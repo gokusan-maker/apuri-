@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addMyWord, loadMyWords, loadUseMy, removeMyWord, saveMyWords, saveUseMy, validate } from './myWords'
+import { addMany, addMyWord, loadMyWords, loadUseMy, parseBulk, removeMyWord, saveMyWords, saveUseMy, validate } from './myWords'
 
 describe('マイ単語帳', () => {
   beforeEach(() => localStorage.clear())
@@ -28,5 +28,27 @@ describe('マイ単語帳', () => {
     expect(loadUseMy()).toBe(false)
     saveUseMy(true)
     expect(loadUseMy()).toBe(true)
+  })
+})
+
+describe('まとめて追加', () => {
+  it('1行に「英語,意味」。区切りはカンマ・タブ・全角カンマ。おかしな行は数える', () => {
+    const r = parseBulk('sunflower,ひまわり\nice cream\tアイス\nsky，空\nnomeaning\n\n')
+    expect(r.words).toEqual([
+      { en: 'sunflower', ja: 'ひまわり' },
+      { en: 'ice cream', ja: 'アイス' },
+      { en: 'sky', ja: '空' },
+    ])
+    expect(r.errors).toBe(1)
+  })
+
+  it('同じ単語や英語でないものはとばす', () => {
+    const r = addMany([], [
+      { en: 'cat', ja: 'ねこ' },
+      { en: 'Cat', ja: 'ネコ' },
+      { en: 'ねこ', ja: 'x' },
+    ], 1)
+    expect(r.added).toBe(1)
+    expect(r.skipped).toBe(2)
   })
 })

@@ -682,3 +682,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .today-summary { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--card); }
 .feeling { color: var(--muted); font-weight: 400; margin-left: 4px; }
 .mix-test { margin: 4px 0 10px; }
+.bulk { margin: 10px 0; text-align: left; }
+.bulk summary { color: var(--accent); cursor: pointer; }
+.bulk textarea { width: 100%; padding: 8px; border: 1px solid var(--muted); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }

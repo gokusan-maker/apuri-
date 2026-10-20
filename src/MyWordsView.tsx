@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { addMyWord, removeMyWord, validate } from './myWords'
+import { addMany, addMyWord, parseBulk, removeMyWord, validate } from './myWords'
 import type { Word } from './words'
 
 type Props = {
@@ -13,6 +13,8 @@ export function MyWords({ list, onChange }: Props) {
   const [example, setExample] = useState('')
   const [exampleJa, setExampleJa] = useState('')
   const [error, setError] = useState('')
+  const [bulk, setBulk] = useState('')
+  const [bulkMsg, setBulkMsg] = useState('')
 
   function submit(e: FormEvent) {
     e.preventDefault()
@@ -48,6 +50,28 @@ export function MyWords({ list, onChange }: Props) {
           追加する
         </button>
       </form>
+      <details className="bulk">
+        <summary>まとめて追加する</summary>
+        <p className="stats-note">1行に「英語,意味」で入力（例：sunflower,ひまわり）</p>
+        <textarea value={bulk} onChange={(e) => setBulk(e.target.value)} rows={4} aria-label="まとめて追加" />
+        <button
+          className="flip"
+          onClick={() => {
+            const { words, errors } = parseBulk(bulk)
+            const r = addMany(list, words)
+            onChange(r.list)
+            setBulk('')
+            setBulkMsg(`${r.added}語 追加しました${r.skipped + errors ? `（${r.skipped + errors}行は追加できませんでした）` : ''}`)
+          }}
+        >
+          まとめて追加
+        </button>
+        {bulkMsg && (
+          <p className="stats-note" role="status">
+            {bulkMsg}
+          </p>
+        )}
+      </details>
       {list.length > 0 && (
         <ul className="weak-list">
           {list.map((w) => (

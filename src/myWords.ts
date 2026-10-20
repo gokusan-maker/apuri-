@@ -69,3 +69,35 @@ export function saveUseMy(v: boolean): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// まとめて追加：1行に「英語,意味」（カンマ・タブ・全角カンマで区切る）
+export function parseBulk(text: string): { words: NewWord[]; errors: number } {
+  const words: NewWord[] = []
+  let errors = 0
+  for (const line of text.split(/\r?\n/)) {
+    if (!line.trim()) continue
+    const [en, ...rest] = line.split(/[,\t，、]/)
+    const ja = rest.join('、').trim()
+    if (!en?.trim() || !ja) {
+      errors++
+      continue
+    }
+    words.push({ en: en.trim(), ja })
+  }
+  return { words, errors }
+}
+
+export function addMany(list: Word[], items: NewWord[], now = Date.now()): { list: Word[]; added: number; skipped: number } {
+  let next = list
+  let added = 0
+  let skipped = 0
+  items.forEach((w, i) => {
+    if (validate(w, next)) {
+      skipped++
+      return
+    }
+    next = addMyWord(next, w, now + i)
+    added++
+  })
+  return { list: next, added, skipped }
+}
