@@ -8,6 +8,7 @@ const PLAYERS = ['🔴 プレイヤー1', '🔵 プレイヤー2']
 
 // 2人対戦：1台を交代で使う（XP は入らない）
 export function Versus({ words }: { words: Word[] }) {
+  const [jaEn, setJaEn] = useState(false) // 日→英
   const [qs, setQs] = useState(() => makeQuiz(words, (w) => w.ja, VERSUS_EACH * 2))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
@@ -24,8 +25,9 @@ export function Versus({ words }: { words: Word[] }) {
     } else playWrong()
   }
 
-  function restart() {
-    setQs(makeQuiz(words, (w) => w.ja, VERSUS_EACH * 2))
+  function restart(je = jaEn) {
+    setJaEn(je)
+    setQs(makeQuiz(words, je ? (w) => w.en : (w) => w.ja, VERSUS_EACH * 2))
     setIndex(0)
     setPicked(null)
     setScores([0, 0])
@@ -40,7 +42,7 @@ export function Versus({ words }: { words: Word[] }) {
           {scores[0]} 対 {scores[1]}
         </p>
         <p className="level-up">{winner === null ? '引き分け！' : `${PLAYERS[winner]} の勝ち！`}</p>
-        <button className="flip" onClick={restart}>
+        <button className="flip" onClick={() => restart()}>
           もう1回
         </button>
       </section>
@@ -53,7 +55,17 @@ export function Versus({ words }: { words: Word[] }) {
       <p className="quiz-progress">
         {PLAYERS[turn]} の番（{Math.floor(index / 2) + 1} / {total / 2} 問目）・{scores[0]} 対 {scores[1]}
       </p>
-      <p className="en">{q.word.en}</p>
+      {index === 0 && picked === null && (
+        <div className="counts" role="group" aria-label="向き">
+          <button aria-pressed={!jaEn} onClick={() => restart(false)}>
+            英→日
+          </button>
+          <button aria-pressed={jaEn} onClick={() => restart(true)}>
+            日→英
+          </button>
+        </div>
+      )}
+      <p className={jaEn ? 'en ja-prompt' : 'en'}>{jaEn ? q.word.ja : q.word.en}</p>
       <div className="choices">
         {q.choices.map((c, i) => {
           let cls = 'choice'

@@ -20,3 +20,14 @@ it('2人で交代に答え、多く正解したほうが勝ち', () => {
   fireEvent.click(screen.getByText('もう1回'))
   expect(screen.getByText(/プレイヤー1 の番/)).toBeInTheDocument()
 })
+
+it('日→英も選べる（1問目の前だけ切りかえられる）', () => {
+  const words = WORDS.slice(0, 30)
+  render(<Versus words={words} />)
+  fireEvent.click(screen.getByText('日→英'))
+  const ja = document.querySelector('.quiz .ja-prompt')!.textContent
+  const w = words.find((x) => x.ja === ja)!
+  fireEvent.click(screen.getByRole('button', { name: w.en }))
+  expect(screen.getByText('正解！')).toBeInTheDocument()
+  expect(screen.queryByRole('group', { name: '向き' })).not.toBeInTheDocument()
+})
