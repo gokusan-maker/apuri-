@@ -581,3 +581,7 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .calendar td.studied { background: color-mix(in srgb, var(--accent) 25%, var(--bg)); font-weight: 700; }
 .calendar td.met { background: color-mix(in srgb, #22c55e 30%, var(--bg)); }
 .calendar td.today { outline: 2px solid var(--accent); }
+.grade-pick { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 10px 0 0; }
+.grade-pick p { width: 100%; margin: 0; }
+.grade-pick button { padding: 6px 12px; border: 1px solid var(--accent); border-radius: 999px; background: transparent; color: var(--accent); }
+.grade-pick button[aria-pressed='true'] { background: var(--accent); color: var(--accent-fg); }

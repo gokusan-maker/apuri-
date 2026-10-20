@@ -1,10 +1,14 @@
 import { Install } from './InstallView'
+import { GRADES } from './grade'
+import type { Level } from './words'
+import { useState } from 'react'
 import { speak } from './speech'
 import { GOALS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
 
 type Props = {
   settings: Settings
   onChange: (s: Settings) => void
+  onGrade?: (levels: Level[]) => void
 }
 
 const THEMES: { id: Theme; label: string }[] = [
@@ -18,11 +22,36 @@ const ACCENTS: { id: Accent; label: string }[] = [
   { id: 'en-GB', label: 'イギリス英語' },
 ]
 
-export function SettingsPanel({ settings, onChange }: Props) {
+export function SettingsPanel({ settings, onChange, onGrade }: Props) {
+  const [graded, setGraded] = useState('')
   const set = (patch: Partial<Settings>) => onChange({ ...settings, ...patch })
   return (
     <section className="card settings">
       <h2>設定</h2>
+
+      {onGrade && (
+        <fieldset className="setting">
+          <legend>学年から単語帳を選ぶ</legend>
+          <div className="levels">
+            {GRADES.map((g) => (
+              <button
+                key={g.id}
+                onClick={() => {
+                  onGrade(g.levels)
+                  setGraded(`${g.label}向けの単語帳にしました（${g.levels.join('・')}）`)
+                }}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+          {graded && (
+            <p className="stats-note" role="status">
+              {graded}
+            </p>
+          )}
+        </fieldset>
+      )}
 
       <label className="setting">
         <span>発音の速さ：{settings.rate.toFixed(1)}倍</span>

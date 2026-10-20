@@ -394,4 +394,20 @@ describe('App', () => {
     expect(screen.getByLabelText(`${d}日 1問`)).toHaveClass('studied')
     expect(screen.getByText('今月 1日 学習しました')).toBeInTheDocument()
   })
+
+  it('はじめての案内で学年を選ぶと単語帳が変わる', () => {
+    localStorage.removeItem('eitan:onboarded')
+    render(<App />)
+    fireEvent.click(screen.getByText('つぎへ'))
+    fireEvent.click(screen.getByText('中学1年'))
+    expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1', '曜日・月'])
+  })
+
+  it('設定で学年から単語帳を選びなおせる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.click(screen.getByText('高校生'))
+    expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中3', '高校基礎', '熟語'])
+    expect(screen.getByText(/高校生向けの単語帳にしました/)).toBeInTheDocument()
+  })
 })

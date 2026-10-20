@@ -362,7 +362,7 @@ function App() {
           }}
         />
       ) : mode === 'settings' ? (
-        <SettingsPanel settings={settings} onChange={setSettings} />
+        <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
       ) : mode === 'stats' ? (
         <>
           <Missions state={missions} today={today} />
@@ -499,7 +499,7 @@ function App() {
           </div>
         </div>
       )}
-      {!onboarded && <Onboarding onDone={() => setOnboarded(true)} />}
+      {!onboarded && <Onboarding onDone={() => setOnboarded(true)} onGrade={setLevels} />}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">

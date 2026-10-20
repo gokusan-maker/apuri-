@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { FORMS } from './monster'
 import { MonsterFigure } from './MonsterView'
+import { GRADES } from './grade'
+import type { Level } from './words'
 
 const STEPS = [
   {
@@ -17,8 +19,9 @@ const STEPS = [
   },
 ]
 
-export function Onboarding({ onDone }: { onDone: () => void }) {
+export function Onboarding({ onDone, onGrade }: { onDone: () => void; onGrade?: (levels: Level[]) => void }) {
   const [step, setStep] = useState(0)
+  const [grade, setGrade] = useState<string | null>(null)
   const s = STEPS[step]
   const last = step === STEPS.length - 1
   return (
@@ -29,6 +32,23 @@ export function Onboarding({ onDone }: { onDone: () => void }) {
         </div>
         <p className="celebrate-title">{s.title}</p>
         <p className="celebrate-text">{s.body}</p>
+        {step === 1 && onGrade && (
+          <div className="grade-pick" role="group" aria-label="学年">
+            <p className="stats-note">学年を選ぶと、ちょうどいい単語帳にするよ</p>
+            {GRADES.map((g) => (
+              <button
+                key={g.id}
+                aria-pressed={grade === g.id}
+                onClick={() => {
+                  setGrade(g.id)
+                  onGrade(g.levels)
+                }}
+              >
+                {g.label}
+              </button>
+            ))}
+          </div>
+        )}
         <p className="onboarding-dots" aria-hidden="true">
           {STEPS.map((_, i) => (i === step ? '●' : '○')).join(' ')}
         </p>
