@@ -25,5 +25,6 @@ export const EMOJI: Record<string, string> = {
   chopsticks: '🥢', crayon: '🖍️', elevator: '🛗', envelope: '✉️', bucket: '🪣', bug: '🐞', airplane: '🛩️',
   ghost: '👻', glove: '🧤', helmet: '⛑️', kite: '🪁', knife: '🔪', ladder: '🪜', magic: '🪄',
   spoon: '🥄', plate: '🍽️', pan: '🍳', scissors: '✂️', soap: '🧼', toothbrush: '🪥', toilet: '🚽', shower: '🚿', trash: '🗑️',
+  mask: '😷', motorcycle: '🏍️', mushroom: '🍄', nest: '🪺', lock: '🔒',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
