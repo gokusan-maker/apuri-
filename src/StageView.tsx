@@ -73,6 +73,11 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
               '6問以上正解でクリア。もう一度！'
             )}
             {firstThree && <span className="stage-bonus">はじめての★3！ 🪙{STAR3_COINS}</span>}
+            {result > 0 && (
+              <span className="stage-progress">
+                {playing.level}の★ {stagesOf(playing.level).reduce((a, st) => a + (record[st.id] ?? 0), 0)} / {stagesOf(playing.level).length * 3}
+              </span>
+            )}
           </p>
         )}
         <Quiz

@@ -715,3 +715,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .verb-forms { font-size: 0.9em; opacity: 0.8; margin: 4px 0; }
 .emoji-prompt { font-size: 4rem; line-height: 1.2; }
 .emoji-choices .choice { font-size: 2rem; }
+.stage-progress { display: block; font-size: 0.85em; opacity: 0.8; margin-top: 4px; }

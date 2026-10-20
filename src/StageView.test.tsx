@@ -20,6 +20,8 @@ describe('ステージ画面', () => {
     expect(onClear).toHaveBeenCalledWith('中1-1', 3)
     expect(screen.getByLabelText('クリア！ ★★★')).toBeInTheDocument()
     expect(screen.getByText('はじめての★3！ 🪙20')).toBeInTheDocument()
+    // 記録は親が持つので、ここではまだ0（親が更新すると増える）
+    expect(screen.getByText(`中1の★ 0 / ${stagesOf('中1').length * 3}`)).toBeInTheDocument()
     fireEvent.click(screen.getByText('もう1回'))
     expect(screen.queryByLabelText('クリア！ ★★★')).not.toBeInTheDocument()
     expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
