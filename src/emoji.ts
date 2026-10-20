@@ -20,5 +20,6 @@ export const EMOJI: Record<string, string> = {
   balloon: '🎈', basket: '🧺', battery: '🔋', bone: '🦴', butter: '🧈', calendar: '📅', candle: '🕯️', coin: '🪙',
   dinosaur: '🦕', diary: '📔',
   storm: '⛈️', thunder: '🌩️', lightning: '⚡', fog: '🌫️', typhoon: '🌀', ice: '🧊', bakery: '🥐', 'post-office': '🏣', 'fire-station': '🚒',
+  tongue: '👅',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
