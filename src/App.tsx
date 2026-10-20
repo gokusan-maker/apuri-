@@ -28,7 +28,8 @@ import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
-import { souvenirFor } from './souvenir'
+import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor } from './souvenir'
+import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
@@ -176,6 +177,7 @@ function App() {
   useStudyTime(setTimeLog, today)
 
   const [celebrate, setCelebrate] = useState(false)
+  const [souvenirs, setSouvenirs] = usePersistent(loadSouvenirs, saveSouvenirs)
   const [cheer, setCheer] = useState<Line | null>(null) // 10問ごとの相棒の応援
   useEffect(() => {
     if (!cheer) return
@@ -221,6 +223,7 @@ function App() {
       setCelebrate(true)
       // 相棒がおでかけして、おみやげを見つけてくる
       const sv = souvenirFor(today)
+      setSouvenirs((l) => addSouvenir(l, sv.id))
       setWallet((w) => ({ ...w, coins: w.coins + sv.coins }))
       pushToast([{ id: 'souvenir', text: `${monster.name ?? formOf(monster).name}が「${sv.icon} ${sv.name}」を見つけてきた！ 🪙${sv.coins}`, counter: 'answers', target: 0 }])
     }
@@ -699,6 +702,7 @@ function App() {
               <BadgeList earned={earned} />
               <Zukan monsters={party.members} />
               <BossDex record={boss} />
+              <SouvenirList got={souvenirs} />
             </section>
           )}
           {statsTab === 'data' && (

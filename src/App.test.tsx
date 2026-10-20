@@ -165,6 +165,7 @@ describe('App', () => {
     expect(screen.getByText('🎯 目標達成！')).toBeInTheDocument()
     expect(toast('🎒 おみやげ')).toBeInTheDocument()
     expect(screen.getByText(new RegExp(souvenirFor(dayKey()).name))).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:souvenirs')!)).toEqual([souvenirFor(dayKey()).id])
     // もう一度答えてもお祝いは出ない
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
