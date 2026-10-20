@@ -7,6 +7,15 @@ export function addMistake(m: Mistakes, id: string): Mistakes {
   return { ...m, [id]: (m[id] ?? 0) + 1 }
 }
 
+// 苦手カードで「覚えた」：回数を1減らし、0になったら苦手から外す
+export function easeMistake(m: Mistakes, id: string): Mistakes {
+  const n = (m[id] ?? 0) - 1
+  const next = { ...m }
+  if (n > 0) next[id] = n
+  else delete next[id]
+  return next
+}
+
 // 間違えた回数が多い順（同数なら元の並び順）
 export function weakWords<T extends { id: string }>(words: T[], m: Mistakes, limit = 20): T[] {
   return words

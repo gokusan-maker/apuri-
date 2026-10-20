@@ -34,7 +34,7 @@ import {
   saveProgress,
   type ProgressMap,
 } from './srs'
-import { addMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
+import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
@@ -61,6 +61,8 @@ function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
   const [showList, setShowList] = useState(false)
+  // 苦手カード：記録画面から始める。一周するまで同じ単語は出さない
+  const [weakCards, setWeakCards] = useState<string[] | null>(null)
   const today = dayKey()
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
@@ -206,6 +208,18 @@ function App() {
     return () => window.clearTimeout(id)
   }, [toast])
 
+  const weakCard = weakCards ? weak.find((w) => !weakCards.includes(w.id)) : undefined
+
+  function answerWeak(correct: boolean) {
+    if (!weakCard || !weakCards) return
+    setWeakCards([...weakCards, weakCard.id])
+    setProgress({ ...progress, [weakCard.id]: grade(progress[weakCard.id], correct, today) })
+    studied(correct)
+    if (correct) count('cardGood')
+    setMistakes((m) => (correct ? easeMistake(m, weakCard.id) : addMistake(m, weakCard.id)))
+    gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
+  }
+
   function answer(correct: boolean) {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
@@ -284,6 +298,11 @@ function App() {
               setWeakOnly(true)
               setMode('quiz')
             }}
+            onReviewWeakCards={() => {
+              setWeakCards([])
+              setShowList(false)
+              setMode('card')
+            }}
           >
             <MyWords list={myWords} onChange={setMyWords} />
             <BadgeList earned={earned} />
@@ -316,7 +335,19 @@ function App() {
             count('timeAttack')
           }} />
       ) : (
-        showList ? (
+        weakCards ? (
+          <>
+            <p className="weak-banner">
+              苦手カードで復習中（のこり {weak.filter((w) => !weakCards.includes(w.id)).length}語）
+              <button onClick={() => setWeakCards(null)}>やめる</button>
+            </p>
+            {weakCard ? (
+              <Card key={`weak-${weakCard.id}`} card={weakCard} onAnswer={answerWeak} />
+            ) : (
+              <p className="done">苦手カードを一周しました 💪</p>
+            )}
+          </>
+        ) : showList ? (
           <WordList words={words} progress={progress} onClose={() => setShowList(false)} />
         ) : (
           <>

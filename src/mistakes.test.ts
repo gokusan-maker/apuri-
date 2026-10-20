@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
 import { makeQuiz } from './quiz'
-import { addMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
+import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { WORDS } from './words'
 
 describe('苦手単語', () => {
@@ -34,4 +34,10 @@ describe('苦手単語', () => {
       expect(q.choices).toHaveLength(4)
     }
   })
+})
+
+it('「覚えた」で苦手の回数が減り、0で外れる', () => {
+  expect(easeMistake({ a: 2 }, 'a')).toEqual({ a: 1 })
+  expect(easeMistake({ a: 1, b: 3 }, 'a')).toEqual({ b: 3 })
+  expect(easeMistake({}, 'a')).toEqual({})
 })

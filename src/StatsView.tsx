@@ -14,10 +14,11 @@ type Props = {
   weak: Word[]
   mistakes: Mistakes
   onReviewWeak: () => void
+  onReviewWeakCards: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -56,9 +57,14 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
               </li>
             ))}
           </ol>
-          <button className="flip" onClick={onReviewWeak}>
-            苦手だけ復習する
-          </button>
+          <div className="actions">
+            <button className="good" onClick={onReviewWeakCards}>
+              カードで復習
+            </button>
+            <button className="good" onClick={onReviewWeak}>
+              クイズで復習
+            </button>
+          </div>
         </>
       )}
       {children}
