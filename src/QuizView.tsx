@@ -13,6 +13,7 @@ import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
+import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
 import { Scramble } from './ScrambleView'
@@ -45,7 +46,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -101,6 +102,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'grammar', label: '📖 文法', group: '文法・読解' },
   { id: 'reading', label: '📰 読解', group: '文法・読解' },
   { id: 'confusing', label: '⚠️ まちがえやすい単語', group: '文法・読解' },
+  { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
 ]
 const GROUPS = ['4択', '聞く・話す', '書く・並べる', '文法・読解']
 const MODE_KEY = 'eitan:quiz-mode'
@@ -353,6 +355,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Shiritori onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'sounds') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Grammar key="sounds" units={SOUNDS} title="発音のコツ" onAnswer={onAnswer} />
       </>
     )
   }
