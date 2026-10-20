@@ -5,8 +5,8 @@ import { Quiz } from './QuizView'
 import { WORDS } from './words'
 
 describe('英英クイズ', () => {
-  it('説明は60語ぶんあり、どれも単語帳にある', () => {
-    expect(Object.keys(DEFS)).toHaveLength(60)
+  it('説明は75語ぶんあり、どれも単語帳にある', () => {
+    expect(Object.keys(DEFS)).toHaveLength(75)
     for (const id of Object.keys(DEFS)) expect(WORDS.some((w) => w.id === id), id).toBe(true)
   })
 
