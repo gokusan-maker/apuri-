@@ -4,14 +4,21 @@ import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import type { Word } from './words'
 
+export type Direction = 'en-ja' | 'ja-en'
+
+const prompt = (w: Word, d: Direction) => (d === 'en-ja' ? w.en : w.ja)
+const label = (d: Direction) => (d === 'en-ja' ? (w: Word) => w.ja : (w: Word) => w.en)
+
 type Props = {
   words: Word[]
+  direction?: Direction
   count?: number
   onCorrect?: (xp: number) => void
 }
 
-export function Quiz({ words, count = 10, onCorrect }: Props) {
-  const [questions, setQuestions] = useState(() => makeQuiz(words, (w) => w.ja, count))
+export function Quiz({ words, direction: initial = 'en-ja', count = 10, onCorrect }: Props) {
+  const [direction, setDirection] = useState<Direction>(initial)
+  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -47,8 +54,9 @@ export function Quiz({ words, count = 10, onCorrect }: Props) {
     setIndex(index + 1)
   }
 
-  function restart() {
-    setQuestions(makeQuiz(words, (w) => w.ja, count))
+  function restart(d: Direction = direction) {
+    setDirection(d)
+    setQuestions(makeQuiz(words, label(d), count))
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -82,7 +90,7 @@ export function Quiz({ words, count = 10, onCorrect }: Props) {
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
-        <button className="flip" onClick={restart}>
+        <button className="flip" onClick={() => restart()}>
           もう1回
         </button>
       </section>
@@ -91,6 +99,14 @@ export function Quiz({ words, count = 10, onCorrect }: Props) {
 
   return (
     <section className="card quiz" aria-live="polite">
+      <div className="direction" role="group" aria-label="出題の向き">
+        <button aria-pressed={direction === 'en-ja'} onClick={() => restart('en-ja')}>
+          英→日
+        </button>
+        <button aria-pressed={direction === 'ja-en'} onClick={() => restart('ja-en')}>
+          日→英
+        </button>
+      </div>
       <p className="progress">
         {index + 1} / {questions.length}
         {combo >= 2 && (
@@ -99,7 +115,7 @@ export function Quiz({ words, count = 10, onCorrect }: Props) {
           </span>
         )}
       </p>
-      <p className="en">{q.word.en}</p>
+      <p className={direction === 'en-ja' ? 'en' : 'en ja-prompt'}>{prompt(q.word, direction)}</p>
       <div className="choices">
         {q.choices.map((c, i) => {
           let cls = 'choice'

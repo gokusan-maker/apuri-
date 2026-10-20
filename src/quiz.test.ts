@@ -32,3 +32,11 @@ describe('quiz', () => {
     expect(new Set(quiz.map((q) => q.word.id)).size).toBe(10)
   })
 })
+
+it('日→英の選択肢（英単語）も4つで重複しない', () => {
+  for (const w of WORDS) {
+    const q = makeQuestion(w, WORDS, (x) => x.en)
+    expect(new Set(q.choices).size).toBe(4)
+    expect(q.choices[q.answer]).toBe(w.en)
+  }
+})

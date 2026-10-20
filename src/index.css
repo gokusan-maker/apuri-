@@ -161,3 +161,15 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .timer.hurry { animation: none; }
 }
+
+.direction { display: flex; justify-content: center; gap: 6px; margin-bottom: 8px; }
+.direction button {
+  padding: 4px 12px;
+  font-size: 0.85rem;
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+}
+.direction button[aria-pressed='true'] { border-color: var(--accent); background: var(--accent); color: var(--accent-fg); }
+.ja-prompt { font-size: 1.7rem; }

@@ -28,7 +28,7 @@ describe('Quiz', () => {
     render(<Quiz words={words} count={1} />)
     const en = screen.getByText(/^[a-z]+$/).textContent
     const word = words.find((w) => w.en === en)!
-    const wrong = screen.getAllByRole('button').find((b) => b.textContent !== word.ja)!
+    const wrong = [...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!
     fireEvent.click(wrong)
     expect(screen.getByText(`正解は「${word.ja}」`)).toBeInTheDocument()
   })
@@ -48,10 +48,36 @@ describe('コンボ', () => {
     answerCorrect()
     const en = document.querySelector('.quiz .en')!.textContent
     const word = words.find((w) => w.en === en)!
-    fireEvent.click(screen.getAllByRole('button').find((b) => b.textContent !== word.ja)!)
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
     expect(screen.queryByText(/コンボ！/)).not.toBeInTheDocument()
     fireEvent.click(screen.getByText('次へ'))
     expect(screen.getByText('67%')).toBeInTheDocument()
     expect(screen.getByText('2')).toBeInTheDocument()
+  })
+})
+
+describe('逆方向クイズ', () => {
+  it('日→英では日本語が出て、英単語を選ぶ', () => {
+    const words = WORDS.slice(0, 8)
+    render(<Quiz words={words} count={1} />)
+    fireEvent.click(screen.getByText('日→英'))
+    const ja = document.querySelector('.quiz .en')!.textContent
+    const word = words.find((w) => w.ja === ja)!
+    expect(word).toBeDefined()
+    const buttons = screen.getAllByRole('button').filter((b) => b.className.includes('choice'))
+    expect(buttons.map((b) => b.textContent).every((t) => words.some((w) => w.en === t))).toBe(true)
+    fireEvent.click(screen.getByRole('button', { name: word.en }))
+    expect(screen.getByText(/正解！/)).toBeInTheDocument()
+  })
+
+  it('向きを切り替えると最初から', () => {
+    const words = WORDS.slice(0, 8)
+    render(<Quiz words={words} count={3} />)
+    const en = document.querySelector('.quiz .en')!.textContent
+    fireEvent.click(screen.getByRole('button', { name: words.find((w) => w.en === en)!.ja }))
+    fireEvent.click(screen.getByText('次へ'))
+    expect(screen.getByText(/^2 \/ 3/)).toBeInTheDocument()
+    fireEvent.click(screen.getByText('日→英'))
+    expect(screen.getByText(/^1 \/ 3/)).toBeInTheDocument()
   })
 })
