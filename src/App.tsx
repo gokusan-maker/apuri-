@@ -50,7 +50,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { buy, buyFreeze, COIN_PER_CORRECT, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, COIN_PER_CORRECT, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -140,6 +140,12 @@ function App() {
     if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
     const r = recordStudyWithFreeze(streak, today, wallet.freezes ?? 0)
     setStreak(r.streak)
+    // ログインボーナス：その日はじめての学習で🪙5、7日連続ごとに🪙20
+    if (streak?.last !== today) {
+      const bonus = r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS
+      setWallet((w) => ({ ...w, coins: w.coins + bonus }))
+      setMissionToast([{ id: 'login', text: `今日もえらい！ 🪙${bonus}`, counter: 'answers', target: 0 }])
+    }
     if (r.used) setWallet((w) => ({ ...w, freezes: Math.max(0, (w.freezes ?? 0) - 1) }))
     const next = addToday(todayCount, today)
     setTodayCount(next)
@@ -575,7 +581,9 @@ function App() {
           </span>
           <div>
             <p className="badge-toast-title">
-              {missionToast[0].id === 'weekly'
+              {missionToast[0].id === 'login'
+                ? 'ログインボーナス'
+                : missionToast[0].id === 'weekly'
                 ? `週間チャレンジ達成！ +${WEEKLY_XP}XP`
                 : `ミッション達成！ +${MISSION_XP * missionToast.length}XP`}
             </p>

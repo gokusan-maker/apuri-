@@ -282,7 +282,7 @@ describe('App', () => {
 
   it('正解でコインがたまり、ショップで買って相棒に着せられる', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
-    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 29, owned: [] }))
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 24, owned: [] })) // +1（正解）+5（ログインボーナス）で30
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
@@ -445,7 +445,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText(/週間チャレンジ達成！/)).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(50)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(55) // 50 + ログインボーナス5
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(61)
   })
 
@@ -465,5 +465,15 @@ describe('App', () => {
     const prof = document.querySelector('.profile')!
     expect(prof.textContent).toContain(dayKey())
     expect(prof.textContent).toContain('100%')
+  })
+
+  it('その日はじめての学習でログインボーナス🪙5（2回目からはなし）', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText('ログインボーナス')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(5)
   })
 })

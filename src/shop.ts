@@ -11,6 +11,8 @@ export const ITEMS: Item[] = [
 ]
 
 export const COIN_PER_CORRECT = 1
+export const LOGIN_COINS = 5 // その日はじめての学習
+export const LOGIN_WEEK_COINS = 20 // 7日連続ごと
 
 export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string }
 
