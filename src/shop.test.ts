@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, isEarly, snacksLeft } from './shop'
+import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -80,4 +80,10 @@ it('買い物をしても、おやすみチケットや部屋はそのまま', (
 it('部屋に「夜の町」「さくら」がある', () => {
   for (const id of ['night', 'sakura']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
   expect(new Set(ROOMS.map((r) => r.id)).size).toBe(ROOMS.length)
+})
+
+it('おやつにプリンがあり、値段が高いほどXPも多い', () => {
+  expect(SNACKS.find((s) => s.id === 'pudding')).toMatchObject({ price: 18, xp: 40 })
+  const byPrice = [...SNACKS].sort((a, b) => a.price - b.price)
+  expect(byPrice.map((s) => s.xp)).toEqual([...byPrice.map((s) => s.xp)].sort((a, b) => a - b))
 })

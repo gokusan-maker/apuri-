@@ -77,6 +77,7 @@ export type Snack = { id: string; name: string; price: number; xp: number; icon:
 
 export const SNACKS: Snack[] = [
   { id: 'cookie', name: 'クッキー', price: 10, xp: 20, icon: '🍪' },
+  { id: 'pudding', name: 'プリン', price: 18, xp: 40, icon: '🍮' },
   { id: 'cake', name: 'ケーキ', price: 25, xp: 60, icon: '🍰' },
 ]
 
