@@ -41,3 +41,9 @@ it('ボス・コイン・なかまのバッジ', () => {
 it('単語帳を1冊完全制覇でバッジ', () => {
   expect(newlyEarned({ ...zero, completeBooks: 1 }, {}).map((b) => b.id)).toContain('complete-1')
 })
+
+it('300語・500語定着と100日学習のバッジ', () => {
+  const ids = newlyEarned({ ...zero, learned: 500, studyDays: 100 }, {}).map((b) => b.id)
+  expect(ids).toEqual(expect.arrayContaining(['learned-300', 'learned-500', 'days-100']))
+  expect(newlyEarned({ ...zero, studyDays: 99 }, {}).map((b) => b.id)).not.toContain('days-100')
+})

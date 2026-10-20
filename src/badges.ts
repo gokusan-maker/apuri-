@@ -13,6 +13,7 @@ export type BadgeStats = {
   members?: number // なかまの数
   bestCombo?: number // コンボの自己ベスト
   completeBooks?: number // 全語定着した単語帳の数
+  studyDays?: number // 学習した日数（連続でなくてよい）
 }
 
 export type Badge = {
@@ -35,6 +36,9 @@ export const BADGES: Badge[] = [
   { id: 'learned-10', icon: '📗', name: '10語定着', desc: '10語を定着させる', check: (s) => s.learned >= 10 },
   { id: 'learned-50', icon: '📘', name: '50語定着', desc: '50語を定着させる', check: (s) => s.learned >= 50 },
   { id: 'learned-100', icon: '📚', name: '100語定着', desc: '100語を定着させる', check: (s) => s.learned >= 100 },
+  { id: 'learned-300', icon: '🏫', name: '300語定着', desc: '300語を定着させる', check: (s) => s.learned >= 300 },
+  { id: 'learned-500', icon: '🎓', name: '500語定着', desc: '500語を定着させる', check: (s) => s.learned >= 500 },
+  { id: 'days-100', icon: '💯', name: '100日学習', desc: '学習した日が100日になる', check: (s) => (s.studyDays ?? 0) >= 100 },
   { id: 'level-5', icon: '🐣', name: '進化の始まり', desc: '相棒をレベル5に育てる', check: (s) => s.level >= 5 },
   { id: 'level-15', icon: '🐉', name: 'たくましく', desc: '相棒をレベル15に育てる', check: (s) => s.level >= 15 },
   { id: 'time-15', icon: '⚡', name: 'スピードスター', desc: 'タイムアタックで15問正解', check: (s) => s.bestTime >= 15 },
