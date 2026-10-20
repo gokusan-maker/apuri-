@@ -4,6 +4,7 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Card } from './CardView'
 import { WordList } from './WordListView'
+import { makeLookup } from './glossary'
 import { loadNotes, saveNotes, setNote } from './notes'
 import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
@@ -208,6 +209,7 @@ function App() {
     () => [...wordsOf(levels), ...(useMy ? myWords : [])],
     [levels, useMy, myWords],
   )
+  const lookup = useMemo(() => makeLookup([...WORDS, ...myWords]), [myWords])
   const levelKey = `${levels.join(',')}${useMy ? `:my${myWords.length}` : ''}`
 
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
@@ -553,6 +555,7 @@ function App() {
                 autoSpeak={settings.autoSpeak}
                 jaFirst={settings.cardJaFirst}
                 hideExampleJa={settings.hideExampleJa}
+                lookup={lookup}
                 favorite={favorites.includes(focusCard.id)}
                 note={notes[focusCard.id]}
                 onNote={(t) => setNotes((n) => setNote(n, focusCard.id, t))}
@@ -581,6 +584,7 @@ function App() {
               autoSpeak={settings.autoSpeak}
               jaFirst={settings.cardJaFirst}
               hideExampleJa={settings.hideExampleJa}
+              lookup={lookup}
               favorite={!!card && favorites.includes(card.id)}
               note={card ? notes[card.id] : undefined}
               onNote={(t) => card && setNotes((n) => setNote(n, card.id, t))}

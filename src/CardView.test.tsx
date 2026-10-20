@@ -111,3 +111,11 @@ it('🐢 でゆっくり発音する', () => {
   expect(rates[0]).toBe(1)
   expect(rates[1]).toBeLessThan(0.6)
 })
+
+it('例文の中の単語をタップすると意味が出る', () => {
+  const w = WORDS.find((x) => x.id === 'library')!
+  render(<Card card={w} onAnswer={() => {}} lookup={(t) => (t.toLowerCase() === 'school.' ? { ...w, id: 'school', en: 'school', ja: '学校' } : undefined)} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  fireEvent.click(screen.getByRole('button', { name: 'school.' }))
+  expect(screen.getByText('school：学校')).toBeInTheDocument()
+})

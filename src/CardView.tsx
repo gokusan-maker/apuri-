@@ -17,13 +17,15 @@ type Props = {
   note?: string
   onNote?: (text: string) => void
   hideExampleJa?: boolean
+  lookup?: (token: string) => Word | undefined // 例文の単語をタップしたときの意味
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const [showJa, setShowJa] = useState(false)
+  const [gloss, setGloss] = useState<Word | null>(null)
   const start = useRef<{ x: number; y: number } | null>(null)
 
   // 英語が見えたときに自動で発音（英→日なら表、日→英ならめくったとき）
@@ -152,10 +154,26 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
           )}
           {card.example && (
             <p className="example">
-              {card.example}
+              {lookup
+                ? card.example.split(/(\s+)/).map((tok, i) => {
+                    const hit = lookup(tok)
+                    return hit && hit.id !== card.id ? (
+                      <button key={i} className="gloss-word" onClick={() => setGloss(gloss?.id === hit.id ? null : hit)}>
+                        {tok}
+                      </button>
+                    ) : (
+                      <span key={i}>{tok}</span>
+                    )
+                  })
+                : card.example}
               <button className="speak small" onClick={() => speak(card.example)} aria-label="例文を聞く">
                 🔊
               </button>
+            </p>
+          )}
+          {gloss && (
+            <p className="gloss" role="status">
+              {gloss.en}：{gloss.ja}
             </p>
           )}
           {card.exampleJa &&
