@@ -126,6 +126,7 @@ describe('App', () => {
       dailyGoal: 20,
       autoSpeak: false,
       cardJaFirst: false,
+      largeText: false,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
@@ -319,5 +320,14 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('相棒にさわる'))
     expect(screen.getByText('（タマゴの中からコトコト音がする）')).toBeInTheDocument()
+  })
+
+  it('文字を大きくする設定', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.click(screen.getByRole('checkbox', { name: '文字を大きくする' }))
+    expect(document.documentElement.style.fontSize).toBe('112.5%')
+    fireEvent.click(screen.getByRole('checkbox', { name: '文字を大きくする' }))
+    expect(document.documentElement.style.fontSize).toBe('')
   })
 })

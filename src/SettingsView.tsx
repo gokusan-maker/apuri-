@@ -83,6 +83,11 @@ export function SettingsPanel({ settings, onChange }: Props) {
       </label>
 
       <label className="setting toggle">
+        <span>文字を大きくする</span>
+        <input type="checkbox" checked={settings.largeText} onChange={(e) => set({ largeText: e.target.checked })} />
+      </label>
+
+      <label className="setting toggle">
         <span>効果音</span>
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>

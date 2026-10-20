@@ -43,6 +43,7 @@ export type Settings = {
   dailyGoal: number // 1日の目標（問題数）
   autoSpeak: boolean // カードを出したら自動で発音
   cardJaFirst: boolean // カードを日本語→英語にする
+  largeText: boolean // 文字を大きくする
 }
 
 export const GOALS = [10, 20, 30, 50]
@@ -55,6 +56,7 @@ export const DEFAULT_SETTINGS: Settings = {
   dailyGoal: 20,
   autoSpeak: false,
   cardJaFirst: false,
+  largeText: false,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -71,6 +73,7 @@ export function loadSettings(): Settings {
       dailyGoal: typeof v.dailyGoal === 'number' && GOALS.includes(v.dailyGoal) ? v.dailyGoal : DEFAULT_SETTINGS.dailyGoal,
       autoSpeak: v.autoSpeak === true,
       cardJaFirst: v.cardJaFirst === true,
+      largeText: v.largeText === true,
     }
   } catch {
     return { ...DEFAULT_SETTINGS }
@@ -88,4 +91,9 @@ export function saveSettings(s: Settings): void {
 export function applyTheme(theme: Theme, root: HTMLElement = document.documentElement): void {
   if (theme === 'system') delete root.dataset.theme
   else root.dataset.theme = theme
+}
+
+// 文字の大きさ。rem で作っているので html の文字サイズを変えると全体が大きくなる
+export function applyTextSize(large: boolean, root: HTMLElement = document.documentElement): void {
+  root.style.fontSize = large ? '112.5%' : ''
 }
