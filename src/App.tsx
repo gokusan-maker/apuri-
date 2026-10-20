@@ -1,3 +1,4 @@
+import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
@@ -190,7 +191,7 @@ function App() {
       setTotals((t) => ({ ...t, studyDays: (t.studyDays ?? 0) + 1 }))
       const bonus = r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS
       setWallet((w) => ({ ...w, coins: w.coins + bonus }))
-      setMissionToast([{ id: 'login', text: `今日もえらい！ 🪙${bonus}`, counter: 'answers', target: 0 }])
+      pushToast([{ id: 'login', text: `今日もえらい！ 🪙${bonus}`, counter: 'answers', target: 0 }])
     }
     if (r.used) setWallet((w) => ({ ...w, freezes: Math.max(0, (w.freezes ?? 0) - 1) }))
     const next = addToday(todayCount, today)
@@ -226,7 +227,7 @@ function App() {
     if (!correct || !lucky || wordId !== lucky.id || luckyDay === today) return
     setLuckyDay(today)
     gainXp(LUCKY_XP, null)
-    setMissionToast([{ id: 'lucky', text: `ラッキー単語「${lucky.en}」に正解！ +${LUCKY_XP}XP`, counter: 'answers', target: 0 }])
+    pushToast([{ id: 'lucky', text: `ラッキー単語「${lucky.en}」に正解！ +${LUCKY_XP}XP`, counter: 'answers', target: 0 }])
   }
 
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
@@ -327,18 +328,21 @@ function App() {
   }
 
   // ミッション達成：その場でボーナスXP
-  const [missionToast, setMissionToast] = useState<Mission[]>([])
+  const [toastQueue, setToastQueue] = useState<Mission[][]>([])
+  const toastHead = toastQueue[0]
+  const missionToast = toastHead ?? []
+  const pushToast = (ms: Mission[]) => setToastQueue((q) => enqueue(q, ms))
   const finished = completedUnclaimed(missions, today)
   if (finished.length > 0) {
     setMissions({ ...missions, claimed: [...missions.claimed, ...finished.map((m) => m.id)] })
     updateMonster((m) => feed(m, MISSION_XP * finished.length, null, today))
-    setMissionToast(finished)
+    pushToast(finished)
   }
   useEffect(() => {
-    if (missionToast.length === 0) return
-    const id = window.setTimeout(() => setMissionToast([]), 3000)
+    if (!toastHead) return
+    const id = window.setTimeout(() => setToastQueue(dequeue), 3000)
     return () => window.clearTimeout(id)
-  }, [missionToast])
+  }, [toastHead])
 
   // 週間チャレンジ：達成したらその場でコインとXP
   // 新しい週に最初に開いたとき、先週のふりかえりを見せる
@@ -365,7 +369,7 @@ function App() {
     setWeeklyClaimed(thisWeek)
     setWallet((w) => ({ ...w, coins: w.coins + WEEKLY_COINS }))
     updateMonster((m) => feed(m, WEEKLY_XP, null, today))
-    setMissionToast([{ id: 'weekly', text: `今週${WEEKLY_TARGET}問クリア・🪙${WEEKLY_COINS}もゲット`, counter: 'answers', target: WEEKLY_TARGET }])
+    pushToast([{ id: 'weekly', text: `今週${WEEKLY_TARGET}問クリア・🪙${WEEKLY_COINS}もゲット`, counter: 'answers', target: WEEKLY_TARGET }])
   }
 
   // 相棒の記念日（まとめて過ぎていたら、いちばん新しいものだけお祝いして残りも済みにする）
@@ -375,7 +379,7 @@ function App() {
   if (anniv !== null) {
     setAnnivDone([...annivDone, ...MILESTONES.filter((n) => n <= anniv).map((n) => `${annivKey}:${n}`)])
     setWallet((w) => ({ ...w, coins: w.coins + ANNIV_COINS }))
-    setMissionToast([{ id: 'anniv', text: `${monster.name ?? formOf(monster).name}と出会って${anniv}日！ 🪙${ANNIV_COINS}`, counter: 'answers', target: 0 }])
+    pushToast([{ id: 'anniv', text: `${monster.name ?? formOf(monster).name}と出会って${anniv}日！ 🪙${ANNIV_COINS}`, counter: 'answers', target: 0 }])
   }
 
   // 節目のバッジでタマゴがもらえる
@@ -771,7 +775,7 @@ function App() {
         </div>
       )}
       {missionToast.length > 0 && (
-        <div className="badge-toast mission-toast" role="status" onClick={() => setMissionToast([])}>
+        <div className="badge-toast mission-toast" role="status" onClick={() => setToastQueue(dequeue)}>
           <span className="badge-icon" aria-hidden="true">
             ✅
           </span>

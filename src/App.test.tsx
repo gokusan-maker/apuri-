@@ -6,6 +6,16 @@ import { missionsFor } from './missions'
 import { pickWordOfDay } from './wordOfDay'
 import { WORDS, wordsOf } from './words'
 
+// お知らせは順番に出るので、目当てのものが出るまで前のものを閉じる
+function toast(text: string | RegExp) {
+  for (let i = 0; i < 5 && !screen.queryByText(text); i++) {
+    const t = document.querySelector('.mission-toast')
+    if (!t) break
+    fireEvent.click(t)
+  }
+  return screen.getByText(text)
+}
+
 describe('App', () => {
   beforeEach(() => {
     localStorage.clear()
@@ -257,7 +267,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    expect(screen.getByText(/ミッション達成！ \+30XP/)).toBeInTheDocument()
+    expect(toast(/ミッション達成！ \+30XP/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(35)
     expect(JSON.parse(localStorage.getItem('eitan:missions')!).claimed).toContain(m!.id)
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
@@ -456,7 +466,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    expect(screen.getByText(/週間チャレンジ達成！/)).toBeInTheDocument()
+    expect(toast(/週間チャレンジ達成！/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(55) // 50 + ログインボーナス5
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(61)
   })
@@ -610,6 +620,15 @@ describe('App', () => {
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
   })
 
+  it('お知らせが重なると順番に出る', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('ログインボーナス')).toBeInTheDocument()
+    fireEvent.click(document.querySelector('.mission-toast')!)
+    expect(screen.queryByText('ログインボーナス')).not.toBeInTheDocument()
+  })
+
   it('ラッキー単語に正解すると1日1回+20XP', () => {
     const lucky = pickWordOfDay(WORDS, dayKey())!
     localStorage.setItem('eitan:favorites', JSON.stringify([lucky.id]))
@@ -619,7 +638,7 @@ describe('App', () => {
     fireEvent.click(fav.querySelector('button')!)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    expect(screen.getByText('🍀 ラッキー！')).toBeInTheDocument()
+    expect(toast('🍀 ラッキー！')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(25)
   })
 })
