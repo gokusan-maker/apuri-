@@ -16,7 +16,7 @@ import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type 
 import { Missions } from './MissionsView'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
-import { loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
+import { isWeekend, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { Evolve } from './EvolveView'
@@ -91,6 +91,7 @@ function App() {
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
+  const xpRate = isWeekend(today) ? 2 : 1 // 週末は正解のXPが2倍
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
   const extraToday = daily.day === today ? (daily.extra ?? 0) : 0
@@ -178,7 +179,7 @@ function App() {
     setAccuracy((a) => recordAnswer(a, today, source, correct))
     if (correct && source === 'ear') count('ear')
     if (!correct) setMistakes((m) => addMistake(m, wordId))
-    if (correct && xp > 0) gainXp(xp, source)
+    if (correct && xp > 0) gainXp(xp * xpRate, source)
   }
 
   function gainXp(amount: number, source: Source | null) {
@@ -349,7 +350,7 @@ function App() {
     setAccuracy((a) => recordAnswer(a, today, 'card', correct))
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, card.id))
-    gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
+    gainXp((correct ? XP_CARD_GOOD : XP_CARD_AGAIN) * xpRate, 'card')
   }
 
   return (
@@ -361,6 +362,7 @@ function App() {
             🔥 {streakDays}日
           </p>
         </div>
+        {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
         <Monster
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}

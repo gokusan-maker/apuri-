@@ -36,3 +36,10 @@ export function saveWeeklyClaimed(week: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 土日はXP2倍
+export function isWeekend(today: string): boolean {
+  const [y, m, d] = today.split('-').map(Number)
+  const dow = new Date(y, m - 1, d).getDay()
+  return dow === 0 || dow === 6
+}

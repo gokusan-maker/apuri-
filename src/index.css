@@ -645,3 +645,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .rival-score { display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; }
 .rival-me { color: var(--accent); }
 .rival-cpu { color: #7c3aed; }
+.weekend { margin: 0 0 4px; text-align: center; font-size: 0.85rem; font-weight: 700; color: #f97316; }

@@ -242,6 +242,7 @@ describe('App', () => {
     let m = undefined as ReturnType<typeof missionsFor>[number] | undefined
     for (let i = 0; i < 60 && !m; i++) {
       day = new Date(2026, 9, 1 + i)
+      if (day.getDay() === 0 || day.getDay() === 6) continue // 週末はXP2倍なので平日で
       m = missionsFor(dayKey(day)).find((x) => x.counter === 'answers' || x.counter === 'correct' || x.counter === 'cardGood')
     }
     vi.setSystemTime(day)
@@ -487,5 +488,14 @@ describe('App', () => {
     expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
+  })
+
+  it('週末は正解のXPが2倍', () => {
+    vi.setSystemTime(new Date(2026, 9, 24, 10)) // 土曜
+    render(<App />)
+    expect(screen.getByText('🎉 週末はXP2倍！')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(10)
   })
 })
