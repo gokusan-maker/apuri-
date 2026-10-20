@@ -253,6 +253,20 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
               `正解は「${q.choices[q.answer]}」`
             )}
           </p>
+          {picked !== q.answer && direction !== 'blank' && q.word.example && (
+            <div className="miss-example">
+              <p className="example">
+                <strong>{q.word.en}</strong>：{q.word.ja}
+              </p>
+              <p className="example">
+                {q.word.example}
+                <button className="speak small" onClick={() => speak(q.word.example)} aria-label="例文を聞く">
+                  🔊
+                </button>
+              </p>
+              <p className="example-ja">{q.word.exampleJa}</p>
+            </div>
+          )}
           <button className="flip" onClick={next}>
             次へ
           </button>

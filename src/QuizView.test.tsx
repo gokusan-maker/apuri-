@@ -32,6 +32,8 @@ describe('Quiz', () => {
     const wrong = [...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!
     fireEvent.click(wrong)
     expect(screen.getByText(`正解は「${word.ja}」`)).toBeInTheDocument()
+    // 間違えたときは例文と訳も見せる
+    expect(screen.getByText(word.exampleJa)).toBeInTheDocument()
   })
 })
 

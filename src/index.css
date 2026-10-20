@@ -535,3 +535,4 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .snacks { margin-top: 0; }
 .snacks button { font-size: 0.85rem; padding: 10px 6px; }
 .snacks button:disabled { opacity: 0.4; }
+.miss-example { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; }
