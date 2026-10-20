@@ -31,3 +31,27 @@ describe('Spell', () => {
     expect(screen.getByText('0 / 1 問正解')).toBeInTheDocument()
   })
 })
+
+describe('ディクテーション', () => {
+  it('日本語は答えるまで隠れていて、音声で出題される', () => {
+    const spoken: string[] = []
+    Object.assign(window, {
+      SpeechSynthesisUtterance: class {
+        text: string
+        constructor(t: string) {
+          this.text = t
+        }
+      },
+      speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+    })
+    const words = WORDS.slice(0, 3)
+    render(<Spell words={words} count={1} byEar />)
+    expect(spoken).toHaveLength(1)
+    const w = words.find((x) => x.en === spoken[0])!
+    expect(screen.queryByText(w.ja)).not.toBeInTheDocument()
+    fireEvent.change(screen.getByLabelText('英単語を入力'), { target: { value: w.en } })
+    fireEvent.click(screen.getByText('こたえる'))
+    expect(screen.getByText('正解！')).toBeInTheDocument()
+    expect(screen.getByText(w.ja)).toBeInTheDocument()
+  })
+})

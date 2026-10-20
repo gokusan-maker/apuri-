@@ -19,7 +19,8 @@ import type { Word } from './words'
 // speak：発音練習（音声認識が使える端末のみ表示）
 // grammar：文法ミニ解説＋確認問題
 // order：例文の並べ替え
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// dictation：音声を聞いて書く
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
@@ -35,6 +36,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'spell', label: '✏️ スペル' },
+  { id: 'dictation', label: '🎧 書き取り' },
   { id: 'blank', label: '📝 穴埋め' },
   { id: 'order', label: '🔀 並べ替え' },
   { id: 'irregular', label: '🔁 不規則動詞' },
@@ -151,6 +153,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       <>
         <div className="card-tabs">{toggle}</div>
         <Irregular count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'dictation') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Spell key="dictation" words={targets ?? words} count={count} onAnswer={onAnswer} byEar />
       </>
     )
   }

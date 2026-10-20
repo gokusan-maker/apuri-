@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -10,9 +10,10 @@ type Props = {
   words: Word[]
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  byEar?: boolean // ディクテーション：日本語の代わりに音声で出題
 }
 
-export function Spell({ words, count = 10, onAnswer }: Props) {
+export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [list, setList] = useState(() => shuffle(words).slice(0, count))
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
@@ -21,6 +22,10 @@ export function Spell({ words, count = 10, onAnswer }: Props) {
   const [score, setScore] = useState(0)
 
   const w = list[index]
+
+  useEffect(() => {
+    if (byEar && w) speak(w.en)
+  }, [byEar, w])
 
   function submit(e: FormEvent) {
     e.preventDefault()
@@ -73,7 +78,16 @@ export function Spell({ words, count = 10, onAnswer }: Props) {
       <p className="progress">
         {index + 1} / {list.length}
       </p>
-      <p className="en ja-prompt">{w.ja}</p>
+      {byEar ? (
+        <>
+          <button className="listen" type="button" onClick={() => speak(w.en)} aria-label="もう一度聞く">
+            🔊
+          </button>
+          <p className="example-ja">{result ? w.ja : '聞こえた英単語を書こう'}</p>
+        </>
+      ) : (
+        <p className="en ja-prompt">{w.ja}</p>
+      )}
       <p className="hint" aria-label="ヒント">
         {hintText(w.en, hints)}
       </p>
