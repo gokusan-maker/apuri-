@@ -278,4 +278,59 @@ export const PASSAGES: Passage[] = [
       { q: 'ときどき父は何をする？', choices: ['料理を作る', '歌を歌う', 'おもしろい話をする'], answer: 2 },
     ],
   },
+  {
+    id: 'lost-dog',
+    title: 'The Lost Dog',
+    text: 'On my way home, I found a small dog near the park. It had a red collar with a phone number on it. I called the number, and a girl answered. She came running and hugged the dog. She thanked me many times.',
+    ja: '帰り道、公園の近くで小さな犬を見つけました。赤い首輪に電話番号が書いてありました。その番号に電話すると、女の子が出ました。彼女は走ってきて犬を抱きしめました。何度もお礼を言ってくれました。',
+    questions: [
+      { q: '犬はどこにいた？', choices: ['駅の前', '公園の近く', '学校の中'], answer: 1 },
+      { q: '首輪には何が書いてあった？', choices: ['電話番号', '名前だけ', '住所'], answer: 0 },
+      { q: '電話に出たのはだれ？', choices: ['男の人', 'おばあさん', '女の子'], answer: 2 },
+    ],
+  },
+  {
+    id: 'sleep',
+    title: 'Good Sleep',
+    text: 'Sleep is important for students. Doctors say that teenagers need about nine hours of sleep. If you use your phone in bed, it is hard to fall asleep. Try to put your phone away an hour before bed.',
+    ja: '睡眠は生徒にとって大切です。医者によると、10代の人は約9時間の睡眠が必要です。ベッドでスマホを使うと、なかなか眠れません。寝る1時間前にはスマホをしまうようにしましょう。',
+    questions: [
+      { q: '10代に必要な睡眠は約何時間？', choices: ['6時間', '9時間', '12時間'], answer: 1 },
+      { q: 'ベッドでスマホを使うとどうなる？', choices: ['眠りにくくなる', 'よく眠れる', '夢を見る'], answer: 0 },
+      { q: 'いつスマホをしまうとよい？', choices: ['朝起きたとき', '夕食の前', '寝る1時間前'], answer: 2 },
+    ],
+  },
+  {
+    id: 'garden-tomato',
+    title: 'My Tomato Plant',
+    text: 'In May, I planted a small tomato plant on our balcony. I gave it water every morning. By July, it was taller than me. I picked twenty tomatoes this summer. My mother used them in a salad.',
+    ja: '5月に、ベランダに小さなトマトの苗を植えました。毎朝水をあげました。7月には私より背が高くなりました。この夏、トマトを20個収穫しました。母がそれをサラダに使ってくれました。',
+    questions: [
+      { q: 'トマトを植えたのは何月？', choices: ['3月', '5月', '7月'], answer: 1 },
+      { q: '7月にはどうなった？', choices: ['かれた', '花がさかなかった', '私より背が高くなった'], answer: 2 },
+      { q: 'トマトはいくつとれた？', choices: ['20個', '12個', '2個'], answer: 0 },
+    ],
+  },
+  {
+    id: 'museum-trip',
+    title: 'A Trip to the Science Museum',
+    text: 'Last week, our class visited a science museum. We saw a real dinosaur bone and a model of a rocket. My favorite part was the planetarium. I learned that some stars are much bigger than the sun.',
+    ja: '先週、私たちのクラスは科学館を訪れました。本物の恐竜の骨とロケットの模型を見ました。いちばん好きだったのはプラネタリウムです。太陽よりずっと大きい星があることを知りました。',
+    questions: [
+      { q: 'どこへ行った？', choices: ['美術館', '科学館', '動物園'], answer: 1 },
+      { q: 'いちばん好きだったのは？', choices: ['恐竜の骨', 'ロケットの模型', 'プラネタリウム'], answer: 2 },
+      { q: '何を知った？', choices: ['太陽より大きい星がある', '恐竜は今もいる', 'ロケットは小さい'], answer: 0 },
+    ],
+  },
+  {
+    id: 'grandpa-letter',
+    title: 'A Letter to Grandpa',
+    text: 'My grandfather lives far away, so I write him a letter every month. He cannot use e-mail, but he loves letters. Last month, he wrote back and sent me some photos of his garden. I keep all his letters in a box.',
+    ja: '祖父は遠くに住んでいるので、毎月手紙を書いています。祖父はメールが使えませんが、手紙が大好きです。先月、返事と庭の写真を送ってくれました。祖父からの手紙は全部箱にしまってあります。',
+    questions: [
+      { q: 'どのくらいの間隔で手紙を書く？', choices: ['毎週', '毎月', '毎年'], answer: 1 },
+      { q: '祖父が送ってくれたものは？', choices: ['庭の写真', '野菜', '本'], answer: 0 },
+      { q: '祖父からの手紙はどうしている？', choices: ['すてた', '友だちにあげた', '箱にしまってある'], answer: 2 },
+    ],
+  },
 ]
