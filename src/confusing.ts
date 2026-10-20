@@ -282,6 +282,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Do you think we can ___ the match?', choices: ['win', 'beat'], answer: 0, why: '試合（the match）に勝つので win。' },
     ],
   },
+  {
+    id: 'arrive-reach',
+    title: 'arrive と reach',
+    points: ['どちらも「着く」。arrive はあとに at（せまい場所）か in（広い場所）が必要。reach はすぐあとに場所を置く。'],
+    examples: [
+      { en: 'We arrived at the station.', ja: '私たちは駅に着いた。' },
+      { en: 'We reached the station.', ja: '私たちは駅に着いた。' },
+    ],
+    questions: [
+      { sentence: 'The plane ___ in London at noon.', choices: ['arrived', 'reached'], answer: 0, why: 'あとに in があるので arrive。' },
+      { sentence: 'They ___ the top of the mountain.', choices: ['arrived', 'reached'], answer: 1, why: 'すぐあとに場所があるので reach。' },
+      { sentence: 'What time did you ___ at school?', choices: ['arrive', 'reach'], answer: 0, why: 'あとに at があるので arrive。' },
+    ],
+  },
+  {
+    id: 'lose-miss',
+    title: 'lose と miss',
+    points: ['lose は「なくす・負ける」。miss は「（乗り物に）乗りおくれる・のがす・いなくてさびしく思う」。'],
+    examples: [
+      { en: 'I lost my wallet.', ja: 'さいふをなくした。' },
+      { en: 'I missed the bus.', ja: 'バスに乗りおくれた。' },
+    ],
+    questions: [
+      { sentence: 'Hurry up, or you will ___ the train.', choices: ['lose', 'miss'], answer: 1, why: '電車に「乗りおくれる」は miss。' },
+      { sentence: 'Our team ___ the game 2 to 3.', choices: ['lost', 'missed'], answer: 0, why: '試合に「負けた」は lose の過去形 lost。' },
+      { sentence: 'I will ___ you when you move away.', choices: ['lose', 'miss'], answer: 1, why: 'いなくて「さびしく思う」は miss。' },
+    ],
+  },
+  {
+    id: 'hope-wish',
+    title: 'hope と wish',
+    points: ['hope は「（実現しそうなことを）望む」。wish は「（実現がむずかしいことを）願う」で、あとの文は過去形になる（仮定法）。'],
+    examples: [
+      { en: 'I hope it will be sunny tomorrow.', ja: '明日晴れるといいな。' },
+      { en: 'I wish I could fly.', ja: '空を飛べたらいいのに。' },
+    ],
+    questions: [
+      { sentence: 'I ___ you get well soon.', choices: ['hope', 'wish'], answer: 0, why: 'よくなることは実現しそうなので hope。' },
+      { sentence: 'I ___ I were taller.', choices: ['hope', 'wish'], answer: 1, why: 'あとが過去形 were（事実とちがう願い）なので wish。' },
+      { sentence: 'We ___ to see you again.', choices: ['hope', 'wish'], answer: 0, why: '「また会いたい」は実現しそうな望みなので hope to。' },
+    ],
+  },
+  {
+    id: 'another-other',
+    title: 'another と other',
+    points: ['another は「もう1つの・別の1つの」で、あとは単数の名詞。other は「ほかの」で、あとはふつう複数の名詞（other students）。'],
+    examples: [
+      { en: 'Can I have another cookie?', ja: 'クッキーをもう1つもらえる？' },
+      { en: 'Some students walk, and other students ride bikes.', ja: '歩く生徒もいれば、自転車に乗る生徒もいる。' },
+    ],
+    questions: [
+      { sentence: 'Would you like ___ cup of tea?', choices: ['another', 'other'], answer: 0, why: 'あとが単数 cup で「もう1杯」なので another。' },
+      { sentence: 'Do you have any ___ questions?', choices: ['another', 'other'], answer: 1, why: 'あとが複数 questions なので other。' },
+      { sentence: 'This shirt is too small. Show me ___ one.', choices: ['another', 'other'], answer: 0, why: '「別の1つ」なので another one。' },
+    ],
+  },
+  {
+    id: 'use-borrow',
+    title: 'use と borrow（その場で使う）',
+    points: ['borrow は「借りて持っていく」。トイレや電話など、その場で使わせてもらうときは use を使う。'],
+    examples: [
+      { en: 'May I use your bathroom?', ja: 'お手洗いをお借りしてもいいですか。' },
+      { en: 'May I borrow this book until Friday?', ja: 'この本を金曜日まで借りてもいいですか。' },
+    ],
+    questions: [
+      { sentence: 'Can I ___ your phone for a minute?', choices: ['use', 'borrow'], answer: 0, why: 'その場でちょっと使わせてもらうので use。' },
+      { sentence: 'Can I ___ your umbrella? I\'ll return it tomorrow.', choices: ['use', 'borrow'], answer: 1, why: '持っていって明日返すので borrow。' },
+      { sentence: 'May I ___ the bathroom?', choices: ['use', 'borrow'], answer: 0, why: 'トイレは持っていけないので use。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元

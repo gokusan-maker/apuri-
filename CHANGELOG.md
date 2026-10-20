@@ -220,3 +220,4 @@
 - 2026-10-20: 中2の単語を20語追加（cousin・restaurant・thirsty など）
 - 2026-10-20: 中3の単語を20語追加（convenient・opportunity・explore など）
 - 2026-10-20: クイズの結果をテキストでシェアできるようにした（共有メニュー、なければコピー）
+- 2026-10-20: まちがえやすい単語を5組追加（arrive/reach・lose/miss・hope/wish・another/other・use/borrow、計25組）
