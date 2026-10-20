@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from 'react'
+import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -8,7 +9,7 @@ import type { Word } from './words'
 type Props = {
   words: Word[]
   count?: number
-  onAnswer?: (correct: boolean, xp: number, wordId: string) => void
+  onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
 }
 
 export function Spell({ words, count = 10, onAnswer }: Props) {
@@ -28,11 +29,11 @@ export function Spell({ words, count = 10, onAnswer }: Props) {
       setResult('ok')
       setScore(score + 1)
       playCorrect()
-      onAnswer?.(true, spellXp(hints), w.id)
+      onAnswer?.(true, spellXp(hints), w.id, 'ear')
     } else {
       setResult('ng')
       playWrong()
-      onAnswer?.(false, 0, w.id)
+      onAnswer?.(false, 0, w.id, 'ear')
     }
     speak(w.en)
   }

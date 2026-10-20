@@ -1,7 +1,14 @@
 // 相棒モンスター：学習で得た XP（エサ）で育つ。
+// XP の出どころ。Lv15 の進化先を決めるのに使う。
+export type Source = 'card' | 'quiz' | 'ear'
+export const SOURCES: Source[] = ['card', 'quiz', 'ear']
+
 export type MonsterState = {
   xp: number // 累計XP
   lastDay?: string // 最後にXPをもらった日（YYYY-MM-DD）。古い保存データには無い
+  src?: Partial<Record<Source, number>> // 出どころ別のXP
+  branch?: Source // Lv15 で決まった進化の系統
+  seen?: string[] // 出会った姿（図鑑）
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -36,7 +43,14 @@ export function loadMonster(): MonsterState {
     const raw = localStorage.getItem(STORAGE_KEY)
     const m = raw ? (JSON.parse(raw) as Partial<MonsterState>) : null
     const xp = typeof m?.xp === 'number' && m.xp >= 0 ? m.xp : 0
-    return typeof m?.lastDay === 'string' ? { xp, lastDay: m.lastDay } : { xp }
+    const out: MonsterState = { xp }
+    if (typeof m?.lastDay === 'string') out.lastDay = m.lastDay
+    if (m?.src && typeof m.src === 'object') {
+      out.src = Object.fromEntries(SOURCES.filter((k) => typeof m.src?.[k] === 'number').map((k) => [k, m.src![k]]))
+    }
+    if (m?.branch && SOURCES.includes(m.branch)) out.branch = m.branch
+    if (Array.isArray(m?.seen)) out.seen = m.seen.filter((x): x is string => typeof x === 'string')
+    return out
   } catch {
     return { xp: 0 }
   }
@@ -83,4 +97,58 @@ export function isLonely(m: MonsterState, today: string): boolean {
 // クイズ正解のXP。連続正解（コンボ）が続くほどボーナス（最大+10）。
 export function quizXp(combo: number): number {
   return XP_QUIZ_CORRECT + Math.min(Math.max(combo - 1, 0), 5) * 2
+}
+
+// 図鑑に載る姿。Lv15 からは学び方（系統）で姿が分かれる。
+export type Form = {
+  id: string
+  name: string
+  stage: number
+  branch?: Source
+  color: string
+  line: string
+  hint: string // 図鑑で未発見のときのヒント
+}
+
+export const FORMS: Form[] = [
+  { id: 'egg', name: 'ふしぎなタマゴ', stage: 0, color: '#fde68a', line: '#d97706', hint: 'はじめから' },
+  { id: 'chibi', name: 'ちびモチ', stage: 1, color: '#bbf7d0', line: '#15803d', hint: 'Lv2' },
+  { id: 'mochimaru', name: 'モチまる', stage: 2, color: '#86efac', line: '#15803d', hint: 'Lv5' },
+  { id: 'mori', name: 'モリモチ', stage: 3, branch: 'card', color: '#4ade80', line: '#166534', hint: 'Lv15・カード中心' },
+  { id: 'inazuma', name: 'イナズマモチ', stage: 3, branch: 'quiz', color: '#fde047', line: '#a16207', hint: 'Lv15・クイズ中心' },
+  { id: 'sora', name: 'ソラモチ', stage: 3, branch: 'ear', color: '#7dd3fc', line: '#0369a1', hint: 'Lv15・リスニング/スペル中心' },
+  { id: 'mori-king', name: 'モリノオオモチ', stage: 4, branch: 'card', color: '#22c55e', line: '#14532d', hint: 'Lv30・カード中心' },
+  { id: 'inazuma-king', name: 'カミナリオオモチ', stage: 4, branch: 'quiz', color: '#facc15', line: '#854d0e', hint: 'Lv30・クイズ中心' },
+  { id: 'sora-king', name: 'ソラノオオモチ', stage: 4, branch: 'ear', color: '#38bdf8', line: '#075985', hint: 'Lv30・リスニング/スペル中心' },
+]
+
+// いちばん多くXPをもらった学び方（同点ならカード→クイズ→耳の順）
+export function dominant(src: MonsterState['src']): Source {
+  let best: Source = 'card'
+  for (const k of SOURCES) if ((src?.[k] ?? 0) > (src?.[best] ?? 0)) best = k
+  return best
+}
+
+export function formOf(m: MonsterState): Form {
+  const stage = stageOf(levelInfo(m.xp).level).index
+  if (stage < 3) return FORMS.find((f) => f.stage === stage)!
+  const branch = m.branch ?? dominant(m.src)
+  return FORMS.find((f) => f.stage === stage && f.branch === branch)!
+}
+
+// XP をあげる。Lv15 に届いた時点の学び方で系統が決まり、以後は変わらない。
+export function feed(m: MonsterState, amount: number, source: Source, today: string): MonsterState {
+  const src = { ...m.src, [source]: (m.src?.[source] ?? 0) + amount }
+  const next: MonsterState = { ...m, xp: m.xp + amount, lastDay: today, src }
+  if (!next.branch && stageOf(levelInfo(next.xp).level).index >= 3) next.branch = dominant(src)
+  next.seen = seenForms(next)
+  return next
+}
+
+// 今の姿までに通ってきた姿（＋これまでに記録した姿）。古いデータでも途中の姿が図鑑に載る。
+export function seenForms(m: MonsterState): string[] {
+  const now = formOf(m)
+  const passed = FORMS.filter((f) => f.stage <= now.stage && (!f.branch || f.branch === now.branch)).map((f) => f.id)
+  const all = new Set([...(m.seen ?? []), ...passed])
+  return FORMS.filter((f) => all.has(f.id)).map((f) => f.id)
 }

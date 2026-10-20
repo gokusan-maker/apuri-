@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { XP_QUIZ_CORRECT } from './monster'
+import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { randomQuestion, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { loadBest, saveBest, TIME_LIMIT } from './timeAttack'
@@ -7,7 +7,7 @@ import type { Word } from './words'
 
 type Props = {
   words: Word[]
-  onAnswer?: (correct: boolean, xp: number, wordId: string) => void
+  onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number) => void
 }
 
@@ -62,11 +62,11 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
       setScore(scoreRef.current)
       setFlash('ok')
       playCorrect()
-      onAnswer?.(true, XP_QUIZ_CORRECT, q.word.id)
+      onAnswer?.(true, XP_QUIZ_CORRECT, q.word.id, 'quiz')
     } else {
       setFlash('ng')
       playWrong()
-      onAnswer?.(false, 0, q.word.id)
+      onAnswer?.(false, 0, q.word.id, 'quiz')
     }
     nextQuestion()
   }

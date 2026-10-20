@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { blankOut, canBlank } from './blank'
-import { quizXp } from './monster'
+import { quizXp, type Source } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -29,7 +29,7 @@ type Props = {
   targets?: Word[] // 出題する単語（省略時は words 全部）
   direction?: Direction
   count?: number
-  onAnswer?: (correct: boolean, xp: number, wordId: string) => void
+  onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number, total: number) => void
 }
 
@@ -63,12 +63,12 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
-      onAnswer?.(true, xp, q.word.id)
+      onAnswer?.(true, xp, q.word.id, direction === 'listen' ? 'ear' : 'quiz')
     } else {
       setCombo(0)
       setLastXp(0)
       playWrong()
-      onAnswer?.(false, 0, q.word.id)
+      onAnswer?.(false, 0, q.word.id, direction === 'listen' ? 'ear' : 'quiz')
     }
   }
 

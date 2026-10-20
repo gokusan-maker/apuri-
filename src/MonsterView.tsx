@@ -1,18 +1,15 @@
-import { levelInfo, stageOf } from './monster'
+import { FORMS, formOf, levelInfo, seenForms, type Form, type MonsterState } from './monster'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
 type Props = {
-  xp: number
+  monster: MonsterState
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
 }
 
-// 相棒は完全オリジナルのモチ型モンスター。段階ごとに色と飾りが増える。
-const COLORS = ['#fde68a', '#bbf7d0', '#86efac', '#7dd3fc', '#c4b5fd']
-const LINES = ['#d97706', '#15803d', '#15803d', '#0369a1', '#6d28d9']
-
+// 相棒は完全オリジナルのモチ型モンスター。段階と系統で色と飾りが変わる。
 function Face({ mood }: { mood: Mood }) {
   if (mood === 'lonely') {
     return (
@@ -39,47 +36,57 @@ function Face({ mood }: { mood: Mood }) {
   )
 }
 
-function Body({ stage, mood }: { stage: number; mood: Mood }) {
-  if (stage === 0) {
+export function MonsterFigure({ form, mood = 'normal', hidden = false }: { form: Form; mood?: Mood; hidden?: boolean }) {
+  const fill = hidden ? '#9ca3af' : form.color
+  const line = hidden ? '#6b7280' : form.line
+  if (form.stage === 0) {
     return (
       <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
-        <ellipse cx="50" cy="56" rx="30" ry="38" fill={COLORS[0]} stroke={LINES[0]} strokeWidth="3" />
-        <path d="M30 50 l8 -6 l8 6 l8 -6 l8 6 l8 -6" fill="none" stroke={LINES[0]} strokeWidth="3" />
-        <circle cx="40" cy="70" r="4" fill="#f59e0b" />
-        <circle cx="60" cy="78" r="3" fill="#f59e0b" />
+        <ellipse cx="50" cy="56" rx="30" ry="38" fill={fill} stroke={line} strokeWidth="3" />
+        <path d="M30 50 l8 -6 l8 6 l8 -6 l8 6 l8 -6" fill="none" stroke={line} strokeWidth="3" />
+        {!hidden && (
+          <>
+            <circle cx="40" cy="70" r="4" fill="#f59e0b" />
+            <circle cx="60" cy="78" r="3" fill="#f59e0b" />
+          </>
+        )}
       </svg>
     )
   }
-  const fill = COLORS[stage]
-  const line = LINES[stage]
   return (
     <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
-      {stage >= 3 && (
+      {form.branch === 'ear' && (
         <>
           <path d="M18 60 Q2 46 8 32 Q18 44 24 50 Z" fill={fill} stroke={line} strokeWidth="3" />
           <path d="M82 60 Q98 46 92 32 Q82 44 76 50 Z" fill={fill} stroke={line} strokeWidth="3" />
         </>
       )}
       <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 88 50 88 Q18 88 18 70 Z" fill={fill} stroke={line} strokeWidth="3" />
-      {stage >= 2 && <path d="M38 28 Q42 14 50 22 Q58 14 62 28" fill={fill} stroke={line} strokeWidth="3" />}
-      {stage >= 4 && <path d="M36 18 L40 6 L50 14 L60 6 L64 18 Z" fill="#facc15" stroke="#a16207" strokeWidth="2" />}
-      <Face mood={mood} />
+      {form.stage >= 2 && form.branch !== 'quiz' && form.branch !== 'card' && (
+        <path d="M38 28 Q42 14 50 22 Q58 14 62 28" fill={fill} stroke={line} strokeWidth="3" />
+      )}
+      {form.branch === 'card' && (
+        <path d="M50 27 Q38 8 54 4 Q62 18 50 27 Z M50 27 L54 10" fill="#16a34a" stroke="#14532d" strokeWidth="2" />
+      )}
+      {form.branch === 'quiz' && <path d="M54 2 L40 22 L50 22 L44 34 L62 14 L52 14 Z" fill="#facc15" stroke="#a16207" strokeWidth="2" />}
+      {form.stage >= 4 && <path d="M30 34 L33 24 L40 30 L50 20 L60 30 L67 24 L70 34 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="2" />}
+      {hidden ? <text x="50" y="66" textAnchor="middle" fontSize="22" fill="#f3f4f6">？</text> : <Face mood={mood} />}
     </svg>
   )
 }
 
-export function Monster({ xp, mood = 'normal', leveledUp = false, evolved = false }: Props) {
-  const { level, into, need } = levelInfo(xp)
-  const stage = stageOf(level)
+export function Monster({ monster, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+  const { level, into, need } = levelInfo(monster.xp)
+  const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
     <section className="monster" aria-label="相棒モンスター">
       <div className={`monster-body${cls}${evolved ? ' evolve' : ''}`}>
-        <Body stage={stage.index} mood={mood} />
+        <MonsterFigure form={form} mood={mood} />
       </div>
       <div className="monster-info">
         <p className="monster-name">
-          {stage.name} <span className="monster-level">Lv.{level}</span>
+          {form.name} <span className="monster-level">Lv.{level}</span>
         </p>
         <div className="xp-bar" role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
           <div className="xp-fill" style={{ width: `${(into / need) * 100}%` }} />
@@ -88,7 +95,7 @@ export function Monster({ xp, mood = 'normal', leveledUp = false, evolved = fals
           XP {into} / {need}
         </p>
         {evolved ? (
-          <p className="level-up">{stage.index === 1 ? 'タマゴがかえった！' : `${stage.name}に進化した！`}</p>
+          <p className="level-up">{form.stage === 1 ? 'タマゴがかえった！' : `${form.name}に進化した！`}</p>
         ) : leveledUp ? (
           <p className="level-up">レベルアップ！</p>
         ) : mood === 'lonely' ? (
@@ -96,5 +103,28 @@ export function Monster({ xp, mood = 'normal', leveledUp = false, evolved = fals
         ) : null}
       </div>
     </section>
+  )
+}
+
+export function Zukan({ monster }: { monster: MonsterState }) {
+  const seen = new Set(seenForms(monster))
+  return (
+    <div className="zukan">
+      <h2>
+        モンスター図鑑 {seen.size} / {FORMS.length}
+      </h2>
+      <p className="stats-note">Lv15 からは、いちばん多く使った学び方で進化先が変わるよ。</p>
+      <ul className="badge-grid">
+        {FORMS.map((f) => (
+          <li key={f.id} className={seen.has(f.id) ? 'got' : 'locked'}>
+            <span className="zukan-figure">
+              <MonsterFigure form={f} hidden={!seen.has(f.id)} />
+            </span>
+            <span className="badge-name">{seen.has(f.id) ? f.name : '？？？'}</span>
+            <span className="badge-desc">{f.hint}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

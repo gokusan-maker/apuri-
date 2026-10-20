@@ -18,7 +18,7 @@ describe('Spell', () => {
     fireEvent.change(screen.getByLabelText('英単語を入力'), { target: { value: w.en.toUpperCase() } })
     fireEvent.click(screen.getByText('こたえる'))
     expect(screen.getByText('正解！')).toBeInTheDocument()
-    expect(onAnswer).toHaveBeenCalledWith(true, 8, w.id)
+    expect(onAnswer).toHaveBeenCalledWith(true, 8, w.id, 'ear')
   })
 
   it('まちがえると正しいつづりを見せ、最後に結果', () => {

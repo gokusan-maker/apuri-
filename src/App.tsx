@@ -3,13 +3,15 @@ import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Celebrate } from './CelebrateView'
-import { Monster } from './MonsterView'
+import { Monster, Zukan } from './MonsterView'
 import {
+  feed,
+  formOf,
   isLonely,
   levelInfo,
   loadMonster,
   saveMonster,
-  stageOf,
+  type Source,
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
 } from './monster'
@@ -100,20 +102,18 @@ function App() {
   useEffect(() => saveMistakes(mistakes), [mistakes])
   const [weakOnly, setWeakOnly] = useState(false)
 
-  function onAnswer(correct: boolean, xp: number, wordId: string) {
+  function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
     studied(correct)
     if (!correct) setMistakes((m) => addMistake(m, wordId))
-    if (correct && xp > 0) gainXp(xp)
+    if (correct && xp > 0) gainXp(xp, source)
   }
 
-  function gainXp(amount: number) {
-    const before = levelInfo(monster.xp).level
-    const xp = monster.xp + amount
-    const after = levelInfo(xp).level
-    setMonster({ xp, lastDay: today })
+  function gainXp(amount: number, source: Source) {
+    const next = feed(monster, amount, source, today)
+    setMonster(next)
     setHappy(true)
-    setLeveledUp(after > before)
-    setEvolved(stageOf(after).index > stageOf(before).index)
+    setLeveledUp(levelInfo(next.xp).level > levelInfo(monster.xp).level)
+    setEvolved(formOf(next).id !== formOf(monster).id)
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
       setHappy(false)
@@ -159,7 +159,7 @@ function App() {
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     studied(correct)
     if (!correct) setMistakes((m) => addMistake(m, card.id))
-    gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN)
+    gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
     setFlipped(false)
   }
 
@@ -173,7 +173,7 @@ function App() {
           </p>
         </div>
         <Monster
-          xp={monster.xp}
+          monster={monster}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}
@@ -249,6 +249,7 @@ function App() {
             </>
           )}
           <BadgeList earned={earned} />
+          <Zukan monster={monster} />
           <Backup />
         </section>
       ) : mode === 'quiz' ? (

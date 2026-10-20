@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { isLonely, quizXp, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
+import { feed, formOf, isLonely, quizXp, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
 
 describe('monster', () => {
   beforeEach(() => localStorage.clear())
@@ -58,4 +58,41 @@ it('コンボボーナスは1コンボ+0、以降+2ずつ、最大+10', () => {
   expect(quizXp(2)).toBe(12)
   expect(quizXp(6)).toBe(20)
   expect(quizXp(20)).toBe(20)
+})
+
+describe('進化の分岐と図鑑', () => {
+  const xpForLevel = (lv: number) => {
+    let xp = 0
+    for (let l = 1; l < lv; l++) xp += xpToNext(l)
+    return xp
+  }
+
+  it('Lv15 になった時点でいちばん多い学び方の系統に進化し、その後は変わらない', () => {
+    let m: MonsterState = { xp: xpForLevel(15) - 10, src: { card: 100, quiz: 300 } }
+    expect(formOf(m).id).toBe('mochimaru')
+    m = feed(m, 10, 'card', '2026-10-20')
+    expect(m.branch).toBe('quiz')
+    expect(formOf(m).name).toBe('イナズマモチ')
+    m = feed(m, 5000, 'card', '2026-10-21')
+    expect(m.branch).toBe('quiz')
+    expect(formOf(m).id).toBe('inazuma-king')
+  })
+
+  it('リスニング・スペル中心ならソラモチ', () => {
+    const m = feed({ xp: xpForLevel(15) - 1, src: { ear: 500 } }, 1, 'ear', '2026-10-20')
+    expect(formOf(m).id).toBe('sora')
+  })
+
+  it('図鑑には通ってきた姿が全部のる（古いデータでも）', () => {
+    expect(seenForms({ xp: xpForLevel(5) })).toEqual(['egg', 'chibi', 'mochimaru'])
+    const m = feed({ xp: xpForLevel(30), branch: 'card' }, 1, 'card', '2026-10-20')
+    expect(m.seen).toEqual(['egg', 'chibi', 'mochimaru', 'mori', 'mori-king'])
+  })
+
+  it('保存した系統・出どころ・図鑑を読み込める', () => {
+    saveMonster({ xp: 3, src: { quiz: 3 }, branch: 'quiz', seen: ['egg'] })
+    expect(loadMonster()).toEqual({ xp: 3, src: { quiz: 3 }, branch: 'quiz', seen: ['egg'] })
+    localStorage.setItem('eitan:monster', '{"xp":3,"branch":"magic","seen":[1,"egg"]}')
+    expect(loadMonster()).toEqual({ xp: 3, seen: ['egg'] })
+  })
 })

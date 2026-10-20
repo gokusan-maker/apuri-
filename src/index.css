@@ -355,3 +355,5 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .badge-toast-title { font-size: 0.75rem; opacity: 0.8; }
 .badge-toast-name { font-weight: 700; }
 @keyframes toast-in { from { transform: translate(-50%, 20px); opacity: 0; } }
+.zukan { margin-top: 24px; }
+.zukan-figure { width: 56px; height: 56px; }
