@@ -101,6 +101,7 @@ const STATS_TABS = [
 
 const LUCKY_XP = 20
 const REVIEW_DONE_COINS = 10
+const EVENT_COINS = 10 // 季節のイベント期間の、その日はじめての学習
 function saveReviewDone(day: string) {
   try {
     localStorage.setItem('eitan:review-done', day)
@@ -205,9 +206,10 @@ function App() {
     if (streak?.last !== today) {
       setTotals((t) => ({ ...t, studyDays: (t.studyDays ?? 0) + 1 }))
       const early = isEarlyNow() ? EARLY_COINS : 0
-      const bonus = (r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS) + early
+      const eventBonus = seasonEvent ? EVENT_COINS : 0
+      const bonus = (r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS) + early + eventBonus
       setWallet((w) => ({ ...w, coins: w.coins + bonus }))
-      pushToast([{ id: 'login', text: `${early ? '早起きえらい！' : '今日もえらい！'} 🪙${bonus}`, counter: 'answers', target: 0 }])
+      pushToast([{ id: 'login', text: `${seasonEvent ? `${seasonEvent.icon} ${seasonEvent.name}ボーナスつき！ ` : ''}${early ? '早起きえらい！' : '今日もえらい！'} 🪙${bonus}`, counter: 'answers', target: 0 }])
       const days = (totals.studyDays ?? 0) + 1
       if (bondLevel(days) > bondLevel(days - 1)) {
         pushToast([{ id: 'bond', text: `${monster.name ?? formOf(monster).name}「いつもありがとう！」 ${bondHearts(bondLevel(days))}`, counter: 'answers', target: 0 }])

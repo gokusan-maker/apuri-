@@ -549,6 +549,9 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByText(/ハロウィンウィーク/)).toBeInTheDocument()
     expect(screen.getByLabelText('飾り 🎃')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText(/ハロウィンボーナスつき！ 今日もえらい！ 🪙15/)).toBeInTheDocument()
   })
 
   it('週末は正解のXPが2倍', () => {
