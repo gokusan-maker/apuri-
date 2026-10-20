@@ -94,3 +94,23 @@ export function countQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([n, ...near], rng).map((x) => NUM_EN[x])
   return { prompt: `${e.repeat(n)}\nいくつある？`, choices, answer: choices.indexOf(NUM_EN[n]), why: `${n} は ${NUM_EN[n]}`, wordId: NUM_EN[n] }
 }
+
+// 時計を読もう：時計の絵文字（ちょうど・30分）を英語で
+const CLOCKS = ['🕐', '🕑', '🕒', '🕓', '🕔', '🕕', '🕖', '🕗', '🕘', '🕙', '🕚', '🕛']
+const HALF = ['🕜', '🕝', '🕞', '🕟', '🕠', '🕡', '🕢', '🕣', '🕤', '🕥', '🕦', '🕧']
+const timeEn = (h: number, half: boolean) => (half ? `${NUM_EN[h]} thirty` : `${NUM_EN[h]} o'clock`)
+
+export function clockQ(rng: Rng = Math.random): PuzzleQ {
+  const h = 1 + Math.floor(rng() * 12)
+  const half = rng() < 0.5
+  const ans = timeEn(h, half)
+  const others = [timeEn(h, !half), timeEn((h % 12) + 1, half), timeEn(((h + 10) % 12) + 1, half), timeEn((h % 12) + 1, !half)]
+  const choices = shuffle([ans, ...shuffle(others, rng).slice(0, 3)], rng)
+  return {
+    prompt: `${(half ? HALF : CLOCKS)[h - 1]}\n何時？`,
+    choices,
+    answer: choices.indexOf(ans),
+    why: `${h}:${half ? '30' : '00'} は ${ans}`,
+    wordId: NUM_EN[h],
+  }
+}

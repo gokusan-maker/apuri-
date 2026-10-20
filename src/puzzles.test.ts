@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, clockQ, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -46,5 +46,16 @@ describe('パズル', () => {
       expect(new Set(q.choices).size).toBe(4)
       expect(WORDS.some((w) => w.id === q.wordId)).toBe(true)
     }
+  })
+
+  it('時計を読もう：絵文字と答えが合い、選択肢は4つでちがう', () => {
+    const seq = (xs: number[]) => () => xs.shift() ?? 0
+    const q = clockQ(seq([6 / 12, 0.1]))
+    expect(q.prompt.startsWith('🕢')).toBe(true)
+    expect(q.choices[q.answer]).toBe('seven thirty')
+    const q2 = clockQ(seq([0, 0.9]))
+    expect(q2.prompt.startsWith('🕐')).toBe(true)
+    expect(q2.choices[q2.answer]).toBe("one o'clock")
+    for (let i = 0; i < 50; i++) expect(new Set(clockQ().choices).size).toBe(4)
   })
 })

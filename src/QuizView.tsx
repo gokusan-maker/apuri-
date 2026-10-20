@@ -21,7 +21,7 @@ import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
 import { Versus } from './VersusView'
 import { Puzzle } from './PuzzleView'
-import { abcQ, countQ, oddQ, oppositeQ } from './puzzles'
+import { abcQ, clockQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -55,7 +55,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -108,6 +108,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'opposite', label: '↔️ 反対の意味', group: '4択' },
   { id: 'odd', label: '🧩 仲間はずれ', group: '4択' },
   { id: 'count', label: '🔢 いくつある？', group: '4択' },
+  { id: 'clock', label: '🕐 時計を読もう', group: '4択' },
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
@@ -388,6 +389,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Sequence key={count} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'clock') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Puzzle key="clock" make={() => clockQ()} onAnswer={onAnswer} />
       </>
     )
   }
