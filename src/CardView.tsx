@@ -77,8 +77,11 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
     ? {
         onPointerDown: (e: PointerEvent) => {
           start.current = { x: e.clientX, y: e.clientY }
+          // カードの外で指やマウスを離しても離したことがわかるように
+          ;(e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId)
         },
         onPointerMove: (e: PointerEvent) => {
+          if (e.pointerType === 'mouse' && e.buttons === 0) start.current = null
           if (start.current) setDx(e.clientX - start.current.x)
         },
         onPointerUp: (e: PointerEvent) => {

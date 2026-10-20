@@ -11,7 +11,7 @@ import { Grammar } from './GrammarView'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
-import type { Word } from './words'
+import { WORDS, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
 // spell：日本語を見て英単語を入力
@@ -33,7 +33,9 @@ const pool = (d: Direction, ws: Word[], all: Word[]) => {
   const can = d === 'blank' ? canBlank : d === 'sentence' ? (w: Word) => !!w.example && !!w.exampleJa : null
   if (!can) return ws
   const ok = ws.filter(can)
-  return ok.length > 0 ? ok : all.filter(can)
+  if (ok.length > 0) return ok
+  const fromAll = all.filter(can)
+  return fromAll.length > 0 ? fromAll : WORDS.filter(can)
 }
 
 type Q = Question<Word> & { d?: Direction } // d：ミックスのときのその問題の種類

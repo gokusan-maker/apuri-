@@ -49,7 +49,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_XP, loadBoss, saveBoss } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -351,7 +351,7 @@ function App() {
           boss={boss}
           onBossWin={(level) => {
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
-            updateMonster((m) => feed(m, BOSS_XP, null, today))
+            updateMonster((m) => feed(m, boss[level] ? BOSS_REMATCH_XP : BOSS_XP, null, today))
           }}
           record={stages}
           onAnswer={onAnswer}

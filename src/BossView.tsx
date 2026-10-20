@@ -11,6 +11,7 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onWin: () => void
   onExit: () => void
+  bonus?: number
 }
 
 // オリジナルのボス。単語帳ごとに色と名前が変わる
@@ -27,7 +28,7 @@ function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   )
 }
 
-export function Boss({ level, words, onAnswer, onWin, onExit }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100 }: Props) {
   const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(BOSS_HP)
@@ -99,7 +100,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit }: Props) {
       {won ? (
         <>
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
-          <p className="result-message">ボーナス +100XP</p>
+          <p className="result-message">ボーナス +{bonus}XP</p>
           <button className="flip" onClick={onExit}>
             ステージにもどる
           </button>

@@ -8,9 +8,18 @@ export function isCorrectSpelling(input: string, answer: string): boolean {
 }
 
 // 先頭から shown 文字だけ見せ、残りは「_」。最後の1文字は見せない。
+// 熟語の単語の区切り（空白）はそのまま見せ、文字数にも数えない
 export function hintText(answer: string, shown: number): string {
-  const n = Math.min(Math.max(shown, 0), Math.max(answer.length - 1, 0))
-  return [...answer].map((c, i) => (i < n ? c : '_')).join(' ')
+  const n = Math.min(Math.max(shown, 0), Math.max(letterCount(answer) - 1, 0))
+  let seen = 0
+  return answer
+    .split(' ')
+    .map((word) => [...word].map((c) => (seen++ < n ? c : '_')).join(' '))
+    .join('   ')
+}
+
+export function letterCount(answer: string): number {
+  return answer.replace(/\s/g, '').length
 }
 
 export const XP_SPELL = 15

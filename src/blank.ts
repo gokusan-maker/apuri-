@@ -7,7 +7,20 @@ function stem(en: string): string {
   return en
 }
 
+// 熟語（look for など）：最初の語は変化形も認める。be 動詞の熟語は be のあとを空欄にする
+function blankPhrase(example: string, en: string): Blanked | null {
+  const key = en.toLowerCase().startsWith('be ') ? en.slice(3) : en
+  const parts = key.toLowerCase().split(/\s+/)
+  const esc = (x: string) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+  const first = esc(stem(parts[0])) + '[a-z]*'
+  const re = new RegExp(`\\b${[first, ...parts.slice(1).map(esc)].join('\\s+')}\\b`, 'i')
+  const m = re.exec(example)
+  if (!m) return null
+  return { before: example.slice(0, m.index), answer: m[0], after: example.slice(m.index + m[0].length) }
+}
+
 export function blankOut(example: string, en: string): Blanked | null {
+  if (/\s/.test(en.trim())) return blankPhrase(example, en)
   const target = en.toLowerCase()
   const s = stem(target)
   const re = /[A-Za-z]+/g

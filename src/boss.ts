@@ -6,6 +6,7 @@ export const BOSS_HP = 100
 export const HEARTS = 3
 export const BOSS_QUESTIONS = 20
 export const BOSS_XP = 100
+export const BOSS_REMATCH_XP = 20 // 2回目以降の撃破ボーナス
 
 // 正解のダメージ。連続正解で少しずつ強くなる（最大10）
 export function damage(combo: number): number {

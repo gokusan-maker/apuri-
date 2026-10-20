@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSSES, bossUnlocked, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, type BossRecord } from './boss'
 import { Boss } from './BossView'
 import { Quiz } from './QuizView'
 import { isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -28,6 +28,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
       <Boss
         level={fighting}
         words={wordsOf([fighting])}
+        bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onAnswer={onAnswer}
         onWin={() => onBossWin?.(fighting)}
         onExit={() => setFighting(null)}

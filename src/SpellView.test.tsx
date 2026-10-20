@@ -33,7 +33,7 @@ describe('Spell', () => {
 })
 
 describe('ディクテーション', () => {
-  it('日本語は答えるまで隠れていて、音声で出題される', () => {
+  it('音声で出題され、同音異義語で迷わないよう意味もヒントで出る', () => {
     const spoken: string[] = []
     Object.assign(window, {
       SpeechSynthesisUtterance: class {
@@ -48,10 +48,10 @@ describe('ディクテーション', () => {
     render(<Spell words={words} count={1} byEar />)
     expect(spoken).toHaveLength(1)
     const w = words.find((x) => x.en === spoken[0])!
-    expect(screen.queryByText(w.ja)).not.toBeInTheDocument()
+    expect(screen.getByText(`聞こえた英単語を書こう（意味：${w.ja}）`)).toBeInTheDocument()
+    expect(screen.queryByText(w.en)).not.toBeInTheDocument()
     fireEvent.change(screen.getByLabelText('英単語を入力'), { target: { value: w.en } })
     fireEvent.click(screen.getByText('こたえる'))
     expect(screen.getByText('正解！')).toBeInTheDocument()
-    expect(screen.getByText(w.ja)).toBeInTheDocument()
   })
 })

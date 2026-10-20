@@ -3,7 +3,7 @@ import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
-import { hintText, isCorrectSpelling, spellXp } from './spell'
+import { hintText, isCorrectSpelling, letterCount, spellXp } from './spell'
 import type { Word } from './words'
 
 type Props = {
@@ -83,7 +83,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
           <button className="listen" type="button" onClick={() => speak(w.en)} aria-label="もう一度聞く">
             🔊
           </button>
-          <p className="example-ja">{result ? w.ja : '聞こえた英単語を書こう'}</p>
+          <p className="example-ja">聞こえた英単語を書こう（意味：{w.ja}）</p>
         </>
       ) : (
         <p className="en ja-prompt">{w.ja}</p>
@@ -110,7 +110,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
               type="button"
               className="again hint-btn"
               onClick={() => setHints(hints + 1)}
-              disabled={hints >= w.en.length - 1}
+              disabled={hints >= letterCount(w.en) - 1}
             >
               1文字ヒント
             </button>
