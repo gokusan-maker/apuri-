@@ -132,6 +132,24 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
 ]
 const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる', '文法・読解']
+const COLLAPSE_KEY = 'eitan:quiz-collapsed'
+function loadCollapsed(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(COLLAPSE_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+function saveCollapsed(list: string[]): string[] {
+  try {
+    localStorage.setItem(COLLAPSE_KEY, JSON.stringify(list))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return list
+}
+
 const MODE_KEY = 'eitan:quiz-mode'
 function loadMode(fallback: Direction): Direction {
   try {
@@ -186,6 +204,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     onAnswerProp?.(correct, xp, wordId, source)
   }
   const [played, setPlayed] = useState(loadPlayed)
+  const [collapsed, setCollapsed] = useState(loadCollapsed)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
@@ -324,7 +343,14 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}
           {GROUPS.map((g) => (
             <div key={g} className="mode-group">
-              <p className="mode-group-name">{g}</p>
+              <button
+                className="mode-group-name"
+                aria-expanded={!collapsed.includes(g)}
+                onClick={() => setCollapsed((c) => saveCollapsed(c.includes(g) ? c.filter((x) => x !== g) : [...c, g]))}
+              >
+                {collapsed.includes(g) ? '▶' : '▼'} {g}
+              </button>
+              {!collapsed.includes(g) && (
               <div className="direction">
                 {DIRECTIONS.filter((d) => d.group === g && ((d.id !== 'speak' && d.id !== 'read') || getRecognition())).map((d) => (
                   <button
@@ -345,6 +371,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
                   </button>
                 ))}
               </div>
+              )}
             </div>
           ))}
         </div>

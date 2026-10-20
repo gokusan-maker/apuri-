@@ -658,7 +658,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .mode-btn { display: block; width: 100%; margin-bottom: 6px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 12px; background: var(--bg); color: var(--fg); font-weight: 700; text-align: left; }
 .mode-change { float: right; font-weight: 400; font-size: 0.8rem; color: var(--accent); }
 .mode-menu { margin-bottom: 8px; text-align: left; }
-.mode-group-name { margin: 6px 0 4px; font-size: 0.75rem; color: var(--muted); }
+.mode-group-name { display: block; margin: 6px 0 4px; padding: 2px 0; font-size: 0.75rem; color: var(--muted); background: none; border: none; cursor: pointer; text-align: left; }
 .mode-menu .direction { flex-wrap: wrap; overflow: visible; }
 .ta-top { margin: 0 auto 10px; padding: 0; list-style: none; max-width: 220px; text-align: left; } .ta-top li { padding: 2px 0; }
 .zukan-detail { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; font-size: 0.9rem; }

@@ -368,7 +368,21 @@ it('かんたんモードでは選択肢が3つ', () => {
 it('クイズの種類メニューに「パズル・ゲーム」グループがある', () => {
   render(<Quiz words={WORDS.slice(0, 8)} />)
   fireEvent.click(screen.getByText(/種類を変える/))
-  const g = screen.getByText('パズル・ゲーム').parentElement!
+  const g = screen.getByText(/パズル・ゲーム/).parentElement!
   expect(g.textContent).toContain('2人対戦')
   expect(g.textContent).toContain('アルファベット')
+})
+
+it('クイズの種類メニューのグループはたためて、たたんだことを覚える', () => {
+  localStorage.clear()
+  const { unmount } = render(<Quiz words={WORDS.slice(0, 8)} />)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/パズル・ゲーム/))
+  expect(screen.queryByText('👥 2人対戦')).not.toBeInTheDocument()
+  unmount()
+  render(<Quiz words={WORDS.slice(0, 8)} />)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  expect(screen.getByText(/パズル・ゲーム/).getAttribute('aria-expanded')).toBe('false')
+  fireEvent.click(screen.getByText(/パズル・ゲーム/))
+  expect(screen.getByText('👥 2人対戦')).toBeInTheDocument()
 })
