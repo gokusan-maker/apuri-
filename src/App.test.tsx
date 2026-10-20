@@ -517,4 +517,12 @@ describe('App', () => {
     render(<App />)
     expect(screen.queryByText('記念日おめでとう！')).not.toBeInTheDocument()
   })
+
+  it('10問ごとに相棒が応援してくれる', () => {
+    localStorage.setItem('eitan:today-count', JSON.stringify({ day: dayKey(), count: 9 }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText('Great job!')).toBeInTheDocument()
+  })
 })

@@ -13,6 +13,7 @@ type Props = {
   onShop?: () => void
   room?: string
   title?: string // 称号
+  cheer?: Line | null // 外から見せるひとこと（応援）
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -150,7 +151,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -178,10 +179,10 @@ export function Monster({ monster, onRename, coins, onShop, room, title, mood = 
       >
         <MonsterFigure form={form} mood={line ? 'happy' : mood} wear={monster.wear} />
       </button>
-      {line && (
+      {(line ?? cheer) && (
         <div className="bubble" role="status" onClick={() => setLine(null)}>
-          <span className="bubble-en">{line.en}</span>
-          <span className="bubble-ja">{line.ja}</span>
+          <span className="bubble-en">{(line ?? cheer)!.en}</span>
+          <span className="bubble-ja">{(line ?? cheer)!.ja}</span>
         </div>
       )}
       <div className="monster-info">

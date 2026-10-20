@@ -20,3 +20,16 @@ export function pickLine(stage: number, lonely: boolean, r: number): Line {
   if (lonely) return LONELY_LINE
   return LINES[Math.floor(r * LINES.length) % LINES.length]
 }
+
+// 学習中の応援（10問ごと）
+export const CHEERS: Line[] = [
+  { en: 'Great job!', ja: 'その調子！' },
+  { en: "You're doing well!", ja: 'よくできてるよ！' },
+  { en: 'Keep going!', ja: 'まだまだいけるよ！' },
+  { en: 'Wow, ten more!', ja: 'また10問！すごい！' },
+  { en: "I'm proud of you!", ja: 'きみはぼくのじまんだよ！' },
+]
+
+export function cheerFor(count: number): Line {
+  return CHEERS[Math.floor(count / 10 - 1) % CHEERS.length]
+}

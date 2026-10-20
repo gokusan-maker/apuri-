@@ -53,6 +53,7 @@ import {
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { titleFor } from './titles'
+import { cheerFor, type Line } from './talk'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
@@ -136,6 +137,12 @@ function App() {
   useStudyTime(setTimeLog, today)
 
   const [celebrate, setCelebrate] = useState(false)
+  const [cheer, setCheer] = useState<Line | null>(null) // 10問ごとの相棒の応援
+  useEffect(() => {
+    if (!cheer) return
+    const id = window.setTimeout(() => setCheer(null), 3000)
+    return () => window.clearTimeout(id)
+  }, [cheer])
   const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
 
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
@@ -163,6 +170,7 @@ function App() {
     if (r.used) setWallet((w) => ({ ...w, freezes: Math.max(0, (w.freezes ?? 0) - 1) }))
     const next = addToday(todayCount, today)
     setTodayCount(next)
+    if (next.count % 10 === 0) setCheer(cheerFor(next.count))
     setHistory((h) => addHistory(h, today))
     const reached = studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal
     if (reached) setCelebrate(true)
@@ -383,6 +391,7 @@ function App() {
           onShop={() => setShowShop(true)}
           room={wallet.room}
           title={titleFor(totals.studyDays ?? 0)}
+          cheer={cheer}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}
