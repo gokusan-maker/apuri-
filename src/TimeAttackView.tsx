@@ -7,12 +7,12 @@ import type { Word } from './words'
 
 type Props = {
   words: Word[]
-  onCorrect?: (xp: number) => void
+  onAnswer?: (correct: boolean, xp: number) => void
 }
 
 type Phase = 'ready' | 'play' | 'done'
 
-export function TimeAttack({ words, onCorrect }: Props) {
+export function TimeAttack({ words, onAnswer }: Props) {
   const [phase, setPhase] = useState<Phase>('ready')
   const [left, setLeft] = useState(TIME_LIMIT)
   const [score, setScore] = useState(0)
@@ -60,10 +60,11 @@ export function TimeAttack({ words, onCorrect }: Props) {
       setScore(scoreRef.current)
       setFlash('ok')
       playCorrect()
-      onCorrect?.(XP_QUIZ_CORRECT)
+      onAnswer?.(true, XP_QUIZ_CORRECT)
     } else {
       setFlash('ng')
       playWrong()
+      onAnswer?.(false, 0)
     }
     nextQuestion()
   }

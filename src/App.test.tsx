@@ -70,4 +70,18 @@ describe('App', () => {
     fireEvent.click(tab('カード'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
   })
+
+  it('記録画面に連続日数・今日の学習数・定着語数が出る（クイズの不正解も学習数に入る）', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    fireEvent.click(screen.getByRole('button', { name: /クイズ/ }))
+    const en = document.querySelector('.quiz .en')!.textContent
+    const word = WORDS.find((w) => w.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('1日')).toBeInTheDocument()
+    expect(screen.getByText('2問')).toBeInTheDocument()
+    expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
+  })
 })

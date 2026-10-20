@@ -21,6 +21,7 @@ import {
 } from './srs'
 import { Quiz } from './QuizView'
 import { TimeAttack } from './TimeAttackView'
+import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { WORDS } from './words'
 
@@ -64,8 +65,22 @@ function App() {
   useEffect(() => saveStreak(streak), [streak])
   const streakDays = currentStreak(streak, today)
 
-  function gainXp(amount: number) {
+  const [todayCount, setTodayCount] = useState(() => loadTodayCount(today))
+  useEffect(() => saveTodayCount(todayCount), [todayCount])
+  const studiedToday = todayCount.day === today ? todayCount.count : 0
+
+  // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
+  function studied() {
     setStreak(recordStudy(streak, today))
+    setTodayCount(addToday(todayCount, today))
+  }
+
+  function onAnswer(correct: boolean, xp: number) {
+    studied()
+    if (correct && xp > 0) gainXp(xp)
+  }
+
+  function gainXp(amount: number) {
     const before = levelInfo(monster.xp).level
     const xp = monster.xp + amount
     const after = levelInfo(xp).level
@@ -88,6 +103,7 @@ function App() {
   function answer(correct: boolean) {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
+    studied()
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN)
     setFlipped(false)
   }
@@ -121,17 +137,25 @@ function App() {
               <dd>{streakDays}日</dd>
             </div>
             <div>
+              <dt>今日の学習</dt>
+              <dd>{studiedToday}問</dd>
+            </div>
+            <div>
               <dt>定着語数</dt>
               <dd>
                 {learned} / {WORDS.length}
               </dd>
             </div>
           </dl>
+          <p className="stats-note">定着語数＝カードで3回以上続けて「覚えた」になった単語</p>
+          <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={WORDS.length} aria-valuenow={learned}>
+            <div className="xp-fill" style={{ width: `${(learned / WORDS.length) * 100}%` }} />
+          </div>
         </section>
       ) : mode === 'quiz' ? (
-        <Quiz words={WORDS} onCorrect={gainXp} />
+        <Quiz words={WORDS} onAnswer={onAnswer} />
       ) : mode === 'time' ? (
-        <TimeAttack words={WORDS} onCorrect={gainXp} />
+        <TimeAttack words={WORDS} onAnswer={onAnswer} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>

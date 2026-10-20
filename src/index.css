@@ -202,3 +202,6 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .tabbar button[aria-current='page'] { color: var(--accent); font-weight: 700; }
 .tab-icon { font-size: 1.3rem; }
 .stats-view h2 { margin: 0 0 8px; font-size: 1.2rem; }
+.choice:disabled { cursor: default; color: var(--fg); opacity: 0.55; }
+.choice.correct:disabled, .choice.wrong:disabled { color: #fff; opacity: 1; }
+.stats-note { color: var(--muted); font-size: 0.8rem; margin: 0 0 8px; }

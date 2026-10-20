@@ -18,8 +18,8 @@ describe('TimeAttack', () => {
   afterEach(() => vi.useRealTimers())
 
   it('60秒で終了し、正解数を自己ベストとして保存する', () => {
-    const onCorrect = vi.fn()
-    render(<TimeAttack words={WORDS} onCorrect={onCorrect} />)
+    const onAnswer = vi.fn()
+    render(<TimeAttack words={WORDS} onAnswer={onAnswer} />)
     expect(screen.getByText('自己ベスト 0 問')).toBeInTheDocument()
     fireEvent.click(screen.getByText('スタート'))
     expect(screen.getByText(`⏱ ${TIME_LIMIT}秒`)).toBeInTheDocument()
@@ -27,7 +27,8 @@ describe('TimeAttack', () => {
     answerCorrect()
     answerCorrect()
     expect(screen.getByText('3 問')).toBeInTheDocument()
-    expect(onCorrect).toHaveBeenCalledTimes(3)
+    expect(onAnswer).toHaveBeenCalledTimes(3)
+    expect(onAnswer).toHaveBeenCalledWith(true, 10)
     act(() => vi.advanceTimersByTime(TIME_LIMIT * 1000))
     expect(screen.getByText('タイムアップ！')).toBeInTheDocument()
     expect(screen.getByText('3 問正解')).toBeInTheDocument()

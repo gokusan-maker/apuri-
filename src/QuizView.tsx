@@ -13,10 +13,10 @@ type Props = {
   words: Word[]
   direction?: Direction
   count?: number
-  onCorrect?: (xp: number) => void
+  onAnswer?: (correct: boolean, xp: number) => void
 }
 
-export function Quiz({ words, direction: initial = 'en-ja', count = 10, onCorrect }: Props) {
+export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count))
   const [index, setIndex] = useState(0)
@@ -41,11 +41,12 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onCorrec
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
-      onCorrect?.(xp)
+      onAnswer?.(true, xp)
     } else {
       setCombo(0)
       setLastXp(0)
       playWrong()
+      onAnswer?.(false, 0)
     }
   }
 
