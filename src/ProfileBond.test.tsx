@@ -5,4 +5,5 @@ import { Profile } from './MonsterView'
 it('プロフィールになつき度が出る', () => {
   render(<Profile monster={{ xp: 100 } as never} studyDays={5} />)
   expect(screen.getByLabelText('なつき度 2').textContent).toContain('あと2日')
+  expect(screen.getByText(/あと .* レベル/)).toBeInTheDocument()
 })

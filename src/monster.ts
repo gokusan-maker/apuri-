@@ -200,3 +200,9 @@ export function rename(m: MonsterState, name: string): MonsterState {
   else delete next.name
   return next
 }
+
+// 次の進化までのレベル（最後のすがたなら null）
+export function levelsToNextStage(level: number): { name: string; levels: number } | null {
+  const next = STAGES.find((s) => s.minLevel > level)
+  return next ? { name: next.name, levels: next.minLevel - level } : null
+}

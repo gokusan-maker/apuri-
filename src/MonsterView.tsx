@@ -1,7 +1,7 @@
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { pickLineNow, type Line } from './talk'
@@ -402,6 +402,8 @@ export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; stu
         <dd>{monster.born ?? '記録なし'}</dd>
         <dt>累計XP</dt>
         <dd>{monster.xp}</dd>
+        <dt>次の進化</dt>
+        <dd>{levelsToNextStage(levelInfo(monster.xp).level) ? `あと ${levelsToNextStage(levelInfo(monster.xp).level)!.levels} レベル` : 'さいごのすがた！'}</dd>
         <dt>なつき度</dt>
         <dd aria-label={`なつき度 ${bondLevel(studyDays)}`}>
           {bondHearts(bondLevel(studyDays))}

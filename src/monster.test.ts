@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { feed, FORM_DESC, FORMS, formOf, isLonely, quizXp, rename, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
+import { feed, FORM_DESC, FORMS, formOf, isLonely, quizXp, rename, seenForms, type MonsterState, levelInfo, levelsToNextStage, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
 
 describe('monster', () => {
   beforeEach(() => localStorage.clear())
@@ -129,4 +129,10 @@ it('最初にXPをもらった日が出会った日になり、その後は変�
 
 it('図鑑のすべての姿に説明文がある', () => {
   for (const f of FORMS) expect(FORM_DESC[f.id], f.id).toBeTruthy()
+})
+
+it('次の進化までのレベル', () => {
+  expect(levelsToNextStage(1)).toEqual({ name: 'ちびモチ', levels: 1 })
+  expect(levelsToNextStage(10)?.levels).toBe(5)
+  expect(levelsToNextStage(50)).toBeNull()
 })
