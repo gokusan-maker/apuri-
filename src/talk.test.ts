@@ -26,3 +26,8 @@ describe('時間帯・季節のひとこと', () => {
     expect([1, 4, 7, 10, 12].map((m) => seasonLine(m).ja.slice(0, 2))).toEqual(['寒い', '春だ', '暑い', '秋は', '寒い'])
   })
 })
+
+it('新しいクイズを案内するひとことがある', () => {
+  expect(LINES.some((l) => l.ja.includes('2人対戦'))).toBe(true)
+  expect(LINES.some((l) => l.ja.includes('絵文字'))).toBe(true)
+})

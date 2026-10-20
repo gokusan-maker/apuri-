@@ -14,6 +14,9 @@ export const LINES: Line[] = [
   { en: 'Mistakes help us learn.', ja: 'まちがいは学びのもとだよ。' },
   { en: 'Can you say it out loud?', ja: '声に出して言ってみよう！' },
   { en: 'Words are like treasure.', ja: '単語は宝物みたいだね。' },
+  { en: 'Try the emoji quiz!', ja: '絵文字クイズもやってみてね！' },
+  { en: 'Play a quiz with a friend!', ja: '友だちと2人対戦してみよう！' },
+  { en: 'Can you find the odd one out?', ja: '仲間はずれ、見つけられるかな？' },
 ]
 
 // 時間帯のひとこと
