@@ -364,3 +364,24 @@ const GRAMMAR_MAKERS = [beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, t
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
 }
+
+// 英語なぞなぞ（昔から言われている短いなぞなぞ）
+export const RIDDLES: { q: string; ja: string; a: string }[] = [
+  { q: "I have keys, but I can't open locks. What am I?", ja: 'かぎ（キー）があるのに、錠は開けられない', a: 'piano' },
+  { q: 'What has hands but cannot clap?', ja: '手（針）があるのに、手をたたけない', a: 'clock' },
+  { q: 'What has a neck but no head?', ja: '首があるのに、頭がない', a: 'bottle' },
+  { q: 'What gets wetter the more it dries?', ja: 'ふけばふくほど、ぬれていく', a: 'towel' },
+  { q: 'What has an eye but cannot see?', ja: '目（穴）があるのに、見えない', a: 'needle' },
+  { q: 'What goes up but never comes down?', ja: '上がるけれど、下がらない', a: 'age' },
+  { q: 'What has many teeth but cannot bite?', ja: '歯がたくさんあるのに、かめない', a: 'comb' },
+  { q: 'What has legs but cannot walk?', ja: '脚があるのに、歩けない', a: 'table' },
+  { q: 'What can you catch but not throw?', ja: 'つかまえられる（ひける）のに、投げられない', a: 'cold' },
+  { q: 'What has a face and two hands but no arms or legs?', ja: '顔と2本の手（針）があるのに、腕も脚もない', a: 'clock' },
+]
+
+export function riddleQ(rng: Rng = Math.random): PuzzleQ {
+  const r = RIDDLES[Math.floor(rng() * RIDDLES.length)]
+  const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a)
+  const choices = shuffle([r.a, ...shuffle(pool, rng).slice(0, 3)], rng)
+  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.ja} → ${r.a}`, wordId: idOf(r.a) ?? '' }
+}

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -162,5 +162,13 @@ describe('パズル', () => {
   it('文法ミックス：いろいろな種類が出る', () => {
     const prompts = new Set(Array.from({ length: 200 }, () => grammarMixQ().prompt.slice(0, 3)))
     expect(prompts.size).toBeGreaterThan(5)
+  })
+
+  it('なぞなぞ：答えが合い、選択肢は4つでちがう', () => {
+    for (let i = 0; i < 40; i++) {
+      const q = riddleQ()
+      expect(RIDDLES.filter((r) => r.q === q.prompt).map((r) => r.a)).toContain(q.choices[q.answer])
+      expect(new Set(q.choices).size).toBe(4)
+    }
   })
 })

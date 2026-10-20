@@ -393,3 +393,4 @@
 - 2026-10-20: 高校基礎の単語を20語追加（obvious・option・overcome・perspective など、計260語）
 - 2026-10-20: 熟語を20追加（come true・make sure・keep in touch など、計160）
 - 2026-10-20: Service Worker：新しい版の js/css をキャッシュしたら、同じ名前の古い版を消すようにした（端末の容量がふくらまないように。キャッシュ名も eitan-v3 に）
+- 2026-10-20: クイズに「英語なぞなぞ」を追加（I have keys but can't open locks. → piano など昔からある10問）
