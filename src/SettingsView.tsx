@@ -4,7 +4,7 @@ import { GRADES } from './grade'
 import type { Level } from './words'
 import { useState } from 'react'
 import { speak } from './speech'
-import { GOALS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
+import { DEFAULT_SETTINGS, GOALS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
 
 type Props = {
   settings: Settings
@@ -147,6 +147,15 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         <span>効果音</span>
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>
+
+      <button
+        className="danger-link"
+        onClick={() => {
+          if (window.confirm('設定を最初の状態にもどします（学習データはそのまま）。よろしいですか？')) onChange({ ...DEFAULT_SETTINGS })
+        }}
+      >
+        設定を初期値にもどす
+      </button>
 
       <Install />
       <OfflineStatus />

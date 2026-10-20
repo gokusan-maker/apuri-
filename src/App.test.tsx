@@ -556,4 +556,16 @@ describe('App', () => {
     render(<App />)
     expect(screen.queryByText(/先週のふりかえり/)).not.toBeInTheDocument()
   })
+
+  it('設定を初期値にもどせる（学習データは残る）', () => {
+    localStorage.setItem('eitan:settings', JSON.stringify({ theme: 'dark', rate: 0.7 }))
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 33, owned: [] }))
+    vi.spyOn(window, 'confirm').mockReturnValue(true)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.click(screen.getByText('設定を初期値にもどす'))
+    expect(JSON.parse(localStorage.getItem('eitan:settings')!).theme).toBe('system')
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(33)
+    vi.restoreAllMocks()
+  })
 })
