@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { backupFileName, exportData, importData, resetAll } from './backup'
+import { backupFileName, exportData, importData, needBackup, resetAll } from './backup'
 
 describe('バックアップ', () => {
   beforeEach(() => localStorage.clear())
@@ -45,4 +45,11 @@ it('すべてのデータを消す（ほかのアプリのデータは残す）'
   expect(resetAll()).toBe(2)
   expect(localStorage.getItem('eitan:monster')).toBeNull()
   expect(localStorage.getItem('other')).toBe('x')
+})
+
+it('バックアップのおすすめは、50問以上学習していて14日以上保存していないとき', () => {
+  expect(needBackup('', '2026-10-20', 10)).toBe(false)
+  expect(needBackup('', '2026-10-20', 60)).toBe(true)
+  expect(needBackup('2026-10-10', '2026-10-20', 60)).toBe(false)
+  expect(needBackup('2026-10-06', '2026-10-20', 60)).toBe(true)
 })

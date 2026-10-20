@@ -1,5 +1,6 @@
 import { useRef, useState, type ChangeEvent } from 'react'
-import { BackupError, backupFileName, exportData, importData, resetAll } from './backup'
+import { BackupError, backupFileName, exportData, importData, resetAll, saveLastBackup } from './backup'
+import { dayKey } from './srs'
 
 export function Backup() {
   const fileRef = useRef<HTMLInputElement>(null)
@@ -13,6 +14,7 @@ export function Backup() {
     a.download = backupFileName()
     a.click()
     URL.revokeObjectURL(url)
+    saveLastBackup(dayKey())
     setMessage('ファイルに保存しました')
   }
 

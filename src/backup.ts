@@ -69,3 +69,31 @@ export function resetAll(storage: Storage = localStorage): number {
   keys.forEach((k) => storage.removeItem(k))
   return keys.length
 }
+
+// 最後にファイルに保存した日。しばらく保存していなければ案内する
+const LAST_KEY = 'eitan:last-backup'
+export const BACKUP_REMIND_DAYS = 14
+
+export function loadLastBackup(): string {
+  try {
+    return localStorage.getItem(LAST_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+export function saveLastBackup(day: string): void {
+  try {
+    localStorage.setItem(LAST_KEY, day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
+export function needBackup(last: string, today: string, answers: number): boolean {
+  if (answers < 50) return false // まだあまり学習していない
+  if (!last) return true
+  const [y1, m1, d1] = last.split('-').map(Number)
+  const [y2, m2, d2] = today.split('-').map(Number)
+  return (Date.UTC(y2, m2 - 1, d2) - Date.UTC(y1, m1 - 1, d1)) / 86400000 >= BACKUP_REMIND_DAYS
+}

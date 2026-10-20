@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
+import { loadLastBackup, needBackup } from './backup'
 import { Card } from './CardView'
 import { WordList } from './WordListView'
 import { makeLookup } from './glossary'
@@ -536,6 +537,12 @@ function App() {
           </div>
           {statsTab === 'log' && (
             <>
+              {needBackup(loadLastBackup(), today, totals.answers) && (
+                <p className="weak-banner backup-remind" role="status">
+                  💾 しばらくデータを保存していません
+                  <button onClick={() => setStatsTab('data')}>保存する</button>
+                </p>
+              )}
             <WordOfDay word={pickWordOfDay(WORDS, today)} />
             <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
             <Stats
