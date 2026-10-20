@@ -390,3 +390,4 @@
 - 2026-10-20: 遊び方ヘルプ・README に、レベル診断と今日のボスを追記
 - 2026-10-20: 中2に基本語を20語追加（robot・rocket・screen・snack など）
 - 2026-10-20: 中3に基本語を20語追加（stadium・suitcase・teenager など。絵文字クイズにも）
+- 2026-10-20: 高校基礎の単語を20語追加（obvious・option・overcome・perspective など、計260語）
