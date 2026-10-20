@@ -2,6 +2,7 @@
 export type Progress = {
   box: number
   due: string // YYYY-MM-DD
+  first?: string // はじめて学んだ日（古いデータにはない）
 }
 
 export type ProgressMap = Record<string, Progress>
@@ -25,7 +26,7 @@ export function addDays(day: string, n: number): string {
 // easy：「かんたん」のときは箱を2つ進める
 export function grade(prev: Progress | undefined, correct: boolean, today: string, easy = false): Progress {
   const box = correct ? Math.min((prev?.box ?? 0) + (easy ? 2 : 1), INTERVALS.length - 1) : 0
-  return { box, due: addDays(today, INTERVALS[box]) }
+  return { box, due: addDays(today, INTERVALS[box]), first: prev ? prev.first : today }
 }
 
 export function isDue(p: Progress | undefined, today: string): boolean {
@@ -124,4 +125,11 @@ function hash(s: string): number {
   let h = 2166136261
   for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619) >>> 0
   return h
+}
+
+// その日にはじめて学んだ単語のid
+export function firstLearnedOn(progress: ProgressMap, day: string): string[] {
+  return Object.entries(progress)
+    .filter(([, p]) => p.first === day)
+    .map(([id]) => id)
 }

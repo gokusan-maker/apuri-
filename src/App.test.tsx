@@ -435,6 +435,16 @@ describe('App', () => {
     expect(screen.getByText(/今日の残り 5 語/)).toBeInTheDocument()
   })
 
+  it('記録画面に「今日はじめて学んだ単語」が出る', () => {
+    render(<App />)
+    const en = document.querySelector('.card .en')!.textContent!
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('🌱 今日はじめて学んだ単語（1語）')).toBeInTheDocument()
+    expect(screen.getByRole('list', { name: '今日はじめて学んだ単語' }).textContent).toContain(en.replace(/[🔊🐢]/gu, '').trim())
+  })
+
   it('記録画面のカレンダーに今日の学習が印される', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

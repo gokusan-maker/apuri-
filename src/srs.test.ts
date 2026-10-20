@@ -1,12 +1,12 @@
 import { describe, expect, it } from 'vitest'
-import { addDays, grade, isDue, upcoming } from './srs'
+import { addDays, firstLearnedOn, grade, isDue, upcoming } from './srs'
 
 describe('srs', () => {
   it('正解で箱が上がり、出題日が延びる', () => {
     const p1 = grade(undefined, true, '2026-10-20')
-    expect(p1).toEqual({ box: 1, due: '2026-10-21' })
+    expect(p1).toEqual({ box: 1, due: '2026-10-21', first: '2026-10-20' })
     const p2 = grade(p1, true, '2026-10-21')
-    expect(p2).toEqual({ box: 2, due: '2026-10-24' })
+    expect(p2).toEqual({ box: 2, due: '2026-10-24', first: '2026-10-20' })
   })
 
   it('不正解で箱0に戻り、今日また出題される', () => {
@@ -33,6 +33,11 @@ it('これから1週間の復習予定（期日を過ぎたものは今日）', 
 })
 
 it('「かんたん」は箱を2つ進める（上限あり）', () => {
-  expect(grade(undefined, true, '2026-10-20', true)).toEqual({ box: 2, due: '2026-10-23' })
+  expect(grade(undefined, true, '2026-10-20', true)).toEqual({ box: 2, due: '2026-10-23', first: '2026-10-20' })
   expect(grade({ box: 4, due: '2026-10-20' }, true, '2026-10-20', true).box).toBe(5)
+})
+
+it('はじめて学んだ日を記録し、その日の単語を取り出せる（古いデータは日付なし）', () => {
+  const p = { a: grade(undefined, true, '2026-10-20'), b: grade({ box: 1, due: '2026-10-19' }, true, '2026-10-20') }
+  expect(firstLearnedOn(p, '2026-10-20')).toEqual(['a'])
 })

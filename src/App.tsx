@@ -28,6 +28,7 @@ import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
+import { MissedList } from './MissedListView'
 import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
@@ -55,6 +56,7 @@ import {
   loadProgress,
   saveDailyNew,
   saveProgress,
+  firstLearnedOn,
   type ProgressMap,
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
@@ -79,7 +81,7 @@ import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, 
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
-import { LEVELS, WORDS, wordsOf } from './words'
+import { LEVELS, WORDS, wordsOf, type Word } from './words'
 
 type Tab = 'card' | 'stage' | 'quiz' | 'time' | 'stats' | 'settings'
 
@@ -333,6 +335,9 @@ function App() {
       // ストレージが使えない環境では保存をあきらめる
     }
   }, [today])
+  const firstToday = firstLearnedOn(progress, today)
+    .map((id) => WORDS.find((w) => w.id === id) ?? myWords.find((w) => w.id === id))
+    .filter((w): w is Word => !!w)
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
@@ -661,6 +666,12 @@ function App() {
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
                 <strong>{newToday}語</strong>
               </p>
+              {firstToday.length > 0 && (
+                <details className="first-today">
+                  <summary>🌱 今日はじめて学んだ単語（{firstToday.length}語）</summary>
+                  <MissedList words={firstToday} label="今日はじめて学んだ単語" />
+                </details>
+              )}
               {needBackup(loadLastBackup(), today, totals.answers) && (
                 <p className="weak-banner backup-remind" role="status">
                   💾 しばらくデータを保存していません
