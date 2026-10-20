@@ -353,7 +353,7 @@ export const CONFUSING: GrammarUnit[] = [
     ],
   },
   {
-    id: 'hear-sound',
+    id: 'sound-voice',
     title: 'sound と voice',
     points: ['sound は「音」全般（物音・楽器の音など）。voice は「人の声」。'],
     examples: [
