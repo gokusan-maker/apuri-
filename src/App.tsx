@@ -72,7 +72,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { buy, buyFreeze, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, couponsBetween, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -287,6 +287,11 @@ function App() {
     const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
     setLeveledUp(up)
     if (up) playFanfare()
+    const coupons = couponsBetween(levelInfo(monster.xp).level, levelInfo(next.xp).level)
+    if (coupons > 0) {
+      setWallet((w) => ({ ...w, coupons: (w.coupons ?? 0) + coupons }))
+      pushToast([{ id: 'coupon', text: `Lv.${levelInfo(next.xp).level} になった記念に割引券をもらった！（次の着せ替え・部屋が半額）`, counter: 'answers', target: 0 }])
+    }
     const changed = formOf(next).id !== formOf(monster).id
     setEvolved(changed)
     if (changed) setEvoForm(formOf(next).id)
@@ -883,6 +888,8 @@ function App() {
                 ? '🍀 ラッキー！'
                 : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
+                : missionToast[0].id === 'coupon'
+                ? '🎟 割引券ゲット'
                 : missionToast[0].id === 'souvenir'
                 ? '🎒 おみやげ'
                 : missionToast[0].id === 'snack'

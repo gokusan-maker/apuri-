@@ -31,7 +31,12 @@ export const isEarly = (hour: number) => hour >= 5 && hour < 10
 export const isEarlyNow = () => isEarly(new Date().getHours())
 export const LOGIN_WEEK_COINS = 20 // 7日連続ごと
 
-export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string }
+export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string; coupons?: number }
+
+// 相棒のレベルがこの数になったら割引券（次の着せ替え・部屋が半額）
+export const COUPON_LEVELS = [10, 20, 30]
+export const couponsBetween = (from: number, to: number) => COUPON_LEVELS.filter((l) => l > from && l <= to).length
+export const priceWith = (w: Wallet, price: number) => ((w.coupons ?? 0) > 0 ? Math.ceil(price / 2) : price)
 
 // 相棒の部屋の背景
 export const ROOMS: Item[] = [
@@ -54,8 +59,11 @@ export function buyFreeze(w: Wallet): Wallet | null {
 
 export function buy(w: Wallet, id: string): Wallet | null {
   const item = [...ITEMS, ...EVENT_ITEMS, ...ROOMS].find((i) => i.id === id)
-  if (!item || w.owned.includes(id) || w.coins < item.price) return null
-  return { ...w, coins: w.coins - item.price, owned: [...w.owned, id] }
+  if (!item || w.owned.includes(id)) return null
+  const price = priceWith(w, item.price)
+  if (w.coins < price) return null
+  const coupons = price < item.price ? (w.coupons ?? 0) - 1 : w.coupons
+  return { ...w, coins: w.coins - price, owned: [...w.owned, id], ...(coupons !== undefined ? { coupons } : {}) }
 }
 
 const STORAGE_KEY = 'eitan:wallet'
@@ -69,6 +77,7 @@ export function loadWallet(): Wallet {
       owned: Array.isArray(v?.owned) ? v.owned.filter((x) => [...ITEMS, ...EVENT_ITEMS, ...ROOMS].some((i) => i.id === x)) : [],
       ...(typeof v?.room === 'string' && ROOMS.some((r) => r.id === v.room) ? { room: v.room } : {}),
       freezes: typeof v?.freezes === 'number' && v.freezes > 0 ? Math.min(v.freezes, FREEZE_MAX) : 0,
+      ...(typeof v?.coupons === 'number' && v.coupons > 0 ? { coupons: Math.min(Math.floor(v.coupons), 9) } : {}),
     }
   } catch {
     return { coins: 0, owned: [] }

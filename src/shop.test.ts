@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
+import { buy, buyFreeze, couponsBetween, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -94,4 +94,13 @@ it('限定の着せ替えはイベント中か持っているときだけ並ぶ'
   expect(shopItems('halloween', []).some((i) => i.id === 'santahat')).toBe(false)
   expect(shopItems(undefined, ['santahat']).some((i) => i.id === 'santahat')).toBe(true)
   expect(buy({ coins: 100, owned: [] }, 'witchhat')).toMatchObject({ coins: 20, owned: ['witchhat'] })
+})
+
+it('割引券：レベル10・20・30でもらえ、次の着せ替えが半額', () => {
+  expect(couponsBetween(9, 10)).toBe(1)
+  expect(couponsBetween(10, 25)).toBe(1)
+  expect(couponsBetween(5, 31)).toBe(3)
+  expect(couponsBetween(10, 11)).toBe(0)
+  expect(buy({ coins: 60, owned: [], coupons: 1 }, 'hat')).toEqual({ coins: 0, owned: ['hat'], coupons: 0 })
+  expect(buy({ coins: 59, owned: [], coupons: 1 }, 'hat')).toBeNull()
 })

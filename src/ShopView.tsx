@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { FREEZE_MAX, FREEZE_PRICE, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
+import { FREEZE_MAX, FREEZE_PRICE, priceWith, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -61,14 +61,15 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
                   {using ? 'もとにもどす' : 'この部屋にする'}
                 </button>
               ) : (
-                <button className="shop-btn" disabled={wallet.coins < r.price} onClick={() => onBuy(r.id)}>
-                  🪙{r.price}で買う
+                <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
+                  🪙{priceWith(wallet, r.price)}で買う
                 </button>
               )}
             </li>
           )
         })}
       </ul>
+      {(wallet.coupons ?? 0) > 0 && <p className="weekend">🎟 割引券 {wallet.coupons}枚：次の着せ替え・部屋が半額！</p>}
       <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
       <ul className="badge-grid">
@@ -76,7 +77,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           const owned = wallet.owned.includes(it.id)
           const wearing = monster.wear === it.id
           return (
-            <li key={it.id} className={owned ? 'got' : wallet.coins >= it.price ? 'got' : 'locked'}>
+            <li key={it.id} className={owned ? 'got' : wallet.coins >= priceWith(wallet, it.price) ? 'got' : 'locked'}>
               <span className="badge-icon" aria-hidden="true">
                 {it.icon}
               </span>
@@ -86,8 +87,8 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
                   {wearing ? 'はずす' : 'つける'}
                 </button>
               ) : (
-                <button className="shop-btn" disabled={wallet.coins < it.price} onClick={() => onBuy(it.id)}>
-                  🪙{it.price}で買う
+                <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, it.price)} onClick={() => onBuy(it.id)}>
+                  🪙{priceWith(wallet, it.price)}で買う
                 </button>
               )}
             </li>
