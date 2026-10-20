@@ -1,8 +1,9 @@
+import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useState } from 'react'
 import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
-import { makeQuiz } from './quiz'
+import { easyIf, makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { LEVELS, WORDS, type Level, type Word } from './words'
 
@@ -31,7 +32,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 }
 
 export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend }: Props) {
-  const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words))
+  const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(BOSS_HP)
   const [hearts, setHearts] = useState(HEARTS)
@@ -73,7 +74,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
-    setQs(makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words))
+    setQs(makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
     setHp(BOSS_HP)
     setHearts(HEARTS)

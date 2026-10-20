@@ -1,7 +1,8 @@
+import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
-import { randomQuestion, type Question } from './quiz'
+import { easyIf, randomQuestion, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { addTop, LENGTHS, loadBest, loadTop, saveBest, saveTop, TIME_LIMIT } from './timeAttack'
 import { dayKey } from './srs'
@@ -30,7 +31,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [missed, setMissed] = useState<Word[]>([])
 
   function nextQuestion() {
-    setQ(randomQuestion(words, jaEn ? (x) => x.en : (x) => x.ja))
+    setQ(easyIf(loadSettings().easy, randomQuestion(words, jaEn ? (x) => x.en : (x) => x.ja)))
   }
 
   function start() {

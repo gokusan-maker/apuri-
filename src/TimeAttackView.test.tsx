@@ -91,3 +91,11 @@ it('日→英も選べる', () => {
   fireEvent.click(screen.getByRole('button', { name: w.en }))
   expect(screen.getByText('1 問')).toBeInTheDocument()
 })
+
+it('かんたんモードでは選択肢が3つ', () => {
+  localStorage.setItem('eitan:settings', JSON.stringify({ easy: true }))
+  render(<TimeAttack words={WORDS.slice(0, 20)} />)
+  fireEvent.click(screen.getByText('スタート'))
+  expect(document.querySelectorAll('.choice')).toHaveLength(3)
+  localStorage.clear()
+})

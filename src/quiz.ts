@@ -68,3 +68,8 @@ export function trimChoices<T extends { id: string }>(q: Question<T>, n: number,
   const choices = q.choices.filter((c) => keep.has(c))
   return { ...q, choices, answer: choices.indexOf(correct) }
 }
+
+// かんたんモードなら選択肢を3つに（設定は呼ぶ側で読む）
+export function easyIf<T extends { id: string }>(easy: boolean, q: Question<T>): Question<T> {
+  return easy ? trimChoices(q, 3) : q
+}
