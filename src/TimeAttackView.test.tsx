@@ -36,6 +36,17 @@ describe('TimeAttack', () => {
     expect(loadBest()).toBe(3)
   })
 
+  it('結果画面に、まちがえた単語と意味の一覧', () => {
+    render(<TimeAttack words={WORDS.slice(0, 10)} />)
+    fireEvent.click(screen.getByText('スタート'))
+    const en = document.querySelector('.quiz .en')!.textContent
+    const word = WORDS.find((w) => w.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
+    act(() => vi.advanceTimersByTime(TIME_LIMIT * 1000))
+    const list = screen.getByRole('list', { name: 'まちがえた単語' })
+    expect(list.textContent).toContain(word.ja)
+  })
+
   it('自己ベストに届かなければ更新しない', () => {
     localStorage.setItem('eitan:best-time-attack', '5')
     render(<TimeAttack words={WORDS} />)

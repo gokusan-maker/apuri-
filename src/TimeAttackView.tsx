@@ -25,6 +25,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [q, setQ] = useState<Question<Word> | null>(null)
   const [flash, setFlash] = useState<'ok' | 'ng' | null>(null)
   const scoreRef = useRef(0)
+  const [missed, setMissed] = useState<Word[]>([])
 
   function nextQuestion() {
     setQ(randomQuestion(words, (x) => x.ja))
@@ -33,6 +34,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   function start() {
     scoreRef.current = 0
     setScore(0)
+    setMissed([])
     setLeft(length)
     setNewBest(false)
     setFlash(null)
@@ -72,6 +74,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
     } else {
       setFlash('ng')
       playWrong()
+      setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       onAnswer?.(false, 0, q.word.id, 'quiz')
     }
     nextQuestion()
@@ -119,6 +122,15 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
         <p className="result-title">タイムアップ！</p>
         <p className="result-score">{score} 問正解</p>
         {newBest ? <p className="level-up">自己ベスト更新！</p> : <p className="best">自己ベスト {best} 問</p>}
+        {missed.length > 0 && (
+          <ul className="missed-list" aria-label="まちがえた単語">
+            {missed.map((w) => (
+              <li key={w.id}>
+                <strong>{w.en}</strong> {w.ja}
+              </li>
+            ))}
+          </ul>
+        )}
         <button className="flip" onClick={start}>
           もう1回
         </button>
