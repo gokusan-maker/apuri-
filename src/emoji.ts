@@ -15,6 +15,7 @@ export const EMOJI: Record<string, string> = {
   hat: '👒', cap: '🧢', shirt: '👕', dress: '👗', shoes: '👟', sock: '🧦', coat: '🧥', glasses: '👓', umbrella: '☂️', wallet: '👛',
   coffee: '☕', cake: '🍰', cookie: '🍪', candy: '🍬', chocolate: '🍫', 'ice-cream': '🍨', salad: '🥗', pizza: '🍕', hamburger: '🍔', noodles: '🍜', grape: '🍇', peach: '🍑', watermelon: '🍉', onion: '🧅', carrot: '🥕',
   piano: '🎹', guitar: '🎸', violin: '🎻', drum: '🥁', baby: '👶',
-  tv: '📺', radio: '📻', movie: '🎬', zoo: '🦒', bank: '🏦', hotel: '🏨', church: '⛪', shrine: '⛩️', lemon: '🍋', melon: '🍈', corn: '🌽', newspaper: '📰', camera: '📷', phone: '📱', computer: '💻', milk: '🥛', school: '🏫',
+  tv: '📺', radio: '📻', movie: '🎬', bank: '🏦', hotel: '🏨', church: '⛪', shrine: '⛩️', lemon: '🍋', melon: '🍈', corn: '🌽', newspaper: '📰', camera: '📷', phone: '📱', computer: '💻', milk: '🥛', school: '🏫',
+  dolphin: '🐬', eagle: '🦅', giraffe: '🦒', goat: '🐐', kangaroo: '🦘', koala: '🐨', octopus: '🐙', owl: '🦉', panda: '🐼', penguin: '🐧', shark: '🦈', snake: '🐍', spider: '🕷️', squirrel: '🐿️', turtle: '🐢', whale: '🐋', wolf: '🐺', zebra: '🦓', duck: '🦆', chick: '🐤',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
