@@ -173,3 +173,15 @@ it('🗣 例文リスニング：例文を読み上げ、訳を選ぶ', () => {
   expect(screen.getByText(/正解！/)).toBeInTheDocument()
   expect(screen.getByText(w.example)).toBeInTheDocument()
 })
+
+it('🎲 ミックス：1問ごとに英→日・日→英・リスニングのどれかが出る', () => {
+  const words = WORDS.slice(0, 12)
+  render(<Quiz words={words} count={5} />)
+  fireEvent.click(screen.getByText('🎲 ミックス'))
+  for (let i = 0; i < 5; i++) {
+    expect(document.querySelectorAll('.choice')).toHaveLength(4)
+    fireEvent.click(document.querySelector<HTMLButtonElement>('.choice')!)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(/問正解/)).toBeInTheDocument()
+})

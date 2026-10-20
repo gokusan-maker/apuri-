@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { blankOut, canBlank } from './blank'
 import { quizXp, type Source } from './monster'
-import { makeQuiz } from './quiz'
+import { makeQuestion, makeQuiz, shuffle, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { useKeys } from './useKeys'
@@ -22,7 +22,8 @@ import type { Word } from './words'
 // order：例文の並べ替え
 // dictation：音声を聞いて書く
 // sentence：例文を聞いて訳を選ぶ
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// mix：英→日・日→英・リスニングが1問ごとにランダム
+export type Direction = 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -35,8 +36,23 @@ const pool = (d: Direction, ws: Word[], all: Word[]) => {
   return ok.length > 0 ? ok : all.filter(can)
 }
 
+type Q = Question<Word> & { d?: Direction } // d：ミックスのときのその問題の種類
+
+const MIX: Direction[] = ['en-ja', 'ja-en', 'listen']
+
+function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[] {
+  if (d !== 'mix') return makeQuiz(words, label(d), count, Math.random, pool(d, targets, words))
+  return shuffle(targets)
+    .slice(0, count)
+    .map((w) => {
+      const sub = MIX[Math.floor(Math.random() * MIX.length)]
+      return { ...makeQuestion(w, words, label(sub)), d: sub }
+    })
+}
+
 const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
+  { id: 'mix', label: '🎲 ミックス' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'sentence', label: '🗣 例文リスニング' },
@@ -62,7 +78,7 @@ type Props = {
 
 export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart, lockDirection = false }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
-  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words, words)))
+  const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -72,9 +88,10 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   const [lastXp, setLastXp] = useState(0)
 
   const q = questions[index]
+  const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank'].includes(direction)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank'].includes(qd)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -90,9 +107,9 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   // リスニングは問題が変わるたびに自動で読み上げる
   useEffect(() => {
-    if (direction === 'listen' && q) speak(q.word.en)
-    if (direction === 'sentence' && q) speak(q.word.example)
-  }, [direction, q])
+    if (qd === 'listen' && q) speak(q.word.en)
+    if (qd === 'sentence' && q) speak(q.word.example)
+  }, [qd, q])
 
   function pick(i: number) {
     if (picked !== null) return
@@ -106,12 +123,12 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
-      onAnswer?.(true, xp, q.word.id, direction === 'listen' || direction === 'sentence' ? 'ear' : 'quiz')
+      onAnswer?.(true, xp, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
     } else {
       setCombo(0)
       setLastXp(0)
       playWrong()
-      onAnswer?.(false, 0, q.word.id, direction === 'listen' || direction === 'sentence' ? 'ear' : 'quiz')
+      onAnswer?.(false, 0, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
     }
   }
 
@@ -123,7 +140,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   function restart(d: Direction = direction) {
     setDirection(d)
-    setQuestions(makeQuiz(words, label(d), count, Math.random, pool(d, targets ?? words, words)))
+    setQuestions(build(words, d, count, targets ?? words))
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -239,16 +256,16 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
           </span>
         )}
       </p>
-      {direction === 'blank' ? (
+      {qd === 'blank' ? (
         <BlankPrompt word={q.word} revealed={picked !== null} />
-      ) : direction === 'sentence' ? (
+      ) : qd === 'sentence' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.example)} aria-label="もう一度聞く">
             🔊
           </button>
           <p className="example listen-sentence">{picked !== null ? q.word.example : '例文を聞いて、意味を選ぼう'}</p>
         </>
-      ) : direction === 'listen' ? (
+      ) : qd === 'listen' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
             🔊
@@ -256,7 +273,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
           <p className="en listen-word">{picked !== null ? q.word.en : '？'}</p>
         </>
       ) : (
-        <p className={direction === 'en-ja' ? 'en' : 'en ja-prompt'}>{prompt(q.word, direction)}</p>
+        <p className={qd === 'ja-en' ? 'en ja-prompt' : 'en'}>{prompt(q.word, qd)}</p>
       )}
       <div className="choices">
         {q.choices.map((c, i) => {
@@ -281,7 +298,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
               `正解は「${q.choices[q.answer]}」`
             )}
           </p>
-          {picked !== q.answer && direction !== 'blank' && q.word.example && (
+          {picked !== q.answer && qd !== 'blank' && q.word.example && (
             <div className="miss-example">
               <p className="example">
                 <strong>{q.word.en}</strong>：{q.word.ja}
