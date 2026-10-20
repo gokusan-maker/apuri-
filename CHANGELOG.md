@@ -338,3 +338,4 @@
 - 2026-10-20: 中2に基本語を20語追加（apartment・battery・customer など。絵文字クイズにも）
 - 2026-10-20: 中3に基本語を20語追加（capital・continent・decision・discuss など）
 - 2026-10-20: 夕方（18時以降）にまだ学習していない日は「連続○日をつなげよう」と知らせるようにした
+- 2026-10-20: 中1に基本語を20語追加（east・west・north・south・hello・goodbye など）
