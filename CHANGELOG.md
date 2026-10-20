@@ -340,3 +340,4 @@
 - 2026-10-20: 夕方（18時以降）にまだ学習していない日は「連続○日をつなげよう」と知らせるようにした
 - 2026-10-20: 中1に基本語を20語追加（east・west・north・south・hello・goodbye など）
 - 2026-10-20: 会話フレーズを10追加（You too・Just kidding・Well done など、計50）
+- 2026-10-20: テーマ別に「天気」「町」の単語を15語追加（typhoon・temperature・convenience store など。絵文字クイズにも）

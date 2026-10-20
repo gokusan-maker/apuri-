@@ -19,5 +19,6 @@ export const EMOJI: Record<string, string> = {
   dolphin: '🐬', eagle: '🦅', giraffe: '🦒', goat: '🐐', kangaroo: '🦘', koala: '🐨', octopus: '🐙', owl: '🦉', panda: '🐼', penguin: '🐧', shark: '🦈', snake: '🐍', spider: '🕷️', squirrel: '🐿️', turtle: '🐢', whale: '🐋', wolf: '🐺', zebra: '🦓', duck: '🦆', chick: '🐤',
   balloon: '🎈', basket: '🧺', battery: '🔋', bone: '🦴', butter: '🧈', calendar: '📅', candle: '🕯️', coin: '🪙',
   dinosaur: '🦕', diary: '📔',
+  storm: '⛈️', thunder: '🌩️', lightning: '⚡', fog: '🌫️', typhoon: '🌀', ice: '🧊', bakery: '🥐', 'post-office': '🏣', 'fire-station': '🚒',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
