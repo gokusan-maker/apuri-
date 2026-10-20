@@ -28,6 +28,7 @@ import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
+import { souvenirFor } from './souvenir'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
@@ -216,7 +217,13 @@ function App() {
     if (next.count % 10 === 0) setCheer(cheerFor(next.count))
     setHistory((h) => addHistory(h, today))
     const reached = studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal
-    if (reached) setCelebrate(true)
+    if (reached) {
+      setCelebrate(true)
+      // 相棒がおでかけして、おみやげを見つけてくる
+      const sv = souvenirFor(today)
+      setWallet((w) => ({ ...w, coins: w.coins + sv.coins }))
+      pushToast([{ id: 'souvenir', text: `${monster.name ?? formOf(monster).name}が「${sv.icon} ${sv.name}」を見つけてきた！ 🪙${sv.coins}`, counter: 'answers', target: 0 }])
+    }
     setTotals((t) => ({
       ...t,
       answers: t.answers + 1,
@@ -829,6 +836,8 @@ function App() {
                 ? '🍀 ラッキー！'
                 : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
+                : missionToast[0].id === 'souvenir'
+                ? '🎒 おみやげ'
                 : missionToast[0].id === 'snack'
                 ? '😋 もぐもぐ'
                 : missionToast[0].id === 'bond'

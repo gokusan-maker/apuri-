@@ -4,6 +4,7 @@ import App from './App'
 import { dayKey } from './srs'
 import { missionsFor } from './missions'
 import { pickWordOfDay } from './wordOfDay'
+import { souvenirFor } from './souvenir'
 import { WORDS, wordsOf } from './words'
 
 // お知らせは順番に出るので、目当てのものが出るまで前のものを閉じる
@@ -162,6 +163,8 @@ describe('App', () => {
     fireEvent.click(screen.getByText('やったね'))
     expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
     expect(screen.getByText('🎯 目標達成！')).toBeInTheDocument()
+    expect(toast('🎒 おみやげ')).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(souvenirFor(dayKey()).name))).toBeInTheDocument()
     // もう一度答えてもお祝いは出ない
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
