@@ -22,6 +22,7 @@ describe('再発防止', () => {
   it('ボスをたおした最後の一撃のXPも、ボーナスと一緒にちゃんと入る', () => {
     const today = dayKey()
     localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
+    localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスが入らないように
     localStorage.setItem('eitan:stages', JSON.stringify(Object.fromEntries(stagesOf('中1').map((s) => [s.id, 1]))))
     // ミッションのボーナスが混ざらないよう、今日の分は受け取り済みにしておく
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
