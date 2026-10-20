@@ -72,6 +72,16 @@ export function SettingsPanel({ settings, onChange }: Props) {
       </fieldset>
 
       <label className="setting toggle">
+        <span>カードを出したら自動で発音</span>
+        <input type="checkbox" checked={settings.autoSpeak} onChange={(e) => set({ autoSpeak: e.target.checked })} />
+      </label>
+
+      <label className="setting toggle">
+        <span>カードを日本語→英語にする</span>
+        <input type="checkbox" checked={settings.cardJaFirst} onChange={(e) => set({ cardJaFirst: e.target.checked })} />
+      </label>
+
+      <label className="setting toggle">
         <span>効果音</span>
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>

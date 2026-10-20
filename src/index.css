@@ -504,3 +504,4 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .chip { padding: 8px 12px; font-size: 1.05rem; border: 1px solid var(--accent); border-radius: 10px; background: var(--bg); color: var(--fg); }
 .chip:disabled { opacity: 0.8; }
 .scramble .flip:disabled { opacity: 0.4; }
+.card-en-back { font-weight: 700; font-size: 1.8rem; }

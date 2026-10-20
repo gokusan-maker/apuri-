@@ -370,7 +370,13 @@ function App() {
               <button onClick={() => setWeakCards(null)}>やめる</button>
             </p>
             {weakCard ? (
-              <Card key={`weak-${weakCard.id}`} card={weakCard} onAnswer={answerWeak} />
+              <Card
+                key={`weak-${weakCard.id}`}
+                card={weakCard}
+                onAnswer={answerWeak}
+                autoSpeak={settings.autoSpeak}
+                jaFirst={settings.cardJaFirst}
+              />
             ) : (
               <p className="done">苦手カードを一周しました 💪</p>
             )}
@@ -379,7 +385,7 @@ function App() {
           <WordList words={words} progress={progress} onClose={() => setShowList(false)} />
         ) : (
           <>
-            <Card key={card?.id} card={card} onAnswer={answer} />
+            <Card key={card?.id} card={card} onAnswer={answer} autoSpeak={settings.autoSpeak} jaFirst={settings.cardJaFirst} />
             <button className="list-link" onClick={() => setShowList(true)}>
               📚 単語一覧・さがす
             </button>

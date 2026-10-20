@@ -116,7 +116,7 @@ describe('App', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '0.7' } })
     fireEvent.click(screen.getByText('イギリス英語'))
     fireEvent.click(screen.getByText('ダーク'))
-    fireEvent.click(screen.getByRole('checkbox'))
+    fireEvent.click(screen.getByRole('checkbox', { name: '効果音' }))
     expect(document.documentElement.dataset.theme).toBe('dark')
     expect(JSON.parse(localStorage.getItem('eitan:settings')!)).toEqual({
       rate: 0.7,
@@ -124,6 +124,8 @@ describe('App', () => {
       theme: 'dark',
       sound: false,
       dailyGoal: 20,
+      autoSpeak: false,
+      cardJaFirst: false,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()

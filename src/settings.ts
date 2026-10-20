@@ -41,11 +41,21 @@ export type Settings = {
   theme: Theme
   sound: boolean // 効果音
   dailyGoal: number // 1日の目標（問題数）
+  autoSpeak: boolean // カードを出したら自動で発音
+  cardJaFirst: boolean // カードを日本語→英語にする
 }
 
 export const GOALS = [10, 20, 30, 50]
 
-export const DEFAULT_SETTINGS: Settings = { rate: 1, accent: 'en-US', theme: 'system', sound: true, dailyGoal: 20 }
+export const DEFAULT_SETTINGS: Settings = {
+  rate: 1,
+  accent: 'en-US',
+  theme: 'system',
+  sound: true,
+  dailyGoal: 20,
+  autoSpeak: false,
+  cardJaFirst: false,
+}
 
 const SETTINGS_KEY = 'eitan:settings'
 
@@ -59,6 +69,8 @@ export function loadSettings(): Settings {
       theme: v.theme === 'light' || v.theme === 'dark' ? v.theme : 'system',
       sound: typeof v.sound === 'boolean' ? v.sound : true,
       dailyGoal: typeof v.dailyGoal === 'number' && GOALS.includes(v.dailyGoal) ? v.dailyGoal : DEFAULT_SETTINGS.dailyGoal,
+      autoSpeak: v.autoSpeak === true,
+      cardJaFirst: v.cardJaFirst === true,
     }
   } catch {
     return { ...DEFAULT_SETTINGS }
