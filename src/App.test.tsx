@@ -339,4 +339,12 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(20)
     expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
   })
+
+  it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('明日 1語')).toBeInTheDocument()
+  })
 })

@@ -96,3 +96,19 @@ export function saveDailyNew(d: DailyNew): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// これから n 日の復習予定（期日が過ぎているものは今日に数える）
+export function upcoming(progress: ProgressMap, today: string, n = 7, ids?: Set<string>): number[] {
+  const out = Array.from({ length: n }, () => 0)
+  for (const [id, p] of Object.entries(progress)) {
+    if (ids && !ids.has(id)) continue
+    for (let i = 0; i < n; i++) {
+      const d = addDays(today, i)
+      if (i === 0 ? p.due <= d : p.due === d) {
+        out[i]++
+        break
+      }
+    }
+  }
+  return out
+}

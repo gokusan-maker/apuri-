@@ -27,6 +27,7 @@ import {
 } from './monster'
 import {
   buildQueue,
+  upcoming,
   dayKey,
   grade,
   loadDailyNew,
@@ -343,6 +344,7 @@ function App() {
               setWeakOnly(true)
               setMode('quiz')
             }}
+            schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
             onReviewWeakCards={() => {
               setWeakCards([])
               setShowList(false)

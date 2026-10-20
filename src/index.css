@@ -536,3 +536,7 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .snacks button { font-size: 0.85rem; padding: 10px 6px; }
 .snacks button:disabled { opacity: 0.4; }
 .miss-example { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; }
+.schedule { list-style: none; padding: 0; margin: 0 0 8px; display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
+.schedule li { padding: 6px 0; border-radius: 8px; background: var(--bg); }
+.schedule-day { display: block; font-size: 0.65rem; color: var(--muted); }
+.schedule-n { font-weight: 700; }

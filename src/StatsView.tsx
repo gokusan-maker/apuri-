@@ -15,10 +15,11 @@ type Props = {
   mistakes: Mistakes
   onReviewWeak: () => void
   onReviewWeakCards: () => void
+  schedule: number[] // 今日から7日間の復習数
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -43,6 +44,18 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
         <div className="xp-fill" style={{ width: `${(learned / total) * 100}%` }} />
       </div>
       <WeekChart days={week} goal={goal} />
+      <h2>復習の予定</h2>
+      <p className="stats-note">
+        今日 {schedule[0]}語・<strong>明日 {schedule[1]}語</strong>
+      </p>
+      <ol className="schedule" aria-label="これから1週間の復習予定">
+        {schedule.map((n, i) => (
+          <li key={i}>
+            <span className="schedule-day">{i === 0 ? '今日' : i === 1 ? '明日' : `${i}日後`}</span>
+            <span className="schedule-n">{n}</span>
+          </li>
+        ))}
+      </ol>
       <h2>苦手な単語</h2>
       {weak.length === 0 ? (
         <p className="stats-note">まだありません。まちがえた単語がここに集まります。</p>
