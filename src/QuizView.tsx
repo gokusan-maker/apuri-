@@ -6,6 +6,7 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
+import { Grammar } from './GrammarView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import type { Word } from './words'
@@ -15,7 +16,8 @@ import type { Word } from './words'
 // blank：例文の空欄に入る単語を選ぶ
 // irregular：不規則動詞の活用ドリル
 // speak：発音練習（音声認識が使える端末のみ表示）
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'irregular' | 'speak'
+// grammar：文法ミニ解説＋確認問題
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
@@ -28,6 +30,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'spell', label: '✏️ スペル' },
   { id: 'blank', label: '📝 穴埋め' },
   { id: 'irregular', label: '🔁 不規則動詞' },
+  { id: 'grammar', label: '📖 文法' },
   { id: 'speak', label: '🎤 発音' },
 ]
 
@@ -106,6 +109,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       ))}
     </div>
   )
+
+  if (direction === 'grammar') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Grammar onAnswer={onAnswer} />
+      </>
+    )
+  }
 
   if (direction === 'speak') {
     return (

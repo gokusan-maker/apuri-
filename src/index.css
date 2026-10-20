@@ -426,3 +426,24 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .week-num { position: absolute; top: -16px; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--muted); }
 .week-label { position: absolute; bottom: -20px; font-size: 0.75rem; color: var(--muted); }
 .speak.small { font-size: 1.1rem; padding: 0 6px; vertical-align: middle; }
+
+.grammar { text-align: left; }
+.grammar h2 { margin: 4px 0 8px; font-size: 1.2rem; }
+.grammar-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 8px; }
+.grammar-list button {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--fg);
+  text-align: left;
+}
+.grammar-score { color: var(--muted); font-size: 0.85rem; white-space: nowrap; }
+.grammar-points { padding-left: 1.2em; margin: 0 0 12px; line-height: 1.6; }
+.grammar-example { display: flex; flex-direction: column; margin: 0 0 10px; padding: 8px 12px; border-left: 4px solid var(--accent); background: var(--bg); border-radius: 0 8px 8px 0; }
+.grammar-why { margin: 4px 0 0; color: var(--muted); }
+.grammar .progress, .grammar .blank-sentence, .grammar .feedback { text-align: center; }
