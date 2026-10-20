@@ -21,5 +21,6 @@ export const EMOJI: Record<string, string> = {
   dinosaur: '🦕', diary: '📔',
   storm: '⛈️', thunder: '🌩️', lightning: '⚡', fog: '🌫️', typhoon: '🌀', ice: '🧊', bakery: '🥐', 'post-office': '🏣', 'fire-station': '🚒',
   tongue: '👅',
+  fork: '🍴', factory: '🏭', feather: '🪶',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
