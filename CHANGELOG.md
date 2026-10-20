@@ -323,3 +323,4 @@
 - 2026-10-20: 中1に形容詞を20語追加（angry・funny・same・strange など）。反対の意味に high ↔ low など5組追加
 - 2026-10-20: 中1に副詞・前置詞などを19語追加（again・behind・between・soon など）
 - 2026-10-20: 反対の意味に near ↔ far・inside ↔ outside・over ↔ under を追加
+- 2026-10-20: 相棒タブに「思い出アルバム」（出会った日ともらったバッジを日付順にならべた年表）を追加

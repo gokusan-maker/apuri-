@@ -29,6 +29,7 @@ import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
+import { Album } from './AlbumView'
 import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
@@ -731,6 +732,7 @@ function App() {
             <section className="card stats-view">
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
               <Profile monster={monster} studyDays={totals.studyDays ?? 0} />
+              <Album earned={earned} born={monster.born} />
               <ShareButton
                 stats={{
                   name: monster.name ?? formOf(monster).name,
