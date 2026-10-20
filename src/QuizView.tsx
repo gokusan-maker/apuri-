@@ -14,6 +14,7 @@ import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
 import { claimFeatured, FEATURED_XP, featuredClaimed, featuredFor } from './featured'
 import { dayKey } from './srs'
+import { quizShareText, shareText } from './shareText'
 import { isNew, loadPlayed, markPlayed } from './playedModes'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
@@ -180,6 +181,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const [lastXp, setLastXp] = useState(0)
   const [missed, setMissed] = useState<Word[]>([])
   const [favDone, setFavDone] = useState(false)
+  const [shared, setShared] = useState('')
   const [left, setLeft] = useState(QUESTION_TIME) // 制限時間モードの残り秒
   const [removed, setRemoved] = useState<number[]>([]) // 50:50 で消した選択肢
 
@@ -266,6 +268,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
     setMissed([])
     setFavDone(false)
+    setShared('')
     setLeft(QUESTION_TIME)
     setRemoved([])
     setIndex(0)
@@ -517,6 +520,21 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
+        <button
+          className="list-link"
+          onClick={() =>
+            shareText(quizShareText(DIRECTIONS.find((d) => d.id === direction)?.label ?? 'クイズ', score, questions.length)).then((r) =>
+              setShared(r === 'copied' ? 'コピーしました' : r === 'shared' ? '' : 'シェアできませんでした'),
+            )
+          }
+        >
+          📤 結果をシェア
+        </button>
+        {shared && (
+          <p className="stats-note" role="status">
+            {shared}
+          </p>
+        )}
         <MissedList words={missed} />
         {missed.length > 0 && !onRestart && (
           <button className="list-link" onClick={() => restart(direction, missed)}>
