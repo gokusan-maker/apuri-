@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, articleQ, beQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -131,5 +131,18 @@ describe('パズル', () => {
         expect(new Set(q.choices).size).toBe(4)
       }
     }
+  })
+
+  it('be動詞・a と an：正解が合う', () => {
+    for (let i = 0; i < 50; i++) {
+      const q = beQ()
+      const subj = q.prompt.split(' ___ ')[0]
+      const want = subj === 'I' ? 'am' : /^(You|We|They)$|and | books$| friends$/.test(subj) ? 'are' : 'is'
+      expect(q.choices[q.answer]).toBe(want)
+      const a = articleQ()
+      expect(['a', 'an']).toContain(a.choices[a.answer])
+    }
+    const seq = (xs: number[]) => () => xs.shift() ?? 0
+    expect(articleQ(seq([0])).choices[articleQ(seq([0])).answer]).toBe('an')
   })
 })

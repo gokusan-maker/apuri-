@@ -287,3 +287,38 @@ export function ingQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([ans, ...wrong], rng)
   return { prompt: `「${base}」の ing形は？`, choices, answer: choices.indexOf(ans), why: `${base} → ${ans}`, wordId: idOf(base) ?? '' }
 }
+
+// be動詞：主語に合うのはどれ？
+const BE_SUBJECTS: [string, 'am' | 'is' | 'are'][] = [
+  ['I', 'am'], ['You', 'are'], ['He', 'is'], ['She', 'is'], ['It', 'is'], ['We', 'are'], ['They', 'are'],
+  ['My mother', 'is'], ['Tom and Ken', 'are'], ['This book', 'is'], ['These books', 'are'], ['My friends', 'are'], ['The cat', 'is'],
+]
+const BE_REST = ['happy today.', 'in the kitchen.', 'from Osaka.', 'very busy now.', 'at school.', 'tired.']
+
+export function beQ(rng: Rng = Math.random): PuzzleQ {
+  const [subj, be] = BE_SUBJECTS[Math.floor(rng() * BE_SUBJECTS.length)]
+  const rest = BE_REST[Math.floor(rng() * BE_REST.length)]
+  const choices = ['am', 'is', 'are']
+  return { prompt: `${subj} ___ ${rest}`, choices, answer: choices.indexOf(be), why: `主語が「${subj}」なので ${be}`, wordId: '' }
+}
+
+// a と an：母音（ア・イ・ウ・エ・オの音）で始まる語には an
+const ARTICLES: [string, 'a' | 'an'][] = [
+  ['apple', 'an'], ['banana', 'a'], ['egg', 'an'], ['orange', 'an'], ['dog', 'a'], ['umbrella', 'an'], ['elephant', 'an'],
+  ['book', 'a'], ['hour', 'an'], ['uniform', 'a'], ['island', 'an'], ['owl', 'an'], ['university', 'a'], ['idea', 'an'],
+  ['eraser', 'an'], ['cat', 'a'], ['ant', 'an'], ['house', 'a'], ['old car', 'an'], ['big apple', 'a'],
+]
+
+export function articleQ(rng: Rng = Math.random): PuzzleQ {
+  const [noun, art] = ARTICLES[Math.floor(rng() * ARTICLES.length)]
+  const choices = ['a', 'an']
+  const why =
+    noun === 'hour'
+      ? 'hour は h を読まず「アワー」と母音で始まるので an'
+      : noun === 'uniform' || noun === 'university'
+        ? `${noun} は「ユ」（子音の音）で始まるので a`
+        : art === 'an'
+          ? `${noun} は母音の音で始まるので an`
+          : `${noun} は子音の音で始まるので a`
+  return { prompt: `___ ${noun}`, choices, answer: choices.indexOf(art), why, wordId: idOf(noun) ?? '' }
+}
