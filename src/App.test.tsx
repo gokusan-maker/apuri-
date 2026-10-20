@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { dayKey } from './srs'
 import { missionsFor } from './missions'
+import { pickWordOfDay } from './wordOfDay'
 import { WORDS, wordsOf } from './words'
 
 describe('App', () => {
@@ -607,5 +608,18 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
+  })
+
+  it('ラッキー単語に正解すると1日1回+20XP', () => {
+    const lucky = pickWordOfDay(WORDS, dayKey())!
+    localStorage.setItem('eitan:favorites', JSON.stringify([lucky.id]))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    const fav = screen.getByText('★ お気に入り（1語）').nextElementSibling!
+    fireEvent.click(fav.querySelector('button')!)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('🍀 ラッキー！')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(25)
   })
 })

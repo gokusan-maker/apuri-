@@ -1,7 +1,7 @@
 import { speak } from './speech'
 import type { Word } from './words'
 
-export function WordOfDay({ word }: { word: Word | undefined }) {
+export function WordOfDay({ word, claimed = false }: { word: Word | undefined; claimed?: boolean }) {
   if (!word) return null
   return (
     <section className="card wotd">
@@ -15,6 +15,7 @@ export function WordOfDay({ word }: { word: Word | undefined }) {
       </p>
       <p className="example">{word.example}</p>
       <p className="example-ja">{word.exampleJa}</p>
+      <p className="lucky">{claimed ? '🍀 ラッキーボーナス獲得ずみ！' : '🍀 ラッキー単語：今日この単語に正解すると +20XP'}</p>
     </section>
   )
 }

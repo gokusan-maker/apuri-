@@ -94,6 +94,15 @@ const STATS_TABS = [
   { id: 'data', label: 'データ' },
 ] as const
 
+const LUCKY_XP = 20
+function saveLucky(day: string) {
+  try {
+    localStorage.setItem('eitan:lucky', day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
@@ -201,8 +210,28 @@ function App() {
   const [mistakes, setMistakes] = usePersistent(loadMistakes, saveMistakes)
   const [quizFocus, setQuizFocus] = useState<Focus | null>(null)
 
+  // ラッキー単語（今日のことば）に正解すると1日1回ボーナス
+  const lucky = pickWordOfDay(WORDS, today)
+  const [luckyDay, setLuckyDay] = usePersistent(
+    () => {
+      try {
+        return localStorage.getItem('eitan:lucky') ?? ''
+      } catch {
+        return ''
+      }
+    },
+    saveLucky,
+  )
+  function checkLucky(correct: boolean, wordId: string) {
+    if (!correct || !lucky || wordId !== lucky.id || luckyDay === today) return
+    setLuckyDay(today)
+    gainXp(LUCKY_XP, null)
+    setMissionToast([{ id: 'lucky', text: `ラッキー単語「${lucky.en}」に正解！ +${LUCKY_XP}XP`, counter: 'answers', target: 0 }])
+  }
+
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
     studied(correct)
+    checkLucky(correct, wordId)
     setAccuracy((a) => recordAnswer(a, today, source, correct))
     if (correct && source === 'ear') count('ear')
     if (!correct) setMistakes((m) => addMistake(m, wordId))
@@ -374,6 +403,7 @@ function App() {
     setCardFocus({ ...cardFocus, done: [...cardFocus.done, focusCard.id] })
     setProgress({ ...progress, [focusCard.id]: grade(progress[focusCard.id], correct, today, easy) })
     studied(correct)
+    checkLucky(correct, focusCard.id)
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, focusCard.id))
     else if (cardFocus.kind === 'weak') setMistakes((m) => easeMistake(m, focusCard.id))
@@ -406,6 +436,7 @@ function App() {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today, easy) })
     studied(correct)
+    checkLucky(correct, card.id)
     setAccuracy((a) => recordAnswer(a, today, 'card', correct))
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, card.id))
@@ -565,7 +596,7 @@ function App() {
                   <button onClick={() => setStatsTab('data')}>保存する</button>
                 </p>
               )}
-            <WordOfDay word={pickWordOfDay(WORDS, today)} />
+            <WordOfDay word={lucky} claimed={luckyDay === today} />
             <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
             <Stats
               streakDays={streakDays}
@@ -746,7 +777,9 @@ function App() {
           </span>
           <div>
             <p className="badge-toast-title">
-              {missionToast[0].id === 'anniv'
+              {missionToast[0].id === 'lucky'
+                ? '🍀 ラッキー！'
+                : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
                 : missionToast[0].id === 'login'
                 ? 'ログインボーナス'
