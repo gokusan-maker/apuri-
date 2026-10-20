@@ -352,6 +352,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'May I ___ the bathroom?', choices: ['use', 'borrow'], answer: 0, why: 'トイレは持っていけないので use。' },
     ],
   },
+  {
+    id: 'hear-sound',
+    title: 'sound と voice',
+    points: ['sound は「音」全般（物音・楽器の音など）。voice は「人の声」。'],
+    examples: [
+      { en: 'I heard a strange sound.', ja: '変な音が聞こえた。' },
+      { en: 'She has a beautiful voice.', ja: '彼女はきれいな声をしている。' },
+    ],
+    questions: [
+      { sentence: 'The singer has a soft ___.', choices: ['voice', 'sound'], answer: 0, why: '人の「声」なので voice。' },
+      { sentence: 'I like the ___ of the rain.', choices: ['voice', 'sound'], answer: 1, why: '雨の「音」なので sound。' },
+      { sentence: 'Please speak in a loud ___.', choices: ['voice', 'sound'], answer: 0, why: '話す「声」なので voice。' },
+    ],
+  },
+  {
+    id: 'fun-funny',
+    title: 'fun と funny',
+    points: ['fun は「楽しい」（楽しいこと）。funny は「おかしい・笑える」。'],
+    examples: [
+      { en: 'The trip was fun.', ja: '旅行は楽しかった。' },
+      { en: 'His joke was funny.', ja: '彼の冗談はおもしろかった。' },
+    ],
+    questions: [
+      { sentence: 'We had a lot of ___ at the party.', choices: ['fun', 'funny'], answer: 0, why: '「楽しいこと」は fun。have fun で「楽しむ」。' },
+      { sentence: 'That movie was so ___. I laughed a lot.', choices: ['fun', 'funny'], answer: 1, why: '笑えるので funny。' },
+      { sentence: 'Playing soccer is ___.', choices: ['fun', 'funny'], answer: 0, why: '「楽しい」は fun。' },
+    ],
+  },
+  {
+    id: 'clothes-cloth',
+    title: 'clothes と cloth',
+    points: ['clothes は「服」（いつも複数あつかい）。cloth は「布」。'],
+    examples: [
+      { en: 'I bought new clothes.', ja: '新しい服を買った。' },
+      { en: 'Clean the table with a cloth.', ja: '布でテーブルをふいて。' },
+    ],
+    questions: [
+      { sentence: 'Put your ___ in the closet.', choices: ['clothes', 'cloth'], answer: 0, why: '「服」は clothes。' },
+      { sentence: 'This bag is made of ___.', choices: ['clothes', 'cloth'], answer: 1, why: '「布」は cloth。' },
+      { sentence: 'My ___ are wet.', choices: ['clothes', 'cloth'], answer: 0, why: 'are と複数なので「服」の clothes。' },
+    ],
+  },
+  {
+    id: 'remember-remind',
+    title: 'remember と remind',
+    points: ['remember は「覚えている・思い出す」（自分が）。remind は「（人に）思い出させる」。remind 人 of / to 〜。'],
+    examples: [
+      { en: 'I remember your name.', ja: 'あなたの名前を覚えています。' },
+      { en: 'Please remind me to call him.', ja: '彼に電話するよう私に言ってね。' },
+    ],
+    questions: [
+      { sentence: 'Do you ___ me? We met last year.', choices: ['remember', 'remind'], answer: 0, why: '自分が「覚えている」かなので remember。' },
+      { sentence: 'This song ___ me of summer.', choices: ['remembers', 'reminds'], answer: 1, why: '「（私に）夏を思い出させる」なので remind 人 of。' },
+      { sentence: 'Can you ___ me to bring my book?', choices: ['remember', 'remind'], answer: 1, why: '人に「〜するよう思い出させる」は remind 人 to。' },
+    ],
+  },
+  {
+    id: 'tall-high',
+    title: 'tall と high',
+    points: ['tall は細長く背が高いもの（人・木・ビル）。high は高い位置・高さ（山・かべ・天井・値段）。'],
+    examples: [
+      { en: 'My brother is tall.', ja: '兄は背が高い。' },
+      { en: 'Mt. Fuji is very high.', ja: '富士山はとても高い。' },
+    ],
+    questions: [
+      { sentence: 'He is the ___ boy in our class.', choices: ['tallest', 'highest'], answer: 0, why: '人の背の高さは tall。' },
+      { sentence: 'The prices here are too ___.', choices: ['tall', 'high'], answer: 1, why: '値段が高いは high。' },
+      { sentence: 'The bird is flying ___ in the sky.', choices: ['tall', 'high'], answer: 1, why: '空の高い所は high。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
