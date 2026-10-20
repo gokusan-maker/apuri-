@@ -53,4 +53,5 @@ export const BOSSES: Record<Level, BossLook> = {
   '曜日・月': { name: 'トケイモチ', color: '#ca8a04', line: '#713f12', eye: '#fff7ed' },
   テーマ別: { name: 'ゴチャマゼモチ', color: '#db2777', line: '#831843', eye: '#fdf2f8' },
   数: { name: 'カゾエモチ', color: '#4f46e5', line: '#1e1b4b', eye: '#fef9c3' },
+  '色・形': { name: 'ニジイロモチ', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
 }

@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形']
 
 export type Word = {
   id: string
@@ -494,6 +494,26 @@ export const WORDS: Word[] = [
   { id: 'eighth', en: 'eighth', ja: '8番目の', example: 'August is the eighth month.', exampleJa: '8月は8番目の月だ。', level: '数' },
   { id: 'ninth', en: 'ninth', ja: '9番目の', example: 'She lives on the ninth floor.', exampleJa: '彼女は9階に住んでいる。', level: '数' },
   { id: 'tenth', en: 'tenth', ja: '10番目の', example: 'Today is our tenth wedding anniversary.', exampleJa: '今日は私たちの10回目の結婚記念日だ。', level: '数' },
+  // 色・形
+  { id: 'red', en: 'red', ja: '赤・赤い', example: 'The apple is red and shiny.', exampleJa: 'そのりんごは赤くてつやつやしている。', level: '色・形' },
+  { id: 'blue', en: 'blue', ja: '青・青い', example: 'My new bike is blue.', exampleJa: '私の新しい自転車は青い。', level: '色・形' },
+  { id: 'yellow', en: 'yellow', ja: '黄色・黄色い', example: 'Bananas turn yellow when they are ripe.', exampleJa: 'バナナは熟すと黄色くなる。', level: '色・形' },
+  { id: 'green', en: 'green', ja: '緑・緑の', example: 'The leaves are green in summer.', exampleJa: '夏には葉が緑色だ。', level: '色・形' },
+  { id: 'black', en: 'black', ja: '黒・黒い', example: 'He wore a black jacket.', exampleJa: '彼は黒い上着を着ていた。', level: '色・形' },
+  { id: 'white', en: 'white', ja: '白・白い', example: 'The mountain is white with snow.', exampleJa: '山は雪で白い。', level: '色・形' },
+  { id: 'pink', en: 'pink', ja: 'ピンク・ピンクの', example: 'She painted her room pink.', exampleJa: '彼女は部屋をピンクにぬった。', level: '色・形' },
+  { id: 'purple', en: 'purple', ja: 'むらさき・むらさきの', example: 'Grapes can be purple or green.', exampleJa: 'ブドウにはむらさきのも緑のもある。', level: '色・形' },
+  { id: 'brown', en: 'brown', ja: '茶色・茶色の', example: 'Our dog has brown eyes.', exampleJa: 'うちの犬は茶色い目をしている。', level: '色・形' },
+  { id: 'gray', en: 'gray', ja: '灰色・灰色の', example: 'The sky was gray all day.', exampleJa: '空は一日中灰色だった。', level: '色・形' },
+  { id: 'orange', en: 'orange', ja: 'オレンジ色・オレンジ', example: "I'd like an orange, please.", exampleJa: 'オレンジを1つください。', level: '色・形' },
+  { id: 'gold', en: 'gold', ja: '金・金色の', example: 'She won a gold medal.', exampleJa: '彼女は金メダルを取った。', level: '色・形' },
+  { id: 'silver', en: 'silver', ja: '銀・銀色の', example: 'He has a silver watch.', exampleJa: '彼は銀色の腕時計を持っている。', level: '色・形' },
+  { id: 'circle', en: 'circle', ja: '円・丸', example: 'Draw a circle on the paper.', exampleJa: '紙に丸をかきなさい。', level: '色・形' },
+  { id: 'square', en: 'square', ja: '正方形・四角', example: 'The table is square.', exampleJa: 'そのテーブルは正方形だ。', level: '色・形' },
+  { id: 'triangle', en: 'triangle', ja: '三角形', example: 'A triangle has three sides.', exampleJa: '三角形には3つの辺がある。', level: '色・形' },
+  { id: 'heart', en: 'heart', ja: '心臓・心・ハート', example: 'My heart was beating fast.', exampleJa: '心臓がどきどきしていた。', level: '色・形' },
+  { id: 'line', en: 'line', ja: '線・列', example: 'Draw a straight line.', exampleJa: 'まっすぐな線を引きなさい。', level: '色・形' },
+  { id: 'dot', en: 'dot', ja: '点・ドット', example: 'Her dress has white dots on it.', exampleJa: '彼女のワンピースには白い水玉がついている。', level: '色・形' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
