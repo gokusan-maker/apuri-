@@ -20,6 +20,7 @@ import { WordOfDay } from './WordOfDayView'
 import { isWeekend, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
+import { BossDex } from './BossView'
 import { Evolve } from './EvolveView'
 import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
@@ -537,6 +538,7 @@ function App() {
             <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
             <Profile monster={monster} />
             <Zukan monsters={party.members} />
+            <BossDex record={boss} />
             <Backup />
           </Stats>
         </>

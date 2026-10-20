@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook } from './boss'
+import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
-import { WORDS, type Level, type Word } from './words'
+import { LEVELS, WORDS, type Level, type Word } from './words'
 
 type Props = {
   level: Level
@@ -16,7 +16,7 @@ type Props = {
 }
 
 // オリジナルのボス。単語帳ごとに色と名前が変わる
-function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
+export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   return (
     <svg viewBox="0 0 100 100" className={`boss-svg${hit ? ' hit' : ''}`} aria-hidden="true">
       <path d="M30 30 L24 8 L40 24 Z M70 30 L76 8 L60 24 Z" fill={look.color} stroke={look.line} strokeWidth="3" />
@@ -156,5 +156,29 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </>
       )}
     </section>
+  )
+}
+
+// ボス図鑑：たおしたボスは姿と日付、まだのボスはシルエット
+export function BossDex({ record }: { record: BossRecord }) {
+  const shadow: BossLook = { name: '？？？', color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }
+  const beaten = LEVELS.filter((l) => record[l]).length
+  return (
+    <div className="zukan">
+      <h2>
+        ボス図鑑 {beaten} / {LEVELS.length}
+      </h2>
+      <ul className="badge-grid">
+        {LEVELS.map((l) => (
+          <li key={l} className={record[l] ? 'got' : 'locked'}>
+            <span className="zukan-figure">
+              <BossFigure hit={false} look={record[l] ? BOSSES[l] : shadow} />
+            </span>
+            <span className="badge-name">{record[l] ? BOSSES[l].name : '？？？'}</span>
+            <span className="badge-desc">{record[l] ? record[l] : `${l}のボス`}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

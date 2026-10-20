@@ -533,4 +533,12 @@ describe('App', () => {
     fireEvent.click(document.querySelector('.zukan-pick')!)
     expect(screen.getByText(/ふしぎな模様のタマゴ/)).toBeInTheDocument()
   })
+
+  it('ボス図鑑にたおしたボスが載る', () => {
+    localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-19' }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText(/ボス図鑑 1 \//)).toBeInTheDocument()
+    expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
+  })
 })
