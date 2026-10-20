@@ -28,5 +28,6 @@ export const EMOJI: Record<string, string> = {
   mask: '😷', motorcycle: '🏍️', mushroom: '🍄', nest: '🪺', lock: '🔒',
   passport: '🛂', pie: '🥧', pirate: '🏴‍☠️',
   ruler: '📏', backpack: '🎒',
+  bicycle: '🚴', bath: '🛁', bell: '🔔', boot: '🥾', crab: '🦀', deer: '🦌', dice: '🎲', hen: '🐔', pear: '🍐', ring: '💍', rose: '🌹', web: '🕸️', wood: '🪵',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
