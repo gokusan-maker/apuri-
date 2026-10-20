@@ -196,6 +196,22 @@ function App() {
   const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday), [words, progress, today, newToday, extraToday])
+  // その日はじめて開いたときだけ「今日の復習」を知らせる
+  const dueReviews = words.filter((w) => progress[w.id] && progress[w.id].due <= today).length
+  const [greet, setGreet] = useState(() => {
+    try {
+      return localStorage.getItem('eitan:greeted') !== today
+    } catch {
+      return false
+    }
+  })
+  useEffect(() => {
+    try {
+      localStorage.setItem('eitan:greeted', today)
+    } catch {
+      // ストレージが使えない環境では保存をあきらめる
+    }
+  }, [today])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
@@ -336,6 +352,25 @@ function App() {
         )}
       </header>
 
+      {greet && dueReviews > 0 && onboarded && (
+        <p className="weak-banner today-banner" role="status">
+          📚 今日の復習が {dueReviews}語 あります
+          <span>
+            <button
+              onClick={() => {
+                setGreet(false)
+                setShowShop(false)
+                setMode('card')
+              }}
+            >
+              はじめる
+            </button>
+            <button onClick={() => setGreet(false)} aria-label="とじる">
+              ✕
+            </button>
+          </span>
+        </p>
+      )}
       {showShop ? (
         <Shop
           wallet={wallet}

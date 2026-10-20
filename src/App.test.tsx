@@ -427,4 +427,15 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 5 日')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).freezes).toBe(0)
   })
+
+  it('その日はじめて開いたとき、期日の来た復習があればお知らせが出る', () => {
+    localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[2].id]: { box: 1, due: '2000-01-01' } }))
+    const { unmount } = render(<App />)
+    expect(screen.getByText(/今日の復習が 1語 あります/)).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText('とじる'))
+    expect(screen.queryByText(/今日の復習が/)).not.toBeInTheDocument()
+    unmount()
+    render(<App />)
+    expect(screen.queryByText(/今日の復習が/)).not.toBeInTheDocument()
+  })
 })

@@ -593,3 +593,4 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .note.edit { display: flex; gap: 6px; }
 .note.edit textarea { flex: 1; padding: 6px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }
 .note.edit button { border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); padding: 0 12px; }
+.today-banner span { display: flex; gap: 4px; }
