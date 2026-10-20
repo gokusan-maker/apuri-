@@ -19,7 +19,7 @@ import { Missions } from './MissionsView'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
-import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
+import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
@@ -681,6 +681,7 @@ function App() {
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
                 <strong>{newToday}語</strong>
               </p>
+              <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
               {weekAgo.length > 0 && (
                 <button className="list-link" onClick={() => startQuiz('week')}>
                   📅 1週間前に学んだ単語をクイズでたしかめる（{weekAgo.length}語）

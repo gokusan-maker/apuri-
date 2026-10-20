@@ -56,3 +56,10 @@ export function lastWeekSummary(h: History, today: string): { count: number; day
   }
   return { count, days, start }
 }
+
+// 今週と先週の問題数をくらべる文
+export function weekCompare(thisWeek: number, lastWeek: number): string {
+  const diff = thisWeek - lastWeek
+  if (lastWeek === 0) return `今週 ${thisWeek}問`
+  return `今週 ${thisWeek}問（先週 ${lastWeek}問・${diff >= 0 ? `+${diff}` : diff}）`
+}
