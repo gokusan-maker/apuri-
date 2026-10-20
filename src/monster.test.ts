@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { isLonely, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
+import { isLonely, quizXp, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
 
 describe('monster', () => {
   beforeEach(() => localStorage.clear())
@@ -51,4 +51,11 @@ describe('進化と表情', () => {
     saveMonster({ xp: 3, lastDay: '2026-10-20' })
     expect(loadMonster()).toEqual({ xp: 3, lastDay: '2026-10-20' })
   })
+})
+
+it('コンボボーナスは1コンボ+0、以降+2ずつ、最大+10', () => {
+  expect(quizXp(1)).toBe(10)
+  expect(quizXp(2)).toBe(12)
+  expect(quizXp(6)).toBe(20)
+  expect(quizXp(20)).toBe(20)
 })

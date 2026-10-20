@@ -8,7 +8,6 @@ import {
   stageOf,
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
-  XP_QUIZ_CORRECT,
 } from './monster'
 import {
   buildQueue,
@@ -101,7 +100,7 @@ function App() {
       </header>
 
       {mode === 'quiz' ? (
-        <Quiz words={WORDS} onCorrect={() => gainXp(XP_QUIZ_CORRECT)} />
+        <Quiz words={WORDS} onCorrect={gainXp} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>

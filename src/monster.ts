@@ -79,3 +79,8 @@ function daysBetween(a: string, b: string): number {
 export function isLonely(m: MonsterState, today: string): boolean {
   return !!m.lastDay && daysBetween(m.lastDay, today) >= LONELY_DAYS
 }
+
+// クイズ正解のXP。連続正解（コンボ）が続くほどボーナス（最大+10）。
+export function quizXp(combo: number): number {
+  return XP_QUIZ_CORRECT + Math.min(Math.max(combo - 1, 0), 5) * 2
+}

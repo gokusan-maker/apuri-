@@ -137,3 +137,11 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .monster-body.evolve { animation: none; }
 }
+
+.combo { margin-left: 10px; font-weight: 700; color: #f97316; display: inline-block; animation: pop 0.3s; }
+.xp-gain { color: #f97316; font-size: 1rem; }
+.result-list { display: flex; justify-content: space-around; margin: 16px 0; }
+.result-list div { text-align: center; }
+.result-list dt { color: var(--muted); font-size: 0.85rem; }
+.result-list dd { margin: 4px 0 0; font-size: 1.3rem; font-weight: 700; }
+.result-message { margin: 0 0 8px; }
