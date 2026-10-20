@@ -43,6 +43,7 @@ export const BADGES: Badge[] = [
   { id: 'learned-100', icon: '📚', name: '100語定着', desc: '100語を定着させる', check: (s) => s.learned >= 100 },
   { id: 'learned-300', icon: '🏫', name: '300語定着', desc: '300語を定着させる', check: (s) => s.learned >= 300 },
   { id: 'learned-500', icon: '🎓', name: '500語定着', desc: '500語を定着させる', check: (s) => s.learned >= 500 },
+  { id: 'learned-1000', icon: '🏆', name: '1000語定着', desc: '1000語を定着させる', check: (s) => s.learned >= 1000 },
   { id: 'days-100', icon: '💯', name: '100日学習', desc: '学習した日が100日になる', check: (s) => (s.studyDays ?? 0) >= 100 },
   { id: 'level-5', icon: '🐣', name: '進化の始まり', desc: '相棒をレベル5に育てる', check: (s) => s.level >= 5 },
   { id: 'level-15', icon: '🐉', name: 'たくましく', desc: '相棒をレベル15に育てる', check: (s) => s.level >= 15 },
