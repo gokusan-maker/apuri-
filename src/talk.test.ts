@@ -35,3 +35,7 @@ it('新しいクイズを案内するひとことがある', () => {
 it('覚えた単語で話しかける', () => {
   expect(rememberLine({ en: 'apple', ja: 'りんご' }).ja).toBe('「apple」っておぼえてる？（りんご）')
 })
+
+it('2000語の記念のひとことがある', () => {
+  expect(LINES.some((l) => l.ja.includes('2000語'))).toBe(true)
+})
