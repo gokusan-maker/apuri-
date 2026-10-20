@@ -8,6 +8,8 @@ type Props = {
   words: Word[]
   progress: ProgressMap
   onClose: () => void
+  favorites?: string[]
+  onToggleFavorite?: (id: string) => void
 }
 
 function status(box: number | undefined): string {
@@ -16,7 +18,7 @@ function status(box: number | undefined): string {
   return '学習中'
 }
 
-export function WordList({ words, progress, onClose }: Props) {
+export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite }: Props) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
   const hits = searchWords(words, query)
@@ -52,6 +54,16 @@ export function WordList({ words, progress, onClose }: Props) {
                   <button className="speak small" onClick={() => speak(w.en)} aria-label={`${w.en}の発音を聞く`}>
                     🔊
                   </button>
+                  {onToggleFavorite && (
+                    <button
+                      className={`fav inline${favorites.includes(w.id) ? ' on' : ''}`}
+                      onClick={() => onToggleFavorite(w.id)}
+                      aria-pressed={favorites.includes(w.id)}
+                      aria-label={`${w.en}をお気に入り`}
+                    >
+                      {favorites.includes(w.id) ? '★' : '☆'}
+                    </button>
+                  )}
                   <span className="word-level">{w.id.startsWith('my:') ? 'マイ単語帳' : levelOf(w)}</span>
                   {w.example && (
                     <>

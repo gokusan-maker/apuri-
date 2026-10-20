@@ -4,6 +4,7 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Card } from './CardView'
 import { WordList } from './WordListView'
+import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
@@ -69,8 +70,10 @@ function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
   const [showList, setShowList] = useState(false)
-  // 苦手カード：記録画面から始める。一周するまで同じ単語は出さない
-  const [weakCards, setWeakCards] = useState<string[] | null>(null)
+  // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
+  type Focus = 'weak' | 'fav'
+  const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
+  const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const today = dayKey()
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
@@ -137,7 +140,7 @@ function App() {
   }
 
   const [mistakes, setMistakes] = usePersistent(loadMistakes, saveMistakes)
-  const [weakOnly, setWeakOnly] = useState(false)
+  const [quizFocus, setQuizFocus] = useState<Focus | null>(null)
 
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
     studied(correct)
@@ -174,6 +177,10 @@ function App() {
   const levelKey = `${levels.join(',')}${useMy ? `:my${myWords.length}` : ''}`
 
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
+  // お気に入りは単語帳の選択に関係なく全部から
+  const favWords = useMemo(() => [...WORDS, ...myWords].filter((w) => favorites.includes(w.id)), [myWords, favorites])
+  const focusList = (k: Focus) => (k === 'weak' ? weak : favWords)
+  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday), [words, progress, today, newToday])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
@@ -225,16 +232,28 @@ function App() {
     return () => window.clearTimeout(id)
   }, [toast])
 
-  const weakCard = weakCards ? weak.find((w) => !weakCards.includes(w.id)) : undefined
+  const focusCard = cardFocus ? focusList(cardFocus.kind).find((w) => !cardFocus.done.includes(w.id)) : undefined
 
-  function answerWeak(correct: boolean) {
-    if (!weakCard || !weakCards) return
-    setWeakCards([...weakCards, weakCard.id])
-    setProgress({ ...progress, [weakCard.id]: grade(progress[weakCard.id], correct, today) })
+  function answerFocus(correct: boolean) {
+    if (!focusCard || !cardFocus) return
+    setCardFocus({ ...cardFocus, done: [...cardFocus.done, focusCard.id] })
+    setProgress({ ...progress, [focusCard.id]: grade(progress[focusCard.id], correct, today) })
     studied(correct)
     if (correct) count('cardGood')
-    setMistakes((m) => (correct ? easeMistake(m, weakCard.id) : addMistake(m, weakCard.id)))
+    if (!correct) setMistakes((m) => addMistake(m, focusCard.id))
+    else if (cardFocus.kind === 'weak') setMistakes((m) => easeMistake(m, focusCard.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
+  }
+
+  function startCards(kind: Focus) {
+    setCardFocus({ kind, done: [] })
+    setShowList(false)
+    setMode('card')
+  }
+
+  function startQuiz(kind: Focus) {
+    setQuizFocus(kind)
+    setMode('quiz')
   }
 
   const [shown, setShown] = useState(0) // 同じカードがもう一度出ても新しいカードとして扱う
@@ -340,16 +359,12 @@ function App() {
             goal={settings.dailyGoal}
             weak={weak}
             mistakes={mistakes}
-            onReviewWeak={() => {
-              setWeakOnly(true)
-              setMode('quiz')
-            }}
+            onReviewWeak={() => startQuiz('weak')}
+            favorites={favWords}
+            onReviewFav={() => startQuiz('fav')}
+            onReviewFavCards={() => startCards('fav')}
             schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
-            onReviewWeakCards={() => {
-              setWeakCards([])
-              setShowList(false)
-              setMode('card')
-            }}
+            onReviewWeakCards={() => startCards('weak')}
           >
             <ShareButton
               stats={{
@@ -369,16 +384,16 @@ function App() {
         </>
       ) : mode === 'quiz' ? (
         <>
-          {weakOnly && weak.length > 0 && (
+          {quizFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
-              苦手だけ復習中（{weak.length}語）
-              <button onClick={() => setWeakOnly(false)}>やめる</button>
+              {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
+              <button onClick={() => setQuizFocus(null)}>やめる</button>
             </p>
           )}
           <Quiz
-            key={`${levelKey}${weakOnly ? ':weak' : ''}`}
-            words={words}
-            targets={weakOnly && weak.length > 0 ? weak : undefined}
+            key={`${levelKey}${quizFocus ? `:${quizFocus}` : ''}`}
+            words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
+            targets={quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={onAnswer}
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
@@ -391,29 +406,46 @@ function App() {
             count('timeAttack')
           }} />
       ) : (
-        weakCards ? (
+        cardFocus ? (
           <>
             <p className="weak-banner">
-              苦手カードで復習中（のこり {weak.filter((w) => !weakCards.includes(w.id)).length}語）
-              <button onClick={() => setWeakCards(null)}>やめる</button>
+              {FOCUS_LABEL[cardFocus.kind]}カードで復習中（のこり{' '}
+              {focusList(cardFocus.kind).filter((w) => !cardFocus.done.includes(w.id)).length}語）
+              <button onClick={() => setCardFocus(null)}>やめる</button>
             </p>
-            {weakCard ? (
+            {focusCard ? (
               <Card
-                key={`weak-${weakCard.id}`}
-                card={weakCard}
-                onAnswer={answerWeak}
+                key={`focus-${focusCard.id}`}
+                card={focusCard}
+                onAnswer={answerFocus}
                 autoSpeak={settings.autoSpeak}
                 jaFirst={settings.cardJaFirst}
+                favorite={favorites.includes(focusCard.id)}
+                onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
               />
             ) : (
-              <p className="done">苦手カードを一周しました 💪</p>
+              <p className="done">{FOCUS_LABEL[cardFocus.kind]}カードを一周しました 💪</p>
             )}
           </>
         ) : showList ? (
-          <WordList words={words} progress={progress} onClose={() => setShowList(false)} />
+          <WordList
+            words={words}
+            progress={progress}
+            onClose={() => setShowList(false)}
+            favorites={favorites}
+            onToggleFavorite={(id) => setFavorites((f) => toggleFavorite(f, id))}
+          />
         ) : (
           <>
-            <Card key={`${card?.id}-${shown}`} card={card} onAnswer={answer} autoSpeak={settings.autoSpeak} jaFirst={settings.cardJaFirst} />
+            <Card
+              key={`${card?.id}-${shown}`}
+              card={card}
+              onAnswer={answer}
+              autoSpeak={settings.autoSpeak}
+              jaFirst={settings.cardJaFirst}
+              favorite={!!card && favorites.includes(card.id)}
+              onToggleFavorite={() => card && setFavorites((f) => toggleFavorite(f, card.id))}
+            />
             <button className="list-link" onClick={() => setShowList(true)}>
               📚 単語一覧・さがす
             </button>

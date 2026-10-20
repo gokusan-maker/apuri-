@@ -16,10 +16,13 @@ type Props = {
   onReviewWeak: () => void
   onReviewWeakCards: () => void
   schedule: number[] // 今日から7日間の復習数
+  favorites?: Word[]
+  onReviewFav?: () => void
+  onReviewFavCards?: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -79,6 +82,19 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
             </button>
           </div>
         </>
+      )}
+      <h2>★ お気に入り（{favorites.length}語）</h2>
+      {favorites.length === 0 ? (
+        <p className="stats-note">カードや単語一覧の ☆ をタップすると、ここに集まります。</p>
+      ) : (
+        <div className="actions">
+          <button className="good" onClick={onReviewFavCards}>
+            カードで復習
+          </button>
+          <button className="good" onClick={onReviewFav}>
+            クイズで復習
+          </button>
+        </div>
       )}
       {children}
     </section>

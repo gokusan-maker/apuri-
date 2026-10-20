@@ -9,10 +9,12 @@ type Props = {
   onAnswer: (correct: boolean) => void
   autoSpeak?: boolean
   jaFirst?: boolean // 表に日本語、裏に英語
+  favorite?: boolean
+  onToggleFavorite?: () => void
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const start = useRef<{ x: number; y: number } | null>(null)
@@ -79,6 +81,16 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false }: Pro
       style={dx ? { transform: `translateX(${dx}px) rotate(${dx / 30}deg)` } : undefined}
       {...swipe}
     >
+      {onToggleFavorite && (
+        <button
+          className={`fav${favorite ? ' on' : ''}`}
+          onClick={onToggleFavorite}
+          aria-pressed={favorite}
+          aria-label="お気に入り"
+        >
+          {favorite ? '★' : '☆'}
+        </button>
+      )}
       {jaFirst ? (
         <p className="en ja-prompt">{card.ja}</p>
       ) : (

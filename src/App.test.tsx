@@ -347,4 +347,19 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
     expect(screen.getByText('明日 1語')).toBeInTheDocument()
   })
+
+  it('カードの☆でお気に入りにして、記録画面からお気に入りだけ復習できる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('お気に入り'))
+    expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([WORDS[0].id])
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('★ お気に入り（1語）')).toBeInTheDocument()
+    const favSection = screen.getByText('★ お気に入り（1語）').nextElementSibling!
+    fireEvent.click(favSection.querySelector('button')!) // カードで復習
+    expect(screen.getByText(/お気に入りカードで復習中/)).toBeInTheDocument()
+    expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[0].en)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('お気に入りカードを一周しました 💪')).toBeInTheDocument()
+  })
 })
