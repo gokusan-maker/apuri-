@@ -12,5 +12,6 @@ export const EMOJI: Record<string, string> = {
   sofa: '🛋️', mirror: '🪞', window: '🪟', chair: '🪑',
   christmas: '🎄', halloween: '🎃', party: '🥳', fireworks: '🎆', wedding: '💒', concert: '🎤', graduation: '🎓',
   volcano: '🌋', desert: '🏜️', leaf: '🍃', grass: '🌱', insect: '🐛', brain: '🧠',
+  hat: '👒', cap: '🧢', shirt: '👕', skirt: '👗', shoes: '👟', sock: '🧦', coat: '🧥', glasses: '👓', umbrella: '☂️', wallet: '👛',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
