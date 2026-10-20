@@ -741,6 +741,12 @@ describe('App', () => {
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
   })
 
+  it('設定画面に見出しがある', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    for (const h of ['📚 学習', '🔊 音声', '🎨 見た目', '💾 データ']) expect(screen.getByRole('heading', { name: h })).toBeInTheDocument()
+  })
+
   it('設定画面で新しくなったことを見られる', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))
