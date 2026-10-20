@@ -246,7 +246,19 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       </button>
       {(line ?? cheer) && (
         <div className="bubble" role="status" onClick={() => setLine(null)}>
-          <span className="bubble-en">{(line ?? cheer)!.en}</span>
+          <span className="bubble-en">
+            {(line ?? cheer)!.en}
+            <button
+              className="speak small"
+              aria-label="ひとことを聞く"
+              onClick={(e) => {
+                e.stopPropagation()
+                speak((line ?? cheer)!.en)
+              }}
+            >
+              🔊
+            </button>
+          </span>
           <span className="bubble-ja">{(line ?? cheer)!.ja}</span>
         </div>
       )}
