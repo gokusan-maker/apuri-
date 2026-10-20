@@ -32,3 +32,20 @@ describe('並べ替えクイズ', () => {
     expect(screen.getByText('こたえあわせ')).toBeDisabled()
   })
 })
+
+it('聞き並べ：訳は答えるまで隠れていて、例文を読み上げる', () => {
+  const spoken: string[] = []
+  Object.assign(window, {
+    SpeechSynthesisUtterance: class {
+      text: string
+      constructor(t: string) {
+        this.text = t
+      }
+    },
+    speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+  })
+  const w = WORDS.find((x) => x.id === 'borrow')!
+  render(<Scramble words={[w]} count={1} byEar />)
+  expect(spoken).toEqual([w.example])
+  expect(screen.queryByText(w.exampleJa)).not.toBeInTheDocument()
+})

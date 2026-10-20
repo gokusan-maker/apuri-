@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { canScramble, isCorrectOrder, scramble, split } from './scramble'
@@ -12,6 +12,7 @@ type Props = {
   words: Word[]
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  byEar?: boolean // 訳を見ずに、例文を聞いて並べる
 }
 
 type Chip = { id: number; text: string }
@@ -20,7 +21,7 @@ function setup(w: Word): Chip[] {
   return scramble(split(w.example).words).map((text, id) => ({ id, text }))
 }
 
-export function Scramble({ words, count = 10, onAnswer }: Props) {
+export function Scramble({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [list, setList] = useState(() => shuffle(words.filter((w) => canScramble(w.example))).slice(0, count))
   const [index, setIndex] = useState(0)
   const [pool, setPool] = useState<Chip[]>(() => (list[0] ? setup(list[0]) : []))
@@ -28,6 +29,10 @@ export function Scramble({ words, count = 10, onAnswer }: Props) {
   const [result, setResult] = useState<'ok' | 'ng' | null>(null)
   const [score, setScore] = useState(0)
   const w = list[index]
+
+  useEffect(() => {
+    if (byEar && w) speak(w.example)
+  }, [byEar, w])
 
   function start(i: number, l = list) {
     setIndex(i)
@@ -49,8 +54,8 @@ export function Scramble({ words, count = 10, onAnswer }: Props) {
     } else {
       playWrong()
     }
-    onAnswer?.(ok, ok ? XP_SCRAMBLE : 0, w.id, 'quiz')
-    speak(w.example)
+    onAnswer?.(ok, ok ? XP_SCRAMBLE : 0, w.id, byEar ? 'ear' : 'quiz')
+    if (!byEar) speak(w.example)
   }
 
   if (!w) {
@@ -81,7 +86,16 @@ export function Scramble({ words, count = 10, onAnswer }: Props) {
       <p className="progress">
         {index + 1} / {list.length}
       </p>
-      <p className="example-ja scramble-ja">{w.exampleJa}</p>
+      {byEar ? (
+        <>
+          <button className="listen" onClick={() => speak(w.example)} aria-label="もう一度聞く">
+            🔊
+          </button>
+          <p className="example-ja scramble-ja">{result ? w.exampleJa : '聞こえた順に単語を並べよう'}</p>
+        </>
+      ) : (
+        <p className="example-ja scramble-ja">{w.exampleJa}</p>
+      )}
       <div className="scramble-answer" aria-label="答え">
         {answer.map((c) => (
           <button
