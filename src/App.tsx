@@ -383,7 +383,10 @@ function App() {
   // 相棒が話題にする、覚えた単語（箱2以上から最大20語）
   const learnedSample = useMemo(() => WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 2).slice(0, 20), [progress])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
-  const card = queue[0]
+  // 「あとで」に回した単語は列のうしろへ（その日だけ）
+  const [skipped, setSkipped] = useState<string[]>([])
+  const ordered = skipped.length ? [...queue.filter((w) => !skipped.includes(w.id)), ...queue.filter((w) => skipped.includes(w.id))] : queue
+  const card = ordered[0]
 
 
   // バッジ：条件を満たしたらその場でもらえる
@@ -961,6 +964,7 @@ function App() {
                   : undefined
               }
               onQuiz={() => setMode('quiz')}
+              onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
             />
             <button className="list-link" onClick={() => setShowList(true)}>
               📚 単語一覧・さがす

@@ -758,6 +758,14 @@ describe('App', () => {
     expect(screen.getByText(/問目（レベル診断）/)).toBeInTheDocument()
   })
 
+  it('カードの「あとで」で、その単語を列のうしろに回せる', () => {
+    render(<App />)
+    const first = document.querySelector('.card .en')!.textContent
+    fireEvent.click(screen.getByText('⏭ あとで'))
+    expect(document.querySelector('.card .en')!.textContent).not.toBe(first)
+    expect(screen.getByText(/今日の残り 10 語/)).toBeInTheDocument()
+  })
+
   it('設定画面に見出しがある', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))

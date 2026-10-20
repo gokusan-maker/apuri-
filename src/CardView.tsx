@@ -18,6 +18,7 @@ type Props = {
   favorite?: boolean
   onToggleFavorite?: () => void
   onMore?: () => void // 今日の分が終わったあと、新しい単語を5語ふやす
+  onSkip?: () => void // この単語をうしろに回す
   onQuiz?: () => void
   note?: string
   onNote?: (text: string) => void
@@ -26,7 +27,7 @@ type Props = {
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup, emojiHint = false }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup, emojiHint = false, onSkip }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const [showJa, setShowJa] = useState(false)
@@ -238,9 +239,16 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
           <p className="swipe-hint">← スワイプでも答えられるよ →</p>
         </>
       ) : (
-        <button className="flip" onClick={() => setFlipped(true)}>
-          {jaFirst ? '英語を見る' : '意味を見る'}
-        </button>
+        <>
+          <button className="flip" onClick={() => setFlipped(true)}>
+            {jaFirst ? '英語を見る' : '意味を見る'}
+          </button>
+          {onSkip && (
+            <button className="note-btn skip-card" onClick={onSkip}>
+              ⏭ あとで
+            </button>
+          )}
+        </>
       )}
     </section>
   )
