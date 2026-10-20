@@ -1,4 +1,5 @@
 import { Install } from './InstallView'
+import { OfflineStatus } from './OfflineView'
 import { GRADES } from './grade'
 import type { Level } from './words'
 import { useState } from 'react'
@@ -148,6 +149,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       </label>
 
       <Install />
+      <OfflineStatus />
     </section>
   )
 }
