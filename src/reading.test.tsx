@@ -4,13 +4,20 @@ import { PASSAGES } from './reading'
 import { Reading } from './ReadingView'
 
 describe('読解ミニ', () => {
-  it('15話、各3問で、正解が選択肢の中にある', () => {
+  it('25話、各3問で、正解が選択肢の中にある', () => {
     expect(PASSAGES).toHaveLength(25)
     for (const p of PASSAGES) {
       expect(p.questions).toHaveLength(3)
       for (const q of p.questions) expect(q.choices[q.answer]).toBeDefined()
       expect(p.text.split('. ').length).toBeGreaterThanOrEqual(3)
     }
+  })
+
+  it('本文の単語をタップすると意味が出る', () => {
+    render(<Reading />)
+    fireEvent.click(screen.getByText(PASSAGES[0].title))
+    fireEvent.click(screen.getByRole('button', { name: 'cat.' }))
+    expect(screen.getByRole('status').textContent).toContain('cat：')
   })
 
   it('読んで3問に答え、最後に訳が出る', () => {

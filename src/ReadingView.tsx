@@ -3,6 +3,10 @@ import type { Source } from './monster'
 import { PASSAGES, type Passage } from './reading'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
+import { makeLookup } from './glossary'
+import { WORDS, type Word } from './words'
+
+const lookup = makeLookup(WORDS)
 
 export const XP_READING = 15
 
@@ -14,6 +18,7 @@ export function Reading({ onAnswer }: Props) {
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [showJa, setShowJa] = useState(false)
+  const [gloss, setGloss] = useState<Word | null>(null)
 
   if (!p) {
     return (
@@ -26,6 +31,7 @@ export function Reading({ onAnswer }: Props) {
               <button
                 onClick={() => {
                   setP(x)
+                  setGloss(null)
                   setStep(0)
                   setPicked(null)
                   setScore(0)
@@ -53,7 +59,23 @@ export function Reading({ onAnswer }: Props) {
           🔊
         </button>
       </h2>
-      <p className="reading-text">{p.text}</p>
+      <p className="reading-text">
+        {p.text.split(/(\s+)/).map((tok, i) => {
+          const hit = lookup(tok)
+          return hit ? (
+            <button key={i} className="gloss-word" onClick={() => setGloss(gloss?.id === hit.id ? null : hit)}>
+              {tok}
+            </button>
+          ) : (
+            <span key={i}>{tok}</span>
+          )
+        })}
+      </p>
+      {gloss && (
+        <p className="gloss" role="status">
+          {gloss.en}：{gloss.ja}
+        </p>
+      )}
       {showJa ? <p className="example-ja">{p.ja}</p> : null}
       {q ? (
         <>
