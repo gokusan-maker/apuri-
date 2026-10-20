@@ -82,3 +82,15 @@ export function oddQ(rng: Rng = Math.random): PuzzleQ {
     wordId: odd.id,
   }
 }
+
+// いくつある？：絵文字を数えて英語で答える（2〜12）
+const COUNT_EMOJI = ['🍎', '🐱', '⭐', '🚗', '🌸', '⚽', '🍌', '🐟']
+const NUM_EN = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve']
+
+export function countQ(rng: Rng = Math.random): PuzzleQ {
+  const n = 2 + Math.floor(rng() * 11)
+  const e = COUNT_EMOJI[Math.floor(rng() * COUNT_EMOJI.length)]
+  const near = shuffle([n - 3, n - 2, n - 1, n + 1, n + 2, n + 3].filter((x) => x >= 1 && x <= 12), rng).slice(0, 3)
+  const choices = shuffle([n, ...near], rng).map((x) => NUM_EN[x])
+  return { prompt: `${e.repeat(n)}\nいくつある？`, choices, answer: choices.indexOf(NUM_EN[n]), why: `${n} は ${NUM_EN[n]}`, wordId: NUM_EN[n] }
+}

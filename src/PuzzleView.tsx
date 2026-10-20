@@ -67,7 +67,7 @@ export function Puzzle({ make, onAnswer }: Props) {
       <p className="quiz-progress">
         {n} / {PUZZLE_COUNT} 問目・正解 {score}
       </p>
-      <p className="verb-ask">{q.prompt}</p>
+      <p className="verb-ask puzzle-prompt">{q.prompt}</p>
       <div className="choices">
         {q.choices.map((c, i) => {
           let cls = 'choice'

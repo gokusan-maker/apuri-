@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -35,6 +35,16 @@ describe('パズル', () => {
       expect(names.filter((n) => n === odd)).toHaveLength(1)
       expect(new Set(names.filter((_, k) => k !== q.answer)).size).toBe(1)
       for (const c of q.choices) expect(q.why).toContain(c)
+    }
+  })
+
+  it('いくつある？：絵文字の数と正解が合い、選択肢は4つ', () => {
+    for (let i = 0; i < 50; i++) {
+      const q = countQ()
+      const n = [...q.prompt.split('\n')[0]].length
+      expect(['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve'][n]).toBe(q.choices[q.answer])
+      expect(new Set(q.choices).size).toBe(4)
+      expect(WORDS.some((w) => w.id === q.wordId)).toBe(true)
     }
   })
 })

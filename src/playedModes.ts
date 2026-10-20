@@ -2,7 +2,7 @@
 const KEY = 'eitan:played-modes'
 
 // 最近ふえた種類（遊ぶまで NEW を出す）
-export const NEW_MODES = ['numbers', 'sounds', 'emoji', 'emoji-rev', 'emoji-ear', 'versus', 'abc', 'opposite', 'odd']
+export const NEW_MODES = ['numbers', 'sounds', 'emoji', 'emoji-rev', 'emoji-ear', 'versus', 'abc', 'opposite', 'odd', 'count', 'clock', 'color']
 
 export function loadPlayed(): string[] {
   try {
