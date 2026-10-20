@@ -3,8 +3,8 @@ import { GRAMMAR } from './grammar'
 import { SOUNDS } from './sounds'
 
 describe('発音のコツ', () => {
-  it('6単元、各3問。正解が選択肢にあり、文法とidが重ならない', () => {
-    expect(SOUNDS).toHaveLength(6)
+  it('7単元、各3問。正解が選択肢にあり、文法とidが重ならない', () => {
+    expect(SOUNDS).toHaveLength(7)
     for (const u of SOUNDS) {
       expect(GRAMMAR.some((g) => g.id === u.id)).toBe(false)
       expect(u.questions).toHaveLength(3)

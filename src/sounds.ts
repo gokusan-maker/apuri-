@@ -86,4 +86,18 @@ export const SOUNDS: GrammarUnit[] = [
       { sentence: 'Japan の強く読むところは ___', choices: ['JA-pan', 'ja-PAN'], answer: 1, why: 'うしろの PAN を強く読む。Japanese も ja-pa-NESE とうしろが強い。' },
     ],
   },
+  {
+    id: 'snd-ssh',
+    title: 's と sh（see と she）',
+    points: ['s は歯のすきまから「スー」と息を出す音。sh はくちびるを少し丸めて前に出し「シュー」と出す音。see（見る）と she（彼女）、sip（すする）と ship（船）はちがう単語。'],
+    examples: [
+      { en: 'She sells shells by the sea.', ja: '彼女は海辺で貝がらを売っている。（早口ことば）' },
+      { en: 'I see a ship.', ja: '船が見える。' },
+    ],
+    questions: [
+      { sentence: '___ is my sister.（彼女は）', choices: ['See', 'She'], answer: 1, why: '「彼女は」は sh の She。' },
+      { sentence: 'We went to Hokkaido by ___.（船）', choices: ['sip', 'ship'], answer: 1, why: '「船」は sh の ship。sip は「すする」。' },
+      { sentence: 'I like swimming in the ___.（海）', choices: ['sea', 'she'], answer: 0, why: '「海」は s の sea。she は「彼女は」。' },
+    ],
+  },
 ]
