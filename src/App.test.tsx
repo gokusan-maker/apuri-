@@ -197,4 +197,21 @@ describe('App', () => {
     expect(screen.getByText('合計 1 問・目標達成 0 日')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:history')!)).toEqual({ [dayKey()]: 1 })
   })
+
+  it('カードの裏で例文を読み上げられる', () => {
+    const spoken: string[] = []
+    Object.assign(window, {
+      SpeechSynthesisUtterance: class {
+        text: string
+        constructor(t: string) {
+          this.text = t
+        }
+      },
+      speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+    })
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByLabelText('例文を聞く'))
+    expect(spoken).toEqual([WORDS[0].example])
+  })
 })

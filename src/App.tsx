@@ -337,7 +337,14 @@ function App() {
           {flipped ? (
             <>
               <p className="ja">{card.ja}</p>
-              <p className="example">{card.example}</p>
+              {card.example && (
+                <p className="example">
+                  {card.example}
+                  <button className="speak small" onClick={() => speak(card.example)} aria-label="例文を聞く">
+                    🔊
+                  </button>
+                </p>
+              )}
               <p className="example-ja">{card.exampleJa}</p>
               <div className="actions">
                 <button className="again" onClick={() => answer(false)}>
