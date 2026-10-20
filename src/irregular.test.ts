@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { makeVerbDrill, makeVerbQuestion, regularize, VERBS } from './irregular'
 
 describe('不規則動詞', () => {
-  it('40語以上あり、原形は重複しない', () => {
-    expect(VERBS.length).toBeGreaterThanOrEqual(40)
+  it('60語あり、原形は重複しない', () => {
+    expect(VERBS.length).toBe(60)
     expect(new Set(VERBS.map((v) => v.base)).size).toBe(VERBS.length)
   })
 
