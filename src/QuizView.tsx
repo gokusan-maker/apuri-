@@ -23,7 +23,8 @@ import { WORDS, type Word } from './words'
 // dictation：音声を聞いて書く
 // sentence：例文を聞いて訳を選ぶ
 // mix：英→日・日→英・リスニングが1問ごとにランダム
-export type Direction = 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// read：例文の音読（音声認識が使える端末のみ表示）
+export type Direction = 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -65,6 +66,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'irregular', label: '🔁 不規則動詞' },
   { id: 'grammar', label: '📖 文法' },
   { id: 'speak', label: '🎤 発音' },
+  { id: 'read', label: '📢 音読' },
 ]
 
 type Props = {
@@ -155,7 +157,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   const toggle = lockDirection ? null : (
     <div className="direction" role="group" aria-label="出題の向き">
-      {DIRECTIONS.filter((d) => d.id !== 'speak' || getRecognition()).map((d) => (
+      {DIRECTIONS.filter((d) => (d.id !== 'speak' && d.id !== 'read') || getRecognition()).map((d) => (
         <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
           {d.label}
         </button>
@@ -177,6 +179,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       <>
         <div className="card-tabs">{toggle}</div>
         <Grammar onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'read') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Pronounce key="read" words={targets ?? words} count={count} onAnswer={onAnswer} sentence />
       </>
     )
   }

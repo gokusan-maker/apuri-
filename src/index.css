@@ -606,3 +606,4 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind { color: inherit; opacity: 0.8; }
 .room-sample .badge-name { color: inherit; }
 .weekly { margin-top: 10px; } .weekly p { margin: 0 0 4px; font-size: 0.9rem; }
+.read-sentence { font-size: 1.25rem; font-weight: 700; margin: 8px 0 4px; }

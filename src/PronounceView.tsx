@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { Source } from './monster'
-import { getRecognition, matchesSpeech } from './pronounce'
+import { getRecognition, matchesSpeech, SENTENCE_PASS, sentenceScore } from './pronounce'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -11,12 +11,13 @@ type Props = {
   words: Word[]
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  sentence?: boolean // 例文を音読する
 }
 
 export const XP_PRONOUNCE = 10
 
-export function Pronounce({ words, count = 10, onAnswer }: Props) {
-  const [list] = useState(() => shuffle(words).slice(0, count))
+export function Pronounce({ words, count = 10, onAnswer, sentence = false }: Props) {
+  const [list] = useState(() => shuffle(sentence ? words.filter((w) => w.example) : words).slice(0, count))
   const [index, setIndex] = useState(0)
   const [listening, setListening] = useState(false)
   const [heard, setHeard] = useState('')
@@ -26,6 +27,7 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
   const answeredRef = useRef(false) // 1単語につき記録（XP・コイン）は最初の1回だけ
   const Rec = getRecognition()
   const w = list[index % list.length]
+  const target = w ? (sentence ? w.example : w.en) : ''
 
   if (!Rec) {
     return (
@@ -45,7 +47,7 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
     rec.onresult = (e) => {
       const alts = Array.from(e.results[0] ?? []).map((a) => a.transcript)
       setHeard(alts[0] ?? '')
-      const ok = matchesSpeech(alts, w.en)
+      const ok = sentence ? sentenceScore(alts, target) >= SENTENCE_PASS : matchesSpeech(alts, target)
       setResult(ok ? 'ok' : 'ng')
       if (ok) playCorrect()
       else playWrong()
@@ -86,15 +88,24 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
       <p className="progress">
         {(index % list.length) + 1} / {list.length}
       </p>
-      <p className="en">{w.en}</p>
-      <p className="example-ja">{w.ja}</p>
-      <button className="speak" onClick={() => speak(w.en)} aria-label="お手本を聞く">
+      {sentence ? (
+        <>
+          <p className="example read-sentence">{w.example}</p>
+          <p className="example-ja">{w.exampleJa}</p>
+        </>
+      ) : (
+        <>
+          <p className="en">{w.en}</p>
+          <p className="example-ja">{w.ja}</p>
+        </>
+      )}
+      <button className="speak" onClick={() => speak(target)} aria-label="お手本を聞く">
         🔊
       </button>
       <button className={`listen mic${listening ? ' on' : ''}`} onClick={listen} aria-label="話す">
         🎤
       </button>
-      <p className="stats-note">{listening ? '聞いています…' : 'マイクを押して英語で言ってみよう'}</p>
+      <p className="stats-note">{listening ? '聞いています…' : sentence ? 'マイクを押して例文を読んでみよう' : 'マイクを押して英語で言ってみよう'}</p>
       {heard && <p className="heard">聞こえた：「{heard}」</p>}
       {result && <p className="feedback">{result === 'ok' ? 'ばっちり！' : 'おしい！もう一度'}</p>}
       {error && <p className="form-error">{error}</p>}

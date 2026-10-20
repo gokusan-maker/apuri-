@@ -24,3 +24,17 @@ export function getRecognition(w: Window = window): RecognitionCtor | null {
   const x = w as unknown as { SpeechRecognition?: RecognitionCtor; webkitSpeechRecognition?: RecognitionCtor }
   return x.SpeechRecognition ?? x.webkitSpeechRecognition ?? null
 }
+
+// 例文の音読：目標の単語の8割以上が聞き取れていれば合格
+export function sentenceScore(alternatives: string[], target: string): number {
+  const want = normalizeSpeech(target).split(' ').filter(Boolean)
+  if (want.length === 0) return 0
+  let best = 0
+  for (const a of alternatives) {
+    const got = new Set(normalizeSpeech(a).split(' '))
+    best = Math.max(best, want.filter((w) => got.has(w)).length / want.length)
+  }
+  return best
+}
+
+export const SENTENCE_PASS = 0.8
