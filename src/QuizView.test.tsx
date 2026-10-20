@@ -396,3 +396,12 @@ it('ふつうの種類では問題数ボタンを出す', () => {
   render(<Quiz words={WORDS.slice(0, 20)} direction="en-ja" />)
   expect(screen.getByRole('group', { name: '問題数' })).toBeInTheDocument()
 })
+
+it('しぼりこみ中は、神経衰弱もその単語で遊ぶ', () => {
+  const targets = WORDS.slice(100, 106)
+  render(<Quiz words={WORDS.slice(0, 50)} targets={targets} direction="memory" />)
+  const cards = [...document.querySelectorAll<HTMLButtonElement>('.memory-card')]
+  fireEvent.click(cards[0])
+  const t = document.querySelectorAll('.memory-card')[0].textContent
+  expect(targets.some((w) => w.en === t || w.ja === t)).toBe(true)
+})

@@ -438,7 +438,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Bingo words={words} onAnswer={onAnswer} />
+        <Bingo words={targets && targets.length >= 9 ? targets : words} onAnswer={onAnswer} />
       </>
     )
   }
@@ -447,7 +447,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Memory words={words} onAnswer={onAnswer} />
+        <Memory words={targets && targets.length >= 6 ? targets : words} onAnswer={onAnswer} />
       </>
     )
   }
