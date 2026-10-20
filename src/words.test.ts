@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
-  it('中学100語＋高校基礎30語あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(130)
+  it('中学158語＋高校基礎30語あり、id が重複しない', () => {
+    expect(WORDS).toHaveLength(188)
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
     expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(30)
   })
@@ -17,7 +17,9 @@ describe('WORDS', () => {
   })
 
   it('どのレベルにも単語があり、レベルで絞り込める', () => {
-    for (const l of LEVELS) expect(wordsOf([l]).length, l).toBeGreaterThanOrEqual(15)
+    for (const l of LEVELS) expect(wordsOf([l]).length, l).toBeGreaterThanOrEqual(30)
+    expect(wordsOf(['中2']).length).toBeGreaterThanOrEqual(50)
+    expect(wordsOf(['中3']).length).toBeGreaterThanOrEqual(50)
     expect(wordsOf([...LEVELS])).toHaveLength(WORDS.length)
     expect(wordsOf(['中1']).every((w) => levelOf(w) === '中1')).toBe(true)
   })
