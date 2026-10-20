@@ -455,4 +455,15 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
     expect(screen.getByLabelText('中1の定着')).toHaveAttribute('aria-valuenow', '1')
   })
+
+  it('記録画面に相棒のプロフィール（出会った日・学び方の割合）', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('相棒のプロフィール')).toBeInTheDocument()
+    const prof = document.querySelector('.profile')!
+    expect(prof.textContent).toContain(dayKey())
+    expect(prof.textContent).toContain('100%')
+  })
 })

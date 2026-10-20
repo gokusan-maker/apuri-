@@ -308,3 +308,41 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
     </div>
   )
 }
+
+const SRC_LABEL = { card: 'カード', quiz: 'クイズ', ear: 'リスニング・スペル' } as const
+
+export function Profile({ monster }: { monster: MonsterState }) {
+  const form = formOf(monster)
+  const total = (monster.src?.card ?? 0) + (monster.src?.quiz ?? 0) + (monster.src?.ear ?? 0)
+  return (
+    <div className="profile">
+      <h2>相棒のプロフィール</h2>
+      <dl>
+        <dt>名前</dt>
+        <dd>{monster.name ?? form.name}</dd>
+        <dt>すがた</dt>
+        <dd>
+          {form.name}（Lv.{levelInfo(monster.xp).level}）
+        </dd>
+        <dt>出会った日</dt>
+        <dd>{monster.born ?? '記録なし'}</dd>
+        <dt>累計XP</dt>
+        <dd>{monster.xp}</dd>
+      </dl>
+      <p className="stats-note">学び方の割合（Lv15 の進化先に影響）</p>
+      {(['card', 'quiz', 'ear'] as const).map((k) => {
+        const n = monster.src?.[k] ?? 0
+        const pct = total ? Math.round((n / total) * 100) : 0
+        return (
+          <div key={k} className="by-level-row">
+            <span className="by-level-name">{SRC_LABEL[k]}</span>
+            <div className="goal-bar">
+              <div className="goal-fill" style={{ width: `${pct}%` }} />
+            </div>
+            <span className="by-level-num">{pct}%</span>
+          </div>
+        )
+      })}
+    </div>
+  )
+}

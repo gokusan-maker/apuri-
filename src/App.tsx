@@ -15,7 +15,7 @@ import { Missions } from './MissionsView'
 import { loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
-import { Monster, Party as PartyView, Zukan } from './MonsterView'
+import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
@@ -466,6 +466,7 @@ function App() {
             <MyWords list={myWords} onChange={setMyWords} />
             <BadgeList earned={earned} />
             <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
+            <Profile monster={monster} />
             <Zukan monsters={party.members} />
             <Backup />
           </Stats>

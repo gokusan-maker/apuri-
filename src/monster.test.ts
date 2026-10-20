@@ -119,3 +119,10 @@ it('Lv50 で伝説の姿に進化し、図鑑は12種になる', () => {
   expect(formOf({ xp: xp - 1, branch: 'ear' }).id).toBe('sora-king')
   expect(seenForms({ xp, branch: 'card' })).toEqual(['egg', 'chibi', 'mochimaru', 'mori', 'mori-king', 'mori-legend'])
 })
+
+it('最初にXPをもらった日が出会った日になり、その後は変わらない', () => {
+  let m = feed({ xp: 0 }, 5, 'card', '2026-10-20')
+  expect(m.born).toBe('2026-10-20')
+  m = feed(m, 5, 'quiz', '2026-10-25')
+  expect(m.born).toBe('2026-10-20')
+})

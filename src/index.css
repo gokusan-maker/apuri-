@@ -614,3 +614,9 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .by-level h2 { margin: 0 0 6px; }
 .by-level-row { display: grid; grid-template-columns: 5.5em 1fr 4em; gap: 8px; align-items: center; margin-bottom: 6px; font-size: 0.85rem; }
 .by-level-num { text-align: right; color: var(--muted); }
+.profile { margin-top: 20px; }
+.profile h2 { margin: 0 0 6px; }
+.profile dl { display: grid; grid-template-columns: 6em 1fr; gap: 4px 8px; margin: 0 0 8px; text-align: left; }
+.profile dt { color: var(--muted); font-size: 0.85rem; }
+.profile dd { margin: 0; }
+.by-level-row .by-level-name { font-size: 0.8rem; }

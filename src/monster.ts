@@ -11,6 +11,7 @@ export type MonsterState = {
   seen?: string[] // 出会った姿（図鑑）
   name?: string // 自分でつけた名前
   wear?: string // 着ている飾り（ショップのアイテムid）
+  born?: string // 最初にXPをもらった日（出会った日）
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -54,6 +55,7 @@ export function sanitizeMonster(v: unknown): MonsterState {
   if (typeof m.name === 'string' && m.name) out.name = cleanName(m.name)
   if (!out.name) delete out.name
   if (typeof m.wear === 'string') out.wear = m.wear
+  if (typeof m.born === 'string') out.born = m.born
   return out
 }
 
@@ -154,7 +156,7 @@ export function formOf(m: MonsterState): Form {
 // source が null のとき（ミッションのごほうびなど）は系統の判定に数えない
 export function feed(m: MonsterState, amount: number, source: Source | null, today: string): MonsterState {
   const src = source ? { ...m.src, [source]: (m.src?.[source] ?? 0) + amount } : { ...m.src }
-  const next: MonsterState = { ...m, xp: m.xp + amount, lastDay: today, src }
+  const next: MonsterState = { ...m, xp: m.xp + amount, lastDay: today, src, born: m.born ?? today }
   if (!next.branch && stageOf(levelInfo(next.xp).level).index >= 3) next.branch = dominant(src)
   next.seen = seenForms(next)
   return next
