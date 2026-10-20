@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { Backup } from './BackupView'
 import { Monster } from './MonsterView'
 import {
   isLonely,
@@ -193,6 +194,7 @@ function App() {
               </button>
             </>
           )}
+          <Backup />
         </section>
       ) : mode === 'quiz' ? (
         <>

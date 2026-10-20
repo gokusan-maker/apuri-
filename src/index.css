@@ -258,3 +258,6 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .weak-count { color: var(--again); font-weight: 700; }
 .weak-banner { display: flex; justify-content: space-between; align-items: center; margin: 12px 0 0; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--again) 12%, transparent); font-size: 0.9rem; }
 .weak-banner button { border: none; background: transparent; color: var(--accent); }
+.backup { margin-top: 24px; }
+.backup .actions { margin-top: 8px; }
+.backup .actions button { font-size: 0.95rem; }
