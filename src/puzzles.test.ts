@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, clockQ, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -57,5 +57,14 @@ describe('パズル', () => {
     expect(q2.prompt.startsWith('🕐')).toBe(true)
     expect(q2.choices[q2.answer]).toBe("one o'clock")
     for (let i = 0; i < 50; i++) expect(new Set(clockQ().choices).size).toBe(4)
+  })
+
+  it('色の名前：どの色も単語帳にあり、正解が合う', () => {
+    for (const [, en] of COLOR_SQUARES) expect(WORDS.some((w) => w.id === en)).toBe(true)
+    for (let i = 0; i < 30; i++) {
+      const q = colorQ()
+      const sq = q.prompt.split('\n')[0]
+      expect(COLOR_SQUARES.find(([s]) => s === sq)![1]).toBe(q.choices[q.answer])
+    }
   })
 })

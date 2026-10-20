@@ -114,3 +114,15 @@ export function clockQ(rng: Rng = Math.random): PuzzleQ {
     wordId: NUM_EN[h],
   }
 }
+
+// 色の名前：色の四角を英語で
+export const COLOR_SQUARES: [string, string][] = [
+  ['🟥', 'red'], ['🟧', 'orange'], ['🟨', 'yellow'], ['🟩', 'green'], ['🟦', 'blue'], ['🟪', 'purple'], ['🟫', 'brown'], ['⬛', 'black'], ['⬜', 'white'],
+]
+
+export function colorQ(rng: Rng = Math.random): PuzzleQ {
+  const [sq, ans] = COLOR_SQUARES[Math.floor(rng() * COLOR_SQUARES.length)]
+  const wrong = shuffle(COLOR_SQUARES.map((c) => c[1]).filter((c) => c !== ans), rng).slice(0, 3)
+  const choices = shuffle([ans, ...wrong], rng)
+  return { prompt: `${sq}\nこの色は英語で？`, choices, answer: choices.indexOf(ans), why: `${sq} は ${ans}`, wordId: ans }
+}
