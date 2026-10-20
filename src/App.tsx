@@ -9,6 +9,7 @@ import {
   saveProgress,
   type ProgressMap,
 } from './srs'
+import { Quiz } from './Quiz'
 import { WORDS } from './words'
 
 function speak(text: string) {
@@ -22,6 +23,7 @@ function speak(text: string) {
 function App() {
   const [progress, setProgress] = useState<ProgressMap>(loadProgress)
   const [flipped, setFlipped] = useState(false)
+  const [mode, setMode] = useState<'card' | 'quiz'>('card')
   const today = dayKey()
   const [daily, setDaily] = useState(() => loadDailyNew(today))
   const newToday = daily.day === today ? daily.count : 0
@@ -46,9 +48,19 @@ function App() {
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
         </p>
+        <nav className="modes">
+          <button aria-pressed={mode === 'card'} onClick={() => setMode('card')}>
+            カード
+          </button>
+          <button aria-pressed={mode === 'quiz'} onClick={() => setMode('quiz')}>
+            クイズ
+          </button>
+        </nav>
       </header>
 
-      {card ? (
+      {mode === 'quiz' ? (
+        <Quiz words={WORDS} />
+      ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>
           <button className="speak" onClick={() => speak(card.en)} aria-label="発音を聞く">
