@@ -678,6 +678,16 @@ export const WORDS: Word[] = [
   { id: 'congratulations', en: 'Congratulations', ja: 'おめでとう', example: 'Congratulations on winning the game!', exampleJa: '試合に勝っておめでとう！', level: '会話' },
   { id: 'take-care', en: 'Take care', ja: '気をつけてね・お大事に', example: 'You have a cold? Take care.', exampleJa: '風邪なの？お大事に。', level: '会話' },
   { id: 'welcome', en: 'Welcome', ja: 'ようこそ', example: 'Welcome to our school!', exampleJa: '私たちの学校へようこそ！', level: '会話' },
+  { id: 'good-afternoon', en: 'Good afternoon', ja: 'こんにちは（午後のあいさつ）', example: 'Good afternoon, everyone. Let\'s begin.', exampleJa: 'みなさん、こんにちは。始めましょう。', level: '会話' },
+  { id: 'see-you-tomorrow', en: 'See you tomorrow', ja: 'また明日', example: 'Bye! See you tomorrow at school.', exampleJa: 'じゃあね！また明日学校で。', level: '会話' },
+  { id: 'long-time-no-see', en: 'Long time no see', ja: '久しぶり', example: 'Long time no see! How have you been?', exampleJa: '久しぶり！元気にしてた？', level: '会話' },
+  { id: 'what-time-is-it', en: 'What time is it?', ja: '今何時ですか', example: 'What time is it? I think we are late.', exampleJa: '今何時？遅れている気がする。', level: '会話' },
+  { id: 'how-much-is-it', en: 'How much is it?', ja: 'いくらですか', example: 'This bag is nice. How much is it?', exampleJa: 'このかばん、いいね。いくらですか。', level: '会話' },
+  { id: 'can-i-help-you', en: 'Can I help you?', ja: 'いらっしゃいませ・お手伝いしましょうか', example: 'Can I help you? You look lost.', exampleJa: 'お手伝いしましょうか。道に迷っているようですね。', level: '会話' },
+  { id: 'i-see', en: 'I see', ja: 'なるほど・わかりました', example: 'I see. So the shop opens at ten.', exampleJa: 'なるほど。じゃあ店は10時に開くんだね。', level: '会話' },
+  { id: 'pardon', en: 'Pardon?', ja: 'もう一度言ってください', example: 'Pardon? I didn\'t hear you.', exampleJa: 'もう一度言ってもらえますか。聞こえなかったんです。', level: '会話' },
+  { id: 'sounds-good', en: 'Sounds good', ja: 'いいね', example: 'Pizza for lunch? Sounds good!', exampleJa: 'お昼はピザ？いいね！', level: '会話' },
+  { id: 'dont-worry', en: 'Don\'t worry', ja: '心配しないで', example: 'Don\'t worry. You can try again.', exampleJa: '心配しないで。もう一度やればいいよ。', level: '会話' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
