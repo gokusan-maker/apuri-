@@ -68,7 +68,7 @@ import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_REMATCH_XP, BOSS_XP, loadBoss, saveBoss } from './boss'
-import { addToday, loadTodayCount, saveTodayCount } from './stats'
+import { addToday, loadTodayCount, loadTodayXp, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
@@ -143,6 +143,7 @@ function App() {
   useEffect(() => saveHistory(history), [history])
 
   const [accuracy, setAccuracy] = usePersistent(loadAccuracy, saveAccuracy)
+  const [todayXp, setTodayXp] = usePersistent(() => loadTodayXp(today), saveTodayXp)
   const [timeLog, setTimeLog] = usePersistent(loadTime, saveTime)
   useStudyTime(setTimeLog, today)
 
@@ -204,6 +205,7 @@ function App() {
   }
 
   function gainXp(amount: number, source: Source | null) {
+    setTodayXp((d) => ({ day: today, count: (d.day === today ? d.count : 0) + amount }))
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
     setHappy(true)
@@ -537,6 +539,10 @@ function App() {
           </div>
           {statsTab === 'log' && (
             <>
+              <p className="today-summary">
+                ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
+                <strong>{newToday}語</strong>
+              </p>
               {needBackup(loadLastBackup(), today, totals.answers) && (
                 <p className="weak-banner backup-remind" role="status">
                   💾 しばらくデータを保存していません

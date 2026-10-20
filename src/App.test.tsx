@@ -87,7 +87,7 @@ describe('App', () => {
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
     expect(screen.getByText('1日')).toBeInTheDocument()
-    expect(screen.getByText('2問')).toBeInTheDocument()
+    expect(document.querySelector('.result-list')!.textContent).toContain('2問')
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
   })
 
@@ -576,5 +576,13 @@ describe('App', () => {
     expect(screen.getByText(/完全制覇/)).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
     expect(document.querySelector('.by-level')!.textContent).toContain('👑曜日・月')
+  })
+
+  it('記録画面に今日のまとめ（問題数・XP・新しい単語）', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(document.querySelector('.today-summary')!.textContent).toContain('1問・+5XP・新しい単語 1語')
   })
 })
