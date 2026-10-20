@@ -11,6 +11,7 @@ import { Grammar } from './GrammarView'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { Shiritori } from './ShiritoriView'
+import { Numbers } from './NumbersView'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
 import { Scramble } from './ScrambleView'
@@ -43,7 +44,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -85,6 +86,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
+  { id: 'numbers', label: '🔢 数の聞き取り', group: '聞く・話す' },
   { id: 'order-ear', label: '🎧 聞き並べ', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
   { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },
@@ -332,6 +334,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Sequence key={count} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'numbers') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Numbers onAnswer={onAnswer} />
       </>
     )
   }

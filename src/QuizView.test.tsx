@@ -2,6 +2,7 @@ import { act, fireEvent, render, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Quiz } from './QuizView'
 import { VERBS } from './irregular'
+import { toEnglish } from './numbers'
 import { WORDS } from './words'
 
 beforeEach(() => localStorage.clear()) // 最後に遊んだ種類を持ちこさない
@@ -309,4 +310,30 @@ it('📄 例文の訳：例文を読んで訳を選ぶ', () => {
   const w = words.find((x) => x.example === ex)!
   fireEvent.click(screen.getByRole('button', { name: w.exampleJa }))
   expect(screen.getByText(/正解！/)).toBeInTheDocument()
+})
+
+it('数の聞き取り：読み上げた数を数字で答える', () => {
+  const spoken: string[] = []
+  class FakeUtterance {
+    text: string
+    lang = ''
+    constructor(t: string) {
+      this.text = t
+    }
+  }
+  Object.assign(window, {
+    SpeechSynthesisUtterance: FakeUtterance,
+    speechSynthesis: { cancel() {}, speak: (u: FakeUtterance) => spoken.push(u.text) },
+  })
+  const got: [boolean, string][] = []
+  render(<Quiz words={WORDS.slice(0, 8)} onAnswer={(c, _xp, id) => got.push([c, id])} />)
+  pickMode('🔢 数の聞き取り')
+  const said = spoken[spoken.length - 1]
+  const n = [...Array(1000).keys()].find((i) => toEnglish(i) === said)!
+  fireEvent.change(screen.getByLabelText('数'), { target: { value: String(n) } })
+  fireEvent.click(screen.getByText('答える'))
+  expect(screen.getByRole('status').textContent).toContain('正解！')
+  expect(got[0][0]).toBe(true)
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('正解 1 / 1')).toBeInTheDocument()
 })
