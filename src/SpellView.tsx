@@ -1,3 +1,5 @@
+import { EMOJI } from './emoji'
+import { loadSettings } from './settings'
 import { markSpelling } from './spellDiff'
 import { useEffect, useState, type FormEvent } from 'react'
 import type { Source } from './monster'
@@ -15,6 +17,7 @@ type Props = {
 }
 
 export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
+  const [easy] = useState(() => loadSettings().easy)
   const [list, setList] = useState(() => shuffle(words).slice(0, count))
   const [index, setIndex] = useState(0)
   const [input, setInput] = useState('')
@@ -87,7 +90,10 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
           <p className="example-ja">聞こえた英単語を書こう（意味：{w.ja}）</p>
         </>
       ) : (
-        <p className="en ja-prompt">{w.ja}</p>
+        <p className="en ja-prompt">
+          {easy && EMOJI[w.id] && <span className="card-emoji">{EMOJI[w.id]} </span>}
+          {w.ja}
+        </p>
       )}
       <p className="hint" aria-label="ヒント">
         {hintText(w.en, hints)}

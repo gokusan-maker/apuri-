@@ -56,3 +56,11 @@ describe('ディクテーション', () => {
     expect(screen.getByText('正解！')).toBeInTheDocument()
   })
 })
+
+it('かんたんモードでは日→英スペルに絵文字のヒント', () => {
+  localStorage.setItem('eitan:settings', JSON.stringify({ easy: true }))
+  const w = WORDS.find((x) => x.id === 'apple')!
+  render(<Spell words={[w]} count={1} />)
+  expect(document.querySelector('.ja-prompt')!.textContent).toContain('🍎')
+  localStorage.clear()
+})
