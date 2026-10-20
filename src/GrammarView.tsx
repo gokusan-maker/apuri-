@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { shuffle } from './quiz'
 import { GRAMMAR, loadGrammar, saveGrammar, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -29,6 +30,16 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       <section className="card grammar">
         <h2>{title}</h2>
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
+        <button
+          className="flip mix-test"
+          onClick={() => {
+            const qs = shuffle(units.flatMap((u) => u.questions)).slice(0, 10)
+            open({ id: 'mix-test', title: `${title}のまとめテスト`, points: [], examples: [], questions: qs })
+            setStep(0)
+          }}
+        >
+          📝 まとめテスト（ランダム10問）
+        </button>
         <ul className="grammar-list">
           {units.map((u) => (
             <li key={u.id}>

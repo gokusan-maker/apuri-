@@ -24,3 +24,9 @@ describe('文法ミニ解説', () => {
     expect(screen.getByText('3 / 3 👑')).toBeInTheDocument()
   })
 })
+
+it('まとめテストは全単元からランダムに10問', () => {
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('📝 まとめテスト（ランダム10問）'))
+  expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
+})
