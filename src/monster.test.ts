@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { feed, formOf, isLonely, quizXp, rename, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
+import { feed, FORM_DESC, FORMS, formOf, isLonely, quizXp, rename, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
 
 describe('monster', () => {
   beforeEach(() => localStorage.clear())
@@ -125,4 +125,8 @@ it('最初にXPをもらった日が出会った日になり、その後は変�
   expect(m.born).toBe('2026-10-20')
   m = feed(m, 5, 'quiz', '2026-10-25')
   expect(m.born).toBe('2026-10-20')
+})
+
+it('図鑑のすべての姿に説明文がある', () => {
+  for (const f of FORMS) expect(FORM_DESC[f.id], f.id).toBeTruthy()
 })

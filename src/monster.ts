@@ -123,6 +123,22 @@ export type Form = {
   hint: string // 図鑑で未発見のときのヒント
 }
 
+// 図鑑の説明文
+export const FORM_DESC: Record<string, string> = {
+  egg: 'ふしぎな模様のタマゴ。英単語を聞かせると、中からコトコト音がする。',
+  chibi: '生まれたばかりのモチ。覚えたての単語をうれしそうにくり返す。',
+  mochimaru: 'ぷにぷにの体で、毎日新しい単語を食べて大きくなる。',
+  mori: 'カードで学ぶのが好きなモチ。頭の葉っぱは覚えた単語の数だけしげる。',
+  inazuma: 'クイズが大好きなモチ。正解すると頭のイナズマがピカッと光る。',
+  sora: '耳がよいモチ。英語の音を聞くと、つばさを広げて空を飛ぶ。',
+  'mori-king': '森の王さま。木の実のかわりに英単語を集めているという。',
+  'inazuma-king': 'カミナリの王さま。早押しなら、だれにも負けない。',
+  'sora-king': '空の王さま。世界中の英語を聞き分けられる。',
+  'mori-legend': '伝説の森のモチ。そのまわりでは、本がよく読まれるという。',
+  'inazuma-legend': '伝説のイナズマモチ。100問連続正解したという言い伝えがある。',
+  'sora-legend': '伝説の空のモチ。聞いた英語を一度で覚えてしまう。',
+}
+
 export const FORMS: Form[] = [
   { id: 'egg', name: 'ふしぎなタマゴ', stage: 0, color: '#fde68a', line: '#d97706', hint: 'はじめから' },
   { id: 'chibi', name: 'ちびモチ', stage: 1, color: '#bbf7d0', line: '#15803d', hint: 'Lv2' },

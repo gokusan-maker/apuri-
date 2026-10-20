@@ -172,7 +172,7 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByText('新しい仲間！')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
-    const picks = document.querySelectorAll<HTMLButtonElement>('.party-pick')
+    const picks = document.querySelectorAll<HTMLButtonElement>('.party-member')
     expect(picks).toHaveLength(2)
     fireEvent.click(picks[1])
     expect(document.querySelector('.monster-name')!.textContent).toContain('ふしぎなタマゴ')
@@ -524,5 +524,13 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText('Great job!')).toBeInTheDocument()
+  })
+
+  it('図鑑で出会った姿をタップすると説明文が出る', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(document.querySelector('.zukan-pick')!)
+    expect(screen.getByText(/ふしぎな模様のタマゴ/)).toBeInTheDocument()
   })
 })

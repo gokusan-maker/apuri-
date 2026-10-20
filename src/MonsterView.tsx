@@ -1,5 +1,5 @@
 import { useEffect, useState, type FormEvent } from 'react'
-import { FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { pickLine, type Line } from './talk'
@@ -256,6 +256,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
 
 export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const seen = new Set(monsters.flatMap(seenForms))
+  const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
       <h2>
@@ -265,14 +266,26 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
       <ul className="badge-grid">
         {FORMS.map((f) => (
           <li key={f.id} className={seen.has(f.id) ? 'got' : 'locked'}>
-            <span className="zukan-figure">
-              <MonsterFigure form={f} hidden={!seen.has(f.id)} />
-            </span>
-            <span className="badge-name">{seen.has(f.id) ? f.name : '？？？'}</span>
-            <span className="badge-desc">{f.hint}</span>
+            <button
+              className="party-pick zukan-pick"
+              aria-label={seen.has(f.id) ? `${f.name}の説明` : 'まだ出会っていない姿'}
+              disabled={!seen.has(f.id)}
+              onClick={() => setDetail(detail?.id === f.id ? null : f)}
+            >
+              <span className="zukan-figure">
+                <MonsterFigure form={f} hidden={!seen.has(f.id)} />
+              </span>
+              <span className="badge-name">{seen.has(f.id) ? f.name : '？？？'}</span>
+              <span className="badge-desc">{f.hint}</span>
+            </button>
           </li>
         ))}
       </ul>
+      {detail && (
+        <p className="zukan-detail" role="status">
+          <strong>{detail.name}</strong>：{FORM_DESC[detail.id]}
+        </p>
+      )}
     </div>
   )
 }
@@ -288,7 +301,7 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
           const active = i === party.active
           return (
             <li key={i} className={active ? 'got active' : 'got'}>
-              <button className="party-pick" onClick={() => onSelect(i)} aria-pressed={active}>
+              <button className="party-pick party-member" onClick={() => onSelect(i)} aria-pressed={active}>
                 <span className="zukan-figure">
                   <MonsterFigure form={f} wear={m.wear} />
                 </span>
