@@ -55,3 +55,17 @@ it('上位5回の記録が残る', () => {
   const many = [9, 8, 7, 6, 5].map((n) => ({ score: n, day: 'x' }))
   expect(addTop(many, 1, 'y')).toEqual(many)
 })
+
+it('30秒を選ぶと30秒で終わり、自己ベストは長さごと', () => {
+  vi.useFakeTimers()
+  localStorage.clear()
+  render(<TimeAttack words={WORDS} />)
+  fireEvent.click(screen.getByText('30秒'))
+  fireEvent.click(screen.getByText('スタート'))
+  answerCorrect()
+  act(() => vi.advanceTimersByTime(30 * 1000))
+  expect(screen.getByText('タイムアップ！')).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:best-time-attack-30')).toBe('1')
+  expect(loadBest()).toBe(0)
+  vi.useRealTimers()
+})

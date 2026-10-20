@@ -1,19 +1,22 @@
 // タイムアタックの制限時間と自己ベストの保存
 export const TIME_LIMIT = 60
+export const LENGTHS = [30, 60, 90]
 const BEST_KEY = 'eitan:best-time-attack'
+// 60秒はこれまでのキーのまま（前のデータを引きつぐ）、ほかの長さは別のキー
+const bestKey = (sec: number) => (sec === 60 ? BEST_KEY : `${BEST_KEY}-${sec}`)
 
-export function loadBest(): number {
+export function loadBest(sec = 60): number {
   try {
-    const n = Number(localStorage.getItem(BEST_KEY))
+    const n = Number(localStorage.getItem(bestKey(sec)))
     return Number.isFinite(n) && n > 0 ? n : 0
   } catch {
     return 0
   }
 }
 
-export function saveBest(n: number): void {
+export function saveBest(n: number, sec = 60): void {
   try {
-    localStorage.setItem(BEST_KEY, String(n))
+    localStorage.setItem(bestKey(sec), String(n))
   } catch {
     // ストレージが使えない環境では保存をあきらめる
   }

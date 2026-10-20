@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { randomQuestion, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
-import { addTop, loadBest, loadTop, saveBest, saveTop, TIME_LIMIT } from './timeAttack'
+import { addTop, LENGTHS, loadBest, loadTop, saveBest, saveTop, TIME_LIMIT } from './timeAttack'
 import { dayKey } from './srs'
 import type { Word } from './words'
 
@@ -16,9 +16,10 @@ type Phase = 'ready' | 'play' | 'done'
 
 export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [phase, setPhase] = useState<Phase>('ready')
+  const [length, setLength] = useState(TIME_LIMIT)
   const [left, setLeft] = useState(TIME_LIMIT)
   const [score, setScore] = useState(0)
-  const [best, setBest] = useState(loadBest)
+  const [best, setBest] = useState(() => loadBest(TIME_LIMIT))
   const [top, setTop] = useState(loadTop)
   const [newBest, setNewBest] = useState(false)
   const [q, setQ] = useState<Question<Word> | null>(null)
@@ -32,7 +33,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   function start() {
     scoreRef.current = 0
     setScore(0)
-    setLeft(TIME_LIMIT)
+    setLeft(length)
     setNewBest(false)
     setFlash(null)
     nextQuestion()
@@ -50,7 +51,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
     const final = scoreRef.current
     if (final > best) {
       setBest(final)
-      saveBest(final)
+      saveBest(final, length)
       setNewBest(true)
     }
     const nextTop = addTop(top, final, dayKey())
@@ -58,7 +59,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
     saveTop(nextTop)
     setPhase('done')
     onFinish?.(final)
-  }, [left, phase, best, onFinish, top])
+  }, [left, phase, best, onFinish, top, length])
 
   function pick(i: number) {
     if (!q) return
@@ -80,7 +81,21 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
     return (
       <section className="card result">
         <p className="result-title">タイムアタック</p>
-        <p className="result-message">{TIME_LIMIT}秒で何問正解できるかな？</p>
+        <div className="counts" role="group" aria-label="長さ">
+          {LENGTHS.map((n) => (
+            <button
+              key={n}
+              aria-pressed={length === n}
+              onClick={() => {
+                setLength(n)
+                setBest(loadBest(n))
+              }}
+            >
+              {n}秒
+            </button>
+          ))}
+        </div>
+        <p className="result-message">{length}秒で何問正解できるかな？</p>
         <p className="best">自己ベスト {best} 問</p>
         {top.length > 0 && (
           <ol className="ta-top" aria-label="これまでの記録">
@@ -118,7 +133,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
         <span className="ta-score">{score} 問</span>
       </div>
       <div className="timer-bar">
-        <div className="timer-fill" style={{ width: `${(left / TIME_LIMIT) * 100}%` }} />
+        <div className="timer-fill" style={{ width: `${(left / length) * 100}%` }} />
       </div>
       {q && (
         <>
