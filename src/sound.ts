@@ -40,3 +40,9 @@ export function playWrong() {
   if (!ready()) return
   tone(220, 0, 0.25)
 }
+
+// レベルアップ・進化のファンファーレ（ド・ミ・ソ・ド）
+export function playFanfare() {
+  if (!ready()) return
+  ;[523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.12, i === 3 ? 0.4 : 0.15))
+}

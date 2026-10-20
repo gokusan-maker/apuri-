@@ -45,6 +45,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
+import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
@@ -167,7 +168,9 @@ function App() {
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
     setHappy(true)
-    setLeveledUp(levelInfo(next.xp).level > levelInfo(monster.xp).level)
+    const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
+    setLeveledUp(up)
+    if (up) playFanfare()
     setEvolved(formOf(next).id !== formOf(monster).id)
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
