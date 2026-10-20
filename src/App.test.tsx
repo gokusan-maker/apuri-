@@ -445,6 +445,15 @@ describe('App', () => {
     expect(screen.getByRole('list', { name: '今日はじめて学んだ単語' }).textContent).toContain(en.replace(/[🔊🐢]/gu, '').trim())
   })
 
+  it('1週間前に学んだ単語をクイズでたしかめられる', () => {
+    const p = Object.fromEntries(WORDS.slice(0, 4).map((w) => [w.id, { box: 2, due: '2099-01-01', first: '2026-10-13' }]))
+    localStorage.setItem('eitan:progress', JSON.stringify(p))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByText('📅 1週間前に学んだ単語をクイズでたしかめる（4語）'))
+    expect(screen.getByText(/1週間前に学んだ単語だけ復習中（4語）/)).toBeInTheDocument()
+  })
+
   it('記録画面のカレンダーに今日の学習が印される', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

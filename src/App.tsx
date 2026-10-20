@@ -57,6 +57,7 @@ import {
   saveDailyNew,
   saveProgress,
   firstLearnedOn,
+  addDays,
   type ProgressMap,
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
@@ -132,7 +133,7 @@ function App() {
   const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
   const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
   // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
-  type Focus = 'weak' | 'fav' | 'pick'
+  type Focus = 'weak' | 'fav' | 'pick' | 'week'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
   const [picked, setPicked] = useState<string[]>([]) // 単語一覧から選んだ単語
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
@@ -315,8 +316,8 @@ function App() {
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
   // お気に入りは単語帳の選択に関係なく全部から
   const favWords = useMemo(() => [...WORDS, ...myWords].filter((w) => favorites.includes(w.id)), [myWords, favorites])
-  const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : words.filter((w) => picked.includes(w.id)))
-  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の' }
+  const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : k === 'week' ? weekAgo : words.filter((w) => picked.includes(w.id)))
+  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の', week: '1週間前に学んだ単語' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday, settings.newPerDay + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap, settings.newPerDay])
   // その日はじめて開いたときだけ「今日の復習」を知らせる
@@ -338,6 +339,11 @@ function App() {
   const firstToday = firstLearnedOn(progress, today)
     .map((id) => WORDS.find((w) => w.id === id) ?? myWords.find((w) => w.id === id))
     .filter((w): w is Word => !!w)
+  // 1週間前（5〜9日前）にはじめて学んだ単語
+  const weekAgo = [...WORDS, ...myWords].filter((w) => {
+    const f = progress[w.id]?.first
+    return !!f && f >= addDays(today, -9) && f <= addDays(today, -5)
+  })
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
@@ -666,6 +672,11 @@ function App() {
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
                 <strong>{newToday}語</strong>
               </p>
+              {weekAgo.length > 0 && (
+                <button className="list-link" onClick={() => startQuiz('week')}>
+                  📅 1週間前に学んだ単語をクイズでたしかめる（{weekAgo.length}語）
+                </button>
+              )}
               {firstToday.length > 0 && (
                 <details className="first-today">
                   <summary>🌱 今日はじめて学んだ単語（{firstToday.length}語）</summary>
