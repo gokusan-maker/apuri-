@@ -29,4 +29,12 @@ describe('WORDS', () => {
   it('意味（ja）が重ならない（4択で同じ選択肢が出ないように）', () => {
     expect(new Set(WORDS.map((w) => w.ja)).size).toBe(WORDS.length)
   })
+
+  it('例文は大文字（か数字）で始まり . ! ? で終わり、訳は 。！？ などで終わる', () => {
+    for (const w of WORDS) {
+      expect(w.example, w.id).toMatch(/^[A-Z0-9"']/)
+      expect(w.example, w.id).toMatch(/[.!?"]$/)
+      expect(w.exampleJa, w.id).toMatch(/[。！？）」]$/)
+    }
+  })
 })
