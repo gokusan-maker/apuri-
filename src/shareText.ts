@@ -16,3 +16,8 @@ export async function shareText(text: string): Promise<'shared' | 'copied' | 'fa
     return 'failed'
   }
 }
+
+// 今週のレポート（保護者や先生に送れる短い文）
+export function weekReportText(r: { answers: number; days: number; learned: number; total: number; streak: number }): string {
+  return `えいたん 今週のレポート\n・答えた問題：${r.answers}問\n・学習した日：${r.days}日\n・定着した単語：${r.learned} / ${r.total}語\n・連続学習：${r.streak}日`
+}

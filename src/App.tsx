@@ -29,6 +29,7 @@ import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
+import { shareText, weekReportText } from './shareText'
 import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
 import { eventFor } from './events'
@@ -700,6 +701,22 @@ function App() {
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
                 <strong>{newToday}語</strong>
               </p>
+              <button
+                className="list-link"
+                onClick={() =>
+                  shareText(
+                    weekReportText({
+                      answers: weekCount(history, today),
+                      days: lastDays(history, today, 7).filter((d) => d.count > 0 && d.day >= weekStart(today)).length,
+                      learned,
+                      total: words.length,
+                      streak: streakDays,
+                    }),
+                  )
+                }
+              >
+                📤 今週のレポートをシェア
+              </button>
               <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
               {thisWeekWords.length >= 4 && (
                 <button className="list-link" onClick={() => startQuiz('thisweek')}>
