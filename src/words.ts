@@ -12,7 +12,7 @@ export type Word = {
 }
 
 // 中学〜高校基礎レベルの基本語（例文はすべてオリジナル）
-export const WORDS: Word[] = [
+const WORDS_1: Word[] = [
   { id: 'apple', en: 'apple', ja: 'りんご', example: 'I eat an apple every morning.', exampleJa: '私は毎朝りんごを食べる。' },
   { id: 'borrow', en: 'borrow', ja: '借りる', example: 'Can I borrow your pen?', exampleJa: 'ペンを借りてもいい？' },
   { id: 'decide', en: 'decide', ja: '決める', example: 'She decided to study abroad.', exampleJa: '彼女は留学することに決めた。' },
@@ -280,6 +280,9 @@ export const WORDS: Word[] = [
   { id: 'bag', en: 'bag', ja: 'かばん・ふくろ', example: 'My bag is on the chair.', exampleJa: '私のかばんはいすの上にある。', level: '中1' },
   { id: 'box', en: 'box', ja: '箱', example: 'What is in this box?', exampleJa: 'この箱には何が入っているの？', level: '中1' },
   { id: 'ball', en: 'ball', ja: 'ボール', example: 'The dog is playing with a ball.', exampleJa: '犬がボールで遊んでいる。', level: '中1' },
+]
+
+const WORDS_2: Word[] = [
   { id: 'car', en: 'car', ja: '車', example: 'My father washes his car on Sundays.', exampleJa: '父は日曜日に車を洗う。', level: '中1' },
   { id: 'chair', en: 'chair', ja: 'いす', example: 'Please sit on this chair.', exampleJa: 'このいすにすわってください。', level: '中1' },
   { id: 'clock', en: 'clock', ja: '時計（置き時計・かけ時計）', example: 'The clock in the kitchen is slow.', exampleJa: '台所の時計は遅れている。', level: '中1' },
@@ -547,6 +550,9 @@ export const WORDS: Word[] = [
   { id: 'enemy', en: 'enemy', ja: '敵', example: 'The hero fought against the enemy.', exampleJa: 'ヒーローは敵と戦った。', level: '中3' },
   { id: 'enter', en: 'enter', ja: '入る', example: 'Please enter the room quietly.', exampleJa: '静かに部屋に入ってください。', level: '中3' },
   { id: 'exam', en: 'exam', ja: '試験', example: 'I have a math exam tomorrow.', exampleJa: '明日は数学の試験がある。', level: '中3' },
+]
+
+const WORDS_3: Word[] = [
   { id: 'exchange', en: 'exchange', ja: '交換（する）', example: 'Let\'s exchange e-mail addresses.', exampleJa: 'メールアドレスを交換しよう。', level: '中3' },
   { id: 'experiment', en: 'experiment', ja: '実験', example: 'We did a science experiment in class.', exampleJa: '授業で理科の実験をした。', level: '中3' },
   { id: 'favor', en: 'favor', ja: 'お願い・親切な行為', example: 'Can I ask you a favor?', exampleJa: 'お願いがあるんだけど。', level: '中3' },
@@ -683,6 +689,26 @@ export const WORDS: Word[] = [
   { id: 'occur', en: 'occur', ja: '起こる', example: 'Earthquakes often occur in this area.', exampleJa: 'この地域ではよく地震が起こる。', level: '高校基礎' },
   { id: 'permit', en: 'permit', ja: '許可する', example: 'Eating is not permitted in the library.', exampleJa: '図書館での飲食は許可されていない。', level: '高校基礎' },
   { id: 'associate', en: 'associate', ja: '結びつけて考える', example: 'Many people associate summer with the beach.', exampleJa: '多くの人は夏といえば海を思いうかべる。', level: '高校基礎' },
+  { id: 'accurate', en: 'accurate', ja: '正確な', example: 'Is this clock accurate?', exampleJa: 'この時計は正確ですか。', level: '高校基礎' },
+  { id: 'adjust', en: 'adjust', ja: '調整する', example: 'You can adjust the height of the chair.', exampleJa: 'いすの高さを調整できる。', level: '高校基礎' },
+  { id: 'admire', en: 'admire', ja: '感心する・尊敬する', example: 'I admire her courage.', exampleJa: '彼女の勇気に感心する。', level: '高校基礎' },
+  { id: 'adopt', en: 'adopt', ja: '採用する・養子にする', example: 'The school adopted a new rule.', exampleJa: '学校は新しい規則を採用した。', level: '高校基礎' },
+  { id: 'advance', en: 'advance', ja: '進歩（する）・前進する', example: 'Science has advanced a lot in 100 years.', exampleJa: '科学はこの100年で大きく進歩した。', level: '高校基礎' },
+  { id: 'adventure', en: 'adventure', ja: '冒険', example: 'The story is about a boy\'s adventure at sea.', exampleJa: 'その物語は海での少年の冒険の話だ。', level: '高校基礎' },
+  { id: 'alternative', en: 'alternative', ja: '代わりの（もの）', example: 'Is there an alternative plan?', exampleJa: '代わりの案はありますか。', level: '高校基礎' },
+  { id: 'ambition', en: 'ambition', ja: '大きな夢・野心', example: 'His ambition is to become a pilot.', exampleJa: '彼の夢はパイロットになることだ。', level: '高校基礎' },
+  { id: 'annual', en: 'annual', ja: '毎年の・年1回の', example: 'The annual school festival is in November.', exampleJa: '毎年の文化祭は11月にある。', level: '高校基礎' },
+  { id: 'appropriate', en: 'appropriate', ja: '適切な', example: 'Jeans are not appropriate for the ceremony.', exampleJa: 'ジーンズはその式にふさわしくない。', level: '高校基礎' },
+  { id: 'attempt', en: 'attempt', ja: '試み（る）', example: 'He passed the test on his first attempt.', exampleJa: '彼は1回目の挑戦で試験に合格した。', level: '高校基礎' },
+  { id: 'average', en: 'average', ja: '平均（の）', example: 'The average score was 70.', exampleJa: '平均点は70点だった。', level: '高校基礎' },
+  { id: 'behave', en: 'behave', ja: 'ふるまう', example: 'Please behave well at the museum.', exampleJa: '博物館ではお行儀よくしてね。', level: '高校基礎' },
+  { id: 'calculate', en: 'calculate', ja: '計算する', example: 'Calculate the total price.', exampleJa: '合計金額を計算して。', level: '高校基礎' },
+  { id: 'category', en: 'category', ja: '部門・種類', example: 'Which category did you enter?', exampleJa: 'どの部門に応募したの？', level: '高校基礎' },
+  { id: 'combine', en: 'combine', ja: '組み合わせる', example: 'Combine the eggs and sugar.', exampleJa: '卵と砂糖を混ぜ合わせて。', level: '高校基礎' },
+  { id: 'compete', en: 'compete', ja: '競争する・競う', example: 'Ten teams will compete in the contest.', exampleJa: '10チームがそのコンテストで競う。', level: '高校基礎' },
+  { id: 'concentrate', en: 'concentrate', ja: '集中する', example: 'I can\'t concentrate when it\'s noisy.', exampleJa: 'うるさいと集中できない。', level: '高校基礎' },
+  { id: 'conflict', en: 'conflict', ja: '対立・争い', example: 'The two countries settled the conflict.', exampleJa: '2国は争いを解決した。', level: '高校基礎' },
+  { id: 'consequence', en: 'consequence', ja: '結果・影響', example: 'Think about the consequences before you act.', exampleJa: '行動する前に、その結果を考えて。', level: '高校基礎' },
   // 熟語
   { id: 'look-for', en: 'look for', ja: '〜をさがす', example: "I'm looking for my glasses.", exampleJa: 'メガネをさがしているところです。', level: '熟語' },
   { id: 'look-forward-to', en: 'look forward to', ja: '〜を楽しみに待つ', example: "I'm looking forward to the trip.", exampleJa: '旅行を楽しみにしている。', level: '熟語' },
@@ -794,6 +820,9 @@ export const WORDS: Word[] = [
   { id: 'sunday', en: 'Sunday', ja: '日曜日', example: 'We often eat out on Sunday.', exampleJa: '日曜日はよく外食する。', level: '曜日・月' },
   { id: 'january', en: 'January', ja: '1月', example: 'The new year starts in January.', exampleJa: '新しい年は1月に始まる。', level: '曜日・月' },
   { id: 'february', en: 'February', ja: '2月', example: 'February is the shortest month.', exampleJa: '2月はいちばん短い月だ。', level: '曜日・月' },
+]
+
+const WORDS_4: Word[] = [
   { id: 'march', en: 'March', ja: '3月', example: 'We graduate in March in Japan.', exampleJa: '日本では3月に卒業する。', level: '曜日・月' },
   { id: 'april', en: 'April', ja: '4月', example: 'The new school year begins in April.', exampleJa: '新学年は4月に始まる。', level: '曜日・月' },
   { id: 'may', en: 'May', ja: '5月', example: 'The weather is nice in May.', exampleJa: '5月は天気がいい。', level: '曜日・月' },
@@ -1062,6 +1091,9 @@ export const WORDS: Word[] = [
   { id: 'hold-on', en: 'Hold on.', ja: 'ちょっと待って', example: 'Hold on. I\'ll get my bag.', exampleJa: 'ちょっと待って。かばんを取ってくる。', level: '会話' },
   { id: 'cheer-up', en: 'Cheer up!', ja: '元気を出して', example: 'Cheer up! You\'ll do better next time.', exampleJa: '元気出して！次はもっとうまくいくよ。', level: '会話' },
 ]
+
+// TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
+export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_3, ...WORDS_4]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
 const LEVEL_OF: Record<string, Level> = Object.fromEntries([
