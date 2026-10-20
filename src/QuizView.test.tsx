@@ -246,3 +246,19 @@ it('⏳ 10秒：時間切れはまちがい扱い、早く答えるとボーナ�
   ])
   vi.useRealTimers()
 })
+
+it('💡 50:50 でコインを使って選択肢を2つ消す（足りなければ消えない）', () => {
+  let coins = 6
+  const spend = (n: number) => (coins >= n ? ((coins -= n), true) : false)
+  render(<Quiz words={WORDS.slice(0, 10)} count={2} onSpend={spend} />)
+  fireEvent.click(screen.getByText(/50:50/))
+  expect(document.querySelectorAll('.choice.removed')).toHaveLength(2)
+  expect(coins).toBe(1)
+  const en = document.querySelector('.quiz .en')!.textContent
+  const w = WORDS.find((x) => x.en === en)!
+  expect(screen.getByRole('button', { name: w.ja })).not.toHaveClass('removed')
+  fireEvent.click(screen.getByRole('button', { name: w.ja }))
+  fireEvent.click(screen.getByText('次へ'))
+  fireEvent.click(screen.getByText(/50:50/))
+  expect(document.querySelectorAll('.choice.removed')).toHaveLength(0)
+})

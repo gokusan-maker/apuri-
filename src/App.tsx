@@ -494,6 +494,11 @@ function App() {
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
+            onSpend={(n) => {
+              if (wallet.coins < n) return false
+              setWallet((w) => ({ ...w, coins: w.coins - n }))
+              return true
+            }}
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
           />
         </>

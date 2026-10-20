@@ -79,11 +79,13 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number, total: number) => void
   onCombo?: (combo: number) => void // 正解するたびに今のコンボ数
+  onSpend?: (coins: number) => boolean // コインを使う（足りなければ false）
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
 
 export const QUESTION_TIME = 10
+export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
@@ -95,7 +97,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
@@ -109,6 +111,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
   const [lastXp, setLastXp] = useState(0)
   const [missed, setMissed] = useState<Word[]>([])
   const [left, setLeft] = useState(QUESTION_TIME) // 制限時間モードの残り秒
+  const [removed, setRemoved] = useState<number[]>([]) // 50:50 で消した選択肢
 
   const q = questions[index]
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
@@ -145,8 +148,14 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
     if (timing && left <= 0) pick(-1)
   })
 
+  function fiftyFifty() {
+    if (!q || removed.length > 0 || !onSpend?.(HINT_COST)) return
+    const wrong = shuffle(q.choices.map((_, i) => i).filter((i) => i !== q.answer)).slice(0, 2)
+    setRemoved(wrong)
+  }
+
   function pick(i: number) {
-    if (picked !== null) return
+    if (picked !== null || removed.includes(i)) return
     setPicked(i)
     if (i === q.answer) {
       const c = combo + 1
@@ -170,6 +179,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
 
   function next() {
     setPicked(null)
+    setRemoved([])
     setLeft(QUESTION_TIME)
     setIndex(index + 1)
     if (index + 1 === questions.length) onFinish?.(score, questions.length)
@@ -372,12 +382,22 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
           if (picked !== null && i === q.answer) cls += ' correct'
           else if (picked === i) cls += ' wrong'
           return (
-            <button key={c} className={cls} onClick={() => pick(i)} disabled={picked !== null}>
+            <button
+              key={c}
+              className={`${cls}${removed.includes(i) ? ' removed' : ''}`}
+              onClick={() => pick(i)}
+              disabled={picked !== null || removed.includes(i)}
+            >
               {c}
             </button>
           )
         })}
       </div>
+      {picked === null && onSpend && q.choices.length === 4 && removed.length === 0 && (
+        <button className="hint-5050" onClick={fiftyFifty}>
+          💡 50:50（🪙{HINT_COST}）
+        </button>
+      )}
       {picked === q.answer && combo > 0 && combo % 10 === 0 && (
         <p className="mega-combo" role="status">
           🔥{combo}コンボ！ すごい！
