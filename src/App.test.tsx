@@ -290,7 +290,7 @@ describe('App', () => {
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'librar' } })
     expect(screen.getByText('1語')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /library/ }))
-    expect(screen.getByText('I study at the library after school.')).toBeInTheDocument()
+    expect(document.querySelector('.word-detail .example')?.textContent).toBe('I study at the library after school.')
     fireEvent.click(screen.getByText('← カードにもどる'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
   })

@@ -25,6 +25,7 @@ import { Bingo } from './BingoView'
 import { WordSearch } from './WordSearchView'
 import { Twisters } from './TwisterView'
 import { Placement } from './PlacementView'
+import { Highlight } from './HighlightView'
 import { Puzzle } from './PuzzleView'
 import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
@@ -932,7 +933,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
                 <strong>{q.word.en}</strong>：{q.word.ja}
               </p>
               <p className="example">
-                {q.word.example}
+                <Highlight text={q.word.example} word={q.word.en} />
                 <button className="speak small" onClick={() => speak(q.word.example)} aria-label="例文を聞く">
                   🔊
                 </button>

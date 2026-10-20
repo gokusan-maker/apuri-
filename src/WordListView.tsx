@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Highlight } from './HighlightView'
 import { sortWords } from './wordSort'
 import { EMOJI } from './emoji'
 import { searchWords } from './search'
@@ -119,7 +120,9 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                   {progress[w.id]?.first && <span className="word-first">はじめて学んだ日 {progress[w.id]!.first!.slice(5).replace('-', '/')}</span>}
                   {w.example && (
                     <>
-                      <p className="example">{w.example}</p>
+                      <p className="example">
+                        <Highlight text={w.example} word={w.en} />
+                      </p>
                       <p className="example-ja">{w.exampleJa}</p>
                     </>
                   )}
