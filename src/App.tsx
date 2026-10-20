@@ -253,7 +253,7 @@ function App() {
     checkLucky(correct, wordId)
     setAccuracy((a) => recordAnswer(a, today, source, correct))
     if (correct && source === 'ear') count('ear')
-    if (!correct) setMistakes((m) => addMistake(m, wordId))
+    if (!correct && wordId) setMistakes((m) => addMistake(m, wordId)) // 単語にひもづかない問題（アルファベットなど）は記録しない
     if (correct && xp > 0) gainXp(xp * xpRate, source)
   }
 

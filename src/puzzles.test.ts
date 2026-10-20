@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -66,5 +66,18 @@ describe('パズル', () => {
       const sq = q.prompt.split('\n')[0]
       expect(COLOR_SQUARES.find(([s]) => s === sq)![1]).toBe(q.choices[q.answer])
     }
+  })
+
+  it('アルファベット：大文字・小文字・次の文字', () => {
+    const seq = (xs: number[]) => () => xs.shift() ?? 0
+    const a = alphabetQ(seq([0, 0]))
+    expect(a.prompt).toBe('「A」の小文字は？')
+    expect(a.choices[a.answer]).toBe('a')
+    const b = alphabetQ(seq([1 / 25, 0.5]))
+    expect(b.choices[b.answer]).toBe('B')
+    const c = alphabetQ(seq([24 / 25, 0.9]))
+    expect(c.prompt).toBe('「y」の次の文字は？')
+    expect(c.choices[c.answer]).toBe('z')
+    for (let i = 0; i < 30; i++) expect(new Set(alphabetQ().choices).size).toBe(4)
   })
 })

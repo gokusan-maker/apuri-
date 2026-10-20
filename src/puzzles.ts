@@ -126,3 +126,27 @@ export function colorQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([ans, ...wrong], rng)
   return { prompt: `${sq}\nこの色は英語で？`, choices, answer: choices.indexOf(ans), why: `${sq} は ${ans}`, wordId: ans }
 }
+
+// アルファベット：大文字↔小文字、次の文字
+const ABC = 'abcdefghijklmnopqrstuvwxyz'
+
+export function alphabetQ(rng: Rng = Math.random): PuzzleQ {
+  const i = Math.floor(rng() * 25) // z の次は出さない
+  const kind = Math.floor(rng() * 3)
+  const pick = (ok: string, pool: string[]) => {
+    const choices = shuffle([ok, ...shuffle(pool.filter((c) => c !== ok), rng).slice(0, 3)], rng)
+    return { choices, answer: choices.indexOf(ok) }
+  }
+  const letters = ABC.split('')
+  if (kind === 0) {
+    const r = pick(letters[i], letters)
+    return { prompt: `「${letters[i].toUpperCase()}」の小文字は？`, ...r, why: `${letters[i].toUpperCase()} の小文字は ${letters[i]}`, wordId: '' }
+  }
+  if (kind === 1) {
+    const up = letters.map((c) => c.toUpperCase())
+    const r = pick(up[i], up)
+    return { prompt: `「${letters[i]}」の大文字は？`, ...r, why: `${letters[i]} の大文字は ${up[i]}`, wordId: '' }
+  }
+  const r = pick(letters[i + 1], letters)
+  return { prompt: `「${letters[i]}」の次の文字は？`, ...r, why: `${letters.slice(Math.max(0, i - 1), i + 3).join(' ')} …`, wordId: '' }
+}
