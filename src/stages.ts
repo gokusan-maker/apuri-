@@ -39,6 +39,11 @@ export function recordStars(rec: StageRecord, id: string, stars: number): StageR
 
 const STORAGE_KEY = 'eitan:stages'
 
+// 単語帳の全ステージで星3（トロフィー）
+export function allThreeStars(level: Level, rec: StageRecord): boolean {
+  return stagesOf(level).every((s) => (rec[s.id] ?? 0) >= 3)
+}
+
 export function loadStages(): StageRecord {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)

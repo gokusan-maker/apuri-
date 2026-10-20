@@ -3,7 +3,7 @@ import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, type BossRecord } from './boss'
 import { Boss } from './BossView'
 import { Quiz } from './QuizView'
-import { isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
+import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { WORDS, wordsOf, type Level } from './words'
 
 type Props = {
@@ -122,6 +122,11 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           <div key={level} className="stage-level">
             <h3>
               {level} <span className="stage-total">★{stars} / {list.length * 3}</span>
+              {allThreeStars(level, record) && (
+                <span className="stage-trophy" role="img" aria-label="トロフィー（全ステージ星3）">
+                  🏆
+                </span>
+              )}
             </h3>
             <div className="stage-grid">
               {list.map((s) => {

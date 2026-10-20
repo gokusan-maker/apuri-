@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { ALL_STAGES, isUnlocked, loadStages, recordStars, saveStages, starsFor, stagesOf } from './stages'
+import { ALL_STAGES, allThreeStars, isUnlocked, loadStages, recordStars, saveStages, starsFor, stagesOf } from './stages'
 import { WORDS } from './words'
 
 describe('ステージ', () => {
@@ -11,6 +11,13 @@ describe('ステージ', () => {
     expect(s[0].words).toHaveLength(10)
     expect(s.map((x) => x.id).slice(0, 3)).toEqual(['高校基礎-1', '高校基礎-2', '高校基礎-3'])
     expect(ALL_STAGES.flatMap((x) => x.words)).toHaveLength(WORDS.length)
+  })
+
+  it('全ステージで星3ならトロフィー', () => {
+    const rec = Object.fromEntries(stagesOf('数').map((s) => [s.id, 3]))
+    expect(allThreeStars('数', rec)).toBe(true)
+    expect(allThreeStars('数', { ...rec, [stagesOf('数')[0].id]: 2 })).toBe(false)
+    expect(allThreeStars('数', {})).toBe(false)
   })
 
   it('星は正答率で決まる', () => {

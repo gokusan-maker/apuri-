@@ -40,3 +40,12 @@ it('「つづきから」で、まだクリアしていない次のステージ�
   fireEvent.click(screen.getByText('▶ つづきから（中1 ステージ2）'))
   expect(screen.getByText('中1 ステージ2')).toBeInTheDocument()
 })
+
+it('全ステージで星3を取るとトロフィー', () => {
+  const ones = Object.fromEntries(stagesOf('数').map((s) => [s.id, 1]))
+  const { rerender } = render(<Stages levels={['数']} record={ones} onClear={() => {}} />)
+  expect(screen.queryByRole('img', { name: /トロフィー/ })).not.toBeInTheDocument()
+  const threes = Object.fromEntries(stagesOf('数').map((s) => [s.id, 3]))
+  rerender(<Stages levels={['数']} record={threes} onClear={() => {}} />)
+  expect(screen.getByRole('img', { name: /トロフィー/ })).toBeInTheDocument()
+})
