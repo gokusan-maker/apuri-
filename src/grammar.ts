@@ -360,6 +360,37 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Please tell me ___ to put this box.', choices: ['where', 'what', 'how'], answer: 0, why: '「どこに置けばいいか」は where to put。' },
     ],
   },
+  {
+    id: 'svoo-svoc',
+    title: 'give 人 物・make A B',
+    points: [
+      'give・show・tell・send・buy などは「動詞＋人＋物」で「人に物を〜する」（give me a book）。',
+      'make・call・name は「動詞＋A＋B」で「AをBにする／AをBと呼ぶ」（The news made me happy）。',
+    ],
+    examples: [
+      { en: 'My father gave me a watch.', ja: '父は私に腕時計をくれた。' },
+      { en: 'We call the cat Tama.', ja: '私たちはその猫をタマと呼ぶ。' },
+    ],
+    questions: [
+      { sentence: 'Please show ___ your notebook.', choices: ['me', 'I', 'my'], answer: 0, why: '「私に見せて」は show me ＋ 物。' },
+      { sentence: 'The movie made ___ sad.', choices: ['her', 'she', 'hers'], answer: 0, why: 'make A B の A は「〜を」の形。her。' },
+      { sentence: 'My friends call ___ Ken.', choices: ['me', 'my', 'I'], answer: 0, why: 'call A B「AをBと呼ぶ」。A は me。' },
+    ],
+  },
+  {
+    id: 'it-for-to',
+    title: 'It is … for 人 to ～',
+    points: ['「（人が）〜することは…だ」は It is ＋ 形容詞 ＋ (for 人) ＋ to ＋ 動詞の原形。It は「to 以下」を指す。'],
+    examples: [
+      { en: 'It is easy for me to swim.', ja: '私にとって泳ぐことはかんたんだ。' },
+      { en: 'It is important to sleep well.', ja: 'よく眠ることは大切だ。' },
+    ],
+    questions: [
+      { sentence: 'It is hard ___ me to get up early.', choices: ['for', 'to', 'of'], answer: 0, why: '「私にとって」は for me。' },
+      { sentence: 'It is fun to ___ new words.', choices: ['learn', 'learning', 'learned'], answer: 0, why: 'to のあとは動詞の原形。' },
+      { sentence: '___ is dangerous to swim here.', choices: ['It', 'This', 'There'], answer: 0, why: 'It is … to ～ の形。It を使う。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
