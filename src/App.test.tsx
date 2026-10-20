@@ -594,6 +594,12 @@ describe('App', () => {
     expect(screen.queryByText(/連続5日をつなげよう/)).not.toBeInTheDocument()
   })
 
+  it('夜おそくは相棒のそばに💤', () => {
+    vi.setSystemTime(new Date(2026, 9, 20, 23))
+    render(<App />)
+    expect(screen.getByLabelText('ねむそう')).toBeInTheDocument()
+  })
+
   it('週末は正解のXPが2倍', () => {
     vi.setSystemTime(new Date(2026, 9, 24, 10)) // 土曜
     render(<App />)

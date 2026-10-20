@@ -23,6 +23,7 @@ type Props = {
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
+  sleepy?: boolean // 夜おそく（💤 を出す）
 }
 
 // 相棒は完全オリジナルのモチ型モンスター。段階と系統で色と飾りが変わる。
@@ -194,7 +195,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [] }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -209,6 +210,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
     <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
+      {sleepy && (
+        <span className="monster-zzz" aria-label="ねむそう">
+          💤
+        </span>
+      )}
       {shelf.length > 0 && (
         <span className="monster-shelf" aria-label={`かざってあるおみやげ ${shelf.length}こ`}>
           {shelf.join('')}

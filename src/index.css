@@ -740,3 +740,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .ws-cell { aspect-ratio: 1; border-radius: 8px; border: 1px solid var(--muted); background: var(--bg); color: var(--fg); font-size: 1.2rem; font-weight: bold; text-transform: uppercase; }
 .ws-cell.picked { background: var(--accent); color: var(--accent-fg); }
 .ws-cell.found { background: #bbf7d0; color: #14532d; }
+.monster-zzz { position: absolute; left: 70px; top: 4px; font-size: 1.2rem; animation: zzz 2s ease-in-out infinite; pointer-events: none; } @keyframes zzz { 50% { transform: translateY(-4px); opacity: 0.6; } } @media (prefers-reduced-motion: reduce) { .monster-zzz { animation: none; } }
