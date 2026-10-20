@@ -24,7 +24,8 @@ import { WORDS, type Word } from './words'
 // sentence：例文を聞いて訳を選ぶ
 // mix：英→日・日→英・リスニングが1問ごとにランダム
 // read：例文の音読（音声認識が使える端末のみ表示）
-export type Direction = 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// timed：1問10秒の英→日。早いほどボーナス
+export type Direction = 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -56,6 +57,7 @@ function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[]
 const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
   { id: 'mix', label: '🎲 ミックス' },
+  { id: 'timed', label: '⏳ 10秒' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'sentence', label: '🗣 例文リスニング' },
@@ -81,6 +83,7 @@ type Props = {
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
 
+export const QUESTION_TIME = 10
 const COUNTS = [5, 10, 20]
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
@@ -105,12 +108,13 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
   const [earned, setEarned] = useState(0)
   const [lastXp, setLastXp] = useState(0)
   const [missed, setMissed] = useState<Word[]>([])
+  const [left, setLeft] = useState(QUESTION_TIME) // 制限時間モードの残り秒
 
   const q = questions[index]
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank'].includes(qd)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed'].includes(qd)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -130,12 +134,23 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
     if (qd === 'sentence' && q) speak(q.word.example)
   }, [qd, q])
 
+  // 制限時間モード：1秒ずつ減らし、0になったら時間切れ（まちがい扱い）
+  const timing = direction === 'timed' && picked === null && !!q
+  useEffect(() => {
+    if (!timing) return
+    const id = window.setInterval(() => setLeft((t) => t - 1), 1000)
+    return () => window.clearInterval(id)
+  }, [timing, index])
+  useEffect(() => {
+    if (timing && left <= 0) pick(-1)
+  })
+
   function pick(i: number) {
     if (picked !== null) return
     setPicked(i)
     if (i === q.answer) {
       const c = combo + 1
-      const xp = quizXp(c)
+      const xp = quizXp(c) + (direction === 'timed' ? Math.max(0, left) : 0)
       setScore(score + 1)
       setCombo(c)
       setMaxCombo(Math.max(maxCombo, c))
@@ -155,6 +170,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
 
   function next() {
     setPicked(null)
+    setLeft(QUESTION_TIME)
     setIndex(index + 1)
     if (index + 1 === questions.length) onFinish?.(score, questions.length)
   }
@@ -163,6 +179,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
     setDirection(d)
     setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
     setMissed([])
+    setLeft(QUESTION_TIME)
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -311,6 +328,11 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
   return (
     <section className="card quiz" aria-live="polite">
       {toggle}
+      {direction === 'timed' && (
+        <div className="timer-bar" aria-label={`のこり ${Math.max(0, left)}秒`}>
+          <div className="timer-fill" style={{ width: `${(Math.max(0, left) / QUESTION_TIME) * 100}%` }} />
+        </div>
+      )}
       <p className="progress">
         {index + 1} / {questions.length}
         {combo >= 2 && (
@@ -363,7 +385,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
                 正解！ <span className="xp-gain">+{lastXp} XP</span>
               </>
             ) : (
-              `正解は「${q.choices[q.answer]}」`
+              `${picked === -1 ? '時間切れ！ ' : ''}正解は「${q.choices[q.answer]}」`
             )}
           </p>
           {picked !== q.answer && qd !== 'blank' && q.word.example && (

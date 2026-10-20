@@ -3,8 +3,9 @@ import { addTime, IDLE, TICK, type TimeLog } from './studyTime'
 
 // 画面が見えていて、最後にさわってから IDLE 秒以内なら TICK 秒ずつ数える
 export function useStudyTime(setLog: Dispatch<SetStateAction<TimeLog>>, today: string): void {
-  const last = useRef(Date.now())
+  const last = useRef(0)
   useEffect(() => {
+    last.current = Date.now()
     const touch = () => {
       last.current = Date.now()
     }

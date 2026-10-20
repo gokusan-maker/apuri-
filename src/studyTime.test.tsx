@@ -1,5 +1,5 @@
 import { act, render } from '@testing-library/react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { addTime, minutesToday, minutesWeek, type TimeLog } from './studyTime'
 import { useStudyTime } from './useStudyTime'
@@ -20,7 +20,9 @@ describe('学習時間', () => {
     let latest: TimeLog = {}
     function Probe() {
       const [log, setLog] = useState<TimeLog>({})
-      latest = log
+      useEffect(() => {
+        latest = log
+      })
       useStudyTime(setLog, '2026-10-20')
       return null
     }

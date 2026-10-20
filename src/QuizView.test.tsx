@@ -1,5 +1,5 @@
-import { fireEvent, render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { act, fireEvent, render, screen } from '@testing-library/react'
+import { describe, expect, it, vi } from 'vitest'
 import { Quiz } from './QuizView'
 import { VERBS } from './irregular'
 import { WORDS } from './words'
@@ -227,4 +227,22 @@ it('問題数を5問にでき、選んだ数は覚えておく', () => {
   render(<Quiz words={WORDS.slice(0, 30)} />)
   expect(screen.getByText(/^1 \/ 5/)).toBeInTheDocument()
   localStorage.clear()
+})
+
+it('⏳ 10秒：時間切れはまちがい扱い、早く答えるとボーナスXP', () => {
+  vi.useFakeTimers()
+  const words = WORDS.slice(0, 10)
+  const got: [boolean, number][] = []
+  render(<Quiz words={words} count={2} direction="timed" onAnswer={(c, xp) => got.push([c, xp])} />)
+  act(() => vi.advanceTimersByTime(10_000))
+  expect(screen.getByText(/時間切れ！/)).toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ'))
+  act(() => vi.advanceTimersByTime(3_000))
+  const en = document.querySelector('.quiz .en')!.textContent
+  fireEvent.click(screen.getByRole('button', { name: words.find((w) => w.en === en)!.ja }))
+  expect(got).toEqual([
+    [false, 0],
+    [true, 17],
+  ])
+  vi.useRealTimers()
 })
