@@ -772,6 +772,7 @@ function App() {
             onRivalWin={() => setWallet((w) => ({ ...w, coins: w.coins + RIVAL_COINS }))}
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
             onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
+            onGame={() => count('game')}
           />
         </>
       ) : mode === 'time' ? (

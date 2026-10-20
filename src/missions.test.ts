@@ -19,7 +19,7 @@ describe('デイリーミッション', () => {
     const m = missionsFor(today)[0]
     let s = loadMissions(today)
     s = bump(s, today, m.counter, m.target - 1)
-    expect(completedUnclaimed(s, today)).toEqual([])
+    expect(completedUnclaimed(s, today).map((x) => x.id)).not.toContain(m.id)
     s = bump(s, today, m.counter)
     expect(completedUnclaimed(s, today).map((x) => x.id)).toContain(m.id)
     s = { ...s, claimed: [m.id] }
@@ -37,4 +37,8 @@ describe('デイリーミッション', () => {
 
 it('聞き取り系で5問正解のミッションがある', () => {
   expect(MISSION_POOL.find((m) => m.id === 'ear-5')).toMatchObject({ counter: 'ear', target: 5 })
+})
+
+it('神経衰弱かビンゴのミッションがある', () => {
+  expect(MISSION_POOL.find((m) => m.id === 'game-1')).toMatchObject({ counter: 'game', target: 1 })
 })

@@ -10,10 +10,11 @@ type Props = {
   words: Word[]
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   initialBoard?: Word[] // テスト用
+  onClear?: () => void // ビンゴになったとき
 }
 
 // 単語ビンゴ
-export function Bingo({ words, onAnswer, initialBoard }: Props) {
+export function Bingo({ words, onAnswer, initialBoard, onClear }: Props) {
   const [board, setBoard] = useState(() => initialBoard ?? makeBoard(words))
   const [order, setOrder] = useState(() => shuffle([...Array(9).keys()]))
   const [step, setStep] = useState(0)
@@ -35,6 +36,7 @@ export function Bingo({ words, onAnswer, initialBoard }: Props) {
       onAnswer?.(true, XP_QUIZ_CORRECT, board[i].id, 'quiz')
       if (hasBingo(m)) {
         playFanfare()
+        onClear?.()
         if (recordLowBest(BINGO_BEST, step + 1)) {
           setNewBest(true)
           setBest(step + 1)

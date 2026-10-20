@@ -34,3 +34,17 @@ it('ちがう2枚は伏せもどり、ペアをそろえると XP、全部でク
   expect(screen.getByText('ぜんぶそろった！ 7 手でクリア・自己ベスト！')).toBeInTheDocument()
   expect(localStorage.getItem('eitan:best-memory')).toBe('7')
 })
+
+it('全部そろえると onClear が呼ばれる', () => {
+  const deck = makeDeck(WORDS.slice(0, 6))
+  let cleared = 0
+  render(<Memory words={WORDS} initialDeck={deck} onClear={() => cleared++} />)
+  const cards = () => [...document.querySelectorAll<HTMLButtonElement>('.memory-card')]
+  for (let i = 0; i < deck.length; i++) {
+    const j = deck.findIndex((c, k) => k > i && isPair(c, deck[i]))
+    if (j < 0) continue
+    fireEvent.click(cards()[i])
+    fireEvent.click(cards()[j])
+  }
+  expect(cleared).toBe(1)
+})

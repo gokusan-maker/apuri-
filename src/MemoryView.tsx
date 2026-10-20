@@ -9,10 +9,11 @@ type Props = {
   words: Word[]
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   initialDeck?: MemCard[] // テスト用
+  onClear?: () => void // 全部そろえたとき
 }
 
 // 神経衰弱（6ペア）
-export function Memory({ words, onAnswer, initialDeck }: Props) {
+export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
   const [deck, setDeck] = useState(() => initialDeck ?? makeDeck(words))
   const [open, setOpen] = useState<number[]>([]) // めくっている（最大2枚）
   const [done, setDone] = useState<string[]>([]) // そろったカードの key
@@ -37,6 +38,7 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
         playCorrect()
         const d = [...done, a.key, b.key]
         setDone(d)
+        if (d.length === deck.length) onClear?.()
         if (d.length === deck.length && recordLowBest(MEMORY_BEST, moves + 1)) {
           setNewBest(true)
           setBest(moves + 1)
