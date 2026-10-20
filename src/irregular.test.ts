@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { makeVerbDrill, makeVerbQuestion, regularize, VERBS } from './irregular'
+import { makeVerbDrill, makeVerbQuestion, regularize, verbOf, VERBS } from './irregular'
 
 describe('不規則動詞', () => {
   it('75語あり、原形は重複しない', () => {
@@ -35,5 +35,12 @@ describe('不規則動詞', () => {
     const d = makeVerbDrill(10)
     expect(d).toHaveLength(10)
     expect(new Set(d.map((q) => q.verb.base)).size).toBe(10)
+  })
+})
+
+describe('verbOf', () => {
+  it('不規則動詞なら変化を返す', () => {
+    expect(verbOf('go')?.past).toBe('went')
+    expect(verbOf('play')).toBeUndefined()
   })
 })

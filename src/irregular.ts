@@ -93,6 +93,11 @@ export const TENSE_LABEL: Record<Tense, string> = { past: '過去形', pp: '過�
 
 export type VerbQuestion = { verb: Verb; tense: Tense; choices: string[]; answer: number }
 
+// 見出し語が不規則動詞なら、その変化
+export function verbOf(en: string): Verb | undefined {
+  return VERBS.find((v) => v.base === en)
+}
+
 export function makeVerbQuestion(verb: Verb, tense: Tense, rng: Rng = Math.random): VerbQuestion {
   const correct = verb[tense]
   const other = tense === 'past' ? verb.pp : verb.past

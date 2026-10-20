@@ -126,3 +126,10 @@ it('まちがえやすい単語は、カードの裏で解説を見られる', (
   fireEvent.click(screen.getByText('意味を見る'))
   expect(screen.getByText(/⚠ まちがえやすい：borrow と lend/)).toBeInTheDocument()
 })
+
+it('不規則動詞のカードの裏に、過去形・過去分詞を出す', () => {
+  const w = WORDS.find((x) => x.id === 'begin')!
+  render(<Card card={w} onAnswer={() => {}} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  expect(screen.getByText('begin - began - begun')).toBeInTheDocument()
+})

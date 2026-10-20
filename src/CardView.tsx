@@ -4,6 +4,7 @@ import { swipeResult } from './swipe'
 import { useKeys } from './useKeys'
 import { Note } from './NoteView'
 import { confusingFor } from './confusing'
+import { verbOf } from './irregular'
 import type { Word } from './words'
 
 type Props = {
@@ -152,6 +153,11 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
             </p>
           ) : (
             <p className="ja">{card.ja}</p>
+          )}
+          {verbOf(card.en) && (
+            <p className="verb-forms">
+              {verbOf(card.en)!.base} - {verbOf(card.en)!.past} - {verbOf(card.en)!.pp}
+            </p>
           )}
           {card.example && (
             <p className="example">
