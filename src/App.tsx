@@ -142,6 +142,7 @@ function App() {
   type Focus = 'weak' | 'fav' | 'pick' | 'week' | 'thisweek'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
   const [picked, setPicked] = useState<string[]>([]) // 単語一覧から選んだ単語
+  const [themeQuiz, setThemeQuiz] = useState(false) // テーマで練習：クイズでやる
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
@@ -749,13 +750,22 @@ function App() {
               <DiaryBox today={today} />
               <details className="theme-practice">
                 <summary>🗂 テーマで練習</summary>
+                <div className="counts" role="group" aria-label="練習のしかた">
+                  <button aria-pressed={!themeQuiz} onClick={() => setThemeQuiz(false)}>
+                    めくって覚える
+                  </button>
+                  <button aria-pressed={themeQuiz} onClick={() => setThemeQuiz(true)}>
+                    問題をとく
+                  </button>
+                </div>
                 <div className="levels">
                   {GROUPS.map((g) => (
                     <button
                       key={g.name}
                       onClick={() => {
                         setPicked(g.ids)
-                        startCards('pick')
+                        if (themeQuiz) startQuiz('pick')
+                        else startCards('pick')
                       }}
                     >
                       {g.name}

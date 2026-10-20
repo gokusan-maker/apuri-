@@ -474,6 +474,15 @@ describe('App', () => {
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
   })
 
+  it('「テーマで練習」はクイズでもできる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByText('🗂 テーマで練習'))
+    fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
+    fireEvent.click(screen.getByRole('button', { name: '動物' }))
+    expect(screen.getByText(/選んだ単語のだけ復習中/)).toBeInTheDocument()
+  })
+
   it('記録画面のカレンダーに今日の学習が印される', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
