@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, eat, ITEMS, loadWallet, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, eat, ITEMS, loadWallet, saveWallet, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -58,4 +58,10 @@ it('部屋の背景も買えて、えらんだ部屋は保存される', () => {
   expect(loadWallet().room).toBe('ocean')
   localStorage.setItem('eitan:wallet', '{"coins":1,"owned":[],"room":"castle"}')
   expect(loadWallet().room).toBeUndefined()
+})
+
+describe('早起き', () => {
+  it('5〜10時が早起き', () => {
+    expect([4, 5, 9, 10].map(isEarly)).toEqual([false, true, true, false])
+  })
 })

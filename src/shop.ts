@@ -12,6 +12,9 @@ export const ITEMS: Item[] = [
 
 export const COIN_PER_CORRECT = 1
 export const LOGIN_COINS = 5 // その日はじめての学習
+export const EARLY_COINS = 3 // 朝5〜10時にその日はじめての学習（早起きボーナス）
+export const isEarly = (hour: number) => hour >= 5 && hour < 10
+export const isEarlyNow = () => isEarly(new Date().getHours())
 export const LOGIN_WEEK_COINS = 20 // 7日連続ごと
 
 export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string }

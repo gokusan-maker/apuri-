@@ -500,6 +500,15 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(5)
   })
 
+  it('朝5〜10時にその日はじめて学習すると早起きボーナス🪙3', () => {
+    vi.setSystemTime(new Date(2026, 9, 20, 7))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText(/早起きえらい！ 🪙8/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(8)
+  })
+
   it('単語帳の選択はふだんたたまれていて、タップで開く', () => {
     render(<App />)
     expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
