@@ -709,3 +709,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .missed-list li { padding: 4px 0; border-bottom: 1px solid rgba(128, 128, 128, 0.2); }
 .missed-list strong { margin-right: 8px; }
 .stage-trophy { margin-left: 6px; }
+.confusing-tip { margin: 8px 0; font-size: 0.85em; text-align: left; } .confusing-tip summary { cursor: pointer; }

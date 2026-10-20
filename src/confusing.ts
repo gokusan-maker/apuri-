@@ -283,3 +283,8 @@ export const CONFUSING: GrammarUnit[] = [
     ],
   },
 ]
+
+// 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
+export function confusingFor(id: string): GrammarUnit | undefined {
+  return CONFUSING.find((u) => u.id.split('-').includes(id))
+}

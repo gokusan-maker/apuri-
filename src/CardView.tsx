@@ -3,6 +3,7 @@ import { speak } from './speech'
 import { swipeResult } from './swipe'
 import { useKeys } from './useKeys'
 import { Note } from './NoteView'
+import { confusingFor } from './confusing'
 import type { Word } from './words'
 
 type Props = {
@@ -184,6 +185,14 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
             ) : (
               <p className="example-ja">{card.exampleJa}</p>
             ))}
+          {confusingFor(card.id) && (
+            <details className="confusing-tip">
+              <summary>⚠ まちがえやすい：{confusingFor(card.id)!.title}</summary>
+              {confusingFor(card.id)!.points.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </details>
+          )}
           {onNote && <Note text={note} onSave={onNote} />}
           <div className="actions">
             <button className="again" onClick={() => answer(false)}>

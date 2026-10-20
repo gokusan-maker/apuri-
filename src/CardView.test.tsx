@@ -119,3 +119,10 @@ it('例文の中の単語をタップすると意味が出る', () => {
   fireEvent.click(screen.getByRole('button', { name: 'school.' }))
   expect(screen.getByText('school：学校')).toBeInTheDocument()
 })
+
+it('まちがえやすい単語は、カードの裏で解説を見られる', () => {
+  const w = WORDS.find((x) => x.id === 'borrow')!
+  render(<Card card={w} onAnswer={() => {}} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  expect(screen.getByText(/⚠ まちがえやすい：borrow と lend/)).toBeInTheDocument()
+})
