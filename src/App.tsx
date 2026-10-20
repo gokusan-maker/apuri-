@@ -1,62 +1,68 @@
-import { useEffect, useState, type FormEvent } from 'react'
-import { loadHabits, saveHabits, todayKey, toggleDone, type Habit } from './habits'
+import { useEffect, useMemo, useState } from 'react'
+import { dayKey, grade, isDue, loadProgress, saveProgress, type ProgressMap } from './srs'
+import { WORDS } from './words'
+
+function speak(text: string) {
+  if (!('speechSynthesis' in window)) return
+  const u = new SpeechSynthesisUtterance(text)
+  u.lang = 'en-US'
+  window.speechSynthesis.cancel()
+  window.speechSynthesis.speak(u)
+}
 
 function App() {
-  const [habits, setHabits] = useState<Habit[]>(loadHabits)
-  const [name, setName] = useState('')
-  const today = todayKey()
+  const [progress, setProgress] = useState<ProgressMap>(loadProgress)
+  const [flipped, setFlipped] = useState(false)
+  const today = dayKey()
 
-  useEffect(() => saveHabits(habits), [habits])
+  useEffect(() => saveProgress(progress), [progress])
 
-  function addHabit(e: FormEvent) {
-    e.preventDefault()
-    const trimmed = name.trim()
-    if (!trimmed) return
-    setHabits([...habits, { id: crypto.randomUUID(), name: trimmed, doneDates: [] }])
-    setName('')
+  const queue = useMemo(() => WORDS.filter((w) => isDue(progress[w.id], today)), [progress, today])
+  const learned = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
+  const card = queue[0]
+
+  function answer(correct: boolean) {
+    setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
+    setFlipped(false)
   }
-
-  const doneCount = habits.filter((h) => h.doneDates.includes(today)).length
 
   return (
     <main className="app">
       <header>
-        <h1>まいにち習慣</h1>
-        <p className="progress">
-          今日の達成：{doneCount} / {habits.length}
+        <h1>えいたん</h1>
+        <p className="stats">
+          今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
         </p>
       </header>
 
-      <form onSubmit={addHabit} className="add-form">
-        <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="新しい習慣（例：水を飲む）"
-          aria-label="新しい習慣"
-        />
-        <button type="submit">追加</button>
-      </form>
-
-      {habits.length === 0 ? (
-        <p className="empty">まだ習慣がありません。上から追加しましょう。</p>
-      ) : (
-        <ul className="habit-list">
-          {habits.map((h) => {
-            const done = h.doneDates.includes(today)
-            return (
-              <li key={h.id}>
-                <button
-                  className={done ? 'habit done' : 'habit'}
-                  aria-pressed={done}
-                  onClick={() => setHabits(habits.map((x) => (x.id === h.id ? toggleDone(x, today) : x)))}
-                >
-                  <span className="check">{done ? '✓' : ''}</span>
-                  {h.name}
+      {card ? (
+        <section className="card" aria-live="polite">
+          <p className="en">{card.en}</p>
+          <button className="speak" onClick={() => speak(card.en)} aria-label="発音を聞く">
+            🔊
+          </button>
+          {flipped ? (
+            <>
+              <p className="ja">{card.ja}</p>
+              <p className="example">{card.example}</p>
+              <p className="example-ja">{card.exampleJa}</p>
+              <div className="actions">
+                <button className="again" onClick={() => answer(false)}>
+                  まだ
                 </button>
-              </li>
-            )
-          })}
-        </ul>
+                <button className="good" onClick={() => answer(true)}>
+                  覚えた
+                </button>
+              </div>
+            </>
+          ) : (
+            <button className="flip" onClick={() => setFlipped(true)}>
+              意味を見る
+            </button>
+          )}
+        </section>
+      ) : (
+        <p className="done">今日の学習は完了です 🎉 また明日！</p>
       )}
     </main>
   )

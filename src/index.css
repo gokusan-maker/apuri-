@@ -3,8 +3,9 @@
   --fg: #1f2937;
   --muted: #6b7280;
   --card: #f3f4f6;
-  --accent: #4f46e5;
+  --accent: #2563eb;
   --accent-fg: #ffffff;
+  --again: #dc2626;
   font-family: system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
   color: var(--fg);
   background: var(--bg);
@@ -21,6 +22,7 @@
 
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); }
+button { font: inherit; cursor: pointer; }
 
 .app {
   max-width: 480px;
@@ -29,48 +31,37 @@ body { margin: 0; background: var(--bg); }
 }
 
 h1 { font-size: 1.6rem; margin: 8px 0 4px; }
-.progress, .empty { color: var(--muted); }
+.stats, .done, .example-ja { color: var(--muted); }
+.done { text-align: center; margin-top: 48px; font-size: 1.1rem; }
 
-.add-form { display: flex; gap: 8px; margin: 16px 0; }
-.add-form input {
-  flex: 1;
-  font-size: 1rem;
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid var(--muted);
-  background: var(--bg);
-  color: var(--fg);
+.card {
+  margin-top: 16px;
+  padding: 28px 20px;
+  border-radius: 16px;
+  background: var(--card);
+  text-align: center;
 }
-.add-form button {
-  font-size: 1rem;
-  padding: 0 18px;
+.en { font-size: 2.2rem; font-weight: 700; margin: 0 0 8px; }
+.ja { font-size: 1.4rem; margin: 20px 0 12px; }
+.example { font-size: 1.05rem; margin: 0 0 4px; }
+.example-ja { margin: 0; }
+
+.speak {
   border: none;
-  border-radius: 10px;
-  background: var(--accent);
-  color: var(--accent-fg);
+  background: transparent;
+  font-size: 1.6rem;
+  padding: 4px 12px;
 }
 
-.habit-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
-.habit {
+.flip, .actions button {
   width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.05rem;
-  text-align: left;
   padding: 14px;
+  font-size: 1.05rem;
   border: none;
   border-radius: 12px;
-  background: var(--card);
-  color: var(--fg);
+  color: var(--accent-fg);
+  background: var(--accent);
 }
-.check {
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  border: 2px solid var(--accent);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-.habit.done .check { background: var(--accent); color: var(--accent-fg); }
+.flip { margin-top: 24px; }
+.actions { display: flex; gap: 12px; margin-top: 24px; }
+.actions .again { background: var(--again); }
