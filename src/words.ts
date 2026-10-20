@@ -848,6 +848,11 @@ export const WORDS: Word[] = [
   { id: 'eighth', en: 'eighth', ja: '8番目の', example: 'August is the eighth month.', exampleJa: '8月は8番目の月だ。', level: '数' },
   { id: 'ninth', en: 'ninth', ja: '9番目の', example: 'She lives on the ninth floor.', exampleJa: '彼女は9階に住んでいる。', level: '数' },
   { id: 'tenth', en: 'tenth', ja: '10番目の', example: 'Today is our tenth wedding anniversary.', exampleJa: '今日は私たちの10回目の結婚記念日だ。', level: '数' },
+  { id: 'zero', en: 'zero', ja: 'ゼロ・0', example: 'The score was three to zero.', exampleJa: 'スコアは3対0だった。', level: '数' },
+  { id: 'half', en: 'half', ja: '半分', example: 'I ate half of the pizza.', exampleJa: 'ピザの半分を食べた。', level: '数' },
+  { id: 'dozen', en: 'dozen', ja: '1ダース・12個', example: 'I bought a dozen eggs.', exampleJa: '卵を1ダース買った。', level: '数' },
+  { id: 'pair', en: 'pair', ja: '1組・1足', example: 'I need a new pair of shoes.', exampleJa: '新しい靴が1足ほしい。', level: '数' },
+  { id: 'double', en: 'double', ja: '2倍の・2人用の', example: 'We booked a double room.', exampleJa: '2人用の部屋を予約した。', level: '数' },
   // 色・形
   { id: 'red', en: 'red', ja: '赤・赤い', example: 'The apple is red and shiny.', exampleJa: 'そのりんごは赤くてつやつやしている。', level: '色・形' },
   { id: 'blue', en: 'blue', ja: '青・青い', example: 'My new bike is blue.', exampleJa: '私の新しい自転車は青い。', level: '色・形' },
