@@ -667,3 +667,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .define-prompt { font-size: 1.2rem; font-weight: 700; margin: 8px 0 4px; line-height: 1.5; }
 .shiritori-chain { font-size: 1.2rem; font-weight: 700; margin: 4px 0 8px; }
 .choice-ja { font-size: 0.8rem; color: var(--muted); margin-left: 6px; }
+.listen-through .listen { display: block; margin: 8px auto; } .listen-ja { margin: 12px 0 0; }

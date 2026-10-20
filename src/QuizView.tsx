@@ -12,6 +12,7 @@ import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { Shiritori } from './ShiritoriView'
 import { Sequence } from './SequenceView'
+import { ListenThrough } from './ListenThroughView'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
@@ -39,7 +40,8 @@ import { WORDS, type Word } from './words'
 // define：英語の説明を読んで単語を当てる
 // shiritori：英語しりとり
 // sequence：曜日・月・序数の順番
-export type Direction = 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// through：聞き流し
+export type Direction = 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : d === 'define' ? DEFS[w.id] ?? w.ja : w.en)
 const label = (d: Direction) =>
@@ -78,6 +80,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
+  { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
   { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },
   { id: 'speak', label: '🎤 発音', group: '聞く・話す' },
@@ -294,6 +297,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Scramble key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'through') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <ListenThrough words={targets ?? words} />
       </>
     )
   }

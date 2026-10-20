@@ -13,3 +13,24 @@ export function speak(text: string, slow = false): void {
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(u)
 }
+
+// 続けて読み上げる（英語→日本語など）。最後まで読んだら onDone。止めるときは cancelSpeech()
+export function speakSeq(parts: { text: string; lang?: string }[], onDone: () => void): void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
+    onDone()
+    return
+  }
+  const { rate, accent } = loadSettings()
+  window.speechSynthesis.cancel()
+  parts.forEach((p, i) => {
+    const u = new SpeechSynthesisUtterance(p.text)
+    u.lang = p.lang ?? accent
+    u.rate = rate
+    if (i === parts.length - 1) u.onend = () => onDone()
+    window.speechSynthesis.speak(u)
+  })
+}
+
+export function cancelSpeech(): void {
+  if (typeof window !== 'undefined' && 'speechSynthesis' in window) window.speechSynthesis.cancel()
+}
