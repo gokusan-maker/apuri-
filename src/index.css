@@ -386,3 +386,6 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .stage-back { border: none; background: transparent; color: var(--accent); padding: 4px 0; }
 .stage-result { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--card); text-align: center; font-weight: 700; }
 .stage-result.clear { color: #f59e0b; font-size: 1.2rem; animation: pop 0.4s; }
+.verb-ask { margin: 0 0 4px; color: var(--muted); }
+.verb-ask strong { color: var(--accent); }
+.verb-forms { font-size: 1.15rem; font-weight: 700; margin: 4px 0 0; }

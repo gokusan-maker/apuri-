@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { Quiz } from './QuizView'
+import { VERBS } from './irregular'
 import { WORDS } from './words'
 
 describe('Quiz', () => {
@@ -126,4 +127,15 @@ it('📝 穴埋めでは例文の空欄に入る単語を選び、答えると�
   fireEvent.click(screen.getByRole('button', { name: word.en }))
   expect(screen.getByText(/正解！/)).toBeInTheDocument()
   expect(document.querySelector('.blank-sentence')!.textContent).toBe(word.example)
+})
+
+it('🔁 不規則動詞ドリルで活用を答えられる', () => {
+  render(<Quiz words={WORDS.slice(0, 8)} count={1} />)
+  fireEvent.click(screen.getByText('🔁 不規則動詞'))
+  const base = document.querySelector('.irregular .en')!.textContent!
+  const tense = document.querySelector('.verb-ask strong')!.textContent
+  const v = VERBS.find((x) => x.base === base)!
+  fireEvent.click(screen.getByRole('button', { name: tense === '過去形' ? v.past : v.pp }))
+  expect(screen.getByText('正解！')).toBeInTheDocument()
+  expect(screen.getByText(`${v.base} – ${v.past} – ${v.pp}`)).toBeInTheDocument()
 })
