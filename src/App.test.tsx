@@ -507,4 +507,14 @@ describe('App', () => {
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText('🎖 かけだし')).toBeInTheDocument()
   })
+
+  it('相棒と出会って7日で記念日のお祝い（1回だけ）', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, members: [{ xp: 50, born: '2026-10-13' }] }))
+    const { unmount } = render(<App />)
+    expect(screen.getByText('記念日おめでとう！')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(10)
+    unmount()
+    render(<App />)
+    expect(screen.queryByText('記念日おめでとう！')).not.toBeInTheDocument()
+  })
 })

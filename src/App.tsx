@@ -14,6 +14,7 @@ import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
+import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
 import { isWeekend, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
@@ -291,6 +292,16 @@ function App() {
     setWallet((w) => ({ ...w, coins: w.coins + WEEKLY_COINS }))
     updateMonster((m) => feed(m, WEEKLY_XP, null, today))
     setMissionToast([{ id: 'weekly', text: `今週${WEEKLY_TARGET}問クリア・🪙${WEEKLY_COINS}もゲット`, counter: 'answers', target: WEEKLY_TARGET }])
+  }
+
+  // 相棒の記念日（まとめて過ぎていたら、いちばん新しいものだけお祝いして残りも済みにする）
+  const [annivDone, setAnnivDone] = usePersistent(loadDone, saveDone)
+  const annivKey = `m${party.active}`
+  const anniv = dueAnniversary(monster.born, today, annivDone, annivKey)
+  if (anniv !== null) {
+    setAnnivDone([...annivDone, ...MILESTONES.filter((n) => n <= anniv).map((n) => `${annivKey}:${n}`)])
+    setWallet((w) => ({ ...w, coins: w.coins + ANNIV_COINS }))
+    setMissionToast([{ id: 'anniv', text: `${monster.name ?? formOf(monster).name}と出会って${anniv}日！ 🪙${ANNIV_COINS}`, counter: 'answers', target: 0 }])
   }
 
   // 節目のバッジでタマゴがもらえる
@@ -629,7 +640,9 @@ function App() {
           </span>
           <div>
             <p className="badge-toast-title">
-              {missionToast[0].id === 'login'
+              {missionToast[0].id === 'anniv'
+                ? '記念日おめでとう！'
+                : missionToast[0].id === 'login'
                 ? 'ログインボーナス'
                 : missionToast[0].id === 'weekly'
                 ? `週間チャレンジ達成！ +${WEEKLY_XP}XP`
