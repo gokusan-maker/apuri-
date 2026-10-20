@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, calcQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, calcQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -91,6 +91,15 @@ describe('パズル', () => {
       expect(ans).toBeGreaterThanOrEqual(0)
       expect(new Set(q.choices).size).toBe(4)
       if (q.wordId) expect(WORDS.some((w) => w.id === q.wordId), q.wordId).toBe(true)
+    }
+  })
+
+  it('複数形：正解が合い、選択肢は4つでちがう', () => {
+    for (let i = 0; i < 80; i++) {
+      const q = pluralQ()
+      const one = q.prompt.match(/「(.+)」/)![1]
+      expect(PLURALS.find(([a]) => a === one)![1]).toBe(q.choices[q.answer])
+      expect(new Set(q.choices).size).toBe(4)
     }
   })
 })

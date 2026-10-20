@@ -173,3 +173,28 @@ const SMALL = [...NUM_EN, 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'sevente
 function toEnglishSmall(n: number): string {
   return SMALL[n]
 }
+
+// 複数形：まちがえやすいものを中心に
+export const PLURALS: [string, string][] = [
+  ['book', 'books'], ['box', 'boxes'], ['bus', 'buses'], ['watch', 'watches'], ['dish', 'dishes'], ['glass', 'glasses'],
+  ['potato', 'potatoes'], ['tomato', 'tomatoes'], ['city', 'cities'], ['baby', 'babies'], ['story', 'stories'], ['country', 'countries'],
+  ['library', 'libraries'], ['knife', 'knives'], ['leaf', 'leaves'], ['child', 'children'], ['man', 'men'], ['woman', 'women'],
+  ['foot', 'feet'], ['tooth', 'teeth'], ['mouse', 'mice'], ['person', 'people'], ['sheep', 'sheep'], ['boy', 'boys'],
+  ['day', 'days'], ['toy', 'toys'], ['key', 'keys'],
+]
+
+function wrongPlurals(w: string): string[] {
+  const out = [w + 's', w + 'es', w + 'en', w + w.slice(-1) + 'es']
+  if (w.endsWith('y')) out.push(w.slice(0, -1) + 'ies')
+  if (w.endsWith('f')) out.push(w.slice(0, -1) + 'ves')
+  if (w.endsWith('fe')) out.push(w.slice(0, -2) + 'ves', w + 'es')
+  if (w.endsWith('o')) out.push(w + 'ss')
+  return out
+}
+
+export function pluralQ(rng: Rng = Math.random): PuzzleQ {
+  const [one, many] = PLURALS[Math.floor(rng() * PLURALS.length)]
+  const wrong = shuffle([...new Set(wrongPlurals(one))].filter((x) => x !== many), rng).slice(0, 3)
+  const choices = shuffle([many, ...wrong], rng)
+  return { prompt: `「${one}」の複数形は？`, choices, answer: choices.indexOf(many), why: `${one} → ${many}`, wordId: idOf(one) ?? '' }
+}
