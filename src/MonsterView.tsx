@@ -189,6 +189,7 @@ export function MonsterFigure({
       )}
       {form.branch === 'quiz' && <path d="M54 2 L40 22 L50 22 L44 34 L62 14 L52 14 Z" fill="#facc15" stroke="#a16207" strokeWidth="2" />}
       {form.stage >= 4 && <path d="M30 34 L33 24 L40 30 L50 20 L60 30 L67 24 L70 34 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="2" />}
+      {form.stage >= 6 && <ellipse cx="50" cy="12" rx="20" ry="5" fill="none" stroke="#fde047" strokeWidth="3" opacity="0.9" />}
       {hidden ? <text x="50" y="66" textAnchor="middle" fontSize="22" fill="#f3f4f6">？</text> : <Face mood={mood} />}
       {!hidden && <Wear id={wear} />}
     </svg>

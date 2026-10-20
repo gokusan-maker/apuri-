@@ -38,7 +38,9 @@ describe('進化と表情', () => {
     expect(stageOf(29).index).toBe(3)
     expect(stageOf(30).index).toBe(4)
     expect(stageOf(49).index).toBe(4)
-    expect(stageOf(99).index).toBe(5)
+    expect(stageOf(69).index).toBe(5)
+    expect(stageOf(70).index).toBe(6)
+    expect(stageOf(99).index).toBe(6)
   })
 
   it('3日以上あくと「さみしそう」。記録が無い古いデータはさみしくない', () => {
@@ -134,5 +136,14 @@ it('図鑑のすべての姿に説明文がある', () => {
 it('次の進化までのレベル', () => {
   expect(levelsToNextStage(1)).toEqual({ name: 'ちびモチ', levels: 1 })
   expect(levelsToNextStage(10)?.levels).toBe(5)
-  expect(levelsToNextStage(50)).toBeNull()
+  expect(levelsToNextStage(50)?.levels).toBe(20)
+  expect(levelsToNextStage(70)).toBeNull()
+})
+
+it('Lv70 で神話のすがたに進化し、説明もある', () => {
+  for (const f of FORMS) expect(FORM_DESC[f.id], f.id).toBeTruthy()
+  const m = feed({ xp: 0 }, 0, null, '2026-10-20')
+  void m
+  const myth = FORMS.filter((f) => f.stage === 6)
+  expect(myth.map((f) => f.branch).sort()).toEqual(['card', 'ear', 'quiz'])
 })

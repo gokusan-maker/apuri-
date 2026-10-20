@@ -86,6 +86,7 @@ export const STAGES: Stage[] = [
   { index: 3, name: 'モチノスケ', minLevel: 15 },
   { index: 4, name: 'オオモチ', minLevel: 30 },
   { index: 5, name: 'デンセツモチ', minLevel: 50 },
+  { index: 6, name: 'シンワモチ', minLevel: 70 },
 ]
 
 export function stageOf(level: number): Stage {
@@ -137,6 +138,9 @@ export const FORM_DESC: Record<string, string> = {
   'mori-legend': '伝説の森のモチ。そのまわりでは、本がよく読まれるという。',
   'inazuma-legend': '伝説のイナズマモチ。100問連続正解したという言い伝えがある。',
   'sora-legend': '伝説の空のモチ。聞いた英語を一度で覚えてしまう。',
+  'mori-myth': '神話にうたわれる森のモチ。世界中の単語の木を育てているという。',
+  'inazuma-myth': '神話にうたわれる雷のモチ。どんな問題も一瞬で答えてしまう。',
+  'sora-myth': '神話にうたわれる空のモチ。世界中のことばの歌を聞いている。',
 }
 
 export const FORMS: Form[] = [
@@ -152,6 +156,9 @@ export const FORMS: Form[] = [
   { id: 'mori-legend', name: 'デンセツノモリモチ', stage: 5, branch: 'card', color: '#15803d', line: '#052e16', hint: 'Lv50・カード中心' },
   { id: 'inazuma-legend', name: 'デンセツノイナズマモチ', stage: 5, branch: 'quiz', color: '#eab308', line: '#713f12', hint: 'Lv50・クイズ中心' },
   { id: 'sora-legend', name: 'デンセツノソラモチ', stage: 5, branch: 'ear', color: '#0284c7', line: '#082f49', hint: 'Lv50・リスニング/スペル中心' },
+  { id: 'mori-myth', name: 'シンワノモリモチ', stage: 6, branch: 'card', color: '#a3e635', line: '#365314', hint: 'Lv70・カード中心' },
+  { id: 'inazuma-myth', name: 'シンワノイナズマモチ', stage: 6, branch: 'quiz', color: '#fb923c', line: '#7c2d12', hint: 'Lv70・クイズ中心' },
+  { id: 'sora-myth', name: 'シンワノソラモチ', stage: 6, branch: 'ear', color: '#c4b5fd', line: '#4c1d95', hint: 'Lv70・リスニング/スペル中心' },
 ]
 
 // いちばん多くXPをもらった学び方（同点ならカード→クイズ→耳の順）
