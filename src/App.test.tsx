@@ -132,6 +132,7 @@ describe('App', () => {
       color: 'blue',
       hideExampleJa: false,
       randomNew: false,
+      testDate: '',
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
@@ -584,5 +585,11 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     fireEvent.click(screen.getByRole('button', { name: /記録/ }))
     expect(document.querySelector('.today-summary')!.textContent).toContain('1問・+5XP・新しい単語 1語')
+  })
+
+  it('定期テストの日を入れるとカウントダウンが出る', () => {
+    localStorage.setItem('eitan:settings', JSON.stringify({ testDate: '2026-10-30' }))
+    render(<App />)
+    expect(document.querySelector('.exam')!.textContent).toContain('テストまであと 10日')
   })
 })

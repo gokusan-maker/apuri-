@@ -55,6 +55,17 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       )}
 
       <label className="setting">
+        <span>定期テストの日（カウントダウンを表示）</span>
+        <input
+          type="date"
+          className="date-input"
+          value={settings.testDate}
+          onChange={(e) => set({ testDate: e.target.value })}
+          aria-label="定期テストの日"
+        />
+      </label>
+
+      <label className="setting">
         <span>発音の速さ：{settings.rate.toFixed(1)}倍</span>
         <input
           type="range"

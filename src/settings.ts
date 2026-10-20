@@ -47,6 +47,7 @@ export type Settings = {
   color: ThemeColor // テーマカラー
   hideExampleJa: boolean // カード裏の例文の訳を隠す（タップで表示）
   randomNew: boolean // 新しい単語をランダムな順に出す
+  testDate: string // 定期テストの日（YYYY-MM-DD、なしは空）
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -72,6 +73,7 @@ export const DEFAULT_SETTINGS: Settings = {
   color: 'blue',
   hideExampleJa: false,
   randomNew: false,
+  testDate: '',
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -92,6 +94,7 @@ export function loadSettings(): Settings {
       color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
       hideExampleJa: v.hideExampleJa === true,
       randomNew: v.randomNew === true,
+      testDate: typeof v.testDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.testDate) ? v.testDate : '',
     }
   } catch {
     return { ...DEFAULT_SETTINGS }

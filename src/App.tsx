@@ -55,6 +55,7 @@ import {
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { titleFor } from './titles'
+import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
 import { cheerFor, type Line } from './talk'
 import { RIVAL_COINS } from './rival'
@@ -431,6 +432,12 @@ function App() {
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
         </p>
+        {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
+          <p className="exam">
+            📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
+            <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
+          </p>
+        )}
         <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
           <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
           <div className="goal-bar">
