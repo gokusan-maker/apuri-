@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数']
 
 export type Word = {
   id: string
@@ -454,6 +454,46 @@ export const WORDS: Word[] = [
   { id: 'lesson', en: 'lesson', ja: '授業・レッスン', example: 'The first lesson starts at 8:45.', exampleJa: '1時間目は8時45分に始まる。', level: 'テーマ別' },
   { id: 'blackboard', en: 'blackboard', ja: '黒板', example: 'The teacher wrote a question on the blackboard.', exampleJa: '先生は黒板に問題を書いた。', level: 'テーマ別' },
   { id: 'gym', en: 'gym', ja: '体育館', example: 'We played basketball in the gym.', exampleJa: '体育館でバスケットボールをした。', level: 'テーマ別' },
+  // 数
+  { id: 'one', en: 'one', ja: '1', example: 'I have one brother.', exampleJa: '私には兄弟が1人いる。', level: '数' },
+  { id: 'two', en: 'two', ja: '2', example: 'She has two cats.', exampleJa: '彼女はねこを2匹飼っている。', level: '数' },
+  { id: 'three', en: 'three', ja: '3', example: 'We stayed there for three days.', exampleJa: '私たちはそこに3日間いた。', level: '数' },
+  { id: 'four', en: 'four', ja: '4', example: 'A car has four wheels.', exampleJa: '車にはタイヤが4つある。', level: '数' },
+  { id: 'five', en: 'five', ja: '5', example: 'I get up at five on Sundays.', exampleJa: '日曜日は5時に起きる。', level: '数' },
+  { id: 'six', en: 'six', ja: '6', example: 'There are six eggs in the box.', exampleJa: '箱には卵が6個入っている。', level: '数' },
+  { id: 'seven', en: 'seven', ja: '7', example: 'A week has seven days.', exampleJa: '1週間は7日ある。', level: '数' },
+  { id: 'eight', en: 'eight', ja: '8', example: 'Spiders have eight legs.', exampleJa: 'クモには足が8本ある。', level: '数' },
+  { id: 'nine', en: 'nine', ja: '9', example: 'The shop opens at nine.', exampleJa: 'その店は9時に開く。', level: '数' },
+  { id: 'ten', en: 'ten', ja: '10', example: 'Count from one to ten.', exampleJa: '1から10まで数えて。', level: '数' },
+  { id: 'eleven', en: 'eleven', ja: '11', example: 'My brother is eleven years old.', exampleJa: '弟は11歳だ。', level: '数' },
+  { id: 'twelve', en: 'twelve', ja: '12', example: 'A year has twelve months.', exampleJa: '1年は12か月ある。', level: '数' },
+  { id: 'thirteen', en: 'thirteen', ja: '13', example: 'There are thirteen students in the club.', exampleJa: 'その部には13人の生徒がいる。', level: '数' },
+  { id: 'fourteen', en: 'fourteen', ja: '14', example: 'I will be fourteen next month.', exampleJa: '来月14歳になる。', level: '数' },
+  { id: 'fifteen', en: 'fifteen', ja: '15', example: 'The bus comes every fifteen minutes.', exampleJa: 'バスは15分おきに来る。', level: '数' },
+  { id: 'sixteen', en: 'sixteen', ja: '16', example: 'She bought sixteen pencils.', exampleJa: '彼女はえんぴつを16本買った。', level: '数' },
+  { id: 'seventeen', en: 'seventeen', ja: '17', example: 'My cousin is seventeen.', exampleJa: 'いとこは17歳だ。', level: '数' },
+  { id: 'eighteen', en: 'eighteen', ja: '18', example: 'There are eighteen chairs in this room.', exampleJa: 'この部屋にはいすが18脚ある。', level: '数' },
+  { id: 'nineteen', en: 'nineteen', ja: '19', example: 'He scored nineteen points.', exampleJa: '彼は19点取った。', level: '数' },
+  { id: 'twenty', en: 'twenty', ja: '20', example: 'Twenty people came to the party.', exampleJa: 'パーティーに20人来た。', level: '数' },
+  { id: 'thirty', en: 'thirty', ja: '30', example: 'It takes thirty minutes to walk there.', exampleJa: 'そこまで歩いて30分かかる。', level: '数' },
+  { id: 'forty', en: 'forty', ja: '40', example: 'My father is forty years old.', exampleJa: '父は40歳だ。', level: '数' },
+  { id: 'fifty', en: 'fifty', ja: '50', example: 'This book has fifty pages.', exampleJa: 'この本は50ページある。', level: '数' },
+  { id: 'sixty', en: 'sixty', ja: '60', example: 'An hour has sixty minutes.', exampleJa: '1時間は60分だ。', level: '数' },
+  { id: 'seventy', en: 'seventy', ja: '70', example: 'My grandmother is seventy.', exampleJa: '祖母は70歳だ。', level: '数' },
+  { id: 'eighty', en: 'eighty', ja: '80', example: 'I got eighty points on the test.', exampleJa: 'テストで80点を取った。', level: '数' },
+  { id: 'ninety', en: 'ninety', ja: '90', example: 'The old tree is ninety years old.', exampleJa: 'その古い木は樹齢90年だ。', level: '数' },
+  { id: 'hundred', en: 'hundred', ja: '100', example: 'There are a hundred people in the hall.', exampleJa: 'ホールには100人いる。', level: '数' },
+  { id: 'thousand', en: 'thousand', ja: '1000', example: 'This ticket costs a thousand yen.', exampleJa: 'このチケットは1000円だ。', level: '数' },
+  { id: 'first', en: 'first', ja: '1番目の', example: 'This is my first trip to Kyoto.', exampleJa: 'これが私の初めての京都旅行だ。', level: '数' },
+  { id: 'second', en: 'second', ja: '2番目の', example: 'Take the second street on the left.', exampleJa: '2つ目の道を左に曲がって。', level: '数' },
+  { id: 'third', en: 'third', ja: '3番目の', example: 'Our classroom is on the third floor.', exampleJa: '私たちの教室は3階にある。', level: '数' },
+  { id: 'fourth', en: 'fourth', ja: '4番目の', example: 'He finished fourth in the race.', exampleJa: '彼はレースで4位だった。', level: '数' },
+  { id: 'fifth', en: 'fifth', ja: '5番目の', example: 'Today is my fifth day at this school.', exampleJa: '今日はこの学校に来て5日目だ。', level: '数' },
+  { id: 'sixth', en: 'sixth', ja: '6番目の', example: "I'm in the sixth row.", exampleJa: '私は6列目にいる。', level: '数' },
+  { id: 'seventh', en: 'seventh', ja: '7番目の', example: 'Saturday is the seventh day of the week.', exampleJa: '土曜日は週の7番目の日だ。', level: '数' },
+  { id: 'eighth', en: 'eighth', ja: '8番目の', example: 'August is the eighth month.', exampleJa: '8月は8番目の月だ。', level: '数' },
+  { id: 'ninth', en: 'ninth', ja: '9番目の', example: 'She lives on the ninth floor.', exampleJa: '彼女は9階に住んでいる。', level: '数' },
+  { id: 'tenth', en: 'tenth', ja: '10番目の', example: 'Today is our tenth wedding anniversary.', exampleJa: '今日は私たちの10回目の結婚記念日だ。', level: '数' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
