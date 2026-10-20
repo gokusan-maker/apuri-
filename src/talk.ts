@@ -72,6 +72,7 @@ export const SNACK_LINES: Record<string, Line> = {
   cookie: { en: 'Crunchy! Thank you!', ja: 'サクサク！ありがとう！' },
   pudding: { en: 'So soft and sweet!', ja: 'ぷるぷるで甘い！' },
   cake: { en: 'Wow, a cake! I love it!', ja: 'わあ、ケーキ！大好き！' },
+  onigiri: { en: 'Rice balls give me energy!', ja: 'おにぎりで元気が出る！' },
 }
 
 export function snackLine(id: string): Line {

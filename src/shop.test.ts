@@ -104,3 +104,8 @@ it('割引券：レベル10・20・30でもらえ、次の着せ替えが半額'
   expect(buy({ coins: 60, owned: [], coupons: 1 }, 'hat')).toEqual({ coins: 0, owned: ['hat'], coupons: 0 })
   expect(buy({ coins: 59, owned: [], coupons: 1 }, 'hat')).toBeNull()
 })
+
+it('部屋（図書室・お城）とおやつ（おにぎり）がある', () => {
+  for (const id of ['bookroom', 'royal']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
+  expect(SNACKS.some((s) => s.id === 'onigiri')).toBe(true)
+})

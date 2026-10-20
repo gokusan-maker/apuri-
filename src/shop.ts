@@ -46,6 +46,8 @@ export const ROOMS: Item[] = [
   { id: 'school', name: '教室', price: 80, icon: '🏫' },
   { id: 'night', name: '夜の町', price: 120, icon: '🌃' },
   { id: 'sakura', name: 'さくら', price: 100, icon: '🌸' },
+  { id: 'bookroom', name: '図書室', price: 100, icon: '📚' },
+  { id: 'royal', name: 'お城', price: 150, icon: '🏰' },
 ]
 
 export const FREEZE_PRICE = 50
@@ -97,6 +99,7 @@ export type Snack = { id: string; name: string; price: number; xp: number; icon:
 
 export const SNACKS: Snack[] = [
   { id: 'cookie', name: 'クッキー', price: 10, xp: 20, icon: '🍪' },
+  { id: 'onigiri', name: 'おにぎり', price: 14, xp: 30, icon: '🍙' },
   { id: 'pudding', name: 'プリン', price: 18, xp: 40, icon: '🍮' },
   { id: 'cake', name: 'ケーキ', price: 25, xp: 60, icon: '🍰' },
 ]
