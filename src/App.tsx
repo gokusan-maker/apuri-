@@ -24,7 +24,8 @@ import { speak } from './speech'
 import { TimeAttack } from './TimeAttackView'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
-import { WORDS } from './words'
+import { loadLevels, saveLevels, toggleLevel } from './settings'
+import { LEVELS, wordsOf } from './words'
 
 type Tab = 'card' | 'quiz' | 'time' | 'stats'
 
@@ -89,8 +90,13 @@ function App() {
     }, 2000)
   }
 
-  const queue = useMemo(() => buildQueue(WORDS, progress, today, newToday), [progress, today, newToday])
-  const learned = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
+  const [levels, setLevels] = useState(loadLevels)
+  useEffect(() => saveLevels(levels), [levels])
+  const words = useMemo(() => wordsOf(levels), [levels])
+  const levelKey = levels.join(',')
+
+  const queue = useMemo(() => buildQueue(words, progress, today, newToday), [words, progress, today, newToday])
+  const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
   function answer(correct: boolean) {
@@ -117,8 +123,17 @@ function App() {
           evolved={evolved}
         />
         <p className="stats">
-          今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
+          今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
         </p>
+        {mode !== 'stats' && (
+          <div className="levels" role="group" aria-label="単語帳">
+            {LEVELS.map((l) => (
+              <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
+                {l}
+              </button>
+            ))}
+          </div>
+        )}
       </header>
 
       {mode === 'stats' ? (
@@ -136,19 +151,19 @@ function App() {
             <div>
               <dt>定着語数</dt>
               <dd>
-                {learned} / {WORDS.length}
+                {learned} / {words.length}
               </dd>
             </div>
           </dl>
           <p className="stats-note">定着語数＝カードで3回以上続けて「覚えた」になった単語</p>
-          <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={WORDS.length} aria-valuenow={learned}>
-            <div className="xp-fill" style={{ width: `${(learned / WORDS.length) * 100}%` }} />
+          <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={words.length} aria-valuenow={learned}>
+            <div className="xp-fill" style={{ width: `${(learned / words.length) * 100}%` }} />
           </div>
         </section>
       ) : mode === 'quiz' ? (
-        <Quiz words={WORDS} onAnswer={onAnswer} />
+        <Quiz key={levelKey} words={words} onAnswer={onAnswer} />
       ) : mode === 'time' ? (
-        <TimeAttack words={WORDS} onAnswer={onAnswer} />
+        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>

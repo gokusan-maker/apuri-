@@ -237,3 +237,14 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .spell .actions { margin-top: 12px; }
 .hint-btn { background: var(--muted) !important; }
 .hint-btn:disabled { opacity: 0.5; }
+
+.levels { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 0; }
+.levels button {
+  padding: 4px 10px;
+  font-size: 0.8rem;
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+}
+.levels button[aria-pressed='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); font-weight: 700; }

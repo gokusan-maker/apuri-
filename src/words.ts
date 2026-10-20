@@ -1,12 +1,17 @@
+export type Level = '中1' | '中2' | '中3' | '高校基礎'
+
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎']
+
 export type Word = {
   id: string
   en: string
   ja: string
   example: string
   exampleJa: string
+  level?: Level // 省略時は LEVEL_OF（なければ中2）
 }
 
-// 中学〜高校基礎レベルの基本語（例文はオリジナル）
+// 中学〜高校基礎レベルの基本語（例文はすべてオリジナル）
 export const WORDS: Word[] = [
   { id: 'apple', en: 'apple', ja: 'りんご', example: 'I eat an apple every morning.', exampleJa: '私は毎朝りんごを食べる。' },
   { id: 'borrow', en: 'borrow', ja: '借りる', example: 'Can I borrow your pen?', exampleJa: 'ペンを借りてもいい？' },
@@ -108,4 +113,53 @@ export const WORDS: Word[] = [
   { id: 'sometimes', en: 'sometimes', ja: 'ときどき', example: 'Sometimes I read before bed.', exampleJa: 'ときどき寝る前に本を読む。' },
   { id: 'together', en: 'together', ja: '一緒に', example: "Let's go together.", exampleJa: '一緒に行こう。' },
   { id: 'usually', en: 'usually', ja: 'たいてい', example: 'I usually eat rice for breakfast.', exampleJa: '朝食はたいていご飯だ。' },
+  // 高校基礎
+  { id: 'achieve', en: 'achieve', ja: '達成する', example: 'She achieved her goal of running 10 km.', exampleJa: '彼女は10キロ走るという目標を達成した。', level: '高校基礎' },
+  { id: 'require', en: 'require', ja: '必要とする', example: 'This job requires a lot of patience.', exampleJa: 'この仕事にはかなりの忍耐が必要だ。', level: '高校基礎' },
+  { id: 'increase', en: 'increase', ja: '増える・増やす', example: 'The number of visitors increased this year.', exampleJa: '今年は訪問者の数が増えた。', level: '高校基礎' },
+  { id: 'decrease', en: 'decrease', ja: '減る・減らす', example: 'We should decrease the amount of plastic we use.', exampleJa: '使うプラスチックの量を減らすべきだ。', level: '高校基礎' },
+  { id: 'improve', en: 'improve', ja: '改善する・上達させる', example: 'Reading every day will improve your English.', exampleJa: '毎日読めば英語が上達するよ。', level: '高校基礎' },
+  { id: 'consider', en: 'consider', ja: 'よく考える', example: 'Please consider my idea before you decide.', exampleJa: '決める前に私の考えも検討してください。', level: '高校基礎' },
+  { id: 'suggest', en: 'suggest', ja: '提案する', example: 'I suggest that we take a short break.', exampleJa: '少し休憩しようと提案します。', level: '高校基礎' },
+  { id: 'prefer', en: 'prefer', ja: '〜のほうを好む', example: 'I prefer tea to coffee.', exampleJa: '私はコーヒーより紅茶のほうが好きだ。', level: '高校基礎' },
+  { id: 'provide', en: 'provide', ja: '提供する・与える', example: 'The school provides lunch for students.', exampleJa: '学校は生徒に昼食を提供している。', level: '高校基礎' },
+  { id: 'allow', en: 'allow', ja: '許す・可能にする', example: 'My parents allowed me to stay up late.', exampleJa: '両親は夜ふかしを許してくれた。', level: '高校基礎' },
+  { id: 'avoid', en: 'avoid', ja: '避ける', example: 'Try to avoid eating too much sugar.', exampleJa: '砂糖のとりすぎは避けるようにしよう。', level: '高校基礎' },
+  { id: 'compare', en: 'compare', ja: '比べる', example: "Let's compare the two maps.", exampleJa: '2枚の地図を比べてみよう。', level: '高校基礎' },
+  { id: 'describe', en: 'describe', ja: '説明する・描写する', example: 'Can you describe the man you saw?', exampleJa: '見た男の人の特徴を説明できますか？', level: '高校基礎' },
+  { id: 'depend', en: 'depend', ja: '頼る・〜次第である', example: 'Our plan depends on the weather.', exampleJa: '私たちの計画は天気次第だ。', level: '高校基礎' },
+  { id: 'develop', en: 'develop', ja: '発達させる・開発する', example: 'The company developed a new game.', exampleJa: 'その会社は新しいゲームを開発した。', level: '高校基礎' },
+  { id: 'environment', en: 'environment', ja: '環境', example: 'We must protect the natural environment.', exampleJa: '私たちは自然環境を守らなければならない。', level: '高校基礎' },
+  { id: 'opinion', en: 'opinion', ja: '意見', example: 'What is your opinion about this plan?', exampleJa: 'この計画についてあなたの意見は？', level: '高校基礎' },
+  { id: 'experience', en: 'experience', ja: '経験・経験する', example: 'Living abroad was a great experience.', exampleJa: '海外での生活はすばらしい経験だった。', level: '高校基礎' },
+  { id: 'information', en: 'information', ja: '情報', example: 'I need more information about the event.', exampleJa: 'そのイベントについてもっと情報が必要だ。', level: '高校基礎' },
+  { id: 'result', en: 'result', ja: '結果', example: 'The result of the game surprised everyone.', exampleJa: '試合の結果はみんなを驚かせた。', level: '高校基礎' },
+  { id: 'reason', en: 'reason', ja: '理由', example: 'Tell me the reason you were late.', exampleJa: '遅れた理由を教えて。', level: '高校基礎' },
+  { id: 'advantage', en: 'advantage', ja: '利点・有利な点', example: 'Being tall is an advantage in basketball.', exampleJa: '背が高いことはバスケットボールで有利だ。', level: '高校基礎' },
+  { id: 'effort', en: 'effort', ja: '努力', example: 'Her effort finally paid off.', exampleJa: '彼女の努力はついに報われた。', level: '高校基礎' },
+  { id: 'government', en: 'government', ja: '政府', example: 'The government announced a new law.', exampleJa: '政府は新しい法律を発表した。', level: '高校基礎' },
+  { id: 'society', en: 'society', ja: '社会', example: 'Everyone plays a role in society.', exampleJa: '社会では誰もが役割を担っている。', level: '高校基礎' },
+  { id: 'available', en: 'available', ja: '利用できる・手に入る', example: 'Is this seat available?', exampleJa: 'この席は空いていますか？', level: '高校基礎' },
+  { id: 'necessary', en: 'necessary', ja: '必要な', example: 'Sleep is necessary for growing children.', exampleJa: '成長期の子どもには睡眠が必要だ。', level: '高校基礎' },
+  { id: 'possible', en: 'possible', ja: '可能な', example: 'Is it possible to finish by Friday?', exampleJa: '金曜日までに終えることは可能ですか？', level: '高校基礎' },
+  { id: 'similar', en: 'similar', ja: '似ている', example: 'My idea is similar to yours.', exampleJa: '私の考えはあなたのと似ている。', level: '高校基礎' },
+  { id: 'especially', en: 'especially', ja: '特に', example: 'I like fruit, especially peaches.', exampleJa: '果物が好きで、特に桃が好きだ。', level: '高校基礎' },
 ]
+
+// 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
+const LEVEL_OF: Record<string, Level> = Object.fromEntries([
+  ...'apple library weather answer begin buy call clean close cook cry draw drink enjoy fly give help know learn meet open sing sleep start teach think walk wash watch write beautiful busy easy favorite hungry kind tired always often sometimes together usually early practice visit wait find finish carry change smile tell try stay quiet'
+    .split(' ')
+    .map((id) => [id, '中1' as Level]),
+  ...'medicine several explain receive share spend believe dangerous popular decide invite neighbor worry return save'
+    .split(' ')
+    .map((id) => [id, '中3' as Level]),
+])
+
+export function levelOf(w: Word): Level {
+  return w.level ?? LEVEL_OF[w.id] ?? '中2'
+}
+
+export function wordsOf(levels: Level[]): Word[] {
+  return WORDS.filter((w) => levels.includes(levelOf(w)))
+}

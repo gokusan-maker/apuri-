@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
 import App from './App'
-import { WORDS } from './words'
+import { WORDS, wordsOf } from './words'
 
 describe('App', () => {
   beforeEach(() => localStorage.clear())
@@ -83,5 +83,13 @@ describe('App', () => {
     expect(screen.getByText('1日')).toBeInTheDocument()
     expect(screen.getByText('2問')).toBeInTheDocument()
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
+  })
+
+  it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
+    render(<App />)
+    for (const l of ['中2', '中3', '高校基礎']) fireEvent.click(screen.getByRole('button', { name: l }))
+    const n = wordsOf(['中1']).length
+    expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])
   })
 })
