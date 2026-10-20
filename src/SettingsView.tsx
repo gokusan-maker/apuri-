@@ -1,3 +1,4 @@
+import { Install } from './InstallView'
 import { speak } from './speech'
 import { GOALS, type Accent, type Settings, type Theme } from './settings'
 
@@ -85,6 +86,8 @@ export function SettingsPanel({ settings, onChange }: Props) {
         <span>効果音</span>
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>
+
+      <Install />
     </section>
   )
 }
