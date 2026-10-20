@@ -14,7 +14,9 @@ type Props = {
 
 // 神経衰弱（6ペア）
 export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
+  const [hard, setHard] = useState(false)
   const [deck, setDeck] = useState(() => initialDeck ?? makeDeck(words))
+  const bestKey = hard ? `${MEMORY_BEST}-8` : MEMORY_BEST
   const [open, setOpen] = useState<number[]>([]) // めくっている（最大2枚）
   const [done, setDone] = useState<string[]>([]) // そろったカードの key
   const [moves, setMoves] = useState(0)
@@ -39,7 +41,7 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
         const d = [...done, a.key, b.key]
         setDone(d)
         if (d.length === deck.length) onClear?.()
-        if (d.length === deck.length && recordLowBest(MEMORY_BEST, moves + 1)) {
+        if (d.length === deck.length && recordLowBest(bestKey, moves + 1)) {
           setNewBest(true)
           setBest(moves + 1)
         }
@@ -59,7 +61,25 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
       <p className="quiz-progress">
         そろった {done.length / 2} / {deck.length / 2} ペア・{moves} 手{best !== null && `（ベスト ${best} 手）`}
       </p>
-      <div className="memory-grid">
+      <div className="counts" role="group" aria-label="むずかしさ">
+        {[false, true].map((h) => (
+          <button
+            key={String(h)}
+            aria-pressed={hard === h}
+            onClick={() => {
+              setHard(h)
+              setDeck(makeDeck(words, h ? 8 : 6))
+              setDone([])
+              setOpen([])
+              setMoves(0)
+              setBest(loadLowBest(h ? `${MEMORY_BEST}-8` : MEMORY_BEST))
+            }}
+          >
+            {h ? 'むずかしい（8ペア）' : 'ふつう（6ペア）'}
+          </button>
+        ))}
+      </div>
+      <div className="memory-grid" style={{ gridTemplateColumns: `repeat(${hard ? 4 : 3}, 1fr)` }}>
         {deck.map((c: MemCard, i) => {
           const shown = open.includes(i) || done.includes(c.key)
           return (
@@ -80,7 +100,7 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
           <button
             className="flip"
             onClick={() => {
-              setDeck(makeDeck(words))
+              setDeck(makeDeck(words, hard ? 8 : 6))
               setDone([])
               setOpen([])
               setMoves(0)

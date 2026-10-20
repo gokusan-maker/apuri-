@@ -48,3 +48,9 @@ it('全部そろえると onClear が呼ばれる', () => {
   }
   expect(cleared).toBe(1)
 })
+
+it('むずかしい（8ペア）に切りかえられる', () => {
+  render(<Memory words={WORDS} />)
+  fireEvent.click(screen.getByText('むずかしい（8ペア）'))
+  expect(document.querySelectorAll('.memory-card')).toHaveLength(16)
+})
