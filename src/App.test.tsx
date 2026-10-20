@@ -330,4 +330,13 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('checkbox', { name: '文字を大きくする' }))
     expect(document.documentElement.style.fontSize).toBe('')
   })
+
+  it('ショップでおやつをあげるとXPが入る', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
+    fireEvent.click(screen.getByText(/クッキー/))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(20)
+    expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
+  })
 })

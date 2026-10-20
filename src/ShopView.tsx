@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { ITEMS, type Wallet } from './shop'
+import { ITEMS, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -8,9 +8,11 @@ type Props = {
   onBuy: (id: string) => void
   onWear: (id: string | undefined) => void
   onClose: () => void
+  snacksLeft: number
+  onEat: (id: string) => void
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   return (
@@ -23,6 +25,15 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose }: Props) {
       <div className="shop-preview">
         <MonsterFigure form={form} wear={monster.wear} mood="happy" />
       </div>
+      <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
+      <div className="actions snacks">
+        {SNACKS.map((sn) => (
+          <button key={sn.id} className="good" disabled={snacksLeft <= 0 || wallet.coins < sn.price} onClick={() => onEat(sn.id)}>
+            {sn.icon} {sn.name} 🪙{sn.price}（+{sn.xp}XP）
+          </button>
+        ))}
+      </div>
+      <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
       <ul className="badge-grid">
         {ITEMS.map((it) => {

@@ -41,7 +41,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages } from './StageView'
-import { buy, COIN_PER_CORRECT, loadWallet, saveWallet } from './shop'
+import { buy, COIN_PER_CORRECT, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -112,6 +112,7 @@ function App() {
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [showShop, setShowShop] = useState(false)
+  const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
 
@@ -144,7 +145,7 @@ function App() {
     if (correct && xp > 0) gainXp(xp, source)
   }
 
-  function gainXp(amount: number, source: Source) {
+  function gainXp(amount: number, source: Source | null) {
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
     setHappy(true)
@@ -300,6 +301,14 @@ function App() {
           }}
           onWear={(id) => updateMonster((m) => ({ ...m, wear: id }))}
           onClose={() => setShowShop(false)}
+          snacksLeft={snacksLeft(snacks, today)}
+          onEat={(id) => {
+            const r = eat(wallet, snacks, id, today)
+            if (!r) return
+            setWallet(r.wallet)
+            setSnacks(r.log)
+            gainXp(r.xp, null)
+          }}
         />
       ) : mode === 'stage' ? (
         <Stages
