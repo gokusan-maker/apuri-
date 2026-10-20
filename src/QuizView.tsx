@@ -91,6 +91,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   const [maxCombo, setMaxCombo] = useState(0)
   const [earned, setEarned] = useState(0)
   const [lastXp, setLastXp] = useState(0)
+  const [missed, setMissed] = useState<Word[]>([])
 
   const q = questions[index]
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
@@ -133,6 +134,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     } else {
       setCombo(0)
       setLastXp(0)
+      setMissed([...missed, q.word])
       playWrong()
       onAnswer?.(false, 0, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
     }
@@ -144,9 +146,10 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     if (index + 1 === questions.length) onFinish?.(score, questions.length)
   }
 
-  function restart(d: Direction = direction) {
+  function restart(d: Direction = direction, only?: Word[]) {
     setDirection(d)
-    setQuestions(build(words, d, count, targets ?? words))
+    setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
+    setMissed([])
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -253,6 +256,11 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
+        {missed.length > 0 && !onRestart && (
+          <button className="list-link" onClick={() => restart(direction, missed)}>
+            まちがえた {missed.length}問だけもう一度
+          </button>
+        )}
         <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>
           もう1回
         </button>

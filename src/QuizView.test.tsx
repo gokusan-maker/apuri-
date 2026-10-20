@@ -199,3 +199,21 @@ it('10問つづけて正解すると特別な演出、コンボ数を知らせ�
   expect(screen.getByText('🔥10コンボ！ すごい！')).toBeInTheDocument()
   expect(combos).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 })
+
+it('結果画面から、まちがえた問題だけもう一度', () => {
+  const words = WORDS.slice(0, 10)
+  render(<Quiz words={words} count={3} />)
+  const wrongs: string[] = []
+  for (let i = 0; i < 3; i++) {
+    const en = document.querySelector('.quiz .en')!.textContent!
+    const w = words.find((x) => x.en === en)!
+    if (i < 2) {
+      wrongs.push(en)
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== w.ja)!)
+    } else fireEvent.click(screen.getByRole('button', { name: w.ja }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('まちがえた 2問だけもう一度'))
+  expect(screen.getByText(/^1 \/ 2/)).toBeInTheDocument()
+  expect(wrongs).toContain(document.querySelector('.quiz .en')!.textContent)
+})
