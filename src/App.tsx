@@ -546,6 +546,7 @@ function App() {
         )}
         <Monster
           deco={seasonEvent?.icon}
+          shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}
           coins={wallet.coins}
