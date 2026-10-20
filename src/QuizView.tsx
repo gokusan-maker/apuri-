@@ -13,6 +13,7 @@ import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
 import { Reading } from './ReadingView'
+import { Tiles } from './TilesView'
 import { WORDS, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
@@ -29,7 +30,8 @@ import { WORDS, type Word } from './words'
 // timed：1問10秒の英→日。早いほどボーナス
 // rival：ライバルと早押し
 // reading：読解ミニ
-export type Direction = 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// tiles：文字タイルで単語を作る
+export type Direction = 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -67,6 +69,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'sentence', label: '🗣 例文リスニング' },
   { id: 'spell', label: '✏️ スペル' },
+  { id: 'tiles', label: '🔤 文字タイル' },
   { id: 'dictation', label: '🎧 書き取り' },
   { id: 'blank', label: '📝 穴埋め' },
   { id: 'order', label: '🔀 並べ替え' },
@@ -257,6 +260,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
       <>
         <div className="card-tabs">{toggle}</div>
         <Grammar onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'tiles') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Tiles key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
       </>
     )
   }
