@@ -29,6 +29,7 @@ import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
+import { DiaryBox } from './DiaryView'
 import { shareText, weekReportText } from './shareText'
 import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
@@ -739,6 +740,7 @@ function App() {
               >
                 📤 今週のレポートをシェア
               </button>
+              <DiaryBox today={today} />
               <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
               {thisWeekWords.length >= 4 && (
                 <button className="list-link" onClick={() => startQuiz('thisweek')}>
