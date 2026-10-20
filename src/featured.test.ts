@@ -18,5 +18,5 @@ describe('今日のおすすめクイズ', () => {
 })
 
 it('おすすめの候補に新しいパズルも入る', () => {
-  for (const id of ['abc', 'opposite', 'odd', 'emoji-rev']) expect(FEATURED_POOL).toContain(id)
+  for (const id of ['abc', 'opposite', 'odd', 'emoji-rev', 'count', 'clock', 'color', 'alphabet']) expect(FEATURED_POOL).toContain(id)
 })
