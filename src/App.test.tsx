@@ -26,7 +26,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('XP 5 / 20')).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:monster')!).xp).toBe(5)
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(5)
   })
 
   it('クイズで正解するとXP+10、タマゴがかえる', () => {
@@ -152,5 +152,18 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: /^バッジ 1 \// })).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:badges')!)).toHaveProperty('first-correct')
     expect(JSON.parse(localStorage.getItem('eitan:totals')!)).toMatchObject({ answers: 1, correct: 1 })
+  })
+
+  it('節目のバッジがあるとタマゴがもらえ、相棒を切り替えられる', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 2000 }))
+    localStorage.setItem('eitan:badges', JSON.stringify({ 'streak-7': '2026-10-19' }))
+    render(<App />)
+    expect(screen.getByText('新しい仲間！')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    const picks = document.querySelectorAll<HTMLButtonElement>('.party-pick')
+    expect(picks).toHaveLength(2)
+    fireEvent.click(picks[1])
+    expect(document.querySelector('.monster-name')!.textContent).toContain('ふしぎなタマゴ')
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 })

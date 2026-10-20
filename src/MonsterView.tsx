@@ -1,4 +1,5 @@
 import { FORMS, formOf, levelInfo, seenForms, type Form, type MonsterState } from './monster'
+import { EGG_MILESTONES, type Party as PartyState } from './party'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
@@ -106,8 +107,8 @@ export function Monster({ monster, mood = 'normal', leveledUp = false, evolved =
   )
 }
 
-export function Zukan({ monster }: { monster: MonsterState }) {
-  const seen = new Set(seenForms(monster))
+export function Zukan({ monsters }: { monsters: MonsterState[] }) {
+  const seen = new Set(monsters.flatMap(seenForms))
   return (
     <div className="zukan">
       <h2>
@@ -122,6 +123,41 @@ export function Zukan({ monster }: { monster: MonsterState }) {
             </span>
             <span className="badge-name">{seen.has(f.id) ? f.name : '？？？'}</span>
             <span className="badge-desc">{f.hint}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: number) => void }) {
+  const locked = EGG_MILESTONES.slice(party.members.length - 1)
+  return (
+    <div className="party">
+      <h2>なかま</h2>
+      <ul className="badge-grid">
+        {party.members.map((m, i) => {
+          const f = formOf(m)
+          const active = i === party.active
+          return (
+            <li key={i} className={active ? 'got active' : 'got'}>
+              <button className="party-pick" onClick={() => onSelect(i)} aria-pressed={active}>
+                <span className="zukan-figure">
+                  <MonsterFigure form={f} />
+                </span>
+                <span className="badge-name">{f.name}</span>
+                <span className="badge-desc">{active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}</span>
+              </button>
+            </li>
+          )
+        })}
+        {locked.map((m) => (
+          <li key={m.badge} className="locked">
+            <span className="badge-icon" aria-hidden="true">
+              🥚
+            </span>
+            <span className="badge-name">？？？</span>
+            <span className="badge-desc">{m.label}でタマゴ</span>
           </li>
         ))}
       </ul>

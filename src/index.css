@@ -357,3 +357,7 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @keyframes toast-in { from { transform: translate(-50%, 20px); opacity: 0; } }
 .zukan { margin-top: 24px; }
 .zukan-figure { width: 56px; height: 56px; }
+.party { margin-top: 24px; }
+.party-pick { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; border: none; background: transparent; color: inherit; padding: 0; }
+.badge-grid li.active { outline: 3px solid var(--accent); }
+.badge-toast.second { bottom: calc(150px + env(safe-area-inset-bottom)); }

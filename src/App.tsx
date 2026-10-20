@@ -3,14 +3,13 @@ import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Celebrate } from './CelebrateView'
-import { Monster, Zukan } from './MonsterView'
+import { Monster, Party as PartyView, Zukan } from './MonsterView'
+import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
   formOf,
   isLonely,
   levelInfo,
-  loadMonster,
-  saveMonster,
   type Source,
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
@@ -57,12 +56,14 @@ function App() {
   useEffect(() => saveProgress(progress), [progress])
   useEffect(() => saveDailyNew(daily), [daily])
 
-  const [monster, setMonster] = useState(loadMonster)
+  const [party, setParty] = useState(loadParty)
+  const monster = party.members[party.active]
+  const setMonster = (m: typeof monster) => setParty((p) => updateActive(p, m))
   const [happy, setHappy] = useState(false)
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
   const timer = useRef<number | undefined>(undefined)
-  useEffect(() => saveMonster(monster), [monster])
+  useEffect(() => saveParty(party), [party])
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
   const [streak, setStreak] = useState(loadStreak)
@@ -139,7 +140,7 @@ function App() {
   const [bestTime, setBestTime] = useState(loadBest)
   const [toast, setToast] = useState<Badge[]>([])
   const learnedAll = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
-  const level = levelInfo(monster.xp).level
+  const level = Math.max(...party.members.map((m) => levelInfo(m.xp).level))
   const streakCount = streak?.count ?? 0
   const got = newlyEarned({ ...totals, streak: streakCount, learned: learnedAll, level, bestTime }, earned)
   if (got.length > 0) {
@@ -148,6 +149,19 @@ function App() {
     setToast(got)
   }
   useEffect(() => saveEarned(earned), [earned])
+
+  // 節目のバッジでタマゴがもらえる
+  const eggTotal = eggsEarned(earned)
+  const [eggToast, setEggToast] = useState(false)
+  if (party.members.length < eggTotal) {
+    setParty(addEggs(party, eggTotal))
+    setEggToast(true)
+  }
+  useEffect(() => {
+    if (!eggToast) return
+    const id = window.setTimeout(() => setEggToast(false), 3500)
+    return () => window.clearTimeout(id)
+  }, [eggToast])
   useEffect(() => {
     if (toast.length === 0) return
     const id = window.setTimeout(() => setToast([]), 3000)
@@ -249,7 +263,8 @@ function App() {
             </>
           )}
           <BadgeList earned={earned} />
-          <Zukan monster={monster} />
+          <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
+          <Zukan monsters={party.members} />
           <Backup />
         </section>
       ) : mode === 'quiz' ? (
@@ -303,6 +318,17 @@ function App() {
       )}
 
       <BadgeToast badges={toast} onClose={() => setToast([])} />
+      {eggToast && (
+        <div className={`badge-toast${toast.length > 0 ? ' second' : ''}`} role="status" onClick={() => setEggToast(false)}>
+          <span className="badge-icon" aria-hidden="true">
+            🥚
+          </span>
+          <div>
+            <p className="badge-toast-title">新しい仲間！</p>
+            <p className="badge-toast-name">タマゴをもらった（記録画面で相棒を選べるよ）</p>
+          </div>
+        </div>
+      )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">
