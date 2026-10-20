@@ -847,6 +847,7 @@ function App() {
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
             onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
             onGame={() => count('game')}
+            onSetLevels={setLevels}
           />
         </>
       ) : mode === 'time' ? (

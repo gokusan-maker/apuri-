@@ -24,6 +24,7 @@ import { Memory } from './MemoryView'
 import { Bingo } from './BingoView'
 import { WordSearch } from './WordSearchView'
 import { Twisters } from './TwisterView'
+import { Placement } from './PlacementView'
 import { Puzzle } from './PuzzleView'
 import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
@@ -35,7 +36,7 @@ import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
 import { Reading } from './ReadingView'
 import { Tiles } from './TilesView'
-import { WORDS, type Word } from './words'
+import { WORDS, type Level, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
 // spell：日本語を見て英単語を入力
@@ -59,7 +60,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -102,6 +103,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'mix', label: '🎲 ミックス', group: '4択' },
   { id: 'timed', label: '⏳ 10秒', group: '4択' },
   { id: 'define', label: '🇬🇧 英英クイズ', group: '4択' },
+  { id: 'placement', label: '📋 レベル診断', group: '4択' },
   { id: 'emoji', label: '😀 絵文字クイズ', group: '4択' },
   { id: 'emoji-rev', label: '🔤 英語→絵文字', group: '4択' },
   { id: 'sentence-read', label: '📄 例文の訳', group: '4択' },
@@ -190,6 +192,7 @@ type Props = {
   onSpend?: (coins: number) => boolean // コインを使う（足りなければ false）
   onRivalWin?: () => void
   onGame?: () => void // 神経衰弱・ビンゴをクリアしたとき
+  onSetLevels?: (levels: Level[]) => void // レベル診断の結果で単語帳を切りかえる
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
@@ -199,7 +202,7 @@ export const QUESTION_TIME = 10
 export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 // 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
-const NO_COUNT: Direction[] = ['twister', 'wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
+const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
   try {
@@ -210,7 +213,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
@@ -459,6 +462,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Sequence key={count} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'placement') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Placement onSetLevels={onSetLevels} />
       </>
     )
   }
