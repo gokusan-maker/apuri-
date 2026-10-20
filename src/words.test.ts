@@ -2,10 +2,10 @@ import { describe, expect, it } from 'vitest'
 import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
-  it('中学882語＋高校基礎200語＋熟語140＋曜日・月25＋テーマ別252＋数44＋色・形24＋会話50あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(1617)
+  it('中学882語＋高校基礎220語＋熟語140＋曜日・月25＋テーマ別252＋数44＋色・形24＋会話50あり、id が重複しない', () => {
+    expect(WORDS).toHaveLength(1637)
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
-    expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(200)
+    expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(220)
   })
 
   it('すべての単語に訳と例文があり、例文に見出し語（またはその変化形）が含まれる', () => {
