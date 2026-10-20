@@ -356,3 +356,10 @@ export function whQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([ans, ...shuffle(pool, rng).slice(0, 3)], rng)
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
+
+// 文法ミックス：文法パズルから1問ずつランダム
+const GRAMMAR_MAKERS = [beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+
+export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
+  return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
+}

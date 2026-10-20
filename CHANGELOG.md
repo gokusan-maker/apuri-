@@ -374,3 +374,4 @@
 - 2026-10-20: クイズに「a と an」を追加（an apple・a banana・an hour・a uniform など）
 - 2026-10-20: クイズに「時の前置詞（in・on・at）」を追加（on Monday・at seven・in April など）
 - 2026-10-20: クイズに「疑問詞」を追加（What・Where・When・Who・Why・How・Whose・Which）
+- 2026-10-20: クイズに「文法ミックス」を追加（be動詞・a/an・3単現・ing形・複数形・過去形・比較級・前置詞・疑問詞からランダム）
