@@ -8,7 +8,7 @@ describe('絵文字クイズ', () => {
   it('すべて単語帳にある単語で、絵文字は重ならない', () => {
     for (const id of Object.keys(EMOJI)) expect(WORDS.some((w) => w.id === id), id).toBe(true)
     expect(new Set(Object.values(EMOJI)).size).toBe(Object.keys(EMOJI).length)
-    expect(Object.keys(EMOJI).length).toBeGreaterThanOrEqual(50)
+    expect(Object.keys(EMOJI).length).toBeGreaterThanOrEqual(80)
   })
 
   it('絵文字を見て英単語を選ぶ', () => {

@@ -5,7 +5,10 @@ export const EMOJI: Record<string, string> = {
   rice: '🍚', bread: '🍞', egg: '🥚', banana: '🍌', strawberry: '🍓', potato: '🥔', tomato: '🍅', cheese: '🧀', sandwich: '🥪',
   ear: '👂', nose: '👃', mouth: '👄', tooth: '🦷', foot: '🦶',
   rain: '🌧️', snow: '❄️', cloud: '☁️', moon: '🌙', star: '⭐', rainbow: '🌈', mountain: '⛰️', sea: '🌊', flower: '🌸',
-  pencil: '✏️', book: '📕', car: '🚗', key: '🔑', bed: '🛏️', door: '🚪', house: '🏠', ball: '⚽', box: '📦', gift: '🎁',
+  pencil: '✏️', book: '📕', car: '🚗', key: '🔑', bed: '🛏️', door: '🚪', house: '🏠', box: '📦', gift: '🎁',
   medal: '🏅', flag: '🚩', castle: '🏯', bridge: '🌉', hospital: '🏥', clock: '🕐', birthday: '🎂', music: '🎵',
+  soccer: '⚽', baseball: '⚾', basketball: '🏀', tennis: '🎾', volleyball: '🏐', swimming: '🏊', skiing: '⛷️', 'table-tennis': '🏓', badminton: '🏸', rugby: '🏉',
+  bus: '🚌', train: '🚆', bike: '🚲', plane: '✈️', ship: '🚢', taxi: '🚕', subway: '🚇', truck: '🚚', boat: '⛵', helicopter: '🚁',
+  sofa: '🛋️', mirror: '🪞', window: '🪟', chair: '🪑',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
