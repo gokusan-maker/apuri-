@@ -59,3 +59,8 @@ it('ステージの10語をカードで予習できる', () => {
   fireEvent.click(screen.getByText('📖 カードで予習'))
   expect(got).toEqual(stagesOf('中1')[0].words.map((w) => w.id))
 })
+
+it('定着率でメダルが出る', () => {
+  render(<Stages levels={['数']} record={{}} onClear={() => {}} learnedPct={{ 数: 85 }} />)
+  expect(screen.getByRole('img', { name: 'メダル（定着率85%）' }).textContent).toBe('🥈')
+})

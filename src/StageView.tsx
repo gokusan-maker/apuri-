@@ -1,3 +1,4 @@
+import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, type BossRecord } from './boss'
@@ -15,13 +16,14 @@ type Props = {
   onBossWin?: (level: Level) => void
   onSpend?: (coins: number) => boolean
   onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
+  learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
 }
 
 export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {} }: Props) {
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
@@ -133,6 +135,11 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           <div key={level} className="stage-level">
             <h3>
               {level} <span className="stage-total">★{stars} / {list.length * 3}</span>
+              {medalFor(learnedPct[level] ?? 0) && (
+                <span className="stage-medal" role="img" aria-label={`メダル（定着率${learnedPct[level]}%）`}>
+                  {medalFor(learnedPct[level] ?? 0)}
+                </span>
+              )}
               {allThreeStars(level, record) && (
                 <span className="stage-trophy" role="img" aria-label="トロフィー（全ステージ星3）">
                   🏆

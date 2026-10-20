@@ -659,6 +659,7 @@ function App() {
       ) : mode === 'stage' ? (
         <Stages
           onSpend={spend}
+          learnedPct={Object.fromEntries(levels.map((l) => [l, learnedPct(wordsOf([l]), progress)]))}
           onStudy={(ws) => {
             setPicked(ws.map((w) => w.id))
             startCards('pick')
