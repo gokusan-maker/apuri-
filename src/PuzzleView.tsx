@@ -7,11 +7,12 @@ export const PUZZLE_COUNT = 10
 
 type Props = {
   make: () => PuzzleQ
+  count?: number // 何問で区切るか
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
 }
 
 // 4択パズル：10問で区切って結果を出す
-export function Puzzle({ make, onAnswer }: Props) {
+export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
   const [q, setQ] = useState(make)
   const [picked, setPicked] = useState<number | null>(null)
   const [n, setN] = useState(1)
@@ -30,7 +31,7 @@ export function Puzzle({ make, onAnswer }: Props) {
   }
 
   function next() {
-    if (n >= PUZZLE_COUNT) {
+    if (n >= count) {
       setDone(true)
       return
     }
@@ -44,7 +45,7 @@ export function Puzzle({ make, onAnswer }: Props) {
       <section className="card result puzzle">
         <h2>結果</h2>
         <p className="result-score">
-          {score} / {PUZZLE_COUNT} 問正解
+          {score} / {count} 問正解
         </p>
         <button
           className="flip"
@@ -65,7 +66,7 @@ export function Puzzle({ make, onAnswer }: Props) {
   return (
     <section className="card quiz puzzle">
       <p className="quiz-progress">
-        {n} / {PUZZLE_COUNT} 問目・正解 {score}
+        {n} / {count} 問目・正解 {score}
       </p>
       <p className="verb-ask puzzle-prompt">{q.prompt}</p>
       <div className="choices">
@@ -85,7 +86,7 @@ export function Puzzle({ make, onAnswer }: Props) {
           <p className="feedback">{picked === q.answer ? '正解！' : `正解は「${q.choices[q.answer]}」`}</p>
           <p className="stats-note">{q.why}</p>
           <button className="flip" onClick={next}>
-            {n >= PUZZLE_COUNT ? '結果を見る' : '次へ'}
+            {n >= count ? '結果を見る' : '次へ'}
           </button>
         </>
       )}

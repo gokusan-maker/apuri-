@@ -14,3 +14,13 @@ it('10問で結果が出る', () => {
   expect(screen.getByText(`${PUZZLE_COUNT - 1} / ${PUZZLE_COUNT} 問正解`)).toBeInTheDocument()
   expect(got.filter(Boolean)).toHaveLength(PUZZLE_COUNT - 1)
 })
+
+it('問題数を指定できる', () => {
+  const make = () => ({ prompt: 'どれ？', choices: ['a', 'b', 'c', 'd'], answer: 1, why: '', wordId: '' })
+  render(<Puzzle make={make} count={5} />)
+  for (let i = 0; i < 5; i++) {
+    fireEvent.click(screen.getByRole('button', { name: 'b' }))
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByText('5 / 5 問正解')).toBeInTheDocument()
+})

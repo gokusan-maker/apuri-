@@ -6,10 +6,10 @@ import { speak } from './speech'
 
 const ROUND = 10 // 1回の問題数
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; round?: number }
 
 // 数の聞き取り：読み上げた数を数字で答える
-export function Numbers({ onAnswer }: Props) {
+export function Numbers({ onAnswer, round = ROUND }: Props) {
   const [q, setQ] = useState(() => pickQ())
   const [text, setText] = useState('')
   const [result, setResult] = useState<boolean | null>(null)
@@ -32,7 +32,7 @@ export function Numbers({ onAnswer }: Props) {
   const [done, setDone] = useState(false)
 
   function next() {
-    if (score.all >= ROUND) {
+    if (score.all >= round) {
       setDone(true)
       return
     }
@@ -46,7 +46,7 @@ export function Numbers({ onAnswer }: Props) {
       <section className="card result numbers">
         <h2>結果</h2>
         <p className="result-score">
-          {score.ok} / {ROUND} 問正解
+          {score.ok} / {round} 問正解
         </p>
         <p className="result-message">獲得XP +{score.ok * XP_QUIZ_CORRECT}</p>
         <button
@@ -68,7 +68,7 @@ export function Numbers({ onAnswer }: Props) {
   return (
     <section className="card quiz numbers">
       <p className="quiz-progress">
-        {Math.min(score.all + (result === null ? 1 : 0), ROUND)} / {ROUND} 問目・正解 {score.ok}
+        {Math.min(score.all + (result === null ? 1 : 0), round)} / {round} 問目・正解 {score.ok}
       </p>
       <p className="prompt">{q.kind === 'time' ? '聞こえた時刻を 7:30 のように書こう' : q.kind === 'date' ? '聞こえた日付を 5/3 のように書こう' : q.kind === 'price' ? '聞こえた値段（ドル）を 3.50 のように書こう' : '聞こえた数を数字で書こう'}</p>
       <button className="speak" onClick={() => speak(q.say)} aria-label="もう一度聞く">

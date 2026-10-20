@@ -452,7 +452,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="compare" make={() => compareQ()} onAnswer={onAnswer} />
+        <Puzzle key={`compare-${count}`} make={() => compareQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -461,7 +461,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="past-ed" make={() => pastQ()} onAnswer={onAnswer} />
+        <Puzzle key={`past-ed-${count}`} make={() => pastQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -470,7 +470,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="plural" make={() => pluralQ()} onAnswer={onAnswer} />
+        <Puzzle key={`plural-${count}`} make={() => pluralQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -479,7 +479,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="calc" make={() => calcQ()} onAnswer={onAnswer} />
+        <Puzzle key={`calc-${count}`} make={() => calcQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -488,7 +488,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="alphabet" make={() => alphabetQ()} onAnswer={onAnswer} />
+        <Puzzle key={`alphabet-${count}`} make={() => alphabetQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -497,7 +497,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="color" make={() => colorQ()} onAnswer={onAnswer} />
+        <Puzzle key={`color-${count}`} make={() => colorQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -506,7 +506,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="clock" make={() => clockQ()} onAnswer={onAnswer} />
+        <Puzzle key={`clock-${count}`} make={() => clockQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -515,7 +515,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="count" make={() => countQ()} onAnswer={onAnswer} />
+        <Puzzle key={`count-${count}`} make={() => countQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -524,7 +524,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="odd" make={() => oddQ()} onAnswer={onAnswer} />
+        <Puzzle key={`odd-${count}`} make={() => oddQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -533,7 +533,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="opposite" make={() => oppositeQ()} onAnswer={onAnswer} />
+        <Puzzle key={`opposite-${count}`} make={() => oppositeQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -542,7 +542,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key="abc" make={() => abcQ()} onAnswer={onAnswer} />
+        <Puzzle key={`abc-${count}`} make={() => abcQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
@@ -560,7 +560,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Numbers onAnswer={onAnswer} />
+        <Numbers key={count} onAnswer={onAnswer} round={count} />
       </>
     )
   }
