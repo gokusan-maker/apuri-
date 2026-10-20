@@ -496,3 +496,11 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .onboarding-figure { width: 96px; height: 96px; margin: 0 auto; }
 .onboarding-dots { color: var(--accent); margin: 8px 0; letter-spacing: 4px; }
 .skip { margin-top: 8px; border: none; background: transparent; color: var(--muted); }
+
+.scramble-ja { font-size: 1.05rem; margin: 4px 0 12px; }
+.scramble-answer { min-height: 56px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; justify-content: center; padding: 8px; border-bottom: 2px solid var(--accent); }
+.scramble-pool { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin: 14px 0; min-height: 44px; }
+.scramble-end { font-size: 1.2rem; font-weight: 700; }
+.chip { padding: 8px 12px; font-size: 1.05rem; border: 1px solid var(--accent); border-radius: 10px; background: var(--bg); color: var(--fg); }
+.chip:disabled { opacity: 0.8; }
+.scramble .flip:disabled { opacity: 0.4; }
