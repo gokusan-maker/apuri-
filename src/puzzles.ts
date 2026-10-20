@@ -67,6 +67,7 @@ export const GROUPS: { name: string; ids: string[] }[] = [
   { name: '家族', ids: ['father', 'mother', 'sister', 'brother', 'grandfather', 'grandmother', 'uncle', 'aunt', 'son', 'daughter', 'cousin', 'parent'] },
   { name: '楽器', ids: ['piano', 'guitar', 'violin', 'drum', 'flute'] },
   { name: '服', ids: ['hat', 'cap', 'shirt', 'skirt', 'shoes', 'sock', 'coat', 'dress', 'jacket', 'clothes'] },
+  { name: '国', ids: ['japan', 'america', 'china', 'korea', 'france', 'australia', 'canada', 'india', 'brazil', 'italy', 'spain', 'germany', 'egypt', 'the-uk'] },
   { name: '行事', ids: ['christmas', 'new-year', 'halloween', 'party', 'fireworks', 'wedding', 'concert', 'sports-day', 'graduation', 'festival'] },
   { name: '仕事', ids: ['doctor', 'nurse', 'farmer', 'pilot', 'police-officer', 'firefighter', 'scientist', 'artist', 'singer', 'writer', 'dentist', 'engineer', 'chef', 'astronaut', 'teacher'] },
 ]
