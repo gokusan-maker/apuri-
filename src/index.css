@@ -642,3 +642,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .book-toggle { display: block; width: 100%; margin: 2px 0 4px; padding: 4px 0; border: none; background: transparent; color: var(--muted); font-size: 0.8rem; text-align: left; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .gloss-word { border: none; padding: 0; background: transparent; color: inherit; font: inherit; text-decoration: underline dotted var(--accent); text-underline-offset: 3px; cursor: pointer; }
 .gloss { display: inline-block; margin: 4px 0; padding: 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 15%, var(--bg)); font-size: 0.9rem; }
+.rival-score { display: flex; justify-content: space-between; align-items: center; font-weight: 800; font-size: 1.1rem; margin-bottom: 8px; }
+.rival-me { color: var(--accent); }
+.rival-cpu { color: #7c3aed; }

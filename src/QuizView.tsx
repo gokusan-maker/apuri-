@@ -11,6 +11,7 @@ import { Grammar } from './GrammarView'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
+import { Rival } from './RivalView'
 import { WORDS, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
@@ -25,7 +26,8 @@ import { WORDS, type Word } from './words'
 // mix：英→日・日→英・リスニングが1問ごとにランダム
 // read：例文の音読（音声認識が使える端末のみ表示）
 // timed：1問10秒の英→日。早いほどボーナス
-export type Direction = 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// rival：ライバルと早押し
+export type Direction = 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -58,6 +60,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
   { id: 'mix', label: '🎲 ミックス' },
   { id: 'timed', label: '⏳ 10秒' },
+  { id: 'rival', label: '⚔️ ライバル戦' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'sentence', label: '🗣 例文リスニング' },
@@ -80,6 +83,7 @@ type Props = {
   onFinish?: (score: number, total: number) => void
   onCombo?: (combo: number) => void // 正解するたびに今のコンボ数
   onSpend?: (coins: number) => boolean // コインを使う（足りなければ false）
+  onRivalWin?: () => void
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
@@ -97,7 +101,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
@@ -250,6 +254,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
       <>
         <div className="card-tabs">{toggle}</div>
         <Grammar onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'rival') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Rival words={targets ?? words} onAnswer={onAnswer} onWin={onRivalWin} />
       </>
     )
   }
