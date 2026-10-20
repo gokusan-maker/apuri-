@@ -32,10 +32,19 @@ function speak(text: string) {
   window.speechSynthesis.speak(u)
 }
 
+type Tab = 'card' | 'quiz' | 'time' | 'stats'
+
+const TABS: { id: Tab; icon: string; label: string }[] = [
+  { id: 'card', icon: '🃏', label: 'カード' },
+  { id: 'quiz', icon: '❓', label: 'クイズ' },
+  { id: 'time', icon: '⏱', label: 'タイム' },
+  { id: 'stats', icon: '📊', label: '記録' },
+]
+
 function App() {
   const [progress, setProgress] = useState<ProgressMap>(loadProgress)
   const [flipped, setFlipped] = useState(false)
-  const [mode, setMode] = useState<'card' | 'quiz' | 'time'>('card')
+  const [mode, setMode] = useState<Tab>('card')
   const today = dayKey()
   const [daily, setDaily] = useState(() => loadDailyNew(today))
   const newToday = daily.day === today ? daily.count : 0
@@ -101,20 +110,25 @@ function App() {
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
         </p>
-        <nav className="modes">
-          <button aria-pressed={mode === 'card'} onClick={() => setMode('card')}>
-            カード
-          </button>
-          <button aria-pressed={mode === 'quiz'} onClick={() => setMode('quiz')}>
-            クイズ
-          </button>
-          <button aria-pressed={mode === 'time'} onClick={() => setMode('time')}>
-            タイムアタック
-          </button>
-        </nav>
       </header>
 
-      {mode === 'quiz' ? (
+      {mode === 'stats' ? (
+        <section className="card stats-view">
+          <h2>記録</h2>
+          <dl className="result-list">
+            <div>
+              <dt>連続学習</dt>
+              <dd>{streakDays}日</dd>
+            </div>
+            <div>
+              <dt>定着語数</dt>
+              <dd>
+                {learned} / {WORDS.length}
+              </dd>
+            </div>
+          </dl>
+        </section>
+      ) : mode === 'quiz' ? (
         <Quiz words={WORDS} onCorrect={gainXp} />
       ) : mode === 'time' ? (
         <TimeAttack words={WORDS} onCorrect={gainXp} />
@@ -147,6 +161,17 @@ function App() {
       ) : (
         <p className="done">今日の学習は完了です 🎉 また明日！</p>
       )}
+
+      <nav className="tabbar" aria-label="画面の切り替え">
+        {TABS.map((t) => (
+          <button key={t.id} aria-current={mode === t.id ? 'page' : undefined} onClick={() => setMode(t.id)}>
+            <span className="tab-icon" aria-hidden="true">
+              {t.icon}
+            </span>
+            {t.label}
+          </button>
+        ))}
+      </nav>
     </main>
   )
 }
