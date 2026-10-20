@@ -142,4 +142,74 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Students ___ uniforms at my school.', choices: ['wear', 'put on'], answer: 0, why: '制服を「着ている」状態は wear。' },
     ],
   },
+  {
+    id: 'house-home',
+    title: 'house と home',
+    points: ['house は「建物としての家」、home は「（自分が住む）家・家庭」。go home のように home は前に to をつけない。'],
+    examples: [
+      { en: 'They built a new house.', ja: '彼らは新しい家を建てた。' },
+      { en: 'I went home early.', ja: '早く家に帰った。' },
+    ],
+    questions: [
+      { sentence: 'Let\'s go ___ now.', choices: ['home', 'house', 'to home'], answer: 0, why: '「家に帰る」は go home（to はつけない）。' },
+      { sentence: 'There is a big ___ on the hill.', choices: ['home', 'house'], answer: 1, why: '建物としての家は house。' },
+      { sentence: 'I stayed at ___ all day.', choices: ['house', 'home'], answer: 1, why: '「家にいる」は stay at home。' },
+    ],
+  },
+  {
+    id: 'trip-travel',
+    title: 'trip と travel',
+    points: ['trip は「（行って帰ってくる）旅行」で名詞として使う。travel は「旅をする」と動詞で使うことが多い。'],
+    examples: [
+      { en: 'We went on a school trip.', ja: '修学旅行に行った。' },
+      { en: 'I want to travel around the world.', ja: '世界中を旅したい。' },
+    ],
+    questions: [
+      { sentence: 'How was your ___ to Kyoto?', choices: ['trip', 'travel'], answer: 0, why: '1回の「旅行」は trip。' },
+      { sentence: 'She likes to ___ by train.', choices: ['trip', 'travel'], answer: 1, why: '「旅をする」と動詞なら travel。' },
+      { sentence: 'We took a day ___ to the beach.', choices: ['trip', 'travel'], answer: 0, why: '日帰り旅行は a day trip。' },
+    ],
+  },
+  {
+    id: 'job-work',
+    title: 'job と work',
+    points: ['job は「（数えられる）仕事・職」、work は「（数えられない）仕事・作業」や「働く」。'],
+    examples: [
+      { en: 'My sister got a new job.', ja: '姉は新しい仕事についた。' },
+      { en: 'I have a lot of work today.', ja: '今日はやることがたくさんある。' },
+    ],
+    questions: [
+      { sentence: 'He is looking for a ___.', choices: ['job', 'work'], answer: 0, why: 'a がつく数えられる「職」は job。' },
+      { sentence: 'My father goes to ___ by bus.', choices: ['job', 'work'], answer: 1, why: '「仕事に行く」は go to work。' },
+      { sentence: 'Good ___!', choices: ['job', 'work'], answer: 0, why: '「よくやったね」は Good job!' },
+    ],
+  },
+  {
+    id: 'look-find',
+    title: 'look for と find',
+    points: ['look for は「さがす（さがしている途中）」、find は「見つける（見つかった結果）」。'],
+    examples: [
+      { en: 'I am looking for my key.', ja: '鍵をさがしている。' },
+      { en: 'I found my key under the bed.', ja: 'ベッドの下で鍵を見つけた。' },
+    ],
+    questions: [
+      { sentence: 'What are you ___ for?', choices: ['looking', 'finding'], answer: 0, why: '「何をさがしているの？」は look for。' },
+      { sentence: 'I ___ my wallet in the car.', choices: ['looked', 'found'], answer: 1, why: '「見つけた」という結果は found。' },
+      { sentence: 'She couldn\'t ___ her cat.', choices: ['look', 'find'], answer: 1, why: '「見つけられなかった」は find。' },
+    ],
+  },
+  {
+    id: 'speak-talk',
+    title: 'speak と talk',
+    points: ['speak は「（言語を）話す・（一方的に）話す」、talk は「（相手と）おしゃべりする・話し合う」。'],
+    examples: [
+      { en: 'She can speak Chinese.', ja: '彼女は中国語を話せる。' },
+      { en: 'Let\'s talk about the trip.', ja: '旅行について話そう。' },
+    ],
+    questions: [
+      { sentence: 'Do you ___ English?', choices: ['speak', 'talk'], answer: 0, why: '言語を話すのは speak。' },
+      { sentence: 'We ___ on the phone for an hour.', choices: ['spoke', 'talked'], answer: 1, why: '電話でおしゃべりするのは talk。' },
+      { sentence: 'Can I ___ to you for a minute?', choices: ['speak', 'tell'], answer: 0, why: '「ちょっと話してもいい？」は speak to you（talk to you でも可）。tell は後ろに人＋内容が必要。' },
+    ],
+  },
 ]
