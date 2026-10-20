@@ -366,3 +366,4 @@
 - 2026-10-20: 相棒のひとこと（ふきだし）の英語を🔊で聞けるようにした
 - 2026-10-20: 中3に基本語を20語追加（passenger・passport・plenty など）
 - 2026-10-20: 高校基礎の単語を20語追加（generate・indicate・interpret など、計220語）
+- 2026-10-20: テーマ別に「文房具・学校」の単語を13語追加（ruler・timetable・principal など）
