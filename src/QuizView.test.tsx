@@ -364,3 +364,11 @@ it('かんたんモードでは選択肢が3つ', () => {
   expect(document.querySelectorAll('.choice')).toHaveLength(3)
   localStorage.removeItem('eitan:settings')
 })
+
+it('クイズの種類メニューに「パズル・ゲーム」グループがある', () => {
+  render(<Quiz words={WORDS.slice(0, 8)} />)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  const g = screen.getByText('パズル・ゲーム').parentElement!
+  expect(g.textContent).toContain('2人対戦')
+  expect(g.textContent).toContain('アルファベット')
+})

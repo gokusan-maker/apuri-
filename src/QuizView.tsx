@@ -101,17 +101,17 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'emoji', label: '😀 絵文字クイズ', group: '4択' },
   { id: 'emoji-rev', label: '🔤 英語→絵文字', group: '4択' },
   { id: 'sentence-read', label: '📄 例文の訳', group: '4択' },
-  { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
-  { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
-  { id: 'versus', label: '👥 2人対戦', group: '4択' },
-  { id: 'abc', label: '🔠 ABC順', group: '4択' },
-  { id: 'opposite', label: '↔️ 反対の意味', group: '4択' },
-  { id: 'odd', label: '🧩 仲間はずれ', group: '4択' },
-  { id: 'count', label: '🔢 いくつある？', group: '4択' },
-  { id: 'clock', label: '🕐 時計を読もう', group: '4択' },
-  { id: 'color', label: '🎨 色の名前', group: '4択' },
-  { id: 'alphabet', label: '🔤 アルファベット', group: '4択' },
-  { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
+  { id: 'rival', label: '⚔️ ライバル戦', group: 'パズル・ゲーム' },
+  { id: 'shiritori', label: '🔗 しりとり', group: 'パズル・ゲーム' },
+  { id: 'versus', label: '👥 2人対戦', group: 'パズル・ゲーム' },
+  { id: 'abc', label: '🔠 ABC順', group: 'パズル・ゲーム' },
+  { id: 'opposite', label: '↔️ 反対の意味', group: 'パズル・ゲーム' },
+  { id: 'odd', label: '🧩 仲間はずれ', group: 'パズル・ゲーム' },
+  { id: 'count', label: '🔢 いくつある？', group: 'パズル・ゲーム' },
+  { id: 'clock', label: '🕐 時計を読もう', group: 'パズル・ゲーム' },
+  { id: 'color', label: '🎨 色の名前', group: 'パズル・ゲーム' },
+  { id: 'alphabet', label: '🔤 アルファベット', group: 'パズル・ゲーム' },
+  { id: 'sequence', label: '📅 順番クイズ', group: 'パズル・ゲーム' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
   { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
@@ -131,7 +131,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'confusing', label: '⚠️ まちがえやすい単語', group: '文法・読解' },
   { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
 ]
-const GROUPS = ['4択', '聞く・話す', '書く・並べる', '文法・読解']
+const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる', '文法・読解']
 const MODE_KEY = 'eitan:quiz-mode'
 function loadMode(fallback: Direction): Direction {
   try {
