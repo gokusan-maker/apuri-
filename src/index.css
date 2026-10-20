@@ -702,3 +702,6 @@ button:focus:not(:focus-visible) { outline: none; }
 
 .whats-new ul { margin: 8px 0 0; padding-left: 18px; font-size: 0.9em; line-height: 1.5; }
 .whats-new summary { cursor: pointer; font-weight: bold; }
+.help dl { margin: 8px 0 0; font-size: 0.9em; line-height: 1.5; }
+.help dt { font-weight: bold; margin-top: 6px; }
+.help dd { margin: 0 0 0 4px; }

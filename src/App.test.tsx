@@ -624,7 +624,10 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))
     expect(screen.getByText('🆕 新しくなったこと')).toBeInTheDocument()
-    expect(screen.getByText(/ラッキー単語（今日のことば/)).toBeInTheDocument()
+    const items = document.querySelectorAll('.whats-new:not(.help) li')
+    expect(items.length).toBeGreaterThan(0)
+    expect(items.length).toBeLessThanOrEqual(10)
+    expect(screen.getByText('❔ 遊び方')).toBeInTheDocument()
   })
 
   it('お知らせが重なると順番に出る', () => {
