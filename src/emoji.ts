@@ -32,5 +32,6 @@ export const EMOJI: Record<string, string> = {
   poster: '🖼️', prince: '🤴', princess: '👸', puzzle: '🧩',
   japan: '🇯🇵', america: '🇺🇸', china: '🇨🇳', korea: '🇰🇷', france: '🇫🇷', australia: '🇦🇺', canada: '🇨🇦', india: '🇮🇳', brazil: '🇧🇷', italy: '🇮🇹', spain: '🇪🇸', germany: '🇩🇪', egypt: '🇪🇬', 'the-uk': '🇬🇧',
   robot: '🤖', rocket: '🚀', scarf: '🧣', shell: '🐚', snack: '🍿',
+  stadium: '🏟️', statue: '🗽', steak: '🥩', sunflower: '🌻', sunglasses: '🕶️', sunset: '🌇', sword: '🗡️', tool: '🔧',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
