@@ -426,3 +426,4 @@
 - 2026-10-20: 単語一覧とクイズのまちがい表示の例文でも、見出し語を太字にした
 - 2026-10-20: 中1に単語を20語追加（clap・chew・ceiling・compass など）
 - 2026-10-20: 中2に単語を20語追加（alien・baggage・charge・chemistry など）
+- 2026-10-20: 中3に単語を20語追加（arrest・barrier・bond・certain など、全2090語）
