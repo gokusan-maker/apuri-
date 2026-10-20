@@ -53,3 +53,9 @@ it('100日連続と5000問のバッジ', () => {
   expect(ids).toEqual(expect.arrayContaining(['streak-100', 'answers-5000']))
   expect(newlyEarned({ ...zero, streak: 99, answers: 4999 }, {}).map((b) => b.id)).not.toContain('streak-100')
 })
+
+it('図鑑のすがたを全部見るとバッジ', () => {
+  expect(newlyEarned({ ...zero, formsSeen: 12, formsTotal: 12 }, {}).map((b) => b.id)).toContain('zukan-all')
+  expect(newlyEarned({ ...zero, formsSeen: 11, formsTotal: 12 }, {}).map((b) => b.id)).not.toContain('zukan-all')
+  expect(newlyEarned({ ...zero }, {}).map((b) => b.id)).not.toContain('zukan-all')
+})
