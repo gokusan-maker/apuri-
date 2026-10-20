@@ -1,3 +1,4 @@
+import { medalFor } from './medal'
 import type { ReactNode } from 'react'
 import type { Mistakes } from './mistakes'
 import type { DayBar } from './history'
@@ -76,7 +77,7 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
           {byLevel.map((b) => (
             <div key={b.level} className="by-level-row">
               <span className="by-level-name">
-                {b.learned === b.total && b.total > 0 ? '👑' : ''}
+                {b.learned === b.total && b.total > 0 ? '👑' : medalFor(b.total ? Math.round((b.learned / b.total) * 100) : 0)}
                 {b.level}
               </span>
               <div className="goal-bar" role="progressbar" aria-label={`${b.level}の定着`} aria-valuemin={0} aria-valuemax={b.total} aria-valuenow={b.learned}>
