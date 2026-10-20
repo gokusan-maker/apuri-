@@ -16,7 +16,7 @@ import { EMOJI } from './emoji'
 import { claimFeatured, FEATURED_XP, featuredClaimed, featuredFor } from './featured'
 import { dayKey } from './srs'
 import { quizShareText, shareText } from './shareText'
-import { isNew, loadPlayed, markPlayed } from './playedModes'
+import { isNew, loadPlayed, loadRecent, markPlayed, pushRecent } from './playedModes'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
 import { Versus } from './VersusView'
@@ -215,6 +215,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     onAnswerProp?.(correct, xp, wordId, source)
   }
   const [played, setPlayed] = useState(loadPlayed)
+  const [recent, setRecent] = useState(loadRecent)
   const [collapsed, setCollapsed] = useState(loadCollapsed)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
@@ -352,6 +353,21 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       {menu && (
         <div className="mode-menu" role="group" aria-label="クイズの種類">
           {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}
+          {recent.length > 0 && (
+            <div className="mode-group mode-recent">
+              <p className="mode-group-name">さいきん遊んだ種類</p>
+              <div className="direction">
+                {recent
+                  .map((id) => DIRECTIONS.find((d) => d.id === id))
+                  .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
+                  .map((d) => (
+                    <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
+                      ↺ {d.label}
+                    </button>
+                  ))}
+              </div>
+            </div>
+          )}
           {GROUPS.map((g) => (
             <div key={g} className="mode-group">
               <button
@@ -369,6 +385,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
                     aria-pressed={direction === d.id}
                     onClick={() => {
                       setPlayed((p) => markPlayed(p, d.id))
+                      setRecent((r) => pushRecent(r, d.id))
                       restart(d.id)
                     }}
                   >

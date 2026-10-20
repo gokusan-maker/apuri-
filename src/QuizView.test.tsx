@@ -405,3 +405,14 @@ it('しぼりこみ中は、神経衰弱もその単語で遊ぶ', () => {
   const t = document.querySelectorAll('.memory-card')[0].textContent
   expect(targets.some((w) => w.en === t || w.ja === t)).toBe(true)
 })
+
+it('メニューの上に「さいきん遊んだ種類」が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Quiz words={WORDS.slice(0, 20)} />)
+  pickMode('🔠 ABC順')
+  unmount()
+  render(<Quiz words={WORDS.slice(0, 20)} />)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  expect(screen.getByText('↺ 🔠 ABC順')).toBeInTheDocument()
+  localStorage.clear()
+})
