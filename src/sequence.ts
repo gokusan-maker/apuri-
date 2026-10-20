@@ -8,6 +8,7 @@ export const SEQUENCES: { name: string; items: string[]; loop: boolean }[] = [
     items: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
     loop: true,
   },
+  { name: '季節', items: ['spring', 'summer', 'autumn', 'winter'], loop: true },
   { name: '順番', items: ['first', 'second', 'third', 'fourth', 'fifth', 'sixth', 'seventh', 'eighth', 'ninth', 'tenth'], loop: false },
 ]
 
@@ -23,7 +24,9 @@ export function makeSeqQ(rng: Rng = Math.random): SeqQ {
   const i = lo + Math.floor(rng() * (hi - lo))
   const j = (i + (dir === 'next' ? 1 : -1) + n) % n
   const correct = seq.items[j]
-  const wrong = shuffle(seq.items.filter((_, k) => k !== j && k !== i), rng).slice(0, 3)
+  // 短い並び（季節）は問題の語も選択肢に入れて4つにする
+  const others = seq.items.filter((_, k) => k !== j && k !== i)
+  const wrong = shuffle(others.length >= 3 ? others : seq.items.filter((_, k) => k !== j), rng).slice(0, 3)
   const choices = shuffle([correct, ...wrong], rng)
   return { word: seq.items[i], dir, choices, answer: choices.indexOf(correct), seq: seq.name }
 }

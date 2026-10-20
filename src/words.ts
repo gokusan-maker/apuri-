@@ -581,6 +581,12 @@ export const WORDS: Word[] = [
   { id: 'october', en: 'October', ja: '10月', example: 'The leaves turn red in October.', exampleJa: '10月には葉が赤くなる。', level: '曜日・月' },
   { id: 'november', en: 'November', ja: '11月', example: 'November is a good month for hiking.', exampleJa: '11月はハイキングにいい月だ。', level: '曜日・月' },
   { id: 'december', en: 'December', ja: '12月', example: 'We have a party in December.', exampleJa: '12月にパーティーをする。', level: '曜日・月' },
+  { id: 'spring', en: 'spring', ja: '春', example: 'Cherry trees bloom in spring.', exampleJa: '春には桜がさく。', level: '曜日・月' },
+  { id: 'autumn', en: 'autumn', ja: '秋（アメリカでは fall とも）', example: 'The leaves turn red in autumn.', exampleJa: '秋には葉が赤くなる。', level: '曜日・月' },
+  { id: 'winter', en: 'winter', ja: '冬', example: 'We go skiing every winter.', exampleJa: '毎年冬にスキーに行く。', level: '曜日・月' },
+  { id: 'week', en: 'week', ja: '週', example: 'I have English class three times a week.', exampleJa: '英語の授業は週に3回ある。', level: '曜日・月' },
+  { id: 'month', en: 'month', ja: '月（1か月）', example: 'My birthday is next month.', exampleJa: '私の誕生日は来月だ。', level: '曜日・月' },
+  { id: 'year', en: 'year', ja: '年', example: 'She will be thirteen this year.', exampleJa: '彼女は今年13歳になる。', level: '曜日・月' },
   // テーマ別（動物・食べ物・体・天気と自然・学校）
   { id: 'cat', en: 'cat', ja: 'ねこ', example: 'Our cat sleeps all day.', exampleJa: 'うちのねこは一日中寝ている。', level: 'テーマ別' },
   { id: 'dog', en: 'dog', ja: '犬', example: 'I walk my dog every evening.', exampleJa: '毎晩犬の散歩をする。', level: 'テーマ別' },
