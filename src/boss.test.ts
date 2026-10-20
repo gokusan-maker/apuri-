@@ -35,3 +35,7 @@ it('単語帳ごとにボスがいて、名前は重複しない', () => {
   expect(names).toHaveLength(LEVELS.length)
   expect(new Set(names).size).toBe(names.length)
 })
+
+it('すべてのボスに説明がある', () => {
+  for (const b of Object.values(BOSSES)) expect(b.desc, b.name).toBeTruthy()
+})

@@ -175,7 +175,7 @@ export function BossDex({ record }: { record: BossRecord }) {
               <BossFigure hit={false} look={record[l] ? BOSSES[l] : shadow} />
             </span>
             <span className="badge-name">{record[l] ? BOSSES[l].name : '？？？'}</span>
-            <span className="badge-desc">{record[l] ? record[l] : `${l}のボス`}</span>
+            <span className="badge-desc">{record[l] ? `${record[l]}・${BOSSES[l].desc ?? ''}` : `${l}のボス`}</span>
           </li>
         ))}
       </ul>

@@ -42,17 +42,17 @@ export function saveBoss(r: BossRecord): void {
 }
 
 // 単語帳ごとのボス（すべてオリジナル）
-export type BossLook = { name: string; color: string; line: string; eye: string }
+export type BossLook = { name: string; color: string; line: string; eye: string; desc?: string }
 
 export const BOSSES: Record<Level, BossLook> = {
-  中1: { name: 'ヤミモチ', color: '#6d28d9', line: '#3b0764', eye: '#fde047' },
-  中2: { name: 'ホノオモチ', color: '#dc2626', line: '#7f1d1d', eye: '#fef08a' },
-  中3: { name: 'コオリモチ', color: '#0ea5e9', line: '#0c4a6e', eye: '#f0f9ff' },
-  高校基礎: { name: 'カゲノオオモチ', color: '#334155', line: '#020617', eye: '#f87171' },
-  熟語: { name: 'ナゾナゾモチ', color: '#0d9488', line: '#134e4a', eye: '#fde68a' },
-  '曜日・月': { name: 'トケイモチ', color: '#ca8a04', line: '#713f12', eye: '#fff7ed' },
-  テーマ別: { name: 'ゴチャマゼモチ', color: '#db2777', line: '#831843', eye: '#fdf2f8' },
-  数: { name: 'カゾエモチ', color: '#4f46e5', line: '#1e1b4b', eye: '#fef9c3' },
-  '色・形': { name: 'ニジイロモチ', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
-  会話: { name: 'オシャベリモチ', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
+  中1: { name: 'ヤミモチ', desc: '中1の単語をこっそり食べてしまう、やみのモチ。', color: '#6d28d9', line: '#3b0764', eye: '#fde047' },
+  中2: { name: 'ホノオモチ', desc: 'まちがえるほど燃えあがる、熱いモチ。', color: '#dc2626', line: '#7f1d1d', eye: '#fef08a' },
+  中3: { name: 'コオリモチ', desc: 'むずかしい単語でみんなをこおらせるモチ。', color: '#0ea5e9', line: '#0c4a6e', eye: '#f0f9ff' },
+  高校基礎: { name: 'カゲノオオモチ', desc: '高校の単語の影にひそむ、大きなモチ。', color: '#334155', line: '#020617', eye: '#f87171' },
+  熟語: { name: 'ナゾナゾモチ', desc: '熟語のなぞなぞで道をふさぐモチ。', color: '#0d9488', line: '#134e4a', eye: '#fde68a' },
+  '曜日・月': { name: 'トケイモチ', desc: '曜日と月を入れかえてしまう、いたずらなモチ。', color: '#ca8a04', line: '#713f12', eye: '#fff7ed' },
+  テーマ別: { name: 'ゴチャマゼモチ', desc: 'いろんなテーマをごちゃまぜにするモチ。', color: '#db2777', line: '#831843', eye: '#fdf2f8' },
+  数: { name: 'カゾエモチ', desc: '数を数えるのが大すきだが、よくまちがえるモチ。', color: '#4f46e5', line: '#1e1b4b', eye: '#fef9c3' },
+  '色・形': { name: 'ニジイロモチ', desc: '色と形をぬすんで虹にしてしまうモチ。', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
+  会話: { name: 'オシャベリモチ', desc: 'あいさつを聞くまで通してくれない、おしゃべりなモチ。', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
 }
