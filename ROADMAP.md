@@ -212,7 +212,7 @@
 - [x] 数の聞き取りに「値段」をまぜる（three dollars and fifty cents → 3.50）
 - [x] 曜日・月の単語帳に季節と週・月・年（spring・autumn・winter・week・month・year）を足す
 - [x] 色・形の単語帳に5語ふやす（shape・size・round・rectangle・oval）
-- [ ] 熟語をさらに20ふやす（計100）
+- [x] 熟語をさらに20ふやす（計100）
 
 ## アイデア（未整理）
 
