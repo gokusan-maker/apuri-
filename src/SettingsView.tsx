@@ -2,6 +2,7 @@ import { Install } from './InstallView'
 import { OfflineStatus } from './OfflineView'
 import { WhatsNew } from './WhatsNewView'
 import { Help } from './HelpView'
+import { clearAllData } from './resetData'
 import { GRADES } from './grade'
 import type { Level } from './words'
 import { useState } from 'react'
@@ -179,6 +180,22 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         }}
       >
         設定を初期値にもどす
+      </button>
+
+      <button
+        className="danger-link"
+        onClick={() => {
+          if (!window.confirm('学習の記録・相棒・コインなど、すべてのデータを消します。もとにもどせません。よろしいですか？')) return
+          if (!window.confirm('本当に消しますか？（バックアップをとっていない記録は消えます）')) return
+          try {
+            clearAllData()
+          } catch {
+            // ストレージが使えない環境では何もしない
+          }
+          window.location.reload()
+        }}
+      >
+        学習データをすべて消す
       </button>
 
       <Install />

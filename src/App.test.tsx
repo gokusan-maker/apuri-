@@ -603,6 +603,17 @@ describe('App', () => {
     vi.restoreAllMocks()
   })
 
+  it('学習データをすべて消す：2回目の確認でやめれば消えない', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 50, owned: [] }))
+    const c = vi.spyOn(window, 'confirm').mockReturnValueOnce(true).mockReturnValueOnce(false)
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.click(screen.getByText('学習データをすべて消す'))
+    expect(c).toHaveBeenCalledTimes(2)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(50)
+    vi.restoreAllMocks()
+  })
+
   it('単語帳をぜんぶ定着させると👑と完全制覇バッジ', () => {
     const p = Object.fromEntries(wordsOf(['曜日・月']).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
