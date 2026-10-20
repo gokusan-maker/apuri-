@@ -582,6 +582,16 @@ describe('App', () => {
     expect(screen.getByText(/ハロウィンボーナスつき！ 今日もえらい！ 🪙15/)).toBeInTheDocument()
   })
 
+  it('夕方にまだ学習していないと、連続日数が途切れないよう知らせる', () => {
+    vi.setSystemTime(new Date(2026, 9, 20, 19))
+    localStorage.setItem('eitan:streak', JSON.stringify({ last: '2026-10-19', count: 5 }))
+    render(<App />)
+    expect(screen.getByText(/連続5日をつなげよう/)).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.queryByText(/連続5日をつなげよう/)).not.toBeInTheDocument()
+  })
+
   it('週末は正解のXPが2倍', () => {
     vi.setSystemTime(new Date(2026, 9, 24, 10)) // 土曜
     render(<App />)
