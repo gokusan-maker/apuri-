@@ -2035,6 +2035,16 @@ const WORDS_4: Word[] = [
   { id: 'here-we-go', en: 'Here we go!', ja: 'さあ、行くよ！・始めよう', example: 'Here we go! Question one.', exampleJa: 'さあ、行くよ！第1問。', level: '会話' },
   { id: 'im-hungry', en: 'I\'m hungry', ja: 'おなかがすいた', example: 'I\'m hungry. What\'s for lunch?', exampleJa: 'おなかすいた。お昼は何？', level: '会話' },
   { id: 'thats-too-bad', en: 'That\'s too bad', ja: 'それは残念', example: 'You lost your wallet? That\'s too bad.', exampleJa: 'さいふをなくしたの？それは残念だね。', level: '会話' },
+  { id: 'id-like', en: 'I\'d like ...', ja: '〜がほしいのですが（ていねい）', example: 'I\'d like a cheeseburger, please.', exampleJa: 'チーズバーガーをください。', level: '会話' },
+  { id: 'for-here-or-to-go', en: 'For here or to go?', ja: '店内でお召し上がりですか、お持ち帰りですか', example: 'For here or to go? — To go, please.', exampleJa: '店内ですか、お持ち帰りですか。—持ち帰りで。', level: '会話' },
+  { id: 'here-is-your-change', en: 'Here\'s your change', ja: 'おつりです', example: 'Here\'s your change. Thank you.', exampleJa: 'おつりです。ありがとうございました。', level: '会話' },
+  { id: 'can-i-try-it-on', en: 'Can I try it on?', ja: '試着してもいいですか', example: 'I like this shirt. Can I try it on?', exampleJa: 'このシャツいいな。試着してもいいですか。', level: '会話' },
+  { id: 'how-can-i-get-to', en: 'How can I get to ...?', ja: '〜へはどう行けばいいですか', example: 'How can I get to the station?', exampleJa: '駅へはどう行けばいいですか。', level: '会話' },
+  { id: 'go-straight', en: 'Go straight', ja: 'まっすぐ行って', example: 'Go straight and turn left at the bank.', exampleJa: 'まっすぐ行って、銀行で左に曲がって。', level: '会話' },
+  { id: 'its-on-your-right', en: 'It\'s on your right', ja: '右手にあります', example: 'Where is the museum? — It\'s on your right.', exampleJa: '博物館はどこですか。—右手にあります。', level: '会話' },
+  { id: 'im-just-looking', en: 'I\'m just looking', ja: '見ているだけです', example: 'Can I help you? — I\'m just looking, thanks.', exampleJa: '何かおさがしですか。—見ているだけです。', level: '会話' },
+  { id: 'that-will-be', en: 'That will be ... yen', ja: '〜円になります', example: 'That will be 500 yen.', exampleJa: '500円になります。', level: '会話' },
+  { id: 'how-long-does-it-take', en: 'How long does it take?', ja: 'どのくらい時間がかかりますか', example: 'How long does it take to walk there?', exampleJa: 'そこまで歩いてどのくらいかかりますか。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
