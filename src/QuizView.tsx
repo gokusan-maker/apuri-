@@ -6,13 +6,16 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
+import { getRecognition } from './pronounce'
+import { Pronounce } from './PronounceView'
 import type { Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
 // spell：日本語を見て英単語を入力
 // blank：例文の空欄に入る単語を選ぶ
 // irregular：不規則動詞の活用ドリル
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'irregular'
+// speak：発音練習（音声認識が使える端末のみ表示）
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'irregular' | 'speak'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
@@ -25,6 +28,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'spell', label: '✏️ スペル' },
   { id: 'blank', label: '📝 穴埋め' },
   { id: 'irregular', label: '🔁 不規則動詞' },
+  { id: 'speak', label: '🎤 発音' },
 ]
 
 type Props = {
@@ -95,13 +99,22 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   const toggle = (
     <div className="direction" role="group" aria-label="出題の向き">
-      {DIRECTIONS.map((d) => (
+      {DIRECTIONS.filter((d) => d.id !== 'speak' || getRecognition()).map((d) => (
         <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
           {d.label}
         </button>
       ))}
     </div>
   )
+
+  if (direction === 'speak') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Pronounce words={targets ?? words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
 
   if (direction === 'irregular') {
     return (
