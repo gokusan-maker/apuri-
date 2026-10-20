@@ -121,6 +121,12 @@ export function MonsterFigure({
   }
   return (
     <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
+      {form.stage >= 5 && !hidden && (
+        <g className="aura">
+          <circle cx="50" cy="56" r="46" fill="none" stroke="#fde047" strokeWidth="3" strokeDasharray="4 6" />
+          <path d="M14 30 l3 -7 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 Z M80 14 l2 -5 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 Z" fill="#fde047" />
+        </g>
+      )}
       {form.branch === 'ear' && (
         <>
           <path d="M18 60 Q2 46 8 32 Q18 44 24 50 Z" fill={fill} stroke={line} strokeWidth="3" />

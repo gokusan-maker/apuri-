@@ -568,3 +568,6 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .fav.inline { position: static; font-size: 1.1rem; }
 .listen-sentence { margin-top: 8px; min-height: 1.6em; }
 .quiz .choices .choice { white-space: normal; }
+.aura { transform-origin: 50px 56px; animation: spin 12s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .aura { animation: none; } }

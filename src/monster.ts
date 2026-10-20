@@ -83,6 +83,7 @@ export const STAGES: Stage[] = [
   { index: 2, name: 'モチまる', minLevel: 5 },
   { index: 3, name: 'モチノスケ', minLevel: 15 },
   { index: 4, name: 'オオモチ', minLevel: 30 },
+  { index: 5, name: 'デンセツモチ', minLevel: 50 },
 ]
 
 export function stageOf(level: number): Stage {
@@ -130,6 +131,9 @@ export const FORMS: Form[] = [
   { id: 'mori-king', name: 'モリノオオモチ', stage: 4, branch: 'card', color: '#22c55e', line: '#14532d', hint: 'Lv30・カード中心' },
   { id: 'inazuma-king', name: 'カミナリオオモチ', stage: 4, branch: 'quiz', color: '#facc15', line: '#854d0e', hint: 'Lv30・クイズ中心' },
   { id: 'sora-king', name: 'ソラノオオモチ', stage: 4, branch: 'ear', color: '#38bdf8', line: '#075985', hint: 'Lv30・リスニング/スペル中心' },
+  { id: 'mori-legend', name: 'デンセツノモリモチ', stage: 5, branch: 'card', color: '#15803d', line: '#052e16', hint: 'Lv50・カード中心' },
+  { id: 'inazuma-legend', name: 'デンセツノイナズマモチ', stage: 5, branch: 'quiz', color: '#eab308', line: '#713f12', hint: 'Lv50・クイズ中心' },
+  { id: 'sora-legend', name: 'デンセツノソラモチ', stage: 5, branch: 'ear', color: '#0284c7', line: '#082f49', hint: 'Lv50・リスニング/スペル中心' },
 ]
 
 // いちばん多くXPをもらった学び方（同点ならカード→クイズ→耳の順）

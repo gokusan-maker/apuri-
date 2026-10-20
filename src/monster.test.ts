@@ -37,7 +37,8 @@ describe('進化と表情', () => {
     expect(stageOf(15).index).toBe(3)
     expect(stageOf(29).index).toBe(3)
     expect(stageOf(30).index).toBe(4)
-    expect(stageOf(99).index).toBe(4)
+    expect(stageOf(49).index).toBe(4)
+    expect(stageOf(99).index).toBe(5)
   })
 
   it('3日以上あくと「さみしそう」。記録が無い古いデータはさみしくない', () => {
@@ -108,4 +109,13 @@ describe('名前', () => {
     saveMonster({ xp: 1, name: 'モッチー' })
     expect(loadMonster()).toEqual({ xp: 1, name: 'モッチー' })
   })
+})
+
+it('Lv50 で伝説の姿に進化し、図鑑は12種になる', () => {
+  let xp = 0
+  for (let l = 1; l < 50; l++) xp += xpToNext(l)
+  expect(stageOf(50).index).toBe(5)
+  expect(formOf({ xp, branch: 'ear' }).id).toBe('sora-legend')
+  expect(formOf({ xp: xp - 1, branch: 'ear' }).id).toBe('sora-king')
+  expect(seenForms({ xp, branch: 'card' })).toEqual(['egg', 'chibi', 'mochimaru', 'mori', 'mori-king', 'mori-legend'])
 })
