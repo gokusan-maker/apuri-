@@ -64,6 +64,21 @@ export const VERBS: Verb[] = [
   { base: 'understand', past: 'understood', pp: 'understood', ja: '理解する' },
   { base: 'wake', past: 'woke', pp: 'woken', ja: '目を覚ます' },
   { base: 'wear', past: 'wore', pp: 'worn', ja: '着ている' },
+  { base: 'read', past: 'read', pp: 'read', ja: '読む' },
+  { base: 'rise', past: 'rose', pp: 'risen', ja: '上がる・昇る' },
+  { base: 'shake', past: 'shook', pp: 'shaken', ja: '振る・揺れる' },
+  { base: 'steal', past: 'stole', pp: 'stolen', ja: '盗む' },
+  { base: 'bite', past: 'bit', pp: 'bitten', ja: 'かむ' },
+  { base: 'blow', past: 'blew', pp: 'blown', ja: '（風が）吹く' },
+  { base: 'feed', past: 'fed', pp: 'fed', ja: 'えさをやる' },
+  { base: 'fight', past: 'fought', pp: 'fought', ja: '戦う' },
+  { base: 'forgive', past: 'forgave', pp: 'forgiven', ja: '許す' },
+  { base: 'lead', past: 'led', pp: 'led', ja: '導く' },
+  { base: 'mean', past: 'meant', pp: 'meant', ja: '意味する' },
+  { base: 'show', past: 'showed', pp: 'shown', ja: '見せる' },
+  { base: 'shoot', past: 'shot', pp: 'shot', ja: '撃つ・シュートする' },
+  { base: 'tear', past: 'tore', pp: 'torn', ja: '引き裂く' },
+  { base: 'dig', past: 'dug', pp: 'dug', ja: '掘る' },
 ]
 
 // うっかり規則変化させた形（よくある間違い）
