@@ -327,14 +327,18 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   })
   const got: [boolean, string][] = []
   render(<Quiz words={WORDS.slice(0, 8)} onAnswer={(c, _xp, id) => got.push([c, id])} />)
-  vi.spyOn(Math, 'random').mockReturnValue(0.9) // 数の問題で 902
+  vi.spyOn(Math, 'random').mockReturnValue(0.9) // 毎回、数の問題で 902
   pickMode('🔢 数・時刻・日付の聞き取り')
-  vi.restoreAllMocks()
   expect(spoken[spoken.length - 1]).toBe(toEnglish(902))
-  fireEvent.change(screen.getByLabelText('答え'), { target: { value: '902' } })
-  fireEvent.click(screen.getByText('答える'))
-  expect(screen.getByRole('status').textContent).toContain('正解！')
-  expect(got[0][0]).toBe(true)
-  fireEvent.click(screen.getByText('次へ'))
-  expect(screen.getByText('正解 1 / 1')).toBeInTheDocument()
+  for (let i = 0; i < 10; i++) {
+    expect(screen.getByText(`${i + 1} / 10 問目・正解 ${i}`)).toBeInTheDocument()
+    fireEvent.change(screen.getByLabelText('答え'), { target: { value: i < 9 ? '902' : '1' } })
+    fireEvent.click(screen.getByText('答える'))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  vi.restoreAllMocks()
+  expect(got.filter(([c]) => c)).toHaveLength(9)
+  expect(screen.getByText('9 / 10 問正解')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('もう1回'))
+  expect(screen.getByText('1 / 10 問目・正解 0')).toBeInTheDocument()
 })
