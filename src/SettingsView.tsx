@@ -1,6 +1,6 @@
 import { Install } from './InstallView'
 import { speak } from './speech'
-import { GOALS, type Accent, type Settings, type Theme } from './settings'
+import { GOALS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
 
 type Props = {
   settings: Settings
@@ -56,6 +56,22 @@ export function SettingsPanel({ settings, onChange }: Props) {
           {THEMES.map((t) => (
             <button key={t.id} aria-pressed={settings.theme === t.id} onClick={() => set({ theme: t.id })}>
               {t.label}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="setting">
+        <legend>テーマカラー</legend>
+        <div className="levels">
+          {THEME_COLORS.map((c) => (
+            <button
+              key={c.id}
+              aria-pressed={settings.color === c.id}
+              onClick={() => set({ color: c.id })}
+              style={{ borderColor: c.value, color: settings.color === c.id ? '#fff' : c.value, background: settings.color === c.id ? c.value : 'transparent' }}
+            >
+              {c.label}
             </button>
           ))}
         </div>

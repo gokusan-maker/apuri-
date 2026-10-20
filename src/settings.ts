@@ -44,7 +44,17 @@ export type Settings = {
   autoSpeak: boolean // カードを出したら自動で発音
   cardJaFirst: boolean // カードを日本語→英語にする
   largeText: boolean // 文字を大きくする
+  color: ThemeColor // テーマカラー
 }
+
+export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
+
+export const THEME_COLORS: { id: ThemeColor; label: string; value: string }[] = [
+  { id: 'blue', label: 'あお', value: '#2563eb' },
+  { id: 'pink', label: 'ピンク', value: '#db2777' },
+  { id: 'green', label: 'みどり', value: '#16a34a' },
+  { id: 'orange', label: 'オレンジ', value: '#ea580c' },
+]
 
 export const GOALS = [10, 20, 30, 50]
 
@@ -57,6 +67,7 @@ export const DEFAULT_SETTINGS: Settings = {
   autoSpeak: false,
   cardJaFirst: false,
   largeText: false,
+  color: 'blue',
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -74,6 +85,7 @@ export function loadSettings(): Settings {
       autoSpeak: v.autoSpeak === true,
       cardJaFirst: v.cardJaFirst === true,
       largeText: v.largeText === true,
+      color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
     }
   } catch {
     return { ...DEFAULT_SETTINGS }
@@ -96,4 +108,12 @@ export function applyTheme(theme: Theme, root: HTMLElement = document.documentEl
 // 文字の大きさ。rem で作っているので html の文字サイズを変えると全体が大きくなる
 export function applyTextSize(large: boolean, root: HTMLElement = document.documentElement): void {
   root.style.fontSize = large ? '112.5%' : ''
+}
+
+// テーマカラー（ボタンなどの色）。ブラウザのバーの色も合わせる
+export function applyColor(color: ThemeColor, root: HTMLElement = document.documentElement): void {
+  const c = THEME_COLORS.find((x) => x.id === color) ?? THEME_COLORS[0]
+  if (color === 'blue') root.style.removeProperty('--accent')
+  else root.style.setProperty('--accent', c.value)
+  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', c.value)
 }

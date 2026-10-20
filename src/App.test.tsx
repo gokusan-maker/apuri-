@@ -127,6 +127,7 @@ describe('App', () => {
       autoSpeak: false,
       cardJaFirst: false,
       largeText: false,
+      color: 'blue',
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
@@ -361,5 +362,14 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('お気に入りカードを一周しました 💪')).toBeInTheDocument()
+  })
+
+  it('テーマカラーを変えられる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.click(screen.getByText('ピンク'))
+    expect(document.documentElement.style.getPropertyValue('--accent')).toBe('#db2777')
+    fireEvent.click(screen.getByText('あお'))
+    expect(document.documentElement.style.getPropertyValue('--accent')).toBe('')
   })
 })

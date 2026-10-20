@@ -51,7 +51,7 @@ import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
-import { applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
+import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf } from './words'
 
@@ -101,6 +101,7 @@ function App() {
     saveSettings(settings)
     applyTheme(settings.theme)
     applyTextSize(settings.largeText)
+    applyColor(settings.color)
   }, [settings])
 
   // グラフ用の日ごとの記録。古いデータには無いので、今日の分は今日の学習数から補う
