@@ -1420,6 +1420,16 @@ const WORDS_4: Word[] = [
   { id: 'how-was-it', en: 'How was it?', ja: 'どうだった？', example: 'You went to the zoo? How was it?', exampleJa: '動物園に行ったの？どうだった？', level: '会話' },
   { id: 'hold-on', en: 'Hold on.', ja: 'ちょっと待って', example: 'Hold on. I\'ll get my bag.', exampleJa: 'ちょっと待って。かばんを取ってくる。', level: '会話' },
   { id: 'cheer-up', en: 'Cheer up!', ja: '元気を出して', example: 'Cheer up! You\'ll do better next time.', exampleJa: '元気出して！次はもっとうまくいくよ。', level: '会話' },
+  { id: 'nice-day', en: 'Have a good weekend', ja: 'よい週末を', example: 'Have a good weekend! See you on Monday.', exampleJa: 'よい週末を！月曜日にね。', level: '会話' },
+  { id: 'me-neither', en: 'Me neither', ja: '私も〜ない', example: 'I don\'t like spiders. — Me neither.', exampleJa: 'クモはきらい。—私も。', level: '会話' },
+  { id: 'you-too', en: 'You too', ja: 'あなたもね', example: 'Have a nice day! — You too!', exampleJa: 'よい1日を！—あなたもね！', level: '会話' },
+  { id: 'no-thanks', en: 'No, thank you', ja: 'いいえ、けっこうです', example: 'More cake? — No, thank you.', exampleJa: 'ケーキもっとどう？—いいえ、けっこうです。', level: '会話' },
+  { id: 'sure-why-not', en: 'Why not?', ja: 'いいね・もちろん', example: 'Let\'s go to the beach. — Why not?', exampleJa: '海に行こうよ。—いいね！', level: '会話' },
+  { id: 'just-kidding', en: 'Just kidding', ja: 'じょうだんだよ', example: 'I ate all the cake. Just kidding!', exampleJa: 'ケーキ全部食べちゃった。じょうだんだよ！', level: '会話' },
+  { id: 'what-happened', en: 'What happened?', ja: '何があったの？', example: 'You look tired. What happened?', exampleJa: 'つかれてるね。何があったの？', level: '会話' },
+  { id: 'be-careful', en: 'Be careful', ja: '気をつけて', example: 'Be careful! The floor is wet.', exampleJa: '気をつけて！床がぬれてるよ。', level: '会話' },
+  { id: 'well-done', en: 'Well done', ja: 'よくできました', example: 'You got 100 points? Well done!', exampleJa: '100点とったの？よくできました！', level: '会話' },
+  { id: 'im-ready', en: 'I\'m ready', ja: '準備できたよ', example: 'I\'m ready. Let\'s go!', exampleJa: '準備できたよ。行こう！', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
