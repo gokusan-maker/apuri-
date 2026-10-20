@@ -113,4 +113,59 @@ export const PASSAGES: Passage[] = [
       { q: '掃除にかかった時間は？', choices: ['1時間', '2時間', '3時間'], answer: 2 },
     ],
   },
+  {
+    id: 'piano',
+    title: 'The Piano Contest',
+    text: 'Aya practiced the piano for two hours every day. On the day of the contest, she was very nervous. But she played well and won second prize. She was so happy that she cried.',
+    ja: 'アヤは毎日2時間ピアノを練習しました。コンテストの日、彼女はとても緊張していました。でも上手にひけて、2位をとりました。うれしくて泣いてしまいました。',
+    questions: [
+      { q: 'アヤは毎日どのくらい練習した？', choices: ['1時間', '2時間', '3時間'], answer: 1 },
+      { q: 'コンテストの日のアヤは？', choices: ['眠かった', 'とても緊張していた', 'かぜをひいていた'], answer: 1 },
+      { q: '結果は？', choices: ['1位', '2位', '3位'], answer: 1 },
+    ],
+  },
+  {
+    id: 'park',
+    title: 'A New Park',
+    text: 'A new park opened near my house last month. It has a pond, a running course, and many trees. On weekends, families come with their dogs. I like to read books on a bench there.',
+    ja: '先月、家の近くに新しい公園ができました。池、ランニングコース、たくさんの木があります。週末には家族が犬を連れて来ます。私はそこのベンチで本を読むのが好きです。',
+    questions: [
+      { q: '公園ができたのはいつ？', choices: ['先週', '先月', '去年'], answer: 1 },
+      { q: '公園にないものは？', choices: ['池', 'ランニングコース', 'プール'], answer: 2 },
+      { q: '「私」は公園で何をするのが好き？', choices: ['走る', '本を読む', '犬と遊ぶ'], answer: 1 },
+    ],
+  },
+  {
+    id: 'exchange',
+    title: 'Our Guest from Canada',
+    text: 'Emma, a student from Canada, stayed with my family for a week. She tried natto for the first time. She did not like it, but she loved miso soup. We still send messages to each other.',
+    ja: 'カナダから来た学生のエマが、1週間うちに泊まりました。初めて納豆を食べてみました。納豆は好きではありませんでしたが、みそ汁は大好きでした。今でもおたがいにメッセージを送り合っています。',
+    questions: [
+      { q: 'エマはどこから来た？', choices: ['アメリカ', 'カナダ', 'イギリス'], answer: 1 },
+      { q: 'エマが大好きだったのは？', choices: ['納豆', 'みそ汁', 'すし'], answer: 1 },
+      { q: '今はどうしている？', choices: ['メッセージを送り合っている', '電話で話す', '会っていない'], answer: 0 },
+    ],
+  },
+  {
+    id: 'bus',
+    title: 'The Wrong Bus',
+    text: 'Yesterday I took the wrong bus. It went to the airport, not to the station. I was worried, but the driver was kind. He told me which bus to take, and I got home safely.',
+    ja: '昨日、私はまちがったバスに乗りました。そのバスは駅ではなく空港へ行きました。心配でしたが、運転手さんが親切でした。どのバスに乗ればいいか教えてくれて、無事に家に帰れました。',
+    questions: [
+      { q: 'バスはどこへ行った？', choices: ['駅', '空港', '学校'], answer: 1 },
+      { q: '運転手さんはどうだった？', choices: ['こわかった', '親切だった', 'いそがしかった'], answer: 1 },
+      { q: '最後はどうなった？', choices: ['無事に家に帰れた', '空港に泊まった', '歩いて帰った'], answer: 0 },
+    ],
+  },
+  {
+    id: 'garden-club',
+    title: 'The Garden Club',
+    text: 'I joined the garden club in April. We grow sunflowers and vegetables behind the school. Every morning, I water the plants before class. In summer, our sunflowers were taller than our teacher!',
+    ja: '私は4月に園芸部に入りました。学校の裏でひまわりや野菜を育てています。毎朝、授業の前に植物に水をやります。夏には、私たちのひまわりは先生よりも背が高くなりました！',
+    questions: [
+      { q: '園芸部に入ったのはいつ？', choices: ['4月', '6月', '9月'], answer: 0 },
+      { q: '毎朝することは？', choices: ['草取り', '水やり', '花をつむ'], answer: 1 },
+      { q: '夏のひまわりは？', choices: ['かれてしまった', '先生より高くなった', '花がさかなかった'], answer: 1 },
+    ],
+  },
 ]
