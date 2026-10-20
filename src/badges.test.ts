@@ -47,3 +47,9 @@ it('300語・500語定着と100日学習のバッジ', () => {
   expect(ids).toEqual(expect.arrayContaining(['learned-300', 'learned-500', 'days-100']))
   expect(newlyEarned({ ...zero, studyDays: 99 }, {}).map((b) => b.id)).not.toContain('days-100')
 })
+
+it('100日連続と5000問のバッジ', () => {
+  const ids = newlyEarned({ ...zero, streak: 100, answers: 5000 }, {}).map((b) => b.id)
+  expect(ids).toEqual(expect.arrayContaining(['streak-100', 'answers-5000']))
+  expect(newlyEarned({ ...zero, streak: 99, answers: 4999 }, {}).map((b) => b.id)).not.toContain('streak-100')
+})

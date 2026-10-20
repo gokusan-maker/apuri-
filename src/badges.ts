@@ -33,6 +33,7 @@ export const BADGES: Badge[] = [
   { id: 'streak-3', icon: '🔥', name: '3日連続', desc: '3日続けて学習する', check: (s) => s.streak >= 3 },
   { id: 'streak-7', icon: '🔥', name: '7日連続', desc: '7日続けて学習する', check: (s) => s.streak >= 7 },
   { id: 'streak-30', icon: '🌋', name: '30日連続', desc: '30日続けて学習する', check: (s) => s.streak >= 30 },
+  { id: 'streak-100', icon: '☀️', name: '100日連続', desc: '100日続けて学習する', check: (s) => s.streak >= 100 },
   { id: 'learned-10', icon: '📗', name: '10語定着', desc: '10語を定着させる', check: (s) => s.learned >= 10 },
   { id: 'learned-50', icon: '📘', name: '50語定着', desc: '50語を定着させる', check: (s) => s.learned >= 50 },
   { id: 'learned-100', icon: '📚', name: '100語定着', desc: '100語を定着させる', check: (s) => s.learned >= 100 },
@@ -52,6 +53,7 @@ export const BADGES: Badge[] = [
   { id: 'combo-20', icon: '☄️', name: '20コンボ', desc: 'クイズで20問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 20 },
   { id: 'complete-1', icon: '👑', name: '完全制覇', desc: '単語帳を1冊ぜんぶ定着させる', check: (s) => (s.completeBooks ?? 0) >= 1 },
   { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
+  { id: 'answers-5000', icon: '🌠', name: '5000問の流れ星', desc: '累計5000問に答える', check: (s) => s.answers >= 5000 },
 ]
 
 export type Earned = Record<string, string> // バッジid → もらった日
