@@ -186,6 +186,8 @@ type Props = {
 export const QUESTION_TIME = 10
 export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
+// 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
+const NO_COUNT: Direction[] = ['memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
   try {
@@ -384,13 +386,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           ))}
         </div>
       )}
-      <div className="counts" role="group" aria-label="問題数">
-        {COUNTS.map((n) => (
-          <button key={n} aria-pressed={count === n} onClick={() => changeCount(n)}>
-            {n}問
-          </button>
-        ))}
-      </div>
+      {!NO_COUNT.includes(direction) && (
+        <div className="counts" role="group" aria-label="問題数">
+          {COUNTS.map((n) => (
+            <button key={n} aria-pressed={count === n} onClick={() => changeCount(n)}>
+              {n}問
+            </button>
+          ))}
+        </div>
+      )}
     </>
   )
 

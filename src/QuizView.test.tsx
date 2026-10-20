@@ -386,3 +386,13 @@ it('クイズの種類メニューのグループはたためて、たたんだ�
   fireEvent.click(screen.getByText(/パズル・ゲーム/))
   expect(screen.getByText('👥 2人対戦')).toBeInTheDocument()
 })
+
+it('問題数を使わない種類では問題数ボタンを出さない', () => {
+  render(<Quiz words={WORDS.slice(0, 20)} direction="memory" />)
+  expect(screen.queryByRole('group', { name: '問題数' })).not.toBeInTheDocument()
+})
+
+it('ふつうの種類では問題数ボタンを出す', () => {
+  render(<Quiz words={WORDS.slice(0, 20)} direction="en-ja" />)
+  expect(screen.getByRole('group', { name: '問題数' })).toBeInTheDocument()
+})
