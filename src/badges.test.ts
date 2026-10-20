@@ -69,3 +69,8 @@ it('1000語定着のバッジ', () => {
   expect(newlyEarned({ ...zero, learned: 1000 }, {}).map((b) => b.id)).toContain('learned-1000')
   expect(newlyEarned({ ...zero, learned: 999 }, {}).map((b) => b.id)).not.toContain('learned-1000')
 })
+
+it('クイズの種類を15種類遊ぶとバッジ', () => {
+  expect(newlyEarned({ ...zero, modesPlayed: 15 }, {}).map((b) => b.id)).toContain('modes-15')
+  expect(newlyEarned({ ...zero, modesPlayed: 14 }, {}).map((b) => b.id)).not.toContain('modes-15')
+})

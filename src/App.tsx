@@ -29,6 +29,7 @@ import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
+import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
 import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
@@ -379,6 +380,7 @@ function App() {
       formsTotal: FORMS.length,
       souvenirs: souvenirs.length,
       souvenirsTotal: SOUVENIRS.length,
+      modesPlayed: loadPlayed().length,
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
     },
     earned,
