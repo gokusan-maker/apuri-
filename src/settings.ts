@@ -50,6 +50,7 @@ export type Settings = {
   testDate: string // 定期テストの日（YYYY-MM-DD、なしは空）
   reviewCap: number // 1日の復習の上限（0はなし）
   easy: boolean // かんたんモード：4択クイズの選択肢を3つにする
+  newPerDay: number // 1日の新しい単語の数
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -63,6 +64,7 @@ export const THEME_COLORS: { id: ThemeColor; label: string; value: string }[] = 
 
 export const GOALS = [10, 20, 30, 50]
 export const REVIEW_CAPS = [0, 30, 50, 100]
+export const NEW_PER_DAY = [5, 10, 15, 20]
 
 export const DEFAULT_SETTINGS: Settings = {
   rate: 1,
@@ -79,6 +81,7 @@ export const DEFAULT_SETTINGS: Settings = {
   testDate: '',
   reviewCap: 0,
   easy: false,
+  newPerDay: 10,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -100,6 +103,7 @@ export function loadSettings(): Settings {
       hideExampleJa: v.hideExampleJa === true,
       randomNew: v.randomNew === true,
       easy: v.easy === true,
+      newPerDay: NEW_PER_DAY.includes(v.newPerDay as number) ? (v.newPerDay as number) : 10,
       reviewCap: REVIEW_CAPS.includes(v.reviewCap as number) ? (v.reviewCap as number) : 0,
       testDate: typeof v.testDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.testDate) ? v.testDate : '',
     }

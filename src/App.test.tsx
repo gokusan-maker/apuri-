@@ -147,6 +147,7 @@ describe('App', () => {
       testDate: '',
       reviewCap: 0,
       easy: false,
+      newPerDay: 10,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
@@ -424,6 +425,14 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText(/今日の残り 4 語/)).toBeInTheDocument()
+  })
+
+  it('設定で1日の新しい単語の数を変えられる', () => {
+    localStorage.setItem('eitan:settings', JSON.stringify({ newPerDay: 15 }))
+    localStorage.setItem('eitan:daily-new', JSON.stringify({ day: dayKey(), count: 10 }))
+    render(<App />)
+    expect(screen.queryByText('今日の学習は完了です 🎉 また明日！')).not.toBeInTheDocument()
+    expect(screen.getByText(/今日の残り 5 語/)).toBeInTheDocument()
   })
 
   it('記録画面のカレンダーに今日の学習が印される', () => {

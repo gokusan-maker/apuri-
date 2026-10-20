@@ -47,7 +47,6 @@ import {
 } from './monster'
 import {
   buildQueue,
-  DAILY_NEW_LIMIT,
   upcoming,
   dayKey,
   grade,
@@ -308,7 +307,7 @@ function App() {
   const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : words.filter((w) => picked.includes(w.id)))
   const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の' }
 
-  const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap])
+  const queue = useMemo(() => buildQueue(words, progress, today, newToday, settings.newPerDay + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap, settings.newPerDay])
   // その日はじめて開いたときだけ「今日の復習」を知らせる
   const dueReviews = words.filter((w) => progress[w.id] && progress[w.id].due <= today).length
   const [greet, setGreet] = useState(() => {
