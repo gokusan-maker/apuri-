@@ -409,3 +409,8 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .listen.mic.on { animation: none; }
 }
+.monster-kind { font-size: 0.8rem; font-weight: 400; color: var(--muted); }
+.rename-btn { border: none; background: transparent; font-size: 0.85rem; padding: 0 4px; }
+.rename { display: flex; gap: 6px; margin: 0 0 6px; }
+.rename input { flex: 1; min-width: 0; padding: 4px 8px; font-size: 1rem; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); }
+.rename button { padding: 4px 10px; border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); }

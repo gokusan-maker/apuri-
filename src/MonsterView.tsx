@@ -1,10 +1,12 @@
-import { FORMS, formOf, levelInfo, seenForms, type Form, type MonsterState } from './monster'
+import { useState, type FormEvent } from 'react'
+import { FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
 type Props = {
   monster: MonsterState
+  onRename?: (name: string) => void
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -76,7 +78,9 @@ export function MonsterFigure({ form, mood = 'normal', hidden = false }: { form:
   )
 }
 
-export function Monster({ monster, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+  const [editing, setEditing] = useState(false)
+  const [draft, setDraft] = useState('')
   const { level, into, need } = levelInfo(monster.xp)
   const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
@@ -86,9 +90,50 @@ export function Monster({ monster, mood = 'normal', leveledUp = false, evolved =
         <MonsterFigure form={form} mood={mood} />
       </div>
       <div className="monster-info">
-        <p className="monster-name">
-          {form.name} <span className="monster-level">Lv.{level}</span>
-        </p>
+        {editing ? (
+          <form
+            className="rename"
+            onSubmit={(e: FormEvent) => {
+              e.preventDefault()
+              onRename?.(draft)
+              setEditing(false)
+            }}
+          >
+            <input
+              value={draft}
+              onChange={(e) => setDraft(e.target.value)}
+              maxLength={NAME_MAX * 2}
+              placeholder={form.name}
+              aria-label="名前"
+              autoFocus
+            />
+            <button type="submit">決定</button>
+          </form>
+        ) : (
+          <p className="monster-name">
+            {monster.name ? (
+              <>
+                {monster.name}
+                <span className="monster-kind">（{form.name}）</span>
+              </>
+            ) : (
+              form.name
+            )}{' '}
+            <span className="monster-level">Lv.{level}</span>
+            {onRename && (
+              <button
+                className="rename-btn"
+                aria-label="名前をつける"
+                onClick={() => {
+                  setDraft(monster.name ?? '')
+                  setEditing(true)
+                }}
+              >
+                ✏️
+              </button>
+            )}
+          </p>
+        )}
         <div className="xp-bar" role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
           <div className="xp-fill" style={{ width: `${(into / need) * 100}%` }} />
         </div>
@@ -145,7 +190,7 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
                 <span className="zukan-figure">
                   <MonsterFigure form={f} />
                 </span>
-                <span className="badge-name">{f.name}</span>
+                <span className="badge-name">{m.name ?? f.name}</span>
                 <span className="badge-desc">{active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}</span>
               </button>
             </li>

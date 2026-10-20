@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { feed, formOf, isLonely, quizXp, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
+import { feed, formOf, isLonely, quizXp, rename, seenForms, type MonsterState, levelInfo, loadMonster, saveMonster, stageOf, xpToNext } from './monster'
 
 describe('monster', () => {
   beforeEach(() => localStorage.clear())
@@ -94,5 +94,18 @@ describe('進化の分岐と図鑑', () => {
     expect(loadMonster()).toEqual({ xp: 3, src: { quiz: 3 }, branch: 'quiz', seen: ['egg'] })
     localStorage.setItem('eitan:monster', '{"xp":3,"branch":"magic","seen":[1,"egg"]}')
     expect(loadMonster()).toEqual({ xp: 3, seen: ['egg'] })
+  })
+})
+
+describe('名前', () => {
+  it('前後の空白を取り、10文字まで。空なら名前なしに戻る', () => {
+    expect(rename({ xp: 1 }, '  ポチ  ')).toEqual({ xp: 1, name: 'ポチ' })
+    expect(rename({ xp: 1 }, 'あいうえおかきくけこさしす').name).toBe('あいうえおかきくけこ')
+    expect(rename({ xp: 1, name: 'ポチ' }, '   ')).toEqual({ xp: 1 })
+  })
+
+  it('名前も保存・読み込みされる', () => {
+    saveMonster({ xp: 1, name: 'モッチー' })
+    expect(loadMonster()).toEqual({ xp: 1, name: 'モッチー' })
   })
 })

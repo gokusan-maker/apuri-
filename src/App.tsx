@@ -9,6 +9,7 @@ import { MyWords } from './MyWordsView'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
+  rename,
   formOf,
   isLonely,
   levelInfo,
@@ -203,6 +204,7 @@ function App() {
         </div>
         <Monster
           monster={monster}
+          onRename={(name) => setMonster(rename(monster, name))}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}

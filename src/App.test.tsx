@@ -178,4 +178,13 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
     expect(screen.getByText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
   })
+
+  it('相棒に名前をつけられ、保存される', () => {
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('名前をつける'))
+    fireEvent.change(screen.getByLabelText('名前'), { target: { value: 'もっちー' } })
+    fireEvent.click(screen.getByText('決定'))
+    expect(document.querySelector('.monster-name')!.textContent).toContain('もっちー（ふしぎなタマゴ）')
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].name).toBe('もっちー')
+  })
 })

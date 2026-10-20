@@ -9,6 +9,7 @@ export type MonsterState = {
   src?: Partial<Record<Source, number>> // 出どころ別のXP
   branch?: Source // Lv15 で決まった進化の系統
   seen?: string[] // 出会った姿（図鑑）
+  name?: string // 自分でつけた名前
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -50,6 +51,7 @@ export function loadMonster(): MonsterState {
     }
     if (m?.branch && SOURCES.includes(m.branch)) out.branch = m.branch
     if (Array.isArray(m?.seen)) out.seen = m.seen.filter((x): x is string => typeof x === 'string')
+    if (typeof m?.name === 'string' && m.name) out.name = cleanName(m.name)
     return out
   } catch {
     return { xp: 0 }
@@ -151,4 +153,19 @@ export function seenForms(m: MonsterState): string[] {
   const passed = FORMS.filter((f) => f.stage <= now.stage && (!f.branch || f.branch === now.branch)).map((f) => f.id)
   const all = new Set([...(m.seen ?? []), ...passed])
   return FORMS.filter((f) => all.has(f.id)).map((f) => f.id)
+}
+
+export const NAME_MAX = 10
+
+// 前後の空白を取り、10文字まで（絵文字なども1文字として数える）
+export function cleanName(name: string): string {
+  return [...name.trim()].slice(0, NAME_MAX).join('')
+}
+
+export function rename(m: MonsterState, name: string): MonsterState {
+  const n = cleanName(name)
+  const next = { ...m }
+  if (n) next.name = n
+  else delete next.name
+  return next
 }

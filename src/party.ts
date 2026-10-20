@@ -1,5 +1,5 @@
 // 仲間（複数の相棒）。節目でタマゴがもらえ、相棒を切り替えられる。
-import { loadMonster, type MonsterState } from './monster'
+import { cleanName, loadMonster, type MonsterState } from './monster'
 
 export type Party = {
   active: number
@@ -36,7 +36,12 @@ export function loadParty(): Party {
     const raw = localStorage.getItem(STORAGE_KEY)
     const v = raw ? (JSON.parse(raw) as Partial<Party>) : null
     if (v && Array.isArray(v.members) && v.members.length > 0) {
-      const members = v.members.map((m) => ({ ...m, xp: typeof m?.xp === 'number' && m.xp >= 0 ? m.xp : 0 }))
+      const members = v.members.map((m) => {
+        const out: MonsterState = { ...m, xp: typeof m?.xp === 'number' && m.xp >= 0 ? m.xp : 0 }
+        if (typeof m?.name === 'string') out.name = cleanName(m.name)
+        if (!out.name) delete out.name
+        return out
+      })
       const active = typeof v.active === 'number' && v.active >= 0 && v.active < members.length ? v.active : 0
       return { active, members }
     }
