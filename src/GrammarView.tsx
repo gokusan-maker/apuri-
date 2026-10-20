@@ -29,6 +29,9 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     return (
       <section className="card grammar">
         <h2>{title}</h2>
+        <p className="stats-note grammar-total">
+          全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
+        </p>
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
         <button
           className="flip mix-test"

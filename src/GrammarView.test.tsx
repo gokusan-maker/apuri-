@@ -8,6 +8,7 @@ describe('文法ミニ解説', () => {
     localStorage.clear()
     const onAnswer = vi.fn()
     render(<Grammar onAnswer={onAnswer} />)
+    expect(screen.getByText(`全問正解 0 / ${GRAMMAR.length} 単元`)).toBeInTheDocument()
     const unit = GRAMMAR[0]
     fireEvent.click(screen.getByText(unit.title))
     expect(screen.getByText(unit.points[0])).toBeInTheDocument()
@@ -22,6 +23,7 @@ describe('文法ミニ解説', () => {
     expect(JSON.parse(localStorage.getItem('eitan:grammar')!)).toEqual({ [unit.id]: 3 })
     fireEvent.click(screen.getByText('← 単元一覧'))
     expect(screen.getByText('3 / 3 👑')).toBeInTheDocument()
+    expect(screen.getByText(`全問正解 1 / ${GRAMMAR.length} 単元`)).toBeInTheDocument()
   })
 })
 
