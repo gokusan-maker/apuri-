@@ -735,6 +735,15 @@ describe('App', () => {
     expect(toast('💕 なつき度アップ！')).toBeInTheDocument()
   })
 
+  it('学習した日数で称号が上がった日はお知らせが出る', () => {
+    localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, studyDays: 6 }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(toast('🎖 称号アップ')).toBeInTheDocument()
+    expect(screen.getByText('称号が「がんばり屋」になった！（学習7日）')).toBeInTheDocument()
+  })
+
   it('お知らせが重なると順番に出る', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
