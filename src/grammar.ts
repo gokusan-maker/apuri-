@@ -391,6 +391,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: '___ is dangerous to swim here.', choices: ['It', 'This', 'There'], answer: 0, why: 'It is … to ～ の形。It を使う。' },
     ],
   },
+  {
+    id: 'past-progressive',
+    title: '過去進行形（was / were ＋ ing）',
+    points: ['「（そのとき）〜していた」は was / were ＋ 動詞の ing 形。I・he・she・it は was、you・we・they は were。'],
+    examples: [
+      { en: 'I was sleeping at ten last night.', ja: '昨夜10時には寝ていた。' },
+      { en: 'They were playing soccer when it started to rain.', ja: '雨がふりだしたとき、彼らはサッカーをしていた。' },
+    ],
+    questions: [
+      { sentence: 'She ___ cooking when I came home.', choices: ['was', 'were', 'is'], answer: 0, why: 'she で過去のことなので was。' },
+      { sentence: 'We were ___ TV at that time.', choices: ['watch', 'watching', 'watched'], answer: 1, why: 'were のあとは ing 形。' },
+      { sentence: 'What ___ you doing then?', choices: ['was', 'were', 'did'], answer: 1, why: 'you なので were。' },
+    ],
+  },
+  {
+    id: 'perfect-progressive',
+    title: '現在完了進行形（have been ＋ ing）',
+    points: ['「（ずっと）〜し続けている」は have / has been ＋ 動詞の ing 形。for（〜の間）や since（〜から）といっしょによく使う。'],
+    examples: [
+      { en: 'I have been studying for two hours.', ja: '2時間ずっと勉強している。' },
+      { en: 'It has been raining since morning.', ja: '朝からずっと雨が降っている。' },
+    ],
+    questions: [
+      { sentence: 'He has ___ waiting for an hour.', choices: ['been', 'be', 'being'], answer: 0, why: 'has been ＋ ing の形。' },
+      { sentence: 'We have been playing ___ noon.', choices: ['since', 'for', 'at'], answer: 0, why: '「正午から」は since noon。' },
+      { sentence: 'They ___ been talking for thirty minutes.', choices: ['have', 'has', 'are'], answer: 0, why: 'they なので have。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
