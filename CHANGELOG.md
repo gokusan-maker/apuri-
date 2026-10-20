@@ -412,3 +412,4 @@
 - 2026-10-20: テーマ別に「旅行」の単語を13語追加（luggage・reservation・departure など）
 - 2026-10-20: 中3に基本語を20語追加（victory・weekday・wisdom など）
 - 2026-10-20: 中3に単語を20語追加（afford・assignment・athlete など）
+- 2026-10-20: 中3に単語を20語追加（bloom・breath・broadcast など。絵文字クイズにも）
