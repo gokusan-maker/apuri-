@@ -723,3 +723,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .memory-card { min-height: 64px; border-radius: 10px; border: 2px solid var(--accent, #2563eb); background: var(--accent, #2563eb); color: #fff; font-size: 0.95rem; padding: 4px; }
 .memory-card.shown { background: var(--card, #fff); color: inherit; }
 .memory-card.done { opacity: 0.5; border-style: dashed; }
+.bingo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 12px 0; }
+.bingo-cell { min-height: 56px; border-radius: 10px; border: 2px solid var(--accent, #2563eb); background: var(--card, #fff); color: inherit; font-size: 0.95rem; }
+.bingo-cell.marked { background: var(--accent, #2563eb); color: #fff; }
