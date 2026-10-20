@@ -593,4 +593,12 @@ describe('App', () => {
     render(<App />)
     expect(document.querySelector('.exam')!.textContent).toContain('テストまであと 10日')
   })
+
+  it('カードの進み具合バー', () => {
+    render(<App />)
+    expect(screen.getByLabelText('今日のカード 0 / 10')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByLabelText('今日のカード 1 / 10')).toBeInTheDocument()
+  })
 })

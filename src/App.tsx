@@ -70,7 +70,7 @@ import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_REMATCH_XP, BOSS_XP, loadBoss, saveBoss } from './boss'
-import { addToday, loadTodayCount, loadTodayXp, saveTodayCount, saveTodayXp } from './stats'
+import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
@@ -145,6 +145,8 @@ function App() {
   useEffect(() => saveHistory(history), [history])
 
   const [accuracy, setAccuracy] = usePersistent(loadAccuracy, saveAccuracy)
+  const [cardsToday, setCardsToday] = usePersistent(() => loadCardsToday(today), saveCardsToday)
+  const cardsDone = cardsToday.day === today ? cardsToday.count : 0
   const [todayXp, setTodayXp] = usePersistent(() => loadTodayXp(today), saveTodayXp)
   const [timeLog, setTimeLog] = usePersistent(loadTime, saveTime)
   useStudyTime(setTimeLog, today)
@@ -397,6 +399,7 @@ function App() {
 
   function answer(correct: boolean, easy = false) {
     setShown((n) => n + 1)
+    setCardsToday((d) => addToday(d, today))
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today, easy) })
     studied(correct)
@@ -684,6 +687,16 @@ function App() {
           />
         ) : (
           <>
+            {cardsDone + queue.length > 0 && (
+              <div className="card-progress" aria-label={`今日のカード ${cardsDone} / ${cardsDone + queue.length}`}>
+                <div className="goal-bar">
+                  <div className="goal-fill" style={{ width: `${(cardsDone / (cardsDone + queue.length)) * 100}%` }} />
+                </div>
+                <span>
+                  {cardsDone} / {cardsDone + queue.length}
+                </span>
+              </div>
+            )}
             <Card
               key={`${card?.id}-${shown}`}
               card={card}

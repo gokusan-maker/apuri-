@@ -687,3 +687,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .bulk textarea { width: 100%; padding: 8px; border: 1px solid var(--muted); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }
 .exam { margin: 0 0 4px; font-size: 0.85rem; color: #b45309; }
 .date-input { padding: 6px 8px; border: 1px solid var(--muted); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }
+.card-progress { display: flex; align-items: center; gap: 8px; margin: 12px 0 -4px; font-size: 0.8rem; color: var(--muted); }
+.card-progress .goal-bar { flex: 1; }

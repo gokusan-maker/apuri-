@@ -45,3 +45,24 @@ export function saveTodayXp(d: DayCount): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 今日カードで答えた数（カードの進み具合バー用）
+const CARDS_KEY = 'eitan:cards-today'
+
+export function loadCardsToday(today: string): DayCount {
+  try {
+    const raw = localStorage.getItem(CARDS_KEY)
+    const d = raw ? (JSON.parse(raw) as DayCount) : null
+    return d && d.day === today && typeof d.count === 'number' ? d : { day: today, count: 0 }
+  } catch {
+    return { day: today, count: 0 }
+  }
+}
+
+export function saveCardsToday(d: DayCount): void {
+  try {
+    localStorage.setItem(CARDS_KEY, JSON.stringify(d))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
