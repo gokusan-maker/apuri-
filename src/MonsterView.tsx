@@ -11,6 +11,7 @@ type Props = {
   onRename?: (name: string) => void
   coins?: number
   onShop?: () => void
+  room?: string
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -148,7 +149,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -162,7 +163,7 @@ export function Monster({ monster, onRename, coins, onShop, mood = 'normal', lev
   const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
-    <section className="monster" aria-label="相棒モンスター">
+    <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
       <button
         key={poke}
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}

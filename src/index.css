@@ -597,3 +597,11 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .mega-combo { margin: 10px 0 0; font-size: 1.5rem; font-weight: 800; color: #f97316; animation: mega 0.8s; text-shadow: 0 2px 8px rgb(249 115 22 / 0.4); }
 @keyframes mega { 0% { transform: scale(0.3); opacity: 0; } 60% { transform: scale(1.25); opacity: 1; } 100% { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { .mega-combo { animation: none; } }
+
+/* 相棒の部屋 */
+.room-meadow { background: linear-gradient(180deg, #bae6fd 0%, #dcfce7 60%, #86efac 100%) !important; color: #1f2937; }
+.room-ocean { background: linear-gradient(180deg, #e0f2fe 0%, #7dd3fc 60%, #0ea5e9 100%) !important; color: #1f2937; }
+.room-space { background: radial-gradient(circle at 80% 20%, #fef9c3 0 2px, transparent 3px), radial-gradient(circle at 30% 70%, #fff 0 1px, transparent 2px), linear-gradient(180deg, #1e1b4b, #312e81) !important; color: #f9fafb; }
+.room-school { background: linear-gradient(180deg, #fef3c7 0%, #fde68a 70%, #b45309 100%) !important; color: #1f2937; }
+.monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind { color: inherit; opacity: 0.8; }
+.room-sample .badge-name { color: inherit; }

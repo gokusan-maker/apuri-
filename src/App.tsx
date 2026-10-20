@@ -323,6 +323,7 @@ function App() {
           onRename={(name) => updateMonster((m) => rename(m, name))}
           coins={wallet.coins}
           onShop={() => setShowShop(true)}
+          room={wallet.room}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}
@@ -382,6 +383,7 @@ function App() {
           onWear={(id) => updateMonster((m) => ({ ...m, wear: id }))}
           onClose={() => setShowShop(false)}
           snacksLeft={snacksLeft(snacks, today)}
+          onRoom={(id) => setWallet((w) => ({ ...w, room: id }))}
           onBuyFreeze={() => {
             const next = buyFreeze(wallet)
             if (next) setWallet(next)

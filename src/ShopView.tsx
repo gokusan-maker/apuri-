@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { FREEZE_MAX, FREEZE_PRICE, ITEMS, SNACKS, type Wallet } from './shop'
+import { FREEZE_MAX, FREEZE_PRICE, ITEMS, ROOMS, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -11,9 +11,10 @@ type Props = {
   snacksLeft: number
   onEat: (id: string) => void
   onBuyFreeze?: () => void
+  onRoom?: (id: string | undefined) => void
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   return (
@@ -43,6 +44,30 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       >
         🎫 🪙{FREEZE_PRICE}で買う
       </button>
+      <h3 className="shop-h">相棒の部屋</h3>
+      <ul className="badge-grid">
+        {ROOMS.map((r) => {
+          const owned = wallet.owned.includes(r.id)
+          const using = wallet.room === r.id
+          return (
+            <li key={r.id} className={`got room-${r.id} room-sample`}>
+              <span className="badge-icon" aria-hidden="true">
+                {r.icon}
+              </span>
+              <span className="badge-name">{r.name}</span>
+              {owned ? (
+                <button className="shop-btn" onClick={() => onRoom?.(using ? undefined : r.id)}>
+                  {using ? 'もとにもどす' : 'この部屋にする'}
+                </button>
+              ) : (
+                <button className="shop-btn" disabled={wallet.coins < r.price} onClick={() => onBuy(r.id)}>
+                  🪙{r.price}で買う
+                </button>
+              )}
+            </li>
+          )
+        })}
+      </ul>
       <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
       <ul className="badge-grid">

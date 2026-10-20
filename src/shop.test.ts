@@ -50,3 +50,12 @@ it('お休みチケットは🪙50で、2枚まで', () => {
   expect(buyFreeze(w)).toBeNull()
   expect(buyFreeze({ coins: 10, owned: [] })).toBeNull()
 })
+
+it('部屋の背景も買えて、えらんだ部屋は保存される', () => {
+  const w = buy({ coins: 100, owned: [] }, 'ocean')!
+  expect(w.owned).toEqual(['ocean'])
+  saveWallet({ ...w, room: 'ocean' })
+  expect(loadWallet().room).toBe('ocean')
+  localStorage.setItem('eitan:wallet', '{"coins":1,"owned":[],"room":"castle"}')
+  expect(loadWallet().room).toBeUndefined()
+})

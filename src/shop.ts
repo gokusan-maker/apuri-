@@ -12,7 +12,15 @@ export const ITEMS: Item[] = [
 
 export const COIN_PER_CORRECT = 1
 
-export type Wallet = { coins: number; owned: string[]; freezes?: number }
+export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string }
+
+// 相棒の部屋の背景
+export const ROOMS: Item[] = [
+  { id: 'meadow', name: '草原', price: 80, icon: '🌿' },
+  { id: 'ocean', name: '海', price: 80, icon: '🌊' },
+  { id: 'space', name: '宇宙', price: 120, icon: '🌌' },
+  { id: 'school', name: '教室', price: 80, icon: '🏫' },
+]
 
 export const FREEZE_PRICE = 50
 export const FREEZE_MAX = 2
@@ -24,7 +32,7 @@ export function buyFreeze(w: Wallet): Wallet | null {
 }
 
 export function buy(w: Wallet, id: string): Wallet | null {
-  const item = ITEMS.find((i) => i.id === id)
+  const item = [...ITEMS, ...ROOMS].find((i) => i.id === id)
   if (!item || w.owned.includes(id) || w.coins < item.price) return null
   return { coins: w.coins - item.price, owned: [...w.owned, id] }
 }
@@ -37,7 +45,8 @@ export function loadWallet(): Wallet {
     const v = raw ? (JSON.parse(raw) as Partial<Wallet>) : null
     return {
       coins: typeof v?.coins === 'number' && v.coins >= 0 ? v.coins : 0,
-      owned: Array.isArray(v?.owned) ? v.owned.filter((x) => ITEMS.some((i) => i.id === x)) : [],
+      owned: Array.isArray(v?.owned) ? v.owned.filter((x) => [...ITEMS, ...ROOMS].some((i) => i.id === x)) : [],
+      ...(typeof v?.room === 'string' && ROOMS.some((r) => r.id === v.room) ? { room: v.room } : {}),
       freezes: typeof v?.freezes === 'number' && v.freezes > 0 ? Math.min(v.freezes, FREEZE_MAX) : 0,
     }
   } catch {
