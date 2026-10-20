@@ -111,8 +111,9 @@ function App() {
   const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
   const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
   // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
-  type Focus = 'weak' | 'fav'
+  type Focus = 'weak' | 'fav' | 'pick'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
+  const [picked, setPicked] = useState<string[]>([]) // 単語一覧から選んだ単語
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
@@ -279,8 +280,8 @@ function App() {
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
   // お気に入りは単語帳の選択に関係なく全部から
   const favWords = useMemo(() => [...WORDS, ...myWords].filter((w) => favorites.includes(w.id)), [myWords, favorites])
-  const focusList = (k: Focus) => (k === 'weak' ? weak : favWords)
-  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り' }
+  const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : words.filter((w) => picked.includes(w.id)))
+  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap])
   // その日はじめて開いたときだけ「今日の復習」を知らせる
@@ -727,6 +728,10 @@ function App() {
             onToggleFavorite={(id) => setFavorites((f) => toggleFavorite(f, id))}
             notes={notes}
             onNote={(id, t) => setNotes((n) => setNote(n, id, t))}
+            onPractice={(id) => {
+              setPicked([id])
+              startCards('pick')
+            }}
           />
         ) : (
           <>

@@ -13,6 +13,7 @@ type Props = {
   onToggleFavorite?: (id: string) => void
   notes?: Record<string, string>
   onNote?: (id: string, text: string) => void
+  onPractice?: (id: string) => void // この単語だけカードで練習
 }
 
 type Filter = 'all' | 'まだ' | '学習中' | '定着' | 'fav'
@@ -30,7 +31,7 @@ function status(box: number | undefined): string {
   return '学習中'
 }
 
-export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite, notes = {}, onNote }: Props) {
+export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite, notes = {}, onNote, onPractice }: Props) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
   const [filter, setFilter] = useState<Filter>('all')
@@ -101,6 +102,11 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                     </>
                   )}
                   {onNote && <Note text={notes[w.id]} onSave={(t) => onNote(w.id, t)} />}
+                  {onPractice && (
+                    <button className="list-link" onClick={() => onPractice(w.id)}>
+                      🃏 この単語をカードで練習
+                    </button>
+                  )}
                 </div>
               )}
             </li>

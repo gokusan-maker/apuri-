@@ -286,6 +286,18 @@ describe('App', () => {
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
   })
 
+  it('単語一覧から1語だけカードで練習できる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
+    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'librar' } })
+    fireEvent.click(screen.getByRole('button', { name: /library/ }))
+    fireEvent.click(screen.getByText('🃏 この単語をカードで練習'))
+    expect(document.querySelector('.card .en')?.textContent).toContain('library')
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText(/カードを一周しました/)).toBeInTheDocument()
+  })
+
   it('苦手単語をカードで復習でき、「覚えた」で苦手から外れる', () => {
     localStorage.setItem('eitan:mistakes', JSON.stringify({ [WORDS[3].id]: 1, [WORDS[5].id]: 2 }))
     render(<App />)
