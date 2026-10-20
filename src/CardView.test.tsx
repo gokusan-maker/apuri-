@@ -42,3 +42,21 @@ describe('カードの設定', () => {
     expect(spoken).toEqual([w.en])
   })
 })
+
+it('めくったあと右にスワイプすると「覚えた」', () => {
+  const answers: boolean[] = []
+  render(<Card card={WORDS[0]} onAnswer={(c) => answers.push(c)} />)
+  const card = document.querySelector('.card')!
+  // めくる前のスワイプは無視
+  fireEvent.pointerDown(card, { clientX: 0, clientY: 0 })
+  fireEvent.pointerUp(card, { clientX: 200, clientY: 0 })
+  expect(answers).toEqual([])
+  fireEvent.click(screen.getByText('意味を見る'))
+  fireEvent.pointerDown(card, { clientX: 0, clientY: 0 })
+  fireEvent.pointerMove(card, { clientX: 100, clientY: 0 })
+  fireEvent.pointerUp(card, { clientX: 150, clientY: 5 })
+  fireEvent.click(screen.getByText('意味を見る'))
+  fireEvent.pointerDown(card, { clientX: 200, clientY: 0 })
+  fireEvent.pointerUp(card, { clientX: 50, clientY: 0 })
+  expect(answers).toEqual([true, false])
+})

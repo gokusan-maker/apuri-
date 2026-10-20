@@ -526,3 +526,8 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 }
 .bubble-en { font-weight: 700; }
 .bubble-ja { font-size: 0.8rem; color: var(--muted); }
+
+.card { touch-action: pan-y; }
+.card.swipe-good { box-shadow: 0 0 0 3px #16a34a inset; }
+.card.swipe-again { box-shadow: 0 0 0 3px var(--again) inset; }
+.swipe-hint { margin: 10px 0 0; font-size: 0.75rem; color: var(--muted); }
