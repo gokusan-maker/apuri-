@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react'
-import { addMany, addMyWord, parseBulk, removeMyWord, validate } from './myWords'
+import { addMany, addMyWord, exportText, parseBulk, removeMyWord, validate } from './myWords'
 import type { Word } from './words'
 
 type Props = {
@@ -15,6 +15,7 @@ export function MyWords({ list, onChange }: Props) {
   const [error, setError] = useState('')
   const [bulk, setBulk] = useState('')
   const [bulkMsg, setBulkMsg] = useState('')
+  const [copied, setCopied] = useState(false)
 
   function submit(e: FormEvent) {
     e.preventDefault()
@@ -72,6 +73,24 @@ export function MyWords({ list, onChange }: Props) {
           </p>
         )}
       </details>
+      {list.length > 0 && (
+        <details className="bulk">
+          <summary>テキストで書き出す</summary>
+          <p className="stats-note">コピーして、ほかの端末の「まとめて追加」に貼りつけられます</p>
+          <textarea readOnly value={exportText(list)} rows={4} aria-label="書き出したテキスト" />
+          <button
+            className="flip"
+            onClick={() => {
+              navigator.clipboard
+                ?.writeText(exportText(list))
+                .then(() => setCopied(true))
+                .catch(() => setCopied(false))
+            }}
+          >
+            {copied ? 'コピーしました' : 'コピーする'}
+          </button>
+        </details>
+      )}
       {list.length > 0 && (
         <ul className="weak-list">
           {list.map((w) => (

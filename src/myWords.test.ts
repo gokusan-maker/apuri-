@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addMany, addMyWord, loadMyWords, loadUseMy, parseBulk, removeMyWord, saveMyWords, saveUseMy, validate } from './myWords'
+import { addMany, addMyWord, exportText, loadMyWords, loadUseMy, parseBulk, removeMyWord, saveMyWords, saveUseMy, validate } from './myWords'
 
 describe('マイ単語帳', () => {
   beforeEach(() => localStorage.clear())
@@ -51,4 +51,11 @@ describe('まとめて追加', () => {
     expect(r.added).toBe(1)
     expect(r.skipped).toBe(2)
   })
+})
+
+it('書き出したテキストは、まとめて追加でそのまま読みこめる', () => {
+  const list = addMany([], [{ en: 'sunflower', ja: 'ひまわり' }, { en: 'look up', ja: '調べる' }], 1).list
+  const text = exportText(list)
+  expect(text).toBe('sunflower,ひまわり\nlook up,調べる')
+  expect(parseBulk(text).words).toEqual([{ en: 'sunflower', ja: 'ひまわり' }, { en: 'look up', ja: '調べる' }])
 })

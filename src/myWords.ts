@@ -101,3 +101,8 @@ export function addMany(list: Word[], items: NewWord[], now = Date.now()): { lis
   })
   return { list: next, added, skipped }
 }
+
+// 書き出し：「まとめて追加」にそのまま貼れる「英語,意味」の行
+export function exportText(list: Word[]): string {
+  return list.map((w) => `${w.en},${w.ja}`).join('\n')
+}
