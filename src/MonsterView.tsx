@@ -14,6 +14,7 @@ type Props = {
   room?: string
   title?: string // 称号
   cheer?: Line | null // 外から見せるひとこと（応援）
+  feeling?: { icon: string; text: string } // ごきげん
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -151,7 +152,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -230,7 +231,12 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             )}
           </p>
         )}
-        {title && <p className="title-badge">🎖 {title}</p>}
+        {(title || feeling) && (
+          <p className="title-badge">
+            {title && `🎖 ${title}`}
+            {feeling && <span className="feeling">{` ${feeling.icon} ${feeling.text}`}</span>}
+          </p>
+        )}
         <div className="xp-bar" role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
           <div className="xp-fill" style={{ width: `${(into / need) * 100}%` }} />
         </div>

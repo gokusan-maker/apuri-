@@ -55,6 +55,7 @@ import {
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { titleFor } from './titles'
+import { feelingFor } from './feeling'
 import { cheerFor, type Line } from './talk'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
@@ -422,6 +423,7 @@ function App() {
           room={wallet.room}
           title={titleFor(totals.studyDays ?? 0)}
           cheer={cheer}
+          feeling={feelingFor(studiedToday)}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}

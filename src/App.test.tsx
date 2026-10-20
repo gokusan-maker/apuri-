@@ -506,10 +506,10 @@ describe('App', () => {
   it('学習した日数で称号が出る', () => {
     localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, goals: 0, studyDays: 2 }))
     render(<App />)
-    expect(screen.getByText('🎖 見習い')).toBeInTheDocument()
+    expect(document.querySelector('.title-badge')!.textContent).toContain('🎖 見習い')
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    expect(screen.getByText('🎖 かけだし')).toBeInTheDocument()
+    expect(document.querySelector('.title-badge')!.textContent).toContain('🎖 かけだし')
   })
 
   it('相棒と出会って7日で記念日のお祝い（1回だけ）', () => {

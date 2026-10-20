@@ -680,3 +680,4 @@ button:focus:not(:focus-visible) { outline: none; }
   .weak-ja { color: #000 !important; white-space: normal; }
 }
 .today-summary { margin: 12px 0 0; padding: 10px 14px; border-radius: 12px; background: var(--card); }
+.feeling { color: var(--muted); font-weight: 400; margin-left: 4px; }
