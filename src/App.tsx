@@ -29,16 +29,19 @@ import { Quiz } from './QuizView'
 import { speak } from './speech'
 import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
+import { loadStages, recordStars, saveStages } from './stages'
+import { Stages } from './StageView'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf } from './words'
 
-type Tab = 'card' | 'quiz' | 'time' | 'stats' | 'settings'
+type Tab = 'card' | 'stage' | 'quiz' | 'time' | 'stats' | 'settings'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'card', icon: '🃏', label: 'カード' },
+  { id: 'stage', icon: '🗺️', label: 'ステージ' },
   { id: 'quiz', icon: '❓', label: 'クイズ' },
   { id: 'time', icon: '⏱', label: 'タイム' },
   { id: 'stats', icon: '📊', label: '記録' },
@@ -123,6 +126,9 @@ function App() {
     }, 2000)
   }
 
+
+  const [stages, setStages] = useState(loadStages)
+  useEffect(() => saveStages(stages), [stages])
 
   const [levels, setLevels] = useState(loadLevels)
   useEffect(() => saveLevels(levels), [levels])
@@ -212,7 +218,14 @@ function App() {
         )}
       </header>
 
-      {mode === 'settings' ? (
+      {mode === 'stage' ? (
+        <Stages
+          levels={levels}
+          record={stages}
+          onAnswer={onAnswer}
+          onClear={(id, stars) => setStages((r) => recordStars(r, id, stars))}
+        />
+      ) : mode === 'settings' ? (
         <SettingsPanel settings={settings} onChange={setSettings} />
       ) : mode === 'stats' ? (
         <section className="card stats-view">

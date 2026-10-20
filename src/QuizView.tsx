@@ -31,9 +31,10 @@ type Props = {
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number, total: number) => void
+  onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words)))
   const [index, setIndex] = useState(0)
@@ -133,7 +134,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
-        <button className="flip" onClick={() => restart()}>
+        <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>
           もう1回
         </button>
       </section>

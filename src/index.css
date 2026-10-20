@@ -361,3 +361,28 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .party-pick { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; border: none; background: transparent; color: inherit; padding: 0; }
 .badge-grid li.active { outline: 3px solid var(--accent); }
 .badge-toast.second { bottom: calc(150px + env(safe-area-inset-bottom)); }
+
+.tabbar button { font-size: 0.7rem; }
+.stages { text-align: left; }
+.stages h2 { margin: 0 0 4px; font-size: 1.2rem; }
+.stage-level h3 { margin: 16px 0 8px; font-size: 1rem; }
+.stage-total { color: #f59e0b; font-size: 0.85rem; margin-left: 6px; }
+.stage-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; }
+.stage-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 0;
+  border: 2px solid var(--accent);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--fg);
+}
+.stage-btn.cleared { background: color-mix(in srgb, #f59e0b 15%, var(--bg)); border-color: #f59e0b; }
+.stage-btn:disabled { border-color: transparent; opacity: 0.5; }
+.stage-no { font-weight: 700; font-size: 1.1rem; }
+.stage-stars { font-size: 0.65rem; color: #f59e0b; letter-spacing: -1px; }
+.stage-head { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-weight: 700; }
+.stage-back { border: none; background: transparent; color: var(--accent); padding: 4px 0; }
+.stage-result { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--card); text-align: center; font-weight: 700; }
+.stage-result.clear { color: #f59e0b; font-size: 1.2rem; animation: pop 0.4s; }
