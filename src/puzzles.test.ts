@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, calcQ, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -119,6 +119,17 @@ describe('パズル', () => {
       const row = COMPARES.find(([a]) => a === base)!
       expect(q.choices[q.answer]).toBe(q.prompt.includes('最上級') ? row[2] : row[1])
       expect(new Set(q.choices).size).toBe(4)
+    }
+  })
+
+  it('3単現・ing形：正解が合い、選択肢は4つでちがう', () => {
+    for (let i = 0; i < 100; i++) {
+      for (const [make, table] of [[thirdQ, THIRDS], [ingQ, INGS]] as const) {
+        const q = make()
+        const base = q.prompt.match(/「(.+)」/)![1]
+        expect(table.find(([a]) => a === base)![1]).toBe(q.choices[q.answer])
+        expect(new Set(q.choices).size).toBe(4)
+      }
     }
   })
 })

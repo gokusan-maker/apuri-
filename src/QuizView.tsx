@@ -23,7 +23,7 @@ import { Versus } from './VersusView'
 import { Memory } from './MemoryView'
 import { Bingo } from './BingoView'
 import { Puzzle } from './PuzzleView'
-import { abcQ, alphabetQ, calcQ, compareQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -119,6 +119,8 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'plural', label: '👥 複数形', group: '文法・読解' },
   { id: 'past-ed', label: '⏪ 過去形のつづり', group: '文法・読解' },
   { id: 'compare', label: '📏 比較級・最上級', group: '文法・読解' },
+  { id: 'third', label: '🧍 3単現の s', group: '文法・読解' },
+  { id: 'ing', label: '🏃 ing形のつづり', group: '文法・読解' },
   { id: 'sequence', label: '📅 順番クイズ', group: 'パズル・ゲーム' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
@@ -466,6 +468,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Memory words={targets && targets.length >= 6 ? targets : words} onAnswer={onAnswer} onClear={onGame} />
+      </>
+    )
+  }
+
+  if (direction === 'third' || direction === 'ing') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Puzzle key={`${direction}-${count}`} make={() => (direction === 'third' ? thirdQ() : ingQ())} onAnswer={onAnswer} count={count} />
       </>
     )
   }

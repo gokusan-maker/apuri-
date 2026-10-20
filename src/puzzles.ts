@@ -251,3 +251,39 @@ export function compareQ(rng: Rng = Math.random): PuzzleQ {
     wordId: idOf(base) ?? '',
   }
 }
+
+// 3単現の s
+export const THIRDS: [string, string][] = [
+  ['play', 'plays'], ['go', 'goes'], ['study', 'studies'], ['have', 'has'], ['watch', 'watches'], ['wash', 'washes'],
+  ['do', 'does'], ['try', 'tries'], ['fix', 'fixes'], ['teach', 'teaches'], ['enjoy', 'enjoys'], ['fly', 'flies'],
+  ['like', 'likes'], ['carry', 'carries'], ['catch', 'catches'], ['stay', 'stays'],
+]
+
+function wrongThirds(w: string): string[] {
+  return [w + 's', w + 'es', w.slice(0, -1) + 'ies', w.slice(0, -1) + 's', w + 'ss', w.slice(0, -1) + 'es']
+}
+
+export function thirdQ(rng: Rng = Math.random): PuzzleQ {
+  const [base, ans] = THIRDS[Math.floor(rng() * THIRDS.length)]
+  const wrong = shuffle([...new Set(wrongThirds(base))].filter((x) => x !== ans && x !== base), rng).slice(0, 3)
+  const choices = shuffle([ans, ...wrong], rng)
+  return { prompt: `He ___ … 「${base}」の3単現の形は？`, choices, answer: choices.indexOf(ans), why: `${base} → ${ans}`, wordId: idOf(base) ?? '' }
+}
+
+// ing形のつづり
+export const INGS: [string, string][] = [
+  ['run', 'running'], ['make', 'making'], ['swim', 'swimming'], ['write', 'writing'], ['sit', 'sitting'], ['play', 'playing'],
+  ['come', 'coming'], ['stop', 'stopping'], ['study', 'studying'], ['use', 'using'], ['get', 'getting'], ['dance', 'dancing'],
+  ['cut', 'cutting'], ['lie', 'lying'], ['die', 'dying'], ['read', 'reading'],
+]
+
+function wrongIngs(w: string): string[] {
+  return [w + 'ing', w + w.slice(-1) + 'ing', w.slice(0, -1) + 'ing', w + 'eing', w.slice(0, -2) + 'ying', w + 'ning']
+}
+
+export function ingQ(rng: Rng = Math.random): PuzzleQ {
+  const [base, ans] = INGS[Math.floor(rng() * INGS.length)]
+  const wrong = shuffle([...new Set(wrongIngs(base))].filter((x) => x !== ans && x.length > 3), rng).slice(0, 3)
+  const choices = shuffle([ans, ...wrong], rng)
+  return { prompt: `「${base}」の ing形は？`, choices, answer: choices.indexOf(ans), why: `${base} → ${ans}`, wordId: idOf(base) ?? '' }
+}
