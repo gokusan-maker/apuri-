@@ -40,3 +40,12 @@ it('日→英の選択肢（英単語）も4つで重複しない', () => {
     expect(q.choices[q.answer]).toBe(w.en)
   }
 })
+
+it('空の選択肢は作らない（例文のないマイ単語が混ざっていても）', () => {
+  const my = { id: 'my:1', en: 'sunflower', ja: 'ひまわり', example: '', exampleJa: '' }
+  const all = [...WORDS.slice(0, 6), my]
+  for (let i = 0; i < 20; i++) {
+    const q = makeQuestion(all[0], all, (w) => w.exampleJa)
+    expect(q.choices.every((c) => c !== '')).toBe(true)
+  }
+})

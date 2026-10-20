@@ -28,7 +28,7 @@ export function makeQuestion<T extends { id: string }>(
   const wrong: string[] = []
   for (const w of shuffle(all, rng)) {
     const l = label(w)
-    if (w.id === word.id || seen.has(l)) continue
+    if (w.id === word.id || !l || seen.has(l)) continue
     seen.add(l)
     wrong.push(l)
     if (wrong.length === 3) break

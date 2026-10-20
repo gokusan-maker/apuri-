@@ -153,3 +153,23 @@ it('キーボード：数字キーで選び、Enter で次へ', () => {
   fireEvent.keyDown(window, { key: 'Enter' })
   expect(screen.getByText(/^2 \/ 2/)).toBeInTheDocument()
 })
+
+it('🗣 例文リスニング：例文を読み上げ、訳を選ぶ', () => {
+  const spoken: string[] = []
+  Object.assign(window, {
+    SpeechSynthesisUtterance: class {
+      text: string
+      constructor(t: string) {
+        this.text = t
+      }
+    },
+    speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+  })
+  const words = WORDS.slice(0, 8)
+  render(<Quiz words={words} count={1} direction="sentence" />)
+  const w = words.find((x) => x.example === spoken[0])!
+  expect(w).toBeDefined()
+  fireEvent.click(screen.getByRole('button', { name: w.exampleJa }))
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+  expect(screen.getByText(w.example)).toBeInTheDocument()
+})

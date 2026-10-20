@@ -21,21 +21,25 @@ import type { Word } from './words'
 // grammar：文法ミニ解説＋確認問題
 // order：例文の並べ替え
 // dictation：音声を聞いて書く
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// sentence：例文を聞いて訳を選ぶ
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
-const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
+const label = (d: Direction) =>
+  d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : d === 'sentence' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
 // 穴埋めにできる単語が1つも無いとき（例文なしのマイ単語だけなど）は通常の単語から出す
 const pool = (d: Direction, ws: Word[], all: Word[]) => {
-  if (d !== 'blank') return ws
-  const ok = ws.filter(canBlank)
-  return ok.length > 0 ? ok : all.filter(canBlank)
+  const can = d === 'blank' ? canBlank : d === 'sentence' ? (w: Word) => !!w.example && !!w.exampleJa : null
+  if (!can) return ws
+  const ok = ws.filter(can)
+  return ok.length > 0 ? ok : all.filter(can)
 }
 
 const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
+  { id: 'sentence', label: '🗣 例文リスニング' },
   { id: 'spell', label: '✏️ スペル' },
   { id: 'dictation', label: '🎧 書き取り' },
   { id: 'blank', label: '📝 穴埋め' },
@@ -70,7 +74,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   const q = questions[index]
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'blank'].includes(direction)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank'].includes(direction)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -87,6 +91,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   // リスニングは問題が変わるたびに自動で読み上げる
   useEffect(() => {
     if (direction === 'listen' && q) speak(q.word.en)
+    if (direction === 'sentence' && q) speak(q.word.example)
   }, [direction, q])
 
   function pick(i: number) {
@@ -101,12 +106,12 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
-      onAnswer?.(true, xp, q.word.id, direction === 'listen' ? 'ear' : 'quiz')
+      onAnswer?.(true, xp, q.word.id, direction === 'listen' || direction === 'sentence' ? 'ear' : 'quiz')
     } else {
       setCombo(0)
       setLastXp(0)
       playWrong()
-      onAnswer?.(false, 0, q.word.id, direction === 'listen' ? 'ear' : 'quiz')
+      onAnswer?.(false, 0, q.word.id, direction === 'listen' || direction === 'sentence' ? 'ear' : 'quiz')
     }
   }
 
@@ -236,6 +241,13 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       </p>
       {direction === 'blank' ? (
         <BlankPrompt word={q.word} revealed={picked !== null} />
+      ) : direction === 'sentence' ? (
+        <>
+          <button className="listen" onClick={() => speak(q.word.example)} aria-label="もう一度聞く">
+            🔊
+          </button>
+          <p className="example listen-sentence">{picked !== null ? q.word.example : '例文を聞いて、意味を選ぼう'}</p>
+        </>
       ) : direction === 'listen' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
