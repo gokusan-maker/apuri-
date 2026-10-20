@@ -72,4 +72,18 @@ export const SOUNDS: GrammarUnit[] = [
       { sentence: 't を読まないのは ___', choices: ['listen', 'little'], answer: 0, why: 'listen は t を読まず「リスン」。' },
     ],
   },
+  {
+    id: 'snd-stress',
+    title: 'アクセント（強く読むところ）',
+    points: ['英語の単語には強く読むところ（アクセント）が1つある。カタカナ語とちがうことが多いので注意。banana は ba-NA-na、hotel は ho-TEL、guitar は gui-TAR と読む。'],
+    examples: [
+      { en: 'I want a banana.', ja: 'バナナがほしい。（ba-NA-na）' },
+      { en: 'We stayed at a hotel.', ja: 'ホテルに泊まった。（ho-TEL）' },
+    ],
+    questions: [
+      { sentence: 'banana の強く読むところは ___', choices: ['BA-na-na', 'ba-NA-na', 'ba-na-NA'], answer: 1, why: '真ん中の NA を強く読む。' },
+      { sentence: 'computer の強く読むところは ___', choices: ['COM-pu-ter', 'com-PU-ter', 'com-pu-TER'], answer: 1, why: 'PU を強く読む（コンピューター）。' },
+      { sentence: 'Japan の強く読むところは ___', choices: ['JA-pan', 'ja-PAN'], answer: 1, why: 'うしろの PAN を強く読む。Japanese も ja-pa-NESE とうしろが強い。' },
+    ],
+  },
 ]
