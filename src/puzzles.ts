@@ -198,3 +198,22 @@ export function pluralQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([many, ...wrong], rng)
   return { prompt: `「${one}」の複数形は？`, choices, answer: choices.indexOf(many), why: `${one} → ${many}`, wordId: idOf(one) ?? '' }
 }
+
+// 過去形のつづり（規則動詞）：ed のつけ方
+export const PASTS: [string, string][] = [
+  ['play', 'played'], ['study', 'studied'], ['stop', 'stopped'], ['live', 'lived'], ['try', 'tried'], ['plan', 'planned'],
+  ['enjoy', 'enjoyed'], ['carry', 'carried'], ['use', 'used'], ['walk', 'walked'], ['cry', 'cried'], ['drop', 'dropped'],
+  ['like', 'liked'], ['visit', 'visited'], ['stay', 'stayed'], ['worry', 'worried'], ['clean', 'cleaned'], ['move', 'moved'],
+]
+
+function wrongPasts(w: string): string[] {
+  const out = [w + 'ed', w + 'd', w + w.slice(-1) + 'ed', w.slice(0, -1) + 'ied', w.slice(0, -1) + 'ed']
+  return out.filter((x) => x.length > w.length - 1)
+}
+
+export function pastQ(rng: Rng = Math.random): PuzzleQ {
+  const [base, past] = PASTS[Math.floor(rng() * PASTS.length)]
+  const wrong = shuffle([...new Set(wrongPasts(base))].filter((x) => x !== past), rng).slice(0, 3)
+  const choices = shuffle([past, ...wrong], rng)
+  return { prompt: `「${base}」の過去形は？`, choices, answer: choices.indexOf(past), why: `${base} → ${past}`, wordId: idOf(base) ?? '' }
+}
