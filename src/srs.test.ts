@@ -31,3 +31,8 @@ it('これから1週間の復習予定（期日を過ぎたものは今日）', 
   expect(upcoming(p, '2026-10-20')).toEqual([2, 1, 0, 0, 0, 0, 1])
   expect(upcoming(p, '2026-10-20', 7, new Set(['c']))).toEqual([0, 1, 0, 0, 0, 0, 0])
 })
+
+it('「かんたん」は箱を2つ進める（上限あり）', () => {
+  expect(grade(undefined, true, '2026-10-20', true)).toEqual({ box: 2, due: '2026-10-23' })
+  expect(grade({ box: 4, due: '2026-10-20' }, true, '2026-10-20', true).box).toBe(5)
+})

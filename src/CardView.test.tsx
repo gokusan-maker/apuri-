@@ -71,3 +71,16 @@ it('キーボード：スペースでめくって、→で覚えた、←でま�
   fireEvent.keyDown(window, { key: 'ArrowLeft' })
   expect(answers).toEqual([true, false])
 })
+
+it('「かんたん」ボタンと↑キー', () => {
+  const answers: [boolean, boolean | undefined][] = []
+  render(<Card card={WORDS[0]} onAnswer={(c, e) => answers.push([c, e])} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  fireEvent.click(screen.getByText('かんたん'))
+  fireEvent.keyDown(window, { key: ' ' })
+  fireEvent.keyDown(window, { key: 'ArrowUp' })
+  expect(answers).toEqual([
+    [true, true],
+    [true, true],
+  ])
+})

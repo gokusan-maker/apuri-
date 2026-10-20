@@ -250,10 +250,10 @@ function App() {
 
   const focusCard = cardFocus ? focusList(cardFocus.kind).find((w) => !cardFocus.done.includes(w.id)) : undefined
 
-  function answerFocus(correct: boolean) {
+  function answerFocus(correct: boolean, easy = false) {
     if (!focusCard || !cardFocus) return
     setCardFocus({ ...cardFocus, done: [...cardFocus.done, focusCard.id] })
-    setProgress({ ...progress, [focusCard.id]: grade(progress[focusCard.id], correct, today) })
+    setProgress({ ...progress, [focusCard.id]: grade(progress[focusCard.id], correct, today, easy) })
     studied(correct)
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, focusCard.id))
@@ -274,10 +274,10 @@ function App() {
 
   const [shown, setShown] = useState(0) // 同じカードがもう一度出ても新しいカードとして扱う
 
-  function answer(correct: boolean) {
+  function answer(correct: boolean, easy = false) {
     setShown((n) => n + 1)
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
-    setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
+    setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today, easy) })
     studied(correct)
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, card.id))

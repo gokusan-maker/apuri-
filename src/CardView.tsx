@@ -6,7 +6,7 @@ import type { Word } from './words'
 
 type Props = {
   card: Word | undefined
-  onAnswer: (correct: boolean) => void
+  onAnswer: (correct: boolean, easy?: boolean) => void
   autoSpeak?: boolean
   jaFirst?: boolean // 表に日本語、裏に英語
   favorite?: boolean
@@ -38,6 +38,10 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
       answer(true)
       return true
     }
+    if (flipped && key === 'ArrowUp') {
+      answer(true, true)
+      return true
+    }
     if (flipped && key === 'ArrowLeft') {
       answer(false)
       return true
@@ -66,10 +70,10 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
     )
   }
 
-  function answer(correct: boolean) {
+  function answer(correct: boolean, easy = false) {
     setFlipped(false)
     setDx(0)
-    onAnswer(correct)
+    onAnswer(correct, easy)
   }
 
   // めくったあとは、右にスワイプで「覚えた」、左で「まだ」
@@ -153,6 +157,9 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
             </button>
             <button className="good" onClick={() => answer(true)}>
               覚えた
+            </button>
+            <button className="easy" onClick={() => answer(true, true)}>
+              かんたん
             </button>
           </div>
           <p className="swipe-hint">← スワイプでも答えられるよ →</p>

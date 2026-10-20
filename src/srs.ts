@@ -22,8 +22,9 @@ export function addDays(day: string, n: number): string {
   return dayKey(new Date(y, m - 1, d + n))
 }
 
-export function grade(prev: Progress | undefined, correct: boolean, today: string): Progress {
-  const box = correct ? Math.min((prev?.box ?? 0) + 1, INTERVALS.length - 1) : 0
+// easy：「かんたん」のときは箱を2つ進める
+export function grade(prev: Progress | undefined, correct: boolean, today: string, easy = false): Progress {
+  const box = correct ? Math.min((prev?.box ?? 0) + (easy ? 2 : 1), INTERVALS.length - 1) : 0
   return { box, due: addDays(today, INTERVALS[box]) }
 }
 
