@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { WordList } from './WordListView'
 import { WORDS } from './words'
 
@@ -18,4 +18,12 @@ describe('単語一覧の絞り込み', () => {
     fireEvent.click(screen.getByRole('button', { name: '★' }))
     expect(screen.getByText(words[2].en)).toBeInTheDocument()
   })
+})
+
+it('🖨 で印刷できる', () => {
+  const print = vi.spyOn(window, 'print').mockImplementation(() => {})
+  render(<WordList words={WORDS.slice(0, 3)} progress={{}} onClose={() => {}} />)
+  fireEvent.click(screen.getByText('🖨 印刷・PDF'))
+  expect(print).toHaveBeenCalled()
+  print.mockRestore()
 })

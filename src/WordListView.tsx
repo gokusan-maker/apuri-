@@ -62,7 +62,12 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
           </button>
         ))}
       </div>
-      <p className="stats-note">{hits.length}語</p>
+      <p className="stats-note">
+        {hits.length}語
+        <button className="note-btn print-btn" onClick={() => window.print()}>
+          🖨 印刷・PDF
+        </button>
+      </p>
       <ul className="words">
         {hits.map((w) => {
           const box = progress[w.id]?.box

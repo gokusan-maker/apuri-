@@ -668,3 +668,14 @@ button:focus:not(:focus-visible) { outline: none; }
 .shiritori-chain { font-size: 1.2rem; font-weight: 700; margin: 4px 0 8px; }
 .choice-ja { font-size: 0.8rem; color: var(--muted); margin-left: 6px; }
 .listen-through .listen { display: block; margin: 8px auto; } .listen-ja { margin: 12px 0 0; }
+
+/* 印刷：単語一覧だけを、英語と意味の表のように出す */
+@media print {
+  .tabbar, header, .search, .word-filter, .stage-back, .print-btn, .fav, .badge-toast, .weak-banner, .weekend { display: none !important; }
+  body, .app, .card { background: #fff !important; color: #000 !important; box-shadow: none !important; }
+  .app { padding: 0; max-width: none; }
+  .words li { break-inside: avoid; border-bottom: 1px solid #ccc; }
+  .word-row { padding: 4px 0; }
+  .word-status { display: none; }
+  .weak-ja { color: #000 !important; white-space: normal; }
+}
