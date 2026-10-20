@@ -30,6 +30,7 @@ import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
 import { DiaryBox } from './DiaryView'
+import { GROUPS } from './puzzles'
 import { loadDiary } from './diary'
 import { shareText, weekReportText } from './shareText'
 import { loadPlayed } from './playedModes'
@@ -345,7 +346,7 @@ function App() {
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
   // お気に入りは単語帳の選択に関係なく全部から
   const favWords = useMemo(() => [...WORDS, ...myWords].filter((w) => favorites.includes(w.id)), [myWords, favorites])
-  const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : k === 'week' ? weekAgo : k === 'thisweek' ? thisWeekWords : words.filter((w) => picked.includes(w.id)))
+  const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : k === 'week' ? weekAgo : k === 'thisweek' ? thisWeekWords : [...WORDS, ...myWords].filter((w) => picked.includes(w.id)))
   const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の', week: '1週間前に学んだ単語', thisweek: '今週学んだ単語' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday, settings.newPerDay + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap, settings.newPerDay])
@@ -743,6 +744,22 @@ function App() {
                 📤 今週のレポートをシェア
               </button>
               <DiaryBox today={today} />
+              <details className="theme-practice">
+                <summary>🗂 テーマで練習</summary>
+                <div className="levels">
+                  {GROUPS.map((g) => (
+                    <button
+                      key={g.name}
+                      onClick={() => {
+                        setPicked(g.ids)
+                        startCards('pick')
+                      }}
+                    >
+                      {g.name}
+                    </button>
+                  ))}
+                </div>
+              </details>
               <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
               {thisWeekWords.length >= 4 && (
                 <button className="list-link" onClick={() => startQuiz('thisweek')}>
