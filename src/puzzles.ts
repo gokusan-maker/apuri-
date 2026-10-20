@@ -24,3 +24,29 @@ export function abcQ(rng: Rng = Math.random): PuzzleQ {
     wordId: first.id,
   }
 }
+
+// 反対の意味のペア（どちらかは単語帳にある語）
+export const OPPOSITES: [string, string][] = [
+  ['big', 'small'], ['hot', 'cold'], ['long', 'short'], ['new', 'old'], ['fast', 'slow'], ['happy', 'sad'],
+  ['easy', 'difficult'], ['early', 'late'], ['open', 'close'], ['buy', 'sell'], ['win', 'lose'], ['remember', 'forget'],
+  ['heavy', 'light'], ['rich', 'poor'], ['strong', 'weak'], ['empty', 'full'], ['quiet', 'noisy'],
+  ['arrive', 'leave'], ['start', 'finish'], ['before', 'after'], ['clean', 'dirty'], ['cheap', 'expensive'], ['safe', 'dangerous'],
+  ['increase', 'decrease'], ['borrow', 'lend'], ['true', 'false'],
+]
+
+const idOf = (en: string) => WORDS.find((w) => w.en === en)?.id
+
+export function oppositeQ(rng: Rng = Math.random): PuzzleQ {
+  const [a, b] = OPPOSITES[Math.floor(rng() * OPPOSITES.length)]
+  const [ask, ans] = rng() < 0.5 ? [a, b] : [b, a]
+  const used = new Set([a, b])
+  const wrong = shuffle(OPPOSITES.flat().filter((w) => !used.has(w)), rng).slice(0, 3)
+  const choices = shuffle([ans, ...wrong], rng)
+  return {
+    prompt: `「${ask}」の反対の意味の単語は？`,
+    choices,
+    answer: choices.indexOf(ans),
+    why: `${ask} ↔ ${ans}`,
+    wordId: idOf(ask) ?? idOf(ans) ?? '',
+  }
+}
