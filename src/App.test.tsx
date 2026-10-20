@@ -674,6 +674,14 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:review-done')).toBe(dayKey())
   })
 
+  it('学習した日数でなつき度が上がると、相棒がお礼を言う', () => {
+    localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, studyDays: 2 }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(toast('💕 なつき度アップ！')).toBeInTheDocument()
+  })
+
   it('お知らせが重なると順番に出る', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

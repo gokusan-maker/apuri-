@@ -27,6 +27,7 @@ import { Evolve } from './EvolveView'
 import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
+import { bondHearts, bondLevel } from './bond'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
@@ -204,6 +205,10 @@ function App() {
       const bonus = (r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS) + early
       setWallet((w) => ({ ...w, coins: w.coins + bonus }))
       pushToast([{ id: 'login', text: `${early ? '早起きえらい！' : '今日もえらい！'} 🪙${bonus}`, counter: 'answers', target: 0 }])
+      const days = (totals.studyDays ?? 0) + 1
+      if (bondLevel(days) > bondLevel(days - 1)) {
+        pushToast([{ id: 'bond', text: `${monster.name ?? formOf(monster).name}「いつもありがとう！」 ${bondHearts(bondLevel(days))}`, counter: 'answers', target: 0 }])
+      }
     }
     if (r.used) setWallet((w) => ({ ...w, freezes: Math.max(0, (w.freezes ?? 0) - 1) }))
     const next = addToday(todayCount, today)
@@ -822,6 +827,8 @@ function App() {
                 ? '🍀 ラッキー！'
                 : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
+                : missionToast[0].id === 'bond'
+                ? '💕 なつき度アップ！'
                 : missionToast[0].id === 'review'
                 ? '📚 復習コンプリート！'
                 : missionToast[0].id === 'login'
