@@ -32,6 +32,7 @@ export const OPPOSITES: [string, string][] = [
   ['heavy', 'light'], ['rich', 'poor'], ['strong', 'weak'], ['empty', 'full'], ['quiet', 'noisy'],
   ['arrive', 'leave'], ['start', 'finish'], ['before', 'after'], ['clean', 'dirty'], ['cheap', 'expensive'], ['safe', 'dangerous'],
   ['increase', 'decrease'], ['borrow', 'lend'], ['true', 'false'],
+  ['warm', 'cool'], ['dark', 'bright'], ['sweet', 'bitter'], ['come', 'go'], ['laugh', 'cry'], ['question', 'answer'], ['teach', 'learn'], ['accept', 'refuse'], ['always', 'never'],
 ]
 
 const idOf = (en: string) => WORDS.find((w) => w.en === en)?.id
