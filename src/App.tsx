@@ -427,6 +427,7 @@ function App() {
             favorites={favWords}
             calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
             minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
+            bestCombo={totals.bestCombo ?? 0}
             onReviewFav={() => startQuiz('fav')}
             onReviewFavCards={() => startCards('fav')}
             schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
@@ -464,6 +465,7 @@ function App() {
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
+            onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
           />
         </>
       ) : mode === 'time' ? (

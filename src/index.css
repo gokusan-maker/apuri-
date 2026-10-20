@@ -594,3 +594,6 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .note.edit textarea { flex: 1; padding: 6px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }
 .note.edit button { border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); padding: 0 12px; }
 .today-banner span { display: flex; gap: 4px; }
+.mega-combo { margin: 10px 0 0; font-size: 1.5rem; font-weight: 800; color: #f97316; animation: mega 0.8s; text-shadow: 0 2px 8px rgb(249 115 22 / 0.4); }
+@keyframes mega { 0% { transform: scale(0.3); opacity: 0; } 60% { transform: scale(1.25); opacity: 1; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .mega-combo { animation: none; } }

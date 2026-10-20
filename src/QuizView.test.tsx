@@ -185,3 +185,17 @@ it('🎲 ミックス：1問ごとに英→日・日→英・リスニングの�
   }
   expect(screen.getByText(/問正解/)).toBeInTheDocument()
 })
+
+it('10問つづけて正解すると特別な演出、コンボ数を知らせる', () => {
+  const words = WORDS.slice(0, 20)
+  const combos: number[] = []
+  render(<Quiz words={words} count={10} onCombo={(c) => combos.push(c)} />)
+  for (let i = 0; i < 10; i++) {
+    const en = document.querySelector('.quiz .en')!.textContent
+    const w = words.find((x) => x.en === en)!
+    fireEvent.click(screen.getByRole('button', { name: w.ja }))
+    if (i < 9) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('🔥10コンボ！ すごい！')).toBeInTheDocument()
+  expect(combos).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+})

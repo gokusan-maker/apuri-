@@ -74,11 +74,12 @@ type Props = {
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number, total: number) => void
+  onCombo?: (combo: number) => void // 正解するたびに今のコンボ数
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart, lockDirection = false }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
   const [index, setIndex] = useState(0)
@@ -125,6 +126,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
+      onCombo?.(c)
       onAnswer?.(true, xp, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
     } else {
       setCombo(0)
@@ -289,6 +291,11 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
           )
         })}
       </div>
+      {picked === q.answer && combo > 0 && combo % 10 === 0 && (
+        <p className="mega-combo" role="status">
+          🔥{combo}コンボ！ すごい！
+        </p>
+      )}
       {picked !== null && (
         <>
           <p className="feedback">

@@ -11,6 +11,7 @@ export type BadgeStats = {
   bosses?: number // たおしたボスの数
   coins?: number // 今持っているコイン
   members?: number // なかまの数
+  bestCombo?: number // コンボの自己ベスト
 }
 
 export type Badge = {
@@ -42,6 +43,8 @@ export const BADGES: Badge[] = [
   { id: 'boss-all', icon: '🏆', name: 'ボスマスター', desc: 'すべての単語帳のボスをたおす', check: (s) => (s.bosses ?? 0) >= 7 },
   { id: 'coins-100', icon: '💰', name: 'こつこつ貯金', desc: 'コインを100枚ためる', check: (s) => (s.coins ?? 0) >= 100 },
   { id: 'members-2', icon: '🤝', name: 'なかまが増えた', desc: '2匹目の相棒に出会う', check: (s) => (s.members ?? 1) >= 2 },
+  { id: 'combo-10', icon: '🔥', name: '10コンボ', desc: 'クイズで10問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 10 },
+  { id: 'combo-20', icon: '☄️', name: '20コンボ', desc: 'クイズで20問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 20 },
   { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
 ]
 
@@ -55,7 +58,7 @@ export function newlyEarned(stats: BadgeStats, earned: Earned): Badge[] {
 const BADGES_KEY = 'eitan:badges'
 const TOTALS_KEY = 'eitan:totals'
 
-export type Totals = { answers: number; correct: number; perfect: number; goals: number }
+export type Totals = { answers: number; correct: number; perfect: number; goals: number; bestCombo?: number }
 const ZERO: Totals = { answers: 0, correct: 0, perfect: 0, goals: 0 }
 
 function load<T>(key: string, fallback: T, ok: (v: unknown) => boolean): T {
