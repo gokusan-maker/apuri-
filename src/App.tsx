@@ -7,6 +7,8 @@ import { WordList } from './WordListView'
 import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
 import { Calendar } from './CalendarView'
+import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
+import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
 import { usePersistent } from './usePersistent'
@@ -112,6 +114,9 @@ function App() {
     return h[today] === undefined && studiedToday > 0 ? { ...h, [today]: studiedToday } : h
   })
   useEffect(() => saveHistory(history), [history])
+
+  const [timeLog, setTimeLog] = usePersistent(loadTime, saveTime)
+  useStudyTime(setTimeLog, today)
 
   const [celebrate, setCelebrate] = useState(false)
   const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
@@ -384,6 +389,7 @@ function App() {
             onReviewWeak={() => startQuiz('weak')}
             favorites={favWords}
             calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
+            minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
             onReviewFav={() => startQuiz('fav')}
             onReviewFavCards={() => startCards('fav')}
             schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}

@@ -18,12 +18,13 @@ type Props = {
   schedule: number[] // 今日から7日間の復習数
   favorites?: Word[]
   calendar?: ReactNode
+  minutes?: [number, number] // 今日・この7日の学習時間（分）
   onReviewFav?: () => void
   onReviewFavCards?: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, minutes, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -44,6 +45,11 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
         </div>
       </dl>
       <p className="stats-note">定着語数＝カードで3回以上続けて「覚えた」になった単語</p>
+      {minutes && (
+        <p className="study-time">
+          ⏳ 学習時間：今日 <strong>{minutes[0]}分</strong>・この7日 <strong>{minutes[1]}分</strong>
+        </p>
+      )}
       <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={total} aria-valuenow={learned}>
         <div className="xp-fill" style={{ width: `${(learned / total) * 100}%` }} />
       </div>
