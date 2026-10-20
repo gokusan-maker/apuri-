@@ -96,6 +96,15 @@ const STATS_TABS = [
 ] as const
 
 const LUCKY_XP = 20
+const REVIEW_DONE_COINS = 10
+function saveReviewDone(day: string) {
+  try {
+    localStorage.setItem('eitan:review-done', day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
 function saveLucky(day: string) {
   try {
     localStorage.setItem('eitan:lucky', day)
@@ -303,6 +312,7 @@ function App() {
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
+
   // バッジ：条件を満たしたらその場でもらえる
   const [earned, setEarned] = usePersistent(loadEarned, saveEarned)
   const [bestTime, setBestTime] = useState(loadBest)
@@ -347,6 +357,21 @@ function App() {
     const id = window.setTimeout(() => setToastQueue(dequeue), 3000)
     return () => window.clearTimeout(id)
   }, [toastHead])
+
+  // 今日の復習：開いたときにあった復習を全部終えたら🪙（1日1回）
+  const [reviewStart] = useState(dueReviews)
+  const [reviewDay, setReviewDay] = usePersistent(() => {
+    try {
+      return localStorage.getItem('eitan:review-done') ?? ''
+    } catch {
+      return ''
+    }
+  }, saveReviewDone)
+  if (reviewStart > 0 && dueReviews === 0 && reviewDay !== today) {
+    setReviewDay(today)
+    setWallet((w) => ({ ...w, coins: w.coins + REVIEW_DONE_COINS }))
+    pushToast([{ id: 'review', text: `今日の復習をぜんぶ終えた！ 🪙${REVIEW_DONE_COINS}`, counter: 'answers', target: 0 }])
+  }
 
   // 週間チャレンジ：達成したらその場でコインとXP
   // 新しい週に最初に開いたとき、先週のふりかえりを見せる
@@ -794,6 +819,8 @@ function App() {
                 ? '🍀 ラッキー！'
                 : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
+                : missionToast[0].id === 'review'
+                ? '📚 復習コンプリート！'
                 : missionToast[0].id === 'login'
                 ? 'ログインボーナス'
                 : missionToast[0].id === 'weekly'

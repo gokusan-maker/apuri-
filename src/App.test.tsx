@@ -662,6 +662,17 @@ describe('App', () => {
     expect(screen.getByText('❔ 遊び方')).toBeInTheDocument()
   })
 
+  it('今日の復習を全部終えると🪙10（1日1回）', () => {
+    localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[0].id]: { box: 1, due: dayKey() } }))
+    render(<App />)
+    expect(document.querySelector('.card .en')?.textContent).toContain(WORDS[0].en)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(toast('📚 復習コンプリート！')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(16)
+    expect(localStorage.getItem('eitan:review-done')).toBe(dayKey())
+  })
+
   it('お知らせが重なると順番に出る', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
