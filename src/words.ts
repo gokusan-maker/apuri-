@@ -1745,6 +1745,16 @@ const WORDS_4: Word[] = [
   { id: 'be-careful', en: 'Be careful', ja: '気をつけて', example: 'Be careful! The floor is wet.', exampleJa: '気をつけて！床がぬれてるよ。', level: '会話' },
   { id: 'well-done', en: 'Well done', ja: 'よくできました', example: 'You got 100 points? Well done!', exampleJa: '100点とったの？よくできました！', level: '会話' },
   { id: 'im-ready', en: 'I\'m ready', ja: '準備できたよ', example: 'I\'m ready. Let\'s go!', exampleJa: '準備できたよ。行こう！', level: '会話' },
+  { id: 'how-about', en: 'How about ...?', ja: '〜はどう？', example: 'How about going to the movies?', exampleJa: '映画に行くのはどう？', level: '会話' },
+  { id: 'what-do-you-think', en: 'What do you think?', ja: 'どう思う？', example: 'I want to try this. What do you think?', exampleJa: 'これをやってみたい。どう思う？', level: '会話' },
+  { id: 'i-dont-know', en: 'I don\'t know', ja: 'わからない・知らない', example: 'I don\'t know the answer.', exampleJa: '答えがわからない。', level: '会話' },
+  { id: 'let-me-see', en: 'Let me see', ja: 'ええと・そうだなあ', example: 'Let me see... I think it\'s Tuesday.', exampleJa: 'ええと…火曜日だと思う。', level: '会話' },
+  { id: 'that-sounds-fun', en: 'That sounds fun', ja: '楽しそう', example: 'A picnic? That sounds fun!', exampleJa: 'ピクニック？楽しそう！', level: '会話' },
+  { id: 'no-way', en: 'No way!', ja: 'まさか！・ありえない', example: 'You won the prize? No way!', exampleJa: '賞をとったの？まさか！', level: '会話' },
+  { id: 'take-it-easy', en: 'Take it easy', ja: '気楽にね・むりしないで', example: 'Take it easy. You can do it.', exampleJa: '気楽にね。きみならできるよ。', level: '会話' },
+  { id: 'here-we-go', en: 'Here we go!', ja: 'さあ、行くよ！・始めよう', example: 'Here we go! Question one.', exampleJa: 'さあ、行くよ！第1問。', level: '会話' },
+  { id: 'im-hungry', en: 'I\'m hungry', ja: 'おなかがすいた', example: 'I\'m hungry. What\'s for lunch?', exampleJa: 'おなかすいた。お昼は何？', level: '会話' },
+  { id: 'thats-too-bad', en: 'That\'s too bad', ja: 'それは残念', example: 'You lost your wallet? That\'s too bad.', exampleJa: 'さいふをなくしたの？それは残念だね。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ

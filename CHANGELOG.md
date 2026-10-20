@@ -381,3 +381,4 @@
 - 2026-10-20: 中3に基本語を20語追加（poem・recipe・review など）
 - 2026-10-20: 記録画面に「今週のレポートをシェア」（問題数・学習日数・定着語数・連続日数をテキストで）を追加
 - 2026-10-20: まちがえやすい単語を5組追加（sound/voice・fun/funny・clothes/cloth・remember/remind・tall/high、計30組）
+- 2026-10-20: 会話フレーズを10追加（How about …?・Let me see・No way! など、計60）
