@@ -325,3 +325,4 @@
 - 2026-10-20: 反対の意味に near ↔ far・inside ↔ outside・over ↔ under を追加
 - 2026-10-20: 相棒タブに「思い出アルバム」（出会った日ともらったバッジを日付順にならべた年表）を追加
 - 2026-10-20: 中2に基本語を20語追加（happen・news・person・safe など）
+- 2026-10-20: 中2に基本語を20語追加（space・sport・traffic・work など）
