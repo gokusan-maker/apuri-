@@ -587,3 +587,9 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .grade-pick button[aria-pressed='true'] { background: var(--accent); color: var(--accent-fg); }
 .actions .easy { background: #16a34a; }
 .study-time { margin: 0 0 8px; }
+.note { margin: 8px 0 0; font-size: 0.9rem; }
+.note-text { display: block; margin-bottom: 4px; padding: 6px 10px; border-radius: 8px; background: color-mix(in srgb, #facc15 20%, var(--bg)); text-align: left; }
+.note-btn { border: none; background: transparent; color: var(--accent); font-size: 0.85rem; }
+.note.edit { display: flex; gap: 6px; }
+.note.edit textarea { flex: 1; padding: 6px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); font: inherit; }
+.note.edit button { border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); padding: 0 12px; }

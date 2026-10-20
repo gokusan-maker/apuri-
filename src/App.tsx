@@ -4,6 +4,7 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Card } from './CardView'
 import { WordList } from './WordListView'
+import { loadNotes, saveNotes, setNote } from './notes'
 import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
 import { Calendar } from './CalendarView'
@@ -78,6 +79,7 @@ function App() {
   type Focus = 'weak' | 'fav'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
+  const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
@@ -450,6 +452,8 @@ function App() {
                 autoSpeak={settings.autoSpeak}
                 jaFirst={settings.cardJaFirst}
                 favorite={favorites.includes(focusCard.id)}
+                note={notes[focusCard.id]}
+                onNote={(t) => setNotes((n) => setNote(n, focusCard.id, t))}
                 onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
               />
             ) : (
@@ -463,6 +467,8 @@ function App() {
             onClose={() => setShowList(false)}
             favorites={favorites}
             onToggleFavorite={(id) => setFavorites((f) => toggleFavorite(f, id))}
+            notes={notes}
+            onNote={(id, t) => setNotes((n) => setNote(n, id, t))}
           />
         ) : (
           <>
@@ -473,6 +479,8 @@ function App() {
               autoSpeak={settings.autoSpeak}
               jaFirst={settings.cardJaFirst}
               favorite={!!card && favorites.includes(card.id)}
+              note={card ? notes[card.id] : undefined}
+              onNote={(t) => card && setNotes((n) => setNote(n, card.id, t))}
               onToggleFavorite={() => card && setFavorites((f) => toggleFavorite(f, card.id))}
               onMore={
                 words.some((w) => !progress[w.id])

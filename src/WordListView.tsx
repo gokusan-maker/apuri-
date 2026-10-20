@@ -3,6 +3,7 @@ import { searchWords } from './search'
 import { speak } from './speech'
 import type { ProgressMap } from './srs'
 import { levelOf, type Word } from './words'
+import { Note } from './NoteView'
 
 type Props = {
   words: Word[]
@@ -10,6 +11,8 @@ type Props = {
   onClose: () => void
   favorites?: string[]
   onToggleFavorite?: (id: string) => void
+  notes?: Record<string, string>
+  onNote?: (id: string, text: string) => void
 }
 
 function status(box: number | undefined): string {
@@ -18,7 +21,7 @@ function status(box: number | undefined): string {
   return '学習中'
 }
 
-export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite }: Props) {
+export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite, notes = {}, onNote }: Props) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
   const hits = searchWords(words, query)
@@ -71,6 +74,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                       <p className="example-ja">{w.exampleJa}</p>
                     </>
                   )}
+                  {onNote && <Note text={notes[w.id]} onSave={(t) => onNote(w.id, t)} />}
                 </div>
               )}
             </li>

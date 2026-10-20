@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { speak } from './speech'
 import { swipeResult } from './swipe'
 import { useKeys } from './useKeys'
+import { Note } from './NoteView'
 import type { Word } from './words'
 
 type Props = {
@@ -13,10 +14,12 @@ type Props = {
   onToggleFavorite?: () => void
   onMore?: () => void // 今日の分が終わったあと、新しい単語を5語ふやす
   onQuiz?: () => void
+  note?: string
+  onNote?: (text: string) => void
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const start = useRef<{ x: number; y: number } | null>(null)
@@ -151,6 +154,7 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
             </p>
           )}
           <p className="example-ja">{card.exampleJa}</p>
+          {onNote && <Note text={note} onSave={onNote} />}
           <div className="actions">
             <button className="again" onClick={() => answer(false)}>
               まだ
