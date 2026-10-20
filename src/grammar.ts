@@ -298,6 +298,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'I wonder when ___ back.', choices: ['will he come', 'he will come', 'comes he'], answer: 1, why: '主語 he ＋ will come の順。' },
     ],
   },
+  {
+    id: 'participle',
+    title: '分詞（a running boy / a broken cup）',
+    points: [
+      '動詞の ing 形は「〜している」、過去分詞は「〜された」の意味で名詞を説明できる。',
+      '1語なら名詞の前（a sleeping cat）、2語以上なら名詞のうしろ（the boy playing tennis）に置く。',
+    ],
+    examples: [
+      { en: 'Look at the sleeping baby.', ja: '眠っている赤ちゃんを見て。' },
+      { en: 'This is a car made in Japan.', ja: 'これは日本で作られた車です。' },
+    ],
+    questions: [
+      { sentence: 'The boy ___ by the door is my brother.', choices: ['standing', 'stood', 'stands'], answer: 0, why: '「立っている」男の子なので ing 形の standing。' },
+      { sentence: 'I found a ___ window.', choices: ['breaking', 'broken', 'break'], answer: 1, why: '「割られた」窓なので過去分詞の broken。' },
+      { sentence: 'English is a language ___ all over the world.', choices: ['speaking', 'spoke', 'spoken'], answer: 2, why: '「話されている」言語なので過去分詞の spoken。' },
+    ],
+  },
+  {
+    id: 'subjunctive',
+    title: '仮定法（I wish / If I were）',
+    points: [
+      '今の事実とちがうことを願ったり想像したりするときは、動詞を過去形にする。be動詞はふつう主語に関係なく were を使う。',
+      'I wish ＋ 主語 ＋ 過去形「〜ならいいのに」。If ＋ 主語 ＋ 過去形, 主語 ＋ would ＋ 動詞の原形「もし〜なら、…だろうに」。',
+    ],
+    examples: [
+      { en: 'I wish I had a dog.', ja: '犬を飼っていたらいいのに。' },
+      { en: 'If I were you, I would ask the teacher.', ja: '私があなたなら、先生に聞くだろう。' },
+    ],
+    questions: [
+      { sentence: 'I wish I ___ fly like a bird.', choices: ['can', 'could', 'will'], answer: 1, why: '今できないことを願うので can の過去形 could。' },
+      { sentence: 'If I ___ rich, I would travel around the world.', choices: ['am', 'were', 'be'], answer: 1, why: '事実とちがう想像なので were。' },
+      { sentence: 'If it were sunny, we ___ go to the beach.', choices: ['will', 'would', 'are'], answer: 1, why: '仮定法の文の後半は would ＋ 動詞の原形。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
