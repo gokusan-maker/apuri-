@@ -223,3 +223,4 @@
 - 2026-10-20: まちがえやすい単語を5組追加（arrive/reach・lose/miss・hope/wish・another/other・use/borrow、計25組）
 - 2026-10-20: 高校基礎の単語を20語追加（appreciate・evidence・investigate など、計120語）
 - 2026-10-20: クイズに「2人対戦」を追加（1台を交代で使い、10問ずつ答えて勝ち負け）
+- 2026-10-20: タイムアタックで「日→英」も選べるようにした

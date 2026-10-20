@@ -18,6 +18,7 @@ type Phase = 'ready' | 'play' | 'done'
 export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [phase, setPhase] = useState<Phase>('ready')
   const [length, setLength] = useState(TIME_LIMIT)
+  const [jaEn, setJaEn] = useState(false) // 日→英
   const [left, setLeft] = useState(TIME_LIMIT)
   const [score, setScore] = useState(0)
   const [best, setBest] = useState(() => loadBest(TIME_LIMIT))
@@ -29,7 +30,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [missed, setMissed] = useState<Word[]>([])
 
   function nextQuestion() {
-    setQ(randomQuestion(words, (x) => x.ja))
+    setQ(randomQuestion(words, jaEn ? (x) => x.en : (x) => x.ja))
   }
 
   function start() {
@@ -99,6 +100,14 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
             </button>
           ))}
         </div>
+        <div className="counts" role="group" aria-label="向き">
+          <button aria-pressed={!jaEn} onClick={() => setJaEn(false)}>
+            英→日
+          </button>
+          <button aria-pressed={jaEn} onClick={() => setJaEn(true)}>
+            日→英
+          </button>
+        </div>
         <p className="result-message">{length}秒で何問正解できるかな？</p>
         <p className="best">自己ベスト {best} 問</p>
         {top.length > 0 && (
@@ -142,7 +151,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
       </div>
       {q && (
         <>
-          <p className="en">{q.word.en}</p>
+          <p className={jaEn ? 'en ja-prompt' : 'en'}>{jaEn ? q.word.ja : q.word.en}</p>
           <div className="choices">
             {q.choices.map((c, i) => (
               <button key={c} className="choice" onClick={() => pick(i)}>

@@ -12,7 +12,7 @@ export function Versus({ words }: { words: Word[] }) {
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [scores, setScores] = useState([0, 0])
-  const total = Math.min(qs.length, VERSUS_EACH * 2)
+  const total = Math.floor(Math.min(qs.length, VERSUS_EACH * 2) / 2) * 2 // 2人で同じ数
   const turn = index % 2
 
   function pick(i: number) {

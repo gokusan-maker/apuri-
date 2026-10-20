@@ -80,3 +80,14 @@ it('30秒を選ぶと30秒で終わり、自己ベストは長さごと', () => 
   expect(loadBest()).toBe(0)
   vi.useRealTimers()
 })
+
+it('日→英も選べる', () => {
+  localStorage.clear()
+  render(<TimeAttack words={WORDS.slice(0, 20)} />)
+  fireEvent.click(screen.getByText('日→英'))
+  fireEvent.click(screen.getByText('スタート'))
+  const ja = document.querySelector('.quiz .ja-prompt')!.textContent
+  const w = WORDS.slice(0, 20).find((x) => x.ja === ja)!
+  fireEvent.click(screen.getByRole('button', { name: w.en }))
+  expect(screen.getByText('1 問')).toBeInTheDocument()
+})
