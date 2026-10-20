@@ -221,3 +221,4 @@
 - 2026-10-20: 中3の単語を20語追加（convenient・opportunity・explore など）
 - 2026-10-20: クイズの結果をテキストでシェアできるようにした（共有メニュー、なければコピー）
 - 2026-10-20: まちがえやすい単語を5組追加（arrive/reach・lose/miss・hope/wish・another/other・use/borrow、計25組）
+- 2026-10-20: 高校基礎の単語を20語追加（appreciate・evidence・investigate など、計120語）
