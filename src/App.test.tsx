@@ -601,4 +601,11 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByLabelText('今日のカード 1 / 10')).toBeInTheDocument()
   })
+
+  it('XPを受け取ると相棒のそばに +XP が浮かぶ', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
+  })
 })

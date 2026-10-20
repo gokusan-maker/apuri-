@@ -121,6 +121,7 @@ function App() {
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
   const [evoForm, setEvoForm] = useState<string | null>(null) // 全画面で見せる進化後の姿
+  const [gain, setGain] = useState<{ amount: number; key: number } | null>(null) // ふわっと浮かぶXP
   const timer = useRef<number | undefined>(undefined)
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
@@ -210,6 +211,7 @@ function App() {
 
   function gainXp(amount: number, source: Source | null) {
     setTodayXp((d) => ({ day: today, count: (d.day === today ? d.count : 0) + amount }))
+    setGain((g) => ({ amount, key: (g?.key ?? 0) + 1 }))
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
     setHappy(true)
@@ -224,6 +226,7 @@ function App() {
       setHappy(false)
       setLeveledUp(false)
       setEvolved(false)
+      setGain(null)
     }, 2000)
   }
 
@@ -428,6 +431,7 @@ function App() {
           title={titleFor(totals.studyDays ?? 0)}
           cheer={cheer}
           feeling={feelingFor(studiedToday)}
+          gain={gain}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}

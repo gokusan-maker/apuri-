@@ -15,6 +15,7 @@ type Props = {
   title?: string // 称号
   cheer?: Line | null // 外から見せるひとこと（応援）
   feeling?: { icon: string; text: string } // ごきげん
+  gain?: { amount: number; key: number } | null // もらったXP（ふわっと浮かぶ）
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -152,7 +153,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -179,6 +180,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         }}
       >
         <MonsterFigure form={form} mood={line ? 'happy' : mood} wear={monster.wear} />
+        {gain && gain.amount > 0 && (
+          <span key={gain.key} className="xp-float" aria-hidden="true">
+            +{gain.amount}
+          </span>
+        )}
       </button>
       {(line ?? cheer) && (
         <div className="bubble" role="status" onClick={() => setLine(null)}>
