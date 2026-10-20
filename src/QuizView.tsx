@@ -18,6 +18,7 @@ import { quizShareText, shareText } from './shareText'
 import { isNew, loadPlayed, markPlayed } from './playedModes'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
+import { Versus } from './VersusView'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -51,7 +52,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -94,6 +95,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'sentence-read', label: '📄 例文の訳', group: '4択' },
   { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
   { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
+  { id: 'versus', label: '👥 2人対戦', group: '4択' },
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
@@ -374,6 +376,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Sequence key={count} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'versus') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Versus words={words} />
       </>
     )
   }
