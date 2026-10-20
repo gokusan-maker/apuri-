@@ -27,3 +27,10 @@ it('🖨 で印刷できる', () => {
   expect(print).toHaveBeenCalled()
   print.mockRestore()
 })
+
+it('絵文字のある単語は一覧にも絵文字が出る', () => {
+  const words = WORDS.filter((w) => w.id === 'apple' || w.id === 'borrow')
+  render(<WordList words={words} progress={{}} onClose={() => {}} />)
+  expect(screen.getByRole('button', { name: /apple/ }).textContent).toContain('🍎')
+  expect(screen.getByRole('button', { name: /borrow/ }).textContent).not.toMatch(/\p{Extended_Pictographic}/u)
+})

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { EMOJI } from './emoji'
 import { searchWords } from './search'
 import { speak } from './speech'
 import type { ProgressMap } from './srs'
@@ -76,7 +77,10 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
             <li key={w.id}>
               <button className="word-row" onClick={() => setOpen(open === w.id ? null : w.id)} aria-expanded={open === w.id}>
                 <span className="weak-en">{w.en}</span>
-                <span className="weak-ja">{w.ja}</span>
+                <span className="weak-ja">
+                  {EMOJI[w.id] ? `${EMOJI[w.id]} ` : ''}
+                  {w.ja}
+                </span>
                 <span className={`word-status s-${status(box)}`}>{status(box)}</span>
               </button>
               {open === w.id && (
