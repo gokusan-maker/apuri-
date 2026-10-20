@@ -653,3 +653,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .tile-built, .tile-pool { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; min-height: 48px; margin: 10px 0; }
 .tile-built { border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
 .tile { width: 40px; height: 44px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); font-size: 1.3rem; font-weight: 700; text-transform: lowercase; }
+.mode-btn { display: block; width: 100%; margin-bottom: 6px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 12px; background: var(--bg); color: var(--fg); font-weight: 700; text-align: left; }
+.mode-change { float: right; font-weight: 400; font-size: 0.8rem; color: var(--accent); }
+.mode-menu { margin-bottom: 8px; text-align: left; }
+.mode-group-name { margin: 6px 0 4px; font-size: 0.75rem; color: var(--muted); }
+.mode-menu .direction { flex-wrap: wrap; overflow: visible; }

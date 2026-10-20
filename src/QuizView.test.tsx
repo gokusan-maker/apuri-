@@ -1,8 +1,16 @@
 import { act, fireEvent, render, screen } from '@testing-library/react'
-import { describe, expect, it, vi } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import { Quiz } from './QuizView'
 import { VERBS } from './irregular'
 import { WORDS } from './words'
+
+beforeEach(() => localStorage.clear()) // 最後に遊んだ種類を持ちこさない
+
+// クイズの種類はメニューから選ぶ
+function pickMode(label: string) {
+  if (!screen.queryByRole('group', { name: 'クイズの種類' })) fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(label))
+}
 
 describe('Quiz', () => {
   it('正解を選ぶと「正解！」、最後に結果と「もう1回」が出る', () => {
@@ -63,7 +71,7 @@ describe('逆方向クイズ', () => {
   it('日→英では日本語が出て、英単語を選ぶ', () => {
     const words = WORDS.slice(0, 8)
     render(<Quiz words={words} count={1} />)
-    fireEvent.click(screen.getByText('日→英'))
+    pickMode('日→英')
     const ja = document.querySelector('.quiz .en')!.textContent
     const word = words.find((w) => w.ja === ja)!
     expect(word).toBeDefined()
@@ -80,7 +88,7 @@ describe('逆方向クイズ', () => {
     fireEvent.click(screen.getByRole('button', { name: words.find((w) => w.en === en)!.ja }))
     fireEvent.click(screen.getByText('次へ'))
     expect(screen.getByText(/^2 \/ 3/)).toBeInTheDocument()
-    fireEvent.click(screen.getByText('日→英'))
+    pickMode('日→英')
     expect(screen.getByText(/^1 \/ 3/)).toBeInTheDocument()
   })
 })
@@ -114,9 +122,9 @@ describe('リスニング', () => {
 
 it('クイズの「✏️ スペル」でスペル入力に切り替わる', () => {
   render(<Quiz words={WORDS.slice(0, 8)} count={2} />)
-  fireEvent.click(screen.getByText('✏️ スペル'))
+  pickMode('✏️ スペル')
   expect(screen.getByLabelText('英単語を入力')).toBeInTheDocument()
-  fireEvent.click(screen.getByText('英→日'))
+  pickMode('英→日')
   expect(document.querySelector('.choice')).not.toBeNull()
 })
 
@@ -133,7 +141,7 @@ it('📝 穴埋めでは例文の空欄に入る単語を選び、答えると�
 
 it('🔁 不規則動詞ドリルで活用を答えられる', () => {
   render(<Quiz words={WORDS.slice(0, 8)} count={1} />)
-  fireEvent.click(screen.getByText('🔁 不規則動詞'))
+  pickMode('🔁 不規則動詞')
   const base = document.querySelector('.irregular .en')!.textContent!
   const tense = document.querySelector('.verb-ask strong')!.textContent
   const v = VERBS.find((x) => x.base === base)!
@@ -177,7 +185,7 @@ it('🗣 例文リスニング：例文を読み上げ、訳を選ぶ', () => {
 it('🎲 ミックス：1問ごとに英→日・日→英・リスニングのどれかが出る', () => {
   const words = WORDS.slice(0, 12)
   render(<Quiz words={words} count={5} />)
-  fireEvent.click(screen.getByText('🎲 ミックス'))
+  pickMode('🎲 ミックス')
   for (let i = 0; i < 5; i++) {
     expect(document.querySelectorAll('.choice')).toHaveLength(4)
     fireEvent.click(document.querySelector<HTMLButtonElement>('.choice')!)
@@ -261,4 +269,13 @@ it('💡 50:50 でコインを使って選択肢を2つ消す（足りなけれ�
   fireEvent.click(screen.getByText('次へ'))
   fireEvent.click(screen.getByText(/50:50/))
   expect(document.querySelectorAll('.choice.removed')).toHaveLength(0)
+})
+
+it('メニューから選んだ種類は、次に開いたときも同じ', () => {
+  const { unmount } = render(<Quiz words={WORDS.slice(0, 10)} />)
+  pickMode('📝 穴埋め')
+  expect(document.querySelector('.blank-sentence')).not.toBeNull()
+  unmount()
+  render(<Quiz words={WORDS.slice(0, 10)} />)
+  expect(document.querySelector('.blank-sentence')).not.toBeNull()
 })

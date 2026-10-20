@@ -60,25 +60,35 @@ function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[]
     })
 }
 
-const DIRECTIONS: { id: Direction; label: string }[] = [
-  { id: 'en-ja', label: '英→日' },
-  { id: 'mix', label: '🎲 ミックス' },
-  { id: 'timed', label: '⏳ 10秒' },
-  { id: 'rival', label: '⚔️ ライバル戦' },
-  { id: 'ja-en', label: '日→英' },
-  { id: 'listen', label: '🎧 リスニング' },
-  { id: 'sentence', label: '🗣 例文リスニング' },
-  { id: 'spell', label: '✏️ スペル' },
-  { id: 'tiles', label: '🔤 文字タイル' },
-  { id: 'dictation', label: '🎧 書き取り' },
-  { id: 'blank', label: '📝 穴埋め' },
-  { id: 'order', label: '🔀 並べ替え' },
-  { id: 'irregular', label: '🔁 不規則動詞' },
-  { id: 'grammar', label: '📖 文法' },
-  { id: 'reading', label: '📰 読解' },
-  { id: 'speak', label: '🎤 発音' },
-  { id: 'read', label: '📢 音読' },
+const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
+  { id: 'en-ja', label: '英→日', group: '4択' },
+  { id: 'ja-en', label: '日→英', group: '4択' },
+  { id: 'mix', label: '🎲 ミックス', group: '4択' },
+  { id: 'timed', label: '⏳ 10秒', group: '4択' },
+  { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
+  { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
+  { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
+  { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },
+  { id: 'speak', label: '🎤 発音', group: '聞く・話す' },
+  { id: 'read', label: '📢 音読', group: '聞く・話す' },
+  { id: 'spell', label: '✏️ スペル', group: '書く・並べる' },
+  { id: 'tiles', label: '🔤 文字タイル', group: '書く・並べる' },
+  { id: 'blank', label: '📝 穴埋め', group: '書く・並べる' },
+  { id: 'order', label: '🔀 並べ替え', group: '書く・並べる' },
+  { id: 'irregular', label: '🔁 不規則動詞', group: '文法・読解' },
+  { id: 'grammar', label: '📖 文法', group: '文法・読解' },
+  { id: 'reading', label: '📰 読解', group: '文法・読解' },
 ]
+const GROUPS = ['4択', '聞く・話す', '書く・並べる', '文法・読解']
+const MODE_KEY = 'eitan:quiz-mode'
+function loadMode(fallback: Direction): Direction {
+  try {
+    const m = localStorage.getItem(MODE_KEY) as Direction | null
+    return m && DIRECTIONS.some((d) => d.id === m) ? m : fallback
+  } catch {
+    return fallback
+  }
+}
 
 type Props = {
   words: Word[]
@@ -107,8 +117,11 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin }: Props) {
+  // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
+  const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
+  const [menu, setMenu] = useState(false)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
@@ -197,6 +210,12 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
 
   function restart(d: Direction = direction, only?: Word[]) {
     setDirection(d)
+    setMenu(false)
+    try {
+      localStorage.setItem(MODE_KEY, d)
+    } catch {
+      // ストレージが使えない環境では保存をあきらめる
+    }
     setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
     setMissed([])
     setLeft(QUESTION_TIME)
@@ -229,13 +248,25 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
 
   const toggle = lockDirection ? null : (
     <>
-      <div className="direction" role="group" aria-label="出題の向き">
-        {DIRECTIONS.filter((d) => (d.id !== 'speak' && d.id !== 'read') || getRecognition()).map((d) => (
-          <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
-            {d.label}
-          </button>
-        ))}
-      </div>
+      <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
+        {DIRECTIONS.find((d) => d.id === direction)?.label} <span className="mode-change">種類を変える {menu ? '▲' : '▼'}</span>
+      </button>
+      {menu && (
+        <div className="mode-menu" role="group" aria-label="クイズの種類">
+          {GROUPS.map((g) => (
+            <div key={g} className="mode-group">
+              <p className="mode-group-name">{g}</p>
+              <div className="direction">
+                {DIRECTIONS.filter((d) => d.group === g && ((d.id !== 'speak' && d.id !== 'read') || getRecognition())).map((d) => (
+                  <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
+                    {d.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
       <div className="counts" role="group" aria-label="問題数">
         {COUNTS.map((n) => (
           <button key={n} aria-pressed={count === n} onClick={() => changeCount(n)}>
