@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
+import { addFavorites, loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 
 describe('お気に入り', () => {
   beforeEach(() => localStorage.clear())
@@ -14,5 +14,9 @@ describe('お気に入り', () => {
     expect(loadFavorites()).toEqual(['apple'])
     localStorage.setItem('eitan:favorites', '{"x":1}')
     expect(loadFavorites()).toEqual([])
+  })
+
+  it('まとめて★に入れる（重複なし）', () => {
+    expect(addFavorites(['a'], ['a', 'b', 'b', 'c'])).toEqual(['a', 'b', 'c'])
   })
 })

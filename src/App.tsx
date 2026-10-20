@@ -8,7 +8,7 @@ import { Card } from './CardView'
 import { WordList } from './WordListView'
 import { makeLookup } from './glossary'
 import { loadNotes, saveNotes, setNote } from './notes'
-import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
+import { addFavorites, loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
 import { Calendar } from './CalendarView'
 import { loadAccuracy, rate, recordAnswer, saveAccuracy } from './accuracy'
@@ -681,6 +681,7 @@ function App() {
             onSpend={spend}
             onRivalWin={() => setWallet((w) => ({ ...w, coins: w.coins + RIVAL_COINS }))}
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
+            onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
           />
         </>
       ) : mode === 'time' ? (

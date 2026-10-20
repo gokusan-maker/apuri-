@@ -5,6 +5,11 @@ export function toggleFavorite(list: string[], id: string): string[] {
   return list.includes(id) ? list.filter((x) => x !== id) : [...list, id]
 }
 
+// まとめて★に入れる（すでに入っているものはそのまま）
+export function addFavorites(list: string[], ids: string[]): string[] {
+  return [...list, ...ids.filter((id, i) => !list.includes(id) && ids.indexOf(id) === i)]
+}
+
 export function loadFavorites(): string[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)

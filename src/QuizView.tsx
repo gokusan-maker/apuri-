@@ -120,6 +120,7 @@ type Props = {
   onCombo?: (combo: number) => void // 正解するたびに今のコンボ数
   onSpend?: (coins: number) => boolean // コインを使う（足りなければ false）
   onRivalWin?: () => void
+  onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
@@ -137,7 +138,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
@@ -153,6 +154,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const [earned, setEarned] = useState(0)
   const [lastXp, setLastXp] = useState(0)
   const [missed, setMissed] = useState<Word[]>([])
+  const [favDone, setFavDone] = useState(false)
   const [left, setLeft] = useState(QUESTION_TIME) // 制限時間モードの残り秒
   const [removed, setRemoved] = useState<number[]>([]) // 50:50 で消した選択肢
 
@@ -238,6 +240,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     }
     setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
     setMissed([])
+    setFavDone(false)
     setLeft(QUESTION_TIME)
     setRemoved([])
     setIndex(0)
@@ -460,6 +463,18 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         {missed.length > 0 && !onRestart && (
           <button className="list-link" onClick={() => restart(direction, missed)}>
             まちがえた {missed.length}問だけもう一度
+          </button>
+        )}
+        {missed.length > 0 && onFavorite && (
+          <button
+            className="list-link"
+            disabled={favDone}
+            onClick={() => {
+              onFavorite(missed.map((w) => w.id))
+              setFavDone(true)
+            }}
+          >
+            {favDone ? '★に入れました' : 'まちがえた単語を★お気に入りに入れる'}
           </button>
         )}
         <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>

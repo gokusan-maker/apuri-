@@ -208,6 +208,25 @@ it('10問つづけて正解すると特別な演出、コンボ数を知らせ�
   expect(combos).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 })
 
+it('結果画面から、まちがえた単語をまとめて★に入れる', () => {
+  const words = WORDS.slice(0, 10)
+  const got: string[][] = []
+  render(<Quiz words={words} count={3} onFavorite={(ids) => got.push(ids)} />)
+  const wrongs: string[] = []
+  for (let i = 0; i < 3; i++) {
+    const en = document.querySelector('.quiz .en')!.textContent!
+    const w = words.find((x) => x.en === en)!
+    if (i < 2) {
+      wrongs.push(w.id)
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== w.ja)!)
+    } else fireEvent.click(screen.getByRole('button', { name: w.ja }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('まちがえた単語を★お気に入りに入れる'))
+  expect(got).toEqual([wrongs])
+  expect(screen.getByText('★に入れました')).toBeDisabled()
+})
+
 it('結果画面から、まちがえた問題だけもう一度', () => {
   const words = WORDS.slice(0, 10)
   render(<Quiz words={words} count={3} />)
