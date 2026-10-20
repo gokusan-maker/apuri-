@@ -31,6 +31,9 @@ describe('ボス戦', () => {
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+    const n = screen.getByRole('list', { name: 'まちがえた単語' }).querySelectorAll('li').length
+    expect(n).toBeGreaterThanOrEqual(1)
+    expect(n).toBeLessThanOrEqual(3)
     fireEvent.click(screen.getByText('もう一度挑戦'))
     expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
   })

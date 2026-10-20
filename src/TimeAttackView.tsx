@@ -1,3 +1,4 @@
+import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { randomQuestion, type Question } from './quiz'
@@ -122,15 +123,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
         <p className="result-title">タイムアップ！</p>
         <p className="result-score">{score} 問正解</p>
         {newBest ? <p className="level-up">自己ベスト更新！</p> : <p className="best">自己ベスト {best} 問</p>}
-        {missed.length > 0 && (
-          <ul className="missed-list" aria-label="まちがえた単語">
-            {missed.map((w) => (
-              <li key={w.id}>
-                <strong>{w.en}</strong> {w.ja}
-              </li>
-            ))}
-          </ul>
-        )}
+        <MissedList words={missed} />
         <button className="flip" onClick={start}>
           もう1回
         </button>

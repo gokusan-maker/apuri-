@@ -1,3 +1,4 @@
+import { MissedList } from './MissedListView'
 import { useState } from 'react'
 import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
@@ -38,6 +39,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
+  const [missed, setMissed] = useState<Word[]>([])
 
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
@@ -58,6 +60,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     } else {
       setCombo(0)
       setHearts(hearts - 1)
+      setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
       onAnswer?.(false, 0, q.word.id, 'quiz')
     }
@@ -78,6 +81,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setPicked(null)
     setHit(false)
     setHealed(false)
+    setMissed([])
   }
 
   return (
@@ -128,6 +132,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           ))}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           <p className="result-message">ボーナス +{bonus}XP</p>
+          <MissedList words={missed} />
           <button className="flip" onClick={onExit}>
             ステージにもどる
           </button>
@@ -136,6 +141,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <>
           <p className="boss-result">まけてしまった…</p>
           <p className="result-message">苦手な単語を復習して、もう一度挑戦しよう！</p>
+          <MissedList words={missed} />
           <button className="flip" onClick={retry}>
             もう一度挑戦
           </button>

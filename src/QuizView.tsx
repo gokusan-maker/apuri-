@@ -1,3 +1,4 @@
+import { MissedList } from './MissedListView'
 import { useEffect, useState } from 'react'
 import { blankOut, canBlank } from './blank'
 import { quizXp, type Source } from './monster'
@@ -471,15 +472,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
-        {missed.length > 0 && (
-          <ul className="missed-list" aria-label="まちがえた単語">
-            {missed.map((w, i) => (
-              <li key={i}>
-                <strong>{w.en}</strong> {w.ja}
-              </li>
-            ))}
-          </ul>
-        )}
+        <MissedList words={missed} />
         {missed.length > 0 && !onRestart && (
           <button className="list-link" onClick={() => restart(direction, missed)}>
             まちがえた {missed.length}問だけもう一度
