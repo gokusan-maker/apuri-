@@ -267,6 +267,37 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Is this pen yours? — Yes, it\'s ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
     ],
   },
+  {
+    id: 'tag-exclaim',
+    title: '付加疑問・感嘆文',
+    points: [
+      '付加疑問「〜ですよね」：肯定文には否定の形、否定文には肯定の形を文末につける（It is hot, isn\'t it?）。',
+      '感嘆文「なんて〜！」：How＋形容詞（＋主語＋動詞）! / What＋a＋形容詞＋名詞（＋主語＋動詞）!',
+    ],
+    examples: [
+      { en: 'You like dogs, don\'t you?', ja: '犬が好きですよね？' },
+      { en: 'What a beautiful sunset!', ja: 'なんてきれいな夕日でしょう！' },
+    ],
+    questions: [
+      { sentence: 'She is your sister, ___?', choices: ['is she', 'isn\'t she', 'doesn\'t she'], answer: 1, why: 'be動詞の肯定文なので isn\'t she。' },
+      { sentence: 'You didn\'t go there, ___?', choices: ['did you', 'didn\'t you', 'do you'], answer: 0, why: '過去の否定文なので肯定の did you。' },
+      { sentence: '___ tall this tree is!', choices: ['What', 'How', 'Very'], answer: 1, why: '形容詞 tall だけが続くので How。' },
+    ],
+  },
+  {
+    id: 'indirect',
+    title: '間接疑問（I know where he lives）',
+    points: ['疑問詞の疑問文を文の中に入れるときは「疑問詞＋主語＋動詞」の順にする（Where does he live? → I know where he lives.）。'],
+    examples: [
+      { en: 'Do you know what time it is?', ja: '今何時か知っていますか？' },
+      { en: 'Tell me why you were late.', ja: 'なぜ遅れたのか教えて。' },
+    ],
+    questions: [
+      { sentence: 'I don\'t know where ___.', choices: ['does she live', 'she lives', 'lives she'], answer: 1, why: '文の中では「疑問詞＋主語＋動詞」なので where she lives。' },
+      { sentence: 'Can you tell me what ___?', choices: ['this is', 'is this', 'this'], answer: 0, why: '主語 this ＋動詞 is の順。' },
+      { sentence: 'I wonder when ___ back.', choices: ['will he come', 'he will come', 'comes he'], answer: 1, why: '主語 he ＋ will come の順。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
