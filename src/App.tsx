@@ -12,6 +12,8 @@ import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
+import { pickWordOfDay } from './wordOfDay'
+import { WordOfDay } from './WordOfDayView'
 import { loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
@@ -437,6 +439,7 @@ function App() {
         <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
       ) : mode === 'stats' ? (
         <>
+          <WordOfDay word={pickWordOfDay(WORDS, today)} />
           <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
           <Stats
             streakDays={streakDays}
