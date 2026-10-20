@@ -354,7 +354,6 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .badge-toast p { margin: 0; }
 .badge-toast-title { font-size: 0.75rem; opacity: 0.8; }
 .badge-toast-name { font-weight: 700; }
-@keyframes toast-in { from { transform: translate(-50%, 20px); opacity: 0; } }
 .zukan { margin-top: 24px; }
 .zukan-figure { width: 56px; height: 56px; }
 .party { margin-top: 24px; }
@@ -540,3 +539,25 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .schedule li { padding: 6px 0; border-radius: 8px; background: var(--bg); }
 .schedule-day { display: block; font-size: 0.65rem; color: var(--muted); }
 .schedule-n { font-weight: 700; }
+
+/* 見た目の調整：トーストは横幅いっぱいまで使って折り返しを減らす */
+.badge-toast {
+  left: 16px;
+  right: 16px;
+  width: fit-content;
+  max-width: 448px;
+  margin: 0 auto;
+  transform: none;
+}
+@keyframes toast-in { from { transform: translateY(20px); opacity: 0; } }
+/* クイズの種類は1行で横にスクロール */
+.direction {
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  overflow-x: auto;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+  -webkit-overflow-scrolling: touch;
+}
+.direction::-webkit-scrollbar { display: none; }
+.direction button { flex: none; white-space: nowrap; }
