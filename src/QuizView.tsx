@@ -81,8 +81,21 @@ type Props = {
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo }: Props) {
+const COUNTS = [5, 10, 20]
+const COUNT_KEY = 'eitan:quiz-count'
+function loadCount(fallback: number): number {
+  try {
+    const n = Number(localStorage.getItem(COUNT_KEY))
+    return COUNTS.includes(n) ? n : fallback
+  } catch {
+    return fallback
+  }
+}
+
+export function Quiz({ words, targets, direction: initial = 'en-ja', count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
+  // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
+  const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
@@ -158,21 +171,48 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     setEarned(0)
   }
 
+  function changeCount(n: number) {
+    setCount(n)
+    try {
+      localStorage.setItem(COUNT_KEY, String(n))
+    } catch {
+      // ストレージが使えない環境では保存をあきらめる
+    }
+    setDirection(direction)
+    setQuestions(build(words, direction, n, targets ?? words))
+    setMissed([])
+    setIndex(0)
+    setPicked(null)
+    setScore(0)
+    setCombo(0)
+    setMaxCombo(0)
+    setEarned(0)
+  }
+
   const toggle = lockDirection ? null : (
-    <div className="direction" role="group" aria-label="出題の向き">
-      {DIRECTIONS.filter((d) => (d.id !== 'speak' && d.id !== 'read') || getRecognition()).map((d) => (
-        <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
-          {d.label}
-        </button>
-      ))}
-    </div>
+    <>
+      <div className="direction" role="group" aria-label="出題の向き">
+        {DIRECTIONS.filter((d) => (d.id !== 'speak' && d.id !== 'read') || getRecognition()).map((d) => (
+          <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
+            {d.label}
+          </button>
+        ))}
+      </div>
+      <div className="counts" role="group" aria-label="問題数">
+        {COUNTS.map((n) => (
+          <button key={n} aria-pressed={count === n} onClick={() => changeCount(n)}>
+            {n}問
+          </button>
+        ))}
+      </div>
+    </>
   )
 
   if (direction === 'order') {
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Scramble words={targets ?? words} count={count} onAnswer={onAnswer} />
+        <Scramble key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
       </>
     )
   }
@@ -190,7 +230,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Pronounce key="read" words={targets ?? words} count={count} onAnswer={onAnswer} sentence />
+        <Pronounce key={`read-${count}`} words={targets ?? words} count={count} onAnswer={onAnswer} sentence />
       </>
     )
   }
@@ -199,7 +239,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Pronounce words={targets ?? words} count={count} onAnswer={onAnswer} />
+        <Pronounce key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
       </>
     )
   }
@@ -208,7 +248,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Irregular count={count} onAnswer={onAnswer} />
+        <Irregular key={count} count={count} onAnswer={onAnswer} />
       </>
     )
   }
@@ -217,7 +257,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Spell key="dictation" words={targets ?? words} count={count} onAnswer={onAnswer} byEar />
+        <Spell key={`dictation-${count}`} words={targets ?? words} count={count} onAnswer={onAnswer} byEar />
       </>
     )
   }
@@ -226,7 +266,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Spell words={targets ?? words} count={count} onAnswer={onAnswer} />
+        <Spell key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
       </>
     )
   }

@@ -217,3 +217,14 @@ it('結果画面から、まちがえた問題だけもう一度', () => {
   expect(screen.getByText(/^1 \/ 2/)).toBeInTheDocument()
   expect(wrongs).toContain(document.querySelector('.quiz .en')!.textContent)
 })
+
+it('問題数を5問にでき、選んだ数は覚えておく', () => {
+  localStorage.clear()
+  const { unmount } = render(<Quiz words={WORDS.slice(0, 30)} />)
+  fireEvent.click(screen.getByText('5問'))
+  expect(screen.getByText(/^1 \/ 5/)).toBeInTheDocument()
+  unmount()
+  render(<Quiz words={WORDS.slice(0, 30)} />)
+  expect(screen.getByText(/^1 \/ 5/)).toBeInTheDocument()
+  localStorage.clear()
+})
