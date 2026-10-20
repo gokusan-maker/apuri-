@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isWeekend, weekCount, weekStart } from './weekly'
+import { isWeekend, lastWeekSummary, weekCount, weekStart } from './weekly'
 
 describe('週間チャレンジ', () => {
   it('週は月曜はじまり', () => {
@@ -18,4 +18,9 @@ it('土日は週末', () => {
   expect(isWeekend('2026-10-24')).toBe(true) // 土
   expect(isWeekend('2026-10-25')).toBe(true) // 日
   expect(isWeekend('2026-10-26')).toBe(false) // 月
+})
+
+it('先週のまとめ（月曜はじまり）', () => {
+  const h = { '2026-10-12': 10, '2026-10-14': 5, '2026-10-18': 3, '2026-10-19': 99 }
+  expect(lastWeekSummary(h, '2026-10-20')).toEqual({ count: 18, days: 3, start: '2026-10-12' })
 })

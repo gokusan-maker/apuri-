@@ -43,3 +43,16 @@ export function isWeekend(today: string): boolean {
   const dow = new Date(y, m - 1, d).getDay()
   return dow === 0 || dow === 6
 }
+
+// 先週のまとめ（問題数と学習した日数）
+export function lastWeekSummary(h: History, today: string): { count: number; days: number; start: string } {
+  const start = addDays(weekStart(today), -7)
+  let count = 0
+  let days = 0
+  for (let i = 0; i < 7; i++) {
+    const n = h[addDays(start, i)] ?? 0
+    count += n
+    if (n > 0) days++
+  }
+  return { count, days, start }
+}

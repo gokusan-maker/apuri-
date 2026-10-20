@@ -547,4 +547,13 @@ describe('App', () => {
     expect(screen.getByText(/ボス図鑑 1 \//)).toBeInTheDocument()
     expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
   })
+
+  it('新しい週に開くと先週のふりかえりが出る（2回目は出ない）', () => {
+    localStorage.setItem('eitan:history', JSON.stringify({ '2026-10-13': 20, '2026-10-15': 10 }))
+    const { unmount } = render(<App />)
+    expect(screen.getByText(/先週のふりかえり：30問・2日/)).toBeInTheDocument()
+    unmount()
+    render(<App />)
+    expect(screen.queryByText(/先週のふりかえり/)).not.toBeInTheDocument()
+  })
 })

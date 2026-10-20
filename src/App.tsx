@@ -17,7 +17,7 @@ import { Missions } from './MissionsView'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
-import { isWeekend, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
+import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
@@ -301,6 +301,23 @@ function App() {
   }, [missionToast])
 
   // 週間チャレンジ：達成したらその場でコインとXP
+  // 新しい週に最初に開いたとき、先週のふりかえりを見せる
+  const lastWeek = lastWeekSummary(history, today)
+  const [reviewWeek, setReviewWeek] = useState(() => {
+    try {
+      return localStorage.getItem('eitan:review-week') !== weekStart(today)
+    } catch {
+      return false
+    }
+  })
+  useEffect(() => {
+    try {
+      localStorage.setItem('eitan:review-week', weekStart(today))
+    } catch {
+      // ストレージが使えない環境では保存をあきらめる
+    }
+  }, [today])
+
   const [weeklyClaimed, setWeeklyClaimed] = usePersistent(loadWeeklyClaimed, saveWeeklyClaimed)
   const thisWeek = weekStart(today)
   const weekDone = weekCount(history, today)
@@ -437,6 +454,14 @@ function App() {
         )}
       </header>
 
+      {reviewWeek && lastWeek.count > 0 && onboarded && (
+        <p className="weak-banner week-review" role="status">
+          📊 先週のふりかえり：{lastWeek.count}問・{lastWeek.days}日 学習しました{lastWeek.days >= 5 ? '。すばらしい！' : '。今週もがんばろう！'}
+          <button onClick={() => setReviewWeek(false)} aria-label="ふりかえりをとじる">
+            ✕
+          </button>
+        </p>
+      )}
       {greet && dueReviews > 0 && onboarded && (
         <p className="weak-banner today-banner" role="status">
           📚 今日の復習が {dueReviews}語 あります
