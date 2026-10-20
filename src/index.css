@@ -457,3 +457,17 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .mission-progress { font-size: 0.85rem; color: var(--muted); font-weight: 700; }
 .missions li.done .mission-progress { color: #f97316; }
 .mission-toast { bottom: calc(216px + env(safe-area-inset-bottom)); }
+
+.list-link { display: block; margin: 16px auto 0; padding: 8px 16px; border: 1px solid var(--accent); border-radius: 999px; background: transparent; color: var(--accent); }
+.word-list { text-align: left; }
+.word-list h2 { margin: 4px 0 8px; font-size: 1.2rem; }
+.search { width: 100%; padding: 10px 12px; font-size: 1rem; border: 1px solid var(--muted); border-radius: 10px; background: var(--bg); color: var(--fg); }
+.words { list-style: none; padding: 0; margin: 0; }
+.words li { border-bottom: 1px solid color-mix(in srgb, var(--muted) 25%, transparent); }
+.word-row { width: 100%; display: flex; gap: 8px; align-items: baseline; padding: 10px 0; border: none; background: transparent; color: inherit; text-align: left; }
+.word-status { font-size: 0.7rem; padding: 1px 6px; border-radius: 999px; background: var(--bg); color: var(--muted); white-space: nowrap; }
+.word-status.s-定着 { background: #22c55e; color: #fff; }
+.word-status.s-学習中 { background: color-mix(in srgb, var(--accent) 20%, transparent); color: var(--accent); }
+.word-detail { padding: 0 0 10px; }
+.word-level { font-size: 0.75rem; color: var(--muted); margin-left: 4px; }
+.word-detail .example { margin: 4px 0 2px; }

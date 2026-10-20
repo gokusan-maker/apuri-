@@ -3,6 +3,7 @@ import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Card } from './CardView'
+import { WordList } from './WordListView'
 import { Stats } from './StatsView'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
@@ -59,6 +60,7 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
+  const [showList, setShowList] = useState(false)
   const today = dayKey()
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
@@ -314,7 +316,16 @@ function App() {
             count('timeAttack')
           }} />
       ) : (
-        <Card key={card?.id} card={card} onAnswer={answer} />
+        showList ? (
+          <WordList words={words} progress={progress} onClose={() => setShowList(false)} />
+        ) : (
+          <>
+            <Card key={card?.id} card={card} onAnswer={answer} />
+            <button className="list-link" onClick={() => setShowList(true)}>
+              📚 単語一覧・さがす
+            </button>
+          </>
+        )
       )}
 
       <BadgeToast badges={toast} onClose={() => setToast([])} />

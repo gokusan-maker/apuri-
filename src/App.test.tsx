@@ -245,4 +245,15 @@ describe('App', () => {
     expect(screen.getByText(/今日のミッション 1 \/ 3/)).toBeInTheDocument()
     vi.useRealTimers()
   })
+
+  it('単語一覧で検索でき、タップで例文が見える', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
+    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'librar' } })
+    expect(screen.getByText('1語')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /library/ }))
+    expect(screen.getByText('I study at the library after school.')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('← カードにもどる'))
+    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+  })
 })
