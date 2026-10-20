@@ -2,7 +2,7 @@
 
 日本人の中高生〜大人向けの英単語学習アプリ。Vite + React + TypeScript。
 データは端末の localStorage のみ（サーバーなし）。UI はスマホ縦画面が基準（幅 360〜480px）。
-画面の文言は日本語、学習内容は英語。発音は Web Speech API（speechSynthesis）を使う。
+画面の文言は日本語、学習内容は英語。コンセプトは「楽しく学べる、ゲーム感覚」（詳細は ROADMAP.md の方針）。発音は Web Speech API（speechSynthesis）を使う。
 
 ## コマンド
 
