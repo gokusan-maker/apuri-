@@ -5,7 +5,7 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
-import { pickLineNow, type Line } from './talk'
+import { pickLineNow, rememberLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
@@ -25,6 +25,7 @@ type Props = {
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
   sleepy?: boolean // 夜おそく（💤 を出す）
+  learned?: { en: string; ja: string }[] // 覚えた単語（ときどき話題にする）
 }
 
 // 相棒は完全オリジナルのモチ型モンスター。段階と系統で色と飾りが変わる。
@@ -208,7 +209,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [] }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -243,7 +244,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}
         aria-label="相棒にさわる"
         onClick={() => {
-          const l = pickLineNow(form.stage, mood === 'lonely', Math.random())
+          const r = Math.random()
+          const l = learned.length > 0 && form.stage > 0 && r < 0.3 ? rememberLine(learned[Math.floor(Math.random() * learned.length)]) : pickLineNow(form.stage, mood === 'lonely', Math.random())
           setLine(l)
           playChirp(form.stage)
           setPoke(poke + 1)

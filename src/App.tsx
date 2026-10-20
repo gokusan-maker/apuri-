@@ -379,6 +379,8 @@ function App() {
     const f = progress[w.id]?.first
     return !!f && f >= addDays(today, -9) && f <= addDays(today, -5)
   })
+  // 相棒が話題にする、覚えた単語（箱2以上から最大20語）
+  const learnedSample = useMemo(() => WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 2).slice(0, 20), [progress])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
@@ -575,6 +577,7 @@ function App() {
         <Monster
           deco={seasonEvent?.icon}
           sleepy={hour >= 22 || hour < 5}
+          learned={learnedSample}
           shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}

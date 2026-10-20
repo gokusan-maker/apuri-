@@ -78,3 +78,8 @@ export const SNACK_LINES: Record<string, Line> = {
 export function snackLine(id: string): Line {
   return SNACK_LINES[id] ?? { en: 'Yummy!', ja: 'おいしい！' }
 }
+
+// 覚えた単語で話しかける
+export function rememberLine(w: { en: string; ja: string }): Line {
+  return { en: `Do you remember "${w.en}"?`, ja: `「${w.en}」っておぼえてる？（${w.ja}）` }
+}

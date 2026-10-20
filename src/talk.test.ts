@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { EGG_LINE, LINES, LONELY_LINE, pickLine, seasonLine, TIME_LINES } from './talk'
+import { EGG_LINE, LINES, LONELY_LINE, pickLine, rememberLine, seasonLine, TIME_LINES } from './talk'
 
 describe('相棒のひとこと', () => {
   it('タマゴのとき・さみしいときは決まったひとこと', () => {
@@ -30,4 +30,8 @@ describe('時間帯・季節のひとこと', () => {
 it('新しいクイズを案内するひとことがある', () => {
   expect(LINES.some((l) => l.ja.includes('2人対戦'))).toBe(true)
   expect(LINES.some((l) => l.ja.includes('絵文字'))).toBe(true)
+})
+
+it('覚えた単語で話しかける', () => {
+  expect(rememberLine({ en: 'apple', ja: 'りんご' }).ja).toBe('「apple」っておぼえてる？（りんご）')
 })
