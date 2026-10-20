@@ -139,8 +139,9 @@ export function formOf(m: MonsterState): Form {
 }
 
 // XP をあげる。Lv15 に届いた時点の学び方で系統が決まり、以後は変わらない。
-export function feed(m: MonsterState, amount: number, source: Source, today: string): MonsterState {
-  const src = { ...m.src, [source]: (m.src?.[source] ?? 0) + amount }
+// source が null のとき（ミッションのごほうびなど）は系統の判定に数えない
+export function feed(m: MonsterState, amount: number, source: Source | null, today: string): MonsterState {
+  const src = source ? { ...m.src, [source]: (m.src?.[source] ?? 0) + amount } : { ...m.src }
   const next: MonsterState = { ...m, xp: m.xp + amount, lastDay: today, src }
   if (!next.branch && stageOf(levelInfo(next.xp).level).index >= 3) next.branch = dominant(src)
   next.seen = seenForms(next)

@@ -1,7 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { beforeEach, describe, expect, it } from 'vitest'
+import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { dayKey } from './srs'
+import { missionsFor } from './missions'
 import { WORDS, wordsOf } from './words'
 
 describe('App', () => {
@@ -220,5 +221,28 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[1].en)
+  })
+
+  it('ミッションを達成すると、お知らせとボーナスXP（日付を固定して確認）', () => {
+    vi.useFakeTimers({ toFake: ['Date'] })
+    // 「答える／正解」系のミッションがある日を探して固定する
+    let day = new Date(2026, 9, 1)
+    let m = undefined as ReturnType<typeof missionsFor>[number] | undefined
+    for (let i = 0; i < 60 && !m; i++) {
+      day = new Date(2026, 9, 1 + i)
+      m = missionsFor(dayKey(day)).find((x) => x.counter === 'answers' || x.counter === 'correct' || x.counter === 'cardGood')
+    }
+    vi.setSystemTime(day)
+    const today = dayKey()
+    localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: { [m!.counter]: m!.target - 1 }, claimed: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText(/ミッション達成！ \+30XP/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(35)
+    expect(JSON.parse(localStorage.getItem('eitan:missions')!).claimed).toContain(m!.id)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText(/今日のミッション 1 \/ 3/)).toBeInTheDocument()
+    vi.useRealTimers()
   })
 })

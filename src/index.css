@@ -447,3 +447,13 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .grammar-example { display: flex; flex-direction: column; margin: 0 0 10px; padding: 8px 12px; border-left: 4px solid var(--accent); background: var(--bg); border-radius: 0 8px 8px 0; }
 .grammar-why { margin: 4px 0 0; color: var(--muted); }
 .grammar .progress, .grammar .blank-sentence, .grammar .feedback { text-align: center; }
+
+.missions { text-align: left; padding: 16px 20px; }
+.missions h2 { margin: 0 0 8px; font-size: 1.1rem; }
+.missions ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+.missions li { display: flex; gap: 8px; align-items: center; }
+.missions li.done .mission-text { color: var(--muted); text-decoration: line-through; }
+.mission-text { flex: 1; }
+.mission-progress { font-size: 0.85rem; color: var(--muted); font-weight: 700; }
+.missions li.done .mission-progress { color: #f97316; }
+.mission-toast { bottom: calc(216px + env(safe-area-inset-bottom)); }

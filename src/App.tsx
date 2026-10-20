@@ -4,6 +4,8 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Card } from './CardView'
 import { Stats } from './StatsView'
+import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
+import { Missions } from './MissionsView'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { Monster, Party as PartyView, Zukan } from './MonsterView'
@@ -93,8 +95,13 @@ function App() {
   const [celebrate, setCelebrate] = useState(false)
   const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
 
+  const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
+  const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
+
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
   function studied(correct: boolean) {
+    count('answers')
+    if (correct) count('correct')
     setStreak(recordStudy(streak, today))
     const next = addToday(todayCount, today)
     setTodayCount(next)
@@ -114,6 +121,7 @@ function App() {
 
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
     studied(correct)
+    if (correct && source === 'ear') count('ear')
     if (!correct) setMistakes((m) => addMistake(m, wordId))
     if (correct && xp > 0) gainXp(xp, source)
   }
@@ -164,6 +172,20 @@ function App() {
     setToast(got)
   }
 
+  // ミッション達成：その場でボーナスXP
+  const [missionToast, setMissionToast] = useState<Mission[]>([])
+  const finished = completedUnclaimed(missions, today)
+  if (finished.length > 0) {
+    setMissions({ ...missions, claimed: [...missions.claimed, ...finished.map((m) => m.id)] })
+    setMonster(feed(monster, MISSION_XP * finished.length, null, today))
+    setMissionToast(finished)
+  }
+  useEffect(() => {
+    if (missionToast.length === 0) return
+    const id = window.setTimeout(() => setMissionToast([]), 3000)
+    return () => window.clearTimeout(id)
+  }, [missionToast])
+
   // 節目のバッジでタマゴがもらえる
   const eggTotal = eggsEarned(earned)
   const [eggToast, setEggToast] = useState(false)
@@ -186,6 +208,7 @@ function App() {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     studied(correct)
+    if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, card.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
   }
@@ -236,31 +259,37 @@ function App() {
           levels={levels}
           record={stages}
           onAnswer={onAnswer}
-          onClear={(id, stars) => setStages((r) => recordStars(r, id, stars))}
+          onClear={(id, stars) => {
+            setStages((r) => recordStars(r, id, stars))
+            if (stars > 0) count('stageClear')
+          }}
         />
       ) : mode === 'settings' ? (
         <SettingsPanel settings={settings} onChange={setSettings} />
       ) : mode === 'stats' ? (
-        <Stats
-          streakDays={streakDays}
-          studiedToday={studiedToday}
-          learned={learned}
-          total={words.length}
-          week={lastDays(history, today)}
-          goal={settings.dailyGoal}
-          weak={weak}
-          mistakes={mistakes}
-          onReviewWeak={() => {
-            setWeakOnly(true)
-            setMode('quiz')
-          }}
-        >
-          <MyWords list={myWords} onChange={setMyWords} />
-          <BadgeList earned={earned} />
-          <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
-          <Zukan monsters={party.members} />
-          <Backup />
-        </Stats>
+        <>
+          <Missions state={missions} today={today} />
+          <Stats
+            streakDays={streakDays}
+            studiedToday={studiedToday}
+            learned={learned}
+            total={words.length}
+            week={lastDays(history, today)}
+            goal={settings.dailyGoal}
+            weak={weak}
+            mistakes={mistakes}
+            onReviewWeak={() => {
+              setWeakOnly(true)
+              setMode('quiz')
+            }}
+          >
+            <MyWords list={myWords} onChange={setMyWords} />
+            <BadgeList earned={earned} />
+            <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
+            <Zukan monsters={party.members} />
+            <Backup />
+          </Stats>
+        </>
       ) : mode === 'quiz' ? (
         <>
           {weakOnly && weak.length > 0 && (
@@ -280,7 +309,10 @@ function App() {
           />
         </>
       ) : mode === 'time' ? (
-        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => setBestTime((b) => Math.max(b, n))} />
+        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => {
+            setBestTime((b) => Math.max(b, n))
+            count('timeAttack')
+          }} />
       ) : (
         <Card key={card?.id} card={card} onAnswer={answer} />
       )}
@@ -294,6 +326,17 @@ function App() {
           <div>
             <p className="badge-toast-title">新しい仲間！</p>
             <p className="badge-toast-name">タマゴをもらった（記録画面で相棒を選べるよ）</p>
+          </div>
+        </div>
+      )}
+      {missionToast.length > 0 && (
+        <div className="badge-toast mission-toast" role="status" onClick={() => setMissionToast([])}>
+          <span className="badge-icon" aria-hidden="true">
+            ✅
+          </span>
+          <div>
+            <p className="badge-toast-title">ミッション達成！ +{MISSION_XP * missionToast.length}XP</p>
+            <p className="badge-toast-name">{missionToast.map((m) => m.text).join('・')}</p>
           </div>
         </div>
       )}
