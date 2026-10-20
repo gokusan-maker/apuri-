@@ -342,3 +342,17 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   fireEvent.click(screen.getByText('もう1回'))
   expect(screen.getByText('1 / 10 問目・正解 0')).toBeInTheDocument()
 })
+
+it('新しく増えた種類は、遊ぶまで NEW マークが出る', () => {
+  localStorage.clear()
+  render(<Quiz words={WORDS.slice(0, 8)} />)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  const emojiBtn = screen.getByText('😀 絵文字クイズ').closest('button')!
+  expect(emojiBtn.querySelector('.new-mark')).not.toBeNull()
+  expect(screen.getByText('🎧 リスニング').closest('button')!.querySelector('.new-mark')).toBeNull()
+  fireEvent.click(emojiBtn)
+  fireEvent.click(screen.getByText(/種類を変える/))
+  const menu = screen.getByRole('group', { name: 'クイズの種類' })
+  expect([...menu.querySelectorAll('button')].find((b) => b.textContent?.startsWith('😀 絵文字クイズ'))!.querySelector('.new-mark')).toBeNull()
+  expect(JSON.parse(localStorage.getItem('eitan:played-modes')!)).toContain('emoji')
+})

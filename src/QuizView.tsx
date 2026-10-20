@@ -12,6 +12,7 @@ import { Grammar } from './GrammarView'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
+import { isNew, loadPlayed, markPlayed } from './playedModes'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
 import { SOUNDS } from './sounds'
@@ -154,6 +155,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
   const [menu, setMenu] = useState(false)
+  const [played, setPlayed] = useState(loadPlayed)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
@@ -292,8 +294,16 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
               <p className="mode-group-name">{g}</p>
               <div className="direction">
                 {DIRECTIONS.filter((d) => d.group === g && ((d.id !== 'speak' && d.id !== 'read') || getRecognition())).map((d) => (
-                  <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
-                    {d.label}
+                  <button
+                    key={d.id}
+                    aria-pressed={direction === d.id}
+                    onClick={() => {
+                      setPlayed((p) => markPlayed(p, d.id))
+                      restart(d.id)
+                    }}
+                  >
+                    <span>{d.label}</span>
+                    {isNew(d.id, played) && <span className="new-mark">NEW</span>}
                   </button>
                 ))}
               </div>
