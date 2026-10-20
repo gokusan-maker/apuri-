@@ -277,3 +277,4 @@
 - 2026-10-20: クイズに「複数形」を追加（box → boxes、child → children など27語）
 - 2026-10-20: 相棒をタップしたとき、小さな鳴き声が鳴るようにした（効果音オンのとき。小さいすがたほど高い声）
 - 2026-10-20: クイズに「過去形のつづり」を追加（study → studied、stop → stopped など18語）
+- 2026-10-20: クイズに「比較級・最上級」を追加（big → bigger、good → better、beautiful → more beautiful など16語）

@@ -217,3 +217,33 @@ export function pastQ(rng: Rng = Math.random): PuzzleQ {
   const choices = shuffle([past, ...wrong], rng)
   return { prompt: `「${base}」の過去形は？`, choices, answer: choices.indexOf(past), why: `${base} → ${past}`, wordId: idOf(base) ?? '' }
 }
+
+// 比較級・最上級
+export const COMPARES: [string, string, string][] = [
+  ['big', 'bigger', 'biggest'], ['tall', 'taller', 'tallest'], ['happy', 'happier', 'happiest'], ['hot', 'hotter', 'hottest'],
+  ['easy', 'easier', 'easiest'], ['large', 'larger', 'largest'], ['fast', 'faster', 'fastest'], ['good', 'better', 'best'],
+  ['bad', 'worse', 'worst'], ['many', 'more', 'most'], ['beautiful', 'more beautiful', 'most beautiful'],
+  ['interesting', 'more interesting', 'most interesting'], ['popular', 'more popular', 'most popular'], ['young', 'younger', 'youngest'],
+  ['busy', 'busier', 'busiest'], ['nice', 'nicer', 'nicest'],
+]
+
+function wrongCompares(w: string, sup: boolean): string[] {
+  const e = sup ? 'est' : 'er'
+  const more = sup ? 'most' : 'more'
+  return [w + e, w + w.slice(-1) + e, w.slice(0, -1) + 'i' + e, `${more} ${w}`, w + 'r', `${more} ${w}${e}`]
+}
+
+export function compareQ(rng: Rng = Math.random): PuzzleQ {
+  const [base, er, est] = COMPARES[Math.floor(rng() * COMPARES.length)]
+  const sup = rng() < 0.5
+  const ans = sup ? est : er
+  const wrong = shuffle([...new Set(wrongCompares(base, sup))].filter((x) => x !== ans), rng).slice(0, 3)
+  const choices = shuffle([ans, ...wrong], rng)
+  return {
+    prompt: `「${base}」の${sup ? '最上級' : '比較級'}は？`,
+    choices,
+    answer: choices.indexOf(ans),
+    why: `${base} → ${er} → ${est}`,
+    wordId: idOf(base) ?? '',
+  }
+}

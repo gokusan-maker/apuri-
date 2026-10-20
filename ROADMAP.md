@@ -274,7 +274,7 @@
 - [x] クイズに「複数形」（box → boxes、child → children など）
 - [x] 相棒をタップしたとき、小さな鳴き声（効果音オンのとき）
 - [x] クイズに「過去形のつづり」（study → studied、stop → stopped など規則動詞）
-- [ ] クイズに「比較級・最上級」（big → bigger、good → better など）
+- [x] クイズに「比較級・最上級」（big → bigger、good → better など）
 - [ ] 今日のおすすめの候補と README に、英語で計算・複数形・過去形・比較級を足す
 
 ## アイデア（未整理）
