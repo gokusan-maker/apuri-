@@ -37,3 +37,9 @@ describe('1日の新出上限', () => {
     expect(loadDailyNew(today)).toEqual({ day: today, count: 4 })
   })
 })
+
+it('今日「まだ」にした単語は後回しになり、続けて同じ単語が出ない', () => {
+  const words = [{ id: 'a' }, { id: 'b' }, { id: 'c' }]
+  const progress: ProgressMap = { a: { box: 0, due: '2026-10-20' }, c: { box: 2, due: '2026-10-20' } }
+  expect(buildQueue(words, progress, '2026-10-20', 0).map((w) => w.id)).toEqual(['c', 'b', 'a'])
+})

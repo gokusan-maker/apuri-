@@ -2,12 +2,14 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
+import { Card } from './CardView'
+import { Stats } from './StatsView'
+import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { Monster, Party as PartyView, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { WeekChart } from './WeekChartView'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
@@ -31,7 +33,6 @@ import {
 } from './srs'
 import { addMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
-import { speak } from './speech'
 import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
@@ -54,32 +55,26 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
 ]
 
 function App() {
-  const [progress, setProgress] = useState<ProgressMap>(loadProgress)
-  const [flipped, setFlipped] = useState(false)
+  const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
   const today = dayKey()
-  const [daily, setDaily] = useState(() => loadDailyNew(today))
+  const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
 
-  useEffect(() => saveProgress(progress), [progress])
-  useEffect(() => saveDailyNew(daily), [daily])
 
-  const [party, setParty] = useState(loadParty)
+  const [party, setParty] = usePersistent(loadParty, saveParty)
   const monster = party.members[party.active]
   const setMonster = (m: typeof monster) => setParty((p) => updateActive(p, m))
   const [happy, setHappy] = useState(false)
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
   const timer = useRef<number | undefined>(undefined)
-  useEffect(() => saveParty(party), [party])
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
-  const [streak, setStreak] = useState(loadStreak)
-  useEffect(() => saveStreak(streak), [streak])
+  const [streak, setStreak] = usePersistent(loadStreak, saveStreak)
   const streakDays = currentStreak(streak, today)
 
-  const [todayCount, setTodayCount] = useState(() => loadTodayCount(today))
-  useEffect(() => saveTodayCount(todayCount), [todayCount])
+  const [todayCount, setTodayCount] = usePersistent(() => loadTodayCount(today), saveTodayCount)
   const studiedToday = todayCount.day === today ? todayCount.count : 0
 
   const [settings, setSettings] = useState(loadSettings)
@@ -96,8 +91,7 @@ function App() {
   useEffect(() => saveHistory(history), [history])
 
   const [celebrate, setCelebrate] = useState(false)
-  const [totals, setTotals] = useState(loadTotals)
-  useEffect(() => saveTotals(totals), [totals])
+  const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
 
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
   function studied(correct: boolean) {
@@ -115,8 +109,7 @@ function App() {
     }))
   }
 
-  const [mistakes, setMistakes] = useState(loadMistakes)
-  useEffect(() => saveMistakes(mistakes), [mistakes])
+  const [mistakes, setMistakes] = usePersistent(loadMistakes, saveMistakes)
   const [weakOnly, setWeakOnly] = useState(false)
 
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
@@ -140,15 +133,11 @@ function App() {
   }
 
 
-  const [stages, setStages] = useState(loadStages)
-  useEffect(() => saveStages(stages), [stages])
+  const [stages, setStages] = usePersistent(loadStages, saveStages)
 
-  const [levels, setLevels] = useState(loadLevels)
-  useEffect(() => saveLevels(levels), [levels])
-  const [myWords, setMyWords] = useState(loadMyWords)
-  useEffect(() => saveMyWords(myWords), [myWords])
-  const [useMy, setUseMy] = useState(loadUseMy)
-  useEffect(() => saveUseMy(useMy), [useMy])
+  const [levels, setLevels] = usePersistent(loadLevels, saveLevels)
+  const [myWords, setMyWords] = usePersistent(loadMyWords, saveMyWords)
+  const [useMy, setUseMy] = usePersistent(loadUseMy, saveUseMy)
   const words = useMemo(
     () => [...wordsOf(levels), ...(useMy ? myWords : [])],
     [levels, useMy, myWords],
@@ -162,7 +151,7 @@ function App() {
   const card = queue[0]
 
   // バッジ：条件を満たしたらその場でもらえる
-  const [earned, setEarned] = useState(loadEarned)
+  const [earned, setEarned] = usePersistent(loadEarned, saveEarned)
   const [bestTime, setBestTime] = useState(loadBest)
   const [toast, setToast] = useState<Badge[]>([])
   const learnedAll = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
@@ -174,7 +163,6 @@ function App() {
     setEarned({ ...earned, ...Object.fromEntries(got.map((b) => [b.id, today])) })
     setToast(got)
   }
-  useEffect(() => saveEarned(earned), [earned])
 
   // 節目のバッジでタマゴがもらえる
   const eggTotal = eggsEarned(earned)
@@ -200,7 +188,6 @@ function App() {
     studied(correct)
     if (!correct) setMistakes((m) => addMistake(m, card.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
-    setFlipped(false)
   }
 
   return (
@@ -254,60 +241,26 @@ function App() {
       ) : mode === 'settings' ? (
         <SettingsPanel settings={settings} onChange={setSettings} />
       ) : mode === 'stats' ? (
-        <section className="card stats-view">
-          <h2>記録</h2>
-          <dl className="result-list">
-            <div>
-              <dt>連続学習</dt>
-              <dd>{streakDays}日</dd>
-            </div>
-            <div>
-              <dt>今日の学習</dt>
-              <dd>{studiedToday}問</dd>
-            </div>
-            <div>
-              <dt>定着語数</dt>
-              <dd>
-                {learned} / {words.length}
-              </dd>
-            </div>
-          </dl>
-          <p className="stats-note">定着語数＝カードで3回以上続けて「覚えた」になった単語</p>
-          <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={words.length} aria-valuenow={learned}>
-            <div className="xp-fill" style={{ width: `${(learned / words.length) * 100}%` }} />
-          </div>
-          <WeekChart days={lastDays(history, today)} goal={settings.dailyGoal} />
-          <h2>苦手な単語</h2>
-          {weak.length === 0 ? (
-            <p className="stats-note">まだありません。まちがえた単語がここに集まります。</p>
-          ) : (
-            <>
-              <ol className="weak-list">
-                {weak.slice(0, 10).map((w) => (
-                  <li key={w.id}>
-                    <span className="weak-en">{w.en}</span>
-                    <span className="weak-ja">{w.ja}</span>
-                    <span className="weak-count">×{mistakes[w.id]}</span>
-                  </li>
-                ))}
-              </ol>
-              <button
-                className="flip"
-                onClick={() => {
-                  setWeakOnly(true)
-                  setMode('quiz')
-                }}
-              >
-                苦手だけ復習する
-              </button>
-            </>
-          )}
+        <Stats
+          streakDays={streakDays}
+          studiedToday={studiedToday}
+          learned={learned}
+          total={words.length}
+          week={lastDays(history, today)}
+          goal={settings.dailyGoal}
+          weak={weak}
+          mistakes={mistakes}
+          onReviewWeak={() => {
+            setWeakOnly(true)
+            setMode('quiz')
+          }}
+        >
           <MyWords list={myWords} onChange={setMyWords} />
           <BadgeList earned={earned} />
           <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
           <Zukan monsters={party.members} />
           <Backup />
-        </section>
+        </Stats>
       ) : mode === 'quiz' ? (
         <>
           {weakOnly && weak.length > 0 && (
@@ -328,41 +281,8 @@ function App() {
         </>
       ) : mode === 'time' ? (
         <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => setBestTime((b) => Math.max(b, n))} />
-      ) : card ? (
-        <section className="card" aria-live="polite">
-          <p className="en">{card.en}</p>
-          <button className="speak" onClick={() => speak(card.en)} aria-label="発音を聞く">
-            🔊
-          </button>
-          {flipped ? (
-            <>
-              <p className="ja">{card.ja}</p>
-              {card.example && (
-                <p className="example">
-                  {card.example}
-                  <button className="speak small" onClick={() => speak(card.example)} aria-label="例文を聞く">
-                    🔊
-                  </button>
-                </p>
-              )}
-              <p className="example-ja">{card.exampleJa}</p>
-              <div className="actions">
-                <button className="again" onClick={() => answer(false)}>
-                  まだ
-                </button>
-                <button className="good" onClick={() => answer(true)}>
-                  覚えた
-                </button>
-              </div>
-            </>
-          ) : (
-            <button className="flip" onClick={() => setFlipped(true)}>
-              意味を見る
-            </button>
-          )}
-        </section>
       ) : (
-        <p className="done">今日の学習は完了です 🎉 また明日！</p>
+        <Card key={card?.id} card={card} onAnswer={answer} />
       )}
 
       <BadgeToast badges={toast} onClose={() => setToast([])} />

@@ -67,7 +67,9 @@ export function buildQueue<T extends { id: string }>(
 ): T[] {
   const reviews = words.filter((w) => progress[w.id] && isDue(progress[w.id], today))
   const fresh = words.filter((w) => !progress[w.id]).slice(0, Math.max(0, limit - newToday))
-  return [...reviews, ...fresh]
+  // 今日「まだ」にした単語（箱0）は最後に回し、同じ単語が続けて出ないようにする
+  const relearn = (w: T) => progress[w.id]?.box === 0 && progress[w.id]?.due === today
+  return [...reviews.filter((w) => !relearn(w)), ...fresh, ...reviews.filter(relearn)]
 }
 
 export function loadDailyNew(today: string): DailyNew {

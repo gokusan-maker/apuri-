@@ -214,4 +214,11 @@ describe('App', () => {
     fireEvent.click(screen.getByLabelText('例文を聞く'))
     expect(spoken).toEqual([WORDS[0].example])
   })
+
+  it('「まだ」にした単語はすぐには出ず、次の単語に進む', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[1].en)
+  })
 })
