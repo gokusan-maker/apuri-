@@ -665,3 +665,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .sub-tabs button[aria-selected='true'] { background: var(--accent); color: var(--accent-fg); font-weight: 700; }
 .stats-view > .party:first-child, .stats-view > .badges:first-child, .stats-view > .my-words:first-child { margin-top: 0; }
 .define-prompt { font-size: 1.2rem; font-weight: 700; margin: 8px 0 4px; line-height: 1.5; }
+.shiritori-chain { font-size: 1.2rem; font-weight: 700; margin: 4px 0 8px; }
+.choice-ja { font-size: 0.8rem; color: var(--muted); margin-left: 6px; }

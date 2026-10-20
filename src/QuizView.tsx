@@ -10,6 +10,7 @@ import { Irregular } from './IrregularView'
 import { Grammar } from './GrammarView'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
+import { Shiritori } from './ShiritoriView'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
@@ -35,7 +36,8 @@ import { WORDS, type Word } from './words'
 // tiles：文字タイルで単語を作る
 // confusing：まちがえやすい単語
 // define：英語の説明を読んで単語を当てる
-export type Direction = 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// shiritori：英語しりとり
+export type Direction = 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : d === 'define' ? DEFS[w.id] ?? w.ja : w.en)
 const label = (d: Direction) =>
@@ -71,6 +73,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'timed', label: '⏳ 10秒', group: '4択' },
   { id: 'define', label: '🇬🇧 英英クイズ', group: '4択' },
   { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
+  { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
   { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },
@@ -288,6 +291,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Scramble key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'shiritori') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Shiritori onAnswer={onAnswer} />
       </>
     )
   }
