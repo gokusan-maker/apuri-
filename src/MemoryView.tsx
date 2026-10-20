@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { loadLowBest, MEMORY_BEST, recordLowBest } from './bests'
 import { isPair, makeDeck, type MemCard } from './memory'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -16,6 +17,8 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
   const [open, setOpen] = useState<number[]>([]) // めくっている（最大2枚）
   const [done, setDone] = useState<string[]>([]) // そろったカードの key
   const [moves, setMoves] = useState(0)
+  const [best, setBest] = useState(() => loadLowBest(MEMORY_BEST))
+  const [newBest, setNewBest] = useState(false)
 
   // 2枚がちがったら少し見せてから伏せる
   useEffect(() => {
@@ -32,7 +35,12 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
       const [a, b] = next.map((k) => deck[k])
       if (isPair(a, b)) {
         playCorrect()
-        setDone([...done, a.key, b.key])
+        const d = [...done, a.key, b.key]
+        setDone(d)
+        if (d.length === deck.length && recordLowBest(MEMORY_BEST, moves + 1)) {
+          setNewBest(true)
+          setBest(moves + 1)
+        }
         onAnswer?.(true, XP_QUIZ_CORRECT, a.wordId, 'quiz')
         setOpen([])
         return
@@ -47,7 +55,7 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
   return (
     <section className="card quiz memory">
       <p className="quiz-progress">
-        そろった {done.length / 2} / {deck.length / 2} ペア・{moves} 手
+        そろった {done.length / 2} / {deck.length / 2} ペア・{moves} 手{best !== null && `（ベスト ${best} 手）`}
       </p>
       <div className="memory-grid">
         {deck.map((c: MemCard, i) => {
@@ -66,7 +74,7 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
       </div>
       {cleared && (
         <>
-          <p className="level-up">ぜんぶそろった！ {moves} 手でクリア</p>
+          <p className="level-up">ぜんぶそろった！ {moves} 手でクリア{newBest && '・自己ベスト！'}</p>
           <button
             className="flip"
             onClick={() => {
@@ -74,6 +82,7 @@ export function Memory({ words, onAnswer, initialDeck }: Props) {
               setDone([])
               setOpen([])
               setMoves(0)
+              setNewBest(false)
             }}
           >
             もう1回

@@ -11,6 +11,7 @@ it('山札は6ペア12枚で、英語と日本語がそろう', () => {
 })
 
 it('ちがう2枚は伏せもどり、ペアをそろえると XP、全部でクリア', () => {
+  localStorage.clear()
   vi.useFakeTimers({ toFake: ['setTimeout', 'clearTimeout'] })
   const deck = makeDeck(WORDS.slice(0, 6))
   const got: boolean[] = []
@@ -30,5 +31,6 @@ it('ちがう2枚は伏せもどり、ペアをそろえると XP、全部でク
   }
   vi.useRealTimers()
   expect(got).toEqual([true, true, true, true, true, true])
-  expect(screen.getByText('ぜんぶそろった！ 7 手でクリア')).toBeInTheDocument()
+  expect(screen.getByText('ぜんぶそろった！ 7 手でクリア・自己ベスト！')).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:best-memory')).toBe('7')
 })

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BINGO_BEST, loadLowBest, recordLowBest } from './bests'
 import { hasBingo, makeBoard } from './bingo'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { shuffle } from './quiz'
@@ -18,6 +19,8 @@ export function Bingo({ words, onAnswer, initialBoard }: Props) {
   const [step, setStep] = useState(0)
   const [marked, setMarked] = useState<number[]>([])
   const [miss, setMiss] = useState(false)
+  const [best, setBest] = useState(() => loadLowBest(BINGO_BEST))
+  const [newBest, setNewBest] = useState(false)
   const bingo = hasBingo(marked)
   const target = order[step]
 
@@ -30,7 +33,13 @@ export function Bingo({ words, onAnswer, initialBoard }: Props) {
       setStep(step + 1)
       setMiss(false)
       onAnswer?.(true, XP_QUIZ_CORRECT, board[i].id, 'quiz')
-      if (hasBingo(m)) playFanfare()
+      if (hasBingo(m)) {
+        playFanfare()
+        if (recordLowBest(BINGO_BEST, step + 1)) {
+          setNewBest(true)
+          setBest(step + 1)
+        }
+      }
     } else {
       playWrong()
       setMiss(true)
@@ -44,13 +53,18 @@ export function Bingo({ words, onAnswer, initialBoard }: Props) {
     setStep(0)
     setMarked([])
     setMiss(false)
+    setNewBest(false)
   }
 
   return (
     <section className="card quiz bingo">
-      <p className="quiz-progress">{step} 問目まで正解</p>
+      <p className="quiz-progress">
+        {step} 問目まで正解{best !== null && `（ベスト ${best} 問でビンゴ）`}
+      </p>
       {bingo ? (
-        <p className="level-up">🎉 ビンゴ！（{step} 問）</p>
+        <p className="level-up">
+          🎉 ビンゴ！（{step} 問）{newBest && '・自己ベスト！'}
+        </p>
       ) : (
         <p className="verb-ask">
           「<strong>{board[target]?.ja}</strong>」はどれ？{miss && <span className="stats-note">（ちがうよ）</span>}
