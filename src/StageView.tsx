@@ -4,7 +4,7 @@ import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, type BossRecord } from 
 import { Boss } from './BossView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
-import { WORDS, wordsOf, type Level } from './words'
+import { WORDS, wordsOf, type Level, type Word } from './words'
 
 type Props = {
   levels: Level[]
@@ -14,13 +14,14 @@ type Props = {
   boss?: BossRecord
   onBossWin?: (level: Level) => void
   onSpend?: (coins: number) => boolean
+  onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
 }
 
 export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy }: Props) {
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
@@ -57,6 +58,11 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           <span>
             {playing.level} ステージ{playing.no}
           </span>
+          {onStudy && result === null && (
+            <button className="note-btn" onClick={() => onStudy(playing.words)}>
+              📖 カードで予習
+            </button>
+          )}
         </div>
         {result !== null && (
           <p className={`stage-result${result > 0 ? ' clear' : ''}`}>

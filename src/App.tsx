@@ -650,6 +650,10 @@ function App() {
       ) : mode === 'stage' ? (
         <Stages
           onSpend={spend}
+          onStudy={(ws) => {
+            setPicked(ws.map((w) => w.id))
+            startCards('pick')
+          }}
           levels={levels}
           boss={boss}
           onBossWin={(level) => {
