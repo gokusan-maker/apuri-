@@ -92,7 +92,7 @@ describe('App', () => {
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
-    for (const l of ['中2', '中3', '高校基礎', '熟語']) fireEvent.click(screen.getByRole('button', { name: l }))
+    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月']) fireEvent.click(screen.getByRole('button', { name: l }))
     const n = wordsOf(['中1']).length
     expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])

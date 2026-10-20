@@ -48,4 +48,5 @@ export const BOSSES: Record<Level, BossLook> = {
   中3: { name: 'コオリモチ', color: '#0ea5e9', line: '#0c4a6e', eye: '#f0f9ff' },
   高校基礎: { name: 'カゲノオオモチ', color: '#334155', line: '#020617', eye: '#f87171' },
   熟語: { name: 'ナゾナゾモチ', color: '#0d9488', line: '#134e4a', eye: '#fde68a' },
+  '曜日・月': { name: 'トケイモチ', color: '#ca8a04', line: '#713f12', eye: '#fff7ed' },
 }

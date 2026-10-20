@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月']
 
 export type Word = {
   id: string
@@ -358,6 +358,26 @@ export const WORDS: Word[] = [
   { id: 'these-days', en: 'these days', ja: '最近', example: 'These days, I often play chess.', exampleJa: '最近、よくチェスをする。', level: '熟語' },
   { id: 'take-part-in', en: 'take part in', ja: '〜に参加する', example: 'I want to take part in the speech contest.', exampleJa: 'スピーチコンテストに参加したい。', level: '熟語' },
   { id: 'turn-on', en: 'turn on', ja: '（電気などを）つける', example: 'Please turn on the light.', exampleJa: '電気をつけてください。', level: '熟語' },
+  // 曜日・月
+  { id: 'monday', en: 'Monday', ja: '月曜日', example: 'I have a piano lesson on Monday.', exampleJa: '月曜日にピアノのレッスンがある。', level: '曜日・月' },
+  { id: 'tuesday', en: 'Tuesday', ja: '火曜日', example: 'We have P.E. on Tuesday.', exampleJa: '火曜日に体育がある。', level: '曜日・月' },
+  { id: 'wednesday', en: 'Wednesday', ja: '水曜日', example: 'The library is closed on Wednesday.', exampleJa: '図書館は水曜日が休みだ。', level: '曜日・月' },
+  { id: 'thursday', en: 'Thursday', ja: '木曜日', example: 'My favorite TV show is on Thursday.', exampleJa: '好きなテレビ番組は木曜日にある。', level: '曜日・月' },
+  { id: 'friday', en: 'Friday', ja: '金曜日', example: "Let's watch a movie on Friday night.", exampleJa: '金曜日の夜に映画を見よう。', level: '曜日・月' },
+  { id: 'saturday', en: 'Saturday', ja: '土曜日', example: 'I play soccer every Saturday.', exampleJa: '毎週土曜日にサッカーをする。', level: '曜日・月' },
+  { id: 'sunday', en: 'Sunday', ja: '日曜日', example: 'We often eat out on Sunday.', exampleJa: '日曜日はよく外食する。', level: '曜日・月' },
+  { id: 'january', en: 'January', ja: '1月', example: 'The new year starts in January.', exampleJa: '新しい年は1月に始まる。', level: '曜日・月' },
+  { id: 'february', en: 'February', ja: '2月', example: 'February is the shortest month.', exampleJa: '2月はいちばん短い月だ。', level: '曜日・月' },
+  { id: 'march', en: 'March', ja: '3月', example: 'We graduate in March in Japan.', exampleJa: '日本では3月に卒業する。', level: '曜日・月' },
+  { id: 'april', en: 'April', ja: '4月', example: 'The new school year begins in April.', exampleJa: '新学年は4月に始まる。', level: '曜日・月' },
+  { id: 'may', en: 'May', ja: '5月', example: 'The weather is nice in May.', exampleJa: '5月は天気がいい。', level: '曜日・月' },
+  { id: 'june', en: 'June', ja: '6月', example: 'It rains a lot in June.', exampleJa: '6月は雨がよく降る。', level: '曜日・月' },
+  { id: 'july', en: 'July', ja: '7月', example: 'Summer vacation starts in July.', exampleJa: '夏休みは7月に始まる。', level: '曜日・月' },
+  { id: 'august', en: 'August', ja: '8月', example: 'It is very hot in August.', exampleJa: '8月はとても暑い。', level: '曜日・月' },
+  { id: 'september', en: 'September', ja: '9月', example: 'My birthday is in September.', exampleJa: '私の誕生日は9月だ。', level: '曜日・月' },
+  { id: 'october', en: 'October', ja: '10月', example: 'The leaves turn red in October.', exampleJa: '10月には葉が赤くなる。', level: '曜日・月' },
+  { id: 'november', en: 'November', ja: '11月', example: 'November is a good month for hiking.', exampleJa: '11月はハイキングにいい月だ。', level: '曜日・月' },
+  { id: 'december', en: 'December', ja: '12月', example: 'We have a party in December.', exampleJa: '12月にパーティーをする。', level: '曜日・月' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
