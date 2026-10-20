@@ -1,5 +1,14 @@
 import { useEffect, useMemo, useState } from 'react'
-import { dayKey, grade, isDue, loadProgress, saveProgress, type ProgressMap } from './srs'
+import {
+  buildQueue,
+  dayKey,
+  grade,
+  loadDailyNew,
+  loadProgress,
+  saveDailyNew,
+  saveProgress,
+  type ProgressMap,
+} from './srs'
 import { WORDS } from './words'
 
 function speak(text: string) {
@@ -14,14 +23,18 @@ function App() {
   const [progress, setProgress] = useState<ProgressMap>(loadProgress)
   const [flipped, setFlipped] = useState(false)
   const today = dayKey()
+  const [daily, setDaily] = useState(() => loadDailyNew(today))
+  const newToday = daily.day === today ? daily.count : 0
 
   useEffect(() => saveProgress(progress), [progress])
+  useEffect(() => saveDailyNew(daily), [daily])
 
-  const queue = useMemo(() => WORDS.filter((w) => isDue(progress[w.id], today)), [progress, today])
+  const queue = useMemo(() => buildQueue(WORDS, progress, today, newToday), [progress, today, newToday])
   const learned = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
   function answer(correct: boolean) {
+    if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     setFlipped(false)
   }
