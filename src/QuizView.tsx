@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { blankOut, canBlank } from './blank'
 import { quizXp } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -8,16 +9,19 @@ import type { Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
 // spell：日本語を見て英単語を入力
-export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell'
+// blank：例文の空欄に入る単語を選ぶ
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
-const label = (d: Direction) => (d === 'ja-en' ? (w: Word) => w.en : (w: Word) => w.ja)
+const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
+const pool = (d: Direction, ws: Word[]) => (d === 'blank' ? ws.filter(canBlank) : ws)
 
 const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
   { id: 'spell', label: '✏️ スペル' },
+  { id: 'blank', label: '📝 穴埋め' },
 ]
 
 type Props = {
@@ -30,7 +34,7 @@ type Props = {
 
 export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
-  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, targets))
+  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words)))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -74,7 +78,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   function restart(d: Direction = direction) {
     setDirection(d)
-    setQuestions(makeQuiz(words, label(d), count, Math.random, targets))
+    setQuestions(makeQuiz(words, label(d), count, Math.random, pool(d, targets ?? words)))
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -145,7 +149,9 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
           </span>
         )}
       </p>
-      {direction === 'listen' ? (
+      {direction === 'blank' ? (
+        <BlankPrompt word={q.word} revealed={picked !== null} />
+      ) : direction === 'listen' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
             🔊
@@ -184,5 +190,20 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
         </>
       )}
     </section>
+  )
+}
+
+function BlankPrompt({ word, revealed }: { word: Word; revealed: boolean }) {
+  const b = blankOut(word.example, word.en)
+  if (!b) return null
+  return (
+    <div className="blank-prompt">
+      <p className="example blank-sentence">
+        {b.before}
+        <span className={`blank${revealed ? ' filled' : ''}`}>{revealed ? b.answer : '\u3000\u3000\u3000'}</span>
+        {b.after}
+      </p>
+      <p className="example-ja">{word.exampleJa}</p>
+    </div>
   )
 }

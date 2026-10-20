@@ -278,3 +278,8 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .setting.toggle { display: flex; justify-content: space-between; align-items: center; }
 .setting.toggle input { width: 22px; height: 22px; accent-color: var(--accent); }
 .speak-test { margin: 0 0 16px; padding: 6px 12px; border: 1px solid var(--accent); border-radius: 999px; background: transparent; color: var(--accent); }
+
+.blank-prompt { margin: 8px 0 4px; }
+.blank-sentence { font-size: 1.25rem; line-height: 1.8; }
+.blank { display: inline-block; min-width: 4.5em; border-bottom: 3px solid var(--accent); margin: 0 4px; font-weight: 700; }
+.blank.filled { color: #16a34a; animation: pop 0.3s; }

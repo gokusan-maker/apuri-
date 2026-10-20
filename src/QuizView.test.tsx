@@ -116,3 +116,14 @@ it('クイズの「✏️ スペル」でスペル入力に切り替わる', () 
   fireEvent.click(screen.getByText('英→日'))
   expect(document.querySelector('.choice')).not.toBeNull()
 })
+
+it('📝 穴埋めでは例文の空欄に入る単語を選び、答えると空欄が埋まる', () => {
+  const words = WORDS.slice(0, 10)
+  render(<Quiz words={words} count={1} direction="blank" />)
+  const sentence = document.querySelector('.blank-sentence')!.textContent!
+  const word = words.find((w) => w.example.startsWith(sentence.split('　')[0]) && sentence.endsWith(w.example.slice(-6)))!
+  expect(word).toBeDefined()
+  fireEvent.click(screen.getByRole('button', { name: word.en }))
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+  expect(document.querySelector('.blank-sentence')!.textContent).toBe(word.example)
+})
