@@ -239,6 +239,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: "Let's ___ lunch together.", choices: ['eat', 'eats', 'eating'], answer: 0, why: "Let's のあとは原形。" },
     ],
   },
+  {
+    id: 'wh',
+    title: '疑問詞（what / who / where / when / how）',
+    points: ['what「何」、who「だれ」、where「どこ」、when「いつ」、how「どうやって・どのくらい」。', '疑問詞を文の最初に置き、そのあとはふつうの疑問文の形。'],
+    examples: [
+      { en: 'Where do you live?', ja: 'どこに住んでいますか？' },
+      { en: 'How do you go to school?', ja: 'どうやって学校へ行きますか？' },
+    ],
+    questions: [
+      { sentence: '___ is your birthday? — It is May 5.', choices: ['When', 'Where', 'Who'], answer: 0, why: '日付を答えているので「いつ」の When。' },
+      { sentence: '___ is that girl? — She is my cousin.', choices: ['What', 'Who', 'How'], answer: 1, why: '人をたずねるので Who。' },
+      { sentence: '___ many brothers do you have?', choices: ['What', 'Which', 'How'], answer: 2, why: '数をたずねる「いくつ」は How many。' },
+    ],
+  },
+  {
+    id: 'pronoun',
+    title: '代名詞（I / my / me / mine）',
+    points: ['「〜は」I・he・she、「〜の」my・his・her、「〜を・に」me・him・her、「〜のもの」mine・his・hers。'],
+    examples: [
+      { en: 'This is my bag. It is mine.', ja: 'これは私のかばんです。それは私のものです。' },
+      { en: 'Do you know him?', ja: '彼を知っていますか？' },
+    ],
+    questions: [
+      { sentence: 'Please help ___.', choices: ['I', 'my', 'me'], answer: 2, why: '「私を」は me。' },
+      { sentence: 'That is ___ bike.', choices: ['she', 'her', 'hers'], answer: 1, why: '名詞の前の「彼女の」は her。' },
+      { sentence: 'Is this pen yours? — Yes, it\'s ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
