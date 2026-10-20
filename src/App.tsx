@@ -596,6 +596,7 @@ function App() {
       )}
       {showShop ? (
         <Shop
+          eventId={seasonEvent?.id}
           wallet={wallet}
           monster={monster}
           onBuy={(id) => {

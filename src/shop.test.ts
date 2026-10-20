@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, SNACKS, isEarly, snacksLeft } from './shop'
+import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -86,4 +86,12 @@ it('おやつにプリンがあり、値段が高いほどXPも多い', () => {
   expect(SNACKS.find((s) => s.id === 'pudding')).toMatchObject({ price: 18, xp: 40 })
   const byPrice = [...SNACKS].sort((a, b) => a.price - b.price)
   expect(byPrice.map((s) => s.xp)).toEqual([...byPrice.map((s) => s.xp)].sort((a, b) => a - b))
+})
+
+it('限定の着せ替えはイベント中か持っているときだけ並ぶ', () => {
+  expect(shopItems(undefined, []).some((i) => i.id === 'witchhat')).toBe(false)
+  expect(shopItems('halloween', []).some((i) => i.id === 'witchhat')).toBe(true)
+  expect(shopItems('halloween', []).some((i) => i.id === 'santahat')).toBe(false)
+  expect(shopItems(undefined, ['santahat']).some((i) => i.id === 'santahat')).toBe(true)
+  expect(buy({ coins: 100, owned: [] }, 'witchhat')).toMatchObject({ coins: 20, owned: ['witchhat'] })
 })

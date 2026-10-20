@@ -13,6 +13,17 @@ export const ITEMS: Item[] = [
   { id: 'crown', name: '王冠', price: 300, icon: '👑' },
 ]
 
+// イベント期間だけ並ぶ限定の着せ替え（買ったものはずっと使える）
+export const EVENT_ITEMS: (Item & { event: string })[] = [
+  { id: 'witchhat', name: '魔女のぼうし', price: 80, icon: '🧙', event: 'halloween' },
+  { id: 'santahat', name: 'サンタのぼうし', price: 80, icon: '🎅', event: 'christmas' },
+]
+
+// ショップに並べる着せ替え：いつもの品＋今のイベントの品＋持っている限定品
+export function shopItems(eventId: string | undefined, owned: string[]): Item[] {
+  return [...ITEMS, ...EVENT_ITEMS.filter((i) => i.event === eventId || owned.includes(i.id))]
+}
+
 export const COIN_PER_CORRECT = 1
 export const LOGIN_COINS = 5 // その日はじめての学習
 export const EARLY_COINS = 3 // 朝5〜10時にその日はじめての学習（早起きボーナス）
@@ -42,7 +53,7 @@ export function buyFreeze(w: Wallet): Wallet | null {
 }
 
 export function buy(w: Wallet, id: string): Wallet | null {
-  const item = [...ITEMS, ...ROOMS].find((i) => i.id === id)
+  const item = [...ITEMS, ...EVENT_ITEMS, ...ROOMS].find((i) => i.id === id)
   if (!item || w.owned.includes(id) || w.coins < item.price) return null
   return { ...w, coins: w.coins - item.price, owned: [...w.owned, id] }
 }
@@ -55,7 +66,7 @@ export function loadWallet(): Wallet {
     const v = raw ? (JSON.parse(raw) as Partial<Wallet>) : null
     return {
       coins: typeof v?.coins === 'number' && v.coins >= 0 ? v.coins : 0,
-      owned: Array.isArray(v?.owned) ? v.owned.filter((x) => [...ITEMS, ...ROOMS].some((i) => i.id === x)) : [],
+      owned: Array.isArray(v?.owned) ? v.owned.filter((x) => [...ITEMS, ...EVENT_ITEMS, ...ROOMS].some((i) => i.id === x)) : [],
       ...(typeof v?.room === 'string' && ROOMS.some((r) => r.id === v.room) ? { room: v.room } : {}),
       freezes: typeof v?.freezes === 'number' && v.freezes > 0 ? Math.min(v.freezes, FREEZE_MAX) : 0,
     }

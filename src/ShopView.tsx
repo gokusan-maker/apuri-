@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { FREEZE_MAX, FREEZE_PRICE, ITEMS, ROOMS, SNACKS, type Wallet } from './shop'
+import { FREEZE_MAX, FREEZE_PRICE, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -10,11 +10,12 @@ type Props = {
   onClose: () => void
   snacksLeft: number
   onEat: (id: string) => void
+  eventId?: string // 今の季節のイベント（限定の着せ替えを出す）
   onBuyFreeze?: () => void
   onRoom?: (id: string | undefined) => void
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   return (
@@ -71,7 +72,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
       <ul className="badge-grid">
-        {ITEMS.map((it) => {
+        {shopItems(eventId, wallet.owned).map((it) => {
           const owned = wallet.owned.includes(it.id)
           const wearing = monster.wear === it.id
           return (

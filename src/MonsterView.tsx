@@ -102,6 +102,21 @@ export function Wear({ id }: { id?: string }) {
           <path d="M29 28 L31 17 L38 25 Z M71 28 L69 17 L62 25 Z" fill="#f9a8d4" stroke="none" />
         </g>
       )
+    case 'witchhat':
+      return (
+        <g stroke="#1f2937" strokeWidth="2">
+          <path d="M28 28 L72 28 L60 22 L54 2 L40 22 Z" fill="#7c3aed" />
+          <rect x="40" y="20" width="20" height="4" fill="#f59e0b" stroke="none" />
+        </g>
+      )
+    case 'santahat':
+      return (
+        <g stroke="#7f1d1d" strokeWidth="1.5">
+          <path d="M30 28 Q48 0 70 14 L68 28 Z" fill="#dc2626" />
+          <rect x="28" y="24" width="44" height="7" rx="3" fill="#fff" />
+          <circle cx="71" cy="14" r="4" fill="#fff" />
+        </g>
+      )
     case 'crown':
       return (
         <g fill="#facc15" stroke="#a16207" strokeWidth="2">
