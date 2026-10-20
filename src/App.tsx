@@ -49,7 +49,7 @@ import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
-import { Stages } from './StageView'
+import { Stages, STAR3_COINS } from './StageView'
 import { buy, buyFreeze, COIN_PER_CORRECT, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
@@ -422,6 +422,7 @@ function App() {
           record={stages}
           onAnswer={onAnswer}
           onClear={(id, stars) => {
+            if (stars === 3 && (stages[id] ?? 0) < 3) setWallet((w) => ({ ...w, coins: w.coins + STAR3_COINS }))
             setStages((r) => recordStars(r, id, stars))
             if (stars > 0) count('stageClear')
           }}

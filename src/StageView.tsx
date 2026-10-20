@@ -15,6 +15,8 @@ type Props = {
   onBossWin?: (level: Level) => void
 }
 
+export const STAR3_COINS = 20
+
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
 export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin }: Props) {
@@ -22,6 +24,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
   const [fighting, setFighting] = useState<Level | null>(null)
+  const [firstThree, setFirstThree] = useState(false)
 
   if (fighting) {
     return (
@@ -56,6 +59,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         {result !== null && (
           <p className={`stage-result${result > 0 ? ' clear' : ''}`}>
             {result > 0 ? `クリア！ ${starText(result)}` : '6問以上正解でクリア。もう一度！'}
+            {firstThree && <span className="stage-bonus">はじめての★3！ 🪙{STAR3_COINS}</span>}
           </p>
         )}
         <Quiz
@@ -68,6 +72,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           onFinish={(score, total) => {
             const stars = starsFor(score, total)
             setResult(stars)
+            setFirstThree(stars === 3 && (record[playing.id] ?? 0) < 3)
             onClear(playing.id, stars)
           }}
           onRestart={() => {
