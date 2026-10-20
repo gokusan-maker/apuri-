@@ -11,5 +11,6 @@ export const EMOJI: Record<string, string> = {
   bus: '🚌', train: '🚆', bike: '🚲', plane: '✈️', ship: '🚢', taxi: '🚕', subway: '🚇', truck: '🚚', boat: '⛵', helicopter: '🚁',
   sofa: '🛋️', mirror: '🪞', window: '🪟', chair: '🪑',
   christmas: '🎄', halloween: '🎃', party: '🥳', fireworks: '🎆', wedding: '💒', concert: '🎤', graduation: '🎓',
+  volcano: '🌋', desert: '🏜️', leaf: '🍃', grass: '🌱', insect: '🐛', brain: '🧠',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
