@@ -506,3 +506,4 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .scramble .flip:disabled { opacity: 0.4; }
 .card-en-back { font-weight: 700; font-size: 1.8rem; }
 .install .flip { margin-top: 4px; }
+.share { text-align: center; margin-top: 8px; }

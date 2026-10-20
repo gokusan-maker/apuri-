@@ -43,6 +43,7 @@ import { Stages } from './StageView'
 import { buy, COIN_PER_CORRECT, loadWallet, saveWallet } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
+import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
@@ -332,6 +333,15 @@ function App() {
               setMode('card')
             }}
           >
+            <ShareButton
+              stats={{
+                name: monster.name ?? formOf(monster).name,
+                level: levelInfo(monster.xp).level,
+                streak: streakDays,
+                learned: learnedAll,
+                badges: Object.keys(earned).length,
+              }}
+            />
             <MyWords list={myWords} onChange={setMyWords} />
             <BadgeList earned={earned} />
             <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
