@@ -20,6 +20,7 @@ import {
   type ProgressMap,
 } from './srs'
 import { Quiz } from './Quiz'
+import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { WORDS } from './words'
 
 function speak(text: string) {
@@ -49,7 +50,12 @@ function App() {
   useEffect(() => saveMonster(monster), [monster])
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
+  const [streak, setStreak] = useState(loadStreak)
+  useEffect(() => saveStreak(streak), [streak])
+  const streakDays = currentStreak(streak, today)
+
   function gainXp(amount: number) {
+    setStreak(recordStudy(streak, today))
     const before = levelInfo(monster.xp).level
     const xp = monster.xp + amount
     const after = levelInfo(xp).level
@@ -79,7 +85,12 @@ function App() {
   return (
     <main className="app">
       <header>
-        <h1>えいたん</h1>
+        <div className="top">
+          <h1>えいたん</h1>
+          <p className={`streak${streakDays > 0 ? ' on' : ''}`} aria-label={`連続学習 ${streakDays} 日`}>
+            🔥 {streakDays}日
+          </p>
+        </div>
         <Monster
           xp={monster.xp}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}

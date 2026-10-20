@@ -145,3 +145,7 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .result-list dt { color: var(--muted); font-size: 0.85rem; }
 .result-list dd { margin: 4px 0 0; font-size: 1.3rem; font-weight: 700; }
 .result-message { margin: 0 0 8px; }
+
+.top { display: flex; align-items: center; justify-content: space-between; }
+.streak { margin: 0; font-weight: 700; color: var(--muted); filter: grayscale(1); }
+.streak.on { color: #f97316; filter: none; }

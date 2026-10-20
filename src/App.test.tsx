@@ -47,4 +47,12 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.queryByText(/さみしそう/)).not.toBeInTheDocument()
   })
+
+  it('学習すると連続日数の🔥が1日になる', () => {
+    render(<App />)
+    expect(screen.getByLabelText('連続学習 0 日')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
+  })
 })
