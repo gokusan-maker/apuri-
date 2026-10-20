@@ -223,4 +223,59 @@ export const PASSAGES: Passage[] = [
       { q: 'ゴールまでの時間は？', choices: ['30分', '2時間', '1時間'], answer: 2 },
     ],
   },
+  {
+    id: 'lost-umbrella',
+    title: 'The Lost Umbrella',
+    text: 'Yesterday, I left my umbrella on the train. I went to the station office this morning. A kind man found it in a big box. It had my name on it, so he gave it back to me.',
+    ja: '昨日、電車にかさを置き忘れました。今朝、駅の事務所に行きました。親切な男の人が大きな箱の中から見つけてくれました。名前が書いてあったので、返してもらえました。',
+    questions: [
+      { q: 'かさをどこに忘れた？', choices: ['学校', 'バス', '電車'], answer: 2 },
+      { q: 'かさはどこにあった？', choices: ['大きな箱の中', 'いすの下', '机の上'], answer: 0 },
+      { q: 'なぜ返してもらえた？', choices: ['色が赤かったから', '名前が書いてあったから', '駅員さんと知り合いだったから'], answer: 1 },
+    ],
+  },
+  {
+    id: 'new-student',
+    title: 'A New Student',
+    text: 'A new student came to our class today. His name is Ken, and he is from Hokkaido. He was quiet in the morning. At lunch, we talked about soccer, and he smiled for the first time.',
+    ja: '今日、私たちのクラスに転校生が来ました。名前はケンで、北海道出身です。朝は静かでした。お昼にサッカーの話をしたら、初めて笑顔を見せてくれました。',
+    questions: [
+      { q: 'ケンはどこの出身？', choices: ['沖縄', '北海道', '東京'], answer: 1 },
+      { q: '朝のケンのようすは？', choices: ['静かだった', 'よく話した', 'ねむそうだった'], answer: 0 },
+      { q: 'お昼に何の話をした？', choices: ['音楽', '野球', 'サッカー'], answer: 2 },
+    ],
+  },
+  {
+    id: 'recycle-day',
+    title: 'Recycling at Home',
+    text: 'In my family, we sort the trash every day. Paper goes in a blue box, and bottles go in a green box. On Fridays, my brother and I take the boxes outside. It is our job.',
+    ja: '私の家では毎日ごみを分別しています。紙は青い箱へ、びんは緑の箱へ入れます。金曜日には弟と私が箱を外に出します。それが私たちの仕事です。',
+    questions: [
+      { q: '紙はどの箱に入れる？', choices: ['青い箱', '緑の箱', '赤い箱'], answer: 0 },
+      { q: '箱を外に出すのは何曜日？', choices: ['月曜日', '金曜日', '日曜日'], answer: 1 },
+      { q: '箱を外に出すのはだれ？', choices: ['父', '母', '弟と私'], answer: 2 },
+    ],
+  },
+  {
+    id: 'zoo-trip',
+    title: 'A Day at the Zoo',
+    text: 'Last Sunday, we went to the zoo. The pandas were sleeping, so we went to see the elephants first. One elephant was drinking water with its long nose. When we came back, the pandas were eating.',
+    ja: 'この前の日曜日、動物園に行きました。パンダが寝ていたので、先にゾウを見に行きました。1頭のゾウが長い鼻で水を飲んでいました。もどってくると、パンダはごはんを食べていました。',
+    questions: [
+      { q: 'はじめパンダは何をしていた？', choices: ['食べていた', '寝ていた', '遊んでいた'], answer: 1 },
+      { q: 'ゾウは何をしていた？', choices: ['鼻で水を飲んでいた', '走っていた', '寝ていた'], answer: 0 },
+      { q: 'もどったときのパンダは？', choices: ['まだ寝ていた', 'いなかった', '食べていた'], answer: 2 },
+    ],
+  },
+  {
+    id: 'phone-rule',
+    title: 'Our Phone Rule',
+    text: 'My family has a rule. We do not use our phones at dinner. At first, it was hard for me. Now I enjoy talking with my parents about my day. Sometimes my father tells funny stories.',
+    ja: '私の家にはルールがあります。夕食のときはスマホを使いません。はじめは私にはつらかったです。今は、その日のことを両親と話すのが楽しいです。ときどき父がおもしろい話をしてくれます。',
+    questions: [
+      { q: '家のルールは？', choices: ['夜9時に寝る', '夕食のときスマホを使わない', '毎日本を読む'], answer: 1 },
+      { q: 'はじめはどうだった？', choices: ['つらかった', '楽しかった', '何も感じなかった'], answer: 0 },
+      { q: 'ときどき父は何をする？', choices: ['料理を作る', '歌を歌う', 'おもしろい話をする'], answer: 2 },
+    ],
+  },
 ]
