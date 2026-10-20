@@ -309,6 +309,13 @@ function App() {
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
   }
 
+  // コインを使う（足りなければ false）
+  function spend(n: number): boolean {
+    if (wallet.coins < n) return false
+    setWallet((w) => ({ ...w, coins: w.coins - n }))
+    return true
+  }
+
   function startCards(kind: Focus) {
     setCardFocus({ kind, done: [] })
     setShowList(false)
@@ -421,6 +428,7 @@ function App() {
         />
       ) : mode === 'stage' ? (
         <Stages
+          onSpend={spend}
           levels={levels}
           boss={boss}
           onBossWin={(level) => {
@@ -497,11 +505,7 @@ function App() {
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
-            onSpend={(n) => {
-              if (wallet.coins < n) return false
-              setWallet((w) => ({ ...w, coins: w.coins - n }))
-              return true
-            }}
+            onSpend={spend}
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
           />
         </>

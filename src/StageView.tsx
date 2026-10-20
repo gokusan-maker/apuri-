@@ -13,13 +13,14 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   boss?: BossRecord
   onBossWin?: (level: Level) => void
+  onSpend?: (coins: number) => boolean
 }
 
 export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend }: Props) {
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
@@ -32,6 +33,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         level={fighting}
         words={wordsOf([fighting])}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
+        onSpend={onSpend}
         onAnswer={onAnswer}
         onWin={() => onBossWin?.(fighting)}
         onExit={() => setFighting(null)}

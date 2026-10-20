@@ -34,3 +34,17 @@ describe('ボス戦', () => {
     expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
   })
 })
+
+it('コインでハートを1つ回復できる（1戦1回）', () => {
+  let coins = 30
+  const spend = (n: number) => (coins >= n ? ((coins -= n), true) : false)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onSpend={spend} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  fireEvent.click(screen.getByText('❤️+1（🪙10）'))
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  expect(coins).toBe(20)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.queryByText('❤️+1（🪙10）')).not.toBeInTheDocument()
+})

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEARTS, type BossLook } from './boss'
+import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook } from './boss'
 import { quizXp, type Source } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -12,6 +12,7 @@ type Props = {
   onWin: () => void
   onExit: () => void
   bonus?: number
+  onSpend?: (coins: number) => boolean
 }
 
 // オリジナルのボス。単語帳ごとに色と名前が変わる
@@ -28,7 +29,7 @@ function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   )
 }
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100 }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend }: Props) {
   const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(BOSS_HP)
@@ -36,6 +37,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100 }: Pro
   const [combo, setCombo] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
+  const [healed, setHealed] = useState(false) // 回復は1戦1回まで
 
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
@@ -75,6 +77,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100 }: Pro
     setCombo(0)
     setPicked(null)
     setHit(false)
+    setHealed(false)
   }
 
   return (
@@ -95,6 +98,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100 }: Pro
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
         {combo >= 2 && <span className="combo">🔥{combo}</span>}
+        {onSpend && !healed && !won && hearts > 0 && hearts < HEARTS && (
+          <button
+            className="hint-5050"
+            onClick={() => {
+              if (!onSpend(HEAL_COST)) return
+              setHearts(hearts + 1)
+              setHealed(true)
+            }}
+          >
+            ❤️+1（🪙{HEAL_COST}）
+          </button>
+        )}
       </p>
 
       {won ? (
