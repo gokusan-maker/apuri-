@@ -17,3 +17,7 @@ describe('spell', () => {
     expect(spellXp(0)).toBeGreaterThan(spellXp(1))
   })
 })
+
+it('スマホの「’」でも正解（You’re welcome）', () => {
+  expect(isCorrectSpelling('You’re welcome', "You're welcome")).toBe(true)
+})

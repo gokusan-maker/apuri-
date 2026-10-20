@@ -1,6 +1,6 @@
 // スペル入力モードの判定とヒント
 export function normalize(s: string): string {
-  return s.trim().toLowerCase().replace(/\s+/g, ' ')
+  return s.trim().toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, ' ')
 }
 
 export function isCorrectSpelling(input: string, answer: string): boolean {
