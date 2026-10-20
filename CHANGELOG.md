@@ -391,3 +391,4 @@
 - 2026-10-20: 中2に基本語を20語追加（robot・rocket・screen・snack など）
 - 2026-10-20: 中3に基本語を20語追加（stadium・suitcase・teenager など。絵文字クイズにも）
 - 2026-10-20: 高校基礎の単語を20語追加（obvious・option・overcome・perspective など、計260語）
+- 2026-10-20: 熟語を20追加（come true・make sure・keep in touch など、計160）
