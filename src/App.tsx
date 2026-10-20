@@ -348,7 +348,7 @@ function App() {
   // お気に入りは単語帳の選択に関係なく全部から
   const favWords = useMemo(() => [...WORDS, ...myWords].filter((w) => favorites.includes(w.id)), [myWords, favorites])
   const focusList = (k: Focus) => (k === 'weak' ? weak : k === 'fav' ? favWords : k === 'week' ? weekAgo : k === 'thisweek' ? thisWeekWords : [...WORDS, ...myWords].filter((w) => picked.includes(w.id)))
-  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語の', week: '1週間前に学んだ単語', thisweek: '今週学んだ単語' }
+  const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り', pick: '選んだ単語', week: '1週間前に学んだ単語', thisweek: '今週学んだ単語' }
 
   const queue = useMemo(() => buildQueue(words, progress, today, newToday, settings.newPerDay + extraToday, settings.randomNew, settings.reviewCap), [words, progress, today, newToday, extraToday, settings.randomNew, settings.reviewCap, settings.newPerDay])
   // その日はじめて開いたときだけ「今日の復習」を知らせる
@@ -893,7 +893,7 @@ function App() {
         cardFocus ? (
           <>
             <p className="weak-banner">
-              {FOCUS_LABEL[cardFocus.kind]}カードで復習中（のこり{' '}
+              {FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードで復習中（のこり{' '}
               {focusList(cardFocus.kind).filter((w) => !cardFocus.done.includes(w.id)).length}語）
               <button onClick={() => setCardFocus(null)}>やめる</button>
             </p>
@@ -913,7 +913,7 @@ function App() {
                 onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
               />
             ) : (
-              <p className="done">{FOCUS_LABEL[cardFocus.kind]}カードを一周しました 💪</p>
+              <p className="done">{FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードを一周しました 💪</p>
             )}
           </>
         ) : showList ? (

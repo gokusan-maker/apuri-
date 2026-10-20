@@ -480,7 +480,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
     fireEvent.click(screen.getByRole('button', { name: '動物' }))
-    expect(screen.getByText(/選んだ単語のだけ復習中/)).toBeInTheDocument()
+    expect(screen.getByText(/選んだ単語だけ復習中/)).toBeInTheDocument()
   })
 
   it('記録画面のカレンダーに今日の学習が印される', () => {
