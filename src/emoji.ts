@@ -39,5 +39,6 @@ export const EMOJI: Record<string, string> = {
   trumpet: '🎺', video: '📹', wheel: '🛞',
   butterfly: '🦋', bubble: '🫧', bulb: '💡', bride: '👰',
   cabbage: '🥬', camel: '🐫', cherry: '🍒', circus: '🎪', chain: '⛓️',
+  comb: '🪮', bull: '🐂', compass: '🧭', cart: '🛒', cereal: '🥣',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
