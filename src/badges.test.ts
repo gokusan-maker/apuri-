@@ -37,3 +37,7 @@ it('ボス・コイン・なかまのバッジ', () => {
   expect(ids).toEqual(expect.arrayContaining(['boss-1', 'coins-100', 'members-2']))
   expect(ids).not.toContain('boss-all')
 })
+
+it('単語帳を1冊完全制覇でバッジ', () => {
+  expect(newlyEarned({ ...zero, completeBooks: 1 }, {}).map((b) => b.id)).toContain('complete-1')
+})

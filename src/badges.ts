@@ -12,6 +12,7 @@ export type BadgeStats = {
   coins?: number // 今持っているコイン
   members?: number // なかまの数
   bestCombo?: number // コンボの自己ベスト
+  completeBooks?: number // 全語定着した単語帳の数
 }
 
 export type Badge = {
@@ -45,6 +46,7 @@ export const BADGES: Badge[] = [
   { id: 'members-2', icon: '🤝', name: 'なかまが増えた', desc: '2匹目の相棒に出会う', check: (s) => (s.members ?? 1) >= 2 },
   { id: 'combo-10', icon: '🔥', name: '10コンボ', desc: 'クイズで10問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 10 },
   { id: 'combo-20', icon: '☄️', name: '20コンボ', desc: 'クイズで20問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 20 },
+  { id: 'complete-1', icon: '👑', name: '完全制覇', desc: '単語帳を1冊ぜんぶ定着させる', check: (s) => (s.completeBooks ?? 0) >= 1 },
   { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
 ]
 

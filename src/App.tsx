@@ -277,6 +277,7 @@ function App() {
       bosses: Object.keys(boss).length,
       coins: wallet.coins,
       members: party.members.length,
+      completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
     },
     earned,
   )

@@ -75,7 +75,10 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
           <h2>単語帳ごとの定着</h2>
           {byLevel.map((b) => (
             <div key={b.level} className="by-level-row">
-              <span className="by-level-name">{b.level}</span>
+              <span className="by-level-name">
+                {b.learned === b.total && b.total > 0 ? '👑' : ''}
+                {b.level}
+              </span>
               <div className="goal-bar" role="progressbar" aria-label={`${b.level}の定着`} aria-valuemin={0} aria-valuemax={b.total} aria-valuenow={b.learned}>
                 <div className="goal-fill" style={{ width: `${(b.learned / b.total) * 100}%` }} />
               </div>

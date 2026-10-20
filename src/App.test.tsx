@@ -568,4 +568,13 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(33)
     vi.restoreAllMocks()
   })
+
+  it('単語帳をぜんぶ定着させると👑と完全制覇バッジ', () => {
+    const p = Object.fromEntries(wordsOf(['曜日・月']).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
+    localStorage.setItem('eitan:progress', JSON.stringify(p))
+    render(<App />)
+    expect(screen.getByText(/完全制覇/)).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(document.querySelector('.by-level')!.textContent).toContain('👑曜日・月')
+  })
 })
