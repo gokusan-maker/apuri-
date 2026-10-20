@@ -16,12 +16,14 @@ type Props = {
   onQuiz?: () => void
   note?: string
   onNote?: (text: string) => void
+  hideExampleJa?: boolean
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
+  const [showJa, setShowJa] = useState(false)
   const start = useRef<{ x: number; y: number } | null>(null)
 
   // 英語が見えたときに自動で発音（英→日なら表、日→英ならめくったとき）
@@ -153,7 +155,14 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
               </button>
             </p>
           )}
-          <p className="example-ja">{card.exampleJa}</p>
+          {card.exampleJa &&
+            (hideExampleJa && !showJa ? (
+              <button className="note-btn" onClick={() => setShowJa(true)}>
+                訳を見る
+              </button>
+            ) : (
+              <p className="example-ja">{card.exampleJa}</p>
+            ))}
           {onNote && <Note text={note} onSave={onNote} />}
           <div className="actions">
             <button className="again" onClick={() => answer(false)}>

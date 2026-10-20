@@ -517,6 +517,7 @@ function App() {
                 onAnswer={answerFocus}
                 autoSpeak={settings.autoSpeak}
                 jaFirst={settings.cardJaFirst}
+                hideExampleJa={settings.hideExampleJa}
                 favorite={favorites.includes(focusCard.id)}
                 note={notes[focusCard.id]}
                 onNote={(t) => setNotes((n) => setNote(n, focusCard.id, t))}
@@ -544,6 +545,7 @@ function App() {
               onAnswer={answer}
               autoSpeak={settings.autoSpeak}
               jaFirst={settings.cardJaFirst}
+              hideExampleJa={settings.hideExampleJa}
               favorite={!!card && favorites.includes(card.id)}
               note={card ? notes[card.id] : undefined}
               onNote={(t) => card && setNotes((n) => setNote(n, card.id, t))}

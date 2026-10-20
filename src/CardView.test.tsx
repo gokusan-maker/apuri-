@@ -84,3 +84,11 @@ it('「かんたん」ボタンと↑キー', () => {
     [true, true],
   ])
 })
+
+it('例文の訳を隠す設定：タップで見える', () => {
+  render(<Card card={WORDS[0]} onAnswer={() => {}} hideExampleJa />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  expect(screen.queryByText(WORDS[0].exampleJa)).not.toBeInTheDocument()
+  fireEvent.click(screen.getByText('訳を見る'))
+  expect(screen.getByText(WORDS[0].exampleJa)).toBeInTheDocument()
+})

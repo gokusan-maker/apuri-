@@ -128,6 +128,7 @@ describe('App', () => {
       cardJaFirst: false,
       largeText: false,
       color: 'blue',
+      hideExampleJa: false,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()

@@ -45,6 +45,7 @@ export type Settings = {
   cardJaFirst: boolean // カードを日本語→英語にする
   largeText: boolean // 文字を大きくする
   color: ThemeColor // テーマカラー
+  hideExampleJa: boolean // カード裏の例文の訳を隠す（タップで表示）
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -68,6 +69,7 @@ export const DEFAULT_SETTINGS: Settings = {
   cardJaFirst: false,
   largeText: false,
   color: 'blue',
+  hideExampleJa: false,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -86,6 +88,7 @@ export function loadSettings(): Settings {
       cardJaFirst: v.cardJaFirst === true,
       largeText: v.largeText === true,
       color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
+      hideExampleJa: v.hideExampleJa === true,
     }
   } catch {
     return { ...DEFAULT_SETTINGS }
