@@ -92,4 +92,16 @@ describe('App', () => {
     expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])
   })
+
+  it('まちがえた単語が記録の「苦手な単語」に出て、苦手だけ復習できる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('×1')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('苦手だけ復習する'))
+    expect(screen.getByText(/苦手だけ復習中（1語）/)).toBeInTheDocument()
+    expect(document.querySelector('.quiz .en')!.textContent).toBe(WORDS[0].en)
+    expect(screen.getByText('1 / 1')).toBeInTheDocument()
+  })
 })

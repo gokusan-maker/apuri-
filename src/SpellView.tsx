@@ -8,7 +8,7 @@ import type { Word } from './words'
 type Props = {
   words: Word[]
   count?: number
-  onAnswer?: (correct: boolean, xp: number) => void
+  onAnswer?: (correct: boolean, xp: number, wordId: string) => void
 }
 
 export function Spell({ words, count = 10, onAnswer }: Props) {
@@ -28,11 +28,11 @@ export function Spell({ words, count = 10, onAnswer }: Props) {
       setResult('ok')
       setScore(score + 1)
       playCorrect()
-      onAnswer?.(true, spellXp(hints))
+      onAnswer?.(true, spellXp(hints), w.id)
     } else {
       setResult('ng')
       playWrong()
-      onAnswer?.(false, 0)
+      onAnswer?.(false, 0, w.id)
     }
     speak(w.en)
   }

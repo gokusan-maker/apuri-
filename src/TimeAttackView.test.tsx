@@ -28,7 +28,7 @@ describe('TimeAttack', () => {
     answerCorrect()
     expect(screen.getByText('3 問')).toBeInTheDocument()
     expect(onAnswer).toHaveBeenCalledTimes(3)
-    expect(onAnswer).toHaveBeenCalledWith(true, 10)
+    expect(onAnswer).toHaveBeenCalledWith(true, 10, expect.any(String))
     act(() => vi.advanceTimersByTime(TIME_LIMIT * 1000))
     expect(screen.getByText('タイムアップ！')).toBeInTheDocument()
     expect(screen.getByText('3 問正解')).toBeInTheDocument()

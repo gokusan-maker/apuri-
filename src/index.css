@@ -248,3 +248,13 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
   color: var(--muted);
 }
 .levels button[aria-pressed='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 15%, transparent); color: var(--accent); font-weight: 700; }
+
+.stats-view h2 + .stats-note { margin-top: 0; }
+.stats-view h2:not(:first-child) { margin-top: 20px; }
+.weak-list { list-style: none; padding: 0; margin: 0 0 8px; text-align: left; }
+.weak-list li { display: flex; gap: 8px; align-items: baseline; padding: 6px 0; border-bottom: 1px solid color-mix(in srgb, var(--muted) 25%, transparent); }
+.weak-en { font-weight: 700; }
+.weak-ja { flex: 1; color: var(--muted); font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.weak-count { color: var(--again); font-weight: 700; }
+.weak-banner { display: flex; justify-content: space-between; align-items: center; margin: 12px 0 0; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--again) 12%, transparent); font-size: 0.9rem; }
+.weak-banner button { border: none; background: transparent; color: var(--accent); }

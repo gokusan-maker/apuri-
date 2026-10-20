@@ -37,13 +37,15 @@ export function makeQuestion<T extends { id: string }>(
   return { word, choices, answer: choices.indexOf(correct) }
 }
 
+// targets から出題し、誤答は all から選ぶ（苦手だけ復習のときに使う）
 export function makeQuiz<T extends { id: string }>(
   all: T[],
   label: (w: T) => string,
   count = 10,
   rng: Rng = Math.random,
+  targets: T[] = all,
 ): Question<T>[] {
-  return shuffle(all, rng)
+  return shuffle(targets, rng)
     .slice(0, count)
     .map((w) => makeQuestion(w, all, label, rng))
 }

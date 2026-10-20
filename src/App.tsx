@@ -19,6 +19,7 @@ import {
   saveProgress,
   type ProgressMap,
 } from './srs'
+import { addMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { speak } from './speech'
 import { TimeAttack } from './TimeAttackView'
@@ -69,8 +70,13 @@ function App() {
     setTodayCount(addToday(todayCount, today))
   }
 
-  function onAnswer(correct: boolean, xp: number) {
+  const [mistakes, setMistakes] = useState(loadMistakes)
+  useEffect(() => saveMistakes(mistakes), [mistakes])
+  const [weakOnly, setWeakOnly] = useState(false)
+
+  function onAnswer(correct: boolean, xp: number, wordId: string) {
     studied()
+    if (!correct) setMistakes((m) => addMistake(m, wordId))
     if (correct && xp > 0) gainXp(xp)
   }
 
@@ -95,6 +101,8 @@ function App() {
   const words = useMemo(() => wordsOf(levels), [levels])
   const levelKey = levels.join(',')
 
+  const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
+
   const queue = useMemo(() => buildQueue(words, progress, today, newToday), [words, progress, today, newToday])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
@@ -103,6 +111,7 @@ function App() {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     studied()
+    if (!correct) setMistakes((m) => addMistake(m, card.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN)
     setFlipped(false)
   }
@@ -159,9 +168,47 @@ function App() {
           <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={words.length} aria-valuenow={learned}>
             <div className="xp-fill" style={{ width: `${(learned / words.length) * 100}%` }} />
           </div>
+          <h2>苦手な単語</h2>
+          {weak.length === 0 ? (
+            <p className="stats-note">まだありません。まちがえた単語がここに集まります。</p>
+          ) : (
+            <>
+              <ol className="weak-list">
+                {weak.slice(0, 10).map((w) => (
+                  <li key={w.id}>
+                    <span className="weak-en">{w.en}</span>
+                    <span className="weak-ja">{w.ja}</span>
+                    <span className="weak-count">×{mistakes[w.id]}</span>
+                  </li>
+                ))}
+              </ol>
+              <button
+                className="flip"
+                onClick={() => {
+                  setWeakOnly(true)
+                  setMode('quiz')
+                }}
+              >
+                苦手だけ復習する
+              </button>
+            </>
+          )}
         </section>
       ) : mode === 'quiz' ? (
-        <Quiz key={levelKey} words={words} onAnswer={onAnswer} />
+        <>
+          {weakOnly && weak.length > 0 && (
+            <p className="weak-banner">
+              苦手だけ復習中（{weak.length}語）
+              <button onClick={() => setWeakOnly(false)}>やめる</button>
+            </p>
+          )}
+          <Quiz
+            key={`${levelKey}${weakOnly ? ':weak' : ''}`}
+            words={words}
+            targets={weakOnly && weak.length > 0 ? weak : undefined}
+            onAnswer={onAnswer}
+          />
+        </>
       ) : mode === 'time' ? (
         <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} />
       ) : card ? (

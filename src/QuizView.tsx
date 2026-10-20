@@ -22,14 +22,15 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
 
 type Props = {
   words: Word[]
+  targets?: Word[] // 出題する単語（省略時は words 全部）
   direction?: Direction
   count?: number
-  onAnswer?: (correct: boolean, xp: number) => void
+  onAnswer?: (correct: boolean, xp: number, wordId: string) => void
 }
 
-export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
-  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count))
+  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, targets))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -57,12 +58,12 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
       setEarned(earned + xp)
       setLastXp(xp)
       playCorrect()
-      onAnswer?.(true, xp)
+      onAnswer?.(true, xp, q.word.id)
     } else {
       setCombo(0)
       setLastXp(0)
       playWrong()
-      onAnswer?.(false, 0)
+      onAnswer?.(false, 0, q.word.id)
     }
   }
 
@@ -73,7 +74,7 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
 
   function restart(d: Direction = direction) {
     setDirection(d)
-    setQuestions(makeQuiz(words, label(d), count))
+    setQuestions(makeQuiz(words, label(d), count, Math.random, targets))
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -96,7 +97,7 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Spell words={words} count={count} onAnswer={onAnswer} />
+        <Spell words={targets ?? words} count={count} onAnswer={onAnswer} />
       </>
     )
   }
