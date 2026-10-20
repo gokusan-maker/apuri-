@@ -28,6 +28,8 @@ export const ROOMS: Item[] = [
   { id: 'ocean', name: '海', price: 80, icon: '🌊' },
   { id: 'space', name: '宇宙', price: 120, icon: '🌌' },
   { id: 'school', name: '教室', price: 80, icon: '🏫' },
+  { id: 'night', name: '夜の町', price: 120, icon: '🌃' },
+  { id: 'sakura', name: 'さくら', price: 100, icon: '🌸' },
 ]
 
 export const FREEZE_PRICE = 50

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, eat, ITEMS, loadWallet, saveWallet, isEarly, snacksLeft } from './shop'
+import { buy, buyFreeze, eat, ITEMS, loadWallet, ROOMS, saveWallet, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -75,4 +75,9 @@ describe('着せ替えの追加', () => {
 
 it('買い物をしても、おやすみチケットや部屋はそのまま', () => {
   expect(buy({ coins: 200, owned: ['space'], freezes: 2, room: 'space' }, 'ribbon')).toEqual({ coins: 170, owned: ['space', 'ribbon'], freezes: 2, room: 'space' })
+})
+
+it('部屋に「夜の町」「さくら」がある', () => {
+  for (const id of ['night', 'sakura']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
+  expect(new Set(ROOMS.map((r) => r.id)).size).toBe(ROOMS.length)
 })

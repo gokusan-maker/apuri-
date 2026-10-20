@@ -603,6 +603,8 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .room-ocean { background: linear-gradient(180deg, #e0f2fe 0%, #7dd3fc 60%, #0ea5e9 100%) !important; color: #1f2937; }
 .room-space { background: radial-gradient(circle at 80% 20%, #fef9c3 0 2px, transparent 3px), radial-gradient(circle at 30% 70%, #fff 0 1px, transparent 2px), linear-gradient(180deg, #1e1b4b, #312e81) !important; color: #f9fafb; }
 .room-school { background: linear-gradient(180deg, #fef3c7 0%, #fde68a 70%, #b45309 100%) !important; color: #1f2937; }
+.room-night { background: radial-gradient(circle at 20% 15%, #fef08a 0 6px, transparent 7px), linear-gradient(180deg, #0f172a 0%, #1e3a8a 70%, #334155 100%) !important; color: #f9fafb; }
+.room-sakura { background: radial-gradient(circle at 15% 20%, #fbcfe8 0 5px, transparent 6px), radial-gradient(circle at 75% 35%, #f9a8d4 0 4px, transparent 5px), linear-gradient(180deg, #fdf2f8 0%, #fce7f3 60%, #bbf7d0 100%) !important; color: #1f2937; }
 .monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind { color: inherit; opacity: 0.8; }
 .room-sample .badge-name { color: inherit; }
 .weekly { margin-top: 10px; } .weekly p { margin: 0 0 4px; font-size: 0.9rem; }
