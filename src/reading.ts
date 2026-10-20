@@ -168,4 +168,59 @@ export const PASSAGES: Passage[] = [
       { q: '夏のひまわりは？', choices: ['かれてしまった', '先生より高くなった', '花がさかなかった'], answer: 1 },
     ],
   },
+  {
+    id: 'library-day',
+    title: 'At the Library',
+    text: 'On Sundays, I often go to the city library with my brother. He reads books about trains. I like stories about space. We can borrow five books each for two weeks.',
+    ja: '日曜日、私はよく弟と市の図書館に行きます。弟は電車の本を読みます。私は宇宙の物語が好きです。1人5冊まで、2週間借りられます。',
+    questions: [
+      { q: '弟は何の本を読む？', choices: ['電車', '動物', '料理'], answer: 0 },
+      { q: '1人何冊借りられる？', choices: ['3冊', '5冊', '10冊'], answer: 1 },
+      { q: '借りられる期間は？', choices: ['1週間', '1か月', '2週間'], answer: 2 },
+    ],
+  },
+  {
+    id: 'snow-day',
+    title: 'The First Snow',
+    text: 'It snowed a lot last night. This morning, the trains were late, so school started at ten. After lunch, we made a big snowman in the schoolyard. Its nose was a carrot.',
+    ja: '昨夜は雪がたくさん降りました。今朝は電車が遅れたので、学校は10時に始まりました。昼食のあと、校庭で大きな雪だるまを作りました。鼻はにんじんでした。',
+    questions: [
+      { q: '学校は何時に始まった？', choices: ['8時', '10時', '12時'], answer: 1 },
+      { q: '雪だるまはどこで作った？', choices: ['校庭', '公園', '家の前'], answer: 0 },
+      { q: '雪だるまの鼻は？', choices: ['石', '木の枝', 'にんじん'], answer: 2 },
+    ],
+  },
+  {
+    id: 'pen-pal',
+    title: 'A Letter from Canada',
+    text: 'I have a pen pal in Canada. Her name is Emma. She sent me a photo of a lake near her house. In winter, the lake freezes, and people skate on it. I want to visit her someday.',
+    ja: '私にはカナダにペンフレンドがいます。名前はエマです。家の近くの湖の写真を送ってくれました。冬になると湖がこおり、人々がその上でスケートをします。いつか彼女をたずねたいです。',
+    questions: [
+      { q: 'エマはどこに住んでいる？', choices: ['アメリカ', 'カナダ', 'イギリス'], answer: 1 },
+      { q: 'エマが送ってくれたのは？', choices: ['湖の写真', '手作りのおかし', 'スケート靴'], answer: 0 },
+      { q: '冬の湖では何をする？', choices: ['つり', '泳ぐ', 'スケート'], answer: 2 },
+    ],
+  },
+  {
+    id: 'curry',
+    title: 'Cooking Dinner',
+    text: 'Last Friday, my mother came home late, so I cooked dinner for my family. I made curry and rice. It was a little too spicy, but everyone ate it all. My father asked me to make it again.',
+    ja: 'この前の金曜日、母の帰りが遅かったので、私が家族の夕食を作りました。カレーライスを作りました。少し辛すぎましたが、みんな全部食べてくれました。父はまた作ってほしいと言いました。',
+    questions: [
+      { q: 'なぜ夕食を作った？', choices: ['母の帰りが遅かったから', '料理の宿題だったから', '誕生日だったから'], answer: 0 },
+      { q: 'カレーはどうだった？', choices: ['甘すぎた', '少し辛すぎた', '冷めていた'], answer: 1 },
+      { q: '父は何と言った？', choices: ['もう作らないで', '自分が作る', 'また作ってほしい'], answer: 2 },
+    ],
+  },
+  {
+    id: 'marathon',
+    title: 'The Ten-Kilometer Run',
+    text: 'Last month, I ran in a ten-kilometer race for the first time. At first, I ran too fast and got tired. Then an old man ran next to me and said, "Slow and steady." I finished the race in one hour.',
+    ja: '先月、初めて10キロのレースに出ました。はじめは速く走りすぎて疲れてしまいました。すると、おじいさんが横を走りながら「ゆっくり着実に」と言いました。私は1時間でゴールしました。',
+    questions: [
+      { q: 'レースの距離は？', choices: ['5キロ', '10キロ', '20キロ'], answer: 1 },
+      { q: 'はじめはどうなった？', choices: ['速く走りすぎて疲れた', '道に迷った', '転んだ'], answer: 0 },
+      { q: 'ゴールまでの時間は？', choices: ['30分', '2時間', '1時間'], answer: 2 },
+    ],
+  },
 ]
