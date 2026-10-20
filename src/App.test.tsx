@@ -92,7 +92,7 @@ describe('App', () => {
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
-    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月']) fireEvent.click(screen.getByRole('button', { name: l }))
+    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別']) fireEvent.click(screen.getByRole('button', { name: l }))
     const n = wordsOf(['中1']).length
     expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])
@@ -400,7 +400,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('つぎへ'))
     fireEvent.click(screen.getByText('中学1年'))
-    expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1', '曜日・月'])
+    expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1', '曜日・月', 'テーマ別'])
   })
 
   it('設定で学年から単語帳を選びなおせる', () => {
