@@ -183,6 +183,62 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'He has a dog ___ runs very fast.', choices: ['who', 'that', 'what'], answer: 1, why: '動物には that（または which）。' },
     ],
   },
+  {
+    id: 'there',
+    title: 'There is / There are（〜がある・いる）',
+    points: ['「（どこどこに）〜がある・いる」は There is ＋ 1つのもの／There are ＋ 2つ以上のもの。', '過去は There was / There were。'],
+    examples: [
+      { en: 'There is a cat under the table.', ja: 'テーブルの下にねこがいる。' },
+      { en: 'There are three parks in my town.', ja: '私の町には公園が3つある。' },
+    ],
+    questions: [
+      { sentence: 'There ___ a big tree in the garden.', choices: ['is', 'are', 'be'], answer: 0, why: 'a big tree は1本なので is。' },
+      { sentence: 'There ___ many people at the station.', choices: ['is', 'are', 'was'], answer: 1, why: 'many people は複数なので are。' },
+      { sentence: 'There ___ a festival last Sunday.', choices: ['is', 'are', 'was'], answer: 2, why: '過去（last Sunday）で1つなので was。' },
+    ],
+  },
+  {
+    id: 'preposition',
+    title: '前置詞 in / on / at（時と場所）',
+    points: ['時：at ＋ 時刻、on ＋ 曜日・日付、in ＋ 月・季節・年。', '場所：at ＋ 地点、on ＋ 面の上、in ＋ 中・広い場所。'],
+    examples: [
+      { en: 'School starts at eight thirty.', ja: '学校は8時30分に始まる。' },
+      { en: 'My birthday is in July.', ja: '私の誕生日は7月だ。' },
+    ],
+    questions: [
+      { sentence: 'I get up ___ six every day.', choices: ['at', 'on', 'in'], answer: 0, why: '時刻は at。' },
+      { sentence: 'We have no school ___ Sunday.', choices: ['at', 'on', 'in'], answer: 1, why: '曜日は on。' },
+      { sentence: 'It snows a lot ___ winter.', choices: ['at', 'on', 'in'], answer: 2, why: '季節は in。' },
+    ],
+  },
+  {
+    id: 'conjunction',
+    title: '接続詞（when / if / because）',
+    points: ['when「〜するとき」、if「もし〜なら」、because「〜なので（理由）」で2つの文をつなぐ。', 'when や if の文では、未来のことでも現在形を使う。'],
+    examples: [
+      { en: 'I was reading when you called.', ja: 'あなたが電話したとき、私は本を読んでいた。' },
+      { en: 'If it rains, we will stay home.', ja: 'もし雨なら、家にいます。' },
+    ],
+    questions: [
+      { sentence: 'I stayed home ___ I had a cold.', choices: ['because', 'if', 'but'], answer: 0, why: '「かぜをひいていたので」理由は because。' },
+      { sentence: '___ you are free, let\'s play tennis.', choices: ['Because', 'If', 'So'], answer: 1, why: '「もしひまなら」は If。' },
+      { sentence: 'Call me ___ you get home.', choices: ['when', 'because', 'or'], answer: 0, why: '「家に着いたとき」は when。' },
+    ],
+  },
+  {
+    id: 'imperative',
+    title: '命令文（〜しなさい・〜しないで・〜しよう）',
+    points: ['主語を言わずに動詞の原形で始めると「〜しなさい」。ていねいにするときは please をつける。', 'Don\'t ＋ 原形「〜しないで」、Let\'s ＋ 原形「〜しよう」。'],
+    examples: [
+      { en: 'Open the window, please.', ja: '窓を開けてください。' },
+      { en: "Let's play soccer after school.", ja: '放課後サッカーをしよう。' },
+    ],
+    questions: [
+      { sentence: '___ quiet in the library.', choices: ['Be', 'Are', 'Is'], answer: 0, why: 'be動詞の命令文は原形の Be で始める。' },
+      { sentence: "___ run in the hallway.", choices: ["Don't", "Doesn't", 'Not'], answer: 0, why: '「〜しないで」は Don’t ＋ 原形。' },
+      { sentence: "Let's ___ lunch together.", choices: ['eat', 'eats', 'eating'], answer: 0, why: "Let's のあとは原形。" },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
