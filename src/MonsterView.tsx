@@ -2,7 +2,7 @@ import { useEffect, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
-import { pickLine, type Line } from './talk'
+import { pickLineNow, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
@@ -195,7 +195,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}
         aria-label="相棒にさわる"
         onClick={() => {
-          const l = pickLine(form.stage, mood === 'lonely', Math.random())
+          const l = pickLineNow(form.stage, mood === 'lonely', Math.random())
           setLine(l)
           setPoke(poke + 1)
           if (form.stage > 0) speak(l.en)

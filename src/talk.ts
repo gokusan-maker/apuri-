@@ -10,14 +10,39 @@ export const LINES: Line[] = [
   { en: 'Practice makes perfect.', ja: '練習あるのみ！' },
   { en: 'I like learning with you.', ja: 'きみと勉強するのが好きだよ。' },
   { en: 'Never give up!', ja: 'あきらめないで！' },
+  { en: 'Little by little, every day.', ja: '毎日少しずつね。' },
+  { en: 'Mistakes help us learn.', ja: 'まちがいは学びのもとだよ。' },
+  { en: 'Can you say it out loud?', ja: '声に出して言ってみよう！' },
+  { en: 'Words are like treasure.', ja: '単語は宝物みたいだね。' },
 ]
+
+// 時間帯のひとこと
+export const TIME_LINES: Record<'morning' | 'night', Line> = {
+  morning: { en: 'Good morning! Ready to learn?', ja: 'おはよう！今日も勉強しよう？' },
+  night: { en: "It's late. Let's sleep soon.", ja: 'もう遅いね。そろそろ寝よう。' },
+}
+
+// 季節のひとこと（月 1〜12）
+export function seasonLine(month: number): Line {
+  if (month >= 3 && month <= 5) return { en: 'Spring is here! Flowers are blooming.', ja: '春だね！花がさいてるよ。' }
+  if (month >= 6 && month <= 8) return { en: "It's hot! Drink some water.", ja: '暑いね！水を飲んでね。' }
+  if (month >= 9 && month <= 11) return { en: 'Autumn is a good time to read.', ja: '秋は読書にぴったりだね。' }
+  return { en: "It's cold. Stay warm!", ja: '寒いね。あたたかくしてね。' }
+}
 
 export const EGG_LINE: Line = { en: '...knock, knock.', ja: '（タマゴの中からコトコト音がする）' }
 export const LONELY_LINE: Line = { en: 'I missed you!', ja: '会いたかったよ！' }
 
-export function pickLine(stage: number, lonely: boolean, r: number): Line {
+export function pickLine(stage: number, lonely: boolean, r: number, now?: Date): Line {
   if (stage === 0) return EGG_LINE
   if (lonely) return LONELY_LINE
+  if (now) {
+    const h = now.getHours()
+    if (h >= 22 || h < 5) return TIME_LINES.night
+    // ときどき（2割）朝のあいさつや季節のひとこと
+    if (r < 0.1) return h < 10 ? TIME_LINES.morning : seasonLine(now.getMonth() + 1)
+    if (r < 0.2) return seasonLine(now.getMonth() + 1)
+  }
   return LINES[Math.floor(r * LINES.length) % LINES.length]
 }
 
@@ -32,4 +57,9 @@ export const CHEERS: Line[] = [
 
 export function cheerFor(count: number): Line {
   return CHEERS[Math.floor(count / 10 - 1) % CHEERS.length]
+}
+
+// 今の時刻・季節でひとことを選ぶ
+export function pickLineNow(stage: number, lonely: boolean, r: number): Line {
+  return pickLine(stage, lonely, r, new Date())
 }
