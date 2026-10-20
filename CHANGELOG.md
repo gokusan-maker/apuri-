@@ -373,3 +373,4 @@
 - 2026-10-20: クイズに「be動詞（am・is・are）」を追加
 - 2026-10-20: クイズに「a と an」を追加（an apple・a banana・an hour・a uniform など）
 - 2026-10-20: クイズに「時の前置詞（in・on・at）」を追加（on Monday・at seven・in April など）
+- 2026-10-20: クイズに「疑問詞」を追加（What・Where・When・Who・Why・How・Whose・Which）

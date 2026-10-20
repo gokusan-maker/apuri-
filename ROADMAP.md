@@ -368,7 +368,7 @@
 - [x] クイズに「be動詞（am・is・are）」（主語に合うのはどれ？）
 - [x] クイズに「a と an」（an apple・a banana など）
 - [x] クイズに「時の前置詞（in・on・at）」（on Monday・at seven・in April）
-- [ ] クイズに「疑問詞」（What・Where・When・Who・Why・How など）
+- [x] クイズに「疑問詞」（What・Where・When・Who・Why・How など）
 
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
