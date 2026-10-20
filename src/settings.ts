@@ -48,6 +48,7 @@ export type Settings = {
   hideExampleJa: boolean // カード裏の例文の訳を隠す（タップで表示）
   randomNew: boolean // 新しい単語をランダムな順に出す
   testDate: string // 定期テストの日（YYYY-MM-DD、なしは空）
+  reviewCap: number // 1日の復習の上限（0はなし）
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -60,6 +61,7 @@ export const THEME_COLORS: { id: ThemeColor; label: string; value: string }[] = 
 ]
 
 export const GOALS = [10, 20, 30, 50]
+export const REVIEW_CAPS = [0, 30, 50, 100]
 
 export const DEFAULT_SETTINGS: Settings = {
   rate: 1,
@@ -74,6 +76,7 @@ export const DEFAULT_SETTINGS: Settings = {
   hideExampleJa: false,
   randomNew: false,
   testDate: '',
+  reviewCap: 0,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -94,6 +97,7 @@ export function loadSettings(): Settings {
       color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
       hideExampleJa: v.hideExampleJa === true,
       randomNew: v.randomNew === true,
+      reviewCap: REVIEW_CAPS.includes(v.reviewCap as number) ? (v.reviewCap as number) : 0,
       testDate: typeof v.testDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.testDate) ? v.testDate : '',
     }
   } catch {

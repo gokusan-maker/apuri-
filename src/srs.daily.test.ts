@@ -51,3 +51,10 @@ it('ランダム順：同じ日は同じ順、日がかわると順がかわる'
   expect(a).not.toEqual(words.slice(0, 10).map((w) => w.id))
   expect(buildQueue(words, {}, '2026-10-21', 0, 10, true).map((w) => w.id)).not.toEqual(a)
 })
+
+it('復習の上限を決めると、その数までしか復習を出さない', () => {
+  const words = Array.from({ length: 10 }, (_, i) => ({ id: `w${i}` }))
+  const progress: ProgressMap = Object.fromEntries(words.map((w) => [w.id, { box: 1, due: '2026-10-19' }]))
+  expect(buildQueue(words, progress, '2026-10-20', 0, 10, false, 3)).toHaveLength(3)
+  expect(buildQueue(words, progress, '2026-10-20', 0, 10, false, 0)).toHaveLength(10)
+})

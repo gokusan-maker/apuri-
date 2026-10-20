@@ -4,7 +4,7 @@ import { GRADES } from './grade'
 import type { Level } from './words'
 import { useState } from 'react'
 import { speak } from './speech'
-import { DEFAULT_SETTINGS, GOALS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
+import { DEFAULT_SETTINGS, GOALS, REVIEW_CAPS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
 
 type Props = {
   settings: Settings
@@ -124,6 +124,17 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
           {GOALS.map((g) => (
             <button key={g} aria-pressed={settings.dailyGoal === g} onClick={() => set({ dailyGoal: g })}>
               {g}問
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="setting">
+        <legend>1日の復習の上限</legend>
+        <div className="levels">
+          {REVIEW_CAPS.map((n) => (
+            <button key={n} aria-pressed={settings.reviewCap === n} onClick={() => set({ reviewCap: n })}>
+              {n === 0 ? 'なし' : `${n}語`}
             </button>
           ))}
         </div>

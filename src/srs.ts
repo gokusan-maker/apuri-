@@ -74,8 +74,10 @@ export function buildQueue<T extends { id: string }>(
   newToday: number,
   limit = DAILY_NEW_LIMIT,
   random = false, // 新しい単語をランダムな順に（同じ日は同じ順）
+  reviewLimit = 0, // 1日の復習の上限（0はなし）
 ): T[] {
-  const reviews = words.filter((w) => progress[w.id] && isDue(progress[w.id], today))
+  const allReviews = words.filter((w) => progress[w.id] && isDue(progress[w.id], today))
+  const reviews = reviewLimit > 0 ? allReviews.slice(0, reviewLimit) : allReviews
   const unseen = words.filter((w) => !progress[w.id])
   if (random) unseen.sort((a, b) => hash(today + a.id) - hash(today + b.id))
   const fresh = unseen.slice(0, Math.max(0, limit - newToday))
