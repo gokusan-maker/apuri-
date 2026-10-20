@@ -178,3 +178,4 @@
 - 2026-10-20: 単語カードの裏に「まちがえやすい単語」の解説（borrow と lend など）を出すようにした
 - 2026-10-20: 中2の単語を20語追加（hobby・village・secret など）
 - 2026-10-20: 中3の単語を20語追加（celebrate・knowledge・memory など）
+- 2026-10-20: 中1の単語を20語追加（bag・station・window など）
