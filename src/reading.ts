@@ -333,4 +333,59 @@ export const PASSAGES: Passage[] = [
       { q: '祖父からの手紙はどうしている？', choices: ['すてた', '友だちにあげた', '箱にしまってある'], answer: 2 },
     ],
   },
+  {
+    id: 'rainy-season',
+    title: 'The Rainy Season',
+    text: 'In June, it rains almost every day in many parts of Japan. This is called the rainy season. Hydrangeas bloom beautifully at this time. My sister and I like walking in the rain in our new boots.',
+    ja: '6月、日本の多くの地域ではほぼ毎日雨が降ります。これは梅雨と呼ばれます。この時期にはアジサイがきれいにさきます。姉と私は新しい長ぐつで雨の中を歩くのが好きです。',
+    questions: [
+      { q: '梅雨は何月？', choices: ['4月', '6月', '8月'], answer: 1 },
+      { q: 'この時期にさく花は？', choices: ['アジサイ', '桜', 'ひまわり'], answer: 0 },
+      { q: '姉と私が好きなことは？', choices: ['家で本を読む', 'かさを集める', '長ぐつで雨の中を歩く'], answer: 2 },
+    ],
+  },
+  {
+    id: 'robot-class',
+    title: 'Making a Robot',
+    text: 'In our science club, we made a small robot. It can move forward and turn left or right. We wrote the program on a computer. At first, it kept hitting the wall, but now it can find its way out of a box.',
+    ja: '科学部で小さなロボットを作りました。前に進んだり、左右に曲がったりできます。プログラムはコンピューターで書きました。はじめはかべにぶつかってばかりでしたが、今では箱から出る道を見つけられます。',
+    questions: [
+      { q: 'どこでロボットを作った？', choices: ['美術部', '科学部', '家'], answer: 1 },
+      { q: 'はじめはどうだった？', choices: ['かべにぶつかってばかり', '動かなかった', '速すぎた'], answer: 0 },
+      { q: '今ではどうなった？', choices: ['空を飛べる', '話せる', '箱から出る道を見つけられる'], answer: 2 },
+    ],
+  },
+  {
+    id: 'volunteer',
+    title: 'Beach Cleanup',
+    text: 'Last Saturday, I joined a beach cleanup with my family. We picked up plastic bottles, cans, and fishing nets. In two hours, we filled thirty bags. I want to use less plastic from now on.',
+    ja: 'この前の土曜日、家族と海岸清掃に参加しました。ペットボトルや空き缶、つりのあみを拾いました。2時間で30ふくろがいっぱいになりました。これからはプラスチックを使う量を減らしたいです。',
+    questions: [
+      { q: 'だれと参加した？', choices: ['友だち', '家族', 'クラス'], answer: 1 },
+      { q: '何ふくろいっぱいになった？', choices: ['3ふくろ', '13ふくろ', '30ふくろ'], answer: 2 },
+      { q: 'これからしたいことは？', choices: ['プラスチックを減らす', '毎日海に行く', 'つりを習う'], answer: 0 },
+    ],
+  },
+  {
+    id: 'first-job',
+    title: 'Helping at the Bakery',
+    text: 'During the summer vacation, I helped at my uncle\'s bakery for a week. I got up at five every morning. I learned how to make bread and how to talk to customers. It was hard work, but I felt proud.',
+    ja: '夏休みの間、1週間おじのパン屋を手伝いました。毎朝5時に起きました。パンの作り方とお客さんとの話し方を学びました。大変な仕事でしたが、誇らしく感じました。',
+    questions: [
+      { q: 'どこで手伝った？', choices: ['おじのパン屋', '学校の図書館', '近所の公園'], answer: 0 },
+      { q: '毎朝何時に起きた？', choices: ['5時', '6時', '7時'], answer: 0 },
+      { q: '最後にどう感じた？', choices: ['つまらなかった', '誇らしかった', 'ねむかった'], answer: 1 },
+    ],
+  },
+  {
+    id: 'moon-night',
+    title: 'Moon Viewing',
+    text: 'In September, my family enjoyed moon viewing. We put rice dumplings and some grass called susuki by the window. The moon was big and round. My grandmother told us an old story about a rabbit on the moon.',
+    ja: '9月、家族でお月見を楽しみました。窓のそばにお団子とススキをかざりました。月は大きくて丸かったです。祖母が月のウサギの昔話をしてくれました。',
+    questions: [
+      { q: 'お月見は何月？', choices: ['7月', '9月', '12月'], answer: 1 },
+      { q: '窓のそばにかざったものは？', choices: ['花火', 'お団子とススキ', 'ろうそく'], answer: 1 },
+      { q: '祖母が話したのは？', choices: ['月のウサギの話', '星の名前', '雨の話'], answer: 0 },
+    ],
+  },
 ]
