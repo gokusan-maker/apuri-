@@ -6,6 +6,8 @@ import { Celebrate } from './CelebrateView'
 import { Monster, Party as PartyView, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
+import { addHistory, lastDays, loadHistory, saveHistory } from './history'
+import { WeekChart } from './WeekChartView'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
@@ -86,6 +88,13 @@ function App() {
     applyTheme(settings.theme)
   }, [settings])
 
+  // グラフ用の日ごとの記録。古いデータには無いので、今日の分は今日の学習数から補う
+  const [history, setHistory] = useState(() => {
+    const h = loadHistory()
+    return h[today] === undefined && studiedToday > 0 ? { ...h, [today]: studiedToday } : h
+  })
+  useEffect(() => saveHistory(history), [history])
+
   const [celebrate, setCelebrate] = useState(false)
   const [totals, setTotals] = useState(loadTotals)
   useEffect(() => saveTotals(totals), [totals])
@@ -95,6 +104,7 @@ function App() {
     setStreak(recordStudy(streak, today))
     const next = addToday(todayCount, today)
     setTodayCount(next)
+    setHistory((h) => addHistory(h, today))
     const reached = studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal
     if (reached) setCelebrate(true)
     setTotals((t) => ({
@@ -266,6 +276,7 @@ function App() {
           <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={words.length} aria-valuenow={learned}>
             <div className="xp-fill" style={{ width: `${(learned / words.length) * 100}%` }} />
           </div>
+          <WeekChart days={lastDays(history, today)} goal={settings.dailyGoal} />
           <h2>苦手な単語</h2>
           {weak.length === 0 ? (
             <p className="stats-note">まだありません。まちがえた単語がここに集まります。</p>

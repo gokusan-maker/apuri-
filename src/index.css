@@ -414,3 +414,14 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .rename { display: flex; gap: 6px; margin: 0 0 6px; }
 .rename input { flex: 1; min-width: 0; padding: 4px 8px; font-size: 1rem; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); }
 .rename button { padding: 4px 10px; border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); }
+
+.week { margin-top: 20px; }
+.week h2 { margin: 0 0 4px; }
+.week-chart { position: relative; display: flex; align-items: flex-end; gap: 6px; height: 140px; margin-top: 8px; padding: 18px 0 20px; }
+.week-goal { position: absolute; left: 0; right: 0; border-top: 2px dashed color-mix(in srgb, #22c55e 60%, transparent); }
+.week-col { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; position: relative; }
+.week-bar { position: relative; width: 70%; min-height: 2px; border-radius: 6px 6px 0 0; background: color-mix(in srgb, var(--accent) 55%, transparent); transition: height 0.4s; }
+.week-bar.met { background: #22c55e; }
+.week-bar.today { outline: 2px solid var(--accent); }
+.week-num { position: absolute; top: -16px; left: 0; right: 0; text-align: center; font-size: 0.7rem; color: var(--muted); }
+.week-label { position: absolute; bottom: -20px; font-size: 0.75rem; color: var(--muted); }

@@ -187,4 +187,14 @@ describe('App', () => {
     expect(document.querySelector('.monster-name')!.textContent).toContain('もっちー（ふしぎなタマゴ）')
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].name).toBe('もっちー')
   })
+
+  it('記録画面に直近1週間のグラフが出て、学習すると今日の棒が伸びる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByText('この1週間')).toBeInTheDocument()
+    expect(screen.getByText('合計 1 問・目標達成 0 日')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:history')!)).toEqual({ [dayKey()]: 1 })
+  })
 })
