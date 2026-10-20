@@ -213,6 +213,7 @@ function App() {
 
   // ラッキー単語（今日のことば）に正解すると1日1回ボーナス
   const lucky = pickWordOfDay(WORDS, today)
+  const [hour] = useState(() => new Date().getHours())
   const [luckyDay, setLuckyDay] = usePersistent(
     () => {
       try {
@@ -465,7 +466,7 @@ function App() {
           room={wallet.room}
           title={titleFor(totals.studyDays ?? 0)}
           cheer={cheer}
-          feeling={feelingFor(studiedToday)}
+          feeling={feelingFor(studiedToday, hour)}
           gain={gain}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
