@@ -4,16 +4,17 @@ import type { Word } from './words'
 
 export const SIZE = 6
 export type Placed = { word: Word; cells: number[] } // cells はマスの番号（行*SIZE+列）
-export type Puzzle = { grid: string[]; placed: Placed[] }
+export type Puzzle = { grid: string[]; placed: Placed[]; size: number }
 
 const LETTERS = 'abcdefghijklmnopqrstuvwxyz'
 
-// 3〜6文字の英字だけの単語を count 個かくす（置けなければ少なくなる）
-export function makeSearch(words: Word[], count = 3, rng: Rng = Math.random): Puzzle {
+// 3〜size文字の英字だけの単語を count 個かくす（置けなければ少なくなる）
+export function makeSearch(words: Word[], count = 3, rng: Rng = Math.random, size = SIZE): Puzzle {
+  const SIZE = size
   const grid: string[] = Array(SIZE * SIZE).fill('')
   const placed: Placed[] = []
   const pool = shuffle(
-    words.filter((w) => /^[a-z]{3,6}$/.test(w.en)),
+    words.filter((w) => w.en.length >= 3 && w.en.length <= Math.min(SIZE, 7) && /^[a-z]+$/.test(w.en)),
     rng,
   )
   for (const w of pool) {
@@ -32,7 +33,7 @@ export function makeSearch(words: Word[], count = 3, rng: Rng = Math.random): Pu
     }
   }
   for (let k = 0; k < grid.length; k++) if (!grid[k]) grid[k] = LETTERS[Math.floor(rng() * LETTERS.length)]
-  return { grid, placed }
+  return { grid, placed, size }
 }
 
 // えらんだマス（順番どおり）がかくした単語のどれかと一致するか

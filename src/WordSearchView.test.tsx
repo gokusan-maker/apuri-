@@ -15,3 +15,9 @@ it('かくれた単語の文字を順にタップすると見つかり、全部�
   expect(cleared).toBe(1)
   expect(screen.getByText('ぜんぶ見つけた！')).toBeInTheDocument()
 })
+
+it('むずかしい（8×8）に切りかえられる', () => {
+  render(<WordSearch words={WORDS} />)
+  fireEvent.click(screen.getByText('むずかしい（8×8）'))
+  expect(document.querySelectorAll('.ws-cell')).toHaveLength(64)
+})

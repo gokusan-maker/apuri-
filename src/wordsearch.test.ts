@@ -16,3 +16,13 @@ describe('ことばさがし', () => {
     }
   })
 })
+
+it('8×8 で5語までかくせる', () => {
+  for (let n = 0; n < 20; n++) {
+    const p = makeSearch(WORDS, 5, Math.random, 8)
+    expect(p.grid).toHaveLength(64)
+    expect(p.size).toBe(8)
+    expect(p.placed.length).toBeGreaterThanOrEqual(4)
+    for (const x of p.placed) expect(x.cells.map((k) => p.grid[k]).join('')).toBe(x.word.en)
+  }
+})
