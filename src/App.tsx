@@ -665,7 +665,7 @@ function App() {
           {statsTab === 'buddy' && (
             <section className="card stats-view">
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
-              <Profile monster={monster} />
+              <Profile monster={monster} studyDays={totals.studyDays ?? 0} />
               <ShareButton
                 stats={{
                   name: monster.name ?? formOf(monster).name,

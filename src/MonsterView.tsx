@@ -1,3 +1,4 @@
+import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
@@ -361,7 +362,7 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
 
 const SRC_LABEL = { card: 'カード', quiz: 'クイズ', ear: 'リスニング・スペル' } as const
 
-export function Profile({ monster }: { monster: MonsterState }) {
+export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; studyDays?: number }) {
   const form = formOf(monster)
   const total = (monster.src?.card ?? 0) + (monster.src?.quiz ?? 0) + (monster.src?.ear ?? 0)
   return (
@@ -378,6 +379,11 @@ export function Profile({ monster }: { monster: MonsterState }) {
         <dd>{monster.born ?? '記録なし'}</dd>
         <dt>累計XP</dt>
         <dd>{monster.xp}</dd>
+        <dt>なつき度</dt>
+        <dd aria-label={`なつき度 ${bondLevel(studyDays)}`}>
+          {bondHearts(bondLevel(studyDays))}
+          {daysToNext(studyDays) !== null && <small>（あと{daysToNext(studyDays)}日学習で❤️）</small>}
+        </dd>
       </dl>
       <p className="stats-note">学び方の割合（Lv15 の進化先に影響）</p>
       {(['card', 'quiz', 'ear'] as const).map((k) => {
