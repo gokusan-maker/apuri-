@@ -93,6 +93,7 @@ describe('App', () => {
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
+    fireEvent.click(screen.getByText(/📚 単語帳：/))
     for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形']) fireEvent.click(screen.getByRole('button', { name: l }))
     const n = wordsOf(['中1']).length
     expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
@@ -186,6 +187,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('追加する'))
     expect(screen.getByText('マイ単語帳（1語）')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /カード/ }))
+    fireEvent.click(screen.getByText(/📚 単語帳：/))
     fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
     expect(screen.getByText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
   })
@@ -478,5 +480,12 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(5)
+  })
+
+  it('単語帳の選択はふだんたたまれていて、タップで開く', () => {
+    render(<App />)
+    expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
+    fireEvent.click(screen.getByText(/📚 単語帳：/))
+    expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
   })
 })

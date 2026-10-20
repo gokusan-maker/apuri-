@@ -82,6 +82,7 @@ function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
   const [showList, setShowList] = useState(false)
+  const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
   // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
   type Focus = 'weak' | 'fav'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
@@ -377,18 +378,25 @@ function App() {
           </div>
         </div>
         {mode !== 'stats' && mode !== 'settings' && (
-          <div className="levels" role="group" aria-label="単語帳">
-            {LEVELS.map((l) => (
-              <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
-                {l}
-              </button>
-            ))}
-            {myWords.length > 0 && (
-              <button aria-pressed={useMy} onClick={() => setUseMy(!useMy)}>
-                マイ単語帳
-              </button>
+          <>
+            <button className="book-toggle" aria-expanded={showBooks} onClick={() => setShowBooks(!showBooks)}>
+              📚 単語帳：{[...levels, ...(useMy ? ['マイ単語帳'] : [])].join('・')} {showBooks ? '▲' : '▼'}
+            </button>
+            {showBooks && (
+              <div className="levels" role="group" aria-label="単語帳">
+                {LEVELS.map((l) => (
+                  <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
+                    {l}
+                  </button>
+                ))}
+                {myWords.length > 0 && (
+                  <button aria-pressed={useMy} onClick={() => setUseMy(!useMy)}>
+                    マイ単語帳
+                  </button>
+                )}
+              </div>
             )}
-          </div>
+          </>
         )}
       </header>
 
