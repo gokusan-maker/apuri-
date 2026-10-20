@@ -1,5 +1,5 @@
 import { speak } from './speech'
-import type { Accent, Settings, Theme } from './settings'
+import { GOALS, type Accent, type Settings, type Theme } from './settings'
 
 type Props = {
   settings: Settings
@@ -55,6 +55,17 @@ export function SettingsPanel({ settings, onChange }: Props) {
           {THEMES.map((t) => (
             <button key={t.id} aria-pressed={settings.theme === t.id} onClick={() => set({ theme: t.id })}>
               {t.label}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="setting">
+        <legend>1日の目標</legend>
+        <div className="levels">
+          {GOALS.map((g) => (
+            <button key={g} aria-pressed={settings.dailyGoal === g} onClick={() => set({ dailyGoal: g })}>
+              {g}問
             </button>
           ))}
         </div>

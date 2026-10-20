@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it } from 'vitest'
 import App from './App'
+import { dayKey } from './srs'
 import { WORDS, wordsOf } from './words'
 
 describe('App', () => {
@@ -118,8 +119,26 @@ describe('App', () => {
       accent: 'en-GB',
       theme: 'dark',
       sound: false,
+      dailyGoal: 20,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
+  })
+
+  it('今日の目標に届いた瞬間にお祝いが出て、閉じられる', () => {
+    localStorage.setItem('eitan:settings', JSON.stringify({ dailyGoal: 10 }))
+    localStorage.setItem('eitan:today-count', JSON.stringify({ day: dayKey(), count: 9 }))
+    render(<App />)
+    expect(screen.getByText('🎯 今日の目標 9 / 10 問')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('今日の目標達成！')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('やったね'))
+    expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
+    expect(screen.getByText('🎯 目標達成！')).toBeInTheDocument()
+    // もう一度答えてもお祝いは出ない
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
   })
 })

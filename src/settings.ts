@@ -40,9 +40,12 @@ export type Settings = {
   accent: Accent
   theme: Theme
   sound: boolean // 効果音
+  dailyGoal: number // 1日の目標（問題数）
 }
 
-export const DEFAULT_SETTINGS: Settings = { rate: 1, accent: 'en-US', theme: 'system', sound: true }
+export const GOALS = [10, 20, 30, 50]
+
+export const DEFAULT_SETTINGS: Settings = { rate: 1, accent: 'en-US', theme: 'system', sound: true, dailyGoal: 20 }
 
 const SETTINGS_KEY = 'eitan:settings'
 
@@ -55,6 +58,7 @@ export function loadSettings(): Settings {
       accent: v.accent === 'en-GB' ? 'en-GB' : 'en-US',
       theme: v.theme === 'light' || v.theme === 'dark' ? v.theme : 'system',
       sound: typeof v.sound === 'boolean' ? v.sound : true,
+      dailyGoal: typeof v.dailyGoal === 'number' && GOALS.includes(v.dailyGoal) ? v.dailyGoal : DEFAULT_SETTINGS.dailyGoal,
     }
   } catch {
     return { ...DEFAULT_SETTINGS }

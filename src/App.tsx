@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Backup } from './BackupView'
+import { Celebrate } from './CelebrateView'
 import { Monster } from './MonsterView'
 import {
   isLonely,
@@ -68,9 +69,19 @@ function App() {
   const studiedToday = todayCount.day === today ? todayCount.count : 0
 
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
+  const [settings, setSettings] = useState(loadSettings)
+  useEffect(() => {
+    saveSettings(settings)
+    applyTheme(settings.theme)
+  }, [settings])
+
+  const [celebrate, setCelebrate] = useState(false)
+
   function studied() {
     setStreak(recordStudy(streak, today))
-    setTodayCount(addToday(todayCount, today))
+    const next = addToday(todayCount, today)
+    setTodayCount(next)
+    if (studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal) setCelebrate(true)
   }
 
   const [mistakes, setMistakes] = useState(loadMistakes)
@@ -99,11 +110,6 @@ function App() {
     }, 2000)
   }
 
-  const [settings, setSettings] = useState(loadSettings)
-  useEffect(() => {
-    saveSettings(settings)
-    applyTheme(settings.theme)
-  }, [settings])
 
   const [levels, setLevels] = useState(loadLevels)
   useEffect(() => saveLevels(levels), [levels])
@@ -143,6 +149,12 @@ function App() {
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
         </p>
+        <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
+          <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
+          <div className="goal-bar">
+            <div className="goal-fill" style={{ width: `${Math.min(studiedToday / settings.dailyGoal, 1) * 100}%` }} />
+          </div>
+        </div>
         {mode !== 'stats' && mode !== 'settings' && (
           <div className="levels" role="group" aria-label="単語帳">
             {LEVELS.map((l) => (
@@ -252,6 +264,8 @@ function App() {
       ) : (
         <p className="done">今日の学習は完了です 🎉 また明日！</p>
       )}
+
+      {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">
         {TABS.map((t) => (

@@ -283,3 +283,47 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .blank-sentence { font-size: 1.25rem; line-height: 1.8; }
 .blank { display: inline-block; min-width: 4.5em; border-bottom: 3px solid var(--accent); margin: 0 4px; font-weight: 700; }
 .blank.filled { color: #16a34a; animation: pop 0.3s; }
+
+.goal { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--muted); margin: 2px 0 6px; }
+.goal span { white-space: nowrap; }
+.goal-bar { flex: 1; height: 6px; border-radius: 999px; background: var(--card); overflow: hidden; }
+.goal-fill { height: 100%; background: #22c55e; transition: width 0.4s; }
+
+.celebrate {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgb(0 0 0 / 0.35);
+  overflow: hidden;
+  animation: fade-in 0.2s;
+}
+.celebrate-card {
+  width: min(100%, 340px);
+  padding: 24px 20px;
+  border-radius: 20px;
+  background: var(--bg);
+  text-align: center;
+  animation: pop 0.4s;
+}
+.celebrate-emoji { font-size: 3rem; margin: 0; }
+.celebrate-title { font-size: 1.5rem; font-weight: 700; margin: 8px 0 4px; }
+.celebrate-text { color: var(--muted); margin: 0; }
+.confetti {
+  position: absolute;
+  top: -12px;
+  width: 8px;
+  height: 14px;
+  border-radius: 2px;
+  animation: fall 2.2s ease-in forwards;
+}
+@keyframes fall {
+  to { transform: translateY(110vh) rotate(540deg); opacity: 0.6; }
+}
+@keyframes fade-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  .confetti { display: none; }
+  .celebrate, .celebrate-card { animation: none; }
+}
