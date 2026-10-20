@@ -795,6 +795,7 @@ function App() {
                 onAnswer={answerFocus}
                 autoSpeak={settings.autoSpeak}
                 jaFirst={settings.cardJaFirst}
+                emojiHint={settings.easy}
                 hideExampleJa={settings.hideExampleJa}
                 lookup={lookup}
                 favorite={favorites.includes(focusCard.id)}
@@ -838,6 +839,7 @@ function App() {
               onAnswer={answer}
               autoSpeak={settings.autoSpeak}
               jaFirst={settings.cardJaFirst}
+              emojiHint={settings.easy}
               hideExampleJa={settings.hideExampleJa}
               lookup={lookup}
               favorite={!!card && favorites.includes(card.id)}

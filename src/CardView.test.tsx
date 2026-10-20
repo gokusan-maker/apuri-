@@ -140,3 +140,9 @@ it('カードの裏に、その単語の絵文字を出す', () => {
   fireEvent.click(screen.getByText('意味を見る'))
   expect(document.querySelector('.card-emoji')?.textContent).toContain('🍎')
 })
+
+it('かんたんモードでは表にも絵文字のヒント', () => {
+  const w = WORDS.find((x) => x.id === 'apple')!
+  render(<Card card={w} onAnswer={() => {}} emojiHint />)
+  expect(screen.getByLabelText('ヒント').textContent).toBe('🍎')
+})

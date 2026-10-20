@@ -13,6 +13,7 @@ type Props = {
   onAnswer: (correct: boolean, easy?: boolean) => void
   autoSpeak?: boolean
   jaFirst?: boolean // 表に日本語、裏に英語
+  emojiHint?: boolean // 表にも絵文字のヒント（かんたんモード）
   favorite?: boolean
   onToggleFavorite?: () => void
   onMore?: () => void // 今日の分が終わったあと、新しい単語を5語ふやす
@@ -24,7 +25,7 @@ type Props = {
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup, emojiHint = false }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const [showJa, setShowJa] = useState(false)
@@ -129,6 +130,11 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
         >
           {favorite ? '★' : '☆'}
         </button>
+      )}
+      {emojiHint && !flipped && EMOJI[card.id] && (
+        <p className="card-emoji-hint" aria-label="ヒント">
+          {EMOJI[card.id]}
+        </p>
       )}
       {jaFirst ? (
         <p className="en ja-prompt">{card.ja}</p>
