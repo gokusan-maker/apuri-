@@ -40,21 +40,27 @@ export function levelInfo(totalXp: number): LevelInfo {
   return { level, into: rest, need: xpToNext(level) }
 }
 
+// 保存データを検証して整える（壊れた値は捨てる）
+export function sanitizeMonster(v: unknown): MonsterState {
+  const m = (v && typeof v === 'object' ? v : {}) as Partial<MonsterState>
+  const xp = typeof m.xp === 'number' && m.xp >= 0 ? m.xp : 0
+  const out: MonsterState = { xp }
+  if (typeof m.lastDay === 'string') out.lastDay = m.lastDay
+  if (m.src && typeof m.src === 'object') {
+    out.src = Object.fromEntries(SOURCES.filter((k) => typeof m.src?.[k] === 'number').map((k) => [k, m.src![k]]))
+  }
+  if (m.branch && SOURCES.includes(m.branch)) out.branch = m.branch
+  if (Array.isArray(m.seen)) out.seen = m.seen.filter((x): x is string => typeof x === 'string')
+  if (typeof m.name === 'string' && m.name) out.name = cleanName(m.name)
+  if (!out.name) delete out.name
+  if (typeof m.wear === 'string') out.wear = m.wear
+  return out
+}
+
 export function loadMonster(): MonsterState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    const m = raw ? (JSON.parse(raw) as Partial<MonsterState>) : null
-    const xp = typeof m?.xp === 'number' && m.xp >= 0 ? m.xp : 0
-    const out: MonsterState = { xp }
-    if (typeof m?.lastDay === 'string') out.lastDay = m.lastDay
-    if (m?.src && typeof m.src === 'object') {
-      out.src = Object.fromEntries(SOURCES.filter((k) => typeof m.src?.[k] === 'number').map((k) => [k, m.src![k]]))
-    }
-    if (m?.branch && SOURCES.includes(m.branch)) out.branch = m.branch
-    if (Array.isArray(m?.seen)) out.seen = m.seen.filter((x): x is string => typeof x === 'string')
-    if (typeof m?.name === 'string' && m.name) out.name = cleanName(m.name)
-    if (typeof m?.wear === 'string') out.wear = m.wear
-    return out
+    return sanitizeMonster(raw ? JSON.parse(raw) : null)
   } catch {
     return { xp: 0 }
   }

@@ -55,7 +55,7 @@ export function loadMissions(today: string): MissionState {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     const v = raw ? (JSON.parse(raw) as MissionState) : null
-    if (v && v.day === today && typeof v.counts === 'object' && Array.isArray(v.claimed)) return v
+    if (v && v.day === today && v.counts && typeof v.counts === 'object' && Array.isArray(v.claimed)) return v
   } catch {
     // 壊れていたら今日の分を新しく
   }

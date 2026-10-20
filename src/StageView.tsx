@@ -62,6 +62,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           words={WORDS}
           targets={playing.words}
           count={STAGE_SIZE}
+          lockDirection
           onAnswer={onAnswer}
           onFinish={(score, total) => {
             const stars = starsFor(score, total)

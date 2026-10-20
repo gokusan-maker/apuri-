@@ -23,7 +23,12 @@ export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell' | 'blank' | 'orde
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) => (d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : (w: Word) => w.ja)
-const pool = (d: Direction, ws: Word[]) => (d === 'blank' ? ws.filter(canBlank) : ws)
+// 穴埋めにできる単語が1つも無いとき（例文なしのマイ単語だけなど）は通常の単語から出す
+const pool = (d: Direction, ws: Word[], all: Word[]) => {
+  if (d !== 'blank') return ws
+  const ok = ws.filter(canBlank)
+  return ok.length > 0 ? ok : all.filter(canBlank)
+}
 
 const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
@@ -45,11 +50,12 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onFinish?: (score: number, total: number) => void
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
+  lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish, onRestart, lockDirection = false }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
-  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words)))
+  const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words, words)))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -94,7 +100,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
 
   function restart(d: Direction = direction) {
     setDirection(d)
-    setQuestions(makeQuiz(words, label(d), count, Math.random, pool(d, targets ?? words)))
+    setQuestions(makeQuiz(words, label(d), count, Math.random, pool(d, targets ?? words, words)))
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -103,7 +109,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
     setEarned(0)
   }
 
-  const toggle = (
+  const toggle = lockDirection ? null : (
     <div className="direction" role="group" aria-label="出題の向き">
       {DIRECTIONS.filter((d) => d.id !== 'speak' || getRecognition()).map((d) => (
         <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
@@ -159,7 +165,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   }
 
   if (!q) {
-    const rate = Math.round((score / questions.length) * 100)
+    const rate = questions.length === 0 ? 0 : Math.round((score / questions.length) * 100)
     return (
       <section className="card result">
         <p className="result-title">結果</p>

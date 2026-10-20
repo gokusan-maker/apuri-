@@ -34,7 +34,14 @@ export function isDue(p: Progress | undefined, today: string): boolean {
 export function loadProgress(): ProgressMap {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    return raw ? (JSON.parse(raw) as ProgressMap) : {}
+    const v = raw ? (JSON.parse(raw) as unknown) : null
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    // 壊れた項目は捨てる（バックアップの復元などで変な値が入っても落ちないように）
+    return Object.fromEntries(
+      Object.entries(v).filter(
+        ([, p]) => p && typeof p === 'object' && typeof p.box === 'number' && typeof p.due === 'string',
+      ),
+    ) as ProgressMap
   } catch {
     return {}
   }

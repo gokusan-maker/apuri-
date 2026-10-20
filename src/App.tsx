@@ -17,6 +17,7 @@ import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party
 import {
   feed,
   rename,
+  type MonsterState,
   formOf,
   isLonely,
   levelInfo,
@@ -76,7 +77,9 @@ function App() {
 
   const [party, setParty] = usePersistent(loadParty, saveParty)
   const monster = party.members[party.active]
-  const setMonster = (m: typeof monster) => setParty((p) => updateActive(p, m))
+  // いまの相棒を更新する。同じ操作で何度呼んでも前の更新を消さないよう、最新の値から計算する
+  const updateMonster = (f: (m: MonsterState) => MonsterState) =>
+    setParty((p) => updateActive(p, f(p.members[p.active])))
   const [happy, setHappy] = useState(false)
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
@@ -143,7 +146,7 @@ function App() {
 
   function gainXp(amount: number, source: Source) {
     const next = feed(monster, amount, source, today)
-    setMonster(next)
+    updateMonster((m) => feed(m, amount, source, today))
     setHappy(true)
     setLeveledUp(levelInfo(next.xp).level > levelInfo(monster.xp).level)
     setEvolved(formOf(next).id !== formOf(monster).id)
@@ -193,7 +196,7 @@ function App() {
   const finished = completedUnclaimed(missions, today)
   if (finished.length > 0) {
     setMissions({ ...missions, claimed: [...missions.claimed, ...finished.map((m) => m.id)] })
-    setMonster(feed(monster, MISSION_XP * finished.length, null, today))
+    updateMonster((m) => feed(m, MISSION_XP * finished.length, null, today))
     setMissionToast(finished)
   }
   useEffect(() => {
@@ -232,7 +235,10 @@ function App() {
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
   }
 
+  const [shown, setShown] = useState(0) // 同じカードがもう一度出ても新しいカードとして扱う
+
   function answer(correct: boolean) {
+    setShown((n) => n + 1)
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     studied(correct)
@@ -252,7 +258,7 @@ function App() {
         </div>
         <Monster
           monster={monster}
-          onRename={(name) => setMonster(rename(monster, name))}
+          onRename={(name) => updateMonster((m) => rename(m, name))}
           coins={wallet.coins}
           onShop={() => setShowShop(true)}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
@@ -292,7 +298,7 @@ function App() {
             const next = buy(wallet, id)
             if (next) setWallet(next)
           }}
-          onWear={(id) => setMonster({ ...monster, wear: id })}
+          onWear={(id) => updateMonster((m) => ({ ...m, wear: id }))}
           onClose={() => setShowShop(false)}
         />
       ) : mode === 'stage' ? (
@@ -301,7 +307,7 @@ function App() {
           boss={boss}
           onBossWin={(level) => {
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
-            setMonster(feed(monster, BOSS_XP, null, today))
+            updateMonster((m) => feed(m, BOSS_XP, null, today))
           }}
           record={stages}
           onAnswer={onAnswer}
@@ -396,7 +402,7 @@ function App() {
           <WordList words={words} progress={progress} onClose={() => setShowList(false)} />
         ) : (
           <>
-            <Card key={card?.id} card={card} onAnswer={answer} autoSpeak={settings.autoSpeak} jaFirst={settings.cardJaFirst} />
+            <Card key={`${card?.id}-${shown}`} card={card} onAnswer={answer} autoSpeak={settings.autoSpeak} jaFirst={settings.cardJaFirst} />
             <button className="list-link" onClick={() => setShowList(true)}>
               📚 単語一覧・さがす
             </button>

@@ -22,7 +22,8 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
   const [heard, setHeard] = useState('')
   const [result, setResult] = useState<'ok' | 'ng' | null>(null)
   const [error, setError] = useState('')
-  const recRef = useRef<{ abort: () => void } | null>(null)
+  const recRef = useRef<{ abort: () => void; onerror: unknown; onresult: unknown; onend: unknown } | null>(null)
+  const answeredRef = useRef(false) // 1単語につき記録（XP・コイン）は最初の1回だけ
   const Rec = getRecognition()
   const w = list[index % list.length]
 
@@ -48,9 +49,13 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
       setResult(ok ? 'ok' : 'ng')
       if (ok) playCorrect()
       else playWrong()
-      onAnswer?.(ok, ok ? XP_PRONOUNCE : 0, w.id, 'ear')
+      if (!answeredRef.current) onAnswer?.(ok, ok ? XP_PRONOUNCE : 0, w.id, 'ear')
+      answeredRef.current = true
     }
-    rec.onerror = (e) => setError(e.error === 'not-allowed' ? 'マイクの使用を許可してください' : 'うまく聞き取れませんでした')
+    rec.onerror = (e) => {
+      if (e.error === 'aborted') return
+      setError(e.error === 'not-allowed' ? 'マイクの使用を許可してください' : 'うまく聞き取れませんでした')
+    }
     rec.onend = () => setListening(false)
     recRef.current = rec
     setError('')
@@ -61,7 +66,15 @@ export function Pronounce({ words, count = 10, onAnswer }: Props) {
   }
 
   function next() {
-    recRef.current?.abort()
+    const rec = recRef.current
+    if (rec) {
+      rec.onresult = null
+      rec.onerror = null
+      rec.onend = null
+      rec.abort()
+    }
+    setListening(false)
+    answeredRef.current = false
     setIndex(index + 1)
     setHeard('')
     setResult(null)
