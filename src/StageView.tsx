@@ -88,6 +88,20 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
     <section className="card stages">
       <h2>ステージ</h2>
       <p className="stats-note">10語ずつのステージ。6問以上正解でクリアして、次のステージへ！</p>
+      {(() => {
+        const nextStage = levels.flatMap(stagesOf).find((st) => isUnlocked(st, record) && !(record[st.id] >= 1))
+        return nextStage ? (
+          <button
+            className="flip continue-btn"
+            onClick={() => {
+              setPlaying(nextStage)
+              setResult(null)
+            }}
+          >
+            ▶ つづきから（{nextStage.level} ステージ{nextStage.no}）
+          </button>
+        ) : null
+      })()}
       {levels.map((level) => {
         const list = stagesOf(level)
         const stars = list.reduce((a, s) => a + (record[s.id] ?? 0), 0)

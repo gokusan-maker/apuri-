@@ -34,3 +34,9 @@ it('全ステージをクリアするとボスに挑戦できる', () => {
   fireEvent.click(screen.getByText('← にげる'))
   expect(screen.getByText('ステージ')).toBeInTheDocument()
 })
+
+it('「つづきから」で、まだクリアしていない次のステージを始める', () => {
+  render(<Stages levels={['中1']} record={{ '中1-1': 2 }} onClear={() => {}} />)
+  fireEvent.click(screen.getByText('▶ つづきから（中1 ステージ2）'))
+  expect(screen.getByText('中1 ステージ2')).toBeInTheDocument()
+})

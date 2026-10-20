@@ -629,3 +629,4 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .wotd-label { margin: 0; font-size: 0.75rem; color: var(--accent); font-weight: 700; }
 .wotd-word { margin: 2px 0 4px; font-size: 1.4rem; font-weight: 700; }
 .wotd-ja { margin-left: 8px; font-size: 0.95rem; font-weight: 400; color: var(--muted); }
+.continue-btn { margin: 4px 0 8px; }
