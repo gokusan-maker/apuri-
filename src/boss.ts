@@ -56,3 +56,12 @@ export const BOSSES: Record<Level, BossLook> = {
   '色・形': { name: 'ニジイロモチ', desc: '色と形をぬすんで虹にしてしまうモチ。', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
   会話: { name: 'オシャベリモチ', desc: 'あいさつを聞くまで通してくれない、おしゃべりなモチ。', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
 }
+
+// 今日のボス：選んでいる単語帳から日付で1つ
+export const DAILY_BOSS_COINS = 15
+export function dailyBossLevel<T>(levels: T[], day: string): T | undefined {
+  if (levels.length === 0) return undefined
+  let h = 3
+  for (const c of day) h = (h * 41 + c.charCodeAt(0)) >>> 0
+  return levels[h % levels.length]
+}

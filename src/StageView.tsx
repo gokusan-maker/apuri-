@@ -1,7 +1,8 @@
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, type BossRecord } from './boss'
+import { dayKey } from './srs'
 import { Boss } from './BossView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -14,6 +15,8 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   boss?: BossRecord
   onBossWin?: (level: Level) => void
+  dailyDone?: boolean // 今日のボスにもう勝った
+  onDailyWin?: () => void
   onSpend?: (coins: number) => boolean
   onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
   learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
@@ -23,7 +26,9 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {} }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin }: Props) {
+  const daily = dailyBossLevel(levels, dayKey())
+  const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
@@ -38,8 +43,14 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
-        onWin={() => onBossWin?.(fighting)}
-        onExit={() => setFighting(null)}
+        onWin={() => {
+          onBossWin?.(fighting)
+          if (dailyFight) onDailyWin?.()
+        }}
+        onExit={() => {
+          setFighting(null)
+          setDailyFight(false)
+        }}
       />
     )
   }
@@ -113,6 +124,17 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
   return (
     <section className="card stages">
       <h2>ステージ</h2>
+      {daily && (
+        <button
+          className="boss-btn daily-boss"
+          onClick={() => {
+            setDailyFight(true)
+            setFighting(daily)
+          }}
+        >
+          {dailyDone ? `✅ 今日のボス「${BOSSES[daily].name}」はたおした！（もう一度戦う）` : `⚔️ 今日のボス「${BOSSES[daily].name}」（${daily}）に勝つと 🪙${DAILY_BOSS_COINS}`}
+        </button>
+      )}
       <p className="stats-note">10語ずつのステージ。6問以上正解でクリアして、次のステージへ！</p>
       {(() => {
         const nextStage = levels.flatMap(stagesOf).find((st) => isUnlocked(st, record) && !(record[st.id] >= 1))

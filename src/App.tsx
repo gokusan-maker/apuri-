@@ -80,7 +80,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, loadBoss, saveBoss } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, saveBoss } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -190,6 +190,22 @@ function App() {
 
   const [celebrate, setCelebrate] = useState(false)
   const [souvenirs, setSouvenirs] = usePersistent(loadSouvenirs, saveSouvenirs)
+  const [dailyBossDay, setDailyBossDay] = usePersistent(
+    () => {
+      try {
+        return localStorage.getItem('eitan:daily-boss') ?? ''
+      } catch {
+        return ''
+      }
+    },
+    (d: string) => {
+      try {
+        localStorage.setItem('eitan:daily-boss', d)
+      } catch {
+        // ストレージが使えない環境では保存をあきらめる
+      }
+    },
+  )
   const [cheer, setCheer] = useState<Line | null>(null) // 10問ごとの相棒の応援
   useEffect(() => {
     if (!cheer) return
@@ -665,6 +681,12 @@ function App() {
       ) : mode === 'stage' ? (
         <Stages
           onSpend={spend}
+          dailyDone={dailyBossDay === today}
+          onDailyWin={() => {
+            if (dailyBossDay === today) return
+            setDailyBossDay(today)
+            setWallet((w) => ({ ...w, coins: w.coins + DAILY_BOSS_COINS }))
+          }}
           learnedPct={Object.fromEntries(levels.map((l) => [l, learnedPct(wordsOf([l]), progress)]))}
           onStudy={(ws) => {
             setPicked(ws.map((w) => w.id))

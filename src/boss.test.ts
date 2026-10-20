@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, bossUnlocked, damage, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, bossUnlocked, dailyBossLevel, damage, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -38,4 +38,9 @@ it('単語帳ごとにボスがいて、名前は重複しない', () => {
 
 it('すべてのボスに説明がある', () => {
   for (const b of Object.values(BOSSES)) expect(b.desc, b.name).toBeTruthy()
+})
+
+it('今日のボスは日付で決まる', () => {
+  expect(dailyBossLevel(['中1', '中2', '中3'], '2026-10-20')).toBe(dailyBossLevel(['中1', '中2', '中3'], '2026-10-20'))
+  expect(dailyBossLevel([], '2026-10-20')).toBeUndefined()
 })

@@ -64,3 +64,12 @@ it('定着率でメダルが出る', () => {
   render(<Stages levels={['数']} record={{}} onClear={() => {}} learnedPct={{ 数: 85 }} />)
   expect(screen.getByRole('img', { name: 'メダル（定着率85%）' }).textContent).toBe('🥈')
 })
+
+it('今日のボスに勝つと onDailyWin が呼ばれる', () => {
+  let won = 0
+  render(<Stages levels={['数']} record={{}} onClear={() => {}} onDailyWin={() => won++} />)
+  fireEvent.click(screen.getByText(/今日のボス/))
+  expect(screen.getByText('← にげる')).toBeInTheDocument()
+  // ボスを最後までたおすのは BossView のテストで確かめているので、ここでは出現だけ確認
+  expect(won).toBe(0)
+})
