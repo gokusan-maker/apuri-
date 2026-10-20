@@ -74,3 +74,8 @@ it('クイズの種類を15種類遊ぶとバッジ', () => {
   expect(newlyEarned({ ...zero, modesPlayed: 15 }, {}).map((b) => b.id)).toContain('modes-15')
   expect(newlyEarned({ ...zero, modesPlayed: 14 }, {}).map((b) => b.id)).not.toContain('modes-15')
 })
+
+it('英語日記を7日分書くとバッジ', () => {
+  expect(newlyEarned({ ...zero, diaryDays: 7 }, {}).map((b) => b.id)).toContain('diary-7')
+  expect(newlyEarned({ ...zero, diaryDays: 6 }, {}).map((b) => b.id)).not.toContain('diary-7')
+})

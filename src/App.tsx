@@ -30,6 +30,7 @@ import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
 import { DiaryBox } from './DiaryView'
+import { loadDiary } from './diary'
 import { shareText, weekReportText } from './shareText'
 import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
@@ -404,6 +405,7 @@ function App() {
       souvenirs: souvenirs.length,
       souvenirsTotal: SOUVENIRS.length,
       modesPlayed: loadPlayed().length,
+      diaryDays: Object.keys(loadDiary()).length,
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
     },
     earned,
