@@ -205,3 +205,15 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .choice:disabled { cursor: default; color: var(--fg); opacity: 0.55; }
 .choice.correct:disabled, .choice.wrong:disabled { color: #fff; opacity: 1; }
 .stats-note { color: var(--muted); font-size: 0.8rem; margin: 0 0 8px; }
+.listen {
+  width: 96px;
+  height: 96px;
+  border: none;
+  border-radius: 50%;
+  font-size: 2.6rem;
+  background: var(--accent);
+  color: var(--accent-fg);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--accent) 40%, transparent);
+}
+.listen:active { transform: scale(0.95); }
+.listen-word { min-height: 2.6rem; margin-top: 8px; }

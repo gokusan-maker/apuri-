@@ -1,13 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { quizXp } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
+import { speak } from './speech'
 import type { Word } from './words'
 
-export type Direction = 'en-ja' | 'ja-en'
+// listen：音声だけ聞いて日本語の意味を選ぶ
+export type Direction = 'en-ja' | 'ja-en' | 'listen'
 
-const prompt = (w: Word, d: Direction) => (d === 'en-ja' ? w.en : w.ja)
-const label = (d: Direction) => (d === 'en-ja' ? (w: Word) => w.ja : (w: Word) => w.en)
+const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
+const label = (d: Direction) => (d === 'ja-en' ? (w: Word) => w.en : (w: Word) => w.ja)
+
+const DIRECTIONS: { id: Direction; label: string }[] = [
+  { id: 'en-ja', label: '英→日' },
+  { id: 'ja-en', label: '日→英' },
+  { id: 'listen', label: '🎧 リスニング' },
+]
 
 type Props = {
   words: Word[]
@@ -28,6 +36,11 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
   const [lastXp, setLastXp] = useState(0)
 
   const q = questions[index]
+
+  // リスニングは問題が変わるたびに自動で読み上げる
+  useEffect(() => {
+    if (direction === 'listen' && q) speak(q.word.en)
+  }, [direction, q])
 
   function pick(i: number) {
     if (picked !== null) return
@@ -101,12 +114,11 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
   return (
     <section className="card quiz" aria-live="polite">
       <div className="direction" role="group" aria-label="出題の向き">
-        <button aria-pressed={direction === 'en-ja'} onClick={() => restart('en-ja')}>
-          英→日
-        </button>
-        <button aria-pressed={direction === 'ja-en'} onClick={() => restart('ja-en')}>
-          日→英
-        </button>
+        {DIRECTIONS.map((d) => (
+          <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
+            {d.label}
+          </button>
+        ))}
       </div>
       <p className="progress">
         {index + 1} / {questions.length}
@@ -116,7 +128,16 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
           </span>
         )}
       </p>
-      <p className={direction === 'en-ja' ? 'en' : 'en ja-prompt'}>{prompt(q.word, direction)}</p>
+      {direction === 'listen' ? (
+        <>
+          <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
+            🔊
+          </button>
+          <p className="en listen-word">{picked !== null ? q.word.en : '？'}</p>
+        </>
+      ) : (
+        <p className={direction === 'en-ja' ? 'en' : 'en ja-prompt'}>{prompt(q.word, direction)}</p>
+      )}
       <div className="choices">
         {q.choices.map((c, i) => {
           let cls = 'choice'

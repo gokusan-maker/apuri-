@@ -81,3 +81,30 @@ describe('逆方向クイズ', () => {
     expect(screen.getByText(/^1 \/ 3/)).toBeInTheDocument()
   })
 })
+
+describe('リスニング', () => {
+  it('単語は隠れていて読み上げられ、答えると単語が見える', () => {
+    const spoken: string[] = []
+    class FakeUtterance {
+      text: string
+      lang = ''
+      constructor(t: string) {
+        this.text = t
+      }
+    }
+    Object.assign(window, {
+      SpeechSynthesisUtterance: FakeUtterance,
+      speechSynthesis: { cancel() {}, speak: (u: FakeUtterance) => spoken.push(u.text) },
+    })
+    const words = WORDS.slice(0, 8)
+    render(<Quiz words={words} count={1} direction="listen" />)
+    expect(screen.getByText('？')).toBeInTheDocument()
+    expect(spoken).toHaveLength(1)
+    const word = words.find((w) => w.en === spoken[0])!
+    fireEvent.click(screen.getByLabelText('もう一度聞く'))
+    expect(spoken).toEqual([word.en, word.en])
+    fireEvent.click(screen.getByRole('button', { name: word.ja }))
+    expect(screen.getByText(/正解！/)).toBeInTheDocument()
+    expect(screen.getByText(word.en)).toBeInTheDocument()
+  })
+})

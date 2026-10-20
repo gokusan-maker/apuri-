@@ -20,18 +20,11 @@ import {
   type ProgressMap,
 } from './srs'
 import { Quiz } from './QuizView'
+import { speak } from './speech'
 import { TimeAttack } from './TimeAttackView'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { WORDS } from './words'
-
-function speak(text: string) {
-  if (!('speechSynthesis' in window)) return
-  const u = new SpeechSynthesisUtterance(text)
-  u.lang = 'en-US'
-  window.speechSynthesis.cancel()
-  window.speechSynthesis.speak(u)
-}
 
 type Tab = 'card' | 'quiz' | 'time' | 'stats'
 
