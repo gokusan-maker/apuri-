@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { randomQuestion, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
-import { loadBest, saveBest, TIME_LIMIT } from './timeAttack'
+import { addTop, loadBest, loadTop, saveBest, saveTop, TIME_LIMIT } from './timeAttack'
+import { dayKey } from './srs'
 import type { Word } from './words'
 
 type Props = {
@@ -18,6 +19,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [left, setLeft] = useState(TIME_LIMIT)
   const [score, setScore] = useState(0)
   const [best, setBest] = useState(loadBest)
+  const [top, setTop] = useState(loadTop)
   const [newBest, setNewBest] = useState(false)
   const [q, setQ] = useState<Question<Word> | null>(null)
   const [flash, setFlash] = useState<'ok' | 'ng' | null>(null)
@@ -51,9 +53,12 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
       saveBest(final)
       setNewBest(true)
     }
+    const nextTop = addTop(top, final, dayKey())
+    setTop(nextTop)
+    saveTop(nextTop)
     setPhase('done')
     onFinish?.(final)
-  }, [left, phase, best, onFinish])
+  }, [left, phase, best, onFinish, top])
 
   function pick(i: number) {
     if (!q) return
@@ -77,6 +82,15 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
         <p className="result-title">タイムアタック</p>
         <p className="result-message">{TIME_LIMIT}秒で何問正解できるかな？</p>
         <p className="best">自己ベスト {best} 問</p>
+        {top.length > 0 && (
+          <ol className="ta-top" aria-label="これまでの記録">
+            {top.map((t, i) => (
+              <li key={i}>
+                {i + 1}位 {t.score}問 <span className="stats-note">{t.day}</span>
+              </li>
+            ))}
+          </ol>
+        )}
         <button className="flip" onClick={start}>
           スタート
         </button>

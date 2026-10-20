@@ -1,7 +1,7 @@
 import { act, fireEvent, render, screen } from '@testing-library/react'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { TimeAttack } from './TimeAttackView'
-import { loadBest, TIME_LIMIT } from './timeAttack'
+import { addTop, loadBest, TIME_LIMIT } from './timeAttack'
 import { WORDS } from './words'
 
 function answerCorrect() {
@@ -45,4 +45,13 @@ describe('TimeAttack', () => {
     expect(screen.getByText('自己ベスト 5 問')).toBeInTheDocument()
     expect(loadBest()).toBe(5)
   })
+})
+
+it('上位5回の記録が残る', () => {
+  expect(addTop([{ score: 3, day: 'a' }], 5, 'b')).toEqual([
+    { score: 5, day: 'b' },
+    { score: 3, day: 'a' },
+  ])
+  const many = [9, 8, 7, 6, 5].map((n) => ({ score: n, day: 'x' }))
+  expect(addTop(many, 1, 'y')).toEqual(many)
 })
