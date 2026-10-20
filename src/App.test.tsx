@@ -544,6 +544,12 @@ describe('App', () => {
     expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
   })
 
+  it('ハロウィンの期間はイベントのバナーが出る', () => {
+    vi.setSystemTime(new Date(2026, 9, 27, 10))
+    render(<App />)
+    expect(screen.getByText(/ハロウィンウィーク/)).toBeInTheDocument()
+  })
+
   it('週末は正解のXPが2倍', () => {
     vi.setSystemTime(new Date(2026, 9, 24, 10)) // 土曜
     render(<App />)

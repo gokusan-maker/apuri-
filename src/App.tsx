@@ -28,6 +28,7 @@ import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
+import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
@@ -239,6 +240,7 @@ function App() {
 
   // ラッキー単語（今日のことば）に正解すると1日1回ボーナス
   const lucky = pickWordOfDay(WORDS, today)
+  const seasonEvent = eventFor(today)
   const [hour] = useState(() => new Date().getHours())
   const [luckyDay, setLuckyDay] = usePersistent(
     () => {
@@ -505,6 +507,11 @@ function App() {
           </p>
         </div>
         {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
+        {seasonEvent && (
+          <p className="weekend season-event">
+            {seasonEvent.icon} {seasonEvent.text}
+          </p>
+        )}
         <Monster
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}
