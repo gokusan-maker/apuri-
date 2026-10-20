@@ -31,3 +31,10 @@ it('日→英も選べる（1問目の前だけ切りかえられる）', () => 
   expect(screen.getByText('正解！')).toBeInTheDocument()
   expect(screen.queryByRole('group', { name: '向き' })).not.toBeInTheDocument()
 })
+
+it('かんたんモードでは選択肢が3つ', () => {
+  localStorage.setItem('eitan:settings', JSON.stringify({ easy: true }))
+  render(<Versus words={WORDS.slice(0, 30)} />)
+  expect(document.querySelectorAll('.choice')).toHaveLength(3)
+  localStorage.removeItem('eitan:settings')
+})

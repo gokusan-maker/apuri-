@@ -1,15 +1,22 @@
 import { useState } from 'react'
-import { makeQuiz } from './quiz'
+import { makeQuiz, trimChoices } from './quiz'
+import { loadSettings } from './settings'
 import { playCorrect, playWrong } from './sound'
 import type { Word } from './words'
 
 export const VERSUS_EACH = 10 // ひとり何問
 const PLAYERS = ['🔴 プレイヤー1', '🔵 プレイヤー2']
 
+// かんたんモードなら選択肢を3つに
+function makeQs(words: Word[], jaEn: boolean) {
+  const qs = makeQuiz(words, jaEn ? (w) => w.en : (w) => w.ja, VERSUS_EACH * 2)
+  return loadSettings().easy ? qs.map((q) => trimChoices(q, 3)) : qs
+}
+
 // 2人対戦：1台を交代で使う（XP は入らない）
 export function Versus({ words }: { words: Word[] }) {
   const [jaEn, setJaEn] = useState(false) // 日→英
-  const [qs, setQs] = useState(() => makeQuiz(words, (w) => w.ja, VERSUS_EACH * 2))
+  const [qs, setQs] = useState(() => makeQs(words, false))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [scores, setScores] = useState([0, 0])
@@ -27,7 +34,7 @@ export function Versus({ words }: { words: Word[] }) {
 
   function restart(je = jaEn) {
     setJaEn(je)
-    setQs(makeQuiz(words, je ? (w) => w.en : (w) => w.ja, VERSUS_EACH * 2))
+    setQs(makeQs(words, je))
     setIndex(0)
     setPicked(null)
     setScores([0, 0])
