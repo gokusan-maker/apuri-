@@ -6,9 +6,10 @@ import type { Word } from './words'
 type Props = {
   words: Word[]
   count?: number
+  onCorrect?: () => void
 }
 
-export function Quiz({ words, count = 10 }: Props) {
+export function Quiz({ words, count = 10, onCorrect }: Props) {
   const [questions, setQuestions] = useState(() => makeQuiz(words, (w) => w.ja, count))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
@@ -22,6 +23,7 @@ export function Quiz({ words, count = 10 }: Props) {
     if (i === q.answer) {
       setScore(score + 1)
       playCorrect()
+      onCorrect?.()
     } else {
       playWrong()
     }

@@ -1,4 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
+import { Monster } from './Monster'
+import { levelInfo, loadMonster, saveMonster, XP_CARD_AGAIN, XP_CARD_GOOD, XP_QUIZ_CORRECT } from './monster'
 import {
   buildQueue,
   dayKey,
@@ -31,6 +33,26 @@ function App() {
   useEffect(() => saveProgress(progress), [progress])
   useEffect(() => saveDailyNew(daily), [daily])
 
+  const [monster, setMonster] = useState(loadMonster)
+  const [happy, setHappy] = useState(false)
+  const [leveledUp, setLeveledUp] = useState(false)
+  const timer = useRef<number | undefined>(undefined)
+  useEffect(() => saveMonster(monster), [monster])
+  useEffect(() => () => window.clearTimeout(timer.current), [])
+
+  function gainXp(amount: number) {
+    const before = levelInfo(monster.xp).level
+    const xp = monster.xp + amount
+    setMonster({ xp })
+    setHappy(true)
+    setLeveledUp(levelInfo(xp).level > before)
+    window.clearTimeout(timer.current)
+    timer.current = window.setTimeout(() => {
+      setHappy(false)
+      setLeveledUp(false)
+    }, 1500)
+  }
+
   const queue = useMemo(() => buildQueue(WORDS, progress, today, newToday), [progress, today, newToday])
   const learned = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
@@ -38,6 +60,7 @@ function App() {
   function answer(correct: boolean) {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
+    gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN)
     setFlipped(false)
   }
 
@@ -45,6 +68,7 @@ function App() {
     <main className="app">
       <header>
         <h1>えいたん</h1>
+        <Monster xp={monster.xp} happy={happy} leveledUp={leveledUp} />
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
         </p>
@@ -59,7 +83,7 @@ function App() {
       </header>
 
       {mode === 'quiz' ? (
-        <Quiz words={WORDS} />
+        <Quiz words={WORDS} onCorrect={() => gainXp(XP_QUIZ_CORRECT)} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>

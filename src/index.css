@@ -100,3 +100,28 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .choice.correct, .choice.wrong { animation: none; }
 }
+
+.monster {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 8px 0;
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: var(--card);
+}
+.monster-body { width: 72px; height: 72px; flex: none; }
+.monster-svg { width: 100%; height: 100%; }
+.monster-body.bounce { animation: bounce 0.5s; }
+.monster-info { flex: 1; min-width: 0; }
+.monster-name { margin: 0 0 6px; font-weight: 700; }
+.monster-level { color: var(--accent); margin-left: 4px; }
+.xp-bar { height: 10px; border-radius: 999px; background: var(--bg); overflow: hidden; }
+.xp-fill { height: 100%; background: linear-gradient(90deg, #facc15, #f97316); transition: width 0.4s; }
+.xp-text { margin: 4px 0 0; font-size: 0.85rem; color: var(--muted); }
+.level-up { margin: 4px 0 0; font-weight: 700; color: #f97316; animation: pop 0.4s; }
+
+@keyframes bounce { 30% { transform: translateY(-10px); } 60% { transform: translateY(0); } 80% { transform: translateY(-4px); } }
+@media (prefers-reduced-motion: reduce) {
+  .monster-body.bounce, .level-up { animation: none; }
+}
