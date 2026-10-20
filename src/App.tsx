@@ -4,6 +4,8 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Celebrate } from './CelebrateView'
 import { Monster, Party as PartyView, Zukan } from './MonsterView'
+import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
+import { MyWords } from './MyWordsView'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
@@ -132,8 +134,15 @@ function App() {
 
   const [levels, setLevels] = useState(loadLevels)
   useEffect(() => saveLevels(levels), [levels])
-  const words = useMemo(() => wordsOf(levels), [levels])
-  const levelKey = levels.join(',')
+  const [myWords, setMyWords] = useState(loadMyWords)
+  useEffect(() => saveMyWords(myWords), [myWords])
+  const [useMy, setUseMy] = useState(loadUseMy)
+  useEffect(() => saveUseMy(useMy), [useMy])
+  const words = useMemo(
+    () => [...wordsOf(levels), ...(useMy ? myWords : [])],
+    [levels, useMy, myWords],
+  )
+  const levelKey = `${levels.join(',')}${useMy ? `:my${myWords.length}` : ''}`
 
   const weak = useMemo(() => weakWords(words, mistakes), [words, mistakes])
 
@@ -214,6 +223,11 @@ function App() {
                 {l}
               </button>
             ))}
+            {myWords.length > 0 && (
+              <button aria-pressed={useMy} onClick={() => setUseMy(!useMy)}>
+                マイ単語帳
+              </button>
+            )}
           </div>
         )}
       </header>
@@ -275,6 +289,7 @@ function App() {
               </button>
             </>
           )}
+          <MyWords list={myWords} onChange={setMyWords} />
           <BadgeList earned={earned} />
           <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
           <Zukan monsters={party.members} />

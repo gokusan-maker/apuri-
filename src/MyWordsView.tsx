@@ -1,0 +1,66 @@
+import { useState, type FormEvent } from 'react'
+import { addMyWord, removeMyWord, validate } from './myWords'
+import type { Word } from './words'
+
+type Props = {
+  list: Word[]
+  onChange: (list: Word[]) => void
+}
+
+export function MyWords({ list, onChange }: Props) {
+  const [en, setEn] = useState('')
+  const [ja, setJa] = useState('')
+  const [example, setExample] = useState('')
+  const [exampleJa, setExampleJa] = useState('')
+  const [error, setError] = useState('')
+
+  function submit(e: FormEvent) {
+    e.preventDefault()
+    const w = { en, ja, example, exampleJa }
+    const err = validate(w, list)
+    if (err) {
+      setError(err)
+      return
+    }
+    onChange(addMyWord(list, w))
+    setEn('')
+    setJa('')
+    setExample('')
+    setExampleJa('')
+    setError('')
+  }
+
+  return (
+    <div className="my-words">
+      <h2>マイ単語帳（{list.length}語）</h2>
+      <p className="stats-note">覚えたい単語を自分で追加できます。上の「マイ単語帳」を選ぶとカードやクイズに出ます。</p>
+      <form className="my-form" onSubmit={submit}>
+        <input value={en} onChange={(e) => setEn(e.target.value)} placeholder="英語（例：sunflower）" aria-label="英語" autoCapitalize="none" />
+        <input value={ja} onChange={(e) => setJa(e.target.value)} placeholder="意味（例：ひまわり）" aria-label="意味" />
+        <input value={example} onChange={(e) => setExample(e.target.value)} placeholder="例文（なくてもOK）" aria-label="例文" />
+        <input value={exampleJa} onChange={(e) => setExampleJa(e.target.value)} placeholder="例文の訳（なくてもOK）" aria-label="例文の訳" />
+        {error && (
+          <p className="form-error" role="alert">
+            {error}
+          </p>
+        )}
+        <button type="submit" className="flip">
+          追加する
+        </button>
+      </form>
+      {list.length > 0 && (
+        <ul className="weak-list">
+          {list.map((w) => (
+            <li key={w.id}>
+              <span className="weak-en">{w.en}</span>
+              <span className="weak-ja">{w.ja}</span>
+              <button className="my-del" onClick={() => onChange(removeMyWord(list, w.id))} aria-label={`${w.en}を削除`}>
+                ✕
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}

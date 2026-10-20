@@ -166,4 +166,16 @@ describe('App', () => {
     expect(document.querySelector('.monster-name')!.textContent).toContain('ふしぎなタマゴ')
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
+
+  it('マイ単語帳に追加して選ぶと、カードの母数に入る', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.change(screen.getByLabelText('英語'), { target: { value: 'sunflower' } })
+    fireEvent.change(screen.getByLabelText('意味'), { target: { value: 'ひまわり' } })
+    fireEvent.click(screen.getByText('追加する'))
+    expect(screen.getByText('マイ単語帳（1語）')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /カード/ }))
+    fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
+    expect(screen.getByText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
+  })
 })

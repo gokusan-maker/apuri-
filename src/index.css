@@ -389,3 +389,17 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .verb-ask { margin: 0 0 4px; color: var(--muted); }
 .verb-ask strong { color: var(--accent); }
 .verb-forms { font-size: 1.15rem; font-weight: 700; margin: 4px 0 0; }
+
+.my-words { margin-top: 24px; }
+.my-form { display: grid; gap: 8px; }
+.my-form input {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--muted);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--fg);
+}
+.my-form .flip { margin-top: 4px; }
+.form-error { margin: 0; color: var(--again); font-size: 0.85rem; }
+.my-del { border: none; background: transparent; color: var(--muted); font-size: 1rem; }
