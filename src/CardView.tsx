@@ -1,3 +1,4 @@
+import { blankOut } from './blank'
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { speak } from './speech'
 import { swipeResult } from './swipe'
@@ -34,6 +35,9 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
 
   // 英語が見えたときに自動で発音（英→日なら表、日→英ならめくったとき）
   const englishShown = !!card && (!jaFirst || flipped)
+  // 例文の中の見出し語（変化形もふくむ）
+  const hlParts = card?.example ? blankOut(card.example, card.en) : null
+  const hl = hlParts?.answer
   useEffect(() => {
     if (autoSpeak && englishShown && card) speak(card.en)
   }, [autoSpeak, englishShown, card])
@@ -182,11 +186,17 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
                       <button key={i} className="gloss-word" onClick={() => setGloss(gloss?.id === hit.id ? null : hit)}>
                         {tok}
                       </button>
+                    ) : hl && tok.replace(/[^A-Za-z']/g, '') === hl ? (
+                      <strong key={i} className="hl">
+                        {tok}
+                      </strong>
                     ) : (
                       <span key={i}>{tok}</span>
                     )
                   })
-                : card.example}
+                : hlParts
+                  ? [hlParts.before, <strong key="hl" className="hl">{hlParts.answer}</strong>, hlParts.after]
+                  : card.example}
               <button className="speak small" onClick={() => speak(card.example)} aria-label="例文を聞く">
                 🔊
               </button>

@@ -26,7 +26,7 @@ describe('カードの設定', () => {
     expect(screen.getByText(w.ja)).toBeInTheDocument()
     expect(screen.queryByText(w.en)).not.toBeInTheDocument()
     fireEvent.click(screen.getByText('英語を見る'))
-    expect(screen.getByText(w.en)).toBeInTheDocument()
+    expect(document.querySelector('.card-en-back')?.textContent).toContain(w.en)
   })
 
   it('自動で発音：英→日は表示したとき、日→英はめくったとき', () => {
@@ -145,4 +145,11 @@ it('かんたんモードでは表にも絵文字のヒント', () => {
   const w = WORDS.find((x) => x.id === 'apple')!
   render(<Card card={w} onAnswer={() => {}} emojiHint />)
   expect(screen.getByLabelText('ヒント').textContent).toBe('🍎')
+})
+
+it('例文の中の見出し語を太字にする', () => {
+  const w = WORDS.find((x) => x.id === 'decide')!
+  render(<Card card={w} onAnswer={() => {}} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  expect(document.querySelector('.example .hl')?.textContent).toBe('decided')
 })
