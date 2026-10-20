@@ -49,3 +49,14 @@ it('聞き並べ：訳は答えるまで隠れていて、例文を読み上げ�
   expect(spoken).toEqual([w.example])
   expect(screen.queryByText(w.exampleJa)).not.toBeInTheDocument()
 })
+
+it('まちがえた順に並べると、正しい語順（例文）を見せる', () => {
+  const w = WORDS.find((x) => x.id === 'borrow')!
+  render(<Scramble words={[w]} count={1} />)
+  // 逆順にタップする
+  const order = split(w.example).words
+  for (const t of [...order].reverse()) fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.scramble-pool .chip')].find((c) => c.textContent === t)!)
+  fireEvent.click(screen.getByText('こたえあわせ'))
+  expect(screen.getByText('正解はこちら')).toBeInTheDocument()
+  expect(screen.getByText(w.example)).toBeInTheDocument()
+})
