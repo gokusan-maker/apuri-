@@ -34,3 +34,10 @@ it('絵文字のある単語は一覧にも絵文字が出る', () => {
   expect(screen.getByRole('button', { name: /apple/ }).textContent).toContain('🍎')
   expect(screen.getByRole('button', { name: /borrow/ }).textContent).not.toMatch(/\p{Extended_Pictographic}/u)
 })
+
+it('詳細に「はじめて学んだ日」が出る', () => {
+  const w = WORDS[0]
+  render(<WordList words={[w]} progress={{ [w.id]: { box: 1, due: '2099-01-01', first: '2026-10-18' } }} onClose={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(w.en) }))
+  expect(screen.getByText('はじめて学んだ日 10/18')).toBeInTheDocument()
+})

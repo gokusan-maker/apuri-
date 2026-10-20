@@ -99,6 +99,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                     </button>
                   )}
                   <span className="word-level">{w.id.startsWith('my:') ? 'マイ単語帳' : levelOf(w)}</span>
+                  {progress[w.id]?.first && <span className="word-first">はじめて学んだ日 {progress[w.id]!.first!.slice(5).replace('-', '/')}</span>}
                   {w.example && (
                     <>
                       <p className="example">{w.example}</p>
