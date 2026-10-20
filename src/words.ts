@@ -753,6 +753,11 @@ export const WORDS: Word[] = [
   { id: 'heart', en: 'heart', ja: '心臓・心・ハート', example: 'My heart was beating fast.', exampleJa: '心臓がどきどきしていた。', level: '色・形' },
   { id: 'line', en: 'line', ja: '線・列', example: 'Draw a straight line.', exampleJa: 'まっすぐな線を引きなさい。', level: '色・形' },
   { id: 'dot', en: 'dot', ja: '点・ドット', example: 'Her dress has white dots on it.', exampleJa: '彼女のワンピースには白い水玉がついている。', level: '色・形' },
+  { id: 'shape', en: 'shape', ja: '形', example: 'This cookie has the shape of a star.', exampleJa: 'このクッキーは星の形をしている。', level: '色・形' },
+  { id: 'size', en: 'size', ja: '大きさ・サイズ', example: 'Do you have this shirt in a smaller size?', exampleJa: 'このシャツの小さいサイズはありますか。', level: '色・形' },
+  { id: 'round', en: 'round', ja: '丸い', example: 'The earth is round.', exampleJa: '地球は丸い。', level: '色・形' },
+  { id: 'rectangle', en: 'rectangle', ja: '長方形', example: 'A door is usually a rectangle.', exampleJa: 'ドアはたいてい長方形だ。', level: '色・形' },
+  { id: 'oval', en: 'oval', ja: 'だ円（形）・卵形の', example: 'The mirror in the hall is oval.', exampleJa: '玄関の鏡はだ円形だ。', level: '色・形' },
   // 会話フレーズ
   { id: 'good-morning', en: 'Good morning', ja: 'おはよう', example: 'Good morning, Mom! I\'m hungry.', exampleJa: 'おはよう、お母さん！おなかすいた。', level: '会話' },
   { id: 'good-night', en: 'Good night', ja: 'おやすみ', example: 'Good night. See you tomorrow.', exampleJa: 'おやすみ。また明日ね。', level: '会話' },

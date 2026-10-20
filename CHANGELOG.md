@@ -211,3 +211,4 @@
 - 2026-10-20: 文法・まちがえやすい単語・発音のコツの一覧に、全問正解した単元の数を表示
 - 2026-10-20: 数の聞き取りに「値段」の問題をまぜた（three dollars and fifty cents → 3.50）
 - 2026-10-20: 曜日・月の単語帳に spring・autumn・winter・week・month・year を追加。順番クイズに季節の並びも
+- 2026-10-20: 色・形の単語帳に shape・size・round・rectangle・oval を追加
