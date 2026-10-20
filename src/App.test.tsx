@@ -438,4 +438,14 @@ describe('App', () => {
     render(<App />)
     expect(screen.queryByText(/今日の復習が/)).not.toBeInTheDocument()
   })
+
+  it('週間チャレンジを達成するとコインとXP', () => {
+    localStorage.setItem('eitan:history', JSON.stringify({ [dayKey()]: 99 }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText(/週間チャレンジ達成！/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(50)
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(61)
+  })
 })

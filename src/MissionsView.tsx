@@ -1,6 +1,6 @@
 import { MISSION_XP, missionsFor, type MissionState } from './missions'
 
-export function Missions({ state, today }: { state: MissionState; today: string }) {
+export function Missions({ state, today, weekly }: { state: MissionState; today: string; weekly?: [number, number] }) {
   const list = missionsFor(today)
   const counts = state.day === today ? state.counts : {}
   const done = list.filter((m) => (counts[m.counter] ?? 0) >= m.target).length
@@ -24,6 +24,17 @@ export function Missions({ state, today }: { state: MissionState; today: string 
           )
         })}
       </ul>
+      {weekly && (
+        <div className="weekly">
+          <p>
+            🗓 今週のチャレンジ：{weekly[1]}問に答える（{weekly[0]} / {weekly[1]}）{weekly[0] >= weekly[1] ? ' ✅' : ''}
+          </p>
+          <div className="goal-bar">
+            <div className="goal-fill" style={{ width: `${(weekly[0] / weekly[1]) * 100}%` }} />
+          </div>
+          <p className="stats-note">達成すると🪙50と+60XP</p>
+        </div>
+      )}
     </section>
   )
 }

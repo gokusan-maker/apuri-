@@ -12,6 +12,7 @@ import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
+import { loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { Monster, Party as PartyView, Zukan } from './MonsterView'
@@ -255,6 +256,17 @@ function App() {
     return () => window.clearTimeout(id)
   }, [missionToast])
 
+  // 週間チャレンジ：達成したらその場でコインとXP
+  const [weeklyClaimed, setWeeklyClaimed] = usePersistent(loadWeeklyClaimed, saveWeeklyClaimed)
+  const thisWeek = weekStart(today)
+  const weekDone = weekCount(history, today)
+  if (weekDone >= WEEKLY_TARGET && weeklyClaimed !== thisWeek) {
+    setWeeklyClaimed(thisWeek)
+    setWallet((w) => ({ ...w, coins: w.coins + WEEKLY_COINS }))
+    updateMonster((m) => feed(m, WEEKLY_XP, null, today))
+    setMissionToast([{ id: 'weekly', text: `今週${WEEKLY_TARGET}問クリア・🪙${WEEKLY_COINS}もゲット`, counter: 'answers', target: WEEKLY_TARGET }])
+  }
+
   // 節目のバッジでタマゴがもらえる
   const eggTotal = eggsEarned(earned)
   const [eggToast, setEggToast] = useState(false)
@@ -415,7 +427,7 @@ function App() {
         <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
       ) : mode === 'stats' ? (
         <>
-          <Missions state={missions} today={today} />
+          <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
           <Stats
             streakDays={streakDays}
             studiedToday={studiedToday}
@@ -553,7 +565,11 @@ function App() {
             ✅
           </span>
           <div>
-            <p className="badge-toast-title">ミッション達成！ +{MISSION_XP * missionToast.length}XP</p>
+            <p className="badge-toast-title">
+              {missionToast[0].id === 'weekly'
+                ? `週間チャレンジ達成！ +${WEEKLY_XP}XP`
+                : `ミッション達成！ +${MISSION_XP * missionToast.length}XP`}
+            </p>
             <p className="badge-toast-name">{missionToast.map((m) => m.text).join('・')}</p>
           </div>
         </div>

@@ -605,3 +605,4 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .room-school { background: linear-gradient(180deg, #fef3c7 0%, #fde68a 70%, #b45309 100%) !important; color: #1f2937; }
 .monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind { color: inherit; opacity: 0.8; }
 .room-sample .badge-name { color: inherit; }
+.weekly { margin-top: 10px; } .weekly p { margin: 0 0 4px; font-size: 0.9rem; }
