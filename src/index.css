@@ -217,3 +217,23 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 }
 .listen:active { transform: scale(0.95); }
 .listen-word { min-height: 2.6rem; margin-top: 8px; }
+
+.direction { flex-wrap: wrap; }
+.card-tabs { margin-top: 16px; }
+.hint { font-family: ui-monospace, monospace; font-size: 1.3rem; letter-spacing: 0.05em; margin: 8px 0 12px; }
+.spell-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.3rem;
+  text-align: center;
+  border: 2px solid var(--muted);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--fg);
+}
+.spell-input:focus { outline: none; border-color: var(--accent); }
+.spell-input.ok { border-color: #16a34a; animation: pop 0.3s; }
+.spell-input.ng { border-color: var(--again); animation: shake 0.3s; }
+.spell .actions { margin-top: 12px; }
+.hint-btn { background: var(--muted) !important; }
+.hint-btn:disabled { opacity: 0.5; }

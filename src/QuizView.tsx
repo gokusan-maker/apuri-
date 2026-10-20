@@ -3,10 +3,12 @@ import { quizXp } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
+import { Spell } from './SpellView'
 import type { Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
-export type Direction = 'en-ja' | 'ja-en' | 'listen'
+// spell：日本語を見て英単語を入力
+export type Direction = 'en-ja' | 'ja-en' | 'listen' | 'spell'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) => (d === 'ja-en' ? (w: Word) => w.en : (w: Word) => w.ja)
@@ -15,6 +17,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'en-ja', label: '英→日' },
   { id: 'ja-en', label: '日→英' },
   { id: 'listen', label: '🎧 リスニング' },
+  { id: 'spell', label: '✏️ スペル' },
 ]
 
 type Props = {
@@ -79,6 +82,25 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
     setEarned(0)
   }
 
+  const toggle = (
+    <div className="direction" role="group" aria-label="出題の向き">
+      {DIRECTIONS.map((d) => (
+        <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
+          {d.label}
+        </button>
+      ))}
+    </div>
+  )
+
+  if (direction === 'spell') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Spell words={words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
   if (!q) {
     const rate = Math.round((score / questions.length) * 100)
     return (
@@ -113,13 +135,7 @@ export function Quiz({ words, direction: initial = 'en-ja', count = 10, onAnswer
 
   return (
     <section className="card quiz" aria-live="polite">
-      <div className="direction" role="group" aria-label="出題の向き">
-        {DIRECTIONS.map((d) => (
-          <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
-            {d.label}
-          </button>
-        ))}
-      </div>
+      {toggle}
       <p className="progress">
         {index + 1} / {questions.length}
         {combo >= 2 && (

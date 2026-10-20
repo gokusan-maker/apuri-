@@ -108,3 +108,11 @@ describe('リスニング', () => {
     expect(screen.getByText(word.en)).toBeInTheDocument()
   })
 })
+
+it('クイズの「✏️ スペル」でスペル入力に切り替わる', () => {
+  render(<Quiz words={WORDS.slice(0, 8)} count={2} />)
+  fireEvent.click(screen.getByText('✏️ スペル'))
+  expect(screen.getByLabelText('英単語を入力')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('英→日'))
+  expect(document.querySelector('.choice')).not.toBeNull()
+})
