@@ -332,6 +332,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'If it were sunny, we ___ go to the beach.', choices: ['will', 'would', 'are'], answer: 1, why: '仮定法の文の後半は would ＋ 動詞の原形。' },
     ],
   },
+  {
+    id: 'that-clause',
+    title: '接続詞 that（I think that …）',
+    points: ['think・know・hope・say などのあとに「that ＋ 主語 ＋ 動詞」を続けると「〜ということ」を表せる。この that はよく省略される。'],
+    examples: [
+      { en: 'I think that English is fun.', ja: '英語は楽しいと思う。' },
+      { en: 'I know he is busy.', ja: '彼がいそがしいことは知っている。（that の省略）' },
+    ],
+    questions: [
+      { sentence: 'I hope ___ you will come to the party.', choices: ['that', 'what', 'if'], answer: 0, why: '「〜ということを望む」は hope that 〜。' },
+      { sentence: 'She says that the test ___ easy.', choices: ['was', 'be', 'being'], answer: 0, why: 'that のあとは「主語＋動詞」。the test was easy。' },
+      { sentence: 'I think ___ is a good idea.', choices: ['it', 'to', 'for'], answer: 0, why: 'that が省略された形。I think (that) it is a good idea。' },
+    ],
+  },
+  {
+    id: 'wh-to',
+    title: '疑問詞＋to（how to など）',
+    points: ['how to ＋ 動詞の原形「〜のしかた」、what to 〜「何を〜すべきか」、where to 〜「どこで〜すべきか」、when to 〜「いつ〜すべきか」。'],
+    examples: [
+      { en: 'I know how to swim.', ja: '泳ぎ方を知っている。' },
+      { en: "I don't know what to say.", ja: '何と言えばいいかわからない。' },
+    ],
+    questions: [
+      { sentence: 'Can you tell me ___ to get to the station?', choices: ['how', 'what', 'who'], answer: 0, why: '「駅への行き方」は how to get to 〜。' },
+      { sentence: "I don't know ___ to buy for her birthday.", choices: ['what', 'how', 'where'], answer: 0, why: '「何を買えばいいか」は what to buy。' },
+      { sentence: 'Please tell me ___ to put this box.', choices: ['where', 'what', 'how'], answer: 0, why: '「どこに置けばいいか」は where to put。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
