@@ -27,7 +27,7 @@ describe('再発防止', () => {
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /ステージ/ }))
-    fireEvent.click(screen.getByText('👹 ボスに挑戦！'))
+    fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     const words = wordsOf(['中1'])
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {

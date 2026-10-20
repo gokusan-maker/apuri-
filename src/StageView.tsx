@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { Source } from './monster'
-import { bossUnlocked, type BossRecord } from './boss'
+import { BOSSES, bossUnlocked, type BossRecord } from './boss'
 import { Boss } from './BossView'
 import { Quiz } from './QuizView'
 import { isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -112,7 +112,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
             </div>
             {bossUnlocked(level, record) ? (
               <button className={`boss-btn${boss[level] ? ' beaten' : ''}`} onClick={() => setFighting(level)}>
-                {boss[level] ? '👑 ボス撃破ずみ（もう一度戦う）' : '👹 ボスに挑戦！'}
+                {boss[level] ? `👑 ${BOSSES[level].name} 撃破ずみ（もう一度戦う）` : `👹 ボス「${BOSSES[level].name}」に挑戦！`}
               </button>
             ) : (
               <p className="boss-locked">🔒 全ステージをクリアするとボスが出現</p>

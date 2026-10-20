@@ -38,3 +38,14 @@ export function saveBoss(r: BossRecord): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 単語帳ごとのボス（すべてオリジナル）
+export type BossLook = { name: string; color: string; line: string; eye: string }
+
+export const BOSSES: Record<Level, BossLook> = {
+  中1: { name: 'ヤミモチ', color: '#6d28d9', line: '#3b0764', eye: '#fde047' },
+  中2: { name: 'ホノオモチ', color: '#dc2626', line: '#7f1d1d', eye: '#fef08a' },
+  中3: { name: 'コオリモチ', color: '#0ea5e9', line: '#0c4a6e', eye: '#f0f9ff' },
+  高校基礎: { name: 'カゲノオオモチ', color: '#334155', line: '#020617', eye: '#f87171' },
+  熟語: { name: 'ナゾナゾモチ', color: '#0d9488', line: '#134e4a', eye: '#fde68a' },
+}

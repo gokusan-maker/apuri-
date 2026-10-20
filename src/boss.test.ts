@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, bossUnlocked, damage, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, bossUnlocked, damage, loadBoss, saveBoss } from './boss'
+import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
 describe('ボス', () => {
@@ -27,4 +28,10 @@ describe('ボス', () => {
     saveBoss({ 中1: '2026-10-20' })
     expect(loadBoss()).toEqual({ 中1: '2026-10-20' })
   })
+})
+
+it('単語帳ごとにボスがいて、名前は重複しない', () => {
+  const names = Object.values(BOSSES).map((b) => b.name)
+  expect(names).toHaveLength(LEVELS.length)
+  expect(new Set(names).size).toBe(names.length)
 })

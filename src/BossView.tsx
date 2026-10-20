@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BOSS_HP, BOSS_QUESTIONS, damage, HEARTS } from './boss'
+import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEARTS, type BossLook } from './boss'
 import { quizXp, type Source } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -13,15 +13,15 @@ type Props = {
   onExit: () => void
 }
 
-// オリジナルのボス「ヤミモチ」
-function BossFigure({ hit }: { hit: boolean }) {
+// オリジナルのボス。単語帳ごとに色と名前が変わる
+function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   return (
     <svg viewBox="0 0 100 100" className={`boss-svg${hit ? ' hit' : ''}`} aria-hidden="true">
-      <path d="M30 30 L24 8 L40 24 Z M70 30 L76 8 L60 24 Z" fill="#7c3aed" stroke="#3b0764" strokeWidth="3" />
-      <path d="M12 72 Q12 24 50 22 Q88 24 88 72 Q88 92 50 92 Q12 92 12 72 Z" fill="#6d28d9" stroke="#3b0764" strokeWidth="3" />
-      <path d="M30 50 L44 56 M70 50 L56 56" stroke="#fde047" strokeWidth="4" strokeLinecap="round" />
-      <circle cx="38" cy="58" r="4" fill="#fde047" />
-      <circle cx="62" cy="58" r="4" fill="#fde047" />
+      <path d="M30 30 L24 8 L40 24 Z M70 30 L76 8 L60 24 Z" fill={look.color} stroke={look.line} strokeWidth="3" />
+      <path d="M12 72 Q12 24 50 22 Q88 24 88 72 Q88 92 50 92 Q12 92 12 72 Z" fill={look.color} stroke={look.line} strokeWidth="3" />
+      <path d="M30 50 L44 56 M70 50 L56 56" stroke={look.eye} strokeWidth="4" strokeLinecap="round" />
+      <circle cx="38" cy="58" r="4" fill={look.eye} />
+      <circle cx="62" cy="58" r="4" fill={look.eye} />
       <path d="M38 74 L44 70 L50 74 L56 70 L62 74" fill="none" stroke="#f5f3ff" strokeWidth="3" />
     </svg>
   )
@@ -85,9 +85,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit }: Props) {
         <span>{level} のボス</span>
       </div>
       <div className="boss-figure">
-        <BossFigure hit={hit} />
+        <BossFigure hit={hit} look={BOSSES[level]} />
       </div>
-      <p className="boss-name">ヤミモチ</p>
+      <p className="boss-name">{BOSSES[level].name}</p>
       <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={BOSS_HP} aria-valuenow={hp}>
         <div className="boss-hp-fill" style={{ width: `${(hp / BOSS_HP) * 100}%` }} />
       </div>

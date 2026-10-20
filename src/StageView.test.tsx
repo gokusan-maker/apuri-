@@ -28,8 +28,8 @@ describe('ステージ画面', () => {
 it('全ステージをクリアするとボスに挑戦できる', () => {
   const all = Object.fromEntries(stagesOf('中3').map((s) => [s.id, 1]))
   render(<Stages levels={['中3']} record={all} onClear={() => {}} />)
-  fireEvent.click(screen.getByText('👹 ボスに挑戦！'))
-  expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
+  expect(screen.getByText('コオリモチ')).toBeInTheDocument()
   fireEvent.click(screen.getByText('← にげる'))
   expect(screen.getByText('ステージ')).toBeInTheDocument()
 })
