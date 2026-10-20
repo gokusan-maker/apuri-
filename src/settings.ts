@@ -30,3 +30,46 @@ export function toggleLevel(levels: Level[], l: Level): Level[] {
   const next = levels.includes(l) ? levels.filter((x) => x !== l) : [...levels, l]
   return next.length === 0 ? levels : LEVELS.filter((x) => next.includes(x))
 }
+
+// アプリの設定
+export type Theme = 'system' | 'light' | 'dark'
+export type Accent = 'en-US' | 'en-GB'
+
+export type Settings = {
+  rate: number // 発音の速さ 0.5〜1.5
+  accent: Accent
+  theme: Theme
+  sound: boolean // 効果音
+}
+
+export const DEFAULT_SETTINGS: Settings = { rate: 1, accent: 'en-US', theme: 'system', sound: true }
+
+const SETTINGS_KEY = 'eitan:settings'
+
+export function loadSettings(): Settings {
+  try {
+    const raw = localStorage.getItem(SETTINGS_KEY)
+    const v = raw ? (JSON.parse(raw) as Partial<Settings>) : {}
+    return {
+      rate: typeof v.rate === 'number' && v.rate >= 0.5 && v.rate <= 1.5 ? v.rate : DEFAULT_SETTINGS.rate,
+      accent: v.accent === 'en-GB' ? 'en-GB' : 'en-US',
+      theme: v.theme === 'light' || v.theme === 'dark' ? v.theme : 'system',
+      sound: typeof v.sound === 'boolean' ? v.sound : true,
+    }
+  } catch {
+    return { ...DEFAULT_SETTINGS }
+  }
+}
+
+export function saveSettings(s: Settings): void {
+  try {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(s))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
+export function applyTheme(theme: Theme, root: HTMLElement = document.documentElement): void {
+  if (theme === 'system') delete root.dataset.theme
+  else root.dataset.theme = theme
+}

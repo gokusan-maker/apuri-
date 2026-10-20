@@ -26,16 +26,18 @@ import { speak } from './speech'
 import { TimeAttack } from './TimeAttackView'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
-import { loadLevels, saveLevels, toggleLevel } from './settings'
+import { applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
+import { SettingsPanel } from './SettingsView'
 import { LEVELS, wordsOf } from './words'
 
-type Tab = 'card' | 'quiz' | 'time' | 'stats'
+type Tab = 'card' | 'quiz' | 'time' | 'stats' | 'settings'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'card', icon: '🃏', label: 'カード' },
   { id: 'quiz', icon: '❓', label: 'クイズ' },
   { id: 'time', icon: '⏱', label: 'タイム' },
   { id: 'stats', icon: '📊', label: '記録' },
+  { id: 'settings', icon: '⚙️', label: '設定' },
 ]
 
 function App() {
@@ -97,6 +99,12 @@ function App() {
     }, 2000)
   }
 
+  const [settings, setSettings] = useState(loadSettings)
+  useEffect(() => {
+    saveSettings(settings)
+    applyTheme(settings.theme)
+  }, [settings])
+
   const [levels, setLevels] = useState(loadLevels)
   useEffect(() => saveLevels(levels), [levels])
   const words = useMemo(() => wordsOf(levels), [levels])
@@ -135,7 +143,7 @@ function App() {
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
         </p>
-        {mode !== 'stats' && (
+        {mode !== 'stats' && mode !== 'settings' && (
           <div className="levels" role="group" aria-label="単語帳">
             {LEVELS.map((l) => (
               <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
@@ -146,7 +154,9 @@ function App() {
         )}
       </header>
 
-      {mode === 'stats' ? (
+      {mode === 'settings' ? (
+        <SettingsPanel settings={settings} onChange={setSettings} />
+      ) : mode === 'stats' ? (
         <section className="card stats-view">
           <h2>記録</h2>
           <dl className="result-list">

@@ -104,4 +104,22 @@ describe('App', () => {
     expect(document.querySelector('.quiz .en')!.textContent).toBe(WORDS[0].en)
     expect(screen.getByText('1 / 1')).toBeInTheDocument()
   })
+
+  it('設定タブで発音の速さ・音声・画面の色・効果音を変えられ、保存される', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '0.7' } })
+    fireEvent.click(screen.getByText('イギリス英語'))
+    fireEvent.click(screen.getByText('ダーク'))
+    fireEvent.click(screen.getByRole('checkbox'))
+    expect(document.documentElement.dataset.theme).toBe('dark')
+    expect(JSON.parse(localStorage.getItem('eitan:settings')!)).toEqual({
+      rate: 0.7,
+      accent: 'en-GB',
+      theme: 'dark',
+      sound: false,
+    })
+    fireEvent.click(screen.getByText('端末に合わせる'))
+    expect(document.documentElement.dataset.theme).toBeUndefined()
+  })
 })

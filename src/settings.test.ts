@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { loadLevels, saveLevels, toggleLevel } from './settings'
+import { applyTheme, DEFAULT_SETTINGS, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { LEVELS } from './words'
 
 describe('単語帳の選択', () => {
@@ -20,5 +20,25 @@ describe('単語帳の選択', () => {
     expect(loadLevels()).toEqual(['中3'])
     localStorage.setItem('eitan:levels', '["大学"]')
     expect(loadLevels()).toEqual(LEVELS)
+  })
+})
+
+describe('設定', () => {
+  beforeEach(() => localStorage.clear())
+
+  it('初期値と保存・読み込み、範囲外は初期値に戻す', () => {
+    expect(loadSettings()).toEqual(DEFAULT_SETTINGS)
+    saveSettings({ rate: 0.8, accent: 'en-GB', theme: 'dark', sound: false })
+    expect(loadSettings()).toEqual({ rate: 0.8, accent: 'en-GB', theme: 'dark', sound: false })
+    localStorage.setItem('eitan:settings', '{"rate":9,"accent":"fr","theme":"pink"}')
+    expect(loadSettings()).toEqual(DEFAULT_SETTINGS)
+  })
+
+  it('ダークモードの手動切替は html の data-theme で行う', () => {
+    const root = document.createElement('html')
+    applyTheme('dark', root)
+    expect(root.dataset.theme).toBe('dark')
+    applyTheme('system', root)
+    expect(root.dataset.theme).toBeUndefined()
   })
 })

@@ -1,4 +1,6 @@
-// 正解・不正解の短い効果音（Web Audio）。使えない環境では何もしない。
+// 正解・不正解の短い効果音（Web Audio）。使えない環境や設定でオフのときは鳴らさない。
+import { loadSettings } from './settings'
+
 let ctx: AudioContext | null = null
 
 function tone(freq: number, start: number, dur: number) {
@@ -15,6 +17,7 @@ function tone(freq: number, start: number, dur: number) {
 }
 
 function ready(): boolean {
+  if (!loadSettings().sound) return false
   try {
     if (!ctx) {
       const AC = window.AudioContext ?? (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext
