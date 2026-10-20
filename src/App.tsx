@@ -1,4 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge } from './badges'
+import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { Celebrate } from './CelebrateView'
 import { Monster } from './MonsterView'
@@ -24,12 +26,13 @@ import {
 import { addMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { speak } from './speech'
+import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
-import { LEVELS, wordsOf } from './words'
+import { LEVELS, WORDS, wordsOf } from './words'
 
 type Tab = 'card' | 'quiz' | 'time' | 'stats' | 'settings'
 
@@ -68,7 +71,6 @@ function App() {
   useEffect(() => saveTodayCount(todayCount), [todayCount])
   const studiedToday = todayCount.day === today ? todayCount.count : 0
 
-  // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
   const [settings, setSettings] = useState(loadSettings)
   useEffect(() => {
     saveSettings(settings)
@@ -76,12 +78,22 @@ function App() {
   }, [settings])
 
   const [celebrate, setCelebrate] = useState(false)
+  const [totals, setTotals] = useState(loadTotals)
+  useEffect(() => saveTotals(totals), [totals])
 
-  function studied() {
+  // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
+  function studied(correct: boolean) {
     setStreak(recordStudy(streak, today))
     const next = addToday(todayCount, today)
     setTodayCount(next)
-    if (studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal) setCelebrate(true)
+    const reached = studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal
+    if (reached) setCelebrate(true)
+    setTotals((t) => ({
+      ...t,
+      answers: t.answers + 1,
+      correct: t.correct + (correct ? 1 : 0),
+      goals: t.goals + (reached ? 1 : 0),
+    }))
   }
 
   const [mistakes, setMistakes] = useState(loadMistakes)
@@ -89,7 +101,7 @@ function App() {
   const [weakOnly, setWeakOnly] = useState(false)
 
   function onAnswer(correct: boolean, xp: number, wordId: string) {
-    studied()
+    studied(correct)
     if (!correct) setMistakes((m) => addMistake(m, wordId))
     if (correct && xp > 0) gainXp(xp)
   }
@@ -122,10 +134,30 @@ function App() {
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
+  // バッジ：条件を満たしたらその場でもらえる
+  const [earned, setEarned] = useState(loadEarned)
+  const [bestTime, setBestTime] = useState(loadBest)
+  const [toast, setToast] = useState<Badge[]>([])
+  const learnedAll = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
+  const level = levelInfo(monster.xp).level
+  const streakCount = streak?.count ?? 0
+  const got = newlyEarned({ ...totals, streak: streakCount, learned: learnedAll, level, bestTime }, earned)
+  if (got.length > 0) {
+    // 描画中に差分を反映する（React の「前回の描画からの変化に合わせて state を直す」書き方）
+    setEarned({ ...earned, ...Object.fromEntries(got.map((b) => [b.id, today])) })
+    setToast(got)
+  }
+  useEffect(() => saveEarned(earned), [earned])
+  useEffect(() => {
+    if (toast.length === 0) return
+    const id = window.setTimeout(() => setToast([]), 3000)
+    return () => window.clearTimeout(id)
+  }, [toast])
+
   function answer(correct: boolean) {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
-    studied()
+    studied(correct)
     if (!correct) setMistakes((m) => addMistake(m, card.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN)
     setFlipped(false)
@@ -216,6 +248,7 @@ function App() {
               </button>
             </>
           )}
+          <BadgeList earned={earned} />
           <Backup />
         </section>
       ) : mode === 'quiz' ? (
@@ -231,10 +264,13 @@ function App() {
             words={words}
             targets={weakOnly && weak.length > 0 ? weak : undefined}
             onAnswer={onAnswer}
+            onFinish={(score, total) => {
+              if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
+            }}
           />
         </>
       ) : mode === 'time' ? (
-        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} />
+        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => setBestTime((b) => Math.max(b, n))} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>
@@ -265,6 +301,7 @@ function App() {
         <p className="done">今日の学習は完了です 🎉 また明日！</p>
       )}
 
+      <BadgeToast badges={toast} onClose={() => setToast([])} />
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">

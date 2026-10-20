@@ -30,9 +30,10 @@ type Props = {
   direction?: Direction
   count?: number
   onAnswer?: (correct: boolean, xp: number, wordId: string) => void
+  onFinish?: (score: number, total: number) => void
 }
 
-export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer }: Props) {
+export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10, onAnswer, onFinish }: Props) {
   const [direction, setDirection] = useState<Direction>(initial)
   const [questions, setQuestions] = useState(() => makeQuiz(words, label(initial), count, Math.random, pool(initial, targets ?? words)))
   const [index, setIndex] = useState(0)
@@ -74,6 +75,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   function next() {
     setPicked(null)
     setIndex(index + 1)
+    if (index + 1 === questions.length) onFinish?.(score, questions.length)
   }
 
   function restart(d: Direction = direction) {

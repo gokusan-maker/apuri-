@@ -8,11 +8,12 @@ import type { Word } from './words'
 type Props = {
   words: Word[]
   onAnswer?: (correct: boolean, xp: number, wordId: string) => void
+  onFinish?: (score: number) => void
 }
 
 type Phase = 'ready' | 'play' | 'done'
 
-export function TimeAttack({ words, onAnswer }: Props) {
+export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [phase, setPhase] = useState<Phase>('ready')
   const [left, setLeft] = useState(TIME_LIMIT)
   const [score, setScore] = useState(0)
@@ -51,7 +52,8 @@ export function TimeAttack({ words, onAnswer }: Props) {
       setNewBest(true)
     }
     setPhase('done')
-  }, [left, phase, best])
+    onFinish?.(final)
+  }, [left, phase, best, onFinish])
 
   function pick(i: number) {
     if (!q) return

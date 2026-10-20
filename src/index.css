@@ -327,3 +327,31 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
   .confetti { display: none; }
   .celebrate, .celebrate-card { animation: none; }
 }
+
+.badges { margin-top: 24px; }
+.badge-grid { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.badge-grid li { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; border-radius: 12px; background: var(--bg); text-align: center; }
+.badge-grid li.locked { opacity: 0.55; }
+.badge-icon { font-size: 1.8rem; }
+.badge-name { font-size: 0.8rem; font-weight: 700; }
+.badge-desc { font-size: 0.7rem; color: var(--muted); }
+.badge-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(84px + env(safe-area-inset-bottom));
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: var(--fg);
+  color: var(--bg);
+  transform: translateX(-50%);
+  box-shadow: 0 6px 20px rgb(0 0 0 / 0.25);
+  animation: toast-in 0.3s;
+}
+.badge-toast p { margin: 0; }
+.badge-toast-title { font-size: 0.75rem; opacity: 0.8; }
+.badge-toast-name { font-weight: 700; }
+@keyframes toast-in { from { transform: translate(-50%, 20px); opacity: 0; } }

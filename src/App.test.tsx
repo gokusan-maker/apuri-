@@ -141,4 +141,16 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
   })
+
+  it('初めて正解するとバッジ獲得のお知らせが出て、記録画面のバッジ一覧に並ぶ', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('バッジ獲得！')).toBeInTheDocument()
+    expect(screen.getByText('はじめの一歩')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByRole('heading', { name: /^バッジ 1 \// })).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:badges')!)).toHaveProperty('first-correct')
+    expect(JSON.parse(localStorage.getItem('eitan:totals')!)).toMatchObject({ answers: 1, correct: 1 })
+  })
 })
