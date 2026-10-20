@@ -86,7 +86,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
-  { id: 'numbers', label: '🔢 数の聞き取り', group: '聞く・話す' },
+  { id: 'numbers', label: '🔢 数・時刻の聞き取り', group: '聞く・話す' },
   { id: 'order-ear', label: '🎧 聞き並べ', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
   { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },

@@ -327,10 +327,11 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   })
   const got: [boolean, string][] = []
   render(<Quiz words={WORDS.slice(0, 8)} onAnswer={(c, _xp, id) => got.push([c, id])} />)
-  pickMode('🔢 数の聞き取り')
-  const said = spoken[spoken.length - 1]
-  const n = [...Array(1000).keys()].find((i) => toEnglish(i) === said)!
-  fireEvent.change(screen.getByLabelText('数'), { target: { value: String(n) } })
+  vi.spyOn(Math, 'random').mockReturnValue(0.9) // 数の問題で 902
+  pickMode('🔢 数・時刻の聞き取り')
+  vi.restoreAllMocks()
+  expect(spoken[spoken.length - 1]).toBe(toEnglish(902))
+  fireEvent.change(screen.getByLabelText('答え'), { target: { value: '902' } })
   fireEvent.click(screen.getByText('答える'))
   expect(screen.getByRole('status').textContent).toContain('正解！')
   expect(got[0][0]).toBe(true)

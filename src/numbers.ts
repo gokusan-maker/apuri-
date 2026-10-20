@@ -31,3 +31,37 @@ export function parseAnswer(text: string): number | null {
   const t = text.replace(/[０-９]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0)).replace(/[,\s]/g, '')
   return /^\d+$/.test(t) ? Number(t) : null
 }
+
+// 問題：読み上げる英語・正解（入力の形）・記録用の単語id
+export type NumQ = { kind: 'number' | 'time'; say: string; answer: string; id: string }
+
+export function numberQ(r: () => number = Math.random): NumQ {
+  const n = pickNumber(r)
+  return { kind: 'number', say: toEnglish(n), answer: String(n), id: wordIdOf(n) }
+}
+
+// 時刻：seven thirty → 7:30（5分きざみ。ちょうどは o'clock、1〜9分は oh five のように読む）
+export function timeQ(r: () => number = Math.random): NumQ {
+  const h = 1 + Math.floor(r() * 12)
+  const m = Math.floor(r() * 12) * 5
+  const say = m === 0 ? `${toEnglish(h)} o'clock` : `${toEnglish(h)} ${m < 10 ? `oh ${toEnglish(m)}` : toEnglish(m)}`
+  return { kind: 'time', say, answer: `${h}:${String(m).padStart(2, '0')}`, id: wordIdOf(h) }
+}
+
+export function pickQ(r: () => number = Math.random): NumQ {
+  return r() < 0.3 ? timeQ(r) : numberQ(r)
+}
+
+function half(text: string): string {
+  return text.replace(/[０-９：／]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+}
+
+// 入力が正解か（全角・空白・カンマ・時刻の先頭0は気にしない）
+export function isRight(q: NumQ, text: string): boolean {
+  const t = half(text).replace(/[,\s]/g, '')
+  if (q.kind === 'time') {
+    const m = /^0?(\d{1,2}):(\d{2})$/.exec(t)
+    return !!m && `${Number(m[1])}:${m[2]}` === q.answer
+  }
+  return parseAnswer(t) === Number(q.answer)
+}

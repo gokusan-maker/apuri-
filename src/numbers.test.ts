@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { parseAnswer, pickNumber, toEnglish, wordIdOf } from './numbers'
+import { isRight, parseAnswer, pickNumber, timeQ, toEnglish, wordIdOf } from './numbers'
 import { WORDS } from './words'
 
 describe('numbers', () => {
@@ -31,5 +31,23 @@ describe('numbers', () => {
     expect(parseAnswer('１３')).toBe(13)
     expect(parseAnswer('1,000')).toBe(1000)
     expect(parseAnswer('abc')).toBeNull()
+  })
+})
+
+describe('時刻', () => {
+  it('読み方と答え', () => {
+    // h = 1 + floor(r*12), m = floor(r*12)*5
+    const seq = (xs: number[]) => () => xs.shift()!
+    expect(timeQ(seq([6 / 12, 6 / 12]))).toMatchObject({ say: 'seven thirty', answer: '7:30' })
+    expect(timeQ(seq([0, 0]))).toMatchObject({ say: "one o'clock", answer: '1:00' })
+    expect(timeQ(seq([11 / 12, 1 / 12]))).toMatchObject({ say: 'twelve oh five', answer: '12:05' })
+  })
+  it('入力の判定', () => {
+    const q = { kind: 'time' as const, say: '', answer: '7:30', id: 'seven' }
+    expect(isRight(q, '7:30')).toBe(true)
+    expect(isRight(q, '07:30')).toBe(true)
+    expect(isRight(q, '７：３０')).toBe(true)
+    expect(isRight(q, '7:03')).toBe(false)
+    expect(isRight({ kind: 'number', say: '', answer: '13', id: 'thirteen' }, '13')).toBe(true)
   })
 })
