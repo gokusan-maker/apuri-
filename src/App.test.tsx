@@ -148,6 +148,7 @@ describe('App', () => {
       reviewCap: 0,
       easy: false,
       newPerDay: 10,
+      voice: '',
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()

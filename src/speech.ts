@@ -4,11 +4,13 @@ import { loadSettings } from './settings'
 // slow：ゆっくり（いつもの半分くらいの速さ）
 export function speak(text: string, slow = false): void {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
-  const { rate, accent } = loadSettings()
+  const { rate, accent, voice: chosen } = loadSettings()
   const u = new SpeechSynthesisUtterance(text)
   u.lang = accent
   u.rate = slow ? Math.max(0.4, rate * 0.55) : rate
-  const voice = window.speechSynthesis.getVoices?.().find((v) => v.lang.replace('_', '-') === accent)
+  const voices = window.speechSynthesis.getVoices?.() ?? []
+  // 設定で選んだ声があればそれ、なければ米/英に合う声
+  const voice = (chosen && voices.find((v) => v.name === chosen)) || voices.find((v) => v.lang.replace('_', '-') === accent)
   if (voice) u.voice = voice
   window.speechSynthesis.cancel()
   window.speechSynthesis.speak(u)
@@ -33,4 +35,10 @@ export function speakSeq(parts: { text: string; lang?: string }[], onDone: () =>
 
 export function cancelSpeech(): void {
   if (typeof window !== 'undefined' && 'speechSynthesis' in window) window.speechSynthesis.cancel()
+}
+
+// 端末にある英語の声の名前
+export function englishVoices(): string[] {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return []
+  return (window.speechSynthesis.getVoices?.() ?? []).filter((v) => v.lang.toLowerCase().startsWith('en')).map((v) => v.name)
 }

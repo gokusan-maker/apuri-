@@ -2,6 +2,7 @@ import { Install } from './InstallView'
 import { OfflineStatus } from './OfflineView'
 import { WhatsNew } from './WhatsNewView'
 import { Help } from './HelpView'
+import { VoicePicker } from './VoicePickerView'
 import { clearAllData } from './resetData'
 import { GRADES } from './grade'
 import type { Level } from './words'
@@ -90,6 +91,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
           ))}
         </div>
       </fieldset>
+      <VoicePicker value={settings.voice} onChange={(voice) => set({ voice })} />
       <button className="speak-test" onClick={() => speak('Hello! Nice to meet you.')}>
         🔊 試しに聞く
       </button>
