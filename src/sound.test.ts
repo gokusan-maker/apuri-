@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest'
+import { chirpFreq } from './sound'
 
 describe('効果音', () => {
   afterEach(() => {
@@ -27,4 +28,9 @@ describe('効果音', () => {
     playFanfare()
     expect(started).toBe(4)
   })
+})
+
+it('鳴き声は小さいすがたほど高い', () => {
+  expect(chirpFreq(0)).toBeGreaterThan(chirpFreq(2))
+  expect(chirpFreq(10)).toBe(400)
 })

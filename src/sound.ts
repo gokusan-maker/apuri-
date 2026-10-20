@@ -46,3 +46,15 @@ export function playFanfare() {
   if (!ready()) return
   ;[523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.12, i === 3 ? 0.4 : 0.15))
 }
+
+// 相棒の鳴き声：小さいすがたほど高い声（ピッ・ピュイ）
+export function chirpFreq(stage: number): number {
+  return Math.max(400, 1400 - stage * 200)
+}
+
+export function playChirp(stage: number) {
+  if (!ready()) return
+  const f = chirpFreq(stage)
+  tone(f, 0, 0.08)
+  tone(f * 1.25, 0.07, 0.1)
+}

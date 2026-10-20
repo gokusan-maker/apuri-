@@ -1,3 +1,4 @@
+import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
@@ -198,6 +199,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         onClick={() => {
           const l = pickLineNow(form.stage, mood === 'lonely', Math.random())
           setLine(l)
+          playChirp(form.stage)
           setPoke(poke + 1)
           if (form.stage > 0) speak(l.en)
         }}
