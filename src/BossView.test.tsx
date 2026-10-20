@@ -21,6 +21,7 @@ describe('ボス戦', () => {
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(onWin).toHaveBeenCalledTimes(1)
+    expect(document.querySelectorAll('.boss .confetti').length).toBe(12)
   })
 
   it('3回まちがえると負け、もう一度挑戦できる', () => {

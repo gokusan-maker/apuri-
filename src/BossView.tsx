@@ -114,6 +114,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
       {won ? (
         <>
+          {Array.from({ length: 12 }, (_, i) => (
+            <span
+              key={i}
+              className="confetti"
+              aria-hidden="true"
+              style={{
+                left: `${(i * 83) % 100}%`,
+                background: ['#f97316', '#facc15', '#22c55e', '#3b82f6', '#a855f7', '#ec4899'][i % 6],
+                animationDelay: `${(i % 6) * 0.12}s`,
+              }}
+            />
+          ))}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           <p className="result-message">ボーナス +{bonus}XP</p>
           <button className="flip" onClick={onExit}>
