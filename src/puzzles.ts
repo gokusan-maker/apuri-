@@ -1,5 +1,6 @@
 // ちょっとした4択パズル（ABC順・反対の意味・仲間はずれ）
 import { shuffle, type Rng } from './quiz'
+import { EMOJI } from './emoji'
 import { WORDS, type Word } from './words'
 
 export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string }
@@ -76,7 +77,7 @@ export function oddQ(rng: Rng = Math.random): PuzzleQ {
     prompt: '仲間はずれはどれ？',
     choices,
     answer: choices.indexOf(odd.en),
-    why: `${odd.en}（${odd.ja}）は「${h.name}」。ほかは「${g.name}」`,
+    why: `${odd.en}${EMOJI[odd.id] ?? ''}（${odd.ja}）は「${h.name}」。ほかは「${g.name}」：${same.map((w) => `${w.en}${EMOJI[w.id] ?? ''}`).join('・')}`,
     wordId: odd.id,
   }
 }

@@ -34,6 +34,7 @@ describe('パズル', () => {
       const odd = names[q.answer]
       expect(names.filter((n) => n === odd)).toHaveLength(1)
       expect(new Set(names.filter((_, k) => k !== q.answer)).size).toBe(1)
+      for (const c of q.choices) expect(q.why).toContain(c)
     }
   })
 })
