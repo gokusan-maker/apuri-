@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, eat, ITEMS, loadWallet, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, eat, ITEMS, loadWallet, saveWallet, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -19,9 +19,9 @@ describe('ショップ', () => {
 
   it('保存と読み込み。知らないアイテムは捨てる', () => {
     saveWallet({ coins: 5, owned: ['hat'] })
-    expect(loadWallet()).toEqual({ coins: 5, owned: ['hat'] })
+    expect(loadWallet()).toEqual({ coins: 5, owned: ['hat'], freezes: 0 })
     localStorage.setItem('eitan:wallet', '{"coins":-1,"owned":["sword","ribbon"]}')
-    expect(loadWallet()).toEqual({ coins: 0, owned: ['ribbon'] })
+    expect(loadWallet()).toEqual({ coins: 0, owned: ['ribbon'], freezes: 0 })
   })
 })
 
@@ -41,4 +41,12 @@ describe('おやつ', () => {
     expect(snacksLeft(log, '2026-10-21')).toBe(3)
     expect(eat({ coins: 5, owned: [] }, log, 'cookie', '2026-10-21')).toBeNull()
   })
+})
+
+it('お休みチケットは🪙50で、2枚まで', () => {
+  let w = buyFreeze({ coins: 200, owned: [] })!
+  expect(w).toEqual({ coins: 150, owned: [], freezes: 1 })
+  w = buyFreeze(w)!
+  expect(buyFreeze(w)).toBeNull()
+  expect(buyFreeze({ coins: 10, owned: [] })).toBeNull()
 })

@@ -45,14 +45,14 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages } from './StageView'
-import { buy, COIN_PER_CORRECT, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, COIN_PER_CORRECT, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_REMATCH_XP, BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
-import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
+import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf } from './words'
@@ -94,7 +94,6 @@ function App() {
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
   const [streak, setStreak] = usePersistent(loadStreak, saveStreak)
-  const streakDays = currentStreak(streak, today)
 
   const [todayCount, setTodayCount] = usePersistent(() => loadTodayCount(today), saveTodayCount)
   const studiedToday = todayCount.day === today ? todayCount.count : 0
@@ -119,6 +118,7 @@ function App() {
 
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
+  const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
@@ -129,7 +129,9 @@ function App() {
     count('answers')
     if (correct) count('correct')
     if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
-    setStreak(recordStudy(streak, today))
+    const r = recordStudyWithFreeze(streak, today, wallet.freezes ?? 0)
+    setStreak(r.streak)
+    if (r.used) setWallet((w) => ({ ...w, freezes: Math.max(0, (w.freezes ?? 0) - 1) }))
     const next = addToday(todayCount, today)
     setTodayCount(next)
     setHistory((h) => addHistory(h, today))
@@ -338,6 +340,10 @@ function App() {
           onWear={(id) => updateMonster((m) => ({ ...m, wear: id }))}
           onClose={() => setShowShop(false)}
           snacksLeft={snacksLeft(snacks, today)}
+          onBuyFreeze={() => {
+            const next = buyFreeze(wallet)
+            if (next) setWallet(next)
+          }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)
             if (!r) return

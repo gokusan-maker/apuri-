@@ -39,3 +39,17 @@ export function saveStreak(s: Streak | null): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// お休みチケット：1日休んでも、チケットがあれば連続が切れない（使うと1枚へる）
+export function recordStudyWithFreeze(s: Streak | null, today: string, freezes: number): { streak: Streak; used: boolean } {
+  if (s && freezes > 0 && addDays(s.last, 2) === today) {
+    return { streak: { last: today, count: s.count + 1 }, used: true }
+  }
+  return { streak: recordStudy(s, today), used: false }
+}
+
+// チケットがあれば、きのう休んだだけなら連続日数をそのまま見せる
+export function currentStreakWithFreeze(s: Streak | null, today: string, freezes: number): number {
+  if (s && freezes > 0 && addDays(s.last, 2) === today) return s.count
+  return currentStreak(s, today)
+}

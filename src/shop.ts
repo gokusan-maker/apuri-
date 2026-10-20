@@ -12,7 +12,16 @@ export const ITEMS: Item[] = [
 
 export const COIN_PER_CORRECT = 1
 
-export type Wallet = { coins: number; owned: string[] }
+export type Wallet = { coins: number; owned: string[]; freezes?: number }
+
+export const FREEZE_PRICE = 50
+export const FREEZE_MAX = 2
+
+export function buyFreeze(w: Wallet): Wallet | null {
+  const n = w.freezes ?? 0
+  if (n >= FREEZE_MAX || w.coins < FREEZE_PRICE) return null
+  return { ...w, coins: w.coins - FREEZE_PRICE, freezes: n + 1 }
+}
 
 export function buy(w: Wallet, id: string): Wallet | null {
   const item = ITEMS.find((i) => i.id === id)
@@ -29,6 +38,7 @@ export function loadWallet(): Wallet {
     return {
       coins: typeof v?.coins === 'number' && v.coins >= 0 ? v.coins : 0,
       owned: Array.isArray(v?.owned) ? v.owned.filter((x) => ITEMS.some((i) => i.id === x)) : [],
+      freezes: typeof v?.freezes === 'number' && v.freezes > 0 ? Math.min(v.freezes, FREEZE_MAX) : 0,
     }
   } catch {
     return { coins: 0, owned: [] }

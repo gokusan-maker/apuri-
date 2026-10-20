@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { ITEMS, SNACKS, type Wallet } from './shop'
+import { FREEZE_MAX, FREEZE_PRICE, ITEMS, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -10,9 +10,10 @@ type Props = {
   onClose: () => void
   snacksLeft: number
   onEat: (id: string) => void
+  onBuyFreeze?: () => void
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   return (
@@ -33,6 +34,15 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           </button>
         ))}
       </div>
+      <h3 className="shop-h">お休みチケット（持っている数 {wallet.freezes ?? 0} / {FREEZE_MAX}）</h3>
+      <p className="stats-note">1日休んでも、連続学習日数が切れないよ（休んだ次の日に自動で使う）。</p>
+      <button
+        className="shop-btn freeze-btn"
+        disabled={!onBuyFreeze || (wallet.freezes ?? 0) >= FREEZE_MAX || wallet.coins < FREEZE_PRICE}
+        onClick={onBuyFreeze}
+      >
+        🎫 🪙{FREEZE_PRICE}で買う
+      </button>
       <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
       <ul className="badge-grid">

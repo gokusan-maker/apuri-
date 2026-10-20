@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
+import { currentStreak, currentStreakWithFreeze, loadStreak, recordStudy, recordStudyWithFreeze, saveStreak } from './streak'
 
 describe('streak', () => {
   beforeEach(() => localStorage.clear())
@@ -33,5 +33,23 @@ describe('streak', () => {
     expect(loadStreak()).toEqual({ last: '2026-10-20', count: 3 })
     localStorage.setItem('eitan:streak', '{"foo":1}')
     expect(loadStreak()).toBeNull()
+  })
+})
+
+describe('お休みチケット', () => {
+  it('1日休んでもチケットがあれば連続がつながり、1枚使う', () => {
+    const s = { last: '2026-10-18', count: 5 }
+    expect(currentStreakWithFreeze(s, '2026-10-20', 1)).toBe(5)
+    expect(currentStreakWithFreeze(s, '2026-10-20', 0)).toBe(0)
+    expect(recordStudyWithFreeze(s, '2026-10-20', 1)).toEqual({ streak: { last: '2026-10-20', count: 6 }, used: true })
+    expect(recordStudyWithFreeze(s, '2026-10-20', 0)).toEqual({ streak: { last: '2026-10-20', count: 1 }, used: false })
+  })
+
+  it('2日以上休むとチケットがあっても切れる。ふつうの翌日は使わない', () => {
+    expect(recordStudyWithFreeze({ last: '2026-10-17', count: 5 }, '2026-10-20', 2).used).toBe(false)
+    expect(recordStudyWithFreeze({ last: '2026-10-19', count: 5 }, '2026-10-20', 2)).toEqual({
+      streak: { last: '2026-10-20', count: 6 },
+      used: false,
+    })
   })
 })
