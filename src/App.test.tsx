@@ -548,6 +548,7 @@ describe('App', () => {
     vi.setSystemTime(new Date(2026, 9, 27, 10))
     render(<App />)
     expect(screen.getByText(/ハロウィンウィーク/)).toBeInTheDocument()
+    expect(screen.getByLabelText('飾り 🎃')).toBeInTheDocument()
   })
 
   it('週末は正解のXPが2倍', () => {

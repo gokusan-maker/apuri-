@@ -513,6 +513,7 @@ function App() {
           </p>
         )}
         <Monster
+          deco={seasonEvent?.icon}
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}
           coins={wallet.coins}

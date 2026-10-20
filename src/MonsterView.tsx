@@ -21,6 +21,7 @@ type Props = {
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
+  deco?: string // 季節のイベントの飾り（🎃 など）
 }
 
 // 相棒は完全オリジナルのモチ型モンスター。段階と系統で色と飾りが変わる。
@@ -177,7 +178,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -192,6 +193,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
     <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
+      {deco && (
+        <span className="monster-deco" aria-label={`飾り ${deco}`}>
+          {deco}
+        </span>
+      )}
       <button
         key={poke}
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}
