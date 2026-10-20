@@ -904,6 +904,16 @@ export const WORDS: Word[] = [
   { id: 'pardon', en: 'Pardon?', ja: 'もう一度言ってください', example: 'Pardon? I didn\'t hear you.', exampleJa: 'もう一度言ってもらえますか。聞こえなかったんです。', level: '会話' },
   { id: 'sounds-good', en: 'Sounds good', ja: 'いいね', example: 'Pizza for lunch? Sounds good!', exampleJa: 'お昼はピザ？いいね！', level: '会話' },
   { id: 'dont-worry', en: 'Don\'t worry', ja: '心配しないで', example: 'Don\'t worry. You can try again.', exampleJa: '心配しないで。もう一度やればいいよ。', level: '会話' },
+  { id: 'how-about-you', en: 'How about you?', ja: 'あなたはどう？', example: 'I like cats. How about you?', exampleJa: '私は猫が好き。あなたはどう？', level: '会話' },
+  { id: 'whats-wrong', en: 'What\'s wrong?', ja: 'どうしたの？', example: 'You look sad. What\'s wrong?', exampleJa: '悲しそうだね。どうしたの？', level: '会話' },
+  { id: 'im-home', en: 'I\'m home.', ja: 'ただいま', example: 'I\'m home! What\'s for dinner?', exampleJa: 'ただいま！夕ご飯は何？', level: '会話' },
+  { id: 'help-yourself', en: 'Help yourself.', ja: '自由に取って食べてね', example: 'There are cookies on the table. Help yourself.', exampleJa: 'テーブルにクッキーがあるよ。自由に食べてね。', level: '会話' },
+  { id: 'after-you', en: 'After you.', ja: 'お先にどうぞ', example: 'After you. — Thank you.', exampleJa: 'お先にどうぞ。—ありがとう。', level: '会話' },
+  { id: 'thats-right', en: 'That\'s right.', ja: 'その通り', example: 'That\'s right. The answer is ten.', exampleJa: 'その通り。答えは10だよ。', level: '会話' },
+  { id: 'i-think-so-too', en: 'I think so, too.', ja: '私もそう思う', example: 'This book is great. — I think so, too.', exampleJa: 'この本、すごくいいね。—私もそう思う。', level: '会話' },
+  { id: 'how-was-it', en: 'How was it?', ja: 'どうだった？', example: 'You went to the zoo? How was it?', exampleJa: '動物園に行ったの？どうだった？', level: '会話' },
+  { id: 'hold-on', en: 'Hold on.', ja: 'ちょっと待って', example: 'Hold on. I\'ll get my bag.', exampleJa: 'ちょっと待って。かばんを取ってくる。', level: '会話' },
+  { id: 'cheer-up', en: 'Cheer up!', ja: '元気を出して', example: 'Cheer up! You\'ll do better next time.', exampleJa: '元気出して！次はもっとうまくいくよ。', level: '会話' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
