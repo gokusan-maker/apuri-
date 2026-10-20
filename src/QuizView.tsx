@@ -22,6 +22,7 @@ import { Numbers } from './NumbersView'
 import { Versus } from './VersusView'
 import { Memory } from './MemoryView'
 import { Bingo } from './BingoView'
+import { WordSearch } from './WordSearchView'
 import { Puzzle } from './PuzzleView'
 import { abcQ, alphabetQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
@@ -57,7 +58,7 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -116,6 +117,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'calc', label: '➕ 英語で計算', group: 'パズル・ゲーム' },
   { id: 'memory', label: '🃏 神経衰弱', group: 'パズル・ゲーム' },
   { id: 'bingo', label: '🎯 単語ビンゴ', group: 'パズル・ゲーム' },
+  { id: 'wordsearch', label: '🔍 ことばさがし', group: 'パズル・ゲーム' },
   { id: 'plural', label: '👥 複数形', group: '文法・読解' },
   { id: 'past-ed', label: '⏪ 過去形のつづり', group: '文法・読解' },
   { id: 'compare', label: '📏 比較級・最上級', group: '文法・読解' },
@@ -190,7 +192,7 @@ export const QUESTION_TIME = 10
 export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 // 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
-const NO_COUNT: Direction[] = ['memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
+const NO_COUNT: Direction[] = ['wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
   try {
@@ -450,6 +452,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Sequence key={count} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'wordsearch') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <WordSearch words={targets && targets.length >= 6 ? targets : words} onAnswer={onAnswer} onClear={onGame} />
       </>
     )
   }
