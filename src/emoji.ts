@@ -35,5 +35,6 @@ export const EMOJI: Record<string, string> = {
   stadium: '🏟️', statue: '🗽', steak: '🥩', sunflower: '🌻', sunglasses: '🕶️', sunset: '🌇', sword: '🗡️', tool: '🔧',
   bored: '🥱', scared: '😱', worried: '😟', sleepy: '😪', upset: '😠', embarrassed: '😳', relaxed: '😌', jealous: '😒',
   hammer: '🔨', jeans: '👖', nut: '🥜', parrot: '🦜', pin: '📌',
+  luggage: '🧳',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }
