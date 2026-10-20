@@ -717,3 +717,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .emoji-choices .choice { font-size: 2rem; }
 .stage-progress { display: block; font-size: 0.85em; opacity: 0.8; margin-top: 4px; }
 .new-mark { margin-left: 4px; font-size: 0.65em; font-weight: bold; color: #fff; background: #ef4444; border-radius: 6px; padding: 1px 4px; vertical-align: middle; }
+.spell-diff { font-size: 1.3em; letter-spacing: 0.05em; } .spell-ng { color: #dc2626; text-decoration: underline wavy; font-weight: bold; }

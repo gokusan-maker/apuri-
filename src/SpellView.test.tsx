@@ -27,6 +27,7 @@ describe('Spell', () => {
     fireEvent.change(screen.getByLabelText('英単語を入力'), { target: { value: 'zzz' } })
     fireEvent.click(screen.getByText('こたえる'))
     expect(screen.getByText(`正解は「${w.en}」`)).toBeInTheDocument()
+    expect(screen.getByLabelText('あなたの答え').querySelectorAll('.spell-ng')).toHaveLength(3)
     fireEvent.click(screen.getByText('次へ'))
     expect(screen.getByText('0 / 1 問正解')).toBeInTheDocument()
   })

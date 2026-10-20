@@ -1,3 +1,4 @@
+import { markSpelling } from './spellDiff'
 import { useEffect, useState, type FormEvent } from 'react'
 import type { Source } from './monster'
 import { shuffle } from './quiz'
@@ -123,6 +124,15 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
       {result && (
         <>
           <p className="feedback">{result === 'ok' ? '正解！' : `正解は「${w.en}」`}</p>
+          {result === 'ng' && (
+            <p className="spell-diff" aria-label="あなたの答え">
+              {markSpelling(input, w.en).map((x, i) => (
+                <span key={i} className={x.ok ? '' : 'spell-ng'}>
+                  {x.ch}
+                </span>
+              ))}
+            </p>
+          )}
           <button className="flip" onClick={next}>
             次へ
           </button>
