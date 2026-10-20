@@ -194,7 +194,19 @@ function App() {
   const learnedAll = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const level = Math.max(...party.members.map((m) => levelInfo(m.xp).level))
   const streakCount = streak?.count ?? 0
-  const got = newlyEarned({ ...totals, streak: streakCount, learned: learnedAll, level, bestTime }, earned)
+  const got = newlyEarned(
+    {
+      ...totals,
+      streak: streakCount,
+      learned: learnedAll,
+      level,
+      bestTime,
+      bosses: Object.keys(boss).length,
+      coins: wallet.coins,
+      members: party.members.length,
+    },
+    earned,
+  )
   if (got.length > 0) {
     // 描画中に差分を反映する（React の「前回の描画からの変化に合わせて state を直す」書き方）
     setEarned({ ...earned, ...Object.fromEntries(got.map((b) => [b.id, today])) })

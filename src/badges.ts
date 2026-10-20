@@ -8,6 +8,9 @@ export type BadgeStats = {
   perfect: number // クイズ10問パーフェクトの回数
   bestTime: number // タイムアタック自己ベスト
   goals: number // 1日の目標を達成した日数
+  bosses?: number // たおしたボスの数
+  coins?: number // 今持っているコイン
+  members?: number // なかまの数
 }
 
 export type Badge = {
@@ -35,6 +38,11 @@ export const BADGES: Badge[] = [
   { id: 'time-15', icon: '⚡', name: 'スピードスター', desc: 'タイムアタックで15問正解', check: (s) => s.bestTime >= 15 },
   { id: 'goal-1', icon: '🎯', name: '目標達成', desc: '1日の目標を初めて達成する', check: (s) => s.goals >= 1 },
   { id: 'goal-10', icon: '🏅', name: 'コツコツ名人', desc: '1日の目標を10日達成する', check: (s) => s.goals >= 10 },
+  { id: 'boss-1', icon: '⚔️', name: 'ボスたいじ', desc: 'ボスを初めてたおす', check: (s) => (s.bosses ?? 0) >= 1 },
+  { id: 'boss-all', icon: '🏆', name: 'ボスマスター', desc: 'すべての単語帳のボスをたおす', check: (s) => (s.bosses ?? 0) >= 6 },
+  { id: 'coins-100', icon: '💰', name: 'こつこつ貯金', desc: 'コインを100枚ためる', check: (s) => (s.coins ?? 0) >= 100 },
+  { id: 'members-2', icon: '🤝', name: 'なかまが増えた', desc: '2匹目の相棒に出会う', check: (s) => (s.members ?? 1) >= 2 },
+  { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
 ]
 
 export type Earned = Record<string, string> // バッジid → もらった日

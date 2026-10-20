@@ -31,3 +31,9 @@ describe('バッジ', () => {
     expect(loadEarned()).toEqual({})
   })
 })
+
+it('ボス・コイン・なかまのバッジ', () => {
+  const ids = newlyEarned({ ...zero, bosses: 1, coins: 100, members: 2 }, {}).map((b) => b.id)
+  expect(ids).toEqual(expect.arrayContaining(['boss-1', 'coins-100', 'members-2']))
+  expect(ids).not.toContain('boss-all')
+})
