@@ -12,6 +12,7 @@ type Props = {
   coins?: number
   onShop?: () => void
   room?: string
+  title?: string // 称号
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -149,7 +150,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -228,6 +229,7 @@ export function Monster({ monster, onRename, coins, onShop, room, mood = 'normal
             )}
           </p>
         )}
+        {title && <p className="title-badge">🎖 {title}</p>}
         <div className="xp-bar" role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
           <div className="xp-fill" style={{ width: `${(into / need) * 100}%` }} />
         </div>

@@ -51,6 +51,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
+import { titleFor } from './titles'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
@@ -153,6 +154,7 @@ function App() {
     setStreak(r.streak)
     // ログインボーナス：その日はじめての学習で🪙5、7日連続ごとに🪙20
     if (streak?.last !== today) {
+      setTotals((t) => ({ ...t, studyDays: (t.studyDays ?? 0) + 1 }))
       const bonus = r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS
       setWallet((w) => ({ ...w, coins: w.coins + bonus }))
       setMissionToast([{ id: 'login', text: `今日もえらい！ 🪙${bonus}`, counter: 'answers', target: 0 }])
@@ -369,6 +371,7 @@ function App() {
           coins={wallet.coins}
           onShop={() => setShowShop(true)}
           room={wallet.room}
+          title={titleFor(totals.studyDays ?? 0)}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}

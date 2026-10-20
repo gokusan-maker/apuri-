@@ -498,4 +498,13 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(10)
   })
+
+  it('学習した日数で称号が出る', () => {
+    localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, goals: 0, studyDays: 2 }))
+    render(<App />)
+    expect(screen.getByText('🎖 見習い')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    expect(screen.getByText('🎖 かけだし')).toBeInTheDocument()
+  })
 })

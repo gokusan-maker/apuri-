@@ -646,3 +646,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .rival-me { color: var(--accent); }
 .rival-cpu { color: #7c3aed; }
 .weekend { margin: 0 0 4px; text-align: center; font-size: 0.85rem; font-weight: 700; color: #f97316; }
+.title-badge { margin: -4px 0 4px; font-size: 0.75rem; color: #b45309; font-weight: 700; }

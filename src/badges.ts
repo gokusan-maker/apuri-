@@ -58,7 +58,14 @@ export function newlyEarned(stats: BadgeStats, earned: Earned): Badge[] {
 const BADGES_KEY = 'eitan:badges'
 const TOTALS_KEY = 'eitan:totals'
 
-export type Totals = { answers: number; correct: number; perfect: number; goals: number; bestCombo?: number }
+export type Totals = {
+  answers: number
+  correct: number
+  perfect: number
+  goals: number
+  bestCombo?: number
+  studyDays?: number // 学習した日数（累計）
+}
 const ZERO: Totals = { answers: 0, correct: 0, perfect: 0, goals: 0 }
 
 function load<T>(key: string, fallback: T, ok: (v: unknown) => boolean): T {
