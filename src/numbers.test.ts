@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isRight, parseAnswer, pickNumber, timeQ, toEnglish, wordIdOf } from './numbers'
+import { dateQ, isRight, ordinal, parseAnswer, pickNumber, timeQ, toEnglish, wordIdOf } from './numbers'
 import { WORDS } from './words'
 
 describe('numbers', () => {
@@ -49,5 +49,23 @@ describe('時刻', () => {
     expect(isRight(q, '７：３０')).toBe(true)
     expect(isRight(q, '7:03')).toBe(false)
     expect(isRight({ kind: 'number', say: '', answer: '13', id: 'thirteen' }, '13')).toBe(true)
+  })
+})
+
+describe('日付', () => {
+  it('序数', () => {
+    expect([1, 2, 3, 4, 5, 8, 9, 12, 20, 21, 22, 23, 30, 31].map(ordinal)).toEqual(['first', 'second', 'third', 'fourth', 'fifth', 'eighth', 'ninth', 'twelfth', 'twentieth', 'twenty-first', 'twenty-second', 'twenty-third', 'thirtieth', 'thirty-first'])
+  })
+  it('読み方と答え・入力の判定', () => {
+    const seq = (xs: number[]) => () => xs.shift()!
+    const q = dateQ(seq([4 / 12, 2 / 31]))
+    expect(q).toMatchObject({ say: 'May third', answer: '5/3', id: 'may' })
+    expect(isRight(q, '5/3')).toBe(true)
+    expect(isRight(q, '05/03')).toBe(true)
+    expect(isRight(q, '5月3日')).toBe(true)
+    expect(isRight(q, '3/5')).toBe(false)
+  })
+  it('月の単語idは単語帳にある', () => {
+    for (let i = 0; i < 12; i++) expect(WORDS.some((w) => w.id === dateQ(() => i / 12).id)).toBe(true)
   })
 })

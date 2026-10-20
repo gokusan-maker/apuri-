@@ -33,7 +33,7 @@ export function parseAnswer(text: string): number | null {
 }
 
 // 問題：読み上げる英語・正解（入力の形）・記録用の単語id
-export type NumQ = { kind: 'number' | 'time'; say: string; answer: string; id: string }
+export type NumQ = { kind: 'number' | 'time' | 'date'; say: string; answer: string; id: string }
 
 export function numberQ(r: () => number = Math.random): NumQ {
   const n = pickNumber(r)
@@ -48,8 +48,28 @@ export function timeQ(r: () => number = Math.random): NumQ {
   return { kind: 'time', say, answer: `${h}:${String(m).padStart(2, '0')}`, id: wordIdOf(h) }
 }
 
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const DAYS_IN = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+const ORD: Record<string, string> = { one: 'first', two: 'second', three: 'third', five: 'fifth', eight: 'eighth', nine: 'ninth', twelve: 'twelfth' }
+
+// 序数（1st〜31st）：first, second, twenty-third, thirtieth など
+export function ordinal(n: number): string {
+  const words = toEnglish(n).split('-')
+  const last = words[words.length - 1]
+  words[words.length - 1] = ORD[last] ?? (last.endsWith('y') ? `${last.slice(0, -1)}ieth` : `${last}th`)
+  return words.join('-')
+}
+
+// 日付：May third → 5/3
+export function dateQ(r: () => number = Math.random): NumQ {
+  const m = Math.floor(r() * 12)
+  const d = 1 + Math.floor(r() * DAYS_IN[m])
+  return { kind: 'date', say: `${MONTHS[m]} ${ordinal(d)}`, answer: `${m + 1}/${d}`, id: MONTHS[m].toLowerCase() }
+}
+
 export function pickQ(r: () => number = Math.random): NumQ {
-  return r() < 0.3 ? timeQ(r) : numberQ(r)
+  const k = r()
+  return k < 0.25 ? timeQ(r) : k < 0.5 ? dateQ(r) : numberQ(r)
 }
 
 function half(text: string): string {
@@ -62,6 +82,10 @@ export function isRight(q: NumQ, text: string): boolean {
   if (q.kind === 'time') {
     const m = /^0?(\d{1,2}):(\d{2})$/.exec(t)
     return !!m && `${Number(m[1])}:${m[2]}` === q.answer
+  }
+  if (q.kind === 'date') {
+    const m = /^0?(\d{1,2})(?:\/|月)0?(\d{1,2})日?$/.exec(t)
+    return !!m && `${m[1]}/${m[2]}` === q.answer
   }
   return parseAnswer(t) === Number(q.answer)
 }
