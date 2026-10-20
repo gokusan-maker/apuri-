@@ -367,7 +367,7 @@
 - [x] 相棒の新しい進化（Lv70「シンワ」のすがた3種・光の輪）を追加
 - [x] クイズに「be動詞（am・is・are）」（主語に合うのはどれ？）
 - [x] クイズに「a と an」（an apple・a banana など）
-- [ ] クイズに「時の前置詞（in・on・at）」（on Monday・at seven・in April）
+- [x] クイズに「時の前置詞（in・on・at）」（on Monday・at seven・in April）
 - [ ] クイズに「疑問詞」（What・Where・When・Who・Why・How など）
 
 ## アイデア（未整理）

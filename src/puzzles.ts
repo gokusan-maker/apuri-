@@ -322,3 +322,37 @@ export function articleQ(rng: Rng = Math.random): PuzzleQ {
           : `${noun} は子音の音で始まるので a`
   return { prompt: `___ ${noun}`, choices, answer: choices.indexOf(art), why, wordId: idOf(noun) ?? '' }
 }
+
+// 時の前置詞：in（月・年・季節・朝/午後/夕方）、on（曜日・日付）、at（時刻・夜）
+const TIME_PREPS: [string, 'in' | 'on' | 'at', string][] = [
+  ['Monday', 'on', '曜日には on'], ['Sunday morning', 'on', '特定の日の朝も on'], ['July 4th', 'on', '日付には on'], ['my birthday', 'on', '特定の日には on'],
+  ['seven o\'clock', 'at', '時刻には at'], ['noon', 'at', '正午（時刻）には at'], ['night', 'at', 'at night（夜に）は決まった言い方'],
+  ['April', 'in', '月には in'], ['2026', 'in', '年には in'], ['summer', 'in', '季節には in'], ['the morning', 'in', 'in the morning（午前中に）'], ['the evening', 'in', 'in the evening（夕方に）'],
+]
+
+export function timePrepQ(rng: Rng = Math.random): PuzzleQ {
+  const [t, p, why] = TIME_PREPS[Math.floor(rng() * TIME_PREPS.length)]
+  const choices = ['in', 'on', 'at']
+  return { prompt: `I go to the park ___ ${t}.`, choices, answer: choices.indexOf(p), why, wordId: '' }
+}
+
+// 疑問詞
+const WH_QS: [string, string, string][] = [
+  ['___ is your name? — My name is Aki.', 'What', '名前（何）をたずねるので What'],
+  ['___ do you live? — I live in Kobe.', 'Where', '場所をたずねるので Where'],
+  ['___ is your birthday? — It\'s May 5th.', 'When', '時（いつ）をたずねるので When'],
+  ['___ is that boy? — He is my brother.', 'Who', '人（だれ）をたずねるので Who'],
+  ['___ are you sad? — Because I lost my key.', 'Why', 'Because で答えているので理由をたずねる Why'],
+  ['___ old are you? — I\'m thirteen.', 'How', '年れいは How old'],
+  ['___ bag is this? — It\'s mine.', 'Whose', '持ち主（だれの）をたずねるので Whose'],
+  ['___ do you like, tea or coffee? — Tea.', 'Which', '2つのうち「どちら」なので Which'],
+  ['___ many cats do you have? — Two.', 'How', '数は How many'],
+  ['___ time is it? — It\'s ten.', 'What', '時刻は What time'],
+]
+
+export function whQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = WH_QS[Math.floor(rng() * WH_QS.length)]
+  const pool = ['What', 'Where', 'When', 'Who', 'Why', 'How', 'Whose', 'Which'].filter((x) => x !== ans)
+  const choices = shuffle([ans, ...shuffle(pool, rng).slice(0, 3)], rng)
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}

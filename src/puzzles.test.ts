@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, articleQ, beQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, articleQ, beQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -144,5 +144,18 @@ describe('パズル', () => {
     }
     const seq = (xs: number[]) => () => xs.shift() ?? 0
     expect(articleQ(seq([0])).choices[articleQ(seq([0])).answer]).toBe('an')
+  })
+
+  it('時の前置詞・疑問詞：選択肢がそろい、正解がある', () => {
+    for (let i = 0; i < 50; i++) {
+      const t = timePrepQ()
+      expect(t.choices).toEqual(['in', 'on', 'at'])
+      const w = whQ()
+      expect(new Set(w.choices).size).toBe(4)
+      expect(w.answer).toBeGreaterThanOrEqual(0)
+    }
+    const seq = (xs: number[]) => () => xs.shift() ?? 0
+    const q = timePrepQ(seq([0]))
+    expect(q.choices[q.answer]).toBe('on')
   })
 })

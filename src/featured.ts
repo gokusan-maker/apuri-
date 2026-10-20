@@ -3,7 +3,7 @@ export const FEATURED_XP = 10
 const KEY = 'eitan:featured'
 
 // 音声認識が要らない種類から、日付で1つ選ぶ（同じ日は同じ）
-export const FEATURED_POOL = ['en-ja', 'ja-en', 'listen', 'spell', 'blank', 'order', 'define', 'emoji', 'emoji-rev', 'emoji-ear', 'numbers', 'irregular', 'tiles', 'sentence', 'dictation', 'abc', 'opposite', 'odd', 'count', 'clock', 'color', 'alphabet', 'calc', 'plural', 'past-ed', 'compare', 'memory', 'bingo', 'third', 'ing', 'wordsearch', 'be', 'article']
+export const FEATURED_POOL = ['en-ja', 'ja-en', 'listen', 'spell', 'blank', 'order', 'define', 'emoji', 'emoji-rev', 'emoji-ear', 'numbers', 'irregular', 'tiles', 'sentence', 'dictation', 'abc', 'opposite', 'odd', 'count', 'clock', 'color', 'alphabet', 'calc', 'plural', 'past-ed', 'compare', 'memory', 'bingo', 'third', 'ing', 'wordsearch', 'be', 'article', 'timeprep', 'wh']
 
 export function featuredFor(day: string): string {
   let h = 7
