@@ -29,3 +29,23 @@ it('逆：英語を見て絵文字を選ぶ', () => {
   fireEvent.click(screen.getByRole('button', { name: EMOJI[w.id] }))
   expect(screen.getByText(/正解！/)).toBeInTheDocument()
 })
+
+it('聞いて絵文字を選ぶ', () => {
+  const spoken: string[] = []
+  class FakeUtterance {
+    text: string
+    lang = ''
+    constructor(t: string) {
+      this.text = t
+    }
+  }
+  Object.assign(window, {
+    SpeechSynthesisUtterance: FakeUtterance,
+    speechSynthesis: { cancel() {}, speak: (u: FakeUtterance) => spoken.push(u.text) },
+  })
+  render(<Quiz words={WORDS} count={1} direction="emoji-ear" />)
+  expect(screen.getByText('？')).toBeInTheDocument()
+  const w = WORDS.find((x) => x.en === spoken[spoken.length - 1] && EMOJI[x.id])!
+  fireEvent.click(screen.getByRole('button', { name: EMOJI[w.id] }))
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+})

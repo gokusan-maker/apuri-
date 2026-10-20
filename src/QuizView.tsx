@@ -47,15 +47,15 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
 const label = (d: Direction) =>
-  d === 'emoji-rev' ? (w: Word) => EMOJI[w.id] ?? w.ja : d === 'ja-en' || d === 'blank' || d === 'define' || d === 'emoji' ? (w: Word) => w.en : d === 'sentence' || d === 'sentence-read' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
+  d === 'emoji-rev' || d === 'emoji-ear' ? (w: Word) => EMOJI[w.id] ?? w.ja : d === 'ja-en' || d === 'blank' || d === 'define' || d === 'emoji' ? (w: Word) => w.en : d === 'sentence' || d === 'sentence-read' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
 // 穴埋めにできる単語が1つも無いとき（例文なしのマイ単語だけなど）は通常の単語から出す
 const pool = (d: Direction, ws: Word[], all: Word[]) => {
-  const can = d === 'define' ? (w: Word) => !!DEFS[w.id] : d === 'emoji' || d === 'emoji-rev' ? (w: Word) => !!EMOJI[w.id] : d === 'blank' ? canBlank : d === 'sentence' || d === 'sentence-read' ? (w: Word) => !!w.example && !!w.exampleJa : null
+  const can = d === 'define' ? (w: Word) => !!DEFS[w.id] : d === 'emoji' || d === 'emoji-rev' || d === 'emoji-ear' ? (w: Word) => !!EMOJI[w.id] : d === 'blank' ? canBlank : d === 'sentence' || d === 'sentence-read' ? (w: Word) => !!w.example && !!w.exampleJa : null
   if (!can) return ws
   const ok = ws.filter(can)
   if (ok.length > 0) return ok
@@ -69,7 +69,7 @@ const MIX: Direction[] = ['en-ja', 'ja-en', 'listen']
 
 function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[] {
   // 絵文字の逆：選択肢も絵文字のある単語から
-  if (d === 'emoji-rev') return makeQuiz(WORDS.filter((w) => EMOJI[w.id]), label(d), count, Math.random, pool(d, targets, words))
+  if (d === 'emoji-rev' || d === 'emoji-ear') return makeQuiz(WORDS.filter((w) => EMOJI[w.id]), label(d), count, Math.random, pool(d, targets, words))
   if (d !== 'mix') return makeQuiz(words, label(d), count, Math.random, pool(d, targets, words))
   return shuffle(targets)
     .slice(0, count)
@@ -92,6 +92,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
   { id: 'sequence', label: '📅 順番クイズ', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
+  { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
   { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
   { id: 'numbers', label: '🔢 数・時刻・日付の聞き取り', group: '聞く・話す' },
   { id: 'order-ear', label: '🎧 聞き並べ', group: '聞く・話す' },
@@ -172,7 +173,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed', 'define', 'sentence-read', 'emoji', 'emoji-rev'].includes(qd)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed', 'define', 'sentence-read', 'emoji', 'emoji-rev', 'emoji-ear'].includes(qd)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -188,7 +189,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
 
   // リスニングは問題が変わるたびに自動で読み上げる
   useEffect(() => {
-    if (qd === 'listen' && q) speak(q.word.en)
+    if ((qd === 'listen' || qd === 'emoji-ear') && q) speak(q.word.en)
     if (qd === 'sentence' && q) speak(q.word.example)
   }, [qd, q])
 
@@ -222,13 +223,13 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       setLastXp(xp)
       playCorrect()
       onCombo?.(c)
-      onAnswer?.(true, xp, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
+      onAnswer?.(true, xp, q.word.id, qd === 'listen' || qd === 'sentence' || qd === 'emoji-ear' ? 'ear' : 'quiz')
     } else {
       setCombo(0)
       setLastXp(0)
       setMissed([...missed, q.word])
       playWrong()
-      onAnswer?.(false, 0, q.word.id, qd === 'listen' || qd === 'sentence' ? 'ear' : 'quiz')
+      onAnswer?.(false, 0, q.word.id, qd === 'listen' || qd === 'sentence' || qd === 'emoji-ear' ? 'ear' : 'quiz')
     }
   }
 
@@ -541,7 +542,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           </button>
           <p className="example listen-sentence">{picked !== null ? q.word.example : '例文を聞いて、意味を選ぼう'}</p>
         </>
-      ) : qd === 'listen' ? (
+      ) : qd === 'listen' || qd === 'emoji-ear' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
             🔊
@@ -554,7 +555,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       ) : (
         <p className={qd === 'ja-en' ? 'en ja-prompt' : qd === 'emoji' ? 'en emoji-prompt' : qd === 'define' || qd === 'sentence-read' ? 'define-prompt' : 'en'}>{prompt(q.word, qd)}</p>
       )}
-      <div className={`choices${qd === 'emoji-rev' ? ' emoji-choices' : ''}`}>
+      <div className={`choices${qd === 'emoji-rev' || qd === 'emoji-ear' ? ' emoji-choices' : ''}`}>
         {q.choices.map((c, i) => {
           let cls = 'choice'
           if (picked !== null && i === q.answer) cls += ' correct'

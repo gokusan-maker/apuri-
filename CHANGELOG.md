@@ -213,3 +213,4 @@
 - 2026-10-20: 曜日・月の単語帳に spring・autumn・winter・week・month・year を追加。順番クイズに季節の並びも
 - 2026-10-20: 色・形の単語帳に shape・size・round・rectangle・oval を追加
 - 2026-10-20: 熟語を20追加（take a picture・get along with・instead of など、計100）
+- 2026-10-20: クイズに「聞いて絵文字」を追加（英語を聞いて🍎などを選ぶ）
