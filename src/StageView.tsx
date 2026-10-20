@@ -60,7 +60,18 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         </div>
         {result !== null && (
           <p className={`stage-result${result > 0 ? ' clear' : ''}`}>
-            {result > 0 ? `クリア！ ${starText(result)}` : '6問以上正解でクリア。もう一度！'}
+            {result > 0 ? (
+              <span aria-label={`クリア！ ${starText(result)}`}>
+                クリア！{' '}
+                {[0, 1, 2].map((i) => (
+                  <span key={i} className={`star${i < result ? ' lit' : ''}`} style={{ animationDelay: `${i * 0.3}s` }}>
+                    {i < result ? '★' : '☆'}
+                  </span>
+                ))}
+              </span>
+            ) : (
+              '6問以上正解でクリア。もう一度！'
+            )}
             {firstThree && <span className="stage-bonus">はじめての★3！ 🪙{STAR3_COINS}</span>}
           </p>
         )}

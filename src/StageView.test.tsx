@@ -18,10 +18,10 @@ describe('ステージ画面', () => {
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(onClear).toHaveBeenCalledWith('中1-1', 3)
-    expect(screen.getByText(/クリア！ ★★★/)).toBeInTheDocument()
+    expect(screen.getByLabelText('クリア！ ★★★')).toBeInTheDocument()
     expect(screen.getByText('はじめての★3！ 🪙20')).toBeInTheDocument()
     fireEvent.click(screen.getByText('もう1回'))
-    expect(screen.queryByText(/クリア！ ★★★/)).not.toBeInTheDocument()
+    expect(screen.queryByLabelText('クリア！ ★★★')).not.toBeInTheDocument()
     expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
   })
 })
