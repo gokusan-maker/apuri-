@@ -460,6 +460,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <p className="result-message">
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
+        {missed.length > 0 && (
+          <ul className="missed-list" aria-label="まちがえた単語">
+            {missed.map((w, i) => (
+              <li key={i}>
+                <strong>{w.en}</strong> {w.ja}
+              </li>
+            ))}
+          </ul>
+        )}
         {missed.length > 0 && !onRestart && (
           <button className="list-link" onClick={() => restart(direction, missed)}>
             まちがえた {missed.length}問だけもう一度
