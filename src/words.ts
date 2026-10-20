@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語']
 
 export type Word = {
   id: string
@@ -317,6 +317,47 @@ export const WORDS: Word[] = [
   { id: 'tradition', en: 'tradition', ja: '伝統', example: 'Making rice cakes is a New Year tradition.', exampleJa: 'もちをつくのは正月の伝統だ。', level: '高校基礎' },
   { id: 'various', en: 'various', ja: 'さまざまな', example: 'The shop sells various kinds of tea.', exampleJa: 'その店はさまざまな種類のお茶を売っている。', level: '高校基礎' },
   { id: 'ancient', en: 'ancient', ja: '古代の・大昔の', example: 'We visited the ruins of an ancient city.', exampleJa: '古代都市の遺跡を訪れた。', level: '高校基礎' },
+  // 熟語
+  { id: 'look-for', en: 'look for', ja: '〜をさがす', example: "I'm looking for my glasses.", exampleJa: 'メガネをさがしているところです。', level: '熟語' },
+  { id: 'look-forward-to', en: 'look forward to', ja: '〜を楽しみに待つ', example: "I'm looking forward to the trip.", exampleJa: '旅行を楽しみにしている。', level: '熟語' },
+  { id: 'take-care-of', en: 'take care of', ja: '〜の世話をする', example: 'I take care of my little sister on Sundays.', exampleJa: '日曜日は妹の世話をしている。', level: '熟語' },
+  { id: 'get-up', en: 'get up', ja: '起きる', example: 'I get up at six every day.', exampleJa: '私は毎日6時に起きる。', level: '熟語' },
+  { id: 'go-to-bed', en: 'go to bed', ja: '寝る', example: 'I usually go to bed at ten.', exampleJa: 'たいてい10時に寝る。', level: '熟語' },
+  { id: 'a-lot-of', en: 'a lot of', ja: 'たくさんの', example: 'There are a lot of books in his room.', exampleJa: '彼の部屋にはたくさんの本がある。', level: '熟語' },
+  { id: 'be-good-at', en: 'be good at', ja: '〜が得意だ', example: 'My sister is good at drawing.', exampleJa: '姉は絵をかくのが得意だ。', level: '熟語' },
+  { id: 'be-interested-in', en: 'be interested in', ja: '〜に興味がある', example: 'Are you interested in space?', exampleJa: '宇宙に興味がありますか？', level: '熟語' },
+  { id: 'be-afraid-of', en: 'be afraid of', ja: '〜をこわがる', example: 'My little brother is afraid of the dark.', exampleJa: '弟は暗いところをこわがる。', level: '熟語' },
+  { id: 'be-proud-of', en: 'be proud of', ja: '〜を誇りに思う', example: 'We are proud of our team.', exampleJa: '私たちは自分たちのチームを誇りに思う。', level: '熟語' },
+  { id: 'be-famous-for', en: 'be famous for', ja: '〜で有名だ', example: 'This town is famous for its hot springs.', exampleJa: 'この町は温泉で有名だ。', level: '熟語' },
+  { id: 'because-of', en: 'because of', ja: '〜のために（原因）', example: 'The game was stopped because of the rain.', exampleJa: '雨のために試合が中止された。', level: '熟語' },
+  { id: 'each-other', en: 'each other', ja: 'おたがい', example: 'We helped each other.', exampleJa: '私たちはおたがいに助け合った。', level: '熟語' },
+  { id: 'for-example', en: 'for example', ja: 'たとえば', example: 'I like fruit, for example, grapes and melons.', exampleJa: '果物が好きで、たとえばブドウやメロンだ。', level: '熟語' },
+  { id: 'in-front-of', en: 'in front of', ja: '〜の前に', example: "Let's meet in front of the station.", exampleJa: '駅の前で会おう。', level: '熟語' },
+  { id: 'next-to', en: 'next to', ja: '〜のとなりに', example: 'The bank is next to the post office.', exampleJa: '銀行は郵便局のとなりにある。', level: '熟語' },
+  { id: 'on-time', en: 'on time', ja: '時間どおりに', example: 'The bus came on time.', exampleJa: 'バスは時間どおりに来た。', level: '熟語' },
+  { id: 'at-once', en: 'at once', ja: 'すぐに', example: 'Come here at once!', exampleJa: 'すぐにここに来なさい！', level: '熟語' },
+  { id: 'at-last', en: 'at last', ja: 'ついに', example: 'At last, we reached the top.', exampleJa: 'ついに頂上に着いた。', level: '熟語' },
+  { id: 'all-over-the-world', en: 'all over the world', ja: '世界中で', example: 'This song is loved all over the world.', exampleJa: 'この歌は世界中で愛されている。', level: '熟語' },
+  { id: 'come-back', en: 'come back', ja: '戻る', example: 'Please come back by five.', exampleJa: '5時までに戻ってきてね。', level: '熟語' },
+  { id: 'give-up', en: 'give up', ja: 'あきらめる', example: "Don't give up so easily.", exampleJa: 'そんなに簡単にあきらめないで。', level: '熟語' },
+  { id: 'grow-up', en: 'grow up', ja: '成長する・大人になる', example: 'I want to be a pilot when I grow up.', exampleJa: '大人になったらパイロットになりたい。', level: '熟語' },
+  { id: 'hear-from', en: 'hear from', ja: '〜から便りがある', example: 'I was happy to hear from my old friend.', exampleJa: '昔の友だちから連絡があってうれしかった。', level: '熟語' },
+  { id: 'help-with', en: 'help with', ja: '（人の）〜を手伝う', example: 'Can you help me with my homework?', exampleJa: '宿題を手伝ってくれる？', level: '熟語' },
+  { id: 'listen-to', en: 'listen to', ja: '〜を聞く', example: 'I like to listen to the radio.', exampleJa: 'ラジオを聞くのが好きだ。', level: '熟語' },
+  { id: 'think-of', en: 'think of', ja: '〜のことを考える・思いつく', example: "I can't think of a good name.", exampleJa: 'いい名前が思いつかない。', level: '熟語' },
+  { id: 'wait-for', en: 'wait for', ja: '〜を待つ', example: "Let's wait for the rain to stop.", exampleJa: '雨がやむのを待とう。', level: '熟語' },
+  { id: 'get-to', en: 'get to', ja: '〜に着く', example: 'How can I get to the museum?', exampleJa: '博物館へはどうやって行けますか？', level: '熟語' },
+  { id: 'be-able-to', en: 'be able to', ja: '〜できる', example: 'She will be able to swim soon.', exampleJa: '彼女はもうすぐ泳げるようになるだろう。', level: '熟語' },
+  { id: 'have-to', en: 'have to', ja: '〜しなければならない', example: 'I have to clean my room today.', exampleJa: '今日は部屋を掃除しなければならない。', level: '熟語' },
+  { id: 'want-to', en: 'want to', ja: '〜したい', example: 'I want to eat ramen for lunch.', exampleJa: '昼ごはんにラーメンが食べたい。', level: '熟語' },
+  { id: 'try-to', en: 'try to', ja: '〜しようとする', example: 'I try to read a book every week.', exampleJa: '毎週1冊本を読むようにしている。', level: '熟語' },
+  { id: 'such-as', en: 'such as', ja: '〜のような', example: 'I like sports such as tennis and soccer.', exampleJa: 'テニスやサッカーのようなスポーツが好きだ。', level: '熟語' },
+  { id: 'as-soon-as', en: 'as soon as', ja: '〜するとすぐに', example: 'Call me as soon as you get home.', exampleJa: '家に着いたらすぐに電話してね。', level: '熟語' },
+  { id: 'not-only-but-also', en: 'not only but also', ja: '〜だけでなく…も', example: 'He can speak not only English but also French.', exampleJa: '彼は英語だけでなくフランス語も話せる。', level: '熟語' },
+  { id: 'one-day', en: 'one day', ja: 'ある日', example: 'One day, a strange letter arrived.', exampleJa: 'ある日、ふしぎな手紙が届いた。', level: '熟語' },
+  { id: 'these-days', en: 'these days', ja: '最近', example: 'These days, I often play chess.', exampleJa: '最近、よくチェスをする。', level: '熟語' },
+  { id: 'take-part-in', en: 'take part in', ja: '〜に参加する', example: 'I want to take part in the speech contest.', exampleJa: 'スピーチコンテストに参加したい。', level: '熟語' },
+  { id: 'turn-on', en: 'turn on', ja: '（電気などを）つける', example: 'Please turn on the light.', exampleJa: '電気をつけてください。', level: '熟語' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。

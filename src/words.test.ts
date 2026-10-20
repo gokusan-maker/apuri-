@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
-  it('中学240語＋高校基礎60語あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(300)
+  it('中学240語＋高校基礎60語＋熟語40あり、id が重複しない', () => {
+    expect(WORDS).toHaveLength(340)
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
     expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(60)
   })
@@ -12,7 +12,8 @@ describe('WORDS', () => {
     for (const w of WORDS) {
       expect(w.ja, w.id).not.toBe('')
       expect(w.exampleJa, w.id).not.toBe('')
-      expect(w.example.toLowerCase(), w.id).toContain(w.en.slice(0, 3))
+      const head = w.en.startsWith('be ') ? w.en.slice(3) : w.en // be 動詞の熟語は変化するので後ろで見る
+      expect(w.example.toLowerCase(), w.id).toContain(head.slice(0, 3))
     }
   })
 
