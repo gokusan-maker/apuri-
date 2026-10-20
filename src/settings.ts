@@ -46,6 +46,7 @@ export type Settings = {
   largeText: boolean // 文字を大きくする
   color: ThemeColor // テーマカラー
   hideExampleJa: boolean // カード裏の例文の訳を隠す（タップで表示）
+  randomNew: boolean // 新しい単語をランダムな順に出す
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -70,6 +71,7 @@ export const DEFAULT_SETTINGS: Settings = {
   largeText: false,
   color: 'blue',
   hideExampleJa: false,
+  randomNew: false,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -89,6 +91,7 @@ export function loadSettings(): Settings {
       largeText: v.largeText === true,
       color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
       hideExampleJa: v.hideExampleJa === true,
+      randomNew: v.randomNew === true,
     }
   } catch {
     return { ...DEFAULT_SETTINGS }

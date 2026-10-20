@@ -190,6 +190,7 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
     setQuestions(build(words, d, only ? only.length : count, only ?? targets ?? words))
     setMissed([])
     setLeft(QUESTION_TIME)
+    setRemoved([])
     setIndex(0)
     setPicked(null)
     setScore(0)

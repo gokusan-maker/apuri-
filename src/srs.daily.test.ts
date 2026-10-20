@@ -43,3 +43,11 @@ it('今日「まだ」にした単語は後回しになり、続けて同じ単�
   const progress: ProgressMap = { a: { box: 0, due: '2026-10-20' }, c: { box: 2, due: '2026-10-20' } }
   expect(buildQueue(words, progress, '2026-10-20', 0).map((w) => w.id)).toEqual(['c', 'b', 'a'])
 })
+
+it('ランダム順：同じ日は同じ順、日がかわると順がかわる', () => {
+  const words = Array.from({ length: 30 }, (_, i) => ({ id: `w${i}` }))
+  const a = buildQueue(words, {}, '2026-10-20', 0, 10, true).map((w) => w.id)
+  expect(buildQueue(words, {}, '2026-10-20', 0, 10, true).map((w) => w.id)).toEqual(a)
+  expect(a).not.toEqual(words.slice(0, 10).map((w) => w.id))
+  expect(buildQueue(words, {}, '2026-10-21', 0, 10, true).map((w) => w.id)).not.toEqual(a)
+})

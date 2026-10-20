@@ -129,6 +129,7 @@ describe('App', () => {
       largeText: false,
       color: 'blue',
       hideExampleJa: false,
+      randomNew: false,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()

@@ -205,7 +205,7 @@ function App() {
   const focusList = (k: Focus) => (k === 'weak' ? weak : favWords)
   const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り' }
 
-  const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday), [words, progress, today, newToday, extraToday])
+  const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday, settings.randomNew), [words, progress, today, newToday, extraToday, settings.randomNew])
   // その日はじめて開いたときだけ「今日の復習」を知らせる
   const dueReviews = words.filter((w) => progress[w.id] && progress[w.id].due <= today).length
   const [greet, setGreet] = useState(() => {

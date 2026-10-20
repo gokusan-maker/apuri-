@@ -73,9 +73,12 @@ export function buildQueue<T extends { id: string }>(
   today: string,
   newToday: number,
   limit = DAILY_NEW_LIMIT,
+  random = false, // 新しい単語をランダムな順に（同じ日は同じ順）
 ): T[] {
   const reviews = words.filter((w) => progress[w.id] && isDue(progress[w.id], today))
-  const fresh = words.filter((w) => !progress[w.id]).slice(0, Math.max(0, limit - newToday))
+  const unseen = words.filter((w) => !progress[w.id])
+  if (random) unseen.sort((a, b) => hash(today + a.id) - hash(today + b.id))
+  const fresh = unseen.slice(0, Math.max(0, limit - newToday))
   // 今日「まだ」にした単語（箱0）は最後に回し、同じ単語が続けて出ないようにする
   const relearn = (w: T) => progress[w.id]?.box === 0 && progress[w.id]?.due === today
   return [...reviews.filter((w) => !relearn(w)), ...fresh, ...reviews.filter(relearn)]
@@ -113,4 +116,10 @@ export function upcoming(progress: ProgressMap, today: string, n = 7, ids?: Set<
     }
   }
   return out
+}
+
+function hash(s: string): number {
+  let h = 2166136261
+  for (let i = 0; i < s.length; i++) h = Math.imul(h ^ s.charCodeAt(i), 16777619) >>> 0
+  return h
 }
