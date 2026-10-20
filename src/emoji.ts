@@ -10,5 +10,6 @@ export const EMOJI: Record<string, string> = {
   soccer: '⚽', baseball: '⚾', basketball: '🏀', tennis: '🎾', volleyball: '🏐', swimming: '🏊', skiing: '⛷️', 'table-tennis': '🏓', badminton: '🏸', rugby: '🏉',
   bus: '🚌', train: '🚆', bike: '🚲', plane: '✈️', ship: '🚢', taxi: '🚕', subway: '🚇', truck: '🚚', boat: '⛵', helicopter: '🚁',
   sofa: '🛋️', mirror: '🪞', window: '🪟', chair: '🪑',
+  christmas: '🎄', halloween: '🎃', party: '🥳', fireworks: '🎆', wedding: '💒', concert: '🎤', graduation: '🎓',
   doctor: '🧑‍⚕️', pilot: '🧑‍✈️', astronaut: '🧑‍🚀', chef: '🧑‍🍳', firefighter: '🧑‍🚒',
 }

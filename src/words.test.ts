@@ -25,4 +25,8 @@ describe('WORDS', () => {
     expect(wordsOf([...LEVELS])).toHaveLength(WORDS.length)
     expect(wordsOf(['中1']).every((w) => levelOf(w) === '中1')).toBe(true)
   })
+
+  it('意味（ja）が重ならない（4択で同じ選択肢が出ないように）', () => {
+    expect(new Set(WORDS.map((w) => w.ja)).size).toBe(WORDS.length)
+  })
 })
