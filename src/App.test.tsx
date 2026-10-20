@@ -620,6 +620,13 @@ describe('App', () => {
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
   })
 
+  it('設定画面で新しくなったことを見られる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /設定/ }))
+    expect(screen.getByText('🆕 新しくなったこと')).toBeInTheDocument()
+    expect(screen.getByText(/ラッキー単語（今日のことば/)).toBeInTheDocument()
+  })
+
   it('お知らせが重なると順番に出る', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

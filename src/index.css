@@ -699,3 +699,6 @@ button:focus:not(:focus-visible) { outline: none; }
 @media (prefers-reduced-motion: reduce) { .star.lit { animation: none; } }
 .boss { position: relative; overflow: hidden; }
 .lucky { margin: 6px 0 0; font-size: 0.8rem; color: #15803d; font-weight: 700; }
+
+.whats-new ul { margin: 8px 0 0; padding-left: 18px; font-size: 0.9em; line-height: 1.5; }
+.whats-new summary { cursor: pointer; font-weight: bold; }
