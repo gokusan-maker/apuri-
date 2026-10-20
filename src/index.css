@@ -713,3 +713,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .stage-trophy { margin-left: 6px; }
 .confusing-tip { margin: 8px 0; font-size: 0.85em; text-align: left; } .confusing-tip summary { cursor: pointer; }
 .verb-forms { font-size: 0.9em; opacity: 0.8; margin: 4px 0; }
+.emoji-prompt { font-size: 4rem; line-height: 1.2; }
