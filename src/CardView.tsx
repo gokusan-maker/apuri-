@@ -5,6 +5,7 @@ import { useKeys } from './useKeys'
 import { Note } from './NoteView'
 import { confusingFor } from './confusing'
 import { verbOf } from './irregular'
+import { EMOJI } from './emoji'
 import type { Word } from './words'
 
 type Props = {
@@ -152,7 +153,14 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
               </button>
             </p>
           ) : (
-            <p className="ja">{card.ja}</p>
+            <p className="ja">
+              {EMOJI[card.id] && (
+                <span className="card-emoji" aria-hidden="true">
+                  {EMOJI[card.id]}{' '}
+                </span>
+              )}
+              {card.ja}
+            </p>
           )}
           {verbOf(card.en) && (
             <p className="verb-forms">

@@ -133,3 +133,10 @@ it('不規則動詞のカードの裏に、過去形・過去分詞を出す', (
   fireEvent.click(screen.getByText('意味を見る'))
   expect(screen.getByText('begin - began - begun')).toBeInTheDocument()
 })
+
+it('カードの裏に、その単語の絵文字を出す', () => {
+  const w = WORDS.find((x) => x.id === 'apple')!
+  render(<Card card={w} onAnswer={() => {}} />)
+  fireEvent.click(screen.getByText('意味を見る'))
+  expect(document.querySelector('.card-emoji')?.textContent).toContain('🍎')
+})
