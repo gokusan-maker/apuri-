@@ -16,3 +16,7 @@ describe('今日のおすすめクイズ', () => {
     expect(featuredClaimed('2026-10-21')).toBe(false)
   })
 })
+
+it('おすすめの候補に新しいパズルも入る', () => {
+  for (const id of ['abc', 'opposite', 'odd', 'emoji-rev']) expect(FEATURED_POOL).toContain(id)
+})
