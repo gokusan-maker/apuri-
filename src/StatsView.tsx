@@ -17,12 +17,13 @@ type Props = {
   onReviewWeakCards: () => void
   schedule: number[] // 今日から7日間の復習数
   favorites?: Word[]
+  calendar?: ReactNode
   onReviewFav?: () => void
   onReviewFavCards?: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -47,6 +48,7 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
         <div className="xp-fill" style={{ width: `${(learned / total) * 100}%` }} />
       </div>
       <WeekChart days={week} goal={goal} />
+      {calendar}
       <h2>復習の予定</h2>
       <p className="stats-note">
         今日 {schedule[0]}語・<strong>明日 {schedule[1]}語</strong>

@@ -384,4 +384,14 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText(/今日の残り 4 語/)).toBeInTheDocument()
   })
+
+  it('記録画面のカレンダーに今日の学習が印される', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('まだ'))
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    const d = Number(dayKey().slice(8))
+    expect(screen.getByLabelText(`${d}日 1問`)).toHaveClass('studied')
+    expect(screen.getByText('今月 1日 学習しました')).toBeInTheDocument()
+  })
 })

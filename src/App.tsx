@@ -6,6 +6,7 @@ import { Card } from './CardView'
 import { WordList } from './WordListView'
 import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
+import { Calendar } from './CalendarView'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
 import { usePersistent } from './usePersistent'
@@ -376,6 +377,7 @@ function App() {
             mistakes={mistakes}
             onReviewWeak={() => startQuiz('weak')}
             favorites={favWords}
+            calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
             onReviewFav={() => startQuiz('fav')}
             onReviewFavCards={() => startCards('fav')}
             schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
