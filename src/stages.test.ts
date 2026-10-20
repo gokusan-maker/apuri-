@@ -7,7 +7,7 @@ describe('ステージ', () => {
 
   it('レベルごとに10語ずつ分かれ、全単語がどこかのステージに入る', () => {
     const s = stagesOf('高校基礎')
-    expect(s).toHaveLength(16)
+    expect(s).toHaveLength(18)
     expect(s[0].words).toHaveLength(10)
     expect(s.map((x) => x.id).slice(0, 3)).toEqual(['高校基礎-1', '高校基礎-2', '高校基礎-3'])
     expect(ALL_STAGES.flatMap((x) => x.words)).toHaveLength(WORDS.length)

@@ -345,3 +345,4 @@
 - 2026-10-20: 集めたおみやげを相棒の部屋に小さくかざるようにした
 - 2026-10-20: テーマ別に体の単語を12語追加（elbow・shoulder・wrist など。仲間はずれにも）
 - 2026-10-20: 中3に基本語を20語追加（entrance・exit・excellent・furniture など）
+- 2026-10-20: 高校基礎の単語を20語追加（crucial・diverse・efficient など、計180語）
