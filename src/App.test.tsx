@@ -21,6 +21,7 @@ describe('App', () => {
   beforeEach(() => {
     localStorage.clear()
     localStorage.setItem('eitan:onboarded', '1') // 初回の案内は別のテストで確認
+    localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスは専用のテストだけで確かめる
   })
 
   it('カードをめくって「覚えた」で次の単語に進む', () => {
@@ -765,6 +766,7 @@ describe('App', () => {
   })
 
   it('ラッキー単語に正解すると1日1回+20XP', () => {
+    localStorage.removeItem('eitan:lucky')
     const lucky = pickWordOfDay(WORDS, dayKey())!
     localStorage.setItem('eitan:favorites', JSON.stringify([lucky.id]))
     render(<App />)
