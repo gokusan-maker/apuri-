@@ -743,3 +743,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .monster-zzz { position: absolute; left: 70px; top: 4px; font-size: 1.2rem; animation: zzz 2s ease-in-out infinite; pointer-events: none; } @keyframes zzz { 50% { transform: translateY(-4px); opacity: 0.6; } } @media (prefers-reduced-motion: reduce) { .monster-zzz { animation: none; } }
 .stage-medal { margin-left: 4px; }
 .diary textarea { width: 100%; box-sizing: border-box; font-size: 1rem; margin: 4px 0; } .diary summary { cursor: pointer; font-weight: bold; margin: 8px 0; }
+.settings-h { margin: 18px 0 4px; font-size: 0.95rem; color: var(--muted); border-bottom: 1px solid rgba(128,128,128,0.25); padding-bottom: 2px; }

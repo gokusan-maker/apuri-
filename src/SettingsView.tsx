@@ -34,6 +34,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
     <section className="card settings">
       <h2>設定</h2>
 
+      <h3 className="settings-h">📚 学習</h3>
       {onGrade && (
         <fieldset className="setting">
           <legend>学年から単語帳を選ぶ</legend>
@@ -69,6 +70,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         />
       </label>
 
+      <h3 className="settings-h">🔊 音声</h3>
       <label className="setting">
         <span>発音の速さ：{settings.rate.toFixed(1)}倍</span>
         <input
@@ -96,6 +98,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         🔊 試しに聞く
       </button>
 
+      <h3 className="settings-h">🎨 見た目</h3>
       <fieldset className="setting">
         <legend>画面の色</legend>
         <div className="levels">
@@ -123,6 +126,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         </div>
       </fieldset>
 
+      <h3 className="settings-h">🎯 目標</h3>
       <fieldset className="setting">
         <legend>1日の目標</legend>
         <div className="levels">
@@ -156,6 +160,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         </div>
       </fieldset>
 
+      <h3 className="settings-h">🃏 カード・クイズ</h3>
       <label className="setting toggle">
         <span>カードを出したら自動で発音</span>
         <input type="checkbox" checked={settings.autoSpeak} onChange={(e) => set({ autoSpeak: e.target.checked })} />
@@ -191,6 +196,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>
 
+      <h3 className="settings-h">💾 データ</h3>
       <button
         className="danger-link"
         onClick={() => {
