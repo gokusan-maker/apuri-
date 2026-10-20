@@ -60,7 +60,7 @@ import { Quiz } from './QuizView'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
-import { cheerFor, type Line } from './talk'
+import { cheerFor, snackLine, type Line } from './talk'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
@@ -595,6 +595,8 @@ function App() {
             setWallet(r.wallet)
             setSnacks(r.log)
             gainXp(r.xp, null)
+            const l = snackLine(id)
+            pushToast([{ id: 'snack', text: `${l.en}（${l.ja}）`, counter: 'answers', target: 0 }])
           }}
         />
       ) : mode === 'stage' ? (
@@ -827,6 +829,8 @@ function App() {
                 ? '🍀 ラッキー！'
                 : missionToast[0].id === 'anniv'
                 ? '記念日おめでとう！'
+                : missionToast[0].id === 'snack'
+                ? '😋 もぐもぐ'
                 : missionToast[0].id === 'bond'
                 ? '💕 なつき度アップ！'
                 : missionToast[0].id === 'review'

@@ -374,6 +374,8 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/クッキー/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(20)
     expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
+    expect(screen.getByText('😋 もぐもぐ')).toBeInTheDocument()
+    expect(screen.getByText(/サクサク/)).toBeInTheDocument()
   })
 
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {

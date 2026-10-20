@@ -66,3 +66,14 @@ export function cheerFor(count: number): Line {
 export function pickLineNow(stage: number, lonely: boolean, r: number): Line {
   return pickLine(stage, lonely, r, new Date())
 }
+
+// おやつをあげたときのひとこと
+export const SNACK_LINES: Record<string, Line> = {
+  cookie: { en: 'Crunchy! Thank you!', ja: 'サクサク！ありがとう！' },
+  pudding: { en: 'So soft and sweet!', ja: 'ぷるぷるで甘い！' },
+  cake: { en: 'Wow, a cake! I love it!', ja: 'わあ、ケーキ！大好き！' },
+}
+
+export function snackLine(id: string): Line {
+  return SNACK_LINES[id] ?? { en: 'Yummy!', ja: 'おいしい！' }
+}
