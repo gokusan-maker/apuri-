@@ -84,6 +84,28 @@ export function Wear({ id }: { id?: string }) {
           ))}
         </g>
       )
+    case 'bowtie':
+      return (
+        <g fill="#7c3aed" stroke="#4c1d95" strokeWidth="2">
+          <path d="M50 80 L38 72 L38 88 Z M50 80 L62 72 L62 88 Z" />
+          <circle cx="50" cy="80" r="3.5" />
+        </g>
+      )
+    case 'catears':
+      return (
+        <g stroke="#78350f" strokeWidth="2">
+          <path d="M24 34 L28 10 L44 26 Z" fill="#fbbf24" />
+          <path d="M76 34 L72 10 L56 26 Z" fill="#fbbf24" />
+          <path d="M29 28 L31 17 L38 25 Z M71 28 L69 17 L62 25 Z" fill="#f9a8d4" stroke="none" />
+        </g>
+      )
+    case 'crown':
+      return (
+        <g fill="#facc15" stroke="#a16207" strokeWidth="2">
+          <path d="M32 28 L32 12 L41 20 L50 8 L59 20 L68 12 L68 28 Z" />
+          <circle cx="50" cy="22" r="2.5" fill="#ef4444" stroke="none" />
+        </g>
+      )
     case 'headphones':
       return (
         <g>

@@ -65,3 +65,14 @@ describe('早起き', () => {
     expect([4, 5, 9, 10].map(isEarly)).toEqual([false, true, true, false])
   })
 })
+
+describe('着せ替えの追加', () => {
+  it('王冠・ねこみみ・蝶ネクタイが買える', () => {
+    for (const id of ['crown', 'catears', 'bowtie']) expect(ITEMS.some((i) => i.id === id)).toBe(true)
+    expect(buy({ coins: 300, owned: [] }, 'crown')).toEqual({ coins: 0, owned: ['crown'] })
+  })
+})
+
+it('買い物をしても、おやすみチケットや部屋はそのまま', () => {
+  expect(buy({ coins: 200, owned: ['space'], freezes: 2, room: 'space' }, 'ribbon')).toEqual({ coins: 170, owned: ['space', 'ribbon'], freezes: 2, room: 'space' })
+})

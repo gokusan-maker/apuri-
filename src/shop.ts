@@ -5,9 +5,12 @@ export const ITEMS: Item[] = [
   { id: 'ribbon', name: 'リボン', price: 30, icon: '🎀' },
   { id: 'glasses', name: 'まるメガネ', price: 60, icon: '👓' },
   { id: 'scarf', name: 'マフラー', price: 90, icon: '🧣' },
+  { id: 'bowtie', name: '蝶ネクタイ', price: 100, icon: '🦋' },
   { id: 'hat', name: 'シルクハット', price: 120, icon: '🎩' },
   { id: 'flower', name: '花かんむり', price: 150, icon: '🌼' },
+  { id: 'catears', name: 'ねこみみ', price: 180, icon: '🐱' },
   { id: 'headphones', name: 'ヘッドホン', price: 200, icon: '🎧' },
+  { id: 'crown', name: '王冠', price: 300, icon: '👑' },
 ]
 
 export const COIN_PER_CORRECT = 1
@@ -39,7 +42,7 @@ export function buyFreeze(w: Wallet): Wallet | null {
 export function buy(w: Wallet, id: string): Wallet | null {
   const item = [...ITEMS, ...ROOMS].find((i) => i.id === id)
   if (!item || w.owned.includes(id) || w.coins < item.price) return null
-  return { coins: w.coins - item.price, owned: [...w.owned, id] }
+  return { ...w, coins: w.coins - item.price, owned: [...w.owned, id] }
 }
 
 const STORAGE_KEY = 'eitan:wallet'
