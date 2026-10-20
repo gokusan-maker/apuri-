@@ -69,4 +69,48 @@ export const PASSAGES: Passage[] = [
       { q: '今、何を一生けんめい勉強している？', choices: ['数学', '英語', '理科'], answer: 2 },
     ],
   },
+  {
+    id: 'bento',
+    title: 'My Lunch Box',
+    text: 'I make my lunch box every Monday. I put rice, eggs, and some vegetables in it. My mother helps me with the eggs. My friends say my lunch box looks delicious.',
+    ja: '私は毎週月曜日に自分のお弁当を作ります。ごはん、卵、野菜を入れます。卵は母が手伝ってくれます。友だちは私のお弁当がおいしそうだと言います。',
+    questions: [
+      { q: 'お弁当を作るのは何曜日？', choices: ['月曜日', '水曜日', '金曜日'], answer: 0 },
+      { q: 'お母さんは何を手伝う？', choices: ['ごはん', '卵', '野菜'], answer: 1 },
+      { q: '友だちは何と言う？', choices: ['小さい', 'おいしそう', 'からそう'], answer: 1 },
+    ],
+  },
+  {
+    id: 'bike',
+    title: 'A New Bike',
+    text: 'Last week, I got a new bike for my birthday. It is green and very fast. On Sunday, I rode it to the lake with my father. We had a picnic there.',
+    ja: '先週、誕生日に新しい自転車をもらいました。緑色でとても速いです。日曜日、父といっしょに湖まで乗っていきました。そこでピクニックをしました。',
+    questions: [
+      { q: '自転車は何色？', choices: ['赤', '青', '緑'], answer: 2 },
+      { q: '日曜日にだれと出かけた？', choices: ['父', '母', '友だち'], answer: 0 },
+      { q: '湖で何をした？', choices: ['つり', 'ピクニック', '水泳'], answer: 1 },
+    ],
+  },
+  {
+    id: 'star',
+    title: 'Looking at Stars',
+    text: 'My uncle has a big telescope. Last night, we looked at the moon and some stars. The moon looked very close. I want to study space in the future.',
+    ja: 'おじは大きな望遠鏡を持っています。昨夜、いっしょに月と星を見ました。月はとても近くに見えました。私は将来、宇宙について勉強したいです。',
+    questions: [
+      { q: 'おじが持っているものは？', choices: ['カメラ', '望遠鏡', '地図'], answer: 1 },
+      { q: '月はどう見えた？', choices: ['とても近く', 'とても小さく', '赤く'], answer: 0 },
+      { q: '「私」が将来勉強したいことは？', choices: ['海', '宇宙', '音楽'], answer: 1 },
+    ],
+  },
+  {
+    id: 'cleanup',
+    title: 'Beach Cleanup',
+    text: 'Last Saturday, our club cleaned the beach. We found many plastic bottles and bags. It took three hours. The beach became beautiful again, and we felt happy.',
+    ja: 'この前の土曜日、私たちの部活で浜辺の掃除をしました。プラスチックのボトルや袋がたくさん見つかりました。3時間かかりました。浜辺はまたきれいになり、私たちはうれしい気持ちになりました。',
+    questions: [
+      { q: 'どこを掃除した？', choices: ['公園', '浜辺', '川'], answer: 1 },
+      { q: '何がたくさん見つかった？', choices: ['貝がら', 'プラスチックごみ', 'お金'], answer: 1 },
+      { q: '掃除にかかった時間は？', choices: ['1時間', '2時間', '3時間'], answer: 2 },
+    ],
+  },
 ]
