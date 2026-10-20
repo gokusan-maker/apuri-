@@ -1,6 +1,6 @@
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
-import { FREEZE_MAX, FREEZE_PRICE, priceWith, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
+import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
@@ -75,7 +75,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       <ul className="badge-grid">
         {shopItems(eventId, wallet.owned).map((it) => {
           const owned = wallet.owned.includes(it.id)
-          const wearing = monster.wear === it.id
+          const wearing = wearList(monster.wear).includes(it.id)
           return (
             <li key={it.id} className={owned ? 'got' : wallet.coins >= priceWith(wallet, it.price) ? 'got' : 'locked'}>
               <span className="badge-icon" aria-hidden="true">
@@ -83,7 +83,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
               </span>
               <span className="badge-name">{it.name}</span>
               {owned ? (
-                <button className="shop-btn" disabled={!canWear} onClick={() => onWear(wearing ? undefined : it.id)}>
+                <button className="shop-btn" disabled={!canWear} onClick={() => onWear(it.id)}>
                   {wearing ? 'はずす' : 'つける'}
                 </button>
               ) : (

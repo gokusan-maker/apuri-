@@ -1,3 +1,4 @@
+import { wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useState, type FormEvent } from 'react'
@@ -54,7 +55,18 @@ function Face({ mood }: { mood: Mood }) {
 }
 
 // 飾り（タマゴのときは着られない）
+// つけている着せ替え（いくつか重ねられる）
 export function Wear({ id }: { id?: string }) {
+  return (
+    <>
+      {wearList(id).map((x) => (
+        <WearOne key={x} id={x} />
+      ))}
+    </>
+  )
+}
+
+function WearOne({ id }: { id: string }) {
   switch (id) {
     case 'ribbon':
       return <path d="M62 30 L54 22 L54 38 Z M62 30 L70 22 L70 38 Z" fill="#f472b6" stroke="#9d174d" strokeWidth="2" />

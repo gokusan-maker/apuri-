@@ -142,3 +142,17 @@ export function saveSnacks(l: SnackLog): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 着せ替えの場所（頭・顔・首）。同じ場所には1つだけ
+const SLOT: Record<string, 'head' | 'face' | 'neck'> = { glasses: 'face', scarf: 'neck', bowtie: 'neck' }
+export const slotOf = (id: string) => SLOT[id] ?? 'head'
+
+// つけている着せ替え（「hat,glasses」のようにカンマ区切り。昔の1つだけのデータもそのまま読める）
+export const wearList = (wear: string | undefined) => (wear ?? '').split(',').filter(Boolean)
+
+// つける／はずす：同じ場所のものは入れかわる
+export function toggleWear(wear: string | undefined, id: string): string | undefined {
+  const list = wearList(wear)
+  const next = list.includes(id) ? list.filter((x) => x !== id) : [...list.filter((x) => slotOf(x) !== slotOf(id)), id]
+  return next.length ? next.join(',') : undefined
+}

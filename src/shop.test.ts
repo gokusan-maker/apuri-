@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, couponsBetween, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
+import { buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -108,4 +108,16 @@ it('割引券：レベル10・20・30でもらえ、次の着せ替えが半額'
 it('部屋（図書室・お城）とおやつ（おにぎり）がある', () => {
   for (const id of ['bookroom', 'royal']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
   expect(SNACKS.some((s) => s.id === 'onigiri')).toBe(true)
+})
+
+it('着せ替えは場所ごとに1つずつ重ねられる', () => {
+  let w = toggleWear(undefined, 'hat')
+  w = toggleWear(w, 'glasses')
+  expect(wearList(w)).toEqual(['hat', 'glasses'])
+  w = toggleWear(w, 'crown') // 頭どうしは入れかわる
+  expect(wearList(w)).toEqual(['glasses', 'crown'])
+  w = toggleWear(w, 'glasses') // はずす
+  expect(w).toBe('crown')
+  expect(toggleWear('crown', 'crown')).toBeUndefined()
+  expect(wearList('ribbon')).toEqual(['ribbon']) // 昔のデータ
 })

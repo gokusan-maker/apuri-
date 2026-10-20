@@ -75,7 +75,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { buy, buyFreeze, couponsBetween, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -644,7 +644,7 @@ function App() {
             const next = buy(wallet, id)
             if (next) setWallet(next)
           }}
-          onWear={(id) => updateMonster((m) => ({ ...m, wear: id }))}
+          onWear={(id) => updateMonster((m) => ({ ...m, wear: id ? toggleWear(m.wear, id) : undefined }))}
           onClose={() => setShowShop(false)}
           snacksLeft={snacksLeft(snacks, today)}
           onRoom={(id) => setWallet((w) => ({ ...w, room: id }))}
