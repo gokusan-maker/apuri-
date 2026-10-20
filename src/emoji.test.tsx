@@ -19,3 +19,13 @@ describe('絵文字クイズ', () => {
     expect(screen.getByText(/正解！/)).toBeInTheDocument()
   })
 })
+
+it('逆：英語を見て絵文字を選ぶ', () => {
+  render(<Quiz words={WORDS} count={1} direction="emoji-rev" />)
+  const en = document.querySelector('.quiz .en')!.textContent!
+  const w = WORDS.find((x) => x.en === en && EMOJI[x.id])!
+  const choices = [...document.querySelectorAll('.choice')].map((b) => b.textContent)
+  expect(choices.every((c) => Object.values(EMOJI).includes(c!))).toBe(true)
+  fireEvent.click(screen.getByRole('button', { name: EMOJI[w.id] }))
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+})

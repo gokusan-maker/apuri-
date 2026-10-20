@@ -47,15 +47,15 @@ import { WORDS, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
-  d === 'ja-en' ? w.ja : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
+  d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
 const label = (d: Direction) =>
-  d === 'ja-en' || d === 'blank' || d === 'define' || d === 'emoji' ? (w: Word) => w.en : d === 'sentence' || d === 'sentence-read' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
+  d === 'emoji-rev' ? (w: Word) => EMOJI[w.id] ?? w.ja : d === 'ja-en' || d === 'blank' || d === 'define' || d === 'emoji' ? (w: Word) => w.en : d === 'sentence' || d === 'sentence-read' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
 // 穴埋めにできる単語が1つも無いとき（例文なしのマイ単語だけなど）は通常の単語から出す
 const pool = (d: Direction, ws: Word[], all: Word[]) => {
-  const can = d === 'define' ? (w: Word) => !!DEFS[w.id] : d === 'emoji' ? (w: Word) => !!EMOJI[w.id] : d === 'blank' ? canBlank : d === 'sentence' || d === 'sentence-read' ? (w: Word) => !!w.example && !!w.exampleJa : null
+  const can = d === 'define' ? (w: Word) => !!DEFS[w.id] : d === 'emoji' || d === 'emoji-rev' ? (w: Word) => !!EMOJI[w.id] : d === 'blank' ? canBlank : d === 'sentence' || d === 'sentence-read' ? (w: Word) => !!w.example && !!w.exampleJa : null
   if (!can) return ws
   const ok = ws.filter(can)
   if (ok.length > 0) return ok
@@ -68,6 +68,8 @@ type Q = Question<Word> & { d?: Direction } // d：ミックスのときのそ�
 const MIX: Direction[] = ['en-ja', 'ja-en', 'listen']
 
 function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[] {
+  // 絵文字の逆：選択肢も絵文字のある単語から
+  if (d === 'emoji-rev') return makeQuiz(WORDS.filter((w) => EMOJI[w.id]), label(d), count, Math.random, pool(d, targets, words))
   if (d !== 'mix') return makeQuiz(words, label(d), count, Math.random, pool(d, targets, words))
   return shuffle(targets)
     .slice(0, count)
@@ -84,6 +86,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'timed', label: '⏳ 10秒', group: '4択' },
   { id: 'define', label: '🇬🇧 英英クイズ', group: '4択' },
   { id: 'emoji', label: '😀 絵文字クイズ', group: '4択' },
+  { id: 'emoji-rev', label: '🔤 英語→絵文字', group: '4択' },
   { id: 'sentence-read', label: '📄 例文の訳', group: '4択' },
   { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
   { id: 'shiritori', label: '🔗 しりとり', group: '4択' },
@@ -169,7 +172,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed', 'define', 'sentence-read', 'emoji'].includes(qd)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed', 'define', 'sentence-read', 'emoji', 'emoji-rev'].includes(qd)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -551,7 +554,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       ) : (
         <p className={qd === 'ja-en' ? 'en ja-prompt' : qd === 'emoji' ? 'en emoji-prompt' : qd === 'define' || qd === 'sentence-read' ? 'define-prompt' : 'en'}>{prompt(q.word, qd)}</p>
       )}
-      <div className="choices">
+      <div className={`choices${qd === 'emoji-rev' ? ' emoji-choices' : ''}`}>
         {q.choices.map((c, i) => {
           let cls = 'choice'
           if (picked !== null && i === q.answer) cls += ' correct'
