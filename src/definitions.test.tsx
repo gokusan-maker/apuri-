@@ -6,7 +6,7 @@ import { WORDS } from './words'
 
 describe('英英クイズ', () => {
   it('説明は30語ぶんあり、どれも単語帳にある', () => {
-    expect(Object.keys(DEFS)).toHaveLength(30)
+    expect(Object.keys(DEFS)).toHaveLength(45)
     for (const id of Object.keys(DEFS)) expect(WORDS.some((w) => w.id === id), id).toBe(true)
   })
 
