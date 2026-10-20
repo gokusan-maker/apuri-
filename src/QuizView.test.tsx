@@ -279,3 +279,12 @@ it('メニューから選んだ種類は、次に開いたときも同じ', () =
   render(<Quiz words={WORDS.slice(0, 10)} />)
   expect(document.querySelector('.blank-sentence')).not.toBeNull()
 })
+
+it('📄 例文の訳：例文を読んで訳を選ぶ', () => {
+  const words = WORDS.slice(0, 10)
+  render(<Quiz words={words} count={1} direction="sentence-read" />)
+  const ex = document.querySelector('.define-prompt')!.textContent
+  const w = words.find((x) => x.example === ex)!
+  fireEvent.click(screen.getByRole('button', { name: w.exampleJa }))
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+})
