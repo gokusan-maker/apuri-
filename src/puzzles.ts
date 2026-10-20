@@ -50,3 +50,29 @@ export function oppositeQ(rng: Rng = Math.random): PuzzleQ {
     wordId: idOf(ask) ?? idOf(ans) ?? '',
   }
 }
+
+// 仲間はずれ：同じ仲間3つ＋ちがう仲間1つ
+export const GROUPS: { name: string; ids: string[] }[] = [
+  { name: '動物', ids: ['cat', 'dog', 'rabbit', 'horse', 'cow', 'pig', 'sheep', 'monkey', 'elephant', 'lion', 'tiger', 'bear', 'fox', 'mouse', 'frog', 'bird'] },
+  { name: '食べ物', ids: ['rice', 'bread', 'egg', 'meat', 'banana', 'strawberry', 'potato', 'tomato', 'cheese', 'soup', 'sandwich', 'apple'] },
+  { name: 'スポーツ', ids: ['soccer', 'baseball', 'basketball', 'tennis', 'volleyball', 'badminton', 'rugby', 'table-tennis'] },
+  { name: '乗り物', ids: ['bus', 'train', 'bike', 'plane', 'ship', 'taxi', 'subway', 'truck', 'boat', 'helicopter', 'car'] },
+  { name: '色', ids: ['red', 'blue', 'yellow', 'green', 'black', 'white', 'pink', 'purple', 'brown', 'gray'] },
+  { name: '体', ids: ['head', 'face', 'eye', 'ear', 'nose', 'mouth', 'hand', 'finger', 'arm', 'leg', 'foot'] },
+]
+
+const byId = (id: string) => WORDS.find((w) => w.id === id)!
+
+export function oddQ(rng: Rng = Math.random): PuzzleQ {
+  const [g, h] = shuffle(GROUPS, rng)
+  const same = shuffle(g.ids, rng).slice(0, 3).map(byId)
+  const odd = byId(h.ids[Math.floor(rng() * h.ids.length)])
+  const choices = shuffle([...same, odd], rng).map((w) => w.en)
+  return {
+    prompt: '仲間はずれはどれ？',
+    choices,
+    answer: choices.indexOf(odd.en),
+    why: `${odd.en}（${odd.ja}）は「${h.name}」。ほかは「${g.name}」`,
+    wordId: odd.id,
+  }
+}
