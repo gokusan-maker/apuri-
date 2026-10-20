@@ -15,6 +15,15 @@ type Props = {
   onNote?: (id: string, text: string) => void
 }
 
+type Filter = 'all' | 'まだ' | '学習中' | '定着' | 'fav'
+const FILTERS: { id: Filter; label: string }[] = [
+  { id: 'all', label: 'ぜんぶ' },
+  { id: 'まだ', label: 'まだ' },
+  { id: '学習中', label: '学習中' },
+  { id: '定着', label: '定着' },
+  { id: 'fav', label: '★' },
+]
+
 function status(box: number | undefined): string {
   if (box === undefined) return 'まだ'
   if (box >= 3) return '定着'
@@ -24,7 +33,12 @@ function status(box: number | undefined): string {
 export function WordList({ words, progress, onClose, favorites = [], onToggleFavorite, notes = {}, onNote }: Props) {
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
-  const hits = searchWords(words, query)
+  const [filter, setFilter] = useState<Filter>('all')
+  const hits = searchWords(words, query).filter((w) => {
+    if (filter === 'all') return true
+    if (filter === 'fav') return favorites.includes(w.id)
+    return status(progress[w.id]?.box) === filter
+  })
 
   return (
     <section className="card word-list">
@@ -41,6 +55,13 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
         aria-label="単語をさがす"
         autoCapitalize="none"
       />
+      <div className="levels word-filter" role="group" aria-label="しぼりこみ">
+        {FILTERS.map((f) => (
+          <button key={f.id} aria-pressed={filter === f.id} onClick={() => setFilter(f.id)}>
+            {f.label}
+          </button>
+        ))}
+      </div>
       <p className="stats-note">{hits.length}語</p>
       <ul className="words">
         {hits.map((w) => {
