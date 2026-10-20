@@ -59,3 +59,8 @@ it('図鑑のすがたを全部見るとバッジ', () => {
   expect(newlyEarned({ ...zero, formsSeen: 11, formsTotal: 12 }, {}).map((b) => b.id)).not.toContain('zukan-all')
   expect(newlyEarned({ ...zero }, {}).map((b) => b.id)).not.toContain('zukan-all')
 })
+
+it('おみやげを全種類集めるとバッジ', () => {
+  expect(newlyEarned({ ...zero, souvenirs: 10, souvenirsTotal: 10 }, {}).map((b) => b.id)).toContain('souvenir-all')
+  expect(newlyEarned({ ...zero, souvenirs: 9, souvenirsTotal: 10 }, {}).map((b) => b.id)).not.toContain('souvenir-all')
+})

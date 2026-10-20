@@ -28,7 +28,7 @@ import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
-import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor } from './souvenir'
+import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
@@ -349,6 +349,8 @@ function App() {
       studyDays: totals.studyDays ?? 0,
       formsSeen: new Set(party.members.flatMap(seenForms)).size,
       formsTotal: FORMS.length,
+      souvenirs: souvenirs.length,
+      souvenirsTotal: SOUVENIRS.length,
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
     },
     earned,
