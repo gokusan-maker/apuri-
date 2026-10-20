@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, calcQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -79,5 +79,18 @@ describe('パズル', () => {
     expect(c.prompt).toBe('「y」の次の文字は？')
     expect(c.choices[c.answer]).toBe('z')
     for (let i = 0; i < 30; i++) expect(new Set(alphabetQ().choices).size).toBe(4)
+  })
+
+  it('英語で計算：答えが合い、記録用の単語は単語帳にある', () => {
+    const en = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+    for (let i = 0; i < 80; i++) {
+      const q = calcQ()
+      const [a, op, b] = q.prompt.split(' ')
+      const ans = op === 'plus' ? en.indexOf(a) + en.indexOf(b) : en.indexOf(a) - en.indexOf(b)
+      expect(q.choices[q.answer]).toBe(en[ans])
+      expect(ans).toBeGreaterThanOrEqual(0)
+      expect(new Set(q.choices).size).toBe(4)
+      if (q.wordId) expect(WORDS.some((w) => w.id === q.wordId), q.wordId).toBe(true)
+    }
   })
 })

@@ -150,3 +150,26 @@ export function alphabetQ(rng: Rng = Math.random): PuzzleQ {
   const r = pick(letters[i + 1], letters)
   return { prompt: `「${letters[i]}」の次の文字は？`, ...r, why: `${letters.slice(Math.max(0, i - 1), i + 3).join(' ')} …`, wordId: '' }
 }
+
+// 英語で計算：足し算・引き算（答えは 0〜20）
+export function calcQ(rng: Rng = Math.random): PuzzleQ {
+  const plus = rng() < 0.5
+  const a = 1 + Math.floor(rng() * 10)
+  const b = 1 + Math.floor(rng() * (plus ? 10 : a))
+  const ans = plus ? a + b : a - b
+  const en = (n: number) => toEnglishSmall(n)
+  const near = shuffle([ans - 3, ans - 2, ans - 1, ans + 1, ans + 2, ans + 3].filter((x) => x >= 0 && x <= 20), rng).slice(0, 3)
+  const choices = shuffle([ans, ...near], rng).map(en)
+  return {
+    prompt: `${en(a)} ${plus ? 'plus' : 'minus'} ${en(b)} is …?`,
+    choices,
+    answer: choices.indexOf(en(ans)),
+    why: `${a} ${plus ? '+' : '−'} ${b} = ${ans}（${en(ans)}）`,
+    wordId: ans >= 1 && ans <= 20 ? en(ans) : '',
+  }
+}
+
+const SMALL = [...NUM_EN, 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty']
+function toEnglishSmall(n: number): string {
+  return SMALL[n]
+}
