@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { dateQ, isRight, ordinal, parseAnswer, pickNumber, timeQ, toEnglish, wordIdOf } from './numbers'
+import { dateQ, isRight, ordinal, parseAnswer, pickNumber, priceQ, timeQ, toEnglish, wordIdOf } from './numbers'
 import { WORDS } from './words'
 
 describe('numbers', () => {
@@ -67,5 +67,20 @@ describe('日付', () => {
   })
   it('月の単語idは単語帳にある', () => {
     for (let i = 0; i < 12; i++) expect(WORDS.some((w) => w.id === dateQ(() => i / 12).id)).toBe(true)
+  })
+})
+
+describe('値段', () => {
+  it('読み方と答え・入力の判定', () => {
+    const seq = (xs: number[]) => () => xs.shift()!
+    const q = priceQ(seq([2 / 20, 10 / 20]))
+    expect(q).toMatchObject({ say: 'three dollars and fifty cents', answer: '3.50' })
+    expect(isRight(q, '3.50')).toBe(true)
+    expect(isRight(q, '$3.5')).toBe(true)
+    expect(isRight(q, '＄３.５０')).toBe(true)
+    expect(isRight(q, '3.05')).toBe(false)
+    const one = priceQ(seq([0, 0]))
+    expect(one).toMatchObject({ say: 'one dollar', answer: '1.00' })
+    expect(isRight(one, '1')).toBe(true)
   })
 })

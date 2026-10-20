@@ -33,7 +33,7 @@ export function parseAnswer(text: string): number | null {
 }
 
 // 問題：読み上げる英語・正解（入力の形）・記録用の単語id
-export type NumQ = { kind: 'number' | 'time' | 'date'; say: string; answer: string; id: string }
+export type NumQ = { kind: 'number' | 'time' | 'date' | 'price'; say: string; answer: string; id: string }
 
 export function numberQ(r: () => number = Math.random): NumQ {
   const n = pickNumber(r)
@@ -67,9 +67,18 @@ export function dateQ(r: () => number = Math.random): NumQ {
   return { kind: 'date', say: `${MONTHS[m]} ${ordinal(d)}`, answer: `${m + 1}/${d}`, id: MONTHS[m].toLowerCase() }
 }
 
+// 値段：three dollars and fifty cents → 3.50（セントは5きざみ）
+export function priceQ(r: () => number = Math.random): NumQ {
+  const d = 1 + Math.floor(r() * 20)
+  const c = Math.floor(r() * 20) * 5
+  const dollars = `${toEnglish(d)} ${d === 1 ? 'dollar' : 'dollars'}`
+  const say = c === 0 ? dollars : `${dollars} and ${toEnglish(c)} cents`
+  return { kind: 'price', say, answer: `${d}.${String(c).padStart(2, '0')}`, id: wordIdOf(d) }
+}
+
 export function pickQ(r: () => number = Math.random): NumQ {
   const k = r()
-  return k < 0.25 ? timeQ(r) : k < 0.5 ? dateQ(r) : numberQ(r)
+  return k < 0.2 ? timeQ(r) : k < 0.4 ? dateQ(r) : k < 0.55 ? priceQ(r) : numberQ(r)
 }
 
 function half(text: string): string {
@@ -78,10 +87,14 @@ function half(text: string): string {
 
 // 入力が正解か（全角・空白・カンマ・時刻の先頭0は気にしない）
 export function isRight(q: NumQ, text: string): boolean {
-  const t = half(text).replace(/[,\s]/g, '')
+  const t = half(text).replace(/[,\s＄]/g, (c) => (c === '＄' ? '$' : ''))
   if (q.kind === 'time') {
     const m = /^0?(\d{1,2}):(\d{2})$/.exec(t)
     return !!m && `${Number(m[1])}:${m[2]}` === q.answer
+  }
+  if (q.kind === 'price') {
+    const m = /^\$?(\d+)(?:\.(\d{1,2}))?$/.exec(t)
+    return !!m && `${Number(m[1])}.${(m[2] ?? '0').padEnd(2, '0')}` === q.answer
   }
   if (q.kind === 'date') {
     const m = /^0?(\d{1,2})(?:\/|月)0?(\d{1,2})日?$/.exec(t)
