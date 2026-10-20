@@ -84,11 +84,19 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'settings', icon: '⚙️', label: '設定' },
 ]
 
+const STATS_TABS = [
+  { id: 'log', label: 'きろく' },
+  { id: 'buddy', label: 'あいぼう' },
+  { id: 'collection', label: 'コレクション' },
+  { id: 'data', label: 'データ' },
+] as const
+
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('card')
   const [showList, setShowList] = useState(false)
   const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
+  const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
   // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
   type Focus = 'weak' | 'fav'
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
@@ -493,54 +501,76 @@ function App() {
         <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
       ) : mode === 'stats' ? (
         <>
-          <WordOfDay word={pickWordOfDay(WORDS, today)} />
-          <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
-          <Stats
-            streakDays={streakDays}
-            studiedToday={studiedToday}
-            learned={learned}
-            total={words.length}
-            week={lastDays(history, today)}
-            goal={settings.dailyGoal}
-            weak={weak}
-            mistakes={mistakes}
-            onReviewWeak={() => startQuiz('weak')}
-            favorites={favWords}
-            calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
-            minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
-            bestCombo={totals.bestCombo ?? 0}
-            accuracy={{
-              today: accuracy.day === today ? rate(accuracy.today) : null,
-              card: rate(accuracy.by.card),
-              quiz: rate(accuracy.by.quiz),
-              ear: rate(accuracy.by.ear),
-            }}
-            byLevel={LEVELS.map((l) => {
-              const ws = wordsOf([l])
-              return { level: l, learned: ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length, total: ws.length }
-            })}
-            onReviewFav={() => startQuiz('fav')}
-            onReviewFavCards={() => startCards('fav')}
-            schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
-            onReviewWeakCards={() => startCards('weak')}
-          >
-            <ShareButton
-              stats={{
-                name: monster.name ?? formOf(monster).name,
-                level: levelInfo(monster.xp).level,
-                streak: streakDays,
-                learned: learnedAll,
-                badges: Object.keys(earned).length,
+          <div className="sub-tabs" role="tablist" aria-label="記録の種類">
+            {STATS_TABS.map((t) => (
+              <button key={t.id} role="tab" aria-selected={statsTab === t.id} onClick={() => setStatsTab(t.id)}>
+                {t.label}
+              </button>
+            ))}
+          </div>
+          {statsTab === 'log' && (
+            <>
+            <WordOfDay word={pickWordOfDay(WORDS, today)} />
+            <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
+            <Stats
+              streakDays={streakDays}
+              studiedToday={studiedToday}
+              learned={learned}
+              total={words.length}
+              week={lastDays(history, today)}
+              goal={settings.dailyGoal}
+              weak={weak}
+              mistakes={mistakes}
+              onReviewWeak={() => startQuiz('weak')}
+              favorites={favWords}
+              calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
+              minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
+              bestCombo={totals.bestCombo ?? 0}
+              accuracy={{
+                today: accuracy.day === today ? rate(accuracy.today) : null,
+                card: rate(accuracy.by.card),
+                quiz: rate(accuracy.by.quiz),
+                ear: rate(accuracy.by.ear),
               }}
+              byLevel={LEVELS.map((l) => {
+                const ws = wordsOf([l])
+                return { level: l, learned: ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length, total: ws.length }
+              })}
+              onReviewFav={() => startQuiz('fav')}
+              onReviewFavCards={() => startCards('fav')}
+              schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}
+              onReviewWeakCards={() => startCards('weak')}
             />
-            <MyWords list={myWords} onChange={setMyWords} />
-            <BadgeList earned={earned} />
-            <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
-            <Profile monster={monster} />
-            <Zukan monsters={party.members} />
-            <BossDex record={boss} />
-            <Backup />
-          </Stats>
+          </>
+          )}
+          {statsTab === 'buddy' && (
+            <section className="card stats-view">
+              <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} />
+              <Profile monster={monster} />
+              <ShareButton
+                stats={{
+                  name: monster.name ?? formOf(monster).name,
+                  level: levelInfo(monster.xp).level,
+                  streak: streakDays,
+                  learned: learnedAll,
+                  badges: Object.keys(earned).length,
+                }}
+              />
+            </section>
+          )}
+          {statsTab === 'collection' && (
+            <section className="card stats-view">
+              <BadgeList earned={earned} />
+              <Zukan monsters={party.members} />
+              <BossDex record={boss} />
+            </section>
+          )}
+          {statsTab === 'data' && (
+            <section className="card stats-view">
+              <MyWords list={myWords} onChange={setMyWords} />
+              <Backup />
+            </section>
+          )}
         </>
       ) : mode === 'quiz' ? (
         <>
