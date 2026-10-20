@@ -314,4 +314,10 @@ describe('App', () => {
     render(<App />)
     expect(screen.queryByText('えいたんへようこそ！')).not.toBeInTheDocument()
   })
+
+  it('相棒をタップするとひとこと話す', () => {
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('相棒にさわる'))
+    expect(screen.getByText('（タマゴの中からコトコト音がする）')).toBeInTheDocument()
+  })
 })

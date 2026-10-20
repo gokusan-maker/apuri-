@@ -1,6 +1,8 @@
-import { useState, type FormEvent } from 'react'
+import { useEffect, useState, type FormEvent } from 'react'
 import { FORMS, formOf, levelInfo, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
+import { speak } from './speech'
+import { pickLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely'
 
@@ -143,14 +145,37 @@ export function MonsterFigure({
 export function Monster({ monster, onRename, coins, onShop, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
+  const [line, setLine] = useState<Line | null>(null)
+  const [poke, setPoke] = useState(0)
+  useEffect(() => {
+    if (!line) return
+    const id = window.setTimeout(() => setLine(null), 3500)
+    return () => window.clearTimeout(id)
+  }, [line])
   const { level, into, need } = levelInfo(monster.xp)
   const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
     <section className="monster" aria-label="相棒モンスター">
-      <div className={`monster-body${cls}${evolved ? ' evolve' : ''}`}>
-        <MonsterFigure form={form} mood={mood} wear={monster.wear} />
-      </div>
+      <button
+        key={poke}
+        className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}
+        aria-label="相棒にさわる"
+        onClick={() => {
+          const l = pickLine(form.stage, mood === 'lonely', Math.random())
+          setLine(l)
+          setPoke(poke + 1)
+          if (form.stage > 0) speak(l.en)
+        }}
+      >
+        <MonsterFigure form={form} mood={line ? 'happy' : mood} wear={monster.wear} />
+      </button>
+      {line && (
+        <div className="bubble" role="status" onClick={() => setLine(null)}>
+          <span className="bubble-en">{line.en}</span>
+          <span className="bubble-ja">{line.ja}</span>
+        </div>
+      )}
       <div className="monster-info">
         {editing ? (
           <form

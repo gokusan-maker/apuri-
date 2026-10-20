@@ -507,3 +507,22 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .card-en-back { font-weight: 700; font-size: 1.8rem; }
 .install .flip { margin-top: 4px; }
 .share { text-align: center; margin-top: 8px; }
+
+.monster { position: relative; }
+button.monster-body { padding: 0; border: none; background: transparent; cursor: pointer; }
+.bubble {
+  position: absolute;
+  left: 84px;
+  right: 8px;
+  top: -6px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 4px 12px rgb(0 0 0 / 0.15);
+  animation: pop 0.3s;
+}
+.bubble-en { font-weight: 700; }
+.bubble-ja { font-size: 0.8rem; color: var(--muted); }
