@@ -8,6 +8,7 @@ import { loadNotes, saveNotes, setNote } from './notes'
 import { loadFavorites, saveFavorites, toggleFavorite } from './favorites'
 import { Stats } from './StatsView'
 import { Calendar } from './CalendarView'
+import { loadAccuracy, rate, recordAnswer, saveAccuracy } from './accuracy'
 import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
@@ -124,6 +125,7 @@ function App() {
   })
   useEffect(() => saveHistory(history), [history])
 
+  const [accuracy, setAccuracy] = usePersistent(loadAccuracy, saveAccuracy)
   const [timeLog, setTimeLog] = usePersistent(loadTime, saveTime)
   useStudyTime(setTimeLog, today)
 
@@ -170,6 +172,7 @@ function App() {
 
   function onAnswer(correct: boolean, xp: number, wordId: string, source: Source) {
     studied(correct)
+    setAccuracy((a) => recordAnswer(a, today, source, correct))
     if (correct && source === 'ear') count('ear')
     if (!correct) setMistakes((m) => addMistake(m, wordId))
     if (correct && xp > 0) gainXp(xp, source)
@@ -339,6 +342,7 @@ function App() {
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today, easy) })
     studied(correct)
+    setAccuracy((a) => recordAnswer(a, today, 'card', correct))
     if (correct) count('cardGood')
     if (!correct) setMistakes((m) => addMistake(m, card.id))
     gainXp(correct ? XP_CARD_GOOD : XP_CARD_AGAIN, 'card')
@@ -468,6 +472,12 @@ function App() {
             calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
             minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
             bestCombo={totals.bestCombo ?? 0}
+            accuracy={{
+              today: accuracy.day === today ? rate(accuracy.today) : null,
+              card: rate(accuracy.by.card),
+              quiz: rate(accuracy.by.quiz),
+              ear: rate(accuracy.by.ear),
+            }}
             byLevel={LEVELS.map((l) => {
               const ws = wordsOf([l])
               return { level: l, learned: ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length, total: ws.length }

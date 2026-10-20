@@ -20,13 +20,14 @@ type Props = {
   calendar?: ReactNode
   minutes?: [number, number] // 今日・この7日の学習時間（分）
   bestCombo?: number
+  accuracy?: { today: number | null; card: number | null; quiz: number | null; ear: number | null }
   byLevel?: { level: string; learned: number; total: number }[]
   onReviewFav?: () => void
   onReviewFavCards?: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, minutes, bestCombo = 0, byLevel = [], children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, minutes, bestCombo = 0, byLevel = [], accuracy, children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -52,6 +53,18 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
           ⏳ 学習時間：今日 <strong>{minutes[0]}分</strong>・この7日 <strong>{minutes[1]}分</strong>
           <br />
           🔥 コンボの自己ベスト：<strong>{bestCombo}</strong>
+        </p>
+      )}
+      {accuracy && (
+        <p className="study-time">
+          🎯 今日の正答率：<strong>{accuracy.today ?? '―'}{accuracy.today !== null && '%'}</strong>
+          <br />
+          <span className="stats-note">
+            これまで：カード {accuracy.card ?? '―'}
+            {accuracy.card !== null && '%'}・クイズ {accuracy.quiz ?? '―'}
+            {accuracy.quiz !== null && '%'}・リスニング/スペル {accuracy.ear ?? '―'}
+            {accuracy.ear !== null && '%'}
+          </span>
         </p>
       )}
       <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={total} aria-valuenow={learned}>
