@@ -1,7 +1,7 @@
 // えいたん Service Worker：アプリ本体をキャッシュしてオフラインでも使えるようにする。
 // ページ（HTML）はネット優先・失敗したらキャッシュ、その他のファイルはキャッシュ優先。
-const CACHE = 'eitan-v1'
-const CORE = ['./', './index.html', './manifest.webmanifest', './favicon.svg']
+const CACHE = 'eitan-v2'
+const CORE = ['./', './index.html', './manifest.webmanifest', './favicon.svg', './icon-192.png', './apple-touch-icon.png']
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting()))
