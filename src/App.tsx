@@ -110,6 +110,11 @@ function saveReviewDone(day: string) {
   }
 }
 
+// 単語帳の定着率（箱3以上の割合）
+function learnedPct(ws: { id: string }[], progress: Record<string, { box: number } | undefined>): number {
+  return ws.length ? Math.round((ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length / ws.length) * 100) : 0
+}
+
 function saveLucky(day: string) {
   try {
     localStorage.setItem('eitan:lucky', day)
@@ -554,6 +559,7 @@ function App() {
                 {LEVELS.map((l) => (
                   <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
                     {l}
+                    <small className="level-pct" aria-hidden="true"> {learnedPct(wordsOf([l]), progress)}%</small>
                   </button>
                 ))}
                 {myWords.length > 0 && (

@@ -544,6 +544,14 @@ describe('App', () => {
     expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
   })
 
+  it('単語帳ボタンに定着率が出る', () => {
+    const p = Object.fromEntries(wordsOf(['曜日・月']).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
+    localStorage.setItem('eitan:progress', JSON.stringify(p))
+    render(<App />)
+    fireEvent.click(screen.getByText(/📚 単語帳：/))
+    expect(screen.getByRole('group', { name: '単語帳' }).textContent).toContain('曜日・月 100%')
+  })
+
   it('ハロウィンの期間はイベントのバナーが出る', () => {
     vi.setSystemTime(new Date(2026, 9, 27, 10))
     render(<App />)

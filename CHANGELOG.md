@@ -293,3 +293,4 @@
 - 2026-10-20: 中1の単語を20語追加（ask・take・listen・wear など基本動詞）
 - 2026-10-20: 中2の単語を20語追加（cross・follow・promise・repair など）
 - 2026-10-20: 中3の単語を20語追加（apologize・comfortable・confident など、全1015語）
+- 2026-10-20: 単語帳を選ぶボタンに、その単語帳の定着率（%）を出すようにした
