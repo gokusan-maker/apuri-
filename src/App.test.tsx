@@ -741,6 +741,14 @@ describe('App', () => {
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
   })
 
+  it('はじめての案内から「レベル診断で決める」でレベル診断が始まる', () => {
+    localStorage.removeItem('eitan:onboarded')
+    render(<App />)
+    fireEvent.click(screen.getByText('つぎへ'))
+    fireEvent.click(screen.getByText(/レベル診断で決める/))
+    expect(screen.getByText(/問目（レベル診断）/)).toBeInTheDocument()
+  })
+
   it('設定画面に見出しがある', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))

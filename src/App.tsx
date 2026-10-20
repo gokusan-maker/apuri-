@@ -1004,7 +1004,19 @@ function App() {
           </div>
         </div>
       )}
-      {!onboarded && <Onboarding onDone={() => setOnboarded(true)} onGrade={setLevels} />}
+      {!onboarded && <Onboarding
+          onDone={() => setOnboarded(true)}
+          onGrade={setLevels}
+          onPlacement={() => {
+            try {
+              localStorage.setItem('eitan:quiz-mode', 'placement')
+            } catch {
+              // ストレージが使えない環境では保存をあきらめる
+            }
+            setOnboarded(true)
+            setMode('quiz')
+          }}
+        />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
         <Evolve form={FORMS.find((f) => f.id === evoForm)!} wear={monster.wear} onClose={() => setEvoForm(null)} />
       )}

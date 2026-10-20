@@ -19,7 +19,7 @@ const STEPS = [
   },
 ]
 
-export function Onboarding({ onDone, onGrade }: { onDone: () => void; onGrade?: (levels: Level[]) => void }) {
+export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => void; onGrade?: (levels: Level[]) => void; onPlacement?: () => void }) {
   const [step, setStep] = useState(0)
   const [grade, setGrade] = useState<string | null>(null)
   const s = STEPS[step]
@@ -47,6 +47,11 @@ export function Onboarding({ onDone, onGrade }: { onDone: () => void; onGrade?: 
                 {g.label}
               </button>
             ))}
+            {onPlacement && (
+              <button className="list-link" onClick={onPlacement}>
+                📋 わからないときは、レベル診断で決める
+              </button>
+            )}
           </div>
         )}
         <p className="onboarding-dots" aria-hidden="true">
