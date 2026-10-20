@@ -60,3 +60,14 @@ it('めくったあと右にスワイプすると「覚えた」', () => {
   fireEvent.pointerUp(card, { clientX: 50, clientY: 0 })
   expect(answers).toEqual([true, false])
 })
+
+it('キーボード：スペースでめくって、→で覚えた、←でまだ', () => {
+  const answers: boolean[] = []
+  render(<Card card={WORDS[0]} onAnswer={(c) => answers.push(c)} />)
+  fireEvent.keyDown(window, { key: ' ' })
+  expect(screen.getByText(WORDS[0].ja)).toBeInTheDocument()
+  fireEvent.keyDown(window, { key: 'ArrowRight' })
+  fireEvent.keyDown(window, { key: ' ' })
+  fireEvent.keyDown(window, { key: 'ArrowLeft' })
+  expect(answers).toEqual([true, false])
+})

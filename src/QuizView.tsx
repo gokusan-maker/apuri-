@@ -4,6 +4,7 @@ import { quizXp, type Source } from './monster'
 import { makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
+import { useKeys } from './useKeys'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
 import { Grammar } from './GrammarView'
@@ -67,6 +68,21 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count = 10,
   const [lastXp, setLastXp] = useState(0)
 
   const q = questions[index]
+
+  // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'blank'].includes(direction)
+  useKeys((key) => {
+    if (!fourChoice || !q) return
+    const n = Number(key)
+    if (picked === null && n >= 1 && n <= q.choices.length) {
+      pick(n - 1)
+      return true
+    }
+    if (picked !== null && key === 'Enter') {
+      next()
+      return true
+    }
+  })
 
   // リスニングは問題が変わるたびに自動で読み上げる
   useEffect(() => {

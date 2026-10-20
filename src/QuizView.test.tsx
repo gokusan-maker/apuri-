@@ -141,3 +141,15 @@ it('🔁 不規則動詞ドリルで活用を答えられる', () => {
   expect(screen.getByText('正解！')).toBeInTheDocument()
   expect(screen.getByText(`${v.base} – ${v.past} – ${v.pp}`)).toBeInTheDocument()
 })
+
+it('キーボード：数字キーで選び、Enter で次へ', () => {
+  const words = WORDS.slice(0, 8)
+  render(<Quiz words={words} count={2} />)
+  const en = document.querySelector('.quiz .en')!.textContent
+  const w = words.find((x) => x.en === en)!
+  const idx = [...document.querySelectorAll('.choice')].findIndex((b) => b.textContent === w.ja)
+  fireEvent.keyDown(window, { key: String(idx + 1) })
+  expect(screen.getByText(/正解！/)).toBeInTheDocument()
+  fireEvent.keyDown(window, { key: 'Enter' })
+  expect(screen.getByText(/^2 \/ 2/)).toBeInTheDocument()
+})

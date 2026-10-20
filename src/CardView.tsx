@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type PointerEvent } from 'react'
 import { speak } from './speech'
 import { swipeResult } from './swipe'
+import { useKeys } from './useKeys'
 import type { Word } from './words'
 
 type Props = {
@@ -21,6 +22,23 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false }: Pro
   useEffect(() => {
     if (autoSpeak && englishShown && card) speak(card.en)
   }, [autoSpeak, englishShown, card])
+
+  // スペースでめくる、めくったあとは →／Enter で「覚えた」、← で「まだ」
+  useKeys((key) => {
+    if (!card) return
+    if (!flipped && (key === ' ' || key === 'Enter')) {
+      setFlipped(true)
+      return true
+    }
+    if (flipped && (key === 'ArrowRight' || key === 'Enter')) {
+      answer(true)
+      return true
+    }
+    if (flipped && key === 'ArrowLeft') {
+      answer(false)
+      return true
+    }
+  })
 
   if (!card) return <p className="done">今日の学習は完了です 🎉 また明日！</p>
 
