@@ -486,3 +486,10 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .boss-svg.hit { animation: none; }
 }
+
+.coins { margin-left: 8px; padding: 0 8px; border: 1px solid #f59e0b; border-radius: 999px; background: transparent; color: #b45309; font-size: 0.8rem; font-weight: 700; }
+.shop { text-align: left; }
+.shop h2 { margin: 4px 0 4px; font-size: 1.2rem; }
+.shop-preview { width: 120px; height: 120px; margin: 0 auto 8px; }
+.shop-btn { margin-top: 4px; padding: 4px 8px; border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); font-size: 0.75rem; }
+.shop-btn:disabled { opacity: 0.4; }

@@ -10,6 +10,7 @@ export type MonsterState = {
   branch?: Source // Lv15 で決まった進化の系統
   seen?: string[] // 出会った姿（図鑑）
   name?: string // 自分でつけた名前
+  wear?: string // 着ている飾り（ショップのアイテムid）
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -52,6 +53,7 @@ export function loadMonster(): MonsterState {
     if (m?.branch && SOURCES.includes(m.branch)) out.branch = m.branch
     if (Array.isArray(m?.seen)) out.seen = m.seen.filter((x): x is string => typeof x === 'string')
     if (typeof m?.name === 'string' && m.name) out.name = cleanName(m.name)
+    if (typeof m?.wear === 'string') out.wear = m.wear
     return out
   } catch {
     return { xp: 0 }

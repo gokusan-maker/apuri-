@@ -40,6 +40,8 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages } from './StageView'
+import { buy, COIN_PER_CORRECT, loadWallet, saveWallet } from './shop'
+import { Shop } from './ShopView'
 import { BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
@@ -101,12 +103,15 @@ function App() {
   const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
 
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
+  const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
+  const [showShop, setShowShop] = useState(false)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
 
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
   function studied(correct: boolean) {
     count('answers')
     if (correct) count('correct')
+    if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
     setStreak(recordStudy(streak, today))
     const next = addToday(todayCount, today)
     setTodayCount(next)
@@ -243,6 +248,8 @@ function App() {
         <Monster
           monster={monster}
           onRename={(name) => setMonster(rename(monster, name))}
+          coins={wallet.coins}
+          onShop={() => setShowShop(true)}
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}
@@ -272,7 +279,18 @@ function App() {
         )}
       </header>
 
-      {mode === 'stage' ? (
+      {showShop ? (
+        <Shop
+          wallet={wallet}
+          monster={monster}
+          onBuy={(id) => {
+            const next = buy(wallet, id)
+            if (next) setWallet(next)
+          }}
+          onWear={(id) => setMonster({ ...monster, wear: id })}
+          onClose={() => setShowShop(false)}
+        />
+      ) : mode === 'stage' ? (
         <Stages
           levels={levels}
           boss={boss}
@@ -393,7 +411,14 @@ function App() {
 
       <nav className="tabbar" aria-label="画面の切り替え">
         {TABS.map((t) => (
-          <button key={t.id} aria-current={mode === t.id ? 'page' : undefined} onClick={() => setMode(t.id)}>
+          <button
+            key={t.id}
+            aria-current={mode === t.id && !showShop ? 'page' : undefined}
+            onClick={() => {
+              setMode(t.id)
+              setShowShop(false)
+            }}
+          >
             <span className="tab-icon" aria-hidden="true">
               {t.icon}
             </span>

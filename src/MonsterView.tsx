@@ -7,6 +7,8 @@ type Mood = 'normal' | 'happy' | 'lonely'
 type Props = {
   monster: MonsterState
   onRename?: (name: string) => void
+  coins?: number
+  onShop?: () => void
   mood?: Mood
   leveledUp?: boolean
   evolved?: boolean
@@ -39,7 +41,66 @@ function Face({ mood }: { mood: Mood }) {
   )
 }
 
-export function MonsterFigure({ form, mood = 'normal', hidden = false }: { form: Form; mood?: Mood; hidden?: boolean }) {
+// 飾り（タマゴのときは着られない）
+export function Wear({ id }: { id?: string }) {
+  switch (id) {
+    case 'ribbon':
+      return <path d="M62 30 L54 22 L54 38 Z M62 30 L70 22 L70 38 Z" fill="#f472b6" stroke="#9d174d" strokeWidth="2" />
+    case 'glasses':
+      return (
+        <g fill="none" stroke="#1f2937" strokeWidth="2.5">
+          <circle cx="38" cy="56" r="9" />
+          <circle cx="62" cy="56" r="9" />
+          <path d="M47 56 L53 56" />
+        </g>
+      )
+    case 'scarf':
+      return (
+        <g fill="#ef4444" stroke="#991b1b" strokeWidth="2">
+          <path d="M20 76 Q50 86 80 76 L80 82 Q50 92 20 82 Z" />
+          <path d="M62 84 L66 98 L74 96 L70 82 Z" />
+        </g>
+      )
+    case 'hat':
+      return (
+        <g fill="#1f2937" stroke="#000" strokeWidth="1.5">
+          <rect x="32" y="22" width="36" height="6" rx="2" />
+          <rect x="38" y="4" width="24" height="20" rx="2" />
+          <rect x="38" y="17" width="24" height="4" fill="#dc2626" />
+        </g>
+      )
+    case 'flower':
+      return (
+        <g stroke="#a16207" strokeWidth="1">
+          {[30, 40, 50, 60, 70].map((x, i) => (
+            <circle key={x} cx={x} cy={i % 2 ? 26 : 30} r="5" fill={i % 2 ? '#fde047' : '#f9a8d4'} />
+          ))}
+        </g>
+      )
+    case 'headphones':
+      return (
+        <g>
+          <path d="M18 56 Q18 18 50 18 Q82 18 82 56" fill="none" stroke="#1f2937" strokeWidth="4" />
+          <rect x="10" y="50" width="12" height="18" rx="5" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
+          <rect x="78" y="50" width="12" height="18" rx="5" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
+        </g>
+      )
+    default:
+      return null
+  }
+}
+
+export function MonsterFigure({
+  form,
+  mood = 'normal',
+  hidden = false,
+  wear,
+}: {
+  form: Form
+  mood?: Mood
+  hidden?: boolean
+  wear?: string
+}) {
   const fill = hidden ? '#9ca3af' : form.color
   const line = hidden ? '#6b7280' : form.line
   if (form.stage === 0) {
@@ -74,11 +135,12 @@ export function MonsterFigure({ form, mood = 'normal', hidden = false }: { form:
       {form.branch === 'quiz' && <path d="M54 2 L40 22 L50 22 L44 34 L62 14 L52 14 Z" fill="#facc15" stroke="#a16207" strokeWidth="2" />}
       {form.stage >= 4 && <path d="M30 34 L33 24 L40 30 L50 20 L60 30 L67 24 L70 34 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="2" />}
       {hidden ? <text x="50" y="66" textAnchor="middle" fontSize="22" fill="#f3f4f6">？</text> : <Face mood={mood} />}
+      {!hidden && <Wear id={wear} />}
     </svg>
   )
 }
 
-export function Monster({ monster, onRename, mood = 'normal', leveledUp = false, evolved = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, mood = 'normal', leveledUp = false, evolved = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const { level, into, need } = levelInfo(monster.xp)
@@ -87,7 +149,7 @@ export function Monster({ monster, onRename, mood = 'normal', leveledUp = false,
   return (
     <section className="monster" aria-label="相棒モンスター">
       <div className={`monster-body${cls}${evolved ? ' evolve' : ''}`}>
-        <MonsterFigure form={form} mood={mood} />
+        <MonsterFigure form={form} mood={mood} wear={monster.wear} />
       </div>
       <div className="monster-info">
         {editing ? (
@@ -139,6 +201,11 @@ export function Monster({ monster, onRename, mood = 'normal', leveledUp = false,
         </div>
         <p className="xp-text">
           XP {into} / {need}
+          {coins !== undefined && (
+            <button className="coins" onClick={onShop} aria-label={`コイン ${coins}枚・ショップを開く`}>
+              🪙 {coins}
+            </button>
+          )}
         </p>
         {evolved ? (
           <p className="level-up">{form.stage === 1 ? 'タマゴがかえった！' : `${form.name}に進化した！`}</p>
@@ -188,7 +255,7 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
             <li key={i} className={active ? 'got active' : 'got'}>
               <button className="party-pick" onClick={() => onSelect(i)} aria-pressed={active}>
                 <span className="zukan-figure">
-                  <MonsterFigure form={f} />
+                  <MonsterFigure form={f} wear={m.wear} />
                 </span>
                 <span className="badge-name">{m.name ?? f.name}</span>
                 <span className="badge-desc">{active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}</span>
