@@ -493,3 +493,6 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .shop-preview { width: 120px; height: 120px; margin: 0 auto 8px; }
 .shop-btn { margin-top: 4px; padding: 4px 8px; border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); font-size: 0.75rem; }
 .shop-btn:disabled { opacity: 0.4; }
+.onboarding-figure { width: 96px; height: 96px; margin: 0 auto; }
+.onboarding-dots { color: var(--accent); margin: 8px 0; letter-spacing: 4px; }
+.skip { margin-top: 8px; border: none; background: transparent; color: var(--muted); }

@@ -6,7 +6,10 @@ import { missionsFor } from './missions'
 import { WORDS, wordsOf } from './words'
 
 describe('App', () => {
-  beforeEach(() => localStorage.clear())
+  beforeEach(() => {
+    localStorage.clear()
+    localStorage.setItem('eitan:onboarded', '1') // 初回の案内は別のテストで確認
+  })
 
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
@@ -288,5 +291,25 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].wear).toBeUndefined()
     fireEvent.click(screen.getByText('← もどる'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
+  })
+
+  it('はじめての人には3ステップの案内が出て、終わると二度と出ない', () => {
+    localStorage.removeItem('eitan:onboarded')
+    const { unmount } = render(<App />)
+    expect(screen.getByText('えいたんへようこそ！')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('つぎへ'))
+    fireEvent.click(screen.getByText('つぎへ'))
+    fireEvent.click(screen.getByText('タマゴを受け取る 🥚'))
+    expect(screen.queryByRole('dialog', { name: 'はじめての案内' })).not.toBeInTheDocument()
+    unmount()
+    render(<App />)
+    expect(screen.queryByText('えいたんへようこそ！')).not.toBeInTheDocument()
+  })
+
+  it('すでに学習データがある人には案内を出さない', () => {
+    localStorage.removeItem('eitan:onboarded')
+    localStorage.setItem('eitan:progress', '{"apple":{"box":1,"due":"2026-10-21"}}')
+    render(<App />)
+    expect(screen.queryByText('えいたんへようこそ！')).not.toBeInTheDocument()
   })
 })

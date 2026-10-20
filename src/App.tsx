@@ -42,6 +42,8 @@ import { loadStages, recordStars, saveStages } from './stages'
 import { Stages } from './StageView'
 import { buy, COIN_PER_CORRECT, loadWallet, saveWallet } from './shop'
 import { Shop } from './ShopView'
+import { Onboarding } from './OnboardingView'
+import { loadOnboarded, saveOnboarded } from './onboarding'
 import { BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
@@ -105,6 +107,7 @@ function App() {
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [showShop, setShowShop] = useState(false)
+  const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
 
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
@@ -407,6 +410,7 @@ function App() {
           </div>
         </div>
       )}
+      {!onboarded && <Onboarding onDone={() => setOnboarded(true)} />}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">
