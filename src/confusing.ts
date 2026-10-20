@@ -212,4 +212,74 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Can I ___ to you for a minute?', choices: ['speak', 'tell'], answer: 0, why: '「ちょっと話してもいい？」は speak to you（talk to you でも可）。tell は後ろに人＋内容が必要。' },
     ],
   },
+  {
+    id: 'teach-learn',
+    title: 'teach と learn',
+    points: ['teach は「教える」（相手に知識をわたす）。learn は「学ぶ・身につける」（自分が受け取る）。'],
+    examples: [
+      { en: 'My aunt teaches English.', ja: 'おばは英語を教えている。' },
+      { en: 'I learned how to swim last summer.', ja: '去年の夏に泳ぎ方を覚えた。' },
+    ],
+    questions: [
+      { sentence: 'Mr. Sato ___ us math.', choices: ['teaches', 'learns'], answer: 0, why: '私たちに「教える」ので teach。' },
+      { sentence: 'I want to ___ Spanish.', choices: ['teach', 'learn'], answer: 1, why: '自分が「学びたい」ので learn。' },
+      { sentence: 'Can you ___ me this game?', choices: ['teach', 'learn'], answer: 0, why: '「私に教えて」なので teach me。' },
+    ],
+  },
+  {
+    id: 'during-while',
+    title: 'during と while',
+    points: ['during のあとは名詞（the summer など）。while のあとは「主語＋動詞」の文が続く。どちらも「〜の間」。'],
+    examples: [
+      { en: 'I visited Kyoto during the summer.', ja: '夏の間に京都を訪れた。' },
+      { en: 'I listen to music while I study.', ja: '勉強している間、音楽を聞く。' },
+    ],
+    questions: [
+      { sentence: 'Please be quiet ___ the movie.', choices: ['during', 'while'], answer: 0, why: 'the movie は名詞なので during。' },
+      { sentence: 'He called me ___ I was eating dinner.', choices: ['during', 'while'], answer: 1, why: 'あとに I was eating（主語＋動詞）が続くので while。' },
+      { sentence: 'We sang songs ___ the bus trip.', choices: ['during', 'while'], answer: 0, why: 'the bus trip は名詞なので during。' },
+    ],
+  },
+  {
+    id: 'already-yet',
+    title: 'already と yet',
+    points: ['already は肯定文で「もう・すでに」。yet は疑問文で「もう」、否定文で「まだ（〜ない）」。yet はふつう文の最後に置く。'],
+    examples: [
+      { en: 'I have already finished my homework.', ja: 'もう宿題を終えた。' },
+      { en: 'Have you eaten lunch yet?', ja: 'もうお昼を食べた？' },
+    ],
+    questions: [
+      { sentence: 'The train has ___ left.', choices: ['already', 'yet'], answer: 0, why: '肯定文の「もう」なので already。' },
+      { sentence: 'I haven\'t read the letter ___.', choices: ['already', 'yet'], answer: 1, why: '否定文の「まだ〜ない」なので yet。' },
+      { sentence: 'Has the movie started ___?', choices: ['already', 'yet'], answer: 1, why: '疑問文の文末の「もう」なので yet。' },
+    ],
+  },
+  {
+    id: 'by-until',
+    title: 'by と until',
+    points: ['by は「〜までに」（その時までに1回やればよい・しめきり）。until は「〜まで（ずっと）」（その時まで続く）。'],
+    examples: [
+      { en: 'Please come back by five.', ja: '5時までに帰ってきてね。' },
+      { en: 'I waited for her until five.', ja: '5時まで彼女を待った。' },
+    ],
+    questions: [
+      { sentence: 'Finish the report ___ Friday.', choices: ['by', 'until'], answer: 0, why: '金曜日「までに」終える（しめきり）なので by。' },
+      { sentence: 'The shop is open ___ nine tonight.', choices: ['by', 'until'], answer: 1, why: '夜9時「まで（ずっと）」開いているので until。' },
+      { sentence: 'We played soccer ___ it got dark.', choices: ['by', 'until'], answer: 1, why: '暗くなる「まで」続けたので until。' },
+    ],
+  },
+  {
+    id: 'win-beat',
+    title: 'win と beat',
+    points: ['win のあとは試合・賞（the game, a prize）。beat のあとは相手（チーム・人）。「相手に勝つ」は beat。'],
+    examples: [
+      { en: 'Our team won the game.', ja: '私たちのチームは試合に勝った。' },
+      { en: 'Our team beat the Tigers.', ja: '私たちのチームはタイガースに勝った。' },
+    ],
+    questions: [
+      { sentence: 'She ___ first prize in the contest.', choices: ['won', 'beat'], answer: 0, why: '賞を「勝ち取った」ので win（過去形 won）。' },
+      { sentence: 'I ___ my brother at chess.', choices: ['won', 'beat'], answer: 1, why: '相手（兄）に勝ったので beat。' },
+      { sentence: 'Do you think we can ___ the match?', choices: ['win', 'beat'], answer: 0, why: '試合（the match）に勝つので win。' },
+    ],
+  },
 ]
