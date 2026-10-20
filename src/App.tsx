@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { Monster } from './Monster'
+import { Monster } from './MonsterView'
 import {
   isLonely,
   levelInfo,
@@ -19,7 +19,8 @@ import {
   saveProgress,
   type ProgressMap,
 } from './srs'
-import { Quiz } from './Quiz'
+import { Quiz } from './QuizView'
+import { TimeAttack } from './TimeAttackView'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { WORDS } from './words'
 
@@ -34,7 +35,7 @@ function speak(text: string) {
 function App() {
   const [progress, setProgress] = useState<ProgressMap>(loadProgress)
   const [flipped, setFlipped] = useState(false)
-  const [mode, setMode] = useState<'card' | 'quiz'>('card')
+  const [mode, setMode] = useState<'card' | 'quiz' | 'time'>('card')
   const today = dayKey()
   const [daily, setDaily] = useState(() => loadDailyNew(today))
   const newToday = daily.day === today ? daily.count : 0
@@ -107,11 +108,16 @@ function App() {
           <button aria-pressed={mode === 'quiz'} onClick={() => setMode('quiz')}>
             クイズ
           </button>
+          <button aria-pressed={mode === 'time'} onClick={() => setMode('time')}>
+            タイムアタック
+          </button>
         </nav>
       </header>
 
       {mode === 'quiz' ? (
         <Quiz words={WORDS} onCorrect={gainXp} />
+      ) : mode === 'time' ? (
+        <TimeAttack words={WORDS} onCorrect={gainXp} />
       ) : card ? (
         <section className="card" aria-live="polite">
           <p className="en">{card.en}</p>

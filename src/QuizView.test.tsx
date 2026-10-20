@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { Quiz } from './Quiz'
+import { Quiz } from './QuizView'
 import { WORDS } from './words'
 
 describe('Quiz', () => {

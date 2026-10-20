@@ -149,3 +149,15 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .top { display: flex; align-items: center; justify-content: space-between; }
 .streak { margin: 0; font-weight: 700; color: var(--muted); filter: grayscale(1); }
 .streak.on { color: #f97316; filter: none; }
+
+.modes button { font-size: 0.9rem; white-space: nowrap; }
+.best { color: var(--muted); margin: 0 0 8px; }
+.ta-head { display: flex; justify-content: space-between; font-weight: 700; }
+.timer.hurry { color: var(--again); animation: pop 0.5s infinite; }
+.timer-bar { height: 6px; border-radius: 999px; background: var(--bg); overflow: hidden; margin: 8px 0 12px; }
+.timer-fill { height: 100%; background: var(--accent); transition: width 1s linear; }
+.quiz.flash-ok { box-shadow: 0 0 0 3px #16a34a inset; }
+.quiz.flash-ng { box-shadow: 0 0 0 3px var(--again) inset; }
+@media (prefers-reduced-motion: reduce) {
+  .timer.hurry { animation: none; }
+}

@@ -47,3 +47,12 @@ export function makeQuiz<T extends { id: string }>(
     .slice(0, count)
     .map((w) => makeQuestion(w, all, label, rng))
 }
+
+// ランダムな1問（タイムアタック用）
+export function randomQuestion<T extends { id: string }>(
+  all: T[],
+  label: (w: T) => string,
+  rng: Rng = Math.random,
+): Question<T> {
+  return makeQuestion(all[Math.floor(rng() * all.length)], all, label, rng)
+}

@@ -14,6 +14,7 @@
 - `src/words.ts` 単語データ
 - `src/srs.ts` 間隔反復（ライトナー方式）と保存
 - `src/App.tsx` 画面
+- 画面部品は `src/XxxView.tsx`、ロジックは小文字の `src/xxx.ts`（大文字小文字だけ違うファイル名は Windows/Mac で衝突するので作らない）
 
 ## 自動開発のルール（定期実行セッション向け）
 
