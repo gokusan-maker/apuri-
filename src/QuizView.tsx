@@ -12,6 +12,7 @@ import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
+import { Reading } from './ReadingView'
 import { WORDS, type Word } from './words'
 
 // listen：音声だけ聞いて日本語の意味を選ぶ
@@ -27,7 +28,8 @@ import { WORDS, type Word } from './words'
 // read：例文の音読（音声認識が使える端末のみ表示）
 // timed：1問10秒の英→日。早いほどボーナス
 // rival：ライバルと早押し
-export type Direction = 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// reading：読解ミニ
+export type Direction = 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -70,6 +72,7 @@ const DIRECTIONS: { id: Direction; label: string }[] = [
   { id: 'order', label: '🔀 並べ替え' },
   { id: 'irregular', label: '🔁 不規則動詞' },
   { id: 'grammar', label: '📖 文法' },
+  { id: 'reading', label: '📰 読解' },
   { id: 'speak', label: '🎤 発音' },
   { id: 'read', label: '📢 音読' },
 ]
@@ -254,6 +257,15 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
       <>
         <div className="card-tabs">{toggle}</div>
         <Grammar onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'reading') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Reading onAnswer={onAnswer} />
       </>
     )
   }

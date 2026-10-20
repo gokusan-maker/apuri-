@@ -647,3 +647,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .rival-cpu { color: #7c3aed; }
 .weekend { margin: 0 0 4px; text-align: center; font-size: 0.85rem; font-weight: 700; color: #f97316; }
 .title-badge { margin: -4px 0 4px; font-size: 0.75rem; color: #b45309; font-weight: 700; }
+.reading-text { font-size: 1.1rem; line-height: 1.7; margin: 8px 0; }
+.reading-q { font-weight: 700; margin: 12px 0 0; }
+.reading .choices .choice { text-align: left; }
