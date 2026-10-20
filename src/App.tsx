@@ -442,6 +442,10 @@ function App() {
             calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}
             minutes={[minutesToday(timeLog, today), minutesWeek(timeLog, today)]}
             bestCombo={totals.bestCombo ?? 0}
+            byLevel={LEVELS.map((l) => {
+              const ws = wordsOf([l])
+              return { level: l, learned: ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length, total: ws.length }
+            })}
             onReviewFav={() => startQuiz('fav')}
             onReviewFavCards={() => startCards('fav')}
             schedule={upcoming(progress, today, 7, new Set(words.map((w) => w.id)))}

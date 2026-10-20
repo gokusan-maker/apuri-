@@ -20,12 +20,13 @@ type Props = {
   calendar?: ReactNode
   minutes?: [number, number] // 今日・この7日の学習時間（分）
   bestCombo?: number
+  byLevel?: { level: string; learned: number; total: number }[]
   onReviewFav?: () => void
   onReviewFavCards?: () => void
   children?: ReactNode // 記録画面の下に並べる部品（マイ単語帳・バッジ・図鑑など）
 }
 
-export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, minutes, bestCombo = 0, children }: Props) {
+export function Stats({ streakDays, studiedToday, learned, total, week, goal, weak, mistakes, onReviewWeak, onReviewWeakCards, schedule, favorites = [], onReviewFav, onReviewFavCards, calendar, minutes, bestCombo = 0, byLevel = [], children }: Props) {
   return (
     <section className="card stats-view">
       <h2>記録</h2>
@@ -56,6 +57,22 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
       <div className="xp-bar" role="progressbar" aria-label="定着の割合" aria-valuemin={0} aria-valuemax={total} aria-valuenow={learned}>
         <div className="xp-fill" style={{ width: `${(learned / total) * 100}%` }} />
       </div>
+      {byLevel.length > 0 && (
+        <div className="by-level">
+          <h2>単語帳ごとの定着</h2>
+          {byLevel.map((b) => (
+            <div key={b.level} className="by-level-row">
+              <span className="by-level-name">{b.level}</span>
+              <div className="goal-bar" role="progressbar" aria-label={`${b.level}の定着`} aria-valuemin={0} aria-valuemax={b.total} aria-valuenow={b.learned}>
+                <div className="goal-fill" style={{ width: `${(b.learned / b.total) * 100}%` }} />
+              </div>
+              <span className="by-level-num">
+                {b.learned}/{b.total}
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
       <WeekChart days={week} goal={goal} />
       {calendar}
       <h2>復習の予定</h2>

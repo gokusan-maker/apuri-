@@ -448,4 +448,11 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(50)
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(61)
   })
+
+  it('記録画面に単語帳ごとの定着が出る', () => {
+    localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[0].id]: { box: 3, due: '2099-01-01' } }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByLabelText('中1の定着')).toHaveAttribute('aria-valuenow', '1')
+  })
 })
