@@ -357,3 +357,10 @@ it('新しく増えた種類は、遊ぶまで NEW マークが出る', () => {
   expect(JSON.parse(localStorage.getItem('eitan:played-modes')!)).toContain('emoji')
 })
 
+
+it('かんたんモードでは選択肢が3つ', () => {
+  localStorage.setItem('eitan:settings', JSON.stringify({ easy: true }))
+  render(<Quiz words={WORDS.slice(0, 10)} direction="en-ja" />)
+  expect(document.querySelectorAll('.choice')).toHaveLength(3)
+  localStorage.removeItem('eitan:settings')
+})

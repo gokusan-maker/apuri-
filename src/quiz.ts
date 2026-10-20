@@ -58,3 +58,13 @@ export function randomQuestion<T extends { id: string }>(
 ): Question<T> {
   return makeQuestion(all[Math.floor(rng() * all.length)], all, label, rng)
 }
+
+// かんたんモード：まちがいの選択肢を減らして n 個にする
+export function trimChoices<T extends { id: string }>(q: Question<T>, n: number, rng: Rng = Math.random): Question<T> {
+  if (q.choices.length <= n) return q
+  const correct = q.choices[q.answer]
+  const wrong = shuffle(q.choices.filter((_, i) => i !== q.answer), rng).slice(0, n - 1)
+  const keep = new Set([correct, ...wrong])
+  const choices = q.choices.filter((c) => keep.has(c))
+  return { ...q, choices, answer: choices.indexOf(correct) }
+}

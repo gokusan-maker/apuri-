@@ -2,7 +2,8 @@ import { MissedList } from './MissedListView'
 import { useEffect, useState } from 'react'
 import { blankOut, canBlank } from './blank'
 import { quizXp, type Source } from './monster'
-import { makeQuestion, makeQuiz, shuffle, type Question } from './quiz'
+import { makeQuestion, makeQuiz, shuffle, trimChoices, type Question } from './quiz'
+import { loadSettings } from './settings'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { useKeys } from './useKeys'
@@ -73,6 +74,11 @@ type Q = Question<Word> & { d?: Direction } // d：ミックスのときのそ�
 const MIX: Direction[] = ['en-ja', 'ja-en', 'listen']
 
 function build(words: Word[], d: Direction, count: number, targets: Word[]): Q[] {
+  const qs = buildAll(words, d, count, targets)
+  return loadSettings().easy ? qs.map((q) => ({ ...trimChoices(q, 3), d: q.d })) : qs
+}
+
+function buildAll(words: Word[], d: Direction, count: number, targets: Word[]): Q[] {
   // 絵文字の逆：選択肢も絵文字のある単語から
   if (d === 'emoji-rev' || d === 'emoji-ear') return makeQuiz(WORDS.filter((w) => EMOJI[w.id]), label(d), count, Math.random, pool(d, targets, words))
   if (d !== 'mix') return makeQuiz(words, label(d), count, Math.random, pool(d, targets, words))

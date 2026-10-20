@@ -49,6 +49,7 @@ export type Settings = {
   randomNew: boolean // 新しい単語をランダムな順に出す
   testDate: string // 定期テストの日（YYYY-MM-DD、なしは空）
   reviewCap: number // 1日の復習の上限（0はなし）
+  easy: boolean // かんたんモード：4択クイズの選択肢を3つにする
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -77,6 +78,7 @@ export const DEFAULT_SETTINGS: Settings = {
   randomNew: false,
   testDate: '',
   reviewCap: 0,
+  easy: false,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -97,6 +99,7 @@ export function loadSettings(): Settings {
       color: THEME_COLORS.some((c) => c.id === v.color) ? (v.color as ThemeColor) : 'blue',
       hideExampleJa: v.hideExampleJa === true,
       randomNew: v.randomNew === true,
+      easy: v.easy === true,
       reviewCap: REVIEW_CAPS.includes(v.reviewCap as number) ? (v.reviewCap as number) : 0,
       testDate: typeof v.testDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.testDate) ? v.testDate : '',
     }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { makeQuestion, makeQuiz, shuffle } from './quiz'
+import { makeQuestion, makeQuiz, shuffle, trimChoices } from './quiz'
 import { WORDS } from './words'
 
 // 決まった並びを返す乱数（テスト用）
@@ -48,4 +48,14 @@ it('空の選択肢は作らない（例文のないマイ単語が混ざって�
     const q = makeQuestion(all[0], all, (w) => w.exampleJa)
     expect(q.choices.every((c) => c !== '')).toBe(true)
   }
+})
+
+describe('trimChoices', () => {
+  it('正解を残して選択肢を減らす', () => {
+    const q = { word: { id: 'a' }, choices: ['w', 'x', 'y', 'z'], answer: 2 }
+    const t = trimChoices(q, 3)
+    expect(t.choices).toHaveLength(3)
+    expect(t.choices[t.answer]).toBe('y')
+    expect(trimChoices(t, 3)).toBe(t)
+  })
 })

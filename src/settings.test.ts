@@ -28,7 +28,7 @@ describe('設定', () => {
 
   it('初期値と保存・読み込み、範囲外は初期値に戻す', () => {
     expect(loadSettings()).toEqual(DEFAULT_SETTINGS)
-    const s = { rate: 0.8, accent: 'en-GB', theme: 'dark', sound: false, dailyGoal: 30, autoSpeak: true, cardJaFirst: true, largeText: true, color: 'green', hideExampleJa: true, randomNew: true, testDate: '2026-12-01', reviewCap: 50 } as const
+    const s = { rate: 0.8, accent: 'en-GB', theme: 'dark', sound: false, dailyGoal: 30, autoSpeak: true, cardJaFirst: true, largeText: true, color: 'green', hideExampleJa: true, randomNew: true, testDate: '2026-12-01', reviewCap: 50, easy: true } as const
     saveSettings(s)
     expect(loadSettings()).toEqual(s)
     localStorage.setItem('eitan:settings', '{"rate":9,"accent":"fr","theme":"pink"}')

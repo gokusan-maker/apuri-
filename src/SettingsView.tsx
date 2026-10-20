@@ -154,6 +154,11 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       </label>
 
       <label className="setting toggle">
+        <span>かんたんモード（4択クイズの選択肢を3つに）</span>
+        <input type="checkbox" checked={settings.easy} onChange={(e) => set({ easy: e.target.checked })} />
+      </label>
+
+      <label className="setting toggle">
         <span>新しい単語をランダムな順に出す</span>
         <input type="checkbox" checked={settings.randomNew} onChange={(e) => set({ randomNew: e.target.checked })} />
       </label>
