@@ -348,12 +348,18 @@ export function Quiz({ words, targets, direction: initial = 'en-ja', count: coun
           <button className="listen" onClick={() => speak(q.word.example)} aria-label="もう一度聞く">
             🔊
           </button>
+          <button className="speak" onClick={() => speak(q.word.example, true)} aria-label="ゆっくり聞く">
+            🐢
+          </button>
           <p className="example listen-sentence">{picked !== null ? q.word.example : '例文を聞いて、意味を選ぼう'}</p>
         </>
       ) : qd === 'listen' ? (
         <>
           <button className="listen" onClick={() => speak(q.word.en)} aria-label="もう一度聞く">
             🔊
+          </button>
+          <button className="speak" onClick={() => speak(q.word.en, true)} aria-label="ゆっくり聞く">
+            🐢
           </button>
           <p className="en listen-word">{picked !== null ? q.word.en : '？'}</p>
         </>

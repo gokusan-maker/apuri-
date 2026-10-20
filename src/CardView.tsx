@@ -133,6 +133,9 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
           <button className="speak" onClick={() => speak(card.en)} aria-label="発音を聞く">
             🔊
           </button>
+          <button className="speak" onClick={() => speak(card.en, true)} aria-label="ゆっくり聞く">
+            🐢
+          </button>
         </>
       )}
       {flipped ? (

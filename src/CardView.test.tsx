@@ -92,3 +92,22 @@ it('例文の訳を隠す設定：タップで見える', () => {
   fireEvent.click(screen.getByText('訳を見る'))
   expect(screen.getByText(WORDS[0].exampleJa)).toBeInTheDocument()
 })
+
+it('🐢 でゆっくり発音する', () => {
+  const rates: number[] = []
+  Object.assign(window, {
+    SpeechSynthesisUtterance: class {
+      text: string
+      rate = 1
+      constructor(t: string) {
+        this.text = t
+      }
+    },
+    speechSynthesis: { cancel() {}, speak: (u: { rate: number }) => rates.push(u.rate), getVoices: () => [] },
+  })
+  render(<Card card={WORDS[0]} onAnswer={() => {}} />)
+  fireEvent.click(screen.getByLabelText('発音を聞く'))
+  fireEvent.click(screen.getByLabelText('ゆっくり聞く'))
+  expect(rates[0]).toBe(1)
+  expect(rates[1]).toBeLessThan(0.6)
+})
