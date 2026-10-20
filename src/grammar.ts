@@ -127,6 +127,62 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'I have ___ been to Hokkaido.', choices: ['never', 'yet', 'since'], answer: 0, why: '「一度も〜ない」は never。' },
     ],
   },
+  {
+    id: 'modal',
+    title: '助動詞（can / must / should）',
+    points: ['動詞の前に置いて意味を足す。助動詞のあとの動詞は必ず原形。', 'can「〜できる」、must「〜しなければならない」、should「〜したほうがいい」。'],
+    examples: [
+      { en: 'She can play the violin.', ja: '彼女はバイオリンをひくことができる。' },
+      { en: 'You should go to bed early.', ja: '早く寝たほうがいいよ。' },
+    ],
+    questions: [
+      { sentence: 'My brother can ___ very fast.', choices: ['swim', 'swims', 'swimming'], answer: 0, why: '助動詞 can のあとは原形 swim。' },
+      { sentence: 'You ___ wash your hands before lunch.', choices: ['must', 'are', 'do'], answer: 0, why: '「〜しなければならない」は must ＋ 原形。' },
+      { sentence: 'It is cold. You ___ wear a coat.', choices: ['should', 'can’t', 'were'], answer: 0, why: '「〜したほうがいい」は should。' },
+    ],
+  },
+  {
+    id: 'infinitive',
+    title: '不定詞（to ＋ 動詞の原形）',
+    points: ['to ＋ 原形 で「〜すること」「〜するために」「〜するための」を表す。', 'want to 〜「〜したい」、go 〜 to buy …「…を買いに行く」などでよく使う。'],
+    examples: [
+      { en: 'I want to be a teacher.', ja: '私は先生になりたい。' },
+      { en: 'He went to the store to buy milk.', ja: '彼は牛乳を買いに店へ行った。' },
+    ],
+    questions: [
+      { sentence: 'I want ___ visit Canada someday.', choices: ['to', 'for', 'in'], answer: 0, why: 'want to ＋ 原形で「〜したい」。' },
+      { sentence: 'She went to the library to ___ some books.', choices: ['borrow', 'borrowed', 'borrowing'], answer: 0, why: 'to のあとは原形。' },
+      { sentence: 'I have a lot of homework ___ do today.', choices: ['to', 'at', 'of'], answer: 0, why: '「するべき宿題」は homework to do。' },
+    ],
+  },
+  {
+    id: 'gerund',
+    title: '動名詞（動詞の -ing 形で「〜すること」）',
+    points: ['動詞の -ing 形は「〜すること」という名詞のはたらきもする。', 'enjoy・finish・stop のあとは -ing 形。前置詞（at, of など）のあとも -ing 形。'],
+    examples: [
+      { en: 'I enjoy reading comics.', ja: '私はまんがを読むのを楽しむ。' },
+      { en: 'She is good at drawing.', ja: '彼女は絵をかくのが得意だ。' },
+    ],
+    questions: [
+      { sentence: 'We enjoyed ___ at the beach.', choices: ['swim', 'swimming', 'to swim'], answer: 1, why: 'enjoy のあとは -ing 形。' },
+      { sentence: 'Did you finish ___ your report?', choices: ['write', 'writing', 'wrote'], answer: 1, why: 'finish のあとは -ing 形。' },
+      { sentence: 'Thank you for ___ me.', choices: ['help', 'helped', 'helping'], answer: 2, why: '前置詞 for のあとは -ing 形。' },
+    ],
+  },
+  {
+    id: 'relative',
+    title: '関係代名詞（who / which / that）',
+    points: ['名詞にくわしい説明をつなぐことば。人なら who、物や動物なら which、どちらにも that が使える。', '「名詞 ＋ who / which ＋ 説明」の順に並べる。'],
+    examples: [
+      { en: 'I have a friend who lives in Osaka.', ja: '私には大阪に住んでいる友だちがいる。' },
+      { en: 'This is the bike which my father gave me.', ja: 'これは父がくれた自転車だ。' },
+    ],
+    questions: [
+      { sentence: 'The girl ___ is singing is my sister.', choices: ['who', 'which', 'what'], answer: 0, why: '「歌っている女の子」は人なので who。' },
+      { sentence: 'I lost the pen ___ I bought yesterday.', choices: ['who', 'which', 'where'], answer: 1, why: 'pen は物なので which。' },
+      { sentence: 'He has a dog ___ runs very fast.', choices: ['who', 'that', 'what'], answer: 1, why: '動物には that（または which）。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
