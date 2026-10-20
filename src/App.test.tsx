@@ -372,4 +372,16 @@ describe('App', () => {
     fireEvent.click(screen.getByText('あお'))
     expect(document.documentElement.style.getPropertyValue('--accent')).toBe('')
   })
+
+  it('今日の分が終わったら「もう5語おぼえる」で新しい単語を追加できる', () => {
+    localStorage.setItem('eitan:daily-new', JSON.stringify({ day: dayKey(), count: 10 }))
+    render(<App />)
+    expect(screen.getByText('今日の学習は完了です 🎉 また明日！')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('もう5語おぼえる'))
+    expect(screen.getByText(/今日の残り 5 語/)).toBeInTheDocument()
+    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText(/今日の残り 4 語/)).toBeInTheDocument()
+  })
 })

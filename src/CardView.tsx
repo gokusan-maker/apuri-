@@ -11,10 +11,12 @@ type Props = {
   jaFirst?: boolean // 表に日本語、裏に英語
   favorite?: boolean
   onToggleFavorite?: () => void
+  onMore?: () => void // 今日の分が終わったあと、新しい単語を5語ふやす
+  onQuiz?: () => void
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const start = useRef<{ x: number; y: number } | null>(null)
@@ -42,7 +44,27 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
     }
   })
 
-  if (!card) return <p className="done">今日の学習は完了です 🎉 また明日！</p>
+  if (!card) {
+    return (
+      <div className="done">
+        <p>今日の学習は完了です 🎉 また明日！</p>
+        {(onMore || onQuiz) && (
+          <div className="actions">
+            {onMore && (
+              <button className="good" onClick={onMore}>
+                もう5語おぼえる
+              </button>
+            )}
+            {onQuiz && (
+              <button className="good" onClick={onQuiz}>
+                クイズで力だめし
+              </button>
+            )}
+          </div>
+        )}
+      </div>
+    )
+  }
 
   function answer(correct: boolean) {
     setFlipped(false)

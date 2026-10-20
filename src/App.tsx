@@ -28,6 +28,7 @@ import {
 } from './monster'
 import {
   buildQueue,
+  DAILY_NEW_LIMIT,
   upcoming,
   dayKey,
   grade,
@@ -77,6 +78,7 @@ function App() {
   const today = dayKey()
   const [daily, setDaily] = usePersistent(() => loadDailyNew(today), saveDailyNew)
   const newToday = daily.day === today ? daily.count : 0
+  const extraToday = daily.day === today ? (daily.extra ?? 0) : 0
 
 
   const [party, setParty] = usePersistent(loadParty, saveParty)
@@ -183,7 +185,7 @@ function App() {
   const focusList = (k: Focus) => (k === 'weak' ? weak : favWords)
   const FOCUS_LABEL: Record<Focus, string> = { weak: '苦手', fav: 'お気に入り' }
 
-  const queue = useMemo(() => buildQueue(words, progress, today, newToday), [words, progress, today, newToday])
+  const queue = useMemo(() => buildQueue(words, progress, today, newToday, DAILY_NEW_LIMIT + extraToday), [words, progress, today, newToday, extraToday])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const card = queue[0]
 
@@ -273,7 +275,7 @@ function App() {
 
   function answer(correct: boolean) {
     setShown((n) => n + 1)
-    if (!progress[card.id]) setDaily({ day: today, count: newToday + 1 })
+    if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today) })
     studied(correct)
     if (correct) count('cardGood')
@@ -458,6 +460,12 @@ function App() {
               jaFirst={settings.cardJaFirst}
               favorite={!!card && favorites.includes(card.id)}
               onToggleFavorite={() => card && setFavorites((f) => toggleFavorite(f, card.id))}
+              onMore={
+                words.some((w) => !progress[w.id])
+                  ? () => setDaily({ day: today, count: newToday, extra: extraToday + 5 })
+                  : undefined
+              }
+              onQuiz={() => setMode('quiz')}
             />
             <button className="list-link" onClick={() => setShowList(true)}>
               📚 単語一覧・さがす

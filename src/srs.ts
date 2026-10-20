@@ -61,6 +61,7 @@ export const DAILY_NEW_LIMIT = 10
 export type DailyNew = {
   day: string
   count: number
+  extra?: number // 「もう5語」で増やした今日の上限
 }
 
 const DAILY_KEY = 'eitan:daily-new'
