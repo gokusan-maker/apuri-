@@ -125,3 +125,15 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 @media (prefers-reduced-motion: reduce) {
   .monster-body.bounce, .level-up { animation: none; }
 }
+.monster-body.droop { transform: translateY(4px) scale(0.96); }
+.monster-body.evolve { animation: evolve 1s; }
+.lonely { margin: 4px 0 0; font-size: 0.85rem; color: var(--muted); }
+@keyframes evolve {
+  0% { filter: brightness(1); transform: scale(1); }
+  40% { filter: brightness(2.2); transform: scale(1.2) rotate(-6deg); }
+  70% { filter: brightness(1.6); transform: scale(0.95) rotate(4deg); }
+  100% { filter: brightness(1); transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .monster-body.evolve { animation: none; }
+}

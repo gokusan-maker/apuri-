@@ -1,6 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Monster } from './Monster'
-import { levelInfo, loadMonster, saveMonster, XP_CARD_AGAIN, XP_CARD_GOOD, XP_QUIZ_CORRECT } from './monster'
+import {
+  isLonely,
+  levelInfo,
+  loadMonster,
+  saveMonster,
+  stageOf,
+  XP_CARD_AGAIN,
+  XP_CARD_GOOD,
+  XP_QUIZ_CORRECT,
+} from './monster'
 import {
   buildQueue,
   dayKey,
@@ -36,6 +45,7 @@ function App() {
   const [monster, setMonster] = useState(loadMonster)
   const [happy, setHappy] = useState(false)
   const [leveledUp, setLeveledUp] = useState(false)
+  const [evolved, setEvolved] = useState(false)
   const timer = useRef<number | undefined>(undefined)
   useEffect(() => saveMonster(monster), [monster])
   useEffect(() => () => window.clearTimeout(timer.current), [])
@@ -43,14 +53,17 @@ function App() {
   function gainXp(amount: number) {
     const before = levelInfo(monster.xp).level
     const xp = monster.xp + amount
-    setMonster({ xp })
+    const after = levelInfo(xp).level
+    setMonster({ xp, lastDay: today })
     setHappy(true)
-    setLeveledUp(levelInfo(xp).level > before)
+    setLeveledUp(after > before)
+    setEvolved(stageOf(after).index > stageOf(before).index)
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
       setHappy(false)
       setLeveledUp(false)
-    }, 1500)
+      setEvolved(false)
+    }, 2000)
   }
 
   const queue = useMemo(() => buildQueue(WORDS, progress, today, newToday), [progress, today, newToday])
@@ -68,7 +81,12 @@ function App() {
     <main className="app">
       <header>
         <h1>えいたん</h1>
-        <Monster xp={monster.xp} happy={happy} leveledUp={leveledUp} />
+        <Monster
+          xp={monster.xp}
+          mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
+          leveledUp={leveledUp}
+          evolved={evolved}
+        />
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {WORDS.length} 語
         </p>

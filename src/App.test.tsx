@@ -18,4 +18,33 @@ describe('App', () => {
     expect(screen.getByText(WORDS[1].en)).toBeInTheDocument()
     expect(screen.getByText(new RegExp(`今日の残り 9 語`))).toBeInTheDocument()
   })
+
+  it('「覚えた」でモンスターにXPが入り、保存される', () => {
+    render(<App />)
+    expect(screen.getByText('XP 0 / 20')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByText('XP 5 / 20')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:monster')!).xp).toBe(5)
+  })
+
+  it('クイズで正解するとXP+10、タマゴがかえる', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 15 }))
+    render(<App />)
+    fireEvent.click(screen.getByText('クイズ'))
+    const en = document.querySelector('.quiz .en')!.textContent
+    const word = WORDS.find((w) => w.en === en)!
+    fireEvent.click(screen.getByRole('button', { name: word.ja }))
+    expect(screen.getByText('タマゴがかえった！')).toBeInTheDocument()
+    expect(screen.getByText(/ちびモチ/)).toBeInTheDocument()
+  })
+
+  it('しばらくぶりだと「さみしそう」が出て、学習すると元気になる', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 30, lastDay: '2000-01-01' }))
+    render(<App />)
+    expect(screen.getByText(/さみしそう/)).toBeInTheDocument()
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.queryByText(/さみしそう/)).not.toBeInTheDocument()
+  })
 })
