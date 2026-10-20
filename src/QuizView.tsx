@@ -12,6 +12,8 @@ import { Grammar } from './GrammarView'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
+import { claimFeatured, FEATURED_XP, featuredClaimed, featuredFor } from './featured'
+import { dayKey } from './srs'
 import { isNew, loadPlayed, markPlayed } from './playedModes'
 import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
@@ -150,11 +152,21 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
   const [menu, setMenu] = useState(false)
+  // 今日のおすすめ：その種類でその日はじめて正解するとボーナスXP（ステージは対象外）
+  const [today] = useState(() => dayKey())
+  const featured = lockDirection ? null : featuredFor(today)
+  const onAnswer: Props['onAnswer'] = (correct, xp, wordId, source) => {
+    if (correct && direction === featured && !featuredClaimed(today)) {
+      claimFeatured(today)
+      xp += FEATURED_XP
+    }
+    onAnswerProp?.(correct, xp, wordId, source)
+  }
   const [played, setPlayed] = useState(loadPlayed)
   // 問題数：ステージ（向き固定）は指定どおり、ふだんは選んだ数を覚えておく
   const [count, setCount] = useState(() => (lockDirection ? countProp : loadCount(countProp)))
@@ -289,6 +301,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       </button>
       {menu && (
         <div className="mode-menu" role="group" aria-label="クイズの種類">
+          {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}
           {GROUPS.map((g) => (
             <div key={g} className="mode-group">
               <p className="mode-group-name">{g}</p>
@@ -303,6 +316,11 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
                     }}
                   >
                     <span>{d.label}</span>
+                    {d.id === featured && (
+                      <span className="featured-mark" aria-label="今日のおすすめ">
+                        ⭐
+                      </span>
+                    )}
                     {isNew(d.id, played) && <span className="new-mark">NEW</span>}
                   </button>
                 ))}

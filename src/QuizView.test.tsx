@@ -356,3 +356,4 @@ it('新しく増えた種類は、遊ぶまで NEW マークが出る', () => {
   expect([...menu.querySelectorAll('button')].find((b) => b.textContent?.startsWith('😀 絵文字クイズ'))!.querySelector('.new-mark')).toBeNull()
   expect(JSON.parse(localStorage.getItem('eitan:played-modes')!)).toContain('emoji')
 })
+
