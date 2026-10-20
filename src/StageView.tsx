@@ -1,22 +1,39 @@
 import { useState } from 'react'
 import type { Source } from './monster'
+import { bossUnlocked, type BossRecord } from './boss'
+import { Boss } from './BossView'
 import { Quiz } from './QuizView'
 import { isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
-import { WORDS, type Level } from './words'
+import { WORDS, wordsOf, type Level } from './words'
 
 type Props = {
   levels: Level[]
   record: StageRecord
   onClear: (id: string, stars: number) => void
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  boss?: BossRecord
+  onBossWin?: (level: Level) => void
 }
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin }: Props) {
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
+  const [fighting, setFighting] = useState<Level | null>(null)
+
+  if (fighting) {
+    return (
+      <Boss
+        level={fighting}
+        words={wordsOf([fighting])}
+        onAnswer={onAnswer}
+        onWin={() => onBossWin?.(fighting)}
+        onExit={() => setFighting(null)}
+      />
+    )
+  }
 
   if (playing) {
     return (
@@ -92,6 +109,13 @@ export function Stages({ levels, record, onClear, onAnswer }: Props) {
                 )
               })}
             </div>
+            {bossUnlocked(level, record) ? (
+              <button className={`boss-btn${boss[level] ? ' beaten' : ''}`} onClick={() => setFighting(level)}>
+                {boss[level] ? '👑 ボス撃破ずみ（もう一度戦う）' : '👹 ボスに挑戦！'}
+              </button>
+            ) : (
+              <p className="boss-locked">🔒 全ステージをクリアするとボスが出現</p>
+            )}
           </div>
         )
       })}

@@ -40,6 +40,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages } from './StageView'
+import { BOSS_XP, loadBoss, saveBoss } from './boss'
 import { addToday, loadTodayCount, saveTodayCount } from './stats'
 import { currentStreak, loadStreak, recordStudy, saveStreak } from './streak'
 import { applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -146,6 +147,7 @@ function App() {
 
 
   const [stages, setStages] = usePersistent(loadStages, saveStages)
+  const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
   const [levels, setLevels] = usePersistent(loadLevels, saveLevels)
   const [myWords, setMyWords] = usePersistent(loadMyWords, saveMyWords)
@@ -273,6 +275,11 @@ function App() {
       {mode === 'stage' ? (
         <Stages
           levels={levels}
+          boss={boss}
+          onBossWin={(level) => {
+            setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
+            setMonster(feed(monster, BOSS_XP, null, today))
+          }}
           record={stages}
           onAnswer={onAnswer}
           onClear={(id, stars) => {
