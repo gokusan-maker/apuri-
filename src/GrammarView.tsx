@@ -5,10 +5,12 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = {
+  units?: GrammarUnit[] // 省略時は文法の単元
+  title?: string
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
 }
 
-export function Grammar({ onAnswer }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer }: Props) {
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
   const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
@@ -25,10 +27,10 @@ export function Grammar({ onAnswer }: Props) {
   if (!unit) {
     return (
       <section className="card grammar">
-        <h2>文法ミニ解説</h2>
+        <h2>{title}</h2>
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
         <ul className="grammar-list">
-          {GRAMMAR.map((u) => (
+          {units.map((u) => (
             <li key={u.id}>
               <button onClick={() => open(u)}>
                 <span>{u.title}</span>

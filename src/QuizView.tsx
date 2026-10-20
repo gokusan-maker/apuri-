@@ -8,6 +8,7 @@ import { useKeys } from './useKeys'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
 import { Grammar } from './GrammarView'
+import { CONFUSING } from './confusing'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
@@ -31,7 +32,8 @@ import { WORDS, type Word } from './words'
 // rival：ライバルと早押し
 // reading：読解ミニ
 // tiles：文字タイルで単語を作る
-export type Direction = 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// confusing：まちがえやすい単語
+export type Direction = 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
 const label = (d: Direction) =>
@@ -78,6 +80,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'irregular', label: '🔁 不規則動詞', group: '文法・読解' },
   { id: 'grammar', label: '📖 文法', group: '文法・読解' },
   { id: 'reading', label: '📰 読解', group: '文法・読解' },
+  { id: 'confusing', label: '⚠️ まちがえやすい単語', group: '文法・読解' },
 ]
 const GROUPS = ['4択', '聞く・話す', '書く・並べる', '文法・読解']
 const MODE_KEY = 'eitan:quiz-mode'
@@ -282,6 +285,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Scramble key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'confusing') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Grammar key="confusing" units={CONFUSING} title="まちがえやすい単語" onAnswer={onAnswer} />
       </>
     )
   }
