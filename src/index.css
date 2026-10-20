@@ -719,3 +719,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .new-mark { margin-left: 4px; font-size: 0.65em; font-weight: bold; color: #fff; background: #ef4444; border-radius: 6px; padding: 1px 4px; vertical-align: middle; }
 .spell-diff { font-size: 1.3em; letter-spacing: 0.05em; } .spell-ng { color: #dc2626; text-decoration: underline wavy; font-weight: bold; }
 .puzzle-prompt { white-space: pre-line; font-size: 1.2em; }
+.memory-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0; }
+.memory-card { min-height: 64px; border-radius: 10px; border: 2px solid var(--accent, #2563eb); background: var(--accent, #2563eb); color: #fff; font-size: 0.95rem; padding: 4px; }
+.memory-card.shown { background: var(--card, #fff); color: inherit; }
+.memory-card.done { opacity: 0.5; border-style: dashed; }
