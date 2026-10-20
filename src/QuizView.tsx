@@ -9,6 +9,7 @@ import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
 import { Grammar } from './GrammarView'
 import { CONFUSING } from './confusing'
+import { DEFS } from './definitions'
 import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
@@ -33,14 +34,15 @@ import { WORDS, type Word } from './words'
 // reading：読解ミニ
 // tiles：文字タイルで単語を作る
 // confusing：まちがえやすい単語
-export type Direction = 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// define：英語の説明を読んで単語を当てる
+export type Direction = 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
-const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : w.en)
+const prompt = (w: Word, d: Direction) => (d === 'ja-en' ? w.ja : d === 'define' ? DEFS[w.id] ?? w.ja : w.en)
 const label = (d: Direction) =>
-  d === 'ja-en' || d === 'blank' ? (w: Word) => w.en : d === 'sentence' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
+  d === 'ja-en' || d === 'blank' || d === 'define' ? (w: Word) => w.en : d === 'sentence' ? (w: Word) => w.exampleJa : (w: Word) => w.ja
 // 穴埋めにできる単語が1つも無いとき（例文なしのマイ単語だけなど）は通常の単語から出す
 const pool = (d: Direction, ws: Word[], all: Word[]) => {
-  const can = d === 'blank' ? canBlank : d === 'sentence' ? (w: Word) => !!w.example && !!w.exampleJa : null
+  const can = d === 'define' ? (w: Word) => !!DEFS[w.id] : d === 'blank' ? canBlank : d === 'sentence' ? (w: Word) => !!w.example && !!w.exampleJa : null
   if (!can) return ws
   const ok = ws.filter(can)
   if (ok.length > 0) return ok
@@ -67,6 +69,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'ja-en', label: '日→英', group: '4択' },
   { id: 'mix', label: '🎲 ミックス', group: '4択' },
   { id: 'timed', label: '⏳ 10秒', group: '4択' },
+  { id: 'define', label: '🇬🇧 英英クイズ', group: '4択' },
   { id: 'rival', label: '⚔️ ライバル戦', group: '4択' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
@@ -143,7 +146,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
 
   // 1〜4キーで選ぶ、Enter で次へ（4択の画面だけ）
-  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed'].includes(qd)
+  const fourChoice = ['en-ja', 'ja-en', 'listen', 'sentence', 'blank', 'timed', 'define'].includes(qd)
   useKeys((key) => {
     if (!fourChoice || !q) return
     const n = Number(key)
@@ -455,7 +458,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           <p className="en listen-word">{picked !== null ? q.word.en : '？'}</p>
         </>
       ) : (
-        <p className={qd === 'ja-en' ? 'en ja-prompt' : 'en'}>{prompt(q.word, qd)}</p>
+        <p className={qd === 'ja-en' ? 'en ja-prompt' : qd === 'define' ? 'define-prompt' : 'en'}>{prompt(q.word, qd)}</p>
       )}
       <div className="choices">
         {q.choices.map((c, i) => {
