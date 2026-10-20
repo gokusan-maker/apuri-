@@ -58,3 +58,14 @@ export function importData(text: string, storage: Storage = localStorage): numbe
   for (const [k, v] of entries) storage.setItem(k, typeof v === 'string' ? v : JSON.stringify(v))
   return entries.length
 }
+
+// すべての学習データ（eitan: で始まるキー）を消す
+export function resetAll(storage: Storage = localStorage): number {
+  const keys: string[] = []
+  for (let i = 0; i < storage.length; i++) {
+    const k = storage.key(i)
+    if (k?.startsWith(PREFIX)) keys.push(k)
+  }
+  keys.forEach((k) => storage.removeItem(k))
+  return keys.length
+}

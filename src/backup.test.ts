@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { backupFileName, exportData, importData } from './backup'
+import { backupFileName, exportData, importData, resetAll } from './backup'
 
 describe('バックアップ', () => {
   beforeEach(() => localStorage.clear())
@@ -36,4 +36,13 @@ describe('バックアップ', () => {
     expect(() => importData('{"app":"eitan","version":99,"data":{}}')).toThrow('新しいバージョン')
     expect(localStorage.getItem('eitan:monster')).toBe('{"xp":42}')
   })
+})
+
+it('すべてのデータを消す（ほかのアプリのデータは残す）', () => {
+  localStorage.setItem('eitan:monster', '{"xp":1}')
+  localStorage.setItem('eitan:wallet', '{}')
+  localStorage.setItem('other', 'x')
+  expect(resetAll()).toBe(2)
+  expect(localStorage.getItem('eitan:monster')).toBeNull()
+  expect(localStorage.getItem('other')).toBe('x')
 })

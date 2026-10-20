@@ -1,5 +1,5 @@
 import { useRef, useState, type ChangeEvent } from 'react'
-import { BackupError, backupFileName, exportData, importData } from './backup'
+import { BackupError, backupFileName, exportData, importData, resetAll } from './backup'
 
 export function Backup() {
   const fileRef = useRef<HTMLInputElement>(null)
@@ -50,6 +50,18 @@ export function Backup() {
         aria-label="バックアップファイル"
         onChange={onFile}
       />
+      <button
+        className="danger-link"
+        onClick={() => {
+          if (!window.confirm('学習データをすべて消します。相棒・コイン・記録もなくなります。よろしいですか？')) return
+          if (!window.confirm('本当に消しますか？ 元にはもどせません（先に「ファイルに保存」がおすすめ）')) return
+          resetAll()
+          setMessage('消しました。再読み込みします…')
+          window.location.reload()
+        }}
+      >
+        すべてのデータを消す
+      </button>
       {message && (
         <p className="stats-note" role="status">
           {message}
