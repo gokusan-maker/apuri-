@@ -40,7 +40,7 @@ export const BADGES: Badge[] = [
   { id: 'goal-1', icon: '🎯', name: '目標達成', desc: '1日の目標を初めて達成する', check: (s) => s.goals >= 1 },
   { id: 'goal-10', icon: '🏅', name: 'コツコツ名人', desc: '1日の目標を10日達成する', check: (s) => s.goals >= 10 },
   { id: 'boss-1', icon: '⚔️', name: 'ボスたいじ', desc: 'ボスを初めてたおす', check: (s) => (s.bosses ?? 0) >= 1 },
-  { id: 'boss-all', icon: '🏆', name: 'ボスマスター', desc: 'すべての単語帳のボスをたおす', check: (s) => (s.bosses ?? 0) >= 9 },
+  { id: 'boss-all', icon: '🏆', name: 'ボスマスター', desc: 'すべての単語帳のボスをたおす', check: (s) => (s.bosses ?? 0) >= 10 },
   { id: 'coins-100', icon: '💰', name: 'こつこつ貯金', desc: 'コインを100枚ためる', check: (s) => (s.coins ?? 0) >= 100 },
   { id: 'members-2', icon: '🤝', name: 'なかまが増えた', desc: '2匹目の相棒に出会う', check: (s) => (s.members ?? 1) >= 2 },
   { id: 'combo-10', icon: '🔥', name: '10コンボ', desc: 'クイズで10問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 10 },

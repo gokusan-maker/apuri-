@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形' | '会話'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']
 
 export type Word = {
   id: string
@@ -514,6 +514,27 @@ export const WORDS: Word[] = [
   { id: 'heart', en: 'heart', ja: '心臓・心・ハート', example: 'My heart was beating fast.', exampleJa: '心臓がどきどきしていた。', level: '色・形' },
   { id: 'line', en: 'line', ja: '線・列', example: 'Draw a straight line.', exampleJa: 'まっすぐな線を引きなさい。', level: '色・形' },
   { id: 'dot', en: 'dot', ja: '点・ドット', example: 'Her dress has white dots on it.', exampleJa: '彼女のワンピースには白い水玉がついている。', level: '色・形' },
+  // 会話フレーズ
+  { id: 'good-morning', en: 'Good morning', ja: 'おはよう', example: 'Good morning, Mom! I\'m hungry.', exampleJa: 'おはよう、お母さん！おなかすいた。', level: '会話' },
+  { id: 'good-night', en: 'Good night', ja: 'おやすみ', example: 'Good night. See you tomorrow.', exampleJa: 'おやすみ。また明日ね。', level: '会話' },
+  { id: 'thank-you', en: 'Thank you', ja: 'ありがとう', example: 'Thank you for the nice gift.', exampleJa: 'すてきなプレゼントをありがとう。', level: '会話' },
+  { id: 'youre-welcome', en: 'You\'re welcome', ja: 'どういたしまして', example: '"Thanks a lot!" "You\'re welcome."', exampleJa: '「本当にありがとう！」「どういたしまして。」', level: '会話' },
+  { id: 'excuse-me', en: 'Excuse me', ja: 'すみません（呼びかけ）', example: 'Excuse me, where is the station?', exampleJa: 'すみません、駅はどこですか？', level: '会話' },
+  { id: 'im-sorry', en: 'I\'m sorry', ja: 'ごめんなさい', example: 'I\'m sorry I\'m late.', exampleJa: '遅れてごめんなさい。', level: '会話' },
+  { id: 'nice-to-meet-you', en: 'Nice to meet you', ja: 'はじめまして', example: 'Hi, I\'m Yuki. Nice to meet you.', exampleJa: 'こんにちは、ユキです。はじめまして。', level: '会話' },
+  { id: 'how-are-you', en: 'How are you', ja: '元気ですか', example: 'Hello, Mr. Smith. How are you today?', exampleJa: 'こんにちは、スミス先生。今日はお元気ですか？', level: '会話' },
+  { id: 'see-you-later', en: 'See you later', ja: 'またあとでね', example: 'I have to go now. See you later!', exampleJa: 'もう行かなきゃ。またあとでね！', level: '会話' },
+  { id: 'have-a-nice-day', en: 'Have a nice day', ja: 'よい一日を', example: 'Here is your bag. Have a nice day!', exampleJa: 'かばんをどうぞ。よい一日を！', level: '会話' },
+  { id: 'of-course', en: 'Of course', ja: 'もちろん', example: '"Can you help me?" "Of course!"', exampleJa: '「手伝ってくれる？」「もちろん！」', level: '会話' },
+  { id: 'no-problem', en: 'No problem', ja: 'いいよ・問題ないよ', example: '"Can I use your pen?" "No problem."', exampleJa: '「ペン借りてもいい？」「いいよ。」', level: '会話' },
+  { id: 'me-too', en: 'Me too', ja: '私も', example: '"I love this song." "Me too!"', exampleJa: '「この歌大好き。」「私も！」', level: '会話' },
+  { id: 'here-you-are', en: 'Here you are', ja: 'はい、どうぞ', example: '"Can I have the salt?" "Here you are."', exampleJa: '「塩を取ってくれる？」「はい、どうぞ。」', level: '会話' },
+  { id: 'just-a-moment', en: 'Just a moment', ja: '少々お待ちください', example: 'Just a moment, please. I\'ll get my teacher.', exampleJa: '少々お待ちください。先生を呼んできます。', level: '会話' },
+  { id: 'lets-go', en: 'Let\'s go', ja: '行こう', example: 'The bus is here. Let\'s go!', exampleJa: 'バスが来たよ。行こう！', level: '会話' },
+  { id: 'good-luck', en: 'Good luck', ja: 'がんばってね', example: 'Good luck on your test tomorrow!', exampleJa: '明日のテストがんばってね！', level: '会話' },
+  { id: 'congratulations', en: 'Congratulations', ja: 'おめでとう', example: 'Congratulations on winning the game!', exampleJa: '試合に勝っておめでとう！', level: '会話' },
+  { id: 'take-care', en: 'Take care', ja: '気をつけてね・お大事に', example: 'You have a cold? Take care.', exampleJa: '風邪なの？お大事に。', level: '会話' },
+  { id: 'welcome', en: 'Welcome', ja: 'ようこそ', example: 'Welcome to our school!', exampleJa: '私たちの学校へようこそ！', level: '会話' },
 ]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
