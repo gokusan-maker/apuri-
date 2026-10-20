@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { sortWords } from './wordSort'
 import { EMOJI } from './emoji'
 import { searchWords } from './search'
 import { speak } from './speech'
@@ -16,6 +17,13 @@ type Props = {
   onNote?: (id: string, text: string) => void
   onPractice?: (id: string) => void // この単語だけカードで練習
 }
+
+type Sort = 'none' | 'abc' | 'recent'
+const SORTS: { id: Sort; label: string }[] = [
+  { id: 'none', label: 'もとの順' },
+  { id: 'abc', label: 'ABC順' },
+  { id: 'recent', label: '最近学んだ順' },
+]
 
 type Filter = 'all' | 'まだ' | '学習中' | '定着' | 'fav'
 const FILTERS: { id: Filter; label: string }[] = [
@@ -36,11 +44,13 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState<string | null>(null)
   const [filter, setFilter] = useState<Filter>('all')
+  const [sort, setSort] = useState<Sort>('none')
   const hits = searchWords(words, query).filter((w) => {
     if (filter === 'all') return true
     if (filter === 'fav') return favorites.includes(w.id)
     return status(progress[w.id]?.box) === filter
   })
+  const shown = sortWords(hits, sort, progress)
 
   return (
     <section className="card word-list">
@@ -64,6 +74,13 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
           </button>
         ))}
       </div>
+      <div className="levels word-sort" role="group" aria-label="ならべかえ">
+        {SORTS.map((o) => (
+          <button key={o.id} aria-pressed={sort === o.id} onClick={() => setSort(o.id)}>
+            {o.label}
+          </button>
+        ))}
+      </div>
       <p className="stats-note">
         {hits.length}語
         <button className="note-btn print-btn" onClick={() => window.print()}>
@@ -71,7 +88,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
         </button>
       </p>
       <ul className="words">
-        {hits.map((w) => {
+        {shown.map((w) => {
           const box = progress[w.id]?.box
           return (
             <li key={w.id}>
