@@ -26,7 +26,7 @@ export function Numbers({ onAnswer }: Props) {
     else playWrong()
     setResult(ok)
     setScore((s) => ({ ok: s.ok + (ok ? 1 : 0), all: s.all + 1 }))
-    onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, q.id, 'quiz')
+    onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, q.id, 'ear')
   }
 
   const [done, setDone] = useState(false)

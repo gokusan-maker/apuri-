@@ -34,3 +34,7 @@ describe('デイリーミッション', () => {
     expect(loadMissions('2026-10-20').counts.answers).toBe(2)
   })
 })
+
+it('聞き取り系で5問正解のミッションがある', () => {
+  expect(MISSION_POOL.find((m) => m.id === 'ear-5')).toMatchObject({ counter: 'ear', target: 5 })
+})

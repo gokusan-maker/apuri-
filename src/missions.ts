@@ -9,6 +9,7 @@ export const MISSION_POOL: Mission[] = [
   { id: 'correct-10', text: '10問正解する', counter: 'correct', target: 10 },
   { id: 'card-5', text: 'カードで5語「覚えた」', counter: 'cardGood', target: 5 },
   { id: 'ear-3', text: 'リスニングかスペルで3問正解', counter: 'ear', target: 3 },
+  { id: 'ear-5', text: '聞き取り系のクイズ（リスニング・数の聞き取りなど）で5問正解', counter: 'ear', target: 5 },
   { id: 'time-1', text: 'タイムアタックを1回遊ぶ', counter: 'timeAttack', target: 1 },
   { id: 'stage-1', text: 'ステージを1つクリア', counter: 'stageClear', target: 1 },
 ]
