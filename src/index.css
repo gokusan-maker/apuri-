@@ -630,3 +630,8 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .wotd-word { margin: 2px 0 4px; font-size: 1.4rem; font-weight: 700; }
 .wotd-ja { margin-left: 8px; font-size: 0.95rem; font-weight: 400; color: var(--muted); }
 .continue-btn { margin: 4px 0 8px; }
+.evolve-screen { background: radial-gradient(circle, rgb(253 224 71 / 0.6), rgb(0 0 0 / 0.55)); }
+.evolve-card { text-align: center; animation: pop 0.6s; }
+.evolve-figure { width: 180px; height: 180px; margin: 0 auto; animation: evolve 1.2s; filter: drop-shadow(0 0 24px #fde047); }
+.evolve-name { margin: 0 0 12px; font-size: 1.8rem; font-weight: 800; color: #fff; text-shadow: 0 2px 8px rgb(0 0 0 / 0.5); }
+.evolve-screen .celebrate-title { color: #fff; text-shadow: 0 2px 8px rgb(0 0 0 / 0.5); }

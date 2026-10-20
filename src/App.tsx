@@ -17,6 +17,7 @@ import { WordOfDay } from './WordOfDayView'
 import { loadWeeklyClaimed, saveWeeklyClaimed, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
+import { Evolve } from './EvolveView'
 import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
@@ -24,6 +25,7 @@ import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
 import {
   feed,
+  FORMS,
   rename,
   type MonsterState,
   formOf,
@@ -98,6 +100,7 @@ function App() {
   const [happy, setHappy] = useState(false)
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
+  const [evoForm, setEvoForm] = useState<string | null>(null) // 全画面で見せる進化後の姿
   const timer = useRef<number | undefined>(undefined)
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
@@ -179,7 +182,9 @@ function App() {
     const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
     setLeveledUp(up)
     if (up) playFanfare()
-    setEvolved(formOf(next).id !== formOf(monster).id)
+    const changed = formOf(next).id !== formOf(monster).id
+    setEvolved(changed)
+    if (changed) setEvoForm(formOf(next).id)
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
       setHappy(false)
@@ -606,6 +611,9 @@ function App() {
         </div>
       )}
       {!onboarded && <Onboarding onDone={() => setOnboarded(true)} onGrade={setLevels} />}
+      {evoForm && FORMS.find((f) => f.id === evoForm) && (
+        <Evolve form={FORMS.find((f) => f.id === evoForm)!} wear={monster.wear} onClose={() => setEvoForm(null)} />
+      )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
       <nav className="tabbar" aria-label="画面の切り替え">

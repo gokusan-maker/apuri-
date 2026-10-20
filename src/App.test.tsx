@@ -40,8 +40,9 @@ describe('App', () => {
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
-    expect(screen.getByText('タマゴがかえった！')).toBeInTheDocument()
-    expect(screen.getByText(/ちびモチ/)).toBeInTheDocument()
+    expect(screen.getAllByText('タマゴがかえった！').length).toBeGreaterThan(0)
+    expect(screen.getByRole('dialog', { name: '進化' })).toBeInTheDocument()
+    expect(document.querySelector('.monster-name')!.textContent).toContain('ちびモチ')
   })
 
   it('しばらくぶりだと「さみしそう」が出て、学習すると元気になる', () => {
