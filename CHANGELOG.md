@@ -238,3 +238,4 @@
 - 2026-10-20: 会話フレーズを10追加（How about you?・I'm home.・Cheer up! など、計40）
 - 2026-10-20: 数の単語帳に zero・half・dozen・pair・double を追加
 - 2026-10-20: 英英クイズの説明を15語追加（bus・soccer・dozen など、計75語）
+- 2026-10-20: 中1に基本の単語を20語追加（young・tall・warm・dark・cheap など）
