@@ -320,3 +320,15 @@ it('まちがえた問題だけ解き直せる', () => {
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/14 \/ 14 点/)).toBeInTheDocument()
 })
+
+it('すぐに答えあわせモードでは、答えるとすぐ正解と解説が出る', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  fireEvent.click(screen.getByLabelText(/1問ずつすぐに答えあわせ/))
+  const t = p.tf[0]
+  fireEvent.click(screen.getByRole('button', { name: `(1) ${t.answer ? '○' : '×'}` }))
+  expect(screen.getByText(new RegExp(t.why.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: `(1) ${t.answer ? '×' : '○'}` })).toBeDisabled()
+})

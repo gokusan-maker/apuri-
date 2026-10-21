@@ -83,7 +83,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
   const [aloudAt, setAloudAt] = useState<number | null>(null) // 音読を始めた時刻
-  const [wpm, setWpm] = useState(0) // 和訳を開いている段落
+  const [wpm, setWpm] = useState(0)
+  const [instant, setInstant] = useState(false) // すぐに答えあわせ（空所補充・○×） // 和訳を開いている段落
   const [bestTime, setBestTime] = useState(false)
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
@@ -216,7 +217,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
   const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq })
   const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length + (p.seq && seq.length === p.seq.events.length ? 1 : 0)
-  const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
+  const markNow = (ok: boolean) => (done || instant ? (ok ? ' right' : ' wrong') : '')
 
   return (
     <section className="card grammar long-reading">
@@ -297,6 +298,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           ))
         )}
       </div>
+      <label className="long-instant">
+        <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつすぐに答えあわせ（空所補充・○×）
+      </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
@@ -375,8 +379,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             {b.choices.map((c, i) => (
               <button
                 key={c}
-                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${done && i === b.answer ? ' answer' : ''}`}
-                disabled={done}
+                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${(done || (instant && blanks[b.id] !== undefined)) && i === b.answer ? ' answer' : ''}`}
+                disabled={done || (instant && blanks[b.id] !== undefined)}
                 aria-pressed={blanks[b.id] === i}
                 onClick={() => setBlanks({ ...blanks, [b.id]: i })}
               >
@@ -384,8 +388,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
               </button>
             ))}
           </div>
-          {done && (
-            <p className={`long-why${mark(blanks[b.id] === b.answer)}`}>
+          {(done || (instant && blanks[b.id] !== undefined)) && (
+            <p className={`long-why${markNow(blanks[b.id] === b.answer)}`}>
               {blanks[b.id] === b.answer ? '⭕' : '❌'} 正解 {MARKS[b.answer]}（{b.choices[b.answer]}）：{b.why}
             </p>
           )}
@@ -431,8 +435,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             {[true, false].map((v) => (
               <button
                 key={String(v)}
-                className={`long-choice${tf[i] === v ? ' picked' : ''}${done && v === t.answer ? ' answer' : ''}`}
-                disabled={done}
+                className={`long-choice${tf[i] === v ? ' picked' : ''}${(done || (instant && tf[i] !== undefined)) && v === t.answer ? ' answer' : ''}`}
+                disabled={done || (instant && tf[i] !== undefined)}
                 aria-pressed={tf[i] === v}
                 aria-label={`(${i + 1}) ${v ? '○' : '×'}`}
                 onClick={() => setTf({ ...tf, [i]: v })}
@@ -441,8 +445,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
               </button>
             ))}
           </div>
-          {done && (
-            <p className={`long-why${mark(tf[i] === t.answer)}`}>
+          {(done || (instant && tf[i] !== undefined)) && (
+            <p className={`long-why${markNow(tf[i] === t.answer)}`}>
               {tf[i] === t.answer ? '⭕' : '❌'} 正解 {t.answer ? '○' : '×'}：{t.why}
             </p>
           )}
