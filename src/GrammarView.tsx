@@ -8,7 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -21,9 +21,10 @@ type Props = {
   onMonsterWin?: () => void // 文法モンスターをたおした（ごほうびはアプリ側）
   onDailyBonus?: () => void // 今日の文法を全問正解した（1日1回）
   onRushWin?: () => void // 文法モンスターラッシュを3連勝した
+  onSpend?: (coins: number) => boolean // ヒントのコイン
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
@@ -37,6 +38,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [grade, setGrade] = useState<GrammarGrade | 'all'>('all')
   const [rush, setRush] = useState<{ list: GrammarUnit[]; at: number } | null>(null) // 文法モンスターラッシュ
   const [cards, setCards] = useState(false) // 要点カード
+  const [hidden, setHidden] = useState<{ step: number; i: number } | null>(null) // ヒントで消した選択肢
   const [listen, setListen] = useState(false) // 例文リスニング
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
@@ -50,6 +52,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   }
 
   function open(u: GrammarUnit) {
+    setHidden(null)
     setBattle(false)
     setOrdering(false)
     setUnit(u)
@@ -331,8 +334,21 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         </span>
         {after}
       </p>
+      {onSpend && picked === null && q.choices.length > 2 && hidden?.step !== step && (
+        <button
+          className="hint-5050"
+          onClick={() => {
+            if (!onSpend(GRAMMAR_HINT_COST)) return
+            const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.answer)
+            setHidden({ step, i: wrongs[0] })
+          }}
+        >
+          💡 ヒント：1つ消す（🪙{GRAMMAR_HINT_COST}）
+        </button>
+      )}
       <div className="choices">
         {q.choices.map((c, i) => {
+          if (hidden?.step === step && hidden.i === i && picked === null) return null
           let cls = 'choice'
           if (picked !== null && i === q.answer) cls += ' correct'
           else if (picked === i) cls += ' wrong'

@@ -1038,3 +1038,6 @@ export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[
 export function gradeOf(id: string): GrammarGrade {
   return GRAMMAR_GRADES.find((g) => GRADE_IDS[g].includes(id)) ?? '中3'
 }
+
+// 文法のヒント（まちがいの選択肢を1つ消す）のコイン
+export const GRAMMAR_HINT_COST = 5

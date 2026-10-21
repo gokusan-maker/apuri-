@@ -139,3 +139,17 @@ it('文法モンスターラッシュを3連勝するとごほうび', () => {
   expect(screen.getByText(/ラッシュ完全クリア！/)).toBeInTheDocument()
   expect(rushWin).toHaveBeenCalledTimes(1)
 })
+
+it('ヒントでまちがいの選択肢を1つ消せる', () => {
+  localStorage.clear()
+  const spend = vi.fn(() => true)
+  render(<Grammar onSpend={spend} />)
+  const u = GRAMMAR[0]
+  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByText(/確認問題へ/))
+  expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
+  fireEvent.click(screen.getByText(/ヒント：1つ消す/))
+  expect(spend).toHaveBeenCalledWith(5)
+  expect(document.querySelectorAll('.choices .choice')).toHaveLength(2)
+  expect(screen.getByRole('button', { name: u.questions[0].choices[u.questions[0].answer] })).toBeInTheDocument()
+})
