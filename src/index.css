@@ -1322,3 +1322,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .hide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 220px; margin: 0 auto; }
 .hide-grid button { aspect-ratio: 1; border: none; border-radius: 10px; background: var(--bg); font-size: 1.5rem; }
 .grammar-praise { margin: 6px 0; padding: 6px 10px; border-radius: 12px; background: #fef9c3; color: #713f12; font-weight: 700; }
+.daily-gq { margin: 8px 0; padding: 8px; border-radius: 12px; background: var(--card); text-align: center; }
+.daily-gq-title { margin: 0 0 4px; font-size: 0.8rem; font-weight: 700; }
+.daily-gq-sentence { margin: 0 0 6px; font-size: 1rem; font-weight: 700; }
+.daily-gq-choices { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }

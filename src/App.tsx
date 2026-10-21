@@ -25,6 +25,8 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { DailyGrammarQ } from './DailyGrammarQView'
+import { DAILY_Q_XP } from './grammarq'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -808,6 +810,7 @@ function App() {
             pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
           }}
         />
+        <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
         <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
         <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
         <Roulette
