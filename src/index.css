@@ -609,7 +609,7 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .room-sakura { background: radial-gradient(circle at 15% 20%, #fbcfe8 0 5px, transparent 6px), radial-gradient(circle at 75% 35%, #f9a8d4 0 4px, transparent 5px), linear-gradient(180deg, #fdf2f8 0%, #fce7f3 60%, #bbf7d0 100%) !important; color: #1f2937; }
 .room-bookroom { background: repeating-linear-gradient(90deg, #92400e 0 6px, #b45309 6px 18px, #fde68a 18px 20px), linear-gradient(180deg, #fef3c7, #fde68a) !important; background-blend-mode: soft-light; color: #1f2937; }
 .room-royal { background: linear-gradient(180deg, #c7d2fe 0%, #e0e7ff 55%, #a5b4fc 56%, #818cf8 100%) !important; color: #1f2937; }
-.monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind { color: inherit; opacity: 0.8; }
+.monster[class*='room-'] .xp-text, .monster[class*='room-'] .monster-kind, .monster[class*='room-'] .feeling { color: inherit; opacity: 0.85; }
 .room-sample .badge-name { color: inherit; }
 .weekly { margin-top: 10px; } .weekly p { margin: 0 0 4px; font-size: 0.9rem; }
 .read-sentence { font-size: 1.25rem; font-weight: 700; margin: 8px 0 4px; }
