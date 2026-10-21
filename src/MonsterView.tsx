@@ -79,6 +79,30 @@ function WearOne({ id }: { id: string }) {
           <path d="M47 56 L53 56" />
         </g>
       )
+    case 'sunglasses':
+      return (
+        <g fill="#111827" stroke="#000" strokeWidth="2">
+          <rect x="28" y="49" width="19" height="13" rx="5" />
+          <rect x="53" y="49" width="19" height="13" rx="5" />
+          <path d="M47 54 L53 54" fill="none" />
+        </g>
+      )
+    case 'cap':
+      return (
+        <g stroke="#1e3a8a" strokeWidth="2">
+          <path d="M30 30 Q30 10 50 10 Q70 10 70 30 Z" fill="#3b82f6" />
+          <path d="M66 28 L88 30 L70 32 Z" fill="#1d4ed8" />
+          <circle cx="50" cy="10" r="2.5" fill="#1d4ed8" />
+        </g>
+      )
+    case 'pearls':
+      return (
+        <g fill="#f8fafc" stroke="#94a3b8" strokeWidth="1">
+          {[28, 34, 40, 46, 54, 60, 66, 72].map((x) => (
+            <circle key={x} cx={x} cy={78 + (x < 50 ? (x - 28) / 4 : (72 - x) / 4)} r="3" />
+          ))}
+        </g>
+      )
     case 'scarf':
       return (
         <g fill="#ef4444" stroke="#991b1b" strokeWidth="2">

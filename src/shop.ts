@@ -4,10 +4,13 @@ export type Item = { id: string; name: string; price: number; icon: string }
 export const ITEMS: Item[] = [
   { id: 'ribbon', name: 'リボン', price: 30, icon: '🎀' },
   { id: 'glasses', name: 'まるメガネ', price: 60, icon: '👓' },
+  { id: 'cap', name: 'キャップ', price: 70, icon: '🧢' },
   { id: 'scarf', name: 'マフラー', price: 90, icon: '🧣' },
   { id: 'bowtie', name: '蝶ネクタイ', price: 100, icon: '🦋' },
   { id: 'hat', name: 'シルクハット', price: 120, icon: '🎩' },
+  { id: 'sunglasses', name: 'サングラス', price: 140, icon: '🕶' },
   { id: 'flower', name: '花かんむり', price: 150, icon: '🌼' },
+  { id: 'pearls', name: '真珠のネックレス', price: 160, icon: '📿' },
   { id: 'catears', name: 'ねこみみ', price: 180, icon: '🐱' },
   { id: 'headphones', name: 'ヘッドホン', price: 200, icon: '🎧' },
   { id: 'crown', name: '王冠', price: 300, icon: '👑' },
@@ -144,7 +147,7 @@ export function saveSnacks(l: SnackLog): void {
 }
 
 // 着せ替えの場所（頭・顔・首）。同じ場所には1つだけ
-const SLOT: Record<string, 'head' | 'face' | 'neck'> = { glasses: 'face', scarf: 'neck', bowtie: 'neck' }
+const SLOT: Record<string, 'head' | 'face' | 'neck'> = { glasses: 'face', sunglasses: 'face', scarf: 'neck', bowtie: 'neck', pearls: 'neck' }
 export const slotOf = (id: string) => SLOT[id] ?? 'head'
 
 // つけている着せ替え（「hat,glasses」のようにカンマ区切り。昔の1つだけのデータもそのまま読める）
