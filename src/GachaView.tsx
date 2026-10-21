@@ -7,10 +7,11 @@ type Props = {
   coins: number
   members: number // 今の仲間の数
   onDraw: () => Kind | null // 引けたら出た色ちがいを返す
+  onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, onDraw }: Props) {
+export function Gacha({ coins, members, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<{ kind: Kind; key: number } | null>(null)
   const full = members >= PARTY_MAX
   return (
@@ -35,6 +36,17 @@ export function Gacha({ coins, members, onDraw }: Props) {
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>
           <p className="gacha-name">{result.kind.id === 'normal' ? 'ふしぎなタマゴ' : `${result.kind.name}のタマゴ`}が仲間になった！</p>
+          {onRaise && (
+            <button
+              className="flip"
+              onClick={() => {
+                onRaise()
+                setResult(null)
+              }}
+            >
+              🐣 この子を相棒にして育てる
+            </button>
+          )}
           <button className="list-link" onClick={() => setResult(null)}>
             とじる
           </button>

@@ -396,6 +396,8 @@ describe('App', () => {
     expect(party.gacha).toBe(1)
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(10)
     expect(screen.getByText(/が仲間になった！/)).toBeInTheDocument()
+    fireEvent.click(screen.getByText('🐣 この子を相棒にして育てる'))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {

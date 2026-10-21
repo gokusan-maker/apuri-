@@ -691,6 +691,7 @@ function App() {
             if (next) setWallet(next)
           }}
           members={party.members.length}
+          onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={() => {
             const r = drawEgg(wallet, party, Math.random())
             if (!r) return null
