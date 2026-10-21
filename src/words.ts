@@ -3833,6 +3833,16 @@ const WORDS_4: Word[] = [
   { id: 'see-you-in-class', en: 'See you in class', ja: '授業でね', example: 'I\'m going to the library. See you in class!', exampleJa: '図書館に行くね。授業でね！', level: '会話' },
   { id: 'are-you-sure', en: 'Are you sure?', ja: '本当に？・確かなの？', example: '"The test is tomorrow." "Are you sure?"', exampleJa: '「テストは明日だよ。」「本当に？」', level: '会話' },
   { id: 'i-understand', en: 'I understand', ja: 'わかりました', example: 'I understand. I\'ll do it right away.', exampleJa: 'わかりました。すぐにやります。', level: '会話' },
+  { id: 'never-mind', en: 'Never mind', ja: '気にしないで・なんでもない', example: 'Never mind. It\'s not a big problem.', exampleJa: '気にしないで。たいした問題じゃないよ。', level: '会話' },
+  { id: 'not-bad', en: 'Not bad', ja: '悪くないね・なかなかいい', example: 'Not bad! Your English is getting better.', exampleJa: 'なかなかいいね！英語が上達してきてるよ。', level: '会話' },
+  { id: 'so-far-so-good', en: 'So far, so good', ja: '今のところ順調', example: '"How is your new school?" "So far, so good."', exampleJa: '「新しい学校はどう？」「今のところ順調だよ。」', level: '会話' },
+  { id: 'let-me-know', en: 'Let me know', ja: '知らせてね・教えてね', example: 'Let me know when you are ready.', exampleJa: '準備ができたら知らせてね。', level: '会話' },
+  { id: 'times-up', en: 'Time\'s up!', ja: '時間です！・時間切れ！', example: 'Time\'s up! Please put down your pencils.', exampleJa: '時間です！えんぴつを置いてください。', level: '会話' },
+  { id: 'over-here', en: 'Over here!', ja: 'こっちだよ！', example: 'Over here! I saved a seat for you.', exampleJa: 'こっちだよ！きみの席を取っておいたよ。', level: '会話' },
+  { id: 'seat-taken', en: 'Is this seat taken?', ja: 'この席、空いていますか？', example: 'Excuse me. Is this seat taken?', exampleJa: 'すみません。この席、空いていますか？', level: '会話' },
+  { id: 'have-a-minute', en: 'Do you have a minute?', ja: 'ちょっといいですか？', example: 'Do you have a minute? I need some help.', exampleJa: 'ちょっといい？手伝ってほしいことがあるんだ。', level: '会話' },
+  { id: 'just-looking', en: 'Just looking', ja: '（店で）見ているだけです', example: '"Can I help you?" "No, thanks. I\'m just looking."', exampleJa: '「何かおさがしですか？」「いえ、見ているだけです。」', level: '会話' },
+  { id: 'see-you-around', en: 'See you around', ja: 'またどこかでね', example: 'It was nice talking to you. See you around!', exampleJa: '話せて楽しかったよ。またどこかでね！', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
