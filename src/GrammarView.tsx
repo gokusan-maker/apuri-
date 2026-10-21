@@ -284,7 +284,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     </button>
   )
 
-  if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onBack={() => setOrdering(false)} />
+  if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onSpend={onSpend} onBack={() => setOrdering(false)} />
 
   if (step === -1) {
     return (
