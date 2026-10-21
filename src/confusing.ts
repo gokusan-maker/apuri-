@@ -772,6 +772,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Plants need water to stay ___.', choices: ['alive', 'live'], answer: 0, why: 'stay alive で「生きたままでいる」。' },
     ],
   },
+  {
+    id: 'close-closed',
+    title: 'close と closed',
+    points: ['close は「閉める」（動詞）や「近い」（形容詞、クロース）。', 'closed は「閉まっている」（状態）。お店の「準備中・閉店」も closed。'],
+    examples: [
+      { en: 'Please close the door.', ja: 'ドアを閉めてください。' },
+      { en: 'The shop is closed on Mondays.', ja: 'その店は月曜日は閉まっている。' },
+    ],
+    questions: [
+      { sentence: 'The museum is ___ today.', choices: ['close', 'closed'], answer: 1, why: '「閉まっている」状態は closed。' },
+      { sentence: 'Can you ___ the window?', choices: ['close', 'closed'], answer: 0, why: '「閉める」動作は close。' },
+      { sentence: 'My house is ___ to the station.', choices: ['close', 'closed'], answer: 0, why: '「近い」は close（クロース）。' },
+    ],
+  },
+  {
+    id: 'sound-soundlike',
+    title: 'sound と sound like',
+    points: ['sound ＋形容詞で「〜に聞こえる・思える」（That sounds fun.）。', 'sound like ＋名詞で「〜のように聞こえる・思える」（That sounds like a good idea.）。'],
+    examples: [
+      { en: 'That sounds great!', ja: 'それはすてきだね！' },
+      { en: 'That sounds like a plan.', ja: 'それはいい計画だね。' },
+    ],
+    questions: [
+      { sentence: 'Your idea sounds ___.', choices: ['interesting', 'like interesting'], answer: 0, why: 'sound ＋形容詞なので interesting。' },
+      { sentence: 'That sounds ___ a lot of fun.', choices: ['like', 'as'], answer: 0, why: 'sound like ＋名詞。' },
+      { sentence: 'It sounds ___ rain outside.', choices: ['like', 'to'], answer: 0, why: '「雨のような音」は sounds like rain。' },
+    ],
+  },
+  {
+    id: 'which-what',
+    title: 'what と which',
+    points: ['what は「何」（選ぶものが決まっていないとき）。', 'which は「どちら・どれ」（決まった中から選ぶとき）。'],
+    examples: [
+      { en: 'What do you want for your birthday?', ja: '誕生日に何がほしい？' },
+      { en: 'Which do you like, cats or dogs?', ja: 'ネコとイヌ、どちらが好き？' },
+    ],
+    questions: [
+      { sentence: '___ is your favorite food?', choices: ['What', 'Which'], answer: 0, why: '決まっていない中からなので What。' },
+      { sentence: '___ bag is yours, the red one or the blue one?', choices: ['What', 'Which'], answer: 1, why: '2つの中から選ぶので Which。' },
+      { sentence: '___ season do you like better, summer or winter?', choices: ['What', 'Which'], answer: 1, why: '夏か冬かを選ぶので Which。' },
+    ],
+  },
+  {
+    id: 'other-others',
+    title: 'other と others',
+    points: ['other は名詞の前に置く（other people / other books）。', 'others は「ほかの人たち・ほかのもの」と名詞なしで使う。'],
+    examples: [
+      { en: 'Some students walk, and others take the bus.', ja: '歩く生徒もいれば、バスに乗る生徒もいる。' },
+      { en: 'Do you have other colors?', ja: 'ほかの色はありますか。' },
+    ],
+    questions: [
+      { sentence: 'Be kind to ___.', choices: ['other', 'others'], answer: 1, why: '名詞なしで「ほかの人たち」は others。' },
+      { sentence: 'I visited ___ cities in Europe.', choices: ['other', 'others'], answer: 0, why: '名詞 cities の前なので other。' },
+      { sentence: 'Some like tea, and ___ like coffee.', choices: ['other', 'others'], answer: 1, why: 'Some ～, others … で「〜な人もいれば…な人もいる」。' },
+    ],
+  },
+  {
+    id: 'last-latest',
+    title: 'last と latest',
+    points: ['last は「最後の・この前の」（last week / the last train）。', 'latest は「最新の」（the latest news）。'],
+    examples: [
+      { en: 'This is the last train tonight.', ja: 'これが今夜の最終電車だ。' },
+      { en: 'Have you seen the latest movie?', ja: '最新の映画を見た？' },
+    ],
+    questions: [
+      { sentence: 'I want the ___ model of this phone.', choices: ['last', 'latest'], answer: 1, why: '「最新の」は latest。' },
+      { sentence: 'We went to the beach ___ summer.', choices: ['last', 'latest'], answer: 0, why: '「この前の夏」は last summer。' },
+      { sentence: 'Did you hear the ___ news?', choices: ['last', 'latest'], answer: 1, why: '「最新の」ニュースは latest。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
