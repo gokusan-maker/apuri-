@@ -1098,6 +1098,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .stamp.on { background: #ffe4e6; border-color: #fb7185; }
 .long-pick { display: block; width: 100%; margin: 4px 0; text-align: left; }
 .boss-drop { margin: 4px 0; font-weight: 800; color: #b45309; animation: treasure-pop 0.6s ease-out both; }
+.boss-maxhit { margin: 4px 0; font-weight: 700; color: #dc2626; }
 
 .long-underline { text-decoration-thickness: 2px; text-underline-offset: 3px; text-decoration-color: #2563eb; }
 .long-choices.one { grid-template-columns: 1fr; }

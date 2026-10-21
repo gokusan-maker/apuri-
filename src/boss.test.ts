@@ -100,3 +100,17 @@ it('今日のボスは★が高いほどHPが多い', async () => {
   const { dailyHp } = await import('./boss')
   expect([dailyHp(1), dailyHp(2), dailyHp(3)]).toEqual([100, 140, 180])
 })
+
+it('1撃の最大ダメージ記録は、上回ったときだけ更新される', async () => {
+  const { loadMaxHit, recordHit } = await import('./boss')
+  localStorage.clear()
+  expect(loadMaxHit()).toBe(0)
+  expect(recordHit(8)).toBe(true)
+  expect(loadMaxHit()).toBe(8)
+  expect(recordHit(8)).toBe(false)
+  expect(recordHit(5)).toBe(false)
+  expect(recordHit(12)).toBe(true)
+  expect(loadMaxHit()).toBe(12)
+  localStorage.setItem('eitan:max-hit', 'abc')
+  expect(loadMaxHit()).toBe(0)
+})

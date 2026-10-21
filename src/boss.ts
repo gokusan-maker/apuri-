@@ -183,6 +183,27 @@ export function saveWinStreak(n: number): void {
   }
 }
 
+// 1撃の最大ダメージ記録
+const MAX_HIT_KEY = 'eitan:max-hit'
+export function loadMaxHit(): number {
+  try {
+    const n = Number(localStorage.getItem(MAX_HIT_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+// 記録を更新したら true
+export function recordHit(dmg: number): boolean {
+  if (!(dmg > loadMaxHit())) return false
+  try {
+    localStorage.setItem(MAX_HIT_KEY, String(Math.floor(dmg)))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return true
+}
+
 // 金色ボス：日替わりで単語帳のボス1体が金色になる。たおすとおまけコイン
 export const GOLDEN_COINS = 20
 export function goldenLevelOf<T>(levels: T[], day: string): T | undefined {

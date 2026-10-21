@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playCorrect, playWrong } from './sound'
@@ -146,6 +146,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
+  const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
@@ -187,6 +188,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
       const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0)
       setCrit(critical)
+      if (recordHit(hp - nextHp)) setNewRecord(hp - nextHp)
       if (critical) playBossSound('crit')
       const nc = crits + (critical ? 1 : 0)
       setCrits(nc)
@@ -414,6 +416,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          <p className="boss-maxhit">{newRecord > 0 ? `💥 最大ダメージ記録を更新！ ${newRecord}` : `💥 最大ダメージ記録 ${loadMaxHit()}`}</p>
           {drop && (
             <p className="boss-drop">
               🎁 ボスが {BATTLE_ITEMS.find((it) => it.id === drop)!.icon} {BATTLE_ITEMS.find((it) => it.id === drop)!.name} をおとした！
