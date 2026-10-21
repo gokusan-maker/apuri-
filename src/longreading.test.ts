@@ -291,3 +291,9 @@ it('今日の1本は日付で決まる', async () => {
   saveDailyLongDay('2026-10-20')
   expect(loadDailyLongDay()).toBe('2026-10-20')
 })
+
+it('英問英答のある長文は13本以上で、選択肢は4つ', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.qa)
+  expect(ps.length).toBeGreaterThanOrEqual(13)
+  for (const p of ps) for (const q of p.qa!) expect(q.choices).toHaveLength(4)
+})

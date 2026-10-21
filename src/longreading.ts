@@ -1683,6 +1683,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     vocab: [{ word: 'survive', choices: ['生きのびる', '飛び立つ', 'ねむる', '旅をする'], answer: 0, why: '危機にあるペンギンのために海を守る、という流れなので「生きのびる」。' }],
     insert: { sentence: 'Thanks to them, penguins can live even in icy water.', after: [0, 1, 2, 3], answer: 2, why: '「厚い羽毛と脂肪（them）のおかげで」なので、それらを説明した第3段落のあとに入る。' },
+    qa: [{ q: 'Why are some kinds of penguins in danger today?', choices: ['Because the sea is getting warmer and there is less food.', 'Because they cannot swim well.', 'Because people eat too many penguins.', 'Because it is too cold in Antarctica.'], answer: 0, why: '第5段落「海があたたかくなり、えさが少なくなっている」。' }],
     tf: [
       { statement: 'Penguins can fly very high.', answer: false, why: 'ペンギンは飛べない。' },
       { statement: 'All penguins live in very cold places.', answer: false, why: 'あたたかい場所にすむものもいる。' },
@@ -1862,6 +1863,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['during', 'for', 'since', 'while'], answer: 0, why: '後ろが名詞（a hard time）なので前置詞 during。' },
     ],
     seq: { events: ['Taku took the cranes to the hospital.', 'Taku watched a video to learn how to fold a crane.', "Taku's grandmother left the hospital.", "Taku's friends began to help him."], answer: [1, 3, 0, 2], why: '動画で練習 → 友だちが手伝う → 病院に持って行く → おばあさんが退院。' },
+    qa: [{ q: 'Who helped Taku fold the cranes?', choices: ['His friends at school.', 'His grandmother.', 'A doctor.', 'Nobody.'], answer: 0, why: '第3段落「学校の友だちが手伝いはじめた」。' }],
     tf: [
       { statement: "Taku's mother told him about senbazuru.", answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Taku could fold cranes well from the beginning.', answer: false, why: '最初の鶴はうまくできなかった。' },
@@ -1902,6 +1904,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       ],
     },
     vocab: [{ word: 'reduce', choices: ['へらす', 'ふやす', '売る', '運ぶ'], answer: 0, why: '買い物の前に冷蔵庫を確かめる、必要なものだけ買う、という方法の説明なので「へらす」。' }],
+    qa: [{ q: 'What should you do before shopping?', choices: ['Check what is already in your fridge.', 'Throw away old food.', 'Cook a lot of food.', 'Go to a restaurant.'], answer: 0, why: '第4段落「買い物の前に冷蔵庫に何があるか確かめる」。' }],
     tf: [
       { statement: 'Food loss means throwing away food that can still be eaten.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All food loss comes from stores and restaurants.', answer: false, why: '家庭からも多く出ている。' },
@@ -1935,6 +1938,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 1, why: 'Thank you for 〜ing で「〜してくれてありがとう」。' },
     ],
     gist: [{ para: 1, choices: ['ブラウン先生のまちがいの話', 'ブラウン先生の家族', '赤ちゃんの育て方', '日本語のテスト'], answer: 0, why: '第2段落は、ブラウン先生が「かわいい」と「こわい」をまちがえた話。' }],
+    qa: [{ q: 'What did Ms. Brown want to say to the baby?', choices: ['"Kawaii."', '"Kowai."', '"Hello."', '"Thank you."'], answer: 0, why: '第2段落「かわいいと言いたかったのに、こわいと言ってしまった」。' }],
     tf: [
       { statement: 'The speaker often raised a hand in English class in the first year.', answer: false, why: '笑われたくなくて手をあげたことがなかった。' },
       { statement: 'Ms. Brown said "kowai" to a baby by mistake.', answer: true, why: '第2段落の内容と合う。' },
@@ -1968,6 +1972,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['after', 'before', 'during', 'until'], answer: 1, why: '「学校に行く前に」なので before going。' },
     ],
     seq: { events: ['Ren named the kitten Mocha.', 'Ren found a kitten in a box.', 'Ren\'s father said Ren could keep Mocha.', 'Ren took the kitten to an animal doctor.'], answer: [1, 3, 0, 2], why: '箱で子ねこを見つける → 動物のお医者さん → モカと名づける → お父さんが飼ってよいと言う。' },
+    qa: [{ q: 'Where did Ren find the kitten?', choices: ['In a box near the road.', 'At the animal doctor.', 'In his school.', 'Under his bed.'], answer: 0, why: '第1段落「道のそばの箱の中」。' }],
     tf: [
       { statement: 'Ren found the kitten on a sunny day.', answer: false, why: '雨の午後に見つけた。' },
       { statement: "Ren's mother said they could take care of the kitten for a while.", answer: true, why: '第2段落の内容と合う。' },
