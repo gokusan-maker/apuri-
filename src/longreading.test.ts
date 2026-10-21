@@ -105,3 +105,14 @@ it('設問タイプ別の正答率を集計する', async () => {
   saveTypeStats(m)
   expect(loadTypeStats()).toEqual(m)
 })
+
+it('指示語の語句は本文にあり、正解すると1点', () => {
+  const rs = LONG_PASSAGES.filter((p) => p.refer)
+  expect(rs.length).toBeGreaterThanOrEqual(3)
+  for (const p of rs) {
+    const text = p.paragraphs.join(' ')
+    expect(text, p.id).toContain(p.refer!.phrase)
+    expect(p.refer!.phrase).toContain(p.refer!.word)
+    expect(scoreLong(p, {}, {}, [], { refer: p.refer!.answer }).score).toBe(1)
+  }
+})

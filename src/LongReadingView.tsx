@@ -11,7 +11,7 @@ type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source:
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
 
 // 本文の「( A )」を目立つ空所にする
-function Paragraph({ text, underline }: { text: string; underline?: string }) {
+function Paragraph({ text, underline, refer }: { text: string; underline?: string; refer?: { phrase: string; word: string } }) {
   const parts = text.split(/(\( [A-Z] \)|\[ \d \])/)
   return (
     <p className="long-para">
@@ -22,6 +22,17 @@ function Paragraph({ text, underline }: { text: string; underline?: string }) {
               {s}
             </span>
           )
+        const rAt = refer ? s.indexOf(refer.phrase) : -1
+        if (rAt >= 0) {
+          const w = s.indexOf(refer!.word, rAt)
+          return (
+            <span key={i}>
+              {s.slice(0, w)}
+              <u className="long-refer">{refer!.word}</u>
+              {s.slice(w + refer!.word.length)}
+            </span>
+          )
+        }
         const at = underline ? s.indexOf(underline) : -1
         if (at < 0) return s
         return (
@@ -47,6 +58,7 @@ export function LongReading({ onAnswer }: Props) {
   const [sents, setSents] = useState<Record<string, number>>({}) // 会話文の [ 1 ] に入る文
   const [startAt, setStartAt] = useState(0) // 読みはじめた時刻
   const [qa, setQa] = useState<Record<number, number>>({}) // 英問英答
+  const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -90,6 +102,7 @@ export function LongReading({ onAnswer }: Props) {
                   setOrder([])
                   setSents({})
                   setQa({})
+                  setRefer(undefined)
                   setDone(false)
                   setShowJa(false)
                 }}
@@ -115,8 +128,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0)
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -135,7 +148,7 @@ export function LongReading({ onAnswer }: Props) {
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
             <div className="long-para-row">
-              <Paragraph text={t} underline={p.underline?.phrase} />
+              <Paragraph text={t} underline={p.underline?.phrase} refer={p.refer} />
               <button className="speak small long-speak" aria-label={`第${i + 1}段落を聞く`} onClick={() => speak(readable(t))}>
                 🔊
               </button>
@@ -313,6 +326,26 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.refer && (
+        <>
+          <h3 className="long-q">問　本文中の二重下線部 <u className="long-refer">{p.refer.word}</u> が指すものを、ア〜エ から選びなさい。</h3>
+          <div className="long-item">
+            <div className="long-choices one">
+              {p.refer.choices.map((c, i) => (
+                <button key={c} className={`long-choice${refer === i ? ' picked' : ''}${done && i === p.refer!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={refer === i} onClick={() => setRefer(i)}>
+                  {MARKS[i]} {c}
+                </button>
+              ))}
+            </div>
+            {done && (
+              <p className={`long-why${refer === p.refer.answer ? ' right' : ' wrong'}`}>
+                {refer === p.refer.answer ? '⭕' : '❌'} 正解 {MARKS[p.refer.answer]}：{p.refer.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {p.underline && (
         <>
           <h3 className="long-q">問{p.pick2 ? 4 : 3}　下線部 <u>{p.underline.phrase}</u> の意味に最も近いものを、ア〜エ から選びなさい。</h3>
@@ -382,6 +415,7 @@ export function LongReading({ onAnswer }: Props) {
               setOrder([])
               setSents({})
               setQa({})
+              setRefer(undefined)
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -398,7 +432,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer }))
             setTypes(t)
             saveTypeStats(t)
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')

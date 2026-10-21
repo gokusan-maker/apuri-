@@ -6,8 +6,9 @@ export type PickTwo = { statements: string[]; answers: [number, number]; why: st
 export type Underline = { phrase: string; choices: string[]; answer: number; why: string } // 下線部の意味に近いもの
 export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
 export type SentenceBlank = { id: string; choices: string[]; answer: number; why: string } // 会話文の [ 1 ] に入る文
+export type Refer = { phrase: string; word: string; choices: string[]; answer: number; why: string } // 指示語：phrase の中の word が指すもの
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][] }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -178,6 +179,13 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [0, 3],
       why: 'アは第1段落、エは第3段落の内容と合う。イは歌ではなくダンス、ウは数が減っている、オは花を育てようと言っている、カは花で食べ物を見つける。',
     },
+    refer: {
+      phrase: 'This helps many plants',
+      word: 'This',
+      choices: ['bees carrying pollen from flower to flower', 'the food we eat', 'a special dance', 'chemicals used on farms'],
+      answer: 0,
+      why: 'This は直前の文「花から花へ飛ぶとき花粉を運ぶ」ことを指す。',
+    },
     tf: [
       { statement: 'Bees help many plants make fruit and seeds.', answer: true, why: '第1段落に「多くの植物が実や種をつけるのを助ける」とある。' },
       { statement: 'All of the food we eat depends on insects.', answer: false, why: 'たよっているのは「およそ3分の1」。' },
@@ -271,6 +279,13 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'on', 'to', 'with'], answer: 2, why: 'grow to 〜 で「（数が）〜にまでふえる」。to は到達点。' },
       { id: 'E', choices: ['at', 'by', 'for', 'of'], answer: 2, why: '「生き物たちにとって」は for 〜。' },
     ],
+    refer: {
+      phrase: 'mistake them',
+      word: 'them',
+      choices: ['very small pieces of plastic', 'sea animals', 'bottles and bags', 'countries'],
+      answer: 0,
+      why: 'them は直前の microplastics（とても小さなプラスチックのかけら）を指す。',
+    },
     tf: [
       { statement: 'Plastic disappears quickly in the ocean.', answer: false, why: 'Plastic does not disappear easily. とある。' },
       { statement: 'Sea animals sometimes eat small pieces of plastic by mistake.', answer: true, why: 'えさとまちがえる（mistake them for food）とある。' },
@@ -727,6 +742,13 @@ export const LONG_PASSAGES: LongPassage[] = [
       answer: 0,
       why: 'behind the scenes は「舞台裏で・人目につかないところで」。',
     },
+    refer: {
+      phrase: 'it has carried',
+      word: 'it',
+      choices: ['the Shinkansen', 'the station', 'Tokyo', 'the Olympics'],
+      answer: 0,
+      why: '「それ以来、何十億人もの人を運んできた」のは新幹線。',
+    },
     tf: [
       { statement: 'The first Shinkansen line connected Tokyo and Shin-Osaka.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Shinkansen trains are usually more than ten minutes late.', answer: false, why: '平均の遅れは1分未満。' },
@@ -740,7 +762,7 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number> } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -748,7 +770,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const o = p.order && extra.order === p.order.answer ? 1 : 0
   const se = (p.sentences ?? []).filter((x) => extra.sentences?.[x.id] === x.answer).length
   const qa = (p.qa ?? []).filter((x, i) => extra.qa?.[i] === x.answer).length
-  return { score: b + t + k + u + o + se + qa, total: totalOf(p) }
+  const rf = p.refer && extra.refer === p.refer.answer ? 1 : 0
+  return { score: b + t + k + u + o + se + qa + rf, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -773,7 +796,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
@@ -802,13 +825,13 @@ export function targetMinutes(p: LongPassage): number {
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
-export const TYPE_LABEL = { blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export const TYPE_LABEL = { refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
 export type QType = keyof typeof TYPE_LABEL
 export type TypeStats = Partial<Record<QType, [number, number]>>
 
 export function typeResults(
   p: LongPassage,
-  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number> },
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number },
 ): TypeStats {
   const out: TypeStats = {}
   out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
@@ -818,6 +841,7 @@ export function typeResults(
   if (p.qa) out.qa = [p.qa.filter((x, i) => a.qa?.[i] === x.answer).length, p.qa.length]
   if (p.underline) out.underline = [a.underline === p.underline.answer ? 1 : 0, 1]
   if (p.order) out.order = [a.order === p.order.answer ? 1 : 0, 1]
+  if (p.refer) out.refer = [a.refer === p.refer.answer ? 1 : 0, 1]
   return out
 }
 
