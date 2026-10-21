@@ -7,11 +7,11 @@ type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source:
 
 // 本文の「( A )」を目立つ空所にする
 function Paragraph({ text, underline }: { text: string; underline?: string }) {
-  const parts = text.split(/(\( [A-Z] \))/)
+  const parts = text.split(/(\( [A-Z] \)|\[ \d \])/)
   return (
     <p className="long-para">
       {parts.map((s, i) => {
-        if (/^\( [A-Z] \)$/.test(s))
+        if (/^(\( [A-Z] \)|\[ \d \])$/.test(s))
           return (
             <span key={i} className="long-blank">
               {s}
@@ -39,6 +39,7 @@ export function LongReading({ onAnswer }: Props) {
   const [picks, setPicks] = useState<number[]>([])
   const [under, setUnder] = useState<number | undefined>(undefined)
   const [order, setOrder] = useState<number[]>([]) // 並べた語の番号
+  const [sents, setSents] = useState<Record<string, number>>({}) // 会話文の [ 1 ] に入る文
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
@@ -59,6 +60,7 @@ export function LongReading({ onAnswer }: Props) {
                   setPicks([])
                   setUnder(undefined)
                   setOrder([])
+                  setSents({})
                   setDone(false)
                   setShowJa(false)
                 }}
@@ -84,8 +86,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0)
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -134,6 +136,35 @@ export function LongReading({ onAnswer }: Props) {
           )}
         </div>
       ))}
+
+      {p.sentences && (
+        <>
+          <h3 className="long-q">問1-2　会話の [ 1 ]〜[ {p.sentences.at(-1)!.id} ] に入る最も適切な文を、それぞれ ア〜エ から選びなさい。</h3>
+          {p.sentences.map((sb) => (
+            <div key={sb.id} className="long-item">
+              <span className="long-label">[ {sb.id} ]</span>
+              <div className="long-choices one">
+                {sb.choices.map((c, i) => (
+                  <button
+                    key={c}
+                    className={`long-choice${sents[sb.id] === i ? ' picked' : ''}${done && i === sb.answer ? ' answer' : ''}`}
+                    disabled={done}
+                    aria-pressed={sents[sb.id] === i}
+                    onClick={() => setSents({ ...sents, [sb.id]: i })}
+                  >
+                    {MARKS[i]} {c}
+                  </button>
+                ))}
+              </div>
+              {done && (
+                <p className={`long-why${sents[sb.id] === sb.answer ? ' right' : ' wrong'}`}>
+                  {sents[sb.id] === sb.answer ? '⭕' : '❌'} 正解 {MARKS[sb.answer]}：{sb.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
 
       <h3 className="long-q">問2　次の英文が本文の内容と合っていれば○、合っていなければ×を選びなさい。</h3>
       {p.tf.map((t, i) => (
@@ -251,6 +282,7 @@ export function LongReading({ onAnswer }: Props) {
               setPicks([])
               setUnder(undefined)
               setOrder([])
+              setSents({})
               setDone(false)
             }}
           >

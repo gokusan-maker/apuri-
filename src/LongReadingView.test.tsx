@@ -57,3 +57,14 @@ it('採点するとまちがえた問題の根拠の段落に色がつく', () =
   expect(screen.getByText(/根拠がある段落に色をつけたよ/)).toBeInTheDocument()
   expect(document.querySelectorAll('.long-evidence').length).toBe(3)
 })
+
+it('会話文の空所に入る文を選べる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.id === 'shopping-dialogue')!
+  fireEvent.click(screen.getByText(new RegExp('At a Sports Shop')))
+  expect(screen.getAllByText('[ 1 ]').length).toBeGreaterThan(0)
+  const sb = p.sentences![0]
+  fireEvent.click(screen.getByRole('button', { name: `${MARKS[sb.answer]} ${sb.choices[sb.answer]}` }))
+  expect(screen.getByRole('button', { name: `${MARKS[sb.answer]} ${sb.choices[sb.answer]}` })).toHaveAttribute('aria-pressed', 'true')
+})

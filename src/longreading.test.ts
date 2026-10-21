@@ -4,7 +4,7 @@ import { LONG_PASSAGES, loadLongRecord, saveLongRecord, scoreLong } from './long
 beforeEach(() => localStorage.clear())
 
 it('長文は3本以上で、空所が本文にあり、選択肢は4つで正解がその中にある', () => {
-  expect(LONG_PASSAGES.length).toBeGreaterThanOrEqual(9)
+  expect(LONG_PASSAGES.length).toBeGreaterThanOrEqual(10)
   expect(new Set(LONG_PASSAGES.map((p) => p.id)).size).toBe(LONG_PASSAGES.length)
   for (const p of LONG_PASSAGES) {
     const text = p.paragraphs.join(' ')
@@ -60,4 +60,18 @@ it('まちがえた問題の根拠の段落がわかる', async () => {
   expect(evidenceParas(p, [], [])).toEqual([])
   const q = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
   expect(evidenceParas(q, [], [], true)).toEqual([3])
+})
+
+it('会話文の [ n ] は本文にあり、選択肢は4つ', () => {
+  const ds = LONG_PASSAGES.filter((p) => p.sentences)
+  expect(ds.length).toBeGreaterThanOrEqual(1)
+  for (const p of ds) {
+    const text = p.paragraphs.join(' ')
+    for (const sb of p.sentences!) {
+      expect(text.split(`[ ${sb.id} ]`)).toHaveLength(2)
+      expect(sb.choices).toHaveLength(4)
+    }
+    const right = Object.fromEntries(p.sentences!.map((x) => [x.id, x.answer]))
+    expect(scoreLong(p, {}, {}, [], { sentences: right }).score).toBe(p.sentences!.length)
+  }
 })

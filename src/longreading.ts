@@ -5,7 +5,8 @@ export type TrueFalse = { statement: string; answer: boolean; why: string }
 export type PickTwo = { statements: string[]; answers: [number, number]; why: string } // 本文と合うものを2つ選ぶ（ア〜カ）
 export type Underline = { phrase: string; choices: string[]; answer: number; why: string } // 下線部の意味に近いもの
 export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering }
+export type SentenceBlank = { id: string; choices: string[]; answer: number; why: string } // 会話文の [ 1 ] に入る文
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[] }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -339,18 +340,69 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Emma is going to visit Japan next winter.', answer: false, why: '日本に来るのは来年の夏。' },
     ],
   },
+  {
+    id: 'shopping-dialogue',
+    title: 'At a Sports Shop (会話文)',
+    level: '中2〜中3（会話文）',
+    paragraphs: [
+      'Clerk: Good afternoon. May I help you?',
+      "Mika: Yes, please. I'm looking ( A ) a present for my brother. His birthday is next week.",
+      'Clerk: How old will he be?',
+      "Mika: He'll be ten. He likes soccer very much.",
+      'Clerk: [ 1 ]',
+      "Mika: It looks nice, but I think it's a little too expensive for me. [ 2 ]",
+      "Clerk: Sure. This one is ( B ) half the price. It's a little smaller, but it's good for children.",
+      "Mika: Great. I'll take it. Can you wrap it ( C ) me?",
+      'Clerk: Of course. [ 3 ]',
+      "Mika: Blue, please. It's his favorite color.",
+      'Clerk: Here you are. I hope your brother likes it.',
+      "Mika: Thank you. I'm sure he will be glad ( D ) get it.",
+    ],
+    ja: [
+      '店員：こんにちは。いらっしゃいませ。',
+      'ミカ：はい、お願いします。弟へのプレゼントをさがしているんです。来週が誕生日なんです。',
+      '店員：何歳になるんですか。',
+      'ミカ：10歳になります。サッカーが大好きなんです。',
+      '店員：［ 1 ］',
+      'ミカ：すてきですね。でも、私には少し高すぎると思います。［ 2 ］',
+      '店員：もちろんです。こちらはおよそ半分のお値段です。少し小さめですが、子どもにはぴったりですよ。',
+      'ミカ：いいですね。それにします。私のために包んでもらえますか。',
+      '店員：もちろんです。［ 3 ］',
+      'ミカ：青をお願いします。弟の大好きな色なんです。',
+      '店員：どうぞ。弟さんが気に入るといいですね。',
+      'ミカ：ありがとうございます。きっと喜んでくれると思います。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'into', 'with'], answer: 1, why: 'look for 〜 で「〜をさがす」。' },
+      { id: 'B', choices: ['about', 'by', 'for', 'in'], answer: 0, why: 'about は「およそ・約」。about half the price で「およそ半額」。' },
+      { id: 'C', choices: ['at', 'for', 'to', 'with'], answer: 1, why: 'wrap it for me で「私のために包む」。for は「〜のために」。' },
+      { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'be glad to ＋動詞の原形で「〜してうれしい」（感情の原因の不定詞）。' },
+    ],
+    sentences: [
+      { id: '1', choices: ["I'm sorry, but we are closed today.", "Then how about this soccer ball? It's very popular.", 'He is good at playing the piano.', 'Your brother is younger than you.'], answer: 1, why: 'サッカー好きと聞いて、サッカーボールをすすめている。次にミカが「すてきですね」と答えている。' },
+      { id: '2', choices: ['Do you have a cheaper one?', 'Can I try it on?', 'Where is the station?', "I'll take three of them."], answer: 0, why: '「高すぎる」のあとで、店員が「およそ半額」のものを出しているので、安いものをたずねている。' },
+      { id: '3', choices: ['How much is it?', "It's sunny today.", 'Which color of paper would you like, blue or red?', 'Here is your change.'], answer: 2, why: '次にミカが「青をお願いします」と色を答えている。' },
+    ],
+    tf: [
+      { statement: 'Mika is looking for a present for her brother.', answer: true, why: "I'm looking for a present for my brother. とある。" },
+      { statement: "Mika's brother will be twelve years old.", answer: false, why: '10歳になる。' },
+      { statement: 'Mika buys the first soccer ball the clerk shows her.', answer: false, why: '最初のボールは高すぎたので、安いほうを買った。' },
+      { statement: "Mika chooses blue paper because it is her brother's favorite color.", answer: true, why: '青は弟の大好きな色だと言っている。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number> } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
   const u = p.underline && extra.underline === p.underline.answer ? 1 : 0
   const o = p.order && extra.order === p.order.answer ? 1 : 0
-  return { score: b + t + k + u + o, total: p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) }
+  const se = (p.sentences ?? []).filter((x) => extra.sentences?.[x.id] === x.answer).length
+  return { score: b + t + k + u + o + se, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -375,7 +427,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
