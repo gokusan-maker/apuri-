@@ -1129,3 +1129,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .spot-text { font-size: 1.1rem; font-weight: 700; }
 .spot-buttons { justify-content: center; grid-template-columns: repeat(2, minmax(0, 140px)) !important; }
 .spot-btn { display: block; margin: 6px auto; }
+
+.long-vocab { margin: 6px 0; text-align: left; font-size: 0.85rem; }
+.long-vocab ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; grid-template-columns: 1fr; gap: 2px; }
+.long-vocab strong { color: #1d4ed8; margin-right: 4px; }

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -118,6 +119,18 @@ export function LongReading({ onAnswer }: Props) {
       <button className="list-link" onClick={() => setShowJa(!showJa)}>
         {showJa ? '和訳をかくす' : '和訳を見る'}
       </button>
+      {keyWords(p).length > 0 && (
+        <details className="long-vocab">
+          <summary>📒 重要語句（{keyWords(p).length}）</summary>
+          <ul>
+            {keyWords(p).map((w) => (
+              <li key={w.id}>
+                <strong>{w.en}</strong> {w.ja}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
 
       <h3 className="long-q">問1　本文の ( A )〜( {p.blanks.at(-1)!.id} ) に入る最も適切な語を、それぞれ ア〜エ から選びなさい。</h3>
       {p.blanks.map((b) => (
