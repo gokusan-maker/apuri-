@@ -35,6 +35,7 @@ type Props = {
   onSwitch?: (i: number) => void
   season?: SeasonFx // 季節の背景演出
   onPet?: () => void // なでた（ごきげんメーター）
+  epithet?: string | null // 二つ名（ボスをたおした回数で変わる）
   mood100?: { points: number; max: number } // ごきげんメーター
   onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
   evolved?: boolean
@@ -655,7 +656,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season, onPet, mood100 }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season, onPet, mood100, epithet }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -836,6 +837,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             )}
           </p>
         )}
+        {epithet && <p className="epithet">⚔️ {epithet}</p>}
         {(title || feeling) && (
           <p className="title-badge">
             {title && `🎖 ${title}`}

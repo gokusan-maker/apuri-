@@ -33,3 +33,14 @@ export function saveBook(b: BossBook): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 相棒の二つ名：ボスをたおした回数（ボス図鑑の合計）で変わる
+export const EPITHETS: { wins: number; name: string }[] = [
+  { wins: 1, name: 'かけだし勇者' },
+  { wins: 10, name: 'ボスハンター' },
+  { wins: 30, name: '伝説の勇者' },
+]
+export const totalWins = (book: BossBook) => Object.values(book).reduce((a, e) => a + e.wins, 0)
+export function epithetOf(wins: number): string | null {
+  return [...EPITHETS].reverse().find((e) => wins >= e.wins)?.name ?? null
+}

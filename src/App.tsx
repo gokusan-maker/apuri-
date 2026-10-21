@@ -16,6 +16,7 @@ import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
+import { epithetOf, loadBook, totalWins } from './bossbook'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
@@ -720,6 +721,7 @@ function App() {
           onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
           onPet={() => cheerUp(1)}
           mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
+          epithet={epithetOf(totalWins(loadBook()))}
           onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
         />
         <p className="stats">

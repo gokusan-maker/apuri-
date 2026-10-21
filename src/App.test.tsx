@@ -423,6 +423,12 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
+  it('ボスをたおした回数で相棒に二つ名がつく', () => {
+    localStorage.setItem('eitan:boss-book', JSON.stringify({ ヤミモチ: { wins: 10, best: 'A', first: '2026-10-01', look: { name: 'ヤミモチ', color: '#000', line: '#000', eye: '#fff' } } }))
+    render(<App />)
+    expect(screen.getByText('⚔️ ボスハンター')).toBeInTheDocument()
+  })
+
   it('なでるとごきげんがたまる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     render(<App />)
