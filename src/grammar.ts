@@ -1128,3 +1128,24 @@ export function grammarShareText(unitTitle: string, score: number, total: number
   const mark = score === total ? '👑 全問正解！' : score * 2 >= total ? '👍' : '💪 もう一度がんばる！'
   return `イングリッシュモンスターで文法「${unitTitle}」に挑戦！ ${score} / ${total} 問正解 ${mark}`
 }
+
+// お気に入りの単元（★）
+const FAV_KEY = 'eitan:grammar-fav'
+export function loadGrammarFav(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(FAV_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveGrammarFav(ids: string[]): void {
+  try {
+    localStorage.setItem(FAV_KEY, JSON.stringify(ids))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const toggleGrammarFav = (ids: string[], id: string) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id])
+// ★の単元を先に、あとは元の順番
+export const favFirst = <T extends { id: string }>(units: T[], fav: string[]) => [...units.filter((u) => fav.includes(u.id)), ...units.filter((u) => !fav.includes(u.id))]

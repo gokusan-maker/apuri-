@@ -8,7 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -32,6 +32,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [picked, setPicked] = useState<number | null>(null)
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
+  const [fav, setFav] = useState(loadGrammarFav)
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
@@ -182,8 +183,22 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </div>
         )}
         <ul className="grammar-list">
-          {units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade).map((u) => (
-            <li key={u.id}>
+          {favFirst(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), stampMode ? fav : []).map((u) => (
+            <li key={u.id} className={stampMode ? 'with-fav' : undefined}>
+              {stampMode && (
+                <button
+                  className={`grammar-fav${fav.includes(u.id) ? ' on' : ''}`}
+                  aria-label={`${u.title}をお気に入り${fav.includes(u.id) ? 'からはずす' : 'にする'}`}
+                  aria-pressed={fav.includes(u.id)}
+                  onClick={() => {
+                    const f = toggleGrammarFav(fav, u.id)
+                    setFav(f)
+                    saveGrammarFav(f)
+                  }}
+                >
+                  {fav.includes(u.id) ? '★' : '☆'}
+                </button>
+              )}
               <button onClick={() => open(u)}>
                 <span>{u.title}</span>
                 <span className="grammar-score">

@@ -196,3 +196,15 @@ it('結果画面でシェア用の文をコピーできる', async () => {
   expect(writeText).toHaveBeenCalledWith(expect.stringContaining(`「${unit.title}」に挑戦！ 3 / 3 問正解`))
   expect(await screen.findByText('✅ コピーしました')).toBeInTheDocument()
 })
+
+it('単元に★をつけると一覧の上に来る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const last = GRAMMAR[GRAMMAR.length - 1]
+  fireEvent.click(screen.getByRole('button', { name: `${last.title}をお気に入りにする` }))
+  const items = [...document.querySelectorAll('.grammar-list li')]
+  expect(items[0].textContent).toContain(last.title)
+  expect(JSON.parse(localStorage.getItem('eitan:grammar-fav')!)).toEqual([last.id])
+  fireEvent.click(screen.getByRole('button', { name: `${last.title}をお気に入りからはずす` }))
+  expect(document.querySelectorAll('.grammar-list li')[0].textContent).toContain(GRAMMAR[0].title)
+})

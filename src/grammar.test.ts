@@ -87,3 +87,19 @@ it('文法クイズの結果をシェア用の文にできる', async () => {
   expect(grammarShareText('過去形', 2, 3)).toContain('👍')
   expect(grammarShareText('過去形', 0, 3)).toContain('もう一度がんばる')
 })
+
+it('お気に入りの単元を先に並べられる', async () => {
+  const { favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav } = await import('./grammar')
+  localStorage.clear()
+  expect(loadGrammarFav()).toEqual([])
+  let f = toggleGrammarFav([], 'b')
+  f = toggleGrammarFav(f, 'c')
+  expect(f).toEqual(['b', 'c'])
+  expect(toggleGrammarFav(f, 'b')).toEqual(['c'])
+  saveGrammarFav(f)
+  expect(loadGrammarFav()).toEqual(['b', 'c'])
+  const us = [{ id: 'a' }, { id: 'b' }, { id: 'c' }, { id: 'd' }]
+  expect(favFirst(us, ['c']).map((u) => u.id)).toEqual(['c', 'a', 'b', 'd'])
+  localStorage.setItem('eitan:grammar-fav', '{"x":1}')
+  expect(loadGrammarFav()).toEqual([])
+})
