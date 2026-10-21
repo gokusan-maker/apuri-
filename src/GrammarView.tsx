@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BossFigure } from './BossView'
+import { GrammarCards } from './GrammarCardsView'
 import { GrammarOrder } from './GrammarOrderView'
 import { GrammarSpot } from './GrammarSpotView'
 import { GrammarTime } from './GrammarTimeView'
@@ -34,6 +35,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [timeAttack, setTimeAttack] = useState(false) // タイムアタック
   const [grade, setGrade] = useState<GrammarGrade | 'all'>('all')
   const [rush, setRush] = useState<{ list: GrammarUnit[]; at: number } | null>(null) // 文法モンスターラッシュ
+  const [cards, setCards] = useState(false) // 要点カード
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
   const daily = dailyGrammar(today)
@@ -55,6 +57,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   }
 
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
+  if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} />
 
   if (!unit) {
@@ -96,6 +99,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         >
           📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setCards(true)}>
+            🃏 要点カードでおさらい（学年タブでしぼりこめるよ）
+          </button>
+        )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問）
