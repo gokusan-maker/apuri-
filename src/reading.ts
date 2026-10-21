@@ -718,4 +718,59 @@ export const PASSAGES: Passage[] = [
       { q: '弟は何をした？', choices: ['泣いた', 'ペンギンの歩き方をまねした', '寝てしまった'], answer: 1 },
     ],
   },
+  {
+    id: 'study-plan',
+    title: 'My Study Plan',
+    text: 'I want to pass the English test in February. So I made a study plan. I learn ten new words every morning and review them at night. On Sundays, I take a practice test. Little by little, my score is going up.',
+    ja: '2月の英語の試験に合格したいです。そこで勉強の計画を立てました。毎朝新しい単語を10語覚え、夜に復習します。日曜日には模擬テストを受けます。少しずつ点数が上がっています。',
+    questions: [
+      { q: '試験はいつ？', choices: ['12月', '2月', '4月'], answer: 1 },
+      { q: '毎朝何をする？', choices: ['新しい単語を10語覚える', '模擬テストを受ける', '本を読む'], answer: 0 },
+      { q: '日曜日に何をする？', choices: ['休む', '模擬テストを受ける', '映画を見る'], answer: 1 },
+    ],
+  },
+  {
+    id: 'fox-shrine',
+    title: 'The Fox Statues',
+    text: 'There is an old shrine with many fox statues in my town. People say foxes are messengers of the god there. Every New Year, my family visits the shrine. I always say hello to the biggest fox.',
+    ja: '私の町には、キツネの像がたくさんある古い神社があります。キツネはそこの神様のお使いだと言われています。毎年お正月に家族でその神社にお参りします。私はいつもいちばん大きなキツネにあいさつします。',
+    questions: [
+      { q: '神社には何の像がたくさんある？', choices: ['イヌ', 'キツネ', 'ウサギ'], answer: 1 },
+      { q: 'キツネは何だと言われている？', choices: ['神様のお使い', '町の王さま', '山の主'], answer: 0 },
+      { q: 'いつ神社に行く？', choices: ['夏休み', 'お正月', '誕生日'], answer: 1 },
+    ],
+  },
+  {
+    id: 'robot-contest',
+    title: 'The Robot Contest',
+    text: 'Our science club joined a robot contest last month. Our robot had to carry balls into a box. During practice, it often stopped. We fixed it many times. In the contest, it carried twelve balls and we won second place.',
+    ja: '先月、科学部でロボットコンテストに参加しました。私たちのロボットはボールを箱に運ばなければなりませんでした。練習中はよく止まってしまいました。何度も直しました。大会では12個のボールを運び、2位になりました。',
+    questions: [
+      { q: 'ロボットは何をする？', choices: ['ボールを箱に運ぶ', '絵をかく', '歌を歌う'], answer: 0 },
+      { q: '練習中はどうだった？', choices: ['完ぺきだった', 'よく止まった', '速すぎた'], answer: 1 },
+      { q: '結果は？', choices: ['1位', '2位', '3位'], answer: 1 },
+    ],
+  },
+  {
+    id: 'shooting-star',
+    title: 'Shooting Stars',
+    text: 'Last August, my family went to the mountains to see shooting stars. We lay on a blanket and looked up at the dark sky. At first we saw nothing. Then, after midnight, we counted fifteen shooting stars.',
+    ja: '去年の8月、家族で流れ星を見に山へ行きました。毛布の上に寝転んで暗い空を見上げました。最初は何も見えませんでした。それから真夜中を過ぎると、流れ星を15個数えました。',
+    questions: [
+      { q: 'いつ行った？', choices: ['去年の8月', '去年の12月', '今年の春'], answer: 0 },
+      { q: 'どうやって空を見た？', choices: ['望遠鏡で', '毛布の上に寝転んで', '車の中から'], answer: 1 },
+      { q: '流れ星はいくつ数えた？', choices: ['5個', '10個', '15個'], answer: 2 },
+    ],
+  },
+  {
+    id: 'thank-you-letter',
+    title: 'A Thank-You Letter',
+    text: 'Our homeroom teacher is leaving our school in March. We decided to write her a thank-you letter in English. Everyone wrote one sentence about a happy memory. When she read it, she smiled and said she would keep it forever.',
+    ja: '担任の先生が3月に学校を去ることになりました。私たちは英語で感謝の手紙を書くことにしました。全員が楽しい思い出について1文ずつ書きました。先生はそれを読んでほほえみ、ずっと大切にすると言いました。',
+    questions: [
+      { q: '先生はいつ学校を去る？', choices: ['3月', '4月', '7月'], answer: 0 },
+      { q: '手紙は何語で書いた？', choices: ['日本語', '英語', 'フランス語'], answer: 1 },
+      { q: '先生は手紙をどうすると言った？', choices: ['すぐ返す', 'ずっと大切にする', 'みんなに見せる'], answer: 1 },
+    ],
+  },
 ]
