@@ -553,6 +553,19 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:roulette')).toBe('2026-10-20')
   })
 
+  it('5連ガチャはレア以上が1つ確定', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 300, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 300枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5) // ふつうなら全部ふつうの色
+    fireEvent.click(screen.getByRole('button', { name: /5連ガチャ/ }))
+    rnd.mockRestore()
+    const st = JSON.parse(localStorage.getItem('eitan:gacha-stats')!)
+    expect(st.total).toBe(5)
+    expect(st.N).toBe(4)
+    expect(st.R + st.SR + st.UR).toBe(1)
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

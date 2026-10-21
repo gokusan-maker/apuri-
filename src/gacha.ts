@@ -156,3 +156,6 @@ export const addStats = (s: GachaStats, rarities: Kind['rarity'][]): GachaStats 
 export const LUCKY_EVERY = 7
 export const LUCKY_COINS = 7
 export const isLuckyPull = (n: number) => n > 0 && n % LUCKY_EVERY === 0
+
+// 5連ガチャ：5回目までにレア以上が出なければ、最後の1回はレア以上確定
+export const MULTI5 = 5

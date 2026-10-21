@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GACHA_PRICE, gachaOmen, LUCKY_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
+import { GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -68,6 +68,22 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
         >
           🎰🎰🎰 3連ガチャ 🪙{price * MULTI}
           {members + MULTI > PARTY_MAX && <small>（仲間の空きが3ひつよう）</small>}
+        </button>
+      )}
+      {onDrawMulti && !full && (
+        <button
+          className="good gacha-btn multi multi5"
+          disabled={!(members + MULTI5 <= PARTY_MAX && coins >= price * MULTI5)}
+          onClick={() => {
+            const list = onDrawMulti(MULTI5)
+            if (list.length === 0) return
+            setResult(null)
+            setMulti({ list, key: Date.now() })
+            list.forEach(record)
+          }}
+        >
+          🌈 5連ガチャ（レア以上1つ確定）🪙{price * MULTI5}
+          {members + MULTI5 > PARTY_MAX && <small>（仲間の空きが5ひつよう）</small>}
         </button>
       )}
       {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}
