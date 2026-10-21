@@ -25,6 +25,7 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
 import { HideSeek } from './HideSeekView'
@@ -277,6 +278,10 @@ function App() {
   const [shards, setShards] = usePersistent(loadShards, saveShards)
   const [gachaPoints, setGachaPoints] = usePersistent(loadGachaPoints, saveGachaPoints)
   const [stickers, setStickers] = usePersistent(loadStickers, saveStickers)
+  const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
+  const [giftMsg, setGiftMsg] = useState('')
+  // 1日の目標を達成したら、次の日のおみやげを予約する
+  if (studiedToday >= settings.dailyGoal && giftDay !== today && !giftReady(giftDay, today)) setGiftDay(today)
   const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
@@ -810,6 +815,30 @@ function App() {
             pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
           }}
         />
+        {giftReady(giftDay, today) ? (
+          <button
+            className="challenge-btn gift-btn"
+            onClick={() => {
+              const st = stickerOf(rand())
+              const r = addSticker(stickers, st)
+              setStickers(r.book)
+              setGiftDay('')
+              setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
+              if (r.complete) {
+                setWallet((x) => addTicket(addTicket(x)))
+                pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+              }
+            }}
+          >
+            🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
+          </button>
+        ) : (
+          giftMsg && (
+            <p className="walk-msg" role="status">
+              {giftMsg}
+            </p>
+          )
+        )}
         <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
         <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
         <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />

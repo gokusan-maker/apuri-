@@ -1326,3 +1326,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .daily-gq-title { margin: 0 0 4px; font-size: 0.8rem; font-weight: 700; }
 .daily-gq-sentence { margin: 0 0 6px; font-size: 1rem; font-weight: 700; }
 .daily-gq-choices { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.gift-btn { background: linear-gradient(90deg, #fbcfe8, #fde68a); color: #831843; }
