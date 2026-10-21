@@ -1154,3 +1154,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-types ul { margin: 4px 0 0; padding-left: 1.2em; }
 .long-types li.weak { color: #b91c1c; font-weight: 700; }
 .warm-btn { display: block; width: 100%; margin-top: 4px; padding: 4px; border: 1px solid #fdba74; border-radius: 8px; background: #fff7ed; font-size: 0.72rem; }
+.ta-head strong { font-size: 1.2rem; }
+.ta-hurry { color: #dc2626; }
+.ta.ta-ok { box-shadow: 0 0 0 3px #86efac; }
+.ta.ta-ng { box-shadow: 0 0 0 3px #fca5a5; }

@@ -918,3 +918,25 @@ export function saveDailyGrammarDay(d: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 文法タイムアタックのベスト記録
+export const TA_SECONDS = 60
+const KEY = 'eitan:grammar-ta-best'
+
+export function loadTaBest(): number {
+  try {
+    const n = Number(localStorage.getItem(KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+
+export function saveTaBest(n: number): void {
+  try {
+    localStorage.setItem(KEY, String(n))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+

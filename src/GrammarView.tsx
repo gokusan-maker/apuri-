@@ -2,10 +2,11 @@ import { useState } from 'react'
 import { BossFigure } from './BossView'
 import { GrammarOrder } from './GrammarOrderView'
 import { GrammarSpot } from './GrammarSpotView'
+import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -29,6 +30,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
   const [spot, setSpot] = useState(false) // まちがいさがし
+  const [timeAttack, setTimeAttack] = useState(false) // タイムアタック
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
   const daily = dailyGrammar(today)
@@ -44,6 +46,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   }
 
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
+  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} />
 
   if (!unit) {
     return (
@@ -87,6 +90,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問）
+          </button>
+        )}
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setTimeAttack(true)}>
+            ⏱ 文法タイムアタック（60秒）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
           </button>
         )}
         {stampMode && weakUnits(record).length > 0 && (
