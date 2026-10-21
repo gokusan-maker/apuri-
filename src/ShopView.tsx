@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react'
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
@@ -18,6 +19,12 @@ type Props = {
 export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
+  const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
+  useEffect(() => {
+    if (!eating) return
+    const t = window.setTimeout(() => setEating(null), 1800)
+    return () => window.clearTimeout(t)
+  }, [eating])
   return (
     <section className="card shop">
       <button className="stage-back" onClick={onClose}>
@@ -26,12 +33,21 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       <h2>ショップ・着せ替え</h2>
       <p className="stats-note">正解1問で🪙1枚。いまのコイン：🪙 {wallet.coins}</p>
       <div className="shop-preview">
-        <MonsterFigure form={form} wear={monster.wear} mood="happy" />
+        <MonsterFigure form={form} wear={monster.wear} mood={eating ? 'eat' : 'happy'} />
+        {eating && (
+          <span key={eating.key} className="snack-bite" aria-label="もぐもぐ">
+            {eating.icon}
+          </span>
+        )}
       </div>
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (
-          <button key={sn.id} className="good" disabled={snacksLeft <= 0 || wallet.coins < sn.price} onClick={() => onEat(sn.id)}>
+          <button key={sn.id} className="good" disabled={snacksLeft <= 0 || wallet.coins < sn.price} onClick={() => {
+              onEat(sn.id)
+              setEating({ icon: sn.icon, key: Date.now() })
+            }}
+          >
             {sn.icon} {sn.name} 🪙{sn.price}（+{sn.xp}XP）
           </button>
         ))}

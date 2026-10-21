@@ -9,7 +9,7 @@ import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
-type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow' | 'sleep'
+type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow' | 'sleep' | 'eat'
 // さわったときの表情（順番に変わる）
 const REACTIONS: Mood[] = ['happy', 'wink', 'star', 'wow']
 
@@ -43,6 +43,17 @@ function Face({ mood }: { mood: Mood }) {
         <path d="M57 61 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path d="M44 75 Q50 70 56 75" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path className="monster-tear" d="M68 64 q3 6 0 9 q-3 -3 0 -9" fill="#60a5fa" />
+      </g>
+    )
+  }
+  if (mood === 'eat') {
+    return (
+      <g className="monster-face face-eat">
+        <path d="M31 58 Q38 50 45 58" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
+        <path d="M55 58 Q62 50 69 58" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
+        <ellipse cx="28" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.6" />
+        <ellipse cx="72" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.6" />
+        <ellipse className="chew" cx="50" cy="72" rx="6" ry="4" fill="#7f1d1d" stroke="#1f2937" strokeWidth="2" />
       </g>
     )
   }

@@ -491,7 +491,12 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .coins { margin-left: 8px; padding: 0 8px; border: 1px solid #f59e0b; border-radius: 999px; background: transparent; color: #b45309; font-size: 0.8rem; font-weight: 700; }
 .shop { text-align: left; }
 .shop h2 { margin: 4px 0 4px; font-size: 1.2rem; }
-.shop-preview { width: 120px; height: 120px; margin: 0 auto 8px; }
+.shop-preview { position: relative; width: 120px; height: 120px; margin: 0 auto 8px; }
+.snack-bite { position: absolute; left: 50%; top: 52%; font-size: 1.6rem; pointer-events: none; animation: bite 1.8s forwards; }
+@keyframes bite { 0% { transform: translate(-50%, -60px) scale(1.2); opacity: 0; } 25% { transform: translate(-50%, -10px) scale(1); opacity: 1; } 45% { transform: translate(-50%, 0) scale(0.7); } 70% { transform: translate(-50%, 2px) scale(0.35); opacity: 0.8; } 100% { transform: translate(-50%, 4px) scale(0); opacity: 0; } }
+.chew { transform-origin: 50px 72px; animation: chew 0.3s ease-in-out infinite alternate; }
+@keyframes chew { to { transform: scale(1.1, 0.4); } }
+@media (prefers-reduced-motion: reduce) { .snack-bite, .chew { animation: none; } }
 .shop-btn { margin-top: 4px; padding: 4px 8px; border: none; border-radius: 8px; background: var(--accent); color: var(--accent-fg); font-size: 0.75rem; }
 .shop-btn:disabled { opacity: 0.4; }
 .onboarding-figure { width: 96px; height: 96px; margin: 0 auto; }
