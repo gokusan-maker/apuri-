@@ -3,7 +3,7 @@ import { GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, 
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
-import { speak } from './speech'
+import { cancelSpeech, speak, speakSeq } from './speech'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
@@ -73,6 +73,7 @@ export function LongReading({ onAnswer }: Props) {
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
   const [resumed, setResumed] = useState(false)
+  const [readingAll, setReadingAll] = useState(false)
   const [genre, setGenre] = useState<Genre | 'all'>('all')
 
   function openPassage(x: LongPassage) {
@@ -186,7 +187,14 @@ export function LongReading({ onAnswer }: Props) {
   return (
     <section className="card grammar long-reading">
       <div className="stage-head">
-        <button className="stage-back" onClick={() => setP(null)}>
+        <button
+          className="stage-back"
+          onClick={() => {
+            cancelSpeech()
+            setReadingAll(false)
+            setP(null)
+          }}
+        >
           ← 長文の一覧
         </button>
         <span>
@@ -195,6 +203,23 @@ export function LongReading({ onAnswer }: Props) {
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
       {resumed && !done && <p className="stats-note">✏️ とちゅうから再開しました（答えかけの内容はそのまま）</p>}
+      <button
+        className="list-link long-read-all"
+        onClick={() => {
+          if (readingAll) {
+            cancelSpeech()
+            setReadingAll(false)
+            return
+          }
+          setReadingAll(true)
+          speakSeq(
+            p.paragraphs.map((t) => ({ text: readable(t) })),
+            () => setReadingAll(false),
+          )
+        }}
+      >
+        {readingAll ? '⏹ 読み上げをとめる' : '🔊 全文を聞く'}
+      </button>
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (

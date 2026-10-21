@@ -172,3 +172,21 @@ it('文を入れる位置の問題は本文に［ア］〜［エ］が出て選�
   fireEvent.click(btn)
   expect(btn).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('全文を聞くで段落を順番に読み上げ、とめられる', async () => {
+  localStorage.clear()
+  const speech = await import('./speech')
+  const seq = vi.spyOn(speech, 'speakSeq').mockImplementation(() => {})
+  const cancel = vi.spyOn(speech, 'cancelSpeech').mockImplementation(() => {})
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getByText('🔊 全文を聞く'))
+  expect(seq).toHaveBeenCalledTimes(1)
+  expect(seq.mock.calls[0][0]).toHaveLength(p.paragraphs.length)
+  fireEvent.click(screen.getByText('⏹ 読み上げをとめる'))
+  expect(cancel).toHaveBeenCalled()
+  expect(screen.getByText('🔊 全文を聞く')).toBeInTheDocument()
+  seq.mockRestore()
+  cancel.mockRestore()
+})
