@@ -755,9 +755,10 @@ function App() {
             if (next) setWallet(next)
           }}
           members={party.members.length}
+          dragonUp={isWeekend(today)}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random())
+            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today))
             if (!r) return null
             setWallet(r.wallet)
             setParty(r.party)

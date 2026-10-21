@@ -89,3 +89,12 @@ it('天井：スーパーレア以上が出ないまま20回目はきんいろ�
   expect(r2.kind.id).toBe('kin')
   expect(r2.wallet.pity).toBe(0)
 })
+
+it('週末はドラコが出やすい（10%→20%、そのぶんモチが減る）', async () => {
+  const { rollSpecies, SPECIES, speciesRate } = await import('./monster')
+  const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, true), 0)
+  expect(total).toBeCloseTo(1)
+  let dragons = 0
+  for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
+  expect(dragons).toBe(200)
+})

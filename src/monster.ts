@@ -273,10 +273,18 @@ export const SPECIES: Species[] = [
 export const speciesOf = (id: string | undefined): Species => SPECIES.find((x) => x.id === id) ?? SPECIES[0]
 
 // 0〜1の乱数から種類を決める（割合は SPECIES の rate）
-export function rollSpecies(r: number): Species {
+// dragonUp（週末）のときはドラコが2倍、そのぶんモチが少なくなる
+export const DRAGON_UP = 0.1
+
+export function speciesRate(sp: Species, dragonUp = false): number {
+  if (!dragonUp) return sp.rate
+  return sp.id === 'dragon' ? sp.rate + DRAGON_UP : sp.id === 'mochi' ? sp.rate - DRAGON_UP : sp.rate
+}
+
+export function rollSpecies(r: number, dragonUp = false): Species {
   let acc = 0
   for (const sp of SPECIES) {
-    acc += sp.rate
+    acc += speciesRate(sp, dragonUp)
     if (r < acc) return sp
   }
   return SPECIES[SPECIES.length - 1]

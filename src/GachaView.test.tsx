@@ -42,3 +42,8 @@ it('出る確率が見られる（合計100%）', () => {
   })
   expect(pct.reduce((a, b) => a + b, 0)).toBe(100)
 })
+
+it('週末はドラコ出現アップのお知らせが出る', () => {
+  render(<Gacha coins={0} members={1} dragonUp onDraw={() => null} />)
+  expect(screen.getByText(/週末はドラコが出やすい/)).toBeInTheDocument()
+})

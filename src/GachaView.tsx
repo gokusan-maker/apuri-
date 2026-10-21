@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { GACHA_PRICE, PARTY_MAX } from './gacha'
-import { FORMS, RARITY_LABEL, SPECIES, withSpecies, type Kind, type Species } from './monster'
+import { FORMS, RARITY_LABEL, SPECIES, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
 export type GachaResult = { kind: Kind; species: Species }
@@ -10,12 +10,13 @@ type Props = {
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
   pityLeft?: number // あと何回でスーパーレア以上が確定
+  dragonUp?: boolean // 週末はドラコが出やすい
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const full = members >= PARTY_MAX
   return (
@@ -44,6 +45,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, onDraw, onRaise }
         </button>
       )}
       <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
+      {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
       {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}
       <details className="gacha-odds">
         <summary>出る確率</summary>
@@ -52,7 +54,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, onDraw, onRaise }
           <li>レア（さくら色・うみ色・よる色）各10%</li>
           <li>スーパーレア（きんいろ）9%</li>
           <li>ウルトラレア（にじいろ）1%</li>
-          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(sp.rate * 100)}%`).join('・')}</li>
+          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(speciesRate(sp, dragonUp) * 100)}%`).join('・')}</li>
         </ul>
       </details>
       {result && (

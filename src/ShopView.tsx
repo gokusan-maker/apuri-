@@ -21,9 +21,10 @@ type Props = {
   members?: number // 仲間の数（ガチャ用）
   onGacha?: (ticket: boolean) => GachaResult | null
   onRaiseNew?: () => void
+  dragonUp?: boolean
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -50,7 +51,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           )}
         </div>
       </div>
-      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} onDraw={onGacha} onRaise={onRaiseNew} />}
+      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} onDraw={onGacha} onRaise={onRaiseNew} />}
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (

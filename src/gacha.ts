@@ -23,12 +23,12 @@ export function addTicket(w: Wallet): Wallet {
 // 引けたら、コインを減らしてタマゴを仲間に加える
 // ticket=true のときはコインのかわりにチケットを1枚使う
 // r は色ちがい、r2 はキャラクターの種類を決める乱数
-export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
+export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
   if (!canDraw(w, p, ticket)) return null
   const rolled = rollKind(r)
   const kind = rolled.rarity === 'N' || rolled.rarity === 'R' ? ((w.pity ?? 0) + 1 >= PITY ? kindOf('kin') : rolled) : rolled
   const pity = kind.rarity === 'SR' || kind.rarity === 'UR' ? 0 : (w.pity ?? 0) + 1
-  const species = rollSpecies(r2)
+  const species = rollSpecies(r2, dragonUp)
   const egg = { xp: 0, ...(kind.id === 'normal' ? {} : { kind: kind.id }), ...(species.id === 'mochi' ? {} : { species: species.id }) }
   const paid = ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }
   return { wallet: { ...paid, pity }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
