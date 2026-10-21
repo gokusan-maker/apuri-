@@ -1070,6 +1070,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Shall I ___ you with your homework?', choices: ['help', 'helping', 'to help'], answer: 0, why: 'Shall I のあとは動詞の原形。' },
     ],
   },
+  {
+    id: 'as-soon-as',
+    title: '接続詞 as soon as（〜するとすぐに）',
+    points: ['as soon as ＋主語＋動詞で「〜するとすぐに」。', '未来のことでも、as soon as の中は現在形を使う（as soon as I get home）。'],
+    examples: [
+      { en: 'I will call you as soon as I arrive.', ja: '着いたらすぐにあなたに電話します。' },
+      { en: 'As soon as the bell rang, the students ran outside.', ja: 'ベルが鳴るとすぐに、生徒たちは外へかけ出した。' },
+    ],
+    questions: [
+      { sentence: 'Please text me as soon ___ you get home.', choices: ['as', 'so', 'than'], answer: 0, why: 'as soon as 〜 の形。' },
+      { sentence: 'I will start my homework as soon as dinner ___.', choices: ['will end', 'ends', 'ended'], answer: 1, why: '未来のことでも as soon as の中は現在形 ends。' },
+      { sentence: 'As soon as she ___ the news, she began to cry.', choices: ['hears', 'heard', 'hearing'], answer: 1, why: '過去の話なので過去形 heard。' },
+    ],
+  },
+  {
+    id: 'prep-phrase',
+    title: '前置詞のまとまりで名詞を説明（the book on the desk）',
+    points: ['前置詞＋名詞のまとまりを名詞のうしろに置くと、「〜にある・〜の」と前の名詞を説明できる。', 'the girl with long hair（長いかみの女の子）のように、人の様子も表せる。'],
+    examples: [
+      { en: 'The book on the desk is mine.', ja: '机の上の本は私のものだ。' },
+      { en: 'Do you know the boy with a red cap?', ja: '赤いぼうしをかぶった男の子を知っていますか。' },
+    ],
+    questions: [
+      { sentence: 'The pictures ___ the wall are beautiful.', choices: ['on', 'of', 'to'], answer: 0, why: '「かべに（かかっている）」は on the wall。' },
+      { sentence: 'The girl ___ glasses is my sister.', choices: ['in', 'with', 'by'], answer: 1, why: '「メガネをかけた」は with glasses。' },
+      { sentence: 'The cat under the table ___ sleeping.', choices: ['are', 'is', 'am'], answer: 1, why: '主語は The cat（単数）なので is。under the table は説明の部分。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1170,8 +1198,8 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中2: ['prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
