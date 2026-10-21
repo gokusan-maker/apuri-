@@ -164,3 +164,11 @@ it('ボスの口ぐせは正解するたびにかわる', async () => {
   expect(a).not.toBe(b)
   expect(hurtLineOf('モチ', 1 + HURT_LINES.length)).toBe(a)
 })
+
+it('ボスは7問ごとに2問ねむり、ためこうげきとは重ならない', async () => {
+  const { isAsleep, isCharge } = await import('./boss')
+  expect(isAsleep(false, 5)).toBe(true)
+  expect(isAsleep(false, 6)).toBe(true)
+  expect(isAsleep(false, 7)).toBe(false)
+  for (let i = 0; i < 40; i++) expect(isAsleep(false, i) && isCharge(false, i)).toBe(false)
+})

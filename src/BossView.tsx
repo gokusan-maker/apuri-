@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -188,6 +188,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [chargeAt, setChargeAt] = useState(-1)
   if (picked === null && isCharge(enraged, index) && chargeAt !== index && !chance) setChargeAt(index)
   const charge = chargeAt === index
+  const [sleepAt, setSleepAt] = useState(-1)
+  if (picked === null && isAsleep(enraged, index) && sleepAt !== index && !chance && !charge) setSleepAt(index)
+  const asleep = sleepAt === index
 
   function pick(i: number) {
     if (picked !== null || won || lost) return
@@ -211,7 +214,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
-      const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
+      const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep ? 2 : 1)
       const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0)
       setCrit(critical)
       setLastDmg(hp - nextHp)
@@ -349,6 +352,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setContinued(false)
     setChanceAt(-1)
     setChargeAt(-1)
+    setSleepAt(-1)
     setSaves(0)
     setSkillMsg('')
   }
@@ -370,6 +374,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {minion === 'beaten' && minionAt === index && picked !== null && !won && <p className="boss-minion">👾 子分をたおした！ 🪙{MINION_COINS}</p>}
       {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
+      {asleep && !won && !lost && <p className="boss-sleep">💤 {look.name}がねむっている！ 正解でダメージ2倍</p>}
       {shield && !won && !lost && <p className="boss-shield">🛡 ことばの盾：次のまちがい1回はハートがへらない</p>}
       {shieldUsed === index && picked !== null && <p className="boss-shield">🛡 ことばの盾がハートを守った！</p>}
       {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}

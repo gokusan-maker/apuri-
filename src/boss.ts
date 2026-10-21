@@ -307,3 +307,6 @@ export function hurtLineOf(name: string, n: number): { en: string; ja: string } 
   const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
   return HURT_LINES[(k + n) % HURT_LINES.length]
 }
+
+// ボスのねむり：7問ごとに2問、ボスがねむる（その間の正解はダメージ2倍）。ためこうげき・チャンス問題とは重ならない
+export const isAsleep = (enraged: boolean, index: number) => index % 7 >= 5 && !isCharge(enraged, index) && !isChance(enraged, index)

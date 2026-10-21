@@ -363,3 +363,18 @@ it('負けたボスに勝つとリベンジ成功で🪙5', async () => {
   expect(screen.getByText(/リベンジ成功！/)).toBeInTheDocument()
   expect(bonus).toHaveBeenCalledWith(5)
 })
+
+it('6問目はボスがねむっていてダメージ2倍', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} />)
+  for (let i = 0; i < 5; i++) {
+    vi.setSystemTime(Date.now() + 5000)
+    answer(true)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(/ねむっている！/)).toBeInTheDocument()
+  const before = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  vi.setSystemTime(Date.now() + 5000)
+  answer(true)
+  const after = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  expect(before - after).toBeGreaterThanOrEqual(20) // ふつうは最大10
+})
