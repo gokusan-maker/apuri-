@@ -938,4 +938,59 @@ export const PASSAGES: Passage[] = [
       { q: '魚はいつつった？', choices: ['4年前', '14年前', '40年前'], answer: 2 },
     ],
   },
+  {
+    id: 'egg-hunt',
+    title: 'Waiting for the Egg',
+    text: 'I got a new egg from a game on my tablet. The game said it would hatch after I studied for seven days. I studied English every day. On the seventh day, a tiny pink rabbit came out of the egg. I named it Mochi.',
+    ja: 'タブレットのゲームで新しいタマゴを手に入れました。7日間勉強するとかえるとゲームに書いてありました。毎日英語を勉強しました。7日目に、小さなピンク色のウサギがタマゴから出てきました。モチと名づけました。',
+    questions: [
+      { q: 'タマゴはどうするとかえる？', choices: ['7日間勉強する', '水をあげる', 'お金をはらう'], answer: 0 },
+      { q: '何が出てきた？', choices: ['青いドラゴン', 'ピンク色のウサギ', '黄色いヒヨコ'], answer: 1 },
+      { q: '名前は？', choices: ['モチ', 'タマ', 'ピョン'], answer: 0 },
+    ],
+  },
+  {
+    id: 'bus-driver',
+    title: 'A Kind Bus Driver',
+    text: 'One rainy morning, I ran to the bus stop, but the bus was leaving. The driver saw me and stopped the bus again. I said, "Thank you so much!" Because of him, I was not late for my exam.',
+    ja: 'ある雨の朝、バス停まで走りましたが、バスは出発するところでした。運転手さんが私に気づいて、もう一度バスを止めてくれました。「本当にありがとうございます！」と言いました。運転手さんのおかげで試験に遅れずにすみました。',
+    questions: [
+      { q: 'その日の天気は？', choices: ['晴れ', '雨', '雪'], answer: 1 },
+      { q: '運転手は何をした？', choices: ['バスをもう一度止めた', '道を教えた', 'かさをくれた'], answer: 0 },
+      { q: 'その日、私は何があった？', choices: ['試験', '運動会', '旅行'], answer: 0 },
+    ],
+  },
+  {
+    id: 'bamboo',
+    title: 'Fast-Growing Bamboo',
+    text: 'Bamboo is one of the fastest-growing plants in the world. Some kinds can grow almost one meter in a single day. People use bamboo to make baskets, chopsticks, and even houses. Pandas also love to eat it.',
+    ja: '竹は世界でもっとも成長が速い植物の1つです。種類によっては1日でほぼ1メートルのびるものもあります。人々は竹を使って、かご、はし、そして家まで作ります。パンダも竹を食べるのが大好きです。',
+    questions: [
+      { q: '竹は1日でどのくらいのびることがある？', choices: ['1センチ', '10センチ', 'ほぼ1メートル'], answer: 2 },
+      { q: '竹で作られるものは？', choices: ['かご・はし・家', 'くつ', 'ガラス'], answer: 0 },
+      { q: '竹を食べるのが好きな動物は？', choices: ['コアラ', 'パンダ', 'ウサギ'], answer: 1 },
+    ],
+  },
+  {
+    id: 'hospital-visit',
+    title: 'Visiting Grandpa',
+    text: 'My grandfather was in the hospital for two weeks. Every Sunday, I visited him with my mother. I told him about school and showed him my drawings. When he left the hospital, he said my visits helped him get better.',
+    ja: '祖父は2週間入院していました。毎週日曜日、母といっしょにお見まいに行きました。学校のことを話したり、自分のかいた絵を見せたりしました。退院するとき、祖父は私のお見まいのおかげで元気になれたと言いました。',
+    questions: [
+      { q: '祖父はどのくらい入院していた？', choices: ['2日', '2週間', '2か月'], answer: 1 },
+      { q: 'お見まいに行ったのはいつ？', choices: ['毎週日曜日', '毎日', '毎週水曜日'], answer: 0 },
+      { q: '祖父は何と言った？', choices: ['お見まいのおかげで元気になれた', 'もう来なくていい', '絵がへただ'], answer: 0 },
+    ],
+  },
+  {
+    id: 'ice-skating',
+    title: 'My First Time on Ice',
+    text: 'Last winter, I went ice skating for the first time. I fell down again and again, and my clothes got wet. My cousin held my hands and helped me. By the end of the day, I could skate around the rink alone.',
+    ja: '去年の冬、はじめてアイススケートに行きました。何度も何度も転んで、服がぬれてしまいました。いとこが手をにぎって助けてくれました。その日の終わりには、ひとりでリンクを1周すべれるようになりました。',
+    questions: [
+      { q: 'はじめてしたことは？', choices: ['スキー', 'アイススケート', 'スノーボード'], answer: 1 },
+      { q: 'だれが助けてくれた？', choices: ['いとこ', '先生', '母'], answer: 0 },
+      { q: '最後にどうなった？', choices: ['ひとりでリンクを1周すべれた', 'あきらめた', 'けがをした'], answer: 0 },
+    ],
+  },
 ]
