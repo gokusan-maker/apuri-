@@ -1,0 +1,29 @@
+name: Cloudflare Pages に公開
+on:
+  push:
+    branches: [claude/auto-app-development-c4w9w8]
+  workflow_dispatch:
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: c08b508aa9611751878a39e16cd77cec
+    steps:
+      # トークンをまだ登録していないときは何もしない（失敗にしない）
+      - if: env.CLOUDFLARE_API_TOKEN == ''
+        run: echo "CLOUDFLARE_API_TOKEN が未登録なので公開をスキップします"
+      - if: env.CLOUDFLARE_API_TOKEN != ''
+        uses: actions/checkout@v4
+      - if: env.CLOUDFLARE_API_TOKEN != ''
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npm ci && npm run build
+      # はじめての公開ではプロジェクト eitan を作る（もうあれば何もしない）
+      - if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx wrangler@3 pages project create eitan --production-branch=main || true
+      - if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx wrangler@3 pages deploy dist --project-name=eitan --branch=main --commit-dirty=true
