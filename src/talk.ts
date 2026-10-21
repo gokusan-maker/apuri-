@@ -15,7 +15,7 @@ export const LINES: Line[] = [
   { en: 'Can you say it out loud?', ja: '声に出して言ってみよう！' },
   { en: 'Words are like treasure.', ja: '単語は宝物みたいだね。' },
   { en: 'Try the emoji quiz!', ja: '絵文字クイズもやってみてね！' },
-  { en: 'Now there are more than 2,300 words to learn!', ja: '覚えられる単語が2300語をこえたよ！' },
+  { en: 'Now there are 3,000 words to learn!', ja: '覚えられる単語が3000語になったよ！' },
   { en: 'Play a quiz with a friend!', ja: '友だちと2人対戦してみよう！' },
   { en: 'Can you find the odd one out?', ja: '仲間はずれ、見つけられるかな？' },
   { en: 'That tickles!', ja: 'くすぐったいよ！' },

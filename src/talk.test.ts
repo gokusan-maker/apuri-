@@ -37,7 +37,7 @@ it('覚えた単語で話しかける', () => {
 })
 
 it('単語数の記念のひとことがある', () => {
-  expect(LINES.some((l) => l.ja.includes('2300語'))).toBe(true)
+  expect(LINES.some((l) => l.ja.includes('3000語'))).toBe(true)
 })
 
 it('ひとことは26個以上で、英語と日本語がそろっている', () => {
