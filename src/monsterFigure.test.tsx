@@ -126,3 +126,12 @@ it('なかまの画面で相棒以外の子にも名前をつけられる', asyn
   fireEvent.click(screen.getByText('決定'))
   expect(onRename).toHaveBeenCalledWith(1, 'タマ')
 })
+
+it('コレクション表：キャラクター×色ちがいの持っているマスが埋まる', async () => {
+  const { Zukan } = await import('./MonsterView')
+  const { screen } = await import('@testing-library/react')
+  render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon', kind: 'kin' }]} />)
+  expect(screen.getByText(/コレクション表 2 \/ 36/)).toBeInTheDocument()
+  expect(screen.getByLabelText('ドラコ・きんいろ（持っている）')).toBeInTheDocument()
+  expect(screen.getByLabelText('ドラコ・にじいろ（まだ）')).toBeInTheDocument()
+})

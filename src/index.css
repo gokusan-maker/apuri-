@@ -904,3 +904,11 @@ button:focus:not(:focus-visible) { outline: none; }
 .cloud-restore { display: flex; gap: 6px; margin: 6px 0; }
 .cloud-restore input { flex: 1; min-width: 0; padding: 6px 8px; border: 1px solid var(--muted); border-radius: 8px; background: var(--bg); color: var(--fg); }
 .cloud-msg { font-size: 0.85rem; font-weight: 700; }
+/* コレクション表 */
+.zukan-collection { margin-top: 10px; }
+.zukan-collection summary { font-weight: 800; cursor: pointer; }
+.zukan-collection table { width: 100%; border-collapse: collapse; margin-top: 6px; font-size: 0.6rem; table-layout: fixed; }
+.zukan-collection th, .zukan-collection td { padding: 2px; text-align: center; border: 1px solid rgb(0 0 0 / 0.08); }
+.zukan-collection tbody th { font-size: 0.6rem; white-space: nowrap; }
+.collection-figure { display: block; width: 100%; aspect-ratio: 1; }
+.collection-figure .monster-breathe, .collection-figure .monster-eyes, .collection-figure .glance { animation: none; }

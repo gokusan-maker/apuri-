@@ -828,6 +828,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const kinds = new Set(monsters.map((m) => m.kind).filter(Boolean))
   const species = new Set(monsters.map((m) => m.species).filter(Boolean))
   const [spDetail, setSpDetail] = useState<string | null>(null)
+  const owned = new Set(monsters.map((m) => `${m.species ?? 'mochi'}:${m.kind ?? 'normal'}`))
   const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
@@ -917,6 +918,44 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           })}
         </ol>
       </div>
+      <details className="zukan-collection">
+        <summary>
+          📒 コレクション表 {SPECIES.reduce((n, sp) => n + KINDS.filter((k) => owned.has(`${sp.id}:${k.id}`)).length, 0)} / {SPECIES.length * KINDS.length}
+        </summary>
+        <table>
+          <thead>
+            <tr>
+              <th />
+              {KINDS.map((k) => (
+                <th key={k.id} className={`kind-tag r-${k.rarity}`}>
+                  {k.name}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {SPECIES.map((sp) => (
+              <tr key={sp.id}>
+                <th>{sp.name}</th>
+                {KINDS.map((k) => {
+                  const got = owned.has(`${sp.id}:${k.id}`)
+                  return (
+                    <td key={k.id} aria-label={`${sp.name}・${k.name}${got ? '（持っている）' : '（まだ）'}`}>
+                      {got ? (
+                        <span className="collection-figure">
+                          <MonsterFigure form={withSpecies(FORMS[1], sp.id)} kind={k.id} />
+                        </span>
+                      ) : (
+                        '・'
+                      )}
+                    </td>
+                  )
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </details>
       {detail && (
         <div className="zukan-detail" role="status" style={{ background: `linear-gradient(135deg, ${detail.color}55, transparent 70%)` }}>
           <span className="zukan-big">
