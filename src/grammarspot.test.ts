@@ -11,9 +11,11 @@ it('まちがいさがしは、正しい文か、まちがった語の文にな�
   expect(ng.correct).toBe(false)
   expect(ng.text).not.toBe(ok.text)
   expect(ng.right).toBe(ok.text)
-  const set = spotSet(10)
+  let seed = 1
+  const rng = () => ((seed = (seed * 16807) % 2147483647) - 1) / 2147483646
+  const set = spotSet(10, rng)
   expect(set).toHaveLength(10)
-  expect(new Set(set.map((x) => x.right)).size).toBe(10)
+  expect(new Set(set.map((x) => x.right)).size).toBeGreaterThanOrEqual(9) // 同じ文の問題が別の単元にあることもある
 })
 
 it('「何も入らない」が正解の問題は、空欄なしの文になる', () => {

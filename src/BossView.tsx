@@ -5,9 +5,9 @@ import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
-import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf } from './partner'
+import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
-import { quizXp, type Form, type Source } from './monster'
+import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playCorrect, playWrong } from './sound'
 import { LEVELS, type Level, type Word } from './words'
@@ -134,6 +134,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [gauge, setGauge] = useState(0)
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
   const lv = skillLevel(partner?.skillUses ?? 0)
+  const weak = weakOf(look.name)
+  const hitsWeak = !!skill && (partner?.species ?? 'mochi') === weak
   const [corrects, setCorrects] = useState(0)
   const [crits, setCrits] = useState(0)
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
@@ -180,7 +182,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
-      const nextHp = hp - base - extra
+      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0)
       setCrit(critical)
       if (critical) playBossSound('crit')
       const nc = crits + (critical ? 1 : 0)
@@ -307,6 +309,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </p>
       )}
       <p className="boss-name">{look.name}</p>
+      <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
+        弱点：{speciesOf(weak).name}
+        {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
+      </p>
       {partner && (
         <div className="boss-partner">
           <span className="boss-partner-fig">

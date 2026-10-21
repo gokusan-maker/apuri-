@@ -35,3 +35,9 @@ it('キャラクターごとに必殺技名がある', async () => {
   expect(specialOf(undefined).name).toBe('もちもちメテオプレス')
   expect(new Set(Object.values(SPECIAL_MOVES).map((m) => m.name)).size).toBe(Object.keys(SPECIAL_MOVES).length)
 })
+
+it('ボスの弱点は名前で決まる', async () => {
+  const { weakOf } = await import('./partner')
+  expect(weakOf('ヤミモチ')).toBe(weakOf('ヤミモチ'))
+  expect(SPECIES.map((s) => s.id)).toContain(weakOf('ヤミモチ'))
+})

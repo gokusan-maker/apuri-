@@ -1158,3 +1158,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .ta-hurry { color: #dc2626; }
 .ta.ta-ok { box-shadow: 0 0 0 3px #86efac; }
 .ta.ta-ng { box-shadow: 0 0 0 3px #fca5a5; }
+.boss-weak { margin: -2px 0 4px; text-align: center; font-size: 0.75rem; color: var(--muted); }
+.boss-weak.hit { color: #dc2626; font-weight: 800; }

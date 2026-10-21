@@ -218,3 +218,17 @@ it('負けてもコインでコンティニューして続きから戦える（1
   }
   expect(screen.queryByText(/コンティニュー/)).not.toBeInTheDocument()
 })
+
+it('弱点のキャラクターの相棒だと追加ダメージ', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  const { weakOf } = await import('./partner')
+  const { BOSSES } = await import('./boss')
+  const sp = weakOf(BOSSES['中1'].name)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], sp), species: sp === 'mochi' ? undefined : sp, name: 'あいぼう' }} />)
+  expect(screen.getByText(/弱点をついている！/)).toBeInTheDocument()
+  const before = 100
+  vi.setSystemTime(Date.now() + 10000) // 会心なし
+  answer(true)
+  const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  expect(before - hp).toBeGreaterThanOrEqual(6 + 4)
+})

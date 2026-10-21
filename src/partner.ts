@@ -43,3 +43,11 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   dragon: { name: 'ドラゴンブレス・ゼロ', color: '#ef4444' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
+
+// ボスの弱点：ボスごとに弱点のキャラクターが決まっていて、その相棒だと正解ごとに追加ダメージ
+export const WEAK_BONUS = 4
+const WEAK_ORDER = ['mochi', 'fox', 'penguin', 'rabbit', 'cat', 'dragon']
+export function weakOf(bossName: string): string {
+  const n = [...bossName].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 3)
+  return WEAK_ORDER[n % WEAK_ORDER.length]
+}
