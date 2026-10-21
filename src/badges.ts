@@ -20,6 +20,7 @@ export type BadgeStats = {
   souvenirsTotal?: number
   towerFloors?: number // 大学入試の塔でクリアした階の数
   species?: number // 集めたキャラクターの種類
+  collection?: number // コレクション表で埋まったマス（キャラクター×色）
   modesPlayed?: number // 遊んだクイズの種類の数
   diaryDays?: number // 英語日記を書いた日数
 }
@@ -68,7 +69,8 @@ export const BADGES: Badge[] = [
   { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
   { id: 'tower-1', icon: '🏯', name: '塔の挑戦者', desc: '大学入試の塔の1階をクリア', check: (s) => (s.towerFloors ?? 0) >= 1 },
   { id: 'tower-all', icon: '🐉', name: '塔の覇者', desc: '大学入試の塔を最上階までクリア', check: (s) => (s.towerFloors ?? 0) >= 9 },
-  { id: 'species-all', icon: '🐾', name: 'キャラクター博士', desc: 'キャラクターを6種類ぜんぶ集める', check: (s) => (s.species ?? 1) >= 6 },
+  { id: 'species-all', icon: '🐾', name: 'キャラクター博士', desc: 'キャラクターを6種類ぜんぶ集める（ごほうび 🎟1）', check: (s) => (s.species ?? 1) >= 6 },
+  { id: 'collect-all', icon: '🌈', name: 'コレクションマスター', desc: 'コレクション表の36マスをぜんぶうめる（ごほうび 🎟3・🪙200）', check: (s) => (s.collection ?? 0) >= 36 },
   { id: 'answers-5000', icon: '🌠', name: '5000問の流れ星', desc: '累計5000問に答える', check: (s) => s.answers >= 5000 },
 ]
 
@@ -116,3 +118,13 @@ export const loadEarned = (): Earned => load(BADGES_KEY, {}, isObj)
 export const saveEarned = (e: Earned) => save(BADGES_KEY, e)
 export const loadTotals = (): Totals => ({ ...ZERO, ...load<Partial<Totals>>(TOTALS_KEY, {}, isObj) })
 export const saveTotals = (t: Totals) => save(TOTALS_KEY, t)
+
+// バッジのごほうび（図鑑のコンプリート報酬）
+export const BADGE_REWARDS: Record<string, { tickets?: number; coins?: number }> = {
+  'species-all': { tickets: 1 },
+  'collect-all': { tickets: 3, coins: 200 },
+}
+
+export function rewardOf(ids: string[]): { tickets: number; coins: number } {
+  return ids.reduce((a, id) => ({ tickets: a.tickets + (BADGE_REWARDS[id]?.tickets ?? 0), coins: a.coins + (BADGE_REWARDS[id]?.coins ?? 0) }), { tickets: 0, coins: 0 })
+}

@@ -87,3 +87,12 @@ it('大学入試の塔とキャラクター集めのバッジ', async () => {
   expect([ok('tower-1', { towerFloors: 1 }), ok('tower-all', { towerFloors: 8 }), ok('tower-all', { towerFloors: 9 })]).toEqual([true, false, true])
   expect([ok('species-all', { species: 5 }), ok('species-all', { species: 6 })]).toEqual([false, true])
 })
+
+it('図鑑のコンプリート報酬：6種でチケット、36マスでチケット3枚と200コイン', async () => {
+  const { BADGES, rewardOf } = await import('./badges')
+  const base = { answers: 0, correct: 0, streak: 0, learned: 0, level: 1, perfect: 0, bestTime: 0, goals: 0 }
+  const ok = (id: string, s: object) => BADGES.find((b) => b.id === id)!.check({ ...base, ...s })
+  expect([ok('collect-all', { collection: 35 }), ok('collect-all', { collection: 36 })]).toEqual([false, true])
+  expect(rewardOf(['species-all'])).toEqual({ tickets: 1, coins: 0 })
+  expect(rewardOf(['species-all', 'collect-all', 'answers-100'])).toEqual({ tickets: 4, coins: 200 })
+})

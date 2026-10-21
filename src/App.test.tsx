@@ -916,3 +916,11 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(25)
   })
 })
+
+it('キャラクターを6種そろえるとバッジとガチャチケットがもらえる', () => {
+  const members = ['mochi', 'fox', 'penguin', 'rabbit', 'cat', 'dragon'].map((sp) => ({ xp: 0, ...(sp === 'mochi' ? {} : { species: sp }) }))
+  localStorage.setItem('eitan:party', JSON.stringify({ members, active: 0 }))
+  localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+  render(<App />)
+  expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
+})

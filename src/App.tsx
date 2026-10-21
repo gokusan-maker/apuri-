@@ -1,6 +1,6 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
-import { loadEarned, loadTotals, newlyEarned, saveEarned, saveTotals, type Badge } from './badges'
+import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { loadLastBackup, needBackup } from './backup'
@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, updateActive } from './party'
-import { addTicket, drawEgg, DUP_REFUND, isDuplicate, RARE_FULL_COINS, rareEgg } from './gacha'
+import { addTicket, drawEgg, DUP_REFUND, isDuplicate, RARE_FULL_COINS, rareEgg, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -477,6 +477,7 @@ function App() {
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
       towerFloors: Object.keys(loadUniv()).length,
       species: new Set(party.members.map((m) => m.species ?? 'mochi')).size,
+      collection: new Set(party.members.map((m) => `${m.species ?? 'mochi'}:${m.kind ?? 'normal'}`)).size,
     },
     earned,
   )
@@ -484,6 +485,8 @@ function App() {
     // 描画中に差分を反映する（React の「前回の描画からの変化に合わせて state を直す」書き方）
     setEarned({ ...earned, ...Object.fromEntries(got.map((b) => [b.id, today])) })
     setToast(got)
+    const reward = rewardOf(got.map((b) => b.id))
+    if (reward.tickets || reward.coins) setWallet((w) => ({ ...w, coins: w.coins + reward.coins, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + reward.tickets) }))
   }
 
   // ミッション達成：その場でボーナスXP
