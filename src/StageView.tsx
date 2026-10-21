@@ -39,6 +39,7 @@ type Props = {
   onUseItem?: (id: BattleItemId) => void
   onBossDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   onSkill?: () => void // 相棒の特技が出た
+  onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
 
@@ -48,7 +49,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -83,6 +84,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
         onSkill={onSkill}
+        onDrop={onDrop}
         onRankBonus={onRankBonus}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -115,6 +117,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
         onSkill={onSkill}
+        onDrop={onDrop}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -149,6 +152,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
         onSkill={onSkill}
+        onDrop={onDrop}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -176,6 +180,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
         onSkill={onSkill}
+        onDrop={onDrop}
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -201,6 +206,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
         onSkill={onSkill}
+        onDrop={onDrop}
         onRankBonus={onRankBonus}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}

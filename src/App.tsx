@@ -878,6 +878,7 @@ function App() {
           bag={bag}
           onUseItem={(id) => setBag((b) => spendItem(b, id))}
           onBossDefeat={() => count('boss')}
+          onDrop={(id) => setBag((b) => addItem(b, id))}
           onSkill={() => updateMonster((m) => ({ ...m, skillUses: (m.skillUses ?? 0) + 1 }))}
           onEndlessReward={(times) => {
             setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))

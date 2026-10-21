@@ -179,3 +179,13 @@ it('たおすとボスが撃破セリフを言う', async () => {
   answer(true)
   expect(screen.getByText(`「${defeatLineOf(BOSSES['中1'].name).en}」`, { exact: false })).toBeInTheDocument()
 })
+
+it('ボスがアイテムをおとすことがある', () => {
+  const drop = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} onDrop={drop} />)
+  const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.01)
+  answer(true)
+  rnd.mockRestore()
+  expect(drop).toHaveBeenCalledWith('bomb')
+  expect(screen.getByText(/ボスが 💣 どっかんボンバー をおとした！/)).toBeInTheDocument()
+})

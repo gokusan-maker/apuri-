@@ -2,7 +2,7 @@ import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
-import { BATTLE_ITEMS, BOMB_DAMAGE, type BattleBag, type BattleItemId } from './battleitems'
+import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves } from './partner'
@@ -30,6 +30,7 @@ type Props = {
   bag?: BattleBag // 持っているバトルアイテム
   onDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   onSkill?: () => void // 相棒の特技が出た（特技レベル用）
+  onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
@@ -116,8 +117,9 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
+const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -137,6 +139,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
+  const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
@@ -238,6 +241,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
     onDefeat?.()
+    const d = onDrop ? dropOf(rnd()) : null
+    setDrop(d)
+    if (d) onDrop!(d)
     onWinHearts?.(hearts)
     if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS)
   }
@@ -263,6 +269,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setCorrects(0)
     setCrits(0)
     setUsedItems([])
+    setDrop(null)
     setChanceAt(-1)
     setSaves(0)
     setSkillMsg('')
@@ -380,6 +387,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          {drop && (
+            <p className="boss-drop">
+              🎁 ボスが {BATTLE_ITEMS.find((it) => it.id === drop)!.icon} {BATTLE_ITEMS.find((it) => it.id === drop)!.name} をおとした！
+            </p>
+          )}
           <p className="boss-taunt boss-defeat">
             「{defeatLineOf(look.name).en}」<span>{defeatLineOf(look.name).ja}</span>
           </p>

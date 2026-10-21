@@ -32,3 +32,10 @@ export function saveBag(b: BattleBag): void {
 
 export const addItem = (b: BattleBag, id: BattleItemId): BattleBag => ({ ...b, [id]: Math.min(BAG_MAX, b[id] + 1) })
 export const spendItem = (b: BattleBag, id: BattleItemId): BattleBag => ({ ...b, [id]: Math.max(0, b[id] - 1) })
+
+// ボスのドロップ：3回に1回くらい、バトルアイテムをおとす
+export const DROP_RATE = 1 / 3
+export function dropOf(r: number): BattleItemId | null {
+  if (r >= DROP_RATE) return null
+  return r < DROP_RATE / 2 ? 'bomb' : 'charm'
+}

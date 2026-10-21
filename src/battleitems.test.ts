@@ -13,3 +13,11 @@ it('バトルアイテムは9個まで持てて、使うと減る', () => {
   expect(loadBag()).toEqual({ bomb: 0, charm: BAG_MAX })
   expect(spendItem({ bomb: 0, charm: 0 }, 'bomb').bomb).toBe(0)
 })
+
+it('ボスのドロップは3回に1回くらい', async () => {
+  const { dropOf, DROP_RATE } = await import('./battleitems')
+  expect(dropOf(0)).toBe('bomb')
+  expect(dropOf(DROP_RATE * 0.75)).toBe('charm')
+  expect(dropOf(DROP_RATE)).toBeNull()
+  expect(dropOf(0.99)).toBeNull()
+})
