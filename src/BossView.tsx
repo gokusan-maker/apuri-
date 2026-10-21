@@ -166,6 +166,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <BossFigure hit={hit} look={look} />
       </div>
       <p className="boss-name">{look.name}</p>
+      {look.taunt && index === 0 && picked === null && (
+        <p className="boss-taunt">
+          「{look.taunt.en}」<span>{look.taunt.ja}</span>
+        </p>
+      )}
       <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={maxHp} aria-valuenow={hp}>
         <div className="boss-hp-fill" style={{ width: `${(hp / maxHp) * 100}%` }} />
       </div>
