@@ -38,3 +38,15 @@ describe('WORDS', () => {
     }
   })
 })
+
+it('例文に見出し語（またはその変化形）が入っている', () => {
+  const SKIP = new Set(['be', 'oneself', "one's", '...'])
+  const IRREGULAR = new Set(['overcome']) // 例文が不規則な過去形
+  const bad = WORDS.filter((w) => {
+    if (!w.example || IRREGULAR.has(w.id)) return false
+    const ex = w.example.toLowerCase()
+    const parts = w.en.toLowerCase().replace(/[.?!]/g, '').split(/\s+/).filter((p) => p && !SKIP.has(p))
+    return !parts.every((p) => ex.includes(p.slice(0, Math.max(3, p.length - 2))))
+  })
+  expect(bad.map((w) => w.id)).toEqual([])
+})
