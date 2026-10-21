@@ -2915,6 +2915,16 @@ const WORDS_4: Word[] = [
   { id: 'i-made-it', en: 'I made it!', ja: 'できた！・間に合った！', example: 'I made it! I caught the last train.', exampleJa: '間に合った！終電に乗れたよ。', level: '会話' },
   { id: 'take-your-time', en: 'Take your time', ja: 'ゆっくりでいいよ', example: 'There\'s no hurry. Take your time.', exampleJa: '急がなくていいよ。ゆっくりでいいよ。', level: '会話' },
   { id: 'thats-all', en: 'That\'s all', ja: 'それで全部です・以上です', example: '"Anything else?" "No, that\'s all."', exampleJa: '「ほかに何か？」「いいえ、以上です。」', level: '会話' },
+  { id: 'how-was-school', en: 'How was school?', ja: '学校はどうだった？', example: 'Welcome home! How was school today?', exampleJa: 'おかえり！今日の学校はどうだった？', level: '会話' },
+  { id: 'nice-try', en: 'Nice try!', ja: 'おしい！・いいチャレンジだったね', example: 'Nice try! You\'ll get it next time.', exampleJa: 'おしい！次はできるよ。', level: '会話' },
+  { id: 'see-you-at-school', en: 'See you at school', ja: '学校でね', example: 'Good night. See you at school tomorrow!', exampleJa: 'おやすみ。明日学校でね！', level: '会話' },
+  { id: 'can-i-borrow', en: 'Can I borrow ...?', ja: '〜を借りてもいい？', example: 'Can I borrow your eraser?', exampleJa: '消しゴムを借りてもいい？', level: '会話' },
+  { id: 'here-it-is', en: 'Here it is', ja: 'はい、これです', example: '"Where is my pen?" "Here it is."', exampleJa: '「ぼくのペンはどこ？」「はい、ここだよ。」', level: '会話' },
+  { id: 'not-yet', en: 'Not yet', ja: 'まだだよ', example: '"Did you finish your homework?" "Not yet."', exampleJa: '「宿題は終わった？」「まだだよ。」', level: '会話' },
+  { id: 'me-first', en: 'Me first!', ja: 'ぼくが先！・私から！', example: '"Who wants to try?" "Me first!"', exampleJa: '「やってみたい人？」「ぼくが先！」', level: '会話' },
+  { id: 'lets-see', en: 'Let\'s see', ja: 'さあ見てみよう・ええと', example: 'Let\'s see what is inside the box.', exampleJa: '箱の中に何があるか見てみよう。', level: '会話' },
+  { id: 'its-up-to-you', en: 'It\'s up to you', ja: 'あなたが決めていいよ', example: '"Pizza or pasta?" "It\'s up to you."', exampleJa: '「ピザとパスタどっちにする？」「きみが決めていいよ。」', level: '会話' },
+  { id: 'good-for-you', en: 'Good for you!', ja: 'よかったね！', example: '"I passed the test!" "Good for you!"', exampleJa: '「テストに合格したよ！」「よかったね！」', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
