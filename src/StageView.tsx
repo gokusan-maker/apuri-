@@ -5,6 +5,7 @@ import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, daily
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
+import { openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -14,6 +15,7 @@ type Props = {
   levels: Level[]
   record: StageRecord
   onClear: (id: string, stars: number) => void
+  onTreasure?: (t: Treasure) => void // クリアの宝箱をあけた
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   boss?: BossRecord
   onBossWin?: (level: Level) => void
@@ -29,7 +31,7 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -37,6 +39,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
   const [round, setRound] = useState(0)
   const [fighting, setFighting] = useState<Level | null>(null)
   const [firstThree, setFirstThree] = useState(false)
+  const [treasure, setTreasure] = useState<Treasure | null>(null)
   const [univ, setUniv] = usePersistent(loadUniv, saveUniv)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
 
@@ -120,6 +123,23 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
               '6問以上正解でクリア。もう一度！'
             )}
             {firstThree && <span className="stage-bonus">はじめての★3！ 🪙{STAR3_COINS}</span>}
+            {result > 0 &&
+              (treasure ? (
+                <span key={treasure.text} className={`treasure-open t-${treasure.kind}`} role="status">
+                  🎁 {treasure.text}
+                </span>
+              ) : (
+                <button
+                  className="treasure-btn"
+                  onClick={() => {
+                    const t = openTreasure(result, Math.random())
+                    setTreasure(t)
+                    onTreasure?.(t)
+                  }}
+                >
+                  🎁 宝箱をあける
+                </button>
+              ))}
             {result > 0 && (
               <span className="stage-progress">
                 {playing.level}の★ {stagesOf(playing.level).reduce((a, st) => a + (record[st.id] ?? 0), 0)} / {stagesOf(playing.level).length * 3}
@@ -137,6 +157,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
           onFinish={(score, total) => {
             const stars = starsFor(score, total)
             setResult(stars)
+            setTreasure(null)
             setFirstThree(stars === 3 && (record[playing.id] ?? 0) < 3)
             onClear(playing.id, stars)
           }}

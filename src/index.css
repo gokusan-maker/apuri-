@@ -932,3 +932,11 @@ button:focus:not(:focus-visible) { outline: none; }
 .monster-body.wiggle { animation: wiggle 0.5s ease-in-out 2; }
 @keyframes wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }
 @media (prefers-reduced-motion: reduce) { .monster-body.wiggle { animation: none; } }
+
+/* ステージクリアの宝箱 */
+.treasure-btn { display: block; margin: 8px auto 0; padding: 8px 16px; border: none; border-radius: 999px; background: linear-gradient(180deg, #fbbf24, #d97706); color: #fff; font-weight: 800; box-shadow: 0 3px 0 #92400e; animation: treasure-shake 1.2s ease-in-out infinite; }
+.treasure-open { display: block; margin-top: 8px; font-weight: 800; font-size: 1.1rem; animation: treasure-pop 0.6s ease-out both; }
+.treasure-open.t-ticket { color: #a855f7; text-shadow: 0 0 10px #e9d5ff; }
+@keyframes treasure-shake { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-6deg); } 85% { transform: rotate(6deg); } 95% { transform: rotate(-3deg); } }
+@keyframes treasure-pop { 0% { transform: scale(0.3); opacity: 0; } 70% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .treasure-btn, .treasure-open { animation: none; } }

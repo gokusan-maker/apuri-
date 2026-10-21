@@ -820,6 +820,11 @@ function App() {
             setStages((r) => recordStars(r, id, stars))
             if (stars > 0) count('stageClear')
           }}
+          onTreasure={(t) => {
+            if (t.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + t.amount }))
+            else if (t.kind === 'ticket') setWallet((w) => addTicket(w))
+            else gainXp(t.amount, null)
+          }}
         />
       ) : mode === 'settings' ? (
         <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
