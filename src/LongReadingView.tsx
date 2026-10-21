@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { evidenceParas, formatTime, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -93,6 +93,12 @@ export function LongReading({ onAnswer }: Props) {
       <section className="card grammar long-reading">
         <h2>長文読解（入試形式）</h2>
         <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        {recommendLong(types, record) && (
+          <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
+            💡 おすすめ：苦手な「{TYPE_LABEL[recommendLong(types, record)!.type]}」の練習に
+            <strong>{shownTitle(recommendLong(types, record)!.passage, LONG_PASSAGES.indexOf(recommendLong(types, record)!.passage))}</strong>
+          </button>
+        )}
         {LONG_PASSAGES.some((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)) && (
           <div className="long-review">
             <p className="long-review-title">🔁 もう一度ときたい長文（満点でないもの）</p>

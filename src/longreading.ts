@@ -1115,3 +1115,33 @@ export function saveTypeStats(s: TypeStats): void {
 
 // 一覧・見出しに出す名前（タイトル選択の問題がある長文はタイトルをかくす）
 export const shownTitle = (p: LongPassage, n: number) => (p.titleQ ? `タイトルを当てる長文 No.${n + 1}` : p.title)
+
+// 苦手な設問タイプ（正答率60%未満）がある長文のうち、まだ満点でないものをおすすめする
+export function hasType(p: LongPassage, k: QType): boolean {
+  const map: Record<QType, boolean> = {
+    blank: p.blanks.length > 0,
+    tf: p.tf.length > 0,
+    pick2: !!p.pick2,
+    sentence: !!p.sentences,
+    qa: !!p.qa,
+    underline: !!p.underline,
+    order: !!p.order,
+    refer: !!p.refer,
+    gist: !!p.gist,
+    title: !!p.titleQ,
+    complete: !!p.complete,
+  }
+  return map[k]
+}
+
+export function weakTypes(t: TypeStats): QType[] {
+  return (Object.keys(t) as QType[]).filter((k) => t[k]![1] > 0 && t[k]![0] / t[k]![1] < 0.6)
+}
+
+export function recommendLong(t: TypeStats, record: LongRecord): { passage: LongPassage; type: QType } | null {
+  for (const k of weakTypes(t)) {
+    const p = LONG_PASSAGES.find((x) => hasType(x, k) && (record[x.id] ?? -1) < totalOf(x))
+    if (p) return { passage: p, type: k }
+  }
+  return null
+}

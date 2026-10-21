@@ -146,3 +146,12 @@ it('英文の完成の問題は選択肢4つで、3本以上にある', () => {
     expect(scoreLong(p, {}, {}, [], { complete: Object.fromEntries(p.complete!.map((x, i) => [i, x.answer])) }).score).toBe(p.complete!.length)
   }
 })
+
+it('苦手な設問タイプがある長文をおすすめする', async () => {
+  const { recommendLong, weakTypes, hasType } = await import('./longreading')
+  expect(weakTypes({ tf: [1, 5], blank: [9, 10] })).toEqual(['tf'])
+  const r = recommendLong({ refer: [0, 2] }, {})!
+  expect(hasType(r.passage, 'refer')).toBe(true)
+  expect(r.type).toBe('refer')
+  expect(recommendLong({ blank: [10, 10] }, {})).toBeNull()
+})
