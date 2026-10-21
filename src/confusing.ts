@@ -422,6 +422,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'The bird is flying ___ in the sky.', choices: ['tall', 'high'], answer: 1, why: '空の高い所は high。' },
     ],
   },
+  {
+    id: 'lie-lay',
+    title: 'lie と lay',
+    points: ['lie は「横になる」（目的語なし）。lay は「（物を）横たえる・置く」（目的語あり）。lie の過去形は lay なので注意。'],
+    examples: [
+      { en: 'I lie on the sofa after dinner.', ja: '夕食のあとソファーに横になる。' },
+      { en: 'Lay the baby on the bed.', ja: '赤ちゃんをベッドに寝かせて。' },
+    ],
+    questions: [
+      { sentence: 'My cat likes to ___ in the sun.', choices: ['lie', 'lay'], answer: 0, why: '自分が「横になる」ので lie。' },
+      { sentence: 'Please ___ the book on the desk.', choices: ['lie', 'lay'], answer: 1, why: '本を「置く」（目的語あり）ので lay。' },
+      { sentence: 'Yesterday I ___ down because I was tired.', choices: ['lay', 'laid'], answer: 0, why: 'lie（横になる）の過去形は lay。' },
+    ],
+  },
+  {
+    id: 'rise-raise',
+    title: 'rise と raise',
+    points: ['rise は「上がる・のぼる」（目的語なし）。raise は「（〜を）上げる」（目的語あり）。'],
+    examples: [
+      { en: 'The sun rises in the east.', ja: '太陽は東からのぼる。' },
+      { en: 'Raise your hand if you know the answer.', ja: '答えがわかったら手をあげて。' },
+    ],
+    questions: [
+      { sentence: 'Prices ___ every year.', choices: ['rise', 'raise'], answer: 0, why: '値段が「上がる」（目的語なし）ので rise。' },
+      { sentence: '___ your hand, please.', choices: ['Rise', 'Raise'], answer: 1, why: '手を「上げる」（目的語あり）ので raise。' },
+      { sentence: 'The balloon ___ into the sky.', choices: ['rose', 'raised'], answer: 0, why: '風船が「上がった」ので rise の過去形 rose。' },
+    ],
+  },
+  {
+    id: 'rent-borrow',
+    title: 'rent と borrow',
+    points: ['rent は「お金をはらって借りる（貸す）」。borrow は「（ふつうは無料で）借りる」。'],
+    examples: [
+      { en: 'We rented a car in Hawaii.', ja: 'ハワイでレンタカーを借りた。' },
+      { en: 'Can I borrow your pencil?', ja: 'えんぴつを借りてもいい？' },
+    ],
+    questions: [
+      { sentence: 'They ___ an apartment near the station.', choices: ['rent', 'borrow'], answer: 0, why: 'お金をはらって借りるので rent。' },
+      { sentence: 'May I ___ your eraser?', choices: ['rent', 'borrow'], answer: 1, why: '友だちから無料で借りるので borrow。' },
+      { sentence: 'We ___ bikes at the park for 300 yen.', choices: ['rented', 'borrowed'], answer: 0, why: 'お金をはらって借りたので rent。' },
+    ],
+  },
+  {
+    id: 'speak-say',
+    title: 'speak と say',
+    points: ['speak は「（言語を）話す・話をする」。say は「（ことばを）言う」で、あとに言った内容がくる。'],
+    examples: [
+      { en: 'She speaks three languages.', ja: '彼女は3か国語を話す。' },
+      { en: 'He said, "Good morning."', ja: '彼は「おはよう」と言った。' },
+    ],
+    questions: [
+      { sentence: 'Can you ___ Chinese?', choices: ['speak', 'say'], answer: 0, why: '言語を話すのは speak。' },
+      { sentence: 'What did she ___?', choices: ['speak', 'say'], answer: 1, why: '「何と言ったか」は say。' },
+      { sentence: 'Please ___ more slowly.', choices: ['speak', 'say'], answer: 0, why: '「話す」動作そのものは speak。' },
+    ],
+  },
+  {
+    id: 'early-soon',
+    title: 'early と soon',
+    points: ['early は「（時間的に）早く・早い時間に」。soon は「まもなく・すぐに」（今からあまり時間がたたないうちに）。'],
+    examples: [
+      { en: 'I got up early this morning.', ja: '今朝は早起きした。' },
+      { en: 'The bus will come soon.', ja: 'バスはまもなく来る。' },
+    ],
+    questions: [
+      { sentence: 'Go to bed ___ tonight.', choices: ['early', 'soon'], answer: 0, why: '「早い時間に」寝るので early。' },
+      { sentence: 'See you ___!', choices: ['early', 'soon'], answer: 1, why: '「またすぐに」は soon。' },
+      { sentence: 'The movie will start ___.', choices: ['early', 'soon'], answer: 1, why: '「まもなく」始まるので soon。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元

@@ -432,3 +432,4 @@
 - 2026-10-21: 高校基礎の単語を20語追加（variety・acquire・aspect など、計340語）
 - 2026-10-21: 中3に単語を20語追加（confirm・convince・cough・crop など）
 - 2026-10-21: クイズに「否定文（don't・doesn't・didn't）」を追加。文法ミックスにも入れた
+- 2026-10-21: まちがえやすい単語を5組追加（lie/lay・rise/raise・rent/borrow・speak/say・early/soon、計35組）
