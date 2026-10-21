@@ -25,5 +25,10 @@ jobs:
       # はじめての公開ではプロジェクト eitan を作る（もうあれば何もしない）
       - if: env.CLOUDFLARE_API_TOKEN != ''
         run: npx wrangler@3 pages project create eitan --production-branch=main || true
+      # プロジェクトの「本番ブランチ」に合わせて公開する（ちがうと本番URLではなくプレビューになる）
       - if: env.CLOUDFLARE_API_TOKEN != ''
-        run: npx wrangler@3 pages deploy dist --project-name=eitan --branch=main --commit-dirty=true
+        run: |
+          BRANCH=$(curl -fsS -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/eitan" | jq -r '.result.production_branch // "main"')
+          echo "本番ブランチ: $BRANCH"
+          npx wrangler@3 pages deploy dist --project-name=eitan --branch="$BRANCH" --commit-dirty=true
