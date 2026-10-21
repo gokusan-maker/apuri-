@@ -11,3 +11,9 @@ it('ページは日本語指定で、フォントは日本語フォントを sys
   expect(fonts.indexOf('Noto Sans JP')).toBeLessThan(fonts.indexOf('system-ui'))
   expect(fonts.indexOf('Yu Gothic')).toBeLessThan(fonts.indexOf('system-ui'))
 })
+
+it('Vercel の設定：dist を出し、Service Worker はキャッシュしない', () => {
+  const v = JSON.parse(readFileSync('vercel.json', 'utf8'))
+  expect(v.outputDirectory).toBe('dist')
+  expect(v.headers.find((h: { source: string }) => h.source === '/sw.js').headers[0].value).toBe('no-cache')
+})

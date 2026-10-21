@@ -865,3 +865,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .friend-mini { width: 26px; height: 26px; padding: 0; border: none; border-radius: 50%; background: rgb(255 255 255 / 0.55); cursor: pointer; }
 .friend-mini .monster-breathe, .friend-mini .particles, .friend-mini .aura { animation: none; }
 .friend-more { font-size: 0.7rem; color: var(--muted); }
+.gacha-odds { font-size: 0.8rem; color: #4b5563; } .gacha-odds ul { margin: 4px 0; padding-left: 18px; }

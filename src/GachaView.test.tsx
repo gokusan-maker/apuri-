@@ -30,3 +30,13 @@ it('チケットがあるときはチケットで引ける', () => {
   expect(onDraw).toHaveBeenCalledWith(true)
   expect(screen.getByText('レア！')).toBeInTheDocument()
 })
+
+it('出る確率が見られる（合計100%）', () => {
+  render(<Gacha coins={0} members={1} onDraw={() => null} />)
+  expect(screen.getByText('出る確率')).toBeInTheDocument()
+  const pct = [...document.querySelectorAll('.gacha-odds li')].map((li) => {
+    const n = Number(li.textContent!.match(/(\d+)%/)![1])
+    return li.textContent!.includes('各') ? n * 3 : n
+  })
+  expect(pct.reduce((a, b) => a + b, 0)).toBe(100)
+})

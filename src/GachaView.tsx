@@ -41,6 +41,15 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
         </button>
       )}
       <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
+      <details className="gacha-odds">
+        <summary>出る確率</summary>
+        <ul>
+          <li>ノーマル（ふつうの色）60%</li>
+          <li>レア（さくら色・うみ色・よる色）各10%</li>
+          <li>スーパーレア（きんいろ）9%</li>
+          <li>ウルトラレア（にじいろ）1%</li>
+        </ul>
+      </details>
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
           <span className="gacha-capsule" aria-hidden="true" />

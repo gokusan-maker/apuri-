@@ -32,3 +32,7 @@ npm run lint     # oxlint
 npm test         # vitest
 npm run build    # 型チェック＋ビルド（dist/）
 ```
+
+## 公開（Vercel で自動デプロイ）
+
+`vercel.json` に設定済み。最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。サーバーやデータベースは使わない（学習データは端末の localStorage）ので、Supabase の設定は不要。
