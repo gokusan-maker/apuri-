@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
+import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -31,7 +31,7 @@ describe('おやつ', () => {
     let log = { day: '', count: 0 }
     for (let i = 0; i < 3; i++) {
       const r = eat(w, log, 'cookie', '2026-10-20')!
-      expect(r.xp).toBe(20)
+      expect(r.xp).toBe(40) // 2026-10-20 はクッキーがきょうの好物（2倍）
       w = r.wallet
       log = r.log
     }
@@ -129,4 +129,15 @@ it('部屋に雪山と森の中がある', () => {
 it('名前は物そのままではなく、アレンジした名前', () => {
   const plain = ['リボン', 'マフラー', 'サングラス', 'キャップ', '王冠', 'クッキー', 'プリン', 'ケーキ', '草原', '海', '宇宙']
   for (const i of [...ITEMS, ...ROOMS, ...SNACKS]) expect(plain, i.id).not.toContain(i.name)
+})
+
+it('きょうの好物は日替わりで、あげると XP 2倍', () => {
+  const days = ['2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24', '2026-10-25']
+  expect(new Set(days.map((d) => favSnackOf(d).id)).size).toBeGreaterThan(1)
+  const d = '2026-10-21'
+  const fav = favSnackOf(d)
+  const other = SNACKS.find((s) => s.id !== fav.id)!
+  const w = { coins: 100, owned: [] }
+  expect(eat(w, { day: '', count: 0 }, fav.id, d)!.xp).toBe(fav.xp * 2)
+  expect(eat(w, { day: '', count: 0 }, other.id, d)!.xp).toBe(other.xp)
 })

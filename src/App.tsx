@@ -94,7 +94,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -784,6 +784,7 @@ function App() {
           members={party.members.length}
           dragonUp={isWeekend(today)}
           pickup={pickupOf(today)}
+          favSnack={favSnackOf(today).id}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
             const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id)

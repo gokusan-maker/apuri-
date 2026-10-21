@@ -113,6 +113,12 @@ export const SNACKS: Snack[] = [
 
 export const SNACKS_PER_DAY = 3
 
+// 相棒の「きょうの好物」：日替わりでおやつが1つ選ばれ、それをあげると XP 2倍
+export function favSnackOf(day: string): Snack {
+  const n = [...day].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 7)
+  return SNACKS[n % SNACKS.length]
+}
+
 export type SnackLog = { day: string; count: number }
 
 export function snacksLeft(log: SnackLog, today: string): number {
@@ -126,7 +132,7 @@ export function eat(w: Wallet, log: SnackLog, id: string, today: string): { wall
   return {
     wallet: { ...w, coins: w.coins - s.price },
     log: { day: today, count: (log.day === today ? log.count : 0) + 1 },
-    xp: s.xp,
+    xp: favSnackOf(today).id === s.id ? s.xp * 2 : s.xp,
   }
 }
 

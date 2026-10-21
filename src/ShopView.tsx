@@ -23,9 +23,10 @@ type Props = {
   onRaiseNew?: () => void
   dragonUp?: boolean
   pickup?: Species // 日替わりピックアップ
+  favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -58,14 +59,15 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
         {SNACKS.map((sn) => (
           <button
             key={sn.id}
-            className="good"
+            className={`good${favSnack === sn.id ? ' fav-snack' : ''}`}
             disabled={snacksLeft <= 0 || wallet.coins < sn.price}
             onClick={() => {
               onEat(sn.id)
               setEating({ icon: sn.icon, key: Date.now() })
             }}
           >
-            {sn.icon} {sn.name} 🪙{sn.price}（+{sn.xp}XP）
+            {favSnack === sn.id && <span className="fav-snack-tag">💕 きょうの好物 XP2倍！</span>}
+            {sn.icon} {sn.name} 🪙{sn.price}（+{favSnack === sn.id ? sn.xp * 2 : sn.xp}XP）
           </button>
         ))}
       </div>

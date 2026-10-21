@@ -399,8 +399,9 @@ describe('App', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
+    expect(screen.getByText('💕 きょうの好物 XP2倍！')).toBeInTheDocument() // テストの日はクッキーが好物
     fireEvent.click(screen.getByText(/サクサククッキン/))
-    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(20)
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(40)
     expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
     expect(screen.getByText('😋 もぐもぐ')).toBeInTheDocument()
     expect(screen.getAllByText(/サクサク/).length).toBeGreaterThanOrEqual(2) // ボタンとひとこと
@@ -410,7 +411,9 @@ describe('App', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5) // ふつうの色・モチ以外が出る（かぶりボーナスなし）
     fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    rnd.mockRestore()
     const party = JSON.parse(localStorage.getItem('eitan:party')!)
     expect(party.members).toHaveLength(2)
     expect(party.gacha).toBe(1)
