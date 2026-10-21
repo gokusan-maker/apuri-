@@ -54,3 +54,14 @@ it('今日の文法は日付で決まる', async () => {
   expect(ids.size).toBeGreaterThan(1)
   expect(GRAMMAR).toContain(dailyGrammar('2026-10-21'))
 })
+
+it('すべての文法単元に学年の目安がある', async () => {
+  const { GRAMMAR, gradeOf } = await import('./grammar')
+  const { gradeListed } = await import('./grammar')
+  for (const u of GRAMMAR) expect(gradeListed(u.id), u.id).toBe(true)
+  expect(gradeOf('be')).toBe('中1')
+  expect(gradeOf('past-perfect')).toBe('高校')
+  const counts = new Map<string, number>()
+  for (const u of GRAMMAR) counts.set(gradeOf(u.id), (counts.get(gradeOf(u.id)) ?? 0) + 1)
+  expect(counts.size).toBe(4)
+})

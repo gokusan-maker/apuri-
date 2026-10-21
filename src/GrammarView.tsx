@@ -6,7 +6,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -31,6 +31,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
   const [spot, setSpot] = useState(false) // まちがいさがし
   const [timeAttack, setTimeAttack] = useState(false) // タイムアタック
+  const [grade, setGrade] = useState<GrammarGrade | 'all'>('all')
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
   const daily = dailyGrammar(today)
@@ -109,8 +110,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             🔁 苦手な文法の復習（{weakUnits(record).length}単元）
           </button>
         )}
+        {stampMode && (
+          <div className="sub-tabs grade-tabs" role="tablist" aria-label="学年">
+            {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
+              <button key={g} role="tab" aria-selected={grade === g} onClick={() => setGrade(g)}>
+                {g === 'all' ? 'すべて' : g}
+              </button>
+            ))}
+          </div>
+        )}
         <ul className="grammar-list">
-          {units.map((u) => (
+          {units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade).map((u) => (
             <li key={u.id}>
               <button onClick={() => open(u)}>
                 <span>{u.title}</span>

@@ -940,3 +940,17 @@ export function saveTaBest(n: number): void {
   }
 }
 
+
+// 学年の目安（学校の教科書の順番は会社によって少しちがうので「目安」）
+export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
+export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
+const GRADE_IDS: Record<GrammarGrade, string[]> = {
+  中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive'],
+  中3: ['perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or'],
+  高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think'],
+}
+export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
+export function gradeOf(id: string): GrammarGrade {
+  return GRAMMAR_GRADES.find((g) => GRADE_IDS[g].includes(id)) ?? '中3'
+}

@@ -110,3 +110,13 @@ it('今日の文法を全問正解すると1日1回ボーナス', async () => {
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText('✅ 今日はクリアずみ')).toBeInTheDocument()
 })
+
+it('学年のタブで単元をしぼりこめる', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByRole('tab', { name: '高校' }))
+  expect(screen.getByText(/過去完了/)).toBeInTheDocument()
+  expect(screen.queryByText('be動詞（am / is / are）')).not.toBeInTheDocument()
+  fireEvent.click(screen.getByRole('tab', { name: 'すべて' }))
+  expect(screen.getByText('be動詞（am / is / are）')).toBeInTheDocument()
+})
