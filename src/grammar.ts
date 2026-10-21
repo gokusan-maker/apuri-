@@ -1210,6 +1210,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'to', 'and'], answer: 2, why: 'between A and B の形。' },
     ],
   },
+  {
+    id: 'have-to',
+    title: "have to / don't have to（〜しなければならない・〜しなくてよい）",
+    points: ['have to ＋動詞の原形で「〜しなければならない」。主語が三人称単数なら has to、過去なら had to。', "don't have to 〜 は「〜しなくてもよい（する必要がない）」。must not（〜してはいけない）とは意味がちがう。"],
+    examples: [
+      { en: 'I have to get up early tomorrow.', ja: '私は明日早く起きなければならない。' },
+      { en: "You don't have to bring lunch today.", ja: '今日はお弁当を持ってこなくてもいいよ。' },
+    ],
+    questions: [
+      { sentence: 'She ___ to practice the piano every day.', choices: ['have', 'has', 'having'], answer: 1, why: '主語が三人称単数（She）なので has to。' },
+      { sentence: "It's Sunday. You ___ have to go to school.", choices: ["don't", "doesn't", 'not'], answer: 0, why: '「〜しなくてよい」は don\'t have to。主語は You。' },
+      { sentence: 'Yesterday I ___ to clean my room.', choices: ['have', 'had', 'has'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
+    ],
+  },
+  {
+    id: 'may-might',
+    title: 'may / might（〜かもしれない・〜してもよい）',
+    points: ['may ＋動詞の原形で「〜かもしれない」（推量）や「〜してもよい」（許可）。', 'might は may より可能性が低い「ひょっとすると〜かもしれない」。May I 〜? は「〜してもいいですか」のていねいな言い方。'],
+    examples: [
+      { en: 'It may rain this afternoon.', ja: '午後は雨がふるかもしれない。' },
+      { en: 'May I use your pen?', ja: 'ペンを使ってもいいですか。' },
+    ],
+    questions: [
+      { sentence: 'Take an umbrella. It ___ rain later.', choices: ['may', 'must', 'shall'], answer: 0, why: '「雨がふるかもしれない」は may。' },
+      { sentence: '___ I come in? — Sure.', choices: ['May', 'Must', 'Do'], answer: 0, why: '許可を求める「〜してもいいですか」は May I 〜?。' },
+      { sentence: 'He might ___ late today.', choices: ['is', 'be', 'being'], answer: 1, why: 'might のあとは動詞の原形 be。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1310,7 +1338,7 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中2: ['have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

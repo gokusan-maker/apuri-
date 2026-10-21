@@ -85,6 +85,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'how-adj': { wrong: 'How many old is he?', right: 'How old is he?', why: '年れいは How old。many はいらない。' },
   'whose-which': { wrong: 'Who pen is this?', right: 'Whose pen is this?', why: '「だれの〜」は Whose ＋名詞。' },
   'between-among': { wrong: 'The house is among the school and the station.', right: 'The house is between the school and the station.', why: '2つの間は between A and B。among は3つ以上の間。' },
+  'have-to': { wrong: 'He have to study.', right: 'He has to study.', why: '主語が三人称単数なら has to。' },
+  'may-might': { wrong: 'It may rains tomorrow.', right: 'It may rain tomorrow.', why: 'may のあとは動詞の原形。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
