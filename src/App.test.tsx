@@ -287,7 +287,7 @@ describe('App', () => {
   it('単語一覧で検索でき、タップで例文が見える', () => {
     render(<App />)
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
-    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'librar' } })
+    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     expect(screen.getByText('1語')).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: /library/ }))
     expect(document.querySelector('.word-detail .example')?.textContent).toBe('I study at the library after school.')
@@ -298,7 +298,7 @@ describe('App', () => {
   it('単語一覧から1語だけカードで練習できる', () => {
     render(<App />)
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
-    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'librar' } })
+    fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     fireEvent.click(screen.getByRole('button', { name: /library/ }))
     fireEvent.click(screen.getByText('🃏 この単語をカードで練習'))
     expect(document.querySelector('.card .en')?.textContent).toContain('library')
