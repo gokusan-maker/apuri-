@@ -118,7 +118,7 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
   border-radius: 16px;
   background: var(--card);
 }
-.monster-body { width: 72px; height: 72px; flex: none; }
+.monster-body { width: 88px; height: 88px; flex: none; }
 .monster-svg { width: 100%; height: 100%; }
 .monster-body.bounce { animation: bounce 0.5s; }
 .monster-info { flex: 1; min-width: 0; }
@@ -636,7 +636,18 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .continue-btn { margin: 4px 0 8px; }
 .evolve-screen { background: radial-gradient(circle, rgb(253 224 71 / 0.6), rgb(0 0 0 / 0.55)); }
 .evolve-card { text-align: center; animation: pop 0.6s; }
-.evolve-figure { width: 180px; height: 180px; margin: 0 auto; animation: evolve 1.2s; filter: drop-shadow(0 0 24px #fde047); }
+.evolve-stage { position: relative; width: 220px; height: 220px; margin: 0 auto; display: grid; place-items: center; }
+.evolve-rays { position: absolute; inset: -40px; border-radius: 50%; background: repeating-conic-gradient(rgb(255 255 255 / 0.55) 0 10deg, transparent 10deg 30deg); -webkit-mask: radial-gradient(circle, #000 20%, transparent 70%); mask: radial-gradient(circle, #000 20%, transparent 70%); animation: spin 10s linear infinite, fade-in 1s; }
+.evolve-figure { position: relative; width: 180px; height: 180px; animation: evolve 1.2s, reveal 2s; filter: drop-shadow(0 0 24px #fde047); }
+@keyframes reveal { 0%, 45% { filter: brightness(0) invert(1) drop-shadow(0 0 30px #fff); } 100% { filter: drop-shadow(0 0 24px #fde047); } }
+.evolve-flash { position: fixed; inset: 0; background: #fff; opacity: 0; pointer-events: none; animation: flash 1.4s; }
+@keyframes flash { 0% { opacity: 0; } 40% { opacity: 0.95; } 100% { opacity: 0; } }
+.evolve-spark { position: absolute; font-size: 1.4rem; opacity: 0; animation: spark-out 1.6s 1s ease-out forwards; }
+.evolve-spark.s0 { --dx: -90px; --dy: -70px; } .evolve-spark.s1 { --dx: 95px; --dy: -60px; } .evolve-spark.s2 { --dx: -100px; --dy: 40px; }
+.evolve-spark.s3 { --dx: 100px; --dy: 50px; } .evolve-spark.s4 { --dx: -20px; --dy: -110px; } .evolve-spark.s5 { --dx: 30px; --dy: 105px; }
+@keyframes spark-out { 0% { transform: translate(0, 0) scale(0.3); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) scale(1.2); opacity: 0; } }
+.evolve-desc { max-width: 300px; margin: 0 auto 14px; color: #fff; font-size: 0.9rem; text-shadow: 0 1px 4px rgb(0 0 0 / 0.6); }
+@media (prefers-reduced-motion: reduce) { .evolve-rays, .evolve-figure, .evolve-flash, .evolve-spark { animation: none; } }
 .evolve-name { margin: 0 0 12px; font-size: 1.8rem; font-weight: 800; color: #fff; text-shadow: 0 2px 8px rgb(0 0 0 / 0.5); }
 .evolve-screen .celebrate-title { color: #fff; text-shadow: 0 2px 8px rgb(0 0 0 / 0.5); }
 
