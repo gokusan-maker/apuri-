@@ -282,3 +282,14 @@ it('段落ごとに和訳を開いたり閉じたりできる', () => {
   fireEvent.click(screen.getByLabelText('第2段落の和訳'))
   expect(screen.queryByText(p.ja[1])).toBeNull()
 })
+
+it('音読タイムで1分あたりの語数が出る', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  fireEvent.click(screen.getByText('🎙 音読タイム（声に出して読む）'))
+  vi.setSystemTime(Date.now() + 60000)
+  fireEvent.click(screen.getByText('⏹ 読みおわった！'))
+  expect(screen.getByText(new RegExp(`1分あたり ${wordCount(p)}語`))).toBeInTheDocument()
+})

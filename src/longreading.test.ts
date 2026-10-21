@@ -332,3 +332,10 @@ it('内容に合うものを2つ選ぶ設問は7本以上', () => {
     expect(p.pick2!.answers[0]).not.toBe(p.pick2!.answers[1])
   }
 })
+
+it('音読スピードは1分あたりの語数', async () => {
+  const { wpmOf } = await import('./longreading')
+  expect(wpmOf(120, 60)).toBe(120)
+  expect(wpmOf(150, 90)).toBe(100)
+  expect(wpmOf(100, 0)).toBe(0)
+})

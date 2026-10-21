@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
@@ -81,7 +81,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [history, setHistory] = useState(loadLongHistory)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
-  const [jaParas, setJaParas] = useState<number[]>([]) // 和訳を開いている段落
+  const [jaParas, setJaParas] = useState<number[]>([])
+  const [aloudAt, setAloudAt] = useState<number | null>(null) // 音読を始めた時刻
+  const [wpm, setWpm] = useState(0) // 和訳を開いている段落
   const [bestTime, setBestTime] = useState(false)
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
@@ -110,6 +112,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
     setDone(false)
     setShowJa(false)
     setJaParas([])
+    setAloudAt(null)
+    setWpm(0)
     setResumed(!!d)
   }
 
@@ -243,6 +247,27 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
       )}
       {resumed && !done && <p className="stats-note">✏️ とちゅうから再開しました（答えかけの内容はそのまま）</p>}
       <div className="long-read-row">
+        {aloudAt === null ? (
+          <button
+            className="list-link"
+            onClick={() => {
+              setWpm(0)
+              setAloudAt(nowMs())
+            }}
+          >
+            🎙 音読タイム（声に出して読む）
+          </button>
+        ) : (
+          <button
+            className="list-link"
+            onClick={() => {
+              setWpm(wpmOf(wordCount(p), Math.max(1, Math.round((nowMs() - aloudAt) / 1000))))
+              setAloudAt(null)
+            }}
+          >
+            ⏹ 読みおわった！
+          </button>
+        )}
         {readingAll ? (
           <button
             className="list-link long-read-all"
@@ -272,6 +297,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           ))
         )}
       </div>
+      {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (

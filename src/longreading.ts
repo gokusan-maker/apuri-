@@ -2691,3 +2691,6 @@ export function levelPick(level: '初級' | '中級' | '上級', record: Record<
   const pool = list.filter((p) => p.level.includes(tag))
   return pool.find((p) => record[p.id] === undefined) ?? pool[0] ?? null
 }
+
+// 音読タイム：1分あたりの語数（WPM）
+export const wpmOf = (words: number, sec: number) => (sec > 0 ? Math.round((words * 60) / sec) : 0)
