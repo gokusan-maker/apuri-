@@ -12,3 +12,8 @@ it('おやつをあげると相棒がもぐもぐ食べる', () => {
   expect(screen.getByLabelText('もぐもぐ').textContent).toBe(SNACKS[0].icon)
   expect(document.querySelector('.face-eat .chew')).not.toBeNull()
 })
+
+it('ショップの見本は今の部屋の中に相棒が立つ', () => {
+  render(<Shop wallet={{ coins: 100, owned: ['ocean'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(document.querySelector('.shop-stage.room-ocean .scene-ocean')).not.toBeNull()
+})
