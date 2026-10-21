@@ -187,6 +187,8 @@ it('全文を聞くで段落を順番に読み上げ、とめられる', async (
   fireEvent.click(screen.getByText('⏹ 読み上げをとめる'))
   expect(cancel).toHaveBeenCalled()
   expect(screen.getByText('🔊 全文を聞く')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('🐢 ゆっくり聞く'))
+  expect(seq.mock.calls[1][2]).toBe(true)
   seq.mockRestore()
   cancel.mockRestore()
 })

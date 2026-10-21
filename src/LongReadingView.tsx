@@ -207,23 +207,36 @@ export function LongReading({ onAnswer }: Props) {
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
       {resumed && !done && <p className="stats-note">✏️ とちゅうから再開しました（答えかけの内容はそのまま）</p>}
-      <button
-        className="list-link long-read-all"
-        onClick={() => {
-          if (readingAll) {
-            cancelSpeech()
-            setReadingAll(false)
-            return
-          }
-          setReadingAll(true)
-          speakSeq(
-            p.paragraphs.map((t) => ({ text: readable(t) })),
-            () => setReadingAll(false),
-          )
-        }}
-      >
-        {readingAll ? '⏹ 読み上げをとめる' : '🔊 全文を聞く'}
-      </button>
+      <div className="long-read-row">
+        {readingAll ? (
+          <button
+            className="list-link long-read-all"
+            onClick={() => {
+              cancelSpeech()
+              setReadingAll(false)
+            }}
+          >
+            ⏹ 読み上げをとめる
+          </button>
+        ) : (
+          ([false, true] as const).map((slow) => (
+            <button
+              key={String(slow)}
+              className="list-link long-read-all"
+              onClick={() => {
+                setReadingAll(true)
+                speakSeq(
+                  p.paragraphs.map((t) => ({ text: readable(t) })),
+                  () => setReadingAll(false),
+                  slow,
+                )
+              }}
+            >
+              {slow ? '🐢 ゆっくり聞く' : '🔊 全文を聞く'}
+            </button>
+          ))
+        )}
+      </div>
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (

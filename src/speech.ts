@@ -17,7 +17,7 @@ export function speak(text: string, slow = false): void {
 }
 
 // 続けて読み上げる（英語→日本語など）。最後まで読んだら onDone。止めるときは cancelSpeech()
-export function speakSeq(parts: { text: string; lang?: string }[], onDone: () => void): void {
+export function speakSeq(parts: { text: string; lang?: string }[], onDone: () => void, slow = false): void {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) {
     onDone()
     return
@@ -27,7 +27,7 @@ export function speakSeq(parts: { text: string; lang?: string }[], onDone: () =>
   parts.forEach((p, i) => {
     const u = new SpeechSynthesisUtterance(p.text)
     u.lang = p.lang ?? accent
-    u.rate = rate
+    u.rate = slow ? Math.max(0.4, rate * 0.7) : rate
     if (i === parts.length - 1) u.onend = () => onDone()
     window.speechSynthesis.speak(u)
   })
