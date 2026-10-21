@@ -378,8 +378,30 @@ export function negQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// 場所の前置詞：in（中に）、on（上に・接して）、under（下に）、by（そばに）
+const PLACE_PREPS: [string, 'in' | 'on' | 'under' | 'by', string][] = [
+  ['The cat is sleeping ___ the box.', 'in', '箱の「中」なので in'],
+  ['There is a cup ___ the table.', 'on', 'テーブルの「上」（接している）なので on'],
+  ['My shoes are ___ the bed.', 'under', 'ベッドの「下」なので under'],
+  ['He is standing ___ the window.', 'by', '窓の「そば」なので by'],
+  ['There are fish ___ the river.', 'in', '川の「中」なので in'],
+  ['A picture is ___ the wall.', 'on', '壁に接しているので on'],
+  ['The dog is lying ___ the tree.', 'under', '木の「下」なので under'],
+  ['We had lunch ___ the lake.', 'by', '湖の「そば」なので by'],
+  ['I live ___ Osaka.', 'in', '都市・国の「中」なので in'],
+  ['Your pen is ___ the desk.', 'on', '机の「上」なので on'],
+  ['Let\'s hide ___ the bridge.', 'under', '橋の「下」なので under'],
+  ['My house is ___ the station.', 'by', '駅の「そば」なので by'],
+]
+
+export function placePrepQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = PLACE_PREPS[Math.floor(rng() * PLACE_PREPS.length)]
+  const choices = ['in', 'on', 'under', 'by']
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
