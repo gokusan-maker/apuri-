@@ -3,7 +3,9 @@ import { useState } from 'react'
 import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, type BossRecord } from './boss'
 import { dayKey } from './srs'
-import { Boss } from './BossView'
+import { Boss, BossFigure } from './BossView'
+import { loadUniv, saveUniv, UNIV_BOSSES, univUnlocked, type UnivBoss } from './univ'
+import { usePersistent } from './usePersistent'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { WORDS, wordsOf, type Level, type Word } from './words'
@@ -20,13 +22,14 @@ type Props = {
   onSpend?: (coins: number) => boolean
   onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
   learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
+  onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
 }
 
 export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin }: Props) {
+export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -34,6 +37,30 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
   const [round, setRound] = useState(0)
   const [fighting, setFighting] = useState<Level | null>(null)
   const [firstThree, setFirstThree] = useState(false)
+  const [univ, setUniv] = usePersistent(loadUniv, saveUniv)
+  const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
+
+  if (univFight) {
+    const first = !univ[univFight.id]
+    return (
+      <Boss
+        key={univFight.id}
+        level="高校基礎"
+        words={wordsOf(univFight.levels)}
+        look={univFight}
+        title={`🏯 大学入試の塔 ${univFight.floor}`}
+        hp={univFight.hp}
+        bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onAnswer}
+        onWin={() => {
+          setUniv((r) => ({ ...r, [univFight.id]: dayKey() }))
+          onUnivWin?.(univFight, first)
+        }}
+        onExit={() => setUnivFight(null)}
+      />
+    )
+  }
 
   if (fighting) {
     return (
@@ -124,6 +151,39 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
   return (
     <section className="card stages">
       <h2>ステージ</h2>
+      <details className="univ-tower" open={Object.keys(univ).length > 0}>
+        <summary>
+          🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
+        </summary>
+        <p className="stats-note">大学にちなんだボスが待つ塔。下の階から順に挑戦しよう（高校基礎・熟語の単語で戦う）。</p>
+        <ol className="univ-floors">
+          {[...UNIV_BOSSES].reverse().map((b) => {
+            const i = UNIV_BOSSES.indexOf(b)
+            const open = univUnlocked(i, univ)
+            return (
+              <li key={b.id} className={univ[b.id] ? 'beaten' : open ? 'open' : 'locked'}>
+                <span className="univ-figure">
+                  <BossFigure hit={false} look={open ? b : { ...b, color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }} />
+                </span>
+                <span className="univ-info">
+                  <strong>
+                    {b.floor} {open ? b.name : '？？？'}
+                  </strong>
+                  <span className="univ-hint">
+                    {b.hint}
+                    {open && `・HP${b.hp}・🪙${b.coins}`}
+                  </span>
+                </span>
+                {open && (
+                  <button className="boss-btn" onClick={() => setUnivFight(b)}>
+                    {univ[b.id] ? '👑 もう一度' : '⚔ 挑戦'}
+                  </button>
+                )}
+              </li>
+            )
+          })}
+        </ol>
+      </details>
       {daily && (
         <button
           className="boss-btn daily-boss"

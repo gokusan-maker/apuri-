@@ -15,6 +15,9 @@ type Props = {
   onExit: () => void
   bonus?: number
   onSpend?: (coins: number) => boolean
+  look?: BossLook // 指定がなければ単語帳のボス
+  title?: string // 上に出す見出し
+  hp?: number // ボスのHP（大学入試の塔は強い）
 }
 
 // オリジナルのボス。単語帳ごとに色と名前が変わる
@@ -31,10 +34,11 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   )
 }
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP }: Props) {
+  const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
-  const [hp, setHp] = useState(BOSS_HP)
+  const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(HEARTS)
   const [combo, setCombo] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
@@ -76,7 +80,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   function retry() {
     setQs(makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
-    setHp(BOSS_HP)
+    setHp(maxHp)
     setHearts(HEARTS)
     setCombo(0)
     setPicked(null)
@@ -91,14 +95,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <button className="stage-back" onClick={onExit}>
           ← にげる
         </button>
-        <span>{level} のボス</span>
+        <span>{title ?? `${level} のボス`}</span>
       </div>
       <div className="boss-figure">
-        <BossFigure hit={hit} look={BOSSES[level]} />
+        <BossFigure hit={hit} look={look} />
       </div>
-      <p className="boss-name">{BOSSES[level].name}</p>
-      <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={BOSS_HP} aria-valuenow={hp}>
-        <div className="boss-hp-fill" style={{ width: `${(hp / BOSS_HP) * 100}%` }} />
+      <p className="boss-name">{look.name}</p>
+      <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={maxHp} aria-valuenow={hp}>
+        <div className="boss-hp-fill" style={{ width: `${(hp / maxHp) * 100}%` }} />
       </div>
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>

@@ -880,3 +880,15 @@ button:focus:not(:focus-visible) { outline: none; }
 .challenge-head { display: flex; gap: 10px; align-items: center; }
 .challenge-face { width: 84px; height: 84px; flex: none; }
 .challenge-result { text-align: center; margin: 12px 0; }
+/* 大学入試の塔 */
+.univ-tower { margin: 8px 0 12px; padding: 8px 10px; border-radius: 14px; background: linear-gradient(180deg, #ede9fe, #fef3c7); color: #1f2937; }
+.univ-tower summary { font-weight: 800; cursor: pointer; }
+.univ-tower .stats-note { color: #4b5563; }
+.univ-floors { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; gap: 6px; }
+.univ-floors li { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 12px; background: rgb(255 255 255 / 0.8); }
+.univ-floors li.locked { opacity: 0.55; }
+.univ-floors li.beaten { box-shadow: inset 0 0 0 2px #f59e0b; }
+.univ-figure { width: 44px; height: 44px; flex: none; }
+.univ-info { flex: 1; min-width: 0; display: flex; flex-direction: column; font-size: 0.85rem; }
+.univ-hint { font-size: 0.72rem; color: #6b7280; }
+.univ-floors .boss-btn { flex: none; width: auto; padding: 6px 10px; font-size: 0.8rem; }

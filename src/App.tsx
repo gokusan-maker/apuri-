@@ -779,6 +779,11 @@ function App() {
           }}
           levels={levels}
           boss={boss}
+          onUnivWin={(b, first) => {
+            gainXp(first ? BOSS_XP : BOSS_REMATCH_XP, null)
+            setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
+            pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
+          }}
           onBossWin={(level) => {
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
             updateMonster((m) => feed(m, boss[level] ? BOSS_REMATCH_XP : BOSS_XP, null, today))
