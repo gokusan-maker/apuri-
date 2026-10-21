@@ -2,24 +2,24 @@
 export type Item = { id: string; name: string; price: number; icon: string }
 
 export const ITEMS: Item[] = [
-  { id: 'ribbon', name: 'リボン', price: 30, icon: '🎀' },
-  { id: 'glasses', name: 'まるメガネ', price: 60, icon: '👓' },
-  { id: 'cap', name: 'キャップ', price: 70, icon: '🧢' },
-  { id: 'scarf', name: 'マフラー', price: 90, icon: '🧣' },
-  { id: 'bowtie', name: '蝶ネクタイ', price: 100, icon: '🦋' },
-  { id: 'hat', name: 'シルクハット', price: 120, icon: '🎩' },
-  { id: 'sunglasses', name: 'サングラス', price: 140, icon: '🕶' },
-  { id: 'flower', name: '花かんむり', price: 150, icon: '🌼' },
-  { id: 'pearls', name: '真珠のネックレス', price: 160, icon: '📿' },
-  { id: 'catears', name: 'ねこみみ', price: 180, icon: '🐱' },
-  { id: 'headphones', name: 'ヘッドホン', price: 200, icon: '🎧' },
-  { id: 'crown', name: '王冠', price: 300, icon: '👑' },
+  { id: 'ribbon', name: 'ちょうちょリボンヌ', price: 30, icon: '🎀' },
+  { id: 'glasses', name: 'かしこメガネル', price: 60, icon: '👓' },
+  { id: 'cap', name: 'ダッシュキャッピー', price: 70, icon: '🧢' },
+  { id: 'scarf', name: 'ぬくぬくマフラン', price: 90, icon: '🧣' },
+  { id: 'bowtie', name: 'ジェントルボウタイ', price: 100, icon: '🦋' },
+  { id: 'hat', name: 'マジカルシルキー', price: 120, icon: '🎩' },
+  { id: 'sunglasses', name: 'キラリグラサン', price: 140, icon: '🕶' },
+  { id: 'flower', name: 'はなかんむりーナ', price: 150, icon: '🌼' },
+  { id: 'pearls', name: 'うみのパールル', price: 160, icon: '📿' },
+  { id: 'catears', name: 'ニャンミミーナ', price: 180, icon: '🐱' },
+  { id: 'headphones', name: 'オトキキホーン', price: 200, icon: '🎧' },
+  { id: 'crown', name: 'キングクラウニー', price: 300, icon: '👑' },
 ]
 
 // イベント期間だけ並ぶ限定の着せ替え（買ったものはずっと使える）
 export const EVENT_ITEMS: (Item & { event: string })[] = [
-  { id: 'witchhat', name: '魔女のぼうし', price: 80, icon: '🧙', event: 'halloween' },
-  { id: 'santahat', name: 'サンタのぼうし', price: 80, icon: '🎅', event: 'christmas' },
+  { id: 'witchhat', name: 'マジョリンハット', price: 80, icon: '🧙', event: 'halloween' },
+  { id: 'santahat', name: 'サンタクロッポ', price: 80, icon: '🎅', event: 'christmas' },
 ]
 
 // ショップに並べる着せ替え：いつもの品＋今のイベントの品＋持っている限定品
@@ -43,16 +43,16 @@ export const priceWith = (w: Wallet, price: number) => ((w.coupons ?? 0) > 0 ? M
 
 // 相棒の部屋の背景
 export const ROOMS: Item[] = [
-  { id: 'meadow', name: '草原', price: 80, icon: '🌿' },
-  { id: 'ocean', name: '海', price: 80, icon: '🌊' },
-  { id: 'space', name: '宇宙', price: 120, icon: '🌌' },
-  { id: 'school', name: '教室', price: 80, icon: '🏫' },
-  { id: 'night', name: '夜の町', price: 120, icon: '🌃' },
-  { id: 'sakura', name: 'さくら', price: 100, icon: '🌸' },
-  { id: 'bookroom', name: '図書室', price: 100, icon: '📚' },
-  { id: 'royal', name: 'お城', price: 150, icon: '🏰' },
-  { id: 'snowy', name: '雪山', price: 120, icon: '🏔' },
-  { id: 'forest', name: '森の中', price: 100, icon: '🌲' },
+  { id: 'meadow', name: 'そよかぜ草原', price: 80, icon: '🌿' },
+  { id: 'ocean', name: 'しおさいビーチ', price: 80, icon: '🌊' },
+  { id: 'space', name: 'ほしぞらステーション', price: 120, icon: '🌌' },
+  { id: 'school', name: 'まなびの教室', price: 80, icon: '🏫' },
+  { id: 'night', name: 'よぞらタウン', price: 120, icon: '🌃' },
+  { id: 'sakura', name: 'さくらひらひら通り', price: 100, icon: '🌸' },
+  { id: 'bookroom', name: 'ものしり図書室', price: 100, icon: '📚' },
+  { id: 'royal', name: 'えいたん城', price: 150, icon: '🏰' },
+  { id: 'snowy', name: 'しろくま雪山', price: 120, icon: '🏔' },
+  { id: 'forest', name: 'こもれびの森', price: 100, icon: '🌲' },
 ]
 
 export const FREEZE_PRICE = 50
@@ -104,10 +104,10 @@ export function saveWallet(w: Wallet): void {
 export type Snack = { id: string; name: string; price: number; xp: number; icon: string }
 
 export const SNACKS: Snack[] = [
-  { id: 'cookie', name: 'クッキー', price: 10, xp: 20, icon: '🍪' },
-  { id: 'onigiri', name: 'おにぎり', price: 14, xp: 30, icon: '🍙' },
-  { id: 'pudding', name: 'プリン', price: 18, xp: 40, icon: '🍮' },
-  { id: 'cake', name: 'ケーキ', price: 25, xp: 60, icon: '🍰' },
+  { id: 'cookie', name: 'サクサククッキン', price: 10, xp: 20, icon: '🍪' },
+  { id: 'onigiri', name: 'もぐもぐおにぎりん', price: 14, xp: 30, icon: '🍙' },
+  { id: 'pudding', name: 'ぷるるんプリンセス', price: 18, xp: 40, icon: '🍮' },
+  { id: 'cake', name: 'キラキラケーキング', price: 25, xp: 60, icon: '🍰' },
 ]
 
 export const SNACKS_PER_DAY = 3

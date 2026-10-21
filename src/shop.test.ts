@@ -125,3 +125,8 @@ it('着せ替えは場所ごとに1つずつ重ねられる', () => {
 it('部屋に雪山と森の中がある', () => {
   for (const id of ['snowy', 'forest']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
 })
+
+it('名前は物そのままではなく、アレンジした名前', () => {
+  const plain = ['リボン', 'マフラー', 'サングラス', 'キャップ', '王冠', 'クッキー', 'プリン', 'ケーキ', '草原', '海', '宇宙']
+  for (const i of [...ITEMS, ...ROOMS, ...SNACKS]) expect(plain, i.id).not.toContain(i.name)
+})

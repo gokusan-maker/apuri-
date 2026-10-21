@@ -379,11 +379,11 @@ describe('App', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
-    fireEvent.click(screen.getByText(/クッキー/))
+    fireEvent.click(screen.getByText(/サクサククッキン/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(20)
     expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
     expect(screen.getByText('😋 もぐもぐ')).toBeInTheDocument()
-    expect(screen.getByText(/サクサク/)).toBeInTheDocument()
+    expect(screen.getAllByText(/サクサク/).length).toBeGreaterThanOrEqual(2) // ボタンとひとこと
   })
 
   it('ショップのガチャでタマゴを引くと仲間がふえ、コインがへる', () => {
