@@ -10,6 +10,7 @@ import { shuffle } from './quiz'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
+import { GrammarShadow } from './GrammarShadowView'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -40,6 +41,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
   const [bingo, setBingo] = useState(false)
+  const [shadow, setShadow] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
   const [goalReached, setGoalReached] = useState(false)
@@ -70,6 +72,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   function open(u: GrammarUnit) {
     setHidden(null)
     setCopied(false)
+    setShadow(false)
     setFirstClear(false)
     setGoalReached(false)
     setBattle(false)
@@ -303,6 +306,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     </button>
   )
 
+  if (unit && shadow) return <GrammarShadow key={unit.id} unit={unit} onBack={() => setShadow(false)} />
   if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onSpend={onSpend} onBack={() => setOrdering(false)} />
 
   if (step === -1) {
@@ -340,6 +344,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {unit.examples.length > 0 && (
           <button className="list-link grammar-order-btn" onClick={() => setOrdering(true)}>
             🧩 例文の並べかえに挑戦（{unit.examples.length}問）
+          </button>
+        )}
+        {unit.examples.length > 0 && (
+          <button className="list-link grammar-order-btn" onClick={() => setShadow(true)}>
+            🗣 例文のシャドーイング（聞いてまねする）
           </button>
         )}
         {stampMode && (
