@@ -492,6 +492,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'The movie will start ___.', choices: ['early', 'soon'], answer: 1, why: '「まもなく」始まるので soon。' },
     ],
   },
+  {
+    id: 'ago-before',
+    title: 'ago と before',
+    points: ['ago は「（今から）〜前に」で、two days ago のように期間のあとに置き、過去の文で使う。', 'before は「以前に」「〜の前に」。現在完了の文でも使える。'],
+    examples: [
+      { en: 'I visited Kyoto three years ago.', ja: '私は3年前に京都を訪れた。' },
+      { en: 'Wash your hands before lunch.', ja: '昼ごはんの前に手を洗いなさい。' },
+    ],
+    questions: [
+      { sentence: 'My cat was born two years ___.', choices: ['ago', 'before'], answer: 0, why: '「（今から）2年前に」なので ago。' },
+      { sentence: 'Have you seen this movie ___?', choices: ['ago', 'before'], answer: 1, why: '現在完了の「以前に」は before。' },
+      { sentence: 'Brush your teeth ___ you go to bed.', choices: ['ago', 'before'], answer: 1, why: '「寝る前に」は before。' },
+    ],
+  },
+  {
+    id: 'interesting-interested',
+    title: 'interesting と interested',
+    points: ['interesting は「（物事が）おもしろい・興味をひく」。', 'interested は「（人が）興味をもっている」で、be interested in 〜 の形でよく使う。'],
+    examples: [
+      { en: 'This book is very interesting.', ja: 'この本はとてもおもしろい。' },
+      { en: 'I am interested in space.', ja: '私は宇宙に興味がある。' },
+    ],
+    questions: [
+      { sentence: 'The science class was ___.', choices: ['interesting', 'interested'], answer: 0, why: '授業（物事）がおもしろいので interesting。' },
+      { sentence: 'My brother is ___ in old cars.', choices: ['interesting', 'interested'], answer: 1, why: '兄（人）が興味をもっているので interested。' },
+      { sentence: 'Are you ___ in Japanese history?', choices: ['interesting', 'interested'], answer: 1, why: 'be interested in 〜 で「〜に興味がある」。' },
+    ],
+  },
+  {
+    id: 'between-among',
+    title: 'between と among',
+    points: ['between は「（2つ・2人）の間に」。between A and B の形が多い。', 'among は「（3つ以上・大勢）の中で・間で」。'],
+    examples: [
+      { en: 'The bank is between the park and the station.', ja: '銀行は公園と駅の間にある。' },
+      { en: 'This song is popular among young people.', ja: 'この歌は若い人たちの間で人気がある。' },
+    ],
+    questions: [
+      { sentence: 'I sat ___ Ken and Yumi.', choices: ['between', 'among'], answer: 0, why: 'ケンとユミの2人の間なので between。' },
+      { sentence: 'The cat was hiding ___ the flowers.', choices: ['between', 'among'], answer: 1, why: 'たくさんの花の中なので among。' },
+      { sentence: 'Let\'s share the cake ___ the two of us.', choices: ['between', 'among'], answer: 0, why: '2人の間なので between。' },
+    ],
+  },
+  {
+    id: 'alone-lonely',
+    title: 'alone と lonely',
+    points: ['alone は「ひとりで」（ほかに人がいない）という状態。気持ちは表さない。', 'lonely は「さびしい」という気持ち。'],
+    examples: [
+      { en: 'I like to walk alone in the morning.', ja: '私は朝ひとりで歩くのが好きだ。' },
+      { en: 'She felt lonely after her friend moved away.', ja: '友だちが引っこしたあと、彼女はさびしく感じた。' },
+    ],
+    questions: [
+      { sentence: 'My grandfather lives ___ in the country.', choices: ['alone', 'lonely'], answer: 0, why: '「ひとりで」暮らしているので alone。' },
+      { sentence: 'I was ___ because nobody talked to me.', choices: ['alone', 'lonely'], answer: 1, why: '「さびしい」気持ちなので lonely。' },
+      { sentence: 'Can you do your homework ___?', choices: ['alone', 'lonely'], answer: 0, why: '「ひとりで」宿題をするので alone。' },
+    ],
+  },
+  {
+    id: 'quite-quiet',
+    title: 'quite と quiet',
+    points: ['quite（クワイト）は「かなり・とても」。', 'quiet（クワイエット）は「静かな」。つづりがにているので注意。'],
+    examples: [
+      { en: 'The test was quite easy.', ja: 'テストはかなりやさしかった。' },
+      { en: 'Please be quiet in the hospital.', ja: '病院では静かにしてください。' },
+    ],
+    questions: [
+      { sentence: 'The library is very ___.', choices: ['quite', 'quiet'], answer: 1, why: '「静かな」は quiet。' },
+      { sentence: 'It was ___ cold this morning.', choices: ['quite', 'quiet'], answer: 0, why: '「かなり」寒いので quite。' },
+      { sentence: 'Be ___! The baby is sleeping.', choices: ['quite', 'quiet'], answer: 1, why: '「静かにして」は Be quiet。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
