@@ -19,3 +19,10 @@ it('連続正解3・5・10回目と、2回続けてまちがえたときに励�
   expect(cheerEvent(0, 1)).toBeNull()
   expect(cheerEvent(0, 2)).toBe('wrong')
 })
+
+it('キャラクターごとの口ぐせで励ます', () => {
+  expect(encourage('fox', 1, 'streak', 0).text).toBe('コンコン！かしこいね！')
+  expect(encourage('cat', 1, 'wrong', 0).text).toBe('ニャ…おしいニャ！')
+  expect(encourage('rabbit', 4, 'streak', 0).text).toBe('Great ears! Hop hop!')
+  expect(encourage('penguin', 4, 'wrong', 0).lang).toBe('en')
+})
