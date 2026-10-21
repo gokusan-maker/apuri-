@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, type BattleBag, type BattleItemId } from './
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -380,6 +380,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          <p className="boss-taunt boss-defeat">
+            「{defeatLineOf(look.name).en}」<span>{defeatLineOf(look.name).ja}</span>
+          </p>
           <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
             {battleRank(hearts, crits)}
           </p>

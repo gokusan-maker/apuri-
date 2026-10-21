@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, isChance, isEnraged, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, defeatLineOf, DEFEAT_LINES, isChance, isEnraged, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -73,4 +73,10 @@ it('HPが半分以下でいかりモード、3問に1問がチャンス問題', 
   expect(isChance(true, 2)).toBe(true)
   expect(isChance(true, 3)).toBe(false)
   expect(isChance(false, 2)).toBe(false)
+})
+
+it('ボスの撃破セリフは名前で決まり、英語と和訳がある', () => {
+  expect(defeatLineOf('ヤミモチ')).toBe(defeatLineOf('ヤミモチ'))
+  expect(DEFEAT_LINES.every((l) => /^[A-Z]/.test(l.en) && l.ja.length > 0)).toBe(true)
+  expect(new Set(Object.values(BOSSES).map((b) => defeatLineOf(b.name).en)).size).toBeGreaterThan(1)
 })

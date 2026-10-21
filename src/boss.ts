@@ -124,3 +124,20 @@ export function saveRushDay(d: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// ボスの撃破セリフ：倒されたときのひとこと（ボスの名前で決まる）
+export const DEFEAT_LINES: { en: string; ja: string }[] = [
+  { en: 'No way... You know too many words!', ja: 'そんな…きみは単語を知りすぎている！' },
+  { en: 'I will be back after I study more!', ja: 'もっと勉強してから、また来るぞ！' },
+  { en: 'You are stronger than I thought.', ja: 'きみは思ったより強いな。' },
+  { en: 'My words... are all gone!', ja: 'わたしの単語が…ぜんぶ消えた！' },
+  { en: 'Well done. You may go on.', ja: 'みごとだ。先へ進むがいい。' },
+  { en: 'Next time, I will not lose!', ja: '次は負けないからな！' },
+  { en: 'Your partner is amazing, too.', ja: 'きみの相棒もすごいな。' },
+  { en: 'I need a little rest now...', ja: 'ちょっと休ませてくれ…' },
+]
+
+export function defeatLineOf(name: string): { en: string; ja: string } {
+  const n = [...name].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 0)
+  return DEFEAT_LINES[n % DEFEAT_LINES.length]
+}

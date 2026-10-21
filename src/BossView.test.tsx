@@ -172,3 +172,10 @@ it('Sランクでなければ PERFECT! は出ない', () => {
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
   expect(screen.queryByText('PERFECT!')).not.toBeInTheDocument()
 })
+
+it('たおすとボスが撃破セリフを言う', async () => {
+  const { defeatLineOf, BOSSES } = await import('./boss')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  answer(true)
+  expect(screen.getByText(`「${defeatLineOf(BOSSES['中1'].name).en}」`, { exact: false })).toBeInTheDocument()
+})
