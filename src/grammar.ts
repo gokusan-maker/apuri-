@@ -1098,6 +1098,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'The cat under the table ___ sleeping.', choices: ['are', 'is', 'am'], answer: 1, why: '主語は The cat（単数）なので is。under the table は説明の部分。' },
     ],
   },
+  {
+    id: 'few-little',
+    title: 'a few / a little（少しの）',
+    points: ['a few ＋数えられる名詞の複数形、a little ＋数えられない名詞で「少しの〜（がある）」。', 'a をとった few / little は「ほとんど〜ない」という意味になる。'],
+    examples: [
+      { en: 'I have a few friends in Canada.', ja: '私にはカナダに少し友だちがいる。' },
+      { en: 'There is a little milk in the bottle.', ja: 'びんに牛乳が少し入っている。' },
+    ],
+    questions: [
+      { sentence: 'I bought a ___ apples at the store.', choices: ['few', 'little', 'much'], answer: 0, why: 'apples は数えられる名詞の複数形なので a few。' },
+      { sentence: 'Can I have a ___ water, please?', choices: ['few', 'little', 'many'], answer: 1, why: 'water は数えられない名詞なので a little。' },
+      { sentence: 'He was sad because he had ___ friends at his new school.', choices: ['a few', 'few', 'a little'], answer: 1, why: '「ほとんどいない（だから悲しい）」なので a のない few。' },
+    ],
+  },
+  {
+    id: 'prep-gerund',
+    title: '前置詞＋動名詞（without 〜ing / before 〜ing）',
+    points: ['前置詞のあとに動詞を置くときは -ing 形（動名詞）にする。', 'without 〜ing（〜しないで）、before 〜ing（〜する前に）、after 〜ing（〜したあとで）、by 〜ing（〜することによって）などがよく使われる。'],
+    examples: [
+      { en: 'He left without saying goodbye.', ja: '彼はさよならを言わずに去った。' },
+      { en: 'Wash your hands before eating.', ja: '食べる前に手を洗いなさい。' },
+    ],
+    questions: [
+      { sentence: 'She went out without ___ breakfast.', choices: ['eat', 'eating', 'to eat'], answer: 1, why: '前置詞 without のあとは動名詞 eating。' },
+      { sentence: 'Brush your teeth before ___ to bed.', choices: ['going', 'go', 'went'], answer: 0, why: '前置詞 before のあとは動名詞 going。' },
+      { sentence: 'You can learn English ___ watching movies.', choices: ['by', 'with', 'of'], answer: 0, why: 'by 〜ing で「〜することによって」。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1198,7 +1226,7 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中2: ['few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

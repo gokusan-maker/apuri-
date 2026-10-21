@@ -77,6 +77,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'perfect-done': { wrong: 'I have finished my homework yet.', right: 'I have already finished my homework.', why: '肯定文の「もう」は already。yet は疑問文・否定文で使う。' },
   shall: { wrong: 'Shall we go shopping? — Yes, we shall.', right: "Shall we go shopping? — Yes, let's.", why: 'Shall we 〜? には Yes, let\'s. / No, let\'s not. と答えるのがふつう。' },
   'as-soon-as': { wrong: 'I will call you as soon as I will get home.', right: 'I will call you as soon as I get home.', why: 'as soon as の中は、未来のことでも現在形。' },
+  'few-little': { wrong: 'I have a little friends.', right: 'I have a few friends.', why: 'friends は数えられる名詞なので a few。a little は数えられない名詞に使う。' },
+  'prep-gerund': { wrong: 'He left without say goodbye.', right: 'He left without saying goodbye.', why: '前置詞のあとの動詞は -ing 形（動名詞）。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
