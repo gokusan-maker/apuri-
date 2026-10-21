@@ -8,6 +8,7 @@ import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
 import { challengeOf } from './challenge'
+import { IDLE_MS, idleAt } from './idle'
 import { loadPetLog, nextPet, PET_BONUS, petReaction, savePetLog, type PetReaction } from './pet'
 import { dayKey } from './srs'
 import { pickLineNow, rememberLine, type Line } from './talk'
@@ -656,6 +657,12 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const [line, setLine] = useState<Line | null>(null)
   const [poke, setPoke] = useState(0)
   const [react, setReact] = useState<PetReaction>('normal')
+  const [tick, setTick] = useState(0)
+  useEffect(() => {
+    const id = window.setInterval(() => setTick((t) => t + 1), IDLE_MS)
+    return () => window.clearInterval(id)
+  }, [])
+  const idle = idleAt(tick, sleepy)
   useEffect(() => {
     if (!line) return
     const id = window.setTimeout(() => setLine(null), 3500)
@@ -714,7 +721,14 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? (react === 'max' ? 'star' : react === 'tickle' ? 'wow' : REACTIONS[poke % REACTIONS.length]) : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
+<span className={`monster-idle${line || leveledUp ? '' : ` idle-${idle}`}`} data-idle={idle}>
+                  <MonsterFigure form={form} mood={line ? (react === 'max' ? 'star' : react === 'tickle' ? 'wow' : REACTIONS[poke % REACTIONS.length]) : idle === 'yawn' && mood === 'normal' && !leveledUp ? 'wow' : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
+          {idle === 'yawn' && !line && !leveledUp && (
+            <span className="idle-yawn" aria-hidden="true">
+              ふぁ〜
+            </span>
+          )}
+        </span>
         {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
         {poke > 0 && (
           <span key={`h${poke}`} className={`poke-hearts${react === 'max' ? ' max' : ''}`} aria-hidden="true">

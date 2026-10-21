@@ -362,6 +362,11 @@ describe('App', () => {
     expect(screen.queryByText('イングリッシュモンスターへようこそ！')).not.toBeInTheDocument()
   })
 
+  it('ホームの相棒はひとりで動いている', () => {
+    render(<App />)
+    expect(document.querySelector('.monster-idle')!.getAttribute('data-idle')).toMatch(/walk|sleep/)
+  })
+
   it('相棒をタップするとひとこと話す', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('相棒にさわる'))
