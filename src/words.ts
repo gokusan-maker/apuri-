@@ -3491,6 +3491,16 @@ const WORDS_4: Word[] = [
   { id: 'what-do-you-mean', en: 'What do you mean?', ja: 'どういうこと？', example: 'Sorry, what do you mean by that?', exampleJa: 'ごめん、それってどういうこと？', level: '会話' },
   { id: 'i-forgot', en: 'I forgot', ja: '忘れちゃった', example: 'Oh no, I forgot my homework!', exampleJa: 'しまった、宿題を忘れちゃった！', level: '会話' },
   { id: 'lucky-you', en: 'Lucky you!', ja: 'いいなあ！・ついてるね！', example: '"I got two tickets!" "Lucky you!"', exampleJa: '「チケットを2枚もらったよ！」「いいなあ！」', level: '会話' },
+  { id: 'how-do-you-spell', en: 'How do you spell ...?', ja: '〜はどうつづりますか', example: 'How do you spell your name?', exampleJa: 'あなたの名前はどうつづりますか。', level: '会話' },
+  { id: 'could-you-speak-slowly', en: 'Could you speak more slowly?', ja: 'もっとゆっくり話していただけますか', example: 'Sorry, could you speak more slowly?', exampleJa: 'すみません、もっとゆっくり話していただけますか。', level: '会話' },
+  { id: 'im-lost', en: 'I\'m lost', ja: '道に迷いました', example: 'Excuse me, I\'m lost. Where is the station?', exampleJa: 'すみません、道に迷いました。駅はどこですか。', level: '会話' },
+  { id: 'nice-to-meet-you-too', en: 'Nice to meet you, too', ja: 'こちらこそはじめまして', example: '"Nice to meet you." "Nice to meet you, too."', exampleJa: '「はじめまして。」「こちらこそはじめまして。」', level: '会話' },
+  { id: 'how-was-your-weekend', en: 'How was your weekend?', ja: '週末はどうだった？', example: 'Hi! How was your weekend?', exampleJa: 'やあ！週末はどうだった？', level: '会話' },
+  { id: 'im-full-of-energy', en: 'I\'m full of energy', ja: '元気いっぱいだよ', example: 'I slept well, so I\'m full of energy today.', exampleJa: 'よく寝たから、今日は元気いっぱいだよ。', level: '会話' },
+  { id: 'check-please', en: 'Check, please', ja: 'お会計をお願いします', example: 'Excuse me. Check, please.', exampleJa: 'すみません。お会計をお願いします。', level: '会話' },
+  { id: 'just-a-little', en: 'Just a little', ja: 'ほんの少しだけ', example: '"Do you speak Japanese?" "Just a little."', exampleJa: '「日本語は話せますか？」「ほんの少しだけ。」', level: '会話' },
+  { id: 'no-hurry', en: 'There\'s no hurry', ja: '急がなくていいよ', example: 'There\'s no hurry. We have plenty of time.', exampleJa: '急がなくていいよ。時間はたっぷりあるから。', level: '会話' },
+  { id: 'whats-the-date-today', en: 'What\'s the date today?', ja: '今日は何日？', example: 'What\'s the date today? It\'s October 21st.', exampleJa: '今日は何日？10月21日だよ。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
