@@ -5,6 +5,7 @@ export type Party = {
   active: number
   members: MonsterState[]
   gacha?: number // ガチャで引いたタマゴの数（節目のタマゴとは別に数える）
+  released?: number // なかま交換所でおわかれした節目のタマゴの数（もう一度もらえないように）
 }
 
 // タマゴがもらえる節目（バッジid）。1匹目ははじめから。
@@ -22,9 +23,10 @@ export function eggsEarned(earned: Record<string, string>): number {
 
 // もらえる数に足りなければ新しいタマゴを足す
 export function addEggs(p: Party, total: number): Party {
-  if (p.members.length - (p.gacha ?? 0) >= total) return p
+  const have = (n: number) => n - (p.gacha ?? 0) + (p.released ?? 0)
+  if (have(p.members.length) >= total) return p
   const members = [...p.members]
-  while (members.length - (p.gacha ?? 0) < total) members.push({ xp: 0 })
+  while (have(members.length) < total) members.push({ xp: 0 })
   return { ...p, members }
 }
 
@@ -53,7 +55,8 @@ export function loadParty(): Party {
       const members = v.members.map(sanitizeMonster)
       const active = typeof v.active === 'number' && v.active >= 0 && v.active < members.length ? v.active : 0
       const gacha = typeof v.gacha === 'number' && v.gacha > 0 ? Math.min(v.gacha, members.length - 1) : 0
-      return gacha ? { active, members, gacha } : { active, members }
+      const released = typeof v.released === 'number' && v.released > 0 ? Math.floor(v.released) : 0
+      return { active, members, ...(gacha ? { gacha } : {}), ...(released ? { released } : {}) }
     }
   } catch {
     // 壊れていたら旧形式から作り直す
@@ -88,4 +91,24 @@ export function toggleFav(p: Party, i: number): Party {
 export function displayOrder(p: Party): number[] {
   const idx = p.members.map((_, i) => i)
   return [...idx.filter((i) => p.members[i].fav), ...idx.filter((i) => !p.members[i].fav)]
+}
+
+// なかま交換所：相棒・おきにいり以外の子とおわかれして、コインにかえる（レベルが高いほど多い）
+export const releaseCoins = (level: number) => Math.min(100, 10 + level * 2)
+
+export function canRelease(p: Party, i: number): boolean {
+  return p.members.length > 1 && i !== p.active && !p.members[i]?.fav
+}
+
+export function releaseMember(p: Party, i: number): Party | null {
+  if (!canRelease(p, i)) return null
+  const members = p.members.filter((_, j) => j !== i)
+  const active = i < p.active ? p.active - 1 : p.active
+  const gacha = p.gacha ?? 0
+  // ガチャの子から先に数を減らす。ガチャの子がいなければ節目のタマゴとして記録（もう一度もらえないように）
+  const next: Party = { active, members }
+  if (gacha > 1) next.gacha = gacha - 1
+  const released = (p.released ?? 0) + (gacha > 0 ? 0 : 1)
+  if (released) next.released = released
+  return next
 }

@@ -65,6 +65,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           {members + MULTI > PARTY_MAX && <small>（仲間の空きが3ひつよう）</small>}
         </button>
       )}
+      {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}
       {tickets > 0 && !full && (
         <button
           className="good gacha-btn ticket"

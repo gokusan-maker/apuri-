@@ -1117,3 +1117,4 @@ button:focus:not(:focus-visible) { outline: none; }
 
 .long-evidence { margin: 0 -6px; padding: 2px 6px; border-radius: 8px; background: #fef9c3; box-shadow: inset 4px 0 0 #facc15; }
 .long-evidence-note { margin: 0 0 6px; font-size: 0.78rem; color: #854d0e; }
+.release-btn { position: absolute; right: 4px; top: 4px; border: none; background: none; font-size: 1rem; padding: 2px; opacity: 0.7; }

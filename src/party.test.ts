@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addEggs, displayOrder, eggsEarned, loadParty, saveParty, toggleFav, updateActive } from './party'
+import { addEggs, canRelease, displayOrder, eggsEarned, loadParty, releaseCoins, releaseMember, saveParty, toggleFav, updateActive } from './party'
 
 describe('なかま', () => {
   beforeEach(() => localStorage.clear())
@@ -40,4 +40,22 @@ it('おきにいりは一覧の先頭に並び、保存しても残る（相棒�
   const g = toggleFav(f, 2)
   expect(g.members[2].fav).toBeUndefined()
   expect(displayOrder(g)).toEqual([0, 1, 2])
+})
+
+it('なかま交換所：相棒・おきにいりはおわかれできず、節目のタマゴは二度ともらえない', () => {
+  const p = { active: 1, members: [{ xp: 0 }, { xp: 5 }, { xp: 9, fav: true }, { xp: 3 }], gacha: 1 }
+  expect(canRelease(p, 1)).toBe(false) // 相棒
+  expect(canRelease(p, 2)).toBe(false) // おきにいり
+  expect(releaseMember(p, 1)).toBeNull()
+  const a = releaseMember(p, 0)! // 相棒より前の子
+  expect(a.members).toHaveLength(3)
+  expect(a.active).toBe(0)
+  expect(a.gacha).toBeUndefined() // ガチャの子の数から減らす
+  const b = releaseMember(a, 2)!
+  expect(b.released).toBe(1)
+  expect(addEggs(b, 3).members).toHaveLength(b.members.length) // おわかれした分は足されない
+  expect(releaseCoins(1)).toBe(12)
+  expect(releaseCoins(99)).toBe(100)
+  saveParty(b)
+  expect(loadParty().released).toBe(1)
 })

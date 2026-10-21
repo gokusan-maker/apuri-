@@ -423,6 +423,18 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
+  it('なかま交換所でおわかれするとコインにかわる', () => {
+    vi.spyOn(window, 'confirm').mockReturnValue(true)
+    localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 0 }, { xp: 0, species: 'fox' }], active: 0, gacha: 1 }))
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
+    fireEvent.click(screen.getByLabelText(/とおわかれする/))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members).toHaveLength(1)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(12)
+  })
+
   it('ボスをたおした回数で相棒に二つ名がつく', () => {
     localStorage.setItem('eitan:boss-book', JSON.stringify({ ヤミモチ: { wins: 10, best: 'A', first: '2026-10-01', look: { name: 'ヤミモチ', color: '#000', line: '#000', eye: '#fff' } } }))
     render(<App />)

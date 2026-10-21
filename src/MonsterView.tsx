@@ -3,7 +3,7 @@ import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
-import { displayOrder, EGG_MILESTONES, type Party as PartyState } from './party'
+import { canRelease, displayOrder, EGG_MILESTONES, releaseCoins, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
@@ -1028,13 +1028,14 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
-export function Party({ party, onSelect, onRename, onFav }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void }) {
+export function Party({ party, onSelect, onRename, onFav, onRelease }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void }) {
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
   return (
     <div className="party">
       <h2>なかま</h2>
+      {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}
       {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
       <ul className="badge-grid">
         {displayOrder(party).map((i) => {
@@ -1062,6 +1063,17 @@ export function Party({ party, onSelect, onRename, onFav }: { party: PartyState;
               {onFav && (
                 <button className={`fav-btn${m.fav ? ' on' : ''}`} aria-label={`${m.name ?? f.name}をおきにいりに${m.fav ? 'しない' : 'する'}`} aria-pressed={!!m.fav} onClick={() => onFav(i)}>
                   {m.fav ? '★' : '☆'}
+                </button>
+              )}
+              {onRelease && canRelease(party, i) && (
+                <button
+                  className="release-btn"
+                  aria-label={`${m.name ?? f.name}とおわかれする`}
+                  onClick={() => {
+                    if (window.confirm(`${m.name ?? f.name}とおわかれして、🪙${releaseCoins(levelInfo(m.xp).level)}にかえますか？（もとにもどせません）`)) onRelease(i)
+                  }}
+                >
+                  👋
                 </button>
               )}
               {onRename &&
