@@ -209,3 +209,15 @@ it('スロットは4%でそろい、それ以外はそろわない', async () =>
     expect(s.reels[0]).not.toBe(s.reels[2])
   }
 })
+
+it('季節ガチャ：10月はさくら色のかわりにかぼちゃ色が出る', async () => {
+  const { drawEgg, seasonalKindOf } = await import('./gacha')
+  expect(seasonalKindOf('2026-10-20')).toBe('pumpkin')
+  expect(seasonalKindOf('2026-12-24')).toBe('snow')
+  expect(seasonalKindOf('2026-11-01')).toBeUndefined()
+  const w = { coins: 100, owned: [] }
+  const p = { members: [{ xp: 0 }], active: 0 }
+  expect(drawEgg(w, p, 0.61, false, 0.5, false, undefined, false, 50, 'pumpkin')!.kind.id).toBe('pumpkin')
+  expect(drawEgg(w, p, 0.61, false, 0.5)!.kind.id).toBe('sakura')
+  expect(drawEgg(w, p, 0.75, false, 0.5, false, undefined, false, 50, 'pumpkin')!.kind.id).toBe('umi')
+})

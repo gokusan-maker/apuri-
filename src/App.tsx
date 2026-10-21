@@ -50,7 +50,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { MULTI5, SLOT_COINS, slotOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -677,7 +677,7 @@ function App() {
     let bonusXp = 0
     const pulled = loadGachaStats().total
     for (let i = 0; i < n; i++) {
-      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today))
+      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today))
       if (!r) break
       st = nextStep(st, today)
       const dup = isDuplicate(p.members, r.species.id, r.kind.id)

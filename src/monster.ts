@@ -241,6 +241,9 @@ export const KINDS: Kind[] = [
   { id: 'yoru', name: 'よる色', rarity: 'R', color: '#a5b4fc', line: '#3730a3' },
   { id: 'kin', name: 'きんいろ', rarity: 'SR', color: '#f59e0b', line: '#78350f' },
   { id: 'niji', name: 'にじいろ', rarity: 'UR', color: '#f0abfc', line: '#6b21a8' },
+  // 季節限定（その時期のガチャだけで出る）
+  { id: 'pumpkin', name: 'かぼちゃ色', rarity: 'R', color: '#fb923c', line: '#7c2d12' },
+  { id: 'snow', name: 'ゆき色', rarity: 'R', color: '#e0f2fe', line: '#0369a1' },
 ]
 
 export const RARITY_LABEL = { N: 'ノーマル', R: 'レア', SR: 'スーパーレア', UR: 'ウルトラレア' } as const
