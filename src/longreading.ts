@@ -11,10 +11,12 @@ export type Gist = { para: number; choices: string[]; answer: number; why: strin
 export type Refer = { phrase: string; word: string; choices: string[]; answer: number; why: string } // 指示語：phrase の中の word が指すもの
 // 文を入れる位置：ぬけている1文が入る場所を、段落のあとの［ア］〜［エ］から選ぶ（after は段落の番号）
 // 要約文の完成：本文をまとめた英文の ( 1 ) ( 2 ) … に入る語を選ぶ
+// 語句の意味：本文中の語の意味を前後から推測して選ぶ
+export type VocabQ = { word: string; choices: string[]; answer: number; why: string }
 export type SummaryQ = { text: string; blanks: { choices: string[]; answer: number; why: string }[] }
 export type InsertQ = { sentence: string; after: number[]; answer: number; why: string }
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答（complete では q が文の前半）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[] }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -1124,6 +1126,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'be harmful to 〜 で「〜にとって害がある」。' },
       { id: 'D', choices: ['by', 'for', 'of', 'with'], answer: 1, why: 'for us で「私たちのために」。' },
     ],
+    vocab: [{ word: 'pollen', choices: ['花粉', '花びら', 'はちみつ', '種'], answer: 0, why: 'ハチが花から花へ運び、植物が実や種をつくる助けになるもの＝花粉。' }],
     tf: [
       { statement: 'Bees carry pollen from one flower to another.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Apples and strawberries do not need bees at all.', answer: false, why: 'ハチの働きにたよっている食べ物の例として出ている。' },
@@ -1232,6 +1235,7 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['more', 'less', 'new', 'colorful'], answer: 1, why: '第4段落「プラスチックを使う量をへらそうとしている」。' },
       ],
     },
+    vocab: [{ word: 'charging', choices: ['（お金を）とる', '電気をためる', 'すてる', 'くばる'], answer: 0, why: 'レジ袋の話で charging money for 〜 なので「〜にお金をとる（有料にする）」。' }],
     tf: [
       { statement: 'Plastic is light, strong, and cheap.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All plastic breaks down in a few weeks.', answer: false, why: '何百年も残るものもある。' },
@@ -1341,6 +1345,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       ],
     },
     insert: { sentence: 'In other words, sleep helps you keep your memories.', after: [0, 1, 2, 3], answer: 2, why: '第3段落の「ねている間に脳が学んだことを整理する」という説明を、「言いかえると記憶を保つ助けになる」とまとめる文。' },
+    vocab: [{ word: 'repair', choices: ['修復する', 'こわす', '数える', '売る'], answer: 0, why: 'ねている間に筋肉が休み体が成長する、という流れから「（自分を）なおす・修復する」。' }],
     tf: [
       { statement: 'Our bodies repair themselves while we are sleeping.', answer: true, why: '第2段落の内容と合う。' },
       { statement: 'Our brains stop working completely during sleep.', answer: false, why: 'ねている間に脳は学んだことを整理している。' },
@@ -1537,7 +1542,7 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number> } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number> } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -1551,7 +1556,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const co = (p.complete ?? []).filter((x, i) => extra.complete?.[i] === x.answer).length
   const ins = p.insert && extra.insert === p.insert.answer ? 1 : 0
   const su = (p.summary?.blanks ?? []).filter((x, i) => extra.summary?.[i] === x.answer).length
-  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su, total: totalOf(p) }
+  const vo = (p.vocab ?? []).filter((x, i) => extra.vocab?.[i] === x.answer).length
+  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su + vo, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -1576,7 +1582,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
@@ -1627,13 +1633,13 @@ export function addReadWords(n: number): number {
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
-export const TYPE_LABEL = { summary: '要約文の完成', insert: '文を入れる位置', complete: '英文の完成', title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export const TYPE_LABEL = { vocab: '語句の意味', summary: '要約文の完成', insert: '文を入れる位置', complete: '英文の完成', title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
 export type QType = keyof typeof TYPE_LABEL
 export type TypeStats = Partial<Record<QType, [number, number]>>
 
 export function typeResults(
   p: LongPassage,
-  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number> },
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number> },
 ): TypeStats {
   const out: TypeStats = {}
   out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
@@ -1648,6 +1654,7 @@ export function typeResults(
   if (p.titleQ) out.title = [a.title === p.titleQ.answer ? 1 : 0, 1]
   if (p.complete) out.complete = [p.complete.filter((x, i) => a.complete?.[i] === x.answer).length, p.complete.length]
   if (p.insert) out.insert = [a.insert === p.insert.answer ? 1 : 0, 1]
+  if (p.vocab) out.vocab = [p.vocab.filter((x, i) => a.vocab?.[i] === x.answer).length, p.vocab.length]
   if (p.summary) out.summary = [p.summary.blanks.filter((x, i) => a.summary?.[i] === x.answer).length, p.summary.blanks.length]
   return out
 }
@@ -1698,6 +1705,7 @@ export function hasType(p: LongPassage, k: QType): boolean {
     complete: !!p.complete,
     insert: !!p.insert,
     summary: !!p.summary,
+    vocab: !!p.vocab,
   }
   return map[k]
 }
@@ -1743,6 +1751,7 @@ export type LongDraft = {
   comp: Record<number, number>
   insert?: number
   summary?: Record<number, number>
+  vocab?: Record<number, number>
 }
 const DRAFT_KEY = 'eitan:long-draft'
 const isObj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v)
@@ -1756,7 +1765,7 @@ export function loadLongDraft(id: string): LongDraft | null {
     const d = isObj(all) ? all[id] : null
     if (!isObj(d)) return null
     const tf = isObj(d.tf) ? (Object.fromEntries(Object.entries(d.tf).filter(([, x]) => typeof x === 'boolean')) as Record<number, boolean>) : {}
-    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary) }
+    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary), vocab: numMap(d.vocab) }
   } catch {
     return null
   }
@@ -1764,7 +1773,7 @@ export function loadLongDraft(id: string): LongDraft | null {
 
 // 1問も答えていなければ消す
 export const draftEmpty = (d: LongDraft) =>
-  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined
+  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}, d.vocab ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined
 
 export function saveLongDraft(id: string, d: LongDraft | null): void {
   try {

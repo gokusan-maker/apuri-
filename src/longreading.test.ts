@@ -192,7 +192,7 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   expect(loadLongDraft('x')).toBeNull()
   const empty = { blanks: {}, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} }
   saveLongDraft('x', { ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1 })
-  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {} })
+  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {}, vocab: {} })
   saveLongDraft('x', empty)
   expect(loadLongDraft('x')).toBeNull()
   saveLongDraft('y', { ...empty, picks: [1] })
@@ -241,5 +241,18 @@ it('要約文の完成と文を入れる位置の設問はそれぞれ5本以上
     expect(p.insert!.after).toHaveLength(4)
     expect(p.insert!.answer).toBeLessThan(4)
     for (const i of p.insert!.after) expect(i).toBeLessThan(p.paragraphs.length)
+  }
+})
+
+it('語句の意味の設問は本文にある語で、選択肢は4つ', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.vocab)
+  expect(ps.length).toBeGreaterThanOrEqual(3)
+  for (const p of ps) {
+    for (const v of p.vocab!) {
+      expect(p.paragraphs.join(' ')).toContain(v.word)
+      expect(v.choices).toHaveLength(4)
+    }
+    const right = Object.fromEntries(p.vocab!.map((v, i) => [i, v.answer]))
+    expect(scoreLong(p, {}, {}, [], { vocab: right }).score).toBe(p.vocab!.length)
   }
 })

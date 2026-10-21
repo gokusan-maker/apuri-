@@ -66,6 +66,7 @@ export function LongReading({ onAnswer }: Props) {
   const [titlePick, setTitlePick] = useState<number | undefined>(undefined) // タイトル選択
   const [ins, setIns] = useState<number | undefined>(undefined) // 文を入れる位置
   const [summ, setSumm] = useState<Record<number, number>>({}) // 要約文の完成
+  const [voc, setVoc] = useState<Record<number, number>>({}) // 語句の意味
   const [comp, setComp] = useState<Record<number, number>>({}) // 英文の完成
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
@@ -94,6 +95,7 @@ export function LongReading({ onAnswer }: Props) {
     setComp(d?.comp ?? {})
     setIns(d?.insert)
     setSumm(d?.summary ?? {})
+    setVoc(d?.vocab ?? {})
     setDone(false)
     setShowJa(false)
     setResumed(!!d)
@@ -102,8 +104,8 @@ export function LongReading({ onAnswer }: Props) {
   // 答えかけの内容をとっておく（採点したら消す）
   useEffect(() => {
     if (!p) return
-    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ })
-  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ])
+    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc })
+  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc])
 
   if (!p) {
     return (
@@ -182,8 +184,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -431,6 +433,29 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.vocab && (
+        <>
+          <h3 className="long-q">問　本文中の次の語の意味として最も適切なものを、前後の内容から考えて ア〜エ から選びなさい。</h3>
+          {p.vocab.map((v, n) => (
+            <div key={v.word} className="long-item">
+              <p className="long-vocab-word">{v.word}</p>
+              <div className="long-choices">
+                {v.choices.map((c, i) => (
+                  <button key={c} className={`long-choice${voc[n] === i ? ' picked' : ''}${done && i === v.answer ? ' answer' : ''}`} disabled={done} aria-pressed={voc[n] === i} onClick={() => setVoc({ ...voc, [n]: i })}>
+                    {MARKS[i]} {c}
+                  </button>
+                ))}
+              </div>
+              {done && (
+                <p className={`long-why${voc[n] === v.answer ? ' right' : ' wrong'}`}>
+                  {voc[n] === v.answer ? '⭕' : '❌'} 正解 {MARKS[v.answer]}：{v.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
+
       {p.summary && (
         <>
           <h3 className="long-q">問　次の英文は本文の内容をまとめたものです。( 1 )〜( {p.summary.blanks.length} ) に入る最も適切な語を、ア〜エ から選びなさい。</h3>
@@ -614,6 +639,7 @@ export function LongReading({ onAnswer }: Props) {
               setComp({})
               setIns(undefined)
               setSumm({})
+              setVoc({})
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -630,7 +656,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc }))
             setTypes(t)
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))

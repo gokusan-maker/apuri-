@@ -1260,3 +1260,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .janken-result { font-weight: 700; }
 .janken-hands { display: flex; gap: 8px; justify-content: center; }
 .janken-hands button { width: 56px; height: 56px; border: none; border-radius: 50%; background: var(--bg); font-size: 1.6rem; }
+.long-vocab-word { margin: 0 0 6px; font-weight: 800; font-size: 1.05rem; }

@@ -202,3 +202,14 @@ it('要約文の完成の問題に答えられる', () => {
   fireEvent.click(btn)
   expect(btn).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('語句の意味の問題に答えられる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.vocab)!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  const v = p.vocab![0]
+  const btn = screen.getByRole('button', { name: `${MARKS[v.answer]} ${v.choices[v.answer]}` })
+  fireEvent.click(btn)
+  expect(btn).toHaveAttribute('aria-pressed', 'true')
+})
