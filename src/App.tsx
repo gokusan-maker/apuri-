@@ -1249,6 +1249,7 @@ function App() {
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             onXp={(n) => gainXp(n, null)}
+            partnerName={monster.name ?? formOf(monster).name}
             onGoalTicket={() => {
               setWallet((w) => addTicket(w))
               pushToast([{ id: 'grammar-goal', text: '🎯 文法の今週の目標をたっせい！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])

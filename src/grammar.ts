@@ -1480,3 +1480,7 @@ export function recommendUnits(units: GrammarUnit[], clears: Record<string, numb
   const key = (u: GrammarUnit) => unitStars(clears[u.id] ?? 0) * 2 + (record[u.id] === u.questions.length ? 1 : 0)
   return [...units].sort((a, b) => key(a) - key(b)).slice(0, n)
 }
+
+// 全問正解のとき相棒がほめてくれるひとこと（単元ごとに決まる）
+export const PRAISE_LINES = ['すごい！ 全問正解だね！', 'カンペキ！ きみは文法マスターだ！', 'やったね！ ぼくもうれしいよ！', 'その調子！ どんどん強くなってる！', 'さすが！ 次の単元もいっしょにがんばろう！']
+export const praiseOf = (unitId: string) => PRAISE_LINES[[...unitId].reduce((a, c) => a + c.charCodeAt(0), 0) % PRAISE_LINES.length]

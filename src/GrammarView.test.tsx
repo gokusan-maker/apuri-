@@ -331,3 +331,17 @@ it('おすすめ単元から単元を開ける', () => {
   fireEvent.click(screen.getByText(`👉 ${GRAMMAR[0].title}`))
   expect(screen.getByText(GRAMMAR[0].points[0])).toBeInTheDocument()
 })
+
+it('全問正解すると相棒がほめてくれる', async () => {
+  const { praiseOf } = await import('./grammar')
+  localStorage.clear()
+  render(<Grammar partnerName="モチ" />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(`🐣 モチ「${praiseOf(unit.id)}」`)).toBeInTheDocument()
+})
