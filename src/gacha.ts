@@ -71,3 +71,15 @@ export const DUP_REFUND = 15
 export function isDuplicate(members: Party['members'], species: string, kind: string): boolean {
   return members.some((m) => (m.species ?? 'mochi') === species && (m.kind ?? 'normal') === kind)
 }
+
+const KINDS_R = ['sakura', 'umi', 'yoru'].map(kindOf)
+export const RARE_FULL_COINS = 50 // レアボスに勝ったが仲間がいっぱいのとき
+
+// レアボスのごほうび：色ちがい確定のタマゴ（仲間がいっぱいなら null）
+export function rareEgg(p: Party, r: number, r2: number): { party: Party; kind: Kind; species: Species } | null {
+  if (p.members.length >= PARTY_MAX) return null
+  const kind = r < 0.7 ? KINDS_R[Math.min(2, Math.floor((r / 0.7) * 3))] : r < 0.95 ? kindOf('kin') : kindOf('niji')
+  const species = rollSpecies(r2)
+  const egg = { xp: 0, kind: kind.id, ...(species.id === 'mochi' ? {} : { species: species.id }) }
+  return { party: { ...p, members: [...p.members, egg] }, kind, species }
+}

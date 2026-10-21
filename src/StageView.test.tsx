@@ -93,3 +93,10 @@ it('まだ制覇していなければ合格証書は出ない', () => {
   expect(screen.queryByText('🎓 合格証書')).not.toBeInTheDocument()
   localStorage.removeItem('eitan:univ')
 })
+
+it('今週のレアボスに挑戦できる', () => {
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByText(/今週のレアボス「キラキラ.+」に勝つと 色ちがい確定のタマゴ！/))
+  expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
+})

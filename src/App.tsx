@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, updateActive } from './party'
-import { addTicket, drawEgg, DUP_REFUND, isDuplicate } from './gacha'
+import { addTicket, drawEgg, DUP_REFUND, isDuplicate, RARE_FULL_COINS, rareEgg } from './gacha'
 import {
   feed,
   FORMS,
@@ -145,6 +145,9 @@ function saveLucky(day: string) {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 乱数（ボタンを押したときだけ呼ぶ）
+const rand = () => Math.random()
 
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
@@ -812,6 +815,12 @@ function App() {
             gainXp(first ? BOSS_XP : BOSS_REMATCH_XP, null)
             setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
             pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
+          }}
+          onRareWin={() => {
+            const r = rareEgg(party, rand(), rand())
+            if (r) setParty(r.party)
+            else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
+            pushToast([{ id: 'rare', text: r ? `✨ レアボスをたおした！ ${r.kind.name}の${r.species.egg}が仲間になった（ショップの「なかま」で見られるよ）` : `✨ レアボスをたおした！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
           }}
           onBossWin={(level) => {
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
