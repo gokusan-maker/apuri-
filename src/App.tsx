@@ -25,6 +25,7 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
 import { loadShards, saveShards, shardAfter, SHARDS_FOR_EGG } from './shard'
 import { SugorokuBoard } from './SugorokuView'
 import { JANKEN_COINS } from './janken'
@@ -271,6 +272,7 @@ function App() {
   const [keys, setKeys] = usePersistent(loadKeys, saveKeys)
   const [shards, setShards] = usePersistent(loadShards, saveShards)
   const [gachaPoints, setGachaPoints] = usePersistent(loadGachaPoints, saveGachaPoints)
+  const [stickers, setStickers] = usePersistent(loadStickers, saveStickers)
   const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
@@ -680,6 +682,8 @@ function App() {
     const out: GachaResult[] = []
     let bonusXp = 0
     const pulled = loadGachaStats().total
+    let sb = stickers
+    let stickerDone = false
     for (let i = 0; i < n; i++) {
       const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today))
       if (!r) break
@@ -690,10 +694,14 @@ function App() {
       const bonus = bonusOf(rand())
       const lucky = isLuckyPull(pulled + i + 1) ? pulled + i + 1 : 0
       const slot = slotOf(rand())
+      const sticker = stickerOf(rand())
+      const st2 = addSticker(sb, sticker)
+      sb = st2.book
+      if (st2.complete) stickerDone = true
       w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) + (lucky ? LUCKY_COINS : 0) + (slot.win ? SLOT_COINS : 0) }
       if (bonus?.kind === 'xp') bonusXp += bonus.amount
       p = r.party
-      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot })
+      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker })
     }
     if (out.length > 0) {
       setWallet(w)
@@ -701,6 +709,11 @@ function App() {
       setGachaStep(st)
       saveGachaStats(addStats(loadGachaStats(), out.map((k) => k.kind.rarity)))
       setGachaPoints((pt) => pt + out.length)
+      setStickers(sb)
+      if (stickerDone) {
+        setWallet((x) => ({ ...addTicket(addTicket(x)) }))
+        pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+      }
       count('gacha', out.length)
       if (bonusXp > 0) gainXp(bonusXp, null)
     }
@@ -917,6 +930,7 @@ function App() {
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           onGachaMulti={(n) => drawMany(false, n)}
           gachaPoints={gachaPoints}
+          stickers={stickers.got}
           onExchange={() => {
             if (gachaPoints < POINTS_FOR_SR) return null
             const r = srEgg(party, rand(), rand())

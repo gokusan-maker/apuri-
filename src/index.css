@@ -1307,3 +1307,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-tips { margin: 8px 0; padding: 8px; border-radius: 10px; background: var(--bg); text-align: left; font-size: 0.85rem; }
 .long-tips-title { margin: 0 0 4px; font-weight: 800; }
 .long-tips ul { margin: 0; padding-left: 18px; }
+.sticker-book { margin: 4px 0; font-size: 0.8rem; }
+.sticker-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 4px 0; font-size: 1.3rem; text-align: center; }
+.sticker-grid .not { color: var(--muted); font-size: 1rem; }
+.gacha-sticker { margin: 2px 0; font-size: 0.85rem; }

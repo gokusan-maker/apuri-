@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { STICKERS, STICKER_TICKETS } from './stickers'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -7,7 +8,7 @@ const MULTI = 3
 const RANK = ['N', 'R', 'SR', 'UR'] as const
 const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
 
-export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean } }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean }; sticker?: string }
 
 // 結果をシェア用の文にしてコピーするボタン
 function ShareButton({ text }: { text: string }) {
@@ -33,6 +34,7 @@ type Props = {
   tickets?: number // ガチャチケットの枚数
   pityLeft?: number // あと何回でスーパーレア以上が確定
   points?: number // ガチャポイント
+  stickers?: string[] // 集めたシール
   onExchange?: () => GachaResult | null // 20ポイントでスーパーレア以上確定
   dragonUp?: boolean // 週末はドラコが出やすい
   pickup?: Species // 日替わりピックアップ（出やすい）
@@ -44,7 +46,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [stats, setStats] = useState(loadGachaStats)
@@ -141,6 +143,20 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      {stickers && (
+        <details className="sticker-book">
+          <summary>
+            🏷 シール帳 {stickers.length} / {STICKERS.length}（全部そろうと🎟{STICKER_TICKETS}）
+          </summary>
+          <p className="sticker-grid">
+            {STICKERS.map((s) => (
+              <span key={s} className={stickers.includes(s) ? 'got' : 'not'} aria-label={stickers.includes(s) ? `シール ${s}` : 'まだのシール'}>
+                {stickers.includes(s) ? s : '？'}
+              </span>
+            ))}
+          </p>
+        </details>
+      )}
       {points !== undefined && (
         <p className="gacha-points">
           🎫 ガチャポイント {Math.min(points, POINTS_FOR_SR)} / {POINTS_FOR_SR}（たまるとスーパーレア以上確定と交換）
@@ -240,6 +256,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
             {result.species.egg}が仲間になった！
           </p>
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
+          {result.sticker && <p className="gacha-sticker">🏷 おまけシール {result.sticker}</p>}
           {result.slot && (
             <p className={`gacha-slot${result.slot.win ? ' win' : ''}`} aria-label={result.slot.win ? 'スロットがそろった' : 'スロット'}>
               🎰 {result.slot.reels.join(' ')}

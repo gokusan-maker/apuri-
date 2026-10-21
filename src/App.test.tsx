@@ -611,6 +611,20 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:gacha-points')).toBe('0')
   })
 
+  it('シール帳が全部そろうと🎟2', async () => {
+    const { STICKERS } = await import('./stickers')
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
+    localStorage.setItem('eitan:stickers', JSON.stringify({ got: STICKERS.filter((x) => x !== '⚽'), rewarded: false }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5) // シールは ⚽
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    rnd.mockRestore()
+    expect(screen.getByText('🏷 おまけシール ⚽')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(2)
+    expect(JSON.parse(localStorage.getItem('eitan:stickers')!).rewarded).toBe(true)
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
