@@ -220,3 +220,6 @@ export function srEgg(p: Party, r: number, r2: number): { party: Party; kind: Ki
   const egg = { xp: 0, kind: kind.id, ...(species.id === 'mochi' ? {} : { species: species.id }) }
   return { party: { ...p, members: [...p.members, egg] }, kind, species }
 }
+
+// リーチ：そろわなかったけれど、はじめの2つが同じ絵
+export const isReach = (s: { reels: string[]; win: boolean }) => !s.win && s.reels[0] === s.reels[1]

@@ -239,3 +239,13 @@ it('ポイント交換のタマゴはスーパーレア以上', async () => {
   saveGachaPoints(21)
   expect(loadGachaPoints()).toBe(21)
 })
+
+it('はじめの2つがそろうとリーチ', async () => {
+  const { isReach, slotOf } = await import('./gacha')
+  expect(isReach({ reels: ['🍒', '🍒', '⭐'], win: false })).toBe(true)
+  expect(isReach({ reels: ['🍒', '🍒', '🍒'], win: true })).toBe(false)
+  expect(isReach({ reels: ['🍒', '🔔', '⭐'], win: false })).toBe(false)
+  let reach = 0
+  for (let r = 0.04; r < 1; r += 0.001) if (isReach(slotOf(r))) reach++
+  expect(reach).toBeGreaterThan(0)
+})

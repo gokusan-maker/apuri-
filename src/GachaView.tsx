@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
+import { isReach } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -261,6 +262,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
             <p className={`gacha-slot${result.slot.win ? ' win' : ''}`} aria-label={result.slot.win ? 'スロットがそろった' : 'スロット'}>
               🎰 {result.slot.reels.join(' ')}
               {result.slot.win && ` そろった！ 🪙${SLOT_COINS}`}
+              {isReach(result.slot) && ' 🔥 リーチ！ おしい！'}
             </p>
           )}
           {!!result.lucky && <p className="gacha-lucky">🍀 ラッキーナンバー！ 通算{result.lucky}回目で 🪙{LUCKY_COINS}</p>}
