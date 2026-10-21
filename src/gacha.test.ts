@@ -98,3 +98,13 @@ it('週末はドラコが出やすい（10%→20%、そのぶんモチが減る�
   for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
   expect(dragons).toBe(200)
 })
+
+it('最近のガチャの結果は新しい順に10回まで残る', async () => {
+  const { loadGachaLog, pushGachaLog } = await import('./gacha')
+  localStorage.clear()
+  let log = loadGachaLog()
+  for (let i = 0; i < 12; i++) log = pushGachaLog(log, { day: `2026-10-${10 + i}`, kind: 'normal', species: 'mochi' })
+  expect(log).toHaveLength(10)
+  expect(log[0].day).toBe('2026-10-21')
+  expect(loadGachaLog()).toEqual(log)
+})

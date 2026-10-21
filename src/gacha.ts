@@ -33,3 +33,26 @@ export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, 
   const paid = ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }
   return { wallet: { ...paid, pity }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
 }
+
+// 最近のガチャの結果（新しい順に10回まで）
+export type GachaLog = { day: string; kind: string; species: string }[]
+const LOG_KEY = 'eitan:gacha-log'
+
+export function loadGachaLog(): GachaLog {
+  try {
+    const v = JSON.parse(localStorage.getItem(LOG_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is GachaLog[number] => !!x && typeof x.day === 'string' && typeof x.kind === 'string' && typeof x.species === 'string').slice(0, 10) : []
+  } catch {
+    return []
+  }
+}
+
+export function pushGachaLog(log: GachaLog, entry: GachaLog[number]): GachaLog {
+  const next = [entry, ...log].slice(0, 10)
+  try {
+    localStorage.setItem(LOG_KEY, JSON.stringify(next))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return next
+}

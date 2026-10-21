@@ -36,7 +36,7 @@ it('チケットがあるときはチケットで引ける', () => {
 it('出る確率が見られる（合計100%）', () => {
   render(<Gacha coins={0} members={1} onDraw={() => null} />)
   expect(screen.getByText('出る確率')).toBeInTheDocument()
-  const pct = [...document.querySelectorAll('.gacha-odds li')].map((li) => {
+  const pct = [...document.querySelectorAll('.gacha-rates li')].map((li) => {
     const n = Number(li.textContent!.match(/(\d+)%/)![1])
     return li.textContent!.includes('キャラクター') ? 0 : li.textContent!.includes('各') ? n * 3 : n
   })
@@ -52,4 +52,12 @@ it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {
   render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true, newSpecies: true })} />)
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByText('NEW! はじめての「ニャンタ」・はじめての「うみ色」')).toBeInTheDocument()
+})
+
+it('ガチャを引くと「最近のガチャ」に残る', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('dragon') })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('最近のガチャ（1回）')).toBeInTheDocument()
+  expect(document.querySelector('.gacha-log li')!.textContent).toContain('きんいろのドラコ')
 })
