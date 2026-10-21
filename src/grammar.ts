@@ -1238,6 +1238,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'He might ___ late today.', choices: ['is', 'be', 'being'], answer: 1, why: 'might のあとは動詞の原形 be。' },
     ],
   },
+  {
+    id: 'be-imperative',
+    title: "Be 〜 / Don't be 〜 の命令文",
+    points: ['形容詞を使う命令文は Be ＋形容詞で「〜でいなさい・〜にしなさい」（Be quiet.）。', "否定は Don't be ＋形容詞で「〜しないで（〜になるな）」（Don't be late.）。"],
+    examples: [
+      { en: 'Be careful on the stairs.', ja: '階段では気をつけて。' },
+      { en: "Don't be afraid of making mistakes.", ja: 'まちがえることをこわがらないで。' },
+    ],
+    questions: [
+      { sentence: '___ quiet in the library.', choices: ['Be', 'Are', 'Do'], answer: 0, why: '形容詞（quiet）の命令文は Be ＋形容詞。' },
+      { sentence: "Don't ___ late for school.", choices: ['are', 'be', 'is'], answer: 1, why: "Don't be ＋形容詞で「〜しないで」。" },
+      { sentence: '___ kind to your friends.', choices: ['Be', 'Being', 'To be'], answer: 0, why: '命令文は動詞の原形で始めるので Be。' },
+    ],
+  },
+  {
+    id: 'look-adj',
+    title: 'look / sound / feel ＋形容詞（〜に見える・聞こえる・感じる）',
+    points: ['look ＋形容詞で「〜に見える」、sound ＋形容詞で「〜に聞こえる（〜そうだ）」、feel ＋形容詞で「〜と感じる」。', 'うしろは形容詞（happy / good / tired など）。名詞を続けるときは look like 〜（〜のように見える）。'],
+    examples: [
+      { en: 'You look tired today.', ja: '今日はつかれているように見えるね。' },
+      { en: 'That sounds interesting!', ja: 'それはおもしろそうだね！' },
+    ],
+    questions: [
+      { sentence: 'This cake looks ___.', choices: ['delicious', 'deliciously', 'like delicious'], answer: 0, why: 'look のあとは形容詞 delicious。' },
+      { sentence: 'Your idea sounds ___.', choices: ['greatly', 'great', 'like great'], answer: 1, why: 'sound のあとは形容詞 great。' },
+      { sentence: 'That cloud looks ___ a cat.', choices: ['like', 'as', 'to'], answer: 0, why: '名詞（a cat）が続くときは look like 〜。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1337,8 +1365,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

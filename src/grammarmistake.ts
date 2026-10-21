@@ -87,6 +87,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'between-among': { wrong: 'The house is among the school and the station.', right: 'The house is between the school and the station.', why: '2つの間は between A and B。among は3つ以上の間。' },
   'have-to': { wrong: 'He have to study.', right: 'He has to study.', why: '主語が三人称単数なら has to。' },
   'may-might': { wrong: 'It may rains tomorrow.', right: 'It may rain tomorrow.', why: 'may のあとは動詞の原形。' },
+  'be-imperative': { wrong: "Don't late for the train.", right: "Don't be late for the train.", why: "形容詞（late）を使う否定の命令文は Don't be ＋形容詞。" },
+  'look-adj': { wrong: 'You look happily.', right: 'You look happy.', why: 'look のあとは副詞ではなく形容詞。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
