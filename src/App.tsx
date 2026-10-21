@@ -42,6 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
+import { drawEgg } from './gacha'
 import {
   feed,
   FORMS,
@@ -689,6 +690,14 @@ function App() {
             const next = buyFreeze(wallet)
             if (next) setWallet(next)
           }}
+          members={party.members.length}
+          onGacha={() => {
+            const r = drawEgg(wallet, party, Math.random())
+            if (!r) return null
+            setWallet(r.wallet)
+            setParty(r.party)
+            return r.kind
+          }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)
             if (!r) return
@@ -1043,7 +1052,7 @@ function App() {
           }}
         />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
-        <Evolve form={FORMS.find((f) => f.id === evoForm)!} wear={monster.wear} onClose={() => setEvoForm(null)} />
+        <Evolve form={FORMS.find((f) => f.id === evoForm)!} wear={monster.wear} kind={monster.kind} onClose={() => setEvoForm(null)} />
       )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 

@@ -386,6 +386,18 @@ describe('App', () => {
     expect(screen.getByText(/サクサク/)).toBeInTheDocument()
   })
 
+  it('ショップのガチャでタマゴを引くと仲間がふえ、コインがへる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    const party = JSON.parse(localStorage.getItem('eitan:party')!)
+    expect(party.members).toHaveLength(2)
+    expect(party.gacha).toBe(1)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(10)
+    expect(screen.getByText(/が仲間になった！/)).toBeInTheDocument()
+  })
+
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

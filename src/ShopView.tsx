@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { RoomScene } from './RoomSceneView'
+import { Gacha } from './GachaView'
+import type { Kind } from './monster'
 import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
@@ -15,9 +17,11 @@ type Props = {
   eventId?: string // 今の季節のイベント（限定の着せ替えを出す）
   onBuyFreeze?: () => void
   onRoom?: (id: string | undefined) => void
+  members?: number // 仲間の数（ガチャ用）
+  onGacha?: () => Kind | null
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -36,7 +40,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       <div className={`shop-stage${wallet.room ? ` room-${wallet.room}` : ''}`}>
         <RoomScene room={wallet.room} />
         <div className="shop-preview">
-          <MonsterFigure form={form} wear={monster.wear} mood={eating ? 'eat' : 'happy'} />
+          <MonsterFigure form={form} wear={monster.wear} kind={monster.kind} mood={eating ? 'eat' : 'happy'} />
           {eating && (
             <span key={eating.key} className="snack-bite" aria-label="もぐもぐ">
               {eating.icon}
@@ -44,6 +48,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           )}
         </div>
       </div>
+      {onGacha && <Gacha coins={wallet.coins} members={members} onDraw={onGacha} />}
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (

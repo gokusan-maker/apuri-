@@ -2,7 +2,7 @@ import { FORM_DESC, type Form } from './monster'
 import { MonsterFigure } from './MonsterView'
 
 // 進化したときの全画面演出（タップで閉じる）。光の筋→白いシルエット→色がつく
-export function Evolve({ form, wear, onClose }: { form: Form; wear?: string; onClose: () => void }) {
+export function Evolve({ form, wear, kind, onClose }: { form: Form; wear?: string; kind?: string; onClose: () => void }) {
   return (
     <div className="celebrate evolve-screen" role="dialog" aria-label="進化" onClick={onClose}>
       <div className="evolve-flash" aria-hidden="true" />
@@ -10,7 +10,7 @@ export function Evolve({ form, wear, onClose }: { form: Form; wear?: string; onC
         <div className="evolve-stage">
           <div className="evolve-rays" aria-hidden="true" />
           <div className="evolve-figure">
-            <MonsterFigure form={form} mood="happy" wear={wear} />
+            <MonsterFigure form={form} mood="happy" wear={wear} kind={kind} />
           </div>
           {['✨', '⭐', '✨', '🌟', '✨', '⭐'].map((s, i) => (
             <span key={i} className={`evolve-spark s${i}`} aria-hidden="true">

@@ -2,7 +2,7 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, withKind, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -408,29 +408,42 @@ function WearOne({ id }: { id: string }) {
 }
 
 export function MonsterFigure({
-  form,
+  form: baseForm,
   mood = 'normal',
   hidden = false,
   wear,
   crack = 0,
+  kind,
 }: {
   form: Form
+  kind?: string // 色ちがい
   mood?: Mood
   hidden?: boolean
   wear?: string
   crack?: number // タマゴのひび（0〜1。かえる直前ほど大きい）
 }) {
-  const uid = form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
+  const form = withKind(baseForm, kind)
+  const rainbow = kind === 'niji' && !hidden
+  const gold = kind === 'kin' && !hidden
+  const uid = (kind ?? '') + form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
   const fill = hidden ? '#9ca3af' : form.color
   const line = hidden ? '#6b7280' : form.line
   const body = hidden ? fill : `url(#b${uid})`
   const defs = (
     <defs>
-      <radialGradient id={`b${uid}`} cx="0.38" cy="0.32" r="0.75">
-        <stop offset="0" stopColor={shade(form.color, 0.55)} />
-        <stop offset="0.55" stopColor={form.color} />
-        <stop offset="1" stopColor={shade(form.color, -0.18)} />
-      </radialGradient>
+      {rainbow || gold ? (
+        <linearGradient id={`b${uid}`} x1="0" y1="0" x2="1" y2="1">
+          {(rainbow ? ['#fca5a5', '#fdba74', '#fde047', '#86efac', '#7dd3fc', '#c4b5fd', '#f0abfc'] : ['#fef3c7', '#f59e0b', '#fde68a', '#fffbeb', '#d97706', '#fbbf24', '#b45309']).map((c, i) => (
+            <stop key={c} offset={i / 6} stopColor={c} />
+          ))}
+        </linearGradient>
+      ) : (
+        <radialGradient id={`b${uid}`} cx="0.38" cy="0.32" r="0.75">
+          <stop offset="0" stopColor={shade(form.color, 0.55)} />
+          <stop offset="0.55" stopColor={form.color} />
+          <stop offset="1" stopColor={shade(form.color, -0.18)} />
+        </radialGradient>
+      )}
       <radialGradient id={`h${uid}`}>
         <stop offset="0" stopColor="#fef08a" stopOpacity="0.9" />
         <stop offset="1" stopColor="#fef08a" stopOpacity="0" />
@@ -473,6 +486,12 @@ export function MonsterFigure({
         </g>
       )}
       <ellipse cx="50" cy="94" rx={30 * size} ry="4" fill="#000" opacity="0.13" />
+      {(gold || rainbow) && (
+        <g className="kind-shine" fill={rainbow ? '#f0abfc' : '#fbbf24'}>
+          <path d="M10 60 l2 -5 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 Z" />
+          <path d="M88 52 l1.5 -4 l1.5 4 l4 1.5 l-4 1.5 l-1.5 4 l-1.5 -4 l-4 -1.5 Z" />
+        </g>
+      )}
       {form.stage >= 3 && !hidden && <Particles form={form} />}
       <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
         <g className={hidden ? undefined : 'monster-breathe'}>
@@ -581,7 +600,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
+        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
         {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
         {poke > 0 && (
           <span key={`h${poke}`} className="poke-hearts" aria-hidden="true">
@@ -757,7 +776,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
 }
 
 export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: number) => void }) {
-  const locked = EGG_MILESTONES.slice(party.members.length - 1)
+  const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
   return (
     <div className="party">
       <h2>なかま</h2>
@@ -769,10 +788,13 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
             <li key={i} className={active ? 'got active' : 'got'}>
               <button className="party-pick party-member" onClick={() => onSelect(i)} aria-pressed={active}>
                 <span className="zukan-figure">
-                  <MonsterFigure form={f} wear={m.wear} />
+                  <MonsterFigure form={f} wear={m.wear} kind={m.kind} />
                 </span>
                 <span className="badge-name">{m.name ?? f.name}</span>
-                <span className="badge-desc">{active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}</span>
+                <span className="badge-desc">
+                  {active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}
+                  {m.kind && <span className={`kind-tag r-${kindOf(m.kind).rarity}`}> {kindOf(m.kind).name}</span>}
+                </span>
               </button>
             </li>
           )

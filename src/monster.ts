@@ -12,6 +12,7 @@ export type MonsterState = {
   name?: string // 自分でつけた名前
   wear?: string // 着ている飾り（ショップのアイテムid）
   born?: string // 最初にXPをもらった日（出会った日）
+  kind?: string // 色ちがい（ガチャのタマゴ）。無いときはふつうの色
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -56,6 +57,7 @@ export function sanitizeMonster(v: unknown): MonsterState {
   if (!out.name) delete out.name
   if (typeof m.wear === 'string') out.wear = m.wear
   if (typeof m.born === 'string') out.born = m.born
+  if (typeof m.kind === 'string' && KINDS.some((k) => k.id === m.kind)) out.kind = m.kind
   return out
 }
 
@@ -212,4 +214,34 @@ export function rename(m: MonsterState, name: string): MonsterState {
 export function levelsToNextStage(level: number): { name: string; levels: number } | null {
   const next = STAGES.find((s) => s.minLevel > level)
   return next ? { name: next.name, levels: next.minLevel - level } : null
+}
+
+// 色ちがい（タマゴガチャで出る）。color/line が姿の色の代わりになる
+export type Kind = { id: string; name: string; rarity: 'N' | 'R' | 'SR' | 'UR'; color: string; line: string }
+
+export const KINDS: Kind[] = [
+  { id: 'normal', name: 'ふつう', rarity: 'N', color: '', line: '' },
+  { id: 'sakura', name: 'さくら色', rarity: 'R', color: '#f9a8d4', line: '#9d174d' },
+  { id: 'umi', name: 'うみ色', rarity: 'R', color: '#5eead4', line: '#115e59' },
+  { id: 'yoru', name: 'よる色', rarity: 'R', color: '#a5b4fc', line: '#3730a3' },
+  { id: 'kin', name: 'きんいろ', rarity: 'SR', color: '#f59e0b', line: '#78350f' },
+  { id: 'niji', name: 'にじいろ', rarity: 'UR', color: '#f0abfc', line: '#6b21a8' },
+]
+
+export const RARITY_LABEL = { N: 'ノーマル', R: 'レア', SR: 'スーパーレア', UR: 'ウルトラレア' } as const
+
+export const kindOf = (id: string | undefined): Kind => KINDS.find((k) => k.id === id) ?? KINDS[0]
+
+// 0〜1の乱数から色ちがいを決める：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%
+export function rollKind(r: number): Kind {
+  if (r < 0.6) return KINDS[0]
+  if (r < 0.9) return KINDS[1 + Math.min(2, Math.floor(((r - 0.6) / 0.3) * 3))]
+  if (r < 0.99) return kindOf('kin')
+  return kindOf('niji')
+}
+
+// 色ちがいをあてた姿（ふつうはそのまま）
+export function withKind(form: Form, kind: string | undefined): Form {
+  const k = kindOf(kind)
+  return k.color ? { ...form, color: k.color, line: k.line } : form
 }

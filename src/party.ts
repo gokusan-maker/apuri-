@@ -4,6 +4,7 @@ import { loadMonster, sanitizeMonster, type MonsterState } from './monster'
 export type Party = {
   active: number
   members: MonsterState[]
+  gacha?: number // ガチャで引いたタマゴの数（節目のタマゴとは別に数える）
 }
 
 // タマゴがもらえる節目（バッジid）。1匹目ははじめから。
@@ -21,9 +22,9 @@ export function eggsEarned(earned: Record<string, string>): number {
 
 // もらえる数に足りなければ新しいタマゴを足す
 export function addEggs(p: Party, total: number): Party {
-  if (p.members.length >= total) return p
+  if (p.members.length - (p.gacha ?? 0) >= total) return p
   const members = [...p.members]
-  while (members.length < total) members.push({ xp: 0 })
+  while (members.length - (p.gacha ?? 0) < total) members.push({ xp: 0 })
   return { ...p, members }
 }
 
@@ -38,7 +39,8 @@ export function loadParty(): Party {
     if (v && Array.isArray(v.members) && v.members.length > 0) {
       const members = v.members.map(sanitizeMonster)
       const active = typeof v.active === 'number' && v.active >= 0 && v.active < members.length ? v.active : 0
-      return { active, members }
+      const gacha = typeof v.gacha === 'number' && v.gacha > 0 ? Math.min(v.gacha, members.length - 1) : 0
+      return gacha ? { active, members, gacha } : { active, members }
     }
   } catch {
     // 壊れていたら旧形式から作り直す
