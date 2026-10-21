@@ -330,3 +330,13 @@ it('HPが半分になると子分があらわれ、次の正解でたおすと�
   slowAnswer()
   expect(bonus).toHaveBeenCalledWith(2)
 })
+
+it('ボス戦10回に1回、色ちがいのボスがあらわれ、たおすとボス図鑑に記録される', async () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:boss-battles', '9')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  expect(screen.getByText(/色ちがいのボスがあらわれた/)).toBeInTheDocument()
+  answer(true)
+  const { loadBook } = await import('./bossbook')
+  expect(Object.keys(loadBook()).some((n) => n.startsWith('✨色ちがいの'))).toBe(true)
+})

@@ -230,6 +230,21 @@ export function goldenLevelOf<T>(levels: T[], day: string): T | undefined {
 }
 export const goldenLook = (l: BossLook): BossLook => ({ ...l, name: `金色の${l.name}`, color: '#fbbf24', line: '#92400e', eye: '#7c2d12' })
 
+// 色ちがいボス：ボス戦10回に1回あらわれる。たおすとボス図鑑に「✨色ちがいの〜」が記録される
+export const SHINY_EVERY = 10
+const BATTLES_KEY = 'eitan:boss-battles'
+// ボス戦を1回数えて、色ちがいの回なら true
+export function countBattle(): boolean {
+  try {
+    const n = (Number(localStorage.getItem(BATTLES_KEY) ?? 0) || 0) + 1
+    localStorage.setItem(BATTLES_KEY, String(n))
+    return n % SHINY_EVERY === 0
+  } catch {
+    return false
+  }
+}
+export const shinyLook = (l: BossLook): BossLook => ({ ...l, name: `✨色ちがいの${l.name}`, color: '#c4b5fd', line: '#5b21b6', eye: '#be185d' })
+
 // 今日のボスの強さ：★が1つふえるごとに HP+40、ごほうびは★の数の倍
 export const dailyHp = (stars: number) => BOSS_HP + (stars - 1) * 40
 

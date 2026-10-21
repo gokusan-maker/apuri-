@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -132,7 +132,8 @@ const rnd = () => Math.random()
 
 export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
-  const look = golden ? goldenLook(baseLook) : baseLook
+  const [shiny] = useState(() => countBattle() && !golden)
+  const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
@@ -146,7 +147,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [gauge, setGauge] = useState(0)
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
   const lv = skillLevel(partner?.skillUses ?? 0)
-  const weak = weakOf(look.name)
+  const weak = weakOf(baseLook.name)
   const hitsWeak = !!skill && (partner?.species ?? 'mochi') === weak
   const [corrects, setCorrects] = useState(0)
   const [crits, setCrits] = useState(0)
@@ -367,6 +368,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           💥 {skill ? `${partner!.name}の「${specialOf(partner!.species).name}」！` : '必殺技！'} {SPECIAL_DAMAGE} ダメージ
         </p>
       )}
+      {shiny && <p className="golden-boss shiny-boss">✨ 色ちがいのボスがあらわれた！ たおすとボス図鑑に記録されるよ</p>}
       {golden && <p className="golden-boss">✨ 金色ボスがあらわれた！ たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
       <p className="boss-name">{look.name}</p>
       {index === 0 && picked === null && hp === maxHp && (
