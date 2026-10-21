@@ -1251,3 +1251,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .bingo-cell.ok { background: #bbf7d0; }
 .bingo-cell.ng { background: #fecaca; }
 .bingo-q { margin-top: 8px; }
+.long-summary { margin: 4px 0 8px; padding: 8px; border: 1px dashed var(--muted); border-radius: 8px; text-align: left; line-height: 1.7; }

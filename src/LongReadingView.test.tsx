@@ -190,3 +190,15 @@ it('全文を聞くで段落を順番に読み上げ、とめられる', async (
   seq.mockRestore()
   cancel.mockRestore()
 })
+
+it('要約文の完成の問題に答えられる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.summary)!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  expect(screen.getByText(p.summary!.text)).toBeInTheDocument()
+  const b = p.summary!.blanks[0]
+  const btn = screen.getAllByRole('button', { name: `${MARKS[b.answer]} ${b.choices[b.answer]}` })[0]
+  fireEvent.click(btn)
+  expect(btn).toHaveAttribute('aria-pressed', 'true')
+})

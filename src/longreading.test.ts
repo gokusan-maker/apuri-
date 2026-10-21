@@ -192,7 +192,7 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   expect(loadLongDraft('x')).toBeNull()
   const empty = { blanks: {}, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} }
   saveLongDraft('x', { ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1 })
-  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined })
+  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {} })
   saveLongDraft('x', empty)
   expect(loadLongDraft('x')).toBeNull()
   saveLongDraft('y', { ...empty, picks: [1] })
@@ -220,4 +220,16 @@ it('文を入れる位置の問題は1点で、正しい位置なら正解', () 
   const right = scoreLong(p, {}, {}, [], { insert: p.insert!.answer })
   const wrong = scoreLong(p, {}, {}, [], { insert: (p.insert!.answer + 1) % 4 })
   expect(right.score - wrong.score).toBe(1)
+})
+
+it('要約文の完成は空所の数だけ点があり、本文に ( 1 ) がある', () => {
+  const p = LONG_PASSAGES.find((x) => x.summary)!
+  const s = p.summary!
+  s.blanks.forEach((b, i) => {
+    expect(s.text).toContain(`( ${i + 1} )`)
+    expect(b.choices).toHaveLength(4)
+  })
+  const all = Object.fromEntries(s.blanks.map((b, i) => [i, b.answer]))
+  const none = Object.fromEntries(s.blanks.map((b, i) => [i, (b.answer + 1) % 4]))
+  expect(scoreLong(p, {}, {}, [], { summary: all }).score - scoreLong(p, {}, {}, [], { summary: none }).score).toBe(s.blanks.length)
 })
