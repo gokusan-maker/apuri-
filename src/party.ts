@@ -69,3 +69,23 @@ export function saveParty(p: Party): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// おきにいりを切りかえる（並び順そのものは変えないので、相棒の番号はそのまま）
+export function toggleFav(p: Party, i: number): Party {
+  return {
+    ...p,
+    members: p.members.map((m, j) => {
+      if (j !== i) return m
+      const c = { ...m }
+      if (c.fav) delete c.fav
+      else c.fav = true
+      return c
+    }),
+  }
+}
+
+// なかま一覧の表示順：おきにいりが先、あとは元の順
+export function displayOrder(p: Party): number[] {
+  const idx = p.members.map((_, i) => i)
+  return [...idx.filter((i) => p.members[i].fav), ...idx.filter((i) => !p.members[i].fav)]
+}

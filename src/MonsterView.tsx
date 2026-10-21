@@ -3,7 +3,7 @@ import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
-import { EGG_MILESTONES, type Party as PartyState } from './party'
+import { displayOrder, EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
@@ -1015,7 +1015,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
-export function Party({ party, onSelect, onRename }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void }) {
+export function Party({ party, onSelect, onRename, onFav }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void }) {
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
@@ -1024,7 +1024,8 @@ export function Party({ party, onSelect, onRename }: { party: PartyState; onSele
       <h2>なかま</h2>
       {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
       <ul className="badge-grid">
-        {party.members.map((m, i) => {
+        {displayOrder(party).map((i) => {
+          const m = party.members[i]
           const f = formOf(m)
           const active = i === party.active
           return (
@@ -1045,6 +1046,11 @@ export function Party({ party, onSelect, onRename }: { party: PartyState; onSele
                   {levelsToNextStage(levelInfo(m.xp).level) ? `あとLv${levelsToNextStage(levelInfo(m.xp).level)!.levels}で進化` : 'さいごの姿'}
                 </span>
               </button>
+              {onFav && (
+                <button className={`fav-btn${m.fav ? ' on' : ''}`} aria-label={`${m.name ?? f.name}をおきにいりに${m.fav ? 'しない' : 'する'}`} aria-pressed={!!m.fav} onClick={() => onFav(i)}>
+                  {m.fav ? '★' : '☆'}
+                </button>
+              )}
               {onRename &&
                 (editing === i ? (
                   <form

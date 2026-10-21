@@ -14,6 +14,7 @@ export type MonsterState = {
   born?: string // 最初にXPをもらった日（出会った日）
   kind?: string // 色ちがい（ガチャのタマゴ）。無いときはふつうの色
   species?: string // キャラクターの種類（ガチャのタマゴ）。無いときはモチ
+  fav?: boolean // おきにいり（なかま一覧の先頭に並ぶ）
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -60,6 +61,7 @@ export function sanitizeMonster(v: unknown): MonsterState {
   if (typeof m.born === 'string') out.born = m.born
   if (typeof m.kind === 'string' && KINDS.some((k) => k.id === m.kind)) out.kind = m.kind
   if (typeof m.species === 'string' && m.species !== 'mochi' && SPECIES.some((k) => k.id === m.species)) out.species = m.species
+  if (m.fav === true) out.fav = true
   return out
 }
 

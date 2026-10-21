@@ -1015,3 +1015,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .season-summer i { animation-name: season-glow; top: auto; bottom: 10%; }
 @keyframes season-glow { 0%, 100% { transform: translate(0, 0); opacity: 0; } 50% { transform: translate(10px, -40px); opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .season-fx { display: none; } }
+
+/* なかまのおきにいり */
+.party li { position: relative; }
+.fav-btn { position: absolute; left: 4px; top: 4px; border: none; background: none; font-size: 1.1rem; line-height: 1; color: #cbd5e1; padding: 2px; }
+.fav-btn.on { color: #f59e0b; text-shadow: 0 0 6px #fde68a; }

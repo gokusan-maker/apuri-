@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
+import { addEggs, displayOrder, eggsEarned, loadParty, saveParty, toggleFav, updateActive } from './party'
 
 describe('なかま', () => {
   beforeEach(() => localStorage.clear())
@@ -26,4 +26,18 @@ describe('なかま', () => {
     localStorage.setItem('eitan:party', '{"active":9,"members":[{"xp":5}]}')
     expect(loadParty().active).toBe(0)
   })
+})
+
+it('おきにいりは一覧の先頭に並び、保存しても残る（相棒の番号は変わらない）', () => {
+  localStorage.clear()
+  const p = { active: 2, members: [{ xp: 0 }, { xp: 10 }, { xp: 20 }] }
+  const f = toggleFav(p, 2)
+  expect(f.members[2].fav).toBe(true)
+  expect(f.active).toBe(2)
+  expect(displayOrder(f)).toEqual([2, 0, 1])
+  saveParty(f)
+  expect(loadParty().members[2].fav).toBe(true)
+  const g = toggleFav(f, 2)
+  expect(g.members[2].fav).toBeUndefined()
+  expect(displayOrder(g)).toEqual([0, 1, 2])
 })

@@ -41,7 +41,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, updateActive } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, toggleFav, updateActive } from './party'
 import { addTicket, drawEgg, DUP_REFUND, isDuplicate, RARE_FULL_COINS, rareEgg, TICKET_MAX } from './gacha'
 import {
   feed,
@@ -976,7 +976,7 @@ function App() {
           )}
           {statsTab === 'buddy' && (
             <section className="card stats-view">
-              <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onRename={(i, name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? rename(m, name) : m)) }))} />
+              <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))} onRename={(i, name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? rename(m, name) : m)) }))} />
               <Profile monster={monster} studyDays={totals.studyDays ?? 0} />
               <Album earned={earned} born={monster.born} />
               <ShareButton
