@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, PARTY_MAX } from './gacha'
+import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, isDuplicate, PARTY_MAX } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -114,4 +114,12 @@ it('確定演出のひとことはレア度ごとにちがい、ふつうは出�
   const lines = (['R', 'SR', 'UR'] as const).map(gachaOmen)
   expect(new Set(lines).size).toBe(3)
   expect(gachaOmen('UR')).toMatch(/虹色/)
+})
+
+it('同じキャラ・同じ色の子がいればかぶり（キャラや色がないものはモチ・ふつう）', () => {
+  const members = [{ xp: 0 }, { xp: 0, species: 'fox', kind: 'kin' }] as never
+  expect(isDuplicate(members, 'mochi', 'normal')).toBe(true)
+  expect(isDuplicate(members, 'fox', 'kin')).toBe(true)
+  expect(isDuplicate(members, 'fox', 'normal')).toBe(false)
+  expect(isDuplicate(members, 'cat', 'kin')).toBe(false)
 })

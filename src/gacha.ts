@@ -64,3 +64,10 @@ export function gachaOmen(rarity: Kind['rarity']): string | null {
   if (rarity === 'UR') return '虹色の光！！ ウルトラレア確定！！'
   return null
 }
+
+// かぶりボーナス：同じキャラ・同じ色の子がもう仲間にいたら、コインが少しもどる
+export const DUP_REFUND = 15
+
+export function isDuplicate(members: Party['members'], species: string, kind: string): boolean {
+  return members.some((m) => (m.species ?? 'mochi') === species && (m.kind ?? 'normal') === kind)
+}

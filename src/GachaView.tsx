@@ -3,7 +3,7 @@ import { GACHA_PRICE, gachaOmen, loadGachaLog, PARTY_MAX, pushGachaLog } from '.
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
-export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number }
 
 type Props = {
   coins: number
@@ -92,6 +92,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
           </p>
+          {!!result.refund && <p className="gacha-dup">かぶりボーナス！ 同じ子がいたので 🪙{result.refund} もどってきた</p>}
           {result.species.id !== 'mochi' && <p className="gacha-species">「{result.species.name}」の仲間だ！ {result.species.desc}</p>}
           {onRaise && (
             <button

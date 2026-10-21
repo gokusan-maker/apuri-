@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, updateActive } from './party'
-import { addTicket, drawEgg } from './gacha'
+import { addTicket, drawEgg, DUP_REFUND, isDuplicate } from './gacha'
 import {
   feed,
   FORMS,
@@ -772,11 +772,12 @@ function App() {
           onGacha={(ticket) => {
             const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today))
             if (!r) return null
-            setWallet(r.wallet)
+            const dup = isDuplicate(party.members, r.species.id, r.kind.id)
+            setWallet(dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet)
             setParty(r.party)
             const newSpecies = r.species.id !== 'mochi' && !party.members.some((m) => m.species === r.species.id)
             const newKind = r.kind.id !== 'normal' && !party.members.some((m) => m.kind === r.kind.id)
-            return { kind: r.kind, species: r.species, newKind, newSpecies }
+            return { kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0 }
           }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)

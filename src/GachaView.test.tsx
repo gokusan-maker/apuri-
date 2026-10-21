@@ -73,3 +73,9 @@ it('レア度で確定演出が変わる（ウルトラレアは虹色、ふつ�
   expect(document.querySelector('.gacha-omen')).toBeNull()
   expect(document.querySelector('.gacha-burst')).toBeNull()
 })
+
+it('かぶったときはコインがもどったことを知らせる', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('mochi'), refund: 15 })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('かぶりボーナス！ 同じ子がいたので 🪙15 もどってきた')).toBeInTheDocument()
+})
