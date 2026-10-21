@@ -31,6 +31,7 @@ type Props = {
   onDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   onSkill?: () => void // 相棒の特技が出た（特技レベル用）
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
+  onLose?: () => void // ハートがなくなって負けた（連勝が切れる）
   onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
@@ -119,7 +120,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -210,7 +211,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       } else if (revive) {
         setSaves(saves + 1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
-      } else setHearts(hearts - 1)
+      } else {
+        setHearts(hearts - 1)
+        if (hearts - 1 <= 0) onLose?.()
+      }
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
       onAnswer?.(false, 0, q.word.id, 'quiz')

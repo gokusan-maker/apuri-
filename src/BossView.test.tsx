@@ -239,3 +239,13 @@ it('ボスのセリフに相棒が言い返す', async () => {
   render(<Boss level="高校基礎" words={wordsOf(['高校基礎'])} look={UNIV_BOSSES[0]} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], 'cat'), species: 'cat', name: 'ニャ' }} />)
   expect(screen.getByText(/ニャ：「I am not afraid of you.」/)).toBeInTheDocument()
 })
+
+it('ハートがなくなると onLose が呼ばれる', () => {
+  const lose = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onLose={lose} />)
+  for (let i = 0; i < 3; i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(lose).toHaveBeenCalledTimes(1)
+})

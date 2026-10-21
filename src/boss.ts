@@ -162,3 +162,23 @@ export function saveRushExDay(d: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// ボス戦の連勝：負けると0にもどる。3連勝ごとにボーナス
+export const STREAK_EVERY = 3
+export const STREAK_COINS = 15
+const WIN_KEY = 'eitan:win-streak'
+export function loadWinStreak(): number {
+  try {
+    const n = Number(localStorage.getItem(WIN_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function saveWinStreak(n: number): void {
+  try {
+    localStorage.setItem(WIN_KEY, String(n))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

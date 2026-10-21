@@ -107,7 +107,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -255,6 +255,7 @@ function App() {
   const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
   const [warm, setWarm] = usePersistent(loadWarm, saveWarm)
   const [keys, setKeys] = usePersistent(loadKeys, saveKeys)
+  const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
@@ -892,7 +893,15 @@ function App() {
           onBossDefeat={() => {
             count('boss')
             setKeys((k) => k + 1)
+            const n = winStreak + 1
+            setWinStreak(n)
+            if (n % STREAK_EVERY === 0) {
+              setWallet((w) => ({ ...w, coins: w.coins + STREAK_COINS }))
+              pushToast([{ id: 'streak', text: `🔥 ボス${n}連勝！ 🪙${STREAK_COINS}`, counter: 'answers', target: 0 }])
+            }
           }}
+          winStreak={winStreak}
+          onLose={() => setWinStreak(0)}
           keys={keys}
           onOpenGold={() => {
             if (keys < KEYS_FOR_GOLD) return

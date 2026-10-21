@@ -174,3 +174,8 @@ it('鍵が3つあると金の宝箱をあけられる', () => {
   fireEvent.click(screen.getByText(/金の宝箱をあける/))
   expect(open).toHaveBeenCalled()
 })
+
+it('ボスの連勝数が出る', () => {
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} winStreak={2} />)
+  expect(screen.getByText(/ボス 2連勝中！/)).toBeInTheDocument()
+})

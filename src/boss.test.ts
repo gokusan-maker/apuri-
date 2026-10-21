@@ -80,3 +80,11 @@ it('ボスの撃破セリフは名前で決まり、英語と和訳がある', (
   expect(DEFEAT_LINES.every((l) => /^[A-Z]/.test(l.en) && l.ja.length > 0)).toBe(true)
   expect(new Set(Object.values(BOSSES).map((b) => defeatLineOf(b.name).en)).size).toBeGreaterThan(1)
 })
+
+it('連勝数は保存できる', async () => {
+  const { loadWinStreak, saveWinStreak } = await import('./boss')
+  localStorage.clear()
+  expect(loadWinStreak()).toBe(0)
+  saveWinStreak(5)
+  expect(loadWinStreak()).toBe(5)
+})

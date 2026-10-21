@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_EX_COINS, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -43,6 +43,8 @@ type Props = {
   onSkill?: () => void // 相棒の特技が出た
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   keys?: number // 金の宝箱の鍵
+  winStreak?: number // ボスの連勝数
+  onLose?: () => void
   onOpenGold?: () => void
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
@@ -53,7 +55,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -89,6 +91,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onDefeat={onBossDefeat}
         onSkill={onSkill}
         onDrop={onDrop}
+        onLose={onLose}
         onRankBonus={onRankBonus}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -122,6 +125,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onDefeat={onBossDefeat}
         onSkill={onSkill}
         onDrop={onDrop}
+        onLose={onLose}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -158,6 +162,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onDefeat={onBossDefeat}
         onSkill={onSkill}
         onDrop={onDrop}
+        onLose={onLose}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -186,6 +191,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onDefeat={onBossDefeat}
         onSkill={onSkill}
         onDrop={onDrop}
+        onLose={onLose}
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -212,6 +218,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onDefeat={onBossDefeat}
         onSkill={onSkill}
         onDrop={onDrop}
+        onLose={onLose}
         onRankBonus={onRankBonus}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}
@@ -315,6 +322,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   return (
     <section className="card stages">
       <h2>ステージ</h2>
+      {winStreak > 0 && (
+        <p className="win-streak">
+          🔥 ボス {winStreak}連勝中！（{STREAK_EVERY}連勝ごとに 🪙{STREAK_COINS}・負けるとリセット）
+        </p>
+      )}
       <div className="gold-chest">
         <span>🗝 金の宝箱の鍵 {'🔑'.repeat(Math.min(keys, KEYS_FOR_GOLD))}{'▫️'.repeat(Math.max(0, KEYS_FOR_GOLD - keys))}（ボスをたおすと1つ）</span>
         {keys >= KEYS_FOR_GOLD && onOpenGold && (
