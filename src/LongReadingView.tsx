@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -8,6 +8,7 @@ import { speak } from './speech'
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
+const rand = () => Math.random()
 
 // 読み上げ用：空所は「ブランク」と読まず、少し間をあける
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
@@ -94,6 +95,9 @@ export function LongReading({ onAnswer }: Props) {
       <section className="card grammar long-reading">
         <h2>長文読解（入試形式）</h2>
         <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
+          🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
+        </button>
         {recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
             💡 おすすめ：苦手な「{TYPE_LABEL[recommendLong(types, record)!.type]}」の練習に

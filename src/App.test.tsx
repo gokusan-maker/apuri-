@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { dayKey } from './srs'
@@ -77,7 +77,7 @@ describe('App', () => {
 
   it('画面下のタブで カード／クイズ／タイム／記録 を切り替えられる', () => {
     render(<App />)
-    const tab = (name: string) => screen.getByRole('button', { name: new RegExp(name) })
+    const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('カード')).toHaveAttribute('aria-current', 'page')
     fireEvent.click(tab('クイズ'))
     expect(document.querySelector('.quiz')).not.toBeNull()

@@ -124,3 +124,13 @@ it('満点でない長文は「もう一度ときたい長文」に出る', () =
   expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
   localStorage.clear()
 })
+
+it('ランダム挑戦で、まだ解いていない長文が開く', () => {
+  localStorage.clear()
+  const done = Object.fromEntries(LONG_PASSAGES.slice(0, -1).map((x) => [x.id, 1]))
+  localStorage.setItem('eitan:long-reading', JSON.stringify(done))
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(/🎲 ランダム挑戦/))
+  expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
+  expect(screen.getAllByText(LONG_PASSAGES[LONG_PASSAGES.length - 1].paragraphs[1].slice(0, 20), { exact: false }).length).toBeGreaterThan(0)
+})

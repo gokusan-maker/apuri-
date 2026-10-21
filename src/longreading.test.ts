@@ -176,3 +176,12 @@ it('長文の最高点から★1〜3をつける', async () => {
   expect(longStars(6, 10)).toBe(1)
   expect(longStars(0, 10)).toBe(1)
 })
+
+it('ランダム挑戦はまだ解いていない長文からえらぶ', async () => {
+  const { randomLong } = await import('./longreading')
+  const done = Object.fromEntries(LONG_PASSAGES.slice(1).map((x) => [x.id, 1]))
+  expect(randomLong(done, 0.99).id).toBe(LONG_PASSAGES[0].id)
+  const all = Object.fromEntries(LONG_PASSAGES.map((x) => [x.id, 1]))
+  expect(randomLong(all, 0.999).id).toBe(LONG_PASSAGES[LONG_PASSAGES.length - 1].id)
+  expect(randomLong({}, 0).id).toBe(LONG_PASSAGES[0].id)
+})

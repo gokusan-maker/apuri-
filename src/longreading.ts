@@ -1369,3 +1369,10 @@ export function longStars(best: number | undefined, total: number): number {
   if (best >= total) return 3
   return best / total >= 0.7 ? 2 : 1
 }
+
+// ランダム挑戦：まだ解いていない長文から1本（全部解いていたら全体から）。r は 0〜1 の乱数
+export function randomLong(record: Record<string, number>, r: number, list: LongPassage[] = LONG_PASSAGES): LongPassage {
+  const fresh = list.filter((x) => record[x.id] === undefined)
+  const pool = fresh.length > 0 ? fresh : list
+  return pool[Math.min(pool.length - 1, Math.floor(r * pool.length))]
+}
