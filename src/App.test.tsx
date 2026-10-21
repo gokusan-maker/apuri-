@@ -272,6 +272,7 @@ describe('App', () => {
     }
     vi.setSystemTime(day)
     const today = dayKey()
+    localStorage.setItem('eitan:lucky', today)
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: { [m!.counter]: m!.target - 1 }, claimed: [] }))
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
