@@ -894,3 +894,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .univ-floors .boss-btn { flex: none; width: auto; padding: 6px 10px; font-size: 0.8rem; }
 .gacha-pity { margin: 2px 0 6px; font-size: 0.8rem; font-weight: 700; color: #b45309; }
 .gacha-event { margin: 2px 0 6px; padding: 4px 8px; border-radius: 10px; background: #fee2e2; color: #991b1b; font-weight: 800; font-size: 0.85rem; }
+.party-rename { display: flex; gap: 4px; margin-top: 4px; } .party-rename input { width: 80px; }

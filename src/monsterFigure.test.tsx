@@ -114,3 +114,15 @@ it('図鑑のキャラクターをタップすると説明とチャレンジの�
   fireEvent.click(screen.getByLabelText(/^ウサピョン：/))
   expect(screen.getByText(/今日のチャレンジ：リスニング/)).toBeInTheDocument()
 })
+
+it('なかまの画面で相棒以外の子にも名前をつけられる', async () => {
+  const { Party } = await import('./MonsterView')
+  const { fireEvent, screen } = await import('@testing-library/react')
+  const { vi } = await import('vitest')
+  const onRename = vi.fn()
+  render(<Party party={{ active: 0, members: [{ xp: 0 }, { xp: 30, species: 'cat' }] }} onSelect={() => {}} onRename={onRename} />)
+  fireEvent.click(screen.getByLabelText('ちびニャンに名前をつける'))
+  fireEvent.change(screen.getByLabelText('ちびニャンの名前'), { target: { value: 'タマ' } })
+  fireEvent.click(screen.getByText('決定'))
+  expect(onRename).toHaveBeenCalledWith(1, 'タマ')
+})

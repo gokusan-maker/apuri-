@@ -937,7 +937,9 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
-export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: number) => void }) {
+export function Party({ party, onSelect, onRename }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void }) {
+  const [editing, setEditing] = useState<number | null>(null)
+  const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
   return (
     <div className="party">
@@ -965,6 +967,31 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
                   {levelsToNextStage(levelInfo(m.xp).level) ? `あとLv${levelsToNextStage(levelInfo(m.xp).level)!.levels}で進化` : 'さいごの姿'}
                 </span>
               </button>
+              {onRename &&
+                (editing === i ? (
+                  <form
+                    className="rename party-rename"
+                    onSubmit={(e: FormEvent) => {
+                      e.preventDefault()
+                      onRename(i, draft)
+                      setEditing(null)
+                    }}
+                  >
+                    <input value={draft} onChange={(e) => setDraft(e.target.value)} maxLength={NAME_MAX * 2} placeholder={f.name} aria-label={`${f.name}の名前`} autoFocus />
+                    <button type="submit">決定</button>
+                  </form>
+                ) : (
+                  <button
+                    className="rename-btn"
+                    aria-label={`${m.name ?? f.name}に名前をつける`}
+                    onClick={() => {
+                      setDraft(m.name ?? '')
+                      setEditing(i)
+                    }}
+                  >
+                    ✏️
+                  </button>
+                ))}
             </li>
           )
         })}
