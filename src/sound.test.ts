@@ -39,3 +39,11 @@ it('キャラクターごとに鳴き声の高さと並びがちがう', () => {
   expect(Object.keys(CHIRP_STYLE).sort()).toEqual(['cat', 'dragon', 'fox', 'mochi', 'penguin', 'rabbit'])
   expect(CHIRP_STYLE.dragon.pitch).toBeLessThan(CHIRP_STYLE.rabbit.pitch)
 })
+
+it('ボス戦の効果音がそろっていて、音を切っていれば鳴らさない', async () => {
+  const { BOSS_SOUNDS, playBossSound } = await import('./sound')
+  expect(Object.keys(BOSS_SOUNDS).sort()).toEqual(['appear', 'crit', 'special', 'victory'])
+  for (const notes of Object.values(BOSS_SOUNDS)) for (const [f, , d] of notes) expect(f > 100 && d > 0).toBe(true)
+  localStorage.setItem('eitan:settings', JSON.stringify({ sound: false }))
+  expect(() => playBossSound('victory')).not.toThrow()
+})

@@ -68,3 +68,16 @@ export function playChirp(stage: number, species = 'mochi') {
   const f = chirpFreq(stage) * st.pitch
   st.steps.forEach((k, i) => tone(f * k, i * 0.07, 0.09))
 }
+
+// ボス戦の効果音（周波数, はじまり秒, 長さ秒）
+export const BOSS_SOUNDS = {
+  appear: [[196, 0, 0.25], [185, 0.22, 0.25], [147, 0.44, 0.5]],
+  crit: [[880, 0, 0.08], [1175, 0.07, 0.15]],
+  special: [[392, 0, 0.1], [523, 0.08, 0.1], [659, 0.16, 0.1], [1047, 0.24, 0.35]],
+  victory: [[523, 0, 0.15], [523, 0.15, 0.15], [523, 0.3, 0.15], [659, 0.45, 0.2], [587, 0.65, 0.15], [784, 0.8, 0.5]],
+} satisfies Record<string, [number, number, number][]>
+
+export function playBossSound(kind: keyof typeof BOSS_SOUNDS) {
+  if (!ready()) return
+  BOSS_SOUNDS[kind].forEach(([f, start, dur]) => tone(f, start, dur))
+}

@@ -9,7 +9,7 @@ import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, 
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
-import { playCorrect, playWrong } from './sound'
+import { playBossSound, playCorrect, playWrong } from './sound'
 import { LEVELS, type Level, type Word } from './words'
 
 type Props = {
@@ -145,6 +145,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   useEffect(() => {
     shownAt.current = nowMs()
   }, [index, qs])
+  useEffect(() => {
+    playBossSound('appear')
+  }, [])
 
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
@@ -178,6 +181,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
       const nextHp = hp - base - extra
       setCrit(critical)
+      if (critical) playBossSound('crit')
       const nc = crits + (critical ? 1 : 0)
       setCrits(nc)
       const plus = skill ? skillGauge(skill.id, n, lv) : 0
@@ -215,6 +219,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     const nextHp = hp - SPECIAL_DAMAGE
     setGauge(0)
     setSpecial(special + 1)
+    playBossSound('special')
     setHp(Math.max(0, nextHp))
     setHit(true)
     playCorrect()
@@ -238,6 +243,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function win(c: number) {
+    playBossSound('victory')
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
     onDefeat?.()
