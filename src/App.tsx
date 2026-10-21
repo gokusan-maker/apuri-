@@ -57,6 +57,7 @@ import {
   XP_CARD_GOOD,
   withSpecies,
   pickupOf,
+  type Form,
 } from './monster'
 import {
   buildQueue,
@@ -178,6 +179,7 @@ function App() {
   const [leveledUp, setLeveledUp] = useState(false)
   const [evolved, setEvolved] = useState(false)
   const [evoForm, setEvoForm] = useState<string | null>(null) // 全画面で見せる進化後の姿
+  const [evoFrom, setEvoFrom] = useState<Form | null>(null) // 進化する前の姿（シルエットで見せる）
   const [gain, setGain] = useState<{ amount: number; key: number } | null>(null) // ふわっと浮かぶXP
   const timer = useRef<number | undefined>(undefined)
   useEffect(() => () => window.clearTimeout(timer.current), [])
@@ -376,7 +378,10 @@ function App() {
     }
     const changed = formOf(next).id !== formOf(monster).id
     setEvolved(changed)
-    if (changed) setEvoForm(formOf(next).id)
+    if (changed) {
+      setEvoForm(formOf(next).id)
+      setEvoFrom(formOf(monster))
+    }
     window.clearTimeout(timer.current)
     timer.current = window.setTimeout(() => {
       setHappy(false)
@@ -1168,7 +1173,7 @@ function App() {
           }}
         />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
-        <Evolve form={withSpecies(FORMS.find((f) => f.id === evoForm)!, monster.species)} wear={monster.wear} kind={monster.kind} onClose={() => setEvoForm(null)} />
+        <Evolve form={withSpecies(FORMS.find((f) => f.id === evoForm)!, monster.species)} from={evoFrom ?? undefined} wear={monster.wear} kind={monster.kind} onClose={() => setEvoForm(null)} />
       )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
