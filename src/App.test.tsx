@@ -423,6 +423,23 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
+  it('なでるとごきげんがたまる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('相棒にさわる'))
+    expect(screen.getByLabelText('ごきげん 1 / 20')).toBeInTheDocument()
+  })
+
+  it('ごきげんMAXの日はXPが1.2倍', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
+    localStorage.setItem('eitan:mood-meter', JSON.stringify({ day: dayKey(), points: 20 }))
+    render(<App />)
+    expect(screen.getByText('💗 ごきげんMAX！ 今日はXP1.2倍')).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
+    fireEvent.click(screen.getByText(/サクサククッキン/))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(48) // 好物40×1.2
+  })
+
   it('3連ガチャで仲間が3匹ふえ、コインが3回分へる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
     render(<App />)

@@ -84,6 +84,7 @@ import { loadUniv } from './univ'
 import { annivMonths, annivText, MONTHLY_COINS } from './monthly'
 import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
 import { ENDLESS_REWARD_COINS } from './endless'
+import { addMood, boosted, loadMood, MOOD_MAX, moodFull, moodNow, saveMood } from './moodmeter'
 import { PET_BONUS } from './pet'
 import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
@@ -247,6 +248,8 @@ function App() {
   const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
   const [gachaStep, setGachaStep] = usePersistent(loadStep, saveStep)
   const [bag, setBag] = usePersistent(loadBag, saveBag)
+  const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
+  const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [showChallenge, setShowChallenge] = useState(false)
@@ -286,6 +289,7 @@ function App() {
     count('answers')
     if (correct) count('correct')
     if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
+    if (correct) cheerUp(1)
     const r = recordStudyWithFreeze(streak, today, wallet.freezes ?? 0)
     setStreak(r.streak)
     // ログインボーナス：その日はじめての学習で🪙5、7日連続ごとに🪙20
@@ -368,7 +372,8 @@ function App() {
     if (correct && xp > 0) gainXp(xp * xpRate, source)
   }
 
-  function gainXp(amount: number, source: Source | null) {
+  function gainXp(raw: number, source: Source | null) {
+    const amount = boosted(raw, moodFull(moodMeter, today)) // ごきげんMAXの日は1.2倍
     setTodayXp((d) => ({ day: today, count: (d.day === today ? d.count : 0) + amount }))
     setGain((g) => ({ amount, key: (g?.key ?? 0) + 1 }))
     const next = feed(monster, amount, source, today)
@@ -709,6 +714,8 @@ function App() {
           evolved={evolved}
           friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
           onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
+          onPet={() => cheerUp(1)}
+          mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
           onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
         />
         <p className="stats">
@@ -839,6 +846,7 @@ function App() {
             if (!r) return
             setWallet(r.wallet)
             setSnacks(r.log)
+            cheerUp(3)
             gainXp(r.xp, null)
             const l = snackLine(id)
             pushToast([{ id: 'snack', text: `${l.en}（${l.ja}）`, counter: 'answers', target: 0 }])

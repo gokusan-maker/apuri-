@@ -34,6 +34,8 @@ type Props = {
   friends?: { m: MonsterState; i: number }[] // 相棒以外の仲間（i は仲間の番号）
   onSwitch?: (i: number) => void
   season?: SeasonFx // 季節の背景演出
+  onPet?: () => void // なでた（ごきげんメーター）
+  mood100?: { points: number; max: number } // ごきげんメーター
   onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
@@ -653,7 +655,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season, onPet, mood100 }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -713,6 +715,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           const r = Math.random()
           const pet = nextPet(loadPetLog(), dayKey())
           savePetLog(pet)
+          onPet?.()
           const re = petReaction(pet.count)
           setReact(re)
           if (re === 'max') onPetBonus?.()
@@ -771,6 +774,14 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         </div>
       )}
       <div className="monster-info">
+        {mood100 && (
+          <p className={`mood-meter${mood100.points >= mood100.max ? ' full' : ''}`} aria-label={`ごきげん ${mood100.points} / ${mood100.max}`}>
+            <span className="mood-meter-bar">
+              <span style={{ width: `${(mood100.points / mood100.max) * 100}%` }} />
+            </span>
+            {mood100.points >= mood100.max ? '💗 ごきげんMAX！ 今日はXP1.2倍' : `💗 ごきげん ${mood100.points}/${mood100.max}`}
+          </p>
+        )}
         {friends.length > 0 && (
           <div className="monster-friends" aria-label={`仲間 ${friends.length}匹`}>
             {friends.slice(0, 6).map(({ m, i }) => (
