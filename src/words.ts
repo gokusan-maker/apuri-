@@ -741,6 +741,9 @@ const WORDS_2: Word[] = [
   { id: 'noise', en: 'noise', ja: '物音・そう音', example: 'What is that noise?', exampleJa: 'あの音は何？', level: '中2' },
   { id: 'novel', en: 'novel', ja: '小説', example: 'She is reading a long novel.', exampleJa: '彼女は長い小説を読んでいる。', level: '中2' },
   { id: 'prize', en: 'prize', ja: '賞', example: 'He won first prize in the speech contest.', exampleJa: '彼はスピーチコンテストで1等賞をとった。', level: '中2' },
+]
+
+const WORDS_2B: Word[] = [
   { id: 'quiz', en: 'quiz', ja: 'クイズ・小テスト', example: 'We have a vocabulary quiz every Monday.', exampleJa: '毎週月曜日に単語の小テストがある。', level: '中2' },
   { id: 'stranger', en: 'stranger', ja: '知らない人', example: 'Don\'t talk to strangers.', exampleJa: '知らない人と話さないで。', level: '中2' },
   { id: 'view', en: 'view', ja: 'ながめ・景色', example: 'The view from the top was beautiful.', exampleJa: '頂上からのながめは美しかった。', level: '中2' },
@@ -1766,6 +1769,9 @@ const WORDS_3: Word[] = [
   { id: 'debate', en: 'debate', ja: '討論（する）', example: 'We had a debate about school uniforms.', exampleJa: '制服について討論した。', level: '高校基礎' },
   { id: 'demonstrate', en: 'demonstrate', ja: '実演する・証明する', example: 'The teacher demonstrated the experiment.', exampleJa: '先生がその実験を実演した。', level: '高校基礎' },
   { id: 'deny', en: 'deny', ja: '否定する', example: 'He denied breaking the window.', exampleJa: '彼は窓を割ったことを否定した。', level: '高校基礎' },
+]
+
+const WORDS_3B: Word[] = [
   { id: 'detect', en: 'detect', ja: '見つける・感知する', example: 'Dogs can detect smells we cannot.', exampleJa: '犬は人にはわからないにおいをかぎ分けられる。', level: '高校基礎' },
   { id: 'devote', en: 'devote', ja: 'ささげる', example: 'She devoted her life to helping children.', exampleJa: '彼女は子どもたちを助けることに一生をささげた。', level: '高校基礎' },
   { id: 'distinct', en: 'distinct', ja: 'はっきりと異なる', example: 'The two words have distinct meanings.', exampleJa: 'その2語ははっきり意味がちがう。', level: '高校基礎' },
@@ -2060,6 +2066,26 @@ const WORDS_3: Word[] = [
   { id: 'attain', en: 'attain', ja: '（努力して）手に入れる・到達する', example: 'She worked hard to attain her goal.', exampleJa: '彼女は目標を達成するために努力した。', level: '高校基礎' },
   { id: 'authentic', en: 'authentic', ja: '本物の', example: 'This restaurant serves authentic Italian food.', exampleJa: 'このレストランは本場のイタリア料理を出す。', level: '高校基礎' },
   { id: 'autonomy', en: 'autonomy', ja: '自主性・自治', example: 'Teenagers want more autonomy.', exampleJa: '10代の若者はもっと自主性を求める。', level: '高校基礎' },
+  { id: 'academy', en: 'academy', ja: '学院・専門学校', example: 'He studies music at an academy in Tokyo.', exampleJa: '彼は東京の音楽学院で学んでいる。', level: '高校基礎' },
+  { id: 'accent', en: 'accent', ja: 'なまり・アクセント', example: 'She speaks English with a British accent.', exampleJa: '彼女はイギリスなまりの英語を話す。', level: '高校基礎' },
+  { id: 'access', en: 'access', ja: '利用（する権利）・接近', example: 'Students have free access to the library.', exampleJa: '生徒は図書館を自由に利用できる。', level: '高校基礎' },
+  { id: 'accomplish', en: 'accomplish', ja: '成しとげる', example: 'We can accomplish a lot if we work together.', exampleJa: '協力すれば多くのことを成しとげられる。', level: '高校基礎' },
+  { id: 'accuse', en: 'accuse', ja: '（〜を）責める・訴える', example: 'Don\'t accuse him without any proof.', exampleJa: '証拠もなく彼を責めないで。', level: '高校基礎' },
+  { id: 'acid', en: 'acid', ja: '酸・酸性の', example: 'Lemon juice is an acid.', exampleJa: 'レモン汁は酸性だ。', level: '高校基礎' },
+  { id: 'adolescent', en: 'adolescent', ja: '思春期の・若者', example: 'Adolescent children need a lot of sleep.', exampleJa: '思春期の子どもにはたくさんの睡眠が必要だ。', level: '高校基礎' },
+  { id: 'affection', en: 'affection', ja: '愛情', example: 'The dog showed great affection for the boy.', exampleJa: 'その犬は少年にとても愛情を示した。', level: '高校基礎' },
+  { id: 'aid', en: 'aid', ja: '援助・助ける', example: 'The country sent aid to the flood victims.', exampleJa: 'その国は洪水の被災者に援助を送った。', level: '高校基礎' },
+  { id: 'alert', en: 'alert', ja: '油断のない・警報', example: 'Stay alert when you cross the road.', exampleJa: '道をわたるときは油断しないで。', level: '高校基礎' },
+  { id: 'allowance', en: 'allowance', ja: 'おこづかい・手当', example: 'I get a monthly allowance from my parents.', exampleJa: '私は親から毎月おこづかいをもらう。', level: '高校基礎' },
+  { id: 'ambassador', en: 'ambassador', ja: '大使', example: 'The ambassador visited our school.', exampleJa: '大使が私たちの学校を訪れた。', level: '高校基礎' },
+  { id: 'amuse', en: 'amuse', ja: '楽しませる・笑わせる', example: 'His funny stories always amuse us.', exampleJa: '彼のおもしろい話はいつも私たちを楽しませる。', level: '高校基礎' },
+  { id: 'anniversary', en: 'anniversary', ja: '（〜周年の）記念日', example: 'Today is my parents\' wedding anniversary.', exampleJa: '今日は両親の結婚記念日だ。', level: '高校基礎' },
+  { id: 'anxiety', en: 'anxiety', ja: '不安・心配', example: 'She felt anxiety before the speech.', exampleJa: 'スピーチの前に彼女は不安を感じた。', level: '高校基礎' },
+  { id: 'applaud', en: 'applaud', ja: '拍手する・称賛する', example: 'The audience began to applaud loudly.', exampleJa: '観客は大きな拍手を送りはじめた。', level: '高校基礎' },
+  { id: 'appliance', en: 'appliance', ja: '（家庭用の）電化製品', example: 'A refrigerator is a useful appliance.', exampleJa: '冷蔵庫は便利な電化製品だ。', level: '高校基礎' },
+  { id: 'artificial', en: 'artificial', ja: '人工の', example: 'The park has an artificial lake.', exampleJa: 'その公園には人工の湖がある。', level: '高校基礎' },
+  { id: 'astonish', en: 'astonish', ja: '（ひどく）おどろかせる', example: 'The magic trick will astonish you.', exampleJa: 'その手品にはびっくりするよ。', level: '高校基礎' },
+  { id: 'awkward', en: 'awkward', ja: '気まずい・ぎこちない', example: 'There was an awkward silence after his joke.', exampleJa: '彼の冗談のあと気まずい沈黙があった。', level: '高校基礎' },
   { id: 'criteria', en: 'criteria', ja: '（判断の）基準', example: 'What are the criteria for choosing the winner?', exampleJa: '優勝者を選ぶ基準は何ですか。', level: '高校基礎' },
   { id: 'depression', en: 'depression', ja: 'うつ状態・不景気', example: 'Many people lost their jobs during the depression.', exampleJa: '不景気の間に多くの人が職を失った。', level: '高校基礎' },
   { id: 'dispose', en: 'dispose', ja: '（of と）処分する', example: 'Please dispose of your trash properly.', exampleJa: 'ごみはきちんと処分してください。', level: '高校基礎' },
@@ -2948,7 +2974,7 @@ const WORDS_4: Word[] = [
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
-export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_3, ...WORDS_4]
+export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_2B, ...WORDS_3, ...WORDS_3B, ...WORDS_4]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
 const LEVEL_OF: Record<string, Level> = Object.fromEntries([
