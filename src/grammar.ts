@@ -734,6 +734,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Turn right at the corner, ___ you will see the station.', choices: ['or', 'and', 'but'], answer: 1, why: '「そうすれば駅が見える」なので and。' },
     ],
   },
+  {
+    id: 'one-of-the',
+    title: '最上級 one of the 〜（もっとも〜なものの1つ）',
+    points: ['one of the ＋最上級＋名詞の複数形で「もっとも〜な…の1つ（1人）」。', '名詞は必ず複数形にする（one of the best players）。'],
+    examples: [
+      { en: 'Kyoto is one of the most famous cities in Japan.', ja: '京都は日本でもっとも有名な都市の1つです。' },
+      { en: 'He is one of the fastest runners on our team.', ja: '彼は私たちのチームでもっとも足の速い選手の1人です。' },
+    ],
+    questions: [
+      { sentence: 'This is one of the ___ books in the library.', choices: ['old', 'older', 'oldest'], answer: 2, why: 'one of the ＋最上級。' },
+      { sentence: 'She is one of the best ___ in our class.', choices: ['singer', 'singers', 'singing'], answer: 1, why: 'one of the 〜 のあとの名詞は複数形。' },
+      { sentence: 'Soccer is one of the ___ popular sports in the world.', choices: ['more', 'most', 'much'], answer: 1, why: 'popular の最上級は most popular。' },
+    ],
+  },
+  {
+    id: 'perfect-experience',
+    title: '現在完了の経験（ever / never / have been to）',
+    points: ['Have you ever ＋過去分詞 〜? で「今までに〜したことがありますか」。', 'have never ＋過去分詞で「一度も〜したことがない」。「〜に行ったことがある」は have been to 〜。'],
+    examples: [
+      { en: 'Have you ever seen a rainbow at night?', ja: '今までに夜のにじを見たことがありますか。' },
+      { en: 'I have never been to a foreign country.', ja: '私は一度も外国に行ったことがありません。' },
+    ],
+    questions: [
+      { sentence: 'Have you ___ eaten Thai food?', choices: ['ever', 'never', 'yet'], answer: 0, why: '「今までに〜したことがありますか」は Have you ever 〜?。' },
+      { sentence: 'I have ___ climbed Mt. Fuji. I want to try it someday.', choices: ['ever', 'never', 'already'], answer: 1, why: '「一度も〜ない（いつか挑戦したい）」なので never。' },
+      { sentence: 'My sister has ___ to London three times.', choices: ['gone', 'been', 'went'], answer: 1, why: '「〜に行ったことがある」は have been to。has gone to は「行ってしまった（今いない）」。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
