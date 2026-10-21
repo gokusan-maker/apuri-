@@ -21,6 +21,7 @@ import { Shiritori } from './ShiritoriView'
 import { Numbers } from './NumbersView'
 import { Versus } from './VersusView'
 import { Memory } from './MemoryView'
+import { Mole } from './MoleView'
 import { Bingo } from './BingoView'
 import { WordSearch } from './WordSearchView'
 import { Twisters } from './TwisterView'
@@ -77,7 +78,7 @@ const SIMPLE_PUZZLES: Partial<Record<Direction, () => PuzzleQ>> = {
   waswere: wasWereQ,
 }
 
-export type Direction = 'waswere' | 'ordinal' | 'muchmany' | 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'long-reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'waswere' | 'ordinal' | 'muchmany' | 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'mole' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'long-reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -138,6 +139,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'riddle', label: '🤔 英語なぞなぞ', group: 'パズル・ゲーム' },
   { id: 'memory', label: '🃏 神経衰弱', group: 'パズル・ゲーム' },
   { id: 'bingo', label: '🎯 単語ビンゴ', group: 'パズル・ゲーム' },
+  { id: 'mole', label: '🔨 単語もぐらたたき', group: 'パズル・ゲーム' },
   { id: 'wordsearch', label: '🔍 ことばさがし', group: 'パズル・ゲーム' },
   { id: 'plural', label: '👥 複数形', group: '文法・読解' },
   { id: 'past-ed', label: '⏪ 過去形のつづり', group: '文法・読解' },
@@ -233,7 +235,7 @@ export const QUESTION_TIME = 10
 export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 // 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
-const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'long-reading', 'grammar', 'confusing', 'sounds']
+const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'mole', 'shiritori', 'versus', 'rival', 'through', 'reading', 'long-reading', 'grammar', 'confusing', 'sounds']
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
   try {
@@ -529,6 +531,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Bingo words={targets && targets.length >= 9 ? targets : words} onAnswer={onAnswer} onClear={onGame} />
+      </>
+    )
+  }
+
+  if (direction === 'mole') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Mole words={targets && targets.length >= 6 ? targets : words} onAnswer={onAnswer} onClear={onGame} />
       </>
     )
   }
