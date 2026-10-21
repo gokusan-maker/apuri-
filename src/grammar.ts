@@ -1283,3 +1283,27 @@ export const markKnown = (ids: string[], id: string, known: boolean) => (known ?
 
 // 単元をはじめて全問正解したときのXP
 export const GRAMMAR_CLEAR_XP = 30
+
+// まちがいノート：確認問題でまちがえた問題（問題文で覚える。正解すると消える）
+const NOTE_KEY = 'eitan:grammar-notebook'
+export const NOTE_MAX = 50
+export function loadNotebook(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(NOTE_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveNotebook(list: string[]): void {
+  try {
+    localStorage.setItem(NOTE_KEY, JSON.stringify(list))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const noteAfter = (list: string[], sentence: string, ok: boolean): string[] =>
+  ok ? list.filter((x) => x !== sentence) : [sentence, ...list.filter((x) => x !== sentence)].slice(0, NOTE_MAX)
+// ノートの問題文から問題を取り出す（単元が消えた問題はとばす）
+export const notebookQuestions = (list: string[]): GrammarQuestion[] =>
+  list.map((t) => GRAMMAR.flatMap((u) => u.questions).find((q) => q.sentence === t)).filter((q): q is GrammarQuestion => !!q)

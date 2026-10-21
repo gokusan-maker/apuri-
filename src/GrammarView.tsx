@@ -12,7 +12,7 @@ import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -40,6 +40,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
   const [bingo, setBingo] = useState(false)
+  const [note, setNote] = useState(loadNotebook)
   const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
   const [goalReached, setGoalReached] = useState(false)
   const [firstClear, setFirstClear] = useState(false) // この回ではじめて全問正解した
@@ -187,6 +188,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             }}
           >
             👾👾👾 文法モンスターラッシュ（{RUSH_COUNT}連戦・全勝で🪙{RUSH_GRAMMAR_COINS}）
+          </button>
+        )}
+        {stampMode && notebookQuestions(note).length > 0 && (
+          <button
+            className="list-link weak-grammar-btn"
+            onClick={() => {
+              open({ id: 'notebook', title: '📓 まちがいノート', points: [], examples: [], questions: notebookQuestions(note).slice(0, 10) })
+              setStep(0)
+            }}
+          >
+            📓 まちがいノート（{notebookQuestions(note).length}問）
           </button>
         )}
         {stampMode && weakUnits(record).length > 0 && (
@@ -389,6 +401,13 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setScore(nextScore)
     if (ok) playCorrect()
     else playWrong()
+    if (stampMode) {
+      const nb = noteAfter(note, q.sentence, ok)
+      if (nb.length !== note.length || nb.some((x, i) => x !== note[i])) {
+        setNote(nb)
+        saveNotebook(nb)
+      }
+    }
     const st = streakAfter(streak, ok)
     setStreak(st)
     saveGrammarStreak(st)

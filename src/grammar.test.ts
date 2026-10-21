@@ -114,3 +114,20 @@ it('要点カードの覚えた記録をつけ外しできる', async () => {
   saveCardsKnown(['b'])
   expect(loadCardsKnown()).toEqual(['b'])
 })
+
+it('まちがいノートはまちがえた問題を先頭に入れ、正解すると消す', async () => {
+  const { loadNotebook, noteAfter, notebookQuestions, saveNotebook, NOTE_MAX } = await import('./grammar')
+  localStorage.clear()
+  const [a, b] = GRAMMAR[0].questions.map((q) => q.sentence)
+  let n = noteAfter([], a, false)
+  n = noteAfter(n, b, false)
+  n = noteAfter(n, a, false)
+  expect(n).toEqual([a, b])
+  n = noteAfter(n, b, true)
+  expect(n).toEqual([a])
+  saveNotebook([...n, 'なくなった問題'])
+  expect(notebookQuestions(loadNotebook())).toEqual([GRAMMAR[0].questions[0]])
+  let big: string[] = []
+  for (let i = 0; i < NOTE_MAX + 5; i++) big = noteAfter(big, `q${i}`, false)
+  expect(big).toHaveLength(NOTE_MAX)
+})
