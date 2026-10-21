@@ -102,3 +102,25 @@ export function battleRank(hearts: number, crits: number): Rank {
 // いかりモード：HPが半分以下になると、3問に1問が「チャンス問題」（正解でダメージ2倍）
 export const isEnraged = (hp: number, maxHp: number) => hp > 0 && hp <= maxHp / 2
 export const isChance = (enraged: boolean, index: number) => enraged && index % 3 === 2
+
+// ボスラッシュ：中1→中2→中3のボスと3連戦（ハートは引き継ぎ）。1日1回、全部たおすと大きなごほうび
+export const RUSH_LEVELS: Level[] = ['中1', '中2', '中3']
+export const RUSH_COINS = 100
+
+const RUSH_KEY = 'eitan:rush'
+
+export function loadRushDay(): string {
+  try {
+    return localStorage.getItem(RUSH_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+export function saveRushDay(d: string): void {
+  try {
+    localStorage.setItem(RUSH_KEY, d)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

@@ -21,6 +21,9 @@ type Props = {
   title?: string // 上に出す見出し
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
+  startHearts?: number // ボスラッシュではハートを引き継ぐ
+  winLabel?: string // 勝ったあとのボタンの文字
+  onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
   partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string } // いっしょに戦う相棒（タマゴは応援だけ）
 }
@@ -106,12 +109,12 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
-  const [hearts, setHearts] = useState(HEARTS)
+  const [hearts, setHearts] = useState(startHearts)
   const [combo, setCombo] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
@@ -194,6 +197,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
   function win(c: number) {
     onWin()
+    onWinHearts?.(hearts)
     if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS)
   }
 
@@ -208,7 +212,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setQs(bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
     setHp(maxHp)
-    setHearts(HEARTS)
+    setHearts(startHearts)
     setCombo(0)
     setPicked(null)
     setHit(false)
@@ -326,7 +330,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className="result-message">ボーナス +{bonus}XP</p>
           <MissedList words={missed} />
           <button className="flip" onClick={onExit}>
-            ステージにもどる
+            {winLabel}
           </button>
         </>
       ) : lost && picked === null ? (

@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
@@ -29,6 +29,8 @@ type Props = {
   onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
   partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
   onRankBonus?: (coins: number) => void // ボス戦Sランクのおまけ
+  onRushClear?: () => void // ボスラッシュを全部たおした（ごほうびはアプリ側）
+  rushDone?: boolean // 今日のボスラッシュのごほうびをもうもらった
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
 
@@ -36,7 +38,7 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -48,6 +50,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [univ, setUniv] = usePersistent(loadUniv, saveUniv)
   const [rareWeek, setRareWeek] = usePersistent(loadRareWeek, saveRareWeek)
   const [rareFight, setRareFight] = useState(false)
+  const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean } | null>(null)
   const week = weekKey(dayKey())
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
@@ -73,6 +76,32 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           onUnivWin?.(univFight, first)
         }}
         onExit={() => setUnivFight(null)}
+      />
+    )
+  }
+
+  if (rush) {
+    const lv = RUSH_LEVELS[rush.round]
+    const last = rush.round === RUSH_LEVELS.length - 1
+    return (
+      <Boss
+        key={`rush-${rush.round}`}
+        level={lv}
+        words={wordsOf([lv])}
+        title={`🔥 ボスラッシュ ${rush.round + 1} / ${RUSH_LEVELS.length}`}
+        startHearts={rush.hearts}
+        winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
+        partner={partner}
+        bonus={BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onAnswer}
+        onRankBonus={onRankBonus}
+        onWinHearts={(h) => setRush((r) => (r ? { ...r, hearts: h } : r))}
+        onWin={() => {
+          setRush((r) => (r ? { ...r, won: true } : r))
+          if (last) onRushClear?.()
+        }}
+        onExit={() => setRush(rush.won && !last ? { round: rush.round + 1, hearts: rush.hearts, won: false } : null)}
       />
     )
   }
@@ -254,6 +283,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           })}
         </ol>
       </details>
+      <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
+        {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
+      </button>
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
         {rareWeek === week ? `✅ 今週のレアボス「${rare.look.name}」はたおした！（もう一度戦う）` : `✨ 今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
       </button>

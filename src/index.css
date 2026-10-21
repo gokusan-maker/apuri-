@@ -983,3 +983,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-rage { margin: 0; text-align: center; color: #dc2626; font-weight: 800; font-size: 0.9rem; }
 .boss-chance { margin: 2px auto; padding: 4px 12px; width: fit-content; border-radius: 999px; background: #fef08a; color: #854d0e; font-weight: 900; animation: crit-pop 0.6s ease-out both; }
 @media (prefers-reduced-motion: reduce) { .boss-figure.rage svg { animation: none; } }
+.boss-btn.rush-boss { background: linear-gradient(90deg, #ef4444, #f97316); color: #fff; }

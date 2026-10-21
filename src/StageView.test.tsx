@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
 import { UNIV_BOSSES } from './univ'
+import { wordsOf } from './words'
 
 describe('ステージ画面', () => {
   it('ステージ1だけ遊べて、全問正解で星3つ', () => {
@@ -99,4 +100,24 @@ it('今週のレアボスに挑戦できる', () => {
   fireEvent.click(screen.getByText(/今週のレアボス「キラキラ.+」に勝つと 色ちがい確定のタマゴ！/))
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
+})
+
+it('ボスラッシュは3連戦で、勝つとハートを引き継いで次のボスへ', () => {
+  const clear = vi.fn()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} onRushClear={clear} />)
+  fireEvent.click(screen.getByText(/ボスラッシュ（3連戦/))
+  for (let round = 1; round <= 3; round++) {
+    expect(screen.getByText(`🔥 ボスラッシュ ${round} / 3`)).toBeInTheDocument()
+    const lv = ['中1', '中2', '中3'][round - 1] as '中1'
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      const en = document.querySelector('.boss .en')!.textContent
+      const w = wordsOf([lv]).find((x) => x.en === en)!
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    if (round < 3) fireEvent.click(screen.getByText(/次のボスへ ▶（ハート3を引き継ぐ）/))
+  }
+  expect(clear).toHaveBeenCalledTimes(1)
+  fireEvent.click(screen.getByText('ラッシュ完全クリア！ ステージにもどる'))
+  expect(screen.getByText(/ボスラッシュ（3連戦/)).toBeInTheDocument()
 })

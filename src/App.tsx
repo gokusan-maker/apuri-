@@ -97,7 +97,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, saveBoss } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, loadRushDay, RUSH_COINS, saveBoss, saveRushDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -237,6 +237,7 @@ function App() {
 
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
+  const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [showChallenge, setShowChallenge] = useState(false)
@@ -818,6 +819,13 @@ function App() {
             gainXp(first ? BOSS_XP : BOSS_REMATCH_XP, null)
             setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
             pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
+          }}
+          rushDone={rushDay === today}
+          onRushClear={() => {
+            if (rushDay === today) return
+            setRushDay(today)
+            setWallet((w) => ({ ...addTicket(w), coins: w.coins + RUSH_COINS }))
+            pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
           }}
           onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
           onRareWin={() => {
