@@ -1263,3 +1263,10 @@ export function recommendLong(t: TypeStats, record: LongRecord): { passage: Long
   }
   return null
 }
+
+// 本ごとの★（最高点の正答率）：満点で★3、7割以上で★2、それ以外は★1
+export function longStars(best: number | undefined, total: number): number {
+  if (best === undefined || total <= 0) return 0
+  if (best >= total) return 3
+  return best / total >= 0.7 ? 2 : 1
+}

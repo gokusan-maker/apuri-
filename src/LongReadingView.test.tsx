@@ -26,7 +26,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   expect(screen.getAllByText(/⭕/).length).toBe(11)
   expect(onAnswer).toHaveBeenCalledTimes(14)
   fireEvent.click(screen.getByText('← 長文の一覧'))
-  expect(screen.getByText(/最高 13点/)).toBeInTheDocument()
+  expect(screen.getByText(/最高 13点 ★★☆/)).toBeInTheDocument()
   expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
   expect(screen.getByText(new RegExp(`これまでに読んだ語数：${wordCount(p)}語`))).toBeInTheDocument()
 })

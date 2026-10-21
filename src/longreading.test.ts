@@ -167,3 +167,12 @@ it('長文の語数を数え、読んだ語数の合計をためられる', asyn
   expect(loadReadWords()).toBe(200)
   for (const x of LONG_PASSAGES) expect(wordCount(x)).toBeGreaterThan(0)
 })
+
+it('長文の最高点から★1〜3をつける', async () => {
+  const { longStars } = await import('./longreading')
+  expect(longStars(undefined, 10)).toBe(0)
+  expect(longStars(10, 10)).toBe(3)
+  expect(longStars(7, 10)).toBe(2)
+  expect(longStars(6, 10)).toBe(1)
+  expect(longStars(0, 10)).toBe(1)
+})
