@@ -101,6 +101,7 @@ import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
 import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
+import { Records } from './RecordsView'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -1060,6 +1061,7 @@ function App() {
           )}
           {statsTab === 'collection' && (
             <section className="card stats-view">
+              <Records />
               <BadgeList earned={earned} />
               <Zukan monsters={party.members} />
               <BossDex record={boss} />

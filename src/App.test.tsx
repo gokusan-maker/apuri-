@@ -435,6 +435,15 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(12)
   })
 
+  it('記録の部屋に自己ベストが出る', () => {
+    localStorage.setItem('eitan:endless', '7')
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
+    expect(screen.getByText('🏆 記録の部屋')).toBeInTheDocument()
+    expect(screen.getByText('7階')).toBeInTheDocument()
+  })
+
   it('ボスをたおした回数で相棒に二つ名がつく', () => {
     localStorage.setItem('eitan:boss-book', JSON.stringify({ ヤミモチ: { wins: 10, best: 'A', first: '2026-10-01', look: { name: 'ヤミモチ', color: '#000', line: '#000', eye: '#fff' } } }))
     render(<App />)
