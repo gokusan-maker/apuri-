@@ -357,7 +357,7 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 .badge-toast-title { font-size: 0.75rem; opacity: 0.8; }
 .badge-toast-name { font-weight: 700; }
 .zukan { margin-top: 24px; }
-.zukan-figure { width: 56px; height: 56px; }
+.zukan-figure { width: 64px; height: 64px; }
 .party { margin-top: 24px; }
 .party-pick { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; border: none; background: transparent; color: inherit; padding: 0; }
 .badge-grid li.active { outline: 3px solid var(--accent); }
@@ -676,7 +676,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .mode-group-name { display: block; margin: 6px 0 4px; padding: 2px 0; font-size: 0.75rem; color: var(--muted); background: none; border: none; cursor: pointer; text-align: left; }
 .mode-menu .direction { flex-wrap: wrap; overflow: visible; }
 .ta-top { margin: 0 auto 10px; padding: 0; list-style: none; max-width: 220px; text-align: left; } .ta-top li { padding: 2px 0; }
-.zukan-detail { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; font-size: 0.9rem; }
+.zukan-detail { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; font-size: 0.9rem; display: flex; gap: 10px; align-items: center; animation: fade-in 0.3s; }
+.zukan-big { width: 110px; height: 110px; flex: none; }
+.zukan-stars { margin-left: 6px; color: #f59e0b; letter-spacing: 1px; font-size: 0.8rem; }
 .sub-tabs { display: flex; gap: 4px; margin: 12px 0 0; }
 .sub-tabs button { flex: 1; padding: 8px 0; font-size: 0.8rem; border: none; border-radius: 10px; background: var(--card); color: var(--muted); }
 .sub-tabs button[aria-selected='true'] { background: var(--accent); color: var(--accent-fg); font-weight: 700; }

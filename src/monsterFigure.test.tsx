@@ -42,3 +42,13 @@ it('ふつうの顔だけキョロキョロする', () => {
   expect(render(<MonsterFigure form={form('mochimaru')} />).container.querySelector('.glance')).not.toBeNull()
   expect(render(<MonsterFigure form={form('mochimaru')} mood="lonely" />).container.querySelector('.glance')).toBeNull()
 })
+
+it('図鑑：出会った姿をタップすると大きな絵と段階の星と説明が出る', async () => {
+  const { Zukan } = await import('./MonsterView')
+  const { fireEvent, screen } = await import('@testing-library/react')
+  render(<Zukan monsters={[{ xp: 0, seen: ['egg', 'chibi', 'mochimaru'] }]} />)
+  fireEvent.click(screen.getByRole('button', { name: 'モチまるの説明' }))
+  expect(document.querySelector('.zukan-big svg')).not.toBeNull()
+  expect(screen.getByLabelText('進化段階 2').textContent).toBe('★★☆☆☆☆')
+  expect(screen.getByText(/ぷにぷにの体/)).toBeInTheDocument()
+})

@@ -627,9 +627,20 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
         ))}
       </ul>
       {detail && (
-        <p className="zukan-detail" role="status">
-          <strong>{detail.name}</strong>：{FORM_DESC[detail.id]}
-        </p>
+        <div className="zukan-detail" role="status" style={{ background: `linear-gradient(135deg, ${detail.color}55, transparent 70%)` }}>
+          <span className="zukan-big">
+            <MonsterFigure form={detail} mood="happy" />
+          </span>
+          <span>
+            <strong>{detail.name}</strong>
+            <span className="zukan-stars" aria-label={`進化段階 ${detail.stage}`}>
+              {'★'.repeat(detail.stage)}
+              {'☆'.repeat(6 - detail.stage)}
+            </span>
+            <br />
+            {FORM_DESC[detail.id]}
+          </span>
+        </div>
       )}
     </div>
   )
