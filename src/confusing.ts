@@ -702,6 +702,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'What is the ___ of this bag?', choices: ['price', 'prize'], answer: 0, why: 'かばんの「値段」は price。' },
     ],
   },
+  {
+    id: 'desert-dessert',
+    title: 'desert と dessert',
+    points: ['desert（デザート、前を強く）は「砂漠」。', 'dessert（ディザート、後ろを強く）は「デザート（食後のあまいもの）」。s が2つ＝もう1回おかわりしたいデザート、と覚えよう。'],
+    examples: [
+      { en: 'Camels can live in the desert.', ja: 'ラクダは砂漠で生きられる。' },
+      { en: 'We had ice cream for dessert.', ja: 'デザートにアイスクリームを食べた。' },
+    ],
+    questions: [
+      { sentence: 'It hardly rains in the ___.', choices: ['desert', 'dessert'], answer: 0, why: '「砂漠」は desert。' },
+      { sentence: 'What would you like for ___?', choices: ['desert', 'dessert'], answer: 1, why: '食後の「デザート」は dessert。' },
+      { sentence: 'The Sahara is a large ___.', choices: ['desert', 'dessert'], answer: 0, why: 'サハラは「砂漠」なので desert。' },
+    ],
+  },
+  {
+    id: 'affect-effect',
+    title: 'affect と effect',
+    points: ['affect は「影響を与える」という動詞。', 'effect は「影響・効果」という名詞（have an effect on ～）。'],
+    examples: [
+      { en: 'The weather affects my mood.', ja: '天気は私の気分に影響する。' },
+      { en: 'The medicine had a good effect.', ja: 'その薬はよく効いた。' },
+    ],
+    questions: [
+      { sentence: 'Lack of sleep can ___ your health.', choices: ['affect', 'effect'], answer: 0, why: '動詞「影響を与える」は affect。' },
+      { sentence: 'Music has a calming ___ on babies.', choices: ['affect', 'effect'], answer: 1, why: '名詞「効果」は effect。' },
+      { sentence: 'The rain did not ___ the game.', choices: ['affect', 'effect'], answer: 0, why: '動詞なので affect。' },
+    ],
+  },
+  {
+    id: 'twice-second',
+    title: 'twice と second time',
+    points: ['twice は「2回」（回数）。', 'the second time は「2回目」（順番）。'],
+    examples: [
+      { en: 'I have been to Kyoto twice.', ja: '京都には2回行ったことがある。' },
+      { en: 'This is my second time in Kyoto.', ja: '京都は今回が2回目だ。' },
+    ],
+    questions: [
+      { sentence: 'I brush my teeth ___ a day.', choices: ['twice', 'the second time'], answer: 0, why: '「1日2回」は回数なので twice。' },
+      { sentence: 'This is ___ I have seen this movie.', choices: ['twice', 'the second time'], answer: 1, why: '「2回目」は順番なので the second time。' },
+      { sentence: 'She called me ___ yesterday.', choices: ['twice', 'the second time'], answer: 0, why: '「2回」電話したので twice。' },
+    ],
+  },
+  {
+    id: 'sleep-asleep',
+    title: 'sleep と asleep',
+    points: ['sleep は「眠る」（動詞）。', 'asleep は「眠っている」（状態）。be asleep / fall asleep の形で使う。'],
+    examples: [
+      { en: 'I sleep eight hours every night.', ja: '私は毎晩8時間眠る。' },
+      { en: 'The baby is asleep now.', ja: '赤ちゃんは今眠っている。' },
+    ],
+    questions: [
+      { sentence: 'The cat is ___ on the sofa.', choices: ['sleep', 'asleep'], answer: 1, why: 'be ＋ asleep で「眠っている」。' },
+      { sentence: 'I couldn\'t ___ last night.', choices: ['sleep', 'asleep'], answer: 0, why: 'could のあとは動詞の原形 sleep。' },
+      { sentence: 'He fell ___ during the movie.', choices: ['sleep', 'asleep'], answer: 1, why: 'fall asleep で「眠りこむ」。' },
+    ],
+  },
+  {
+    id: 'alive-live',
+    title: 'alive と live',
+    points: ['alive は「生きている」（状態）。名詞の前には置かず、be alive の形が多い。', 'live（ライブ）は「生きている・生の」で名詞の前に置く（a live fish / live music）。動詞の live（リブ）は「住む・生きる」。'],
+    examples: [
+      { en: 'The fish is still alive.', ja: 'その魚はまだ生きている。' },
+      { en: 'We listened to live music.', ja: '私たちは生演奏を聞いた。' },
+    ],
+    questions: [
+      { sentence: 'Is the bug still ___?', choices: ['alive', 'live'], answer: 0, why: 'be ＋「生きている」は alive。' },
+      { sentence: 'The band played ___ music in the park.', choices: ['alive', 'live'], answer: 1, why: '名詞 music の前は live（生の）。' },
+      { sentence: 'Plants need water to stay ___.', choices: ['alive', 'live'], answer: 0, why: 'stay alive で「生きたままでいる」。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
