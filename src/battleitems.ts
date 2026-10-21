@@ -1,11 +1,12 @@
 // バトルアイテム：ショップで買って、ボス戦で1戦に1回ずつ使える
-export type BattleItemId = 'bomb' | 'charm'
+export type BattleItemId = 'bomb' | 'charm' | 'clock'
 export type BattleItem = { id: BattleItemId; name: string; icon: string; price: number; desc: string }
 export type BattleBag = Record<BattleItemId, number>
 
 export const BATTLE_ITEMS: BattleItem[] = [
   { id: 'bomb', name: 'どっかんボンバー', icon: '💣', price: 30, desc: 'ボスに20ダメージ' },
   { id: 'charm', name: 'まもりのおまもりん', icon: '🧿', price: 25, desc: 'ハートを1つ回復' },
+  { id: 'clock', name: 'スローどけい', icon: '⏳', price: 20, desc: 'この戦いの間、会心の一撃の時間が2倍' },
 ]
 export const BOMB_DAMAGE = 20
 export const BAG_MAX = 9
@@ -16,9 +17,9 @@ export function loadBag(): BattleBag {
   try {
     const v = JSON.parse(localStorage.getItem(KEY) ?? '{}') as Partial<BattleBag>
     const n = (x: unknown) => (typeof x === 'number' && x > 0 ? Math.min(Math.floor(x), BAG_MAX) : 0)
-    return { bomb: n(v.bomb), charm: n(v.charm) }
+    return { bomb: n(v.bomb), charm: n(v.charm), clock: n(v.clock) }
   } catch {
-    return { bomb: 0, charm: 0 }
+    return { bomb: 0, charm: 0, clock: 0 }
   }
 }
 

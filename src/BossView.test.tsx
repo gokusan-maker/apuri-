@@ -143,7 +143,7 @@ it('チャンス問題が出る', () => {
 
 it('バトルアイテム：ばくだんで20ダメージ、おまもりでハート回復（1戦1回）', () => {
   const used: string[] = []
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1 }} onUseItem={(id) => used.push(id)} />)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1, clock: 0 }} onUseItem={(id) => used.push(id)} />)
   expect(screen.getByText(/まもりのおまもりん/).closest('button')).toBeDisabled() // ハート満タン
   fireEvent.click(screen.getByText(/どっかんボンバー/))
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '80')
@@ -278,4 +278,14 @@ it('ためこうげきの問題をまちがえるとハートが2つへる', () 
   answer(false)
   expect(screen.getByText(/ためこうげき！ ハートが2つへった/)).toBeInTheDocument()
   expect(screen.getByLabelText('のこりハート 1')).toBeInTheDocument()
+})
+
+it('スローどけいを使うと、5秒かかっても会心の一撃', () => {
+  const used: string[] = []
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 0, charm: 0, clock: 1 }} onUseItem={(id) => used.push(id)} />)
+  fireEvent.click(screen.getByText(/スローどけい/))
+  expect(used).toEqual(['clock'])
+  vi.setSystemTime(Date.now() + 5000)
+  answer(true)
+  expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
 })

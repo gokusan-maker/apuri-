@@ -182,8 +182,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setCombo(c)
       setCorrects(n)
       const ms = nowMs() - shownAt.current
-      const critical = isCritical(ms, skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS)
-      if (critical && !isCritical(ms)) {
+      const slow = usedItems.includes('clock') ? 2 : 1
+      const critical = isCritical(ms, (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow)
+      if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
       }
@@ -251,6 +252,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (!bag || bag[id] <= 0 || usedItems.includes(id) || won || lost) return
     setUsedItems([...usedItems, id])
     onUseItem?.(id)
+    if (id === 'clock') {
+      setSkillMsg('⏳ スローどけい！ 会心の一撃の時間が2倍になった')
+      return
+    }
     if (id === 'charm') {
       setHearts(Math.min(HEARTS, hearts + 1))
       setSkillMsg('🧿 おまもりでハートが1つもどった！')
@@ -406,7 +411,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </button>
         )}
       </p>
-      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0) && (
+      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0 || bag.clock > 0) && (
         <div className="battle-items">
           {BATTLE_ITEMS.filter((it) => bag[it.id] > 0).map((it) => (
             <button key={it.id} className="battle-item" disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)} onClick={() => applyItem(it.id)}>
