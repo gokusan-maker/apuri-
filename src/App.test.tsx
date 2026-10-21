@@ -527,6 +527,18 @@ describe('App', () => {
     expect([7, 22, 37]).toContain(coins)
   })
 
+  it('今日のルーレットは1日1回まわせて、当たりがもらえる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.8) // 🪙10
+    fireEvent.click(screen.getByRole('button', { name: /今日のルーレットをまわす/ }))
+    rnd.mockRestore()
+    expect(screen.getByText('🎉 🪙10 が当たった！')).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /今日のルーレットをまわす/ })).toBeNull()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(10)
+    expect(localStorage.getItem('eitan:roulette')).toBe('2026-10-20')
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

@@ -23,6 +23,8 @@ import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
+import { Roulette } from './RouletteView'
+import { loadRouletteDay, saveRouletteDay } from './roulette'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
 import { Evolve } from './EvolveView'
@@ -174,6 +176,7 @@ function App() {
   const [picked, setPicked] = useState<string[]>([]) // 単語一覧から選んだ単語
   const [themeQuiz, setThemeQuiz] = useState(false) // テーマで練習：クイズでやる
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
+  const [rouletteDay, setRouletteDay] = usePersistent(loadRouletteDay, saveRouletteDay)
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
   const xpRate = isWeekend(today) ? 2 : 1 // 週末は正解のXPが2倍
@@ -747,6 +750,14 @@ function App() {
             <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
           </p>
         )}
+        <Roulette
+          done={rouletteDay === today}
+          onPrize={(p) => {
+            setRouletteDay(today)
+            if (p.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + p.amount }))
+            else gainXp(p.amount, null)
+          }}
+        />
         <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => setShowChallenge(true)}>
           ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
           {challengeDay === today ? ' ✅クリア' : ''}
