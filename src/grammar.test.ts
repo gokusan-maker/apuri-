@@ -4,9 +4,9 @@ import { GRAMMAR, loadGrammar, saveGrammar } from './grammar'
 describe('文法', () => {
   beforeEach(() => localStorage.clear())
 
-  it('42単元、各3問。空欄は1つ、正解が選択肢に含まれ、選択肢は重複しない', () => {
-    expect(GRAMMAR).toHaveLength(42)
-    expect(new Set(GRAMMAR.map((u) => u.id)).size).toBe(42)
+  it('44単元、各3問。空欄は1つ、正解が選択肢に含まれ、選択肢は重複しない', () => {
+    expect(GRAMMAR).toHaveLength(44)
+    expect(new Set(GRAMMAR.map((u) => u.id)).size).toBe(44)
     for (const u of GRAMMAR) {
       expect(u.questions, u.id).toHaveLength(3)
       expect(u.points.length).toBeGreaterThan(0)

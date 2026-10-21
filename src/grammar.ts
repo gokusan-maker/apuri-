@@ -622,6 +622,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'All the ___ were ready.', choices: ['player', 'players'], answer: 1, why: 'all のあとは複数形。' },
     ],
   },
+  {
+    id: 'had-better',
+    title: 'had better / had to（〜したほうがいい／〜しなければならなかった）',
+    points: ['had better ＋動詞の原形で「〜したほうがいい（しないとよくない）」。強めのアドバイス。', 'had to ＋動詞の原形は must の過去「〜しなければならなかった」。'],
+    examples: [
+      { en: 'You had better take an umbrella.', ja: 'かさを持っていったほうがいいよ。' },
+      { en: 'I had to wait for an hour.', ja: '1時間待たなければならなかった。' },
+    ],
+    questions: [
+      { sentence: 'It\'s late. You had better ___ home.', choices: ['go', 'going', 'to go'], answer: 0, why: 'had better のあとは動詞の原形。' },
+      { sentence: 'Yesterday I ___ to clean my room.', choices: ['must', 'had', 'have'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
+      { sentence: 'You had better ___ eat too much candy.', choices: ['not', 'no', "don't"], answer: 0, why: '否定は had better not ＋原形。' },
+    ],
+  },
+  {
+    id: 'tag-q',
+    title: '付加疑問（〜ですよね？）',
+    points: ['文の最後に「〜ですよね？」をつける。肯定文には否定の形、否定文には肯定の形をつける。', '主語は代名詞にする（Ken → he）。'],
+    examples: [
+      { en: "It's hot today, isn't it?", ja: '今日は暑いですよね？' },
+      { en: "You don't like carrots, do you?", ja: 'ニンジンは好きじゃないよね？' },
+    ],
+    questions: [
+      { sentence: 'Ken is your friend, ___ he?', choices: ["isn't", 'is', "doesn't"], answer: 0, why: '肯定の be動詞の文なので isn\'t he?' },
+      { sentence: 'You can swim, ___ you?', choices: ["can't", 'can', "don't"], answer: 0, why: 'can の肯定文なので can\'t you?' },
+      { sentence: "She didn't come, ___ she?", choices: ['did', "didn't", 'does'], answer: 0, why: '否定文なので肯定の did she?' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
