@@ -1195,3 +1195,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .golden-boss-note { margin: 4px 0; font-size: 0.8rem; font-weight: 700; color: #b45309; }
 .long-recommend { display: block; width: 100%; margin: 6px 0; padding: 8px 10px; border: 2px solid #f59e0b; border-radius: 12px; background: #fffbeb; text-align: left; font-size: 0.85rem; }
 .long-recommend strong { display: block; font-size: 0.95rem; }
+.daily-stars { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: -2px 0 6px; font-size: 0.8rem; }

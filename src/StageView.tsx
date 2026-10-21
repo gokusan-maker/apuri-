@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -25,7 +25,7 @@ type Props = {
   boss?: BossRecord
   onBossWin?: (level: Level) => void
   dailyDone?: boolean // 今日のボスにもう勝った
-  onDailyWin?: () => void
+  onDailyWin?: (stars: number) => void // 今日のボスに勝った（★1〜3）
   onSpend?: (coins: number) => boolean
   onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
   learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
@@ -57,7 +57,7 @@ const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
 export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
-  const [dailyFight, setDailyFight] = useState(false)
+  const [dailyFight, setDailyFight] = useState(0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
@@ -212,6 +212,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         level={fighting}
         words={wordsOf([fighting])}
         golden={fighting === goldenLevelOf(LEVELS, dayKey())}
+        hp={dailyFight ? dailyHp(dailyFight) : undefined}
+        title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : undefined}
         grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
         bag={bag}
@@ -226,11 +228,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onAnswer={onAnswer}
         onWin={() => {
           onBossWin?.(fighting)
-          if (dailyFight) onDailyWin?.()
+          if (dailyFight) onDailyWin?.(dailyFight)
         }}
         onExit={() => {
           setFighting(null)
-          setDailyFight(false)
+          setDailyFight(0)
         }}
       />
     )
@@ -401,12 +403,29 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         <button
           className="boss-btn daily-boss"
           onClick={() => {
-            setDailyFight(true)
+            setDailyFight(1)
             setFighting(daily)
           }}
         >
           {dailyDone ? `✅ 今日のボス「${BOSSES[daily].name}」はたおした！（もう一度戦う）` : `⚔️ 今日のボス「${BOSSES[daily].name}」（${daily}）に勝つと 🪙${DAILY_BOSS_COINS}`}
         </button>
+      )}
+      {daily && !dailyDone && (
+        <div className="daily-stars">
+          強さを選ぶ：
+          {[2, 3].map((n) => (
+            <button
+              key={n}
+              className="list-link"
+              onClick={() => {
+                setDailyFight(n)
+                setFighting(daily)
+              }}
+            >
+              {'★'.repeat(n)}（HP{dailyHp(n)}・🪙×{n}）
+            </button>
+          ))}
+        </div>
       )}
       <p className="stats-note">10語ずつのステージ。6問以上正解でクリアして、次のステージへ！</p>
       {(() => {

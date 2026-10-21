@@ -189,3 +189,6 @@ export function goldenLevelOf<T>(levels: T[], day: string): T | undefined {
   return dailyBossLevel(levels, `gold-${day}`)
 }
 export const goldenLook = (l: BossLook): BossLook => ({ ...l, name: `金色の${l.name}`, color: '#fbbf24', line: '#92400e', eye: '#7c2d12' })
+
+// 今日のボスの強さ：★が1つふえるごとに HP+40、ごほうびは★の数の倍
+export const dailyHp = (stars: number) => BOSS_HP + (stars - 1) * 40

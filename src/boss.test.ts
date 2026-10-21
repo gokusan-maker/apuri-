@@ -95,3 +95,8 @@ it('今日の金色ボスは日付で決まり、名前に「金色の」がつ�
   expect(LEVELS).toContain(goldenLevelOf(LEVELS, '2026-10-21'))
   expect(goldenLook(BOSSES['中1']).name).toBe('金色のヤミモチ')
 })
+
+it('今日のボスは★が高いほどHPが多い', async () => {
+  const { dailyHp } = await import('./boss')
+  expect([dailyHp(1), dailyHp(2), dailyHp(3)]).toEqual([100, 140, 180])
+})

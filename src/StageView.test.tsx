@@ -179,3 +179,10 @@ it('ボスの連勝数が出る', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} winStreak={2} />)
   expect(screen.getByText(/ボス 2連勝中！/)).toBeInTheDocument()
 })
+
+it('今日のボスは★2・★3の強さを選べる', () => {
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByText(/★★★（HP180・🪙×3）/))
+  expect(screen.getByText('⚔️ 今日のボス ★★★')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '180')
+})

@@ -875,10 +875,10 @@ function App() {
           partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
           onSpend={spend}
           dailyDone={dailyBossDay === today}
-          onDailyWin={() => {
+          onDailyWin={(stars) => {
             if (dailyBossDay === today) return
             setDailyBossDay(today)
-            setWallet((w) => ({ ...w, coins: w.coins + DAILY_BOSS_COINS }))
+            setWallet((w) => ({ ...w, coins: w.coins + DAILY_BOSS_COINS * stars }))
           }}
           learnedPct={Object.fromEntries(levels.map((l) => [l, learnedPct(wordsOf([l]), progress)]))}
           onStudy={(ws) => {
