@@ -482,6 +482,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'I was ___ tired to finish my homework.', choices: ['too', 'enough', 'much'], answer: 0, why: '「疲れすぎて終えられなかった」なので too ～ to。' },
     ],
   },
+  {
+    id: 'want-to',
+    title: 'want to ～ / want 人 to ～',
+    points: ['want to ～ で「～したい」。', 'want ＋人＋ to ～ で「（人）に～してほしい」。tell 人 to ～（～するように言う）、ask 人 to ～（～するようにたのむ）も同じ形。'],
+    examples: [
+      { en: 'I want to be a pilot.', ja: '私はパイロットになりたい。' },
+      { en: 'My mother wants me to clean my room.', ja: '母は私に部屋をそうじしてほしいと思っている。' },
+    ],
+    questions: [
+      { sentence: 'I want ___ a new bike.', choices: ['buy', 'to buy', 'buying'], answer: 1, why: '「～したい」は want to ＋動詞の原形。' },
+      { sentence: 'The teacher told us ___ quiet.', choices: ['be', 'to be', 'being'], answer: 1, why: 'tell ＋人＋ to ～で「～するように言う」。' },
+      { sentence: 'I want ___ to help me.', choices: ['you', 'your', 'yours'], answer: 0, why: 'want ＋人＋ to ～。人の部分は目的格 you。' },
+    ],
+  },
+  {
+    id: 'reflexive',
+    title: '再帰代名詞（myself / yourself など）',
+    points: ['「自分自身を・に」は -self（複数は -selves）を使う：myself, yourself, himself, herself, itself, ourselves, themselves。', 'enjoy oneself（楽しむ）、by oneself（ひとりで）、help yourself（自由に取って）などの決まった言い方が多い。'],
+    examples: [
+      { en: 'We enjoyed ourselves at the party.', ja: '私たちはパーティーで楽しんだ。' },
+      { en: 'He made the cake by himself.', ja: '彼はひとりでケーキを作った。' },
+    ],
+    questions: [
+      { sentence: 'Please help ___ to the cookies.', choices: ['you', 'yourself', 'your'], answer: 1, why: 'help yourself で「自由に取って食べてね」。' },
+      { sentence: 'She looked at ___ in the mirror.', choices: ['her', 'herself', 'she'], answer: 1, why: '主語と同じ人（自分自身）を見るので herself。' },
+      { sentence: 'The children enjoyed ___ at the beach.', choices: ['themselves', 'them', 'their'], answer: 0, why: 'enjoy oneself で「楽しむ」。主語が複数なので themselves。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
