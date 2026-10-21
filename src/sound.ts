@@ -36,6 +36,16 @@ export function playCorrect() {
   tone(1320, 0.1, 0.18)
 }
 
+// コンボ音：連続正解するほど高くなる（半音ずつ、最大1オクターブ）
+export const comboPitch = (combo: number) => 2 ** (Math.min(Math.max(combo - 1, 0), 12) / 12)
+
+export function playComboCorrect(combo: number) {
+  if (!ready()) return
+  const k = comboPitch(combo)
+  tone(880 * k, 0, 0.12)
+  tone(1320 * k, 0.1, 0.18)
+}
+
 export function playWrong() {
   if (!ready()) return
   tone(220, 0, 0.25)

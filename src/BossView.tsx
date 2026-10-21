@@ -9,7 +9,7 @@ import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, 
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
-import { playBossSound, playCorrect, playWrong } from './sound'
+import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
 import { LEVELS, type Level, type Word } from './words'
 
 type Props = {
@@ -202,7 +202,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
       setHp(Math.max(0, nextHp))
       setHit(true)
-      playCorrect()
+      playComboCorrect(c)
       onAnswer?.(true, quizXp(c), q.word.id, 'quiz')
       if (nextHp <= 0) win(nc)
     } else {

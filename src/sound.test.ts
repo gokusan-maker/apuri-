@@ -47,3 +47,12 @@ it('ボス戦の効果音がそろっていて、音を切っていれば鳴ら�
   localStorage.setItem('eitan:settings', JSON.stringify({ sound: false }))
   expect(() => playBossSound('victory')).not.toThrow()
 })
+
+it('コンボ音は連続正解するほど高くなり、1オクターブで止まる', async () => {
+  const { comboPitch } = await import('./sound')
+  expect(comboPitch(1)).toBe(1)
+  expect(comboPitch(0)).toBe(1)
+  expect(comboPitch(2)).toBeGreaterThan(comboPitch(1))
+  expect(comboPitch(13)).toBeCloseTo(2)
+  expect(comboPitch(30)).toBeCloseTo(2)
+})
