@@ -538,6 +538,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: '___ you are tired, take a rest.', choices: ['If', 'But', 'So'], answer: 0, why: '「もし疲れているなら」は If。' },
     ],
   },
+  {
+    id: 'for-since',
+    title: 'for と since（現在完了の「〜の間」「〜から」）',
+    points: ['for ＋期間で「〜の間」（for three years）。', 'since ＋始まった時で「〜から（ずっと）」（since 2020 / since I was ten）。'],
+    examples: [
+      { en: 'I have lived here for five years.', ja: '私はここに5年間住んでいる。' },
+      { en: 'She has played tennis since she was eight.', ja: '彼女は8歳のときからテニスをしている。' },
+    ],
+    questions: [
+      { sentence: 'We have known each other ___ ten years.', choices: ['for', 'since'], answer: 0, why: '「10年間」は期間なので for。' },
+      { sentence: 'It has been raining ___ this morning.', choices: ['for', 'since'], answer: 1, why: '「今朝から」は始まった時なので since。' },
+      { sentence: 'He has been sick ___ last Monday.', choices: ['for', 'since'], answer: 1, why: '「この前の月曜日から」なので since。' },
+    ],
+  },
+  {
+    id: 'it-takes',
+    title: 'It takes ＋時間＋ to ～（～するのに…かかる）',
+    points: ['It takes ＋時間＋ to ～ で「～するのに（時間が）かかる」。', 'だれにとってかを言うときは It takes ＋人＋時間＋ to ～。たずねるときは How long does it take to ～?'],
+    examples: [
+      { en: 'It takes ten minutes to walk to school.', ja: '学校まで歩いて10分かかる。' },
+      { en: 'How long does it take to get to the station?', ja: '駅までどのくらいかかりますか。' },
+    ],
+    questions: [
+      { sentence: 'It ___ an hour to finish my homework.', choices: ['takes', 'spends', 'has'], answer: 0, why: '「時間がかかる」は It takes。' },
+      { sentence: 'How long does it take ___ to Osaka by train?', choices: ['go', 'to go', 'going'], answer: 1, why: 'It takes ～ to ＋動詞の原形。' },
+      { sentence: 'It took ___ three hours to clean the room.', choices: ['me', 'my', 'I'], answer: 0, why: 'It takes ＋人（目的格）＋時間。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
