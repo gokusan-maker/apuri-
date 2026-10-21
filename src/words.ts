@@ -2165,6 +2165,16 @@ const WORDS_4: Word[] = [
   { id: 'im-just-looking', en: 'I\'m just looking', ja: '見ているだけです', example: 'Can I help you? — I\'m just looking, thanks.', exampleJa: '何かおさがしですか。—見ているだけです。', level: '会話' },
   { id: 'that-will-be', en: 'That will be ... yen', ja: '〜円になります', example: 'That will be 500 yen.', exampleJa: '500円になります。', level: '会話' },
   { id: 'how-long-does-it-take', en: 'How long does it take?', ja: 'どのくらい時間がかかりますか', example: 'How long does it take to walk there?', exampleJa: 'そこまで歩いてどのくらいかかりますか。', level: '会話' },
+  { id: 'are-you-ok', en: 'Are you OK?', ja: 'だいじょうぶ？', example: 'You fell down. Are you OK?', exampleJa: '転んだね。だいじょうぶ？', level: '会話' },
+  { id: 'nice-job', en: 'Nice job!', ja: 'よくやったね！', example: 'Nice job! You got all the answers right.', exampleJa: 'よくやったね！全問正解だよ。', level: '会話' },
+  { id: 'see-you-soon', en: 'See you soon', ja: 'またすぐにね', example: 'See you soon, Grandma!', exampleJa: 'おばあちゃん、またすぐにね！', level: '会話' },
+  { id: 'come-on', en: 'Come on!', ja: 'さあ、早く！・がんばれ！', example: 'Come on! The bus is coming.', exampleJa: 'さあ早く！バスが来るよ。', level: '会話' },
+  { id: 'all-right', en: 'All right', ja: 'わかった・いいよ', example: 'All right, let\'s start the game.', exampleJa: 'わかった、ゲームを始めよう。', level: '会話' },
+  { id: 'enjoy-your-meal', en: 'Enjoy your meal', ja: 'ごゆっくりお召し上がりください', example: 'Here is your pizza. Enjoy your meal.', exampleJa: 'ピザをどうぞ。ごゆっくりお召し上がりください。', level: '会話' },
+  { id: 'happy-birthday', en: 'Happy birthday', ja: 'お誕生日おめでとう', example: 'Happy birthday, Ken! I made a cake for you.', exampleJa: 'ケン、お誕生日おめでとう！ケーキを作ったよ。', level: '会話' },
+  { id: 'my-pleasure', en: 'My pleasure', ja: 'どういたしまして・よろこんで', example: '"Thank you for your help." "My pleasure."', exampleJa: '「手伝ってくれてありがとう。」「どういたしまして。」', level: '会話' },
+  { id: 'same-here', en: 'Same here', ja: 'こっちも同じだよ', example: '"I\'m so tired today." "Same here."', exampleJa: '「今日はすごく疲れた。」「こっちも同じだよ。」', level: '会話' },
+  { id: 'good-idea', en: 'Good idea', ja: 'いい考えだね', example: '"Let\'s go to the park." "Good idea!"', exampleJa: '「公園に行こう。」「いい考えだね！」', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
