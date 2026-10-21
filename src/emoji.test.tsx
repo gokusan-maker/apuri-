@@ -49,3 +49,7 @@ it('聞いて絵文字を選ぶ', () => {
   fireEvent.click(screen.getByRole('button', { name: EMOJI[w.id] }))
   expect(screen.getByText(/正解！/)).toBeInTheDocument()
 })
+
+it('新しく足した動物などにも絵文字がある', () => {
+  for (const id of ['hippo', 'lizard', 'telescope', 'ambulance', 'honey']) expect(EMOJI[id], id).toBeTruthy()
+})
