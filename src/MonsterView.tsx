@@ -688,6 +688,14 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   )
 }
 
+// 図鑑の並び：はじめの3つ → 系統ごとに4段階
+const ZUKAN_ROWS = [
+  { label: '🥚 はじめ', ids: ['egg', 'chibi', 'mochimaru'] },
+  { label: '🃏 カード', ids: ['mori', 'mori-king', 'mori-legend', 'mori-myth'] },
+  { label: '❓ クイズ', ids: ['inazuma', 'inazuma-king', 'inazuma-legend', 'inazuma-myth'] },
+  { label: '👂 リスニング・スペル', ids: ['sora', 'sora-king', 'sora-legend', 'sora-myth'] },
+]
+
 export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const seen = new Set(monsters.flatMap(seenForms))
   const [detail, setDetail] = useState<Form | null>(null)
@@ -697,24 +705,37 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
         モンスター図鑑 {seen.size} / {FORMS.length}
       </h2>
       <p className="stats-note">Lv15 からは、いちばん多く使った学び方で進化先が変わるよ。</p>
-      <ul className="badge-grid">
-        {FORMS.map((f) => (
-          <li key={f.id} className={seen.has(f.id) ? 'got' : 'locked'}>
-            <button
-              className="party-pick zukan-pick"
-              aria-label={seen.has(f.id) ? `${f.name}の説明` : 'まだ出会っていない姿'}
-              disabled={!seen.has(f.id)}
-              onClick={() => setDetail(detail?.id === f.id ? null : f)}
-            >
-              <span className="zukan-figure">
-                <MonsterFigure form={f} hidden={!seen.has(f.id)} />
-              </span>
-              <span className="badge-name">{seen.has(f.id) ? f.name : '？？？'}</span>
-              <span className="badge-desc">{f.hint}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
+      {ZUKAN_ROWS.map((row) => (
+        <div key={row.label} className="zukan-row">
+          <span className="zukan-row-label">{row.label}</span>
+          <ol className="zukan-line">
+            {row.ids.map((id, i) => {
+              const f = FORMS.find((x) => x.id === id)!
+              return (
+                <li key={id} className={seen.has(id) ? 'got' : 'locked'}>
+                  {i > 0 && (
+                    <span className="zukan-arrow" aria-hidden="true">
+                      ▶
+                    </span>
+                  )}
+                  <button
+                    className="party-pick zukan-pick"
+                    aria-label={seen.has(id) ? `${f.name}の説明` : 'まだ出会っていない姿'}
+                    disabled={!seen.has(id)}
+                    onClick={() => setDetail(detail?.id === id ? null : f)}
+                  >
+                    <span className="zukan-figure">
+                      <MonsterFigure form={f} hidden={!seen.has(id)} />
+                    </span>
+                    <span className="badge-name">{seen.has(id) ? f.name : '？？？'}</span>
+                    <span className="badge-desc">{f.hint}</span>
+                  </button>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
+      ))}
       {detail && (
         <div className="zukan-detail" role="status" style={{ background: `linear-gradient(135deg, ${detail.color}55, transparent 70%)` }}>
           <span className="zukan-big">

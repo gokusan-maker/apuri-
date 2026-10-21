@@ -822,3 +822,15 @@ button:focus:not(:focus-visible) { outline: none; }
 @keyframes heart-up { 0% { transform: translateY(10px) scale(0.5); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(-30px) scale(1.1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .poke-hearts { display: none; } }
 .shop-stage { position: relative; isolation: isolate; overflow: hidden; margin: 0 0 8px; padding: 6px 0; border-radius: 16px; background: var(--card); }
+/* 図鑑：系統ごとの進化の流れ */
+.zukan-row { margin: 10px 0 0; }
+.zukan-row-label { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
+.zukan-line { list-style: none; display: flex; gap: 0; padding: 0; margin: 4px 0 0; overflow-x: auto; }
+.zukan-line li { display: flex; align-items: center; flex: 1 1 0; min-width: 0; }
+.zukan-line li.locked { opacity: 0.55; }
+.zukan-line .zukan-pick { flex: 1; min-width: 0; display: flex; flex-direction: column; align-items: center; padding: 6px 2px; border-radius: 12px; background: var(--bg); }
+.zukan-line .badge-name { font-size: 0.65rem; line-height: 1.2; word-break: break-all; }
+.zukan-line .badge-desc { font-size: 0.6rem; }
+.zukan-arrow { flex: none; padding: 0 1px; font-size: 0.6rem; color: #f59e0b; }
+.zukan-line .zukan-figure { width: 52px; height: 52px; }
+.zukan-line li.locked .zukan-figure { filter: grayscale(1); }
