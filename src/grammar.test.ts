@@ -159,3 +159,11 @@ it('おすすめ単元は★が少なく、まだ全問正解していない単�
   const r = recommendUnits(us, clears, record).map((u) => u.id)
   expect(r).toEqual([us[3].id, us[4].id, us[2].id])
 })
+
+it('苦手ランキングはまちがいノートに多い単元から', async () => {
+  const { weakRanking } = await import('./grammar')
+  const a = GRAMMAR[0].questions.map((q) => q.sentence)
+  const b = GRAMMAR[1].questions.map((q) => q.sentence)
+  const r = weakRanking([b[0], a[0], a[1], 'なし'])
+  expect(r.map((x) => [x.unit.id, x.count])).toEqual([[GRAMMAR[0].id, 2], [GRAMMAR[1].id, 1]])
+})
