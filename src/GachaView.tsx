@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { GACHA_PRICE, PARTY_MAX } from './gacha'
-import { FORMS, RARITY_LABEL, withSpecies, type Kind, type Species } from './monster'
+import { FORMS, RARITY_LABEL, SPECIES, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
 export type GachaResult = { kind: Kind; species: Species }
@@ -50,7 +50,7 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
           <li>レア（さくら色・うみ色・よる色）各10%</li>
           <li>スーパーレア（きんいろ）9%</li>
           <li>ウルトラレア（にじいろ）1%</li>
-          <li>キャラクター：モチ40%・コンコン25%・ペンペン25%・ドラコ10%</li>
+          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(sp.rate * 100)}%`).join('・')}</li>
         </ul>
       </details>
       {result && (

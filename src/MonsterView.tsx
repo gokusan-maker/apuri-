@@ -240,6 +240,14 @@ function Markings({ form, line }: { form: Form; line: string }) {
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
+  if (species === 'rabbit') return <circle cx="82" cy="80" r="7" fill="#fff" stroke={line} strokeWidth="2" />
+  if (species === 'cat')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinecap="round" fill="none">
+        <path d="M78 80 Q96 80 92 62 Q90 54 96 50" strokeWidth="6" stroke={line} />
+        <path d="M78 80 Q96 80 92 62 Q90 54 96 50" strokeWidth="3" stroke={fill} />
+      </g>
+    )
   if (species === 'fox')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -269,6 +277,23 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M66 34 Q74 22 70 12 Q66 24 60 30 Z" />
       </g>
     )
+  if (species === 'rabbit')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        <path d="M34 32 Q26 0 36 -2 Q46 0 44 30 Z" fill={fill} />
+        <path d="M66 32 Q74 0 64 -2 Q54 0 56 30 Z" fill={fill} />
+        <path d="M36 26 Q32 6 37 4 Q41 6 41 26 Z M64 26 Q68 6 63 4 Q59 6 59 26 Z" fill="#f9a8d4" stroke="none" />
+      </g>
+    )
+  if (species === 'cat')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        <path d="M26 40 L28 18 L44 30 Z" fill={fill} />
+        <path d="M74 40 L72 18 L56 30 Z" fill={fill} />
+        <path d="M30 34 L31 24 L38 30 Z M70 34 L69 24 L62 30 Z" fill="#f9a8d4" stroke="none" />
+        <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
+      </g>
+    )
   if (species === 'fox')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -283,6 +308,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
 // 顔まわりのパーツ（おなか・口もと）
 function SpeciesFace({ species }: { species: string }) {
   if (species === 'penguin') return <ellipse cx="50" cy="70" rx="22" ry="18" fill="#fff" opacity="0.92" />
+  if (species === 'cat')
+    return (
+      <g stroke="#475569" strokeWidth="1.3" strokeLinecap="round" opacity="0.8">
+        <path d="M24 64 L12 61 M24 68 L12 69 M76 64 L88 61 M76 68 L88 69" />
+      </g>
+    )
+  if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
   if (species === 'fox') return <path d="M32 66 Q50 58 68 66 Q66 84 50 86 Q34 84 32 66 Z" fill="#fff" opacity="0.85" />
   if (species === 'dragon')
     return (
@@ -552,7 +584,7 @@ export function MonsterFigure({
       {form.stage >= 3 && !hidden && <Particles form={form} />}
       <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
         <g className={hidden ? undefined : 'monster-breathe'}>
-          {form.species === 'fox' || form.species === 'dragon' ? (
+          {form.species === 'fox' || form.species === 'dragon' || form.species === 'rabbit' || form.species === 'cat' ? (
             form.stage >= 1 && <SpeciesTail species={form.species} fill={hidden ? fill : body} line={line} />
           ) : (
             form.stage >= 3 && <Tail form={form} fill={hidden ? fill : body} line={line} />

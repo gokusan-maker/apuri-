@@ -24,3 +24,8 @@ it('今日のチャレンジの連続クリア日数', () => {
   expect(nextChallengeStreak('2026-10-17', 5, '2026-10-20')).toBe(1)
   expect(nextChallengeStreak('2026-02-28', 1, '2026-03-01')).toBe(2)
 })
+
+it('ウサピョンはリスニング、ニャンタは和文英訳', () => {
+  expect(challengeOf('rabbit').dir).toBe('listen')
+  expect(challengeOf('cat').dir).toBe('ja-en')
+})

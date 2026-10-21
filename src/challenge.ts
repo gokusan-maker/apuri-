@@ -1,13 +1,15 @@
 // 今日のチャレンジ：選んでいるキャラクターで問題の種類が、育ち具合で難しさが変わる。1日1回ごほうび
 import type { Level } from './words'
 
-export type ChallengeKind = { dir: 'en-ja' | 'gmix' | 'order' | 'sentence-read'; label: string; icon: string }
+export type ChallengeKind = { dir: 'en-ja' | 'gmix' | 'order' | 'sentence-read' | 'listen' | 'ja-en'; label: string; icon: string }
 
 export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   mochi: { dir: 'en-ja', label: '単語', icon: '🔤' },
   fox: { dir: 'gmix', label: '文法', icon: '📐' },
   penguin: { dir: 'order', label: '並べかえ', icon: '🔀' },
   dragon: { dir: 'sentence-read', label: '英文和訳', icon: '📜' },
+  rabbit: { dir: 'listen', label: 'リスニング', icon: '🎧' },
+  cat: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
 export const challengeOf = (species: string | undefined): ChallengeKind => CHALLENGE_BY_SPECIES[species ?? 'mochi'] ?? CHALLENGE_BY_SPECIES.mochi

@@ -84,7 +84,7 @@ export function Challenge({ monster, done, onAnswer, onClear, onClose }: Props) 
           </button>
         </div>
       )}
-      <p className="stats-note">キャラクターによって問題の種類が変わるよ：モチ＝単語・コンコン＝文法・ペンペン＝並べかえ・ドラコ＝英文和訳。相棒が育つほど難しくなる！</p>
+      <p className="stats-note">キャラクターによって問題の種類が変わるよ：モチ＝単語・コンコン＝文法・ペンペン＝並べかえ・ウサピョン＝リスニング・ニャンタ＝和文英訳・ドラコ＝英文和訳。相棒が育つほど難しくなる！</p>
     </section>
   )
 }
