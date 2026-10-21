@@ -52,3 +52,8 @@ it('図鑑：出会った姿をタップすると大きな絵と段階の星と�
   expect(screen.getByLabelText('進化段階 2').textContent).toBe('★★☆☆☆☆')
   expect(screen.getByText(/ぷにぷにの体/)).toBeInTheDocument()
 })
+
+it('タマゴはかえる直前ほどひびが入る', () => {
+  const n = (c: number) => render(<MonsterFigure form={form('egg')} crack={c} />).container.querySelectorAll('.egg-crack').length
+  expect([n(0), n(0.3), n(0.6), n(0.9)]).toEqual([0, 1, 2, 3])
+})

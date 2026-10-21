@@ -353,11 +353,13 @@ export function MonsterFigure({
   mood = 'normal',
   hidden = false,
   wear,
+  crack = 0,
 }: {
   form: Form
   mood?: Mood
   hidden?: boolean
   wear?: string
+  crack?: number // タマゴのひび（0〜1。かえる直前ほど大きい）
 }) {
   const uid = form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
   const fill = hidden ? '#9ca3af' : form.color
@@ -390,6 +392,9 @@ export function MonsterFigure({
               <circle cx="60" cy="80" r="3.5" fill="#f59e0b" opacity="0.8" />
               <circle cx="64" cy="66" r="2.5" fill="#f59e0b" opacity="0.8" />
               <ellipse cx="38" cy="32" rx="7" ry="10" fill="#fff" opacity="0.5" transform="rotate(-20 38 32)" />
+              {crack >= 0.3 && <path className="egg-crack" d="M50 20 l-4 8 l6 5 l-5 8" fill="none" stroke={line} strokeWidth="2" strokeLinecap="round" />}
+              {crack >= 0.6 && <path className="egg-crack" d="M70 40 l-6 4 l4 6 l-7 3" fill="none" stroke={line} strokeWidth="2" strokeLinecap="round" />}
+              {crack >= 0.85 && <path className="egg-crack" d="M30 62 l7 -2 l-2 7 l8 -1" fill="none" stroke={line} strokeWidth="2" strokeLinecap="round" />}
             </>
           )}
         </g>
@@ -500,7 +505,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : mood} wear={monster.wear} />
+        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
         {gain && gain.amount > 0 && (
           <span key={gain.key} className="xp-float" aria-hidden="true">
             +{gain.amount}
