@@ -114,3 +114,11 @@ it('1撃の最大ダメージ記録は、上回ったときだけ更新される
   localStorage.setItem('eitan:max-hit', 'abc')
   expect(loadMaxHit()).toBe(0)
 })
+
+it('ボスの登場セリフは名前ごとに決まる', async () => {
+  const { INTRO_LINES, introLineOf } = await import('./boss')
+  for (const b of Object.values(BOSSES)) {
+    expect(INTRO_LINES).toContain(introLineOf(b.name))
+    expect(introLineOf(b.name)).toBe(introLineOf(b.name))
+  }
+})

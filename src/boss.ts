@@ -142,6 +142,21 @@ export const DEFEAT_LINES: { en: string; ja: string }[] = [
   { en: 'I need a little rest now...', ja: 'ちょっと休ませてくれ…' },
 ]
 
+// 登場セリフ（戦いの始めにひとこと）
+export const INTRO_LINES: { en: string; ja: string }[] = [
+  { en: 'Can you answer my questions?', ja: 'わたしの問題に答えられるかな？' },
+  { en: "Let's see how many words you know!", ja: 'きみがどれだけ単語を知っているか見てやろう！' },
+  { en: 'I have been waiting for you.', ja: 'きみを待っていたぞ。' },
+  { en: 'You cannot beat me so easily!', ja: 'そうかんたんには負けないぞ！' },
+  { en: 'Show me what you have learned.', ja: '学んだことを見せてみろ。' },
+  { en: 'Are you ready? Here I come!', ja: '準備はいいか？ いくぞ！' },
+]
+
+export function introLineOf(name: string): { en: string; ja: string } {
+  const n = [...name].reduce((a, c) => (a * 37 + c.charCodeAt(0)) % 9973, 0)
+  return INTRO_LINES[n % INTRO_LINES.length]
+}
+
 export function defeatLineOf(name: string): { en: string; ja: string } {
   const n = [...name].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 0)
   return DEFEAT_LINES[n % DEFEAT_LINES.length]

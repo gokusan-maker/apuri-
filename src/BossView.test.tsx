@@ -15,6 +15,7 @@ describe('ボス戦', () => {
   it('正解を続けるとボスをたおせる', () => {
     const onWin = vi.fn()
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={onWin} onExit={() => {}} />)
+    expect(document.querySelector('.boss-intro')).not.toBeNull()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
       answer(true)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
@@ -23,6 +24,7 @@ describe('ボス戦', () => {
     expect(onWin).toHaveBeenCalledTimes(1)
     expect(document.querySelectorAll('.boss .confetti:not(.gold)').length).toBe(12)
     expect(screen.getByText('💥 とどめ！')).toBeInTheDocument()
+    expect(document.querySelector('.boss-intro')).toBeNull()
     expect(document.querySelector('.boss-figure.finished')).not.toBeNull()
     expect(screen.getByText(/最大ダメージ記録/)).toBeInTheDocument()
   })
