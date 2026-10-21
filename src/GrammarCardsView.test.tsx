@@ -14,3 +14,27 @@ it('要点カードはタップでめくれて、つぎ・まえに進める', (
   fireEvent.click(screen.getByText('◀ まえ'))
   expect(screen.getByText(GRAMMAR[2].title)).toBeInTheDocument() // 先頭からまえは最後へ
 })
+
+it('「覚えた／まだ」を記録して、まだのカードだけめくれる', () => {
+  localStorage.clear()
+  render(<GrammarCards units={GRAMMAR.slice(0, 3)} onBack={() => {}} />)
+  fireEvent.click(screen.getByLabelText('カードをめくる'))
+  fireEvent.click(screen.getByText('⭕ 覚えた'))
+  expect(screen.getByText(/覚えた 1 \/ 3/)).toBeInTheDocument()
+  expect(screen.getByText(GRAMMAR[1].title)).toBeInTheDocument()
+  fireEvent.click(screen.getByLabelText('カードをめくる'))
+  fireEvent.click(screen.getByText('🔁 まだ'))
+  expect(JSON.parse(localStorage.getItem('eitan:grammar-cards-known')!)).toEqual([GRAMMAR[0].id])
+  fireEvent.click(screen.getByText('🔁 「まだ」のカードだけめくる'))
+  expect(screen.getByText(/要点カード 1 \/ 2/)).toBeInTheDocument()
+  expect(screen.getByText(GRAMMAR[1].title)).toBeInTheDocument()
+  fireEvent.click(screen.getByText('📚 全部のカードにもどす'))
+  expect(screen.getByText(/要点カード 1 \/ 3/)).toBeInTheDocument()
+})
+
+it('全部覚えると「まだ」だけの山札は空になる', () => {
+  localStorage.setItem('eitan:grammar-cards-known', JSON.stringify(GRAMMAR.slice(0, 2).map((u) => u.id)))
+  render(<GrammarCards units={GRAMMAR.slice(0, 2)} onBack={() => {}} />)
+  fireEvent.click(screen.getByText('🔁 「まだ」のカードだけめくる'))
+  expect(screen.getByText('🎉 全部のカードを覚えた！')).toBeInTheDocument()
+})

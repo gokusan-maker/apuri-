@@ -103,3 +103,14 @@ it('お気に入りの単元を先に並べられる', async () => {
   localStorage.setItem('eitan:grammar-fav', '{"x":1}')
   expect(loadGrammarFav()).toEqual([])
 })
+
+it('要点カードの覚えた記録をつけ外しできる', async () => {
+  const { loadCardsKnown, markKnown, saveCardsKnown } = await import('./grammar')
+  localStorage.clear()
+  expect(loadCardsKnown()).toEqual([])
+  expect(markKnown(['a'], 'a', true)).toEqual(['a'])
+  expect(markKnown(['a'], 'b', true)).toEqual(['a', 'b'])
+  expect(markKnown(['a', 'b'], 'a', false)).toEqual(['b'])
+  saveCardsKnown(['b'])
+  expect(loadCardsKnown()).toEqual(['b'])
+})

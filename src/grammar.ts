@@ -1149,3 +1149,22 @@ export function saveGrammarFav(ids: string[]): void {
 export const toggleGrammarFav = (ids: string[], id: string) => (ids.includes(id) ? ids.filter((x) => x !== id) : [...ids, id])
 // ★の単元を先に、あとは元の順番
 export const favFirst = <T extends { id: string }>(units: T[], fav: string[]) => [...units.filter((u) => fav.includes(u.id)), ...units.filter((u) => !fav.includes(u.id))]
+
+// 要点カードの「覚えた」単元
+const CARDS_KEY = 'eitan:grammar-cards-known'
+export function loadCardsKnown(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(CARDS_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveCardsKnown(ids: string[]): void {
+  try {
+    localStorage.setItem(CARDS_KEY, JSON.stringify(ids))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const markKnown = (ids: string[], id: string, known: boolean) => (known ? (ids.includes(id) ? ids : [...ids, id]) : ids.filter((x) => x !== id))
