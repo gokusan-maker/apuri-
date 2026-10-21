@@ -192,7 +192,7 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   expect(loadLongDraft('x')).toBeNull()
   const empty = { blanks: {}, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} }
   saveLongDraft('x', { ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1 })
-  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {}, vocab: {} })
+  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {}, vocab: {}, seq: [] })
   saveLongDraft('x', empty)
   expect(loadLongDraft('x')).toBeNull()
   saveLongDraft('y', { ...empty, picks: [1] })
@@ -254,5 +254,20 @@ it('語句の意味の設問は本文にある語で、選択肢は4つ', () => 
     }
     const right = Object.fromEntries(p.vocab!.map((v, i) => [i, v.answer]))
     expect(scoreLong(p, {}, {}, [], { vocab: right }).score).toBe(p.vocab!.length)
+  }
+})
+
+it('出来事の順番は全部の順番が合って1点', async () => {
+  const { seqRight } = await import('./longreading')
+  const ps = LONG_PASSAGES.filter((x) => x.seq)
+  expect(ps.length).toBeGreaterThanOrEqual(5)
+  for (const p of ps) {
+    const q = p.seq!
+    expect(q.events).toHaveLength(4)
+    expect([...q.answer].sort()).toEqual([0, 1, 2, 3])
+    expect(seqRight(q, q.answer)).toBe(true)
+    expect(seqRight(q, [...q.answer].reverse())).toBe(false)
+    expect(seqRight(q, q.answer.slice(0, 3))).toBe(false)
+    expect(scoreLong(p, {}, {}, [], { seq: q.answer }).score).toBe(1)
   }
 })

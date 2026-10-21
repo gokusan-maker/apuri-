@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -68,6 +68,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
   const [ins, setIns] = useState<number | undefined>(undefined) // 文を入れる位置
   const [summ, setSumm] = useState<Record<number, number>>({}) // 要約文の完成
   const [voc, setVoc] = useState<Record<number, number>>({}) // 語句の意味
+  const [seq, setSeq] = useState<number[]>([]) // 出来事の順番
   const [comp, setComp] = useState<Record<number, number>>({}) // 英文の完成
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
@@ -97,6 +98,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
     setIns(d?.insert)
     setSumm(d?.summary ?? {})
     setVoc(d?.vocab ?? {})
+    setSeq(d?.seq ?? [])
     setDone(false)
     setShowJa(false)
     setResumed(!!d)
@@ -105,8 +107,8 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
   // 答えかけの内容をとっておく（採点したら消す）
   useEffect(() => {
     if (!p) return
-    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc })
-  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc])
+    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq })
+  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq])
 
   if (!p) {
     return (
@@ -185,8 +187,8 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length + (p.seq && seq.length === p.seq.events.length ? 1 : 0)
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -460,6 +462,34 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
         </>
       )}
 
+      {p.seq && (
+        <>
+          <h3 className="long-q">問　次の ア〜エ の出来事を、起きた順に並べなさい（タップした順に並びます）。</h3>
+          <div className="long-item">
+            <p className="long-order-answer" aria-label="並べた順番">
+              {seq.length ? seq.map((i) => MARKS[i]).join(' → ') : '　'}
+            </p>
+            <div className="long-choices one">
+              {p.seq.events.map((e, i) => (
+                <button key={e} className={`long-choice${seq.includes(i) ? ' picked' : ''}`} disabled={done || seq.includes(i)} onClick={() => setSeq([...seq, i])}>
+                  {MARKS[i]} {e}
+                </button>
+              ))}
+            </div>
+            {!done && seq.length > 0 && (
+              <button className="list-link" onClick={() => setSeq([])}>
+                やりなおす
+              </button>
+            )}
+            {done && (
+              <p className={`long-why${seqRight(p.seq, seq) ? ' right' : ' wrong'}`}>
+                {seqRight(p.seq, seq) ? '⭕' : '❌'} 正解 {p.seq.answer.map((i) => MARKS[i]).join(' → ')}：{p.seq.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {p.vocab && (
         <>
           <h3 className="long-q">問　本文中の次の語の意味として最も適切なものを、前後の内容から考えて ア〜エ から選びなさい。</h3>
@@ -667,6 +697,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
               setIns(undefined)
               setSumm({})
               setVoc({})
+              setSeq([])
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -683,7 +714,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq }))
             setTypes(t)
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))

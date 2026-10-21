@@ -229,3 +229,12 @@ it('重要語句を★に入れられる', async () => {
   expect(onFavorite).toHaveBeenCalledWith([w.id])
   expect(btn).toBeDisabled()
 })
+
+it('出来事の順番をタップで並べられる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.seq)!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  for (const i of p.seq!.answer) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.seq!.events[i]}` }))
+  expect(screen.getByLabelText('並べた順番')).toHaveTextContent(p.seq!.answer.map((i) => MARKS[i]).join(' → '))
+})

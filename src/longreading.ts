@@ -12,11 +12,13 @@ export type Refer = { phrase: string; word: string; choices: string[]; answer: n
 // 文を入れる位置：ぬけている1文が入る場所を、段落のあとの［ア］〜［エ］から選ぶ（after は段落の番号）
 // 要約文の完成：本文をまとめた英文の ( 1 ) ( 2 ) … に入る語を選ぶ
 // 語句の意味：本文中の語の意味を前後から推測して選ぶ
+// 出来事の順番：ア〜エ の出来事を起きた順に並べる（answer は起きた順の番号の並び）
+export type SeqQ = { events: string[]; answer: number[]; why: string }
 export type VocabQ = { word: string; choices: string[]; answer: number; why: string }
 export type SummaryQ = { text: string; blanks: { choices: string[]; answer: number; why: string }[] }
 export type InsertQ = { sentence: string; after: number[]; answer: number; why: string }
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答（complete では q が文の前半）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[] }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[]; seq?: SeqQ }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -1061,6 +1063,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'by', 'from', 'to'], answer: 2, why: 'receive a letter from 人 で「人から手紙を受け取る」。' },
     ],
     refer: { phrase: 'It said', word: 'It', choices: ['the letter', 'the wallet', 'the photo', 'the phone'], answer: 0, why: '「〜と書いてあった」のは男の子からの手紙。' },
+    seq: { events: ['Nana called the number on the card.', 'Nana found a wallet on the sidewalk.', 'Nana received a letter from the boy.', 'The man came to the place where Nana was waiting.'], answer: [1, 0, 3, 2], why: 'さいふを見つける → カードの番号に電話 → 男の人が来る → 次の週に手紙が届く。' },
     tf: [
       { statement: 'Nana found the wallet on her way to school.', answer: false, why: '学校から家に帰るとちゅうに見つけた。' },
       { statement: 'There was a photo of a little boy in the wallet.', answer: true, why: '第1段落の内容と合う。' },
@@ -1195,6 +1198,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'in', 'on', 'to'], answer: 1, why: 'run in the park で「公園（の中）を走る」。' },
     ],
     refer: { phrase: 'he enjoys it', word: 'it', choices: ['running', 'the relay race', 'the park', 'the baton'], answer: 0, why: 'ハルトが楽しんでいるのは、毎朝走ること。' },
+    seq: { events: ['Haruto got the baton in second place.', 'The teacher chose Haruto for the relay race.', 'Haruto and Sota practiced in the park.', 'Haruto\'s classmates ran to him with big smiles.'], answer: [1, 2, 0, 3], why: '選手に選ばれる → 公園で練習 → 2位でバトンを受け取る → クラスメートがかけよる。' },
     tf: [
       { statement: 'Haruto was the fastest runner in his class.', answer: false, why: 'クラスでいちばん足がおそかった。' },
       { statement: 'Haruto and Sota practiced every morning before school.', answer: true, why: '第2段落の内容と合う。' },
@@ -1305,6 +1309,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'send 物 to 人 で「人に物を送る」。' },
     ],
     refer: { phrase: 'sent it', word: 'it', choices: ['the picture', 'the tomato', 'the plant', 'the garden'], answer: 0, why: 'おじいさんに送ったのはトマトの写真。' },
+    seq: { events: ['Yui called her grandfather.', 'Yui got a tomato plant from her grandfather.', 'Yui ate the sweetest tomato.', 'The leaves started to look weak.'], answer: [1, 3, 0, 2], why: 'なえをもらう → 葉が弱る → おじいさんに電話 → いちばんあまいトマトを食べる。' },
     tf: [
       { statement: "Yui's grandfather lived in the city.", answer: false, why: 'おじいさんはいなかに住んでいた。' },
       { statement: 'Yui got a tomato plant from her grandfather.', answer: true, why: '第2段落の内容と合う。' },
@@ -1529,6 +1534,7 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['gate', 'posters', 'phone', 'bench'], answer: 0, why: '第5段落「毎朝門をたしかめるようにした」。' },
       ],
     },
+    seq: { events: ['Riko heard a small bark near the river.', 'Riko and her father put up posters.', 'A woman called Riko\'s family.', 'Riko found that Coco was not in the yard.'], answer: [3, 1, 2, 0], why: 'ココがいないと気づく → ポスターをはる → 女の人から電話 → 川の近くでほえ声を聞く。' },
     tf: [
       { statement: 'Coco was in the yard on Sunday morning.', answer: false, why: '庭にいなかった。' },
       { statement: 'Riko and her father made posters with Coco\'s picture.', answer: true, why: '第2段落の内容と合う。' },
@@ -1642,6 +1648,7 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['famous', 'perfect', 'rich', 'tall'], answer: 1, why: '第5段落「音楽は完ぺきであることだけではない」。' },
       ],
     },
+    seq: { events: ['An old man talked to Mei.', 'Mei played a wrong note.', 'Mei practiced the same song every day.', 'Mei remembered her teacher\'s words.'], answer: [2, 1, 3, 0], why: '毎日練習 → まちがった音をひく → 先生の言葉を思い出す → おじいさんが話しかける。' },
     tf: [
       { statement: 'Mei practiced the piano for three months.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Mei played without any mistakes in the contest.', answer: false, why: 'とちゅうでまちがった音をひいた。' },
@@ -1763,7 +1770,9 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number> } = {}): { score: number; total: number } {
+export const seqRight = (q: SeqQ, a: number[] | undefined) => !!a && a.length === q.answer.length && a.every((x, i) => x === q.answer[i])
+
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number>; seq?: number[] } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -1778,7 +1787,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const ins = p.insert && extra.insert === p.insert.answer ? 1 : 0
   const su = (p.summary?.blanks ?? []).filter((x, i) => extra.summary?.[i] === x.answer).length
   const vo = (p.vocab ?? []).filter((x, i) => extra.vocab?.[i] === x.answer).length
-  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su + vo, total: totalOf(p) }
+  const sq = p.seq && seqRight(p.seq, extra.seq) ? 1 : 0
+  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su + vo + sq, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -1803,7 +1813,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0) + (p.seq ? 1 : 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
@@ -1854,13 +1864,13 @@ export function addReadWords(n: number): number {
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
-export const TYPE_LABEL = { vocab: '語句の意味', summary: '要約文の完成', insert: '文を入れる位置', complete: '英文の完成', title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export const TYPE_LABEL = { seq: '出来事の順番', vocab: '語句の意味', summary: '要約文の完成', insert: '文を入れる位置', complete: '英文の完成', title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
 export type QType = keyof typeof TYPE_LABEL
 export type TypeStats = Partial<Record<QType, [number, number]>>
 
 export function typeResults(
   p: LongPassage,
-  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number> },
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number>; seq?: number[] },
 ): TypeStats {
   const out: TypeStats = {}
   out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
@@ -1875,6 +1885,7 @@ export function typeResults(
   if (p.titleQ) out.title = [a.title === p.titleQ.answer ? 1 : 0, 1]
   if (p.complete) out.complete = [p.complete.filter((x, i) => a.complete?.[i] === x.answer).length, p.complete.length]
   if (p.insert) out.insert = [a.insert === p.insert.answer ? 1 : 0, 1]
+  if (p.seq) out.seq = [seqRight(p.seq, a.seq) ? 1 : 0, 1]
   if (p.vocab) out.vocab = [p.vocab.filter((x, i) => a.vocab?.[i] === x.answer).length, p.vocab.length]
   if (p.summary) out.summary = [p.summary.blanks.filter((x, i) => a.summary?.[i] === x.answer).length, p.summary.blanks.length]
   return out
@@ -1927,6 +1938,7 @@ export function hasType(p: LongPassage, k: QType): boolean {
     insert: !!p.insert,
     summary: !!p.summary,
     vocab: !!p.vocab,
+    seq: !!p.seq,
   }
   return map[k]
 }
@@ -1973,6 +1985,7 @@ export type LongDraft = {
   insert?: number
   summary?: Record<number, number>
   vocab?: Record<number, number>
+  seq?: number[]
 }
 const DRAFT_KEY = 'eitan:long-draft'
 const isObj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v)
@@ -1986,7 +1999,7 @@ export function loadLongDraft(id: string): LongDraft | null {
     const d = isObj(all) ? all[id] : null
     if (!isObj(d)) return null
     const tf = isObj(d.tf) ? (Object.fromEntries(Object.entries(d.tf).filter(([, x]) => typeof x === 'boolean')) as Record<number, boolean>) : {}
-    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary), vocab: numMap(d.vocab) }
+    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary), vocab: numMap(d.vocab), seq: nums(d.seq) }
   } catch {
     return null
   }
@@ -1994,7 +2007,7 @@ export function loadLongDraft(id: string): LongDraft | null {
 
 // 1問も答えていなければ消す
 export const draftEmpty = (d: LongDraft) =>
-  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}, d.vocab ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined
+  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}, d.vocab ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined && (d.seq ?? []).length === 0
 
 export function saveLongDraft(id: string, d: LongDraft | null): void {
   try {
