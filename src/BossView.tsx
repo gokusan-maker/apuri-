@@ -6,8 +6,8 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
-import { quizXp, speciesOf, type Form, type Source } from './monster'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
 import { LEVELS, type Level, type Word } from './words'
@@ -118,6 +118,15 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 }
 
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
+// 先制クイズの選択肢：弱点のキャラと、ほかの2つ（弱点によって並びを変える）
+function preemptChoices(weak: string): string[] {
+  const others = SPECIES.map((sp) => sp.id).filter((id) => id !== weak)
+  const k = [...weak].reduce((a, c) => a + c.charCodeAt(0), 0)
+  const pick = [others[k % others.length], others[(k + 1) % others.length]]
+  const at = k % 3
+  return [...pick.slice(0, at), weak, ...pick.slice(at)]
+}
+
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
@@ -147,6 +156,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [preempt, setPreempt] = useState<boolean | null>(null) // 先制クイズの結果（null＝まだ）
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const startedAt = useRef(0) // 戦いを始めた時刻（タイム記録用）
@@ -352,10 +362,38 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <span className="boss-intro-ja">{introLineOf(look.name).ja}</span>
         </p>
       )}
-      <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
+      {preempt === null && index === 0 && picked === null && hp === maxHp ? (
+        <div className="boss-preempt">
+          <p>❓ 先制クイズ：{look.name}の弱点はどのキャラクター？ 当てると先制 {PREEMPT_DAMAGE} ダメージ！</p>
+          <div className="boss-preempt-choices">
+            {preemptChoices(weak).map((id) => (
+              <button
+                key={id}
+                className="list-link"
+                onClick={() => {
+                  const ok = id === weak
+                  setPreempt(ok)
+                  if (ok) {
+                    setHp(Math.max(0, hp - PREEMPT_DAMAGE))
+                    setHit(true)
+                  }
+                }}
+              >
+                {speciesOf(id).name}
+              </button>
+            ))}
+            <button className="list-link" onClick={() => setPreempt(false)}>
+              スキップ
+            </button>
+          </div>
+        </div>
+      ) : (
+        preempt !== null && index === 0 && picked === null && <p className="boss-preempt-result">{preempt ? `⚡ 先制攻撃！ ${PREEMPT_DAMAGE} ダメージ` : '先制クイズははずれ…'}</p>
+      )}
+      {!(preempt === null && index === 0 && picked === null && hp === maxHp) && <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
         弱点：{speciesOf(weak).name}
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
-      </p>
+      </p>}
       {partner && (
         <div className="boss-partner">
           <span className="boss-partner-fig">

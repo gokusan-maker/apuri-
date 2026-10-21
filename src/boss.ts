@@ -261,3 +261,6 @@ export function recordBossTime(name: string, sec: number): boolean {
   return true
 }
 export const formatSec = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
+
+// 先制クイズ：戦う前にボスの弱点キャラを当てると先制ダメージ
+export const PREEMPT_DAMAGE = 10

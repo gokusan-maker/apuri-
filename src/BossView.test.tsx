@@ -233,6 +233,7 @@ it('弱点のキャラクターの相棒だと追加ダメージ', async () => {
   const { BOSSES } = await import('./boss')
   const sp = weakOf(BOSSES['中1'].name)
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], sp), species: sp === 'mochi' ? undefined : sp, name: 'あいぼう' }} />)
+  fireEvent.click(screen.getByText('スキップ'))
   expect(screen.getByText(/弱点をついている！/)).toBeInTheDocument()
   const before = 100
   vi.setSystemTime(Date.now() + 10000) // 会心なし
@@ -288,4 +289,22 @@ it('スローどけいを使うと、5秒かかっても会心の一撃', () => 
   vi.setSystemTime(Date.now() + 5000)
   answer(true)
   expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
+})
+
+it('先制クイズで弱点を当てると10ダメージ、はずれると0', async () => {
+  const { weakOf } = await import('./partner')
+  const { speciesOf } = await import('./monster')
+  const { BOSSES } = await import('./boss')
+  const weak = speciesOf(weakOf(BOSSES['中1'].name)).name
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  expect(screen.getByText(/先制クイズ/)).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: weak }))
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '90')
+  expect(screen.getByText(/先制攻撃！/)).toBeInTheDocument()
+  unmount()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  const wrong = [...document.querySelectorAll<HTMLButtonElement>('.boss-preempt-choices button')].find((b) => b.textContent !== weak && b.textContent !== 'スキップ')!
+  fireEvent.click(wrong)
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '100')
+  expect(screen.getByText('先制クイズははずれ…')).toBeInTheDocument()
 })

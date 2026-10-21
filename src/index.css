@@ -1272,3 +1272,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .mole-hole.up { background: radial-gradient(circle at 50% 75%, #78350f 35%, #fde68a 36%); color: #1f2937; animation: treasure-pop 0.3s ease-out both; }
 .mole-face { font-size: 1.4rem; line-height: 1; }
 .mole-word { font-size: 0.7rem; font-weight: 800; word-break: break-word; }
+.boss-preempt { margin: 6px 0; padding: 6px; border-radius: 10px; background: #eff6ff; color: #1e3a8a; font-size: 0.85rem; }
+.boss-preempt p { margin: 0 0 4px; font-weight: 700; }
+.boss-preempt-choices { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+.boss-preempt-result { margin: 4px 0; font-weight: 700; color: #1d4ed8; }
