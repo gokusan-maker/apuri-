@@ -46,6 +46,7 @@ type Props = {
   winStreak?: number // ボスの連勝数
   onLose?: () => void
   onOpenGold?: () => void
+  power?: number // 相棒のちから（正解ダメージ+）
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
   onWeekendWin?: () => void // 週末ボスをその週末はじめて倒した
 }
@@ -56,7 +57,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -89,6 +90,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         hp={univFight.hp}
         grammar
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
@@ -123,6 +125,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
@@ -160,6 +163,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
@@ -190,6 +194,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title="🌙 週末ボス"
         hp={WEEKEND_HP}
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
@@ -219,6 +224,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title="✨ 今週のレアボス"
         hp={RARE_HP}
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}
@@ -249,6 +255,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : undefined}
         grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
+        power={power}
         bag={bag}
         onUseItem={onUseItem}
         onDefeat={onBossDefeat}

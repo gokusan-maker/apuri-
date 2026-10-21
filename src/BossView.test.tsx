@@ -378,3 +378,17 @@ it('6問目はボスがねむっていてダメージ2倍', () => {
   const after = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
   expect(before - after).toBeGreaterThanOrEqual(20) // ふつうは最大10
 })
+
+it('相棒のちからの分だけ正解ダメージがふえる', () => {
+  vi.setSystemTime(Date.now() + 5000)
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} />)
+  vi.setSystemTime(Date.now() + 5000)
+  answer(true)
+  const a = 500 - Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  unmount()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} power={3} />)
+  vi.setSystemTime(Date.now() + 5000)
+  answer(true)
+  const b = 500 - Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  expect(b - a).toBe(3)
+})

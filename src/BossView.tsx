@@ -32,6 +32,7 @@ type Props = {
   onSkill?: () => void // 相棒の特技が出た（特技レベル用）
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   onLose?: () => void // ハートがなくなって負けた（連勝が切れる）
+  power?: number // 相棒のちから：正解ダメージ+
   golden?: boolean // 今日の金色ボス
   onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
@@ -130,7 +131,7 @@ function preemptChoices(weak: string): string[] {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
@@ -215,7 +216,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep ? 2 : 1)
-      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0)
+      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (minion === 'here') {

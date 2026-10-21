@@ -25,6 +25,8 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { Training } from './TrainingView'
+import { loadTraining } from './training'
 import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
@@ -279,6 +281,7 @@ function App() {
   const [shards, setShards] = usePersistent(loadShards, saveShards)
   const [gachaPoints, setGachaPoints] = usePersistent(loadGachaPoints, saveGachaPoints)
   const [stickers, setStickers] = usePersistent(loadStickers, saveStickers)
+  const [power, setPower] = useState(() => loadTraining().power)
   const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
   const [giftMsg, setGiftMsg] = useState('')
   // 1日の目標を達成したら、次の日のおみやげを予約する
@@ -844,6 +847,7 @@ function App() {
             </p>
           )
         )}
+        <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
         <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
         <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
         <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
@@ -994,6 +998,7 @@ function App() {
         />
       ) : mode === 'stage' ? (
         <Stages
+          power={power}
           partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
           onSpend={spend}
           dailyDone={dailyBossDay === today}
