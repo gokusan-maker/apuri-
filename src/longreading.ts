@@ -2,9 +2,10 @@
 // 本文・問題・解説はすべて自作。空所は本文中で「( A )」のように書く
 export type Blank = { id: string; choices: string[]; answer: number; why: string }
 export type TrueFalse = { statement: string; answer: boolean; why: string }
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[] }
+export type PickTwo = { statements: string[]; answers: [number, number]; why: string } // 本文と合うものを2つ選ぶ（ア〜カ）
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo }
 
-export const MARKS = ['ア', 'イ', 'ウ', 'エ']
+export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
 export const LONG_PASSAGES: LongPassage[] = [
   {
@@ -28,6 +29,18 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'in', 'of'], answer: 1, why: 'wait for 人 to 〜 で「人が〜するのを待つ」。' },
       { id: 'E', choices: ['what', 'when', 'where', 'who'], answer: 2, why: 'the room（場所）を説明する関係副詞 where。' },
     ],
+    pick2: {
+      statements: [
+        'Pepper came to the library with the librarian.',
+        'The librarian found Pepper on a rainy morning.',
+        'Children often start reading books while they wait for Pepper.',
+        'The library has fewer visitors now than before.',
+        'Pepper damaged many of the oldest books.',
+        'Everyone was happy about Pepper from the beginning.',
+      ],
+      answers: [1, 2],
+      why: 'イは第1段落、ウは第2段落の内容と合う。アはどこから来たかだれも知らない、エは来館者が増えた、オは心配されただけ、カははじめは心配する人もいた。',
+    },
     tf: [
       { statement: 'Pepper has lived in the library for more than five years.', answer: true, why: '第1段落に「5年以上前からそこに住んでいる」とある。' },
       { statement: 'The librarian brought Pepper from her own house.', answer: false, why: 'どこから来たかはだれも知らず、雨の朝に図書館で見つかった。' },
@@ -121,6 +134,18 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['because', 'in front', 'instead', 'out'], answer: 0, why: 'because of 〜 で「〜のせいで・〜が原因で」。' },
       { id: 'E', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'places to find food で「食べ物を見つける（ための）場所」（不定詞の形容詞的用法）。' },
     ],
+    pick2: {
+      statements: [
+        'Bees carry pollen when they fly from flower to flower.',
+        'Bees tell each other about flowers by singing.',
+        'The number of bees is growing all over the world.',
+        'Some scientists think chemicals used on farms are a problem for bees.',
+        'The writer says that we should buy more honey.',
+        'Bees do not need flowers to find food.',
+      ],
+      answers: [0, 3],
+      why: 'アは第1段落、エは第3段落の内容と合う。イは歌ではなくダンス、ウは数が減っている、オは花を育てようと言っている、カは花で食べ物を見つける。',
+    },
     tf: [
       { statement: 'Bees help many plants make fruit and seeds.', answer: true, why: '第1段落に「多くの植物が実や種をつけるのを助ける」とある。' },
       { statement: 'All of the food we eat depends on insects.', answer: false, why: 'たよっているのは「およそ3分の1」。' },
@@ -196,10 +221,11 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = []): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
-  return { score: b + t, total: p.blanks.length + p.tf.length }
+  const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
+  return { score: b + t + k, total: p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点

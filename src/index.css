@@ -1096,3 +1096,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .stamp-grid { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 4px; }
 .stamp { aspect-ratio: 1; border-radius: 50%; border: 1px solid #fed7aa; background: #fff; display: grid; place-items: center; font-size: 0.85rem; }
 .stamp.on { background: #ffe4e6; border-color: #fb7185; }
+.long-pick { display: block; width: 100%; margin: 4px 0; text-align: left; }

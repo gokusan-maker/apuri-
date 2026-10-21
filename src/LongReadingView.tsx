@@ -28,6 +28,7 @@ export function LongReading({ onAnswer }: Props) {
   const [p, setP] = useState<LongPassage | null>(null)
   const [blanks, setBlanks] = useState<Record<string, number>>({})
   const [tf, setTf] = useState<Record<number, boolean>>({})
+  const [picks, setPicks] = useState<number[]>([])
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
@@ -45,13 +46,14 @@ export function LongReading({ onAnswer }: Props) {
                   setP(x)
                   setBlanks({})
                   setTf({})
+                  setPicks([])
                   setDone(false)
                   setShowJa(false)
                 }}
               >
                 📖 {x.title}
                 <span className="long-meta">
-                  {x.level}・{x.blanks.length + x.tf.length}問{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
+                  {x.level}・{x.blanks.length + x.tf.length + (x.pick2 ? 2 : 0)}点{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
                 </span>
               </button>
             </li>
@@ -61,8 +63,8 @@ export function LongReading({ onAnswer }: Props) {
     )
   }
 
-  const { score, total } = scoreLong(p, blanks, tf)
-  const answered = Object.keys(blanks).length + Object.keys(tf).length
+  const { score, total } = scoreLong(p, blanks, tf, picks)
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -139,6 +141,30 @@ export function LongReading({ onAnswer }: Props) {
         </div>
       ))}
 
+      {p.pick2 && (
+        <>
+          <h3 className="long-q">問3　本文の内容と合うものを、ア〜カ から2つ選びなさい。</h3>
+          <div className="long-item">
+            {p.pick2.statements.map((st, i) => (
+              <button
+                key={i}
+                className={`long-choice long-pick${picks.includes(i) ? ' picked' : ''}${done && p.pick2!.answers.includes(i) ? ' answer' : ''}`}
+                disabled={done}
+                aria-pressed={picks.includes(i)}
+                onClick={() => setPicks(picks.includes(i) ? picks.filter((x) => x !== i) : picks.length < 2 ? [...picks, i] : [picks[1], i])}
+              >
+                {MARKS[i]} {st}
+              </button>
+            ))}
+            {done && (
+              <p className={`long-why${picks.filter((i) => p.pick2!.answers.includes(i)).length === 2 ? ' right' : ' wrong'}`}>
+                正解 {p.pick2.answers.map((i) => MARKS[i]).join('・')}：{p.pick2.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {done ? (
         <div className="long-result" role="status">
           <p className="level-up">
@@ -149,6 +175,7 @@ export function LongReading({ onAnswer }: Props) {
             onClick={() => {
               setBlanks({})
               setTf({})
+              setPicks([])
               setDone(false)
             }}
           >
