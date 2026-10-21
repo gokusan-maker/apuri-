@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -156,6 +156,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [minion, setMinion] = useState<'none' | 'here' | 'beaten'>('none') // 子分
+  const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
   const [preempt, setPreempt] = useState<boolean | null>(null) // 先制クイズの結果（null＝まだ）
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
@@ -207,6 +209,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0)
       setCrit(critical)
       setLastDmg(hp - nextHp)
+      if (minion === 'here') {
+        setMinion('beaten')
+        setMinionAt(index)
+        onRankBonus?.(MINION_COINS)
+      } else if (minion === 'none' && nextHp > 0 && isEnraged(nextHp, maxHp)) setMinion('here')
       if (recordHit(hp - nextHp)) setNewRecord(hp - nextHp)
       if (critical) playBossSound('crit')
       const nc = crits + (critical ? 1 : 0)
@@ -301,6 +308,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setMinion('none')
+    setMinionAt(-1)
     startedAt.current = nowMs()
     setTime(null)
     setQs(bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
@@ -332,6 +341,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </button>
         <span>{title ?? `${level} のボス`}</span>
       </div>
+      {minion === 'here' && !won && !lost && <p className="boss-minion">👾 子分のチビ{look.name}があらわれた！ 次の正解でたおすと 🪙{MINION_COINS}</p>}
+      {minion === 'beaten' && minionAt === index && picked !== null && !won && <p className="boss-minion">👾 子分をたおした！ 🪙{MINION_COINS}</p>}
       {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
       {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}

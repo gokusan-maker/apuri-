@@ -264,3 +264,6 @@ export const formatSec = (sec: number) => `${Math.floor(sec / 60)}分${String(se
 
 // 先制クイズ：戦う前にボスの弱点キャラを当てると先制ダメージ
 export const PREEMPT_DAMAGE = 10
+
+// ボスの子分：HPが半分になるとあらわれ、次の正解でたおすと🪙2
+export const MINION_COINS = 2

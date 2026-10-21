@@ -1291,3 +1291,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .shadow-en { margin: 8px 0 2px; font-size: 1.15rem; font-weight: 800; }
 .shadow-ja { margin: 0 0 8px; color: var(--muted); font-size: 0.85rem; }
 .shadow-btns { display: flex; gap: 8px; justify-content: center; }
+.boss-minion { margin: 4px 0; font-weight: 800; color: #6d28d9; }

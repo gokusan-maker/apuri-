@@ -308,3 +308,19 @@ it('先制クイズで弱点を当てると10ダメージ、はずれると0', a
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '100')
   expect(screen.getByText('先制クイズははずれ…')).toBeInTheDocument()
 })
+
+it('HPが半分になると子分があらわれ、次の正解でたおすと🪙2', () => {
+  const bonus = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={20} onRankBonus={bonus} />)
+  const slowAnswer = () => {
+    vi.setSystemTime(Date.now() + 5000) // 会心なし
+    answer(true)
+  }
+  slowAnswer() // 20 → 14
+  fireEvent.click(screen.getByText('次へ'))
+  slowAnswer() // → 7（半分以下）
+  expect(screen.getByText(/子分のチビ/)).toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ'))
+  slowAnswer()
+  expect(bonus).toHaveBeenCalledWith(2)
+})
