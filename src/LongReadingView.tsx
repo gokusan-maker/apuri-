@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -51,12 +51,31 @@ export function LongReading({ onAnswer }: Props) {
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
+  const [types, setTypes] = useState(loadTypeStats)
 
   if (!p) {
     return (
       <section className="card grammar long-reading">
         <h2>長文読解（入試形式）</h2>
         <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        {Object.keys(types).length > 0 && (
+          <details className="long-types">
+            <summary>📊 問題のタイプ別 正答率</summary>
+            <ul>
+              {(Object.keys(TYPE_LABEL) as QType[])
+                .filter((k) => types[k])
+                .map((k) => {
+                  const [ok, n] = types[k]!
+                  const pct = Math.round((ok / n) * 100)
+                  return (
+                    <li key={k} className={pct < 60 ? 'weak' : undefined}>
+                      {TYPE_LABEL[k]}：{pct}%（{ok}/{n}）{pct < 60 ? ' ← 苦手' : ''}
+                    </li>
+                  )
+                })}
+            </ul>
+          </details>
+        )}
         <ul className="grammar-list">
           {LONG_PASSAGES.map((x) => (
             <li key={x.id}>
@@ -379,6 +398,9 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa }))
+            setTypes(t)
+            saveTypeStats(t)
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
             if (score > (record[p.id] ?? -1)) {
               const r = { ...record, [p.id]: score }

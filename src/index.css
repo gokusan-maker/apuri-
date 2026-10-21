@@ -1150,3 +1150,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .evo-preview-fig { width: 64px; height: 64px; flex: none; }
 .evo-preview-fig svg { width: 100%; height: 100%; }
 .evo-preview small { display: block; color: var(--muted); }
+.long-types { margin: 6px 0; text-align: left; font-size: 0.85rem; }
+.long-types ul { margin: 4px 0 0; padding-left: 1.2em; }
+.long-types li.weak { color: #b91c1c; font-weight: 700; }

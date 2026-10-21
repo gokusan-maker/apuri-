@@ -672,3 +672,50 @@ export function targetMinutes(p: LongPassage): number {
 }
 
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
+
+// 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
+export const TYPE_LABEL = { blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export type QType = keyof typeof TYPE_LABEL
+export type TypeStats = Partial<Record<QType, [number, number]>>
+
+export function typeResults(
+  p: LongPassage,
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number> },
+): TypeStats {
+  const out: TypeStats = {}
+  out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
+  out.tf = [p.tf.filter((x, i) => a.tf[i] === x.answer).length, p.tf.length]
+  if (p.pick2) out.pick2 = [a.picks.filter((i) => p.pick2!.answers.includes(i)).length, 2]
+  if (p.sentences) out.sentence = [p.sentences.filter((x) => a.sentences?.[x.id] === x.answer).length, p.sentences.length]
+  if (p.qa) out.qa = [p.qa.filter((x, i) => a.qa?.[i] === x.answer).length, p.qa.length]
+  if (p.underline) out.underline = [a.underline === p.underline.answer ? 1 : 0, 1]
+  if (p.order) out.order = [a.order === p.order.answer ? 1 : 0, 1]
+  return out
+}
+
+export function mergeTypes(base: TypeStats, add: TypeStats): TypeStats {
+  const out: TypeStats = { ...base }
+  for (const k of Object.keys(add) as QType[]) {
+    const [a, b] = add[k]!
+    const [c, d] = base[k] ?? [0, 0]
+    out[k] = [a + c, b + d]
+  }
+  return out
+}
+
+const TYPE_KEY = 'eitan:long-types'
+export function loadTypeStats(): TypeStats {
+  try {
+    const v = JSON.parse(localStorage.getItem(TYPE_KEY) ?? '{}') as Record<string, unknown>
+    return Object.fromEntries(Object.entries(v).filter(([k, x]) => k in TYPE_LABEL && Array.isArray(x) && x.length === 2 && x.every((n) => typeof n === 'number'))) as TypeStats
+  } catch {
+    return {}
+  }
+}
+export function saveTypeStats(s: TypeStats): void {
+  try {
+    localStorage.setItem(TYPE_KEY, JSON.stringify(s))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

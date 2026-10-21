@@ -91,3 +91,17 @@ it('英問英答は選択肢4つで、3本以上にある', () => {
   expect(qs.length).toBeGreaterThanOrEqual(3)
   for (const p of qs) for (const x of p.qa!) expect(x.choices).toHaveLength(4)
 })
+
+it('設問タイプ別の正答率を集計する', async () => {
+  const { typeResults, mergeTypes, loadTypeStats, saveTypeStats } = await import('./longreading')
+  const p = LONG_PASSAGES.find((x) => x.id === 'library-cat')!
+  const r = typeResults(p, { blanks: { A: p.blanks[0].answer }, tf: {}, picks: p.pick2!.answers, qa: {} })
+  expect(r.blank).toEqual([1, 5])
+  expect(r.pick2).toEqual([2, 2])
+  expect(r.qa).toEqual([0, 2])
+  const m = mergeTypes(r, r)
+  expect(m.blank).toEqual([2, 10])
+  localStorage.clear()
+  saveTypeStats(m)
+  expect(loadTypeStats()).toEqual(m)
+})

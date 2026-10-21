@@ -27,6 +27,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   expect(onAnswer).toHaveBeenCalledTimes(14)
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getByText(/最高 13点/)).toBeInTheDocument()
+  expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
 })
 
 it('下線部の意味と並べかえに答えられる', () => {
