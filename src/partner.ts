@@ -32,3 +32,14 @@ export const skillCritMs = (skill: SkillId, base: number, lv = 1) => (skill === 
 
 // ガード・根性が1戦で使える回数
 export const skillSaves = (skill: SkillId, lv = 1) => (skill === 'guard' && lv >= 3 ? 2 : 1)
+
+// 相棒ごとの必殺技名と演出の色（必殺技ゲージが満タンのとき）
+export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
+  mochi: { name: 'もちもちメテオプレス', color: '#22c55e' },
+  fox: { name: 'きつね火ランページ', color: '#f97316' },
+  penguin: { name: 'こおりのスライディング', color: '#0ea5e9' },
+  rabbit: { name: 'ムーンジャンプキック', color: '#ec4899' },
+  cat: { name: 'ねこパンチ百連発', color: '#a855f7' },
+  dragon: { name: 'ドラゴンブレス・ゼロ', color: '#ef4444' },
+}
+export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi

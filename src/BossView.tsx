@@ -5,7 +5,7 @@ import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
-import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves } from './partner'
+import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf } from './partner'
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
@@ -294,8 +294,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </p>
       )}
       {special > 0 && (
-        <p key={`sp${special}`} className="boss-special" role="status">
-          💥 必殺技！ {SPECIAL_DAMAGE} ダメージ
+        <p key={`sp${special}`} className="boss-special" role="status" style={skill ? { color: specialOf(partner!.species).color } : undefined}>
+          💥 {skill ? `${partner!.name}の「${specialOf(partner!.species).name}」！` : '必殺技！'} {SPECIAL_DAMAGE} ダメージ
         </p>
       )}
       <p className="boss-name">{look.name}</p>
@@ -360,7 +360,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       )}
       {gauge >= GAUGE_MAX && !won && !lost && (
         <button className="special-btn" onClick={fireSpecial}>
-          💥 必殺技をはなつ！
+          💥 {skill ? `「${specialOf(partner!.species).name}」をはなつ！` : '必殺技をはなつ！'}
         </button>
       )}
 

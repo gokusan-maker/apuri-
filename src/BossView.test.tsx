@@ -189,3 +189,14 @@ it('ボスがアイテムをおとすことがある', () => {
   expect(drop).toHaveBeenCalledWith('bomb')
   expect(screen.getByText(/ボスが 💣 どっかんボンバー をおとした！/)).toBeInTheDocument()
 })
+
+it('相棒がいると必殺技はキャラクターの技名になる', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], 'dragon'), species: 'dragon', name: 'ドラ' }} />)
+  for (let i = 0; i < 3; i++) {
+    answer(true)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('💥 「ドラゴンブレス・ゼロ」をはなつ！'))
+  expect(screen.getByText(/ドラの「ドラゴンブレス・ゼロ」！ 25 ダメージ/)).toBeInTheDocument()
+})

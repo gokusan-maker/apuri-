@@ -28,3 +28,10 @@ it('特技レベル：10回でLv2、30回でLv3。Lv3で効果アップ', async 
   expect(skillSaves('guard', 3)).toBe(2)
   expect(skillSaves('guard', 2)).toBe(1)
 })
+
+it('キャラクターごとに必殺技名がある', async () => {
+  const { SPECIAL_MOVES, specialOf } = await import('./partner')
+  for (const sp of SPECIES) expect(SPECIAL_MOVES[sp.id], sp.id).toBeDefined()
+  expect(specialOf(undefined).name).toBe('もちもちメテオプレス')
+  expect(new Set(Object.values(SPECIAL_MOVES).map((m) => m.name)).size).toBe(Object.keys(SPECIAL_MOVES).length)
+})
