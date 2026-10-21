@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest'
 import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
-  it('中学1353語＋高校基礎420語＋熟語200＋曜日・月25＋テーマ別374＋数44＋色・形24＋会話100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(2540)
+  it('中学1373語＋高校基礎420語＋熟語200＋曜日・月25＋テーマ別374＋数44＋色・形24＋会話100あり、id が重複しない', () => {
+    expect(WORDS).toHaveLength(2560)
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
     expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(420)
   })
