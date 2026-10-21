@@ -24,6 +24,7 @@ import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
+import { omikujiDiscount, omikujiOf } from './omikuji'
 import { loadRouletteDay, saveRouletteDay } from './roulette'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
@@ -671,7 +672,7 @@ function App() {
     let bonusXp = 0
     const pulled = loadGachaStats().total
     for (let i = 0; i < n; i++) {
-      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0, gachaPrice(hour))
+      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0, gachaPrice(hour) - omikujiDiscount(today))
       if (!r) break
       st = nextStep(st, today)
       const dup = isDuplicate(p.members, r.species.id, r.kind.id)
@@ -750,6 +751,9 @@ function App() {
             <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
           </p>
         )}
+        <p className={`omikuji o-${omikujiOf(today).id}`}>
+          ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
+        </p>
         <Roulette
           done={rouletteDay === today}
           onPrize={(p) => {
@@ -860,7 +864,7 @@ function App() {
           dragonUp={isWeekend(today)}
           pickup={pickupOf(today)}
           stepLeft={stepLeft(gachaStep, today)}
-          gachaPrice={gachaPrice(hour)}
+          gachaPrice={gachaPrice(hour) - omikujiDiscount(today)}
           favSnack={favSnackOf(today).id}
           bag={bag}
           onBuyBattle={(id) => {

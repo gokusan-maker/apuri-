@@ -1227,3 +1227,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .dmg-pop { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); font-size: 1.5rem; font-weight: 900; color: #ef4444; text-shadow: 0 2px 0 #fff; pointer-events: none; animation: dmg-pop 0.8s ease-out both; }
 .dmg-pop.crit { color: #f59e0b; font-size: 2rem; }
 @keyframes dmg-pop { 0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); } 30% { opacity: 1; transform: translate(-50%, -10px) scale(1.2); } 100% { opacity: 0; transform: translate(-50%, -30px) scale(1); } }
+.omikuji { margin: 6px 0; padding: 6px 10px; border-radius: 10px; background: #fef2f2; color: #7f1d1d; font-size: 0.85rem; }
+.omikuji.o-daikichi { background: #fee2e2; font-weight: 700; }

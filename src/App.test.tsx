@@ -407,6 +407,20 @@ describe('App', () => {
     expect(screen.getAllByText(/サクサク/).length).toBeGreaterThanOrEqual(2) // ボタンとひとこと
   })
 
+  it('おみくじが大吉の日はガチャが🪙5安い', () => {
+    const was = Date.now()
+    vi.setSystemTime(new Date(2026, 9, 21, 10, 0)) // この日は大吉
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
+    render(<App />)
+    expect(screen.getByText('大吉')).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    rnd.mockRestore()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(15)
+    vi.setSystemTime(was)
+  })
+
   it('ショップのガチャでタマゴを引くと仲間がふえ、コインがへる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
     render(<App />)
