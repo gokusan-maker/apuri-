@@ -5,6 +5,7 @@ import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
+import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
@@ -34,6 +35,8 @@ type Props = {
   onRushClear?: () => void // ボスラッシュを全部たおした（ごほうびはアプリ側）
   onEndlessReward?: (times: number) => void // エンドレスの塔で新しく10階ごとに到達した
   rushDone?: boolean // 今日のボスラッシュのごほうびをもうもらった
+  bag?: BattleBag // バトルアイテム
+  onUseItem?: (id: BattleItemId) => void
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
 
@@ -41,7 +44,7 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward, bag, onUseItem }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -72,6 +75,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         hp={univFight.hp}
         grammar
         partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
         onRankBonus={onRankBonus}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -100,6 +105,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -130,6 +137,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -153,6 +162,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title="✨ 今週のレアボス"
         hp={RARE_HP}
         partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
@@ -173,6 +184,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         level={fighting}
         words={wordsOf([fighting])}
         partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
         onRankBonus={onRankBonus}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}

@@ -81,6 +81,7 @@ import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
+import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
 import { ENDLESS_REWARD_COINS } from './endless'
 import { PET_BONUS } from './pet'
 import { seasonFxOf } from './seasonfx'
@@ -243,6 +244,7 @@ function App() {
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
   const [gachaStep, setGachaStep] = usePersistent(loadStep, saveStep)
+  const [bag, setBag] = usePersistent(loadBag, saveBag)
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [showChallenge, setShowChallenge] = useState(false)
@@ -788,6 +790,13 @@ function App() {
           pickup={pickupOf(today)}
           stepLeft={stepLeft(gachaStep, today)}
           favSnack={favSnackOf(today).id}
+          bag={bag}
+          onBuyBattle={(id) => {
+            const it = BATTLE_ITEMS.find((x) => x.id === id)!
+            if (wallet.coins < it.price || bag[id] >= BAG_MAX) return
+            setWallet((w) => ({ ...w, coins: w.coins - it.price }))
+            setBag((b) => addItem(b, id))
+          }}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
             const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0)
@@ -833,6 +842,8 @@ function App() {
             pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
           }}
           rushDone={rushDay === today}
+          bag={bag}
+          onUseItem={(id) => setBag((b) => spendItem(b, id))}
           onEndlessReward={(times) => {
             setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
             pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])

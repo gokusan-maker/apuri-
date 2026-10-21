@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { BAG_MAX, BATTLE_ITEMS, type BattleBag, type BattleItemId } from './battleitems'
 import { formOf, type MonsterState, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { RoomScene } from './RoomSceneView'
@@ -24,10 +25,12 @@ type Props = {
   dragonUp?: boolean
   pickup?: Species // 日替わりピックアップ
   stepLeft?: number // ステップアップ：あと何回でレア以上確定
+  bag?: BattleBag // 持っているバトルアイテム
+  onBuyBattle?: (id: BattleItemId) => void
   favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -83,6 +86,18 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       >
         🎫 🪙{FREEZE_PRICE}で買う
       </button>
+      {bag && onBuyBattle && (
+        <>
+          <h3 className="shop-h">⚔️ バトルアイテム（ボス戦で1戦1回ずつ使える）</h3>
+          <div className="snacks">
+            {BATTLE_ITEMS.map((it) => (
+              <button key={it.id} className="good" disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
+                {it.icon} {it.name} 🪙{it.price}（{it.desc}・持っている数 {bag[it.id]}）
+              </button>
+            ))}
+          </div>
+        </>
+      )}
       <h3 className="shop-h">相棒の部屋</h3>
       <ul className="badge-grid">
         {ROOMS.map((r) => {

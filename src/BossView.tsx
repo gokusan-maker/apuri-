@@ -2,6 +2,7 @@ import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
+import { BATTLE_ITEMS, BOMB_DAMAGE, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
@@ -26,6 +27,8 @@ type Props = {
   startHearts?: number // ボスラッシュではハートを引き継ぐ
   winLabel?: string // 勝ったあとのボタンの文字
   noBook?: boolean // ボス図鑑に記録しない（エンドレスの塔）
+  bag?: BattleBag // 持っているバトルアイテム
+  onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
   partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string } // いっしょに戦う相棒（タマゴは応援だけ）
@@ -112,7 +115,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -130,6 +133,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crits, setCrits] = useState(0)
   const [saved, setSaved] = useState(false) // ガード・根性は1戦1回
   const [skillMsg, setSkillMsg] = useState('')
+  const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
@@ -198,6 +202,22 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (nextHp <= 0) win(crits)
   }
 
+  function applyItem(id: BattleItemId) {
+    if (!bag || bag[id] <= 0 || usedItems.includes(id) || won || lost) return
+    setUsedItems([...usedItems, id])
+    onUseItem?.(id)
+    if (id === 'charm') {
+      setHearts(Math.min(HEARTS, hearts + 1))
+      setSkillMsg('🧿 おまもりでハートが1つもどった！')
+      return
+    }
+    const nextHp = hp - BOMB_DAMAGE
+    setHp(Math.max(0, nextHp))
+    setHit(true)
+    setSkillMsg(`💣 どっかん！ ${BOMB_DAMAGE} ダメージ`)
+    if (nextHp <= 0) win(crits)
+  }
+
   function win(c: number) {
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
@@ -225,6 +245,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setGauge(0)
     setCorrects(0)
     setCrits(0)
+    setUsedItems([])
     setChanceAt(-1)
     setSaved(false)
     setSkillMsg('')
@@ -304,6 +325,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </button>
         )}
       </p>
+      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0) && (
+        <div className="battle-items">
+          {BATTLE_ITEMS.filter((it) => bag[it.id] > 0).map((it) => (
+            <button key={it.id} className="battle-item" disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)} onClick={() => applyItem(it.id)}>
+              {it.icon} {it.name}（あと{bag[it.id]}）
+            </button>
+          ))}
+        </div>
+      )}
       {gauge >= GAUGE_MAX && !won && !lost && (
         <button className="special-btn" onClick={fireSpecial}>
           💥 必殺技をはなつ！

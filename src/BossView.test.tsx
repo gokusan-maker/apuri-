@@ -130,3 +130,17 @@ it('チャンス問題が出る', () => {
   slow() // 8×2=16 → 0
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
 })
+
+it('バトルアイテム：ばくだんで20ダメージ、おまもりでハート回復（1戦1回）', () => {
+  const used: string[] = []
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1 }} onUseItem={(id) => used.push(id)} />)
+  expect(screen.getByText(/まもりのおまもりん/).closest('button')).toBeDisabled() // ハート満タン
+  fireEvent.click(screen.getByText(/どっかんボンバー/))
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '80')
+  expect(screen.getByText(/どっかんボンバー/).closest('button')).toBeDisabled()
+  answer(false)
+  expect(screen.getByLabelText('のこりハート 2')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/まもりのおまもりん/))
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  expect(used).toEqual(['bomb', 'charm'])
+})
