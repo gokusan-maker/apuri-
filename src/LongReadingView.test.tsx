@@ -40,3 +40,20 @@ it('下線部の意味と並べかえに答えられる', () => {
   }
   expect(screen.getByLabelText('並べた英文').textContent).toContain(p.order!.answer)
 })
+
+it('採点するとまちがえた問題の根拠の段落に色がつく', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  for (const b of p.blanks) {
+    const wrong = (b.answer + 1) % 4
+    const btn = screen.getAllByRole('button', { name: `${MARKS[wrong]} ${b.choices[wrong]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!
+    fireEvent.click(btn)
+  }
+  p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${t.answer ? '○' : '×'}` })))
+  for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  expect(screen.getByText(/根拠がある段落に色をつけたよ/)).toBeInTheDocument()
+  expect(document.querySelectorAll('.long-evidence').length).toBe(3)
+})

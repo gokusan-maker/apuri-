@@ -376,3 +376,21 @@ export function saveLongRecord(r: LongRecord): void {
 
 // 長文の点数の合計（一覧に出す）
 export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0)
+
+// まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
+export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
+  const out = new Set<number>()
+  for (const id of wrongBlanks) {
+    const i = p.paragraphs.findIndex((t) => t.includes(`( ${id} )`))
+    if (i >= 0) out.add(i)
+  }
+  for (const n of wrongTf) {
+    const m = p.tf[n]?.why.match(/第(\d)段落/)
+    if (m) out.add(Number(m[1]) - 1)
+  }
+  if (underlineWrong && p.underline) {
+    const i = p.paragraphs.findIndex((t) => t.includes(p.underline!.phrase))
+    if (i >= 0) out.add(i)
+  }
+  return [...out].sort((a, b) => a - b)
+}

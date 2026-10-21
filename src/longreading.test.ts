@@ -51,3 +51,13 @@ it('下線部の語句は本文にあり、並べかえの語は正解の文と�
   const p = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
   expect(scoreLong(p, {}, {}, [], { underline: p.underline!.answer, order: p.order!.answer }).score).toBe(2)
 })
+
+it('まちがえた問題の根拠の段落がわかる', async () => {
+  const { evidenceParas } = await import('./longreading')
+  const p = LONG_PASSAGES.find((x) => x.id === 'library-cat')!
+  expect(evidenceParas(p, ['A', 'D'], [])).toEqual([0, 1])
+  expect(evidenceParas(p, [], [0])).toEqual([0]) // 「第1段落に…」
+  expect(evidenceParas(p, [], [])).toEqual([])
+  const q = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
+  expect(evidenceParas(q, [], [], true)).toEqual([3])
+})

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { evidenceParas, LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -75,6 +75,14 @@ export function LongReading({ onAnswer }: Props) {
     )
   }
 
+  const evidence = done
+    ? evidenceParas(
+        p,
+        p.blanks.filter((b) => blanks[b.id] !== b.answer).map((b) => b.id),
+        p.tf.map((t, i) => (tf[i] === t.answer ? -1 : i)).filter((i) => i >= 0),
+        !!p.underline && under !== p.underline.answer,
+      )
+    : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
   const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText })
   const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0)
@@ -90,8 +98,9 @@ export function LongReading({ onAnswer }: Props) {
       </div>
       <h2>{p.title}</h2>
       <div className="long-text">
+        {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (
-          <div key={i}>
+          <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
             <Paragraph text={t} underline={p.underline?.phrase} />
             {showJa && <p className="long-ja">{p.ja[i]}</p>}
           </div>
