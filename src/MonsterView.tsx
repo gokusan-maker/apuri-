@@ -6,6 +6,7 @@ import { FORM_DESC, FORMS, formOf, levelInfo, levelsToNextStage, NAME_MAX, seenF
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
+import { RoomScene } from './RoomSceneView'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow'
@@ -432,6 +433,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
     <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
+      <RoomScene room={room} />
       {sleepy && (
         <span className="monster-zzz" aria-label="ねむそう">
           💤

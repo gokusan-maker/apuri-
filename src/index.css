@@ -779,3 +779,13 @@ button:focus:not(:focus-visible) { outline: none; }
 .monster-body:not(.bounce):not(.droop) .monster-breathe { animation: breathe 3.2s ease-in-out infinite, hop 13s ease-in-out infinite 4s; }
 @keyframes hop { 0%, 92%, 100% { translate: 0 0; } 95% { translate: 0 -6px; } 97% { translate: 0 0; } 98.5% { translate: 0 -2px; } }
 @media (prefers-reduced-motion: reduce) { .monster-face.glance, .monster-body .monster-breathe { animation: none !important; } }
+/* 部屋の背景イラスト */
+.monster { overflow: hidden; isolation: isolate; }
+.room-scene { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; }
+.scene-twinkle { animation: twinkle 2s ease-in-out infinite; }
+@keyframes twinkle { 50% { opacity: 0.2; } }
+.scene-bubble { animation: rise 4s linear infinite; }
+@keyframes rise { to { transform: translateY(-30px); opacity: 0; } }
+.scene-petal { animation: petal 5s linear infinite; }
+@keyframes petal { to { transform: translate(-40px, 30px) rotate(200deg); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .scene-twinkle, .scene-bubble, .scene-petal { animation: none; } }
