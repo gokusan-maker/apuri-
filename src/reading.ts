@@ -663,4 +663,59 @@ export const PASSAGES: Passage[] = [
       { q: '祖父は毎週何を送ってくる？', choices: ['庭の写真', '手紙', 'お菓子'], answer: 0 },
     ],
   },
+  {
+    id: 'dragon-story',
+    title: 'The Little Dragon',
+    text: 'Once upon a time, a little dragon lived on a mountain. He could not fly well, so the other dragons laughed at him. Every day he practiced flying a little higher. One day, he flew over the clouds and saw the whole world.',
+    ja: '昔々、山に小さなドラゴンが住んでいました。うまく飛べなかったので、ほかのドラゴンたちに笑われていました。毎日、少しずつ高く飛ぶ練習をしました。ある日、雲の上まで飛んで、世界じゅうを見わたしました。',
+    questions: [
+      { q: '小さなドラゴンはどこに住んでいた？', choices: ['海', '山', '森'], answer: 1 },
+      { q: '毎日何をした？', choices: ['高く飛ぶ練習', '火をはく練習', '昼寝'], answer: 0 },
+      { q: 'ある日どうなった？', choices: ['山を下りた', '雲の上まで飛んだ', '友だちとけんかした'], answer: 1 },
+    ],
+  },
+  {
+    id: 'exam-day',
+    title: 'The Entrance Exam',
+    text: 'My sister had her university entrance exam last Saturday. She studied English words every morning for a year. On the day of the exam, she was nervous, but she did her best. Last week, she got a letter saying she passed.',
+    ja: '姉はこの前の土曜日に大学の入試を受けました。1年間、毎朝英単語を勉強していました。試験の日は緊張していましたが、全力をつくしました。先週、合格したという手紙が届きました。',
+    questions: [
+      { q: '姉は何を受けた？', choices: ['大学の入試', '英検', '運転免許の試験'], answer: 0 },
+      { q: '毎朝何を勉強した？', choices: ['数学', '英単語', '歴史'], answer: 1 },
+      { q: '結果は？', choices: ['不合格', '合格', 'まだわからない'], answer: 1 },
+    ],
+  },
+  {
+    id: 'cat-cafe',
+    title: 'The Cat Cafe',
+    text: 'There is a cat cafe near the station. My friend and I went there after school. Ten cats were sleeping or playing in the room. A gray cat sat on my lap and fell asleep. I did not want to leave.',
+    ja: '駅の近くにネコカフェがあります。放課後、友だちとそこへ行きました。部屋では10匹のネコが寝たり遊んだりしていました。灰色のネコが私のひざにのって眠ってしまいました。帰りたくありませんでした。',
+    questions: [
+      { q: 'ネコカフェはどこにある？', choices: ['駅の近く', '学校の中', '公園の中'], answer: 0 },
+      { q: 'ネコは何匹いた？', choices: ['5匹', '10匹', '20匹'], answer: 1 },
+      { q: '灰色のネコは何をした？', choices: ['外に出た', 'ひざの上で眠った', 'えさを食べた'], answer: 1 },
+    ],
+  },
+  {
+    id: 'moon-rabbit',
+    title: 'The Rabbit on the Moon',
+    text: 'In Japan, people say that a rabbit lives on the moon. When you look at the full moon, the dark parts look like a rabbit making rice cakes. In other countries, people see different shapes, such as a face or a crab.',
+    ja: '日本では、月にウサギが住んでいると言われています。満月を見ると、暗い部分がおもちをつくウサギのように見えます。ほかの国では、顔やカニなど、ちがう形に見えるそうです。',
+    questions: [
+      { q: '日本では月に何が住んでいると言われる？', choices: ['ウサギ', 'ネコ', 'カニ'], answer: 0 },
+      { q: 'ウサギは何をしているように見える？', choices: ['歌っている', 'おもちをついている', '走っている'], answer: 1 },
+      { q: 'ほかの国では何に見える？', choices: ['車', '顔やカニ', '花'], answer: 1 },
+    ],
+  },
+  {
+    id: 'penguin-walk',
+    title: 'The Penguin Walk',
+    text: 'At a zoo in a cold town, penguins take a walk outside in winter. Visitors stand on both sides of the path and watch. The penguins walk slowly in a line. My little brother laughed and copied their walk all the way home.',
+    ja: '寒い町の動物園では、冬になるとペンギンが外を散歩します。お客さんは道の両側に立って見ています。ペンギンたちは一列になってゆっくり歩きます。弟は笑って、帰り道ずっとペンギンの歩き方をまねしていました。',
+    questions: [
+      { q: 'ペンギンの散歩はいつ？', choices: ['夏', '冬', '春'], answer: 1 },
+      { q: 'ペンギンはどう歩く？', choices: ['一列になってゆっくり', '走って', 'ばらばらに'], answer: 0 },
+      { q: '弟は何をした？', choices: ['泣いた', 'ペンギンの歩き方をまねした', '寝てしまった'], answer: 1 },
+    ],
+  },
 ]
