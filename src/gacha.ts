@@ -162,3 +162,20 @@ export const MULTI5 = 5
 
 // コンプリート率（％・切り捨て）
 export const completionPct = (have: number, total: number) => (total > 0 ? Math.floor((Math.min(have, total) / total) * 100) : 0)
+
+// スロット演出：ガチャを引くたびに3つの絵がまわる。そろう（4%）とおまけ🪙5
+export const SLOT_SYMBOLS = ['🍒', '🔔', '⭐', '🍀', '💎'] as const
+export const SLOT_RATE = 0.04
+export const SLOT_COINS = 5
+export function slotOf(r: number): { reels: string[]; win: boolean } {
+  const n = SLOT_SYMBOLS.length
+  if (r < SLOT_RATE) {
+    const s = SLOT_SYMBOLS[Math.min(n - 1, Math.floor((r / SLOT_RATE) * n))]
+    return { reels: [s, s, s], win: true }
+  }
+  // そろわないとき：1つ目と3つ目はかならずちがう絵にする
+  const a = Math.floor(r * n) % n
+  const b = Math.floor(r * n * n) % n
+  const c = (a + 1 + (Math.floor(r * n * n * n) % (n - 1))) % n
+  return { reels: [SLOT_SYMBOLS[a], SLOT_SYMBOLS[b], SLOT_SYMBOLS[c]], win: false }
+}

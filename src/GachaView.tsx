@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
+import { GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -7,7 +7,7 @@ const MULTI = 3
 const RANK = ['N', 'R', 'SR', 'UR'] as const
 const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
 
-export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean } }
 
 type Props = {
   coins: number
@@ -174,6 +174,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
                 {(k.newKind || k.newSpecies) && <span className="gacha-new">NEW!</span>}
                 {!!k.refund && <span className="gacha-dup">🪙{k.refund}もどった</span>}
                 {k.bonus && <span className="gacha-bonus">🎁{k.bonus}</span>}
+                {k.slot?.win && <span className="gacha-lucky">🎰{k.slot.reels[0]}×3 🪙{SLOT_COINS}</span>}
                 {!!k.lucky && <span className="gacha-lucky">🍀{k.lucky}回目 🪙{LUCKY_COINS}</span>}
               </li>
             ))}
@@ -198,6 +199,12 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
             {result.species.egg}が仲間になった！
           </p>
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
+          {result.slot && (
+            <p className={`gacha-slot${result.slot.win ? ' win' : ''}`} aria-label={result.slot.win ? 'スロットがそろった' : 'スロット'}>
+              🎰 {result.slot.reels.join(' ')}
+              {result.slot.win && ` そろった！ 🪙${SLOT_COINS}`}
+            </p>
+          )}
           {!!result.lucky && <p className="gacha-lucky">🍀 ラッキーナンバー！ 通算{result.lucky}回目で 🪙{LUCKY_COINS}</p>}
           {!!result.refund && <p className="gacha-dup">かぶりボーナス！ 同じ子がいたので 🪙{result.refund} もどってきた</p>}
           {result.species.id !== 'mochi' && <p className="gacha-species">「{result.species.name}」の仲間だ！ {result.species.desc}</p>}

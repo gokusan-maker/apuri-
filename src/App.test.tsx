@@ -576,6 +576,16 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:walk')).toBe('2026-10-20')
   })
 
+  it('ガチャのスロットがそろうとおまけ🪙5', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.01)
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    rnd.mockRestore()
+    expect(screen.getByLabelText('スロットがそろった')).toHaveTextContent('そろった！ 🪙5')
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

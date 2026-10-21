@@ -198,3 +198,14 @@ it('コンプリート率はパーセントの切り捨て', async () => {
   expect(completionPct(70, 60)).toBe(100)
   expect(completionPct(1, 0)).toBe(0)
 })
+
+it('スロットは4%でそろい、それ以外はそろわない', async () => {
+  const { slotOf, SLOT_RATE } = await import('./gacha')
+  expect(slotOf(0).win).toBe(true)
+  expect(new Set(slotOf(0.01).reels).size).toBe(1)
+  for (let r = SLOT_RATE; r < 1; r += 0.013) {
+    const s = slotOf(r)
+    expect(s.win).toBe(false)
+    expect(s.reels[0]).not.toBe(s.reels[2])
+  }
+})
