@@ -56,6 +56,7 @@ import {
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
   withSpecies,
+  pickupOf,
 } from './monster'
 import {
   buildQueue,
@@ -768,9 +769,10 @@ function App() {
           }}
           members={party.members.length}
           dragonUp={isWeekend(today)}
+          pickup={pickupOf(today)}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today))
+            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id)
             if (!r) return null
             const dup = isDuplicate(party.members, r.species.id, r.kind.id)
             setWallet(dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet)

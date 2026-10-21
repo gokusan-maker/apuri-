@@ -11,12 +11,13 @@ type Props = {
   tickets?: number // ガチャチケットの枚数
   pityLeft?: number // あと何回でスーパーレア以上が確定
   dragonUp?: boolean // 週末はドラコが出やすい
+  pickup?: Species // 日替わりピックアップ（出やすい）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const record = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
@@ -53,6 +54,17 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
         </button>
       )}
       <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
+      {pickup && (
+        <div className="gacha-pickup">
+          <span className="gacha-pickup-fig">
+            <MonsterFigure form={withSpecies(FORMS[0], pickup.id)} mood="happy" />
+          </span>
+          <span>
+            <strong>🎯 今日のピックアップ</strong>
+            <br />「{pickup.name}」が出やすい！（{Math.round(pickup.rate * 100)}% → {Math.round(speciesRate(pickup, dragonUp, pickup.id) * 100)}%）
+          </span>
+        </div>
+      )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
       {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}
       {log.length > 0 && (
@@ -75,7 +87,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           <li>レア（さくら色・うみ色・よる色）各10%</li>
           <li>スーパーレア（きんいろ）9%</li>
           <li>ウルトラレア（にじいろ）1%</li>
-          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(speciesRate(sp, dragonUp) * 100)}%`).join('・')}</li>
+          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(speciesRate(sp, dragonUp, pickup?.id) * 100)}%`).join('・')}</li>
         </ul>
       </details>
       {result && (

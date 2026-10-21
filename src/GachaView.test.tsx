@@ -79,3 +79,9 @@ it('かぶったときはコインがもどったことを知らせる', () => {
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByText('かぶりボーナス！ 同じ子がいたので 🪙15 もどってきた')).toBeInTheDocument()
 })
+
+it('今日のピックアップが表示される', () => {
+  render(<Gacha coins={0} members={1} pickup={speciesOf('fox')} onDraw={() => null} />)
+  expect(screen.getByText('🎯 今日のピックアップ')).toBeInTheDocument()
+  expect(screen.getByText(/「コンコン」が出やすい！（16% → 24%）/)).toBeInTheDocument()
+})

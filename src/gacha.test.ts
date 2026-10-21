@@ -123,3 +123,18 @@ it('同じキャラ・同じ色の子がいればかぶり（キャラや色が�
   expect(isDuplicate(members, 'fox', 'normal')).toBe(false)
   expect(isDuplicate(members, 'cat', 'kin')).toBe(false)
 })
+
+it('日替わりピックアップは日付で決まり、そのキャラが出やすくなる（合計は100%のまま）', async () => {
+  const { pickupOf, rollSpecies, SPECIES, speciesRate, PICKUP_UP } = await import('./monster')
+  const p = pickupOf('2026-10-21')
+  expect(p.id).not.toBe('mochi')
+  expect(pickupOf('2026-10-21')).toBe(p)
+  expect(new Set(['2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24'].map((d) => pickupOf(d).id)).size).toBeGreaterThan(1)
+  for (const up of [false, true]) {
+    const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, up, p.id), 0)
+    expect(total).toBeCloseTo(1)
+  }
+  expect(speciesRate(p, false, p.id)).toBeCloseTo(p.rate + PICKUP_UP)
+  const count = (pick?: string) => Array.from({ length: 1000 }, (_, i) => rollSpecies(i / 1000, false, pick)).filter((sp) => sp.id === p.id).length
+  expect(count(p.id)).toBeGreaterThan(count())
+})

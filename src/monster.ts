@@ -276,18 +276,28 @@ export const speciesOf = (id: string | undefined): Species => SPECIES.find((x) =
 // dragonUp（週末）のときはドラコが2倍、そのぶんモチが少なくなる
 export const DRAGON_UP = 0.1
 
-export function speciesRate(sp: Species, dragonUp = false): number {
-  if (!dragonUp) return sp.rate
-  return sp.id === 'dragon' ? sp.rate + DRAGON_UP : sp.id === 'mochi' ? sp.rate - DRAGON_UP : sp.rate
+export const PICKUP_UP = 0.08 // 日替わりピックアップの上乗せ（モチの分からまわす）
+
+export function speciesRate(sp: Species, dragonUp = false, pickup?: string): number {
+  const up = (id: string) => (dragonUp && id === 'dragon' ? DRAGON_UP : 0) + (pickup && pickup !== 'mochi' && id === pickup ? PICKUP_UP : 0)
+  if (sp.id === 'mochi') return sp.rate - SPECIES.reduce((a, x) => a + up(x.id), 0)
+  return sp.rate + up(sp.id)
 }
 
-export function rollSpecies(r: number, dragonUp = false): Species {
+export function rollSpecies(r: number, dragonUp = false, pickup?: string): Species {
   let acc = 0
   for (const sp of SPECIES) {
-    acc += speciesRate(sp, dragonUp)
+    acc += speciesRate(sp, dragonUp, pickup)
     if (r < acc) return sp
   }
   return SPECIES[SPECIES.length - 1]
+}
+
+// 日替わりピックアップのキャラクター（モチ以外から、日付で決まる）
+export function pickupOf(day: string): Species {
+  const others = SPECIES.filter((sp) => sp.id !== 'mochi')
+  const n = [...day].reduce((a, c) => a + c.charCodeAt(0), 0)
+  return others[n % others.length]
 }
 
 // 種類をあてた姿：名前の「モチ」を種類の呼び名に、小さいうちは体の色も種類の色に
