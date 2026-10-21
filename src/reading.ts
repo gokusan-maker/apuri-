@@ -993,7 +993,7 @@ export const PASSAGES: Passage[] = [
       { q: '最後にどうなった？', choices: ['ひとりでリンクを1周すべれた', 'あきらめた', 'けがをした'], answer: 0 },
     ],
   },  {
-    id: 'lost-umbrella',
+    id: 'blue-umbrella',
     title: 'The Blue Umbrella',
     text: 'One rainy afternoon, I left my blue umbrella on the train. I was sad because it was a present from my aunt. The next day, I went to the station office. A kind staff member smiled and gave it back to me.',
     ja: 'ある雨の午後、私は青いかさを電車に置き忘れました。おばからのプレゼントだったので悲しくなりました。次の日、駅の事務所に行きました。親切な駅員さんがほほえんで、かさを返してくれました。',
