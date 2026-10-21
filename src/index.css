@@ -1232,3 +1232,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .omikuji.o-daikichi { background: #fee2e2; font-weight: 700; }
 .genre-tabs { flex-wrap: wrap; }
 .genre-tabs button { flex: 1 0 28%; }
+.grammar-goal { margin: 8px 0; padding: 8px; border-radius: 12px; background: var(--bg); font-size: 0.85rem; }
+.grammar-goal p { margin: 0 0 6px; }
+.goal-choices { display: flex; gap: 6px; justify-content: center; }
+.goal-choices button { padding: 4px 12px; border: 1px solid var(--muted); border-radius: 999px; background: var(--card); color: var(--fg); }
+.goal-choices button.on { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }

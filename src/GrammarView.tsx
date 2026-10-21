@@ -8,6 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
+import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -23,9 +24,10 @@ type Props = {
   onRushWin?: () => void // 文法モンスターラッシュを3連勝した
   onSpend?: (coins: number) => boolean // ヒントのコイン
   onFirstClear?: () => void // 単元をはじめて全問正解したとき
+  onWeeklyGoal?: () => void // 今週の目標を達成したとき
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
@@ -33,6 +35,8 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [picked, setPicked] = useState<number | null>(null)
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
+  const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
+  const [goalReached, setGoalReached] = useState(false)
   const [firstClear, setFirstClear] = useState(false) // この回ではじめて全問正解した
   const [fav, setFav] = useState(loadGrammarFav)
   const [score, setScore] = useState(0)
@@ -60,6 +64,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setHidden(null)
     setCopied(false)
     setFirstClear(false)
+    setGoalReached(false)
     setBattle(false)
     setOrdering(false)
     setUnit(u)
@@ -131,6 +136,34 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           <button className="list-link spot-btn" onClick={() => setTimeAttack(true)}>
             ⏱ 文法タイムアタック（60秒）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
           </button>
+        )}
+        {stampMode && (
+          <div className="grammar-goal">
+            {weekGoal.goal > 0 ? (
+              <p>
+                🎯 今週の目標：全問正解 {Math.min(weekGoal.cleared.length, weekGoal.goal)} / {weekGoal.goal} 単元{weekGoal.rewarded ? ' ✅ たっせい！' : '（たっせいで🎟1）'}
+              </p>
+            ) : (
+              <p>🎯 今週の目標を決めよう（全問正解する単元の数）</p>
+            )}
+            <div className="goal-choices">
+              {GOAL_CHOICES.map((n) => (
+                <button
+                  key={n}
+                  className={weekGoal.goal === n ? 'on' : undefined}
+                  aria-pressed={weekGoal.goal === n}
+                  disabled={weekGoal.rewarded}
+                  onClick={() => {
+                    const g = { ...weekGoal, goal: n }
+                    setWeekGoal(g)
+                    saveGrammarGoal(g)
+                  }}
+                >
+                  {n}単元
+                </button>
+              ))}
+            </div>
+          </div>
         )}
         {stampMode && streak.best > 0 && <p className="stats-note">🔥 確認問題の連続正解ベスト {streak.best}問</p>}
         {stampMode && (
@@ -309,6 +342,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         ) : (
           <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
         )}
+        {goalReached && <p className="level-up">🎯 今週の目標たっせい！ 🎟ガチャチケット1まい</p>}
         {firstClear && <p className="level-up">🌟 はじめての全問正解！ モンスターに XP+{GRAMMAR_CLEAR_XP}</p>}
         <button
           className="list-link"
@@ -355,6 +389,15 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       if (rush && rush.at === rush.list.length - 1) onRushWin?.()
     }
     if (battle && rush && step === unit.questions.length - 1 && nextScore < unit.questions.length) setRush(null)
+    if (step === unit.questions.length - 1 && stampMode && !battle && nextScore === unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
+      const r = clearForGoal(weekGoal, unit.id)
+      setWeekGoal(r.goal)
+      saveGrammarGoal(r.goal)
+      if (r.reached) {
+        setGoalReached(true)
+        onWeeklyGoal?.()
+      }
+    }
     if (step === unit.questions.length - 1 && stampMode && nextScore === unit.questions.length && (record[unit.id] ?? -1) < unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
       onFirstClear?.()
       setFirstClear(true)

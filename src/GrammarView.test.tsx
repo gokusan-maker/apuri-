@@ -234,3 +234,23 @@ it('単元をはじめて全問正解するとXPボーナス（2回目はなし�
   expect(onFirstClear).toHaveBeenCalledTimes(1)
   expect(screen.queryByText(/はじめての全問正解/)).toBeNull()
 })
+
+it('今週の目標を決めて、達成するとチケットのお知らせ', () => {
+  localStorage.clear()
+  const onWeeklyGoal = vi.fn()
+  render(<Grammar onWeeklyGoal={onWeeklyGoal} />)
+  fireEvent.click(screen.getByRole('button', { name: '3単元' }))
+  for (const unit of GRAMMAR.slice(0, 3)) {
+    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByText('確認問題へ（3問）'))
+    for (const q of unit.questions) {
+      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    if (unit !== GRAMMAR[2]) fireEvent.click(screen.getByText('← 単元一覧'))
+  }
+  expect(onWeeklyGoal).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/今週の目標たっせい/)).toBeInTheDocument()
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText(/全問正解 3 \/ 3 単元 ✅ たっせい/)).toBeInTheDocument()
+})

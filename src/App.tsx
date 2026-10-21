@@ -1166,6 +1166,10 @@ function App() {
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             onXp={(n) => gainXp(n, null)}
+            onGoalTicket={() => {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'grammar-goal', text: '🎯 文法の今週の目標をたっせい！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+            }}
             onTicket={() => {
               setWallet((w) => addTicket(w))
               pushToast([{ id: 'stamp', text: '📮 文法スタンプが10個たまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
