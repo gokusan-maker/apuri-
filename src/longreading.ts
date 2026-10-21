@@ -1569,6 +1569,11 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     vocab: [{ word: 'rarely', choices: ['めったに〜ない', 'いつも', 'すぐに', 'ときどき'], answer: 0, why: '日本は安全な国だという説明なので、機械がこわされることは「めったにない」。' }],
     insert: { sentence: 'So it is easy to keep them outside all day and night.', after: [0, 1, 2, 3], answer: 2, why: '「日本は安全なので機械がこわされることがめったにない」という第3段落の理由のあとに、「だから一日中外に置いておける」と続く。' },
+    pick2: {
+      statements: ['Some vending machines sell umbrellas.', 'Vending machines sell only cold drinks in winter.', 'People often break vending machines in Japan.', 'Some vending machines show news on a screen.', 'Vending machines do not use electricity.', 'There are no vending machines at stations.'],
+      answers: [0, 3],
+      why: '第2段落「かさを売るものもある」、第4段落「画面にニュースを表示するものもある」。',
+    },
     tf: [
       { statement: 'There are vending machines even in the mountains in Japan.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All vending machines in Japan sell only drinks.', answer: false, why: 'アイスクリームやお米、かさを売るものもある。' },
@@ -1684,6 +1689,11 @@ export const LONG_PASSAGES: LongPassage[] = [
     vocab: [{ word: 'survive', choices: ['生きのびる', '飛び立つ', 'ねむる', '旅をする'], answer: 0, why: '危機にあるペンギンのために海を守る、という流れなので「生きのびる」。' }],
     insert: { sentence: 'Thanks to them, penguins can live even in icy water.', after: [0, 1, 2, 3], answer: 2, why: '「厚い羽毛と脂肪（them）のおかげで」なので、それらを説明した第3段落のあとに入る。' },
     qa: [{ q: 'Why are some kinds of penguins in danger today?', choices: ['Because the sea is getting warmer and there is less food.', 'Because they cannot swim well.', 'Because people eat too many penguins.', 'Because it is too cold in Antarctica.'], answer: 0, why: '第5段落「海があたたかくなり、えさが少なくなっている」。' }],
+    pick2: {
+      statements: ['Penguins use their wings to fly over the sea.', 'Some penguins live in warm places.', 'Penguins have thin feathers.', 'Penguins stand close together to stay warm.', 'Penguins eat only plants.', 'All kinds of penguins are safe today.'],
+      answers: [1, 3],
+      why: '第2段落「あたたかい場所にすむものもいる」、第3段落「寄りそって立つ」。羽毛は厚く、魚を食べ、危機にある種類もいる。',
+    },
     tf: [
       { statement: 'Penguins can fly very high.', answer: false, why: 'ペンギンは飛べない。' },
       { statement: 'All penguins live in very cold places.', answer: false, why: 'あたたかい場所にすむものもいる。' },
@@ -1791,6 +1801,11 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['and', 'but', 'or', 'so'], answer: 0, why: 'cleaner and healthier で「よりきれいで、より健康的に」。' },
     ],
     insert: { sentence: 'For these reasons, many people choose bicycles instead of cars.', after: [0, 1, 2, 3], answer: 2, why: '第3段落で自転車のよい点（空気・健康・安い）を説明したあとに「これらの理由で」と続く。' },
+    pick2: {
+      statements: ['Amsterdam has many roads only for bicycles.', 'Riding a bicycle is more expensive than using a car.', 'The land of Amsterdam is flat.', 'There are no problems with bicycles.', 'Bicycles make the air dirty.', 'Nobody rides too fast.'],
+      answers: [0, 2],
+      why: '第2段落「土地が平ら」「自転車専用の広い道がたくさん」。自転車は車より安く、空気をよごさず、問題もある。',
+    },
     tf: [
       { statement: 'There are more bicycles than people in Amsterdam.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The land of Amsterdam has many mountains.', answer: false, why: '土地は平ら。' },
@@ -2007,6 +2022,11 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     vocab: [{ word: 'Germs', choices: ['細菌', '宝石', '野菜', '雨つぶ'], answer: 0, why: '目に見えず、体に入ると病気の原因になるもの＝細菌。' }],
     insert: { sentence: 'So it is easy for germs to get on our hands.', after: [0, 1, 2, 3], answer: 0, why: '第1段落の「手は毎日たくさんのものにさわる」から「だから細菌が手につきやすい」と続く。' },
+    pick2: {
+      statements: ['We should wash our hands for about twenty seconds.', 'Germs are easy to see.', 'We do not need to wash between our fingers.', 'Washing hands before eating is important.', 'Washing hands is expensive.', 'Only adults can wash their hands well.'],
+      answers: [0, 3],
+      why: '第3段落「20秒くらい」、第4段落「食べる前に手をあらうことは大切」。細菌は見えず、指の間もあらい、お金はかからず、だれでもできる。',
+    },
     tf: [
       { statement: 'Washing hands is a difficult way to protect ourselves.', answer: false, why: 'いちばんかんたんな方法の1つ。' },
       { statement: 'Germs can enter our bodies when we touch our mouth with dirty hands.', answer: true, why: '第2段落の内容と合う。' },
@@ -2114,6 +2134,11 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['stars', 'sun', 'Earth', 'cities'], answer: 1, why: '第2段落「太陽の光を反射している」。' },
         { choices: ['tides', 'clouds', 'winds', 'rains'], answer: 0, why: '第4段落「これが潮の満ち引きを起こす」。' },
       ],
+    },
+    pick2: {
+      statements: ['The moon is very far, so it would take ten years to drive there.', 'The moon looks bright because of the light of the sun.', 'Many animals live on the moon.', 'There is no wind on the moon.', 'The moon has no effect on the sea.', 'No one has ever walked on the moon.'],
+      answers: [1, 3],
+      why: '第2段落「太陽の光を反射」、第3段落「風がない」。車で半年、生き物はいない、潮を起こす、宇宙飛行士の足あとがある。',
     },
     tf: [
       { statement: 'The moon is about 380,000 kilometers away from the Earth.', answer: true, why: '第1段落の内容と合う。' },

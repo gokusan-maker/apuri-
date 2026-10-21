@@ -323,3 +323,12 @@ it('読解レベルに合った、まだ解いていない長文をすすめる'
   expect(b.level).toContain('中3')
   expect(b.id).not.toBe(levelPick('中級', {})!.id)
 })
+
+it('内容に合うものを2つ選ぶ設問は7本以上', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.pick2)
+  expect(ps.length).toBeGreaterThanOrEqual(7)
+  for (const p of ps) {
+    expect(p.pick2!.statements).toHaveLength(6)
+    expect(p.pick2!.answers[0]).not.toBe(p.pick2!.answers[1])
+  }
+})
