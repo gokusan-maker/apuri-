@@ -150,3 +150,12 @@ it('キーワードで単元をさがせる', async () => {
   expect(searchUnits(GRAMMAR, 'WHOSE').some((u) => u.id === 'whose')).toBe(true)
   expect(searchUnits(GRAMMAR, 'zzzz')).toEqual([])
 })
+
+it('おすすめ単元は★が少なく、まだ全問正解していない単元から', async () => {
+  const { recommendUnits } = await import('./grammar')
+  const us = GRAMMAR.slice(0, 5)
+  const clears = { [us[0].id]: 5, [us[1].id]: 1 }
+  const record = { [us[2].id]: us[2].questions.length }
+  const r = recommendUnits(us, clears, record).map((u) => u.id)
+  expect(r).toEqual([us[3].id, us[4].id, us[2].id])
+})

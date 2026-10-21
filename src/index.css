@@ -1311,3 +1311,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .sticker-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 4px; margin: 4px 0; font-size: 1.3rem; text-align: center; }
 .sticker-grid .not { color: var(--muted); font-size: 1rem; }
 .gacha-sticker { margin: 2px 0; font-size: 0.85rem; }
+.grammar-recommend { margin: 8px 0 0; display: flex; flex-wrap: wrap; gap: 4px; align-items: center; justify-content: center; }
+.grammar-recommend .stats-note { margin: 0; width: 100%; }

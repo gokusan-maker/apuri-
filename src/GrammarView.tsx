@@ -16,7 +16,7 @@ import { GrammarDuel } from './GrammarDuelView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -273,6 +273,16 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
               <button key={g} role="tab" aria-selected={grade === g} onClick={() => setGrade(g)}>
                 {g === 'all' ? 'すべて' : g}
+              </button>
+            ))}
+          </div>
+        )}
+        {stampMode && (
+          <div className="grammar-recommend">
+            <p className="stats-note">🌟 おすすめ単元</p>
+            {recommendUnits(units.filter((u) => grade === 'all' || gradeOf(u.id) === grade), clears, record).map((u) => (
+              <button key={u.id} className="list-link" onClick={() => open(u)}>
+                {`👉 ${u.title}`}
               </button>
             ))}
           </div>

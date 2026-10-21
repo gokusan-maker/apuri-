@@ -115,7 +115,7 @@ it('学年のタブで単元をしぼりこめる', () => {
   localStorage.clear()
   render(<Grammar />)
   fireEvent.click(screen.getByRole('tab', { name: '高校' }))
-  expect(screen.getByText(/過去完了/)).toBeInTheDocument()
+  expect(screen.getAllByText(/過去完了/).length).toBeGreaterThan(0)
   expect(screen.queryByText('be動詞（am / is / are）')).not.toBeInTheDocument()
   fireEvent.click(screen.getByRole('tab', { name: 'すべて' }))
   expect(screen.getByText('be動詞（am / is / are）')).toBeInTheDocument()
@@ -322,4 +322,12 @@ it('単元さがしでしぼりこめる', () => {
   expect(items.length).toBeLessThan(GRAMMAR.length)
   fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: 'zzzz' } })
   expect(screen.getByText('見つかりませんでした')).toBeInTheDocument()
+})
+
+it('おすすめ単元から単元を開ける', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  expect(screen.getByText('🌟 おすすめ単元')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(`👉 ${GRAMMAR[0].title}`))
+  expect(screen.getByText(GRAMMAR[0].points[0])).toBeInTheDocument()
 })

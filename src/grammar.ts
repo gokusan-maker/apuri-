@@ -1446,3 +1446,9 @@ export function searchUnits<T extends GrammarUnit>(units: T[], q: string): T[] {
   if (!k) return units
   return units.filter((u) => [u.title, ...u.points, ...u.examples.map((e) => e.en)].some((t) => t.toLowerCase().includes(k)))
 }
+
+// おすすめ単元：★が少ない順（同じなら、まだ全問正解していない・一覧の順）に3つ
+export function recommendUnits(units: GrammarUnit[], clears: Record<string, number>, record: GrammarRecord, n = 3): GrammarUnit[] {
+  const key = (u: GrammarUnit) => unitStars(clears[u.id] ?? 0) * 2 + (record[u.id] === u.questions.length ? 1 : 0)
+  return [...units].sort((a, b) => key(a) - key(b)).slice(0, n)
+}
