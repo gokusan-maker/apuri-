@@ -538,7 +538,7 @@ button.monster-body { padding: 0; border: none; background: transparent; cursor:
 .card.swipe-again { box-shadow: 0 0 0 3px var(--again) inset; }
 .swipe-hint { margin: 10px 0 0; font-size: 0.75rem; color: var(--muted); }
 .shop-h { margin: 12px 0 6px; font-size: 1rem; }
-.snacks { margin-top: 0; }
+.snacks { margin-top: 0; display: grid !important; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .snacks button { font-size: 0.85rem; padding: 10px 6px; }
 .snacks button:disabled { opacity: 0.4; }
 .miss-example { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--bg); text-align: left; }
