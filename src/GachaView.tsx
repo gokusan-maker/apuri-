@@ -3,7 +3,7 @@ import { GACHA_PRICE, PARTY_MAX } from './gacha'
 import { FORMS, RARITY_LABEL, SPECIES, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
-export type GachaResult = { kind: Kind; species: Species }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean }
 
 type Props = {
   coins: number
@@ -64,6 +64,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>
+          {(result.newKind || result.newSpecies) && <p className="gacha-new">NEW! {result.newSpecies ? `はじめての「${result.species.name}」` : ''}{result.newSpecies && result.newKind ? '・' : ''}{result.newKind ? `はじめての「${result.kind.name}」` : ''}</p>}
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！

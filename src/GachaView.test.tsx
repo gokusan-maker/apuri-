@@ -47,3 +47,9 @@ it('週末はドラコ出現アップのお知らせが出る', () => {
   render(<Gacha coins={0} members={1} dragonUp onDraw={() => null} />)
   expect(screen.getByText(/週末はドラコが出やすい/)).toBeInTheDocument()
 })
+
+it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true, newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('NEW! はじめての「ニャンタ」・はじめての「うみ色」')).toBeInTheDocument()
+})

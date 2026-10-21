@@ -763,7 +763,9 @@ function App() {
             if (!r) return null
             setWallet(r.wallet)
             setParty(r.party)
-            return { kind: r.kind, species: r.species }
+            const newSpecies = r.species.id !== 'mochi' && !party.members.some((m) => m.species === r.species.id)
+            const newKind = r.kind.id !== 'normal' && !party.members.some((m) => m.kind === r.kind.id)
+            return { kind: r.kind, species: r.species, newKind, newSpecies }
           }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)
