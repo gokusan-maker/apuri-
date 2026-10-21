@@ -566,6 +566,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'It took ___ three hours to clean the room.', choices: ['me', 'my', 'I'], answer: 0, why: 'It takes ＋人（目的格）＋時間。' },
     ],
   },
+  {
+    id: 'so-that',
+    title: 'so ～ that …（とても～なので…）',
+    points: ['so ＋形容詞・副詞＋ that ～ で「とても…なので～」。', 'that のあとに結果（どうなったか）を書く。'],
+    examples: [
+      { en: 'It was so hot that we went swimming.', ja: 'とても暑かったので泳ぎに行った。' },
+      { en: 'He ran so fast that nobody could catch him.', ja: '彼はとても速く走ったので、だれも追いつけなかった。' },
+    ],
+    questions: [
+      { sentence: 'The box was ___ heavy that I couldn\'t carry it.', choices: ['so', 'too', 'very'], answer: 0, why: 'so ～ that … で「とても～なので…」。' },
+      { sentence: 'She was so tired ___ she went to bed early.', choices: ['that', 'than', 'then'], answer: 0, why: 'so ～ that の that。' },
+      { sentence: 'The movie was so funny that we ___ a lot.', choices: ['laughed', 'laugh', 'laughing'], answer: 0, why: '過去の話なので laughed。' },
+    ],
+  },
+  {
+    id: 'polite-request',
+    title: '間接的なお願い（Could you ～? / Would you mind ～ing?）',
+    points: ['Could you ～? で「～していただけますか」（ていねいなお願い）。', 'Would you mind ～ing? は「～していただけませんか」。答えが「いいですよ」なら No, not at all.'],
+    examples: [
+      { en: 'Could you open the window?', ja: '窓を開けていただけますか。' },
+      { en: 'Would you mind closing the door?', ja: 'ドアを閉めていただけませんか。' },
+    ],
+    questions: [
+      { sentence: '___ you tell me the way to the station?', choices: ['Could', 'Must', 'Should'], answer: 0, why: 'ていねいなお願いは Could you ～?' },
+      { sentence: 'Would you mind ___ a little?', choices: ['wait', 'waiting', 'to wait'], answer: 1, why: 'mind のあとは ～ing。' },
+      { sentence: '"Would you mind helping me?" "No, not at ___."', choices: ['all', 'once', 'last'], answer: 0, why: '「いいですよ」は No, not at all.' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
