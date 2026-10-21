@@ -3,7 +3,7 @@ import { BossFigure } from './BossView'
 import { GrammarOrder } from './GrammarOrderView'
 import { GrammarSpot } from './GrammarSpotView'
 import { GrammarTime } from './GrammarTimeView'
-import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
+import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
 import { gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -18,9 +18,10 @@ type Props = {
   onStampTicket?: () => void // スタンプが10個ふえるごとに（文法のときだけ）
   onMonsterWin?: () => void // 文法モンスターをたおした（ごほうびはアプリ側）
   onDailyBonus?: () => void // 今日の文法を全問正解した（1日1回）
+  onRushWin?: () => void // 文法モンスターラッシュを3連勝した
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
@@ -32,10 +33,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [spot, setSpot] = useState(false) // まちがいさがし
   const [timeAttack, setTimeAttack] = useState(false) // タイムアタック
   const [grade, setGrade] = useState<GrammarGrade | 'all'>('all')
+  const [rush, setRush] = useState<{ list: GrammarUnit[]; at: number } | null>(null) // 文法モンスターラッシュ
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
   const daily = dailyGrammar(today)
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
+
+  function startBattle(u: GrammarUnit) {
+    open(u)
+    setBattle(true)
+    setStep(0)
+  }
 
   function open(u: GrammarUnit) {
     setBattle(false)
@@ -98,6 +106,18 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             ⏱ 文法タイムアタック（60秒）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
           </button>
         )}
+        {stampMode && (
+          <button
+            className="boss-btn grammar-monster-btn"
+            onClick={() => {
+              const list = shuffle(GRAMMAR).slice(0, RUSH_COUNT)
+              setRush({ list, at: 0 })
+              startBattle(list[0])
+            }}
+          >
+            👾👾👾 文法モンスターラッシュ（{RUSH_COUNT}連戦・全勝で🪙{RUSH_GRAMMAR_COINS}）
+          </button>
+        )}
         {stampMode && weakUnits(record).length > 0 && (
           <button
             className="list-link weak-grammar-btn"
@@ -137,7 +157,13 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   }
 
   const back = (
-    <button className="stage-back" onClick={() => setUnit(null)}>
+    <button
+      className="stage-back"
+      onClick={() => {
+        setUnit(null)
+        setRush(null)
+      }}
+    >
       ← 単元一覧
     </button>
   )
@@ -202,6 +228,22 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             {mixRank(score, unit.questions.length)}
           </p>
         )}
+        {battle && rush && score === unit.questions.length && (
+          rush.at + 1 < rush.list.length ? (
+            <button
+              className="boss-btn grammar-monster-btn"
+              onClick={() => {
+                const at = rush.at + 1
+                setRush({ ...rush, at })
+                startBattle(rush.list[at])
+              }}
+            >
+              次の文法モンスターへ ▶（{rush.at + 2} / {rush.list.length}）
+            </button>
+          ) : (
+            <p className="level-up">👾 ラッシュ完全クリア！ 🪙{RUSH_GRAMMAR_COINS}</p>
+          )
+        )}
         {battle ? (
           <p className="result-message">{score === unit.questions.length ? `👾 ${monsterName(unit)}をたおした！ 🪙${GRAMMAR_MONSTER_COINS}` : `${monsterName(unit)}ににげられた…解説を見直してもう一度！`}</p>
         ) : (
@@ -233,7 +275,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       saveDailyGrammarDay(today)
       onDailyBonus?.()
     }
-    if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) onMonsterWin?.()
+    if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) {
+      onMonsterWin?.()
+      if (rush && rush.at === rush.list.length - 1) onRushWin?.()
+    }
+    if (battle && rush && step === unit.questions.length - 1 && nextScore < unit.questions.length) setRush(null)
     if (step === unit.questions.length - 1 && nextScore > (record[unit.id] ?? -1)) {
       const r = { ...record, [unit.id]: nextScore }
       if (stampMode && Math.floor(grammarStamps(r) / STAMP_EVERY) > Math.floor(grammarStamps(record) / STAMP_EVERY)) onStampTicket?.()

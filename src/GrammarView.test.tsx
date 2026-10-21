@@ -120,3 +120,22 @@ it('学年のタブで単元をしぼりこめる', () => {
   fireEvent.click(screen.getByRole('tab', { name: 'すべて' }))
   expect(screen.getByText('be動詞（am / is / are）')).toBeInTheDocument()
 })
+
+it('文法モンスターラッシュを3連勝するとごほうび', () => {
+  localStorage.clear()
+  const rushWin = vi.fn()
+  render(<Grammar onRushWin={rushWin} />)
+  fireEvent.click(screen.getByText(/文法モンスターラッシュ/))
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  for (let round = 0; round < 3; round++) {
+    for (let i = 0; i < 3; i++) {
+      const text = document.querySelector('.blank-sentence')!.textContent!
+      const q = all.find((x) => x.sentence.replace('___', '　　　') === text)!
+      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    if (round < 2) fireEvent.click(screen.getByText(/次の文法モンスターへ/))
+  }
+  expect(screen.getByText(/ラッシュ完全クリア！/)).toBeInTheDocument()
+  expect(rushWin).toHaveBeenCalledTimes(1)
+})

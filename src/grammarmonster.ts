@@ -3,6 +3,8 @@ import type { BossLook } from './boss'
 import type { GrammarUnit } from './grammar'
 
 export const GRAMMAR_MONSTER_COINS = 10
+export const RUSH_COUNT = 3 // 文法モンスターラッシュの連戦数
+export const RUSH_GRAMMAR_COINS = 30 // ラッシュ全勝のごほうび
 const COLORS = ['#7c3aed', '#db2777', '#0891b2', '#16a34a', '#ea580c', '#4f46e5', '#be123c', '#0d9488']
 
 // 「be動詞（am / is / are）」→「be動詞モンスター」
