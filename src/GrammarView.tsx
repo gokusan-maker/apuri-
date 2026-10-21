@@ -3,7 +3,7 @@ import { BossFigure } from './BossView'
 import { GrammarOrder } from './GrammarOrderView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
-import { GRAMMAR, grammarStamps, loadGrammar, saveGrammar, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { GRAMMAR, grammarStamps, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -25,6 +25,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
+  const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
 
   function open(u: GrammarUnit) {
     setBattle(false)
@@ -66,7 +67,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             setStep(0)
           }}
         >
-          📝 まとめテスト（ランダム10問）
+          📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
         <ul className="grammar-list">
           {units.map((u) => (
@@ -146,6 +147,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <p className="result-score">
           {score} / {unit.questions.length} 問正解
         </p>
+        {unit.id === 'mix-test' && (
+          <p className={`battle-rank rank-${mixRank(score, unit.questions.length)}`} aria-label={`ランク ${mixRank(score, unit.questions.length)}`}>
+            {mixRank(score, unit.questions.length)}
+          </p>
+        )}
         {battle ? (
           <p className="result-message">{score === unit.questions.length ? `👾 ${monsterName(unit)}をたおした！ 🪙${GRAMMAR_MONSTER_COINS}` : `${monsterName(unit)}ににげられた…解説を見直してもう一度！`}</p>
         ) : (
@@ -167,6 +173,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     if (ok) playCorrect()
     else playWrong()
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
+    if (unit.id === 'mix-test' && step === unit.questions.length - 1 && nextScore > (mixBest[title] ?? -1)) {
+      const b = { ...mixBest, [title]: nextScore }
+      setMixBest(b)
+      saveMixBest(b)
+    }
     if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) onMonsterWin?.()
     if (step === unit.questions.length - 1 && nextScore > (record[unit.id] ?? -1)) {
       const r = { ...record, [unit.id]: nextScore }

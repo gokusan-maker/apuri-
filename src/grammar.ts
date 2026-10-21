@@ -818,3 +818,22 @@ export function saveGrammar(r: GrammarRecord): void {
 // 文法スタンプカード：確認問題を全問正解した単元にスタンプ。10個ごとにガチャチケット
 export const STAMP_EVERY = 10
 export const grammarStamps = (r: GrammarRecord) => GRAMMAR.filter((u) => r[u.id] === u.questions.length).length
+
+// まとめテストのランク（10問中）とベスト記録
+export const mixRank = (score: number, total: number): 'S' | 'A' | 'B' => (score >= total ? 'S' : score >= total * 0.8 ? 'A' : 'B')
+const MIX_KEY = 'eitan:grammar-mix-best'
+export function loadMixBest(): Record<string, number> {
+  try {
+    const v = JSON.parse(localStorage.getItem(MIX_KEY) ?? '{}') as unknown
+    return v && typeof v === 'object' && !Array.isArray(v) ? (Object.fromEntries(Object.entries(v).filter(([, n]) => typeof n === 'number')) as Record<string, number>) : {}
+  } catch {
+    return {}
+  }
+}
+export function saveMixBest(r: Record<string, number>): void {
+  try {
+    localStorage.setItem(MIX_KEY, JSON.stringify(r))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

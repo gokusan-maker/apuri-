@@ -66,3 +66,19 @@ it('文法モンスターを全問正解でたおすとごほうび', () => {
   expect(win).toHaveBeenCalledTimes(1)
   expect(screen.getByText(/be動詞モンスターをたおした！/)).toBeInTheDocument()
 })
+
+it('まとめテストを全問正解するとSランクでベストが残る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByText(/まとめテスト（ランダム10問）/))
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  for (let i = 0; i < 10; i++) {
+    const text = document.querySelector('.blank-sentence')!.textContent!
+    const q = all.find((x) => x.sentence.replace('___', '　　　') === text)!
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText(/ベスト 10\/10・S/)).toBeInTheDocument()
+})

@@ -31,3 +31,11 @@ it('全問正解の単元がスタンプになる', async () => {
   expect(grammarStamps({ ...r, [GRAMMAR[3].id]: 1 })).toBe(3)
   expect(grammarStamps({ 'borrow-lend': 3 })).toBe(0) // まちがえやすい単語は数えない
 })
+
+it('まとめテストのランクとベスト記録', async () => {
+  const { mixRank, loadMixBest, saveMixBest } = await import('./grammar')
+  expect([mixRank(10, 10), mixRank(8, 10), mixRank(7, 10)]).toEqual(['S', 'A', 'B'])
+  localStorage.clear()
+  saveMixBest({ 文法ミニ解説: 9 })
+  expect(loadMixBest()).toEqual({ 文法ミニ解説: 9 })
+})
