@@ -474,8 +474,28 @@ export function ordinalQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt: `「${n}番目」は英語で？`, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// was と were：主語が I・he・she・it・1人/1つなら was、you・複数なら were
+const WAS_WERE: [string, 'was' | 'were', string][] = [
+  ['I ___ at home yesterday.', 'was', '主語が I なので was'],
+  ['They ___ very happy last night.', 'were', '主語が They（複数）なので were'],
+  ['My mother ___ busy this morning.', 'was', '主語が My mother（1人）なので was'],
+  ['You ___ late for school yesterday.', 'were', '主語が You なので were'],
+  ['The movie ___ very exciting.', 'was', '主語が The movie（1つ）なので was'],
+  ['Ken and Aki ___ in the library.', 'were', '主語が Ken and Aki（2人）なので were'],
+  ['It ___ cold last week.', 'was', '主語が It なので was'],
+  ['We ___ tired after the game.', 'were', '主語が We（複数）なので were'],
+  ['There ___ many people at the park.', 'were', 'many people（複数）なので were'],
+  ['There ___ a cat on the roof.', 'was', 'a cat（1匹）なので was'],
+]
+
+export function wasWereQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = WAS_WERE[Math.floor(rng() * WAS_WERE.length)]
+  const choices = ['was', 'were']
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [muchManyQ, pronounQ, modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [wasWereQ, muchManyQ, pronounQ, modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
