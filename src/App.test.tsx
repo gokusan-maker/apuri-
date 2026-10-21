@@ -457,6 +457,15 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:keys')).toBe('0')
   })
 
+  it('スーパーレア以上の仲間は一覧で光る', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 0 }, { xp: 0, kind: 'niji' }, { xp: 0, kind: 'sakura' }], active: 0 }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
+    expect(document.querySelectorAll('.party li.shine')).toHaveLength(1)
+    expect(document.querySelector('.party li.shine.r-UR')).not.toBeNull()
+  })
+
   it('記録の部屋に自己ベストが出る', () => {
     localStorage.setItem('eitan:endless', '7')
     render(<App />)

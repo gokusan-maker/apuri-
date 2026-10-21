@@ -1043,7 +1043,7 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
           const f = formOf(m)
           const active = i === party.active
           return (
-            <li key={i} className={active ? 'got active' : 'got'}>
+            <li key={i} className={`${active ? 'got active' : 'got'}${m.kind && ['SR', 'UR'].includes(kindOf(m.kind).rarity) ? ` shine r-${kindOf(m.kind).rarity}` : ''}`}>
               <button className="party-pick party-member" onClick={() => onSelect(i)} aria-pressed={active}>
                 <span className="zukan-figure">
                   <MonsterFigure form={f} wear={m.wear} kind={m.kind} />
