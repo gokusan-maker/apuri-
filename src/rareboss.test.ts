@@ -27,3 +27,14 @@ it('レアボスのタマゴはかならず色ちがい。仲間がいっぱい�
   const full = { members: Array.from({ length: PARTY_MAX }, () => ({ xp: 0 })), active: 0 }
   expect(rareEgg(full as never, 0, 0)).toBeNull()
 })
+
+it('週末ボスは週ごとに決まり、たおした週を記録できる', async () => {
+  const { loadWeekendWeek, saveWeekendWeek, weekendBossOf, WEEKEND_HP } = await import('./rareboss')
+  expect(WEEKEND_HP).toBeGreaterThan(130)
+  expect(weekendBossOf('2026-10-19')).toEqual(weekendBossOf('2026-10-19'))
+  expect(weekendBossOf('2026-10-19').look.name.startsWith('週末の')).toBe(true)
+  localStorage.clear()
+  expect(loadWeekendWeek()).toBe('')
+  saveWeekendWeek('2026-10-19')
+  expect(loadWeekendWeek()).toBe('2026-10-19')
+})

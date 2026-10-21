@@ -39,3 +39,30 @@ export function saveRareWeek(w: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 週末ボス：土日だけあらわれる強いボス。その週末の最初の撃破で🎟1
+export const WEEKEND_HP = 160
+export function weekendBossOf(week: string): { level: Level; look: BossLook } {
+  const level = dailyBossLevel(RARE_LEVELS, `weekend-${week}`) ?? '中2'
+  const base = BOSSES[level]
+  return {
+    level,
+    look: { ...base, name: `週末の${base.name}`, color: '#7c3aed', line: '#4c1d95', eye: '#facc15', desc: '土曜と日曜だけあらわれる、とても強いボス。', taunt: { en: 'Weekends are for training!', ja: '週末は修行の日だ！' } },
+  }
+}
+
+const WEEKEND_KEY = 'eitan:weekend-boss'
+export function loadWeekendWeek(): string {
+  try {
+    return localStorage.getItem(WEEKEND_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveWeekendWeek(w: string): void {
+  try {
+    localStorage.setItem(WEEKEND_KEY, w)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

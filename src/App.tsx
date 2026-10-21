@@ -953,6 +953,10 @@ function App() {
             pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
           }}
           onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
+          onWeekendWin={() => {
+            setWallet((w) => addTicket(w))
+            pushToast([{ id: 'weekend-boss', text: '🌙 週末ボスをたおした！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+          }}
           onRareWin={() => {
             const r = rareEgg(party, rand(), rand())
             if (r) setParty(r.party)

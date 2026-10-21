@@ -8,7 +8,7 @@ import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
-import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
+import { loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
@@ -47,6 +47,7 @@ type Props = {
   onLose?: () => void
   onOpenGold?: () => void
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
+  onWeekendWin?: () => void // 週末ボスをその週末はじめて倒した
 }
 
 export const STAR3_COINS = 20
@@ -55,7 +56,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -67,6 +68,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [univ, setUniv] = usePersistent(loadUniv, saveUniv)
   const [rareWeek, setRareWeek] = usePersistent(loadRareWeek, saveRareWeek)
   const [rareFight, setRareFight] = useState(false)
+  const [weekendWeek, setWeekendWeek] = usePersistent(loadWeekendWeek, saveWeekendWeek)
+  const [weekendFight, setWeekendFight] = useState(false)
   const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean; ex?: boolean } | null>(null)
   const [endless, setEndless] = useState<{ floor: number; hearts: number; won: boolean } | null>(null)
   const [endlessBest, setEndlessBest] = usePersistent(loadEndlessBest, saveEndlessBest)
@@ -173,6 +176,36 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           if (last) onRushClear?.(!!rush.ex)
         }}
         onExit={() => setRush(rush.won && !last ? { round: rush.round + 1, hearts: rush.hearts, won: false, ex: rush.ex } : null)}
+      />
+    )
+  }
+
+  if (weekendFight) {
+    const wb = weekendBossOf(week)
+    return (
+      <Boss
+        level={wb.level}
+        words={wordsOf([wb.level])}
+        look={wb.look}
+        title="🌙 週末ボス"
+        hp={WEEKEND_HP}
+        partner={partner}
+        bag={bag}
+        onUseItem={onUseItem}
+        onDefeat={onBossDefeat}
+        onSkill={onSkill}
+        onDrop={onDrop}
+        onLose={onLose}
+        onRankBonus={onRankBonus}
+        bonus={BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onAnswer}
+        onWin={() => {
+          if (weekendWeek === week) return
+          setWeekendWeek(week)
+          onWeekendWin?.()
+        }}
+        onExit={() => setWeekendFight(false)}
       />
     )
   }
@@ -395,6 +428,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
         {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
       </button>
+      {weekend && (
+        <button className="boss-btn weekend-boss" onClick={() => setWeekendFight(true)}>
+          {weekendWeek === week ? `✅ 週末ボス「${weekendBossOf(week).look.name}」はたおした！（もう一度戦う）` : `🌙 週末ボス「${weekendBossOf(week).look.name}」（HP${WEEKEND_HP}）たおすと 🎟1`}
+        </button>
+      )}
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
         {rareWeek === week ? `✅ 今週のレアボス「${rare.look.name}」はたおした！（もう一度戦う）` : `✨ 今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
       </button>

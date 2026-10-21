@@ -186,3 +186,14 @@ it('今日のボスは★2・★3の強さを選べる', () => {
   expect(screen.getByText('⚔️ 今日のボス ★★★')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '180')
 })
+
+it('週末ボスは週末だけ出て、HPが多い', () => {
+  localStorage.clear()
+  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(screen.queryByText(/🌙 週末ボス/)).not.toBeInTheDocument()
+  unmount()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
+  fireEvent.click(screen.getByText(/🌙 週末ボス「週末の/))
+  expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
+})
