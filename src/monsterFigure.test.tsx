@@ -37,3 +37,8 @@ it('さわったときの表情：ウインク・星の目・びっくり', () =
     expect(render(<MonsterFigure form={form('mochimaru')} mood={m} />).container.querySelector(`.face-${m}`)).not.toBeNull()
   }
 })
+
+it('ふつうの顔だけキョロキョロする', () => {
+  expect(render(<MonsterFigure form={form('mochimaru')} />).container.querySelector('.glance')).not.toBeNull()
+  expect(render(<MonsterFigure form={form('mochimaru')} mood="lonely" />).container.querySelector('.glance')).toBeNull()
+})

@@ -773,3 +773,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .particles > g > * { animation: drift 3s ease-in-out infinite; animation-delay: inherit; }
 @keyframes drift { 50% { transform: translateY(-5px) rotate(12deg); opacity: 0.6; } }
 @media (prefers-reduced-motion: reduce) { .particles > g > * { animation: none; } }
+/* ときどきキョロキョロ・ぴょんと跳ねる */
+.monster-face.glance { animation: glance 9s ease-in-out infinite; }
+@keyframes glance { 0%, 60%, 100% { transform: translateX(0); } 64%, 70% { transform: translateX(-3px); } 74%, 80% { transform: translateX(3px); } }
+.monster-body:not(.bounce):not(.droop) .monster-breathe { animation: breathe 3.2s ease-in-out infinite, hop 13s ease-in-out infinite 4s; }
+@keyframes hop { 0%, 92%, 100% { translate: 0 0; } 95% { translate: 0 -6px; } 97% { translate: 0 0; } 98.5% { translate: 0 -2px; } }
+@media (prefers-reduced-motion: reduce) { .monster-face.glance, .monster-body .monster-breathe { animation: none !important; } }

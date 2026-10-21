@@ -84,7 +84,7 @@ function Face({ mood }: { mood: Mood }) {
     )
   }
   return (
-    <g className="monster-face">
+    <g className={mood === 'normal' ? 'monster-face glance' : 'monster-face'}>
       {mood === 'happy' ? (
         <>
           <path d="M31 59 Q38 49 45 59" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
