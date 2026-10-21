@@ -156,3 +156,11 @@ it('Sランクのルーレットはコインかアイテム', async () => {
   expect(sRouletteOf(0.999)).toBe(S_ROULETTE[S_ROULETTE.length - 1])
   expect(S_ROULETTE.some((p) => p.kind === 'item')).toBe(true)
 })
+
+it('ボスの口ぐせは正解するたびにかわる', async () => {
+  const { hurtLineOf, HURT_LINES } = await import('./boss')
+  const a = hurtLineOf('モチ', 1)
+  const b = hurtLineOf('モチ', 2)
+  expect(a).not.toBe(b)
+  expect(hurtLineOf('モチ', 1 + HURT_LINES.length)).toBe(a)
+})

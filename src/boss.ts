@@ -293,3 +293,17 @@ export const S_ROULETTE: ({ kind: 'coins'; amount: number } | { kind: 'item'; id
   { kind: 'item', id: 'bomb' },
 ]
 export const sRouletteOf = (r: number) => S_ROULETTE[Math.min(S_ROULETTE.length - 1, Math.floor(r * S_ROULETTE.length))]
+
+// ボスの口ぐせ：正解するたびにボスがひとこと（ボスごとに始まりがちがい、順番にかわる）
+export const HURT_LINES: { en: string; ja: string }[] = [
+  { en: 'Ouch! That hurts!', ja: 'いたっ！ きいたぞ！' },
+  { en: 'Not bad!', ja: 'なかなかやるな！' },
+  { en: 'How did you know that?', ja: 'なぜわかったんだ？' },
+  { en: 'I will not give up!', ja: 'まだまだあきらめないぞ！' },
+  { en: 'You are getting stronger!', ja: 'どんどん強くなっているな！' },
+  { en: 'That was a good answer!', ja: 'いい答えだ……！' },
+]
+export function hurtLineOf(name: string, n: number): { en: string; ja: string } {
+  const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
+  return HURT_LINES[(k + n) % HURT_LINES.length]
+}
