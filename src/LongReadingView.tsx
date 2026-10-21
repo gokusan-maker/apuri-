@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -77,6 +77,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
+  const [history, setHistory] = useState(loadLongHistory)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([]) // 和訳を開いている段落
@@ -164,6 +165,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           </details>
         )}
         <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
+        {readingLevel(history) && (
+          <p className="stats-note reading-level">
+            🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）
+          </p>
+        )}
         <div className="sub-tabs genre-tabs" role="tablist" aria-label="長文の種類">
           {(['all', ...GENRES] as const).map((g) => (
             <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
@@ -743,6 +749,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             setTypes(t)
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))
+            setHistory(pushLongHistory(score / total))
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
             if (score > (record[p.id] ?? -1)) {
               const r = { ...record, [p.id]: score }

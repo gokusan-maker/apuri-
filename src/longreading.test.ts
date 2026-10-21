@@ -297,3 +297,14 @@ it('英問英答のある長文は13本以上で、選択肢は4つ', () => {
   expect(ps.length).toBeGreaterThanOrEqual(13)
   for (const p of ps) for (const q of p.qa!) expect(q.choices).toHaveLength(4)
 })
+
+it('直近5本の正答率で読解レベルが決まる', async () => {
+  const { loadLongHistory, pushLongHistory, readingLevel } = await import('./longreading')
+  localStorage.clear()
+  expect(readingLevel([])).toBeNull()
+  expect(readingLevel([0.5])).toEqual({ name: '初級', pct: 50 })
+  expect(readingLevel([0.6, 0.7])).toEqual({ name: '中級', pct: 65 })
+  expect(readingLevel([0.9, 0.8])).toEqual({ name: '上級', pct: 85 })
+  for (let i = 0; i < 7; i++) pushLongHistory(i / 10)
+  expect(loadLongHistory()).toEqual([0.2, 0.3, 0.4, 0.5, 0.6])
+})

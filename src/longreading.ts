@@ -2293,3 +2293,28 @@ export function saveDailyLongDay(day: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 読解レベル：直近5本の正答率の平均で「初級・中級・上級」
+const HIST_KEY = 'eitan:long-history'
+export function loadLongHistory(): number[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(HIST_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is number => typeof x === 'number' && x >= 0 && x <= 1).slice(-5) : []
+  } catch {
+    return []
+  }
+}
+export function pushLongHistory(rate: number): number[] {
+  const h = [...loadLongHistory(), Math.max(0, Math.min(1, rate))].slice(-5)
+  try {
+    localStorage.setItem(HIST_KEY, JSON.stringify(h))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return h
+}
+export function readingLevel(h: number[]): { name: '初級' | '中級' | '上級'; pct: number } | null {
+  if (h.length === 0) return null
+  const pct = Math.round((h.reduce((a, b) => a + b, 0) / h.length) * 100)
+  return { name: pct >= 85 ? '上級' : pct >= 60 ? '中級' : '初級', pct }
+}
