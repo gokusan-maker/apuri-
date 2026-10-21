@@ -25,6 +25,7 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { SugorokuBoard } from './SugorokuView'
 import { JANKEN_COINS } from './janken'
 import { loadWalkDay, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
 import { omikujiDiscount, omikujiOf } from './omikuji'
@@ -780,6 +781,14 @@ function App() {
             </p>
           )
         )}
+        <SugorokuBoard
+          day={today}
+          words={words}
+          onGoal={() => {
+            setWallet((w) => addTicket(w))
+            pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+          }}
+        />
         <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
         <Roulette
           done={rouletteDay === today}
