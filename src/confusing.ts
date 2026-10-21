@@ -842,6 +842,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Did you hear the ___ news?', choices: ['last', 'latest'], answer: 1, why: '「最新の」ニュースは latest。' },
     ],
   },
+  {
+    id: 'look-like-alike',
+    title: 'look と look like',
+    points: ['look ＋形容詞で「〜に見える」（You look tired.）。', 'look like ＋名詞で「〜のように見える・〜に似ている」（He looks like his father.）。'],
+    examples: [
+      { en: 'You look happy today.', ja: '今日はうれしそうだね。' },
+      { en: 'That cloud looks like a fish.', ja: 'あの雲は魚みたいに見える。' },
+    ],
+    questions: [
+      { sentence: 'She looks ___ her mother.', choices: ['like', 'as'], answer: 0, why: '「〜に似ている」は look like ＋名詞。' },
+      { sentence: 'You look ___. Are you OK?', choices: ['tired', 'like tired'], answer: 0, why: 'look ＋形容詞なので tired。' },
+      { sentence: 'It looks ___ rain.', choices: ['like', 'to'], answer: 0, why: '「雨になりそうだ」は It looks like rain.' },
+    ],
+  },
+  {
+    id: 'make-let',
+    title: 'make と let（〜させる）',
+    points: ['make ＋人＋動詞の原形で「（むりやり）〜させる」。', 'let ＋人＋動詞の原形で「（望みどおり）〜させてあげる」。'],
+    examples: [
+      { en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' },
+      { en: 'My father let me use his camera.', ja: '父はカメラを使わせてくれた。' },
+    ],
+    questions: [
+      { sentence: 'Please ___ me try it!', choices: ['let', 'make'], answer: 0, why: '「やらせて」とたのむのは let。' },
+      { sentence: 'The teacher ___ us rewrite the essay.', choices: ['let', 'made'], answer: 1, why: '「（いやでも）書き直させた」は made。' },
+      { sentence: 'My parents ___ me stay up late on Fridays.', choices: ['let', 'make'], answer: 0, why: '「夜ふかしさせてくれる」は let。' },
+    ],
+  },
+  {
+    id: 'hope-expect',
+    title: 'hope と expect',
+    points: ['hope は「（よいことを）望む・〜だといいな」。', 'expect は「（たぶんそうなると）予想する・待ち受ける」。よいことにも悪いことにも使う。'],
+    examples: [
+      { en: 'I hope you get well soon.', ja: '早くよくなるといいね。' },
+      { en: 'We expect rain tomorrow.', ja: '明日は雨になる見こみだ。' },
+    ],
+    questions: [
+      { sentence: 'I ___ you have a nice trip.', choices: ['hope', 'expect'], answer: 0, why: '「〜だといいな」と望むので hope。' },
+      { sentence: 'The test was harder than I ___.', choices: ['hoped', 'expected'], answer: 1, why: '「予想していたより」は expected。' },
+      { sentence: 'We ___ about 100 guests at the party.', choices: ['hope', 'expect'], answer: 1, why: '「来ると見こんでいる」は expect。' },
+    ],
+  },
+  {
+    id: 'wakeup-getup',
+    title: 'wake up と get up',
+    points: ['wake up は「目が覚める」。', 'get up は「起き上がる・（ふとんから）起きる」。目が覚めてもまだ get up していないことがある。'],
+    examples: [
+      { en: 'I woke up at six, but I got up at seven.', ja: '6時に目が覚めたが、起き上がったのは7時だった。' },
+      { en: 'Wake up! It\'s time for school.', ja: '起きて！学校の時間だよ。' },
+    ],
+    questions: [
+      { sentence: 'The noise made me ___ in the night.', choices: ['wake up', 'get up'], answer: 0, why: '音で「目が覚めた」ので wake up。' },
+      { sentence: 'I usually ___ and wash my face.', choices: ['get up', 'wake up'], answer: 0, why: '「起き上がって顔を洗う」なので get up。' },
+      { sentence: "Don't ___ the baby.", choices: ['wake up', 'get up'], answer: 0, why: '「起こさないで」は wake (up) を使う。' },
+    ],
+  },
+  {
+    id: 'therebe-have',
+    title: 'there is と have',
+    points: ['There is / are 〜 は「（ある場所に）〜がある・いる」。', 'have は「（人が）〜を持っている・〜がいる」。'],
+    examples: [
+      { en: 'There is a park near my house.', ja: '家の近くに公園がある。' },
+      { en: 'I have two brothers.', ja: '私には兄弟が2人いる。' },
+    ],
+    questions: [
+      { sentence: '___ many books in the library.', choices: ['There are', 'They have'], answer: 0, why: '「図書館に本がたくさんある」は There are。' },
+      { sentence: 'I ___ a dog and a cat.', choices: ['have', 'there are'], answer: 0, why: '「（私は）飼っている」は have。' },
+      { sentence: '___ a cat on the roof.', choices: ['There is', 'It has'], answer: 0, why: '「屋根の上にネコがいる」は There is。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
