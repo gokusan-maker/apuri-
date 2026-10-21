@@ -1126,6 +1126,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'You can learn English ___ watching movies.', choices: ['by', 'with', 'of'], answer: 0, why: 'by 〜ing で「〜することによって」。' },
     ],
   },
+  {
+    id: 'good-better',
+    title: 'good / well の比較（better・best）',
+    points: ['good（よい）・well（じょうずに）は、比較級が better、最上級が best と形が変わる。', 'like A better than B で「B より A が好き」、like A the best で「A がいちばん好き」。'],
+    examples: [
+      { en: 'Your idea is better than mine.', ja: 'あなたの考えは私のよりよい。' },
+      { en: 'I like summer the best of all seasons.', ja: '私はすべての季節の中で夏がいちばん好きだ。' },
+    ],
+    questions: [
+      { sentence: 'She sings ___ than her sister.', choices: ['more well', 'better', 'gooder'], answer: 1, why: 'well の比較級は better。' },
+      { sentence: 'This is the ___ movie I have ever seen.', choices: ['best', 'better', 'most good'], answer: 0, why: 'good の最上級は best。' },
+      { sentence: 'Which do you like ___, cats or dogs?', choices: ['best', 'better', 'well'], answer: 1, why: '2つをくらべるので better。' },
+    ],
+  },
+  {
+    id: 'possessive',
+    title: '名詞の所有格（Ken\'s / the name of 〜）',
+    points: ['人や動物には \'s をつけて「〜の」を表す（Ken\'s bag、my mother\'s car）。-s で終わる複数形は \' だけ（my parents\' room）。', 'ものには of を使うことが多い（the name of this flower、the top of the mountain）。'],
+    examples: [
+      { en: "This is my brother's bike.", ja: 'これは兄の自転車だ。' },
+      { en: 'Do you know the name of this song?', ja: 'この歌の名前を知っていますか。' },
+    ],
+    questions: [
+      { sentence: 'That is ___ umbrella.', choices: ["Yuki's", 'Yuki', 'Yukis'], answer: 0, why: '人の「〜の」は \'s をつける。' },
+      { sentence: 'The ___ room is on the second floor.', choices: ["boys's", "boys'", "boy's s"], answer: 1, why: '-s で終わる複数形（boys）には \' だけをつける。' },
+      { sentence: 'We climbed to the top ___ the mountain.', choices: ['of', 'in', 'at'], answer: 0, why: 'もの（山）の「〜の」は the top of 〜。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1225,8 +1253,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

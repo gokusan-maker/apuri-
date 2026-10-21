@@ -79,6 +79,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'as-soon-as': { wrong: 'I will call you as soon as I will get home.', right: 'I will call you as soon as I get home.', why: 'as soon as の中は、未来のことでも現在形。' },
   'few-little': { wrong: 'I have a little friends.', right: 'I have a few friends.', why: 'friends は数えられる名詞なので a few。a little は数えられない名詞に使う。' },
   'prep-gerund': { wrong: 'He left without say goodbye.', right: 'He left without saying goodbye.', why: '前置詞のあとの動詞は -ing 形（動名詞）。' },
+  'good-better': { wrong: 'He plays tennis more well than me.', right: 'He plays tennis better than me.', why: 'well の比較級は better。more well とは言わない。' },
+  possessive: { wrong: 'This is the bag of Ken.', right: "This is Ken's bag.", why: '人の「〜の」は \'s を使うのがふつう。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
