@@ -297,3 +297,18 @@ it('学年まとめテストはその学年の問題だけで、ベストが残�
   }
   expect(JSON.parse(localStorage.getItem('eitan:grammar-mix-best') ?? '{}')['grade:中1']).toBe(10)
 })
+
+it('全問正解すると単元に★がつく', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:grammar-clears', JSON.stringify({ [GRAMMAR[0].id]: 2 }))
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByLabelText('レベル ★2')).toBeInTheDocument()
+})

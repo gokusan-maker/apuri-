@@ -1294,3 +1294,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-minion { margin: 4px 0; font-weight: 800; color: #6d28d9; }
 .duel-options { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
 .duel-option { padding: 12px; border: 2px solid var(--muted); border-radius: 12px; background: var(--bg); color: var(--fg); font-size: 1rem; text-align: left; }
+.unit-stars { color: #f59e0b; }

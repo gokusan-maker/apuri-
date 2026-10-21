@@ -15,7 +15,7 @@ import { GrammarDuel } from './GrammarDuelView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -46,6 +46,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [shadow, setShadow] = useState(false)
   const [duel, setDuel] = useState(false)
   const [note, setNote] = useState(loadNotebook)
+  const [clears, setClears] = useState(loadClears)
   const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
   const [goalReached, setGoalReached] = useState(false)
   const [firstClear, setFirstClear] = useState(false) // この回ではじめて全問正解した
@@ -294,6 +295,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
                 <span className="grammar-score">
                   {record[u.id] === undefined ? '未挑戦' : `${record[u.id]} / ${u.questions.length}`}
                   {record[u.id] === u.questions.length ? ' 👑' : ''}
+                  {stampMode && unitStars(clears[u.id] ?? 0) > 0 && <span className="unit-stars" aria-label={`レベル ★${unitStars(clears[u.id] ?? 0)}`}>{' ' + '★'.repeat(unitStars(clears[u.id] ?? 0))}</span>}
                 </span>
               </button>
             </li>
@@ -469,6 +471,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       if (rush && rush.at === rush.list.length - 1) onRushWin?.()
     }
     if (battle && rush && step === unit.questions.length - 1 && nextScore < unit.questions.length) setRush(null)
+    if (step === unit.questions.length - 1 && nextScore === unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
+      const c = { ...clears, [unit.id]: (clears[unit.id] ?? 0) + 1 }
+      setClears(c)
+      saveClears(c)
+    }
     if (step === unit.questions.length - 1 && stampMode && !battle && nextScore === unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
       const r = clearForGoal(weekGoal, unit.id)
       setWeekGoal(r.goal)

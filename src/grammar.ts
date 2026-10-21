@@ -1391,3 +1391,23 @@ export const noteAfter = (list: string[], sentence: string, ok: boolean): string
 // ノートの問題文から問題を取り出す（単元が消えた問題はとばす）
 export const notebookQuestions = (list: string[]): GrammarQuestion[] =>
   list.map((t) => GRAMMAR.flatMap((u) => u.questions).find((q) => q.sentence === t)).filter((q): q is GrammarQuestion => !!q)
+
+// 単元のレベル★：全問正解した回数（1回で★1、3回で★2、5回で★3）
+const CLEARS_KEY = 'eitan:grammar-clears'
+export function loadClears(): Record<string, number> {
+  try {
+    const v = JSON.parse(localStorage.getItem(CLEARS_KEY) ?? '{}') as unknown
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    return Object.fromEntries(Object.entries(v).filter(([, n]) => typeof n === 'number' && n > 0)) as Record<string, number>
+  } catch {
+    return {}
+  }
+}
+export function saveClears(c: Record<string, number>): void {
+  try {
+    localStorage.setItem(CLEARS_KEY, JSON.stringify(c))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const unitStars = (clears: number) => (clears >= 5 ? 3 : clears >= 3 ? 2 : clears >= 1 ? 1 : 0)

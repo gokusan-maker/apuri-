@@ -131,3 +131,12 @@ it('まちがいノートはまちがえた問題を先頭に入れ、正解す�
   for (let i = 0; i < NOTE_MAX + 5; i++) big = noteAfter(big, `q${i}`, false)
   expect(big).toHaveLength(NOTE_MAX)
 })
+
+it('全問正解の回数で単元の★がふえる', async () => {
+  const { loadClears, saveClears, unitStars } = await import('./grammar')
+  expect([0, 1, 2, 3, 4, 5, 9].map(unitStars)).toEqual([0, 1, 1, 2, 2, 3, 3])
+  localStorage.clear()
+  expect(loadClears()).toEqual({})
+  saveClears({ be: 2 })
+  expect(loadClears()).toEqual({ be: 2 })
+})
