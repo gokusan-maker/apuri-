@@ -20,3 +20,21 @@ export function makeBingo(rnd: () => number): GrammarQuestion[] {
 
 // cells: true＝正解したマス
 export const bingoCount = (cells: boolean[]) => BINGO_LINES.filter((l) => l.every((i) => cells[i])).length
+
+// ベスト記録：1回のビンゴでそろえた列の最多
+const BEST_KEY = 'eitan:grammar-bingo-best'
+export function loadBingoBest(): number {
+  try {
+    const n = Number(localStorage.getItem(BEST_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function saveBingoBest(n: number): void {
+  try {
+    localStorage.setItem(BEST_KEY, String(n))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

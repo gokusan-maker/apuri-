@@ -10,7 +10,7 @@ import { shuffle } from './quiz'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
-import { BINGO_COINS } from './grammarbingo'
+import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
@@ -140,7 +140,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setBingo(true)}>
-            🎯 文法ビンゴ（そろうと🪙{BINGO_COINS}）
+            🎯 文法ビンゴ（そろうと🪙{BINGO_COINS}）{loadBingoBest() > 0 ? `　ベスト ${loadBingoBest()}列` : ''}
           </button>
         )}
         {stampMode && (

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BINGO_COINS, bingoCount, makeBingo } from './grammarbingo'
+import { BINGO_COINS, bingoCount, loadBingoBest, makeBingo, saveBingoBest } from './grammarbingo'
 import { playCorrect, playWrong } from './sound'
 
 const rand = () => Math.random()
@@ -10,6 +10,7 @@ export function GrammarBingo({ onBack, onBingo }: Props) {
   const [qs] = useState(() => makeBingo(rand))
   const [cells, setCells] = useState<(boolean | null)[]>(() => Array(9).fill(null))
   const [open, setOpen] = useState<number | null>(null)
+  const [best, setBest] = useState(loadBingoBest)
   const ok = cells.map((c) => c === true)
   const lines = bingoCount(ok)
   const q = open !== null ? qs[open] : null
@@ -19,6 +20,7 @@ export function GrammarBingo({ onBack, onBingo }: Props) {
         ← 単元一覧
       </button>
       <h2>🎯 文法ビンゴ</h2>
+      {best > 0 && <p className="stats-note">🏆 ベスト記録 {best}列</p>}
       <p className="stats-note">マスをタップして問題に答えよう。正解のマスが1列そろうとビンゴ！ 🪙{BINGO_COINS}</p>
       <div className="bingo-grid">
         {qs.map((_, i) => (
@@ -41,7 +43,12 @@ export function GrammarBingo({ onBack, onBingo }: Props) {
                   const next = cells.map((x, k) => (k === open ? right : x))
                   if (right) playCorrect()
                   else playWrong()
-                  if (bingoCount(next.map((x) => x === true)) > 0 && lines === 0) onBingo?.()
+                  const n = bingoCount(next.map((x) => x === true))
+                  if (n > 0 && lines === 0) onBingo?.()
+                  if (n > best) {
+                    setBest(n)
+                    saveBingoBest(n)
+                  }
                   setCells(next)
                   setOpen(null)
                 }}

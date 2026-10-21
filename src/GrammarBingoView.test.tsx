@@ -12,6 +12,7 @@ const answerCell = (n: number, right: boolean) => {
 }
 
 it('1列そろうとビンゴで、ごほうびは1回だけ', () => {
+  localStorage.clear()
   const onBingo = vi.fn()
   render(<GrammarBingo onBack={() => {}} onBingo={onBingo} />)
   answerCell(1, true)
@@ -25,4 +26,6 @@ it('1列そろうとビンゴで、ごほうびは1回だけ', () => {
   expect(onBingo).toHaveBeenCalledTimes(1)
   answerCell(4, false)
   expect(screen.getByLabelText('マス 4 まちがい')).toBeDisabled()
+  expect(localStorage.getItem('eitan:grammar-bingo-best')).toBe('2') // よこ1列＋ななめ（3・5・9…ではなく1・5・9）
+  expect(screen.getByText('🏆 ベスト記録 2列')).toBeInTheDocument()
 })
