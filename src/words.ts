@@ -2735,6 +2735,16 @@ const WORDS_4: Word[] = [
   { id: 'i-agree', en: 'I agree', ja: '賛成です', example: '"Let\'s start early." "I agree."', exampleJa: '「早めに始めよう。」「賛成。」', level: '会話' },
   { id: 'lets-take-a-break', en: 'Let\'s take a break', ja: 'ひと休みしよう', example: 'We studied for two hours. Let\'s take a break.', exampleJa: '2時間勉強したね。ひと休みしよう。', level: '会話' },
   { id: 'its-your-turn', en: 'It\'s your turn', ja: 'あなたの番だよ', example: 'I threw the dice. It\'s your turn.', exampleJa: 'ぼくはさいころをふったよ。きみの番だよ。', level: '会話' },
+  { id: 'where-is-the-restroom', en: 'Where is the restroom?', ja: 'お手洗いはどこですか', example: 'Excuse me. Where is the restroom?', exampleJa: 'すみません。お手洗いはどこですか。', level: '会話' },
+  { id: 'could-you-take-a-picture', en: 'Could you take a picture?', ja: '写真をとっていただけますか', example: 'Excuse me. Could you take a picture of us?', exampleJa: 'すみません。私たちの写真をとっていただけますか。', level: '会話' },
+  { id: 'how-are-you-feeling', en: 'How are you feeling?', ja: '気分はどう？・具合はどう？', example: 'I heard you were sick. How are you feeling now?', exampleJa: '病気だったんだってね。今は具合はどう？', level: '会話' },
+  { id: 'enjoy-yourself', en: 'Enjoy yourself!', ja: '楽しんできてね！', example: 'Have a nice trip. Enjoy yourself!', exampleJa: 'いい旅を。楽しんできてね！', level: '会話' },
+  { id: 'can-you-help-me', en: 'Can you help me?', ja: '手伝ってくれる？', example: 'This box is heavy. Can you help me?', exampleJa: 'この箱、重いんだ。手伝ってくれる？', level: '会話' },
+  { id: 'which-one', en: 'Which one?', ja: 'どれ？・どっち？', example: '"Pass me the book." "Which one?"', exampleJa: '「その本を取って。」「どれ？」', level: '会話' },
+  { id: 'can-i-have-another', en: 'Can I have another one?', ja: 'もう1つもらってもいい？', example: 'These cookies are good. Can I have another one?', exampleJa: 'このクッキーおいしいね。もう1つもらってもいい？', level: '会話' },
+  { id: 'i-made-it', en: 'I made it!', ja: 'できた！・間に合った！', example: 'I made it! I caught the last train.', exampleJa: '間に合った！終電に乗れたよ。', level: '会話' },
+  { id: 'take-your-time', en: 'Take your time', ja: 'ゆっくりでいいよ', example: 'There\'s no hurry. Take your time.', exampleJa: '急がなくていいよ。ゆっくりでいいよ。', level: '会話' },
+  { id: 'thats-all', en: 'That\'s all', ja: 'それで全部です・以上です', example: '"Anything else?" "No, that\'s all."', exampleJa: '「ほかに何か？」「いいえ、以上です。」', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
