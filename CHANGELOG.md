@@ -639,3 +639,4 @@
 - 2026-10-21: 読み物の id の重なりを直し、重ならないことをテストで確認
 - 2026-10-21: 会話フレーズを10個追加（Never mind, Time's up!, Is this seat taken? など。計190）
 - 2026-10-21: 中3に単語を20語追加（deserve, inspire, tolerate など。計3820語）
+- 2026-10-21: Cloudflare Pages で公開できるよう設定（_headers・Node 22 指定・手順を README に）

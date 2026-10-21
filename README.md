@@ -33,6 +33,8 @@ npm test         # vitest
 npm run build    # 型チェック＋ビルド（dist/）
 ```
 
-## 公開（Vercel で自動デプロイ）
+## 公開（Cloudflare Pages で自動デプロイ）
 
-`vercel.json` に設定済み。最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。学習データは端末の localStorage が基本。設定の「クラウド保存・引き継ぎ」で Supabase に保存でき、引き継ぎコードで別の端末に復元できる（SQL は supabase/migrations/）。
+**Cloudflare Pages（メインの公開先）**：最初に1回だけ Cloudflare のダッシュボードで「Workers & Pages」→「作成」→「Pages」→「Git に接続」から GitHub の `gokusan-maker/apuri-` を選び、本番ブランチ `claude/auto-app-development-c4w9w8`、フレームワーク「Vite」（ビルド `npm run build`、出力 `dist`）で保存する。以後は push するたびに自動でビルド・公開され、URL は `https://<プロジェクト名>.pages.dev`。ヘッダーは `public/_headers`、Node のバージョンは `.node-version`（22）で指定済み。`vercel.json` も残してあるので Vercel でも同じように公開できる。
+
+Vercel の場合は最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。学習データは端末の localStorage が基本。設定の「クラウド保存・引き継ぎ」で Supabase に保存でき、引き継ぎコードで別の端末に復元できる（SQL は supabase/migrations/）。
