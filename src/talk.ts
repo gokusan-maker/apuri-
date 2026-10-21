@@ -15,9 +15,19 @@ export const LINES: Line[] = [
   { en: 'Can you say it out loud?', ja: '声に出して言ってみよう！' },
   { en: 'Words are like treasure.', ja: '単語は宝物みたいだね。' },
   { en: 'Try the emoji quiz!', ja: '絵文字クイズもやってみてね！' },
-  { en: 'Now there are 2,000 words to learn!', ja: '覚えられる単語が2000語になったよ！' },
+  { en: 'Now there are more than 2,300 words to learn!', ja: '覚えられる単語が2300語をこえたよ！' },
   { en: 'Play a quiz with a friend!', ja: '友だちと2人対戦してみよう！' },
   { en: 'Can you find the odd one out?', ja: '仲間はずれ、見つけられるかな？' },
+  { en: 'That tickles!', ja: 'くすぐったいよ！' },
+  { en: 'Do you like my new look?', ja: '新しいすがた、どうかな？' },
+  { en: 'Let me sit next to you.', ja: 'となりにすわってもいい？' },
+  { en: 'Sea and see sound the same!', ja: 'sea と see は同じ発音なんだって！' },
+  { en: 'I want to visit a new room!', ja: '新しい部屋に行ってみたいな！' },
+  { en: 'A snack would be nice...', ja: 'おやつがあるとうれしいな…' },
+  { en: 'You are my best friend.', ja: 'きみは一番の友だちだよ。' },
+  { en: 'Five minutes is enough. Let\'s go!', ja: '5分だけでいいよ。やってみよう！' },
+  { en: 'I dreamed about English words.', ja: '英単語の夢を見たよ。' },
+  { en: 'Your English is getting better!', ja: 'きみの英語、上手になってきたね！' },
 ]
 
 // 時間帯のひとこと

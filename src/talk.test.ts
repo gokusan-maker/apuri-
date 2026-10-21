@@ -36,6 +36,15 @@ it('覚えた単語で話しかける', () => {
   expect(rememberLine({ en: 'apple', ja: 'りんご' }).ja).toBe('「apple」っておぼえてる？（りんご）')
 })
 
-it('2000語の記念のひとことがある', () => {
-  expect(LINES.some((l) => l.ja.includes('2000語'))).toBe(true)
+it('単語数の記念のひとことがある', () => {
+  expect(LINES.some((l) => l.ja.includes('2300語'))).toBe(true)
+})
+
+it('ひとことは26個以上で、英語と日本語がそろっている', () => {
+  expect(LINES.length).toBeGreaterThanOrEqual(26)
+  for (const l of LINES) {
+    expect(l.en.trim()).not.toBe('')
+    expect(l.ja.trim()).not.toBe('')
+  }
+  expect(new Set(LINES.map((l) => l.en)).size).toBe(LINES.length)
 })
