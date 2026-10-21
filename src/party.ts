@@ -112,3 +112,26 @@ export function releaseMember(p: Party, i: number): Party | null {
   if (released) next.released = released
   return next
 }
+
+// タマゴあたため：まだ生まれていない仲間をあたためると XP+2（1日5回まで、全部の仲間で合わせて）
+export const WARM_XP = 2
+export const WARM_PER_DAY = 5
+export type WarmLog = { day: string; count: number }
+const WARM_KEY = 'eitan:warm'
+export const warmLeft = (l: WarmLog, today: string) => WARM_PER_DAY - (l.day === today ? l.count : 0)
+export const nextWarm = (l: WarmLog, today: string): WarmLog => ({ day: today, count: (l.day === today ? l.count : 0) + 1 })
+export function loadWarm(): WarmLog {
+  try {
+    const v = JSON.parse(localStorage.getItem(WARM_KEY) ?? 'null') as WarmLog | null
+    return v && typeof v.day === 'string' && typeof v.count === 'number' ? v : { day: '', count: 0 }
+  } catch {
+    return { day: '', count: 0 }
+  }
+}
+export function saveWarm(l: WarmLog): void {
+  try {
+    localStorage.setItem(WARM_KEY, JSON.stringify(l))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

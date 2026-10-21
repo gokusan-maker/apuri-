@@ -435,6 +435,16 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(12)
   })
 
+  it('まだ生まれていない仲間をあたためるとXPが入る', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 500 }, { xp: 0 }], active: 0 }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
+    fireEvent.click(screen.getByLabelText(/をあたためる/))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(2)
+    expect(screen.getByText(/今日あと4回/)).toBeInTheDocument()
+  })
+
   it('記録の部屋に自己ベストが出る', () => {
     localStorage.setItem('eitan:endless', '7')
     render(<App />)

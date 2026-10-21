@@ -42,7 +42,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, releaseCoins, releaseMember, saveParty, toggleFav, updateActive } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
 import { addStats, addTicket, bonusOf, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
@@ -252,6 +252,7 @@ function App() {
   const [gachaStep, setGachaStep] = usePersistent(loadStep, saveStep)
   const [bag, setBag] = usePersistent(loadBag, saveBag)
   const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
+  const [warm, setWarm] = usePersistent(loadWarm, saveWarm)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
@@ -1052,6 +1053,12 @@ function App() {
             <section className="card stats-view">
               <EvolutionPreview monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}
+                warmLeft={warmLeft(warm, today)}
+                onWarm={(i) => {
+                  if (warmLeft(warm, today) <= 0) return
+                  setWarm(nextWarm(warm, today))
+                  setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? feed(m, WARM_XP, null, today) : m)) }))
+                }}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)
                   if (!next) return

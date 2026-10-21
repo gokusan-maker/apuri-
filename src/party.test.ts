@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addEggs, canRelease, displayOrder, eggsEarned, loadParty, releaseCoins, releaseMember, saveParty, toggleFav, updateActive } from './party'
+import { addEggs, canRelease, displayOrder, eggsEarned, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, warmLeft, WARM_PER_DAY } from './party'
 
 describe('なかま', () => {
   beforeEach(() => localStorage.clear())
@@ -58,4 +58,15 @@ it('なかま交換所：相棒・おきにいりはおわかれできず、節�
   expect(releaseCoins(99)).toBe(100)
   saveParty(b)
   expect(loadParty().released).toBe(1)
+})
+
+it('タマゴあたためは1日5回まで', () => {
+  localStorage.clear()
+  let l = loadWarm()
+  const d = '2026-10-21'
+  expect(warmLeft(l, d)).toBe(WARM_PER_DAY)
+  for (let i = 0; i < 5; i++) l = nextWarm(l, d)
+  expect(warmLeft(l, d)).toBe(0)
+  saveWarm(l)
+  expect(warmLeft(loadWarm(), '2026-10-22')).toBe(WARM_PER_DAY)
 })

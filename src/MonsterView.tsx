@@ -1028,7 +1028,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
-export function Party({ party, onSelect, onRename, onFav, onRelease }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void }) {
+export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, warmLeft = 0 }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void; onWarm?: (i: number) => void; warmLeft?: number }) {
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
@@ -1063,6 +1063,11 @@ export function Party({ party, onSelect, onRename, onFav, onRelease }: { party: 
               {onFav && (
                 <button className={`fav-btn${m.fav ? ' on' : ''}`} aria-label={`${m.name ?? f.name}をおきにいりに${m.fav ? 'しない' : 'する'}`} aria-pressed={!!m.fav} onClick={() => onFav(i)}>
                   {m.fav ? '★' : '☆'}
+                </button>
+              )}
+              {onWarm && f.stage === 0 && (
+                <button className="warm-btn" disabled={warmLeft <= 0} aria-label={`${m.name ?? f.name}をあたためる`} onClick={() => onWarm(i)}>
+                  🔥 あたためる（今日あと{warmLeft}回）
                 </button>
               )}
               {onRelease && canRelease(party, i) && (
