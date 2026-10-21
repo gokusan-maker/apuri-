@@ -9,7 +9,7 @@ import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
-type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow'
+type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow' | 'sleep'
 // さわったときの表情（順番に変わる）
 const REACTIONS: Mood[] = ['happy', 'wink', 'star', 'wow']
 
@@ -43,6 +43,18 @@ function Face({ mood }: { mood: Mood }) {
         <path d="M57 61 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path d="M44 75 Q50 70 56 75" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path className="monster-tear" d="M68 64 q3 6 0 9 q-3 -3 0 -9" fill="#60a5fa" />
+      </g>
+    )
+  }
+  if (mood === 'sleep') {
+    return (
+      <g className="monster-face face-sleep">
+        <path d="M31 58 Q38 63 45 58" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <path d="M55 58 Q62 63 69 58" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <ellipse cx="28" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.35" />
+        <ellipse cx="72" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.35" />
+        <ellipse cx="50" cy="73" rx="3" ry="2.5" fill="#1f2937" />
+        <circle className="snot" cx="57" cy="70" r="3" fill="#bae6fd" stroke="#38bdf8" strokeWidth="1" opacity="0.85" />
       </g>
     )
   }
@@ -505,7 +517,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
+        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
         {gain && gain.amount > 0 && (
           <span key={gain.key} className="xp-float" aria-hidden="true">
             +{gain.amount}

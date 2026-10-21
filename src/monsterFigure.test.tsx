@@ -57,3 +57,7 @@ it('タマゴはかえる直前ほどひびが入る', () => {
   const n = (c: number) => render(<MonsterFigure form={form('egg')} crack={c} />).container.querySelectorAll('.egg-crack').length
   expect([n(0), n(0.3), n(0.6), n(0.9)]).toEqual([0, 1, 2, 3])
 })
+
+it('ねむいときは目を閉じて鼻ちょうちん', () => {
+  expect(render(<MonsterFigure form={form('mochimaru')} mood="sleep" />).container.querySelector('.face-sleep .snot')).not.toBeNull()
+})

@@ -793,3 +793,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .scene-petal { animation: petal 5s linear infinite; }
 @keyframes petal { to { transform: translate(-40px, 30px) rotate(200deg); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .scene-twinkle, .scene-bubble, .scene-petal { animation: none; } }
+.snot { transform-origin: 57px 70px; animation: snot 2.4s ease-in-out infinite; }
+@keyframes snot { 50% { transform: scale(1.6); } }
+@media (prefers-reduced-motion: reduce) { .snot { animation: none; } }
