@@ -3631,6 +3631,16 @@ const WORDS_4: Word[] = [
   { id: 'just-a-little', en: 'Just a little', ja: 'ほんの少しだけ', example: '"Do you speak Japanese?" "Just a little."', exampleJa: '「日本語は話せますか？」「ほんの少しだけ。」', level: '会話' },
   { id: 'no-hurry', en: 'There\'s no hurry', ja: '急がなくていいよ', example: 'There\'s no hurry. We have plenty of time.', exampleJa: '急がなくていいよ。時間はたっぷりあるから。', level: '会話' },
   { id: 'whats-the-date-today', en: 'What\'s the date today?', ja: '今日は何日？', example: 'What\'s the date today? It\'s October 21st.', exampleJa: '今日は何日？10月21日だよ。', level: '会話' },
+  { id: 'can-i-sit-here', en: 'Can I sit here?', ja: 'ここにすわってもいい？', example: 'Excuse me, can I sit here?', exampleJa: 'すみません、ここにすわってもいいですか。', level: '会話' },
+  { id: 'please-go-first', en: 'Please go first', ja: 'お先にどうぞ（順番をゆずる）', example: 'Please go first. I\'m not in a hurry.', exampleJa: 'お先にどうぞ。急いでいないので。', level: '会話' },
+  { id: 'thats-fine', en: 'That\'s fine', ja: 'それでいいよ・だいじょうぶ', example: '"Is Tuesday OK?" "That\'s fine."', exampleJa: '「火曜日でいい？」「それでいいよ。」', level: '会話' },
+  { id: 'i-dont-mind', en: 'I don\'t mind', ja: 'かまわないよ', example: '"Can I open the window?" "I don\'t mind."', exampleJa: '「窓を開けてもいい？」「かまわないよ。」', level: '会話' },
+  { id: 'what-a-pity', en: 'What a pity!', ja: '残念だね！', example: 'You can\'t come? What a pity!', exampleJa: '来られないの？残念だね！', level: '会話' },
+  { id: 'nice-weather', en: 'Nice weather, isn\'t it?', ja: 'いい天気ですね', example: 'Nice weather, isn\'t it? Let\'s go for a walk.', exampleJa: 'いい天気ですね。散歩に行きましょう。', level: '会話' },
+  { id: 'im-on-my-way', en: 'I\'m on my way', ja: '今向かっているところ', example: 'I\'m on my way. I\'ll be there in five minutes.', exampleJa: '今向かってるよ。5分で着くね。', level: '会話' },
+  { id: 'sounds-like-fun', en: 'Sounds like fun!', ja: '楽しそうだね！', example: '"Let\'s go camping!" "Sounds like fun!"', exampleJa: '「キャンプに行こう！」「楽しそうだね！」', level: '会話' },
+  { id: 'good-question', en: 'Good question', ja: 'いい質問だね', example: 'Good question. Let me think about it.', exampleJa: 'いい質問だね。ちょっと考えさせて。', level: '会話' },
+  { id: 'bless-you', en: 'Bless you', ja: 'お大事に（くしゃみをした人に）', example: '"Achoo!" "Bless you!"', exampleJa: '「ハクション！」「お大事に！」', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
