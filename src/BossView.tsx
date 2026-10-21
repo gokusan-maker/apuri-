@@ -1,7 +1,7 @@
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
-import { useState } from 'react'
-import { BOSS_HP, bossQuestions, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
+import { useEffect, useRef, useState } from 'react'
+import { BOSS_HP, bossQuestions, BOSSES, critDamage, damage, HEAL_COST, HEARTS, isCritical, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -99,6 +99,9 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   )
 }
 
+// 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
+const nowMs = () => Date.now()
+
 export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
@@ -110,6 +113,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [hit, setHit] = useState(false)
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
+  const [crit, setCrit] = useState(false)
+  const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
+  useEffect(() => {
+    shownAt.current = nowMs()
+  }, [index, qs])
 
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
@@ -121,7 +129,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (i === q.answer) {
       const c = combo + 1
       setCombo(c)
-      const nextHp = hp - damage(c)
+      const critical = isCritical(nowMs() - shownAt.current)
+      const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c))
+      setCrit(critical)
       setHp(Math.max(0, nextHp))
       setHit(true)
       playCorrect()
@@ -139,6 +149,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   function next() {
     setPicked(null)
     setHit(false)
+    setCrit(false)
     setIndex(index + 1)
   }
 
@@ -165,7 +176,13 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       <div className="boss-figure">
         <BossFigure hit={hit} look={look} />
       </div>
+      {hit && crit && (
+        <p key={index} className="boss-crit" role="status">
+          ⚡ 会心の一撃！
+        </p>
+      )}
       <p className="boss-name">{look.name}</p>
+      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると「会心の一撃」でダメージ1.5倍！</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">
           「{look.taunt.en}」<span>{look.taunt.ja}</span>

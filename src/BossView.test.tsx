@@ -52,3 +52,17 @@ it('コインでハートを1つ回復できる（1戦1回）', () => {
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.queryByText('❤️+1（🪙10）')).not.toBeInTheDocument()
 })
+
+it('すぐに正解すると会心の一撃、ゆっくりだとふつうのダメージ', () => {
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  expect(screen.getByText(/3秒以内に正解すると/)).toBeInTheDocument()
+  answer(true)
+  expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '91')
+  unmount()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  vi.setSystemTime(Date.now() + 5000)
+  answer(true)
+  expect(screen.queryByText('⚡ 会心の一撃！')).not.toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '94')
+})

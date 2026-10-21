@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, bossUnlocked, dailyBossLevel, damage, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, bossUnlocked, critDamage, dailyBossLevel, damage, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -43,4 +43,12 @@ it('すべてのボスに説明がある', () => {
 it('今日のボスは日付で決まる', () => {
   expect(dailyBossLevel(['中1', '中2', '中3'], '2026-10-20')).toBe(dailyBossLevel(['中1', '中2', '中3'], '2026-10-20'))
   expect(dailyBossLevel([], '2026-10-20')).toBeUndefined()
+})
+
+it('3秒以内の正解は会心の一撃でダメージ1.5倍', () => {
+  expect(isCritical(0)).toBe(true)
+  expect(isCritical(3000)).toBe(true)
+  expect(isCritical(3001)).toBe(false)
+  expect(critDamage(damage(1))).toBe(9)
+  expect(critDamage(damage(5))).toBe(15)
 })

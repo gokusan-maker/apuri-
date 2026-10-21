@@ -940,3 +940,9 @@ button:focus:not(:focus-visible) { outline: none; }
 @keyframes treasure-shake { 0%, 70%, 100% { transform: rotate(0); } 75% { transform: rotate(-6deg); } 85% { transform: rotate(6deg); } 95% { transform: rotate(-3deg); } }
 @keyframes treasure-pop { 0% { transform: scale(0.3); opacity: 0; } 70% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { .treasure-btn, .treasure-open { animation: none; } }
+
+/* ボス戦の会心の一撃 */
+.boss-crit { margin: 0; text-align: center; font-weight: 900; font-size: 1.3rem; color: #f59e0b; text-shadow: 0 0 6px #fde68a, 2px 2px 0 #7c2d12; animation: crit-pop 0.7s ease-out both; }
+.boss-tip { text-align: center; margin: 2px 0; }
+@keyframes crit-pop { 0% { transform: scale(2.2) rotate(-8deg); opacity: 0; } 50% { transform: scale(0.9) rotate(3deg); opacity: 1; } 100% { transform: scale(1) rotate(0); } }
+@media (prefers-reduced-motion: reduce) { .boss-crit { animation: none; } }

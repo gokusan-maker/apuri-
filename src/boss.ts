@@ -16,6 +16,11 @@ export function damage(combo: number): number {
   return 6 + Math.min(Math.max(combo - 1, 0), 4)
 }
 
+// 会心の一撃：問題が出てから3秒以内に正解するとダメージ1.5倍
+export const CRIT_MS = 3000
+export const isCritical = (ms: number) => ms >= 0 && ms <= CRIT_MS
+export const critDamage = (base: number) => Math.ceil(base * 1.5)
+
 export function bossUnlocked(level: Level, rec: StageRecord): boolean {
   const list = stagesOf(level)
   return list.length > 0 && list.every((s) => (rec[s.id] ?? 0) >= 1)
