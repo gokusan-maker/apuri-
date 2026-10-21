@@ -1105,3 +1105,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-rest { font-weight: 400; color: var(--muted); }
 .long-order-words { display: flex; flex-wrap: wrap; gap: 6px; }
 .long-order-words .long-choice { padding: 6px 10px; }
+.gacha-bonus { margin: 2px 0; font-weight: 800; color: #db2777; }

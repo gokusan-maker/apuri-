@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, toggleFav, updateActive } from './party'
-import { addTicket, drawEgg, gachaPrice, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { addTicket, bonusOf, drawEgg, gachaPrice, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -653,6 +653,7 @@ function App() {
     let p = party
     let st = gachaStep
     const out: GachaResult[] = []
+    let bonusXp = 0
     for (let i = 0; i < n; i++) {
       const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0, gachaPrice(hour))
       if (!r) break
@@ -660,15 +661,18 @@ function App() {
       const dup = isDuplicate(p.members, r.species.id, r.kind.id)
       const newSpecies = r.species.id !== 'mochi' && !p.members.some((m) => m.species === r.species.id)
       const newKind = r.kind.id !== 'normal' && !p.members.some((m) => m.kind === r.kind.id)
-      w = dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet
+      const bonus = bonusOf(rand())
+      w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) }
+      if (bonus?.kind === 'xp') bonusXp += bonus.amount
       p = r.party
-      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0 })
+      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}) })
     }
     if (out.length > 0) {
       setWallet(w)
       setParty(p)
       setGachaStep(st)
       count('gacha', out.length)
+      if (bonusXp > 0) gainXp(bonusXp, null)
     }
     return out
   }

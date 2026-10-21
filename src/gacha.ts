@@ -117,3 +117,11 @@ export const todaySteps = (s: GachaStep, today: string) => (s.day === today ? s.
 // 次の1回がレア以上確定か／あと何回で確定か（次が確定なら 0）
 export const stepLeft = (s: GachaStep, today: string) => STEP_EVERY - 1 - (todaySteps(s, today) % STEP_EVERY)
 export const nextStep = (s: GachaStep, today: string): GachaStep => ({ day: today, count: todaySteps(s, today) + 1 })
+
+// おまけカプセル：5回に1回くらい、🪙10 か おやつ（XP+20）がおまけでつく
+export const BONUS_RATE = 0.2
+export type GachaBonus = { kind: 'coins' | 'xp'; amount: number; text: string }
+export function bonusOf(r: number): GachaBonus | null {
+  if (r >= BONUS_RATE) return null
+  return r < BONUS_RATE / 2 ? { kind: 'coins', amount: 10, text: '🪙10' } : { kind: 'xp', amount: 20, text: '🍪 おやつ（XP+20）' }
+}

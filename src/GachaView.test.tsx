@@ -121,3 +121,9 @@ it('3連ガチャはコインか仲間の空きが足りないと押せない', 
   rerender(<Gacha coins={GACHA_PRICE * 3} members={10} onDraw={() => null} onDrawMulti={() => []} />)
   expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
 })
+
+it('おまけカプセルが出たら表示する', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('fox'), bonus: '🪙10' })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('🎁 おまけカプセル！ 🪙10')).toBeInTheDocument()
+})

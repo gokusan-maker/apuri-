@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { canDraw, drawEgg, gachaOmen, gachaPrice, GACHA_PRICE, GOLDEN_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
+import { bonusOf, canDraw, drawEgg, gachaOmen, gachaPrice, GACHA_PRICE, GOLDEN_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -164,4 +164,10 @@ it('ゴールデンタイム（19時台）はガチャが安い', () => {
   expect(canDraw(w, p)).toBe(false)
   expect(canDraw(w, p, false, GOLDEN_PRICE)).toBe(true)
   expect(drawEgg(w, p, 0.5, false, 0.5, false, undefined, false, GOLDEN_PRICE)!.wallet.coins).toBe(0)
+})
+
+it('おまけカプセルは5回に1回くらい、コインかおやつ', () => {
+  expect(bonusOf(0)).toMatchObject({ kind: 'coins', amount: 10 })
+  expect(bonusOf(0.15)).toMatchObject({ kind: 'xp', amount: 20 })
+  expect(bonusOf(0.2)).toBeNull()
 })
