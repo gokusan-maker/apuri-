@@ -1014,6 +1014,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'This is the book ___ I wanted.', choices: ['what', 'which', 'whose'], answer: 1, why: '前に名詞 the book があるので which（what は使えない）。' },
     ],
   },
+  {
+    id: 'times-as',
+    title: '倍数表現（twice as 〜 as …）',
+    points: ['twice as 〜 as … で「…の2倍〜」。3倍以上は three times as 〜 as … のように「数＋times」を使う。', '「半分」は half as 〜 as …。as と as の間は形容詞・副詞の原級（もとの形）。'],
+    examples: [
+      { en: 'This bridge is twice as long as that one.', ja: 'この橋はあの橋の2倍の長さだ。' },
+      { en: 'My father has three times as many books as I do.', ja: '父は私の3倍の本を持っている。' },
+    ],
+    questions: [
+      { sentence: 'This box is ___ as heavy as that one.', choices: ['two', 'twice', 'second'], answer: 1, why: '「2倍」は twice as 〜 as。' },
+      { sentence: 'Her room is three ___ as large as mine.', choices: ['times', 'time', 'twice'], answer: 0, why: '3倍以上は「数＋times」。' },
+      { sentence: 'The new train is twice as ___ as the old one.', choices: ['faster', 'fastest', 'fast'], answer: 2, why: 'as と as の間は原級 fast。' },
+    ],
+  },
+  {
+    id: 'while',
+    title: '接続詞 while（〜している間に）',
+    points: ['while ＋主語＋動詞で「〜している間に」。進行形といっしょによく使う（while I was reading）。', 'during は前置詞なので後ろは名詞（during the summer）、while は後ろに主語と動詞が来る。'],
+    examples: [
+      { en: 'Someone called me while I was taking a bath.', ja: 'おふろに入っている間に、だれかが電話をくれた。' },
+      { en: 'Please wait here while I get my bag.', ja: 'かばんを取ってくる間、ここで待っていてください。' },
+    ],
+    questions: [
+      { sentence: 'I fell asleep ___ I was watching TV.', choices: ['during', 'while', 'for'], answer: 1, why: '後ろに主語と動詞（I was watching）があるので while。' },
+      { sentence: 'We visited many temples ___ our trip to Kyoto.', choices: ['while', 'during', 'when'], answer: 1, why: '後ろが名詞（our trip）なので前置詞 during。' },
+      { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooks', 'cook'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1115,7 +1143,7 @@ export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中3: ['times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
