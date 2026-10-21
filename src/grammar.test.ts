@@ -39,3 +39,10 @@ it('まとめテストのランクとベスト記録', async () => {
   saveMixBest({ 文法ミニ解説: 9 })
   expect(loadMixBest()).toEqual({ 文法ミニ解説: 9 })
 })
+
+it('全問正解していない単元が苦手な単元', async () => {
+  const { GRAMMAR, weakUnits } = await import('./grammar')
+  const r = { [GRAMMAR[0].id]: 1, [GRAMMAR[1].id]: GRAMMAR[1].questions.length }
+  expect(weakUnits(r).map((u) => u.id)).toEqual([GRAMMAR[0].id])
+  expect(weakUnits({})).toEqual([])
+})

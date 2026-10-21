@@ -82,3 +82,13 @@ it('まとめテストを全問正解するとSランクでベストが残る', 
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText(/ベスト 10\/10・S/)).toBeInTheDocument()
 })
+
+it('苦手な文法の復習は、まちがえた単元の問題だけが出る', () => {
+  localStorage.clear()
+  const u = GRAMMAR[2]
+  localStorage.setItem('eitan:grammar', JSON.stringify({ [u.id]: 1 }))
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('🔁 苦手な文法の復習（1単元）'))
+  const text = document.querySelector('.blank-sentence')!.textContent!
+  expect(u.questions.some((q) => q.sentence.replace('___', '　　　') === text)).toBe(true)
+})

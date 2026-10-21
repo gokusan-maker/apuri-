@@ -1134,3 +1134,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-vocab ul { list-style: none; padding: 0; margin: 6px 0 0; display: grid; grid-template-columns: 1fr; gap: 2px; }
 .long-vocab strong { color: #1d4ed8; margin-right: 4px; }
 .boss-btn.rush-boss.ex { background: linear-gradient(90deg, #f59e0b, #ef4444, #a855f7); box-shadow: 0 0 12px #fcd34d; }
+.weak-grammar-btn { display: block; margin: 6px auto; color: #b91c1c; }

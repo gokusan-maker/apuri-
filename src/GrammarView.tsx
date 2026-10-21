@@ -4,7 +4,7 @@ import { GrammarOrder } from './GrammarOrderView'
 import { GrammarSpot } from './GrammarSpotView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
-import { GRAMMAR, grammarStamps, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -76,6 +76,18 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問）
+          </button>
+        )}
+        {stampMode && weakUnits(record).length > 0 && (
+          <button
+            className="list-link weak-grammar-btn"
+            onClick={() => {
+              const ws = weakUnits(record)
+              open({ id: 'weak-test', title: '苦手な文法の復習', points: [], examples: [], questions: shuffle(ws.flatMap((u) => u.questions)).slice(0, 10) })
+              setStep(0)
+            }}
+          >
+            🔁 苦手な文法の復習（{weakUnits(record).length}単元）
           </button>
         )}
         <ul className="grammar-list">

@@ -865,3 +865,6 @@ export function saveMixBest(r: Record<string, number>): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 苦手な単元：確認問題に挑戦して、まだ全問正解していない単元
+export const weakUnits = (r: GrammarRecord) => GRAMMAR.filter((u) => r[u.id] !== undefined && r[u.id] < u.questions.length)
