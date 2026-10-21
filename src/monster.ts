@@ -323,3 +323,7 @@ export function withSpecies(form: Form, species: string | undefined): Form {
   const name = form.stage === 0 ? sp.egg : form.name.replace(/モチ/g, form.stage >= 3 ? sp.bigToken : sp.token)
   return form.stage < 3 ? { ...form, name, species: sp.id, color: sp.color, line: sp.line } : { ...form, name, species: sp.id }
 }
+
+// レベルの節目：10・50・100 になったらお祝い（🎟1）
+export const LEVEL_MILESTONES = [10, 50, 100]
+export const milestonesBetween = (from: number, to: number) => LEVEL_MILESTONES.filter((m) => from < m && m <= to)

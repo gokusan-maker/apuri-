@@ -68,6 +68,7 @@ import {
   isLonely,
   seenForms,
   levelInfo,
+  milestonesBetween,
   type Source,
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
@@ -422,6 +423,10 @@ function App() {
     const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
     setLeveledUp(up)
     if (up) playFanfare()
+    for (const m of milestonesBetween(levelInfo(monster.xp).level, levelInfo(next.xp).level)) {
+      setWallet((w) => addTicket(w))
+      pushToast([{ id: `milestone-${m}`, text: `🎊 祝・Lv.${m}！ ${monster.name ?? formOf(monster).name}の記念日！ 🎟ガチャチケットをもらった`, counter: 'answers', target: 0 }])
+    }
     const coupons = couponsBetween(levelInfo(monster.xp).level, levelInfo(next.xp).level)
     if (coupons > 0) {
       setWallet((w) => ({ ...w, coupons: (w.coupons ?? 0) + coupons }))

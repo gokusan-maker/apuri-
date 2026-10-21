@@ -158,3 +158,11 @@ it('次の進化の姿とあと何レベルかがわかる', async () => {
   expect(nextFormOf({ xp: 10 ** 9 })).toBeNull()
   expect(FORMS.some((f) => f.id === egg.form.id || egg.form.id.startsWith(f.id))).toBe(true)
 })
+
+it('レベルの節目 10・50・100 を通りこしたらお祝い', async () => {
+  const { milestonesBetween } = await import('./monster')
+  expect(milestonesBetween(8, 9)).toEqual([])
+  expect(milestonesBetween(9, 10)).toEqual([10])
+  expect(milestonesBetween(9, 55)).toEqual([10, 50])
+  expect(milestonesBetween(10, 12)).toEqual([])
+})
