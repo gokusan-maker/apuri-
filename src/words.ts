@@ -2465,6 +2465,16 @@ const WORDS_4: Word[] = [
   { id: 'im-coming', en: 'I\'m coming', ja: '今行くよ', example: '"Dinner is ready!" "I\'m coming!"', exampleJa: '「夕ごはんできたよ！」「今行く！」', level: '会話' },
   { id: 'wait-a-minute', en: 'Wait a minute', ja: 'ちょっと待ってね', example: 'Wait a minute. I\'ll get my coat.', exampleJa: 'ちょっと待ってね。コートを取ってくるから。', level: '会話' },
   { id: 'see-you-next-week', en: 'See you next week', ja: 'また来週', example: 'Have a nice weekend. See you next week!', exampleJa: 'よい週末を。また来週ね！', level: '会話' },
+  { id: 'what-a-surprise', en: 'What a surprise!', ja: 'びっくりした！・おどろいた！', example: 'What a surprise! I didn\'t know you were coming.', exampleJa: 'びっくりした！来るなんて知らなかったよ。', level: '会話' },
+  { id: 'im-full', en: 'I\'m full', ja: 'おなかいっぱい', example: 'Thank you, but I\'m full.', exampleJa: 'ありがとう、でもおなかいっぱいです。', level: '会話' },
+  { id: 'im-sorry-to-hear-that', en: 'I\'m sorry to hear that', ja: 'それはお気の毒に', example: '"My cat is sick." "I\'m sorry to hear that."', exampleJa: '「うちの猫が病気なんだ。」「それはお気の毒に。」', level: '会話' },
+  { id: 'it-doesnt-matter', en: 'It doesn\'t matter', ja: 'どちらでもいいよ・気にしないで', example: '"Red or blue?" "It doesn\'t matter."', exampleJa: '「赤と青どっちがいい？」「どっちでもいいよ。」', level: '会話' },
+  { id: 'i-hope-so', en: 'I hope so', ja: 'そうだといいね', example: '"Will it be sunny tomorrow?" "I hope so."', exampleJa: '「明日は晴れるかな？」「そうだといいね。」', level: '会話' },
+  { id: 'i-dont-think-so', en: 'I don\'t think so', ja: 'そうは思わない', example: '"Is this test easy?" "I don\'t think so."', exampleJa: '「このテストやさしい？」「そうは思わないな。」', level: '会話' },
+  { id: 'let-me-try', en: 'Let me try', ja: 'やらせて', example: 'This puzzle looks fun. Let me try!', exampleJa: 'このパズル楽しそう。やらせて！', level: '会話' },
+  { id: 'anything-else', en: 'Anything else?', ja: 'ほかに何か（ありますか）？', example: 'One hamburger. Anything else?', exampleJa: 'ハンバーガーをおひとつ。ほかにご注文は？', level: '会話' },
+  { id: 'ill-be-right-back', en: 'I\'ll be right back', ja: 'すぐもどるね', example: 'Wait here. I\'ll be right back.', exampleJa: 'ここで待ってて。すぐもどるね。', level: '会話' },
+  { id: 'keep-it-up', en: 'Keep it up!', ja: 'その調子でがんばって！', example: 'Your English is great. Keep it up!', exampleJa: '英語がとても上手だね。その調子でがんばって！', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ

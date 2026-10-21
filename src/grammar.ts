@@ -454,6 +454,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Ken is ___ late for school.', choices: ['sometimes', 'sometime', 'some times'], answer: 0, why: '「ときどき」は sometimes。be動詞 is のあとに置く。' },
     ],
   },
+  {
+    id: 'adverb',
+    title: '形容詞と副詞（quick / quickly）',
+    points: ['形容詞は名詞を説明する（a quick answer）。be動詞のあとにも置く。', '副詞は動詞などを説明する（answer quickly）。多くは形容詞に -ly をつけてつくる。', 'good の副詞は well、fast・hard は形が変わらない。'],
+    examples: [
+      { en: 'She is a careful driver.', ja: '彼女は注意深い運転手だ。' },
+      { en: 'She drives carefully.', ja: '彼女は注意深く運転する。' },
+    ],
+    questions: [
+      { sentence: 'Please speak ___. The baby is sleeping.', choices: ['quiet', 'quietly'], answer: 1, why: '動詞 speak を説明するので副詞 quietly。' },
+      { sentence: 'Ken is a very ___ runner.', choices: ['fast', 'fastly'], answer: 0, why: 'fast は形容詞も副詞も fast。fastly という語はない。' },
+      { sentence: 'My sister plays the piano very ___.', choices: ['good', 'well'], answer: 1, why: '動詞 plays を説明するので good の副詞 well。' },
+    ],
+  },
+  {
+    id: 'too-enough',
+    title: 'too ～ to … / ～ enough to …',
+    points: ['too ＋形容詞＋ to ～ で「あまりに…なので～できない」。', '形容詞＋ enough to ～ で「～できるほど（十分）…」。enough は形容詞のあとに置く。'],
+    examples: [
+      { en: 'This box is too heavy to carry.', ja: 'この箱は重すぎて運べない。' },
+      { en: 'He is old enough to drive a car.', ja: '彼は車を運転できる年れいだ。' },
+    ],
+    questions: [
+      { sentence: 'The soup is ___ hot to eat now.', choices: ['too', 'enough', 'very'], answer: 0, why: '「熱すぎて食べられない」なので too ～ to。' },
+      { sentence: 'She is tall ___ to reach the top shelf.', choices: ['too', 'enough', 'so'], answer: 1, why: '「届くほど背が高い」なので形容詞のあとに enough。' },
+      { sentence: 'I was ___ tired to finish my homework.', choices: ['too', 'enough', 'much'], answer: 0, why: '「疲れすぎて終えられなかった」なので too ～ to。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
