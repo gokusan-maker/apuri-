@@ -773,4 +773,59 @@ export const PASSAGES: Passage[] = [
       { q: '先生は手紙をどうすると言った？', choices: ['すぐ返す', 'ずっと大切にする', 'みんなに見せる'], answer: 1 },
     ],
   },
+  {
+    id: 'rabbit-ears',
+    title: 'Why Rabbits Have Long Ears',
+    text: 'Rabbits have long ears for two reasons. First, long ears help them hear dangerous animals from far away. Second, their ears help them stay cool on hot days. Heat leaves the body through their thin ears.',
+    ja: 'ウサギの耳が長いのには2つの理由があります。1つ目に、長い耳のおかげで遠くの危険な動物の音が聞こえます。2つ目に、暑い日に体を冷やすのに役立ちます。うすい耳から熱が体の外へ出ていくのです。',
+    questions: [
+      { q: '長い耳の理由はいくつ書かれている？', choices: ['1つ', '2つ', '3つ'], answer: 1 },
+      { q: '長い耳は何を聞くのに役立つ？', choices: ['遠くの危険な動物', '鳥の歌', '雨の音'], answer: 0 },
+      { q: '暑い日、耳はどう役立つ？', choices: ['体を冷やす', '水を飲む', '日かげを作る'], answer: 0 },
+    ],
+  },
+  {
+    id: 'lost-in-london',
+    title: 'Lost in a Big City',
+    text: 'During our trip abroad, I got lost in a big city. I was scared, but I remembered some English. I asked a woman, "Excuse me, where is the station?" She kindly showed me the way. I was glad I had studied English.',
+    ja: '海外旅行の途中、大きな町で道に迷いました。こわかったけれど、英語をいくつか思い出しました。女の人に「すみません、駅はどこですか」とたずねました。彼女は親切に道を教えてくれました。英語を勉強しておいてよかったと思いました。',
+    questions: [
+      { q: 'どこで道に迷った？', choices: ['海外の大きな町', '近所の公園', '学校'], answer: 0 },
+      { q: '何をたずねた？', choices: ['トイレの場所', '駅の場所', '時間'], answer: 1 },
+      { q: '最後にどう思った？', choices: ['英語を勉強しておいてよかった', '旅行はもういやだ', '道に迷ってよかった'], answer: 0 },
+    ],
+  },
+  {
+    id: 'volunteer-library',
+    title: 'Fixing Old Books',
+    text: 'Every Wednesday, I help at the school library after class. My job is to fix old books. I use tape to repair torn pages. Last week, I fixed twenty books. The librarian said that more students can now read them.',
+    ja: '毎週水曜日、放課後に学校の図書館を手伝っています。私の仕事は古い本を直すことです。テープで破れたページを直します。先週は20冊直しました。司書の先生は、これでもっと多くの生徒が読めると言ってくれました。',
+    questions: [
+      { q: 'いつ図書館を手伝う？', choices: ['毎週水曜日', '毎週土曜日', '毎日'], answer: 0 },
+      { q: '何を使って直す？', choices: ['のり', 'テープ', 'ホチキス'], answer: 1 },
+      { q: '先週何冊直した？', choices: ['10冊', '20冊', '30冊'], answer: 1 },
+    ],
+  },
+  {
+    id: 'first-snow',
+    title: 'The First Snow',
+    text: 'This morning, I looked out of the window and saw white snow everywhere. It was the first snow of the year. My little sister and I put on our coats and ran outside. We made a small snowman with a carrot nose.',
+    ja: '今朝窓の外を見ると、一面に白い雪が積もっていました。その年の初雪でした。妹と私はコートを着て外へかけ出しました。ニンジンの鼻の小さな雪だるまを作りました。',
+    questions: [
+      { q: '今朝何が見えた？', choices: ['雨', '一面の雪', '虹'], answer: 1 },
+      { q: 'だれと外へ出た？', choices: ['妹', '兄', '友だち'], answer: 0 },
+      { q: '雪だるまの鼻は何？', choices: ['石', 'ニンジン', '木の枝'], answer: 1 },
+    ],
+  },
+  {
+    id: 'brave-dragon',
+    title: 'The Dragon and the Village',
+    text: 'Long ago, people in a small village were afraid of a dragon on the hill. One day, a girl climbed the hill and talked to it. She learned that the dragon was lonely. After that, the dragon and the villagers became friends.',
+    ja: '昔、小さな村の人々は丘の上のドラゴンをこわがっていました。ある日、1人の少女が丘に登り、ドラゴンに話しかけました。少女はドラゴンがさびしかったのだと知りました。それからドラゴンと村人たちは友だちになりました。',
+    questions: [
+      { q: 'ドラゴンはどこにいた？', choices: ['湖', '丘の上', '洞くつ'], answer: 1 },
+      { q: '少女は何をした？', choices: ['ドラゴンに話しかけた', 'ドラゴンと戦った', '村から逃げた'], answer: 0 },
+      { q: 'ドラゴンはどんな気持ちだった？', choices: ['おこっていた', 'さびしかった', 'おなかがすいていた'], answer: 1 },
+    ],
+  },
 ]
