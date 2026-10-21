@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
+import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
@@ -226,6 +227,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         </span>
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
+      {grammarTags(p).length > 0 && (
+        <p className="long-gtags" aria-label="この長文に出てくる文法">
+          📘 {grammarTags(p).map((t) => (
+            <span key={t.id} className="long-gtag">
+              {t.title}
+            </span>
+          ))}
+        </p>
+      )}
       {resumed && !done && <p className="stats-note">✏️ とちゅうから再開しました（答えかけの内容はそのまま）</p>}
       <div className="long-read-row">
         {readingAll ? (
