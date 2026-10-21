@@ -2,7 +2,7 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { canRelease, displayOrder, EGG_MILESTONES, releaseCoins, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -1159,6 +1159,25 @@ export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; stu
           </div>
         )
       })}
+    </div>
+  )
+}
+
+// 相棒の進化図：次の姿をシルエットで見せる
+export function EvolutionPreview({ monster }: { monster: MonsterState }) {
+  const n = nextFormOf(monster)
+  if (!n) return <p className="evo-preview stats-note">🌟 さいごの姿まで進化したよ！</p>
+  return (
+    <div className="evo-preview">
+      <span className="evo-preview-fig">
+        <MonsterFigure form={n.form} hidden />
+      </span>
+      <span>
+        <strong>🔮 次の姿は…？</strong>
+        <br />
+        あと Lv{n.levels} で進化！
+        {n.form.stage >= 3 && !monster.branch && <small>（Lv15 のときにいちばん多い学び方で姿が決まるよ：カード・クイズ・リスニング）</small>}
+      </span>
     </div>
   )
 }

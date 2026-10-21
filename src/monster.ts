@@ -217,6 +217,15 @@ export function rename(m: MonsterState, name: string): MonsterState {
 }
 
 // 次の進化までのレベル（最後のすがたなら null）
+// 次の進化の姿（予想）：Lv15 で系統が決まる前は、今いちばん多い学び方の系統で予想する
+export function nextFormOf(m: MonsterState): { form: Form; levels: number } | null {
+  const level = levelInfo(m.xp).level
+  const next = STAGES.findIndex((s) => s.minLevel > level)
+  if (next < 0) return null
+  const base = next < 3 ? FORMS.find((f) => f.stage === next)! : FORMS.find((f) => f.stage === next && f.branch === (m.branch ?? dominant(m.src)))!
+  return { form: withSpecies(base, m.species), levels: STAGES[next].minLevel - level }
+}
+
 export function levelsToNextStage(level: number): { name: string; levels: number } | null {
   const next = STAGES.find((s) => s.minLevel > level)
   return next ? { name: next.name, levels: next.minLevel - level } : null

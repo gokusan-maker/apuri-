@@ -147,3 +147,14 @@ it('Lv70 で神話のすがたに進化し、説明もある', () => {
   const myth = FORMS.filter((f) => f.stage === 6)
   expect(myth.map((f) => f.branch).sort()).toEqual(['card', 'ear', 'quiz'])
 })
+
+it('次の進化の姿とあと何レベルかがわかる', async () => {
+  const { nextFormOf, FORMS } = await import('./monster')
+  const egg = nextFormOf({ xp: 0 })!
+  expect(egg.form.stage).toBe(1)
+  expect(egg.levels).toBeGreaterThan(0)
+  const quizzy = nextFormOf({ xp: 0, src: { quiz: 50 } })
+  expect(quizzy).not.toBeNull()
+  expect(nextFormOf({ xp: 10 ** 9 })).toBeNull()
+  expect(FORMS.some((f) => f.id === egg.form.id || egg.form.id.startsWith(f.id))).toBe(true)
+})

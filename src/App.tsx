@@ -25,7 +25,7 @@ import { usePersistent } from './usePersistent'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
 import { Evolve } from './EvolveView'
-import { Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
+import { EvolutionPreview, Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
@@ -1050,6 +1050,7 @@ function App() {
           )}
           {statsTab === 'buddy' && (
             <section className="card stats-view">
+              <EvolutionPreview monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)
