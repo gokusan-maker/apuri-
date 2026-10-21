@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BossFigure } from './BossView'
+import { GrammarOrder } from './GrammarOrderView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
 import { GRAMMAR, grammarStamps, loadGrammar, saveGrammar, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -23,9 +24,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
+  const [ordering, setOrdering] = useState(false) // 並べかえクイズ
 
   function open(u: GrammarUnit) {
     setBattle(false)
+    setOrdering(false)
     setUnit(u)
     setStep(-1)
     setPicked(null)
@@ -88,6 +91,8 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     </button>
   )
 
+  if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onBack={() => setOrdering(false)} />
+
   if (step === -1) {
     return (
       <section className="card grammar">
@@ -112,6 +117,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <button className="flip" onClick={() => setStep(0)}>
           確認問題へ（{unit.questions.length}問）
         </button>
+        {unit.examples.length > 0 && (
+          <button className="list-link grammar-order-btn" onClick={() => setOrdering(true)}>
+            🧩 例文の並べかえに挑戦（{unit.examples.length}問）
+          </button>
+        )}
         {stampMode && (
           <button
             className="boss-btn grammar-monster-btn"
