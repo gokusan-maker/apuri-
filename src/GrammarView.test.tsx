@@ -92,3 +92,21 @@ it('苦手な文法の復習は、まちがえた単元の問題だけが出る'
   const text = document.querySelector('.blank-sentence')!.textContent!
   expect(u.questions.some((q) => q.sentence.replace('___', '　　　') === text)).toBe(true)
 })
+
+it('今日の文法を全問正解すると1日1回ボーナス', async () => {
+  localStorage.clear()
+  const { dailyGrammar } = await import('./grammar')
+  const { dayKey } = await import('./srs')
+  const u = dailyGrammar(dayKey())
+  const bonus = vi.fn()
+  render(<Grammar onDailyBonus={bonus} />)
+  fireEvent.click(screen.getByText(`📅 今日の文法：${u.title}`, { exact: false }))
+  fireEvent.click(screen.getByText(/確認問題へ/))
+  for (const q of u.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(bonus).toHaveBeenCalledTimes(1)
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText('✅ 今日はクリアずみ')).toBeInTheDocument()
+})

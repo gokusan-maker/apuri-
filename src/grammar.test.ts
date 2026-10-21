@@ -46,3 +46,11 @@ it('全問正解していない単元が苦手な単元', async () => {
   expect(weakUnits(r).map((u) => u.id)).toEqual([GRAMMAR[0].id])
   expect(weakUnits({})).toEqual([])
 })
+
+it('今日の文法は日付で決まる', async () => {
+  const { dailyGrammar, GRAMMAR } = await import('./grammar')
+  expect(dailyGrammar('2026-10-21')).toBe(dailyGrammar('2026-10-21'))
+  const ids = new Set(['2026-10-20', '2026-10-21', '2026-10-22', '2026-10-23', '2026-10-24'].map((d) => dailyGrammar(d).id))
+  expect(ids.size).toBeGreaterThan(1)
+  expect(GRAMMAR).toContain(dailyGrammar('2026-10-21'))
+})

@@ -868,3 +868,25 @@ export function saveMixBest(r: Record<string, number>): void {
 
 // 苦手な単元：確認問題に挑戦して、まだ全問正解していない単元
 export const weakUnits = (r: GrammarRecord) => GRAMMAR.filter((u) => r[u.id] !== undefined && r[u.id] < u.questions.length)
+
+// 今日の文法：日付で1単元を選ぶ。その日に全問正解すると🪙5（1日1回）
+export const DAILY_GRAMMAR_COINS = 5
+export function dailyGrammar(day: string): GrammarUnit {
+  const n = [...day].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 11)
+  return GRAMMAR[n % GRAMMAR.length]
+}
+const DAILY_KEY = 'eitan:grammar-daily'
+export function loadDailyGrammarDay(): string {
+  try {
+    return localStorage.getItem(DAILY_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveDailyGrammarDay(d: string): void {
+  try {
+    localStorage.setItem(DAILY_KEY, d)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

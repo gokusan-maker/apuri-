@@ -4,7 +4,8 @@ import { GrammarOrder } from './GrammarOrderView'
 import { GrammarSpot } from './GrammarSpotView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
-import { GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { dayKey } from './srs'
+import { dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -15,9 +16,10 @@ type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onStampTicket?: () => void // スタンプが10個ふえるごとに（文法のときだけ）
   onMonsterWin?: () => void // 文法モンスターをたおした（ごほうびはアプリ側）
+  onDailyBonus?: () => void // 今日の文法を全問正解した（1日1回）
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
@@ -27,6 +29,9 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
   const [spot, setSpot] = useState(false) // まちがいさがし
+  const [today] = useState(() => dayKey())
+  const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
+  const daily = dailyGrammar(today)
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
 
   function open(u: GrammarUnit) {
@@ -48,6 +53,12 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
         </p>
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
+        {stampMode && (
+          <button className="daily-grammar" onClick={() => open(daily)}>
+            📅 今日の文法：{daily.title}
+            <span>{dailyDay === today ? '✅ 今日はクリアずみ' : `確認問題を全問正解で 🪙${DAILY_GRAMMAR_COINS}`}</span>
+          </button>
+        )}
         {stampMode && (
           <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
             <p className="stamp-title">
@@ -198,6 +209,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       const b = { ...mixBest, [title]: nextScore }
       setMixBest(b)
       saveMixBest(b)
+    }
+    if (stampMode && unit.id === daily.id && step === unit.questions.length - 1 && nextScore === unit.questions.length && dailyDay !== today) {
+      setDailyDay(today)
+      saveDailyGrammarDay(today)
+      onDailyBonus?.()
     }
     if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) onMonsterWin?.()
     if (step === unit.questions.length - 1 && nextScore > (record[unit.id] ?? -1)) {
