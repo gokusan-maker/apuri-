@@ -151,3 +151,8 @@ export function saveGachaStats(s: GachaStats): void {
 
 export const addStats = (s: GachaStats, rarities: Kind['rarity'][]): GachaStats =>
   rarities.reduce((a, r) => ({ ...a, total: a.total + 1, [r]: a[r] + 1 }), s)
+
+// ラッキーナンバー：通算の回数が7の倍数のときおまけ
+export const LUCKY_EVERY = 7
+export const LUCKY_COINS = 7
+export const isLuckyPull = (n: number) => n > 0 && n % LUCKY_EVERY === 0

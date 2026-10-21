@@ -179,3 +179,13 @@ it('ガチャの記録はレア度ごとに数える', () => {
   saveGachaStats(s)
   expect(loadGachaStats()).toEqual(s)
 })
+
+it('通算の回数が7の倍数ならラッキーナンバー', async () => {
+  const { isLuckyPull, LUCKY_COINS } = await import('./gacha')
+  expect(LUCKY_COINS).toBe(7)
+  expect(isLuckyPull(0)).toBe(false)
+  expect(isLuckyPull(6)).toBe(false)
+  expect(isLuckyPull(7)).toBe(true)
+  expect(isLuckyPull(14)).toBe(true)
+  expect(isLuckyPull(15)).toBe(false)
+})

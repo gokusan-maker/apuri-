@@ -513,6 +513,20 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:gacha-stats')!).total).toBe(3)
   })
 
+  it('通算7回目のガチャはラッキーナンバーで🪙7もらえる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
+    localStorage.setItem('eitan:gacha-stats', JSON.stringify({ total: 6, N: 6, R: 0, SR: 0, UR: 0 }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 150枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+    rnd.mockRestore()
+    expect(screen.getByText(/🍀1?7回目 🪙7/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:gacha-stats')!).total).toBe(9)
+    const coins = JSON.parse(localStorage.getItem('eitan:wallet')!).coins
+    expect([7, 22, 37]).toContain(coins)
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
