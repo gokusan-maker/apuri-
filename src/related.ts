@@ -1,5 +1,5 @@
 // 単語のつながり（反対の意味・同じ発音）。パズル用の表から引く
-import { HOMOPHONES, OPPOSITES } from './puzzles'
+import { GROUPS, HOMOPHONES, OPPOSITES } from './puzzles'
 
 export function oppositeOf(en: string): string | undefined {
   const p = OPPOSITES.find(([a, b]) => a === en || b === en)
@@ -11,4 +11,9 @@ export function homophoneOf(en: string): string | undefined {
   const h = HOMOPHONES.find((x) => x[0] === en || x[2] === en)
   if (!h) return undefined
   return h[0] === en ? `${h[2]}（${h[3]}）` : `${h[0]}（${h[1]}）`
+}
+
+// 仲間（動物・食べ物など）の名前
+export function groupOf(id: string): string | undefined {
+  return GROUPS.find((g) => g.ids.includes(id))?.name
 }
