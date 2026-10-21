@@ -1522,3 +1522,7 @@ export function weakRanking(list: string[], n = 3): { unit: GrammarUnit; count: 
   }
   return [...counts.entries()].map(([unit, count]) => ({ unit, count })).sort((a, b) => b.count - a.count).slice(0, n)
 }
+
+// ディクテーションの答えあわせ：大文字小文字・記号・空白のちがいは気にしない（’ と ' は同じ）
+const norm = (t: string) => t.toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim()
+export const sameSentence = (a: string, b: string) => norm(a) === norm(b)

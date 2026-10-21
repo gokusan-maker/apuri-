@@ -167,3 +167,10 @@ it('苦手ランキングはまちがいノートに多い単元から', async (
   const r = weakRanking([b[0], a[0], a[1], 'なし'])
   expect(r.map((x) => [x.unit.id, x.count])).toEqual([[GRAMMAR[0].id, 2], [GRAMMAR[1].id, 1]])
 })
+
+it('ディクテーションの答えあわせは記号や大文字を気にしない', async () => {
+  const { sameSentence } = await import('./grammar')
+  expect(sameSentence("i don't like it", "I don't like it.")).toBe(true)
+  expect(sameSentence('I don’t  like it!', "I don't like it.")).toBe(true)
+  expect(sameSentence('I like it', "I don't like it.")).toBe(false)
+})

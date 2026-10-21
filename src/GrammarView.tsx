@@ -12,6 +12,7 @@ import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
 import { GrammarShadow } from './GrammarShadowView'
 import { GrammarPrint } from './GrammarPrintView'
+import { GrammarDict } from './GrammarDictView'
 import { GrammarDuel } from './GrammarDuelView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
@@ -47,6 +48,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [bingo, setBingo] = useState(false)
   const [shadow, setShadow] = useState(false)
   const [printing, setPrinting] = useState(false)
+  const [dict, setDict] = useState(false)
   const [duel, setDuel] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [clears, setClears] = useState(loadClears)
@@ -82,6 +84,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setCopied(false)
     setShadow(false)
     setPrinting(false)
+    setDict(false)
     setFirstClear(false)
     setGoalReached(false)
     setBattle(false)
@@ -350,6 +353,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     </button>
   )
 
+  if (unit && dict) return <GrammarDict key={unit.id} unit={unit} onAnswer={onAnswer} onBack={() => setDict(false)} />
   if (unit && printing) return <GrammarPrint unit={unit} onBack={() => setPrinting(false)} />
   if (unit && shadow) return <GrammarShadow key={unit.id} unit={unit} onBack={() => setShadow(false)} />
   if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onSpend={onSpend} onBack={() => setOrdering(false)} />
@@ -394,6 +398,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <button className="list-link grammar-order-btn" onClick={() => setPrinting(true)}>
           📄 おさらいプリント（印刷できる）
         </button>
+        {unit.examples.length > 0 && (
+          <button className="list-link grammar-order-btn" onClick={() => setDict(true)}>
+            ✍️ 例文のディクテーション（聞いて書く）
+          </button>
+        )}
         {unit.examples.length > 0 && (
           <button className="list-link grammar-order-btn" onClick={() => setShadow(true)}>
             🗣 例文のシャドーイング（聞いてまねする）
