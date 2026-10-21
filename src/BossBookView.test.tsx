@@ -1,0 +1,18 @@
+import { fireEvent, render, screen } from '@testing-library/react'
+import { expect, it } from 'vitest'
+import { Boss } from './BossView'
+import { BossBook } from './BossBookView'
+import { wordsOf } from './words'
+
+it('ボスを倒すとボス図鑑にのる', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  expect(screen.getByText(/ボス図鑑（1 \/ \d+体）/)).toBeInTheDocument()
+  expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
+  expect(screen.getByText(/1回たおした/)).toBeInTheDocument()
+})

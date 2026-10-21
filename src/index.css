@@ -1028,3 +1028,13 @@ button:focus:not(:focus-visible) { outline: none; }
 /* ステップアップガチャ */
 .gacha-step { margin: 4px 0; font-size: 0.85rem; font-weight: 700; color: #c2410c; }
 .gacha-step.sure { padding: 4px 10px; border-radius: 999px; background: linear-gradient(90deg, #fde68a, #fca5a5); color: #7c2d12; animation: gauge-glow 0.8s ease-in-out infinite alternate; }
+
+/* ボス図鑑 */
+.boss-book { margin: 6px 0; }
+.boss-book-list { list-style: none; padding: 0; margin: 6px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.boss-book-list li { display: flex; flex-direction: column; align-items: center; padding: 6px 4px; border-radius: 10px; background: rgb(255 255 255 / 0.8); text-align: center; font-size: 0.75rem; }
+.boss-book-list li.locked { opacity: 0.55; }
+.boss-book-fig { width: 56px; height: 56px; }
+.boss-book-fig svg { width: 100%; height: 100%; }
+.rank-mini { display: inline-block; min-width: 1.2em; border-radius: 4px; color: #fff; }
+.rank-mini.rank-S { background: #ef4444; } .rank-mini.rank-A { background: #3b82f6; } .rank-mini.rank-B { background: #64748b; }

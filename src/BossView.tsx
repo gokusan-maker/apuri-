@@ -2,6 +2,8 @@ import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
+import { loadBook, recordWin, saveBook } from './bossbook'
+import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
@@ -196,6 +198,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function win(c: number) {
+    saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
     onWinHearts?.(hearts)
     if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS)

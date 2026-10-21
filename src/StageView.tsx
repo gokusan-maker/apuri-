@@ -5,6 +5,7 @@ import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
+import { BossBook } from './BossBookView'
 import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { openTreasure, type Treasure } from './treasure'
@@ -238,6 +239,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   return (
     <section className="card stages">
       <h2>ステージ</h2>
+      <BossBook />
       <details className="univ-tower" open={Object.keys(univ).length > 0}>
         <summary>
           🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
