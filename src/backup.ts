@@ -42,7 +42,7 @@ export function importData(text: string, storage: Storage = localStorage): numbe
     throw new BackupError('JSON として読めませんでした')
   }
   if (!b || b.app !== 'eitan' || typeof b.data !== 'object' || b.data === null) {
-    throw new BackupError('えいたんのバックアップファイルではありません')
+    throw new BackupError('イングリッシュモンスターのバックアップファイルではありません')
   }
   if (typeof b.version !== 'number' || b.version > BACKUP_VERSION) {
     throw new BackupError('新しいバージョンのアプリで作られたファイルです')

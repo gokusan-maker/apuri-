@@ -3,7 +3,7 @@ import { quizShareText, shareText, weekReportText } from './shareText'
 
 describe('結果のシェア', () => {
   it('テキスト', () => {
-    expect(quizShareText('英→日', 9, 10)).toBe('えいたんで「英→日」10問中9問正解（90%） #えいたん')
+    expect(quizShareText('英→日', 9, 10)).toBe('イングリッシュモンスターで「英→日」10問中9問正解（90%） #イングリッシュモンスター')
     expect(quizShareText('英→日', 10, 10)).toContain('👑')
   })
   it('共有メニューがなければコピー', async () => {

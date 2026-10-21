@@ -50,7 +50,7 @@ export const ROOMS: Item[] = [
   { id: 'night', name: 'よぞらタウン', price: 120, icon: '🌃' },
   { id: 'sakura', name: 'さくらひらひら通り', price: 100, icon: '🌸' },
   { id: 'bookroom', name: 'ものしり図書室', price: 100, icon: '📚' },
-  { id: 'royal', name: 'えいたん城', price: 150, icon: '🏰' },
+  { id: 'royal', name: 'モンスター城', price: 150, icon: '🏰' },
   { id: 'snowy', name: 'しろくま雪山', price: 120, icon: '🏔' },
   { id: 'forest', name: 'こもれびの森', price: 100, icon: '🌲' },
 ]

@@ -6,7 +6,7 @@ export function shareLines(s: ShareStats): string[] {
 }
 
 export function shareText(s: ShareStats): string {
-  return `えいたんで英単語を勉強中！ ${shareLines(s).join(' / ')}`
+  return `イングリッシュモンスターで英単語を勉強中！ ${shareLines(s).join(' / ')}`
 }
 
 function loadSvg(svg: string): Promise<HTMLImageElement | null> {
@@ -45,7 +45,7 @@ export async function makeShareImage(s: ShareStats, monsterSvg: string | null): 
   lines.slice(1).forEach((l, i) => ctx.fillText(l, 300, 360 + i * 50))
   ctx.fillStyle = '#2563eb'
   ctx.font = 'bold 28px system-ui, sans-serif'
-  ctx.fillText('えいたん', 300, 545)
+  ctx.fillText('イングリッシュモンスター', 300, 545)
   return new Promise((resolve) => canvas.toBlob((b) => resolve(b), 'image/png'))
 }
 

@@ -32,7 +32,7 @@ describe('バックアップ', () => {
   it('別のファイルや壊れたファイルは読み込まず、今のデータを守る', () => {
     localStorage.setItem('eitan:monster', '{"xp":42}')
     expect(() => importData('not json')).toThrow('JSON として読めませんでした')
-    expect(() => importData('{"app":"other","data":{}}')).toThrow('えいたんのバックアップファイルではありません')
+    expect(() => importData('{"app":"other","data":{}}')).toThrow('イングリッシュモンスターのバックアップファイルではありません')
     expect(() => importData('{"app":"eitan","version":99,"data":{}}')).toThrow('新しいバージョン')
     expect(localStorage.getItem('eitan:monster')).toBe('{"xp":42}')
   })

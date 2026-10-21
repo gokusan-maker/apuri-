@@ -1,7 +1,7 @@
 // 結果をテキストで共有する（共有メニューがなければコピー）
 export function quizShareText(mode: string, score: number, total: number): string {
   const rate = total ? Math.round((score / total) * 100) : 0
-  return `えいたんで「${mode}」${total}問中${score}問正解（${rate}%）${rate === 100 ? '👑' : ''} #えいたん`
+  return `イングリッシュモンスターで「${mode}」${total}問中${score}問正解（${rate}%）${rate === 100 ? '👑' : ''} #イングリッシュモンスター`
 }
 
 export async function shareText(text: string): Promise<'shared' | 'copied' | 'failed'> {
@@ -19,5 +19,5 @@ export async function shareText(text: string): Promise<'shared' | 'copied' | 'fa
 
 // 今週のレポート（保護者や先生に送れる短い文）
 export function weekReportText(r: { answers: number; days: number; learned: number; total: number; streak: number }): string {
-  return `えいたん 今週のレポート\n・答えた問題：${r.answers}問\n・学習した日：${r.days}日\n・定着した単語：${r.learned} / ${r.total}語\n・連続学習：${r.streak}日`
+  return `イングリッシュモンスター 今週のレポート\n・答えた問題：${r.answers}問\n・学習した日：${r.days}日\n・定着した単語：${r.learned} / ${r.total}語\n・連続学習：${r.streak}日`
 }

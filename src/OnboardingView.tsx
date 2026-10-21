@@ -6,7 +6,7 @@ import type { Level } from './words'
 
 const STEPS = [
   {
-    title: 'えいたんへようこそ！',
+    title: 'イングリッシュモンスターへようこそ！',
     body: '英単語を覚えると、相棒のモンスターが育っていくよ。正解するたびに XP（エサ）がもらえる！',
   },
   {

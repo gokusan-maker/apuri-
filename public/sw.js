@@ -1,4 +1,4 @@
-// えいたん Service Worker：アプリ本体をキャッシュしてオフラインでも使えるようにする。
+// イングリッシュモンスター（旧名 えいたん）Service Worker：アプリ本体をキャッシュしてオフラインでも使えるようにする。
 // ページ（HTML）はネット優先・失敗したらキャッシュ、その他のファイルはキャッシュ優先。
 const CACHE = 'eitan-v3'
 const CORE = ['./', './index.html', './manifest.webmanifest', './favicon.svg', './icon-192.png', './apple-touch-icon.png']

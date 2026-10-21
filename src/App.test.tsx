@@ -345,21 +345,21 @@ describe('App', () => {
   it('はじめての人には3ステップの案内が出て、終わると二度と出ない', () => {
     localStorage.removeItem('eitan:onboarded')
     const { unmount } = render(<App />)
-    expect(screen.getByText('えいたんへようこそ！')).toBeInTheDocument()
+    expect(screen.getByText('イングリッシュモンスターへようこそ！')).toBeInTheDocument()
     fireEvent.click(screen.getByText('つぎへ'))
     fireEvent.click(screen.getByText('つぎへ'))
     fireEvent.click(screen.getByText('タマゴを受け取る 🥚'))
     expect(screen.queryByRole('dialog', { name: 'はじめての案内' })).not.toBeInTheDocument()
     unmount()
     render(<App />)
-    expect(screen.queryByText('えいたんへようこそ！')).not.toBeInTheDocument()
+    expect(screen.queryByText('イングリッシュモンスターへようこそ！')).not.toBeInTheDocument()
   })
 
   it('すでに学習データがある人には案内を出さない', () => {
     localStorage.removeItem('eitan:onboarded')
     localStorage.setItem('eitan:progress', '{"apple":{"box":1,"due":"2026-10-21"}}')
     render(<App />)
-    expect(screen.queryByText('えいたんへようこそ！')).not.toBeInTheDocument()
+    expect(screen.queryByText('イングリッシュモンスターへようこそ！')).not.toBeInTheDocument()
   })
 
   it('相棒をタップするとひとこと話す', () => {

@@ -642,3 +642,4 @@
 - 2026-10-21: Cloudflare Pages で公開できるよう設定（_headers・Node 22 指定・手順を README に）
 - 2026-10-21: まちがえやすい単語を5組追加（join/attend・expensive/high・customer/guest・excited/exciting・almost/most。計75組）
 - 2026-10-21: GitHub Actions で push のたびに Cloudflare Pages へ自動公開する仕組みを追加
+- 2026-10-21: アプリ名を「イングリッシュモンスター」に変更し、公開先を Cloudflare Pages の english-monster に（学習データの保存形式はそのまま）

@@ -1,4 +1,4 @@
-# プロジェクト: えいたん（スマホ向け英語学習アプリ PWA）
+# プロジェクト: イングリッシュモンスター（旧名 えいたん。スマホ向け英語学習アプリ PWA）
 
 日本人の中高生〜大人向けの英単語学習アプリ。Vite + React + TypeScript。
 データは端末の localStorage が基本（オフラインで動く）。クラウド保存・引き継ぎは Supabase（共有プロジェクト mljhjdzuabaujluearbd。えいたんのものは eitan スキーマと eitan_ で始まる関数に分け、ほかのアプリのテーブルにはさわらない。SQL は supabase/migrations/ に置く）。UI はスマホ縦画面が基準（幅 360〜480px）。

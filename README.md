@@ -1,4 +1,4 @@
-# えいたん
+# イングリッシュモンスター（旧名：えいたん）
 
 スマホで使える英単語学習アプリ（PWA）。相棒のモンスターを育てながら、ゲーム感覚で英単語を覚えます。
 データは端末の中（localStorage）だけに保存され、サーバーはありません。オフラインでも動きます。
@@ -35,8 +35,8 @@ npm run build    # 型チェック＋ビルド（dist/）
 
 ## 公開（Cloudflare Pages で自動デプロイ）
 
-**Cloudflare Pages（メインの公開先）**：GitHub Actions（`.github/workflows/deploy.yml`）で push のたびに自動公開する。最初に1回だけ、Cloudflare で「Cloudflare Pages：編集」権限の API トークンを作り、GitHub のリポジトリの Settings → Secrets and variables → Actions に `CLOUDFLARE_API_TOKEN` という名前で登録する（未登録のあいだは公開をスキップ）。URL は https://eitan-20z.pages.dev。
+**Cloudflare Pages（メインの公開先）**：GitHub Actions（`.github/workflows/deploy.yml`）で push のたびに自動公開する。最初に1回だけ、Cloudflare で「Cloudflare Pages：編集」権限の API トークンを作り、GitHub のリポジトリの Settings → Secrets and variables → Actions に `CLOUDFLARE_API_TOKEN` という名前で登録する（未登録のあいだは公開をスキップ）。URL は https://english-monster.pages.dev（Cloudflare のプロジェクト名 english-monster。名前が使われていると末尾に文字がつく）。
 
-ダッシュボードから Git 接続する場合は、最初に1回だけ Cloudflare のダッシュボードで「Workers & Pages」→「作成」→「Pages」→「Git に接続」から GitHub の `gokusan-maker/apuri-` を選び、本番ブランチ `claude/auto-app-development-c4w9w8`、フレームワーク「Vite」（ビルド `npm run build`、出力 `dist`）で保存する。以後は push するたびに自動でビルド・公開され、URL は https://eitan-20z.pages.dev。ヘッダーは `public/_headers`、Node のバージョンは `.node-version`（22）で指定済み。`vercel.json` も残してあるので Vercel でも同じように公開できる。
+ダッシュボードから Git 接続する場合は、最初に1回だけ Cloudflare のダッシュボードで「Workers & Pages」→「作成」→「Pages」→「Git に接続」から GitHub の `gokusan-maker/apuri-` を選び、本番ブランチ `claude/auto-app-development-c4w9w8`、フレームワーク「Vite」（ビルド `npm run build`、出力 `dist`）で保存する。以後は push するたびに自動でビルド・公開され、URL は上と同じ。ヘッダーは `public/_headers`、Node のバージョンは `.node-version`（22）で指定済み。`vercel.json` も残してあるので Vercel でも同じように公開できる。
 
 Vercel の場合は最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。学習データは端末の localStorage が基本。設定の「クラウド保存・引き継ぎ」で Supabase に保存でき、引き継ぎコードで別の端末に復元できる（SQL は supabase/migrations/）。

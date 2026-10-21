@@ -163,7 +163,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
               <div className="univ-diploma" role="note">
                 <strong>🎓 合格証書</strong>
                 <span>あなたは大学入試の塔の全{UNIV_BOSSES.length}階を制覇しました。ここに合格を証します。</span>
-                <span className="univ-diploma-day">{day.replace(/-/g, '/')}　えいたん塔 学長 アカモンドラゴン</span>
+                <span className="univ-diploma-day">{day.replace(/-/g, '/')}　モンスター塔 学長 アカモンドラゴン</span>
               </div>
             )
           )

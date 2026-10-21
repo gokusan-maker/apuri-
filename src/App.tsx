@@ -620,7 +620,7 @@ function App() {
     <main className="app">
       <header>
         <div className="top">
-          <h1>えいたん</h1>
+          <h1>イングリッシュモンスター</h1>
           <p className={`streak${streakDays > 0 ? ' on' : ''}`} aria-label={`連続学習 ${streakDays} 日`}>
             🔥 {streakDays}日
           </p>

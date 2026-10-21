@@ -6,8 +6,8 @@ describe('manifest', () => {
   const m = JSON.parse(raw)
 
   it('ホーム画面に追加できる項目がそろっている', () => {
-    expect(m.name).toContain('えいたん')
-    expect(m.short_name).toBe('えいたん')
+    expect(m.name).toContain('イングリッシュモンスター')
+    expect(m.short_name).toBe('イングリッシュモンスター')
     expect(m.display).toBe('standalone')
     expect(m.start_url).toBe('./')
   })
