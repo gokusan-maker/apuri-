@@ -146,6 +146,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
+  const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
@@ -188,6 +189,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
       const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0)
       setCrit(critical)
+      setLastDmg(hp - nextHp)
       if (recordHit(hp - nextHp)) setNewRecord(hp - nextHp)
       if (critical) playBossSound('crit')
       const nc = crits + (critical ? 1 : 0)
@@ -306,6 +308,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
         <BossFigure hit={hit} look={look} />
+        {hit && lastDmg > 0 && (
+          <span key={`d${index}`} className={`dmg-pop${crit ? ' crit' : ''}`} aria-hidden="true">
+            -{lastDmg}
+          </span>
+        )}
       </div>
       {hit && crit && (
         <p key={index} className="boss-crit" role="status">

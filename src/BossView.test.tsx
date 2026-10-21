@@ -19,6 +19,7 @@ describe('ボス戦', () => {
     expect(document.querySelector('.boss.bg-field')).not.toBeNull()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
       answer(true)
+      expect(document.querySelector('.dmg-pop')?.textContent).toMatch(/^-\d+$/)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()

@@ -476,7 +476,7 @@ h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); margin: 8px 0 4px; white-space: n
 .boss-btn { width: 100%; margin-top: 10px; padding: 12px; border: none; border-radius: 12px; background: #6d28d9; color: #fff; font-weight: 700; }
 .boss-btn.beaten { background: #f59e0b; }
 .boss-locked { margin: 8px 0 0; font-size: 0.8rem; color: var(--muted); }
-.boss-figure { width: 120px; height: 120px; margin: 4px auto 0; }
+.boss-figure { position: relative; width: 120px; height: 120px; margin: 4px auto 0; }
 .boss-svg { width: 100%; height: 100%; }
 .boss-svg.hit { animation: shake 0.3s; filter: brightness(1.6); }
 .boss-name { margin: 0; font-weight: 700; }
@@ -1224,3 +1224,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-list li.with-fav { display: flex; gap: 4px; }
 .grammar-list button.grammar-fav { width: auto; flex: none; padding: 12px 8px; color: #94a3b8; font-size: 1.1rem; }
 .grammar-list button.grammar-fav.on { color: #f59e0b; }
+.dmg-pop { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); font-size: 1.5rem; font-weight: 900; color: #ef4444; text-shadow: 0 2px 0 #fff; pointer-events: none; animation: dmg-pop 0.8s ease-out both; }
+.dmg-pop.crit { color: #f59e0b; font-size: 2rem; }
+@keyframes dmg-pop { 0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); } 30% { opacity: 1; transform: translate(-50%, -10px) scale(1.2); } 100% { opacity: 0; transform: translate(-50%, -30px) scale(1); } }
