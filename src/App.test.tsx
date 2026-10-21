@@ -98,7 +98,7 @@ describe('App', () => {
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('1日')).toBeInTheDocument()
     expect(document.querySelector('.result-list')!.textContent).toContain('2問')
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
@@ -117,7 +117,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('×1')).toBeInTheDocument()
     fireEvent.click(screen.getByText('クイズで復習'))
     expect(screen.getByText(/苦手だけ復習中（1語）/)).toBeInTheDocument()
@@ -182,7 +182,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('バッジ獲得！')).toBeInTheDocument()
     expect(screen.getByText('はじめの一歩')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByRole('heading', { name: /^バッジ 1 \// })).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:badges')!)).toHaveProperty('first-correct')
@@ -194,7 +194,7 @@ describe('App', () => {
     localStorage.setItem('eitan:badges', JSON.stringify({ 'streak-7': '2026-10-19' }))
     render(<App />)
     expect(screen.getByText('新しい仲間！')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     const picks = document.querySelectorAll<HTMLButtonElement>('.party-member')
     expect(picks).toHaveLength(2)
@@ -205,7 +205,7 @@ describe('App', () => {
 
   it('マイ単語帳に追加して選ぶと、カードの母数に入る', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'データ' }))
     fireEvent.change(screen.getByLabelText('英語'), { target: { value: 'sunflower' } })
     fireEvent.change(screen.getByLabelText('意味'), { target: { value: 'ひまわり' } })
@@ -230,7 +230,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('この1週間')).toBeInTheDocument()
     expect(screen.getByText('合計 1 問・目標達成 0 日')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:history')!)).toEqual({ [dayKey()]: 1 })
@@ -280,7 +280,7 @@ describe('App', () => {
     expect(toast(/ミッション達成！ \+30XP/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(35)
     expect(JSON.parse(localStorage.getItem('eitan:missions')!).claimed).toContain(m!.id)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText(/今日のミッション 1 \/ 3/)).toBeInTheDocument()
     vi.useRealTimers()
   })
@@ -311,7 +311,7 @@ describe('App', () => {
   it('苦手単語をカードで復習でき、「覚えた」で苦手から外れる', () => {
     localStorage.setItem('eitan:mistakes', JSON.stringify({ [WORDS[3].id]: 1, [WORDS[5].id]: 2 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByText('カードで復習'))
     expect(screen.getByText(/苦手カードで復習中（のこり 2語）/)).toBeInTheDocument()
     expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[5].en)
@@ -456,7 +456,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('明日 1語')).toBeInTheDocument()
   })
 
@@ -464,7 +464,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('お気に入り'))
     expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([WORDS[0].id])
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('★ お気に入り（1語）')).toBeInTheDocument()
     const favSection = screen.getByText('★ お気に入り（1語）').nextElementSibling!
     fireEvent.click(favSection.querySelector('button')!) // カードで復習
@@ -509,7 +509,7 @@ describe('App', () => {
     const en = document.querySelector('.card .en')!.textContent!
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByText('🌱 今日はじめて学んだ単語（1語）')).toBeInTheDocument()
     expect(screen.getByRole('list', { name: '今日はじめて学んだ単語' }).textContent).toContain(en.replace(/[🔊🐢]/gu, '').trim())
   })
@@ -518,7 +518,7 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 5).map((w) => [w.id, { box: 1, due: '2099-01-01', first: '2026-10-19' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByText('🗓 今週学んだ単語をクイズでおさらい（5語）'))
     expect(screen.getByText(/今週学んだ単語だけ復習中（5語）/)).toBeInTheDocument()
   })
@@ -527,14 +527,14 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 4).map((w) => [w.id, { box: 2, due: '2099-01-01', first: '2026-10-13' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByText('📅 1週間前に学んだ単語をクイズでたしかめる（4語）'))
     expect(screen.getByText(/1週間前に学んだ単語だけ復習中（4語）/)).toBeInTheDocument()
   })
 
   it('記録画面の「テーマで練習」で、その仲間の単語をカードで練習できる', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
@@ -542,7 +542,7 @@ describe('App', () => {
 
   it('「テーマで練習」はクイズでもできる', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
     fireEvent.click(screen.getByRole('button', { name: '動物' }))
@@ -553,7 +553,7 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 7).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByRole('img', { name: '定着した単語の数のグラフ（今日 7語）' })).toBeInTheDocument()
   })
 
@@ -561,7 +561,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     const d = Number(dayKey().slice(8))
     expect(screen.getByLabelText(`${d}日 1問`)).toHaveClass('studied')
     expect(screen.getByText('今月 1日 学習しました')).toBeInTheDocument()
@@ -624,7 +624,7 @@ describe('App', () => {
   it('記録画面に単語帳ごとの定着が出る', () => {
     localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[0].id]: { box: 3, due: '2099-01-01' } }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(screen.getByLabelText('中1の定着')).toHaveAttribute('aria-valuenow', '1')
   })
 
@@ -632,7 +632,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     expect(screen.getByText('相棒のプロフィール')).toBeInTheDocument()
     const prof = document.querySelector('.profile')!
@@ -739,7 +739,7 @@ describe('App', () => {
   it('図鑑で出会った姿をタップすると説明文が出る', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     fireEvent.click(document.querySelector('.zukan-pick')!)
     expect(screen.getByText(/ふしぎな模様のタマゴ/)).toBeInTheDocument()
@@ -748,7 +748,7 @@ describe('App', () => {
   it('ボス図鑑にたおしたボスが載る', () => {
     localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-19' }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByText(/ボス図鑑 1 \//)).toBeInTheDocument()
     expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
@@ -791,7 +791,7 @@ describe('App', () => {
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
     expect(screen.getByText(/完全制覇/)).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(document.querySelector('.by-level')!.textContent).toContain('👑曜日・月')
   })
 
@@ -799,7 +799,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     expect(document.querySelector('.today-summary')!.textContent).toContain('1問・+5XP・新しい単語 1語')
   })
 
@@ -898,7 +898,7 @@ describe('App', () => {
     const lucky = pickWordOfDay(WORDS, dayKey())!
     localStorage.setItem('eitan:favorites', JSON.stringify([lucky.id]))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    fireEvent.click(screen.getByRole('button', { name: '記録' }))
     const fav = screen.getByText('★ お気に入り（1語）').nextElementSibling!
     fireEvent.click(fav.querySelector('button')!)
     fireEvent.click(screen.getByText('意味を見る'))
