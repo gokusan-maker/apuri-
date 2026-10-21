@@ -1182,6 +1182,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'How ___ is Tokyo Skytree? — It is 634 meters tall.', choices: ['tall', 'old', 'many'], answer: 0, why: '高さをたずねるので How tall。' },
     ],
   },
+  {
+    id: 'whose-which',
+    title: 'Whose 〜? / Which 〜?（だれの・どちらの）',
+    points: ['Whose ＋名詞 〜? で「だれの〜ですか」。答えは It\'s mine. / It\'s Ken\'s. など。', 'Which ＋名詞 〜? で「どちらの〜ですか」。Which do you like, A or B? のように2つから選ばせる。'],
+    examples: [
+      { en: "Whose pen is this? — It's mine.", ja: 'これはだれのペンですか。—私のです。' },
+      { en: 'Which bus goes to the station?', ja: 'どちらのバスが駅に行きますか。' },
+    ],
+    questions: [
+      { sentence: '___ notebook is this? — It is Yumi\'s.', choices: ['Whose', 'Who', 'Which'], answer: 0, why: '「だれの」は Whose ＋名詞。' },
+      { sentence: '___ do you like better, rice or bread?', choices: ['What', 'Which', 'Whose'], answer: 1, why: '2つから選ばせるときは Which。' },
+      { sentence: 'Whose bag is that? — It is ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
+    ],
+  },
+  {
+    id: 'between-among',
+    title: 'between A and B / among（〜の間に）',
+    points: ['between は「（2つ・2人）の間に」。between A and B の形でよく使う。', 'among は「（3つ以上・大勢）の間で・中で」（popular among students）。'],
+    examples: [
+      { en: 'The bank is between the post office and the park.', ja: '銀行は郵便局と公園の間にある。' },
+      { en: 'This song is popular among young people.', ja: 'この歌は若い人の間で人気がある。' },
+    ],
+    questions: [
+      { sentence: 'Sit ___ Ken and Mika, please.', choices: ['between', 'among', 'during'], answer: 0, why: '2人の間なので between A and B。' },
+      { sentence: 'The singer is famous ___ teenagers.', choices: ['between', 'among', 'by'], answer: 1, why: '大勢（10代の若者）の間で人気なので among。' },
+      { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'to', 'and'], answer: 2, why: 'between A and B の形。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1281,8 +1309,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

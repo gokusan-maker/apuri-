@@ -83,6 +83,8 @@ export const MISTAKES: Record<string, Mistake> = {
   possessive: { wrong: 'This is the bag of Ken.', right: "This is Ken's bag.", why: '人の「〜の」は \'s を使うのがふつう。' },
   'both-either': { wrong: 'Both Ken and Yumi is busy.', right: 'Both Ken and Yumi are busy.', why: 'both A and B は複数あつかいなので are。' },
   'how-adj': { wrong: 'How many old is he?', right: 'How old is he?', why: '年れいは How old。many はいらない。' },
+  'whose-which': { wrong: 'Who pen is this?', right: 'Whose pen is this?', why: '「だれの〜」は Whose ＋名詞。' },
+  'between-among': { wrong: 'The house is among the school and the station.', right: 'The house is between the school and the station.', why: '2つの間は between A and B。among は3つ以上の間。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
