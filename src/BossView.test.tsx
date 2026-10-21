@@ -16,6 +16,7 @@ describe('ボス戦', () => {
     const onWin = vi.fn()
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={onWin} onExit={() => {}} />)
     expect(document.querySelector('.boss-intro')).not.toBeNull()
+    expect(document.querySelector('.boss.bg-field')).not.toBeNull()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
       answer(true)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))

@@ -228,3 +228,9 @@ export const goldenLook = (l: BossLook): BossLook => ({ ...l, name: `金色の${
 
 // 今日のボスの強さ：★が1つふえるごとに HP+40、ごほうびは★の数の倍
 export const dailyHp = (stars: number) => BOSS_HP + (stars - 1) * 40
+
+// ボス戦の背景：単語帳のレベルごとに変える
+export const BOSS_BGS = { field: '草原', forest: '森', mountain: '山', night: '夜空', castle: 'お城', sea: '海' } as const
+export type BossBg = keyof typeof BOSS_BGS
+const BG_OF: Partial<Record<string, BossBg>> = { 中1: 'field', 中2: 'forest', 中3: 'mountain', 高校基礎: 'night', 熟語: 'castle' }
+export const bossBgOf = (level: string): BossBg => BG_OF[level] ?? 'sea'

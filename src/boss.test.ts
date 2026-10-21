@@ -122,3 +122,11 @@ it('ボスの登場セリフは名前ごとに決まる', async () => {
     expect(introLineOf(b.name)).toBe(introLineOf(b.name))
   }
 })
+
+it('ボス戦の背景は単語帳のレベルごとに変わる', async () => {
+  const { bossBgOf, BOSS_BGS } = await import('./boss')
+  expect(bossBgOf('中1')).toBe('field')
+  expect(bossBgOf('高校基礎')).toBe('night')
+  expect(bossBgOf('会話')).toBe('sea')
+  for (const l of LEVELS) expect(Object.keys(BOSS_BGS)).toContain(bossBgOf(l))
+})

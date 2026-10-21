@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playCorrect, playWrong } from './sound'
@@ -295,7 +295,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   return (
-    <section className="card quiz boss">
+    <section className={`card quiz boss bg-${golden ? 'gold' : bossBgOf(level)}`}>
       <div className="stage-head">
         <button className="stage-back" onClick={onExit}>
           ← にげる
