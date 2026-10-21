@@ -388,4 +388,59 @@ export const PASSAGES: Passage[] = [
       { q: '祖母が話したのは？', choices: ['月のウサギの話', '星の名前', '雨の話'], answer: 0 },
     ],
   },
+  {
+    id: 'camping',
+    title: 'Camping by the River',
+    text: 'Last summer, my family went camping by a river. My father and I put up the tent. At night, we cooked dinner over a fire. I saw many stars in the sky before I went to sleep.',
+    ja: '去年の夏、家族で川のそばにキャンプに行きました。父と私でテントを張りました。夜は火で夕食を作りました。寝る前に空にたくさんの星を見ました。',
+    questions: [
+      { q: 'どこでキャンプした？', choices: ['海のそば', '川のそば', '山の上'], answer: 1 },
+      { q: 'テントを張ったのはだれ？', choices: ['父と私', '母と姉', '友だち'], answer: 0 },
+      { q: '寝る前に何を見た？', choices: ['花火', '魚', 'たくさんの星'], answer: 2 },
+    ],
+  },
+  {
+    id: 'swimming',
+    title: 'Learning to Swim',
+    text: 'I could not swim last year. This summer, I took lessons at the city pool. My teacher was patient and kind. Now I can swim twenty-five meters, and I want to try fifty.',
+    ja: '去年は泳げませんでした。この夏、市のプールでレッスンを受けました。先生はがまん強くて親切でした。今は25メートル泳げるので、50メートルにも挑戦したいです。',
+    questions: [
+      { q: 'どこでレッスンを受けた？', choices: ['学校のプール', '市のプール', '海'], answer: 1 },
+      { q: '今は何メートル泳げる？', choices: ['10メートル', '25メートル', '50メートル'], answer: 1 },
+      { q: '次にやりたいことは？', choices: ['50メートルに挑戦', 'レッスンをやめる', '先生になる'], answer: 0 },
+    ],
+  },
+  {
+    id: 'new-year',
+    title: 'New Year\'s Day',
+    text: 'On New Year\'s Day, we visited a shrine near our house. It was very cold, and there were many people. I wished for good health for my family. After that, my grandparents gave me some pocket money.',
+    ja: '元日に、家の近くの神社にお参りしました。とても寒く、人がたくさんいました。家族の健康をお願いしました。そのあと、祖父母がお年玉をくれました。',
+    questions: [
+      { q: '元日にどこへ行った？', choices: ['お寺', '近くの神社', 'デパート'], answer: 1 },
+      { q: '何をお願いした？', choices: ['テストの合格', '家族の健康', '新しいゲーム'], answer: 1 },
+      { q: '祖父母がくれたものは？', choices: ['お年玉', '本', 'おもち'], answer: 0 },
+    ],
+  },
+  {
+    id: 'party-plan',
+    title: 'A Surprise Party',
+    text: 'Next Friday is our teacher\'s last day at our school. Our class is planning a surprise party for her. Some students will make a card, and others will practice a song. We must keep it a secret.',
+    ja: '来週の金曜日は先生がこの学校にいる最後の日です。私たちのクラスは先生のためにサプライズパーティーを計画しています。カードを作る生徒もいれば、歌を練習する生徒もいます。秘密にしておかなければなりません。',
+    questions: [
+      { q: '来週の金曜日は何の日？', choices: ['先生の誕生日', '先生がこの学校にいる最後の日', '運動会'], answer: 1 },
+      { q: '生徒たちが準備しているものは？', choices: ['カードと歌', 'ケーキと花', '劇とダンス'], answer: 0 },
+      { q: '気をつけなければならないことは？', choices: ['早く帰ること', '秘密にすること', 'お金を集めること'], answer: 1 },
+    ],
+  },
+  {
+    id: 'flea-market',
+    title: 'The Flea Market',
+    text: 'On Saturday, my mother and I opened a small shop at a flea market. We sold old toys and clothes. A little boy bought my old robot for one hundred yen. He looked very happy, and so did I.',
+    ja: '土曜日、母と私はフリーマーケットで小さなお店を出しました。古いおもちゃや服を売りました。小さな男の子が私の古いロボットを100円で買いました。彼はとてもうれしそうで、私もうれしかったです。',
+    questions: [
+      { q: '何を売った？', choices: ['野菜と果物', '古いおもちゃや服', '手作りのパン'], answer: 1 },
+      { q: 'ロボットはいくらで売れた？', choices: ['50円', '100円', '500円'], answer: 1 },
+      { q: 'ロボットを買ったのは？', choices: ['小さな男の子', 'おばあさん', '先生'], answer: 0 },
+    ],
+  },
 ]
