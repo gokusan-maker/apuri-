@@ -41,6 +41,7 @@ export function LongReading({ onAnswer }: Props) {
   const [order, setOrder] = useState<number[]>([]) // 並べた語の番号
   const [sents, setSents] = useState<Record<string, number>>({}) // 会話文の [ 1 ] に入る文
   const [startAt, setStartAt] = useState(0) // 読みはじめた時刻
+  const [qa, setQa] = useState<Record<number, number>>({}) // 英問英答
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -64,6 +65,7 @@ export function LongReading({ onAnswer }: Props) {
                   setUnder(undefined)
                   setOrder([])
                   setSents({})
+                  setQa({})
                   setDone(false)
                   setShowJa(false)
                 }}
@@ -89,8 +91,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -199,6 +201,31 @@ export function LongReading({ onAnswer }: Props) {
         </div>
       ))}
 
+      {p.qa && (
+        <>
+          <h3 className="long-q">問　次の質問の答えとして最も適切なものを、それぞれ ア〜エ から選びなさい。</h3>
+          {p.qa.map((x, n) => (
+            <div key={n} className="long-item">
+              <p className="long-statement">
+                Q{n + 1}. {x.q}
+              </p>
+              <div className="long-choices one">
+                {x.choices.map((c, i) => (
+                  <button key={c} className={`long-choice${qa[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={qa[n] === i} onClick={() => setQa({ ...qa, [n]: i })}>
+                    {MARKS[i]} {c}
+                  </button>
+                ))}
+              </div>
+              {done && (
+                <p className={`long-why${qa[n] === x.answer ? ' right' : ' wrong'}`}>
+                  {qa[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
+
       {p.pick2 && (
         <>
           <h3 className="long-q">問3　本文の内容と合うものを、ア〜カ から2つ選びなさい。</h3>
@@ -291,6 +318,7 @@ export function LongReading({ onAnswer }: Props) {
               setUnder(undefined)
               setOrder([])
               setSents({})
+              setQa({})
               setStartAt(Date.now())
               setDone(false)
             }}

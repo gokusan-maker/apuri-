@@ -6,7 +6,8 @@ export type PickTwo = { statements: string[]; answers: [number, number]; why: st
 export type Underline = { phrase: string; choices: string[]; answer: number; why: string } // 下線部の意味に近いもの
 export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
 export type SentenceBlank = { id: string; choices: string[]; answer: number; why: string } // 会話文の [ 1 ] に入る文
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[] }
+export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[] }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -44,6 +45,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 2],
       why: 'イは第1段落、ウは第2段落の内容と合う。アはどこから来たかだれも知らない、エは来館者が増えた、オは心配されただけ、カははじめは心配する人もいた。',
     },
+    qa: [
+      { q: 'Why do many children visit the library?', choices: ['To buy new books.', 'To see Pepper.', 'To meet the librarian.', 'To read old newspapers.'], answer: 1, why: 'Many children visit the library just to see her. とある。' },
+      { q: 'What rule did the library make?', choices: ['Pepper must stay outside.', 'Children cannot touch Pepper.', 'Pepper cannot enter the room with the oldest books.', 'Visitors must bring food for Pepper.'], answer: 2, why: '第3段落に、いちばん古い本の部屋には入れないというきまりがある。' },
+    ],
     tf: [
       { statement: 'Pepper has lived in the library for more than five years.', answer: true, why: '第1段落に「5年以上前からそこに住んでいる」とある。' },
       { statement: 'The librarian brought Pepper from her own house.', answer: false, why: 'どこから来たかはだれも知らず、雨の朝に図書館で見つかった。' },
@@ -297,6 +302,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['by', 'for', 'since', 'until'], answer: 1, why: '「1〜2年（の間）」は期間の for。' },
       { id: 'E', choices: ['at', 'in', 'on', 'with'], answer: 2, why: 'depend on 〜 で「〜によって決まる・〜しだいだ」。' },
     ],
+    qa: [
+      { q: 'Why is octopus blood blue?', choices: ['Because it eats blue fish.', 'Because it uses copper to carry oxygen.', 'Because it lives in deep water.', 'Because it has three hearts.'], answer: 1, why: '第1段落に、鉄ではなく銅を使って酸素を運ぶからとある。' },
+      { q: 'Why does an octopus change its color?', choices: ['To hide from enemies or to catch food.', 'To make friends.', 'To keep warm.', 'To show it is sick.'], answer: 0, why: '第3段落の最後の文。' },
+    ],
     tf: [
       { statement: 'An octopus has three hearts.', answer: true, why: '第1段落に three hearts とある。' },
       { statement: 'Octopus blood is blue because it uses iron to carry oxygen.', answer: false, why: '鉄ではなく銅を使っている。' },
@@ -448,6 +457,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'in', 'on'], answer: 1, why: 'for the first time で「はじめて」。' },
       { id: 'E', choices: ['saw', 'see', 'seeing', 'to see'], answer: 2, why: 'look forward to のあとは 〜ing（to は前置詞）。' },
     ],
+    qa: [
+      { q: 'How can students join the camp?', choices: ['By calling a teacher.', 'By visiting the nature center.', 'By sending an e-mail to the City Education Office.', 'By writing a letter to the school.'], answer: 2, why: 'To join, please send an e-mail to the City Education Office とある。' },
+      { q: 'What will happen on the last night of the camp?', choices: ['A cooking contest.', 'A campfire party.', 'A short drama.', 'A soccer game.'], answer: 1, why: 'On the last night, there will be a campfire party. とある。' },
+    ],
     tf: [
       { statement: 'The camp is held for three days.', answer: true, why: 'three-day English Camp、8月5日〜7日。' },
       { statement: 'Students have to pay for their meals separately.', answer: false, why: '費用は食事つき（meals included）。' },
@@ -496,14 +509,15 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number> } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number> } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
   const u = p.underline && extra.underline === p.underline.answer ? 1 : 0
   const o = p.order && extra.order === p.order.answer ? 1 : 0
   const se = (p.sentences ?? []).filter((x) => extra.sentences?.[x.id] === x.answer).length
-  return { score: b + t + k + u + o + se, total: totalOf(p) }
+  const qa = (p.qa ?? []).filter((x, i) => extra.qa?.[i] === x.answer).length
+  return { score: b + t + k + u + o + se + qa, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -528,7 +542,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {

@@ -10,7 +10,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   const p = LONG_PASSAGES[0]
   fireEvent.click(screen.getByText(new RegExp(p.title)))
   expect(screen.getAllByText('( A )').length).toBeGreaterThan(0)
-  expect(screen.getByRole('button', { name: /のこり 12問/ })).toBeDisabled()
+  expect(screen.getByRole('button', { name: /のこり 14問/ })).toBeDisabled()
   for (const b of p.blanks) {
     const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
     const btn = screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!
@@ -18,14 +18,15 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   }
   p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${i === 0 ? '×' : t.answer ? '○' : '×'}` })))
   for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  p.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
   vi.setSystemTime(Date.now() + 125000)
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
-  expect(screen.getByText(/11 \/ 12 点/)).toBeInTheDocument()
+  expect(screen.getByText(/13 \/ 14 点/)).toBeInTheDocument()
   expect(screen.getByText(/かかった時間 2分05秒/)).toBeInTheDocument()
-  expect(screen.getAllByText(/⭕/).length).toBe(9)
-  expect(onAnswer).toHaveBeenCalledTimes(12)
+  expect(screen.getAllByText(/⭕/).length).toBe(11)
+  expect(onAnswer).toHaveBeenCalledTimes(14)
   fireEvent.click(screen.getByText('← 長文の一覧'))
-  expect(screen.getByText(/最高 11点/)).toBeInTheDocument()
+  expect(screen.getByText(/最高 13点/)).toBeInTheDocument()
 })
 
 it('下線部の意味と並べかえに答えられる', () => {
@@ -55,6 +56,7 @@ it('採点するとまちがえた問題の根拠の段落に色がつく', () =
   }
   p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${t.answer ? '○' : '×'}` })))
   for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  p.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/根拠がある段落に色をつけたよ/)).toBeInTheDocument()
   expect(document.querySelectorAll('.long-evidence').length).toBe(3)

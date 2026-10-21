@@ -31,8 +31,9 @@ it('採点と最高点の保存', () => {
   const p = LONG_PASSAGES[0]
   const allRight = Object.fromEntries(p.blanks.map((b) => [b.id, b.answer]))
   const tfRight = Object.fromEntries(p.tf.map((t, i) => [i, t.answer]))
-  expect(scoreLong(p, allRight, tfRight, p.pick2!.answers)).toEqual({ score: 12, total: 12 })
-  expect(scoreLong(p, allRight, tfRight, [p.pick2!.answers[0], 5]).score).toBe(11)
+  const qaRight = Object.fromEntries(p.qa!.map((x, i) => [i, x.answer]))
+  expect(scoreLong(p, allRight, tfRight, p.pick2!.answers, { qa: qaRight })).toEqual({ score: 14, total: 14 })
+  expect(scoreLong(p, allRight, tfRight, [p.pick2!.answers[0], 5]).score).toBe(11) // 英問英答は未回答
   expect(scoreLong(p, {}, {}).score).toBe(0)
   saveLongRecord({ [p.id]: 8 })
   expect(loadLongRecord()).toEqual({ [p.id]: 8 })
@@ -83,4 +84,10 @@ it('目安時間は語数と設問数で決まり、時間は分と秒で表示'
     expect(targetMinutes(p), p.id).toBeLessThanOrEqual(15)
   }
   expect(formatTime(125)).toBe('2分05秒')
+})
+
+it('英問英答は選択肢4つで、3本以上にある', () => {
+  const qs = LONG_PASSAGES.filter((p) => p.qa)
+  expect(qs.length).toBeGreaterThanOrEqual(3)
+  for (const p of qs) for (const x of p.qa!) expect(x.choices).toHaveLength(4)
 })
