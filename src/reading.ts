@@ -828,4 +828,59 @@ export const PASSAGES: Passage[] = [
       { q: 'ドラゴンはどんな気持ちだった？', choices: ['おこっていた', 'さびしかった', 'おなかがすいていた'], answer: 1 },
     ],
   },
+  {
+    id: 'cloud-backup',
+    title: 'A New Phone',
+    text: 'Last month, my old phone broke. I was worried because all my study records were on it. But I had saved my data online with a special code. On my new phone, I typed the code, and all my records came back.',
+    ja: '先月、古いケータイがこわれました。学習の記録が全部その中にあったので心配でした。でも特別なコードを使ってデータをインターネット上に保存していました。新しいケータイでコードを入力すると、記録が全部もどってきました。',
+    questions: [
+      { q: '先月何が起きた？', choices: ['ケータイがこわれた', 'ケータイをなくした', '新しいゲームを買った'], answer: 0 },
+      { q: 'データをどうしていた？', choices: ['紙に書いていた', 'コードを使ってネット上に保存していた', '友だちにあずけていた'], answer: 1 },
+      { q: '新しいケータイでどうなった？', choices: ['記録がもどった', '記録が消えた', 'コードを忘れた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'fox-and-grapes',
+    title: 'The Fox and the Grapes',
+    text: 'A hungry fox saw some grapes on a high branch. He jumped again and again, but he could not reach them. At last he walked away and said, "Those grapes are sour anyway." Sometimes people say bad things about what they cannot get.',
+    ja: 'おなかをすかせたキツネが、高い枝にぶどうがなっているのを見つけました。何度も何度もとびはねましたが、届きませんでした。とうとうキツネは立ち去りながら「どうせあのぶどうはすっぱいさ」と言いました。人は手に入らないものを悪く言うことがあります。',
+    questions: [
+      { q: 'キツネは何を見つけた？', choices: ['りんご', 'ぶどう', 'さかな'], answer: 1 },
+      { q: 'ぶどうは取れた？', choices: ['取れた', '取れなかった', '友だちが取ってくれた'], answer: 1 },
+      { q: 'キツネは最後に何と言った？', choices: ['とてもおいしい', 'どうせすっぱい', 'また明日来る'], answer: 1 },
+    ],
+  },
+  {
+    id: 'big-tower',
+    title: 'Climbing the Tower',
+    text: 'Our town has a tall tower with 600 steps. My father and I decided to climb it on foot. After 300 steps, my legs hurt, but we did not give up. From the top, we could see the sea and the mountains.',
+    ja: '私の町には600段の階段がある高い塔があります。父と私は歩いて登ることにしました。300段を過ぎると足が痛くなりましたが、あきらめませんでした。てっぺんからは海と山が見えました。',
+    questions: [
+      { q: '塔の階段は何段？', choices: ['300段', '600段', '1000段'], answer: 1 },
+      { q: '300段を過ぎてどうなった？', choices: ['足が痛くなった', '雨が降った', 'エレベーターに乗った'], answer: 0 },
+      { q: 'てっぺんから何が見えた？', choices: ['海と山', '学校', '富士山だけ'], answer: 0 },
+    ],
+  },
+  {
+    id: 'penpal-video',
+    title: 'A Video Call',
+    text: 'Last night, I had a video call with my friend in New Zealand. It was morning there, and she was eating breakfast. We talked about our schools in English. Her school has no uniforms, so she was surprised that I wear one.',
+    ja: 'きのうの夜、ニュージーランドの友だちとビデオ通話をしました。向こうは朝で、彼女は朝ごはんを食べていました。英語でおたがいの学校について話しました。彼女の学校には制服がないので、私が制服を着ていることにおどろいていました。',
+    questions: [
+      { q: '友だちはどこに住んでいる？', choices: ['ニュージーランド', 'カナダ', 'イギリス'], answer: 0 },
+      { q: '向こうは何時ごろだった？', choices: ['夜', '朝', '昼'], answer: 1 },
+      { q: '友だちは何におどろいた？', choices: ['私が制服を着ていること', '日本の天気', '私の名前'], answer: 0 },
+    ],
+  },
+  {
+    id: 'collecting',
+    title: 'My Collection',
+    text: 'I collect small monster figures from capsule toy machines. Each one costs two hundred yen, so I save my pocket money. I have twenty-five now. The rarest one is a golden dragon, and I keep it in a special box.',
+    ja: '私はカプセルトイのマシンで小さなモンスターのフィギュアを集めています。1つ200円なので、おこづかいをためています。今は25個あります。いちばんめずらしいのは金色のドラゴンで、特別な箱にしまっています。',
+    questions: [
+      { q: '何を集めている？', choices: ['切手', 'モンスターのフィギュア', 'カード'], answer: 1 },
+      { q: '今いくつ持っている？', choices: ['15個', '25個', '200個'], answer: 1 },
+      { q: 'いちばんめずらしいのは？', choices: ['銀色のネコ', '金色のドラゴン', '虹色のウサギ'], answer: 1 },
+    ],
+  },
 ]
