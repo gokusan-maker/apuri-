@@ -6,10 +6,11 @@ export type PickTwo = { statements: string[]; answers: [number, number]; why: st
 export type Underline = { phrase: string; choices: string[]; answer: number; why: string } // 下線部の意味に近いもの
 export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
 export type SentenceBlank = { id: string; choices: string[]; answer: number; why: string } // 会話文の [ 1 ] に入る文
+export type TitleQ = { choices: string[]; answer: number; why: string } // 本文全体に合うタイトル（このときは一覧や見出しにタイトルを出さない）
 export type Gist = { para: number; choices: string[]; answer: number; why: string } // 段落の要旨（見出し）：para は0から
 export type Refer = { phrase: string; word: string; choices: string[]; answer: number; why: string } // 指示語：phrase の中の word が指すもの
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[] }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -291,6 +292,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answer: 0,
       why: 'them は直前の microplastics（とても小さなプラスチックのかけら）を指す。',
     },
+    titleQ: { choices: ['A Day at the Beach', 'How to Make Plastic', 'Plastic in the Ocean', 'Sea Animals and Their Food'], answer: 2, why: '海のプラスチックの問題と、その対策について書かれている。' },
     tf: [
       { statement: 'Plastic disappears quickly in the ocean.', answer: false, why: 'Plastic does not disappear easily. とある。' },
       { statement: 'Sea animals sometimes eat small pieces of plastic by mistake.', answer: true, why: 'えさとまちがえる（mistake them for food）とある。' },
@@ -326,6 +328,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { q: 'Why is octopus blood blue?', choices: ['Because it eats blue fish.', 'Because it uses copper to carry oxygen.', 'Because it lives in deep water.', 'Because it has three hearts.'], answer: 1, why: '第1段落に、鉄ではなく銅を使って酸素を運ぶからとある。' },
       { q: 'Why does an octopus change its color?', choices: ['To hide from enemies or to catch food.', 'To make friends.', 'To keep warm.', 'To show it is sick.'], answer: 0, why: '第3段落の最後の文。' },
     ],
+    titleQ: { choices: ['How to Cook Seafood', 'The Clever Octopus', 'Life in an Aquarium', 'Animals with Blue Eyes'], answer: 1, why: '体のつくり・かしこさ・色を変える力・寿命など、タコのふしぎ全体について書かれている。' },
     tf: [
       { statement: 'An octopus has three hearts.', answer: true, why: '第1段落に three hearts とある。' },
       { statement: 'Octopus blood is blue because it uses iron to carry oxygen.', answer: false, why: '鉄ではなく銅を使っている。' },
@@ -582,6 +585,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { para: 1, choices: ['葉が緑の理由と、秋に緑が消えるわけ', 'カエデの赤い色', '冬のすごし方', '紅葉の名所'], answer: 0, why: '第2段落は葉緑素の話と、秋に緑が消えるしくみ。' },
       { para: 3, choices: ['木の育て方', '紅葉は木が冬にそなえる合図', '葉の数え方', '秋の天気'], answer: 1, why: '第4段落は、紅葉が冬への準備の合図だというまとめ。' },
     ],
+    titleQ: { choices: ['Why Do Leaves Change Color?', 'How to Grow Maple Trees', 'The Best Places to See Snow', 'Colors of the Sea'], answer: 0, why: '秋に葉の色が変わるしくみを説明している。' },
     tf: [
       { statement: 'Leaves are green because of chlorophyll.', answer: true, why: '第2段落の最初の文と合う。' },
       { statement: 'In autumn, trees make more food than in summer.', answer: false, why: '秋はあまり栄養を作らなくなる。' },
@@ -866,7 +870,7 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number> } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -876,7 +880,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const qa = (p.qa ?? []).filter((x, i) => extra.qa?.[i] === x.answer).length
   const rf = p.refer && extra.refer === p.refer.answer ? 1 : 0
   const gi = (p.gist ?? []).filter((x, i) => extra.gist?.[i] === x.answer).length
-  return { score: b + t + k + u + o + se + qa + rf + gi, total: totalOf(p) }
+  const ti = p.titleQ && extra.title === p.titleQ.answer ? 1 : 0
+  return { score: b + t + k + u + o + se + qa + rf + gi + ti, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -901,7 +906,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
@@ -930,13 +935,13 @@ export function targetMinutes(p: LongPassage): number {
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
-export const TYPE_LABEL = { gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export const TYPE_LABEL = { title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
 export type QType = keyof typeof TYPE_LABEL
 export type TypeStats = Partial<Record<QType, [number, number]>>
 
 export function typeResults(
   p: LongPassage,
-  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number> },
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number },
 ): TypeStats {
   const out: TypeStats = {}
   out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
@@ -948,6 +953,7 @@ export function typeResults(
   if (p.order) out.order = [a.order === p.order.answer ? 1 : 0, 1]
   if (p.refer) out.refer = [a.refer === p.refer.answer ? 1 : 0, 1]
   if (p.gist) out.gist = [p.gist.filter((x, i) => a.gist?.[i] === x.answer).length, p.gist.length]
+  if (p.titleQ) out.title = [a.title === p.titleQ.answer ? 1 : 0, 1]
   return out
 }
 
@@ -977,3 +983,6 @@ export function saveTypeStats(s: TypeStats): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 一覧・見出しに出す名前（タイトル選択の問題がある長文はタイトルをかくす）
+export const shownTitle = (p: LongPassage, n: number) => (p.titleQ ? `タイトルを当てる長文 No.${n + 1}` : p.title)

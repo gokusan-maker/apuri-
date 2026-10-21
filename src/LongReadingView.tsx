@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { evidenceParas, formatTime, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -60,6 +60,7 @@ export function LongReading({ onAnswer }: Props) {
   const [qa, setQa] = useState<Record<number, number>>({}) // 英問英答
   const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
   const [gist, setGist] = useState<Record<number, number>>({}) // 段落の要旨
+  const [titlePick, setTitlePick] = useState<number | undefined>(undefined) // タイトル選択
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -105,11 +106,12 @@ export function LongReading({ onAnswer }: Props) {
                   setQa({})
                   setRefer(undefined)
                   setGist({})
+                  setTitlePick(undefined)
                   setDone(false)
                   setShowJa(false)
                 }}
               >
-                📖 {x.title}
+                📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">
                   {x.level}・{totalOf(x)}点・目安{targetMinutes(x)}分{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
                 </span>
@@ -130,8 +132,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0)
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -144,7 +146,7 @@ export function LongReading({ onAnswer }: Props) {
           {p.level}・⏱ 目安{targetMinutes(p)}分
         </span>
       </div>
-      <h2>{p.title}</h2>
+      <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (
@@ -328,6 +330,26 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.titleQ && (
+        <>
+          <h3 className="long-q">問　この文章のタイトルとして最も適切なものを、ア〜エ から選びなさい。</h3>
+          <div className="long-item">
+            <div className="long-choices one">
+              {p.titleQ.choices.map((c, i) => (
+                <button key={c} className={`long-choice${titlePick === i ? ' picked' : ''}${done && i === p.titleQ!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={titlePick === i} onClick={() => setTitlePick(i)}>
+                  {MARKS[i]} {c}
+                </button>
+              ))}
+            </div>
+            {done && (
+              <p className={`long-why${titlePick === p.titleQ.answer ? ' right' : ' wrong'}`}>
+                {titlePick === p.titleQ.answer ? '⭕' : '❌'} 正解 {MARKS[p.titleQ.answer]}：{p.titleQ.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {p.gist && (
         <>
           <h3 className="long-q">問　次の段落の内容に最も合う見出しを、それぞれ ア〜エ から選びなさい。</h3>
@@ -442,6 +464,7 @@ export function LongReading({ onAnswer }: Props) {
               setQa({})
               setRefer(undefined)
               setGist({})
+              setTitlePick(undefined)
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -458,7 +481,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick }))
             setTypes(t)
             saveTypeStats(t)
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')

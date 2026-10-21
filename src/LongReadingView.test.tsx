@@ -105,3 +105,12 @@ it('指示語の問題では二重下線の語が出る', () => {
   fireEvent.click(screen.getByRole('button', { name: 'ア the Shinkansen' }))
   expect(screen.getByRole('button', { name: 'ア the Shinkansen' })).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('タイトル選択の長文はタイトルをかくして、選択肢から選ぶ', () => {
+  render(<LongReading />)
+  expect(screen.queryByText(/The Clever Octopus/)).not.toBeInTheDocument()
+  const n = LONG_PASSAGES.findIndex((p) => p.id === 'octopus')
+  fireEvent.click(screen.getByText(new RegExp(`タイトルを当てる長文 No.${n + 1}`)))
+  fireEvent.click(screen.getByRole('button', { name: 'イ The Clever Octopus' }))
+  expect(screen.getByRole('button', { name: 'イ The Clever Octopus' })).toHaveAttribute('aria-pressed', 'true')
+})

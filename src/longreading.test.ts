@@ -127,3 +127,13 @@ it('段落の要旨の問題は、本文にある段落を指している', () =
   const p = gs[0]
   expect(scoreLong(p, {}, {}, [], { gist: Object.fromEntries(p.gist!.map((g, i) => [i, g.answer])) }).score).toBe(p.gist!.length)
 })
+
+it('タイトル選択の問題がある長文は、一覧でタイトルをかくす', async () => {
+  const { shownTitle } = await import('./longreading')
+  const ts = LONG_PASSAGES.filter((p) => p.titleQ)
+  expect(ts.length).toBeGreaterThanOrEqual(3)
+  for (const p of ts) {
+    expect(p.titleQ!.choices[p.titleQ!.answer]).toBe(p.title)
+    expect(shownTitle(p, 0)).not.toContain(p.title)
+  }
+})
