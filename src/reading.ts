@@ -883,4 +883,59 @@ export const PASSAGES: Passage[] = [
       { q: 'いちばんめずらしいのは？', choices: ['銀色のネコ', '金色のドラゴン', '虹色のウサギ'], answer: 1 },
     ],
   },
+  {
+    id: 'trash-sorting',
+    title: 'Sorting Trash',
+    text: 'In my town, we sort trash into four groups: burnable trash, plastic, cans and bottles, and paper. At first it was hard for my friend from abroad. Now she sorts everything correctly and even teaches her family.',
+    ja: '私の町では、ごみを4つに分けます。燃えるごみ、プラスチック、缶とびん、紙です。海外から来た友だちには最初は難しかったです。今では全部正しく分けて、家族にも教えています。',
+    questions: [
+      { q: 'ごみはいくつに分ける？', choices: ['2つ', '4つ', '6つ'], answer: 1 },
+      { q: '最初、だれにとって難しかった？', choices: ['海外から来た友だち', '先生', '弟'], answer: 0 },
+      { q: '今、友だちは何をしている？', choices: ['家族に分け方を教えている', 'ごみを出さない', '町を出た'], answer: 0 },
+    ],
+  },
+  {
+    id: 'speech-contest',
+    title: 'The Speech Contest',
+    text: 'I entered an English speech contest. My speech was about my grandmother\'s garden. I practiced in front of the mirror every night. On the day, I forgot one line, but I kept going. I won third prize.',
+    ja: '英語のスピーチコンテストに出ました。スピーチは祖母の庭についてでした。毎晩鏡の前で練習しました。当日、1行忘れてしまいましたが、そのまま続けました。3位に入りました。',
+    questions: [
+      { q: 'スピーチは何について？', choices: ['祖母の庭', '学校の行事', '好きな食べ物'], answer: 0 },
+      { q: 'どこで練習した？', choices: ['学校の体育館', '鏡の前', '公園'], answer: 1 },
+      { q: '結果は？', choices: ['1位', '2位', '3位'], answer: 2 },
+    ],
+  },
+  {
+    id: 'firefly-night',
+    title: 'Fireflies',
+    text: 'In June, my family went to a small river at night to see fireflies. We turned off our flashlights and waited quietly. Soon, hundreds of small lights began to float above the water. It looked like the stars came down to the river.',
+    ja: '6月の夜、家族で小さな川へホタルを見に行きました。懐中電灯を消して静かに待ちました。まもなく何百もの小さな光が水の上をただよいはじめました。まるで星が川に降りてきたようでした。',
+    questions: [
+      { q: 'いつ行った？', choices: ['6月の夜', '8月の朝', '12月の夜'], answer: 0 },
+      { q: '待つ間に何をした？', choices: ['歌を歌った', '懐中電灯を消して静かに待った', '花火をした'], answer: 1 },
+      { q: 'ホタルの光は何のように見えた？', choices: ['雪', '星', '花火'], answer: 1 },
+    ],
+  },
+  {
+    id: 'map-reading',
+    title: 'The Orienteering Race',
+    text: 'At summer camp, we had an orienteering race. Each team used a map and a compass to find ten points in the forest. Our team went the wrong way once, but we did not panic. We found all the points and finished second.',
+    ja: 'サマーキャンプでオリエンテーリングの競争がありました。各チームが地図と方位磁針を使って、森の中の10か所のポイントを探しました。私たちのチームは一度道をまちがえましたが、あわてませんでした。全部のポイントを見つけて2位でゴールしました。',
+    questions: [
+      { q: '何を使ってポイントを探した？', choices: ['地図と方位磁針', 'スマートフォン', '望遠鏡'], answer: 0 },
+      { q: 'ポイントはいくつ？', choices: ['5か所', '10か所', '20か所'], answer: 1 },
+      { q: '結果は？', choices: ['1位', '2位', '最下位'], answer: 1 },
+    ],
+  },
+  {
+    id: 'old-photo',
+    title: 'An Old Photo',
+    text: 'While cleaning the closet, I found an old photo of my father. He was about my age and was holding a big fish. He laughed when I showed it to him. He said he caught that fish with his grandfather forty years ago.',
+    ja: 'クローゼットをそうじしていたら、父の古い写真を見つけました。父は私と同じくらいの年で、大きな魚を持っていました。見せると父は笑いました。40年前に自分のおじいさんといっしょにその魚をつったのだと言いました。',
+    questions: [
+      { q: '写真はどこで見つけた？', choices: ['クローゼット', '本だな', '机の引き出し'], answer: 0 },
+      { q: '写真の父は何を持っていた？', choices: ['大きな魚', 'トロフィー', 'ギター'], answer: 0 },
+      { q: '魚はいつつった？', choices: ['4年前', '14年前', '40年前'], answer: 2 },
+    ],
+  },
 ]
