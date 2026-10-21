@@ -73,7 +73,16 @@ it('Lv15からはしっぽと模様、神話の姿はきらきら', () => {
 it('図鑑は系統ごとに進化の流れで並ぶ（全15種）', async () => {
   const { Zukan } = await import('./MonsterView')
   render(<Zukan monsters={[{ xp: 0 }]} />)
-  expect(document.querySelectorAll('.zukan-row')).toHaveLength(4)
-  expect(document.querySelectorAll('.zukan-line li')).toHaveLength(15)
+  expect(document.querySelectorAll('.zukan-row')).toHaveLength(5) // 4系統＋色ちがい
+  expect(document.querySelectorAll('.zukan-line:not(.zukan-kinds) li')).toHaveLength(15)
   expect(document.querySelectorAll('.zukan-arrow')).toHaveLength(11)
+})
+
+it('図鑑に色ちがいの集まり具合が出る', async () => {
+  const { Zukan } = await import('./MonsterView')
+  const { screen } = await import('@testing-library/react')
+  render(<Zukan monsters={[{ xp: 0 }, { xp: 0, kind: 'kin' }]} />)
+  expect(screen.getByText(/色ちがい 2 \/ 6/)).toBeInTheDocument()
+  expect(screen.getByLabelText('きんいろ（スーパーレア）')).toBeInTheDocument()
+  expect(screen.getAllByLabelText('まだ出ていない色')).toHaveLength(4)
 })

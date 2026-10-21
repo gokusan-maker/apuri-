@@ -2,7 +2,7 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, kindOf, withKind, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, withKind, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -717,6 +717,7 @@ const ZUKAN_ROWS = [
 
 export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const seen = new Set(monsters.flatMap(seenForms))
+  const kinds = new Set(monsters.map((m) => m.kind).filter(Boolean))
   const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
@@ -755,6 +756,27 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           </ol>
         </div>
       ))}
+      <div className="zukan-row">
+        <span className="zukan-row-label">
+          🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}（タマゴガチャで出るよ）
+        </span>
+        <ol className="zukan-line zukan-kinds">
+          {KINDS.map((k) => {
+            const got = k.id === 'normal' || kinds.has(k.id)
+            return (
+              <li key={k.id} className={got ? 'got' : 'locked'}>
+                <span className="zukan-pick" aria-label={got ? `${k.name}（${RARITY_LABEL[k.rarity]}）` : 'まだ出ていない色'}>
+                  <span className="zukan-figure">
+                    <MonsterFigure form={FORMS[2]} kind={k.id} hidden={!got} />
+                  </span>
+                  <span className="badge-name">{got ? k.name : '？？？'}</span>
+                  <span className={`badge-desc kind-tag r-${k.rarity}`}>{RARITY_LABEL[k.rarity]}</span>
+                </span>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
       {detail && (
         <div className="zukan-detail" role="status" style={{ background: `linear-gradient(135deg, ${detail.color}55, transparent 70%)` }}>
           <span className="zukan-big">
