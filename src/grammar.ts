@@ -818,6 +818,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'How old do you think ___?', choices: ['is this tree', 'this tree is', 'does this tree'], answer: 1, why: 'do you think のあとはふつうの語順 this tree is。' },
     ],
   },
+  {
+    id: 'if-whether',
+    title: 'if / whether「〜かどうか」',
+    points: ['I don\'t know if 〜. / I wonder whether 〜. で「〜かどうか（わからない・と思う）」。', 'このときの if のあとは、未来のことでも will を使って言える（「もし〜なら」の if とはちがう）。'],
+    examples: [
+      { en: "I don't know if he will come to the party.", ja: '彼がパーティーに来るかどうかわからない。' },
+      { en: 'Can you check whether the store is open?', ja: 'その店が開いているかどうか確かめてくれる？' },
+    ],
+    questions: [
+      { sentence: 'I wonder ___ it will rain tomorrow.', choices: ['if', 'that', 'what'], answer: 0, why: '「〜かどうか」は if（whether）。' },
+      { sentence: "I'm not sure ___ she likes cats.", choices: ['whether', 'which', 'who'], answer: 0, why: '「好きかどうか」なので whether。' },
+      { sentence: 'Please ask him if he ___ us tomorrow.', choices: ['help', 'will help', 'helping'], answer: 1, why: '「〜かどうか」の if のあとは、未来なら will を使う。' },
+    ],
+  },
+  {
+    id: 'relative-omit',
+    title: '関係代名詞の省略（the book I read）',
+    points: ['目的語になる関係代名詞（which / that / who）は省略できる：the book (that) I read。', '名詞のすぐあとに「主語＋動詞」が続いたら、関係代名詞が省略されていると考える。'],
+    examples: [
+      { en: 'This is the cake my grandmother made.', ja: 'これは祖母が作ったケーキです。' },
+      { en: 'The boy I met yesterday was very kind.', ja: '昨日私が会った男の子はとても親切だった。' },
+    ],
+    questions: [
+      { sentence: 'The movie we ___ last night was exciting.', choices: ['saw', 'seeing', 'see'], answer: 0, why: 'the movie (that) we saw ＝「私たちが昨夜見た映画」。過去なので saw。' },
+      { sentence: 'Is this the bag ___ you lost?', choices: ['who', 'you', '（何も入らない）'], answer: 2, why: '目的語の関係代名詞は省略できるので、the bag you lost でよい。' },
+      { sentence: 'The song she sang ___ beautiful.', choices: ['were', 'was', 'be'], answer: 1, why: '主語は the song（単数）、過去なので was。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
