@@ -174,3 +174,16 @@ it('ディクテーションの答えあわせは記号や大文字を気にし�
   expect(sameSentence('I don’t  like it!', "I don't like it.")).toBe(true)
   expect(sameSentence('I like it', "I don't like it.")).toBe(false)
 })
+
+it('文法を3日続けるとボーナス、1日あくと1から', async () => {
+  const { studyGrammarDay } = await import('./grammar')
+  let d = { last: '', streak: 0 }
+  let r = studyGrammarDay(d, '2026-10-30')
+  expect(r.days.streak).toBe(1)
+  r = studyGrammarDay(r.days, '2026-10-31')
+  r = studyGrammarDay(r.days, '2026-11-01') // 月をまたいでも続く
+  expect(r).toEqual({ days: { last: '2026-11-01', streak: 3 }, bonus: true })
+  expect(studyGrammarDay(r.days, '2026-11-01').bonus).toBe(false)
+  d = studyGrammarDay(r.days, '2026-11-03').days
+  expect(d.streak).toBe(1)
+})

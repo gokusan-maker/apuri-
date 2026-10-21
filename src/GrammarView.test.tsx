@@ -345,3 +345,15 @@ it('全問正解すると相棒がほめてくれる', async () => {
   }
   expect(screen.getByText(`🐣 モチ「${praiseOf(unit.id)}」`)).toBeInTheDocument()
 })
+
+it('文法を3日続けた日にボーナス', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:grammar-days', JSON.stringify({ last: '2026-10-19', streak: 2 }))
+  const onStreakBonus = vi.fn()
+  render(<Grammar onStreakBonus={onStreakBonus} />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  fireEvent.click(screen.getByRole('button', { name: unit.questions[0].choices[0] }))
+  expect(onStreakBonus).toHaveBeenCalledTimes(1)
+})

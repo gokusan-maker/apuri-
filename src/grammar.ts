@@ -1554,3 +1554,35 @@ export function weakRanking(list: string[], n = 3): { unit: GrammarUnit; count: 
 // ディクテーションの答えあわせ：大文字小文字・記号・空白のちがいは気にしない（’ と ' は同じ）
 const norm = (t: string) => t.toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim()
 export const sameSentence = (a: string, b: string) => norm(a) === norm(b)
+
+// 文法の連続ボーナス：文法を3日続けるごとに🪙10
+export const GRAMMAR_STREAK_DAYS = 3
+export const GRAMMAR_STREAK_COINS = 10
+export type GrammarDays = { last: string; streak: number }
+const DAYS_KEY = 'eitan:grammar-days'
+export function loadGrammarDays(): GrammarDays {
+  try {
+    const v = JSON.parse(localStorage.getItem(DAYS_KEY) ?? 'null') as Partial<GrammarDays> | null
+    return { last: typeof v?.last === 'string' ? v.last : '', streak: typeof v?.streak === 'number' && v.streak > 0 ? Math.floor(v.streak) : 0 }
+  } catch {
+    return { last: '', streak: 0 }
+  }
+}
+export function saveGrammarDays(d: GrammarDays): void {
+  try {
+    localStorage.setItem(DAYS_KEY, JSON.stringify(d))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+const prevDay = (day: string) => {
+  const [y, m, d] = day.split('-').map(Number)
+  const t = new Date(y, m - 1, d - 1)
+  return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`
+}
+// その日はじめて文法をやったときに呼ぶ。ボーナスの日なら bonus が true
+export function studyGrammarDay(d: GrammarDays, today: string): { days: GrammarDays; bonus: boolean } {
+  if (d.last === today) return { days: d, bonus: false }
+  const streak = d.last === prevDay(today) ? d.streak + 1 : 1
+  return { days: { last: today, streak }, bonus: streak % GRAMMAR_STREAK_DAYS === 0 }
+}
