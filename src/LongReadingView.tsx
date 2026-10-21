@@ -7,6 +7,8 @@ import { speak } from './speech'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
+const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
+
 // 読み上げ用：空所は「ブランク」と読まず、少し間をあける
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
 
@@ -67,11 +69,38 @@ export function LongReading({ onAnswer }: Props) {
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
 
+  function openPassage(x: LongPassage) {
+    setStartAt(nowMs())
+    setP(x)
+    setBlanks({})
+    setTf({})
+    setPicks([])
+    setUnder(undefined)
+    setOrder([])
+    setSents({})
+    setQa({})
+    setRefer(undefined)
+    setGist({})
+    setTitlePick(undefined)
+    setDone(false)
+    setShowJa(false)
+  }
+
   if (!p) {
     return (
       <section className="card grammar long-reading">
         <h2>長文読解（入試形式）</h2>
         <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        {LONG_PASSAGES.some((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)) && (
+          <div className="long-review">
+            <p className="long-review-title">🔁 もう一度ときたい長文（満点でないもの）</p>
+            {LONG_PASSAGES.filter((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)).map((x) => (
+              <button key={x.id} className="list-link" onClick={() => openPassage(x)}>
+                {shownTitle(x, LONG_PASSAGES.indexOf(x))}（{record[x.id]} / {totalOf(x)}点）
+              </button>
+            ))}
+          </div>
+        )}
         {Object.keys(types).length > 0 && (
           <details className="long-types">
             <summary>📊 問題のタイプ別 正答率</summary>
@@ -94,22 +123,7 @@ export function LongReading({ onAnswer }: Props) {
           {LONG_PASSAGES.map((x) => (
             <li key={x.id}>
               <button
-                onClick={() => {
-                  setStartAt(Date.now())
-                  setP(x)
-                  setBlanks({})
-                  setTf({})
-                  setPicks([])
-                  setUnder(undefined)
-                  setOrder([])
-                  setSents({})
-                  setQa({})
-                  setRefer(undefined)
-                  setGist({})
-                  setTitlePick(undefined)
-                  setDone(false)
-                  setShowJa(false)
-                }}
+                onClick={() => openPassage(x)}
               >
                 📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">

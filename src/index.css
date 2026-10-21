@@ -1179,3 +1179,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .gcard-body { display: flex; flex-direction: column; gap: 6px; font-size: 0.9rem; }
 .gcard-ex { margin-top: 6px; padding-top: 6px; border-top: 1px dashed #c7d2fe; font-weight: 700; }
 .gcard-nav { display: flex; justify-content: space-between; align-items: center; }
+.long-review { margin: 6px 0; padding: 6px 10px; border-radius: 12px; background: #fef2f2; text-align: left; }
+.long-review-title { margin: 0 0 4px; font-weight: 800; font-size: 0.85rem; color: #b91c1c; }
+.long-review .list-link { display: block; text-align: left; }

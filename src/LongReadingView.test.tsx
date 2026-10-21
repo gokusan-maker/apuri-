@@ -114,3 +114,12 @@ it('タイトル選択の長文はタイトルをかくして、選択肢から�
   fireEvent.click(screen.getByRole('button', { name: 'イ The Clever Octopus' }))
   expect(screen.getByRole('button', { name: 'イ The Clever Octopus' })).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('満点でない長文は「もう一度ときたい長文」に出る', () => {
+  const p = LONG_PASSAGES[1]
+  localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: 3 }))
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(new RegExp(`${p.title}（3 / \\d+点）`)))
+  expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
+  localStorage.clear()
+})
