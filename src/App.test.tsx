@@ -425,6 +425,23 @@ describe('App', () => {
     expect(c.querySelector('.pet-cheer-text')!.textContent).toMatch(/[ぁ-んァ-ン]/)
   })
 
+  it('今日のチャレンジ：5問クリアでコインがもらえ、ボタンがクリアずみになる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByText(/今日のチャレンジ：/))
+    fireEvent.click(screen.getByText('チャレンジ開始！'))
+    for (let i = 0; i < 5; i++) {
+      const en = document.querySelector('.challenge .en')!.textContent!
+      const ja = WORDS.find((w) => w.en === en)!.ja
+      fireEvent.click(screen.getByRole('button', { name: ja }))
+      const next = screen.queryByText(/次へ|つぎへ/)
+      if (next) fireEvent.click(next)
+    }
+    expect(screen.getByText('チャレンジ成功！')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeGreaterThanOrEqual(10)
+    expect(localStorage.getItem('eitan:challenge')).toBe('2026-10-20')
+  })
+
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

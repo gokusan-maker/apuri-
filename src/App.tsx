@@ -77,6 +77,8 @@ import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
+import { Challenge } from './ChallengeView'
+import { challengeOf, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
 import { speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
@@ -229,6 +231,8 @@ function App() {
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [showChallenge, setShowChallenge] = useState(false)
+  const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
@@ -649,6 +653,10 @@ function App() {
             <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
           </p>
         )}
+        <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => setShowChallenge(true)}>
+          ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
+          {challengeDay === today ? ' ✅クリア' : ''}
+        </button>
         <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
           <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
           <div className="goal-bar">
@@ -706,7 +714,20 @@ function App() {
           </span>
         </p>
       )}
-      {showShop ? (
+      {showChallenge ? (
+        <Challenge
+          monster={monster}
+          done={challengeDay === today}
+          onAnswer={onAnswer}
+          onClear={() => {
+            const d = difficultyOf(formOf(monster).stage)
+            setChallengeDay(today)
+            setWallet((w) => ({ ...w, coins: w.coins + d.coins }))
+            gainXp(d.xp, null)
+          }}
+          onClose={() => setShowChallenge(false)}
+        />
+      ) : showShop ? (
         <Shop
           eventId={seasonEvent?.id}
           wallet={wallet}
