@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { BossFigure } from './BossView'
+import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
 import { GRAMMAR, grammarStamps, loadGrammar, saveGrammar, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
@@ -10,17 +12,20 @@ type Props = {
   title?: string
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   onStampTicket?: () => void // スタンプが10個ふえるごとに（文法のときだけ）
+  onMonsterWin?: () => void // 文法モンスターをたおした（ごほうびはアプリ側）
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
   const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
+  const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
 
   function open(u: GrammarUnit) {
+    setBattle(false)
     setUnit(u)
     setStep(-1)
     setPicked(null)
@@ -107,6 +112,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <button className="flip" onClick={() => setStep(0)}>
           確認問題へ（{unit.questions.length}問）
         </button>
+        {stampMode && (
+          <button
+            className="boss-btn grammar-monster-btn"
+            onClick={() => {
+              setBattle(true)
+              setStep(0)
+            }}
+          >
+            👾 文法モンスター「{monsterName(unit)}」と戦う（全問正解でたおせる）
+          </button>
+        )}
       </section>
     )
   }
@@ -120,7 +136,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <p className="result-score">
           {score} / {unit.questions.length} 問正解
         </p>
-        <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
+        {battle ? (
+          <p className="result-message">{score === unit.questions.length ? `👾 ${monsterName(unit)}をたおした！ 🪙${GRAMMAR_MONSTER_COINS}` : `${monsterName(unit)}ににげられた…解説を見直してもう一度！`}</p>
+        ) : (
+          <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
+        )}
         <button className="flip" onClick={() => open(unit)}>
           もう一度
         </button>
@@ -137,6 +157,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     if (ok) playCorrect()
     else playWrong()
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
+    if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) onMonsterWin?.()
     if (step === unit.questions.length - 1 && nextScore > (record[unit.id] ?? -1)) {
       const r = { ...record, [unit.id]: nextScore }
       if (stampMode && Math.floor(grammarStamps(r) / STAMP_EVERY) > Math.floor(grammarStamps(record) / STAMP_EVERY)) onStampTicket?.()
@@ -152,6 +173,19 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       <p className="progress">
         {step + 1} / {unit.questions.length}
       </p>
+      {battle && (
+        <div className="grammar-monster">
+          <span className="grammar-monster-fig">
+            <BossFigure hit={picked !== null && picked === q.answer} look={monsterLook(unit)} />
+          </span>
+          <span>
+            <strong>{monsterName(unit)}</strong>
+            <span className="boss-hp grammar-monster-hp" role="progressbar" aria-label="文法モンスターのHP" aria-valuemin={0} aria-valuemax={unit.questions.length} aria-valuenow={unit.questions.length - score}>
+              <span className="boss-hp-fill" style={{ width: `${((unit.questions.length - score) / unit.questions.length) * 100}%` }} />
+            </span>
+          </span>
+        </div>
+      )}
       <p className="example blank-sentence">
         {before}
         <span className={`blank${picked !== null ? ' filled' : ''}`}>

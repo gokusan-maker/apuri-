@@ -35,6 +35,7 @@ import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
+import { GRAMMAR_MONSTER_COINS } from './grammarmonster'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
 import { Tiles } from './TilesView'
@@ -218,6 +219,7 @@ type Props = {
   onGame?: () => void // 神経衰弱・ビンゴをクリアしたとき
   onSetLevels?: (levels: Level[]) => void // レベル診断の結果で単語帳を切りかえる
   onTicket?: () => void // 文法スタンプ10個ごとのガチャチケット
+  onCoins?: (n: number) => void // コインのごほうび（文法モンスターなど）
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
@@ -238,7 +240,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [direction, setDirection] = useState<Direction>(initial)
@@ -739,7 +741,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar onAnswer={onAnswer} onStampTicket={onTicket} />
+        <Grammar onAnswer={onAnswer} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} />
       </>
     )
   }

@@ -50,3 +50,19 @@ it('スタンプが10個になるとガチャチケットのお知らせが呼�
   }
   expect(ticket).toHaveBeenCalledTimes(1)
 })
+
+it('文法モンスターを全問正解でたおすとごほうび', () => {
+  localStorage.clear()
+  const win = vi.fn()
+  render(<Grammar onMonsterWin={win} />)
+  const u = GRAMMAR[0]
+  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByText(/文法モンスター「be動詞モンスター」と戦う/))
+  expect(screen.getByRole('progressbar', { name: '文法モンスターのHP' })).toHaveAttribute('aria-valuenow', '3')
+  for (const q of u.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(win).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/be動詞モンスターをたおした！/)).toBeInTheDocument()
+})

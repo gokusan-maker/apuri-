@@ -1106,3 +1106,10 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-order-words { display: flex; flex-wrap: wrap; gap: 6px; }
 .long-order-words .long-choice { padding: 6px 10px; }
 .gacha-bonus { margin: 2px 0; font-weight: 800; color: #db2777; }
+
+/* 文法モンスター */
+.grammar-monster-btn { display: block; width: 100%; margin-top: 8px; background: linear-gradient(90deg, #7c3aed, #db2777); color: #fff; }
+.grammar-monster { display: flex; align-items: center; gap: 8px; margin: 4px 0 8px; text-align: left; }
+.grammar-monster-fig { width: 64px; height: 64px; flex: none; }
+.grammar-monster-fig svg { width: 100%; height: 100%; }
+.grammar-monster-hp { display: block; width: 160px; margin-top: 4px; }
