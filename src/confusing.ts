@@ -632,6 +632,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Be careful not to ___ your wallet.', choices: ['lose', 'loose'], answer: 0, why: '「なくす」は lose。' },
     ],
   },
+  {
+    id: 'hard-hardly',
+    title: 'hard と hardly',
+    points: ['hard は「一生けんめいに・熱心に」（副詞）や「かたい・難しい」（形容詞）。', 'hardly は「ほとんど〜ない」。意味がまったくちがうので注意。'],
+    examples: [
+      { en: 'She studies hard every day.', ja: '彼女は毎日一生けんめい勉強する。' },
+      { en: 'I could hardly sleep last night.', ja: 'ゆうべはほとんど眠れなかった。' },
+    ],
+    questions: [
+      { sentence: 'The players practiced ___ for the game.', choices: ['hard', 'hardly'], answer: 0, why: '「一生けんめいに」練習したので hard。' },
+      { sentence: 'It was so dark that I could ___ see anything.', choices: ['hard', 'hardly'], answer: 1, why: '「ほとんど見えなかった」は hardly。' },
+      { sentence: 'This math problem is very ___.', choices: ['hard', 'hardly'], answer: 0, why: '「難しい」は形容詞 hard。' },
+    ],
+  },
+  {
+    id: 'late-lately',
+    title: 'late と lately',
+    points: ['late は「遅く・遅れて」。', 'lately は「最近」（現在完了の文でよく使う）。'],
+    examples: [
+      { en: 'I got up late this morning.', ja: '今朝は遅く起きた。' },
+      { en: 'Have you seen Ken lately?', ja: '最近ケンに会った？' },
+    ],
+    questions: [
+      { sentence: 'Don\'t stay up ___.', choices: ['late', 'lately'], answer: 0, why: '「遅くまで」起きているは late。' },
+      { sentence: 'I haven\'t been to the library ___.', choices: ['late', 'lately'], answer: 1, why: '「最近」は lately。' },
+      { sentence: 'The bus came ten minutes ___.', choices: ['late', 'lately'], answer: 0, why: '「10分遅れて」来たので late。' },
+    ],
+  },
+  {
+    id: 'shade-shadow',
+    title: 'shade と shadow',
+    points: ['shade は「日かげ」（日光が当たらない場所）。', 'shadow は「影」（物や人の形をした暗い部分）。'],
+    examples: [
+      { en: 'Let\'s rest in the shade of the tree.', ja: '木の日かげで休もう。' },
+      { en: 'My shadow is long in the evening.', ja: '夕方は私の影が長い。' },
+    ],
+    questions: [
+      { sentence: 'It\'s hot. Let\'s sit in the ___.', choices: ['shade', 'shadow'], answer: 0, why: '暑いので「日かげ」にすわる＝ shade。' },
+      { sentence: 'The cat was playing with its own ___.', choices: ['shade', 'shadow'], answer: 1, why: '自分の「影」は shadow。' },
+      { sentence: 'The ___ of the building fell on the street.', choices: ['shade', 'shadow'], answer: 1, why: '建物の形の「影」は shadow。' },
+    ],
+  },
+  {
+    id: 'hear-here',
+    title: 'hear と here',
+    points: ['hear（聞こえる）と here（ここに）は同じ発音でつづりがちがう。', 'hear は動詞、here は場所を表す副詞。'],
+    examples: [
+      { en: 'Can you hear the birds?', ja: '鳥の声が聞こえる？' },
+      { en: 'Come here, please.', ja: 'ここに来てください。' },
+    ],
+    questions: [
+      { sentence: 'I can\'t ___ you. Please speak louder.', choices: ['hear', 'here'], answer: 0, why: '「聞こえない」は hear。' },
+      { sentence: 'Put your bag ___.', choices: ['hear', 'here'], answer: 1, why: '「ここに」置くので here。' },
+      { sentence: 'Did you ___ the news?', choices: ['hear', 'here'], answer: 0, why: '「ニュースを聞いた？」は hear。' },
+    ],
+  },
+  {
+    id: 'price-prize',
+    title: 'price と prize',
+    points: ['price は「値段・価格」。', 'prize は「賞・賞品」。つづりが1文字ちがうだけなので注意。'],
+    examples: [
+      { en: 'The price of this book is 800 yen.', ja: 'この本の値段は800円だ。' },
+      { en: 'She won first prize in the contest.', ja: '彼女はコンテストで1等賞をとった。' },
+    ],
+    questions: [
+      { sentence: 'The ___ of vegetables went up.', choices: ['price', 'prize'], answer: 0, why: '野菜の「値段」は price。' },
+      { sentence: 'He got a ___ for his painting.', choices: ['price', 'prize'], answer: 1, why: '絵で「賞」をもらったので prize。' },
+      { sentence: 'What is the ___ of this bag?', choices: ['price', 'prize'], answer: 0, why: 'かばんの「値段」は price。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
