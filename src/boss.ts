@@ -42,7 +42,7 @@ export function saveBoss(r: BossRecord): void {
 }
 
 // 単語帳ごとのボス（すべてオリジナル）
-export type BossLook = { name: string; color: string; line: string; eye: string; desc?: string }
+export type BossLook = { name: string; color: string; line: string; eye: string; desc?: string; deco?: string }
 
 export const BOSSES: Record<Level, BossLook> = {
   中1: { name: 'ヤミモチ', desc: '中1の単語をこっそり食べてしまう、やみのモチ。', color: '#6d28d9', line: '#3b0764', eye: '#fde047' },
