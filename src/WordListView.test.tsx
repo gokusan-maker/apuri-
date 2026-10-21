@@ -56,3 +56,10 @@ it('詳細に反対の意味・同じ発音の単語が出る', () => {
   fireEvent.click(screen.getByRole('button', { name: /sea/ }))
   expect(screen.getByText('👂 同じ発音：see（見る）')).toBeInTheDocument()
 })
+
+it('多いときは100語ずつ表示し、「もっと見る」で続きが出る', () => {
+  render(<WordList words={WORDS.slice(0, 150)} progress={{}} onClose={() => {}} />)
+  expect(document.querySelectorAll('.word-row')).toHaveLength(100)
+  fireEvent.click(screen.getByText('もっと見る（あと50語）'))
+  expect(document.querySelectorAll('.word-row')).toHaveLength(150)
+})

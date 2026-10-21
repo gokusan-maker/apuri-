@@ -20,6 +20,8 @@ type Props = {
   onPractice?: (id: string) => void // この単語だけカードで練習
 }
 
+const PAGE = 100 // 一度に表示する数（多すぎると重くなる）
+
 type Sort = 'none' | 'abc' | 'recent'
 const SORTS: { id: Sort; label: string }[] = [
   { id: 'none', label: 'もとの順' },
@@ -48,6 +50,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
   const [open, setOpen] = useState<string | null>(null)
   const [filter, setFilter] = useState<Filter>('all')
   const [sort, setSort] = useState<Sort>('none')
+  const [limit, setLimit] = useState(PAGE)
   const hits = searchWords(words, query).filter((w) => {
     if (filter === 'all') return true
     if (filter === 'fav') return favorites.includes(w.id)
@@ -92,7 +95,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
         </button>
       </p>
       <ul className="words">
-        {shown.map((w) => {
+        {shown.slice(0, limit).map((w) => {
           const box = progress[w.id]?.box
           return (
             <li key={w.id}>
@@ -148,6 +151,11 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
           )
         })}
       </ul>
+      {shown.length > limit && (
+        <button className="list-link" onClick={() => setLimit(limit + PAGE)}>
+          もっと見る（あと{shown.length - limit}語）
+        </button>
+      )}
     </section>
   )
 }
