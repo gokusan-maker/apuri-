@@ -318,6 +318,11 @@ function App() {
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
     setParty((p) => feedHelpers(p, amount, today))
+    const helped = feedHelpers(party, amount, today)
+    helped.members.forEach((m, i) => {
+      if (i === party.active || formOf(m).id === formOf(party.members[i]).id) return
+      pushToast([{ id: 'helper-evolve', text: `おるすばん中の${party.members[i].name ?? formOf(party.members[i]).name}が「${formOf(m).name}」に${formOf(m).stage === 1 ? 'かえった' : '進化した'}！`, counter: 'answers', target: 0 }])
+    })
     setHappy(true)
     const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
     setLeveledUp(up)

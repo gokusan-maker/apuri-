@@ -400,6 +400,19 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
+  it('おるすばん中の仲間がかえると知らせが出る', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(20)
+    for (let i = 0; i < 6 && !screen.queryByText('おるすばん中のタマが「ちびモチ」にかえった！'); i++) {
+      const t = document.querySelector('.mission-toast')
+      if (t) fireEvent.click(t)
+    }
+    expect(screen.getByText('おるすばん中のタマが「ちびモチ」にかえった！')).toBeInTheDocument()
+  })
+
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
