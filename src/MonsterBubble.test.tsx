@@ -34,3 +34,10 @@ it('夜だけ夜空が出る', () => {
   render(<Monster monster={{ xp: 500 } as never} night />)
   expect(document.querySelector('.night-sky')).not.toBeNull()
 })
+
+it('相棒をさわるとハートが出る', () => {
+  render(<Monster monster={{ xp: 500 } as never} />)
+  expect(document.querySelector('.poke-hearts')).toBeNull()
+  fireEvent.click(screen.getByLabelText('相棒にさわる'))
+  expect(document.querySelectorAll('.poke-hearts i')).toHaveLength(3)
+})
