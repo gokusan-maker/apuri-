@@ -1020,6 +1020,14 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'get used to 〜 で「〜になれる」。' },
       { id: 'D', choices: ['at', 'by', 'for', 'to'], answer: 3, why: 'be connected to 〜 で「〜と結びついている」。' },
     ],
+    insert: { sentence: 'Because they are made of metal, they also last a long time.', after: [0, 1, 2, 3], answer: 2, why: '「金属でできているので」とあるので、韓国の金属のはしを説明した第3段落のあとに入る。' },
+    summary: {
+      text: 'Chopsticks are used in many Asian countries, but their ( 1 ) is different in each country. For example, Chinese chopsticks are usually ( 2 ).',
+      blanks: [
+        { choices: ['shape', 'price', 'color', 'name'], answer: 0, why: '第5段落「形はそれぞれの国の料理や食べ方と結びついている」。' },
+        { choices: ['short', 'long', 'heavy', 'cheap'], answer: 1, why: '第2段落「中国では、はしはふつう長い」。' },
+      ],
+    },
     tf: [
       { statement: 'Chopsticks are used only in Japan.', answer: false, why: 'アジアの多くの国で使われている。' },
       { statement: 'Chinese chopsticks are usually long.', answer: true, why: '第2段落の内容と合う。' },
@@ -1216,6 +1224,14 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['because', 'but', 'until', 'when'], answer: 3, why: '「買い物に行くときに」なので when。' },
       { id: 'D', choices: ['at', 'by', 'for', 'of'], answer: 2, why: 'be important for 〜ing で「〜するために大切だ」。' },
     ],
+    insert: { sentence: 'In this way, plastic from the land ends up in the ocean.', after: [0, 1, 2, 3], answer: 1, why: '第2段落の「雨や風がプラスチックを川へ、そして海へと運ぶ」のまとめとして入る。' },
+    summary: {
+      text: 'Plastic is useful, but most of it does not break down ( 1 ). To protect the sea, many countries are trying to use ( 2 ) plastic.',
+      blanks: [
+        { choices: ['easily', 'loudly', 'kindly', 'late'], answer: 0, why: '第2段落「ほとんどのプラスチックはかんたんには分解されない」。' },
+        { choices: ['more', 'less', 'new', 'colorful'], answer: 1, why: '第4段落「プラスチックを使う量をへらそうとしている」。' },
+      ],
+    },
     tf: [
       { statement: 'Plastic is light, strong, and cheap.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All plastic breaks down in a few weeks.', answer: false, why: '何百年も残るものもある。' },
@@ -1358,6 +1374,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['for', 'from', 'on', 'to'], answer: 1, why: 'learn 〜 from 人 で「人から〜を学ぶ」。' },
     ],
     gist: [{ para: 2, choices: ['佐藤さんの子どものころの話', '老人ホームの場所', 'ゲームのルール', 'テレビの歴史'], answer: 0, why: '第3段落は、佐藤さんが話してくれた子どものころの思い出。' }],
+    insert: { sentence: 'I was happy that she spoke to me first.', after: [0, 1, 2, 3], answer: 1, why: '佐藤さんが先に声をかけてくれた第2段落のあとに入る。' },
     tf: [
       { statement: 'The speaker joined the volunteer activity last winter.', answer: false, why: '去年の夏に参加した。' },
       { statement: 'The speaker was nervous on the first day.', answer: true, why: '第2段落の内容と合う。' },
@@ -1500,6 +1517,13 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['by', 'for', 'from', 'until'], answer: 2, why: 'from that day で「その日から」。' },
     ],
     refer: { phrase: 'she was shaking', word: 'she', choices: ['Coco', 'Riko', 'the woman', "Riko's mother"], answer: 0, why: 'ベンチの下でふるえていたのは犬のココ。' },
+    summary: {
+      text: "Riko's dog Coco ran away, but a woman saw her near the ( 1 ). After that day, Riko checked the ( 2 ) every morning.",
+      blanks: [
+        { choices: ['station', 'river', 'school', 'supermarket'], answer: 1, why: '第3段落「川の近くで犬を見た」。' },
+        { choices: ['gate', 'posters', 'phone', 'bench'], answer: 0, why: '第5段落「毎朝門をたしかめるようにした」。' },
+      ],
+    },
     tf: [
       { statement: 'Coco was in the yard on Sunday morning.', answer: false, why: '庭にいなかった。' },
       { statement: 'Riko and her father made posters with Coco\'s picture.', answer: true, why: '第2段落の内容と合う。' },
