@@ -121,3 +121,7 @@ it('着せ替えは場所ごとに1つずつ重ねられる', () => {
   expect(toggleWear('crown', 'crown')).toBeUndefined()
   expect(wearList('ribbon')).toEqual(['ribbon']) // 昔のデータ
 })
+
+it('部屋に雪山と森の中がある', () => {
+  for (const id of ['snowy', 'forest']) expect(ROOMS.some((r) => r.id === id)).toBe(true)
+})

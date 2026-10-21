@@ -113,4 +113,30 @@ const SCENES: Record<string, React.ReactNode> = {
       </g>
     </>
   ),
+  snowy: (
+    <>
+      <path d="M150 100 L210 30 L240 62 L265 40 L320 100 Z" fill="#cbd5e1" opacity="0.7" />
+      <path d="M210 30 L196 47 L204 45 L212 52 L220 42 L226 46 Z M265 40 L256 51 L264 50 L272 55 L276 51 Z" fill="#fff" />
+      <path d="M0 92 Q80 82 160 94 T320 90 L320 100 L0 100 Z" fill="#fff" />
+      {[[130, 20], [170, 50], [290, 20], [240, 80], [110, 70], [200, 10]].map(([x, y], i) => (
+        <circle key={x} className="scene-snow" cx={x} cy={y} r="2" fill="#fff" style={{ animationDelay: `${i * 0.5}s` }} />
+      ))}
+    </>
+  ),
+  forest: (
+    <>
+      {[[250, 0.45], [272, 0.6], [296, 0.5], [314, 0.4]].map(([x, k]) => (
+        <g key={x} transform={`translate(${x} 100) scale(${k})`}>
+          <rect x="-3" y="-16" width="6" height="16" fill="#78350f" />
+          <path d="M0 -70 L-18 -36 L-8 -36 L-22 -14 L22 -14 L8 -36 L18 -36 Z" fill="#15803d" stroke="#14532d" strokeWidth="1.5" />
+        </g>
+      ))}
+      <path d="M0 96 Q160 88 320 96 L320 100 L0 100 Z" fill="#65a30d" opacity="0.7" />
+      <g transform="translate(170 92)">
+        <rect x="-1.5" y="-6" width="3" height="6" fill="#fef3c7" />
+        <path d="M-7 -6 Q0 -14 7 -6 Z" fill="#ef4444" />
+        <circle cx="-2" cy="-9" r="1" fill="#fff" />
+      </g>
+    </>
+  ),
 }
