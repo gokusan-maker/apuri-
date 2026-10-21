@@ -7,6 +7,7 @@ import { speak } from './speech'
 import type { ProgressMap } from './srs'
 import { levelOf, type Word } from './words'
 import { Note } from './NoteView'
+import { homophoneOf, oppositeOf } from './related'
 
 type Props = {
   words: Word[]
@@ -127,6 +128,12 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                       </p>
                       <p className="example-ja">{w.exampleJa}</p>
                     </>
+                  )}
+                  {(oppositeOf(w.en) || homophoneOf(w.en)) && (
+                    <p className="word-related">
+                      {oppositeOf(w.en) && <span>↔ 反対：{oppositeOf(w.en)}</span>}
+                      {homophoneOf(w.en) && <span>👂 同じ発音：{homophoneOf(w.en)}</span>}
+                    </p>
                   )}
                   {onNote && <Note text={notes[w.id]} onSave={(t) => onNote(w.id, t)} />}
                   {onPractice && (

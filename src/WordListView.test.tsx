@@ -49,3 +49,10 @@ it('メモのある単語だけにしぼりこめる', () => {
   expect(screen.getByText('1語')).toBeInTheDocument()
   expect(screen.getByText(words[1].en)).toBeInTheDocument()
 })
+
+it('詳細に反対の意味・同じ発音の単語が出る', () => {
+  const w = WORDS.find((x) => x.en === 'sea')!
+  render(<WordList words={[w]} progress={{}} onClose={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /sea/ }))
+  expect(screen.getByText('👂 同じ発音：see（見る）')).toBeInTheDocument()
+})
