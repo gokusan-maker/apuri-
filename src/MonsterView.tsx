@@ -802,6 +802,7 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
   return (
     <div className="party">
       <h2>なかま</h2>
+      {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
       <ul className="badge-grid">
         {party.members.map((m, i) => {
           const f = formOf(m)

@@ -41,7 +41,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, updateActive } from './party'
 import { addTicket, drawEgg } from './gacha'
 import {
   feed,
@@ -317,6 +317,7 @@ function App() {
     setGain((g) => ({ amount, key: (g?.key ?? 0) + 1 }))
     const next = feed(monster, amount, source, today)
     updateMonster((m) => feed(m, amount, source, today))
+    setParty((p) => feedHelpers(p, amount, today))
     setHappy(true)
     const up = levelInfo(next.xp).level > levelInfo(monster.xp).level
     setLeveledUp(up)

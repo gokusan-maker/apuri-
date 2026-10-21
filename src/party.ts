@@ -1,5 +1,5 @@
 // 仲間（複数の相棒）。節目でタマゴがもらえ、相棒を切り替えられる。
-import { loadMonster, sanitizeMonster, type MonsterState } from './monster'
+import { feed, loadMonster, sanitizeMonster, type MonsterState } from './monster'
 
 export type Party = {
   active: number
@@ -30,6 +30,19 @@ export function addEggs(p: Party, total: number): Party {
 
 export function updateActive(p: Party, m: MonsterState): Party {
   return { ...p, members: p.members.map((x, i) => (i === p.active ? m : x)) }
+}
+
+// 相棒以外の仲間も、おるすばんで少しずつ育つ（もらったXPの1割、最低1）
+export const HELPER_RATE = 0.1
+
+export function helperXp(amount: number): number {
+  return amount > 0 ? Math.max(1, Math.round(amount * HELPER_RATE)) : 0
+}
+
+export function feedHelpers(p: Party, amount: number, today: string): Party {
+  const x = helperXp(amount)
+  if (!x || p.members.length < 2) return p
+  return { ...p, members: p.members.map((m, i) => (i === p.active ? m : feed(m, x, null, today))) }
 }
 
 export function loadParty(): Party {

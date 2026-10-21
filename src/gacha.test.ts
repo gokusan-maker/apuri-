@@ -53,3 +53,12 @@ it('7日連続でもらえるチケットでもガチャを引ける（コイン
   expect(r.party.members).toHaveLength(2)
   expect(addTicket({ coins: 0, owned: [], tickets: 9 }).tickets).toBe(9)
 })
+
+it('相棒以外の仲間もおるすばんで少しずつ育つ', async () => {
+  const { feedHelpers, helperXp } = await import('./party')
+  expect([helperXp(0), helperXp(5), helperXp(10), helperXp(40)]).toEqual([0, 1, 1, 4])
+  const p = feedHelpers({ active: 0, members: [{ xp: 100 }, { xp: 0 }, { xp: 3 }] }, 40, '2026-10-20')
+  expect(p.members.map((m) => m.xp)).toEqual([100, 4, 7])
+  const one = { active: 0, members: [{ xp: 1 }] }
+  expect(feedHelpers(one, 40, '2026-10-20')).toBe(one)
+})
