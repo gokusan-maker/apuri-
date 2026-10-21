@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { useEffect, useState } from 'react'
+import { loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -71,24 +71,33 @@ export function LongReading({ onAnswer }: Props) {
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
+  const [resumed, setResumed] = useState(false)
 
   function openPassage(x: LongPassage) {
+    const d = loadLongDraft(x.id)
     setStartAt(nowMs())
     setP(x)
-    setBlanks({})
-    setTf({})
-    setPicks([])
-    setUnder(undefined)
-    setOrder([])
-    setSents({})
-    setQa({})
-    setRefer(undefined)
-    setGist({})
-    setTitlePick(undefined)
-    setComp({})
+    setBlanks(d?.blanks ?? {})
+    setTf(d?.tf ?? {})
+    setPicks(d?.picks ?? [])
+    setUnder(d?.under)
+    setOrder(d?.order ?? [])
+    setSents(d?.sents ?? {})
+    setQa(d?.qa ?? {})
+    setRefer(d?.refer)
+    setGist(d?.gist ?? {})
+    setTitlePick(d?.title)
+    setComp(d?.comp ?? {})
     setDone(false)
     setShowJa(false)
+    setResumed(!!d)
   }
+
+  // 答えかけの内容をとっておく（採点したら消す）
+  useEffect(() => {
+    if (!p) return
+    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp })
+  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp])
 
   if (!p) {
     return (
@@ -141,7 +150,7 @@ export function LongReading({ onAnswer }: Props) {
               >
                 📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">
-                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
+                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
                 </span>
               </button>
             </li>
@@ -175,6 +184,7 @@ export function LongReading({ onAnswer }: Props) {
         </span>
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
+      {resumed && !done && <p className="stats-note">✏️ とちゅうから再開しました（答えかけの内容はそのまま）</p>}
       <div className="long-text">
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (

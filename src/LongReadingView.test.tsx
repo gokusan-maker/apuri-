@@ -134,3 +134,18 @@ it('ランダム挑戦で、まだ解いていない長文が開く', () => {
   expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
   expect(screen.getAllByText(LONG_PASSAGES[LONG_PASSAGES.length - 1].paragraphs[1].slice(0, 20), { exact: false }).length).toBeGreaterThan(0)
 })
+
+it('とちゅうで一覧にもどっても、もう一度開くと続きから', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  const b = p.blanks[0]
+  const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
+  fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
+  fireEvent.click(screen.getByText('← 長文の一覧'))
+  expect(screen.getAllByText(/✏️とちゅう/).length).toBe(1)
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  expect(screen.getByText(/とちゅうから再開しました/)).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /のこり 13問/ })).toBeDisabled()
+})

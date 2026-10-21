@@ -1376,3 +1376,51 @@ export function randomLong(record: Record<string, number>, r: number, list: Long
   const pool = fresh.length > 0 ? fresh : list
   return pool[Math.min(pool.length - 1, Math.floor(r * pool.length))]
 }
+
+// とちゅうから：答えかけの内容（長文ごと）
+export type LongDraft = {
+  blanks: Record<string, number>
+  tf: Record<number, boolean>
+  picks: number[]
+  under?: number
+  order: number[]
+  sents: Record<string, number>
+  qa: Record<number, number>
+  refer?: number
+  gist: Record<number, number>
+  title?: number
+  comp: Record<number, number>
+}
+const DRAFT_KEY = 'eitan:long-draft'
+const isObj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v)
+const numMap = (v: unknown) => (isObj(v) ? Object.fromEntries(Object.entries(v).filter(([, x]) => typeof x === 'number')) : {}) as Record<string, number>
+const nums = (v: unknown) => (Array.isArray(v) ? v.filter((x): x is number => typeof x === 'number') : [])
+const opt = (v: unknown) => (typeof v === 'number' ? v : undefined)
+
+export function loadLongDraft(id: string): LongDraft | null {
+  try {
+    const all = JSON.parse(localStorage.getItem(DRAFT_KEY) ?? '{}') as unknown
+    const d = isObj(all) ? all[id] : null
+    if (!isObj(d)) return null
+    const tf = isObj(d.tf) ? (Object.fromEntries(Object.entries(d.tf).filter(([, x]) => typeof x === 'boolean')) as Record<number, boolean>) : {}
+    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp) }
+  } catch {
+    return null
+  }
+}
+
+// 1問も答えていなければ消す
+export const draftEmpty = (d: LongDraft) =>
+  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined
+
+export function saveLongDraft(id: string, d: LongDraft | null): void {
+  try {
+    const raw = JSON.parse(localStorage.getItem(DRAFT_KEY) ?? '{}') as unknown
+    const all = isObj(raw) ? { ...raw } : {}
+    if (!d || draftEmpty(d)) delete all[id]
+    else all[id] = d
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(all))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

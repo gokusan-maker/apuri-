@@ -185,3 +185,19 @@ it('ランダム挑戦はまだ解いていない長文からえらぶ', async (
   expect(randomLong(all, 0.999).id).toBe(LONG_PASSAGES[LONG_PASSAGES.length - 1].id)
   expect(randomLong({}, 0).id).toBe(LONG_PASSAGES[0].id)
 })
+
+it('長文の答えかけを保存して読みもどせる', async () => {
+  const { loadLongDraft, saveLongDraft } = await import('./longreading')
+  localStorage.clear()
+  expect(loadLongDraft('x')).toBeNull()
+  const empty = { blanks: {}, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} }
+  saveLongDraft('x', { ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1 })
+  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined })
+  saveLongDraft('x', empty)
+  expect(loadLongDraft('x')).toBeNull()
+  saveLongDraft('y', { ...empty, picks: [1] })
+  saveLongDraft('y', null)
+  expect(loadLongDraft('y')).toBeNull()
+  localStorage.setItem('eitan:long-draft', '[1,2]')
+  expect(loadLongDraft('x')).toBeNull()
+})
