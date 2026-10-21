@@ -9,3 +9,11 @@ describe('なつき度', () => {
     expect(daysToNext(30)).toBeNull()
   })
 })
+
+it('なかよしボーナスは ❤️ の数だけコイン', async () => {
+  const { bondWinCoins } = await import('./bond')
+  expect(bondWinCoins(0)).toBe(0)
+  expect(bondWinCoins(1)).toBe(1)
+  expect(bondWinCoins(7)).toBe(3)
+  expect(bondWinCoins(100)).toBe(5)
+})

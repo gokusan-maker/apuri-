@@ -14,3 +14,6 @@ export function daysToNext(studyDays: number): number | null {
   const next = BOND_DAYS.find((d) => studyDays < d)
   return next === undefined ? null : next - studyDays
 }
+
+// なかよしボーナス：ボスに勝つと ❤️ の数だけコインのおまけ
+export const bondWinCoins = (studyDays: number) => bondLevel(studyDays)

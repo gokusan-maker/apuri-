@@ -32,7 +32,7 @@ import { Evolve } from './EvolveView'
 import { EvolutionPreview, Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
-import { bondHearts, bondLevel } from './bond'
+import { bondHearts, bondLevel, bondWinCoins } from './bond'
 import { MissedList } from './MissedListView'
 import { DiaryBox } from './DiaryView'
 import { LearnedChart } from './LearnedChartView'
@@ -964,6 +964,11 @@ function App() {
             pushToast([{ id: 'rare', text: r ? `✨ レアボスをたおした！ ${r.kind.name}の${r.species.egg}が仲間になった（ショップの「なかま」で見られるよ）` : `✨ レアボスをたおした！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
           }}
           onBossWin={(level) => {
+            const bonus = bondWinCoins(totals.studyDays ?? 0)
+            if (bonus > 0) {
+              setWallet((w) => ({ ...w, coins: w.coins + bonus }))
+              pushToast([{ id: 'bond-win', text: `${bondHearts(bondLevel(totals.studyDays ?? 0))} なかよしボーナス！ 🪙${bonus}`, counter: 'answers', target: 0 }])
+            }
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
             updateMonster((m) => feed(m, boss[level] ? BOSS_REMATCH_XP : BOSS_XP, null, today))
           }}
