@@ -1190,3 +1190,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .partner-status dt { font-weight: 700; color: var(--muted); }
 .partner-status dd { margin: 0; }
 .partner-status small { color: var(--muted); }
+.listen-play { display: block; margin: 8px auto; padding: 8px 18px; font-size: 1rem; }
