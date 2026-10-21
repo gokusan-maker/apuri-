@@ -3271,6 +3271,16 @@ const WORDS_4: Word[] = [
   { id: 'same-to-you', en: 'Same to you', ja: 'あなたにも同じことを（お返しのあいさつ）', example: '"Have a nice weekend!" "Same to you!"', exampleJa: '「よい週末を！」「あなたもね！」', level: '会話' },
   { id: 'i-cant-wait', en: 'I can\'t wait!', ja: '待ちきれない！・楽しみ！', example: 'The trip is tomorrow. I can\'t wait!', exampleJa: '旅行は明日だ。待ちきれない！', level: '会話' },
   { id: 'lets-practice-together', en: 'Let\'s practice together', ja: 'いっしょに練習しよう', example: 'The test is next week. Let\'s practice together.', exampleJa: 'テストは来週だね。いっしょに練習しよう。', level: '会話' },
+  { id: 'what-a-nice-day', en: 'What a nice day!', ja: 'なんていい天気！', example: 'What a nice day! Let\'s go outside.', exampleJa: 'なんていい天気！外に行こう。', level: '会話' },
+  { id: 'i-agree-with-you', en: 'I agree with you', ja: 'あなたに賛成です', example: 'That\'s a good point. I agree with you.', exampleJa: 'いい指摘だね。賛成だよ。', level: '会話' },
+  { id: 'excuse-me-can-you', en: 'Excuse me, can you ...?', ja: 'すみません、〜してもらえますか', example: 'Excuse me, can you take our picture?', exampleJa: 'すみません、写真をとってもらえますか。', level: '会話' },
+  { id: 'i-feel-sick', en: 'I feel sick', ja: '気分が悪い', example: 'I feel sick. Can I go to the nurse\'s office?', exampleJa: '気分が悪いです。保健室に行ってもいいですか。', level: '会話' },
+  { id: 'it-was-fun', en: 'It was fun', ja: '楽しかった', example: 'Thank you for inviting me. It was fun!', exampleJa: 'さそってくれてありがとう。楽しかった！', level: '会話' },
+  { id: 'lets-meet-at', en: 'Let\'s meet at ...', ja: '〜で会おう', example: 'Let\'s meet at the station at ten.', exampleJa: '10時に駅で会おう。', level: '会話' },
+  { id: 'see-you-then', en: 'See you then', ja: 'じゃあそのときに', example: '"Let\'s meet at noon." "OK, see you then."', exampleJa: '「お昼に会おう。」「うん、じゃあそのときに。」', level: '会話' },
+  { id: 'what-do-you-mean', en: 'What do you mean?', ja: 'どういうこと？', example: 'Sorry, what do you mean by that?', exampleJa: 'ごめん、それってどういうこと？', level: '会話' },
+  { id: 'i-forgot', en: 'I forgot', ja: '忘れちゃった', example: 'Oh no, I forgot my homework!', exampleJa: 'しまった、宿題を忘れちゃった！', level: '会話' },
+  { id: 'lucky-you', en: 'Lucky you!', ja: 'いいなあ！・ついてるね！', example: '"I got two tickets!" "Lucky you!"', exampleJa: '「チケットを2枚もらったよ！」「いいなあ！」', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
