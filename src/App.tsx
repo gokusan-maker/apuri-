@@ -24,6 +24,7 @@ import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
+import { loadWalkDay, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
 import { omikujiDiscount, omikujiOf } from './omikuji'
 import { loadRouletteDay, saveRouletteDay } from './roulette'
 import { Celebrate } from './CelebrateView'
@@ -95,7 +96,7 @@ import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
-import { speakPet } from './speech'
+import { speak, speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
@@ -178,6 +179,8 @@ function App() {
   const [themeQuiz, setThemeQuiz] = useState(false) // テーマで練習：クイズでやる
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const [rouletteDay, setRouletteDay] = usePersistent(loadRouletteDay, saveRouletteDay)
+  const [walkDay, setWalkDay] = usePersistent(loadWalkDay, saveWalkDay)
+  const [walkMsg, setWalkMsg] = useState('')
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
   const xpRate = isWeekend(today) ? 2 : 1 // 週末は正解のXPが2倍
@@ -754,6 +757,26 @@ function App() {
         <p className={`omikuji o-${omikujiOf(today).id}`}>
           ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
         </p>
+        {walkDay !== today ? (
+          <button
+            className="challenge-btn walk-btn"
+            onClick={() => {
+              const w = walkFind(words, rand())
+              setWalkDay(today)
+              setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
+              setWalkMsg(`🐾 ${walkPlace(rand())}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
+              if (w) speak(w.en)
+            }}
+          >
+            🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
+          </button>
+        ) : (
+          walkMsg && (
+            <p className="walk-msg" role="status">
+              {walkMsg}
+            </p>
+          )
+        )}
         <Roulette
           done={rouletteDay === today}
           onPrize={(p) => {

@@ -1252,3 +1252,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .bingo-cell.ng { background: #fecaca; }
 .bingo-q { margin-top: 8px; }
 .long-summary { margin: 4px 0 8px; padding: 8px; border: 1px dashed var(--muted); border-radius: 8px; text-align: left; line-height: 1.7; }
+.walk-msg { margin: 6px 0; padding: 6px 10px; border-radius: 10px; background: #ecfccb; color: #365314; font-size: 0.85rem; }

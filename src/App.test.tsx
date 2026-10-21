@@ -566,6 +566,16 @@ describe('App', () => {
     expect(st.R + st.SR + st.UR).toBe(1)
   })
 
+  it('おさんぽは1日1回で、単語を拾ってきて🪙3', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /おさんぽに行く/ }))
+    expect(screen.getByText(/を拾ってきた！ 🪙3/)).toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /おさんぽに行く/ })).toBeNull()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(3)
+    expect(localStorage.getItem('eitan:walk')).toBe('2026-10-20')
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
