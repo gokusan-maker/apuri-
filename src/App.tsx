@@ -30,6 +30,8 @@ import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel } from './bond'
 import { MissedList } from './MissedListView'
 import { DiaryBox } from './DiaryView'
+import { LearnedChart } from './LearnedChartView'
+import { lastLearned, loadLearnedLog, recordLearned, saveLearnedLog } from './learnedLog'
 import { GROUPS } from './puzzles'
 import { loadDiary } from './diary'
 import { shareText, weekReportText } from './shareText'
@@ -382,6 +384,12 @@ function App() {
   })
   // 相棒が話題にする、覚えた単語（箱2以上から最大20語）
   const learnedSample = useMemo(() => WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 2).slice(0, 20), [progress])
+  // 定着した単語の数（全単語帳）を毎日記録
+  const learnedTotal = useMemo(() => Object.values(progress).filter((p) => p.box >= 3).length, [progress])
+  const [learnedLog, setLearnedLog] = usePersistent(loadLearnedLog, saveLearnedLog)
+  useEffect(() => {
+    setLearnedLog((l) => recordLearned(l, today, learnedTotal))
+  }, [today, learnedTotal, setLearnedLog])
   const learned = words.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   // 「あとで」に回した単語は列のうしろへ（その日だけ）
   const [skipped, setSkipped] = useState<string[]>([])
@@ -750,6 +758,7 @@ function App() {
               >
                 📤 今週のレポートをシェア
               </button>
+              <LearnedChart values={lastLearned(learnedLog, today)} />
               <DiaryBox today={today} />
               <details className="theme-practice">
                 <summary>🗂 テーマで練習</summary>

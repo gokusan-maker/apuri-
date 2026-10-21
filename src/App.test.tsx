@@ -483,6 +483,14 @@ describe('App', () => {
     expect(screen.getByText(/選んだ単語だけ復習中/)).toBeInTheDocument()
   })
 
+  it('記録画面に、定着した単語の数のグラフが出る', () => {
+    const p = Object.fromEntries(WORDS.slice(0, 7).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
+    localStorage.setItem('eitan:progress', JSON.stringify(p))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    expect(screen.getByRole('img', { name: '定着した単語の数のグラフ（今日 7語）' })).toBeInTheDocument()
+  })
+
   it('記録画面のカレンダーに今日の学習が印される', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
