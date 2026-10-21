@@ -81,6 +81,7 @@ import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
+import { annivMonths, annivText, MONTHLY_COINS } from './monthly'
 import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
 import { ENDLESS_REWARD_COINS } from './endless'
 import { PET_BONUS } from './pet'
@@ -296,6 +297,11 @@ function App() {
       if (r.streak.count % 7 === 0) {
         setWallet((w) => addTicket(w))
         pushToast([{ id: 'ticket', text: `${r.streak.count}日連続！ 🎟 ガチャチケットを1枚もらった（ショップで使えるよ）`, counter: 'answers', target: 0 }])
+      }
+      const months = annivMonths(monster.born, today)
+      if (months > 0) {
+        setWallet((w) => ({ ...w, coins: w.coins + MONTHLY_COINS }))
+        pushToast([{ id: 'monthly', text: `${annivText(monster.name ?? formOf(monster).name, months)} 🪙${MONTHLY_COINS}`, counter: 'answers', target: 0 }])
       }
       pushToast([{ id: 'login', text: `${seasonEvent ? `${seasonEvent.icon} ${seasonEvent.name}ボーナスつき！ ` : ''}${early ? '早起きえらい！' : '今日もえらい！'} 🪙${bonus}`, counter: 'answers', target: 0 }])
       const days = (totals.studyDays ?? 0) + 1
