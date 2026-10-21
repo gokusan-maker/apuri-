@@ -854,3 +854,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .gacha-name { margin: 2px 0 6px; font-weight: 700; }
 @media (prefers-reduced-motion: reduce) { .gacha-capsule { display: none; } .gacha-egg, .gacha-rarity { animation: none; } }
 .kind-tag { font-weight: 700; } .kind-tag.r-R { color: #2563eb; } .kind-tag.r-SR { color: #d97706; } .kind-tag.r-UR { color: #c026d3; }
+.r-R .gacha-capsule { background: linear-gradient(180deg, #60a5fa 50%, #f8fafc 50%); }
+.r-SR .gacha-capsule { background: linear-gradient(180deg, #fbbf24 50%, #fffbeb 50%); box-shadow: 0 0 16px #fbbf24; }
+.r-UR .gacha-capsule { background: linear-gradient(180deg, #f87171, #fbbf24, #4ade80, #60a5fa, #c084fc); box-shadow: 0 0 22px #e879f9; }
+.gacha-result.r-SR::after, .gacha-result.r-UR::after { content: '✨'; position: absolute; right: 14px; top: 10px; font-size: 1.4rem; animation: twinkle 1.2s infinite; }
