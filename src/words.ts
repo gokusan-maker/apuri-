@@ -2615,6 +2615,16 @@ const WORDS_4: Word[] = [
   { id: 'anything-else', en: 'Anything else?', ja: 'ほかに何か（ありますか）？', example: 'One hamburger. Anything else?', exampleJa: 'ハンバーガーをおひとつ。ほかにご注文は？', level: '会話' },
   { id: 'ill-be-right-back', en: 'I\'ll be right back', ja: 'すぐもどるね', example: 'Wait here. I\'ll be right back.', exampleJa: 'ここで待ってて。すぐもどるね。', level: '会話' },
   { id: 'keep-it-up', en: 'Keep it up!', ja: 'その調子でがんばって！', example: 'Your English is great. Keep it up!', exampleJa: '英語がとても上手だね。その調子でがんばって！', level: '会話' },
+  { id: 'how-do-you-say-in-english', en: 'How do you say ... in English?', ja: '〜は英語で何と言いますか', example: 'How do you say "neko" in English?', exampleJa: '「ねこ」は英語で何と言いますか。', level: '会話' },
+  { id: 'what-does-mean', en: 'What does ... mean?', ja: '〜はどういう意味ですか', example: 'What does "huge" mean?', exampleJa: '「huge」はどういう意味ですか。', level: '会話' },
+  { id: 'can-i-ask-a-question', en: 'Can I ask a question?', ja: '質問してもいいですか', example: 'Excuse me. Can I ask a question?', exampleJa: 'すみません。質問してもいいですか。', level: '会話' },
+  { id: 'its-my-treat', en: 'It\'s my treat', ja: 'ぼくのおごりだよ', example: 'Put your money away. It\'s my treat.', exampleJa: 'お金はしまって。ぼくのおごりだよ。', level: '会話' },
+  { id: 'cheers', en: 'Cheers!', ja: '乾杯！', example: 'Let\'s drink to our team. Cheers!', exampleJa: 'チームに乾杯しよう。乾杯！', level: '会話' },
+  { id: 'good-game', en: 'Good game!', ja: 'いい試合だったね！', example: 'You played well. Good game!', exampleJa: 'よくがんばったね。いい試合だったよ！', level: '会話' },
+  { id: 'thats-amazing', en: 'That\'s amazing!', ja: 'それはすごい！', example: 'You won first prize? That\'s amazing!', exampleJa: '1等をとったの？それはすごい！', level: '会話' },
+  { id: 'i-agree', en: 'I agree', ja: '賛成です', example: '"Let\'s start early." "I agree."', exampleJa: '「早めに始めよう。」「賛成。」', level: '会話' },
+  { id: 'lets-take-a-break', en: 'Let\'s take a break', ja: 'ひと休みしよう', example: 'We studied for two hours. Let\'s take a break.', exampleJa: '2時間勉強したね。ひと休みしよう。', level: '会話' },
+  { id: 'its-your-turn', en: 'It\'s your turn', ja: 'あなたの番だよ', example: 'I threw the dice. It\'s your turn.', exampleJa: 'ぼくはさいころをふったよ。きみの番だよ。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
