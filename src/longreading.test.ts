@@ -280,3 +280,14 @@ it('長文の最短タイムは短くなったときだけ更新', async () => {
   expect(recordLongTime('a', 250)).toBe(true)
   expect(loadLongTimes()).toEqual({ a: 250 })
 })
+
+it('今日の1本は日付で決まる', async () => {
+  const { dailyLong, loadDailyLongDay, saveDailyLongDay } = await import('./longreading')
+  expect(dailyLong('2026-10-20')).toBe(dailyLong('2026-10-20'))
+  const ids = new Set(Array.from({ length: 30 }, (_, i) => dailyLong(`2026-11-${String(i + 1).padStart(2, '0')}`).id))
+  expect(ids.size).toBeGreaterThan(5)
+  localStorage.clear()
+  expect(loadDailyLongDay()).toBe('')
+  saveDailyLongDay('2026-10-20')
+  expect(loadDailyLongDay()).toBe('2026-10-20')
+})

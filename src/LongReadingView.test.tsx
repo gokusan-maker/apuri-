@@ -255,3 +255,13 @@ it('満点をとると最短タイムが記録される', () => {
   expect(screen.getByText(/最短タイム更新！/)).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:long-best-time')!)[p.id]).toBe(60)
 })
+
+it('今日の1本のボタンでその日の長文が開く', async () => {
+  const { dailyLong, shownTitle } = await import('./longreading')
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  render(<LongReading />)
+  const p = dailyLong(dayKey())
+  fireEvent.click(screen.getByText(/📅 今日の1本/))
+  expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(shownTitle(p, LONG_PASSAGES.indexOf(p)))
+})

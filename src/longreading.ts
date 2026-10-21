@@ -2159,3 +2159,26 @@ export function recordLongTime(id: string, sec: number): boolean {
   }
   return true
 }
+
+// 今日の1本：日替わりのおすすめ長文。その日に満点をとると🪙10（1日1回）
+export const DAILY_LONG_COINS = 10
+export function dailyLong(day: string, list: LongPassage[] = LONG_PASSAGES): LongPassage {
+  let h = 5
+  for (const c of `long-${day}`) h = (h * 31 + c.charCodeAt(0)) >>> 0
+  return list[h % list.length]
+}
+const DAILY_KEY = 'eitan:long-daily'
+export function loadDailyLongDay(): string {
+  try {
+    return localStorage.getItem(DAILY_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveDailyLongDay(day: string): void {
+  try {
+    localStorage.setItem(DAILY_KEY, day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

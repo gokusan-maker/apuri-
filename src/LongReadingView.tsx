@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
-import { loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
+import { dayKey } from './srs'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void }
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -51,7 +52,7 @@ function Paragraph({ text, underline, refer }: { text: string; underline?: strin
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [p, setP] = useState<LongPassage | null>(null)
   const [starred, setStarred] = useState<string[]>([]) // この画面で★に入れた語
   const [blanks, setBlanks] = useState<Record<string, number>>({})
@@ -78,7 +79,10 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
   const [readWords, setReadWords] = useState(loadReadWords)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
-  const [bestTime, setBestTime] = useState(false) // この回で最短タイムを更新した
+  const [bestTime, setBestTime] = useState(false)
+  const [today] = useState(() => dayKey())
+  const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
+  const [dailyGot, setDailyGot] = useState(false) // この回で今日の1本のごほうびをもらった // この回で最短タイムを更新した
   const [genre, setGenre] = useState<Genre | 'all'>('all')
 
   function openPassage(x: LongPassage) {
@@ -116,6 +120,10 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
       <section className="card grammar long-reading">
         <h2>長文読解（入試形式）</h2>
         <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
+          📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
+          {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}
+        </button>
         <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
           🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>
@@ -678,6 +686,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
           <p className="level-up">
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
+          {dailyGot && <p className="level-up">📅 今日の1本を満点クリア！ 🪙{DAILY_LONG_COINS}</p>}
           <p className="stats-note">
             ⏱ かかった時間 {formatTime(took)}（目安 {targetMinutes(p)}分）{took <= targetMinutes(p) * 60 ? '　目安より早い！' : ''}
             {bestTime ? '　🏁 最短タイム更新！' : loadLongTimes()[p.id] ? `　（満点の最短 ${formatTime(loadLongTimes()[p.id])}）` : ''}
@@ -715,6 +724,13 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
             const sec = Math.round((Date.now() - startAt) / 1000)
             setTook(sec)
             setBestTime(score === total && recordLongTime(p.id, Math.max(1, sec)))
+            const daily = score === total && p.id === dailyLong(today).id && dailyDay !== today
+            setDailyGot(daily)
+            if (daily) {
+              setDailyDay(today)
+              saveDailyLongDay(today)
+              onCoins?.(DAILY_LONG_COINS)
+            }
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()

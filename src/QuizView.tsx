@@ -774,7 +774,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <LongReading onAnswer={onAnswer} onFavorite={onFavorite} />
+        <LongReading onAnswer={onAnswer} onFavorite={onFavorite} onCoins={onCoins} />
       </>
     )
   }
