@@ -79,6 +79,7 @@ import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
+import { PET_BONUS } from './pet'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
@@ -656,6 +657,7 @@ function App() {
           evolved={evolved}
           friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
           onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
+          onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
         />
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語

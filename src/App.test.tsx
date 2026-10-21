@@ -368,6 +368,14 @@ describe('App', () => {
     expect(screen.getByText('（タマゴの中からコトコト音がする）')).toBeInTheDocument()
   })
 
+  it('相棒を1日5回なでるとごきげんMAXでコインがもらえる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    for (let i = 0; i < 5; i++) fireEvent.click(screen.getByLabelText('相棒にさわる'))
+    expect(screen.getByText('だいすき！ ごきげんMAX！ 🪙3')).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(3)
+  })
+
   it('文字を大きくする設定', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))

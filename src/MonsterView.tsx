@@ -8,6 +8,8 @@ import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
 import { challengeOf } from './challenge'
+import { loadPetLog, nextPet, PET_BONUS, petReaction, savePetLog, type PetReaction } from './pet'
+import { dayKey } from './srs'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow' | 'sleep' | 'eat'
@@ -29,6 +31,7 @@ type Props = {
   night?: boolean // 夜は部屋を暗くして星を出す
   friends?: { m: MonsterState; i: number }[] // 相棒以外の仲間（i は仲間の番号）
   onSwitch?: (i: number) => void
+  onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
@@ -647,11 +650,12 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
   const [poke, setPoke] = useState(0)
+  const [react, setReact] = useState<PetReaction>('normal')
   useEffect(() => {
     if (!line) return
     const id = window.setTimeout(() => setLine(null), 3500)
@@ -687,21 +691,33 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       )}
       <button
         key={poke}
-        className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? ' bounce' : ''}`}
+        className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? (react === 'tickle' ? ' wiggle' : ' bounce') : ''}`}
         aria-label="相棒にさわる"
         onClick={() => {
           const r = Math.random()
-          const l = learned.length > 0 && form.stage > 0 && r < 0.3 ? rememberLine(learned[Math.floor(Math.random() * learned.length)]) : pickLineNow(form.stage, mood === 'lonely', Math.random())
+          const pet = nextPet(loadPetLog(), dayKey())
+          savePetLog(pet)
+          const re = petReaction(pet.count)
+          setReact(re)
+          if (re === 'max') onPetBonus?.()
+          const l =
+            re === 'max'
+              ? { en: 'I love you!', ja: `だいすき！ ごきげんMAX！ 🪙${PET_BONUS}` }
+              : re === 'tickle'
+                ? { en: 'That tickles!', ja: 'くすぐったいよ〜！' }
+                : learned.length > 0 && form.stage > 0 && r < 0.3
+                  ? rememberLine(learned[Math.floor(Math.random() * learned.length)])
+                  : pickLineNow(form.stage, mood === 'lonely', Math.random())
           setLine(l)
           playChirp(form.stage, monster.species)
           setPoke(poke + 1)
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
+        <MonsterFigure form={form} mood={line ? (react === 'max' ? 'star' : react === 'tickle' ? 'wow' : REACTIONS[poke % REACTIONS.length]) : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
         {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
         {poke > 0 && (
-          <span key={`h${poke}`} className="poke-hearts" aria-hidden="true">
+          <span key={`h${poke}`} className={`poke-hearts${react === 'max' ? ' max' : ''}`} aria-hidden="true">
             <i>♥</i>
             <i>♥</i>
             <i>♥</i>

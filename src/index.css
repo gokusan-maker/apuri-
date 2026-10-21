@@ -926,3 +926,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .zukan-collection tbody th { font-size: 0.6rem; white-space: nowrap; }
 .collection-figure { display: block; width: 100%; aspect-ratio: 1; }
 .collection-figure .monster-breathe, .collection-figure .monster-eyes, .collection-figure .glance { animation: none; }
+
+/* なでる：5回目は大きなハート、なですぎるとくねくね */
+.poke-hearts.max i { font-size: 1.6rem; color: #ec4899; }
+.monster-body.wiggle { animation: wiggle 0.5s ease-in-out 2; }
+@keyframes wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }
+@media (prefers-reduced-motion: reduce) { .monster-body.wiggle { animation: none; } }
