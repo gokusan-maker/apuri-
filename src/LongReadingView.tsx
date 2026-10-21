@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -69,6 +69,7 @@ export function LongReading({ onAnswer }: Props) {
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
+  const [readWords, setReadWords] = useState(loadReadWords)
 
   function openPassage(x: LongPassage) {
     setStartAt(nowMs())
@@ -127,6 +128,7 @@ export function LongReading({ onAnswer }: Props) {
             </ul>
           </details>
         )}
+        <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
         <ul className="grammar-list">
           {LONG_PASSAGES.map((x) => (
             <li key={x.id}>
@@ -135,7 +137,7 @@ export function LongReading({ onAnswer }: Props) {
               >
                 📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">
-                  {x.level}・{totalOf(x)}点・目安{targetMinutes(x)}分{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
+                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
                 </span>
               </button>
             </li>
@@ -165,7 +167,7 @@ export function LongReading({ onAnswer }: Props) {
           ← 長文の一覧
         </button>
         <span>
-          {p.level}・⏱ 目安{targetMinutes(p)}分
+          {p.level}・{wordCount(p)}語・⏱ 目安{targetMinutes(p)}分
         </span>
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
@@ -532,6 +534,7 @@ export function LongReading({ onAnswer }: Props) {
             const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp }))
             setTypes(t)
             saveTypeStats(t)
+            setReadWords(addReadWords(wordCount(p)))
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
             if (score > (record[p.id] ?? -1)) {
               const r = { ...record, [p.id]: score }

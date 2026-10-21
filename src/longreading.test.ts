@@ -155,3 +155,15 @@ it('苦手な設問タイプがある長文をおすすめする', async () => {
   expect(r.type).toBe('refer')
   expect(recommendLong({ blank: [10, 10] }, {})).toBeNull()
 })
+
+it('長文の語数を数え、読んだ語数の合計をためられる', async () => {
+  const { addReadWords, loadReadWords, wordCount } = await import('./longreading')
+  localStorage.clear()
+  const p = { ...LONG_PASSAGES[0], paragraphs: ['I like ( A ) cats.', 'They are cute!'] }
+  expect(wordCount(p)).toBe(6)
+  expect(loadReadWords()).toBe(0)
+  expect(addReadWords(120)).toBe(120)
+  expect(addReadWords(80)).toBe(200)
+  expect(loadReadWords()).toBe(200)
+  for (const x of LONG_PASSAGES) expect(wordCount(x)).toBeGreaterThan(0)
+})

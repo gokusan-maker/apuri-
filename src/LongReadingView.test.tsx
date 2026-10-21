@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
-import { LONG_PASSAGES, MARKS } from './longreading'
+import { LONG_PASSAGES, MARKS, wordCount } from './longreading'
 import { LongReading } from './LongReadingView'
 
 it('長文を読んで記号で答え、採点すると点数と解説が出る', () => {
@@ -28,6 +28,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getByText(/最高 13点/)).toBeInTheDocument()
   expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
+  expect(screen.getByText(new RegExp(`これまでに読んだ語数：${wordCount(p)}語`))).toBeInTheDocument()
 })
 
 it('下線部の意味と並べかえに答えられる', () => {

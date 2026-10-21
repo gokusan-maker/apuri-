@@ -1150,10 +1150,32 @@ export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: nu
   return [...out].sort((a, b) => a - b)
 }
 
+// 本文の語数
+export const wordCount = (p: LongPassage) => p.paragraphs.join(' ').replace(/\(\s*[A-Z]\s*\)/g, ' ').split(/\s+/).filter((w) => /[A-Za-z0-9]/.test(w)).length
+
 // 目安時間（分）：本文の語数（1分60語）＋設問1つにつき20秒
 export function targetMinutes(p: LongPassage): number {
-  const words = p.paragraphs.join(' ').split(/\s+/).length
-  return Math.ceil(words / 60 + totalOf(p) / 3)
+  return Math.ceil(wordCount(p) / 60 + totalOf(p) / 3)
+}
+
+// これまでに読んだ語数の合計（答え合わせのたびに足す）
+const READ_WORDS_KEY = 'eitan:long-words'
+export function loadReadWords(): number {
+  try {
+    const n = Number(localStorage.getItem(READ_WORDS_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function addReadWords(n: number): number {
+  const total = loadReadWords() + Math.max(0, Math.floor(n))
+  try {
+    localStorage.setItem(READ_WORDS_KEY, String(total))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return total
 }
 
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
