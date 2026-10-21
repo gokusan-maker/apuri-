@@ -8,7 +8,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   const onAnswer = vi.fn()
   render(<LongReading onAnswer={onAnswer} />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.getAllByText('( A )').length).toBeGreaterThan(0)
   expect(screen.getByRole('button', { name: /のこり 14問/ })).toBeDisabled()
   for (const b of p.blanks) {
@@ -35,7 +35,7 @@ it('下線部の意味と並べかえに答えられる', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(document.querySelector('.long-underline')!.textContent).toBe(p.underline!.phrase)
   fireEvent.click(screen.getByRole('button', { name: `${MARKS[p.underline!.answer]} ${p.underline!.choices[p.underline!.answer]}` }))
   const area = document.querySelector('.long-order-words')!
@@ -50,7 +50,7 @@ it('採点するとまちがえた問題の根拠の段落に色がつく', () =
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   for (const b of p.blanks) {
     const wrong = (b.answer + 1) % 4
     const btn = screen.getAllByRole('button', { name: `${MARKS[wrong]} ${b.choices[wrong]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!
@@ -93,7 +93,7 @@ it('段落ごとに英語で読み上げられる（空所は読まない）', (
   }
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   fireEvent.click(screen.getByLabelText('第1段落を聞く'))
   expect(spoken[0]).toContain('There is a small library')
   expect(spoken[0]).not.toContain('( A )')
@@ -139,13 +139,13 @@ it('とちゅうで一覧にもどっても、もう一度開くと続きから'
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   const b = p.blanks[0]
   const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
   fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getAllByText(/✏️とちゅう/).length).toBe(1)
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.getByText(/とちゅうから再開しました/)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: /のこり 13問/ })).toBeDisabled()
 })
@@ -165,7 +165,7 @@ it('文を入れる位置の問題は本文に［ア］〜［エ］が出て選�
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES.find((x) => x.insert)!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(document.querySelectorAll('.long-insert-mark')).toHaveLength(4)
   expect(screen.getByText(p.insert!.sentence)).toBeInTheDocument()
   const btn = screen.getByRole('button', { name: `［${MARKS[p.insert!.answer]}］` })
@@ -180,7 +180,7 @@ it('全文を聞くで段落を順番に読み上げ、とめられる', async (
   const cancel = vi.spyOn(speech, 'cancelSpeech').mockImplementation(() => {})
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   fireEvent.click(screen.getByText('🔊 全文を聞く'))
   expect(seq).toHaveBeenCalledTimes(1)
   expect(seq.mock.calls[0][0]).toHaveLength(p.paragraphs.length)
@@ -197,7 +197,7 @@ it('要約文の完成の問題に答えられる', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES.find((x) => x.summary)!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.getByText(p.summary!.text)).toBeInTheDocument()
   const b = p.summary!.blanks[0]
   const btn = screen.getAllByRole('button', { name: `${MARKS[b.answer]} ${b.choices[b.answer]}` })[0]
@@ -209,7 +209,7 @@ it('語句の意味の問題に答えられる', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES.find((x) => x.vocab)!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   const v = p.vocab![0]
   const btn = screen.getByRole('button', { name: `${MARKS[v.answer]} ${v.choices[v.answer]}` })
   fireEvent.click(btn)
@@ -222,7 +222,7 @@ it('重要語句を★に入れられる', async () => {
   const onFavorite = vi.fn()
   render(<LongReading onFavorite={onFavorite} />)
   const p = LONG_PASSAGES.find((x) => keyWords(x).length > 0)!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   const w = keyWords(p)[0]
   const btn = screen.getByLabelText(`${w.en}を★に入れる`)
   fireEvent.click(btn)
@@ -234,7 +234,7 @@ it('出来事の順番をタップで並べられる', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES.find((x) => x.seq)!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   for (const i of p.seq!.answer) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.seq!.events[i]}` }))
   expect(screen.getByLabelText('並べた順番')).toHaveTextContent(p.seq!.answer.map((i) => MARKS[i]).join(' → '))
 })
@@ -244,7 +244,7 @@ it('満点をとると最短タイムが記録される', () => {
   render(<LongReading />)
   const keys = ['pick2', 'underline', 'order', 'sentences', 'qa', 'table', 'refer', 'gist', 'titleQ', 'complete', 'insert', 'summary', 'vocab', 'seq']
   const p = LONG_PASSAGES.find((x) => keys.every((k) => !(k in x)))!
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   for (const b of p.blanks) {
     const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
     fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
@@ -270,7 +270,7 @@ it('段落ごとに和訳を開いたり閉じたりできる', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
-  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.queryByText(p.ja[1])).toBeNull()
   fireEvent.click(screen.getByLabelText('第2段落の和訳'))
   expect(screen.getByText(p.ja[1])).toBeInTheDocument()
