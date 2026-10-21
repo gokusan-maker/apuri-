@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -697,6 +697,20 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           <p className="level-up">
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
+          {score < total && (
+            <div className="long-tips">
+              <p className="long-tips-title">💡 つまずき解説</p>
+              <ul>
+                {(Object.entries(typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq })) as [QType, [number, number]][])
+                  .filter(([, [ok, n]]) => ok < n)
+                  .map(([k]) => (
+                    <li key={k}>
+                      <strong>{TYPE_LABEL[k]}</strong>：{TYPE_TIPS[k]}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          )}
           {dailyGot && <p className="level-up">📅 今日の1本を満点クリア！ 🪙{DAILY_LONG_COINS}</p>}
           <p className="stats-note">
             ⏱ かかった時間 {formatTime(took)}（目安 {targetMinutes(p)}分）{took <= targetMinutes(p) * 60 ? '　目安より早い！' : ''}

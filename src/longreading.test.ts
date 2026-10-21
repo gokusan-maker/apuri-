@@ -308,3 +308,8 @@ it('直近5本の正答率で読解レベルが決まる', async () => {
   for (let i = 0; i < 7; i++) pushLongHistory(i / 10)
   expect(loadLongHistory()).toEqual([0.2, 0.3, 0.4, 0.5, 0.6])
 })
+
+it('すべての設問の種類につまずき解説がある', async () => {
+  const { TYPE_LABEL, TYPE_TIPS } = await import('./longreading')
+  for (const k of Object.keys(TYPE_LABEL)) expect((TYPE_TIPS as Record<string, string>)[k]).toBeTruthy()
+})

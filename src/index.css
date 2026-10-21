@@ -1304,3 +1304,6 @@ button:focus:not(:focus-visible) { outline: none; }
 }
 .gacha-points { margin: 4px 0; font-size: 0.8rem; color: var(--muted); }
 .grammar-search { width: 100%; box-sizing: border-box; margin: 8px 0 0; padding: 8px 10px; border: 1px solid var(--muted); border-radius: 10px; background: var(--bg); color: var(--fg); font-size: 0.9rem; }
+.long-tips { margin: 8px 0; padding: 8px; border-radius: 10px; background: var(--bg); text-align: left; font-size: 0.85rem; }
+.long-tips-title { margin: 0 0 4px; font-weight: 800; }
+.long-tips ul { margin: 0; padding-left: 18px; }
