@@ -41,3 +41,9 @@ it('ボスの弱点は名前で決まる', async () => {
   expect(weakOf('ヤミモチ')).toBe(weakOf('ヤミモチ'))
   expect(SPECIES.map((s) => s.id)).toContain(weakOf('ヤミモチ'))
 })
+
+it('キャラクターごとに返しセリフがある', async () => {
+  const { PARTNER_REPLIES, replyOf } = await import('./partner')
+  for (const sp of SPECIES) expect(PARTNER_REPLIES[sp.id], sp.id).toBeDefined()
+  expect(replyOf(undefined).ja).toBe('ぼくたちは負けないよ！')
+})

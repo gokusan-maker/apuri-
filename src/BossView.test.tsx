@@ -232,3 +232,10 @@ it('弱点のキャラクターの相棒だと追加ダメージ', async () => {
   const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
   expect(before - hp).toBeGreaterThanOrEqual(6 + 4)
 })
+
+it('ボスのセリフに相棒が言い返す', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  const { UNIV_BOSSES } = await import('./univ')
+  render(<Boss level="高校基礎" words={wordsOf(['高校基礎'])} look={UNIV_BOSSES[0]} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], 'cat'), species: 'cat', name: 'ニャ' }} />)
+  expect(screen.getByText(/ニャ：「I am not afraid of you.」/)).toBeInTheDocument()
+})

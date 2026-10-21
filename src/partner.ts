@@ -51,3 +51,14 @@ export function weakOf(bossName: string): string {
   const n = [...bossName].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 3)
   return WEAK_ORDER[n % WEAK_ORDER.length]
 }
+
+// ボスのセリフへの相棒の返しセリフ（キャラクターごと）
+export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
+  mochi: { en: "We won't lose!", ja: 'ぼくたちは負けないよ！' },
+  fox: { en: 'Too easy for us!', ja: 'そんなの、かんたんだよ！' },
+  penguin: { en: 'Stay cool and do our best!', ja: 'おちついて、がんばろう！' },
+  rabbit: { en: "Let's jump right in!", ja: 'さあ、とびこもう！' },
+  cat: { en: 'I am not afraid of you.', ja: 'きみなんか、こわくないにゃ。' },
+  dragon: { en: 'Feel the power of words!', ja: 'ことばの力を見せてやる！' },
+}
+export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
