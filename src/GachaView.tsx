@@ -6,12 +6,13 @@ import { MonsterFigure } from './MonsterView'
 type Props = {
   coins: number
   members: number // 今の仲間の数
-  onDraw: () => Kind | null // 引けたら出た色ちがいを返す
+  tickets?: number // ガチャチケットの枚数
+  onDraw: (ticket: boolean) => Kind | null // 引けたら出た色ちがいを返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<{ kind: Kind; key: number } | null>(null)
   const full = members >= PARTY_MAX
   return (
@@ -22,12 +23,24 @@ export function Gacha({ coins, members, onDraw, onRaise }: Props) {
         className="good gacha-btn"
         disabled={full || coins < GACHA_PRICE}
         onClick={() => {
-          const k = onDraw()
+          const k = onDraw(false)
           if (k) setResult({ kind: k, key: Date.now() })
         }}
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${GACHA_PRICE}`}
       </button>
+      {tickets > 0 && !full && (
+        <button
+          className="good gacha-btn ticket"
+          onClick={() => {
+            const k = onDraw(true)
+            if (k) setResult({ kind: k, key: Date.now() })
+          }}
+        >
+          🎟 チケットで引く（あと{tickets}枚）
+        </button>
+      )}
+      <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
           <span className="gacha-capsule" aria-hidden="true" />

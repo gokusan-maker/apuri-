@@ -22,3 +22,11 @@ it('コインが足りないときや仲間がいっぱいのときは引けな�
   render(<Gacha coins={999} members={PARTY_MAX} onDraw={() => null} />)
   expect(screen.getByRole('button', { name: '仲間がいっぱい' })).toBeDisabled()
 })
+
+it('チケットがあるときはチケットで引ける', () => {
+  const onDraw = vi.fn(() => kindOf('umi'))
+  render(<Gacha coins={0} members={1} tickets={2} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: '🎟 チケットで引く（あと2枚）' }))
+  expect(onDraw).toHaveBeenCalledWith(true)
+  expect(screen.getByText('レア！')).toBeInTheDocument()
+})

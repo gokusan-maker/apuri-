@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, loadParty, saveParty, updateActive } from './party'
-import { drawEgg } from './gacha'
+import { addTicket, drawEgg } from './gacha'
 import {
   feed,
   FORMS,
@@ -244,6 +244,10 @@ function App() {
       const eventBonus = seasonEvent ? EVENT_COINS : 0
       const bonus = (r.streak.count % 7 === 0 ? LOGIN_WEEK_COINS : LOGIN_COINS) + early + eventBonus
       setWallet((w) => ({ ...w, coins: w.coins + bonus }))
+      if (r.streak.count % 7 === 0) {
+        setWallet((w) => addTicket(w))
+        pushToast([{ id: 'ticket', text: `${r.streak.count}日連続！ 🎟 ガチャチケットを1枚もらった（ショップで使えるよ）`, counter: 'answers', target: 0 }])
+      }
       pushToast([{ id: 'login', text: `${seasonEvent ? `${seasonEvent.icon} ${seasonEvent.name}ボーナスつき！ ` : ''}${early ? '早起きえらい！' : '今日もえらい！'} 🪙${bonus}`, counter: 'answers', target: 0 }])
       const days = (totals.studyDays ?? 0) + 1
       if (titleFor(days) !== titleFor(days - 1)) {
@@ -692,8 +696,8 @@ function App() {
           }}
           members={party.members.length}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
-          onGacha={() => {
-            const r = drawEgg(wallet, party, Math.random())
+          onGacha={(ticket) => {
+            const r = drawEgg(wallet, party, Math.random(), ticket)
             if (!r) return null
             setWallet(r.wallet)
             setParty(r.party)

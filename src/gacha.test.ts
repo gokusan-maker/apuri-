@@ -41,3 +41,15 @@ it('ガチャのタマゴがあっても、節目のタマゴはちゃんとも�
   expect(p.members).toHaveLength(3)
   expect(addEggs(p, 2)).toBe(p)
 })
+
+it('7日連続でもらえるチケットでもガチャを引ける（コインはへらない）', async () => {
+  const { addTicket } = await import('./gacha')
+  const w = addTicket({ coins: 0, owned: [] })
+  expect(w.tickets).toBe(1)
+  const party = { active: 0, members: [{ xp: 0 }] }
+  expect(drawEgg(w, party, 0.1)).toBeNull()
+  const r = drawEgg(w, party, 0.1, true)!
+  expect(r.wallet).toEqual({ coins: 0, owned: [], tickets: 0 })
+  expect(r.party.members).toHaveLength(2)
+  expect(addTicket({ coins: 0, owned: [], tickets: 9 }).tickets).toBe(9)
+})

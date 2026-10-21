@@ -18,7 +18,7 @@ type Props = {
   onBuyFreeze?: () => void
   onRoom?: (id: string | undefined) => void
   members?: number // 仲間の数（ガチャ用）
-  onGacha?: () => Kind | null
+  onGacha?: (ticket: boolean) => Kind | null
   onRaiseNew?: () => void
 }
 
@@ -49,7 +49,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           )}
         </div>
       </div>
-      {onGacha && <Gacha coins={wallet.coins} members={members} onDraw={onGacha} onRaise={onRaiseNew} />}
+      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} onDraw={onGacha} onRaise={onRaiseNew} />}
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (
