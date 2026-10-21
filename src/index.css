@@ -1246,3 +1246,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-mistake .ok { color: #16a34a; font-weight: 700; }
 .grammar-mistake .why { font-size: 0.8rem; color: var(--muted); }
 .boss-charge { margin: 4px 0; font-weight: 800; color: #7c2d12; background: #ffedd5; border-radius: 8px; padding: 4px; animation: shake 0.3s linear 2; }
+.bingo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; max-width: 280px; margin: 8px auto; }
+.bingo-cell { aspect-ratio: 1; border: none; border-radius: 12px; background: var(--bg); color: var(--fg); font-size: 1.3rem; font-weight: 800; }
+.bingo-cell.ok { background: #bbf7d0; }
+.bingo-cell.ng { background: #fecaca; }
+.bingo-q { margin-top: 8px; }

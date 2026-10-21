@@ -9,6 +9,8 @@ import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMM
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
+import { GrammarBingo } from './GrammarBingoView'
+import { BINGO_COINS } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
@@ -26,9 +28,10 @@ type Props = {
   onSpend?: (coins: number) => boolean // ヒントのコイン
   onFirstClear?: () => void // 単元をはじめて全問正解したとき
   onWeeklyGoal?: () => void // 今週の目標を達成したとき
+  onBingo?: () => void // 文法ビンゴがそろったとき
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
@@ -36,6 +39,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [picked, setPicked] = useState<number | null>(null)
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
+  const [bingo, setBingo] = useState(false)
   const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
   const [goalReached, setGoalReached] = useState(false)
   const [firstClear, setFirstClear] = useState(false) // この回ではじめて全問正解した
@@ -77,6 +81,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
   if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} />
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
+  if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} />
 
   if (!unit) {
@@ -131,6 +136,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問）
+          </button>
+        )}
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setBingo(true)}>
+            🎯 文法ビンゴ（そろうと🪙{BINGO_COINS}）
           </button>
         )}
         {stampMode && (

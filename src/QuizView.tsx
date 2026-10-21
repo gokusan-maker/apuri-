@@ -36,6 +36,7 @@ import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
 import { DAILY_GRAMMAR_COINS, GRAMMAR_CLEAR_XP } from './grammar'
+import { BINGO_COINS } from './grammarbingo'
 import { GRAMMAR_MONSTER_COINS, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
@@ -744,7 +745,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar onAnswer={onAnswer} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
+        <Grammar onAnswer={onAnswer} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
       </>
     )
   }
