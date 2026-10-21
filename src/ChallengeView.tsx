@@ -39,7 +39,7 @@ export function Challenge({ monster, done, onAnswer, onClear, onClose }: Props) 
           {kind.icon} <strong>{kind.label}</strong>・{diff.label}（{diff.count}問）
           <br />
           <span className="stats-note">
-            6割正解でクリア：🪙{diff.coins}＋{diff.xp}XP{done ? '（今日はクリアずみ。練習はできるよ）' : ''}
+            6割正解でクリア：🪙{diff.coins}＋{diff.xp}XP（3日連続クリアで🎟ガチャチケット）{done ? '（今日はクリアずみ。練習はできるよ）' : ''}
           </span>
         </p>
       </div>

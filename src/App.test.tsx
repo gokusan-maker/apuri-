@@ -440,6 +440,7 @@ describe('App', () => {
     expect(screen.getByText('チャレンジ成功！')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeGreaterThanOrEqual(10)
     expect(localStorage.getItem('eitan:challenge')).toBe('2026-10-20')
+    expect(localStorage.getItem('eitan:challenge-streak')).toBe('1')
   })
 
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {

@@ -78,7 +78,7 @@ import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { Challenge } from './ChallengeView'
-import { challengeOf, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
+import { challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
@@ -721,6 +721,12 @@ function App() {
           onAnswer={onAnswer}
           onClear={() => {
             const d = difficultyOf(formOf(monster).stage)
+            const streak = nextChallengeStreak(challengeDay, loadChallengeStreak(), today)
+            saveChallengeStreak(streak)
+            if (streak % STREAK_TICKET_DAYS === 0) {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'ticket', text: `今日のチャレンジ${streak}日連続クリア！ 🎟 ガチャチケットを1枚もらった`, counter: 'answers', target: 0 }])
+            }
             setChallengeDay(today)
             setWallet((w) => ({ ...w, coins: w.coins + d.coins }))
             gainXp(d.xp, null)

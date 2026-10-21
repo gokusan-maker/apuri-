@@ -1,5 +1,5 @@
 import { beforeEach, expect, it } from 'vitest'
-import { challengeOf, cleared, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
+import { nextChallengeStreak, challengeOf, cleared, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
 
 beforeEach(() => localStorage.clear())
 
@@ -17,4 +17,10 @@ it('6割正解でクリア。1日1回の記録', () => {
   expect([cleared(3, 5), cleared(2, 5), cleared(0, 0)]).toEqual([true, false, false])
   saveChallengeDay('2026-10-20')
   expect(loadChallengeDay()).toBe('2026-10-20')
+})
+
+it('今日のチャレンジの連続クリア日数', () => {
+  expect(nextChallengeStreak('2026-10-19', 2, '2026-10-20')).toBe(3)
+  expect(nextChallengeStreak('2026-10-17', 5, '2026-10-20')).toBe(1)
+  expect(nextChallengeStreak('2026-02-28', 1, '2026-03-01')).toBe(2)
 })

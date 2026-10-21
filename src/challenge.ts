@@ -29,6 +29,7 @@ export const CLEAR_RATE = 0.6 // 6割正解でクリア
 export const cleared = (correct: number, total: number) => total > 0 && correct / total >= CLEAR_RATE
 
 const KEY = 'eitan:challenge'
+const STREAK_KEY = 'eitan:challenge-streak'
 
 export function loadChallengeDay(): string {
   try {
@@ -41,6 +42,35 @@ export function loadChallengeDay(): string {
 export function saveChallengeDay(day: string): void {
   try {
     localStorage.setItem(KEY, day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
+// 連続クリア日数：前の日もクリアしていれば +1、そうでなければ 1 から
+export const STREAK_TICKET_DAYS = 3
+
+function prevDay(day: string): string {
+  const [y, m, d] = day.split('-').map(Number)
+  return new Date(Date.UTC(y, m - 1, d - 1)).toISOString().slice(0, 10)
+}
+
+export function nextChallengeStreak(lastDay: string, streak: number, today: string): number {
+  return lastDay === prevDay(today) ? streak + 1 : 1
+}
+
+export function loadChallengeStreak(): number {
+  try {
+    const n = Number(localStorage.getItem(STREAK_KEY))
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+
+export function saveChallengeStreak(n: number): void {
+  try {
+    localStorage.setItem(STREAK_KEY, String(n))
   } catch {
     // ストレージが使えない環境では保存をあきらめる
   }
