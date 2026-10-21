@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
@@ -170,6 +170,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           <p className="stats-note reading-level">
             🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）
           </p>
+        )}
+        {readingLevel(history) && levelPick(readingLevel(history)!.name, record) && (
+          <button className="list-link" onClick={() => openPassage(levelPick(readingLevel(history)!.name, record)!)}>
+            🎯 {readingLevel(history)!.name}のきみにおすすめ：{shownTitle(levelPick(readingLevel(history)!.name, record)!, LONG_PASSAGES.indexOf(levelPick(readingLevel(history)!.name, record)!))}
+          </button>
         )}
         <div className="sub-tabs genre-tabs" role="tablist" aria-label="長文の種類">
           {(['all', ...GENRES] as const).map((g) => (

@@ -2551,3 +2551,10 @@ export const TYPE_TIPS: Record<QType, string> = {
   vocab: '知らない語は、前後の文の流れ（理由・例・反対の内容）から意味を考えよう。',
   seq: 'when / after / then / the next day など時を表す語に印をつけながら読もう。',
 }
+
+// レベル別おすすめ：初級なら中2向け、中級なら中3向け、上級なら高校入試向けの、まだ解いていない長文
+export function levelPick(level: '初級' | '中級' | '上級', record: Record<string, number>, list: LongPassage[] = LONG_PASSAGES): LongPassage | null {
+  const tag = level === '初級' ? '中2' : level === '中級' ? '中3' : '高校入試'
+  const pool = list.filter((p) => p.level.includes(tag))
+  return pool.find((p) => record[p.id] === undefined) ?? pool[0] ?? null
+}

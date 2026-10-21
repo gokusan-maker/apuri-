@@ -313,3 +313,13 @@ it('すべての設問の種類につまずき解説がある', async () => {
   const { TYPE_LABEL, TYPE_TIPS } = await import('./longreading')
   for (const k of Object.keys(TYPE_LABEL)) expect((TYPE_TIPS as Record<string, string>)[k]).toBeTruthy()
 })
+
+it('読解レベルに合った、まだ解いていない長文をすすめる', async () => {
+  const { levelPick } = await import('./longreading')
+  const a = levelPick('上級', {})!
+  expect(a.level).toContain('高校入試')
+  expect(levelPick('初級', {})!.level).toContain('中2')
+  const b = levelPick('中級', { [levelPick('中級', {})!.id]: 5 })!
+  expect(b.level).toContain('中3')
+  expect(b.id).not.toBe(levelPick('中級', {})!.id)
+})
