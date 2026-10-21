@@ -139,3 +139,19 @@ it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る'
   fireEvent.click(screen.getByText('← にげる'))
   expect(screen.getByText(/エンドレスの塔（最高 2階）/)).toBeInTheDocument()
 })
+
+it('中学のボスは4問に1問が文法問題', () => {
+  const all = Object.fromEntries(stagesOf('中1').map((s) => [s.id, 1]))
+  render(<Stages levels={['中1']} record={all} onClear={() => {}} />)
+  fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
+  const seen: boolean[] = []
+  for (let i = 0; i < 4; i++) {
+    const en = document.querySelector('.boss .en')!.textContent!
+    const w = wordsOf(['中1']).find((x) => x.en === en)
+    seen.push(!!w)
+    const btns = [...document.querySelectorAll<HTMLButtonElement>('.choice')]
+    fireEvent.click(w ? btns.find((b) => b.textContent === w.ja)! : btns[0])
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(seen).toEqual([true, true, true, false])
+})

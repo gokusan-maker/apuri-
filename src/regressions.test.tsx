@@ -20,16 +20,17 @@ describe('再発防止', () => {
   })
 
   it('ボスをたおした最後の一撃のXPも、ボーナスと一緒にちゃんと入る', () => {
+    // 中学のボスは文法問題がまざるので、単語だけの熟語のボスで確かめる
     const today = dayKey()
-    localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
+    localStorage.setItem('eitan:levels', JSON.stringify(['熟語']))
     localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスが入らないように
-    localStorage.setItem('eitan:stages', JSON.stringify(Object.fromEntries(stagesOf('中1').map((s) => [s.id, 1]))))
+    localStorage.setItem('eitan:stages', JSON.stringify(Object.fromEntries(stagesOf('熟語').map((s) => [s.id, 1]))))
     // ミッションのボーナスが混ざらないよう、今日の分は受け取り済みにしておく
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /ステージ/ }))
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
-    const words = wordsOf(['中1'])
+    const words = wordsOf(['熟語'])
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent

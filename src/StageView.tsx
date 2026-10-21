@@ -43,6 +43,8 @@ type Props = {
 }
 
 export const STAR3_COINS = 20
+// 中学のボスは4問に1問が文法問題
+const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
@@ -193,6 +195,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <Boss
         level={fighting}
         words={wordsOf([fighting])}
+        grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
         bag={bag}
         onUseItem={onUseItem}
