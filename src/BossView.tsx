@@ -1,11 +1,11 @@
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useState } from 'react'
-import { BOSS_HP, BOSS_QUESTIONS, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, damage, HEAL_COST, HEARTS, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
-import { easyIf, makeQuiz } from './quiz'
+import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
-import { LEVELS, WORDS, type Level, type Word } from './words'
+import { LEVELS, type Level, type Word } from './words'
 
 type Props = {
   level: Level
@@ -18,7 +18,9 @@ type Props = {
   look?: BossLook // 指定がなければ単語帳のボス
   title?: string // 上に出す見出し
   hp?: number // ボスのHP（大学入試の塔は強い）
+  grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
 }
+
 
 // 大学入試の塔のボスの飾り（体のうしろ）
 function BossDecoBack({ deco, look }: { deco: string; look: BossLook }) {
@@ -97,9 +99,9 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
   )
 }
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false }: Props) {
   const look = lookProp ?? BOSSES[level]
-  const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
+  const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(HEARTS)
@@ -128,7 +130,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     } else {
       setCombo(0)
       setHearts(hearts - 1)
-      setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
+      if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
       onAnswer?.(false, 0, q.word.id, 'quiz')
     }
@@ -141,7 +143,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
-    setQs(makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words).map((q) => easyIf(loadSettings().easy, q)))
+    setQs(bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
     setHp(maxHp)
     setHearts(HEARTS)

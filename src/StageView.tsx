@@ -50,6 +50,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         look={univFight}
         title={`🏯 大学入試の塔 ${univFight.floor}`}
         hp={univFight.hp}
+        grammar
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -155,7 +156,7 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         <summary>
           🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
         </summary>
-        <p className="stats-note">大学にちなんだボスが待つ塔。下の階から順に挑戦しよう（高校基礎・熟語の単語で戦う）。</p>
+        <p className="stats-note">大学にちなんだボスが待つ塔。下の階から順に挑戦しよう（高校基礎・熟語の単語と、4問に1問は文法問題）。</p>
         <ol className="univ-floors">
           {[...UNIV_BOSSES].reverse().map((b) => {
             const i = UNIV_BOSSES.indexOf(b)

@@ -1,6 +1,8 @@
 // ボス戦：単語帳の全ステージをクリアすると挑戦できる。
 import { stagesOf, type StageRecord } from './stages'
-import type { Level } from './words'
+import { WORDS, type Level, type Word } from './words'
+import { makeQuiz } from './quiz'
+import { grammarMixQ } from './puzzles'
 
 export const BOSS_HP = 100
 export const HEARTS = 3
@@ -64,4 +66,15 @@ export function dailyBossLevel<T>(levels: T[], day: string): T | undefined {
   let h = 3
   for (const c of day) h = (h * 41 + c.charCodeAt(0)) >>> 0
   return levels[h % levels.length]
+}
+
+// ボスの問題：単語の4択。grammar のときは4問に1問を文法問題にする（単語にひもづかないので id は空）
+export function bossQuestions(words: Word[], grammar: boolean) {
+  const qs = makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words)
+  if (!grammar) return qs
+  return qs.map((q, i) => {
+    if (i % 4 !== 3) return q
+    const g = grammarMixQ()
+    return { word: { id: '', en: g.prompt, ja: g.choices[g.answer], example: '', exampleJa: '', level: '高校基礎' } as Word, choices: g.choices, answer: g.answer }
+  })
 }
