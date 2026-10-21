@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { muchManyQ, pronounQ, modalQ, placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { ordinalQ, muchManyQ, pronounQ, modalQ, placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { ordinal } from './numbers'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -226,5 +227,14 @@ it('much と many：複数形の名詞には many', () => {
   for (let i = 0; i < 30; i++) {
     const q = muchManyQ()
     expect(q.choices[q.answer]).toBe(q.why.includes('複数形') ? 'many' : 'much')
+  }
+})
+
+it('序数：数字に合う〜番目の英語', () => {
+  for (let i = 0; i < 30; i++) {
+    const q = ordinalQ()
+    const n = Number(q.prompt.match(/「(\d+)番目」/)![1])
+    expect(q.choices[q.answer]).toBe(ordinal(n))
+    expect(new Set(q.choices).size).toBe(4)
   }
 })

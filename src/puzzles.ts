@@ -1,4 +1,5 @@
 // ちょっとした4択パズル（ABC順・反対の意味・仲間はずれ）
+import { ordinal } from './numbers'
 import { shuffle, type Rng } from './quiz'
 import { EMOJI } from './emoji'
 import { WORDS, type Word } from './words'
@@ -457,6 +458,20 @@ export function muchManyQ(rng: Rng = Math.random): PuzzleQ {
   const [prompt, ans, why] = MUCH_MANY[Math.floor(rng() * MUCH_MANY.length)]
   const choices = ['much', 'many']
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
+// 序数（〜番目）：1〜31から出題。「12番目」→ twelfth
+export function ordinalQ(rng: Rng = Math.random): PuzzleQ {
+  const n = 1 + Math.floor(rng() * 31)
+  const others = new Set<number>()
+  while (others.size < 3) {
+    const m = 1 + Math.floor(rng() * 31)
+    if (m !== n) others.add(m)
+  }
+  const ans = ordinal(n)
+  const choices = shuffle([ans, ...[...others].map(ordinal)], rng)
+  const why = n === 1 || n === 2 || n === 3 ? `${n}番目は特別な形で ${ans}` : `${n}番目は ${ans}（日付にも使う：the ${ans}）`
+  return { prompt: `「${n}番目」は英語で？`, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
 // 文法ミックス：文法パズルから1問ずつランダム
