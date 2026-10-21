@@ -77,6 +77,7 @@ import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
+import { loadUniv } from './univ'
 import { Challenge } from './ChallengeView'
 import { challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { speakPet } from './speech'
@@ -459,6 +460,8 @@ function App() {
       modesPlayed: loadPlayed().length,
       diaryDays: Object.keys(loadDiary()).length,
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
+      towerFloors: Object.keys(loadUniv()).length,
+      species: new Set(party.members.map((m) => m.species ?? 'mochi')).size,
     },
     earned,
   )

@@ -79,3 +79,11 @@ it('英語日記を7日分書くとバッジ', () => {
   expect(newlyEarned({ ...zero, diaryDays: 7 }, {}).map((b) => b.id)).toContain('diary-7')
   expect(newlyEarned({ ...zero, diaryDays: 6 }, {}).map((b) => b.id)).not.toContain('diary-7')
 })
+
+it('大学入試の塔とキャラクター集めのバッジ', async () => {
+  const { BADGES } = await import('./badges')
+  const base = { answers: 0, correct: 0, streak: 0, learned: 0, level: 1, perfect: 0, bestTime: 0, goals: 0 }
+  const ok = (id: string, s: object) => BADGES.find((b) => b.id === id)!.check({ ...base, ...s })
+  expect([ok('tower-1', { towerFloors: 1 }), ok('tower-all', { towerFloors: 8 }), ok('tower-all', { towerFloors: 9 })]).toEqual([true, false, true])
+  expect([ok('species-all', { species: 5 }), ok('species-all', { species: 6 })]).toEqual([false, true])
+})

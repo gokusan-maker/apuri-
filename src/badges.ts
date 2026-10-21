@@ -18,6 +18,8 @@ export type BadgeStats = {
   formsTotal?: number // 図鑑のすがたの総数
   souvenirs?: number // 集めたおみやげの種類
   souvenirsTotal?: number
+  towerFloors?: number // 大学入試の塔でクリアした階の数
+  species?: number // 集めたキャラクターの種類
   modesPlayed?: number // 遊んだクイズの種類の数
   diaryDays?: number // 英語日記を書いた日数
 }
@@ -64,6 +66,9 @@ export const BADGES: Badge[] = [
   { id: 'combo-20', icon: '☄️', name: '20コンボ', desc: 'クイズで20問つづけて正解', check: (s) => (s.bestCombo ?? 0) >= 20 },
   { id: 'complete-1', icon: '👑', name: '完全制覇', desc: '単語帳を1冊ぜんぶ定着させる', check: (s) => (s.completeBooks ?? 0) >= 1 },
   { id: 'answers-1000', icon: '🌟', name: '1000問の星', desc: '累計1000問に答える', check: (s) => s.answers >= 1000 },
+  { id: 'tower-1', icon: '🏯', name: '塔の挑戦者', desc: '大学入試の塔の1階をクリア', check: (s) => (s.towerFloors ?? 0) >= 1 },
+  { id: 'tower-all', icon: '🐉', name: '塔の覇者', desc: '大学入試の塔を最上階までクリア', check: (s) => (s.towerFloors ?? 0) >= 9 },
+  { id: 'species-all', icon: '🐾', name: 'キャラクター博士', desc: 'キャラクターを6種類ぜんぶ集める', check: (s) => (s.species ?? 1) >= 6 },
   { id: 'answers-5000', icon: '🌠', name: '5000問の流れ星', desc: '累計5000問に答える', check: (s) => s.answers >= 5000 },
 ]
 
