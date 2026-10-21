@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { modalQ, placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -201,5 +201,15 @@ it('場所の前置詞：4つの選択肢から理由に合う答え', () => {
     expect(q.choices).toEqual(['in', 'on', 'under', 'by'])
     expect(q.why).toContain(q.choices[q.answer])
     expect(q.prompt).toContain('___')
+  }
+})
+
+it('助動詞：ヒントの意味に合う can・must・should', () => {
+  for (let i = 0; i < 30; i++) {
+    const q = modalQ()
+    const a = q.choices[q.answer].toLowerCase()
+    if (/できる|ひけ|話せ|飛べ/.test(q.prompt)) expect(a).toBe('can')
+    else if (/なければ/.test(q.prompt)) expect(a).toBe('must')
+    else expect(a).toBe('should')
   }
 })

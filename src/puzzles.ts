@@ -400,8 +400,28 @@ export function placePrepQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// 助動詞：can（できる）、must（〜しなければならない）、should（〜したほうがよい）
+const MODALS: [string, string, string][] = [
+  ['My brother ___ swim very fast.（泳ぐことができる）', 'can', '「できる」なので can'],
+  ['You ___ stop at a red light.（止まらなければならない）', 'must', '「しなければならない」（ルール）なので must'],
+  ['You ___ go to bed early tonight.（寝たほうがいい）', 'should', '「したほうがよい」（アドバイス）なので should'],
+  ['___ you play the guitar?（ひけますか）', 'Can', '「できますか」とたずねるので Can'],
+  ['Students ___ wear a uniform at this school.（着なければならない）', 'must', '学校の決まりで「しなければならない」なので must'],
+  ['You look tired. You ___ take a rest.（休んだほうがいい）', 'should', '「したほうがよい」（アドバイス）なので should'],
+  ['I ___ speak a little Chinese.（話せる）', 'can', '「できる」なので can'],
+  ['We ___ be quiet in the library.（静かにしなければならない）', 'must', '図書館の決まりで「しなければならない」なので must'],
+  ['You ___ eat more vegetables.（食べたほうがいい）', 'should', '「したほうがよい」（アドバイス）なので should'],
+  ['Birds ___ fly, but penguins can\'t.（飛べる）', 'can', '「できる」なので can'],
+]
+
+export function modalQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = MODALS[Math.floor(rng() * MODALS.length)]
+  const choices = prompt.startsWith('___') ? ['Can', 'Must', 'Should'] : ['can', 'must', 'should']
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
