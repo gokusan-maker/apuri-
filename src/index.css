@@ -1196,3 +1196,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-recommend { display: block; width: 100%; margin: 6px 0; padding: 8px 10px; border: 2px solid #f59e0b; border-radius: 12px; background: #fffbeb; text-align: left; font-size: 0.85rem; }
 .long-recommend strong { display: block; font-size: 0.95rem; }
 .daily-stars { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: -2px 0 6px; font-size: 0.8rem; }
+
+/* 文法の進みぐあい */
+.grade-progress { display: flex; flex-direction: column; gap: 3px; margin: 6px 0; font-size: 0.78rem; }
+.grade-row { display: grid; grid-template-columns: 3em 1fr 3.5em; align-items: center; gap: 6px; }
+.grade-bar { height: 8px; border-radius: 999px; background: #e5e7eb; overflow: hidden; }
+.grade-bar span { display: block; height: 100%; background: linear-gradient(90deg, #34d399, #10b981); }

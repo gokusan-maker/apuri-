@@ -150,6 +150,25 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </button>
         )}
         {stampMode && (
+          <div className="grade-progress" aria-label="学年ごとの進みぐあい">
+            {GRAMMAR_GRADES.map((g) => {
+              const us = GRAMMAR.filter((u) => gradeOf(u.id) === g)
+              const done = us.filter((u) => record[u.id] === u.questions.length).length
+              return (
+                <div key={g} className="grade-row">
+                  <span>{g}</span>
+                  <span className="grade-bar" role="progressbar" aria-label={`${g}の全問正解`} aria-valuemin={0} aria-valuemax={us.length} aria-valuenow={done}>
+                    <span style={{ width: `${(done / us.length) * 100}%` }} />
+                  </span>
+                  <span>
+                    {done}/{us.length}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+        )}
+        {stampMode && (
           <div className="sub-tabs grade-tabs" role="tablist" aria-label="学年">
             {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
               <button key={g} role="tab" aria-selected={grade === g} onClick={() => setGrade(g)}>

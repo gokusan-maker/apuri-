@@ -153,3 +153,12 @@ it('ヒントでまちがいの選択肢を1つ消せる', () => {
   expect(document.querySelectorAll('.choices .choice')).toHaveLength(2)
   expect(screen.getByRole('button', { name: u.questions[0].choices[u.questions[0].answer] })).toBeInTheDocument()
 })
+
+it('学年ごとの全問正解の進みぐあいがバーで出る', () => {
+  localStorage.clear()
+  const u = GRAMMAR.find((x) => x.id === 'be')!
+  localStorage.setItem('eitan:grammar', JSON.stringify({ be: u.questions.length }))
+  render(<Grammar />)
+  expect(screen.getByRole('progressbar', { name: '中1の全問正解' })).toHaveAttribute('aria-valuenow', '1')
+  expect(screen.getByRole('progressbar', { name: '高校の全問正解' })).toHaveAttribute('aria-valuenow', '0')
+})
