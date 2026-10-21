@@ -586,6 +586,13 @@ describe('App', () => {
     expect(screen.getByLabelText('スロットがそろった')).toHaveTextContent('そろった！ 🪙5')
   })
 
+  it('相棒をタップするとポーズがかわり、全部見ると称号', () => {
+    render(<App />)
+    for (let i = 0; i < 6; i++) fireEvent.click(screen.getByLabelText('相棒にさわる'))
+    expect(screen.getByText(/ポーズ 6 \/ 6/)).toBeInTheDocument()
+    expect(screen.getByText(/称号「ポーズマスター」/)).toBeInTheDocument()
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

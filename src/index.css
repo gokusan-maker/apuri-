@@ -1287,3 +1287,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .sugoroku-q p { margin: 0 0 6px; font-size: 0.9rem; font-weight: 700; }
 .sugoroku-choices { display: flex; flex-direction: column; gap: 4px; }
 .sugoroku-msg { margin: 0; font-size: 0.85rem; }
+.pose-label { margin: 2px 0; font-size: 0.8rem; font-weight: 700; color: var(--muted); }

@@ -4,6 +4,7 @@ import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { completionPct } from './gacha'
+import { allPosesSeen, loadPosesSeen, poseAt, POSE_TITLE, POSES, savePosesSeen, seePose } from './pose'
 import { canRelease, displayOrder, EGG_MILESTONES, releaseCoins, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -662,6 +663,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
   const [poke, setPoke] = useState(0)
+  const [posesSeen, setPosesSeen] = useState(loadPosesSeen)
   const [react, setReact] = useState<PetReaction>('normal')
   const [tick, setTick] = useState(0)
   useEffect(() => {
@@ -732,6 +734,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           setLine(l)
           playChirp(form.stage, monster.species)
           setPoke(poke + 1)
+          const seen = seePose(posesSeen, poseAt(poke).id)
+          if (seen.length !== posesSeen.length) {
+            setPosesSeen(seen)
+            savePosesSeen(seen)
+          }
           if (form.stage > 0) speak(l.en)
         }}
       >
@@ -757,6 +764,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           </span>
         )}
       </button>
+      {poke > 0 && (
+        <p className={`pose-label pose-${poseAt(poke - 1).id}`}>
+          {poseAt(poke - 1).icon} {poseAt(poke - 1).name}（ポーズ {posesSeen.length} / {POSES.length}）{allPosesSeen(posesSeen) ? `　🏅 称号「${POSE_TITLE}」` : ''}
+        </p>
+      )}
       {(line ?? cheer) && (
         <div className="bubble" role="status" onClick={() => setLine(null)}>
           <span className="bubble-en">
