@@ -238,3 +238,26 @@ export const BOSS_BGS = { field: '草原', forest: '森', mountain: '山', night
 export type BossBg = keyof typeof BOSS_BGS
 const BG_OF: Partial<Record<string, BossBg>> = { 中1: 'field', 中2: 'forest', 中3: 'mountain', 高校基礎: 'night', 熟語: 'castle' }
 export const bossBgOf = (level: string): BossBg => BG_OF[level] ?? 'sea'
+
+// ボスごとの最短タイム（秒）。記録を更新したら true
+const TIME_KEY = 'eitan:boss-times'
+export function loadBossTimes(): Record<string, number> {
+  try {
+    const v = JSON.parse(localStorage.getItem(TIME_KEY) ?? '{}') as unknown
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    return Object.fromEntries(Object.entries(v).filter(([, n]) => typeof n === 'number' && n > 0)) as Record<string, number>
+  } catch {
+    return {}
+  }
+}
+export function recordBossTime(name: string, sec: number): boolean {
+  const all = loadBossTimes()
+  if (all[name] !== undefined && all[name] <= sec) return false
+  try {
+    localStorage.setItem(TIME_KEY, JSON.stringify({ ...all, [name]: sec }))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return true
+}
+export const formatSec = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`

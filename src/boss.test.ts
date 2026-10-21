@@ -139,3 +139,13 @@ it('ためこうげきは5問に1問で、チャンス問題とは重ならな�
   expect(isCharge(true, 14)).toBe(false) // 14 はチャンス問題
   for (let i = 0; i < 30; i++) expect(isCharge(true, i) && isChance(true, i)).toBe(false)
 })
+
+it('ボスの最短タイムは短くなったときだけ更新', async () => {
+  const { formatSec, loadBossTimes, recordBossTime } = await import('./boss')
+  localStorage.clear()
+  expect(recordBossTime('モチ', 90)).toBe(true)
+  expect(recordBossTime('モチ', 120)).toBe(false)
+  expect(recordBossTime('モチ', 60)).toBe(true)
+  expect(loadBossTimes()).toEqual({ モチ: 60 })
+  expect(formatSec(65)).toBe('1分05秒')
+})

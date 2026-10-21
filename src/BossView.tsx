@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -149,12 +149,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
+  const startedAt = useRef(0) // 戦いを始めた時刻（タイム記録用）
+  const [time, setTime] = useState<{ sec: number; best: boolean } | null>(null)
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
     shownAt.current = nowMs()
   }, [index, qs])
   useEffect(() => {
     playBossSound('appear')
+    startedAt.current = nowMs()
   }, [])
 
   const won = hp <= 0
@@ -262,6 +265,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
   function win(c: number) {
     playBossSound('victory')
+    const sec = Math.max(1, Math.round((nowMs() - startedAt.current) / 1000))
+    setTime({ sec, best: recordBossTime(look.name, sec) })
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
     onDefeat?.()
@@ -281,6 +286,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    startedAt.current = nowMs()
+    setTime(null)
     setQs(bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
     setHp(maxHp)
@@ -438,6 +445,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          {time && <p className="boss-maxhit">⏱ タイム {formatSec(time.sec)}{time.best ? '　🏁 最短記録！' : `（最短 ${formatSec(loadBossTimes()[look.name] ?? time.sec)}）`}</p>}
           <p className="boss-maxhit">{newRecord > 0 ? `💥 最大ダメージ記録を更新！ ${newRecord}` : `💥 最大ダメージ記録 ${loadMaxHit()}`}</p>
           {drop && (
             <p className="boss-drop">
