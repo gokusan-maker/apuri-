@@ -13,6 +13,8 @@ export default defineConfig({
         manualChunks(id) {
           if (id.includes('node_modules/react')) return 'react'
           if (id.endsWith('/src/words.ts')) return 'words'
+          // 読み物・文法・まちがえやすい単語などの学習データもまとめて分ける
+          if (/\/src\/(reading|grammar|confusing|definitions|emoji|twisters|sounds)\.ts$/.test(id)) return 'content'
         },
       },
     },
