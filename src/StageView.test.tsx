@@ -121,3 +121,21 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
   fireEvent.click(screen.getByText('ラッシュ完全クリア！ ステージにもどる'))
   expect(screen.getByText(/ボスラッシュ（3連戦/)).toBeInTheDocument()
 })
+
+it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る', () => {
+  localStorage.clear()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByText(/エンドレスの塔（最高 0階）/))
+  for (let floor = 1; floor <= 2; floor++) {
+    expect(screen.getByText(`🗼 エンドレスの塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      const en = document.querySelector('.boss .en')!.textContent
+      const w = wordsOf(['中1']).find((x) => x.en === en)!
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    fireEvent.click(screen.getByText(new RegExp(`${floor + 1}階へ ▶`)))
+  }
+  fireEvent.click(screen.getByText('← にげる'))
+  expect(screen.getByText(/エンドレスの塔（最高 2階）/)).toBeInTheDocument()
+})

@@ -6,6 +6,7 @@ import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, daily
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import { BossBook } from './BossBookView'
+import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { openTreasure, type Treasure } from './treasure'
@@ -31,6 +32,7 @@ type Props = {
   partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
   onRankBonus?: (coins: number) => void // ボス戦Sランクのおまけ
   onRushClear?: () => void // ボスラッシュを全部たおした（ごほうびはアプリ側）
+  onEndlessReward?: (times: number) => void // エンドレスの塔で新しく10階ごとに到達した
   rushDone?: boolean // 今日のボスラッシュのごほうびをもうもらった
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
@@ -39,7 +41,7 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -52,6 +54,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [rareWeek, setRareWeek] = usePersistent(loadRareWeek, saveRareWeek)
   const [rareFight, setRareFight] = useState(false)
   const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean } | null>(null)
+  const [endless, setEndless] = useState<{ floor: number; hearts: number; won: boolean } | null>(null)
+  const [endlessBest, setEndlessBest] = usePersistent(loadEndlessBest, saveEndlessBest)
   const week = weekKey(dayKey())
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
@@ -77,6 +81,39 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           onUnivWin?.(univFight, first)
         }}
         onExit={() => setUnivFight(null)}
+      />
+    )
+  }
+
+  if (endless) {
+    const f = endless.floor
+    const lv = endlessLevel(f)
+    return (
+      <Boss
+        key={`endless-${f}`}
+        level={lv}
+        words={wordsOf([lv])}
+        look={endlessLook(f)}
+        hp={endlessHp(f)}
+        noBook
+        title={`🗼 エンドレスの塔 ${f}階（最高 ${endlessBest}階）`}
+        startHearts={endless.hearts}
+        winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
+        partner={partner}
+        bonus={BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onAnswer}
+        onRankBonus={onRankBonus}
+        onWinHearts={(h) => setEndless((e) => (e ? { ...e, hearts: h } : e))}
+        onWin={() => {
+          setEndless((e) => (e ? { ...e, won: true } : e))
+          if (f > endlessBest) {
+            const times = rewardsBetween(endlessBest, f)
+            setEndlessBest(f)
+            if (times > 0) onEndlessReward?.(times)
+          }
+        }}
+        onExit={() => setEndless(endless.won ? { floor: f + 1, hearts: endless.hearts, won: false } : null)}
       />
     )
   }
@@ -285,6 +322,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           })}
         </ol>
       </details>
+      <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
+        🗼 エンドレスの塔（最高 {endlessBest}階）10階ごとに 🪙{ENDLESS_REWARD_COINS}＋🎟
+      </button>
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
         {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
       </button>

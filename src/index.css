@@ -1038,3 +1038,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-book-fig svg { width: 100%; height: 100%; }
 .rank-mini { display: inline-block; min-width: 1.2em; border-radius: 4px; color: #fff; }
 .rank-mini.rank-S { background: #ef4444; } .rank-mini.rank-A { background: #3b82f6; } .rank-mini.rank-B { background: #64748b; }
+.boss-btn.endless-boss { background: linear-gradient(90deg, #4338ca, #7c3aed); color: #fff; }
