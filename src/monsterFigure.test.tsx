@@ -86,3 +86,14 @@ it('図鑑に色ちがいの集まり具合が出る', async () => {
   expect(screen.getByLabelText('きんいろ（スーパーレア）')).toBeInTheDocument()
   expect(screen.getAllByLabelText('まだ出ていない色')).toHaveLength(4)
 })
+
+it('なかまの画面にそれぞれのレベル・XPバー・次の進化までが出る', async () => {
+  const { Party } = await import('./MonsterView')
+  const { screen } = await import('@testing-library/react')
+  render(<Party party={{ active: 0, members: [{ xp: 0 }, { xp: 25, kind: 'umi' }] }} onSelect={() => {}} />)
+  expect(screen.getByText(/相棒・Lv\.1/)).toBeInTheDocument()
+  expect(screen.getByText('あとLv1で進化')).toBeInTheDocument()
+  expect(screen.getByText('あとLv3で進化')).toBeInTheDocument()
+  expect(screen.getByText(/うみ色/)).toBeInTheDocument()
+  expect(document.querySelectorAll('.party-bar')).toHaveLength(2)
+})

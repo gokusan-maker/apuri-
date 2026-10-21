@@ -858,3 +858,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .r-SR .gacha-capsule { background: linear-gradient(180deg, #fbbf24 50%, #fffbeb 50%); box-shadow: 0 0 16px #fbbf24; }
 .r-UR .gacha-capsule { background: linear-gradient(180deg, #f87171, #fbbf24, #4ade80, #60a5fa, #c084fc); box-shadow: 0 0 22px #e879f9; }
 .gacha-result.r-SR::after, .gacha-result.r-UR::after { content: '✨'; position: absolute; right: 14px; top: 10px; font-size: 1.4rem; animation: twinkle 1.2s infinite; }
+.party-bar { display: block; width: 80%; height: 5px; margin: 3px auto 0; border-radius: 3px; background: #e5e7eb; overflow: hidden; }
+.party-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e); }
+.party-next { display: block; font-size: 0.65rem; color: var(--muted); }

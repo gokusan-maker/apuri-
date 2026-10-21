@@ -814,8 +814,14 @@ export function Party({ party, onSelect }: { party: PartyState; onSelect: (i: nu
                 </span>
                 <span className="badge-name">{m.name ?? f.name}</span>
                 <span className="badge-desc">
-                  {active ? '相棒' : `Lv.${levelInfo(m.xp).level}`}
+                  {active ? '相棒・' : ''}Lv.{levelInfo(m.xp).level}
                   {m.kind && <span className={`kind-tag r-${kindOf(m.kind).rarity}`}> {kindOf(m.kind).name}</span>}
+                </span>
+                <span className="party-bar" aria-hidden="true">
+                  <span style={{ width: `${Math.round((levelInfo(m.xp).into / levelInfo(m.xp).need) * 100)}%` }} />
+                </span>
+                <span className="party-next">
+                  {levelsToNextStage(levelInfo(m.xp).level) ? `あとLv${levelsToNextStage(levelInfo(m.xp).level)!.levels}で進化` : 'さいごの姿'}
                 </span>
               </button>
             </li>
