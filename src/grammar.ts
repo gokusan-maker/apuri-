@@ -510,6 +510,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'The children enjoyed ___ at the beach.', choices: ['themselves', 'them', 'their'], answer: 0, why: 'enjoy oneself で「楽しむ」。主語が複数なので themselves。' },
     ],
   },
+  {
+    id: 'used-to',
+    title: 'used to ～（以前は～だった）',
+    points: ['used to ＋動詞の原形 で「以前は～していた（今はちがう）」。', 'be used to ～ing（～に慣れている）とはちがうので注意。'],
+    examples: [
+      { en: 'I used to live in Hokkaido.', ja: '私は以前北海道に住んでいた。' },
+      { en: 'There used to be a big tree here.', ja: '以前ここに大きな木があった。' },
+    ],
+    questions: [
+      { sentence: 'My father used to ___ soccer.', choices: ['play', 'playing', 'played'], answer: 0, why: 'used to のあとは動詞の原形。' },
+      { sentence: 'I ___ to be afraid of dogs, but now I love them.', choices: ['use', 'used', 'using'], answer: 1, why: '「以前は～だった」は used to。' },
+      { sentence: 'There ___ to be a bookstore near the station.', choices: ['used', 'uses', 'use'], answer: 0, why: 'There used to be ～で「以前は～があった」。' },
+    ],
+  },
+  {
+    id: 'if-present',
+    title: '条件の if（もし～なら）',
+    points: ['if ～ で「もし～なら」。未来のことでも if の中は現在形を使う。', 'if の文が先なら、うしろにコンマを打つ。'],
+    examples: [
+      { en: 'If it rains tomorrow, we will stay home.', ja: 'もし明日雨なら、家にいます。' },
+      { en: 'Call me if you need help.', ja: '助けが必要なら電話してね。' },
+    ],
+    questions: [
+      { sentence: 'If it ___ sunny tomorrow, let\'s go to the beach.', choices: ['is', 'will be', 'was'], answer: 0, why: '未来のことでも if の中は現在形 is。' },
+      { sentence: 'If you hurry, you ___ catch the bus.', choices: ['can', 'could', 'were'], answer: 0, why: '「急げばバスに間に合う」は can。' },
+      { sentence: '___ you are tired, take a rest.', choices: ['If', 'But', 'So'], answer: 0, why: '「もし疲れているなら」は If。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
