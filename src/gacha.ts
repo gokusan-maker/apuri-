@@ -125,3 +125,29 @@ export function bonusOf(r: number): GachaBonus | null {
   if (r >= BONUS_RATE) return null
   return r < BONUS_RATE / 2 ? { kind: 'coins', amount: 10, text: '🪙10' } : { kind: 'xp', amount: 20, text: '🍪 おやつ（XP+20）' }
 }
+
+// ガチャの記録：引いた回数とレア度ごとの数
+export type GachaStats = { total: number; N: number; R: number; SR: number; UR: number }
+const STATS_KEY = 'eitan:gacha-stats'
+export const emptyStats = (): GachaStats => ({ total: 0, N: 0, R: 0, SR: 0, UR: 0 })
+
+export function loadGachaStats(): GachaStats {
+  try {
+    const v = JSON.parse(localStorage.getItem(STATS_KEY) ?? 'null') as Partial<GachaStats> | null
+    const n = (x: unknown) => (typeof x === 'number' && x > 0 ? Math.floor(x) : 0)
+    return v ? { total: n(v.total), N: n(v.N), R: n(v.R), SR: n(v.SR), UR: n(v.UR) } : emptyStats()
+  } catch {
+    return emptyStats()
+  }
+}
+
+export function saveGachaStats(s: GachaStats): void {
+  try {
+    localStorage.setItem(STATS_KEY, JSON.stringify(s))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
+export const addStats = (s: GachaStats, rarities: Kind['rarity'][]): GachaStats =>
+  rarities.reduce((a, r) => ({ ...a, total: a.total + 1, [r]: a[r] + 1 }), s)

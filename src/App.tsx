@@ -43,7 +43,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, releaseCoins, releaseMember, saveParty, toggleFav, updateActive } from './party'
-import { addTicket, bonusOf, drawEgg, gachaPrice, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { addStats, addTicket, bonusOf, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -674,6 +674,7 @@ function App() {
       setWallet(w)
       setParty(p)
       setGachaStep(st)
+      saveGachaStats(addStats(loadGachaStats(), out.map((k) => k.kind.rarity)))
       count('gacha', out.length)
       if (bonusXp > 0) gainXp(bonusXp, null)
     }

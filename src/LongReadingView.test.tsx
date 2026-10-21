@@ -72,3 +72,10 @@ it('会話文の空所に入る文を選べる', () => {
   fireEvent.click(screen.getByRole('button', { name: `${MARKS[sb.answer]} ${sb.choices[sb.answer]}` }))
   expect(screen.getByRole('button', { name: `${MARKS[sb.answer]} ${sb.choices[sb.answer]}` })).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('表を読みとる長文では表が出る', () => {
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(/Green City Sports Center/))
+  expect(document.querySelectorAll('.long-table tbody tr')).toHaveLength(4)
+  expect(screen.getByText('Tennis', { selector: 'td' })).toBeInTheDocument()
+})

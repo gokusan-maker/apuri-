@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GACHA_PRICE, gachaOmen, loadGachaLog, PARTY_MAX, pushGachaLog } from './gacha'
+import { GACHA_PRICE, gachaOmen, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -27,7 +27,12 @@ type Props = {
 export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
-  const record = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
+  const [stats, setStats] = useState(loadGachaStats)
+  const record = (k: GachaResult) => {
+    setStats(loadGachaStats())
+    recordLog(k)
+  }
+  const recordLog = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
   const [multi, setMulti] = useState<{ list: GachaResult[]; key: number } | null>(null)
   const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
@@ -109,6 +114,18 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
               <li key={i}>
                 {g.day.slice(5).replace('-', '/')} <span className={`kind-tag r-${kindOf(g.kind).rarity}`}>{kindOf(g.kind).id === 'normal' ? '' : `${kindOf(g.kind).name}の`}</span>
                 {speciesOf(g.species).name}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+      {stats.total > 0 && (
+        <details className="gacha-odds gacha-stats">
+          <summary>ガチャの記録（{stats.total}回）</summary>
+          <ul>
+            {(['UR', 'SR', 'R', 'N'] as const).map((r) => (
+              <li key={r}>
+                <span className={`kind-tag r-${r}`}>{RARITY_LABEL[r]}</span> {stats[r]}回（{Math.round((stats[r] / stats.total) * 100)}%）
               </li>
             ))}
           </ul>

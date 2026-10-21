@@ -479,6 +479,7 @@ describe('App', () => {
     expect(party.gacha).toBe(3)
     const coins = JSON.parse(localStorage.getItem('eitan:wallet')!).coins
     expect([0, 15, 30]).toContain(coins) // 2回目以降は同じ子がいるのでかぶりボーナスが入る
+    expect(JSON.parse(localStorage.getItem('eitan:gacha-stats')!).total).toBe(3)
   })
 
   it('おるすばん中の仲間がかえると知らせが出る', () => {

@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { bonusOf, canDraw, drawEgg, gachaOmen, gachaPrice, GACHA_PRICE, GOLDEN_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
+import { addStats, bonusOf, canDraw, loadGachaStats, saveGachaStats, drawEgg, gachaOmen, gachaPrice, GACHA_PRICE, GOLDEN_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -170,4 +170,12 @@ it('おまけカプセルは5回に1回くらい、コインかおやつ', () =>
   expect(bonusOf(0)).toMatchObject({ kind: 'coins', amount: 10 })
   expect(bonusOf(0.15)).toMatchObject({ kind: 'xp', amount: 20 })
   expect(bonusOf(0.2)).toBeNull()
+})
+
+it('ガチャの記録はレア度ごとに数える', () => {
+  localStorage.clear()
+  const s = addStats(loadGachaStats(), ['N', 'R', 'R', 'UR'])
+  expect(s).toEqual({ total: 4, N: 1, R: 2, SR: 0, UR: 1 })
+  saveGachaStats(s)
+  expect(loadGachaStats()).toEqual(s)
 })
