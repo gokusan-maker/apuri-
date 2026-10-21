@@ -1022,8 +1022,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .fav-btn.on { color: #f59e0b; text-shadow: 0 0 6px #fde68a; }
 
 /* きょうの好物 */
-.fav-snack { position: relative; box-shadow: 0 0 0 2px #f472b6; }
-.fav-snack-tag { display: block; font-size: 0.75rem; font-weight: 800; color: #db2777; }
+.fav-snack { position: relative; box-shadow: 0 0 0 3px #f472b6; }
+.fav-snack-tag { display: block; font-size: 0.75rem; font-weight: 800; color: #fde68a; }
 
 /* ステップアップガチャ */
 .gacha-step { margin: 4px 0; font-size: 0.85rem; font-weight: 700; color: #c2410c; }
