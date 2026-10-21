@@ -806,3 +806,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .scene-snow { animation: snow 4s linear infinite; }
 @keyframes snow { to { transform: translate(-8px, 40px); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .scene-snow { animation: none; } }
+.myth-glitter { animation: twinkle 1.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .myth-glitter { animation: none; } }

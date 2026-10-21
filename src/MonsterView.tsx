@@ -200,6 +200,41 @@ function Particles({ form }: { form: Form }) {
   )
 }
 
+// 系統ごとの体の模様としっぽ（Lv15〜）。段階が上がると模様がふえる
+function Tail({ form, fill, line }: { form: Form; fill: string; line: string }) {
+  if (form.branch === 'card') return <path d="M78 80 Q96 78 94 62 Q86 70 80 70 Z" fill="#22c55e" stroke="#14532d" strokeWidth="2.5" strokeLinejoin="round" />
+  if (form.branch === 'quiz') return <path d="M78 80 L92 76 L86 70 L98 62 L84 64 L88 56 L76 70 Z" fill="#facc15" stroke="#a16207" strokeWidth="2.5" strokeLinejoin="round" />
+  return <path d="M78 82 Q98 84 96 70 Q92 74 86 72 Q92 66 88 62 Q84 72 78 72 Z" fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round" />
+}
+
+function Markings({ form, line }: { form: Form; line: string }) {
+  const st = form.stage
+  if (form.branch === 'card') {
+    return (
+      <g fill="none" stroke={line} strokeWidth="1.6" opacity="0.45" strokeLinecap="round">
+        <path d="M22 62 q4 -3 8 0 M24 70 q4 -3 8 0" />
+        <path d="M78 62 q-4 -3 -8 0 M76 70 q-4 -3 -8 0" />
+        {st >= 5 && <path d="M50 84 Q44 80 46 74 Q50 78 50 84 Q56 80 54 74 Q50 78 50 84" fill="#86efac" />}
+      </g>
+    )
+  }
+  if (form.branch === 'quiz') {
+    return (
+      <g fill={line} opacity="0.35">
+        <path d="M20 58 L30 62 L22 66 Z M80 58 L70 62 L78 66 Z" />
+        {st >= 4 && <path d="M21 72 L30 75 L23 79 Z M79 72 L70 75 L77 79 Z" />}
+        {st >= 5 && <path d="M44 32 L50 40 L56 32 Z" />}
+      </g>
+    )
+  }
+  return (
+    <g fill="#fff" opacity="0.7">
+      <path d="M40 82 q3 -6 5 0 q3 -6 5 0 q3 -6 5 0 q3 -6 5 0 Q50 90 40 82 Z" />
+      {st >= 5 && <path d="M30 40 q2 -4 4 0 q2 -4 4 0 Z M62 40 q2 -4 4 0 q2 -4 4 0 Z" />}
+    </g>
+  )
+}
+
 // 系統「耳」のつばさ。段階が上がると大きくなる
 function Wings({ form, fill, line }: { form: Form; fill: string; line: string }) {
   const big = form.stage >= 4 ? 1.35 : 1
@@ -440,6 +475,7 @@ export function MonsterFigure({
       {form.stage >= 3 && !hidden && <Particles form={form} />}
       <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
         <g className={hidden ? undefined : 'monster-breathe'}>
+          {form.stage >= 3 && <Tail form={form} fill={hidden ? fill : body} line={line} />}
           {form.branch === 'ear' && <Wings form={form} fill={hidden ? fill : shade(form.color, 0.25)} line={line} />}
           {form.stage >= 2 && (
             <g fill={body} stroke={line} strokeWidth="3">
@@ -450,6 +486,15 @@ export function MonsterFigure({
           <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" fill={body} stroke={line} strokeWidth="3" />
           {!hidden && <ellipse cx="50" cy="77" rx="18" ry="10" fill="#fff" opacity="0.28" />}
           {!hidden && <ellipse cx="34" cy="38" rx="8" ry="4.5" fill="#fff" opacity="0.55" transform="rotate(-25 34 38)" />}
+          {!hidden && form.stage >= 3 && <Markings form={form} line={line} />}
+          {!hidden && form.stage >= 6 && (
+            <g fill="#fff" className="myth-glitter">
+              <circle cx="30" cy="50" r="1.2" />
+              <circle cx="72" cy="46" r="1.5" />
+              <circle cx="66" cy="80" r="1.2" />
+              <circle cx="34" cy="80" r="1" />
+            </g>
+          )}
           {form.stage >= 2 && (
             <g fill={body} stroke={line} strokeWidth="3" className="monster-arms">
               <path d="M20 66 Q8 70 12 78 Q18 80 22 74" />

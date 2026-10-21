@@ -61,3 +61,11 @@ it('タマゴはかえる直前ほどひびが入る', () => {
 it('ねむいときは目を閉じて鼻ちょうちん', () => {
   expect(render(<MonsterFigure form={form('mochimaru')} mood="sleep" />).container.querySelector('.face-sleep .snot')).not.toBeNull()
 })
+
+it('Lv15からはしっぽと模様、神話の姿はきらきら', () => {
+  const c = render(<MonsterFigure form={form('mochimaru')} />).container
+  const m = render(<MonsterFigure form={form('mori-myth')} />).container
+  expect(c.querySelectorAll('path').length).toBeLessThan(m.querySelectorAll('path').length)
+  expect(m.querySelector('.myth-glitter')).not.toBeNull()
+  expect(render(<MonsterFigure form={form('inazuma')} />).container.querySelector('.myth-glitter')).toBeNull()
+})
