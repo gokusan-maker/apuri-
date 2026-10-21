@@ -1295,3 +1295,10 @@ button:focus:not(:focus-visible) { outline: none; }
 .duel-options { display: flex; flex-direction: column; gap: 8px; margin: 8px 0; }
 .duel-option { padding: 12px; border: 2px solid var(--muted); border-radius: 12px; background: var(--bg); color: var(--fg); font-size: 1rem; text-align: left; }
 .unit-stars { color: #f59e0b; }
+.grammar-print { text-align: left; }
+.grammar-print h3 { margin: 12px 0 4px; font-size: 0.95rem; }
+.print-list { margin: 0; padding-left: 20px; line-height: 1.7; }
+@media print {
+  .no-print, .tabbar, header, .toast { display: none !important; }
+  .grammar-print { box-shadow: none; background: #fff; color: #000; }
+}
