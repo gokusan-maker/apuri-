@@ -312,3 +312,14 @@ it('全問正解すると単元に★がつく', () => {
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByLabelText('レベル ★2')).toBeInTheDocument()
 })
+
+it('単元さがしでしぼりこめる', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: 'whose' } })
+  const items = [...document.querySelectorAll('.grammar-list li')]
+  expect(items.length).toBeGreaterThan(0)
+  expect(items.length).toBeLessThan(GRAMMAR.length)
+  fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: 'zzzz' } })
+  expect(screen.getByText('見つかりませんでした')).toBeInTheDocument()
+})

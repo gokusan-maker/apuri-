@@ -1303,3 +1303,4 @@ button:focus:not(:focus-visible) { outline: none; }
   .grammar-print { box-shadow: none; background: #fff; color: #000; }
 }
 .gacha-points { margin: 4px 0; font-size: 0.8rem; color: var(--muted); }
+.grammar-search { width: 100%; box-sizing: border-box; margin: 8px 0 0; padding: 8px 10px; border: 1px solid var(--muted); border-radius: 10px; background: var(--bg); color: var(--fg); font-size: 0.9rem; }

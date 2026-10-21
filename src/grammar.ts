@@ -1439,3 +1439,10 @@ export function saveClears(c: Record<string, number>): void {
   }
 }
 export const unitStars = (clears: number) => (clears >= 5 ? 3 : clears >= 3 ? 2 : clears >= 1 ? 1 : 0)
+
+// 単元さがし：タイトル・要点・例文にキーワードがふくまれる単元（大文字小文字は区別しない）
+export function searchUnits<T extends GrammarUnit>(units: T[], q: string): T[] {
+  const k = q.trim().toLowerCase()
+  if (!k) return units
+  return units.filter((u) => [u.title, ...u.points, ...u.examples.map((e) => e.en)].some((t) => t.toLowerCase().includes(k)))
+}

@@ -140,3 +140,13 @@ it('全問正解の回数で単元の★がふえる', async () => {
   saveClears({ be: 2 })
   expect(loadClears()).toEqual({ be: 2 })
 })
+
+it('キーワードで単元をさがせる', async () => {
+  const { searchUnits } = await import('./grammar')
+  expect(searchUnits(GRAMMAR, '')).toBe(GRAMMAR)
+  const r = searchUnits(GRAMMAR, '関係代名詞')
+  expect(r.length).toBeGreaterThan(2)
+  expect(r.every((u) => [u.title, ...u.points].some((t) => t.includes('関係代名詞')) || u.examples.some((e) => e.en.includes('関係代名詞')))).toBe(true)
+  expect(searchUnits(GRAMMAR, 'WHOSE').some((u) => u.id === 'whose')).toBe(true)
+  expect(searchUnits(GRAMMAR, 'zzzz')).toEqual([])
+})

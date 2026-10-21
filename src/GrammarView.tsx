@@ -16,7 +16,7 @@ import { GrammarDuel } from './GrammarDuelView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -53,6 +53,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [goalReached, setGoalReached] = useState(false)
   const [firstClear, setFirstClear] = useState(false) // この回ではじめて全問正解した
   const [fav, setFav] = useState(loadGrammarFav)
+  const [keyword, setKeyword] = useState('')
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
@@ -276,8 +277,12 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             ))}
           </div>
         )}
+        {stampMode && (
+          <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：関係代名詞・have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
+        )}
+        {stampMode && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
         <ul className="grammar-list">
-          {favFirst(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), stampMode ? fav : []).map((u) => (
+          {favFirst(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword), stampMode ? fav : []).map((u) => (
             <li key={u.id} className={stampMode ? 'with-fav' : undefined}>
               {stampMode && (
                 <button
