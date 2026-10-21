@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -165,6 +165,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [chanceAt, setChanceAt] = useState(-1)
   if (picked === null && isChance(enraged, index) && chanceAt !== index) setChanceAt(index)
   const chance = chanceAt === index
+  const [chargeAt, setChargeAt] = useState(-1)
+  if (picked === null && isCharge(enraged, index) && chargeAt !== index && !chance) setChargeAt(index)
+  const charge = chargeAt === index
 
   function pick(i: number) {
     if (picked !== null || won || lost) return
@@ -187,7 +190,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
-      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0)
+      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0)
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (recordHit(hp - nextHp)) setNewRecord(hp - nextHp)
@@ -209,17 +212,19 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setCombo(0)
       const canSave = !!skill && saves < skillSaves(skill.id, lv)
       const guard = skill?.id === 'guard' && canSave
-      const revive = skill?.id === 'revive' && canSave && hearts - 1 <= 0
+      const revive = skill?.id === 'revive' && canSave && hearts - (charge ? 2 : 1) <= 0
       if (guard || revive) onSkill?.()
       if (guard) {
         setSaves(saves + 1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハートを守った`)
       } else if (revive) {
         setSaves(saves + 1)
+        setHearts(1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
       } else {
-        setHearts(hearts - 1)
-        if (hearts - 1 <= 0) onLose?.()
+        const lose = charge ? 2 : 1
+        setHearts(Math.max(0, hearts - lose))
+        if (hearts - lose <= 0) onLose?.()
       }
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
@@ -292,6 +297,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setDrop(null)
     setContinued(false)
     setChanceAt(-1)
+    setChargeAt(-1)
     setSaves(0)
     setSkillMsg('')
   }
@@ -306,6 +312,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       </div>
       {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
+      {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}
+      {charge && picked !== null && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
         <BossFigure hit={hit} look={look} />
         {hit && lastDmg > 0 && (

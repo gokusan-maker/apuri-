@@ -219,9 +219,9 @@ it('負けてもコインでコンティニューして続きから戦える（1
   fireEvent.click(screen.getByText(/コンティニュー/))
   expect(spend).toHaveBeenCalledWith(20)
   expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
-  for (let i = 0; i < 3; i++) {
+  for (let i = 0; i < 3 && !screen.queryByText('まけてしまった…'); i++) {
     answer(false)
-    fireEvent.click(screen.getByText('次へ'))
+    if (!screen.queryByText('まけてしまった…')) fireEvent.click(screen.getByText('次へ'))
   }
   expect(screen.queryByText(/コンティニュー/)).not.toBeInTheDocument()
 })
@@ -263,4 +263,18 @@ it('金色ボスをたおすとおまけコイン', () => {
   expect(screen.getByText('金色のヤミモチ')).toBeInTheDocument()
   answer(true)
   expect(bonus).toHaveBeenCalledWith(20)
+})
+
+it('ためこうげきの問題をまちがえるとハートが2つへる', () => {
+  vi.setSystemTime(Date.now() + 5000)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  for (let i = 0; i < 4; i++) {
+    answer(true)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(/力をためている/)).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  answer(false)
+  expect(screen.getByText(/ためこうげき！ ハートが2つへった/)).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 1')).toBeInTheDocument()
 })

@@ -130,3 +130,12 @@ it('ボス戦の背景は単語帳のレベルごとに変わる', async () => {
   expect(bossBgOf('会話')).toBe('sea')
   for (const l of LEVELS) expect(Object.keys(BOSS_BGS)).toContain(bossBgOf(l))
 })
+
+it('ためこうげきは5問に1問で、チャンス問題とは重ならない', async () => {
+  const { isCharge } = await import('./boss')
+  expect(isCharge(false, 4)).toBe(true)
+  expect(isCharge(false, 3)).toBe(false)
+  expect(isCharge(false, 9)).toBe(true)
+  expect(isCharge(true, 14)).toBe(false) // 14 はチャンス問題
+  for (let i = 0; i < 30; i++) expect(isCharge(true, i) && isChance(true, i)).toBe(false)
+})

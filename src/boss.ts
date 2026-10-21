@@ -104,6 +104,10 @@ export function battleRank(hearts: number, crits: number): Rank {
 export const isEnraged = (hp: number, maxHp: number) => hp > 0 && hp <= maxHp / 2
 export const isChance = (enraged: boolean, index: number) => enraged && index % 3 === 2
 
+// ためこうげき：5問に1問、ボスが力をためる。まちがえるとハート2つ、正解ならボスがひるんでダメージ+5
+export const CHARGE_STUN = 5
+export const isCharge = (enraged: boolean, index: number) => index % 5 === 4 && !isChance(enraged, index)
+
 // ボスラッシュ：中1→中2→中3のボスと3連戦（ハートは引き継ぎ）。1日1回、全部たおすと大きなごほうび
 export const RUSH_LEVELS: Level[] = ['中1', '中2', '中3']
 export const RUSH_COINS = 100
