@@ -25,6 +25,8 @@ type Props = {
   dragonUp?: boolean
   pickup?: Species // 日替わりピックアップ
   gachaPrice?: number // ガチャの値段
+  gachaPoints?: number // ガチャポイント
+  onExchange?: () => GachaResult | null // ポイントでスーパーレア以上と交換
   onGachaMulti?: (n: number) => GachaResult[] // まとめて引く
   stepLeft?: number // ステップアップ：あと何回でレア以上確定
   bag?: BattleBag // 持っているバトルアイテム
@@ -32,7 +34,7 @@ type Props = {
   favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -59,7 +61,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           )}
         </div>
       </div>
-      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} />}
+      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} points={gachaPoints} onExchange={onExchange} />}
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (

@@ -597,6 +597,20 @@ describe('App', () => {
     expect(screen.getByText(/称号「ポーズマスター」/)).toBeInTheDocument()
   })
 
+  it('ガチャポイントが20たまるとスーパーレア以上と交換できる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
+    localStorage.setItem('eitan:gacha-points', '19')
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    expect(screen.queryByText('🎫 交換する')).toBeNull()
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    fireEvent.click(screen.getByText('🎫 交換する'))
+    rnd.mockRestore()
+    expect(screen.getByText(/スーパーレア！/)).toBeInTheDocument()
+    expect(localStorage.getItem('eitan:gacha-points')).toBe('0')
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

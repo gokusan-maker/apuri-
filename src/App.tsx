@@ -52,7 +52,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -270,6 +270,7 @@ function App() {
   const [warm, setWarm] = usePersistent(loadWarm, saveWarm)
   const [keys, setKeys] = usePersistent(loadKeys, saveKeys)
   const [shards, setShards] = usePersistent(loadShards, saveShards)
+  const [gachaPoints, setGachaPoints] = usePersistent(loadGachaPoints, saveGachaPoints)
   const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
@@ -699,6 +700,7 @@ function App() {
       setParty(p)
       setGachaStep(st)
       saveGachaStats(addStats(loadGachaStats(), out.map((k) => k.kind.rarity)))
+      setGachaPoints((pt) => pt + out.length)
       count('gacha', out.length)
       if (bonusXp > 0) gainXp(bonusXp, null)
     }
@@ -914,6 +916,17 @@ function App() {
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           onGachaMulti={(n) => drawMany(false, n)}
+          gachaPoints={gachaPoints}
+          onExchange={() => {
+            if (gachaPoints < POINTS_FOR_SR) return null
+            const r = srEgg(party, rand(), rand())
+            if (!r) return null
+            setParty(r.party)
+            setGachaPoints((pt) => pt - POINTS_FOR_SR)
+            const newSpecies = r.species.id !== 'mochi' && !party.members.some((m) => m.species === r.species.id)
+            const newKind = !party.members.some((m) => m.kind === r.kind.id)
+            return { kind: r.kind, species: r.species, newKind, newSpecies }
+          }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)
             if (!r) return

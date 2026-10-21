@@ -193,3 +193,30 @@ export function gachaShareText(items: { kindName: string; normal: boolean; speci
   const names = items.map((k) => `${k.normal ? '' : `${k.kindName}の`}${k.speciesName}（${k.rarity}）`)
   return `イングリッシュモンスターのガチャで ${names.join('・')} が出た！`
 }
+
+// ガチャポイント交換所：ガチャ1回で1ポイント。20ポイントでスーパーレア以上確定のタマゴ
+export const POINTS_FOR_SR = 20
+const POINT_KEY = 'eitan:gacha-points'
+export function loadGachaPoints(): number {
+  try {
+    const n = Number(localStorage.getItem(POINT_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function saveGachaPoints(n: number): void {
+  try {
+    localStorage.setItem(POINT_KEY, String(n))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+// きんいろ85%・にじいろ15%（仲間がいっぱいなら null）
+export function srEgg(p: Party, r: number, r2: number): { party: Party; kind: Kind; species: Species } | null {
+  if (p.members.length >= PARTY_MAX) return null
+  const kind = r < 0.85 ? kindOf('kin') : kindOf('niji')
+  const species = rollSpecies(r2)
+  const egg = { xp: 0, kind: kind.id, ...(species.id === 'mochi' ? {} : { species: species.id }) }
+  return { party: { ...p, members: [...p.members, egg] }, kind, species }
+}

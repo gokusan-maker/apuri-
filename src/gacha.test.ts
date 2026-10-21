@@ -227,3 +227,15 @@ it('ガチャの結果をシェア用の文にする', async () => {
   expect(gachaShareText([{ kindName: 'きんいろ', normal: false, speciesName: 'ドラコ', rarity: 'スーパーレア' }])).toBe('イングリッシュモンスターのガチャで きんいろのドラコ（スーパーレア） が出た！')
   expect(gachaShareText([{ kindName: 'ふつう', normal: true, speciesName: 'モチ', rarity: 'ノーマル' }, { kindName: 'うみ色', normal: false, speciesName: 'モチ', rarity: 'レア' }])).toContain('モチ（ノーマル）・うみ色のモチ（レア）')
 })
+
+it('ポイント交換のタマゴはスーパーレア以上', async () => {
+  const { srEgg, loadGachaPoints, saveGachaPoints } = await import('./gacha')
+  const p = { members: [{ xp: 0 }], active: 0 }
+  expect(srEgg(p, 0, 0.5)!.kind.id).toBe('kin')
+  expect(srEgg(p, 0.9, 0.5)!.kind.id).toBe('niji')
+  expect(srEgg({ members: Array.from({ length: 12 }, () => ({ xp: 0 })), active: 0 }, 0, 0)).toBeNull()
+  localStorage.clear()
+  expect(loadGachaPoints()).toBe(0)
+  saveGachaPoints(21)
+  expect(loadGachaPoints()).toBe(21)
+})

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
+import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -32,6 +32,8 @@ type Props = {
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
   pityLeft?: number // あと何回でスーパーレア以上が確定
+  points?: number // ガチャポイント
+  onExchange?: () => GachaResult | null // 20ポイントでスーパーレア以上確定
   dragonUp?: boolean // 週末はドラコが出やすい
   pickup?: Species // 日替わりピックアップ（出やすい）
   price?: number // 1回の値段（ゴールデンタイムは安い）
@@ -42,7 +44,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [stats, setStats] = useState(loadGachaStats)
@@ -139,6 +141,26 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      {points !== undefined && (
+        <p className="gacha-points">
+          🎫 ガチャポイント {Math.min(points, POINTS_FOR_SR)} / {POINTS_FOR_SR}（たまるとスーパーレア以上確定と交換）
+          {onExchange && points >= POINTS_FOR_SR && members < PARTY_MAX && (
+            <button
+              className="list-link"
+              onClick={() => {
+                const k = onExchange()
+                if (k) {
+                  setMulti(null)
+                  setResult({ ...k, key: Date.now() })
+                  record(k)
+                }
+              }}
+            >
+              🎫 交換する
+            </button>
+          )}
+        </p>
+      )}
       {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log">

@@ -1302,3 +1302,4 @@ button:focus:not(:focus-visible) { outline: none; }
   .no-print, .tabbar, header, .toast { display: none !important; }
   .grammar-print { box-shadow: none; background: #fff; color: #000; }
 }
+.gacha-points { margin: 4px 0; font-size: 0.8rem; color: var(--muted); }
