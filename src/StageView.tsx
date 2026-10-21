@@ -4,7 +4,7 @@ import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
-import { loadUniv, saveUniv, UNIV_BOSSES, univUnlocked, type UnivBoss } from './univ'
+import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { usePersistent } from './usePersistent'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -156,6 +156,18 @@ export function Stages({ levels, record, onClear, onAnswer, boss = {}, onBossWin
         <summary>
           🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
         </summary>
+        {(() => {
+          const day = univGraduated(univ)
+          return (
+            day && (
+              <div className="univ-diploma" role="note">
+                <strong>🎓 合格証書</strong>
+                <span>あなたは大学入試の塔の全{UNIV_BOSSES.length}階を制覇しました。ここに合格を証します。</span>
+                <span className="univ-diploma-day">{day.replace(/-/g, '/')}　えいたん塔 学長 アカモンドラゴン</span>
+              </div>
+            )
+          )
+        })()}
         <p className="stats-note">大学にちなんだボスが待つ塔。下の階から順に挑戦しよう（高校基礎・熟語の単語と、4問に1問は文法問題）。</p>
         <ol className="univ-floors">
           {[...UNIV_BOSSES].reverse().map((b) => {

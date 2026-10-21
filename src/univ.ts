@@ -23,6 +23,12 @@ export function univUnlocked(i: number, rec: UnivRecord): boolean {
   return i === 0 || !!rec[UNIV_BOSSES[i - 1].id]
 }
 
+// 全階を制覇した日（いちばん最後に初めて倒した日）。まだなら null
+export function univGraduated(rec: UnivRecord): string | null {
+  if (!UNIV_BOSSES.every((b) => rec[b.id])) return null
+  return UNIV_BOSSES.map((b) => rec[b.id]).sort().at(-1) ?? null
+}
+
 const KEY = 'eitan:univ'
 
 export function loadUniv(): UnivRecord {

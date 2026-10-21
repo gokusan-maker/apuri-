@@ -1,5 +1,5 @@
 import { beforeEach, expect, it } from 'vitest'
-import { loadUniv, saveUniv, UNIV_BOSSES, univUnlocked } from './univ'
+import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked } from './univ'
 
 beforeEach(() => localStorage.clear())
 
@@ -35,4 +35,11 @@ it('塔のボス戦は4問に1問が文法問題', async () => {
   expect(qs.filter((q) => q.word.id === '')).toHaveLength(5)
   expect(qs[3].choices[qs[3].answer]).toBe(qs[3].word.ja)
   expect(bossQuestions(wordsOf(['中1']), false).every((q) => q.word.id)).toBe(true)
+})
+
+it('全階を倒すと、最後に倒した日が制覇した日になる', () => {
+  const rec = Object.fromEntries(UNIV_BOSSES.map((b) => [b.id, '2026-10-01']))
+  expect(univGraduated(rec)).toBe('2026-10-01')
+  expect(univGraduated({ ...rec, okuma: '2026-10-19' })).toBe('2026-10-19')
+  expect(univGraduated({ gate: '2026-10-20' })).toBeNull()
 })

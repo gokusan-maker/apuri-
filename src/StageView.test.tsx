@@ -2,6 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
+import { UNIV_BOSSES } from './univ'
 
 describe('ステージ画面', () => {
   it('ステージ1だけ遊べて、全問正解で星3つ', () => {
@@ -72,4 +73,20 @@ it('今日のボスに勝つと onDailyWin が呼ばれる', () => {
   expect(screen.getByText('← にげる')).toBeInTheDocument()
   // ボスを最後までたおすのは BossView のテストで確かめているので、ここでは出現だけ確認
   expect(won).toBe(0)
+})
+
+it('大学入試の塔を全階制覇すると合格証書が出る', () => {
+  const rec = Object.fromEntries(UNIV_BOSSES.map((b, i) => [b.id, `2026-10-${String(10 + i).padStart(2, '0')}`]))
+  localStorage.setItem('eitan:univ', JSON.stringify(rec))
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(screen.getByText('🎓 合格証書')).toBeInTheDocument()
+  expect(screen.getByText(/2026\/10\/18/)).toBeInTheDocument()
+  localStorage.removeItem('eitan:univ')
+})
+
+it('まだ制覇していなければ合格証書は出ない', () => {
+  localStorage.setItem('eitan:univ', JSON.stringify({ gate: '2026-10-20' }))
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(screen.queryByText('🎓 合格証書')).not.toBeInTheDocument()
+  localStorage.removeItem('eitan:univ')
 })
