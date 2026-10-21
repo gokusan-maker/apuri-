@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
@@ -79,6 +79,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
   const [history, setHistory] = useState(loadLongHistory)
+  const [genreStats, setGenreStats] = useState(loadGenreStats)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
@@ -174,6 +175,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         {readingLevel(history) && (
           <p className="stats-note reading-level">
             🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）
+          </p>
+        )}
+        {Object.keys(genreStats).length > 0 && (
+          <p className="stats-note genre-stats">
+            📊 ジャンル別：
+            {GENRES.filter((g) => genreStats[g]).map((g) => `${g} ${Math.round((genreStats[g]![0] / genreStats[g]![1]) * 100)}%`).join('・')}
           </p>
         )}
         {readingLevel(history) && levelPick(readingLevel(history)!.name, record) && (
@@ -837,6 +844,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))
             setHistory(pushLongHistory(score / total))
+            setGenreStats(addGenreStats(genreOf(p), score, total))
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
             if (score > (record[p.id] ?? -1)) {
               const r = { ...record, [p.id]: score }

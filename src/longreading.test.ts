@@ -339,3 +339,12 @@ it('音読スピードは1分あたりの語数', async () => {
   expect(wpmOf(150, 90)).toBe(100)
   expect(wpmOf(100, 0)).toBe(0)
 })
+
+it('ジャンルごとの正答率をためる', async () => {
+  const { addGenreStats, loadGenreStats } = await import('./longreading')
+  localStorage.clear()
+  addGenreStats('物語', 8, 10)
+  expect(addGenreStats('物語', 9, 10)).toEqual({ 物語: [17, 20] })
+  addGenreStats('説明文', 5, 10)
+  expect(loadGenreStats()).toEqual({ 物語: [17, 20], 説明文: [5, 10] })
+})

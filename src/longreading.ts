@@ -2801,3 +2801,26 @@ export function levelPick(level: '初級' | '中級' | '上級', record: Record<
 
 // 音読タイム：1分あたりの語数（WPM）
 export const wpmOf = (words: number, sec: number) => (sec > 0 ? Math.round((words * 60) / sec) : 0)
+
+// ジャンルごとの正答率：［正解数, 問題数］
+const GENRE_KEY = 'eitan:long-genre'
+export function loadGenreStats(): Partial<Record<Genre, [number, number]>> {
+  try {
+    const v = JSON.parse(localStorage.getItem(GENRE_KEY) ?? '{}') as unknown
+    if (!isObj(v)) return {}
+    return Object.fromEntries(Object.entries(v).filter(([k, x]) => (GENRES as readonly string[]).includes(k) && Array.isArray(x) && x.length === 2 && x.every((n) => typeof n === 'number'))) as Partial<Record<Genre, [number, number]>>
+  } catch {
+    return {}
+  }
+}
+export function addGenreStats(g: Genre, ok: number, n: number): Partial<Record<Genre, [number, number]>> {
+  const all = loadGenreStats()
+  const [a, b] = all[g] ?? [0, 0]
+  const next = { ...all, [g]: [a + ok, b + n] as [number, number] }
+  try {
+    localStorage.setItem(GENRE_KEY, JSON.stringify(next))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return next
+}
