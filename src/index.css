@@ -1276,3 +1276,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-preempt p { margin: 0 0 4px; font-weight: 700; }
 .boss-preempt-choices { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
 .boss-preempt-result { margin: 4px 0; font-weight: 700; color: #1d4ed8; }
+.grade-tests { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; margin: 6px 0; }

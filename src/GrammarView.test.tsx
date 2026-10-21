@@ -281,3 +281,19 @@ it('まちがえた問題はまちがいノートに入り、正解すると消�
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
   expect(JSON.parse(localStorage.getItem('eitan:grammar-notebook')!)).toEqual([])
 })
+
+it('学年まとめテストはその学年の問題だけで、ベストが残る', async () => {
+  const { gradeOf } = await import('./grammar')
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByRole('button', { name: /📝 中1まとめ/ }))
+  const pool = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
+  for (let i = 0; i < 10; i++) {
+    const text = document.querySelector('.blank-sentence')!.textContent!
+    const q = pool.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))!
+    expect(q).toBeDefined()
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(JSON.parse(localStorage.getItem('eitan:grammar-mix-best') ?? '{}')['grade:中1']).toBe(10)
+})

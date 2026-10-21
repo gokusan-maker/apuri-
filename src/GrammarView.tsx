@@ -59,6 +59,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
   const daily = dailyGrammar(today)
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
+  const [gradeKey, setGradeKey] = useState('') // 学年まとめテストのベストのキー（grade:中1 など）
 
   function startBattle(u: GrammarUnit) {
     open(u)
@@ -124,6 +125,24 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         >
           📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
+        {stampMode && (
+          <div className="grade-tests" aria-label="学年まとめテスト">
+            {GRAMMAR_GRADES.filter((g) => g !== '高校').map((g) => (
+              <button
+                key={g}
+                className="list-link"
+                onClick={() => {
+                  const qs = shuffle(GRAMMAR.filter((u) => gradeOf(u.id) === g).flatMap((u) => u.questions)).slice(0, 10)
+                  setGradeKey(`grade:${g}`)
+                  open({ id: 'grade-test', title: `${g}の文法まとめテスト`, points: [], examples: [], questions: qs })
+                  setStep(0)
+                }}
+              >
+                📝 {g}まとめ{mixBest[`grade:${g}`] !== undefined ? `（ベスト ${mixBest[`grade:${g}`]}/10）` : ''}
+              </button>
+            ))}
+          </div>
+        )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setListen(true)}>
             👂 例文リスニング（聞いて空所の語を選ぶ・5問）
@@ -347,7 +366,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <p className="result-score">
           {score} / {unit.questions.length} 問正解
         </p>
-        {unit.id === 'mix-test' && (
+        {(unit.id === 'mix-test' || unit.id === 'grade-test') && (
           <p className={`battle-rank rank-${mixRank(score, unit.questions.length)}`} aria-label={`ランク ${mixRank(score, unit.questions.length)}`}>
             {mixRank(score, unit.questions.length)}
           </p>
@@ -412,6 +431,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setStreak(st)
     saveGrammarStreak(st)
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
+    if (unit.id === 'grade-test' && gradeKey && step === unit.questions.length - 1 && nextScore > (mixBest[gradeKey] ?? -1)) {
+      const b = { ...mixBest, [gradeKey]: nextScore }
+      setMixBest(b)
+      saveMixBest(b)
+    }
     if (unit.id === 'mix-test' && step === unit.questions.length - 1 && nextScore > (mixBest[title] ?? -1)) {
       const b = { ...mixBest, [title]: nextScore }
       setMixBest(b)
