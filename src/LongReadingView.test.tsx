@@ -265,3 +265,16 @@ it('今日の1本のボタンでその日の長文が開く', async () => {
   fireEvent.click(screen.getByText(/📅 今日の1本/))
   expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent(shownTitle(p, LONG_PASSAGES.indexOf(p)))
 })
+
+it('段落ごとに和訳を開いたり閉じたりできる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  expect(screen.queryByText(p.ja[1])).toBeNull()
+  fireEvent.click(screen.getByLabelText('第2段落の和訳'))
+  expect(screen.getByText(p.ja[1])).toBeInTheDocument()
+  expect(screen.queryByText(p.ja[0])).toBeNull()
+  fireEvent.click(screen.getByLabelText('第2段落の和訳'))
+  expect(screen.queryByText(p.ja[1])).toBeNull()
+})

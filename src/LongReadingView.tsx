@@ -79,6 +79,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [readWords, setReadWords] = useState(loadReadWords)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
+  const [jaParas, setJaParas] = useState<number[]>([]) // 和訳を開いている段落
   const [bestTime, setBestTime] = useState(false)
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
@@ -106,6 +107,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
     setSeq(d?.seq ?? [])
     setDone(false)
     setShowJa(false)
+    setJaParas([])
     setResumed(!!d)
   }
 
@@ -258,8 +260,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
               <button className="speak small long-speak" aria-label={`第${i + 1}段落を聞く`} onClick={() => speak(readable(t))}>
                 🔊
               </button>
+              <button className="speak small long-speak" aria-label={`第${i + 1}段落の和訳`} aria-pressed={jaParas.includes(i)} onClick={() => setJaParas(jaParas.includes(i) ? jaParas.filter((x) => x !== i) : [...jaParas, i])}>
+                訳
+              </button>
             </div>
-            {showJa && <p className="long-ja">{p.ja[i]}</p>}
+            {(showJa || jaParas.includes(i)) && <p className="long-ja">{p.ja[i]}</p>}
             {p.insert && p.insert.after.includes(i) && <p className="long-insert-mark">［{MARKS[p.insert.after.indexOf(i)]}］</p>}
           </div>
         ))}
