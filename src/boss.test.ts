@@ -149,3 +149,10 @@ it('ボスの最短タイムは短くなったときだけ更新', async () => {
   expect(loadBossTimes()).toEqual({ モチ: 60 })
   expect(formatSec(65)).toBe('1分05秒')
 })
+
+it('Sランクのルーレットはコインかアイテム', async () => {
+  const { sRouletteOf, S_ROULETTE } = await import('./boss')
+  expect(sRouletteOf(0)).toBe(S_ROULETTE[0])
+  expect(sRouletteOf(0.999)).toBe(S_ROULETTE[S_ROULETTE.length - 1])
+  expect(S_ROULETTE.some((p) => p.kind === 'item')).toBe(true)
+})

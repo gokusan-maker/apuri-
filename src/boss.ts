@@ -267,3 +267,14 @@ export const PREEMPT_DAMAGE = 10
 
 // ボスの子分：HPが半分になるとあらわれ、次の正解でたおすと🪙2
 export const MINION_COINS = 2
+
+// Sランクのごほうびルーレット：コインかバトルアイテムが当たる
+export const S_ROULETTE: ({ kind: 'coins'; amount: number } | { kind: 'item'; id: 'bomb' | 'charm' | 'clock' })[] = [
+  { kind: 'coins', amount: 5 },
+  { kind: 'item', id: 'charm' },
+  { kind: 'coins', amount: 10 },
+  { kind: 'item', id: 'clock' },
+  { kind: 'coins', amount: 20 },
+  { kind: 'item', id: 'bomb' },
+]
+export const sRouletteOf = (r: number) => S_ROULETTE[Math.min(S_ROULETTE.length - 1, Math.floor(r * S_ROULETTE.length))]

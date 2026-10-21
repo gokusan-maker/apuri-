@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -156,6 +156,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [sPrize, setSPrize] = useState<ReturnType<typeof sRouletteOf> | null>(null)
   const [minion, setMinion] = useState<'none' | 'here' | 'beaten'>('none') // 子分
   const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
   const [preempt, setPreempt] = useState<boolean | null>(null) // 先制クイズの結果（null＝まだ）
@@ -308,6 +309,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setSPrize(null)
     setMinion('none')
     setMinionAt(-1)
     startedAt.current = nowMs()
@@ -495,6 +497,23 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 <span key={`g${i}`} className="confetti gold" aria-hidden="true" style={{ left: `${(i * 37 + 5) % 100}%`, animationDelay: `${(i % 8) * 0.1}s` }} />
               ))}
               <p className="perfect-banner">PERFECT!</p>
+              {sPrize === null ? (
+                <button
+                  className="special-btn"
+                  onClick={() => {
+                    const p = sRouletteOf(rnd())
+                    setSPrize(p)
+                    if (p.kind === 'coins') onRankBonus?.(p.amount)
+                    else onDrop?.(p.id)
+                  }}
+                >
+                  🎡 Sランクのごほうびルーレットをまわす
+                </button>
+              ) : (
+                <p className="boss-drop">
+                  🎡 {sPrize.kind === 'coins' ? `🪙${sPrize.amount}` : `${BATTLE_ITEMS.find((it) => it.id === sPrize.id)!.icon} ${BATTLE_ITEMS.find((it) => it.id === sPrize.id)!.name}`} が当たった！
+                </p>
+              )}
             </>
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
