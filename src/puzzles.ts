@@ -385,6 +385,34 @@ export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
 }
 
+// 同じ発音でつづりと意味がちがう単語（同音異義語）
+export const HOMOPHONES: [string, string, string, string][] = [
+  ['sea', '海', 'see', '見る'], ['son', '息子', 'sun', '太陽'], ['two', '2', 'too', '〜も'], ['eight', '8', 'ate', '食べた'],
+  ['right', '右・正しい', 'write', '書く'], ['flower', '花', 'flour', '小麦粉'], ['meet', '会う', 'meat', '肉'],
+  ['hear', '聞こえる', 'here', 'ここに'], ['know', '知っている', 'no', 'いいえ'], ['week', '週', 'weak', '弱い'],
+  ['blue', '青', 'blew', '（風が）ふいた'], ['buy', '買う', 'bye', 'さようなら'], ['road', '道', 'rode', '乗った'],
+  ['tail', 'しっぽ', 'tale', 'お話'], ['pair', '1組', 'pear', '洋なし'], ['hour', '1時間', 'our', '私たちの'],
+  ['knight', '騎士', 'night', '夜'], ['mail', '郵便', 'male', '男性の'],
+]
+
+export function homophoneQ(rng: Rng = Math.random): PuzzleQ {
+  const i = Math.floor(rng() * HOMOPHONES.length)
+  const flip = rng() < 0.5
+  const [a, aJa, b, bJa] = HOMOPHONES[i]
+  const [ask, askJa, ans, ansJa] = flip ? [b, bJa, a, aJa] : [a, aJa, b, bJa]
+  const others = shuffle(HOMOPHONES.filter((_, j) => j !== i), rng)
+    .slice(0, 3)
+    .map((h) => h[rng() < 0.5 ? 0 : 2])
+  const choices = shuffle([ans, ...others], rng)
+  return {
+    prompt: `「${ask}（${askJa}）」と同じ発音の単語は？`,
+    choices,
+    answer: choices.indexOf(ans),
+    why: `${ask}（${askJa}）と ${ans}（${ansJa}）は同じ発音`,
+    wordId: idOf(ask) ?? idOf(ans) ?? '',
+  }
+}
+
 // 英語なぞなぞ（昔から言われている短いなぞなぞ）
 export const RIDDLES: { q: string; ja: string; a: string }[] = [
   { q: "I have keys, but I can't open locks. What am I?", ja: 'かぎ（キー）があるのに、錠は開けられない', a: 'piano' },

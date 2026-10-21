@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -181,4 +181,16 @@ describe('パズル', () => {
       else expect(a).toBe("doesn't")
     }
   })
+})
+
+it('同じ発音の単語：答えは組になった相手で、選択肢は重ならない', () => {
+  const all = HOMOPHONES.flatMap((h) => [h[0], h[2]])
+  expect(new Set(all).size).toBe(all.length)
+  for (let i = 0; i < 40; i++) {
+    const q = homophoneQ()
+    const ask = q.prompt.match(/「(\w+)（/)![1]
+    const pair = HOMOPHONES.find((h) => h[0] === ask || h[2] === ask)!
+    expect(q.choices[q.answer]).toBe(pair[0] === ask ? pair[2] : pair[0])
+    expect(new Set(q.choices).size).toBe(4)
+  }
 })
