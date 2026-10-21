@@ -3751,6 +3751,16 @@ const WORDS_4: Word[] = [
   { id: 'sounds-like-fun', en: 'Sounds like fun!', ja: '楽しそうだね！', example: '"Let\'s go camping!" "Sounds like fun!"', exampleJa: '「キャンプに行こう！」「楽しそうだね！」', level: '会話' },
   { id: 'good-question', en: 'Good question', ja: 'いい質問だね', example: 'Good question. Let me think about it.', exampleJa: 'いい質問だね。ちょっと考えさせて。', level: '会話' },
   { id: 'bless-you', en: 'Bless you', ja: 'お大事に（くしゃみをした人に）', example: '"Achoo!" "Bless you!"', exampleJa: '「ハクション！」「お大事に！」', level: '会話' },
+  { id: 'happy-new-year', en: 'Happy New Year!', ja: 'あけましておめでとう！', example: 'Happy New Year! Let\'s have a great year.', exampleJa: 'あけましておめでとう！いい1年にしよう。', level: '会話' },
+  { id: 'merry-christmas', en: 'Merry Christmas!', ja: 'メリークリスマス！', example: 'Merry Christmas! Here is a present for you.', exampleJa: 'メリークリスマス！プレゼントをどうぞ。', level: '会話' },
+  { id: 'trick-or-treat', en: 'Trick or treat!', ja: 'お菓子をくれないといたずらするぞ！', example: 'The children knocked and said, "Trick or treat!"', exampleJa: '子どもたちはノックして「お菓子をくれないといたずらするぞ！」と言った。', level: '会話' },
+  { id: 'thanks-for-coming', en: 'Thanks for coming', ja: '来てくれてありがとう', example: 'Thanks for coming to my party!', exampleJa: 'パーティーに来てくれてありがとう！', level: '会話' },
+  { id: 'how-kind-of-you', en: 'How kind of you!', ja: 'なんてご親切に！', example: 'You carried my bag? How kind of you!', exampleJa: 'かばんを運んでくれたの？なんて親切なんだ！', level: '会話' },
+  { id: 'i-made-a-mistake', en: 'I made a mistake', ja: 'まちがえちゃった', example: 'Sorry, I made a mistake on the board.', exampleJa: 'ごめん、黒板にまちがえて書いちゃった。', level: '会話' },
+  { id: 'no-idea', en: 'I have no idea', ja: 'さっぱりわからない', example: '"Where is Ken?" "I have no idea."', exampleJa: '「ケンはどこ？」「さっぱりわからない。」', level: '会話' },
+  { id: 'see-you-in-class', en: 'See you in class', ja: '授業でね', example: 'I\'m going to the library. See you in class!', exampleJa: '図書館に行くね。授業でね！', level: '会話' },
+  { id: 'are-you-sure', en: 'Are you sure?', ja: '本当に？・確かなの？', example: '"The test is tomorrow." "Are you sure?"', exampleJa: '「テストは明日だよ。」「本当に？」', level: '会話' },
+  { id: 'i-understand', en: 'I understand', ja: 'わかりました', example: 'I understand. I\'ll do it right away.', exampleJa: 'わかりました。すぐにやります。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
