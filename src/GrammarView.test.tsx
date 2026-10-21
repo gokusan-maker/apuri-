@@ -254,3 +254,13 @@ it('今週の目標を決めて、達成するとチケットのお知らせ', (
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText(/全問正解 3 \/ 3 単元 ✅ たっせい/)).toBeInTheDocument()
 })
+
+it('解説の下によくあるまちがいが出る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const unit = GRAMMAR.find((u) => u.id === 'third')!
+  fireEvent.click(screen.getByText(unit.title))
+  expect(screen.getByText('⚠ よくあるまちがい')).toBeInTheDocument()
+  expect(screen.getByText('✕ He play soccer every day.')).toBeInTheDocument()
+  expect(screen.getByText('○ He plays soccer every day.')).toBeInTheDocument()
+})

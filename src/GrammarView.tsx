@@ -8,6 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
+import { mistakeOf } from './grammarmistake'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
@@ -273,6 +274,14 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             <li key={p}>{p}</li>
           ))}
         </ul>
+        {mistakeOf(unit.id) && (
+          <div className="grammar-mistake">
+            <p className="grammar-mistake-title">⚠ よくあるまちがい</p>
+            <p className="ng">✕ {mistakeOf(unit.id)!.wrong}</p>
+            <p className="ok">○ {mistakeOf(unit.id)!.right}</p>
+            <p className="why">{mistakeOf(unit.id)!.why}</p>
+          </div>
+        )}
         {unit.examples.map((ex) => (
           <p key={ex.en} className="grammar-example">
             <span>

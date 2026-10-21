@@ -1239,3 +1239,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .goal-choices button.on { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
 .long-insert-mark { margin: 2px 0 8px; text-align: center; font-weight: 800; color: #2563eb; }
 .long-insert-sentence { margin: 0 0 8px; padding: 8px; border-left: 4px solid #2563eb; background: var(--bg); text-align: left; font-style: italic; }
+.grammar-mistake { margin: 8px 0; padding: 8px 10px; border-radius: 12px; background: var(--bg); text-align: left; font-size: 0.9rem; }
+.grammar-mistake p { margin: 2px 0; }
+.grammar-mistake-title { font-weight: 800; color: #b45309; }
+.grammar-mistake .ng { color: #dc2626; text-decoration: line-through; text-decoration-thickness: 1px; }
+.grammar-mistake .ok { color: #16a34a; font-weight: 700; }
+.grammar-mistake .why { font-size: 0.8rem; color: var(--muted); }
