@@ -6,7 +6,8 @@
   --accent: #2563eb;
   --accent-fg: #ffffff;
   --again: #dc2626;
-  font-family: system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+  /* 日本語フォントを先に指定する（system-ui が先だと中国語の字形で表示される端末がある） */
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Noto Sans CJK JP', 'BIZ UDPGothic', 'Yu Gothic UI', 'Yu Gothic', YuGothic, Meiryo, 'Source Han Sans JP', -apple-system, system-ui, sans-serif;
   color: var(--fg);
   background: var(--bg);
 }
@@ -31,6 +32,7 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); }
 button { font: inherit; cursor: pointer; }
+input, select, textarea { font-family: inherit; }
 
 .app {
   max-width: 480px;
@@ -228,7 +230,7 @@ h1 { font-size: 1.6rem; margin: 8px 0 4px; }
 
 .direction { flex-wrap: wrap; }
 .card-tabs { margin-top: 16px; }
-.hint { font-family: ui-monospace, monospace; font-size: 1.3rem; letter-spacing: 0.05em; margin: 8px 0 12px; }
+.hint { font-family: ui-monospace, monospace, 'Hiragino Sans', 'Noto Sans JP', 'Noto Sans CJK JP', 'Yu Gothic', Meiryo, sans-serif; font-size: 1.3rem; letter-spacing: 0.05em; margin: 8px 0 12px; }
 .spell-input {
   width: 100%;
   padding: 14px;
