@@ -419,6 +419,41 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'They ___ been talking for thirty minutes.', choices: ['have', 'has', 'are'], answer: 0, why: 'they なので have。' },
     ],
   },
+  {
+    id: 'countable',
+    title: '数えられる名詞・数えられない名詞',
+    points: [
+      'book や apple のように1つ、2つと数えられる名詞は、2つ以上なら複数形（books）にする。',
+      'water・money・time などは数えられない名詞で、複数形にせず a / an もつけない。',
+      '「たくさんの」は、数えられる名詞なら many、数えられない名詞なら much（a lot of はどちらにも使える）。',
+    ],
+    examples: [
+      { en: 'I have many comic books.', ja: '私はたくさんマンガを持っている。' },
+      { en: 'We don\'t have much milk in the fridge.', ja: '冷蔵庫に牛乳があまりない。' },
+    ],
+    questions: [
+      { sentence: 'How ___ brothers do you have?', choices: ['much', 'many'], answer: 1, why: 'brothers は数えられる名詞の複数形なので many。' },
+      { sentence: 'Can I have some ___?', choices: ['water', 'a water', 'waters'], answer: 0, why: 'water は数えられないので a もつけず、複数形にもしない。' },
+      { sentence: 'There isn\'t ___ time before the bus comes.', choices: ['many', 'much'], answer: 1, why: 'time（時間）は数えられない名詞なので much。' },
+    ],
+  },
+  {
+    id: 'frequency',
+    title: '頻度を表す副詞（always / usually / sometimes / never）',
+    points: [
+      'どのくらいよくするかを表す。always（いつも）＞ usually（ふつうは）＞ often（よく）＞ sometimes（ときどき）＞ never（一度も〜ない）。',
+      '一般動詞の前、be動詞のあとに置く。',
+    ],
+    examples: [
+      { en: 'I usually walk to school.', ja: '私はふだん歩いて学校に行く。' },
+      { en: 'My father is always busy.', ja: '父はいつも忙しい。' },
+    ],
+    questions: [
+      { sentence: 'She ___ eats breakfast. She eats it every day.', choices: ['always', 'never', 'sometimes'], answer: 0, why: '毎日食べるので always（いつも）。' },
+      { sentence: 'I have ___ been to Hokkaido. I want to go someday.', choices: ['always', 'never', 'often'], answer: 1, why: '「いつか行きたい」ので一度も行ったことがない＝ never。' },
+      { sentence: 'Ken is ___ late for school.', choices: ['sometimes', 'sometime', 'some times'], answer: 0, why: '「ときどき」は sometimes。be動詞 is のあとに置く。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
