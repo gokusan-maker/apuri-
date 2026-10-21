@@ -1143,3 +1143,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .continue-btn { display: block; width: 100%; margin: 6px 0; background: linear-gradient(90deg, #f97316, #ef4444); color: #fff; }
 .daily-grammar { display: block; width: 100%; margin: 6px 0; padding: 8px 10px; border: 2px solid #22c55e; border-radius: 12px; background: #f0fdf4; text-align: left; font-weight: 800; }
 .daily-grammar span { display: block; font-size: 0.75rem; font-weight: 400; color: #15803d; }
+.long-para-row { display: flex; align-items: flex-start; gap: 4px; }
+.long-para-row .long-para { flex: 1; }
+.long-speak { flex: none; margin-top: 2px; }

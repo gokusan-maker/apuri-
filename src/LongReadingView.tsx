@@ -3,8 +3,12 @@ import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, MARKS, saveLo
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
+import { speak } from './speech'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
+
+// 読み上げ用：空所は「ブランク」と読まず、少し間をあける
+const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
 
 // 本文の「( A )」を目立つ空所にする
 function Paragraph({ text, underline }: { text: string; underline?: string }) {
@@ -111,7 +115,12 @@ export function LongReading({ onAnswer }: Props) {
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
-            <Paragraph text={t} underline={p.underline?.phrase} />
+            <div className="long-para-row">
+              <Paragraph text={t} underline={p.underline?.phrase} />
+              <button className="speak small long-speak" aria-label={`第${i + 1}段落を聞く`} onClick={() => speak(readable(t))}>
+                🔊
+              </button>
+            </div>
             {showJa && <p className="long-ja">{p.ja[i]}</p>}
           </div>
         ))}

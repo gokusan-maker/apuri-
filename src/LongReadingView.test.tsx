@@ -79,3 +79,20 @@ it('表を読みとる長文では表が出る', () => {
   expect(document.querySelectorAll('.long-table tbody tr')).toHaveLength(4)
   expect(screen.getByText('Tennis', { selector: 'td' })).toBeInTheDocument()
 })
+
+it('段落ごとに英語で読み上げられる（空所は読まない）', () => {
+  const spoken: string[] = []
+  Object.defineProperty(window, 'speechSynthesis', { configurable: true, value: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] } })
+  ;(globalThis as unknown as { SpeechSynthesisUtterance: unknown }).SpeechSynthesisUtterance = class {
+    text: string
+    constructor(t: string) {
+      this.text = t
+    }
+  }
+  render(<LongReading />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  fireEvent.click(screen.getByLabelText('第1段落を聞く'))
+  expect(spoken[0]).toContain('There is a small library')
+  expect(spoken[0]).not.toContain('( A )')
+})
