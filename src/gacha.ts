@@ -223,3 +223,29 @@ export function srEgg(p: Party, r: number, r2: number): { party: Party; kind: Ki
 
 // リーチ：そろわなかったけれど、はじめの2つが同じ絵
 export const isReach = (s: { reels: string[]; win: boolean }) => !s.win && s.reels[0] === s.reels[1]
+
+// きせかえカプセル：ふつうのカプセルの色を選べる（レア以上はレアの色が優先）
+export const CAPSULE_COLORS = [
+  { id: 'red', name: 'あか', color: '#f87171' },
+  { id: 'green', name: 'みどり', color: '#4ade80' },
+  { id: 'yellow', name: 'きいろ', color: '#facc15' },
+  { id: 'pink', name: 'ピンク', color: '#f472b6' },
+  { id: 'purple', name: 'むらさき', color: '#a78bfa' },
+] as const
+const CAPSULE_KEY = 'eitan:capsule-color'
+export function loadCapsule(): string {
+  try {
+    const v = localStorage.getItem(CAPSULE_KEY) ?? 'red'
+    return CAPSULE_COLORS.some((c) => c.id === v) ? v : 'red'
+  } catch {
+    return 'red'
+  }
+}
+export function saveCapsule(id: string): void {
+  try {
+    localStorage.setItem(CAPSULE_KEY, id)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const capsuleColorOf = (id: string) => (CAPSULE_COLORS.find((c) => c.id === id) ?? CAPSULE_COLORS[0]).color

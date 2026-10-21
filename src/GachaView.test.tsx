@@ -127,3 +127,11 @@ it('おまけカプセルが出たら表示する', () => {
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByText('🎁 おまけカプセル！ 🪙10')).toBeInTheDocument()
 })
+
+it('カプセルの色を選ぶと保存される', () => {
+  localStorage.clear()
+  render(<Gacha coins={100} members={1} onDraw={() => null} />)
+  fireEvent.click(screen.getByLabelText('カプセル みどり'))
+  expect(screen.getByLabelText('カプセル みどり')).toHaveAttribute('aria-pressed', 'true')
+  expect(localStorage.getItem('eitan:capsule-color')).toBe('green')
+})

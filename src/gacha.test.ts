@@ -249,3 +249,15 @@ it('はじめの2つがそろうとリーチ', async () => {
   for (let r = 0.04; r < 1; r += 0.001) if (isReach(slotOf(r))) reach++
   expect(reach).toBeGreaterThan(0)
 })
+
+it('カプセルの色は5色から選べて、知らない色はあか', async () => {
+  const { capsuleColorOf, CAPSULE_COLORS, loadCapsule, saveCapsule } = await import('./gacha')
+  expect(CAPSULE_COLORS).toHaveLength(5)
+  expect(capsuleColorOf('nope')).toBe(CAPSULE_COLORS[0].color)
+  localStorage.clear()
+  expect(loadCapsule()).toBe('red')
+  saveCapsule('pink')
+  expect(loadCapsule()).toBe('pink')
+  localStorage.setItem('eitan:capsule-color', 'gold')
+  expect(loadCapsule()).toBe('red')
+})

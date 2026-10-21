@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { isReach } from './gacha'
+import { capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -50,6 +50,7 @@ type Props = {
 export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
+  const [capsule, setCapsule] = useState(loadCapsule)
   const [stats, setStats] = useState(loadGachaStats)
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
@@ -144,6 +145,22 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      <p className="capsule-picker" role="group" aria-label="カプセルの色">
+        🎨 カプセル：
+        {CAPSULE_COLORS.map((c) => (
+          <button
+            key={c.id}
+            aria-label={`カプセル ${c.name}`}
+            aria-pressed={capsule === c.id}
+            className={capsule === c.id ? 'on' : undefined}
+            style={{ background: c.color }}
+            onClick={() => {
+              setCapsule(c.id)
+              saveCapsule(c.id)
+            }}
+          />
+        ))}
+      </p>
       {stickers && (
         <details className="sticker-book">
           <summary>
@@ -245,7 +262,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
-          <span className="gacha-capsule" aria-hidden="true" />
+          <span className="gacha-capsule" aria-hidden="true" style={result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
           <span className="gacha-egg">
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
