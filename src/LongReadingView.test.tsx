@@ -238,3 +238,20 @@ it('出来事の順番をタップで並べられる', () => {
   for (const i of p.seq!.answer) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.seq!.events[i]}` }))
   expect(screen.getByLabelText('並べた順番')).toHaveTextContent(p.seq!.answer.map((i) => MARKS[i]).join(' → '))
 })
+
+it('満点をとると最短タイムが記録される', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const keys = ['pick2', 'underline', 'order', 'sentences', 'qa', 'table', 'refer', 'gist', 'titleQ', 'complete', 'insert', 'summary', 'vocab', 'seq']
+  const p = LONG_PASSAGES.find((x) => keys.every((k) => !(k in x)))!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  for (const b of p.blanks) {
+    const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
+    fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
+  }
+  p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${t.answer ? '○' : '×'}` })))
+  vi.setSystemTime(Date.now() + 60000)
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  expect(screen.getByText(/最短タイム更新！/)).toBeInTheDocument()
+  expect(JSON.parse(localStorage.getItem('eitan:long-best-time')!)[p.id]).toBe(60)
+})

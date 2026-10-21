@@ -271,3 +271,12 @@ it('出来事の順番は全部の順番が合って1点', async () => {
     expect(scoreLong(p, {}, {}, [], { seq: q.answer }).score).toBe(1)
   }
 })
+
+it('長文の最短タイムは短くなったときだけ更新', async () => {
+  const { loadLongTimes, recordLongTime } = await import('./longreading')
+  localStorage.clear()
+  expect(recordLongTime('a', 300)).toBe(true)
+  expect(recordLongTime('a', 400)).toBe(false)
+  expect(recordLongTime('a', 250)).toBe(true)
+  expect(loadLongTimes()).toEqual({ a: 250 })
+})

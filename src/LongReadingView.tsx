@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -78,6 +78,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
   const [readWords, setReadWords] = useState(loadReadWords)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
+  const [bestTime, setBestTime] = useState(false) // この回で最短タイムを更新した
   const [genre, setGenre] = useState<Genre | 'all'>('all')
 
   function openPassage(x: LongPassage) {
@@ -168,7 +169,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
               >
                 📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">
-                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
+                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
                 </span>
               </button>
             </li>
@@ -679,6 +680,7 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
           </p>
           <p className="stats-note">
             ⏱ かかった時間 {formatTime(took)}（目安 {targetMinutes(p)}分）{took <= targetMinutes(p) * 60 ? '　目安より早い！' : ''}
+            {bestTime ? '　🏁 最短タイム更新！' : loadLongTimes()[p.id] ? `　（満点の最短 ${formatTime(loadLongTimes()[p.id])}）` : ''}
           </p>
           <button
             className="flip"
@@ -710,7 +712,9 @@ export function LongReading({ onAnswer, onFavorite }: Props) {
           className="flip"
           disabled={answered < total}
           onClick={() => {
-            setTook(Math.round((Date.now() - startAt) / 1000))
+            const sec = Math.round((Date.now() - startAt) / 1000)
+            setTook(sec)
+            setBestTime(score === total && recordLongTime(p.id, Math.max(1, sec)))
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()

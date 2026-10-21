@@ -2032,3 +2032,25 @@ export function genreOf(p: LongPassage): Genre {
   if (['物語', '日記', ''].includes(tag)) return '物語'
   return '説明文'
 }
+
+// 最短タイム：満点をとったときのかかった秒数（長文ごと）
+const TIME_KEY = 'eitan:long-best-time'
+export function loadLongTimes(): Record<string, number> {
+  try {
+    const v = JSON.parse(localStorage.getItem(TIME_KEY) ?? '{}') as unknown
+    return isObj(v) ? (Object.fromEntries(Object.entries(v).filter(([, n]) => typeof n === 'number' && n > 0)) as Record<string, number>) : {}
+  } catch {
+    return {}
+  }
+}
+// 更新したら true
+export function recordLongTime(id: string, sec: number): boolean {
+  const all = loadLongTimes()
+  if (all[id] !== undefined && all[id] <= sec) return false
+  try {
+    localStorage.setItem(TIME_KEY, JSON.stringify({ ...all, [id]: sec }))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return true
+}
