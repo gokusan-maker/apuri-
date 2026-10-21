@@ -1315,3 +1315,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-recommend .stats-note { margin: 0; width: 100%; }
 .long-gtags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 4px 0; font-size: 0.75rem; }
 .long-gtag { padding: 2px 8px; border-radius: 999px; background: #dbeafe; color: #1e40af; }
+.boss-shield { margin: 4px 0; font-weight: 700; color: #0369a1; }

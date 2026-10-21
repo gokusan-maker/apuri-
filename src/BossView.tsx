@@ -157,6 +157,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
+  const [shieldUsed, setShieldUsed] = useState(-1) // 盾を使った問題の番号
   const [sPrize, setSPrize] = useState<ReturnType<typeof sRouletteOf> | null>(null)
   const [minion, setMinion] = useState<'none' | 'here' | 'beaten'>('none') // 子分
   const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
@@ -194,6 +196,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const c = combo + 1
       const n = corrects + 1
       setCombo(c)
+      if (c % 3 === 0) setShield(true)
       setCorrects(n)
       const ms = nowMs() - shownAt.current
       const slow = usedItems.includes('clock') ? 2 : 1
@@ -244,6 +247,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSaves(saves + 1)
         setHearts(1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
+      } else if (shield) {
+        setShield(false)
+        setShieldUsed(index)
       } else {
         const lose = charge ? 2 : 1
         setHearts(Math.max(0, hearts - lose))
@@ -310,6 +316,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setShield(false)
+    setShieldUsed(-1)
     setSPrize(null)
     setMinion('none')
     setMinionAt(-1)
@@ -348,8 +356,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {minion === 'beaten' && minionAt === index && picked !== null && !won && <p className="boss-minion">👾 子分をたおした！ 🪙{MINION_COINS}</p>}
       {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
+      {shield && !won && !lost && <p className="boss-shield">🛡 ことばの盾：次のまちがい1回はハートがへらない</p>}
+      {shieldUsed === index && picked !== null && <p className="boss-shield">🛡 ことばの盾がハートを守った！</p>}
       {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}
-      {charge && picked !== null && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
+      {charge && picked !== null && shieldUsed !== index && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
         <BossFigure hit={hit} look={look} />
         {hit && lastDmg > 0 && (

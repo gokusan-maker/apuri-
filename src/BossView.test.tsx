@@ -275,16 +275,27 @@ it('金色ボスをたおすとおまけコイン', () => {
 
 it('ためこうげきの問題をまちがえるとハートが2つへる', () => {
   vi.setSystemTime(Date.now() + 5000)
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
-  for (let i = 0; i < 4; i++) {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} />)
+  ;[true, false, true, true].forEach((ok) => {
+    answer(ok)
+    fireEvent.click(screen.getByText('次へ'))
+  })
+  expect(screen.getByText(/力をためている/)).toBeInTheDocument()
+  answer(false)
+  expect(screen.getByText(/ためこうげき！ ハートが2つへった/)).toBeInTheDocument()
+})
+
+it('3問連続正解でことばの盾がたまり、次のまちがいでハートがへらない', () => {
+  vi.setSystemTime(Date.now() + 5000)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} />)
+  for (let i = 0; i < 3; i++) {
     answer(true)
     fireEvent.click(screen.getByText('次へ'))
   }
-  expect(screen.getByText(/力をためている/)).toBeInTheDocument()
-  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  expect(screen.getByText(/ことばの盾：次のまちがい1回/)).toBeInTheDocument()
   answer(false)
-  expect(screen.getByText(/ためこうげき！ ハートが2つへった/)).toBeInTheDocument()
-  expect(screen.getByLabelText('のこりハート 1')).toBeInTheDocument()
+  expect(screen.getByText('🛡 ことばの盾がハートを守った！')).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
 })
 
 it('スローどけいを使うと、5秒かかっても会心の一撃', () => {
