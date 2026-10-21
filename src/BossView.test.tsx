@@ -102,3 +102,14 @@ it('タマゴの相棒は応援だけ', async () => {
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: FORMS[0], name: 'たまご' }} />)
   expect(screen.getByText(/たまごが応援しているよ/)).toBeInTheDocument()
 })
+
+it('ノーミス＆会心でたおすとSランクでおまけコイン', () => {
+  const bonus = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onRankBonus={bonus} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
+  expect(bonus).toHaveBeenCalledWith(10)
+})

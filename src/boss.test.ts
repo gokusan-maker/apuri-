@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, bossUnlocked, critDamage, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -57,4 +57,11 @@ it('必殺技ゲージは正解で1、会心で2たまり、満タンで止ま�
   expect(gaugeAfter(0, false)).toBe(1)
   expect(gaugeAfter(0, true)).toBe(2)
   expect(gaugeAfter(GAUGE_MAX - 1, true)).toBe(GAUGE_MAX)
+})
+
+it('バトル結果のランク', () => {
+  expect(battleRank(3, 3)).toBe('S')
+  expect(battleRank(3, 2)).toBe('A')
+  expect(battleRank(2, 5)).toBe('A')
+  expect(battleRank(1, 9)).toBe('B')
 })

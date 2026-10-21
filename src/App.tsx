@@ -816,6 +816,7 @@ function App() {
             setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
             pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
           }}
+          onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
           onRareWin={() => {
             const r = rareEgg(party, rand(), rand())
             if (r) setParty(r.party)

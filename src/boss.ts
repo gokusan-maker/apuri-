@@ -88,3 +88,13 @@ export function bossQuestions(words: Word[], grammar: boolean) {
     return { word: { id: '', en: g.prompt, ja: g.choices[g.answer], example: '', exampleJa: '', level: '高校基礎' } as Word, choices: g.choices, answer: g.answer }
   })
 }
+
+// バトル結果のランク：ハートが減らず会心3回以上で S、ハートが2つ以上で A、それ以外は B
+export type Rank = 'S' | 'A' | 'B'
+export const RANK_S_COINS = 10
+
+export function battleRank(hearts: number, crits: number): Rank {
+  if (hearts >= HEARTS && crits >= 3) return 'S'
+  if (hearts >= 2) return 'A'
+  return 'B'
+}

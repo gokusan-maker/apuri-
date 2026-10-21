@@ -3,7 +3,7 @@ import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, SPECIAL_DAMAGE, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -21,6 +21,7 @@ type Props = {
   title?: string // 上に出す見出し
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
+  onRankBonus?: (coins: number) => void // Sランクのおまけコイン
   partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string } // いっしょに戦う相棒（タマゴは応援だけ）
 }
 
@@ -105,7 +106,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -120,6 +121,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [gauge, setGauge] = useState(0)
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
   const [corrects, setCorrects] = useState(0)
+  const [crits, setCrits] = useState(0)
   const [saved, setSaved] = useState(false) // ガード・根性は1戦1回
   const [skillMsg, setSkillMsg] = useState('')
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
@@ -146,6 +148,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       if (extra > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c)) - extra
       setCrit(critical)
+      const nc = crits + (critical ? 1 : 0)
+      setCrits(nc)
       const plus = skill ? skillGauge(skill.id, n) : 0
       if (plus > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
       setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
@@ -153,7 +157,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setHit(true)
       playCorrect()
       onAnswer?.(true, quizXp(c), q.word.id, 'quiz')
-      if (nextHp <= 0) onWin()
+      if (nextHp <= 0) win(nc)
     } else {
       setCombo(0)
       const guard = skill?.id === 'guard' && !saved
@@ -179,7 +183,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHp(Math.max(0, nextHp))
     setHit(true)
     playCorrect()
-    if (nextHp <= 0) onWin()
+    if (nextHp <= 0) win(crits)
+  }
+
+  function win(c: number) {
+    onWin()
+    if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS)
   }
 
   function next() {
@@ -201,6 +210,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setMissed([])
     setGauge(0)
     setCorrects(0)
+    setCrits(0)
     setSaved(false)
     setSkillMsg('')
   }
@@ -298,6 +308,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             />
           ))}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
+            {battleRank(hearts, crits)}
+          </p>
+          <p className="stats-note">
+            のこりハート {hearts}・会心 {crits}回{battleRank(hearts, crits) === 'S' ? `　Sランクボーナス 🪙${RANK_S_COINS}！` : '　（ハートを減らさず会心3回でSランク）'}
+          </p>
           <p className="result-message">ボーナス +{bonus}XP</p>
           <MissedList words={missed} />
           <button className="flip" onClick={onExit}>

@@ -28,6 +28,7 @@ type Props = {
   learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
   onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
   partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
+  onRankBonus?: (coins: number) => void // ボス戦Sランクのおまけ
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
 
@@ -35,7 +36,7 @@ export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -63,6 +64,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         hp={univFight.hp}
         grammar
         partner={partner}
+        onRankBonus={onRankBonus}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -84,6 +86,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title="✨ 今週のレアボス"
         hp={RARE_HP}
         partner={partner}
+        onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -103,6 +106,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         level={fighting}
         words={wordsOf([fighting])}
         partner={partner}
+        onRankBonus={onRankBonus}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
