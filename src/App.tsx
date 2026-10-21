@@ -106,7 +106,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, loadRushDay, RUSH_COINS, saveBoss, saveRushDay } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -248,6 +248,7 @@ function App() {
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
+  const [rushExDay, setRushExDay] = usePersistent(loadRushExDay, saveRushExDay)
   const [gachaStep, setGachaStep] = usePersistent(loadStep, saveStep)
   const [bag, setBag] = usePersistent(loadBag, saveBag)
   const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
@@ -891,7 +892,16 @@ function App() {
             setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
             pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])
           }}
-          onRushClear={() => {
+          weekend={isWeekend(today)}
+          rushExDone={rushExDay === today}
+          onRushClear={(ex) => {
+            if (ex) {
+              if (rushExDay === today) return
+              setRushExDay(today)
+              setWallet((w) => ({ ...w, coins: w.coins + RUSH_EX_COINS, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + 2) }))
+              pushToast([{ id: 'rush-ex', text: `🌟 ボスラッシュEX完全クリア！ 🪙${RUSH_EX_COINS}・🎟2`, counter: 'answers', target: 0 }])
+              return
+            }
             if (rushDay === today) return
             setRushDay(today)
             setWallet((w) => ({ ...addTicket(w), coins: w.coins + RUSH_COINS }))

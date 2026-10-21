@@ -106,8 +106,12 @@ export const isChance = (enraged: boolean, index: number) => enraged && index % 
 // ボスラッシュ：中1→中2→中3のボスと3連戦（ハートは引き継ぎ）。1日1回、全部たおすと大きなごほうび
 export const RUSH_LEVELS: Level[] = ['中1', '中2', '中3']
 export const RUSH_COINS = 100
+// 週末限定ボスラッシュEX：むずかしいボスと3連戦。ごほうび2倍（🪙200＋🎟2）
+export const RUSH_EX_LEVELS: Level[] = ['中3', '高校基礎', '熟語']
+export const RUSH_EX_COINS = 200
 
 const RUSH_KEY = 'eitan:rush'
+const RUSH_EX_KEY = 'eitan:rush-ex'
 
 export function loadRushDay(): string {
   try {
@@ -140,4 +144,20 @@ export const DEFEAT_LINES: { en: string; ja: string }[] = [
 export function defeatLineOf(name: string): { en: string; ja: string } {
   const n = [...name].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 0)
   return DEFEAT_LINES[n % DEFEAT_LINES.length]
+}
+
+export function loadRushExDay(): string {
+  try {
+    return localStorage.getItem(RUSH_EX_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+export function saveRushExDay(d: string): void {
+  try {
+    localStorage.setItem(RUSH_EX_KEY, d)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
 }

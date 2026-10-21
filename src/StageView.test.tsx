@@ -155,3 +155,13 @@ it('中学のボスは4問に1問が文法問題', () => {
   }
   expect(seen).toEqual([true, true, true, false])
 })
+
+it('週末はボスラッシュEXが出て、むずかしいボスと戦う', () => {
+  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(screen.queryByText(/ボスラッシュEX/)).not.toBeInTheDocument()
+  unmount()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
+  fireEvent.click(screen.getByText(/週末限定ボスラッシュEX/))
+  expect(screen.getByText('🔥 ボスラッシュEX 1 / 3')).toBeInTheDocument()
+  expect(screen.getByText('コオリモチ')).toBeInTheDocument() // 中3のボスから
+})

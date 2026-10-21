@@ -2,7 +2,7 @@ import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, RUSH_COINS, RUSH_EX_COINS, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -32,7 +32,9 @@ type Props = {
   onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
   partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
   onRankBonus?: (coins: number) => void // ボス戦Sランクのおまけ
-  onRushClear?: () => void // ボスラッシュを全部たおした（ごほうびはアプリ側）
+  onRushClear?: (ex: boolean) => void // ボスラッシュを全部たおした（ごほうびはアプリ側。ex は週末のEX）
+  weekend?: boolean // 週末はボスラッシュEXが出る
+  rushExDone?: boolean
   onEndlessReward?: (times: number) => void // エンドレスの塔で新しく10階ごとに到達した
   rushDone?: boolean // 今日のボスラッシュのごほうびをもうもらった
   bag?: BattleBag // バトルアイテム
@@ -49,7 +51,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -61,7 +63,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [univ, setUniv] = usePersistent(loadUniv, saveUniv)
   const [rareWeek, setRareWeek] = usePersistent(loadRareWeek, saveRareWeek)
   const [rareFight, setRareFight] = useState(false)
-  const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean } | null>(null)
+  const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean; ex?: boolean } | null>(null)
   const [endless, setEndless] = useState<{ floor: number; hearts: number; won: boolean } | null>(null)
   const [endlessBest, setEndlessBest] = usePersistent(loadEndlessBest, saveEndlessBest)
   const week = weekKey(dayKey())
@@ -137,14 +139,15 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   }
 
   if (rush) {
-    const lv = RUSH_LEVELS[rush.round]
-    const last = rush.round === RUSH_LEVELS.length - 1
+    const levels = rush.ex ? RUSH_EX_LEVELS : RUSH_LEVELS
+    const lv = levels[rush.round]
+    const last = rush.round === levels.length - 1
     return (
       <Boss
         key={`rush-${rush.round}`}
         level={lv}
         words={wordsOf([lv])}
-        title={`🔥 ボスラッシュ ${rush.round + 1} / ${RUSH_LEVELS.length}`}
+        title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
@@ -160,9 +163,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onWinHearts={(h) => setRush((r) => (r ? { ...r, hearts: h } : r))}
         onWin={() => {
           setRush((r) => (r ? { ...r, won: true } : r))
-          if (last) onRushClear?.()
+          if (last) onRushClear?.(!!rush.ex)
         }}
-        onExit={() => setRush(rush.won && !last ? { round: rush.round + 1, hearts: rush.hearts, won: false } : null)}
+        onExit={() => setRush(rush.won && !last ? { round: rush.round + 1, hearts: rush.hearts, won: false, ex: rush.ex } : null)}
       />
     )
   }
@@ -359,6 +362,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
         🗼 エンドレスの塔（最高 {endlessBest}階）10階ごとに 🪙{ENDLESS_REWARD_COINS}＋🎟
       </button>
+      {weekend && (
+        <button className="boss-btn rush-boss ex" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false, ex: true })}>
+          {rushExDone ? '✅ 今日のボスラッシュEXは完全クリア！（もう一度挑戦）' : `🌟 週末限定ボスラッシュEX（中3・高校基礎・熟語）全部たおすと 🪙${RUSH_EX_COINS}＋🎟2`}
+        </button>
+      )}
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
         {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
       </button>
