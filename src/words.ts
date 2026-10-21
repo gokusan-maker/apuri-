@@ -2325,6 +2325,16 @@ const WORDS_4: Word[] = [
   { id: 'my-pleasure', en: 'My pleasure', ja: 'どういたしまして・よろこんで', example: '"Thank you for your help." "My pleasure."', exampleJa: '「手伝ってくれてありがとう。」「どういたしまして。」', level: '会話' },
   { id: 'same-here', en: 'Same here', ja: 'こっちも同じだよ', example: '"I\'m so tired today." "Same here."', exampleJa: '「今日はすごく疲れた。」「こっちも同じだよ。」', level: '会話' },
   { id: 'good-idea', en: 'Good idea', ja: 'いい考えだね', example: '"Let\'s go to the park." "Good idea!"', exampleJa: '「公園に行こう。」「いい考えだね！」', level: '会話' },
+  { id: 'welcome-home', en: 'Welcome home', ja: 'おかえりなさい', example: '"I\'m home." "Welcome home!"', exampleJa: '「ただいま。」「おかえりなさい！」', level: '会話' },
+  { id: 'go-ahead', en: 'Go ahead', ja: 'どうぞ（お先に・やってみて）', example: '"Can I use your pen?" "Sure, go ahead."', exampleJa: '「ペンを使ってもいい？」「もちろん、どうぞ。」', level: '会話' },
+  { id: 'i-got-it', en: 'I got it', ja: 'わかった・了解', example: '"Turn left at the bank." "OK, I got it."', exampleJa: '「銀行で左に曲がってね。」「うん、わかった。」', level: '会話' },
+  { id: 'sorry-im-late', en: 'Sorry I\'m late', ja: '遅れてごめんなさい', example: 'Sorry I\'m late. The train stopped for ten minutes.', exampleJa: '遅れてごめんなさい。電車が10分止まったんです。', level: '会話' },
+  { id: 'whats-up', en: 'What\'s up?', ja: 'どうしたの？・調子はどう？', example: 'Hi, Ken! What\'s up?', exampleJa: 'やあ、ケン！調子はどう？', level: '会話' },
+  { id: 'nice-to-see-you', en: 'Nice to see you', ja: '会えてうれしいです', example: 'Nice to see you again, Ms. Brown.', exampleJa: 'ブラウン先生、また会えてうれしいです。', level: '会話' },
+  { id: 'could-you-say-that-again', en: 'Could you say that again?', ja: 'もう一度言っていただけますか', example: 'Sorry, could you say that again?', exampleJa: 'すみません、もう一度言っていただけますか。', level: '会話' },
+  { id: 'im-coming', en: 'I\'m coming', ja: '今行くよ', example: '"Dinner is ready!" "I\'m coming!"', exampleJa: '「夕ごはんできたよ！」「今行く！」', level: '会話' },
+  { id: 'wait-a-minute', en: 'Wait a minute', ja: 'ちょっと待ってね', example: 'Wait a minute. I\'ll get my coat.', exampleJa: 'ちょっと待ってね。コートを取ってくるから。', level: '会話' },
+  { id: 'see-you-next-week', en: 'See you next week', ja: 'また来週', example: 'Have a nice weekend. See you next week!', exampleJa: 'よい週末を。また来週ね！', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
