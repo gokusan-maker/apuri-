@@ -1,5 +1,5 @@
 import { beforeEach, expect, it } from 'vitest'
-import { nextChallengeStreak, challengeOf, cleared, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
+import { challengeStreakNow, saveChallengeStreak, nextChallengeStreak, challengeOf, cleared, difficultyOf, loadChallengeDay, saveChallengeDay } from './challenge'
 
 beforeEach(() => localStorage.clear())
 
@@ -28,4 +28,11 @@ it('今日のチャレンジの連続クリア日数', () => {
 it('ウサピョンはリスニング、ニャンタは和文英訳', () => {
   expect(challengeOf('rabbit').dir).toBe('listen')
   expect(challengeOf('cat').dir).toBe('ja-en')
+})
+
+it('いま続いている連続クリア日数（2日以上あいたら0）', () => {
+  saveChallengeStreak(4)
+  expect(challengeStreakNow('2026-10-20', '2026-10-20')).toBe(4)
+  expect(challengeStreakNow('2026-10-19', '2026-10-20')).toBe(4)
+  expect(challengeStreakNow('2026-10-17', '2026-10-20')).toBe(0)
 })

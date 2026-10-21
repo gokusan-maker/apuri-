@@ -80,7 +80,7 @@ import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
 import { Challenge } from './ChallengeView'
-import { challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
+import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
@@ -660,6 +660,7 @@ function App() {
         <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => setShowChallenge(true)}>
           ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
           {challengeDay === today ? ' ✅クリア' : ''}
+          {challengeStreakNow(challengeDay, today) > 1 && <span className="challenge-streak">🔥{challengeStreakNow(challengeDay, today)}日連続</span>}
         </button>
         <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
           <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>

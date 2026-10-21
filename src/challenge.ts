@@ -77,3 +77,9 @@ export function saveChallengeStreak(n: number): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// いま続いている連続クリア日数（最後のクリアが今日か昨日なら有効）
+export function challengeStreakNow(lastDay: string, today: string): number {
+  if (lastDay !== today && lastDay !== prevDay(today)) return 0
+  return loadChallengeStreak()
+}
