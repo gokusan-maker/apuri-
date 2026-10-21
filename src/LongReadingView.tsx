@@ -5,7 +5,7 @@ import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void }
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -51,8 +51,9 @@ function Paragraph({ text, underline, refer }: { text: string; underline?: strin
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer }: Props) {
+export function LongReading({ onAnswer, onFavorite }: Props) {
   const [p, setP] = useState<LongPassage | null>(null)
+  const [starred, setStarred] = useState<string[]>([]) // この画面で★に入れた語
   const [blanks, setBlanks] = useState<Record<string, number>>({})
   const [tf, setTf] = useState<Record<number, boolean>>({})
   const [picks, setPicks] = useState<number[]>([])
@@ -284,6 +285,19 @@ export function LongReading({ onAnswer }: Props) {
             {keyWords(p).map((w) => (
               <li key={w.id}>
                 <strong>{w.en}</strong> {w.ja}
+                {onFavorite && (
+                  <button
+                    className="long-vocab-fav"
+                    aria-label={`${w.en}を★に入れる`}
+                    disabled={starred.includes(w.id)}
+                    onClick={() => {
+                      onFavorite([w.id])
+                      setStarred([...starred, w.id])
+                    }}
+                  >
+                    {starred.includes(w.id) ? '★' : '＋☆'}
+                  </button>
+                )}
               </li>
             ))}
           </ul>

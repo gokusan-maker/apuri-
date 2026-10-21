@@ -215,3 +215,17 @@ it('語句の意味の問題に答えられる', () => {
   fireEvent.click(btn)
   expect(btn).toHaveAttribute('aria-pressed', 'true')
 })
+
+it('重要語句を★に入れられる', async () => {
+  localStorage.clear()
+  const { keyWords } = await import('./longvocab')
+  const onFavorite = vi.fn()
+  render(<LongReading onFavorite={onFavorite} />)
+  const p = LONG_PASSAGES.find((x) => keyWords(x).length > 0)!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  const w = keyWords(p)[0]
+  const btn = screen.getByLabelText(`${w.en}を★に入れる`)
+  fireEvent.click(btn)
+  expect(onFavorite).toHaveBeenCalledWith([w.id])
+  expect(btn).toBeDisabled()
+})
