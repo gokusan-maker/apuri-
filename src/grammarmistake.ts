@@ -91,6 +91,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'look-adj': { wrong: 'You look happily.', right: 'You look happy.', why: 'look のあとは副詞ではなく形容詞。' },
   'after-before': { wrong: 'I will call you after I will get home.', right: 'I will call you after I get home.', why: '未来のことでも after の中は現在形。' },
   'and-but-or-so': { wrong: 'Because it was cold, so I wore a coat.', right: 'It was cold, so I wore a coat.', why: 'because と so はいっしょに使わない。' },
+  'adj-prep': { wrong: 'I am interested about science.', right: 'I am interested in science.', why: 'be interested in 〜 の形。前置詞は in。' },
+  'by-with': { wrong: 'I go to school by a bus.', right: 'I go to school by bus.', why: '手段の by のあとの乗り物には a / the をつけない。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 

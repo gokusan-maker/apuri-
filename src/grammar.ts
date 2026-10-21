@@ -1294,6 +1294,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'He is young, ___ he is very wise.', choices: ['so', 'or', 'but'], answer: 2, why: '「若いが、かしこい」と反対の内容なので but。' },
     ],
   },
+  {
+    id: 'adj-prep',
+    title: '形容詞＋前置詞（be interested in / be afraid of など）',
+    points: ['形容詞と前置詞がセットになった表現は、まとめて覚える（be interested in 〜・be afraid of 〜・be good at 〜・be proud of 〜・be different from 〜）。', '前置詞のあとに動詞を置くときは -ing 形（be good at swimming）。'],
+    examples: [
+      { en: 'I am interested in Japanese history.', ja: '私は日本の歴史に興味がある。' },
+      { en: 'My little brother is afraid of dogs.', ja: '弟は犬がこわい。' },
+    ],
+    questions: [
+      { sentence: 'She is good ___ playing the guitar.', choices: ['at', 'in', 'of'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
+      { sentence: 'I am proud ___ my team.', choices: ['for', 'of', 'with'], answer: 1, why: 'be proud of 〜 で「〜をほこりに思う」。' },
+      { sentence: 'His idea is different ___ mine.', choices: ['from', 'to', 'at'], answer: 0, why: 'be different from 〜 で「〜とちがう」。' },
+    ],
+  },
+  {
+    id: 'by-with',
+    title: '手段の by と道具の with',
+    points: ['by ＋乗り物・方法で「〜で（手段）」。by bus / by train / by e-mail のように a や the をつけない。', 'with ＋道具で「〜を使って」（write with a pen / eat with chopsticks）。歩いて行くときは on foot。'],
+    examples: [
+      { en: 'I go to school by bike.', ja: '私は自転車で学校に行く。' },
+      { en: 'Please write your name with a pen.', ja: 'ペンで名前を書いてください。' },
+    ],
+    questions: [
+      { sentence: 'They came here ___ car.', choices: ['by', 'with', 'in a'], answer: 0, why: '乗り物の手段は by ＋名詞（a をつけない）。' },
+      { sentence: 'He cut the paper ___ scissors.', choices: ['by', 'with', 'on'], answer: 1, why: '道具を使うときは with。' },
+      { sentence: 'I usually go to the park on ___.', choices: ['walk', 'foot', 'feet'], answer: 1, why: '「歩いて」は on foot。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1393,8 +1421,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
