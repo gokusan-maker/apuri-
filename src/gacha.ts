@@ -187,3 +187,9 @@ export function seasonalKindOf(day: string): string | undefined {
   const m = Number(day.slice(5, 7))
   return m === 10 ? 'pumpkin' : m === 12 ? 'snow' : undefined
 }
+
+// ガチャの結果をシェアするための文
+export function gachaShareText(items: { kindName: string; normal: boolean; speciesName: string; rarity: string }[]): string {
+  const names = items.map((k) => `${k.normal ? '' : `${k.kindName}の`}${k.speciesName}（${k.rarity}）`)
+  return `イングリッシュモンスターのガチャで ${names.join('・')} が出た！`
+}

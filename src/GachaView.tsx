@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
+import { gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -8,6 +8,24 @@ const RANK = ['N', 'R', 'SR', 'UR'] as const
 const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
 
 export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean } }
+
+// 結果をシェア用の文にしてコピーするボタン
+function ShareButton({ text }: { text: string }) {
+  const [copied, setCopied] = useState(false)
+  return (
+    <button
+      className="list-link gacha-share"
+      onClick={() => {
+        navigator.clipboard
+          ?.writeText(text)
+          .then(() => setCopied(true))
+          .catch(() => setCopied(false))
+      }}
+    >
+      {copied ? '✅ コピーしました' : '📋 結果をコピー（シェア用）'}
+    </button>
+  )
+}
 
 type Props = {
   coins: number
@@ -179,6 +197,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
               </li>
             ))}
           </ul>
+          <ShareButton text={gachaShareText(multi.list.map((k) => ({ kindName: k.kind.name, normal: k.kind.id === 'normal', speciesName: k.species.name, rarity: RARITY_LABEL[k.kind.rarity] })))} />
           <button className="list-link" onClick={() => setMulti(null)}>
             とじる
           </button>
@@ -207,6 +226,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           )}
           {!!result.lucky && <p className="gacha-lucky">🍀 ラッキーナンバー！ 通算{result.lucky}回目で 🪙{LUCKY_COINS}</p>}
           {!!result.refund && <p className="gacha-dup">かぶりボーナス！ 同じ子がいたので 🪙{result.refund} もどってきた</p>}
+          <ShareButton text={gachaShareText([{ kindName: result.kind.name, normal: result.kind.id === 'normal', speciesName: result.species.name, rarity: RARITY_LABEL[result.kind.rarity] }])} />
           {result.species.id !== 'mochi' && <p className="gacha-species">「{result.species.name}」の仲間だ！ {result.species.desc}</p>}
           {onRaise && (
             <button

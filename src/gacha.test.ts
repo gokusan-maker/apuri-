@@ -221,3 +221,9 @@ it('季節ガチャ：10月はさくら色のかわりにかぼちゃ色が出�
   expect(drawEgg(w, p, 0.61, false, 0.5)!.kind.id).toBe('sakura')
   expect(drawEgg(w, p, 0.75, false, 0.5, false, undefined, false, 50, 'pumpkin')!.kind.id).toBe('umi')
 })
+
+it('ガチャの結果をシェア用の文にする', async () => {
+  const { gachaShareText } = await import('./gacha')
+  expect(gachaShareText([{ kindName: 'きんいろ', normal: false, speciesName: 'ドラコ', rarity: 'スーパーレア' }])).toBe('イングリッシュモンスターのガチャで きんいろのドラコ（スーパーレア） が出た！')
+  expect(gachaShareText([{ kindName: 'ふつう', normal: true, speciesName: 'モチ', rarity: 'ノーマル' }, { kindName: 'うみ色', normal: false, speciesName: 'モチ', rarity: 'レア' }])).toContain('モチ（ノーマル）・うみ色のモチ（レア）')
+})

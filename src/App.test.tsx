@@ -584,6 +584,10 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
     rnd.mockRestore()
     expect(screen.getByLabelText('スロットがそろった')).toHaveTextContent('そろった！ 🪙5')
+    const writeText = vi.fn(() => Promise.resolve())
+    Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })
+    fireEvent.click(screen.getByText('📋 結果をコピー（シェア用）'))
+    expect(writeText).toHaveBeenCalledWith(expect.stringContaining('イングリッシュモンスターのガチャで'))
   })
 
   it('相棒をタップするとポーズがかわり、全部見ると称号', () => {
