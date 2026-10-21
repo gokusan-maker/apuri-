@@ -3,7 +3,9 @@
 export type Blank = { id: string; choices: string[]; answer: number; why: string }
 export type TrueFalse = { statement: string; answer: boolean; why: string }
 export type PickTwo = { statements: string[]; answers: [number, number]; why: string } // 本文と合うものを2つ選ぶ（ア〜カ）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo }
+export type Underline = { phrase: string; choices: string[]; answer: number; why: string } // 下線部の意味に近いもの
+export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -72,6 +74,18 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['that', 'what', 'where', 'who'], answer: 0, why: 'know の目的語が欠けているので、関係代名詞 that（which も可）。where は使えない。' },
       { id: 'E', choices: ['because', 'but', 'so', 'when'], answer: 3, why: '「散歩に行くとき」なので when。' },
     ],
+    underline: {
+      phrase: 'none of them were important',
+      choices: ['all the messages were important', 'no message was important', 'some of the messages were important', 'the messages were from his friends'],
+      answer: 1,
+      why: 'none of 〜 は「〜のどれも…ない」。「大事なメッセージはひとつもなかった」の意味。',
+    },
+    order: {
+      words: ['phone', 'I', 'not', 'check', 'to', 'do', 'my', 'have'],
+      rest: 'all the time.',
+      answer: 'I do not have to check my phone',
+      ja: '私はいつもスマホを確認しなくてもいい。（don\'t have to ＝〜しなくてもよい）',
+    },
     tf: [
       { statement: "At first, the writer's sister liked her father's idea.", answer: false, why: '姉と私は、はじめその考えが気に入らなかった。' },
       { statement: 'The family got lost because they could not use the map on their phones.', answer: true, why: '第2段落の内容と合う。' },
@@ -103,6 +117,18 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['for', 'of', 'to', 'with'], answer: 2, why: 'a chance to ＋動詞の原形で「〜する機会」（不定詞の形容詞的用法）。' },
       { id: 'E', choices: ['at', 'on', 'to', 'with'], answer: 3, why: '「人（の意見）に賛成する」は agree with 人。' },
     ],
+    underline: {
+      phrase: 'take care of',
+      choices: ['look after', 'sell', 'stay away from', 'draw pictures of'],
+      answer: 0,
+      why: 'take care of 〜 は「〜の世話をする」。同じ意味は look after 〜。',
+    },
+    order: {
+      words: ['how', 'grow', 'them', 'to', 'taught'],
+      rest: 'vegetables.',
+      answer: 'taught them how to grow',
+      ja: '（お年寄りは）子どもたちに野菜の育て方を教えた。（teach 人 how to 〜）',
+    },
     tf: [
       { statement: 'The empty space was clean and safe before the garden was made.', answer: false, why: 'ごみが捨てられ、夜はだれも近くを歩きたがらなかった。' },
       { statement: 'Ms. Tanaka lives in one of the tall buildings.', answer: true, why: 'a woman who lives in one of the buildings とある。' },
@@ -221,11 +247,13 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = []): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
-  return { score: b + t + k, total: p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) }
+  const u = p.underline && extra.underline === p.underline.answer ? 1 : 0
+  const o = p.order && extra.order === p.order.answer ? 1 : 0
+  return { score: b + t + k + u + o, total: p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -248,3 +276,6 @@ export function saveLongRecord(r: LongRecord): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 長文の点数の合計（一覧に出す）
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0)

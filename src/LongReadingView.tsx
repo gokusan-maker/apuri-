@@ -1,24 +1,32 @@
 import { useState } from 'react'
-import { LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
 // 本文の「( A )」を目立つ空所にする
-function Paragraph({ text }: { text: string }) {
+function Paragraph({ text, underline }: { text: string; underline?: string }) {
   const parts = text.split(/(\( [A-Z] \))/)
   return (
     <p className="long-para">
-      {parts.map((s, i) =>
-        /^\( [A-Z] \)$/.test(s) ? (
-          <span key={i} className="long-blank">
-            {s}
+      {parts.map((s, i) => {
+        if (/^\( [A-Z] \)$/.test(s))
+          return (
+            <span key={i} className="long-blank">
+              {s}
+            </span>
+          )
+        const at = underline ? s.indexOf(underline) : -1
+        if (at < 0) return s
+        return (
+          <span key={i}>
+            {s.slice(0, at)}
+            <u className="long-underline">{underline}</u>
+            {s.slice(at + underline!.length)}
           </span>
-        ) : (
-          s
-        ),
-      )}
+        )
+      })}
     </p>
   )
 }
@@ -29,6 +37,8 @@ export function LongReading({ onAnswer }: Props) {
   const [blanks, setBlanks] = useState<Record<string, number>>({})
   const [tf, setTf] = useState<Record<number, boolean>>({})
   const [picks, setPicks] = useState<number[]>([])
+  const [under, setUnder] = useState<number | undefined>(undefined)
+  const [order, setOrder] = useState<number[]>([]) // 並べた語の番号
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
@@ -47,13 +57,15 @@ export function LongReading({ onAnswer }: Props) {
                   setBlanks({})
                   setTf({})
                   setPicks([])
+                  setUnder(undefined)
+                  setOrder([])
                   setDone(false)
                   setShowJa(false)
                 }}
               >
                 📖 {x.title}
                 <span className="long-meta">
-                  {x.level}・{x.blanks.length + x.tf.length + (x.pick2 ? 2 : 0)}点{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
+                  {x.level}・{totalOf(x)}点{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
                 </span>
               </button>
             </li>
@@ -63,8 +75,9 @@ export function LongReading({ onAnswer }: Props) {
     )
   }
 
-  const { score, total } = scoreLong(p, blanks, tf, picks)
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length
+  const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0)
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -79,7 +92,7 @@ export function LongReading({ onAnswer }: Props) {
       <div className="long-text">
         {p.paragraphs.map((t, i) => (
           <div key={i}>
-            <Paragraph text={t} />
+            <Paragraph text={t} underline={p.underline?.phrase} />
             {showJa && <p className="long-ja">{p.ja[i]}</p>}
           </div>
         ))}
@@ -165,6 +178,57 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.underline && (
+        <>
+          <h3 className="long-q">問{p.pick2 ? 4 : 3}　下線部 <u>{p.underline.phrase}</u> の意味に最も近いものを、ア〜エ から選びなさい。</h3>
+          <div className="long-item">
+            <div className="long-choices one">
+              {p.underline.choices.map((c, i) => (
+                <button key={c} className={`long-choice${under === i ? ' picked' : ''}${done && i === p.underline!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={under === i} onClick={() => setUnder(i)}>
+                  {MARKS[i]} {c}
+                </button>
+              ))}
+            </div>
+            {done && (
+              <p className={`long-why${under === p.underline.answer ? ' right' : ' wrong'}`}>
+                {under === p.underline.answer ? '⭕' : '❌'} 正解 {MARKS[p.underline.answer]}：{p.underline.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
+      {p.order && (
+        <>
+          <h3 className="long-q">問{(p.pick2 ? 4 : 3) + (p.underline ? 1 : 0)}　（　）内の語を並べかえて、意味の通る英文にしなさい。</h3>
+          <div className="long-item">
+            <p className="long-statement">
+              （ {p.order.words.join(' / ')} ） {p.order.rest}
+            </p>
+            <p className="long-order-answer" aria-label="並べた英文">
+              {orderText || '　'} <span className="long-rest">{p.order.rest}</span>
+            </p>
+            <div className="long-order-words">
+              {p.order.words.map((w, i) => (
+                <button key={i} className="long-choice" disabled={done || order.includes(i)} onClick={() => setOrder([...order, i])}>
+                  {w}
+                </button>
+              ))}
+              {!done && order.length > 0 && (
+                <button className="list-link" onClick={() => setOrder([])}>
+                  やりなおす
+                </button>
+              )}
+            </div>
+            {done && (
+              <p className={`long-why${orderText === p.order.answer ? ' right' : ' wrong'}`}>
+                {orderText === p.order.answer ? '⭕' : '❌'} 正解 {p.order.answer} {p.order.rest}　{p.order.ja}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {done ? (
         <div className="long-result" role="status">
           <p className="level-up">
@@ -176,6 +240,8 @@ export function LongReading({ onAnswer }: Props) {
               setBlanks({})
               setTf({})
               setPicks([])
+              setUnder(undefined)
+              setOrder([])
               setDone(false)
             }}
           >

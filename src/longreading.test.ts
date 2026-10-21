@@ -37,3 +37,17 @@ it('採点と最高点の保存', () => {
   saveLongRecord({ [p.id]: 8 })
   expect(loadLongRecord()).toEqual({ [p.id]: 8 })
 })
+
+it('下線部の語句は本文にあり、並べかえの語は正解の文と同じ語でできている', () => {
+  const withExtra = LONG_PASSAGES.filter((p) => p.underline || p.order)
+  expect(withExtra.length).toBeGreaterThanOrEqual(2)
+  for (const p of withExtra) {
+    if (p.underline) {
+      expect(p.paragraphs.join(' '), p.id).toContain(p.underline.phrase)
+      expect(p.underline.choices).toHaveLength(4)
+    }
+    if (p.order) expect([...p.order.words].sort().join(' ')).toBe(p.order.answer.split(' ').sort().join(' '))
+  }
+  const p = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
+  expect(scoreLong(p, {}, {}, [], { underline: p.underline!.answer, order: p.order!.answer }).score).toBe(2)
+})

@@ -25,3 +25,18 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getByText(/最高 11点/)).toBeInTheDocument()
 })
+
+it('下線部の意味と並べかえに答えられる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.id === 'no-phone-trip')!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  expect(document.querySelector('.long-underline')!.textContent).toBe(p.underline!.phrase)
+  fireEvent.click(screen.getByRole('button', { name: `${MARKS[p.underline!.answer]} ${p.underline!.choices[p.underline!.answer]}` }))
+  const area = document.querySelector('.long-order-words')!
+  for (const w of p.order!.answer.split(' ')) {
+    const btn = [...area.querySelectorAll<HTMLButtonElement>('button')].find((b) => b.textContent === w && !b.disabled)!
+    fireEvent.click(btn)
+  }
+  expect(screen.getByLabelText('並べた英文').textContent).toContain(p.order!.answer)
+})
