@@ -11,6 +11,8 @@ import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
 import { GrammarShadow } from './GrammarShadowView'
+import { GrammarDuel } from './GrammarDuelView'
+import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -42,6 +44,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [copied, setCopied] = useState(false)
   const [bingo, setBingo] = useState(false)
   const [shadow, setShadow] = useState(false)
+  const [duel, setDuel] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [weekGoal, setWeekGoal] = useState(() => loadGrammarGoal(dayKey()))
   const [goalReached, setGoalReached] = useState(false)
@@ -86,6 +89,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
   if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} />
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
+  if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} />
 
@@ -159,6 +163,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問）
+          </button>
+        )}
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setDuel(true)}>
+            ⚡ 2択スピード（正しい英文はどっち？）{loadDuelBest() > 0 ? `　ベスト ${loadDuelBest()}秒` : ''}
           </button>
         )}
         {stampMode && (
