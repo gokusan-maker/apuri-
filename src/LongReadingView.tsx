@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { evidenceParas, LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { evidenceParas, formatTime, LONG_PASSAGES, loadLongRecord, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -40,6 +40,8 @@ export function LongReading({ onAnswer }: Props) {
   const [under, setUnder] = useState<number | undefined>(undefined)
   const [order, setOrder] = useState<number[]>([]) // 並べた語の番号
   const [sents, setSents] = useState<Record<string, number>>({}) // 会話文の [ 1 ] に入る文
+  const [startAt, setStartAt] = useState(0) // 読みはじめた時刻
+  const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
   const [record, setRecord] = useState(loadLongRecord)
@@ -54,6 +56,7 @@ export function LongReading({ onAnswer }: Props) {
             <li key={x.id}>
               <button
                 onClick={() => {
+                  setStartAt(Date.now())
                   setP(x)
                   setBlanks({})
                   setTf({})
@@ -67,7 +70,7 @@ export function LongReading({ onAnswer }: Props) {
               >
                 📖 {x.title}
                 <span className="long-meta">
-                  {x.level}・{totalOf(x)}点{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
+                  {x.level}・{totalOf(x)}点・目安{targetMinutes(x)}分{record[x.id] !== undefined ? `・最高 ${record[x.id]}点` : ''}
                 </span>
               </button>
             </li>
@@ -96,7 +99,9 @@ export function LongReading({ onAnswer }: Props) {
         <button className="stage-back" onClick={() => setP(null)}>
           ← 長文の一覧
         </button>
-        <span>{p.level}</span>
+        <span>
+          {p.level}・⏱ 目安{targetMinutes(p)}分
+        </span>
       </div>
       <h2>{p.title}</h2>
       <div className="long-text">
@@ -274,6 +279,9 @@ export function LongReading({ onAnswer }: Props) {
           <p className="level-up">
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
+          <p className="stats-note">
+            ⏱ かかった時間 {formatTime(took)}（目安 {targetMinutes(p)}分）{took <= targetMinutes(p) * 60 ? '　目安より早い！' : ''}
+          </p>
           <button
             className="flip"
             onClick={() => {
@@ -283,6 +291,7 @@ export function LongReading({ onAnswer }: Props) {
               setUnder(undefined)
               setOrder([])
               setSents({})
+              setStartAt(Date.now())
               setDone(false)
             }}
           >
@@ -294,6 +303,7 @@ export function LongReading({ onAnswer }: Props) {
           className="flip"
           disabled={answered < total}
           onClick={() => {
+            setTook(Math.round((Date.now() - startAt) / 1000))
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()

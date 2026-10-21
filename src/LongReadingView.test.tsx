@@ -18,8 +18,10 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   }
   p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${i === 0 ? '×' : t.answer ? '○' : '×'}` })))
   for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  vi.setSystemTime(Date.now() + 125000)
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/11 \/ 12 点/)).toBeInTheDocument()
+  expect(screen.getByText(/かかった時間 2分05秒/)).toBeInTheDocument()
   expect(screen.getAllByText(/⭕/).length).toBe(9)
   expect(onAnswer).toHaveBeenCalledTimes(12)
   fireEvent.click(screen.getByText('← 長文の一覧'))

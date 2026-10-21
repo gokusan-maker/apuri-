@@ -75,3 +75,12 @@ it('会話文の [ n ] は本文にあり、選択肢は4つ', () => {
     expect(scoreLong(p, {}, {}, [], { sentences: right }).score).toBe(p.sentences!.length)
   }
 })
+
+it('目安時間は語数と設問数で決まり、時間は分と秒で表示', async () => {
+  const { targetMinutes, formatTime } = await import('./longreading')
+  for (const p of LONG_PASSAGES) {
+    expect(targetMinutes(p), p.id).toBeGreaterThanOrEqual(3)
+    expect(targetMinutes(p), p.id).toBeLessThanOrEqual(15)
+  }
+  expect(formatTime(125)).toBe('2分05秒')
+})

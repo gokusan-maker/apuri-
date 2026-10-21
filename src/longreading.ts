@@ -547,3 +547,11 @@ export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: nu
   }
   return [...out].sort((a, b) => a - b)
 }
+
+// 目安時間（分）：本文の語数（1分60語）＋設問1つにつき20秒
+export function targetMinutes(p: LongPassage): number {
+  const words = p.paragraphs.join(' ').split(/\s+/).length
+  return Math.ceil(words / 60 + totalOf(p) / 3)
+}
+
+export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
