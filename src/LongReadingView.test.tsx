@@ -149,3 +149,14 @@ it('とちゅうで一覧にもどっても、もう一度開くと続きから'
   expect(screen.getByText(/とちゅうから再開しました/)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: /のこり 13問/ })).toBeDisabled()
 })
+
+it('種類のタブで長文をしぼりこめる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const all = document.querySelectorAll('.grammar-list li').length
+  fireEvent.click(screen.getByRole('tab', { name: 'スピーチ' }))
+  const n = document.querySelectorAll('.grammar-list li').length
+  expect(n).toBeGreaterThan(0)
+  expect(n).toBeLessThan(all)
+  expect(screen.getByRole('tab', { name: 'スピーチ' })).toHaveAttribute('aria-selected', 'true')
+})

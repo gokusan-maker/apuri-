@@ -201,3 +201,14 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   localStorage.setItem('eitan:long-draft', '[1,2]')
   expect(loadLongDraft('x')).toBeNull()
 })
+
+it('長文の種類を見分ける', async () => {
+  const { genreOf, GENRES } = await import('./longreading')
+  const at = (id: string) => LONG_PASSAGES.find((x) => x.id === id)!
+  expect(genreOf(at('chopsticks'))).toBe('説明文')
+  expect(genreOf(at('lost-wallet'))).toBe('物語')
+  expect(genreOf(at('speech-nurse'))).toBe('スピーチ')
+  expect(genreOf(at('email-homestay'))).toBe('手紙・メール')
+  expect(genreOf(at('talk-library'))).toBe('会話文')
+  for (const g of GENRES) expect(LONG_PASSAGES.some((x) => genreOf(x) === g)).toBe(true)
+})

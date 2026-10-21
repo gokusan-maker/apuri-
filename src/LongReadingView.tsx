@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -72,6 +72,7 @@ export function LongReading({ onAnswer }: Props) {
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
   const [resumed, setResumed] = useState(false)
+  const [genre, setGenre] = useState<Genre | 'all'>('all')
 
   function openPassage(x: LongPassage) {
     const d = loadLongDraft(x.id)
@@ -142,8 +143,15 @@ export function LongReading({ onAnswer }: Props) {
           </details>
         )}
         <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
+        <div className="sub-tabs genre-tabs" role="tablist" aria-label="長文の種類">
+          {(['all', ...GENRES] as const).map((g) => (
+            <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
+              {g === 'all' ? 'すべて' : g}
+            </button>
+          ))}
+        </div>
         <ul className="grammar-list">
-          {LONG_PASSAGES.map((x) => (
+          {LONG_PASSAGES.filter((x) => genre === 'all' || genreOf(x) === genre).map((x) => (
             <li key={x.id}>
               <button
                 onClick={() => openPassage(x)}

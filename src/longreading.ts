@@ -1525,3 +1525,15 @@ export function saveLongDraft(id: string, d: LongDraft | null): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 長文の種類（level の（ ）の中から決める。書いていないものは身近な話＝物語）
+export const GENRES = ['説明文', '物語', '会話文', '手紙・メール', 'スピーチ'] as const
+export type Genre = (typeof GENRES)[number]
+export function genreOf(p: LongPassage): Genre {
+  const tag = /（(.+)）/.exec(p.level)?.[1] ?? ''
+  if (tag === '会話文') return '会話文'
+  if (tag === 'スピーチ') return 'スピーチ'
+  if (['メール', '手紙', 'お知らせ'].includes(tag)) return '手紙・メール'
+  if (['物語', '日記', ''].includes(tag)) return '物語'
+  return '説明文'
+}
