@@ -802,6 +802,7 @@ function App() {
             const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0)
             if (!r) return null
             setGachaStep(nextStep(gachaStep, today))
+            count('gacha')
             const dup = isDuplicate(party.members, r.species.id, r.kind.id)
             setWallet(dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet)
             setParty(r.party)
@@ -844,6 +845,7 @@ function App() {
           rushDone={rushDay === today}
           bag={bag}
           onUseItem={(id) => setBag((b) => spendItem(b, id))}
+          onBossDefeat={() => count('boss')}
           onEndlessReward={(times) => {
             setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
             pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])

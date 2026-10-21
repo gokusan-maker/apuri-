@@ -1,5 +1,5 @@
 // デイリーミッション：日付ごとに3つ選ばれ、達成するとボーナスXP。
-export type Counter = 'answers' | 'correct' | 'cardGood' | 'ear' | 'timeAttack' | 'stageClear' | 'game'
+export type Counter = 'answers' | 'correct' | 'cardGood' | 'ear' | 'timeAttack' | 'stageClear' | 'game' | 'boss' | 'gacha'
 
 export type Mission = { id: string; text: string; counter: Counter; target: number }
 
@@ -13,6 +13,8 @@ export const MISSION_POOL: Mission[] = [
   { id: 'time-1', text: 'タイムアタックを1回遊ぶ', counter: 'timeAttack', target: 1 },
   { id: 'game-1', text: '神経衰弱かビンゴを1回クリア', counter: 'game', target: 1 },
   { id: 'stage-1', text: 'ステージを1つクリア', counter: 'stageClear', target: 1 },
+  { id: 'boss-1', text: 'ボスを1体たおす', counter: 'boss', target: 1 },
+  { id: 'gacha-1', text: 'ガチャを1回引く', counter: 'gacha', target: 1 },
 ]
 
 export const MISSION_XP = 30

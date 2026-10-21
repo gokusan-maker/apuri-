@@ -42,3 +42,10 @@ it('聞き取り系で5問正解のミッションがある', () => {
 it('神経衰弱かビンゴのミッションがある', () => {
   expect(MISSION_POOL.find((m) => m.id === 'game-1')).toMatchObject({ counter: 'game', target: 1 })
 })
+
+it('戦いとガチャのミッションもある', async () => {
+  const { MISSION_POOL, bump, fresh } = await import('./missions')
+  expect(MISSION_POOL.some((m) => m.counter === 'boss')).toBe(true)
+  expect(MISSION_POOL.some((m) => m.counter === 'gacha')).toBe(true)
+  expect(bump(fresh('2026-10-21'), '2026-10-21', 'boss').counts.boss).toBe(1)
+})

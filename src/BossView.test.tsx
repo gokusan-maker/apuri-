@@ -144,3 +144,10 @@ it('バトルアイテム：ばくだんで20ダメージ、おまもりでハ�
   expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
   expect(used).toEqual(['bomb', 'charm'])
 })
+
+it('どのボスでもたおすと onDefeat が呼ばれる', () => {
+  const defeat = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} onDefeat={defeat} />)
+  answer(true)
+  expect(defeat).toHaveBeenCalledTimes(1)
+})
