@@ -608,4 +608,59 @@ export const PASSAGES: Passage[] = [
       { q: 'どんなタマゴだった？', choices: ['にじいろ', '金色', '白'], answer: 0 },
     ],
   },
+  {
+    id: 'three-pets',
+    title: 'Raising Three Pets',
+    text: 'Our family has a dog, a cat, and a turtle. My brother walks the dog every morning. I give food to the cat at night. My mother cleans the turtle\'s tank on Sundays. Each pet needs different care.',
+    ja: 'わが家には犬と猫とカメがいます。兄は毎朝犬の散歩をします。私は夜に猫にエサをあげます。母は日曜日にカメの水そうをそうじします。ペットによって必要な世話がちがいます。',
+    questions: [
+      { q: '毎朝犬の散歩をするのはだれ？', choices: ['兄', '母', '私'], answer: 0 },
+      { q: '私がするのは？', choices: ['犬の散歩', '夜に猫にエサをあげる', '水そうのそうじ'], answer: 1 },
+      { q: 'カメの水そうをそうじするのはいつ？', choices: ['毎朝', '日曜日', '土曜日の夜'], answer: 1 },
+    ],
+  },
+  {
+    id: 'farm-visit',
+    title: 'A Day on a Farm',
+    text: 'Our class visited a farm in the mountains. We milked a cow and picked potatoes. The farmer told us that cows need a lot of water every day. For lunch, we ate potato soup that we made ourselves.',
+    ja: 'クラスで山の牧場を訪れました。牛の乳しぼりをして、ジャガイモをほりました。農家の人が、牛は毎日たくさん水が必要だと教えてくれました。昼ごはんには、自分たちで作ったジャガイモのスープを食べました。',
+    questions: [
+      { q: '牧場で何をした？', choices: ['乳しぼりとジャガイモほり', '乗馬', '魚つり'], answer: 0 },
+      { q: '牛に毎日たくさん必要なものは？', choices: ['草', '水', '塩'], answer: 1 },
+      { q: '昼ごはんは？', choices: ['カレー', 'ジャガイモのスープ', 'おにぎり'], answer: 1 },
+    ],
+  },
+  {
+    id: 'piano-recital',
+    title: 'The Piano Recital',
+    text: 'Last Sunday, I played the piano at a recital. My hands were shaking before I started. But when I began to play, I forgot about the audience. After I finished, everyone clapped, and I felt proud.',
+    ja: 'この前の日曜日、発表会でピアノをひきました。始める前は手がふるえていました。でもひきはじめると、観客のことを忘れました。ひき終わると、みんなが拍手してくれて、誇らしく思いました。',
+    questions: [
+      { q: '発表会はいつ？', choices: ['この前の日曜日', '昨日', '来週'], answer: 0 },
+      { q: '始める前はどうだった？', choices: ['眠かった', '手がふるえていた', 'おなかがすいていた'], answer: 1 },
+      { q: 'ひき終わったあとは？', choices: ['みんなが拍手した', 'だれもいなかった', 'もう一度ひいた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'cleaning-beach',
+    title: 'Cleaning the Beach',
+    text: 'In July, I joined a beach cleanup with my friends. We picked up bottles, bags, and fishing lines. A volunteer said that plastic can hurt sea turtles. I decided to use my own bottle instead of buying plastic ones.',
+    ja: '7月、友だちと浜辺のそうじに参加しました。びん、ふくろ、釣り糸を拾いました。ボランティアの人が、プラスチックはウミガメを傷つけることがあると言いました。私はペットボトルを買うかわりに、自分の水とうを使うことにしました。',
+    questions: [
+      { q: 'そうじはいつ？', choices: ['5月', '7月', '10月'], answer: 1 },
+      { q: 'プラスチックが傷つけるかもしれない生き物は？', choices: ['ウミガメ', 'カモメ', 'カニ'], answer: 0 },
+      { q: '私が決めたことは？', choices: ['毎日海に行く', '自分の水とうを使う', '魚をとる'], answer: 1 },
+    ],
+  },
+  {
+    id: 'grandpa-phone',
+    title: 'Teaching Grandpa',
+    text: 'My grandfather got a new smartphone, but he did not know how to use it. I taught him how to send photos and make video calls. Now he sends me pictures of his garden every week. He says it is fun.',
+    ja: '祖父は新しいスマートフォンを買いましたが、使い方がわかりませんでした。私は写真の送り方とビデオ通話のやり方を教えました。今では祖父は毎週庭の写真を送ってくれます。楽しいと言っています。',
+    questions: [
+      { q: '祖父が買ったものは？', choices: ['テレビ', 'スマートフォン', 'カメラ'], answer: 1 },
+      { q: '私が教えたことは？', choices: ['料理の作り方', '写真の送り方とビデオ通話', '英語の歌'], answer: 1 },
+      { q: '祖父は毎週何を送ってくる？', choices: ['庭の写真', '手紙', 'お菓子'], answer: 0 },
+    ],
+  },
 ]
