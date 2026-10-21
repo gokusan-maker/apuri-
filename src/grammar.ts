@@ -650,6 +650,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: "She didn't come, ___ she?", choices: ['did', "didn't", 'does'], answer: 0, why: '否定文なので肯定の did she?' },
     ],
   },
+  {
+    id: 'what-a',
+    title: '感嘆文（What a 〜! / How 〜!）',
+    points: ['What a ＋形容詞＋名詞！で「なんて〜な…だろう！」（What a big dog!）。', 'How ＋形容詞（副詞）！で「なんて〜だろう！」（How big!）。'],
+    examples: [
+      { en: 'What a beautiful sunset!', ja: 'なんて美しい夕日だろう！' },
+      { en: 'How fast he runs!', ja: '彼はなんて速く走るんだろう！' },
+    ],
+    questions: [
+      { sentence: '___ a nice day!', choices: ['What', 'How'], answer: 0, why: '後ろに a ＋名詞があるので What。' },
+      { sentence: '___ cute!', choices: ['What', 'How'], answer: 1, why: '形容詞だけなので How。' },
+      { sentence: 'What ___ interesting book!', choices: ['a', 'an'], answer: 1, why: 'interesting は母音で始まるので an。' },
+    ],
+  },
+  {
+    id: 'as-as',
+    title: 'as 〜 as …（…と同じくらい〜）',
+    points: ['as ＋形容詞・副詞の原級＋ as で「…と同じくらい〜」。', 'not as 〜 as … で「…ほど〜ではない」。'],
+    examples: [
+      { en: 'Ken is as tall as his father.', ja: 'ケンはお父さんと同じくらいの背の高さだ。' },
+      { en: 'This bag is not as heavy as that one.', ja: 'このかばんはあのかばんほど重くない。' },
+    ],
+    questions: [
+      { sentence: 'My cat is as ___ as your dog.', choices: ['big', 'bigger', 'biggest'], answer: 0, why: 'as と as の間は原級。' },
+      { sentence: 'I can run as fast ___ Aki.', choices: ['as', 'than', 'so'], answer: 0, why: 'as 〜 as の形。' },
+      { sentence: 'Math is not as ___ as English for me.', choices: ['easy', 'easier', 'easiest'], answer: 0, why: 'not as 〜 as でも原級。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
