@@ -104,3 +104,8 @@ export async function cloudLoad(code: string, f: Fetch = fetch): Promise<Backup 
   const v = await rpc('eitan_backup_load', { p_code: code }, f)
   return isBackup(v) ? v : null
 }
+
+// 自動保存するか：コードがあり、今日まだ保存していなくて、オンラインのとき
+export function shouldAutoSave(code: string, savedAt: string, today: string, online: boolean): boolean {
+  return !!code && online && savedAt.slice(0, 10) !== today
+}

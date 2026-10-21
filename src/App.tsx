@@ -79,6 +79,7 @@ import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
+import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { speakPet } from './speech'
@@ -238,6 +239,14 @@ function App() {
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
+
+  // 引き継ぎコードがあれば、1日1回自動でクラウドに保存（失敗しても気にしない）
+  useEffect(() => {
+    const code = loadCode()
+    if (!shouldAutoSave(code, loadSavedAt(), today, typeof navigator === 'undefined' || navigator.onLine)) return
+    const id = window.setTimeout(() => cloudSave(code).catch(() => {}), 5000)
+    return () => window.clearTimeout(id)
+  }, [today])
 
   // 相棒の励まし（連続正解・連続ミスで声をかけてくれる）
   const run = useRef({ ok: 0, ng: 0 })

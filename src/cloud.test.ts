@@ -1,5 +1,5 @@
 import { beforeEach, expect, it, vi } from 'vitest'
-import { applyBackup, cloudLoad, cloudSave, collectBackup, ensureCode, formatCode, isBackup, loadCode, loadSavedAt, makeCode, normalizeCode, SUPABASE_URL } from './cloud'
+import { shouldAutoSave, applyBackup, cloudLoad, cloudSave, collectBackup, ensureCode, formatCode, isBackup, loadCode, loadSavedAt, makeCode, normalizeCode, SUPABASE_URL } from './cloud'
 
 beforeEach(() => localStorage.clear())
 
@@ -46,4 +46,11 @@ it('クラウドへの保存と読みこみ（Supabase の関数を呼ぶ）', a
   expect(await cloudLoad('AAAAAAAAAAAAAAAA', none as never)).toBeNull()
   const bad = vi.fn(async () => new Response('{}', { status: 400 }))
   await expect(cloudSave('AAAAAAAAAAAAAAAA', bad as never)).rejects.toThrow()
+})
+
+it('自動保存はコードがあって、今日まだ保存しておらず、オンラインのときだけ', () => {
+  expect(shouldAutoSave('', '', '2026-10-21', true)).toBe(false)
+  expect(shouldAutoSave('AAAAAAAAAAAAAAAA', '2026-10-21T01:00:00.000Z', '2026-10-21', true)).toBe(false)
+  expect(shouldAutoSave('AAAAAAAAAAAAAAAA', '2026-10-20T01:00:00.000Z', '2026-10-21', true)).toBe(true)
+  expect(shouldAutoSave('AAAAAAAAAAAAAAAA', '', '2026-10-21', false)).toBe(false)
 })
