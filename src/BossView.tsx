@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playCorrect, playWrong } from './sound'
@@ -140,6 +140,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [skillMsg, setSkillMsg] = useState('')
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [drop, setDrop] = useState<BattleItemId | null>(null)
+  const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
@@ -276,6 +277,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setCrits(0)
     setUsedItems([])
     setDrop(null)
+    setContinued(false)
     setChanceAt(-1)
     setSaves(0)
     setSkillMsg('')
@@ -417,6 +419,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <>
           <p className="boss-result">まけてしまった…</p>
           <p className="result-message">苦手な単語を復習して、もう一度挑戦しよう！</p>
+          {onSpend && !continued && hearts <= 0 && index < qs.length && (
+            <button
+              className="boss-btn continue-btn"
+              onClick={() => {
+                if (!onSpend(CONTINUE_COST)) return
+                setHearts(HEARTS)
+                setContinued(true)
+              }}
+            >
+              🔥 コンティニュー（🪙{CONTINUE_COST}でハート全回復して続きから）
+            </button>
+          )}
           <MissedList words={missed} />
           <button className="flip" onClick={retry}>
             もう一度挑戦

@@ -1140,3 +1140,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
 .long-table th, .long-table td { border: 1px solid #cbd5e1; padding: 4px; text-align: left; }
 .long-table th { background: #e0f2fe; }
+.continue-btn { display: block; width: 100%; margin: 6px 0; background: linear-gradient(90deg, #f97316, #ef4444); color: #fff; }

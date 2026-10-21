@@ -200,3 +200,21 @@ it('相棒がいると必殺技はキャラクターの技名になる', async (
   fireEvent.click(screen.getByText('💥 「ドラゴンブレス・ゼロ」をはなつ！'))
   expect(screen.getByText(/ドラの「ドラゴンブレス・ゼロ」！ 25 ダメージ/)).toBeInTheDocument()
 })
+
+it('負けてもコインでコンティニューして続きから戦える（1戦1回）', () => {
+  const spend = vi.fn(() => true)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onSpend={spend} />)
+  for (let i = 0; i < 3; i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/コンティニュー/))
+  expect(spend).toHaveBeenCalledWith(20)
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  for (let i = 0; i < 3; i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.queryByText(/コンティニュー/)).not.toBeInTheDocument()
+})
