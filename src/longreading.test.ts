@@ -116,3 +116,14 @@ it('指示語の語句は本文にあり、正解すると1点', () => {
     expect(scoreLong(p, {}, {}, [], { refer: p.refer!.answer }).score).toBe(1)
   }
 })
+
+it('段落の要旨の問題は、本文にある段落を指している', () => {
+  const gs = LONG_PASSAGES.filter((p) => p.gist)
+  expect(gs.length).toBeGreaterThanOrEqual(2)
+  for (const p of gs) for (const g of p.gist!) {
+    expect(g.para).toBeLessThan(p.paragraphs.length)
+    expect(g.choices).toHaveLength(4)
+  }
+  const p = gs[0]
+  expect(scoreLong(p, {}, {}, [], { gist: Object.fromEntries(p.gist!.map((g, i) => [i, g.answer])) }).score).toBe(p.gist!.length)
+})

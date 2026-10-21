@@ -59,6 +59,7 @@ export function LongReading({ onAnswer }: Props) {
   const [startAt, setStartAt] = useState(0) // 読みはじめた時刻
   const [qa, setQa] = useState<Record<number, number>>({}) // 英問英答
   const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
+  const [gist, setGist] = useState<Record<number, number>>({}) // 段落の要旨
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -103,6 +104,7 @@ export function LongReading({ onAnswer }: Props) {
                   setSents({})
                   setQa({})
                   setRefer(undefined)
+                  setGist({})
                   setDone(false)
                   setShowJa(false)
                 }}
@@ -128,8 +130,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0)
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -326,6 +328,29 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.gist && (
+        <>
+          <h3 className="long-q">問　次の段落の内容に最も合う見出しを、それぞれ ア〜エ から選びなさい。</h3>
+          {p.gist.map((x, n) => (
+            <div key={n} className="long-item">
+              <span className="long-label">第{x.para + 1}段落</span>
+              <div className="long-choices one">
+                {x.choices.map((c, i) => (
+                  <button key={c} className={`long-choice${gist[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={gist[n] === i} onClick={() => setGist({ ...gist, [n]: i })}>
+                    {MARKS[i]} {c}
+                  </button>
+                ))}
+              </div>
+              {done && (
+                <p className={`long-why${gist[n] === x.answer ? ' right' : ' wrong'}`}>
+                  {gist[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
+
       {p.refer && (
         <>
           <h3 className="long-q">問　本文中の二重下線部 <u className="long-refer">{p.refer.word}</u> が指すものを、ア〜エ から選びなさい。</h3>
@@ -416,6 +441,7 @@ export function LongReading({ onAnswer }: Props) {
               setSents({})
               setQa({})
               setRefer(undefined)
+              setGist({})
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -432,7 +458,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist }))
             setTypes(t)
             saveTypeStats(t)
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
