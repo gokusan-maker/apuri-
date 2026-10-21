@@ -1205,3 +1205,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .grade-row { display: grid; grid-template-columns: 3em 1fr 3.5em; align-items: center; gap: 6px; }
 .grade-bar { height: 8px; border-radius: 999px; background: #e5e7eb; overflow: hidden; }
 .grade-bar span { display: block; height: 100%; background: linear-gradient(90deg, #34d399, #10b981); }
+.boss-finisher { margin: 4px 0; font-size: 2rem; font-weight: 900; color: #dc2626; text-shadow: 0 2px 0 #fde68a; animation: treasure-pop 0.5s ease-out both; }
+.boss-figure.finished { animation: shake 0.15s linear 4; }

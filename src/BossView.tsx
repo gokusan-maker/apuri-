@@ -304,7 +304,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       </div>
       {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
       {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
-      <div className={`boss-figure${enraged && !won ? ' rage' : ''}`}>
+      <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
         <BossFigure hit={hit} look={look} />
       </div>
       {hit && crit && (
@@ -415,6 +415,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               <p className="perfect-banner">PERFECT!</p>
             </>
           )}
+          <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           <p className="boss-maxhit">{newRecord > 0 ? `💥 最大ダメージ記録を更新！ ${newRecord}` : `💥 最大ダメージ記録 ${loadMaxHit()}`}</p>
           {drop && (

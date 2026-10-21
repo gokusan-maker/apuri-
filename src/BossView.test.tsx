@@ -22,6 +22,9 @@ describe('ボス戦', () => {
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(onWin).toHaveBeenCalledTimes(1)
     expect(document.querySelectorAll('.boss .confetti:not(.gold)').length).toBe(12)
+    expect(screen.getByText('💥 とどめ！')).toBeInTheDocument()
+    expect(document.querySelector('.boss-figure.finished')).not.toBeNull()
+    expect(screen.getByText(/最大ダメージ記録/)).toBeInTheDocument()
   })
 
   it('3回まちがえると負け、もう一度挑戦できる', () => {
