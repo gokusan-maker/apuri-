@@ -986,6 +986,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Can you return the book ___ next Monday?', choices: ['until', 'by', 'during'], answer: 1, why: '次の月曜日「までに」返すので by。' },
     ],
   },
+  {
+    id: 'whose',
+    title: '関係代名詞 whose（〜の…が）',
+    points: ['whose ＋名詞で、前の人やものを「その〜が（を）…する」と説明できる。', 'whose は his / her / its / their の代わりになる（a girl whose father is a doctor ＝お父さんが医者の女の子）。'],
+    examples: [
+      { en: 'I have a friend whose sister is a singer.', ja: '私にはお姉さんが歌手の友だちがいる。' },
+      { en: 'Look at the house whose roof is red.', ja: '屋根が赤いあの家を見て。' },
+    ],
+    questions: [
+      { sentence: 'He is the boy ___ bike was stolen.', choices: ['who', 'whose', 'which'], answer: 1, why: '「その子の自転車が」なので whose ＋名詞。' },
+      { sentence: 'I know a woman whose son ___ in Canada.', choices: ['live', 'lives', 'living'], answer: 1, why: 'whose son（その息子が）が主語なので三人称単数の lives。' },
+      { sentence: 'This is a dog ___ eyes are blue.', choices: ['whose', 'that', 'what'], answer: 0, why: '「その犬の目が」なので whose。' },
+    ],
+  },
+  {
+    id: 'relative-what',
+    title: '関係代名詞 what（〜するもの・こと）',
+    points: ['what は「〜するもの・こと」という意味で、the thing(s) which と同じはたらきをする。', 'what の前には名詞を置かない（the thing what は×）。'],
+    examples: [
+      { en: 'What he said was true.', ja: '彼が言ったことは本当だった。' },
+      { en: 'This is what I wanted.', ja: 'これは私がほしかったものだ。' },
+    ],
+    questions: [
+      { sentence: 'Please show me ___ you bought.', choices: ['which', 'that', 'what'], answer: 2, why: '前に名詞がなく「買ったもの」なので what。' },
+      { sentence: 'I could not understand ___ the teacher said.', choices: ['what', 'who', 'whose'], answer: 0, why: '「先生が言ったこと」なので what。' },
+      { sentence: 'This is the book ___ I wanted.', choices: ['what', 'which', 'whose'], answer: 1, why: '前に名詞 the book があるので which（what は使えない）。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1087,7 +1115,7 @@ export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中3: ['whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
