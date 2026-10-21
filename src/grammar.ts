@@ -1094,3 +1094,9 @@ export function saveGrammarStreak(s: GrammarStreak): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 結果をシェアするための文
+export function grammarShareText(unitTitle: string, score: number, total: number): string {
+  const mark = score === total ? '👑 全問正解！' : score * 2 >= total ? '👍' : '💪 もう一度がんばる！'
+  return `イングリッシュモンスターで文法「${unitTitle}」に挑戦！ ${score} / ${total} 問正解 ${mark}`
+}

@@ -8,7 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -31,6 +31,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
   const [picked, setPicked] = useState<number | null>(null)
   const [streak, setStreak] = useState(loadGrammarStreak)
+  const [copied, setCopied] = useState(false)
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
@@ -54,6 +55,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
 
   function open(u: GrammarUnit) {
     setHidden(null)
+    setCopied(false)
     setBattle(false)
     setOrdering(false)
     setUnit(u)
@@ -289,6 +291,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         ) : (
           <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
         )}
+        <button
+          className="list-link"
+          onClick={() => {
+            navigator.clipboard
+              ?.writeText(grammarShareText(unit.title, score, unit.questions.length))
+              .then(() => setCopied(true))
+              .catch(() => setCopied(false))
+          }}
+        >
+          {copied ? '✅ コピーしました' : '📋 結果をコピー（シェア用）'}
+        </button>
         <button className="flip" onClick={() => open(unit)}>
           もう一度
         </button>

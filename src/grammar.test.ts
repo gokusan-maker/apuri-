@@ -80,3 +80,10 @@ it('連続正解はまちがえると0にもどり、ベストは残る', async 
   localStorage.setItem('eitan:grammar-streak', '{"now":4,"best":1}')
   expect(loadGrammarStreak()).toEqual({ now: 4, best: 4 })
 })
+
+it('文法クイズの結果をシェア用の文にできる', async () => {
+  const { grammarShareText } = await import('./grammar')
+  expect(grammarShareText('過去形', 3, 3)).toBe('イングリッシュモンスターで文法「過去形」に挑戦！ 3 / 3 問正解 👑 全問正解！')
+  expect(grammarShareText('過去形', 2, 3)).toContain('👍')
+  expect(grammarShareText('過去形', 0, 3)).toContain('もう一度がんばる')
+})

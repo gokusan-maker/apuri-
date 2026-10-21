@@ -179,3 +179,20 @@ it('確認問題の連続正解を数え、ベストを記録する', () => {
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText('🔥 確認問題の連続正解ベスト 5問')).toBeInTheDocument()
 })
+
+it('結果画面でシェア用の文をコピーできる', async () => {
+  localStorage.clear()
+  const writeText = vi.fn(() => Promise.resolve())
+  Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('📋 結果をコピー（シェア用）'))
+  expect(writeText).toHaveBeenCalledWith(expect.stringContaining(`「${unit.title}」に挑戦！ 3 / 3 問正解`))
+  expect(await screen.findByText('✅ コピーしました')).toBeInTheDocument()
+})
