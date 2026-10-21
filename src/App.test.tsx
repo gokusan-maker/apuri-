@@ -423,6 +423,20 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
+  it('3連ガチャで仲間が3匹ふえ、コインが3回分へる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 150枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5) // ふつうの色・モチ以外（かぶりなし）
+    fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+    rnd.mockRestore()
+    const party = JSON.parse(localStorage.getItem('eitan:party')!)
+    expect(party.members).toHaveLength(4)
+    expect(party.gacha).toBe(3)
+    const coins = JSON.parse(localStorage.getItem('eitan:wallet')!).coins
+    expect([0, 15, 30]).toContain(coins) // 2回目以降は同じ子がいるのでかぶりボーナスが入る
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

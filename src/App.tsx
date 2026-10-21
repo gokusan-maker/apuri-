@@ -98,6 +98,7 @@ import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
 import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import type { GachaResult } from './GachaView'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
@@ -641,6 +642,32 @@ function App() {
     gainXp((correct ? XP_CARD_GOOD : XP_CARD_AGAIN) * xpRate, 'card')
   }
 
+  // ガチャを n 回まとめて引く（1回ずつ財布・仲間・ステップを引きついで計算する）
+  function drawMany(ticket: boolean, n: number): GachaResult[] {
+    let w = wallet
+    let p = party
+    let st = gachaStep
+    const out: GachaResult[] = []
+    for (let i = 0; i < n; i++) {
+      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0, gachaPrice(hour))
+      if (!r) break
+      st = nextStep(st, today)
+      const dup = isDuplicate(p.members, r.species.id, r.kind.id)
+      const newSpecies = r.species.id !== 'mochi' && !p.members.some((m) => m.species === r.species.id)
+      const newKind = r.kind.id !== 'normal' && !p.members.some((m) => m.kind === r.kind.id)
+      w = dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet
+      p = r.party
+      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0 })
+    }
+    if (out.length > 0) {
+      setWallet(w)
+      setParty(p)
+      setGachaStep(st)
+      count('gacha', out.length)
+    }
+    return out
+  }
+
   return (
     <main className="app">
       <header>
@@ -805,18 +832,8 @@ function App() {
             setBag((b) => addItem(b, id))
           }}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
-          onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0, gachaPrice(hour))
-            if (!r) return null
-            setGachaStep(nextStep(gachaStep, today))
-            count('gacha')
-            const dup = isDuplicate(party.members, r.species.id, r.kind.id)
-            setWallet(dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet)
-            setParty(r.party)
-            const newSpecies = r.species.id !== 'mochi' && !party.members.some((m) => m.species === r.species.id)
-            const newKind = r.kind.id !== 'normal' && !party.members.some((m) => m.kind === r.kind.id)
-            return { kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0 }
-          }}
+          onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
+          onGachaMulti={(n) => drawMany(false, n)}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)
             if (!r) return

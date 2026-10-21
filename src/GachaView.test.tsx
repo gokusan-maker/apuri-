@@ -98,3 +98,26 @@ it('ゴールデンタイムは値下げのお知らせと安い値段が出る'
   expect(screen.getByText(/ゴールデンタイム！/)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: '🎰 ガチャを引く 🪙40' })).toBeEnabled()
 })
+
+it('3連ガチャは3つの結果が並び、いちばんレアな確定演出が出る', () => {
+  localStorage.clear()
+  const list = [
+    { kind: kindOf('normal'), species: speciesOf('fox') },
+    { kind: kindOf('kin'), species: speciesOf('cat'), newKind: true },
+    { kind: kindOf('umi'), species: speciesOf('mochi'), refund: 15 },
+  ]
+  const multi = vi.fn(() => list)
+  render(<Gacha coins={GACHA_PRICE * 3} members={1} onDraw={() => null} onDrawMulti={multi} />)
+  fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+  expect(multi).toHaveBeenCalledWith(3)
+  expect(document.querySelectorAll('.gacha-multi li')).toHaveLength(3)
+  expect(screen.getByText('金色の光…！？ スーパーレア確定！')).toBeInTheDocument()
+  expect(screen.getByText('最近のガチャ（3回）')).toBeInTheDocument()
+})
+
+it('3連ガチャはコインか仲間の空きが足りないと押せない', () => {
+  const { rerender } = render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={() => null} onDrawMulti={() => []} />)
+  expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
+  rerender(<Gacha coins={GACHA_PRICE * 3} members={10} onDraw={() => null} onDrawMulti={() => []} />)
+  expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
+})

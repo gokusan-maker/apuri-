@@ -3,6 +3,10 @@ import { GACHA_PRICE, gachaOmen, loadGachaLog, PARTY_MAX, pushGachaLog } from '.
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
+const MULTI = 3
+const RANK = ['N', 'R', 'SR', 'UR'] as const
+const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
+
 export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number }
 
 type Props = {
@@ -15,15 +19,18 @@ type Props = {
   price?: number // 1回の値段（ゴールデンタイムは安い）
   stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
+  onDrawMulti?: (n: number) => GachaResult[] // まとめて引く（3連ガチャ）
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const record = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
+  const [multi, setMulti] = useState<{ list: GachaResult[]; key: number } | null>(null)
+  const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
   return (
     <div className="gacha">
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
@@ -35,12 +42,29 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           const k = onDraw(false)
           if (k) {
             setResult({ ...k, key: Date.now() })
+            setMulti(null)
             record(k)
           }
         }}
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
+      {onDrawMulti && !full && (
+        <button
+          className="good gacha-btn multi"
+          disabled={!canMulti}
+          onClick={() => {
+            const list = onDrawMulti(MULTI)
+            if (list.length === 0) return
+            setResult(null)
+            setMulti({ list, key: Date.now() })
+            list.forEach(record)
+          }}
+        >
+          🎰🎰🎰 3連ガチャ 🪙{price * MULTI}
+          {members + MULTI > PARTY_MAX && <small>（仲間の空きが3ひつよう）</small>}
+        </button>
+      )}
       {tickets > 0 && !full && (
         <button
           className="good gacha-btn ticket"
@@ -48,6 +72,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
             const k = onDraw(true)
             if (k) {
             setResult({ ...k, key: Date.now() })
+            setMulti(null)
             record(k)
           }
           }}
@@ -98,6 +123,30 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(speciesRate(sp, dragonUp, pickup?.id) * 100)}%`).join('・')}</li>
         </ul>
       </details>
+      {multi && (
+        <div key={multi.key} className={`gacha-multi r-${bestRarity(multi.list)}`} role="status">
+          {gachaOmen(bestRarity(multi.list)) && <p className="gacha-omen">{gachaOmen(bestRarity(multi.list))}</p>}
+          <ul>
+            {multi.list.map((k, i) => (
+              <li key={i} className={`r-${k.kind.rarity}`} style={{ animationDelay: `${i * 0.25}s` }}>
+                <span className="gacha-multi-fig">
+                  <MonsterFigure form={withSpecies(FORMS[0], k.species.id)} kind={k.kind.id} mood="happy" />
+                </span>
+                <span className="gacha-multi-name">
+                  {k.kind.id === 'normal' ? '' : `${k.kind.name}の`}
+                  {k.species.name}
+                </span>
+                <span className={`kind-tag r-${k.kind.rarity}`}>{RARITY_LABEL[k.kind.rarity]}</span>
+                {(k.newKind || k.newSpecies) && <span className="gacha-new">NEW!</span>}
+                {!!k.refund && <span className="gacha-dup">🪙{k.refund}もどった</span>}
+              </li>
+            ))}
+          </ul>
+          <button className="list-link" onClick={() => setMulti(null)}>
+            とじる
+          </button>
+        </div>
+      )}
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
