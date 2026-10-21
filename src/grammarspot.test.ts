@@ -15,3 +15,9 @@ it('まちがいさがしは、正しい文か、まちがった語の文にな�
   expect(set).toHaveLength(10)
   expect(new Set(set.map((x) => x.right)).size).toBe(10)
 })
+
+it('「何も入らない」が正解の問題は、空欄なしの文になる', () => {
+  const q = { sentence: 'Is this the bag ___ you lost?', choices: ['who', 'you', '（何も入らない）'], answer: 2, why: '' }
+  expect(makeSpot(q, 0.1, 0).text).toBe('Is this the bag you lost?')
+  expect(makeSpot(q, 0.9, 0).text).toBe('Is this the bag who you lost?')
+})
