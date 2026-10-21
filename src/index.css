@@ -962,3 +962,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .gacha-pickup { display: flex; align-items: center; gap: 8px; margin: 6px 0; padding: 6px 10px; border-radius: 12px; background: linear-gradient(90deg, #fef3c7, #fce7f3); font-size: 0.9rem; }
 .gacha-pickup-fig { width: 52px; height: 52px; flex: none; }
 .gacha-pickup-fig svg { width: 100%; height: 100%; }
+
+/* ボス戦の相棒 */
+.boss-partner { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; padding: 4px 8px; border-radius: 12px; background: rgb(255 255 255 / 0.7); font-size: 0.8rem; text-align: left; }
+.boss-partner-fig { width: 44px; height: 44px; flex: none; }
+.boss-partner-fig svg { width: 100%; height: 100%; }
+.boss-skill-pop { display: inline-block; color: #db2777; animation: crit-pop 0.6s ease-out both; }

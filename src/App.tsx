@@ -793,6 +793,7 @@ function App() {
         />
       ) : mode === 'stage' ? (
         <Stages
+          partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name }}
           onSpend={spend}
           dailyDone={dailyBossDay === today}
           onDailyWin={() => {

@@ -81,3 +81,24 @@ it('ゲージが満タンになると必殺技で大ダメージ', () => {
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', String(hp - 25))
   expect(screen.getByRole('meter', { name: '必殺技ゲージ' })).toHaveAttribute('aria-valuenow', '0')
 })
+
+it('相棒がいっしょに戦う：ドラコは火の息で追加ダメージ、ペンペンはハートを守る', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  const grown = (sp: string) => ({ form: withSpecies(FORMS[1], sp), species: sp, name: 'あいぼう' })
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={grown('dragon')} />)
+  expect(screen.getByText(/特技「火の息」/)).toBeInTheDocument()
+  answer(true)
+  expect(screen.getByText('あいぼうの火の息！ +3')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '88') // 会心9＋3
+  unmount()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={grown('penguin')} />)
+  answer(false)
+  expect(screen.getByText('あいぼうのペンギンガード！ ハートを守った')).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+})
+
+it('タマゴの相棒は応援だけ', async () => {
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: FORMS[0], name: 'たまご' }} />)
+  expect(screen.getByText(/たまごが応援しているよ/)).toBeInTheDocument()
+})

@@ -18,7 +18,7 @@ export function damage(combo: number): number {
 
 // 会心の一撃：問題が出てから3秒以内に正解するとダメージ1.5倍
 export const CRIT_MS = 3000
-export const isCritical = (ms: number) => ms >= 0 && ms <= CRIT_MS
+export const isCritical = (ms: number, limit = CRIT_MS) => ms >= 0 && ms <= limit
 export const critDamage = (base: number) => Math.ceil(base * 1.5)
 
 // 必殺技ゲージ：正解で1、会心なら2たまる。満タンで必殺技（大ダメージ）

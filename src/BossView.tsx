@@ -1,8 +1,10 @@
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
-import { BOSS_HP, bossQuestions, BOSSES, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, SPECIAL_DAMAGE, type BossLook, type BossRecord } from './boss'
-import { quizXp, type Source } from './monster'
+import { MonsterFigure } from './MonsterView'
+import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, SPECIAL_DAMAGE, type BossLook, type BossRecord } from './boss'
+import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { LEVELS, type Level, type Word } from './words'
@@ -19,6 +21,7 @@ type Props = {
   title?: string // 上に出す見出し
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
+  partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string } // いっしょに戦う相棒（タマゴは応援だけ）
 }
 
 
@@ -102,7 +105,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -115,6 +118,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [missed, setMissed] = useState<Word[]>([])
   const [crit, setCrit] = useState(false)
   const [gauge, setGauge] = useState(0)
+  const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
+  const [corrects, setCorrects] = useState(0)
+  const [saved, setSaved] = useState(false) // ガード・根性は1戦1回
+  const [skillMsg, setSkillMsg] = useState('')
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
@@ -128,13 +135,20 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   function pick(i: number) {
     if (picked !== null || won || lost) return
     setPicked(i)
+    setSkillMsg('')
     if (i === q.answer) {
       const c = combo + 1
+      const n = corrects + 1
       setCombo(c)
-      const critical = isCritical(nowMs() - shownAt.current)
-      const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c))
+      setCorrects(n)
+      const critical = isCritical(nowMs() - shownAt.current, skill ? skillCritMs(skill.id, CRIT_MS) : CRIT_MS)
+      const extra = skill ? skillDamage(skill.id, n) : 0
+      if (extra > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
+      const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c)) - extra
       setCrit(critical)
-      setGauge(gaugeAfter(gauge, critical))
+      const plus = skill ? skillGauge(skill.id, n) : 0
+      if (plus > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
+      setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
       setHp(Math.max(0, nextHp))
       setHit(true)
       playCorrect()
@@ -142,7 +156,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       if (nextHp <= 0) onWin()
     } else {
       setCombo(0)
-      setHearts(hearts - 1)
+      const guard = skill?.id === 'guard' && !saved
+      const revive = skill?.id === 'revive' && !saved && hearts - 1 <= 0
+      if (guard) {
+        setSaved(true)
+        setSkillMsg(`${partner!.name}の${skill!.name}！ ハートを守った`)
+      } else if (revive) {
+        setSaved(true)
+        setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
+      } else setHearts(hearts - 1)
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
       onAnswer?.(false, 0, q.word.id, 'quiz')
@@ -178,6 +200,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHealed(false)
     setMissed([])
     setGauge(0)
+    setCorrects(0)
+    setSaved(false)
+    setSkillMsg('')
   }
 
   return (
@@ -202,6 +227,26 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </p>
       )}
       <p className="boss-name">{look.name}</p>
+      {partner && (
+        <div className="boss-partner">
+          <span className="boss-partner-fig">
+            <MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood={hit ? 'happy' : 'normal'} />
+          </span>
+          <span className="boss-partner-text">
+            {skillMsg ? (
+              <strong key={skillMsg + index} className="boss-skill-pop">
+                {skillMsg}
+              </strong>
+            ) : skill ? (
+              <>
+                {partner.name}の特技「{skill.name}」：{skill.desc}
+              </>
+            ) : (
+              <>{partner.name}が応援しているよ！（生まれると特技が使える）</>
+            )}
+          </span>
+        </div>
+      )}
       {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると「会心の一撃」！ 正解でゲージがたまると必殺技が出せる</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">

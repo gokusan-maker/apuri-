@@ -1,3 +1,4 @@
+import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
@@ -25,13 +26,14 @@ type Props = {
   onStudy?: (words: Word[]) => void // このステージの単語をカードで予習
   learnedPct?: Partial<Record<Level, number>> // 単語帳の定着率（メダル用）
   onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
+  partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
 }
 
 export const STAR3_COINS = 20
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -54,6 +56,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         title={`🏯 大学入試の塔 ${univFight.floor}`}
         hp={univFight.hp}
         grammar
+        partner={partner}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
@@ -71,6 +74,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <Boss
         level={fighting}
         words={wordsOf([fighting])}
+        partner={partner}
         bonus={boss[fighting] ? BOSS_REMATCH_XP : BOSS_XP}
         onSpend={onSpend}
         onAnswer={onAnswer}
