@@ -26,13 +26,14 @@ const SORTS: { id: Sort; label: string }[] = [
   { id: 'recent', label: '最近学んだ順' },
 ]
 
-type Filter = 'all' | 'まだ' | '学習中' | '定着' | 'fav'
+type Filter = 'all' | 'まだ' | '学習中' | '定着' | 'fav' | 'note'
 const FILTERS: { id: Filter; label: string }[] = [
   { id: 'all', label: 'ぜんぶ' },
   { id: 'まだ', label: 'まだ' },
   { id: '学習中', label: '学習中' },
   { id: '定着', label: '定着' },
   { id: 'fav', label: '★' },
+  { id: 'note', label: '📝メモ' },
 ]
 
 function status(box: number | undefined): string {
@@ -49,6 +50,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
   const hits = searchWords(words, query).filter((w) => {
     if (filter === 'all') return true
     if (filter === 'fav') return favorites.includes(w.id)
+    if (filter === 'note') return !!notes[w.id]?.trim()
     return status(progress[w.id]?.box) === filter
   })
   const shown = sortWords(hits, sort, progress)

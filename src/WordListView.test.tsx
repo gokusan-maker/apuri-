@@ -41,3 +41,11 @@ it('詳細に「はじめて学んだ日」が出る', () => {
   fireEvent.click(screen.getByRole('button', { name: new RegExp(w.en) }))
   expect(screen.getByText('はじめて学んだ日 10/18')).toBeInTheDocument()
 })
+
+it('メモのある単語だけにしぼりこめる', () => {
+  const words = WORDS.slice(0, 3)
+  render(<WordList words={words} progress={{}} onClose={() => {}} notes={{ [words[1].id]: 'にている単語に注意' }} />)
+  fireEvent.click(screen.getByRole('button', { name: '📝メモ' }))
+  expect(screen.getByText('1語')).toBeInTheDocument()
+  expect(screen.getByText(words[1].en)).toBeInTheDocument()
+})
