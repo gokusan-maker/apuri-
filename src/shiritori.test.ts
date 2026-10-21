@@ -16,6 +16,6 @@ describe('英語しりとり', () => {
 
   it('使った単語は出さず、つなげる単語がなければ null', () => {
     const cur = { id: 'x', en: 'abcx', ja: '', example: '', exampleJa: '' }
-    expect(makeTurn(cur, pool, new Set())).toBeNull()
+    expect(makeTurn(cur, pool.filter((w) => !w.en.toLowerCase().startsWith('x')), new Set())).toBeNull()
   })
 })
