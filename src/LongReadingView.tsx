@@ -781,6 +781,34 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           >
             もう一度とく
           </button>
+          {score < total && (
+            <button
+              className="list-link"
+              onClick={() => {
+                // まちがえた設問の答えだけを消して、もう一度とく
+                const keep = <T,>(m: Record<string | number, T>, ok: (k: string, v: T) => boolean) => Object.fromEntries(Object.entries(m).filter(([k, v]) => ok(k, v)))
+                setBlanks(keep(blanks, (k, v) => p.blanks.find((b) => b.id === k)?.answer === v))
+                setTf(keep(tf, (k, v) => p.tf[Number(k)]?.answer === v))
+                if (p.pick2 && !p.pick2.answers.every((i) => picks.includes(i))) setPicks([])
+                if (p.underline && under !== p.underline.answer) setUnder(undefined)
+                if (p.order && orderText !== p.order.answer) setOrder([])
+                setSents(keep(sents, (k, v) => p.sentences?.find((x) => x.id === k)?.answer === v))
+                setQa(keep(qa, (k, v) => p.qa?.[Number(k)]?.answer === v))
+                if (p.refer && refer !== p.refer.answer) setRefer(undefined)
+                setGist(keep(gist, (k, v) => p.gist?.[Number(k)]?.answer === v))
+                if (p.titleQ && titlePick !== p.titleQ.answer) setTitlePick(undefined)
+                setComp(keep(comp, (k, v) => p.complete?.[Number(k)]?.answer === v))
+                if (p.insert && ins !== p.insert.answer) setIns(undefined)
+                setSumm(keep(summ, (k, v) => p.summary?.blanks[Number(k)]?.answer === v))
+                setVoc(keep(voc, (k, v) => p.vocab?.[Number(k)]?.answer === v))
+                if (p.seq && !seqRight(p.seq, seq)) setSeq([])
+                setStartAt(Date.now())
+                setDone(false)
+              }}
+            >
+              🔁 まちがえた問題だけ解き直す
+            </button>
+          )}
         </div>
       ) : (
         <button

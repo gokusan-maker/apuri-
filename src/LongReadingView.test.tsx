@@ -293,3 +293,30 @@ it('音読タイムで1分あたりの語数が出る', () => {
   fireEvent.click(screen.getByText('⏹ 読みおわった！'))
   expect(screen.getByText(new RegExp(`1分あたり ${wordCount(p)}語`))).toBeInTheDocument()
 })
+
+it('まちがえた問題だけ解き直せる', () => {
+  localStorage.clear()
+  const onAnswer = vi.fn()
+  render(<LongReading onAnswer={onAnswer} />)
+  const p = LONG_PASSAGES[0]
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  expect(screen.getAllByText('( A )').length).toBeGreaterThan(0)
+  expect(screen.getByRole('button', { name: /のこり 14問/ })).toBeDisabled()
+  for (const b of p.blanks) {
+    const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
+    const btn = screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!
+    fireEvent.click(btn)
+  }
+  p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${i === 0 ? '×' : t.answer ? '○' : '×'}` })))
+  for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  p.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
+  vi.setSystemTime(Date.now() + 125000)
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  expect(screen.getByText(/13 \/ 14 点/)).toBeInTheDocument()
+  expect(screen.getByText('💡 つまずき解説')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('🔁 まちがえた問題だけ解き直す'))
+  expect(screen.getByRole('button', { name: /のこり 1問/ })).toBeDisabled()
+  fireEvent.click(screen.getByRole('button', { name: `(1) ${p.tf[0].answer ? '○' : '×'}` }))
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  expect(screen.getByText(/14 \/ 14 点/)).toBeInTheDocument()
+})
