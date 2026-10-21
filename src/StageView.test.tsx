@@ -165,3 +165,12 @@ it('週末はボスラッシュEXが出て、むずかしいボスと戦う', ()
   expect(screen.getByText('🔥 ボスラッシュEX 1 / 3')).toBeInTheDocument()
   expect(screen.getByText('コオリモチ')).toBeInTheDocument() // 中3のボスから
 })
+
+it('鍵が3つあると金の宝箱をあけられる', () => {
+  const open = vi.fn()
+  const { rerender } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} keys={2} onOpenGold={open} />)
+  expect(screen.queryByText(/金の宝箱をあける/)).not.toBeInTheDocument()
+  rerender(<Stages levels={['中1']} record={{}} onClear={() => {}} keys={3} onOpenGold={open} />)
+  fireEvent.click(screen.getByText(/金の宝箱をあける/))
+  expect(open).toHaveBeenCalled()
+})

@@ -10,7 +10,7 @@ import { BossBook } from './BossBookView'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadRareWeek, RARE_HP, rareBossOf, saveRareWeek, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
-import { openTreasure, type Treasure } from './treasure'
+import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -42,6 +42,8 @@ type Props = {
   onBossDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   onSkill?: () => void // 相棒の特技が出た
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
+  keys?: number // 金の宝箱の鍵
+  onOpenGold?: () => void
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
 }
 
@@ -51,7 +53,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, onRareWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(false)
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -313,6 +315,14 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   return (
     <section className="card stages">
       <h2>ステージ</h2>
+      <div className="gold-chest">
+        <span>🗝 金の宝箱の鍵 {'🔑'.repeat(Math.min(keys, KEYS_FOR_GOLD))}{'▫️'.repeat(Math.max(0, KEYS_FOR_GOLD - keys))}（ボスをたおすと1つ）</span>
+        {keys >= KEYS_FOR_GOLD && onOpenGold && (
+          <button className="treasure-btn" onClick={onOpenGold}>
+            🎁 金の宝箱をあける（🎟＋🪙{GOLD_COINS}）
+          </button>
+        )}
+      </div>
       <BossBook />
       <details className="univ-tower" open={Object.keys(univ).length > 0}>
         <summary>

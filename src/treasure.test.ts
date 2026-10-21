@@ -8,3 +8,11 @@ it('宝箱はコインが多め、ときどきおやつ、★3のときだけま
   expect(openTreasure(3, TICKET_CHANCE + XP_CHANCE)).toEqual({ kind: 'coins', amount: 8, text: '🪙 コイン 8まい' })
   expect(openTreasure(1, 0.99).amount).toBe(4)
 })
+
+it('金の宝箱の鍵は保存できる', async () => {
+  const { loadKeys, saveKeys } = await import('./treasure')
+  localStorage.clear()
+  expect(loadKeys()).toBe(0)
+  saveKeys(4)
+  expect(loadKeys()).toBe(4)
+})

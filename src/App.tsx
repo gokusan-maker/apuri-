@@ -17,6 +17,7 @@ import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
 import { epithetOf, loadBook, totalWins } from './bossbook'
+import { GOLD_COINS, KEYS_FOR_GOLD, loadKeys, saveKeys } from './treasure'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
@@ -253,6 +254,7 @@ function App() {
   const [bag, setBag] = usePersistent(loadBag, saveBag)
   const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
   const [warm, setWarm] = usePersistent(loadWarm, saveWarm)
+  const [keys, setKeys] = usePersistent(loadKeys, saveKeys)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
@@ -887,7 +889,17 @@ function App() {
           rushDone={rushDay === today}
           bag={bag}
           onUseItem={(id) => setBag((b) => spendItem(b, id))}
-          onBossDefeat={() => count('boss')}
+          onBossDefeat={() => {
+            count('boss')
+            setKeys((k) => k + 1)
+          }}
+          keys={keys}
+          onOpenGold={() => {
+            if (keys < KEYS_FOR_GOLD) return
+            setKeys((k) => k - KEYS_FOR_GOLD)
+            setWallet((w) => ({ ...addTicket(w), coins: w.coins + GOLD_COINS }))
+            pushToast([{ id: 'gold', text: `🎁 金の宝箱！ 🎟ガチャチケットと🪙${GOLD_COINS}をゲット`, counter: 'answers', target: 0 }])
+          }}
           onDrop={(id) => setBag((b) => addItem(b, id))}
           onSkill={() => updateMonster((m) => ({ ...m, skillUses: (m.skillUses ?? 0) + 1 }))}
           onEndlessReward={(times) => {

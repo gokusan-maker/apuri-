@@ -445,6 +445,18 @@ describe('App', () => {
     expect(screen.getByText(/今日あと4回/)).toBeInTheDocument()
   })
 
+  it('金の宝箱をあけるとチケットとコイン', () => {
+    localStorage.setItem('eitan:keys', '3')
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /ステージ/ }))
+    fireEvent.click(screen.getByText(/金の宝箱をあける/))
+    const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
+    expect(w.coins).toBe(30)
+    expect(w.tickets).toBe(1)
+    expect(localStorage.getItem('eitan:keys')).toBe('0')
+  })
+
   it('記録の部屋に自己ベストが出る', () => {
     localStorage.setItem('eitan:endless', '7')
     render(<App />)
