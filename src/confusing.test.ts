@@ -3,7 +3,7 @@ import { CONFUSING, confusingFor } from './confusing'
 
 describe('まちがえやすい単語', () => {
   it('15組、各3問、空欄は1つで正解が選択肢にある', () => {
-    expect(CONFUSING).toHaveLength(70)
+    expect(CONFUSING).toHaveLength(75)
     for (const u of CONFUSING) {
       expect(u.questions).toHaveLength(3)
       for (const q of u.questions) {
@@ -16,6 +16,7 @@ describe('まちがえやすい単語', () => {
   it('単語idから「まちがえやすい単語」の単元を探す', () => {
     expect(confusingFor('borrow')?.id).toBe('borrow-lend')
     expect(confusingFor('watch')?.id).toBe('see-look-watch')
+    expect(confusingFor('attend')?.id).toBe('join-attend')
     expect(confusingFor('apple')).toBeUndefined()
   })
 })

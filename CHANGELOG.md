@@ -640,3 +640,4 @@
 - 2026-10-21: 会話フレーズを10個追加（Never mind, Time's up!, Is this seat taken? など。計190）
 - 2026-10-21: 中3に単語を20語追加（deserve, inspire, tolerate など。計3820語）
 - 2026-10-21: Cloudflare Pages で公開できるよう設定（_headers・Node 22 指定・手順を README に）
+- 2026-10-21: まちがえやすい単語を5組追加（join/attend・expensive/high・customer/guest・excited/exciting・almost/most。計75組）

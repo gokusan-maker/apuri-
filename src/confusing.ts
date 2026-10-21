@@ -982,6 +982,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'It rained the ___ day.', choices: ['whole', 'all'], answer: 0, why: '「一日中」は the whole day（all day とも言う）。' },
     ],
   },
+  {
+    id: 'join-attend',
+    title: 'join と attend',
+    points: ['join は「（グループ・活動に）加わる・参加する」。attend は「（会議・授業・式などに）出席する」で、少しかための言い方。どちらも後ろに in や to をつけない。'],
+    examples: [
+      { en: 'I joined the brass band in April.', ja: '私は4月に吹奏楽部に入った。' },
+      { en: 'Many parents attended the graduation ceremony.', ja: 'たくさんの保護者が卒業式に出席した。' },
+    ],
+    questions: [
+      { sentence: 'Do you want to ___ our soccer team?', choices: ['join', 'attend'], answer: 0, why: 'チームの「仲間に加わる」ので join。' },
+      { sentence: 'All students must ___ the meeting tomorrow.', choices: ['join', 'attend'], answer: 1, why: '会議に「出席する」ので attend。' },
+      { sentence: 'She could not ___ class because she was sick.', choices: ['join', 'attend'], answer: 1, why: '授業に「出席する」は attend class。' },
+    ],
+  },
+  {
+    id: 'expensive-high',
+    title: 'expensive と high（値段）',
+    points: ['「物が高い」は expensive。「値段（price）が高い」は high。The price is expensive. とは言わない。安いほうも同じで、物は cheap、値段は low。'],
+    examples: [
+      { en: 'This watch is very expensive.', ja: 'この腕時計はとても高い。' },
+      { en: 'The price of vegetables is high this winter.', ja: '今年の冬は野菜の値段が高い。' },
+    ],
+    questions: [
+      { sentence: 'That car is too ___ for me.', choices: ['expensive', 'high'], answer: 0, why: '「車（物）」が高いので expensive。' },
+      { sentence: 'The price of this ticket is ___.', choices: ['expensive', 'high'], answer: 1, why: '主語が price（値段）なので high。' },
+      { sentence: 'The rent in this city is very ___.', choices: ['expensive', 'high'], answer: 1, why: 'rent（家賃）は「料金」なので high。' },
+    ],
+  },
+  {
+    id: 'customer-guest',
+    title: 'customer と guest',
+    points: ['customer は「お店で買い物をする客」。guest は「招かれた客・ホテルの宿泊客」。visitor は「訪問者・見学者」。'],
+    examples: [
+      { en: 'The shop was full of customers.', ja: 'その店はお客さんでいっぱいだった。' },
+      { en: 'We have three guests for dinner tonight.', ja: '今夜は夕食に3人のお客さんが来る。' },
+    ],
+    questions: [
+      { sentence: 'The clerk said "Thank you" to every ___.', choices: ['customer', 'guest'], answer: 0, why: '店員がお礼を言う相手は店の客 customer。' },
+      { sentence: 'I invited five ___ to my birthday party.', choices: ['customers', 'guests'], answer: 1, why: 'パーティーに「招いた客」なので guest。' },
+      { sentence: 'Hotel ___ can use the pool for free.', choices: ['customers', 'guests'], answer: 1, why: 'ホテルの宿泊客は guest。' },
+    ],
+  },
+  {
+    id: 'excited-exciting',
+    title: 'excited と exciting',
+    points: ['excited は「（人が）わくわくしている」。exciting は「（物事が）わくわくさせる」。人の気持ちは -ed、気持ちを起こす物事は -ing。'],
+    examples: [
+      { en: 'The children were excited about the trip.', ja: '子どもたちは旅行にわくわくしていた。' },
+      { en: 'The final game was really exciting.', ja: '決勝戦は本当にわくわくする試合だった。' },
+    ],
+    questions: [
+      { sentence: 'I am so ___ about the concert tomorrow!', choices: ['excited', 'exciting'], answer: 0, why: '「私が」わくわくしているので excited。' },
+      { sentence: 'That roller coaster was very ___.', choices: ['excited', 'exciting'], answer: 1, why: 'ジェットコースター（物事）がわくわくさせるので exciting。' },
+      { sentence: 'The fans got ___ when their team scored.', choices: ['excited', 'exciting'], answer: 0, why: 'ファン（人）の気持ちなので excited。' },
+    ],
+  },
+  {
+    id: 'almost-most',
+    title: 'almost と most',
+    points: ['most は「ほとんどの」で、名詞の前に置ける（most students）。almost は「ほとんど・もう少しで」という副詞なので、名詞の前には置けない。「ほとんどの生徒」は almost all students か most students。'],
+    examples: [
+      { en: 'Most students walk to school.', ja: 'ほとんどの生徒は歩いて学校へ行く。' },
+      { en: 'I almost missed the bus.', ja: 'もう少しでバスに乗りおくれるところだった。' },
+    ],
+    questions: [
+      { sentence: '___ people in my town have a car.', choices: ['Almost', 'Most'], answer: 1, why: '名詞 people の前なので Most（Almost all people なら OK）。' },
+      { sentence: 'It is ___ ten o\'clock.', choices: ['almost', 'most'], answer: 0, why: '「もうすぐ10時」なので副詞の almost。' },
+      { sentence: 'I ___ forgot my homework today.', choices: ['almost', 'most'], answer: 0, why: '「もう少しで忘れるところだった」は almost。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
