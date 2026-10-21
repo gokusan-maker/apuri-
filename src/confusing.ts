@@ -912,6 +912,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: '___ a cat on the roof.', choices: ['There is', 'It has'], answer: 0, why: '「屋根の上にネコがいる」は There is。' },
     ],
   },
+  {
+    id: 'though-through',
+    title: 'though と through',
+    points: ['though（ゾウ）は「〜だけれども」。', 'through（スルー）は「〜を通りぬけて」。つづりがにているので注意。'],
+    examples: [
+      { en: 'Though it was cold, we went swimming.', ja: '寒かったけれど、泳ぎに行った。' },
+      { en: 'The train went through a long tunnel.', ja: '電車は長いトンネルを通りぬけた。' },
+    ],
+    questions: [
+      { sentence: 'We walked ___ the forest.', choices: ['though', 'through'], answer: 1, why: '「森を通りぬけて」は through。' },
+      { sentence: '___ he was tired, he kept working.', choices: ['Though', 'Through'], answer: 0, why: '「疲れていたけれど」は Though。' },
+      { sentence: 'Light comes in ___ the window.', choices: ['though', 'through'], answer: 1, why: '「窓を通って」は through。' },
+    ],
+  },
+  {
+    id: 'such-so',
+    title: 'such と so',
+    points: ['such ＋ a ＋形容詞＋名詞で「とても〜な…」（such a kind boy）。', 'so ＋形容詞で「とても〜」（so kind）。'],
+    examples: [
+      { en: 'She is such a good singer.', ja: '彼女はとても歌がうまい。' },
+      { en: 'The movie was so exciting.', ja: 'その映画はとてもわくわくした。' },
+    ],
+    questions: [
+      { sentence: 'It was ___ a beautiful day.', choices: ['such', 'so'], answer: 0, why: 'a ＋形容詞＋名詞の前は such。' },
+      { sentence: 'This soup is ___ hot.', choices: ['such', 'so'], answer: 1, why: '形容詞だけの前は so。' },
+      { sentence: 'He is ___ kind that everyone likes him.', choices: ['such', 'so'], answer: 1, why: 'so ＋形容詞＋ that。' },
+    ],
+  },
+  {
+    id: 'travel-trip-journey',
+    title: 'travel と trip と journey',
+    points: ['travel は「旅行する（動詞）」や旅行全般。', 'trip は「（短い）旅行・出かけること」で、go on a trip の形。journey は「（長い）旅・道のり」。'],
+    examples: [
+      { en: 'I want to travel around the world.', ja: '世界中を旅行したい。' },
+      { en: 'We went on a school trip to Nara.', ja: '奈良へ修学旅行に行った。' },
+    ],
+    questions: [
+      { sentence: 'Have a nice ___!', choices: ['trip', 'travel'], answer: 0, why: '「よい旅行を」は Have a nice trip!' },
+      { sentence: 'My parents like to ___ abroad.', choices: ['travel', 'trip'], answer: 0, why: '動詞「旅行する」は travel。' },
+      { sentence: 'The ___ across the desert took ten days.', choices: ['journey', 'trip'], answer: 0, why: '長い道のりの「旅」は journey。' },
+    ],
+  },
+  {
+    id: 'lie-lie',
+    title: 'lie（横になる）と lie（うそをつく）',
+    points: ['「横になる」の lie は lie - lay - lain と変化する。', '「うそをつく」の lie は lie - lied - lied と変化する。'],
+    examples: [
+      { en: 'I lay on the grass and looked at the sky.', ja: '草の上に横になって空を見た。' },
+      { en: 'He lied about his age.', ja: '彼は年れいについてうそをついた。' },
+    ],
+    questions: [
+      { sentence: 'Yesterday I ___ on the sofa all afternoon.', choices: ['lay', 'lied'], answer: 0, why: '「横になった」は lay（lie の過去形）。' },
+      { sentence: 'She ___ to her mother about the test.', choices: ['lay', 'lied'], answer: 1, why: '「うそをついた」は lied。' },
+      { sentence: 'Please ___ down and rest.', choices: ['lie', 'lay'], answer: 0, why: '「横になって」は lie down。' },
+    ],
+  },
+  {
+    id: 'whole-all',
+    title: 'whole と all',
+    points: ['the whole ＋単数名詞で「〜全体」（the whole class）。', 'all ＋複数名詞・数えられない名詞で「すべての〜」（all the students）。'],
+    examples: [
+      { en: 'I ate the whole cake!', ja: 'ケーキを丸ごと食べた！' },
+      { en: 'All the students passed the test.', ja: '生徒全員がテストに合格した。' },
+    ],
+    questions: [
+      { sentence: 'The ___ town was quiet.', choices: ['whole', 'all'], answer: 0, why: 'the ＋ whole ＋単数名詞。' },
+      { sentence: '___ my friends came to the party.', choices: ['Whole', 'All'], answer: 1, why: '複数名詞の前は All。' },
+      { sentence: 'It rained the ___ day.', choices: ['whole', 'all'], answer: 0, why: '「一日中」は the whole day（all day とも言う）。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
