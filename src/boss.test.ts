@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, bossUnlocked, critDamage, dailyBossLevel, damage, isCritical, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, bossUnlocked, critDamage, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -51,4 +51,10 @@ it('3秒以内の正解は会心の一撃でダメージ1.5倍', () => {
   expect(isCritical(3001)).toBe(false)
   expect(critDamage(damage(1))).toBe(9)
   expect(critDamage(damage(5))).toBe(15)
+})
+
+it('必殺技ゲージは正解で1、会心で2たまり、満タンで止まる', () => {
+  expect(gaugeAfter(0, false)).toBe(1)
+  expect(gaugeAfter(0, true)).toBe(2)
+  expect(gaugeAfter(GAUGE_MAX - 1, true)).toBe(GAUGE_MAX)
 })

@@ -66,3 +66,18 @@ it('すぐに正解すると会心の一撃、ゆっくりだとふつうのダ�
   expect(screen.queryByText('⚡ 会心の一撃！')).not.toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '94')
 })
+
+it('ゲージが満タンになると必殺技で大ダメージ', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  expect(screen.queryByText('💥 必殺技をはなつ！')).not.toBeInTheDocument()
+  for (let i = 0; i < 3; i++) {
+    answer(true) // すぐ答えるので会心（ゲージ+2）
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByRole('meter', { name: '必殺技ゲージ' })).toHaveAttribute('aria-valuenow', '5')
+  const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+  fireEvent.click(screen.getByText('💥 必殺技をはなつ！'))
+  expect(screen.getByText('💥 必殺技！ 25 ダメージ')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', String(hp - 25))
+  expect(screen.getByRole('meter', { name: '必殺技ゲージ' })).toHaveAttribute('aria-valuenow', '0')
+})

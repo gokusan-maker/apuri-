@@ -21,6 +21,11 @@ export const CRIT_MS = 3000
 export const isCritical = (ms: number) => ms >= 0 && ms <= CRIT_MS
 export const critDamage = (base: number) => Math.ceil(base * 1.5)
 
+// 必殺技ゲージ：正解で1、会心なら2たまる。満タンで必殺技（大ダメージ）
+export const GAUGE_MAX = 5
+export const SPECIAL_DAMAGE = 25
+export const gaugeAfter = (g: number, critical: boolean) => Math.min(GAUGE_MAX, g + (critical ? 2 : 1))
+
 export function bossUnlocked(level: Level, rec: StageRecord): boolean {
   const list = stagesOf(level)
   return list.length > 0 && list.every((s) => (rec[s.id] ?? 0) >= 1)

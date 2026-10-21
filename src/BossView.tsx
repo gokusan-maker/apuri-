@@ -1,7 +1,7 @@
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
-import { BOSS_HP, bossQuestions, BOSSES, critDamage, damage, HEAL_COST, HEARTS, isCritical, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, SPECIAL_DAMAGE, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -114,6 +114,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
   const [crit, setCrit] = useState(false)
+  const [gauge, setGauge] = useState(0)
+  const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
   useEffect(() => {
     shownAt.current = nowMs()
@@ -132,6 +134,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const critical = isCritical(nowMs() - shownAt.current)
       const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c))
       setCrit(critical)
+      setGauge(gaugeAfter(gauge, critical))
       setHp(Math.max(0, nextHp))
       setHit(true)
       playCorrect()
@@ -144,6 +147,17 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       playWrong()
       onAnswer?.(false, 0, q.word.id, 'quiz')
     }
+  }
+
+  function fireSpecial() {
+    if (gauge < GAUGE_MAX || won || lost) return
+    const nextHp = hp - SPECIAL_DAMAGE
+    setGauge(0)
+    setSpecial(special + 1)
+    setHp(Math.max(0, nextHp))
+    setHit(true)
+    playCorrect()
+    if (nextHp <= 0) onWin()
   }
 
   function next() {
@@ -163,6 +177,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHit(false)
     setHealed(false)
     setMissed([])
+    setGauge(0)
   }
 
   return (
@@ -181,8 +196,13 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           ⚡ 会心の一撃！
         </p>
       )}
+      {special > 0 && (
+        <p key={`sp${special}`} className="boss-special" role="status">
+          💥 必殺技！ {SPECIAL_DAMAGE} ダメージ
+        </p>
+      )}
       <p className="boss-name">{look.name}</p>
-      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると「会心の一撃」でダメージ1.5倍！</p>}
+      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると「会心の一撃」！ 正解でゲージがたまると必殺技が出せる</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">
           「{look.taunt.en}」<span>{look.taunt.ja}</span>
@@ -194,6 +214,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
         {combo >= 2 && <span className="combo">🔥{combo}</span>}
+        <span className={`special-gauge${gauge >= GAUGE_MAX ? ' full' : ''}`} role="meter" aria-label="必殺技ゲージ" aria-valuemin={0} aria-valuemax={GAUGE_MAX} aria-valuenow={gauge}>
+          {Array.from({ length: GAUGE_MAX }, (_, i) => (
+            <i key={i} className={i < gauge ? 'on' : ''} />
+          ))}
+        </span>
         {onSpend && !healed && !won && hearts > 0 && hearts < HEARTS && (
           <button
             className="hint-5050"
@@ -207,6 +232,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </button>
         )}
       </p>
+      {gauge >= GAUGE_MAX && !won && !lost && (
+        <button className="special-btn" onClick={fireSpecial}>
+          💥 必殺技をはなつ！
+        </button>
+      )}
 
       {won ? (
         <>

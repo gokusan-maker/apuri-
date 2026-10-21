@@ -947,3 +947,13 @@ button:focus:not(:focus-visible) { outline: none; }
 @keyframes crit-pop { 0% { transform: scale(2.2) rotate(-8deg); opacity: 0; } 50% { transform: scale(0.9) rotate(3deg); opacity: 1; } 100% { transform: scale(1) rotate(0); } }
 @media (prefers-reduced-motion: reduce) { .boss-crit { animation: none; } }
 .gacha-dup { margin: 4px 0; font-weight: 700; color: #b45309; }
+
+/* 必殺技ゲージ */
+.special-gauge { display: inline-flex; gap: 2px; align-items: center; }
+.special-gauge i { width: 10px; height: 12px; border-radius: 3px; background: #e5e7eb; transform: skewX(-12deg); }
+.special-gauge i.on { background: linear-gradient(180deg, #fde047, #f97316); }
+.special-gauge.full i { animation: gauge-glow 0.8s ease-in-out infinite alternate; }
+@keyframes gauge-glow { from { box-shadow: 0 0 0 #f97316; } to { box-shadow: 0 0 8px #f97316; } }
+.special-btn { display: block; margin: 0 auto 8px; padding: 10px 20px; border: none; border-radius: 999px; font-weight: 900; font-size: 1.05rem; color: #fff; background: linear-gradient(90deg, #ef4444, #f97316, #eab308); box-shadow: 0 3px 0 #7f1d1d; animation: treasure-shake 1s ease-in-out infinite; }
+.boss-special { margin: 0; text-align: center; font-weight: 900; font-size: 1.4rem; color: #ef4444; text-shadow: 0 0 10px #fecaca, 2px 2px 0 #450a0a; animation: crit-pop 0.8s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .special-gauge.full i, .special-btn, .boss-special { animation: none; } }
