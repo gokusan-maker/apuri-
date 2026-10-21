@@ -89,6 +89,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'may-might': { wrong: 'It may rains tomorrow.', right: 'It may rain tomorrow.', why: 'may のあとは動詞の原形。' },
   'be-imperative': { wrong: "Don't late for the train.", right: "Don't be late for the train.", why: "形容詞（late）を使う否定の命令文は Don't be ＋形容詞。" },
   'look-adj': { wrong: 'You look happily.', right: 'You look happy.', why: 'look のあとは副詞ではなく形容詞。' },
+  'after-before': { wrong: 'I will call you after I will get home.', right: 'I will call you after I get home.', why: '未来のことでも after の中は現在形。' },
+  'and-but-or-so': { wrong: 'Because it was cold, so I wore a coat.', right: 'It was cold, so I wore a coat.', why: 'because と so はいっしょに使わない。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 

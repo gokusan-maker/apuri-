@@ -1266,6 +1266,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'That cloud looks ___ a cat.', choices: ['like', 'as', 'to'], answer: 0, why: '名詞（a cat）が続くときは look like 〜。' },
     ],
   },
+  {
+    id: 'after-before',
+    title: '接続詞 after / before ＋文（〜したあとで・〜する前に）',
+    points: ['after ＋主語＋動詞で「〜したあとで」、before ＋主語＋動詞で「〜する前に」。', '未来のことでも after / before の中は現在形（before it gets dark）。'],
+    examples: [
+      { en: 'I did my homework after I ate dinner.', ja: '私は夕食を食べたあとで宿題をした。' },
+      { en: 'Let\'s go home before it gets dark.', ja: '暗くなる前に家に帰ろう。' },
+    ],
+    questions: [
+      { sentence: 'Wash your hands ___ you eat.', choices: ['before', 'during', 'since'], answer: 0, why: '「食べる前に」なので before ＋文。' },
+      { sentence: 'He went to bed ___ he finished the book.', choices: ['before', 'after', 'until'], answer: 1, why: '「本を読み終えたあとで」なので after。' },
+      { sentence: 'Call me before you ___ the station.', choices: ['will leave', 'leave', 'left'], answer: 1, why: '未来のことでも before の中は現在形 leave。' },
+    ],
+  },
+  {
+    id: 'and-but-or-so',
+    title: 'and / but / or / so の使い分け',
+    points: ['and（そして）・but（しかし）・or（または）・so（だから）は、語と語、文と文をつなぐ。', 'so は前の文が理由で「だから〜」。because は「〜だから（理由）」で、so と同じ文にいっしょには使わない。'],
+    examples: [
+      { en: 'It was raining, so we stayed home.', ja: '雨がふっていたので、私たちは家にいた。' },
+      { en: 'I like tea, but my sister likes coffee.', ja: '私は紅茶が好きだが、姉はコーヒーが好きだ。' },
+    ],
+    questions: [
+      { sentence: 'I was tired, ___ I went to bed early.', choices: ['so', 'but', 'or'], answer: 0, why: '「つかれていた、だから早くねた」なので so。' },
+      { sentence: 'Do you want rice ___ bread?', choices: ['and', 'or', 'so'], answer: 1, why: '「ご飯かパンか」どちらかなので or。' },
+      { sentence: 'He is young, ___ he is very wise.', choices: ['so', 'or', 'but'], answer: 2, why: '「若いが、かしこい」と反対の内容なので but。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1365,8 +1393,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
