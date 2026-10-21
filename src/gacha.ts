@@ -1,5 +1,5 @@
 // タマゴガチャ：コイン（勉強でたまる）で新しいタマゴを引く。色ちがいが出ることもある
-import { rollKind, rollSpecies, type Kind, type Species } from './monster'
+import { kindOf, rollKind, rollSpecies, type Kind, type Species } from './monster'
 import type { Party } from './party'
 import type { Wallet } from './shop'
 
@@ -7,6 +7,9 @@ export const GACHA_PRICE = 50
 export const PARTY_MAX = 12
 
 export const TICKET_MAX = 9
+export const PITY = 20 // スーパーレア以上が出ないまま20回目なら、きんいろが確定
+
+export const pityLeft = (w: Wallet) => PITY - (w.pity ?? 0)
 
 export function canDraw(w: Wallet, p: Party, ticket = false): boolean {
   return (ticket ? (w.tickets ?? 0) > 0 : w.coins >= GACHA_PRICE) && p.members.length < PARTY_MAX
@@ -22,8 +25,11 @@ export function addTicket(w: Wallet): Wallet {
 // r は色ちがい、r2 はキャラクターの種類を決める乱数
 export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
   if (!canDraw(w, p, ticket)) return null
-  const kind = rollKind(r)
+  const rolled = rollKind(r)
+  const kind = rolled.rarity === 'N' || rolled.rarity === 'R' ? ((w.pity ?? 0) + 1 >= PITY ? kindOf('kin') : rolled) : rolled
+  const pity = kind.rarity === 'SR' || kind.rarity === 'UR' ? 0 : (w.pity ?? 0) + 1
   const species = rollSpecies(r2)
   const egg = { xp: 0, ...(kind.id === 'normal' ? {} : { kind: kind.id }), ...(species.id === 'mochi' ? {} : { species: species.id }) }
-  return { wallet: ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
+  const paid = ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }
+  return { wallet: { ...paid, pity }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
 }

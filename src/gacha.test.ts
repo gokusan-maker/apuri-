@@ -17,6 +17,7 @@ it('コインでタマゴを引くと仲間がふえる。コイン不足や満�
   const party = { active: 0, members: [{ xp: 100 }] }
   const r = drawEgg({ coins: GACHA_PRICE + 5, owned: [] }, party, 0.995)!
   expect(r.wallet.coins).toBe(5)
+  expect(r.wallet.pity).toBe(0)
   expect(r.party.members).toHaveLength(2)
   expect(r.party.members[1]).toEqual({ xp: 0, kind: 'niji' })
   expect(r.party.active).toBe(0)
@@ -49,7 +50,7 @@ it('7日連続でもらえるチケットでもガチャを引ける（コイン
   const party = { active: 0, members: [{ xp: 0 }] }
   expect(drawEgg(w, party, 0.1)).toBeNull()
   const r = drawEgg(w, party, 0.1, true)!
-  expect(r.wallet).toEqual({ coins: 0, owned: [], tickets: 0 })
+  expect(r.wallet).toEqual({ coins: 0, owned: [], tickets: 0, pity: 1 })
   expect(r.party.members).toHaveLength(2)
   expect(addTicket({ coins: 0, owned: [], tickets: 9 }).tickets).toBe(9)
 })
@@ -75,4 +76,16 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   expect(formOf({ xp: 99999, species: 'penguin', branch: 'ear' }).name).toBe('シンワノソラペンギ')
   expect(sanitizeMonster({ xp: 1, species: 'dragon' }).species).toBe('dragon')
   expect(sanitizeMonster({ xp: 1, species: 'unicorn' }).species).toBeUndefined()
+})
+
+it('天井：スーパーレア以上が出ないまま20回目はきんいろ確定', async () => {
+  const { PITY, pityLeft } = await import('./gacha')
+  const party = { active: 0, members: [{ xp: 0 }] }
+  const r1 = drawEgg({ coins: 100, owned: [], pity: PITY - 2 }, party, 0.1)!
+  expect(r1.kind.id).toBe('normal')
+  expect(r1.wallet.pity).toBe(PITY - 1)
+  expect(pityLeft(r1.wallet)).toBe(1)
+  const r2 = drawEgg(r1.wallet, party, 0.1)!
+  expect(r2.kind.id).toBe('kin')
+  expect(r2.wallet.pity).toBe(0)
 })

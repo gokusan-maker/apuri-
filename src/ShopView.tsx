@@ -3,6 +3,7 @@ import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
+import { pityLeft } from './gacha'
 import type { GachaResult } from './GachaView'
 import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
@@ -49,7 +50,7 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
           )}
         </div>
       </div>
-      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} onDraw={onGacha} onRaise={onRaiseNew} />}
+      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} onDraw={onGacha} onRaise={onRaiseNew} />}
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (

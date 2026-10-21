@@ -9,12 +9,13 @@ type Props = {
   coins: number
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
+  pityLeft?: number // あと何回でスーパーレア以上が確定
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const full = members >= PARTY_MAX
   return (
@@ -43,6 +44,7 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
         </button>
       )}
       <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
+      {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}
       <details className="gacha-odds">
         <summary>出る確率</summary>
         <ul>
