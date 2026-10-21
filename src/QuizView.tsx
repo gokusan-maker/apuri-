@@ -27,7 +27,7 @@ import { Twisters } from './TwisterView'
 import { Placement } from './PlacementView'
 import { Highlight } from './HighlightView'
 import { Puzzle } from './PuzzleView'
-import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -61,7 +61,7 @@ import { WORDS, type Level, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -128,6 +128,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'compare', label: '📏 比較級・最上級', group: '文法・読解' },
   { id: 'be', label: '🟰 be動詞', group: '文法・読解' },
   { id: 'article', label: '🅰️ a と an', group: '文法・読解' },
+  { id: 'neg', label: '🚫 否定文', group: '文法・読解' },
   { id: 'gmix', label: '🎲 文法ミックス', group: '文法・読解' },
   { id: 'timeprep', label: '🗓 in・on・at（時）', group: '文法・読解' },
   { id: 'wh', label: '❔ 疑問詞', group: '文法・読解' },
@@ -536,6 +537,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Puzzle key={`${direction}-${count}`} make={() => (direction === 'wh' ? whQ() : timePrepQ())} onAnswer={onAnswer} count={count} />
+      </>
+    )
+  }
+
+  if (direction === 'neg') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <Puzzle key={`neg-${count}`} make={() => negQ()} onAnswer={onAnswer} count={count} />
       </>
     )
   }

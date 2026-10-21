@@ -358,8 +358,28 @@ export function whQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// 否定文：don't・doesn't・didn't
+const NEG_QS: [string, "don't" | "doesn't" | "didn't", string][] = [
+  ["I ___ like carrots.", "don't", 'I なので don\'t'],
+  ["He ___ play tennis.", "doesn't", 'He（3人称単数）なので doesn\'t'],
+  ["We ___ go to school yesterday.", "didn't", 'yesterday（過去）なので didn\'t'],
+  ["My sister ___ eat meat.", "doesn't", 'My sister（3人称単数）なので doesn\'t'],
+  ["They ___ have a car.", "don't", 'They なので don\'t'],
+  ["She ___ come to the party last night.", "didn't", 'last night（過去）なので didn\'t'],
+  ["You ___ need an umbrella today.", "don't", 'You なので don\'t'],
+  ["The shop ___ open on Mondays.", "doesn't", 'The shop（3人称単数）なので doesn\'t'],
+  ["I ___ see him last week.", "didn't", 'last week（過去）なので didn\'t'],
+  ["Tom and Ken ___ live here.", "don't", 'Tom and Ken（複数）なので don\'t'],
+]
+
+export function negQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = NEG_QS[Math.floor(rng() * NEG_QS.length)]
+  const choices = ["don't", "doesn't", "didn't"]
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)

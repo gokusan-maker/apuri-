@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -169,6 +169,16 @@ describe('パズル', () => {
       const q = riddleQ()
       expect(RIDDLES.filter((r) => r.q === q.prompt).map((r) => r.a)).toContain(q.choices[q.answer])
       expect(new Set(q.choices).size).toBe(4)
+    }
+  })
+
+  it('否定文：時や主語に合う答え', () => {
+    for (let i = 0; i < 40; i++) {
+      const q = negQ()
+      const a = q.choices[q.answer]
+      if (/yesterday|last /.test(q.prompt)) expect(a).toBe("didn't")
+      else if (/^(I|You|We|They|Tom and Ken) /.test(q.prompt)) expect(a).toBe("don't")
+      else expect(a).toBe("doesn't")
     }
   })
 })
