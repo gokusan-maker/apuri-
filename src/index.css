@@ -1255,3 +1255,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .walk-msg { margin: 6px 0; padding: 6px 10px; border-radius: 10px; background: #ecfccb; color: #365314; font-size: 0.85rem; }
 .zukan-pct { height: 8px; margin: 6px 0; border-radius: 999px; background: var(--bg); overflow: hidden; }
 .zukan-pct span { display: block; height: 100%; background: linear-gradient(90deg, #f472b6, #a855f7, #3b82f6); }
+.janken { margin: 8px 0; padding: 8px; border-radius: 12px; background: var(--card); text-align: center; }
+.janken-title, .janken-result { margin: 0 0 6px; font-size: 0.85rem; }
+.janken-result { font-weight: 700; }
+.janken-hands { display: flex; gap: 8px; justify-content: center; }
+.janken-hands button { width: 56px; height: 56px; border: none; border-radius: 50%; background: var(--bg); font-size: 1.6rem; }

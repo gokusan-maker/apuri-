@@ -24,6 +24,8 @@ import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
+import { Janken } from './JankenView'
+import { JANKEN_COINS } from './janken'
 import { loadWalkDay, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
 import { omikujiDiscount, omikujiOf } from './omikuji'
 import { loadRouletteDay, saveRouletteDay } from './roulette'
@@ -777,6 +779,7 @@ function App() {
             </p>
           )
         )}
+        <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
         <Roulette
           done={rouletteDay === today}
           onPrize={(p) => {
