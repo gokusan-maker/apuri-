@@ -27,7 +27,7 @@ import { Twisters } from './TwisterView'
 import { Placement } from './PlacementView'
 import { Highlight } from './HighlightView'
 import { Puzzle } from './PuzzleView'
-import { type PuzzleQ, pronounQ, modalQ, placePrepQ, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
+import { type PuzzleQ, muchManyQ, pronounQ, modalQ, placePrepQ, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -68,9 +68,10 @@ const SIMPLE_PUZZLES: Partial<Record<Direction, () => PuzzleQ>> = {
   placeprep: placePrepQ,
   modal: modalQ,
   pronoun: pronounQ,
+  muchmany: muchManyQ,
 }
 
-export type Direction = 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'muchmany' | 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -141,6 +142,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'placeprep', label: '📦 場所の前置詞', group: '文法・読解' },
   { id: 'modal', label: '💪 助動詞', group: '文法・読解' },
   { id: 'pronoun', label: '👤 代名詞', group: '文法・読解' },
+  { id: 'muchmany', label: '🔢 much と many', group: '文法・読解' },
   { id: 'homophone', label: '👂 同じ発音', group: 'パズル・ゲーム' },
   { id: 'gmix', label: '🎲 文法ミックス', group: '文法・読解' },
   { id: 'timeprep', label: '🗓 in・on・at（時）', group: '文法・読解' },

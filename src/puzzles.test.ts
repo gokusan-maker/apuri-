@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { pronounQ, modalQ, placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
+import { muchManyQ, pronounQ, modalQ, placePrepQ, HOMOPHONES, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, RIDDLES, riddleQ, timePrepQ, whQ, calcQ, ingQ, INGS, thirdQ, THIRDS, COMPARES, compareQ, PASTS, pastQ, PLURALS, pluralQ, clockQ, colorQ, COLOR_SQUARES, countQ, GROUPS, oddQ, OPPOSITES, oppositeQ } from './puzzles'
 import { WORDS } from './words'
 
 describe('パズル', () => {
@@ -219,5 +219,12 @@ it('代名詞：答えが選択肢にあり、理由に答えが書いてある'
     const q = pronounQ()
     expect(q.answer).toBeGreaterThanOrEqual(0)
     expect(q.why).toContain(q.choices[q.answer])
+  }
+})
+
+it('much と many：複数形の名詞には many', () => {
+  for (let i = 0; i < 30; i++) {
+    const q = muchManyQ()
+    expect(q.choices[q.answer]).toBe(q.why.includes('複数形') ? 'many' : 'much')
   }
 })

@@ -439,8 +439,28 @@ export function pronounQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// much と many：数えられる名詞の複数形には many、数えられない名詞には much
+const MUCH_MANY: [string, 'much' | 'many', string][] = [
+  ['How ___ apples do you want?', 'many', 'apples は数えられる名詞（複数形）なので many'],
+  ['How ___ water do you drink every day?', 'much', 'water は数えられない名詞なので much'],
+  ['I don\'t have ___ time today.', 'much', 'time（時間）は数えられない名詞なので much'],
+  ['There are ___ books in the library.', 'many', 'books は数えられる名詞（複数形）なので many'],
+  ['How ___ money do you have?', 'much', 'money は数えられない名詞なので much'],
+  ['She has ___ friends in Canada.', 'many', 'friends は数えられる名詞（複数形）なので many'],
+  ['We didn\'t get ___ snow this winter.', 'much', 'snow は数えられない名詞なので much'],
+  ['How ___ students are in your class?', 'many', 'students は数えられる名詞（複数形）なので many'],
+  ['Don\'t put too ___ sugar in my tea.', 'much', 'sugar は数えられない名詞なので much'],
+  ['I saw ___ birds by the river.', 'many', 'birds は数えられる名詞（複数形）なので many'],
+]
+
+export function muchManyQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, why] = MUCH_MANY[Math.floor(rng() * MUCH_MANY.length)]
+  const choices = ['much', 'many']
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [pronounQ, modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [muchManyQ, pronounQ, modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)
