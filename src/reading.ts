@@ -553,4 +553,59 @@ export const PASSAGES: Passage[] = [
       { q: '感想は？', choices: ['難しかったけれど楽しかった', 'かんたんだった', 'つまらなかった'], answer: 0 },
     ],
   },
+  {
+    id: 'kendama',
+    title: 'My Kendama Challenge',
+    text: 'My grandfather gave me a kendama for my birthday. At first, I could not catch the ball at all. I practiced for ten minutes every day. After a month, I could catch it ten times in a row.',
+    ja: '祖父が誕生日にけん玉をくれました。最初は玉をまったく受けられませんでした。毎日10分練習しました。1か月後には、10回連続で受けられるようになりました。',
+    questions: [
+      { q: 'けん玉をくれたのはだれ？', choices: ['父', '祖父', '友だち'], answer: 1 },
+      { q: '毎日どれくらい練習した？', choices: ['10分', '30分', '1時間'], answer: 0 },
+      { q: '1か月後どうなった？', choices: ['やめてしまった', '10回連続で受けられた', '大会で優勝した'], answer: 1 },
+    ],
+  },
+  {
+    id: 'bird-nest',
+    title: 'A Nest by the Window',
+    text: 'In May, a bird made a nest near our kitchen window. Soon there were four small eggs in it. We watched quietly every morning. One day, the eggs hatched, and the babies began to sing for food.',
+    ja: '5月に、鳥がうちの台所の窓の近くに巣を作りました。まもなく中に小さな卵が4つありました。私たちは毎朝静かに見守りました。ある日卵がかえり、ひなたちがエサをねだって鳴きはじめました。',
+    questions: [
+      { q: '巣はどこにあった？', choices: ['庭の木', '台所の窓の近く', '屋根の上'], answer: 1 },
+      { q: '卵はいくつあった？', choices: ['2つ', '3つ', '4つ'], answer: 2 },
+      { q: 'ひなは何をした？', choices: ['エサをねだって鳴いた', 'すぐに飛んでいった', '眠っていた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'library-volunteer',
+    title: 'Reading to Children',
+    text: 'Every Saturday, I read picture books to small children at the city library. They sit in front of me and listen carefully. Last week, a little girl brought me a drawing of the story. It made me very happy.',
+    ja: '毎週土曜日、市の図書館で小さな子どもたちに絵本を読んでいます。子どもたちは私の前にすわって、しっかり聞いてくれます。先週、小さな女の子がお話の絵をかいて持ってきてくれました。とてもうれしかったです。',
+    questions: [
+      { q: 'どこで読み聞かせをする？', choices: ['学校', '市の図書館', '病院'], answer: 1 },
+      { q: 'いつ読み聞かせをする？', choices: ['毎週土曜日', '毎日', '毎月1回'], answer: 0 },
+      { q: '女の子は何を持ってきた？', choices: ['花', 'お話の絵', '手紙'], answer: 1 },
+    ],
+  },
+  {
+    id: 'typhoon',
+    title: 'The Typhoon',
+    text: 'A big typhoon came to our town last night. The wind was so strong that the windows shook. We stayed inside and checked the news. In the morning, the sky was clear, and we helped clean the street.',
+    ja: 'きのうの夜、大きな台風が町に来ました。風がとても強くて窓がゆれました。私たちは家の中にいて、ニュースを確かめました。朝には空が晴れて、私たちは通りのそうじを手伝いました。',
+    questions: [
+      { q: '台風はいつ来た？', choices: ['きのうの夜', '今朝', '先週'], answer: 0 },
+      { q: '台風の間どうしていた？', choices: ['外で遊んだ', '家の中にいた', '学校に行った'], answer: 1 },
+      { q: '朝に何をした？', choices: ['通りのそうじを手伝った', 'ずっと寝ていた', '海に行った'], answer: 0 },
+    ],
+  },
+  {
+    id: 'egg-gacha',
+    title: 'A Rainbow Egg',
+    text: 'I study English with an app every day. When I answer correctly, I get coins. Yesterday I used fifty coins and got a new egg. It was a rare rainbow egg! I hope it hatches soon.',
+    ja: '私は毎日アプリで英語を勉強しています。正解するとコインがもらえます。きのう、コインを50枚使って新しいタマゴを手に入れました。めずらしいにじいろのタマゴでした！早くかえるといいな。',
+    questions: [
+      { q: '正解すると何がもらえる？', choices: ['シール', 'コイン', 'メダル'], answer: 1 },
+      { q: 'タマゴに使ったコインは？', choices: ['10枚', '50枚', '100枚'], answer: 1 },
+      { q: 'どんなタマゴだった？', choices: ['にじいろ', '金色', '白'], answer: 0 },
+    ],
+  },
 ]
