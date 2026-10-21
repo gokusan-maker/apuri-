@@ -1253,3 +1253,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .bingo-q { margin-top: 8px; }
 .long-summary { margin: 4px 0 8px; padding: 8px; border: 1px dashed var(--muted); border-radius: 8px; text-align: left; line-height: 1.7; }
 .walk-msg { margin: 6px 0; padding: 6px 10px; border-radius: 10px; background: #ecfccb; color: #365314; font-size: 0.85rem; }
+.zukan-pct { height: 8px; margin: 6px 0; border-radius: 999px; background: var(--bg); overflow: hidden; }
+.zukan-pct span { display: block; height: 100%; background: linear-gradient(90deg, #f472b6, #a855f7, #3b82f6); }

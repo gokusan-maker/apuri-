@@ -3,6 +3,7 @@ import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
+import { completionPct } from './gacha'
 import { canRelease, displayOrder, EGG_MILESTONES, releaseCoins, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -881,6 +882,8 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const species = new Set(monsters.map((m) => m.species).filter(Boolean))
   const [spDetail, setSpDetail] = useState<string | null>(null)
   const owned = new Set(monsters.map((m) => `${m.species ?? 'mochi'}:${m.kind ?? 'normal'}`))
+  const ownedCount = SPECIES.reduce((n, sp) => n + KINDS.filter((k) => owned.has(`${sp.id}:${k.id}`)).length, 0)
+  const pct = completionPct(ownedCount, SPECIES.length * KINDS.length)
   const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
@@ -972,8 +975,12 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
       </div>
       <details className="zukan-collection">
         <summary>
-          📒 コレクション表 {SPECIES.reduce((n, sp) => n + KINDS.filter((k) => owned.has(`${sp.id}:${k.id}`)).length, 0)} / {SPECIES.length * KINDS.length}
+          📒 コレクション表 {ownedCount} / {SPECIES.length * KINDS.length}
+          （コンプリート率 {pct}%）
         </summary>
+        <div className="zukan-pct" role="progressbar" aria-label="コンプリート率" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
+          <span style={{ width: `${pct}%` }} />
+        </div>
         <table>
           <thead>
             <tr>

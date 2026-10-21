@@ -159,3 +159,6 @@ export const isLuckyPull = (n: number) => n > 0 && n % LUCKY_EVERY === 0
 
 // 5連ガチャ：5回目までにレア以上が出なければ、最後の1回はレア以上確定
 export const MULTI5 = 5
+
+// コンプリート率（％・切り捨て）
+export const completionPct = (have: number, total: number) => (total > 0 ? Math.floor((Math.min(have, total) / total) * 100) : 0)

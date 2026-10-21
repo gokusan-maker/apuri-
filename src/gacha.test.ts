@@ -189,3 +189,12 @@ it('通算の回数が7の倍数ならラッキーナンバー', async () => {
   expect(isLuckyPull(14)).toBe(true)
   expect(isLuckyPull(15)).toBe(false)
 })
+
+it('コンプリート率はパーセントの切り捨て', async () => {
+  const { completionPct } = await import('./gacha')
+  expect(completionPct(0, 60)).toBe(0)
+  expect(completionPct(1, 3)).toBe(33)
+  expect(completionPct(60, 60)).toBe(100)
+  expect(completionPct(70, 60)).toBe(100)
+  expect(completionPct(1, 0)).toBe(0)
+})

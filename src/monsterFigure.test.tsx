@@ -132,6 +132,8 @@ it('コレクション表：キャラクター×色ちがいの持っている�
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon', kind: 'kin' }]} />)
   expect(screen.getByText(/コレクション表 2 \/ 36/)).toBeInTheDocument()
+  expect(screen.getByText(/コンプリート率 5%/)).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'コンプリート率' })).toHaveAttribute('aria-valuenow', '5')
   expect(screen.getByLabelText('ドラコ・きんいろ（持っている）')).toBeInTheDocument()
   expect(screen.getByLabelText('ドラコ・にじいろ（まだ）')).toBeInTheDocument()
 })
