@@ -3091,6 +3091,16 @@ const WORDS_4: Word[] = [
   { id: 'lets-see', en: 'Let\'s see', ja: 'さあ見てみよう・ええと', example: 'Let\'s see what is inside the box.', exampleJa: '箱の中に何があるか見てみよう。', level: '会話' },
   { id: 'its-up-to-you', en: 'It\'s up to you', ja: 'あなたが決めていいよ', example: '"Pizza or pasta?" "It\'s up to you."', exampleJa: '「ピザとパスタどっちにする？」「きみが決めていいよ。」', level: '会話' },
   { id: 'good-for-you', en: 'Good for you!', ja: 'よかったね！', example: '"I passed the test!" "Good for you!"', exampleJa: '「テストに合格したよ！」「よかったね！」', level: '会話' },
+  { id: 'good-luck-on-your-test', en: 'Good luck on your test!', ja: 'テストがんばってね！', example: 'Study hard tonight. Good luck on your test!', exampleJa: '今夜はしっかり勉強してね。テストがんばって！', level: '会話' },
+  { id: 'what-do-you-want-to-be', en: 'What do you want to be?', ja: '何になりたいの？', example: 'What do you want to be in the future?', exampleJa: '将来は何になりたいの？', level: '会話' },
+  { id: 'im-into', en: 'I\'m into ...', ja: '〜にはまっている', example: 'I\'m into Japanese anime these days.', exampleJa: '最近、日本のアニメにはまっている。', level: '会話' },
+  { id: 'how-often', en: 'How often ...?', ja: 'どのくらいよく〜しますか', example: 'How often do you go to the gym?', exampleJa: 'どのくらいよくジムに行きますか。', level: '会話' },
+  { id: 'whats-your-favorite', en: 'What\'s your favorite ...?', ja: 'いちばん好きな〜は何？', example: 'What\'s your favorite subject?', exampleJa: 'いちばん好きな教科は何？', level: '会話' },
+  { id: 'you-did-it', en: 'You did it!', ja: 'やったね！・できたね！', example: 'You finished the marathon. You did it!', exampleJa: 'マラソンを完走したね。やったね！', level: '会話' },
+  { id: 'wait-for-me', en: 'Wait for me!', ja: '待って！・置いていかないで！', example: 'Wait for me! I\'m coming!', exampleJa: '待って！今行くから！', level: '会話' },
+  { id: 'same-to-you', en: 'Same to you', ja: 'あなたにも同じことを（お返しのあいさつ）', example: '"Have a nice weekend!" "Same to you!"', exampleJa: '「よい週末を！」「あなたもね！」', level: '会話' },
+  { id: 'i-cant-wait', en: 'I can\'t wait!', ja: '待ちきれない！・楽しみ！', example: 'The trip is tomorrow. I can\'t wait!', exampleJa: '旅行は明日だ。待ちきれない！', level: '会話' },
+  { id: 'lets-practice-together', en: 'Let\'s practice together', ja: 'いっしょに練習しよう', example: 'The test is next week. Let\'s practice together.', exampleJa: 'テストは来週だね。いっしょに練習しよう。', level: '会話' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
