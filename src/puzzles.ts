@@ -420,8 +420,27 @@ export function modalQ(rng: Rng = Math.random): PuzzleQ {
   return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
 }
 
+// 代名詞：主格（〜は）・所有格（〜の）・目的格（〜を・〜に）
+const PRONOUNS: [string, string, string[], string][] = [
+  ['Ken is my friend. ___ lives near my house.', 'He', ['He', 'His', 'Him'], '文の主語（〜は）なので He'],
+  ['This is Yumi. I like ___ very much.', 'her', ['she', 'her', 'hers'], '動詞 like のあと（〜を）なので her'],
+  ['Tom has a dog. ___ dog is very big.', 'His', ['He', 'His', 'Him'], '「彼の」犬なので His'],
+  ['My parents are kind. I love ___.', 'them', ['they', 'their', 'them'], '動詞 love のあと（〜を）なので them'],
+  ['We have a new teacher. ___ name is Mr. Sato.', 'Her', ['She', 'Her', 'Hers'], '「彼女の」名前なので Her'],
+  ['Aki and I are in the same class. ___ are good friends.', 'We', ['We', 'Our', 'Us'], '文の主語（〜は）なので We'],
+  ['Please help ___. This box is heavy.', 'me', ['I', 'my', 'me'], '動詞 help のあと（〜を）なので me'],
+  ['The students opened ___ books.', 'their', ['they', 'their', 'them'], '「彼らの」本なので their'],
+  ['Come and play with ___!', 'us', ['we', 'our', 'us'], '前置詞 with のあとなので us'],
+  ['I have a cat. ___ name is Tama.', 'Its', ['It', 'Its', 'It\'s'], '「それの」名前なので Its（It\'s は it is の短縮形）'],
+]
+
+export function pronounQ(rng: Rng = Math.random): PuzzleQ {
+  const [prompt, ans, choices, why] = PRONOUNS[Math.floor(rng() * PRONOUNS.length)]
+  return { prompt, choices, answer: choices.indexOf(ans), why, wordId: '' }
+}
+
 // 文法ミックス：文法パズルから1問ずつランダム
-const GRAMMAR_MAKERS = [modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
+const GRAMMAR_MAKERS = [pronounQ, modalQ, placePrepQ, negQ, beQ, articleQ, thirdQ, ingQ, pluralQ, pastQ, compareQ, timePrepQ, whQ]
 
 export function grammarMixQ(rng: Rng = Math.random): PuzzleQ {
   return GRAMMAR_MAKERS[Math.floor(rng() * GRAMMAR_MAKERS.length)](rng)

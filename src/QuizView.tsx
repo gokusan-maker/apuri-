@@ -27,7 +27,7 @@ import { Twisters } from './TwisterView'
 import { Placement } from './PlacementView'
 import { Highlight } from './HighlightView'
 import { Puzzle } from './PuzzleView'
-import { modalQ, placePrepQ, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
+import { type PuzzleQ, pronounQ, modalQ, placePrepQ, homophoneQ, abcQ, alphabetQ, articleQ, beQ, grammarMixQ, negQ, riddleQ, timePrepQ, whQ, calcQ, compareQ, ingQ, thirdQ, pastQ, pluralQ, clockQ, colorQ, countQ, oddQ, oppositeQ } from './puzzles'
 import { SOUNDS } from './sounds'
 import { Sequence } from './SequenceView'
 import { ListenThrough } from './ListenThroughView'
@@ -61,7 +61,16 @@ import { WORDS, type Level, type Word } from './words'
 // through：聞き流し
 // order-ear：例文を聞いて並べる
 // sentence-read：例文を読んで訳を選ぶ
-export type Direction = 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+// 1種類の問題をくり返すだけのパズル
+const SIMPLE_PUZZLES: Partial<Record<Direction, () => PuzzleQ>> = {
+  neg: negQ,
+  homophone: homophoneQ,
+  placeprep: placePrepQ,
+  modal: modalQ,
+  pronoun: pronounQ,
+}
+
+export type Direction = 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -131,6 +140,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'neg', label: '🚫 否定文', group: '文法・読解' },
   { id: 'placeprep', label: '📦 場所の前置詞', group: '文法・読解' },
   { id: 'modal', label: '💪 助動詞', group: '文法・読解' },
+  { id: 'pronoun', label: '👤 代名詞', group: '文法・読解' },
   { id: 'homophone', label: '👂 同じ発音', group: 'パズル・ゲーム' },
   { id: 'gmix', label: '🎲 文法ミックス', group: '文法・読解' },
   { id: 'timeprep', label: '🗓 in・on・at（時）', group: '文法・読解' },
@@ -544,11 +554,12 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     )
   }
 
-  if (direction === 'neg' || direction === 'homophone' || direction === 'placeprep' || direction === 'modal') {
+  const simple = SIMPLE_PUZZLES[direction]
+  if (simple) {
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key={`${direction}-${count}`} make={() => (direction === 'neg' ? negQ() : direction === 'placeprep' ? placePrepQ() : direction === 'modal' ? modalQ() : homophoneQ())} onAnswer={onAnswer} count={count} />
+        <Puzzle key={`${direction}-${count}`} make={() => simple()} onAnswer={onAnswer} count={count} />
       </>
     )
   }
