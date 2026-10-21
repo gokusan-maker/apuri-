@@ -21,6 +21,8 @@ export type BadgeStats = {
   towerFloors?: number // 大学入試の塔でクリアした階の数
   species?: number // 集めたキャラクターの種類
   collection?: number // コレクション表で埋まったマス（キャラクター×色）
+  bossBook?: number // ボス図鑑でたおしたステージ・大学入試の塔のボスの数
+  bossTotal?: number // その全体の数
   modesPlayed?: number // 遊んだクイズの種類の数
   diaryDays?: number // 英語日記を書いた日数
 }
@@ -70,6 +72,7 @@ export const BADGES: Badge[] = [
   { id: 'tower-1', icon: '🏯', name: '塔の挑戦者', desc: '大学入試の塔の1階をクリア', check: (s) => (s.towerFloors ?? 0) >= 1 },
   { id: 'tower-all', icon: '🐉', name: '塔の覇者', desc: '大学入試の塔を最上階までクリア', check: (s) => (s.towerFloors ?? 0) >= 9 },
   { id: 'species-all', icon: '🐾', name: 'キャラクター博士', desc: 'キャラクターを6種類ぜんぶ集める（ごほうび 🎟1）', check: (s) => (s.species ?? 1) >= 6 },
+  { id: 'bossbook-all', icon: '📕', name: 'ボス図鑑マスター', desc: 'ステージと大学入試の塔のボスをぜんぶたおす（ごほうび 🎟3）', check: (s) => !!s.bossTotal && (s.bossBook ?? 0) >= s.bossTotal },
   { id: 'collect-all', icon: '🌈', name: 'コレクションマスター', desc: 'コレクション表の36マスをぜんぶうめる（ごほうび 🎟3・🪙200）', check: (s) => (s.collection ?? 0) >= 36 },
   { id: 'answers-5000', icon: '🌠', name: '5000問の流れ星', desc: '累計5000問に答える', check: (s) => s.answers >= 5000 },
 ]
@@ -123,6 +126,7 @@ export const saveTotals = (t: Totals) => save(TOTALS_KEY, t)
 export const BADGE_REWARDS: Record<string, { tickets?: number; coins?: number }> = {
   'species-all': { tickets: 1 },
   'collect-all': { tickets: 3, coins: 200 },
+  'bossbook-all': { tickets: 3 },
 }
 
 export function rewardOf(ids: string[]): { tickets: number; coins: number } {

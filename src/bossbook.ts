@@ -44,3 +44,8 @@ export const totalWins = (book: BossBook) => Object.values(book).reduce((a, e) =
 export function epithetOf(wins: number): string | null {
   return [...EPITHETS].reverse().find((e) => wins >= e.wins)?.name ?? null
 }
+
+// ステージと大学入試の塔のボス（図鑑の基本の顔ぶれ）のうち、たおした数
+export function baseBeaten(book: BossBook, baseNames: string[]): number {
+  return baseNames.filter((n) => book[n]).length
+}

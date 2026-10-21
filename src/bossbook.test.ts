@@ -25,3 +25,9 @@ it('ボスをたおした回数で二つ名が変わる', async () => {
   const b = recordWin(recordWin({}, BOSSES['中1'], 'A', '2026-10-21'), BOSSES['中2'], 'B', '2026-10-21')
   expect(totalWins(b)).toBe(2)
 })
+
+it('基本のボスのうちたおした数', async () => {
+  const { baseBeaten } = await import('./bossbook')
+  const b = recordWin({}, BOSSES['中1'], 'A', '2026-10-21')
+  expect(baseBeaten(b, [BOSSES['中1'].name, BOSSES['中2'].name])).toBe(1)
+})

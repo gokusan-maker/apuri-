@@ -16,7 +16,7 @@ import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { Missions } from './MissionsView'
-import { epithetOf, loadBook, totalWins } from './bossbook'
+import { baseBeaten, epithetOf, loadBook, totalWins } from './bossbook'
 import { GOLD_COINS, KEYS_FOR_GOLD, loadKeys, saveKeys } from './treasure'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
@@ -82,7 +82,7 @@ import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
-import { loadUniv } from './univ'
+import { loadUniv, UNIV_BOSSES } from './univ'
 import { annivMonths, annivText, MONTHLY_COINS } from './monthly'
 import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
 import { ENDLESS_REWARD_COINS } from './endless'
@@ -108,7 +108,7 @@ import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -159,6 +159,8 @@ function saveLucky(day: string) {
 
 // 乱数（ボタンを押したときだけ呼ぶ）
 const rand = () => Math.random()
+// ボス図鑑の基本の顔ぶれ（ステージのボスと大学入試の塔のボス）
+const BASE_BOSS_NAMES = [...Object.values(BOSSES).map((b) => b.name), ...UNIV_BOSSES.map((b) => b.name)]
 
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
@@ -509,6 +511,8 @@ function App() {
       towerFloors: Object.keys(loadUniv()).length,
       species: new Set(party.members.map((m) => m.species ?? 'mochi')).size,
       collection: new Set(party.members.map((m) => `${m.species ?? 'mochi'}:${m.kind ?? 'normal'}`)).size,
+      bossBook: baseBeaten(loadBook(), BASE_BOSS_NAMES),
+      bossTotal: BASE_BOSS_NAMES.length,
     },
     earned,
   )

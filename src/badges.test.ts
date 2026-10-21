@@ -96,3 +96,13 @@ it('図鑑のコンプリート報酬：6種でチケット、36マスでチケ�
   expect(rewardOf(['species-all'])).toEqual({ tickets: 1, coins: 0 })
   expect(rewardOf(['species-all', 'collect-all', 'answers-100'])).toEqual({ tickets: 4, coins: 200 })
 })
+
+it('ボス図鑑の基本のボスを全部たおすとボス図鑑マスター', async () => {
+  const { BADGES, rewardOf } = await import('./badges')
+  const base = { answers: 0, correct: 0, streak: 0, learned: 0, level: 1, perfect: 0, bestTime: 0, goals: 0 }
+  const ok = (s: object) => BADGES.find((b) => b.id === 'bossbook-all')!.check({ ...base, ...s })
+  expect(ok({ bossBook: 15, bossTotal: 16 })).toBe(false)
+  expect(ok({ bossBook: 16, bossTotal: 16 })).toBe(true)
+  expect(ok({})).toBe(false)
+  expect(rewardOf(['bossbook-all']).tickets).toBe(3)
+})
