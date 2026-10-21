@@ -1108,6 +1108,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-order-words .long-choice { padding: 6px 10px; }
 .gacha-bonus { margin: 2px 0; font-weight: 800; color: #db2777; }
 .gacha-lucky { margin: 2px 0; font-weight: 800; color: #16a34a; }
+.grammar-streak { margin: 4px 0; font-weight: 800; color: #ea580c; }
 
 /* 文法モンスター */
 .grammar-monster-btn { display: block; width: 100%; margin-top: 8px; background: linear-gradient(90deg, #7c3aed, #db2777); color: #fff; }

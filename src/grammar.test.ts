@@ -65,3 +65,18 @@ it('すべての文法単元に学年の目安がある', async () => {
   for (const u of GRAMMAR) counts.set(gradeOf(u.id), (counts.get(gradeOf(u.id)) ?? 0) + 1)
   expect(counts.size).toBe(4)
 })
+
+it('連続正解はまちがえると0にもどり、ベストは残る', async () => {
+  const { loadGrammarStreak, saveGrammarStreak, streakAfter } = await import('./grammar')
+  localStorage.clear()
+  let s = loadGrammarStreak()
+  expect(s).toEqual({ now: 0, best: 0 })
+  s = streakAfter(streakAfter(s, true), true)
+  expect(s).toEqual({ now: 2, best: 2 })
+  s = streakAfter(s, false)
+  expect(s).toEqual({ now: 0, best: 2 })
+  saveGrammarStreak(s)
+  expect(loadGrammarStreak()).toEqual({ now: 0, best: 2 })
+  localStorage.setItem('eitan:grammar-streak', '{"now":4,"best":1}')
+  expect(loadGrammarStreak()).toEqual({ now: 4, best: 4 })
+})

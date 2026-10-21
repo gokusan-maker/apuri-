@@ -8,7 +8,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { dayKey } from './srs'
-import { GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -30,6 +30,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
   const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
   const [picked, setPicked] = useState<number | null>(null)
+  const [streak, setStreak] = useState(loadGrammarStreak)
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
@@ -125,6 +126,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             ⏱ 文法タイムアタック（60秒）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
           </button>
         )}
+        {stampMode && streak.best > 0 && <p className="stats-note">🔥 確認問題の連続正解ベスト {streak.best}問</p>}
         {stampMode && (
           <button
             className="boss-btn grammar-monster-btn"
@@ -302,6 +304,9 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setScore(nextScore)
     if (ok) playCorrect()
     else playWrong()
+    const st = streakAfter(streak, ok)
+    setStreak(st)
+    saveGrammarStreak(st)
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
     if (unit.id === 'mix-test' && step === unit.questions.length - 1 && nextScore > (mixBest[title] ?? -1)) {
       const b = { ...mixBest, [title]: nextScore }
@@ -345,6 +350,12 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             </span>
           </span>
         </div>
+      )}
+      {streak.now >= 2 && (
+        <p className="grammar-streak">
+          🔥 連続正解 {streak.now}
+          {streak.now >= streak.best ? '（ベスト更新中！）' : `（ベスト ${streak.best}）`}
+        </p>
       )}
       <p className="example blank-sentence">
         {before}

@@ -162,3 +162,20 @@ it('学年ごとの全問正解の進みぐあいがバーで出る', () => {
   expect(screen.getByRole('progressbar', { name: '中1の全問正解' })).toHaveAttribute('aria-valuenow', '1')
   expect(screen.getByRole('progressbar', { name: '高校の全問正解' })).toHaveAttribute('aria-valuenow', '0')
 })
+
+it('確認問題の連続正解を数え、ベストを記録する', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:grammar-streak', JSON.stringify({ now: 0, best: 5 }))
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  unit.questions.forEach((q, i) => {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    if (i >= 1) expect(screen.getByText(`🔥 連続正解 ${i + 1}`, { exact: false })).toBeInTheDocument()
+    fireEvent.click(screen.getByText('次へ'))
+  })
+  expect(JSON.parse(localStorage.getItem('eitan:grammar-streak')!)).toEqual({ now: 3, best: 5 })
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText('🔥 確認問題の連続正解ベスト 5問')).toBeInTheDocument()
+})

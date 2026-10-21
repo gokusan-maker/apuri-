@@ -1069,3 +1069,28 @@ export function gradeOf(id: string): GrammarGrade {
 
 // 文法のヒント（まちがいの選択肢を1つ消す）のコイン
 export const GRAMMAR_HINT_COST = 5
+
+// 確認問題の連続正解記録（単元をまたいで続く。まちがえると0にもどる）
+export type GrammarStreak = { now: number; best: number }
+const STREAK_KEY = 'eitan:grammar-streak'
+export function loadGrammarStreak(): GrammarStreak {
+  try {
+    const v = JSON.parse(localStorage.getItem(STREAK_KEY) ?? 'null') as Partial<GrammarStreak> | null
+    const n = (x: unknown) => (typeof x === 'number' && x > 0 ? Math.floor(x) : 0)
+    const now = n(v?.now)
+    return { now, best: Math.max(now, n(v?.best)) }
+  } catch {
+    return { now: 0, best: 0 }
+  }
+}
+export function streakAfter(s: GrammarStreak, ok: boolean): GrammarStreak {
+  const now = ok ? s.now + 1 : 0
+  return { now, best: Math.max(s.best, now) }
+}
+export function saveGrammarStreak(s: GrammarStreak): void {
+  try {
+    localStorage.setItem(STREAK_KEY, JSON.stringify(s))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
