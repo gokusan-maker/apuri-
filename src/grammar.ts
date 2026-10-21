@@ -1042,6 +1042,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooks', 'cook'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
     ],
   },
+  {
+    id: 'perfect-done',
+    title: '現在完了の完了（just / already / yet）',
+    points: ['have（has）＋過去分詞で「（ちょうど・もう）〜してしまった」と、終わったことを表す。', 'just（ちょうど）・already（もう）は have と過去分詞の間。yet は文の最後で、疑問文では「もう」、否定文では「まだ」。'],
+    examples: [
+      { en: 'I have just finished my homework.', ja: '私はちょうど宿題を終えたところだ。' },
+      { en: 'Has the bus left yet? — No, it has not left yet.', ja: 'バスはもう出発しましたか。—いいえ、まだ出発していません。' },
+    ],
+    questions: [
+      { sentence: 'She has ___ cleaned her room.', choices: ['yet', 'already', 'ever'], answer: 1, why: '肯定文で「もう〜した」は already（have と過去分詞の間）。' },
+      { sentence: 'Have you eaten lunch ___?', choices: ['already', 'just', 'yet'], answer: 2, why: '疑問文の「もう」は文の最後に yet。' },
+      { sentence: 'I have not read the letter ___.', choices: ['yet', 'already', 'just'], answer: 0, why: '否定文の「まだ（〜していない）」は yet。' },
+    ],
+  },
+  {
+    id: 'shall',
+    title: 'Shall I 〜? / Shall we 〜?',
+    points: ['Shall I 〜? は「（私が）〜しましょうか」と申し出る言い方。', 'Shall we 〜? は「（いっしょに）〜しましょうか」とさそう言い方。答えは Yes, let\'s. / No, let\'s not. など。'],
+    examples: [
+      { en: 'Shall I open the window? — Yes, please.', ja: '窓を開けましょうか。—はい、お願いします。' },
+      { en: "Shall we go to the movies? — Yes, let's.", ja: '映画に行きましょうか。—ええ、そうしましょう。' },
+    ],
+    questions: [
+      { sentence: 'Your bag looks heavy. ___ I carry it for you?', choices: ['Shall', 'Will', 'Do'], answer: 0, why: '「（私が）〜しましょうか」は Shall I 〜?。' },
+      { sentence: "Shall we play tennis after school? — Yes, ___.", choices: ['we shall', "let's", 'please'], answer: 1, why: 'Shall we 〜? には Yes, let\'s. と答える。' },
+      { sentence: 'Shall I ___ you with your homework?', choices: ['help', 'helping', 'to help'], answer: 0, why: 'Shall I のあとは動詞の原形。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1142,8 +1170,8 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中2: ['shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中3: ['perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
