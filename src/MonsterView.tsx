@@ -2,11 +2,12 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
+import { challengeOf } from './challenge'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow' | 'sleep' | 'eat'
@@ -826,6 +827,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const seen = new Set(monsters.flatMap(seenForms))
   const kinds = new Set(monsters.map((m) => m.kind).filter(Boolean))
   const species = new Set(monsters.map((m) => m.species).filter(Boolean))
+  const [spDetail, setSpDetail] = useState<string | null>(null)
   const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
@@ -873,17 +875,27 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
             const got = sp.id === 'mochi' || species.has(sp.id)
             return (
               <li key={sp.id} className={got ? 'got' : 'locked'}>
-                <span className="zukan-pick" aria-label={got ? `${sp.name}：${sp.desc}` : 'まだ出会っていないキャラクター'}>
+                <button
+                  className="zukan-pick"
+                  disabled={!got}
+                  aria-label={got ? `${sp.name}：${sp.desc}` : 'まだ出会っていないキャラクター'}
+                  onClick={() => setSpDetail(spDetail === sp.id ? null : sp.id)}
+                >
                   <span className="zukan-figure">
                     <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!got} />
                   </span>
                   <span className="badge-name">{got ? sp.name : '？？？'}</span>
-                </span>
+                </button>
               </li>
             )
           })}
         </ol>
       </div>
+      {spDetail && (
+        <p className="zukan-detail" role="status">
+          <strong>{speciesOf(spDetail).name}</strong>：{speciesOf(spDetail).desc}（今日のチャレンジ：{challengeOf(spDetail).label}）
+        </p>
+      )}
       <div className="zukan-row">
         <span className="zukan-row-label">
           🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}（タマゴガチャで出るよ）

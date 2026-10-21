@@ -106,3 +106,11 @@ it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラ�
   expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
   expect(screen.getAllByLabelText("まだ出会っていないキャラクター")).toHaveLength(4)
 })
+
+it('図鑑のキャラクターをタップすると説明とチャレンジの種類が出る', async () => {
+  const { Zukan } = await import('./MonsterView')
+  const { fireEvent, screen } = await import('@testing-library/react')
+  render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'rabbit' }]} />)
+  fireEvent.click(screen.getByLabelText(/^ウサピョン：/))
+  expect(screen.getByText(/今日のチャレンジ：リスニング/)).toBeInTheDocument()
+})
