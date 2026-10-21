@@ -3,7 +3,7 @@ import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
-import { loadBook, recordWin, saveBook } from './bossbook'
+import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
@@ -157,6 +157,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [revenge, setRevenge] = useState(false) // リベンジ成功
   const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
   const [shieldUsed, setShieldUsed] = useState(-1) // 盾を使った問題の番号
   const [sPrize, setSPrize] = useState<ReturnType<typeof sRouletteOf> | null>(null)
@@ -253,7 +254,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       } else {
         const lose = charge ? 2 : 1
         setHearts(Math.max(0, hearts - lose))
-        if (hearts - lose <= 0) onLose?.()
+        if (hearts - lose <= 0) {
+          markLost(baseLook.name)
+          onLose?.()
+        }
       }
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
@@ -295,6 +299,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
   function win(c: number) {
     playBossSound('victory')
+    if (takeRevenge(baseLook.name)) {
+      setRevenge(true)
+      onRankBonus?.(REVENGE_COINS)
+    }
     const sec = Math.max(1, Math.round((nowMs() - startedAt.current) / 1000))
     setTime({ sec, best: recordBossTime(look.name, sec) })
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
@@ -316,6 +324,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setRevenge(false)
     setShield(false)
     setShieldUsed(-1)
     setSPrize(null)
@@ -529,6 +538,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
+          {revenge && <p className="level-up boss-revenge">🔥 リベンジ成功！ 🪙{REVENGE_COINS}</p>}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           {time && <p className="boss-maxhit">⏱ タイム {formatSec(time.sec)}{time.best ? '　🏁 最短記録！' : `（最短 ${formatSec(loadBossTimes()[look.name] ?? time.sec)}）`}</p>}
           <p className="boss-maxhit">{newRecord > 0 ? `💥 最大ダメージ記録を更新！ ${newRecord}` : `💥 最大ダメージ記録 ${loadMaxHit()}`}</p>

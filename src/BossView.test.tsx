@@ -351,3 +351,14 @@ it('ボス戦10回に1回、色ちがいのボスがあらわれ、たおすと�
   const { loadBook } = await import('./bossbook')
   expect(Object.keys(loadBook()).some((n) => n.startsWith('✨色ちがいの'))).toBe(true)
 })
+
+it('負けたボスに勝つとリベンジ成功で🪙5', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  localStorage.setItem('eitan:boss-lost', JSON.stringify([BOSSES['中1'].name]))
+  const bonus = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} onRankBonus={bonus} />)
+  answer(true)
+  expect(screen.getByText(/リベンジ成功！/)).toBeInTheDocument()
+  expect(bonus).toHaveBeenCalledWith(5)
+})

@@ -49,3 +49,33 @@ export function epithetOf(wins: number): string | null {
 export function baseBeaten(book: BossBook, baseNames: string[]): number {
   return baseNames.filter((n) => book[n]).length
 }
+
+// リベンジ：負けたボスの名前を覚えておき、次に勝つと🪙5
+export const REVENGE_COINS = 5
+const LOST_KEY = 'eitan:boss-lost'
+export function loadLost(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(LOST_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+function saveLost(list: string[]): void {
+  try {
+    localStorage.setItem(LOST_KEY, JSON.stringify(list.slice(-50)))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export function markLost(name: string): void {
+  const l = loadLost()
+  if (!l.includes(name)) saveLost([...l, name])
+}
+// 勝ったとき：リベンジだったら true（記録から消す）
+export function takeRevenge(name: string): boolean {
+  const l = loadLost()
+  if (!l.includes(name)) return false
+  saveLost(l.filter((x) => x !== name))
+  return true
+}

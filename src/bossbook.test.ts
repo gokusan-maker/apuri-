@@ -31,3 +31,14 @@ it('基本のボスのうちたおした数', async () => {
   const b = recordWin({}, BOSSES['中1'], 'A', '2026-10-21')
   expect(baseBeaten(b, [BOSSES['中1'].name, BOSSES['中2'].name])).toBe(1)
 })
+
+it('負けたボスに勝つとリベンジ（1回だけ）', async () => {
+  const { markLost, takeRevenge, loadLost } = await import('./bossbook')
+  localStorage.clear()
+  expect(takeRevenge('モチ')).toBe(false)
+  markLost('モチ')
+  markLost('モチ')
+  expect(loadLost()).toEqual(['モチ'])
+  expect(takeRevenge('モチ')).toBe(true)
+  expect(takeRevenge('モチ')).toBe(false)
+})
