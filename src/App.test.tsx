@@ -443,6 +443,14 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:challenge-streak')).toBe('1')
   })
 
+  it('ドラゴンのタマゴがかえると、進化の画面にドラゴンの名前が出る', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 18, species: 'dragon' }] }))
+    render(<App />)
+    fireEvent.click(screen.getByText('意味を見る'))
+    fireEvent.click(screen.getByText('覚えた'))
+    expect(screen.getByRole('dialog', { name: '進化' })).toHaveTextContent('ちびドラ')
+  })
+
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

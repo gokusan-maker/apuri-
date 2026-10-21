@@ -55,6 +55,7 @@ import {
   type Source,
   XP_CARD_AGAIN,
   XP_CARD_GOOD,
+  withSpecies,
 } from './monster'
 import {
   buildQueue,
@@ -1122,7 +1123,7 @@ function App() {
           }}
         />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
-        <Evolve form={FORMS.find((f) => f.id === evoForm)!} wear={monster.wear} kind={monster.kind} onClose={() => setEvoForm(null)} />
+        <Evolve form={withSpecies(FORMS.find((f) => f.id === evoForm)!, monster.species)} wear={monster.wear} kind={monster.kind} onClose={() => setEvoForm(null)} />
       )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
