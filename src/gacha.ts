@@ -23,9 +23,11 @@ export function addTicket(w: Wallet): Wallet {
 // 引けたら、コインを減らしてタマゴを仲間に加える
 // ticket=true のときはコインのかわりにチケットを1枚使う
 // r は色ちがい、r2 はキャラクターの種類を決める乱数
-export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
+export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string, rareSure = false): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
   if (!canDraw(w, p, ticket)) return null
-  const rolled = rollKind(r)
+  const first = rollKind(r)
+  // レア以上確定のときは、ふつうが出たら3つのレア色のどれかにする
+  const rolled = rareSure && first.rarity === 'N' ? KINDS_R[Math.min(2, Math.floor((r / 0.6) * 3))] : first
   const kind = rolled.rarity === 'N' || rolled.rarity === 'R' ? ((w.pity ?? 0) + 1 >= PITY ? kindOf('kin') : rolled) : rolled
   const pity = kind.rarity === 'SR' || kind.rarity === 'UR' ? 0 : (w.pity ?? 0) + 1
   const species = rollSpecies(r2, dragonUp, pickup)
@@ -83,3 +85,30 @@ export function rareEgg(p: Party, r: number, r2: number): { party: Party; kind: 
   const egg = { xp: 0, kind: kind.id, ...(species.id === 'mochi' ? {} : { species: species.id }) }
   return { party: { ...p, members: [...p.members, egg] }, kind, species }
 }
+
+// ステップアップ：その日の3回目ごとのガチャはレア以上確定
+export const STEP_EVERY = 3
+export type GachaStep = { day: string; count: number }
+const STEP_KEY = 'eitan:gacha-step'
+
+export function loadStep(): GachaStep {
+  try {
+    const v = JSON.parse(localStorage.getItem(STEP_KEY) ?? 'null') as GachaStep | null
+    return v && typeof v.day === 'string' && typeof v.count === 'number' ? v : { day: '', count: 0 }
+  } catch {
+    return { day: '', count: 0 }
+  }
+}
+
+export function saveStep(s: GachaStep): void {
+  try {
+    localStorage.setItem(STEP_KEY, JSON.stringify(s))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+
+export const todaySteps = (s: GachaStep, today: string) => (s.day === today ? s.count : 0)
+// 次の1回がレア以上確定か／あと何回で確定か（次が確定なら 0）
+export const stepLeft = (s: GachaStep, today: string) => STEP_EVERY - 1 - (todaySteps(s, today) % STEP_EVERY)
+export const nextStep = (s: GachaStep, today: string): GachaStep => ({ day: today, count: todaySteps(s, today) + 1 })

@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, isDuplicate, PARTY_MAX } from './gacha'
+import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -137,4 +137,21 @@ it('日替わりピックアップは日付で決まり、そのキャラが出�
   expect(speciesRate(p, false, p.id)).toBeCloseTo(p.rate + PICKUP_UP)
   const count = (pick?: string) => Array.from({ length: 1000 }, (_, i) => rollSpecies(i / 1000, false, pick)).filter((sp) => sp.id === p.id).length
   expect(count(p.id)).toBeGreaterThan(count())
+})
+
+it('ステップアップ：その日3回目はレア以上確定', () => {
+  localStorage.clear()
+  const d = '2026-10-21'
+  let s = loadStep()
+  expect(stepLeft(s, d)).toBe(2)
+  s = nextStep(s, d)
+  expect(stepLeft(s, d)).toBe(1)
+  s = nextStep(s, d)
+  expect(stepLeft(s, d)).toBe(0) // 次が確定
+  saveStep(s)
+  expect(stepLeft(loadStep(), '2026-10-22')).toBe(2) // 日がかわるとリセット
+  const w = { coins: 100, owned: [] }
+  const p = { active: 0, members: [{ xp: 0 }] }
+  expect(drawEgg(w, p, 0, false, 0.5, false, undefined, false)!.kind.rarity).toBe('N')
+  for (const r of [0, 0.3, 0.59]) expect(drawEgg(w, p, r, false, 0.5, false, undefined, true)!.kind.rarity).toBe('R')
 })

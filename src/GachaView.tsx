@@ -12,12 +12,13 @@ type Props = {
   pityLeft?: number // あと何回でスーパーレア以上が確定
   dragonUp?: boolean // 週末はドラコが出やすい
   pickup?: Species // 日替わりピックアップ（出やすい）
+  stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const record = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
@@ -64,6 +65,11 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
             <br />「{pickup.name}」が出やすい！（{Math.round(pickup.rate * 100)}% → {Math.round(speciesRate(pickup, dragonUp, pickup.id) * 100)}%）
           </span>
         </div>
+      )}
+      {stepLeft !== undefined && (
+        <p className={`gacha-step${stepLeft === 0 ? ' sure' : ''}`}>
+          {stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ステップアップ：あと${stepLeft}回で、その次がレア以上確定`}
+        </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
       {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}

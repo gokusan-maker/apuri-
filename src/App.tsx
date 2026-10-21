@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, toggleFav, updateActive } from './party'
-import { addTicket, drawEgg, DUP_REFUND, isDuplicate, RARE_FULL_COINS, rareEgg, TICKET_MAX } from './gacha'
+import { addTicket, drawEgg, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -241,6 +241,7 @@ function App() {
   const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
+  const [gachaStep, setGachaStep] = usePersistent(loadStep, saveStep)
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [showChallenge, setShowChallenge] = useState(false)
@@ -784,11 +785,13 @@ function App() {
           members={party.members.length}
           dragonUp={isWeekend(today)}
           pickup={pickupOf(today)}
+          stepLeft={stepLeft(gachaStep, today)}
           favSnack={favSnackOf(today).id}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id)
+            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0)
             if (!r) return null
+            setGachaStep(nextStep(gachaStep, today))
             const dup = isDuplicate(party.members, r.species.id, r.kind.id)
             setWallet(dup ? { ...r.wallet, coins: r.wallet.coins + DUP_REFUND } : r.wallet)
             setParty(r.party)

@@ -85,3 +85,10 @@ it('今日のピックアップが表示される', () => {
   expect(screen.getByText('🎯 今日のピックアップ')).toBeInTheDocument()
   expect(screen.getByText(/「コンコン」が出やすい！（16% → 24%）/)).toBeInTheDocument()
 })
+
+it('ステップアップの残り回数と確定のお知らせ', () => {
+  const { rerender } = render(<Gacha coins={0} members={1} stepLeft={2} onDraw={() => null} />)
+  expect(screen.getByText('🔥 ステップアップ：あと2回で、その次がレア以上確定')).toBeInTheDocument()
+  rerender(<Gacha coins={0} members={1} stepLeft={0} onDraw={() => null} />)
+  expect(screen.getByText('🔥 ステップアップ！ 次の1回はレア以上確定！')).toBeInTheDocument()
+})
