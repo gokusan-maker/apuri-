@@ -1316,3 +1316,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-gtags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 4px 0; font-size: 0.75rem; }
 .long-gtag { padding: 2px 8px; border-radius: 999px; background: #dbeafe; color: #1e40af; }
 .boss-shield { margin: 4px 0; font-weight: 700; color: #0369a1; }
+.hideseek { margin: 8px 0; text-align: center; }
+.hide-title, .hide-hint, .hide-msg { margin: 4px 0; font-size: 0.85rem; }
+.hide-hint { color: #b45309; }
+.hide-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px; max-width: 220px; margin: 0 auto; }
+.hide-grid button { aspect-ratio: 1; border: none; border-radius: 10px; background: var(--bg); font-size: 1.5rem; }
