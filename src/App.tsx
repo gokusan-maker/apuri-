@@ -102,6 +102,7 @@ import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
 import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
+import { PartnerStatus } from './PartnerStatusView'
 import { Records } from './RecordsView'
 import { Shop } from './ShopView'
 import { Onboarding } from './OnboardingView'
@@ -1073,6 +1074,7 @@ function App() {
           {statsTab === 'buddy' && (
             <section className="card stats-view">
               <EvolutionPreview monster={monster} />
+              <PartnerStatus monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}
                 warmLeft={warmLeft(warm, today)}
                 onWarm={(i) => {
