@@ -52,6 +52,7 @@ export type Settings = {
   easy: boolean // かんたんモード：4択クイズの選択肢を3つにする
   newPerDay: number // 1日の新しい単語の数
   voice: string // 読み上げの声の名前（空は自動）
+  petVoice: boolean // 相棒の励ましの声
 }
 
 export type ThemeColor = 'blue' | 'pink' | 'green' | 'orange'
@@ -84,6 +85,7 @@ export const DEFAULT_SETTINGS: Settings = {
   easy: false,
   newPerDay: 10,
   voice: '',
+  petVoice: true,
 }
 
 const SETTINGS_KEY = 'eitan:settings'
@@ -106,6 +108,7 @@ export function loadSettings(): Settings {
       randomNew: v.randomNew === true,
       easy: v.easy === true,
       voice: typeof v.voice === 'string' ? v.voice.slice(0, 100) : '',
+      petVoice: typeof v.petVoice === 'boolean' ? v.petVoice : true,
       newPerDay: NEW_PER_DAY.includes(v.newPerDay as number) ? (v.newPerDay as number) : 10,
       reviewCap: REVIEW_CAPS.includes(v.reviewCap as number) ? (v.reviewCap as number) : 0,
       testDate: typeof v.testDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(v.testDate) ? v.testDate : '',

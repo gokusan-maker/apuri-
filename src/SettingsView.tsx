@@ -196,6 +196,11 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         <input type="checkbox" checked={settings.sound} onChange={(e) => set({ sound: e.target.checked })} />
       </label>
 
+      <label className="setting toggle">
+        <span>相棒の励ましの声</span>
+        <input type="checkbox" checked={settings.petVoice} onChange={(e) => set({ petVoice: e.target.checked })} />
+      </label>
+
       <h3 className="settings-h">💾 データ</h3>
       <button
         className="danger-link"

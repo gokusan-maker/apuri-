@@ -150,6 +150,7 @@ describe('App', () => {
       easy: false,
       newPerDay: 10,
       voice: '',
+      petVoice: true,
     })
     fireEvent.click(screen.getByText('端末に合わせる'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
