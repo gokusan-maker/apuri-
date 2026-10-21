@@ -63,6 +63,7 @@ export function LongReading({ onAnswer }: Props) {
   const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
   const [gist, setGist] = useState<Record<number, number>>({}) // 段落の要旨
   const [titlePick, setTitlePick] = useState<number | undefined>(undefined) // タイトル選択
+  const [comp, setComp] = useState<Record<number, number>>({}) // 英文の完成
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -82,6 +83,7 @@ export function LongReading({ onAnswer }: Props) {
     setRefer(undefined)
     setGist({})
     setTitlePick(undefined)
+    setComp({})
     setDone(false)
     setShowJa(false)
   }
@@ -146,8 +148,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0)
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -344,6 +346,31 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.complete && (
+        <>
+          <h3 className="long-q">問　本文の内容に合うように、英文の続きとして最も適切なものを ア〜エ から選びなさい。</h3>
+          {p.complete.map((x, n) => (
+            <div key={n} className="long-item">
+              <p className="long-statement">
+                ({n + 1}) {x.q}
+              </p>
+              <div className="long-choices one">
+                {x.choices.map((c, i) => (
+                  <button key={c} className={`long-choice${comp[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={comp[n] === i} onClick={() => setComp({ ...comp, [n]: i })}>
+                    {MARKS[i]} {c}
+                  </button>
+                ))}
+              </div>
+              {done && (
+                <p className={`long-why${comp[n] === x.answer ? ' right' : ' wrong'}`}>
+                  {comp[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
+
       {p.titleQ && (
         <>
           <h3 className="long-q">問　この文章のタイトルとして最も適切なものを、ア〜エ から選びなさい。</h3>
@@ -479,6 +506,7 @@ export function LongReading({ onAnswer }: Props) {
               setRefer(undefined)
               setGist({})
               setTitlePick(undefined)
+              setComp({})
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -495,7 +523,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp }))
             setTypes(t)
             saveTypeStats(t)
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')

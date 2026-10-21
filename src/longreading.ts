@@ -9,8 +9,8 @@ export type SentenceBlank = { id: string; choices: string[]; answer: number; why
 export type TitleQ = { choices: string[]; answer: number; why: string } // 本文全体に合うタイトル（このときは一覧や見出しにタイトルを出さない）
 export type Gist = { para: number; choices: string[]; answer: number; why: string } // 段落の要旨（見出し）：para は0から
 export type Refer = { phrase: string; word: string; choices: string[]; answer: number; why: string } // 指示語：phrase の中の word が指すもの
-export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ }
+export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答（complete では q が文の前半）
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[] }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -762,6 +762,9 @@ export const LONG_PASSAGES: LongPassage[] = [
       answer: 0,
       why: '「それ以来、何十億人もの人を運んできた」のは新幹線。',
     },
+    complete: [
+      { q: 'The Shinkansen can be on time because ...', choices: ['it runs only at night.', 'many workers check the tracks and trains every night.', 'it has no passengers.', 'it is the fastest train in the world.'], answer: 1, why: '第2段落：毎晩作業員が線路と車両を点検しているから。' },
+    ],
     tf: [
       { statement: 'The first Shinkansen line connected Tokyo and Shin-Osaka.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Shinkansen trains are usually more than ten minutes late.', answer: false, why: '平均の遅れは1分未満。' },
@@ -888,6 +891,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'by', 'in', 'on'], answer: 0, why: 'at the same time で「同じ時刻に」。' },
     ],
     gist: [{ para: 2, choices: ['生徒がねぶそくになる理由の1つ', 'よくねるためのコツ', 'ねむりのしくみ', '医者の意見'], answer: 0, why: '第3段落は、スマホがねぶそくの原因の1つだという話。' }],
+    complete: [
+      { q: 'If you sleep well, ...', choices: ['you will forget everything.', 'it becomes easier to remember what you studied.', 'you do not need to eat breakfast.', 'your phone will work better.'], answer: 1, why: '第2段落：よくねると勉強したことを覚えやすくなる。' },
+      { q: 'The writer says that we should stop using our phones ...', choices: ['at least one hour before bed.', 'only on weekends.', 'after we go to bed.', 'when we wake up.'], answer: 0, why: '第4段落：ねる少なくとも1時間前にはやめよう。' },
+    ],
     tf: [
       { statement: 'Doctors say teenagers need about eight to ten hours of sleep.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Many students in Japan sleep more than nine hours.', answer: false, why: '多くの生徒は7時間未満。' },
@@ -919,6 +926,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'use A to ＋原形で「〜するために A を使う」。' },
     ],
     order: { words: ['bake', 'He', 'bread', 'to', 'wants', 'for'], rest: 'his family at home.', answer: 'He wants to bake bread for', ja: '彼は家で家族のためにパンを焼きたい。（want to ＋原形）' },
+    complete: [
+      { q: 'When Haruto dropped the bread, his grandmother ...', choices: ['told him to go home.', 'was very angry.', 'said that everyone makes mistakes.', 'cried in the kitchen.'], answer: 2, why: '第2段落：Everyone makes mistakes. と言った。' },
+      { q: 'Haruto decided to use the money ...', choices: ['to buy a cookbook.', 'to buy a new bike.', 'to open his own bakery.', 'to take a trip.'], answer: 0, why: '第4段落：料理の本を買うことにした。' },
+    ],
     tf: [
       { statement: 'Haruto helped at the bakery for a week.', answer: true, why: '第1段落の内容と合う。' },
       { statement: "Haruto's grandmother got angry when he dropped the bread.", answer: false, why: 'だれでもまちがえると言っただけで、おこらなかった。' },
@@ -986,7 +997,7 @@ export const LONG_PASSAGES: LongPassage[] = [
 export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number> } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -997,7 +1008,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const rf = p.refer && extra.refer === p.refer.answer ? 1 : 0
   const gi = (p.gist ?? []).filter((x, i) => extra.gist?.[i] === x.answer).length
   const ti = p.titleQ && extra.title === p.titleQ.answer ? 1 : 0
-  return { score: b + t + k + u + o + se + qa + rf + gi + ti, total: totalOf(p) }
+  const co = (p.complete ?? []).filter((x, i) => extra.complete?.[i] === x.answer).length
+  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -1022,7 +1034,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0)
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {
@@ -1051,13 +1063,13 @@ export function targetMinutes(p: LongPassage): number {
 export const formatTime = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // 苦手タイプ分析：設問のタイプごとの［正解数, 問題数］
-export const TYPE_LABEL = { title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
+export const TYPE_LABEL = { complete: '英文の完成', title: 'タイトル選択', gist: '段落の要旨', refer: '指示語', blank: '空所補充（語句）', sentence: '会話の文補充', tf: '内容一致（○×）', pick2: '内容一致（2つ選ぶ）', qa: '英問英答', underline: '下線部の意味', order: '語句整序' } as const
 export type QType = keyof typeof TYPE_LABEL
 export type TypeStats = Partial<Record<QType, [number, number]>>
 
 export function typeResults(
   p: LongPassage,
-  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number },
+  a: { blanks: Record<string, number>; tf: Record<number, boolean>; picks: number[]; underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number> },
 ): TypeStats {
   const out: TypeStats = {}
   out.blank = [p.blanks.filter((x) => a.blanks[x.id] === x.answer).length, p.blanks.length]
@@ -1070,6 +1082,7 @@ export function typeResults(
   if (p.refer) out.refer = [a.refer === p.refer.answer ? 1 : 0, 1]
   if (p.gist) out.gist = [p.gist.filter((x, i) => a.gist?.[i] === x.answer).length, p.gist.length]
   if (p.titleQ) out.title = [a.title === p.titleQ.answer ? 1 : 0, 1]
+  if (p.complete) out.complete = [p.complete.filter((x, i) => a.complete?.[i] === x.answer).length, p.complete.length]
   return out
 }
 

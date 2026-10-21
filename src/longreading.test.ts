@@ -137,3 +137,12 @@ it('タイトル選択の問題がある長文は、一覧でタイトルをか�
     expect(shownTitle(p, 0)).not.toContain(p.title)
   }
 })
+
+it('英文の完成の問題は選択肢4つで、3本以上にある', () => {
+  const cs = LONG_PASSAGES.filter((p) => p.complete)
+  expect(cs.length).toBeGreaterThanOrEqual(3)
+  for (const p of cs) {
+    for (const x of p.complete!) expect(x.choices).toHaveLength(4)
+    expect(scoreLong(p, {}, {}, [], { complete: Object.fromEntries(p.complete!.map((x, i) => [i, x.answer])) }).score).toBe(p.complete!.length)
+  }
+})
