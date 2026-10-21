@@ -562,6 +562,76 @@ export const CONFUSING: GrammarUnit[] = [
       { sentence: 'Be ___! The baby is sleeping.', choices: ['quite', 'quiet'], answer: 1, why: '「静かにして」は Be quiet。' },
     ],
   },
+  {
+    id: 'bored-boring',
+    title: 'bored と boring',
+    points: ['boring は「（物事が）退屈な・つまらない」。', 'bored は「（人が）退屈している」。interesting / interested と同じ考え方。'],
+    examples: [
+      { en: 'The speech was boring.', ja: 'そのスピーチは退屈だった。' },
+      { en: 'I was bored, so I took a walk.', ja: '退屈だったので散歩した。' },
+    ],
+    questions: [
+      { sentence: 'This game is ___. Let\'s play something else.', choices: ['bored', 'boring'], answer: 1, why: 'ゲーム（物事）がつまらないので boring。' },
+      { sentence: 'The children got ___ during the long drive.', choices: ['bored', 'boring'], answer: 0, why: '子ども（人）が退屈したので bored。' },
+      { sentence: 'Are you ___? Let\'s go outside.', choices: ['bored', 'boring'], answer: 0, why: 'あなた（人）が退屈しているかなので bored。' },
+    ],
+  },
+  {
+    id: 'cook-cooker',
+    title: 'cook と cooker',
+    points: ['cook は「料理する」のほかに「料理人・コック」という意味もある。', 'cooker は「調理器具（なべ・コンロなど）」。料理する人ではない。'],
+    examples: [
+      { en: 'My father is a good cook.', ja: '父は料理が上手だ。' },
+      { en: 'We bought a new rice cooker.', ja: '新しい炊飯器を買った。' },
+    ],
+    questions: [
+      { sentence: 'She works as a ___ at a hotel.', choices: ['cook', 'cooker'], answer: 0, why: '料理人は cook。' },
+      { sentence: 'Put the rice in the rice ___.', choices: ['cook', 'cooker'], answer: 1, why: '炊飯器は rice cooker。' },
+      { sentence: 'My grandmother is a great ___.', choices: ['cook', 'cooker'], answer: 0, why: '「料理上手な人」は a great cook。' },
+    ],
+  },
+  {
+    id: 'buy-pay',
+    title: 'pay と buy',
+    points: ['buy は「（物を）買う」。buy ＋物。', 'pay は「（お金を）払う」。pay ＋お金、pay for ＋物 の形で使う。'],
+    examples: [
+      { en: 'I bought a new pen.', ja: '新しいペンを買った。' },
+      { en: 'I paid 200 yen for the pen.', ja: 'そのペンに200円払った。' },
+    ],
+    questions: [
+      { sentence: 'I want to ___ a new bike.', choices: ['buy', 'pay'], answer: 0, why: '自転車（物）を買うので buy。' },
+      { sentence: 'How much did you ___ for the ticket?', choices: ['buy', 'pay'], answer: 1, why: 'pay for ＋物で「〜の代金を払う」。' },
+      { sentence: 'Can I ___ by card?', choices: ['buy', 'pay'], answer: 1, why: '「カードで払う」は pay by card。' },
+    ],
+  },
+  {
+    id: 'kitchen-chicken',
+    title: 'kitchen と chicken',
+    points: ['kitchen（キッチン）は「台所」。', 'chicken（チキン）は「ニワトリ・とり肉」。つづりも音もにているので注意。'],
+    examples: [
+      { en: 'My mother is cooking in the kitchen.', ja: '母は台所で料理している。' },
+      { en: 'I like fried chicken.', ja: '私はフライドチキンが好きだ。' },
+    ],
+    questions: [
+      { sentence: 'Please wash the dishes in the ___.', choices: ['kitchen', 'chicken'], answer: 0, why: 'お皿を洗うのは台所 kitchen。' },
+      { sentence: 'We had ___ curry for dinner.', choices: ['kitchen', 'chicken'], answer: 1, why: 'とり肉のカレーは chicken curry。' },
+      { sentence: 'The ___ laid an egg.', choices: ['kitchen', 'chicken'], answer: 1, why: '卵を産んだのはニワトリ chicken。' },
+    ],
+  },
+  {
+    id: 'lose-loose',
+    title: 'lose と loose',
+    points: ['lose（ルーズ、濁る音）は「なくす・負ける」という動詞。', 'loose（ルース、濁らない音）は「ゆるい」という形容詞。'],
+    examples: [
+      { en: 'Don\'t lose your key.', ja: 'かぎをなくさないでね。' },
+      { en: 'These pants are a little loose.', ja: 'このズボンは少しゆるい。' },
+    ],
+    questions: [
+      { sentence: 'I don\'t want to ___ the game.', choices: ['lose', 'loose'], answer: 0, why: '「試合に負ける」は lose。' },
+      { sentence: 'My shoes are too ___.', choices: ['lose', 'loose'], answer: 1, why: '「ゆるい」は loose。' },
+      { sentence: 'Be careful not to ___ your wallet.', choices: ['lose', 'loose'], answer: 0, why: '「なくす」は lose。' },
+    ],
+  },
 ]
 
 // 単語id（例：borrow）が出てくる「まちがえやすい単語」の単元
