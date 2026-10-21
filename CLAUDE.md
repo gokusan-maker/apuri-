@@ -1,7 +1,7 @@
 # プロジェクト: えいたん（スマホ向け英語学習アプリ PWA）
 
 日本人の中高生〜大人向けの英単語学習アプリ。Vite + React + TypeScript。
-データは端末の localStorage のみ（サーバーなし）。UI はスマホ縦画面が基準（幅 360〜480px）。
+データは端末の localStorage が基本（オフラインで動く）。クラウド保存・引き継ぎは Supabase（共有プロジェクト mljhjdzuabaujluearbd。えいたんのものは eitan スキーマと eitan_ で始まる関数に分け、ほかのアプリのテーブルにはさわらない。SQL は supabase/migrations/ に置く）。UI はスマホ縦画面が基準（幅 360〜480px）。
 画面の文言は日本語、学習内容は英語。コンセプトは「楽しく学べる、ゲーム感覚」「モンスターを育てる」（詳細は ROADMAP.md の方針）。発音は Web Speech API（speechSynthesis）を使う。
 
 ## コマンド

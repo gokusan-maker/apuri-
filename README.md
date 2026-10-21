@@ -35,4 +35,4 @@ npm run build    # 型チェック＋ビルド（dist/）
 
 ## 公開（Vercel で自動デプロイ）
 
-`vercel.json` に設定済み。最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。サーバーやデータベースは使わない（学習データは端末の localStorage）ので、Supabase の設定は不要。
+`vercel.json` に設定済み。最初に1回だけ https://vercel.com/new で GitHub の `gokusan-maker/apuri-` を Import すると、以後はこのリポジトリに push するたびに自動でビルド・公開される（ビルド `npm run build`、出力 `dist`）。学習データは端末の localStorage が基本。設定の「クラウド保存・引き継ぎ」で Supabase に保存でき、引き継ぎコードで別の端末に復元できる（SQL は supabase/migrations/）。

@@ -898,3 +898,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-taunt { margin: 0 0 6px; text-align: center; font-weight: 700; font-style: italic; } .boss-taunt span { display: block; font-size: 0.8rem; font-weight: 400; font-style: normal; color: var(--muted); }
 .challenge-streak { margin-left: 6px; font-size: 0.8rem; color: #c2410c; }
 .gacha-new { margin: 2px 0; color: #dc2626; font-weight: 900; animation: pop 0.6s 1.6s both; }
+/* クラウド保存・引き継ぎ */
+.cloud-info { font-size: 0.85rem; }
+.cloud-code { font-family: ui-monospace, monospace; letter-spacing: 0.05em; user-select: all; }
+.cloud-restore { display: flex; gap: 6px; margin: 6px 0; }
+.cloud-restore input { flex: 1; min-width: 0; padding: 6px 8px; border: 1px solid var(--muted); border-radius: 8px; background: var(--bg); color: var(--fg); }
+.cloud-msg { font-size: 0.85rem; font-weight: 700; }

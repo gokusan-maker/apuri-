@@ -1,3 +1,4 @@
+import { Cloud } from './CloudView'
 import { Install } from './InstallView'
 import { OfflineStatus } from './OfflineView'
 import { WhatsNew } from './WhatsNewView'
@@ -200,6 +201,9 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
         <span>相棒の励ましの声</span>
         <input type="checkbox" checked={settings.petVoice} onChange={(e) => set({ petVoice: e.target.checked })} />
       </label>
+
+      <h3 className="settings-h">☁️ クラウド保存・引き継ぎ</h3>
+      <Cloud />
 
       <h3 className="settings-h">💾 データ</h3>
       <button
