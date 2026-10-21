@@ -1,4 +1,4 @@
-import { wearList } from './shop'
+import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
@@ -204,105 +204,143 @@ export function Wear({ id }: { id?: string }) {
 function WearOne({ id }: { id: string }) {
   switch (id) {
     case 'ribbon':
-      return <path d="M62 30 L54 22 L54 38 Z M62 30 L70 22 L70 38 Z" fill="#f472b6" stroke="#9d174d" strokeWidth="2" />
+      return (
+        <g stroke="#9d174d" strokeWidth="2" strokeLinejoin="round">
+          <path d="M66 34 L60 46 L64 46 Z M70 34 L74 46 L78 44 Z" fill="#db2777" />
+          <path d="M68 32 Q56 20 54 30 Q54 40 68 32 Z M68 32 Q80 20 82 30 Q82 40 68 32 Z" fill="#f472b6" />
+          <circle cx="68" cy="32" r="4" fill="#ec4899" />
+          <path d="M58 27 q2 -2 5 0 M74 27 q3 -2 5 0" stroke="#fff" strokeWidth="1.5" fill="none" opacity="0.8" />
+        </g>
+      )
     case 'glasses':
       return (
-        <g fill="none" stroke="#1f2937" strokeWidth="2.5">
-          <circle cx="38" cy="56" r="9" />
-          <circle cx="62" cy="56" r="9" />
-          <path d="M47 56 L53 56" />
+        <g>
+          <g fill="#e0f2fe" fillOpacity="0.35" stroke="#1f2937" strokeWidth="2.5">
+            <circle cx="38" cy="57" r="10" />
+            <circle cx="62" cy="57" r="10" />
+          </g>
+          <path d="M48 56 Q50 53 52 56 M28 55 L20 52 M72 55 L80 52" fill="none" stroke="#1f2937" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M32 52 q3 -4 7 -4 M56 52 q3 -4 7 -4" stroke="#fff" strokeWidth="1.8" fill="none" strokeLinecap="round" />
         </g>
       )
     case 'sunglasses':
       return (
-        <g fill="#111827" stroke="#000" strokeWidth="2">
-          <rect x="28" y="49" width="19" height="13" rx="5" />
-          <rect x="53" y="49" width="19" height="13" rx="5" />
-          <path d="M47 54 L53 54" fill="none" />
+        <g>
+          <path d="M26 50 L48 50 Q48 64 37 64 Q26 64 26 50 Z M52 50 L74 50 Q74 64 63 64 Q52 64 52 50 Z" fill="#111827" stroke="#000" strokeWidth="2" />
+          <path d="M48 52 L52 52 M26 51 L19 49 M74 51 L81 49" stroke="#000" strokeWidth="2.5" strokeLinecap="round" />
+          <path d="M30 53 l6 0 M56 53 l6 0" stroke="#fff" strokeWidth="2" strokeLinecap="round" opacity="0.7" />
         </g>
       )
     case 'cap':
       return (
-        <g stroke="#1e3a8a" strokeWidth="2">
-          <path d="M30 30 Q30 10 50 10 Q70 10 70 30 Z" fill="#3b82f6" />
-          <path d="M66 28 L88 30 L70 32 Z" fill="#1d4ed8" />
-          <circle cx="50" cy="10" r="2.5" fill="#1d4ed8" />
+        <g stroke="#1e3a8a" strokeWidth="2" strokeLinejoin="round">
+          <path d="M66 32 Q84 30 90 36 Q80 38 66 37 Z" fill="#1d4ed8" />
+          <path d="M28 36 Q28 14 50 13 Q72 14 72 36 Z" fill="#3b82f6" />
+          <path d="M50 13 L50 36" stroke="#1e40af" strokeWidth="1.5" opacity="0.6" />
+          <circle cx="50" cy="13" r="2.5" fill="#1d4ed8" />
+          <circle cx="40" cy="27" r="5" fill="#fff" strokeWidth="1.2" />
+          <text x="40" y="29.5" fontSize="7" textAnchor="middle" fill="#1d4ed8" stroke="none" fontWeight="bold">
+            E
+          </text>
+          <path d="M33 22 q3 -6 9 -7" stroke="#fff" strokeWidth="1.8" fill="none" opacity="0.6" />
         </g>
       )
     case 'pearls':
       return (
         <g fill="#f8fafc" stroke="#94a3b8" strokeWidth="1">
-          {[28, 34, 40, 46, 54, 60, 66, 72].map((x) => (
-            <circle key={x} cx={x} cy={78 + (x < 50 ? (x - 28) / 4 : (72 - x) / 4)} r="3" />
+          {[26, 32, 38, 44, 50, 56, 62, 68, 74].map((x) => (
+            <circle key={x} cx={x} cy={80 + (12 - Math.abs(50 - x) / 2) * 0.5} r="3.2" />
           ))}
+          <circle cx="50" cy="91" r="4.5" fill="#fbcfe8" stroke="#db2777" />
         </g>
       )
     case 'scarf':
       return (
-        <g fill="#ef4444" stroke="#991b1b" strokeWidth="2">
-          <path d="M20 76 Q50 86 80 76 L80 82 Q50 92 20 82 Z" />
-          <path d="M62 84 L66 98 L74 96 L70 82 Z" />
+        <g stroke="#991b1b" strokeWidth="2" strokeLinejoin="round">
+          <path d="M60 82 L64 100 L74 98 L70 80 Z" fill="#dc2626" />
+          <path d="M20 76 Q50 88 80 76 L80 84 Q50 96 20 84 Z" fill="#ef4444" />
+          <path d="M28 80 L28 87 M38 83 L38 90 M50 84 L50 91 M62 83 L62 90 M72 80 L72 87" stroke="#fff" strokeWidth="2" opacity="0.6" />
         </g>
       )
     case 'hat':
       return (
-        <g fill="#1f2937" stroke="#000" strokeWidth="1.5">
-          <rect x="32" y="22" width="36" height="6" rx="2" />
-          <rect x="38" y="4" width="24" height="20" rx="2" />
-          <rect x="38" y="17" width="24" height="4" fill="#dc2626" />
+        <g stroke="#000" strokeWidth="1.5">
+          <ellipse cx="50" cy="31" rx="22" ry="4.5" fill="#1f2937" />
+          <path d="M37 30 L38 6 Q50 3 62 6 L63 30 Q50 33 37 30 Z" fill="#1f2937" />
+          <path d="M37.5 22 Q50 25 62.5 22 L62.8 27 Q50 30 37.2 27 Z" fill="#dc2626" />
+          <path d="M42 9 L42 20" stroke="#6b7280" strokeWidth="2.5" strokeLinecap="round" />
         </g>
       )
     case 'flower':
       return (
-        <g stroke="#a16207" strokeWidth="1">
-          {[30, 40, 50, 60, 70].map((x, i) => (
-            <circle key={x} cx={x} cy={i % 2 ? 26 : 30} r="5" fill={i % 2 ? '#fde047' : '#f9a8d4'} />
+        <g>
+          <path d="M26 34 Q50 22 74 34" fill="none" stroke="#65a30d" strokeWidth="3" />
+          {[26, 37, 50, 63, 74].map((x, i) => (
+            <g key={x} transform={`translate(${x} ${34 - (12 - Math.abs(50 - x) / 2) * 0.9})`}>
+              {[0, 72, 144, 216, 288].map((r) => (
+                <ellipse key={r} transform={`rotate(${r})`} cx="0" cy="-3.5" rx="2.6" ry="3.6" fill={['#f9a8d4', '#fde047', '#c4b5fd', '#fde047', '#f9a8d4'][i]} stroke="#a16207" strokeWidth="0.6" />
+              ))}
+              <circle r="2" fill="#f59e0b" />
+            </g>
           ))}
         </g>
       )
     case 'bowtie':
       return (
-        <g fill="#7c3aed" stroke="#4c1d95" strokeWidth="2">
-          <path d="M50 80 L38 72 L38 88 Z M50 80 L62 72 L62 88 Z" />
-          <circle cx="50" cy="80" r="3.5" />
+        <g stroke="#4c1d95" strokeWidth="2" strokeLinejoin="round">
+          <path d="M50 82 Q40 72 34 74 Q32 82 34 90 Q40 92 50 82 Z M50 82 Q60 72 66 74 Q68 82 66 90 Q60 92 50 82 Z" fill="#7c3aed" />
+          <rect x="46" y="78" width="8" height="8" rx="2.5" fill="#6d28d9" />
+          <path d="M37 78 q3 -2 6 0 M57 78 q3 -2 6 0" stroke="#ddd6fe" strokeWidth="1.5" fill="none" />
         </g>
       )
     case 'catears':
       return (
-        <g stroke="#78350f" strokeWidth="2">
-          <path d="M24 34 L28 10 L44 26 Z" fill="#fbbf24" />
-          <path d="M76 34 L72 10 L56 26 Z" fill="#fbbf24" />
-          <path d="M29 28 L31 17 L38 25 Z M71 28 L69 17 L62 25 Z" fill="#f9a8d4" stroke="none" />
+        <g stroke="#78350f" strokeWidth="2" strokeLinejoin="round">
+          <path d="M24 40 L26 12 L46 30 Z" fill="#fbbf24" />
+          <path d="M76 40 L74 12 L54 30 Z" fill="#fbbf24" />
+          <path d="M29 33 L30 20 L40 29 Z M71 33 L70 20 L60 29 Z" fill="#f9a8d4" stroke="none" />
         </g>
       )
     case 'witchhat':
       return (
-        <g stroke="#1f2937" strokeWidth="2">
-          <path d="M28 28 L72 28 L60 22 L54 2 L40 22 Z" fill="#7c3aed" />
-          <rect x="40" y="20" width="20" height="4" fill="#f59e0b" stroke="none" />
+        <g stroke="#1f2937" strokeWidth="2" strokeLinejoin="round">
+          <ellipse cx="50" cy="32" rx="26" ry="5" fill="#6d28d9" />
+          <path d="M34 31 Q40 18 46 10 Q52 2 64 4 Q56 8 58 18 L66 31 Z" fill="#7c3aed" />
+          <path d="M36 26 L64 26 L65.5 30 L34.5 30 Z" fill="#f59e0b" stroke="none" />
+          <path d="M52 22 l1 -3 l1 3 l3 1 l-3 1 l-1 3 l-1 -3 l-3 -1 Z" fill="#fde047" stroke="none" />
         </g>
       )
     case 'santahat':
       return (
-        <g stroke="#7f1d1d" strokeWidth="1.5">
-          <path d="M30 28 Q48 0 70 14 L68 28 Z" fill="#dc2626" />
-          <rect x="28" y="24" width="44" height="7" rx="3" fill="#fff" />
-          <circle cx="71" cy="14" r="4" fill="#fff" />
+        <g stroke="#7f1d1d" strokeWidth="1.5" strokeLinejoin="round">
+          <path d="M30 32 Q34 8 56 8 Q72 10 78 26 L70 30 Z" fill="#dc2626" />
+          <path d="M40 16 Q48 10 58 11" stroke="#fca5a5" strokeWidth="2" fill="none" />
+          <rect x="27" y="27" width="46" height="8" rx="4" fill="#fff" />
+          <circle cx="78" cy="27" r="5" fill="#fff" />
         </g>
       )
     case 'crown':
       return (
-        <g fill="#facc15" stroke="#a16207" strokeWidth="2">
-          <path d="M32 28 L32 12 L41 20 L50 8 L59 20 L68 12 L68 28 Z" />
-          <circle cx="50" cy="22" r="2.5" fill="#ef4444" stroke="none" />
+        <g stroke="#a16207" strokeWidth="2" strokeLinejoin="round">
+          <path d="M32 32 L30 12 L41 22 L50 7 L59 22 L70 12 L68 32 Z" fill="#facc15" />
+          <path d="M32 27 L68 27" stroke="#ca8a04" strokeWidth="1.5" />
+          <circle cx="30" cy="11" r="2.5" fill="#fde047" />
+          <circle cx="50" cy="6" r="2.5" fill="#fde047" />
+          <circle cx="70" cy="11" r="2.5" fill="#fde047" />
+          <circle cx="50" cy="22" r="3" fill="#ef4444" stroke="#7f1d1d" strokeWidth="1" />
+          <circle cx="40" cy="27" r="1.8" fill="#22c55e" stroke="none" />
+          <circle cx="60" cy="27" r="1.8" fill="#3b82f6" stroke="none" />
+          <path d="M36 16 L37 25" stroke="#fef9c3" strokeWidth="1.8" strokeLinecap="round" />
         </g>
       )
     case 'headphones':
       return (
         <g>
-          <path d="M18 56 Q18 18 50 18 Q82 18 82 56" fill="none" stroke="#1f2937" strokeWidth="4" />
-          <rect x="10" y="50" width="12" height="18" rx="5" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
-          <rect x="78" y="50" width="12" height="18" rx="5" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
+          <path d="M17 58 Q16 18 50 17 Q84 18 83 58" fill="none" stroke="#1f2937" strokeWidth="5" strokeLinecap="round" />
+          <path d="M17 58 Q16 18 50 17 Q84 18 83 58" fill="none" stroke="#4b5563" strokeWidth="1.5" strokeLinecap="round" />
+          <rect x="9" y="50" width="14" height="20" rx="6" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
+          <rect x="77" y="50" width="14" height="20" rx="6" fill="#3b82f6" stroke="#1e3a8a" strokeWidth="2" />
+          <path d="M13 54 L13 62 M81 54 L81 62" stroke="#bfdbfe" strokeWidth="2" strokeLinecap="round" />
         </g>
       )
     default:
@@ -393,7 +431,7 @@ export function MonsterFigure({
           {form.stage === 1 && !hidden && (
             <path d="M30 34 L36 26 L42 33 L50 24 L58 33 L64 26 L70 34 Q50 24 30 34 Z" fill="#fef3c7" stroke="#d97706" strokeWidth="2" strokeLinejoin="round" />
           )}
-          {!hidden && <Crest form={form} line={line} />}
+          {!hidden && !(form.stage <= 2 && wearList(wear).some((w) => slotOf(w) === 'head')) && <Crest form={form} line={line} />}
           {form.stage >= 4 && (
             <g stroke="#a16207" strokeWidth="2" strokeLinejoin="round">
               <path d="M30 34 L33 22 L41 30 L50 18 L59 30 L67 22 L70 34 Z" fill="#fbbf24" />
