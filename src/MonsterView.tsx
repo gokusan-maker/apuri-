@@ -8,7 +8,9 @@ import { speak } from './speech'
 import { shade } from './color'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
-type Mood = 'normal' | 'happy' | 'lonely'
+type Mood = 'normal' | 'happy' | 'lonely' | 'wink' | 'star' | 'wow'
+// さわったときの表情（順番に変わる）
+const REACTIONS: Mood[] = ['happy', 'wink', 'star', 'wow']
 
 type Props = {
   monster: MonsterState
@@ -40,6 +42,44 @@ function Face({ mood }: { mood: Mood }) {
         <path d="M57 61 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path d="M44 75 Q50 70 56 75" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
         <path className="monster-tear" d="M68 64 q3 6 0 9 q-3 -3 0 -9" fill="#60a5fa" />
+      </g>
+    )
+  }
+  if (mood === 'wink' || mood === 'star' || mood === 'wow') {
+    const star = 'M0 -7 l2 5 l5.5 0.5 l-4.2 3.6 l1.4 5.4 l-4.7 -3 l-4.7 3 l1.4 -5.4 l-4.2 -3.6 l5.5 -0.5 Z'
+    return (
+      <g className={`monster-face face-${mood}`}>
+        {mood === 'star' ? (
+          <g fill="#facc15" stroke="#a16207" strokeWidth="1.2">
+            <path transform="translate(38 57)" d={star} />
+            <path transform="translate(62 57)" d={star} />
+          </g>
+        ) : mood === 'wow' ? (
+          <g fill="#1f2937">
+            <circle cx="38" cy="56" r="5" />
+            <circle cx="62" cy="56" r="5" />
+            <circle cx="39.5" cy="54.5" r="1.6" fill="#fff" />
+            <circle cx="63.5" cy="54.5" r="1.6" fill="#fff" />
+          </g>
+        ) : (
+          <>
+            <ellipse cx="38" cy="57" rx="6" ry="7.5" fill="#1f2937" />
+            <circle cx="40" cy="54" r="2.4" fill="#fff" />
+            <path d="M55 58 Q62 52 69 58" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
+          </>
+        )}
+        <ellipse cx="28" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.55" />
+        <ellipse cx="72" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.55" />
+        {mood === 'wow' ? (
+          <ellipse cx="50" cy="73" rx="4.5" ry="5.5" fill="#7f1d1d" stroke="#1f2937" strokeWidth="2" />
+        ) : mood === 'wink' ? (
+          <>
+            <path d="M43 69 Q50 76 57 69" fill="none" stroke="#1f2937" strokeWidth="2.5" strokeLinecap="round" />
+            <path d="M52 72 q3 5 6 1" fill="#fb7185" stroke="#1f2937" strokeWidth="1.5" />
+          </>
+        ) : (
+          <path d="M42 68 Q50 80 58 68 Z" fill="#7f1d1d" stroke="#1f2937" strokeWidth="2" strokeLinejoin="round" />
+        )}
       </g>
     )
   }
@@ -420,7 +460,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? 'happy' : mood} wear={monster.wear} />
+        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : mood} wear={monster.wear} />
         {gain && gain.amount > 0 && (
           <span key={gain.key} className="xp-float" aria-hidden="true">
             +{gain.amount}

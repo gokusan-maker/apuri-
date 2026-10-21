@@ -31,3 +31,9 @@ it('ふつうの顔はまばたきする目、うれしい顔は笑った目', (
   expect(render(<MonsterFigure form={form('mochimaru')} />).container.querySelector('.monster-eyes')).not.toBeNull()
   expect(render(<MonsterFigure form={form('mochimaru')} mood="happy" />).container.querySelector('.monster-eyes')).toBeNull()
 })
+
+it('さわったときの表情：ウインク・星の目・びっくり', () => {
+  for (const m of ['wink', 'star', 'wow'] as const) {
+    expect(render(<MonsterFigure form={form('mochimaru')} mood={m} />).container.querySelector(`.face-${m}`)).not.toBeNull()
+  }
+})
