@@ -1045,3 +1045,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .battle-item { padding: 6px 10px; border: 2px solid #f59e0b; border-radius: 999px; background: #fffbeb; font-weight: 700; font-size: 0.85rem; }
 .battle-item:disabled { opacity: 0.45; }
 .gacha-golden { margin: 4px 0; padding: 4px 10px; border-radius: 999px; background: linear-gradient(90deg, #fef08a, #fbbf24); color: #713f12; font-weight: 800; font-size: 0.85rem; }
+
+/* Sランクの勝利演出 */
+.confetti.gold { background: linear-gradient(135deg, #fde68a, #f59e0b, #fef3c7) !important; width: 10px; height: 14px; }
+.perfect-banner { margin: 0; text-align: center; font-size: 2rem; font-weight: 900; letter-spacing: 0.08em; background: linear-gradient(90deg, #f59e0b, #fde047, #f59e0b); -webkit-background-clip: text; background-clip: text; color: transparent; filter: drop-shadow(0 2px 0 #92400e); animation: crit-pop 0.9s ease-out both; }

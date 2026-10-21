@@ -371,6 +371,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               }}
             />
           ))}
+          {battleRank(hearts, crits) === 'S' && (
+            <>
+              {Array.from({ length: 16 }, (_, i) => (
+                <span key={`g${i}`} className="confetti gold" aria-hidden="true" style={{ left: `${(i * 37 + 5) % 100}%`, animationDelay: `${(i % 8) * 0.1}s` }} />
+              ))}
+              <p className="perfect-banner">PERFECT!</p>
+            </>
+          )}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
             {battleRank(hearts, crits)}

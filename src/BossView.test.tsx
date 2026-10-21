@@ -21,7 +21,7 @@ describe('ボス戦', () => {
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(onWin).toHaveBeenCalledTimes(1)
-    expect(document.querySelectorAll('.boss .confetti').length).toBe(12)
+    expect(document.querySelectorAll('.boss .confetti:not(.gold)').length).toBe(12)
   })
 
   it('3回まちがえると負け、もう一度挑戦できる', () => {
@@ -111,6 +111,8 @@ it('ノーミス＆会心でたおすとSランクでおまけコイン', () => 
     if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
   }
   expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
+  expect(screen.getByText('PERFECT!')).toBeInTheDocument()
+  expect(document.querySelectorAll('.confetti.gold')).toHaveLength(16)
   expect(bonus).toHaveBeenCalledWith(10)
 })
 
@@ -160,4 +162,13 @@ it('特技が出ると onSkill が呼ばれ、Lv3のドラコは +5', async () =
   answer(true)
   expect(screen.getByText('ドラの火の息！ +5')).toBeInTheDocument()
   expect(skill).toHaveBeenCalledTimes(1)
+})
+
+it('Sランクでなければ PERFECT! は出ない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  answer(true)
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.queryByText('PERFECT!')).not.toBeInTheDocument()
 })
