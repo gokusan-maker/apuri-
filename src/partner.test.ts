@@ -17,3 +17,14 @@ it('特技の効果', () => {
   expect(skillCritMs('claw', 3000)).toBe(5000)
   expect(skillCritMs('fire', 3000)).toBe(3000)
 })
+
+it('特技レベル：10回でLv2、30回でLv3。Lv3で効果アップ', async () => {
+  const { skillLevel, skillSaves } = await import('./partner')
+  expect([skillLevel(0), skillLevel(9), skillLevel(10), skillLevel(30)]).toEqual([1, 1, 2, 3])
+  expect(skillDamage('fire', 1, 3)).toBe(5)
+  expect(skillDamage('foxfire', 3, 3)).toBe(8)
+  expect(skillGauge('cheer', 1, 3)).toBe(1)
+  expect(skillCritMs('claw', 3000, 3)).toBe(6000)
+  expect(skillSaves('guard', 3)).toBe(2)
+  expect(skillSaves('guard', 2)).toBe(1)
+})

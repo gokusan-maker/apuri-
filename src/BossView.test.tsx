@@ -151,3 +151,13 @@ it('どのボスでもたおすと onDefeat が呼ばれる', () => {
   answer(true)
   expect(defeat).toHaveBeenCalledTimes(1)
 })
+
+it('特技が出ると onSkill が呼ばれ、Lv3のドラコは +5', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  const skill = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onSkill={skill} partner={{ form: withSpecies(FORMS[1], 'dragon'), species: 'dragon', name: 'ドラ', skillUses: 30 }} />)
+  expect(screen.getByText(/特技「火の息」Lv3/)).toBeInTheDocument()
+  answer(true)
+  expect(screen.getByText('ドラの火の息！ +5')).toBeInTheDocument()
+  expect(skill).toHaveBeenCalledTimes(1)
+})

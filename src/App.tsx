@@ -822,7 +822,7 @@ function App() {
         />
       ) : mode === 'stage' ? (
         <Stages
-          partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name }}
+          partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
           onSpend={spend}
           dailyDone={dailyBossDay === today}
           onDailyWin={() => {
@@ -846,6 +846,7 @@ function App() {
           bag={bag}
           onUseItem={(id) => setBag((b) => spendItem(b, id))}
           onBossDefeat={() => count('boss')}
+          onSkill={() => updateMonster((m) => ({ ...m, skillUses: (m.skillUses ?? 0) + 1 }))}
           onEndlessReward={(times) => {
             setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
             pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])

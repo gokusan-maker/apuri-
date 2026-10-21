@@ -5,7 +5,7 @@ import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
-import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
+import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves } from './partner'
 import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
@@ -29,10 +29,11 @@ type Props = {
   noBook?: boolean // ボス図鑑に記録しない（エンドレスの塔）
   bag?: BattleBag // 持っているバトルアイテム
   onDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
+  onSkill?: () => void // 相棒の特技が出た（特技レベル用）
   onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
-  partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string } // いっしょに戦う相棒（タマゴは応援だけ）
+  partner?: { form: Form; kind?: string; wear?: string; species?: string; name: string; skillUses?: number } // いっしょに戦う相棒（タマゴは応援だけ）
 }
 
 
@@ -116,7 +117,7 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 // 今の時刻（ミリ秒）。会心の一撃の判定に使う（ボタンを押したときだけ呼ぶ）
 const nowMs = () => Date.now()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill }: Props) {
   const look = lookProp ?? BOSSES[level]
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
@@ -130,9 +131,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crit, setCrit] = useState(false)
   const [gauge, setGauge] = useState(0)
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
+  const lv = skillLevel(partner?.skillUses ?? 0)
   const [corrects, setCorrects] = useState(0)
   const [crits, setCrits] = useState(0)
-  const [saved, setSaved] = useState(false) // ガード・根性は1戦1回
+  const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
@@ -159,16 +161,27 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const n = corrects + 1
       setCombo(c)
       setCorrects(n)
-      const critical = isCritical(nowMs() - shownAt.current, skill ? skillCritMs(skill.id, CRIT_MS) : CRIT_MS)
-      const extra = skill ? skillDamage(skill.id, n) : 0
-      if (extra > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
+      const ms = nowMs() - shownAt.current
+      const critical = isCritical(ms, skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS)
+      if (critical && !isCritical(ms)) {
+        onSkill?.()
+        setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
+      }
+      const extra = skill ? skillDamage(skill.id, n, lv) : 0
+      if (extra > 0) {
+        onSkill?.()
+        setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
+      }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
       const nextHp = hp - base - extra
       setCrit(critical)
       const nc = crits + (critical ? 1 : 0)
       setCrits(nc)
-      const plus = skill ? skillGauge(skill.id, n) : 0
-      if (plus > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
+      const plus = skill ? skillGauge(skill.id, n, lv) : 0
+      if (plus > 0) {
+        onSkill?.()
+        setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
+      }
       setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
       setHp(Math.max(0, nextHp))
       setHit(true)
@@ -177,13 +190,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       if (nextHp <= 0) win(nc)
     } else {
       setCombo(0)
-      const guard = skill?.id === 'guard' && !saved
-      const revive = skill?.id === 'revive' && !saved && hearts - 1 <= 0
+      const canSave = !!skill && saves < skillSaves(skill.id, lv)
+      const guard = skill?.id === 'guard' && canSave
+      const revive = skill?.id === 'revive' && canSave && hearts - 1 <= 0
+      if (guard || revive) onSkill?.()
       if (guard) {
-        setSaved(true)
+        setSaves(saves + 1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハートを守った`)
       } else if (revive) {
-        setSaved(true)
+        setSaves(saves + 1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
       } else setHearts(hearts - 1)
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
@@ -249,7 +264,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setCrits(0)
     setUsedItems([])
     setChanceAt(-1)
-    setSaved(false)
+    setSaves(0)
     setSkillMsg('')
   }
 
@@ -289,7 +304,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               </strong>
             ) : skill ? (
               <>
-                {partner.name}の特技「{skill.name}」：{skill.desc}
+                {partner.name}の特技「{skill.name}」Lv{lv}：{skill.desc}
               </>
             ) : (
               <>{partner.name}が応援しているよ！（生まれると特技が使える）</>

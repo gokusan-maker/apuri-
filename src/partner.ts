@@ -13,15 +13,22 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
 
 export const skillOf = (species: string | undefined): Skill => PARTNER_SKILLS[species ?? 'mochi'] ?? PARTNER_SKILLS.mochi
 
+// 特技レベル：ボス戦で特技が出た回数で上がる（Lv1→Lv2：10回、Lv3：30回）。Lv3で効果アップ
+export const SKILL_LV_USES = [0, 10, 30]
+export const skillLevel = (uses: number) => SKILL_LV_USES.filter((u) => uses >= u).length
+
 // 正解したときの追加ダメージ（n は何問目の正解か）
-export function skillDamage(skill: SkillId, n: number): number {
-  if (skill === 'fire') return 3
-  if (skill === 'foxfire' && n % 3 === 0) return 5
+export function skillDamage(skill: SkillId, n: number, lv = 1): number {
+  if (skill === 'fire') return lv >= 3 ? 5 : 3
+  if (skill === 'foxfire' && n % 3 === 0) return lv >= 3 ? 8 : 5
   return 0
 }
 
-// 正解したときの追加ゲージ
-export const skillGauge = (skill: SkillId, n: number) => (skill === 'cheer' && n % 2 === 0 ? 1 : 0)
+// 正解したときの追加ゲージ（Lv3の応援は毎回）
+export const skillGauge = (skill: SkillId, n: number, lv = 1) => (skill === 'cheer' && (lv >= 3 || n % 2 === 0) ? 1 : 0)
 
 // 会心の一撃が出る時間（ミリ秒）
-export const skillCritMs = (skill: SkillId, base: number) => (skill === 'claw' ? 5000 : base)
+export const skillCritMs = (skill: SkillId, base: number, lv = 1) => (skill === 'claw' ? (lv >= 3 ? 6000 : 5000) : base)
+
+// ガード・根性が1戦で使える回数
+export const skillSaves = (skill: SkillId, lv = 1) => (skill === 'guard' && lv >= 3 ? 2 : 1)
