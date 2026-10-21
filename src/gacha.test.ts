@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { canDraw, drawEgg, GACHA_PRICE, PARTY_MAX } from './gacha'
+import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, PARTY_MAX } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -107,4 +107,11 @@ it('最近のガチャの結果は新しい順に10回まで残る', async () =>
   expect(log).toHaveLength(10)
   expect(log[0].day).toBe('2026-10-21')
   expect(loadGachaLog()).toEqual(log)
+})
+
+it('確定演出のひとことはレア度ごとにちがい、ふつうは出ない', () => {
+  expect(gachaOmen('N')).toBeNull()
+  const lines = (['R', 'SR', 'UR'] as const).map(gachaOmen)
+  expect(new Set(lines).size).toBe(3)
+  expect(gachaOmen('UR')).toMatch(/虹色/)
 })

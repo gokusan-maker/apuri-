@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { GACHA_PRICE, loadGachaLog, PARTY_MAX, pushGachaLog } from './gacha'
+import { GACHA_PRICE, gachaOmen, loadGachaLog, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
@@ -80,7 +80,9 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
       </details>
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
+          {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
           <span className="gacha-capsule" aria-hidden="true" />
+          {gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
           <span className="gacha-egg">
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>

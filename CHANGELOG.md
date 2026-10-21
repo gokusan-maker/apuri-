@@ -643,3 +643,4 @@
 - 2026-10-21: まちがえやすい単語を5組追加（join/attend・expensive/high・customer/guest・excited/exciting・almost/most。計75組）
 - 2026-10-21: GitHub Actions で push のたびに Cloudflare Pages へ自動公開する仕組みを追加
 - 2026-10-21: アプリ名を「イングリッシュモンスター」に変更し、公開先を Cloudflare Pages の english-monster に（学習データの保存形式はそのまま）
+- 2026-10-21: ガチャに確定演出（レア度で光の筋とひとことが変わり、ウルトラレアは虹色）

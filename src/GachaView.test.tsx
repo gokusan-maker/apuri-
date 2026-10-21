@@ -61,3 +61,15 @@ it('ガチャを引くと「最近のガチャ」に残る', () => {
   expect(screen.getByText('最近のガチャ（1回）')).toBeInTheDocument()
   expect(document.querySelector('.gacha-log li')!.textContent).toContain('きんいろのドラコ')
 })
+
+it('レア度で確定演出が変わる（ウルトラレアは虹色、ふつうは無し）', () => {
+  const { unmount } = render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('niji'), species: speciesOf('fox') })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('虹色の光！！ ウルトラレア確定！！')).toBeInTheDocument()
+  expect(document.querySelector('.r-UR .gacha-burst')).not.toBeNull()
+  unmount()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('fox') })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(document.querySelector('.gacha-omen')).toBeNull()
+  expect(document.querySelector('.gacha-burst')).toBeNull()
+})

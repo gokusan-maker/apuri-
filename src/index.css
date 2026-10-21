@@ -852,7 +852,17 @@ button:focus:not(:focus-visible) { outline: none; }
 .r-N .gacha-rarity { color: #6b7280; } .r-R .gacha-rarity { color: #2563eb; } .r-SR .gacha-rarity { color: #d97706; }
 .r-UR .gacha-rarity { background: linear-gradient(90deg, #ef4444, #f59e0b, #22c55e, #3b82f6, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .gacha-name { margin: 2px 0 6px; font-weight: 700; }
-@media (prefers-reduced-motion: reduce) { .gacha-capsule { display: none; } .gacha-egg, .gacha-rarity { animation: none; } }
+/* 確定演出：カプセルの後ろから光の筋が回り、ひとことが出る */
+.gacha-burst { position: absolute; left: 50%; top: 54px; width: 360px; height: 360px; margin: -180px 0 0 -180px; border-radius: 50%; pointer-events: none; opacity: 0; animation: burst 2.4s ease-out forwards; background: repeating-conic-gradient(var(--burst, #60a5fa) 0 10deg, transparent 10deg 30deg); -webkit-mask: radial-gradient(circle, #000 20%, transparent 70%); mask: radial-gradient(circle, #000 20%, transparent 70%); }
+.r-SR .gacha-burst { --burst: #fbbf24; }
+.r-UR .gacha-burst { background: repeating-conic-gradient(#f87171 0 8deg, transparent 8deg 15deg, #fbbf24 15deg 23deg, transparent 23deg 30deg, #4ade80 30deg 38deg, transparent 38deg 45deg, #60a5fa 45deg 53deg, transparent 53deg 60deg, #c084fc 60deg 68deg, transparent 68deg 75deg); animation-duration: 3s; }
+@keyframes burst { 0% { opacity: 0; transform: rotate(0) scale(0.3); } 25% { opacity: 0.9; } 60% { opacity: 0.7; transform: rotate(120deg) scale(1); } 100% { opacity: 0.25; transform: rotate(200deg) scale(1.1); } }
+.gacha-omen { position: relative; z-index: 2; margin: 0 0 4px; font-weight: 800; animation: omen 1.2s ease-out both; }
+.r-R .gacha-omen { color: #2563eb; }
+.r-SR .gacha-omen { color: #b45309; text-shadow: 0 0 8px #fde68a; }
+.r-UR .gacha-omen { background: linear-gradient(90deg, #ef4444, #f59e0b, #22c55e, #3b82f6, #a855f7); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.1rem; }
+@keyframes omen { 0% { transform: scale(0.4); opacity: 0; } 60% { transform: scale(1.15); opacity: 1; } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .gacha-capsule, .gacha-burst { display: none; } .gacha-omen { animation: none; } .gacha-egg, .gacha-rarity { animation: none; } }
 .kind-tag { font-weight: 700; } .kind-tag.r-R { color: #2563eb; } .kind-tag.r-SR { color: #d97706; } .kind-tag.r-UR { color: #c026d3; }
 .r-R .gacha-capsule { background: linear-gradient(180deg, #60a5fa 50%, #f8fafc 50%); }
 .r-SR .gacha-capsule { background: linear-gradient(180deg, #fbbf24 50%, #fffbeb 50%); box-shadow: 0 0 16px #fbbf24; }

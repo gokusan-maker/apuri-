@@ -56,3 +56,11 @@ export function pushGachaLog(log: GachaLog, entry: GachaLog[number]): GachaLog {
   }
   return next
 }
+
+// ガチャを開ける前の「確定演出」のひとこと（レア度で光と文が変わる。ふつうは無し）
+export function gachaOmen(rarity: Kind['rarity']): string | null {
+  if (rarity === 'R') return 'キラッ！ 色ちがいの予感…'
+  if (rarity === 'SR') return '金色の光…！？ スーパーレア確定！'
+  if (rarity === 'UR') return '虹色の光！！ ウルトラレア確定！！'
+  return null
+}
