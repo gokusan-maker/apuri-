@@ -498,4 +498,59 @@ export const PASSAGES: Passage[] = [
       { q: '食べながら何をした？', choices: ['ゲーム', '映画を見た', '歌を歌った'], answer: 1 },
     ],
   },
+  {
+    id: 'stargazing',
+    title: 'Looking at the Stars',
+    text: 'Last night, my father and I went up to the roof with a telescope. The sky was clear, and we could see Saturn and its rings. My father taught me the names of some stars. I want to be a scientist someday.',
+    ja: 'きのうの夜、父と私は望遠鏡を持って屋上に上がりました。空は晴れていて、土星とその輪が見えました。父はいくつかの星の名前を教えてくれました。私はいつか科学者になりたいです。',
+    questions: [
+      { q: 'どこで星を見た？', choices: ['公園', '屋上', '山の上'], answer: 1 },
+      { q: '何が見えた？', choices: ['土星とその輪', '流れ星', '月だけ'], answer: 0 },
+      { q: '私の夢は？', choices: ['先生', '科学者', 'パイロット'], answer: 1 },
+    ],
+  },
+  {
+    id: 'part-time',
+    title: 'Grandma\'s Shop',
+    text: 'My grandmother runs a small candy shop near the station. Every Saturday, I help her. I put candies on the shelves and say hello to the customers. Many children come after their soccer practice.',
+    ja: '祖母は駅の近くで小さなお菓子屋さんをしています。毎週土曜日に私は手伝います。お菓子をたなにならべ、お客さんにあいさつします。サッカーの練習のあとに多くの子どもたちが来ます。',
+    questions: [
+      { q: '祖母のお店は何の店？', choices: ['花屋', 'お菓子屋', '本屋'], answer: 1 },
+      { q: 'いつ手伝う？', choices: ['毎週土曜日', '毎日', '夏休みだけ'], answer: 0 },
+      { q: '子どもたちはいつ来る？', choices: ['学校の前', 'サッカーの練習のあと', '夜おそく'], answer: 1 },
+    ],
+  },
+  {
+    id: 'lost-wallet',
+    title: 'The Honest Boy',
+    text: 'On my way to school, I found a wallet on the street. There was a lot of money in it. I took it to the police station. The next day, the owner came to my school and thanked me.',
+    ja: '学校へ行く途中、道でさいふを見つけました。中にはたくさんのお金が入っていました。私はそれを警察署に届けました。次の日、持ち主が学校に来てお礼を言ってくれました。',
+    questions: [
+      { q: '何を見つけた？', choices: ['かぎ', 'さいふ', 'ケータイ'], answer: 1 },
+      { q: 'どこに届けた？', choices: ['警察署', '学校', '駅'], answer: 0 },
+      { q: '次の日どうなった？', choices: ['持ち主がお礼を言いに来た', '先生にしかられた', 'お金をもらった'], answer: 0 },
+    ],
+  },
+  {
+    id: 'rainbow',
+    title: 'After the Rain',
+    text: 'It rained hard in the afternoon. When the rain stopped, I looked out of the window. There was a big rainbow over the river. I took a picture of it and sent it to my friend in Osaka.',
+    ja: '午後は雨が強く降りました。雨がやんだとき、窓の外を見ました。川の上に大きなにじがかかっていました。写真をとって、大阪の友だちに送りました。',
+    questions: [
+      { q: 'にじはどこに見えた？', choices: ['山の上', '川の上', '学校の上'], answer: 1 },
+      { q: 'にじを見て何をした？', choices: ['絵をかいた', '写真をとった', '歌を歌った'], answer: 1 },
+      { q: '友だちはどこに住んでいる？', choices: ['大阪', '東京', '福岡'], answer: 0 },
+    ],
+  },
+  {
+    id: 'english-club',
+    title: 'The English Club',
+    text: 'I joined the English club this spring. We meet every Wednesday after school. Last week, we made a short video about our town in English. It was difficult, but it was a lot of fun.',
+    ja: 'この春、英語部に入りました。毎週水曜日の放課後に集まります。先週は、自分たちの町についての短い動画を英語で作りました。難しかったけれど、とても楽しかったです。',
+    questions: [
+      { q: '英語部はいつ集まる？', choices: ['毎週月曜日', '毎週水曜日', '毎週金曜日'], answer: 1 },
+      { q: '先週何を作った？', choices: ['新聞', '町についての動画', '英語の劇'], answer: 1 },
+      { q: '感想は？', choices: ['難しかったけれど楽しかった', 'かんたんだった', 'つまらなかった'], answer: 0 },
+    ],
+  },
 ]
