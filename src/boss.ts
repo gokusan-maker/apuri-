@@ -98,3 +98,7 @@ export function battleRank(hearts: number, crits: number): Rank {
   if (hearts >= 2) return 'A'
   return 'B'
 }
+
+// いかりモード：HPが半分以下になると、3問に1問が「チャンス問題」（正解でダメージ2倍）
+export const isEnraged = (hp: number, maxHp: number) => hp > 0 && hp <= maxHp / 2
+export const isChance = (enraged: boolean, index: number) => enraged && index % 3 === 2

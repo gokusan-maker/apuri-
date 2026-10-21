@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, isChance, isEnraged, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -64,4 +64,13 @@ it('バトル結果のランク', () => {
   expect(battleRank(3, 2)).toBe('A')
   expect(battleRank(2, 5)).toBe('A')
   expect(battleRank(1, 9)).toBe('B')
+})
+
+it('HPが半分以下でいかりモード、3問に1問がチャンス問題', () => {
+  expect(isEnraged(51, 100)).toBe(false)
+  expect(isEnraged(50, 100)).toBe(true)
+  expect(isEnraged(0, 100)).toBe(false)
+  expect(isChance(true, 2)).toBe(true)
+  expect(isChance(true, 3)).toBe(false)
+  expect(isChance(false, 2)).toBe(false)
 })

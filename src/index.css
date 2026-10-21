@@ -976,3 +976,10 @@ button:focus:not(:focus-visible) { outline: none; }
 .battle-rank.rank-S { background: linear-gradient(135deg, #f59e0b, #ef4444, #a855f7); box-shadow: 0 0 18px #fbbf24; }
 .battle-rank.rank-A { background: linear-gradient(135deg, #3b82f6, #06b6d4); }
 .battle-rank.rank-B { background: linear-gradient(135deg, #64748b, #94a3b8); }
+
+/* ボスのいかりモードとチャンス問題 */
+.boss-figure.rage svg { filter: drop-shadow(0 0 10px #ef4444) saturate(1.4); animation: rage-shake 0.4s ease-in-out infinite alternate; }
+@keyframes rage-shake { from { transform: translateX(-2px); } to { transform: translateX(2px); } }
+.boss-rage { margin: 0; text-align: center; color: #dc2626; font-weight: 800; font-size: 0.9rem; }
+.boss-chance { margin: 2px auto; padding: 4px 12px; width: fit-content; border-radius: 999px; background: #fef08a; color: #854d0e; font-weight: 900; animation: crit-pop 0.6s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .boss-figure.rage svg { animation: none; } }

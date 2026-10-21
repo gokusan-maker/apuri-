@@ -113,3 +113,20 @@ it('ノーミス＆会心でたおすとSランクでおまけコイン', () => 
   expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
   expect(bonus).toHaveBeenCalledWith(10)
 })
+
+it('チャンス問題が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={26} />)
+  const slow = () => {
+    vi.setSystemTime(Date.now() + 5000) // ゆっくり答えて会心にしない
+    answer(true)
+  }
+  slow() // 6 → 20
+  expect(screen.queryByText(/がおこった！/)).not.toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ'))
+  slow() // 7 → 13（半分以下）
+  expect(screen.getByText(/がおこった！/)).toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('⚡ チャンス問題！ 正解でダメージ2倍')).toBeInTheDocument()
+  slow() // 8×2=16 → 0
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+})

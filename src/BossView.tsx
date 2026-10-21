@@ -3,7 +3,7 @@ import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { skillCritMs, skillDamage, skillGauge, skillOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isCritical, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -133,6 +133,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
   const q = qs[index]
+  const enraged = isEnraged(hp, maxHp)
+  // チャンス問題かどうかは、問題が出たときのいかり具合で決める
+  const [chanceAt, setChanceAt] = useState(-1)
+  if (picked === null && isChance(enraged, index) && chanceAt !== index) setChanceAt(index)
+  const chance = chanceAt === index
 
   function pick(i: number) {
     if (picked !== null || won || lost) return
@@ -146,7 +151,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const critical = isCritical(nowMs() - shownAt.current, skill ? skillCritMs(skill.id, CRIT_MS) : CRIT_MS)
       const extra = skill ? skillDamage(skill.id, n) : 0
       if (extra > 0) setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
-      const nextHp = hp - (critical ? critDamage(damage(c)) : damage(c)) - extra
+      const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance ? 2 : 1)
+      const nextHp = hp - base - extra
       setCrit(critical)
       const nc = crits + (critical ? 1 : 0)
       setCrits(nc)
@@ -211,6 +217,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setGauge(0)
     setCorrects(0)
     setCrits(0)
+    setChanceAt(-1)
     setSaved(false)
     setSkillMsg('')
   }
@@ -223,7 +230,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </button>
         <span>{title ?? `${level} のボス`}</span>
       </div>
-      <div className="boss-figure">
+      {enraged && !won && <p className="boss-rage">💢 {look.name}がおこった！</p>}
+      {chance && !won && !lost && <p className="boss-chance">⚡ チャンス問題！ 正解でダメージ2倍</p>}
+      <div className={`boss-figure${enraged && !won ? ' rage' : ''}`}>
         <BossFigure hit={hit} look={look} />
       </div>
       {hit && crit && (
