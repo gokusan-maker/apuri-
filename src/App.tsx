@@ -25,6 +25,7 @@ import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekC
 import { usePersistent } from './usePersistent'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
+import { loadShards, saveShards, shardAfter, SHARDS_FOR_EGG } from './shard'
 import { SugorokuBoard } from './SugorokuView'
 import { JANKEN_COINS } from './janken'
 import { loadWalkDay, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
@@ -268,6 +269,7 @@ function App() {
   const [moodMeter, setMoodMeter] = usePersistent(loadMood, saveMood)
   const [warm, setWarm] = usePersistent(loadWarm, saveWarm)
   const [keys, setKeys] = usePersistent(loadKeys, saveKeys)
+  const [shards, setShards] = usePersistent(loadShards, saveShards)
   const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
@@ -951,6 +953,16 @@ function App() {
           onBossDefeat={() => {
             count('boss')
             setKeys((k) => k + 1)
+            const sh = shardAfter(shards, rand())
+            if (sh.dropped) {
+              setShards(sh.shards)
+              if (sh.exchange) {
+                const r = rareEgg(party, rand(), rand())
+                if (r) setParty(r.party)
+                else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
+                pushToast([{ id: 'shard-egg', text: r ? `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ ${r.kind.name}の${r.species.egg}と交換した` : `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
+              } else pushToast([{ id: 'shard', text: `💠 ボスのかけらを拾った（${sh.shards} / ${SHARDS_FOR_EGG}）`, counter: 'answers', target: 0 }])
+            }
             const n = winStreak + 1
             setWinStreak(n)
             if (n % STREAK_EVERY === 0) {
