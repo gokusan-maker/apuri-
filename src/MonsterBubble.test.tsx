@@ -20,3 +20,9 @@ it('ふきだしの英語を🔊で聞ける（ふきだしは閉じない）', 
   expect(spoken.length).toBe(before + 1)
   expect(screen.getByLabelText('ひとことを聞く')).toBeInTheDocument()
 })
+
+it('レベルアップしたときは星の目と光の輪', () => {
+  render(<Monster monster={{ xp: 500 } as never} leveledUp />)
+  expect(document.querySelector('.lvup-ring')).not.toBeNull()
+  expect(document.querySelector('.face-star')).not.toBeNull()
+})

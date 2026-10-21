@@ -573,7 +573,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
+        <MonsterFigure form={form} mood={line ? REACTIONS[poke % REACTIONS.length] : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} crack={form.stage === 0 ? into / need : 0} />
+        {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
         {gain && gain.amount > 0 && (
           <span key={gain.key} className="xp-float" aria-hidden="true">
             +{gain.amount}
