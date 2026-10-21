@@ -1586,3 +1586,6 @@ export function studyGrammarDay(d: GrammarDays, today: string): { days: GrammarD
   const streak = d.last === prevDay(today) ? d.streak + 1 : 1
   return { days: { last: today, streak }, bonus: streak % GRAMMAR_STREAK_DAYS === 0 }
 }
+
+// 問題がのっている単元（まとめテストなどから解説へもどるため）
+export const unitOfQuestion = (q: GrammarQuestion) => GRAMMAR.find((u) => u.questions.includes(q))

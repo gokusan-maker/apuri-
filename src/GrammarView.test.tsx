@@ -357,3 +357,16 @@ it('文法を3日続けた日にボーナス', () => {
   fireEvent.click(screen.getByRole('button', { name: unit.questions[0].choices[0] }))
   expect(onStreakBonus).toHaveBeenCalledTimes(1)
 })
+
+it('まとめテストでは「もっとくわしく」でその問題の単元へ行ける', async () => {
+  const { unitOfQuestion } = await import('./grammar')
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByText(/まとめテスト（ランダム10問）/))
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  const text = document.querySelector('.blank-sentence')!.textContent!
+  const q = all.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))!
+  fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+  fireEvent.click(screen.getByText(/もっとくわしく/))
+  expect(screen.getByText(unitOfQuestion(q)!.points[0])).toBeInTheDocument()
+})
