@@ -160,3 +160,15 @@ it('種類のタブで長文をしぼりこめる', () => {
   expect(n).toBeLessThan(all)
   expect(screen.getByRole('tab', { name: 'スピーチ' })).toHaveAttribute('aria-selected', 'true')
 })
+
+it('文を入れる位置の問題は本文に［ア］〜［エ］が出て選べる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const p = LONG_PASSAGES.find((x) => x.insert)!
+  fireEvent.click(screen.getByText(new RegExp(p.title)))
+  expect(document.querySelectorAll('.long-insert-mark')).toHaveLength(4)
+  expect(screen.getByText(p.insert!.sentence)).toBeInTheDocument()
+  const btn = screen.getByRole('button', { name: `［${MARKS[p.insert!.answer]}］` })
+  fireEvent.click(btn)
+  expect(btn).toHaveAttribute('aria-pressed', 'true')
+})

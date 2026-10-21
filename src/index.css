@@ -1237,3 +1237,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .goal-choices { display: flex; gap: 6px; justify-content: center; }
 .goal-choices button { padding: 4px 12px; border: 1px solid var(--muted); border-radius: 999px; background: var(--card); color: var(--fg); }
 .goal-choices button.on { background: var(--accent); color: var(--accent-fg); border-color: var(--accent); }
+.long-insert-mark { margin: 2px 0 8px; text-align: center; font-weight: 800; color: #2563eb; }
+.long-insert-sentence { margin: 0 0 8px; padding: 8px; border-left: 4px solid #2563eb; background: var(--bg); text-align: left; font-style: italic; }

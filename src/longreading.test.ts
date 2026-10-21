@@ -212,3 +212,12 @@ it('長文の種類を見分ける', async () => {
   expect(genreOf(at('talk-library'))).toBe('会話文')
   for (const g of GENRES) expect(LONG_PASSAGES.some((x) => genreOf(x) === g)).toBe(true)
 })
+
+it('文を入れる位置の問題は1点で、正しい位置なら正解', () => {
+  const p = LONG_PASSAGES.find((x) => x.insert)!
+  expect(p.insert!.after).toHaveLength(4)
+  for (const i of p.insert!.after) expect(i).toBeLessThan(p.paragraphs.length)
+  const right = scoreLong(p, {}, {}, [], { insert: p.insert!.answer })
+  const wrong = scoreLong(p, {}, {}, [], { insert: (p.insert!.answer + 1) % 4 })
+  expect(right.score - wrong.score).toBe(1)
+})

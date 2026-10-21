@@ -64,6 +64,7 @@ export function LongReading({ onAnswer }: Props) {
   const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
   const [gist, setGist] = useState<Record<number, number>>({}) // 段落の要旨
   const [titlePick, setTitlePick] = useState<number | undefined>(undefined) // タイトル選択
+  const [ins, setIns] = useState<number | undefined>(undefined) // 文を入れる位置
   const [comp, setComp] = useState<Record<number, number>>({}) // 英文の完成
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
@@ -89,6 +90,7 @@ export function LongReading({ onAnswer }: Props) {
     setGist(d?.gist ?? {})
     setTitlePick(d?.title)
     setComp(d?.comp ?? {})
+    setIns(d?.insert)
     setDone(false)
     setShowJa(false)
     setResumed(!!d)
@@ -97,8 +99,8 @@ export function LongReading({ onAnswer }: Props) {
   // 答えかけの内容をとっておく（採点したら消す）
   useEffect(() => {
     if (!p) return
-    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp })
-  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp])
+    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins })
+  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins])
 
   if (!p) {
     return (
@@ -177,8 +179,8 @@ export function LongReading({ onAnswer }: Props) {
       )
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins })
+  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0)
   const mark = (ok: boolean) => (done ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -204,6 +206,7 @@ export function LongReading({ onAnswer }: Props) {
               </button>
             </div>
             {showJa && <p className="long-ja">{p.ja[i]}</p>}
+            {p.insert && p.insert.after.includes(i) && <p className="long-insert-mark">［{MARKS[p.insert.after.indexOf(i)]}］</p>}
           </div>
         ))}
       </div>
@@ -401,6 +404,27 @@ export function LongReading({ onAnswer }: Props) {
         </>
       )}
 
+      {p.insert && (
+        <>
+          <h3 className="long-q">問　次の英文が入る最も適切な場所を、本文中の［ア］〜［エ］から選びなさい。</h3>
+          <div className="long-item">
+            <p className="long-insert-sentence">{p.insert.sentence}</p>
+            <div className="long-choices">
+              {p.insert.after.map((_, i) => (
+                <button key={i} className={`long-choice${ins === i ? ' picked' : ''}${done && i === p.insert!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={ins === i} onClick={() => setIns(i)}>
+                  ［{MARKS[i]}］
+                </button>
+              ))}
+            </div>
+            {done && (
+              <p className={`long-why${ins === p.insert.answer ? ' right' : ' wrong'}`}>
+                {ins === p.insert.answer ? '⭕' : '❌'} 正解［{MARKS[p.insert.answer]}］：{p.insert.why}
+              </p>
+            )}
+          </div>
+        </>
+      )}
+
       {p.titleQ && (
         <>
           <h3 className="long-q">問　この文章のタイトルとして最も適切なものを、ア〜エ から選びなさい。</h3>
@@ -537,6 +561,7 @@ export function LongReading({ onAnswer }: Props) {
               setGist({})
               setTitlePick(undefined)
               setComp({})
+              setIns(undefined)
               setStartAt(Date.now())
               setDone(false)
             }}
@@ -553,7 +578,7 @@ export function LongReading({ onAnswer }: Props) {
             setDone(true)
             if (score === total) playCorrect()
             else playWrong()
-            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp }))
+            const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins }))
             setTypes(t)
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))
