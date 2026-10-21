@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { shuffle } from './quiz'
-import { GRAMMAR, loadGrammar, saveGrammar, type GrammarUnit } from './grammar'
+import { GRAMMAR, grammarStamps, loadGrammar, saveGrammar, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -9,9 +9,11 @@ type Props = {
   units?: GrammarUnit[] // 省略時は文法の単元
   title?: string
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  onStampTicket?: () => void // スタンプが10個ふえるごとに（文法のときだけ）
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer }: Props) {
+export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket }: Props) {
+  const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   const [unit, setUnit] = useState<GrammarUnit | null>(null)
   const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
@@ -33,6 +35,21 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
         </p>
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
+        {stampMode && (
+          <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
+            <p className="stamp-title">
+              📮 文法スタンプカード {grammarStamps(record)} / {GRAMMAR.length}
+              <span>（あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で 🎟ガチャチケット）</span>
+            </p>
+            <div className="stamp-grid">
+              {GRAMMAR.map((u) => (
+                <span key={u.id} className={record[u.id] === u.questions.length ? 'stamp on' : 'stamp'} title={u.title}>
+                  {record[u.id] === u.questions.length ? '🌸' : ''}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
         <button
           className="flip mix-test"
           onClick={() => {
@@ -122,6 +139,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
     if (step === unit.questions.length - 1 && nextScore > (record[unit.id] ?? -1)) {
       const r = { ...record, [unit.id]: nextScore }
+      if (stampMode && Math.floor(grammarStamps(r) / STAMP_EVERY) > Math.floor(grammarStamps(record) / STAMP_EVERY)) onStampTicket?.()
       setRecord(r)
       saveGrammar(r)
     }

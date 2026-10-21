@@ -32,3 +32,21 @@ it('まとめテストは全単元からランダムに10問', () => {
   fireEvent.click(screen.getByText('📝 まとめテスト（ランダム10問）'))
   expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
 })
+
+it('スタンプが10個になるとガチャチケットのお知らせが呼ばれる', () => {
+  localStorage.clear()
+  const nine = Object.fromEntries(GRAMMAR.slice(1, 10).map((u) => [u.id, u.questions.length]))
+  localStorage.setItem('eitan:grammar', JSON.stringify(nine))
+  const ticket = vi.fn()
+  render(<Grammar onStampTicket={ticket} />)
+  expect(screen.getByLabelText('文法スタンプ 9個')).toBeInTheDocument()
+  const u = GRAMMAR[0]
+  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByText(/問題にチャレンジ|確認問題へ|問題へ/))
+  for (const q of u.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    const next = screen.queryByText('次へ') ?? screen.queryByText('結果を見る')
+    if (next) fireEvent.click(next)
+  }
+  expect(ticket).toHaveBeenCalledTimes(1)
+})

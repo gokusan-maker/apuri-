@@ -730,3 +730,7 @@ export function saveGrammar(r: GrammarRecord): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 文法スタンプカード：確認問題を全問正解した単元にスタンプ。10個ごとにガチャチケット
+export const STAMP_EVERY = 10
+export const grammarStamps = (r: GrammarRecord) => GRAMMAR.filter((u) => r[u.id] === u.questions.length).length

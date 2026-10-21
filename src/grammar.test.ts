@@ -24,3 +24,10 @@ describe('文法', () => {
     expect(loadGrammar()).toEqual({ be: 3 })
   })
 })
+
+it('全問正解の単元がスタンプになる', async () => {
+  const { GRAMMAR, grammarStamps } = await import('./grammar')
+  const r = Object.fromEntries(GRAMMAR.slice(0, 3).map((u) => [u.id, u.questions.length]))
+  expect(grammarStamps({ ...r, [GRAMMAR[3].id]: 1 })).toBe(3)
+  expect(grammarStamps({ 'borrow-lend': 3 })).toBe(0) // まちがえやすい単語は数えない
+})

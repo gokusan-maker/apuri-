@@ -1082,6 +1082,10 @@ function App() {
             onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
             onGame={() => count('game')}
             onSetLevels={setLevels}
+            onTicket={() => {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'stamp', text: '📮 文法スタンプが10個たまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+            }}
           />
         </>
       ) : mode === 'time' ? (
