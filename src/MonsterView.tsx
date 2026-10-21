@@ -1,10 +1,11 @@
 import { wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
+import { shade } from './color'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
 type Mood = 'normal' | 'happy' | 'lonely'
@@ -32,26 +33,118 @@ type Props = {
 function Face({ mood }: { mood: Mood }) {
   if (mood === 'lonely') {
     return (
-      <>
-        <path d="M33 58 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
-        <path d="M57 58 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
-        <path d="M44 74 Q50 69 56 74" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
-        <path d="M70 60 q2 5 0 8 q-2 -3 0 -8" fill="#60a5fa" />
-      </>
+      <g className="monster-face">
+        <path d="M31 54 l10 3" stroke="#1f2937" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M69 54 l-10 3" stroke="#1f2937" strokeWidth="2.5" strokeLinecap="round" />
+        <path d="M33 61 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <path d="M57 61 q5 -4 10 0" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <path d="M44 75 Q50 70 56 75" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <path className="monster-tear" d="M68 64 q3 6 0 9 q-3 -3 0 -9" fill="#60a5fa" />
+      </g>
     )
   }
   return (
-    <>
-      <circle cx="38" cy="56" r="5" fill="#1f2937" />
-      <circle cx="62" cy="56" r="5" fill="#1f2937" />
-      <circle cx="30" cy="68" r="5" fill="#fca5a5" opacity="0.7" />
-      <circle cx="70" cy="68" r="5" fill="#fca5a5" opacity="0.7" />
+    <g className="monster-face">
       {mood === 'happy' ? (
-        <path d="M42 68 Q50 78 58 68" fill="#1f2937" />
+        <>
+          <path d="M31 59 Q38 49 45 59" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
+          <path d="M55 59 Q62 49 69 59" fill="none" stroke="#1f2937" strokeWidth="3.5" strokeLinecap="round" />
+        </>
       ) : (
-        <path d="M44 70 Q50 74 56 70" fill="none" stroke="#1f2937" strokeWidth="3" strokeLinecap="round" />
+        <g className="monster-eyes">
+          <ellipse cx="38" cy="57" rx="6" ry="7.5" fill="#1f2937" />
+          <ellipse cx="62" cy="57" rx="6" ry="7.5" fill="#1f2937" />
+          <circle cx="40" cy="54" r="2.4" fill="#fff" />
+          <circle cx="64" cy="54" r="2.4" fill="#fff" />
+          <circle cx="36" cy="60" r="1.1" fill="#fff" opacity="0.8" />
+          <circle cx="60" cy="60" r="1.1" fill="#fff" opacity="0.8" />
+        </g>
       )}
-    </>
+      <ellipse cx="28" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.45" />
+      <ellipse cx="72" cy="68" rx="6" ry="4" fill="#fb7185" opacity="0.45" />
+      {mood === 'happy' ? (
+        <>
+          <path d="M42 68 Q50 80 58 68 Z" fill="#7f1d1d" stroke="#1f2937" strokeWidth="2" strokeLinejoin="round" />
+          <path d="M45.5 72.5 Q50 77 54.5 72.5 Q50 70.5 45.5 72.5 Z" fill="#fb7185" />
+        </>
+      ) : (
+        <path d="M44 70 Q47 73 50 70 Q53 73 56 70" fill="none" stroke="#1f2937" strokeWidth="2.5" strokeLinecap="round" />
+      )}
+    </g>
+  )
+}
+
+// 系統ごとの頭の飾り。段階が上がるほど立派になる
+function Crest({ form, line }: { form: Form; line: string }) {
+  const st = form.stage
+  if (form.branch === 'card') {
+    const leaves = st >= 5 ? [-40, -15, 15, 40] : st >= 4 ? [-28, 0, 28] : [-14, 14]
+    return (
+      <g>
+        {leaves.map((r) => (
+          <path key={r} transform={`rotate(${r} 50 28)`} d="M50 28 Q38 10 50 0 Q62 10 50 28 Z" fill="#22c55e" stroke="#14532d" strokeWidth="2" />
+        ))}
+        {leaves.map((r) => (
+          <path key={`v${r}`} transform={`rotate(${r} 50 28)`} d="M50 26 L50 6" stroke="#14532d" strokeWidth="1.2" opacity="0.6" />
+        ))}
+        {st >= 6 && [30, 50, 70].map((x) => <circle key={x} cx={x} cy={x === 50 ? 4 : 12} r="3.5" fill="#f472b6" stroke="#9d174d" strokeWidth="1" />)}
+      </g>
+    )
+  }
+  if (form.branch === 'quiz') {
+    const bolt = 'M0 0 L-8 14 L-2 14 L-6 26 L8 8 L2 8 Z'
+    return (
+      <g fill="#facc15" stroke="#a16207" strokeWidth="2" strokeLinejoin="round">
+        <path transform="translate(54 2)" d={bolt} />
+        {st >= 4 && <path transform="translate(30 12) scale(0.7)" d={bolt} />}
+        {st >= 4 && <path transform="translate(74 12) scale(0.7)" d={bolt} />}
+        {st >= 5 && (
+          <g className="sparks" stroke="#fde047" strokeWidth="2.5" fill="none" strokeLinecap="round">
+            <path d="M8 50 l6 4 l-4 4 l6 4" />
+            <path d="M92 50 l-6 4 l4 4 l-6 4" />
+          </g>
+        )}
+      </g>
+    )
+  }
+  if (form.branch === 'ear') {
+    return <path d="M40 30 Q44 12 50 22 Q56 12 60 30" fill={shade(form.color, 0.3)} stroke={line} strokeWidth="2.5" />
+  }
+  if (st >= 2) return <path d="M50 27 Q46 14 52 10 Q50 18 56 20 Q52 22 50 27 Z" fill="#4ade80" stroke="#15803d" strokeWidth="2" />
+  return null
+}
+
+// 系統ごとにまわりをただようもの（Lv15〜）。葉っぱ・音符・火花
+function Particles({ form }: { form: Form }) {
+  const spots = form.stage >= 5 ? [[10, 40], [88, 34], [14, 84], [90, 80]] : [[12, 44], [88, 38]]
+  return (
+    <g className="particles">
+      {spots.map(([x, y], i) => (
+        <g key={i} transform={`translate(${x} ${y})`} style={{ animationDelay: `${i * 0.6}s` }}>
+          {form.branch === 'card' ? (
+            <path d="M0 0 Q-5 -6 0 -10 Q5 -6 0 0 Z" fill="#4ade80" stroke="#15803d" strokeWidth="1" />
+          ) : form.branch === 'ear' ? (
+            <text fontSize="10" fill="#0369a1" textAnchor="middle">
+              {i % 2 ? '♪' : '♫'}
+            </text>
+          ) : (
+            <path d="M0 -6 l1.6 4.4 l4.4 1.6 l-4.4 1.6 l-1.6 4.4 l-1.6 -4.4 l-4.4 -1.6 l4.4 -1.6 Z" fill="#facc15" />
+          )}
+        </g>
+      ))}
+    </g>
+  )
+}
+
+// 系統「耳」のつばさ。段階が上がると大きくなる
+function Wings({ form, fill, line }: { form: Form; fill: string; line: string }) {
+  const big = form.stage >= 4 ? 1.35 : 1
+  const wing = 'M0 0 Q-16 -14 -12 -32 Q-6 -22 2 -20 Q-4 -12 6 -8 Z'
+  return (
+    <g className="wings" fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+      <path transform={`translate(22 62) scale(${big})`} d={wing} />
+      <path transform={`translate(78 62) scale(${-big} ${big})`} d={wing} />
+    </g>
   )
 }
 
@@ -187,48 +280,99 @@ export function MonsterFigure({
   hidden?: boolean
   wear?: string
 }) {
+  const uid = form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
   const fill = hidden ? '#9ca3af' : form.color
   const line = hidden ? '#6b7280' : form.line
+  const body = hidden ? fill : `url(#b${uid})`
+  const defs = (
+    <defs>
+      <radialGradient id={`b${uid}`} cx="0.38" cy="0.32" r="0.75">
+        <stop offset="0" stopColor={shade(form.color, 0.55)} />
+        <stop offset="0.55" stopColor={form.color} />
+        <stop offset="1" stopColor={shade(form.color, -0.18)} />
+      </radialGradient>
+      <radialGradient id={`h${uid}`}>
+        <stop offset="0" stopColor="#fef08a" stopOpacity="0.9" />
+        <stop offset="1" stopColor="#fef08a" stopOpacity="0" />
+      </radialGradient>
+    </defs>
+  )
   if (form.stage === 0) {
     return (
       <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
-        <ellipse cx="50" cy="56" rx="30" ry="38" fill={fill} stroke={line} strokeWidth="3" />
-        <path d="M30 50 l8 -6 l8 6 l8 -6 l8 6 l8 -6" fill="none" stroke={line} strokeWidth="3" />
-        {!hidden && (
-          <>
-            <circle cx="40" cy="70" r="4" fill="#f59e0b" />
-            <circle cx="60" cy="78" r="3" fill="#f59e0b" />
-          </>
-        )}
+        {defs}
+        <ellipse cx="50" cy="95" rx="24" ry="4" fill="#000" opacity="0.12" />
+        <g className={hidden ? undefined : 'egg-wobble'}>
+          <ellipse cx="50" cy="56" rx="30" ry="38" fill={body} stroke={line} strokeWidth="3" />
+          <path d="M22 54 l7 -6 l7 6 l7 -6 l7 6 l7 -6 l7 6 l7 -6 l6 5" fill="none" stroke={line} strokeWidth="3" strokeLinejoin="round" />
+          {!hidden && (
+            <>
+              <circle cx="38" cy="72" r="5" fill="#f59e0b" opacity="0.8" />
+              <circle cx="60" cy="80" r="3.5" fill="#f59e0b" opacity="0.8" />
+              <circle cx="64" cy="66" r="2.5" fill="#f59e0b" opacity="0.8" />
+              <ellipse cx="38" cy="32" rx="7" ry="10" fill="#fff" opacity="0.5" transform="rotate(-20 38 32)" />
+            </>
+          )}
+        </g>
       </svg>
     )
   }
+  // 生まれたては小さく、だんだん大きくなる（足もとを中心に拡大）
+  const size = form.stage === 1 ? 0.78 : form.stage === 2 ? 0.9 : 1
   return (
     <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
+      {defs}
+      {form.stage >= 5 && !hidden && <circle cx="50" cy="56" r="46" fill={`url(#h${uid})`} opacity={form.stage >= 6 ? 0.9 : 0.6} />}
       {form.stage >= 5 && !hidden && (
         <g className="aura">
-          <circle cx="50" cy="56" r="46" fill="none" stroke="#fde047" strokeWidth="3" strokeDasharray="4 6" />
-          <path d="M14 30 l3 -7 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 Z M80 14 l2 -5 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 Z" fill="#fde047" />
+          <circle cx="50" cy="56" r="46" fill="none" stroke={form.stage >= 6 ? '#c4b5fd' : '#fde047'} strokeWidth="3" strokeDasharray="4 6" />
+          <path d="M14 30 l3 -7 l3 7 l7 3 l-7 3 l-3 7 l-3 -7 l-7 -3 Z M80 14 l2 -5 l2 5 l5 2 l-5 2 l-2 5 l-2 -5 l-5 -2 Z M86 78 l2 -4 l2 4 l4 2 l-4 2 l-2 4 l-2 -4 l-4 -2 Z" fill="#fde047" />
         </g>
       )}
-      {form.branch === 'ear' && (
-        <>
-          <path d="M18 60 Q2 46 8 32 Q18 44 24 50 Z" fill={fill} stroke={line} strokeWidth="3" />
-          <path d="M82 60 Q98 46 92 32 Q82 44 76 50 Z" fill={fill} stroke={line} strokeWidth="3" />
-        </>
-      )}
-      <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 88 50 88 Q18 88 18 70 Z" fill={fill} stroke={line} strokeWidth="3" />
-      {form.stage >= 2 && form.branch !== 'quiz' && form.branch !== 'card' && (
-        <path d="M38 28 Q42 14 50 22 Q58 14 62 28" fill={fill} stroke={line} strokeWidth="3" />
-      )}
-      {form.branch === 'card' && (
-        <path d="M50 27 Q38 8 54 4 Q62 18 50 27 Z M50 27 L54 10" fill="#16a34a" stroke="#14532d" strokeWidth="2" />
-      )}
-      {form.branch === 'quiz' && <path d="M54 2 L40 22 L50 22 L44 34 L62 14 L52 14 Z" fill="#facc15" stroke="#a16207" strokeWidth="2" />}
-      {form.stage >= 4 && <path d="M30 34 L33 24 L40 30 L50 20 L60 30 L67 24 L70 34 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="2" />}
-      {form.stage >= 6 && <ellipse cx="50" cy="12" rx="20" ry="5" fill="none" stroke="#fde047" strokeWidth="3" opacity="0.9" />}
-      {hidden ? <text x="50" y="66" textAnchor="middle" fontSize="22" fill="#f3f4f6">？</text> : <Face mood={mood} />}
-      {!hidden && <Wear id={wear} />}
+      <ellipse cx="50" cy="94" rx={30 * size} ry="4" fill="#000" opacity="0.13" />
+      {form.stage >= 3 && !hidden && <Particles form={form} />}
+      <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
+        <g className={hidden ? undefined : 'monster-breathe'}>
+          {form.branch === 'ear' && <Wings form={form} fill={hidden ? fill : shade(form.color, 0.25)} line={line} />}
+          {form.stage >= 2 && (
+            <g fill={body} stroke={line} strokeWidth="3">
+              <ellipse cx="36" cy="89" rx="9" ry="5" />
+              <ellipse cx="64" cy="89" rx="9" ry="5" />
+            </g>
+          )}
+          <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" fill={body} stroke={line} strokeWidth="3" />
+          {!hidden && <ellipse cx="50" cy="77" rx="18" ry="10" fill="#fff" opacity="0.28" />}
+          {!hidden && <ellipse cx="34" cy="38" rx="8" ry="4.5" fill="#fff" opacity="0.55" transform="rotate(-25 34 38)" />}
+          {form.stage >= 2 && (
+            <g fill={body} stroke={line} strokeWidth="3" className="monster-arms">
+              <path d="M20 66 Q8 70 12 78 Q18 80 22 74" />
+              <path d="M80 66 Q92 70 88 78 Q82 80 78 74" />
+            </g>
+          )}
+          {form.stage === 1 && !hidden && (
+            <path d="M30 34 L36 26 L42 33 L50 24 L58 33 L64 26 L70 34 Q50 24 30 34 Z" fill="#fef3c7" stroke="#d97706" strokeWidth="2" strokeLinejoin="round" />
+          )}
+          {!hidden && <Crest form={form} line={line} />}
+          {form.stage >= 4 && (
+            <g stroke="#a16207" strokeWidth="2" strokeLinejoin="round">
+              <path d="M30 34 L33 22 L41 30 L50 18 L59 30 L67 22 L70 34 Z" fill="#fbbf24" />
+              <circle cx="50" cy="28" r="3" fill={form.stage >= 5 ? '#a855f7' : '#ef4444'} stroke="none" />
+              <circle cx="38" cy="31" r="1.8" fill="#38bdf8" stroke="none" />
+              <circle cx="62" cy="31" r="1.8" fill="#38bdf8" stroke="none" />
+            </g>
+          )}
+          {form.stage >= 6 && !hidden && <path d="M50 40 l4 5 l-4 5 l-4 -5 Z" fill="#e879f9" stroke="#86198f" strokeWidth="1.2" />}
+          {form.stage >= 6 && <ellipse className="halo" cx="50" cy="10" rx="20" ry="5" fill="none" stroke="#fde047" strokeWidth="3.5" />}
+          {hidden ? (
+            <text x="50" y="66" textAnchor="middle" fontSize="22" fill="#f3f4f6">
+              ？
+            </text>
+          ) : (
+            <Face mood={mood} />
+          )}
+          {!hidden && <Wear id={wear} />}
+        </g>
+      </g>
     </svg>
   )
 }

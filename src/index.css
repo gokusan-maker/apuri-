@@ -745,3 +745,20 @@ button:focus:not(:focus-visible) { outline: none; }
 .stage-medal { margin-left: 4px; }
 .diary textarea { width: 100%; box-sizing: border-box; font-size: 1rem; margin: 4px 0; } .diary summary { cursor: pointer; font-weight: bold; margin: 8px 0; }
 .settings-h { margin: 18px 0 4px; font-size: 0.95rem; color: var(--muted); border-bottom: 1px solid rgba(128,128,128,0.25); padding-bottom: 2px; }
+/* 相棒の動き：呼吸・まばたき・タマゴのゆれ */
+.monster-breathe { transform-origin: 50px 90px; animation: breathe 3.2s ease-in-out infinite; }
+@keyframes breathe { 50% { transform: scale(1.03, 0.97); } }
+.monster-eyes { transform-origin: 50px 57px; animation: blink 4.5s infinite; }
+@keyframes blink { 0%, 94%, 100% { transform: scaleY(1); } 97% { transform: scaleY(0.1); } }
+.egg-wobble { transform-origin: 50px 92px; animation: wobble 2.8s ease-in-out infinite; }
+@keyframes wobble { 0%, 70%, 100% { transform: rotate(0); } 78% { transform: rotate(-6deg); } 86% { transform: rotate(5deg); } 93% { transform: rotate(-2deg); } }
+.wings { transform-origin: 50px 62px; animation: flap 1.6s ease-in-out infinite; }
+@keyframes flap { 50% { transform: scaleX(1.06); } }
+.halo { animation: halo 2.4s ease-in-out infinite; }
+@keyframes halo { 50% { transform: translateY(-2px); opacity: 0.7; } }
+.sparks { animation: sparks 0.9s steps(2) infinite; }
+@keyframes sparks { 50% { opacity: 0.2; } }
+@media (prefers-reduced-motion: reduce) { .monster-breathe, .monster-eyes, .egg-wobble, .wings, .halo, .sparks { animation: none; } }
+.particles > g > * { animation: drift 3s ease-in-out infinite; animation-delay: inherit; }
+@keyframes drift { 50% { transform: translateY(-5px) rotate(12deg); opacity: 0.6; } }
+@media (prefers-reduced-motion: reduce) { .particles > g > * { animation: none; } }
