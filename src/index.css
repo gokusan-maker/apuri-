@@ -861,3 +861,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .party-bar { display: block; width: 80%; height: 5px; margin: 3px auto 0; border-radius: 3px; background: #e5e7eb; overflow: hidden; }
 .party-bar > span { display: block; height: 100%; background: linear-gradient(90deg, #4ade80, #22c55e); }
 .party-next { display: block; font-size: 0.65rem; color: var(--muted); }
+.monster-friends { display: flex; flex-wrap: wrap; gap: 2px; align-items: center; margin-bottom: 2px; }
+.friend-mini { width: 26px; height: 26px; padding: 0; border: none; border-radius: 50%; background: rgb(255 255 255 / 0.55); cursor: pointer; }
+.friend-mini .monster-breathe, .friend-mini .particles, .friend-mini .aura { animation: none; }
+.friend-more { font-size: 0.7rem; color: var(--muted); }

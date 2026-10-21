@@ -611,6 +611,8 @@ function App() {
           mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
           leveledUp={leveledUp}
           evolved={evolved}
+          friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
+          onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
         />
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語

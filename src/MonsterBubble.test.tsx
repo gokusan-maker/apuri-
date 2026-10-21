@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { expect, it } from 'vitest'
+import { expect, it, vi } from 'vitest'
 import { Monster } from './MonsterView'
 
 it('ふきだしの英語を🔊で聞ける（ふきだしは閉じない）', () => {
@@ -40,4 +40,11 @@ it('相棒をさわるとハートが出る', () => {
   expect(document.querySelector('.poke-hearts')).toBeNull()
   fireEvent.click(screen.getByLabelText('相棒にさわる'))
   expect(document.querySelectorAll('.poke-hearts i')).toHaveLength(3)
+})
+
+it('ホームの相棒の横に仲間が小さく出て、タップで交代できる', () => {
+  const onSwitch = vi.fn()
+  render(<Monster monster={{ xp: 500 } as never} friends={[{ m: { xp: 0, name: 'ポチ' }, i: 2 }]} onSwitch={onSwitch} />)
+  fireEvent.click(screen.getByLabelText('ポチと交代'))
+  expect(onSwitch).toHaveBeenCalledWith(2)
 })

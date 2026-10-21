@@ -26,6 +26,8 @@ type Props = {
   mood?: Mood
   leveledUp?: boolean
   night?: boolean // 夜は部屋を暗くして星を出す
+  friends?: { m: MonsterState; i: number }[] // 相棒以外の仲間（i は仲間の番号）
+  onSwitch?: (i: number) => void
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
@@ -549,7 +551,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -634,6 +636,16 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         </div>
       )}
       <div className="monster-info">
+        {friends.length > 0 && (
+          <div className="monster-friends" aria-label={`仲間 ${friends.length}匹`}>
+            {friends.slice(0, 6).map(({ m, i }) => (
+              <button key={i} className="friend-mini" aria-label={`${m.name ?? formOf(m).name}と交代`} onClick={() => onSwitch?.(i)}>
+                <MonsterFigure form={formOf(m)} kind={m.kind} wear={m.wear} />
+              </button>
+            ))}
+            {friends.length > 6 && <span className="friend-more">+{friends.length - 6}</span>}
+          </div>
+        )}
         {editing ? (
           <form
             className="rename"
