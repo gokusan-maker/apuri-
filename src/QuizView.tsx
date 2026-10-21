@@ -35,6 +35,7 @@ import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
+import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
 import { Tiles } from './TilesView'
 import { WORDS, type Level, type Word } from './words'
@@ -73,7 +74,7 @@ const SIMPLE_PUZZLES: Partial<Record<Direction, () => PuzzleQ>> = {
   waswere: wasWereQ,
 }
 
-export type Direction = 'waswere' | 'ordinal' | 'muchmany' | 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
+export type Direction = 'waswere' | 'ordinal' | 'muchmany' | 'pronoun' | 'modal' | 'placeprep' | 'homophone' | 'neg' | 'riddle' | 'placement' | 'gmix' | 'timeprep' | 'wh' | 'be' | 'article' | 'twister' | 'wordsearch' | 'third' | 'ing' | 'bingo' | 'memory' | 'compare' | 'past-ed' | 'plural' | 'calc' | 'alphabet' | 'color' | 'clock' | 'count' | 'odd' | 'opposite' | 'abc' | 'versus' | 'emoji-ear' | 'emoji-rev' | 'emoji' | 'sounds' | 'numbers' | 'sentence-read' | 'order-ear' | 'through' | 'sequence' | 'shiritori' | 'define' | 'confusing' | 'tiles' | 'reading' | 'long-reading' | 'rival' | 'timed' | 'read' | 'mix' | 'en-ja' | 'ja-en' | 'listen' | 'sentence' | 'spell' | 'dictation' | 'blank' | 'order' | 'irregular' | 'speak' | 'grammar'
 
 const prompt = (w: Word, d: Direction) =>
   d === 'ja-en' ? w.ja : d === 'emoji-rev' ? w.en : d === 'emoji' ? (EMOJI[w.id] ?? w.ja) : d === 'define' ? (DEFS[w.id] ?? w.ja) : d === 'sentence-read' ? w.example : w.en
@@ -170,6 +171,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'irregular', label: '🔁 不規則動詞', group: '文法・読解' },
   { id: 'grammar', label: '📖 文法', group: '文法・読解' },
   { id: 'reading', label: '📰 読解', group: '文法・読解' },
+  { id: 'long-reading', label: '📖 長文読解（入試形式）', group: '文法・読解' },
   { id: 'confusing', label: '⚠️ まちがえやすい単語', group: '文法・読解' },
   { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
   { id: 'twister', label: '👅 早口ことば', group: '聞く・話す' },
@@ -224,7 +226,7 @@ export const QUESTION_TIME = 10
 export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 // 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
-const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'grammar', 'confusing', 'sounds']
+const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'shiritori', 'versus', 'rival', 'through', 'reading', 'long-reading', 'grammar', 'confusing', 'sounds']
 const COUNT_KEY = 'eitan:quiz-count'
 function loadCount(fallback: number): number {
   try {
@@ -746,6 +748,15 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       <>
         <div className="card-tabs">{toggle}</div>
         <Tiles key={count} words={targets ?? words} count={count} onAnswer={onAnswer} />
+      </>
+    )
+  }
+
+  if (direction === 'long-reading') {
+    return (
+      <>
+        <div className="card-tabs">{toggle}</div>
+        <LongReading onAnswer={onAnswer} />
       </>
     )
   }
