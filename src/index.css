@@ -1044,3 +1044,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .battle-items { display: flex; gap: 6px; justify-content: center; flex-wrap: wrap; margin: 0 0 8px; }
 .battle-item { padding: 6px 10px; border: 2px solid #f59e0b; border-radius: 999px; background: #fffbeb; font-weight: 700; font-size: 0.85rem; }
 .battle-item:disabled { opacity: 0.45; }
+.gacha-golden { margin: 4px 0; padding: 4px 10px; border-radius: 999px; background: linear-gradient(90deg, #fef08a, #fbbf24); color: #713f12; font-weight: 800; font-size: 0.85rem; }

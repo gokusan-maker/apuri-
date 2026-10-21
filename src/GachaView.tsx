@@ -12,13 +12,14 @@ type Props = {
   pityLeft?: number // あと何回でスーパーレア以上が確定
   dragonUp?: boolean // 週末はドラコが出やすい
   pickup?: Species // 日替わりピックアップ（出やすい）
+  price?: number // 1回の値段（ゴールデンタイムは安い）
   stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, onDraw, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const record = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
@@ -29,7 +30,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
       <p className="stats-note">勉強でためたコインで新しいタマゴを引けるよ。色ちがい（レア・スーパーレア・ウルトラレア）が出るかも！ 生まれた子は「なかま」で相棒に選んで育てよう。</p>
       <button
         className="good gacha-btn"
-        disabled={full || coins < GACHA_PRICE}
+        disabled={full || coins < price}
         onClick={() => {
           const k = onDraw(false)
           if (k) {
@@ -38,7 +39,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           }
         }}
       >
-        {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${GACHA_PRICE}`}
+        {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
       {tickets > 0 && !full && (
         <button
@@ -66,6 +67,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, dragonUp = false,
           </span>
         </div>
       )}
+      {price < GACHA_PRICE && <p className="gacha-golden">🌟 ゴールデンタイム！ 19時台はガチャが 🪙{GACHA_PRICE} → 🪙{price}</p>}
       {stepLeft !== undefined && (
         <p className={`gacha-step${stepLeft === 0 ? ' sure' : ''}`}>
           {stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ステップアップ：あと${stepLeft}回で、その次がレア以上確定`}

@@ -92,3 +92,9 @@ it('ステップアップの残り回数と確定のお知らせ', () => {
   rerender(<Gacha coins={0} members={1} stepLeft={0} onDraw={() => null} />)
   expect(screen.getByText('🔥 ステップアップ！ 次の1回はレア以上確定！')).toBeInTheDocument()
 })
+
+it('ゴールデンタイムは値下げのお知らせと安い値段が出る', () => {
+  render(<Gacha coins={40} members={1} price={40} onDraw={() => null} />)
+  expect(screen.getByText(/ゴールデンタイム！/)).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: '🎰 ガチャを引く 🪙40' })).toBeEnabled()
+})

@@ -42,7 +42,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, saveParty, toggleFav, updateActive } from './party'
-import { addTicket, drawEgg, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { addTicket, drawEgg, gachaPrice, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -789,6 +789,7 @@ function App() {
           dragonUp={isWeekend(today)}
           pickup={pickupOf(today)}
           stepLeft={stepLeft(gachaStep, today)}
+          gachaPrice={gachaPrice(hour)}
           favSnack={favSnackOf(today).id}
           bag={bag}
           onBuyBattle={(id) => {
@@ -799,7 +800,7 @@ function App() {
           }}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0)
+            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random(), isWeekend(today), pickupOf(today).id, stepLeft(gachaStep, today) === 0, gachaPrice(hour))
             if (!r) return null
             setGachaStep(nextStep(gachaStep, today))
             count('gacha')

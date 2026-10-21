@@ -11,8 +11,13 @@ export const PITY = 20 // スーパーレア以上が出ないまま20回目な�
 
 export const pityLeft = (w: Wallet) => PITY - (w.pity ?? 0)
 
-export function canDraw(w: Wallet, p: Party, ticket = false): boolean {
-  return (ticket ? (w.tickets ?? 0) > 0 : w.coins >= GACHA_PRICE) && p.members.length < PARTY_MAX
+// ゴールデンタイム：毎日19時台はガチャが安い
+export const GOLDEN_PRICE = 40
+export const isGoldenHour = (hour: number) => hour === 19
+export const gachaPrice = (hour: number) => (isGoldenHour(hour) ? GOLDEN_PRICE : GACHA_PRICE)
+
+export function canDraw(w: Wallet, p: Party, ticket = false, price = GACHA_PRICE): boolean {
+  return (ticket ? (w.tickets ?? 0) > 0 : w.coins >= price) && p.members.length < PARTY_MAX
 }
 
 // 7日連続で学習するとガチャチケットが1枚もらえる（最大9枚）
@@ -23,8 +28,8 @@ export function addTicket(w: Wallet): Wallet {
 // 引けたら、コインを減らしてタマゴを仲間に加える
 // ticket=true のときはコインのかわりにチケットを1枚使う
 // r は色ちがい、r2 はキャラクターの種類を決める乱数
-export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string, rareSure = false): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
-  if (!canDraw(w, p, ticket)) return null
+export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string, rareSure = false, price = GACHA_PRICE): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
+  if (!canDraw(w, p, ticket, price)) return null
   const first = rollKind(r)
   // レア以上確定のときは、ふつうが出たら3つのレア色のどれかにする
   const rolled = rareSure && first.rarity === 'N' ? KINDS_R[Math.min(2, Math.floor((r / 0.6) * 3))] : first
@@ -32,7 +37,7 @@ export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, 
   const pity = kind.rarity === 'SR' || kind.rarity === 'UR' ? 0 : (w.pity ?? 0) + 1
   const species = rollSpecies(r2, dragonUp, pickup)
   const egg = { xp: 0, ...(kind.id === 'normal' ? {} : { kind: kind.id }), ...(species.id === 'mochi' ? {} : { species: species.id }) }
-  const paid = ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }
+  const paid = ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - price }
   return { wallet: { ...paid, pity }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
 }
 

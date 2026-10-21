@@ -1,5 +1,5 @@
 import { expect, it } from 'vitest'
-import { canDraw, drawEgg, gachaOmen, GACHA_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
+import { canDraw, drawEgg, gachaOmen, gachaPrice, GACHA_PRICE, GOLDEN_PRICE, isDuplicate, loadStep, nextStep, PARTY_MAX, saveStep, stepLeft } from './gacha'
 import { KINDS, rollKind, sanitizeMonster, withKind, FORMS } from './monster'
 
 it('レア度の出かた：ノーマル60%・レア30%・スーパーレア9%・ウルトラレア1%', () => {
@@ -154,4 +154,14 @@ it('ステップアップ：その日3回目はレア以上確定', () => {
   const p = { active: 0, members: [{ xp: 0 }] }
   expect(drawEgg(w, p, 0, false, 0.5, false, undefined, false)!.kind.rarity).toBe('N')
   for (const r of [0, 0.3, 0.59]) expect(drawEgg(w, p, r, false, 0.5, false, undefined, true)!.kind.rarity).toBe('R')
+})
+
+it('ゴールデンタイム（19時台）はガチャが安い', () => {
+  expect(gachaPrice(18)).toBe(GACHA_PRICE)
+  expect(gachaPrice(19)).toBe(GOLDEN_PRICE)
+  const w = { coins: GOLDEN_PRICE, owned: [] }
+  const p = { active: 0, members: [{ xp: 0 }] }
+  expect(canDraw(w, p)).toBe(false)
+  expect(canDraw(w, p, false, GOLDEN_PRICE)).toBe(true)
+  expect(drawEgg(w, p, 0.5, false, 0.5, false, undefined, false, GOLDEN_PRICE)!.wallet.coins).toBe(0)
 })
