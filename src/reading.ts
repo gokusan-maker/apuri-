@@ -992,5 +992,59 @@ export const PASSAGES: Passage[] = [
       { q: 'だれが助けてくれた？', choices: ['いとこ', '先生', '母'], answer: 0 },
       { q: '最後にどうなった？', choices: ['ひとりでリンクを1周すべれた', 'あきらめた', 'けがをした'], answer: 0 },
     ],
+  },  {
+    id: 'lost-umbrella',
+    title: 'The Blue Umbrella',
+    text: 'One rainy afternoon, I left my blue umbrella on the train. I was sad because it was a present from my aunt. The next day, I went to the station office. A kind staff member smiled and gave it back to me.',
+    ja: 'ある雨の午後、私は青いかさを電車に置き忘れました。おばからのプレゼントだったので悲しくなりました。次の日、駅の事務所に行きました。親切な駅員さんがほほえんで、かさを返してくれました。',
+    questions: [
+      { q: 'かさをどこに忘れた？', choices: ['電車', 'バス', '学校'], answer: 0 },
+      { q: 'かさはだれからのプレゼント？', choices: ['祖母', 'おば', '友だち'], answer: 1 },
+      { q: 'かさはどうなった？', choices: ['見つからなかった', '駅員さんが返してくれた', '新しいのを買った'], answer: 1 },
+    ],
+  },
+  {
+    id: 'night-sky',
+    title: 'Stars in the Mountains',
+    text: 'In summer, my family stayed at a small cabin in the mountains. At night, we turned off all the lights and lay on the grass. The sky was full of stars. My father showed me how to find the North Star.',
+    ja: '夏に、家族で山の小さな小屋にとまりました。夜、明かりを全部消して草の上に寝転びました。空は星でいっぱいでした。父が北極星の見つけ方を教えてくれました。',
+    questions: [
+      { q: '家族はどこにとまった？', choices: ['海辺のホテル', '山の小屋', '祖父母の家'], answer: 1 },
+      { q: '夜に何をした？', choices: ['花火をした', '草の上に寝転んで星を見た', '映画を見た'], answer: 1 },
+      { q: '父は何を教えてくれた？', choices: ['北極星の見つけ方', '火のおこし方', '魚のつり方'], answer: 0 },
+    ],
+  },
+  {
+    id: 'bread-baking',
+    title: 'Baking Bread',
+    text: 'On Saturday, my sister and I baked bread for the first time. We mixed flour, water, and a little sugar. Then we waited for one hour. The bread was not very pretty, but it smelled wonderful and tasted great.',
+    ja: '土曜日、姉と私ははじめてパンを焼きました。小麦粉と水と少しの砂糖をまぜました。それから1時間待ちました。パンの見た目はあまりよくありませんでしたが、とてもいいにおいがして、おいしかったです。',
+    questions: [
+      { q: 'パンを焼いたのはいつ？', choices: ['土曜日', '日曜日', '金曜日'], answer: 0 },
+      { q: 'どのくらい待った？', choices: ['10分', '30分', '1時間'], answer: 2 },
+      { q: 'パンはどうだった？', choices: ['見た目はいまひとつだがおいしかった', 'こげて食べられなかった', 'とてもきれいだった'], answer: 0 },
+    ],
+  },
+  {
+    id: 'relay-race',
+    title: 'The Relay Race',
+    text: 'At sports day, I was the last runner in the relay. When I got the baton, our team was in third place. I ran as fast as I could and passed one runner. We finished second, and my classmates cheered for me.',
+    ja: '運動会で、私はリレーのアンカーでした。バトンを受け取ったとき、私たちのチームは3位でした。全力で走って1人をぬきました。私たちは2位でゴールし、クラスのみんなが私に声えんを送ってくれました。',
+    questions: [
+      { q: '私はリレーで何番目に走った？', choices: ['最初', '最後（アンカー）', '2番目'], answer: 1 },
+      { q: 'バトンを受け取ったとき何位だった？', choices: ['1位', '2位', '3位'], answer: 2 },
+      { q: 'チームは最後に何位だった？', choices: ['1位', '2位', '3位'], answer: 1 },
+    ],
+  },
+  {
+    id: 'recycling-day',
+    title: 'Sorting the Trash',
+    text: 'In my town, we sort our trash. Paper, plastic bottles, and cans go into different bags. My job at home is to wash the bottles and take off the labels. It takes only a few minutes, and it helps the earth.',
+    ja: '私の町では、ごみを分別します。紙、ペットボトル、かんは別々のふくろに入れます。家での私の仕事は、ボトルを洗ってラベルをはがすことです。ほんの数分しかかかりませんが、地球の役に立ちます。',
+    questions: [
+      { q: '町では何をする？', choices: ['ごみを分別する', 'ごみを燃やす', 'ごみを集めない'], answer: 0 },
+      { q: '家での私の仕事は？', choices: ['かんをつぶす', 'ボトルを洗ってラベルをはがす', '紙をしばる'], answer: 1 },
+      { q: 'その仕事はどのくらいかかる？', choices: ['数分', '1時間', '半日'], answer: 0 },
+    ],
   },
 ]
