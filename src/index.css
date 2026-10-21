@@ -1126,3 +1126,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .records li { display: flex; align-items: center; gap: 8px; padding: 6px 4px; border-bottom: 1px solid #f1f5f9; font-size: 0.9rem; }
 .records-label { flex: 1; }
 .records-value { color: #7c3aed; }
+.spot-text { font-size: 1.1rem; font-weight: 700; }
+.spot-buttons { justify-content: center; grid-template-columns: repeat(2, minmax(0, 140px)) !important; }
+.spot-btn { display: block; margin: 6px auto; }

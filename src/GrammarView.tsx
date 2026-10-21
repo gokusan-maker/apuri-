@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BossFigure } from './BossView'
 import { GrammarOrder } from './GrammarOrderView'
+import { GrammarSpot } from './GrammarSpotView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName } from './grammarmonster'
 import { shuffle } from './quiz'
 import { GRAMMAR, grammarStamps, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -25,6 +26,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [score, setScore] = useState(0)
   const [battle, setBattle] = useState(false) // 文法モンスターと戦うモード
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
+  const [spot, setSpot] = useState(false) // まちがいさがし
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
 
   function open(u: GrammarUnit) {
@@ -35,6 +37,8 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setPicked(null)
     setScore(0)
   }
+
+  if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
 
   if (!unit) {
     return (
@@ -69,6 +73,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         >
           📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setSpot(true)}>
+            🔍 まちがいさがし（○×で10問）
+          </button>
+        )}
         <ul className="grammar-list">
           {units.map((u) => (
             <li key={u.id}>
