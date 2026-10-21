@@ -26,3 +26,11 @@ it('レベルアップしたときは星の目と光の輪', () => {
   expect(document.querySelector('.lvup-ring')).not.toBeNull()
   expect(document.querySelector('.face-star')).not.toBeNull()
 })
+
+it('夜だけ夜空が出る', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} />)
+  expect(document.querySelector('.night-sky')).toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} night />)
+  expect(document.querySelector('.night-sky')).not.toBeNull()
+})

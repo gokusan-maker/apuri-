@@ -74,6 +74,7 @@ import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
+import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
@@ -589,6 +590,7 @@ function App() {
         <Monster
           deco={seasonEvent?.icon}
           sleepy={hour >= 22 || hour < 5}
+          night={isNight(hour)}
           learned={learnedSample}
           shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
           monster={monster}

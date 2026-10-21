@@ -811,3 +811,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .lvup-ring { position: absolute; inset: 0; border-radius: 50%; border: 4px solid #fbbf24; pointer-events: none; animation: lvup-ring 1s ease-out forwards; }
 @keyframes lvup-ring { from { transform: scale(0.4); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .lvup-ring { animation: none; opacity: 0; } }
+/* 夜は部屋が少し暗くなって星が出る */
+.night-sky { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(180deg, rgb(30 27 75 / 0.28), rgb(30 27 75 / 0.08)); }
+.night-sky i { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fef9c3; box-shadow: 0 0 6px #fef08a; animation: twinkle 2.2s ease-in-out infinite; }
+.night-sky i:nth-child(1) { left: 34%; top: 12%; } .night-sky i:nth-child(2) { left: 72%; top: 22%; animation-delay: 0.7s; } .night-sky i:nth-child(3) { left: 90%; top: 8%; animation-delay: 1.4s; }
+@media (prefers-reduced-motion: reduce) { .night-sky i { animation: none; } }

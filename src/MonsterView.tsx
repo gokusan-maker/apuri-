@@ -25,6 +25,7 @@ type Props = {
   gain?: { amount: number; key: number } | null // もらったXP（ふわっと浮かぶ）
   mood?: Mood
   leveledUp?: boolean
+  night?: boolean // 夜は部屋を暗くして星を出す
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
@@ -529,7 +530,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [] }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -545,6 +546,13 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   return (
     <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
       <RoomScene room={room} />
+      {night && (
+        <span className="night-sky" aria-label="夜">
+          <i />
+          <i />
+          <i />
+        </span>
+      )}
       {sleepy && (
         <span className="monster-zzz" aria-label="ねむそう">
           💤
