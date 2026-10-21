@@ -443,4 +443,59 @@ export const PASSAGES: Passage[] = [
       { q: 'ロボットを買ったのは？', choices: ['小さな男の子', 'おばあさん', '先生'], answer: 0 },
     ],
   },
+  {
+    id: 'pet-hamster',
+    title: 'My Hamster',
+    text: 'I got a hamster last month. His name is Mochi. He sleeps during the day and runs on his wheel at night. He puts sunflower seeds in his cheeks and looks very funny.',
+    ja: '先月ハムスターを飼い始めました。名前はモチです。昼間は寝ていて、夜は回し車で走ります。ほおにヒマワリの種をつめこんで、とてもおもしろい顔になります。',
+    questions: [
+      { q: 'ハムスターの名前は？', choices: ['モチ', 'タマ', 'ポチ'], answer: 0 },
+      { q: '夜に何をする？', choices: ['寝る', '回し車で走る', '鳴く'], answer: 1 },
+      { q: 'ほおに何をつめる？', choices: ['米', 'ヒマワリの種', 'チーズ'], answer: 1 },
+    ],
+  },
+  {
+    id: 'sports-day',
+    title: 'Sports Day',
+    text: 'Our sports day was held on a sunny Saturday. I ran in the relay for the red team. I dropped the baton once, but my teammates did not get angry. In the end, the red team won by ten points.',
+    ja: '運動会は晴れた土曜日に行われました。私は赤組のリレーに出ました。一度バトンを落としましたが、チームのみんなはおこりませんでした。最後は赤組が10点差で勝ちました。',
+    questions: [
+      { q: '運動会の日の天気は？', choices: ['雨', 'くもり', '晴れ'], answer: 2 },
+      { q: '私は何に出た？', choices: ['リレー', '玉入れ', 'つな引き'], answer: 0 },
+      { q: '結果はどうなった？', choices: ['白組が勝った', '引き分け', '赤組が勝った'], answer: 2 },
+    ],
+  },
+  {
+    id: 'hot-spring',
+    title: 'A Trip to a Hot Spring',
+    text: 'In winter, my family visited a hot spring town in the mountains. It was snowing, but the water was warm. We ate hot noodles for dinner. My grandfather said it was the best trip of the year.',
+    ja: '冬に、家族で山の温泉町に行きました。雪が降っていましたが、お湯はあたたかかったです。夕食に温かいめんを食べました。祖父は、今年いちばんの旅行だと言いました。',
+    questions: [
+      { q: 'いつ行った？', choices: ['夏', '冬', '春'], answer: 1 },
+      { q: '夕食に何を食べた？', choices: ['すし', '温かいめん', 'カレー'], answer: 1 },
+      { q: '祖父は何と言った？', choices: ['寒すぎた', '今年いちばんの旅行だ', 'また来年は海に行きたい'], answer: 1 },
+    ],
+  },
+  {
+    id: 'origami',
+    title: 'Teaching Origami',
+    text: 'A student from France joined our class. She wanted to learn origami. I showed her how to fold a paper crane. It took her thirty minutes, but she was very happy when she finished it.',
+    ja: 'フランスから来た生徒がクラスに入りました。彼女は折り紙を習いたがっていました。私は折りづるの折り方を見せました。30分かかりましたが、できあがったとき彼女はとても喜びました。',
+    questions: [
+      { q: 'その生徒はどこから来た？', choices: ['アメリカ', 'フランス', '中国'], answer: 1 },
+      { q: '何を折った？', choices: ['折りづる', 'かぶと', '紙ひこうき'], answer: 0 },
+      { q: '何分かかった？', choices: ['10分', '20分', '30分'], answer: 2 },
+    ],
+  },
+  {
+    id: 'rainy-plan',
+    title: 'A Change of Plans',
+    text: 'We planned to have a picnic on Sunday, but it rained all day. So we stayed home and made sandwiches. We ate them on the living room floor and watched a movie. It was a fun indoor picnic.',
+    ja: '日曜日にピクニックをする予定でしたが、一日中雨が降りました。そこで家にいてサンドイッチを作りました。居間の床で食べながら映画を見ました。楽しい家の中のピクニックでした。',
+    questions: [
+      { q: '日曜日の天気は？', choices: ['晴れ', '雪', '一日中雨'], answer: 2 },
+      { q: '何を作った？', choices: ['サンドイッチ', 'おにぎり', 'ケーキ'], answer: 0 },
+      { q: '食べながら何をした？', choices: ['ゲーム', '映画を見た', '歌を歌った'], answer: 1 },
+    ],
+  },
 ]
