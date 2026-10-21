@@ -4,7 +4,7 @@ import { MISTAKES, mistakeOf } from './grammarmistake'
 
 it('よくあるまちがいは実在する単元にあり、× と ○ がちがう', () => {
   const ids = new Set(GRAMMAR.map((u) => u.id))
-  expect(Object.keys(MISTAKES).length).toBeGreaterThanOrEqual(40)
+  for (const u of GRAMMAR) expect(MISTAKES[u.id], u.id).toBeDefined()
   for (const [id, m] of Object.entries(MISTAKES)) {
     expect(ids.has(id)).toBe(true)
     expect(m.wrong).not.toBe(m.right)
