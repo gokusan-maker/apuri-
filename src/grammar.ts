@@ -958,6 +958,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'We watched the children ___ soccer.', choices: ['to play', 'play', 'played'], answer: 1, why: 'watch ＋人＋動詞の原形。' },
     ],
   },
+  {
+    id: 'to-adjective',
+    title: '不定詞の形容詞用法（something to drink）',
+    points: ['名詞（代名詞）のあとに to ＋動詞の原形を置くと、「〜するための・〜すべき」と前の名詞を説明できる。', 'something / anything / nothing のあとにもよく使う（something to eat ＝何か食べるもの）。'],
+    examples: [
+      { en: 'I want something to drink.', ja: '何か飲むものがほしい。' },
+      { en: 'She has a lot of homework to do today.', ja: '彼女は今日やるべき宿題がたくさんある。' },
+    ],
+    questions: [
+      { sentence: 'Do you have anything ___ eat?', choices: ['to', 'for', 'of'], answer: 0, why: 'anything to eat で「何か食べるもの」。' },
+      { sentence: 'There are many places to ___ in Kyoto.', choices: ['visiting', 'visit', 'visited'], answer: 1, why: 'to のあとは動詞の原形 visit。' },
+      { sentence: 'I had no time ___ breakfast this morning.', choices: ['eat', 'eating', 'to eat'], answer: 2, why: 'time to eat で「食べる時間」。' },
+    ],
+  },
+  {
+    id: 'by-until',
+    title: 'by と until（〜までに・〜まで）',
+    points: ['by は「〜までに」：その時までに1回終わればよい（締め切り）。', 'until（till）は「〜まで（ずっと）」：その時まで同じ状態や動作が続く。'],
+    examples: [
+      { en: 'Please finish this report by Friday.', ja: '金曜日までにこのレポートを終えてください。' },
+      { en: 'I waited for him until six.', ja: '私は6時まで彼を待った。' },
+    ],
+    questions: [
+      { sentence: 'You must come home ___ seven o\'clock.', choices: ['by', 'until', 'for'], answer: 0, why: '7時「までに」帰る（締め切り）なので by。' },
+      { sentence: 'It rained ___ noon.', choices: ['by', 'until', 'since'], answer: 1, why: '正午「まで（ずっと）」雨が続いたので until。' },
+      { sentence: 'Can you return the book ___ next Monday?', choices: ['until', 'by', 'during'], answer: 1, why: '次の月曜日「までに」返すので by。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1058,7 +1086,7 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中2: ['to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
