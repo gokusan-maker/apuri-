@@ -1154,6 +1154,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'We climbed to the top ___ the mountain.', choices: ['of', 'in', 'at'], answer: 0, why: 'もの（山）の「〜の」は the top of 〜。' },
     ],
   },
+  {
+    id: 'both-either',
+    title: 'both A and B / either A or B',
+    points: ['both A and B で「A と B の両方」。主語にすると複数あつかい（are など）。', 'either A or B で「A か B のどちらか」。neither A nor B は「A も B も〜ない」。'],
+    examples: [
+      { en: 'Both Ken and Yumi are good at math.', ja: 'ケンもユミも数学が得意だ。' },
+      { en: 'You can have either tea or coffee.', ja: '紅茶かコーヒーのどちらかを飲めます。' },
+    ],
+    questions: [
+      { sentence: 'Both my father ___ my mother like cooking.', choices: ['or', 'and', 'but'], answer: 1, why: 'both A and B の形。' },
+      { sentence: 'We can go there either by bus ___ by train.', choices: ['or', 'and', 'nor'], answer: 0, why: 'either A or B の形。' },
+      { sentence: 'Both Tom and Lisa ___ from Canada.', choices: ['is', 'are', 'am'], answer: 1, why: 'both A and B が主語なので複数あつかいで are。' },
+    ],
+  },
+  {
+    id: 'how-adj',
+    title: 'How ＋形容詞（How tall / How old / How far）',
+    points: ['How ＋形容詞・副詞で「どのくらい〜」と程度をたずねる。', 'How tall（背の高さ）・How old（年れい）・How far（きょり）・How long（長さ・期間）・How often（回数）など。'],
+    examples: [
+      { en: 'How tall is your brother? — He is 170 centimeters tall.', ja: 'お兄さんの身長はどのくらいですか。—170センチです。' },
+      { en: 'How far is it from here to the station?', ja: 'ここから駅までどのくらいの距離ですか。' },
+    ],
+    questions: [
+      { sentence: 'How ___ is your sister? — She is twelve.', choices: ['old', 'tall', 'long'], answer: 0, why: '年れいをたずねるのは How old。' },
+      { sentence: 'How ___ do you go to the gym? — Twice a week.', choices: ['long', 'often', 'far'], answer: 1, why: '回数（どのくらいよく）をたずねるのは How often。' },
+      { sentence: 'How ___ is Tokyo Skytree? — It is 634 meters tall.', choices: ['tall', 'old', 'many'], answer: 0, why: '高さをたずねるので How tall。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1253,8 +1281,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }

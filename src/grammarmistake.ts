@@ -81,6 +81,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-gerund': { wrong: 'He left without say goodbye.', right: 'He left without saying goodbye.', why: '前置詞のあとの動詞は -ing 形（動名詞）。' },
   'good-better': { wrong: 'He plays tennis more well than me.', right: 'He plays tennis better than me.', why: 'well の比較級は better。more well とは言わない。' },
   possessive: { wrong: 'This is the bag of Ken.', right: "This is Ken's bag.", why: '人の「〜の」は \'s を使うのがふつう。' },
+  'both-either': { wrong: 'Both Ken and Yumi is busy.', right: 'Both Ken and Yumi are busy.', why: 'both A and B は複数あつかいなので are。' },
+  'how-adj': { wrong: 'How many old is he?', right: 'How old is he?', why: '年れいは How old。many はいらない。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
