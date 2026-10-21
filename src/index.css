@@ -1004,3 +1004,14 @@ button:focus:not(:focus-visible) { outline: none; }
 @keyframes idle-breath { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.03, 0.97); } }
 .idle-yawn { position: absolute; right: -4px; top: 6px; font-size: 0.75rem; font-weight: 700; color: #64748b; animation: fade-in 0.6s; }
 @media (prefers-reduced-motion: reduce) { .monster-idle { animation: none !important; } }
+
+/* 季節の背景演出 */
+.season-fx { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.season-fx i { position: absolute; top: -20px; font-style: normal; font-size: 14px; opacity: 0.85; animation: season-fall 9s linear infinite; }
+.season-fx i:nth-child(1) { left: 6%; animation-delay: 0s; } .season-fx i:nth-child(2) { left: 22%; animation-delay: 3s; font-size: 11px; }
+.season-fx i:nth-child(3) { left: 40%; animation-delay: 6s; } .season-fx i:nth-child(4) { left: 58%; animation-delay: 1.5s; font-size: 12px; }
+.season-fx i:nth-child(5) { left: 76%; animation-delay: 4.5s; } .season-fx i:nth-child(6) { left: 90%; animation-delay: 7.5s; font-size: 10px; }
+@keyframes season-fall { 0% { transform: translate(0, 0) rotate(0); opacity: 0; } 10% { opacity: 0.85; } 100% { transform: translate(-30px, 260px) rotate(300deg); opacity: 0; } }
+.season-summer i { animation-name: season-glow; top: auto; bottom: 10%; }
+@keyframes season-glow { 0%, 100% { transform: translate(0, 0); opacity: 0; } 50% { transform: translate(10px, -40px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .season-fx { display: none; } }

@@ -9,6 +9,7 @@ import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
 import { challengeOf } from './challenge'
 import { IDLE_MS, idleAt } from './idle'
+import type { SeasonFx } from './seasonfx'
 import { loadPetLog, nextPet, PET_BONUS, petReaction, savePetLog, type PetReaction } from './pet'
 import { dayKey } from './srs'
 import { pickLineNow, rememberLine, type Line } from './talk'
@@ -32,6 +33,7 @@ type Props = {
   night?: boolean // 夜は部屋を暗くして星を出す
   friends?: { m: MonsterState; i: number }[] // 相棒以外の仲間（i は仲間の番号）
   onSwitch?: (i: number) => void
+  season?: SeasonFx // 季節の背景演出
   onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
@@ -651,7 +653,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -674,6 +676,13 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   return (
     <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
       <RoomScene room={room} />
+      {season && (
+        <span className={`season-fx season-${season.id}`} aria-label={`季節の演出：${season.name}`}>
+          {[0, 1, 2, 3, 4, 5].map((i) => (
+            <i key={i}>{season.icon}</i>
+          ))}
+        </span>
+      )}
       {night && (
         <span className="night-sky" aria-label="夜">
           <i />

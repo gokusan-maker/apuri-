@@ -82,6 +82,7 @@ import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
 import { loadUniv } from './univ'
 import { PET_BONUS } from './pet'
+import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
@@ -654,6 +655,7 @@ function App() {
           deco={seasonEvent?.icon}
           sleepy={hour >= 22 || hour < 5}
           night={isNight(hour)}
+          season={seasonFxOf(today)}
           learned={learnedSample}
           shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
           monster={monster}

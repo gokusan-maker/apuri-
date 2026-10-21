@@ -367,6 +367,11 @@ describe('App', () => {
     expect(document.querySelector('.monster-idle')!.getAttribute('data-idle')).toMatch(/walk|sleep/)
   })
 
+  it('秋はホームに落ち葉が舞う', () => {
+    render(<App />)
+    expect(screen.getByLabelText('季節の演出：落ち葉')).toBeInTheDocument()
+  })
+
   it('相棒をタップするとひとこと話す', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('相棒にさわる'))
