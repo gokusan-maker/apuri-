@@ -6,7 +6,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, recordWin, saveBook } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
+import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, GOLDEN_COINS, goldenLook, isChance, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playCorrect, playWrong } from './sound'
@@ -32,6 +32,7 @@ type Props = {
   onSkill?: () => void // 相棒の特技が出た（特技レベル用）
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   onLose?: () => void // ハートがなくなって負けた（連勝が切れる）
+  golden?: boolean // 今日の金色ボス
   onUseItem?: (id: BattleItemId) => void
   onWinHearts?: (hearts: number) => void // 勝ったときののこりハート
   onRankBonus?: (coins: number) => void // Sランクのおまけコイン
@@ -120,8 +121,9 @@ export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose }: Props) {
-  const look = lookProp ?? BOSSES[level]
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false }: Props) {
+  const baseLook = lookProp ?? BOSSES[level]
+  const look = golden ? goldenLook(baseLook) : baseLook
   const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
@@ -254,6 +256,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (!noBook) saveBook(recordWin(loadBook(), look, battleRank(hearts, c), dayKey()))
     onWin()
     onDefeat?.()
+    if (golden) onRankBonus?.(GOLDEN_COINS)
     const d = onDrop ? dropOf(rnd()) : null
     setDrop(d)
     if (d) onDrop!(d)
@@ -312,6 +315,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           💥 {skill ? `${partner!.name}の「${specialOf(partner!.species).name}」！` : '必殺技！'} {SPECIAL_DAMAGE} ダメージ
         </p>
       )}
+      {golden && <p className="golden-boss">✨ 金色ボスがあらわれた！ たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
       <p className="boss-name">{look.name}</p>
       <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
         弱点：{speciesOf(weak).name}

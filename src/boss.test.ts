@@ -88,3 +88,10 @@ it('連勝数は保存できる', async () => {
   saveWinStreak(5)
   expect(loadWinStreak()).toBe(5)
 })
+
+it('今日の金色ボスは日付で決まり、名前に「金色の」がつく', async () => {
+  const { goldenLevelOf, goldenLook } = await import('./boss')
+  expect(goldenLevelOf(LEVELS, '2026-10-21')).toBe(goldenLevelOf(LEVELS, '2026-10-21'))
+  expect(LEVELS).toContain(goldenLevelOf(LEVELS, '2026-10-21'))
+  expect(goldenLook(BOSSES['中1']).name).toBe('金色のヤミモチ')
+})

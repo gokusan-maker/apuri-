@@ -182,3 +182,10 @@ export function saveWinStreak(n: number): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 金色ボス：日替わりで単語帳のボス1体が金色になる。たおすとおまけコイン
+export const GOLDEN_COINS = 20
+export function goldenLevelOf<T>(levels: T[], day: string): T | undefined {
+  return dailyBossLevel(levels, `gold-${day}`)
+}
+export const goldenLook = (l: BossLook): BossLook => ({ ...l, name: `金色の${l.name}`, color: '#fbbf24', line: '#92400e', eye: '#7c2d12' })

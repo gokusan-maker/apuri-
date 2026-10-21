@@ -1191,3 +1191,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .partner-status dd { margin: 0; }
 .partner-status small { color: var(--muted); }
 .listen-play { display: block; margin: 8px auto; padding: 8px 18px; font-size: 1rem; }
+.golden-boss { margin: 0; text-align: center; font-weight: 800; color: #b45309; animation: gauge-glow 0.8s ease-in-out infinite alternate; }
+.golden-boss-note { margin: 4px 0; font-size: 0.8rem; font-weight: 700; color: #b45309; }

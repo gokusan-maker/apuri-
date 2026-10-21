@@ -249,3 +249,11 @@ it('ハートがなくなると onLose が呼ばれる', () => {
   }
   expect(lose).toHaveBeenCalledTimes(1)
 })
+
+it('金色ボスをたおすとおまけコイン', () => {
+  const bonus = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} golden onRankBonus={bonus} />)
+  expect(screen.getByText('金色のヤミモチ')).toBeInTheDocument()
+  answer(true)
+  expect(bonus).toHaveBeenCalledWith(20)
+})
