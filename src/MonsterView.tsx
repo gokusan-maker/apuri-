@@ -693,7 +693,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           const r = Math.random()
           const l = learned.length > 0 && form.stage > 0 && r < 0.3 ? rememberLine(learned[Math.floor(Math.random() * learned.length)]) : pickLineNow(form.stage, mood === 'lonely', Math.random())
           setLine(l)
-          playChirp(form.stage)
+          playChirp(form.stage, monster.species)
           setPoke(poke + 1)
           if (form.stage > 0) speak(l.en)
         }}

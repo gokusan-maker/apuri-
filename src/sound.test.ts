@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { chirpFreq } from './sound'
+import { CHIRP_STYLE, chirpFreq } from './sound'
 
 describe('効果音', () => {
   afterEach(() => {
@@ -33,4 +33,9 @@ describe('効果音', () => {
 it('鳴き声は小さいすがたほど高い', () => {
   expect(chirpFreq(0)).toBeGreaterThan(chirpFreq(2))
   expect(chirpFreq(10)).toBe(400)
+})
+
+it('キャラクターごとに鳴き声の高さと並びがちがう', () => {
+  expect(Object.keys(CHIRP_STYLE).sort()).toEqual(['cat', 'dragon', 'fox', 'mochi', 'penguin', 'rabbit'])
+  expect(CHIRP_STYLE.dragon.pitch).toBeLessThan(CHIRP_STYLE.rabbit.pitch)
 })

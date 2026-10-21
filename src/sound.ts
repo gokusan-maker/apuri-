@@ -52,9 +52,19 @@ export function chirpFreq(stage: number): number {
   return Math.max(400, 1400 - stage * 200)
 }
 
-export function playChirp(stage: number) {
+// キャラクターごとの鳴き声のちがい：音の高さの倍率と、音の並び（倍率）
+export const CHIRP_STYLE: Record<string, { pitch: number; steps: number[] }> = {
+  mochi: { pitch: 1, steps: [1, 1.25] },
+  fox: { pitch: 1.1, steps: [1, 1.5, 1.2] }, // コンコン
+  penguin: { pitch: 0.9, steps: [1, 0.85, 1] }, // ペッペッ
+  rabbit: { pitch: 1.3, steps: [1.2, 1.4] }, // ぴょこっ
+  cat: { pitch: 1.15, steps: [1.3, 1, 0.8] }, // ニャーオ
+  dragon: { pitch: 0.6, steps: [1, 0.8, 1.2] }, // ガオー
+}
+
+export function playChirp(stage: number, species = 'mochi') {
   if (!ready()) return
-  const f = chirpFreq(stage)
-  tone(f, 0, 0.08)
-  tone(f * 1.25, 0.07, 0.1)
+  const st = CHIRP_STYLE[species] ?? CHIRP_STYLE.mochi
+  const f = chirpFreq(stage) * st.pitch
+  st.steps.forEach((k, i) => tone(f * k, i * 0.07, 0.09))
 }
