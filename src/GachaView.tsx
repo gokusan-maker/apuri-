@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import { GACHA_PRICE, PARTY_MAX } from './gacha'
-import { FORMS, RARITY_LABEL, type Kind } from './monster'
+import { FORMS, RARITY_LABEL, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
+
+export type GachaResult = { kind: Kind; species: Species }
 
 type Props = {
   coins: number
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
-  onDraw: (ticket: boolean) => Kind | null // 引けたら出た色ちがいを返す
+  onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onRaise?: () => void // 出たタマゴを相棒にする
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
 export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
-  const [result, setResult] = useState<{ kind: Kind; key: number } | null>(null)
+  const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const full = members >= PARTY_MAX
   return (
     <div className="gacha">
@@ -24,7 +26,7 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
         disabled={full || coins < GACHA_PRICE}
         onClick={() => {
           const k = onDraw(false)
-          if (k) setResult({ kind: k, key: Date.now() })
+          if (k) setResult({ ...k, key: Date.now() })
         }}
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${GACHA_PRICE}`}
@@ -34,7 +36,7 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
           className="good gacha-btn ticket"
           onClick={() => {
             const k = onDraw(true)
-            if (k) setResult({ kind: k, key: Date.now() })
+            if (k) setResult({ ...k, key: Date.now() })
           }}
         >
           🎟 チケットで引く（あと{tickets}枚）
@@ -48,16 +50,21 @@ export function Gacha({ coins, members, tickets = 0, onDraw, onRaise }: Props) {
           <li>レア（さくら色・うみ色・よる色）各10%</li>
           <li>スーパーレア（きんいろ）9%</li>
           <li>ウルトラレア（にじいろ）1%</li>
+          <li>キャラクター：モチ40%・コンコン25%・ペンペン25%・ドラコ10%</li>
         </ul>
       </details>
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
           <span className="gacha-capsule" aria-hidden="true" />
           <span className="gacha-egg">
-            <MonsterFigure form={FORMS[0]} kind={result.kind.id} mood="happy" />
+            <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>
-          <p className="gacha-name">{result.kind.id === 'normal' ? 'ふしぎなタマゴ' : `${result.kind.name}のタマゴ`}が仲間になった！</p>
+          <p className="gacha-name">
+            {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
+            {result.species.egg}が仲間になった！
+          </p>
+          {result.species.id !== 'mochi' && <p className="gacha-species">「{result.species.name}」の仲間だ！ {result.species.desc}</p>}
           {onRaise && (
             <button
               className="flip"

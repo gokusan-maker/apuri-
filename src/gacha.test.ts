@@ -62,3 +62,17 @@ it('相棒以外の仲間もおるすばんで少しずつ育つ', async () => {
   const one = { active: 0, members: [{ xp: 1 }] }
   expect(feedHelpers(one, 40, '2026-10-20')).toBe(one)
 })
+
+it('ガチャでキャラクターの種類も決まる（モチ40%・コンコン25%・ペンペン25%・ドラコ10%）', async () => {
+  const { rollSpecies, formOf } = await import('./monster')
+  const count: Record<string, number> = {}
+  for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
+  expect(count).toEqual({ mochi: 400, fox: 250, penguin: 250, dragon: 100 })
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.95)!
+  expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
+  expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
+  expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
+  expect(formOf({ xp: 99999, species: 'penguin', branch: 'ear' }).name).toBe('シンワノソラペンギ')
+  expect(sanitizeMonster({ xp: 1, species: 'dragon' }).species).toBe('dragon')
+  expect(sanitizeMonster({ xp: 1, species: 'unicorn' }).species).toBeUndefined()
+})

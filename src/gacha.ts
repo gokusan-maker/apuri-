@@ -1,5 +1,5 @@
 // タマゴガチャ：コイン（勉強でたまる）で新しいタマゴを引く。色ちがいが出ることもある
-import { rollKind, type Kind } from './monster'
+import { rollKind, rollSpecies, type Kind, type Species } from './monster'
 import type { Party } from './party'
 import type { Wallet } from './shop'
 
@@ -19,9 +19,11 @@ export function addTicket(w: Wallet): Wallet {
 
 // 引けたら、コインを減らしてタマゴを仲間に加える
 // ticket=true のときはコインのかわりにチケットを1枚使う
-export function drawEgg(w: Wallet, p: Party, r: number, ticket = false): { wallet: Wallet; party: Party; kind: Kind } | null {
+// r は色ちがい、r2 はキャラクターの種類を決める乱数
+export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
   if (!canDraw(w, p, ticket)) return null
   const kind = rollKind(r)
-  const egg = kind.id === 'normal' ? { xp: 0 } : { xp: 0, kind: kind.id }
-  return { wallet: ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind }
+  const species = rollSpecies(r2)
+  const egg = { xp: 0, ...(kind.id === 'normal' ? {} : { kind: kind.id }), ...(species.id === 'mochi' ? {} : { species: species.id }) }
+  return { wallet: ticket ? { ...w, tickets: (w.tickets ?? 1) - 1 } : { ...w, coins: w.coins - GACHA_PRICE }, party: { ...p, members: [...p.members, egg], gacha: (p.gacha ?? 0) + 1 }, kind, species }
 }

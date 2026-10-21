@@ -73,7 +73,7 @@ it('Lv15からはしっぽと模様、神話の姿はきらきら', () => {
 it('図鑑は系統ごとに進化の流れで並ぶ（全15種）', async () => {
   const { Zukan } = await import('./MonsterView')
   render(<Zukan monsters={[{ xp: 0 }]} />)
-  expect(document.querySelectorAll('.zukan-row')).toHaveLength(5) // 4系統＋色ちがい
+  expect(document.querySelectorAll('.zukan-row')).toHaveLength(6) // 4系統＋キャラクター＋色ちがい
   expect(document.querySelectorAll('.zukan-line:not(.zukan-kinds) li')).toHaveLength(15)
   expect(document.querySelectorAll('.zukan-arrow')).toHaveLength(11)
 })
@@ -96,4 +96,13 @@ it('なかまの画面にそれぞれのレベル・XPバー・次の進化ま�
   expect(screen.getByText('あとLv3で進化')).toBeInTheDocument()
   expect(screen.getByText(/うみ色/)).toBeInTheDocument()
   expect(document.querySelectorAll('.party-bar')).toHaveLength(2)
+})
+
+it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラコ）の集まり具合が出る', async () => {
+  const { Zukan } = await import('./MonsterView')
+  const { screen } = await import('@testing-library/react')
+  render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon' }]} />)
+  expect(screen.getByText(/キャラクター 2 \/ 4/)).toBeInTheDocument()
+  expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
+  expect(screen.getAllByLabelText('まだ出会っていないキャラクター')).toHaveLength(2)
 })

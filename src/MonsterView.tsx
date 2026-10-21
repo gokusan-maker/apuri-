@@ -2,7 +2,7 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, withKind, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, seenForms, type Form, type MonsterState } from './monster'
 import { EGG_MILESTONES, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -238,6 +238,61 @@ function Markings({ form, line }: { form: Form; line: string }) {
   )
 }
 
+// キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
+function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
+  if (species === 'fox')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        <path d="M76 82 Q100 80 96 54 Q90 40 84 50 Q90 64 76 72 Z" fill={fill} />
+        <path d="M96 54 Q90 40 84 50 Q88 52 92 58 Z" fill="#fff" strokeWidth="1.5" />
+      </g>
+    )
+  return <path d="M76 80 Q92 84 96 72 L100 66 L92 68 L94 60 L86 66 Q84 74 76 72 Z" fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round" />
+}
+
+function DragonWings({ fill, line }: { fill: string; line: string }) {
+  const wing = 'M0 0 L-14 -20 L-10 -12 L-20 -14 L-12 -6 L-20 -2 Z'
+  return (
+    <g className="wings" fill={fill} stroke={line} strokeWidth="2" strokeLinejoin="round">
+      <path transform="translate(24 52)" d={wing} />
+      <path transform="translate(76 52) scale(-1 1)" d={wing} />
+    </g>
+  )
+}
+
+// 頭のパーツ（角・耳）
+function SpeciesHead({ species, fill, line, big = false }: { species: string; fill: string; line: string; big?: boolean }) {
+  if (species === 'dragon')
+    return (
+      <g fill="#fde68a" stroke="#92400e" strokeWidth="2" strokeLinejoin="round" transform={big ? 'translate(50 34) scale(1.35) translate(-50 -34)' : undefined}>
+        <path d="M34 34 Q26 22 30 12 Q34 24 40 30 Z" />
+        <path d="M66 34 Q74 22 70 12 Q66 24 60 30 Z" />
+      </g>
+    )
+  if (species === 'fox')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        <path d="M24 44 L22 12 L44 30 Z" fill={fill} />
+        <path d="M76 44 L78 12 L56 30 Z" fill={fill} />
+        <path d="M27 36 L26 20 L37 30 Z M73 36 L74 20 L63 30 Z" fill="#fde68a" stroke="none" />
+      </g>
+    )
+  return null
+}
+
+// 顔まわりのパーツ（おなか・口もと）
+function SpeciesFace({ species }: { species: string }) {
+  if (species === 'penguin') return <ellipse cx="50" cy="70" rx="22" ry="18" fill="#fff" opacity="0.92" />
+  if (species === 'fox') return <path d="M32 66 Q50 58 68 66 Q66 84 50 86 Q34 84 32 66 Z" fill="#fff" opacity="0.85" />
+  if (species === 'dragon')
+    return (
+      <g fill="none" stroke="#fef3c7" strokeWidth="2" opacity="0.9" strokeLinecap="round">
+        <path d="M40 80 Q50 84 60 80 M42 85 Q50 88 58 85" />
+      </g>
+    )
+  return null
+}
+
 // 系統「耳」のつばさ。段階が上がると大きくなる
 function Wings({ form, fill, line }: { form: Form; fill: string; line: string }) {
   const big = form.stage >= 4 ? 1.35 : 1
@@ -427,7 +482,7 @@ export function MonsterFigure({
   const form = withKind(baseForm, kind)
   const rainbow = kind === 'niji' && !hidden
   const gold = kind === 'kin' && !hidden
-  const uid = (kind ?? '') + form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
+  const uid = (kind ?? '') + (form.species ?? '') + form.id.replace(/[^a-z]/g, '') + useId().replace(/[^a-zA-Z0-9]/g, '')
   const fill = hidden ? '#9ca3af' : form.color
   const line = hidden ? '#6b7280' : form.line
   const body = hidden ? fill : `url(#b${uid})`
@@ -497,10 +552,15 @@ export function MonsterFigure({
       {form.stage >= 3 && !hidden && <Particles form={form} />}
       <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
         <g className={hidden ? undefined : 'monster-breathe'}>
-          {form.stage >= 3 && <Tail form={form} fill={hidden ? fill : body} line={line} />}
+          {form.species === 'fox' || form.species === 'dragon' ? (
+            form.stage >= 1 && <SpeciesTail species={form.species} fill={hidden ? fill : body} line={line} />
+          ) : (
+            form.stage >= 3 && <Tail form={form} fill={hidden ? fill : body} line={line} />
+          )}
+          {form.species === 'dragon' && form.stage >= 2 && form.branch !== 'ear' && <DragonWings fill={hidden ? fill : shade(form.color, 0.3)} line={line} />}
           {form.branch === 'ear' && <Wings form={form} fill={hidden ? fill : shade(form.color, 0.25)} line={line} />}
           {form.stage >= 2 && (
-            <g fill={body} stroke={line} strokeWidth="3">
+            <g fill={form.species === 'penguin' && !hidden ? '#fb923c' : body} stroke={line} strokeWidth="3">
               <ellipse cx="36" cy="89" rx="9" ry="5" />
               <ellipse cx="64" cy="89" rx="9" ry="5" />
             </g>
@@ -508,6 +568,7 @@ export function MonsterFigure({
           <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" fill={body} stroke={line} strokeWidth="3" />
           {!hidden && <ellipse cx="50" cy="77" rx="18" ry="10" fill="#fff" opacity="0.28" />}
           {!hidden && <ellipse cx="34" cy="38" rx="8" ry="4.5" fill="#fff" opacity="0.55" transform="rotate(-25 34 38)" />}
+          {!hidden && form.species && <SpeciesFace species={form.species} />}
           {!hidden && form.stage >= 3 && <Markings form={form} line={line} />}
           {!hidden && form.stage >= 6 && (
             <g fill="#fff" className="myth-glitter">
@@ -526,6 +587,7 @@ export function MonsterFigure({
           {form.stage === 1 && !hidden && (
             <path d="M30 34 L36 26 L42 33 L50 24 L58 33 L64 26 L70 34 Q50 24 30 34 Z" fill="#fef3c7" stroke="#d97706" strokeWidth="2" strokeLinejoin="round" />
           )}
+          {form.species && <SpeciesHead species={form.species} fill={hidden ? fill : body} line={line} big={form.stage >= 3} />}
           {!hidden && !(form.stage <= 2 && wearList(wear).some((w) => slotOf(w) === 'head')) && <Crest form={form} line={line} />}
           {form.stage >= 4 && (
             <g stroke="#a16207" strokeWidth="2" strokeLinejoin="round">
@@ -544,6 +606,7 @@ export function MonsterFigure({
           ) : (
             <Face mood={mood} />
           )}
+          {!hidden && form.species === 'penguin' && <path d="M45 62 L55 62 L50 68 Z" fill="#fb923c" stroke="#9a3412" strokeWidth="1.2" strokeLinejoin="round" />}
           {!hidden && <Wear id={wear} />}
         </g>
       </g>
@@ -730,6 +793,7 @@ const ZUKAN_ROWS = [
 export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   const seen = new Set(monsters.flatMap(seenForms))
   const kinds = new Set(monsters.map((m) => m.kind).filter(Boolean))
+  const species = new Set(monsters.map((m) => m.species).filter(Boolean))
   const [detail, setDetail] = useState<Form | null>(null)
   return (
     <div className="zukan">
@@ -768,6 +832,26 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           </ol>
         </div>
       ))}
+      <div className="zukan-row">
+        <span className="zukan-row-label">
+          🐾 キャラクター {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).length} / {SPECIES.length}（タマゴガチャで出るよ）
+        </span>
+        <ol className="zukan-line zukan-kinds zukan-species">
+          {SPECIES.map((sp) => {
+            const got = sp.id === 'mochi' || species.has(sp.id)
+            return (
+              <li key={sp.id} className={got ? 'got' : 'locked'}>
+                <span className="zukan-pick" aria-label={got ? `${sp.name}：${sp.desc}` : 'まだ出会っていないキャラクター'}>
+                  <span className="zukan-figure">
+                    <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!got} />
+                  </span>
+                  <span className="badge-name">{got ? sp.name : '？？？'}</span>
+                </span>
+              </li>
+            )
+          })}
+        </ol>
+      </div>
       <div className="zukan-row">
         <span className="zukan-row-label">
           🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}（タマゴガチャで出るよ）

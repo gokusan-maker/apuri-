@@ -705,11 +705,11 @@ function App() {
           members={party.members.length}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => {
-            const r = drawEgg(wallet, party, Math.random(), ticket)
+            const r = drawEgg(wallet, party, Math.random(), ticket, Math.random())
             if (!r) return null
             setWallet(r.wallet)
             setParty(r.party)
-            return r.kind
+            return { kind: r.kind, species: r.species }
           }}
           onEat={(id) => {
             const r = eat(wallet, snacks, id, today)

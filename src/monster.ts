@@ -13,6 +13,7 @@ export type MonsterState = {
   wear?: string // 着ている飾り（ショップのアイテムid）
   born?: string // 最初にXPをもらった日（出会った日）
   kind?: string // 色ちがい（ガチャのタマゴ）。無いときはふつうの色
+  species?: string // キャラクターの種類（ガチャのタマゴ）。無いときはモチ
 }
 
 export const XP_QUIZ_CORRECT = 10
@@ -58,6 +59,7 @@ export function sanitizeMonster(v: unknown): MonsterState {
   if (typeof m.wear === 'string') out.wear = m.wear
   if (typeof m.born === 'string') out.born = m.born
   if (typeof m.kind === 'string' && KINDS.some((k) => k.id === m.kind)) out.kind = m.kind
+  if (typeof m.species === 'string' && m.species !== 'mochi' && SPECIES.some((k) => k.id === m.species)) out.species = m.species
   return out
 }
 
@@ -124,6 +126,7 @@ export type Form = {
   color: string
   line: string
   hint: string // 図鑑で未発見のときのヒント
+  species?: string // キャラクターの種類（無いときはモチ）
 }
 
 // 図鑑の説明文
@@ -172,9 +175,8 @@ export function dominant(src: MonsterState['src']): Source {
 
 export function formOf(m: MonsterState): Form {
   const stage = stageOf(levelInfo(m.xp).level).index
-  if (stage < 3) return FORMS.find((f) => f.stage === stage)!
-  const branch = m.branch ?? dominant(m.src)
-  return FORMS.find((f) => f.stage === stage && f.branch === branch)!
+  const base = stage < 3 ? FORMS.find((f) => f.stage === stage)! : FORMS.find((f) => f.stage === stage && f.branch === (m.branch ?? dominant(m.src)))!
+  return withSpecies(base, m.species)
 }
 
 // XP をあげる。Lv15 に届いた時点の学び方で系統が決まり、以後は変わらない。
@@ -244,4 +246,44 @@ export function rollKind(r: number): Kind {
 export function withKind(form: Form, kind: string | undefined): Form {
   const k = kindOf(kind)
   return k.color ? { ...form, color: k.color, line: k.line } : form
+}
+
+// キャラクターの種類（タマゴガチャで出る）。名前の「モチ」が種類ごとの呼び名に変わる
+export type Species = {
+  id: string
+  name: string
+  egg: string // タマゴの名前
+  token: string // 小さいうちの呼び名（ちび〇〇・〇〇まる）
+  bigToken: string // Lv15 からの呼び名
+  color: string // 小さいうち（Lv15まで）の体の色
+  line: string
+  rate: number // ガチャで出る割合
+  desc: string
+}
+
+export const SPECIES: Species[] = [
+  { id: 'mochi', name: 'モチ', egg: 'ふしぎなタマゴ', token: 'モチ', bigToken: 'モチ', color: '', line: '', rate: 0.4, desc: 'ぷにぷにのなかよしモンスター。カードで単語をコツコツ覚えるのが好き。' },
+  { id: 'fox', name: 'コンコン', egg: 'こがねのタマゴ', token: 'コン', bigToken: 'コンコ', color: '#fdba74', line: '#c2410c', rate: 0.25, desc: 'ふさふさしっぽのかしこいキツネ。文法のきまりを見ぬくのが得意。' },
+  { id: 'penguin', name: 'ペンペン', egg: 'こおりのタマゴ', token: 'ペン', bigToken: 'ペンギ', color: '#93c5fd', line: '#1e3a8a', rate: 0.25, desc: 'よちよち歩きのペンギン。ばらばらの単語をきれいに並べるのが好き。' },
+  { id: 'dragon', name: 'ドラコ', egg: 'ほのおのタマゴ', token: 'ドラ', bigToken: 'ドラゴ', color: '#fca5a5', line: '#b91c1c', rate: 0.1, desc: 'めったに出会えない小さなドラゴン。育つと英語で話しはじめ、英文の意味を読みとくのが得意。' },
+]
+
+export const speciesOf = (id: string | undefined): Species => SPECIES.find((x) => x.id === id) ?? SPECIES[0]
+
+// 0〜1の乱数から種類を決める：モチ40%・コンコン25%・ペンペン25%・ドラコ10%
+export function rollSpecies(r: number): Species {
+  let acc = 0
+  for (const sp of SPECIES) {
+    acc += sp.rate
+    if (r < acc) return sp
+  }
+  return SPECIES[SPECIES.length - 1]
+}
+
+// 種類をあてた姿：名前の「モチ」を種類の呼び名に、小さいうちは体の色も種類の色に
+export function withSpecies(form: Form, species: string | undefined): Form {
+  const sp = speciesOf(species)
+  if (sp.id === 'mochi') return form
+  const name = form.stage === 0 ? sp.egg : form.name.replace(/モチ/g, form.stage >= 3 ? sp.bigToken : sp.token)
+  return form.stage < 3 ? { ...form, name, species: sp.id, color: sp.color, line: sp.line } : { ...form, name, species: sp.id }
 }

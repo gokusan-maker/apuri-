@@ -3,7 +3,7 @@ import { formOf, type MonsterState } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
-import type { Kind } from './monster'
+import type { GachaResult } from './GachaView'
 import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
   onBuyFreeze?: () => void
   onRoom?: (id: string | undefined) => void
   members?: number // 仲間の数（ガチャ用）
-  onGacha?: (ticket: boolean) => Kind | null
+  onGacha?: (ticket: boolean) => GachaResult | null
   onRaiseNew?: () => void
 }
 
