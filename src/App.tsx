@@ -1161,6 +1161,7 @@ function App() {
             onGame={() => count('game')}
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
+            onXp={(n) => gainXp(n, null)}
             onTicket={() => {
               setWallet((w) => addTicket(w))
               pushToast([{ id: 'stamp', text: '📮 文法スタンプが10個たまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])

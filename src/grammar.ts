@@ -1196,3 +1196,6 @@ export function saveCardsKnown(ids: string[]): void {
   }
 }
 export const markKnown = (ids: string[], id: string, known: boolean) => (known ? (ids.includes(id) ? ids : [...ids, id]) : ids.filter((x) => x !== id))
+
+// 単元をはじめて全問正解したときのXP
+export const GRAMMAR_CLEAR_XP = 30

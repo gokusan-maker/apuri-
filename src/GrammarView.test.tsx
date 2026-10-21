@@ -208,3 +208,29 @@ it('単元に★をつけると一覧の上に来る', () => {
   fireEvent.click(screen.getByRole('button', { name: `${last.title}をお気に入りからはずす` }))
   expect(document.querySelectorAll('.grammar-list li')[0].textContent).toContain(GRAMMAR[0].title)
 })
+
+it('単元をはじめて全問正解するとXPボーナス（2回目はなし）', () => {
+  localStorage.clear()
+  const onFirstClear = vi.fn()
+  render(<Grammar onFirstClear={onFirstClear} />)
+  const unit = GRAMMAR[0]
+  const solve = () => {
+    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByText('確認問題へ（3問）'))
+    for (const q of unit.questions) {
+      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+  }
+  solve()
+  expect(onFirstClear).toHaveBeenCalledTimes(1)
+  expect(screen.getByText('🌟 はじめての全問正解！ モンスターに XP+30')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('もう一度'))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(onFirstClear).toHaveBeenCalledTimes(1)
+  expect(screen.queryByText(/はじめての全問正解/)).toBeNull()
+})
