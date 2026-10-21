@@ -867,3 +867,10 @@ button:focus:not(:focus-visible) { outline: none; }
 .friend-more { font-size: 0.7rem; color: var(--muted); }
 .gacha-odds { font-size: 0.8rem; color: #4b5563; } .gacha-odds ul { margin: 4px 0; padding-left: 18px; }
 .gacha-species { margin: 0 0 6px; font-size: 0.85rem; color: #4b5563; }
+/* 相棒の励まし（画面のはしから顔を出す） */
+.pet-cheer { position: fixed; left: 8px; bottom: 76px; z-index: 30; display: flex; align-items: flex-end; gap: 4px; max-width: calc(100% - 16px); animation: pet-in 0.4s ease-out; cursor: pointer; }
+.pet-cheer-face { width: 56px; height: 56px; flex: none; }
+.pet-cheer-bubble { position: relative; margin-bottom: 30px; padding: 6px 10px; border-radius: 14px; background: #fff; color: #1f2937; box-shadow: 0 2px 8px rgb(0 0 0 / 0.18); font-weight: 700; font-size: 0.95rem; }
+.pet-cheer-ja { display: block; font-size: 0.75rem; font-weight: 400; color: #6b7280; }
+@keyframes pet-in { from { transform: translateX(-80px); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .pet-cheer { animation: none; } }

@@ -75,6 +75,9 @@ import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
+import { cheerEvent, encourage, type Cheer } from './encourage'
+import { PetCheer } from './PetCheerView'
+import { speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
@@ -230,8 +233,26 @@ function App() {
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
   const count = (c: Counter, n = 1) => setMissions((m) => bump(m, today, c, n))
 
+  // 相棒の励まし（連続正解・連続ミスで声をかけてくれる）
+  const run = useRef({ ok: 0, ng: 0 })
+  const [petCheer, setPetCheer] = useState<{ cheer: Cheer; key: number } | null>(null)
+  useEffect(() => {
+    if (!petCheer) return
+    const id = window.setTimeout(() => setPetCheer(null), 3200)
+    return () => window.clearTimeout(id)
+  }, [petCheer])
+
   // 1問答えるごとに呼ぶ（正解・不正解どちらでも）
   function studied(correct: boolean) {
+    run.current = correct ? { ok: run.current.ok + 1, ng: 0 } : { ok: 0, ng: run.current.ng + 1 }
+    const ev = cheerEvent(run.current.ok, run.current.ng)
+    if (ev) {
+      const f = formOf(monster)
+      const n = (run.current.ok + run.current.ng * 3 + todayCount.count) * 7
+      const c = encourage(monster.species, f.stage, ev, (n % 100) / 100)
+      setPetCheer((p) => ({ cheer: c, key: (p?.key ?? 0) + 1 }))
+      if (settings.sound) speakPet(c.text, c.lang, f.stage >= 3 ? 1.2 : 1.6)
+    }
     count('answers')
     if (correct) count('correct')
     if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
@@ -1018,6 +1039,7 @@ function App() {
           </div>
         </div>
       )}
+      {petCheer && <PetCheer key={petCheer.key} cheer={petCheer.cheer} form={formOf(monster)} kind={monster.kind} onClose={() => setPetCheer(null)} />}
       {missionToast.length > 0 && (
         <div className="badge-toast mission-toast" role="status" onClick={() => setToastQueue(dequeue)}>
           <span className="badge-icon" aria-hidden="true">

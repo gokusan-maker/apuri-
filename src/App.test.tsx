@@ -413,6 +413,18 @@ describe('App', () => {
     expect(screen.getByText('おるすばん中のタマが「ちびモチ」にかえった！')).toBeInTheDocument()
   })
 
+  it('3問続けて正解すると相棒が顔を出して励ましてくれる（小さいうちは日本語）', () => {
+    render(<App />)
+    for (let i = 0; i < 3; i++) {
+      expect(document.querySelector('.pet-cheer')).toBeNull()
+      fireEvent.click(screen.getByText('意味を見る'))
+      fireEvent.click(screen.getByText('覚えた'))
+    }
+    const c = document.querySelector('.pet-cheer')!
+    expect(c).not.toBeNull()
+    expect(c.querySelector('.pet-cheer-text')!.textContent).toMatch(/[ぁ-んァ-ン]/)
+  })
+
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))

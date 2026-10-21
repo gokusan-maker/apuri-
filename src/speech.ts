@@ -42,3 +42,18 @@ export function englishVoices(): string[] {
   if (typeof window === 'undefined' || !('speechSynthesis' in window)) return []
   return (window.speechSynthesis.getVoices?.() ?? []).filter((v) => v.lang.toLowerCase().startsWith('en')).map((v) => v.name)
 }
+
+// 相棒の声：ペットらしく少し高めの声で。lang が ja なら日本語で読む
+export function speakPet(text: string, lang: 'ja' | 'en', pitch = 1.5): void {
+  if (typeof window === 'undefined' || !('speechSynthesis' in window)) return
+  const { rate, accent } = loadSettings()
+  const u = new SpeechSynthesisUtterance(text)
+  u.lang = lang === 'ja' ? 'ja-JP' : accent
+  u.rate = rate
+  u.pitch = pitch
+  const voices = window.speechSynthesis.getVoices?.() ?? []
+  const voice = voices.find((v) => v.lang.replace('_', '-').startsWith(u.lang.slice(0, 2)))
+  if (voice) u.voice = voice
+  window.speechSynthesis.cancel()
+  window.speechSynthesis.speak(u)
+}
