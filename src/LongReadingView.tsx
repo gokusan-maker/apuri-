@@ -116,6 +116,28 @@ export function LongReading({ onAnswer }: Props) {
           </div>
         ))}
       </div>
+      {p.table && (
+        <div className="long-table-wrap">
+          <table className="long-table">
+            <thead>
+              <tr>
+                {p.table[0].map((h) => (
+                  <th key={h}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {p.table.slice(1).map((row) => (
+                <tr key={row[0]}>
+                  {row.map((c, i) => (
+                    <td key={i}>{c}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
       <button className="list-link" onClick={() => setShowJa(!showJa)}>
         {showJa ? '和訳をかくす' : '和訳を見る'}
       </button>

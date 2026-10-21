@@ -1135,3 +1135,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-vocab strong { color: #1d4ed8; margin-right: 4px; }
 .boss-btn.rush-boss.ex { background: linear-gradient(90deg, #f59e0b, #ef4444, #a855f7); box-shadow: 0 0 12px #fcd34d; }
 .weak-grammar-btn { display: block; margin: 6px auto; color: #b91c1c; }
+
+.long-table-wrap { overflow-x: auto; margin: 8px 0; }
+.long-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; }
+.long-table th, .long-table td { border: 1px solid #cbd5e1; padding: 4px; text-align: left; }
+.long-table th { background: #e0f2fe; }

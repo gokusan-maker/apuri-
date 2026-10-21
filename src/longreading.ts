@@ -7,7 +7,7 @@ export type Underline = { phrase: string; choices: string[]; answer: number; why
 export type Ordering = { words: string[]; rest: string; answer: string; ja: string } // 語句整序：words を並べて answer に（rest は後ろに続く語）
 export type SentenceBlank = { id: string; choices: string[]; answer: number; why: string } // 会話文の [ 1 ] に入る文
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[] }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][] }
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -502,6 +502,109 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Mr. Brown wrote the English script for the class.', answer: false, why: '台本はクラスの生徒が自分たちで書いた。' },
       { statement: 'The script is about two pages long.', answer: true, why: '第4段落の内容と合う。' },
       { statement: 'The class will start filming on Sunday.', answer: false, why: '撮影を始めるのは土曜日。' },
+    ],
+  },
+  {
+    id: 'lost-dog',
+    title: 'Coco Goes Home',
+    level: '中2〜中3（物語）',
+    paragraphs: [
+      'One cold evening, Sora found a small brown dog sitting alone ( A ) the park gate. It had a red collar, but there was no name on it. The dog was shaking, so Sora wrapped it in his scarf and took it home.',
+      'His mother said, "Its family must be worried. Let\'s look ( B ) them tomorrow." The next morning, Sora made posters with a picture of the dog and put them up around the town.',
+      'Two days passed, but nobody called. Sora was starting to think that he could keep the dog. Then one afternoon, the phone rang. It was an old woman who lived ( C ) the other side of the river. "That\'s my Coco!" she cried.',
+      'When she came to Sora\'s house, Coco ran to her ( D ) soon as it saw her. The woman thanked Sora many times. Although Sora felt a little sad, he was glad that Coco was back ( E ) her family.',
+    ],
+    ja: [
+      'ある寒い夕方、ソラは公園の門のところに1ぴきで座っている小さな茶色の犬を見つけました。赤い首輪をしていましたが、名前は書いてありませんでした。犬がふるえていたので、ソラは自分のマフラーで包んで家に連れて帰りました。',
+      'お母さんは「家族がきっと心配しているわ。明日さがしてみましょう」と言いました。次の朝、ソラは犬の写真入りのポスターを作り、町のあちこちにはりました。',
+      '2日が過ぎましたが、だれからも電話はありませんでした。ソラは、この犬を飼えるかもしれないと思いはじめていました。そんなある日の午後、電話が鳴りました。川の向こう側に住むおばあさんでした。「それはうちのココよ！」と彼女はさけびました。',
+      'おばあさんがソラの家に来ると、ココは彼女を見るとすぐにかけ寄りました。おばあさんは何度もソラにお礼を言いました。ソラは少しさびしかったけれど、ココが家族のもとにもどれたことがうれしかったのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'from', 'into', 'over'], answer: 0, why: '「門のところに」と場所の一点を表すのは at。' },
+      { id: 'B', choices: ['at', 'for', 'into', 'on'], answer: 1, why: 'look for 〜 で「〜をさがす」。' },
+      { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 2, why: 'on the other side of 〜 で「〜の向こう側に」。' },
+      { id: 'D', choices: ['as', 'so', 'too', 'very'], answer: 0, why: 'as soon as 〜 で「〜するとすぐに」。' },
+      { id: 'E', choices: ['at', 'by', 'to', 'with'], answer: 3, why: 'back with her family で「家族のもとにもどって」。' },
+    ],
+    tf: [
+      { statement: 'Sora found the dog on a cold evening.', answer: true, why: '第1段落の最初の文と合う。' },
+      { statement: "The dog's name was written on its collar.", answer: false, why: '首輪に名前はなかった。' },
+      { statement: "Sora's mother wanted to keep the dog.", answer: false, why: 'お母さんは家族をさがそうと言った。' },
+      { statement: 'The old woman lived on the other side of the river.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Sora felt only happy when Coco went back home.', answer: false, why: '少しさびしかったが、うれしかった。' },
+    ],
+  },
+  {
+    id: 'autumn-leaves',
+    title: 'Why Do Leaves Change Color?',
+    level: '中3（説明文）',
+    paragraphs: [
+      'In autumn, many trees change the color of their leaves from green ( A ) red or yellow. Why does this happen?',
+      'Leaves are green because they have a lot of chlorophyll. Chlorophyll helps trees make food ( B ) sunlight. In autumn, the days get shorter and the air becomes colder, so trees stop making so much food. As the chlorophyll breaks down, the green color disappears.',
+      'Then the yellow and orange colors, which were hidden ( C ) the green, can be seen. Some trees, like maples, also make a new red color in autumn. Sunny days and cool nights help make this red color brighter.',
+      'So, the beautiful colors of autumn are not just for us to enjoy. They are a sign that trees are getting ready ( D ) the long, cold winter. Next time you see red leaves, think about what is happening ( E ) the tree.',
+    ],
+    ja: [
+      '秋になると、多くの木が葉の色を緑から赤や黄色に変えます。どうしてこうなるのでしょうか。',
+      '葉が緑なのは、葉緑素をたくさん持っているからです。葉緑素は、木が日光から栄養を作るのを助けます。秋になると日が短くなり空気が冷たくなるので、木はあまり栄養を作らなくなります。葉緑素がこわれていくにつれて、緑色が消えていきます。',
+      'すると、緑にかくれていた黄色やオレンジ色が見えるようになります。カエデのように、秋に新しく赤い色を作る木もあります。晴れた日と涼しい夜が、この赤い色をよりあざやかにします。',
+      'つまり、秋の美しい色は、私たちが楽しむためだけのものではないのです。それは、木が長く寒い冬にそなえている合図です。今度赤い葉を見たら、木の中で何が起きているのか考えてみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'from A to B で「A から B へ」。' },
+      { id: 'B', choices: ['about', 'from', 'into', 'of'], answer: 1, why: 'make A from B で「B から A を作る」。' },
+      { id: 'C', choices: ['at', 'by', 'for', 'to'], answer: 1, why: '受け身 be hidden by 〜 で「〜によってかくされる」。' },
+      { id: 'D', choices: ['at', 'for', 'in', 'with'], answer: 1, why: 'get ready for 〜 で「〜の準備をする」。' },
+      { id: 'E', choices: ['between', 'inside', 'over', 'under'], answer: 1, why: '「木の中で」なので inside。' },
+    ],
+    tf: [
+      { statement: 'Leaves are green because of chlorophyll.', answer: true, why: '第2段落の最初の文と合う。' },
+      { statement: 'In autumn, trees make more food than in summer.', answer: false, why: '秋はあまり栄養を作らなくなる。' },
+      { statement: 'The yellow colors were hidden by the green color.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Maples make a new blue color in autumn.', answer: false, why: '新しく作るのは赤い色。' },
+      { statement: 'Sunny days and cool nights make the red color brighter.', answer: true, why: '第3段落の最後の文と合う。' },
+    ],
+  },
+  {
+    id: 'sports-center',
+    title: 'New Classes at Green City Sports Center (表)',
+    level: '中3〜高校入試（表を読む）',
+    paragraphs: [
+      'Green City Sports Center has started new classes for children this spring. Look ( A ) the table below and choose a class that is right for you.',
+      'All classes are for children from six ( B ) fifteen years old. If you have never taken a class before, please start with a Beginners class. The center is open from 9:00 a.m. to 8:00 p.m. every day except Tuesday.',
+      'You can join only one class a week. To join, fill out the form at the front desk ( C ) the end of April. Classes start on May 7.',
+      'Students who join with a brother or sister can get 500 yen off the monthly fee. Please bring your own towel ( D ) water bottle. If you have any questions, please call the front desk.',
+    ],
+    ja: [
+      'グリーン市スポーツセンターでは、この春から子ども向けの新しい教室を始めました。下の表を見て、自分に合った教室を選んでください。',
+      'どの教室も6歳から15歳までの子どもが対象です。はじめて教室に参加する人は、初級クラスから始めてください。センターは火曜日以外の毎日、午前9時から午後8時まで開いています。',
+      '参加できるのは週に1つの教室だけです。参加するには、4月末までに受付で申込用紙に記入してください。教室は5月7日に始まります。',
+      'きょうだいといっしょに参加する人は、月謝が500円引きになります。自分のタオルと水筒を持ってきてください。質問があれば、受付に電話してください。',
+    ],
+    table: [
+      ['Class', 'Day', 'Time', 'Monthly fee'],
+      ['Swimming (Beginners)', 'Monday', '4:00–5:00 p.m.', '3,000 yen'],
+      ['Swimming (Advanced)', 'Wednesday', '5:00–6:30 p.m.', '4,000 yen'],
+      ['Dance', 'Friday', '4:30–5:30 p.m.', '3,500 yen'],
+      ['Tennis', 'Saturday', '9:00–11:00 a.m.', '4,500 yen'],
+    ],
+    blanks: [
+      { id: 'A', choices: ['after', 'at', 'for', 'into'], answer: 1, why: 'look at 〜 で「〜を見る」。' },
+      { id: 'B', choices: ['at', 'by', 'in', 'to'], answer: 3, why: 'from A to B で「A から B まで」。' },
+      { id: 'C', choices: ['by', 'for', 'since', 'until'], answer: 0, why: '「4月末までに（記入する）」と期限を表すのは by。' },
+      { id: 'D', choices: ['and', 'but', 'or', 'so'], answer: 0, why: '「タオルと水筒」の両方を持ってくるので and。' },
+    ],
+    qa: [
+      { q: 'Ken wants to take a class on the weekend. Which class can he join?', choices: ['Swimming (Beginners)', 'Swimming (Advanced)', 'Dance', 'Tennis'], answer: 3, why: '表で週末（土曜日）にあるのはテニスだけ。' },
+      { q: 'Aya will join the Dance class with her brother. How much will Aya pay a month?', choices: ['500 yen', '3,000 yen', '3,500 yen', '4,000 yen'], answer: 1, why: 'ダンスは月3,500円。きょうだいで参加すると500円引きなので3,000円。' },
+    ],
+    tf: [
+      { statement: 'The Dance class is on Friday.', answer: true, why: '表のとおり。' },
+      { statement: 'The Tennis class is held in the afternoon.', answer: false, why: 'テニスは午前9時〜11時。' },
+      { statement: 'Children who have never taken a class should start with a Beginners class.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Students can join two classes a week.', answer: false, why: '週に1つの教室だけ。' },
+      { statement: 'The Advanced Swimming class costs 4,000 yen a month.', answer: true, why: '表のとおり。' },
     ],
   },
 ]
