@@ -109,6 +109,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
+import { BossAlly } from './BossAllyView'
 import { loadLongRecord } from './longreading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
@@ -1308,6 +1309,7 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
+          {mode === 'boss' && <BossAlly buddy={buddies.reading} />}
           {mode === 'reading' && (
           <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
             {READ_LEVELS.map((t) => (

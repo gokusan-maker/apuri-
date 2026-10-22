@@ -1554,3 +1554,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .quick-grades { display: flex; gap: 4px; justify-content: center; margin: -6px 0 12px; flex-wrap: wrap; }
 .quick-grades button { padding: 4px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); background: var(--card); color: inherit; font-size: 0.8rem; }
 .quick-grades button[aria-pressed='true'] { background: var(--accent); color: #fff; border-color: var(--accent); }
+.boss-ally { display: flex; align-items: center; gap: 8px; padding: 6px 10px; margin: 0 0 10px; border-radius: 14px; background: linear-gradient(90deg, #ede9fe, #dbeafe); color: #1e1b4b; text-align: left; }
+.boss-ally-text { display: flex; flex-direction: column; min-width: 0; }
+.boss-ally-text small { font-size: 0.72rem; color: #4338ca; overflow-wrap: anywhere; }
