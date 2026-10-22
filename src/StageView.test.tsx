@@ -1,9 +1,10 @@
+import { passageQs } from './readingboss'
+import { LONG_PASSAGES } from './longreading'
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
 import { UNIV_BOSSES } from './univ'
-import { wordsOf } from './words'
 
 describe('ステージ画面', () => {
   it('ステージ1だけ遊べて、全問正解で星3つ', () => {
@@ -32,6 +33,14 @@ describe('ステージ画面', () => {
     expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
   })
 })
+
+// 読解ボスの問題に正しく答える
+const READING_QS = LONG_PASSAGES.flatMap(passageQs)
+function answerReading() {
+  const en = document.querySelector('.boss .en')!.textContent
+  const q = READING_QS.find((x) => x.word.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+}
 
 it('全ステージをクリアするとボスに挑戦できる', () => {
   const all = Object.fromEntries(stagesOf('中3').map((s) => [s.id, 1]))
@@ -108,11 +117,9 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
   fireEvent.click(screen.getByText(/ボスラッシュ（3連戦/))
   for (let round = 1; round <= 3; round++) {
     expect(screen.getByText(`🔥 ボスラッシュ ${round} / 3`)).toBeInTheDocument()
-    const lv = ['中1', '中2', '中3'][round - 1] as '中1'
+    expect(document.querySelector('.boss-passage')).not.toBeNull() // ラッシュのボスも読解問題
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
-      const en = document.querySelector('.boss .en')!.textContent
-      const w = wordsOf([lv]).find((x) => x.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+      answerReading()
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     if (round < 3) fireEvent.click(screen.getByText(/次のボスへ ▶（ハート3を引き継ぐ）/))
@@ -129,9 +136,7 @@ it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る'
   for (let floor = 1; floor <= 2; floor++) {
     expect(screen.getByText(`🗼 エンドレスの塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
-      const en = document.querySelector('.boss .en')!.textContent
-      const w = wordsOf(['中1']).find((x) => x.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+      answerReading()
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     fireEvent.click(screen.getByText(new RegExp(`${floor + 1}階へ ▶`)))

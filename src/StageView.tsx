@@ -92,13 +92,14 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     const first = !univ[univFight.id]
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         key={univFight.id}
         level="高校基礎"
         words={wordsOf(univFight.levels)}
         look={univFight}
         title={`🏯 大学入試の塔 ${univFight.floor}`}
         hp={univFight.hp}
-        grammar
         partner={partner}
         power={power}
         bag={bag}
@@ -110,7 +111,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onRankBonus={onRankBonus}
         bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
           setUniv((r) => ({ ...r, [univFight.id]: dayKey() }))
           onUnivWin?.(univFight, first)
@@ -125,6 +126,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     const lv = endlessLevel(f)
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         key={`endless-${f}`}
         level={lv}
         words={wordsOf([lv])}
@@ -144,7 +147,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onLose={onLose}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onRankBonus={onRankBonus}
         onWinHearts={(h) => setEndless((e) => (e ? { ...e, hearts: h } : e))}
         onWin={() => {
@@ -166,6 +169,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     const last = rush.round === levels.length - 1
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         key={`rush-${rush.round}`}
         level={lv}
         words={wordsOf([lv])}
@@ -182,7 +187,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onLose={onLose}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onRankBonus={onRankBonus}
         onWinHearts={(h) => setRush((r) => (r ? { ...r, hearts: h } : r))}
         onWin={() => {
@@ -200,6 +205,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     const nb = nightBossOf(dayKey())
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         level={nb.level}
         words={wordsOf([nb.level])}
         look={nb.look}
@@ -215,7 +222,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
           if (nightDay === dayKey()) return
           setNightDay(dayKey())
@@ -230,6 +237,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     const wb = weekendBossOf(week)
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         level={wb.level}
         words={wordsOf([wb.level])}
         look={wb.look}
@@ -246,7 +255,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
           if (weekendWeek === week) return
           setWeekendWeek(week)
@@ -260,6 +269,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   if (rareFight) {
     return (
       <Boss
+        reading
+        winBuddy={readingBuddy}
         level={rare.level}
         words={wordsOf([rare.level])}
         look={rare.look}
@@ -276,7 +287,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         onRankBonus={onRankBonus}
         bonus={BOSS_REMATCH_XP}
         onSpend={onSpend}
-        onAnswer={onAnswer}
+        onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
           if (rareWeek === week) return
           setRareWeek(week)
