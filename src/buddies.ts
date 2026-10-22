@@ -233,3 +233,10 @@ export function saveEggPieces(n: number): void {
     // 保存できなくても続ける
   }
 }
+
+// ホームでなかまを押したときの英語のひとこと（自作・和訳つき）
+export const GO_LINES: Record<Track | 'word', { en: string; ja: string }> = {
+  word: { en: "Let's learn some new words!", ja: '新しい単語を覚えよう！' },
+  grammar: { en: "Grammar time! I'm ready.", ja: '文法の時間だ！ 準備オッケー。' },
+  reading: { en: "Let's read a story together.", ja: 'いっしょにお話を読もう。' },
+}

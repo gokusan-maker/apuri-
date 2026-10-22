@@ -172,6 +172,13 @@ describe('App', () => {
     expect(Number(localStorage.getItem('eitan:team-title'))).toBeGreaterThan(0)
   })
 
+  it('ホームのなかまを押すと、そのなかまが英語でひとこと言ってから画面へ', () => {
+    render(<App />)
+    fireEvent.click(within(screen.getByLabelText('育てているなかま')).getByLabelText(/読解のなかま/))
+    expect(screen.getByText(/Let's read a story together\./)).toBeInTheDocument()
+    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()

@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
+import { ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, GO_LINES, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
@@ -1082,6 +1082,8 @@ function App() {
               setShowChallenge(false)
               if (w === 'word') setWordTab('mini')
               setMode(w === 'grammar' ? 'grammar' : w === 'reading' ? 'reading' : 'word')
+              const who = w === 'word' ? (monster.name ?? formOf(monster).name) : buddyName(w, buddies[w])
+              pushToast([{ id: `go-${w}`, text: `${who}「${GO_LINES[w].en}」（${GO_LINES[w].ja}）`, counter: 'answers', target: 0 }])
               toContent()
             }}
           />
