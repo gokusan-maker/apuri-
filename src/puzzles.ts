@@ -574,6 +574,16 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
   { q: 'What do you throw out when you want to use it, and take in when you don\'t?', ja: '使いたいときは外へ投げ、使わないときは中へ取りこむものはなに？', a: 'anchor', aja: '（船の）いかり', trick: '船を止めたいときはいかりを海へ投げ入れ、出発するときは引き上げる。throw out（投げ出す）と take in（取りこむ）が反対。' },
   { q: 'What can you hear but cannot touch or see?', ja: '聞こえるのに、さわることも見ることもできないものはなに？', a: 'voice', aja: '声', trick: 'hear（聞こえる）・touch（さわる）・see（見る）の3つの動詞をくらべている。声は聞こえるだけ。' },
   { q: 'What has a bottom at the top?', ja: '上のほうに「ボトム（下・おしり）」があるものはなに？', a: 'leg', aja: '脚', trick: 'bottom には「いちばん下」と「おしり」の2つの意味がある。脚のいちばん上にはおしり（bottom）がある、というしゃれ。' },
+  { q: 'What has cities but no houses, forests but no trees, and water but no fish?', ja: '都市はあるのに家がなく、森はあるのに木がなく、水はあるのに魚がいないものはなに？', a: 'map', aja: '地図', trick: '地図には都市・森・海がかいてあるけれど、本物の家や木や魚はない。A but no B（A はあるが B はない）を3回くり返す形。' },
+  { q: 'What goes up and down but does not move?', ja: '上がったり下がったりするのに、動かないものはなに？', a: 'stairs', aja: '階段', trick: '人は階段を go up（上がる）・go down（下りる）するけれど、階段そのものは動かない。' },
+  { q: 'What has one eye but cannot see?', ja: '目が1つあるのに、見えないものはなに？', a: 'storm', aja: '台風・あらし', trick: 'the eye of a storm で「台風の目」。eye は「目」のほかに「（台風の）中心」の意味もある。' },
+  { q: 'What kind of tree can you carry in your hand?', ja: '手の中に持ち運べる木はなに？', a: 'palm', aja: 'てのひら（ヤシ）', trick: 'palm には「ヤシ（の木）」と「てのひら」の2つの意味がある。' },
+  { q: 'What is so fragile that saying its name breaks it?', ja: 'とてもこわれやすくて、名前を言うだけでこわれてしまうものはなに？', a: 'silence', aja: 'ちんもく（しずけさ）', trick: 'silence（しーんとした静けさ）は、声に出して言ったとたんに静かでなくなる。break the silence で「沈黙をやぶる」。' },
+  { q: 'What runs but never walks?', ja: 'ランする（走る）のに、けっして歩かないものはなに？', a: 'nose', aja: '鼻', trick: 'My nose is running. で「鼻水が出ている」。run には「（液体が）流れる」の意味がある。' },
+  { q: 'Which letter of the alphabet is a large body of water?', ja: '広い水（うみ）になっているアルファベットはどれ？', a: 'C', aja: 'シー（海）', trick: 'C と sea（海）は同じ「シー」という発音。' },
+  { q: 'Which letter of the alphabet asks a question?', ja: '質問をするアルファベットはどれ？', a: 'Y', aja: 'ワイ（なぜ）', trick: 'Y と why（なぜ）は同じ「ワイ」という発音。' },
+  { q: 'What has ears but cannot hear?', ja: '耳があるのに、聞こえないものはなに？', a: 'corn', aja: 'とうもろこし', trick: 'ear は「耳」。とうもろこしの「1本（穂）」も英語で an ear of corn という。' },
+  { q: 'What has bark but no bite?', ja: 'ほえる（バーク）のに、かみつかないものはなに？', a: 'tree', aja: '木', trick: 'bark は動詞で「（犬が）ほえる」、名詞で「木の皮」。木には bark（皮）があるけれど、かみつかない。' },
   { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
 ]
 
