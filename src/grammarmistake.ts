@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'the-adjective': { wrong: 'The elderly is welcome here.', right: 'The elderly are welcome here.', why: 'the ＋ 形容詞は「〜な人々」なので複数あつかい。' },
   'unless': { wrong: "Unless you don't come, I will go alone.", right: "Unless you come, I will go alone.", why: 'unless に「〜しない」の意味がふくまれるので、not は入れない。' },
   'passive-progressive-perfect': { wrong: 'The bridge is been built now.', right: 'The bridge is being built now.', why: '「〜されているところ」は be ＋ being ＋ 過去分詞。been は完了形（have been）で使う。' },
   'if-inversion': { wrong: 'If had I known, I would have come.', right: 'Had I known, I would have come.', why: '倒置にするときは if を消して had を主語の前に出す。' },
