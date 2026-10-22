@@ -3733,6 +3733,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['before', 'since', 'though', 'unless'], answer: 0, why: '「日がのぼる前に」は before the sun rises。' },
       { id: 'D', choices: ['how', 'what', 'when', 'which'], answer: 2, why: 'when ＋文 で「〜するときに」。' },
     ],
+    titleQ: { choices: ['How to Train Your Cat', 'Why Do Cats Sleep So Much?', 'Cats and Dogs Are Friends', 'The Best Food for Cats'], answer: 1, why: 'ねこがたくさんねる理由（狩り・活動する時間・浅いねむり）が書かれている。' },
     tf: [
       { statement: 'Many cats sleep twelve to sixteen hours a day.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Hunting uses only a little energy.', answer: false, why: 'たくさんのエネルギーを使う。' },
@@ -3837,6 +3838,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['for', 'from', 'of', 'with'], answer: 1, why: '「根から」引き上げられるので from。' },
       { id: 'D', choices: ['become', 'became', 'becoming', 'to become'], answer: 0, why: '助動詞 will のあとは動詞の原形 become。' },
     ],
+    titleQ: { choices: ['How Do Plants Drink Water?', 'The Biggest Tree in Japan', 'Why Leaves Are Green', 'How to Grow Tomatoes'], answer: 0, why: '根から水を取りこみ、くきを通って葉から出ていくしくみが書かれている。' },
     tf: [
       { statement: 'Plants take in water through their roots.', answer: true, why: '第2段落の内容と合う。' },
       { statement: 'Water moves down from the leaves to the roots.', answer: false, why: '水は根からくきを通って上へ進む。' },
