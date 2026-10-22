@@ -261,3 +261,15 @@ it('カプセルの色は5色から選べて、知らない色はあか', async 
   localStorage.setItem('eitan:capsule-color', 'gold')
   expect(loadCapsule()).toBe('red')
 })
+
+it('今日のおすすめ色はレアの3色のどれかで、出やすくなる', async () => {
+  const { dailyColor, drawEgg } = await import('./gacha')
+  expect(['sakura', 'umi', 'yoru']).toContain(dailyColor('2026-10-20'))
+  const w = { coins: 1000, owned: [] }
+  const p = { members: [{ xp: 0 }], active: 0 }
+  let boosted = 0
+  for (let r = 0.6; r < 0.9; r += 0.003) if (drawEgg(w, p, r, false, 0.5, false, undefined, false, 50, undefined, 'umi')!.kind.id === 'umi') boosted++
+  let normal = 0
+  for (let r = 0.6; r < 0.9; r += 0.003) if (drawEgg(w, p, r, false, 0.5)!.kind.id === 'umi') normal++
+  expect(boosted).toBeGreaterThan(normal)
+})

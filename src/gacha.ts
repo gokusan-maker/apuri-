@@ -28,13 +28,15 @@ export function addTicket(w: Wallet): Wallet {
 // 引けたら、コインを減らしてタマゴを仲間に加える
 // ticket=true のときはコインのかわりにチケットを1枚使う
 // r は色ちがい、r2 はキャラクターの種類を決める乱数
-export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string, rareSure = false, price = GACHA_PRICE, seasonal?: string): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
+export function drawEgg(w: Wallet, p: Party, r: number, ticket = false, r2 = 0, dragonUp = false, pickup?: string, rareSure = false, price = GACHA_PRICE, seasonal?: string, boost?: string): { wallet: Wallet; party: Party; kind: Kind; species: Species } | null {
   if (!canDraw(w, p, ticket, price)) return null
   const first = rollKind(r)
   // レア以上確定のときは、ふつうが出たら3つのレア色のどれかにする
   const rolled = rareSure && first.rarity === 'N' ? KINDS_R[Math.min(2, Math.floor((r / 0.6) * 3))] : first
   // 季節ガチャ：その時期は、さくら色のかわりに季節限定の色が出る
-  const seasonRolled = seasonal && rolled.id === 'sakura' ? kindOf(seasonal) : rolled
+  // 今日のおすすめ色：レアが出たとき半分くらいはその色になる
+  const boosted = boost && rolled.rarity === 'R' && Math.floor(r * 1000) % 2 === 0 ? kindOf(boost) : rolled
+  const seasonRolled = seasonal && boosted.id === 'sakura' ? kindOf(seasonal) : boosted
   const kind = seasonRolled.rarity === 'N' || seasonRolled.rarity === 'R' ? ((w.pity ?? 0) + 1 >= PITY ? kindOf('kin') : seasonRolled) : seasonRolled
   const pity = kind.rarity === 'SR' || kind.rarity === 'UR' ? 0 : (w.pity ?? 0) + 1
   const species = rollSpecies(r2, dragonUp, pickup)
@@ -288,3 +290,10 @@ export function saveLuckyBagMonth(m: string): void {
 // ミステリーカプセル：10回に1回くらい、色の見えない？カプセルが出る（おまけ🪙3）
 export const MYSTERY_RATE = 0.1
 export const MYSTERY_COINS = 3
+
+// 今日のおすすめ色（日替わりで、レアの3色のうち1色が出やすい）
+export function dailyColor(day: string): string {
+  let h = 11
+  for (const c of `color-${day}`) h = (h * 31 + c.charCodeAt(0)) >>> 0
+  return ['sakura', 'umi', 'yoru'][h % 3]
+}

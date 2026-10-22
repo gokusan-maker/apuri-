@@ -36,6 +36,7 @@ type Props = {
   pityLeft?: number // あと何回でスーパーレア以上が確定
   points?: number // ガチャポイント
   stickers?: string[] // 集めたシール
+  boostColor?: string // 今日のおすすめ色の名前
   luckyBag?: boolean // 今月の福袋が買える
   onLuckyBag?: () => GachaResult[]
   onExchange?: () => GachaResult | null // 20ポイントでスーパーレア以上確定
@@ -49,7 +50,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [capsule, setCapsule] = useState(loadCapsule)
@@ -148,6 +149,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      {boostColor && <p className="gacha-points">🎨 今日のおすすめ色：{boostColor}（レアが出たとき出やすい）</p>}
       {luckyBag && onLuckyBag && (
         <button
           className="good gacha-btn multi lucky-bag"
