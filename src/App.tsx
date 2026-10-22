@@ -18,6 +18,7 @@ import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
 import { loadLastBackup, needBackup } from './backup'
 import { Card } from './CardView'
+import { CardCheer } from './CardCheerView'
 import { WordList } from './WordListView'
 import { makeLookup } from './glossary'
 import { loadNotes, saveNotes, setNote } from './notes'
@@ -986,6 +987,7 @@ function App() {
                 </span>
               </div>
             )}
+            <CardCheer done={cardsDone} />
             <Card
               key={`${card?.id}-${shown}`}
               card={card}
