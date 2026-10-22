@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BOSSES, type BossLook } from './boss'
-import { loadBook } from './bossbook'
+import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
 import { UNIV_BOSSES } from './univ'
 
@@ -33,6 +33,9 @@ export function BossBook() {
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
                 </span>
+              )}
+              {e && (
+                <span className="boss-secret">{e.wins >= SECRET_WINS ? `🔓 ひみつ：${secretOf(b.name)}` : `🔒 あと${SECRET_WINS - e.wins}回たおすとひみつが読める`}</span>
               )}
             </li>
           )

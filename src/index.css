@@ -1338,3 +1338,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-sleep { margin: 4px 0; font-weight: 700; color: #4338ca; }
 .training { margin: 8px 0; padding: 8px; border-radius: 12px; background: var(--card); text-align: center; }
 .training-title { margin: 0 0 6px; font-size: 0.9rem; font-weight: 700; }
+.boss-secret { display: block; margin-top: 2px; font-size: 0.7rem; color: var(--muted); }

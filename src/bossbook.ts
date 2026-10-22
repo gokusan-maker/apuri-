@@ -79,3 +79,20 @@ export function takeRevenge(name: string): boolean {
   saveLost(l.filter((x) => x !== name))
   return true
 }
+
+// ボスのひみつ：同じボスを3回たおすと読める（名前で1つに決まる）
+export const SECRET_WINS = 3
+const SECRETS = [
+  'じつは、夜ねる前に英語の歌を聞くのが好き。',
+  'いつもこわい顔をしているけれど、子ねこを見るとにっこりしてしまう。',
+  '小さいころは英単語が苦手で、毎日10語ずつ覚えて強くなった。',
+  'たおされたあとは、こっそり単語帳を読んで次の戦いの準備をしている。',
+  'すきな食べ物はプリン。でも、ほかのボスにはないしょ。',
+  '本当はきみと友だちになりたくて、何度も戦いにくる。',
+  '口ぐせの英語は、むかし旅で出会った人から教わった。',
+  'ひみつの特技は、さかだちしながら英語の早口ことばを言うこと。',
+]
+export function secretOf(name: string): string {
+  const k = [...name].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 0)
+  return SECRETS[k % SECRETS.length]
+}
