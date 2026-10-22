@@ -1,7 +1,7 @@
 import { BuddyFigure } from './BuddyFigureView'
 import { TRACK_LABEL, type Buddy, type BuddyForm, type Track } from './buddies'
 
-// 文法のペット・長文の竜が進化したときの全画面演出（タップで閉じる）
+// 文法のことばモンスター・読解の竜が進化したときの全画面演出（タップで閉じる）
 export function BuddyEvolve({ track, form, buddy, onClose }: { track: Track; form: BuddyForm; buddy: Buddy; onClose: () => void }) {
   return (
     <div className={`celebrate buddy-evolve b-${track}`} role="dialog" aria-label="なかまの進化" onClick={onClose}>

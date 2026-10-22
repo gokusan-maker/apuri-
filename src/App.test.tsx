@@ -84,16 +84,37 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
   })
 
-  it('今日の課題の単語は日がわりの単語ゲームで、押すとそのゲームが始まり、正解でクリアになる', async () => {
-    const { dailyWordGame } = await import('./wordgame')
+  it('今日の課題：単語は今日の単語の4択、読解は今日の単語が入った短い英文で、終わるとクリアになる', async () => {
+    const { dailyShort, todayWords } = await import('./dailyread')
     const { dayKey } = await import('./srs')
-    const g = dailyWordGame(dayKey())
+    const day = dayKey()
+    const ws = todayWords(day)
+    const p = dailyShort(day)
     render(<App />)
-    const tasks = screen.getByLabelText('今日の課題')
-    expect(tasks.textContent).toContain(`今日の単語ゲーム「${g.label}」`)
-    fireEvent.click(within(tasks).getByText(`今日の単語ゲーム「${g.label}」`))
-    if (g.id === 'card') expect(screen.getByText('意味を見る')).toBeInTheDocument()
-    else expect(screen.getByRole('tab', { name: '🎮 ミニゲーム' })).toHaveAttribute('aria-selected', 'true')
+    const tasks = () => screen.getByLabelText('今日の課題')
+    expect(tasks().textContent).toContain(`今日の単語 4択（${ws.map((w) => w.en).join('・')}）`)
+    expect(tasks().textContent).toContain(`📖 読解`)
+    expect(tasks().textContent).toContain(`今日の読解「${p.title}」`)
+    // 単語：4択で今日の単語だけが出る
+    fireEvent.click(within(tasks()).getByText(/今日の単語 4択/))
+    expect(screen.getByText(/📋 今日の単語（4択）/)).toBeInTheDocument()
+    for (let i = 0; i < ws.length; i++) {
+      const en = document.querySelector('.quiz .en, .quiz .word-en, .quiz h2')?.textContent ?? ''
+      const w = ws.find((x) => en.includes(x.en))!
+      expect(w).toBeDefined()
+      fireEvent.click(screen.getByRole('button', { name: w.ja }))
+      fireEvent.click(screen.getByText(/次へ|結果を見る/))
+    }
+    expect(localStorage.getItem('eitan:today-words')).toBe(day)
+    // 読解：今日の英文がすぐ開く
+    navTo('ホーム')
+    fireEvent.click(within(tasks()).getByText(/今日の読解/))
+    expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
+    for (const q of p.questions) {
+      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(localStorage.getItem('eitan:daily-short')).toBe(day)
   })
 
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
@@ -863,7 +884,7 @@ describe('App', () => {
     render(<App />)
     const row = screen.getByLabelText('育てているなかま')
     expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
-    expect(row.textContent).toMatch(/単語.*文法.*長文/)
+    expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))
     rnd.mockRestore()

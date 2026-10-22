@@ -15,7 +15,7 @@ it('文法のことばモンスター・長文の竜に名前をつけられ、�
   expect(b.grammar.name).toBe('ポチ')
   rerender(<BuddyDetail buddies={b} onRename={() => {}} />)
   expect(screen.getByLabelText('文法のなかま').textContent).toContain('ポチ')
-  expect(screen.getByLabelText('長文のなかま').textContent).toContain('りゅうのタマゴ')
+  expect(screen.getByLabelText('読解のなかま').textContent).toContain('りゅうのタマゴ')
 })
 
 it('名前を空にすると名前が消える', () => {

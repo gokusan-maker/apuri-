@@ -10,10 +10,14 @@ const lookup = makeLookup(WORDS)
 
 export const XP_READING = 15
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
+type Props = {
+  onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  start?: Passage // はじめからこの話を開く（ホームの今日の読解）
+  onDone?: (score: number, total: number) => void // 1本ぜんぶ答えたとき
+}
 
-export function Reading({ onAnswer }: Props) {
-  const [p, setP] = useState<Passage | null>(null)
+export function Reading({ onAnswer, start, onDone }: Props) {
+  const [p, setP] = useState<Passage | null>(start ?? null)
   const [step, setStep] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -113,7 +117,10 @@ export function Reading({ onAnswer }: Props) {
               onClick={() => {
                 setPicked(null)
                 setStep(step + 1)
-                if (step + 1 === p.questions.length) setShowJa(true)
+                if (step + 1 === p.questions.length) {
+                  setShowJa(true)
+                  onDone?.(score, p.questions.length)
+                }
               }}
             >
               次へ

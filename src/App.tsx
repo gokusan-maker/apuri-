@@ -108,8 +108,8 @@ import {
   type ProgressMap,
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
-import { Quiz, type Direction } from './QuizView'
-import { dailyWordGame, loadWordGameDay, saveWordGameDay } from './wordgame'
+import { Quiz } from './QuizView'
+import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
@@ -324,11 +324,11 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [stageTab, setStageTab] = useState<'long' | 'short'>('long') // 読解ステージのタブの中
-  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペットモンスター・長文の竜
+  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のことばモンスター・読解の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
-  const [wordDir, setWordDir] = useState<Direction | undefined>(undefined) // 今日の課題から開いたゲーム
-  const wordDirNow = useRef<Direction | null>(null) // いま遊んでいるミニゲーム
+  const [todayQuiz, setTodayQuiz] = useState(false) // 今日の課題の「今日の単語（4択）」をやっている
+  const [shortGo, setShortGo] = useState(false) // 今日の課題の「今日の読解」を開く
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
   const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
@@ -822,18 +822,6 @@ function App() {
   }
 
   // 「おまけのあそび」：設定のいちばん下に出す（ゲーム画面にはおかない）
-  // 今日の課題の単語ゲーム：そのゲームで正解（またはクリア）したらクリア
-  const onWordDirection = (d: Direction) => {
-    wordDirNow.current = d
-  }
-  const wordGamePlayed = () => {
-    if (dailyWordGame(today).id === wordDirNow.current && loadWordGameDay() !== today) saveWordGameDay(today)
-  }
-  const onWordGameAnswer: typeof onAnswer = (correct, ...rest) => {
-    onAnswer(correct, ...rest)
-    if (correct) wordGamePlayed()
-  }
-
   const playBox = (
           <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
             <summary>🎁 おまけのあそび（おみくじ・おさんぽ・すごろく など）</summary>
@@ -1185,7 +1173,15 @@ function App() {
       {mode === 'word' && !showShop && !showChallenge && (
         <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
           {WORD_TABS.map((t) => (
-            <button key={t.id} role="tab" aria-selected={wordTab === t.id} onClick={() => setWordTab(t.id)}>
+            <button
+              key={t.id}
+              role="tab"
+              aria-selected={wordTab === t.id}
+              onClick={() => {
+                setWordTab(t.id)
+                setTodayQuiz(false)
+              }}
+            >
               {t.label}
             </button>
           ))}
@@ -1318,7 +1314,15 @@ function App() {
           {mode === 'reading' && (
           <div className="sub-tabs stage-sub-tabs" role="tablist" aria-label="読解の種類">
             {STAGE_TABS.map((t) => (
-              <button key={t.id} role="tab" aria-selected={stageTab === t.id} onClick={() => setStageTab(t.id)}>
+              <button
+                key={t.id}
+                role="tab"
+                aria-selected={stageTab === t.id}
+                onClick={() => {
+                  setStageTab(t.id)
+                  setShortGo(false)
+                }}
+              >
                 {t.label}
               </button>
             ))}
@@ -1327,7 +1331,14 @@ function App() {
           {mode === 'reading' && stageTab === 'long' ? (
             <LongReading onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
-            <Reading onAnswer={onAnswerTrack('reading')} />
+            <Reading
+              key={shortGo ? 'today' : 'list'}
+              start={shortGo ? dailyShort(today) : undefined}
+              onDone={() => {
+                if (shortGo) saveDailyShortDay(today)
+              }}
+              onAnswer={onAnswerTrack('reading')}
+            />
           ) : (
           <Stages
             startDaily={dailyGo}
@@ -1432,7 +1443,7 @@ function App() {
                 pushToast([{ id: 'bond-win', text: `${bondHearts(bondLevel(totals.studyDays ?? 0))} なかよしボーナス！ 🪙${bonus}`, counter: 'answers', target: 0 }])
               }
               setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
-              feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは長文のなかま（竜）へ
+              feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは読解のなかま（竜）へ
             }}
             record={stages}
             onAnswer={onAnswer}
@@ -1458,16 +1469,14 @@ function App() {
         <>
           <TodayTasks
             today={today}
-            cardsLeft={queue.length}
             onGo={(w) => {
-              if (w === 'reading') setStageTab('long')
+              if (w === 'reading') {
+                setStageTab('short')
+                setShortGo(true)
+              }
               if (w === 'word') {
-                const g = dailyWordGame(today)
-                if (g.id === 'card') setWordTab('card')
-                else {
-                  setWordTab('mini')
-                  setWordDir(g.id)
-                }
+                setWordTab('mini')
+                setTodayQuiz(true)
               }
               setMode(w)
               toContent()
@@ -1650,6 +1659,12 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
+          {mode === 'word' && todayQuiz && (
+            <p className="weak-banner">
+              📋 今日の単語（4択）：{todayWords(today).map((w) => w.en).join('・')}
+              <button onClick={() => setTodayQuiz(false)}>やめる</button>
+            </p>
+          )}
           {quizFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
@@ -1657,26 +1672,24 @@ function App() {
             </p>
           )}
           <Quiz
-            key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && wordDir ? `:${wordDir}` : ''}`}
-            direction={mode === 'grammar' ? 'grammar' : wordDir}
+            key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
+            direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
+            count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
-            onDirection={onWordDirection}
-            lockDirection={mode === 'grammar'}
+            lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
             grammarQuick={mode === 'grammar'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
-            targets={quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
-            onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onWordGameAnswer}
+            targets={mode === 'word' && todayQuiz ? todayWords(today) : quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
+            onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}
             onFinish={(score, total) => {
+              if (mode === 'word' && todayQuiz) saveTodayWordsDay(today)
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
             onSpend={spend}
             onRivalWin={() => setWallet((w) => ({ ...w, coins: w.coins + RIVAL_COINS }))}
             onCombo={(c) => setTotals((t) => (c > (t.bestCombo ?? 0) ? { ...t, bestCombo: c } : t))}
             onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
-            onGame={() => {
-              count('game')
-              if (mode === 'word') wordGamePlayed()
-            }}
+            onGame={() => count('game')}
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             onXp={(n) => (mode === 'grammar' ? feedTrack('grammar', n) : gainXp(n, null))}
@@ -1780,6 +1793,8 @@ function App() {
             onClick={() => {
               setMode(t.id)
               setDailyGo(false)
+              setTodayQuiz(false)
+              setShortGo(false)
               setShowShop(false)
               setShowChallenge(false)
               toContent()

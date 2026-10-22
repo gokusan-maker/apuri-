@@ -42,7 +42,7 @@ type Props = {
   onUseItem?: (id: BattleItemId) => void
   onBossDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   startDaily?: boolean // 開いたらすぐ今日のボスと戦う（ホームのボタンから）
-  onReadingAnswer?: Props['onAnswer'] // 読解ボスの答え（長文のなかま＝竜が育つ）
+  onReadingAnswer?: Props['onAnswer'] // 読解ボスの答え（読解のなかま＝竜が育つ）
   readingBuddy?: { icon: string; name: string } // 読解ボスに勝ったときによろこぶ竜
   onSkill?: () => void // 相棒の特技が出た
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした

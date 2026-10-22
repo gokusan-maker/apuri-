@@ -28,7 +28,7 @@ type Props = {
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
   reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
-  winBuddy?: { icon: string; name: string } // 勝ったときによろこぶ長文のなかま（竜）
+  winBuddy?: { icon: string; name: string } // 勝ったときによろこぶ読解のなかま（竜）
   startHearts?: number // ボスラッシュではハートを引き継ぐ
   winLabel?: string // 勝ったあとのボタンの文字
   nextBoss?: { label: string; onClick: () => void } // 勝ったあと、次のボスにすぐ挑む
