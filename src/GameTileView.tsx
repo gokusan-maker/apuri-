@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { loadPlayedGames, markPlayedGame } from './gamesplayed'
+import { dayKey } from './srs'
+import { loadPlayedGames, loadTodayGames, markPlayedGame, markTodayGame } from './gamesplayed'
 
 // ゲームをえらぶタイル（大きな絵文字＋名前＋ひとこと）。いろんなゲームがあることがひと目でわかるように。
 // playKey をわたすと、まだ一度も遊んでいないゲームに NEW 印がつく
@@ -7,6 +8,7 @@ type Props = { icon: string; name: string; sub?: string; on?: boolean; playKey?:
 
 export function GameTile({ icon, name, sub, on = false, playKey, onClick }: Props) {
   const [fresh, setFresh] = useState(() => !!playKey && !loadPlayedGames().includes(playKey))
+  const [played, setPlayed] = useState(() => !!playKey && loadTodayGames(dayKey()).includes(playKey))
   return (
     <button
       className={on ? 'game-tile on' : 'game-tile'}
@@ -16,10 +18,15 @@ export function GameTile({ icon, name, sub, on = false, playKey, onClick }: Prop
           markPlayedGame(playKey)
           setFresh(false)
         }
+        if (playKey && !played) {
+          markTodayGame(playKey, dayKey())
+          setPlayed(true)
+        }
         onClick()
       }}
     >
       {fresh && <span className="game-tile-new">NEW</span>}
+      {!fresh && played && <span className="game-tile-today">✅ 今日</span>}
       <span className="game-tile-icon" aria-hidden="true">
         {icon}
       </span>
