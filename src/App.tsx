@@ -301,6 +301,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
   const [shopTab, setShopTab] = useState<ShopTab | undefined>(undefined) // ショップを開いたときの売り場
   // タブ・ショップ・チャレンジを開いたら、その画面だけを出していちばん上へ（押したら画面が変わったとわかるように）
   // ホームの「きょうのあそび」をひらいているか（端末ごとに覚える）
@@ -844,6 +845,18 @@ function App() {
             </span>
             <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
           </button>
+          {dailyBossDay !== today && (
+            <button
+              className="challenge-btn daily-boss-go"
+              onClick={() => {
+                setDailyGo(true)
+                setMode('stage')
+                toContent()
+              }}
+            >
+              ⚔ 今日のボスに挑む（勝つと🪙{DAILY_BOSS_COINS}）
+            </button>
+          )}
           {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (
             <button
               className="challenge-btn hungry-btn"
@@ -1124,6 +1137,7 @@ function App() {
         />
       ) : mode === 'stage' ? (
         <Stages
+          startDaily={dailyGo}
           power={power}
           hour={hour}
           partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
@@ -1599,6 +1613,7 @@ function App() {
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
               setMode(t.id)
+              setDailyGo(false)
               setShowShop(false)
               setShowChallenge(false)
               toContent()

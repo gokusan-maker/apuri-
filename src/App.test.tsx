@@ -763,6 +763,14 @@ describe('App', () => {
     expect(screen.getByText(/おやつ（今日あと3回）/)).toBeInTheDocument()
   })
 
+  it('ホームの「今日のボスに挑む」でステージ画面の今日のボス戦がすぐ始まる', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText(/⚔ 今日のボスに挑む/))
+    expect(screen.getByText(/⚔️ 今日のボス ★/)).toBeInTheDocument()
+    expect(document.querySelector('.boss')).not.toBeNull()
+    expect(document.querySelector('details.home-play')).toBeNull()
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))
