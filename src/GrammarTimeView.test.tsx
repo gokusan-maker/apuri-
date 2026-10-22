@@ -22,3 +22,20 @@ it('60秒のあいだ答えた正解数が記録になる', () => {
   expect(loadTaBest()).toBe(3)
   vi.useRealTimers()
 })
+
+it('ベストを更新すると、文法のなかまにボーナス（onBest が1回）', () => {
+  localStorage.clear()
+  vi.useFakeTimers()
+  const best = vi.fn()
+  render(<GrammarTime onBack={() => {}} onBest={best} />)
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  const text = document.querySelector('.blank-sentence')!.textContent!
+  const q = all.find((x) => x.sentence.replace('___', '　　　') === text)!
+  fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+  act(() => {
+    vi.advanceTimersByTime(61000)
+  })
+  expect(best).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/ベスト記録更新！ 文法のなかまに \+20XP/)).toBeInTheDocument()
+  vi.useRealTimers()
+})

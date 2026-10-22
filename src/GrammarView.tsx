@@ -45,6 +45,7 @@ type Props = {
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
   onQuickPerfect?: () => void // 「すぐ練習」5問を全問正解したとき
   onRunBest?: () => void // 連続正解チャレンジでベストを更新したとき（3問以上）
+  onTaBest?: () => void // 文法タイムアタックでベストを更新したとき
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
@@ -67,7 +68,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest }: Props) {
+export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest }: Props) {
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
   const [runBonus, setRunBonus] = useState(false) // ベスト更新のボーナスのお知らせ
   const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
@@ -150,7 +151,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   if (odd) return <GrammarOdd onAnswer={onAnswer} onBack={() => setOdd(false)} />
   if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
-  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
+  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBest={onTaBest} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
 
   // 「まだの単元から」のときは、全問正解していない単元を先に
   const todoSort = <T extends GrammarUnit>(us: T[]) => (todoFirst ? [...us.filter((u) => record[u.id] !== u.questions.length), ...us.filter((u) => record[u.id] === u.questions.length)] : us)

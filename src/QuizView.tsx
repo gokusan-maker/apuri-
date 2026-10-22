@@ -40,7 +40,7 @@ import { Scramble } from './ScrambleView'
 import { getRecognition } from './pronounce'
 import { Pronounce } from './PronounceView'
 import { Rival } from './RivalView'
-import { DAILY_GRAMMAR_COINS, GRAMMAR_CLEAR_XP, GRAMMAR_STREAK_COINS } from './grammar'
+import { DAILY_GRAMMAR_COINS, GRAMMAR_CLEAR_XP, GRAMMAR_STREAK_COINS, TA_BEST_XP } from './grammar'
 import { BINGO_COINS } from './grammarbingo'
 import { GRAMMAR_MONSTER_COINS, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { LongReading } from './LongReadingView'
@@ -794,7 +794,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar quickStart={grammarQuick} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
+        <Grammar quickStart={grammarQuick} onTaBest={onXp ? () => onXp(TA_BEST_XP) : undefined} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
       </>
     )
   }

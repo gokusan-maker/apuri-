@@ -1844,6 +1844,7 @@ export function saveDailyGrammarDay(d: string): void {
 }
 
 // 文法タイムアタックのベスト記録
+export const TA_BEST_XP = 20 // 文法タイムアタックのベスト更新で文法のなかまにあげる XP
 export const TA_SECONDS = 60
 const KEY = 'eitan:grammar-ta-best'
 
