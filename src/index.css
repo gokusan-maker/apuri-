@@ -1452,3 +1452,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .heart-shower { position: absolute; left: 50%; top: -6px; z-index: 3; transform: translateX(-50%); padding: 2px 10px; border-radius: 999px; background: #fce7f3; color: #be185d; font-size: 0.8rem; font-weight: 800; white-space: nowrap; pointer-events: none; animation: heart-shower 1.6s ease-out forwards; }
 @keyframes heart-shower { 0% { opacity: 0; transform: translate(-50%, 10px) scale(0.6); } 20% { opacity: 1; transform: translate(-50%, 0) scale(1.15); } 80% { opacity: 1; } 100% { opacity: 0; transform: translate(-50%, -16px) scale(1); } }
 @media (prefers-reduced-motion: reduce) { .heart-shower { animation: none; } }
+.grammar-result { position: relative; overflow: hidden; }
+.grammar-confetti { position: absolute; inset: 0; pointer-events: none; }
+.grammar-confetti i { position: absolute; top: -12px; width: 8px; height: 12px; border-radius: 2px; opacity: 0; animation: grammar-confetti 1.8s ease-in forwards; }
+@keyframes grammar-confetti { 0% { opacity: 1; transform: translateY(0) rotate(0); } 100% { opacity: 0; transform: translateY(260px) rotate(540deg); } }
+@media (prefers-reduced-motion: reduce) { .grammar-confetti { display: none; } }

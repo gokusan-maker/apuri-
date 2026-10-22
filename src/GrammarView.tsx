@@ -581,8 +581,15 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const q = unit.questions[step]
   if (!q) {
     return (
-      <section className="card result">
+      <section className="card result grammar-result">
         {back}
+        {score === unit.questions.length && unit.questions.length > 0 && (
+          <div className="grammar-confetti" aria-hidden="true">
+            {Array.from({ length: 14 }, (_, i) => (
+              <i key={i} style={{ left: `${(i * 7 + 3) % 100}%`, animationDelay: `${(i % 5) * 0.12}s`, background: ['#f87171', '#fbbf24', '#34d399', '#60a5fa', '#a78bfa', '#f472b6'][i % 6] }} />
+            ))}
+          </div>
+        )}
         <p className="result-title">{unit.title}</p>
         <p className="result-score">
           {score} / {unit.questions.length} 問正解

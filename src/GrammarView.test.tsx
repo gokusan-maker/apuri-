@@ -598,3 +598,26 @@ it('文法の一覧に「今週の成績」が出て、正解すると今日の�
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByRole('img', { name: '今週の文法の正解数 3問' })).toBeInTheDocument()
 })
+
+it('確認問題を全問正解すると紙ふぶきが出る（まちがえたら出ない）', () => {
+  localStorage.clear()
+  const { unmount } = render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(document.querySelectorAll('.grammar-confetti i')).toHaveLength(14)
+  unmount()
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  unit.questions.forEach((q, i) => {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[i === 0 ? (q.answer + 1) % q.choices.length : q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  })
+  expect(document.querySelector('.grammar-confetti')).toBeNull()
+})
