@@ -452,7 +452,7 @@ function App() {
     if (correct && xp > 0) gainXp(xp * xpRate, source)
   }
 
-  // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝動物、長文＝竜）へ
+  // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝ペット、長文＝竜）へ
   function feedTrack(track: Track, raw: number) {
     const amount = boosted(raw, moodFull(moodMeter, today))
     const r = feedBuddy(buddies, track, amount) // お知らせ用（同じタイミングで2回あげても足し算はずれないよう、保存は関数で）
@@ -1206,6 +1206,7 @@ function App() {
           <Stages
             startDaily={dailyGo}
             onReadingAnswer={onAnswerTrack('reading')}
+          readingBuddy={{ icon: buddyForm('reading', buddies.reading).icon, name: buddies.reading.name ?? buddyForm('reading', buddies.reading).name }}
             power={power}
             hour={hour}
             partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}

@@ -97,6 +97,12 @@ describe('ボス戦', () => {
     expect(document.querySelector('.lose-cheer')!.textContent).toMatch(/^🐣 モチ「.+」$/)
   })
 
+  it('勝つと長文のなかま（竜）がよろこぶ', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} winBuddy={{ icon: '🐲', name: 'ベビードラゴン' }} />)
+    answer(true)
+    expect(screen.getByText(/🐲 ベビードラゴン「やった！ 読解ボスをたおしたね！/)).toBeInTheDocument()
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {

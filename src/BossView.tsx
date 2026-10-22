@@ -28,6 +28,7 @@ type Props = {
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
   reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
+  winBuddy?: { icon: string; name: string } // 勝ったときによろこぶ長文のなかま（竜）
   startHearts?: number // ボスラッシュではハートを引き継ぐ
   winLabel?: string // 勝ったあとのボタンの文字
   nextBoss?: { label: string; onClick: () => void } // 勝ったあと、次のボスにすぐ挑む
@@ -136,7 +137,7 @@ function preemptChoices(weak: string): string[] {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
@@ -618,6 +619,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             ボーナス +<CountUp to={bonus} />
             XP
           </p>
+          {winBuddy && (
+            <p className="grammar-praise boss-buddy-cheer">
+              {winBuddy.icon} {winBuddy.name}「やった！ 読解ボスをたおしたね！ ぼくも強くなったよ！」
+            </p>
+          )}
           <MissedList words={missed} />
           {nextBoss && (
             <button className="good next-unit-btn" onClick={nextBoss.onClick}>

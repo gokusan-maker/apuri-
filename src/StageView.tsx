@@ -43,6 +43,7 @@ type Props = {
   onBossDefeat?: () => void // どのボスでも、たおしたとき（ミッション用）
   startDaily?: boolean // 開いたらすぐ今日のボスと戦う（ホームのボタンから）
   onReadingAnswer?: Props['onAnswer'] // 読解ボスの答え（長文のなかま＝竜が育つ）
+  readingBuddy?: { icon: string; name: string } // 読解ボスに勝ったときによろこぶ竜
   onSkill?: () => void // 相棒の特技が出た
   onDrop?: (id: BattleItemId) => void // ボスがアイテムをおとした
   keys?: number // 金の宝箱の鍵
@@ -61,7 +62,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -292,6 +293,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <Boss
         key={fighting}
         reading
+        winBuddy={readingBuddy}
         nextBoss={nextLevel ? { label: `次のボスへ ▶ ${BOSSES[nextLevel].name}`, onClick: () => setFighting(nextLevel) } : undefined}
         level={fighting}
         words={wordsOf([fighting])}
