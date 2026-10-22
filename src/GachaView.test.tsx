@@ -173,3 +173,11 @@ it('スーパーレア確定までのゲージが出る', async () => {
   render(<Gacha coins={0} members={1} onDraw={() => null} pityLeft={5} />)
   expect(screen.getByRole('meter', { name: 'スーパーレア確定までのゲージ' })).toHaveAttribute('aria-valuenow', String(PITY - 5))
 })
+
+it('同じキャラの2体目以上はガチャ結果に「○体目」が出る', () => {
+  localStorage.clear()
+  const onDraw = vi.fn(() => ({ kind: kindOf('normal'), species: speciesOf('mochi'), nth: 3 }))
+  render(<Gacha coins={GACHA_PRICE} members={3} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText(`👥 ${speciesOf('mochi').name} 3体目`)).toBeInTheDocument()
+})

@@ -744,7 +744,7 @@ function App() {
       w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) + (lucky ? LUCKY_COINS : 0) + (slot.win ? SLOT_COINS : 0) + (mystery ? MYSTERY_COINS : 0) }
       if (bonus?.kind === 'xp') bonusXp += bonus.amount
       p = r.party
-      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker, ...(mystery ? { mystery } : {}) })
+      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker, ...(mystery ? { mystery } : {}), nth: r.party.members.filter((m) => (m.species ?? 'mochi') === r.species.id).length })
     }
     if (out.length > 0) {
       setWallet(w)

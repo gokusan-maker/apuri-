@@ -1457,3 +1457,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-confetti i { position: absolute; top: -12px; width: 8px; height: 12px; border-radius: 2px; opacity: 0; animation: grammar-confetti 1.8s ease-in forwards; }
 @keyframes grammar-confetti { 0% { opacity: 1; transform: translateY(0) rotate(0); } 100% { opacity: 0; transform: translateY(260px) rotate(540deg); } }
 @media (prefers-reduced-motion: reduce) { .grammar-confetti { display: none; } }
+.gacha-nth { margin: 2px 0; font-size: 0.85rem; font-weight: 700; color: #7c3aed; }

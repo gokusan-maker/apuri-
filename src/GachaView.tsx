@@ -11,7 +11,7 @@ const MULTI = 3
 const RANK = ['N', 'R', 'SR', 'UR'] as const
 const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
 
-export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean }; sticker?: string; mystery?: boolean }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean }; sticker?: string; mystery?: boolean; nth?: number } // nth：仲間の中でそのキャラが何体目か
 
 // 結果をシェア用の文にしてコピーするボタン
 function ShareButton({ text }: { text: string }) {
@@ -303,6 +303,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>
+          {result.nth !== undefined && result.nth > 1 && <p className="gacha-nth">👥 {result.species.name} {result.nth}体目</p>}
           {(result.newKind || result.newSpecies) && <p className="gacha-new">NEW! {result.newSpecies ? `はじめての「${result.species.name}」` : ''}{result.newSpecies && result.newKind ? '・' : ''}{result.newKind ? `はじめての「${result.kind.name}」` : ''}</p>}
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
