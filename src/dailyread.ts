@@ -90,3 +90,9 @@ export function claimTrioStreak(day: string): { count: number; ticket: boolean; 
 
 // 今日の課題を1つクリアするごとに、その課題のなかま（単語・文法・読解）にあげる XP
 export const TASK_XP = 10
+
+// いまのトリオボーナスの連続日数（今日かきのうに受け取っていれば続いている。とぎれていれば0）
+export function trioStreakNow(day: string): number {
+  const s = loadTrioStreak()
+  return s.last === day || s.last === prevDay(day) ? s.count : 0
+}

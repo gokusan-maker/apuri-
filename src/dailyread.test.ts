@@ -53,3 +53,14 @@ describe('トリオボーナス7日連続', () => {
     expect(r).toEqual({ count: 7, ticket: false, week: true })
   })
 })
+
+describe('いまのトリオ連続日数', () => {
+  it('きのうまで続いていれば今の日数、とぎれていれば0', async () => {
+    const { claimTrioStreak, trioStreakNow } = await import('./dailyread')
+    localStorage.clear()
+    claimTrioStreak('2026-10-20')
+    claimTrioStreak('2026-10-21')
+    expect(trioStreakNow('2026-10-22')).toBe(2)
+    expect(trioStreakNow('2026-10-24')).toBe(0)
+  })
+})

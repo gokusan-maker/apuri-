@@ -1,6 +1,6 @@
 import { dailyGrammar, loadDailyGrammarDay } from './grammar'
 import { useState } from 'react'
-import { claimTrioStreak, dailyShort, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
+import { trioStreakNow, claimTrioStreak, dailyShort, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
 
 type Props = {
   today: string
@@ -24,6 +24,7 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
     <section className="today-tasks" aria-label="今日の課題">
       <p className="today-tasks-title">
         📋 今日の課題 <span>{n} / 3 クリア{n === 3 ? ' 🎉' : ''}</span>
+        {trioStreakNow(today) > 0 && <span className="trio-streak" aria-label="トリオボーナスの連続日数"> 🔥{trioStreakNow(today)}日</span>}
       </p>
       {items.map((x) => (
         <button key={x.id} className={`today-task${x.done ? ' done' : ''}`} onClick={() => onGo(x.id)}>
