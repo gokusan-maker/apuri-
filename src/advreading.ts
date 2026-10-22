@@ -1067,4 +1067,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the club do to get more people to join?', choices: ['They put up posters in town.', 'They paid people money.', 'They cleaned the school.', 'They bought new bags.'], answer: 0, why: '第2段落 after we put up posters in town, many people started to join us。' },
     ],
   },
+  {
+    id: 'adv-disagreement',
+    title: 'The Value of Disagreement',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many of us try to avoid disagreement. Arguments can feel uncomfortable, and we may worry that challenging someone's opinion will damage our relationship with them. As a result, groups often reach decisions ( A ) anyone seriously questioning them, even when some members have doubts.",
+      "Research on group decision-making, however, suggests that this comfort comes at a cost. When everyone agrees too quickly, important risks may be ignored, a problem sometimes called 'groupthink.' Teams that include members willing to raise objections tend to consider a ( B ) range of possibilities and make fewer serious mistakes.",
+      'The key is to separate disagreement about ideas from conflict between people. When criticism is aimed at a plan rather than at the person who proposed it, disagreement can become a tool for thinking ( C ) than a threat to friendship. Learning to disagree well may therefore be as important as learning to agree.',
+    ],
+    ja: [
+      '私たちの多くは、意見がくいちがうことを避けようとする。言い合いは気まずく感じられるし、だれかの意見に異をとなえると、その人との関係がこわれるのではないかと心配になるかもしれない。その結果、グループはしばしば、たとえ心の中で疑問をもつメンバーがいても、だれも本気で疑問をなげかけないまま物事を決めてしまう。',
+      'しかし、集団での意思決定についての研究は、この居心地のよさには代償があることを示している。全員があまりにも早く賛成すると、大切な危険が見のがされることがある。これは「集団浅慮（グループシンク）」とよばれることもある問題だ。すすんで反対意見を出すメンバーがいるチームのほうが、より広い範囲の可能性を考え、重大なまちがいが少なくなる傾向がある。',
+      '大切なのは、考えについての意見のちがいと、人どうしのあらそいを分けて考えることだ。批判が、それを提案した人ではなく計画に向けられているとき、意見のくいちがいは友情をおびやかすものではなく、考えるための道具になりうる。したがって、上手に反対することを学ぶのは、賛成することを学ぶのと同じくらい大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'with', 'for', 'by'], answer: 0, why: 'without anyone 〜ing「だれも〜しないまま」。' },
+      { id: 'B', choices: ['wider', 'wide', 'widest', 'widely'], answer: 0, why: '反対意見がないチームとくらべて「より広い」範囲なので比較級 wider。a wide range of 〜 の比較級。' },
+      { id: 'C', choices: ['rather', 'better', 'more', 'sooner'], answer: 0, why: 'A rather than B「BではなくA」。友情へのおどしではなく、考えるための道具。' },
+    ],
+    tf: [
+      { statement: '意見がくいちがうことを、気まずく感じる人は多い。', answer: true, why: '第1段落 Arguments can feel uncomfortable。' },
+      { statement: '研究によれば、全員がすぐに賛成するグループのほうがまちがいが少ない。', answer: false, why: '第2段落 反対意見を出すメンバーがいるチームのほうがまちがいが少ない。' },
+      { statement: '筆者は、計画ではなく人を批判することが大切だと述べている。', answer: false, why: '第3段落 criticism is aimed at a plan rather than at the person（人ではなく計画に向ける）。' },
+    ],
+    qa: [
+      { q: 'What is the key to useful disagreement, according to the author?', choices: ['Separating ideas from people.', 'Avoiding all arguments.', 'Agreeing quickly.', 'Criticizing the person who made the plan.'], answer: 0, why: '第3段落 The key is to separate disagreement about ideas from conflict between people。' },
+    ],
+  },
+  {
+    id: 'toefl-spider-silk',
+    title: 'The Strength of Spider Silk',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      'Spider silk is one of the most remarkable materials in nature. For its weight, some types of silk are stronger than steel, and they can stretch much further ( A ) breaking. This rare combination of strength and flexibility has fascinated scientists for decades.',
+      'Spiders produce silk in special glands and can make several different kinds, each with its own purpose. Some silk is sticky and used to catch insects, ( B ) other kinds are used to build the frame of a web or to wrap eggs.',
+      'Because of these properties, scientists have long wanted to produce spider silk in large amounts. Farming spiders is difficult, however, since many species are territorial and may attack one another. Researchers are therefore trying to create similar fibers using bacteria or other organisms, hoping to use them in products such as medical threads and light, strong clothing. If they ( C ), spider silk could become part of everyday life.',
+    ],
+    ja: [
+      'クモの糸は、自然界で最もおどろくべき材料の一つだ。重さのわりに、ある種類の糸ははがねより強く、切れるまでにずっと長くのびることができる。この強さとしなやかさのめずらしい組み合わせは、何十年も科学者たちの心をとらえてきた。',
+      'クモは特別な腺で糸をつくり、いくつかの種類の糸をつくり分けることができる。それぞれに目的がある。ある糸はねばねばしていて虫をつかまえるのに使われ、一方でほかの種類の糸は巣のわく組みをつくったり、卵をくるんだりするのに使われる。',
+      'こうした性質があるため、科学者たちはずっと前からクモの糸を大量につくりたいと考えてきた。しかしクモを飼って育てるのは難しい。多くの種はなわばり意識が強く、たがいにおそい合うことがあるからだ。そこで研究者たちは、細菌などの生き物を使って似たせんいをつくろうとしており、医療用の糸や、軽くてじょうぶな服などの製品に使いたいと考えている。もし成功すれば、クモの糸は日常生活の一部になるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'after', 'while', 'since'], answer: 0, why: 'stretch further before breaking「切れるまでにもっとのびる」。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'until'], answer: 0, why: '対比の while「一方で」。ねばねばの糸と、ほかの用途の糸をくらべている。' },
+      { id: 'C', choices: ['succeed', 'fail', 'stop', 'wait'], answer: 0, why: 'If they succeed「もし成功すれば」、日常生活の一部になる。' },
+    ],
+    tf: [
+      { statement: 'Some spider silk is stronger than steel for its weight.', answer: true, why: '第1段落 For its weight, some types of silk are stronger than steel。' },
+      { statement: 'Spiders produce only one kind of silk.', answer: false, why: '第2段落 can make several different kinds。' },
+      { statement: 'Farming spiders is easy because they live peacefully together.', answer: false, why: '第3段落 many species are territorial and may attack one another。' },
+    ],
+    qa: [
+      { q: 'Why are researchers using bacteria to make silk-like fibers?', choices: ['Because farming spiders is difficult.', 'Because bacteria are stronger than steel.', 'Because spiders cannot make silk.', 'Because silk is too cheap.'], answer: 0, why: '第3段落 Farming spiders is difficult ... Researchers are therefore trying to create similar fibers using bacteria。' },
+    ],
+  },
 ]

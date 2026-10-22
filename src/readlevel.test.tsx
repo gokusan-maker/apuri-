@@ -5,7 +5,7 @@ import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel } from './readle
 describe('読解のむずかしさ', () => {
   it('かんたん〜TOEFL・IELTS まで5段階あり、かんたん以外は長文がある', () => {
     expect(READ_LEVELS.map((l) => l.label)).toEqual(['かんたん', 'ふつう', '高校入試', '難関大', 'TOEFL・IELTS'])
-    for (const l of READ_LEVELS.filter((x) => x.id !== 'easy')) expect(passagesFor(l.id).length, l.id).toBeGreaterThanOrEqual(14)
+    for (const l of READ_LEVELS.filter((x) => x.id !== 'easy')) expect(passagesFor(l.id).length, l.id).toBeGreaterThanOrEqual(15)
     expect(passagesFor('univ').every((p) => p.level.startsWith('難関大'))).toBe(true)
   })
 
