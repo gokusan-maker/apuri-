@@ -1377,6 +1377,39 @@ export const PASSAGES: Passage[] = [
       { q: '先生によると、テントウムシは何を食べる？', choices: ['植物をいためる虫', '花のみつ', '木の葉'], answer: 0 },
     ],
   },
+  {
+    id: 'fireworks-night',
+    title: 'Fireworks by the River',
+    text: 'Last August, my family went to a fireworks festival by the river. We sat on a blanket and ate shaved ice. At eight o\'clock, the first firework went up with a loud boom. The sky turned red, green, and gold. My little brother covered his ears, but he was smiling.',
+    ja: 'この前の8月、家族で川のそばの花火大会に行きました。私たちはシートにすわって、かき氷を食べました。8時に、最初の花火が大きなドーンという音とともに上がりました。空は赤や緑や金色になりました。弟は耳をふさいでいましたが、笑顔でした。',
+    questions: [
+      { q: '花火大会はどこであった？', choices: ['川のそば', '学校', '山の上'], answer: 0 },
+      { q: '家族は何を食べた？', choices: ['かき氷', 'やきそば', 'りんごあめ'], answer: 0 },
+      { q: '最初の花火は何時に上がった？', choices: ['7時', '8時', '9時'], answer: 1 },
+    ],
+  },
+  {
+    id: 'tanabata-wish',
+    title: 'My Tanabata Wish',
+    text: 'In July, our class put up a bamboo tree for Tanabata. Everyone wrote a wish on a colorful paper strip. I wrote, "I want to speak English well." My friend Yui wrote, "I want to be a doctor." We hung our wishes on the tree and hoped they would come true.',
+    ja: '7月に、私たちのクラスは七夕のために竹をかざりました。みんなが色とりどりの短冊に願いごとを書きました。私は「英語をじょうずに話したい」と書きました。友だちのユイは「医者になりたい」と書きました。私たちは願いごとを竹につるして、かなうといいなと思いました。',
+    questions: [
+      { q: '七夕は何月？', choices: ['6月', '7月', '8月'], answer: 1 },
+      { q: '筆者の願いごとは？', choices: ['英語をじょうずに話したい', '医者になりたい', '背が高くなりたい'], answer: 0 },
+      { q: 'ユイは何になりたい？', choices: ['医者', '先生', '歌手'], answer: 0 },
+    ],
+  },
+  {
+    id: 'snowball-fight',
+    title: 'A Snowball Fight',
+    text: 'It snowed a lot on Saturday. In the morning, my friends and I had a snowball fight in the park. We made two teams and built small snow walls. My hands got very cold, but we laughed and ran for two hours. After that, we drank hot cocoa at my house.',
+    ja: '土曜日にたくさん雪がふりました。朝、友だちと私は公園で雪合戦をしました。2つのチームに分かれて、小さな雪のかべを作りました。手はとても冷たくなりましたが、私たちは2時間笑いながら走り回りました。そのあと、私の家で温かいココアを飲みました。',
+    questions: [
+      { q: '雪合戦はどこでした？', choices: ['公園', '校庭', '家の庭'], answer: 0 },
+      { q: '何時間あそんだ？', choices: ['1時間', '2時間', '3時間'], answer: 1 },
+      { q: 'あそんだあと何を飲んだ？', choices: ['温かいココア', '冷たいジュース', 'お茶'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
