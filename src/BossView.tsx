@@ -1,6 +1,7 @@
 import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
+import { CountUp } from './CountUpView'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -611,7 +612,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className="stats-note">
             のこりハート {hearts}・会心 {crits}回{battleRank(hearts, crits) === 'S' ? `　Sランクボーナス 🪙${RANK_S_COINS}！` : '　（ハートを減らさず会心3回でSランク）'}
           </p>
-          <p className="result-message">ボーナス +{bonus}XP</p>
+          <p className="result-message boss-bonus">
+            ボーナス +<CountUp to={bonus} />
+            XP
+          </p>
           <MissedList words={missed} />
           {nextBoss && (
             <button className="good next-unit-btn" onClick={nextBoss.onClick}>
