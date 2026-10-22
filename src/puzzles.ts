@@ -564,6 +564,16 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
   { q: 'What can you break without touching it?', ja: 'さわらなくても、こわす（やぶる）ことができるものはなに？', a: 'promise', aja: '約束', trick: 'break a promise で「約束をやぶる」。keep a promise は「約束を守る」。' },
   { q: 'Which building has the most stories?', ja: 'いちばんたくさんの「ストーリー」がある建物はどれ？', a: 'library', aja: '図書館', trick: 'story には「物語」と「（建物の）階」の2つの意味がある。図書館には物語がいちばん多い。' },
   { q: 'What has four wheels and flies?', ja: '車輪が4つあって、フライ（とぶ）ものはなに？', a: 'garbage truck', aja: 'ごみ収集車', trick: 'flies は動詞なら「飛ぶ」、名詞なら「ハエ（fly の複数形）」。ごみ収集車にはハエがいる、というしゃれ。' },
+  { q: 'What has needles but cannot sew?', ja: '針（ニードル）があるのに、ぬいものができないものはなに？', a: 'pine tree', aja: '松の木', trick: 'needle は「ぬい針」のほかに、松などの「とがった葉」の意味もある。sew は「ぬう」。' },
+  { q: 'What can you keep after giving it to someone?', ja: 'だれかにあげたあとでも、持っていられるものはなに？', a: 'word', aja: '約束（ことば）', trick: 'give one\'s word で「約束する」、keep one\'s word で「約束を守る」。word には「ことば」のほかに「約束」の意味がある。' },
+  { q: 'What has a tongue but cannot talk?', ja: '舌（タン）があるのに、話せないものはなに？', a: 'shoe', aja: 'くつ', trick: 'tongue は「舌」。くつのひもの下にある「ベロ」の部分も英語で tongue という。' },
+  { q: 'What has a spine but no bones?', ja: '背骨があるのに、骨がないものはなに？', a: 'book', aja: '本', trick: 'spine は「背骨」。本の「背（タイトルが書いてある細いところ）」も spine という。' },
+  { q: 'What has many eyes but cannot see?', ja: '目がたくさんあるのに、見えないものはなに？', a: 'potato', aja: 'じゃがいも', trick: 'eye は「目」。じゃがいもの「芽」が出るくぼみも eye という。' },
+  { q: 'What is always in front of you but can never be seen?', ja: 'いつも目の前にあるのに、けっして見えないものはなに？', a: 'future', aja: '未来', trick: 'in front of 〜 は「〜の前に」。未来は時間の上で「前」にあるけれど、目には見えない。can never be seen は受け身「けっして見られない」。' },
+  { q: 'What gets sharper the more you use it?', ja: '使えば使うほど、シャープ（するどく）になるものはなに？', a: 'brain', aja: '脳（頭）', trick: 'sharp は「（刃物が）するどい」と「頭がきれる」の両方。ナイフは使うとにぶくなるが、頭は使うほどさえる。' },
+  { q: 'What do you throw out when you want to use it, and take in when you don\'t?', ja: '使いたいときは外へ投げ、使わないときは中へ取りこむものはなに？', a: 'anchor', aja: '（船の）いかり', trick: '船を止めたいときはいかりを海へ投げ入れ、出発するときは引き上げる。throw out（投げ出す）と take in（取りこむ）が反対。' },
+  { q: 'What can you hear but cannot touch or see?', ja: '聞こえるのに、さわることも見ることもできないものはなに？', a: 'voice', aja: '声', trick: 'hear（聞こえる）・touch（さわる）・see（見る）の3つの動詞をくらべている。声は聞こえるだけ。' },
+  { q: 'What has a bottom at the top?', ja: '上のほうに「ボトム（下・おしり）」があるものはなに？', a: 'leg', aja: '脚', trick: 'bottom には「いちばん下」と「おしり」の2つの意味がある。脚のいちばん上にはおしり（bottom）がある、というしゃれ。' },
   { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
 ]
 
