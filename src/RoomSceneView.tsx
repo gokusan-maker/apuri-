@@ -1,9 +1,10 @@
 // 部屋の背景のイラスト（相棒のうしろに敷く）。文字が読めるよう下と横のはしに寄せて描く
-export function RoomScene({ room }: { room?: string }) {
+// align：どこを見せるか（ホームの相棒のうしろの小さな四角では、絵のある右はしを見せる）
+export function RoomScene({ room, align = 'xMidYMax' }: { room?: string; align?: 'xMidYMax' | 'xMaxYMax' }) {
   const art = SCENES[room ?? '']
   if (!art) return null
   return (
-    <svg className={`room-scene scene-${room}`} viewBox="0 0 320 100" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <svg className={`room-scene scene-${room}`} viewBox="0 0 320 100" preserveAspectRatio={`${align} slice`} aria-hidden="true">
       <g opacity="0.8">{art}</g>
     </svg>
   )

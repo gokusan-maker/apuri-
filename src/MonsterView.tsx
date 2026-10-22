@@ -682,8 +682,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
-    <section className={`monster${room ? ` room-${room}` : ''}`} aria-label="相棒モンスター">
-      <RoomScene room={room} />
+    <section className={`monster${room ? ' has-room' : ''}`} aria-label="相棒モンスター">
       {season && (
         <span className={`season-fx season-${season.id}`} aria-label={`季節の演出：${season.name}`}>
           {[0, 1, 2, 3, 4, 5].map((i) => (
@@ -713,6 +712,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           {deco}
         </span>
       )}
+      <div className={`monster-stage${room ? ` room-${room}` : ''}`}>
+        <RoomScene room={room} align="xMaxYMax" />
       <button
         key={poke}
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? (react === 'tickle' ? ' wiggle' : ' bounce') : ''}`}
@@ -774,6 +775,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           </span>
         )}
       </button>
+      </div>
       <p className="pet-stamps" aria-label={`なでなでスタンプ ${petStamps.n % PET_STAMPS_FOR_TICKET} / ${PET_STAMPS_FOR_TICKET}`}>
         🐾 なでなでスタンプ {'●'.repeat(petStamps.n % PET_STAMPS_FOR_TICKET)}{'○'.repeat(PET_STAMPS_FOR_TICKET - (petStamps.n % PET_STAMPS_FOR_TICKET))}（10こで🎟）
       </p>
