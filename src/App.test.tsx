@@ -140,6 +140,8 @@ describe('App', () => {
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(Number(bar().getAttribute('aria-valuenow'))).toBeGreaterThan(0)
+    navTo('ホーム')
+    expect(within(screen.getByLabelText('育てているなかま')).getByLabelText(/文法のなかま/).textContent).toMatch(/\+\d+/)
     expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
   })
 

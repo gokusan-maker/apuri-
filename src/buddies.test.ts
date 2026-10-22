@@ -66,3 +66,14 @@ describe('チームの称号のごほうび', () => {
     expect(claimTeamTitle(100)).toBe(0)
   })
 })
+
+describe('今日育ったXP', () => {
+  it('なかまごとに今日のぶんを足していき、日付がかわると0から', async () => {
+    const { addBuddyToday, loadBuddyToday } = await import('./buddies')
+    localStorage.clear()
+    addBuddyToday('2026-10-22', 'grammar', 10)
+    addBuddyToday('2026-10-22', 'grammar', 5)
+    expect(loadBuddyToday('2026-10-22')).toEqual({ day: '2026-10-22', grammar: 15, reading: 0 })
+    expect(loadBuddyToday('2026-10-23')).toEqual({ day: '2026-10-23', grammar: 0, reading: 0 })
+  })
+})

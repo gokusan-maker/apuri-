@@ -10,10 +10,11 @@ type Props = {
   buddies: Buddies
   onGo: (where: 'word' | Track) => void // タップした子の画面へ
   dancing?: boolean // トリオボーナスを受け取ったときに3体がおどる
+  todayGain?: { word: number; grammar: number; reading: number } // 今日育った XP
 }
 
 // ホームの3体：単語の相棒・文法のことばモンスター・読解の竜
-export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, dancing = false }: Props) {
+export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, dancing = false, todayGain }: Props) {
   const tracks: Track[] = ['grammar', 'reading']
   const team = teamOf(wordLevel, buddies)
   return (
@@ -33,6 +34,7 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, danci
         <span className="buddy-name">{wordName}</span>
         <span className="buddy-lv">
           Lv.{wordLevel}
+          {todayGain && todayGain.word > 0 && <span className="buddy-today"> +{todayGain.word}</span>}
           {growthOf(wordLevel) > 0 && <span className="buddy-growth" aria-label={`成長の星 ${growthOf(wordLevel)}`}> {growthText(growthOf(wordLevel))}</span>}
         </span>
       </button>
@@ -46,7 +48,10 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, danci
               <BuddyFigure track={t} buddy={b} />
             </span>
             <span className="buddy-name">{buddyName(t, b)}</span>
-            <span className="buddy-lv">Lv.{lv.level}</span>
+            <span className="buddy-lv">
+              Lv.{lv.level}
+              {todayGain && todayGain[t] > 0 && <span className="buddy-today"> +{todayGain[t]}</span>}
+            </span>
             <span className="buddy-bar" aria-hidden="true">
               <span style={{ width: `${(lv.into / lv.need) * 100}%` }} />
             </span>

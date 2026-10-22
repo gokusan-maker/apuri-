@@ -241,3 +241,26 @@ export const GO_LINES: Record<Track | 'word', { en: string; ja: string }> = {
   grammar: { en: "Grammar time! I'm ready.", ja: '文法の時間だ！ 準備オッケー。' },
   reading: { en: "Let's read a story together.", ja: 'いっしょにお話を読もう。' },
 }
+
+// 今日そのなかまが育った XP（ホームのカードに +N で出す）。日付がかわると0から
+const TODAY_KEY = 'eitan:buddy-today'
+export type BuddyToday = { day: string; grammar: number; reading: number }
+export function loadBuddyToday(day: string): BuddyToday {
+  try {
+    const v = JSON.parse(localStorage.getItem(TODAY_KEY) ?? 'null') as Partial<BuddyToday> | null
+    if (v && v.day === day) return { day, grammar: Number(v.grammar) || 0, reading: Number(v.reading) || 0 }
+  } catch {
+    // こわれていたら0から
+  }
+  return { day, grammar: 0, reading: 0 }
+}
+export function addBuddyToday(day: string, track: Track, amount: number): BuddyToday {
+  const t = loadBuddyToday(day)
+  const next = { ...t, [track]: t[track] + Math.max(0, Math.round(amount)) }
+  try {
+    localStorage.setItem(TODAY_KEY, JSON.stringify(next))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return next
+}
