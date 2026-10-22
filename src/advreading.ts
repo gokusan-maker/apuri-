@@ -536,31 +536,31 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
-    id: 'toefl-rainbow',
-    title: 'How Rainbows Form',
-    level: 'TOEFL・IELTS（物理）',
+    id: 'toefl-glaciers',
+    title: 'Rivers of Ice',
+    level: 'TOEFL・IELTS（地学）',
     paragraphs: [
-      'A rainbow appears when sunlight shines through drops of water in the air. Although sunlight looks white, it is ( A ) made up of many colors mixed together. This can be shown by passing light through a glass prism, which separates it into a band of red, orange, yellow, green, blue, and violet.',
-      'When light enters a raindrop, it bends, a process called refraction. Different colors bend by slightly different amounts, so they spread out. The light then reflects off the back of the drop and bends again as it leaves. As a result, each color comes out at a slightly different angle, ( B ) the band of colors we see.',
-      'To see a rainbow, you must stand with the sun behind you and the rain in front of you. This is why rainbows are most common in the early morning or late afternoon, ( C ) the sun is low in the sky. Under the right conditions, a fainter second rainbow may appear above the first, with its colors in reverse order.',
+      'Glaciers are huge bodies of ice that form in places where more snow falls in winter than melts in summer. Over many years, the snow is pressed into thick ice, which becomes so heavy that it begins to move slowly downhill ( A ) its own weight.',
+      'As a glacier moves, it acts like a giant piece of sandpaper. Rocks frozen into the bottom of the ice scrape the ground, carving deep valleys with a U-shaped cross-section. Many famous landscapes, such as the fjords of Norway, were shaped ( B ) this way during past ice ages.',
+      'Today, most glaciers around the world are shrinking. This matters because glaciers store fresh water. In many mountain regions, people depend on meltwater from glaciers for drinking water and farming during dry seasons. If the glaciers ( C ), these communities may face serious water shortages in the future. Scientists are therefore watching glaciers closely from space.',
     ],
     ja: [
-      '虹は、空気中の水のしずくに日光が差しこむと現れる。日光は白く見えるが、実はたくさんの色が混ざり合ってできている。このことは、光をガラスのプリズムに通すと確かめられる。プリズムは光を、赤・だいだい・黄・緑・青・むらさきの帯に分けるのだ。',
-      '光は雨つぶに入ると曲がる。これは屈折とよばれる現象だ。色によって曲がり方がわずかにちがうので、色が広がる。光はそれから、しずくの奥ではね返り、外に出るときにもう一度曲がる。その結果、それぞれの色が少しずつちがう角度で出てきて、私たちが見る色の帯をつくり出す。',
-      '虹を見るには、太陽を背にして、雨を前にして立たなければならない。だから虹は、太陽が空の低いところにある早朝や夕方によく見られる。条件がそろうと、最初の虹の上に、色の順番が逆になった、うすい2本目の虹が現れることもある。',
+      '氷河は、冬にふる雪の量が夏にとける量より多い場所でできる、巨大な氷のかたまりである。長い年月のあいだに雪は押し固められて厚い氷になり、それがとても重くなるので、自らの重みでゆっくりと坂を下りはじめる。',
+      '氷河は動きながら、巨大な紙やすりのような働きをする。氷の底にこおりついた岩が地面をけずり、断面がU字形の深い谷をきざむ。ノルウェーのフィヨルドのような有名な景色の多くは、過去の氷河期にこのようにして形づくられた。',
+      '今日、世界中のほとんどの氷河は小さくなっている。氷河は淡水をたくわえているので、これは重大なことだ。多くの山岳地域では、人々はかわいた季節に、飲み水や農業のために氷河のとけ水に頼っている。もし氷河が消えてしまえば、こうした地域は将来、深刻な水不足に直面するかもしれない。そのため科学者たちは、宇宙から氷河を注意深く見守っている。',
     ],
     blanks: [
-      { id: 'A', choices: ['actually', 'hardly', 'rarely', 'never'], answer: 0, why: 'actually「実は」。白く見えるが、実はたくさんの色でできている、という逆接の流れ。' },
-      { id: 'B', choices: ['creating', 'created', 'to creating', 'creates'], answer: 0, why: '分詞構文 creating「（その結果）〜をつくり出す」。前の文全体の結果を表す。' },
-      { id: 'C', choices: ['when', 'which', 'what', 'where'], answer: 0, why: '関係副詞 when。the early morning or late afternoon（時）を受けて「そのときは〜」。' },
+      { id: 'A', choices: ['under', 'over', 'beside', 'against'], answer: 0, why: 'under its own weight「自らの重みで」。重さの力を受けて動く。' },
+      { id: 'B', choices: ['in', 'by', 'at', 'for'], answer: 0, why: 'in this way「このようにして」。' },
+      { id: 'C', choices: ['disappear', 'grow', 'freeze', 'return'], answer: 0, why: '氷河が小さくなっている話の流れなので「消える（disappear）」と水不足になる。' },
     ],
     tf: [
-      { statement: 'Sunlight is made up of only one color.', answer: false, why: '第1段落 it is actually made up of many colors mixed together。' },
-      { statement: 'To see a rainbow, the sun should be behind you.', answer: true, why: '第3段落 stand with the sun behind you and the rain in front of you。' },
-      { statement: 'In a second rainbow, the colors appear in the same order as in the first.', answer: false, why: '第3段落 with its colors in reverse order（逆の順番）。' },
+      { statement: 'Glaciers form where more snow melts in summer than falls in winter.', answer: false, why: '第1段落 more snow falls in winter than melts in summer（冬にふる量のほうが多い）。' },
+      { statement: 'U-shaped valleys can be created by moving glaciers.', answer: true, why: '第2段落 carving deep valleys with a U-shaped cross-section。' },
+      { statement: 'Some people rely on glacier meltwater for farming.', answer: true, why: '第3段落 people depend on meltwater from glaciers for drinking water and farming。' },
     ],
     qa: [
-      { q: 'Why are rainbows most common in the early morning or late afternoon?', choices: ['The sun is low in the sky then.', 'It rains only at those times.', 'The air is warmer then.', 'The sun is directly overhead.'], answer: 0, why: '第3段落 when the sun is low in the sky。' },
+      { q: 'Why does the shrinking of glaciers matter?', choices: ['Glaciers store fresh water that people need.', 'Glaciers make the air warmer.', 'Glaciers create new mountains.', 'Glaciers stop rain from falling.'], answer: 0, why: '第3段落 This matters because glaciers store fresh water。' },
     ],
   },
   {
@@ -617,6 +617,62 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'What did the writer understand at the end?', choices: ['Food tastes better when you know the work it needs.', 'Gardening is always boring.', 'Potatoes are easy to grow.', 'Grandmother likes to cook every day.'], answer: 0, why: "第3段落 祖母の言葉 'Vegetables taste good when you know how much work they need.' の意味がわかった。" },
+    ],
+  },
+  {
+    id: 'exam-sign-language',
+    title: 'Thank You in Sign Language',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'In our town, there is a cafe where some of the staff cannot hear. The first time I went there, I did not know how to order. A staff member smiled and pointed to a menu with pictures, so I was able to order ( A ) any problems.',
+      "After that, I became interested in sign language. I borrowed a book from the library and practiced simple words like 'thank you' and 'delicious' every night. At first my hands moved slowly, but little by little I got ( B ) at it.",
+      "A month later, I visited the cafe again and signed 'thank you' to the staff member. Her face lit up, and she signed something back. I did not understand everything, but I felt that we were really talking. I learned that communication is not only about the words we ( C ) with our mouths. Now I want to learn more signs.",
+    ],
+    ja: [
+      '私の町には、耳の聞こえない店員さんが何人かはたらいているカフェがあります。はじめて行ったとき、私は注文のしかたがわかりませんでした。店員さんがほほえんで、写真つきのメニューを指さしてくれたので、何の問題もなく注文することができました。',
+      'それから私は手話に興味をもちました。図書館で本を借りて、「ありがとう」や「おいしい」のような簡単なことばを毎晩練習しました。はじめは手がゆっくりとしか動きませんでしたが、少しずつ上手になりました。',
+      '1か月後、私はまたそのカフェに行き、店員さんに手話で「ありがとう」と伝えました。店員さんの顔がぱっと明るくなり、手話で何かを返してくれました。全部はわかりませんでしたが、本当に話をしていると感じました。コミュニケーションは、口で言うことばだけではないのだと学びました。今では、もっと手話を覚えたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'with', 'for', 'by'], answer: 0, why: 'without any problems「何の問題もなく」。' },
+      { id: 'B', choices: ['better', 'worse', 'more', 'most'], answer: 0, why: 'get better at 〜「〜が上手になる」。少しずつ上達した。' },
+      { id: 'C', choices: ['say', 'hear', 'eat', 'close'], answer: 0, why: '「口で言う（say）ことば」。手話のように手で伝える方法と対比している。' },
+    ],
+    tf: [
+      { statement: 'カフェの店員はみな耳が聞こえない。', answer: false, why: '第1段落 some of the staff cannot hear（何人かは）。' },
+      { statement: '筆者は図書館で本を借りて手話を練習した。', answer: true, why: '第2段落 I borrowed a book from the library and practiced simple words。' },
+      { statement: '1か月後、筆者は店員の手話をすべて理解できた。', answer: false, why: '第3段落 I did not understand everything。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn?', choices: ['Communication is not only about spoken words.', 'Sign language is too difficult to learn.', 'Cafes should use more pictures.', 'Libraries have few books about sign language.'], answer: 0, why: '第3段落最後 communication is not only about the words we say with our mouths。' },
+    ],
+  },
+  {
+    id: 'exam-town-clock',
+    title: 'The Old Clock Tower',
+    level: '高校入試（随筆）',
+    paragraphs: [
+      'In the center of my town, there is an old clock tower. It was built about one hundred years ago, and for a long time it was the only way many people knew the time. Last year, however, the clock stopped, and the town did not have enough money ( A ) it.',
+      "Some people said, 'We all have phones. We don't need the clock anymore.' But my grandfather disagreed. He said the clock was a symbol of the town's history. He and his friends started collecting money ( B ) the station and in front of the supermarket every weekend.",
+      "Many people who had grown up hearing the clock's bell gave money, and even children brought coins from their piggy banks. After six months, the clock was finally fixed. When it rang again, many people stopped walking and looked up. I realized that some things are important not because they are useful, but because they ( C ) people together.",
+    ],
+    ja: [
+      '私の町の中心には古い時計台があります。それはおよそ100年前に建てられ、長いあいだ、多くの人々にとって時刻を知るただ一つの方法でした。しかし去年、時計が止まってしまい、町にはそれを直すためのお金が足りませんでした。',
+      '「みんなスマホを持っている。もう時計はいらない」と言う人もいました。でも祖父は反対しました。時計は町の歴史のしるしだと言ったのです。祖父と友だちは、毎週末、駅とスーパーの前でお金を集め始めました。',
+      '時計の鐘を聞いて育った多くの人がお金を出し、子どもたちまでちょ金箱から小銭を持ってきました。6か月後、時計はついに直りました。ふたたび鐘が鳴ったとき、多くの人が足を止めて見上げました。役に立つからではなく、人々を結びつけるから大切なものもあるのだと、私は気づきました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to repair', 'repairing', 'repaired', 'repair'], answer: 0, why: '不定詞の形容詞的用法 money to repair it「それを直すためのお金」。' },
+      { id: 'B', choices: ['at', 'on', 'to', 'of'], answer: 0, why: 'at the station「駅で」。場所の一点を表す at。' },
+      { id: 'C', choices: ['bring', 'keep', 'break', 'send'], answer: 0, why: 'bring people together「人々を結びつける」。' },
+    ],
+    tf: [
+      { statement: '時計台はおよそ100年前に建てられた。', answer: true, why: '第1段落 It was built about one hundred years ago。' },
+      { statement: '筆者の祖父は、時計はもう必要ないと言った。', answer: false, why: '第2段落 my grandfather disagreed（反対した）。' },
+      { statement: '時計は1か月で直った。', answer: false, why: '第3段落 After six months, the clock was finally fixed（6か月後）。' },
+    ],
+    qa: [
+      { q: 'Why did the writer think the clock was important?', choices: ['It brings people together.', 'It is the most accurate clock.', 'It is very useful for telling the time.', 'It was cheap to repair.'], answer: 0, why: '第3段落最後 not because they are useful, but because they bring people together。' },
     ],
   },
 ]
