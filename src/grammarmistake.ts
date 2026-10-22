@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'participle-idioms': { wrong: 'Judged from his voice, he is angry.', right: 'Judging from his voice, he is angry.', why: '「〜から判断すると」は決まった言い方 judging from（-ing の形）。' },
   'still-anymore': { wrong: "I don't no longer play tennis.", right: 'I no longer play tennis.', why: 'no longer に「もう〜ない」の否定がふくまれるので、not（don\'t）はいらない。' },
   'be-used-to': { wrong: 'I am used to eat spicy food.', right: 'I am used to eating spicy food.', why: 'be used to の to は前置詞なので、あとは -ing。' },
   'in-order-to': { wrong: 'I hurried in order to not miss the bus.', right: 'I hurried in order not to miss the bus.', why: '「〜しないように」は in order not to。not は to の前に置く。' },
