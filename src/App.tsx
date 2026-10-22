@@ -1709,7 +1709,6 @@ function App() {
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
-            grammarQuick={mode === 'grammar'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
             targets={mode === 'word' && todayQuiz ? todayWords(today) : quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}

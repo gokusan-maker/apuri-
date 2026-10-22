@@ -133,6 +133,7 @@ describe('App', () => {
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     render(<App />)
     navTo('文法チャレンジ')
+    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
     rnd.mockRestore()
     const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
     expect(bar()).toHaveAttribute('aria-valuenow', '0')
@@ -178,6 +179,10 @@ describe('App', () => {
     expect(screen.getByText('スタート')).toBeInTheDocument()
     fireEvent.click(tab('文法'))
     expect(document.querySelector('.grammar')).not.toBeNull()
+    // 文法チャレンジは、まずゲームの種類をえらぶ画面（いきなり問題は出ない）
+    expect(screen.getByLabelText('文法ゲーム')).toBeInTheDocument()
+    expect(screen.getByText('✏️ すぐ練習（5問）')).toBeInTheDocument()
+    expect(screen.queryByText(/\/ 5 問目/)).toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
     fireEvent.click(tab('読解'))
     expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
@@ -920,6 +925,7 @@ describe('App', () => {
     expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))
+    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -953,6 +959,7 @@ describe('App', () => {
     render(<App />)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     navTo('文法チャレンジ')
+    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
