@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
-import { LONG_PASSAGES, MARKS, wordCount } from './longreading'
+import { LONG_PASSAGES, MARKS, shownTitle, wordCount } from './longreading'
 import { LongReading } from './LongReadingView'
 
 it('長文を読んで記号で答え、採点すると点数と解説が出る', () => {
@@ -340,7 +340,7 @@ it('★のしおりをつけた長文は一覧の上に来る', () => {
   localStorage.clear()
   render(<LongReading />)
   const last = LONG_PASSAGES[LONG_PASSAGES.length - 1]
-  const btn = screen.getAllByLabelText(/をしおりに入れる$/).at(-1)!
+  const btn = screen.getAllByLabelText(/をしおりに入れる$/).find((b) => b.getAttribute('aria-label') === `${shownTitle(last, LONG_PASSAGES.length - 1)}をしおりに入れる`)!
   fireEvent.click(btn)
   expect(JSON.parse(localStorage.getItem('eitan:long-bookmarks')!)).toEqual([last.id])
   expect(document.querySelector('.grammar-list li .grammar-fav.on')).not.toBeNull()
@@ -398,4 +398,13 @@ it('段落の文の並べかえ：答えるまでその段落はかくれ、正�
   expect(screen.getByText('（この段落は下の「文の並べかえ」の問題です）')).toBeInTheDocument()
   for (const i of q.answer) fireEvent.click(screen.getByRole('button', { name: new RegExp(q.events[i].slice(0, 20).replace(/[?()."]/g, '.')) }))
   expect(screen.getByLabelText('並べた文の順番').textContent).toBe(q.answer.map((i) => MARKS[i]).join(' → '))
+})
+
+it('「すべて」の一覧はジャンルごとに折りたたまれている', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const folds = [...document.querySelectorAll<HTMLDetailsElement>('details.long-genre-fold')]
+  expect(folds.length).toBeGreaterThanOrEqual(3)
+  expect(folds.every((d) => !d.open)).toBe(true)
+  expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(LONG_PASSAGES.length)
 })

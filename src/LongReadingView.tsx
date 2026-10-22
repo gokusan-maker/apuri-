@@ -135,6 +135,30 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
     saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq, pseq })
   }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq, pseq])
 
+  const passageItem = (x: LongPassage) => (
+    <li key={x.id} className="with-fav">
+      <button
+        className={`grammar-fav${bookmarks.includes(x.id) ? ' on' : ''}`}
+        aria-label={`${shownTitle(x, LONG_PASSAGES.indexOf(x))}をしおりに${bookmarks.includes(x.id) ? '入れない' : '入れる'}`}
+        aria-pressed={bookmarks.includes(x.id)}
+        onClick={() => {
+          const b = bookmarks.includes(x.id) ? bookmarks.filter((y) => y !== x.id) : [...bookmarks, x.id]
+          setBookmarks(b)
+          saveBookmarks(b)
+        }}
+      >
+        {bookmarks.includes(x.id) ? '★' : '☆'}
+      </button>
+      <button
+        onClick={() => openPassage(x)}
+      >
+        📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
+        <span className="long-meta">
+          {x.level}・{'★'.repeat(difficultyOf(x))}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
+        </span>
+      </button>
+    </li>
+  )
   if (!p && tfQuiz) return <LongTfQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setTfQuiz(false)} />
   if (!p && vocabQuiz) return <LongVocabQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setVocabQuiz(false)} />
   if (!p) {
@@ -246,32 +270,24 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             </button>
           ))}
         </div>
-        <ul className="grammar-list">
-          {[...LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)), ...LONG_PASSAGES.filter((x) => !bookmarks.includes(x.id))].filter((x) => genre === 'all' || genreOf(x) === genre).map((x) => (
-            <li key={x.id} className="with-fav">
-              <button
-                className={`grammar-fav${bookmarks.includes(x.id) ? ' on' : ''}`}
-                aria-label={`${shownTitle(x, LONG_PASSAGES.indexOf(x))}をしおりに${bookmarks.includes(x.id) ? '入れない' : '入れる'}`}
-                aria-pressed={bookmarks.includes(x.id)}
-                onClick={() => {
-                  const b = bookmarks.includes(x.id) ? bookmarks.filter((y) => y !== x.id) : [...bookmarks, x.id]
-                  setBookmarks(b)
-                  saveBookmarks(b)
-                }}
-              >
-                {bookmarks.includes(x.id) ? '★' : '☆'}
-              </button>
-              <button
-                onClick={() => openPassage(x)}
-              >
-                📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
-                <span className="long-meta">
-                  {x.level}・{'★'.repeat(difficultyOf(x))}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        {genre === 'all' ? (
+          <>
+            {bookmarks.length > 0 && <ul className="grammar-list">{LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)).map(passageItem)}</ul>}
+            {GENRES.map((g) => {
+              const ps = LONG_PASSAGES.filter((x) => genreOf(x) === g)
+              return (
+                <details key={g} className="grammar-grade-fold long-genre-fold">
+                  <summary>
+                    {g}（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本）
+                  </summary>
+                  <ul className="grammar-list">{ps.map(passageItem)}</ul>
+                </details>
+              )
+            })}
+          </>
+        ) : (
+          <ul className="grammar-list">{[...LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)), ...LONG_PASSAGES.filter((x) => !bookmarks.includes(x.id))].filter((x) => genreOf(x) === genre).map(passageItem)}</ul>
+        )}
       </section>
     )
   }
