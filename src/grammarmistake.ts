@@ -101,6 +101,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'relative-that': { wrong: 'This is the best book what I have read.', right: 'This is the best book that I have read.', why: '先行詞があるときに what は使えない。最上級がつくときは that。' },
   'number-expr': { wrong: 'There are three hundreds students.', right: 'There are three hundred students.', why: '具体的な数のあとの hundred には -s をつけない。' },
   'the-more': { wrong: 'The more you practice, more better you get.', right: 'The more you practice, the better you get.', why: 'うしろも the ＋比較級。more better とは言わない。' },
+  'ago-before': { wrong: 'I went there before three days.', right: 'I went there three days ago.', why: '今から数えて「〜前に」は 〜 ago。' },
+  'so-such': { wrong: 'It is so a beautiful flower.', right: 'It is such a beautiful flower.', why: '名詞があるときは such a ＋形容詞＋名詞。' },
   'ing-two': { wrong: 'Swim is fun.', right: 'Swimming is fun.', why: '「泳ぐこと」を主語にするときは動名詞 swimming。' },
   'because-of': { wrong: 'I stayed home because the rain.', right: 'I stayed home because of the rain.', why: 'あとが名詞なら because of。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
