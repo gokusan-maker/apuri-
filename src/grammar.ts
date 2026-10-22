@@ -2168,3 +2168,12 @@ export const almostUnits = (r: GrammarRecord, n = 3) => GRAMMAR.filter((u) => r[
 
 // 選択肢を表示する順番（元の番号の並び）。seed で何こずらすかが決まる（答えの位置を覚えないように）
 export const choiceOrder = (n: number, seed: number) => Array.from({ length: n }, (_, d) => (d + (((seed * 7) % n) + n)) % n)
+
+// 関連する単元：同じ学年の中で、前と次の単元（最大2つ）
+export function relatedUnits(id: string): GrammarUnit[] {
+  const g = gradeOf(id)
+  const list = GRAMMAR.filter((u) => gradeOf(u.id) === g)
+  const i = list.findIndex((u) => u.id === id)
+  if (i < 0) return []
+  return [list[i - 1], list[i + 1]].filter((u): u is GrammarUnit => !!u)
+}

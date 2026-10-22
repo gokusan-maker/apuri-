@@ -1,17 +1,15 @@
 import { expect, it } from 'vitest'
-import { groupOf, homophoneOf, oppositeOf } from './related'
+import { GRAMMAR, gradeOf, relatedUnits } from './grammar'
 
-it('反対の意味と同じ発音の単語を引ける', () => {
-  expect(oppositeOf('big')).toBe('small')
-  expect(oppositeOf('small')).toBe('big')
-  expect(oppositeOf('banana')).toBeUndefined()
-  expect(homophoneOf('sea')).toBe('see（見る）')
-  expect(homophoneOf('see')).toBe('sea（海）')
-  expect(homophoneOf('banana')).toBeUndefined()
-})
-
-it('仲間の名前を引ける', () => {
-  expect(groupOf('cat')).toBe('動物')
-  expect(groupOf('soccer')).toBe('スポーツ')
-  expect(groupOf('xyz')).toBeUndefined()
+it('関連する単元は同じ学年の前と次（最大2つ）', () => {
+  for (const u of GRAMMAR.slice(0, 20)) {
+    const r = relatedUnits(u.id)
+    expect(r.length).toBeGreaterThanOrEqual(1)
+    expect(r.length).toBeLessThanOrEqual(2)
+    for (const x of r) {
+      expect(gradeOf(x.id)).toBe(gradeOf(u.id))
+      expect(x.id).not.toBe(u.id)
+    }
+  }
+  expect(relatedUnits('nothing')).toEqual([])
 })

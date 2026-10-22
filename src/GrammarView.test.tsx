@@ -675,3 +675,14 @@ it('結果画面に「この回の正しい英文」がまとめて出る', asyn
   expect(screen.getByText('📖 この回の正しい英文（3文）')).toBeInTheDocument()
   for (const q of unit.questions) expect(screen.getByLabelText(`${correctSentence(q)} を聞く`)).toBeInTheDocument()
 })
+
+it('単元の要点画面から「関連する単元」へ行ける', async () => {
+  localStorage.clear()
+  const { relatedUnits } = await import('./grammar')
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  const r = relatedUnits(unit.id)[0]
+  fireEvent.click(screen.getAllByRole('button', { name: r.title }).at(-1)!)
+  expect(screen.getByText(r.points[0])).toBeInTheDocument()
+})
