@@ -843,4 +843,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How does the writer drink soft drinks now?', choices: ['Only on weekends.', 'Every day after practice.', 'Never.', 'Two bottles a day.'], answer: 0, why: '第3段落 now I have one only on weekends。' },
     ],
   },
+  {
+    id: 'adv-self-driving',
+    title: 'Who Is Driving?',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Self-driving cars promise to make roads safer, since most traffic accidents are caused by human error. Machines do not get tired, look at their phones, or drive after drinking late at night. ( A ), even supporters admit that no technology can remove every risk.',
+      'This raises a difficult question: when a self-driving car is involved in an accident, who is responsible? The passenger was not driving, the programmers could not predict every situation, and the car itself cannot be punished. Our legal systems were designed for a world in which a human was always ( B ) control.',
+      'Some experts argue that manufacturers should take responsibility, as they do when other products fail. Others worry that this would slow the development of a technology that could save many lives. Whichever view prevails, the debate shows that new technologies often force us to ( C ) ideas we once took for granted.',
+    ],
+    ja: [
+      '自動運転車は、道路をより安全にすると約束している。交通事故の多くは人のミスが原因だからだ。機械はつかれないし、スマートフォンを見ることも、夜おそくにお酒を飲んで運転することもない。それでも、支持する人々でさえ、どんな技術もあらゆる危険をなくすことはできないと認めている。',
+      'ここで難しい問いが生まれる。自動運転車が事故にかかわったとき、だれに責任があるのか。乗っていた人は運転していなかったし、プログラマーはあらゆる状況を予測できたわけではない。そして車そのものを罰することはできない。私たちの法律のしくみは、いつも人間が運転を管理している世界のために作られたのである。',
+      '製造業者が責任を負うべきだと主張する専門家もいる。ほかの製品が故障したときと同じように、というわけだ。一方で、そうすると多くの命を救うかもしれない技術の発展がおくれてしまうと心配する人もいる。どちらの考えが優勢になるにせよ、この議論は、新しい技術がしばしば、かつて当然だと思っていた考えを見直すことを私たちにせまるということを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Nevertheless', 'Therefore', 'For example', 'In addition'], answer: 0, why: 'Nevertheless「それでもなお」。安全になると言われるが、それでも危険はゼロにならない、という逆接。' },
+      { id: 'B', choices: ['in', 'on', 'at', 'under'], answer: 0, why: 'in control「管理している・運転している」。under control は「（物が）管理されている」。' },
+      { id: 'C', choices: ['rethink', 'reuse', 'record', 'recall'], answer: 0, why: 'rethink「考え直す」。当然だと思っていた考えを見直す。' },
+    ],
+    tf: [
+      { statement: '交通事故の多くは人のミスが原因である。', answer: true, why: '第1段落 most traffic accidents are caused by human error。' },
+      { statement: '自動運転車を支持する人は、どんな危険もなくせると考えている。', answer: false, why: '第1段落 even supporters admit that no technology can remove every risk。' },
+      { statement: '筆者は、製造業者が責任を負うべきだと結論づけている。', answer: false, why: '第3段落 両方の意見を紹介し、どちらかに決めてはいない（Whichever view prevails）。' },
+    ],
+    qa: [
+      { q: 'Why is it difficult to decide who is responsible?', choices: ['Our laws assumed that a human was always driving.', 'Self-driving cars are too expensive.', 'Programmers are always to blame.', 'Passengers drive the car themselves.'], answer: 0, why: '第2段落 Our legal systems were designed for a world in which a human was always in control。' },
+    ],
+  },
+  {
+    id: 'toefl-vaccines',
+    title: 'How Vaccines Train the Body',
+    level: 'TOEFL・IELTS（医学）',
+    paragraphs: [
+      'When harmful germs enter the body, the immune system fights them, but this response can take days to build up. During that time, a person may become seriously ill. Vaccines work by giving the immune system a chance to practice ( A ) a real infection occurs.',
+      'A vaccine contains a weakened or inactive form of a germ, or just a harmless piece of it. Although it cannot cause the disease, the immune system still recognizes it as foreign and produces antibodies. More importantly, the body creates memory cells that ( B ) how to fight that particular germ.',
+      'If the real germ appears later, these memory cells can respond quickly, often stopping the infection before symptoms appear. When enough people in a community are vaccinated, germs have fewer chances to spread, which also protects people who cannot receive vaccines, such as newborn babies. This effect is ( C ) as herd immunity.',
+    ],
+    ja: [
+      '有害な病原体が体に入ると、免疫のしくみがそれとたたかうが、この反応が十分に強くなるまでには何日もかかることがある。そのあいだに、重い病気になってしまうこともある。ワクチンは、本当の感染が起こる前に、免疫のしくみに練習する機会をあたえることで働く。',
+      'ワクチンには、弱めたり働かなくしたりした病原体、あるいはその無害な一部だけが入っている。病気を起こすことはできないが、免疫のしくみはそれでも外から来たものだと見分け、抗体をつくる。さらに大切なことに、体はその病原体とのたたかい方を覚えておく記憶細胞をつくる。',
+      'あとで本物の病原体が入ってくると、これらの記憶細胞がすばやく反応し、症状が出る前に感染を止めることも多い。地域で十分に多くの人がワクチンを受けると、病原体が広がる機会が少なくなり、生まれたばかりの赤ちゃんのようにワクチンを受けられない人も守られる。この効果は集団免疫として知られている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'after', 'while', 'since'], answer: 0, why: '「本当の感染が起こる前に（before）」練習する。' },
+      { id: 'B', choices: ['remember', 'forget', 'ignore', 'create'], answer: 0, why: 'memory cells（記憶細胞）は、たたかい方を「覚えている（remember）」。' },
+      { id: 'C', choices: ['known', 'knowing', 'knew', 'know'], answer: 0, why: 'be known as 〜「〜として知られている」。' },
+    ],
+    tf: [
+      { statement: 'Vaccines usually cause the disease in a mild form.', answer: false, why: '第2段落 it cannot cause the disease。' },
+      { statement: 'Memory cells help the body respond quickly to a germ later.', answer: true, why: '第3段落 these memory cells can respond quickly。' },
+      { statement: 'Herd immunity can protect people who cannot be vaccinated.', answer: true, why: '第3段落 which also protects people who cannot receive vaccines ... This effect is known as herd immunity。' },
+    ],
+    qa: [
+      { q: 'What does a vaccine contain?', choices: ['A weakened or inactive germ, or a harmless part of it.', 'Antibodies from other people.', 'Memory cells from animals.', 'A stronger form of the germ.'], answer: 0, why: '第2段落 A vaccine contains a weakened or inactive form of a germ, or just a harmless piece of it。' },
+    ],
+  },
 ]
