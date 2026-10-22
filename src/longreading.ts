@@ -3607,6 +3607,98 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Kenta thinks his bicycle is better than a new one.', answer: true, why: '第5段落の内容と合う。' },
     ],
   },
+  {
+    id: 'salty-sea',
+    title: 'Why Is the Sea Salty?',
+    level: '中2',
+    paragraphs: [
+      'If you have ever swum in the sea, you know that sea water tastes salty. But river water and rain are not salty. So where does the salt in the sea come ( A )?',
+      'The answer is rocks. When rain falls, it slowly breaks ( B ) rocks on the land and takes tiny pieces of salt and other minerals into rivers. Then the rivers carry them to the sea.',
+      'In the sea, the sun heats the water, and some of it goes up into the air. However, the salt cannot go up with the water, so it stays ( C ) the sea. This has happened for millions of years.',
+      'Today, about 3.5 percent of sea water is salt. That may not sound like much, but if we took all the salt out of the sea, it could cover all the land on the earth ( D ) a thick layer.',
+    ],
+    ja: [
+      '海で泳いだことがあれば、海の水がしょっぱいことを知っているでしょう。でも、川の水や雨はしょっぱくありません。では、海の塩はどこから来るのでしょうか。',
+      '答えは岩です。雨がふると、陸の岩を少しずつくだき、塩などの小さなつぶを川へ運びます。そして川がそれを海まで運んでいくのです。',
+      '海では、太陽が水を温め、その一部が空気中へのぼっていきます。しかし、塩は水といっしょにのぼることができないので、海に残ります。これが何百万年もくり返されてきたのです。',
+      '今では、海の水のおよそ3.5パーセントが塩です。それほど多くないように聞こえるかもしれませんが、もし海の塩を全部取り出したら、地球の陸地全体を厚い層でおおうことができるほどなのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'from', 'with'], answer: 2, why: 'come from 〜 で「〜から来る」。疑問詞 where とセットで文の最後に from が残る。' },
+      { id: 'B', choices: ['down', 'off', 'out', 'over'], answer: 0, why: 'break down 〜 で「〜をくだく・分解する」。' },
+      { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 1, why: 'stay in 〜 で「〜の中にとどまる」。' },
+      { id: 'D', choices: ['by', 'for', 'in', 'with'], answer: 3, why: 'cover A with B で「AをBでおおう」。' },
+    ],
+    tf: [
+      { statement: 'River water is as salty as sea water.', answer: false, why: '川の水はしょっぱくない。' },
+      { statement: 'Rain slowly breaks down rocks on the land.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Salt goes up into the air with the water.', answer: false, why: '塩は水といっしょにのぼれず、海に残る。' },
+      { statement: 'About 3.5 percent of sea water is salt.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'The salt in the sea came from rocks.', answer: true, why: '第2段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'lucky-stone',
+    title: 'The Lucky Stone',
+    level: '中2（物語）',
+    paragraphs: [
+      'The night before her piano contest, Mai was so nervous that she could not eat dinner. Her grandmother gave her a small, smooth stone. "This is a lucky stone," she said. "Keep it ( A ) your pocket tomorrow."',
+      'The next day, Mai held the stone tightly before she went on the stage. She took a deep breath and started to play. Her fingers moved smoothly, and she did not make a single mistake.',
+      'Mai won second prize. After the contest, she thanked her grandmother. "The stone really worked!" she said. Her grandmother laughed. "Actually, I found it ( B ) our garden this morning."',
+      'Mai was surprised. "Then why did I play so well?" she asked. "Because you practiced every day for three months," her grandmother answered. "The stone only helped you believe ( C ) yourself."',
+      'Mai still keeps the stone on her desk. When she feels nervous, she looks at it and remembers that hard work is the real key ( D ) success.',
+    ],
+    ja: [
+      'ピアノのコンクールの前の晩、マイはとても緊張していて夕ごはんを食べられませんでした。おばあちゃんが小さくてすべすべした石をくれました。「これは幸運の石よ。明日はポケットに入れておきなさい」とおばあちゃんは言いました。',
+      '次の日、マイはステージに上がる前に石をぎゅっとにぎりました。深呼吸をして、ひきはじめました。指はなめらかに動き、1つもまちがえませんでした。',
+      'マイは2位になりました。コンクールのあと、マイはおばあちゃんにお礼を言いました。「あの石、本当にきいたよ！」。おばあちゃんは笑いました。「じつはね、けさ庭で見つけた石なのよ」。',
+      'マイはおどろきました。「じゃあ、どうしてあんなにうまくひけたの？」とたずねると、おばあちゃんは答えました。「3か月のあいだ毎日練習したからよ。石は、あなたが自分を信じる手助けをしただけ」。',
+      'マイは今もその石を机の上に置いています。緊張したときはその石を見て、努力こそが成功への本当のかぎだと思い出すのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'in', 'on', 'with'], answer: 1, why: '「ポケットの中に」は in your pocket。' },
+      { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 1, why: '「庭で」は in the garden。' },
+      { id: 'C', choices: ['at', 'for', 'in', 'of'], answer: 2, why: 'believe in 〜 で「〜（の力）を信じる」。' },
+      { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'the key to 〜 で「〜へのかぎ（秘けつ）」。' },
+    ],
+    tf: [
+      { statement: 'Mai was nervous the night before the contest.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Mai made some mistakes in the contest.', answer: false, why: '1つもまちがえなかった。' },
+      { statement: 'Mai won first prize.', answer: false, why: '2位だった。' },
+      { statement: "Mai's grandmother found the stone in the garden.", answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Mai practiced every day for three months.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'email-school-trip',
+    title: 'An Email about a School Trip',
+    level: '中2（メール）',
+    paragraphs: [
+      'Dear Sam, Thank you for your last email. I enjoyed reading about your trip to the mountains. This time, I want to tell you ( A ) my school trip to Kyoto.',
+      'We visited many old temples. The most famous one was Kinkakuji, ( B ) is covered with gold. It shines beautifully in the sun. I have attached a photo of it to this email.',
+      'On the second day, we wore kimonos and walked around Gion. It was my first time to wear a kimono, ( C ) it was hard to walk in it. But my friends and I took many fun pictures together.',
+      'Have you ever visited an old city like Kyoto? If you come to Japan someday, I would like to show you around. Please write back ( D ) you have time. Your friend, Daichi',
+    ],
+    ja: [
+      'サムへ。この前はメールをありがとう。山への旅行の話、楽しく読んだよ。今回は、京都への修学旅行のことを話したいな。',
+      'たくさんの古いお寺に行ったよ。いちばん有名なのは金閣寺で、金でおおわれているんだ。日の光を受けて美しくかがやくよ。このメールに写真をつけておいたね。',
+      '2日目は着物を着て祇園を歩いたよ。着物を着るのははじめてだったから、着物で歩くのは大変だった。でも友だちといっしょに楽しい写真をたくさんとったよ。',
+      'サムは京都のような古い町に行ったことはある？いつか日本に来たら、案内したいな。時間があるときに返事をちょうだいね。きみの友だち、ダイチより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['about', 'for', 'of', 'with'], answer: 0, why: 'tell 人 about 〜 で「人に〜について話す」。' },
+      { id: 'B', choices: ['what', 'where', 'which', 'who'], answer: 2, why: 'もの（Kinkakuji）を説明する関係代名詞 which（コンマのあとの説明）。' },
+      { id: 'C', choices: ['because', 'but', 'if', 'so'], answer: 3, why: '「はじめてだった → だから大変だった」なので so。' },
+      { id: 'D', choices: ['what', 'when', 'where', 'which'], answer: 1, why: 'when ＋文 で「〜するときに」。' },
+    ],
+    tf: [
+      { statement: 'Sam wrote about his trip to the mountains in his last email.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: "Daichi's school trip was to Nara.", answer: false, why: '京都への修学旅行。' },
+      { statement: 'Daichi attached a photo of Kinkakuji.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Daichi had worn a kimono many times before.', answer: false, why: '着物を着るのははじめてだった。' },
+      { statement: 'Daichi wants to show Sam around if he comes to Japan.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
