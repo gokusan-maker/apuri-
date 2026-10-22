@@ -494,3 +494,18 @@ it('相棒がいると正解したときにおうえんスタンプが出る', a
   answer(true)
   expect(screen.getByLabelText('おうえんスタンプ')).toHaveTextContent('👍 ナイス！')
 })
+
+it('読解ボスで空所の問題に正解すると、本文のその空所に答えが入る', async () => {
+  localStorage.clear()
+  const { passageQs } = await import('./readingboss')
+  const { LONG_PASSAGES } = await import('./longreading')
+  const all = LONG_PASSAGES.flatMap(passageQs)
+  render(<Boss level="中1" words={wordsOf(['中1'])} reading onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />)
+  // 最初の問題は本文の順で空所の問題
+  const en = document.querySelector('.boss .en')!.textContent
+  const q = all.find((x) => x.word.en === en)!
+  expect(q.blank).toBeDefined()
+  expect(document.querySelector('.boss-filled')).toBeNull()
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+  expect(screen.getByLabelText(`（${q.blank}）${q.choices[q.answer]}`)).toBeInTheDocument()
+})

@@ -1540,3 +1540,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .game-strip .game-tile { padding: 8px 4px; }
 .game-strip .game-tile-icon { font-size: 1.5rem; }
 .game-strip .game-tile-name { font-size: 0.75rem; }
+.boss-filled { background: #bbf7d0; color: #14532d; border-radius: 4px; padding: 0 3px; font-weight: 700; }

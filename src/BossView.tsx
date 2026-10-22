@@ -2,7 +2,7 @@ import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { CountUp } from './CountUpView'
-import { readingBossQs, type ReadingQ } from './readingboss'
+import { filledParts, readingBossQs, type ReadingQ } from './readingboss'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -203,11 +203,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   if (picked === null && isAsleep(enraged, index) && sleepAt !== index && !chance && !charge) setSleepAt(index)
   const asleep = sleepAt === index
 
+  const [solved, setSolved] = useState<string[]>([]) // 読解ボス：答えがわかった空所（長文id:記号）
+
   function pick(i: number) {
     if (picked !== null || won || lost) return
     setPicked(i)
     setSkillMsg('')
     if (i === q.answer) {
+      const rq = q as Partial<ReadingQ>
+      if (rq.blank && rq.passage) setSolved((v) => [...v, `${rq.passage!.id}:${rq.blank}`])
       const c = combo + 1
       const n = corrects + 1
       setCombo(c)
@@ -662,7 +666,21 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             <details className="boss-passage" open>
               <summary>📖 本文：{(q as ReadingQ).passage.title}</summary>
               {(q as ReadingQ).passage.paragraphs.map((t, i) => (
-                <p key={i}>{t}</p>
+                <p key={i}>
+                  {filledParts(
+                    t,
+                    (q as ReadingQ).passage,
+                    solved.filter((k) => k.startsWith(`${(q as ReadingQ).passage.id}:`)).map((k) => k.slice(k.lastIndexOf(':') + 1)),
+                  ).map((x, j) =>
+                    typeof x === 'string' ? (
+                      x
+                    ) : (
+                      <mark key={j} className="boss-filled" aria-label={`（${x.id}）${x.word}`}>
+                        ({x.id}) {x.word}
+                      </mark>
+                    ),
+                  )}
+                </p>
               ))}
             </details>
           )}

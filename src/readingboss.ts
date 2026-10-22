@@ -3,7 +3,7 @@ import { BOSS_QUESTIONS } from './boss'
 import { LONG_PASSAGES, type LongPassage } from './longreading'
 import type { Level, Word } from './words'
 
-export type ReadingQ = { word: Word; choices: string[]; answer: number; passage: LongPassage }
+export type ReadingQ = { word: Word; choices: string[]; answer: number; passage: LongPassage; blank?: string } // blank：空所の問題ならその記号（A など）
 
 // 単語帳のレベル → 長文のレベル（中1・中2は中2の長文、中3は中3、そのほかは高校入試。なければ全部から）
 export function readingPoolFor(level: Level, list: LongPassage[] = LONG_PASSAGES): LongPassage[] {
@@ -20,7 +20,7 @@ export function passageQs(p: LongPassage): ReadingQ[] {
   const out: ReadingQ[] = []
   for (const b of p.blanks) {
     const sent = text.split(/(?<=[.!?"])\s+/).find((s) => s.includes(`( ${b.id} )`)) ?? `( ${b.id} )`
-    out.push({ word: w(`（${b.id}）に入る語は？ ${sent}`, b.choices[b.answer]), choices: b.choices, answer: b.answer, passage: p })
+    out.push({ word: w(`（${b.id}）に入る語は？ ${sent}`, b.choices[b.answer]), choices: b.choices, answer: b.answer, passage: p, blank: b.id })
   }
   for (const t of p.tf) out.push({ word: w(`本文と合っている？ ${t.statement}`, t.answer ? '○' : '×'), choices: ['○ 合っている', '× 合っていない'], answer: t.answer ? 0 : 1, passage: p })
   for (const q of p.qa ?? []) out.push({ word: w(q.q, q.choices[q.answer]), choices: q.choices, answer: q.answer, passage: p })
@@ -34,4 +34,24 @@ export function readingBossQs(level: Level, r: () => number, n = BOSS_QUESTIONS)
   let b = Math.floor(r() * pool.length)
   if (b === a) b = (a + 1) % pool.length
   return [...passageQs(pool[a]), ...passageQs(pool[b])].slice(0, n)
+}
+
+// 本文の1段落を、答えがわかった空所は語を入れた形にして返す（文字列と、うめた空所のならび）
+export type PassagePart = string | { id: string; word: string }
+export function filledParts(text: string, p: LongPassage, solved: string[]): PassagePart[] {
+  const parts: PassagePart[] = []
+  let rest = text
+  for (;;) {
+    const m = rest.match(/\( ([A-Z]) \)/)
+    if (!m || m.index === undefined) break
+    const b = p.blanks.find((x) => x.id === m[1])
+    if (b && solved.includes(b.id)) {
+      if (m.index > 0) parts.push(rest.slice(0, m.index))
+      parts.push({ id: b.id, word: b.choices[b.answer] })
+    } else parts.push(rest.slice(0, m.index + m[0].length))
+    rest = rest.slice(m.index + m[0].length)
+  }
+  if (rest) parts.push(rest)
+  // となりあう文字列はまとめる
+  return parts.reduce<PassagePart[]>((a, x) => (typeof x === 'string' && typeof a[a.length - 1] === 'string' ? [...a.slice(0, -1), (a[a.length - 1] as string) + x] : [...a, x]), [])
 }
