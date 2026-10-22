@@ -371,3 +371,19 @@ it('長文の一覧に「空所でよく出る熟語」まとめが出る', () =
   fireEvent.click(screen.getByText(/空所でよく出る熟語/))
   expect(screen.getByText('thank you for')).toBeTruthy()
 })
+
+it('解いた長文があれば「○×だけチャレンジ」で10問とける', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[0]
+  localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: 3, [LONG_PASSAGES[1].id]: 2 }))
+  const onAnswer = vi.fn()
+  render(<LongReading onAnswer={onAnswer} />)
+  fireEvent.click(screen.getByText(/○×だけチャレンジ/))
+  expect(screen.getByText('⭕❌ ○×だけチャレンジ 1 / 10')).toBeInTheDocument()
+  for (let i = 0; i < 10; i++) {
+    fireEvent.click(screen.getByRole('button', { name: '○' }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(/\/ 10 問正解/)).toBeInTheDocument()
+  expect(onAnswer).toHaveBeenCalledTimes(10)
+})

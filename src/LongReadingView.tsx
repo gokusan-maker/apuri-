@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
+import { LongTfQuiz } from './LongTfQuizView'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -86,6 +87,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [bookmarks, setBookmarks] = useState(loadBookmarks)
   const [weekRes, setWeekRes] = useState(loadWeekResults)
   const [vocabQuiz, setVocabQuiz] = useState(false)
+  const [tfQuiz, setTfQuiz] = useState(false)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
@@ -131,6 +133,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
     saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq })
   }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq])
 
+  if (!p && tfQuiz) return <LongTfQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setTfQuiz(false)} />
   if (!p && vocabQuiz) return <LongVocabQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setVocabQuiz(false)} />
   if (!p) {
     return (
@@ -144,6 +147,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         {Object.keys(record).length > 0 && (
           <button className="list-link" onClick={() => setVocabQuiz(true)}>
             📒 重要語句クイズ（読んだ長文から5問）
+          </button>
+        )}
+        {Object.keys(record).length > 0 && (
+          <button className="list-link" onClick={() => setTfQuiz(true)}>
+            ⭕❌ ○×だけチャレンジ（解いた長文から10問）
           </button>
         )}
         <details className="long-types long-idioms">
