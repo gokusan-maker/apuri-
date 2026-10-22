@@ -28,3 +28,19 @@ describe('項目ごとのなかま（文法のペット・長文の竜）', () =
     expect(loadBuddies()).toEqual({ grammar: { xp: 0 }, reading: { xp: 0 } })
   })
 })
+
+describe('属性のタマゴ', () => {
+  it('まだ仲間でない文法・読解のなかまから1体が仲間になり、全員そろうと出ない', async () => {
+    const { hatchAttrEgg, lockedSpecies, isUnlocked, BUDDY_SPECIES } = await import('./buddies')
+    const b = { grammar: { xp: 0 }, reading: { xp: 0 } }
+    let box = { grammar: {}, reading: {} }
+    expect(lockedSpecies(b, box)).toHaveLength(4)
+    const r = hatchAttrEgg(b, box, 0)!
+    expect(r.track).toBe('grammar')
+    expect(isUnlocked('grammar', BUDDY_SPECIES.grammar[1], b, r.box)).toBe(true)
+    box = r.box
+    for (let i = 0; i < 3; i++) box = hatchAttrEgg(b, box, 0)!.box
+    expect(lockedSpecies(b, box)).toHaveLength(0)
+    expect(hatchAttrEgg(b, box, 0)).toBeNull()
+  })
+})

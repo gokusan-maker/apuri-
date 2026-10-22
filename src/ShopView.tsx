@@ -38,6 +38,7 @@ type Props = {
   bag?: BattleBag // 持っているバトルアイテム
   onBuyBattle?: (id: BattleItemId) => void
   favSnack?: string // 相棒のきょうの好物（おやつのid）
+  attrEgg?: { price: number; left: number; onBuy: () => string | null } // 属性のタマゴ（文法・読解のなかま）
 }
 
 export type ShopTab = 'gacha' | 'snack' | 'item' | 'wear'
@@ -48,7 +49,7 @@ const SHOP_TABS: { id: ShopTab; label: string }[] = [
   { id: 'item', label: '🎒 アイテム' },
 ]
 
-export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag }: Props) {
+export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -85,6 +86,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           </button>
         ))}
       </div>
+      {tab === 'gacha' && attrEgg && <AttrEgg {...attrEgg} coins={wallet.coins} />}
       {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
       {tab === 'snack' && (
         <>
@@ -211,5 +213,23 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         </>
       )}
     </section>
+  )
+}
+
+// 属性のタマゴ：文法・読解のなかまがふえる（なにが出るかはお楽しみ）
+function AttrEgg({ price, left, onBuy, coins }: { price: number; left: number; onBuy: () => string | null; coins: number }) {
+  const [msg, setMsg] = useState('')
+  return (
+    <div className="attr-egg">
+      <button className="attr-egg-btn" disabled={left === 0 || coins < price} onClick={() => setMsg(onBuy() ?? '')}>
+        🥚 属性のタマゴ（文法・読解のなかま）🪙{price}
+        <small>{left === 0 ? 'もう全員なかまになったよ！' : 'なにが生まれるかはお楽しみ！'}</small>
+      </button>
+      {msg && (
+        <p className="level-up" role="status">
+          {msg}
+        </p>
+      )}
+    </div>
   )
 }

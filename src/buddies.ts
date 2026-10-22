@@ -133,7 +133,21 @@ export function saveBuddyBox(box: BuddyBox): void {
 export function bestLevel(track: Track, buddies: Buddies, box: BuddyBox): number {
   return Math.max(buddyLevel(buddies[track]).level, ...Object.values(box[track]).map((b) => buddyLevel(b).level))
 }
-export const isUnlocked = (track: Track, sp: BuddySpecies, buddies: Buddies, box: BuddyBox) => bestLevel(track, buddies, box) >= sp.unlockLv
+// 仲間になっているか（その属性のなかまを育てる・属性のタマゴからかえる・いま出ている）
+export const isUnlocked = (track: Track, sp: BuddySpecies, buddies: Buddies, box: BuddyBox) =>
+  bestLevel(track, buddies, box) >= sp.unlockLv || box[track][sp.id] !== undefined || speciesOf(track, buddies[track]).id === sp.id
+
+// 属性のタマゴ（ショップ）：まだ仲間でない文法・読解のなかまから1体（なにが出るかはお楽しみ）
+export const ATTR_EGG_PRICE = 120
+export function lockedSpecies(buddies: Buddies, box: BuddyBox): { track: Track; sp: BuddySpecies }[] {
+  return (['grammar', 'reading'] as Track[]).flatMap((t) => BUDDY_SPECIES[t].filter((sp) => !isUnlocked(t, sp, buddies, box)).map((sp) => ({ track: t, sp })))
+}
+export function hatchAttrEgg(buddies: Buddies, box: BuddyBox, r: number): { box: BuddyBox; track: Track; sp: BuddySpecies } | null {
+  const list = lockedSpecies(buddies, box)
+  if (list.length === 0) return null
+  const { track, sp } = list[Math.floor(r * list.length)]
+  return { box: { ...box, [track]: { ...box[track], [sp.id]: { xp: 0, species: sp.id } } }, track, sp }
+}
 
 // 同じ属性のなかまと入れかえる（今のなかまはベンチへ。はじめての種類はタマゴから）
 export function switchBuddy(buddies: Buddies, box: BuddyBox, track: Track, speciesId: string): { buddies: Buddies; box: BuddyBox } {

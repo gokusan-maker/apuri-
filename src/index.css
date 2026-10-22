@@ -1571,3 +1571,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-switch-item:disabled { opacity: 1; }
 .buddy-lock { font-size: 1.6rem; width: 40px; text-align: center; }
 .buddy-swap-link { display: block; margin: -4px auto 8px; font-size: 0.85rem; }
+.attr-egg { margin: 8px 0; }
+.attr-egg-btn { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 10px; border: none; border-radius: 14px; background: linear-gradient(90deg, #22c55e, #8b5cf6); color: #fff; font-weight: 700; }
+.attr-egg-btn small { font-weight: 400; font-size: 0.75rem; }
+.attr-egg-btn:disabled { opacity: 0.55; }

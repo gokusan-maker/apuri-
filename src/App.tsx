@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
+import { ATTR_EGG_PRICE, ATTR_LABEL, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
@@ -1250,6 +1250,18 @@ function App() {
         />
       ) : showShop ? (
         <Shop
+          attrEgg={{
+            price: ATTR_EGG_PRICE,
+            left: lockedSpecies(buddies, buddyBox).length,
+            onBuy: () => {
+              if (wallet.coins < ATTR_EGG_PRICE) return null
+              const r = hatchAttrEgg(buddies, buddyBox, Math.random())
+              if (!r) return null
+              setWallet((w) => ({ ...w, coins: w.coins - ATTR_EGG_PRICE }))
+              setBuddyBox(r.box)
+              return `🎉 タマゴがかえって、属性「${ATTR_LABEL[r.track]}」の「${r.sp.label}」が仲間になった！（なかまの入れかえでえらべるよ）`
+            },
+          }}
           initialTab={shopTab}
           eventId={seasonEvent?.id}
           wallet={wallet}

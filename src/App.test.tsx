@@ -151,6 +151,17 @@ describe('App', () => {
     expect(screen.getByLabelText('読解のなかまを入れかえる')).toBeInTheDocument()
   })
 
+  it('ショップの「属性のタマゴ」を買うと、文法か読解のなかまが1体ふえる（なにが出るかはお楽しみ）', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 200, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 200枚・ショップを開く'))
+    fireEvent.click(screen.getByText(/属性のタマゴ（文法・読解のなかま）/))
+    expect(screen.getByText(/が仲間になった！/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(80)
+    const box = JSON.parse(localStorage.getItem('eitan:buddy-box')!)
+    expect(Object.keys(box.grammar).length + Object.keys(box.reading).length).toBe(1)
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()
