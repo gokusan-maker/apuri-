@@ -507,4 +507,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do some small birds gain weight before migration?', choices: ['The fat provides fuel for the long journey.', 'It helps them sense the magnetic field.', 'It keeps them warm only in winter.', 'It makes them fly faster at night.'], answer: 0, why: '第3段落 storing fat, which serves as fuel for the journey。' },
     ],
   },
+  {
+    id: 'adv-stories',
+    title: 'Why We Tell Stories',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Every known human culture tells stories. Long before writing existed, people gathered around fires to share tales of heroes, ( A ) creatures, and distant journeys. This universality suggests that storytelling is not merely entertainment but something deeply connected to how our minds work.',
+      'One reason may be that stories help us understand other people. When we follow a character through difficulties, we imagine their thoughts and feelings, practicing a kind of empathy that is useful in real life. Stories also make information easier to remember, ( B ) facts presented as a simple list are often quickly forgotten.',
+      'In the digital age, stories have not disappeared; they have simply taken new forms, from video games to short online videos. What remains constant is our desire to ( C ) meaning in events by arranging them into a beginning, a middle, and an end. Perhaps that is why a good story can still hold our attention in a world full of distractions.',
+    ],
+    ja: [
+      '知られているすべての人間の文化は物語を語る。文字が生まれるずっと前から、人々は火のまわりに集まり、英雄や不思議な生き物、遠くへの旅の話を分かち合ってきた。この普遍性は、物語を語ることが単なる娯楽ではなく、私たちの心の働き方と深く結びついたものであることを示している。',
+      '一つの理由は、物語が他人を理解する助けになるからかもしれない。困難を乗りこえていく登場人物を追いかけるとき、私たちはその人の考えや気持ちを想像し、現実の生活でも役に立つ一種の共感を練習しているのだ。また、物語は情報を覚えやすくする。それに対して、ただの箇条書きで示された事実は、すぐに忘れられてしまうことが多い。',
+      'デジタル時代になっても、物語は消えてはいない。テレビゲームから短いネット動画まで、ただ新しい形をとっただけである。変わらないのは、できごとを始まり・中ほど・終わりに並べることで、そこに意味を見いだしたいという私たちの欲求だ。だからこそ、気を散らすものであふれた世界でも、よい物語は今なお私たちの注意をひきつけるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['strange', 'strangely', 'strangeness', 'stranger to'], answer: 0, why: '名詞 creatures を説明するので形容詞 strange「不思議な」。heroes, strange creatures, distant journeys と並んでいる。' },
+      { id: 'B', choices: ['whereas', 'because', 'unless', 'so that'], answer: 0, why: '対比の whereas「〜なのに対して」。物語は覚えやすいが、箇条書きの事実は忘れやすい。' },
+      { id: 'C', choices: ['find', 'lose', 'hide', 'spend'], answer: 0, why: 'find meaning in 〜「〜に意味を見いだす」。' },
+    ],
+    tf: [
+      { statement: '文字ができるずっと前から、人々は物語を語り合っていた。', answer: true, why: '第1段落 Long before writing existed, people gathered around fires to share tales。' },
+      { statement: '筆者は、物語は単なる娯楽にすぎないと考えている。', answer: false, why: '第1段落 not merely entertainment but something deeply connected to how our minds work。' },
+      { statement: 'デジタル時代になって、物語はなくなってしまった。', answer: false, why: '第3段落 stories have not disappeared; they have simply taken new forms。' },
+    ],
+    qa: [
+      { q: 'According to the passage, how do stories help us understand other people?', choices: ['We imagine the thoughts and feelings of characters.', 'We memorize long lists of facts.', 'We learn how to write well.', 'We avoid difficult situations.'], answer: 0, why: '第2段落 we imagine their thoughts and feelings, practicing a kind of empathy。' },
+    ],
+  },
+  {
+    id: 'toefl-rainbow',
+    title: 'How Rainbows Form',
+    level: 'TOEFL・IELTS（物理）',
+    paragraphs: [
+      'A rainbow appears when sunlight shines through drops of water in the air. Although sunlight looks white, it is ( A ) made up of many colors mixed together. This can be shown by passing light through a glass prism, which separates it into a band of red, orange, yellow, green, blue, and violet.',
+      'When light enters a raindrop, it bends, a process called refraction. Different colors bend by slightly different amounts, so they spread out. The light then reflects off the back of the drop and bends again as it leaves. As a result, each color comes out at a slightly different angle, ( B ) the band of colors we see.',
+      'To see a rainbow, you must stand with the sun behind you and the rain in front of you. This is why rainbows are most common in the early morning or late afternoon, ( C ) the sun is low in the sky. Under the right conditions, a fainter second rainbow may appear above the first, with its colors in reverse order.',
+    ],
+    ja: [
+      '虹は、空気中の水のしずくに日光が差しこむと現れる。日光は白く見えるが、実はたくさんの色が混ざり合ってできている。このことは、光をガラスのプリズムに通すと確かめられる。プリズムは光を、赤・だいだい・黄・緑・青・むらさきの帯に分けるのだ。',
+      '光は雨つぶに入ると曲がる。これは屈折とよばれる現象だ。色によって曲がり方がわずかにちがうので、色が広がる。光はそれから、しずくの奥ではね返り、外に出るときにもう一度曲がる。その結果、それぞれの色が少しずつちがう角度で出てきて、私たちが見る色の帯をつくり出す。',
+      '虹を見るには、太陽を背にして、雨を前にして立たなければならない。だから虹は、太陽が空の低いところにある早朝や夕方によく見られる。条件がそろうと、最初の虹の上に、色の順番が逆になった、うすい2本目の虹が現れることもある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['actually', 'hardly', 'rarely', 'never'], answer: 0, why: 'actually「実は」。白く見えるが、実はたくさんの色でできている、という逆接の流れ。' },
+      { id: 'B', choices: ['creating', 'created', 'to creating', 'creates'], answer: 0, why: '分詞構文 creating「（その結果）〜をつくり出す」。前の文全体の結果を表す。' },
+      { id: 'C', choices: ['when', 'which', 'what', 'where'], answer: 0, why: '関係副詞 when。the early morning or late afternoon（時）を受けて「そのときは〜」。' },
+    ],
+    tf: [
+      { statement: 'Sunlight is made up of only one color.', answer: false, why: '第1段落 it is actually made up of many colors mixed together。' },
+      { statement: 'To see a rainbow, the sun should be behind you.', answer: true, why: '第3段落 stand with the sun behind you and the rain in front of you。' },
+      { statement: 'In a second rainbow, the colors appear in the same order as in the first.', answer: false, why: '第3段落 with its colors in reverse order（逆の順番）。' },
+    ],
+    qa: [
+      { q: 'Why are rainbows most common in the early morning or late afternoon?', choices: ['The sun is low in the sky then.', 'It rains only at those times.', 'The air is warmer then.', 'The sun is directly overhead.'], answer: 0, why: '第3段落 when the sun is low in the sky。' },
+    ],
+  },
 ]
