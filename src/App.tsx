@@ -109,6 +109,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
+import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
@@ -166,11 +167,6 @@ const WORD_TABS: { id: WordTab; label: string }[] = [
   { id: 'time', label: '⏱ タイムアタック' },
 ]
 
-// 読解ステージの中（ボスは下のメニューの「ボス部屋」へ）
-const STAGE_TABS: { id: 'long' | 'short'; label: string }[] = [
-  { id: 'long', label: '📖 長文' },
-  { id: 'short', label: '📰 短い読解' },
-]
 
 const STATS_TABS = [
   { id: 'log', label: 'きろく' },
@@ -323,7 +319,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
-  const [stageTab, setStageTab] = useState<'long' | 'short'>('long') // 読解ステージのタブの中
+  const [readLevel, setReadLevel] = useState<ReadLevel>(loadReadLevel) // 読解ステージのむずかしさ
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のことばモンスター・読解の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
@@ -1312,24 +1308,26 @@ function App() {
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
           {mode === 'reading' && (
-          <div className="sub-tabs stage-sub-tabs" role="tablist" aria-label="読解の種類">
-            {STAGE_TABS.map((t) => (
+          <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
+            {READ_LEVELS.map((t) => (
               <button
                 key={t.id}
                 role="tab"
-                aria-selected={stageTab === t.id}
+                aria-selected={readLevel === t.id}
                 onClick={() => {
-                  setStageTab(t.id)
+                  setReadLevel(t.id)
+                  saveReadLevel(t.id)
                   setShortGo(false)
                 }}
               >
-                {t.label}
+                <strong>{t.label}</strong>
+                <small>{t.sub}</small>
               </button>
             ))}
           </div>
           )}
-          {mode === 'reading' && stageTab === 'long' ? (
-            <LongReading onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+          {mode === 'reading' && readLevel !== 'easy' && !shortGo ? (
+            <LongReading key={readLevel} passages={passagesFor(readLevel)} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}
@@ -1471,7 +1469,6 @@ function App() {
             today={today}
             onGo={(w) => {
               if (w === 'reading') {
-                setStageTab('short')
                 setShortGo(true)
               }
               if (w === 'word') {

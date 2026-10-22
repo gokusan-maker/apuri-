@@ -11,7 +11,7 @@ import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[] } // passages：このむずかしさの長文だけを出す
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -66,7 +66,8 @@ function Paragraph({ text, underline, refer, filled }: { text: string; underline
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins, passages }: Props) {
+  const LIST = passages ?? LONG_PASSAGES
   const [p, setP] = useState<LongPassage | null>(null)
   const [starred, setStarred] = useState<string[]>([]) // この画面で★に入れた語
   const [blanks, setBlanks] = useState<Record<string, number>>({})
@@ -210,7 +211,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           </button>
         )}
         <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
-          🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
+          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>
         {recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
@@ -218,10 +219,10 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             <strong>{shownTitle(recommendLong(types, record)!.passage, LONG_PASSAGES.indexOf(recommendLong(types, record)!.passage))}</strong>
           </button>
         )}
-        {LONG_PASSAGES.some((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)) && (
+        {LIST.some((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)) && (
           <div className="long-review">
             <p className="long-review-title">🔁 もう一度ときたい長文（満点でないもの）</p>
-            {LONG_PASSAGES.filter((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)).map((x) => (
+            {LIST.filter((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)).map((x) => (
               <button key={x.id} className="list-link" onClick={() => openPassage(x)}>
                 {shownTitle(x, LONG_PASSAGES.indexOf(x))}（{record[x.id]} / {totalOf(x)}点）
               </button>
@@ -247,12 +248,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           </details>
         )}
         <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
-        <div className="long-challenge" aria-label={`解いた長文 ${Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length} / ${LONG_PASSAGES.length}本`}>
+        <div className="long-challenge" aria-label={`解いた長文 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
           <p className="stats-note">
-            🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length} / {LONG_PASSAGES.length}本　{solvedBadges(Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length, LONG_PASSAGES.length).join(' ')}
+            🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
           </p>
           <div className="zukan-pct">
-            <span style={{ width: `${(Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length / LONG_PASSAGES.length) * 100}%` }} />
+            <span style={{ width: `${(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length / LIST.length) * 100}%` }} />
           </div>
         </div>
         {readingLevel(history) && (
@@ -265,7 +266,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             <p className="stats-note">🏆 今週の長文ランキング</p>
             <ol>
               {weekTop(weekRes, weekKey(today), weekKey).map((r) => {
-                const x = LONG_PASSAGES.find((y) => y.id === r.id)
+                const x = LIST.find((y) => y.id === r.id)
                 return x ? <li key={r.id}>{`${shownTitle(x, LONG_PASSAGES.indexOf(x))}　${r.pct}%`}</li> : null
               })}
             </ol>
@@ -291,15 +292,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         </div>
         {genre === 'all' ? (
           <>
-            {LONG_PASSAGES.some((x) => loadLongDraft(x.id)) && (
+            {LIST.some((x) => loadLongDraft(x.id)) && (
               <div className="long-drafts">
                 <p className="stats-note">✏️ とちゅうの長文（続きから）</p>
-                <ul className="grammar-list">{LONG_PASSAGES.filter((x) => loadLongDraft(x.id)).map(passageItem)}</ul>
+                <ul className="grammar-list">{LIST.filter((x) => loadLongDraft(x.id)).map(passageItem)}</ul>
               </div>
             )}
-            {bookmarks.length > 0 && <ul className="grammar-list">{LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)).map(passageItem)}</ul>}
+            {bookmarks.length > 0 && <ul className="grammar-list">{LIST.filter((x) => bookmarks.includes(x.id)).map(passageItem)}</ul>}
             {GENRES.map((g) => {
-              const ps = LONG_PASSAGES.filter((x) => genreOf(x) === g)
+              const ps = LIST.filter((x) => genreOf(x) === g)
               return (
                 <details key={g} className="grammar-grade-fold long-genre-fold">
                   <summary>
@@ -311,7 +312,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             })}
           </>
         ) : (
-          <ul className="grammar-list">{[...LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)), ...LONG_PASSAGES.filter((x) => !bookmarks.includes(x.id))].filter((x) => genreOf(x) === genre).map(passageItem)}</ul>
+          <ul className="grammar-list">{[...LIST.filter((x) => bookmarks.includes(x.id)), ...LIST.filter((x) => !bookmarks.includes(x.id))].filter((x) => genreOf(x) === genre).map(passageItem)}</ul>
         )}
       </section>
     )

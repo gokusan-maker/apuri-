@@ -147,7 +147,7 @@ describe('App', () => {
     expect(document.querySelector('.grammar')).not.toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
     fireEvent.click(tab('読解'))
-    expect(screen.getByRole('tab', { name: '📖 長文' })).toBeInTheDocument()
+    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
     expect(screen.queryByRole('tab', { name: '👹 ボス' })).toBeNull()
     fireEvent.click(tab('ボス部屋'))
     expect(document.querySelector('section.stages')).not.toBeNull()
@@ -894,11 +894,17 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
   })
 
-  it('読解ステージに「長文」「短い読解」があり、ミニゲームには読解がない', () => {
+  it('読解ステージはむずかしさを選べて（かんたん〜京大・TOEFL/IELTS）、ミニゲームには読解がない', () => {
+    localStorage.clear()
     render(<App />)
     navTo('読解ステージ')
-    fireEvent.click(screen.getByRole('tab', { name: '📖 長文' }))
-    expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: '読解ミニ' })).toBeInTheDocument() // はじめは かんたん
+    fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
+    expect(screen.getByText(/The Value of Boredom/)).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('tab', { name: /^TOEFL・IELTS/ }))
+    expect(screen.getByText(/Partners on the Reef/)).toBeInTheDocument()
+    expect(screen.queryByText(/The Value of Boredom/)).toBeNull()
+    expect(localStorage.getItem('eitan:read-level')).toBe('toefl')
     goMini()
     fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
     expect(screen.queryByRole('button', { name: /長文読解/ })).toBeNull()
