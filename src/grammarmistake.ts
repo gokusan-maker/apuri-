@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'be-used-to': { wrong: 'I am used to eat spicy food.', right: 'I am used to eating spicy food.', why: 'be used to の to は前置詞なので、あとは -ing。' },
   'in-order-to': { wrong: 'I hurried in order to not miss the bus.', right: 'I hurried in order not to miss the bus.', why: '「〜しないように」は in order not to。not は to の前に置く。' },
   'may-well': { wrong: 'We might as well to stay here.', right: 'We might as well stay here.', why: 'might as well のあとは to なしの動詞の原形。' },
   'find-leave-oc': { wrong: 'I found the book interestingly.', right: 'I found the book interesting.', why: 'find ＋ O ＋ C の C には形容詞を置く（副詞は使えない）。' },
