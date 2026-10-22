@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'modal-perfect': { wrong: 'It must rained last night.', right: 'It must have rained last night.', why: '過去のことの推量は must have ＋ 過去分詞。have をわすれない。' },
+  'future-perfect': { wrong: 'I will finished it by six.', right: 'I will have finished it by six.', why: '未来完了は will have ＋ 過去分詞。will のあとに過去分詞だけは置けない。' },
   'compound-relative': { wrong: 'Whatever wants to come is welcome.', right: 'Whoever wants to come is welcome.', why: '「〜する人はだれでも」は whoever。whatever は物やことに使う。' },
   'with-attendant': { wrong: 'She sat with her legs crossing.', right: 'She sat with her legs crossed.', why: '足は「組まれる」側なので過去分詞 crossed。' },
   'it-cleft': { wrong: 'It was Ken what broke the window.', right: 'It was Ken that broke the window.', why: '強調構文は It is/was ＋ 強調する語句 ＋ that（人なら who も可）。what は使わない。' },
