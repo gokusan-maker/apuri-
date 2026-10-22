@@ -34,3 +34,11 @@ it('上のなかまをタップすると英語でひとこと（和訳つき）'
   expect(screen.getByRole('status').textContent).toContain(TAP_LINES.reading[0].en)
   expect(screen.getByRole('status').textContent).toContain(TAP_LINES.reading[0].ja)
 })
+
+it('タップのひとことは文法・読解それぞれ6種類で、重ならない', async () => {
+  const { TAP_LINES } = await import('./buddies')
+  for (const t of ['grammar', 'reading'] as const) {
+    expect(TAP_LINES[t]).toHaveLength(6)
+    expect(new Set(TAP_LINES[t].map((l) => l.en)).size).toBe(6)
+  }
+})

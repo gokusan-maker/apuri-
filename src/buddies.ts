@@ -360,10 +360,16 @@ export const TAP_LINES: Record<Track, { en: string; ja: string }[]> = {
     { en: 'Every rule you learn makes me stronger!', ja: 'きみがルールを1つ覚えるたびに、ぼくは強くなるよ！' },
     { en: 'Mistakes are just practice in disguise.', ja: 'まちがいは、すがたをかえた練習なんだ。' },
     { en: "Let's try one more question!", ja: 'もう1問やってみよう！' },
+    { en: 'A sentence is like a puzzle. We fit the pieces together.', ja: '文はパズルみたいなもの。ピースを組み合わせるんだ。' },
+    { en: 'I ate a comma for breakfast. It was delicious!', ja: '朝ごはんにコンマを食べたよ。おいしかった！' },
+    { en: 'Slow and steady wins the race.', ja: 'ゆっくりでも着実に進むのが勝つコツだよ。' },
   ],
   reading: [
     { en: 'I can smell a boss nearby.', ja: '近くにボスのにおいがするぞ。' },
     { en: 'Read carefully. The answer is in the story.', ja: 'よく読んで。答えはお話の中にあるよ。' },
     { en: 'Together, we can beat any boss!', ja: 'いっしょなら、どんなボスにも勝てる！' },
+    { en: 'My wings grow a little every time you read.', ja: 'きみが読むたびに、ぼくのつばさは少しずつ大きくなるよ。' },
+    { en: 'Look for the key words first.', ja: 'まずは大事な単語をさがそう。' },
+    { en: 'One page a day keeps the boss away!', ja: '1日1ページで、ボスなんてこわくない！' },
   ],
 }
