@@ -158,7 +158,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
                 </button>
               ) : (
                 <>
-                  <button className="list-link" aria-pressed={tryRoom === r.id} onClick={() => setTryRoom(tryRoom === r.id ? null : r.id)}>
+                  <button className="room-try" aria-pressed={tryRoom === r.id} onClick={() => setTryRoom(tryRoom === r.id ? null : r.id)}>
                     {tryRoom === r.id ? '👀 ためし中' : '👀 ためす'}
                   </button>
                   <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>

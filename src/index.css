@@ -1620,3 +1620,4 @@ button.team-level { display: block; width: 100%; border: none; background: trans
 /* ショップのプレビューもホームと同じ「相棒のうしろの四角」 */
 .shop-stage { width: 136px; height: 136px; margin: 0 auto 8px; padding: 0; display: grid; place-items: center; border-radius: 18px; }
 .shop-stage .shop-preview { margin: 0; }
+.room-try { margin: 2px 0; padding: 2px 10px; border: none; border-radius: 999px; background: #ffffffd9; color: #1f2937; font-size: 0.8rem; } .room-try[aria-pressed='true'] { background: #fde68a; }
