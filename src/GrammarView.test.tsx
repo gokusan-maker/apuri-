@@ -335,7 +335,7 @@ it('おすすめ単元から単元を開ける', () => {
 })
 
 it('全問正解すると相棒がほめてくれる', async () => {
-  const { praiseOf } = await import('./grammar')
+  const { praiseOf, praiseEnOf } = await import('./grammar')
   localStorage.clear()
   render(<Grammar partnerName="モチ" />)
   const unit = GRAMMAR[0]
@@ -345,7 +345,8 @@ it('全問正解すると相棒がほめてくれる', async () => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     fireEvent.click(screen.getByText('次へ'))
   }
-  expect(screen.getByText(`🐣 モチ「${praiseOf(unit.id)}」`)).toBeInTheDocument()
+  expect(screen.getByText(new RegExp(`🐣 モチ「${praiseEnOf(unit.id).replace(/[!?.]/g, '.')}」`))).toBeInTheDocument()
+  expect(screen.getByText(`（${praiseOf(unit.id)}）`)).toBeInTheDocument()
 })
 
 it('文法を3日続けた日にボーナス', () => {

@@ -2187,6 +2187,9 @@ export function recommendUnits(units: GrammarUnit[], clears: Record<string, numb
 // 全問正解のとき相棒がほめてくれるひとこと（単元ごとに決まる）
 export const PRAISE_LINES = ['すごい！ 全問正解だね！', 'カンペキ！ きみは文法マスターだ！', 'やったね！ ぼくもうれしいよ！', 'その調子！ どんどん強くなってる！', 'さすが！ 次の単元もいっしょにがんばろう！']
 export const praiseOf = (unitId: string) => PRAISE_LINES[[...unitId].reduce((a, c) => a + c.charCodeAt(0), 0) % PRAISE_LINES.length]
+// 全問正解のとき、文法のなかまが英語でもほめる（和訳は PRAISE_LINES と同じ順）
+export const PRAISE_EN = ['Amazing! You got them all right!', 'Perfect! You are a grammar master!', 'Yay! I am happy too!', 'Keep it up! You are getting stronger!', "Great job! Let's do the next unit together!"]
+export const praiseEnOf = (unitId: string) => PRAISE_EN[[...unitId].reduce((a, c) => a + c.charCodeAt(0), 0) % PRAISE_EN.length]
 
 // 苦手ランキング：まちがいノートに多い単元トップ3
 export function weakRanking(list: string[], n = 3): { unit: GrammarUnit; count: number }[] {

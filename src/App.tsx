@@ -1777,7 +1777,7 @@ function App() {
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             onXp={(n) => (mode === 'grammar' ? feedTrack('grammar', n) : gainXp(n, null))}
-            partnerName={monster.name ?? formOf(monster).name}
+            partnerName={mode === 'grammar' ? buddyName('grammar', buddies.grammar) : (monster.name ?? formOf(monster).name)} // 文法のときは文法のなかまがほめる
             onGrammarMaster={() => {
               setWallet((w) => addTicket(addTicket(addTicket(w))))
               pushToast([{ id: 'grammar-master', text: `🏅 文法の全単元を全問正解！ 称号「文法マスター」と🎟${MASTER_TICKETS}`, counter: 'answers', target: 0 }])
