@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'appositive-that': { wrong: 'I heard the news which our team won.', right: 'I heard the news that our team won.', why: '「〜という知らせ」と中身を説明するときは同格の that。which は使えない。' },
   'emphatic-do': { wrong: 'He does likes music.', right: 'He does like music.', why: '強調の does のあとは動詞の原形（like）。-s はつけない。' },
   'be-to': { wrong: 'The meeting is to held tomorrow.', right: 'The meeting is to be held tomorrow.', why: '受け身の予定は be to be ＋ 過去分詞。be をわすれない。' },
   'have-something-done': { wrong: 'I had my hair cutting yesterday.', right: 'I had my hair cut yesterday.', why: '髪は「切られる」側なので過去分詞 cut。have ＋ 物 ＋ 過去分詞。' },
