@@ -554,6 +554,16 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
   { q: 'What can fill a room but takes up no space?', ja: '部屋をいっぱいにできるのに、場所をとらないものはなに？', a: 'light', aja: '光', trick: 'fill は「満たす」、take up space は「場所をとる」。光は部屋中を明るくするけれど、場所はとらない。' },
   { q: 'What kind of room has no doors or windows?', ja: 'ドアもまども、ない部屋（ルーム）はなに？', a: 'mushroom', aja: 'きのこ', trick: 'mushroom（きのこ）の最後が room（部屋）になっている、ことば遊び。' },
   { q: 'What starts with T, ends with T, and has T in it?', ja: 'T で始まり、T で終わり、中に T が入っているものはなに？', a: 'teapot', aja: 'ティーポット', trick: 'teapot は t で始まり t で終わる。そして中に tea（お茶＝ T と同じ発音）が入っている。' },
+  { q: 'What has one head, one foot, and four legs?', ja: '頭が1つ、足が1つ、脚が4本あるものはなに？', a: 'bed', aja: 'ベッド', trick: 'ベッドのまくら側を head、足もと側を foot という。4本の legs はベッドの脚。' },
+  { q: 'What can you hold without ever touching it?', ja: '一度もさわらずに、ホールド（持つ）できるものはなに？', a: 'breath', aja: '息', trick: 'hold one\'s breath で「息を止める」。hold は「持つ」のほかに「止めておく」の意味もある。' },
+  { q: 'What has a ring but no finger?', ja: 'リング（指輪）があるのに、指がないものはなに？', a: 'phone', aja: '電話', trick: 'ring は名詞で「指輪」、動詞で「（電話・ベルが）鳴る」。The phone is ringing.（電話が鳴っている）' },
+  { q: 'What runs around the whole yard without moving?', ja: '動かないのに、庭じゅうを走りまわっているものはなに？', a: 'fence', aja: 'へい・さく', trick: 'run には「走る」のほかに「（道やへいが）続いている・のびている」の意味がある。' },
+  { q: 'What goes through towns and over hills but never moves?', ja: '町を通りぬけ、丘をこえていくのに、けっして動かないものはなに？', a: 'road', aja: '道', trick: 'go through 〜（〜を通りぬける）は道が「のびている」ことにも使える。道そのものは動かない。' },
+  { q: 'What is black when you buy it, red when you use it, and gray when you throw it away?', ja: '買うときは黒、使うときは赤、すてるときは灰色のものはなに？', a: 'charcoal', aja: '炭', trick: '炭は黒く、燃やすと赤くなり、燃えつきると灰色の灰になる。when ＋文 を3回くり返す形。' },
+  { q: 'What has many rings but no fingers?', ja: 'リング（輪）がたくさんあるのに、指がないものはなに？', a: 'tree', aja: '木', trick: '木の切り口の「年輪」も英語で rings（輪）という。ring には「指輪」の意味もある。' },
+  { q: 'What can you break without touching it?', ja: 'さわらなくても、こわす（やぶる）ことができるものはなに？', a: 'promise', aja: '約束', trick: 'break a promise で「約束をやぶる」。keep a promise は「約束を守る」。' },
+  { q: 'Which building has the most stories?', ja: 'いちばんたくさんの「ストーリー」がある建物はどれ？', a: 'library', aja: '図書館', trick: 'story には「物語」と「（建物の）階」の2つの意味がある。図書館には物語がいちばん多い。' },
+  { q: 'What has four wheels and flies?', ja: '車輪が4つあって、フライ（とぶ）ものはなに？', a: 'garbage truck', aja: 'ごみ収集車', trick: 'flies は動詞なら「飛ぶ」、名詞なら「ハエ（fly の複数形）」。ごみ収集車にはハエがいる、というしゃれ。' },
   { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
 ]
 
