@@ -18,6 +18,7 @@ import { GrammarOdd } from './GrammarOddView'
 import { GrammarOneMore } from './GrammarOneMoreView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
+import { addGrammarCorrect, last7, loadGrammarWeek, saveGrammarWeek } from './grammarweek'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
@@ -58,6 +59,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [odd, setOdd] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [champ, setChamp] = useState(loadGrammarChamp)
+  const [gweek, setGweek] = useState(loadGrammarWeek)
   const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
@@ -158,6 +160,20 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             {danOf(units.filter((u) => record[u.id] === u.questions.length).length).next !== null && `（次の段位まであと${danOf(units.filter((u) => record[u.id] === u.questions.length).length).next}単元）`}
             {units.filter((u) => record[u.id] === u.questions.length).length >= 100 && <span className="medal-100"> 💯 100単元クリア記念メダル</span>}
           </p>
+        )}
+        {stampMode && (
+          <div className="grammar-week" role="img" aria-label={`今週の文法の正解数 ${last7(gweek, today).reduce((a, d) => a + d.count, 0)}問`}>
+            <p className="grammar-week-title">📊 今週の成績（正解数）</p>
+            <div className="grammar-week-bars">
+              {last7(gweek, today).map((d) => (
+                <span key={d.day} className={d.day === today ? 'today' : undefined}>
+                  <small>{d.count || ''}</small>
+                  <i style={{ height: `${Math.min(100, (d.count / Math.max(1, ...last7(gweek, today).map((x) => x.count))) * 100)}%` }} />
+                  <b>{d.label}</b>
+                </span>
+              ))}
+            </div>
+          </div>
         )}
         {stampMode && (
           <ul className="grade-rates" aria-label="学年別クリア率">
@@ -648,6 +664,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     }
     if (stampMode && !ok) setWrongDays(markWrongDay(q.sentence, today))
     const realUnit = unitOfQuestion(q)
+    if (ok) {
+      const gw = addGrammarCorrect(gweek, today)
+      setGweek(gw)
+      saveGrammarWeek(gw)
+    }
     if (ok && realUnit) {
       const c = countChamp(champ, realUnit.id, today.slice(0, 7))
       setChamp(c)

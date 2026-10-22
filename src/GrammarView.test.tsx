@@ -583,3 +583,18 @@ it('答えあわせで「🔊 正しい英文を聞く」が出る', async () =>
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
   expect(screen.getByText(`🔊 正しい英文を聞く：${correctSentence(q)}`)).toBeInTheDocument()
 })
+
+it('文法の一覧に「今週の成績」が出て、正解すると今日の数がふえる', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  expect(screen.getByRole('img', { name: '今週の文法の正解数 0問' })).toBeInTheDocument()
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByRole('img', { name: '今週の文法の正解数 3問' })).toBeInTheDocument()
+})
