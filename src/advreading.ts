@@ -1011,4 +1011,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do bats make sounds more frequently as they get closer to prey?', choices: ["To track the insect's exact position.", 'To warn other bats.', 'To scare the insect away.', 'To rest their wings.'], answer: 0, why: "第2段落 allowing it to track the insect's exact position。" },
     ],
   },
+  {
+    id: 'exam-pottery',
+    title: 'The Crooked Cup',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'During the summer vacation, I joined a one-day pottery class at a small studio in the mountains. The teacher, Ms. Mori, showed us how to shape clay on a spinning wheel. She made it look so easy that I thought I could do it ( A ) any trouble.',
+      "I was wrong. Each time I tried, the clay leaned to one side and fell. After many attempts, I finally made a cup, but it was crooked. I was embarrassed and wanted to throw it ( B ). Ms. Mori stopped me and said, 'A cup does not have to be perfect to be loved.'",
+      'A month later, the studio sent me my cup after it had been fired in the kiln. Its blue color was more beautiful than I ( C ). Now I drink milk from it every morning. Whenever I see its crooked shape, I remember that mistakes can become part of something special.',
+    ],
+    ja: [
+      '夏休みに、私は山の中の小さな工房で、1日だけの陶芸教室に参加しました。森先生が、回るろくろの上で粘土の形を作る方法を見せてくれました。先生があまりにもかんたんそうにやるので、私も何の苦労もなくできると思いました。',
+      'それはまちがいでした。やってみるたびに、粘土はかたむいてたおれてしまいました。何度も挑戦して、やっとカップができましたが、ゆがんでいました。私ははずかしくて、それを捨ててしまいたくなりました。森先生は私を止めて「カップは、完ぺきでなくても愛されるのよ」と言いました。',
+      '1か月後、かまで焼かれた私のカップが工房から送られてきました。その青い色は、私が思っていたよりもずっときれいでした。今では毎朝、そのカップで牛乳を飲んでいます。ゆがんだ形を見るたびに、失敗も特別なものの一部になりうるのだと思い出します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'with', 'for', 'by'], answer: 0, why: 'without any trouble「何の苦労もなく」。' },
+      { id: 'B', choices: ['away', 'off', 'out of', 'down'], answer: 0, why: 'throw 〜 away「〜を捨てる」。' },
+      { id: 'C', choices: ['had expected', 'expect', 'expecting', 'to expect'], answer: 0, why: 'カップがとどいた（過去）ときより前に「予想していた」ので過去完了 had expected。than I had expected「思っていたより」。' },
+    ],
+    tf: [
+      { statement: '森先生はろくろの使い方を見せてくれた。', answer: true, why: '第1段落 showed us how to shape clay on a spinning wheel。' },
+      { statement: '筆者は1回目でまっすぐなカップを作れた。', answer: false, why: '第2段落 何度も失敗し、やっとできたカップもゆがんでいた。' },
+      { statement: '筆者は今、そのカップで毎朝牛乳を飲んでいる。', answer: true, why: '第3段落 Now I drink milk from it every morning。' },
+    ],
+    qa: [
+      { q: 'What did Ms. Mori say to the writer?', choices: ['A cup does not have to be perfect to be loved.', 'Throw it away and make a new one.', 'Pottery is very easy.', 'The cup is too small.'], answer: 0, why: "第2段落 'A cup does not have to be perfect to be loved.'" },
+    ],
+  },
+  {
+    id: 'exam-river-project',
+    title: 'Our River Project (Speech)',
+    level: '高校入試（スピーチ）',
+    paragraphs: [
+      'Good morning, everyone. Today I want to talk about the small river that runs behind our school. Two years ago, it was full of plastic bags and cans, and nobody wanted to go ( A ) it.',
+      'Our science club decided to do something. Every other Sunday, we picked up trash along the river, wearing gloves and carrying large bags. At first only five members came, but after we put up posters in town, many people started to join us. Last spring, more than fifty people, ( B ) children and elderly people, took part.',
+      "Now the water is much cleaner, and we can see small fish swimming again. This project taught me that one person cannot change much alone, but when people work together, they can make a big difference. Why don't you join us next Sunday? We would be very happy ( C ) you there. Thank you for listening.",
+    ],
+    ja: [
+      'みなさん、おはようございます。今日は、私たちの学校の裏を流れる小さな川についてお話ししたいと思います。2年前、その川はビニールぶくろや空きかんでいっぱいで、だれも近づこうとしませんでした。',
+      '私たちの科学部は、何かしようと決めました。1週間おきの日曜日に、手ぶくろをして大きなふくろを持ち、川ぞいのごみを拾いました。はじめは部員が5人しか来ませんでしたが、町にポスターをはると、たくさんの人が参加してくれるようになりました。この春には、子どもやお年寄りをふくめ、50人以上が参加しました。',
+      '今では水はずっときれいになり、また小さな魚が泳いでいるのが見られます。この活動から、一人では大きくは変えられないけれど、みんなで力を合わせれば大きなちがいを生むことができると学びました。次の日曜日、いっしょに参加しませんか。そこで会えたら、私たちはとてもうれしいです。ご清聴ありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['near', 'next', 'close', 'beside to'], answer: 0, why: 'go near 〜「〜に近づく」。close は close to 〜、next は next to 〜 の形で使う。' },
+      { id: 'B', choices: ['including', 'included', 'include', 'includes'], answer: 0, why: 'including 〜「〜をふくめて」（前置詞のように使う）。' },
+      { id: 'C', choices: ['to see', 'seeing', 'see', 'seen'], answer: 0, why: 'be happy to 〜「〜してうれしい」。' },
+    ],
+    tf: [
+      { statement: '2年前、学校の裏の川はごみでいっぱいだった。', answer: true, why: '第1段落 it was full of plastic bags and cans。' },
+      { statement: '最初から50人以上が参加していた。', answer: false, why: '第2段落 At first only five members came。' },
+      { statement: '今では川に小さな魚が見られる。', answer: true, why: '第3段落 we can see small fish swimming again。' },
+    ],
+    qa: [
+      { q: 'What did the club do to get more people to join?', choices: ['They put up posters in town.', 'They paid people money.', 'They cleaned the school.', 'They bought new bags.'], answer: 0, why: '第2段落 after we put up posters in town, many people started to join us。' },
+    ],
+  },
 ]
