@@ -4240,6 +4240,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Mei wants to study space in the future.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'onion-tears',
+    title: 'Why Do Onions Make Us Cry?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Have you ever cried while you were cutting an onion? Many people have. But onions do not make us cry because they are sad. There is a scientific reason ( A ) it.',
+      'An onion is made of many small cells. When you cut it, you break these cells, and some chemicals inside them mix together. They make a special gas. This gas goes up into the air and reaches your eyes.',
+      'When the gas touches your eyes, they feel a little pain. Your eyes then make tears ( B ) wash the gas away. So crying is a way to protect your eyes.',
+      'There are some ways to cry less. For example, you can put the onion in the refrigerator before you cut it. A cold onion makes less gas. Using a sharp knife also helps, because it breaks ( C ) cells. Next time you cook, try one of these ideas.',
+    ],
+    ja: [
+      'たまねぎを切っているときに泣いたことはありますか。多くの人があるでしょう。でも、たまねぎが悲しいから泣くわけではありません。それには科学的な理由があります。',
+      'たまねぎはたくさんの小さな細胞でできています。切ると、その細胞がこわれて、中にあるいくつかの物質がまざり合います。それらが特別な気体をつくります。この気体が空気中にのぼって、目にとどくのです。',
+      'その気体が目にふれると、目は少しいたみを感じます。すると目は、気体を洗い流すために涙をつくります。つまり、泣くことは目を守る方法なのです。',
+      '泣くのを少なくする方法もあります。たとえば、切る前にたまねぎを冷蔵庫に入れておくことができます。冷たいたまねぎは気体を出す量が少なくなります。よく切れる包丁を使うのも役に立ちます。こわす細胞が少なくてすむからです。次に料理をするときは、これらのアイデアの一つをためしてみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'in', 'on'], answer: 1, why: 'a reason for 〜 で「〜の理由」。' },
+      { id: 'B', choices: ['for', 'of', 'that', 'to'], answer: 3, why: '目的「〜するために」は to ＋動詞の原形（to wash）。' },
+      { id: 'C', choices: ['fewer', 'less', 'many', 'more'], answer: 0, why: 'よく切れる包丁は、こわす細胞が「より少ない」。cells は数えられる名詞なので fewer。' },
+    ],
+    underline: { phrase: 'wash the gas away', choices: ['気体を洗い流す', '気体をつくる', '気体を集める', '気体をあたためる'], answer: 0, why: 'wash 〜 away は「〜を洗い流す」。目は涙で気体を流して目を守る。' },
+    tf: [
+      { statement: 'Onions make us cry because they are sad.', answer: false, why: '第1段落：悲しいからではなく、科学的な理由がある。' },
+      { statement: 'Cutting an onion breaks its cells.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Tears help protect our eyes.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'A warm onion makes less gas than a cold one.', answer: false, why: '冷たいたまねぎのほうが気体が少ない。' },
+      { statement: 'Using a sharp knife can help us cry less.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
