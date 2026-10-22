@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { buddyForm, buddyLevel, feedBuddy, loadBuddies, renameBuddy, saveBuddies, type BuddyForm, type Buddies, type Track } from './buddies'
+import { buddyForm, buddyLevel, feedBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { BuddyDetail } from './BuddyDetailView'
@@ -316,7 +316,7 @@ function App() {
   const [showShop, setShowShop] = useState(false)
   const [stageTab, setStageTab] = useState<'boss' | 'long' | 'short'>('boss') // 長文ボスのタブの中
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペット・長文の竜
-  const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm } | null>(null) // なかまの進化演出
+  const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [showTimeAttack, setShowTimeAttack] = useState(false) // ミニゲームの中のタイムアタック
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
@@ -458,7 +458,7 @@ function App() {
     const r = feedBuddy(buddies, track, amount) // お知らせ用（同じタイミングで2回あげても足し算はずれないよう、保存は関数で）
     setBuddies((b) => feedBuddy(b, track, amount).buddies)
     const name = (b: Buddies) => b[track].name ?? buddyForm(track, b[track]).name
-    if (r.evolved) setBuddyEvo({ track, form: r.evolved })
+    if (r.evolved) setBuddyEvo({ track, form: r.evolved, buddy: r.buddies[track] })
     else if (r.levelUp) pushToast([{ id: `buddy-lv-${track}`, text: `${buddyForm(track, r.buddies[track]).icon} ${name(r.buddies)}が Lv.${buddyLevel(r.buddies[track]).level} になった！`, counter: 'answers', target: 0 }])
   }
   const onAnswerTrack = (track: Track) => (correct: boolean, xp: number, wordId: string, source: Source) => {
@@ -1694,7 +1694,7 @@ function App() {
       )}
       {celebrate && <Celebrate goal={settings.dailyGoal} onClose={() => setCelebrate(false)} />}
 
-      {buddyEvo && <BuddyEvolve track={buddyEvo.track} form={buddyEvo.form} onClose={() => setBuddyEvo(null)} />}
+      {buddyEvo && <BuddyEvolve track={buddyEvo.track} form={buddyEvo.form} buddy={buddyEvo.buddy} onClose={() => setBuddyEvo(null)} />}
       <nav className="tabbar" aria-label="画面の切り替え">
         {TABS.map((t) => (
           <button

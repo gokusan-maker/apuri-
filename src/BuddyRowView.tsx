@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { BuddyFigure } from './BuddyFigureView'
 import { buddyForm, buddyLevel, TRACK_LABEL, type Buddies, type Track } from './buddies'
 
 type Props = {
@@ -27,8 +28,8 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo }: Pro
         return (
           <button key={t} className={`buddy-card b-${t}`} onClick={() => onGo(t)} aria-label={`${TRACK_LABEL[t]}のなかま ${b.name ?? f.name} Lv.${lv.level}`}>
             <span className="buddy-tag">{TRACK_LABEL[t]}</span>
-            <span className="buddy-fig buddy-emoji" aria-hidden="true">
-              {f.icon}
+            <span className="buddy-fig" aria-hidden="true">
+              <BuddyFigure track={t} buddy={b} />
             </span>
             <span className="buddy-name">{b.name ?? f.name}</span>
             <span className="buddy-lv">Lv.{lv.level}</span>

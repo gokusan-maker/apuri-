@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BuddyFigure } from './BuddyFigureView'
 import { BUDDY_FORMS, buddyForm, buddyLevel, TRACK_LABEL, type Buddies, type Track } from './buddies'
 
 type Props = { buddies: Buddies; onRename: (track: Track, name: string) => void }
@@ -17,7 +18,7 @@ export function BuddyDetail({ buddies, onRename }: Props) {
         return (
           <section key={t} className={`buddy-box b-${t}`} aria-label={`${TRACK_LABEL[t]}のなかま`}>
             <h3>
-              {TRACK_LABEL[t]}のなかま <span className="buddy-big" aria-hidden="true">{f.icon}</span>
+              {TRACK_LABEL[t]}のなかま <BuddyFigure track={t} buddy={b} size={64} />
             </h3>
             {editing === t ? (
               <form
