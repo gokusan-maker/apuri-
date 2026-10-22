@@ -1,15 +1,16 @@
 import { BUDDY_FORMS, buddyForm, type Buddy, type Track } from './buddies'
 
-// 文法のペット・長文の竜のオリジナルの絵（SVG）。姿（何番目の形か）でからだの色・耳・つばさがかわる
-type Look = { body: string; belly: string; ears: 'none' | 'round' | 'long' | 'floppy' | 'pointy' | 'crest' | 'horns'; wings?: string; beak?: boolean; crown?: boolean }
+// 文法のペットモンスター・長文の竜のオリジナルの絵（SVG）。姿（何番目の形か）でからだの色・耳・つのなどがかわる
+type Look = { body: string; belly: string; ears: 'none' | 'round' | 'long' | 'floppy' | 'pointy' | 'crest' | 'horns'; wings?: string; beak?: boolean; crown?: boolean; spots?: string; tail?: string; antenna?: boolean }
 
+// 文法：ペットにちなんだモンスター（ちいさなつの・きば・もようつき）
 const PET: Look[] = [
   { body: '#fde68a', belly: '#fef3c7', ears: 'none' }, // タマゴ
-  { body: '#fdba74', belly: '#fff7ed', ears: 'round' }, // ハムすけ
-  { body: '#f5f5f4', belly: '#ffffff', ears: 'long' }, // ピョンた
-  { body: '#d6a26b', belly: '#fde7c8', ears: 'floppy' }, // ワンまる
-  { body: '#9ca3af', belly: '#f3f4f6', ears: 'pointy' }, // ニャンきち
-  { body: '#4ade80', belly: '#fef08a', ears: 'crest', beak: true, crown: true }, // インコはかせ
+  { body: '#fdba74', belly: '#fff7ed', ears: 'round', spots: '#f97316' }, // ハムモン
+  { body: '#c4b5fd', belly: '#f5f3ff', ears: 'long', spots: '#8b5cf6', antenna: true }, // ピョンモン
+  { body: '#d6a26b', belly: '#fde7c8', ears: 'floppy', spots: '#92400e', tail: '#b45309' }, // ワンモン
+  { body: '#64748b', belly: '#e2e8f0', ears: 'pointy', spots: '#1e293b', tail: '#334155', wings: '#a78bfa' }, // ニャンモン
+  { body: '#4ade80', belly: '#fef08a', ears: 'crest', beak: true, crown: true, spots: '#15803d', tail: '#16a34a', wings: '#22c55e' }, // インコモンはかせ
 ]
 const DRAGON: Look[] = [
   { body: '#c4b5fd', belly: '#ede9fe', ears: 'none' }, // タマゴ
@@ -33,7 +34,7 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
           <circle cx="40" cy="45" r="5" fill={track === 'grammar' ? '#fb923c' : '#8b5cf6'} opacity="0.6" />
           <circle cx="60" cy="62" r="7" fill={track === 'grammar' ? '#fb923c' : '#8b5cf6'} opacity="0.5" />
           <circle cx="47" cy="75" r="4" fill={track === 'grammar' ? '#fb923c' : '#8b5cf6'} opacity="0.5" />
-          {track === 'reading' && <path d="M35 30 L45 38 L52 30 L60 40" stroke="#7c3aed" strokeWidth="2" fill="none" opacity="0.5" />}
+          <path d="M33 34 L42 42 L50 34 L58 42 L67 34" stroke={track === 'grammar' ? '#ea580c' : '#7c3aed'} strokeWidth="2" fill="none" opacity="0.5" />
         </>
       ) : (
         <>
@@ -44,6 +45,13 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
             </>
           )}
           {track === 'reading' && <path d="M70 78 Q92 82 90 64 Q86 74 72 70 Z" fill={l.body} stroke="#00000022" />}
+          {l.tail && <path d="M74 74 Q92 76 90 60 L96 56 L88 54 L90 48 L82 56 Q84 68 72 68 Z" fill={l.tail} stroke="#00000022" />}
+          {l.antenna && (
+            <>
+              <path d="M50 32 Q50 14 50 6" stroke="#1f2937" strokeWidth="2" fill="none" />
+              <circle cx="50" cy="6" r="4.5" fill="#facc15" stroke="#a16207" />
+            </>
+          )}
           {l.ears === 'round' && (
             <>
               <circle cx="30" cy="30" r="9" fill={l.body} />
@@ -82,6 +90,19 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
             </>
           )}
           <ellipse cx="50" cy="58" rx="30" ry="28" fill={l.body} stroke="#00000022" strokeWidth="2" />
+          {track === 'grammar' && (
+            <>
+              <path d="M38 34 L40 12 L49 31 Z" fill="#fde68a" stroke="#92400e" strokeWidth="1.5" strokeLinejoin="round" />
+              <path d="M62 34 L60 12 L51 31 Z" fill="#fde68a" stroke="#92400e" strokeWidth="1.5" strokeLinejoin="round" />
+            </>
+          )}
+          {l.spots && (
+            <>
+              <circle cx="27" cy="50" r="3.5" fill={l.spots} opacity="0.55" />
+              <circle cx="74" cy="47" r="3" fill={l.spots} opacity="0.55" />
+              <circle cx="72" cy="72" r="2.5" fill={l.spots} opacity="0.55" />
+            </>
+          )}
           <ellipse cx="50" cy="66" rx="17" ry="14" fill={l.belly} />
           <circle cx="40" cy="52" r="4.5" fill="#1f2937" />
           <circle cx="60" cy="52" r="4.5" fill="#1f2937" />
@@ -90,6 +111,10 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
           <circle cx="32" cy="60" r="4" fill="#fb7185" opacity="0.45" />
           <circle cx="68" cy="60" r="4" fill="#fb7185" opacity="0.45" />
           {l.beak ? <path d="M45 58 L55 58 L50 66 Z" fill="#f97316" /> : <path d="M45 60 Q50 65 55 60" stroke="#1f2937" strokeWidth="2" fill="none" strokeLinecap="round" />}
+          {track === 'grammar' && !l.beak && <>
+              <path d="M44.5 61 L46.5 68 L49 62.5 Z" fill="#ffffff" stroke="#1f2937" strokeWidth="1" />
+              <path d="M55.5 61 L53.5 68 L51 62.5 Z" fill="#ffffff" stroke="#1f2937" strokeWidth="1" />
+            </>}
           {l.crown && <path d="M38 24 L42 14 L50 22 L58 14 L62 24 Z" fill="#fbbf24" stroke="#b45309" strokeWidth="1" />}
         </>
       )}

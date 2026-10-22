@@ -10,7 +10,7 @@ type Props = {
   onGo: (where: 'word' | Track) => void // タップした子の画面へ
 }
 
-// ホームの3体：単語の相棒・文法のペット・長文の竜
+// ホームの3体：単語の相棒・文法のペットモンスター・長文の竜
 export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo }: Props) {
   const tracks: Track[] = ['grammar', 'reading']
   return (

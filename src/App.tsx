@@ -322,7 +322,7 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [stageTab, setStageTab] = useState<'boss' | 'long' | 'short'>('boss') // 長文ボスのタブの中
-  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペット・長文の竜
+  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペットモンスター・長文の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('card') // 単語タブの中（カード・ミニゲーム・タイムアタック）
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
@@ -459,7 +459,7 @@ function App() {
     if (correct && xp > 0) gainXp(xp * xpRate, source)
   }
 
-  // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝ペット、長文＝竜）へ
+  // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝ペットモンスター、長文＝竜）へ
   function feedTrack(track: Track, raw: number) {
     const amount = boosted(raw, moodFull(moodMeter, today))
     const r = feedBuddy(buddies, track, amount) // お知らせ用（同じタイミングで2回あげても足し算はずれないよう、保存は関数で）

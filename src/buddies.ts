@@ -1,4 +1,4 @@
-// 項目ごとに育てるなかま：単語は相棒（モチなど）、文法はペット（ペットにちなんだ名前のキャラ）、長文は竜（ドラゴン）
+// 項目ごとに育てるなかま：単語は相棒（モチなど）、文法はペットモンスター（ペットにちなんだ名前のモンスター）、長文は竜（ドラゴン）
 // 単語の相棒はこれまでどおり party / monster。文法と長文のなかまはここで別に育てる
 import { levelInfo } from './monster'
 
@@ -10,12 +10,12 @@ export type BuddyForm = { minLv: number; icon: string; name: string }
 // レベルで姿がかわる（Lv.1 はタマゴ。XP がたまってLv.2になるとかえる）
 export const BUDDY_FORMS: Record<Track, BuddyForm[]> = {
   grammar: [
-    { minLv: 1, icon: '🥚', name: 'ペットのタマゴ' },
-    { minLv: 2, icon: '🐹', name: 'ハムすけ' },
-    { minLv: 5, icon: '🐰', name: 'ピョンた' },
-    { minLv: 10, icon: '🐶', name: 'ワンまる' },
-    { minLv: 20, icon: '🐱', name: 'ニャンきち' },
-    { minLv: 35, icon: '🦜', name: 'インコはかせ' },
+    { minLv: 1, icon: '🥚', name: 'モンスターのタマゴ' },
+    { minLv: 2, icon: '🐹', name: 'ハムモン' },
+    { minLv: 5, icon: '🐰', name: 'ピョンモン' },
+    { minLv: 10, icon: '🐶', name: 'ワンモン' },
+    { minLv: 20, icon: '🐱', name: 'ニャンモン' },
+    { minLv: 35, icon: '🦜', name: 'インコモンはかせ' },
   ],
   reading: [
     { minLv: 1, icon: '🥚', name: 'りゅうのタマゴ' },
