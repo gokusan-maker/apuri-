@@ -1,3 +1,4 @@
+import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
@@ -158,6 +159,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [proverb, setProverb] = useState<number | null>(null) // たおしたときに教えてくれたことわざ
   const [revenge, setRevenge] = useState(false) // リベンジ成功
   const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
   const [shieldUsed, setShieldUsed] = useState(-1) // 盾を使った問題の番号
@@ -303,6 +305,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
   function win(c: number) {
     playBossSound('victory')
+    setProverb(learnProverb(rnd()))
     if (takeRevenge(baseLook.name)) {
       setRevenge(true)
       onRankBonus?.(REVENGE_COINS)
@@ -328,6 +331,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setProverb(null)
     setRevenge(false)
     setShield(false)
     setShieldUsed(-1)
@@ -549,6 +553,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
+          {proverb !== null && (
+            <p className="boss-proverb">
+              📜 {look.name}のことわざ「{PROVERBS[proverb].en}」
+              <span className="boss-intro-ja">{PROVERBS[proverb].ja}</span>
+            </p>
+          )}
           {revenge && <p className="level-up boss-revenge">🔥 リベンジ成功！ 🪙{REVENGE_COINS}</p>}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
           {time && <p className="boss-maxhit">⏱ タイム {formatSec(time.sec)}{time.best ? '　🏁 最短記録！' : `（最短 ${formatSec(loadBossTimes()[look.name] ?? time.sec)}）`}</p>}

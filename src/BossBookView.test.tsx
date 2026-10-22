@@ -16,6 +16,7 @@ it('ボスを倒すとボス図鑑にのる', () => {
   expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
   expect(screen.getByText(/1回たおした/)).toBeInTheDocument()
   expect(screen.getByText('🔒 あと2回たおすとひみつが読める')).toBeInTheDocument()
+  expect(screen.getByText(/📜 ことわざ帳 1 \//)).toBeInTheDocument()
 })
 
 it('同じボスを3回たおすとひみつが読める', async () => {

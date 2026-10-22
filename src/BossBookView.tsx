@@ -1,3 +1,4 @@
+import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
 import { BOSSES, type BossLook } from './boss'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
@@ -20,6 +21,20 @@ export function BossBook() {
       <summary>
         📕 ボス図鑑（{beaten} / {all.length}体）
       </summary>
+      {loadProverbs().length > 0 && (
+        <details className="proverb-book">
+          <summary>
+            📜 ことわざ帳 {loadProverbs().length} / {PROVERBS.length}
+          </summary>
+          <ul>
+            {loadProverbs().map((i) => (
+              <li key={i}>
+                <strong>{PROVERBS[i].en}</strong> {PROVERBS[i].ja}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
       <ul className="boss-book-list">
         {all.map((b) => {
           const e = book[b.name]
