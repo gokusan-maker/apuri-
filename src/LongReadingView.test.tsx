@@ -28,6 +28,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   expect(screen.getByText(/かかった時間 2分05秒/)).toBeInTheDocument()
   expect(screen.getAllByText(/⭕/).length).toBe(11)
   expect(onAnswer).toHaveBeenCalledTimes(14)
+  expect(screen.getByRole('button', { name: new RegExp(`次の長文へ ▶ ${LONG_PASSAGES[1].title.replace(/[?()]/g, '.')}`) })).toBeInTheDocument()
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getByText(/最高 13点 ★★☆/)).toBeInTheDocument()
   expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
@@ -407,4 +408,23 @@ it('「すべて」の一覧はジャンルごとに折りたたまれている'
   expect(folds.length).toBeGreaterThanOrEqual(3)
   expect(folds.every((d) => !d.open)).toBe(true)
   expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(LONG_PASSAGES.length)
+})
+
+it('採点したら「次の長文へ ▶」でまだ解いていない次の長文を開ける', () => {
+  localStorage.clear()
+  const [a, b] = LONG_PASSAGES
+  localStorage.setItem('eitan:long-draft', '{}')
+  render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(a.title)).at(-1)!)
+  for (const bl of a.blanks) {
+    const btn = screen.getAllByRole('button', { name: `${MARKS[bl.answer]} ${bl.choices[bl.answer]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${bl.id} )`))!
+    fireEvent.click(btn)
+  }
+  a.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${t.answer ? '○' : '×'}` })))
+  for (const i of a.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${a.pick2!.statements[i]}` }))
+  a.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  fireEvent.click(screen.getByRole('button', { name: /次の長文へ ▶/ }))
+  expect(screen.getAllByText(new RegExp(b.title.replace(/[?()]/g, '.'))).length).toBeGreaterThan(0)
+  expect(screen.getByRole('button', { name: /のこり/ })).toBeDisabled()
 })

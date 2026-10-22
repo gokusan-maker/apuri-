@@ -3782,3 +3782,13 @@ export function keySentence(p: LongPassage, statement: string): string {
   }
   return best
 }
+
+// 次の長文：今の長文のあとから順に、まだ解いていない長文（全部解いていたら次の長文）
+export function nextLong(id: string, record: Record<string, number>, list: LongPassage[] = LONG_PASSAGES): LongPassage {
+  const i = list.findIndex((x) => x.id === id)
+  for (let k = 1; k < list.length; k++) {
+    const x = list[(i + k) % list.length]
+    if (record[x.id] === undefined) return x
+  }
+  return list[(i + 1) % list.length]
+}
