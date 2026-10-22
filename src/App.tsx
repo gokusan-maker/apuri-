@@ -1701,7 +1701,7 @@ function App() {
                   setBuddyBox(r.box)
                 }}
               />
-              <BuddyZukan buddies={buddies} box={buddyBox} />
+              <BuddyZukan buddies={buddies} box={buddyBox} onComp={() => setWallet((w) => addTicket(w))} />
               <EvolutionPreview monster={monster} />
               <PartnerStatus monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}

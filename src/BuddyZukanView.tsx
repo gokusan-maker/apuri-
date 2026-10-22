@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { ATTR_LABEL, BUDDY_FORMS, xpForLevel, zukanOf, type Buddies, type BuddyBox, type Track } from './buddies'
+import { ATTR_LABEL, BUDDY_FORMS, claimZukanComp, loadZukanComp, xpForLevel, zukanOf, type Buddies, type BuddyBox, type Track } from './buddies'
 import { BuddyFigure } from './BuddyFigureView'
 
 // 文法・読解のなかま図鑑：種類ごとに、会えた姿だけ絵と名前。まだの姿は ？？？
-export function BuddyZukan({ buddies, box }: { buddies: Buddies; box: BuddyBox }) {
+export function BuddyZukan({ buddies, box, onComp }: { buddies: Buddies; box: BuddyBox; onComp?: () => void }) {
   const [picked, setPicked] = useState('') // タップした姿の名前
+  const [comp, setComp] = useState(loadZukanComp) // コンプボーナスを受け取った種類
   return (
     <section className="buddy-zukan" aria-label="なかま図鑑">
       <h3>📖 なかま図鑑（文法・読解）</h3>
@@ -24,7 +25,25 @@ export function BuddyZukan({ buddies, box }: { buddies: Buddies; box: BuddyBox }
             </p>
             {rows.map((r) => (
               <div key={r.sp.id} className="buddy-zukan-row" aria-label={`${r.sp.label}の図鑑`}>
-                <p className="buddy-zukan-name">{r.level > 0 ? r.sp.label : '？？？'}</p>
+                <p className="buddy-zukan-name">
+                  {r.level > 0 ? r.sp.label : '？？？'}
+                  {r.seen === BUDDY_FORMS[t].length &&
+                    (comp.includes(`${t}:${r.sp.id}`) ? (
+                      <span className="zukan-comp"> 🏆 コンプ！</span>
+                    ) : (
+                      onComp && (
+                        <button
+                          className="zukan-comp-btn"
+                          onClick={() => {
+                            setComp(claimZukanComp(`${t}:${r.sp.id}`))
+                            onComp()
+                          }}
+                        >
+                          🎁 コンプボーナス🎟を受け取る
+                        </button>
+                      )
+                    ))}
+                </p>
                 <ul>
                   {BUDDY_FORMS[t].map((f) =>
                     r.level >= f.minLv ? (

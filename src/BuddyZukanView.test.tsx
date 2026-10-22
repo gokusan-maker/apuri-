@@ -20,3 +20,17 @@ it('なかま図鑑の会えた姿をタップすると、その姿の名前が�
   fireEvent.click(screen.getByLabelText('インクぷる（Lv.2〜）'))
   expect(screen.getByRole('status').textContent).toBe('インクぷる（Lv.2〜）')
 })
+
+it('1つの種類の姿を全部そろえると、コンプボーナスを1回だけ受け取れる', async () => {
+  const { fireEvent } = await import('@testing-library/react')
+  const { vi } = await import('vitest')
+  localStorage.clear()
+  const comp = vi.fn()
+  const { unmount } = render(<BuddyZukan buddies={{ grammar: { xp: xpForLevel(30) }, reading: { xp: 0 } }} box={{ grammar: {}, reading: {} }} onComp={comp} />)
+  fireEvent.click(screen.getByText('🎁 コンプボーナス🎟を受け取る'))
+  expect(comp).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/🏆 コンプ！/)).toBeInTheDocument()
+  unmount()
+  render(<BuddyZukan buddies={{ grammar: { xp: xpForLevel(30) }, reading: { xp: 0 } }} box={{ grammar: {}, reading: {} }} onComp={comp} />)
+  expect(screen.queryByText('🎁 コンプボーナス🎟を受け取る')).toBeNull()
+})

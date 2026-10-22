@@ -264,3 +264,25 @@ export function addBuddyToday(day: string, track: Track, amount: number): BuddyT
   }
   return next
 }
+
+// なかま図鑑のコンプボーナス：1つの種類の姿を全部そろえると🎟（種類ごとに1回）
+const COMP_KEY = 'eitan:zukan-comp'
+export function loadZukanComp(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(COMP_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function claimZukanComp(key: string): string[] {
+  const list = loadZukanComp()
+  if (list.includes(key)) return list
+  const next = [...list, key]
+  try {
+    localStorage.setItem(COMP_KEY, JSON.stringify(next))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return next
+}

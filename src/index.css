@@ -1604,3 +1604,5 @@ button:focus:not(:focus-visible) { outline: none; }
 button.team-level { display: block; width: 100%; border: none; background: transparent; color: inherit; cursor: pointer; }
 .team-titles { margin: 0 auto 6px; padding-left: 1.4em; font-size: 0.8rem; text-align: left; max-width: 260px; }
 .team-titles .locked { color: var(--muted); }
+.zukan-comp { color: #d97706; }
+.zukan-comp-btn { margin-left: 6px; padding: 2px 8px; border: none; border-radius: 999px; background: #f59e0b; color: #fff; font-size: 0.75rem; font-weight: 700; }
