@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'it-cleft': { wrong: 'It was Ken what broke the window.', right: 'It was Ken that broke the window.', why: '強調構文は It is/was ＋ 強調する語句 ＋ that（人なら who も可）。what は使わない。' },
+  'negative-inversion': { wrong: 'Never I have seen such a big dog.', right: 'Never have I seen such a big dog.', why: '否定の語句を文の最初に出したら、疑問文と同じ語順（have I seen）にする。' },
   'participle-clause': { wrong: 'Writing in easy English, this book is good for beginners.', right: 'Written in easy English, this book is good for beginners.', why: '本は「書かれる」側なので、能動の -ing ではなく過去分詞 Written。' },
   'subjunctive-past-perfect': { wrong: 'If I knew it yesterday, I would have told you.', right: 'If I had known it yesterday, I would have told you.', why: '過去（yesterday）の事実とちがう想像は If ＋ had ＋ 過去分詞。' },
   be: { wrong: 'I am play tennis.', right: 'I play tennis.', why: '一般動詞（play）の文に be動詞はいらない。' },
