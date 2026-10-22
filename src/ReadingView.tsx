@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { Source } from './monster'
-import { PASSAGES, type Passage } from './reading'
+import { loadShortDone, markShortDone, PASSAGES, type Passage } from './reading'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { makeLookup } from './glossary'
@@ -18,6 +18,7 @@ type Props = {
 
 export function Reading({ onAnswer, start, onDone }: Props) {
   const [p, setP] = useState<Passage | null>(start ?? null)
+  const [done, setDone] = useState(loadShortDone) // 解いた話
   const [step, setStep] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -28,7 +29,7 @@ export function Reading({ onAnswer, start, onDone }: Props) {
     return (
       <section className="card grammar">
         <h2>読解ミニ</h2>
-        <p className="stats-note">短い英文を読んで、内容の問題に答えよう。</p>
+        <p className="stats-note">短い英文を読んで、内容の問題に答えよう。（解いた話 {PASSAGES.filter((x) => done.includes(x.id)).length} / {PASSAGES.length}本）</p>
         <ul className="grammar-list">
           {PASSAGES.map((x) => (
             <li key={x.id}>
@@ -42,6 +43,7 @@ export function Reading({ onAnswer, start, onDone }: Props) {
                   setShowJa(false)
                 }}
               >
+                {done.includes(x.id) ? '✅ ' : ''}
                 {x.title}
               </button>
             </li>
@@ -119,6 +121,7 @@ export function Reading({ onAnswer, start, onDone }: Props) {
                 setStep(step + 1)
                 if (step + 1 === p.questions.length) {
                   setShowJa(true)
+                  setDone(markShortDone(p.id))
                   onDone?.(score, p.questions.length)
                 }
               }}

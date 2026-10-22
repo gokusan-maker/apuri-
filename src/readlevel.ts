@@ -1,5 +1,6 @@
 // 読解ステージのむずかしさ：かんたんな短い英文から、難関大（京大レベル）・TOEFL/IELTS まで選べる
 import { ADV_PASSAGES } from './advreading'
+import { PASSAGES } from './reading'
 import { LONG_PASSAGES, type LongPassage, type LongRecord } from './longreading'
 
 export type ReadLevel = 'easy' | 'normal' | 'exam' | 'univ' | 'toefl'
@@ -37,9 +38,9 @@ export function saveReadLevel(l: ReadLevel): void {
   }
 }
 
-// そのむずかしさで解いた本数と全部の本数（かんたん は短い読解なので数えない）
-export function solvedOf(level: ReadLevel, record: LongRecord): { done: number; total: number } | null {
-  if (level === 'easy') return null
+// そのむずかしさで解いた本数と全部の本数（かんたん は短い読解の解いた話）
+export function solvedOf(level: ReadLevel, record: LongRecord, shortDone: string[] = []): { done: number; total: number } | null {
+  if (level === 'easy') return { done: PASSAGES.filter((p) => shortDone.includes(p.id)).length, total: PASSAGES.length }
   const ps = passagesFor(level)
   return { done: ps.filter((p) => record[p.id] !== undefined).length, total: ps.length }
 }

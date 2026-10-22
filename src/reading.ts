@@ -1048,3 +1048,25 @@ export const PASSAGES: Passage[] = [
     ],
   },
 ]
+
+// 解いた短い読解（全部の問題に答えた話の id）
+const DONE_KEY = 'eitan:short-done'
+export function loadShortDone(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(DONE_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function markShortDone(id: string): string[] {
+  const list = loadShortDone()
+  if (list.includes(id)) return list
+  const next = [...list, id]
+  try {
+    localStorage.setItem(DONE_KEY, JSON.stringify(next))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return next
+}

@@ -40,7 +40,7 @@ describe('難関大・TOEFL/IELTS の長文', () => {
 describe('むずかしさごとに解いた本数', () => {
   it('そのレベルで解いた本数と全部の本数（かんたんは数えない）', async () => {
     const { solvedOf } = await import('./readlevel')
-    expect(solvedOf('easy', {})).toBeNull()
+    expect(solvedOf('easy', {}, ['cat'])!.done).toBe(1)
     const ps = passagesFor('univ')
     expect(solvedOf('univ', { [ps[0].id]: 5, 'cat': 3 })).toEqual({ done: 1, total: ps.length })
   })
@@ -56,5 +56,23 @@ describe('むずかしさごとの今日のおすすめ', () => {
     expect(dailyPick([], '2026-10-22')).toBeUndefined()
     const seen = new Set(Array.from({ length: 30 }, (_, i) => dailyPick(list, `2026-11-${i + 1}`)!.id))
     expect(seen.size).toBeGreaterThan(2)
+  })
+})
+
+describe('かんたんの短い読解も解いた本数を数える', () => {
+  it('全部答えた話が✅になり、本数がふえる', async () => {
+    const { render, screen, fireEvent } = await import('@testing-library/react')
+    const { Reading } = await import('./ReadingView')
+    const { PASSAGES } = await import('./reading')
+    localStorage.clear()
+    const p = PASSAGES[0]
+    render(<Reading start={p} />)
+    for (const q of p.questions) {
+      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    fireEvent.click(screen.getByText('ほかの話を読む'))
+    expect(screen.getByText(`✅ ${p.title}`)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`解いた話 1 / ${PASSAGES.length}本`))).toBeInTheDocument()
   })
 })

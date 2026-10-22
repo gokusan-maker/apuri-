@@ -112,6 +112,7 @@ import { Quiz } from './QuizView'
 import { BossAlly, TrackAlly } from './BossAllyView'
 import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord } from './longreading'
+import { loadShortDone } from './reading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
 import { titleFor } from './titles'
@@ -1348,9 +1349,9 @@ function App() {
               >
                 <strong>{t.label}</strong>
                 <small>{t.sub}</small>
-                {solvedOf(t.id, loadLongRecord()) && (
+                {solvedOf(t.id, loadLongRecord(), loadShortDone()) && (
                   <small className="read-level-done">
-                    {solvedOf(t.id, loadLongRecord())!.done}/{solvedOf(t.id, loadLongRecord())!.total}本
+                    {solvedOf(t.id, loadLongRecord(), loadShortDone())!.done}/{solvedOf(t.id, loadLongRecord(), loadShortDone())!.total}本
                   </small>
                 )}
               </button>
