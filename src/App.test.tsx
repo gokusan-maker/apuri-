@@ -951,14 +951,14 @@ describe('App', () => {
     navTo('読解ステージ')
     expect(screen.getByRole('heading', { name: '読解ミニ' })).toBeInTheDocument() // はじめは かんたん
     fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
-    expect(screen.getByText(/The Value of Boredom/)).toBeInTheDocument()
+    expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
     expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
-    expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/7本/)
+    expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/8本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     expect(screen.getByText(/📅 今日のおすすめ：/)).toBeInTheDocument() // そのレベルの中から日がわり
     fireEvent.click(screen.getByRole('tab', { name: /^TOEFL・IELTS/ }))
-    expect(screen.getByText(/Partners on the Reef/)).toBeInTheDocument()
+    expect(screen.getAllByText(/Partners on the Reef/).length).toBeGreaterThan(0)
     expect(screen.queryByText(/The Value of Boredom/)).toBeNull()
     expect(localStorage.getItem('eitan:read-level')).toBe('toefl')
     goMini()
