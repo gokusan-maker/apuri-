@@ -716,6 +716,16 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:partner-birthday')!).lastYear).toBe(Number(dayKey().slice(0, 4)))
   })
 
+  it('カード以外のタブでレベルが上がると「Lv UP!」バナーが出る', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
+    render(<App />)
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('クイズ'))
+    const en = document.querySelector('.quiz .en')!.textContent
+    const word = WORDS.find((w) => w.en === en)!
+    fireEvent.click(screen.getByRole('button', { name: word.ja }))
+    expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

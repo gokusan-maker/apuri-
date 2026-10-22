@@ -973,6 +973,11 @@ function App() {
           </>
         )}
       </header>
+      {leveledUp && !home && (
+        <p className="lvup-banner" role="status">
+          ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
+        </p>
+      )}
 
       {reviewWeek && lastWeek.count > 0 && onboarded && (
         <p className="weak-banner week-review" role="status">

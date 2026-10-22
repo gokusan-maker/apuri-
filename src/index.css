@@ -1391,3 +1391,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .gacha-result.first-pull .gacha-capsule { box-shadow: 0 0 0 3px #fde68a, 0 0 18px 6px rgb(253 224 71 / 0.75); animation: first-glow 1.2s ease-in-out 3; }
 @keyframes first-glow { 50% { box-shadow: 0 0 0 4px #fef08a, 0 0 28px 10px rgb(253 224 71 / 0.95); } }
 @media (prefers-reduced-motion: reduce) { .gacha-first, .gacha-result.first-pull .gacha-capsule { animation: none; } }
+.lvup-banner { position: fixed; top: calc(8px + env(safe-area-inset-top)); left: 50%; z-index: 20; transform: translateX(-50%); max-width: calc(100% - 24px); margin: 0; padding: 6px 14px; border-radius: 999px; background: linear-gradient(135deg, #f59e0b, #f97316); color: #fff; font-weight: 800; font-size: 0.9rem; text-align: center; box-shadow: 0 4px 12px rgb(249 115 22 / 0.4); pointer-events: none; animation: toast-in 0.3s; }
