@@ -444,3 +444,14 @@ it('長文の本文の文字の大きさを小・中・大で変えられ、覚�
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(document.querySelector('.long-text.font-l')).not.toBeNull()
 })
+
+it('長文を解いているあいだ「のこり○問」が上に出て、答えるとへる', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[0]
+  render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  const total = Number(/のこり (\d+)問/.exec(document.querySelector('.long-remaining')!.textContent!)![1])
+  const b = p.blanks[0]
+  fireEvent.click(screen.getAllByRole('button', { name: `${MARKS[b.answer]} ${b.choices[b.answer]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
+  expect(document.querySelector('.long-remaining')!.textContent).toContain(`のこり ${total - 1}問`)
+})

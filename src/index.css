@@ -1433,3 +1433,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-progress-bar span { flex: 1; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); }
 .grammar-progress-bar span.done { background: #22c55e; }
 .grammar-progress-bar span.now { background: var(--accent); }
+.long-remaining { position: sticky; top: calc(4px + env(safe-area-inset-top)); z-index: 5; width: fit-content; max-width: 100%; margin: 0 0 6px auto; padding: 4px 12px; border-radius: 999px; background: var(--accent); color: var(--accent-fg); font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgb(0 0 0 / 0.15); }

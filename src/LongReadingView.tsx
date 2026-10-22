@@ -310,6 +310,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
 
   return (
     <section className="card grammar long-reading">
+      {!done && (
+        <p className="long-remaining" role="status" aria-label={`のこり ${total - answered}問`}>
+          {answered < total ? `📝 のこり ${total - answered}問（${answered} / ${total}）` : '✅ ぜんぶ答えた！ 下の「採点する」へ'}
+        </p>
+      )}
       <div className="stage-head">
         <button
           className="stage-back"
