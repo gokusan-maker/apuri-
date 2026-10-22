@@ -5,6 +5,7 @@ import App from './App'
 import { BOSS_XP } from './boss'
 import { LONG_PASSAGES } from './longreading'
 import { passageQs } from './readingboss'
+import { loadBuddies } from './buddies'
 import { loadMissions, missionsFor } from './missions'
 import { quizXp } from './monster'
 import { loadParty } from './party'
@@ -43,7 +44,7 @@ describe('再発防止', () => {
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
-    expect(loadParty().members[0].xp).toBe(expected)
+    expect(loadBuddies().reading.xp).toBe(expected) // 読解ボスの XP は長文のなかま（竜）へ
   })
 
   it('発音練習は同じ単語で何度言っても記録は1回だけ', () => {

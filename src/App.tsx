@@ -1,6 +1,8 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
+import { buddyForm, buddyLevel, feedBuddy, loadBuddies, saveBuddies, TRACK_LABEL, type Buddies, type Track } from './buddies'
+import { BuddyRow } from './BuddyRowView'
 import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
@@ -48,7 +50,7 @@ import { loadRouletteDay, saveRouletteDay } from './roulette'
 import { Celebrate } from './CelebrateView'
 import { BossDex } from './BossView'
 import { Evolve } from './EvolveView'
-import { EvolutionPreview, Monster, Party as PartyView, Profile, Zukan } from './MonsterView'
+import { EvolutionPreview, Monster, MonsterFigure, Party as PartyView, Profile, Zukan } from './MonsterView'
 import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel, bondWinCoins } from './bond'
@@ -302,6 +304,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法の動物・長文の竜
   const [showTimeAttack, setShowTimeAttack] = useState(false) // ミニゲームの中のタイムアタック
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
@@ -435,6 +438,20 @@ function App() {
     if (correct && source === 'ear') count('ear')
     if (!correct && wordId) setMistakes((m) => addMistake(m, wordId)) // 単語にひもづかない問題（アルファベットなど）は記録しない
     if (correct && xp > 0) gainXp(xp * xpRate, source)
+  }
+
+  // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝動物、長文＝竜）へ
+  function feedTrack(track: Track, raw: number) {
+    const amount = boosted(raw, moodFull(moodMeter, today))
+    const r = feedBuddy(buddies, track, amount) // お知らせ用（同じタイミングで2回あげても足し算はずれないよう、保存は関数で）
+    setBuddies((b) => feedBuddy(b, track, amount).buddies)
+    const name = (b: Buddies) => b[track].name ?? buddyForm(track, b[track]).name
+    if (r.evolved) pushToast([{ id: `buddy-evo-${track}`, text: `${r.evolved.icon} ${TRACK_LABEL[track]}のなかまが「${r.evolved.name}」になった！`, counter: 'answers', target: 0 }])
+    else if (r.levelUp) pushToast([{ id: `buddy-lv-${track}`, text: `${buddyForm(track, r.buddies[track]).icon} ${name(r.buddies)}が Lv.${buddyLevel(r.buddies[track]).level} になった！`, counter: 'answers', target: 0 }])
+  }
+  const onAnswerTrack = (track: Track) => (correct: boolean, xp: number, wordId: string, source: Source) => {
+    onAnswer(correct, 0, wordId, source)
+    if (correct && xp > 0) feedTrack(track, xp * xpRate)
   }
 
   function gainXp(raw: number, source: Source | null) {
@@ -835,6 +852,18 @@ function App() {
               pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
           />
+          <BuddyRow
+            wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
+            wordName={monster.name ?? formOf(monster).name}
+            wordLevel={levelInfo(monster.xp).level}
+            buddies={buddies}
+            onGo={(w) => {
+              setShowShop(false)
+              setShowChallenge(false)
+              setMode(w === 'grammar' ? 'time' : w === 'reading' ? 'stage' : 'quiz')
+              toContent()
+            }}
+          />
           <button
             className="home-gacha-btn"
             onClick={() => {
@@ -1150,6 +1179,7 @@ function App() {
       ) : mode === 'stage' ? (
         <Stages
           startDaily={dailyGo}
+          onReadingAnswer={onAnswerTrack('reading')}
           power={power}
           hour={hour}
           partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
@@ -1249,7 +1279,7 @@ function App() {
               pushToast([{ id: 'bond-win', text: `${bondHearts(bondLevel(totals.studyDays ?? 0))} なかよしボーナス！ 🪙${bonus}`, counter: 'answers', target: 0 }])
             }
             setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
-            updateMonster((m) => feed(m, boss[level] ? BOSS_REMATCH_XP : BOSS_XP, null, today))
+            feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは長文のなかま（竜）へ
           }}
           record={stages}
           onAnswer={onAnswer}
@@ -1458,7 +1488,7 @@ function App() {
             lockDirection={mode === 'time'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
             targets={quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
-            onAnswer={onAnswer}
+            onAnswer={mode === 'time' ? onAnswerTrack('grammar') : onAnswer}
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
@@ -1469,7 +1499,7 @@ function App() {
             onGame={() => count('game')}
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
-            onXp={(n) => gainXp(n, null)}
+            onXp={(n) => (mode === 'time' ? feedTrack('grammar', n) : gainXp(n, null))}
             partnerName={monster.name ?? formOf(monster).name}
             onGrammarMaster={() => {
               setWallet((w) => addTicket(addTicket(addTicket(w))))

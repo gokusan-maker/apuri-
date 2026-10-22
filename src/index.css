@@ -1483,3 +1483,16 @@ button:focus:not(:focus-visible) { outline: none; }
 .unit-sort { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-size: 0.8rem; color: var(--muted); }
 .unit-sort button { padding: 3px 10px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); border-radius: 999px; background: var(--card); color: inherit; font-weight: 700; }
 .unit-sort button[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.buddy-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 8px 0; }
+.buddy-card { display: flex; flex-direction: column; align-items: center; gap: 1px; min-width: 0; padding: 6px 4px 8px; border: none; border-radius: 14px; color: var(--fg); }
+.buddy-card.b-word { background: color-mix(in srgb, #f9a8d4 22%, var(--card)); }
+.buddy-card.b-grammar { background: color-mix(in srgb, #86efac 25%, var(--card)); }
+.buddy-card.b-reading { background: color-mix(in srgb, #a78bfa 25%, var(--card)); }
+.buddy-tag { font-size: 0.68rem; font-weight: 800; color: var(--muted); }
+.buddy-fig { display: grid; place-items: center; width: 52px; height: 52px; }
+.buddy-fig svg { width: 52px; height: 52px; }
+.buddy-emoji { font-size: 2.3rem; line-height: 1; }
+.buddy-name { max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 0.72rem; font-weight: 700; }
+.buddy-lv { font-size: 0.72rem; font-weight: 800; color: var(--accent); }
+.buddy-bar { width: 80%; height: 5px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
+.buddy-bar > span { display: block; height: 100%; background: var(--accent); }

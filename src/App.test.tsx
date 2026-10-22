@@ -813,6 +813,22 @@ describe('App', () => {
     }
   })
 
+  it('ホームに単語・文法・長文の3体がいて、文法の答えは文法のなかま（動物）が育つ', async () => {
+    const { GRAMMAR } = await import('./grammar')
+    render(<App />)
+    const row = screen.getByLabelText('育てているなかま')
+    expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
+    expect(row.textContent).toMatch(/単語.*文法.*長文/)
+    fireEvent.click(within(row).getByLabelText(/文法のなかま/))
+    const unit = GRAMMAR[0]
+    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByText('確認問題へ（3問）'))
+    const q = unit.questions[0]
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
+    expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))
