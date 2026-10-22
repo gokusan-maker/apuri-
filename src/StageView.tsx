@@ -379,6 +379,19 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
                   🎁 宝箱をあける
                 </button>
               ))}
+            {result > 0 && stagesOf(playing.level)[playing.no] && (
+              <button
+                className="good next-unit-btn"
+                onClick={() => {
+                  setPlaying(stagesOf(playing.level)[playing.no])
+                  setResult(null)
+                  setTreasure(null)
+                  window.scrollTo?.({ top: 0 })
+                }}
+              >
+                次のステージへ ▶（{playing.level} ステージ{playing.no + 1}）
+              </button>
+            )}
             {result > 0 && (
               <span className="stage-progress">
                 {playing.level}の★ {stagesOf(playing.level).reduce((a, st) => a + (record[st.id] ?? 0), 0)} / {stagesOf(playing.level).length * 3}

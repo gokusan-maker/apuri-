@@ -227,3 +227,19 @@ it('ナイトボスは夜7時〜10時だけ出る', () => {
   fireEvent.click(screen.getByText(/🌃 ナイトボス「夜の/))
   expect(screen.getByText('🌃 ナイトボス')).toBeInTheDocument()
 })
+
+it('ステージをクリアすると「次のステージへ ▶」ですぐ次のステージを始められる', () => {
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByLabelText('中1 ステージ1'))
+  const words = stagesOf('中1')[0].words
+  for (let i = 0; i < 10; i++) {
+    const en = document.querySelector('.quiz .en')!.textContent
+    fireEvent.click(screen.getByRole('button', { name: words.find((x) => x.en === en)!.ja }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('次のステージへ ▶（中1 ステージ2）'))
+  expect(screen.getByText('中1 ステージ2')).toBeInTheDocument()
+  expect(document.querySelector('.stage-result')).toBeNull()
+  const next = stagesOf('中1')[1].words
+  expect(next.some((w) => w.en === document.querySelector('.quiz .en')!.textContent)).toBe(true)
+})
