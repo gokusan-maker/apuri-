@@ -1473,8 +1473,9 @@ function App() {
         <>
           <TodayTasks
             today={today}
-            onTrio={(xp) => {
+            onTrio={(xp, ticket) => {
               gainXp(xp, null)
+              if (ticket) setWallet((w) => addTicket(w))
               feedTrack('grammar', xp)
               feedTrack('reading', xp)
             }}

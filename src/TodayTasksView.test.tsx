@@ -14,7 +14,7 @@ it('今日の課題を3つクリアするとトリオボーナスを1日1回受�
   localStorage.setItem('eitan:daily-short', day)
   render(<TodayTasks today={day} onGo={() => {}} onTrio={trio} />)
   fireEvent.click(screen.getByText(/トリオボーナスを受け取る/))
-  expect(trio).toHaveBeenCalledWith(30)
+  expect(trio).toHaveBeenCalledWith(30, false)
   expect(screen.getByText(/トリオボーナス受け取りずみ/)).toBeInTheDocument()
   expect(localStorage.getItem('eitan:trio-day')).toBe(day)
 })

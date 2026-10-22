@@ -56,3 +56,33 @@ export const TRIO_XP = 30
 const TRIO_KEY = 'eitan:trio-day'
 export const loadTrioDay = () => load(TRIO_KEY)
 export const saveTrioDay = (day: string) => save(TRIO_KEY, day)
+
+// トリオボーナスの連続日数（3日続くごとに🎟ガチャチケット）
+export const TRIO_TICKET_DAYS = 3
+const TRIO_STREAK_KEY = 'eitan:trio-streak'
+type TrioStreak = { last: string; count: number }
+function prevDay(day: string): string {
+  const [y, m, d] = day.split('-').map(Number)
+  const t = new Date(y, m - 1, d - 1)
+  return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`
+}
+export function loadTrioStreak(): TrioStreak {
+  try {
+    const v = JSON.parse(localStorage.getItem(TRIO_STREAK_KEY) ?? 'null') as Partial<TrioStreak> | null
+    return v && typeof v.last === 'string' && typeof v.count === 'number' ? { last: v.last, count: v.count } : { last: '', count: 0 }
+  } catch {
+    return { last: '', count: 0 }
+  }
+}
+// 今日トリオボーナスを受け取ったときの連続日数。ticket は3日ごとのチケット
+export function claimTrioStreak(day: string): { count: number; ticket: boolean } {
+  const s = loadTrioStreak()
+  if (s.last === day) return { count: s.count, ticket: false }
+  const count = s.last === prevDay(day) ? s.count + 1 : 1
+  try {
+    localStorage.setItem(TRIO_STREAK_KEY, JSON.stringify({ last: day, count }))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return { count, ticket: count % TRIO_TICKET_DAYS === 0 }
+}
