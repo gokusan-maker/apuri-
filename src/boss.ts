@@ -345,3 +345,7 @@ export const isComeback = (hearts: number, startHearts: number) => hearts === 1 
 // おうえんスタンプ：正解するたびに相棒がスタンプでおうえん（5種類を順番に）
 export const CHEER_STAMPS = ['👍 ナイス！', '💪 いいぞ！', '✨ すごい！', '🔥 その調子！', '🎯 ばっちり！']
 export const cheerStampOf = (n: number) => CHEER_STAMPS[(((n - 1) % CHEER_STAMPS.length) + CHEER_STAMPS.length) % CHEER_STAMPS.length]
+
+// 負けたときの相棒のはげまし（たおせなかった回数で順番に）
+export const CHEER_ON_LOSE = ['だいじょうぶ！ つぎはきっと勝てるよ！', 'まちがえた単語をいっしょに覚えよう！', 'おしかった！ もう少しだったよ！', 'ぼくもいっしょにがんばるね！']
+export const cheerOnLose = (n: number) => CHEER_ON_LOSE[((n % CHEER_ON_LOSE.length) + CHEER_ON_LOSE.length) % CHEER_ON_LOSE.length]

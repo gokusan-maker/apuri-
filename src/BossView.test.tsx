@@ -86,6 +86,17 @@ describe('ボス戦', () => {
     expect(document.querySelector('.battle-start')).toBeNull()
   })
 
+  it('負けると相棒がはげましてくれる', async () => {
+    const { FORMS } = await import('./monster')
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: FORMS[1], name: 'モチ' }} />)
+    for (let i = 0; i < 8 && !screen.queryByText('まけてしまった…'); i++) {
+      answer(false)
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+    expect(document.querySelector('.lose-cheer')!.textContent).toMatch(/^🐣 モチ「.+」$/)
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {
