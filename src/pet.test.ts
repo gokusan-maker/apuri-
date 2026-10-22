@@ -18,3 +18,16 @@ it('5回目はごきげんMAX、なですぎるとくすぐったがる', () => 
   expect(petReaction(PET_MAX_AT + 1)).toBe('normal')
   expect(petReaction(PET_TICKLE_FROM)).toBe('tickle')
 })
+
+it('なでた日に1スタンプ、10こでチケット', async () => {
+  const { loadPetStamps, stampPet } = await import('./pet')
+  localStorage.clear()
+  let s = loadPetStamps()
+  let r = stampPet(s, 'd1')
+  expect(r.stamps.n).toBe(1)
+  expect(stampPet(r.stamps, 'd1').stamps.n).toBe(1)
+  s = { n: 9, last: 'd8' }
+  r = stampPet(s, 'd9')
+  expect(r.ticket).toBe(true)
+  expect(loadPetStamps()).toEqual({ n: 10, last: 'd9' })
+})

@@ -649,6 +649,14 @@ describe('App', () => {
     expect(screen.queryByRole('button', { name: /今月の福袋/ })).toBeNull()
   })
 
+  it('なでなでスタンプが10こたまるとチケット', () => {
+    localStorage.setItem('eitan:pet-stamps', JSON.stringify({ n: 9, last: '2026-10-19' }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('相棒にさわる'))
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
+    expect(screen.getByLabelText('なでなでスタンプ 0 / 10')).toBeInTheDocument()
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)

@@ -12,7 +12,7 @@ import { RoomScene } from './RoomSceneView'
 import { challengeOf } from './challenge'
 import { IDLE_MS, idleAt } from './idle'
 import type { SeasonFx } from './seasonfx'
-import { loadPetLog, nextPet, PET_BONUS, petReaction, savePetLog, type PetReaction } from './pet'
+import { loadPetLog, loadPetStamps, nextPet, PET_BONUS, PET_STAMPS_FOR_TICKET, petReaction, savePetLog, stampPet, type PetReaction } from './pet'
 import { dayKey } from './srs'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
@@ -40,6 +40,7 @@ type Props = {
   epithet?: string | null // 二つ名（ボスをたおした回数で変わる）
   mood100?: { points: number; max: number } // ごきげんメーター
   onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
+  onPetStampTicket?: () => void // なでなでスタンプが10こたまった
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
   shelf?: string[] // 部屋にかざるおみやげ（絵文字）
@@ -658,12 +659,13 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, season, onPet, mood100, epithet }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
   const [poke, setPoke] = useState(0)
   const [posesSeen, setPosesSeen] = useState(loadPosesSeen)
+  const [petStamps, setPetStamps] = useState(loadPetStamps)
   const [react, setReact] = useState<PetReaction>('normal')
   const [tick, setTick] = useState(0)
   useEffect(() => {
@@ -719,6 +721,9 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           const r = Math.random()
           const pet = nextPet(loadPetLog(), dayKey())
           savePetLog(pet)
+          const st = stampPet(petStamps, dayKey())
+          if (st.stamps !== petStamps) setPetStamps(st.stamps)
+          if (st.ticket) onPetStampTicket?.()
           onPet?.()
           const re = petReaction(pet.count)
           setReact(re)
@@ -764,6 +769,9 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           </span>
         )}
       </button>
+      <p className="pet-stamps" aria-label={`なでなでスタンプ ${petStamps.n % PET_STAMPS_FOR_TICKET} / ${PET_STAMPS_FOR_TICKET}`}>
+        🐾 なでなでスタンプ {'●'.repeat(petStamps.n % PET_STAMPS_FOR_TICKET)}{'○'.repeat(PET_STAMPS_FOR_TICKET - (petStamps.n % PET_STAMPS_FOR_TICKET))}（10こで🎟）
+      </p>
       {poke > 0 && (
         <p className={`pose-label pose-${poseAt(poke - 1).id}`}>
           {poseAt(poke - 1).icon} {poseAt(poke - 1).name}（ポーズ {posesSeen.length} / {POSES.length}）{allPosesSeen(posesSeen) ? `　🏅 称号「${POSE_TITLE}」` : ''}

@@ -784,6 +784,10 @@ function App() {
           mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
           epithet={epithetOf(totalWins(loadBook()))}
           onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
+          onPetStampTicket={() => {
+            setWallet((w) => addTicket(w))
+            pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+          }}
         />
         <p className="stats">
           今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
