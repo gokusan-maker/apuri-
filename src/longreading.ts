@@ -1694,7 +1694,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 3],
       why: '第2段落「あたたかい場所にすむものもいる」、第3段落「寄りそって立つ」。羽毛は厚く、魚を食べ、危機にある種類もいる。',
     },
-    titleQ: { choices: ['Birds That Cannot Fly', 'How to Catch Fish', 'The Coldest Place on Earth', 'Animals That Live in Trees'], answer: 0, why: '飛べないけれど泳ぎが得意なペンギンについての文章。' },
+    titleQ: { choices: ['How to Catch Fish', 'The Coldest Place on Earth', 'Birds That Cannot Fly', 'Animals That Live in Trees'], answer: 2, why: '飛べないけれど泳ぎが得意なペンギンについての文章。' },
     tf: [
       { statement: 'Penguins can fly very high.', answer: false, why: 'ペンギンは飛べない。' },
       { statement: 'All penguins live in very cold places.', answer: false, why: 'あたたかい場所にすむものもいる。' },
@@ -2141,7 +2141,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 3],
       why: '第2段落「太陽の光を反射」、第3段落「風がない」。車で半年、生き物はいない、潮を起こす、宇宙飛行士の足あとがある。',
     },
-    titleQ: { choices: ['Our Neighbor, the Moon', 'Life on Mars', 'How to Become an Astronaut', 'The Sun and Its Light'], answer: 0, why: '月のきょり、光、環境、潮への影響、これからの計画について書かれている。' },
+    titleQ: { choices: ['Life on Mars', 'How to Become an Astronaut', 'The Sun and Its Light', 'Our Neighbor, the Moon'], answer: 3, why: '月のきょり、光、環境、潮への影響、これからの計画について書かれている。' },
     tf: [
       { statement: 'The moon is about 380,000 kilometers away from the Earth.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The moon makes its own light.', answer: false, why: '自分で光を出していない。' },
@@ -2254,7 +2254,7 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['relaxed', 'angry', 'hungry', 'lonely'], answer: 0, why: '第4段落「緑のある場所は人をリラックスさせる」。' },
       ],
     },
-    titleQ: { choices: ['Why Cities Need Trees', 'How to Build a Park', 'The Tallest Tree in the World', 'Air Conditioners in Summer'], answer: 0, why: '木が町をすずしくし、空気をきれいにし、人をリラックスさせる理由が書かれている。' },
+    titleQ: { choices: ['How to Build a Park', 'Why Cities Need Trees', 'The Tallest Tree in the World', 'Air Conditioners in Summer'], answer: 1, why: '木が町をすずしくし、空気をきれいにし、人をリラックスさせる理由が書かれている。' },
     tf: [
       { statement: 'Trees can make cities cooler.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Trees take in oxygen and give out carbon dioxide.', answer: false, why: '二酸化炭素を取りこんで酸素を出す。' },
@@ -2467,7 +2467,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [0, 3],
       why: '第2段落「日本で初めてつくられた」、第3段落「点のブロックは階段の前にある」。',
     },
-    titleQ: { choices: ['The Yellow Blocks on the Sidewalk', 'How to Ride a Bike Safely', 'Train Stations in Japan', 'The History of the White Cane'], answer: 0, why: '歩道や駅にある黄色い点字ブロックについての文章。' },
+    titleQ: { choices: ['How to Ride a Bike Safely', 'The Yellow Blocks on the Sidewalk', 'Train Stations in Japan', 'The History of the White Cane'], answer: 1, why: '歩道や駅にある黄色い点字ブロックについての文章。' },
     tf: [
       { statement: 'Seiichi Miyake made the first blocks in 1967.', answer: true, why: '第2段落の内容と合う。' },
       { statement: 'There are two main kinds of blocks.', answer: true, why: '第3段落の内容と合う。' },
@@ -2574,7 +2574,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 3],
       why: '第2段落「光が水のつぶに入ると曲がる」、第3段落「太陽がうしろに」。',
     },
-    titleQ: { choices: ['How a Rainbow Appears', 'Why It Rains in June', 'Colors of Flowers', 'How to Use a Hose'], answer: 0, why: 'にじができるしくみと、見え方、色の数について書かれている。' },
+    titleQ: { choices: ['Why It Rains in June', 'Colors of Flowers', 'How a Rainbow Appears', 'How to Use a Hose'], answer: 2, why: 'にじができるしくみと、見え方、色の数について書かれている。' },
     tf: [
       { statement: 'A rainbow appears when sunlight passes through drops of water.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Each color bends in exactly the same way.', answer: false, why: '少しずつちがう曲がり方をする。' },
