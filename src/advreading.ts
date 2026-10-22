@@ -1375,4 +1375,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn about leaders?', choices: ['A good leader can share a goal with others.', 'A leader must be the strongest person.', 'A leader should control everyone.', 'A leader must sing better than others.'], answer: 0, why: '第3段落 A good leader is someone who can share a goal with others。' },
     ],
   },
+  {
+    id: 'toefl-bamboo',
+    title: 'The Fastest-Growing Plant',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      'Although bamboo can grow as tall as a tree, it is actually a type of grass. Some species are among the fastest-growing plants on Earth: under ideal conditions, a single stem can grow almost a meter in one day. This remarkable speed has made bamboo the subject of much scientific interest, ( A ) as a building material and as a model for understanding plant growth.',
+      'The secret lies partly in how a bamboo stem is built. A young shoot already contains all of its sections, packed tightly together like a folded telescope. Rather than producing large numbers of new cells, the plant mainly lengthens the cells it already has by filling them with water. In addition, the shoot does not need to collect all of its energy by itself, ( B ) it is connected to an underground network of stems that stores food made by older plants.',
+      'Bamboo is also unusual in the way it reproduces. Many species flower only once every several decades, and when they do, all the plants of the same species in a wide area tend to flower at the same time and then die. Scientists are still not sure what ( C ) this timing, but one idea is that producing a huge number of seeds at once means that animals cannot eat them all.',
+    ],
+    ja: [
+      '竹は木と同じくらい高く育つことがあるが、実はイネ科の草の一種である。いくつかの種は地球上でもっとも成長の速い植物の一つで、理想的な条件のもとでは、1本の茎が1日でほぼ1メートルのびることがある。このおどろくべき速さによって、竹は建築材料としても、植物の成長を理解するための手本としても、多くの科学的関心の対象となってきた。',
+      'その秘密の一部は、竹の茎のつくりにある。若いたけのこは、すでにすべての節を、たたんだ望遠鏡のようにぎっしりつめた形でふくんでいる。竹は新しい細胞を大量につくるよりも、主にすでにある細胞に水をみたしてのばしている。さらに、たけのこは自分だけでエネルギーをすべて集める必要がない。古い竹がつくった養分をたくわえている地下茎のネットワークにつながっているからである。',
+      '竹は子孫の残し方も変わっている。多くの種は数十年に一度しか花をさかせず、さかせるときには、広い地域の同じ種の竹がいっせいに花をさかせ、そのあとかれてしまう傾向がある。科学者たちは何がこの時期を決めているのかをまだはっきりとは知らないが、一つの考えは、一度に大量の種をつくれば、動物がそのすべてを食べることはできないというものである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['both', 'either', 'neither', 'not'], answer: 0, why: 'both A and B「A も B も」。as a building material and as a model と and でつながっている。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'so that'], answer: 0, why: '「地下茎につながっているから」エネルギーを全部自分で集める必要がない、という理由。' },
+      { id: 'C', choices: ['controls', 'control', 'controlling', 'to control'], answer: 0, why: '疑問詞 what が主語の間接疑問。what controls this timing「何がこの時期を決めているか」。' },
+    ],
+    tf: [
+      { statement: '竹は木の一種である。', answer: false, why: '第1段落 it is actually a type of grass。' },
+      { statement: '竹は主に、すでにある細胞に水をみたしてのびる。', answer: true, why: '第2段落 lengthens the cells it already has by filling them with water。' },
+      { statement: '竹がいっせいに花をさかせる理由は、すでに完全にわかっている。', answer: false, why: '第3段落 Scientists are still not sure。' },
+    ],
+    qa: [
+      { q: 'According to one idea, why might bamboo produce many seeds at once?', choices: ['So that animals cannot eat all of them.', 'Because the plants need more water.', 'So that the stems grow taller.', 'Because the underground stems die first.'], answer: 0, why: '第3段落 animals cannot eat them all。' },
+    ],
+  },
 ]
