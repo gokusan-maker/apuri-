@@ -1940,6 +1940,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Turn on the light so that we ___ see the map.', choices: ['can', 'could have', 'are'], answer: 0, why: '今これからの目的なので can「地図が見えるように」。' },
     ],
   },
+  {
+    id: 'formal-object-it',
+    title: '形式目的語 it（find it 〜 to …）',
+    points: [
+      'find / make / think ＋ it ＋ 形容詞 ＋ to 〜 で「〜するのは…だと思う・わかる」「〜するのを…にする」。この it は後ろの to 〜 を指す（形式目的語）。',
+      '例：I found it easy to make friends.「友だちを作るのはかんたんだとわかった」。',
+    ],
+    examples: [
+      { en: 'I found it difficult to sleep last night.', ja: '昨夜はねむるのが難しかった。' },
+      { en: 'The internet makes it easy to learn new things.', ja: 'インターネットのおかげで、新しいことを学ぶのがかんたんになる。' },
+    ],
+    questions: [
+      { sentence: 'I found ___ hard to answer the question.', choices: ['it', 'that', 'this'], answer: 0, why: 'find it ＋ 形容詞 ＋ to 〜。it が to answer the question を指す。' },
+      { sentence: 'The map made it easy ___ the station.', choices: ['to find', 'finding', 'found'], answer: 0, why: 'make it ＋ 形容詞 ＋ to 〜。it の中身は to find the station。' },
+      { sentence: 'Do you think it important ___ breakfast every day?', choices: ['to eat', 'eat', 'ate'], answer: 0, why: 'think it ＋ 形容詞 ＋ to 〜「〜するのは…だと思う」。' },
+    ],
+  },
+  {
+    id: 'tense-agreement',
+    title: '時制の一致（He said he was 〜）',
+    points: [
+      'said・thought・knew など過去の動詞のあとの that 節では、ふつう動詞も過去形にそろえる（時制の一致）。will は would、can は could になる。',
+      'それよりさらに前のことを言うときは、過去完了（had ＋ 過去分詞）にする。',
+    ],
+    examples: [
+      { en: 'She said that she was tired.', ja: '彼女はつかれていると言った。' },
+      { en: 'I thought he would come.', ja: '彼は来るだろうと思った。' },
+    ],
+    questions: [
+      { sentence: 'He said that he ___ hungry.', choices: ['was', 'is', 'be'], answer: 0, why: 'said（過去）に合わせて was。' },
+      { sentence: 'I knew that she ___ help me.', choices: ['would', 'will', 'can'], answer: 0, why: 'knew（過去）に合わせて will を would にする。' },
+      { sentence: 'Tom told me that he ___ lost his key the day before.', choices: ['had', 'has', 'have'], answer: 0, why: '「言った」ときよりさらに前のことなので過去完了 had lost。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2043,7 +2077,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
