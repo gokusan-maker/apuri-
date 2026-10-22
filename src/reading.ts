@@ -1245,6 +1245,39 @@ export const PASSAGES: Passage[] = [
       { q: '毎朝、金太郎が前に泳いでくるのはなぜ？', choices: ['朝ごはんの時間だとわかっているから', '水がつめたいから', 'こわいから'], answer: 0 },
     ],
   },
+  {
+    id: 'lost-glasses',
+    title: "Grandpa's Glasses",
+    text: 'Yesterday my grandfather looked everywhere for his glasses. He looked under the sofa, in the kitchen, and even in the car. "I can\'t read the newspaper without them," he said. Then my sister started to laugh. His glasses were on top of his head the whole time!',
+    ja: '昨日、祖父はめがねをあちこちさがしていました。ソファの下も、台所も、車の中までさがしました。「めがねがないと新聞が読めないよ」と祖父は言いました。すると妹が笑い出しました。めがねはずっと祖父の頭の上にあったのです！',
+    questions: [
+      { q: '祖父は何をさがしていた？', choices: ['めがね', '新聞', '車のかぎ'], answer: 0 },
+      { q: 'めがねがないと何ができない？', choices: ['新聞を読む', '車を運転する', 'テレビを見る'], answer: 0 },
+      { q: 'めがねはどこにあった？', choices: ['祖父の頭の上', 'ソファの下', '車の中'], answer: 0 },
+    ],
+  },
+  {
+    id: 'big-watermelon',
+    title: 'The Big Watermelon',
+    text: 'In August, our neighbor gave us a huge watermelon from his farm. It was so heavy that my father had to carry it with both arms. We put it in cold water for an hour and then cut it into twenty pieces. We shared some with our neighbors, and everyone said it was very sweet.',
+    ja: '8月に、近所の人が畑でとれた大きなすいかをくれました。とても重かったので、父は両うでで運ばなければなりませんでした。1時間つめたい水で冷やしてから、20切れに切りました。近所の人たちにも分けると、みんながとてもあまいと言いました。',
+    questions: [
+      { q: 'すいかはだれがくれた？', choices: ['近所の人', '祖母', '先生'], answer: 0 },
+      { q: 'すいかを何切れに切った？', choices: ['10切れ', '20切れ', '30切れ'], answer: 1 },
+      { q: 'みんなはどう言った？', choices: ['とてもあまい', 'すっぱい', '小さい'], answer: 0 },
+    ],
+  },
+  {
+    id: 'missed-stop',
+    title: 'Asleep on the Train',
+    text: 'After a long day at school, I fell asleep on the train home. When I woke up, the train was at a station I had never seen. I had missed my stop by four stations! I called my mother, took the next train back, and got home thirty minutes late.',
+    ja: '学校で長い一日をすごしたあと、私は帰りの電車でねむってしまいました。目がさめると、電車は見たことのない駅にいました。4駅も乗りすごしていたのです！ 母に電話をして、次の電車でもどり、30分おくれて家に着きました。',
+    questions: [
+      { q: '筆者は電車で何をしてしまった？', choices: ['ねむってしまった', 'かばんを忘れた', '電車に乗りおくれた'], answer: 0 },
+      { q: '何駅乗りすごした？', choices: ['2駅', '4駅', '6駅'], answer: 1 },
+      { q: '何分おくれて家に着いた？', choices: ['10分', '30分', '60分'], answer: 1 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
