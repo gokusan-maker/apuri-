@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import type { PuzzleQ } from './puzzles'
 import { playCorrect, playWrong } from './sound'
+import { speak } from './speech'
 
 export const PUZZLE_COUNT = 10
 
@@ -84,6 +85,11 @@ export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
       {picked !== null && (
         <>
           <p className="feedback">{picked === q.answer ? '正解！' : `正解は「${q.choices[q.answer]}」`}</p>
+          {q.say && (
+            <button className="list-link" onClick={() => speak(q.say!)}>
+              🔊 問題と答えを英語で聞く
+            </button>
+          )}
           {q.explain ? (
             <ul className="puzzle-explain" aria-label="解説">
               {q.explain.map((t) => (

@@ -4,7 +4,7 @@ import { shuffle, type Rng } from './quiz'
 import { EMOJI } from './emoji'
 import { WORDS, type Word } from './words'
 
-export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string; explain?: string[] } // explain：くわしい解説（行ごと）
+export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string; explain?: string[]; say?: string } // explain：くわしい解説（行ごと） / say：答えあわせで🔊で聞ける英語
 
 // 1語（スペースなし）で、最初の文字がちがう単語
 const SINGLE = WORDS.filter((w) => /^[a-z]+$/.test(w.en))
@@ -581,5 +581,5 @@ export function riddleQ(rng: Rng = Math.random): PuzzleQ {
   const r = RIDDLES[Math.floor(rng() * RIDDLES.length)]
   const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a)
   const choices = shuffle([r.a, ...shuffle(pool, rng).slice(0, 3)], rng)
-  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`] }
+  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`], say: `${r.q} ${r.a}.` }
 }
