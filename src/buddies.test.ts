@@ -44,3 +44,13 @@ describe('属性のタマゴ', () => {
     expect(hatchAttrEgg(b, box, 0)).toBeNull()
   })
 })
+
+describe('チームレベル', () => {
+  it('3体のレベルの合計で称号がかわる', async () => {
+    const { teamOf } = await import('./buddies')
+    const t = teamOf(1, { grammar: { xp: 0 }, reading: { xp: 0 } })
+    expect(t).toEqual({ level: 3, title: 'かけだしチーム', next: 7 })
+    expect(teamOf(8, { grammar: { xp: 0 }, reading: { xp: 0 } }).title).toBe('なかよしチーム')
+    expect(teamOf(200, { grammar: { xp: 0 }, reading: { xp: 0 } }).next).toBeNull()
+  })
+})

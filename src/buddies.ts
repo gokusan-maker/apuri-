@@ -177,3 +177,18 @@ export function zukanOf(track: Track, buddies: Buddies, box: BuddyBox): { sp: Bu
     return { sp, level, seen: BUDDY_FORMS[track].filter((f) => level >= f.minLv).length }
   })
 }
+
+// チームレベル：単語・文法・読解の3体のレベルの合計と、その称号
+export const TEAM_TITLES: { min: number; name: string }[] = [
+  { min: 0, name: 'かけだしチーム' },
+  { min: 10, name: 'なかよしチーム' },
+  { min: 30, name: 'がんばりチーム' },
+  { min: 60, name: 'つわものチーム' },
+  { min: 100, name: 'でんせつのチーム' },
+]
+export function teamOf(wordLevel: number, buddies: Buddies): { level: number; title: string; next: number | null } {
+  const level = wordLevel + buddyLevel(buddies.grammar).level + buddyLevel(buddies.reading).level
+  const t = [...TEAM_TITLES].reverse().find((x) => level >= x.min)!
+  const n = TEAM_TITLES.find((x) => x.min > level)
+  return { level, title: t.name, next: n ? n.min - level : null }
+}

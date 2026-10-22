@@ -1,7 +1,7 @@
 import { growthOf, growthScale, growthText } from './monster'
 import type { ReactNode } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { buddyLevel, buddyName, TRACK_LABEL, type Buddies, type Track } from './buddies'
+import { buddyLevel, buddyName, teamOf, TRACK_LABEL, type Buddies, type Track } from './buddies'
 
 type Props = {
   wordFigure: ReactNode // 単語の相棒（モチなど）の絵
@@ -14,7 +14,12 @@ type Props = {
 // ホームの3体：単語の相棒・文法のことばモンスター・読解の竜
 export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo }: Props) {
   const tracks: Track[] = ['grammar', 'reading']
+  const team = teamOf(wordLevel, buddies)
   return (
+    <>
+    <p className="team-level" aria-label="チームレベル">
+      🤝 チームLv.{team.level}「{team.title}」{team.next !== null && <small>（あと{team.next}で次の称号）</small>}
+    </p>
     <div className="buddy-row" aria-label="育てているなかま">
       <button className="buddy-card b-word" onClick={() => onGo('word')}>
         <span className="buddy-tag">単語</span>
@@ -45,5 +50,6 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo }: Pro
         )
       })}
     </div>
+    </>
   )
 }
