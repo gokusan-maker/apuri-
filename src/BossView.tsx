@@ -493,6 +493,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={maxHp} aria-valuenow={hp}>
         <div className="boss-hp-fill" style={{ width: `${(hp / maxHp) * 100}%` }} />
       </div>
+      <p className="boss-hp-num">
+        のこりHP {hp} / {maxHp}
+      </p>
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
         {comeback && !won && <span className="comeback-badge">⚡逆転チャンス！ダメージ2倍</span>}

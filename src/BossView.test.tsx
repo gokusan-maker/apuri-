@@ -70,6 +70,14 @@ describe('ボス戦', () => {
     expect(onNext).toHaveBeenCalled()
   })
 
+  it('ボスのHPが数字でも出て、正解すると減る', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
+    expect(screen.getByText('のこりHP 300 / 300')).toBeInTheDocument()
+    answer(true)
+    const m = /のこりHP (\d+) \/ 300/.exec(document.querySelector('.boss-hp-num')!.textContent!)!
+    expect(Number(m[1])).toBeLessThan(300)
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {
@@ -226,6 +234,7 @@ it('Sランクでなければ PERFECT! は出ない', () => {
 })
 
 it('たおすとボスが撃破セリフを言う', async () => {
+  localStorage.clear()
   const { defeatLineOf, BOSSES } = await import('./boss')
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
   answer(true)
