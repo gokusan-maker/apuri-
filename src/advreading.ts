@@ -171,4 +171,116 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what may happen in the brain during deep sleep?', choices: ['It replays patterns from the day.', 'It stops all activity.', 'It deletes new memories.', 'It creates new word pairs.'], answer: 0, why: '第2段落 during deep sleep, the brain replays patterns from the day。' },
     ],
   },
+  {
+    id: 'adv-choice',
+    title: 'Too Many Choices',
+    level: '難関大（評論）',
+    paragraphs: [
+      'It seems obvious that having more options should make us happier. If a shop offers fifty kinds of jam ( A ) of five, surely every customer is more likely to find exactly what they want. Yet research on consumer behavior suggests that the relationship between choice and satisfaction is far from simple.',
+      'When faced with too many alternatives, people often find it harder to decide at all, and those who do choose tend to feel less satisfied afterwards. One explanation is that each option we reject leaves behind a trace of regret: the more possibilities there were, the easier it is to imagine that ( B ) would have been better.',
+      'This does not mean that choice is bad in itself. Rather, it suggests that freedom is most valuable when it is accompanied by some kind of structure. A carefully limited menu, a trusted recommendation, or simply a personal rule can ( C ) us from the burden of endless comparison, leaving more energy for enjoying what we have chosen.',
+    ],
+    ja: [
+      '選択肢が多いほど幸せになれるのは、当たり前のように思える。店が5種類ではなく50種類のジャムを置いていれば、どの客も自分がほしいものをぴったり見つけやすくなるはずだ。しかし消費者行動の研究によれば、選択と満足の関係はまったく単純ではない。',
+      '選択肢が多すぎると、人はそもそも決めること自体が難しくなることが多く、選んだ人もあとで満足しにくい傾向がある。一つの説明は、選ばなかった選択肢の一つ一つが後悔のあとを残すということだ。可能性が多ければ多いほど、ほかの何かのほうがよかっただろうと想像しやすくなるのである。',
+      'これは、選択そのものが悪いということではない。むしろ、自由は何らかの枠組みがともなうときに最も価値がある、ということを示している。よく考えてしぼられたメニューや、信頼できるおすすめ、あるいは単に自分なりのルールがあれば、終わりのない比較という重荷から解放され、選んだものを楽しむための力をより多く残せる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['instead', 'because', 'in spite', 'regardless'], answer: 0, why: 'instead of 〜「〜の代わりに」。5種類ではなく50種類。ほかの選択肢も of をとるが、意味が合わない。' },
+      { id: 'B', choices: ['something else', 'nothing', 'everything', 'the same'], answer: 0, why: '「ほかの何か（something else）のほうがよかっただろう」と想像しやすくなる。後悔の話なので something else。' },
+      { id: 'C', choices: ['free', 'fill', 'bring', 'make'], answer: 0, why: 'free A from B「AをBから解放する」。比較という重荷から解放する。' },
+    ],
+    tf: [
+      { statement: '筆者は、選択肢が多いほど人は必ず満足すると考えている。', answer: false, why: '第1段落 the relationship between choice and satisfaction is far from simple。' },
+      { statement: '選択肢が多すぎると、決めること自体が難しくなることがある。', answer: true, why: '第2段落 people often find it harder to decide at all。' },
+      { statement: '筆者は、選択の自由そのものが悪いと主張している。', answer: false, why: '第3段落 This does not mean that choice is bad in itself。' },
+    ],
+    qa: [
+      { q: 'According to the author, when is freedom of choice most valuable?', choices: ['When it comes with some kind of structure.', 'When there are unlimited options.', 'When nobody gives any advice.', 'When every option is compared carefully.'], answer: 0, why: '第3段落 freedom is most valuable when it is accompanied by some kind of structure。' },
+    ],
+  },
+  {
+    id: 'adv-language-thought',
+    title: 'Does Language Shape Thought?',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Does the language we speak shape the way we think? The strong version of this idea, which claims that language ( A ) the limits of thought, has few supporters today. After all, people can clearly think about things for which they have no word, as anyone who has struggled to describe a new feeling knows.',
+      'A weaker version, however, has found considerable support. Some languages, for example, describe locations using fixed directions such as north and south rather than left and right. Speakers of these languages tend to keep track of direction with remarkable accuracy, even indoors, ( B ) their language constantly requires them to know where north is.',
+      'What such findings suggest is not that language imprisons thought, but that it trains attention. The habits our language demands of us, repeated thousands of times a day, gradually make certain distinctions feel natural. Learning a new language, then, may offer more than a new set of words; it may offer a slightly different way of ( C ) the world.',
+    ],
+    ja: [
+      '私たちが話す言語は、ものの考え方を形づくるのだろうか。言語が思考の限界を決めるというこの考えの強い形は、今日ではほとんど支持されていない。なにしろ人は、言葉のないものについてもはっきり考えることができる。新しい気持ちを言い表そうと苦労したことのある人なら、だれでも知っていることだ。',
+      'しかし、もっと弱い形の考えは、かなりの支持を得ている。たとえばある言語では、場所を右や左ではなく、北や南のような決まった方角で表す。こうした言語を話す人は、北がどちらかをいつも知っていることを言語が求めるので、屋内にいても、おどろくほど正確に方角を把握している傾向がある。',
+      'こうした発見が示しているのは、言語が思考を閉じこめるということではなく、注意の向け方をきたえるということである。言語が求める習慣は一日に何千回もくり返され、ある区別を少しずつ自然なものに感じさせる。だとすれば、新しい言語を学ぶことは、新しい単語の組み合わせ以上のものをあたえてくれるかもしれない。それは、世界の気づき方を少しちがったものにしてくれるかもしれないのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['sets', 'breaks', 'hides', 'follows'], answer: 0, why: 'set the limits of 〜「〜の限界を定める」。言語が思考の限界を決める、という強い考え方。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'so that'], answer: 0, why: '理由を表す because。「北がどちらかを知っていることを言語がいつも求めるから」方角に正確になる。' },
+      { id: 'C', choices: ['noticing', 'forgetting', 'leaving', 'buying'], answer: 0, why: '「世界に気づく（notice）方法」。注意の向け方をきたえる、という前の文とつながる。' },
+    ],
+    tf: [
+      { statement: '言語が思考の限界を決めるという強い考え方は、今日では支持する人が少ない。', answer: true, why: '第1段落 has few supporters today。' },
+      { statement: '北や南など決まった方角で場所を表す言語の話し手は、屋内に入ると方角がわからなくなる。', answer: false, why: '第2段落 even indoors（屋内でも）正確に方角を把握している。' },
+      { statement: '筆者は、新しい言語を学ぶことには、単語を覚える以上の意味があるかもしれないと述べている。', answer: true, why: '第3段落 may offer more than a new set of words。' },
+    ],
+    qa: [
+      { q: 'What do the findings suggest about language, according to the author?', choices: ['It trains what we pay attention to.', 'It completely controls our thoughts.', 'It has no effect on thinking.', 'It makes learning new words difficult.'], answer: 0, why: '第3段落 not that language imprisons thought, but that it trains attention。' },
+    ],
+  },
+  {
+    id: 'toefl-heat-island',
+    title: 'Why Cities Are Warmer',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      'Cities are often several degrees warmer than the countryside around them, a phenomenon known as the urban heat island effect. The difference is usually greatest at night, ( A ) buildings and roads release the heat they have absorbed during the day.',
+      'Several factors contribute to this effect. Dark surfaces such as asphalt absorb more sunlight than vegetation does, and the narrow spaces between tall buildings can trap warm air. In addition, cars, air conditioners, and factories all ( B ) heat directly into the environment.',
+      'Because higher temperatures can increase energy use and threaten public health during heat waves, many cities are now looking for ways to cool down. Planting trees, which provide shade and release water vapor, is one of the most effective strategies. Some cities are also painting roofs white so that they reflect sunlight ( C ) absorbing it. Small changes like these, repeated across thousands of buildings, can make a noticeable difference to the temperature of a whole city.',
+    ],
+    ja: [
+      '都市は、まわりの郊外より数度暖かいことが多い。これはヒートアイランド現象として知られている。その差はふつう夜にいちばん大きくなる。夜には、建物や道路が昼間に吸収した熱を放出するからだ。',
+      'いくつかの要因がこの現象の原因となっている。アスファルトのような暗い色の表面は植物よりも多くの日光を吸収し、高い建物のあいだのせまい空間は暖かい空気を閉じこめることがある。さらに、車やエアコン、工場はどれも熱を直接まわりに放出する。',
+      '気温が高くなると、エネルギーの使用量がふえ、熱波のときには人々の健康がおびやかされることがあるため、多くの都市が今、温度を下げる方法を探している。日かげをつくり水蒸気を出す木を植えることは、最も効果的な方法の一つだ。また、屋根を白くぬって、日光を吸収するのではなく反射させるようにしている都市もある。こうした小さな変化も、何千もの建物でくり返されれば、都市全体の気温に目に見えるちがいを生むことがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'which', 'what', 'whose'], answer: 0, why: '関係副詞 when。at night（夜）を受けて「そのときに〜」。後ろは主語・目的語のそろった文なので which・what は入らない。' },
+      { id: 'B', choices: ['release', 'reduce', 'remove', 'receive'], answer: 0, why: 'release heat「熱を放出する」。車・エアコン・工場が熱を出す。' },
+      { id: 'C', choices: ['instead of', 'in addition to', 'as well as', 'because of'], answer: 0, why: 'instead of -ing「〜する代わりに」。吸収するのではなく反射する。' },
+    ],
+    tf: [
+      { statement: 'The urban heat island effect is usually strongest at night.', answer: true, why: '第1段落 The difference is usually greatest at night。' },
+      { statement: 'Asphalt absorbs less sunlight than plants do.', answer: false, why: '第2段落 Dark surfaces such as asphalt absorb more sunlight than vegetation does。' },
+      { statement: 'Some cities paint roofs white so that they absorb more sunlight.', answer: false, why: '第3段落 reflect sunlight instead of absorbing it（吸収ではなく反射）。' },
+    ],
+    qa: [
+      { q: 'Why are trees effective at cooling cities?', choices: ['They provide shade and release water vapor.', 'They absorb heat from cars.', 'They make buildings taller.', 'They stop people from using air conditioners.'], answer: 0, why: '第3段落 Planting trees, which provide shade and release water vapor。' },
+    ],
+  },
+  {
+    id: 'toefl-bee-dance',
+    title: 'The Language of Bees',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      'When a honeybee finds a good source of food, it returns to the hive and performs a kind of dance. This behavior, first explained in detail by the scientist Karl von Frisch, allows the bee to share information ( A ) the location of the food with its nestmates.',
+      'If the food is close to the hive, the bee performs a round dance, moving in small circles. If it is farther away, the bee performs a waggle dance, running in a straight line while shaking its body and then circling back to repeat. The angle of the straight run relative to vertical indicates the direction of the food relative to the sun, ( B ) the length of the run indicates the distance.',
+      'What makes this system remarkable is that it ( C ) bees to communicate about something that is not present. Few animals other than humans are known to share information about distant places in such a precise way, which is one reason the dance continues to fascinate researchers.',
+    ],
+    ja: [
+      'ミツバチはよい食べ物のある場所を見つけると、巣にもどって一種のダンスをする。科学者カール・フォン・フリッシュがはじめてくわしく説明したこの行動によって、ハチは食べ物の場所についての情報を巣の仲間と共有することができる。',
+      '食べ物が巣の近くにあれば、ハチは小さな円をえがいて動く円形ダンスをする。もっと遠くにあれば、体をふりながらまっすぐに走り、円をえがいてもどってはくり返す、尻ふりダンスをする。まっすぐに走る向きの真上からの角度は、太陽に対する食べ物の方向を表し、一方で走る長さは距離を表す。',
+      'このしくみがおどろくべきなのは、目の前にないものについてハチが伝え合えることだ。人間以外で、遠くの場所についての情報をこれほど正確に共有することが知られている動物はほとんどいない。それが、このダンスが研究者たちをひきつけ続けている理由の一つである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['about', 'to', 'by', 'into'], answer: 0, why: 'information about 〜「〜についての情報」。' },
+      { id: 'B', choices: ['while', 'unless', 'because', 'until'], answer: 0, why: '対比の while「一方で」。角度は方向を、長さは距離を表す。' },
+      { id: 'C', choices: ['allows', 'stops', 'makes', 'lets'], answer: 0, why: 'allow A to do「Aが〜するのを可能にする」。make・let は後ろに to をとらない（make A do / let A do）。' },
+    ],
+    tf: [
+      { statement: 'Bees perform the same dance no matter how far away the food is.', answer: false, why: '第2段落 近ければ円形ダンス、遠ければ尻ふりダンス。' },
+      { statement: 'The direction of the waggle run shows the direction of the food in relation to the sun.', answer: true, why: '第2段落 The angle of the straight run ... indicates the direction of the food relative to the sun。' },
+      { statement: 'According to the passage, many animals share information about distant places as precisely as bees do.', answer: false, why: '第3段落 Few animals other than humans are known to ...（ほとんどいない）。' },
+    ],
+    qa: [
+      { q: 'What does the length of the waggle run show?', choices: ['How far away the food is.', 'How much food there is.', 'What kind of flower it is.', 'How many bees should go.'], answer: 0, why: '第2段落 the length of the run indicates the distance。' },
+    ],
+  },
 ]
