@@ -97,6 +97,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'stop-remember': { wrong: 'Remember locking the door when you go out.', right: 'Remember to lock the door when you go out.', why: '「（これから）わすれずに〜する」は remember to 〜。' },
   'how-about': { wrong: 'How about go shopping?', right: 'How about going shopping?', why: 'How about のあとは -ing 形。' },
   'call-ab': { wrong: 'We call he Taro.', right: 'We call him Taro.', why: 'call のあとの人は目的格（him / her など）。' },
+  'short-answer': { wrong: 'Do you like cats? — Yes, I like.', right: 'Do you like cats? — Yes, I do.', why: 'Do で聞かれたら do を使って短く答える。' },
+  'relative-that': { wrong: 'This is the best book what I have read.', right: 'This is the best book that I have read.', why: '先行詞があるときに what は使えない。最上級がつくときは that。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 
