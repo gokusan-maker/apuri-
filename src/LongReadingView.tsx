@@ -906,6 +906,23 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
           <p className={`level-verdict${levelVerdict(p, score, total).pass ? ' pass' : ''}`}>{levelVerdict(p, score, total).text}</p>
+          {keyWords(p).length > 0 && (
+            <div className="long-key3" aria-label="この長文で覚えたい語句">
+              <p className="stats-note">📒 この長文で覚えたい語句</p>
+              <ul>
+                {keyWords(p)
+                  .slice(0, 3)
+                  .map((w) => (
+                    <li key={w.id}>
+                      <strong>{w.en}</strong> {w.ja}
+                      <button className="speak small" onClick={() => speak(w.en)} aria-label={`${w.en} を聞く`}>
+                        🔊
+                      </button>
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          )}
           {score < total && (
             <div className="long-tips">
               <p className="long-tips-title">💡 つまずき解説</p>

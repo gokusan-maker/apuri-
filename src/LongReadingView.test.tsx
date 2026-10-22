@@ -23,6 +23,7 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/13 \/ 14 点/)).toBeInTheDocument()
   expect(screen.getByText(/レベル合格！/)).toBeInTheDocument()
+  expect(screen.getByLabelText('この長文で覚えたい語句').querySelectorAll('li').length).toBeGreaterThan(0)
   expect(screen.getByText('💡 つまずき解説')).toBeInTheDocument()
   expect(screen.getAllByText(/📌 根拠の文：/)).toHaveLength(1)
   expect(document.querySelectorAll('.long-tips li')).toHaveLength(1)
