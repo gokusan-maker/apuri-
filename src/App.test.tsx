@@ -6,6 +6,7 @@ import { missionsFor } from './missions'
 import { pickWordOfDay } from './wordOfDay'
 import { souvenirFor } from './souvenir'
 import { WORDS, wordsOf } from './words'
+import { SPECIES } from './monster'
 
 // お知らせは順番に出るので、目当てのものが出るまで前のものを閉じる
 function toast(text: string | RegExp) {
@@ -518,6 +519,7 @@ describe('App', () => {
   })
 
   it('3連ガチャで仲間が3匹ふえ、コインが3回分へる', () => {
+    localStorage.setItem('eitan:gacha-trio', JSON.stringify(SPECIES.map((sp) => sp.id))) // トリオボーナスは別のテストで
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 150枚・ショップを開く'))
@@ -533,6 +535,7 @@ describe('App', () => {
   })
 
   it('通算7回目のガチャはラッキーナンバーで🪙7もらえる', () => {
+    localStorage.setItem('eitan:gacha-trio', JSON.stringify(SPECIES.map((sp) => sp.id))) // トリオボーナスは別のテストで
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
     localStorage.setItem('eitan:gacha-stats', JSON.stringify({ total: 6, N: 6, R: 0, SR: 0, UR: 0 }))
     render(<App />)
@@ -739,6 +742,17 @@ describe('App', () => {
     const { pickupOf } = await import('./monster')
     render(<App />)
     expect(screen.getByText(`今日のピックアップ：${pickupOf(dayKey()).name}`)).toBeInTheDocument()
+  })
+
+  it('同じキャラが3体そろうとトリオボーナス🪙30（1回だけ）', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 150枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /3連ガチャ/ }))
+    rnd.mockRestore()
+    expect(JSON.parse(localStorage.getItem('eitan:gacha-trio')!).length).toBe(1)
+    expect(screen.getAllByText(/トリオボーナス 🪙30/).length).toBeGreaterThan(0)
   })
 
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {

@@ -65,7 +65,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -755,6 +755,13 @@ function App() {
         saveColorComplete([...done, ...fresh])
         setWallet((x) => fresh.reduce((acc) => addTicket(addTicket(acc)), x))
         pushToast([{ id: 'color-complete', text: `🌈 ${fresh.map((sp) => speciesOf(sp).name).join('・')}の色ちがいを全部そろえた！ 🎟${COLOR_COMPLETE_TICKETS * fresh.length}`, counter: 'answers', target: 0 }])
+      }
+      const trioDone = loadTrio()
+      const trio = trioSpecies(p.members).filter((sp) => !trioDone.includes(sp))
+      if (trio.length > 0) {
+        saveTrio([...trioDone, ...trio])
+        setWallet((x) => ({ ...x, coins: x.coins + TRIO_COINS * trio.length }))
+        pushToast([{ id: 'trio', text: `👪 ${trio.map((sp) => speciesOf(sp).name).join('・')}が3体そろった！ トリオボーナス 🪙${TRIO_COINS * trio.length}`, counter: 'answers', target: 0 }])
       }
       if (stickerDone) {
         setWallet((x) => ({ ...addTicket(addTicket(x)) }))

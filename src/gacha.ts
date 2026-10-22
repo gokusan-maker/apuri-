@@ -326,3 +326,27 @@ export function saveColorComplete(ids: string[]): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// トリオボーナス：同じキャラ（種類）を3体以上そろえると🪙30（キャラごとに1回）
+export const TRIO_COINS = 30
+export function trioSpecies(members: { species?: string }[]): string[] {
+  const n = new Map<string, number>()
+  for (const m of members) n.set(m.species ?? 'mochi', (n.get(m.species ?? 'mochi') ?? 0) + 1)
+  return [...n.entries()].filter(([, c]) => c >= 3).map(([sp]) => sp)
+}
+const TRIO_KEY = 'eitan:gacha-trio'
+export function loadTrio(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(TRIO_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveTrio(ids: string[]): void {
+  try {
+    localStorage.setItem(TRIO_KEY, JSON.stringify(ids))
+  } catch {
+    // 保存できなくても続ける
+  }
+}
