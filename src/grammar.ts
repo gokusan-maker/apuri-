@@ -2110,6 +2110,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Nothing is ___ important than health.', choices: ['more', 'most', 'much'], answer: 0, why: 'Nothing is 比較級 than …「…より〜なものはない」。than があるので比較級 more。' },
     ],
   },
+  {
+    id: 'as-if',
+    title: 'as if（まるで〜のように）',
+    points: [
+      'as if ＋ 主語 ＋ 過去形 で「まるで〜であるかのように」（今の事実とちがう想像）。be動詞はふつう were。',
+      'as if ＋ had ＋ 過去分詞 は「まるで〜したかのように」と、過去のことを想像する。',
+    ],
+    examples: [
+      { en: 'He talks as if he knew everything.', ja: '彼はまるで何でも知っているかのように話す。' },
+      { en: 'She looked as if she had seen a ghost.', ja: '彼女はまるでゆうれいを見たかのような顔をしていた。' },
+    ],
+    questions: [
+      { sentence: 'He is only a student, but he acts as if he ___ the boss.', choices: ['were', 'is being', 'be'], answer: 0, why: '本当はちがうことの想像なので、as if のあとは were。' },
+      { sentence: 'She has never been abroad, but she speaks English as if she ___ in London.', choices: ['lived', 'lives', 'living'], answer: 0, why: '外国に行ったことがないので事実とちがう想像。as if ＋ 過去形 lived。' },
+      { sentence: 'He looked as if he ___ not slept for days.', choices: ['had', 'has', 'was'], answer: 0, why: '「何日も寝ていなかったかのよう」と過去のことの想像なので as if ＋ had ＋ 過去分詞。' },
+    ],
+  },
+  {
+    id: 'no-matter-how',
+    title: 'no matter how / however（どんなに〜でも）',
+    points: [
+      'no matter how ＋ 形容詞・副詞 ＋ 主語 ＋ 動詞 で「どんなに〜でも」。however ＋ 形容詞 ＋ 主語 ＋ 動詞 も同じ意味。',
+      'no matter what / who / where も「何を（だれが・どこへ）〜しても」の意味になる。',
+    ],
+    examples: [
+      { en: 'No matter how hard I try, I cannot solve this puzzle.', ja: 'どんなにがんばっても、このパズルがとけない。' },
+      { en: 'However tired you are, brush your teeth before bed.', ja: 'どんなにつかれていても、寝る前に歯をみがきなさい。' },
+    ],
+    questions: [
+      { sentence: 'No matter ___ busy he is, he always calls his mother.', choices: ['how', 'what', 'who'], answer: 0, why: '形容詞 busy の前なので no matter how「どんなにいそがしくても」。' },
+      { sentence: '___ late it is, please call me.', choices: ['However', 'Whatever', 'Whenever'], answer: 0, why: 'However ＋ 形容詞（late）「どんなにおそくても」。' },
+      { sentence: 'No matter ___ you go, I will find you.', choices: ['where', 'how', 'what'], answer: 0, why: '「どこへ行っても」は no matter where。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2213,7 +2247,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
