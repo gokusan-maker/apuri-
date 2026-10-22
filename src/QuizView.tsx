@@ -182,7 +182,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'twister', label: '👅 早口ことば', group: '聞く・話す' },
 ]
 // いつも見えるところに出す人気のミニゲーム（ほかは「ミニゲームをえらぶ」から）
-const POPULAR: Direction[] = ['mix', 'memory', 'mole', 'riddle', 'rival', 'spell']
+const POPULAR: Direction[] = ['mix', 'memory', 'mole', 'riddle', 'rival']
 const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる', '文法・読解']
 const COLLAPSE_KEY = 'eitan:quiz-collapsed'
 function loadCollapsed(): string[] {
@@ -234,6 +234,8 @@ type Props = {
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
+  onCards?: () => void // 指定すると、ゲームのタイルの先頭に「単語カード」を出す
+  onDirection?: (d: Direction) => void // いま遊んでいるゲームの種類が決まった・かわったとき
 }
 
 export const QUESTION_TIME = 10
@@ -251,11 +253,14 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
   const [direction, setDirection] = useState<Direction>(initial)
+  useEffect(() => {
+    onDirection?.(direction)
+  }, [direction, onDirection])
   const [menu, setMenu] = useState(false)
   // 今日のおすすめ：その種類でその日はじめて正解するとボーナスXP（ステージは対象外）
   const [today] = useState(() => dayKey())
@@ -408,6 +413,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       </button>
       {!menu && (
         <div className="game-grid game-strip" aria-label="人気のミニゲーム">
+          {onCards && <GameTile icon="🃏" name="単語カード" onClick={onCards} />}
           {POPULAR.map((id) => DIRECTIONS.find((d) => d.id === id))
             .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
             .map((d) => (

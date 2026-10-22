@@ -84,6 +84,18 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
   })
 
+  it('今日の課題の単語は日がわりの単語ゲームで、押すとそのゲームが始まり、正解でクリアになる', async () => {
+    const { dailyWordGame } = await import('./wordgame')
+    const { dayKey } = await import('./srs')
+    const g = dailyWordGame(dayKey())
+    render(<App />)
+    const tasks = screen.getByLabelText('今日の課題')
+    expect(tasks.textContent).toContain(`今日の単語ゲーム「${g.label}」`)
+    fireEvent.click(within(tasks).getByText(`今日の単語ゲーム「${g.label}」`))
+    if (g.id === 'card') expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    else expect(screen.getByRole('tab', { name: '🎮 ミニゲーム' })).toHaveAttribute('aria-selected', 'true')
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()
@@ -101,8 +113,12 @@ describe('App', () => {
     expect(screen.getByText('📊 記録')).toBeInTheDocument()
     fireEvent.click(tab('単語'))
     expect(tab('単語')).toHaveAttribute('aria-current', 'page')
+    // 単語ゲームはミニゲームが先。カードはミニゲームのタイルの1つ
+    expect(document.querySelector('.quiz')).not.toBeNull()
+    expect(screen.queryByRole('tab', { name: '🃏 カード' })).toBeNull()
+    fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('単語カード'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
+    fireEvent.click(screen.getByText('← ミニゲームをえらぶ'))
     expect(document.querySelector('.quiz')).not.toBeNull()
     fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
     expect(screen.getByText('スタート')).toBeInTheDocument()
