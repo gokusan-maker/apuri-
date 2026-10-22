@@ -15,7 +15,7 @@ export const READ_LEVELS: { id: ReadLevel; label: string; sub: string }[] = [
 // むずかしさごとの長文（かんたん は短い読解なので空）
 export function passagesFor(level: ReadLevel): LongPassage[] {
   if (level === 'normal') return LONG_PASSAGES.filter((p) => p.level.startsWith('中2') || p.level.startsWith('初級'))
-  if (level === 'exam') return LONG_PASSAGES.filter((p) => p.level.startsWith('中3') || p.level.startsWith('高校入試'))
+  if (level === 'exam') return [...LONG_PASSAGES.filter((p) => p.level.startsWith('中3') || p.level.startsWith('高校入試')), ...ADV_PASSAGES.filter((p) => p.level.startsWith('高校入試'))]
   if (level === 'univ') return ADV_PASSAGES.filter((p) => p.level.startsWith('難関大'))
   if (level === 'toefl') return ADV_PASSAGES.filter((p) => p.level.startsWith('TOEFL'))
   return []

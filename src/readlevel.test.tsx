@@ -87,3 +87,12 @@ describe('次のレベルへのちょうせん印', () => {
     expect(readyFor('easy', half)).toBe(false) // いちばん下には出ない
   })
 })
+
+describe('高校入試レベルの追加読解', () => {
+  it('高校入試のむずかしさに、新しい自作の読解が入っている', () => {
+    const ids = passagesFor('exam').map((p) => p.id)
+    expect(ids).toContain('exam-food-bank')
+    expect(ids).toContain('exam-grandma-garden')
+    expect(passagesFor('univ').some((p) => p.id.startsWith('exam-'))).toBe(false)
+  })
+})

@@ -1,4 +1,4 @@
-// 難関大（京大レベル）・TOEFL/IELTS レベルの読解。本文・訳・設問・解説はすべて自作
+// 難関大（京大レベル）・TOEFL/IELTS レベル（と一部の高校入試レベル）の読解。本文・訳・設問・解説はすべて自作
 import type { LongPassage } from './longreading'
 
 export const ADV_PASSAGES: LongPassage[] = [
@@ -561,6 +561,62 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'Why are rainbows most common in the early morning or late afternoon?', choices: ['The sun is low in the sky then.', 'It rains only at those times.', 'The air is warmer then.', 'The sun is directly overhead.'], answer: 0, why: '第3段落 when the sun is low in the sky。' },
+    ],
+  },
+  {
+    id: 'exam-food-bank',
+    title: 'A Summer at the Food Bank',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'Last summer, I worked as a volunteer at a food bank in my city. A food bank collects food that stores and families cannot use and gives it to people who need it. On my first day, I was surprised ( A ) the large number of boxes in the warehouse.',
+      'My job was to check the dates on cans and packages. Food that was still safe to eat was put on the shelves, and food that was too old ( B ) away. A staff member told me that about one third of the food produced in the world is wasted. I could not believe it.',
+      "On the last day, a woman came to pick up food for her children. She smiled and said, 'Thank you. This helps us a lot.' Since then, I have tried ( C ) to buy more food than I need. Small actions like this can make a difference.",
+    ],
+    ja: [
+      '去年の夏、私は市のフードバンクでボランティアをしました。フードバンクは、お店や家庭で使いきれない食べ物を集めて、それを必要としている人々にわたすところです。初日、私は倉庫にある箱の多さにおどろきました。',
+      '私の仕事は、かんづめや包みの日付を確かめることでした。まだ安全に食べられる食べ物はたなに置かれ、古すぎる食べ物は捨てられました。スタッフの人が、世界で生産される食べ物のおよそ3分の1がむだになっていると教えてくれました。私は信じられませんでした。',
+      '最終日、ある女の人が子どもたちのために食べ物を受け取りに来ました。その人はほほえんで「ありがとう。とても助かります」と言いました。それ以来、私は必要以上の食べ物を買わないようにしています。このような小さな行動でも、変化を生むことができるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'with', 'on'], answer: 0, why: 'be surprised at 〜「〜におどろく」。' },
+      { id: 'B', choices: ['was thrown', 'threw', 'was throwing', 'throws'], answer: 0, why: '受け身。古い食べ物は「捨てられた」ので was thrown（away）。前の was put と同じ形。' },
+      { id: 'C', choices: ['not', 'no', 'nothing', 'none'], answer: 0, why: 'try not to 〜「〜しないようにする」。not は to の前に置く。' },
+    ],
+    tf: [
+      { statement: '筆者は去年の夏、フードバンクでボランティアをした。', answer: true, why: '第1段落 Last summer, I worked as a volunteer at a food bank。' },
+      { statement: '筆者の仕事は、食べ物を家族の家に配ることだった。', answer: false, why: '第2段落 My job was to check the dates on cans and packages（日付を確かめること）。' },
+      { statement: '世界で生産される食べ物のおよそ3分の1がむだになっていると、スタッフが言った。', answer: true, why: '第2段落 about one third of the food produced in the world is wasted。' },
+    ],
+    qa: [
+      { q: 'Why did the woman thank the writer?', choices: ['Because the food helped her family.', 'Because the writer gave her money.', 'Because the writer cooked dinner for her.', 'Because she found a new job.'], answer: 0, why: '第3段落 子どもたちのための食べ物を受け取り This helps us a lot と言った。' },
+    ],
+  },
+  {
+    id: 'exam-grandma-garden',
+    title: "My Grandmother's Garden",
+    level: '高校入試（随筆）',
+    paragraphs: [
+      'My grandmother lives in the country, and she has a large vegetable garden. When I was small, I thought gardening was boring. Last spring, however, she asked me to help her, and I ( A ) to try.',
+      'First, she taught me how to prepare the soil. Then we planted potatoes, carrots, and beans in long, straight lines. Every weekend I visited her and pulled weeds. It was hard work, but I began to notice small changes in the plants ( B ) week. Some days the leaves were bigger, and other days new flowers had opened.',
+      "In July, we finally harvested the vegetables. The potatoes we cooked that night tasted better than any I had eaten before. My grandmother said, 'Vegetables taste good when you know how much work they ( C ).' Now I understand what she meant, and I am looking forward to helping her again next spring.",
+    ],
+    ja: [
+      '私の祖母はいなかに住んでいて、大きな野菜畑を持っています。小さいころ、私は畑仕事はつまらないと思っていました。しかし去年の春、祖母に手伝ってほしいとたのまれ、私はやってみることにしました。',
+      'まず、祖母は土の準備のしかたを教えてくれました。それから、じゃがいも、にんじん、豆を長くまっすぐな列に植えました。毎週末、私は祖母の家に行って草取りをしました。たいへんな仕事でしたが、毎週、植物の小さな変化に気づくようになりました。葉が大きくなっている日もあれば、新しい花がさいている日もありました。',
+      '7月、ついに野菜を収穫しました。その夜に料理したじゃがいもは、それまでに食べたどのじゃがいもよりもおいしかったです。祖母は「野菜は、どれだけ手間がかかるかを知っていると、おいしく感じるものよ」と言いました。今ではその意味がわかります。そして来年の春も手伝うのを楽しみにしています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['decided', 'enjoyed', 'finished', 'stopped'], answer: 0, why: 'decide to 〜「〜することに決める」。enjoy・finish・stop は to 〜 ではなく -ing をとる。' },
+      { id: 'B', choices: ['every', 'all', 'many', 'both'], answer: 0, why: 'every week「毎週」。every のあとは単数の名詞（week）。' },
+      { id: 'C', choices: ['need', 'give', 'lose', 'make'], answer: 0, why: '「野菜がどれだけの手間を必要とするか（need）」。育てるのに手間がかかることを言っている。' },
+    ],
+    tf: [
+      { statement: '筆者は小さいころ、畑仕事をつまらないと思っていた。', answer: true, why: '第1段落 When I was small, I thought gardening was boring。' },
+      { statement: '筆者は毎日祖母の家に行って草取りをした。', answer: false, why: '第2段落 Every weekend（毎週末）に行った。' },
+      { statement: '7月に野菜を収穫した。', answer: true, why: '第3段落 In July, we finally harvested the vegetables。' },
+    ],
+    qa: [
+      { q: 'What did the writer understand at the end?', choices: ['Food tastes better when you know the work it needs.', 'Gardening is always boring.', 'Potatoes are easy to grow.', 'Grandmother likes to cook every day.'], answer: 0, why: "第3段落 祖母の言葉 'Vegetables taste good when you know how much work they need.' の意味がわかった。" },
     ],
   },
 ]
