@@ -1370,7 +1370,7 @@ export const PASSAGES: Passage[] = [
     id: 'ladybug',
     title: 'A Ladybug on My Desk',
     text: 'During math class, a small red ladybug landed on my desk. It had seven black spots. Everyone wanted to see it. Our teacher said, "Ladybugs eat bugs that hurt plants." She opened the window, and the ladybug flew out to the school garden.',
-    ja: '算数（数学）の授業中、小さな赤いテントウムシが私の机にとまりました。黒い点が7つありました。みんながそれを見たがりました。先生は「テントウムシは植物をいためる虫を食べるのよ」と言いました。先生が窓を開けると、テントウムシは学校の花だんへ飛んでいきました。',
+    ja: '数学の授業中、小さな赤いテントウムシが私の机にとまりました。黒い点が7つありました。みんながそれを見たがりました。先生は「テントウムシは植物をいためる虫を食べるのよ」と言いました。先生が窓を開けると、テントウムシは学校の花だんへ飛んでいきました。',
     questions: [
       { q: 'テントウムシが来たのは何の授業中？', choices: ['数学', '英語', '音楽'], answer: 0 },
       { q: 'テントウムシには黒い点がいくつあった？', choices: ['5つ', '7つ', '9つ'], answer: 1 },
