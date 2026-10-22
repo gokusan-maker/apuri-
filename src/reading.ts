@@ -1080,6 +1080,39 @@ export const PASSAGES: Passage[] = [
       { q: '一度に何冊借りられる？', choices: ['3冊', '5冊', '10冊'], answer: 1 },
     ],
   },
+  {
+    id: 'lost-key',
+    title: 'Where Is My Key?',
+    text: 'This morning I could not find my house key. I looked in my bag, under my bed, and in the kitchen. Then my mother laughed and pointed at the front door. The key was still in the lock from last night!',
+    ja: '今朝、家のかぎが見つかりませんでした。かばんの中、ベッドの下、台所をさがしました。すると母が笑って玄関のドアを指さしました。かぎは昨夜からずっと鍵穴にささったままだったのです！',
+    questions: [
+      { q: '何をさがしていた？', choices: ['家のかぎ', 'かばん', 'くつ'], answer: 0 },
+      { q: 'かぎはどこにあった？', choices: ['ドアの鍵穴', '台所', 'ベッドの下'], answer: 0 },
+      { q: 'だれが笑った？', choices: ['母', '父', '弟'], answer: 0 },
+    ],
+  },
+  {
+    id: 'paper-plane',
+    title: 'The Paper Plane Contest',
+    text: "Our class had a paper plane contest on Friday. Everyone made a plane and threw it in the gym. My plane flew only three meters, but Yuki's plane flew twenty meters and won. She showed me how to fold the wings, and now my plane flies much farther.",
+    ja: '金曜日、私たちのクラスで紙飛行機コンテストがありました。みんなで飛行機を作って体育館で飛ばしました。私の飛行機は3メートルしか飛びませんでしたが、ユキの飛行機は20メートル飛んで優勝しました。ユキがつばさのおり方を教えてくれたので、今では私の飛行機もずっと遠くまで飛びます。',
+    questions: [
+      { q: 'コンテストはどこで行われた？', choices: ['体育館', '校庭', '教室'], answer: 0 },
+      { q: '筆者の飛行機は何メートル飛んだ？', choices: ['3メートル', '10メートル', '20メートル'], answer: 0 },
+      { q: 'ユキは何を教えてくれた？', choices: ['つばさのおり方', '投げ方', '紙の選び方'], answer: 0 },
+    ],
+  },
+  {
+    id: 'cooking-club',
+    title: 'The Cooking Club',
+    text: 'I joined the cooking club in April. Every Wednesday we cook something new. Last week we made curry, but I put in too much salt. Our teacher said, "Mistakes help you learn." This week my soup was delicious.',
+    ja: '私は4月に料理部に入りました。毎週水曜日に新しいものを作ります。先週はカレーを作りましたが、私は塩を入れすぎてしまいました。先生は「失敗は学ぶ助けになるよ」と言いました。今週の私のスープはとてもおいしかったです。',
+    questions: [
+      { q: '料理部はいつ活動する？', choices: ['毎週水曜日', '毎週金曜日', '毎日'], answer: 0 },
+      { q: '先週は何を作った？', choices: ['カレー', 'スープ', 'ケーキ'], answer: 0 },
+      { q: '先週の失敗は何？', choices: ['塩を入れすぎた', 'こがした', '時間におくれた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
