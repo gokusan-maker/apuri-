@@ -95,6 +95,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'by-with': { wrong: 'I go to school by a bus.', right: 'I go to school by bus.', why: '手段の by のあとの乗り物には a / the をつけない。' },
   'not-to': { wrong: 'He told me to not go there.', right: 'He told me not to go there.', why: '不定詞の否定は not を to の前に置く（not to 〜）。' },
   'stop-remember': { wrong: 'Remember locking the door when you go out.', right: 'Remember to lock the door when you go out.', why: '「（これから）わすれずに〜する」は remember to 〜。' },
+  'how-about': { wrong: 'How about go shopping?', right: 'How about going shopping?', why: 'How about のあとは -ing 形。' },
+  'call-ab': { wrong: 'We call he Taro.', right: 'We call him Taro.', why: 'call のあとの人は目的格（him / her など）。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 

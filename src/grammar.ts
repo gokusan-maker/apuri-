@@ -1350,6 +1350,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'I remember ___ him at the party last year.', choices: ['meeting', 'to meet', 'meet'], answer: 0, why: '「（過去に）会ったことを覚えている」は remember 〜ing。' },
     ],
   },
+  {
+    id: 'how-about',
+    title: "How about 〜ing? / Why don't you 〜?（さそい・提案）",
+    points: ["How about 〜ing? は「〜するのはどう？」と提案する言い方。about のあとは名詞か -ing 形。", "Why don't you 〜? は「〜したらどう？」、Why don't we 〜? は「いっしょに〜しない？」。"],
+    examples: [
+      { en: 'How about going to the zoo this Sunday?', ja: '今度の日曜日に動物園に行くのはどう？' },
+      { en: "Why don't you ask your teacher?", ja: '先生に聞いてみたらどう？' },
+    ],
+    questions: [
+      { sentence: 'How about ___ lunch together?', choices: ['have', 'having', 'to have'], answer: 1, why: 'How about のあとは -ing 形。' },
+      { sentence: "Why don't you ___ a rest?", choices: ['take', 'taking', 'took'], answer: 0, why: "Why don't you のあとは動詞の原形。" },
+      { sentence: '___ about this red one?', choices: ['What', 'Who', 'Why'], answer: 0, why: 'What about 〜? でも「〜はどう？」と言える。' },
+    ],
+  },
+  {
+    id: 'call-ab',
+    title: 'call A B / What do you call 〜?（A を B とよぶ）',
+    points: ['call A B で「A を B とよぶ」。A は人やもの、B はよび名。', 'What do you call 〜 in English? で「〜は英語で何といいますか」。'],
+    examples: [
+      { en: 'We call the dog Pochi.', ja: '私たちはその犬をポチとよぶ。' },
+      { en: 'What do you call this flower in English?', ja: 'この花は英語で何といいますか。' },
+    ],
+    questions: [
+      { sentence: 'Please ___ me Ken.', choices: ['call', 'say', 'speak'], answer: 0, why: '「私をケンとよんで」は call A B。' },
+      { sentence: 'What do you call this ___ English?', choices: ['by', 'in', 'on'], answer: 1, why: 'in English で「英語で」。' },
+      { sentence: 'His friends call ___ Taku.', choices: ['he', 'his', 'him'], answer: 2, why: 'call のあとの A は目的格 him。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1450,7 +1478,7 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中2: ['how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
