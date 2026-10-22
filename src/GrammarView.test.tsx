@@ -552,3 +552,13 @@ it('確認問題でまちがえると「要点を見る」でその場で要点�
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.queryByRole('list', { name: '単元の要点' })).toBeNull()
 })
+
+it('学年の単元をすべて全問正解すると、その学年の賞状が出る', async () => {
+  localStorage.clear()
+  const { gradeOf } = await import('./grammar')
+  const rec = Object.fromEntries(GRAMMAR.filter((u) => gradeOf(u.id) === '中1').map((u) => [u.id, u.questions.length]))
+  localStorage.setItem('eitan:grammar', JSON.stringify(rec))
+  render(<Grammar />)
+  expect(screen.getByLabelText('中1の賞状')).toBeInTheDocument()
+  expect(screen.queryByLabelText('中2の賞状')).toBeNull()
+})

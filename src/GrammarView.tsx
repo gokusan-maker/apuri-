@@ -457,7 +457,14 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
                 <details key={g} className="grammar-grade-fold">
                   <summary>
                     {g}の単元（全問正解 {us.filter((u) => record[u.id] === u.questions.length).length} / {us.length}）
+                    {us.every((u) => record[u.id] === u.questions.length) && ' 🏅'}
                   </summary>
+                  {us.every((u) => record[u.id] === u.questions.length) && (
+                    <div className="grade-certificate" role="note" aria-label={`${g}の賞状`}>
+                      <p className="grade-certificate-title">🎓 賞状</p>
+                      <p>{g}の文法 {us.length}単元を すべて全問正解しました。よくがんばりました！</p>
+                    </div>
+                  )}
                   <ul className="grammar-list">{us.map(unitItem)}</ul>
                 </details>
               )
