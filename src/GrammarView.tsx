@@ -49,7 +49,7 @@ type Props = {
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
-const GAME_COUNT = 11 // 文法ゲームの種類（下のタイルの数）
+const GAME_COUNT = 12 // 文法ゲームの種類（下のタイルの数）
 // 連続正解チャレンジ：まちがえるまで全単元の問題が続く。ベスト記録を残す
 export const RUN_BEST_XP = 20 // 連続正解のベスト更新で文法のなかまにあげる XP
 const RUN_KEY = 'eitan:grammar-run-best'
@@ -244,6 +244,16 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
                 onClick={() => {
                   open({ id: 'streak-run', title: '🔥 連続正解チャレンジ', points: [], examples: [], questions: shuffle(GRAMMAR.flatMap((u) => u.questions)) })
                   setStep(0)
+                }}
+              />
+              <GameTile
+                playKey="grammar:語順ならべかえ"
+                icon="🔀"
+                name="語順ならべかえ"
+                sub="単語をならべて英文に"
+                onClick={() => {
+                  open({ id: 'order-mix', title: '🔀 語順ならべかえ', points: [], examples: shuffle(GRAMMAR.flatMap((u) => u.examples)).slice(0, 5), questions: [] })
+                  setOrdering(true)
                 }}
               />
               <GameTile
@@ -578,7 +588,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   if (unit && dict) return <GrammarDict key={unit.id} unit={unit} onAnswer={onAnswer} onBack={() => setDict(false)} />
   if (unit && printing) return <GrammarPrint unit={unit} onBack={() => setPrinting(false)} />
   if (unit && shadow) return <GrammarShadow key={unit.id} unit={unit} onBack={() => setShadow(false)} />
-  if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onSpend={onSpend} onBack={() => setOrdering(false)} />
+  if (unit && ordering) return <GrammarOrder key={unit.id} unit={unit} onAnswer={onAnswer} onSpend={onSpend} onBack={() => {
+        setOrdering(false)
+        if (unit.id === 'order-mix') setUnit(null) // タイルから来たときは一覧へもどる
+      }} />
 
   if (step === -1) {
     return (

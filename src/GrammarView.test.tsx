@@ -490,7 +490,7 @@ it('文法の一覧は「すぐ練習」と文法ゲームのタイルが上、�
   expect(screen.queryByText('💬 今日のひとこと例文')).toBeNull()
   expect(screen.queryByText(/📅 今日の文法/)).toBeNull()
   const grid = screen.getByLabelText('文法ゲーム')
-  expect(grid.querySelectorAll('.game-tile')).toHaveLength(11)
+  expect(grid.querySelectorAll('.game-tile')).toHaveLength(12)
   const sec = document.querySelector('section.grammar')!
   const kids = [...sec.children]
   expect(kids.indexOf(grid)).toBeLessThan(kids.indexOf(sec.querySelector('.grammar-records')!))
@@ -758,10 +758,19 @@ it('文法ゲームのタイルは、まだ遊んでいないゲームに NEW �
   localStorage.clear()
   const { unmount } = render(<Grammar />)
   const grid = screen.getByLabelText('文法ゲーム')
-  expect(grid.querySelectorAll('.game-tile-new')).toHaveLength(11)
+  expect(grid.querySelectorAll('.game-tile-new')).toHaveLength(12)
   fireEvent.click(screen.getByText('要点カード'))
   unmount()
   render(<Grammar />)
-  expect(screen.getByLabelText('文法ゲーム').querySelectorAll('.game-tile-new')).toHaveLength(10)
+  expect(screen.getByLabelText('文法ゲーム').querySelectorAll('.game-tile-new')).toHaveLength(11)
   expect(screen.getByText('要点カード').closest('button')!.querySelector('.game-tile-new')).toBeNull()
+})
+
+it('文法ゲーム「語順ならべかえ」は全単元の例文から出て、もどると一覧に帰る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('語順ならべかえ'))
+  expect(screen.queryByLabelText('文法ゲーム')).toBeNull()
+  fireEvent.click(screen.getAllByRole('button').find((b) => /もどる|←/.test(b.textContent ?? ''))!)
+  expect(screen.getByLabelText('文法ゲーム')).toBeInTheDocument()
 })
