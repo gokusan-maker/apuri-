@@ -1974,6 +1974,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Tom told me that he ___ lost his key the day before.', choices: ['had', 'has', 'have'], answer: 0, why: '「言った」ときよりさらに前のことなので過去完了 had lost。' },
     ],
   },
+  {
+    id: 'partial-negation',
+    title: '部分否定（not all / not always）',
+    points: [
+      'not ＋ all / every / always / both は「全部（いつも）〜というわけではない」という部分否定になる。',
+      '全部を否定するときは none / never / neither を使う：None of them came.「だれも来なかった」。',
+    ],
+    examples: [
+      { en: 'Not all students like math.', ja: 'すべての生徒が数学を好きなわけではない。' },
+      { en: 'I am not always busy.', ja: 'いつもいそがしいわけではない。' },
+    ],
+    questions: [
+      { sentence: '___ all birds can fly. Penguins cannot.', choices: ['Not', 'No', 'None'], answer: 0, why: '「すべての鳥が飛べるわけではない」は Not all（部分否定）。' },
+      { sentence: 'He is rich, but he is not ___ happy.', choices: ['always', 'never', 'ever'], answer: 0, why: 'not always「いつも〜とはかぎらない」（部分否定）。' },
+      { sentence: '___ of my friends came. I was all alone.', choices: ['None', 'Not all', 'Not'], answer: 0, why: '「ひとりぼっちだった」ので、だれも来なかった。全部を否定する None。' },
+    ],
+  },
+  {
+    id: 'gerund-subject',
+    title: '動名詞の意味上の主語（my opening 〜）',
+    points: [
+      '動名詞の前に所有格（my / his / Tom\'s）や目的格（me / him）を置くと、「〜が…すること」と、その動作をする人を表せる。',
+      'Do you mind my opening the window?「私が窓を開けてもかまいませんか」。',
+    ],
+    examples: [
+      { en: 'Do you mind my sitting here?', ja: '私がここにすわってもかまいませんか。' },
+      { en: 'I remember my father reading to me every night.', ja: '父が毎晩本を読んでくれたことを覚えている。' },
+    ],
+    questions: [
+      { sentence: 'Do you mind ___ opening the window?', choices: ['my', 'I', 'mine'], answer: 0, why: '動名詞 opening の意味上の主語は所有格 my（または目的格 me）。I は使えない。' },
+      { sentence: 'She was surprised at ___ coming so early.', choices: ['his', 'he', 'he is'], answer: 0, why: '「彼がとても早く来たこと」。動名詞の前は所有格 his。' },
+      { sentence: 'I remember my mother ___ me this song.', choices: ['singing', 'sang', 'to sing'], answer: 0, why: 'remember ＋ 人 ＋ -ing「人が〜したことを覚えている」。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2077,7 +2111,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {

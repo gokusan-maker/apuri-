@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'partial-negation': { wrong: 'All students don\'t like math.（全員がきらいという意味にとられやすい）', right: 'Not all students like math.', why: '「全員が〜というわけではない」は Not all ではじめると、はっきり部分否定になる。' },
+  'gerund-subject': { wrong: 'Do you mind I open the window?', right: 'Do you mind my opening the window?', why: 'mind のあとは動名詞。動作をする人は所有格（my）か目的格（me）で前に置く。' },
   'formal-object-it': { wrong: 'I found easy to make friends.', right: 'I found it easy to make friends.', why: 'find のあとに形式目的語 it を置き、本当の目的語（to make friends）は後ろへ。' },
   'tense-agreement': { wrong: 'She said that she is tired yesterday.', right: 'She said that she was tired yesterday.', why: 'said（過去）のあとの that 節は過去形にそろえる。' },
   'relative-nonrestrictive': { wrong: 'My uncle, that lives in Canada, is a pilot.', right: 'My uncle, who lives in Canada, is a pilot.', why: 'コンマのあとの関係代名詞（非制限用法）に that は使えない。人なら who。' },
