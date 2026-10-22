@@ -106,7 +106,7 @@ describe('App', () => {
     expect(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')).toHaveAttribute('aria-pressed', 'true')
   })
 
-  it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／長文ステージ／設定 を切り替えられる', () => {
+  it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('ホーム')).toHaveAttribute('aria-current', 'page')
@@ -125,8 +125,12 @@ describe('App', () => {
     fireEvent.click(tab('文法'))
     expect(document.querySelector('.grammar')).not.toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
-    fireEvent.click(tab('長文'))
-    expect(screen.getByRole('tab', { name: '👹 ボス' })).toBeInTheDocument()
+    fireEvent.click(tab('読解'))
+    expect(screen.getByRole('tab', { name: '📖 長文' })).toBeInTheDocument()
+    expect(screen.queryByRole('tab', { name: '👹 ボス' })).toBeNull()
+    fireEvent.click(tab('ボス部屋'))
+    expect(document.querySelector('section.stages')).not.toBeNull()
+    expect(tab('ボス部屋')).toHaveAttribute('aria-current', 'page')
     fireEvent.click(tab('設定'))
     expect(tab('設定')).toHaveAttribute('aria-current', 'page')
   })
@@ -509,7 +513,7 @@ describe('App', () => {
     localStorage.setItem('eitan:keys', '3')
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    navTo('長文ステージ')
+    navTo('ボス部屋')
     fireEvent.click(screen.getByText(/金の宝箱をあける/))
     const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
     expect(w.coins).toBe(30)
@@ -741,7 +745,7 @@ describe('App', () => {
     window.scrollTo = scroll as unknown as typeof window.scrollTo
     render(<App />)
     expect(screen.getByText('🎰 ガチャをひく！')).toBeInTheDocument()
-    navTo('長文ステージ')
+    navTo('ボス部屋')
     expect(screen.queryByText('📊 記録')).toBeNull()
     expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
     await new Promise((r) => requestAnimationFrame(() => r(null)))
@@ -750,7 +754,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/今日のチャレンジ：/))
     expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
-    navTo('長文ステージ')
+    navTo('読解ステージ')
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
@@ -869,9 +873,9 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
   })
 
-  it('長文ボスのタブに「ボス」「長文れんしゅう」「短い読解」があり、ミニゲームには読解がない', () => {
+  it('読解ステージに「長文」「短い読解」があり、ミニゲームには読解がない', () => {
     render(<App />)
-    navTo('長文ステージ')
+    navTo('読解ステージ')
     fireEvent.click(screen.getByRole('tab', { name: '📖 長文' }))
     expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
     goMini()

@@ -368,7 +368,7 @@ h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); margin: 8px 0 4px; white-space: n
 .badge-grid li.active { outline: 3px solid var(--accent); }
 .badge-toast.second { bottom: calc(150px + env(safe-area-inset-bottom)); }
 
-.tabbar button { font-size: 0.7rem; }
+.tabbar button { font-size: 0.66rem; min-width: 0; }
 .stages { text-align: left; }
 .stages h2 { margin: 0 0 4px; font-size: 1.2rem; }
 .stage-level h3 { margin: 16px 0 8px; font-size: 1rem; }

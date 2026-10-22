@@ -34,7 +34,7 @@ describe('再発防止', () => {
     // ミッションのボーナスが混ざらないよう、今日の分は受け取り済みにしておく
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
-    navTo('長文ステージ')
+    navTo('ボス部屋')
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     const all = LONG_PASSAGES.flatMap(passageQs)

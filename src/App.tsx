@@ -149,14 +149,15 @@ import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLe
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf, type Word } from './words'
 
-type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'settings'
+type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
 type WordTab = 'card' | 'mini' | 'time'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'home', icon: '🏠', label: 'ホーム' },
   { id: 'word', icon: '🔤', label: '単語ゲーム' },
   { id: 'grammar', icon: '📐', label: '文法チャレンジ' },
-  { id: 'reading', icon: '🐉', label: '長文ステージ' },
+  { id: 'reading', icon: '📖', label: '読解ステージ' },
+  { id: 'boss', icon: '👹', label: 'ボス部屋' },
   { id: 'settings', icon: '⚙️', label: '設定' },
 ]
 // 単語ゲームはミニゲームが先。カードはミニゲームのタイル「🃏 単語カード」から
@@ -165,8 +166,8 @@ const WORD_TABS: { id: WordTab; label: string }[] = [
   { id: 'time', label: '⏱ タイムアタック' },
 ]
 
-const STAGE_TABS: { id: 'boss' | 'long' | 'short'; label: string }[] = [
-  { id: 'boss', label: '👹 ボス' },
+// 読解ステージの中（ボスは下のメニューの「ボス部屋」へ）
+const STAGE_TABS: { id: 'long' | 'short'; label: string }[] = [
   { id: 'long', label: '📖 長文' },
   { id: 'short', label: '📰 短い読解' },
 ]
@@ -322,7 +323,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
-  const [stageTab, setStageTab] = useState<'boss' | 'long' | 'short'>('boss') // 長文ボスのタブの中
+  const [stageTab, setStageTab] = useState<'long' | 'short'>('long') // 読解ステージのタブの中
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペットモンスター・長文の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
@@ -1101,8 +1102,7 @@ function App() {
               className="challenge-btn daily-boss-go"
               onClick={() => {
                 setDailyGo(true)
-                setStageTab('boss')
-                setMode('reading')
+                setMode('boss')
                 toContent()
               }}
             >
@@ -1313,18 +1313,20 @@ function App() {
             pushToast([{ id: 'snack', text: `${l.en}（${l.ja}）`, counter: 'answers', target: 0 }])
           }}
         />
-      ) : mode === 'reading' ? (
+      ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          <div className="sub-tabs stage-sub-tabs" role="tablist" aria-label="長文ボスの種類">
+          {mode === 'reading' && (
+          <div className="sub-tabs stage-sub-tabs" role="tablist" aria-label="読解の種類">
             {STAGE_TABS.map((t) => (
               <button key={t.id} role="tab" aria-selected={stageTab === t.id} onClick={() => setStageTab(t.id)}>
                 {t.label}
               </button>
             ))}
           </div>
-          {stageTab === 'long' ? (
+          )}
+          {mode === 'reading' && stageTab === 'long' ? (
             <LongReading onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
-          ) : stageTab === 'short' ? (
+          ) : mode === 'reading' ? (
             <Reading onAnswer={onAnswerTrack('reading')} />
           ) : (
           <Stages
