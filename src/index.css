@@ -1575,3 +1575,10 @@ button:focus:not(:focus-visible) { outline: none; }
 .attr-egg-btn { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 10px; border: none; border-radius: 14px; background: linear-gradient(90deg, #22c55e, #8b5cf6); color: #fff; font-weight: 700; }
 .attr-egg-btn small { font-weight: 400; font-size: 0.75rem; }
 .attr-egg-btn:disabled { opacity: 0.55; }
+.buddy-zukan { margin: 10px 0; text-align: left; }
+.buddy-zukan-row { margin: 4px 0; }
+.buddy-zukan-name { margin: 2px 0; font-weight: 700; font-size: 0.85rem; }
+.buddy-zukan-row ul { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 2px; list-style: none; padding: 0; margin: 0; }
+.buddy-zukan-row li { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 8px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); min-width: 0; overflow: hidden; }
+.buddy-zukan-row li svg { width: 100%; height: auto; }
+.buddy-zukan-row li.locked { color: var(--muted); font-weight: 700; }

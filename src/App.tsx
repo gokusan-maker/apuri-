@@ -110,6 +110,7 @@ import {
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { BossAlly, TrackAlly } from './BossAllyView'
+import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord } from './longreading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
@@ -1648,6 +1649,7 @@ function App() {
                   setBuddyBox(r.box)
                 }}
               />
+              <BuddyZukan buddies={buddies} box={buddyBox} />
               <EvolutionPreview monster={monster} />
               <PartnerStatus monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}

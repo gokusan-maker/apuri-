@@ -1,6 +1,6 @@
 // 項目ごとに育てるなかま：単語は相棒（モチなど）、文法はことばのモンスター（文房具・魔法の本など。動物ではない）、長文は竜（ドラゴン）
 // 単語の相棒はこれまでどおり party / monster。文法と長文のなかまはここで別に育てる
-import { levelInfo } from './monster'
+import { levelInfo, xpToNext } from './monster'
 
 export type Track = 'grammar' | 'reading'
 export type Buddy = { xp: number; name?: string; species?: string } // species：なかまの種類（なければその項目の最初の種類）
@@ -158,4 +158,20 @@ export function switchBuddy(buddies: Buddies, box: BuddyBox, track: Track, speci
   const picked = rest[speciesId] ?? { xp: 0, species: speciesId }
   delete rest[speciesId]
   return { buddies: { ...buddies, [track]: { ...picked, species: speciesId } }, box: { ...box, [track]: rest } }
+}
+
+// そのレベルになるのに必要な XP（図鑑で、その姿の絵を出すため）
+export function xpForLevel(lv: number): number {
+  let xp = 0
+  for (let l = 1; l < lv; l++) xp += xpToNext(l)
+  return xp
+}
+
+// なかま図鑑：種類ごとに、いちばん育てたレベル（まだ会っていなければ 0）と、会えた姿の数
+export function zukanOf(track: Track, buddies: Buddies, box: BuddyBox): { sp: BuddySpecies; level: number; seen: number }[] {
+  return BUDDY_SPECIES[track].map((sp) => {
+    const mate = speciesOf(track, buddies[track]).id === sp.id ? buddies[track] : box[track][sp.id]
+    const level = mate ? buddyLevel(mate).level : 0
+    return { sp, level, seen: BUDDY_FORMS[track].filter((f) => level >= f.minLv).length }
+  })
 }
