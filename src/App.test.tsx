@@ -785,6 +785,31 @@ describe('App', () => {
     expect(screen.getByText('🐾 おさんぽクイズ 3 / 3 問正解！')).toBeInTheDocument()
   })
 
+  it('自動発音がオンでも、アプリを開いただけではカードの音声が流れない（答えたあとの次のカードからは流れる）', () => {
+    const spoken: string[] = []
+    const had = 'speechSynthesis' in window
+    Object.assign(window, {
+      SpeechSynthesisUtterance: class {
+        text: string
+        constructor(t: string) {
+          this.text = t
+        }
+      },
+      speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+    })
+    localStorage.setItem('eitan:settings', JSON.stringify({ autoSpeak: true }))
+    render(<App />)
+    expect(spoken).toEqual([])
+    fireEvent.click(screen.getByText('意味を見る'))
+    expect(spoken.length).toBe(1)
+    fireEvent.click(screen.getByText('まだ'))
+    expect(spoken.length).toBe(2)
+    if (!had) {
+      delete (window as { speechSynthesis?: unknown }).speechSynthesis
+      delete (window as { SpeechSynthesisUtterance?: unknown }).SpeechSynthesisUtterance
+    }
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

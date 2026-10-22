@@ -302,6 +302,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
   const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
   const [shopTab, setShopTab] = useState<ShopTab | undefined>(undefined) // ショップを開いたときの売り場
@@ -1527,8 +1528,12 @@ function App() {
             <Card
               key={`${card?.id}-${shown}`}
               card={card}
-              onAnswer={answer}
+              onAnswer={(r) => {
+                setCardTouched(true)
+                answer(r)
+              }}
               autoSpeak={settings.autoSpeak}
+              autoStart={cardTouched}
               jaFirst={settings.cardJaFirst}
               emojiHint={settings.easy}
               hideExampleJa={settings.hideExampleJa}

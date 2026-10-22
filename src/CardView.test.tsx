@@ -41,6 +41,16 @@ describe('カードの設定', () => {
     fireEvent.click(screen.getByText('英語を見る'))
     expect(spoken).toEqual([w.en])
   })
+
+  it('アプリを開いた直後の1枚目（autoStart なし）は、何も押さなければ発音しない。めくると1回だけ発音', () => {
+    fakeSpeech()
+    spoken.length = 0
+    const w = WORDS[0]
+    render(<Card card={w} onAnswer={() => {}} autoSpeak autoStart={false} />)
+    expect(spoken).toEqual([])
+    fireEvent.click(screen.getByText('意味を見る'))
+    expect(spoken).toEqual([w.en])
+  })
 })
 
 it('めくったあと右にスワイプすると「覚えた」', () => {

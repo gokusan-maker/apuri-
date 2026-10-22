@@ -13,6 +13,7 @@ type Props = {
   card: Word | undefined
   onAnswer: (correct: boolean, easy?: boolean) => void
   autoSpeak?: boolean
+  autoStart?: boolean // false のときは、めくるまで自動で発音しない（アプリを開いた直後の1枚目など）
   jaFirst?: boolean // 表に日本語、裏に英語
   emojiHint?: boolean // 表にも絵文字のヒント（かんたんモード）
   favorite?: boolean
@@ -27,7 +28,7 @@ type Props = {
 }
 
 // 単語カード（英→日、めくる、発音、覚えた／まだ）
-export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup, emojiHint = false, onSkip }: Props) {
+export function Card({ card, onAnswer, autoSpeak = false, autoStart = true, jaFirst = false, favorite = false, onToggleFavorite, onMore, onQuiz, note, onNote, hideExampleJa = false, lookup, emojiHint = false, onSkip }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [dx, setDx] = useState(0)
   const [showJa, setShowJa] = useState(false)
@@ -39,9 +40,10 @@ export function Card({ card, onAnswer, autoSpeak = false, jaFirst = false, favor
   // 例文の中の見出し語（変化形もふくむ）
   const hlParts = card?.example ? blankOut(card.example, card.en) : null
   const hl = hlParts?.answer
+  const canSpeak = autoStart || flipped // 開いた直後の1枚目は、めくるまで発音しない
   useEffect(() => {
-    if (autoSpeak && englishShown && card) speak(card.en)
-  }, [autoSpeak, englishShown, card])
+    if (autoSpeak && englishShown && card && canSpeak) speak(card.en)
+  }, [autoSpeak, canSpeak, englishShown, card])
 
   // スペースでめくる、めくったあとは →／Enter で「覚えた」、← で「まだ」
   useKeys((key) => {
