@@ -774,3 +774,13 @@ it('文法ゲーム「語順ならべかえ」は全単元の例文から出て�
   fireEvent.click(screen.getAllByRole('button').find((b) => /もどる|←/.test(b.textContent ?? ''))!)
   expect(screen.getByLabelText('文法ゲーム')).toBeInTheDocument()
 })
+
+it('まちがいノートに問題があると、文法ゲームに「まちがいノート」タイルが出て、とき直せる', () => {
+  localStorage.clear()
+  const q = GRAMMAR[0].questions[0]
+  localStorage.setItem('eitan:grammar-notebook', JSON.stringify([q.sentence]))
+  render(<Grammar />)
+  const grid = screen.getByLabelText('文法ゲーム')
+  fireEvent.click(within(grid).getByText('まちがいノート'))
+  expect(screen.getByRole('button', { name: q.choices[q.answer] })).toBeInTheDocument()
+})

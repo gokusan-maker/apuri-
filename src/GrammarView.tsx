@@ -217,6 +217,17 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             </div>
             <p className="game-grid-title">🎮 文法ゲーム（{GAME_COUNT}しゅるい）</p>
             <div className="game-grid" aria-label="文法ゲーム">
+              {notebookQuestions(note).length > 0 && (
+                <GameTile
+                  icon="📓"
+                  name="まちがいノート"
+                  sub={`まちがえた${notebookQuestions(note).length}問をとき直す`}
+                  onClick={() => {
+                    open({ id: 'notebook', title: '📓 まちがいノート', points: [], examples: [], questions: notebookQuestions(note).slice(0, 10) })
+                    setStep(0)
+                  }}
+                />
+              )}
               <GameTile playKey="grammar:まとめテスト" icon="📝" name="まとめテスト" sub={mixBest[title] !== undefined ? `ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : 'ランダム10問'} onClick={mixTest} />
               <GameTile playKey="grammar:例文リスニング" icon="👂" name="例文リスニング" sub="聞いて選ぶ・5問" onClick={() => setListen(true)} />
               <GameTile playKey="grammar:要点カード" icon="🃏" name="要点カード" sub={grade === 'all' ? 'おさらい' : `${grade}の単元だけ`} onClick={() => setCards(true)} />
