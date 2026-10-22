@@ -1560,3 +1560,13 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-ally.ally-grammar { background: linear-gradient(90deg, #dcfce7, #e0e7ff); color: #14532d; }
 .boss-ally.ally-grammar small { color: #166534; }
 .ally-bar { display: block; width: 100%; height: 6px; margin: 2px 0; }
+.attr-badge { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; font-size: 0.7rem; font-weight: 700; color: #fff; vertical-align: middle; }
+.attr-word { background: #f472b6; }
+.attr-grammar { background: #22c55e; }
+.attr-reading { background: #8b5cf6; }
+.buddy-switch { display: flex; flex-direction: column; gap: 4px; margin: 6px 0; }
+.buddy-switch-item { display: flex; align-items: center; gap: 8px; padding: 4px 8px; border-radius: 10px; border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); background: var(--card); color: inherit; text-align: left; }
+.buddy-switch-item[aria-pressed='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, var(--card)); }
+.buddy-switch-item small { display: block; color: var(--muted); font-size: 0.7rem; }
+.buddy-switch-item:disabled { opacity: 1; }
+.buddy-lock { font-size: 1.6rem; width: 40px; text-align: center; }

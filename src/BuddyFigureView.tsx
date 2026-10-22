@@ -1,4 +1,4 @@
-import { BUDDY_FORMS, buddyForm, buddyLevel, growthStars, type Buddy, type Track } from './buddies'
+import { BUDDY_FORMS, buddyForm, buddyLevel, formName, growthStars, speciesOf, type Buddy, type Track } from './buddies'
 
 // 文法のことばモンスター・長文の竜のオリジナルの絵（SVG）。姿（何番目の形か）で色・頭のかざり・つばさがかわる。
 // 進化のあいだも、1レベル上がるごとに星がふえて少しずつ大きくなる
@@ -47,7 +47,7 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
   const grow = 1 + Math.min(12, buddyLevel(buddy).level - 1) / 100
   const spot = track === 'grammar' ? '#fb923c' : '#8b5cf6'
   return (
-    <svg className="buddy-svg" width={size} height={size} viewBox="0 0 100 100" role="img" aria-label={form.name} data-stars={stars}>
+    <svg className="buddy-svg" width={size} height={size} viewBox="0 0 100 100" role="img" aria-label={formName(track, buddy)} data-stars={stars} style={speciesOf(track, buddy).hue ? { filter: `hue-rotate(${speciesOf(track, buddy).hue}deg)` } : undefined}>
       <g transform={`translate(50 60) scale(${grow}) translate(-50 -60)`}>
         {egg ? (
           <>

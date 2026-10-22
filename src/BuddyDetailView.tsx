@@ -1,24 +1,29 @@
 import { useState } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { BUDDY_FORMS, buddyForm, buddyLevel, TRACK_LABEL, type Buddies, type Track } from './buddies'
+import { ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
 
-type Props = { buddies: Buddies; onRename: (track: Track, name: string) => void }
+type Props = {
+  buddies: Buddies
+  onRename: (track: Track, name: string) => void
+  box?: BuddyBox // 入れかえて休んでいるなかま
+  onSwitch?: (track: Track, speciesId: string) => void // 同じ属性のなかまと入れかえる
+}
 
 // 文法のことばモンスター・読解の竜のくわしい画面：名前・次の進化まで・進化の一覧
-export function BuddyDetail({ buddies, onRename }: Props) {
+export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {} }, onSwitch }: Props) {
   const [editing, setEditing] = useState<Track | null>(null)
   const [draft, setDraft] = useState('')
   return (
     <div className="buddy-detail">
       {(['grammar', 'reading'] as Track[]).map((t) => {
         const b = buddies[t]
-        const f = buddyForm(t, b)
         const lv = buddyLevel(b)
         const next = BUDDY_FORMS[t].find((x) => x.minLv > lv.level)
         return (
           <section key={t} className={`buddy-box b-${t}`} aria-label={`${TRACK_LABEL[t]}のなかま`}>
             <h3>
               {TRACK_LABEL[t]}のなかま <BuddyFigure track={t} buddy={b} size={64} />
+              <span className={`attr-badge attr-${t}`}>属性：{ATTR_LABEL[t]}</span>
             </h3>
             {editing === t ? (
               <form
@@ -34,7 +39,7 @@ export function BuddyDetail({ buddies, onRename }: Props) {
               </form>
             ) : (
               <p>
-                <strong>{b.name ?? f.name}</strong>（{f.name}）Lv.{lv.level}
+                <strong>{buddyName(t, b)}</strong>（{formName(t, b)}）Lv.{lv.level}
                 <button
                   className="list-link"
                   onClick={() => {
@@ -49,6 +54,25 @@ export function BuddyDetail({ buddies, onRename }: Props) {
             <p className="stats-note">
               次のレベルまで あと {lv.need - lv.into} XP{next ? `・Lv.${next.minLv}で「${next.name}」に進化` : '・さいごの姿！'}
             </p>
+            {onSwitch && (
+              <div className="buddy-switch" role="group" aria-label={`${TRACK_LABEL[t]}のなかまを入れかえる`}>
+                <p className="stats-note">🔁 入れかえ（属性「{ATTR_LABEL[t]}」のなかまだけ、このわくにおけます）</p>
+                {BUDDY_SPECIES[t].map((sp) => {
+                  const on = speciesOf(t, b).id === sp.id
+                  const open = isUnlocked(t, sp, buddies, box)
+                  const mate = on ? b : (box[t][sp.id] ?? { xp: 0, species: sp.id })
+                  return (
+                    <button key={sp.id} className="buddy-switch-item" aria-pressed={on} disabled={!open || on} onClick={() => onSwitch(t, sp.id)}>
+                      {open ? <BuddyFigure track={t} buddy={mate} size={40} /> : <span className="buddy-lock">🔒</span>}
+                      <span>
+                        {sp.label}
+                        <small>{on ? '（いまのなかま）' : open ? `Lv.${buddyLevel(mate).level}` : `${ATTR_LABEL[t]}のなかまを Lv.${sp.unlockLv} にすると仲間に`}</small>
+                      </span>
+                    </button>
+                  )
+                })}
+              </div>
+            )}
             <ol className="buddy-forms">
               {BUDDY_FORMS[t].map((x) => (
                 <li key={x.name} className={lv.level >= x.minLv ? 'got' : 'locked'}>

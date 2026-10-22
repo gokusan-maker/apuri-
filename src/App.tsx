@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { buddyForm, buddyLevel, feedBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
+import { buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
@@ -322,6 +322,7 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [readLevel, setReadLevel] = useState<ReadLevel>(loadReadLevel) // 読解ステージのむずかしさ
+  const [buddyBox, setBuddyBox] = usePersistent(loadBuddyBox, saveBuddyBox) // 入れかえて休んでいる文法・読解のなかま
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のことばモンスター・読解の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
@@ -466,7 +467,7 @@ function App() {
     const amount = boosted(raw, moodFull(moodMeter, today))
     const r = feedBuddy(buddies, track, amount) // お知らせ用（同じタイミングで2回あげても足し算はずれないよう、保存は関数で）
     setBuddies((b) => feedBuddy(b, track, amount).buddies)
-    const name = (b: Buddies) => b[track].name ?? buddyForm(track, b[track]).name
+    const name = (b: Buddies) => buddyName(track, b[track])
     if (r.evolved) setBuddyEvo({ track, form: r.evolved, buddy: r.buddies[track] })
     else if (r.levelUp) pushToast([{ id: `buddy-lv-${track}`, text: `${buddyForm(track, r.buddies[track]).icon} ${name(r.buddies)}が Lv.${buddyLevel(r.buddies[track]).level} になった！`, counter: 'answers', target: 0 }])
   }
@@ -1349,7 +1350,7 @@ function App() {
           <Stages
             startDaily={dailyGo}
             onReadingAnswer={onAnswerTrack('reading')}
-          readingBuddy={{ icon: buddyForm('reading', buddies.reading).icon, name: buddies.reading.name ?? buddyForm('reading', buddies.reading).name }}
+          readingBuddy={{ icon: buddyForm('reading', buddies.reading).icon, name: buddyName('reading', buddies.reading) }}
             power={power}
             hour={hour}
             partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
@@ -1616,7 +1617,16 @@ function App() {
           )}
           {statsTab === 'buddy' && (
             <section className="card stats-view">
-              <BuddyDetail buddies={buddies} onRename={(t, n) => setBuddies((b) => renameBuddy(b, t, n))} />
+              <BuddyDetail
+                buddies={buddies}
+                box={buddyBox}
+                onRename={(t, n) => setBuddies((b) => renameBuddy(b, t, n))}
+                onSwitch={(t, id) => {
+                  const r = switchBuddy(buddies, buddyBox, t, id)
+                  setBuddies(r.buddies)
+                  setBuddyBox(r.box)
+                }}
+              />
               <EvolutionPreview monster={monster} />
               <PartnerStatus monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}

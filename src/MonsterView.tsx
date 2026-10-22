@@ -1067,7 +1067,10 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
   return (
     <div className="party">
-      <h2>なかま</h2>
+      <h2>
+        単語のなかま <span className="attr-badge attr-word">属性：単語</span>
+      </h2>
+      <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>
       {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}
       {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
       <ul className="badge-grid">

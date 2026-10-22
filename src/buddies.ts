@@ -3,7 +3,7 @@
 import { levelInfo } from './monster'
 
 export type Track = 'grammar' | 'reading'
-export type Buddy = { xp: number; name?: string }
+export type Buddy = { xp: number; name?: string; species?: string } // species：なかまの種類（なければその項目の最初の種類）
 export type Buddies = Record<Track, Buddy>
 
 export type BuddyForm = { minLv: number; icon: string; name: string }
@@ -43,7 +43,7 @@ export function buddyForm(track: Track, b: Buddy): BuddyForm {
 const KEY = 'eitan:buddies'
 const clean = (v: unknown): Buddy => {
   const o = (v && typeof v === 'object' ? v : {}) as Partial<Buddy>
-  return { xp: typeof o.xp === 'number' && o.xp >= 0 ? Math.floor(o.xp) : 0, ...(typeof o.name === 'string' && o.name ? { name: o.name } : {}) }
+  return { xp: typeof o.xp === 'number' && o.xp >= 0 ? Math.floor(o.xp) : 0, ...(typeof o.name === 'string' && o.name ? { name: o.name } : {}), ...(typeof o.species === 'string' && o.species ? { species: o.species } : {}) }
 }
 
 export function loadBuddies(): Buddies {
@@ -73,9 +73,75 @@ export function feedBuddy(b: Buddies, track: Track, amount: number): { buddies: 
 }
 
 // なかまに名前をつける（空なら名前を消す）
-export const renameBuddy = (b: Buddies, track: Track, name: string): Buddies => ({ ...b, [track]: name ? { ...b[track], name } : { xp: b[track].xp } })
+export const renameBuddy = (b: Buddies, track: Track, name: string): Buddies => {
+  const { name: _old, ...rest } = b[track]
+  void _old
+  return { ...b, [track]: name ? { ...rest, name } : rest }
+}
 
 // 今の姿になってから何レベル上がったか（1レベルごとに星がふえて、育っているのが見える）
 export function growthStars(track: Track, b: Buddy): number {
   return Math.min(5, buddyLevel(b).level - buddyForm(track, b).minLv)
+}
+
+// なかまの種類（属性ごと）。属性が「文法」のなかまは文法のわくにだけ、「読解」のなかまは読解のわくにだけおける。
+// 同じ属性の中で入れかえられて、それぞれのなかまが自分の XP を持つ。2・3体目はその属性のなかまを育てると仲間になる
+export type BuddySpecies = { id: string; label: string; prefix: string; hue: number; unlockLv: number }
+export const BUDDY_SPECIES: Record<Track, BuddySpecies[]> = {
+  grammar: [
+    { id: 'kotoba', label: 'ことばモンスター', prefix: '', hue: 0, unlockLv: 1 },
+    { id: 'hoshi', label: 'ほしのことばモンスター', prefix: 'ほしの', hue: 180, unlockLv: 5 },
+    { id: 'honoo', label: 'ほのおのことばモンスター', prefix: 'ほのおの', hue: 300, unlockLv: 12 },
+  ],
+  reading: [
+    { id: 'sora', label: 'そらの竜', prefix: '', hue: 0, unlockLv: 1 },
+    { id: 'koori', label: 'こおりの竜', prefix: 'こおりの', hue: 160, unlockLv: 5 },
+    { id: 'mori', label: 'もりの竜', prefix: 'もりの', hue: 250, unlockLv: 12 },
+  ],
+}
+export const ATTR_LABEL: Record<Track | 'word', string> = { word: '単語', grammar: '文法', reading: '読解' }
+
+export function speciesOf(track: Track, b: Buddy): BuddySpecies {
+  return BUDDY_SPECIES[track].find((x) => x.id === b.species) ?? BUDDY_SPECIES[track][0]
+}
+// 姿の名前（種類つき：ほしのインクぷる など）
+export const formName = (track: Track, b: Buddy) => speciesOf(track, b).prefix + buddyForm(track, b).name
+// 名前（つけた名前があればそれ）
+export const buddyName = (track: Track, b: Buddy) => b.name ?? formName(track, b)
+
+// ベンチ（入れかえて休んでいるなかま）：属性ごとに 種類id → なかま
+export type BuddyBox = Record<Track, Record<string, Buddy>>
+const BOX_KEY = 'eitan:buddy-box'
+export function loadBuddyBox(): BuddyBox {
+  try {
+    const v = JSON.parse(localStorage.getItem(BOX_KEY) ?? '{}') as Record<string, Record<string, unknown>>
+    const side = (t: Track): Record<string, Buddy> => Object.fromEntries(Object.entries(v?.[t] ?? {}).filter(([id]) => BUDDY_SPECIES[t].some((x) => x.id === id)).map(([id, b]) => [id, { ...clean(b), species: id }]))
+    return { grammar: side('grammar'), reading: side('reading') }
+  } catch {
+    return { grammar: {}, reading: {} }
+  }
+}
+export function saveBuddyBox(box: BuddyBox): void {
+  try {
+    localStorage.setItem(BOX_KEY, JSON.stringify(box))
+  } catch {
+    // 保存できなくても続ける
+  }
+}
+
+// その属性で育てたなかまのいちばん高いレベル（2・3体目が仲間になる条件）
+export function bestLevel(track: Track, buddies: Buddies, box: BuddyBox): number {
+  return Math.max(buddyLevel(buddies[track]).level, ...Object.values(box[track]).map((b) => buddyLevel(b).level))
+}
+export const isUnlocked = (track: Track, sp: BuddySpecies, buddies: Buddies, box: BuddyBox) => bestLevel(track, buddies, box) >= sp.unlockLv
+
+// 同じ属性のなかまと入れかえる（今のなかまはベンチへ。はじめての種類はタマゴから）
+export function switchBuddy(buddies: Buddies, box: BuddyBox, track: Track, speciesId: string): { buddies: Buddies; box: BuddyBox } {
+  const cur = buddies[track]
+  const curId = speciesOf(track, cur).id
+  if (curId === speciesId || !BUDDY_SPECIES[track].some((x) => x.id === speciesId)) return { buddies, box }
+  const rest = { ...box[track], [curId]: { ...cur, species: curId } }
+  const picked = rest[speciesId] ?? { xp: 0, species: speciesId }
+  delete rest[speciesId]
+  return { buddies: { ...buddies, [track]: { ...picked, species: speciesId } }, box: { ...box, [track]: rest } }
 }
