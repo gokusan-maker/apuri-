@@ -2,6 +2,7 @@
 import { GRAMMAR, type GrammarQuestion } from './grammar'
 
 export const DUEL_COUNT = 10
+export const DUEL_BEST_XP = 20 // 2択スピードのベスト更新で文法のなかまにあげる XP
 export const DUEL_PENALTY = 5
 export type DuelQ = { right: string; wrong: string; rightFirst: boolean; why: string }
 

@@ -5,7 +5,8 @@ import { GRAMMAR } from './grammar'
 
 it('正しい英文を選んで10問答えるとタイムが出る', () => {
   localStorage.clear()
-  render(<GrammarDuel onBack={() => {}} />)
+  const best = vi.fn()
+  render(<GrammarDuel onBack={() => {}} onBest={best} />)
   fireEvent.click(screen.getByText('スタート'))
   const rights = new Set(GRAMMAR.flatMap((u) => u.questions).map((q) => (q.choices[q.answer].startsWith('（') ? q.sentence.replace(/___ ?/, '') : q.sentence.replace('___', q.choices[q.answer]))))
   for (let i = 0; i < 10; i++) {
@@ -14,5 +15,6 @@ it('正しい英文を選んで10問答えるとタイムが出る', () => {
     if (i === 9) vi.setSystemTime(Date.now() + 20000)
     fireEvent.click(ok)
   }
-  expect(screen.getByText(/⏱ 20秒（まちがい 0） 🏆 ベスト記録！/)).toBeInTheDocument()
+  expect(screen.getByText(/⏱ 20秒（まちがい 0） 🏆 ベスト記録！ 文法のなかまに \+20XP/)).toBeInTheDocument()
+  expect(best).toHaveBeenCalledTimes(1)
 })

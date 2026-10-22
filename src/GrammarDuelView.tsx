@@ -1,13 +1,13 @@
 import { useState } from 'react'
-import { DUEL_PENALTY, duelTime, loadDuelBest, makeDuel, recordDuelBest } from './grammarduel'
+import { DUEL_BEST_XP, DUEL_PENALTY, duelTime, loadDuelBest, makeDuel, recordDuelBest } from './grammarduel'
 import { playCorrect, playWrong } from './sound'
 
 const nowMs = () => Date.now()
 const rand = () => Math.random()
 
-type Props = { onBack: () => void }
+type Props = { onBack: () => void; onBest?: () => void } // onBest：ベスト更新（文法のなかまにボーナス）
 
-export function GrammarDuel({ onBack }: Props) {
+export function GrammarDuel({ onBack, onBest }: Props) {
   const [qs, setQs] = useState(() => makeDuel(rand))
   const [step, setStep] = useState(0)
   const [misses, setMisses] = useState(0)
@@ -27,7 +27,10 @@ export function GrammarDuel({ onBack }: Props) {
     if (step + 1 >= qs.length) {
       const sec = duelTime(Math.max(1, Math.round((nowMs() - startAt) / 1000)), m)
       const b = recordDuelBest(sec)
-      if (b) setBest(sec)
+      if (b) {
+        setBest(sec)
+        onBest?.()
+      }
       setResult({ sec, best: b })
       return
     }
@@ -51,7 +54,7 @@ export function GrammarDuel({ onBack }: Props) {
       ) : result ? (
         <div role="status">
           <p className="level-up">
-            ⏱ {result.sec}秒（まちがい {misses}）{result.best ? ' 🏆 ベスト記録！' : `　ベスト ${best}秒`}
+            ⏱ {result.sec}秒（まちがい {misses}）{result.best ? ` 🏆 ベスト記録！${onBest ? ` 文法のなかまに +${DUEL_BEST_XP}XP` : ''}` : `　ベスト ${best}秒`}
           </p>
           <button
             className="flip"

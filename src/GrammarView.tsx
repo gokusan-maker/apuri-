@@ -45,7 +45,7 @@ type Props = {
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
   onQuickPerfect?: () => void // 「すぐ練習」5問を全問正解したとき
   onRunBest?: () => void // 連続正解チャレンジでベストを更新したとき（3問以上）
-  onTaBest?: () => void // 文法タイムアタックでベストを更新したとき
+  onTaBest?: () => void // 文法タイムアタック・2択スピードでベストを更新したとき
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
@@ -149,7 +149,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} weak={weakIdsOf(note)} />
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
   if (odd) return <GrammarOdd onAnswer={onAnswer} onBack={() => setOdd(false)} />
-  if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
+  if (duel) return <GrammarDuel onBest={onTaBest} onBack={() => setDuel(false)} />
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBest={onTaBest} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
 
