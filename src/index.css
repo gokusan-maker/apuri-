@@ -1440,3 +1440,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-100.got { font-size: 1rem; font-weight: 800; color: #b45309; }
 .pity-gauge { height: 10px; margin: -2px 0 10px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
 .pity-gauge > div { height: 100%; background: linear-gradient(90deg, #fbbf24, #f59e0b, #ef4444); transition: width 0.4s; }
+.walk-quiz { margin: 6px 0; padding: 10px; border-radius: 12px; background: var(--bg); } .walk-quiz-q { margin: 0 0 6px; }

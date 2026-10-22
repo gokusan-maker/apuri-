@@ -45,3 +45,22 @@ export function addWalkDiary(e: WalkEntry): WalkEntry[] {
   }
   return list
 }
+
+// おさんぽクイズ：日記の単語から（同じ単語は1回）最大 n 問。選択肢は日記と予備の意味から3つ
+export function walkQuiz(diary: WalkEntry[], extraJa: string[], rnd: () => number, n = 3): { en: string; ja: string; choices: string[] }[] {
+  const uniq = [...new Map(diary.map((e) => [e.en, e])).values()]
+  const pool = [...uniq]
+  const out: { en: string; ja: string; choices: string[] }[] = []
+  while (out.length < n && pool.length > 0) {
+    const e = pool.splice(Math.floor(rnd() * pool.length), 1)[0]
+    const others = [...new Set([...uniq.map((x) => x.ja), ...extraJa])].filter((j) => j !== e.ja)
+    const wrong: string[] = []
+    for (let k = 0; wrong.length < 2 && k < others.length; k++) {
+      const j = others[(Math.floor(rnd() * others.length) + k) % others.length]
+      if (!wrong.includes(j)) wrong.push(j)
+    }
+    const at = Math.floor(rnd() * (wrong.length + 1))
+    out.push({ en: e.en, ja: e.ja, choices: [...wrong.slice(0, at), e.ja, ...wrong.slice(at)] })
+  }
+  return out
+}

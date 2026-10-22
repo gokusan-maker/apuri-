@@ -771,6 +771,20 @@ describe('App', () => {
     expect(document.querySelector('details.home-play')).toBeNull()
   })
 
+  it('おさんぽ日記の単語が3つ以上あると「おさんぽクイズ」で3問とける', () => {
+    const d = (en: string, ja: string) => ({ day: '2026-10-19', en, ja, place: '公園' })
+    localStorage.setItem('eitan:walk-diary', JSON.stringify([d('dog', '犬'), d('cat', 'ねこ'), d('tree', '木')]))
+    render(<App />)
+    fireEvent.click(screen.getByText('🐾 おさんぽクイズ（拾った単語から3問）'))
+    const ja: Record<string, string> = { dog: '犬', cat: 'ねこ', tree: '木' }
+    for (let i = 0; i < 3; i++) {
+      const en = document.querySelector('.walk-quiz-q strong')!.textContent!
+      fireEvent.click(screen.getByRole('button', { name: ja[en] }))
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(screen.getByText('🐾 おさんぽクイズ 3 / 3 問正解！')).toBeInTheDocument()
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

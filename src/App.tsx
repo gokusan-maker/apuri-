@@ -1,6 +1,7 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
+import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
 import { BIRTHDAY_TICKETS, birthdayAge, loadBirthday, registerBirthday, saveBirthday } from './birthday'
@@ -301,6 +302,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [walkQuizOpen, setWalkQuizOpen] = useState(false)
   const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
   const [shopTab, setShopTab] = useState<ShopTab | undefined>(undefined) // ショップを開いたときの売り場
   // タブ・ショップ・チャレンジを開いたら、その画面だけを出していちばん上へ（押したら画面が変わったとわかるように）
@@ -930,6 +932,14 @@ function App() {
                 </ul>
               </details>
             )}
+          {walkDiary.length >= 3 &&
+            (walkQuizOpen ? (
+              <WalkQuiz diary={walkDiary} onAnswer={onAnswer} onClose={() => setWalkQuizOpen(false)} />
+            ) : (
+              <button className="list-link" onClick={() => setWalkQuizOpen(true)}>
+                🐾 おさんぽクイズ（拾った単語から3問）
+              </button>
+            ))}
             <SugorokuBoard
               day={today}
               words={words}
