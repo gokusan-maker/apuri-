@@ -703,3 +703,20 @@ it('単元一覧を「まだの単元から」ならべかえられる', async (
   fireEvent.click(screen.getByRole('button', { name: 'まだの単元から' }))
   expect(firstItem()).not.toContain(first.title)
 })
+
+it('すぐ練習の5問を全問正解するとコインのごほうび', () => {
+  localStorage.clear()
+  const perfect = vi.fn()
+  const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
+  render(<Grammar quickStart onQuickPerfect={perfect} />)
+  rnd.mockRestore()
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  for (let i = 0; i < 5; i++) {
+    const text = document.querySelector('.blank-sentence')!.textContent!
+    const q = all.find((x) => x.sentence.replace('___', '　　　') === text)!
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(perfect).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/すぐ練習 5問全問正解！/)).toBeInTheDocument()
+})

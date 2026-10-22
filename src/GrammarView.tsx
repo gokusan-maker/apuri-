@@ -43,11 +43,14 @@ type Props = {
   quickStart?: boolean // 開いたらすぐ練習問題を始める（文法タブ）
   onStreakBonus?: () => void // 文法を3日続けたとき
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
+  onQuickPerfect?: () => void // 「すぐ練習」5問を全問正解したとき
 }
 
+export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
 const GAME_COUNT = 10 // 文法ゲームの種類（下のタイルの数）
 
-export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster }: Props) {
+export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect }: Props) {
+  const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
   // quickStart のときは、開いたらすぐ練習問題（まだ全問正解していない単元から5問）
@@ -103,6 +106,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
 
   function open(u: GrammarUnit) {
     setHidden(null)
+    setQuickPerfect(false)
     setCopied(false)
     setShadow(false)
     setPrinting(false)
@@ -651,6 +655,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
           <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
         )}
         {streakBonus && <p className="level-up">📆 文法{gDays.streak}日連続！ 🪙{GRAMMAR_STREAK_COINS}</p>}
+        {quickPerfect && unit.id === 'quick-practice' && <p className="level-up">✏️ すぐ練習 5問全問正解！ 🪙{QUICK_PERFECT_COINS}</p>}
         {goalReached && <p className="level-up">🎯 今週の目標たっせい！ 🎟ガチャチケット1まい</p>}
         {partnerName && !battle && score === unit.questions.length && unit.questions.length > 0 && (
           <p className="grammar-praise">
@@ -766,6 +771,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
       setDailyDay(today)
       saveDailyGrammarDay(today)
       onDailyBonus?.()
+    }
+    if (unit.id === 'quick-practice' && step === unit.questions.length - 1 && nextScore === unit.questions.length) {
+      setQuickPerfect(true)
+      onQuickPerfect?.()
     }
     if (battle && step === unit.questions.length - 1 && nextScore === unit.questions.length) {
       onMonsterWin?.()
