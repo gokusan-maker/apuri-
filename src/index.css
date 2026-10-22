@@ -1339,3 +1339,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .training { margin: 8px 0; padding: 8px; border-radius: 12px; background: var(--card); text-align: center; }
 .training-title { margin: 0 0 6px; font-size: 0.9rem; font-weight: 700; }
 .boss-secret { display: block; margin-top: 2px; font-size: 0.7rem; color: var(--muted); }
+.gacha-fast-toggle { display: block; margin: 4px 0; font-size: 0.8rem; }
+.gacha-result.fast *, .gacha-result.fast { animation-duration: 0.2s !important; animation-delay: 0s !important; }

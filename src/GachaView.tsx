@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -51,6 +51,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [capsule, setCapsule] = useState(loadCapsule)
+  const [fast, setFast] = useState(loadGachaFast)
   const [stats, setStats] = useState(loadGachaStats)
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
@@ -145,6 +146,17 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      <label className="gacha-fast-toggle">
+        <input
+          type="checkbox"
+          checked={fast}
+          onChange={(e) => {
+            setFast(e.target.checked)
+            saveGachaFast(e.target.checked)
+          }}
+        />{' '}
+        ⏩ 演出を短くする
+      </label>
       <p className="capsule-picker" role="group" aria-label="カプセルの色">
         🎨 カプセル：
         {CAPSULE_COLORS.map((c) => (
@@ -260,7 +272,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </div>
       )}
       {result && (
-        <div key={result.key} className={`gacha-result r-${result.kind.rarity}`} role="status">
+        <div key={result.key} className={`gacha-result r-${result.kind.rarity}${fast ? ' fast' : ''}`} role="status">
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
           <span className="gacha-capsule" aria-hidden="true" style={result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}

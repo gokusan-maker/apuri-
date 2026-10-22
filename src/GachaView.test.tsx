@@ -135,3 +135,10 @@ it('カプセルの色を選ぶと保存される', () => {
   expect(screen.getByLabelText('カプセル みどり')).toHaveAttribute('aria-pressed', 'true')
   expect(localStorage.getItem('eitan:capsule-color')).toBe('green')
 })
+
+it('演出を短くする設定が保存される', () => {
+  localStorage.clear()
+  render(<Gacha coins={100} members={1} onDraw={() => null} />)
+  fireEvent.click(screen.getByLabelText(/演出を短くする/))
+  expect(localStorage.getItem('eitan:gacha-fast')).toBe('1')
+})

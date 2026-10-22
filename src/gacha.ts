@@ -249,3 +249,20 @@ export function saveCapsule(id: string): void {
   }
 }
 export const capsuleColorOf = (id: string) => (CAPSULE_COLORS.find((c) => c.id === id) ?? CAPSULE_COLORS[0]).color
+
+// ガチャの演出スキップ（短くする）設定
+const FAST_KEY = 'eitan:gacha-fast'
+export function loadGachaFast(): boolean {
+  try {
+    return localStorage.getItem(FAST_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+export function saveGachaFast(on: boolean): void {
+  try {
+    localStorage.setItem(FAST_KEY, on ? '1' : '0')
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
