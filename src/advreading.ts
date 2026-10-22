@@ -1319,4 +1319,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: "What does the Earth's magnetic field do, according to the passage?", choices: ['It guides some particles toward the polar regions.', 'It creates the solar wind.', 'It changes nitrogen into oxygen.', 'It makes auroras appear only in the day.'], answer: 0, why: '第2段落 the field guides some of the particles toward the regions around the North and South Poles。' },
     ],
   },
+  {
+    id: 'adv-measure-target',
+    title: 'When Numbers Become Goals',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Modern organizations love numbers. Schools count test scores, hospitals count waiting times, and companies count sales. Numbers seem objective, and they allow us to compare performance across places and years. Yet there is a hidden danger in relying on them too heavily: once a number is used to judge people, it often stops telling us what we ( A ) wanted to know.',
+      'The reason is simple. A number is usually chosen because it reflects something we care about, such as learning or health. But when people are rewarded or punished according to that number, they naturally look for the fastest way to raise it, which is not always the same as improving the thing it was meant to reflect. A school under pressure may spend weeks practicing test questions instead of developing real understanding. The score rises, ( B ) the learning it was supposed to show may not.',
+      'None of this means that we should abandon measurement. Without numbers, it would be hard to notice problems or to see whether our efforts are working. The lesson is rather that a measure is a tool for thinking, not a ( C ) for it. Wise organizations use several indicators, look at them together, and remember that what cannot be counted easily may still be what matters most.',
+    ],
+    ja: [
+      '現代の組織は数字を好む。学校はテストの点数を、病院は待ち時間を、企業は売り上げを数える。数字は客観的に見え、場所や年をこえて成果を比べることを可能にする。しかし、数字に頼りすぎることには隠れた危険がある。ある数字が人を評価するために使われると、それはしばしば、私たちが本来知りたかったことを教えてくれなくなるのだ。',
+      '理由は単純である。数字はふつう、学びや健康のような、私たちが大切に思う何かを反映するから選ばれる。しかし人々がその数字によって報われたり罰せられたりすると、人は当然それを上げるもっとも早い方法をさがすが、それはその数字が反映するはずだったものを改善することと、いつも同じとはかぎらない。圧力を受けた学校は、本当の理解を育てるかわりに、何週間もテストの問題の練習に費やすかもしれない。点数は上がるが、それが示すはずだった学びは上がらないかもしれない。',
+      'だからといって、測ることをやめるべきだというわけではない。数字がなければ、問題に気づいたり、努力が実を結んでいるかを確かめたりするのはむずかしいだろう。むしろ教訓は、指標は考えるための道具であって、考えることの代わりではないということだ。賢い組織はいくつかの指標を使い、それらをいっしょに見て、簡単には数えられないものこそが、もっとも大切なものかもしれないことを忘れない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['originally', 'never', 'hardly', 'recently'], answer: 0, why: '「本来（もともと）知りたかったこと」なので originally。' },
+      { id: 'B', choices: ['but', 'so', 'because', 'unless'], answer: 0, why: '「点数は上がる、しかし学びは上がらないかもしれない」という対比なので but。' },
+      { id: 'C', choices: ['substitute', 'reason', 'result', 'chance'], answer: 0, why: 'a tool for thinking, not a substitute for it「考えるための道具であり、考えることの代わりではない」。' },
+    ],
+    tf: [
+      { statement: '筆者は、数字で人を評価すると、その数字が本来の目的を反映しなくなることがあると述べている。', answer: true, why: '第1段落 it often stops telling us what we originally wanted to know。' },
+      { statement: '筆者は、組織は測ることをやめるべきだと主張している。', answer: false, why: '第3段落 None of this means that we should abandon measurement。' },
+      { statement: '筆者は、指標は一つだけにしぼって見るのがよいと考えている。', answer: false, why: '第3段落 Wise organizations use several indicators。' },
+    ],
+    qa: [
+      { q: 'Why might a school under pressure spend weeks practicing test questions?', choices: ['To raise the score quickly, even if real understanding does not improve.', 'Because students prefer tests to lessons.', 'Because tests are the only way to learn.', 'To reduce the number of teachers.'], answer: 0, why: '第2段落 they naturally look for the fastest way to raise it。' },
+    ],
+  },
 ]
