@@ -1714,6 +1714,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Can you ___ a picture of us?', choices: ['take', 'make', 'do'], answer: 0, why: '「写真をとる」は take a picture。' },
     ],
   },
+  {
+    id: 'make-do',
+    title: 'make と do の使い分け',
+    points: ['make は「作る・生み出す」（make a cake / make a mistake / make friends）。', 'do は「（作業・活動を）する」（do homework / do the dishes / do one\'s best）。'],
+    examples: [
+      { en: 'I made a mistake on the test.', ja: 'テストでまちがえてしまった。' },
+      { en: "Let's do our best!", ja: 'ベストをつくそう！' },
+    ],
+    questions: [
+      { sentence: 'I have to ___ my homework tonight.', choices: ['make', 'do', 'take'], answer: 1, why: '宿題を「する」は do my homework。' },
+      { sentence: 'She ___ a lot of friends at the camp.', choices: ['made', 'did', 'took'], answer: 0, why: '「友だちをつくる」は make friends。' },
+      { sentence: "Don't be afraid of ___ mistakes.", choices: ['doing', 'making', 'taking'], answer: 1, why: '「まちがえる」は make a mistake。前置詞 of のあとは -ing。' },
+    ],
+  },
+  {
+    id: 'say-tell',
+    title: 'say / tell / speak / talk の使い分け',
+    points: ['say は「（ことばを）言う」（say "Hello"）。tell は「（人に）伝える・話す」で、すぐあとに人がくる（tell me the story）。', 'speak は「（言語を）話す」（speak English）、talk は「（人と）おしゃべりする」（talk with friends）。'],
+    examples: [
+      { en: 'Can you tell me the way to the station?', ja: '駅への道を教えてくれますか。' },
+      { en: 'She speaks three languages.', ja: '彼女は3か国語を話す。' },
+    ],
+    questions: [
+      { sentence: 'Please ___ me your name.', choices: ['say', 'tell', 'speak'], answer: 1, why: '「人に〜を言う・教える」は tell ＋人＋もの。' },
+      { sentence: 'He can ___ Chinese well.', choices: ['speak', 'tell', 'say'], answer: 0, why: '言語を「話す」は speak。' },
+      { sentence: 'What did she ___ to you?', choices: ['tell', 'say', 'talk'], answer: 1, why: '「〜に何と言ったか」は say 〜 to 人。tell なら人がすぐあとにくる。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1813,8 +1841,8 @@ export function saveTaBest(n: number): void {
 export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
-  中1: ['it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中1: ['make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
+  中2: ['say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
