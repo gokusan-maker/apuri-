@@ -218,6 +218,15 @@ describe('App', () => {
     expect(within(after).getByText('✅ 今日')).toBeInTheDocument()
   })
 
+  it('単語ゲームの「ミニゲームをえらぶ」ボタンに、今日あそんだしゅるいの数が出る', () => {
+    localStorage.clear()
+    render(<App />)
+    goMini()
+    expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
+    fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱'))
+    expect(screen.getByText('今日 1 しゅるいあそんだ')).toBeInTheDocument()
+  })
+
   it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })

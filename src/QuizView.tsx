@@ -20,6 +20,7 @@ import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
 import { claimFeatured, FEATURED_XP, featuredClaimed, featuredFor } from './featured'
 import { dayKey } from './srs'
+import { loadTodayGames, markTodayGame } from './gamesplayed'
 import { quizShareText, shareText } from './shareText'
 import { isNew, loadPlayed, loadRecent, markPlayed, pushRecent } from './playedModes'
 import { Shiritori } from './ShiritoriView'
@@ -368,6 +369,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   }
 
   function restart(d: Direction = direction, only?: Word[]) {
+    markTodayGame(`word:${d}`, dayKey())
     setDirection(d)
     setMenu(false)
     try {
@@ -407,6 +409,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     setEarned(0)
   }
 
+  const playedWordGames = loadTodayGames(dayKey()).filter((k) => k.startsWith('word:') && k !== 'word:cards').length
   const toggle = lockDirection ? null : (
     <>
       <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
@@ -414,6 +417,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <span className="mode-change">
           🎮 ミニゲームをえらぶ（{DIRECTIONS.length}種） {menu ? '▲' : '▼'}
         </span>
+        {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ</span>}
       </button>
       {!menu && (
         <div className="game-grid game-strip" aria-label="人気のミニゲーム">
