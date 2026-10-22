@@ -844,10 +844,11 @@ describe('App', () => {
     expect(screen.getByText(/のきもち日記：🥺/)).toBeInTheDocument()
   })
 
-  it('ホームのガチャボタンに今日のピックアップが出る', async () => {
+  it('ホームのガチャボタンには何が出るかを書かない（お楽しみ）', async () => {
     const { pickupOf } = await import('./monster')
     render(<App />)
-    expect(screen.getByText(`今日のピックアップ：${pickupOf(dayKey()).name}`)).toBeInTheDocument()
+    expect(screen.getByText('なにが出るかはお楽しみ！')).toBeInTheDocument()
+    expect(screen.queryByText(new RegExp(`今日のピックアップ：${pickupOf(dayKey()).name}`))).toBeNull()
   })
 
   it('同じキャラが3体そろうとトリオボーナス🪙30（1回だけ）', () => {

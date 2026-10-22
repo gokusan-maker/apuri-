@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
-import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
+import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 
 const MULTI = 3
@@ -78,7 +78,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   return (
     <div className="gacha">
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
-      <p className="stats-note">勉強でためたコインで新しいタマゴを引けるよ。色ちがい（レア・スーパーレア・ウルトラレア）が出るかも！ 生まれた子は「なかま」で相棒に選んで育てよう。</p>
+      <p className="stats-note">勉強でためたコインで新しいタマゴを引けるよ。どんな子が生まれるかはお楽しみ！ 生まれた子は「なかま」で相棒に選んで育てよう。</p>
       <button
         className="good gacha-btn"
         disabled={full || coins < price}
@@ -131,11 +131,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       {pickup && (
         <div className="gacha-pickup">
           <span className="gacha-pickup-fig">
-            <MonsterFigure form={withSpecies(FORMS[0], pickup.id)} mood="happy" />
+            <MonsterFigure form={withSpecies(FORMS[0], pickup.id)} hidden />
           </span>
           <span>
             <strong>🎯 今日のピックアップ</strong>
-            <br />「{pickup.name}」が出やすい！（{Math.round(pickup.rate * 100)}% → {Math.round(speciesRate(pickup, dragonUp, pickup.id) * 100)}%）
+            <br />今日はだれかが出やすい日…？ なにが出るかはお楽しみ！
           </span>
         </div>
       )}
@@ -145,8 +145,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           {stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ステップアップ：あと${stepLeft}回で、その次がレア以上確定`}
         </p>
       )}
-      {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
-      {boostColor && <p className="gacha-points">🎨 今日のおすすめ色：{boostColor}（レアが出たとき出やすい）</p>}
+      {dragonUp && <p className="gacha-event">🌙 週末はふしぎなことが起きるかも…？</p>}
+      {boostColor && <p className="gacha-points">🎨 今日はラッキーカラーの日…？</p>}
       {luckyBag && onLuckyBag && (
         <button
           className="good gacha-btn multi lucky-bag"
@@ -250,22 +250,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           <ul>
             {(['UR', 'SR', 'R', 'N'] as const).map((r) => (
               <li key={r}>
-                <span className={`kind-tag r-${r}`}>{RARITY_LABEL[r]}</span> {stats[r]}回（{Math.round((stats[r] / stats.total) * 100)}%）
+                <span className={`kind-tag r-${r}`}>{RARITY_LABEL[r]}</span> {stats[r]}回
               </li>
             ))}
           </ul>
         </details>
       )}
-      <details className="gacha-odds gacha-rates">
-        <summary>出る確率</summary>
-        <ul>
-          <li>ノーマル（ふつうの色）60%</li>
-          <li>レア（さくら色・うみ色・よる色）各10%</li>
-          <li>スーパーレア（きんいろ）9%</li>
-          <li>ウルトラレア（にじいろ）1%</li>
-          <li>キャラクター：{SPECIES.map((sp) => `${sp.name}${Math.round(speciesRate(sp, dragonUp, pickup?.id) * 100)}%`).join('・')}</li>
-        </ul>
-      </details>
       {multi && (
         <div key={multi.key} className={`gacha-multi r-${bestRarity(multi.list)}`} role="status">
           {gachaOmen(bestRarity(multi.list)) && <p className="gacha-omen">{gachaOmen(bestRarity(multi.list))}</p>}

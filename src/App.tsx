@@ -1091,7 +1091,7 @@ function App() {
               🎰 ガチャをひく！
               {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
             </span>
-            <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
+            <span className="home-gacha-pickup">なにが出るかはお楽しみ！</span>
           </button>
           {dailyBossDay !== today && (
             <button

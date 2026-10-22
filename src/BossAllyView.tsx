@@ -17,7 +17,7 @@ export function TrackAlly({ track, buddy, label }: { track: Track; buddy: Buddy;
           <span style={{ width: `${(lv.into / lv.need) * 100}%` }} />
         </span>
         <small>
-          XP {lv.into}/{lv.need}・{next ? `あと${next.minLv - lv.level}レベルで「${next.name}」に進化` : 'さいごの姿！'}・{TRACK_LABEL[track]}の問題に正解すると育つ
+          XP {lv.into}/{lv.need}・{next ? `あと${next.minLv - lv.level}レベルで ？？？ に進化` : 'さいごの姿！'}・{TRACK_LABEL[track]}の問題に正解すると育つ
         </small>
       </div>
     </div>
