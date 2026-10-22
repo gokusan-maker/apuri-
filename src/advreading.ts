@@ -1179,4 +1179,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does Mr. Nakano think people must do?', choices: ['Keep the story of the lighthouse alive.', 'Turn on the light every night.', 'Fix the machines every week.', 'Build a new lighthouse.'], answer: 0, why: "第3段落 'people must keep the story alive.'" },
     ],
   },
+  {
+    id: 'exam-lost-found',
+    title: 'The Lost-and-Found Box',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'At our school, there is a big box near the entrance for things that students have lost. When I became a member of the student council, I was surprised to see how full it was. There were umbrellas, pencil cases, gloves, and even a pair of new shoes. Many of these things had been there ( A ) months.',
+      "I wanted to return them to their owners, so I talked with the other members. We decided to take photos of the items and put them on the school board every Monday. We also wrote a short message: 'Is this yours? Please come to the student council room.' At first only a few students came, but after a month, more than half of the things ( B ) returned.",
+      "One day, a first-year student came to get a small key holder. She said, 'My grandmother made this for me. I thought I had lost it forever.' She smiled and thanked us again and again. Through this activity, I learned that even a small idea can ( C ) someone happy. Now I want to find other ways to help people at our school.",
+    ],
+    ja: [
+      '私たちの学校には、生徒が落とした物を入れる大きな箱が入り口の近くにあります。生徒会のメンバーになったとき、その箱がどれほどいっぱいかを見ておどろきました。かさ、筆箱、手ぶくろ、そして新しいくつまでありました。これらの物の多くは、何か月もそこにあったのです。',
+      '私は持ち主に返したいと思い、ほかのメンバーと話し合いました。私たちは、落とし物の写真をとって、毎週月曜日に学校の掲示板にはることに決めました。また「これはあなたのものですか？ 生徒会室に来てください」という短いメッセージも書きました。最初は数人の生徒しか来ませんでしたが、1か月後には半分以上の物が持ち主に返されました。',
+      'ある日、1年生の女の子が小さなキーホルダーを取りに来ました。彼女は「これは祖母が作ってくれたものなんです。もう二度と見つからないと思っていました」と言いました。彼女はほほえんで、何度も何度もお礼を言いました。この活動を通して、私は小さなアイデアでもだれかを幸せにできることを学びました。今は、学校の人たちを助けるほかの方法を見つけたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'since', 'during', 'by'], answer: 0, why: 'for months「何か月も（の間）」。期間の長さは for。' },
+      { id: 'B', choices: ['had been', 'have', 'were being', 'has'], answer: 0, why: '「1か月後には返されていた」。過去のある時点までの完了・受け身なので had been returned。' },
+      { id: 'C', choices: ['make', 'makes', 'making', 'to make'], answer: 0, why: '助動詞 can のあとは原形。make 人 happy「人を幸せにする」。' },
+    ],
+    tf: [
+      { statement: '落とし物の箱には、新しいくつもあった。', answer: true, why: '第1段落 even a pair of new shoes。' },
+      { statement: '生徒会は落とし物の写真を毎日掲示板にはった。', answer: false, why: '第2段落 every Monday（毎週月曜日）。' },
+      { statement: '1年生の女の子のキーホルダーは祖母が作ったものだった。', answer: true, why: "第3段落 'My grandmother made this for me.'" },
+    ],
+    qa: [
+      { q: 'What did the writer learn through the activity?', choices: ['Even a small idea can make someone happy.', 'The box should be thrown away.', 'Students never lose things.', 'Photos are too expensive to take.'], answer: 0, why: '第3段落 even a small idea can make someone happy。' },
+    ],
+  },
 ]
