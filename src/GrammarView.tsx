@@ -174,7 +174,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setCards(true)}>
-            🃏 要点カードでおさらい（学年タブでしぼりこめるよ）
+            🃏 要点カードでおさらい{grade === 'all' ? '（学年タブでしぼりこめるよ）' : `（${grade}の単元だけ）`}
           </button>
         )}
         {stampMode && (

@@ -401,3 +401,13 @@ it('最後の単元を全問正解すると文法マスター', () => {
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText('🏅 称号「文法マスター」')).toBeInTheDocument()
 })
+
+it('学年をえらぶと要点カードもその学年の単元だけになる', async () => {
+  const { gradeOf } = await import('./grammar')
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByRole('tab', { name: '中2' }))
+  fireEvent.click(screen.getByText(/要点カードでおさらい（中2の単元だけ）/))
+  const n = GRAMMAR.filter((u) => gradeOf(u.id) === '中2').length
+  expect(screen.getByText(new RegExp(`要点カード 1 / ${n}`))).toBeInTheDocument()
+})
