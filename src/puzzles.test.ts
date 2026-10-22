@@ -246,3 +246,12 @@ it('was と were：主語に合う答え', () => {
     expect(q.choices[q.answer]).toBe(/複数|You|2人/.test(q.why) ? 'were' : 'was')
   }
 })
+
+it('英語なぞなぞは20問以上あり、訳・答えの意味・英語のしかけの解説がつく', () => {
+  expect(RIDDLES.length).toBeGreaterThanOrEqual(20)
+  expect(new Set(RIDDLES.map((r) => r.q)).size).toBe(RIDDLES.length)
+  for (const r of RIDDLES) expect(r.ja && r.aja && r.trick).toBeTruthy()
+  const q = riddleQ(() => 0)
+  expect(q.explain).toHaveLength(3)
+  expect(q.explain![2]).toMatch(/^【英語のしかけ】/)
+})

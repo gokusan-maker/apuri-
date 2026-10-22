@@ -1464,3 +1464,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-blank.filled.ng { background: #fee2e2; color: #b91c1c; }
 .long-new { display: inline-block; margin-right: 4px; padding: 0 6px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.65rem; font-weight: 800; vertical-align: middle; }
 .count-up { display: inline-block; min-width: 2ch; font-variant-numeric: tabular-nums; font-weight: 800; color: #d97706; }
+.puzzle-explain { margin: 8px 0; padding: 10px 12px; list-style: none; border-radius: 12px; background: color-mix(in srgb, #a78bfa 12%, var(--card)); font-size: 0.85rem; text-align: left; overflow-wrap: anywhere; }
+.puzzle-explain li + li { margin-top: 4px; }

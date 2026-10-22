@@ -84,7 +84,15 @@ export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
       {picked !== null && (
         <>
           <p className="feedback">{picked === q.answer ? '正解！' : `正解は「${q.choices[q.answer]}」`}</p>
-          <p className="stats-note">{q.why}</p>
+          {q.explain ? (
+            <ul className="puzzle-explain" aria-label="解説">
+              {q.explain.map((t) => (
+                <li key={t}>{t}</li>
+              ))}
+            </ul>
+          ) : (
+            <p className="stats-note">{q.why}</p>
+          )}
           <button className="flip" onClick={next}>
             {n >= count ? '結果を見る' : '次へ'}
           </button>

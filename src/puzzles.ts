@@ -4,7 +4,7 @@ import { shuffle, type Rng } from './quiz'
 import { EMOJI } from './emoji'
 import { WORDS, type Word } from './words'
 
-export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string }
+export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string; explain?: string[] } // explain：くわしい解説（行ごと）
 
 // 1語（スペースなし）で、最初の文字がちがう単語
 const SINGLE = WORDS.filter((w) => /^[a-z]+$/.test(w.en))
@@ -529,23 +529,37 @@ export function homophoneQ(rng: Rng = Math.random): PuzzleQ {
   }
 }
 
-// 英語なぞなぞ（昔から言われている短いなぞなぞ）
-export const RIDDLES: { q: string; ja: string; a: string }[] = [
-  { q: "I have keys, but I can't open locks. What am I?", ja: 'かぎ（キー）があるのに、錠は開けられない', a: 'piano' },
-  { q: 'What has hands but cannot clap?', ja: '手（針）があるのに、手をたたけない', a: 'clock' },
-  { q: 'What has a neck but no head?', ja: '首があるのに、頭がない', a: 'bottle' },
-  { q: 'What gets wetter the more it dries?', ja: 'ふけばふくほど、ぬれていく', a: 'towel' },
-  { q: 'What has an eye but cannot see?', ja: '目（穴）があるのに、見えない', a: 'needle' },
-  { q: 'What goes up but never comes down?', ja: '上がるけれど、下がらない', a: 'age' },
-  { q: 'What has many teeth but cannot bite?', ja: '歯がたくさんあるのに、かめない', a: 'comb' },
-  { q: 'What has legs but cannot walk?', ja: '脚があるのに、歩けない', a: 'table' },
-  { q: 'What can you catch but not throw?', ja: 'つかまえられる（ひける）のに、投げられない', a: 'cold' },
-  { q: 'What has a face and two hands but no arms or legs?', ja: '顔と2本の手（針）があるのに、腕も脚もない', a: 'clock' },
+// 英語なぞなぞ（英語圏で昔から言われている有名ななぞなぞ）
+// ja：問題の訳 / aja：答えの意味 / trick：英語のしかけ（1つの語が2つの意味をもつ など）
+export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: string }[] = [
+  { q: "I have keys, but I can't open locks. What am I?", ja: 'わたしにはキー（かぎ）があるけれど、錠は開けられない。わたしはなに？', a: 'piano', aja: 'ピアノ', trick: 'key には「かぎ」と「（ピアノの）鍵盤」の2つの意味がある。lock は「錠（じょう）」。' },
+  { q: 'What has hands but cannot clap?', ja: '手があるのに、手をたたけないものはなに？', a: 'clock', aja: '時計', trick: 'hand には「手」と「（時計の）針」の2つの意味がある。clap は「手をたたく」。' },
+  { q: 'What has a neck but no head?', ja: '首があるのに、頭がないものはなに？', a: 'bottle', aja: 'びん', trick: 'neck は「首」。びんの細くなった口のところも英語で neck という。' },
+  { q: 'What gets wetter the more it dries?', ja: 'かわかせばかわかすほど、ぬれていくものはなに？', a: 'towel', aja: 'タオル', trick: 'dry には「かわく」と「（ふいて）かわかす」の意味がある。タオルは体をふいてかわかすほど、自分はぬれていく。the 比較級, the 比較級 の形にも注目。' },
+  { q: 'What has an eye but cannot see?', ja: '目があるのに、見えないものはなに？', a: 'needle', aja: '針（ぬい針）', trick: 'eye には「目」と「針の穴（めど）」の意味がある。' },
+  { q: 'What goes up but never comes down?', ja: '上がるけれど、けっして下がらないものはなに？', a: 'age', aja: '年れい', trick: '年れい（age）は go up（上がる）だけで、come down（下がる）ことはない。never は「けっして〜ない」。' },
+  { q: 'What has many teeth but cannot bite?', ja: '歯がたくさんあるのに、かめないものはなに？', a: 'comb', aja: 'くし', trick: 'teeth は tooth（歯）の複数形。くしのギザギザも英語で teeth という。bite は「かむ」。' },
+  { q: 'What has legs but cannot walk?', ja: '脚があるのに、歩けないものはなに？', a: 'table', aja: 'テーブル', trick: 'leg は人の「脚」にも、テーブルやいすの「脚」にも使う。' },
+  { q: 'What can you catch but not throw?', ja: 'キャッチ（つかまえる）できるのに、投げられないものはなに？', a: 'cold', aja: 'かぜ', trick: 'catch a cold で「かぜをひく」。catch はボールを「とる」のほかに、病気に「かかる」の意味もある。' },
+  { q: 'What has a face and two hands but no arms or legs?', ja: '顔と2本の手があるのに、腕も脚もないものはなに？', a: 'clock', aja: '時計', trick: 'face は時計の「文字ばん」、hands は時計の「針」のこと。' },
+  { q: 'What has to be broken before you can use it?', ja: '使う前にこわさ（わら）なければならないものはなに？', a: 'egg', aja: 'たまご', trick: 'break は「こわす」と「（たまごを）わる」の両方。has to be broken は受け身「わられなければならない」。' },
+  { q: 'What is full of holes but still holds water?', ja: 'あなだらけなのに、水をためておけるものはなに？', a: 'sponge', aja: 'スポンジ', trick: 'be full of 〜 で「〜でいっぱい」。hold は「持つ・（水を）ためておく」。' },
+  { q: 'What can travel around the world while staying in a corner?', ja: 'すみっこにいたまま、世界中を旅できるものはなに？', a: 'stamp', aja: '切手', trick: '切手は封筒のすみ（corner）にはられたまま、手紙といっしょに世界中へ行く。while 〜ing で「〜しながら」。' },
+  { q: 'What has a head and a tail but no body?', ja: '頭としっぽがあるのに、体がないものはなに？', a: 'coin', aja: 'コイン（硬貨）', trick: 'コインの「表」を head、「裏」を tail という（Heads or tails?「表か裏か？」）。' },
+  { q: 'What has a mouth but never eats, and a bed but never sleeps?', ja: '口があるのに食べず、ベッドがあるのにねむらないものはなに？', a: 'river', aja: '川', trick: 'mouth は「河口」、bed は「川床（川の底）」の意味もある。' },
+  { q: 'What has words but never speaks?', ja: 'ことばがあるのに、けっして話さないものはなに？', a: 'book', aja: '本', trick: '本にはたくさんの words（ことば）が書いてあるけれど、本そのものは speak（話す）しない。' },
+  { q: 'What gets bigger the more you take away from it?', ja: 'とればとるほど、大きくなるものはなに？', a: 'hole', aja: 'あな', trick: 'あなは土を take away（取りのぞく）ほど大きくなる。the 比較級, the 比較級 の形（the more 〜）。' },
+  { q: 'What belongs to you, but other people use it more than you do?', ja: 'あなたのものなのに、あなたよりほかの人のほうがよく使うものはなに？', a: 'name', aja: '名前', trick: '自分の名前は、自分よりもまわりの人がよびかけるときに使う。belong to 〜 で「〜のものである」。' },
+  { q: 'What has a thumb and four fingers but is not alive?', ja: '親指と4本の指があるのに、生きていないものはなに？', a: 'glove', aja: '手ぶくろ', trick: 'thumb は「親指」。英語では親指を finger と分けて言うことが多い。alive は「生きている」。' },
+  { q: 'What can fill a room but takes up no space?', ja: '部屋をいっぱいにできるのに、場所をとらないものはなに？', a: 'light', aja: '光', trick: 'fill は「満たす」、take up space は「場所をとる」。光は部屋中を明るくするけれど、場所はとらない。' },
+  { q: 'What kind of room has no doors or windows?', ja: 'ドアもまども、ない部屋（ルーム）はなに？', a: 'mushroom', aja: 'きのこ', trick: 'mushroom（きのこ）の最後が room（部屋）になっている、ことば遊び。' },
+  { q: 'What starts with T, ends with T, and has T in it?', ja: 'T で始まり、T で終わり、中に T が入っているものはなに？', a: 'teapot', aja: 'ティーポット', trick: 'teapot は t で始まり t で終わる。そして中に tea（お茶＝ T と同じ発音）が入っている。' },
+  { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
 ]
 
 export function riddleQ(rng: Rng = Math.random): PuzzleQ {
   const r = RIDDLES[Math.floor(rng() * RIDDLES.length)]
   const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a)
   const choices = shuffle([r.a, ...shuffle(pool, rng).slice(0, 3)], rng)
-  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.ja} → ${r.a}`, wordId: idOf(r.a) ?? '' }
+  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`] }
 }
