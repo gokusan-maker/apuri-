@@ -355,3 +355,9 @@ it('解いた本数で記念バッジがふえる', async () => {
   expect(solvedBadges(30, 70)).toEqual(['🥉10本', '🥈30本'])
   expect(solvedBadges(70, 70)).toEqual(['🥉10本', '🥈30本', '🥇50本', '🏆全部制覇'])
 })
+
+it('タイトル選択の設問は8本以上で、正解は本当のタイトル', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.titleQ)
+  expect(ps.length).toBeGreaterThanOrEqual(8)
+  for (const p of ps) expect(p.titleQ!.choices).toHaveLength(4)
+})
