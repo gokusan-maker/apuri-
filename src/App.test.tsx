@@ -10,7 +10,7 @@ import { SPECIES } from './monster'
 
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
-  navTo('単語')
+  navTo('単語ゲーム')
   fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
 }
 
@@ -84,7 +84,7 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
   })
 
-  it('画面下のタブで ホーム／単語／文法／長文／設定 を切り替えられる', () => {
+  it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／長文ステージ／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('ホーム')).toHaveAttribute('aria-current', 'page')
@@ -483,7 +483,7 @@ describe('App', () => {
     localStorage.setItem('eitan:keys', '3')
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    navTo('長文')
+    navTo('長文ステージ')
     fireEvent.click(screen.getByText(/金の宝箱をあける/))
     const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
     expect(w.coins).toBe(30)
@@ -715,7 +715,7 @@ describe('App', () => {
     window.scrollTo = scroll as unknown as typeof window.scrollTo
     render(<App />)
     expect(screen.getByText('🎰 ガチャをひく！')).toBeInTheDocument()
-    navTo('長文')
+    navTo('長文ステージ')
     expect(screen.queryByText('📊 記録')).toBeNull()
     expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
     await new Promise((r) => requestAnimationFrame(() => r(null)))
@@ -724,7 +724,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/今日のチャレンジ：/))
     expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
-    navTo('長文')
+    navTo('長文ステージ')
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
@@ -845,7 +845,7 @@ describe('App', () => {
 
   it('長文ボスのタブに「ボス」「長文れんしゅう」「短い読解」があり、ミニゲームには読解がない', () => {
     render(<App />)
-    navTo('長文')
+    navTo('長文ステージ')
     fireEvent.click(screen.getByRole('tab', { name: '📖 長文' }))
     expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
     goMini()
@@ -858,7 +858,7 @@ describe('App', () => {
     localStorage.setItem('eitan:buddies', JSON.stringify({ grammar: { xp: 19 }, reading: { xp: 0 } }))
     render(<App />)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
-    navTo('文法')
+    navTo('文法チャレンジ')
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))

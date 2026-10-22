@@ -153,9 +153,9 @@ type WordTab = 'card' | 'mini' | 'time'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'home', icon: '🏠', label: 'ホーム' },
-  { id: 'word', icon: '🔤', label: '単語' },
-  { id: 'grammar', icon: '📐', label: '文法' },
-  { id: 'reading', icon: '🐉', label: '長文' },
+  { id: 'word', icon: '🔤', label: '単語ゲーム' },
+  { id: 'grammar', icon: '📐', label: '文法チャレンジ' },
+  { id: 'reading', icon: '🐉', label: '長文ステージ' },
   { id: 'settings', icon: '⚙️', label: '設定' },
 ]
 const WORD_TABS: { id: WordTab; label: string }[] = [
@@ -1750,7 +1750,18 @@ function App() {
             <span className="tab-icon" aria-hidden="true">
               {t.icon}
             </span>
-            {t.label}
+            {/* 長い名前（単語ゲームなど）は2行にして360pxでもはみ出さない */}
+            <span className="tab-label">
+              {t.label.length >= 5 ? (
+                <>
+                  {t.label.slice(0, 2)}
+                  <br />
+                  {t.label.slice(2)}
+                </>
+              ) : (
+                t.label
+              )}
+            </span>
           </button>
         ))}
       </nav>

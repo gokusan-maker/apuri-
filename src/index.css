@@ -214,6 +214,7 @@ h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); margin: 8px 0 4px; white-space: n
   color: var(--muted);
 }
 .tabbar button[aria-current='page'] { color: var(--accent); font-weight: 700; }
+.tabbar .tab-label { line-height: 1.15; text-align: center; white-space: nowrap; }
 .tab-icon { font-size: 1.3rem; }
 .stats-view h2 { margin: 0 0 8px; font-size: 1.2rem; }
 .choice:disabled { cursor: default; color: var(--fg); opacity: 0.55; }
