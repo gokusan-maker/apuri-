@@ -1600,3 +1600,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-today { color: #16a34a; font-size: 0.75em; font-weight: 700; }
 .buddy-row.crowned .buddy-card { position: relative; }
 .buddy-row.crowned .buddy-card::before { content: '👑'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 1.1rem; }
+.unit-new { color: #ef4444; font-size: 0.7em; font-weight: 700; }

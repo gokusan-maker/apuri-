@@ -49,6 +49,26 @@ type Props = {
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
+// 一度でも開いた文法の単元（まだ開いていない・まだ答えていない単元に NEW 印）
+const OPENED_KEY = 'eitan:grammar-opened'
+function loadOpened(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(OPENED_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+function markOpened(id: string): string[] {
+  const list = [...loadOpened().filter((x) => x !== id), id]
+  try {
+    localStorage.setItem(OPENED_KEY, JSON.stringify(list))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return list
+}
+
 const GAME_COUNT = 12 // 文法ゲームの種類（下のタイルの数）
 // 連続正解チャレンジ：まちがえるまで全単元の問題が続く。ベスト記録を残す
 export const RUN_BEST_XP = 20 // 連続正解のベスト更新で文法のなかまにあげる XP
@@ -71,6 +91,7 @@ function saveRunBest(n: number): void {
 export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest }: Props) {
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
   const [runBonus, setRunBonus] = useState(false) // ベスト更新のボーナスのお知らせ
+  const [opened, setOpened] = useState(loadOpened) // 一度でも開いた単元（NEW 印を消す）
   const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
@@ -126,6 +147,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   }
 
   function open(u: GrammarUnit) {
+    if (GRAMMAR.some((g) => g.id === u.id) && !opened.includes(u.id)) setOpened(markOpened(u.id))
     setHidden(null)
     setQuickPerfect(false)
     setRunBonus(false)
@@ -175,6 +197,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         <span>
           {stampMode && weakIdsOf(note).includes(u.id) && <span className="unit-weak" aria-label="まちがえたことがある単元">⚠ </span>}
           {u.title}
+          {stampMode && record[u.id] === undefined && !opened.includes(u.id) && <span className="unit-new"> NEW</span>}
         </span>
         <span className="grammar-score">
           {record[u.id] === undefined ? '未挑戦' : `${record[u.id]} / ${u.questions.length}`}

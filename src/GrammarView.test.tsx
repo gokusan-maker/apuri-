@@ -801,3 +801,15 @@ it('すぐ練習でまちがえると、結果に「まちがいノートに入�
   }
   expect(screen.getByText(/まちがえた1問をまちがいノートに入れたよ/)).toBeInTheDocument()
 })
+
+it('文法の単元一覧で、まだ開いていない単元に NEW 印がつき、開くと消える', () => {
+  localStorage.clear()
+  const { unmount } = render(<Grammar />)
+  const u = GRAMMAR[0]
+  const item = () => screen.getAllByText(u.title)[0].closest('button')!
+  expect(item().textContent).toContain('NEW')
+  fireEvent.click(item())
+  unmount()
+  render(<Grammar />)
+  expect(item().textContent).not.toContain('NEW')
+})
