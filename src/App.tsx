@@ -141,7 +141,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { SNACKS_PER_DAY, favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { buyAndMove, MOVE_LINE, SNACKS_PER_DAY, favSnackOf, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
 import { PartnerStatus } from './PartnerStatusView'
 import { Records } from './RecordsView'
@@ -1295,8 +1295,10 @@ function App() {
           wallet={wallet}
           monster={monster}
           onBuy={(id) => {
-            const next = buy(wallet, id)
-            if (next) setWallet(next)
+            const r = buyAndMove(wallet, id)
+            if (!r) return
+            setWallet(r.wallet)
+            if (r.moved) pushToast([{ id: 'move-room', text: `🏠 お引っこし完了！「${r.moved.name}」へ。${MOVE_LINE.en}（${MOVE_LINE.ja}）`, counter: 'answers', target: 0 }])
           }}
           onWear={(id) => updateMonster((m) => ({ ...m, wear: id ? toggleWear(m.wear, id) : undefined }))}
           onSetWear={(wear) => updateMonster((m) => ({ ...m, wear }))}

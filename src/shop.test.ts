@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
+import { buyAndMove, favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -140,4 +140,18 @@ it('きょうの好物は日替わりで、あげると XP 2倍', () => {
   const w = { coins: 100, owned: [] }
   expect(eat(w, { day: '', count: 0 }, fav.id, d)!.xp).toBe(fav.xp * 2)
   expect(eat(w, { day: '', count: 0 }, other.id, d)!.xp).toBe(other.xp)
+})
+
+describe('部屋を買ったらすぐお引っこし', () => {
+  it('部屋を買うとその部屋になり、着せ替えを買っても部屋はかわらない', () => {
+    const room = ROOMS[0]
+    const r = buyAndMove({ coins: 9999, owned: [] }, room.id)!
+    expect(r.wallet.room).toBe(room.id)
+    expect(r.wallet.owned).toContain(room.id)
+    expect(r.moved?.id).toBe(room.id)
+    const w = buyAndMove({ coins: 9999, owned: [], room: room.id }, ITEMS[0].id)!
+    expect(w.wallet.room).toBe(room.id)
+    expect(w.moved).toBeNull()
+    expect(buyAndMove({ coins: 0, owned: [] }, room.id)).toBeNull()
+  })
 })

@@ -73,6 +73,15 @@ export function buy(w: Wallet, id: string): Wallet | null {
   return { ...w, coins: w.coins - price, owned: [...w.owned, id], ...(coupons !== undefined ? { coupons } : {}) }
 }
 
+// 部屋を買ったら、そのまますぐお引っこし（部屋をその部屋にする）
+export function buyAndMove(w: Wallet, id: string): { wallet: Wallet; moved: Item | null } | null {
+  const next = buy(w, id)
+  if (!next) return null
+  const room = ROOMS.find((r) => r.id === id) ?? null
+  return { wallet: room ? { ...next, room: id } : next, moved: room }
+}
+export const MOVE_LINE = { en: 'Welcome to our new room!', ja: '新しい部屋へようこそ！' }
+
 const STORAGE_KEY = 'eitan:wallet'
 
 export function loadWallet(): Wallet {
