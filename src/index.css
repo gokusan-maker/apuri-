@@ -1346,3 +1346,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .proverb-book ul { margin: 4px 0; padding-left: 18px; }
 .gacha-btn.lucky-bag { background: linear-gradient(90deg, #dc2626, #f59e0b); color: #fff; }
 .pet-stamps { margin: 2px 0; font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; }
+.boss-btn.strong-boss { background: linear-gradient(90deg, #991b1b, #dc2626); color: #fff; }

@@ -331,3 +331,7 @@ export function recordBossTaBest(n: number): boolean {
   }
   return true
 }
+
+// 強化版ボス：たおしたボスの強いバージョン。HP1.5倍、勝つと🪙10
+export const STRONG_HP = Math.round(BOSS_HP * 1.5)
+export const STRONG_COINS = 10

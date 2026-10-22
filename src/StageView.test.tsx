@@ -197,3 +197,13 @@ it('週末ボスは週末だけ出て、HPが多い', () => {
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
 })
+
+it('たおしたボスには強化版で挑める（HPが多い）', () => {
+  localStorage.clear()
+  const record = Object.fromEntries(stagesOf('中1').map((s) => [s.id, 3]))
+  const bonus = vi.fn()
+  render(<Stages levels={['中1']} record={record} onClear={() => {}} boss={{ 中1: '2026-10-01' }} onRankBonus={bonus} />)
+  fireEvent.click(screen.getByText(/強化版「/))
+  expect(screen.getByText('💪 強化版の中1ボス')).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '150')
+})
