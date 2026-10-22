@@ -1263,4 +1263,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: "Why is the Sun's effect on the tides smaller than the Moon's?", choices: ['The Sun is much farther away.', 'The Sun is smaller than the Moon.', 'The Sun has no gravity.', 'The Sun moves too fast.'], answer: 0, why: '第3段落 because it is so much farther away。' },
     ],
   },
+  {
+    id: 'exam-video-call',
+    title: "Grandpa's First Video Call",
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "My grandfather lives alone in a small town far from our city. Last spring, my parents gave him a tablet so that we could see each other more often. However, he did not use it at all. When I called him, he said, 'These machines are too difficult ( A ) old people like me.'",
+      "During summer vacation, I stayed at his house for a week and decided to teach him. First, I wrote the steps on a large card with big letters. Then we practiced together every evening. He made many mistakes, but I never laughed at him. On the fifth day, he ( B ) a video call to my mother by himself. When her face appeared on the screen, he shouted, 'I did it!'",
+      "Now he calls us almost every Sunday. He even shows us the vegetables he grows in his garden. Teaching him was not easy, but I learned something important. When we try to help someone, being patient is as important ( C ) knowing the answer. I am glad that the distance between us feels much shorter now.",
+    ],
+    ja: [
+      '私の祖父は、私たちの住む町から遠くはなれた小さな町に一人で住んでいます。去年の春、両親は私たちがもっと会えるように、祖父にタブレットをおくりました。しかし、祖父はまったく使いませんでした。電話をすると、祖父は「こういう機械は、わしのような年寄りにはむずかしすぎる」と言いました。',
+      '夏休みに、私は祖父の家に1週間とまり、使い方を教えることにしました。まず、大きな文字で手順を大きなカードに書きました。それから毎晩いっしょに練習しました。祖父はたくさんまちがえましたが、私は決して笑いませんでした。5日目に、祖父は自分だけで母にビデオ通話をかけました。画面に母の顔が映ると、祖父は「できたぞ！」とさけびました。',
+      '今では祖父はほとんど毎週日曜日に電話をくれます。庭で育てている野菜まで見せてくれます。教えるのは簡単ではありませんでしたが、私は大切なことを学びました。だれかを助けようとするとき、がまん強くあることは、答えを知っていることと同じくらい大切なのです。私たちのあいだの距離が、今ではずっと短く感じられることをうれしく思います。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'of', 'at', 'with'], answer: 0, why: 'too 〜 for 人「人にとって〜すぎる」。' },
+      { id: 'B', choices: ['made', 'did', 'took', 'got'], answer: 0, why: 'make a call「電話をかける」。過去の文なので made。' },
+      { id: 'C', choices: ['as', 'than', 'so', 'like'], answer: 0, why: 'as 〜 as …「…と同じくらい〜」。' },
+    ],
+    tf: [
+      { statement: '祖父はタブレットをもらってすぐに使いはじめた。', answer: false, why: '第1段落 he did not use it at all。' },
+      { statement: '筆者は手順を大きな文字でカードに書いた。', answer: true, why: '第2段落 I wrote the steps on a large card with big letters。' },
+      { statement: '祖父は今、ほとんど毎週日曜日に電話をくれる。', answer: true, why: '第3段落 he calls us almost every Sunday。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn?', choices: ['Being patient is as important as knowing the answer.', 'Tablets are too difficult for everyone.', 'Video calls are better than visiting.', 'Grandparents should not live alone.'], answer: 0, why: '第3段落 being patient is as important as knowing the answer。' },
+    ],
+  },
 ]

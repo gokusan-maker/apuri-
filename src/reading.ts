@@ -1324,7 +1324,7 @@ export const PASSAGES: Passage[] = [
   },
   {
     id: 'garden-snail',
-    title: 'A Snail in the Rain',
+    title: 'A Snail on the Sidewalk',
     text: 'On my way to school, I found a snail on the sidewalk. People were walking near it, and I was worried. I picked it up carefully and put it on a leaf in the park. It slowly moved away. I felt happy all morning.',
     ja: '学校へ行くとちゅう、歩道にカタツムリを見つけました。近くを人が歩いていたので、私は心配になりました。そっと拾い上げて、公園の葉っぱの上に置きました。カタツムリはゆっくりと去っていきました。私は午前中ずっと幸せな気分でした。',
     questions: [
