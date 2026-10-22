@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'have-something-done': { wrong: 'I had my hair cutting yesterday.', right: 'I had my hair cut yesterday.', why: '髪は「切られる」側なので過去分詞 cut。have ＋ 物 ＋ 過去分詞。' },
+  'not-until': { wrong: 'It was not until yesterday when I knew it.', right: 'It was not until yesterday that I knew it.', why: 'It was not until 〜 のあとは that でつなぐ（強調構文）。' },
   'partial-negation': { wrong: 'All students don\'t like math.（全員がきらいという意味にとられやすい）', right: 'Not all students like math.', why: '「全員が〜というわけではない」は Not all ではじめると、はっきり部分否定になる。' },
   'gerund-subject': { wrong: 'Do you mind I open the window?', right: 'Do you mind my opening the window?', why: 'mind のあとは動名詞。動作をする人は所有格（my）か目的格（me）で前に置く。' },
   'formal-object-it': { wrong: 'I found easy to make friends.', right: 'I found it easy to make friends.', why: 'find のあとに形式目的語 it を置き、本当の目的語（to make friends）は後ろへ。' },
