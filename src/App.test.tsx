@@ -156,6 +156,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 200枚・ショップを開く'))
     fireEvent.click(screen.getByText(/属性のタマゴ（文法・読解のなかま）/))
+    expect(screen.getByText(/タマゴのかけら 0 \/ 5/)).toBeInTheDocument()
     expect(screen.getByText(/が仲間になった！/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(80)
     const box = JSON.parse(localStorage.getItem('eitan:buddy-box')!)

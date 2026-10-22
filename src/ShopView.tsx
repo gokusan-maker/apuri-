@@ -1,3 +1,4 @@
+import { PIECES_FOR_EGG } from './buddies'
 import { useEffect, useState } from 'react'
 import { BAG_MAX, BATTLE_ITEMS, type BattleBag, type BattleItemId } from './battleitems'
 import { formOf, type MonsterState, type Species } from './monster'
@@ -38,7 +39,7 @@ type Props = {
   bag?: BattleBag // 持っているバトルアイテム
   onBuyBattle?: (id: BattleItemId) => void
   favSnack?: string // 相棒のきょうの好物（おやつのid）
-  attrEgg?: { price: number; left: number; onBuy: () => string | null } // 属性のタマゴ（文法・読解のなかま）
+  attrEgg?: { price: number; left: number; pieces?: number; onBuy: () => string | null } // 属性のタマゴ（文法・読解のなかま）。pieces：タマゴのかけら
 }
 
 export type ShopTab = 'gacha' | 'snack' | 'item' | 'wear'
@@ -217,7 +218,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
 }
 
 // 属性のタマゴ：文法・読解のなかまがふえる（なにが出るかはお楽しみ）
-function AttrEgg({ price, left, onBuy, coins }: { price: number; left: number; onBuy: () => string | null; coins: number }) {
+function AttrEgg({ price, left, pieces, onBuy, coins }: { price: number; left: number; pieces?: number; onBuy: () => string | null; coins: number }) {
   const [msg, setMsg] = useState('')
   return (
     <div className="attr-egg">
@@ -225,6 +226,9 @@ function AttrEgg({ price, left, onBuy, coins }: { price: number; left: number; o
         🥚 属性のタマゴ（文法・読解のなかま）🪙{price}
         <small>{left === 0 ? 'もう全員なかまになったよ！' : 'なにが生まれるかはお楽しみ！'}</small>
       </button>
+      {pieces !== undefined && left > 0 && (
+        <p className="stats-note">🥚 タマゴのかけら {pieces} / {PIECES_FOR_EGG}（ボス部屋で勝つと1つ。そろうと無料でかえる）</p>
+      )}
       {msg && (
         <p className="level-up" role="status">
           {msg}

@@ -1268,6 +1268,7 @@ function App() {
           attrEgg={{
             price: ATTR_EGG_PRICE,
             left: lockedSpecies(buddies, buddyBox).length,
+            pieces: loadEggPieces(),
             onBuy: () => {
               if (wallet.coins < ATTR_EGG_PRICE) return null
               const r = hatchAttrEgg(buddies, buddyBox, Math.random())
