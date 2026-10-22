@@ -285,8 +285,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   }
 
   if (fighting) {
+    const nextLevel = !dailyFight && !strong && !sudden ? levels.slice(levels.indexOf(fighting) + 1).find((l) => bossUnlocked(l, record)) : undefined
     return (
       <Boss
+        key={fighting}
+        nextBoss={nextLevel ? { label: `次のボスへ ▶ ${BOSSES[nextLevel].name}`, onClick: () => setFighting(nextLevel) } : undefined}
         level={fighting}
         words={wordsOf([fighting])}
         golden={fighting === goldenLevelOf(LEVELS, dayKey())}

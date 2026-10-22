@@ -58,6 +58,18 @@ describe('ボス戦', () => {
     expect(screen.getByText('⚡逆転チャンス！ダメージ2倍')).toBeInTheDocument()
   })
 
+  it('勝ったあと「次のボスへ ▶」が出る', () => {
+    const onNext = vi.fn()
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} nextBoss={{ label: '次のボスへ ▶ テスト', onClick: onNext }} />)
+    expect(screen.queryByText('次のボスへ ▶ テスト')).toBeNull()
+    for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+      answer(true)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    fireEvent.click(screen.getByText('次のボスへ ▶ テスト'))
+    expect(onNext).toHaveBeenCalled()
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {
