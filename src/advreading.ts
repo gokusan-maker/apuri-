@@ -1543,4 +1543,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to critics, what is one problem with zoos?', choices: ['Large, intelligent animals often suffer in captivity.', 'Zoos do not attract enough visitors.', 'Breeding programs help too many species.', 'Children are afraid of wild animals.'], answer: 0, why: '第3段落 large, intelligent animals ... often suffer in captivity。' },
     ],
   },
+  {
+    id: 'toefl-tardigrade',
+    title: 'The Toughest Animal on Earth',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "If you collect a little wet moss from a garden and look at it under a microscope, you may find a tiny creature slowly walking on eight short legs. This animal, known as a tardigrade or 'water bear,' is usually less than one millimeter long. Despite its size, it is famous among scientists ( A ) its astonishing ability to survive conditions that would kill almost any other animal.",
+      "The secret lies in a state called the 'tun.' When its environment dries out, a tardigrade pulls in its legs, loses almost all the water in its body, and curls into a small, dry ball. In this state, its metabolism slows to an extremely low level, so that it appears to be dead. Yet when water returns, it can rehydrate and become active again, sometimes after many years. Researchers believe that special proteins ( B ) its cells from damage while they are dry.",
+      "In laboratory experiments, tardigrades in the tun state have survived temperatures far below freezing, very high pressure, and strong radiation. In 2007, some were even sent into space and exposed to its vacuum, and a number of them survived after returning to Earth. Scientists hope that studying these animals will help them develop new ways to ( C ) medicines and other biological materials without refrigeration.",
+    ],
+    ja: [
+      '庭から少しぬれたコケを集めて顕微鏡でのぞくと、8本の短いあしでゆっくり歩く小さな生き物が見つかるかもしれない。クマムシ（英語では「水のクマ」）として知られるこの動物は、ふつう体長1ミリメートルにも満たない。その小ささにもかかわらず、ほかのほとんどすべての動物が死んでしまうような環境を生きのびるおどろくべき能力で、科学者のあいだで有名である。',
+      'その秘密は「樽（たる）」とよばれる状態にある。まわりが乾燥すると、クマムシはあしを引っこめ、体の水分をほとんどすべて失い、小さな乾いた玉のように丸まる。この状態では代謝がきわめて低いレベルまで落ちるため、死んでいるように見える。しかし水がもどると、ふたたび水分を取りこんで動きだすことができ、それが何年もたってからのこともある。研究者たちは、乾いているあいだ、特別なたんぱく質が細胞を損傷から守っていると考えている。',
+      '実験室での実験では、樽の状態のクマムシは、氷点よりはるかに低い温度や、非常に高い圧力、強い放射線にもたえた。2007年には宇宙に送られて真空にさらされたものもあり、地球にもどったあとに生きのびていたものもいた。科学者たちは、この動物を研究することで、薬やそのほかの生物由来の物質を冷蔵せずに保存する新しい方法を開発できるのではないかと期待している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'by', 'to', 'with'], answer: 0, why: 'be famous for 〜「〜で有名だ」。' },
+      { id: 'B', choices: ['protect', 'protects', 'protecting', 'to protect'], answer: 0, why: 'that 節の主語 special proteins（複数）に対する動詞なので protect。' },
+      { id: 'C', choices: ['store', 'stores', 'stored', 'storing'], answer: 0, why: 'ways to ＋ 動詞の原形「〜する方法」。' },
+    ],
+    tf: [
+      { statement: 'クマムシはふつう体長1ミリメートルより小さい。', answer: true, why: '第1段落 usually less than one millimeter long。' },
+      { statement: '樽の状態のクマムシは、体の水分を多くたくわえている。', answer: false, why: '第2段落 loses almost all the water in its body。' },
+      { statement: '宇宙に送られたクマムシはすべて死んでしまった。', answer: false, why: '第3段落 a number of them survived。' },
+    ],
+    qa: [
+      { q: 'What happens to a tardigrade when its environment dries out?', choices: ['It curls into a small, dry ball and slows its metabolism.', 'It grows larger and searches for food.', 'It lays eggs and dies.', 'It swims to deeper water.'], answer: 0, why: '第2段落 curls into a small, dry ball ... its metabolism slows。' },
+    ],
+  },
 ]
