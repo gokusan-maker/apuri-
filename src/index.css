@@ -1476,3 +1476,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-passage p { margin: 4px 0; overflow-wrap: anywhere; }
 .en.boss-reading-q { font-size: 1rem; line-height: 1.5; text-align: left; overflow-wrap: anywhere; }
 .daily-gq-point { margin: 4px 0 0; font-size: 0.8rem; color: var(--muted); text-align: left; overflow-wrap: anywhere; }
+.riddle-book ul { margin: 0 0 8px; padding: 0; list-style: none; text-align: left; font-size: 0.85rem; }
+.riddle-book li { padding: 6px 0; border-top: 1px solid color-mix(in srgb, var(--muted) 20%, transparent); overflow-wrap: anywhere; }
+.riddle-book li span, .riddle-book li small { display: block; }
+.riddle-book li small { color: var(--muted); }

@@ -10,10 +10,11 @@ type Props = {
   make: () => PuzzleQ
   count?: number // 何問で区切るか
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
+  onResult?: (q: PuzzleQ, correct: boolean) => void // どの問題に答えたか（なぞなぞ図鑑など）
 }
 
 // 4択パズル：10問で区切って結果を出す
-export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
+export function Puzzle({ make, onAnswer, onResult, count = PUZZLE_COUNT }: Props) {
   const [q, setQ] = useState(make)
   const [picked, setPicked] = useState<number | null>(null)
   const [hintOpen, setHintOpen] = useState(false)
@@ -30,6 +31,7 @@ export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
       setScore(score + 1)
     } else playWrong()
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, q.wordId, 'quiz')
+    onResult?.(q, ok)
   }
 
   function next() {

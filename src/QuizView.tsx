@@ -1,3 +1,5 @@
+import { addRiddle, loadRiddleBook } from './riddlebook'
+import { RiddleBook } from './RiddleBookView'
 import { MissedList } from './MissedListView'
 import { useEffect, useState } from 'react'
 import { blankOut, canBlank } from './blank'
@@ -251,6 +253,7 @@ function loadCount(fallback: number): number {
 export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
+  const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
   const [direction, setDirection] = useState<Direction>(initial)
   const [menu, setMenu] = useState(false)
   // 今日のおすすめ：その種類でその日はじめて正解するとボーナスXP（ステージは対象外）
@@ -560,7 +563,8 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Puzzle key={`riddle-${count}`} make={() => riddleQ()} onAnswer={onAnswer} count={count} />
+        <Puzzle key={`riddle-${count}`} make={() => riddleQ()} onAnswer={onAnswer} count={count} onResult={(pq, ok) => ok && setRiddles((b) => addRiddle(b, pq.prompt))} />
+        <RiddleBook solved={riddles} />
       </>
     )
   }
