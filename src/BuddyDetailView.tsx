@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
+import { loadBuddyDays, ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
 
 type Props = {
   buddies: Buddies
@@ -13,6 +13,7 @@ type Props = {
 export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {} }, onSwitch }: Props) {
   const [editing, setEditing] = useState<Track | null>(null)
   const [draft, setDraft] = useState('')
+  const [days] = useState(loadBuddyDays)
   return (
     <div className="buddy-detail">
       {(['grammar', 'reading'] as Track[]).map((t) => {
@@ -54,6 +55,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
             <p className="stats-note">
               次のレベルまで あと {lv.need - lv.into} XP{next ? `・Lv.${next.minLv}で ？？？ に進化` : '・さいごの姿！'}
             </p>
+            <p className="stats-note">🗓 いっしょに学んだ日：{days[t]}日</p>
             {onSwitch && (
               <div className="buddy-switch" role="group" aria-label={`${TRACK_LABEL[t]}のなかまを入れかえる`}>
                 <p className="stats-note">🔁 入れかえ（属性「{ATTR_LABEL[t]}」のなかまだけ、このわくにおけます）</p>

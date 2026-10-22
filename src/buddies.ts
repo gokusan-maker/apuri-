@@ -256,13 +256,36 @@ export function loadBuddyToday(day: string): BuddyToday {
 }
 export function addBuddyToday(day: string, track: Track, amount: number): BuddyToday {
   const t = loadBuddyToday(day)
-  const next = { ...t, [track]: t[track] + Math.max(0, Math.round(amount)) }
+  const add = Math.max(0, Math.round(amount))
+  const next = { ...t, [track]: t[track] + add }
   try {
     localStorage.setItem(TODAY_KEY, JSON.stringify(next))
   } catch {
     // 保存できなくても続ける
   }
+  if (add > 0 && t[track] === 0) addBuddyDay(track)
   return next
+}
+
+// いっしょに学んだ日（経験値をもらった日の数）
+const DAYS_KEY = 'eitan:buddy-days'
+export type BuddyDays = Record<Track, number>
+export function loadBuddyDays(): BuddyDays {
+  try {
+    const v = JSON.parse(localStorage.getItem(DAYS_KEY) ?? 'null') as Partial<BuddyDays> | null
+    if (v) return { grammar: Number(v.grammar) || 0, reading: Number(v.reading) || 0 }
+  } catch {
+    // こわれていたら0から
+  }
+  return { grammar: 0, reading: 0 }
+}
+function addBuddyDay(track: Track) {
+  const d = loadBuddyDays()
+  try {
+    localStorage.setItem(DAYS_KEY, JSON.stringify({ ...d, [track]: d[track] + 1 }))
+  } catch {
+    // 保存できなくても続ける
+  }
 }
 
 // なかま図鑑のコンプボーナス：1つの種類の姿を全部そろえると🎟（種類ごとに1回）

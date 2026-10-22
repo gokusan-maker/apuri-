@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { expect, it } from 'vitest'
-import { renameBuddy, type Buddies } from './buddies'
+import { addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
 import { BuddyDetail } from './BuddyDetailView'
 
 it('文法のことばモンスター・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
@@ -50,4 +50,16 @@ it('入れかえると前のなかまは XP を持ったままベンチで待ち
   r = switchBuddy({ ...r.buddies, grammar: { ...r.buddies.grammar, xp: 30 } }, r.box, 'grammar', 'kotoba')
   expect(r.buddies.grammar).toEqual({ xp: 500, name: 'ポチ', species: 'kotoba' })
   expect(r.box.grammar.hoshi).toEqual({ xp: 30, species: 'hoshi' })
+})
+
+it('経験値をもらった日の数を「いっしょに学んだ日」として出す（同じ日は1回だけ数える）', () => {
+  localStorage.clear()
+  addBuddyToday('2026-10-20', 'grammar', 5)
+  addBuddyToday('2026-10-20', 'grammar', 5)
+  addBuddyToday('2026-10-21', 'grammar', 3)
+  addBuddyToday('2026-10-21', 'reading', 0)
+  expect(loadBuddyDays()).toEqual({ grammar: 2, reading: 0 })
+  render(<BuddyDetail buddies={{ grammar: { xp: 13 }, reading: { xp: 0 } }} onRename={() => {}} />)
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('いっしょに学んだ日：2日')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('いっしょに学んだ日：0日')
 })
