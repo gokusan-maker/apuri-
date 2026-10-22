@@ -1622,3 +1622,7 @@ button.team-level { display: block; width: 100%; border: none; background: trans
 .shop-stage .shop-preview { margin: 0; }
 .room-try { margin: 2px 0; padding: 2px 10px; border: none; border-radius: 999px; background: #ffffffd9; color: #1f2937; font-size: 0.8rem; } .room-try[aria-pressed='true'] { background: #fde68a; }
 .room-trying { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: 0 0 8px; font-size: 0.85rem; }
+/* ごきげんMAXの日は相棒のうしろの四角が金色に光る */
+.monster-stage.stage-max { box-shadow: 0 0 0 2px #fbbf24, 0 0 14px #fbbf24aa; }
+.monster-stage.stage-max::after { content: '✨'; position: absolute; top: -6px; right: -4px; font-size: 1rem; pointer-events: none; animation: twinkle 2s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .monster-stage.stage-max::after { animation: none; } }

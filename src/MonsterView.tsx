@@ -712,7 +712,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           {deco}
         </span>
       )}
-      <div className={`monster-stage${room ? ` room-${room}` : ''}`}>
+      <div className={`monster-stage${room ? ` room-${room}` : ''}${mood100 && mood100.points >= mood100.max ? ' stage-max' : ''}`}>
         <RoomScene room={room} align="xMaxYMax" />
       <button
         key={poke}

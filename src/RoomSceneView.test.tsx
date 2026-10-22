@@ -21,3 +21,12 @@ it('ホームでは部屋がカード全体ではなく、相棒のうしろの�
   expect(stage.querySelector('.scene-ocean')).not.toBeNull()
   expect(stage.querySelector('.monster-body')).not.toBeNull()
 })
+
+it('ごきげんMAXの日だけ、相棒のうしろの四角が光る', async () => {
+  const { Monster } = await import('./MonsterView')
+  const { container, unmount } = render(<Monster monster={{ xp: 0 } as never} mood100={{ points: 20, max: 20 }} />)
+  expect(container.querySelector('.monster-stage.stage-max')).not.toBeNull()
+  unmount()
+  const r = render(<Monster monster={{ xp: 0 } as never} mood100={{ points: 5, max: 20 }} />)
+  expect(r.container.querySelector('.monster-stage.stage-max')).toBeNull()
+})
