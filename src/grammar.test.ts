@@ -187,3 +187,16 @@ it('文法を3日続けるとボーナス、1日あくと1から', async () => {
   d = studyGrammarDay(r.days, '2026-11-03').days
   expect(d.streak).toBe(1)
 })
+
+it('きのうまちがえた問題を3問まで出す', async () => {
+  const { markWrongDay, yesterdayQuestions, yesterdayOf } = await import('./grammar')
+  localStorage.clear()
+  expect(yesterdayOf('2026-11-01')).toBe('2026-10-31')
+  const qs = GRAMMAR.slice(0, 2).flatMap((u) => u.questions)
+  let d: Record<string, string> = {}
+  for (const q of qs.slice(0, 4)) d = markWrongDay(q.sentence, '2026-10-19')
+  d = markWrongDay(qs[5].sentence, '2026-10-18')
+  const r = yesterdayQuestions(d, '2026-10-20')
+  expect(r).toHaveLength(3)
+  expect(r.every((q) => qs.slice(0, 4).includes(q))).toBe(true)
+})

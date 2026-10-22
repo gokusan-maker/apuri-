@@ -411,3 +411,12 @@ it('学年をえらぶと要点カードもその学年の単元だけになる'
   const n = GRAMMAR.filter((u) => gradeOf(u.id) === '中2').length
   expect(screen.getByText(new RegExp(`要点カード 1 / ${n}`))).toBeInTheDocument()
 })
+
+it('きのうまちがえた問題があると「きのうの復習」が出る', () => {
+  localStorage.clear()
+  const q = GRAMMAR[0].questions[0]
+  localStorage.setItem('eitan:grammar-wrong-days', JSON.stringify({ [q.sentence]: '2026-10-19' }))
+  render(<Grammar />)
+  fireEvent.click(screen.getByText(/きのうの復習（きのうまちがえた問題 1問）/))
+  expect(screen.getByRole('button', { name: q.choices[q.answer] })).toBeInTheDocument()
+})

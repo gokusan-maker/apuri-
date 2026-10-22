@@ -18,7 +18,7 @@ import { GrammarOdd } from './GrammarOddView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -55,6 +55,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [duel, setDuel] = useState(false)
   const [odd, setOdd] = useState(false)
   const [note, setNote] = useState(loadNotebook)
+  const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gDays, setGDays] = useState(loadGrammarDays)
   const [master, setMaster] = useState(loadMaster)
@@ -247,6 +248,17 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             }}
           >
             👾👾👾 文法モンスターラッシュ（{RUSH_COUNT}連戦・全勝で🪙{RUSH_GRAMMAR_COINS}）
+          </button>
+        )}
+        {stampMode && yesterdayQuestions(wrongDays, today).length > 0 && (
+          <button
+            className="list-link weak-grammar-btn"
+            onClick={() => {
+              open({ id: 'yesterday', title: '📅 きのうの復習', points: [], examples: [], questions: yesterdayQuestions(wrongDays, today) })
+              setStep(0)
+            }}
+          >
+            📅 きのうの復習（きのうまちがえた問題 {yesterdayQuestions(wrongDays, today).length}問）
           </button>
         )}
         {stampMode && notebookQuestions(note).length > 0 && (
@@ -520,6 +532,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         onStreakBonus?.()
       }
     }
+    if (stampMode && !ok) setWrongDays(markWrongDay(q.sentence, today))
     if (stampMode) {
       const nb = noteAfter(note, q.sentence, ok)
       if (nb.length !== note.length || nb.some((x, i) => x !== note[i])) {

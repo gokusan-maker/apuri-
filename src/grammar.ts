@@ -1737,3 +1737,33 @@ export function saveMaster(): void {
   }
 }
 export const allCleared = (r: GrammarRecord) => GRAMMAR.every((u) => r[u.id] === u.questions.length)
+
+// きのうの復習：まちがえた日を問題ごとに覚えておき、きのうまちがえた問題を3問出す
+const WRONG_DAY_KEY = 'eitan:grammar-wrong-days'
+export function loadWrongDays(): Record<string, string> {
+  try {
+    const v = JSON.parse(localStorage.getItem(WRONG_DAY_KEY) ?? '{}') as unknown
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    return Object.fromEntries(Object.entries(v).filter(([, d]) => typeof d === 'string')) as Record<string, string>
+  } catch {
+    return {}
+  }
+}
+export function markWrongDay(sentence: string, day: string): Record<string, string> {
+  const all = { ...loadWrongDays(), [sentence]: day }
+  // 古いものはけす（200問まで）
+  const kept = Object.fromEntries(Object.entries(all).slice(-200))
+  try {
+    localStorage.setItem(WRONG_DAY_KEY, JSON.stringify(kept))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return kept
+}
+export function yesterdayOf(day: string): string {
+  const [y, m, d] = day.split('-').map(Number)
+  const t = new Date(y, m - 1, d - 1)
+  return `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, '0')}-${String(t.getDate()).padStart(2, '0')}`
+}
+export const yesterdayQuestions = (days: Record<string, string>, today: string, n = 3): GrammarQuestion[] =>
+  notebookQuestions(Object.entries(days).filter(([, d]) => d === yesterdayOf(today)).map(([t]) => t)).slice(0, n)
