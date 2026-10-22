@@ -1212,6 +1212,39 @@ export const PASSAGES: Passage[] = [
       { q: '完成したパズルは今どこにある？', choices: ['リビングのかべ', '箱の中', '学校'], answer: 0 },
     ],
   },
+  {
+    id: 'karuta-game',
+    title: 'The Karuta Game',
+    text: 'On New Year\'s Day, my cousins and I played karuta at my grandmother\'s house. My grandmother read the poems, and we raced to touch the right card. My little cousin was the fastest of all because she knew every card by heart. I want to practice so that I can beat her next year.',
+    ja: '元日に、いとこたちと私は祖母の家でかるたをしました。祖母が歌を読み、私たちは正しい札に先にさわろうときそいました。小さいいとこが、全部の札を覚えていたので、いちばん速かったです。来年は勝てるように練習したいです。',
+    questions: [
+      { q: 'いつかるたをした？', choices: ['元日', '誕生日', '夏休み'], answer: 0 },
+      { q: '歌を読んだのはだれ？', choices: ['祖母', '母', 'いとこ'], answer: 0 },
+      { q: '小さいいとこが速かったのはなぜ？', choices: ['札を全部覚えていたから', '年上だったから', '近くにすわっていたから'], answer: 0 },
+    ],
+  },
+  {
+    id: 'sewing-bag',
+    title: 'My First Sewing Project',
+    text: 'In home economics class, we each made a small bag. I chose blue cloth with white stars. Using the sewing machine was scary at first, and my lines were not straight. But my teacher helped me, and I finished it in four lessons. Now I use it to carry my lunch.',
+    ja: '家庭科の授業で、一人一つずつ小さなバッグを作りました。私は白い星のついた青い布をえらびました。はじめはミシンを使うのがこわくて、ぬい目がまっすぐになりませんでした。でも先生が手伝ってくれて、4回の授業で完成しました。今はお弁当を入れるのに使っています。',
+    questions: [
+      { q: 'どんな布をえらんだ？', choices: ['白い星のついた青い布', '赤いチェックの布', '花がらの布'], answer: 0 },
+      { q: '何回の授業で完成した？', choices: ['2回', '4回', '6回'], answer: 1 },
+      { q: '今バッグを何に使っている？', choices: ['お弁当を入れる', '本を入れる', 'くつを入れる'], answer: 0 },
+    ],
+  },
+  {
+    id: 'goldfish',
+    title: 'Our Goldfish, Kintaro',
+    text: 'Three years ago, I won a goldfish at a summer festival. I named him Kintaro. At first he was as small as my finger, but now he is almost ten centimeters long. Every morning, he swims to the front of the tank when he sees me, because he knows it is time for breakfast.',
+    ja: '3年前、夏祭りで金魚をもらいました。私はその金魚を金太郎と名づけました。はじめは私の指くらいの大きさでしたが、今ではほとんど10センチの長さです。毎朝、私を見ると水そうの前のほうに泳いできます。朝ごはんの時間だとわかっているからです。',
+    questions: [
+      { q: '金魚はどこでもらった？', choices: ['夏祭り', 'ペットショップ', '友だちの家'], answer: 0 },
+      { q: '金太郎は今どれくらいの長さ？', choices: ['指くらい', 'ほとんど10センチ', '20センチ以上'], answer: 1 },
+      { q: '毎朝、金太郎が前に泳いでくるのはなぜ？', choices: ['朝ごはんの時間だとわかっているから', '水がつめたいから', 'こわいから'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
