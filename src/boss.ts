@@ -350,3 +350,21 @@ export const cheerStampOf = (n: number) => CHEER_STAMPS[(((n - 1) % CHEER_STAMPS
 // 負けたときの相棒のはげまし（たおせなかった回数で順番に）
 export const CHEER_ON_LOSE = ['だいじょうぶ！ つぎはきっと勝てるよ！', 'まちがえた単語をいっしょに覚えよう！', 'おしかった！ もう少しだったよ！', 'ぼくもいっしょにがんばるね！']
 export const cheerOnLose = (n: number) => CHEER_ON_LOSE[((n % CHEER_ON_LOSE.length) + CHEER_ON_LOSE.length) % CHEER_ON_LOSE.length]
+
+// ボス部屋のボスを全部たおしたごほうび（1回だけ）：称号「ボスハンター」と🎟
+export const HUNTER_TICKETS = 3
+const HUNTER_KEY = 'eitan:boss-hunter'
+export const loadBossHunter = (): boolean => {
+  try {
+    return localStorage.getItem(HUNTER_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+export function saveBossHunter(): void {
+  try {
+    localStorage.setItem(HUNTER_KEY, '1')
+  } catch {
+    // 保存できなくても続ける
+  }
+}

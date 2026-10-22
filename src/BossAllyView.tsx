@@ -25,12 +25,12 @@ export function TrackAlly({ track, buddy, label }: { track: Track; buddy: Buddy;
 }
 
 // ボス部屋のいちばん上：いっしょに戦う読解の竜
-export const BossAlly = ({ buddy, wins, total }: { buddy: Buddy; wins?: number; total?: number }) => (
+export const BossAlly = ({ buddy, wins, total, hunter = false }: { buddy: Buddy; wins?: number; total?: number; hunter?: boolean }) => (
   <>
     <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />
     {wins !== undefined && total !== undefined && (
       <p className="stats-note boss-record" aria-label="たおしたボスの数">
-        🏆 たおしたボス {wins} / {total}体
+        🏆 たおしたボス {wins} / {total}体{hunter ? '・🏹 称号「ボスハンター」' : '（全部たおすと称号と🎟）'}
       </p>
     )}
     <p className="stats-note egg-pieces">

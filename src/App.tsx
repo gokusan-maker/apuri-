@@ -147,12 +147,12 @@ import { Shop, type ShopTab } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, HUNTER_TICKETS, loadBossHunter, saveBossHunter, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
-import { LEVELS, WORDS, wordsOf, type Word } from './words'
+import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
 
 type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
 type WordTab = 'card' | 'mini' | 'time'
@@ -1354,7 +1354,7 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} />}
+          {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} />}
           {mode === 'reading' && (
           <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
             {READ_LEVELS.map((t) => (
@@ -1500,6 +1500,12 @@ function App() {
               }
               setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
               feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは読解のなかま（竜）へ
+              // 全部のボスをたおしたら1回だけ「ボスハンター」
+              if (!loadBossHunter() && Object.keys(BOSSES).every((k) => k === level || boss[k as Level])) {
+                saveBossHunter()
+                setWallet((w) => Array.from({ length: HUNTER_TICKETS }).reduce<typeof w>((x) => addTicket(x), w))
+                pushToast([{ id: 'boss-hunter', text: `🏹 全部のボスをたおした！ 称号「ボスハンター」と🎟${HUNTER_TICKETS}`, counter: 'answers', target: 0 }])
+              }
               // タマゴのかけら：5つで属性のタマゴが無料でかえる（全員なかまならコイン）
               const pieces = loadEggPieces() + 1
               if (pieces < PIECES_FOR_EGG) {

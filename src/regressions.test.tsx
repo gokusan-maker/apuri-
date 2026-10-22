@@ -2,7 +2,7 @@
 import { act, fireEvent, render, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
-import { BOSS_XP, STREAK_DRAGON_XP } from './boss'
+import { BOSS_XP, BOSSES, STREAK_DRAGON_XP } from './boss'
 import { LONG_PASSAGES } from './longreading'
 import { passageQs } from './readingboss'
 import { loadBuddies } from './buddies'
@@ -50,6 +50,36 @@ describe('再発防止', () => {
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(loadBuddies().reading.xp).toBe(expected) // 読解ボスの XP は長文のなかま（竜）へ
     expect(localStorage.getItem('eitan:egg-pieces')).toBe('1') // 勝つとタマゴのかけら
+  })
+
+  it('全部のボスをたおすと、称号「ボスハンター」と🎟がもらえる（1回だけ）', () => {
+    // ステージのボス（読解問題）で確かめる
+    const today = dayKey()
+    localStorage.removeItem('eitan:egg-pieces')
+    localStorage.removeItem('eitan:boss-hunter')
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    localStorage.setItem('eitan:boss', JSON.stringify(Object.fromEntries(Object.keys(BOSSES).filter((k) => k !== '熟語').map((k) => [k, '2026-10-01']))))
+    localStorage.setItem('eitan:levels', JSON.stringify(['熟語']))
+    localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスが入らないように
+    localStorage.setItem('eitan:stages', JSON.stringify(Object.fromEntries(stagesOf('熟語').map((s) => [s.id, 1]))))
+    // ミッションのボーナスが混ざらないよう、今日の分は受け取り済みにしておく
+    localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
+    render(<App />)
+    navTo('ボス部屋')
+    fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
+    // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
+    const all = LONG_PASSAGES.flatMap(passageQs)
+    let expected = BOSS_XP
+    for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
+      const en = document.querySelector('.boss .en')!.textContent
+      const q = all.find((x) => x.word.en === en)!
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+      expected += quizXp(c)
+      if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+    expect(localStorage.getItem('eitan:boss-hunter')).toBe('1')
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBeGreaterThanOrEqual(3)
   })
 
   it('ボス部屋で3連勝目に勝つと、読解の竜に連勝ボーナスXP', () => {
