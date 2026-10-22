@@ -182,3 +182,10 @@ it('レア以上が出ると相棒がよろこぶ（ふつうの色では出な�
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.queryByText(/🐣 モチ「/)).toBeNull()
 })
+
+it('ガチャの結果に「属性：単語」が出る（単語の相棒のわくにおける）', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('属性：単語')).toBeInTheDocument()
+})
