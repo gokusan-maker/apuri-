@@ -906,6 +906,18 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>
           もう1回
         </button>
+        {!lockDirection && (
+          <button
+            className="good next-unit-btn other-game-btn"
+            onClick={() => {
+              restart()
+              setMenu(true)
+              window.scrollTo?.({ top: 0 })
+            }}
+          >
+            🎮 ほかのミニゲーム
+          </button>
+        )}
       </section>
     )
   }

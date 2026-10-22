@@ -425,3 +425,14 @@ it('ミニゲームの選択ボタンに、いまのゲーム名と「🎮 ミ�
   fireEvent.click(btn)
   expect(screen.getByRole('group', { name: 'ミニゲームの種類' })).toBeInTheDocument()
 })
+
+it('ミニゲームの結果画面から「🎮 ほかのミニゲーム」でえらびなおせる', () => {
+  localStorage.clear()
+  const words = WORDS.slice(0, 6)
+  render(<Quiz words={words} count={1} />)
+  const en = screen.getByText(/^[a-z]+$/).textContent
+  fireEvent.click(screen.getByRole('button', { name: words.find((w) => w.en === en)!.ja }))
+  fireEvent.click(screen.getByText('次へ'))
+  fireEvent.click(screen.getByText('🎮 ほかのミニゲーム'))
+  expect(screen.getByRole('group', { name: 'ミニゲームの種類' })).toBeInTheDocument()
+})
