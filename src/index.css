@@ -1549,3 +1549,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .read-levels small { font-size: 0.6rem; color: var(--muted); overflow-wrap: anywhere; }
 .buddy-growth { color: #f59e0b; font-size: 0.75em; margin-left: 2px; }
 .read-levels .read-level-done { color: var(--accent); font-weight: 700; }
+.today-trio { display: block; width: 100%; margin-top: 6px; padding: 10px; border: none; border-radius: 12px; background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa); color: #fff; font-weight: 700; }
+.today-trio.done { background: color-mix(in srgb, var(--accent) 12%, var(--card)); color: inherit; font-weight: 400; text-align: center; }

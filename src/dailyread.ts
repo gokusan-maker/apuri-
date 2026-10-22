@@ -50,3 +50,9 @@ export const loadTodayWordsDay = () => load(WORDS_KEY)
 export const saveTodayWordsDay = (day: string) => save(WORDS_KEY, day)
 export const loadDailyShortDay = () => load(SHORT_KEY)
 export const saveDailyShortDay = (day: string) => save(SHORT_KEY, day)
+
+// 今日の課題を3つ全部クリアしたときのトリオボーナス（1日1回）：3体のなかまにそれぞれ XP
+export const TRIO_XP = 30
+const TRIO_KEY = 'eitan:trio-day'
+export const loadTrioDay = () => load(TRIO_KEY)
+export const saveTrioDay = (day: string) => save(TRIO_KEY, day)

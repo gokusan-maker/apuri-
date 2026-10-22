@@ -1473,6 +1473,11 @@ function App() {
         <>
           <TodayTasks
             today={today}
+            onTrio={(xp) => {
+              gainXp(xp, null)
+              feedTrack('grammar', xp)
+              feedTrack('reading', xp)
+            }}
             onGo={(w) => {
               if (w === 'reading') {
                 setShortGo(true)

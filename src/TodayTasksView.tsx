@@ -1,13 +1,16 @@
 import { dailyGrammar, loadDailyGrammarDay } from './grammar'
-import { dailyShort, loadDailyShortDay, loadTodayWordsDay, todayWords } from './dailyread'
+import { useState } from 'react'
+import { dailyShort, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, saveTrioDay, todayWords, TRIO_XP } from './dailyread'
 
 type Props = {
   today: string
   onGo: (where: 'word' | 'grammar' | 'reading') => void
+  onTrio?: (xp: number) => void // 3つ全部クリアのトリオボーナスを受け取った
 }
 
 // ホームの「今日の課題」：今日の単語（4択）・今日の文法・今日の読解（今日の単語が出てくるかんたんな短い英文）
-export function TodayTasks({ today, onGo }: Props) {
+export function TodayTasks({ today, onGo, onTrio }: Props) {
+  const [trio, setTrio] = useState(() => loadTrioDay() === today)
   const g = dailyGrammar(today)
   const r = dailyShort(today)
   const ws = todayWords(today)
@@ -31,6 +34,21 @@ export function TodayTasks({ today, onGo }: Props) {
           <span className="today-task-mark">{x.done ? '✅' : '▶'}</span>
         </button>
       ))}
+      {n === 3 &&
+        (trio ? (
+          <p className="today-trio done">🎁 トリオボーナス受け取りずみ（3体に +{TRIO_XP}XP）</p>
+        ) : (
+          <button
+            className="today-trio"
+            onClick={() => {
+              saveTrioDay(today)
+              setTrio(true)
+              onTrio?.(TRIO_XP)
+            }}
+          >
+            🎁 3つクリア！ トリオボーナスを受け取る（3体に +{TRIO_XP}XP）
+          </button>
+        ))}
     </section>
   )
 }
