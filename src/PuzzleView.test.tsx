@@ -43,3 +43,16 @@ it('なぞなぞは答えあわせで「問題と答えを英語で聞く」と�
   fireEvent.click(screen.getByText('🔊 問題と答えを英語で聞く'))
   expect(spoken).toEqual(['What has hands but cannot clap? clock.'])
 })
+
+it('なぞなぞは答える前に「💡 英語のヒントを見る」で1回ヒントが見られる', async () => {
+  const { riddleHint } = await import('./puzzles')
+  expect(riddleHint('piano')).toBe('「p」で始まる 5文字の英語')
+  expect(riddleHint('pine tree')).toBe('「p」で始まる 8文字の英語（2語）')
+  const make = () => ({ prompt: 'What has keys?', choices: ['piano', 'dog', 'cat', 'tree'], answer: 0, why: '', wordId: '', hint: riddleHint('piano') })
+  render(<Puzzle make={make} count={2} />)
+  fireEvent.click(screen.getByText('💡 英語のヒントを見る'))
+  expect(screen.getByText('💡 ヒント：「p」で始まる 5文字の英語')).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: 'piano' }))
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('💡 英語のヒントを見る')).toBeInTheDocument()
+})

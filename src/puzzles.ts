@@ -4,7 +4,7 @@ import { shuffle, type Rng } from './quiz'
 import { EMOJI } from './emoji'
 import { WORDS, type Word } from './words'
 
-export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string; explain?: string[]; say?: string } // explain：くわしい解説（行ごと） / say：答えあわせで🔊で聞ける英語
+export type PuzzleQ = { prompt: string; choices: string[]; answer: number; why: string; wordId: string; explain?: string[]; say?: string; hint?: string } // hint：答える前に1回見られるヒント / explain：くわしい解説（行ごと） / say：答えあわせで🔊で聞ける英語
 
 // 1語（スペースなし）で、最初の文字がちがう単語
 const SINGLE = WORDS.filter((w) => /^[a-z]+$/.test(w.en))
@@ -577,9 +577,12 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
   { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
 ]
 
+// なぞなぞのヒント：答えの最初の文字と文字数
+export const riddleHint = (a: string) => `「${a[0]}」で始まる ${a.replace(/ /g, '').length}文字の英語${a.includes(' ') ? '（2語）' : ''}`
+
 export function riddleQ(rng: Rng = Math.random): PuzzleQ {
   const r = RIDDLES[Math.floor(rng() * RIDDLES.length)]
   const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a)
   const choices = shuffle([r.a, ...shuffle(pool, rng).slice(0, 3)], rng)
-  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`], say: `${r.q} ${r.a}.` }
+  return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`], say: `${r.q} ${r.a}.`, hint: riddleHint(r.a) }
 }

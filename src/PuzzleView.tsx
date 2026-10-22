@@ -16,6 +16,7 @@ type Props = {
 export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
   const [q, setQ] = useState(make)
   const [picked, setPicked] = useState<number | null>(null)
+  const [hintOpen, setHintOpen] = useState(false)
   const [n, setN] = useState(1)
   const [score, setScore] = useState(0)
   const [done, setDone] = useState(false)
@@ -39,6 +40,7 @@ export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
     setN(n + 1)
     setQ(make())
     setPicked(null)
+    setHintOpen(false)
   }
 
   if (done) {
@@ -70,6 +72,15 @@ export function Puzzle({ make, onAnswer, count = PUZZLE_COUNT }: Props) {
         {n} / {count} 問目・正解 {score}
       </p>
       <p className="verb-ask puzzle-prompt">{q.prompt}</p>
+      {q.hint &&
+        picked === null &&
+        (hintOpen ? (
+          <p className="puzzle-hint">💡 ヒント：{q.hint}</p>
+        ) : (
+          <button className="list-link" onClick={() => setHintOpen(true)}>
+            💡 英語のヒントを見る
+          </button>
+        ))}
       <div className="choices">
         {q.choices.map((c, i) => {
           let cls = 'choice'
