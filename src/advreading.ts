@@ -1627,4 +1627,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why might a village become "little more than a stage set"?', choices: ['Local shops and residents are replaced as tourism grows.', 'The government builds a theater there.', 'Tourists stop visiting the village.', 'The village becomes too quiet.'], answer: 0, why: '第2段落 shops ... are replaced by souvenir stores ... push local residents to move elsewhere。' },
     ],
   },
+  {
+    id: 'toefl-drift',
+    title: 'The Moving Continents',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Look at a world map, and you may notice that the east coast of South America and the west coast of Africa seem to fit together like pieces of a puzzle. In 1912, a German scientist named Alfred Wegener suggested that this was no coincidence. He proposed that the continents had once been joined in a single huge landmass and had slowly drifted apart ( A ) millions of years.",
+      "Wegener collected impressive evidence. Fossils of the same ancient reptile were found in both South America and Africa, an animal that could not have swum across a wide ocean. Similar types of rock also appeared on coasts now separated by thousands of kilometers. Nevertheless, most scientists rejected his idea, mainly because he could not explain ( B ) force was strong enough to move entire continents.",
+      "The answer came decades later, after Wegener's death. In the 1950s and 1960s, studies of the ocean floor revealed that new crust is constantly forming along underwater mountain ranges and spreading outward. This discovery led to the theory of plate tectonics, which states that the Earth's surface is divided into large plates that move a few centimeters each year, roughly as fast as fingernails grow. Wegener's once-rejected idea had ( C ) to be largely correct.",
+    ],
+    ja: [
+      '世界地図を見ると、南アメリカの東海岸とアフリカの西海岸が、パズルのピースのようにぴったり合いそうなことに気づくかもしれない。1912年、アルフレッド・ウェゲナーというドイツの科学者は、これは偶然ではないと主張した。彼は、大陸はかつて一つの巨大な陸地としてつながっていて、何百万年もかけてゆっくりはなれていったのだと提唱した。',
+      'ウェゲナーは説得力のある証拠を集めた。同じ古代のは虫類の化石が南アメリカとアフリカの両方で見つかったが、それは広い海を泳いでわたれたはずのない動物だった。また、今では何千キロメートルもはなれた海岸に、似た種類の岩石が見られた。それにもかかわらず、多くの科学者は彼の考えを受け入れなかった。主な理由は、大陸全体を動かすほど強い力が何なのかを、彼が説明できなかったからである。',
+      'その答えが出たのは何十年もあと、ウェゲナーの死後だった。1950年代から1960年代にかけて、海底の研究によって、新しい地殻が海底の山脈にそってたえず生まれ、外側へ広がっていることが明らかになった。この発見がプレートテクトニクスの理論につながった。それは、地球の表面がいくつもの大きなプレートに分かれていて、それらが1年に数センチメートル、およそつめがのびるくらいの速さで動いているという理論である。かつて否定されたウェゲナーの考えは、大部分が正しかったとわかったのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['over', 'since', 'until', 'among'], answer: 0, why: 'over millions of years「何百万年もかけて」。期間全体にわたることを表す over。' },
+      { id: 'B', choices: ['what', 'that', 'which of', 'how much'], answer: 0, why: '疑問詞 what が主語の間接疑問「何の力が〜か」。' },
+      { id: 'C', choices: ['turned out', 'turned up', 'turned down', 'turned off'], answer: 0, why: 'turn out to be 〜「〜だとわかる」。had turned out to be correct。' },
+    ],
+    tf: [
+      { statement: 'ウェゲナーは、大陸はかつて一つにつながっていたと考えた。', answer: true, why: '第1段落 the continents had once been joined in a single huge landmass。' },
+      { statement: '多くの科学者は、ウェゲナーの考えをすぐに受け入れた。', answer: false, why: '第2段落 most scientists rejected his idea。' },
+      { statement: 'プレートは1年に数メートルの速さで動いている。', answer: false, why: '第3段落 a few centimeters each year。' },
+    ],
+    qa: [
+      { q: 'Why did most scientists reject Wegener\'s idea at first?', choices: ['He could not explain what force moved the continents.', 'He had no fossils as evidence.', 'He said the continents never moved.', 'He studied only the ocean floor.'], answer: 0, why: '第2段落 he could not explain what force was strong enough to move entire continents。' },
+    ],
+  },
 ]
