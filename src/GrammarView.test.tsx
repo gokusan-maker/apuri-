@@ -290,7 +290,8 @@ it('学年まとめテストはその学年の問題だけで、ベストが残�
   const pool = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
   for (let i = 0; i < 10; i++) {
     const text = document.querySelector('.blank-sentence')!.textContent!
-    const q = pool.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))!
+    const shown = [...document.querySelectorAll('.choice')].map((b) => b.textContent)
+    const q = pool.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]) && x.choices.every((c) => shown.includes(c)))!
     expect(q).toBeDefined()
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     fireEvent.click(screen.getByText('次へ'))
