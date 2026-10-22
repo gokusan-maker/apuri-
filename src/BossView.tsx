@@ -288,6 +288,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (!bag || bag[id] <= 0 || usedItems.includes(id) || won || lost) return
     setUsedItems([...usedItems, id])
     onUseItem?.(id)
+    if (id === 'lucky') {
+      setSkillMsg('🍀 ラッキーコイン！ この戦いのSランクボーナスが2倍')
+      return
+    }
     if (id === 'clock') {
       setSkillMsg('⏳ スローどけい！ 会心の一撃の時間が2倍になった')
       return
@@ -321,7 +325,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setDrop(d)
     if (d) onDrop!(d)
     onWinHearts?.(hearts)
-    if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS)
+    if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS * (usedItems.includes('lucky') ? 2 : 1))
   }
 
   function next() {
@@ -500,7 +504,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </button>
         )}
       </p>
-      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0 || bag.clock > 0) && (
+      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0 || bag.clock > 0 || bag.lucky > 0) && (
         <div className="battle-items">
           {BATTLE_ITEMS.filter((it) => bag[it.id] > 0).map((it) => (
             <button key={it.id} className="battle-item" disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)} onClick={() => applyItem(it.id)}>

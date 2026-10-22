@@ -150,7 +150,7 @@ it('チャンス問題が出る', () => {
 
 it('バトルアイテム：ばくだんで20ダメージ、おまもりでハート回復（1戦1回）', () => {
   const used: string[] = []
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1, clock: 0 }} onUseItem={(id) => used.push(id)} />)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1, clock: 0, lucky: 0 }} onUseItem={(id) => used.push(id)} />)
   expect(screen.getByText(/まもりのおまもりん/).closest('button')).toBeDisabled() // ハート満タン
   fireEvent.click(screen.getByText(/どっかんボンバー/))
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '80')
@@ -301,7 +301,7 @@ it('3問連続正解でことばの盾がたまり、次のまちがいでハー
 
 it('スローどけいを使うと、5秒かかっても会心の一撃', () => {
   const used: string[] = []
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 0, charm: 0, clock: 1 }} onUseItem={(id) => used.push(id)} />)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 0, charm: 0, clock: 1, lucky: 0 }} onUseItem={(id) => used.push(id)} />)
   fireEvent.click(screen.getByText(/スローどけい/))
   expect(used).toEqual(['clock'])
   vi.setSystemTime(Date.now() + 5000)
@@ -403,4 +403,16 @@ it('相棒のヒントでまちがいの選択肢が1つ消える（1戦1回）'
   answer(true)
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.queryByText(/あいぼうのヒント/)).toBeNull()
+})
+
+it('ラッキーコインを使うとSランクボーナスが2倍', () => {
+  const bonus = vi.fn()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onRankBonus={bonus} bag={{ bomb: 0, charm: 0, clock: 0, lucky: 1 }} onUseItem={() => {}} />)
+  fireEvent.click(screen.getByText(/ラッキーコイン/))
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
+  expect(bonus).toHaveBeenCalledWith(20)
 })
