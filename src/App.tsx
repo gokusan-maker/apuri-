@@ -3,8 +3,9 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { buddyForm, buddyLevel, feedBuddy, loadBuddies, saveBuddies, TRACK_LABEL, type Buddies, type Track } from './buddies'
+import { buddyForm, buddyLevel, feedBuddy, loadBuddies, renameBuddy, saveBuddies, TRACK_LABEL, type Buddies, type Track } from './buddies'
 import { BuddyRow } from './BuddyRowView'
+import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
@@ -1440,6 +1441,7 @@ function App() {
           )}
           {statsTab === 'buddy' && (
             <section className="card stats-view">
+              <BuddyDetail buddies={buddies} onRename={(t, n) => setBuddies((b) => renameBuddy(b, t, n))} />
               <EvolutionPreview monster={monster} />
               <PartnerStatus monster={monster} />
               <PartyView party={party} onSelect={(i) => setParty({ ...party, active: i })} onFav={(i) => setParty((p) => toggleFav(p, i))}

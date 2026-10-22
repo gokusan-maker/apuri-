@@ -1496,3 +1496,14 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-lv { font-size: 0.72rem; font-weight: 800; color: var(--accent); }
 .buddy-bar { width: 80%; height: 5px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
 .buddy-bar > span { display: block; height: 100%; background: var(--accent); }
+.buddy-detail { display: grid; gap: 8px; margin-bottom: 12px; text-align: left; }
+.buddy-box { padding: 10px 12px; border-radius: 14px; }
+.buddy-box.b-grammar { background: color-mix(in srgb, #86efac 20%, var(--card)); }
+.buddy-box.b-reading { background: color-mix(in srgb, #a78bfa 20%, var(--card)); }
+.buddy-box h3 { display: flex; align-items: center; justify-content: space-between; margin: 0 0 4px; font-size: 1rem; }
+.buddy-big { font-size: 2.4rem; }
+.buddy-box p { margin: 4px 0; overflow-wrap: anywhere; }
+.buddy-rename { display: flex; gap: 6px; }
+.buddy-rename input { flex: 1; min-width: 0; padding: 6px 8px; border-radius: 8px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); }
+.buddy-forms { margin: 4px 0 0; padding-left: 20px; font-size: 0.82rem; }
+.buddy-forms li.locked { color: var(--muted); }

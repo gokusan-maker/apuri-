@@ -65,3 +65,6 @@ export function feedBuddy(b: Buddies, track: Track, amount: number): { buddies: 
   const f1 = buddyForm(track, after)
   return { buddies: { ...b, [track]: after }, levelUp: buddyLevel(after).level > buddyLevel(before).level, evolved: f1 !== f0 ? f1 : null }
 }
+
+// なかまに名前をつける（空なら名前を消す）
+export const renameBuddy = (b: Buddies, track: Track, name: string): Buddies => ({ ...b, [track]: name ? { ...b[track], name } : { xp: b[track].xp } })
