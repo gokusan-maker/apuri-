@@ -1,5 +1,6 @@
+import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
-import { solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { grammarTags } from './longgrammar'
@@ -82,6 +83,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [history, setHistory] = useState(loadLongHistory)
   const [genreStats, setGenreStats] = useState(loadGenreStats)
   const [bookmarks, setBookmarks] = useState(loadBookmarks)
+  const [weekRes, setWeekRes] = useState(loadWeekResults)
   const [vocabQuiz, setVocabQuiz] = useState(false)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
@@ -193,6 +195,17 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           <p className="stats-note reading-level">
             🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）
           </p>
+        )}
+        {weekTop(weekRes, weekKey(today), weekKey).length > 0 && (
+          <div className="long-week-rank">
+            <p className="stats-note">🏆 今週の長文ランキング</p>
+            <ol>
+              {weekTop(weekRes, weekKey(today), weekKey).map((r) => {
+                const x = LONG_PASSAGES.find((y) => y.id === r.id)
+                return x ? <li key={r.id}>{`${shownTitle(x, LONG_PASSAGES.indexOf(x))}　${r.pct}%`}</li> : null
+              })}
+            </ol>
+          </div>
         )}
         {Object.keys(genreStats).length > 0 && (
           <p className="stats-note genre-stats">
@@ -873,6 +886,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             saveTypeStats(t)
             setReadWords(addReadWords(wordCount(p)))
             setHistory(pushLongHistory(score / total))
+            setWeekRes(pushWeekResult({ id: p.id, pct: Math.round((score / total) * 100), day: today }))
             setGenreStats(addGenreStats(genreOf(p), score, total))
             for (let i = 0; i < total; i++) onAnswer?.(i < score, i < score ? XP_LONG_ITEM : 0, '', 'quiz')
             if (score > (record[p.id] ?? -1)) {

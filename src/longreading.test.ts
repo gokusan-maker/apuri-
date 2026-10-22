@@ -367,3 +367,17 @@ it('語句整序は8本以上で、並べる語と答えの語が同じ', () => 
   expect(ps.length).toBeGreaterThanOrEqual(8)
   for (const p of ps) expect([...p.order!.words].sort()).toEqual(p.order!.answer.split(' ').sort())
 })
+
+it('今週のランキングは今週の結果だけで、同じ長文はベストの点', async () => {
+  const { weekTop } = await import('./longreading')
+  const { weekKey } = await import('./rareboss')
+  const list = [
+    { id: 'a', pct: 60, day: '2026-10-19' },
+    { id: 'a', pct: 90, day: '2026-10-20' },
+    { id: 'b', pct: 70, day: '2026-10-21' },
+    { id: 'c', pct: 100, day: '2026-10-12' }, // 先週
+    { id: 'd', pct: 50, day: '2026-10-22' },
+    { id: 'e', pct: 80, day: '2026-10-22' },
+  ]
+  expect(weekTop(list, '2026-10-19', weekKey).map((r) => [r.id, r.pct])).toEqual([['a', 90], ['e', 80], ['b', 70]])
+})

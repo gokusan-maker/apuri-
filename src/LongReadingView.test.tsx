@@ -259,6 +259,7 @@ it('満点をとると最短タイムが記録される', () => {
   fireEvent.click(screen.getByText('← 長文の一覧'))
   expect(screen.getByText(/直近1本の正答率 100%/)).toBeInTheDocument()
   expect(screen.getByText(/📊 ジャンル別：.*100%/)).toBeInTheDocument()
+  expect(screen.getByText('🏆 今週の長文ランキング')).toBeInTheDocument()
 })
 
 it('今日の1本のボタンでその日の長文が開く', async () => {

@@ -1350,3 +1350,5 @@ button:focus:not(:focus-visible) { outline: none; }
 /* スタンプ・ポーズの行は相棒カードの下に1行でおく（横ならびの情報欄をせまくしない） */
 .monster { flex-wrap: wrap; }
 .monster > .pet-stamps, .monster > .pose-label { flex-basis: 100%; order: 10; margin: 0; text-align: center; }
+.long-week-rank ol { margin: 2px 0 6px; padding-left: 20px; text-align: left; font-size: 0.85rem; }
+.long-week-rank .stats-note { margin: 4px 0 0; }

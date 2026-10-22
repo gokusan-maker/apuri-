@@ -3186,3 +3186,30 @@ export function solvedBadges(solved: number, total: number): string[] {
   if (total > 0 && solved >= total) out.push('🏆全部制覇')
   return out
 }
+
+// 今週の長文ランキング：今週解いた長文の点数（正答率）ベスト3
+export type WeekResult = { id: string; pct: number; day: string }
+const WEEK_KEY = 'eitan:long-week'
+export function loadWeekResults(): WeekResult[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(WEEK_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is WeekResult => isObj(x) && typeof x.id === 'string' && typeof x.pct === 'number' && typeof x.day === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function pushWeekResult(r: WeekResult): WeekResult[] {
+  const list = [...loadWeekResults(), r].slice(-100)
+  try {
+    localStorage.setItem(WEEK_KEY, JSON.stringify(list))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return list
+}
+// 週はじめ（月曜日）が同じ結果だけ。同じ長文はいちばんよい点
+export function weekTop(list: WeekResult[], week: string, weekOf: (day: string) => string, n = 3): WeekResult[] {
+  const best = new Map<string, WeekResult>()
+  for (const r of list) if (weekOf(r.day) === week && (best.get(r.id)?.pct ?? -1) < r.pct) best.set(r.id, r)
+  return [...best.values()].sort((a, b) => b.pct - a.pct).slice(0, n)
+}
