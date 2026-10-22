@@ -4270,6 +4270,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Using a sharp knife can help us cry less.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'hiccups',
+    title: 'What Are Hiccups?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Almost everyone has had hiccups. They can start suddenly, and they can be ( A ) hard to stop. But what are they?',
+      'Under your lungs, there is a large muscle called the diaphragm. It moves down when you breathe in. Sometimes this muscle moves suddenly by itself. Air rushes into your body, and a part of your throat closes very quickly. This makes the "hic" sound.',
+      'Hiccups often start when people eat too fast or drink fizzy drinks. A full stomach can push ( B ) the diaphragm and make it move strangely.',
+      'Most hiccups stop by themselves after a few minutes. Some people drink a glass of water slowly, and others hold their breath for a short time. Nobody knows ( C ) way works best, but you can try them next time.',
+    ],
+    ja: [
+      'ほとんどだれもが、しゃっくりをしたことがあります。しゃっくりはとつぜん始まり、止めるのがとてもむずかしいことがあります。でも、しゃっくりとは何なのでしょうか。',
+      '肺の下には、横隔膜とよばれる大きな筋肉があります。息をすうとき、それは下に動きます。ときどき、この筋肉がひとりでにとつぜん動くことがあります。空気が体の中に急に入り、のどの一部がとてもすばやく閉じます。これが「ヒック」という音を出すのです。',
+      'しゃっくりは、早く食べすぎたり、炭酸飲料を飲んだりしたときによく始まります。いっぱいになった胃が横隔膜をおして、おかしな動きをさせることがあるのです。',
+      'ほとんどのしゃっくりは、数分たつと自然に止まります。水をゆっくり1ぱい飲む人もいれば、少しのあいだ息を止める人もいます。どの方法が一番きくのかはだれにもわかりませんが、次のときにためしてみてもいいでしょう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['much', 'very', 'many', 'more'], answer: 1, why: '形容詞 hard を強めるのは very（とても）。' },
+      { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 2, why: 'push on 〜 で「〜をおす（〜に力をかける）」。' },
+      { id: 'C', choices: ['what', 'which', 'who', 'whose'], answer: 1, why: 'which way で「どの方法」。いくつかの中から選ぶので which。' },
+    ],
+    underline: { phrase: 'by themselves', choices: ['自然に（何もしなくても）', 'ほかの人といっしょに', '薬を飲んだあとに', '大きな音で'], answer: 0, why: 'by themselves は「ひとりでに・自然に」。数分たつと止まると書いてある。' },
+    tf: [
+      { statement: 'The diaphragm is a muscle under the lungs.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'The "hic" sound comes from the stomach.', answer: false, why: 'のどの一部がすばやく閉じて音が出る。' },
+      { statement: 'Eating too fast can start hiccups.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Most hiccups last for many hours.', answer: false, why: 'ほとんどは数分で止まる。' },
+      { statement: 'Scientists know the best way to stop hiccups.', answer: false, why: 'どの方法が一番きくかはだれにもわからない。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
