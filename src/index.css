@@ -1509,3 +1509,17 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-forms li.locked { color: var(--muted); }
 .buddy-evolve-fig { margin: 0; font-size: 5rem; line-height: 1.1; animation: pop 0.8s ease-out 2; }
 @media (prefers-reduced-motion: reduce) { .buddy-evolve-fig { animation: none; } }
+.today-tasks { margin: 10px 0; padding: 10px 12px; border-radius: 16px; background: var(--card); box-shadow: 0 2px 8px rgb(0 0 0 / 0.06); text-align: left; }
+.today-tasks-title { display: flex; justify-content: space-between; margin: 0 0 6px; font-weight: 800; }
+.today-tasks-title span { font-size: 0.8rem; color: var(--muted); }
+.today-task { display: grid; grid-template-columns: 4.2em 1fr auto; align-items: center; gap: 6px; width: 100%; margin: 4px 0; padding: 8px 10px; border: none; border-radius: 12px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); color: var(--fg); text-align: left; }
+.today-task.done { opacity: 0.7; }
+.today-task-tag { font-weight: 800; font-size: 0.82rem; white-space: nowrap; }
+.today-task-text { min-width: 0; font-size: 0.82rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.today-task-mark { font-weight: 800; color: var(--accent); }
+.today-section-title { margin: 14px 0 6px; font-weight: 800; text-align: left; }
+.today-grammar { margin: 10px 0; padding: 10px 12px; border-radius: 16px; background: color-mix(in srgb, #86efac 14%, var(--card)); text-align: left; }
+.today-grammar .today-section-title { margin-top: 0; }
+.today-grammar-point { margin: 0 0 8px; font-size: 0.85rem; overflow-wrap: anywhere; }
+.today-grammar-q { margin: 6px 0; font-weight: 700; overflow-wrap: anywhere; }
+.today-grammar-done { margin: 6px 0; font-weight: 700; }

@@ -6,6 +6,8 @@ import { Reading } from './ReadingView'
 import { buddyForm, buddyLevel, feedBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
+import { TodayTasks } from './TodayTasksView'
+import { TodayGrammar } from './TodayGrammarView'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
@@ -146,15 +148,20 @@ import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLe
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf, type Word } from './words'
 
-type Tab = 'card' | 'stage' | 'quiz' | 'time' | 'stats' | 'settings'
+type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'settings'
+type WordTab = 'card' | 'mini' | 'time'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
-  { id: 'card', icon: '🃏', label: 'カード' },
-  { id: 'stage', icon: '🐉', label: '長文ボス' },
-  { id: 'quiz', icon: '🎮', label: 'ミニゲーム' },
-  { id: 'time', icon: '📐', label: '文法' }, // id は保存データのため 'time' のまま（中身は文法）
-  { id: 'stats', icon: '📊', label: '記録' },
+  { id: 'home', icon: '🏠', label: 'ホーム' },
+  { id: 'word', icon: '🔤', label: '単語' },
+  { id: 'grammar', icon: '📐', label: '文法' },
+  { id: 'reading', icon: '🐉', label: '長文' },
   { id: 'settings', icon: '⚙️', label: '設定' },
+]
+const WORD_TABS: { id: WordTab; label: string }[] = [
+  { id: 'card', label: '🃏 カード' },
+  { id: 'mini', label: '🎮 ミニゲーム' },
+  { id: 'time', label: '⏱ タイムアタック' },
 ]
 
 const STAGE_TABS: { id: 'boss' | 'long' | 'short'; label: string }[] = [
@@ -201,7 +208,7 @@ const BASE_BOSS_NAMES = [...Object.values(BOSSES).map((b) => b.name), ...UNIV_BO
 
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
-  const [mode, setMode] = useState<Tab>('card')
+  const [mode, setMode] = useState<Tab>('home')
   const [showList, setShowList] = useState(false)
   const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
   const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
@@ -317,7 +324,7 @@ function App() {
   const [stageTab, setStageTab] = useState<'boss' | 'long' | 'short'>('boss') // 長文ボスのタブの中
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペット・長文の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
-  const [showTimeAttack, setShowTimeAttack] = useState(false) // ミニゲームの中のタイムアタック
+  const [wordTab, setWordTab] = useState<WordTab>('card') // 単語タブの中（カード・ミニゲーム・タイムアタック）
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
   const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
@@ -332,7 +339,7 @@ function App() {
   }
   const toContent = () => requestAnimationFrame(() => window.scrollTo?.({ top: 0 }))
   const [showChallenge, setShowChallenge] = useState(false)
-  const home = mode === 'card' && !showShop && !showChallenge // ホーム（相棒・あそび）を出すのはカードのタブだけ
+  const home = mode === 'home' && !showShop && !showChallenge // ホーム（相棒・あそび・今日の課題・記録）
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
@@ -724,12 +731,14 @@ function App() {
   function startCards(kind: Focus) {
     setCardFocus({ kind, done: [] })
     setShowList(false)
-    setMode('card')
+    setMode('word')
+    setWordTab('card')
   }
 
   function startQuiz(kind: Focus) {
     setQuizFocus(kind)
-    setMode('quiz')
+    setMode('word')
+    setWordTab('mini')
   }
 
   const [shown, setShown] = useState(0) // 同じカードがもう一度出ても新しいカードとして扱う
@@ -808,135 +817,8 @@ function App() {
     return out
   }
 
-  return (
-    <main className="app">
-      <header>
-        <div className="top">
-          <h1>イングリッシュモンスター</h1>
-          <p className={`streak${streakDays > 0 ? ' on' : ''}`} aria-label={`連続学習 ${streakDays} 日`}>
-            🔥 {streakDays}日
-          </p>
-        </div>
-        {home && (
-          <>
-          {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
-          {hour >= 18 && studiedToday === 0 && streakDays > 0 && (
-            <p className="weak-banner streak-warn" role="status">
-              🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
-            </p>
-          )}
-          {seasonEvent && (
-            <p className="weekend season-event">
-              {seasonEvent.icon} {seasonEvent.text}
-            </p>
-          )}
-          <Monster
-            deco={seasonEvent?.icon}
-            sleepy={hour >= 22 || hour < 5}
-            night={isNight(hour)}
-            season={seasonFxOf(today)}
-            learned={learnedSample}
-            shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
-            monster={monster}
-            onRename={(name) => updateMonster((m) => rename(m, name))}
-            coins={wallet.coins}
-            onShop={() => {
-              setShopTab(undefined)
-              setShowShop(true)
-              toContent()
-            }}
-            room={wallet.room}
-            title={titleFor(totals.studyDays ?? 0)}
-            cheer={cheer}
-            feeling={feelingFor(studiedToday, hour)}
-            gain={gain}
-            mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
-            leveledUp={leveledUp}
-            evolved={evolved}
-            friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
-            onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
-            onPet={() => cheerUp(1)}
-            mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
-            epithet={epithetOf(totalWins(loadBook()))}
-            onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
-            onPetStampTicket={() => {
-              setWallet((w) => addTicket(w))
-              pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
-            }}
-          />
-          <BuddyRow
-            wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
-            wordName={monster.name ?? formOf(monster).name}
-            wordLevel={levelInfo(monster.xp).level}
-            buddies={buddies}
-            onGo={(w) => {
-              setShowShop(false)
-              setShowChallenge(false)
-              setMode(w === 'grammar' ? 'time' : w === 'reading' ? 'stage' : 'quiz')
-              toContent()
-            }}
-          />
-          <button
-            className="home-gacha-btn"
-            onClick={() => {
-              setShopTab(undefined)
-              setShowShop(true)
-              toContent()
-            }}
-          >
-            <span className="home-gacha-main">
-              🎰 ガチャをひく！
-              {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
-            </span>
-            <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
-          </button>
-          {dailyBossDay !== today && (
-            <button
-              className="challenge-btn daily-boss-go"
-              onClick={() => {
-                setDailyGo(true)
-                setStageTab('boss')
-                setMode('stage')
-                toContent()
-              }}
-            >
-              ⚔ 今日のボスに挑む（勝つと🪙{DAILY_BOSS_COINS}）
-            </button>
-          )}
-          {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (
-            <button
-              className="challenge-btn hungry-btn"
-              onClick={() => {
-                setShopTab('snack')
-                setShowShop(true)
-                toContent()
-              }}
-            >
-              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」（おやつをあげる）
-            </button>
-          )}
-          {birthdayAge(bday, today) > 0 && (
-            <button
-              className="challenge-btn birthday-btn"
-              onClick={() => {
-                const age = birthdayAge(bday, today)
-                setBday({ ...bday, lastYear: Number(today.slice(0, 4)) })
-                setWallet((w) => addTicket(w))
-                pushToast([{ id: 'birthday', text: `🎂 ${monster.name ?? formOf(monster).name}、${age}さいのおたんじょう日おめでとう！ 🎟ガチャチケットを${BIRTHDAY_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
-              }}
-            >
-              🎂 今日は{monster.name ?? formOf(monster).name}のおたんじょう日！（{birthdayAge(bday, today)}さい）お祝いする
-            </button>
-          )}
-          <p className="stats">
-            今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
-          </p>
-          {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
-            <p className="exam">
-              📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
-              <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
-            </p>
-          )}
+  // 「きょうのあそび」：単語タブのミニゲームの上に出す
+  const playBox = (
           <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
             <summary>🎮 きょうのあそび（おさんぽ・すごろく・じゃんけん など）</summary>
             <p className={`omikuji o-${omikujiOf(today).id}`}>
@@ -1029,6 +911,223 @@ function App() {
               }}
             />
           </details>
+  )
+  // カードで学ぶ（ホームの「今日の単語」と、単語タブのカードで使う）
+  const cardStudy = (
+        cardFocus ? (
+          <>
+            <p className="weak-banner">
+              {FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードで復習中（のこり{' '}
+              {focusList(cardFocus.kind).filter((w) => !cardFocus.done.includes(w.id)).length}語）
+              <button onClick={() => setCardFocus(null)}>やめる</button>
+            </p>
+            {focusCard ? (
+              <Card
+                key={`focus-${focusCard.id}`}
+                card={focusCard}
+                onAnswer={answerFocus}
+                autoSpeak={settings.autoSpeak}
+                jaFirst={settings.cardJaFirst}
+                emojiHint={settings.easy}
+                hideExampleJa={settings.hideExampleJa}
+                lookup={lookup}
+                favorite={favorites.includes(focusCard.id)}
+                note={notes[focusCard.id]}
+                onNote={(t) => setNotes((n) => setNote(n, focusCard.id, t))}
+                onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
+              />
+            ) : (
+              <p className="done">{FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードを一周しました 💪</p>
+            )}
+          </>
+        ) : showList ? (
+          <WordList
+            words={words}
+            progress={progress}
+            onClose={() => setShowList(false)}
+            favorites={favorites}
+            onToggleFavorite={(id) => setFavorites((f) => toggleFavorite(f, id))}
+            notes={notes}
+            onNote={(id, t) => setNotes((n) => setNote(n, id, t))}
+            onPractice={(id) => {
+              setPicked([id])
+              startCards('pick')
+            }}
+          />
+        ) : (
+          <>
+            {cardsDone + queue.length > 0 && (
+              <div className="card-progress" aria-label={`今日のカード ${cardsDone} / ${cardsDone + queue.length}`}>
+                <div className="goal-bar">
+                  <div className="goal-fill" style={{ width: `${(cardsDone / (cardsDone + queue.length)) * 100}%` }} />
+                </div>
+                <span>
+                  {cardsDone} / {cardsDone + queue.length}
+                </span>
+              </div>
+            )}
+            <Card
+              key={`${card?.id}-${shown}`}
+              card={card}
+              onAnswer={(r) => {
+                setCardTouched(true)
+                answer(r)
+              }}
+              autoSpeak={settings.autoSpeak}
+              autoStart={cardTouched}
+              jaFirst={settings.cardJaFirst}
+              emojiHint={settings.easy}
+              hideExampleJa={settings.hideExampleJa}
+              lookup={lookup}
+              favorite={!!card && favorites.includes(card.id)}
+              note={card ? notes[card.id] : undefined}
+              onNote={(t) => card && setNotes((n) => setNote(n, card.id, t))}
+              onToggleFavorite={() => card && setFavorites((f) => toggleFavorite(f, card.id))}
+              onMore={
+                words.some((w) => !progress[w.id])
+                  ? () => setDaily({ day: today, count: newToday, extra: extraToday + 5 })
+                  : undefined
+              }
+              onQuiz={() => setWordTab('mini')}
+              onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
+            />
+            <button className="list-link" onClick={() => setShowList(true)}>
+              📚 単語一覧・さがす
+            </button>
+          </>
+        )
+  )
+
+  return (
+    <main className="app">
+      <header>
+        <div className="top">
+          <h1>イングリッシュモンスター</h1>
+          <p className={`streak${streakDays > 0 ? ' on' : ''}`} aria-label={`連続学習 ${streakDays} 日`}>
+            🔥 {streakDays}日
+          </p>
+        </div>
+        {home && (
+          <>
+          {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
+          {hour >= 18 && studiedToday === 0 && streakDays > 0 && (
+            <p className="weak-banner streak-warn" role="status">
+              🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
+            </p>
+          )}
+          {seasonEvent && (
+            <p className="weekend season-event">
+              {seasonEvent.icon} {seasonEvent.text}
+            </p>
+          )}
+          <Monster
+            deco={seasonEvent?.icon}
+            sleepy={hour >= 22 || hour < 5}
+            night={isNight(hour)}
+            season={seasonFxOf(today)}
+            learned={learnedSample}
+            shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
+            monster={monster}
+            onRename={(name) => updateMonster((m) => rename(m, name))}
+            coins={wallet.coins}
+            onShop={() => {
+              setShopTab(undefined)
+              setShowShop(true)
+              toContent()
+            }}
+            room={wallet.room}
+            title={titleFor(totals.studyDays ?? 0)}
+            cheer={cheer}
+            feeling={feelingFor(studiedToday, hour)}
+            gain={gain}
+            mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
+            leveledUp={leveledUp}
+            evolved={evolved}
+            friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
+            onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
+            onPet={() => cheerUp(1)}
+            mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
+            epithet={epithetOf(totalWins(loadBook()))}
+            onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
+            onPetStampTicket={() => {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+            }}
+          />
+          <BuddyRow
+            wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
+            wordName={monster.name ?? formOf(monster).name}
+            wordLevel={levelInfo(monster.xp).level}
+            buddies={buddies}
+            onGo={(w) => {
+              setShowShop(false)
+              setShowChallenge(false)
+              if (w === 'word') setWordTab('card')
+              setMode(w === 'grammar' ? 'grammar' : w === 'reading' ? 'reading' : 'word')
+              toContent()
+            }}
+          />
+          <button
+            className="home-gacha-btn"
+            onClick={() => {
+              setShopTab(undefined)
+              setShowShop(true)
+              toContent()
+            }}
+          >
+            <span className="home-gacha-main">
+              🎰 ガチャをひく！
+              {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
+            </span>
+            <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
+          </button>
+          {dailyBossDay !== today && (
+            <button
+              className="challenge-btn daily-boss-go"
+              onClick={() => {
+                setDailyGo(true)
+                setStageTab('boss')
+                setMode('reading')
+                toContent()
+              }}
+            >
+              ⚔ 今日のボスに挑む（勝つと🪙{DAILY_BOSS_COINS}）
+            </button>
+          )}
+          {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (
+            <button
+              className="challenge-btn hungry-btn"
+              onClick={() => {
+                setShopTab('snack')
+                setShowShop(true)
+                toContent()
+              }}
+            >
+              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」（おやつをあげる）
+            </button>
+          )}
+          {birthdayAge(bday, today) > 0 && (
+            <button
+              className="challenge-btn birthday-btn"
+              onClick={() => {
+                const age = birthdayAge(bday, today)
+                setBday({ ...bday, lastYear: Number(today.slice(0, 4)) })
+                setWallet((w) => addTicket(w))
+                pushToast([{ id: 'birthday', text: `🎂 ${monster.name ?? formOf(monster).name}、${age}さいのおたんじょう日おめでとう！ 🎟ガチャチケットを${BIRTHDAY_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+              }}
+            >
+              🎂 今日は{monster.name ?? formOf(monster).name}のおたんじょう日！（{birthdayAge(bday, today)}さい）お祝いする
+            </button>
+          )}
+          <p className="stats">
+            今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
+          </p>
+          {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
+            <p className="exam">
+              📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
+              <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
+            </p>
+          )}
           <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
               setShowChallenge(true)
               toContent()
@@ -1045,7 +1144,7 @@ function App() {
           </div>
           </>
         )}
-        {mode !== 'stats' && mode !== 'settings' && (
+        {(mode === 'word' || mode === 'home') && (
           <>
             <button className="book-toggle" aria-expanded={showBooks} onClick={() => setShowBooks(!showBooks)}>
               📚 単語帳：{[...levels, ...(useMy ? ['マイ単語帳'] : [])].join('・')} {showBooks ? '▲' : '▼'}
@@ -1068,6 +1167,15 @@ function App() {
           </>
         )}
       </header>
+      {mode === 'word' && !showShop && !showChallenge && (
+        <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
+          {WORD_TABS.map((t) => (
+            <button key={t.id} role="tab" aria-selected={wordTab === t.id} onClick={() => setWordTab(t.id)}>
+              {t.label}
+            </button>
+          ))}
+        </div>
+      )}
       {leveledUp && !home && (
         <p className="lvup-banner" role="status">
           ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
@@ -1090,7 +1198,8 @@ function App() {
               onClick={() => {
                 setGreet(false)
                 setShowShop(false)
-                setMode('card')
+                setMode('word')
+                setWordTab('card')
               }}
             >
               はじめる
@@ -1189,7 +1298,7 @@ function App() {
             pushToast([{ id: 'snack', text: `${l.en}（${l.ja}）`, counter: 'answers', target: 0 }])
           }}
         />
-      ) : mode === 'stage' ? (
+      ) : mode === 'reading' ? (
         <>
           <div className="sub-tabs stage-sub-tabs" role="tablist" aria-label="長文ボスの種類">
             {STAGE_TABS.map((t) => (
@@ -1325,8 +1434,24 @@ function App() {
         </>
       ) : mode === 'settings' ? (
         <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
-      ) : mode === 'stats' ? (
+      ) : mode === 'home' ? (
         <>
+          <TodayTasks
+            today={today}
+            cardsLeft={queue.length}
+            onGo={(w) => {
+              if (w === 'reading') setStageTab('long')
+              if (w === 'word') setWordTab('card')
+              setMode(w)
+              toContent()
+            }}
+          />
+          <section className="today-words" aria-label="今日の単語">
+            <p className="today-section-title">🔤 今日の単語</p>
+            {cardStudy}
+          </section>
+          <TodayGrammar today={today} onAnswer={onAnswerTrack('grammar')} onClear={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))} />
+          <p className="today-section-title home-records-title">📊 記録</p>
           <div className="sub-tabs" role="tablist" aria-label="記録の種類">
             {STATS_TABS.map((t) => (
               <button key={t.id} role="tab" aria-selected={statsTab === t.id} onClick={() => setStatsTab(t.id)}>
@@ -1489,23 +1614,16 @@ function App() {
             </section>
           )}
         </>
-      ) : mode === 'quiz' && showTimeAttack ? (
+      ) : mode === 'word' && wordTab === 'time' ? (
         <>
-          <button className="stage-back" onClick={() => setShowTimeAttack(false)}>
-            ← ミニゲームにもどる
-          </button>
           <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => {
               setBestTime((b) => Math.max(b, n))
               count('timeAttack')
             }} />
         </>
-      ) : mode === 'quiz' || mode === 'time' ? (
+      ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'quiz' && (
-            <button className="list-link time-attack-link" onClick={() => setShowTimeAttack(true)}>
-              ⏱ タイムアタック（60秒で何問とけるか）
-            </button>
-          )}
+          {mode === 'word' && playBox}
           {quizFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
@@ -1514,11 +1632,12 @@ function App() {
           )}
           <Quiz
             key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}`}
-            direction={mode === 'time' ? 'grammar' : undefined}
-            lockDirection={mode === 'time'}
+            direction={mode === 'grammar' ? 'grammar' : undefined}
+            lockDirection={mode === 'grammar'}
+            grammarQuick={mode === 'grammar'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
             targets={quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
-            onAnswer={mode === 'time' ? onAnswerTrack('grammar') : onAnswer}
+            onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}
             onFinish={(score, total) => {
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
@@ -1529,7 +1648,7 @@ function App() {
             onGame={() => count('game')}
             onSetLevels={setLevels}
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
-            onXp={(n) => (mode === 'time' ? feedTrack('grammar', n) : gainXp(n, null))}
+            onXp={(n) => (mode === 'grammar' ? feedTrack('grammar', n) : gainXp(n, null))}
             partnerName={monster.name ?? formOf(monster).name}
             onGrammarMaster={() => {
               setWallet((w) => addTicket(addTicket(addTicket(w))))
@@ -1546,88 +1665,7 @@ function App() {
           />
         </>
       ) : (
-        cardFocus ? (
-          <>
-            <p className="weak-banner">
-              {FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードで復習中（のこり{' '}
-              {focusList(cardFocus.kind).filter((w) => !cardFocus.done.includes(w.id)).length}語）
-              <button onClick={() => setCardFocus(null)}>やめる</button>
-            </p>
-            {focusCard ? (
-              <Card
-                key={`focus-${focusCard.id}`}
-                card={focusCard}
-                onAnswer={answerFocus}
-                autoSpeak={settings.autoSpeak}
-                jaFirst={settings.cardJaFirst}
-                emojiHint={settings.easy}
-                hideExampleJa={settings.hideExampleJa}
-                lookup={lookup}
-                favorite={favorites.includes(focusCard.id)}
-                note={notes[focusCard.id]}
-                onNote={(t) => setNotes((n) => setNote(n, focusCard.id, t))}
-                onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
-              />
-            ) : (
-              <p className="done">{FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードを一周しました 💪</p>
-            )}
-          </>
-        ) : showList ? (
-          <WordList
-            words={words}
-            progress={progress}
-            onClose={() => setShowList(false)}
-            favorites={favorites}
-            onToggleFavorite={(id) => setFavorites((f) => toggleFavorite(f, id))}
-            notes={notes}
-            onNote={(id, t) => setNotes((n) => setNote(n, id, t))}
-            onPractice={(id) => {
-              setPicked([id])
-              startCards('pick')
-            }}
-          />
-        ) : (
-          <>
-            {cardsDone + queue.length > 0 && (
-              <div className="card-progress" aria-label={`今日のカード ${cardsDone} / ${cardsDone + queue.length}`}>
-                <div className="goal-bar">
-                  <div className="goal-fill" style={{ width: `${(cardsDone / (cardsDone + queue.length)) * 100}%` }} />
-                </div>
-                <span>
-                  {cardsDone} / {cardsDone + queue.length}
-                </span>
-              </div>
-            )}
-            <Card
-              key={`${card?.id}-${shown}`}
-              card={card}
-              onAnswer={(r) => {
-                setCardTouched(true)
-                answer(r)
-              }}
-              autoSpeak={settings.autoSpeak}
-              autoStart={cardTouched}
-              jaFirst={settings.cardJaFirst}
-              emojiHint={settings.easy}
-              hideExampleJa={settings.hideExampleJa}
-              lookup={lookup}
-              favorite={!!card && favorites.includes(card.id)}
-              note={card ? notes[card.id] : undefined}
-              onNote={(t) => card && setNotes((n) => setNote(n, card.id, t))}
-              onToggleFavorite={() => card && setFavorites((f) => toggleFavorite(f, card.id))}
-              onMore={
-                words.some((w) => !progress[w.id])
-                  ? () => setDaily({ day: today, count: newToday, extra: extraToday + 5 })
-                  : undefined
-              }
-              onQuiz={() => setMode('quiz')}
-              onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
-            />
-            <button className="list-link" onClick={() => setShowList(true)}>
-              📚 単語一覧・さがす
-            </button>
-          </>
-        )
+        cardStudy
       )}
 
       <BadgeToast badges={toast} onClose={() => setToast([])} />
@@ -1686,7 +1724,8 @@ function App() {
               // ストレージが使えない環境では保存をあきらめる
             }
             setOnboarded(true)
-            setMode('quiz')
+            setMode('word')
+            setWordTab('mini')
           }}
         />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
@@ -1702,7 +1741,6 @@ function App() {
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
               setMode(t.id)
-              setShowTimeAttack(false)
               setDailyGo(false)
               setShowShop(false)
               setShowChallenge(false)

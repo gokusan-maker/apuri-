@@ -8,6 +8,13 @@ import { souvenirFor } from './souvenir'
 import { WORDS, wordsOf } from './words'
 import { SPECIES } from './monster'
 
+const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
+const goMini = () => {
+  navTo('単語')
+  fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
+}
+
+
 // お知らせは順番に出るので、目当てのものが出るまで前のものを閉じる
 function toast(text: string | RegExp) {
   for (let i = 0; i < 5 && !screen.queryByText(text); i++) {
@@ -50,13 +57,13 @@ describe('App', () => {
   it('クイズで正解するとXP+10、タマゴがかえる', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 15 }))
     render(<App />)
-    fireEvent.click(screen.getByText('ミニゲーム'))
+    goMini()
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
     expect(screen.getAllByText('タマゴがかえった！').length).toBeGreaterThan(0)
     expect(screen.getByRole('dialog', { name: '進化' })).toBeInTheDocument()
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('カード'))
+    navTo('ホーム')
     expect(document.querySelector('.monster-name')!.textContent).toContain('ちびモチ')
   })
 
@@ -77,33 +84,36 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
   })
 
-  it('画面下のタブで カード／ミニゲーム／文法／記録 を切り替えられる（タイムアタックはミニゲームの中）', () => {
+  it('画面下のタブで ホーム／単語／文法／長文／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
-    expect(tab('カード')).toHaveAttribute('aria-current', 'page')
-    fireEvent.click(tab('ミニゲーム'))
+    expect(tab('ホーム')).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByText('📊 記録')).toBeInTheDocument()
+    fireEvent.click(tab('単語'))
+    expect(tab('単語')).toHaveAttribute('aria-current', 'page')
+    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
     expect(document.querySelector('.quiz')).not.toBeNull()
-    expect(tab('ミニゲーム')).toHaveAttribute('aria-current', 'page')
-    fireEvent.click(screen.getByText(/⏱ タイムアタック/))
+    fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
     expect(screen.getByText('スタート')).toBeInTheDocument()
     fireEvent.click(tab('文法'))
-    expect(screen.getByRole('heading', { name: '文法ミニ解説' })).toBeInTheDocument()
+    expect(document.querySelector('.grammar')).not.toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
-    fireEvent.click(tab('記録'))
-    expect(screen.getByRole('heading', { name: '記録' })).toBeInTheDocument()
-    fireEvent.click(tab('カード'))
-    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    fireEvent.click(tab('長文'))
+    expect(screen.getByRole('tab', { name: '👹 ボス' })).toBeInTheDocument()
+    fireEvent.click(tab('設定'))
+    expect(tab('設定')).toHaveAttribute('aria-current', 'page')
   })
 
   it('記録画面に連続日数・今日の学習数・定着語数が出る（クイズの不正解も学習数に入る）', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ミニゲーム'))
+    goMini()
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('1日')).toBeInTheDocument()
     expect(document.querySelector('.result-list')!.textContent).toContain('2問')
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
@@ -122,7 +132,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('×1')).toBeInTheDocument()
     fireEvent.click(screen.getByText('クイズで復習'))
     expect(screen.getByText(/苦手だけ復習中（1語）/)).toBeInTheDocument()
@@ -188,7 +198,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('バッジ獲得！')).toBeInTheDocument()
     expect(screen.getByText('はじめの一歩')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByRole('heading', { name: /^バッジ 1 \// })).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:badges')!)).toHaveProperty('first-correct')
@@ -200,25 +210,25 @@ describe('App', () => {
     localStorage.setItem('eitan:badges', JSON.stringify({ 'streak-7': '2026-10-19' }))
     render(<App />)
     expect(screen.getByText('新しい仲間！')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     const picks = document.querySelectorAll<HTMLButtonElement>('.party-member')
     expect(picks).toHaveLength(2)
     fireEvent.click(picks[1])
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('カード'))
+    navTo('ホーム')
     expect(document.querySelector('.monster-name')!.textContent).toContain('ふしぎなタマゴ')
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
 
   it('マイ単語帳に追加して選ぶと、カードの母数に入る', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'データ' }))
     fireEvent.change(screen.getByLabelText('英語'), { target: { value: 'sunflower' } })
     fireEvent.change(screen.getByLabelText('意味'), { target: { value: 'ひまわり' } })
     fireEvent.click(screen.getByText('追加する'))
     expect(screen.getByText('マイ単語帳（1語）')).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: /カード/ }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
     expect(screen.getByText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
@@ -237,7 +247,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('この1週間')).toBeInTheDocument()
     expect(screen.getByText('合計 1 問・目標達成 0 日')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:history')!)).toEqual({ [dayKey()]: 1 })
@@ -287,7 +297,7 @@ describe('App', () => {
     expect(toast(/ミッション達成！ \+30XP/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(35)
     expect(JSON.parse(localStorage.getItem('eitan:missions')!).claimed).toContain(m!.id)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText(/今日のミッション 1 \/ 3/)).toBeInTheDocument()
     vi.useRealTimers()
   })
@@ -318,7 +328,7 @@ describe('App', () => {
   it('苦手単語をカードで復習でき、「覚えた」で苦手から外れる', () => {
     localStorage.setItem('eitan:mistakes', JSON.stringify({ [WORDS[3].id]: 1, [WORDS[5].id]: 2 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText('カードで復習'))
     expect(screen.getByText(/苦手カードで復習中（のこり 2語）/)).toBeInTheDocument()
     expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[5].en)
@@ -420,7 +430,9 @@ describe('App', () => {
     vi.setSystemTime(new Date(2026, 9, 21, 10, 0)) // この日は大吉
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 60, owned: [] }))
     render(<App />)
+    goMini()
     expect(screen.getByText('大吉')).toBeInTheDocument()
+    navTo('ホーム')
     fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
     fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
@@ -450,7 +462,7 @@ describe('App', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 0 }, { xp: 0, species: 'fox' }], active: 0, gacha: 1 }))
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     fireEvent.click(screen.getByLabelText(/とおわかれする/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members).toHaveLength(1)
@@ -460,7 +472,7 @@ describe('App', () => {
   it('まだ生まれていない仲間をあたためるとXPが入る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 500 }, { xp: 0 }], active: 0 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     fireEvent.click(screen.getByLabelText(/をあたためる/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(2)
@@ -471,7 +483,7 @@ describe('App', () => {
     localStorage.setItem('eitan:keys', '3')
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('長文ボス'))
+    navTo('長文')
     fireEvent.click(screen.getByText(/金の宝箱をあける/))
     const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
     expect(w.coins).toBe(30)
@@ -482,7 +494,7 @@ describe('App', () => {
   it('スーパーレア以上の仲間は一覧で光る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ members: [{ xp: 0 }, { xp: 0, kind: 'niji' }, { xp: 0, kind: 'sakura' }], active: 0 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     expect(document.querySelectorAll('.party li.shine')).toHaveLength(1)
     expect(document.querySelector('.party li.shine.r-UR')).not.toBeNull()
@@ -491,7 +503,7 @@ describe('App', () => {
   it('記録の部屋に自己ベストが出る', () => {
     localStorage.setItem('eitan:endless', '7')
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /記録/ }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByText('🏆 記録の部屋')).toBeInTheDocument()
     expect(screen.getByText('7階')).toBeInTheDocument()
@@ -555,6 +567,7 @@ describe('App', () => {
   it('今日のルーレットは1日1回まわせて、当たりがもらえる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
+    goMini()
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.8) // 🪙10
     fireEvent.click(screen.getByRole('button', { name: /今日のルーレットをまわす/ }))
     rnd.mockRestore()
@@ -580,6 +593,7 @@ describe('App', () => {
   it('おさんぽは1日1回で、単語を拾ってきて🪙3', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
+    goMini()
     fireEvent.click(screen.getByRole('button', { name: /おさんぽに行く/ }))
     expect(screen.getByText(/を拾ってきた！ 🪙3/)).toBeInTheDocument()
     expect(screen.queryByRole('button', { name: /おさんぽに行く/ })).toBeNull()
@@ -641,6 +655,7 @@ describe('App', () => {
   it('きのう目標を達成していたら、相棒からおみやげのシール', () => {
     localStorage.setItem('eitan:partner-gift', '2026-10-19')
     render(<App />)
+    goMini()
     fireEvent.click(screen.getByText(/からおみやげがとどいてる！/))
     expect(screen.getByText(/のシールをくれた！/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:stickers')!).got).toHaveLength(1)
@@ -699,18 +714,17 @@ describe('App', () => {
     const scroll = vi.fn()
     window.scrollTo = scroll as unknown as typeof window.scrollTo
     render(<App />)
-    expect(document.querySelector('details.home-play')).not.toBeNull()
-    const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
-    fireEvent.click(nav.getByText('長文ボス'))
-    expect(document.querySelector('details.home-play')).toBeNull()
+    expect(screen.getByText('🎰 ガチャをひく！')).toBeInTheDocument()
+    navTo('長文')
+    expect(screen.queryByText('📊 記録')).toBeNull()
     expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
     await new Promise((r) => requestAnimationFrame(() => r(null)))
     expect(scroll).toHaveBeenCalledWith({ top: 0 })
-    fireEvent.click(nav.getByText('カード'))
+    navTo('ホーム')
     fireEvent.click(screen.getByText(/今日のチャレンジ：/))
     expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
-    fireEvent.click(nav.getByText('長文ボス'))
+    navTo('長文')
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
@@ -728,7 +742,7 @@ describe('App', () => {
   it('カード以外のタブでレベルが上がると「Lv UP!」バナーが出る', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ミニゲーム'))
+    goMini()
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
@@ -737,7 +751,7 @@ describe('App', () => {
 
   it('記録タブに相棒のきもち日記が出る', () => {
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('記録'))
+    navTo('ホーム')
     expect(screen.getByText(/のきもち日記：🥺/)).toBeInTheDocument()
   })
 
@@ -778,6 +792,7 @@ describe('App', () => {
     const d = (en: string, ja: string) => ({ day: '2026-10-19', en, ja, place: '公園' })
     localStorage.setItem('eitan:walk-diary', JSON.stringify([d('dog', '犬'), d('cat', 'ねこ'), d('tree', '木')]))
     render(<App />)
+    goMini()
     fireEvent.click(screen.getByText('🐾 おさんぽクイズ（拾った単語から3問）'))
     const ja: Record<string, string> = { dog: '犬', cat: 'ねこ', tree: '木' }
     for (let i = 0; i < 3; i++) {
@@ -819,11 +834,10 @@ describe('App', () => {
     const row = screen.getByLabelText('育てているなかま')
     expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
     expect(row.textContent).toMatch(/単語.*文法.*長文/)
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))
-    const unit = GRAMMAR[0]
-    fireEvent.click(screen.getByText(unit.title))
-    fireEvent.click(screen.getByText('確認問題へ（3問）'))
-    const q = unit.questions[0]
+    rnd.mockRestore()
+    const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
@@ -831,11 +845,10 @@ describe('App', () => {
 
   it('長文ボスのタブに「ボス」「長文れんしゅう」「短い読解」があり、ミニゲームには読解がない', () => {
     render(<App />)
-    const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
-    fireEvent.click(nav.getByText('長文ボス'))
+    navTo('長文')
     fireEvent.click(screen.getByRole('tab', { name: '📖 長文' }))
     expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
-    fireEvent.click(nav.getByText('ミニゲーム'))
+    goMini()
     fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
     expect(screen.queryByRole('button', { name: /長文読解/ })).toBeNull()
   })
@@ -844,11 +857,10 @@ describe('App', () => {
     const { GRAMMAR } = await import('./grammar')
     localStorage.setItem('eitan:buddies', JSON.stringify({ grammar: { xp: 19 }, reading: { xp: 0 } }))
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法'))
-    const unit = GRAMMAR[0]
-    fireEvent.click(screen.getByText(unit.title))
-    fireEvent.click(screen.getByText('確認問題へ（3問）'))
-    const q = unit.questions[0]
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
+    navTo('文法')
+    rnd.mockRestore()
+    const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('タマゴがかえった！')
   })
@@ -860,8 +872,13 @@ describe('App', () => {
     expect(screen.getAllByText(/ガチャ/).length).toBeGreaterThan(1)
   })
 
-  it('ホームのあそびは「きょうのあそび」にまとまっていて、はじめは閉じている', () => {
+  it('ホームに「きょうのあそび」はなく、今日の単語と今日の文法がある（あそびは単語のミニゲームへ）', () => {
     render(<App />)
+    expect(document.querySelector('details.home-play')).toBeNull()
+    expect(screen.getByLabelText('今日の課題')).toBeInTheDocument()
+    expect(screen.getByLabelText('今日の文法')).toBeInTheDocument()
+    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    goMini()
     const d = document.querySelector('details.home-play') as HTMLDetailsElement
     expect(d.open).toBe(false)
     expect(d.querySelector('summary')!.textContent).toMatch(/きょうのあそび/)
@@ -898,7 +915,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('明日 1語')).toBeInTheDocument()
   })
 
@@ -906,7 +923,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('お気に入り'))
     expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([WORDS[0].id])
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('★ お気に入り（1語）')).toBeInTheDocument()
     const favSection = screen.getByText('★ お気に入り（1語）').nextElementSibling!
     fireEvent.click(favSection.querySelector('button')!) // カードで復習
@@ -951,7 +968,7 @@ describe('App', () => {
     const en = document.querySelector('.card .en')!.textContent!
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByText('🌱 今日はじめて学んだ単語（1語）')).toBeInTheDocument()
     expect(screen.getByRole('list', { name: '今日はじめて学んだ単語' }).textContent).toContain(en.replace(/[🔊🐢]/gu, '').trim())
   })
@@ -960,7 +977,7 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 5).map((w) => [w.id, { box: 1, due: '2099-01-01', first: '2026-10-19' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText('🗓 今週学んだ単語をクイズでおさらい（5語）'))
     expect(screen.getByText(/今週学んだ単語だけ復習中（5語）/)).toBeInTheDocument()
   })
@@ -969,14 +986,14 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 4).map((w) => [w.id, { box: 2, due: '2099-01-01', first: '2026-10-13' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText('📅 1週間前に学んだ単語をクイズでたしかめる（4語）'))
     expect(screen.getByText(/1週間前に学んだ単語だけ復習中（4語）/)).toBeInTheDocument()
   })
 
   it('記録画面の「テーマで練習」で、その仲間の単語をカードで練習できる', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
@@ -984,7 +1001,7 @@ describe('App', () => {
 
   it('「テーマで練習」はクイズでもできる', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
     fireEvent.click(screen.getByRole('button', { name: '動物' }))
@@ -995,7 +1012,7 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 7).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByRole('img', { name: '定着した単語の数のグラフ（今日 7語）' })).toBeInTheDocument()
   })
 
@@ -1003,7 +1020,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     const d = Number(dayKey().slice(8))
     expect(screen.getByLabelText(`${d}日 1問`)).toHaveClass('studied')
     expect(screen.getByText('今月 1日 学習しました')).toBeInTheDocument()
@@ -1067,7 +1084,7 @@ describe('App', () => {
   it('記録画面に単語帳ごとの定着が出る', () => {
     localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[0].id]: { box: 3, due: '2099-01-01' } }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(screen.getByLabelText('中1の定着')).toHaveAttribute('aria-valuenow', '1')
   })
 
@@ -1075,7 +1092,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     expect(screen.getByText('相棒のプロフィール')).toBeInTheDocument()
     const prof = document.querySelector('.profile')!
@@ -1182,7 +1199,7 @@ describe('App', () => {
   it('図鑑で出会った姿をタップすると説明文が出る', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     fireEvent.click(document.querySelector('.zukan-pick')!)
     expect(screen.getByText(/ふしぎな模様のタマゴ/)).toBeInTheDocument()
@@ -1191,7 +1208,7 @@ describe('App', () => {
   it('ボス図鑑にたおしたボスが載る', () => {
     localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-19' }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByText(/ボス図鑑 1 \//)).toBeInTheDocument()
     expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
@@ -1234,7 +1251,7 @@ describe('App', () => {
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
     expect(screen.getByText(/完全制覇/)).toBeInTheDocument()
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(document.querySelector('.by-level')!.textContent).toContain('👑曜日・月')
   })
 
@@ -1242,7 +1259,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     expect(document.querySelector('.today-summary')!.textContent).toContain('1問・+5XP・新しい単語 1語')
   })
 
@@ -1341,7 +1358,7 @@ describe('App', () => {
     const lucky = pickWordOfDay(WORDS, dayKey())!
     localStorage.setItem('eitan:favorites', JSON.stringify([lucky.id]))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: '記録' }))
+    navTo('ホーム')
     const fav = screen.getByText('★ お気に入り（1語）').nextElementSibling!
     fireEvent.click(fav.querySelector('button')!)
     fireEvent.click(screen.getByText('意味を見る'))

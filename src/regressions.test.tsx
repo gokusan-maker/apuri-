@@ -16,6 +16,9 @@ import { stagesOf } from './stages'
 import { Stages } from './StageView'
 import { WORDS } from './words'
 
+const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
+
+
 describe('再発防止', () => {
   beforeEach(() => {
     localStorage.clear()
@@ -31,7 +34,7 @@ describe('再発防止', () => {
     // ミッションのボーナスが混ざらないよう、今日の分は受け取り済みにしておく
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('長文ボス'))
+    navTo('長文')
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     const all = LONG_PASSAGES.flatMap(passageQs)

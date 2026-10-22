@@ -225,6 +225,7 @@ type Props = {
   onCoins?: (n: number) => void // コインのごほうび（文法モンスターなど）
   onGoalTicket?: () => void // 文法の今週の目標をたっせい
   partnerName?: string // 相棒の名前（文法でほめてくれる）
+  grammarQuick?: boolean // 文法タブ：開いたらすぐ文法の練習問題
   onGrammarMaster?: () => void // 文法の全単元クリア
   onXp?: (n: number) => void // XPのごほうび（文法の単元をはじめて全問正解など）
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
@@ -247,7 +248,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -760,7 +761,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
+        <Grammar quickStart={grammarQuick} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
       </>
     )
   }

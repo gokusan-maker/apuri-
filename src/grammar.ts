@@ -2205,3 +2205,18 @@ export function relatedUnits(id: string): GrammarUnit[] {
   if (i < 0) return []
   return [list[i - 1], list[i + 1]].filter((u): u is GrammarUnit => !!u)
 }
+
+// すぐ練習：まだ全問正解していない単元の問題から n 問（全部クリアずみなら全部から）。r は 0〜1 の乱数
+export function quickPractice(record: GrammarRecord, r: () => number, n = 5): GrammarUnit {
+  const todo = GRAMMAR.filter((u) => record[u.id] !== u.questions.length)
+  const pool = (todo.length > 0 ? todo : GRAMMAR).flatMap((u) => u.questions)
+  const picked: GrammarQuestion[] = []
+  const used = new Set<number>()
+  while (picked.length < Math.min(n, pool.length)) {
+    let k = Math.floor(r() * pool.length)
+    while (used.has(k)) k = (k + 1) % pool.length
+    used.add(k)
+    picked.push(pool[k])
+  }
+  return { id: 'quick-practice', title: '✏️ すぐ練習（5問）', points: [], examples: [], questions: picked }
+}

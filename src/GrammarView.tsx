@@ -21,7 +21,7 @@ import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { addGrammarCorrect, last7, loadGrammarWeek, saveGrammarWeek } from './grammarweek'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -39,15 +39,17 @@ type Props = {
   onWeeklyGoal?: () => void // 今週の目標を達成したとき
   onBingo?: () => void // 文法ビンゴがそろったとき
   partnerName?: string // 全問正解のときほめてくれる相棒の名前
+  quickStart?: boolean // 開いたらすぐ練習問題を始める（文法タブ）
   onStreakBonus?: () => void // 文法を3日続けたとき
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
 }
 
-export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster }: Props) {
+export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster }: Props) {
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
-  const [unit, setUnit] = useState<GrammarUnit | null>(null)
-  const [step, setStep] = useState(-1) // -1：解説、0〜：問題、length：結果
+  // quickStart のときは、開いたらすぐ練習問題（まだ全問正解していない単元から5問）
+  const [unit, setUnit] = useState<GrammarUnit | null>(() => (quickStart ? quickPractice(loadGrammar(), Math.random) : null))
+  const [step, setStep] = useState(quickStart ? 0 : -1) // -1：解説、0〜：問題、length：結果
   const [picked, setPicked] = useState<number | null>(null)
   const [streak, setStreak] = useState(loadGrammarStreak)
   const [copied, setCopied] = useState(false)
