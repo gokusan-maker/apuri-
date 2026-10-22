@@ -1425,3 +1425,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .level-verdict { margin: 2px 0 8px; font-weight: 700; color: var(--muted); }
 .level-verdict.pass { color: #b45309; font-size: 1.05rem; }
 .hungry-btn { background: color-mix(in srgb, #fb923c 15%, var(--card)); }
+.battle-start { position: fixed; inset: 0; z-index: 25; display: grid; place-items: center; pointer-events: none; font-size: 2.2rem; font-weight: 900; color: #fff; text-shadow: 0 3px 0 #b91c1c, 0 0 18px rgb(239 68 68 / 0.8); background: radial-gradient(circle, rgb(0 0 0 / 0.35), transparent 70%); opacity: 0; animation: battle-start 1.3s ease-out; }
+@keyframes battle-start { 0% { opacity: 0; transform: scale(1.6); } 20% { opacity: 1; transform: scale(1); } 75% { opacity: 1; } 100% { opacity: 0; transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .battle-start { animation: none; display: none; } }

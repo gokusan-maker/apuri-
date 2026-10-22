@@ -78,6 +78,14 @@ describe('ボス戦', () => {
     expect(Number(m[1])).toBeLessThan(300)
   })
 
+  it('ボス戦のはじめに「⚔ バトルスタート！」が出て、答えると消える（タップのじゃまをしない）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
+    const b = document.querySelector('.battle-start')!
+    expect(b.textContent).toContain('バトルスタート！')
+    answer(true)
+    expect(document.querySelector('.battle-start')).toBeNull()
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {

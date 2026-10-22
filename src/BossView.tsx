@@ -417,6 +417,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {golden && <p className="golden-boss">✨ 金色ボスがあらわれた！ たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
       <p className="boss-name">{look.name}</p>
       {index === 0 && picked === null && hp === maxHp && (
+        <div className="battle-start" aria-hidden="true">
+          ⚔ バトルスタート！
+        </div>
+      )}
+      {index === 0 && picked === null && hp === maxHp && (
         <p className="boss-intro">
           「{introLineOf(look.name).en}」
           <span className="boss-intro-ja">{introLineOf(look.name).ja}</span>
