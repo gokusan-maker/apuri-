@@ -1403,4 +1403,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to one idea, why might bamboo produce many seeds at once?', choices: ['So that animals cannot eat all of them.', 'Because the plants need more water.', 'So that the stems grow taller.', 'Because the underground stems die first.'], answer: 0, why: '第3段落 animals cannot eat them all。' },
     ],
   },
+  {
+    id: 'exam-kindergarten',
+    title: 'Three Days at a Kindergarten',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last June, I took part in a work experience program and spent three days at a kindergarten near my school. I chose this place because I like small children, but I soon found that taking care of them was much harder ( A ) I had imagined.",
+      "On the first day, I tried to read a picture book to a group of children. However, they did not listen to me at all. Some ran around the room, and others started to play with blocks. I felt sad. Then one of the teachers, Ms. Kato, gave me some advice. 'Children can tell whether you are enjoying the story or not,' she said. 'Try reading it as ( B ) you were one of the characters.'",
+      "On the last day, I read the same book again. This time, I changed my voice for each animal and moved my hands a lot. The children laughed and asked me to read it again. When I said goodbye, a boy gave me a drawing of me holding the book. I learned that to ( C ) others interested, we must first enjoy what we are doing ourselves.",
+    ],
+    ja: [
+      'この前の6月、私は職場体験のプログラムに参加し、学校の近くの幼稚園で3日間をすごしました。小さな子どもが好きなのでこの場所を選びましたが、子どもたちの世話をするのは想像していたよりずっと大変だとすぐにわかりました。',
+      '1日目、私は子どもたちのグループに絵本を読もうとしました。しかし、子どもたちはまったく聞いてくれませんでした。部屋を走り回る子もいれば、積み木で遊びはじめる子もいました。私は悲しくなりました。そのとき、先生の一人の加藤先生がアドバイスをくれました。「子どもたちには、あなたがお話を楽しんでいるかどうかがわかるのよ。登場人物の一人になったつもりで読んでごらん」と先生は言いました。',
+      '最終日、私はもう一度同じ本を読みました。今度は動物ごとに声を変えて、手をたくさん動かしました。子どもたちは笑って、もう一度読んでとたのみました。さよならを言うとき、ある男の子が、本を持った私の絵をくれました。私は、ほかの人に興味をもってもらうには、まず自分がしていることを自分で楽しまなければならないのだと学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'as', 'that', 'then'], answer: 0, why: '比較級 harder のあとは than。much harder than I had imagined「想像していたよりずっと大変」。' },
+      { id: 'B', choices: ['if', 'though', 'because', 'so'], answer: 0, why: 'as if ＋ 過去形（were）で「まるで〜であるかのように」。' },
+      { id: 'C', choices: ['make', 'makes', 'made', 'making'], answer: 0, why: '不定詞 to のあとは原形。make 人 interested「人に興味をもたせる」。' },
+    ],
+    tf: [
+      { statement: '筆者は小さな子どもが好きなので幼稚園を選んだ。', answer: true, why: '第1段落 I chose this place because I like small children。' },
+      { statement: '1日目、子どもたちは筆者の読む絵本を静かに聞いた。', answer: false, why: '第2段落 they did not listen to me at all。' },
+      { statement: '最終日、筆者は動物ごとに声を変えて読んだ。', answer: true, why: '第3段落 I changed my voice for each animal。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn?', choices: ['We must enjoy what we are doing to make others interested.', 'Children do not like picture books.', 'Teachers should not give advice.', 'Reading quietly is the best way.'], answer: 0, why: '第3段落最後の文。' },
+    ],
+  },
 ]
