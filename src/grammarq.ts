@@ -2,8 +2,8 @@
 import { GRAMMAR, type GrammarQuestion } from './grammar'
 
 export const DAILY_Q_XP = 10
-export function dailyQuestion(day: string): { q: GrammarQuestion; unitTitle: string } {
-  const all = GRAMMAR.flatMap((u) => u.questions.map((q) => ({ q, unitTitle: u.title })))
+export function dailyQuestion(day: string): { q: GrammarQuestion; unitTitle: string; point: string } {
+  const all = GRAMMAR.flatMap((u) => u.questions.map((q) => ({ q, unitTitle: u.title, point: u.points[0] })))
   let h = 9
   for (const c of `gq-${day}`) h = (h * 37 + c.charCodeAt(0)) >>> 0
   return all[h % all.length]

@@ -7,7 +7,7 @@ type Props = { day: string; onCorrect: () => void }
 export function DailyGrammarQ({ day, onCorrect }: Props) {
   const [doneDay, setDoneDay] = useState(loadQDay)
   const [picked, setPicked] = useState<number | null>(null)
-  const { q, unitTitle } = dailyQuestion(day)
+  const { q, unitTitle, point } = dailyQuestion(day)
   if (doneDay === day && picked === null) return null
   const [before, after] = q.sentence.split('___')
   return (
@@ -43,6 +43,7 @@ export function DailyGrammarQ({ day, onCorrect }: Props) {
           {picked === q.answer ? `⭕ 正解！ XP+${DAILY_Q_XP}` : '❌ ざんねん'}　{q.why}
         </p>
       )}
+      {picked !== null && <p className="daily-gq-point">📌 要点：{point}</p>}
     </div>
   )
 }
