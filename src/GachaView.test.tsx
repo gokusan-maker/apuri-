@@ -153,3 +153,17 @@ it('その日はじめてのガチャは「きょうの1回目」でキラキラ
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.queryByText(/きょうの1回目/)).toBeNull()
 })
+
+it('ガチャの結果から「もう1回ひく」で続けて引ける（コインがなければチケット）', () => {
+  localStorage.clear()
+  const onDraw = vi.fn(() => ({ kind: kindOf('normal'), species: speciesOf('mochi') }))
+  const { rerender } = render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  fireEvent.click(screen.getByRole('button', { name: `🔁 もう1回ひく（🪙${GACHA_PRICE}）` }))
+  expect(onDraw).toHaveBeenLastCalledWith(false)
+  rerender(<Gacha coins={0} tickets={1} members={1} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: '🔁 もう1回ひく（🎟1）' }))
+  expect(onDraw).toHaveBeenLastCalledWith(true)
+  rerender(<Gacha coins={0} tickets={0} members={1} onDraw={onDraw} />)
+  expect(screen.queryByText(/もう1回ひく/)).toBeNull()
+})

@@ -65,6 +65,14 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
   const recordLog = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
   const [multi, setMulti] = useState<{ list: GachaResult[]; key: number } | null>(null)
+  const drawOne = (ticket: boolean) => {
+    const k = onDraw(ticket)
+    if (k) {
+      setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
+      setMulti(null)
+      record(k)
+    }
+  }
   const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
   return (
     <div className="gacha">
@@ -73,14 +81,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
       <button
         className="good gacha-btn"
         disabled={full || coins < price}
-        onClick={() => {
-          const k = onDraw(false)
-          if (k) {
-            setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
-            setMulti(null)
-            record(k)
-          }
-        }}
+        onClick={() => drawOne(false)}
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
@@ -120,14 +121,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
       {tickets > 0 && !full && (
         <button
           className="good gacha-btn ticket"
-          onClick={() => {
-            const k = onDraw(true)
-            if (k) {
-            setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
-            setMulti(null)
-            record(k)
-          }
-          }}
+          onClick={() => drawOne(true)}
         >
           🎟 チケットで引く（あと{tickets}枚）
         </button>
@@ -330,6 +324,11 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
               }}
             >
               🐣 この子を相棒にして育てる
+            </button>
+          )}
+          {!full && (coins >= price || tickets > 0) && (
+            <button className="good gacha-btn gacha-again" onClick={() => drawOne(coins < price)}>
+              🔁 もう1回ひく{coins >= price ? `（🪙${price}）` : '（🎟1）'}
             </button>
           )}
           <button className="list-link" onClick={() => setResult(null)}>
