@@ -1381,3 +1381,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .grade-rate-bar > span { display: block; height: 100%; background: #22c55e; }
 .grade-rate-num { text-align: right; color: var(--muted); }
 .birthday-btn { background: linear-gradient(135deg, #fde68a, #fbcfe8); color: #9d174d; font-weight: 800; }
+.daily-example { margin: 8px 0; padding: 10px 12px; border-radius: 14px; background: color-mix(in srgb, #38bdf8 12%, var(--card)); text-align: left; }
+.daily-example p { margin: 2px 0; }
+.daily-example-title { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
+.daily-example-en { font-weight: 700; overflow-wrap: anywhere; }
+.daily-example-ja { font-size: 0.85rem; color: var(--muted); }

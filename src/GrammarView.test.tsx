@@ -481,3 +481,14 @@ it('文法の一覧に学年別クリア率が出る', () => {
   expect(list.querySelectorAll('li')).toHaveLength(4)
   expect(list.textContent).toMatch(/中1.*0\/\d+/)
 })
+
+it('文法の一覧に「今日のひとこと例文」が出て、その単元を開ける', async () => {
+  localStorage.clear()
+  const { dailyExample } = await import('./grammar')
+  const { dayKey } = await import('./srs')
+  const ex = dailyExample(dayKey())
+  render(<Grammar />)
+  expect(screen.getByText('💬 今日のひとこと例文')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(`→ ${ex.unit.title}`))
+  expect(screen.getByText(ex.unit.points[0])).toBeInTheDocument()
+})

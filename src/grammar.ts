@@ -1872,3 +1872,10 @@ export function gradeClearRates(r: GrammarRecord): { grade: GrammarGrade; cleare
     return { grade, cleared: us.filter((u) => r[u.id] === u.questions.length).length, total: us.length }
   })
 }
+
+// 今日のひとこと例文：全単元の例文から日替わりで1つ
+const ALL_EXAMPLES = GRAMMAR.flatMap((unit) => unit.examples.map((ex) => ({ ...ex, unit })))
+export function dailyExample(day: string) {
+  const n = [...day].reduce((a, c) => (a * 37 + c.charCodeAt(0)) % 10007, 7)
+  return ALL_EXAMPLES[n % ALL_EXAMPLES.length]
+}
