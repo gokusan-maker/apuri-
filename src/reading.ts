@@ -1311,6 +1311,39 @@ export const PASSAGES: Passage[] = [
       { q: 'お金を何に使った？', choices: ['母の誕生日プレゼント', '新しいゲーム', '旅行'], answer: 0 },
     ],
   },
+  {
+    id: 'dentist-visit',
+    title: 'At the Dentist',
+    text: 'I had a toothache, so my mother took me to the dentist on Friday. I was very nervous in the waiting room. But the dentist was kind and explained everything. It did not hurt much. After that, she showed me how to brush my teeth better.',
+    ja: '歯がいたかったので、母が金曜日に私を歯医者へ連れていってくれました。待合室ではとても緊張していました。でも歯医者さんはやさしくて、すべて説明してくれました。あまりいたくありませんでした。そのあと、歯医者さんはもっとじょうずな歯のみがき方を教えてくれました。',
+    questions: [
+      { q: '歯医者へ行ったのは何曜日？', choices: ['金曜日', '土曜日', '水曜日'], answer: 0 },
+      { q: '待合室で筆者はどうだった？', choices: ['とても緊張していた', 'ねむっていた', '本を読んでいた'], answer: 0 },
+      { q: '歯医者さんは最後に何を教えてくれた？', choices: ['歯のみがき方', 'あまいおかしの選び方', '薬の飲み方'], answer: 0 },
+    ],
+  },
+  {
+    id: 'garden-snail',
+    title: 'A Snail in the Rain',
+    text: 'On my way to school, I found a snail on the sidewalk. People were walking near it, and I was worried. I picked it up carefully and put it on a leaf in the park. It slowly moved away. I felt happy all morning.',
+    ja: '学校へ行くとちゅう、歩道にカタツムリを見つけました。近くを人が歩いていたので、私は心配になりました。そっと拾い上げて、公園の葉っぱの上に置きました。カタツムリはゆっくりと去っていきました。私は午前中ずっと幸せな気分でした。',
+    questions: [
+      { q: 'カタツムリはどこにいた？', choices: ['歩道', '教室', '家の庭'], answer: 0 },
+      { q: '筆者はカタツムリをどこに置いた？', choices: ['公園の葉っぱの上', 'かばんの中', '川の近く'], answer: 0 },
+      { q: '筆者はどんな気分になった？', choices: ['幸せな気分', 'かなしい気分', 'こわい気分'], answer: 0 },
+    ],
+  },
+  {
+    id: 'new-shoes',
+    title: 'My New Shoes',
+    text: 'My old shoes had a hole, so I bought new running shoes. They were blue and very light. The next day, I wore them in the school race. I ran faster than ever and finished second. My new shoes helped me a lot!',
+    ja: '古いくつに穴があいたので、新しいランニングシューズを買いました。青くて、とても軽いくつでした。次の日、学校の競走でそれをはきました。私はこれまでで一番速く走って、2位でゴールしました。新しいくつがとても役に立ちました！',
+    questions: [
+      { q: '新しいくつを買ったのはなぜ？', choices: ['古いくつに穴があいたから', 'くつが小さくなったから', 'くつをなくしたから'], answer: 0 },
+      { q: '新しいくつは何色？', choices: ['赤', '青', '白'], answer: 1 },
+      { q: '競走で何位だった？', choices: ['1位', '2位', '3位'], answer: 1 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
