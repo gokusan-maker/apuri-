@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'find-leave-oc': { wrong: 'I found the book interestingly.', right: 'I found the book interesting.', why: 'find ＋ O ＋ C の C には形容詞を置く（副詞は使えない）。' },
   'no-sooner': { wrong: 'No sooner I had arrived than it rained.', right: 'No sooner had I arrived than it rained.', why: 'No sooner を文頭に出すと had と主語の順番が入れかわる（倒置）。' },
   'the-adjective': { wrong: 'The elderly is welcome here.', right: 'The elderly are welcome here.', why: 'the ＋ 形容詞は「〜な人々」なので複数あつかい。' },
   'unless': { wrong: "Unless you don't come, I will go alone.", right: "Unless you come, I will go alone.", why: 'unless に「〜しない」の意味がふくまれるので、not は入れない。' },

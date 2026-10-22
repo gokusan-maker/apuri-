@@ -1200,7 +1200,7 @@
 - [x] 高校基礎の文法単元を追加：no sooner 〜 than / hardly 〜 when（〜するとすぐに）（自作）
 - [x] 読解「高校入試」をさらに1本（自作・既存と題材がかぶらないもの・第3弾）
 - [x] ゲームのタイルに、今日あそんだゲームは「✅ 今日」の印（いろんなゲームをあそびたくなるように）
-- [ ] 中3の文法単元を追加：疑問詞 ＋ do you think 〜?（What do you think he wants?）（自作）
+- [x] 中3の文法単元を追加：find / leave ＋ O ＋ C（find the book interesting / leave the door open）（自作）
 - [ ] 読解「ふつう」の読解をさらに1本（自作・既存と題材がかぶらないもの・第3弾）
 
 ## アイデア（未整理）
