@@ -297,3 +297,32 @@ export function dailyColor(day: string): string {
   for (const c of `color-${day}`) h = (h * 31 + c.charCodeAt(0)) >>> 0
   return ['sakura', 'umi', 'yoru'][h % 3]
 }
+
+// 色コンプボーナス：1つのキャラクターでふつうの6色（季節限定はのぞく）をそろえると🎟2（キャラクターごとに1回）
+export const COLOR_COMPLETE_TICKETS = 2
+const BASE_KINDS = ['normal', 'sakura', 'umi', 'yoru', 'kin', 'niji']
+export function completedSpecies(members: { species?: string; kind?: string }[]): string[] {
+  const got = new Map<string, Set<string>>()
+  for (const m of members) {
+    const sp = m.species ?? 'mochi'
+    if (!got.has(sp)) got.set(sp, new Set())
+    got.get(sp)!.add(m.kind ?? 'normal')
+  }
+  return [...got.entries()].filter(([, k]) => BASE_KINDS.every((b) => k.has(b))).map(([sp]) => sp)
+}
+const CC_KEY = 'eitan:color-complete'
+export function loadColorComplete(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(CC_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveColorComplete(ids: string[]): void {
+  try {
+    localStorage.setItem(CC_KEY, JSON.stringify(ids))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

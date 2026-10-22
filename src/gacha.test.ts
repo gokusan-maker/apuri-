@@ -273,3 +273,11 @@ it('今日のおすすめ色はレアの3色のどれかで、出やすくなる
   for (let r = 0.6; r < 0.9; r += 0.003) if (drawEgg(w, p, r, false, 0.5)!.kind.id === 'umi') normal++
   expect(boosted).toBeGreaterThan(normal)
 })
+
+it('1つのキャラクターでふつうの6色がそろうと色コンプ', async () => {
+  const { completedSpecies } = await import('./gacha')
+  const six = ['normal', 'sakura', 'umi', 'yoru', 'kin', 'niji']
+  expect(completedSpecies(six.map((k) => ({ species: 'fox', kind: k === 'normal' ? undefined : k })))).toEqual(['fox'])
+  expect(completedSpecies(six.slice(1).map((k) => ({ species: 'fox', kind: k })))).toEqual([])
+  expect(completedSpecies([...six.map((k) => ({ kind: k === 'normal' ? undefined : k }))])).toEqual(['mochi'])
+})

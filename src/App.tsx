@@ -61,7 +61,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -71,6 +71,7 @@ import {
   isLonely,
   seenForms,
   kindOf,
+  speciesOf,
   levelInfo,
   milestonesBetween,
   type Source,
@@ -732,6 +733,13 @@ function App() {
       saveGachaStats(addStats(loadGachaStats(), out.map((k) => k.kind.rarity)))
       setGachaPoints((pt) => pt + out.length)
       setStickers(sb)
+      const done = loadColorComplete()
+      const fresh = completedSpecies(p.members).filter((sp) => !done.includes(sp))
+      if (fresh.length > 0) {
+        saveColorComplete([...done, ...fresh])
+        setWallet((x) => fresh.reduce((acc) => addTicket(addTicket(acc)), x))
+        pushToast([{ id: 'color-complete', text: `🌈 ${fresh.map((sp) => speciesOf(sp).name).join('・')}の色ちがいを全部そろえた！ 🎟${COLOR_COMPLETE_TICKETS * fresh.length}`, counter: 'answers', target: 0 }])
+      }
       if (stickerDone) {
         setWallet((x) => ({ ...addTicket(addTicket(x)) }))
         pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
