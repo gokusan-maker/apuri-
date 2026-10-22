@@ -14,3 +14,8 @@ export function cardCheer(done: number): { en: string; ja: string } | null {
   if (done <= 0 || done % CHEER_EVERY !== 0) return null
   return CARD_CHEERS[(done / CHEER_EVERY - 1) % CARD_CHEERS.length]
 }
+
+// 1日に50枚めくるごとに、モチからコインのごほうび
+export const CARD_BONUS_EVERY = 50
+export const CARD_BONUS_COINS = 5
+export const isCardBonus = (done: number) => done > 0 && done % CARD_BONUS_EVERY === 0

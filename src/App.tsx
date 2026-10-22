@@ -19,6 +19,7 @@ import { Backup } from './BackupView'
 import { loadLastBackup, needBackup } from './backup'
 import { Card } from './CardView'
 import { CardCheer } from './CardCheerView'
+import { CARD_BONUS_COINS, isCardBonus } from './cardcheer'
 import { WordList } from './WordListView'
 import { makeLookup } from './glossary'
 import { loadNotes, saveNotes, setNote } from './notes'
@@ -768,6 +769,7 @@ function App() {
   function answer(correct: boolean, easy = false) {
     setShown((n) => n + 1)
     setCardsToday((d) => addToday(d, today))
+    if (isCardBonus(cardsDone + 1)) setWallet((w) => ({ ...w, coins: w.coins + CARD_BONUS_COINS })) // 50枚ごとのモチのごほうび
     if (!progress[card.id]) setDaily({ day: today, count: newToday + 1, extra: extraToday })
     setProgress({ ...progress, [card.id]: grade(progress[card.id], correct, today, easy) })
     studied(correct)
