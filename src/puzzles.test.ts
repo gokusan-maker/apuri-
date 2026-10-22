@@ -248,7 +248,7 @@ it('was と were：主語に合う答え', () => {
 })
 
 it('英語なぞなぞは20問以上あり、訳・答えの意味・英語のしかけの解説がつく', () => {
-  expect(RIDDLES.length).toBeGreaterThanOrEqual(53)
+  expect(RIDDLES.length).toBeGreaterThanOrEqual(63)
   expect(new Set(RIDDLES.map((r) => r.q)).size).toBe(RIDDLES.length)
   for (const r of RIDDLES) expect(r.ja && r.aja && r.trick).toBeTruthy()
   const q = riddleQ(() => 0)

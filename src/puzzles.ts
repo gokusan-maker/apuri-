@@ -585,6 +585,16 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
   { q: 'What has ears but cannot hear?', ja: '耳があるのに、聞こえないものはなに？', a: 'corn', aja: 'とうもろこし', trick: 'ear は「耳」。とうもろこしの「1本（穂）」も英語で an ear of corn という。' },
   { q: 'What has bark but no bite?', ja: 'ほえる（バーク）のに、かみつかないものはなに？', a: 'tree', aja: '木', trick: 'bark は動詞で「（犬が）ほえる」、名詞で「木の皮」。木には bark（皮）があるけれど、かみつかない。' },
   { q: 'What goes up when the rain comes down?', ja: '雨がふってくると、上にあがるものはなに？', a: 'umbrella', aja: 'かさ', trick: 'go up（上がる）と come down（ふってくる）が反対の意味になっている。雨がふると、かさを開いて上にさす。' },
+  { q: 'The more you take, the more you leave behind. What are they?', ja: 'とればとるほど、うしろに残していくものはなに？', a: 'footsteps', aja: '足あと', trick: 'take a step で「一歩ふみ出す」。take には「取る」のほかに「（歩みを）進める」の意味がある。leave behind は「あとに残す」。歩けば歩くほど足あとが残る。' },
+  { q: "I'm tall when I'm young, and I'm short when I'm old. What am I?", ja: '若いときは背が高く、年をとると背が低くなる。わたしはなに？', a: 'candle', aja: 'ろうそく', trick: 'young / old はふつう人の年れいに使うけれど、ここでは「新しい／使いこまれた」の意味。ろうそくは燃えるほど短く（short）なる。' },
+  { q: 'What is easy to get into but hard to get out of?', ja: '入るのはかんたんだけど、出るのはむずかしいものはなに？', a: 'trouble', aja: 'めんどうなこと（トラブル）', trick: 'get into trouble は「めんどうなことになる」、get out of trouble は「めんどうからぬけ出す」。部屋に入る・出るのと同じ get into / get out of を使ったしかけ。' },
+  { q: 'What word is spelled wrong in every dictionary?', ja: 'どの辞書でも、まちがってつづられている単語はなに？', a: 'wrong', aja: 'wrong という単語', trick: 'spelled wrong は「まちがってつづられている」と読めるけれど、「wrong とつづられている」とも読める。どの辞書にも wrong という単語は W-R-O-N-G と書いてある。' },
+  { q: 'What can you put in a bucket to make it lighter?', ja: 'バケツに入れると、バケツが軽くなるものはなに？', a: 'hole', aja: '穴', trick: 'ふつう物を入れると重くなるけれど、put a hole in a bucket（バケツに穴をあける）と中の水がぬけて軽くなる。lighter は light（軽い）の比較級。' },
+  { q: 'Where does today come before yesterday?', ja: 'today（今日）が yesterday（きのう）より前に来るのはどこ？', a: 'dictionary', aja: '辞書', trick: 'come before は「〜より前に来る」。時間の順ではなく、辞書のアルファベット順では today（t）が yesterday（y）より前に出てくる。' },
+  { q: 'What begins with an E but only has one letter in it?', ja: 'E で始まるのに、中に letter が1つしかないものはなに？', a: 'envelope', aja: 'ふうとう', trick: 'letter には「文字」と「手紙」の2つの意味がある。envelope（ふうとう）は E で始まり、中に手紙（letter）が1通だけ入っている。' },
+  { q: 'What is always coming but never arrives?', ja: 'いつもやって来るのに、けっして着かないものはなに？', a: 'tomorrow', aja: 'あした', trick: '明日はいつも近づいて（is coming）いるけれど、来たときには「今日」になっているので、明日そのものはけっして到着（arrive）しない。' },
+  { q: 'Forward I am heavy, but backward I am not. What am I?', ja: '前から読むと重いけれど、うしろから読むとそうではない。わたしはなに？', a: 'ton', aja: 'トン（重さの単位）', trick: 'ton（1トン＝1000kg）は重い。うしろから読むと not（〜でない）になる。backward I am not は「逆からだと重くない」と「逆からだと not だ」の2つの意味になる。' },
+  { q: 'What comes once in a minute, twice in a moment, but never in a thousand years?', ja: '1分（minute）に1回、一瞬（moment）に2回来るのに、千年（a thousand years）には1回も来ないものはなに？', a: 'M', aja: 'M という文字', trick: '時間の話に見えて、実は文字の話。minute には m が1つ、moment には m が2つ、a thousand years には m が1つもない。' },
 ]
 
 // なぞなぞのヒント：答えの最初の文字と文字数
