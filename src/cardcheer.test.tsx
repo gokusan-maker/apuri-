@@ -12,7 +12,7 @@ describe('cardCheer', () => {
     expect(cardCheer(9)).toBeNull()
     expect(cardCheer(10)).toEqual(CARD_CHEERS[0])
     expect(cardCheer(20)).toEqual(CARD_CHEERS[1])
-    expect(cardCheer(60)).toEqual(CARD_CHEERS[0])
+    expect(cardCheer(60)).toEqual(CARD_CHEERS[5])
   })
   it('表示しても勝手に音は出さず、🔊で読む', () => {
     render(<CardCheer done={10} />)
@@ -41,4 +41,11 @@ describe('50枚ごとのごほうび', () => {
     render(<CardCheer done={10} />)
     expect(screen.getByRole('status')).not.toHaveTextContent('ごほうび')
   })
+})
+
+it('モチのひとことは10種類で、10枚ごとに順番にかわる', () => {
+  expect(CARD_CHEERS).toHaveLength(10)
+  expect(new Set(CARD_CHEERS.map((c) => c.en)).size).toBe(10)
+  expect(cardCheer(100)).toEqual(CARD_CHEERS[9])
+  expect(cardCheer(110)).toEqual(CARD_CHEERS[0])
 })

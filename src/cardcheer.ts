@@ -7,6 +7,11 @@ export const CARD_CHEERS: { en: string; ja: string }[] = [
   { en: 'Keep going. I believe in you!', ja: 'その調子。きみならできるよ！' },
   { en: 'So many new words. Great job!', ja: '新しい単語がいっぱい。すごいね！' },
   { en: 'You never give up. I like that!', ja: 'あきらめないところ、大好き！' },
+  { en: 'Every card makes you a little stronger.', ja: '1枚ごとに、きみは少しずつ強くなっているよ。' },
+  { en: 'Wow, you remembered so many!', ja: 'わあ、こんなにたくさん覚えたね！' },
+  { en: 'Your hard work is paying off.', ja: 'がんばりが実を結んでいるよ。' },
+  { en: "Let's take a deep breath and keep going.", ja: '深呼吸して、続けよう。' },
+  { en: 'You are a word master in the making!', ja: 'きみは単語マスターへの道を進んでいるよ！' },
 ]
 
 // めくった枚数がちょうど10の倍数のときだけ、ひとことを返す
