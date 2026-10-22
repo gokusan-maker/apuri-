@@ -621,3 +621,12 @@ it('確認問題を全問正解すると紙ふぶきが出る（まちがえた�
   })
   expect(document.querySelector('.grammar-confetti')).toBeNull()
 })
+
+it('「あと1問で全問正解」の単元が一覧の上に出て、開ける', () => {
+  localStorage.clear()
+  const u = GRAMMAR[1]
+  localStorage.setItem('eitan:grammar', JSON.stringify({ [u.id]: u.questions.length - 1 }))
+  render(<Grammar />)
+  fireEvent.click(screen.getByText(`👉 ${u.title}（${u.questions.length - 1} / ${u.questions.length}）`))
+  expect(screen.getByText(u.points[0])).toBeInTheDocument()
+})

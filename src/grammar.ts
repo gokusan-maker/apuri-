@@ -2078,3 +2078,6 @@ export function correctSentence(q: GrammarQuestion): string | null {
   const s = q.sentence.replace(/___/, q.choices[q.answer])
   return /[ぁ-んァ-ン一-龥（→]/.test(s) ? null : s
 }
+
+// あと少しで全問正解：最高点が「全問 − 1」の単元（最大 n こ）
+export const almostUnits = (r: GrammarRecord, n = 3) => GRAMMAR.filter((u) => r[u.id] === u.questions.length - 1).slice(0, n)
