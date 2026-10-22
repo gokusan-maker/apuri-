@@ -39,11 +39,21 @@ type Props = {
   favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
+type ShopTab = 'gacha' | 'snack' | 'item' | 'wear'
+const SHOP_TABS: { id: ShopTab; label: string }[] = [
+  { id: 'gacha', label: '🎰 ガチャ' },
+  { id: 'snack', label: '🍪 おやつ' },
+  { id: 'wear', label: '👗 きせかえ' },
+  { id: 'item', label: '🎒 アイテム' },
+]
+
 export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
   const [outfits, setOutfits] = useState(loadOutfits)
+  const [tab, setTab] = useState<ShopTab>(onGacha ? 'gacha' : 'snack')
+  const tabs = SHOP_TABS.filter((t) => t.id !== 'gacha' || onGacha)
   useEffect(() => {
     if (!eating) return
     const t = window.setTimeout(() => setEating(null), 1800)
@@ -67,7 +77,16 @@ export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snack
           )}
         </div>
       </div>
-      {onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
+      <div className="shop-tabs" role="tablist" aria-label="ショップの売り場">
+        {tabs.map((t) => (
+          <button key={t.id} role="tab" aria-selected={tab === t.id} className={tab === t.id ? 'on' : undefined} onClick={() => setTab(t.id)}>
+            {t.label}
+          </button>
+        ))}
+      </div>
+      {tab === 'gacha' && onGacha && <Gacha coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
+      {tab === 'snack' && (
+        <>
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (
@@ -85,6 +104,10 @@ export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snack
           </button>
         ))}
       </div>
+        </>
+      )}
+      {tab === 'item' && (
+        <>
       <h3 className="shop-h">
         お休みチケット（持っている数 {wallet.freezes ?? 0} / {FREEZE_MAX}）
       </h3>
@@ -108,6 +131,10 @@ export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snack
           </div>
         </>
       )}
+        </>
+      )}
+      {tab === 'wear' && (
+        <>
       <h3 className="shop-h">相棒の部屋</h3>
       <ul className="badge-grid">
         {ROOMS.map((r) => {
@@ -180,6 +207,8 @@ export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snack
           )
         })}
       </ul>
+        </>
+      )}
     </section>
   )
 }

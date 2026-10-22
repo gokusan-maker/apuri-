@@ -334,6 +334,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     fireEvent.click(screen.getByLabelText('コイン 30枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('tab', { name: /きせかえ/ }))
     fireEvent.click(screen.getByText('🪙30で買う'))
     expect(screen.getByText(/いまのコイン：🪙 0/)).toBeInTheDocument()
     fireEvent.click(screen.getByText('つける'))
@@ -401,6 +402,7 @@ describe('App', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('tab', { name: /おやつ/ }))
     expect(screen.getByText('💕 きょうの好物 XP2倍！')).toBeInTheDocument() // テストの日はクッキーが好物
     fireEvent.click(screen.getByText(/サクサククッキン/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(40)
@@ -510,6 +512,7 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByText('💗 ごきげんMAX！ 今日はXP1.2倍')).toBeInTheDocument()
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('tab', { name: /おやつ/ }))
     fireEvent.click(screen.getByText(/サクサククッキン/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(48) // 好物40×1.2
   })
@@ -906,6 +909,7 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByLabelText('連続学習 0 日')).toBeInTheDocument()
     fireEvent.click(screen.getByLabelText('コイン 60枚・ショップを開く'))
+    fireEvent.click(screen.getByRole('tab', { name: /アイテム/ }))
     fireEvent.click(screen.getByText('🎫 🪙50で買う'))
     expect(screen.getByLabelText('連続学習 4 日')).toBeInTheDocument()
     fireEvent.click(screen.getByText('← もどる'))
