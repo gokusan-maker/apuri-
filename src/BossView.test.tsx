@@ -34,6 +34,19 @@ describe('ボス戦', () => {
     expect(screen.getByText(/🏅 MVP単語：/)).toBeInTheDocument()
   })
 
+  it('5コンボ以上でコンボ表示が大きくなり「すごいコンボ！」が出る', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} hp={999} onWin={() => {}} onExit={() => {}} />)
+    for (let i = 0; i < 4; i++) {
+      answer(true)
+      expect(screen.queryByText(/すごいコンボ！/)).not.toBeInTheDocument()
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(document.querySelector('.combo.big')).toBeNull()
+    answer(true)
+    expect(screen.getByText('🔥 すごいコンボ！ 5連続！')).toBeInTheDocument()
+    expect(document.querySelector('.combo.big')?.textContent).toBe('🔥5')
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {

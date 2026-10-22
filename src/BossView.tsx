@@ -7,7 +7,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { BIG_COMBO, BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -493,7 +493,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       </div>
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
-        {combo >= 2 && <span className="combo">🔥{combo}</span>}
+        {combo >= 2 && (
+          <span key={combo} className={`combo${combo >= BIG_COMBO ? ' big' : ''}`}>
+            🔥{combo}
+          </span>
+        )}
         <span className={`special-gauge${gauge >= GAUGE_MAX ? ' full' : ''}`} role="meter" aria-label="必殺技ゲージ" aria-valuemin={0} aria-valuemax={GAUGE_MAX} aria-valuenow={gauge}>
           {Array.from({ length: GAUGE_MAX }, (_, i) => (
             <i key={i} className={i < gauge ? 'on' : ''} />
@@ -655,6 +659,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               <p className="feedback">
                 {picked === q.answer ? `${damage(combo)} ダメージ！` : `正解は「${q.choices[q.answer]}」`}
               </p>
+              {picked === q.answer && combo >= BIG_COMBO && (
+                <p className="mega-combo boss-mega-combo" role="status">
+                  🔥 すごいコンボ！ {combo}連続！
+                </p>
+              )}
               <button className="flip" onClick={next}>
                 次へ
               </button>
