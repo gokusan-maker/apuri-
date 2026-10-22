@@ -333,3 +333,14 @@ it('すぐに答えあわせモードでは、答えるとすぐ正解と解説�
   expect(screen.getByText(new RegExp(t.why.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))).toBeInTheDocument()
   expect(screen.getByRole('button', { name: `(1) ${t.answer ? '×' : '○'}` })).toBeDisabled()
 })
+
+it('★のしおりをつけた長文は一覧の上に来る', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const last = LONG_PASSAGES[LONG_PASSAGES.length - 1]
+  const btn = screen.getAllByLabelText(/をしおりに入れる$/).at(-1)!
+  fireEvent.click(btn)
+  expect(JSON.parse(localStorage.getItem('eitan:long-bookmarks')!)).toEqual([last.id])
+  expect(document.querySelector('.grammar-list li .grammar-fav.on')).not.toBeNull()
+  expect(document.querySelectorAll('.grammar-list li')[0].querySelector('.grammar-fav.on')).not.toBeNull()
+})

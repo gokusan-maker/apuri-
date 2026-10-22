@@ -2929,3 +2929,21 @@ export function addGenreStats(g: Genre, ok: number, n: number): Partial<Record<G
   }
   return next
 }
+
+// しおり：★をつけた長文（一覧の上にまとめる）
+const BOOKMARK_KEY = 'eitan:long-bookmarks'
+export function loadBookmarks(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(BOOKMARK_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function saveBookmarks(ids: string[]): void {
+  try {
+    localStorage.setItem(BOOKMARK_KEY, JSON.stringify(ids))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

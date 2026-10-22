@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
@@ -80,6 +80,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [readWords, setReadWords] = useState(loadReadWords)
   const [history, setHistory] = useState(loadLongHistory)
   const [genreStats, setGenreStats] = useState(loadGenreStats)
+  const [bookmarks, setBookmarks] = useState(loadBookmarks)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
@@ -196,8 +197,20 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           ))}
         </div>
         <ul className="grammar-list">
-          {LONG_PASSAGES.filter((x) => genre === 'all' || genreOf(x) === genre).map((x) => (
-            <li key={x.id}>
+          {[...LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)), ...LONG_PASSAGES.filter((x) => !bookmarks.includes(x.id))].filter((x) => genre === 'all' || genreOf(x) === genre).map((x) => (
+            <li key={x.id} className="with-fav">
+              <button
+                className={`grammar-fav${bookmarks.includes(x.id) ? ' on' : ''}`}
+                aria-label={`${shownTitle(x, LONG_PASSAGES.indexOf(x))}をしおりに${bookmarks.includes(x.id) ? '入れない' : '入れる'}`}
+                aria-pressed={bookmarks.includes(x.id)}
+                onClick={() => {
+                  const b = bookmarks.includes(x.id) ? bookmarks.filter((y) => y !== x.id) : [...bookmarks, x.id]
+                  setBookmarks(b)
+                  saveBookmarks(b)
+                }}
+              >
+                {bookmarks.includes(x.id) ? '★' : '☆'}
+              </button>
               <button
                 onClick={() => openPassage(x)}
               >
