@@ -66,3 +66,30 @@ export function saveWeekendWeek(w: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// ナイトボス：夜7時〜10時だけあらわれる。その日はじめてたおすと🪙15
+export const NIGHT_COINS = 15
+export const isNightTime = (hour: number) => hour >= 19 && hour < 22
+export function nightBossOf(day: string): { level: Level; look: BossLook } {
+  const level = dailyBossLevel(RARE_LEVELS, `night-${day}`) ?? '中1'
+  const base = BOSSES[level]
+  return {
+    level,
+    look: { ...base, name: `夜の${base.name}`, color: '#1e3a8a', line: '#0f172a', eye: '#fde047', desc: '夜にだけあらわれる、目が光るボス。', taunt: { en: 'The night is my time!', ja: '夜はおれの時間だ！' } },
+  }
+}
+const NIGHT_KEY = 'eitan:night-boss'
+export function loadNightDay(): string {
+  try {
+    return localStorage.getItem(NIGHT_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveNightDay(day: string): void {
+  try {
+    localStorage.setItem(NIGHT_KEY, day)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

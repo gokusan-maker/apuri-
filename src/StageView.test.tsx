@@ -207,3 +207,14 @@ it('たおしたボスには強化版で挑める（HPが多い）', () => {
   expect(screen.getByText('💪 強化版の中1ボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '150')
 })
+
+it('ナイトボスは夜7時〜10時だけ出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={12} />)
+  expect(screen.queryByText(/🌃 ナイトボス/)).not.toBeInTheDocument()
+  unmount()
+  const bonus = vi.fn()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={20} onRankBonus={bonus} />)
+  fireEvent.click(screen.getByText(/🌃 ナイトボス「夜の/))
+  expect(screen.getByText('🌃 ナイトボス')).toBeInTheDocument()
+})

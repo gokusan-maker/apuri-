@@ -1354,3 +1354,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-week-rank .stats-note { margin: 4px 0 0; }
 .gacha-capsule.mystery { background: linear-gradient(180deg, #6b7280 50%, #d1d5db 50%) !important; }
 .gacha-capsule.mystery::after { content: "？"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; font-weight: 900; }
+.boss-btn.night-boss { background: linear-gradient(90deg, #1e3a8a, #312e81); color: #fde047; }

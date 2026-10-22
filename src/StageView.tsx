@@ -9,7 +9,7 @@ import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
-import { loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
+import { isNightTime, loadNightDay, NIGHT_COINS, nightBossOf, saveNightDay, loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
@@ -48,6 +48,7 @@ type Props = {
   onLose?: () => void
   onOpenGold?: () => void
   power?: number // 相棒のちから（正解ダメージ+）
+  hour?: number // いまの時刻（ナイトボス用）
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
   onWeekendWin?: () => void // 週末ボスをその週末はじめて倒した
 }
@@ -58,7 +59,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
+export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -74,6 +75,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [weekendFight, setWeekendFight] = useState(false)
   const [timeAttack, setTimeAttack] = useState(false)
   const [strong, setStrong] = useState(false) // 強化版のボス
+  const [nightFight, setNightFight] = useState(false)
+  const [nightDay, setNightDay] = usePersistent(loadNightDay, saveNightDay)
   const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean; ex?: boolean } | null>(null)
   const [endless, setEndless] = useState<{ floor: number; hearts: number; won: boolean } | null>(null)
   const [endlessBest, setEndlessBest] = usePersistent(loadEndlessBest, saveEndlessBest)
@@ -188,6 +191,36 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   }
 
   if (timeAttack) return <BossTime words={wordsOf(levels)} onBack={() => setTimeAttack(false)} />
+
+  if (nightFight) {
+    const nb = nightBossOf(dayKey())
+    return (
+      <Boss
+        level={nb.level}
+        words={wordsOf([nb.level])}
+        look={nb.look}
+        title="🌃 ナイトボス"
+        partner={partner}
+        power={power}
+        bag={bag}
+        onUseItem={onUseItem}
+        onDefeat={onBossDefeat}
+        onSkill={onSkill}
+        onDrop={onDrop}
+        onLose={onLose}
+        onRankBonus={onRankBonus}
+        bonus={BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onAnswer}
+        onWin={() => {
+          if (nightDay === dayKey()) return
+          setNightDay(dayKey())
+          onRankBonus?.(NIGHT_COINS)
+        }}
+        onExit={() => setNightFight(false)}
+      />
+    )
+  }
 
   if (weekendFight) {
     const wb = weekendBossOf(week)
@@ -442,6 +475,11 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
         {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
       </button>
+      {isNightTime(hour) && (
+        <button className="boss-btn night-boss" onClick={() => setNightFight(true)}>
+          {nightDay === dayKey() ? `✅ 今夜のナイトボス「${nightBossOf(dayKey()).look.name}」はたおした（もう一度戦う）` : `🌃 ナイトボス「${nightBossOf(dayKey()).look.name}」（夜7時〜10時だけ）たおすと 🪙${NIGHT_COINS}`}
+        </button>
+      )}
       {weekend && (
         <button className="boss-btn weekend-boss" onClick={() => setWeekendFight(true)}>
           {weekendWeek === week ? `✅ 週末ボス「${weekendBossOf(week).look.name}」はたおした！（もう一度戦う）` : `🌙 週末ボス「${weekendBossOf(week).look.name}」（HP${WEEKEND_HP}）たおすと 🎟1`}

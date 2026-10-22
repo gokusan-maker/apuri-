@@ -38,3 +38,13 @@ it('週末ボスは週ごとに決まり、たおした週を記録できる', a
   saveWeekendWeek('2026-10-19')
   expect(loadWeekendWeek()).toBe('2026-10-19')
 })
+
+it('ナイトボスは夜だけで、日ごとに決まる', async () => {
+  const { isNightTime, nightBossOf } = await import('./rareboss')
+  expect(isNightTime(18)).toBe(false)
+  expect(isNightTime(19)).toBe(true)
+  expect(isNightTime(21)).toBe(true)
+  expect(isNightTime(22)).toBe(false)
+  expect(nightBossOf('2026-10-20')).toEqual(nightBossOf('2026-10-20'))
+  expect(nightBossOf('2026-10-20').look.name.startsWith('夜の')).toBe(true)
+})
