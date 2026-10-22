@@ -4,6 +4,7 @@ import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, so
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { LongTfQuiz } from './LongTfQuizView'
+import { LONG_FONTS, loadLongFont, saveLongFont } from './longfont'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -89,6 +90,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [weekRes, setWeekRes] = useState(loadWeekResults)
   const [vocabQuiz, setVocabQuiz] = useState(false)
   const [tfQuiz, setTfQuiz] = useState(false)
+  const [font, setFont] = useState(loadLongFont)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
@@ -385,11 +387,26 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           ))
         )}
       </div>
+      <p className="long-font" role="group" aria-label="本文の文字の大きさ">
+        文字の大きさ：
+        {LONG_FONTS.map((f) => (
+          <button
+            key={f.id}
+            aria-pressed={font === f.id}
+            onClick={() => {
+              setFont(f.id)
+              saveLongFont(f.id)
+            }}
+          >
+            {f.label}
+          </button>
+        ))}
+      </p>
       <label className="long-instant">
         <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつすぐに答えあわせ（空所補充・○×）
       </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
-      <div className="long-text">
+      <div className={`long-text font-${font}`}>
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>

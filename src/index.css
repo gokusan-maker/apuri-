@@ -1410,3 +1410,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .tense-table { margin: 6px 0; border-radius: 12px; background: color-mix(in srgb, #38bdf8 8%, var(--card)); padding: 2px 8px; } .tense-table > summary { cursor: pointer; padding: 10px 2px; font-weight: 700; }
 .boss-hp-num { margin: -2px 0 6px; font-size: 0.78rem; font-weight: 700; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
 .inline-points { margin: 6px 0; padding: 8px 10px 8px 26px; border-radius: 10px; background: color-mix(in srgb, #fde68a 30%, var(--card)); font-size: 0.85rem; text-align: left; }
+.long-font { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-size: 0.8rem; color: var(--muted); }
+.long-font button { min-width: 2.4em; padding: 4px 8px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); border-radius: 999px; background: var(--card); color: inherit; font-weight: 700; }
+.long-font button[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }
+.long-text.font-s { font-size: 0.88rem; }
+.long-text.font-m { font-size: 1rem; }
+.long-text.font-l { font-size: 1.2rem; line-height: 1.75; }

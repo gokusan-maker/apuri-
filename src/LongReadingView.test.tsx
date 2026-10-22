@@ -428,3 +428,17 @@ it('採点したら「次の長文へ ▶」でまだ解いていない次の長
   expect(screen.getAllByText(new RegExp(b.title.replace(/[?()]/g, '.'))).length).toBeGreaterThan(0)
   expect(screen.getByRole('button', { name: /のこり/ })).toBeDisabled()
 })
+
+it('長文の本文の文字の大きさを小・中・大で変えられ、覚えている', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[0]
+  const { unmount } = render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  expect(document.querySelector('.long-text.font-m')).not.toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: '大' }))
+  expect(document.querySelector('.long-text.font-l')).not.toBeNull()
+  unmount()
+  render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  expect(document.querySelector('.long-text.font-l')).not.toBeNull()
+})
