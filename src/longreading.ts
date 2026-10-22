@@ -4330,6 +4330,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Our ancestors had more hair than we do.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'zebra-stripes',
+    title: 'Why Do Zebras Have Stripes?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Zebras are famous for their black and white stripes. No two zebras have exactly the same pattern, just ( A ) no two people have the same fingerprints.',
+      'For a long time, people wondered why zebras have stripes. Some thought the stripes helped zebras hide in tall grass. Others thought they helped zebras stay cool under the hot sun.',
+      'Today, many scientists believe that the stripes protect zebras from biting flies. In one study, researchers put striped coats on horses. Flies flew near the horses, but far fewer of them landed on the striped coats. The stripes seem to make it hard ( B ) flies to land.',
+      'There is one more surprising fact. Under their hair, zebras have dark skin. So, are zebras white animals with black stripes, or black animals with white stripes? Scientists say the ( C ) is "black with white stripes."',
+    ],
+    ja: [
+      'シマウマは白と黒のしまもようで有名です。2人の人が同じ指紋をもたないのとちょうど同じように、2頭のシマウマがまったく同じもようをもつことはありません。',
+      '長いあいだ、人々はシマウマになぜしまがあるのかふしぎに思ってきました。しまは背の高い草の中にかくれるのに役立つと考える人もいました。暑い日ざしの下で体をすずしく保つのに役立つと考える人もいました。',
+      '今では多くの科学者が、しまはシマウマを血をすうハエから守っていると考えています。ある研究で、研究者たちは馬にしまもようのコートを着せました。ハエは馬の近くを飛びましたが、しまもようのコートにとまったハエはずっと少なかったのです。しまはハエがとまるのをむずかしくしているようです。',
+      'もう一つおどろくべき事実があります。毛の下のシマウマの皮ふは黒っぽい色をしています。では、シマウマは黒いしまのある白い動物なのでしょうか、それとも白いしまのある黒い動物なのでしょうか。科学者たちは、答えは「白いしまのある黒」だと言っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'like', 'so', 'than'], answer: 0, why: 'just as ＋ 主語 ＋ 動詞「ちょうど〜と同じように」。あとに文が続くので as。' },
+      { id: 'B', choices: ['for', 'of', 'to', 'with'], answer: 0, why: 'make it hard for 人 to 〜「人が〜するのをむずかしくする」。' },
+      { id: 'C', choices: ['answer', 'question', 'problem', 'color'], answer: 0, why: '直前の問いへの「答え（answer）」。' },
+    ],
+    underline: { phrase: 'far fewer of them', choices: ['それらのずっと少ない数', 'それらのずっと遠く', 'それらのほとんど全部', 'それらの少し多い数'], answer: 0, why: 'far は比較級を強めて「ずっと」。fewer は few の比較級で「より少ない数」。' },
+    tf: [
+      { statement: 'Every zebra has a different pattern.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Everyone has always agreed about why zebras have stripes.', answer: false, why: 'いろいろな考えがあった。' },
+      { statement: 'In the study, more flies landed on the striped coats.', answer: false, why: 'しまもようのコートにとまったハエはずっと少なかった。' },
+      { statement: 'Zebras have dark skin under their hair.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'Scientists say zebras are white with black stripes.', answer: false, why: '「白いしまのある黒」と言っている。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
