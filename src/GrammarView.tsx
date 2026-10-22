@@ -22,6 +22,7 @@ import { addGrammarCorrect, last7, loadGrammarWeek, saveGrammarWeek } from './gr
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GameTile } from './GameTileView'
+import { loadTodayGames } from './gamesplayed'
 import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -89,6 +90,7 @@ function saveRunBest(n: number): void {
 }
 
 export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest }: Props) {
+  const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
   const [runBonus, setRunBonus] = useState(false) // ベスト更新のボーナスのお知らせ
   const [opened, setOpened] = useState(loadOpened) // 一度でも開いた単元（NEW 印を消す）
@@ -238,7 +240,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
                 </button>
               ))}
             </div>
-            <p className="game-grid-title">🎮 文法ゲーム（{GAME_COUNT}しゅるい）</p>
+            <p className="game-grid-title">
+              🎮 文法ゲーム（{GAME_COUNT}しゅるい）
+              {playedToday > 0 && <span className="played-today">{playedToday >= GAME_COUNT ? '🎉 今日は全部あそんだ！' : `・今日 ${playedToday} しゅるいあそんだ`}</span>}
+            </p>
             <div className="game-grid" aria-label="文法ゲーム">
               {notebookQuestions(note).length > 0 && (
                 <GameTile

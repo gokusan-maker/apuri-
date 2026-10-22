@@ -813,3 +813,13 @@ it('文法の単元一覧で、まだ開いていない単元に NEW 印がつ�
   render(<Grammar />)
   expect(item().textContent).not.toContain('NEW')
 })
+
+it('文法ゲームの見出しに、今日あそんだゲームのしゅるいの数を出す', () => {
+  localStorage.clear()
+  const { unmount } = render(<Grammar />)
+  expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
+  fireEvent.click(within(screen.getByLabelText('文法ゲーム')).getByText('2択スピード'))
+  unmount()
+  render(<Grammar />)
+  expect(screen.getByText('・今日 1 しゅるいあそんだ')).toBeInTheDocument()
+})
