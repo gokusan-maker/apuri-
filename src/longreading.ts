@@ -3923,6 +3923,96 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: "Hana's sunflower was taller than her father.", answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'fingerprints',
+    title: 'Your Special Fingerprints',
+    level: '中2',
+    paragraphs: [
+      'Look at the tips of your fingers. You can see many thin lines. These lines are called fingerprints, and no two people in the world have ( A ) same ones.',
+      'Even twins who look exactly alike have different fingerprints. This is because fingerprints are formed ( B ) we are born, and small differences during that time make each pattern special.',
+      'Scientists think fingerprints help us hold things. The lines may make it ( C ) for us to pick up small or wet objects. Our fingertips can also feel things better because of them.',
+      "Because everyone's fingerprints are different, they are used ( D ) many places. For example, some smartphones can be opened with a fingerprint instead of a password.",
+    ],
+    ja: [
+      '指先を見てください。細い線がたくさん見えるでしょう。この線は指紋とよばれ、世界に同じ指紋をもつ人は2人といません。',
+      'そっくりなふたごでさえ、指紋はちがいます。それは、指紋が生まれる前にでき、そのときの小さなちがいがそれぞれのもようを特別なものにするからです。',
+      '科学者は、指紋が物を持つのに役立っていると考えています。この線のおかげで、小さなものやぬれたものを拾いやすくなっているのかもしれません。また、指紋があることで指先がものをよりよく感じとれるとも考えられています。',
+      'みんなの指紋がちがうので、指紋はいろいろなところで使われています。たとえば、パスワードのかわりに指紋で開けられるスマートフォンもあります。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['a', 'an', 'some', 'the'], answer: 3, why: 'the same 〜 で「同じ〜」（same の前は the）。' },
+      { id: 'B', choices: ['after', 'before', 'since', 'until'], answer: 1, why: '「生まれる前に」は before we are born。' },
+      { id: 'C', choices: ['easier', 'easiest', 'easily', 'easy'], answer: 0, why: 'make it 〜 for 人 to … で「人が…するのを〜にする」。ここは比較級 easier。' },
+      { id: 'D', choices: ['at', 'for', 'in', 'on'], answer: 2, why: '「多くの場所で」は in many places。' },
+    ],
+    tf: [
+      { statement: 'No two people have the same fingerprints.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Twins have the same fingerprints.', answer: false, why: 'ふたごでも指紋はちがう。' },
+      { statement: 'Fingerprints are formed after we are born.', answer: false, why: '生まれる前にできる。' },
+      { statement: 'Fingerprints may help us pick up small objects.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Some smartphones can be opened with a fingerprint.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'email-grandma-sports',
+    title: 'An Email to Grandma',
+    level: '中2（メール）',
+    paragraphs: [
+      'Dear Grandma, How are you? It is getting colder here. Next month, we will have our sports day at school, and I want you ( A ) come and watch.',
+      'This year, I will run in the relay race. I am the last runner for my team, so I am a little nervous. I practice running ( B ) the river every evening with my father. I hope our team can win this year.',
+      "Sports day will be held on Saturday, November 7. It starts at nine o'clock. If it rains, it will be held ( C ) next day.",
+      "Mom will make lunch for everyone, so please come hungry! I can't wait ( D ) see you. Love, Riku",
+    ],
+    ja: [
+      'おばあちゃんへ。元気ですか。こちらはだんだん寒くなってきました。来月、学校で運動会があるので、見に来てほしいです。',
+      '今年、ぼくはリレーに出ます。チームのアンカーなので、少し緊張しています。毎晩、お父さんといっしょに川ぞいを走って練習しています。今年はチームが勝てるといいな。',
+      '運動会は11月7日の土曜日にあります。9時に始まります。雨がふったら、次の日になります。',
+      'お母さんがみんなのお弁当を作るので、おなかをすかせて来てね！会えるのがとても楽しみです。リクより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'of', 'that', 'to'], answer: 3, why: 'want 人 to 〜 で「人に〜してほしい」。' },
+      { id: 'B', choices: ['along', 'between', 'during', 'until'], answer: 0, why: 'along 〜 で「〜にそって」。' },
+      { id: 'C', choices: ['a', 'an', 'the', 'this'], answer: 2, why: 'the next day で「次の日」。' },
+      { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: "can't wait to 〜 で「〜するのが待ちきれない」。" },
+    ],
+    tf: [
+      { statement: 'Riku wants his grandmother to watch his sports day.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Riku will be the first runner in the relay.', answer: false, why: 'アンカー（最後の走者）。' },
+      { statement: 'Riku practices running with his father every evening.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: "Sports day will start at ten o'clock.", answer: false, why: '9時に始まる。' },
+      { statement: "Riku's mother will make lunch.", answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'library-letter',
+    title: 'A Letter in the Library Book',
+    level: '中2（物語）',
+    paragraphs: [
+      'One day, Saki borrowed an old book from the school library. When she opened it at home, a small piece of paper fell ( A ) of it.',
+      'It was a letter. It said, "To the person who reads this book next: This story helped me when I was sad. I hope it helps you, too." At the bottom, there was a date. The letter was written thirty years ( B ).',
+      "Saki read the book that night. It was about a girl ( C ) moved to a new town and slowly made friends. Saki had also moved to a new school that spring, so she understood the girl's feelings.",
+      'Before Saki returned the book, she put the old letter back and added her own note: "Thank you. It helped me, too." She hoped the next reader would ( D ) both letters.',
+    ],
+    ja: [
+      'ある日、サキは学校の図書館で古い本を借りました。家で開くと、小さな紙が1まい、本からひらりと落ちました。',
+      'それは手紙でした。「この本を次に読む人へ。この物語は、悲しかったときの私を助けてくれました。あなたのことも助けてくれますように」と書いてありました。下には日付があり、その手紙は30年前に書かれたものでした。',
+      'サキはその夜、その本を読みました。新しい町に引っこして、少しずつ友だちをつくっていく女の子の物語でした。サキもその春に新しい学校に転校してきたばかりだったので、女の子の気持ちがよくわかりました。',
+      '本を返す前に、サキは古い手紙をもとにもどし、自分のメモを書きたしました。「ありがとう。私も助けられました」。次に読む人が、2つの手紙を見つけてくれることをサキは願いました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['down', 'off', 'out', 'up'], answer: 2, why: 'fall out of 〜 で「〜から落ちる・こぼれ出る」。' },
+      { id: 'B', choices: ['after', 'ago', 'before', 'since'], answer: 1, why: '今から数えて「30年前に」は thirty years ago。' },
+      { id: 'C', choices: ['what', 'which', 'who', 'whose'], answer: 2, why: '人（a girl）を説明する関係代名詞は who。' },
+      { id: 'D', choices: ['find', 'finding', 'found', 'to find'], answer: 0, why: '助動詞 would のあとは動詞の原形 find。' },
+    ],
+    tf: [
+      { statement: 'Saki borrowed an old book from the school library.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'The letter was written three years ago.', answer: false, why: '30年前に書かれた。' },
+      { statement: 'The story was about a boy who moved to a new town.', answer: false, why: '新しい町に引っこした女の子の物語。' },
+      { statement: 'Saki had moved to a new school that spring.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Saki added her own note before she returned the book.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
