@@ -1179,6 +1179,39 @@ export const PASSAGES: Passage[] = [
       { q: 'コンサートで兄はどうした？', choices: ['いちばん大きな拍手をした', '耳をふさいだ', '来なかった'], answer: 0 },
     ],
   },
+  {
+    id: 'magic-trick',
+    title: 'My First Magic Trick',
+    text: 'For my birthday, my aunt gave me a book of magic tricks. I practiced one card trick for a whole week in front of a mirror. At dinner on Friday, I showed it to my family. My father could not guess how I did it, and he asked me to do it three more times.',
+    ja: '誕生日に、おばが手品の本をくれました。私は1週間ずっと、鏡の前で一つのトランプの手品を練習しました。金曜日の夕食のとき、家族に見せました。父はどうやったのかわからず、あと3回やってとたのみました。',
+    questions: [
+      { q: '手品の本をくれたのはだれ？', choices: ['おば', '父', '友だち'], answer: 0 },
+      { q: 'どこで練習した？', choices: ['鏡の前', '学校', '公園'], answer: 0 },
+      { q: '父は何とたのんだ？', choices: ['あと3回やって', 'やり方を教えて', 'もうやめて'], answer: 0 },
+    ],
+  },
+  {
+    id: 'loose-tooth',
+    title: 'A Loose Tooth',
+    text: 'My little brother had a loose tooth for three days. He was afraid to touch it. This morning he bit into a crunchy apple, and the tooth came out! He was surprised, and then he smiled a big smile with a gap in it. He put the tooth in a small box to keep.',
+    ja: '弟は3日間、歯がぐらぐらしていました。さわるのがこわかったのです。今朝、弟がかたいりんごをかじったら、歯がぬけました！ 弟はびっくりして、それから、すき間のある大きな笑顔を見せました。弟はその歯を小さな箱に入れてとっておきました。',
+    questions: [
+      { q: '歯は何日ぐらぐらしていた？', choices: ['1日', '3日', '1週間'], answer: 1 },
+      { q: '歯はどうしてぬけた？', choices: ['りんごをかじった', '歯医者でぬいた', 'ころんだ'], answer: 0 },
+      { q: 'ぬけた歯はどうした？', choices: ['小さな箱に入れた', '捨てた', '屋根に投げた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'jigsaw-puzzle',
+    title: 'The 1,000-Piece Puzzle',
+    text: 'During the winter vacation, my family started a jigsaw puzzle with one thousand pieces. It was a picture of a castle in the snow. Every evening, we worked on it together after dinner. It took us twelve days to finish. Now it hangs on the wall of our living room.',
+    ja: '冬休みに、家族で1000ピースのジグソーパズルを始めました。雪の中のお城の絵でした。毎晩、夕食のあとにみんなでいっしょに取り組みました。完成するまでに12日かかりました。今はリビングのかべにかざってあります。',
+    questions: [
+      { q: 'パズルは何の絵だった？', choices: ['雪の中のお城', '海と船', '花畑'], answer: 0 },
+      { q: '完成するまで何日かかった？', choices: ['3日', '12日', '30日'], answer: 1 },
+      { q: '完成したパズルは今どこにある？', choices: ['リビングのかべ', '箱の中', '学校'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
