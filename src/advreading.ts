@@ -1459,4 +1459,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does the writer suggest teachers should do?', choices: ['Give learners just enough information to notice a gap.', 'Present only finished answers.', 'Avoid asking any questions.', 'Tell students everything about a topic.'], answer: 0, why: '第3段落 give learners just enough information to notice a gap。' },
     ],
   },
+  {
+    id: 'toefl-caffeine',
+    title: 'How Caffeine Keeps Us Awake',
+    level: 'TOEFL・IELTS（医学）',
+    paragraphs: [
+      "Millions of people start their day with a cup of coffee or tea, relying on the caffeine it contains to feel alert. To understand how caffeine works, we first need to understand why we become sleepy. While we are awake, our brain cells use energy, and in the process a substance called adenosine gradually builds up. When adenosine attaches to special receptors on brain cells, it slows their activity, ( A ) makes us feel tired.",
+      "Caffeine has a shape very similar to that of adenosine. As a result, it can fit into the same receptors, but it does not activate them. Instead, it simply blocks them, so adenosine can no longer deliver its message. The tiredness has not disappeared; it has only been ( B ). This is why people often feel suddenly exhausted when the effect of caffeine wears off.",
+      "In most adults, about half of the caffeine in a drink is still in the body around five hours later, although this varies greatly from person to person. For this reason, a cup of coffee in the late afternoon can make it difficult to fall asleep at night. In addition, people who drink coffee every day may find that it seems to work less well over time, partly because the brain ( C ) by producing more adenosine receptors.",
+    ],
+    ja: [
+      '何百万もの人々が、1ぱいのコーヒーや紅茶で一日を始め、それにふくまれるカフェインにたよって目をさましている。カフェインがどのように働くかを理解するには、まずなぜ私たちが眠くなるのかを理解する必要がある。起きているあいだ、脳の細胞はエネルギーを使い、その過程でアデノシンとよばれる物質がしだいにたまっていく。アデノシンが脳の細胞にある特別な受容体にくっつくと、細胞の活動がおそくなり、それによって私たちは疲れを感じる。',
+      'カフェインはアデノシンととてもよく似た形をしている。そのため、同じ受容体にはまりこむことができるが、受容体を働かせることはない。かわりに受容体をふさぐだけなので、アデノシンはもうその信号を伝えられなくなる。疲れが消えたわけではなく、かくされているだけなのである。カフェインの効果が切れると急にひどく疲れを感じることが多いのはそのためだ。',
+      'たいていの大人では、飲み物にふくまれるカフェインのおよそ半分が、5時間ほどたってもまだ体の中に残っているが、これは人によって大きくちがう。そのため、夕方近くに飲む1ぱいのコーヒーで、夜ねむりにつきにくくなることがある。さらに、毎日コーヒーを飲む人は、時間がたつにつれてききめが弱くなっていくように感じることがあるが、その理由の一つは、脳がアデノシンの受容体をふやして順応するからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '前の内容（活動がおそくなること）全体を受ける関係代名詞 which（, which 〜「そしてそれが〜」）。' },
+      { id: 'B', choices: ['hidden', 'cured', 'doubled', 'shared'], answer: 0, why: '「疲れは消えたのではなく、かくされた（hidden）だけ」。' },
+      { id: 'C', choices: ['adapts', 'sleeps', 'stops', 'forgets'], answer: 0, why: '受容体をふやして「順応する（adapts）」。' },
+    ],
+    tf: [
+      { statement: 'アデノシンは起きているあいだにしだいにたまる。', answer: true, why: '第1段落 adenosine gradually builds up。' },
+      { statement: 'カフェインはアデノシンの受容体を働かせて目をさまさせる。', answer: false, why: '第2段落 it does not activate them. Instead, it simply blocks them。' },
+      { statement: 'カフェインが体に残る時間は、だれでも同じである。', answer: false, why: '第3段落 this varies greatly from person to person。' },
+    ],
+    qa: [
+      { q: 'Why might coffee seem to work less well for people who drink it every day?', choices: ['The brain produces more adenosine receptors.', 'Their coffee contains less caffeine.', 'Adenosine disappears from their brains.', 'They sleep too much at night.'], answer: 0, why: '第3段落 the brain adapts by producing more adenosine receptors。' },
+    ],
+  },
 ]

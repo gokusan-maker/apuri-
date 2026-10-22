@@ -1190,3 +1190,4 @@
 - 2026-10-22: 読解「ふつう」に説明文「Why Do Zebras Have Stripes?」を追加
 - 2026-10-22: 上のなかまをタップしたときのひとことを、文法・読解それぞれ6種類にふやした
 - 2026-10-22: 中3の文法単元「It is said that 〜 / They say 〜」を追加（全166単元に）
+- 2026-10-22: 読解「TOEFL・IELTS」に医学「How Caffeine Keeps Us Awake」を追加
