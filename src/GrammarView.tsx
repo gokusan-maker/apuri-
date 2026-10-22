@@ -652,6 +652,23 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </p>
         )}
         {firstClear && <p className="level-up">🌟 はじめての全問正解！ モンスターに XP+{GRAMMAR_CLEAR_XP}</p>}
+        {unit.questions.some((x) => correctSentence(x)) && (
+          <details className="tense-table correct-list">
+            <summary>📖 この回の正しい英文（{unit.questions.filter((x) => correctSentence(x)).length}文）</summary>
+            <ul>
+              {unit.questions
+                .filter((x) => correctSentence(x))
+                .map((x) => (
+                  <li key={x.sentence}>
+                    {correctSentence(x)}
+                    <button className="speak small" onClick={() => speak(correctSentence(x)!)} aria-label={`${correctSentence(x)} を聞く`}>
+                      🔊
+                    </button>
+                  </li>
+                ))}
+            </ul>
+          </details>
+        )}
         {!battle && missed.length > 0 && (
           <button
             className="good next-unit-btn retry-missed"

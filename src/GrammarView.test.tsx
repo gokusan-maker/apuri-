@@ -660,3 +660,18 @@ it('★をつけた単元だけから「お気に入り単元テスト」がで�
   const shown = document.querySelector('.quiz.grammar')!.textContent!
   expect(u.questions.some((q) => q.choices.every((c) => shown.includes(c)))).toBe(true)
 })
+
+it('結果画面に「この回の正しい英文」がまとめて出る', async () => {
+  localStorage.clear()
+  const { correctSentence } = await import('./grammar')
+  render(<Grammar />)
+  const unit = GRAMMAR.find((u) => u.questions.every((q) => correctSentence(q)))!
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('📖 この回の正しい英文（3文）')).toBeInTheDocument()
+  for (const q of unit.questions) expect(screen.getByLabelText(`${correctSentence(q)} を聞く`)).toBeInTheDocument()
+})
