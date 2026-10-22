@@ -42,3 +42,10 @@ it('ショップは「ガチャ」「おやつ」「きせかえ」「アイテ�
   fireEvent.click(screen.getByRole('tab', { name: /アイテム/ }))
   expect(screen.getByText(/お休みチケット/)).toBeInTheDocument()
 })
+
+it('ショップの部屋のプレビューは、ホームと同じく絵の右はしを見せる四角', () => {
+  localStorage.clear()
+  const { container } = render(<Shop wallet={{ coins: 100, owned: ['ocean'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(container.querySelector('.shop-stage.room-ocean svg.scene-ocean')?.getAttribute('preserveAspectRatio')).toBe('xMaxYMax slice')
+})
+

@@ -70,7 +70,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       <h2>ショップ・着せ替え</h2>
       <p className="stats-note">正解1問で🪙1枚。いまのコイン：🪙 {wallet.coins}</p>
       <div className={`shop-stage${wallet.room ? ` room-${wallet.room}` : ''}`}>
-        <RoomScene room={wallet.room} />
+        <RoomScene room={wallet.room} align="xMaxYMax" />
         <div className="shop-preview">
           <MonsterFigure form={form} wear={monster.wear} kind={monster.kind} mood={eating ? 'eat' : 'happy'} />
           {eating && (
