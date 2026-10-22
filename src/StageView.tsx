@@ -439,7 +439,15 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           </button>
         )}
       </div>
-      <BossBook />
+      <BossBook
+        onFight={(name) => {
+          const lv = (Object.keys(BOSSES) as Level[]).find((l) => BOSSES[l].name === name)
+          if (lv) {
+            setFighting(lv)
+            window.scrollTo?.({ top: 0 })
+          }
+        }}
+      />
       <details className="univ-tower" open={Object.keys(univ).length > 0}>
         <summary>
           🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）

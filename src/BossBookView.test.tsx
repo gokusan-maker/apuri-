@@ -32,3 +32,14 @@ it('同じボスを3回たおすとひみつが読める', async () => {
   render(<BossBook />)
   expect(screen.getByText(`🔓 ひみつ：${secretOf('ヤミモチ')}`)).toBeInTheDocument()
 })
+
+it('ボス図鑑から、たおしたことのあるボスと再戦できる', async () => {
+  localStorage.clear()
+  const { BOSSES } = await import('./boss')
+  const look = BOSSES['中1']
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [look.name]: { look, wins: 1, best: 'A', last: '2026-10-20' } }))
+  const fights: string[] = []
+  render(<BossBook onFight={(n) => fights.push(n)} />)
+  fireEvent.click(screen.getByText('⚔ 再戦する'))
+  expect(fights).toEqual([look.name])
+})

@@ -8,7 +8,8 @@ import { UNIV_BOSSES } from './univ'
 const GRAY = { color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }
 
 // ボス図鑑：ステージのボス・大学入試の塔のボス・倒したレアボスを並べる。まだ倒していないボスはシルエット
-export function BossBook() {
+// onFight：たおしたことのある単語帳のボスと再戦する（名前で知らせる）
+export function BossBook({ onFight }: { onFight?: (name: string) => void } = {}) {
   const [book] = useState(loadBook)
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
   const extra = Object.values(book)
@@ -48,6 +49,11 @@ export function BossBook() {
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
                 </span>
+              )}
+              {e && onFight && Object.values(BOSSES).some((x) => x.name === b.name) && (
+                <button className="shop-btn boss-rematch" onClick={() => onFight(b.name)}>
+                  ⚔ 再戦する
+                </button>
               )}
               {e && (
                 <span className="boss-secret">{e.wins >= SECRET_WINS ? `🔓 ひみつ：${secretOf(b.name)}` : `🔒 あと${SECRET_WINS - e.wins}回たおすとひみつが読める`}</span>
