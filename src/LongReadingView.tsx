@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { grammarTags } from './longgrammar'
@@ -181,6 +181,14 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           </details>
         )}
         <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
+        <div className="long-challenge" aria-label={`解いた長文 ${Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length} / ${LONG_PASSAGES.length}本`}>
+          <p className="stats-note">
+            🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length} / {LONG_PASSAGES.length}本　{solvedBadges(Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length, LONG_PASSAGES.length).join(' ')}
+          </p>
+          <div className="zukan-pct">
+            <span style={{ width: `${(Object.keys(record).filter((id) => LONG_PASSAGES.some((x) => x.id === id)).length / LONG_PASSAGES.length) * 100}%` }} />
+          </div>
+        </div>
         {readingLevel(history) && (
           <p className="stats-note reading-level">
             🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）

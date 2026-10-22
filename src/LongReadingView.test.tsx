@@ -354,3 +354,11 @@ it('読んだ長文があると重要語句クイズができる', () => {
   fireEvent.click(document.querySelector<HTMLButtonElement>('.long-vq .choice')!)
   expect(screen.getByText('次へ')).toBeInTheDocument()
 })
+
+it('全部制覇チャレンジの進みぐあいが出る', () => {
+  localStorage.clear()
+  const rec = Object.fromEntries(LONG_PASSAGES.slice(0, 10).map((x) => [x.id, 1]))
+  localStorage.setItem('eitan:long-reading', JSON.stringify(rec))
+  render(<LongReading />)
+  expect(screen.getByText(new RegExp(`全部制覇チャレンジ：10 / ${LONG_PASSAGES.length}本.*🥉10本`))).toBeInTheDocument()
+})

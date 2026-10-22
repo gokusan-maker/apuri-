@@ -348,3 +348,10 @@ it('ジャンルごとの正答率をためる', async () => {
   addGenreStats('説明文', 5, 10)
   expect(loadGenreStats()).toEqual({ 物語: [17, 20], 説明文: [5, 10] })
 })
+
+it('解いた本数で記念バッジがふえる', async () => {
+  const { solvedBadges } = await import('./longreading')
+  expect(solvedBadges(9, 70)).toEqual([])
+  expect(solvedBadges(30, 70)).toEqual(['🥉10本', '🥈30本'])
+  expect(solvedBadges(70, 70)).toEqual(['🥉10本', '🥈30本', '🥇50本', '🏆全部制覇'])
+})

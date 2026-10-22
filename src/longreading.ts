@@ -3059,3 +3059,13 @@ export function saveBookmarks(ids: string[]): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 全部制覇チャレンジ：解いた本数と記念バッジ（10・30・50本、全部）
+export function solvedBadges(solved: number, total: number): string[] {
+  const out: string[] = []
+  if (solved >= 10) out.push('🥉10本')
+  if (solved >= 30) out.push('🥈30本')
+  if (solved >= 50) out.push('🥇50本')
+  if (total > 0 && solved >= total) out.push('🏆全部制覇')
+  return out
+}
