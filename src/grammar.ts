@@ -1490,6 +1490,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'She is ___ kind girl.', choices: ['so', 'such a', 'such'], answer: 1, why: '名詞 girl があるので such a kind girl。' },
     ],
   },
+  {
+    id: 'help-do',
+    title: 'help ＋人＋動詞の原形',
+    points: ['help ＋人＋動詞の原形 で「人が〜するのを手伝う」（help me carry）。', 'help ＋人＋ with ＋もの で「人の〜を手伝う」（help me with my homework）。'],
+    examples: [
+      { en: 'Can you help me carry this box?', ja: 'この箱を運ぶのを手伝ってくれる？' },
+      { en: 'My sister helped me with my homework.', ja: '姉が宿題を手伝ってくれた。' },
+    ],
+    questions: [
+      { sentence: 'Please help me ___ the dishes.', choices: ['wash', 'washed', 'washing'], answer: 0, why: 'help ＋人のあとは動詞の原形 wash。' },
+      { sentence: 'He helped his mother ___ her work.', choices: ['with', 'for', 'to'], answer: 0, why: 'help 人 with もの で「人の〜を手伝う」。' },
+      { sentence: 'Could you help ___ find my key?', choices: ['I', 'my', 'me'], answer: 2, why: 'help のあとの「人」は目的格 me。' },
+    ],
+  },
+  {
+    id: 'spend-ing',
+    title: 'spend ＋時間＋ -ing',
+    points: ['spend ＋時間＋ -ing で「〜して（時間）を過ごす」（spend an hour reading）。', 'spend ＋お金＋ on ＋もの で「〜にお金を使う」。'],
+    examples: [
+      { en: 'I spent two hours playing games.', ja: '私はゲームをして2時間過ごした。' },
+      { en: 'She spends a lot of money on books.', ja: '彼女は本にたくさんのお金を使う。' },
+    ],
+    questions: [
+      { sentence: 'We spent the afternoon ___ in the park.', choices: ['walk', 'walking', 'to walk'], answer: 1, why: 'spend 時間 のあとは -ing 形 walking。' },
+      { sentence: 'He spent 1,000 yen ___ a new pen.', choices: ['in', 'on', 'to'], answer: 1, why: 'spend お金 on もの で「〜にお金を使う」。' },
+      { sentence: 'How much time do you spend ___ English every day?', choices: ['study', 'studying', 'studied'], answer: 1, why: 'spend 時間 のあとは -ing 形 studying。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1590,8 +1618,8 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中2: ['help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中3: ['spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
