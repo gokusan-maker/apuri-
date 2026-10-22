@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'appositive-comma': { wrong: 'Ms. Ito, our music teachers, play the piano.', right: 'Ms. Ito, our music teacher, plays the piano.', why: '言いかえの名詞は前の名詞と数をそろえ、動詞は主語（Ms. Ito）に合わせる。' },
   'passive-prep': { wrong: 'Butter is made of milk.', right: 'Butter is made from milk.', why: '原料（牛乳）の形が変わるときは made from。' },
   'whether-concession': { wrong: 'Whether it will rain or not, we will go.', right: 'Whether it rains or not, we will go.', why: '「〜であろうとなかろうと」の whether の中は、未来のことでも現在形。' },
   'thing-adjective': { wrong: 'I want cold something.', right: 'I want something cold.', why: '-thing の語は形容詞をうしろに置く。' },
