@@ -1347,4 +1347,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why might a school under pressure spend weeks practicing test questions?', choices: ['To raise the score quickly, even if real understanding does not improve.', 'Because students prefer tests to lessons.', 'Because tests are the only way to learn.', 'To reduce the number of teachers.'], answer: 0, why: '第2段落 they naturally look for the fastest way to raise it。' },
     ],
   },
+  {
+    id: 'exam-chorus',
+    title: 'Our Class Chorus Contest',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Every autumn, our school holds a chorus contest. This year, I was chosen as the conductor of my class. I was happy, but I was also worried because I had never ( A ) a group before. At our first practice, many students were talking, and only a few were singing seriously.",
+      "I did not know what to do, so I asked our music teacher for advice. She said, 'Don't try to control everyone. First, tell them why you want to sing this song.' The next day, I told my classmates that the song was about friends who support each other, and that I wanted to make it our song. After that, the classroom became quiet, and everyone began to listen ( B ) each other's voices.",
+      "On the day of the contest, we did not win first prize. But when we finished singing, the audience clapped for a long time. Some of my classmates were crying with joy. I learned that a leader does not have to be the strongest person. A good leader is someone who can ( C ) a goal with others.",
+    ],
+    ja: [
+      '毎年秋に、私たちの学校では合唱コンクールが開かれます。今年、私はクラスの指揮者に選ばれました。うれしかったのですが、それまで一度もグループをまとめたことがなかったので心配でもありました。最初の練習では、多くの生徒がおしゃべりをしていて、真剣に歌っていたのは数人だけでした。',
+      'どうしたらいいかわからなかったので、私は音楽の先生にアドバイスを求めました。先生は「みんなを思いどおりにしようとしないで。まず、なぜこの歌を歌いたいのかを伝えなさい」と言いました。次の日、私はクラスのみんなに、この歌はささえ合う友だちについての歌で、これを私たちの歌にしたいと伝えました。そのあと教室は静かになり、みんながおたがいの声に耳をかたむけはじめました。',
+      'コンクールの日、私たちは1位にはなれませんでした。でも歌い終わると、観客は長いあいだ拍手をしてくれました。クラスの何人かはうれしくて泣いていました。私は、リーダーは一番強い人である必要はないことを学びました。よいリーダーとは、目標をほかの人と分かち合える人なのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['led', 'lead', 'leading', 'to lead'], answer: 0, why: 'had never ＋ 過去分詞（過去完了の経験）。lead の過去分詞は led。' },
+      { id: 'B', choices: ['to', 'at', 'for', 'on'], answer: 0, why: 'listen to 〜「〜を聞く」。' },
+      { id: 'C', choices: ['share', 'shares', 'shared', 'sharing'], answer: 0, why: '助動詞 can のあとは原形。share 〜 with 人「〜を人と分かち合う」。' },
+    ],
+    tf: [
+      { statement: '筆者は以前にもグループをまとめたことがあった。', answer: false, why: '第1段落 I had never led a group before。' },
+      { statement: '音楽の先生は、まず歌いたい理由を伝えるように言った。', answer: true, why: "第2段落 'First, tell them why you want to sing this song.'" },
+      { statement: '筆者のクラスはコンクールで1位になった。', answer: false, why: '第3段落 we did not win first prize。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn about leaders?', choices: ['A good leader can share a goal with others.', 'A leader must be the strongest person.', 'A leader should control everyone.', 'A leader must sing better than others.'], answer: 0, why: '第3段落 A good leader is someone who can share a goal with others。' },
+    ],
+  },
 ]
