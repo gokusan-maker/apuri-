@@ -817,10 +817,10 @@ function App() {
     return out
   }
 
-  // 「きょうのあそび」：単語タブのミニゲームの上に出す
+  // 「おまけのあそび」：設定のいちばん下に出す（ゲーム画面にはおかない）
   const playBox = (
           <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
-            <summary>🎮 きょうのあそび（おさんぽ・すごろく・じゃんけん など）</summary>
+            <summary>🎁 おまけのあそび（おみくじ・おさんぽ・すごろく など）</summary>
             <p className={`omikuji o-${omikujiOf(today).id}`}>
               ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
             </p>
@@ -1433,7 +1433,10 @@ function App() {
           )}
         </>
       ) : mode === 'settings' ? (
-        <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
+        <>
+          <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
+          {playBox}
+        </>
       ) : mode === 'home' ? (
         <>
           <TodayTasks
@@ -1623,7 +1626,6 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'word' && playBox}
           {quizFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）

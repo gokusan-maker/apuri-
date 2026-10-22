@@ -21,7 +21,8 @@ import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { addGrammarCorrect, last7, loadGrammarWeek, saveGrammarWeek } from './grammarweek'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { GameTile } from './GameTileView'
+import { quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -43,6 +44,8 @@ type Props = {
   onStreakBonus?: () => void // 文法を3日続けたとき
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
 }
+
+const GAME_COUNT = 10 // 文法ゲームの種類（下のタイルの数）
 
 export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster }: Props) {
   const stampMode = units === GRAMMAR
@@ -156,96 +159,66 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
     </li>
   )
 
+  const mixTest = () => {
+    const qs = shuffle(units.flatMap((u) => u.questions)).slice(0, 10)
+    open({ id: 'mix-test', title: `${title}のまとめテスト`, points: [], examples: [], questions: qs })
+    setStep(0)
+  }
+
   if (!unit) {
     return (
       <section className="card grammar">
         <h2>{title}</h2>
-        <p className="stats-note grammar-total">
-          全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
-        </p>
-        {stampMode && (
-          <p className="grammar-dan">
-            🥋 段位：<strong>{danOf(units.filter((u) => record[u.id] === u.questions.length).length).name}</strong>
-            {danOf(units.filter((u) => record[u.id] === u.questions.length).length).next !== null && `（次の段位まであと${danOf(units.filter((u) => record[u.id] === u.questions.length).length).next}単元）`}
-            {units.filter((u) => record[u.id] === u.questions.length).length >= 100 && <span className="medal-100"> 💯 100単元クリア記念メダル</span>}
-          </p>
-        )}
-        {stampMode && (
-          <div className="grammar-week" role="img" aria-label={`今週の文法の正解数 ${last7(gweek, today).reduce((a, d) => a + d.count, 0)}問`}>
-            <p className="grammar-week-title">📊 今週の成績（正解数）</p>
-            <div className="grammar-week-bars">
-              {last7(gweek, today).map((d) => (
-                <span key={d.day} className={d.day === today ? 'today' : undefined}>
-                  <small>{d.count || ''}</small>
-                  <i style={{ height: `${Math.min(100, (d.count / Math.max(1, ...last7(gweek, today).map((x) => x.count))) * 100)}%` }} />
-                  <b>{d.label}</b>
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-        {stampMode && (
-          <ul className="grade-rates" aria-label="学年別クリア率">
-            {gradeClearRates(record).map((g) => (
-              <li key={g.grade}>
-                <span className="grade-rate-name">{g.grade}</span>
-                <span className="grade-rate-bar">
-                  <span style={{ width: `${g.total ? (g.cleared / g.total) * 100 : 0}%` }} />
-                </span>
-                <span className="grade-rate-num">
-                  {g.cleared}/{g.total}
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-        <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>
-        {stampMode && (
-          <div className="daily-example">
-            <p className="daily-example-title">💬 今日のひとこと例文</p>
-            <p className="daily-example-en">
-              {dailyExample(today).en}
-              <button className="speak small" onClick={() => speak(dailyExample(today).en)} aria-label="今日の例文を聞く">
-                🔊
-              </button>
-            </p>
-            <p className="daily-example-ja">{dailyExample(today).ja}</p>
-            <button className="list-link" onClick={() => open(dailyExample(today).unit)}>
-              → {dailyExample(today).unit.title}
+        {stampMode ? (
+          <>
+            <button
+              className="flip grammar-quick-btn"
+              onClick={() => {
+                open(quickPractice(record, Math.random))
+                setStep(0)
+              }}
+            >
+              ✏️ すぐ練習（5問）
             </button>
-          </div>
-        )}
-        {stampMode && (
-          <button className="daily-grammar" onClick={() => open(daily)}>
-            📅 今日の文法：{daily.title}
-            <span>{dailyDay === today ? '✅ 今日はクリアずみ' : `確認問題を全問正解で 🪙${DAILY_GRAMMAR_COINS}`}</span>
-          </button>
-        )}
-        {stampMode && (
-          <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
-            <p className="stamp-title">
-              📮 文法スタンプカード {grammarStamps(record)} / {GRAMMAR.length}
-              <span>（あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で 🎟ガチャチケット）</span>
-            </p>
-            <div className="stamp-grid">
-              {GRAMMAR.map((u) => (
-                <span key={u.id} className={record[u.id] === u.questions.length ? 'stamp on' : 'stamp'} title={u.title}>
-                  {record[u.id] === u.questions.length ? '🌸' : ''}
-                </span>
-              ))}
+            <p className="game-grid-title">🎮 文法ゲーム（{GAME_COUNT}しゅるい）</p>
+            <div className="game-grid" aria-label="文法ゲーム">
+              <GameTile icon="📝" name="まとめテスト" sub={mixBest[title] !== undefined ? `ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : 'ランダム10問'} onClick={mixTest} />
+              <GameTile icon="👂" name="例文リスニング" sub="聞いて選ぶ・5問" onClick={() => setListen(true)} />
+              <GameTile icon="🃏" name="要点カード" sub={grade === 'all' ? 'おさらい' : `${grade}の単元だけ`} onClick={() => setCards(true)} />
+              <GameTile icon="🔍" name="まちがいさがし" sub={`○×で10問${grade === 'all' ? '' : `・${grade}`}`} onClick={() => setSpot(true)} />
+              <GameTile icon="🧺" name="なかま分け" sub="ちがう文をさがす" onClick={() => setOdd(true)} />
+              <GameTile icon="⚡" name="2択スピード" sub={loadDuelBest() > 0 ? `ベスト ${loadDuelBest()}秒` : '正しい英文はどっち？'} onClick={() => setDuel(true)} />
+              <GameTile icon="🎯" name="文法ビンゴ" sub={loadBingoBest() > 0 ? `ベスト ${loadBingoBest()}列` : `そろうと🪙${BINGO_COINS}`} onClick={() => setBingo(true)} />
+              <GameTile icon="⏱" name="タイムアタック" sub={`60秒${grade === 'all' ? '' : `・${grade}`}${loadTaBest() > 0 ? `・ベスト${loadTaBest()}問` : ''}`} onClick={() => setTimeAttack(true)} />
+              <GameTile
+                icon="👾"
+                name="モンスターラッシュ"
+                sub={`${RUSH_COUNT}連戦・全勝で🪙${RUSH_GRAMMAR_COINS}`}
+                onClick={() => {
+                  const list = shuffle(GRAMMAR).slice(0, RUSH_COUNT)
+                  setRush({ list, at: 0 })
+                  startBattle(list[0])
+                }}
+              />
+              <GameTile
+                icon="🎲"
+                name="ランダム1問"
+                sub="全単元から1問"
+                onClick={() => {
+                  open({ id: 'random-one', title: '🎲 ランダム1問', points: [], examples: [], questions: [randomQuestion(Math.random())] })
+                  setStep(0)
+                }}
+              />
             </div>
-          </div>
-        )}
+          </>
+        ) : (
         <button
           className="flip mix-test"
-          onClick={() => {
-            const qs = shuffle(units.flatMap((u) => u.questions)).slice(0, 10)
-            open({ id: 'mix-test', title: `${title}のまとめテスト`, points: [], examples: [], questions: qs })
-            setStep(0)
-          }}
+          onClick={mixTest}
         >
           📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
+        )}
         {stampMode && (
           <div className="grade-tests" aria-label="学年まとめテスト">
             {GRAMMAR_GRADES.filter((g) => g !== '高校').map((g) => (
@@ -263,88 +236,6 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
               </button>
             ))}
           </div>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setListen(true)}>
-            👂 例文リスニング（聞いて空所の語を選ぶ・5問）
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setCards(true)}>
-            🃏 要点カードでおさらい{grade === 'all' ? '（学年タブでしぼりこめるよ）' : `（${grade}の単元だけ）`}
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setSpot(true)}>
-            🔍 まちがいさがし（○×で10問{grade === 'all' ? '' : `・${grade}`}）
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setOdd(true)}>
-            🧺 文法のなかま分け（ちがう文法の文をさがす）
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setDuel(true)}>
-            ⚡ 2択スピード（正しい英文はどっち？）{loadDuelBest() > 0 ? `　ベスト ${loadDuelBest()}秒` : ''}
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setBingo(true)}>
-            🎯 文法ビンゴ（そろうと🪙{BINGO_COINS}）{loadBingoBest() > 0 ? `　ベスト ${loadBingoBest()}列` : ''}
-          </button>
-        )}
-        {stampMode && (
-          <button className="list-link spot-btn" onClick={() => setTimeAttack(true)}>
-            ⏱ 文法タイムアタック（60秒{grade === 'all' ? '' : `・${grade}`}）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
-          </button>
-        )}
-        {stampMode && (
-          <div className="grammar-goal">
-            {weekGoal.goal > 0 ? (
-              <p>
-                🎯 今週の目標：全問正解 {Math.min(weekGoal.cleared.length, weekGoal.goal)} / {weekGoal.goal} 単元{weekGoal.rewarded ? ' ✅ たっせい！' : '（たっせいで🎟1）'}
-              </p>
-            ) : (
-              <p>🎯 今週の目標を決めよう（全問正解する単元の数）</p>
-            )}
-            <div className="goal-choices">
-              {GOAL_CHOICES.map((n) => (
-                <button
-                  key={n}
-                  className={weekGoal.goal === n ? 'on' : undefined}
-                  aria-pressed={weekGoal.goal === n}
-                  disabled={weekGoal.rewarded}
-                  onClick={() => {
-                    const g = { ...weekGoal, goal: n }
-                    setWeekGoal(g)
-                    saveGrammarGoal(g)
-                  }}
-                >
-                  {n}単元
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-        {stampMode && master && <p className="level-up">🏅 称号「文法マスター」</p>}
-        {stampMode && gDays.streak > 0 && (
-          <p className="stats-note">
-            📆 文法 {gDays.last === today ? gDays.streak : 0}日連続（{GRAMMAR_STREAK_DAYS}日ごとに🪙{GRAMMAR_STREAK_COINS}）
-          </p>
-        )}
-        {stampMode && streak.best > 0 && <p className="stats-note">🔥 確認問題の連続正解ベスト {streak.best}問</p>}
-        {stampMode && (
-          <button
-            className="boss-btn grammar-monster-btn"
-            onClick={() => {
-              const list = shuffle(GRAMMAR).slice(0, RUSH_COUNT)
-              setRush({ list, at: 0 })
-              startBattle(list[0])
-            }}
-          >
-            👾👾👾 文法モンスターラッシュ（{RUSH_COUNT}連戦・全勝で🪙{RUSH_GRAMMAR_COINS}）
-          </button>
         )}
         {stampMode && (
           <details className="tense-table">
@@ -380,17 +271,6 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             }}
           >
             ★ お気に入り単元テスト（★{fav.length}単元から最大10問）
-          </button>
-        )}
-        {stampMode && (
-          <button
-            className="list-link weak-grammar-btn random-one-btn"
-            onClick={() => {
-              open({ id: 'random-one', title: '🎲 ランダム1問', points: [], examples: [], questions: [randomQuestion(Math.random())] })
-              setStep(0)
-            }}
-          >
-            🎲 ランダム1問（全単元から1問だけ）
           </button>
         )}
         {stampMode && yesterdayQuestions(wrongDays, today).length > 0 && (
@@ -457,25 +337,6 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
           </button>
         )}
         {stampMode && (
-          <div className="grade-progress" aria-label="学年ごとの進みぐあい">
-            {GRAMMAR_GRADES.map((g) => {
-              const us = GRAMMAR.filter((u) => gradeOf(u.id) === g)
-              const done = us.filter((u) => record[u.id] === u.questions.length).length
-              return (
-                <div key={g} className="grade-row">
-                  <span>{g}</span>
-                  <span className="grade-bar" role="progressbar" aria-label={`${g}の全問正解`} aria-valuemin={0} aria-valuemax={us.length} aria-valuenow={done}>
-                    <span style={{ width: `${(done / us.length) * 100}%` }} />
-                  </span>
-                  <span>
-                    {done}/{us.length}
-                  </span>
-                </div>
-              )
-            })}
-          </div>
-        )}
-        {stampMode && (
           <div className="sub-tabs grade-tabs" role="tablist" aria-label="学年">
             {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
               <button key={g} role="tab" aria-selected={grade === g} onClick={() => setGrade(g)}>
@@ -533,6 +394,123 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
           </>
         ) : (
           <ul className="grammar-list">{favFirst(todoSort(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword)), stampMode ? fav : []).map(unitItem)}</ul>
+        )}
+        {stampMode ? (
+          <details className="grammar-records">
+            <summary>📊 文法の記録（全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元）</summary>
+        <p className="stats-note grammar-total">
+          全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
+        </p>
+        {stampMode && (
+          <p className="grammar-dan">
+            🥋 段位：<strong>{danOf(units.filter((u) => record[u.id] === u.questions.length).length).name}</strong>
+            {danOf(units.filter((u) => record[u.id] === u.questions.length).length).next !== null && `（次の段位まであと${danOf(units.filter((u) => record[u.id] === u.questions.length).length).next}単元）`}
+            {units.filter((u) => record[u.id] === u.questions.length).length >= 100 && <span className="medal-100"> 💯 100単元クリア記念メダル</span>}
+          </p>
+        )}
+        {stampMode && (
+          <div className="grammar-week" role="img" aria-label={`今週の文法の正解数 ${last7(gweek, today).reduce((a, d) => a + d.count, 0)}問`}>
+            <p className="grammar-week-title">📊 今週の成績（正解数）</p>
+            <div className="grammar-week-bars">
+              {last7(gweek, today).map((d) => (
+                <span key={d.day} className={d.day === today ? 'today' : undefined}>
+                  <small>{d.count || ''}</small>
+                  <i style={{ height: `${Math.min(100, (d.count / Math.max(1, ...last7(gweek, today).map((x) => x.count))) * 100)}%` }} />
+                  <b>{d.label}</b>
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+        {stampMode && (
+          <ul className="grade-rates" aria-label="学年別クリア率">
+            {gradeClearRates(record).map((g) => (
+              <li key={g.grade}>
+                <span className="grade-rate-name">{g.grade}</span>
+                <span className="grade-rate-bar">
+                  <span style={{ width: `${g.total ? (g.cleared / g.total) * 100 : 0}%` }} />
+                </span>
+                <span className="grade-rate-num">
+                  {g.cleared}/{g.total}
+                </span>
+              </li>
+            ))}
+          </ul>
+        )}
+        {stampMode && (
+          <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
+            <p className="stamp-title">
+              📮 文法スタンプカード {grammarStamps(record)} / {GRAMMAR.length}
+              <span>（あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で 🎟ガチャチケット）</span>
+            </p>
+            <div className="stamp-grid">
+              {GRAMMAR.map((u) => (
+                <span key={u.id} className={record[u.id] === u.questions.length ? 'stamp on' : 'stamp'} title={u.title}>
+                  {record[u.id] === u.questions.length ? '🌸' : ''}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+        {stampMode && (
+          <div className="grammar-goal">
+            {weekGoal.goal > 0 ? (
+              <p>
+                🎯 今週の目標：全問正解 {Math.min(weekGoal.cleared.length, weekGoal.goal)} / {weekGoal.goal} 単元{weekGoal.rewarded ? ' ✅ たっせい！' : '（たっせいで🎟1）'}
+              </p>
+            ) : (
+              <p>🎯 今週の目標を決めよう（全問正解する単元の数）</p>
+            )}
+            <div className="goal-choices">
+              {GOAL_CHOICES.map((n) => (
+                <button
+                  key={n}
+                  className={weekGoal.goal === n ? 'on' : undefined}
+                  aria-pressed={weekGoal.goal === n}
+                  disabled={weekGoal.rewarded}
+                  onClick={() => {
+                    const g = { ...weekGoal, goal: n }
+                    setWeekGoal(g)
+                    saveGrammarGoal(g)
+                  }}
+                >
+                  {n}単元
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+        {stampMode && master && <p className="level-up">🏅 称号「文法マスター」</p>}
+        {stampMode && gDays.streak > 0 && (
+          <p className="stats-note">
+            📆 文法 {gDays.last === today ? gDays.streak : 0}日連続（{GRAMMAR_STREAK_DAYS}日ごとに🪙{GRAMMAR_STREAK_COINS}）
+          </p>
+        )}
+        {stampMode && streak.best > 0 && <p className="stats-note">🔥 確認問題の連続正解ベスト {streak.best}問</p>}
+        {stampMode && (
+          <div className="grade-progress" aria-label="学年ごとの進みぐあい">
+            {GRAMMAR_GRADES.map((g) => {
+              const us = GRAMMAR.filter((u) => gradeOf(u.id) === g)
+              const done = us.filter((u) => record[u.id] === u.questions.length).length
+              return (
+                <div key={g} className="grade-row">
+                  <span>{g}</span>
+                  <span className="grade-bar" role="progressbar" aria-label={`${g}の全問正解`} aria-valuemin={0} aria-valuemax={us.length} aria-valuenow={done}>
+                    <span style={{ width: `${(done / us.length) * 100}%` }} />
+                  </span>
+                  <span>
+                    {done}/{us.length}
+                  </span>
+                </div>
+              )
+            })}
+          </div>
+        )}
+          </details>
+        ) : (
+        <p className="stats-note grammar-total">
+          全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
+        </p>
         )}
       </section>
     )

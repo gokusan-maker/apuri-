@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { GRAMMAR } from './grammar'
 import { Grammar } from './GrammarView'
@@ -30,7 +30,7 @@ describe('文法ミニ解説', () => {
 
 it('まとめテストは全単元からランダムに10問', () => {
   render(<Grammar />)
-  fireEvent.click(screen.getByText('📝 まとめテスト（ランダム10問）'))
+  fireEvent.click(screen.getByText('まとめテスト'))
   expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 10 問目')
   expect(screen.getByRole('progressbar', { name: '確認問題の進み具合' })).toHaveAttribute('aria-valuemax', '10')
 })
@@ -72,7 +72,7 @@ it('文法モンスターを全問正解でたおすとごほうび', () => {
 it('まとめテストを全問正解するとSランクでベストが残る', () => {
   localStorage.clear()
   render(<Grammar />)
-  fireEvent.click(screen.getByText(/まとめテスト（ランダム10問）/))
+  fireEvent.click(screen.getByText('まとめテスト'))
   const all = GRAMMAR.flatMap((u) => u.questions)
   for (let i = 0; i < 10; i++) {
     const text = document.querySelector('.blank-sentence')!.textContent!
@@ -102,15 +102,14 @@ it('今日の文法を全問正解すると1日1回ボーナス', async () => {
   const u = dailyGrammar(dayKey())
   const bonus = vi.fn()
   render(<Grammar onDailyBonus={bonus} />)
-  fireEvent.click(screen.getByText(`📅 今日の文法：${u.title}`, { exact: false }))
+  fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: u.title } })
+  fireEvent.click(within(document.querySelector('.grammar-list') as HTMLElement).getByText(u.title, { exact: false }))
   fireEvent.click(screen.getByText(/確認問題へ/))
   for (const q of u.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     fireEvent.click(screen.getByText('次へ'))
   }
   expect(bonus).toHaveBeenCalledTimes(1)
-  fireEvent.click(screen.getByText('← 単元一覧'))
-  expect(screen.getByText('✅ 今日はクリアずみ')).toBeInTheDocument()
 })
 
 it('学年のタブで単元をしぼりこめる', () => {
@@ -127,7 +126,7 @@ it('文法モンスターラッシュを3連勝するとごほうび', () => {
   localStorage.clear()
   const rushWin = vi.fn()
   render(<Grammar onRushWin={rushWin} />)
-  fireEvent.click(screen.getByText(/文法モンスターラッシュ/))
+  fireEvent.click(screen.getByText('モンスターラッシュ'))
   const all = GRAMMAR.flatMap((u) => u.questions)
   for (let round = 0; round < 3; round++) {
     for (let i = 0; i < 3; i++) {
@@ -365,7 +364,7 @@ it('まとめテストでは「もっとくわしく」でその問題の単元�
   const { unitOfQuestion } = await import('./grammar')
   localStorage.clear()
   render(<Grammar />)
-  fireEvent.click(screen.getByText(/まとめテスト（ランダム10問）/))
+  fireEvent.click(screen.getByText('まとめテスト'))
   const all = GRAMMAR.flatMap((u) => u.questions)
   const text = document.querySelector('.blank-sentence')!.textContent!
   const shown = [...document.querySelectorAll('.choice')].map((b) => b.textContent)
@@ -380,7 +379,8 @@ it('学年をえらぶとタイムアタックもその学年の問題になる'
   localStorage.clear()
   render(<Grammar />)
   fireEvent.click(screen.getByRole('tab', { name: '中1' }))
-  fireEvent.click(screen.getByText(/文法タイムアタック（60秒・中1）/))
+  expect(screen.getByText('60秒・中1')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('タイムアタック'))
   const pool = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
   const text = document.querySelector('.blank-sentence')!.textContent!
   expect(pool.some((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))).toBe(true)
@@ -409,7 +409,8 @@ it('学年をえらぶと要点カードもその学年の単元だけになる'
   localStorage.clear()
   render(<Grammar />)
   fireEvent.click(screen.getByRole('tab', { name: '中2' }))
-  fireEvent.click(screen.getByText(/要点カードでおさらい（中2の単元だけ）/))
+  expect(screen.getByText('中2の単元だけ')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('要点カード'))
   const n = GRAMMAR.filter((u) => gradeOf(u.id) === '中2').length
   expect(screen.getByText(new RegExp(`要点カード 1 / ${n}`))).toBeInTheDocument()
 })
@@ -483,15 +484,19 @@ it('文法の一覧に学年別クリア率が出る', () => {
   expect(list.textContent).toMatch(/中1.*0\/\d+/)
 })
 
-it('文法の一覧に「今日のひとこと例文」が出て、その単元を開ける', async () => {
+it('文法の一覧は「すぐ練習」と文法ゲームのタイルが上、記録はいちばん下', () => {
   localStorage.clear()
-  const { dailyExample } = await import('./grammar')
-  const { dayKey } = await import('./srs')
-  const ex = dailyExample(dayKey())
   render(<Grammar />)
-  expect(screen.getByText('💬 今日のひとこと例文')).toBeInTheDocument()
-  fireEvent.click(screen.getByText(`→ ${ex.unit.title}`))
-  expect(screen.getByText(ex.unit.points[0])).toBeInTheDocument()
+  expect(screen.queryByText('💬 今日のひとこと例文')).toBeNull()
+  expect(screen.queryByText(/📅 今日の文法/)).toBeNull()
+  const grid = screen.getByLabelText('文法ゲーム')
+  expect(grid.querySelectorAll('.game-tile')).toHaveLength(10)
+  const sec = document.querySelector('section.grammar')!
+  const kids = [...sec.children]
+  expect(kids.indexOf(grid)).toBeLessThan(kids.indexOf(sec.querySelector('.grammar-records')!))
+  expect(sec.lastElementChild!.className).toBe('grammar-records')
+  fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+  expect(screen.getByText(/ 5 問目/)).toBeInTheDocument()
 })
 
 it('文法の単元一覧は学年ごとに折りたたまれている', () => {
@@ -507,7 +512,7 @@ it('「ランダム1問」で全単元から1問だけとける', () => {
   localStorage.clear()
   const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
   render(<Grammar />)
-  fireEvent.click(screen.getByText('🎲 ランダム1問（全単元から1問だけ）'))
+  fireEvent.click(screen.getByText('ランダム1問'))
   rnd.mockRestore()
   const q = GRAMMAR[0].questions[0]
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))

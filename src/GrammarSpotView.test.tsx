@@ -6,7 +6,7 @@ it('文法のまちがいさがしで○×に答えられる', () => {
   localStorage.clear()
   const onAnswer = vi.fn()
   render(<Grammar onAnswer={onAnswer} />)
-  fireEvent.click(screen.getByText('🔍 まちがいさがし（○×で10問）'))
+  fireEvent.click(screen.getByText('まちがいさがし'))
   for (let i = 0; i < 10; i++) {
     fireEvent.click(screen.getByRole('button', { name: '正しい' }))
     fireEvent.click(screen.getByText('次へ'))

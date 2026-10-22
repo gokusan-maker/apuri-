@@ -1,3 +1,4 @@
+import { GameTile } from './GameTileView'
 import { addRiddle, loadRiddleBook } from './riddlebook'
 import { RiddleBook } from './RiddleBookView'
 import { MissedList } from './MissedListView'
@@ -180,6 +181,8 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
   { id: 'twister', label: '👅 早口ことば', group: '聞く・話す' },
 ]
+// いつも見えるところに出す人気のミニゲーム（ほかは「ミニゲームをえらぶ」から）
+const POPULAR: Direction[] = ['mix', 'memory', 'mole', 'riddle', 'rival', 'spell']
 const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる', '文法・読解']
 const COLLAPSE_KEY = 'eitan:quiz-collapsed'
 function loadCollapsed(): string[] {
@@ -399,8 +402,29 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     <>
       <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
         <span className="mode-now">いま：{DIRECTIONS.find((d) => d.id === direction)?.label}</span>
-        <span className="mode-change">🎮 ミニゲームをえらぶ {menu ? '▲' : '▼'}</span>
+        <span className="mode-change">
+          🎮 ミニゲームをえらぶ（{DIRECTIONS.length}種） {menu ? '▲' : '▼'}
+        </span>
       </button>
+      {!menu && (
+        <div className="game-grid game-strip" aria-label="人気のミニゲーム">
+          {POPULAR.map((id) => DIRECTIONS.find((d) => d.id === id))
+            .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
+            .map((d) => (
+              <GameTile
+                key={d.id}
+                icon={d.label.split(' ')[0]}
+                name={d.label.split(' ').slice(1).join(' ')}
+                on={direction === d.id}
+                onClick={() => {
+                  setPlayed((p) => markPlayed(p, d.id))
+                  setRecent((r) => pushRecent(r, d.id))
+                  restart(d.id)
+                }}
+              />
+            ))}
+        </div>
+      )}
       {menu && (
         <div className="mode-menu" role="group" aria-label="ミニゲームの種類">
           {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}

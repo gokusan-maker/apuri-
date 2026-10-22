@@ -1524,3 +1524,19 @@ button:focus:not(:focus-visible) { outline: none; }
 .today-grammar-point { margin: 0 0 8px; font-size: 0.85rem; overflow-wrap: anywhere; }
 .today-grammar-q { margin: 6px 0; font-weight: 700; overflow-wrap: anywhere; }
 .today-grammar-done { margin: 6px 0; font-weight: 700; }
+
+/* ゲームえらびのタイル（文法・単語のミニゲーム） */
+.grammar-quick-btn { font-size: 1.1rem; padding: 14px; margin: 4px 0 12px; }
+.game-grid-title { margin: 8px 0 6px; font-weight: 700; text-align: left; }
+.game-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-bottom: 12px; }
+.game-tile { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; min-width: 0; border: 2px solid color-mix(in srgb, var(--accent) 35%, transparent); border-radius: 14px; background: color-mix(in srgb, var(--accent) 7%, var(--card)); color: inherit; }
+.game-tile.on { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, var(--card)); }
+.game-tile-icon { font-size: 1.8rem; line-height: 1.1; }
+.game-tile-name { font-weight: 700; font-size: 0.9rem; overflow-wrap: anywhere; }
+.game-tile-sub { color: var(--muted); font-size: 0.7rem; overflow-wrap: anywhere; }
+.grammar-records { margin-top: 16px; text-align: left; }
+.grammar-records > summary { font-weight: 700; padding: 8px 0; }
+.game-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 8px; }
+.game-strip .game-tile { padding: 8px 4px; }
+.game-strip .game-tile-icon { font-size: 1.5rem; }
+.game-strip .game-tile-name { font-size: 0.75rem; }
