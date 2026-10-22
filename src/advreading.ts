@@ -955,4 +955,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did Mr. Kato bring for the writer?', choices: ['Old books about the planets.', 'A new science textbook.', 'A map of the town.', 'A letter from his son.'], answer: 0, why: '第2段落 came back with three old books about the planets。' },
     ],
   },
+  {
+    id: 'adv-nostalgia',
+    title: 'The Uses of Nostalgia',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Nostalgia, the warm and slightly sad feeling we have when we remember the past, was once considered a kind of illness. In the seventeenth century, a Swiss doctor used the word to describe soldiers who became sick ( A ) they missed their homes so much.',
+      'Today, psychologists see it very differently. Studies suggest that recalling meaningful memories can make people feel more connected to others and more confident about the future. Nostalgia seems to remind us that our lives have ( B ), especially when we feel lonely or uncertain about what lies ahead.',
+      'Of course, nostalgia can also be a trap if we spend so much time looking back that we ( C ) to live in the present. Used wisely, however, memories of the past can serve as a source of strength rather than an escape, helping us face new challenges with the knowledge that we have overcome difficulties before.',
+    ],
+    ja: [
+      'ノスタルジア、つまり過去を思い出すときに感じる、あたたかくて少し悲しい気持ちは、かつて一種の病気だと考えられていた。17世紀、スイスのある医師は、ふるさとが恋しすぎて病気になった兵士たちを表すのにこの言葉を使った。',
+      '今日、心理学者たちはそれをまったくちがうふうに見ている。研究によれば、意味のある思い出をふり返ると、人は他人とのつながりをより強く感じ、未来に対してより自信がもてるようになるという。ノスタルジアは、特にさびしいときや先が見えず不安なときに、自分の人生には意味があることを思い出させてくれるようだ。',
+      'もちろん、過去をふり返ることに時間を使いすぎて、今を生きることをわすれてしまうなら、ノスタルジアはわなにもなりうる。しかし上手に使えば、過去の思い出は逃げ場ではなく力のみなもととなり、以前にも困難を乗りこえてきたのだという自覚とともに、新しい挑戦に向き合う助けになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '理由の because。ふるさとが恋しかったので病気になった。' },
+      { id: 'B', choices: ['meaning', 'meant', 'mean', 'meaningful'], answer: 0, why: 'have のあとには名詞が必要なので meaning「意味」。meaningful は形容詞。' },
+      { id: 'C', choices: ['forget', 'remember', 'decide', 'hope'], answer: 0, why: 'forget to 〜「〜するのをわすれる」。過去ばかり見て、今を生きるのをわすれる。' },
+    ],
+    tf: [
+      { statement: 'かつてノスタルジアは一種の病気と考えられていた。', answer: true, why: '第1段落 was once considered a kind of illness。' },
+      { statement: '心理学者によれば、思い出をふり返ると人はより孤独になる。', answer: false, why: '第2段落 feel more connected to others（つながりを強く感じる）。' },
+      { statement: '筆者は、過去ばかりふり返るのは危険なこともあると述べている。', answer: true, why: '第3段落 nostalgia can also be a trap。' },
+    ],
+    qa: [
+      { q: 'According to the passage, how can nostalgia help people?', choices: ['It can make them feel more connected and confident.', 'It can cure physical illnesses.', 'It helps them forget the past.', 'It stops them from thinking about the future.'], answer: 0, why: '第2段落 feel more connected to others and more confident about the future。' },
+    ],
+  },
+  {
+    id: 'toefl-bats',
+    title: 'Seeing with Sound',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      'Most bats hunt at night, when it is too dark for them to see their prey clearly. To find insects in the darkness, many species use echolocation. They make high-pitched sounds, most of ( A ) are too high for humans to hear.',
+      "When these sounds hit an object, such as a flying moth, they bounce back as echoes. By listening to the echoes, a bat can tell how far away the object is, how big it is, and even which direction it is moving. As the bat gets closer to its prey, it makes sounds more ( B ), allowing it to track the insect's exact position.",
+      'Some insects have developed ways to escape. Certain moths can hear bat calls and drop suddenly to the ground, while others produce their own clicking sounds that may confuse the bats. This competition between hunters and prey has continued ( C ) millions of years.',
+    ],
+    ja: [
+      'ほとんどのコウモリは、暗くてえものがよく見えない夜に狩りをする。暗やみの中で昆虫を見つけるために、多くの種は反響定位（エコーロケーション）を使う。コウモリは高い音を出すが、そのほとんどは人間には高すぎて聞こえない。',
+      'これらの音が、飛んでいるガのような物に当たると、こだまとしてはね返ってくる。こだまを聞くことで、コウモリは物がどれくらい遠くにあるか、どれくらいの大きさか、さらにはどの方向に動いているかまでわかる。えものに近づくにつれて、コウモリはより頻繁に音を出し、昆虫の正確な位置を追いかけられるようにする。',
+      '逃げる方法を発達させた昆虫もいる。あるガはコウモリの声を聞くと急に地面へ落ち、また自分でカチカチという音を出して、コウモリを混乱させるかもしれないガもいる。狩る側と狩られる側のこの競争は、何百万年ものあいだ続いてきた。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'them', 'that', 'what'], answer: 0, why: 'most of which「そのほとんどは」。コンマのあとで前の sounds を受ける関係代名詞 which。them では文がつながらない。' },
+      { id: 'B', choices: ['frequently', 'frequent', 'frequency', 'frequents'], answer: 0, why: '動詞 makes を説明するので副詞 frequently「頻繁に」。more frequently で比較級。' },
+      { id: 'C', choices: ['for', 'since', 'during', 'by'], answer: 0, why: 'for ＋ 期間「〜のあいだ」。for millions of years。since のあとは始まった時点。' },
+    ],
+    tf: [
+      { statement: 'Humans can easily hear most of the sounds bats make.', answer: false, why: '第1段落 most of which are too high for humans to hear。' },
+      { statement: 'Bats can learn the size of an object from echoes.', answer: true, why: '第2段落 a bat can tell ... how big it is。' },
+      { statement: 'Some moths drop to the ground when they hear bat calls.', answer: true, why: '第3段落 Certain moths can hear bat calls and drop suddenly to the ground。' },
+    ],
+    qa: [
+      { q: 'Why do bats make sounds more frequently as they get closer to prey?', choices: ["To track the insect's exact position.", 'To warn other bats.', 'To scare the insect away.', 'To rest their wings.'], answer: 0, why: "第2段落 allowing it to track the insect's exact position。" },
+    ],
+  },
 ]
