@@ -1598,3 +1598,5 @@ button:focus:not(:focus-visible) { outline: none; }
 @media (prefers-reduced-motion: reduce) { .buddy-row.dancing .buddy-card { animation: none; } }
 .team-bar { display: block; width: 60%; margin: 0 auto 6px; }
 .buddy-today { color: #16a34a; font-size: 0.75em; font-weight: 700; }
+.buddy-row.crowned .buddy-card { position: relative; }
+.buddy-row.crowned .buddy-card::before { content: '👑'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 1.1rem; }

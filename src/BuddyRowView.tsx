@@ -11,10 +11,11 @@ type Props = {
   onGo: (where: 'word' | Track) => void // タップした子の画面へ
   dancing?: boolean // トリオボーナスを受け取ったときに3体がおどる
   todayGain?: { word: number; grammar: number; reading: number } // 今日育った XP
+  crowned?: boolean // 今日の課題を3つクリアした日は👑
 }
 
 // ホームの3体：単語の相棒・文法のことばモンスター・読解の竜
-export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, dancing = false, todayGain }: Props) {
+export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, dancing = false, todayGain, crowned = false }: Props) {
   const tracks: Track[] = ['grammar', 'reading']
   const team = teamOf(wordLevel, buddies)
   return (
@@ -25,7 +26,7 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, danci
     <span className="buddy-bar team-bar" role="progressbar" aria-label="次の称号まで" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(team.progress * 100)}>
       <span style={{ width: `${team.progress * 100}%` }} />
     </span>
-    <div className={`buddy-row${dancing ? ' dancing' : ''}`} aria-label="育てているなかま">
+    <div className={`buddy-row${dancing ? ' dancing' : ''}${crowned ? ' crowned' : ''}`} aria-label="育てているなかま">
       <button className="buddy-card b-word" onClick={() => onGo('word')}>
         <span className="buddy-tag">単語</span>
         <span className="buddy-fig" style={{ transform: `scale(${growthScale(growthOf(wordLevel))})` }}>

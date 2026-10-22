@@ -192,6 +192,7 @@ describe('App', () => {
     localStorage.setItem('eitan:daily-short', day)
     render(<App />)
     expect(document.querySelector('.buddy-row.dancing')).toBeNull()
+    expect(document.querySelector('.buddy-row.crowned')).not.toBeNull() // 3つクリアの日は👑
     fireEvent.click(screen.getByText(/トリオボーナスを受け取る/))
     expect(document.querySelector('.buddy-row.dancing')).not.toBeNull()
   })

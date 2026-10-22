@@ -43,7 +43,7 @@ import { loadTraining } from './training'
 import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
-import { MASTER_TICKETS } from './grammar'
+import { loadDailyGrammarDay, MASTER_TICKETS } from './grammar'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -1076,6 +1076,7 @@ function App() {
           />
           <BuddyRow
             dancing={trioDance}
+            crowned={loadTodayWordsDay() === today && loadDailyGrammarDay() === today && loadDailyShortDay() === today}
             todayGain={{ word: todayXp.day === today ? todayXp.count : 0, ...loadBuddyToday(today) }}
             wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
             wordName={monster.name ?? formOf(monster).name}
