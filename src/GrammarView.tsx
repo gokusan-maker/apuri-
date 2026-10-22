@@ -47,9 +47,26 @@ type Props = {
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
-const GAME_COUNT = 10 // 文法ゲームの種類（下のタイルの数）
+const GAME_COUNT = 11 // 文法ゲームの種類（下のタイルの数）
+// 連続正解チャレンジ：まちがえるまで全単元の問題が続く。ベスト記録を残す
+const RUN_KEY = 'eitan:grammar-run-best'
+function loadRunBest(): number {
+  try {
+    return Number(localStorage.getItem(RUN_KEY)) || 0
+  } catch {
+    return 0
+  }
+}
+function saveRunBest(n: number): void {
+  try {
+    localStorage.setItem(RUN_KEY, String(n))
+  } catch {
+    // 保存できなくても続ける
+  }
+}
 
 export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect }: Props) {
+  const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
   const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
@@ -211,6 +228,15 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
                   const list = shuffle(GRAMMAR).slice(0, RUSH_COUNT)
                   setRush({ list, at: 0 })
                   startBattle(list[0])
+                }}
+              />
+              <GameTile
+                icon="🔥"
+                name="連続正解"
+                sub={runBest > 0 ? `ベスト ${runBest}問` : 'まちがえるまで'}
+                onClick={() => {
+                  open({ id: 'streak-run', title: '🔥 連続正解チャレンジ', points: [], examples: [], questions: shuffle(GRAMMAR.flatMap((u) => u.questions)) })
+                  setStep(0)
                 }}
               />
               <GameTile
@@ -635,7 +661,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         )}
         <p className="result-title">{unit.title}</p>
         <p className="result-score">
-          {score} / {unit.questions.length} 問正解
+          {unit.id === 'streak-run' ? `🔥 ${score}問 連続正解！（ベスト ${runBest}問）` : `${score} / ${unit.questions.length} 問正解`}
         </p>
         {(unit.id === 'mix-test' || unit.id === 'grade-test') && (
           <p className={`battle-rank rank-${mixRank(score, unit.questions.length)}`} aria-label={`ランク ${mixRank(score, unit.questions.length)}`}>
@@ -781,6 +807,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
       saveDailyGrammarDay(today)
       onDailyBonus?.()
     }
+    if (unit.id === 'streak-run' && (!ok || step === unit.questions.length - 1) && nextScore > runBest) {
+      setRunBest(nextScore)
+      saveRunBest(nextScore)
+    }
     if (unit.id === 'quick-practice' && step === unit.questions.length - 1 && nextScore === unit.questions.length) {
       setQuickPerfect(true)
       onQuickPerfect?.()
@@ -826,7 +856,15 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
     <section className="card quiz grammar" aria-live="polite">
       {back}
       <p className="progress grammar-progress">
-        <strong>{step + 1}</strong> / {unit.questions.length} 問目
+        {unit.id === 'streak-run' ? (
+          <>
+            🔥 連続 <strong>{score}</strong> 問（ベスト {runBest}問）
+          </>
+        ) : (
+          <>
+            <strong>{step + 1}</strong> / {unit.questions.length} 問目
+          </>
+        )}
       </p>
       <div className="grammar-progress-bar" role="progressbar" aria-label="確認問題の進み具合" aria-valuemin={0} aria-valuemax={unit.questions.length} aria-valuenow={step + 1}>
         {unit.questions.map((_, i) => (
@@ -922,7 +960,8 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             onClick={() => {
               setPicked(null)
               setShowPoints(false)
-              setStep(step + 1)
+              // 連続正解チャレンジは、まちがえたらそこで終わり
+              setStep(unit.id === 'streak-run' && picked !== q.answer ? unit.questions.length : step + 1)
             }}
           >
             次へ

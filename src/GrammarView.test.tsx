@@ -490,7 +490,7 @@ it('文法の一覧は「すぐ練習」と文法ゲームのタイルが上、�
   expect(screen.queryByText('💬 今日のひとこと例文')).toBeNull()
   expect(screen.queryByText(/📅 今日の文法/)).toBeNull()
   const grid = screen.getByLabelText('文法ゲーム')
-  expect(grid.querySelectorAll('.game-tile')).toHaveLength(10)
+  expect(grid.querySelectorAll('.game-tile')).toHaveLength(11)
   const sec = document.querySelector('section.grammar')!
   const kids = [...sec.children]
   expect(kids.indexOf(grid)).toBeLessThan(kids.indexOf(sec.querySelector('.grammar-records')!))
@@ -730,4 +730,23 @@ it('すぐ練習は学年をえらぶと、その学年の問題だけになる'
   render(<Grammar />)
   fireEvent.click(within(screen.getByRole('group', { name: 'すぐ練習の学年' })).getByText('中2'))
   expect(screen.getByText('✏️ すぐ練習（5問・中2）')).toBeInTheDocument()
+})
+
+it('連続正解チャレンジは、まちがえるまで続いてベスト記録が残る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('連続正解'))
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  const cur = () => all.find((x) => x.sentence.replace('___', '　　　') === document.querySelector('.blank-sentence')!.textContent)!
+  for (let i = 0; i < 3; i++) {
+    const q = cur()
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(document.querySelector('.grammar-progress')!.textContent).toContain('連続 3 問')
+  const q = cur()
+  fireEvent.click(screen.getByRole('button', { name: q.choices[(q.answer + 1) % q.choices.length] }))
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('🔥 3問 連続正解！（ベスト 3問）')).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:grammar-run-best')).toBe('3')
 })
