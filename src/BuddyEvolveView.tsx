@@ -1,6 +1,6 @@
 import { TRACK_LABEL, type BuddyForm, type Track } from './buddies'
 
-// 文法の動物・長文の竜が進化したときの全画面演出（タップで閉じる）
+// 文法のペット・長文の竜が進化したときの全画面演出（タップで閉じる）
 export function BuddyEvolve({ track, form, onClose }: { track: Track; form: BuddyForm; onClose: () => void }) {
   return (
     <div className={`celebrate buddy-evolve b-${track}`} role="dialog" aria-label="なかまの進化" onClick={onClose}>

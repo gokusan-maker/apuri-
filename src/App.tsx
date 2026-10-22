@@ -315,7 +315,7 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [stageTab, setStageTab] = useState<'boss' | 'long' | 'short'>('boss') // 長文ボスのタブの中
-  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法の動物・長文の竜
+  const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のペット・長文の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm } | null>(null) // なかまの進化演出
   const [showTimeAttack, setShowTimeAttack] = useState(false) // ミニゲームの中のタイムアタック
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）

@@ -3,7 +3,7 @@ import { BUDDY_FORMS, buddyForm, buddyLevel, TRACK_LABEL, type Buddies, type Tra
 
 type Props = { buddies: Buddies; onRename: (track: Track, name: string) => void }
 
-// 文法の動物・長文の竜のくわしい画面：名前・次の進化まで・進化の一覧
+// 文法のペット・長文の竜のくわしい画面：名前・次の進化まで・進化の一覧
 export function BuddyDetail({ buddies, onRename }: Props) {
   const [editing, setEditing] = useState<Track | null>(null)
   const [draft, setDraft] = useState('')

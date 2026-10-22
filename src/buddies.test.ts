@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import { BUDDY_FORMS, buddyForm, buddyLevel, feedBuddy, loadBuddies, saveBuddies } from './buddies'
 
-describe('項目ごとのなかま（文法の動物・長文の竜）', () => {
-  it('はじめはタマゴ。XPがたまると文法は動物、長文は竜にかえる', () => {
+describe('項目ごとのなかま（文法のペット・長文の竜）', () => {
+  it('はじめはタマゴ。XPがたまると文法はペット、長文は竜にかえる', () => {
     expect(buddyForm('grammar', { xp: 0 }).icon).toBe('🥚')
     let b = { grammar: { xp: 0 }, reading: { xp: 0 } }
     const r = feedBuddy(b, 'grammar', 1000)
