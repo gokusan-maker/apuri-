@@ -1,8 +1,9 @@
+import { BossTime } from './BossTimeView'
 import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -71,6 +72,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [rareFight, setRareFight] = useState(false)
   const [weekendWeek, setWeekendWeek] = usePersistent(loadWeekendWeek, saveWeekendWeek)
   const [weekendFight, setWeekendFight] = useState(false)
+  const [timeAttack, setTimeAttack] = useState(false)
   const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean; ex?: boolean } | null>(null)
   const [endless, setEndless] = useState<{ floor: number; hearts: number; won: boolean } | null>(null)
   const [endlessBest, setEndlessBest] = usePersistent(loadEndlessBest, saveEndlessBest)
@@ -183,6 +185,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       />
     )
   }
+
+  if (timeAttack) return <BossTime words={wordsOf(levels)} onBack={() => setTimeAttack(false)} />
 
   if (weekendFight) {
     const wb = weekendBossOf(week)
@@ -440,6 +444,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           {weekendWeek === week ? `✅ 週末ボス「${weekendBossOf(week).look.name}」はたおした！（もう一度戦う）` : `🌙 週末ボス「${weekendBossOf(week).look.name}」（HP${WEEKEND_HP}）たおすと 🎟1`}
         </button>
       )}
+      <button className="boss-btn rush-boss" onClick={() => setTimeAttack(true)}>
+        ⏱ ボスのタイムアタック（30秒で何ダメージ？）{loadBossTaBest() > 0 ? `　ベスト ${loadBossTaBest()}` : ''}
+      </button>
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
         {rareWeek === week ? `✅ 今週のレアボス「${rare.look.name}」はたおした！（もう一度戦う）` : `✨ 今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
       </button>

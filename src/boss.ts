@@ -310,3 +310,24 @@ export function hurtLineOf(name: string, n: number): { en: string; ja: string } 
 
 // ボスのねむり：7問ごとに2問、ボスがねむる（その間の正解はダメージ2倍）。ためこうげき・チャンス問題とは重ならない
 export const isAsleep = (enraged: boolean, index: number) => index % 7 >= 5 && !isCharge(enraged, index) && !isChance(enraged, index)
+
+// ボスのタイムアタック：30秒であたえたダメージのベスト
+export const BOSS_TA_SECONDS = 30
+const TA_KEY = 'eitan:boss-ta-best'
+export function loadBossTaBest(): number {
+  try {
+    const n = Number(localStorage.getItem(TA_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function recordBossTaBest(n: number): boolean {
+  if (n <= loadBossTaBest()) return false
+  try {
+    localStorage.setItem(TA_KEY, String(n))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+  return true
+}
