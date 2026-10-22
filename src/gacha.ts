@@ -353,3 +353,15 @@ export function saveTrio(ids: string[]): void {
 
 // レア以上が出たときの相棒のひとこと
 export const rareCheer = (rarity: string) => (rarity === 'UR' ? 'うそでしょ！ ウルトラレアだ！ 一生のたからものだね！' : rarity === 'SR' ? 'すごい！ キラキラのスーパーレアだ！' : 'やったね！ レアが出たよ！')
+
+// ガチャで出た子のあいさつ（種類ごとに決まる。自作の英語）
+export const HELLO_LINES = [
+  { en: 'Nice to meet you!', ja: 'はじめまして！' },
+  { en: "Hi! Let's be friends!", ja: 'やあ！ なかよくしようね！' },
+  { en: "I'm so happy to be here!", ja: 'ここに来られてうれしいな！' },
+  { en: "Let's learn English together!", ja: 'いっしょに英語を学ぼう！' },
+]
+export function helloLine(speciesId: string): { en: string; ja: string } {
+  const n = [...speciesId].reduce((a, c) => a + c.charCodeAt(0), 0)
+  return HELLO_LINES[n % HELLO_LINES.length]
+}

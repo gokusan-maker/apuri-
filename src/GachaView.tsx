@@ -1,8 +1,9 @@
 import { dayKey } from './srs'
 import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
+import { speak } from './speech'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -303,6 +304,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
+          </p>
+          <p className="gacha-hello">
+            👋 「{helloLine(result.species.id).en}」<span className="muted">{helloLine(result.species.id).ja}</span>
+            <button className="speak small" onClick={() => speak(helloLine(result.species.id).en)} aria-label="あいさつを聞く">
+              🔊
+            </button>
           </p>
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
           {result.mystery && <p className="gacha-lucky">❓ ミステリーカプセル！ おまけ 🪙{MYSTERY_COINS}</p>}

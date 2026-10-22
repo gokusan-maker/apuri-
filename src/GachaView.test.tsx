@@ -189,3 +189,15 @@ it('ガチャの結果に「属性：単語」が出る（単語の相棒のわ�
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByText('属性：単語')).toBeInTheDocument()
 })
+
+it('ガチャで出た子が英語であいさつ（🔊を押したときだけ読む）', async () => {
+  const { helloLine } = await import('./gacha')
+  const sp = vi.spyOn(await import('./speech'), 'speak').mockImplementation(() => {})
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf('mochi') }))
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText(new RegExp(helloLine('mochi').en.replace(/[!?]/g, '.')))).toBeInTheDocument()
+  expect(sp).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByRole('button', { name: 'あいさつを聞く' }))
+  expect(sp).toHaveBeenCalledWith(helloLine('mochi').en)
+})
