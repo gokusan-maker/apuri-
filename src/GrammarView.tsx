@@ -178,12 +178,19 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             <button
               className="flip grammar-quick-btn"
               onClick={() => {
-                open(quickPractice(record, Math.random))
+                open(quickPractice(record, Math.random, 5, grade))
                 setStep(0)
               }}
             >
-              ✏️ すぐ練習（5問）
+              ✏️ すぐ練習（5問{grade === 'all' ? '' : `・${grade}`}）
             </button>
+            <div className="quick-grades" role="group" aria-label="すぐ練習の学年">
+              {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
+                <button key={g} aria-pressed={grade === g} onClick={() => setGrade(g)}>
+                  {g === 'all' ? 'すべて' : g}
+                </button>
+              ))}
+            </div>
             <p className="game-grid-title">🎮 文法ゲーム（{GAME_COUNT}しゅるい）</p>
             <div className="game-grid" aria-label="文法ゲーム">
               <GameTile icon="📝" name="まとめテスト" sub={mixBest[title] !== undefined ? `ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : 'ランダム10問'} onClick={mixTest} />

@@ -1551,3 +1551,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .read-levels .read-level-done { color: var(--accent); font-weight: 700; }
 .today-trio { display: block; width: 100%; margin-top: 6px; padding: 10px; border: none; border-radius: 12px; background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa); color: #fff; font-weight: 700; }
 .today-trio.done { background: color-mix(in srgb, var(--accent) 12%, var(--card)); color: inherit; font-weight: 400; text-align: center; }
+.quick-grades { display: flex; gap: 4px; justify-content: center; margin: -6px 0 12px; flex-wrap: wrap; }
+.quick-grades button { padding: 4px 10px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent); background: var(--card); color: inherit; font-size: 0.8rem; }
+.quick-grades button[aria-pressed='true'] { background: var(--accent); color: #fff; border-color: var(--accent); }

@@ -720,3 +720,14 @@ it('すぐ練習の5問を全問正解するとコインのごほうび', () => 
   expect(perfect).toHaveBeenCalledTimes(1)
   expect(screen.getByText(/すぐ練習 5問全問正解！/)).toBeInTheDocument()
 })
+
+it('すぐ練習は学年をえらぶと、その学年の問題だけになる', async () => {
+  const { quickPractice, gradeOf } = await import('./grammar')
+  const u = quickPractice({}, () => 0.5, 5, '中3')
+  const ids = new Set(GRAMMAR.filter((g) => gradeOf(g.id) === '中3').flatMap((g) => g.questions))
+  expect(u.questions.every((q) => ids.has(q))).toBe(true)
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(within(screen.getByRole('group', { name: 'すぐ練習の学年' })).getByText('中2'))
+  expect(screen.getByText('✏️ すぐ練習（5問・中2）')).toBeInTheDocument()
+})
