@@ -1,7 +1,7 @@
 import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
-import { keyWords } from './longvocab'
+import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
@@ -13,6 +13,7 @@ type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source:
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
+const IDIOMS = blankIdioms(LONG_PASSAGES)
 
 // 読み上げ用：空所は「ブランク」と読まず、少し間をあける
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
@@ -145,6 +146,16 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             📒 重要語句クイズ（読んだ長文から5問）
           </button>
         )}
+        <details className="long-types long-idioms">
+          <summary>📗 空所でよく出る熟語（{IDIOMS.length}個）</summary>
+          <ul>
+            {IDIOMS.map(({ w, count }) => (
+              <li key={w.id}>
+                <strong>{w.en}</strong> {w.ja}（{count}本）
+              </li>
+            ))}
+          </ul>
+        </details>
         <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
           🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>

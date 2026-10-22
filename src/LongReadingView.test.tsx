@@ -364,3 +364,10 @@ it('全部制覇チャレンジの進みぐあいが出る', () => {
   render(<LongReading />)
   expect(screen.getByText(new RegExp(`全部制覇チャレンジ：10 / ${LONG_PASSAGES.length}本.*🥉10本`))).toBeInTheDocument()
 })
+
+it('長文の一覧に「空所でよく出る熟語」まとめが出る', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(/空所でよく出る熟語/))
+  expect(screen.getByText('thank you for')).toBeTruthy()
+})

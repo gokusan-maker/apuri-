@@ -39,3 +39,28 @@ export function makeVocabQuiz(words: Word[], rnd: () => number, n = 5) {
   return qs
 }
 
+
+// 長文の「よく出る熟語」：空所に答えを入れた文の中で、答えの語をふくむ熟語を全長文から集める（多い順）
+const esc = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+export function blankIdioms(passages: LongPassage[]): { w: Word; count: number }[] {
+  const count = new Map<string, number>()
+  for (const p of passages) {
+    const found = new Set<string>()
+    for (const b of p.blanks) {
+      const ans = b.choices[b.answer].toLowerCase()
+      for (const para of p.paragraphs) {
+        const sent = para.split(/(?<=[.!?])\s+/).find((s) => s.includes(`( ${b.id} )`))
+        if (!sent) continue
+        const filled = sent.replace(`( ${b.id} )`, ans).toLowerCase()
+        for (const w of PHRASES) {
+          const en = w.en.toLowerCase()
+          if (en.split(/\s+/).includes(ans.split(/\s+/)[0]) && new RegExp(`\\b${esc(en)}\\b`).test(filled)) found.add(w.id)
+        }
+      }
+    }
+    for (const id of found) count.set(id, (count.get(id) ?? 0) + 1)
+  }
+  return PHRASES.filter((w) => count.has(w.id))
+    .map((w) => ({ w, count: count.get(w.id)! }))
+    .sort((a, b) => b.count - a.count)
+}
