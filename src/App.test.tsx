@@ -142,6 +142,14 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
   })
 
+  it('ホームの「なかまを入れかえる」で、属性ごとの入れかえ画面が開く', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('🔁 なかまを入れかえる（属性ごと）'))
+    expect(screen.getByRole('tab', { name: 'あいぼう' })).toHaveAttribute('aria-selected', 'true')
+    expect(screen.getByLabelText('文法のなかまを入れかえる')).toBeInTheDocument()
+    expect(screen.getByLabelText('読解のなかまを入れかえる')).toBeInTheDocument()
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()

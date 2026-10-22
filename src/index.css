@@ -1570,3 +1570,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-switch-item small { display: block; color: var(--muted); font-size: 0.7rem; }
 .buddy-switch-item:disabled { opacity: 1; }
 .buddy-lock { font-size: 1.6rem; width: 40px; text-align: center; }
+.buddy-swap-link { display: block; margin: -4px auto 8px; font-size: 0.85rem; }

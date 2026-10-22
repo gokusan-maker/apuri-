@@ -1071,6 +1071,15 @@ function App() {
             }}
           />
           <button
+            className="list-link buddy-swap-link"
+            onClick={() => {
+              setStatsTab('buddy')
+              requestAnimationFrame(() => document.querySelector('.buddy-detail')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
+            }}
+          >
+            🔁 なかまを入れかえる（属性ごと）
+          </button>
+          <button
             className="home-gacha-btn"
             onClick={() => {
               setShopTab(undefined)
