@@ -101,6 +101,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'relative-that': { wrong: 'This is the best book what I have read.', right: 'This is the best book that I have read.', why: '先行詞があるときに what は使えない。最上級がつくときは that。' },
   'number-expr': { wrong: 'There are three hundreds students.', right: 'There are three hundred students.', why: '具体的な数のあとの hundred には -s をつけない。' },
   'the-more': { wrong: 'The more you practice, more better you get.', right: 'The more you practice, the better you get.', why: 'うしろも the ＋比較級。more better とは言わない。' },
+  'it-weather': { wrong: 'Is very cold today.', right: 'It is very cold today.', why: '天気や寒さを言うときも主語に It が必要。' },
+  'take-uses': { wrong: "Let's do a picture here.", right: "Let's take a picture here.", why: '「写真をとる」は take a picture。' },
   'a-piece-of': { wrong: 'I drank two glass of water.', right: 'I drank two glasses of water.', why: '2つ以上なら入れ物の語を複数形に（glasses）。' },
   'so-do-i': { wrong: '"I don\'t like snakes." "Me too."', right: '"I don\'t like snakes." "Me neither."', why: '否定の文に「私も」と言うときは Me neither. / Neither do I.' },
   'to-or-ing': { wrong: 'We hope seeing you again.', right: 'We hope to see you again.', why: 'hope のあとは to ＋動詞の原形。' },
