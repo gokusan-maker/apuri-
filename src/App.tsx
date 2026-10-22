@@ -145,7 +145,7 @@ type Tab = 'card' | 'stage' | 'quiz' | 'time' | 'stats' | 'settings'
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'card', icon: '🃏', label: 'カード' },
   { id: 'stage', icon: '🗺️', label: 'ステージ' },
-  { id: 'quiz', icon: '❓', label: 'クイズ' },
+  { id: 'quiz', icon: '🎮', label: 'ミニゲーム' },
   { id: 'time', icon: '⏱', label: 'タイム' },
   { id: 'stats', icon: '📊', label: '記録' },
   { id: 'settings', icon: '⚙️', label: '設定' },

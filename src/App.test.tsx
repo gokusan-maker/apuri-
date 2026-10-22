@@ -50,7 +50,7 @@ describe('App', () => {
   it('クイズで正解するとXP+10、タマゴがかえる', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 15 }))
     render(<App />)
-    fireEvent.click(screen.getByText('クイズ'))
+    fireEvent.click(screen.getByText('ミニゲーム'))
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
@@ -81,9 +81,9 @@ describe('App', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('カード')).toHaveAttribute('aria-current', 'page')
-    fireEvent.click(tab('クイズ'))
+    fireEvent.click(tab('ミニゲーム'))
     expect(document.querySelector('.quiz')).not.toBeNull()
-    expect(tab('クイズ')).toHaveAttribute('aria-current', 'page')
+    expect(tab('ミニゲーム')).toHaveAttribute('aria-current', 'page')
     fireEvent.click(tab('タイム'))
     expect(screen.getByText('スタート')).toBeInTheDocument()
     fireEvent.click(tab('記録'))
@@ -96,7 +96,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    fireEvent.click(screen.getByRole('button', { name: /クイズ/ }))
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ミニゲーム'))
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
@@ -725,7 +725,7 @@ describe('App', () => {
   it('カード以外のタブでレベルが上がると「Lv UP!」バナーが出る', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
     render(<App />)
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('クイズ'))
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ミニゲーム'))
     const en = document.querySelector('.quiz .en')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
