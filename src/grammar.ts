@@ -1767,3 +1767,16 @@ export function yesterdayOf(day: string): string {
 }
 export const yesterdayQuestions = (days: Record<string, string>, today: string, n = 3): GrammarQuestion[] =>
   notebookQuestions(Object.entries(days).filter(([, d]) => d === yesterdayOf(today)).map(([t]) => t)).slice(0, n)
+
+// 文法の段位：全問正解した単元の数で決まる
+export const DAN_LEVELS = [
+  { min: 0, name: '見習い' },
+  { min: 10, name: '初段' },
+  { min: 30, name: '二段' },
+  { min: 60, name: '三段' },
+  { min: 90, name: '達人' },
+]
+export function danOf(cleared: number): { name: string; next: number | null } {
+  const i = DAN_LEVELS.reduce((a, d, k) => (cleared >= d.min ? k : a), 0)
+  return { name: DAN_LEVELS[i].name, next: DAN_LEVELS[i + 1] ? DAN_LEVELS[i + 1].min - cleared : null }
+}

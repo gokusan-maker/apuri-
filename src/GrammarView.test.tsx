@@ -9,6 +9,7 @@ describe('文法ミニ解説', () => {
     const onAnswer = vi.fn()
     render(<Grammar onAnswer={onAnswer} />)
     expect(screen.getByText(`全問正解 0 / ${GRAMMAR.length} 単元`)).toBeInTheDocument()
+    expect(screen.getByText('見習い')).toBeInTheDocument()
     const unit = GRAMMAR[0]
     fireEvent.click(screen.getByText(unit.title))
     expect(screen.getByText(unit.points[0])).toBeInTheDocument()

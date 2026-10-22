@@ -200,3 +200,11 @@ it('きのうまちがえた問題を3問まで出す', async () => {
   expect(r).toHaveLength(3)
   expect(r.every((q) => qs.slice(0, 4).includes(q))).toBe(true)
 })
+
+it('全問正解した単元の数で段位が決まる', async () => {
+  const { danOf } = await import('./grammar')
+  expect(danOf(0)).toEqual({ name: '見習い', next: 10 })
+  expect(danOf(10)).toEqual({ name: '初段', next: 20 })
+  expect(danOf(65)).toEqual({ name: '三段', next: 25 })
+  expect(danOf(95)).toEqual({ name: '達人', next: null })
+})
