@@ -1344,6 +1344,39 @@ export const PASSAGES: Passage[] = [
       { q: '競走で何位だった？', choices: ['1位', '2位', '3位'], answer: 1 },
     ],
   },
+  {
+    id: 'sick-day',
+    title: 'A Day in Bed',
+    text: 'Last Tuesday, I had a fever and could not go to school. I stayed in bed all day. My father made rice porridge for me. In the evening, my friend Ken brought my homework and a card. It said, "Get well soon!" I felt much better the next day.',
+    ja: 'この前の火曜日、私は熱があって学校に行けませんでした。一日じゅうベッドにいました。父がおかゆを作ってくれました。夕方、友だちのケンが宿題とカードを持ってきてくれました。カードには「早くよくなってね！」と書いてありました。次の日には、ずっと気分がよくなりました。',
+    questions: [
+      { q: '筆者が学校を休んだのはなぜ？', choices: ['熱があったから', '雨がふったから', '旅行に行ったから'], answer: 0 },
+      { q: '父は何を作ってくれた？', choices: ['おかゆ', 'カレー', 'ケーキ'], answer: 0 },
+      { q: 'ケンは何を持ってきた？', choices: ['宿題とカード', '本とおかし', '花とくだもの'], answer: 0 },
+    ],
+  },
+  {
+    id: 'soap-bubbles',
+    title: 'Big Soap Bubbles',
+    text: 'On Sunday, my little sister and I made soap bubbles in the garden. We used water, soap, and a little sugar. My sister made a bubble as big as her head! It flew over the fence and broke on our neighbor\'s roof. We laughed so much.',
+    ja: '日曜日、妹と私は庭でしゃぼん玉を作りました。水と石けんと少しの砂糖を使いました。妹は頭と同じくらい大きなしゃぼん玉を作りました！ それはへいをこえて飛んでいき、となりの家の屋根の上でわれました。私たちはとてもたくさん笑いました。',
+    questions: [
+      { q: 'しゃぼん玉はどこで作った？', choices: ['庭', '公園', 'おふろ'], answer: 0 },
+      { q: '水と石けんのほかに何を使った？', choices: ['砂糖', '塩', '牛乳'], answer: 0 },
+      { q: '大きなしゃぼん玉はどこでわれた？', choices: ['となりの家の屋根の上', '妹の頭の上', '木の上'], answer: 0 },
+    ],
+  },
+  {
+    id: 'ladybug',
+    title: 'A Ladybug on My Desk',
+    text: 'During math class, a small red ladybug landed on my desk. It had seven black spots. Everyone wanted to see it. Our teacher said, "Ladybugs eat bugs that hurt plants." She opened the window, and the ladybug flew out to the school garden.',
+    ja: '算数（数学）の授業中、小さな赤いテントウムシが私の机にとまりました。黒い点が7つありました。みんながそれを見たがりました。先生は「テントウムシは植物をいためる虫を食べるのよ」と言いました。先生が窓を開けると、テントウムシは学校の花だんへ飛んでいきました。',
+    questions: [
+      { q: 'テントウムシが来たのは何の授業中？', choices: ['数学', '英語', '音楽'], answer: 0 },
+      { q: 'テントウムシには黒い点がいくつあった？', choices: ['5つ', '7つ', '9つ'], answer: 1 },
+      { q: '先生によると、テントウムシは何を食べる？', choices: ['植物をいためる虫', '花のみつ', '木の葉'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
