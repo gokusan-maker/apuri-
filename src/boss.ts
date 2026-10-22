@@ -335,6 +335,8 @@ export function recordBossTaBest(n: number): boolean {
 // 強化版ボス：たおしたボスの強いバージョン。HP1.5倍、勝つと🪙10
 export const STRONG_HP = Math.round(BOSS_HP * 1.5)
 export const STRONG_COINS = 10
+// サドンデス：ハート1つでスタート。勝つと🪙20
+export const SUDDEN_COINS = 20
 
 // おうえんスタンプ：正解するたびに相棒がスタンプでおうえん（5種類を順番に）
 export const CHEER_STAMPS = ['👍 ナイス！', '💪 いいぞ！', '✨ すごい！', '🔥 その調子！', '🎯 ばっちり！']

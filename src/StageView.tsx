@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -75,6 +75,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
   const [weekendFight, setWeekendFight] = useState(false)
   const [timeAttack, setTimeAttack] = useState(false)
   const [strong, setStrong] = useState(false) // 強化版のボス
+  const [sudden, setSudden] = useState(false) // サドンデス（ハート1つ）
   const [nightFight, setNightFight] = useState(false)
   const [nightDay, setNightDay] = usePersistent(loadNightDay, saveNightDay)
   const [rush, setRush] = useState<{ round: number; hearts: number; won: boolean; ex?: boolean } | null>(null)
@@ -290,7 +291,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         words={wordsOf([fighting])}
         golden={fighting === goldenLevelOf(LEVELS, dayKey())}
         hp={dailyFight ? dailyHp(dailyFight) : strong ? STRONG_HP : undefined}
-        title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : strong ? `💪 強化版の${fighting}ボス` : undefined}
+        title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : strong ? `💪 強化版の${fighting}ボス` : sudden ? `💀 サドンデス：${fighting}ボス` : undefined}
+        startHearts={sudden ? 1 : undefined}
         grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
         power={power}
@@ -308,11 +310,13 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           onBossWin?.(fighting)
           if (dailyFight) onDailyWin?.(dailyFight)
           if (strong) onRankBonus?.(STRONG_COINS)
+          if (sudden) onRankBonus?.(SUDDEN_COINS)
         }}
         onExit={() => {
           setFighting(null)
           setDailyFight(0)
           setStrong(false)
+          setSudden(false)
         }}
       />
     )
@@ -587,6 +591,17 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
                     }}
                   >
                     💪 強化版「{BOSSES[level].name}」に挑む（HP{STRONG_HP}・勝つと🪙{STRONG_COINS}）
+                  </button>
+                )}
+                {boss[level] && (
+                  <button
+                    className="boss-btn strong-boss sudden-boss"
+                    onClick={() => {
+                      setSudden(true)
+                      setFighting(level)
+                    }}
+                  >
+                    💀 サドンデス（ハート1つ・勝つと🪙{SUDDEN_COINS}）
                   </button>
                 )}
               </>

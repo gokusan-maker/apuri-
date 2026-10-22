@@ -208,6 +208,15 @@ it('たおしたボスには強化版で挑める（HPが多い）', () => {
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '150')
 })
 
+it('たおしたボスにはサドンデス（ハート1つ）で挑める', () => {
+  localStorage.clear()
+  const record = Object.fromEntries(stagesOf('中1').map((s) => [s.id, 3]))
+  render(<Stages levels={['中1']} record={record} onClear={() => {}} boss={{ 中1: '2026-10-01' }} />)
+  fireEvent.click(screen.getByText(/💀 サドンデス（/))
+  expect(screen.getByText('💀 サドンデス：中1ボス')).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 1')).toBeInTheDocument()
+})
+
 it('ナイトボスは夜7時〜10時だけ出る', () => {
   localStorage.clear()
   const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={12} />)
