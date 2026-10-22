@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { evoDayLabel, loadEvoLog, loadBuddyDays, ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
+import { speak } from './speech'
+import { SPECIES_PROFILE, evoDayLabel, loadEvoLog, loadBuddyDays, ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
 
 type Props = {
   buddies: Buddies
@@ -56,6 +57,15 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
             <p className="stats-note">
               次のレベルまで あと {lv.need - lv.into} XP{next ? `・Lv.${next.minLv}で ？？？ に進化` : '・さいごの姿！'}
             </p>
+            {SPECIES_PROFILE[speciesOf(t, b).id] && (
+              <p className="buddy-profile">
+                <span className="ally-line">{SPECIES_PROFILE[speciesOf(t, b).id].en}</span>
+                <span className="muted">{SPECIES_PROFILE[speciesOf(t, b).id].ja}</span>
+                <button className="speak small" onClick={() => speak(SPECIES_PROFILE[speciesOf(t, b).id].en)} aria-label={`${TRACK_LABEL[t]}のなかまのプロフィールを聞く`}>
+                  🔊
+                </button>
+              </p>
+            )}
             <p className="stats-note">🗓 いっしょに学んだ日：{days[t]}日・✨ これまでの経験値：{b.xp} XP</p>
             {onSwitch && (
               <div className="buddy-switch" role="group" aria-label={`${TRACK_LABEL[t]}のなかまを入れかえる`}>

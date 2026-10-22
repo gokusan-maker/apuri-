@@ -1,7 +1,10 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
-import { expect, it } from 'vitest'
-import { BUDDY_FORMS, recordEvo, loadEvoLog, addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
+import { expect, it, vi } from 'vitest'
+import { SPECIES_PROFILE, BUDDY_FORMS, recordEvo, loadEvoLog, addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
 import { BuddyDetail } from './BuddyDetailView'
+
+const speakMock = vi.hoisted(() => vi.fn())
+vi.mock('./speech', () => ({ speak: speakMock }))
 
 it('文法のことばモンスター・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
   let b: Buddies = { grammar: { xp: 200 }, reading: { xp: 0 } }
@@ -79,4 +82,14 @@ it('これまでにもらった経験値の合計を出す', () => {
   render(<BuddyDetail buddies={{ grammar: { xp: 345 }, reading: { xp: 12 } }} onRename={() => {}} />)
   expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('これまでの経験値：345 XP')
   expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('これまでの経験値：12 XP')
+})
+
+it('種類ごとの英語のプロフィールを出し、🔊を押したときだけ読む', () => {
+  speakMock.mockClear()
+  render(<BuddyDetail buddies={{ grammar: { xp: 0 }, reading: { xp: 0, species: 'koori' } }} onRename={() => {}} />)
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent(SPECIES_PROFILE.kotoba.ja)
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent(SPECIES_PROFILE.koori.en)
+  expect(speakMock).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByRole('button', { name: '読解のなかまのプロフィールを聞く' }))
+  expect(speakMock).toHaveBeenCalledWith(SPECIES_PROFILE.koori.en)
 })

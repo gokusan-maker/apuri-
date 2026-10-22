@@ -101,6 +101,16 @@ export const BUDDY_SPECIES: Record<Track, BuddySpecies[]> = {
     { id: 'mori', label: 'もりの竜', prefix: 'もりの', hue: 250, unlockLv: 12 },
   ],
 }
+// 種類ごとのプロフィール（自作の英語ひとこと紹介）
+export const SPECIES_PROFILE: Record<string, { en: string; ja: string }> = {
+  kotoba: { en: 'I was born from a drop of ink. I love neat sentences.', ja: 'インクのしずくから生まれたよ。きちんとした文が大好き。' },
+  hoshi: { en: 'I fell from a star. I shine when you use the right tense.', ja: '星から落ちてきたよ。正しい時制を使うと光るんだ。' },
+  honoo: { en: 'My heart burns hot. Mistakes only make me stronger!', ja: '心が熱く燃えているよ。まちがいはぼくを強くするだけ！' },
+  sora: { en: 'I fly above the clouds and read the wind like a book.', ja: '雲の上を飛んで、風を本のように読むんだ。' },
+  koori: { en: 'I live in a cold cave. I keep every story frozen and safe.', ja: '冷たいほらあなに住んでいるよ。どんな物語もこおらせて大切にしまっておくんだ。' },
+  mori: { en: 'I sleep under old trees. Their leaves tell me long tales.', ja: '古い木の下でねむるよ。葉っぱが長いお話を聞かせてくれるんだ。' },
+}
+
 export const ATTR_LABEL: Record<Track | 'word', string> = { word: '単語', grammar: '文法', reading: '読解' }
 
 export function speciesOf(track: Track, b: Buddy): BuddySpecies {
