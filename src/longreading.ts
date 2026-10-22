@@ -4360,6 +4360,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Scientists say zebras are white with black stripes.', answer: false, why: '「白いしまのある黒」と言っている。' },
     ],
   },
+  {
+    id: 'yawning',
+    title: 'Why Do We Yawn?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Everyone yawns. Babies yawn even before they are born, and many animals, such as dogs and cats, yawn too. But do you know ( A ) we yawn?',
+      'For a long time, many people believed that we yawn because our bodies need more air. However, in some studies, giving people more air did not stop them from yawning. So scientists now have other ideas. One idea is that yawning helps cool down the brain when it gets a little warm.',
+      'Yawning is also "catching." When you see someone yawn, you often start to yawn, too. Even reading ( B ) yawning can make some people yawn! Interestingly, people yawn more easily when they see their family or close friends yawn than when they see strangers do it.',
+      'Scientists are still studying yawning, and there is a lot that we do not know. So the next time you yawn in class, you can say that your brain is just ( C ) to cool down!',
+    ],
+    ja: [
+      'だれでもあくびをします。赤ちゃんは生まれる前からあくびをしますし、犬やねこのような多くの動物もあくびをします。でも、私たちがなぜあくびをするのか知っていますか。',
+      '長いあいだ、多くの人々は、体がもっと空気を必要とするからあくびをするのだと信じていました。しかし、いくつかの研究では、人により多くの空気をあたえても、あくびは止まりませんでした。そこで今、科学者たちは別の考えをもっています。その一つは、あくびは脳が少しあたたかくなったときに、脳を冷やすのに役立つという考えです。',
+      'あくびは「うつる」ものでもあります。だれかがあくびをするのを見ると、自分もあくびを始めることがよくあります。あくびについて読むだけで、あくびをしてしまう人もいるのです！ おもしろいことに、人は知らない人のあくびを見たときよりも、家族や仲のよい友だちのあくびを見たときのほうが、あくびがうつりやすいのです。',
+      '科学者たちは今もあくびの研究を続けていて、わかっていないことがたくさんあります。だから次に授業中にあくびが出たら、脳がちょっと冷えようとしているだけだと言えるかもしれませんね！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'who'], answer: 0, why: '「なぜあくびをするのか」なので why（間接疑問）。' },
+      { id: 'B', choices: ['about', 'at', 'on', 'from'], answer: 0, why: 'read about 〜「〜について読む」。' },
+      { id: 'C', choices: ['trying', 'tried', 'try', 'tries'], answer: 0, why: 'is trying で現在進行形「〜しようとしているところ」。' },
+    ],
+    underline: { phrase: 'catching', choices: ['人から人へうつる', 'つかまえやすい', 'すぐ止まる', 'とても大きい'], answer: 0, why: 'このあと、だれかのあくびを見ると自分もあくびをすると説明されている。' },
+    tf: [
+      { statement: 'Babies can yawn before they are born.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Giving people more air always stops their yawning.', answer: false, why: '空気をあたえても止まらなかった研究がある。' },
+      { statement: 'One idea is that yawning helps cool down the brain.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'People catch yawns more easily from strangers than from family.', answer: false, why: '家族や友だちのほうがうつりやすい。' },
+      { statement: 'Scientists know everything about yawning now.', answer: false, why: 'わかっていないことがたくさんある。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
