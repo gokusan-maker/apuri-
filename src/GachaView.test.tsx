@@ -181,3 +181,15 @@ it('同じキャラの2体目以上はガチャ結果に「○体目」が出る
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.getByText(`👥 ${speciesOf('mochi').name} 3体目`)).toBeInTheDocument()
 })
+
+it('レア以上が出ると相棒がよろこぶ（ふつうの色では出ない）', () => {
+  localStorage.clear()
+  let k = 'kin'
+  const onDraw = vi.fn(() => ({ kind: kindOf(k), species: speciesOf('mochi') }))
+  render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={onDraw} partnerName="モチ" />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText(/🐣 モチ「すごい！ キラキラのスーパーレアだ！」/)).toBeInTheDocument()
+  k = 'normal'
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.queryByText(/🐣 モチ「/)).toBeNull()
+})
