@@ -1515,4 +1515,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did it take a long time to get to the shelter?', choices: ['They walked slowly and had to choose another road.', 'They got lost in the school.', 'The drill started late.', 'The weather was very bad.'], answer: 0, why: '第2段落 we moved very slowly / We had to choose another way。' },
     ],
   },
+  {
+    id: 'adv-zoo',
+    title: 'Rethinking the Zoo',
+    level: '難関大（評論）',
+    paragraphs: [
+      'For most of their history, zoos existed mainly to entertain. Animals from distant lands were displayed in small cages so that city dwellers could stare at creatures they would otherwise never see. Today, many people find this idea uncomfortable, and some argue that zoos should be closed altogether. Yet the question is not ( A ) simple as it first appears.',
+      "Supporters of modern zoos point out that their role has changed. Many zoos now take part in breeding programs for endangered species, and a few animals that had disappeared from the wild have been returned to their natural habitats thanks to such efforts. Zoos also fund research and education, and for many children a visit to the zoo is their first encounter with wildlife. In this view, closing zoos would ( B ) the very animals that critics hope to protect.",
+      "Critics reply that only a small number of species benefit from these programs, and that large, intelligent animals such as elephants often suffer in captivity no matter how well they are cared for. Perhaps the most reasonable position lies between the two extremes: zoos should be judged not by how many visitors they attract, but by how much they ( C ) to the survival of species in the wild.",
+    ],
+    ja: [
+      '動物園はその歴史の大部分において、主に人々を楽しませるために存在してきた。遠い国の動物が小さなおりに展示され、都会に住む人々は、そうでなければ決して見ることのない生き物をじっと見つめることができた。今日では多くの人がこの考えに居心地の悪さを感じ、動物園は完全に閉鎖すべきだと主張する人もいる。しかし、この問題は最初に思えるほど単純ではない。',
+      '現代の動物園を支持する人々は、その役割が変わったと指摘する。今では多くの動物園が絶滅危惧種の繁殖計画に参加しており、そうした努力のおかげで、野生から姿を消していたいくつかの動物が本来のすみかにもどされた。動物園はまた研究や教育に資金を出し、多くの子どもたちにとって動物園に行くことは野生動物との最初の出会いでもある。この見方からすれば、動物園を閉鎖することは、批判する人々が守りたいと願っているまさにその動物たちを傷つけることになるだろう。',
+      '批判する人々は、こうした計画の恩恵を受けるのはごく一部の種だけであり、ゾウのような大きく知能の高い動物は、どれほど大切に世話をされても、とらわれの身で苦しむことが多いと反論する。おそらくもっとも筋の通った立場は、この二つの極端のあいだにあるだろう。動物園は、どれだけ多くの来園者を集めるかではなく、野生の種の存続にどれだけ貢献するかによって評価されるべきなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'so', 'too', 'very'], answer: 0, why: 'not as 〜 as …「…ほど〜ではない」。' },
+      { id: 'B', choices: ['harm', 'help', 'feed', 'find'], answer: 0, why: '閉鎖すれば、守りたいはずの動物を「傷つける（harm）」ことになる、という逆説。' },
+      { id: 'C', choices: ['contribute', 'belong', 'refer', 'object'], answer: 0, why: 'contribute to 〜「〜に貢献する」。' },
+    ],
+    tf: [
+      { statement: '動物園はかつて、主に娯楽のために存在していた。', answer: true, why: '第1段落 zoos existed mainly to entertain。' },
+      { statement: '支持する人々は、動物園の役割は昔と変わっていないと言う。', answer: false, why: '第2段落 their role has changed。' },
+      { statement: '筆者は、動物園は来園者の数で評価されるべきだと考えている。', answer: false, why: '第3段落 not by how many visitors they attract。' },
+    ],
+    qa: [
+      { q: 'According to critics, what is one problem with zoos?', choices: ['Large, intelligent animals often suffer in captivity.', 'Zoos do not attract enough visitors.', 'Breeding programs help too many species.', 'Children are afraid of wild animals.'], answer: 0, why: '第3段落 large, intelligent animals ... often suffer in captivity。' },
+    ],
+  },
 ]
