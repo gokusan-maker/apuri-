@@ -622,6 +622,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </span>
         </div>
       )}
+      {partnerName && picked !== null && picked === q.answer && streak.now > 0 && streak.now % 3 === 0 && (
+        <p className="grammar-praise">
+          🐣 {partnerName}「{streak.now}問連続正解！ その調子！」
+        </p>
+      )}
       {streak.now >= 2 && (
         <p className="grammar-streak">
           🔥 連続正解 {streak.now}

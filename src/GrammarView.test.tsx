@@ -428,3 +428,16 @@ it('100単元を全問正解すると記念メダル', () => {
   render(<Grammar />)
   expect(screen.getByText(/💯 100単元クリア記念メダル/)).toBeInTheDocument()
 })
+
+it('3問連続正解すると相棒がひとことほめる', () => {
+  localStorage.clear()
+  render(<Grammar partnerName="モチ" />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  unit.questions.forEach((q, i) => {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    if (i === 2) expect(screen.getByText('🐣 モチ「3問連続正解！ その調子！」')).toBeInTheDocument()
+    fireEvent.click(screen.getByText('次へ'))
+  })
+})
