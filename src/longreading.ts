@@ -1921,6 +1921,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     },
     vocab: [{ word: 'reduce', choices: ['へらす', 'ふやす', '売る', '運ぶ'], answer: 0, why: '買い物の前に冷蔵庫を確かめる、必要なものだけ買う、という方法の説明なので「へらす」。' }],
     qa: [{ q: 'What should you do before shopping?', choices: ['Check what is already in your fridge.', 'Throw away old food.', 'Cook a lot of food.', 'Go to a restaurant.'], answer: 0, why: '第4段落「買い物の前に冷蔵庫に何があるか確かめる」。' }],
+    order: { words: ['you', 'Buy', 'need', 'what', 'only'], rest: 'when you go shopping.', answer: 'Buy only what you need', ja: '買い物に行くときは、必要なものだけを買いなさい。' },
     tf: [
       { statement: 'Food loss means throwing away food that can still be eaten.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All food loss comes from stores and restaurants.', answer: false, why: '家庭からも多く出ている。' },
@@ -1989,6 +1990,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     seq: { events: ['Ren named the kitten Mocha.', 'Ren found a kitten in a box.', 'Ren\'s father said Ren could keep Mocha.', 'Ren took the kitten to an animal doctor.'], answer: [1, 3, 0, 2], why: '箱で子ねこを見つける → 動物のお医者さん → モカと名づける → お父さんが飼ってよいと言う。' },
     qa: [{ q: 'Where did Ren find the kitten?', choices: ['In a box near the road.', 'At the animal doctor.', 'In his school.', 'Under his bed.'], answer: 0, why: '第1段落「道のそばの箱の中」。' }],
+    order: { words: ['gave', 'Ren', 'some', 'it', 'warm'], rest: 'milk.', answer: 'Ren gave it some warm', ja: 'レンはそれ（子ねこ）にあたたかいミルクをあげた。' },
     tf: [
       { statement: 'Ren found the kitten on a sunny day.', answer: false, why: '雨の午後に見つけた。' },
       { statement: "Ren's mother said they could take care of the kitten for a while.", answer: true, why: '第2段落の内容と合う。' },
@@ -2142,6 +2144,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       why: '第2段落「太陽の光を反射」、第3段落「風がない」。車で半年、生き物はいない、潮を起こす、宇宙飛行士の足あとがある。',
     },
     titleQ: { choices: ['Life on Mars', 'How to Become an Astronaut', 'The Sun and Its Light', 'Our Neighbor, the Moon'], answer: 3, why: '月のきょり、光、環境、潮への影響、これからの計画について書かれている。' },
+    order: { words: ['looks', 'because', 'It', 'bright'], rest: 'it reflects the light of the sun.', answer: 'It looks bright because', ja: '太陽の光を反射しているので、明るく見える。' },
     tf: [
       { statement: 'The moon is about 380,000 kilometers away from the Earth.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The moon makes its own light.', answer: false, why: '自分で光を出していない。' },
@@ -2255,6 +2258,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       ],
     },
     titleQ: { choices: ['How to Build a Park', 'Why Cities Need Trees', 'The Tallest Tree in the World', 'Air Conditioners in Summer'], answer: 1, why: '木が町をすずしくし、空気をきれいにし、人をリラックスさせる理由が書かれている。' },
+    order: { words: ['help', 'to', 'Trees', 'make', 'really'], rest: 'cities cooler.', answer: 'Trees really help to make', ja: '木は本当に町をすずしくする助けになる。' },
     tf: [
       { statement: 'Trees can make cities cooler.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Trees take in oxygen and give out carbon dioxide.', answer: false, why: '二酸化炭素を取りこんで酸素を出す。' },
@@ -2501,6 +2505,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 1, why: 'Thank you for 〜ing で「〜してくれてありがとう」。' },
     ],
     qa: [{ q: 'What does the speaker do at nine p.m.?', choices: ['Puts the phone in the living room.', 'Watches videos.', 'Goes to bed.', 'Checks messages.'], answer: 0, why: '第3段落「夜9時にはスマートフォンを居間に置く」。' }],
+    order: { words: ['decided', 'my', 'to', 'I', 'make'], rest: 'own rules.', answer: 'I decided to make my', ja: '私は自分のルールをつくることにした。' },
     tf: [
       { statement: 'The speaker got a first smartphone last year.', answer: true, why: '第1段落の内容と合う。' },
       { statement: "The speaker's grades went up after getting the phone.", answer: false, why: '成績は下がった。' },

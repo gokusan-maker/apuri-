@@ -361,3 +361,9 @@ it('タイトル選択の設問は8本以上で、正解は本当のタイトル
   expect(ps.length).toBeGreaterThanOrEqual(8)
   for (const p of ps) expect(p.titleQ!.choices).toHaveLength(4)
 })
+
+it('語句整序は8本以上で、並べる語と答えの語が同じ', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.order)
+  expect(ps.length).toBeGreaterThanOrEqual(8)
+  for (const p of ps) expect([...p.order!.words].sort()).toEqual(p.order!.answer.split(' ').sort())
+})
