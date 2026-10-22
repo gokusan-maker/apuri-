@@ -1322,6 +1322,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'I usually go to the park on ___.', choices: ['walk', 'foot', 'feet'], answer: 1, why: '「歩いて」は on foot。' },
     ],
   },
+  {
+    id: 'not-to',
+    title: 'tell 人 not to 〜（〜しないように言う）',
+    points: ['不定詞を否定するときは、to の前に not を置く（not to 〜）。', 'tell 人 not to 〜「〜しないように言う」、ask 人 not to 〜「〜しないようにたのむ」。'],
+    examples: [
+      { en: 'My mother told me not to play games at night.', ja: '母は私に夜ゲームをしないように言った。' },
+      { en: 'I asked him not to be late.', ja: '私は彼におくれないようにたのんだ。' },
+    ],
+    questions: [
+      { sentence: 'The teacher told us ___ run in the hallway.', choices: ['not to', 'to not', "don't"], answer: 0, why: '不定詞の否定は not to 〜。' },
+      { sentence: 'She asked me not ___ the door.', choices: ['open', 'to open', 'opening'], answer: 1, why: 'not to ＋動詞の原形。' },
+      { sentence: 'Please tell Ken ___ worry.', choices: ['not to', 'no to', 'not'], answer: 0, why: 'tell 人 not to 〜 の形。' },
+    ],
+  },
+  {
+    id: 'stop-remember',
+    title: 'stop / remember ＋ -ing と to 〜 のちがい',
+    points: ['stop 〜ing は「〜するのをやめる」、stop to 〜 は「〜するために立ち止まる（手を止める）」。', 'remember 〜ing は「（過去に）〜したことを覚えている」、remember to 〜 は「（これから）わすれずに〜する」。'],
+    examples: [
+      { en: 'He stopped talking when the teacher came in.', ja: '先生が入ってきたので、彼は話すのをやめた。' },
+      { en: 'Remember to bring your lunch tomorrow.', ja: '明日はわすれずにお弁当を持ってきてね。' },
+    ],
+    questions: [
+      { sentence: 'Please stop ___ so loudly.', choices: ['to talk', 'talking', 'talk'], answer: 1, why: '「話すのをやめる」は stop 〜ing。' },
+      { sentence: 'Remember ___ the window before you leave.', choices: ['closing', 'to close', 'closed'], answer: 1, why: '「わすれずに〜する（これから）」は remember to 〜。' },
+      { sentence: 'I remember ___ him at the party last year.', choices: ['meeting', 'to meet', 'meet'], answer: 0, why: '「（過去に）会ったことを覚えている」は remember 〜ing。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1423,8 +1451,8 @@ export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  中3: ['not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  高校: ['stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {

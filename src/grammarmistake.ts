@@ -93,6 +93,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'and-but-or-so': { wrong: 'Because it was cold, so I wore a coat.', right: 'It was cold, so I wore a coat.', why: 'because と so はいっしょに使わない。' },
   'adj-prep': { wrong: 'I am interested about science.', right: 'I am interested in science.', why: 'be interested in 〜 の形。前置詞は in。' },
   'by-with': { wrong: 'I go to school by a bus.', right: 'I go to school by bus.', why: '手段の by のあとの乗り物には a / the をつけない。' },
+  'not-to': { wrong: 'He told me to not go there.', right: 'He told me not to go there.', why: '不定詞の否定は not を to の前に置く（not to 〜）。' },
+  'stop-remember': { wrong: 'Remember locking the door when you go out.', right: 'Remember to lock the door when you go out.', why: '「（これから）わすれずに〜する」は remember to 〜。' },
   'prep-phrase': { wrong: 'The books on the desk is mine.', right: 'The books on the desk are mine.', why: '主語は The books（複数）なので are。on the desk は説明の部分。' },
 }
 

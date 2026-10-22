@@ -365,7 +365,8 @@ it('まとめテストでは「もっとくわしく」でその問題の単元�
   fireEvent.click(screen.getByText(/まとめテスト（ランダム10問）/))
   const all = GRAMMAR.flatMap((u) => u.questions)
   const text = document.querySelector('.blank-sentence')!.textContent!
-  const q = all.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))!
+  const shown = [...document.querySelectorAll('.choice')].map((b) => b.textContent)
+  const q = all.find((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]) && x.choices.every((c) => shown.includes(c)))!
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
   fireEvent.click(screen.getByText(/もっとくわしく/))
   expect(screen.getByText(unitOfQuestion(q)!.points[0])).toBeInTheDocument()
