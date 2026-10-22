@@ -1406,6 +1406,34 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Look at the boy and his dog ___ are running in the park.', choices: ['who', 'which', 'that'], answer: 2, why: '人と動物の両方を説明するので that。' },
     ],
   },
+  {
+    id: 'number-expr',
+    title: '数の表現（two hundred / hundreds of）',
+    points: ['具体的な数のときは hundred・thousand・million に -s をつけない（two hundred people・three thousand yen）。', '「何百もの〜」「何千もの〜」は hundreds of 〜・thousands of 〜 と -s をつけて of を使う。'],
+    examples: [
+      { en: 'There are three hundred students in our school.', ja: '私たちの学校には300人の生徒がいる。' },
+      { en: 'Thousands of people came to the festival.', ja: '何千人もの人がお祭りに来た。' },
+    ],
+    questions: [
+      { sentence: 'This bike costs twenty ___ yen.', choices: ['thousand', 'thousands', 'thousands of'], answer: 0, why: '具体的な数（20）のあとは -s をつけない thousand。' },
+      { sentence: '___ of birds fly to this lake every winter.', choices: ['Hundred', 'Hundreds', 'A hundreds'], answer: 1, why: '「何百もの」は Hundreds of 〜。' },
+      { sentence: 'Five ___ people live in this town.', choices: ['million', 'millions', 'millions of'], answer: 0, why: '具体的な数（5）のあとは million。' },
+    ],
+  },
+  {
+    id: 'the-more',
+    title: 'the ＋比較級, the ＋比較級（〜すればするほど…）',
+    points: ['The ＋比較級 〜, the ＋比較級 … で「〜すればするほど、ますます…」。', '形容詞・副詞を比較級にして文の先頭に出す（The more you practice, the better you get.）。'],
+    examples: [
+      { en: 'The more you read, the more you learn.', ja: '読めば読むほど、多くを学ぶ。' },
+      { en: 'The older he got, the kinder he became.', ja: '彼は年をとるにつれて、ますますやさしくなった。' },
+    ],
+    questions: [
+      { sentence: 'The more you practice, the ___ you will play.', choices: ['good', 'better', 'best'], answer: 1, why: 'the ＋比較級なので better。' },
+      { sentence: '___ sooner, the better.', choices: ['The', 'A', 'More'], answer: 0, why: 'The sooner, the better.（早ければ早いほどよい）' },
+      { sentence: 'The higher we climbed, the ___ it became.', choices: ['cold', 'coldest', 'colder'], answer: 2, why: 'the ＋比較級なので colder。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1506,9 +1534,9 @@ export type GrammarGrade = '中1' | '中2' | '中3' | '高校'
 export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
-  中2: ['how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
+  中2: ['number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
