@@ -103,6 +103,15 @@ export function stageOf(level: number): Stage {
   return s
 }
 
+// 今のすがたになってから上がったレベルの数（1レベルごとに星がふえ、少し大きくなる）
+export function growthOf(level: number): number {
+  return Math.max(0, level - stageOf(level).minLevel)
+}
+// 成長の星の表示（5こまでは★をならべ、それより多いと ★×数）
+export const growthText = (n: number) => (n <= 0 ? '' : n <= 5 ? '★'.repeat(n) : `★×${n}`)
+// 成長による大きさ（1レベルで +1%、最大 +15%）
+export const growthScale = (n: number) => 1 + Math.min(15, n) / 100
+
 export const LONELY_DAYS = 3
 
 function daysBetween(a: string, b: string): number {

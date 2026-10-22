@@ -166,3 +166,17 @@ it('レベルの節目 10・50・100 を通りこしたらお祝い', async () =
   expect(milestonesBetween(9, 55)).toEqual([10, 50])
   expect(milestonesBetween(10, 12)).toEqual([])
 })
+
+describe('相棒は1レベルごとに育つ', () => {
+  it('進化してからのレベルの数だけ星がふえ、少し大きくなる', async () => {
+    const { growthOf, growthText, growthScale } = await import('./monster')
+    expect(growthOf(5)).toBe(0) // モチまるになったばかり
+    expect(growthOf(6)).toBe(1)
+    expect(growthOf(8)).toBe(3)
+    expect(growthText(3)).toBe('★★★')
+    expect(growthText(9)).toBe('★×9')
+    expect(growthText(0)).toBe('')
+    expect(growthScale(2)).toBeGreaterThan(growthScale(1))
+    expect(growthScale(40)).toBe(1.15)
+  })
+})

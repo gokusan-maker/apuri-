@@ -1,3 +1,4 @@
+import { growthOf, growthScale, growthText } from './monster'
 import type { ReactNode } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
 import { buddyForm, buddyLevel, TRACK_LABEL, type Buddies, type Track } from './buddies'
@@ -17,9 +18,14 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo }: Pro
     <div className="buddy-row" aria-label="育てているなかま">
       <button className="buddy-card b-word" onClick={() => onGo('word')}>
         <span className="buddy-tag">単語</span>
-        <span className="buddy-fig">{wordFigure}</span>
+        <span className="buddy-fig" style={{ transform: `scale(${growthScale(growthOf(wordLevel))})` }}>
+          {wordFigure}
+        </span>
         <span className="buddy-name">{wordName}</span>
-        <span className="buddy-lv">Lv.{wordLevel}</span>
+        <span className="buddy-lv">
+          Lv.{wordLevel}
+          {growthOf(wordLevel) > 0 && <span className="buddy-growth" aria-label={`成長の星 ${growthOf(wordLevel)}`}> {growthText(growthOf(wordLevel))}</span>}
+        </span>
       </button>
       {tracks.map((t) => {
         const b = buddies[t]

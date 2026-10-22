@@ -117,6 +117,16 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:daily-short')).toBe(day)
   })
 
+  it('ホームの単語の相棒は、進化してから上がったレベルの数だけ星が出る', async () => {
+    const { levelInfo } = await import('./monster')
+    let xp = 0
+    while (levelInfo(xp).level < 7) xp += 5 // Lv.7（モチまる Lv.5 から2レベル）
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp }))
+    render(<App />)
+    const row = screen.getByLabelText('育てているなかま')
+    expect(within(row).getByLabelText('成長の星 2').textContent).toContain('★★')
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()

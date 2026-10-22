@@ -1547,3 +1547,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .read-levels button[aria-selected='true'] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 15%, var(--card)); }
 .read-levels strong { font-size: 0.72rem; overflow-wrap: anywhere; line-height: 1.2; }
 .read-levels small { font-size: 0.6rem; color: var(--muted); overflow-wrap: anywhere; }
+.buddy-growth { color: #f59e0b; font-size: 0.75em; margin-left: 2px; }

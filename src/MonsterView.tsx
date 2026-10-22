@@ -2,7 +2,7 @@ import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
-import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
+import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, growthOf, growthScale, growthText, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { completionPct } from './gacha'
 import { allPosesSeen, loadPosesSeen, poseAt, POSE_TITLE, POSES, savePosesSeen, seePose } from './pose'
 import { canRelease, displayOrder, EGG_MILESTONES, releaseCoins, type Party as PartyState } from './party'
@@ -747,7 +747,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           if (form.stage > 0) speak(l.en)
         }}
       >
-<span className={`monster-idle${line || leveledUp ? '' : ` idle-${idle}`}`} data-idle={idle}>
+<span className={`monster-idle${line || leveledUp ? '' : ` idle-${idle}`}`} data-idle={idle} style={{ scale: growthScale(growthOf(level)) }}>
                   <MonsterFigure form={form} mood={line ? (react === 'max' ? 'star' : react === 'tickle' ? 'wow' : REACTIONS[poke % REACTIONS.length]) : idle === 'yawn' && mood === 'normal' && !leveledUp ? 'wow' : leveledUp ? 'star' : sleepy && mood === 'normal' ? 'sleep' : mood} wear={monster.wear} kind={monster.kind} crack={form.stage === 0 ? into / need : 0} />
           {idle === 'yawn' && !line && !leveledUp && (
             <span className="idle-yawn" aria-hidden="true">
@@ -849,6 +849,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
               form.name
             )}{' '}
             <span className="monster-level">Lv.{level}</span>
+            {growthOf(level) > 0 && <span className="buddy-growth" aria-label={`成長の星 ${growthOf(level)}`}>{growthText(growthOf(level))}</span>}
             {onRename && (
               <button
                 className="rename-btn"
