@@ -101,6 +101,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'relative-that': { wrong: 'This is the best book what I have read.', right: 'This is the best book that I have read.', why: '先行詞があるときに what は使えない。最上級がつくときは that。' },
   'number-expr': { wrong: 'There are three hundreds students.', right: 'There are three hundred students.', why: '具体的な数のあとの hundred には -s をつけない。' },
   'the-more': { wrong: 'The more you practice, more better you get.', right: 'The more you practice, the better you get.', why: 'うしろも the ＋比較級。more better とは言わない。' },
+  'phrasal-look': { wrong: 'I am looking my key.', right: 'I am looking for my key.', why: '「〜をさがす」は look for 〜。' },
+  'get-uses': { wrong: 'I got to home at six.', right: 'I got home at six.', why: 'home は「家へ」という意味の副詞なので、to はつけない。' },
   'time-no-prep': { wrong: 'I went to Kyoto in last year.', right: 'I went to Kyoto last year.', why: 'last / next / this / every のつく時の表現に前置詞はいらない。' },
   'adj-order': { wrong: 'I have a red big bag.', right: 'I have a big red bag.', why: '大きさ → 色 の順にならべる。' },
   'keep-ing': { wrong: 'He kept to talk for an hour.', right: 'He kept talking for an hour.', why: 'keep のあとは -ing 形。' },
