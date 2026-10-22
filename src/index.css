@@ -1387,3 +1387,7 @@ button:focus:not(:focus-visible) { outline: none; }
 .daily-example-en { font-weight: 700; overflow-wrap: anywhere; }
 .daily-example-ja { font-size: 0.85rem; color: var(--muted); }
 .long-pseq-hidden { margin: 0; padding: 10px; border: 2px dashed color-mix(in srgb, var(--muted) 50%, transparent); border-radius: 10px; color: var(--muted); font-size: 0.85rem; flex: 1; }
+.gacha-first { margin: 0 0 4px; font-weight: 800; color: #d97706; animation: pop 0.6s 2; }
+.gacha-result.first-pull .gacha-capsule { box-shadow: 0 0 0 3px #fde68a, 0 0 18px 6px rgb(253 224 71 / 0.75); animation: first-glow 1.2s ease-in-out 3; }
+@keyframes first-glow { 50% { box-shadow: 0 0 0 4px #fef08a, 0 0 28px 10px rgb(253 224 71 / 0.95); } }
+@media (prefers-reduced-motion: reduce) { .gacha-first, .gacha-result.first-pull .gacha-capsule { animation: none; } }

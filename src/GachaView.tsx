@@ -1,3 +1,5 @@
+import { dayKey } from './srs'
+import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
@@ -51,7 +53,7 @@ type Props = {
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
 export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
-  const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
+  const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [capsule, setCapsule] = useState(loadCapsule)
   const [fast, setFast] = useState(loadGachaFast)
@@ -74,7 +76,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         onClick={() => {
           const k = onDraw(false)
           if (k) {
-            setResult({ ...k, key: Date.now() })
+            setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
             setMulti(null)
             record(k)
           }
@@ -121,7 +123,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
           onClick={() => {
             const k = onDraw(true)
             if (k) {
-            setResult({ ...k, key: Date.now() })
+            setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
             setMulti(null)
             record(k)
           }
@@ -216,7 +218,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
                 const k = onExchange()
                 if (k) {
                   setMulti(null)
-                  setResult({ ...k, key: Date.now() })
+                  setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
                   record(k)
                 }
               }}
@@ -291,7 +293,8 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </div>
       )}
       {result && (
-        <div key={result.key} className={`gacha-result r-${result.kind.rarity}${fast ? ' fast' : ''}`} role="status">
+        <div key={result.key} className={`gacha-result r-${result.kind.rarity}${fast ? ' fast' : ''}${result.first ? ' first-pull' : ''}`} role="status">
+          {result.first && <p className="gacha-first">✨ きょうの1回目！キラキラカプセル ✨</p>}
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
           <span className={`gacha-capsule${result.mystery ? ' mystery' : ''}`} aria-hidden="true" style={result.mystery ? undefined : result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {!result.mystery && gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}

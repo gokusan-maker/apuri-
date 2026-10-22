@@ -142,3 +142,14 @@ it('演出を短くする設定が保存される', () => {
   fireEvent.click(screen.getByLabelText(/演出を短くする/))
   expect(localStorage.getItem('eitan:gacha-fast')).toBe('1')
 })
+
+it('その日はじめてのガチャは「きょうの1回目」でキラキラ。2回目は出ない', () => {
+  localStorage.clear()
+  const onDraw = vi.fn(() => ({ kind: kindOf('normal'), species: speciesOf('mochi') }))
+  render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={onDraw} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText('✨ きょうの1回目！キラキラカプセル ✨')).toBeInTheDocument()
+  expect(document.querySelector('.gacha-result.first-pull')).not.toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.queryByText(/きょうの1回目/)).toBeNull()
+})
