@@ -284,3 +284,7 @@ export function saveLuckyBagMonth(m: string): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// ミステリーカプセル：10回に1回くらい、色の見えない？カプセルが出る（おまけ🪙3）
+export const MYSTERY_RATE = 0.1
+export const MYSTERY_COINS = 3

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -9,7 +9,7 @@ const MULTI = 3
 const RANK = ['N', 'R', 'SR', 'UR'] as const
 const bestRarity = (list: GachaResult[]) => list.map((k) => k.kind.rarity).sort((a, b) => RANK.indexOf(b) - RANK.indexOf(a))[0]
 
-export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean }; sticker?: string }
+export type GachaResult = { kind: Kind; species: Species; newKind?: boolean; newSpecies?: boolean; refund?: number; bonus?: string; lucky?: number; slot?: { reels: string[]; win: boolean }; sticker?: string; mystery?: boolean }
 
 // 結果をシェア用の文にしてコピーするボタン
 function ShareButton({ text }: { text: string }) {
@@ -291,8 +291,8 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}${fast ? ' fast' : ''}`} role="status">
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
-          <span className="gacha-capsule" aria-hidden="true" style={result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
-          {gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
+          <span className={`gacha-capsule${result.mystery ? ' mystery' : ''}`} aria-hidden="true" style={result.mystery ? undefined : result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
+          {!result.mystery && gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
           <span className="gacha-egg">
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>
@@ -303,6 +303,7 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
             {result.species.egg}が仲間になった！
           </p>
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
+          {result.mystery && <p className="gacha-lucky">❓ ミステリーカプセル！ おまけ 🪙{MYSTERY_COINS}</p>}
           {result.sticker && <p className="gacha-sticker">🏷 おまけシール {result.sticker}</p>}
           {result.slot && (
             <p className={`gacha-slot${result.slot.win ? ' win' : ''}`} aria-label={result.slot.win ? 'スロットがそろった' : 'スロット'}>

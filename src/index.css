@@ -1352,3 +1352,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .monster > .pet-stamps, .monster > .pose-label { flex-basis: 100%; order: 10; margin: 0; text-align: center; }
 .long-week-rank ol { margin: 2px 0 6px; padding-left: 20px; text-align: left; font-size: 0.85rem; }
 .long-week-rank .stats-note { margin: 4px 0 0; }
+.gacha-capsule.mystery { background: linear-gradient(180deg, #6b7280 50%, #d1d5db 50%) !important; }
+.gacha-capsule.mystery::after { content: "？"; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 1.8rem; font-weight: 900; }

@@ -61,7 +61,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -714,13 +714,14 @@ function App() {
       const lucky = isLuckyPull(pulled + i + 1) ? pulled + i + 1 : 0
       const slot = slotOf(rand())
       const sticker = stickerOf(rand())
+      const mystery = rand() < MYSTERY_RATE
       const st2 = addSticker(sb, sticker)
       sb = st2.book
       if (st2.complete) stickerDone = true
-      w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) + (lucky ? LUCKY_COINS : 0) + (slot.win ? SLOT_COINS : 0) }
+      w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) + (lucky ? LUCKY_COINS : 0) + (slot.win ? SLOT_COINS : 0) + (mystery ? MYSTERY_COINS : 0) }
       if (bonus?.kind === 'xp') bonusXp += bonus.amount
       p = r.party
-      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker })
+      out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker, ...(mystery ? { mystery } : {}) })
     }
     if (out.length > 0) {
       setWallet(w)
