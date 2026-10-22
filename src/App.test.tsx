@@ -840,6 +840,19 @@ describe('App', () => {
     expect(screen.queryByRole('button', { name: /長文読解/ })).toBeNull()
   })
 
+  it('文法のなかまがタマゴからかえると、全画面の進化演出が出る', async () => {
+    const { GRAMMAR } = await import('./grammar')
+    localStorage.setItem('eitan:buddies', JSON.stringify({ grammar: { xp: 19 }, reading: { xp: 0 } }))
+    render(<App />)
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法'))
+    const unit = GRAMMAR[0]
+    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByText('確認問題へ（3問）'))
+    const q = unit.questions[0]
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('タマゴがかえった！')
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

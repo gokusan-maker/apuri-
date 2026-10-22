@@ -1507,3 +1507,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-rename input { flex: 1; min-width: 0; padding: 6px 8px; border-radius: 8px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); }
 .buddy-forms { margin: 4px 0 0; padding-left: 20px; font-size: 0.82rem; }
 .buddy-forms li.locked { color: var(--muted); }
+.buddy-evolve-fig { margin: 0; font-size: 5rem; line-height: 1.1; animation: pop 0.8s ease-out 2; }
+@media (prefers-reduced-motion: reduce) { .buddy-evolve-fig { animation: none; } }
