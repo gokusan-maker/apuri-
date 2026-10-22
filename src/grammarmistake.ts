@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'without-but-for': { wrong: 'Without your help, I will fail.（「もしなければ」の仮定）', right: 'Without your help, I would fail.', why: '「〜がなければ…だろう」という仮定は would ＋ 動詞の原形。' },
   'compare-emphasis': { wrong: 'He is very taller than me.', right: 'He is much taller than me.', why: '比較級を強めるのは much / even / far。very は使えない。' },
   'perfect-participle': { wrong: 'Having finish my homework, I went out.', right: 'Having finished my homework, I went out.', why: 'Having のあとは過去分詞（finished）。' },
   'perfect-infinitive': { wrong: 'He seems to be sick last week.', right: 'He seems to have been sick last week.', why: '今から見て前のこと（last week）は完了不定詞 to have ＋ 過去分詞。' },
