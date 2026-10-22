@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'it-is-said': { wrong: 'It says that he is kind.（「〜と言われている」）', right: 'It is said that he is kind.', why: '「〜と言われている」は受け身 It is said that 〜。' },
   'participle-idioms': { wrong: 'Judged from his voice, he is angry.', right: 'Judging from his voice, he is angry.', why: '「〜から判断すると」は決まった言い方 judging from（-ing の形）。' },
   'still-anymore': { wrong: "I don't no longer play tennis.", right: 'I no longer play tennis.', why: 'no longer に「もう〜ない」の否定がふくまれるので、not（don\'t）はいらない。' },
   'be-used-to': { wrong: 'I am used to eat spicy food.', right: 'I am used to eating spicy food.', why: 'be used to の to は前置詞なので、あとは -ing。' },
