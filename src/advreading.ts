@@ -787,4 +787,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why could only wealthy people drink tea at first in Europe?', choices: ['It was expensive.', 'It was not allowed by law.', 'It was sold only in China.', 'It tasted too bitter.'], answer: 0, why: '第2段落 At first it was expensive, so only wealthy people could afford it。' },
     ],
   },
+  {
+    id: 'exam-shamisen',
+    title: "My Grandmother's Shamisen",
+    level: '高校入試（随筆）',
+    paragraphs: [
+      'When I was in the second year of junior high school, my grandmother gave me her old shamisen, a traditional Japanese instrument with three strings. She had played it since she was a girl, but her fingers had become ( A ) weak to press the strings.',
+      'At first I did not want to learn it. Most of my friends liked pop music, and I thought the shamisen was old-fashioned. However, when I heard a recording of my grandmother playing at a festival fifty years ago, I was moved ( B ) its powerful sound.',
+      "I started taking lessons every Saturday. My fingers hurt, and it took me three months to play one short song. Last month, I played that song for my grandmother on her birthday. She closed her eyes and listened, and then she said, 'Now my shamisen has a new voice.' I want to keep playing it so that its sound will ( C ) for many more years.",
+    ],
+    ja: [
+      '中学2年生のとき、祖母が古い三味線をくれました。三味線は糸が3本ある日本の伝統的な楽器です。祖母は女の子のころからひいてきましたが、指が弱くなって糸をおさえられなくなっていました。',
+      'はじめ、私は習いたくありませんでした。友だちのほとんどはポップスが好きで、私は三味線は古くさいと思っていたのです。しかし、祖母が50年前のお祭りでひいている録音を聞いたとき、その力強い音に心を動かされました。',
+      '私は毎週土曜日にけいこに通い始めました。指が痛くなり、短い曲を1曲ひけるようになるまで3か月かかりました。先月、祖母の誕生日に、その曲をひいてあげました。祖母は目を閉じて聞き、それから「これでわたしの三味線に新しい声ができたね」と言いました。私は、その音がこれから何年も続いていくように、三味線をひき続けたいです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['too', 'so', 'very', 'enough'], answer: 0, why: 'too 〜 to …「…するには〜すぎる」。指が弱すぎて糸をおさえられない。' },
+      { id: 'B', choices: ['by', 'at', 'in', 'for'], answer: 0, why: 'be moved by 〜「〜に心を動かされる・感動する」。' },
+      { id: 'C', choices: ['continue', 'stop', 'break', 'fall'], answer: 0, why: '「音がこれからも続く（continue）ように」。ひき続けたい理由。' },
+    ],
+    tf: [
+      { statement: '祖母は指が弱くなって、三味線の糸をおさえられなくなった。', answer: true, why: '第1段落 her fingers had become too weak to press the strings。' },
+      { statement: '筆者ははじめから三味線を習いたいと思っていた。', answer: false, why: '第2段落 At first I did not want to learn it。' },
+      { statement: '筆者は1か月で短い曲をひけるようになった。', answer: false, why: '第3段落 it took me three months to play one short song（3か月）。' },
+    ],
+    qa: [
+      { q: 'What made the writer want to learn the shamisen?', choices: ["Hearing a recording of the grandmother's playing.", 'A request from a music teacher.', 'A pop song on TV.', 'A festival at school.'], answer: 0, why: '第2段落 when I heard a recording of my grandmother playing ... I was moved by its powerful sound。' },
+    ],
+  },
+  {
+    id: 'exam-sweet-drinks',
+    title: 'A Week Without Sweet Drinks',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'In health class, our teacher showed us how much sugar is in one bottle of a popular soft drink. It was more than ten sugar cubes! I was shocked because I usually drank ( A ) bottles a day.',
+      'I decided to try an experiment: for one week, I would drink only water and tea. The first three days were hard. I kept thinking about soft drinks, especially after club practice. On the fourth day, however, I noticed that I was not as tired in the afternoon ( B ) before. I also started to enjoy the taste of cold green tea.',
+      'By the end of the week, I had saved the money I usually spent on drinks, and I felt better. I have not stopped drinking soft drinks completely, but now I have one only on weekends. Small changes in our daily habits can make a big ( C ) to our health.',
+    ],
+    ja: [
+      '保健の授業で、先生が人気のある清涼飲料水1本にどれだけ砂糖が入っているかを見せてくれました。角砂糖10個以上でした！ 私はふだん1日に2本飲んでいたので、ショックを受けました。',
+      '私は実験をしてみることにしました。1週間、水とお茶だけを飲むのです。最初の3日間はつらかったです。特に部活のあとは、ジュースのことばかり考えていました。しかし4日目に、午後になっても前ほどつかれていないことに気づきました。冷たい緑茶の味も好きになってきました。',
+      '1週間が終わるころには、ふだん飲み物に使っていたお金がたまり、体の調子もよくなっていました。ジュースを飲むのを完全にやめたわけではありませんが、今は週末にだけ1本飲むようにしています。毎日の習慣を少し変えるだけでも、健康に大きなちがいが生まれるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['two', 'second', 'twice', 'double'], answer: 0, why: '「1日に2本」は two bottles a day。second は「2番目の」、twice は「2回・2倍」。' },
+      { id: 'B', choices: ['as', 'than', 'so', 'like'], answer: 0, why: 'not as 〜 as …「…ほど〜ない」。前ほどつかれていない。' },
+      { id: 'C', choices: ['difference', 'different', 'differ', 'differently'], answer: 0, why: 'make a difference「ちがいを生む・効果がある」。a big のあとなので名詞 difference。' },
+    ],
+    tf: [
+      { statement: '1本の清涼飲料水に、角砂糖10個以上の砂糖が入っていた。', answer: true, why: '第1段落 It was more than ten sugar cubes。' },
+      { statement: '最初の3日間はかんたんだった。', answer: false, why: '第2段落 The first three days were hard。' },
+      { statement: '筆者は今はまったくジュースを飲まない。', answer: false, why: '第3段落 now I have one only on weekends（週末にだけ飲む）。' },
+    ],
+    qa: [
+      { q: 'How does the writer drink soft drinks now?', choices: ['Only on weekends.', 'Every day after practice.', 'Never.', 'Two bottles a day.'], answer: 0, why: '第3段落 now I have one only on weekends。' },
+    ],
+  },
 ]
