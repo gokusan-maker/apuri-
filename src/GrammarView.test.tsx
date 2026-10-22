@@ -370,3 +370,14 @@ it('まとめテストでは「もっとくわしく」でその問題の単元�
   fireEvent.click(screen.getByText(/もっとくわしく/))
   expect(screen.getByText(unitOfQuestion(q)!.points[0])).toBeInTheDocument()
 })
+
+it('学年をえらぶとタイムアタックもその学年の問題になる', async () => {
+  const { gradeOf } = await import('./grammar')
+  localStorage.clear()
+  render(<Grammar />)
+  fireEvent.click(screen.getByRole('tab', { name: '中1' }))
+  fireEvent.click(screen.getByText(/文法タイムアタック（60秒・中1）/))
+  const pool = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
+  const text = document.querySelector('.blank-sentence')!.textContent!
+  expect(pool.some((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))).toBe(true)
+})

@@ -103,7 +103,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
   if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
-  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} />
+  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
 
   if (!unit) {
     return (
@@ -189,7 +189,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setTimeAttack(true)}>
-            ⏱ 文法タイムアタック（60秒）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
+            ⏱ 文法タイムアタック（60秒{grade === 'all' ? '' : `・${grade}`}）{loadTaBest() > 0 ? `　ベスト ${loadTaBest()}問` : ''}
           </button>
         )}
         {stampMode && (

@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react'
-import { GRAMMAR, loadTaBest, saveTaBest, TA_SECONDS } from './grammar'
+import { GRAMMAR, loadTaBest, saveTaBest, TA_SECONDS, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onBack: () => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onBack: () => void; units?: GrammarUnit[]; label?: string }
 
 // 文法タイムアタック：60秒で何問正解できるか（答えたらすぐ次の問題）
-export function GrammarTime({ onAnswer, onBack }: Props) {
-  const [qs] = useState(() => shuffle(GRAMMAR.flatMap((u) => u.questions)))
+export function GrammarTime({ onAnswer, onBack, units = GRAMMAR, label }: Props) {
+  const [qs] = useState(() => shuffle(units.flatMap((u) => u.questions)))
   const [i, setI] = useState(0)
   const [left, setLeft] = useState(TA_SECONDS)
   const [score, setScore] = useState(0)
@@ -17,8 +17,8 @@ export function GrammarTime({ onAnswer, onBack }: Props) {
   const over = left <= 0
 
   useEffect(() => {
-    if (over && score > best) saveTaBest(score)
-  }, [over, score, best])
+    if (over && !label && score > best) saveTaBest(score) // ベストは全学年のときだけ記録
+  }, [over, score, best, label])
 
   useEffect(() => {
     if (over) return
@@ -33,7 +33,7 @@ export function GrammarTime({ onAnswer, onBack }: Props) {
         <button className="stage-back" onClick={onBack}>
           ← 単元一覧
         </button>
-        <p className="result-title">⏱ 文法タイムアタック</p>
+        <p className="result-title">⏱ 文法タイムアタック{label ? `（${label}）` : ''}</p>
         <p className="result-score">{score} 問正解</p>
         <p className="result-message">{record ? '🎉 ベスト記録更新！' : `ベスト記録 ${best} 問`}</p>
       </section>
