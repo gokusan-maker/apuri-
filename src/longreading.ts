@@ -4103,3 +4103,9 @@ export function levelVerdict(p: LongPassage, score: number, total: number): { pa
   const pass = total > 0 && score / total >= 0.8
   return { pass, text: pass ? `🎖 ${lv}レベル合格！` : `${lv}レベル合格まであと${Math.ceil(total * 0.8) - score}点` }
 }
+
+// 学年チャレンジ：その学年（中2・中3・高校入試）の長文のうち、まだ解いていない最初の1本と、解いた本数
+export function gradeChallenge(tag: string, record: Record<string, number>, list: LongPassage[] = LONG_PASSAGES) {
+  const ps = list.filter((x) => x.level.startsWith(tag))
+  return { next: ps.find((x) => record[x.id] === undefined) ?? null, done: ps.filter((x) => record[x.id] !== undefined).length, total: ps.length }
+}

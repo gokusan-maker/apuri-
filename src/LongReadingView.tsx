@@ -1,6 +1,6 @@
 import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
-import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, levelVerdict, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, levelVerdict, gradeChallenge, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { LongTfQuiz } from './LongTfQuizView'
@@ -192,6 +192,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
             ))}
           </ul>
         </details>
+        {gradeChallenge('中3', record).next && (
+          <button className="list-link" onClick={() => openPassage(gradeChallenge('中3', record).next!)}>
+            🔥 中3チャレンジ（中3レベルの長文 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
+          </button>
+        )}
         <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
           🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>

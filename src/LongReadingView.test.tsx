@@ -455,3 +455,12 @@ it('長文を解いているあいだ「のこり○問」が上に出て、答�
   fireEvent.click(screen.getAllByRole('button', { name: `${MARKS[b.answer]} ${b.choices[b.answer]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
   expect(document.querySelector('.long-remaining')!.textContent).toContain(`のこり ${total - 1}問`)
 })
+
+it('「中3チャレンジ」で中3レベルのまだ解いていない長文が開く', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES.find((x) => x.level.startsWith('中3'))!
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(/🔥 中3チャレンジ/))
+  expect(screen.getAllByText(new RegExp(p.title.replace(/[?()]/g, '.'))).length).toBeGreaterThan(0)
+  expect(document.querySelector('.long-remaining')).not.toBeNull()
+})
