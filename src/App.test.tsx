@@ -471,7 +471,7 @@ describe('App', () => {
     localStorage.setItem('eitan:keys', '3')
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: /ステージ/ }))
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('長文ボス'))
     fireEvent.click(screen.getByText(/金の宝箱をあける/))
     const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
     expect(w.coins).toBe(30)
@@ -701,7 +701,7 @@ describe('App', () => {
     render(<App />)
     expect(document.querySelector('details.home-play')).not.toBeNull()
     const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
-    fireEvent.click(nav.getByText('ステージ'))
+    fireEvent.click(nav.getByText('長文ボス'))
     expect(document.querySelector('details.home-play')).toBeNull()
     expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
     await new Promise((r) => requestAnimationFrame(() => r(null)))
@@ -710,7 +710,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/今日のチャレンジ：/))
     expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
-    fireEvent.click(nav.getByText('ステージ'))
+    fireEvent.click(nav.getByText('長文ボス'))
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
@@ -827,6 +827,17 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
+  })
+
+  it('長文ボスのタブに「ボス」「長文れんしゅう」「短い読解」があり、ミニゲームには読解がない', () => {
+    render(<App />)
+    const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
+    fireEvent.click(nav.getByText('長文ボス'))
+    fireEvent.click(screen.getByRole('tab', { name: '📖 長文れんしゅう' }))
+    expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
+    fireEvent.click(nav.getByText('ミニゲーム'))
+    fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
+    expect(screen.queryByRole('button', { name: /長文読解/ })).toBeNull()
   })
 
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
