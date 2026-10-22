@@ -81,6 +81,18 @@ export function buyAndMove(w: Wallet, id: string): { wallet: Wallet; moved: Item
   return { wallet: room ? { ...next, room: id } : next, moved: room }
 }
 export const MOVE_LINE = { en: 'Welcome to our new room!', ja: '新しい部屋へようこそ！' }
+// 部屋をかえたときの相棒のひとこと（部屋ごとに決まる）
+export const ROOM_LINES = [
+  { en: 'Wow, I love this room!', ja: 'わあ、この部屋大好き！' },
+  { en: 'This place feels like home.', ja: 'ここ、わが家みたいに落ち着くね。' },
+  { en: "Let's study here together!", ja: 'ここでいっしょに勉強しよう！' },
+  { en: 'What a beautiful view!', ja: 'なんてきれいなながめ！' },
+]
+export function roomLine(id?: string): { en: string; ja: string } {
+  if (!id) return { en: 'Back to our old room.', ja: 'もとの部屋にもどったね。' }
+  const i = Math.max(0, ROOMS.findIndex((r) => r.id === id))
+  return ROOM_LINES[i % ROOM_LINES.length]
+}
 
 const STORAGE_KEY = 'eitan:wallet'
 

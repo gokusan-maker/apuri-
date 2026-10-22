@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { buyAndMove, favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
+import { roomLine, ROOM_LINES, buyAndMove, favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, wearList, eat, ITEMS, loadWallet, ROOMS, saveWallet, shopItems, SNACKS, isEarly, snacksLeft } from './shop'
 
 describe('ショップ', () => {
   beforeEach(() => localStorage.clear())
@@ -153,5 +153,14 @@ describe('部屋を買ったらすぐお引っこし', () => {
     expect(w.wallet.room).toBe(room.id)
     expect(w.moved).toBeNull()
     expect(buyAndMove({ coins: 0, owned: [] }, room.id)).toBeNull()
+  })
+})
+
+describe('部屋をかえたときの相棒のひとこと', () => {
+  it('部屋ごとに決まったひとことで、部屋なしにもどすと別のひとこと', () => {
+    expect(roomLine(ROOMS[0].id)).toEqual(ROOM_LINES[0])
+    expect(roomLine(ROOMS[1].id)).toEqual(ROOM_LINES[1])
+    expect(roomLine(ROOMS[0].id)).toEqual(roomLine(ROOMS[0].id))
+    expect(roomLine(undefined).ja).toMatch(/もとの部屋/)
   })
 })
