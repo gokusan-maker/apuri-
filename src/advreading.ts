@@ -1291,4 +1291,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn?', choices: ['Being patient is as important as knowing the answer.', 'Tablets are too difficult for everyone.', 'Video calls are better than visiting.', 'Grandparents should not live alone.'], answer: 0, why: '第3段落 being patient is as important as knowing the answer。' },
     ],
   },
+  {
+    id: 'toefl-aurora',
+    title: 'Lights in the Polar Sky',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "On dark nights in places such as northern Norway, Canada, and Alaska, curtains of green and red light sometimes move slowly across the sky. These displays, called auroras, begin about 150 million kilometers away, at the Sun. The Sun constantly releases a stream of electrically charged particles known as the solar wind, ( A ) travels through space toward the Earth.",
+      "Most of these particles never reach the ground, because the Earth is surrounded by a magnetic field that acts like an invisible shield. However, the field guides some of the particles toward the regions around the North and South Poles. There, high in the atmosphere, they crash into atoms of oxygen and nitrogen. The energy from these collisions is ( B ) as light.",
+      "The color of an aurora depends on which gas is hit and at what height. Oxygen usually produces green light, the most common color, while oxygen at greater heights can give off red. Nitrogen tends to create blue or purple edges. When the Sun is especially active, stronger streams of particles can push auroras far from the poles, and on rare occasions they have even ( C ) seen in Hokkaido.",
+    ],
+    ja: [
+      'ノルウェー北部、カナダ、アラスカなどの暗い夜には、緑や赤の光のカーテンがゆっくりと空を動くことがある。オーロラとよばれるこの光の現象は、約1億5000万キロメートルはなれた太陽から始まる。太陽は、太陽風として知られる電気をおびた粒子の流れをたえず放出しており、それが宇宙を通って地球へ向かう。',
+      'これらの粒子のほとんどは地上にとどかない。地球は目に見えない盾のように働く磁場に囲まれているからである。しかし磁場は、粒子の一部を北極と南極のまわりの地域へとみちびく。そこで、大気の高いところで、粒子は酸素や窒素の原子にぶつかる。この衝突によるエネルギーが光として放たれるのである。',
+      'オーロラの色は、どの気体にどの高さでぶつかるかによって決まる。酸素はふつう、もっともよく見られる色である緑の光を出し、さらに高いところの酸素は赤い光を出すことがある。窒素は青や紫のふちをつくりやすい。太陽がとくに活発なときには、より強い粒子の流れがオーロラを極から遠くまでおし出し、まれに北海道で見られたことさえある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'where', 'who'], answer: 0, why: '先行詞 the solar wind（もの）を受けてコンマのあとで説明する関係代名詞 which。' },
+      { id: 'B', choices: ['released', 'stopped', 'hidden', 'cooled'], answer: 0, why: '衝突のエネルギーが光として「放たれる（released）」。' },
+      { id: 'C', choices: ['been', 'be', 'being', 'was'], answer: 0, why: 'have ＋ been ＋ 過去分詞（seen）で完了形の受け身。' },
+    ],
+    tf: [
+      { statement: 'オーロラのもとになる粒子は太陽から来る。', answer: true, why: '第1段落 begin ... at the Sun / the solar wind。' },
+      { statement: '太陽風の粒子のほとんどは地上までとどく。', answer: false, why: '第2段落 Most of these particles never reach the ground。' },
+      { statement: 'もっともよく見られるオーロラの色は青である。', answer: false, why: '第3段落 green light, the most common color。' },
+    ],
+    qa: [
+      { q: "What does the Earth's magnetic field do, according to the passage?", choices: ['It guides some particles toward the polar regions.', 'It creates the solar wind.', 'It changes nitrogen into oxygen.', 'It makes auroras appear only in the day.'], answer: 0, why: '第2段落 the field guides some of the particles toward the regions around the North and South Poles。' },
+    ],
+  },
 ]
