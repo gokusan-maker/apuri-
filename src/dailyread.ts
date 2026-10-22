@@ -86,3 +86,6 @@ export function claimTrioStreak(day: string): { count: number; ticket: boolean }
   }
   return { count, ticket: count % TRIO_TICKET_DAYS === 0 }
 }
+
+// 今日の課題を1つクリアするごとに、その課題のなかま（単語・文法・読解）にあげる XP
+export const TASK_XP = 10

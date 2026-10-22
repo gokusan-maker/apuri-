@@ -115,6 +115,9 @@ describe('App', () => {
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(localStorage.getItem('eitan:daily-short')).toBe(day)
+    // 今日の課題クリアのごほうび（+10XP）が読解のなかまに入る：問題の正解ぶんより10多い
+    const before = JSON.parse(localStorage.getItem('eitan:buddy-today')!).reading
+    expect(before).toBeGreaterThanOrEqual(10 + p.questions.length)
   })
 
   it('ホームの単語の相棒は、進化してから上がったレベルの数だけ星が出る', async () => {

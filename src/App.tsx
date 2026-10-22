@@ -114,7 +114,7 @@ import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord } from './longreading'
 import { loadShortDone } from './reading'
 import { loadReadLevel, passagesFor, READ_LEVELS, readyFor, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
-import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
+import { dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
@@ -1386,7 +1386,10 @@ function App() {
               key={shortGo ? 'today' : 'list'}
               start={shortGo ? dailyShort(today) : undefined}
               onDone={() => {
-                if (shortGo) saveDailyShortDay(today)
+                if (shortGo && loadDailyShortDay() !== today) {
+                  saveDailyShortDay(today)
+                  feedTrack('reading', TASK_XP) // 今日の課題クリアのごほうびは読解のなかまへ
+                }
               }}
               onAnswer={onAnswerTrack('reading')}
             />
@@ -1561,7 +1564,14 @@ function App() {
             <p className="today-section-title">🔤 今日の単語</p>
             {cardStudy}
           </section>
-          <TodayGrammar today={today} onAnswer={onAnswerTrack('grammar')} onClear={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))} />
+          <TodayGrammar
+            today={today}
+            onAnswer={onAnswerTrack('grammar')}
+            onClear={(c) => {
+              setWallet((w) => ({ ...w, coins: w.coins + c }))
+              feedTrack('grammar', TASK_XP) // 今日の課題クリアのごほうびは文法のなかまへ
+            }}
+          />
           <p className="today-section-title home-records-title">📊 記録</p>
           <div className="sub-tabs" role="tablist" aria-label="記録の種類">
             {STATS_TABS.map((t) => (
@@ -1768,7 +1778,10 @@ function App() {
             targets={mode === 'word' && todayQuiz ? todayWords(today) : quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}
             onFinish={(score, total) => {
-              if (mode === 'word' && todayQuiz) saveTodayWordsDay(today)
+              if (mode === 'word' && todayQuiz && loadTodayWordsDay() !== today) {
+                saveTodayWordsDay(today)
+                gainXp(TASK_XP, null) // 今日の課題クリアのごほうびは単語の相棒へ
+              }
               if (total >= 10 && score === total) setTotals((t) => ({ ...t, perfect: t.perfect + 1 }))
             }}
             onSpend={spend}
