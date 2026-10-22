@@ -3325,6 +3325,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
       { id: 'D', choices: ['how', 'what', 'when', 'which'], answer: 2, why: 'when ＋文 で「〜するときに」。' },
     ],
+    qa: [
+      { q: 'What is inside a camel\'s hump?', choices: ['Water.', 'Fat.', 'Sand.', 'Milk.'], answer: 1, why: 'A hump is full of fat. とある。' },
+      { q: 'Why can camels close their noses?', choices: ['To keep sand out when strong winds blow.', 'To stop drinking water.', 'To sleep well at night.', 'To smell food better.'], answer: 0, why: '強い風がふくときに鼻をとじられる、とある（砂から身を守るため）。' },
+    ],
     tf: [
       { statement: 'Camels keep water in their humps.', answer: false, why: 'こぶの中は脂肪でいっぱい。' },
       { statement: 'A camel uses the fat in its hump when it cannot find food.', answer: true, why: '第2段落の内容と合う。' },
@@ -3629,6 +3633,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 1, why: 'stay in 〜 で「〜の中にとどまる」。' },
       { id: 'D', choices: ['by', 'for', 'in', 'with'], answer: 3, why: 'cover A with B で「AをBでおおう」。' },
     ],
+    qa: [
+      { q: 'What carries salt to the sea?', choices: ['Rivers.', 'Fish.', 'The wind.', 'People.'], answer: 0, why: 'the rivers carry them to the sea とある。' },
+      { q: 'What happens to the salt when sea water goes up into the air?', choices: ['It goes up too.', 'It becomes rain.', 'It stays in the sea.', 'It turns into rocks.'], answer: 2, why: '塩は水といっしょにのぼれず、海に残る。' },
+    ],
     tf: [
       { statement: 'River water is as salty as sea water.', answer: false, why: '川の水はしょっぱくない。' },
       { statement: 'Rain slowly breaks down rocks on the land.', answer: true, why: '第2段落の内容と合う。' },
@@ -3660,6 +3668,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 1, why: '「庭で」は in the garden。' },
       { id: 'C', choices: ['at', 'for', 'in', 'of'], answer: 2, why: 'believe in 〜 で「〜（の力）を信じる」。' },
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'the key to 〜 で「〜へのかぎ（秘けつ）」。' },
+    ],
+    qa: [
+      { q: 'What did Mai\'s grandmother give her?', choices: ['A piano.', 'A small stone.', 'Some dinner.', 'A prize.'], answer: 1, why: 'gave her a small, smooth stone とある。' },
+      { q: 'Why did Mai play so well?', choices: ['Because the stone was magic.', 'Because the contest was easy.', 'Because she practiced every day for three months.', 'Because her grandmother played with her.'], answer: 2, why: 'おばあちゃんが「3か月毎日練習したから」と答えている。' },
     ],
     tf: [
       { statement: 'Mai was nervous the night before the contest.', answer: true, why: '第1段落の内容と合う。' },
