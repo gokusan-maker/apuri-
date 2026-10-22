@@ -416,3 +416,10 @@ it('ラッキーコインを使うとSランクボーナスが2倍', () => {
   expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
   expect(bonus).toHaveBeenCalledWith(20)
 })
+
+it('相棒がいると正解したときにおうえんスタンプが出る', async () => {
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} partner={{ form: FORMS[1], name: 'あいぼう' }} />)
+  answer(true)
+  expect(screen.getByLabelText('おうえんスタンプ')).toHaveTextContent('👍 ナイス！')
+})

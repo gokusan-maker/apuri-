@@ -6,8 +6,9 @@ import { GRAMMAR } from './grammar'
 const answerCell = (n: number, right: boolean) => {
   fireEvent.click(screen.getByLabelText(`マス ${n}`))
   const sentence = document.querySelector('.bingo-q .blank-sentence')!.textContent!
-  const q = GRAMMAR.flatMap((u) => u.questions).find((x) => x.sentence.replace('___', '（　　）') === sentence)!
   const btns = [...document.querySelectorAll<HTMLButtonElement>('.bingo-q .choice')]
+  const shown = btns.map((b) => b.textContent)
+  const q = GRAMMAR.flatMap((u) => u.questions).find((x) => x.sentence.replace('___', '（　　）') === sentence && x.choices.length === shown.length && x.choices.every((c, i) => c === shown[i]))!
   fireEvent.click(btns[right ? q.answer : (q.answer + 1) % q.choices.length])
 }
 

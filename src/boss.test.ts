@@ -172,3 +172,10 @@ it('ボスは7問ごとに2問ねむり、ためこうげきとは重ならな�
   expect(isAsleep(false, 7)).toBe(false)
   for (let i = 0; i < 40; i++) expect(isAsleep(false, i) && isCharge(false, i)).toBe(false)
 })
+
+it('おうえんスタンプは5種類を順番に', async () => {
+  const { cheerStampOf, CHEER_STAMPS } = await import('./boss')
+  expect(cheerStampOf(1)).toBe(CHEER_STAMPS[0])
+  expect(cheerStampOf(5)).toBe(CHEER_STAMPS[4])
+  expect(cheerStampOf(6)).toBe(CHEER_STAMPS[0])
+})
