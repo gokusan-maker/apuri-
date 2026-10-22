@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'as-long-as': { wrong: 'Take a coat in case it will be cold.', right: 'Take a coat in case it is cold.', why: 'in case のあとは未来のことでも現在形。' },
   'it-is-time': { wrong: "I couldn't help to laugh.", right: "I couldn't help laughing.", why: 'cannot help のあとは動名詞（-ing）。' },
   'would-rather': { wrong: 'I prefer swimming than running.', right: 'I prefer swimming to running.', why: 'prefer A to B。than ではなく to を使う。' },
   'without-but-for': { wrong: 'Without your help, I will fail.（「もしなければ」の仮定）', right: 'Without your help, I would fail.', why: '「〜がなければ…だろう」という仮定は would ＋ 動詞の原形。' },

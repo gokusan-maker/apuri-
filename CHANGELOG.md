@@ -1151,3 +1151,4 @@
 - 2026-10-22: 高校基礎の文法単元「It is time ＋ 過去形 / cannot help -ing」を追加（全153単元に）
 - 2026-10-22: 読解「難関大」に評論「In Praise of Forgetting」（忘れることの効用）を追加
 - 2026-10-22: 読解「TOEFL・IELTS」に地学「What Causes the Tides?」を追加
+- 2026-10-22: 高校基礎の文法単元「as long as / as far as / in case」を追加（全154単元に）
