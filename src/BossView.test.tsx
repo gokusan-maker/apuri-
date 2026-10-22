@@ -31,6 +31,7 @@ describe('ボス戦', () => {
     expect(document.querySelector('.boss-figure.finished')).not.toBeNull()
     expect(screen.getByText(/最大ダメージ記録/)).toBeInTheDocument()
     expect(screen.getByText(/⏱ タイム .*最短記録！/)).toBeInTheDocument()
+    expect(screen.getByText(/🏅 MVP単語：/)).toBeInTheDocument()
   })
 
   it('3回まちがえると負け、もう一度挑戦できる', () => {

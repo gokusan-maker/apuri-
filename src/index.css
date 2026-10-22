@@ -1361,3 +1361,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .outfit { display: inline-flex; align-items: center; }
 .boss-partner { position: relative; }
 .cheer-stamp { position: absolute; top: -14px; left: 0; padding: 2px 8px; border-radius: 999px; background: #fef08a; color: #713f12; font-size: 0.75rem; font-weight: 800; animation: treasure-pop 0.5s ease-out both; pointer-events: none; }
+.boss-mvp { margin: 4px 0; font-size: 0.85rem; }

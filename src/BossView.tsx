@@ -159,6 +159,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [mvp, setMvp] = useState<{ en: string; ja: string; ms: number } | null>(null) // いちばん速く正解した単語
   const [hintAt, setHintAt] = useState<{ index: number; hide: number } | null>(null) // 相棒のヒント（1戦1回）
   const [proverb, setProverb] = useState<number | null>(null) // たおしたときに教えてくれたことわざ
   const [revenge, setRevenge] = useState(false) // リベンジ成功
@@ -207,6 +208,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       if (c % 3 === 0) setShield(true)
       setCorrects(n)
       const ms = nowMs() - shownAt.current
+      if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
       const critical = isCritical(ms, (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow)
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
@@ -336,6 +338,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setMvp(null)
     setHintAt(null)
     setProverb(null)
     setRevenge(false)
@@ -564,6 +567,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </>
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
+          {mvp && (
+            <p className="boss-mvp">
+              🏅 MVP単語：<strong>{mvp.en}</strong>（{mvp.ja}）{(mvp.ms / 1000).toFixed(1)}秒で正解！
+            </p>
+          )}
           {proverb !== null && (
             <p className="boss-proverb">
               📜 {look.name}のことわざ「{PROVERBS[proverb].en}」
