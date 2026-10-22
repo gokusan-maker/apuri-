@@ -563,3 +563,11 @@ it('学年の単元をすべて全問正解すると、その学年の賞状が�
   expect(screen.getByLabelText('中1の賞状')).toBeInTheDocument()
   expect(screen.queryByLabelText('中2の賞状')).toBeNull()
 })
+
+it('まちがえたことがある単元には一覧と要点カードで⚠印がつく', () => {
+  localStorage.clear()
+  const unit = GRAMMAR[0]
+  localStorage.setItem('eitan:grammar-notebook', JSON.stringify([unit.questions[0].sentence]))
+  render(<Grammar />)
+  expect(screen.getAllByLabelText('まちがえたことがある単元').length).toBeGreaterThan(0)
+})

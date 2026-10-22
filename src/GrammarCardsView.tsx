@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { loadAutoRead, loadCardsKnown, markKnown, saveAutoRead, saveCardsKnown, type GrammarUnit } from './grammar'
 import { speak } from './speech'
 
-type Props = { units: GrammarUnit[]; onBack: () => void }
+type Props = { units: GrammarUnit[]; onBack: () => void; weak?: string[] } // weak：まちがえたことがある単元
 
 // 文法の要点カード：表に単元名、うらに要点と例文。タップでめくる
-export function GrammarCards({ units: all, onBack }: Props) {
+export function GrammarCards({ units: all, onBack, weak = [] }: Props) {
   const [i, setI] = useState(0)
   const [flipped, setFlipped] = useState(false)
   const [known, setKnown] = useState(loadCardsKnown)
@@ -91,6 +91,7 @@ export function GrammarCards({ units: all, onBack }: Props) {
           </span>
         ) : (
           <span className="gcard-title">
+            {weak.includes(u.id) && <span className="gcard-weak">⚠ まちがえたことがある単元</span>}
             {u.title}
             <small>タップでめくる</small>
           </span>

@@ -2013,3 +2013,6 @@ export const TENSE_TABLE: { name: string; form: string; en: string; ja: string }
   { name: '現在完了', form: 'have / has ＋過去分詞', en: 'I have played tennis for three years.', ja: '私は3年間テニスをしている。' },
   { name: '過去完了', form: 'had ＋過去分詞', en: 'I had played tennis before I came here.', ja: '私はここに来る前にテニスをしたことがあった。' },
 ]
+
+// まちがいノートに問題がのっている単元（まちがえたことがある単元）の id
+export const weakIdsOf = (note: string[]) => GRAMMAR.filter((u) => u.questions.some((q) => note.includes(q.sentence))).map((u) => u.id)
