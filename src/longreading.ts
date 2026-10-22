@@ -4300,6 +4300,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Scientists know the best way to stop hiccups.', answer: false, why: 'どの方法が一番きくかはだれにもわからない。' },
     ],
   },
+  {
+    id: 'goosebumps',
+    title: 'Why Do We Get Goosebumps?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'On a cold morning, or when you watch a scary movie, small bumps sometimes appear on your arms. In English, they are ( A ) "goosebumps" because your skin looks like the skin of a goose.',
+      'Each hair on your body has a very small muscle at its root. When you feel cold or afraid, these muscles pull, and the hairs stand up. The skin around each hair is pushed up, too. That is how the bumps are made.',
+      'For animals with a lot of fur, this is very useful. When their fur stands up, it keeps warm air close to their bodies. It also makes them look bigger, so enemies may be ( B ) to attack them.',
+      'Humans do not have much hair, so goosebumps do not help us very much. Scientists think that they are something left from our ancestors, who had more hair. Even today, our bodies still remember this old way ( C ) staying safe and warm.',
+    ],
+    ja: [
+      '寒い朝や、こわい映画を見ているとき、うでに小さなぶつぶつができることがあります。英語では、皮ふががちょうの皮のように見えるので、それは「グースバンプ（がちょうのぶつぶつ）」とよばれます。',
+      '体のそれぞれの毛には、根もとにとても小さな筋肉があります。寒さやこわさを感じると、これらの筋肉が引っぱられて、毛が立ちます。それぞれの毛のまわりの皮ふもおし上げられます。こうしてぶつぶつができるのです。',
+      'たくさんの毛におおわれた動物にとって、これはとても役に立ちます。毛が立つと、あたたかい空気を体の近くにとどめておけます。また体が大きく見えるので、敵はおそいかかるのをこわがるかもしれません。',
+      '人間には毛があまりないので、鳥はだはあまり役に立ちません。科学者たちは、それはもっと毛の多かった祖先から残ったものだと考えています。今でも私たちの体は、安全とあたたかさを守るこの古いやり方をおぼえているのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['called', 'calling', 'call', 'to call'], answer: 0, why: '受け身 be called 〜「〜とよばれる」。' },
+      { id: 'B', choices: ['afraid', 'happy', 'able', 'glad'], answer: 0, why: 'be afraid to 〜「こわくて〜できない」。大きく見えると敵はこわがる。' },
+      { id: 'C', choices: ['of', 'to', 'at', 'by'], answer: 0, why: 'a way of -ing「〜する方法」。' },
+    ],
+    underline: { phrase: 'something left from our ancestors', choices: ['祖先から残ったもの', '祖先が捨てたもの', '祖先が作った道具', '祖先がこわがったもの'], answer: 0, why: 'left は leave（残す）の過去分詞で「残されたもの」。直前に、毛の多かった祖先とある。' },
+    tf: [
+      { statement: 'Goosebumps can appear when we feel cold.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'There is a small muscle at the root of each hair.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Standing fur makes animals look smaller.', answer: false, why: '体が大きく見える。' },
+      { statement: 'Goosebumps help humans a lot because we have a lot of hair.', answer: false, why: '人間は毛が少ないので、あまり役に立たない。' },
+      { statement: 'Our ancestors had more hair than we do.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
