@@ -1431,4 +1431,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn?', choices: ['We must enjoy what we are doing to make others interested.', 'Children do not like picture books.', 'Teachers should not give advice.', 'Reading quietly is the best way.'], answer: 0, why: '第3段落最後の文。' },
     ],
   },
+  {
+    id: 'adv-curiosity',
+    title: 'The Discomfort of Curiosity',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Curiosity is usually described as a pleasant feeling, the spark that makes children ask endless questions and scientists stay late in their laboratories. Yet curiosity begins with a small discomfort: the awareness that there is a gap between what we know and what we would like to know. It is precisely ( A ) this gap is uncomfortable that we feel driven to close it.',
+      'Interestingly, curiosity seems to be strongest not when we know nothing about a subject, but when we know a little. A person who has never heard of black holes is unlikely to wonder about them, while someone who has read a short article may suddenly find the topic impossible to ignore. Knowledge, in other words, does not satisfy curiosity so much as ( B ) it, by revealing how much remains unknown.',
+      'This has an important consequence for education. If teachers present only finished answers, students may never experience the useful tension of not knowing. A better approach may be to give learners just enough information to notice a gap and then let them search for the rest. Curiosity, from this point of view, is not a gift that some people have and others lack, but a state that can be ( C ) by the way questions are asked.',
+    ],
+    ja: [
+      '好奇心はふつう、子どもに果てしなく質問させたり、科学者を研究室に遅くまで残らせたりする火花のような、心地よい感情として語られる。しかし好奇心は、ちょっとした居心地の悪さから始まる。自分が知っていることと知りたいことのあいだにすき間があるという自覚である。まさにこのすき間が居心地悪いからこそ、私たちはそれをうめようとかり立てられるのだ。',
+      '興味深いことに、好奇心がもっとも強くなるのは、ある話題について何も知らないときではなく、少し知っているときであるらしい。ブラックホールについて聞いたことのない人がそれについて考えることはまずないが、短い記事を読んだ人は、急にその話題を無視できなくなるかもしれない。つまり知識は、好奇心を満たすというよりも、まだ知られていないことがどれほど多いかを明らかにすることで、好奇心をかき立てるのである。',
+      'このことは教育にとって重要な意味をもつ。教師が完成した答えだけを示せば、生徒は知らないことの有益な緊張感を一度も味わわないかもしれない。よりよいやり方は、学ぶ人にすき間に気づくのにちょうど十分な情報を与え、残りは自分でさがさせることかもしれない。この見方からすれば、好奇心は一部の人にはあってほかの人にはない才能ではなく、問いの立て方によって生み出すことのできる状態なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'whether'], answer: 0, why: 'It is precisely because 〜 that …「まさに〜だからこそ…」（強調構文）。' },
+      { id: 'B', choices: ['stimulates', 'ends', 'hides', 'forgets'], answer: 0, why: 'not satisfy 〜 so much as stimulate「満たすというよりかき立てる」。主語 Knowledge なので -s。' },
+      { id: 'C', choices: ['created', 'creating', 'create', 'creates'], answer: 0, why: 'can be ＋ 過去分詞（受け身）「生み出されうる」。' },
+    ],
+    tf: [
+      { statement: '筆者は、好奇心は居心地の悪さから始まると述べている。', answer: true, why: '第1段落 curiosity begins with a small discomfort。' },
+      { statement: '好奇心は、何も知らないときにもっとも強くなる。', answer: false, why: '第2段落 not when we know nothing ... but when we know a little。' },
+      { statement: '筆者は、好奇心は生まれつきの才能で、育てることはできないと考えている。', answer: false, why: '第3段落 not a gift ... but a state that can be created。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest teachers should do?', choices: ['Give learners just enough information to notice a gap.', 'Present only finished answers.', 'Avoid asking any questions.', 'Tell students everything about a topic.'], answer: 0, why: '第3段落 give learners just enough information to notice a gap。' },
+    ],
+  },
 ]
