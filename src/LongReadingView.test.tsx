@@ -344,3 +344,13 @@ it('★のしおりをつけた長文は一覧の上に来る', () => {
   expect(document.querySelector('.grammar-list li .grammar-fav.on')).not.toBeNull()
   expect(document.querySelectorAll('.grammar-list li')[0].querySelector('.grammar-fav.on')).not.toBeNull()
 })
+
+it('読んだ長文があると重要語句クイズができる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:long-reading', JSON.stringify({ [LONG_PASSAGES[0].id]: 5, [LONG_PASSAGES[1].id]: 5 }))
+  render(<LongReading />)
+  fireEvent.click(screen.getByText(/重要語句クイズ（読んだ長文から5問）/))
+  expect(screen.getByText(/📒 重要語句クイズ 1 \//)).toBeInTheDocument()
+  fireEvent.click(document.querySelector<HTMLButtonElement>('.long-vq .choice')!)
+  expect(screen.getByText('次へ')).toBeInTheDocument()
+})

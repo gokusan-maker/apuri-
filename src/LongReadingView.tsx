@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
+import { LongVocabQuiz } from './LongVocabQuizView'
 import { grammarTags } from './longgrammar'
 import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
@@ -81,6 +82,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
   const [history, setHistory] = useState(loadLongHistory)
   const [genreStats, setGenreStats] = useState(loadGenreStats)
   const [bookmarks, setBookmarks] = useState(loadBookmarks)
+  const [vocabQuiz, setVocabQuiz] = useState(false)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
   const [jaParas, setJaParas] = useState<number[]>([])
@@ -126,6 +128,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
     saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq })
   }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq])
 
+  if (!p && vocabQuiz) return <LongVocabQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setVocabQuiz(false)} />
   if (!p) {
     return (
       <section className="card grammar long-reading">
@@ -135,6 +138,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}
         </button>
+        {Object.keys(record).length > 0 && (
+          <button className="list-link" onClick={() => setVocabQuiz(true)}>
+            📒 重要語句クイズ（読んだ長文から5問）
+          </button>
+        )}
         <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
           🎲 ランダム挑戦{LONG_PASSAGES.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>
