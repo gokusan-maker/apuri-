@@ -21,11 +21,19 @@ const IDIOMS = blankIdioms(LONG_PASSAGES)
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
 
 // 本文の「( A )」を目立つ空所にする
-function Paragraph({ text, underline, refer }: { text: string; underline?: string; refer?: { phrase: string; word: string } }) {
+// filled：採点後、空所に正しい語を入れて見せる（まちがえた空所は色をかえる）
+function Paragraph({ text, underline, refer, filled }: { text: string; underline?: string; refer?: { phrase: string; word: string }; filled?: Record<string, { word: string; ok: boolean }> }) {
   const parts = text.split(/(\( [A-Z] \)|\[ \d \])/)
   return (
     <p className="long-para">
       {parts.map((s, i) => {
+        const fid = /^\( ([A-Z]) \)$/.exec(s)?.[1]
+        if (fid && filled?.[fid])
+          return (
+            <span key={i} className={`long-blank filled ${filled[fid].ok ? 'ok' : 'ng'}`}>
+              {s} {filled[fid].word}
+            </span>
+          )
         if (/^(\( [A-Z] \)|\[ \d \])$/.test(s))
           return (
             <span key={i} className="long-blank">
@@ -424,7 +432,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
             <div className="long-para-row">
-              {p.paraSeq?.at === i && !done ? <p className="long-pseq-hidden">（この段落は下の「文の並べかえ」の問題です）</p> : <Paragraph text={t} underline={p.underline?.phrase} refer={p.refer} />}
+              {p.paraSeq?.at === i && !done ? <p className="long-pseq-hidden">（この段落は下の「文の並べかえ」の問題です）</p> : <Paragraph text={t} underline={p.underline?.phrase} refer={p.refer} filled={done ? Object.fromEntries(p.blanks.map((b) => [b.id, { word: b.choices[b.answer], ok: blanks[b.id] === b.answer }])) : undefined} />}
               <button className="speak small long-speak" aria-label={`第${i + 1}段落を聞く`} onClick={() => speak(readable(t))}>
                 🔊
               </button>

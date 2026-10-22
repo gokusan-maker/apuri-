@@ -1458,3 +1458,6 @@ button:focus:not(:focus-visible) { outline: none; }
 @keyframes grammar-confetti { 0% { opacity: 1; transform: translateY(0) rotate(0); } 100% { opacity: 0; transform: translateY(260px) rotate(540deg); } }
 @media (prefers-reduced-motion: reduce) { .grammar-confetti { display: none; } }
 .gacha-nth { margin: 2px 0; font-size: 0.85rem; font-weight: 700; color: #7c3aed; }
+.long-blank.filled { font-weight: 800; border-radius: 4px; padding: 0 3px; }
+.long-blank.filled.ok { background: #dcfce7; color: #166534; }
+.long-blank.filled.ng { background: #fee2e2; color: #b91c1c; }

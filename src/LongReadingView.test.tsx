@@ -483,3 +483,21 @@ it('ジャンルごとの折りたたみに満点の本数が出る', () => {
   const sums = [...document.querySelectorAll('details.long-genre-fold summary')].map((x) => x.textContent ?? '')
   expect(sums.some((t) => t.includes('💯満点 1本'))).toBe(true)
 })
+
+it('採点すると本文の空所に正しい語が入り、まちがえた空所は色がかわる', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[0]
+  render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
+  p.blanks.forEach((b, k) => {
+    const pick = k === 0 ? (b.answer + 1) % 4 : b.answer
+    fireEvent.click(screen.getAllByRole('button', { name: `${MARKS[pick]} ${b.choices[pick]}` }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
+  })
+  p.tf.forEach((t, i) => fireEvent.click(screen.getByRole('button', { name: `(${i + 1}) ${t.answer ? '○' : '×'}` })))
+  for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
+  p.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
+  fireEvent.click(screen.getByRole('button', { name: '採点する' }))
+  expect(document.querySelectorAll('.long-blank.filled')).toHaveLength(p.blanks.length)
+  expect(document.querySelectorAll('.long-blank.filled.ng')).toHaveLength(1)
+  expect(document.querySelector('.long-blank.filled.ng')!.textContent).toBe(`( ${p.blanks[0].id} ) ${p.blanks[0].choices[p.blanks[0].answer]}`)
+})
