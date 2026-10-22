@@ -1386,3 +1386,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .daily-example-title { font-size: 0.8rem; font-weight: 700; color: var(--muted); }
 .daily-example-en { font-weight: 700; overflow-wrap: anywhere; }
 .daily-example-ja { font-size: 0.85rem; color: var(--muted); }
+.long-pseq-hidden { margin: 0; padding: 10px; border: 2px dashed color-mix(in srgb, var(--muted) 50%, transparent); border-radius: 10px; color: var(--muted); font-size: 0.85rem; flex: 1; }

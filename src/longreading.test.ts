@@ -192,7 +192,7 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   expect(loadLongDraft('x')).toBeNull()
   const empty = { blanks: {}, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} }
   saveLongDraft('x', { ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1 })
-  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {}, vocab: {}, seq: [] })
+  expect(loadLongDraft('x')).toEqual({ ...empty, blanks: { A: 2 }, tf: { 0: true }, under: 1, refer: undefined, title: undefined, insert: undefined, summary: {}, vocab: {}, seq: [], pseq: [] })
   saveLongDraft('x', empty)
   expect(loadLongDraft('x')).toBeNull()
   saveLongDraft('y', { ...empty, picks: [1] })

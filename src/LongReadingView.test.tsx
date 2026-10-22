@@ -387,3 +387,15 @@ it('解いた長文があれば「○×だけチャレンジ」で10問とける
   expect(screen.getByText(/\/ 10 問正解/)).toBeInTheDocument()
   expect(onAnswer).toHaveBeenCalledTimes(10)
 })
+
+it('段落の文の並べかえ：答えるまでその段落はかくれ、正しい順に並べると正解', async () => {
+  localStorage.clear()
+  const { paraSeqQ } = await import('./longreading')
+  const p = LONG_PASSAGES.find((x) => x.paraSeq)!
+  const q = paraSeqQ(p)!
+  render(<LongReading />)
+  fireEvent.click(screen.getAllByText(new RegExp(p.title.replace(/[?()]/g, '.'))).at(-1)!)
+  expect(screen.getByText('（この段落は下の「文の並べかえ」の問題です）')).toBeInTheDocument()
+  for (const i of q.answer) fireEvent.click(screen.getByRole('button', { name: new RegExp(q.events[i].slice(0, 20).replace(/[?()."]/g, '.')) }))
+  expect(screen.getByLabelText('並べた文の順番').textContent).toBe(q.answer.map((i) => MARKS[i]).join(' → '))
+})
