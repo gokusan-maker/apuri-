@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'thing-adjective': { wrong: 'I want cold something.', right: 'I want something cold.', why: '-thing の語は形容詞をうしろに置く。' },
   'now-that-once': { wrong: 'Once you will try it, you will like it.', right: 'Once you try it, you will like it.', why: '未来のことでも once のあとは現在形。' },
   'strong-negation': { wrong: 'This book is by not means easy.', right: 'This book is by no means easy.', why: '「決して〜ない」は by no means（not ではなく no）。' },
   'it-is-said': { wrong: 'It says that he is kind.（「〜と言われている」）', right: 'It is said that he is kind.', why: '「〜と言われている」は受け身 It is said that 〜。' },
