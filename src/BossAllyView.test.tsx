@@ -20,3 +20,8 @@ it('ボス部屋の上にタマゴのかけらの数が出る', () => {
   render(<BossAlly buddy={{ xp: 0 }} />)
   expect(screen.getByText(/タマゴのかけら 3 \/ 5/)).toBeInTheDocument()
 })
+
+it('ボス部屋の上に、たおしたボスの数が出る', () => {
+  render(<BossAlly buddy={{ xp: 0 }} wins={3} total={19} />)
+  expect(screen.getByLabelText('たおしたボスの数').textContent).toContain('3 / 19体')
+})
