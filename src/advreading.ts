@@ -1599,4 +1599,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn about cleaning classrooms?', choices: ['It teaches students to take care of the places they use.', 'It is done only in Vietnam.', 'It is a waste of time.', 'Teachers clean the classrooms for students.'], answer: 0, why: '第2段落 cleaning teaches us to take care of the places we use every day。' },
     ],
   },
+  {
+    id: 'adv-tourism',
+    title: 'Loving a Place Too Much',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Travel has never been easier. Cheap flights, online maps, and photo-sharing apps allow millions of people to visit places that once seemed impossibly far away. Yet this freedom has produced an unexpected problem. In some famous towns, the number of visitors has grown so large that the very qualities that attracted them in the first place are ( A ) to disappear.',
+      'Consider a small historic village known for its quiet streets. As more tourists arrive, shops selling daily necessities are replaced by souvenir stores, and rising rents push local residents to move elsewhere. Eventually, the village may become little more than a stage set: beautiful to look at, but no longer a living community. Tourists then complain that the place feels "too touristy," ( B ) realizing that they themselves are part of the cause.',
+      'Some cities have responded by limiting the number of visitors, charging entrance fees, or encouraging travel during less popular seasons. Such measures are often criticized as unfair, since they seem to turn travel back into a privilege of the wealthy. Still, the underlying question remains: how can we enjoy a place without destroying what makes it worth visiting? Perhaps the answer begins with seeing ourselves not merely as consumers of a destination but as temporary ( C ) of it.',
+    ],
+    ja: [
+      '旅行がこれほど簡単になったことはない。安い航空便、オンラインの地図、写真共有アプリのおかげで、何百万もの人が、かつてはとても遠く思えた場所をおとずれることができる。しかしこの自由は、思いがけない問題を生んだ。いくつかの有名な町では、訪問者の数があまりにも多くなり、そもそも人々をひきつけた特徴そのものが消えはじめているのだ。',
+      '静かな通りで知られる小さな歴史ある村を考えてみよう。観光客がふえるにつれて、日用品を売る店はみやげもの店にかわり、上がる家賃のせいで地元の住民はほかの場所へ引っこしていく。やがてその村は、舞台のセットとほとんど変わらないものになるかもしれない。見た目は美しいが、もはや人々が暮らす共同体ではない。すると観光客は、その場所が「観光地化しすぎている」と不満を言う。自分たちこそがその原因の一部だと気づかずに。',
+      'いくつかの都市は、訪問者の数を制限したり、入場料をとったり、人気の少ない季節の旅行をすすめたりして対応してきた。こうした対策は、旅行を再びお金持ちの特権にしてしまうように思えるため、不公平だと批判されることが多い。それでも根本の問いは残る。ある場所を、そこをおとずれる価値のあるものにしているものをこわさずに、どうすれば楽しめるのだろうか。その答えはおそらく、自分たちを単なる目的地の消費者としてではなく、一時的なその場所の守り手として見ることから始まるのだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['beginning', 'refusing', 'pretending', 'failing'], answer: 0, why: 'are beginning to disappear「消えはじめている」。' },
+      { id: 'B', choices: ['without', 'despite', 'by', 'for'], answer: 0, why: 'without -ing「〜せずに」。自分が原因だと気づかずに不満を言う。' },
+      { id: 'C', choices: ['guardians', 'owners', 'enemies', 'sellers'], answer: 0, why: 'consumers（消費する人）と対比して、場所を守る guardians（守り手）。' },
+    ],
+    tf: [
+      { statement: '筆者は、旅行が簡単になったことで予想外の問題が生まれたと述べている。', answer: true, why: '第1段落 this freedom has produced an unexpected problem。' },
+      { statement: '観光客がふえると、地元の住民が村にもどってくる。', answer: false, why: '第2段落 push local residents to move elsewhere。' },
+      { statement: '訪問者を制限する対策は、だれからも公平だと受け入れられている。', answer: false, why: '第3段落 often criticized as unfair。' },
+    ],
+    qa: [
+      { q: 'Why might a village become "little more than a stage set"?', choices: ['Local shops and residents are replaced as tourism grows.', 'The government builds a theater there.', 'Tourists stop visiting the village.', 'The village becomes too quiet.'], answer: 0, why: '第2段落 shops ... are replaced by souvenir stores ... push local residents to move elsewhere。' },
+    ],
+  },
 ]
