@@ -1398,3 +1398,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grammar-grade-fold { margin: 6px 0; border-radius: 12px; background: color-mix(in srgb, var(--accent) 6%, var(--card)); padding: 2px 8px; }
 .grammar-grade-fold > summary { cursor: pointer; padding: 10px 2px; font-weight: 700; }
 .next-unit-btn { display: block; width: 100%; margin: 10px 0 4px; padding: 12px; border-radius: 14px; font-weight: 800; overflow-wrap: anywhere; }
+.kimochi-diary { margin: 8px 0; padding: 10px 12px; border-radius: 14px; background: color-mix(in srgb, #f472b6 10%, var(--card)); font-size: 0.9rem; text-align: left; overflow-wrap: anywhere; }

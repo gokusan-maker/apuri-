@@ -1,6 +1,7 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
+import { kimochiDiary } from './kimochi'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
 import { BIRTHDAY_TICKETS, birthdayAge, loadBirthday, registerBirthday, saveBirthday } from './birthday'
 import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
@@ -1224,6 +1225,9 @@ function App() {
           </div>
           {statsTab === 'log' && (
             <>
+              <p className="kimochi-diary">
+                📔 {monster.name ?? formOf(monster).name}のきもち日記：{kimochiDiary(studiedToday).icon} {kimochiDiary(studiedToday).text}
+              </p>
               <p className="today-summary">
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
                 <strong>{newToday}語</strong>

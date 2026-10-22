@@ -729,6 +729,12 @@ describe('App', () => {
     expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
   })
 
+  it('記録タブに相棒のきもち日記が出る', () => {
+    render(<App />)
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('記録'))
+    expect(screen.getByText(/のきもち日記：🥺/)).toBeInTheDocument()
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))
