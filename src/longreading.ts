@@ -3640,6 +3640,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { q: 'What carries salt to the sea?', choices: ['Rivers.', 'Fish.', 'The wind.', 'People.'], answer: 0, why: 'the rivers carry them to the sea とある。' },
       { q: 'What happens to the salt when sea water goes up into the air?', choices: ['It goes up too.', 'It becomes rain.', 'It stays in the sea.', 'It turns into rocks.'], answer: 2, why: '塩は水といっしょにのぼれず、海に残る。' },
     ],
+    gist: [{ para: 2, choices: ['海の水が空気中へのぼっても塩は残ること', '川がしょっぱくない理由', '海の塩の量', '海で泳ぐときの注意'], answer: 0, why: '第3段落は、水は空気中へのぼるが塩はのぼれず海に残る、という話。' }],
     tf: [
       { statement: 'River water is as salty as sea water.', answer: false, why: '川の水はしょっぱくない。' },
       { statement: 'Rain slowly breaks down rocks on the land.', answer: true, why: '第2段落の内容と合う。' },
@@ -4050,6 +4051,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { q: 'What do owls do instead of moving their eyes?', choices: ['They close their eyes.', 'They turn their heads.', 'They fly higher.', 'They listen to music.'], answer: 1, why: 'Instead, they turn their heads. とある。' },
       { q: 'Why can owls fly very quietly?', choices: ['Because their feathers are soft.', 'Because they are very small.', 'Because they fly slowly.', 'Because they sleep in the day.'], answer: 0, why: 'Their feathers are soft, so they can fly very quietly. とある。' },
     ],
+    gist: [{ para: 2, choices: ['フクロウの耳のすばらしさ', 'フクロウの大きな目', 'フクロウのやわらかい羽', 'フクロウの食べ物'], answer: 0, why: '第3段落は、片方の耳が高い位置にあり、音の場所を正確に見つけられるという耳の話。' }],
     tf: [
       { statement: 'Owls mainly hunt during the day.', answer: false, why: 'おもに夜に狩りをする。' },
       { statement: 'Owls can move their eyes freely.', answer: false, why: '目は動かせず、首を回す。' },
@@ -4151,6 +4153,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'for', 'of', 'with'], answer: 1, why: 'be good for 〜 で「〜によい」。be good at 〜 は「〜が得意」。' },
       { id: 'D', choices: ['as', 'by', 'for', 'with'], answer: 0, why: 'as a result で「その結果」。' },
     ],
+    gist: [{ para: 1, choices: ['赤ちゃんと大人の骨の数のちがい', 'カルシウムの多い食べ物', '骨を強くする運動', '骨が体を守るしくみ'], answer: 0, why: '第2段落は、赤ちゃんは約300個の骨をもち、成長するとくっついて大人は少なくなる、という話。' }],
     tf: [
       { statement: 'Adults have about 206 bones.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Babies have fewer bones than adults.', answer: false, why: '赤ちゃんのほうが多い（約300個）。' },
