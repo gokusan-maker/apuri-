@@ -397,10 +397,11 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const toggle = lockDirection ? null : (
     <>
       <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
-        {DIRECTIONS.find((d) => d.id === direction)?.label} <span className="mode-change">種類を変える {menu ? '▲' : '▼'}</span>
+        <span className="mode-now">いま：{DIRECTIONS.find((d) => d.id === direction)?.label}</span>
+        <span className="mode-change">🎮 ミニゲームをえらぶ {menu ? '▲' : '▼'}</span>
       </button>
       {menu && (
-        <div className="mode-menu" role="group" aria-label="クイズの種類">
+        <div className="mode-menu" role="group" aria-label="ミニゲームの種類">
           {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}
           {recent.length > 0 && (
             <div className="mode-group mode-recent">

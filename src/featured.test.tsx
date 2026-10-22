@@ -11,9 +11,9 @@ it('今日のおすすめの種類で、その日はじめての正解は +10XP�
   const got: number[] = []
   const words = WORDS.slice(0, 10)
   render(<Quiz words={words} direction="en-ja" onAnswer={(c, xp) => c && got.push(xp)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   expect(screen.getByLabelText('今日のおすすめ')).toBeInTheDocument()
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   for (let i = 0; i < 2; i++) {
     const en = document.querySelector('.quiz .en')!.textContent
     const w = words.find((x) => x.en === en)!

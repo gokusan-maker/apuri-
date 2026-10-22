@@ -681,8 +681,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .tile-built, .tile-pool { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; min-height: 48px; margin: 10px 0; }
 .tile-built { border-bottom: 2px solid var(--accent); padding-bottom: 8px; }
 .tile { width: 40px; height: 44px; border: 1px solid var(--accent); border-radius: 8px; background: var(--bg); color: var(--fg); font-size: 1.3rem; font-weight: 700; text-transform: lowercase; }
-.mode-btn { display: block; width: 100%; margin-bottom: 6px; padding: 8px 12px; border: 1px solid var(--accent); border-radius: 12px; background: var(--bg); color: var(--fg); font-weight: 700; text-align: left; }
-.mode-change { float: right; font-weight: 400; font-size: 0.8rem; color: var(--accent); }
+.mode-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; margin-bottom: 8px; padding: 10px 12px; border: none; border-radius: 14px; background: linear-gradient(135deg, #34d399, #3b82f6); color: #fff; font-weight: 800; text-align: center; box-shadow: 0 3px 10px rgb(59 130 246 / 0.3); }
+.mode-now { font-size: 0.78rem; font-weight: 700; opacity: 0.9; }
+.mode-change { font-size: 1.05rem; }
 .mode-menu { margin-bottom: 8px; text-align: left; }
 .mode-group-name { display: block; margin: 6px 0 4px; padding: 2px 0; font-size: 0.75rem; color: var(--muted); background: none; border: none; cursor: pointer; text-align: left; }
 .mode-menu .direction { flex-wrap: wrap; overflow: visible; }

@@ -9,7 +9,7 @@ beforeEach(() => localStorage.clear()) // 最後に遊んだ種類を持ちこ�
 
 // クイズの種類はメニューから選ぶ
 function pickMode(label: string) {
-  if (!screen.queryByRole('group', { name: 'クイズの種類' })) fireEvent.click(screen.getByText(/種類を変える/))
+  if (!screen.queryByRole('group', { name: 'ミニゲームの種類' })) fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   fireEvent.click(screen.getByText(label))
 }
 
@@ -346,13 +346,13 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
 it('新しく増えた種類は、遊ぶまで NEW マークが出る', () => {
   localStorage.clear()
   render(<Quiz words={WORDS.slice(0, 8)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   const emojiBtn = screen.getByText('😀 絵文字クイズ').closest('button')!
   expect(emojiBtn.querySelector('.new-mark')).not.toBeNull()
   expect(screen.getByText('🎧 リスニング').closest('button')!.querySelector('.new-mark')).toBeNull()
   fireEvent.click(emojiBtn)
-  fireEvent.click(screen.getByText(/種類を変える/))
-  const menu = screen.getByRole('group', { name: 'クイズの種類' })
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
+  const menu = screen.getByRole('group', { name: 'ミニゲームの種類' })
   expect([...menu.querySelectorAll('button')].find((b) => b.textContent?.startsWith('😀 絵文字クイズ'))!.querySelector('.new-mark')).toBeNull()
   expect(JSON.parse(localStorage.getItem('eitan:played-modes')!)).toContain('emoji')
 })
@@ -367,7 +367,7 @@ it('かんたんモードでは選択肢が3つ', () => {
 
 it('クイズの種類メニューに「パズル・ゲーム」グループがある', () => {
   render(<Quiz words={WORDS.slice(0, 8)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   const g = screen.getByText(/パズル・ゲーム/).parentElement!
   expect(g.textContent).toContain('2人対戦')
   expect(g.textContent).toContain('アルファベット')
@@ -376,12 +376,12 @@ it('クイズの種類メニューに「パズル・ゲーム」グループが�
 it('クイズの種類メニューのグループはたためて、たたんだことを覚える', () => {
   localStorage.clear()
   const { unmount } = render(<Quiz words={WORDS.slice(0, 8)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   fireEvent.click(screen.getByText(/パズル・ゲーム/))
   expect(screen.queryByText('👥 2人対戦')).not.toBeInTheDocument()
   unmount()
   render(<Quiz words={WORDS.slice(0, 8)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   expect(screen.getByText(/パズル・ゲーム/).getAttribute('aria-expanded')).toBe('false')
   fireEvent.click(screen.getByText(/パズル・ゲーム/))
   expect(screen.getByText('👥 2人対戦')).toBeInTheDocument()
@@ -412,7 +412,16 @@ it('メニューの上に「さいきん遊んだ種類」が出る', () => {
   pickMode('🔠 ABC順')
   unmount()
   render(<Quiz words={WORDS.slice(0, 20)} />)
-  fireEvent.click(screen.getByText(/種類を変える/))
+  fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
   expect(screen.getByText('↺ 🔠 ABC順')).toBeInTheDocument()
   localStorage.clear()
+})
+
+it('ミニゲームの選択ボタンに、いまのゲーム名と「🎮 ミニゲームをえらぶ」が出る', () => {
+  localStorage.clear()
+  render(<Quiz words={WORDS} />)
+  const btn = screen.getByText(/ミニゲームをえらぶ/).closest('button')!
+  expect(btn.textContent).toMatch(/いま：/)
+  fireEvent.click(btn)
+  expect(screen.getByRole('group', { name: 'ミニゲームの種類' })).toBeInTheDocument()
 })
