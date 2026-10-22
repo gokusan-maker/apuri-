@@ -122,6 +122,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           <p className="grammar-dan">
             🥋 段位：<strong>{danOf(units.filter((u) => record[u.id] === u.questions.length).length).name}</strong>
             {danOf(units.filter((u) => record[u.id] === u.questions.length).length).next !== null && `（次の段位まであと${danOf(units.filter((u) => record[u.id] === u.questions.length).length).next}単元）`}
+            {units.filter((u) => record[u.id] === u.questions.length).length >= 100 && <span className="medal-100"> 💯 100単元クリア記念メダル</span>}
           </p>
         )}
         <p className="stats-note">短い解説を読んで、3問の確認問題にチャレンジ！</p>

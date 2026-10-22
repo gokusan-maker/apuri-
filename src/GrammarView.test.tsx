@@ -421,3 +421,10 @@ it('きのうまちがえた問題があると「きのうの復習」が出る'
   fireEvent.click(screen.getByText(/きのうの復習（きのうまちがえた問題 1問）/))
   expect(screen.getByRole('button', { name: q.choices[q.answer] })).toBeInTheDocument()
 })
+
+it('100単元を全問正解すると記念メダル', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:grammar', JSON.stringify(Object.fromEntries(GRAMMAR.slice(0, 100).map((u) => [u.id, u.questions.length]))))
+  render(<Grammar />)
+  expect(screen.getByText(/💯 100単元クリア記念メダル/)).toBeInTheDocument()
+})
