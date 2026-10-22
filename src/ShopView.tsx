@@ -51,6 +51,8 @@ const SHOP_TABS: { id: ShopTab; label: string }[] = [
 ]
 
 export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
+  const [tryRoom, setTryRoom] = useState<string | null>(null) // 買う前に部屋をためす（プレビューだけ）
+  const shownRoom = tryRoom && !wallet.owned.includes(tryRoom) ? tryRoom : wallet.room
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
@@ -69,8 +71,8 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       </button>
       <h2>ショップ・着せ替え</h2>
       <p className="stats-note">正解1問で🪙1枚。いまのコイン：🪙 {wallet.coins}</p>
-      <div className={`shop-stage${wallet.room ? ` room-${wallet.room}` : ''}`}>
-        <RoomScene room={wallet.room} align="xMaxYMax" />
+      <div className={`shop-stage${shownRoom ? ` room-${shownRoom}` : ''}`}>
+        <RoomScene room={shownRoom} align="xMaxYMax" />
         <div className="shop-preview">
           <MonsterFigure form={form} wear={monster.wear} kind={monster.kind} mood={eating ? 'eat' : 'happy'} />
           {eating && (
@@ -155,9 +157,14 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
                   {using ? 'もとにもどす' : 'この部屋にする'}
                 </button>
               ) : (
-                <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
-                  🪙{priceWith(wallet, r.price)}で買う
-                </button>
+                <>
+                  <button className="list-link" aria-pressed={tryRoom === r.id} onClick={() => setTryRoom(tryRoom === r.id ? null : r.id)}>
+                    {tryRoom === r.id ? '👀 ためし中' : '👀 ためす'}
+                  </button>
+                  <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
+                    🪙{priceWith(wallet, r.price)}で買う
+                  </button>
+                </>
               )}
             </li>
           )

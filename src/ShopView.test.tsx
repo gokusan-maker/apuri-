@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
 import { Shop } from './ShopView'
 import { SNACKS } from './shop'
@@ -49,3 +49,16 @@ it('ショップの部屋のプレビューは、ホームと同じく絵の右�
   expect(container.querySelector('.shop-stage.room-ocean svg.scene-ocean')?.getAttribute('preserveAspectRatio')).toBe('xMaxYMax slice')
 })
 
+
+it('まだ買っていない部屋を「👀 ためす」でプレビューだけ試せる（もう一度押すと元にもどる）', async () => {
+  const { ROOMS } = await import('./shop')
+  const target = ROOMS.find((r) => r.id !== 'ocean')!
+  const onBuy = vi.fn()
+  render(<Shop initialTab="wear" wallet={{ coins: 0, owned: ['ocean'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={onBuy} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  const card = screen.getByText(target.name).closest('li')!
+  fireEvent.click(within(card).getByRole('button', { name: '👀 ためす' }))
+  expect(document.querySelector(`.shop-stage.room-${target.id}`)).not.toBeNull()
+  expect(onBuy).not.toHaveBeenCalled()
+  fireEvent.click(within(card).getByRole('button', { name: '👀 ためし中' }))
+  expect(document.querySelector('.shop-stage.room-ocean')).not.toBeNull()
+})
