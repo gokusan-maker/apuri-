@@ -684,6 +684,21 @@ describe('App', () => {
     expect(c.querySelector('.pet-cheer-text')!.textContent).toMatch(/[ぁ-んァ-ン]/)
   })
 
+  it('タブやチャレンジを押すと中身までスクロールし、チャレンジ中にタブを押すとその画面に切りかわる', async () => {
+    const scroll = vi.fn()
+    Element.prototype.scrollIntoView = scroll
+    render(<App />)
+    fireEvent.click(screen.getByText(/今日のチャレンジ：/))
+    expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
+    await new Promise((r) => requestAnimationFrame(() => r(null)))
+    expect(scroll).toHaveBeenCalled()
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ステージ'))
+    expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
+    await new Promise((r) => requestAnimationFrame(() => r(null)))
+    expect(scroll).toHaveBeenCalledTimes(2)
+    delete (Element.prototype as { scrollIntoView?: unknown }).scrollIntoView
+  })
+
   it('今日のチャレンジ：5問クリアでコインがもらえ、ボタンがクリアずみになる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)

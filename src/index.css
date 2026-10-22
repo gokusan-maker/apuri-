@@ -1369,3 +1369,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .medal-100 { font-weight: 800; color: #b45309; }
 .walk-diary { margin: 4px 0; font-size: 0.8rem; text-align: left; }
 .walk-diary ul { margin: 4px 0; padding-left: 18px; }
+.content-anchor { scroll-margin-top: 8px; }

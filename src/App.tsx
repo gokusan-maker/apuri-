@@ -295,6 +295,9 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  // ホームの上の部分が長いので、タブ・ショップ・チャレンジを開いたら中身のところまでスクロールする（画面外に出て「反応しない」ように見えないように）
+  const contentRef = useRef<HTMLDivElement>(null)
+  const toContent = () => requestAnimationFrame(() => contentRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' }))
   const [showChallenge, setShowChallenge] = useState(false)
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
@@ -780,7 +783,10 @@ function App() {
           monster={monster}
           onRename={(name) => updateMonster((m) => rename(m, name))}
           coins={wallet.coins}
-          onShop={() => setShowShop(true)}
+          onShop={() => {
+            setShowShop(true)
+            toContent()
+          }}
           room={wallet.room}
           title={titleFor(totals.studyDays ?? 0)}
           cheer={cheer}
@@ -890,7 +896,10 @@ function App() {
             else gainXp(p.amount, null)
           }}
         />
-        <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => setShowChallenge(true)}>
+        <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
+            setShowChallenge(true)
+            toContent()
+          }}>
           ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
           {challengeDay === today ? ' ✅クリア' : ''}
           {challengeStreakNow(challengeDay, today) > 1 && <span className="challenge-streak">🔥{challengeStreakNow(challengeDay, today)}日連続</span>}
@@ -924,6 +933,7 @@ function App() {
           </>
         )}
       </header>
+      <div ref={contentRef} className="content-anchor" />
 
       {reviewWeek && lastWeek.count > 0 && onboarded && (
         <p className="weak-banner week-review" role="status">
@@ -1508,6 +1518,8 @@ function App() {
             onClick={() => {
               setMode(t.id)
               setShowShop(false)
+              setShowChallenge(false)
+              toContent()
             }}
           >
             <span className="tab-icon" aria-hidden="true">
