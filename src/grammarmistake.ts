@@ -107,3 +107,11 @@ export const MISTAKES: Record<string, Mistake> = {
 }
 
 export const mistakeOf = (unitId: string): Mistake | undefined => MISTAKES[unitId]
+
+// 確認問題の「もう1問」：よくあるまちがいから「正しい文はどれ？」の2択（正解の位置は単元ごとに変える）
+export function oneMoreOf(unitId: string): { choices: string[]; answer: number; why: string } | null {
+  const m = MISTAKES[unitId]
+  if (!m) return null
+  const first = [...unitId].reduce((a, c) => a + c.charCodeAt(0), 0) % 2 === 0
+  return { choices: first ? [m.right, m.wrong] : [m.wrong, m.right], answer: first ? 0 : 1, why: m.why }
+}

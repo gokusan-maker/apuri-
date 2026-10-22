@@ -455,3 +455,21 @@ it('正解した単元が「今月のチャンピオン単元」に出る', () =
   fireEvent.click(screen.getByText('← 単元一覧'))
   expect(screen.getByText(`🏆 今月のチャンピオン単元：${unit.title}（3問正解）`)).toBeInTheDocument()
 })
+
+it('確認問題のあとに「もう1問」（正しい文はどれ？）がとける', async () => {
+  localStorage.clear()
+  const { MISTAKES } = await import('./grammarmistake')
+  const onAnswer = vi.fn()
+  render(<Grammar onAnswer={onAnswer} />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('➕ もう1問（正しい文はどれ？）'))
+  fireEvent.click(screen.getByRole('button', { name: MISTAKES[unit.id].right }))
+  expect(screen.getByText(/⭕ 正解！/)).toBeInTheDocument()
+  expect(onAnswer).toHaveBeenCalledTimes(4)
+})

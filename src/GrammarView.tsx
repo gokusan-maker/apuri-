@@ -15,6 +15,7 @@ import { GrammarPrint } from './GrammarPrintView'
 import { GrammarDict } from './GrammarDictView'
 import { GrammarDuel } from './GrammarDuelView'
 import { GrammarOdd } from './GrammarOddView'
+import { GrammarOneMore } from './GrammarOneMoreView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
@@ -511,6 +512,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </p>
         )}
         {firstClear && <p className="level-up">🌟 はじめての全問正解！ モンスターに XP+{GRAMMAR_CLEAR_XP}</p>}
+        {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
         <button
           className="list-link"
           onClick={() => {
