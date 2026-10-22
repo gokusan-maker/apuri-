@@ -1911,3 +1911,10 @@ export function dailyExample(day: string) {
 // ランダム1問：全単元の確認問題から1問（r は 0〜1 の乱数）
 const ALL_QUESTIONS = GRAMMAR.flatMap((u) => u.questions)
 export const randomQuestion = (r: number) => ALL_QUESTIONS[Math.min(ALL_QUESTIONS.length - 1, Math.floor(r * ALL_QUESTIONS.length))]
+
+// 次の単元：同じ学年の中で次の単元（学年の最後なら次の学年の最初）。最後の単元や、ふつうの単元でなければ null
+const GRADE_ORDER = GRAMMAR_GRADES.flatMap((g) => GRAMMAR.filter((u) => gradeOf(u.id) === g))
+export function nextUnit(id: string): GrammarUnit | null {
+  const i = GRADE_ORDER.findIndex((u) => u.id === id)
+  return i >= 0 && i + 1 < GRADE_ORDER.length ? GRADE_ORDER[i + 1] : null
+}

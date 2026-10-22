@@ -513,3 +513,19 @@ it('「ランダム1問」で全単元から1問だけとける', () => {
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.getByText('1 / 1 問正解')).toBeInTheDocument()
 })
+
+it('確認問題のあとに「次の単元へ ▶」で次の単元を開ける', async () => {
+  localStorage.clear()
+  const { nextUnit } = await import('./grammar')
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  const nx = nextUnit(unit.id)!
+  fireEvent.click(screen.getByText(`次の単元へ ▶ ${nx.title}`))
+  expect(screen.getByText(nx.points[0])).toBeInTheDocument()
+})
