@@ -1395,3 +1395,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .shop-tabs { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 4px; margin: 10px 0 6px; position: sticky; top: 0; z-index: 2; padding: 4px; border-radius: 12px; background: var(--card); box-shadow: 0 2px 6px rgb(0 0 0 / 0.08); }
 .shop-tabs button { min-width: 0; padding: 8px 2px; border: none; border-radius: 9px; background: transparent; color: var(--muted); font-size: 0.8rem; font-weight: 700; white-space: nowrap; }
 .shop-tabs button.on { background: var(--accent); color: var(--accent-fg); }
+.grammar-grade-fold { margin: 6px 0; border-radius: 12px; background: color-mix(in srgb, var(--accent) 6%, var(--card)); padding: 2px 8px; }
+.grammar-grade-fold > summary { cursor: pointer; padding: 10px 2px; font-weight: 700; }

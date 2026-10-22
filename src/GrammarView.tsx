@@ -114,6 +114,33 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
 
+  const unitItem = (u: GrammarUnit) => (
+    <li key={u.id} className={stampMode ? 'with-fav' : undefined}>
+      {stampMode && (
+        <button
+          className={`grammar-fav${fav.includes(u.id) ? ' on' : ''}`}
+          aria-label={`${u.title}をお気に入り${fav.includes(u.id) ? 'からはずす' : 'にする'}`}
+          aria-pressed={fav.includes(u.id)}
+          onClick={() => {
+            const f = toggleGrammarFav(fav, u.id)
+            setFav(f)
+            saveGrammarFav(f)
+          }}
+        >
+          {fav.includes(u.id) ? '★' : '☆'}
+        </button>
+      )}
+      <button onClick={() => open(u)}>
+        <span>{u.title}</span>
+        <span className="grammar-score">
+          {record[u.id] === undefined ? '未挑戦' : `${record[u.id]} / ${u.questions.length}`}
+          {record[u.id] === u.questions.length ? ' 👑' : ''}
+          {stampMode && unitStars(clears[u.id] ?? 0) > 0 && <span className="unit-stars" aria-label={`レベル ★${unitStars(clears[u.id] ?? 0)}`}>{' ' + '★'.repeat(unitStars(clears[u.id] ?? 0))}</span>}
+        </span>
+      </button>
+    </li>
+  )
+
   if (!unit) {
     return (
       <section className="card grammar">
@@ -385,34 +412,24 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：関係代名詞・have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
         )}
         {stampMode && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
-        <ul className="grammar-list">
-          {favFirst(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword), stampMode ? fav : []).map((u) => (
-            <li key={u.id} className={stampMode ? 'with-fav' : undefined}>
-              {stampMode && (
-                <button
-                  className={`grammar-fav${fav.includes(u.id) ? ' on' : ''}`}
-                  aria-label={`${u.title}をお気に入り${fav.includes(u.id) ? 'からはずす' : 'にする'}`}
-                  aria-pressed={fav.includes(u.id)}
-                  onClick={() => {
-                    const f = toggleGrammarFav(fav, u.id)
-                    setFav(f)
-                    saveGrammarFav(f)
-                  }}
-                >
-                  {fav.includes(u.id) ? '★' : '☆'}
-                </button>
-              )}
-              <button onClick={() => open(u)}>
-                <span>{u.title}</span>
-                <span className="grammar-score">
-                  {record[u.id] === undefined ? '未挑戦' : `${record[u.id]} / ${u.questions.length}`}
-                  {record[u.id] === u.questions.length ? ' 👑' : ''}
-                  {stampMode && unitStars(clears[u.id] ?? 0) > 0 && <span className="unit-stars" aria-label={`レベル ★${unitStars(clears[u.id] ?? 0)}`}>{' ' + '★'.repeat(unitStars(clears[u.id] ?? 0))}</span>}
-                </span>
-              </button>
-            </li>
-          ))}
-        </ul>
+        {stampMode && grade === 'all' && !keyword ? (
+          <>
+            {fav.length > 0 && <ul className="grammar-list">{units.filter((u) => fav.includes(u.id)).map(unitItem)}</ul>}
+            {GRAMMAR_GRADES.map((g) => {
+              const us = units.filter((u) => gradeOf(u.id) === g)
+              return (
+                <details key={g} className="grammar-grade-fold">
+                  <summary>
+                    {g}の単元（全問正解 {us.filter((u) => record[u.id] === u.questions.length).length} / {us.length}）
+                  </summary>
+                  <ul className="grammar-list">{us.map(unitItem)}</ul>
+                </details>
+              )
+            })}
+          </>
+        ) : (
+          <ul className="grammar-list">{favFirst(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword), stampMode ? fav : []).map(unitItem)}</ul>
+        )}
       </section>
     )
   }

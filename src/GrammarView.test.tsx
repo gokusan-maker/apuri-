@@ -206,7 +206,7 @@ it('単元に★をつけると一覧の上に来る', () => {
   const items = [...document.querySelectorAll('.grammar-list li')]
   expect(items[0].textContent).toContain(last.title)
   expect(JSON.parse(localStorage.getItem('eitan:grammar-fav')!)).toEqual([last.id])
-  fireEvent.click(screen.getByRole('button', { name: `${last.title}をお気に入りからはずす` }))
+  fireEvent.click(screen.getAllByRole('button', { name: `${last.title}をお気に入りからはずす` })[0])
   expect(document.querySelectorAll('.grammar-list li')[0].textContent).toContain(GRAMMAR[0].title)
 })
 
@@ -491,4 +491,13 @@ it('文法の一覧に「今日のひとこと例文」が出て、その単元�
   expect(screen.getByText('💬 今日のひとこと例文')).toBeInTheDocument()
   fireEvent.click(screen.getByText(`→ ${ex.unit.title}`))
   expect(screen.getByText(ex.unit.points[0])).toBeInTheDocument()
+})
+
+it('文法の単元一覧は学年ごとに折りたたまれている', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const folds = [...document.querySelectorAll<HTMLDetailsElement>('details.grammar-grade-fold')]
+  expect(folds.map((d) => d.querySelector('summary')!.textContent!.slice(0, 2))).toEqual(['中1', '中2', '中3', '高校'])
+  expect(folds.every((d) => !d.open)).toBe(true)
+  expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(GRAMMAR.length)
 })
