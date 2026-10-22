@@ -1424,3 +1424,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grade-certificate-title { font-size: 1.1rem; font-weight: 800; letter-spacing: 0.3em; }
 .level-verdict { margin: 2px 0 8px; font-weight: 700; color: var(--muted); }
 .level-verdict.pass { color: #b45309; font-size: 1.05rem; }
+.hungry-btn { background: color-mix(in srgb, #fb923c 15%, var(--card)); }

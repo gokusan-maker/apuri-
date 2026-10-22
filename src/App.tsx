@@ -124,11 +124,11 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { SNACKS_PER_DAY, favSnackOf, buy, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
 import { PartnerStatus } from './PartnerStatusView'
 import { Records } from './RecordsView'
-import { Shop } from './ShopView'
+import { Shop, type ShopTab } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
@@ -301,6 +301,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [shopTab, setShopTab] = useState<ShopTab | undefined>(undefined) // ショップを開いたときの売り場
   // タブ・ショップ・チャレンジを開いたら、その画面だけを出していちばん上へ（押したら画面が変わったとわかるように）
   // ホームの「きょうのあそび」をひらいているか（端末ごとに覚える）
   const [playOpen, setPlayOpen] = useState(loadPlayOpen)
@@ -806,6 +807,7 @@ function App() {
             onRename={(name) => updateMonster((m) => rename(m, name))}
             coins={wallet.coins}
             onShop={() => {
+              setShopTab(undefined)
               setShowShop(true)
               toContent()
             }}
@@ -831,6 +833,7 @@ function App() {
           <button
             className="home-gacha-btn"
             onClick={() => {
+              setShopTab(undefined)
               setShowShop(true)
               toContent()
             }}
@@ -841,6 +844,18 @@ function App() {
             </span>
             <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
           </button>
+          {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (
+            <button
+              className="challenge-btn hungry-btn"
+              onClick={() => {
+                setShopTab('snack')
+                setShowShop(true)
+                toContent()
+              }}
+            >
+              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」（おやつをあげる）
+            </button>
+          )}
           {birthdayAge(bday, today) > 0 && (
             <button
               className="challenge-btn birthday-btn"
@@ -1040,6 +1055,7 @@ function App() {
         />
       ) : showShop ? (
         <Shop
+          initialTab={shopTab}
           eventId={seasonEvent?.id}
           wallet={wallet}
           monster={monster}

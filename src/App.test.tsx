@@ -755,6 +755,14 @@ describe('App', () => {
     expect(screen.getAllByText(/トリオボーナス 🪙30/).length).toBeGreaterThan(0)
   })
 
+  it('今日おやつをまだあげていないと「おなかすいた」ボタンが出て、おやつ売り場が開く', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 30 }))
+    render(<App />)
+    fireEvent.click(screen.getByText(/「おなかすいた…」/))
+    expect(screen.getByRole('tab', { name: /おやつ/ })).toHaveAttribute('aria-selected', 'true')
+    expect(screen.getByText(/おやつ（今日あと3回）/)).toBeInTheDocument()
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

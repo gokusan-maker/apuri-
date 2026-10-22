@@ -9,6 +9,7 @@ import type { GachaResult } from './GachaView'
 import { loadOutfits, saveOutfits, FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
+  initialTab?: ShopTab // はじめに開く売り場
   wallet: Wallet
   monster: MonsterState
   onBuy: (id: string) => void
@@ -39,7 +40,7 @@ type Props = {
   favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
-type ShopTab = 'gacha' | 'snack' | 'item' | 'wear'
+export type ShopTab = 'gacha' | 'snack' | 'item' | 'wear'
 const SHOP_TABS: { id: ShopTab; label: string }[] = [
   { id: 'gacha', label: '🎰 ガチャ' },
   { id: 'snack', label: '🍪 おやつ' },
@@ -47,12 +48,12 @@ const SHOP_TABS: { id: ShopTab; label: string }[] = [
   { id: 'item', label: '🎒 アイテム' },
 ]
 
-export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag }: Props) {
+export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
   const [outfits, setOutfits] = useState(loadOutfits)
-  const [tab, setTab] = useState<ShopTab>(onGacha ? 'gacha' : 'snack')
+  const [tab, setTab] = useState<ShopTab>(initialTab ?? (onGacha ? 'gacha' : 'snack'))
   const tabs = SHOP_TABS.filter((t) => t.id !== 'gacha' || onGacha)
   useEffect(() => {
     if (!eating) return
