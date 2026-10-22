@@ -1,4 +1,5 @@
 import { GameTile } from './GameTileView'
+import { isGrammarGame } from './quizgames'
 import { addRiddle, loadRiddleBook } from './riddlebook'
 import { RiddleBook } from './RiddleBookView'
 import { MissedList } from './MissedListView'
@@ -236,6 +237,7 @@ type Props = {
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
   onCards?: () => void // 指定すると、ゲームのタイルの先頭に「単語カード」を出す
   onDirection?: (d: Direction) => void // いま遊んでいるゲームの種類が決まった・かわったとき
+  onGrammarAnswer?: Props['onAnswer'] // 文法のミニゲーム（複数形・be動詞など）の答え：文法のなかまが育つ
 }
 
 export const QUESTION_TIME = 10
@@ -253,7 +255,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -270,7 +272,8 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       claimFeatured(today)
       xp += FEATURED_XP
     }
-    onAnswerProp?.(correct, xp, wordId, source)
+    if (onGrammarAnswer && isGrammarGame(direction)) onGrammarAnswer(correct, xp, wordId, source)
+    else onAnswerProp?.(correct, xp, wordId, source)
   }
   const [played, setPlayed] = useState(loadPlayed)
   const [recent, setRecent] = useState(loadRecent)

@@ -436,3 +436,11 @@ it('ミニゲームの結果画面から「🎮 ほかのミニゲーム」で�
   fireEvent.click(screen.getByText('🎮 ほかのミニゲーム'))
   expect(screen.getByRole('group', { name: 'ミニゲームの種類' })).toBeInTheDocument()
 })
+
+it('単語ゲームの中の文法のミニゲーム（複数形など）の答えは、文法のなかま用のコールバックへ', async () => {
+  const { isGrammarGame } = await import('./quizgames')
+  expect(isGrammarGame('plural')).toBe(true)
+  expect(isGrammarGame('be')).toBe(true)
+  expect(isGrammarGame('en-ja')).toBe(false)
+  expect(isGrammarGame('confusing')).toBe(false)
+})

@@ -1557,3 +1557,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-ally { display: flex; align-items: center; gap: 8px; padding: 6px 10px; margin: 0 0 10px; border-radius: 14px; background: linear-gradient(90deg, #ede9fe, #dbeafe); color: #1e1b4b; text-align: left; }
 .boss-ally-text { display: flex; flex-direction: column; min-width: 0; }
 .boss-ally-text small { font-size: 0.72rem; color: #4338ca; overflow-wrap: anywhere; }
+.boss-ally.ally-grammar { background: linear-gradient(90deg, #dcfce7, #e0e7ff); color: #14532d; }
+.boss-ally.ally-grammar small { color: #166534; }
+.ally-bar { display: block; width: 100%; height: 6px; margin: 2px 0; }

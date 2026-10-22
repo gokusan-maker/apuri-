@@ -127,6 +127,21 @@ describe('App', () => {
     expect(within(row).getByLabelText('成長の星 2').textContent).toContain('★★')
   })
 
+  it('文法チャレンジで正解すると、上に出ている文法のなかまの経験値がふえる', async () => {
+    const { GRAMMAR } = await import('./grammar')
+    localStorage.clear()
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
+    render(<App />)
+    navTo('文法チャレンジ')
+    rnd.mockRestore()
+    const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
+    expect(bar()).toHaveAttribute('aria-valuenow', '0')
+    const q = GRAMMAR[0].questions[0]
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    expect(Number(bar().getAttribute('aria-valuenow'))).toBeGreaterThan(0)
+    expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()

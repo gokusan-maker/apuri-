@@ -109,7 +109,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
-import { BossAlly } from './BossAllyView'
+import { BossAlly, TrackAlly } from './BossAllyView'
 import { loadLongRecord } from './longreading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
@@ -1670,6 +1670,7 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
+          {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'word' && todayQuiz && (
             <p className="weak-banner">
               📋 今日の単語（4択）：{todayWords(today).map((w) => w.en).join('・')}
@@ -1687,6 +1688,7 @@ function App() {
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
+            onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
             grammarQuick={mode === 'grammar'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
