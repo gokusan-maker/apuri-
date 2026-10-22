@@ -3303,6 +3303,98 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The vase is not in the house anymore.', answer: false, why: '今も棚の上にある。' },
     ],
   },
+  {
+    id: 'camels',
+    title: 'How Do Camels Live in the Desert?',
+    level: '中2',
+    paragraphs: [
+      'Camels live in deserts, where it is very hot during the day and there is little water. They are sometimes called "ships of the desert" because people have used them ( A ) carry things for a long time.',
+      'Many people think that camels keep water in their humps, but that is not true. A hump is full ( B ) fat. When a camel cannot find food, it uses this fat for energy.',
+      'Camels can go without water for many days. When they find water, however, they can drink more than 100 liters in a short time. Their bodies are also good ( C ) keeping water, so they do not lose much of it.',
+      'Camels have other ways to live in the desert, too. Their long eyelashes protect their eyes from sand, and they can close their noses ( D ) strong winds blow.',
+    ],
+    ja: [
+      'ラクダは砂漠に住んでいます。砂漠は昼間とても暑く、水がほとんどありません。人々が長いあいだラクダを使って荷物を運んできたので、ラクダは「砂漠の船」とよばれることもあります。',
+      'ラクダはこぶに水をためていると思っている人が多いですが、それは本当ではありません。こぶの中は脂肪でいっぱいです。食べ物が見つからないとき、ラクダはこの脂肪をエネルギーにします。',
+      'ラクダは何日も水を飲まずにすごすことができます。けれども水を見つけると、短い時間で100リットル以上も飲むことができます。また、体が水をたくわえるのが得意なので、あまり水分を失いません。',
+      'ラクダには、砂漠で生きるためのほかの工夫もあります。長いまつげが砂から目を守り、強い風がふくときには鼻をとじることができるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'in', 'on', 'to'], answer: 3, why: 'use A to 〜 で「Aを使って〜する」（to ＋動詞の原形）。' },
+      { id: 'B', choices: ['by', 'for', 'of', 'with'], answer: 2, why: 'be full of 〜 で「〜でいっぱいだ」。' },
+      { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
+      { id: 'D', choices: ['how', 'what', 'when', 'which'], answer: 2, why: 'when ＋文 で「〜するときに」。' },
+    ],
+    tf: [
+      { statement: 'Camels keep water in their humps.', answer: false, why: 'こぶの中は脂肪でいっぱい。' },
+      { statement: 'A camel uses the fat in its hump when it cannot find food.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Camels can drink more than 100 liters of water in a short time.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Camels have short eyelashes.', answer: false, why: '長いまつげがある。' },
+      { statement: 'Camels can close their noses.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'email-cooking-class',
+    title: 'An Email about a Cooking Class',
+    level: '中2（メール）',
+    paragraphs: [
+      'Hi Lucas, How are you? I have some exciting news. Next Saturday, there will be a cooking class ( A ) the community center near my house.',
+      'A cook from Italy will teach us how to make pizza from the beginning. We will make the dough, put on the sauce and cheese, and bake it in a big oven. The class starts at ten and lasts ( B ) two hours.',
+      'It costs 500 yen for students. You need to bring an apron and a towel. If you want to come, please tell me ( C ) Wednesday, because I have to tell the teacher how many people will join.',
+      'I know you like Italian food, so I thought ( D ) you first. I hope we can cook together! Your friend, Aoi',
+    ],
+    ja: [
+      'こんにちは、ルーカス。元気？うれしいお知らせがあるの。今度の土曜日、家の近くの公民館で料理教室があるんだ。',
+      'イタリア出身の料理人が、ピザを一から作る方法を教えてくれるの。生地を作って、ソースとチーズをのせて、大きなオーブンで焼くんだよ。教室は10時に始まって2時間あるよ。',
+      '学生は500円。エプロンとタオルを持ってくる必要があるよ。来たかったら、水曜日までに教えてね。何人参加するか先生に伝えないといけないから。',
+      'ルーカスはイタリア料理が好きだから、まっ先にあなたのことを思いうかべたの。いっしょに料理できたらいいな！あなたの友だち、アオイより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'by', 'for', 'to'], answer: 0, why: '場所「〜で」は at（at the community center）。' },
+      { id: 'B', choices: ['at', 'for', 'in', 'since'], answer: 1, why: 'last for 〜 で「〜のあいだ続く」。' },
+      { id: 'C', choices: ['by', 'for', 'from', 'until'], answer: 0, why: '期限「〜までに」は by。until は「〜までずっと」。' },
+      { id: 'D', choices: ['at', 'for', 'of', 'with'], answer: 2, why: 'think of 〜 で「〜のことを思いうかべる」。' },
+    ],
+    tf: [
+      { statement: 'The cooking class will be held next Saturday.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'A cook from France will teach the class.', answer: false, why: 'イタリア出身の料理人。' },
+      { statement: 'The class lasts for two hours.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Students do not have to pay for the class.', answer: false, why: '学生は500円かかる。' },
+      { statement: 'Aoi wants Lucas to answer by Wednesday.', answer: true, why: '第3段落の内容と合う。' },
+    ],
+  },
+  {
+    id: 'morning-greeting',
+    title: 'Good Morning, Mr. Oda',
+    level: '中2（物語）',
+    paragraphs: [
+      'Every morning on her way to school, Rina walked past a small bread shop. An old man named Mr. Oda worked there. He always looked serious, and he never smiled ( A ) anyone.',
+      'One day, Rina decided to say "Good morning" to him. Mr. Oda looked surprised, but he said nothing. Rina felt a little sad, but she kept saying "Good morning" every day.',
+      'A month later, Rina got sick and could not go to school ( B ) three days. When she walked past the shop again, Mr. Oda came out and said, "Good morning! I was worried about you." He was smiling.',
+      'He told her that his wife had died the year before, and he had felt lonely ( C ) then. "Your greeting made my mornings brighter," he said. He gave her a warm melon bun.',
+      'Now Rina and Mr. Oda talk every morning. Rina learned that a small word can be a big present ( D ) someone.',
+    ],
+    ja: [
+      '毎朝、学校へ行くとちゅう、リナは小さなパン屋さんの前を通りました。そこでは小田さんというおじいさんが働いていました。彼はいつもむずかしい顔をしていて、だれにもほほえみかけることはありませんでした。',
+      'ある日、リナは彼に「おはようございます」と言ってみることにしました。小田さんはおどろいた様子でしたが、何も言いませんでした。リナは少しさびしくなりましたが、毎日「おはようございます」と言い続けました。',
+      '1か月後、リナは病気になって3日間学校を休みました。またお店の前を通ると、小田さんが出てきて「おはよう！心配していたんだよ」と言いました。彼はほほえんでいました。',
+      '小田さんは、前の年に奥さんを亡くし、それからずっとさびしかったのだと話してくれました。「きみのあいさつで、朝が明るくなったんだ」と彼は言いました。そして、温かいメロンパンをくれました。',
+      '今では、リナと小田さんは毎朝おしゃべりをします。リナは、小さなひとことがだれかにとって大きな贈り物になることを学んだのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at', 'for', 'of', 'to'], answer: 0, why: 'smile at 〜 で「〜にほほえみかける」。' },
+      { id: 'B', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '期間の長さ「3日間」は for three days。' },
+      { id: 'C', choices: ['ago', 'before', 'since', 'until'], answer: 2, why: '過去完了 had felt と since then で「それ以来ずっと」。' },
+      { id: 'D', choices: ['at', 'for', 'in', 'with'], answer: 1, why: 'a present for 〜 で「〜への贈り物」。' },
+    ],
+    tf: [
+      { statement: 'Mr. Oda worked at a bread shop.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Mr. Oda said "Good morning" back the first time Rina greeted him.', answer: false, why: '最初は何も言わなかった。' },
+      { statement: 'Rina could not go to school for three days.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Mr. Oda gave Rina a cake.', answer: false, why: 'もらったのはメロンパン。' },
+      { statement: 'Rina and Mr. Oda talk every morning now.', answer: true, why: '第5段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
