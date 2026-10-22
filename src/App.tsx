@@ -1,6 +1,7 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
+import { BIRTHDAY_TICKETS, birthdayAge, loadBirthday, registerBirthday, saveBirthday } from './birthday'
 import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
@@ -289,6 +290,7 @@ function App() {
   const [luckyMonth, setLuckyMonth] = usePersistent(loadLuckyBagMonth, saveLuckyBagMonth)
   const [power, setPower] = useState(() => loadTraining().power)
   const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
+  const [bday, setBday] = usePersistent(() => registerBirthday(loadBirthday(), today, formOf(monster).stage >= 1), saveBirthday)
   const [giftMsg, setGiftMsg] = useState('')
   // 1日の目標を達成したら、次の日のおみやげを予約する
   if (studiedToday >= settings.dailyGoal && giftDay !== today && !giftReady(giftDay, today)) setGiftDay(today)
@@ -826,6 +828,19 @@ function App() {
             🎰 ガチャをひく！
             {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
           </button>
+          {birthdayAge(bday, today) > 0 && (
+            <button
+              className="challenge-btn birthday-btn"
+              onClick={() => {
+                const age = birthdayAge(bday, today)
+                setBday({ ...bday, lastYear: Number(today.slice(0, 4)) })
+                setWallet((w) => addTicket(w))
+                pushToast([{ id: 'birthday', text: `🎂 ${monster.name ?? formOf(monster).name}、${age}さいのおたんじょう日おめでとう！ 🎟ガチャチケットを${BIRTHDAY_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+              }}
+            >
+              🎂 今日は{monster.name ?? formOf(monster).name}のおたんじょう日！（{birthdayAge(bday, today)}さい）お祝いする
+            </button>
+          )}
           <p className="stats">
             今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
           </p>

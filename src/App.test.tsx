@@ -705,6 +705,17 @@ describe('App', () => {
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
+  it('相棒のおたんじょう日にお祝いするとガチャチケットがもらえる（1年に1回）', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 30 }))
+    localStorage.setItem('eitan:partner-birthday', JSON.stringify({ day: '2025-' + dayKey().slice(5), lastYear: 0 }))
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByText(/おたんじょう日！（1さい）/))
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
+    expect(screen.queryByText(/おたんじょう日！（1さい）/)).not.toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:partner-birthday')!).lastYear).toBe(Number(dayKey().slice(0, 4)))
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))

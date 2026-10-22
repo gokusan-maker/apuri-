@@ -1380,3 +1380,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .grade-rate-bar { height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
 .grade-rate-bar > span { display: block; height: 100%; background: #22c55e; }
 .grade-rate-num { text-align: right; color: var(--muted); }
+.birthday-btn { background: linear-gradient(135deg, #fde68a, #fbcfe8); color: #9d174d; font-weight: 800; }
