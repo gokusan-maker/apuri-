@@ -1541,7 +1541,11 @@ function App() {
         <>
           <TodayTasks
             today={today}
-            onTrio={(xp, ticket) => {
+            onTrio={(xp, ticket, week) => {
+              if (week) {
+                setWallet((w) => addTicket(addTicket(w)))
+                pushToast([{ id: 'trio-week', text: '🎉 トリオボーナス7日連続！ 特別に🎟2枚', counter: 'answers', target: 0 }])
+              }
               setTrioDance(true)
               window.setTimeout(() => setTrioDance(false), 3000)
               gainXp(xp, null)

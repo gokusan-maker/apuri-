@@ -59,6 +59,7 @@ export const saveTrioDay = (day: string) => save(TRIO_KEY, day)
 
 // トリオボーナスの連続日数（3日続くごとに🎟ガチャチケット）
 export const TRIO_TICKET_DAYS = 3
+export const TRIO_WEEK_DAYS = 7 // 7日連続で特別に🎟2枚
 const TRIO_STREAK_KEY = 'eitan:trio-streak'
 type TrioStreak = { last: string; count: number }
 function prevDay(day: string): string {
@@ -75,16 +76,16 @@ export function loadTrioStreak(): TrioStreak {
   }
 }
 // 今日トリオボーナスを受け取ったときの連続日数。ticket は3日ごとのチケット
-export function claimTrioStreak(day: string): { count: number; ticket: boolean } {
+export function claimTrioStreak(day: string): { count: number; ticket: boolean; week: boolean } {
   const s = loadTrioStreak()
-  if (s.last === day) return { count: s.count, ticket: false }
+  if (s.last === day) return { count: s.count, ticket: false, week: false }
   const count = s.last === prevDay(day) ? s.count + 1 : 1
   try {
     localStorage.setItem(TRIO_STREAK_KEY, JSON.stringify({ last: day, count }))
   } catch {
     // 保存できなくても続ける
   }
-  return { count, ticket: count % TRIO_TICKET_DAYS === 0 }
+  return { count, ticket: count % TRIO_TICKET_DAYS === 0, week: count % TRIO_WEEK_DAYS === 0 }
 }
 
 // 今日の課題を1つクリアするごとに、その課題のなかま（単語・文法・読解）にあげる XP

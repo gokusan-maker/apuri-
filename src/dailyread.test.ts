@@ -34,12 +34,22 @@ describe('トリオボーナスの連続日数', () => {
   it('続けて受け取ると日数がのび、3日ごとにチケット。1日あくと1にもどる', async () => {
     const { claimTrioStreak } = await import('./dailyread')
     localStorage.clear()
-    expect(claimTrioStreak('2026-10-20')).toEqual({ count: 1, ticket: false })
-    expect(claimTrioStreak('2026-10-21')).toEqual({ count: 2, ticket: false })
-    expect(claimTrioStreak('2026-10-21')).toEqual({ count: 2, ticket: false }) // 同じ日は数えない
-    expect(claimTrioStreak('2026-10-22')).toEqual({ count: 3, ticket: true })
-    expect(claimTrioStreak('2026-10-24')).toEqual({ count: 1, ticket: false })
-    expect(claimTrioStreak('2026-10-31')).toEqual({ count: 1, ticket: false })
-    expect(claimTrioStreak('2026-11-01')).toEqual({ count: 2, ticket: false }) // 月をまたいでもつながる
+    expect(claimTrioStreak('2026-10-20')).toEqual({ count: 1, ticket: false, week: false })
+    expect(claimTrioStreak('2026-10-21')).toEqual({ count: 2, ticket: false, week: false })
+    expect(claimTrioStreak('2026-10-21')).toEqual({ count: 2, ticket: false, week: false }) // 同じ日は数えない
+    expect(claimTrioStreak('2026-10-22')).toEqual({ count: 3, ticket: true, week: false })
+    expect(claimTrioStreak('2026-10-24')).toEqual({ count: 1, ticket: false, week: false })
+    expect(claimTrioStreak('2026-10-31')).toEqual({ count: 1, ticket: false, week: false })
+    expect(claimTrioStreak('2026-11-01')).toEqual({ count: 2, ticket: false, week: false }) // 月をまたいでもつながる
+  })
+})
+
+describe('トリオボーナス7日連続', () => {
+  it('7日目は特別ボーナス', async () => {
+    const { claimTrioStreak } = await import('./dailyread')
+    localStorage.clear()
+    let r = claimTrioStreak('2026-10-01')
+    for (let d = 2; d <= 7; d++) r = claimTrioStreak(`2026-10-0${d}`)
+    expect(r).toEqual({ count: 7, ticket: false, week: true })
   })
 })

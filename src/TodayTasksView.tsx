@@ -5,7 +5,7 @@ import { claimTrioStreak, dailyShort, loadDailyShortDay, loadTodayWordsDay, load
 type Props = {
   today: string
   onGo: (where: 'word' | 'grammar' | 'reading') => void
-  onTrio?: (xp: number, ticket: boolean) => void // 3つ全部クリアのトリオボーナスを受け取った（ticket：3日連続の🎟）
+  onTrio?: (xp: number, ticket: boolean, week?: boolean) => void // 3つ全部クリアのトリオボーナスを受け取った（ticket：3日連続の🎟）
 }
 
 // ホームの「今日の課題」：今日の単語（4択）・今日の文法・今日の読解（今日の単語が出てくるかんたんな短い英文）
@@ -46,7 +46,8 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
             onClick={() => {
               saveTrioDay(today)
               setTrio(true)
-              onTrio?.(TRIO_XP, claimTrioStreak(today).ticket)
+              const st = claimTrioStreak(today)
+              onTrio?.(TRIO_XP, st.ticket, st.week)
             }}
           >
             🎁 3つクリア！ トリオボーナスを受け取る（3体に +{TRIO_XP}XP）
