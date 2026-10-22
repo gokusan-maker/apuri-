@@ -4120,6 +4120,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['how', 'what', 'where', 'which'], answer: 1, why: 'what to do で「何をすればよいか」。' },
       { id: 'D', choices: ['for', 'of', 'that', 'to'], answer: 3, why: "it's my turn to 〜 で「わたしが〜する番だ」。" },
     ],
+    underline: { phrase: 'walked over', choices: ['歩いて近づいてきた', '歩いて通りすぎた', '歩いて帰った', 'たおれた'], answer: 0, why: 'walk over は「（こちらへ）歩いてやってくる」。このあと「手伝ってあげよう」と言っている。' },
     tf: [
       { statement: 'Taiga went to the park with his little sister.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The kite got caught in a tall tree.', answer: true, why: '第2段落の内容と合う。' },
@@ -4196,6 +4197,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['taste', 'tastes', 'tasting', 'to taste'], answer: 0, why: 'make ＋人・もの＋動詞の原形 で「〜に…させる」。' },
       { id: 'D', choices: ['at', 'for', 'in', 'since'], answer: 1, why: 'wait for ＋時間 で「〜のあいだ待つ」。' },
     ],
+    underline: { phrase: 'a secret ingredient', choices: ['かくし味', 'ひみつのレシピ本', '高いお肉', 'あまいおかし'], answer: 0, why: 'ingredient は「材料」。secret ingredient は「ひみつの材料」＝かくし味。' },
     tf: [
       { statement: 'Akira helps his mother make curry.', answer: true, why: 'お母さんの最初の発言と合う。' },
       { statement: 'Akira cuts the vegetables into big pieces.', answer: false, why: '小さく（親指くらいに）切る。' },
@@ -4226,6 +4228,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['for', 'of', 'that', 'to'], answer: 3, why: 'hard to 〜 で「〜しにくい」（make them hard to see）。' },
       { id: 'D', choices: ['what', 'which', 'who', 'whose'], answer: 2, why: '人（a scientist）を説明する関係代名詞は who。' },
     ],
+    underline: { phrase: 'could not believe her eyes', choices: ['とてもおどろいた', '目が見えなかった', 'ねむくなった', 'こわくなった'], answer: 0, why: 'can\'t believe one\'s eyes は「自分の目が信じられない（ほどおどろく）」。直後に空が星でいっぱいだったとある。' },
     tf: [
       { statement: 'Mei can see many stars in the city.', answer: false, why: '星は少ししか見えない。' },
       { statement: 'Mei visited her grandfather last summer.', answer: true, why: '第2段落の内容と合う。' },
