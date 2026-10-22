@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react'
-import { expect, it } from 'vitest'
+import { expect, it, vi } from 'vitest'
 import { GRAMMAR } from './grammar'
 import { GrammarCards } from './GrammarCardsView'
 
@@ -37,4 +37,19 @@ it('全部覚えると「まだ」だけの山札は空になる', () => {
   render(<GrammarCards units={GRAMMAR.slice(0, 2)} onBack={() => {}} />)
   fireEvent.click(screen.getByText('🔁 「まだ」のカードだけめくる'))
   expect(screen.getByText('🎉 全部のカードを覚えた！')).toBeInTheDocument()
+})
+
+it('自動読み上げをオンにすると、めくったときに例文を読む', async () => {
+  localStorage.clear()
+  const speech = await import('./speech')
+  const sp = vi.spyOn(speech, 'speak').mockImplementation(() => {})
+  render(<GrammarCards units={GRAMMAR.slice(0, 2)} onBack={() => {}} />)
+  fireEvent.click(screen.getByLabelText('カードをめくる'))
+  expect(sp).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByLabelText('カードの表を見る'))
+  fireEvent.click(screen.getByLabelText(/めくったら例文を読み上げる/))
+  fireEvent.click(screen.getByLabelText('カードをめくる'))
+  expect(sp).toHaveBeenCalledWith(GRAMMAR[0].examples[0].en)
+  expect(localStorage.getItem('eitan:cards-auto-read')).toBe('1')
+  sp.mockRestore()
 })

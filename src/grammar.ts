@@ -1645,3 +1645,20 @@ export function studyGrammarDay(d: GrammarDays, today: string): { days: GrammarD
 
 // 問題がのっている単元（まとめテストなどから解説へもどるため）
 export const unitOfQuestion = (q: GrammarQuestion) => GRAMMAR.find((u) => u.questions.includes(q))
+
+// 要点カードの自動読み上げ（めくったら例文を読む）
+const AUTO_READ_KEY = 'eitan:cards-auto-read'
+export function loadAutoRead(): boolean {
+  try {
+    return localStorage.getItem(AUTO_READ_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+export function saveAutoRead(on: boolean): void {
+  try {
+    localStorage.setItem(AUTO_READ_KEY, on ? '1' : '0')
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

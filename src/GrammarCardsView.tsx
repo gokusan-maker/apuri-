@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { loadCardsKnown, markKnown, saveCardsKnown, type GrammarUnit } from './grammar'
+import { loadAutoRead, loadCardsKnown, markKnown, saveAutoRead, saveCardsKnown, type GrammarUnit } from './grammar'
 import { speak } from './speech'
 
 type Props = { units: GrammarUnit[]; onBack: () => void }
@@ -10,6 +10,7 @@ export function GrammarCards({ units: all, onBack }: Props) {
   const [flipped, setFlipped] = useState(false)
   const [known, setKnown] = useState(loadCardsKnown)
   const [onlyNew, setOnlyNew] = useState(false)
+  const [autoRead, setAutoRead] = useState(loadAutoRead)
   const [deck, setDeck] = useState(all) // 「まだだけ」にしたときの山札（めくっている間は変えない）
   const units = onlyNew ? deck : all
   const u = units[Math.min(i, units.length - 1)]
@@ -56,7 +57,23 @@ export function GrammarCards({ units: all, onBack }: Props) {
       <p className="progress">
         🃏 要点カード {Math.min(i, units.length - 1) + 1} / {units.length}　⭕ 覚えた {knownCount} / {all.length}
       </p>
-      <button className={`gcard${flipped ? ' back' : ''}`} onClick={() => setFlipped(!flipped)} aria-label={flipped ? 'カードの表を見る' : 'カードをめくる'}>
+      <label className="long-instant">
+        <input
+          type="checkbox"
+          checked={autoRead}
+          onChange={(e) => {
+            setAutoRead(e.target.checked)
+            saveAutoRead(e.target.checked)
+          }}
+        />{' '}
+        🔊 めくったら例文を読み上げる
+      </label>
+      <button
+        className={`gcard${flipped ? ' back' : ''}`}
+        onClick={() => {
+          if (!flipped && autoRead && u.examples[0]) speak(u.examples[0].en)
+          setFlipped(!flipped)
+        }} aria-label={flipped ? 'カードの表を見る' : 'カードをめくる'}>
         {flipped ? (
           <span className="gcard-body">
             {u.points.map((p) => (
