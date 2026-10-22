@@ -17,6 +17,7 @@ import { GrammarDuel } from './GrammarDuelView'
 import { GrammarOdd } from './GrammarOddView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
+import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
@@ -55,6 +56,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [duel, setDuel] = useState(false)
   const [odd, setOdd] = useState(false)
   const [note, setNote] = useState(loadNotebook)
+  const [champ, setChamp] = useState(loadGrammarChamp)
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gDays, setGDays] = useState(loadGrammarDays)
@@ -277,6 +279,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             }}
           >
             📓 まちがいノート（{notebookQuestions(note).length}問）
+          </button>
+        )}
+        {stampMode && champOf(champ, today.slice(0, 7)) && (
+          <button className="list-link grammar-champ" onClick={() => open(champOf(champ, today.slice(0, 7))!.unit)}>
+            🏆 今月のチャンピオン単元：{champOf(champ, today.slice(0, 7))!.unit.title}（{champOf(champ, today.slice(0, 7))!.count}問正解）
           </button>
         )}
         {stampMode && weakRanking(note).length > 0 && (
@@ -540,6 +547,12 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
       }
     }
     if (stampMode && !ok) setWrongDays(markWrongDay(q.sentence, today))
+    const realUnit = unitOfQuestion(q)
+    if (ok && realUnit) {
+      const c = countChamp(champ, realUnit.id, today.slice(0, 7))
+      setChamp(c)
+      saveGrammarChamp(c)
+    }
     if (stampMode) {
       const nb = noteAfter(note, q.sentence, ok)
       if (nb.length !== note.length || nb.some((x, i) => x !== note[i])) {

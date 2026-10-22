@@ -441,3 +441,17 @@ it('3問連続正解すると相棒がひとことほめる', () => {
     fireEvent.click(screen.getByText('次へ'))
   })
 })
+
+it('正解した単元が「今月のチャンピオン単元」に出る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText(`🏆 今月のチャンピオン単元：${unit.title}（3問正解）`)).toBeInTheDocument()
+})
