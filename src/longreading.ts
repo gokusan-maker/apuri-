@@ -4390,6 +4390,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Scientists know everything about yawning now.', answer: false, why: 'わかっていないことがたくさんある。' },
     ],
   },
+  {
+    id: 'thunder-lightning',
+    title: 'Lightning and Thunder',
+    level: '中2（説明文）',
+    paragraphs: [
+      'During a storm, you first see a flash of lightning, and a few seconds later you hear thunder. Have you ever wondered ( A ) the sound always comes after the light?',
+      'Lightning is a huge spark of electricity. It makes the air around it very hot, much hotter than the surface of the sun. The hot air spreads out very quickly, and this makes a loud sound. That sound is thunder.',
+      'Light travels much faster ( B ) sound. So we see the flash almost at once, but the sound needs more time to reach us. You can use this to guess how far away the storm is. Count the seconds between the flash and the thunder, and divide the number by three. The answer is about the distance in kilometers.',
+      'If you hear thunder, the storm is close enough to be dangerous. Go inside a building or a car, and stay away from tall trees. It is better to be safe ( C ) sorry!',
+    ],
+    ja: [
+      'あらしのとき、まず稲光が見えて、数秒後に雷の音が聞こえます。なぜいつも光のあとに音が来るのか、ふしぎに思ったことはありますか。',
+      '稲妻は電気の巨大な火花です。それはまわりの空気をとても熱くします。太陽の表面よりもずっと熱くなるのです。熱くなった空気はとても速く広がり、それが大きな音を出します。その音が雷鳴です。',
+      '光は音よりずっと速く進みます。だから光はほとんどすぐに見えますが、音は私たちのところに届くまでにもっと時間が必要です。これを使って、あらしがどのくらい遠くにあるかを推測できます。光ってから雷が鳴るまでの秒数を数えて、その数を3でわってください。その答えが、だいたいのきょり（キロメートル）です。',
+      '雷の音が聞こえたら、あらしは危険なほど近くにいます。建物や車の中に入って、高い木からはなれてください。あとで後悔するより、安全でいるほうがいいのです！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'who', 'which'], answer: 0, why: '「なぜ音がいつも光のあとに来るのか」なので why。' },
+      { id: 'B', choices: ['than', 'as', 'then', 'for'], answer: 0, why: '比較級 faster のあとは than。' },
+      { id: 'C', choices: ['than', 'as', 'or', 'so'], answer: 0, why: 'better safe than sorry「後悔するより安全なほうがいい」。better 〜 than … の形。' },
+    ],
+    underline: { phrase: 'divide the number by three', choices: ['その数を3でわる', 'その数に3をかける', 'その数に3をたす', 'その数から3をひく'], answer: 0, why: 'divide A by B は「A を B でわる」。' },
+    tf: [
+      { statement: 'We usually hear thunder before we see lightning.', answer: false, why: '光が先に見え、あとで音が聞こえる。' },
+      { statement: 'Lightning makes the air very hot.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Sound travels faster than light.', answer: false, why: '光のほうがずっと速い。' },
+      { statement: 'If the thunder comes 6 seconds after the flash, the storm is about 2 kilometers away.', answer: true, why: '6 ÷ 3 ＝ 2 キロメートル。' },
+      { statement: 'It is safe to stand under a tall tree during a storm.', answer: false, why: '高い木からはなれるように書いてある。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
