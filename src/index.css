@@ -1357,3 +1357,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .boss-btn.night-boss { background: linear-gradient(90deg, #1e3a8a, #312e81); color: #fde047; }
 .grammar-dan { margin: 2px 0; font-size: 0.85rem; }
 .long-key { margin: 2px 0 0; padding: 4px 8px; border-left: 3px solid #f59e0b; font-size: 0.8rem; text-align: left; }
+.outfits { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; margin: 4px 0 8px; }
+.outfit { display: inline-flex; align-items: center; }

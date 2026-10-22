@@ -169,3 +169,23 @@ export function toggleWear(wear: string | undefined, id: string): string | undef
   const next = list.includes(id) ? list.filter((x) => x !== id) : [...list.filter((x) => slotOf(x) !== slotOf(id)), id]
   return next.length ? next.join(',') : undefined
 }
+
+// 着せかえコーデ保存：いまの着せかえを3つまで保存して切りかえる（wear の文字列そのまま）
+export const OUTFIT_SLOTS = 3
+const OUTFIT_KEY = 'eitan:outfits'
+export function loadOutfits(): (string | null)[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(OUTFIT_KEY) ?? '[]') as unknown
+    const a = Array.isArray(v) ? v : []
+    return Array.from({ length: OUTFIT_SLOTS }, (_, i) => (typeof a[i] === 'string' ? (a[i] as string) : null))
+  } catch {
+    return Array(OUTFIT_SLOTS).fill(null)
+  }
+}
+export function saveOutfits(o: (string | null)[]): void {
+  try {
+    localStorage.setItem(OUTFIT_KEY, JSON.stringify(o))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

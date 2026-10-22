@@ -957,6 +957,7 @@ function App() {
             if (next) setWallet(next)
           }}
           onWear={(id) => updateMonster((m) => ({ ...m, wear: id ? toggleWear(m.wear, id) : undefined }))}
+          onSetWear={(wear) => updateMonster((m) => ({ ...m, wear }))}
           onClose={() => setShowShop(false)}
           snacksLeft={snacksLeft(snacks, today)}
           onRoom={(id) => setWallet((w) => ({ ...w, room: id }))}

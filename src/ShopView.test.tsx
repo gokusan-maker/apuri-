@@ -17,3 +17,14 @@ it('ショップの見本は今の部屋の中に相棒が立つ', () => {
   render(<Shop wallet={{ coins: 100, owned: ['ocean'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
   expect(document.querySelector('.shop-stage.room-ocean .scene-ocean')).not.toBeNull()
 })
+
+it('いまの着せかえをコーデに保存して、あとで切りかえられる', () => {
+  localStorage.clear()
+  const onSetWear = vi.fn()
+  render(<Shop wallet={{ coins: 100, owned: ['ribbon'] }} monster={{ xp: 200, wear: 'ribbon' }} onBuy={() => {}} onWear={() => {}} onSetWear={onSetWear} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(screen.getByText('👗 コーデ1（空き）')).toBeDisabled()
+  fireEvent.click(screen.getByLabelText('いまの着せかえをコーデ1に保存'))
+  fireEvent.click(screen.getByText('👗 コーデ1'))
+  expect(onSetWear).toHaveBeenCalledWith('ribbon')
+  expect(JSON.parse(localStorage.getItem('eitan:outfits')!)[0]).toBe('ribbon')
+})

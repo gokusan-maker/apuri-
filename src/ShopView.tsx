@@ -6,13 +6,14 @@ import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
 import { pityLeft } from './gacha'
 import type { GachaResult } from './GachaView'
-import { FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
+import { loadOutfits, saveOutfits, FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
   wallet: Wallet
   monster: MonsterState
   onBuy: (id: string) => void
   onWear: (id: string | undefined) => void
+  onSetWear?: (wear: string | undefined) => void // 保存したコーデに切りかえる
   onClose: () => void
   snacksLeft: number
   onEat: (id: string) => void
@@ -37,10 +38,11 @@ type Props = {
   favSnack?: string // 相棒のきょうの好物（おやつのid）
 }
 
-export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, luckyBag, onLuckyBag }: Props) {
+export function Shop({ wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, luckyBag, onLuckyBag }: Props) {
   const form = formOf(monster)
   const canWear = form.stage > 0
   const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
+  const [outfits, setOutfits] = useState(loadOutfits)
   useEffect(() => {
     if (!eating) return
     const t = window.setTimeout(() => setEating(null), 1800)
@@ -132,6 +134,28 @@ export function Shop({ wallet, monster, onBuy, onWear, onClose, snacksLeft, onEa
       {(wallet.coupons ?? 0) > 0 && <p className="weekend">🎟 割引券 {wallet.coupons}枚：次の着せ替え・部屋が半額！</p>}
       <h3 className="shop-h">着せ替え</h3>
       {!canWear && <p className="stats-note">タマゴがかえると着せ替えできるよ。</p>}
+      {canWear && onSetWear && (
+        <div className="outfits" role="group" aria-label="コーデ保存">
+          {outfits.map((o, i) => (
+            <span key={i} className="outfit">
+              <button className="list-link" disabled={o === null} onClick={() => onSetWear(o || undefined)}>
+                👗 コーデ{i + 1}{o === null ? '（空き）' : o ? '' : '（なし）'}
+              </button>
+              <button
+                className="list-link"
+                aria-label={`いまの着せかえをコーデ${i + 1}に保存`}
+                onClick={() => {
+                  const next = outfits.map((x, k) => (k === i ? (monster.wear ?? '') : x))
+                  setOutfits(next)
+                  saveOutfits(next)
+                }}
+              >
+                💾
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
       <ul className="badge-grid">
         {shopItems(eventId, wallet.owned).map((it) => {
           const owned = wallet.owned.includes(it.id)
