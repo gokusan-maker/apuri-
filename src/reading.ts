@@ -1048,14 +1048,14 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
-    id: 'school-garden',
-    title: 'Tomatoes in the School Garden',
-    text: 'Our class has a small garden behind the school. In May we planted tomatoes. We gave them water every morning. In July the tomatoes turned red, and we ate them for lunch. They were sweet!',
-    ja: '私たちのクラスには学校の裏に小さな畑があります。5月にトマトを植えました。毎朝水をあげました。7月にトマトが赤くなり、お昼に食べました。あまかったです！',
+    id: 'calligraphy',
+    title: 'The Calligraphy Class',
+    text: 'Every Thursday I go to a calligraphy class near my school. Our teacher is eighty years old, but her hand never shakes. Today I wrote the word for "dream" ten times. The last one was the best, and my teacher gave it a red circle.',
+    ja: '毎週木曜日、私は学校の近くの書道教室に通っています。先生は80さいですが、手が少しもふるえません。今日は「夢」という字を10回書きました。最後の1枚がいちばん上手で、先生が赤い丸をつけてくれました。',
     questions: [
-      { q: '畑はどこにある？', choices: ['学校の裏', '駅の前', '家の近く'], answer: 0 },
-      { q: 'トマトを植えたのは何月？', choices: ['4月', '5月', '7月'], answer: 1 },
-      { q: 'トマトはどんな味だった？', choices: ['あまかった', 'すっぱかった', 'にがかった'], answer: 0 },
+      { q: '書道教室は何曜日？', choices: ['月曜日', '木曜日', '土曜日'], answer: 1 },
+      { q: '今日は何という字を書いた？', choices: ['夢', '空', '花'], answer: 0 },
+      { q: 'いちばん上手だったのは？', choices: ['1枚目', '5枚目', '最後の1枚'], answer: 2 },
     ],
   },
   {
@@ -1092,14 +1092,14 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
-    id: 'paper-plane',
-    title: 'The Paper Plane Contest',
-    text: "Our class had a paper plane contest on Friday. Everyone made a plane and threw it in the gym. My plane flew only three meters, but Yuki's plane flew twenty meters and won. She showed me how to fold the wings, and now my plane flies much farther.",
-    ja: '金曜日、私たちのクラスで紙飛行機コンテストがありました。みんなで飛行機を作って体育館で飛ばしました。私の飛行機は3メートルしか飛びませんでしたが、ユキの飛行機は20メートル飛んで優勝しました。ユキがつばさのおり方を教えてくれたので、今では私の飛行機もずっと遠くまで飛びます。',
+    id: 'spelling-bee',
+    title: 'The Spelling Bee',
+    text: 'Last Friday our English class had a spelling bee. Our teacher said a word, and we spelled it out loud. I spelled "Wednesday" and "beautiful" correctly, but I missed "February." I came in third place. Next time I want to win!',
+    ja: 'この前の金曜日、英語の授業でスペリング大会がありました。先生が単語を言って、私たちはそのつづりを声に出して言いました。私は「Wednesday」と「beautiful」は正しく言えましたが、「February」をまちがえました。私は3位でした。次は優勝したいです！',
     questions: [
-      { q: 'コンテストはどこで行われた？', choices: ['体育館', '校庭', '教室'], answer: 0 },
-      { q: '筆者の飛行機は何メートル飛んだ？', choices: ['3メートル', '10メートル', '20メートル'], answer: 0 },
-      { q: 'ユキは何を教えてくれた？', choices: ['つばさのおり方', '投げ方', '紙の選び方'], answer: 0 },
+      { q: '大会はいつだった？', choices: ['この前の金曜日', 'この前の月曜日', '今日'], answer: 0 },
+      { q: 'まちがえた単語は？', choices: ['Wednesday', 'beautiful', 'February'], answer: 2 },
+      { q: '筆者は何位だった？', choices: ['1位', '2位', '3位'], answer: 2 },
     ],
   },
   {
@@ -1111,6 +1111,39 @@ export const PASSAGES: Passage[] = [
       { q: '料理部はいつ活動する？', choices: ['毎週水曜日', '毎週金曜日', '毎日'], answer: 0 },
       { q: '先週は何を作った？', choices: ['カレー', 'スープ', 'ケーキ'], answer: 0 },
       { q: '先週の失敗は何？', choices: ['塩を入れすぎた', 'こがした', '時間におくれた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'aquarium-trip',
+    title: 'A Trip to the Aquarium',
+    text: 'On Sunday my family went to the aquarium by train. The biggest tank had sharks, rays, and a huge turtle. At noon we watched the dolphins jump high out of the water. My favorite was a tiny seahorse that held a plant with its tail.',
+    ja: '日曜日、家族で電車に乗って水族館に行きました。いちばん大きな水そうには、サメやエイ、大きなカメがいました。お昼にはイルカが水から高くジャンプするのを見ました。私のお気に入りは、しっぽで海そうにつかまっている小さなタツノオトシゴでした。',
+    questions: [
+      { q: '何で水族館に行った？', choices: ['電車', 'バス', '車'], answer: 0 },
+      { q: 'お昼に何を見た？', choices: ['イルカのジャンプ', 'ペンギンの行進', 'アシカのショー'], answer: 0 },
+      { q: '筆者のお気に入りは？', choices: ['サメ', 'カメ', 'タツノオトシゴ'], answer: 2 },
+    ],
+  },
+  {
+    id: 'juggling',
+    title: 'Learning to Juggle',
+    text: 'My uncle can juggle five balls at once. During the summer vacation, he taught me how to juggle three. At first the balls fell on the floor again and again. After two weeks of practice, I could keep them in the air for one minute.',
+    ja: 'おじは一度にボールを5つジャグリングできます。夏休みに、おじが3つのジャグリングのやり方を教えてくれました。はじめはボールが何度も何度も床に落ちました。2週間練習したら、1分間ボールを空中にあげ続けられるようになりました。',
+    questions: [
+      { q: 'おじは一度にいくつのボールでジャグリングできる？', choices: ['3つ', '4つ', '5つ'], answer: 2 },
+      { q: 'いつ教えてもらった？', choices: ['冬休み', '夏休み', '春休み'], answer: 1 },
+      { q: '2週間後、どうなった？', choices: ['1分間続けられた', 'あきらめた', 'ボールが5つできた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'sister-first-day',
+    title: "My Sister's First Day",
+    text: 'Today was my little sister\'s first day of elementary school. She wore a new red bag that was almost as big as she was. In the morning she was nervous and held my hand all the way to the gate. When I picked her up, she said, "I made two friends!"',
+    ja: '今日は妹の小学校の初日でした。妹は、自分とほとんど同じくらい大きな、新しい赤いランドセルをせおっていました。朝はきんちょうしていて、校門までずっと私の手をにぎっていました。むかえに行くと、妹は「友だちが2人できたよ！」と言いました。',
+    questions: [
+      { q: '今日は何の日？', choices: ['妹の小学校の初日', '妹のたん生日', '運動会'], answer: 0 },
+      { q: '朝、妹はどうだった？', choices: ['きんちょうしていた', '泣いていた', 'おこっていた'], answer: 0 },
+      { q: '妹は友だちが何人できた？', choices: ['1人', '2人', '3人'], answer: 1 },
     ],
   },
 ]
