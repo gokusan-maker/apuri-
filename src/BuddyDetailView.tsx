@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { loadBuddyDays, ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
+import { evoDayLabel, loadEvoLog, loadBuddyDays, ATTR_LABEL, BUDDY_FORMS, BUDDY_SPECIES, buddyLevel, buddyName, formName, isUnlocked, speciesOf, TRACK_LABEL, type Buddies, type BuddyBox, type Track } from './buddies'
 
 type Props = {
   buddies: Buddies
@@ -14,6 +14,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
   const [editing, setEditing] = useState<Track | null>(null)
   const [draft, setDraft] = useState('')
   const [days] = useState(loadBuddyDays)
+  const [evoLog] = useState(loadEvoLog)
   return (
     <div className="buddy-detail">
       {(['grammar', 'reading'] as Track[]).map((t) => {
@@ -80,6 +81,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
                 <li key={x.name} className={lv.level >= x.minLv ? 'got' : 'locked'}>
                   <span aria-hidden="true">{lv.level >= x.minLv ? x.icon : '❔'}</span>
                   {lv.level >= x.minLv ? x.name : '？？？'}（Lv.{x.minLv}〜）
+                  {lv.level >= x.minLv && evoLog[t][x.name] && <small className="evo-day">・{evoDayLabel(evoLog[t][x.name])}</small>}
                 </li>
               ))}
             </ol>

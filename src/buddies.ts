@@ -267,6 +267,32 @@ export function addBuddyToday(day: string, track: Track, amount: number): BuddyT
   return next
 }
 
+// 進化した日の記録（姿の名前 → 日付 YYYY-MM-DD）
+const EVO_LOG_KEY = 'eitan:buddy-evo-log'
+export type EvoLog = Record<Track, Record<string, string>>
+export function loadEvoLog(): EvoLog {
+  try {
+    const v = JSON.parse(localStorage.getItem(EVO_LOG_KEY) ?? 'null') as Partial<EvoLog> | null
+    if (v) return { grammar: { ...(v.grammar ?? {}) }, reading: { ...(v.reading ?? {}) } }
+  } catch {
+    // こわれていたら空から
+  }
+  return { grammar: {}, reading: {} }
+}
+// はじめて進化した日だけ残す（入れかえで同じ姿にもどっても上書きしない）
+export function recordEvo(track: Track, form: string, day: string): EvoLog {
+  const log = loadEvoLog()
+  if (log[track][form]) return log
+  const next = { ...log, [track]: { ...log[track], [form]: day } }
+  try {
+    localStorage.setItem(EVO_LOG_KEY, JSON.stringify(next))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return next
+}
+export const evoDayLabel = (day: string) => `${Number(day.slice(5, 7))}/${Number(day.slice(8, 10))} に進化`
+
 // いっしょに学んだ日（経験値をもらった日の数）
 const DAYS_KEY = 'eitan:buddy-days'
 export type BuddyDays = Record<Track, number>

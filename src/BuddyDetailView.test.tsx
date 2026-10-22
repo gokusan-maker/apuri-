@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { expect, it } from 'vitest'
-import { addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
+import { BUDDY_FORMS, recordEvo, loadEvoLog, addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
 import { BuddyDetail } from './BuddyDetailView'
 
 it('文法のことばモンスター・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
@@ -62,4 +62,15 @@ it('経験値をもらった日の数を「いっしょに学んだ日」とし�
   render(<BuddyDetail buddies={{ grammar: { xp: 13 }, reading: { xp: 0 } }} onRename={() => {}} />)
   expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('いっしょに学んだ日：2日')
   expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('いっしょに学んだ日：0日')
+})
+
+it('進化した日を記録して、進化の一覧に「M/D に進化」と出す（2回目は上書きしない）', () => {
+  localStorage.clear()
+  const second = BUDDY_FORMS.grammar[1].name
+  recordEvo('grammar', second, '2026-10-20')
+  recordEvo('grammar', second, '2026-10-21')
+  expect(loadEvoLog().grammar[second]).toBe('2026-10-20')
+  render(<BuddyDetail buddies={{ grammar: { xp: 200 }, reading: { xp: 0 } }} onRename={() => {}} />)
+  expect(within(screen.getByLabelText('文法のなかま')).getByText(/10\/20 に進化/)).toBeInTheDocument()
+  expect(within(screen.getByLabelText('読解のなかま')).queryByText(/\d+\/\d+ に進化/)).toBeNull()
 })
