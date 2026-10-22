@@ -162,6 +162,15 @@ describe('App', () => {
     expect(Object.keys(box.grammar).length + Object.keys(box.reading).length).toBe(1)
   })
 
+  it('チームの称号が上がるとガチャチケットがもらえる', () => {
+    localStorage.setItem('eitan:team-title', '0')
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
+    localStorage.setItem('eitan:buddies', JSON.stringify({ grammar: { xp: 100000 }, reading: { xp: 0 } }))
+    render(<App />)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBeGreaterThanOrEqual(1)
+    expect(Number(localStorage.getItem('eitan:team-title'))).toBeGreaterThan(0)
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()

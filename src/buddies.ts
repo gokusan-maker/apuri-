@@ -192,3 +192,24 @@ export function teamOf(wordLevel: number, buddies: Buddies): { level: number; ti
   const n = TEAM_TITLES.find((x) => x.min > level)
   return { level, title: t.name, next: n ? n.min - level : null }
 }
+
+// チームの称号のごほうび：新しい称号になったら🎟1（称号ごとに1回）。はじめて記録するときは今の称号までを受け取りずみにする
+const TEAM_KEY = 'eitan:team-title'
+export const teamIndex = (level: number) => TEAM_TITLES.filter((x) => level >= x.min).length - 1
+export function claimTeamTitle(level: number): number {
+  const now = teamIndex(level)
+  let saved: number | null = null
+  try {
+    const v = localStorage.getItem(TEAM_KEY)
+    saved = v === null ? null : Number(v)
+  } catch {
+    return 0
+  }
+  if (saved !== null && now <= saved) return 0
+  try {
+    localStorage.setItem(TEAM_KEY, String(now))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return saved === null ? 0 : now - saved // 上がった称号の数だけチケット
+}

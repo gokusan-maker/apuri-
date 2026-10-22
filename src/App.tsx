@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { ATTR_EGG_PRICE, ATTR_LABEL, EVO_COINS, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
+import { ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
@@ -632,6 +632,16 @@ function App() {
   const toastHead = toastQueue[0]
   const missionToast = toastHead ?? []
   const pushToast = (ms: Mission[]) => setToastQueue((q) => enqueue(q, ms))
+  // チームの称号が上がったら🎟（称号ごとに1回）
+  const teamLevel = teamOf(levelInfo(monster.xp).level, buddies).level
+  useEffect(() => {
+    const n = claimTeamTitle(teamLevel)
+    if (n <= 0) return
+    setWallet((w) => Array.from({ length: n }).reduce<typeof w>((x) => addTicket(x), w))
+    pushToast([{ id: 'team-title', text: `🤝 チームの称号が「${TEAM_TITLES[teamIndex(teamLevel)].name}」に！ 🎟ガチャチケット`, counter: 'answers', target: 0 }])
+    // pushToast・setWallet は毎回つくり直されるので、チームレベルがかわったときだけ動かす
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [teamLevel])
   const finished = completedUnclaimed(missions, today)
   if (finished.length > 0) {
     setMissions({ ...missions, claimed: [...missions.claimed, ...finished.map((m) => m.id)] })

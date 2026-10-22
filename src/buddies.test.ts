@@ -54,3 +54,15 @@ describe('チームレベル', () => {
     expect(teamOf(200, { grammar: { xp: 0 }, reading: { xp: 0 } }).next).toBeNull()
   })
 })
+
+describe('チームの称号のごほうび', () => {
+  it('はじめては今の称号までを記録だけ。そのあと称号が上がるとその数だけチケット', async () => {
+    const { claimTeamTitle } = await import('./buddies')
+    localStorage.clear()
+    expect(claimTeamTitle(12)).toBe(0) // はじめて：なかよし（1）を記録
+    expect(claimTeamTitle(15)).toBe(0) // 同じ称号
+    expect(claimTeamTitle(31)).toBe(1) // がんばり
+    expect(claimTeamTitle(100)).toBe(2) // つわもの・でんせつ
+    expect(claimTeamTitle(100)).toBe(0)
+  })
+})
