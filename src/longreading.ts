@@ -1353,6 +1353,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     },
     insert: { sentence: 'In other words, sleep helps you keep your memories.', after: [0, 1, 2, 3], answer: 2, why: '第3段落の「ねている間に脳が学んだことを整理する」という説明を、「言いかえると記憶を保つ助けになる」とまとめる文。' },
     vocab: [{ word: 'repair', choices: ['修復する', 'こわす', '数える', '売る'], answer: 0, why: 'ねている間に筋肉が休み体が成長する、という流れから「（自分を）なおす・修復する」。' }],
+    paraSeq: { at: 1, shown: [1, 2, 0], why: '「ねている間に体は自分を修復する」→「筋肉が休み、体が成長する」→「だから若い人には特に十分な睡眠が必要」の順。That is why は最後。' },
     tf: [
       { statement: 'Our bodies repair themselves while we are sleeping.', answer: true, why: '第2段落の内容と合う。' },
       { statement: 'Our brains stop working completely during sleep.', answer: false, why: 'ねている間に脳は学んだことを整理している。' },
@@ -1810,6 +1811,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [0, 2],
       why: '第2段落「土地が平ら」「自転車専用の広い道がたくさん」。自転車は車より安く、空気をよごさず、問題もある。',
     },
+    paraSeq: { at: 3, shown: [1, 2, 0], why: '「しかし問題もある」→「大都市では自転車が多すぎて止める場所がない」→「スピードを出しすぎる人もいる（also）」の順。' },
     tf: [
       { statement: 'There are more bicycles than people in Amsterdam.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The land of Amsterdam has many mountains.', answer: false, why: '土地は平ら。' },
@@ -2700,6 +2702,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       ],
     },
     refer: { phrase: 'It last erupted', word: 'It', choices: ['Mt. Fuji', 'Japan', 'a hot spring', 'the sea'], answer: 0, why: '直前の文の Mt. Fuji を指している。' },
+    paraSeq: { at: 2, shown: [2, 0, 1], why: '「しかし火山はよいものもくれる」→「温泉は地下の熱であたためられる」→「多くの人が温泉町を訪れる」の順。However で話題が変わる文が最初。' },
     tf: [
       { statement: 'Mt. Fuji is a volcano.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Mt. Fuji erupted last year.', answer: false, why: '最後の噴火は1707年。' },
