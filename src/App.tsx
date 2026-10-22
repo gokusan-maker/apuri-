@@ -3,7 +3,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
-import { ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
+import { ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
@@ -1488,6 +1488,22 @@ function App() {
               }
               setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
               feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは読解のなかま（竜）へ
+              // タマゴのかけら：5つで属性のタマゴが無料でかえる（全員なかまならコイン）
+              const pieces = loadEggPieces() + 1
+              if (pieces < PIECES_FOR_EGG) {
+                saveEggPieces(pieces)
+                pushToast([{ id: 'egg-piece', text: `🥚 タマゴのかけらを拾った！（${pieces} / ${PIECES_FOR_EGG}）`, counter: 'answers', target: 0 }])
+              } else {
+                saveEggPieces(0)
+                const r = hatchAttrEgg(buddies, buddyBox, Math.random())
+                if (r) {
+                  setBuddyBox(r.box)
+                  pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろってタマゴがかえった！ 属性「${ATTR_LABEL[r.track]}」の「${r.sp.label}」が仲間に！`, counter: 'answers', target: 0 }])
+                } else {
+                  setWallet((w) => ({ ...w, coins: w.coins + PIECES_FULL_COINS }))
+                  pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろった！ もう全員なかまなので 🪙${PIECES_FULL_COINS}`, counter: 'answers', target: 0 }])
+                }
+              }
             }}
             record={stages}
             onAnswer={onAnswer}

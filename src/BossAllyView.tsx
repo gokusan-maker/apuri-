@@ -1,4 +1,4 @@
-import { BUDDY_FORMS, buddyLevel, buddyName, TRACK_LABEL, type Buddy, type Track } from './buddies'
+import { BUDDY_FORMS, buddyLevel, buddyName, loadEggPieces, PIECES_FOR_EGG, TRACK_LABEL, type Buddy, type Track } from './buddies'
 import { BuddyFigure } from './BuddyFigureView'
 
 // 画面のいちばん上に出す、その項目のなかま（文法チャレンジ＝ことばモンスター、ボス部屋＝読解の竜）。
@@ -25,4 +25,11 @@ export function TrackAlly({ track, buddy, label }: { track: Track; buddy: Buddy;
 }
 
 // ボス部屋のいちばん上：いっしょに戦う読解の竜
-export const BossAlly = ({ buddy }: { buddy: Buddy }) => <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />
+export const BossAlly = ({ buddy }: { buddy: Buddy }) => (
+  <>
+    <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />
+    <p className="stats-note egg-pieces">
+      🥚 タマゴのかけら {loadEggPieces()} / {PIECES_FOR_EGG}（ボスに勝つと1つ。そろうと新しいなかまが生まれる）
+    </p>
+  </>
+)

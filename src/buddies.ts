@@ -213,3 +213,23 @@ export function claimTeamTitle(level: number): number {
   }
   return saved === null ? 0 : now - saved // 上がった称号の数だけチケット
 }
+
+// タマゴのかけら：ボス部屋で勝つと1つ。PIECES_FOR_EGG こで属性のタマゴが無料でかえる
+export const PIECES_FOR_EGG = 5
+export const PIECES_FULL_COINS = 30 // もう全員なかまのときは、かわりにコイン
+const PIECE_KEY = 'eitan:egg-pieces'
+export function loadEggPieces(): number {
+  try {
+    const n = Number(localStorage.getItem(PIECE_KEY))
+    return Number.isInteger(n) && n >= 0 ? n : 0
+  } catch {
+    return 0
+  }
+}
+export function saveEggPieces(n: number): void {
+  try {
+    localStorage.setItem(PIECE_KEY, String(n))
+  } catch {
+    // 保存できなくても続ける
+  }
+}

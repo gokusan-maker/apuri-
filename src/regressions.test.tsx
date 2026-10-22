@@ -28,6 +28,7 @@ describe('再発防止', () => {
   it('ボスをたおした最後の一撃のXPも、ボーナスと一緒にちゃんと入る', () => {
     // ステージのボス（読解問題）で確かめる
     const today = dayKey()
+    localStorage.removeItem('eitan:egg-pieces')
     localStorage.setItem('eitan:levels', JSON.stringify(['熟語']))
     localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスが入らないように
     localStorage.setItem('eitan:stages', JSON.stringify(Object.fromEntries(stagesOf('熟語').map((s) => [s.id, 1]))))
@@ -48,6 +49,7 @@ describe('再発防止', () => {
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(loadBuddies().reading.xp).toBe(expected) // 読解ボスの XP は長文のなかま（竜）へ
+    expect(localStorage.getItem('eitan:egg-pieces')).toBe('1') // 勝つとタマゴのかけら
   })
 
   it('発音練習は同じ単語で何度言っても記録は1回だけ', () => {

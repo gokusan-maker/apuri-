@@ -14,3 +14,9 @@ it('次の進化の姿は ？？？ でひみつ（わかったほうがワク�
   render(<BossAlly buddy={{ xp: 0 }} />)
   expect(document.body.textContent).not.toContain(BUDDY_FORMS.reading[1].name)
 })
+
+it('ボス部屋の上にタマゴのかけらの数が出る', () => {
+  localStorage.setItem('eitan:egg-pieces', '3')
+  render(<BossAlly buddy={{ xp: 0 }} />)
+  expect(screen.getByText(/タマゴのかけら 3 \/ 5/)).toBeInTheDocument()
+})
