@@ -1920,7 +1920,7 @@ export const unitStars = (clears: number) => (clears >= 5 ? 3 : clears >= 3 ? 2 
 export function searchUnits<T extends GrammarUnit>(units: T[], q: string): T[] {
   const k = q.trim().toLowerCase()
   if (!k) return units
-  return units.filter((u) => [u.title, ...u.points, ...u.examples.map((e) => e.en)].some((t) => t.toLowerCase().includes(k)))
+  return units.filter((u) => [u.title, ...u.points, ...u.examples.flatMap((e) => [e.en, e.ja]), ...u.questions.map((x) => x.sentence)].some((t) => t.toLowerCase().includes(k)))
 }
 
 // おすすめ単元：★が少ない順（同じなら、まだ全問正解していない・一覧の順）に3つ
