@@ -283,4 +283,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does the length of the waggle run show?', choices: ['How far away the food is.', 'How much food there is.', 'What kind of flower it is.', 'How many bees should go.'], answer: 0, why: '第2段落 the length of the run indicates the distance。' },
     ],
   },
+  {
+    id: 'adv-kindness',
+    title: 'Why Do We Help Strangers?',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Economists once assumed that people act mainly to benefit themselves. Yet everyday life is full of small kindnesses that bring no obvious reward: we give directions to lost tourists, return wallets we find on the street, and hold doors open for people we will never see again. Such behavior is difficult to explain ( A ) we assume that humans are purely selfish.',
+      'One explanation is that helping others is, in the long run, good for the helper. In small communities where people meet repeatedly, a reputation for kindness can bring future benefits. Another is that cooperation has been so important to human survival that a desire to help may have become part of our nature. Studies show that even very young children, ( B ) have not yet learned many social rules, often help adults who drop things.',
+      'Neither explanation, however, fully accounts for the satisfaction people feel when they help someone anonymously. Perhaps the most honest conclusion is that human motives are mixed. We are neither saints nor ( C ) calculators, and the interesting question is not whether we are selfish, but under what conditions our kinder impulses come to the surface.',
+    ],
+    ja: [
+      'かつて経済学者たちは、人は主に自分の利益のために行動すると考えていた。しかし日々の生活は、はっきりした見返りのない小さな親切に満ちている。道に迷った旅行者に道を教え、道で拾った財布を届け、二度と会うことのない人のためにドアを押さえておく。人間が完全に利己的だと仮定すると、こうした行動は説明しにくい。',
+      '一つの説明は、人を助けることは長い目で見れば助ける側のためになる、というものだ。人がくり返し顔を合わせる小さな共同体では、親切だという評判が将来の利益をもたらしうる。もう一つは、協力は人類が生きのびるうえでとても重要だったので、人を助けたいという気持ちが人間の性質の一部になったのかもしれない、という説明である。研究によれば、まだ社会のルールをあまり学んでいないとても小さな子どもでさえ、物を落とした大人をよく手助けする。',
+      'しかし、どちらの説明も、名前を明かさずにだれかを助けたときに人が感じる満足感を十分には説明できない。最も正直な結論は、人間の動機は入りまじっているということかもしれない。私たちは聖人でもなければ冷たい計算機でもない。興味深い問いは、私たちが利己的かどうかではなく、どんな条件のもとでより親切な気持ちが表に出てくるのか、ということなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['if', 'unless', 'until', 'since'], answer: 0, why: 'if「もし〜と仮定すれば」。人間が完全に利己的だと仮定すると説明しにくい。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'whom'], answer: 0, why: 'コンマのあとの関係代名詞 who（非制限用法）。先行詞は children（人）で、後ろの have の主語がないので who。' },
+      { id: 'C', choices: ['cold', 'warm', 'kind', 'honest'], answer: 0, why: 'saints（聖人）と対になる「冷たい計算機（損得だけで動く人）」。' },
+    ],
+    tf: [
+      { statement: 'かつて経済学者は、人は主に自分の利益のために行動すると考えていた。', answer: true, why: '第1段落 Economists once assumed that people act mainly to benefit themselves。' },
+      { statement: '筆者によれば、とても小さな子どもは、社会のルールを学ぶまで人を助けない。', answer: false, why: '第2段落 ルールをあまり学んでいない小さな子どもでも、物を落とした大人をよく助ける。' },
+      { statement: '筆者は、人は完全に利己的だと結論づけている。', answer: false, why: '第3段落 human motives are mixed（動機は入りまじっている）。' },
+    ],
+    qa: [
+      { q: 'What does the author think is the more interesting question?', choices: ['Under what conditions people act kindly.', 'Whether humans are completely selfish.', 'How economists predict prices.', 'Why children drop things.'], answer: 0, why: '第3段落最後 not whether we are selfish, but under what conditions our kinder impulses come to the surface。' },
+    ],
+  },
+  {
+    id: 'toefl-volcano',
+    title: 'Volcanoes and Climate',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Large volcanic eruptions can affect the climate of the entire planet. When a powerful volcano erupts, it can send sulfur dioxide high into the stratosphere, where it combines with water to form tiny droplets. These droplets reflect part of the incoming sunlight back into space, ( A ) the Earth's surface to cool.",
+      'A well-known example is the eruption of Mount Pinatubo in the Philippines in 1991. In the following year, average global temperatures dropped by about half a degree Celsius. The effect did not last, ( B ), because the droplets gradually fell out of the atmosphere within a few years.',
+      "Even larger eruptions in the past had more dramatic results. After the eruption of Mount Tambora in Indonesia in 1815, parts of Europe and North America experienced such cold weather that 1816 became known as 'the year without a summer.' Crops failed in many regions, ( C ) food shortages and high prices. Such events remind us how closely human life depends on a stable climate.",
+    ],
+    ja: [
+      '大きな火山の噴火は、地球全体の気候に影響をあたえることがある。強力な火山が噴火すると、二酸化硫黄を成層圏の高いところまで送りこむことがあり、そこで水と結びついて小さなしずくになる。これらのしずくは、入ってくる日光の一部を宇宙へはね返し、地表を冷やす。',
+      'よく知られた例が、1991年のフィリピンのピナツボ山の噴火だ。翌年、世界の平均気温はおよそ0.5℃下がった。しかしその影響は長くは続かなかった。しずくは数年のうちに少しずつ大気から落ちていったからである。',
+      '過去のさらに大きな噴火は、もっと劇的な結果をもたらした。1815年のインドネシアのタンボラ山の噴火のあと、ヨーロッパと北アメリカの一部ではとても寒い天気が続き、1816年は「夏のない年」として知られるようになった。多くの地域で作物が不作になり、食料不足と物価の高騰につながった。こうしたできごとは、人間の生活がいかに安定した気候に頼っているかを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['causing', 'caused', 'to cause it', 'causes'], answer: 0, why: '分詞構文。「日光をはね返し、（その結果）地表を冷やす」。cause A to do「Aに〜させる」。' },
+      { id: 'B', choices: ['however', 'therefore', 'for example', 'instead'], answer: 0, why: '逆接の however「しかし」。気温は下がったが、その影響は続かなかった。' },
+      { id: 'C', choices: ['leading to', 'leading', 'led to', 'lead'], answer: 0, why: '分詞構文 leading to 〜「（その結果）〜につながる」。lead to 〜 で「〜につながる」。' },
+    ],
+    tf: [
+      { statement: 'Volcanic droplets in the stratosphere reflect some sunlight back into space.', answer: true, why: '第1段落 These droplets reflect part of the incoming sunlight back into space。' },
+      { statement: 'The cooling caused by Mount Pinatubo lasted for several decades.', answer: false, why: '第2段落 The effect did not last ... within a few years（数年のうちに）。' },
+      { statement: 'The year without a summer happened before the eruption of Mount Tambora.', answer: false, why: '第3段落 噴火は1815年、夏のない年は1816年（噴火のあと）。' },
+    ],
+    qa: [
+      { q: 'What happened after the eruption of Mount Tambora?', choices: ['Cold weather caused crops to fail in some regions.', 'Global temperatures rose sharply.', 'Mount Pinatubo erupted.', 'Food became cheaper in Europe.'], answer: 0, why: '第3段落 Crops failed in many regions。' },
+    ],
+  },
 ]
