@@ -977,6 +977,7 @@ describe('App', () => {
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('タマゴがかえった！')
+    expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('お祝い 🪙10')
   })
 
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {

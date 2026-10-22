@@ -32,6 +32,8 @@ export const BUDDY_FORMS: Record<Track, BuddyForm[]> = {
     { minLv: 30, icon: '🐉', name: 'つきのしんりゅう（月の神竜）' },
   ],
 }
+// 新しい姿に進化したときのお祝いコイン
+export const EVO_COINS = 10
 export const TRACK_LABEL: Record<Track, string> = { grammar: '文法', reading: '読解' }
 
 export const buddyLevel = (b: Buddy) => levelInfo(b.xp)

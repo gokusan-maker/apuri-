@@ -1,5 +1,5 @@
 import { BuddyFigure } from './BuddyFigureView'
-import { TRACK_LABEL, type Buddy, type BuddyForm, type Track } from './buddies'
+import { EVO_COINS, formName, TRACK_LABEL, type Buddy, type BuddyForm, type Track } from './buddies'
 
 // 文法のことばモンスター・読解の竜が進化したときの全画面演出（タップで閉じる）
 export function BuddyEvolve({ track, form, buddy, onClose }: { track: Track; form: BuddyForm; buddy: Buddy; onClose: () => void }) {
@@ -11,7 +11,8 @@ export function BuddyEvolve({ track, form, buddy, onClose }: { track: Track; for
         </p>
         <p className="celebrate-title">{form.minLv === 2 ? 'タマゴがかえった！' : '進化した！'}</p>
         <p className="celebrate-text">
-          {TRACK_LABEL[track]}のなかまが「{form.name}」になった！
+          {TRACK_LABEL[track]}のなかまが「{formName(track, buddy)}」になった！
+          <br />🎉 お祝い 🪙{EVO_COINS}
         </p>
         <button className="flip" onClick={onClose}>
           やったね！
