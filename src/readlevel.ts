@@ -43,3 +43,11 @@ export function solvedOf(level: ReadLevel, record: LongRecord): { done: number; 
   const ps = passagesFor(level)
   return { done: ps.filter((p) => record[p.id] !== undefined).length, total: ps.length }
 }
+
+// むずかしさごとの「今日のおすすめ1本」（同じ日は同じ。日ごとにかわる）
+export function dailyPick(list: LongPassage[], day: string): LongPassage | undefined {
+  if (list.length === 0) return undefined
+  let h = 5
+  for (const c of day) h = (h * 37 + c.charCodeAt(0)) >>> 0
+  return list[h % list.length]
+}

@@ -1,6 +1,7 @@
 import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { dailyPick } from './readlevel'
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { LongTfQuiz } from './LongTfQuizView'
@@ -182,6 +183,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           {Object.keys(record).length >= LONG_MEDAL ? `💯 長文${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた長文 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         <p className="stats-note">{whole ? '私立高校の入試のような長文。' : ''}空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        {!whole && dailyPick(LIST, today) && (
+          <button className="long-recommend daily-long level-daily" onClick={() => openPassage(dailyPick(LIST, today)!)}>
+            📅 今日のおすすめ：<strong>{dailyPick(LIST, today)!.title}</strong>
+            {record[dailyPick(LIST, today)!.id] !== undefined ? ' ✅ 解いた' : ''}
+          </button>
+        )}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}

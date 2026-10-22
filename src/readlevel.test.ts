@@ -45,3 +45,16 @@ describe('むずかしさごとに解いた本数', () => {
     expect(solvedOf('univ', { [ps[0].id]: 5, 'cat': 3 })).toEqual({ done: 1, total: ps.length })
   })
 })
+
+describe('むずかしさごとの今日のおすすめ', () => {
+  it('そのレベルの中から日ごとに1本（同じ日は同じ）', async () => {
+    const { dailyPick } = await import('./readlevel')
+    const list = passagesFor('toefl')
+    const p = dailyPick(list, '2026-10-22')!
+    expect(list).toContain(p)
+    expect(dailyPick(list, '2026-10-22')).toBe(p)
+    expect(dailyPick([], '2026-10-22')).toBeUndefined()
+    const seen = new Set(Array.from({ length: 30 }, (_, i) => dailyPick(list, `2026-11-${i + 1}`)!.id))
+    expect(seen.size).toBeGreaterThan(2)
+  })
+})
