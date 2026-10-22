@@ -286,3 +286,17 @@ export function claimZukanComp(key: string): string[] {
   }
   return next
 }
+
+// 文法チャレンジ・ボス部屋の上のなかまをタップしたときの英語のひとこと（自作・和訳つき）
+export const TAP_LINES: Record<Track, { en: string; ja: string }[]> = {
+  grammar: [
+    { en: 'Every rule you learn makes me stronger!', ja: 'きみがルールを1つ覚えるたびに、ぼくは強くなるよ！' },
+    { en: 'Mistakes are just practice in disguise.', ja: 'まちがいは、すがたをかえた練習なんだ。' },
+    { en: "Let's try one more question!", ja: 'もう1問やってみよう！' },
+  ],
+  reading: [
+    { en: 'I can smell a boss nearby.', ja: '近くにボスのにおいがするぞ。' },
+    { en: 'Read carefully. The answer is in the story.', ja: 'よく読んで。答えはお話の中にあるよ。' },
+    { en: 'Together, we can beat any boss!', ja: 'いっしょなら、どんなボスにも勝てる！' },
+  ],
+}

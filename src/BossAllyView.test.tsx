@@ -25,3 +25,12 @@ it('ボス部屋の上に、たおしたボスの数が出る', () => {
   render(<BossAlly buddy={{ xp: 0 }} wins={3} total={19} />)
   expect(screen.getByLabelText('たおしたボスの数').textContent).toContain('3 / 19体')
 })
+
+it('上のなかまをタップすると英語でひとこと（和訳つき）', async () => {
+  const { fireEvent } = await import('@testing-library/react')
+  const { TAP_LINES } = await import('./buddies')
+  render(<BossAlly buddy={{ xp: 0 }} />)
+  fireEvent.click(screen.getByLabelText(/に話しかける/))
+  expect(screen.getByRole('status').textContent).toContain(TAP_LINES.reading[0].en)
+  expect(screen.getByRole('status').textContent).toContain(TAP_LINES.reading[0].ja)
+})

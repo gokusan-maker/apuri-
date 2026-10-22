@@ -1607,3 +1607,5 @@ button.team-level { display: block; width: 100%; border: none; background: trans
 .zukan-comp { color: #d97706; }
 .zukan-comp-btn { margin-left: 6px; padding: 2px 8px; border: none; border-radius: 999px; background: #f59e0b; color: #fff; font-size: 0.75rem; font-weight: 700; }
 .trio-streak { color: #ea580c; font-weight: 700; }
+.ally-fig { border: none; background: transparent; padding: 0; }
+.ally-line { display: block; font-size: 0.8rem; font-weight: 700; }
