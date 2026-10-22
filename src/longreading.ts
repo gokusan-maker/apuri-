@@ -3948,6 +3948,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['easier', 'easiest', 'easily', 'easy'], answer: 0, why: 'make it 〜 for 人 to … で「人が…するのを〜にする」。ここは比較級 easier。' },
       { id: 'D', choices: ['at', 'for', 'in', 'on'], answer: 2, why: '「多くの場所で」は in many places。' },
     ],
+    qa: [
+      { q: 'Do twins have the same fingerprints?', choices: ['Yes, they do.', 'No, they don\'t.', 'Yes, only on one hand.', 'No, they have no fingerprints.'], answer: 1, why: 'Even twins … have different fingerprints. とある。' },
+      { q: 'What can some smartphones use instead of a password?', choices: ['A voice.', 'A photo.', 'A fingerprint.', 'A key.'], answer: 2, why: 'some smartphones can be opened with a fingerprint とある。' },
+    ],
     tf: [
       { statement: 'No two people have the same fingerprints.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Twins have the same fingerprints.', answer: false, why: 'ふたごでも指紋はちがう。' },
@@ -4008,6 +4012,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['what', 'which', 'who', 'whose'], answer: 2, why: '人（a girl）を説明する関係代名詞は who。' },
       { id: 'D', choices: ['find', 'finding', 'found', 'to find'], answer: 0, why: '助動詞 would のあとは動詞の原形 find。' },
     ],
+    qa: [
+      { q: 'Where did Saki find the letter?', choices: ['In her desk.', 'In an old library book.', 'In her bag.', 'Under the door.'], answer: 1, why: '図書館で借りた古い本から紙が落ちた。' },
+      { q: 'What did Saki do before she returned the book?', choices: ['She threw the letter away.', 'She bought a new book.', 'She added her own note.', 'She gave the letter to a teacher.'], answer: 2, why: 'she put the old letter back and added her own note とある。' },
+    ],
     tf: [
       { statement: 'Saki borrowed an old book from the school library.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'The letter was written three years ago.', answer: false, why: '30年前に書かれた。' },
@@ -4037,6 +4045,10 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['behind', 'below', 'beside', 'between'], answer: 0, why: '首を270度回せるので「後ろを」見られる（look behind）。' },
       { id: 'C', choices: ['as', 'than', 'that', 'then'], answer: 1, why: '比較級 higher のあとは than。' },
       { id: 'D', choices: ['by', 'since', 'until', 'while'], answer: 2, why: 'not 〜 until … で「…まで〜しない」。' },
+    ],
+    qa: [
+      { q: 'What do owls do instead of moving their eyes?', choices: ['They close their eyes.', 'They turn their heads.', 'They fly higher.', 'They listen to music.'], answer: 1, why: 'Instead, they turn their heads. とある。' },
+      { q: 'Why can owls fly very quietly?', choices: ['Because their feathers are soft.', 'Because they are very small.', 'Because they fly slowly.', 'Because they sleep in the day.'], answer: 0, why: 'Their feathers are soft, so they can fly very quietly. とある。' },
     ],
     tf: [
       { statement: 'Owls mainly hunt during the day.', answer: false, why: 'おもに夜に狩りをする。' },
