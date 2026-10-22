@@ -13,7 +13,7 @@ import { speak } from './speech'
 import { useKeys } from './useKeys'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
-import { Grammar, QUICK_PERFECT_COINS } from './GrammarView'
+import { Grammar, QUICK_PERFECT_COINS, RUN_BEST_XP } from './GrammarView'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
@@ -794,7 +794,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar quickStart={grammarQuick} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
+        <Grammar quickStart={grammarQuick} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => onCoins(DAILY_GRAMMAR_COINS) : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
       </>
     )
   }

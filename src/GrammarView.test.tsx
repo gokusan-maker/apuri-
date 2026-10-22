@@ -734,7 +734,8 @@ it('すぐ練習は学年をえらぶと、その学年の問題だけになる'
 
 it('連続正解チャレンジは、まちがえるまで続いてベスト記録が残る', () => {
   localStorage.clear()
-  render(<Grammar />)
+  const best = vi.fn()
+  render(<Grammar onRunBest={best} />)
   fireEvent.click(screen.getByText('連続正解'))
   const all = GRAMMAR.flatMap((u) => u.questions)
   const cur = () => all.find((x) => x.sentence.replace('___', '　　　') === document.querySelector('.blank-sentence')!.textContent)!
@@ -749,4 +750,6 @@ it('連続正解チャレンジは、まちがえるまで続いてベスト記�
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.getByText('🔥 3問 連続正解！（ベスト 3問）')).toBeInTheDocument()
   expect(localStorage.getItem('eitan:grammar-run-best')).toBe('3')
+  expect(best).toHaveBeenCalledTimes(1) // 3問以上でベスト更新 → 文法のなかまにボーナス
+  expect(screen.getByText(/ベスト更新！ 文法のなかまに/)).toBeInTheDocument()
 })

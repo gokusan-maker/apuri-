@@ -44,11 +44,13 @@ type Props = {
   onStreakBonus?: () => void // 文法を3日続けたとき
   onMaster?: () => void // 全単元を全問正解したとき（1回だけ）
   onQuickPerfect?: () => void // 「すぐ練習」5問を全問正解したとき
+  onRunBest?: () => void // 連続正解チャレンジでベストを更新したとき（3問以上）
 }
 
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
 const GAME_COUNT = 11 // 文法ゲームの種類（下のタイルの数）
 // 連続正解チャレンジ：まちがえるまで全単元の問題が続く。ベスト記録を残す
+export const RUN_BEST_XP = 20 // 連続正解のベスト更新で文法のなかまにあげる XP
 const RUN_KEY = 'eitan:grammar-run-best'
 function loadRunBest(): number {
   try {
@@ -65,8 +67,9 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect }: Props) {
+export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest }: Props) {
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
+  const [runBonus, setRunBonus] = useState(false) // ベスト更新のボーナスのお知らせ
   const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
@@ -124,6 +127,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   function open(u: GrammarUnit) {
     setHidden(null)
     setQuickPerfect(false)
+    setRunBonus(false)
     setCopied(false)
     setShadow(false)
     setPrinting(false)
@@ -663,6 +667,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         <p className="result-score">
           {unit.id === 'streak-run' ? `🔥 ${score}問 連続正解！（ベスト ${runBest}問）` : `${score} / ${unit.questions.length} 問正解`}
         </p>
+        {unit.id === 'streak-run' && runBonus && <p className="level-up">🏆 ベスト更新！ 文法のなかまに +{RUN_BEST_XP}XP</p>}
         {(unit.id === 'mix-test' || unit.id === 'grade-test') && (
           <p className={`battle-rank rank-${mixRank(score, unit.questions.length)}`} aria-label={`ランク ${mixRank(score, unit.questions.length)}`}>
             {mixRank(score, unit.questions.length)}
@@ -810,6 +815,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
     if (unit.id === 'streak-run' && (!ok || step === unit.questions.length - 1) && nextScore > runBest) {
       setRunBest(nextScore)
       saveRunBest(nextScore)
+      if (nextScore >= 3) {
+        setRunBonus(true)
+        onRunBest?.()
+      }
     }
     if (unit.id === 'quick-practice' && step === unit.questions.length - 1 && nextScore === unit.questions.length) {
       setQuickPerfect(true)
