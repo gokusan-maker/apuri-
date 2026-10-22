@@ -33,6 +33,7 @@ it('なかまは属性ごとに入れかえられ、まだ仲間でない種類�
   const hoshi = within(g).getByText(BUDDY_SPECIES.grammar[1].label).closest('button')!
   expect(hoshi).toBeDisabled()
   expect(hoshi.textContent).toContain('Lv.5 にすると仲間に')
+  expect(hoshi.textContent).toContain('ショップの属性のタマゴ')
   // Lv.5 まで育てると入れかえられる
   b = { grammar: { xp: 100000 }, reading: { xp: 0 } }
   rerender(<BuddyDetail buddies={b} box={box} onRename={() => {}} onSwitch={(t, id) => ({ buddies: b, box } = switchBuddy(b, box, t, id))} />)
