@@ -2246,6 +2246,23 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: "I'd rather ___ talk about it now.", choices: ['not', "don't", 'no'], answer: 0, why: 'would rather の否定は would rather not ＋ 原形。' },
     ],
   },
+  {
+    id: 'it-is-time',
+    title: 'It is time ＋ 過去形 / cannot help -ing',
+    points: [
+      'It is (high) time ＋ 主語 ＋ 過去形 で「もう〜してもいいころだ（まだしていない）」。形は過去形でも意味は今のこと（仮定法）。',
+      'cannot help -ing で「〜せずにはいられない」。help のあとは動名詞（-ing）。',
+    ],
+    examples: [
+      { en: "It's time you went to bed.", ja: 'もうねる時間ですよ。' },
+      { en: 'I could not help laughing at his joke.', ja: '彼の冗談に笑わずにはいられなかった。' },
+    ],
+    questions: [
+      { sentence: 'It is time we ___ home.', choices: ['went', 'go', 'going'], answer: 0, why: 'It is time ＋ 主語 ＋ 過去形。' },
+      { sentence: 'She could not help ___ when she heard the news.', choices: ['crying', 'cry', 'to cry'], answer: 0, why: 'cannot help -ing「〜せずにはいられない」。' },
+      { sentence: "It's high time you ___ your room.", choices: ['cleaned', 'clean', 'will clean'], answer: 0, why: 'high time でも過去形を使う。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2349,7 +2366,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['compare-emphasis', 'keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
