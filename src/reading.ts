@@ -1278,6 +1278,39 @@ export const PASSAGES: Passage[] = [
       { q: '何分おくれて家に着いた？', choices: ['10分', '30分', '60分'], answer: 1 },
     ],
   },
+  {
+    id: 'short-haircut',
+    title: 'A Short Haircut',
+    text: 'Last Saturday, I went to the barber to get a haircut. I asked for "a little shorter," but the barber cut a lot. When I looked in the mirror, I was surprised. At school on Monday, my friends said, "You look cool!" Now I like my short hair.',
+    ja: 'この前の土曜日、私は髪を切りに床屋へ行きました。「少しだけ短く」とたのんだのに、床屋さんはたくさん切りました。鏡を見て、私はおどろきました。月曜日に学校で、友だちが「かっこいいね！」と言いました。今では短い髪が気に入っています。',
+    questions: [
+      { q: '筆者はいつ床屋へ行った？', choices: ['土曜日', '日曜日', '月曜日'], answer: 0 },
+      { q: '鏡を見たとき、筆者はどう感じた？', choices: ['おどろいた', 'ねむくなった', 'おこった'], answer: 0 },
+      { q: '友だちは何と言った？', choices: ['かっこいい', '長すぎる', 'へんだ'], answer: 0 },
+    ],
+  },
+  {
+    id: 'kite-day',
+    title: 'Our Kite',
+    text: 'My father and I made a kite out of paper and thin sticks. On a windy Sunday, we took it to the river. At first, it fell down three times. Then a strong wind came, and our kite flew high into the sky. We watched it for an hour.',
+    ja: '父と私は、紙と細い棒でたこを作りました。風の強い日曜日に、たこを川へ持っていきました。最初は3回落ちてしまいました。そのあと強い風がふいて、たこは空高くあがりました。私たちは1時間それをながめました。',
+    questions: [
+      { q: 'たこは何で作った？', choices: ['紙と細い棒', 'ビニールと針金', '布とひも'], answer: 0 },
+      { q: 'たこは最初に何回落ちた？', choices: ['1回', '3回', '5回'], answer: 1 },
+      { q: 'どのくらいたこをながめた？', choices: ['10分', '30分', '1時間'], answer: 2 },
+    ],
+  },
+  {
+    id: 'piggy-bank',
+    title: 'My Piggy Bank',
+    text: 'I put one hundred yen in my piggy bank every day. After six months, it was very heavy. I opened it and counted the coins with my brother. I had saved about eighteen thousand yen! I used it to buy a present for my mother\'s birthday.',
+    ja: '私は毎日100円を貯金箱に入れました。6か月後、貯金箱はとても重くなりました。弟といっしょに開けて硬貨を数えました。約1万8千円もたまっていました！ そのお金で母の誕生日プレゼントを買いました。',
+    questions: [
+      { q: '筆者は毎日いくら入れた？', choices: ['10円', '100円', '500円'], answer: 1 },
+      { q: 'だれといっしょに硬貨を数えた？', choices: ['弟', '父', '友だち'], answer: 0 },
+      { q: 'お金を何に使った？', choices: ['母の誕生日プレゼント', '新しいゲーム', '旅行'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
