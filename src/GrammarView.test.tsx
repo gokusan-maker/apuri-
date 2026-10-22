@@ -649,3 +649,14 @@ it('まちがえた問題があると「まちがえた問題だけもう一度�
   expect(screen.getByText('1 / 1 問正解')).toBeInTheDocument()
   expect(screen.queryByText(/まちがえた問題だけもう一度/)).toBeNull()
 })
+
+it('★をつけた単元だけから「お気に入り単元テスト」ができる', () => {
+  localStorage.clear()
+  const u = GRAMMAR[3]
+  localStorage.setItem('eitan:grammar-fav', JSON.stringify([u.id]))
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('★ お気に入り単元テスト（★1単元から最大10問）'))
+  expect(document.querySelector('.grammar-progress')!.textContent).toBe(`1 / ${u.questions.length} 問目`)
+  const shown = document.querySelector('.quiz.grammar')!.textContent!
+  expect(u.questions.some((q) => q.choices.every((c) => shown.includes(c)))).toBe(true)
+})

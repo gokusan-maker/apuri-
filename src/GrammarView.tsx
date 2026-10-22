@@ -363,6 +363,18 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             </table>
           </details>
         )}
+        {stampMode && fav.length > 0 && (
+          <button
+            className="list-link weak-grammar-btn fav-test-btn"
+            onClick={() => {
+              const qs = shuffle(GRAMMAR.filter((u) => fav.includes(u.id)).flatMap((u) => u.questions)).slice(0, 10)
+              open({ id: 'fav-test', title: '★ お気に入り単元テスト', points: [], examples: [], questions: qs })
+              setStep(0)
+            }}
+          >
+            ★ お気に入り単元テスト（★{fav.length}単元から最大10問）
+          </button>
+        )}
         {stampMode && (
           <button
             className="list-link weak-grammar-btn random-one-btn"
