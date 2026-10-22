@@ -60,6 +60,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [note, setNote] = useState(loadNotebook)
   const [champ, setChamp] = useState(loadGrammarChamp)
   const [gweek, setGweek] = useState(loadGrammarWeek)
+  const [missed, setMissed] = useState<GrammarUnit['questions']>([]) // この回でまちがえた問題
   const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
@@ -107,6 +108,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setStep(-1)
     setPicked(null)
     setScore(0)
+    setMissed([])
   }
 
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
@@ -638,6 +640,18 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           </p>
         )}
         {firstClear && <p className="level-up">🌟 はじめての全問正解！ モンスターに XP+{GRAMMAR_CLEAR_XP}</p>}
+        {!battle && missed.length > 0 && (
+          <button
+            className="good next-unit-btn retry-missed"
+            onClick={() => {
+              const qs = missed
+              open({ id: 'retry-missed', title: '🔁 まちがえた問題', points: [], examples: [], questions: qs })
+              setStep(0)
+            }}
+          >
+            🔁 まちがえた問題だけもう一度（{missed.length}問）
+          </button>
+        )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
         {!battle && nextUnit(unit.id) && (
           <button className="good next-unit-btn" onClick={() => open(nextUnit(unit.id)!)}>
@@ -666,6 +680,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     if (picked !== null || !unit) return
     setPicked(i)
     const ok = i === q.answer
+    if (!ok) setMissed((m) => [...m, q])
     const nextScore = score + (ok ? 1 : 0)
     setScore(nextScore)
     if (ok) playCorrect()

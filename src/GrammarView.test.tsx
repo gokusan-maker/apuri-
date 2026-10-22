@@ -630,3 +630,22 @@ it('「あと1問で全問正解」の単元が一覧の上に出て、開ける
   fireEvent.click(screen.getByText(`👉 ${u.title}（${u.questions.length - 1} / ${u.questions.length}）`))
   expect(screen.getByText(u.points[0])).toBeInTheDocument()
 })
+
+it('まちがえた問題があると「まちがえた問題だけもう一度」で、その問題だけ解き直せる', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  unit.questions.forEach((q, i) => {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[i === 1 ? (q.answer + 1) % q.choices.length : q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  })
+  fireEvent.click(screen.getByText('🔁 まちがえた問題だけもう一度（1問）'))
+  const q = unit.questions[1]
+  expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 1 問目')
+  fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('1 / 1 問正解')).toBeInTheDocument()
+  expect(screen.queryByText(/まちがえた問題だけもう一度/)).toBeNull()
+})
