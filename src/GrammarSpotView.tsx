@@ -1,13 +1,14 @@
 import { useState } from 'react'
 import { spotSet } from './grammarspot'
+import type { GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onBack: () => void }
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onBack: () => void; units?: GrammarUnit[]; label?: string }
 
 // 文法のまちがいさがし（○×で10問）
-export function GrammarSpot({ onAnswer, onBack }: Props) {
-  const [qs] = useState(() => spotSet(10))
+export function GrammarSpot({ onAnswer, onBack, units, label }: Props) {
+  const [qs] = useState(() => spotSet(10, Math.random, units))
   const [step, setStep] = useState(0)
   const [picked, setPicked] = useState<boolean | null>(null)
   const [score, setScore] = useState(0)
@@ -18,7 +19,7 @@ export function GrammarSpot({ onAnswer, onBack }: Props) {
         <button className="stage-back" onClick={onBack}>
           ← 単元一覧
         </button>
-        <p className="result-title">🔍 まちがいさがし</p>
+        <p className="result-title">🔍 まちがいさがし{label ? `（${label}）` : ''}</p>
         <p className="result-score">
           {score} / {qs.length} 問正解
         </p>

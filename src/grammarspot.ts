@@ -13,13 +13,13 @@ export function makeSpot(q: GrammarQuestion, r: number, r2: number): SpotQ {
   return { text: fill(q.sentence, wrongs[Math.floor(r2 * wrongs.length)]), correct: false, right, why: q.why }
 }
 
-export function spotSet(n: number, rng: () => number = Math.random): SpotQ[] {
-  const all = GRAMMAR.flatMap((u) => u.questions)
+export function spotSet(n: number, rng: () => number = Math.random, units = GRAMMAR): SpotQ[] {
+  const all = units.flatMap((u) => u.questions)
   const out: SpotQ[] = []
   const used = new Set<number>()
   while (out.length < n && used.size < all.length) {
-    const i = Math.floor(rng() * all.length)
-    if (used.has(i)) continue
+    let i = Math.floor(rng() * all.length)
+    while (used.has(i)) i = (i + 1) % all.length
     used.add(i)
     out.push(makeSpot(all[i], rng(), rng()))
   }

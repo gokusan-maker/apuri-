@@ -98,7 +98,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setScore(0)
   }
 
-  if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} />
+  if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
   if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} />
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
   if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
@@ -174,7 +174,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         )}
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
-            🔍 まちがいさがし（○×で10問）
+            🔍 まちがいさがし（○×で10問{grade === 'all' ? '' : `・${grade}`}）
           </button>
         )}
         {stampMode && (
