@@ -1436,3 +1436,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-remaining { position: sticky; top: calc(4px + env(safe-area-inset-top)); z-index: 5; width: fit-content; max-width: 100%; margin: 0 0 6px auto; padding: 4px 12px; border-radius: 999px; background: var(--accent); color: var(--accent-fg); font-size: 0.8rem; font-weight: 700; box-shadow: 0 2px 8px rgb(0 0 0 / 0.15); }
 .gcard-weak { display: block; margin-bottom: 4px; font-size: 0.72rem; font-weight: 700; color: #b45309; }
 .unit-weak { color: #d97706; }
+.long-100 { margin: 0 0 8px; font-size: 0.82rem; color: var(--muted); }
+.long-100.got { font-size: 1rem; font-weight: 800; color: #b45309; }

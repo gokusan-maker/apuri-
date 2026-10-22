@@ -464,3 +464,13 @@ it('「中3チャレンジ」で中3レベルのまだ解いていない長文�
   expect(screen.getAllByText(new RegExp(p.title.replace(/[?()]/g, '.'))).length).toBeGreaterThan(0)
   expect(document.querySelector('.long-remaining')).not.toBeNull()
 })
+
+it('長文を100本解くと記念メダル（それまでは解いた本数を表示）', () => {
+  localStorage.clear()
+  const { unmount } = render(<LongReading />)
+  expect(screen.getByText('📚 解いた長文 0 / 100本（100本で記念メダル）')).toBeInTheDocument()
+  unmount()
+  localStorage.setItem('eitan:long-reading', JSON.stringify(Object.fromEntries(LONG_PASSAGES.slice(0, 100).map((x) => [x.id, 1]))))
+  render(<LongReading />)
+  expect(screen.getByText('💯 長文100本クリア記念メダル！')).toBeInTheDocument()
+})

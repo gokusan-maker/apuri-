@@ -3676,7 +3676,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     paragraphs: [
       'Dear Sam, Thank you for your last email. I enjoyed reading about your trip to the mountains. This time, I want to tell you ( A ) my school trip to Kyoto.',
       'We visited many old temples. The most famous one was Kinkakuji, ( B ) is covered with gold. It shines beautifully in the sun. I have attached a photo of it to this email.',
-      'On the second day, we wore kimonos and walked around Gion. It was my first time to wear a kimono, ( C ) it was hard to walk in it. But my friends and I took many fun pictures together.',
+      'On the second day, we wore kimonos and walked around Gion. I had never worn a kimono before, ( C ) it was hard to walk in it. But my friends and I took many fun pictures together.',
       'Have you ever visited an old city like Kyoto? If you come to Japan someday, I would like to show you around. Please write back ( D ) you have time. Your friend, Daichi',
     ],
     ja: [
@@ -3688,7 +3688,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['about', 'for', 'of', 'with'], answer: 0, why: 'tell 人 about 〜 で「人に〜について話す」。' },
       { id: 'B', choices: ['what', 'where', 'which', 'who'], answer: 2, why: 'もの（Kinkakuji）を説明する関係代名詞 which（コンマのあとの説明）。' },
-      { id: 'C', choices: ['because', 'but', 'if', 'so'], answer: 3, why: '「はじめてだった → だから大変だった」なので so。' },
+      { id: 'C', choices: ['because', 'but', 'if', 'so'], answer: 3, why: '「一度も着たことがなかった → だから大変だった」なので so。' },
       { id: 'D', choices: ['what', 'when', 'where', 'which'], answer: 1, why: 'when ＋文 で「〜するときに」。' },
     ],
     tf: [
@@ -4201,3 +4201,6 @@ export function gradeChallenge(tag: string, record: Record<string, number>, list
   const ps = list.filter((x) => x.level.startsWith(tag))
   return { next: ps.find((x) => record[x.id] === undefined) ?? null, done: ps.filter((x) => record[x.id] !== undefined).length, total: ps.length }
 }
+
+// 長文をこの本数解くと記念メダル
+export const LONG_MEDAL = 100
