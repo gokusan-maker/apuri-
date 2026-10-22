@@ -49,7 +49,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               {e && (
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
-                  {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}</>}
+                  {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
                 </span>
               )}
               {e && onFight && Object.values(BOSSES).some((x) => x.name === b.name) && (
