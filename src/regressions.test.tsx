@@ -3,6 +3,8 @@ import { act, fireEvent, render, screen } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { BOSS_XP } from './boss'
+import { LONG_PASSAGES } from './longreading'
+import { passageQs } from './readingboss'
 import { loadMissions, missionsFor } from './missions'
 import { quizXp } from './monster'
 import { loadParty } from './party'
@@ -11,7 +13,7 @@ import { Quiz } from './QuizView'
 import { dayKey, loadProgress } from './srs'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
-import { WORDS, wordsOf } from './words'
+import { WORDS } from './words'
 
 describe('再発防止', () => {
   beforeEach(() => {
@@ -20,7 +22,7 @@ describe('再発防止', () => {
   })
 
   it('ボスをたおした最後の一撃のXPも、ボーナスと一緒にちゃんと入る', () => {
-    // 中学のボスは文法問題がまざるので、単語だけの熟語のボスで確かめる
+    // ステージのボス（読解問題）で確かめる
     const today = dayKey()
     localStorage.setItem('eitan:levels', JSON.stringify(['熟語']))
     localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスが入らないように
@@ -30,12 +32,13 @@ describe('再発防止', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /ステージ/ }))
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
-    const words = wordsOf(['熟語'])
+    // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
+    const all = LONG_PASSAGES.flatMap(passageQs)
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
-      const w = words.find((x) => x.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+      const q = all.find((x) => x.word.en === en)!
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
       expected += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }

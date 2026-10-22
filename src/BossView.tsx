@@ -2,6 +2,7 @@ import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { CountUp } from './CountUpView'
+import { readingBossQs, type ReadingQ } from './readingboss'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -26,6 +27,7 @@ type Props = {
   title?: string // 上に出す見出し
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
+  reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
   startHearts?: number // ボスラッシュではハートを引き継ぐ
   winLabel?: string // 勝ったあとのボタンの文字
   nextBoss?: { label: string; onClick: () => void } // 勝ったあと、次のボスにすぐ挑む
@@ -134,11 +136,11 @@ function preemptChoices(weak: string): string[] {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
-  const [qs, setQs] = useState(() => bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
+  const [qs, setQs] = useState(() => (reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q)))
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(startHearts)
@@ -352,7 +354,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setMinionAt(-1)
     startedAt.current = nowMs()
     setTime(null)
-    setQs(bossQuestions(words, grammar).map((q) => easyIf(loadSettings().easy, q)))
+    setQs((reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q)))
     setIndex(0)
     setHp(maxHp)
     setHearts(startHearts)
@@ -650,7 +652,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </>
       ) : (
         <>
-          <p className="en">{q.word.en}</p>
+          {'passage' in q && (
+            <details className="boss-passage" open>
+              <summary>📖 本文：{(q as ReadingQ).passage.title}</summary>
+              {(q as ReadingQ).passage.paragraphs.map((t, i) => (
+                <p key={i}>{t}</p>
+              ))}
+            </details>
+          )}
+          <p className={`en${'passage' in q ? ' boss-reading-q' : ''}`}>{q.word.en}</p>
           {partner && hintAt === null && picked === null && q.choices.length > 2 && (
             <button
               className="hint-5050"

@@ -290,6 +290,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
     return (
       <Boss
         key={fighting}
+        reading
         nextBoss={nextLevel ? { label: `次のボスへ ▶ ${BOSSES[nextLevel].name}`, onClick: () => setFighting(nextLevel) } : undefined}
         level={fighting}
         words={wordsOf([fighting])}
