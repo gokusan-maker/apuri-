@@ -971,6 +971,10 @@ describe('App', () => {
     expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
     expect(screen.getByLabelText('チームレベル').textContent).toMatch(/チームLv\.\d+「.+チーム」/)
     expect(screen.getByRole('progressbar', { name: '次の称号まで' })).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText('チームレベル'))
+    const titles = screen.getByLabelText('チームの称号の一覧')
+    expect(titles.textContent).toContain('かけだしチーム')
+    expect(titles.textContent).toContain('？？？') // まだの称号はひみつ
     expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))

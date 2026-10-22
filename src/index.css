@@ -1601,3 +1601,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-row.crowned .buddy-card { position: relative; }
 .buddy-row.crowned .buddy-card::before { content: '👑'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 1.1rem; }
 .unit-new { color: #ef4444; font-size: 0.7em; font-weight: 700; }
+button.team-level { display: block; width: 100%; border: none; background: transparent; color: inherit; cursor: pointer; }
+.team-titles { margin: 0 auto 6px; padding-left: 1.4em; font-size: 0.8rem; text-align: left; max-width: 260px; }
+.team-titles .locked { color: var(--muted); }
