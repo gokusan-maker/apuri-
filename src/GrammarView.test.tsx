@@ -753,3 +753,15 @@ it('連続正解チャレンジは、まちがえるまで続いてベスト記�
   expect(best).toHaveBeenCalledTimes(1) // 3問以上でベスト更新 → 文法のなかまにボーナス
   expect(screen.getByText(/ベスト更新！ 文法のなかまに/)).toBeInTheDocument()
 })
+
+it('文法ゲームのタイルは、まだ遊んでいないゲームに NEW 印がつき、遊ぶと消える', () => {
+  localStorage.clear()
+  const { unmount } = render(<Grammar />)
+  const grid = screen.getByLabelText('文法ゲーム')
+  expect(grid.querySelectorAll('.game-tile-new')).toHaveLength(11)
+  fireEvent.click(screen.getByText('要点カード'))
+  unmount()
+  render(<Grammar />)
+  expect(screen.getByLabelText('文法ゲーム').querySelectorAll('.game-tile-new')).toHaveLength(10)
+  expect(screen.getByText('要点カード').closest('button')!.querySelector('.game-tile-new')).toBeNull()
+})

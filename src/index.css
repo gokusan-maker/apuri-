@@ -1582,3 +1582,5 @@ button:focus:not(:focus-visible) { outline: none; }
 .buddy-zukan-row li { display: flex; align-items: center; justify-content: center; aspect-ratio: 1; border-radius: 8px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); min-width: 0; overflow: hidden; }
 .buddy-zukan-row li svg { width: 100%; height: auto; }
 .buddy-zukan-row li.locked { color: var(--muted); font-weight: 700; }
+.game-tile { position: relative; }
+.game-tile-new { position: absolute; top: 4px; right: 4px; padding: 0 5px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.6rem; font-weight: 700; }

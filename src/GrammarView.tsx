@@ -216,15 +216,16 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             </div>
             <p className="game-grid-title">🎮 文法ゲーム（{GAME_COUNT}しゅるい）</p>
             <div className="game-grid" aria-label="文法ゲーム">
-              <GameTile icon="📝" name="まとめテスト" sub={mixBest[title] !== undefined ? `ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : 'ランダム10問'} onClick={mixTest} />
-              <GameTile icon="👂" name="例文リスニング" sub="聞いて選ぶ・5問" onClick={() => setListen(true)} />
-              <GameTile icon="🃏" name="要点カード" sub={grade === 'all' ? 'おさらい' : `${grade}の単元だけ`} onClick={() => setCards(true)} />
-              <GameTile icon="🔍" name="まちがいさがし" sub={`○×で10問${grade === 'all' ? '' : `・${grade}`}`} onClick={() => setSpot(true)} />
-              <GameTile icon="🧺" name="なかま分け" sub="ちがう文をさがす" onClick={() => setOdd(true)} />
-              <GameTile icon="⚡" name="2択スピード" sub={loadDuelBest() > 0 ? `ベスト ${loadDuelBest()}秒` : '正しい英文はどっち？'} onClick={() => setDuel(true)} />
-              <GameTile icon="🎯" name="文法ビンゴ" sub={loadBingoBest() > 0 ? `ベスト ${loadBingoBest()}列` : `そろうと🪙${BINGO_COINS}`} onClick={() => setBingo(true)} />
-              <GameTile icon="⏱" name="タイムアタック" sub={`60秒${grade === 'all' ? '' : `・${grade}`}${loadTaBest() > 0 ? `・ベスト${loadTaBest()}問` : ''}`} onClick={() => setTimeAttack(true)} />
+              <GameTile playKey="grammar:まとめテスト" icon="📝" name="まとめテスト" sub={mixBest[title] !== undefined ? `ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : 'ランダム10問'} onClick={mixTest} />
+              <GameTile playKey="grammar:例文リスニング" icon="👂" name="例文リスニング" sub="聞いて選ぶ・5問" onClick={() => setListen(true)} />
+              <GameTile playKey="grammar:要点カード" icon="🃏" name="要点カード" sub={grade === 'all' ? 'おさらい' : `${grade}の単元だけ`} onClick={() => setCards(true)} />
+              <GameTile playKey="grammar:まちがいさがし" icon="🔍" name="まちがいさがし" sub={`○×で10問${grade === 'all' ? '' : `・${grade}`}`} onClick={() => setSpot(true)} />
+              <GameTile playKey="grammar:なかま分け" icon="🧺" name="なかま分け" sub="ちがう文をさがす" onClick={() => setOdd(true)} />
+              <GameTile playKey="grammar:2択スピード" icon="⚡" name="2択スピード" sub={loadDuelBest() > 0 ? `ベスト ${loadDuelBest()}秒` : '正しい英文はどっち？'} onClick={() => setDuel(true)} />
+              <GameTile playKey="grammar:文法ビンゴ" icon="🎯" name="文法ビンゴ" sub={loadBingoBest() > 0 ? `ベスト ${loadBingoBest()}列` : `そろうと🪙${BINGO_COINS}`} onClick={() => setBingo(true)} />
+              <GameTile playKey="grammar:タイムアタック" icon="⏱" name="タイムアタック" sub={`60秒${grade === 'all' ? '' : `・${grade}`}${loadTaBest() > 0 ? `・ベスト${loadTaBest()}問` : ''}`} onClick={() => setTimeAttack(true)} />
               <GameTile
+                playKey="grammar:モンスターラッシュ"
                 icon="👾"
                 name="モンスターラッシュ"
                 sub={`${RUSH_COUNT}連戦・全勝で🪙${RUSH_GRAMMAR_COINS}`}
@@ -235,6 +236,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
                 }}
               />
               <GameTile
+                playKey="grammar:連続正解"
                 icon="🔥"
                 name="連続正解"
                 sub={runBest > 0 ? `ベスト ${runBest}問` : 'まちがえるまで'}
@@ -244,6 +246,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
                 }}
               />
               <GameTile
+                playKey="grammar:ランダム1問"
                 icon="🎲"
                 name="ランダム1問"
                 sub="全単元から1問"
