@@ -3992,3 +3992,10 @@ export function nextLong(id: string, record: Record<string, number>, list: LongP
   }
   return list[(i + 1) % list.length]
 }
+
+// レベル判定：8割以上で「中2レベル合格」など。レベルは level の最初の部分（中2・中3・高校入試）
+export function levelVerdict(p: LongPassage, score: number, total: number): { pass: boolean; text: string } {
+  const lv = p.level.replace(/（.*）/, '')
+  const pass = total > 0 && score / total >= 0.8
+  return { pass, text: pass ? `🎖 ${lv}レベル合格！` : `${lv}レベル合格まであと${Math.ceil(total * 0.8) - score}点` }
+}
