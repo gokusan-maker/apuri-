@@ -339,6 +339,8 @@ export const STRONG_COINS = 10
 export const SUDDEN_COINS = 20
 // 5コンボ以上でコンボ表示を大きく（「すごいコンボ！」）
 export const BIG_COMBO = 5
+// 逆転チャンス：ハートがのこり1つになったら正解ダメージ2倍（はじめから1つのサドンデスはのぞく）
+export const isComeback = (hearts: number, startHearts: number) => hearts === 1 && startHearts > 1
 
 // おうえんスタンプ：正解するたびに相棒がスタンプでおうえん（5種類を順番に）
 export const CHEER_STAMPS = ['👍 ナイス！', '💪 いいぞ！', '✨ すごい！', '🔥 その調子！', '🎯 ばっちり！']

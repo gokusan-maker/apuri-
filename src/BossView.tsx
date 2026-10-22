@@ -7,7 +7,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { BIG_COMBO, BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, PREEMPT_DAMAGE, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -184,6 +184,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
 
   const won = hp <= 0
   const lost = !won && (hearts <= 0 || index >= qs.length)
+  const comeback = isComeback(hearts, startHearts) // 逆転チャンス：のこりハート1つで正解ダメージ2倍
   const q = qs[index]
   const enraged = isEnraged(hp, maxHp)
   // チャンス問題かどうかは、問題が出たときのいかり具合で決める
@@ -220,7 +221,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
-      const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep ? 2 : 1)
+      const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep || comeback ? 2 : 1)
       const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
       setCrit(critical)
       setLastDmg(hp - nextHp)
@@ -493,6 +494,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       </div>
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
+        {comeback && !won && <span className="comeback-badge">⚡逆転チャンス！ダメージ2倍</span>}
         {combo >= 2 && (
           <span key={combo} className={`combo${combo >= BIG_COMBO ? ' big' : ''}`}>
             🔥{combo}

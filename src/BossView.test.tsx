@@ -47,6 +47,17 @@ describe('ボス戦', () => {
     expect(document.querySelector('.combo.big')?.textContent).toBe('🔥5')
   })
 
+  it('ハートがのこり1つになると「逆転チャンス」が出る', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+    expect(screen.queryByText(/逆転チャンス/)).not.toBeInTheDocument()
+    for (let i = 0; i < 2; i++) {
+      answer(false)
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(screen.getByLabelText('のこりハート 1')).toBeInTheDocument()
+    expect(screen.getByText('⚡逆転チャンス！ダメージ2倍')).toBeInTheDocument()
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {
