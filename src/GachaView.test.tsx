@@ -167,3 +167,9 @@ it('ガチャの結果から「もう1回ひく」で続けて引ける（コイ
   rerender(<Gacha coins={0} tickets={0} members={1} onDraw={onDraw} />)
   expect(screen.queryByText(/もう1回ひく/)).toBeNull()
 })
+
+it('スーパーレア確定までのゲージが出る', async () => {
+  const { PITY } = await import('./gacha')
+  render(<Gacha coins={0} members={1} onDraw={() => null} pityLeft={5} />)
+  expect(screen.getByRole('meter', { name: 'スーパーレア確定までのゲージ' })).toHaveAttribute('aria-valuenow', String(PITY - 5))
+})

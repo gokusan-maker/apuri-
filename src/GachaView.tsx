@@ -2,7 +2,7 @@ import { dayKey } from './srs'
 import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -222,7 +222,14 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
           )}
         </p>
       )}
-      {pityLeft !== undefined && <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>}
+      {pityLeft !== undefined && (
+        <>
+          <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>
+          <div className="pity-gauge" role="meter" aria-label="スーパーレア確定までのゲージ" aria-valuemin={0} aria-valuemax={PITY} aria-valuenow={PITY - pityLeft}>
+            <div style={{ width: `${((PITY - pityLeft) / PITY) * 100}%` }} />
+          </div>
+        </>
+      )}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log">
           <summary>最近のガチャ（{log.length}回）</summary>
