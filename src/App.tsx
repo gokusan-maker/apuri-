@@ -328,6 +328,7 @@ function App() {
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のことばモンスター・読解の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
+  const [trioDance, setTrioDance] = useState(false) // トリオボーナスで3体がおどる
   const [todayQuiz, setTodayQuiz] = useState(false) // 今日の課題の「今日の単語（4択）」をやっている
   const [shortGo, setShortGo] = useState(false) // 今日の課題の「今日の読解」を開く
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
@@ -1073,6 +1074,7 @@ function App() {
             }}
           />
           <BuddyRow
+            dancing={trioDance}
             wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
             wordName={monster.name ?? formOf(monster).name}
             wordLevel={levelInfo(monster.xp).level}
@@ -1534,6 +1536,8 @@ function App() {
           <TodayTasks
             today={today}
             onTrio={(xp, ticket) => {
+              setTrioDance(true)
+              window.setTimeout(() => setTrioDance(false), 3000)
               gainXp(xp, null)
               if (ticket) setWallet((w) => addTicket(w))
               feedTrack('grammar', xp)

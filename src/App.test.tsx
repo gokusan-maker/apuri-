@@ -179,6 +179,18 @@ describe('App', () => {
     expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
   })
 
+  it('トリオボーナスを受け取ると、ホームの3体がおどる', async () => {
+    const { dayKey } = await import('./srs')
+    const day = dayKey()
+    localStorage.setItem('eitan:today-words', day)
+    localStorage.setItem('eitan:grammar-daily', day)
+    localStorage.setItem('eitan:daily-short', day)
+    render(<App />)
+    expect(document.querySelector('.buddy-row.dancing')).toBeNull()
+    fireEvent.click(screen.getByText(/トリオボーナスを受け取る/))
+    expect(document.querySelector('.buddy-row.dancing')).not.toBeNull()
+  })
+
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()
