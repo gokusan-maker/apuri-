@@ -4,6 +4,7 @@ import { MissedList } from './MissedListView'
 import { CountUp } from './CountUpView'
 import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingboss'
 import { speak } from './speech'
+import { makeLookup } from './glossary'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -14,7 +15,7 @@ import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSSES, CRI
 import { quizXp, SPECIES, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
-import { LEVELS, type Level, type Word } from './words'
+import { LEVELS, WORDS, type Level, type Word } from './words'
 
 type Props = {
   level: Level
@@ -138,6 +139,9 @@ function preemptChoices(weak: string): string[] {
 const nowMs = () => Date.now()
 const rnd = () => Math.random()
 
+// 読解ボスの本文で、単語帳にある語をタップすると意味が出る
+const lookupWord = makeLookup(WORDS)
+
 export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
@@ -205,6 +209,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const asleep = sleepAt === index
 
   const [winLine] = useState(() => WIN_LINES[Math.floor(Math.random() * WIN_LINES.length)]) // 勝ったときの竜のひとこと
+  const [gloss, setGloss] = useState<Word | null>(null) // 本文でタップした語の意味
   const [solved, setSolved] = useState<string[]>([]) // 読解ボス：答えがわかった空所（長文id:記号）
 
   function pick(i: number) {
@@ -680,7 +685,16 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                     solved.filter((k) => k.startsWith(`${(q as ReadingQ).passage.id}:`)).map((k) => k.slice(k.lastIndexOf(':') + 1)),
                   ).map((x, j) =>
                     typeof x === 'string' ? (
-                      x
+                      x.split(/(\s+)/).map((tok, k) => {
+                        const hit = lookupWord(tok)
+                        return hit ? (
+                          <button key={`${j}-${k}`} className="gloss-word" onClick={() => setGloss(gloss?.id === hit.id ? null : hit)}>
+                            {tok}
+                          </button>
+                        ) : (
+                          tok
+                        )
+                      })
                     ) : (
                       <mark key={j} className="boss-filled" aria-label={`（${x.id}）${x.word}`}>
                         ({x.id}) {x.word}
@@ -689,6 +703,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                   )}
                 </p>
               ))}
+              {gloss && (
+                <p className="gloss" role="status">
+                  {gloss.en}：{gloss.ja}
+                </p>
+              )}
             </details>
           )}
           <p className={`en${'passage' in q ? ' boss-reading-q' : ''}`}>{q.word.en}</p>

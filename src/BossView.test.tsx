@@ -514,3 +514,12 @@ it('読解ボスで空所の問題に正解すると、本文のその空所に�
   fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
   expect(screen.getByLabelText(`（${q.blank}）${q.choices[q.answer]}`)).toBeInTheDocument()
 })
+
+it('読解ボスの本文で、単語帳にある語をタップすると意味が出る', () => {
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} reading onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />)
+  const w = document.querySelector<HTMLButtonElement>('.boss-passage .gloss-word')!
+  expect(w).not.toBeNull()
+  fireEvent.click(w)
+  expect(screen.getByRole('status').textContent).toMatch(/：/)
+})
