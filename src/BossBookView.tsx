@@ -1,6 +1,6 @@
 import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
-import { BOSSES, type BossLook } from './boss'
+import { BOSSES, formatSec, loadBossTimes, type BossLook } from './boss'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
 import { UNIV_BOSSES } from './univ'
@@ -11,6 +11,7 @@ const GRAY = { color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }
 // onFight：たおしたことのある単語帳のボスと再戦する（名前で知らせる）
 export function BossBook({ onFight }: { onFight?: (name: string) => void } = {}) {
   const [book] = useState(loadBook)
+  const [times] = useState(loadBossTimes)
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
   const extra = Object.values(book)
     .map((e) => e.look)
@@ -48,6 +49,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               {e && (
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
+                  {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}</>}
                 </span>
               )}
               {e && onFight && Object.values(BOSSES).some((x) => x.name === b.name) && (

@@ -43,3 +43,15 @@ it('ボス図鑑から、たおしたことのあるボスと再戦できる', a
   fireEvent.click(screen.getByText('⚔ 再戦する'))
   expect(fights).toEqual([look.name])
 })
+
+it('ボス図鑑に、たおしたボスの最短タイムが出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  localStorage.setItem('eitan:boss-times', JSON.stringify({ ヤミモチ: 83 }))
+  render(<BossBook />)
+  expect(screen.getByText(/⏱ 最短 1分23秒/)).toBeInTheDocument()
+})
