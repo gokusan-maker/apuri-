@@ -74,3 +74,9 @@ it('進化した日を記録して、進化の一覧に「M/D に進化」と出
   expect(within(screen.getByLabelText('文法のなかま')).getByText(/10\/20 に進化/)).toBeInTheDocument()
   expect(within(screen.getByLabelText('読解のなかま')).queryByText(/\d+\/\d+ に進化/)).toBeNull()
 })
+
+it('これまでにもらった経験値の合計を出す', () => {
+  render(<BuddyDetail buddies={{ grammar: { xp: 345 }, reading: { xp: 12 } }} onRename={() => {}} />)
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('これまでの経験値：345 XP')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('これまでの経験値：12 XP')
+})

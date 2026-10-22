@@ -56,7 +56,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
             <p className="stats-note">
               次のレベルまで あと {lv.need - lv.into} XP{next ? `・Lv.${next.minLv}で ？？？ に進化` : '・さいごの姿！'}
             </p>
-            <p className="stats-note">🗓 いっしょに学んだ日：{days[t]}日</p>
+            <p className="stats-note">🗓 いっしょに学んだ日：{days[t]}日・✨ これまでの経験値：{b.xp} XP</p>
             {onSwitch && (
               <div className="buddy-switch" role="group" aria-label={`${TRACK_LABEL[t]}のなかまを入れかえる`}>
                 <p className="stats-note">🔁 入れかえ（属性「{ATTR_LABEL[t]}」のなかまだけ、このわくにおけます）</p>
