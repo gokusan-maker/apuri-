@@ -529,3 +529,12 @@ it('確認問題のあとに「次の単元へ ▶」で次の単元を開ける
   fireEvent.click(screen.getByText(`次の単元へ ▶ ${nx.title}`))
   expect(screen.getByText(nx.points[0])).toBeInTheDocument()
 })
+
+it('文法の一覧に「時制まとめ表」がある', async () => {
+  localStorage.clear()
+  const { TENSE_TABLE } = await import('./grammar')
+  render(<Grammar />)
+  expect(screen.getByText(/🕰 時制まとめ表/)).toBeInTheDocument()
+  expect(document.querySelectorAll('.tense-table tr')).toHaveLength(TENSE_TABLE.length)
+  expect(screen.getByText('I have played tennis for three years.')).toBeInTheDocument()
+})

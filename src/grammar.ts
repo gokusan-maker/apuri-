@@ -1946,3 +1946,14 @@ export function nextUnit(id: string): GrammarUnit | null {
   const i = GRADE_ORDER.findIndex((u) => u.id === id)
   return i >= 0 && i + 1 < GRADE_ORDER.length ? GRADE_ORDER[i + 1] : null
 }
+
+// 時制まとめ表：play を例に、時制ごとの形と例文
+export const TENSE_TABLE: { name: string; form: string; en: string; ja: string }[] = [
+  { name: '現在', form: '動詞（三単現は -s）', en: 'I play tennis every day.', ja: '私は毎日テニスをする。' },
+  { name: '過去', form: '動詞の過去形', en: 'I played tennis yesterday.', ja: '私はきのうテニスをした。' },
+  { name: '未来', form: 'will ＋原形／be going to ＋原形', en: 'I will play tennis tomorrow.', ja: '私は明日テニスをするつもりだ。' },
+  { name: '現在進行形', form: 'am / is / are ＋ -ing', en: 'I am playing tennis now.', ja: '私は今テニスをしている。' },
+  { name: '過去進行形', form: 'was / were ＋ -ing', en: 'I was playing tennis at five.', ja: '私は5時にテニスをしていた。' },
+  { name: '現在完了', form: 'have / has ＋過去分詞', en: 'I have played tennis for three years.', ja: '私は3年間テニスをしている。' },
+  { name: '過去完了', form: 'had ＋過去分詞', en: 'I had played tennis before I came here.', ja: '私はここに来る前にテニスをしたことがあった。' },
+]

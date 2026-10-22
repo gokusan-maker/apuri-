@@ -20,7 +20,7 @@ import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -316,6 +316,30 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           >
             👾👾👾 文法モンスターラッシュ（{RUSH_COUNT}連戦・全勝で🪙{RUSH_GRAMMAR_COINS}）
           </button>
+        )}
+        {stampMode && (
+          <details className="tense-table">
+            <summary>🕰 時制まとめ表（現在・過去・未来・進行形・完了形）</summary>
+            <table>
+              <tbody>
+                {TENSE_TABLE.map((t) => (
+                  <tr key={t.name}>
+                    <th scope="row">{t.name}</th>
+                    <td>
+                      <span className="tense-form">{t.form}</span>
+                      <span className="tense-en">
+                        {t.en}
+                        <button className="speak small" onClick={() => speak(t.en)} aria-label={`${t.name}の例文を聞く`}>
+                          🔊
+                        </button>
+                      </span>
+                      <span className="tense-ja">{t.ja}</span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </details>
         )}
         {stampMode && (
           <button
