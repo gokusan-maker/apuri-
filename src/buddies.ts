@@ -1,4 +1,4 @@
-// 項目ごとに育てるなかま：単語は相棒（モチなど）、文法はペットモンスター（ペットにちなんだ名前のモンスター）、長文は竜（ドラゴン）
+// 項目ごとに育てるなかま：単語は相棒（モチなど）、文法はことばのモンスター（文房具・魔法の本など。動物ではない）、長文は竜（ドラゴン）
 // 単語の相棒はこれまでどおり party / monster。文法と長文のなかまはここで別に育てる
 import { levelInfo } from './monster'
 
@@ -7,23 +7,29 @@ export type Buddy = { xp: number; name?: string }
 export type Buddies = Record<Track, Buddy>
 
 export type BuddyForm = { minLv: number; icon: string; name: string }
-// レベルで姿がかわる（Lv.1 はタマゴ。XP がたまってLv.2になるとかえる）
+// レベルで姿がかわる（Lv.1 はタマゴ。XP がたまってLv.2になるとかえる）。進化のあいだも1レベルごとに見た目が少しずつ育つ（BuddyFigure の星）
 export const BUDDY_FORMS: Record<Track, BuddyForm[]> = {
+  // 文法：ことばと文房具のふしぎなモンスター（動物ではない）
   grammar: [
-    { minLv: 1, icon: '🥚', name: 'モンスターのタマゴ' },
-    { minLv: 2, icon: '🐹', name: 'ハムモン' },
-    { minLv: 5, icon: '🐰', name: 'ピョンモン' },
-    { minLv: 10, icon: '🐶', name: 'ワンモン' },
-    { minLv: 20, icon: '🐱', name: 'ニャンモン' },
-    { minLv: 35, icon: '🦜', name: 'インコモンはかせ' },
+    { minLv: 1, icon: '🥚', name: 'ことばのタマゴ' },
+    { minLv: 2, icon: '💧', name: 'インクぷる' },
+    { minLv: 4, icon: '✏️', name: 'ペンボウ' },
+    { minLv: 6, icon: '🧽', name: 'けしゴーン' },
+    { minLv: 9, icon: '📓', name: 'ノートン' },
+    { minLv: 13, icon: '💎', name: 'ルーンゴーレム' },
+    { minLv: 20, icon: '🛡️', name: 'まどうしょナイト' },
+    { minLv: 30, icon: '👑', name: 'ブンポウキング' },
   ],
+  // 長文（読解）：ドラゴン・神秘系
   reading: [
     { minLv: 1, icon: '🥚', name: 'りゅうのタマゴ' },
     { minLv: 2, icon: '🦎', name: 'ちびドラ' },
-    { minLv: 5, icon: '🐲', name: 'ベビードラゴン' },
-    { minLv: 10, icon: '🐉', name: 'ドラゴン' },
+    { minLv: 4, icon: '🐲', name: 'ベビードラゴン' },
+    { minLv: 6, icon: '🐲', name: 'はばたきドラゴン' },
+    { minLv: 9, icon: '🐉', name: 'ドラゴン' },
+    { minLv: 13, icon: '🐉', name: 'ほしよみドラゴン' },
     { minLv: 20, icon: '🐉', name: 'せいりゅう（聖竜）' },
-    { minLv: 35, icon: '🐉', name: 'つきのしんりゅう（月の神竜）' },
+    { minLv: 30, icon: '🐉', name: 'つきのしんりゅう（月の神竜）' },
   ],
 }
 export const TRACK_LABEL: Record<Track, string> = { grammar: '文法', reading: '長文' }
@@ -68,3 +74,8 @@ export function feedBuddy(b: Buddies, track: Track, amount: number): { buddies: 
 
 // なかまに名前をつける（空なら名前を消す）
 export const renameBuddy = (b: Buddies, track: Track, name: string): Buddies => ({ ...b, [track]: name ? { ...b[track], name } : { xp: b[track].xp } })
+
+// 今の姿になってから何レベル上がったか（1レベルごとに星がふえて、育っているのが見える）
+export function growthStars(track: Track, b: Buddy): number {
+  return Math.min(5, buddyLevel(b).level - buddyForm(track, b).minLv)
+}

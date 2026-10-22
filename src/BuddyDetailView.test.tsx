@@ -3,12 +3,12 @@ import { expect, it } from 'vitest'
 import { renameBuddy, type Buddies } from './buddies'
 import { BuddyDetail } from './BuddyDetailView'
 
-it('文法のペット・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
+it('文法のことばモンスター・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
   let b: Buddies = { grammar: { xp: 200 }, reading: { xp: 0 } }
   const { rerender } = render(<BuddyDetail buddies={b} onRename={(t, n) => (b = renameBuddy(b, t, n))} />)
   const g = screen.getByLabelText('文法のなかま')
   expect(g.textContent).toMatch(/次のレベルまで あと \d+ XP/)
-  expect(g.querySelectorAll('.buddy-forms li')).toHaveLength(6)
+  expect(g.querySelectorAll('.buddy-forms li')).toHaveLength(8)
   fireEvent.click(within(g).getByText('✏️ 名前をつける'))
   fireEvent.change(screen.getByLabelText('なかまの名前'), { target: { value: 'ポチ' } })
   fireEvent.click(screen.getByText('決定'))
