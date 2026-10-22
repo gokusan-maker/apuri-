@@ -97,10 +97,15 @@ describe('ボス戦', () => {
     expect(document.querySelector('.lose-cheer')!.textContent).toMatch(/^🐣 モチ「.+」$/)
   })
 
-  it('勝つと長文のなかま（竜）がよろこぶ', () => {
+  it('勝つと読解のなかま（竜）が英語で勝利のひとこと（和訳つき）', async () => {
+    const { WIN_LINES } = await import('./readingboss')
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} winBuddy={{ icon: '🐲', name: 'ベビードラゴン' }} />)
+    rnd.mockRestore()
     answer(true)
-    expect(screen.getByText(/🐲 ベビードラゴン「やった！ 読解ボスをたおしたね！/)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`🐲 ベビードラゴン「${WIN_LINES[0].en}」`))).toBeInTheDocument()
+    expect(screen.getByText(`（${WIN_LINES[0].ja}）`)).toBeInTheDocument()
+    expect(screen.getByLabelText('竜のひとことを聞く')).toBeInTheDocument()
   })
 
   it('3回まちがえると負け、もう一度挑戦できる', () => {

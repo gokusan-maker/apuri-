@@ -55,3 +55,12 @@ export function filledParts(text: string, p: LongPassage, solved: string[]): Pas
   // となりあう文字列はまとめる
   return parts.reduce<PassagePart[]>((a, x) => (typeof x === 'string' && typeof a[a.length - 1] === 'string' ? [...a.slice(0, -1), (a[a.length - 1] as string) + x] : [...a, x]), [])
 }
+
+// 読解ボスに勝ったときの、読解の竜の英語のひとこと（自作・和訳つき）
+export const WIN_LINES: { en: string; ja: string }[] = [
+  { en: 'We did it! Reading is our superpower.', ja: 'やったね！ 読むことはぼくたちの超能力だ。' },
+  { en: 'Every word you read makes my wings stronger.', ja: 'きみが読む一語一語が、ぼくのつばさを強くするよ。' },
+  { en: 'That boss never saw it coming!', ja: 'あのボス、まさかやられるとは思っていなかったね！' },
+  { en: "Let's find an even harder story next time.", ja: '次はもっと難しいお話をさがそう。' },
+  { en: 'You read like a true dragon rider.', ja: 'きみは本物の竜使いみたいに読むね。' },
+]

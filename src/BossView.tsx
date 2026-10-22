@@ -2,7 +2,8 @@ import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { CountUp } from './CountUpView'
-import { filledParts, readingBossQs, type ReadingQ } from './readingboss'
+import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingboss'
+import { speak } from './speech'
 import { useEffect, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -203,6 +204,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   if (picked === null && isAsleep(enraged, index) && sleepAt !== index && !chance && !charge) setSleepAt(index)
   const asleep = sleepAt === index
 
+  const [winLine] = useState(() => WIN_LINES[Math.floor(Math.random() * WIN_LINES.length)]) // 勝ったときの竜のひとこと
   const [solved, setSolved] = useState<string[]>([]) // 読解ボス：答えがわかった空所（長文id:記号）
 
   function pick(i: number) {
@@ -625,7 +627,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </p>
           {winBuddy && (
             <p className="grammar-praise boss-buddy-cheer">
-              {winBuddy.icon} {winBuddy.name}「やった！ 読解ボスをたおしたね！ ぼくも強くなったよ！」
+              {winBuddy.icon} {winBuddy.name}「{winLine.en}」
+              <button className="speak small" onClick={() => speak(winLine.en)} aria-label="竜のひとことを聞く">
+                🔊
+              </button>
+              <br />
+              <small>（{winLine.ja}）</small>
             </p>
           )}
           <MissedList words={missed} />
