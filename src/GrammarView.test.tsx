@@ -538,3 +538,17 @@ it('文法の一覧に「時制まとめ表」がある', async () => {
   expect(document.querySelectorAll('.tense-table tr')).toHaveLength(TENSE_TABLE.length)
   expect(screen.getByText('I have played tennis for three years.')).toBeInTheDocument()
 })
+
+it('確認問題でまちがえると「要点を見る」でその場で要点が出る（次の問題では閉じる）', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  const q = unit.questions[0]
+  fireEvent.click(screen.getByRole('button', { name: q.choices[(q.answer + 1) % q.choices.length] }))
+  fireEvent.click(screen.getByText(`📌 要点を見る（${unit.title}）`))
+  expect(screen.getByRole('list', { name: '単元の要点' }).textContent).toContain(unit.points[0])
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.queryByRole('list', { name: '単元の要点' })).toBeNull()
+})

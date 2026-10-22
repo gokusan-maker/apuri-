@@ -58,6 +58,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [odd, setOdd] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [champ, setChamp] = useState(loadGrammarChamp)
+  const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gDays, setGDays] = useState(loadGrammarDays)
@@ -771,6 +772,19 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         <>
           <p className="feedback">{picked === q.answer ? '正解！' : 'ざんねん'}</p>
           <p className="grammar-why">{q.why}</p>
+          {picked !== q.answer && unitOfQuestion(q) && (
+            showPoints ? (
+              <ul className="grammar-points inline-points" aria-label="単元の要点">
+                {unitOfQuestion(q)!.points.map((pt) => (
+                  <li key={pt}>{pt}</li>
+                ))}
+              </ul>
+            ) : (
+              <button className="list-link" onClick={() => setShowPoints(true)}>
+                📌 要点を見る（{unitOfQuestion(q)!.title}）
+              </button>
+            )
+          )}
           {!GRAMMAR.some((g) => g.id === unit.id) && unitOfQuestion(q) && (
             <button className="list-link" onClick={() => open(unitOfQuestion(q)!)}>
               📖 もっとくわしく：{unitOfQuestion(q)!.title}
@@ -780,6 +794,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             className="flip"
             onClick={() => {
               setPicked(null)
+              setShowPoints(false)
               setStep(step + 1)
             }}
           >
