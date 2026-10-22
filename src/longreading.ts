@@ -3522,7 +3522,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['what', 'when', 'where', 'which'], answer: 2, why: '場所（a famous park）を説明する関係副詞 where。' },
       { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 1, why: '「世界で」は in the world。' },
-      { id: 'C', choices: ['what', 'which', 'who', 'whose'], answer: 2, why: '人や動物の「〜する者」を強調する It is 〜 who … の形。サルを人のように表すので who。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: 'It is 〜 that … で「…するのは〜だ」（強調の形）。' },
       { id: 'D', choices: ['for', 'in', 'of', 'to'], answer: 3, why: '目的「〜するために」は to ＋動詞の原形。' },
     ],
     tf: [
