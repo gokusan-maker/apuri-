@@ -833,7 +833,7 @@ describe('App', () => {
     render(<App />)
     const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
     fireEvent.click(nav.getByText('長文ボス'))
-    fireEvent.click(screen.getByRole('tab', { name: '📖 長文れんしゅう' }))
+    fireEvent.click(screen.getByRole('tab', { name: '📖 長文' }))
     expect(screen.getByRole('heading', { name: '長文読解（入試形式）' })).toBeInTheDocument()
     fireEvent.click(nav.getByText('ミニゲーム'))
     fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))

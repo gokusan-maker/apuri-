@@ -157,7 +157,7 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
 
 const STAGE_TABS: { id: 'boss' | 'long' | 'short'; label: string }[] = [
   { id: 'boss', label: '👹 ボス' },
-  { id: 'long', label: '📖 長文れんしゅう' },
+  { id: 'long', label: '📖 長文' },
   { id: 'short', label: '📰 短い読解' },
 ]
 
