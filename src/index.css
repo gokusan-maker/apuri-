@@ -1375,3 +1375,8 @@ button:focus:not(:focus-visible) { outline: none; }
 .home-gacha-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin: 10px 0 4px; padding: 14px 12px; border: none; border-radius: 16px; background: linear-gradient(135deg, #f472b6, #a855f7 55%, #6366f1); color: #fff; font-size: 1.15rem; font-weight: 800; box-shadow: 0 4px 14px rgb(168 85 247 / 0.35); }
 .home-gacha-btn small { padding: 2px 8px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.8rem; }
 .home-gacha-btn:active { transform: scale(0.98); }
+.grade-rates { list-style: none; margin: 6px 0 10px; padding: 0; display: grid; gap: 4px; }
+.grade-rates li { display: grid; grid-template-columns: 3em 1fr 4.5em; align-items: center; gap: 8px; font-size: 0.8rem; }
+.grade-rate-bar { height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
+.grade-rate-bar > span { display: block; height: 100%; background: #22c55e; }
+.grade-rate-num { text-align: right; color: var(--muted); }

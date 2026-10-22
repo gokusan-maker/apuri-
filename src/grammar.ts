@@ -1864,3 +1864,11 @@ export function danOf(cleared: number): { name: string; next: number | null } {
   const i = DAN_LEVELS.reduce((a, d, k) => (cleared >= d.min ? k : a), 0)
   return { name: DAN_LEVELS[i].name, next: DAN_LEVELS[i + 1] ? DAN_LEVELS[i + 1].min - cleared : null }
 }
+
+// 学年別のクリア率：学年ごとの全問正解した単元の数と、全部の単元の数
+export function gradeClearRates(r: GrammarRecord): { grade: GrammarGrade; cleared: number; total: number }[] {
+  return GRAMMAR_GRADES.map((grade) => {
+    const us = GRAMMAR.filter((u) => gradeOf(u.id) === grade)
+    return { grade, cleared: us.filter((u) => r[u.id] === u.questions.length).length, total: us.length }
+  })
+}

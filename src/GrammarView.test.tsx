@@ -473,3 +473,11 @@ it('確認問題のあとに「もう1問」（正しい文はどれ？）がと
   expect(screen.getByText(/⭕ 正解！/)).toBeInTheDocument()
   expect(onAnswer).toHaveBeenCalledTimes(4)
 })
+
+it('文法の一覧に学年別クリア率が出る', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const list = screen.getByRole('list', { name: '学年別クリア率' })
+  expect(list.querySelectorAll('li')).toHaveLength(4)
+  expect(list.textContent).toMatch(/中1.*0\/\d+/)
+})
