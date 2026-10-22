@@ -1207,4 +1207,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn through the activity?', choices: ['Even a small idea can make someone happy.', 'The box should be thrown away.', 'Students never lose things.', 'Photos are too expensive to take.'], answer: 0, why: '第3段落 even a small idea can make someone happy。' },
     ],
   },
+  {
+    id: 'adv-forgetting',
+    title: 'In Praise of Forgetting',
+    level: '難関大（評論）',
+    paragraphs: [
+      'We usually treat forgetting as a failure of memory, something to be fought with notes, reminders, and endless review. Yet a growing number of researchers suggest that forgetting is not merely a weakness of the brain ( A ) one of its essential functions. A mind that kept every detail of every day would not be more powerful; it would be buried under its own records.',
+      'Consider what memory is for. Its purpose is not to preserve the past exactly but to help us act wisely in the future. To do this, the brain must separate what is likely to matter again from what is not. Details that are never used gradually fade, while patterns that appear repeatedly are strengthened. Forgetting, in this sense, is a kind of editing, and good editing depends as much on what is cut as on what is ( B ).',
+      'This view has practical consequences. Students who try to remember everything often end up understanding little, because they give equal weight to the important and the trivial. Those who learn well tend to focus on the structure of a subject and allow minor facts to slip away. The lesson is not that we should stop trying to remember, but that we should stop ( C ) every lost detail as a defeat.',
+    ],
+    ja: [
+      '私たちはふつう、忘れることを記憶の失敗とみなし、メモや通知や終わりのない復習で戦うべきものだと考えている。しかし、忘却は脳の弱点にすぎないのではなく、その欠かせない働きの一つなのだと主張する研究者がふえている。毎日のあらゆる細部を保ち続ける心は、より強力になるのではなく、自らの記録の下にうもれてしまうだろう。',
+      '記憶が何のためにあるのかを考えてみよう。その目的は過去を正確に保存することではなく、未来において賢く行動する助けとなることだ。そのために脳は、また重要になりそうなものとそうでないものを分けなければならない。一度も使われない細部はしだいに薄れ、くり返し現れるパターンは強められる。この意味で忘却は一種の編集であり、よい編集は、何を残すかと同じくらい、何を削るかにかかっている。',
+      'この見方には実際的な意味がある。すべてを覚えようとする学生は、重要なこととささいなことに同じ重みを与えてしまうため、結局ほとんど理解できないことが多い。よく学ぶ人は、科目の構造に集中し、細かな事実がこぼれ落ちるのを許す傾向がある。教訓は、覚えようとするのをやめるべきだということではなく、失われた細部の一つ一つを敗北とみなすのをやめるべきだということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'and', 'or', 'so'], answer: 0, why: 'not merely A but B「単に A ではなく B」。' },
+      { id: 'B', choices: ['kept', 'lost', 'printed', 'sold'], answer: 0, why: 'cut（削る）と対になるのは kept（残す）。' },
+      { id: 'C', choices: ['treating', 'to treat', 'treat', 'treated'], answer: 0, why: 'stop -ing「〜するのをやめる」。treat A as B「A を B とみなす」。' },
+    ],
+    tf: [
+      { statement: '筆者は、あらゆる細部を覚えている心はより強力になると考えている。', answer: false, why: '第1段落 would not be more powerful; it would be buried。' },
+      { statement: '記憶の目的は、未来に賢く行動する助けとなることだとされている。', answer: true, why: '第2段落 to help us act wisely in the future。' },
+      { statement: '筆者は、覚えようとすること自体をやめるべきだと主張している。', answer: false, why: '第3段落 The lesson is not that we should stop trying to remember。' },
+    ],
+    qa: [
+      { q: 'Why do students who try to remember everything often understand little?', choices: ['They give equal weight to important and trivial things.', 'They do not take enough notes.', 'They forget the structure of every subject.', 'They review too little.'], answer: 0, why: '第3段落 because they give equal weight to the important and the trivial。' },
+    ],
+  },
 ]
