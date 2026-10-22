@@ -159,6 +159,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
+  const [hintAt, setHintAt] = useState<{ index: number; hide: number } | null>(null) // 相棒のヒント（1戦1回）
   const [proverb, setProverb] = useState<number | null>(null) // たおしたときに教えてくれたことわざ
   const [revenge, setRevenge] = useState(false) // リベンジ成功
   const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
@@ -331,6 +332,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setHintAt(null)
     setProverb(null)
     setRevenge(false)
     setShield(false)
@@ -607,8 +609,20 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       ) : (
         <>
           <p className="en">{q.word.en}</p>
+          {partner && hintAt === null && picked === null && q.choices.length > 2 && (
+            <button
+              className="hint-5050"
+              onClick={() => {
+                const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.answer)
+                setHintAt({ index, hide: wrongs[Math.floor(rnd() * wrongs.length)] })
+              }}
+            >
+              💡 {partner.name}のヒント（1戦1回・まちがいを1つ消す）
+            </button>
+          )}
           <div className="choices">
             {q.choices.map((c, i) => {
+              if (hintAt && hintAt.index === index && hintAt.hide === i && picked === null) return null
               let cls = 'choice'
               if (picked !== null && i === q.answer) cls += ' correct'
               else if (picked === i) cls += ' wrong'

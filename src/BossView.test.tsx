@@ -392,3 +392,15 @@ it('相棒のちからの分だけ正解ダメージがふえる', () => {
   const b = 500 - Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
   expect(b - a).toBe(3)
 })
+
+it('相棒のヒントでまちがいの選択肢が1つ消える（1戦1回）', async () => {
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} partner={{ form: FORMS[1], name: 'あいぼう' }} />)
+  const before = document.querySelectorAll('.boss .choice').length
+  fireEvent.click(screen.getByText(/あいぼうのヒント/))
+  expect(document.querySelectorAll('.boss .choice').length).toBe(before - 1)
+  expect(screen.queryByText(/あいぼうのヒント/)).toBeNull()
+  answer(true)
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.queryByText(/あいぼうのヒント/)).toBeNull()
+})
