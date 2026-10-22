@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'relative-nonrestrictive': { wrong: 'My uncle, that lives in Canada, is a pilot.', right: 'My uncle, who lives in Canada, is a pilot.', why: 'コンマのあとの関係代名詞（非制限用法）に that は使えない。人なら who。' },
+  'so-that-purpose': { wrong: 'I left early so that I can catch the train.', right: 'I left early so that I could catch the train.', why: '過去の文（left）の目的なので can ではなく could。' },
   'modal-perfect': { wrong: 'It must rained last night.', right: 'It must have rained last night.', why: '過去のことの推量は must have ＋ 過去分詞。have をわすれない。' },
   'future-perfect': { wrong: 'I will finished it by six.', right: 'I will have finished it by six.', why: '未来完了は will have ＋ 過去分詞。will のあとに過去分詞だけは置けない。' },
   'compound-relative': { wrong: 'Whatever wants to come is welcome.', right: 'Whoever wants to come is welcome.', why: '「〜する人はだれでも」は whoever。whatever は物やことに使う。' },

@@ -1906,6 +1906,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'Next month, he will have worked here ___ three years.', choices: ['for', 'since', 'by'], answer: 0, why: '「3年間」という期間は for ＋ 期間。since は始まった時点を表す。' },
     ],
   },
+  {
+    id: 'relative-nonrestrictive',
+    title: '関係代名詞の非制限用法（, who / , which）',
+    points: [
+      '関係代名詞の前にコンマ（,）を置くと、前の名詞について「ちなみに〜」と情報を付け足す言い方になる（非制限用法）。',
+      'この使い方では that は使えない。人なら who、物なら which。, which は前の文全体を指すこともある。',
+    ],
+    examples: [
+      { en: 'My uncle, who lives in Canada, is a pilot.', ja: 'おじは、カナダに住んでいるのだが、パイロットだ。' },
+      { en: 'He passed the test, which made his mother happy.', ja: '彼は試験に合格し、そのことが母親を喜ばせた。' },
+    ],
+    questions: [
+      { sentence: 'My sister, ___ works at a hospital, is very kind.', choices: ['who', 'which', 'that'], answer: 0, why: 'コンマのあとの非制限用法では that は使えない。人（my sister）なので who。' },
+      { sentence: 'I visited Kyoto, ___ has many old temples.', choices: ['which', 'who', 'that'], answer: 0, why: '物・場所（Kyoto）なので which。コンマのあとに that は使えない。' },
+      { sentence: 'She smiled at me, ___ made me happy.', choices: ['which', 'who', 'what'], answer: 0, why: ', which は前の文全体（彼女がほほえんだこと）を指せる。' },
+    ],
+  },
+  {
+    id: 'so-that-purpose',
+    title: 'so that（〜できるように）',
+    points: [
+      'so that ＋ 主語 ＋ can / will ＋ 動詞の原形 で「〜が…できるように」と目的を表す。過去の文では could / would になる。',
+      '不定詞（to ＋ 動詞の原形）でも目的を表せるが、主語がちがうときは so that を使うとわかりやすい：I spoke slowly so that she could understand.',
+    ],
+    examples: [
+      { en: 'I got up early so that I could catch the first train.', ja: '始発の電車に乗れるように早く起きた。' },
+      { en: 'Speak louder so that everyone can hear you.', ja: 'みんなに聞こえるように、もっと大きな声で話して。' },
+    ],
+    questions: [
+      { sentence: 'She studied hard ___ she could pass the exam.', choices: ['so that', 'such that', 'even if'], answer: 0, why: '「合格できるように」と目的を表すので so that。' },
+      { sentence: 'I wrote it down so that I ___ forget it.', choices: ["wouldn't", "didn't", "don't"], answer: 0, why: '過去の文の目的なので would の否定 wouldn\'t「忘れないように」。' },
+      { sentence: 'Turn on the light so that we ___ see the map.', choices: ['can', 'could have', 'are'], answer: 0, why: '今これからの目的なので can「地図が見えるように」。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2009,7 +2043,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
