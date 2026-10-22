@@ -2016,3 +2016,9 @@ export const TENSE_TABLE: { name: string; form: string; en: string; ja: string }
 
 // まちがいノートに問題がのっている単元（まちがえたことがある単元）の id
 export const weakIdsOf = (note: string[]) => GRAMMAR.filter((u) => u.questions.some((q) => note.includes(q.sentence))).map((u) => u.id)
+
+// 答えあわせで読み上げる正しい英文（空所に正解を入れる）。日本語がまじる問題は null
+export function correctSentence(q: GrammarQuestion): string | null {
+  const s = q.sentence.replace(/___/, q.choices[q.answer])
+  return /[ぁ-んァ-ン一-龥（→]/.test(s) ? null : s
+}

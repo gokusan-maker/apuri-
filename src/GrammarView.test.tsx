@@ -571,3 +571,15 @@ it('まちがえたことがある単元には一覧と要点カードで⚠印�
   render(<Grammar />)
   expect(screen.getAllByLabelText('まちがえたことがある単元').length).toBeGreaterThan(0)
 })
+
+it('答えあわせで「🔊 正しい英文を聞く」が出る', async () => {
+  localStorage.clear()
+  const { correctSentence } = await import('./grammar')
+  render(<Grammar />)
+  const unit = GRAMMAR.find((u) => correctSentence(u.questions[0]))!
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  const q = unit.questions[0]
+  fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+  expect(screen.getByText(`🔊 正しい英文を聞く：${correctSentence(q)}`)).toBeInTheDocument()
+})
