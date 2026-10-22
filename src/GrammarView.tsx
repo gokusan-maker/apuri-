@@ -14,6 +14,7 @@ import { GrammarShadow } from './GrammarShadowView'
 import { GrammarPrint } from './GrammarPrintView'
 import { GrammarDict } from './GrammarDictView'
 import { GrammarDuel } from './GrammarDuelView'
+import { GrammarOdd } from './GrammarOddView'
 import { loadDuelBest } from './grammarduel'
 import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
@@ -52,6 +53,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [printing, setPrinting] = useState(false)
   const [dict, setDict] = useState(false)
   const [duel, setDuel] = useState(false)
+  const [odd, setOdd] = useState(false)
   const [note, setNote] = useState(loadNotebook)
   const [clears, setClears] = useState(loadClears)
   const [gDays, setGDays] = useState(loadGrammarDays)
@@ -103,6 +105,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
   if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} />
   if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
+  if (odd) return <GrammarOdd onAnswer={onAnswer} onBack={() => setOdd(false)} />
   if (duel) return <GrammarDuel onBack={() => setDuel(false)} />
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
@@ -177,6 +180,11 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         {stampMode && (
           <button className="list-link spot-btn" onClick={() => setSpot(true)}>
             🔍 まちがいさがし（○×で10問{grade === 'all' ? '' : `・${grade}`}）
+          </button>
+        )}
+        {stampMode && (
+          <button className="list-link spot-btn" onClick={() => setOdd(true)}>
+            🧺 文法のなかま分け（ちがう文法の文をさがす）
           </button>
         )}
         {stampMode && (
