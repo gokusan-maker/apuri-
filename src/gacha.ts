@@ -266,3 +266,21 @@ export function saveGachaFast(on: boolean): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 月に1回の福袋：🪙200で3連ガチャ＋バトルアイテム3つ
+export const LUCKY_BAG_PRICE = 200
+const BAG_MONTH_KEY = 'eitan:lucky-bag'
+export function loadLuckyBagMonth(): string {
+  try {
+    return localStorage.getItem(BAG_MONTH_KEY) ?? ''
+  } catch {
+    return ''
+  }
+}
+export function saveLuckyBagMonth(m: string): void {
+  try {
+    localStorage.setItem(BAG_MONTH_KEY, m)
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}

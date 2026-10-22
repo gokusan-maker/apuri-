@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, speciesRate, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -36,6 +36,8 @@ type Props = {
   pityLeft?: number // あと何回でスーパーレア以上が確定
   points?: number // ガチャポイント
   stickers?: string[] // 集めたシール
+  luckyBag?: boolean // 今月の福袋が買える
+  onLuckyBag?: () => GachaResult[]
   onExchange?: () => GachaResult | null // 20ポイントでスーパーレア以上確定
   dragonUp?: boolean // 週末はドラコが出やすい
   pickup?: Species // 日替わりピックアップ（出やすい）
@@ -47,7 +49,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
+export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchange, stickers, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [capsule, setCapsule] = useState(loadCapsule)
@@ -146,6 +148,21 @@ export function Gacha({ coins, members, tickets = 0, pityLeft, points, onExchang
         </p>
       )}
       {dragonUp && <p className="gacha-event">🐉 週末はドラコが出やすい！（10% → 20%）</p>}
+      {luckyBag && onLuckyBag && (
+        <button
+          className="good gacha-btn multi lucky-bag"
+          disabled={members + 3 > PARTY_MAX}
+          onClick={() => {
+            const list = onLuckyBag()
+            if (list.length === 0) return
+            setResult(null)
+            setMulti({ list, key: Date.now() })
+            list.forEach(record)
+          }}
+        >
+          🎍 今月の福袋（3連ガチャ＋バトルアイテム3つ）🪙{LUCKY_BAG_PRICE}
+        </button>
+      )}
       <label className="gacha-fast-toggle">
         <input
           type="checkbox"

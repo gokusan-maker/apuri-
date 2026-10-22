@@ -61,7 +61,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
-import { loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
   FORMS,
@@ -282,6 +282,7 @@ function App() {
   const [shards, setShards] = usePersistent(loadShards, saveShards)
   const [gachaPoints, setGachaPoints] = usePersistent(loadGachaPoints, saveGachaPoints)
   const [stickers, setStickers] = usePersistent(loadStickers, saveStickers)
+  const [luckyMonth, setLuckyMonth] = usePersistent(loadLuckyBagMonth, saveLuckyBagMonth)
   const [power, setPower] = useState(() => loadTraining().power)
   const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
   const [giftMsg, setGiftMsg] = useState('')
@@ -693,8 +694,8 @@ function App() {
   }
 
   // ガチャを n 回まとめて引く（1回ずつ財布・仲間・ステップを引きついで計算する）
-  function drawMany(ticket: boolean, n: number): GachaResult[] {
-    let w = wallet
+  function drawMany(ticket: boolean, n: number, start = wallet): GachaResult[] {
+    let w = start
     let p = party
     let st = gachaStep
     const out: GachaResult[] = []
@@ -974,6 +975,16 @@ function App() {
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           onGachaMulti={(n) => drawMany(false, n)}
+          luckyBag={luckyMonth !== today.slice(0, 7) && wallet.coins >= LUCKY_BAG_PRICE}
+          onLuckyBag={() => {
+            if (luckyMonth === today.slice(0, 7) || wallet.coins < LUCKY_BAG_PRICE || party.members.length + 3 > PARTY_MAX) return []
+            const out = drawMany(true, 3, { ...wallet, coins: wallet.coins - LUCKY_BAG_PRICE, tickets: (wallet.tickets ?? 0) + 3 })
+            if (out.length === 0) return []
+            setLuckyMonth(today.slice(0, 7))
+            setBag((b) => addItem(addItem(addItem(b, 'bomb'), 'charm'), 'clock'))
+            pushToast([{ id: 'lucky-bag', text: '🎍 福袋をあけた！ バトルアイテム（💣🧿⏳）ももらった', counter: 'answers', target: 0 }])
+            return out
+          }}
           gachaPoints={gachaPoints}
           stickers={stickers.got}
           onExchange={() => {

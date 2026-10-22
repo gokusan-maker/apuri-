@@ -634,6 +634,21 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:partner-gift')).toBe('')
   })
 
+  it('月に1回の福袋で3連ガチャとバトルアイテムがもらえる', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 250, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 250枚・ショップを開く'))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.5)
+    fireEvent.click(screen.getByRole('button', { name: /今月の福袋/ }))
+    rnd.mockRestore()
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members).toHaveLength(4)
+    const bag = JSON.parse(localStorage.getItem('eitan:battle-items')!)
+    expect([bag.bomb, bag.charm, bag.clock]).toEqual([1, 1, 1])
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeLessThanOrEqual(250 - 200 + 30 + 5 * 3)
+    expect(localStorage.getItem('eitan:lucky-bag')).toBe('2026-10')
+    expect(screen.queryByRole('button', { name: /今月の福袋/ })).toBeNull()
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
