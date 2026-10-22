@@ -36,3 +36,12 @@ describe('難関大・TOEFL/IELTS の長文', () => {
     }
   })
 })
+
+describe('むずかしさごとに解いた本数', () => {
+  it('そのレベルで解いた本数と全部の本数（かんたんは数えない）', async () => {
+    const { solvedOf } = await import('./readlevel')
+    expect(solvedOf('easy', {})).toBeNull()
+    const ps = passagesFor('univ')
+    expect(solvedOf('univ', { [ps[0].id]: 5, 'cat': 3 })).toEqual({ done: 1, total: ps.length })
+  })
+})

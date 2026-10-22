@@ -1548,3 +1548,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .read-levels strong { font-size: 0.72rem; overflow-wrap: anywhere; line-height: 1.2; }
 .read-levels small { font-size: 0.6rem; color: var(--muted); overflow-wrap: anywhere; }
 .buddy-growth { color: #f59e0b; font-size: 0.75em; margin-left: 2px; }
+.read-levels .read-level-done { color: var(--accent); font-weight: 700; }

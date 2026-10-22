@@ -109,7 +109,8 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
-import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, type ReadLevel } from './readlevel'
+import { loadLongRecord } from './longreading'
+import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
@@ -1322,6 +1323,11 @@ function App() {
               >
                 <strong>{t.label}</strong>
                 <small>{t.sub}</small>
+                {solvedOf(t.id, loadLongRecord()) && (
+                  <small className="read-level-done">
+                    {solvedOf(t.id, loadLongRecord())!.done}/{solvedOf(t.id, loadLongRecord())!.total}本
+                  </small>
+                )}
               </button>
             ))}
           </div>
