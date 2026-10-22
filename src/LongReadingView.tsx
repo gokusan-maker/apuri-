@@ -288,7 +288,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
               return (
                 <details key={g} className="grammar-grade-fold long-genre-fold">
                   <summary>
-                    {g}（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本）
+                    {g}（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 {ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本）
                   </summary>
                   <ul className="grammar-list">{ps.map(passageItem)}</ul>
                 </details>

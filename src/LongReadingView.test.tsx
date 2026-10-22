@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
-import { LONG_PASSAGES, MARKS, shownTitle, wordCount } from './longreading'
+import { LONG_PASSAGES, MARKS, shownTitle, totalOf, wordCount } from './longreading'
 import { LongReading } from './LongReadingView'
 
 it('長文を読んで記号で答え、採点すると点数と解説が出る', () => {
@@ -473,4 +473,13 @@ it('長文を100本解くと記念メダル（それまでは解いた本数を�
   localStorage.setItem('eitan:long-reading', JSON.stringify(Object.fromEntries(LONG_PASSAGES.slice(0, 100).map((x) => [x.id, 1]))))
   render(<LongReading />)
   expect(screen.getByText('💯 長文100本クリア記念メダル！')).toBeInTheDocument()
+})
+
+it('ジャンルごとの折りたたみに満点の本数が出る', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[0]
+  localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: totalOf(p), [LONG_PASSAGES[1].id]: 0 }))
+  render(<LongReading />)
+  const sums = [...document.querySelectorAll('details.long-genre-fold summary')].map((x) => x.textContent ?? '')
+  expect(sums.some((t) => t.includes('💯満点 1本'))).toBe(true)
 })
