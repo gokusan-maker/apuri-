@@ -11,7 +11,7 @@ import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[] } // passages：このむずかしさの長文だけを出す
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string } // passages：このむずかしさの長文だけを出す
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -66,8 +66,9 @@ function Paragraph({ text, underline, refer, filled }: { text: string; underline
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite, onCoins, passages }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: Props) {
   const LIST = passages ?? LONG_PASSAGES
+  const whole = !passages // 全部の長文を出すとき（むずかしさでしぼっていないとき）だけ出すもの：今日の1本・中3チャレンジなど
   const [p, setP] = useState<LongPassage | null>(null)
   const [starred, setStarred] = useState<string[]>([]) // この画面で★に入れた語
   const [blanks, setBlanks] = useState<Record<string, number>>({})
@@ -176,15 +177,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages }: Props) 
   if (!p) {
     return (
       <section className="card grammar long-reading">
-        <h2>長文読解（入試形式）</h2>
-        <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
+        <h2>{title ?? '長文読解（入試形式）'}</h2>
+        {whole && <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
           {Object.keys(record).length >= LONG_MEDAL ? `💯 長文${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた長文 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
-        </p>
-        <p className="stats-note">私立高校の入試のような長文。空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
-        <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
+        </p>}
+        <p className="stats-note">{whole ? '私立高校の入試のような長文。' : ''}空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}
-        </button>
+        </button>}
         {Object.keys(record).length > 0 && (
           <button className="list-link" onClick={() => setVocabQuiz(true)}>
             📒 重要語句クイズ（読んだ長文から5問）
@@ -205,15 +206,19 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages }: Props) 
             ))}
           </ul>
         </details>
-        {gradeChallenge('中3', record).next && (
+        {whole && gradeChallenge('中3', record).next && (
           <button className="list-link" onClick={() => openPassage(gradeChallenge('中3', record).next!)}>
             🔥 中3チャレンジ（中3レベルの長文 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
           </button>
         )}
-        <button className="list-link" onClick={() => openPassage(randomLong(record, rand()))}>
+        <button className="list-link" onClick={() => {
+            const todo = LIST.filter((x) => record[x.id] === undefined)
+            const pool = todo.length > 0 ? todo : LIST
+            openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
+          }}>
           🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
         </button>
-        {recommendLong(types, record) && (
+        {whole && recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
             💡 おすすめ：苦手な「{TYPE_LABEL[recommendLong(types, record)!.type]}」の練習に
             <strong>{shownTitle(recommendLong(types, record)!.passage, LONG_PASSAGES.indexOf(recommendLong(types, record)!.passage))}</strong>
@@ -278,7 +283,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages }: Props) 
             {GENRES.filter((g) => genreStats[g]).map((g) => `${g} ${Math.round((genreStats[g]![0] / genreStats[g]![1]) * 100)}%`).join('・')}
           </p>
         )}
-        {readingLevel(history) && levelPick(readingLevel(history)!.name, record) && (
+        {whole && readingLevel(history) && levelPick(readingLevel(history)!.name, record) && (
           <button className="list-link" onClick={() => openPassage(levelPick(readingLevel(history)!.name, record)!)}>
             🎯 {readingLevel(history)!.name}のきみにおすすめ：{shownTitle(levelPick(readingLevel(history)!.name, record)!, LONG_PASSAGES.indexOf(levelPick(readingLevel(history)!.name, record)!))}
           </button>

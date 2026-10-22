@@ -1327,7 +1327,7 @@ function App() {
           </div>
           )}
           {mode === 'reading' && readLevel !== 'easy' && !shortGo ? (
-            <LongReading key={readLevel} passages={passagesFor(readLevel)} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}

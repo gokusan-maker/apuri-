@@ -901,6 +901,9 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: '読解ミニ' })).toBeInTheDocument() // はじめは かんたん
     fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
     expect(screen.getByText(/The Value of Boredom/)).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
+    expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
+    expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     fireEvent.click(screen.getByRole('tab', { name: /^TOEFL・IELTS/ }))
     expect(screen.getByText(/Partners on the Reef/)).toBeInTheDocument()
     expect(screen.queryByText(/The Value of Boredom/)).toBeNull()
