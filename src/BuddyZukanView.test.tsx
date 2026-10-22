@@ -13,3 +13,10 @@ it('なかま図鑑：会えた姿だけ絵が出て、まだの姿や会って�
   expect(screen.getAllByText('？？？').length).toBeGreaterThanOrEqual(2) // まだ会っていない種類は名前もひみつ
   expect(screen.getByText(/会えた姿 4 \/ 24/)).toBeInTheDocument()
 })
+
+it('なかま図鑑の会えた姿をタップすると、その姿の名前が出る', async () => {
+  const { fireEvent } = await import('@testing-library/react')
+  render(<BuddyZukan buddies={{ grammar: { xp: xpForLevel(2) }, reading: { xp: 0 } }} box={{ grammar: {}, reading: {} }} />)
+  fireEvent.click(screen.getByLabelText('インクぷる（Lv.2〜）'))
+  expect(screen.getByRole('status').textContent).toBe('インクぷる（Lv.2〜）')
+})

@@ -1,11 +1,18 @@
+import { useState } from 'react'
 import { ATTR_LABEL, BUDDY_FORMS, xpForLevel, zukanOf, type Buddies, type BuddyBox, type Track } from './buddies'
 import { BuddyFigure } from './BuddyFigureView'
 
 // 文法・読解のなかま図鑑：種類ごとに、会えた姿だけ絵と名前。まだの姿は ？？？
 export function BuddyZukan({ buddies, box }: { buddies: Buddies; box: BuddyBox }) {
+  const [picked, setPicked] = useState('') // タップした姿の名前
   return (
     <section className="buddy-zukan" aria-label="なかま図鑑">
       <h3>📖 なかま図鑑（文法・読解）</h3>
+      {picked && (
+        <p className="level-up zukan-picked" role="status">
+          {picked}
+        </p>
+      )}
       {(['grammar', 'reading'] as Track[]).map((t) => {
         const rows = zukanOf(t, buddies, box)
         const seen = rows.reduce((a, r) => a + r.seen, 0)
@@ -22,7 +29,9 @@ export function BuddyZukan({ buddies, box }: { buddies: Buddies; box: BuddyBox }
                   {BUDDY_FORMS[t].map((f) =>
                     r.level >= f.minLv ? (
                       <li key={f.name} title={r.sp.prefix + f.name}>
-                        <BuddyFigure track={t} buddy={{ xp: xpForLevel(f.minLv), species: r.sp.id }} size={36} />
+                        <button className="zukan-fig" aria-label={`${r.sp.prefix + f.name}（Lv.${f.minLv}〜）`} onClick={() => setPicked(`${r.sp.prefix + f.name}（Lv.${f.minLv}〜）`)}>
+                          <BuddyFigure track={t} buddy={{ xp: xpForLevel(f.minLv), species: r.sp.id }} size={36} />
+                        </button>
                       </li>
                     ) : (
                       <li key={f.name} className="locked" aria-label="まだ会っていない姿">
