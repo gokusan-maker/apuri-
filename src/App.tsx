@@ -828,8 +828,11 @@ function App() {
               toContent()
             }}
           >
-            🎰 ガチャをひく！
-            {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
+            <span className="home-gacha-main">
+              🎰 ガチャをひく！
+              {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
+            </span>
+            <span className="home-gacha-pickup">今日のピックアップ：{pickupOf(today).name}</span>
           </button>
           {birthdayAge(bday, today) > 0 && (
             <button

@@ -1416,3 +1416,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-text.font-s { font-size: 0.88rem; }
 .long-text.font-m { font-size: 1rem; }
 .long-text.font-l { font-size: 1.2rem; line-height: 1.75; }
+.home-gacha-btn { flex-direction: column; gap: 2px; }
+.home-gacha-main { display: flex; align-items: center; gap: 8px; }
+.home-gacha-pickup { font-size: 0.75rem; font-weight: 700; opacity: 0.9; }

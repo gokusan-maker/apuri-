@@ -735,6 +735,12 @@ describe('App', () => {
     expect(screen.getByText(/のきもち日記：🥺/)).toBeInTheDocument()
   })
 
+  it('ホームのガチャボタンに今日のピックアップが出る', async () => {
+    const { pickupOf } = await import('./monster')
+    render(<App />)
+    expect(screen.getByText(`今日のピックアップ：${pickupOf(dayKey()).name}`)).toBeInTheDocument()
+  })
+
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
     render(<App />)
     fireEvent.click(screen.getByText('🎰 ガチャをひく！'))
