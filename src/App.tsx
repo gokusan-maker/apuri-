@@ -1,6 +1,7 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
+import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
 import { BIRTHDAY_TICKETS, birthdayAge, loadBirthday, registerBirthday, saveBirthday } from './birthday'
 import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
@@ -290,6 +291,7 @@ function App() {
   const [luckyMonth, setLuckyMonth] = usePersistent(loadLuckyBagMonth, saveLuckyBagMonth)
   const [power, setPower] = useState(() => loadTraining().power)
   const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
+  const [pieces, setPieces] = usePersistent(loadPieces, savePieces)
   const [bday, setBday] = usePersistent(() => registerBirthday(loadBirthday(), today, formOf(monster).stage >= 1), saveBirthday)
   const [giftMsg, setGiftMsg] = useState('')
   // 1日の目標を達成したら、次の日のおみやげを予約する
@@ -1133,6 +1135,12 @@ function App() {
                 pushToast([{ id: 'shard-egg', text: r ? `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ ${r.kind.name}の${r.species.egg}と交換した` : `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
               } else pushToast([{ id: 'shard', text: `💠 ボスのかけらを拾った（${sh.shards} / ${SHARDS_FOR_EGG}）`, counter: 'answers', target: 0 }])
             }
+            const tp = addPiece(pieces)
+            setPieces(tp.pieces)
+            if (tp.ticket) {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけらが${PIECES_FOR_TICKET}こそろった！ 🎟ガチャチケットをもらった`, counter: 'answers', target: 0 }])
+            } else pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけら（${tp.pieces} / ${PIECES_FOR_TICKET}）`, counter: 'answers', target: 0 }])
             const n = winStreak + 1
             setWinStreak(n)
             if (n % STREAK_EVERY === 0) {
