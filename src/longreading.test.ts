@@ -381,3 +381,10 @@ it('今週のランキングは今週の結果だけで、同じ長文はベス�
   ]
   expect(weekTop(list, '2026-10-19', weekKey).map((r) => [r.id, r.pct])).toEqual([['a', 90], ['e', 80], ['b', 70]])
 })
+
+it('むずかしさは★1〜3で、いろいろな★の長文がある', async () => {
+  const { difficultyOf } = await import('./longreading')
+  const ds = LONG_PASSAGES.map(difficultyOf)
+  for (const d of ds) expect([1, 2, 3]).toContain(d)
+  expect(new Set(ds).size).toBeGreaterThanOrEqual(2)
+})

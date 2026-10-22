@@ -1,6 +1,6 @@
 import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
-import { loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
 import { grammarTags } from './longgrammar'
@@ -245,7 +245,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
               >
                 📖 {shownTitle(x, LONG_PASSAGES.indexOf(x))}
                 <span className="long-meta">
-                  {x.level}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
+                  {x.level}・{'★'.repeat(difficultyOf(x))}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
                 </span>
               </button>
             </li>

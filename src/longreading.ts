@@ -3327,3 +3327,9 @@ export function weekTop(list: WeekResult[], week: string, weekOf: (day: string) 
   for (const r of list) if (weekOf(r.day) === week && (best.get(r.id)?.pct ?? -1) < r.pct) best.set(r.id, r)
   return [...best.values()].sort((a, b) => b.pct - a.pct).slice(0, n)
 }
+
+// むずかしさ★1〜3：本文の語数と設問の数から自動で決める
+export function difficultyOf(p: LongPassage): 1 | 2 | 3 {
+  const v = wordCount(p) / 60 + totalOf(p) / 5
+  return v < 5.5 ? 1 : v < 7 ? 2 : 3
+}
