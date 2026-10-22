@@ -291,6 +291,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins }: Props) {
         </div>
         {genre === 'all' ? (
           <>
+            {LONG_PASSAGES.some((x) => loadLongDraft(x.id)) && (
+              <div className="long-drafts">
+                <p className="stats-note">✏️ とちゅうの長文（続きから）</p>
+                <ul className="grammar-list">{LONG_PASSAGES.filter((x) => loadLongDraft(x.id)).map(passageItem)}</ul>
+              </div>
+            )}
             {bookmarks.length > 0 && <ul className="grammar-list">{LONG_PASSAGES.filter((x) => bookmarks.includes(x.id)).map(passageItem)}</ul>}
             {GENRES.map((g) => {
               const ps = LONG_PASSAGES.filter((x) => genreOf(x) === g)

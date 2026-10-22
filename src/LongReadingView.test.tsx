@@ -149,7 +149,7 @@ it('とちゅうで一覧にもどっても、もう一度開くと続きから'
   const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
   fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
   fireEvent.click(screen.getByText('← 長文の一覧'))
-  expect(screen.getAllByText(/✏️とちゅう/).length).toBe(1)
+  expect(screen.getAllByText(/✏️とちゅう/).length).toBe(2) // 上の「とちゅうの長文」とジャンルの中の2か所
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.getByText(/とちゅうから再開しました/)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: /のこり 13問/ })).toBeDisabled()
@@ -500,4 +500,13 @@ it('採点すると本文の空所に正しい語が入り、まちがえた空�
   expect(document.querySelectorAll('.long-blank.filled')).toHaveLength(p.blanks.length)
   expect(document.querySelectorAll('.long-blank.filled.ng')).toHaveLength(1)
   expect(document.querySelector('.long-blank.filled.ng')!.textContent).toBe(`( ${p.blanks[0].id} ) ${p.blanks[0].choices[p.blanks[0].answer]}`)
+})
+
+it('答えかけの長文は一覧の上の「✏️ とちゅうの長文」に出る', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES[5]
+  localStorage.setItem('eitan:long-draft', JSON.stringify({ [p.id]: { blanks: { A: 0 }, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} } }))
+  render(<LongReading />)
+  const box = document.querySelector('.long-drafts')!
+  expect(box.textContent).toContain(shownTitle(p, 5))
 })
