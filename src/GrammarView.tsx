@@ -172,7 +172,9 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
   if (!unit) {
     return (
       <section className="card grammar">
-        <h2>{title}</h2>
+        {/* 見出しだけ「文法チャレンジ」に（title はまとめテストのベスト記録の名前にも使うので変えない） */}
+        <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
+        {stampMode && <p className="stats-note">あそびたいゲームをえらんでね</p>}
         {stampMode ? (
           <>
             <button
