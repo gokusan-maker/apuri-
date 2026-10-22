@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'compound-relative': { wrong: 'Whatever wants to come is welcome.', right: 'Whoever wants to come is welcome.', why: '「〜する人はだれでも」は whoever。whatever は物やことに使う。' },
+  'with-attendant': { wrong: 'She sat with her legs crossing.', right: 'She sat with her legs crossed.', why: '足は「組まれる」側なので過去分詞 crossed。' },
   'it-cleft': { wrong: 'It was Ken what broke the window.', right: 'It was Ken that broke the window.', why: '強調構文は It is/was ＋ 強調する語句 ＋ that（人なら who も可）。what は使わない。' },
   'negative-inversion': { wrong: 'Never I have seen such a big dog.', right: 'Never have I seen such a big dog.', why: '否定の語句を文の最初に出したら、疑問文と同じ語順（have I seen）にする。' },
   'participle-clause': { wrong: 'Writing in easy English, this book is good for beginners.', right: 'Written in easy English, this book is good for beginners.', why: '本は「書かれる」側なので、能動の -ing ではなく過去分詞 Written。' },
