@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'perfect-infinitive': { wrong: 'He seems to be sick last week.', right: 'He seems to have been sick last week.', why: '今から見て前のこと（last week）は完了不定詞 to have ＋ 過去分詞。' },
+  'negative-participle': { wrong: 'Knowing not the way, I asked for help.', right: 'Not knowing the way, I asked for help.', why: '分詞構文の否定は not を -ing の前に置く。' },
   'as-if': { wrong: 'He talks as if he knows everything.（本当は知らないのに）', right: 'He talks as if he knew everything.', why: '事実とちがう想像のときは as if ＋ 過去形。' },
   'no-matter-how': { wrong: 'No matter how I am tired, I study.', right: 'No matter how tired I am, I study.', why: 'how のすぐあとに形容詞（tired）を置く。' },
   'superlative-compare': { wrong: 'He is taller than any other students.', right: 'He is taller than any other student.', why: 'than any other のあとは単数名詞。' },

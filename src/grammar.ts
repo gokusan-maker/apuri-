@@ -2144,6 +2144,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'No matter ___ you go, I will find you.', choices: ['where', 'how', 'what'], answer: 0, why: '「どこへ行っても」は no matter where。' },
     ],
   },
+  {
+    id: 'perfect-infinitive',
+    title: '完了不定詞（seem to have done）',
+    points: [
+      'to have ＋ 過去分詞（完了不定詞）は、文の動詞よりも前のことを表す。He seems to have been sick.「彼は（前に）病気だったようだ」。',
+      'seem / appear / be said などとよくいっしょに使う。',
+    ],
+    examples: [
+      { en: 'She seems to have lost her key.', ja: '彼女はかぎをなくしたようだ。' },
+      { en: 'The castle is said to have been built 400 years ago.', ja: 'その城は400年前に建てられたと言われている。' },
+    ],
+    questions: [
+      { sentence: 'He seems to ___ a cold last week.', choices: ['have had', 'had', 'having'], answer: 0, why: 'last week（過去）のことを今「〜したようだ」と言うので完了不定詞 to have had。' },
+      { sentence: 'The bridge is said to have ___ built in 1900.', choices: ['been', 'be', 'being'], answer: 0, why: '橋は「建てられた」と受け身なので to have been built。' },
+      { sentence: 'She appears ___ the news already.', choices: ['to have heard', 'to hearing', 'hear'], answer: 0, why: '「もう知らせを聞いたようだ」。前のことなので to have heard。' },
+    ],
+  },
+  {
+    id: 'negative-participle',
+    title: '否定の分詞構文（Not knowing 〜）',
+    points: [
+      '分詞構文を否定するときは、-ing の前に not / never を置く：Not knowing what to do, 〜「どうしたらいいかわからなかったので、〜」。',
+      'not の位置に注意：Not knowing は正しいが、Knowing not は使わない。',
+    ],
+    examples: [
+      { en: 'Not knowing the way, I asked a police officer.', ja: '道がわからなかったので、警察官にたずねた。' },
+      { en: 'Never having seen snow, the children were very excited.', ja: '雪を見たことがなかったので、子どもたちはとても興奮していた。' },
+    ],
+    questions: [
+      { sentence: '___ what to say, she just smiled.', choices: ['Not knowing', 'Knowing not', "Don't know"], answer: 0, why: '否定の分詞構文は not を -ing の前に置く。' },
+      { sentence: 'Not ___ the answer, he kept quiet.', choices: ['knowing', 'known', 'to know'], answer: 0, why: 'Not のあとは -ing（分詞構文）。「答えがわからなかったので」。' },
+      { sentence: '___ been to Kyoto before, I was excited to visit it.', choices: ['Never having', 'Having never not', 'Not had'], answer: 0, why: '「前に行ったことがなかったので」は Never having ＋ 過去分詞。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2247,7 +2281,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
