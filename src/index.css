@@ -1480,3 +1480,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .riddle-book li { padding: 6px 0; border-top: 1px solid color-mix(in srgb, var(--muted) 20%, transparent); overflow-wrap: anywhere; }
 .riddle-book li span, .riddle-book li small { display: block; }
 .riddle-book li small { color: var(--muted); }
+.unit-sort { display: flex; align-items: center; gap: 6px; margin: 6px 0; font-size: 0.8rem; color: var(--muted); }
+.unit-sort button { padding: 3px 10px; border: 1px solid color-mix(in srgb, var(--muted) 40%, transparent); border-radius: 999px; background: var(--card); color: inherit; font-weight: 700; }
+.unit-sort button[aria-pressed='true'] { background: var(--accent); border-color: var(--accent); color: var(--accent-fg); }

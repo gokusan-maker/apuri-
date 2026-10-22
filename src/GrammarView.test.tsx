@@ -686,3 +686,15 @@ it('単元の要点画面から「関連する単元」へ行ける', async () =
   fireEvent.click(screen.getAllByRole('button', { name: r.title }).at(-1)!)
   expect(screen.getByText(r.points[0])).toBeInTheDocument()
 })
+
+it('単元一覧を「まだの単元から」ならべかえられる', async () => {
+  localStorage.clear()
+  const { gradeOf } = await import('./grammar')
+  const first = GRAMMAR.filter((u) => gradeOf(u.id) === '中1')[0]
+  localStorage.setItem('eitan:grammar', JSON.stringify({ [first.id]: first.questions.length }))
+  render(<Grammar />)
+  const firstItem = () => document.querySelector('details.grammar-grade-fold li')!.textContent!
+  expect(firstItem()).toContain(first.title)
+  fireEvent.click(screen.getByRole('button', { name: 'まだの単元から' }))
+  expect(firstItem()).not.toContain(first.title)
+})

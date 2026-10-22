@@ -61,6 +61,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [champ, setChamp] = useState(loadGrammarChamp)
   const [gweek, setGweek] = useState(loadGrammarWeek)
   const [missed, setMissed] = useState<GrammarUnit['questions']>([]) // この回でまちがえた問題
+  const [todoFirst, setTodoFirst] = useState(false) // 単元一覧を「まだの単元から」ならべる
   const [shuffleSeed, setShuffleSeed] = useState(0) // 選択肢の順番をずらす（単元を開くたびに変わる）
   const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
@@ -121,6 +122,8 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
   if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
 
+  // 「まだの単元から」のときは、全問正解していない単元を先に
+  const todoSort = <T extends GrammarUnit>(us: T[]) => (todoFirst ? [...us.filter((u) => record[u.id] !== u.questions.length), ...us.filter((u) => record[u.id] === u.questions.length)] : us)
   const unitItem = (u: GrammarUnit) => (
     <li key={u.id} className={stampMode ? 'with-fav' : undefined}>
       {stampMode && (
@@ -493,11 +496,22 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
           <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：関係代名詞・have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
         )}
         {stampMode && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
+        {stampMode && (
+          <p className="unit-sort" role="group" aria-label="単元のならび">
+            ならび：
+            <button aria-pressed={!todoFirst} onClick={() => setTodoFirst(false)}>
+              ふつう
+            </button>
+            <button aria-pressed={todoFirst} onClick={() => setTodoFirst(true)}>
+              まだの単元から
+            </button>
+          </p>
+        )}
         {stampMode && grade === 'all' && !keyword ? (
           <>
             {fav.length > 0 && <ul className="grammar-list">{units.filter((u) => fav.includes(u.id)).map(unitItem)}</ul>}
             {GRAMMAR_GRADES.map((g) => {
-              const us = units.filter((u) => gradeOf(u.id) === g)
+              const us = todoSort(units.filter((u) => gradeOf(u.id) === g))
               return (
                 <details key={g} className="grammar-grade-fold">
                   <summary>
@@ -516,7 +530,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
             })}
           </>
         ) : (
-          <ul className="grammar-list">{favFirst(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword), stampMode ? fav : []).map(unitItem)}</ul>
+          <ul className="grammar-list">{favFirst(todoSort(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword)), stampMode ? fav : []).map(unitItem)}</ul>
         )}
       </section>
     )
