@@ -1907,3 +1907,7 @@ export function dailyExample(day: string) {
   const n = [...day].reduce((a, c) => (a * 37 + c.charCodeAt(0)) % 10007, 7)
   return ALL_EXAMPLES[n % ALL_EXAMPLES.length]
 }
+
+// ランダム1問：全単元の確認問題から1問（r は 0〜1 の乱数）
+const ALL_QUESTIONS = GRAMMAR.flatMap((u) => u.questions)
+export const randomQuestion = (r: number) => ALL_QUESTIONS[Math.min(ALL_QUESTIONS.length - 1, Math.floor(r * ALL_QUESTIONS.length))]

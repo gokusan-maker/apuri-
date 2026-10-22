@@ -501,3 +501,15 @@ it('文法の単元一覧は学年ごとに折りたたまれている', () => {
   expect(folds.every((d) => !d.open)).toBe(true)
   expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(GRAMMAR.length)
 })
+
+it('「ランダム1問」で全単元から1問だけとける', () => {
+  localStorage.clear()
+  const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
+  render(<Grammar />)
+  fireEvent.click(screen.getByText('🎲 ランダム1問（全単元から1問だけ）'))
+  rnd.mockRestore()
+  const q = GRAMMAR[0].questions[0]
+  fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('1 / 1 問正解')).toBeInTheDocument()
+})
