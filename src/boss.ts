@@ -185,6 +185,7 @@ export function saveRushExDay(d: string): void {
 // ボス戦の連勝：負けると0にもどる。3連勝ごとにボーナス
 export const STREAK_EVERY = 3
 export const STREAK_COINS = 15
+export const STREAK_DRAGON_XP = 30 // 3連勝ごとに読解の竜にあげる XP
 const WIN_KEY = 'eitan:win-streak'
 export function loadWinStreak(): number {
   try {

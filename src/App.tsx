@@ -147,7 +147,7 @@ import { Shop, type ShopTab } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -1436,7 +1436,8 @@ function App() {
               setWinStreak(n)
               if (n % STREAK_EVERY === 0) {
                 setWallet((w) => ({ ...w, coins: w.coins + STREAK_COINS }))
-                pushToast([{ id: 'streak', text: `🔥 ボス${n}連勝！ 🪙${STREAK_COINS}`, counter: 'answers', target: 0 }])
+                feedTrack('reading', STREAK_DRAGON_XP) // 連勝のごほうびは読解の竜にも
+                pushToast([{ id: 'streak', text: `🔥 ボス${n}連勝！ 🪙${STREAK_COINS}・読解の竜に +${STREAK_DRAGON_XP}XP`, counter: 'answers', target: 0 }])
               }
             }}
             winStreak={winStreak}
