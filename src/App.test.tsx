@@ -964,6 +964,7 @@ describe('App', () => {
     const row = screen.getByLabelText('育てているなかま')
     expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
     expect(screen.getByLabelText('チームレベル').textContent).toMatch(/チームLv\.\d+「.+チーム」/)
+    expect(screen.getByRole('progressbar', { name: '次の称号まで' })).toBeInTheDocument()
     expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))

@@ -21,6 +21,9 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, danci
     <p className="team-level" aria-label="チームレベル">
       🤝 チームLv.{team.level}「{team.title}」{team.next !== null && <small>（あと{team.next}で次の称号）</small>}
     </p>
+    <span className="buddy-bar team-bar" role="progressbar" aria-label="次の称号まで" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(team.progress * 100)}>
+      <span style={{ width: `${team.progress * 100}%` }} />
+    </span>
     <div className={`buddy-row${dancing ? ' dancing' : ''}`} aria-label="育てているなかま">
       <button className="buddy-card b-word" onClick={() => onGo('word')}>
         <span className="buddy-tag">単語</span>

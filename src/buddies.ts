@@ -186,11 +186,12 @@ export const TEAM_TITLES: { min: number; name: string }[] = [
   { min: 60, name: 'つわものチーム' },
   { min: 100, name: 'でんせつのチーム' },
 ]
-export function teamOf(wordLevel: number, buddies: Buddies): { level: number; title: string; next: number | null } {
+export function teamOf(wordLevel: number, buddies: Buddies): { level: number; title: string; next: number | null; progress: number } {
   const level = wordLevel + buddyLevel(buddies.grammar).level + buddyLevel(buddies.reading).level
   const t = [...TEAM_TITLES].reverse().find((x) => level >= x.min)!
   const n = TEAM_TITLES.find((x) => x.min > level)
-  return { level, title: t.name, next: n ? n.min - level : null }
+  // progress：今の称号から次の称号までのうち、どこまで来たか（0〜1。さいごの称号なら1）
+  return { level, title: t.name, next: n ? n.min - level : null, progress: n ? (level - t.min) / (n.min - t.min) : 1 }
 }
 
 // チームの称号のごほうび：新しい称号になったら🎟1（称号ごとに1回）。はじめて記録するときは今の称号までを受け取りずみにする
