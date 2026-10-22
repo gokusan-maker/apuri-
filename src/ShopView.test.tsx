@@ -62,3 +62,16 @@ it('まだ買っていない部屋を「👀 ためす」でプレビューだ�
   fireEvent.click(within(card).getByRole('button', { name: '👀 ためし中' }))
   expect(document.querySelector('.shop-stage.room-ocean')).not.toBeNull()
 })
+
+it('部屋をためしているあいだ、名前と「この部屋を買う」ボタンが出る', async () => {
+  const { ROOMS } = await import('./shop')
+  const target = ROOMS.find((r) => r.id !== 'ocean')!
+  const onBuy = vi.fn()
+  render(<Shop initialTab="wear" wallet={{ coins: 9999, owned: ['ocean'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={onBuy} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(screen.queryByText(/おためし中/)).toBeNull()
+  fireEvent.click(within(screen.getByText(target.name).closest('li')!).getByRole('button', { name: '👀 ためす' }))
+  const st = screen.getByText(/おためし中/)
+  expect(st).toHaveTextContent(target.name)
+  fireEvent.click(within(st).getByRole('button', { name: /この部屋を買う/ }))
+  expect(onBuy).toHaveBeenCalledWith(target.id)
+})

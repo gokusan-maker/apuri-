@@ -82,6 +82,18 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           )}
         </div>
       </div>
+      {tryRoom && !wallet.owned.includes(tryRoom) && (() => {
+        const r = ROOMS.find((x) => x.id === tryRoom)
+        if (!r) return null
+        return (
+          <p className="room-trying" role="status">
+            👀 おためし中：{r.icon} {r.name}
+            <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
+              🪙{priceWith(wallet, r.price)}でこの部屋を買う
+            </button>
+          </p>
+        )
+      })()}
       <div className="shop-tabs" role="tablist" aria-label="ショップの売り場">
         {tabs.map((t) => (
           <button key={t.id} role="tab" aria-selected={tab === t.id} className={tab === t.id ? 'on' : undefined} onClick={() => setTab(t.id)}>
