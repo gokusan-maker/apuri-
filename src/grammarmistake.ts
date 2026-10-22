@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'emphatic-do': { wrong: 'He does likes music.', right: 'He does like music.', why: '強調の does のあとは動詞の原形（like）。-s はつけない。' },
+  'be-to': { wrong: 'The meeting is to held tomorrow.', right: 'The meeting is to be held tomorrow.', why: '受け身の予定は be to be ＋ 過去分詞。be をわすれない。' },
   'have-something-done': { wrong: 'I had my hair cutting yesterday.', right: 'I had my hair cut yesterday.', why: '髪は「切られる」側なので過去分詞 cut。have ＋ 物 ＋ 過去分詞。' },
   'not-until': { wrong: 'It was not until yesterday when I knew it.', right: 'It was not until yesterday that I knew it.', why: 'It was not until 〜 のあとは that でつなぐ（強調構文）。' },
   'partial-negation': { wrong: 'All students don\'t like math.（全員がきらいという意味にとられやすい）', right: 'Not all students like math.', why: '「全員が〜というわけではない」は Not all ではじめると、はっきり部分否定になる。' },
