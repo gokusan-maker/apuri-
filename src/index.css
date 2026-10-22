@@ -1462,3 +1462,4 @@ button:focus:not(:focus-visible) { outline: none; }
 .long-blank.filled { font-weight: 800; border-radius: 4px; padding: 0 3px; }
 .long-blank.filled.ok { background: #dcfce7; color: #166534; }
 .long-blank.filled.ng { background: #fee2e2; color: #b91c1c; }
+.long-new { display: inline-block; margin-right: 4px; padding: 0 6px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.65rem; font-weight: 800; vertical-align: middle; }

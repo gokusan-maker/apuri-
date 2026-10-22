@@ -4320,3 +4320,7 @@ export function gradeChallenge(tag: string, record: Record<string, number>, list
 
 // 長文をこの本数解くと記念メダル
 export const LONG_MEDAL = 100
+
+// NEW マーク：いちばん新しく追加した6本のうち、まだ解いていない長文
+export const NEW_LONG_COUNT = 6
+export const isNewLong = (p: LongPassage, record: Record<string, number>, list: LongPassage[] = LONG_PASSAGES) => record[p.id] === undefined && list.indexOf(p) >= list.length - NEW_LONG_COUNT
