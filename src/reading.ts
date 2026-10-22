@@ -1146,6 +1146,39 @@ export const PASSAGES: Passage[] = [
       { q: '妹は友だちが何人できた？', choices: ['1人', '2人', '3人'], answer: 1 },
     ],
   },
+  {
+    id: 'shogi-match',
+    title: 'My Shogi Match',
+    text: 'My grandfather taught me how to play shogi when I was eight. Every Sunday we play one game after lunch. For four years I always lost. Last Sunday I finally won! My grandfather was not angry. He laughed and said, "Now I need to practice."',
+    ja: '祖父は、私が8さいのときに将棋の指し方を教えてくれました。毎週日曜日、昼ごはんのあとに1局指します。4年間、私はいつも負けていました。この前の日曜日、ついに勝ちました！ 祖父はおこりませんでした。笑って「今度はわしが練習しなくては」と言いました。',
+    questions: [
+      { q: '何さいのときに将棋を教わった？', choices: ['6さい', '8さい', '10さい'], answer: 1 },
+      { q: '毎週いつ将棋をする？', choices: ['日曜日の昼ごはんのあと', '土曜日の朝', '毎晩'], answer: 0 },
+      { q: '負けた祖父はどうした？', choices: ['おこった', '笑った', '泣いた'], answer: 1 },
+    ],
+  },
+  {
+    id: 'cherry-blossoms',
+    title: 'Under the Cherry Blossoms',
+    text: 'In early April, my class had a picnic under the cherry blossoms in the park. The trees were pink, and the petals fell like snow. We ate sandwiches and played games. When the wind blew, petals landed in our drinks, and everyone laughed.',
+    ja: '4月のはじめ、私のクラスは公園の桜の木の下でピクニックをしました。木はピンク色で、花びらが雪のようにまっていました。サンドイッチを食べて、ゲームをしました。風がふくと、花びらが飲み物の中に落ちてきて、みんなで笑いました。',
+    questions: [
+      { q: 'ピクニックはいつだった？', choices: ['3月の終わり', '4月のはじめ', '5月'], answer: 1 },
+      { q: '花びらは何のように落ちていた？', choices: ['雨', '雪', '星'], answer: 1 },
+      { q: '風がふくとどうなった？', choices: ['花びらが飲み物に落ちた', '帽子がとんだ', '雨がふった'], answer: 0 },
+    ],
+  },
+  {
+    id: 'violin-practice',
+    title: 'The Violin',
+    text: 'I started playing the violin last year. At first my violin sounded like a sad cat, and my brother covered his ears. I practiced for twenty minutes every day. At the school concert in December, I played a short song, and my brother clapped the loudest.',
+    ja: '私は去年バイオリンをひき始めました。はじめは、私のバイオリンは悲しいねこのような音がして、兄は耳をふさいでいました。私は毎日20分練習しました。12月の学校のコンサートで短い曲をひいたとき、兄がいちばん大きな拍手をしてくれました。',
+    questions: [
+      { q: 'はじめ、バイオリンの音は何のようだった？', choices: ['鳥', '悲しいねこ', '風'], answer: 1 },
+      { q: '毎日何分練習した？', choices: ['10分', '20分', '60分'], answer: 1 },
+      { q: 'コンサートで兄はどうした？', choices: ['いちばん大きな拍手をした', '耳をふさいだ', '来なかった'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
