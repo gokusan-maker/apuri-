@@ -101,6 +101,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'relative-that': { wrong: 'This is the best book what I have read.', right: 'This is the best book that I have read.', why: '先行詞があるときに what は使えない。最上級がつくときは that。' },
   'number-expr': { wrong: 'There are three hundreds students.', right: 'There are three hundred students.', why: '具体的な数のあとの hundred には -s をつけない。' },
   'the-more': { wrong: 'The more you practice, more better you get.', right: 'The more you practice, the better you get.', why: 'うしろも the ＋比較級。more better とは言わない。' },
+  'keep-ing': { wrong: 'He kept to talk for an hour.', right: 'He kept talking for an hour.', why: 'keep のあとは -ing 形。' },
+  'seem-to': { wrong: 'He seems know the answer.', right: 'He seems to know the answer.', why: 'seem のあとに動詞を続けるときは to ＋動詞の原形。' },
   'help-do': { wrong: 'Can you help me carrying this box?', right: 'Can you help me carry this box?', why: 'help ＋人のあとは動詞の原形。' },
   'spend-ing': { wrong: 'I spent two hours to read the book.', right: 'I spent two hours reading the book.', why: 'spend ＋時間のあとは -ing 形。' },
   'ago-before': { wrong: 'I went there before three days.', right: 'I went there three days ago.', why: '今から数えて「〜前に」は 〜 ago。' },
