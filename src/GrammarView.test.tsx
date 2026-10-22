@@ -786,3 +786,17 @@ it('まちがいノートに問題があると、文法ゲームに「まちが�
   fireEvent.click(within(grid).getByText('まちがいノート'))
   expect(screen.getByRole('button', { name: q.choices[q.answer] })).toBeInTheDocument()
 })
+
+it('すぐ練習でまちがえると、結果に「まちがいノートに入れたよ」と出る', () => {
+  localStorage.clear()
+  render(<Grammar quickStart />)
+  const all = GRAMMAR.flatMap((u) => u.questions)
+  for (let i = 0; i < 5; i++) {
+    const text = document.querySelector('.blank-sentence')!.textContent!
+    const q = all.find((x) => x.sentence.replace('___', '　　　') === text)!
+    const pick = i === 0 ? (q.answer + 1) % q.choices.length : q.answer
+    fireEvent.click(screen.getByRole('button', { name: q.choices[pick] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText(/まちがえた1問をまちがいノートに入れたよ/)).toBeInTheDocument()
+})

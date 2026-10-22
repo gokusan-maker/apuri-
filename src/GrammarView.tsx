@@ -695,6 +695,9 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         <p className="result-score">
           {unit.id === 'streak-run' ? `🔥 ${score}問 連続正解！（ベスト ${runBest}問）` : `${score} / ${unit.questions.length} 問正解`}
         </p>
+        {stampMode && missed.length > 0 && (
+          <p className="stats-note note-added">📓 まちがえた{missed.length}問をまちがいノートに入れたよ（文法ゲームの「まちがいノート」でとき直せる）</p>
+        )}
         {unit.id === 'streak-run' && runBonus && <p className="level-up">🏆 ベスト更新！ 文法のなかまに +{RUN_BEST_XP}XP</p>}
         {(unit.id === 'mix-test' || unit.id === 'grade-test') && (
           <p className={`battle-rank rank-${mixRank(score, unit.questions.length)}`} aria-label={`ランク ${mixRank(score, unit.questions.length)}`}>
