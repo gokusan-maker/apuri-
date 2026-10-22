@@ -1235,4 +1235,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do students who try to remember everything often understand little?', choices: ['They give equal weight to important and trivial things.', 'They do not take enough notes.', 'They forget the structure of every subject.', 'They review too little.'], answer: 0, why: '第3段落 because they give equal weight to the important and the trivial。' },
     ],
   },
+  {
+    id: 'toefl-tides',
+    title: 'What Causes the Tides?',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Twice a day, the level of the sea along most coasts rises and falls. These regular changes, known as tides, are caused mainly by the Moon's gravity. Because the side of the Earth facing the Moon is closer to it, the water there is pulled slightly more strongly ( A ) the Earth as a whole, creating a bulge of water.",
+      'Surprisingly, a second bulge forms on the opposite side of the planet. There, the water is pulled less strongly than the solid Earth, so it is effectively left behind. As the Earth rotates, a given coastline passes through both bulges each day, which is ( B ) most places experience two high tides and two low tides roughly every twenty-four hours.',
+      "The Sun also affects the tides, although its influence is less than half that of the Moon because it is so much farther away. When the Sun, Moon, and Earth line up, at new moon and full moon, their effects combine to produce especially large 'spring tides.' When the Sun and Moon pull at right angles, the result is weaker 'neap tides.' The shape of the coast and the depth of the sea can also ( C ) the size of tides, which is why some bays see differences of more than ten meters.",
+    ],
+    ja: [
+      'ほとんどの海岸では、1日に2回、海面が上がったり下がったりする。潮の満ち引きとして知られるこの規則的な変化は、主に月の引力によって起こる。地球の月に面した側は月により近いため、そこの水は地球全体よりもわずかに強く引っぱられ、水のふくらみができる。',
+      'おどろくべきことに、地球の反対側にも2つ目のふくらみができる。そこでは、水は固い地球よりも弱く引っぱられるため、実質的に取り残されるのである。地球が自転するにつれて、ある海岸は1日のうちに両方のふくらみを通過する。これが、ほとんどの場所で約24時間ごとに満潮と干潮が2回ずつ起こる理由である。',
+      '太陽も潮に影響を与えるが、ずっと遠くにあるため、その影響は月の半分にも満たない。新月と満月のとき、太陽・月・地球が一直線にならぶと、それぞれの効果が合わさって、とくに大きな「大潮」が生じる。太陽と月が直角の方向に引っぱるときは、弱い「小潮」となる。海岸の形や海の深さも潮の大きさを変えることがあり、そのため10メートル以上の差が見られる湾もある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'as', 'by', 'from'], answer: 0, why: 'more strongly than 〜「〜より強く」。比較級 ＋ than。' },
+      { id: 'B', choices: ['why', 'what', 'because', 'how much'], answer: 0, why: 'which is why 〜「そしてそれが〜の理由だ」。' },
+      { id: 'C', choices: ['change', 'changes', 'changing', 'to change'], answer: 0, why: '助動詞 can のあとは原形。' },
+    ],
+    tf: [
+      { statement: '潮の満ち引きは、主に太陽の引力によって起こる。', answer: false, why: "第1段落 caused mainly by the Moon's gravity。" },
+      { statement: '月と反対側の地球にも、水のふくらみができる。', answer: true, why: '第2段落 a second bulge forms on the opposite side。' },
+      { statement: '大潮は、太陽と月が直角の方向に引っぱるときに起こる。', answer: false, why: '第3段落 直角のときは neap tides（小潮）。大潮は一直線にならぶとき。' },
+    ],
+    qa: [
+      { q: "Why is the Sun's effect on the tides smaller than the Moon's?", choices: ['The Sun is much farther away.', 'The Sun is smaller than the Moon.', 'The Sun has no gravity.', 'The Sun moves too fast.'], answer: 0, why: '第3段落 because it is so much farther away。' },
+    ],
+  },
 ]
