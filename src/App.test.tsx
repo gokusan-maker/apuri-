@@ -55,6 +55,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
     expect(screen.getAllByText('タマゴがかえった！').length).toBeGreaterThan(0)
     expect(screen.getByRole('dialog', { name: '進化' })).toBeInTheDocument()
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('カード'))
     expect(document.querySelector('.monster-name')!.textContent).toContain('ちびモチ')
   })
 
@@ -200,6 +201,7 @@ describe('App', () => {
     const picks = document.querySelectorAll<HTMLButtonElement>('.party-member')
     expect(picks).toHaveLength(2)
     fireEvent.click(picks[1])
+    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('カード'))
     expect(document.querySelector('.monster-name')!.textContent).toContain('ふしぎなタマゴ')
     expect(JSON.parse(localStorage.getItem('eitan:party')!).active).toBe(1)
   })
@@ -684,19 +686,30 @@ describe('App', () => {
     expect(c.querySelector('.pet-cheer-text')!.textContent).toMatch(/[ぁ-んァ-ン]/)
   })
 
-  it('タブやチャレンジを押すと中身までスクロールし、チャレンジ中にタブを押すとその画面に切りかわる', async () => {
+  it('ステージやクイズのタブを押すと、ホームが消えてその画面だけになり、いちばん上にもどる', async () => {
     const scroll = vi.fn()
-    Element.prototype.scrollIntoView = scroll
+    window.scrollTo = scroll as unknown as typeof window.scrollTo
     render(<App />)
+    expect(document.querySelector('details.home-play')).not.toBeNull()
+    const nav = within(screen.getByRole('navigation', { name: '画面の切り替え' }))
+    fireEvent.click(nav.getByText('ステージ'))
+    expect(document.querySelector('details.home-play')).toBeNull()
+    expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
+    await new Promise((r) => requestAnimationFrame(() => r(null)))
+    expect(scroll).toHaveBeenCalledWith({ top: 0 })
+    fireEvent.click(nav.getByText('カード'))
     fireEvent.click(screen.getByText(/今日のチャレンジ：/))
     expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
-    await new Promise((r) => requestAnimationFrame(() => r(null)))
-    expect(scroll).toHaveBeenCalled()
-    fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('ステージ'))
+    expect(document.querySelector('details.home-play')).toBeNull()
+    fireEvent.click(nav.getByText('ステージ'))
     expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
-    await new Promise((r) => requestAnimationFrame(() => r(null)))
-    expect(scroll).toHaveBeenCalledTimes(2)
-    delete (Element.prototype as { scrollIntoView?: unknown }).scrollIntoView
+  })
+
+  it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
+    render(<App />)
+    fireEvent.click(screen.getByText('🎰 ガチャをひく！'))
+    expect(document.querySelector('details.home-play')).toBeNull()
+    expect(screen.getAllByText(/ガチャ/).length).toBeGreaterThan(1)
   })
 
   it('ホームのあそびは「きょうのあそび」にまとまっていて、はじめは閉じている', () => {

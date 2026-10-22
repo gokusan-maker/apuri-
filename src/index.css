@@ -1369,7 +1369,9 @@ button:focus:not(:focus-visible) { outline: none; }
 .medal-100 { font-weight: 800; color: #b45309; }
 .walk-diary { margin: 4px 0; font-size: 0.8rem; text-align: left; }
 .walk-diary ul { margin: 4px 0; padding-left: 18px; }
-.content-anchor { scroll-margin-top: 8px; }
 .home-play { margin: 8px 0; border-radius: 14px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); padding: 4px 10px; }
 .home-play > summary { cursor: pointer; padding: 8px 2px; font-weight: 700; font-size: 0.92rem; }
 .home-play[open] > summary { margin-bottom: 4px; }
+.home-gacha-btn { display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; margin: 10px 0 4px; padding: 14px 12px; border: none; border-radius: 16px; background: linear-gradient(135deg, #f472b6, #a855f7 55%, #6366f1); color: #fff; font-size: 1.15rem; font-weight: 800; box-shadow: 0 4px 14px rgb(168 85 247 / 0.35); }
+.home-gacha-btn small { padding: 2px 8px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.8rem; }
+.home-gacha-btn:active { transform: scale(0.98); }

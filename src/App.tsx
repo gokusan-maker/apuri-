@@ -296,8 +296,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
-  // ホームの上の部分が長いので、タブ・ショップ・チャレンジを開いたら中身のところまでスクロールする（画面外に出て「反応しない」ように見えないように）
-  const contentRef = useRef<HTMLDivElement>(null)
+  // タブ・ショップ・チャレンジを開いたら、その画面だけを出していちばん上へ（押したら画面が変わったとわかるように）
   // ホームの「きょうのあそび」をひらいているか（端末ごとに覚える）
   const [playOpen, setPlayOpen] = useState(loadPlayOpen)
   const togglePlay = (open: boolean) => {
@@ -305,8 +304,9 @@ function App() {
     setPlayOpen(open)
     savePlayOpen(open)
   }
-  const toContent = () => requestAnimationFrame(() => contentRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' }))
+  const toContent = () => requestAnimationFrame(() => window.scrollTo?.({ top: 0 }))
   const [showChallenge, setShowChallenge] = useState(false)
+  const home = mode === 'card' && !showShop && !showChallenge // ホーム（相棒・あそび）を出すのはカードのタブだけ
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
   const [onboarded, setOnboarded] = usePersistent(loadOnboarded, saveOnboarded)
@@ -770,157 +770,171 @@ function App() {
             🔥 {streakDays}日
           </p>
         </div>
-        {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
-        {hour >= 18 && studiedToday === 0 && streakDays > 0 && (
-          <p className="weak-banner streak-warn" role="status">
-            🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
-          </p>
-        )}
-        {seasonEvent && (
-          <p className="weekend season-event">
-            {seasonEvent.icon} {seasonEvent.text}
-          </p>
-        )}
-        <Monster
-          deco={seasonEvent?.icon}
-          sleepy={hour >= 22 || hour < 5}
-          night={isNight(hour)}
-          season={seasonFxOf(today)}
-          learned={learnedSample}
-          shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
-          monster={monster}
-          onRename={(name) => updateMonster((m) => rename(m, name))}
-          coins={wallet.coins}
-          onShop={() => {
-            setShowShop(true)
-            toContent()
-          }}
-          room={wallet.room}
-          title={titleFor(totals.studyDays ?? 0)}
-          cheer={cheer}
-          feeling={feelingFor(studiedToday, hour)}
-          gain={gain}
-          mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
-          leveledUp={leveledUp}
-          evolved={evolved}
-          friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
-          onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
-          onPet={() => cheerUp(1)}
-          mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
-          epithet={epithetOf(totalWins(loadBook()))}
-          onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
-          onPetStampTicket={() => {
-            setWallet((w) => addTicket(w))
-            pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
-          }}
-        />
-        <p className="stats">
-          今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
-        </p>
-        {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
-          <p className="exam">
-            📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
-            <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
-          </p>
-        )}
-        <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
-          <summary>🎮 きょうのあそび（おさんぽ・すごろく・じゃんけん など）</summary>
-          <p className={`omikuji o-${omikujiOf(today).id}`}>
-            ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
-          </p>
-          {walkDay !== today ? (
-            <button
-              className="challenge-btn walk-btn"
-              onClick={() => {
-                const w = walkFind(words, rand())
-                const place = walkPlace(rand())
-                setWalkDay(today)
-                if (w) setWalkDiary(addWalkDiary({ day: today, en: w.en, ja: w.ja, place }))
-                setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
-                setWalkMsg(`🐾 ${place}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
-                if (w) speak(w.en)
-              }}
-            >
-              🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
-            </button>
-          ) : (
-            walkMsg && (
-              <p className="walk-msg" role="status">
-                {walkMsg}
-              </p>
-            )
+        {home && (
+          <>
+          {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
+          {hour >= 18 && studiedToday === 0 && streakDays > 0 && (
+            <p className="weak-banner streak-warn" role="status">
+              🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
+            </p>
           )}
-          {walkDiary.length > 0 && (
-            <details className="walk-diary">
-              <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
-              <ul>
-                {walkDiary.map((e, i) => (
-                  <li key={i}>
-                    {e.day.slice(5).replace('-', '/')} {e.place}：<strong>{e.en}</strong>（{e.ja}）
-                  </li>
-                ))}
-              </ul>
-            </details>
+          {seasonEvent && (
+            <p className="weekend season-event">
+              {seasonEvent.icon} {seasonEvent.text}
+            </p>
           )}
-          <SugorokuBoard
-            day={today}
-            words={words}
-            onGoal={() => {
+          <Monster
+            deco={seasonEvent?.icon}
+            sleepy={hour >= 22 || hour < 5}
+            night={isNight(hour)}
+            season={seasonFxOf(today)}
+            learned={learnedSample}
+            shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
+            monster={monster}
+            onRename={(name) => updateMonster((m) => rename(m, name))}
+            coins={wallet.coins}
+            onShop={() => {
+              setShowShop(true)
+              toContent()
+            }}
+            room={wallet.room}
+            title={titleFor(totals.studyDays ?? 0)}
+            cheer={cheer}
+            feeling={feelingFor(studiedToday, hour)}
+            gain={gain}
+            mood={happy ? 'happy' : isLonely(monster, today) ? 'lonely' : 'normal'}
+            leveledUp={leveledUp}
+            evolved={evolved}
+            friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
+            onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
+            onPet={() => cheerUp(1)}
+            mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
+            epithet={epithetOf(totalWins(loadBook()))}
+            onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
+            onPetStampTicket={() => {
               setWallet((w) => addTicket(w))
-              pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+              pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
           />
-          {giftReady(giftDay, today) ? (
-            <button
-              className="challenge-btn gift-btn"
-              onClick={() => {
-                const st = stickerOf(rand())
-                const r = addSticker(stickers, st)
-                setStickers(r.book)
-                setGiftDay('')
-                setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
-                if (r.complete) {
-                  setWallet((x) => addTicket(addTicket(x)))
-                  pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
-                }
-              }}
-            >
-              🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
-            </button>
-          ) : (
-            giftMsg && (
-              <p className="walk-msg" role="status">
-                {giftMsg}
-              </p>
-            )
+          <button
+            className="home-gacha-btn"
+            onClick={() => {
+              setShowShop(true)
+              toContent()
+            }}
+          >
+            🎰 ガチャをひく！
+            {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
+          </button>
+          <p className="stats">
+            今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
+          </p>
+          {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
+            <p className="exam">
+              📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
+              <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
+            </p>
           )}
-          <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
-          <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
-          <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
-          <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
-          <Roulette
-            done={rouletteDay === today}
-            onPrize={(p) => {
-              setRouletteDay(today)
-              if (p.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + p.amount }))
-              else gainXp(p.amount, null)
-            }}
-          />
-        </details>
-        <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
-            setShowChallenge(true)
-            toContent()
-          }}>
-          ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
-          {challengeDay === today ? ' ✅クリア' : ''}
-          {challengeStreakNow(challengeDay, today) > 1 && <span className="challenge-streak">🔥{challengeStreakNow(challengeDay, today)}日連続</span>}
-        </button>
-        <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
-          <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
-          <div className="goal-bar">
-            <div className="goal-fill" style={{ width: `${Math.min(studiedToday / settings.dailyGoal, 1) * 100}%` }} />
+          <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
+            <summary>🎮 きょうのあそび（おさんぽ・すごろく・じゃんけん など）</summary>
+            <p className={`omikuji o-${omikujiOf(today).id}`}>
+              ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
+            </p>
+            {walkDay !== today ? (
+              <button
+                className="challenge-btn walk-btn"
+                onClick={() => {
+                  const w = walkFind(words, rand())
+                  const place = walkPlace(rand())
+                  setWalkDay(today)
+                  if (w) setWalkDiary(addWalkDiary({ day: today, en: w.en, ja: w.ja, place }))
+                  setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
+                  setWalkMsg(`🐾 ${place}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
+                  if (w) speak(w.en)
+                }}
+              >
+                🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
+              </button>
+            ) : (
+              walkMsg && (
+                <p className="walk-msg" role="status">
+                  {walkMsg}
+                </p>
+              )
+            )}
+            {walkDiary.length > 0 && (
+              <details className="walk-diary">
+                <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
+                <ul>
+                  {walkDiary.map((e, i) => (
+                    <li key={i}>
+                      {e.day.slice(5).replace('-', '/')} {e.place}：<strong>{e.en}</strong>（{e.ja}）
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+            <SugorokuBoard
+              day={today}
+              words={words}
+              onGoal={() => {
+                setWallet((w) => addTicket(w))
+                pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+              }}
+            />
+            {giftReady(giftDay, today) ? (
+              <button
+                className="challenge-btn gift-btn"
+                onClick={() => {
+                  const st = stickerOf(rand())
+                  const r = addSticker(stickers, st)
+                  setStickers(r.book)
+                  setGiftDay('')
+                  setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
+                  if (r.complete) {
+                    setWallet((x) => addTicket(addTicket(x)))
+                    pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+                  }
+                }}
+              >
+                🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
+              </button>
+            ) : (
+              giftMsg && (
+                <p className="walk-msg" role="status">
+                  {giftMsg}
+                </p>
+              )
+            )}
+            <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
+            <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
+            <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
+            <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
+            <Roulette
+              done={rouletteDay === today}
+              onPrize={(p) => {
+                setRouletteDay(today)
+                if (p.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + p.amount }))
+                else gainXp(p.amount, null)
+              }}
+            />
+          </details>
+          <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
+              setShowChallenge(true)
+              toContent()
+            }}>
+            ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
+            {challengeDay === today ? ' ✅クリア' : ''}
+            {challengeStreakNow(challengeDay, today) > 1 && <span className="challenge-streak">🔥{challengeStreakNow(challengeDay, today)}日連続</span>}
+          </button>
+          <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
+            <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
+            <div className="goal-bar">
+              <div className="goal-fill" style={{ width: `${Math.min(studiedToday / settings.dailyGoal, 1) * 100}%` }} />
+            </div>
           </div>
-        </div>
+          </>
+        )}
         {mode !== 'stats' && mode !== 'settings' && (
           <>
             <button className="book-toggle" aria-expanded={showBooks} onClick={() => setShowBooks(!showBooks)}>
@@ -944,7 +958,6 @@ function App() {
           </>
         )}
       </header>
-      <div ref={contentRef} className="content-anchor" />
 
       {reviewWeek && lastWeek.count > 0 && onboarded && (
         <p className="weak-banner week-review" role="status">
