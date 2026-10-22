@@ -1487,4 +1487,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why might coffee seem to work less well for people who drink it every day?', choices: ['The brain produces more adenosine receptors.', 'Their coffee contains less caffeine.', 'Adenosine disappears from their brains.', 'They sleep too much at night.'], answer: 0, why: '第3段落 the brain adapts by producing more adenosine receptors。' },
     ],
   },
+  {
+    id: 'exam-drill',
+    title: 'The Town Evacuation Drill',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last November, my town held an evacuation drill, and our school asked students to join it. Before the drill, I thought it would be easy. I just had to walk to the elementary school, which is used ( A ) a shelter when there is a disaster.",
+      "On the day of the drill, I walked with an old woman who lives alone next to my house. She walks with a cane, so we moved very slowly. On the way, we found that a narrow road was blocked by a broken wall. We had to choose another way, and it took us almost forty minutes to arrive. I was surprised. If a real earthquake happened, I might not be able to help her ( B ) enough.",
+      "After the drill, I talked about my experience in class. My classmates and I decided to make a map of safe roads for people who cannot walk fast. We checked the roads one by one and gave the map to our neighbors. Through this experience, I learned that preparing for disasters is not something we can do alone. It is important ( C ) everyone in the town to think about each other.",
+    ],
+    ja: [
+      'この前の11月、私の町で避難訓練が行われ、学校から生徒にも参加するようにと言われました。訓練の前、私はかんたんだろうと思っていました。災害のときに避難所として使われる小学校まで歩けばいいだけだったからです。',
+      '訓練の日、私はとなりに一人で住んでいるおばあさんといっしょに歩きました。おばあさんはつえをついて歩くので、私たちはとてもゆっくり進みました。とちゅうで、せまい道がこわれたへいでふさがれているのを見つけました。別の道を選ばなければならず、着くまでに40分近くかかりました。私はおどろきました。本当の地震が起きたら、私はおばあさんを十分に早く助けられないかもしれません。',
+      '訓練のあと、私はクラスで自分の体験を話しました。クラスメートと私は、速く歩けない人のための安全な道の地図を作ることに決めました。私たちは道を一つずつ確かめ、その地図を近所の人たちにくばりました。この経験を通して、私は災害への備えは一人でできるものではないと学びました。町のみんながおたがいのことを考えることが大切なのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'for', 'by', 'to'], answer: 0, why: 'be used as 〜「〜として使われる」。' },
+      { id: 'B', choices: ['quickly', 'quick', 'quicker', 'quickest'], answer: 0, why: 'help を説明するのは副詞。quickly enough「十分に早く」（enough は形容詞・副詞のあと）。' },
+      { id: 'C', choices: ['for', 'of', 'to', 'with'], answer: 0, why: 'It is important for 人 to 〜「人が〜することは大切だ」。' },
+    ],
+    tf: [
+      { statement: '筆者は訓練の前、訓練はかんたんだろうと思っていた。', answer: true, why: '第1段落 I thought it would be easy。' },
+      { statement: '筆者とおばあさんは10分ほどで避難所に着いた。', answer: false, why: '第2段落 it took us almost forty minutes。' },
+      { statement: '筆者たちは安全な道の地図を作って近所の人にくばった。', answer: true, why: '第3段落 gave the map to our neighbors。' },
+    ],
+    qa: [
+      { q: 'Why did it take a long time to get to the shelter?', choices: ['They walked slowly and had to choose another road.', 'They got lost in the school.', 'The drill started late.', 'The weather was very bad.'], answer: 0, why: '第2段落 we moved very slowly / We had to choose another way。' },
+    ],
+  },
 ]
