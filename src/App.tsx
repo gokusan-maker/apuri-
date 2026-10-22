@@ -37,7 +37,7 @@ import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } fr
 import { loadShards, saveShards, shardAfter, SHARDS_FOR_EGG } from './shard'
 import { SugorokuBoard } from './SugorokuView'
 import { JANKEN_COINS } from './janken'
-import { loadWalkDay, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
+import { addWalkDiary, loadWalkDay, loadWalkDiary, saveWalkDay, walkFind, walkPlace, WALK_COINS } from './walk'
 import { omikujiDiscount, omikujiOf } from './omikuji'
 import { loadRouletteDay, saveRouletteDay } from './roulette'
 import { Celebrate } from './CelebrateView'
@@ -196,6 +196,7 @@ function App() {
   const [rouletteDay, setRouletteDay] = usePersistent(loadRouletteDay, saveRouletteDay)
   const [walkDay, setWalkDay] = usePersistent(loadWalkDay, saveWalkDay)
   const [walkMsg, setWalkMsg] = useState('')
+  const [walkDiary, setWalkDiary] = useState(loadWalkDiary)
   const [notes, setNotes] = usePersistent(loadNotes, saveNotes)
   const today = dayKey()
   const xpRate = isWeekend(today) ? 2 : 1 // 週末は正解のXPが2倍
@@ -808,9 +809,11 @@ function App() {
             className="challenge-btn walk-btn"
             onClick={() => {
               const w = walkFind(words, rand())
+              const place = walkPlace(rand())
               setWalkDay(today)
+              if (w) setWalkDiary(addWalkDiary({ day: today, en: w.en, ja: w.ja, place }))
               setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
-              setWalkMsg(`🐾 ${walkPlace(rand())}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
+              setWalkMsg(`🐾 ${place}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
               if (w) speak(w.en)
             }}
           >
@@ -822,6 +825,18 @@ function App() {
               {walkMsg}
             </p>
           )
+        )}
+        {walkDiary.length > 0 && (
+          <details className="walk-diary">
+            <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
+            <ul>
+              {walkDiary.map((e, i) => (
+                <li key={i}>
+                  {e.day.slice(5).replace('-', '/')} {e.place}：<strong>{e.en}</strong>（{e.ja}）
+                </li>
+              ))}
+            </ul>
+          </details>
         )}
         <SugorokuBoard
           day={today}

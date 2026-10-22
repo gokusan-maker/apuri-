@@ -574,6 +574,7 @@ describe('App', () => {
     expect(screen.queryByRole('button', { name: /おさんぽに行く/ })).toBeNull()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(3)
     expect(localStorage.getItem('eitan:walk')).toBe('2026-10-20')
+    expect(screen.getByText('📔 おさんぽ日記（1こ）')).toBeInTheDocument()
   })
 
   it('ガチャのスロットがそろうとおまけ🪙5', () => {
