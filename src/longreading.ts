@@ -1242,6 +1242,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       ],
     },
     vocab: [{ word: 'charging', choices: ['（お金を）とる', '電気をためる', 'すてる', 'くばる'], answer: 0, why: 'レジ袋の話で charging money for 〜 なので「〜にお金をとる（有料にする）」。' }],
+    paraSeq: { at: 2, shown: [2, 0, 1], why: '「海の動物がプラスチックを食べてしまう」→「それ（This）で病気になる」→「人が食べる魚の中からも見つかる（also）」の順。This は前の文を指す。' },
     tf: [
       { statement: 'Plastic is light, strong, and cheap.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All plastic breaks down in a few weeks.', answer: false, why: '何百年も残るものもある。' },
@@ -1927,6 +1928,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     vocab: [{ word: 'reduce', choices: ['へらす', 'ふやす', '売る', '運ぶ'], answer: 0, why: '買い物の前に冷蔵庫を確かめる、必要なものだけ買う、という方法の説明なので「へらす」。' }],
     qa: [{ q: 'What should you do before shopping?', choices: ['Check what is already in your fridge.', 'Throw away old food.', 'Cook a lot of food.', 'Go to a restaurant.'], answer: 0, why: '第4段落「買い物の前に冷蔵庫に何があるか確かめる」。' }],
     order: { words: ['you', 'Buy', 'need', 'what', 'only'], rest: 'when you go shopping.', answer: 'Buy only what you need', ja: '買い物に行くときは、必要なものだけを買いなさい。' },
+    paraSeq: { at: 2, shown: [1, 2, 0], why: '「家で買いすぎて食べわすれる」→「ほかの人（Others）は作りすぎる」→「期限をすぎただけですてる人もいる（also）」の順。' },
     tf: [
       { statement: 'Food loss means throwing away food that can still be eaten.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'All food loss comes from stores and restaurants.', answer: false, why: '家庭からも多く出ている。' },
@@ -2103,6 +2105,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['at', 'by', 'in', 'with'], answer: 3, why: 'with a smile で「笑顔で」。' },
     ],
     seq: { events: ['The judges gave Aya\'s team second prize.', 'Aya saw that everything was white.', 'Aya drank hot chocolate.', 'Aya and her friends made a big snowman.'], answer: [1, 3, 0, 2], why: '雪の朝 → 雪だるまをつくる → 2位をもらう → ホットチョコレートを飲む。' },
+    paraSeq: { at: 3, shown: [2, 1, 0], why: '「3時に審査員が来た」→「（審査員たちは）全部の雪だるまを見て、2位をくれた」→「1位は小さな子どものチームだった」の順。They は審査員を指す。' },
     tf: [
       { statement: 'Aya\'s school was closed because of the snow.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Aya made the snowman alone.', answer: false, why: '友だちといっしょにつくった。' },
