@@ -383,3 +383,21 @@ it('学年をえらぶとタイムアタックもその学年の問題になる'
   const text = document.querySelector('.blank-sentence')!.textContent!
   expect(pool.some((x) => text.startsWith(x.sentence.split('___')[0]) && text.endsWith(x.sentence.split('___')[1]))).toBe(true)
 })
+
+it('最後の単元を全問正解すると文法マスター', () => {
+  localStorage.clear()
+  const rec = Object.fromEntries(GRAMMAR.slice(1).map((u) => [u.id, u.questions.length]))
+  localStorage.setItem('eitan:grammar', JSON.stringify(rec))
+  const onMaster = vi.fn()
+  render(<Grammar onMaster={onMaster} />)
+  const unit = GRAMMAR[0]
+  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByText('確認問題へ（3問）'))
+  for (const q of unit.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(onMaster).toHaveBeenCalledTimes(1)
+  fireEvent.click(screen.getByText('← 単元一覧'))
+  expect(screen.getByText('🏅 称号「文法マスター」')).toBeInTheDocument()
+})

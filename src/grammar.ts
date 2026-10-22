@@ -1662,3 +1662,22 @@ export function saveAutoRead(on: boolean): void {
     // ストレージが使えない環境では保存をあきらめる
   }
 }
+
+// 全単元クリア記念：全単元を全問正解すると称号「文法マスター」と🎟3（1回だけ）
+export const MASTER_TICKETS = 3
+const MASTER_KEY = 'eitan:grammar-master'
+export function loadMaster(): boolean {
+  try {
+    return localStorage.getItem(MASTER_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+export function saveMaster(): void {
+  try {
+    localStorage.setItem(MASTER_KEY, '1')
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
+export const allCleared = (r: GrammarRecord) => GRAMMAR.every((u) => r[u.id] === u.questions.length)

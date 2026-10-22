@@ -30,6 +30,7 @@ import { loadTraining } from './training'
 import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
+import { MASTER_TICKETS } from './grammar'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -1292,6 +1293,10 @@ function App() {
             onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             onXp={(n) => gainXp(n, null)}
             partnerName={monster.name ?? formOf(monster).name}
+            onGrammarMaster={() => {
+              setWallet((w) => addTicket(addTicket(addTicket(w))))
+              pushToast([{ id: 'grammar-master', text: `🏅 文法の全単元を全問正解！ 称号「文法マスター」と🎟${MASTER_TICKETS}`, counter: 'answers', target: 0 }])
+            }}
             onGoalTicket={() => {
               setWallet((w) => addTicket(w))
               pushToast([{ id: 'grammar-goal', text: '🎯 文法の今週の目標をたっせい！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
