@@ -48,3 +48,11 @@ it('ホームの相棒の横に仲間が小さく出て、タップで交代で�
   fireEvent.click(screen.getByLabelText('ポチと交代'))
   expect(onSwitch).toHaveBeenCalledWith(2)
 })
+
+it('相棒を10回なでるごとに「なでなで10回！」が出る', () => {
+  render(<Monster monster={{ xp: 500 } as never} />)
+  for (let i = 0; i < 9; i++) fireEvent.click(screen.getByLabelText('相棒にさわる'))
+  expect(screen.queryByText(/なでなで10回！/)).toBeNull()
+  fireEvent.click(screen.getByLabelText('相棒にさわる'))
+  expect(screen.getByText('💖 なでなで10回！')).toBeInTheDocument()
+})

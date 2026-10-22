@@ -756,6 +756,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           )}
         </span>
         {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
+        {poke > 0 && poke % 10 === 0 && (
+          <span key={`s${poke}`} className="heart-shower" role="status">
+            💖 なでなで{poke}回！
+          </span>
+        )}
         {poke > 0 && (
           <span key={`h${poke}`} className={`poke-hearts${react === 'max' ? ' max' : ''}`} aria-hidden="true">
             <i>♥</i>
