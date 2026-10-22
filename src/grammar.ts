@@ -1770,6 +1770,40 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'How much ___ do you drink every day?', choices: ['water', 'waters', 'glass'], answer: 0, why: 'How much のあとは数えられない名詞（water）。' },
     ],
   },
+  {
+    id: 'participle-clause',
+    title: '分詞構文（Walking along the river, …）',
+    points: [
+      '-ing で始まる語句を文の前や後ろにつけて、「〜しながら」「〜すると」「〜なので」などの意味を表す。これを分詞構文という。',
+      '-ing の意味上の主語は文の主語と同じ。主語が「〜される」側のときは過去分詞を使う（Written in easy English, 〜「やさしい英語で書かれているので」）。',
+    ],
+    examples: [
+      { en: 'Walking along the river, I saw a big fish.', ja: '川ぞいを歩いていると、大きな魚が見えた。' },
+      { en: 'Written in easy English, this book is good for beginners.', ja: 'やさしい英語で書かれているので、この本は初心者によい。' },
+    ],
+    questions: [
+      { sentence: '___ to music, she cleaned her room.', choices: ['Listening', 'Listened', 'Listens'], answer: 0, why: '「音楽を聞きながら」。聞くのは主語の she なので能動の -ing 形。' },
+      { sentence: '___ from the hill, the town looks beautiful.', choices: ['Seen', 'Seeing', 'See'], answer: 0, why: '町は丘から「見られる」側なので過去分詞 Seen。' },
+      { sentence: 'Feeling tired, he ___ to bed early.', choices: ['went', 'going', 'to go'], answer: 0, why: '分詞構文のあとには「主語＋動詞」の文が続く。he went。' },
+    ],
+  },
+  {
+    id: 'subjunctive-past-perfect',
+    title: '仮定法過去完了（If I had known, …）',
+    points: [
+      '過去の事実とちがうことを想像するときは、If ＋ 主語 ＋ had ＋ 過去分詞, 主語 ＋ would have ＋ 過去分詞「もし（あのとき）〜だったら、…だっただろうに」。',
+      'I wish ＋ 主語 ＋ had ＋ 過去分詞 で「（あのとき）〜だったらよかったのに」。',
+    ],
+    examples: [
+      { en: 'If I had left earlier, I would have caught the train.', ja: 'もっと早く出ていたら、電車に間に合っただろうに。' },
+      { en: 'I wish I had studied harder.', ja: 'もっと一生けんめい勉強していたらよかったのに。' },
+    ],
+    questions: [
+      { sentence: 'If I ___ known the answer, I would have told you.', choices: ['had', 'have', 'would'], answer: 0, why: '過去の事実とちがう想像なので If ＋ had ＋ 過去分詞。' },
+      { sentence: 'If she had taken the bus, she ___ been late.', choices: ['would not have', 'will not', 'does not'], answer: 0, why: '後半は would (not) have ＋ 過去分詞「〜しなかっただろうに」。' },
+      { sentence: 'I wish I ___ the movie with you yesterday.', choices: ['had seen', 'saw', 'see'], answer: 0, why: 'yesterday（過去）のことを残念に思うので I wish ＋ had ＋ 過去分詞。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -1873,7 +1907,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['participle-clause', 'subjunctive-past-perfect', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {

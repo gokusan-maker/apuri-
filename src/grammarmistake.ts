@@ -2,6 +2,8 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'participle-clause': { wrong: 'Writing in easy English, this book is good for beginners.', right: 'Written in easy English, this book is good for beginners.', why: '本は「書かれる」側なので、能動の -ing ではなく過去分詞 Written。' },
+  'subjunctive-past-perfect': { wrong: 'If I knew it yesterday, I would have told you.', right: 'If I had known it yesterday, I would have told you.', why: '過去（yesterday）の事実とちがう想像は If ＋ had ＋ 過去分詞。' },
   be: { wrong: 'I am play tennis.', right: 'I play tennis.', why: '一般動詞（play）の文に be動詞はいらない。' },
   third: { wrong: 'He play soccer every day.', right: 'He plays soccer every day.', why: '主語が三人称単数で現在の文なら、動詞に -s をつける。' },
   past: { wrong: 'I goed to the park yesterday.', right: 'I went to the park yesterday.', why: 'go の過去形は不規則に変化して went。' },
