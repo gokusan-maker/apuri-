@@ -1047,6 +1047,39 @@ export const PASSAGES: Passage[] = [
       { q: 'その仕事はどのくらいかかる？', choices: ['数分', '1時間', '半日'], answer: 0 },
     ],
   },
+  {
+    id: 'school-garden',
+    title: 'Tomatoes in the School Garden',
+    text: 'Our class has a small garden behind the school. In May we planted tomatoes. We gave them water every morning. In July the tomatoes turned red, and we ate them for lunch. They were sweet!',
+    ja: '私たちのクラスには学校の裏に小さな畑があります。5月にトマトを植えました。毎朝水をあげました。7月にトマトが赤くなり、お昼に食べました。あまかったです！',
+    questions: [
+      { q: '畑はどこにある？', choices: ['学校の裏', '駅の前', '家の近く'], answer: 0 },
+      { q: 'トマトを植えたのは何月？', choices: ['4月', '5月', '7月'], answer: 1 },
+      { q: 'トマトはどんな味だった？', choices: ['あまかった', 'すっぱかった', 'にがかった'], answer: 0 },
+    ],
+  },
+  {
+    id: 'first-pancakes',
+    title: 'My First Pancakes',
+    text: 'Last Sunday I made pancakes for my family. I mixed eggs, milk, and flour in a big bowl. The first pancake was too dark, but the next ones were perfect. My little brother ate four of them!',
+    ja: 'この前の日曜日、私は家族のためにパンケーキを作りました。大きなボウルで卵と牛乳と小麦粉をまぜました。最初の1枚はこげすぎましたが、次からは完ぺきでした。弟は4枚も食べました！',
+    questions: [
+      { q: 'いつパンケーキを作った？', choices: ['この前の土曜日', 'この前の日曜日', '今日'], answer: 1 },
+      { q: '最初の1枚はどうだった？', choices: ['こげすぎた', '小さすぎた', '完ぺきだった'], answer: 0 },
+      { q: '弟は何枚食べた？', choices: ['2枚', '3枚', '4枚'], answer: 2 },
+    ],
+  },
+  {
+    id: 'new-library',
+    title: 'The New Library',
+    text: 'A new library opened near my house last month. It has a quiet room for students and a big window with a view of the park. I go there every Saturday to read and do my homework. I can borrow five books at a time.',
+    ja: '先月、家の近くに新しい図書館ができました。学生用の静かな部屋と、公園が見える大きな窓があります。私は毎週土曜日にそこへ行って、本を読んだり宿題をしたりします。一度に5冊まで本を借りられます。',
+    questions: [
+      { q: '図書館はいつできた？', choices: ['先週', '先月', '去年'], answer: 1 },
+      { q: '窓から何が見える？', choices: ['海', '公園', '山'], answer: 1 },
+      { q: '一度に何冊借りられる？', choices: ['3冊', '5冊', '10冊'], answer: 1 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
