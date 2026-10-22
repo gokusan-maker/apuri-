@@ -731,4 +731,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What happened as books became cheaper?', choices: ['More people learned to read.', 'Fewer books were printed.', 'Printing shops closed down.', 'Scientists stopped writing.'], answer: 0, why: '第2段落 As books became cheaper, more people learned to read。' },
     ],
   },
+  {
+    id: 'adv-advertising',
+    title: 'What Advertisements Really Sell',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Advertisements rarely tell us only what a product does. More often, they suggest who we might become if we owned it: more attractive, more successful, or more popular. In this way, advertising sells not just objects ( A ) also images of ourselves.',
+      'Critics argue that this strategy can create dissatisfaction. By constantly showing us ideal lives, advertisements may make our own lives seem lacking, ( B ) encourages us to buy more in the hope of closing the gap. Yet the satisfaction that comes from a new purchase often fades quickly, and the cycle begins again.',
+      'Others point out that advertising also has useful functions: it informs us about new products and helps pay for free services such as online videos and newspapers. Perhaps the most practical response is not to avoid advertisements entirely, which is nearly impossible, but to become more aware of the messages they ( C ) send.',
+    ],
+    ja: [
+      '広告が、商品が何をするかだけを伝えることはめったにない。それよりも多いのは、その商品を持てば自分がどんな人になれるか、つまり、もっとすてきで、もっと成功して、もっと人気者になれることをほのめかすものだ。このように、広告は物だけでなく、私たち自身のイメージも売っているのである。',
+      'この戦略は不満を生みうる、と批判する人々もいる。理想の暮らしをたえず見せることで、広告は自分の暮らしを物足りなく感じさせることがあり、そのことが、その差をうめようとして私たちにもっと買わせるのだ。しかし、新しい買い物から得られる満足は、すぐに薄れてしまうことが多く、そしてまた同じことがくり返される。',
+      '一方で、広告には役に立つ働きもあると指摘する人々もいる。新しい商品について知らせてくれるし、ネット動画や新聞のような無料のサービスの費用をまかなう助けにもなっている。おそらく最も現実的な対応は、ほとんど不可能な、広告を完全にさけることではなく、広告がひそかに送ってくるメッセージにもっと気づけるようになることだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'and', 'or', 'so'], answer: 0, why: 'not just A but also B「AだけでなくBも」。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとの which は前の内容全体（自分の暮らしを物足りなく感じさせること）を指す。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['quietly', 'loudly', 'never', 'rarely'], answer: 0, why: '「ひそかに（quietly）送ってくるメッセージ」。気づきにくいメッセージだから、気づけるようになることが大切。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、広告は商品の機能だけを伝えることが多い。', answer: false, why: '第1段落 Advertisements rarely tell us only what a product does。' },
+      { statement: '新しい買い物から得られる満足は、すぐに薄れることが多い。', answer: true, why: '第2段落 the satisfaction that comes from a new purchase often fades quickly。' },
+      { statement: '筆者は、広告を完全にさけるべきだと主張している。', answer: false, why: '第3段落 not to avoid advertisements entirely, which is nearly impossible。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what is one useful function of advertising?', choices: ['It helps pay for free services.', 'It makes people dissatisfied.', 'It shows ideal lives.', 'It stops people from buying things.'], answer: 0, why: '第3段落 helps pay for free services such as online videos and newspapers。' },
+    ],
+  },
+  {
+    id: 'toefl-tea',
+    title: 'How Tea Traveled the World',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      'Tea was first drunk in China, where, according to legend, it was discovered thousands of years ago when leaves fell into a pot of boiling water. Whether or not this story is true, tea had become a popular drink in China by the eighth century, ( A ) a famous book about how to prepare it was written.',
+      'From China, tea spread to Japan and Korea, where it became connected with religious and social customs. It reached Europe in the seventeenth century, carried by Dutch and Portuguese traders. At first it was expensive, so only wealthy people could afford ( B ).',
+      'In Britain, tea gradually became an everyday drink for people of all classes. Today, it is one of the most widely consumed drinks in the world, second only to water. The journey of tea shows how a single plant can ( C ) the daily habits of people across many cultures.',
+    ],
+    ja: [
+      'お茶が最初に飲まれたのは中国で、言い伝えによれば、何千年も前に、わかしたお湯のなべに葉が落ちたことで見つかったという。この話が本当かどうかはともかく、お茶は8世紀までには中国で人気のある飲み物になっており、そのころ、お茶のいれ方についての有名な本が書かれた。',
+      'お茶は中国から日本や朝鮮半島へ広まり、そこで宗教や社会の習慣と結びついた。ヨーロッパには17世紀に、オランダやポルトガルの商人によって運ばれた。はじめは高価だったので、裕福な人しか買うことができなかった。',
+      'イギリスでは、お茶はしだいに、あらゆる階級の人々の日常の飲み物になった。今日、お茶は世界で最も広く飲まれている飲み物の一つで、水につぐ2番目である。お茶の旅は、たった一つの植物が、多くの文化の人々の日々の習慣をいかに形づくりうるかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'which', 'where', 'what'], answer: 0, why: '関係副詞 when。the eighth century（時）を受けて「そのころ〜」。後ろは完全な文なので which・what は入らない。' },
+      { id: 'B', choices: ['it', 'them', 'its', 'one'], answer: 0, why: 'it は tea を指す。afford it「それを買う余裕がある」。tea は数えられない名詞なので them ではない。' },
+      { id: 'C', choices: ['shape', 'break', 'hide', 'forget'], answer: 0, why: 'shape「形づくる」。一つの植物が人々の習慣を形づくった。' },
+    ],
+    tf: [
+      { statement: 'According to legend, tea was discovered when leaves fell into hot water.', answer: true, why: '第1段落 when leaves fell into a pot of boiling water。' },
+      { statement: 'Tea reached Europe before it spread to Japan.', answer: false, why: '第2段落 中国から日本・朝鮮へ広まり、ヨーロッパに届いたのは17世紀。' },
+      { statement: 'Tea is drunk more widely than water.', answer: false, why: '第3段落 second only to water（水につぐ2番目）。' },
+    ],
+    qa: [
+      { q: 'Why could only wealthy people drink tea at first in Europe?', choices: ['It was expensive.', 'It was not allowed by law.', 'It was sold only in China.', 'It tasted too bitter.'], answer: 0, why: '第2段落 At first it was expensive, so only wealthy people could afford it。' },
+    ],
+  },
 ]
