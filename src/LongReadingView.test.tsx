@@ -137,7 +137,7 @@ it('ランダム挑戦で、まだ解いていない長文が開く', () => {
   render(<LongReading />)
   fireEvent.click(screen.getByText(/🎲 ランダム挑戦/))
   expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
-  expect(screen.getAllByText(LONG_PASSAGES[LONG_PASSAGES.length - 1].paragraphs[1].slice(0, 20), { exact: false }).length).toBeGreaterThan(0)
+  expect(screen.getAllByText(LONG_PASSAGES[LONG_PASSAGES.length - 1].paragraphs[1].split(' ( ')[0].slice(0, 15), { exact: false }).length).toBeGreaterThan(0)
 })
 
 it('とちゅうで一覧にもどっても、もう一度開くと続きから', () => {
