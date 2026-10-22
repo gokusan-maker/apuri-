@@ -388,3 +388,10 @@ it('むずかしさは★1〜3で、いろいろな★の長文がある', async
   for (const d of ds) expect([1, 2, 3]).toContain(d)
   expect(new Set(ds).size).toBeGreaterThanOrEqual(2)
 })
+
+it('キーセンテンスは○×の文と語がいちばん重なる本文の文', async () => {
+  const { keySentence } = await import('./longreading')
+  const p = { ...LONG_PASSAGES[0], paragraphs: ['Cats like fish. Dogs love long walks in the park.', 'Birds sing every morning.'] }
+  expect(keySentence(p, 'Dogs enjoy walks in the park.')).toBe('Dogs love long walks in the park.')
+  expect(keySentence(p, 'Birds sing at night.')).toBe('Birds sing every morning.')
+})

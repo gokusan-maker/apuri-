@@ -3333,3 +3333,20 @@ export function difficultyOf(p: LongPassage): 1 | 2 | 3 {
   const v = wordCount(p) / 60 + totalOf(p) / 5
   return v < 5.5 ? 1 : v < 7 ? 2 : 3
 }
+
+// キーセンテンス：○×の文といちばん多く語が重なる本文の文（根拠の文の目安）
+export function keySentence(p: LongPassage, statement: string): string {
+  const words = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter((w) => w.length > 3))
+  const target = words(statement)
+  const sentences = p.paragraphs.flatMap((t) => t.split(/(?<=[.!?])\s+/)).filter((t) => t.trim().length > 0)
+  let best = sentences[0] ?? ''
+  let bestScore = -1
+  for (const t of sentences) {
+    const score = [...words(t)].filter((w) => target.has(w)).length
+    if (score > bestScore) {
+      best = t
+      bestScore = score
+    }
+  }
+  return best
+}
