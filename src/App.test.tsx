@@ -207,6 +207,17 @@ describe('App', () => {
     expect(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')).toHaveAttribute('aria-pressed', 'true')
   })
 
+  it('単語ゲームの人気タイルにも NEW の印がつき、あそぶと「✅ 今日」になる', () => {
+    localStorage.clear()
+    render(<App />)
+    goMini()
+    const tile = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
+    expect(within(tile).getByText('NEW')).toBeInTheDocument()
+    fireEvent.click(tile)
+    const after = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
+    expect(within(after).getByText('✅ 今日')).toBeInTheDocument()
+  })
+
   it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })

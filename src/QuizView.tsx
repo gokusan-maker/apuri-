@@ -417,12 +417,13 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       </button>
       {!menu && (
         <div className="game-grid game-strip" aria-label="人気のミニゲーム">
-          {onCards && <GameTile icon="🃏" name="単語カード" onClick={onCards} />}
+          {onCards && <GameTile playKey="word:cards" icon="🃏" name="単語カード" onClick={onCards} />}
           {POPULAR.map((id) => DIRECTIONS.find((d) => d.id === id))
             .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
             .map((d) => (
               <GameTile
                 key={d.id}
+                playKey={`word:${d.id}`}
                 icon={d.label.split(' ')[0]}
                 name={d.label.split(' ').slice(1).join(' ')}
                 on={direction === d.id}
