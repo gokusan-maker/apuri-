@@ -115,4 +115,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What is the main idea of the last paragraph?', choices: ['Writing developed in response to the needs of complex societies.', 'Chinese writing was copied from Mesopotamia.', 'Writing was created by a single genius.', 'Early writing systems all looked the same.'], answer: 0, why: '第3段落最後 writing was less a stroke of individual genius than a response to practical social needs。' },
     ],
   },
+  {
+    id: 'adv-science-doubt',
+    title: 'Science and Changing Minds',
+    level: '難関大（評論）',
+    paragraphs: [
+      'Many people expect science to provide final answers. When experts change their advice, the public often feels betrayed, as though the earlier claims had been lies. This reaction, though understandable, ( A ) a misunderstanding of how science actually works.',
+      'Scientific knowledge is built by testing ideas against evidence, and new evidence can always appear. A good theory is therefore not one that can never be wrong, but one that makes clear predictions which could, in principle, be shown to be false. It is precisely this openness to revision ( B ) gives science its strength.',
+      'None of this means that every claim is equally uncertain. Some conclusions rest on so much evidence that doubting them would be unreasonable, while others are still being tested. The challenge for both scientists and citizens is to tell these apart, and to treat a change of mind not as a failure ( C ) as a sign that the process is working.',
+    ],
+    ja: [
+      '多くの人は、科学が最終的な答えをあたえてくれると期待している。専門家が助言を変えると、人々はまるで以前の主張がうそだったかのように、裏切られたと感じることが多い。この反応は理解できるものではあるが、科学が実際にどのように進むのかについての誤解を示している。',
+      '科学の知識は、考えを証拠に照らして確かめることで築かれ、新しい証拠はいつでも現れうる。したがって、よい理論とは決してまちがうことのない理論ではなく、原理的にはまちがいだと示されうる、はっきりとした予測をする理論である。科学に力をあたえているのは、まさにこの修正に開かれた姿勢なのだ。',
+      'だからといって、あらゆる主張が同じ程度に不確かだということではない。ある結論は非常に多くの証拠に支えられていて、それを疑うのは理にかなわないが、別の結論はまだ検証の途中である。科学者にとっても市民にとっても大切なのは、これらを見分けること、そして考えが変わることを失敗としてではなく、その過程がうまく働いているしるしとして受けとめることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['reveals', 'hides', 'solves', 'follows'], answer: 0, why: 'reveals 〜「〜を明らかにする・示す」。この反応は、科学についての誤解を示している。' },
+      { id: 'B', choices: ['that', 'what', 'which it', 'where'], answer: 0, why: '強調構文 It is ... that 〜「〜なのは、まさに…だ」。this openness to revision を強調している。' },
+      { id: 'C', choices: ['but', 'or', 'so', 'nor'], answer: 0, why: 'not A but B「AではなくB」。失敗としてではなく、うまく働いているしるしとして。' },
+    ],
+    tf: [
+      { statement: '専門家が助言を変えると、人々はだまされたように感じることが多い、と筆者は述べている。', answer: true, why: '第1段落 the public often feels betrayed, as though the earlier claims had been lies。' },
+      { statement: '筆者によれば、よい理論とは決してまちがうことのない理論である。', answer: false, why: '第2段落 A good theory is therefore not one that can never be wrong と否定している。' },
+      { statement: '筆者は、すべての主張は同じ程度に不確かだと考えている。', answer: false, why: '第3段落 None of this means that every claim is equally uncertain。' },
+    ],
+    qa: [
+      { q: 'What does the author say about changes of mind in science?', choices: ['They can show that the process is working.', 'They prove that scientists were lying.', 'They should be avoided at all costs.', 'They happen only with poor theories.'], answer: 0, why: '第3段落最後 a sign that the process is working。' },
+    ],
+  },
+  {
+    id: 'toefl-sleep',
+    title: 'Sleep and Memory',
+    level: 'TOEFL・IELTS（心理）',
+    paragraphs: [
+      'For a long time, sleep was thought of as a passive state in which the brain simply rested. Research over the past few decades has overturned this view. During sleep, the brain remains highly active, and much of this activity appears to play a role ( A ) the formation of memories.',
+      'In one common type of experiment, participants learn a list of word pairs in the evening and are tested the next morning. Those who sleep normally tend to remember significantly more than those who are kept awake for the same period. Recordings of brain activity suggest that, during deep sleep, the brain replays patterns from the day, ( B ) new information from short-term to long-term storage.',
+      'These findings have practical implications, particularly for students. Staying up all night before an exam may feel productive, but it can ( C ) the very process that turns study into lasting knowledge. A regular sleep schedule, by contrast, gives the brain the time it needs to organize what has been learned.',
+    ],
+    ja: [
+      '長いあいだ、睡眠は脳がただ休んでいる受け身の状態だと考えられていた。ここ数十年の研究が、この考えをくつがえした。眠っているあいだも脳は活発に働いており、その活動の多くは記憶をつくることに役割を果たしているようだ。',
+      'よくある実験では、参加者が夕方に単語の組み合わせのリストを覚え、翌朝テストを受ける。ふつうに眠った人は、同じ時間起きたままでいさせられた人よりも、かなり多くを覚えている傾向がある。脳の活動の記録からは、深い眠りのあいだに脳がその日のパターンを再生し、新しい情報を短期の保管から長期の保管へと移していることがうかがえる。',
+      'これらの発見は、とくに学生にとって実用的な意味をもつ。試験の前に徹夜をすると、はかどっているように感じるかもしれないが、勉強を長く残る知識に変える、まさにその過程をそこなってしまうことがある。それに対して規則正しい睡眠は、学んだことを整理するのに必要な時間を脳にあたえてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'play a role in 〜「〜において役割を果たす」。' },
+      { id: 'B', choices: ['transferring', 'transferred', 'to transfer it', 'transfers'], answer: 0, why: '分詞構文。「その日のパターンを再生して、新しい情報を…へ移す」。移すのは主語の the brain なので、能動の -ing 形。' },
+      { id: 'C', choices: ['undermine', 'support', 'repeat', 'create'], answer: 0, why: 'undermine「（少しずつ）そこなう・弱める」。but の前の「はかどっているように感じる」と逆の内容になる。' },
+    ],
+    tf: [
+      { statement: 'Scientists have always believed that the brain is very active during sleep.', answer: false, why: '第1段落 For a long time, sleep was thought of as a passive state（長いあいだ受け身の状態と考えられていた）。' },
+      { statement: 'In the experiments described, people who slept remembered more word pairs.', answer: true, why: '第2段落 Those who sleep normally tend to remember significantly more。' },
+      { statement: 'The author recommends studying all night before an exam.', answer: false, why: '第3段落 徹夜は知識を定着させる過程をそこなうことがあると述べている。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what may happen in the brain during deep sleep?', choices: ['It replays patterns from the day.', 'It stops all activity.', 'It deletes new memories.', 'It creates new word pairs.'], answer: 0, why: '第2段落 during deep sleep, the brain replays patterns from the day。' },
+    ],
+  },
 ]
