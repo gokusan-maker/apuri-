@@ -146,7 +146,7 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'card', icon: '🃏', label: 'カード' },
   { id: 'stage', icon: '🗺️', label: 'ステージ' },
   { id: 'quiz', icon: '🎮', label: 'ミニゲーム' },
-  { id: 'time', icon: '⏱', label: 'タイム' },
+  { id: 'time', icon: '📐', label: '文法' }, // id は保存データのため 'time' のまま（中身は文法）
   { id: 'stats', icon: '📊', label: '記録' },
   { id: 'settings', icon: '⚙️', label: '設定' },
 ]
@@ -302,6 +302,7 @@ function App() {
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
+  const [showTimeAttack, setShowTimeAttack] = useState(false) // ミニゲームの中のタイムアタック
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
   const [walkQuizOpen, setWalkQuizOpen] = useState(false)
   const [dailyGo, setDailyGo] = useState(false) // ホームの「今日のボスに挑む」から来た
@@ -1428,8 +1429,23 @@ function App() {
             </section>
           )}
         </>
-      ) : mode === 'quiz' ? (
+      ) : mode === 'quiz' && showTimeAttack ? (
         <>
+          <button className="stage-back" onClick={() => setShowTimeAttack(false)}>
+            ← ミニゲームにもどる
+          </button>
+          <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => {
+              setBestTime((b) => Math.max(b, n))
+              count('timeAttack')
+            }} />
+        </>
+      ) : mode === 'quiz' || mode === 'time' ? (
+        <>
+          {mode === 'quiz' && (
+            <button className="list-link time-attack-link" onClick={() => setShowTimeAttack(true)}>
+              ⏱ タイムアタック（60秒で何問とけるか）
+            </button>
+          )}
           {quizFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
@@ -1437,7 +1453,9 @@ function App() {
             </p>
           )}
           <Quiz
-            key={`${levelKey}${quizFocus ? `:${quizFocus}` : ''}`}
+            key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}`}
+            direction={mode === 'time' ? 'grammar' : undefined}
+            lockDirection={mode === 'time'}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
             targets={quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={onAnswer}
@@ -1467,11 +1485,6 @@ function App() {
             }}
           />
         </>
-      ) : mode === 'time' ? (
-        <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => {
-            setBestTime((b) => Math.max(b, n))
-            count('timeAttack')
-          }} />
       ) : (
         cardFocus ? (
           <>
@@ -1628,6 +1641,7 @@ function App() {
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
               setMode(t.id)
+              setShowTimeAttack(false)
               setDailyGo(false)
               setShowShop(false)
               setShowChallenge(false)

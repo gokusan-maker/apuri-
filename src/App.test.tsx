@@ -77,15 +77,18 @@ describe('App', () => {
     expect(screen.getByLabelText('連続学習 1 日')).toBeInTheDocument()
   })
 
-  it('画面下のタブで カード／クイズ／タイム／記録 を切り替えられる', () => {
+  it('画面下のタブで カード／ミニゲーム／文法／記録 を切り替えられる（タイムアタックはミニゲームの中）', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('カード')).toHaveAttribute('aria-current', 'page')
     fireEvent.click(tab('ミニゲーム'))
     expect(document.querySelector('.quiz')).not.toBeNull()
     expect(tab('ミニゲーム')).toHaveAttribute('aria-current', 'page')
-    fireEvent.click(tab('タイム'))
+    fireEvent.click(screen.getByText(/⏱ タイムアタック/))
     expect(screen.getByText('スタート')).toBeInTheDocument()
+    fireEvent.click(tab('文法'))
+    expect(screen.getByRole('heading', { name: '文法ミニ解説' })).toBeInTheDocument()
+    expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
     fireEvent.click(tab('記録'))
     expect(screen.getByRole('heading', { name: '記録' })).toBeInTheDocument()
     fireEvent.click(tab('カード'))
