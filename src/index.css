@@ -1347,3 +1347,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .gacha-btn.lucky-bag { background: linear-gradient(90deg, #dc2626, #f59e0b); color: #fff; }
 .pet-stamps { margin: 2px 0; font-size: 0.75rem; color: var(--muted); letter-spacing: 1px; }
 .boss-btn.strong-boss { background: linear-gradient(90deg, #991b1b, #dc2626); color: #fff; }
+/* スタンプ・ポーズの行は相棒カードの下に1行でおく（横ならびの情報欄をせまくしない） */
+.monster { flex-wrap: wrap; }
+.monster > .pet-stamps, .monster > .pose-label { flex-basis: 100%; order: 10; margin: 0; text-align: center; }
