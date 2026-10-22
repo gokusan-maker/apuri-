@@ -315,6 +315,14 @@ export function loadBuddyDays(): BuddyDays {
   }
   return { grammar: 0, reading: 0 }
 }
+// いっしょに学んだ日の記念メダル
+export const DAY_MEDALS = [
+  { days: 100, icon: '🥇' },
+  { days: 30, icon: '🥈' },
+  { days: 7, icon: '🥉' },
+]
+export const dayMedal = (days: number) => DAY_MEDALS.find((m) => days >= m.days)?.icon ?? ''
+export const nextDayMedal = (days: number) => [...DAY_MEDALS].reverse().find((m) => days < m.days) ?? null
 function addBuddyDay(track: Track) {
   const d = loadBuddyDays()
   try {

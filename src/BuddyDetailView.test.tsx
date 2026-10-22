@@ -1,6 +1,6 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
-import { SPECIES_PROFILE, BUDDY_FORMS, recordEvo, loadEvoLog, addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
+import { dayMedal, nextDayMedal, SPECIES_PROFILE, BUDDY_FORMS, recordEvo, loadEvoLog, addBuddyToday, loadBuddyDays, renameBuddy, type Buddies } from './buddies'
 import { BuddyDetail } from './BuddyDetailView'
 
 const speakMock = vi.hoisted(() => vi.fn())
@@ -92,4 +92,18 @@ it('種類ごとの英語のプロフィールを出し、🔊を押したとき
   expect(speakMock).not.toHaveBeenCalled()
   fireEvent.click(screen.getByRole('button', { name: '読解のなかまのプロフィールを聞く' }))
   expect(speakMock).toHaveBeenCalledWith(SPECIES_PROFILE.koori.en)
+})
+
+it('いっしょに学んだ日の記念メダル（7日🥉・30日🥈・100日🥇）', () => {
+  expect(dayMedal(6)).toBe('')
+  expect(dayMedal(7)).toBe('🥉')
+  expect(dayMedal(45)).toBe('🥈')
+  expect(dayMedal(100)).toBe('🥇')
+  expect(nextDayMedal(3)?.days).toBe(7)
+  expect(nextDayMedal(100)).toBeNull()
+  localStorage.clear()
+  localStorage.setItem('eitan:buddy-days', JSON.stringify({ grammar: 8, reading: 2 }))
+  render(<BuddyDetail buddies={{ grammar: { xp: 0 }, reading: { xp: 0 } }} onRename={() => {}} />)
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('8日 🥉（あと22日で🥈）')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('2日（あと5日で🥉）')
 })
