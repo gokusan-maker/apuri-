@@ -899,4 +899,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does a vaccine contain?', choices: ['A weakened or inactive germ, or a harmless part of it.', 'Antibodies from other people.', 'Memory cells from animals.', 'A stronger form of the germ.'], answer: 0, why: '第2段落 A vaccine contains a weakened or inactive form of a germ, or just a harmless piece of it。' },
     ],
   },
+  {
+    id: 'exam-time-capsule',
+    title: 'A Letter from My Younger Self',
+    level: '高校入試（随筆）',
+    paragraphs: [
+      'When I was in the sixth grade, my class buried a time capsule under the cherry tree in the schoolyard. Each of us put in a letter to our future selves. Our teacher told us that we would open it ( A ) we turned fifteen.',
+      "Last month, my old classmates and I gathered at the school to dig it up. The box was a little rusty, but the letters inside were safe. In my letter, I had written, 'I want to be a soccer player. Are you still practicing every day?' I laughed, because I quit the soccer team last year ( B ) join the science club.",
+      "At first I felt a little sorry for my younger self. But then I read the last line: 'Whatever you are doing now, I hope you love it.' I realized that my dream had changed, but my wish to do something I love ( C ) the same. I am going to write a new letter to myself at twenty.",
+    ],
+    ja: [
+      '小学6年生のとき、私たちのクラスは校庭の桜の木の下にタイムカプセルをうめました。一人ひとりが未来の自分にあてた手紙を入れました。先生は、15さいになったら開けようと言いました。',
+      '先月、昔のクラスメートと私は学校に集まり、それをほり出しました。箱は少しさびていましたが、中の手紙は無事でした。私の手紙には「サッカー選手になりたい。今も毎日練習している？」と書いてありました。私は笑ってしまいました。去年、科学部に入るためにサッカー部をやめていたからです。',
+      'はじめは、小さいころの自分に少し悪い気がしました。でも、最後の一行を読みました。「今何をしていても、それを好きでいてほしい」。私は、夢は変わったけれど、好きなことをしたいという願いは変わっていなかったのだと気づきました。20さいの自分に、新しい手紙を書くつもりです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'what', 'which', 'where'], answer: 0, why: '時を表す接続詞 when「15さいになったときに」。' },
+      { id: 'B', choices: ['to', 'for', 'and', 'so'], answer: 0, why: '目的を表す不定詞 to join「入るために」。' },
+      { id: 'C', choices: ['had stayed', 'staying', 'to stay', 'stayed to'], answer: 0, why: 'realized（過去）の時点までずっと「変わらずにいた」ので過去完了 had stayed。前の had changed と対になっている。' },
+    ],
+    tf: [
+      { statement: 'タイムカプセルは校庭の桜の木の下にうめられた。', answer: true, why: '第1段落 under the cherry tree in the schoolyard。' },
+      { statement: '筆者は今もサッカー部で毎日練習している。', answer: false, why: '第2段落 I quit the soccer team last year（去年やめた）。' },
+      { statement: '筆者は20さいの自分に新しい手紙を書くつもりだ。', answer: true, why: '第3段落 I am going to write a new letter to myself at twenty。' },
+    ],
+    qa: [
+      { q: 'What did the writer realize after reading the letter?', choices: ['The wish to do something loved had not changed.', 'Soccer is more fun than science.', 'The letter had been lost.', 'Dreams never change.'], answer: 0, why: '第3段落 my wish to do something I love had stayed the same。' },
+    ],
+  },
+  {
+    id: 'exam-bookstore',
+    title: 'The Old Bookstore',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      'Near my house, there is a small used bookstore run by an old man named Mr. Kato. I often stopped there on my way home from school, but I was too shy ( A ) talk to him.',
+      "One day, I was looking for a book about space for my science report. Mr. Kato noticed me and asked what I was interested in. When I told him, he went to the back of the store and came back ( B ) three old books about the planets. 'These were my favorites when I was your age,' he said.",
+      "My report was the best in the class, and I went to the store to thank him. Since then, we have talked about books every week. Last week, he told me that he would close the store next spring. I was sad, but he said, 'Books don't need a store. They just need someone who ( C ) them.' I will never forget his words.",
+    ],
+    ja: [
+      '家の近くに、加藤さんというおじいさんがやっている小さな古本屋があります。私は学校の帰りによく立ち寄っていましたが、はずかしくて話しかけられませんでした。',
+      'ある日、私は理科のレポートのために宇宙についての本をさがしていました。加藤さんが私に気づいて、何に興味があるのかとたずねました。私が答えると、加藤さんは店の奥へ行き、惑星についての古い本を3冊持ってもどってきました。「わたしが君くらいの年のころ、大好きだった本だよ」と言いました。',
+      '私のレポートはクラスでいちばんになり、お礼を言いにお店に行きました。それ以来、毎週本の話をしています。先週、加藤さんは来年の春にお店を閉めると教えてくれました。私は悲しくなりましたが、加藤さんは「本にお店はいらない。読んでくれる人がいればいいんだ」と言いました。私はその言葉を決してわすれません。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'that', 'so'], answer: 0, why: 'too 〜 to …「〜すぎて…できない」。はずかしすぎて話しかけられなかった。' },
+      { id: 'B', choices: ['with', 'by', 'for', 'in'], answer: 0, why: 'come back with 〜「〜を持ってもどる」。' },
+      { id: 'C', choices: ['reads', 'read', 'reading', 'to read'], answer: 0, why: '関係代名詞 who の先行詞 someone は三人称単数なので reads。' },
+    ],
+    tf: [
+      { statement: '加藤さんは古本屋をやっている。', answer: true, why: '第1段落 a small used bookstore run by an old man named Mr. Kato。' },
+      { statement: '筆者ははじめから加藤さんとよく話していた。', answer: false, why: '第1段落 I was too shy to talk to him。' },
+      { statement: '加藤さんは来年の春に店を閉めるつもりだ。', answer: true, why: '第3段落 he would close the store next spring。' },
+    ],
+    qa: [
+      { q: 'What did Mr. Kato bring for the writer?', choices: ['Old books about the planets.', 'A new science textbook.', 'A map of the town.', 'A letter from his son.'], answer: 0, why: '第2段落 came back with three old books about the planets。' },
+    ],
+  },
 ]
