@@ -21,7 +21,7 @@ import { BINGO_COINS, loadBingoBest } from './grammarbingo'
 import { addGrammarCorrect, last7, loadGrammarWeek, saveGrammarWeek } from './grammarweek'
 import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './grammarchamp'
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
-import { almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, dailyExample, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, DAILY_GRAMMAR_COINS, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -61,6 +61,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   const [champ, setChamp] = useState(loadGrammarChamp)
   const [gweek, setGweek] = useState(loadGrammarWeek)
   const [missed, setMissed] = useState<GrammarUnit['questions']>([]) // この回でまちがえた問題
+  const [shuffleSeed, setShuffleSeed] = useState(0) // 選択肢の順番をずらす（単元を開くたびに変わる）
   const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
@@ -109,6 +110,7 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
     setPicked(null)
     setScore(0)
     setMissed([])
+    setShuffleSeed(Math.floor(Math.random() * 1000))
   }
 
   if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
@@ -853,7 +855,8 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
         </button>
       )}
       <div className="choices">
-        {q.choices.map((c, i) => {
+        {choiceOrder(q.choices.length, shuffleSeed + step).map((i) => {
+          const c = q.choices[i]
           if (hidden?.step === step && hidden.i === i && picked === null) return null
           let cls = 'choice'
           if (picked !== null && i === q.answer) cls += ' correct'

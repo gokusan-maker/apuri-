@@ -2137,3 +2137,6 @@ export function correctSentence(q: GrammarQuestion): string | null {
 
 // あと少しで全問正解：最高点が「全問 − 1」の単元（最大 n こ）
 export const almostUnits = (r: GrammarRecord, n = 3) => GRAMMAR.filter((u) => r[u.id] === u.questions.length - 1).slice(0, n)
+
+// 選択肢を表示する順番（元の番号の並び）。seed で何こずらすかが決まる（答えの位置を覚えないように）
+export const choiceOrder = (n: number, seed: number) => Array.from({ length: n }, (_, d) => (d + (((seed * 7) % n) + n)) % n)
