@@ -31,7 +31,8 @@ describe('文法ミニ解説', () => {
 it('まとめテストは全単元からランダムに10問', () => {
   render(<Grammar />)
   fireEvent.click(screen.getByText('📝 まとめテスト（ランダム10問）'))
-  expect(screen.getByText(/^1 \/ 10/)).toBeInTheDocument()
+  expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 10 問目')
+  expect(screen.getByRole('progressbar', { name: '確認問題の進み具合' })).toHaveAttribute('aria-valuemax', '10')
 })
 
 it('スタンプが10個になるとガチャチケットのお知らせが呼ばれる', () => {

@@ -716,9 +716,14 @@ export function Grammar({ units = GRAMMAR, title = '文法ミニ解説', onAnswe
   return (
     <section className="card quiz grammar" aria-live="polite">
       {back}
-      <p className="progress">
-        {step + 1} / {unit.questions.length}
+      <p className="progress grammar-progress">
+        <strong>{step + 1}</strong> / {unit.questions.length} 問目
       </p>
+      <div className="grammar-progress-bar" role="progressbar" aria-label="確認問題の進み具合" aria-valuemin={0} aria-valuemax={unit.questions.length} aria-valuenow={step + 1}>
+        {unit.questions.map((_, i) => (
+          <span key={i} className={i < step ? 'done' : i === step ? 'now' : undefined} />
+        ))}
+      </div>
       {battle && (
         <div className="grammar-monster">
           <span className="grammar-monster-fig">
