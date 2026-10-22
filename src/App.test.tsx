@@ -699,6 +699,14 @@ describe('App', () => {
     delete (Element.prototype as { scrollIntoView?: unknown }).scrollIntoView
   })
 
+  it('ホームのあそびは「きょうのあそび」にまとまっていて、はじめは閉じている', () => {
+    render(<App />)
+    const d = document.querySelector('details.home-play') as HTMLDetailsElement
+    expect(d.open).toBe(false)
+    expect(d.querySelector('summary')!.textContent).toMatch(/きょうのあそび/)
+    expect(d.textContent).toMatch(/おみくじ/)
+  })
+
   it('今日のチャレンジ：5問クリアでコインがもらえ、ボタンがクリアずみになる', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)

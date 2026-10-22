@@ -1,5 +1,6 @@
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
 import { BadgeList, BadgeToast } from './BadgesView'
 import { Backup } from './BackupView'
@@ -297,6 +298,13 @@ function App() {
   const [showShop, setShowShop] = useState(false)
   // ホームの上の部分が長いので、タブ・ショップ・チャレンジを開いたら中身のところまでスクロールする（画面外に出て「反応しない」ように見えないように）
   const contentRef = useRef<HTMLDivElement>(null)
+  // ホームの「きょうのあそび」をひらいているか（端末ごとに覚える）
+  const [playOpen, setPlayOpen] = useState(loadPlayOpen)
+  const togglePlay = (open: boolean) => {
+    if (open === playOpen) return
+    setPlayOpen(open)
+    savePlayOpen(open)
+  }
   const toContent = () => requestAnimationFrame(() => contentRef.current?.scrollIntoView?.({ behavior: 'smooth', block: 'start' }))
   const [showChallenge, setShowChallenge] = useState(false)
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
@@ -815,87 +823,90 @@ function App() {
             <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
           </p>
         )}
-        <p className={`omikuji o-${omikujiOf(today).id}`}>
-          ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
-        </p>
-        {walkDay !== today ? (
-          <button
-            className="challenge-btn walk-btn"
-            onClick={() => {
-              const w = walkFind(words, rand())
-              const place = walkPlace(rand())
-              setWalkDay(today)
-              if (w) setWalkDiary(addWalkDiary({ day: today, en: w.en, ja: w.ja, place }))
-              setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
-              setWalkMsg(`🐾 ${place}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
-              if (w) speak(w.en)
+        <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
+          <summary>🎮 きょうのあそび（おさんぽ・すごろく・じゃんけん など）</summary>
+          <p className={`omikuji o-${omikujiOf(today).id}`}>
+            ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
+          </p>
+          {walkDay !== today ? (
+            <button
+              className="challenge-btn walk-btn"
+              onClick={() => {
+                const w = walkFind(words, rand())
+                const place = walkPlace(rand())
+                setWalkDay(today)
+                if (w) setWalkDiary(addWalkDiary({ day: today, en: w.en, ja: w.ja, place }))
+                setWallet((x) => ({ ...x, coins: x.coins + WALK_COINS }))
+                setWalkMsg(`🐾 ${place}をさんぽして、「${w ? `${w.en}（${w.ja}）` : 'きれいな石'}」を拾ってきた！ 🪙${WALK_COINS}`)
+                if (w) speak(w.en)
+              }}
+            >
+              🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
+            </button>
+          ) : (
+            walkMsg && (
+              <p className="walk-msg" role="status">
+                {walkMsg}
+              </p>
+            )
+          )}
+          {walkDiary.length > 0 && (
+            <details className="walk-diary">
+              <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
+              <ul>
+                {walkDiary.map((e, i) => (
+                  <li key={i}>
+                    {e.day.slice(5).replace('-', '/')} {e.place}：<strong>{e.en}</strong>（{e.ja}）
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )}
+          <SugorokuBoard
+            day={today}
+            words={words}
+            onGoal={() => {
+              setWallet((w) => addTicket(w))
+              pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
-          >
-            🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
-          </button>
-        ) : (
-          walkMsg && (
-            <p className="walk-msg" role="status">
-              {walkMsg}
-            </p>
-          )
-        )}
-        {walkDiary.length > 0 && (
-          <details className="walk-diary">
-            <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
-            <ul>
-              {walkDiary.map((e, i) => (
-                <li key={i}>
-                  {e.day.slice(5).replace('-', '/')} {e.place}：<strong>{e.en}</strong>（{e.ja}）
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
-        <SugorokuBoard
-          day={today}
-          words={words}
-          onGoal={() => {
-            setWallet((w) => addTicket(w))
-            pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
-          }}
-        />
-        {giftReady(giftDay, today) ? (
-          <button
-            className="challenge-btn gift-btn"
-            onClick={() => {
-              const st = stickerOf(rand())
-              const r = addSticker(stickers, st)
-              setStickers(r.book)
-              setGiftDay('')
-              setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
-              if (r.complete) {
-                setWallet((x) => addTicket(addTicket(x)))
-                pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
-              }
+          />
+          {giftReady(giftDay, today) ? (
+            <button
+              className="challenge-btn gift-btn"
+              onClick={() => {
+                const st = stickerOf(rand())
+                const r = addSticker(stickers, st)
+                setStickers(r.book)
+                setGiftDay('')
+                setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
+                if (r.complete) {
+                  setWallet((x) => addTicket(addTicket(x)))
+                  pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
+                }
+              }}
+            >
+              🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
+            </button>
+          ) : (
+            giftMsg && (
+              <p className="walk-msg" role="status">
+                {giftMsg}
+              </p>
+            )
+          )}
+          <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
+          <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
+          <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
+          <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
+          <Roulette
+            done={rouletteDay === today}
+            onPrize={(p) => {
+              setRouletteDay(today)
+              if (p.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + p.amount }))
+              else gainXp(p.amount, null)
             }}
-          >
-            🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
-          </button>
-        ) : (
-          giftMsg && (
-            <p className="walk-msg" role="status">
-              {giftMsg}
-            </p>
-          )
-        )}
-        <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
-        <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
-        <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
-        <Janken day={today} name={monster.name ?? formOf(monster).name} onWin={() => setWallet((w) => ({ ...w, coins: w.coins + JANKEN_COINS }))} />
-        <Roulette
-          done={rouletteDay === today}
-          onPrize={(p) => {
-            setRouletteDay(today)
-            if (p.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + p.amount }))
-            else gainXp(p.amount, null)
-          }}
-        />
+          />
+        </details>
         <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
             setShowChallenge(true)
             toContent()
