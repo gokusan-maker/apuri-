@@ -1571,4 +1571,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What happens to a tardigrade when its environment dries out?', choices: ['It curls into a small, dry ball and slows its metabolism.', 'It grows larger and searches for food.', 'It lays eggs and dies.', 'It swims to deeper water.'], answer: 0, why: '第2段落 curls into a small, dry ball ... its metabolism slows。' },
     ],
   },
+  {
+    id: 'exam-penpal',
+    title: 'My Pen Pal in Vietnam',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last year, our English teacher introduced a pen pal program, and I started writing to a girl named Linh in Vietnam. At first, I was nervous because my English was not very good. I spent almost an hour ( A ) my first letter, checking every word in my dictionary.",
+      "In her reply, Linh told me about her school and her family. She also asked many questions about Japan. One of them surprised me: 'Why do Japanese students clean their own classrooms?' I had never thought about it before, because it was ( B ) natural for me. I asked my classmates and teachers, and I learned that cleaning teaches us to take care of the places we use every day.",
+      "Through our letters, I started to see my own country in a new way. I also found that we have many things in common. We both like music and want to travel around the world someday. This spring, Linh's class plans to visit Japan. I am looking forward to ( C ) her for the first time. I want to show her our classroom and clean it together with her.",
+    ],
+    ja: [
+      '去年、英語の先生が文通のプログラムを紹介してくれて、私はベトナムのリンという女の子に手紙を書きはじめました。最初は、自分の英語があまりじょうずでないので緊張していました。最初の手紙を書くのに1時間近くかかり、辞書で一語一語確かめました。',
+      'リンは返事の中で、学校や家族のことを教えてくれました。日本についての質問もたくさんしてくれました。そのうちの一つに私はおどろきました。「なぜ日本の生徒は自分たちで教室をそうじするの？」それまで考えたこともありませんでした。私にとってはとても当たり前のことだったからです。クラスメートや先生にたずねてみて、そうじは毎日使う場所を大切にすることを教えてくれるのだと知りました。',
+      '手紙を通して、私は自分の国を新しい見方で見るようになりました。また、私たちには共通点がたくさんあることもわかりました。2人とも音楽が好きで、いつか世界中を旅したいと思っています。この春、リンのクラスが日本をおとずれる予定です。私は初めて彼女に会えるのを楽しみにしています。彼女に私たちの教室を見せて、いっしょにそうじをしたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['writing', 'to write', 'write', 'wrote'], answer: 0, why: 'spend ＋ 時間 ＋ -ing「〜するのに時間を使う」。' },
+      { id: 'B', choices: ['so', 'such', 'too', 'very much'], answer: 0, why: '形容詞 natural を強めるのは so（とても）。such は名詞の前に使う。' },
+      { id: 'C', choices: ['meeting', 'meet', 'met', 'to meet'], answer: 0, why: 'look forward to のあとは -ing（to は前置詞）。' },
+    ],
+    tf: [
+      { statement: '筆者は最初の手紙を書くのに1時間近くかかった。', answer: true, why: '第1段落 I spent almost an hour writing my first letter。' },
+      { statement: 'リンは、日本の生徒が教室をそうじすることを知っていて当然だと思っていた。', answer: false, why: '第2段落 リンはその理由をたずねている。' },
+      { statement: '筆者とリンはもう何度も会ったことがある。', answer: false, why: '第3段落 meeting her for the first time（初めて会う）。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn about cleaning classrooms?', choices: ['It teaches students to take care of the places they use.', 'It is done only in Vietnam.', 'It is a waste of time.', 'Teachers clean the classrooms for students.'], answer: 0, why: '第2段落 cleaning teaches us to take care of the places we use every day。' },
+    ],
+  },
 ]
