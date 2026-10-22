@@ -76,3 +76,14 @@ describe('かんたんの短い読解も解いた本数を数える', () => {
     expect(screen.getByText(new RegExp(`解いた話 1 / ${PASSAGES.length}本`))).toBeInTheDocument()
   })
 })
+
+describe('次のレベルへのちょうせん印', () => {
+  it('1つ下のレベルを半分以上解くと、そのレベルに⭐ちょうせん', async () => {
+    const { readyFor } = await import('./readlevel')
+    const univ = passagesFor('univ')
+    expect(readyFor('toefl', {})).toBe(false)
+    const half = Object.fromEntries(univ.slice(0, Math.ceil(univ.length / 2)).map((p) => [p.id, 5]))
+    expect(readyFor('toefl', half)).toBe(true)
+    expect(readyFor('easy', half)).toBe(false) // いちばん下には出ない
+  })
+})

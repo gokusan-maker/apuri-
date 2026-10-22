@@ -52,3 +52,12 @@ export function dailyPick(list: LongPassage[], day: string): LongPassage | undef
   for (const c of day) h = (h * 37 + c.charCodeAt(0)) >>> 0
   return list[h % list.length]
 }
+
+// 1つ下のレベルを半分以上解いたら、そのレベルに「⭐ちょうせん」印（次のレベルにすすむきっかけ）
+export function readyFor(level: ReadLevel, record: LongRecord, shortDone: string[] = []): boolean {
+  const i = READ_LEVELS.findIndex((l) => l.id === level)
+  if (i <= 0) return false
+  const prev = solvedOf(READ_LEVELS[i - 1].id, record, shortDone)!
+  const cur = solvedOf(level, record, shortDone)!
+  return prev.total > 0 && prev.done * 2 >= prev.total && cur.done < cur.total
+}

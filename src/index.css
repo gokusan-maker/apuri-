@@ -1586,3 +1586,6 @@ button:focus:not(:focus-visible) { outline: none; }
 .game-tile-new { position: absolute; top: 4px; right: 4px; padding: 0 5px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.6rem; font-weight: 700; }
 .team-level { margin: 4px 0 2px; font-weight: 700; font-size: 0.85rem; text-align: center; }
 .team-level small { font-weight: 400; color: var(--muted); }
+.read-levels button { position: relative; }
+.read-level-ready { position: absolute; top: -8px; left: 50%; transform: translateX(-50%); padding: 0 4px; border-radius: 999px; background: #f59e0b; color: #fff; font-size: 0.55rem; font-weight: 700; white-space: nowrap; }
+.read-levels { margin-top: 10px; }

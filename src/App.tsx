@@ -113,7 +113,7 @@ import { BossAlly, TrackAlly } from './BossAllyView'
 import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord } from './longreading'
 import { loadShortDone } from './reading'
-import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
+import { loadReadLevel, passagesFor, READ_LEVELS, readyFor, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { dailyShort, saveDailyShortDay, saveTodayWordsDay, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
@@ -1360,6 +1360,7 @@ function App() {
                   setShortGo(false)
                 }}
               >
+                {readyFor(t.id, loadLongRecord(), loadShortDone()) && <span className="read-level-ready">⭐ちょうせん</span>}
                 <strong>{t.label}</strong>
                 <small>{t.sub}</small>
                 {solvedOf(t.id, loadLongRecord(), loadShortDone()) && (
