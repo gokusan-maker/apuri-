@@ -1123,4 +1123,60 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why are researchers using bacteria to make silk-like fibers?', choices: ['Because farming spiders is difficult.', 'Because bacteria are stronger than steel.', 'Because spiders cannot make silk.', 'Because silk is too cheap.'], answer: 0, why: '第3段落 Farming spiders is difficult ... Researchers are therefore trying to create similar fibers using bacteria。' },
     ],
   },
+  {
+    id: 'exam-bonsai',
+    title: 'A Lesson from a Small Tree',
+    level: '高校入試（随筆）',
+    paragraphs: [
+      'Our neighbor, Mr. Ueda, has more than thirty bonsai trees in his garden. Some of them are older than my parents. When I first saw them, I asked him how long it takes ( A ) a bonsai. He smiled and said, "A lifetime."',
+      'Last year, he gave me a small pine tree and taught me how to take care of it. I had to water it every morning and cut only a few branches at a time. I wanted it to look beautiful quickly, so one day I cut ( B ) many branches. The tree became weak, and I was very worried.',
+      "Mr. Ueda told me not to give up. 'Trees, like people, need time to recover,' he said. After three months, new green needles appeared. Now I check my tree every morning before school. Taking care of it has taught me that some of the most important things in life cannot ( C ).",
+    ],
+    ja: [
+      '近所の上田さんは、庭に30本以上の盆栽を持っています。中には私の両親より年上のものもあります。はじめてそれを見たとき、私は盆栽を育てるのにどれくらいかかるのかたずねました。上田さんはほほえんで「一生だよ」と言いました。',
+      '去年、上田さんは私に小さな松の木をくれて、世話のしかたを教えてくれました。毎朝水をやり、一度に少しの枝だけを切らなければなりませんでした。私は早くきれいな形にしたくて、ある日、枝を切りすぎてしまいました。木は弱ってしまい、私はとても心配しました。',
+      '上田さんは、あきらめないようにと言いました。「木も人と同じで、元気になるには時間がいるんだよ」。3か月後、新しい緑の葉が出てきました。今では毎朝、学校に行く前に自分の木を見ています。盆栽の世話を通して、人生で最も大切なものの中には、急いではいけないものがあるのだと学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to grow', 'growing', 'grew', 'grown'], answer: 0, why: 'It takes 時間 to 〜「〜するのに（時間が）かかる」。' },
+      { id: 'B', choices: ['too', 'very', 'so', 'much'], answer: 0, why: 'too many 〜「〜が多すぎる」。切りすぎて木が弱った。' },
+      { id: 'C', choices: ['be rushed', 'rush', 'rushing', 'rushed'], answer: 0, why: '大切なものは「急がされる」側なので受け身 be rushed。cannot be rushed「急いではいけない・急がせられない」。' },
+    ],
+    tf: [
+      { statement: '上田さんの盆栽の中には、筆者の両親より年上のものもある。', answer: true, why: '第1段落 Some of them are older than my parents。' },
+      { statement: '筆者は枝を少しずつ切って、すぐにきれいな形にできた。', answer: false, why: '第2段落 one day I cut too many branches. The tree became weak。' },
+      { statement: '3か月後、木に新しい葉が出てきた。', answer: true, why: '第3段落 After three months, new green needles appeared。' },
+    ],
+    qa: [
+      { q: 'What did Mr. Ueda say about trees?', choices: ['Like people, they need time to recover.', 'They should be cut every day.', 'They grow very quickly.', 'They do not need water.'], answer: 0, why: "第3段落 'Trees, like people, need time to recover.'" },
+    ],
+  },
+  {
+    id: 'exam-lighthouse',
+    title: 'The Lighthouse on the Cape',
+    level: '高校入試（物語）',
+    paragraphs: [
+      'On a school trip, our class visited an old lighthouse on a rocky cape. A man named Mr. Nakano, who had worked there for many years, showed us around. He told us that before modern machines, a keeper had to climb the stairs every evening ( A ) light the lamp.',
+      "One night, during a terrible storm, the power in the town went out. Mr. Nakano's teacher, the old keeper at that time, stayed awake all night to keep the light ( B ). Early the next morning, a small fishing boat that had been lost in the storm came safely back to the harbor.",
+      "Today the lighthouse works automatically, and no keeper lives there anymore. But Mr. Nakano still visits it every week. 'Machines can keep the light on,' he said, 'but people must keep the story alive.' As we walked down the stairs, I understood why he ( C ) so proud of this place.",
+    ],
+    ja: [
+      '修学旅行で、私たちのクラスは岩の多いみさきにある古い灯台をおとずれました。長年そこではたらいていた中野さんという男性が案内してくれました。中野さんは、今のような機械がなかったころ、灯台守は毎晩階段をのぼって明かりをつけなければならなかったと話してくれました。',
+      'ある晩、ひどいあらしで町の電気が止まりました。そのころの年老いた灯台守で、中野さんの先生だった人は、明かりを消さないように一晩じゅう起きていました。次の日の朝早く、あらしで行方がわからなくなっていた小さな漁船が、無事に港にもどってきました。',
+      '今では灯台は自動で動き、灯台守はもうそこに住んでいません。それでも中野さんは、今も毎週灯台をおとずれています。「明かりは機械がつけていられる。でも物語は、人が伝えていかなければならないんだ」と中野さんは言いました。階段を下りながら、私は中野さんがなぜこの場所をそんなにほこりに思っているのかがわかりました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'and', 'so'], answer: 0, why: '目的を表す不定詞 to light「明かりをつけるために」。' },
+      { id: 'B', choices: ['on', 'in', 'up', 'off'], answer: 0, why: 'keep the light on「明かりをつけたままにする」。' },
+      { id: 'C', choices: ['was', 'is being', 'were', 'be'], answer: 0, why: '主語 he、過去の文（understood）なので was。be proud of 〜「〜をほこりに思う」。' },
+    ],
+    tf: [
+      { statement: '中野さんは長年その灯台ではたらいていた。', answer: true, why: '第1段落 who had worked there for many years。' },
+      { statement: 'あらしの夜、漁船は行方がわからなくなったまま帰ってこなかった。', answer: false, why: '第2段落 came safely back to the harbor（無事に港にもどった）。' },
+      { statement: '今でも灯台守が灯台に住んでいる。', answer: false, why: '第3段落 no keeper lives there anymore。' },
+    ],
+    qa: [
+      { q: 'What does Mr. Nakano think people must do?', choices: ['Keep the story of the lighthouse alive.', 'Turn on the light every night.', 'Fix the machines every week.', 'Build a new lighthouse.'], answer: 0, why: "第3段落 'people must keep the story alive.'" },
+    ],
+  },
 ]
