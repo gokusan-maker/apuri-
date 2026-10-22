@@ -395,3 +395,13 @@ it('キーセンテンスは○×の文と語がいちばん重なる本文の�
   expect(keySentence(p, 'Dogs enjoy walks in the park.')).toBe('Dogs love long walks in the park.')
   expect(keySentence(p, 'Birds sing at night.')).toBe('Birds sing every morning.')
 })
+
+it('指示語の設問は本文にある語句で、8本以上', () => {
+  const ps = LONG_PASSAGES.filter((x) => x.refer)
+  expect(ps.length).toBeGreaterThanOrEqual(8)
+  for (const p of ps) {
+    const t = p.paragraphs.join(' ')
+    expect(t).toContain(p.refer!.phrase)
+    expect(p.refer!.phrase).toContain(p.refer!.word)
+  }
+})

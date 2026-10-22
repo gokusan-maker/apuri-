@@ -2259,6 +2259,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     },
     titleQ: { choices: ['How to Build a Park', 'Why Cities Need Trees', 'The Tallest Tree in the World', 'Air Conditioners in Summer'], answer: 1, why: '木が町をすずしくし、空気をきれいにし、人をリラックスさせる理由が書かれている。' },
     order: { words: ['help', 'to', 'Trees', 'make', 'really'], rest: 'cities cooler.', answer: 'Trees really help to make', ja: '木は本当に町をすずしくする助けになる。' },
+    refer: { phrase: 'This works like a natural air conditioner', word: 'This', choices: ['leaves releasing water into the air', 'the hot ground', 'a big park', 'the sun'], answer: 0, why: '直前の「葉が空気中に水を出すこと」を指している。' },
     tf: [
       { statement: 'Trees can make cities cooler.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Trees take in oxygen and give out carbon dioxide.', answer: false, why: '二酸化炭素を取りこんで酸素を出す。' },
@@ -2694,6 +2695,7 @@ export const LONG_PASSAGES: LongPassage[] = [
         { choices: ['electricity', 'clothes', 'paper', 'music'], answer: 0, why: '第4段落「地面の熱を使って電気をつくる」。' },
       ],
     },
+    refer: { phrase: 'It last erupted', word: 'It', choices: ['Mt. Fuji', 'Japan', 'a hot spring', 'the sea'], answer: 0, why: '直前の文の Mt. Fuji を指している。' },
     tf: [
       { statement: 'Mt. Fuji is a volcano.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Mt. Fuji erupted last year.', answer: false, why: '最後の噴火は1707年。' },
@@ -2799,6 +2801,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 3],
       why: '第2段落「水を運ぶので学校に行けない子どもがいる」、第4段落「残り湯を植物の水やりに」。',
     },
+    refer: { phrase: 'it can make a big difference', word: 'it', choices: ['saving a little water', 'the sea', 'the Earth', 'the tap'], answer: 0, why: '「みんなが少しずつ節約すれば、それが大きなちがいを生む」。' },
     tf: [
       { statement: 'Water covers about seventy percent of the Earth.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Most of the water on the Earth is fresh water.', answer: false, why: 'ほとんどは海の塩水。' },
@@ -2913,6 +2916,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       answers: [1, 3],
       why: '第2段落「びんの開け方を覚えた」、第4段落「心臓が3つ」。',
     },
+    refer: { phrase: 'cannot find it easily', word: 'it', choices: ['the octopus', 'its enemy', 'a rock', 'the sand'], answer: 0, why: '敵が見つけられないのは、岩や砂のように見えるタコ。' },
     tf: [
       { statement: 'Octopuses have eight arms.', answer: true, why: '第1段落の内容と合う。' },
       { statement: 'Octopuses can change color in less than a second.', answer: true, why: '第3段落の内容と合う。' },
@@ -2946,6 +2950,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'D', choices: ['by', 'from', 'of', 'to'], answer: 1, why: 'learn from 〜 で「〜から学ぶ」。' },
     ],
     seq: { events: ['Kaito\'s plane flew twenty meters.', 'Kaito made a plane with thick paper.', 'Kaito and Mia practiced after school.', 'Kaito asked Mia how she made her plane.'], answer: [1, 3, 2, 0], why: '厚い紙でつくる → ミアに聞く → いっしょに練習 → 次の年に20メートル飛ぶ。' },
+    refer: { phrase: 'his plane went straight down', word: 'his', choices: ['Kaito', 'Mia', 'the teacher', 'everyone'], answer: 0, why: 'まっすぐ落ちたのはカイトの飛行機。' },
     tf: [
       { statement: 'Kaito made his plane with thick paper.', answer: true, why: '第1段落の内容と合う。' },
       { statement: "Kaito's plane flew to the other side of the gym.", answer: false, why: 'まっすぐ下に落ちた。反対側まで飛んだのはミアの飛行機。' },
