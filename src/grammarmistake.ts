@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'strong-negation': { wrong: 'This book is by not means easy.', right: 'This book is by no means easy.', why: '「決して〜ない」は by no means（not ではなく no）。' },
   'it-is-said': { wrong: 'It says that he is kind.（「〜と言われている」）', right: 'It is said that he is kind.', why: '「〜と言われている」は受け身 It is said that 〜。' },
   'participle-idioms': { wrong: 'Judged from his voice, he is angry.', right: 'Judging from his voice, he is angry.', why: '「〜から判断すると」は決まった言い方 judging from（-ing の形）。' },
   'still-anymore': { wrong: "I don't no longer play tennis.", right: 'I no longer play tennis.', why: 'no longer に「もう〜ない」の否定がふくまれるので、not（don\'t）はいらない。' },
