@@ -1500,3 +1500,7 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
   :root:not([data-theme="light"]) .battle-item, :root:not([data-theme="light"]) .hint-5050 { background: linear-gradient(180deg, #3b2f14, #2d230d); color: #fde68a; }
 }
 :root[data-theme="dark"] .battle-item, :root[data-theme="dark"] .hint-5050 { background: linear-gradient(180deg, #3b2f14, #2d230d); color: #fde68a; }
+
+/* 選択肢の記号（ア・イ・ウ・エ）：丸いバッジにして選びやすく。選んだ・正解のときは白ぬきに */
+b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; height: 1.6em; margin-right: 6px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); font-size: 0.82em; font-weight: 900; vertical-align: 0.05em; }
+.picked b.mark, .answer b.mark, [aria-pressed='true'] b.mark, .correct b.mark, .wrong b.mark { background: rgb(255 255 255 / 0.3); color: #fff; }

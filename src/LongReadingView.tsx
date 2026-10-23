@@ -530,7 +530,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                 aria-pressed={blanks[b.id] === i}
                 onClick={() => setBlanks({ ...blanks, [b.id]: i })}
               >
-                {MARKS[i]} {c}
+                <b className="mark">{MARKS[i]}</b> {c}
               </button>
             ))}
           </div>
@@ -557,7 +557,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                     aria-pressed={sents[sb.id] === i}
                     onClick={() => setSents({ ...sents, [sb.id]: i })}
                   >
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -613,7 +613,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
                   <button key={c} className={`long-choice${qa[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={qa[n] === i} onClick={() => setQa({ ...qa, [n]: i })}>
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -639,7 +639,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                 aria-pressed={picks.includes(i)}
                 onClick={() => setPicks(picks.includes(i) ? picks.filter((x) => x !== i) : picks.length < 2 ? [...picks, i] : [picks[1], i])}
               >
-                {MARKS[i]} {st}
+                <b className="mark">{MARKS[i]}</b> {st}
               </button>
             ))}
             {done && (
@@ -662,7 +662,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
                   <button key={c} className={`long-choice${comp[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={comp[n] === i} onClick={() => setComp({ ...comp, [n]: i })}>
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -741,7 +741,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               <div className="long-choices">
                 {v.choices.map((c, i) => (
                   <button key={c} className={`long-choice${voc[n] === i ? ' picked' : ''}${done && i === v.answer ? ' answer' : ''}`} disabled={done} aria-pressed={voc[n] === i} onClick={() => setVoc({ ...voc, [n]: i })}>
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -765,7 +765,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               <div className="long-choices">
                 {b.choices.map((c, i) => (
                   <button key={c} className={`long-choice${summ[n] === i ? ' picked' : ''}${done && i === b.answer ? ' answer' : ''}`} disabled={done} aria-pressed={summ[n] === i} onClick={() => setSumm({ ...summ, [n]: i })}>
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -807,7 +807,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             <div className="long-choices one">
               {p.titleQ.choices.map((c, i) => (
                 <button key={c} className={`long-choice${titlePick === i ? ' picked' : ''}${done && i === p.titleQ!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={titlePick === i} onClick={() => setTitlePick(i)}>
-                  {MARKS[i]} {c}
+                  <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>
@@ -829,7 +829,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
                   <button key={c} className={`long-choice${gist[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={gist[n] === i} onClick={() => setGist({ ...gist, [n]: i })}>
-                    {MARKS[i]} {c}
+                    <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
@@ -850,7 +850,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             <div className="long-choices one">
               {p.refer.choices.map((c, i) => (
                 <button key={c} className={`long-choice${refer === i ? ' picked' : ''}${done && i === p.refer!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={refer === i} onClick={() => setRefer(i)}>
-                  {MARKS[i]} {c}
+                  <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>
@@ -870,7 +870,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             <div className="long-choices one">
               {p.underline.choices.map((c, i) => (
                 <button key={c} className={`long-choice${under === i ? ' picked' : ''}${done && i === p.underline!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={under === i} onClick={() => setUnder(i)}>
-                  {MARKS[i]} {c}
+                  <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>

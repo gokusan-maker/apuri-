@@ -52,7 +52,7 @@ export function GrammarOdd({ onBack, onAnswer }: Props) {
               onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${q.unit.id}`, 'quiz')
             }}
           >
-            {MARKS[i]} {t}
+            <b className="mark">{MARKS[i]}</b> {t}
           </button>
         ))}
       </div>
