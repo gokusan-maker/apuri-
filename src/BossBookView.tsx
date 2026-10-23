@@ -18,10 +18,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
     .filter((l) => !base.some((b) => b.name === l.name))
   const all = [...base, ...extra]
   const beaten = all.filter((b) => book[b.name]).length
+  const speedy = all.filter((b) => book[b.name] && (times[b.name] ?? Infinity) < 60).length
   return (
     <details className="boss-book">
       <summary>
-        📕 ボス図鑑（{beaten} / {all.length}体）
+        📕 ボス図鑑（{beaten} / {all.length}体）{speedy > 0 && `・⚡ スピードクリア ${speedy}体`}
       </summary>
       {loadProverbs().length > 0 && (
         <details className="proverb-book">
