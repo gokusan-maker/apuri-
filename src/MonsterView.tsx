@@ -548,6 +548,15 @@ export function MonsterFigure({
           <stop offset="1" stopColor={shade(form.color, -0.18)} />
         </radialGradient>
       )}
+      {/* 立体感：下と右に落ちる陰影と、左上のつや */}
+      <radialGradient id={`s${uid}`} cx="0.36" cy="0.26" r="0.92">
+        <stop offset="0.55" stopColor="#0f172a" stopOpacity="0" />
+        <stop offset="1" stopColor="#0f172a" stopOpacity="0.3" />
+      </radialGradient>
+      <radialGradient id={`g${uid}`} cx="0.5" cy="0.5" r="0.5">
+        <stop offset="0" stopColor="#fff" stopOpacity="0.9" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+      </radialGradient>
       <radialGradient id={`h${uid}`}>
         <stop offset="0" stopColor="#fef08a" stopOpacity="0.9" />
         <stop offset="1" stopColor="#fef08a" stopOpacity="0" />
@@ -561,6 +570,7 @@ export function MonsterFigure({
         <ellipse cx="50" cy="95" rx="24" ry="4" fill="#000" opacity="0.12" />
         <g className={hidden ? undefined : 'egg-wobble'}>
           <ellipse cx="50" cy="56" rx="30" ry="38" fill={body} stroke={line} strokeWidth="3" />
+          {!hidden && <ellipse cx="50" cy="56" rx="28.5" ry="36.5" fill={`url(#s${uid})`} pointerEvents="none" />}
           <path d="M22 54 l7 -6 l7 6 l7 -6 l7 6 l7 -6 l7 6 l7 -6 l6 5" fill="none" stroke={line} strokeWidth="3" strokeLinejoin="round" />
           {!hidden && (
             <>
@@ -613,8 +623,10 @@ export function MonsterFigure({
             </g>
           )}
           <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" fill={body} stroke={line} strokeWidth="3" />
+          {!hidden && <path d="M19.5 70 Q19.5 29.5 50 27.5 Q80.5 29.5 80.5 70 Q80.5 88.5 50 88.5 Q19.5 88.5 19.5 70 Z" fill={`url(#s${uid})`} pointerEvents="none" />}
           {!hidden && <ellipse cx="50" cy="77" rx="18" ry="10" fill="#fff" opacity="0.28" />}
-          {!hidden && <ellipse cx="34" cy="38" rx="8" ry="4.5" fill="#fff" opacity="0.55" transform="rotate(-25 34 38)" />}
+          {!hidden && <ellipse cx="35" cy="39" rx="12" ry="7" fill={`url(#g${uid})`} transform="rotate(-25 35 39)" />}
+          {!hidden && <ellipse cx="33" cy="37" rx="4" ry="2.2" fill="#fff" opacity="0.9" transform="rotate(-25 33 37)" />}
           {!hidden && form.species && <SpeciesFace species={form.species} />}
           {!hidden && form.stage >= 3 && <Markings form={form} line={line} />}
           {!hidden && form.stage >= 6 && (

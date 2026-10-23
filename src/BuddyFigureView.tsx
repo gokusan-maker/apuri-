@@ -1,3 +1,4 @@
+import { useId } from 'react'
 import { BUDDY_FORMS, buddyForm, buddyLevel, formName, growthStars, speciesOf, type Buddy, type Track } from './buddies'
 
 // 文法のことばモンスター・長文の竜のオリジナルの絵（SVG）。姿（何番目の形か）で色・頭のかざり・つばさがかわる。
@@ -37,6 +38,16 @@ const DRAGON: Look[] = [
   { body: '#6d28d9', belly: '#ddd6fe', head: 'horns', wings: '#fbbf24', tail: true, spikes: '#fde68a', crown: true, sparkle: '#c4b5fd' }, // つきのしんりゅう
 ]
 
+// 色を明るく（amt>0）・暗く（amt<0）する（立体感のグラデーション用）
+function tone(hex: string, amt: number): string {
+  const n = parseInt(hex.slice(1), 16)
+  const ch = (v: number) => Math.round(amt >= 0 ? v + (255 - v) * amt : v * (1 + amt))
+  const r = ch((n >> 16) & 255)
+  const g = ch((n >> 8) & 255)
+  const b = ch(n & 255)
+  return `#${((r << 16) | (g << 8) | b).toString(16).padStart(6, '0')}`
+}
+
 export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: Buddy; size?: number }) {
   const form = buddyForm(track, buddy)
   const i = BUDDY_FORMS[track].indexOf(form)
@@ -46,12 +57,28 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
   // 1レベルごとに少しずつ大きく（最大 +12%）
   const grow = 1 + Math.min(12, buddyLevel(buddy).level - 1) / 100
   const spot = track === 'grammar' ? '#fb923c' : '#8b5cf6'
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '')
+  const bodyFill = `url(#bb${uid})`
   return (
     <svg className="buddy-svg" width={size} height={size} viewBox="0 0 100 100" role="img" aria-label={formName(track, buddy)} data-stars={stars} style={speciesOf(track, buddy).hue ? { filter: `hue-rotate(${speciesOf(track, buddy).hue}deg)` } : undefined}>
+      <defs>
+        {/* 立体感：左上が明るく、右下が暗い体と、つや・足もとの影 */}
+        <radialGradient id={`bb${uid}`} cx="0.36" cy="0.3" r="0.8">
+          <stop offset="0" stopColor={tone(l.body, 0.5)} />
+          <stop offset="0.55" stopColor={l.body} />
+          <stop offset="1" stopColor={tone(l.body, -0.22)} />
+        </radialGradient>
+        <radialGradient id={`bg${uid}`} cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="50" cy="91" rx={egg ? 24 : 28} ry="4" fill="#0f172a" opacity="0.14" />
       <g transform={`translate(50 60) scale(${grow}) translate(-50 -60)`}>
         {egg ? (
           <>
-            <ellipse cx="50" cy="56" rx="30" ry="38" fill={l.body} stroke="#00000022" strokeWidth="2" />
+            <ellipse cx="50" cy="56" rx="30" ry="38" fill={bodyFill} stroke="#00000022" strokeWidth="2" />
+            <ellipse cx="38" cy="34" rx="9" ry="12" fill={`url(#bg${uid})`} transform="rotate(-20 38 34)" />
             <circle cx="40" cy="45" r="5" fill={spot} opacity="0.6" />
             <circle cx="60" cy="62" r="7" fill={spot} opacity="0.5" />
             <circle cx="47" cy="75" r="4" fill={spot} opacity="0.5" />
@@ -78,7 +105,7 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
                 <path d="M10 48 L18 54 M9 54 L18 59 M90 48 L82 54 M91 54 L82 59" stroke="#94a3b8" strokeWidth="1" />
               </>
             )}
-            {l.tail && <path d="M70 78 Q92 82 90 64 Q86 74 72 70 Z" fill={l.body} stroke="#00000022" />}
+            {l.tail && <path d="M70 78 Q92 82 90 64 Q86 74 72 70 Z" fill={bodyFill} stroke="#00000022" />}
             {l.spikes && <path d="M30 38 L34 28 L40 34 L46 24 L52 32 L58 24 L64 34 L70 28 L72 40 Z" fill={l.spikes} opacity="0.9" />}
             {l.head === 'drop' && <path d="M50 8 Q60 24 50 34 Q40 24 50 8 Z" fill={l.body} stroke="#00000022" />}
             {l.head === 'pencil' && (
@@ -101,8 +128,9 @@ export function BuddyFigure({ track, buddy, size = 56 }: { track: Track; buddy: 
                 <path d="M66 30 L72 10 L58 26 Z" fill="#fef3c7" stroke="#00000022" />
               </>
             )}
-            <ellipse cx="50" cy="58" rx="30" ry="28" fill={l.body} stroke="#00000022" strokeWidth="2" />
+            <ellipse cx="50" cy="58" rx="30" ry="28" fill={bodyFill} stroke="#00000022" strokeWidth="2" />
             <ellipse cx="50" cy="66" rx="17" ry="14" fill={l.belly} />
+            <ellipse cx="36" cy="42" rx="11" ry="6" fill={`url(#bg${uid})`} transform="rotate(-25 36 42)" />
             {track === 'grammar' && (
               // おなかに ABC の文字（ことばのモンスターのしるし）
               <text x="50" y="72" textAnchor="middle" fontSize="9" fontWeight="700" fill="#475569">

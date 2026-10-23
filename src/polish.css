@@ -1,0 +1,288 @@
+/* ===== 見た目の仕上げ（有料アプリのような質感） =====
+   index.css のあとに読みこみ、色・影・角丸・ボタンの押し心地をそろえる。
+   レイアウト（並び・大きさ）は変えず、質感だけを上書きする。 */
+
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --surface-2: #eef2fb;
+  --accent: #4f46e5;
+  --accent-2: #7c3aed;
+  /* テーマカラー（--accent）にあわせたグラデーション */
+  --accent-grad: linear-gradient(135deg, color-mix(in srgb, var(--accent) 78%, #fff) 0%, var(--accent) 50%, color-mix(in srgb, var(--accent) 70%, #a855f7) 100%);
+  --good-grad: linear-gradient(135deg, #22c55e 0%, #10b981 100%);
+  --warm-grad: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  --hair: rgb(15 23 42 / 0.07);
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06), 0 1px 1px rgb(15 23 42 / 0.04);
+  --shadow-md: 0 1px 2px rgb(15 23 42 / 0.05), 0 6px 18px -6px rgb(30 41 99 / 0.18);
+  --shadow-lg: 0 2px 4px rgb(15 23 42 / 0.05), 0 18px 40px -12px rgb(49 46 129 / 0.28);
+  --radius: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    --bg: #0b1020;
+    --card: #151b2e;
+    --surface-2: #1c2440;
+    --accent: #818cf8;
+    --hair: rgb(255 255 255 / 0.07);
+    --shadow-md: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 22px -8px rgb(0 0 0 / 0.6);
+    --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.4), 0 18px 40px -12px rgb(0 0 0 / 0.7);
+  }
+}
+:root[data-theme='dark'] {
+  --bg: #0b1020;
+  --card: #151b2e;
+  --surface-2: #1c2440;
+  --accent: #818cf8;
+  --hair: rgb(255 255 255 / 0.07);
+  --shadow-md: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 22px -8px rgb(0 0 0 / 0.6);
+  --shadow-lg: 0 2px 4px rgb(0 0 0 / 0.4), 0 18px 40px -12px rgb(0 0 0 / 0.7);
+}
+
+/* 背景：うっすら色のにじむ明るい面 */
+body {
+  background:
+    radial-gradient(120% 60% at 0% 0%, color-mix(in srgb, #a5b4fc 22%, transparent), transparent 60%),
+    radial-gradient(90% 50% at 100% 10%, color-mix(in srgb, #f9a8d4 16%, transparent), transparent 60%),
+    var(--bg);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+:root { letter-spacing: 0.01em; }
+
+/* タイトル：グラデーションの文字 */
+header h1 {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* カード：白い面＋やわらかい影＋細いふち */
+.card,
+.monster {
+  background-color: var(--card);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+/* 色つきのなかまのカードは色をのこして、影とふちだけ足す */
+.buddy-card,
+.buddy-detail .buddy-box {
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+.monster { color: var(--muted); }
+
+/* ===== ボタン：立体的で、押すとしずむ ===== */
+.flip,
+.actions button,
+.boss-btn,
+.gacha-btn,
+.good,
+.shop-btn {
+  position: relative;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.28), 0 4px 0 rgb(0 0 0 / 0.16), 0 8px 18px -8px rgb(30 27 75 / 0.45);
+  transition: transform 0.08s ease, box-shadow 0.08s ease, filter 0.15s;
+}
+.flip,
+.actions button:not(.again),
+.good {
+  background: var(--accent-grad);
+  color: #fff;
+}
+.good { padding: 12px 16px; border-radius: 14px; }
+.flip, .actions button { border-radius: 16px; }
+.flip:active,
+.actions button:active,
+.boss-btn:active,
+.gacha-btn:active,
+.good:active,
+.shop-btn:active,
+.home-gacha-btn:active,
+.mode-btn:active {
+  transform: translateY(3px);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.2), 0 1px 0 rgb(0 0 0 / 0.16), 0 3px 8px -4px rgb(30 27 75 / 0.4);
+}
+.flip:disabled,
+.good:disabled,
+.shop-btn:disabled { filter: grayscale(0.6); opacity: 0.55; box-shadow: none; }
+.actions .again { background: linear-gradient(135deg, #f87171, #dc2626); color: #fff; }
+.shop-btn { background: var(--accent-grad); border-radius: 10px; box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.28), 0 3px 0 rgb(0 0 0 / 0.16); }
+
+/* 輪郭だけのボタン（list-link）は、すりガラスの丸ボタンに */
+.list-link {
+  border: 1px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  background: color-mix(in srgb, var(--card) 85%, transparent);
+  color: var(--accent);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.08s;
+}
+.list-link:active { transform: scale(0.97); }
+
+/* 選択肢：白いカード＋下に厚み */
+.choice {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  font-weight: 600;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 18%, rgb(0 0 0 / 0.1)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s, background 0.2s;
+}
+.choice:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 18%, rgb(0 0 0 / 0.1)); }
+.choice.correct { background: var(--good-grad); border-color: transparent; box-shadow: 0 3px 0 #15803d; }
+.choice.wrong { background: linear-gradient(135deg, #f87171, #dc2626); border-color: transparent; box-shadow: 0 3px 0 #991b1b; }
+
+/* ミニゲームをえらぶボタン・ホームのガチャボタン */
+.mode-btn {
+  border-radius: 18px;
+  background: linear-gradient(135deg, #34d399 0%, #06b6d4 45%, #6366f1 100%);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.3), 0 4px 0 rgb(0 0 0 / 0.14), 0 10px 22px -10px rgb(37 99 235 / 0.6);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.home-gacha-btn {
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35), 0 5px 0 rgb(88 28 135 / 0.35), 0 14px 28px -12px rgb(147 51 234 / 0.7) !important;
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+
+/* ===== ゲームのタイル：アイコンを丸い台にのせたカード ===== */
+.game-tile {
+  position: relative;
+  gap: 4px;
+  padding: 12px 6px 10px;
+  border: 1px solid var(--hair);
+  border-radius: 18px;
+  background: var(--card);
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.game-tile:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)); }
+.game-tile.on { border-color: color-mix(in srgb, var(--accent) 55%, transparent); background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+.game-tile-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  font-size: 1.6rem;
+  background: linear-gradient(160deg, color-mix(in srgb, var(--accent) 16%, var(--card)), color-mix(in srgb, var(--accent-2) 8%, var(--card)));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.6), 0 2px 6px -2px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+.game-tile-new { background: linear-gradient(135deg, #f43f5e, #f97316); box-shadow: 0 2px 6px -1px rgb(244 63 94 / 0.5); letter-spacing: 0.04em; }
+.game-tile-today { background: linear-gradient(135deg, #22c55e, #059669); box-shadow: 0 2px 6px -1px rgb(16 185 129 / 0.5); }
+
+/* 学年などのチップ：まるいセグメント */
+.quick-grades button {
+  border: 1px solid var(--hair);
+  background: var(--card);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+.quick-grades button[aria-pressed='true'] { background: var(--accent-grad); border-color: transparent; color: #fff; box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent); }
+
+/* ===== 下のメニュー：すりガラス＋選んだタブに光る台 ===== */
+.tabbar {
+  background: color-mix(in srgb, var(--card) 78%, transparent);
+  -webkit-backdrop-filter: saturate(1.6) blur(16px);
+  backdrop-filter: saturate(1.6) blur(16px);
+  border-top: 1px solid var(--hair);
+  box-shadow: 0 -8px 24px -16px rgb(30 41 99 / 0.35);
+}
+.tabbar button { border-radius: 14px; transition: background 0.15s, color 0.15s; }
+.tabbar button[aria-current='page'] {
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+}
+.tabbar button[aria-current='page'] .tab-icon { transform: translateY(-1px) scale(1.08); filter: drop-shadow(0 3px 4px color-mix(in srgb, var(--accent) 35%, transparent)); }
+.tab-icon { transition: transform 0.15s; }
+
+/* お知らせ（トースト）：深い色のガラス */
+.badge-toast {
+  background: linear-gradient(135deg, rgb(30 27 75 / 0.94), rgb(49 46 129 / 0.94)) !important;
+  border: 1px solid rgb(255 255 255 / 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 進み具合のバー：つやのあるグラデーション */
+.goal-fill,
+.buddy-bar > span,
+.team-bar > span {
+  background: var(--accent-grad) !important;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.35);
+}
+
+/* ===== キャラクターを立体的に（影・光・陰影） ===== */
+.monster-figure,
+.buddy-svg,
+.monster-body svg {
+  filter: drop-shadow(0 6px 5px rgb(15 23 42 / 0.22)) drop-shadow(0 1px 0 rgb(255 255 255 / 0.4));
+}
+.monster-stage { box-shadow: inset 0 -10px 18px -10px rgb(15 23 42 / 0.25), var(--shadow-sm); }
+
+@media (prefers-reduced-motion: reduce) {
+  .flip, .good, .choice, .game-tile, .boss-btn, .gacha-btn, .shop-btn { transition: none; }
+}
+
+/* ===== タブ・チップ ===== */
+/* 切りかえタブ：すりガラスのセグメント */
+.sub-tabs {
+  gap: 4px;
+  padding: 4px;
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--surface-2) 80%, transparent);
+  border: 1px solid var(--hair);
+}
+.sub-tabs button { border-radius: 12px; background: transparent; font-weight: 700; transition: background 0.15s, color 0.15s; }
+.sub-tabs button[aria-selected='true'] { background: var(--card); color: var(--accent); box-shadow: var(--shadow-md); }
+/* 問題数・ミニゲームの種類などのチップ */
+.counts button,
+.direction button {
+  border: 1px solid var(--hair);
+  background: var(--card);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+.counts button[aria-pressed='true'],
+.direction button[aria-pressed='true'] {
+  border-color: transparent;
+  background: var(--accent-grad);
+  color: #fff;
+  box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+/* 読解のむずかしさ：カード型のタブ */
+.read-levels button {
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 12%, rgb(0 0 0 / 0.06)), var(--shadow-sm);
+}
+.read-levels button[aria-selected='true'] {
+  border-color: transparent;
+  background: var(--accent-grad);
+  color: #fff;
+  box-shadow: 0 6px 14px -6px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.read-levels button[aria-selected='true'] * { color: #fff !important; }
+
+/* 設定などの選択ボタン */
+.levels button {
+  border: 1px solid var(--hair);
+  background: var(--card);
+  font-weight: 700;
+  box-shadow: var(--shadow-sm);
+}
+.levels button[aria-pressed='true'] {
+  border-color: transparent;
+  background: var(--accent-grad);
+  color: #fff;
+  box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.speak-test { box-shadow: var(--shadow-sm); }
