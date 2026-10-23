@@ -30,3 +30,12 @@ it('ごきげんMAXの日だけ、相棒のうしろの四角が光る', async (
   const r = render(<Monster monster={{ xp: 0 } as never} mood100={{ points: 5, max: 20 }} />)
   expect(r.container.querySelector('.monster-stage.stage-max')).toBeNull()
 })
+
+it('今日の課題を3つクリアした日は、相棒の四角に🏅の印', async () => {
+  const { Monster } = await import('./MonsterView')
+  const { unmount } = render(<Monster monster={{ xp: 0 } as never} trioDone />)
+  expect(document.querySelector('.monster-stage [aria-label="今日の課題3つクリア"]')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 0 } as never} />)
+  expect(document.querySelector('[aria-label="今日の課題3つクリア"]')).toBeNull()
+})

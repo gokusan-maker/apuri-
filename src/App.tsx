@@ -116,7 +116,7 @@ import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord } from './longreading'
 import { loadShortDone } from './reading'
 import { loadReadLevel, passagesFor, READ_LEVELS, readyFor, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
-import { dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
+import { loadTrioDay, dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
@@ -1072,6 +1072,7 @@ function App() {
             onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
             onPet={() => cheerUp(1)}
             mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
+            trioDone={loadTrioDay() === today}
             epithet={epithetOf(totalWins(loadBook()))}
             onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
             onPetStampTicket={() => {

@@ -1627,3 +1627,4 @@ button.team-level { display: block; width: 100%; border: none; background: trans
 .monster-stage.stage-max::after { content: '✨'; position: absolute; top: -6px; right: -4px; font-size: 1rem; pointer-events: none; animation: twinkle 2s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .monster-stage.stage-max::after { animation: none; } }
 .speed-clear { color: #d97706; }
+.stage-trio { position: absolute; left: -4px; bottom: -6px; font-size: 1.1rem; z-index: 2; pointer-events: none; }
