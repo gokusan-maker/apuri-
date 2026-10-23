@@ -1623,3 +1623,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 今週のチャレンジ：進み具合はバッジで */
 .weekly > p:first-child { display: flex; align-items: center; gap: 6px; font-weight: 700; }
 .weekly .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; white-space: nowrap; }
+
+/* 文法スタンプカード：見出しは短く、数はバッジ */
+.stamp-card .stamp-title { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.stamp-card .stamp-title .fold-meta { display: inline-block; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; }
+.stamp-card .stamp-next { margin-left: auto; color: var(--muted); font-size: 0.74rem; font-weight: 700; white-space: nowrap; }

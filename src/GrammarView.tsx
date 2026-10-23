@@ -559,8 +559,8 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         {stampMode && (
           <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
             <p className="stamp-title">
-              📮 文法スタンプカード {grammarStamps(record)} / {GRAMMAR.length}
-              <span>（あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で 🎟ガチャチケット）</span>
+              📮 スタンプカード <span className="fold-meta">{grammarStamps(record)}/{GRAMMAR.length}</span>
+              <small className="stamp-next">あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で🎟</small>
             </p>
             <div className="stamp-grid">
               {GRAMMAR.map((u) => (
