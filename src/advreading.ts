@@ -2579,4 +2579,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How does the anglerfish use light?', choices: ['To attract small animals toward its mouth.', 'To scare away larger predators.', 'To find its way home.', 'To warm the water around it.'], answer: 0, why: '第2段落 a glowing lure that hangs in front of its mouth / Small animals that swim toward the light find themselves caught。' },
     ],
   },
+{
+    id: 'adv-sunk-cost',
+    title: 'Why We Keep Going When We Should Stop',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine that you have paid for a concert ticket, but on the day of the show you feel ill and the weather is terrible. Many people would still go, reasoning that otherwise the money would be wasted. Yet the money has already been spent and cannot be recovered ( A ) they decide. The only real question is whether the evening will be better at the concert or at home. Economists call money, time, or effort that cannot be recovered a \"sunk cost,\" and the tendency to let it guide our choices the sunk cost fallacy.",
+      "The fallacy is not limited to small personal decisions. Companies continue expensive projects that are clearly failing because so much has already been invested in them, and governments sometimes pour more resources into plans that have little chance of success. In each case, the desire to justify past choices takes priority over a clear look at future costs and benefits.",
+      "Why are we so easily trapped? One reason is that admitting a loss feels painful, and continuing allows us to postpone that pain. Another is that people who change course may be seen as wasteful or inconsistent. Still, recognizing the fallacy does not mean we should give up at the first difficulty; persistence is often valuable. The point is to ask the right question: not \"How much have I already put in?\" but \"Knowing what I know now, ( B ) I start this today?\" Answering it honestly is ( C ) easier said than done.",
+    ],
+    ja: [
+      'コンサートのチケット代をはらったのに、当日になって体調が悪く、天気もひどかったとしよう。多くの人は、行かなければお金がむだになると考えて、それでも行くだろう。しかし、お金はもうはらってしまっていて、どちらに決めても取りもどすことはできない。本当に問うべきことは、その夜をコンサートですごすのと家ですごすのと、どちらがよいかということだけである。経済学者は、取りもどすことのできないお金や時間、労力を「サンクコスト（埋没費用）」とよび、それに選択を左右されてしまう傾向をサンクコストの誤りとよぶ。',
+      'この誤りは、小さな個人の決定に限られない。企業は、すでに多くを投資したという理由で、明らかに失敗している費用のかかる計画を続けるし、政府もときに、成功の見こみがほとんどない計画にさらに資源をつぎこむ。どの場合も、過去の選択を正当化したいという気持ちが、将来の損得を冷静に見ることよりも優先されているのである。',
+      'なぜ私たちはこれほど簡単にこのわなにはまるのだろうか。理由の一つは、損を認めるのはつらく、続けることでそのつらさを先のばしにできるからだ。もう一つは、方針を変える人はむだづかいをする人、一貫性のない人と見られるかもしれないからである。とはいえ、この誤りに気づくことは、最初の困難であきらめるべきだということではない。がんばり続けることには価値があることも多い。大切なのは、正しい問いを立てることだ。「もうどれだけつぎこんだか」ではなく、「今わかっていることをふまえて、今日これを始めるだろうか」と。正直に答えるのは、もちろん言うはやすく行うはかたしである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whatever', 'however', 'whoever', 'whenever'], answer: 0, why: 'whatever they decide「彼らが何を決めようとも」（譲歩）。' },
+      { id: 'B', choices: ['would', 'did', 'have', 'was'], answer: 0, why: '仮定の問い「今日これを始めるだろうか」なので would I start。' },
+      { id: 'C', choices: ['of course', 'in addition', 'for example', 'as a result'], answer: 0, why: '「もちろん言うはやすく行うはかたし」。of course で当然のことを認める。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、すでにはらったお金は、決定しだいで取りもどせる。', answer: false, why: '第1段落 cannot be recovered whatever they decide。' },
+      { statement: 'サンクコストの誤りは、企業や政府の決定にも見られる。', answer: true, why: '第2段落の内容と合う。' },
+      { statement: '筆者は、少しでも困難があればすぐにあきらめるべきだと主張している。', answer: false, why: '第3段落 does not mean we should give up at the first difficulty。' },
+    ],
+    qa: [
+      { q: 'What question does the writer suggest we ask ourselves?', choices: ['Whether we would start the plan today, knowing what we know now.', 'How much money we have already spent.', 'What other people will think of us.', 'How to finish the plan as quickly as possible.'], answer: 0, why: '第3段落 "Knowing what I know now, would I start this today?"' },
+    ],
+  },
 ]
