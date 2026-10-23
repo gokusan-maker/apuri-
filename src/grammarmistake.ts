@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'of-the-two': { wrong: 'She is the tallest of the two girls.', right: 'She is the taller of the two girls.', why: '2人のうちなら最上級ではなく the ＋ 比較級。' },
   'verb-prep': { wrong: 'I am listening music.', right: 'I am listening to music.', why: 'listen のあとには to が必要（listen to 〜）。' },
   'get-done': { wrong: 'I got lose in the city.', right: 'I got lost in the city.', why: 'get のあとは過去分詞（lost）。' },
   'even-only': { wrong: 'I have only ten minutes only.', right: 'I only have ten minutes. / I have only ten minutes.', why: 'only は1回だけ。動詞の前か、強めたい語の前に置く。' },
