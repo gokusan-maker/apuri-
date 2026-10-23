@@ -1456,3 +1456,9 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .list-link:active { transform: translateY(2px) scale(0.98); box-shadow: 0 0 0 color-mix(in srgb, var(--accent) 22%, transparent); }
 .list-link:disabled { opacity: 0.5; box-shadow: none; }
 .daily-stars .list-link, .related-units .list-link { min-height: 32px; }
+
+/* 問題数・向きなどの選択（.counts）：iOS風のセグメント（1本のトラックの中で選んだものが光る） */
+.counts { display: flex; width: fit-content; max-width: 100%; margin: 4px auto 10px; padding: 3px; gap: 2px; border-radius: 999px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); flex-wrap: wrap; justify-content: center; }
+.counts button { min-height: 32px; padding: 4px 14px; border: none; border-radius: 999px; background: transparent; box-shadow: none; color: var(--muted); font-size: 0.82rem; }
+.counts button[aria-pressed='true'] { color: #fff; }
+.counts button:active { transform: scale(0.96); }
