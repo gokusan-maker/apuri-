@@ -1,3 +1,4 @@
+import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
 import { useState } from 'react'
 import { BossFigure } from './BossView'
@@ -768,7 +769,9 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             ))}
           </div>
         )}
-        <p className="result-title">{unit.title}</p>
+        <p className="result-title" title={unit.title}>
+          {unit.title.split('（')[0]}
+        </p>
         <p className="result-score">
           {unit.id === 'streak-run' ? `🔥 ${score}問 連続正解！（ベスト ${runBest}問）` : `${score} / ${unit.questions.length} 問正解`}
         </p>
@@ -798,7 +801,14 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           )
         )}
         {battle ? (
-          <p className="result-message">{score === unit.questions.length ? `👾 ${monsterName(unit)}をたおした！ 🪙${GRAMMAR_MONSTER_COINS}` : `${monsterName(unit)}ににげられた…解説を見直してもう一度！`}</p>
+          score === unit.questions.length ? (
+            <p className="result-message gm-win">
+              <span className="gm-win-big">👾 たおした！ 🪙{GRAMMAR_MONSTER_COINS}</span>
+              <small className="gm-name">{splitSoft(monsterName(unit)).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</small>
+            </p>
+          ) : (
+            <p className="result-message">💨 にげられた… 解説を見直してもう一度！</p>
+          )
         ) : (
           <p className="result-message">{score === unit.questions.length ? 'カンペキ！' : '解説を見直してもう一度！'}</p>
         )}
@@ -815,7 +825,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             <small>（{praiseOf(unit.id)}）</small>
           </p>
         )}
-        {firstClear && <p className="level-up">🌟 はじめての全問正解！ モンスターに XP+{GRAMMAR_CLEAR_XP}</p>}
+        {firstClear && <p className="level-up">🌟 初クリア！ XP+{GRAMMAR_CLEAR_XP}</p>}
         {unit.questions.some((x) => correctSentence(x)) && (
           <details className="tense-table correct-list">
             <summary>📖 この回の正しい英文（{unit.questions.filter((x) => correctSentence(x)).length}文）</summary>
@@ -999,7 +1009,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             <BossFigure hit={picked !== null && picked === q.answer} look={monsterLook(unit)} />
           </span>
           <span>
-            <strong>{monsterName(unit)}</strong>
+            <strong className="gm-name">{splitSoft(monsterName(unit)).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</strong>
             <span className="boss-hp grammar-monster-hp" role="progressbar" aria-label="文法モンスターのHP" aria-valuemin={0} aria-valuemax={unit.questions.length} aria-valuenow={unit.questions.length - score}>
               <span className="boss-hp-fill" style={{ width: `${((unit.questions.length - score) / unit.questions.length) * 100}%` }} />
             </span>

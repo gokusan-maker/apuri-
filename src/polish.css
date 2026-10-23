@@ -1914,3 +1914,9 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .univ-tower { background: linear-gradient(180deg, rgb(139 92 246 / 0.18), rgb(251 191 36 / 0.08)); color: var(--fg); border-color: rgb(167 139 250 / 0.25); }
 }
 :root[data-theme="dark"] .univ-tower { background: linear-gradient(180deg, rgb(139 92 246 / 0.18), rgb(251 191 36 / 0.08)); color: var(--fg); border-color: rgb(167 139 250 / 0.25); }
+
+/* 文法モンスター戦の勝ち画面：「たおした！」を大きく、モンスター名は小さく下に。名前は語の切れ目で改行 */
+.gm-name { word-break: keep-all; overflow-wrap: anywhere; }
+.gm-win { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.gm-win-big { font-size: 1.25rem; font-weight: 900; color: var(--accent); }
+.gm-win .gm-name { color: var(--muted); font-weight: 700; }

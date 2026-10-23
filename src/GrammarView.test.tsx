@@ -66,7 +66,7 @@ it('文法モンスターを全問正解でたおすとごほうび', () => {
     fireEvent.click(screen.getByText('次へ'))
   }
   expect(win).toHaveBeenCalledTimes(1)
-  expect(screen.getByText(/be動詞モンスターをたおした！/)).toBeInTheDocument()
+  expect(document.querySelector('.gm-win')?.textContent).toMatch(/たおした！.*be動詞モンスター/)
 })
 
 it('まとめテストを全問正解するとSランクでベストが残る', () => {
@@ -225,7 +225,7 @@ it('単元をはじめて全問正解するとXPボーナス（2回目はなし�
   }
   solve()
   expect(onFirstClear).toHaveBeenCalledTimes(1)
-  expect(screen.getByText('🌟 はじめての全問正解！ モンスターに XP+30')).toBeInTheDocument()
+  expect(screen.getByText('🌟 初クリア！ XP+30')).toBeInTheDocument()
   fireEvent.click(screen.getByText('もう一度'))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
