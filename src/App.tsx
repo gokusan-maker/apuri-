@@ -1029,6 +1029,48 @@ function App() {
         )
   )
 
+  // 単語のおさらい（テーマで練習・今週の単語・1週間前の単語）：単語ゲームのミニゲームの下に置く
+  const wordReview = (
+    <section className="card word-review" aria-label="単語のおさらい">
+      <h2>🔁 おさらい</h2>
+      {thisWeekWords.length >= 4 && (
+        <button className="list-link" onClick={() => startQuiz('thisweek')}>
+          🗓 今週の単語（{thisWeekWords.length}語）
+        </button>
+      )}
+      {weekAgo.length > 0 && (
+        <button className="list-link" onClick={() => startQuiz('week')}>
+          📅 1週間前の単語（{weekAgo.length}語）
+        </button>
+      )}
+      <details className="theme-practice">
+        <summary>🗂 テーマで練習</summary>
+        <div className="counts" role="group" aria-label="練習のしかた">
+          <button aria-pressed={!themeQuiz} onClick={() => setThemeQuiz(false)}>
+            めくって覚える
+          </button>
+          <button aria-pressed={themeQuiz} onClick={() => setThemeQuiz(true)}>
+            問題をとく
+          </button>
+        </div>
+        <div className="levels">
+          {GROUPS.map((g) => (
+            <button
+              key={g.name}
+              onClick={() => {
+                setPicked(g.ids)
+                if (themeQuiz) startQuiz('pick')
+                else startCards('pick')
+              }}
+            >
+              {g.name}
+            </button>
+          ))}
+        </div>
+      </details>
+    </section>
+  )
+
   // ステージ（ボス部屋ではボスだけ、単語ゲームでは単語ステージだけ）
   const stagesView = (part: 'boss' | 'stages') => (
     <Stages
@@ -1656,42 +1698,7 @@ function App() {
               </button>
               <LearnedChart values={lastLearned(learnedLog, today)} />
               <DiaryBox today={today} />
-              <details className="theme-practice">
-                <summary>🗂 テーマで練習</summary>
-                <div className="counts" role="group" aria-label="練習のしかた">
-                  <button aria-pressed={!themeQuiz} onClick={() => setThemeQuiz(false)}>
-                    めくって覚える
-                  </button>
-                  <button aria-pressed={themeQuiz} onClick={() => setThemeQuiz(true)}>
-                    問題をとく
-                  </button>
-                </div>
-                <div className="levels">
-                  {GROUPS.map((g) => (
-                    <button
-                      key={g.name}
-                      onClick={() => {
-                        setPicked(g.ids)
-                        if (themeQuiz) startQuiz('pick')
-                        else startCards('pick')
-                      }}
-                    >
-                      {g.name}
-                    </button>
-                  ))}
-                </div>
-              </details>
               <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
-              {thisWeekWords.length >= 4 && (
-                <button className="list-link" onClick={() => startQuiz('thisweek')}>
-                  🗓 今週学んだ単語をクイズでおさらい（{thisWeekWords.length}語）
-                </button>
-              )}
-              {weekAgo.length > 0 && (
-                <button className="list-link" onClick={() => startQuiz('week')}>
-                  📅 1週間前に学んだ単語をクイズでたしかめる（{weekAgo.length}語）
-                </button>
-              )}
               {firstToday.length > 0 && (
                 <details className="first-today">
                   <summary>🌱 今日はじめて学んだ単語（{firstToday.length}語）</summary>
@@ -1857,6 +1864,7 @@ function App() {
               pushToast([{ id: 'stamp', text: '📮 文法スタンプが10個たまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
           />
+          {mode === 'word' && !todayQuiz && !quizFocus && wordReview}
         </>
       ) : (
         <>
