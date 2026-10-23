@@ -15,7 +15,7 @@ export function WordOfDay({ word, claimed = false }: { word: Word | undefined; c
       </p>
       <p className="example">{word.example}</p>
       <p className="example-ja">{word.exampleJa}</p>
-      <p className="lucky">{claimed ? '🍀 ラッキーボーナス獲得ずみ！' : '🍀 ラッキー単語：今日この単語に正解すると +20XP'}</p>
+      <p className="lucky">{claimed ? '🍀 ラッキーボーナス獲得ずみ！' : '🍀 ラッキー単語：正解で +20XP'}</p>
     </section>
   )
 }

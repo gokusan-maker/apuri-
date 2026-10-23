@@ -48,7 +48,7 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
           </dd>
         </div>
       </dl>
-      <p className="stats-note">定着語数＝カードで3回以上続けて「覚えた」になった単語</p>
+      <p className="stats-note">※ 定着＝3回続けて「覚えた」</p>
       {minutes && (
         <p className="study-time">
           ⏳ 学習時間：今日 <strong>{minutes[0]}分</strong>・この7日 <strong>{minutes[1]}分</strong>

@@ -27,12 +27,15 @@ export function Missions({ state, today, weekly }: { state: MissionState; today:
       {weekly && (
         <div className="weekly">
           <p>
-            🗓 今週のチャレンジ：{weekly[1]}問に答える（{weekly[0]} / {weekly[1]}）{weekly[0] >= weekly[1] ? ' ✅' : ''}
+            🗓 今週のチャレンジ{' '}
+            <span className="fold-meta" aria-label={`${weekly[1]}問中 ${weekly[0]}問`}>
+              {weekly[0] >= weekly[1] ? '✅' : `${weekly[0]}/${weekly[1]}`}
+            </span>
           </p>
           <div className="goal-bar">
             <div className="goal-fill" style={{ width: `${(weekly[0] / weekly[1]) * 100}%` }} />
           </div>
-          <p className="stats-note">達成すると🪙50と+60XP</p>
+          <p className="stats-note">{weekly[1]}問で🪙50・+60XP</p>
         </div>
       )}
     </section>
