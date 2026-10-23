@@ -60,10 +60,9 @@ export function BossTime({ words, onBack }: Props) {
           </button>
         </>
       ) : result ? (
-        <div role="status">
-          <p className="level-up">
-            💥 {result.total}ダメージ！{result.best ? ' 🏆 ベスト記録！' : `（ベスト ${best}）`}
-          </p>
+        <div role="status" className="game-result">
+          <p className="game-result-title">💥 {result.total}ダメージ！</p>
+          <p className="buddy-chips game-chips">{result.best ? <span className="game-best">🏆 ベスト記録！</span> : <span>🏆 ベスト {best}</span>}</p>
           <button
             className="flip"
             onClick={() => {

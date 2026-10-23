@@ -18,6 +18,6 @@ it('30秒で正解するたびにダメージがたまり、ベストが残る',
   await act(async () => {
     await new Promise((r) => setTimeout(r, 300))
   })
-  expect(screen.getByText(/13ダメージ！ 🏆 ベスト記録！/)).toBeInTheDocument()
+  expect(screen.getByRole('status').textContent).toMatch(/13ダメージ！.*🏆 ベスト記録！/)
   expect(localStorage.getItem('eitan:boss-ta-best')).toBe('13')
 })

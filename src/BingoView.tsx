@@ -60,13 +60,18 @@ export function Bingo({ words, onAnswer, initialBoard, onClear }: Props) {
 
   return (
     <section className="card quiz bingo">
-      <p className="quiz-progress">
-        {step} 問目まで正解{best !== null && `（ベスト ${best} 問でビンゴ）`}
+      <p className="buddy-chips game-chips">
+        <span aria-label={`${step} 問目まで正解`}>✅ {step}問</span>
+        {best !== null && <span aria-label={`ベスト ${best} 問でビンゴ`}>🏆 ベスト {best}問</span>}
       </p>
       {bingo ? (
-        <p className="level-up">
-          🎉 ビンゴ！（{step} 問）{newBest && '・自己ベスト！'}
-        </p>
+        <div className="game-result" role="status">
+          <p className="game-result-title">🎉 ビンゴ！</p>
+          <p className="buddy-chips game-chips">
+            <span>✅ {step}問</span>
+            {newBest && <span className="game-best">🏆 自己ベスト！</span>}
+          </p>
+        </div>
       ) : (
         <p className="verb-ask">
           「<strong>{board[target]?.ja}</strong>」はどれ？{miss && <span className="stats-note">（ちがうよ）</span>}
