@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'if-only': { wrong: 'If only I have more time!', right: 'If only I had more time!', why: '今の事実と反対の願いは過去形にする。' },
   'happen-to': { wrong: 'I happened meeting my teacher.', right: 'I happened to meet my teacher.', why: '「たまたま～する」は happen to ＋ 動詞の原形。' },
   'as-possible': { wrong: 'I ran as fast as I can yesterday.', right: 'I ran as fast as I could yesterday.', why: '過去の文では as ～ as 主語 could にする。' },
   'modal-passive': { wrong: 'Stars can seen from here.', right: 'Stars can be seen from here.', why: '助動詞の受け身は〈助動詞 ＋ be ＋ 過去分詞〉。be をわすれない。' },
