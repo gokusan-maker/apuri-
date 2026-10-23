@@ -1268,3 +1268,17 @@ main select:focus {
 .vs-p2.vs-turn { border-color: #3b82f6; }
 .vs-p1 .vs-score { color: #dc2626; }
 .vs-p2 .vs-score { color: #2563eb; }
+
+/* ボス勝利画面：ことわざは巻物カード、記録はピル、ボスのせりふはふきだし */
+.boss-proverb { margin: 8px auto; padding: 10px 14px; max-width: 100%; border-radius: 12px; background: linear-gradient(180deg, #fff8e6, #fdf0cf); border: 1px solid #ecd9a6; color: #5b4a1f; box-shadow: var(--shadow-sm); font-size: .95rem; }
+.boss-proverb .boss-intro-ja { display: block; margin-top: 2px; color: #8a7340; }
+.boss-result { font-size: 1.7rem; letter-spacing: .02em; text-shadow: 0 2px 0 rgba(0,0,0,.08); }
+.card .boss-maxhit { display: block; width: fit-content; max-width: 100%; margin: 6px auto; padding: 4px 12px; border-radius: 999px; background: color-mix(in srgb, #ef4444 10%, var(--bg)); border: 1px solid color-mix(in srgb, #ef4444 25%, transparent); font-size: .95rem; }
+.boss-taunt.boss-defeat { position: relative; margin: 10px auto 14px; padding: 10px 14px; max-width: 100%; border-radius: 14px; background: color-mix(in srgb, #64748b 10%, var(--bg)); border: 1px solid var(--hair, rgba(0,0,0,.08)); font-size: 1.05rem; }
+.boss-taunt.boss-defeat span { display: block; font-style: normal; font-weight: 400; font-size: .9rem; color: var(--muted); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .boss-proverb { background: linear-gradient(180deg, #3a3222, #2e2819); border-color: #5c4d2a; color: #f2e3bb; }
+  :root:not([data-theme="light"]) .boss-proverb .boss-intro-ja { color: #cdb889; }
+}
+:root[data-theme="dark"] .boss-proverb { background: linear-gradient(180deg, #3a3222, #2e2819); border-color: #5c4d2a; color: #f2e3bb; }
+:root[data-theme="dark"] .boss-proverb .boss-intro-ja { color: #cdb889; }
