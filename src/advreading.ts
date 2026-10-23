@@ -3006,4 +3006,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, why can cramming feel effective?', choices: ['Because the material seems familiar right afterward.', 'Because it is easier to remember meaningless syllables.', 'Because forgetting happens slowly at first.', 'Because tests are always given several days later.'], answer: 0, why: '第2段落 because the material seems familiar right afterward。' },
     ],
   },
+{
+    id: 'toefl-waggle',
+    title: 'The Dance of the Honeybee',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Honeybees cannot speak, but they share surprisingly precise information. When a worker bee finds a good source of flowers, she returns to the hive and performs what scientists call the waggle dance. In the dark hive, other bees follow her movements ( A ) touch and vibration rather than sight.",
+      "During the dance, the bee runs in a straight line while shaking her body, then circles back and repeats the run. The direction of this straight run shows where the food is: its angle relative to straight up on the honeycomb matches the angle between the food and the sun. The length of the run, meanwhile, indicates distance; the ( B ) the run lasts, the farther away the food is.",
+      "The meaning of the dance was worked out by the Austrian scientist Karl von Frisch, who shared a Nobel Prize in 1973 for his studies of animal behavior. His work showed that even small insects can communicate information about places they are not currently ( C ).",
+    ],
+    ja: [
+      'ミツバチは話すことはできないが、おどろくほど正確な情報を伝え合う。働きバチはよい花の場所を見つけると、巣にもどり、科学者たちが「8の字ダンス（尻ふりダンス）」とよぶ動きをする。暗い巣の中で、ほかのハチたちは目で見るのではなく、ふれることや振動を通して、その動きをたどる。',
+      'ダンスのあいだ、ハチは体をふるわせながらまっすぐに進み、それから円をえがいてもどり、またまっすぐに進むことをくり返す。このまっすぐな進み方の向きが、えさのある場所を示している。巣板の真上の方向に対する角度が、えさと太陽のあいだの角度と一致しているのである。一方、まっすぐ進む長さは距離を示しており、それが長く続くほど、えさは遠くにある。',
+      'このダンスの意味を明らかにしたのは、オーストリアの科学者カール・フォン・フリッシュであり、彼は動物の行動の研究によって1973年にノーベル賞を共同で受賞した。彼の研究は、小さな昆虫でさえ、今いない場所についての情報を伝えられることを示したのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['through', 'during', 'against', 'without'], answer: 0, why: 'through ～「～を通して」。ふれることや振動を通して動きをたどる。' },
+      { id: 'B', choices: ['longer', 'long', 'longest', 'more'], answer: 0, why: 'the ＋ 比較級 ～, the ＋ 比較級 …「～すればするほど…」。the farther に合わせて the longer。' },
+      { id: 'C', choices: ['visiting', 'visited', 'visit', 'to visit'], answer: 0, why: 'they are not currently visiting「今おとずれていない」という進行形。' },
+    ],
+    tf: [
+      { statement: 'ミツバチは、えさのある場所を仲間に伝えるためにダンスをする。', answer: true, why: '第1段落・第2段落の内容と合う。' },
+      { statement: '巣の中のハチは、おもに目で見てダンスを理解する。', answer: false, why: '第1段落 through touch and vibration rather than sight。' },
+      { statement: 'まっすぐ進む時間が長いほど、えさは遠くにある。', answer: true, why: '第2段落 the longer the run lasts, the farther away the food is。' },
+      { statement: 'ダンスの意味を明らかにしたのは、アメリカの科学者である。', answer: false, why: '第3段落 the Austrian scientist Karl von Frisch。' },
+    ],
+    qa: [
+      { q: 'What does the angle of the straight run show?', choices: ['The direction of the food compared with the sun.', 'How much food the bee has carried.', 'How many bees are in the hive.', 'What time of day it is.'], answer: 0, why: '第2段落 its angle ... matches the angle between the food and the sun。' },
+    ],
+  },
 ]
