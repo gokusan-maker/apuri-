@@ -77,7 +77,7 @@ it('かぶったときはコインがもどったことを知らせる', () => {
 
 it('ステップアップの残り回数と確定のお知らせ', () => {
   const { rerender } = render(<Gacha coins={0} members={1} stepLeft={2} onDraw={() => null} />)
-  expect(screen.getByText('🔥 ステップアップ：あと2回で、その次がレア以上確定')).toBeInTheDocument()
+  expect(screen.getByText('🔥 3回目でレア以上確定')).toBeInTheDocument()
   rerender(<Gacha coins={0} members={1} stepLeft={0} onDraw={() => null} />)
   expect(screen.getByText('🔥 ステップアップ！ 次の1回はレア以上確定！')).toBeInTheDocument()
 })

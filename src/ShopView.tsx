@@ -133,7 +133,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       <h3 className="shop-h">
         お休みチケット（持っている数 {wallet.freezes ?? 0} / {FREEZE_MAX}）
       </h3>
-      <p className="stats-note">1日休んでも、連続学習日数が切れないよ（休んだ次の日に自動で使う）。</p>
+      <p className="stats-note">1日休んでも連続記録が切れない</p>
       <button
         className="shop-btn freeze-btn"
         disabled={!onBuyFreeze || (wallet.freezes ?? 0) >= FREEZE_MAX || wallet.coins < FREEZE_PRICE}
@@ -143,7 +143,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       </button>
       {bag && onBuyBattle && (
         <>
-          <h3 className="shop-h">⚔️ バトルアイテム（ボス戦で1戦1回ずつ使える）</h3>
+          <h3 className="shop-h">⚔️ バトルアイテム</h3>
           <div className="snacks">
             {BATTLE_ITEMS.map((it) => (
               <button key={it.id} className="good" disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
@@ -253,7 +253,7 @@ function AttrEgg({ price, left, pieces, onBuy, coins }: { price: number; left: n
         <small>{left === 0 ? 'もう全員なかまになったよ！' : 'なにが生まれるかはお楽しみ！'}</small>
       </button>
       {pieces !== undefined && left > 0 && (
-        <p className="stats-note">🥚 タマゴのかけら {pieces} / {PIECES_FOR_EGG}（ボス部屋で勝つと1つ。そろうと無料でかえる）</p>
+        <p className="stats-note">🥚 タマゴのかけら {pieces} / {PIECES_FOR_EGG}</p>
       )}
       {msg && (
         <p className="level-up" role="status">

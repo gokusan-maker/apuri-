@@ -84,7 +84,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   return (
     <div className="gacha">
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
-      <p className="stats-note">勉強でためたコインで新しいタマゴを引けるよ。どんな子が生まれるかはお楽しみ！ 生まれた子は「なかま」で相棒に選んで育てよう。</p>
+      <p className="stats-note">コインでタマゴを引こう！</p>
       <button
         className="good gacha-btn"
         disabled={full || coins < price}
@@ -138,7 +138,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           🎟 チケットで引く（あと{tickets}枚）
         </button>
       )}
-      <p className="stats-note">🎟 7日連続で学習するとガチャチケットが1枚もらえるよ。</p>
+      <p className="stats-note">🎟 7日連続でチケット1枚</p>
       {pickup && (
         <div className="gacha-pickup">
           <span className="gacha-pickup-fig">
@@ -153,7 +153,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       {price < GACHA_PRICE && <p className="gacha-golden">🌟 ゴールデンタイム！ 19時台はガチャが 🪙{GACHA_PRICE} → 🪙{price}</p>}
       {stepLeft !== undefined && (
         <p className={`gacha-step${stepLeft === 0 ? ' sure' : ''}`}>
-          {stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ステップアップ：あと${stepLeft}回で、その次がレア以上確定`}
+          {stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ${stepLeft + 1}回目でレア以上確定`}
         </p>
       )}
       {dragonUp && <p className="gacha-event">🌙 週末はふしぎなことが起きるかも…？</p>}
@@ -218,7 +218,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       )}
       {points !== undefined && (
         <p className="gacha-points">
-          🎫 ガチャポイント {Math.min(points, POINTS_FOR_SR)} / {POINTS_FOR_SR}（たまるとスーパーレア以上確定と交換）
+          🎫 ガチャポイント {Math.min(points, POINTS_FOR_SR)} / {POINTS_FOR_SR}（SR以上と交換）
           {onExchange && points >= POINTS_FOR_SR && members < PARTY_MAX && (
             <button
               className="list-link"
