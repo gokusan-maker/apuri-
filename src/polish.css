@@ -1382,3 +1382,12 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .danger-link { display: block; width: 100%; margin: 8px 0; padding: 11px 14px; border-radius: 14px; border: 1.5px solid color-mix(in srgb, #dc2626 45%, transparent); background: color-mix(in srgb, #dc2626 5%, var(--bg)); color: #dc2626; font-weight: 700; text-decoration: none; text-align: center; }
 .danger-link:active { background: color-mix(in srgb, #dc2626 12%, var(--bg)); }
 .cloud-restore input { border: none !important; box-shadow: none !important; border-radius: 0 !important; }
+
+/* ガチャの下の情報（ステップアップ・ラッキーカラー・ガチャポイント・確定まで）を小さな情報カードに */
+.gacha .gacha-step:not(.sure), .gacha .gacha-points, .gacha .gacha-pity, .gacha .gacha-event { margin: 6px 0; padding: 8px 12px; border-radius: 12px; background: rgb(255 255 255 / 0.62); border: 1px solid rgb(255 255 255 / 0.8); box-shadow: 0 1px 2px rgb(0 0 0 / 0.05); line-height: 1.5; }
+.gacha .gacha-points .list-link { margin: 6px 0 0; }
+.gacha .gacha-pity + .pity-gauge { margin: 6px 12px 12px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .gacha .gacha-step:not(.sure), :root:not([data-theme="light"]) .gacha .gacha-points, :root:not([data-theme="light"]) .gacha .gacha-pity, :root:not([data-theme="light"]) .gacha .gacha-event { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); }
+}
+:root[data-theme="dark"] .gacha .gacha-step:not(.sure), :root[data-theme="dark"] .gacha .gacha-points, :root[data-theme="dark"] .gacha .gacha-pity, :root[data-theme="dark"] .gacha .gacha-event { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); }
