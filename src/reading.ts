@@ -1553,6 +1553,17 @@ export const PASSAGES: Passage[] = [
       { q: '夕方、母はいもをどうした？', choices: ['焼いた', 'スープにした', 'となりの人にあげた'], answer: 0 },
     ],
   },
+  {
+    id: 'birthday-card',
+    title: 'A Card for Dad',
+    text: 'Next Sunday is my father\'s birthday. I want to give him something special, but I do not have much money. So I decided to make a card. I drew a picture of our family on the front. Inside, I wrote, "Thank you for always working hard. Happy birthday!" I hid the card in my desk. I can\'t wait to see his face.',
+    ja: '次の日曜日は父の誕生日です。何か特別なものをあげたいけれど、お金はあまり持っていません。そこで、カードを作ることにしました。表に家族の絵をかきました。中には「いつも一生けんめい働いてくれてありがとう。お誕生日おめでとう！」と書きました。カードは机の中にかくしました。父の顔を見るのが待ちきれません。',
+    questions: [
+      { q: 'だれの誕生日？', choices: ['父', '母', '妹'], answer: 0 },
+      { q: 'カードの表に何をかいた？', choices: ['家族の絵', 'ケーキの絵', '花の絵'], answer: 0 },
+      { q: 'カードはどこにかくした？', choices: ['机の中', 'かばんの中', 'ベッドの下'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
