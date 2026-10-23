@@ -2131,4 +2131,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the writer, what can help reduce the curse of knowledge?', choices: ['Testing explanations with real learners.', 'Using more technical terms.', 'Studying the subject for a longer time.', 'Giving shorter lectures.'], answer: 0, why: '第3段落 What helps is to test our explanations against real learners。' },
     ],
   },
+{
+    id: 'toefl-heat-island',
+    title: 'Why Cities Stay Warm at Night',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "On a summer evening, a person driving from the countryside into a large city may notice that the air becomes warmer, even ( A ) the sun has already set. This difference, known as the urban heat island effect, can make a city several degrees warmer than the rural areas around it, and it is usually strongest at night.",
+      "Several features of cities work together to produce this effect. Dark surfaces such as asphalt roads and roofs absorb a large share of the sunlight that falls on them during the day. After sunset, they slowly release this stored heat into the air. In addition, cities have fewer trees and fields. Plants cool their surroundings by releasing water vapor from their leaves, ( B ) concrete and stone provide no such cooling. Heat from cars, factories, and air conditioners adds even more warmth.",
+      "Because higher temperatures can harm health and increase energy use, many cities are looking for solutions. Some are planting more trees along streets, while others encourage \"green roofs\" covered with plants. Painting roofs in light colors that reflect sunlight is another simple method. Although none of these steps can remove the effect completely, together they can make city life noticeably ( C ) comfortable in hot weather.",
+    ],
+    ja: [
+      '夏の夕方、いなかから大都市へ車で入っていくと、太陽がもうしずんでいるのに空気があたたかくなることに気づくかもしれない。この差は都市のヒートアイランド現象として知られ、都市をまわりの農村部より数度あたたかくすることがあり、ふつうは夜にいちばん強くなる。',
+      '都市のいくつかの特徴が組み合わさって、この現象を生み出す。アスファルトの道路や屋根のような色のこい表面は、昼のあいだに当たる日光の大部分を吸収する。日がしずんだあと、それらはたくわえた熱を少しずつ空気中に放出する。さらに、都市には木や畑が少ない。植物は葉から水蒸気を出すことでまわりを冷やすが、コンクリートや石にはそのような冷やすはたらきがない。車や工場、エアコンから出る熱が、さらにあたたかさを加える。',
+      '気温が高くなると健康がそこなわれたり、エネルギーの使用がふえたりするので、多くの都市が解決策をさがしている。通りぞいに木をふやしている都市もあれば、植物でおおわれた「屋上緑化」をすすめている都市もある。日光を反射する明るい色で屋根をぬるのも、もう一つの簡単な方法だ。これらの対策のどれも現象を完全になくすことはできないが、組み合わせれば、暑い時期の都市の生活をはっきりと快適にすることができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['though', 'because', 'if', 'until'], answer: 0, why: 'even though 〜「〜なのに」。日がしずんだのにあたたかい、という逆接。' },
+      { id: 'B', choices: ['whereas', 'because', 'so', 'unless'], answer: 0, why: '植物は冷やす、コンクリートは冷やさない、という対比なので whereas「〜であるのに対して」。' },
+      { id: 'C', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'comfortable の比較級は more comfortable。noticeably は比較級を強める副詞。' },
+    ],
+    tf: [
+      { statement: 'ヒートアイランド現象は、ふつう昼の正午ごろにいちばん強くなる。', answer: false, why: '第1段落 it is usually strongest at night。' },
+      { statement: '色のこい表面は、昼に吸収した熱を日没後に放出する。', answer: true, why: '第2段落 After sunset, they slowly release this stored heat into the air。' },
+      { statement: '筆者は、対策を組み合わせればヒートアイランド現象を完全になくせると述べている。', answer: false, why: '第3段落 none of these steps can remove the effect completely。' },
+    ],
+    qa: [
+      { q: 'How do plants help cool their surroundings?', choices: ['By releasing water vapor from their leaves.', 'By absorbing heat from cars.', 'By reflecting all sunlight.', 'By making the soil darker.'], answer: 0, why: '第2段落 Plants cool their surroundings by releasing water vapor from their leaves。' },
+    ],
+  },
 ]
