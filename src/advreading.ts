@@ -2439,4 +2439,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did the class decide to make a town guide in English?', choices: ['To help tourists who looked lost.', 'To win a contest at school.', 'To sell it at the station.', 'To practice taking pictures.'], answer: 0, why: '第1段落 some tourists looked lost / What can we do to help them?' },
     ],
   },
+{
+    id: 'adv-learning-styles',
+    title: 'Do We Have Learning Styles?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people believe that each of us has a particular learning style. Some describe themselves as \"visual learners\" who learn best from pictures, while others claim to be \"auditory learners\" who prefer to listen. The idea is appealing because it seems to respect individual differences, and it has been widely promoted in schools. Teachers have sometimes been encouraged to identify each student's style and adapt their lessons ( A ).",
+      "Yet when researchers have tested the idea carefully, the evidence has been disappointing. To support the theory, a study would need to show that visual learners do better with pictures and auditory learners do better with spoken explanations, and not just that people have preferences. Such results have rarely been found. People certainly have preferences, ( B ) teaching that matches those preferences does not appear to improve how much they actually learn.",
+      "This does not mean that the way we teach is unimportant. On the contrary, research suggests that the best method often depends on the content rather than on the learner. A map is best understood visually, and a piece of music is best understood by listening, whoever the student is. Combining words with pictures tends to help almost everyone. The lesson, perhaps, is that we should be careful not to ( C ) ourselves by labels that may limit how we choose to learn.",
+    ],
+    ja: [
+      '私たち一人ひとりには特定の学習スタイルがあると信じている人は多い。絵からいちばんよく学ぶ「視覚型学習者」だと自分のことを言う人もいれば、聞くほうが好きな「聴覚型学習者」だと言う人もいる。この考えは個人のちがいを尊重しているように思えるので魅力的であり、学校でも広くすすめられてきた。教師たちは、ときに生徒一人ひとりのスタイルを見きわめ、それに合わせて授業を変えるようにすすめられてきた。',
+      'しかし研究者たちがこの考えを注意深く検証すると、証拠は期待はずれのものだった。この理論を裏づけるには、人に好みがあるというだけでなく、視覚型の人は絵で、聴覚型の人は話による説明で、よりよい成果をあげることを研究で示す必要がある。そのような結果はほとんど見つかっていない。人にはたしかに好みがあるが、その好みに合わせて教えても、実際に学ぶ量がふえるようには見えないのである。',
+      'これは、教え方が重要でないということではない。それどころか、研究によれば、最もよい方法は学習者よりも内容によって決まることが多い。地図は目で見てこそいちばんよく理解でき、音楽は聞いてこそいちばんよく理解できる。生徒がだれであってもそうなのだ。言葉と絵を組み合わせると、ほとんどだれにとっても役に立つ傾向がある。おそらく教訓は、学び方の選択をせばめかねないレッテルで自分をしばらないよう気をつけるべきだ、ということだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['accordingly', 'nevertheless', 'otherwise', 'meanwhile'], answer: 0, why: 'accordingly「それに応じて」。生徒のスタイルに合わせて授業を変える。' },
+      { id: 'B', choices: ['but', 'so', 'for', 'or'], answer: 0, why: '「好みはあるが、合わせても学ぶ量はふえない」という逆接なので but。' },
+      { id: 'C', choices: ['restrict', 'restricted', 'restricting', 'restriction'], answer: 0, why: 'be careful not to ＋ 動詞の原形。restrict oneself「自分を制限する」。' },
+    ],
+    tf: [
+      { statement: '学習スタイルの考えは、個人のちがいを尊重しているように見えるので人気がある。', answer: true, why: '第1段落 it seems to respect individual differences。' },
+      { statement: '研究では、好みに合わせて教えると学ぶ量が大きくふえることがくり返し示された。', answer: false, why: '第2段落 does not appear to improve how much they actually learn。' },
+      { statement: '筆者によれば、最もよい教え方は内容によって決まることが多い。', answer: true, why: '第3段落 the best method often depends on the content rather than on the learner。' },
+    ],
+    qa: [
+      { q: 'What kind of evidence would be needed to support the learning-styles theory?', choices: ['That each type of learner learns more when taught in the matching way.', 'That people prefer some ways of learning.', 'That teachers like using pictures.', 'That music is easier than maps.'], answer: 0, why: '第2段落 a study would need to show that visual learners do better with pictures 〜, and not just that people have preferences。' },
+    ],
+  },
 ]
