@@ -4990,6 +4990,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'A compass needs a smartphone signal to work.', answer: false, why: '第4段落 a compass still works when there is no signal。' },
     ],
   },
+  {
+    id: 'star-twinkle',
+    title: 'Why Do Stars Twinkle?',
+    level: '中3（説明文）',
+    paragraphs: [
+      'On a clear night, the stars seem to shine and flicker like tiny lights. Many children sing a song about this, but have you ever wondered why stars twinkle? Surprisingly, the stars themselves are not changing. The reason is the air ( A ) covers the Earth.',
+      'Light from a star travels a very long way through space. Just before it reaches our eyes, it has to pass through our atmosphere. The air is always moving, and some parts are warmer or cooler than others. These moving layers of air bend the starlight a little in different directions again and again. As a result, the light reaching our eyes keeps changing, so the star ( B ) to twinkle.',
+      'Planets such as Venus and Jupiter usually twinkle less than stars. Stars are so far away that each one is like a single tiny point of light. Planets are much closer, so their light comes from a small area, and the changes tend to cancel each other out.',
+      'Astronauts in space say that stars do not twinkle there, because there is no air to bend the light. For the same reason, scientists sent telescopes into space to get clearer pictures. Twinkling stars are beautiful, but they are a problem ( C ) people who study the sky.',
+    ],
+    ja: [
+      '晴れた夜、星は小さな明かりのように、かがやいてちらちらしているように見えます。このことを歌った歌を歌う子どもはたくさんいますが、なぜ星がまたたくのか考えたことはありますか。おどろいたことに、星そのものは変化していません。理由は、地球をおおっている空気にあるのです。',
+      '星からの光は、宇宙をとても長い距離進んできます。私たちの目にとどく直前に、光は大気を通りぬけなければなりません。空気はいつも動いていて、ほかの部分よりあたたかい部分や冷たい部分があります。こうした動く空気の層が、星の光をいろいろな方向に少しずつ、何度も曲げます。その結果、私たちの目にとどく光は変わり続け、星はまたたいているように見えるのです。',
+      '金星や木星のような惑星は、ふつう星ほどまたたきません。星はとても遠くにあるので、1つ1つが小さな光の点のようなものです。惑星はずっと近くにあるので、その光は小さな広がりから来ていて、変化がおたがいに打ち消し合いやすいのです。',
+      '宇宙飛行士は、宇宙では星がまたたかないと言います。光を曲げる空気がないからです。同じ理由で、科学者たちはより鮮明な写真をとるために、望遠鏡を宇宙に送りました。またたく星は美しいですが、空を研究する人々にとってはやっかいなものなのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'where'], answer: 0, why: 'the air を説明する関係代名詞 that（主格）。the air that covers the Earth「地球をおおっている空気」。' },
+      { id: 'B', choices: ['seems', 'looks', 'sees', 'watches'], answer: 0, why: 'seem to ～「～するように見える」。looks のあとに to 不定詞は続かない。' },
+      { id: 'C', choices: ['for', 'at', 'by', 'on'], answer: 0, why: 'a problem for ～「～にとっての問題」。' },
+    ],
+    underline: { phrase: 'the changes tend to cancel each other out', choices: ['変化がおたがいに打ち消し合いやすい', '変化がどんどん大きくなる', '変化がまったく起きない', '変化が順番に起きる'], answer: 0, why: 'tend to ～「～しがちだ」、cancel each other out「おたがいに打ち消し合う」。' },
+    tf: [
+      { statement: 'Stars twinkle because they change their brightness by themselves.', answer: false, why: '第1段落 the stars themselves are not changing。原因は空気。' },
+      { statement: 'Moving air bends starlight in different directions.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Planets usually twinkle more than stars.', answer: false, why: '第3段落 Planets ... usually twinkle less than stars。' },
+      { statement: 'Stars do not twinkle when they are seen from space.', answer: true, why: '第4段落 stars do not twinkle there。' },
+      { statement: 'Twinkling makes it easier for scientists to study the sky.', answer: false, why: '第4段落 they are a problem for people who study the sky。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
