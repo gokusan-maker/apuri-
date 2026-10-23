@@ -2747,4 +2747,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What question does the writer suggest asking to guard against survivorship bias?', choices: ['What am I not seeing, and why?', 'Who is the most successful person?', 'How many planes came back?', 'Which building is the oldest?'], answer: 0, why: '第3段落 what am I not seeing, and why?' },
     ],
   },
+{
+    id: 'toefl-tree-rings',
+    title: 'Reading the Past in Tree Rings',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "When a tree is cut down, its trunk often reveals a pattern of circles. In regions with distinct seasons, a tree typically adds one ring each year. In spring and early summer, it grows quickly and produces wide, light-colored wood; later in the year, growth slows and the wood becomes narrower and darker. ( A ) a result, each pair of light and dark bands marks a single year of the tree's life.",
+      "Because growth depends on conditions such as rainfall and temperature, the width of the rings varies from year to year. Wide rings usually indicate favorable years, while narrow ones suggest drought or cold. Scientists who study tree rings, a field called dendrochronology, compare these patterns across many trees. Trees in the same region tend to show similar sequences of wide and narrow rings, ( B ) allows researchers to match the patterns of living trees with those of old timber found in buildings or buried in the ground.",
+      "By linking overlapping patterns from younger and older wood, researchers have built continuous records that extend back thousands of years. These records can be used to date wooden objects precisely and to reconstruct past climates in places ( C ) no written weather records exist. In this way, a simple cross-section of a tree can become a detailed archive of the environment it lived through.",
+    ],
+    ja: [
+      '木が切りたおされると、幹にはしばしば円のもようがあらわれる。季節がはっきりしている地域では、木はふつう1年に1つの輪をふやす。春から初夏にかけては速く育ち、幅が広く色のうすい材を作る。その年の後半になると成長がおそくなり、材は細く色がこくなる。その結果、うすい帯とこい帯の1組が、木の一生の1年を示すことになる。',
+      '成長は雨の量や気温などの条件に左右されるので、年輪の幅は年ごとに変わる。幅の広い輪はふつう条件のよい年を、細い輪は干ばつや寒さを示している。年輪を研究する科学者たちは、年輪年代学とよばれるこの分野で、多くの木のもようをくらべる。同じ地域の木は、広い輪と細い輪の似た並び方を示す傾向があり、そのおかげで研究者は、生きている木のもようを、建物に使われていたり地中にうまっていたりした古い木材のもようと照らし合わせることができる。',
+      '若い木と古い木の重なり合うもようをつなげることで、研究者たちは何千年も前までさかのぼる切れ目のない記録を作り上げてきた。こうした記録は、木でできた物の年代を正確に決めたり、天気の記録が書き残されていない場所の過去の気候を復元したりするのに使える。このようにして、木の単純な断面が、その木が生きた環境についてのくわしい記録保管所になりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As', 'For', 'In', 'By'], answer: 0, why: 'As a result「その結果」。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['where', 'which', 'when', 'what'], answer: 0, why: '先行詞 places（場所）のあとに文が続くので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '季節がはっきりした地域では、木はふつう1年に1つの年輪をふやす。', answer: true, why: '第1段落 a tree typically adds one ring each year。' },
+      { statement: '幅の広い年輪は、ふつう干ばつの年を示す。', answer: false, why: '第2段落 Wide rings usually indicate favorable years。' },
+      { statement: '年輪の記録は、書き残された天気の記録がない場所の気候を知るのにも使える。', answer: true, why: '第3段落の内容と合う。' },
+    ],
+    qa: [
+      { q: 'Why can researchers match living trees with old timber?', choices: ['Trees in the same region show similar ring patterns.', 'All trees grow at exactly the same speed.', 'Old timber has no rings.', 'Each tree has a written record.'], answer: 0, why: '第2段落 Trees in the same region tend to show similar sequences ... which allows researchers to match the patterns。' },
+    ],
+  },
 ]
