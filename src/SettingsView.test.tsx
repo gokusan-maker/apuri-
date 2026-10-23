@@ -7,7 +7,7 @@ it('設定の項目名は短く、画面の色とテーマカラーは1行（fit
   render(<SettingsPanel settings={loadSettings()} onChange={() => {}} />)
   expect(screen.getByText('定期テストの日')).toBeInTheDocument()
   expect(screen.getByText('かんたんモード（3択に）')).toBeInTheDocument()
-  expect(screen.getByText('新しい単語をランダムに出す')).toBeInTheDocument()
+  expect(screen.getByText('新しい単語はランダム')).toBeInTheDocument()
   expect(screen.getByText('自動').closest('.levels')!.classList.contains('fit')).toBe(true)
   expect(screen.getByText('オレンジ').closest('.levels')!.classList.contains('fit')).toBe(true)
 })

@@ -163,12 +163,12 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
 
       <h3 className="settings-h">🃏 カード・クイズ</h3>
       <label className="setting toggle">
-        <span>カードを出したら自動で発音</span>
+        <span>自動で発音</span>
         <input type="checkbox" checked={settings.autoSpeak} onChange={(e) => set({ autoSpeak: e.target.checked })} />
       </label>
 
       <label className="setting toggle">
-        <span>カードを日本語→英語にする</span>
+        <span>日本語→英語のカード</span>
         <input type="checkbox" checked={settings.cardJaFirst} onChange={(e) => set({ cardJaFirst: e.target.checked })} />
       </label>
 
@@ -178,12 +178,12 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       </label>
 
       <label className="setting toggle">
-        <span>新しい単語をランダムに出す</span>
+        <span>新しい単語はランダム</span>
         <input type="checkbox" checked={settings.randomNew} onChange={(e) => set({ randomNew: e.target.checked })} />
       </label>
 
       <label className="setting toggle">
-        <span>カードの例文の訳を隠す</span>
+        <span>例文の訳を隠す</span>
         <input type="checkbox" checked={settings.hideExampleJa} onChange={(e) => set({ hideExampleJa: e.target.checked })} />
       </label>
 
