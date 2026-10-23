@@ -1591,3 +1591,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 今日の課題の行：内容が「…」で切れないよう2行まで見せる（何をやるかがわかる） */
 .today-task { align-items: center; min-height: 56px; }
 .today-task .today-task-text { white-space: normal; overflow: hidden; text-overflow: clip; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 0.82rem; line-height: 1.4; text-align: left; }
+
+/* 結果画面：「もう1回」を主ボタン、「ほかのミニゲーム」は白いサブボタンにして強弱をつける */
+.other-game-btn { background: var(--card) !important; color: var(--accent) !important; border: 1.5px solid color-mix(in srgb, var(--accent) 40%, transparent) !important; box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 25%, transparent) !important; }
+.other-game-btn:active { transform: translateY(3px); box-shadow: none !important; }
