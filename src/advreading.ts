@@ -2187,4 +2187,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer decide after this experience?', choices: ['To be the first to help people in trouble.', 'To never travel alone again.', 'To live with the aunt in Nagoya.', 'To learn the names of all stations.'], answer: 0, why: '第3段落 I will be the first person to say, "Are you all right?"' },
     ],
   },
+{
+    id: 'adv-commons',
+    title: 'Can We Share Without Ruining?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine a pasture that is open to every farmer in a village. Each farmer gains by adding one more cow, while the damage caused by overgrazing is spread among everyone. Acting sensibly from his or her own point of view, each farmer keeps adding animals, ( A ) the grass is gone and all of them suffer. In 1968, the ecologist Garrett Hardin called this situation \"the tragedy of the commons,\" and argued that shared resources would inevitably be destroyed unless they were either divided into private property or strictly controlled by the state.",
+      "The idea proved influential, but it was not the whole story. The political economist Elinor Ostrom spent years studying real communities that had managed forests, fisheries, and irrigation systems for generations without exhausting them. What she found was that the tragedy is not inevitable. Where users could communicate, agree on their own rules, watch for cheating, and punish it fairly, shared resources were often maintained successfully. Her work earned her the Nobel Prize in Economics in 2009.",
+      "Ostrom's findings matter today, ( B ) many of our most serious problems, from overfishing to climate change, involve resources that no single owner controls. They suggest that the choice is not simply between the market and the government. Trust, local knowledge, and rules that people regard as fair can sometimes achieve ( C ) neither private ownership nor distant authorities could.",
+    ],
+    ja: [
+      '村のすべての農民に開かれた牧草地を想像してほしい。牛を1頭ふやせば、その農民は得をするが、牧草の食べすぎによる損害はみんなに分散される。自分の立場から見れば分別のある行動として、それぞれの農民は家畜をふやしつづけ、ついには草がなくなり、全員が苦しむことになる。1968年、生態学者ギャレット・ハーディンはこの状況を「共有地の悲劇」とよび、共有の資源は、私有財産に分けるか、国家がきびしく管理しないかぎり、必ずほろびると主張した。',
+      'この考えは大きな影響力をもったが、それですべてが説明できるわけではなかった。政治経済学者エリノア・オストロムは、森林や漁場、かんがい施設を、使いつくすことなく何世代にもわたって管理してきた実際の共同体を何年もかけて調べた。彼女がわかったのは、悲劇は避けられないものではないということだった。使う人どうしが話し合い、自分たちでルールを決め、ずるをする人を見張り、公正に罰することができるところでは、共有の資源はしばしばうまく保たれていた。この研究で、彼女は2009年にノーベル経済学賞を受けた。',
+      'オストロムの発見は今日も重要である。というのも、魚のとりすぎから気候変動まで、私たちのもっとも深刻な問題の多くは、ただ一人の持ち主が管理しているのではない資源にかかわっているからだ。彼女の発見は、選択肢が単に市場か政府かというものではないことを示している。信頼や地域の知識、人々が公正だと考えるルールは、私的所有も遠くの権力もなしとげられないことを、ときになしとげることができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['until', 'unless', 'since', 'whether'], answer: 0, why: '「草がなくなるまで家畜をふやしつづける」なので until。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'so that'], answer: 0, why: '今日も重要である理由を述べているので because。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'it'], answer: 0, why: 'achieve の目的語になる名詞節「～するもの・こと」なので関係代名詞 what。' },
+    ],
+    tf: [
+      { statement: 'ハーディンは、共有の資源は私有化か国家の管理がなければほろびると主張した。', answer: true, why: '第1段落 unless they were either divided into private property or strictly controlled by the state。' },
+      { statement: 'オストロムは、共有地の悲劇は必ず起こることを確かめた。', answer: false, why: '第2段落 the tragedy is not inevitable。' },
+      { statement: '筆者は、選択肢は市場か政府かの2つしかないと述べている。', answer: false, why: '第3段落 the choice is not simply between the market and the government。' },
+    ],
+    qa: [
+      { q: 'According to Ostrom, what helped communities maintain shared resources?', choices: ['Making and enforcing their own fair rules.', 'Selling the resources to one owner.', 'Letting each person take as much as they want.', 'Asking a distant government to decide everything.'], answer: 0, why: '第2段落 agree on their own rules, watch for cheating, and punish it fairly。' },
+    ],
+  },
 ]
