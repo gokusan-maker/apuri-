@@ -2977,4 +2977,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why does the grandmother keep working so hard?', choices: ['Because her vegetables make people happy.', 'Because she needs a lot of money.', 'Because she does not like cooking.', 'Because the writer asked her to.'], answer: 0, why: '第2段落 Because my vegetables make people happy.' },
     ],
   },
+{
+    id: 'adv-spacing',
+    title: 'Why Cramming Fails',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the 1880s, the German psychologist Hermann Ebbinghaus tested his own memory by learning long lists of meaningless syllables. He found that forgetting happens quickly at first and then more slowly. He also noticed something useful: lists that he studied over several days stayed in his memory much longer than lists he studied the same number of times ( A ) a single session.",
+      "This finding, now called the spacing effect, has been confirmed in many later studies. Yet students often prefer cramming, studying intensively just before a test. Cramming can feel effective because the material seems familiar right afterward. ( B ), much of what is learned this way fades within days.",
+      "Why should spacing help? One explanation is that when we return to material we have partly forgotten, recalling it takes effort, and that effort strengthens the memory. In other words, a little forgetting between study sessions is not a failure ( C ) part of the learning process itself.",
+    ],
+    ja: [
+      '1880年代、ドイツの心理学者ヘルマン・エビングハウスは、意味のない音のつながりを並べた長いリストを覚えることで、自分自身の記憶を調べた。彼は、忘れることは最初は急速に起こり、その後はゆっくりになることを発見した。また、役に立つことにも気づいた。何日かに分けて学習したリストは、同じ回数を1回の学習でまとめて学んだリストよりも、ずっと長く記憶に残ったのである。',
+      'この発見は、今では「分散効果」とよばれ、その後の多くの研究で確かめられてきた。それなのに、学生はしばしば一夜づけ、つまりテストの直前に集中して勉強することを好む。一夜づけは、学んだ直後には内容になじみがあるように感じられるため、効果的に思えることがある。残念ながら、このようにして学んだことの多くは数日のうちに消えてしまう。',
+      'なぜ間をあけることが役に立つのだろうか。1つの説明は、少し忘れかけた内容にもどってくると、それを思い出すのに努力が必要になり、その努力が記憶を強めるというものだ。言いかえれば、学習と学習のあいだに少し忘れることは、失敗ではなく、学習の過程そのものの一部なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'by', 'to', 'with'], answer: 0, why: 'in a single session「1回の学習で」。' },
+      { id: 'B', choices: ['Unfortunately', 'Therefore', 'For instance', 'Similarly'], answer: 0, why: '「効果的に思える」→「残念ながら数日で消える」という逆の流れなので Unfortunately。' },
+      { id: 'C', choices: ['but', 'or', 'so', 'nor'], answer: 0, why: 'not A but B「A ではなく B」。' },
+    ],
+    tf: [
+      { statement: 'エビングハウスは、意味のない音のつながりを使って自分の記憶を調べた。', answer: true, why: '第1段落 learning long lists of meaningless syllables。' },
+      { statement: '何日かに分けて学習したリストのほうが、早く忘れられた。', answer: false, why: '第1段落 stayed in his memory much longer。' },
+      { statement: '一夜づけで学んだことの多くは、数日のうちに消えてしまう。', answer: true, why: '第2段落 much of what is learned this way fades within days。' },
+      { statement: '筆者は、学習の合間に少し忘れることは学習の失敗だと述べている。', answer: false, why: '第3段落 is not a failure but part of the learning process itself。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why can cramming feel effective?', choices: ['Because the material seems familiar right afterward.', 'Because it is easier to remember meaningless syllables.', 'Because forgetting happens slowly at first.', 'Because tests are always given several days later.'], answer: 0, why: '第2段落 because the material seems familiar right afterward。' },
+    ],
+  },
 ]
