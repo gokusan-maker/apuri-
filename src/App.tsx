@@ -157,7 +157,7 @@ import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
 
 type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
-type WordTab = 'card' | 'mini' | 'time'
+type WordTab = 'card' | 'mini' | 'time' | 'stage'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'home', icon: '🏠', label: 'ホーム' },
@@ -171,6 +171,7 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
 const WORD_TABS: { id: WordTab; label: string }[] = [
   { id: 'mini', label: '🎮 ミニゲーム' },
   { id: 'time', label: '⏱ タイムアタック' },
+  { id: 'stage', label: '🗺 ステージ' },
 ]
 
 
@@ -1028,6 +1029,152 @@ function App() {
         )
   )
 
+  // ステージ（ボス部屋ではボスだけ、単語ゲームでは単語ステージだけ）
+  const stagesView = (part: 'boss' | 'stages') => (
+    <Stages
+      part={part}
+      startDaily={dailyGo}
+      onReadingAnswer={onAnswerTrack('reading')}
+    readingBuddy={{ icon: buddyForm('reading', buddies.reading).icon, name: buddyName('reading', buddies.reading) }}
+      power={power}
+      hour={hour}
+      partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
+      onSpend={spend}
+      dailyDone={dailyBossDay === today}
+      onDailyWin={(stars) => {
+        if (dailyBossDay === today) return
+        setDailyBossDay(today)
+        setWallet((w) => ({ ...w, coins: w.coins + DAILY_BOSS_COINS * stars }))
+      }}
+      learnedPct={Object.fromEntries(levels.map((l) => [l, learnedPct(wordsOf([l]), progress)]))}
+      onStudy={(ws) => {
+        setPicked(ws.map((w) => w.id))
+        startCards('pick')
+      }}
+      levels={levels}
+      boss={boss}
+      onUnivWin={(b, first) => {
+        gainXp(first ? BOSS_XP : BOSS_REMATCH_XP, null)
+        setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
+        pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
+      }}
+      rushDone={rushDay === today}
+      bag={bag}
+      onUseItem={(id) => setBag((b) => spendItem(b, id))}
+      onBossDefeat={() => {
+        count('boss')
+        setKeys((k) => k + 1)
+        const sh = shardAfter(shards, rand())
+        if (sh.dropped) {
+          setShards(sh.shards)
+          if (sh.exchange) {
+            const r = rareEgg(party, rand(), rand())
+            if (r) setParty(r.party)
+            else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
+            pushToast([{ id: 'shard-egg', text: r ? `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ ${r.kind.name}の${r.species.egg}と交換した` : `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
+          } else pushToast([{ id: 'shard', text: `💠 ボスのかけらを拾った（${sh.shards} / ${SHARDS_FOR_EGG}）`, counter: 'answers', target: 0 }])
+        }
+        const tp = addPiece(pieces)
+        setPieces(tp.pieces)
+        if (tp.ticket) {
+          setWallet((w) => addTicket(w))
+          pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけらが${PIECES_FOR_TICKET}こそろった！ 🎟ガチャチケットをもらった`, counter: 'answers', target: 0 }])
+        } else pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけら（${tp.pieces} / ${PIECES_FOR_TICKET}）`, counter: 'answers', target: 0 }])
+        const n = winStreak + 1
+        setWinStreak(n)
+        if (n % STREAK_EVERY === 0) {
+          setWallet((w) => ({ ...w, coins: w.coins + STREAK_COINS }))
+          feedTrack('reading', STREAK_DRAGON_XP) // 連勝のごほうびは読解の竜にも
+          pushToast([{ id: 'streak', text: `🔥 ボス${n}連勝！ 🪙${STREAK_COINS}・読解の竜に +${STREAK_DRAGON_XP}XP`, counter: 'answers', target: 0 }])
+        }
+      }}
+      winStreak={winStreak}
+      onLose={() => setWinStreak(0)}
+      keys={keys}
+      onOpenGold={() => {
+        if (keys < KEYS_FOR_GOLD) return
+        setKeys((k) => k - KEYS_FOR_GOLD)
+        setWallet((w) => ({ ...addTicket(w), coins: w.coins + GOLD_COINS }))
+        pushToast([{ id: 'gold', text: `🎁 金の宝箱！ 🎟ガチャチケットと🪙${GOLD_COINS}をゲット`, counter: 'answers', target: 0 }])
+      }}
+      onDrop={(id) => setBag((b) => addItem(b, id))}
+      onSkill={() => updateMonster((m) => ({ ...m, skillUses: (m.skillUses ?? 0) + 1 }))}
+      onEndlessReward={(times) => {
+        setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
+        pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])
+      }}
+      weekend={isWeekend(today)}
+      rushExDone={rushExDay === today}
+      onRushClear={(ex) => {
+        if (ex) {
+          if (rushExDay === today) return
+          setRushExDay(today)
+          setWallet((w) => ({ ...w, coins: w.coins + RUSH_EX_COINS, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + 2) }))
+          pushToast([{ id: 'rush-ex', text: `🌟 ボスラッシュEX完全クリア！ 🪙${RUSH_EX_COINS}・🎟2`, counter: 'answers', target: 0 }])
+          return
+        }
+        if (rushDay === today) return
+        setRushDay(today)
+        setWallet((w) => ({ ...addTicket(w), coins: w.coins + RUSH_COINS }))
+        pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
+      }}
+      onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
+      onWeekendWin={() => {
+        setWallet((w) => addTicket(w))
+        pushToast([{ id: 'weekend-boss', text: '🌙 週末ボスをたおした！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
+      }}
+      onRareWin={() => {
+        const r = rareEgg(party, rand(), rand())
+        if (r) setParty(r.party)
+        else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
+        pushToast([{ id: 'rare', text: r ? `✨ レアボスをたおした！ ${r.kind.name}の${r.species.egg}が仲間になった（ショップの「なかま」で見られるよ）` : `✨ レアボスをたおした！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
+      }}
+      onBossWin={(level) => {
+        const bonus = bondWinCoins(totals.studyDays ?? 0)
+        if (bonus > 0) {
+          setWallet((w) => ({ ...w, coins: w.coins + bonus }))
+          pushToast([{ id: 'bond-win', text: `${bondHearts(bondLevel(totals.studyDays ?? 0))} なかよしボーナス！ 🪙${bonus}`, counter: 'answers', target: 0 }])
+        }
+        setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
+        feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは読解のなかま（竜）へ
+        // 全部のボスをたおしたら1回だけ「ボスハンター」
+        if (!loadBossHunter() && Object.keys(BOSSES).every((k) => k === level || boss[k as Level])) {
+          saveBossHunter()
+          setWallet((w) => Array.from({ length: HUNTER_TICKETS }).reduce<typeof w>((x) => addTicket(x), w))
+          pushToast([{ id: 'boss-hunter', text: `🏹 全部のボスをたおした！ 称号「ボスハンター」と🎟${HUNTER_TICKETS}`, counter: 'answers', target: 0 }])
+        }
+        // タマゴのかけら：5つで属性のタマゴが無料でかえる（全員なかまならコイン）
+        const pieces = loadEggPieces() + 1
+        if (pieces < PIECES_FOR_EGG) {
+          saveEggPieces(pieces)
+          pushToast([{ id: 'egg-piece', text: `🥚 タマゴのかけらを拾った！（${pieces} / ${PIECES_FOR_EGG}）`, counter: 'answers', target: 0 }])
+        } else {
+          saveEggPieces(0)
+          const r = hatchAttrEgg(buddies, buddyBox, Math.random())
+          if (r) {
+            setBuddyBox(r.box)
+            pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろってタマゴがかえった！ 属性「${ATTR_LABEL[r.track]}」の「${r.sp.label}」が仲間に！`, counter: 'answers', target: 0 }])
+          } else {
+            setWallet((w) => ({ ...w, coins: w.coins + PIECES_FULL_COINS }))
+            pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろった！ もう全員なかまなので 🪙${PIECES_FULL_COINS}`, counter: 'answers', target: 0 }])
+          }
+        }
+      }}
+      record={stages}
+      onAnswer={onAnswer}
+      onClear={(id, stars) => {
+        if (stars === 3 && (stages[id] ?? 0) < 3) setWallet((w) => ({ ...w, coins: w.coins + STAR3_COINS }))
+        setStages((r) => recordStars(r, id, stars))
+        if (stars > 0) count('stageClear')
+      }}
+      onTreasure={(t) => {
+        if (t.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + t.amount }))
+        else if (t.kind === 'ticket') setWallet((w) => addTicket(w))
+        else gainXp(t.amount, null)
+      }}
+    />
+  )
+
   return (
     <main className="app">
       <header>
@@ -1415,147 +1562,7 @@ function App() {
               onAnswer={onAnswerTrack('reading')}
             />
           ) : (
-          <Stages
-            startDaily={dailyGo}
-            onReadingAnswer={onAnswerTrack('reading')}
-          readingBuddy={{ icon: buddyForm('reading', buddies.reading).icon, name: buddyName('reading', buddies.reading) }}
-            power={power}
-            hour={hour}
-            partner={{ form: formOf(monster), kind: monster.kind, wear: monster.wear, species: monster.species, name: monster.name ?? formOf(monster).name, skillUses: monster.skillUses }}
-            onSpend={spend}
-            dailyDone={dailyBossDay === today}
-            onDailyWin={(stars) => {
-              if (dailyBossDay === today) return
-              setDailyBossDay(today)
-              setWallet((w) => ({ ...w, coins: w.coins + DAILY_BOSS_COINS * stars }))
-            }}
-            learnedPct={Object.fromEntries(levels.map((l) => [l, learnedPct(wordsOf([l]), progress)]))}
-            onStudy={(ws) => {
-              setPicked(ws.map((w) => w.id))
-              startCards('pick')
-            }}
-            levels={levels}
-            boss={boss}
-            onUnivWin={(b, first) => {
-              gainXp(first ? BOSS_XP : BOSS_REMATCH_XP, null)
-              setWallet((w) => ({ ...w, coins: w.coins + (first ? b.coins : 5), ...(first && b.id === 'akamon' ? { tickets: Math.min((w.tickets ?? 0) + 1, 9) } : {}) }))
-              pushToast([{ id: 'univ', text: `🏯 ${b.name}をたおした！ 🪙${first ? b.coins : 5}${first && b.id === 'akamon' ? '・🎟ガチャチケット' : ''}`, counter: 'answers', target: 0 }])
-            }}
-            rushDone={rushDay === today}
-            bag={bag}
-            onUseItem={(id) => setBag((b) => spendItem(b, id))}
-            onBossDefeat={() => {
-              count('boss')
-              setKeys((k) => k + 1)
-              const sh = shardAfter(shards, rand())
-              if (sh.dropped) {
-                setShards(sh.shards)
-                if (sh.exchange) {
-                  const r = rareEgg(party, rand(), rand())
-                  if (r) setParty(r.party)
-                  else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
-                  pushToast([{ id: 'shard-egg', text: r ? `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ ${r.kind.name}の${r.species.egg}と交換した` : `💠 ボスのかけらが${SHARDS_FOR_EGG}つそろった！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
-                } else pushToast([{ id: 'shard', text: `💠 ボスのかけらを拾った（${sh.shards} / ${SHARDS_FOR_EGG}）`, counter: 'answers', target: 0 }])
-              }
-              const tp = addPiece(pieces)
-              setPieces(tp.pieces)
-              if (tp.ticket) {
-                setWallet((w) => addTicket(w))
-                pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけらが${PIECES_FOR_TICKET}こそろった！ 🎟ガチャチケットをもらった`, counter: 'answers', target: 0 }])
-              } else pushToast([{ id: 'ticket-piece', text: `🧩 チケットのかけら（${tp.pieces} / ${PIECES_FOR_TICKET}）`, counter: 'answers', target: 0 }])
-              const n = winStreak + 1
-              setWinStreak(n)
-              if (n % STREAK_EVERY === 0) {
-                setWallet((w) => ({ ...w, coins: w.coins + STREAK_COINS }))
-                feedTrack('reading', STREAK_DRAGON_XP) // 連勝のごほうびは読解の竜にも
-                pushToast([{ id: 'streak', text: `🔥 ボス${n}連勝！ 🪙${STREAK_COINS}・読解の竜に +${STREAK_DRAGON_XP}XP`, counter: 'answers', target: 0 }])
-              }
-            }}
-            winStreak={winStreak}
-            onLose={() => setWinStreak(0)}
-            keys={keys}
-            onOpenGold={() => {
-              if (keys < KEYS_FOR_GOLD) return
-              setKeys((k) => k - KEYS_FOR_GOLD)
-              setWallet((w) => ({ ...addTicket(w), coins: w.coins + GOLD_COINS }))
-              pushToast([{ id: 'gold', text: `🎁 金の宝箱！ 🎟ガチャチケットと🪙${GOLD_COINS}をゲット`, counter: 'answers', target: 0 }])
-            }}
-            onDrop={(id) => setBag((b) => addItem(b, id))}
-            onSkill={() => updateMonster((m) => ({ ...m, skillUses: (m.skillUses ?? 0) + 1 }))}
-            onEndlessReward={(times) => {
-              setWallet((w) => ({ ...w, coins: w.coins + ENDLESS_REWARD_COINS * times, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + times) }))
-              pushToast([{ id: 'endless', text: `🗼 エンドレスの塔 最高記録更新！ 🪙${ENDLESS_REWARD_COINS * times}・🎟${times}`, counter: 'answers', target: 0 }])
-            }}
-            weekend={isWeekend(today)}
-            rushExDone={rushExDay === today}
-            onRushClear={(ex) => {
-              if (ex) {
-                if (rushExDay === today) return
-                setRushExDay(today)
-                setWallet((w) => ({ ...w, coins: w.coins + RUSH_EX_COINS, tickets: Math.min(TICKET_MAX, (w.tickets ?? 0) + 2) }))
-                pushToast([{ id: 'rush-ex', text: `🌟 ボスラッシュEX完全クリア！ 🪙${RUSH_EX_COINS}・🎟2`, counter: 'answers', target: 0 }])
-                return
-              }
-              if (rushDay === today) return
-              setRushDay(today)
-              setWallet((w) => ({ ...addTicket(w), coins: w.coins + RUSH_COINS }))
-              pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
-            }}
-            onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
-            onWeekendWin={() => {
-              setWallet((w) => addTicket(w))
-              pushToast([{ id: 'weekend-boss', text: '🌙 週末ボスをたおした！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
-            }}
-            onRareWin={() => {
-              const r = rareEgg(party, rand(), rand())
-              if (r) setParty(r.party)
-              else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
-              pushToast([{ id: 'rare', text: r ? `✨ レアボスをたおした！ ${r.kind.name}の${r.species.egg}が仲間になった（ショップの「なかま」で見られるよ）` : `✨ レアボスをたおした！ 仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
-            }}
-            onBossWin={(level) => {
-              const bonus = bondWinCoins(totals.studyDays ?? 0)
-              if (bonus > 0) {
-                setWallet((w) => ({ ...w, coins: w.coins + bonus }))
-                pushToast([{ id: 'bond-win', text: `${bondHearts(bondLevel(totals.studyDays ?? 0))} なかよしボーナス！ 🪙${bonus}`, counter: 'answers', target: 0 }])
-              }
-              setBoss((b) => ({ ...b, [level]: b[level] ?? today }))
-              feedTrack('reading', boss[level] ? BOSS_REMATCH_XP : BOSS_XP) // 読解ボスのごほうびは読解のなかま（竜）へ
-              // 全部のボスをたおしたら1回だけ「ボスハンター」
-              if (!loadBossHunter() && Object.keys(BOSSES).every((k) => k === level || boss[k as Level])) {
-                saveBossHunter()
-                setWallet((w) => Array.from({ length: HUNTER_TICKETS }).reduce<typeof w>((x) => addTicket(x), w))
-                pushToast([{ id: 'boss-hunter', text: `🏹 全部のボスをたおした！ 称号「ボスハンター」と🎟${HUNTER_TICKETS}`, counter: 'answers', target: 0 }])
-              }
-              // タマゴのかけら：5つで属性のタマゴが無料でかえる（全員なかまならコイン）
-              const pieces = loadEggPieces() + 1
-              if (pieces < PIECES_FOR_EGG) {
-                saveEggPieces(pieces)
-                pushToast([{ id: 'egg-piece', text: `🥚 タマゴのかけらを拾った！（${pieces} / ${PIECES_FOR_EGG}）`, counter: 'answers', target: 0 }])
-              } else {
-                saveEggPieces(0)
-                const r = hatchAttrEgg(buddies, buddyBox, Math.random())
-                if (r) {
-                  setBuddyBox(r.box)
-                  pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろってタマゴがかえった！ 属性「${ATTR_LABEL[r.track]}」の「${r.sp.label}」が仲間に！`, counter: 'answers', target: 0 }])
-                } else {
-                  setWallet((w) => ({ ...w, coins: w.coins + PIECES_FULL_COINS }))
-                  pushToast([{ id: 'egg-piece', text: `🥚 かけらが5つそろった！ もう全員なかまなので 🪙${PIECES_FULL_COINS}`, counter: 'answers', target: 0 }])
-                }
-              }
-            }}
-            record={stages}
-            onAnswer={onAnswer}
-            onClear={(id, stars) => {
-              if (stars === 3 && (stages[id] ?? 0) < 3) setWallet((w) => ({ ...w, coins: w.coins + STAR3_COINS }))
-              setStages((r) => recordStars(r, id, stars))
-              if (stars > 0) count('stageClear')
-            }}
-            onTreasure={(t) => {
-              if (t.kind === 'coins') setWallet((w) => ({ ...w, coins: w.coins + t.amount }))
-              else if (t.kind === 'ticket') setWallet((w) => addTicket(w))
-              else gainXp(t.amount, null)
-            }}
-          />
+          stagesView('boss')
           )}
         </>
       ) : mode === 'settings' ? (
@@ -1787,6 +1794,8 @@ function App() {
             </section>
           )}
         </>
+      ) : mode === 'word' && wordTab === 'stage' ? (
+        stagesView('stages')
       ) : mode === 'word' && wordTab === 'time' ? (
         <>
           <TimeAttack key={levelKey} words={words} onAnswer={onAnswer} onFinish={(n) => {

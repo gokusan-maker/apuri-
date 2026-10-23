@@ -942,6 +942,19 @@ describe('App', () => {
     expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
   })
 
+  it('単語のステージ（中1〜会話）は単語ゲームの「🗺 ステージ」にあり、ボス部屋にはボスだけが出る', () => {
+    render(<App />)
+    navTo('ボス部屋')
+    expect(screen.getByRole('heading', { name: '👹 ボスに挑戦' })).toBeInTheDocument()
+    expect(document.querySelector('.stage-levels')).toBeNull()
+    expect(screen.queryByText(/つづきから（/)).toBeNull()
+    navTo('単語ゲーム')
+    fireEvent.click(screen.getByRole('tab', { name: '🗺 ステージ' }))
+    expect(screen.getByRole('heading', { name: '🗺 単語ステージ' })).toBeInTheDocument()
+    expect(document.querySelector('.stage-levels')).not.toBeNull()
+    expect(screen.queryByText('🗼 エンドレスの塔')).toBeNull()
+  })
+
   it('記録タブに相棒のきもち日記が出る', () => {
     render(<App />)
     navTo('ホーム')

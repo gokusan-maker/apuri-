@@ -18,6 +18,7 @@ import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, 
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
 
 type Props = {
+  part?: 'all' | 'boss' | 'stages' // boss：ボス部屋（ボスだけ）／stages：単語ゲームの単語ステージ
   levels: Level[]
   record: StageRecord
   onClear: (id: string, stars: number) => void
@@ -62,7 +63,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy }: Props) {
+export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -446,7 +447,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
 
   return (
     <section className="card stages">
-      <h2>ステージ</h2>
+      <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
+      {part !== 'stages' && (
+      <>
       {winStreak > 0 && (
         <p className="win-streak">
           🔥 ボス {winStreak}連勝中！（{STREAK_EVERY}連勝ごとに 🪙{STREAK_COINS}・負けるとリセット）
@@ -569,6 +572,10 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           ))}
         </div>
       )}
+      </>
+      )}
+      {part !== 'boss' && (
+      <>
       <p className="stats-note">6問正解でクリア！</p>
       {(() => {
         const nextStage = levels.flatMap(stagesOf).find((st) => isUnlocked(st, record) && !(record[st.id] >= 1))
@@ -659,6 +666,8 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         )
       })}
       </div>
+      </>
+      )}
     </section>
   )
 }

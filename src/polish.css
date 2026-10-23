@@ -1723,3 +1723,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .stage-level.compact h3 { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .stage-level.compact .stage-grid { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); }
 .stage-level.compact .stage-total { display: none; }
+
+/* 単語ゲームの3つのタブ（ミニゲーム・タイムアタック・ステージ）を1行に */
+.word-sub-tabs button { padding-left: 4px; padding-right: 4px; font-size: 0.76rem; white-space: nowrap; letter-spacing: -0.02em; }
