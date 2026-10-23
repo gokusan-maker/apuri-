@@ -1608,6 +1608,17 @@ export const PASSAGES: Passage[] = [
       { q: '荷物は何日で着いた？', choices: ['2日', '1日', '5日'], answer: 0 },
     ],
   },
+  {
+    id: 'lemonade',
+    title: 'Our Lemonade Stand',
+    text: 'On a hot Saturday in August, my brother and I made lemonade. We used lemons, sugar, water, and lots of ice. We set up a small table in front of our house and sold each cup for fifty yen. Many people stopped to buy some. By evening, we had sold thirty cups! We used the money to buy a present for our mother.',
+    ja: '8月の暑い土曜日に、弟と私はレモネードを作りました。レモン、砂糖、水、そしてたくさんの氷を使いました。家の前に小さなテーブルを出して、1ぱい50円で売りました。たくさんの人が立ち止まって買ってくれました。夕方までに、30ぱいも売れました！そのお金で、母へのプレゼントを買いました。',
+    questions: [
+      { q: 'レモネードは1ぱいいくら？', choices: ['50円', '100円', '30円'], answer: 0 },
+      { q: '夕方までに何ばい売れた？', choices: ['30ぱい', '50ぱい', '10ぱい'], answer: 0 },
+      { q: 'お金で何を買った？', choices: ['母へのプレゼント', '新しいゲーム', 'アイスクリーム'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
