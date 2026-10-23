@@ -2075,4 +2075,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What helps salmon choose the right branch of a river?', choices: ['The familiar scent of their home stream.', 'The position of the sun.', 'The sound of other salmon.', 'The temperature of the ocean.'], answer: 0, why: '第3段落 they follow this familiar scent upstream, choosing the correct branch。' },
     ],
   },
+{
+    id: 'hs-book-box',
+    title: 'The Book Box at the Bus Stop',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Near my house, there is a bus stop where many people wait every morning. Last spring, I noticed that most of them were just looking at their phones. I love reading, so I wondered ( A ) I could share some of my old books with them.",
+      "With my father's help, I made a small wooden box with a roof and put it next to the bench. I put ten books inside and wrote a sign: \"Take a book, or leave a book. It's free.\" For the first week, nobody touched the box, and I felt a little sad. Then one morning, two books were gone, and a picture book I had never ( B ) before was there instead.",
+      "Now the box is almost always full. Some people leave short notes in the books, such as \"This story made me cry\" or \"Please read chapter three!\" An old man told me that he had not read a novel for twenty years, but he now reads one every week. I learned that a small idea can connect people who would never talk to ( C ) otherwise.",
+    ],
+    ja: [
+      '私の家の近くには、毎朝多くの人が待つバス停がある。去年の春、私はほとんどの人がただスマートフォンを見ていることに気づいた。私は読書が大好きなので、自分の古い本をその人たちと分かち合えないだろうかと思った。',
+      '父に手伝ってもらって、私は屋根のついた小さな木の箱を作り、ベンチのとなりに置いた。中に本を10冊入れ、「本を1冊持っていくか、1冊置いていってください。無料です。」と看板に書いた。最初の1週間はだれも箱にさわらず、私は少し悲しくなった。ところがある朝、本が2冊なくなっていて、代わりに私が一度も見たことのない絵本が入っていた。',
+      '今では、箱はほとんどいつもいっぱいだ。本の中に「この話で泣きました」や「ぜひ第3章を読んで！」のような短いメモを残していく人もいる。あるお年寄りの男性は、20年間小説を読んでいなかったが、今では毎週1冊読んでいると話してくれた。小さなアイデアが、そうでなければ決して話すことのない人どうしをつなげられるのだと、私は学んだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['if', 'that', 'what', 'because'], answer: 0, why: 'wondered if 〜「〜かどうかと思った」。' },
+      { id: 'B', choices: ['seen', 'saw', 'see', 'seeing'], answer: 0, why: 'had never seen「一度も見たことがなかった」（過去完了の経験）。' },
+      { id: 'C', choices: ['each other', 'themselves', 'anyone', 'it'], answer: 0, why: 'talk to each other「おたがいに話す」。' },
+    ],
+    tf: [
+      { statement: '筆者は父親といっしょに本の箱を作った。', answer: true, why: "第2段落 With my father's help, I made a small wooden box。" },
+      { statement: '箱を置いた最初の日から、多くの人が本を持っていった。', answer: false, why: '第2段落 For the first week, nobody touched the box。' },
+      { statement: 'あるお年寄りの男性は、今では毎週小説を読んでいる。', answer: true, why: '第3段落 he now reads one every week。' },
+    ],
+    qa: [
+      { q: 'Why did the writer start the book box?', choices: ['To share books with people waiting for the bus.', 'To sell old books for money.', 'To stop people from using phones at school.', 'To find a lost picture book.'], answer: 0, why: '第1段落 I wondered if I could share some of my old books with them。' },
+    ],
+  },
 ]
