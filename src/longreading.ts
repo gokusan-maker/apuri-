@@ -4630,6 +4630,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Most of the blue light reaches us at sunset.', answer: false, why: '第3段落 most of the blue light is sent away。' },
     ],
   },
+  {
+    id: 'fish-breathe',
+    title: 'How Do Fish Breathe Underwater?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'People and other land animals need air to breathe. We cannot stay under water for a long time. But fish live in water all their lives. How ( A ) they get the oxygen they need?',
+      'Water has a little oxygen in it. Fish take in water through their mouths, and the water goes over their gills on both sides of their heads. The gills have many thin parts with a lot of blood in them. When the water passes over these parts, oxygen goes from the water into the blood. Then the water goes out of the body through openings behind the head.',
+      'Some fish, such as certain kinds of sharks, have to keep swimming all the time. When they swim forward, water goes into their mouths and over their gills. If they stopped swimming, they could not get ( B ) oxygen.',
+      'Dolphins and whales also live in the sea, but they are not fish. They do not have gills, so they must come up to the surface to breathe air. Fish and dolphins look similar, but their bodies work in very ( C ) ways.',
+    ],
+    ja: [
+      '人やほかの陸上の動物は、呼吸するのに空気が必要です。私たちは長いあいだ水中にいることはできません。でも魚は一生を水の中ですごします。魚はどうやって必要な酸素を手に入れているのでしょうか。',
+      '水には少しだけ酸素がふくまれています。魚は口から水をとり入れ、その水は頭の両側にあるえらの上を流れていきます。えらには、血液がたくさん流れているうすい部分がたくさんあります。水がこの部分の上を通るとき、酸素が水から血液の中へ移ります。そして水は、頭のうしろにある開いた部分から体の外へ出ていきます。',
+      'ある種のサメのように、いつも泳ぎつづけなければならない魚もいます。前へ泳ぐと、水が口に入ってえらの上を流れます。もし泳ぐのをやめたら、十分な酸素を得られなくなってしまうのです。',
+      'イルカやクジラも海に住んでいますが、魚ではありません。えらがないので、空気を吸うために水面に上がってこなければなりません。魚とイルカは見た目は似ていますが、体のしくみはまったくちがうのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['do', 'does', 'are', 'is'], answer: 0, why: '一般動詞 get の疑問文。主語 they は複数なので do。' },
+      { id: 'B', choices: ['enough', 'many', 'a few', 'few'], answer: 0, why: 'oxygen は数えられない名詞。enough oxygen「十分な酸素」。many・a few・few は数えられる名詞に使う。' },
+      { id: 'C', choices: ['different', 'same', 'similar', 'differently'], answer: 0, why: '「見た目は似ているが、しくみはちがう」という対比。ways を修飾する形容詞 different。' },
+    ],
+    underline: { phrase: 'they must come up to the surface to breathe air', choices: ['空気を吸うために水面に上がってこなければならない', '水面で泳いではいけない', '空気を吸うと水中にもぐる', '水面の近くでえらを使う'], answer: 0, why: 'must「～しなければならない」、come up to the surface「水面に上がる」、to breathe「吸うために」。' },
+    tf: [
+      { statement: 'Water has a little oxygen in it.', answer: true, why: '第2段落の最初の文と合う。' },
+      { statement: 'Fish have gills on the top of their heads.', answer: false, why: 'えらは頭の両側（on both sides of their heads）。' },
+      { statement: 'Some sharks must keep swimming to get oxygen.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Dolphins breathe with gills.', answer: false, why: '第4段落 They do not have gills。' },
+      { statement: 'Dolphins and whales are fish.', answer: false, why: '第4段落 they are not fish。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
