@@ -3035,4 +3035,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does the angle of the straight run show?', choices: ['The direction of the food compared with the sun.', 'How much food the bee has carried.', 'How many bees are in the hive.', 'What time of day it is.'], answer: 0, why: '第2段落 its angle ... matches the angle between the food and the sun。' },
     ],
   },
+{
+    id: 'hs-english-haiku',
+    title: 'A Haiku in English',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "In our English class, our teacher, Ms. Brown, asked us to write a haiku in English. I was surprised, because I thought haiku could only be written in Japanese. Ms. Brown said that people all over the world enjoy ( A ) haiku in their own languages. She showed us some short poems written by students in other countries.",
+      "In Japanese, a haiku has five, seven, and five sounds. In English, many people count syllables instead. For example, the word \"summer\" has two syllables. At first, counting syllables was difficult for me, ( B ) I clapped my hands for each one and slowly got used to it.",
+      "I wrote about the cicadas I hear every summer. My classmates wrote about rain, baseball, and their pets. Ms. Brown liked my haiku and put it on the classroom wall. Now I know that a short poem can share a big feeling, ( C ) it is written in Japanese or in English.",
+    ],
+    ja: [
+      '英語の授業で、ブラウン先生は私たちに英語で俳句を書くように言った。私はおどろいた。俳句は日本語でしか書けないと思っていたからだ。ブラウン先生は、世界中の人々が自分の言葉で俳句を書くのを楽しんでいると話した。そして、ほかの国の生徒が書いた短い詩をいくつか見せてくれた。',
+      '日本語では、俳句は五・七・五の音でできている。英語では、そのかわりに音節を数える人が多い。たとえば、summer という語は2音節だ。はじめは音節を数えるのがむずかしかったが、1つごとに手をたたいて、少しずつなれていった。',
+      '私は、毎年夏に聞くセミについて書いた。クラスメートは、雨や野球、自分のペットについて書いた。ブラウン先生は私の俳句を気に入って、教室のかべにはってくれた。今では、短い詩でも大きな気持ちを伝えられることがわかる。それが日本語で書かれていても、英語で書かれていても。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['writing', 'to write', 'write', 'written'], answer: 0, why: 'enjoy のあとは動名詞（～ing）。enjoy writing「書くことを楽しむ」。' },
+      { id: 'B', choices: ['but', 'because', 'if', 'or'], answer: 0, why: '「むずかしかった」→「でも手をたたいてなれていった」という逆接なので but。' },
+      { id: 'C', choices: ['whether', 'if', 'because', 'when'], answer: 0, why: 'whether A or B「A であっても B であっても」。' },
+    ],
+    tf: [
+      { statement: '筆者は、俳句は日本語でしか書けないと思っていた。', answer: true, why: '第1段落 I thought haiku could only be written in Japanese。' },
+      { statement: '英語では、多くの人が音節を数えて俳句を作る。', answer: true, why: '第2段落 In English, many people count syllables instead。' },
+      { statement: '筆者は、はじめから音節を数えるのが得意だった。', answer: false, why: '第2段落 At first, counting syllables was difficult for me。' },
+      { statement: 'ブラウン先生は、筆者の俳句を家に持って帰った。', answer: false, why: '第3段落 put it on the classroom wall。' },
+    ],
+    qa: [
+      { q: 'What did the writer write the haiku about?', choices: ['The cicadas the writer hears every summer.', 'The writer\'s English teacher.', 'Clapping hands in class.', 'A trip to another country.'], answer: 0, why: '第3段落 I wrote about the cicadas I hear every summer.' },
+    ],
+  },
 ]
