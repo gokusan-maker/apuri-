@@ -1538,3 +1538,10 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 .buddy-switch-item small { font-size: 0.7rem; font-weight: 600; color: var(--muted); line-height: 1.35; }
 .buddy-switch-item:not(:disabled)::after { content: '›'; position: absolute; right: 12px; top: 50%; transform: translateY(-52%); font-size: 1.4rem; color: var(--muted); }
 .buddy-switch-item .buddy-lock { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 50%; background: color-mix(in srgb, var(--muted) 12%, transparent); font-size: 1.1rem; }
+
+/* ガチャ結果のボタン：主ボタン（相棒にする）を目立たせ、「もう1回ひく」は2番目、「とじる」は小さな文字ボタン、シェアは小さなピルに */
+.gacha-result .flip { font-size: clamp(0.88rem, 4vw, 1rem); }
+.gacha-result .gacha-share { display: block; width: fit-content; max-width: 100%; min-height: 34px; margin: 10px auto; padding: 6px 12px; font-size: 0.74rem; }
+.gacha-result .gacha-again { min-height: 46px; font-size: clamp(0.82rem, 3.8vw, 0.95rem); }
+.gacha-result .gacha-again + .list-link, .gacha-result .flip ~ .list-link:last-child { display: block; width: fit-content; min-height: 36px; margin: 10px auto 0; padding: 6px 18px; border: none; background: transparent; box-shadow: none; color: var(--muted); font-size: 0.85rem; text-decoration: underline; text-underline-offset: 3px; }
+.gacha-result .gacha-again { background: var(--card); color: var(--accent); border: 1.5px solid color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 25%, transparent); }
