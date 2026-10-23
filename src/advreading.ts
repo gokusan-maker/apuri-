@@ -1739,4 +1739,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why are researchers studying bears during their winter sleep?', choices: ['To learn how they keep muscle and bone strength.', 'To find out where they migrate.', 'To make bears sleep longer.', 'To study how they find food in winter.'], answer: 0, why: '第3段落 how bears avoid losing muscle and bone strength。' },
     ],
   },
+  {
+    id: 'exam-kendo',
+    title: 'What the Kendo Club Taught Me',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "When I entered junior high school, I joined the kendo club. I chose it because it looked cool, but the first month was very hard. We did not even hold a bamboo sword. Instead, we practiced bowing, walking, and cleaning the floor of the dojo. I wondered ( A ) we had to do such boring things.",
+      "One day, I asked our coach, Mr. Hayashi. He smiled and said, 'In kendo, we bow before and after every match. We show respect to our partner, because without a partner, we cannot ( B ) stronger. Cleaning the dojo is also a way to say thank you to the place where we practice.' After hearing this, I started to see the club in a different way.",
+      "Now I am in my third year. I have won some matches and lost many others. When I lose, I still bow to my partner and say, 'Thank you.' At first, it was difficult, but now I understand its meaning. Kendo taught me that being strong is not only about winning. It is also about respecting others, ( C ) when things do not go well.",
+    ],
+    ja: [
+      '中学校に入学したとき、私は剣道部に入りました。かっこよく見えたので選んだのですが、最初の1か月はとても大変でした。竹刀を持つことさえしませんでした。そのかわりに、礼のしかたや歩き方、道場のゆかそうじを練習しました。なぜこんなにつまらないことをしなければならないのか、私はふしぎに思いました。',
+      'ある日、私は顧問の林先生にたずねました。先生はほほえんで言いました。「剣道では、試合の前と後に必ず礼をする。相手に敬意を示すんだ。相手がいなければ、強くなれないからね。道場をそうじするのも、練習する場所にありがとうと言う方法なんだよ」。これを聞いてから、私は部活動をちがった見方で見るようになりました。',
+      '今、私は3年生です。いくつかの試合に勝ち、それ以上に多くの試合に負けてきました。負けたときも、私は相手に礼をして「ありがとうございました」と言います。最初はむずかしかったけれど、今はその意味がわかります。剣道は、強いということは勝つことだけではないと教えてくれました。うまくいかないときでも、ほかの人を尊重することでもあるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'who'], answer: 0, why: '「なぜ〜しなければならないのか」なので why（間接疑問）。' },
+      { id: 'B', choices: ['become', 'becomes', 'became', 'becoming'], answer: 0, why: '助動詞 cannot のあとは原形。become stronger「より強くなる」。' },
+      { id: 'C', choices: ['even', 'only', 'still', 'already'], answer: 0, why: 'even when 〜「〜のときでさえ」。' },
+    ],
+    tf: [
+      { statement: '筆者は剣道部に入ってすぐ竹刀を持って練習した。', answer: false, why: '第1段落 We did not even hold a bamboo sword。' },
+      { statement: '林先生は、道場のそうじは場所への感謝を表すと言った。', answer: true, why: '第2段落 a way to say thank you to the place where we practice。' },
+      { statement: '筆者は3年間、一度も試合に負けなかった。', answer: false, why: '第3段落 lost many others。' },
+    ],
+    qa: [
+      { q: 'What did kendo teach the writer?', choices: ['Being strong also means respecting others.', 'Winning is the only important thing.', 'Cleaning is a waste of time.', 'Bowing is only for teachers.'], answer: 0, why: '第3段落 being strong is not only about winning. It is also about respecting others。' },
+    ],
+  },
 ]

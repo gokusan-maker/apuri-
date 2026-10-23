@@ -1234,3 +1234,4 @@
 - 2026-10-23: 読解「TOEFL・IELTS」に生物「The Long Winter Sleep」（冬眠）を追加
 - 2026-10-23: 今日の課題を3つクリアした日は、相棒のうしろの四角に🏅の印
 - 2026-10-23: 中3の文法単元「形容詞 ＋ that 節（I'm glad that 〜 / I'm sure that 〜）」を追加（全179単元に）
+- 2026-10-23: 読解「高校入試」に体験文「What the Kendo Club Taught Me」を追加
