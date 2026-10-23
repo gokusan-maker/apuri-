@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'must-cant-be': { wrong: 'That must not be true.（はずがない、のつもりで）', right: "That can't be true.", why: '「～のはずがない」は can\'t ＋ 原形。must not は「～してはいけない」。' },
   'worth-ing': { wrong: 'This book is worth to read.', right: 'This book is worth reading.', why: 'be worth のあとは動名詞（～ing）。不定詞は使わない。' },
   'wh-subject': { wrong: 'Who did make this cake?', right: 'Who made this cake?', why: '疑問詞が主語のときは did を使わず〈疑問詞 ＋ 動詞〉の語順。' },
   'suggest-that': { wrong: 'I suggested that he sees a doctor.', right: 'I suggested that he (should) see a doctor.', why: '提案・要求の that 節は (should) ＋ 原形。3人称単数の s をつけない。' },
