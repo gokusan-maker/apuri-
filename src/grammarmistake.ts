@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'need-to': { wrong: 'She need to study more.', right: 'She needs to study more.', why: '主語が3人称単数なので needs to にする。' },
   'why-how-relative': { wrong: 'This is the way how I learned English.', right: 'This is how I learned English.', why: 'the way と how はいっしょに使わない。どちらか一方にする。' },
   'too-many-much': { wrong: 'I have too many homework.', right: 'I have too much homework.', why: 'homework は数えられない名詞なので too much。' },
   'was-were': { wrong: 'Did you tired yesterday?', right: 'Were you tired yesterday?', why: 'tired は形容詞なので be動詞の文。疑問文は Were を前に出す。' },
