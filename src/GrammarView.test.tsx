@@ -59,7 +59,7 @@ it('文法モンスターを全問正解でたおすとごほうび', () => {
   render(<Grammar onMonsterWin={win} />)
   const u = GRAMMAR[0]
   fireEvent.click(screen.getByText(u.title))
-  fireEvent.click(screen.getByText(/文法モンスター「be動詞モンスター」と戦う/))
+  fireEvent.click(screen.getByText(/「be動詞モンスター」と戦う/))
   expect(screen.getByRole('progressbar', { name: '文法モンスターのHP' })).toHaveAttribute('aria-valuenow', '3')
   for (const q of u.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))

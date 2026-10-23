@@ -728,7 +728,8 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
               setStep(0)
             }}
           >
-            👾 文法モンスター「{monsterName(unit)}」と戦う（全問正解でたおせる）
+            <span className="gm-main">👾「{monsterName(unit)}」と戦う</span>
+            <small className="gm-sub">全問正解でたおせる</small>
           </button>
         )}
       </section>

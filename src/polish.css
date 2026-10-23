@@ -1563,3 +1563,8 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 .capsule-picker button.on { transform: none; box-shadow: 0 0 0 3px var(--card), 0 0 0 5px #7c3aed; }
 .capsule-picker { gap: 6px; white-space: nowrap; }
 .capsule-picker button { flex: none; width: 30px; height: 30px; }
+
+/* 文法モンスター戦のボタン：本文は1〜2行、条件は小さな2行目に */
+.grammar-monster-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 12px; padding-bottom: 12px; }
+.grammar-monster-btn .gm-main { font-size: clamp(0.88rem, 4.1vw, 1.02rem); line-height: 1.35; }
+.grammar-monster-btn .gm-sub { font-size: 0.72rem; font-weight: 700; opacity: 0.85; }
