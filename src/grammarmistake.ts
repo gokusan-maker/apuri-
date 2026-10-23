@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'this-these': { wrong: 'This are my books.', right: 'These are my books.', why: '複数の物は these。be 動詞も are にそろえる。' },
   'not-a-but-b': { wrong: 'That animal is not a cat and a fox.', right: 'That animal is not a cat but a fox.', why: '「A ではなく B」は not A but B。and は使わない。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'to-ing': { wrong: 'When it comes to cook, my father is the best.', right: 'When it comes to cooking, my father is the best.', why: 'when it comes to の to は前置詞。あとの動詞は ～ing。' },
