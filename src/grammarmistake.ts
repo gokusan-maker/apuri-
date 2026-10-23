@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'do-does': { wrong: 'Does she plays tennis?', right: 'Does she play tennis?', why: 'Does を使ったら動詞は原形にもどす。-s はつけない。' },
   'have-get-person': { wrong: 'I got my brother help me.', right: 'I got my brother to help me.', why: 'get ＋ 人 のあとは to ＋ 動詞の原形。have ＋ 人 なら原形のまま。' },
   'need-to': { wrong: 'She need to study more.', right: 'She needs to study more.', why: '主語が3人称単数なので needs to にする。' },
   'why-how-relative': { wrong: 'This is the way how I learned English.', right: 'This is how I learned English.', why: 'the way と how はいっしょに使わない。どちらか一方にする。' },
