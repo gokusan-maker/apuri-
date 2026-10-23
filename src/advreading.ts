@@ -2019,4 +2019,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why was the Mercator projection useful for sailors?', choices: ['It kept the angles between directions correct.', 'It showed the true size of every country.', 'It was printed on a round globe.', 'It made Greenland look smaller.'], answer: 0, why: '第2段落 His map kept the angles between directions correct。' },
     ],
   },
+  {
+    id: 'toefl-roman-concrete',
+    title: 'The Secret of Roman Concrete',
+    level: 'TOEFL・IELTS（科学史）',
+    paragraphs: [
+      "Many modern concrete structures begin to crack and crumble within a century, yet some buildings constructed by the ancient Romans have survived for nearly two thousand years. The Pantheon in Rome, for example, still has an enormous concrete dome that has never been reinforced with steel. For a long time, scientists wondered ( A ) Roman concrete could last so long.",
+      "Part of the answer lies in its ingredients. Roman builders mixed lime with volcanic ash, which reacts with lime and water to form strong mineral bonds. Harbor walls made this way even seem to have grown stronger over time, ( B ) seawater seeping into the concrete encouraged the growth of new crystals inside it.",
+      "More recent research has suggested another clue. Small white lumps of lime, long dismissed as a sign of careless mixing, may actually have helped the concrete repair itself. When cracks formed and water entered, these lumps could dissolve and then harden again, filling the gaps. Engineers are now studying such ideas in the hope of developing modern materials that last longer and ( C ) less frequent replacement.",
+    ],
+    ja: [
+      '現代のコンクリート建造物の多くは1世紀もたたないうちにひびが入り、くずれはじめるが、古代ローマ人が建てた建物の中には2000年近くも残っているものがある。たとえばローマのパンテオンには、鉄で補強されたことのない巨大なコンクリートのドームが今もある。長いあいだ、科学者たちはなぜローマのコンクリートがそれほど長もちするのかふしぎに思ってきた。',
+      'その答えの一部は材料にある。ローマの建築家は石灰を火山灰とまぜた。火山灰は石灰や水と反応して強い鉱物の結びつきを作る。こうして作られた港のかべは、時間がたつにつれてかえって強くなったようにさえ見える。コンクリートにしみこんだ海水が、内部で新しい結晶が育つのをうながしたからである。',
+      'より最近の研究は、もう一つの手がかりを示している。長いあいだ雑なまぜ方のしるしとして見すごされてきた小さな白い石灰のかたまりが、実はコンクリートが自分で修復するのを助けていたのかもしれないのだ。ひびができて水が入ると、これらのかたまりがとけてから再び固まり、すき間をうめることができた。技術者たちは今、より長もちし、取りかえの回数が少なくてすむ現代の材料を開発しようと、こうした考えを研究している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'whose'], answer: 0, why: '「なぜそんなに長もちするのか」なので why（間接疑問）。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '強くなった理由（海水が結晶の成長をうながした）を表すので because。' },
+      { id: 'C', choices: ['require', 'requires', 'required', 'requiring'], answer: 0, why: 'materials that last longer and require 〜。that 節の動詞を and で並べる。主語 materials は複数なので require。' },
+    ],
+    tf: [
+      { statement: 'パンテオンのドームは鉄で補強されている。', answer: false, why: '第1段落 has never been reinforced with steel。' },
+      { statement: 'ローマの建築家は石灰と火山灰をまぜた。', answer: true, why: '第2段落 Roman builders mixed lime with volcanic ash。' },
+      { statement: '白い石灰のかたまりは、雑なまぜ方による欠点でしかないことがわかった。', answer: false, why: '第3段落 may actually have helped the concrete repair itself。' },
+    ],
+    qa: [
+      { q: 'How might the lime lumps have helped the concrete?', choices: ['They dissolved and hardened again to fill cracks.', 'They made the concrete lighter.', 'They kept water out completely.', 'They replaced the volcanic ash.'], answer: 0, why: '第3段落 these lumps could dissolve and then harden again, filling the gaps。' },
+    ],
+  },
 ]
