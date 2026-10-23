@@ -4960,6 +4960,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: "You should not cut a cat's whiskers.", answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'compass',
+    title: 'How Does a Compass Work?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'If you get lost in the mountains, a compass can help you find your way. But how does this small tool know which way is north? The answer is ( A ) the Earth itself is like a giant magnet.',
+      "The needle of a compass is a small, thin magnet. It can turn freely, so it lines up with the Earth's magnetic field. One end of the needle always points toward the north, and the ( B ) end points toward the south.",
+      'Interestingly, a compass does not point exactly to the North Pole. It points to the magnetic north pole, which is in a slightly different place and slowly moves over time. People who use maps for hiking learn to make small corrections for this difference.',
+      'Compasses have a long history. People in China were already using them to find their way at sea more than 800 years ago. Today, many people use smartphones instead, but a compass still works when there is no signal and the battery is ( C ). Just remember to keep magnets away from it!',
+    ],
+    ja: [
+      '山で道に迷ったら、方位磁針（コンパス）が道を見つける手助けをしてくれます。でも、この小さな道具は、どうやってどちらが北なのかがわかるのでしょうか。その答えは、地球そのものが巨大な磁石のようなものだということです。',
+      '方位磁針の針は、小さくて細い磁石です。自由に回ることができるので、地球の磁気の向きにそろいます。針の一方の端はいつも北の方を指し、もう一方の端は南の方を指します。',
+      'おもしろいことに、方位磁針は北極点をぴったり指すわけではありません。指しているのは磁北極で、そこは少しちがう場所にあり、長い時間をかけてゆっくり動いています。ハイキングで地図を使う人は、このずれを少し直して使うことを学びます。',
+      '方位磁針には長い歴史があります。中国の人々は、800年以上も前に、海で方角を知るためにすでにそれを使っていました。今ではかわりにスマートフォンを使う人が多いですが、方位磁針は電波がなくても、電池が切れても使えます。ただし、磁石を近づけないように気をつけましょう！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'which', 'who'], answer: 0, why: 'The answer is that ～「答えは～ということだ」。that のあとに完全な文が続く。' },
+      { id: 'B', choices: ['other', 'another', 'others', 'some'], answer: 0, why: '2つのうちの「もう一方」は the other。' },
+      { id: 'C', choices: ['dead', 'died', 'death', 'die'], answer: 0, why: 'The battery is dead.「電池が切れている」。dead は形容詞。' },
+    ],
+    underline: { phrase: "lines up with the Earth's magnetic field", choices: ['地球の磁気と同じ向きにそろう', '地球の前に列を作る', '地球の磁気とけんかする', '地球の磁気からはなれる'], answer: 0, why: 'line up with ～「～にそろう・～と同じ向きに並ぶ」、magnetic field「磁場（磁気の向き）」。' },
+    tf: [
+      { statement: 'A compass needle is a small magnet.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'The Earth is like a giant magnet.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'A compass points exactly to the North Pole.', answer: false, why: '第3段落 a compass does not point exactly to the North Pole。' },
+      { statement: 'The magnetic north pole never moves.', answer: false, why: '第3段落 slowly moves over time。' },
+      { statement: 'A compass needs a smartphone signal to work.', answer: false, why: '第4段落 a compass still works when there is no signal。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
