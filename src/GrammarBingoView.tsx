@@ -20,8 +20,10 @@ export function GrammarBingo({ onBack, onBingo }: Props) {
         ← 単元一覧
       </button>
       <h2>🎯 文法ビンゴ</h2>
-      {best > 0 && <p className="stats-note">🏆 ベスト記録 {best}列</p>}
-      <p className="stats-note">マスをタップして問題に答えよう。正解のマスが1列そろうとビンゴ！ 🪙{BINGO_COINS}</p>
+      <p className="buddy-chips">
+        <span>1列でビンゴ 🪙{BINGO_COINS}</span>
+        {best > 0 && <span>🏆 ベスト記録 {best}列</span>}
+      </p>
       <div className="bingo-grid">
         {qs.map((_, i) => (
           <button key={i} className={`bingo-cell${cells[i] === true ? ' ok' : cells[i] === false ? ' ng' : ''}`} disabled={cells[i] !== null} onClick={() => setOpen(i)} aria-label={`マス ${i + 1}${cells[i] === true ? ' 正解' : cells[i] === false ? ' まちがい' : ''}`}>
@@ -32,7 +34,11 @@ export function GrammarBingo({ onBack, onBingo }: Props) {
       {lines > 0 && <p className="level-up">🎉 ビンゴ！ {lines}列そろった（🪙{BINGO_COINS}）</p>}
       {q && open !== null && (
         <div className="bingo-q">
-          <p className="example blank-sentence">{q.sentence.replace('___', '（　　）')}</p>
+          <p className="example blank-sentence">
+            {q.sentence.split('___')[0]}
+            <span className="blank">　　　</span>
+            {q.sentence.split('___').slice(1).join('___')}
+          </p>
           <div className="choices">
             {q.choices.map((c, i) => (
               <button
