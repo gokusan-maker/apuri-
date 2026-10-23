@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'been-gone': { wrong: 'She has gone to Paris twice.', right: 'She has been to Paris twice.', why: '「行ったことがある」（経験）は have been to。have gone to は「行ってしまった」。' },
   'even-if-though': { wrong: 'Even though it rains tomorrow, we will go.', right: 'Even if it rains tomorrow, we will go.', why: 'まだわからない未来のこと（仮定）は even if。even though は事実に使う。' },
   'when-future': { wrong: 'When he will come, let\'s start the party.', right: 'When he comes, let\'s start the party.', why: '時を表す when のあとは、未来のことでも現在形。' },
   'not-so-much': { wrong: 'She is not so much a singer than an actor.', right: 'She is not so much a singer as an actor.', why: 'not so much A as B。than ではなく as。' },
