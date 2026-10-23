@@ -1879,4 +1879,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What can make a group lose its wisdom?', choices: ['Members seeing each other\'s answers or following one confident voice.', 'Having too many members.', 'Members thinking independently.', 'Bringing different kinds of information.'], answer: 0, why: '第3段落 If people can see each other\'s answers, or if one confident voice persuades the rest。' },
     ],
   },
+  {
+    id: 'toefl-cactus',
+    title: 'How Cacti Survive the Desert',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Deserts may receive less than 250 millimeters of rain in a year, and daytime temperatures can be extremely high. For most plants, such conditions would be deadly. Cacti, however, have developed a set of features that allow them not only to survive ( A ) to thrive in these harsh environments.",
+      "One of the most obvious features is the absence of ordinary leaves. In cacti, leaves have been reduced to spines, which lose far less water than broad, flat leaves would. The spines also protect the plant from thirsty animals and provide a little shade. Instead of leaves, the thick green stem carries out photosynthesis and stores large amounts of water. Many cacti have ribbed stems that can expand like an accordion when it rains and shrink as the water is used ( B ).",
+      "Cacti also save water through an unusual timing strategy. Most plants open small pores on their surfaces during the day to take in carbon dioxide, but doing so in the desert heat would cause heavy water loss. Cacti open these pores at night, when the air is cooler, and store the carbon dioxide until sunlight is available for photosynthesis the next day. Their wide, shallow roots, meanwhile, can quickly absorb rainwater ( C ) it evaporates or sinks deep into the ground.",
+    ],
+    ja: [
+      '砂漠では年間の雨量が250ミリメートルに満たないこともあり、昼間の気温はきわめて高くなることがある。ほとんどの植物にとって、そのような条件は命にかかわるだろう。しかしサボテンは、このきびしい環境で生きのびるだけでなく、さかえることさえできる一連の特徴を発達させてきた。',
+      'もっとも目立つ特徴の一つは、ふつうの葉がないことである。サボテンでは葉がとげに変化しており、とげは広く平たい葉よりもはるかに水を失いにくい。とげはまた、のどのかわいた動物から植物を守り、少しの日かげも作る。葉のかわりに、太い緑の茎が光合成を行い、大量の水をたくわえる。多くのサボテンはひだのある茎をもち、雨がふるとアコーディオンのようにふくらみ、水が使われるにつれてちぢむ。',
+      'サボテンはまた、ふつうとはちがうタイミングの作戦で水を節約している。ほとんどの植物は二酸化炭素を取りこむために昼間に表面の小さな穴を開けるが、砂漠の暑さの中でそうすると多くの水が失われてしまう。サボテンは空気がすずしい夜にこの穴を開け、次の日に日光が使えるようになるまで二酸化炭素をたくわえておく。一方、広く浅い根は、雨水が蒸発したり地中深くしみこんだりする前に、すばやく吸収することができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'and', 'or', 'so'], answer: 0, why: 'not only A but (also) B「A だけでなく B も」。' },
+      { id: 'B', choices: ['up', 'down', 'over', 'off'], answer: 0, why: 'use up「使い切る・使ってへらす」。' },
+      { id: 'C', choices: ['before', 'after', 'unless', 'since'], answer: 0, why: '「蒸発したりしみこんだりする前に」なので before。' },
+    ],
+    tf: [
+      { statement: 'サボテンのとげは、葉が変化したものである。', answer: true, why: '第2段落 leaves have been reduced to spines。' },
+      { statement: 'サボテンでは、葉が主に光合成を行う。', answer: false, why: '第2段落 the thick green stem carries out photosynthesis。' },
+      { statement: 'サボテンは昼間に表面の穴を開けて二酸化炭素を取りこむ。', answer: false, why: '第3段落 Cacti open these pores at night。' },
+    ],
+    qa: [
+      { q: 'Why do cacti open their pores at night?', choices: ['To avoid losing too much water in the heat.', 'To catch more sunlight.', 'To protect themselves from animals.', 'To grow deeper roots.'], answer: 0, why: '第3段落 doing so in the desert heat would cause heavy water loss。' },
+    ],
+  },
 ]

@@ -1270,3 +1270,4 @@
 - 2026-10-23: 読解「難関大」に評論「When Many Minds Are Better Than One」（群衆の知恵）を追加
 - 2026-10-23: デザイン第17弾：ガチャのコーナーをつやのあるガチャマシンのパネルに（カプセルの色選びを立体の玉に、ゲージ・ボタンの間かくも調整）
 - 2026-10-23: 中1の文法単元「前置詞とセットの動詞（listen to / wait for / think about / arrive at）」を追加（全187単元に）
+- 2026-10-23: 読解「TOEFL・IELTS」に生物「How Cacti Survive the Desert」（サボテンの生きのび方）を追加
