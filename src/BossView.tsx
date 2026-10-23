@@ -706,7 +706,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 )}
               </div>
             ) : (
-              <button className="hint-5050 boss-hint-btn" onClick={() => setTipAt(index)}>
+              <button
+                className="hint-5050 boss-hint-btn"
+                onClick={() => {
+                  setTipAt(index)
+                  // 根拠のある段落が本文のわくの外なら、見えるところまでスクロール
+                  setTimeout(() => document.querySelector('.boss-hint-para')?.scrollIntoView?.({ block: 'nearest', behavior: 'smooth' }), 0)
+                }}
+              >
                 💡 ヒント
               </button>
             ))}
