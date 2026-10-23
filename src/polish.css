@@ -1852,3 +1852,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .lucky, :root[data-theme="dark"] .long-why.right, :root[data-theme="dark"] .daily-grammar span { color: #4ade80; }
 :root[data-theme="dark"] .long-why.wrong, :root[data-theme="dark"] .weak-grammar-btn, :root[data-theme="dark"] .long-types li.weak, :root[data-theme="dark"] .long-review-title { color: #f87171; }
 :root[data-theme="dark"] .stamp-title span { color: #fdba74; }
+
+/* ダークモード：「まちがえた単語」の見出しを明るい赤に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .missed-list::before { color: #f87171; }
+}
+:root[data-theme="dark"] .missed-list::before { color: #f87171; }
