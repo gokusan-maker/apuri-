@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'as-well-as': { wrong: 'The teacher, as well as the students, are excited.', right: 'The teacher, as well as the students, is excited.', why: 'A as well as B が主語のときは、動詞を A に合わせる。' },
   'change-adj': { wrong: 'It is getting darkly.', right: 'It is getting dark.', why: '「～になる」の get / become のあとは形容詞。副詞にしない。' },
   'group-prep': { wrong: 'Instead of take the bus, I walked.', right: 'Instead of taking the bus, I walked.', why: 'instead of のあとの動詞は動名詞（～ing）。' },
   despite: { wrong: 'Despite of the rain, we went out.', right: 'Despite the rain, we went out.', why: 'despite は of をつけない。in spite of と混ざらないように。' },
