@@ -44,3 +44,7 @@ it('汎用クラス .done に大きな余白などをつけない（クリアず
 it('カタカナの名前（バッジ・おやつ・ボス・ガチャ結果など）は単語のとちゅうで改行しない設定がある', () => {
   expect(css).toMatch(/\.badge-name, [^{]*\.gacha-result p \{ word-break: keep-all; overflow-wrap: anywhere; \}/)
 })
+
+it('今日のことばの訳は英語の下の行に置く', () => {
+  expect(css).toContain('.wotd .wotd-ja { display: block;')
+})
