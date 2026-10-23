@@ -1024,9 +1024,11 @@ function App() {
               onQuiz={() => setWordTab('mini')}
               onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
             />
-            <button className="list-link" onClick={() => setShowList(true)}>
-              📚 単語一覧・さがす
-            </button>
+            {mode === 'word' && (
+              <button className="list-link" onClick={() => setShowList(true)}>
+                📚 単語一覧・さがす
+              </button>
+            )}
           </>
         )
   )
@@ -1035,6 +1037,15 @@ function App() {
   const wordReview = (
     <section className="card word-review" aria-label="単語のおさらい">
       <h2>🔁 おさらい</h2>
+      <button
+        className="list-link"
+        onClick={() => {
+          setShowList(true)
+          setWordTab('card')
+        }}
+      >
+        📚 単語一覧・さがす
+      </button>
       {thisWeekWords.length >= 4 && (
         <button className="list-link" onClick={() => startQuiz('thisweek')}>
           🗓 今週の単語（{thisWeekWords.length}語）

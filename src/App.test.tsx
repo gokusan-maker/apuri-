@@ -480,6 +480,7 @@ describe('App', () => {
 
   it('単語一覧で検索でき、タップで例文が見える', () => {
     render(<App />)
+    navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     expect(screen.getByText('1語')).toBeInTheDocument()
@@ -491,6 +492,7 @@ describe('App', () => {
 
   it('単語一覧から1語だけカードで練習できる', () => {
     render(<App />)
+    navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     fireEvent.click(within(document.querySelector('section.word-list') as HTMLElement).getByRole('button', { name: /library/ }))
@@ -1254,6 +1256,7 @@ describe('App', () => {
     render(<App />)
     navTo('ホーム')
     expect(screen.queryByText('🗂 テーマで練習')).toBeNull()
+    expect(screen.queryByText('📚 単語一覧・さがす')).toBeNull()
     navTo('単語ゲーム')
     expect(within(screen.getByLabelText('単語のおさらい')).getByText('🗂 テーマで練習')).toBeInTheDocument()
   })
