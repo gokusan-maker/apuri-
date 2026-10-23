@@ -352,7 +352,7 @@ export function saveTrio(ids: string[]): void {
 }
 
 // レア以上が出たときの相棒のひとこと
-export const rareCheer = (rarity: string) => (rarity === 'UR' ? 'うそでしょ！ ウルトラレアだ！ 一生のたからものだね！' : rarity === 'SR' ? 'すごい！ キラキラのスーパーレアだ！' : 'やったね！ レアが出たよ！')
+export const rareCheer = (rarity: string) => (rarity === 'UR' ? 'うそ！ ウルトラレアだ！' : rarity === 'SR' ? 'すごい！ スーパーレアだ！' : 'やったね！ レアだ！')
 
 // ガチャで出た子のあいさつ（種類ごとに決まる。自作の英語）
 export const HELLO_LINES = [

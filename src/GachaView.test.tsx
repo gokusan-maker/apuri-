@@ -46,7 +46,7 @@ it('ガチャには出る確率や、何が出やすいかを書かない（お�
 it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {
   render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true, newSpecies: true })} />)
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
-  expect(screen.getByText('NEW! はじめての「ニャンタ」・はじめての「うみ色」')).toBeInTheDocument()
+  expect(screen.getByLabelText('はじめて：ニャンタ・うみ色').textContent).toBe('NEW!ニャンタうみ色')
 })
 
 it('ガチャを引くと「最近のガチャ」に残る', () => {
@@ -177,7 +177,7 @@ it('レア以上が出ると相棒がよろこぶ（ふつうの色では出な�
   const onDraw = vi.fn(() => ({ kind: kindOf(k), species: speciesOf('mochi') }))
   render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={onDraw} partnerName="モチ" />)
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
-  expect(screen.getByText(/🐣 モチ「すごい！ キラキラのスーパーレアだ！」/)).toBeInTheDocument()
+  expect(screen.getByText(/🐣 モチ「すごい！ スーパーレアだ！」/)).toBeInTheDocument()
   k = 'normal'
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.queryByText(/🐣 モチ「/)).toBeNull()

@@ -320,7 +320,13 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </p>
           {partnerName && !result.mystery && result.kind.rarity !== 'N' && <p className="grammar-praise gacha-cheer">🐣 {partnerName}「{rareCheer(result.kind.rarity)}」</p>}
           {result.nth !== undefined && result.nth > 1 && <p className="gacha-nth">👥 {result.species.name} {result.nth}体目</p>}
-          {(result.newKind || result.newSpecies) && <p className="gacha-new">NEW! {result.newSpecies ? `はじめての「${result.species.name}」` : ''}{result.newSpecies && result.newKind ? '・' : ''}{result.newKind ? `はじめての「${result.kind.name}」` : ''}</p>}
+          {(result.newKind || result.newSpecies) && (
+            <p className="buddy-chips gacha-new-chips" aria-label={`はじめて：${[result.newSpecies ? result.species.name : '', result.newKind ? result.kind.name : ''].filter(Boolean).join('・')}`}>
+              <span className="gacha-new">NEW!</span>
+              {result.newSpecies && <span>{result.species.name}</span>}
+              {result.newKind && <span>{result.kind.name}</span>}
+            </p>
+          )}
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
