@@ -1809,3 +1809,11 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .roulette-wheel li:not(.hit) { background: rgb(251 191 36 / 0.14); color: #fde68a; }
 }
 :root[data-theme="dark"] .roulette-wheel li:not(.hit) { background: rgb(251 191 36 / 0.14); color: #fde68a; }
+
+/* ダークモード：2人対戦の点数を明るい赤・青に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .vs-p1 .vs-score { color: #f87171; }
+  :root:not([data-theme="light"]) .vs-p2 .vs-score { color: #60a5fa; }
+}
+:root[data-theme="dark"] .vs-p1 .vs-score { color: #f87171; }
+:root[data-theme="dark"] .vs-p2 .vs-score { color: #60a5fa; }
