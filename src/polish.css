@@ -879,3 +879,29 @@ main select:focus {
   box-shadow: var(--shadow-md);
 }
 .spot-buttons { justify-content: center; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+/* ===== ボス戦：本文は紙、問題はカード ===== */
+.boss-passage {
+  padding: 10px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffdf7, #fffaf0);
+  color: #1f2937;
+  box-shadow: inset 0 1px 0 #fff, var(--shadow-md);
+}
+.boss-passage > summary { padding: 2px 0 6px; border-bottom: 1px dashed rgb(124 58 237 / 0.2); margin-bottom: 6px; }
+.boss-reading-q {
+  margin: 10px 0;
+  padding: 12px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  font-size: 1.05rem !important;
+  line-height: 1.6;
+  text-align: left;
+  box-shadow: 0 3px 0 rgb(124 58 237 / 0.15), var(--shadow-md);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .boss-passage { background: linear-gradient(180deg, #1b2236, #182033); color: #e5e7eb; }
+}
+:root[data-theme='dark'] .boss-passage { background: linear-gradient(180deg, #1b2236, #182033); color: #e5e7eb; }
