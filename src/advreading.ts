@@ -1851,4 +1851,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How do monarchs appear to find their way?', choices: ['By using the sun and an internal clock.', 'By following older butterflies.', 'By smelling the forests in Mexico.', 'By flying only at night.'], answer: 0, why: '第3段落 use the position of the sun ... with an internal clock。' },
     ],
   },
+  {
+    id: 'adv-crowds',
+    title: 'When Many Minds Are Better Than One',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1906, the British scientist Francis Galton visited a country fair where visitors were invited to guess the weight of an ox. Around eight hundred people took part, most of them with no special knowledge of animals. Galton expected their guesses to be poor, ( A ) when he examined the results, he found that the middle value of all the guesses was within about one percent of the true weight.",
+      "This phenomenon, later called 'the wisdom of crowds,' shows that a group can sometimes judge more accurately than its individual members. The reason is that individual errors tend to point in different directions. Some people guess too high and others too low, so when the guesses are combined, many of the errors ( B ) each other out.",
+      "However, the effect works only under certain conditions. The members of the group must think independently and bring different kinds of information. If people can see each other's answers, or if one confident voice persuades the rest, their errors begin to move in the same direction, and the group may become ( C ) wiser than a single person. A crowd is wise, in other words, not simply because it is large, but because it is diverse and independent.",
+    ],
+    ja: [
+      '1906年、イギリスの科学者フランシス・ゴルトンはある地方の品評会をおとずれた。そこでは来場者が雄牛の重さを当てるよう呼びかけられていた。約800人が参加したが、そのほとんどは動物について特別な知識をもっていなかった。ゴルトンは彼らの推測は不正確だろうと予想していたが、結果を調べてみると、すべての推測のまん中の値が、本当の重さとの差わずか1パーセントほどにおさまっていたことがわかった。',
+      'のちに「群衆の知恵」とよばれるこの現象は、集団がときにその個々のメンバーより正確に判断できることを示している。その理由は、個人のまちがいがばらばらの方向を向きやすいことにある。高すぎる推測をする人もいれば低すぎる人もいるため、推測を合わせると、多くのまちがいがおたがいに打ち消し合うのである。',
+      'しかし、この効果は一定の条件のもとでしか働かない。集団のメンバーはそれぞれ独立して考え、さまざまな種類の情報をもちよらなければならない。もし人々がたがいの答えを見られたり、自信たっぷりの一人の声がほかの人々を説得したりすると、まちがいが同じ方向に動きはじめ、集団は一人の人間より賢いとはいえなくなるかもしれない。つまり群衆が賢いのは、単に大きいからではなく、多様で独立しているからなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'so', 'because', 'or'], answer: 0, why: '「不正確だと予想していたが、実際は正確だった」という逆接なので but。' },
+      { id: 'B', choices: ['cancel', 'carry', 'find', 'give'], answer: 0, why: 'cancel each other out「たがいに打ち消し合う」。' },
+      { id: 'C', choices: ['no', 'much', 'even', 'far'], answer: 0, why: 'become no wiser than 〜「〜より少しも賢くない」。no ＋ 比較級で「少しも〜ない」。' },
+    ],
+    tf: [
+      { statement: 'ゴルトンは、来場者の推測は正確だろうと最初から予想していた。', answer: false, why: '第1段落 Galton expected their guesses to be poor。' },
+      { statement: '個人のまちがいがばらばらの方向を向くことが、群衆の知恵の理由とされている。', answer: true, why: '第2段落 individual errors tend to point in different directions。' },
+      { statement: '筆者は、集団は大きければ大きいほど必ず賢くなると述べている。', answer: false, why: '第3段落 not simply because it is large, but because it is diverse and independent。' },
+    ],
+    qa: [
+      { q: 'What can make a group lose its wisdom?', choices: ['Members seeing each other\'s answers or following one confident voice.', 'Having too many members.', 'Members thinking independently.', 'Bringing different kinds of information.'], answer: 0, why: '第3段落 If people can see each other\'s answers, or if one confident voice persuades the rest。' },
+    ],
+  },
 ]
