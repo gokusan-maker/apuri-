@@ -643,8 +643,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
             {battleRank(hearts, crits)}
           </p>
-          <p className="stats-note">
-            のこりハート {hearts}・会心 {crits}回{battleRank(hearts, crits) === 'S' ? `　Sランクボーナス 🪙${RANK_S_COINS}！` : '　（ハートを減らさず会心3回でSランク）'}
+          <p className="stats-note" title={battleRank(hearts, crits) === 'S' ? undefined : 'ハートを減らさず会心3回でSランク'}>
+            ❤️{hearts}・⚡会心{crits}回{battleRank(hearts, crits) === 'S' ? `・Sランク 🪙${RANK_S_COINS}！` : ''}
           </p>
           <p className="result-message boss-bonus">
             ボーナス +<CountUp to={bonus} />
