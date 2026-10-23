@@ -709,3 +709,36 @@ main h2::before {
 .setting.toggle input[type='checkbox']:checked { background: var(--accent-grad); }
 .setting.toggle input[type='checkbox']:checked::after { transform: translateX(18px); }
 .setting.toggle input[type='checkbox']:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ===== 読解の設問：見出し帯と立体の選択肢 ===== */
+.long-q {
+  margin: 18px 0 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent) 14%, var(--card)), color-mix(in srgb, var(--accent) 3%, var(--card)));
+  border-left: 4px solid var(--accent);
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.5;
+}
+.long-choice {
+  padding: 10px 8px;
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--fg);
+  font-weight: 600;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.long-choice:not(:disabled):active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)); }
+.long-choice.picked {
+  border-color: transparent;
+  background: var(--accent-grad);
+  color: #fff;
+  font-weight: 800;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 60%, #000), 0 6px 12px -6px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.long-choice.answer { border-color: transparent; background: var(--good-grad); color: #fff; box-shadow: 0 3px 0 #15803d; }
+.long-choice.picked:not(.answer):disabled { background: linear-gradient(135deg, #f87171, #dc2626); box-shadow: 0 3px 0 #991b1b; }
+.long-choices.tf { grid-template-columns: repeat(2, 84px); }
