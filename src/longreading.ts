@@ -4720,6 +4720,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'People started using yeast only a hundred years ago.', answer: false, why: '第4段落 for thousands of years。' },
     ],
   },
+  {
+    id: 'seed-travel',
+    title: 'How Do Seeds Travel?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Plants cannot walk, but their seeds often travel far from the parent plant. Why is this important? If all the seeds fell right under the parent, the young plants would have to share the same water, sunlight, and soil. By traveling, seeds can find new places ( A ) grow.',
+      'Some seeds travel by wind. A dandelion seed has a soft white part like a tiny parachute, so it can fly a long way on a windy day. Maple seeds have wings, and they spin like helicopters as they fall.',
+      'Other seeds travel with animals. Some seeds have small hooks that stick to the fur of animals or to people\'s clothes. Long ago, a man in Switzerland noticed these seeds on his dog after a walk. This gave him the idea for a new kind of fastener, ( B ) we now use on shoes and bags. Birds and other animals also eat fruit, and the seeds come out later in a different place.',
+      'Coconuts can even travel by water. They are light enough to float, so they can be carried by the sea to another island. Next time you see a plant growing in a strange place, think about the long journey its seed ( C ) have taken.',
+    ],
+    ja: [
+      '植物は歩けませんが、その種は親の植物から遠くへ旅することがよくあります。なぜそれが大切なのでしょうか。もし種が全部親のすぐ下に落ちたら、若い植物は同じ水や日光、土を分け合わなければならなくなります。旅をすることで、種は育つための新しい場所を見つけられるのです。',
+      '風で旅をする種もあります。タンポポの種には小さなパラシュートのような白くてやわらかい部分があるので、風の強い日には遠くまで飛ぶことができます。カエデの種には羽があり、落ちるときにヘリコプターのようにくるくる回ります。',
+      '動物といっしょに旅をする種もあります。小さなかぎがあって、動物の毛や人の服にくっつく種があるのです。むかし、スイスのある男性が散歩のあとで自分の犬にこのような種がついているのに気づきました。これが新しい種類の留め具のアイデアになり、それを今私たちはくつやかばんに使っています。また、鳥やほかの動物が果物を食べると、種はあとで別の場所に出てきます。',
+      'ココナツは水で旅をすることさえあります。浮かぶほど軽いので、海に運ばれて別の島へ行くことができるのです。今度、ふしぎな場所に植物が生えているのを見たら、その種がたどってきたかもしれない長い旅のことを考えてみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'at', 'by'], answer: 0, why: 'new places to grow「育つための新しい場所」（不定詞の形容詞的用法）。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'who'], answer: 0, why: 'コンマのあとで a new kind of fastener を説明する非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'C', choices: ['may', 'must not', 'should not', 'cannot'], answer: 0, why: 'may have ＋ 過去分詞「～したかもしれない」。' },
+    ],
+    underline: { phrase: 'light enough to float', choices: ['浮かぶほど軽い', '軽すぎて浮かばない', '浮かぶと軽くなる', '重すぎて沈む'], answer: 0, why: '形容詞 ＋ enough to ～「～するほど…」。' },
+    tf: [
+      { statement: 'It is better for all seeds to fall right under the parent plant.', answer: false, why: '第1段落：親の下に落ちると水や日光を分け合わなければならない。' },
+      { statement: 'Dandelion seeds can fly far on the wind.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Some seeds have hooks that stick to animal fur.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Coconuts are too heavy to float.', answer: false, why: '第4段落 They are light enough to float。' },
+      { statement: 'Seeds in fruit eaten by birds can come out in a different place.', answer: true, why: '第3段落の最後の文と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
