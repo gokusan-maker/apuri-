@@ -79,7 +79,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
                       {open ? <BuddyFigure track={t} buddy={mate} size={40} /> : <span className="buddy-lock">🔒</span>}
                       <span>
                         {sp.label}
-                        <small>{on ? '（いまのなかま）' : open ? `Lv.${buddyLevel(mate).level}` : `${ATTR_LABEL[t]}のなかまを Lv.${sp.unlockLv} にすると仲間に（ショップの属性のタマゴ・ボスのタマゴのかけらでも）`}</small>
+                        <small>{on ? '（いまのなかま）' : open ? `Lv.${buddyLevel(mate).level}` : `🔓 Lv.${sp.unlockLv} にすると仲間に（ショップの属性のタマゴでも）`}</small>
                       </span>
                     </button>
                   )
