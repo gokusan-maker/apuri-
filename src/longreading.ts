@@ -4827,7 +4827,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       'もちろん、日時計は夜やくもりの日には使えません。それでも、自分でかんたんな日時計を作ることができます。晴れた日の朝に地面に棒を立て、1時間ごとにかげの先に印をつけてみましょう。かげでできた自分だけの時計ができあがります。',
     ],
     blanks: [
-      { id: 'A', choices: ['opposite', 'next to', 'under', 'inside'], answer: 0, why: 'opposite ～「～の反対側に」。かげは太陽と反対側にできる。' },
+      { id: 'A', choices: ['opposite', 'next to', 'among', 'inside'], answer: 0, why: 'opposite ～「～の反対側に」。かげは太陽と反対側にできる。' },
       { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（かげが動くこと）を受ける非制限用法の which。' },
       { id: 'C', choices: ['yourself', 'yours', 'your', 'you'], answer: 0, why: 'make ～ yourself「自分で～を作る」。' },
     ],
