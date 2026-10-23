@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'like-such-as': { wrong: 'This cloud looks a dog.', right: 'This cloud looks like a dog.', why: '名詞の前では look like ～「～のように見える」。' },
   'there-was': { wrong: 'There was many people at the park.', right: 'There were many people at the park.', why: 'many people（複数）なので were。' },
   'number-of': { wrong: 'The number of students in my class are 30.', right: 'The number of students in my class is 30.', why: 'the number of ～「～の数」は単数あつかい。' },
   'been-gone': { wrong: 'She has gone to Paris twice.', right: 'She has been to Paris twice.', why: '「行ったことがある」（経験）は have been to。have gone to は「行ってしまった」。' },
