@@ -539,3 +539,12 @@ it('読解ボスに負けたときは「本文をもう一度読もう」と出�
   expect(screen.getByText(/本文をもう一度ゆっくり読んで/)).toBeInTheDocument()
   expect(screen.queryByText(/苦手な単語を復習して/)).toBeNull()
 })
+
+it('読解ボスは「💡 ヒント」で解説（答えはかくす）か根拠の1文が見える', () => {
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} reading onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />)
+  expect(document.querySelector('.boss-hint')).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: '💡 ヒント' }))
+  expect(document.querySelector('.boss-hint')!.textContent).toMatch(/💡|📍 根拠/)
+  expect(screen.queryByRole('button', { name: '💡 ヒント' })).toBeNull()
+})

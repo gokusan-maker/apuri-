@@ -1924,3 +1924,10 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* なかまの進化演出：名前を大きく1行で、説明は短く */
 .buddy-evolve .evo-name { display: block; font-size: 1.35rem; font-weight: 900; color: var(--fg); word-break: keep-all; overflow-wrap: anywhere; }
 .buddy-evolve .evo-track { display: block; margin-bottom: 6px; color: var(--muted); font-weight: 700; }
+
+/* ボス戦の読解ヒント：解説（答えの語はかくす）と根拠の1文。根拠のある段落は本文で色をつける */
+.boss-hint { margin: 8px 0; padding: 10px 12px; border-radius: 14px; background: color-mix(in srgb, #facc15 16%, var(--card)); border: 1px solid color-mix(in srgb, #facc15 45%, transparent); text-align: left; }
+.boss-hint p { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--fg); }
+.boss-hint p + p { margin-top: 6px; }
+.boss-hint q { font-weight: 700; }
+.boss-hint-para { background: color-mix(in srgb, #facc15 22%, transparent); border-radius: 8px; box-shadow: 0 0 0 4px color-mix(in srgb, #facc15 22%, transparent); }

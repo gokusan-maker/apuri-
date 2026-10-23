@@ -188,6 +188,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [lastDmg, setLastDmg] = useState(0) // 直前の正解のダメージ（数字の演出用）
   const [mvp, setMvp] = useState<{ en: string; ja: string; ms: number } | null>(null) // いちばん速く正解した単語
   const [hintAt, setHintAt] = useState<{ index: number; hide: number } | null>(null) // 相棒のヒント（1戦1回）
+  const [tipAt, setTipAt] = useState<number | null>(null) // 読解のヒント（解説・根拠の文）を開いた問題の番号
   const [proverb, setProverb] = useState<number | null>(null) // たおしたときに教えてくれたことわざ
   const [revenge, setRevenge] = useState(false) // リベンジ成功
   const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
@@ -372,6 +373,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   function retry() {
+    setTipAt(null)
     setMvp(null)
     setHintAt(null)
     setProverb(null)
@@ -698,7 +700,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             <details className="boss-passage" open>
               <summary>📖 本文：{(q as ReadingQ).passage.title}</summary>
               {(q as ReadingQ).passage.paragraphs.map((t, i) => (
-                <p key={i}>
+                <p key={i} className={tipAt === index && picked === null && (q as ReadingQ).hint?.quote && t.includes((q as ReadingQ).hint!.quote!.replace(/\s+$/, '')) ? 'boss-hint-para' : undefined}>
                   {filledParts(
                     t,
                     (q as ReadingQ).passage,
@@ -731,6 +733,21 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             </details>
           )}
           <p className={`en${'passage' in q ? ' boss-reading-q' : ''}`}>{q.word.en}</p>
+          {'passage' in q && picked === null && ((q as ReadingQ).hint?.note || (q as ReadingQ).hint?.quote) &&
+            (tipAt === index ? (
+              <div className="boss-hint" role="status">
+                {(q as ReadingQ).hint!.note && <p>💡 {(q as ReadingQ).hint!.note}</p>}
+                {(q as ReadingQ).hint!.quote && (
+                  <p>
+                    📍 根拠：<q lang="en">{(q as ReadingQ).hint!.quote}</q>
+                  </p>
+                )}
+              </div>
+            ) : (
+              <button className="hint-5050 boss-hint-btn" onClick={() => setTipAt(index)}>
+                💡 ヒント
+              </button>
+            ))}
           {partner && hintAt === null && picked === null && q.choices.length > 2 && (
             <button
               className="hint-5050"
