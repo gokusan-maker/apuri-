@@ -1,3 +1,4 @@
+import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
@@ -227,6 +228,7 @@ function App() {
   const [cardFocus, setCardFocus] = useState<{ kind: Focus; done: string[] } | null>(null)
   const [picked, setPicked] = useState<string[]>([]) // 単語一覧から選んだ単語
   const [themeQuiz, setThemeQuiz] = useState(false) // テーマで練習：クイズでやる
+  const [grammarDrill, setGrammarDrill] = useState<GrammarDrill | null>(null) // 文法チャレンジの文法ドリルをやっているとき
   const [favorites, setFavorites] = usePersistent(loadFavorites, saveFavorites)
   const [rouletteDay, setRouletteDay] = usePersistent(loadRouletteDay, saveRouletteDay)
   const [walkDay, setWalkDay] = usePersistent(loadWalkDay, saveWalkDay)
@@ -1810,6 +1812,13 @@ function App() {
               count('timeAttack')
             }} />
         </>
+      ) : mode === 'grammar' && grammarDrill ? (
+        <>
+          <button className="stage-back" onClick={() => setGrammarDrill(null)}>
+            ← 文法チャレンジ
+          </button>
+          <Quiz key={`drill:${grammarDrill}`} direction={grammarDrill} lockDirection words={words} onAnswer={onAnswerTrack('grammar')} onXp={(n) => feedTrack('grammar', n)} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+        </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
           {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
@@ -1830,6 +1839,7 @@ function App() {
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
+            onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
@@ -1950,6 +1960,7 @@ function App() {
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
               setMode(t.id)
+              setGrammarDrill(null)
               setDailyGo(false)
               setTodayQuiz(false)
               setShortGo(false)

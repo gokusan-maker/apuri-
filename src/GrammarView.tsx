@@ -1,3 +1,4 @@
+import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
 import { useState } from 'react'
 import { BossFigure } from './BossView'
 import { GrammarCards } from './GrammarCardsView'
@@ -29,6 +30,7 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = {
+  onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
   units?: GrammarUnit[] // 省略時は文法の単元
   title?: string
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
@@ -90,7 +92,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames }: Props) {
+export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames }: Props) {
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -349,6 +351,20 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
               </button>
             ))}
           </div>
+        )}
+        {stampMode && onDrill && (
+          <details className="grammar-drills">
+            <summary>
+              🧩 文法ドリル <span className="fold-meta">{GRAMMAR_DRILLS.length}</span>
+            </summary>
+            <div className="drill-grid" role="group" aria-label="文法ドリル">
+              {GRAMMAR_DRILLS.map((d) => (
+                <button key={d.id} onClick={() => onDrill(d.id)}>
+                  {d.label}
+                </button>
+              ))}
+            </div>
+          </details>
         )}
         {stampMode && (
           <details className="tense-table">

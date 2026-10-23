@@ -847,3 +847,14 @@ it('単元一覧：まだの単元は「未挑戦」を出さず、NEW は題名
   expect(btn.textContent).not.toContain('未挑戦')
   expect(btn.querySelector('.unit-new + .unit-title')).not.toBeNull()
 })
+
+it('文法チャレンジに「🧩 文法ドリル」があり、押すとそのドリルを開く', async () => {
+  const { GRAMMAR_DRILLS } = await import('./grammardrills')
+  localStorage.clear()
+  const onDrill = vi.fn()
+  render(<Grammar onDrill={onDrill} />)
+  const g = screen.getByRole('group', { name: '文法ドリル' })
+  expect(g.querySelectorAll('button').length).toBe(GRAMMAR_DRILLS.length)
+  fireEvent.click(within(g).getByText('👥 複数形'))
+  expect(onDrill).toHaveBeenCalledWith('plural')
+})

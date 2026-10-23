@@ -955,6 +955,16 @@ describe('App', () => {
     expect(screen.queryByText('🗼 エンドレスの塔')).toBeNull()
   })
 
+  it('文法ドリル（複数形など）は文法チャレンジから開けて、← 文法チャレンジで戻れる', () => {
+    render(<App />)
+    navTo('文法チャレンジ')
+    fireEvent.click(within(screen.getByRole('group', { name: '文法ドリル' })).getByText('👥 複数形'))
+    expect(screen.getByText('← 文法チャレンジ')).toBeInTheDocument()
+    expect(screen.queryByRole('group', { name: '文法ドリル' })).toBeNull()
+    fireEvent.click(screen.getByText('← 文法チャレンジ'))
+    expect(screen.getByRole('group', { name: '文法ドリル' })).toBeInTheDocument()
+  })
+
   it('記録タブに相棒のきもち日記が出る', () => {
     render(<App />)
     navTo('ホーム')

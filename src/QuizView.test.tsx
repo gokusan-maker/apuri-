@@ -141,8 +141,8 @@ it('📝 穴埋めでは例文の空欄に入る単語を選び、答えると�
 })
 
 it('🔁 不規則動詞ドリルで活用を答えられる', () => {
-  render(<Quiz words={WORDS.slice(0, 8)} count={1} />)
-  pickMode('🔁 不規則動詞')
+  // 文法ドリルは文法チャレンジから direction を指定して開く
+  render(<Quiz words={WORDS.slice(0, 8)} count={1} direction="irregular" lockDirection />)
   const base = document.querySelector('.irregular .en')!.textContent!
   const tense = document.querySelector('.verb-ask strong')!.textContent
   const v = VERBS.find((x) => x.base === base)!
@@ -443,4 +443,13 @@ it('単語ゲームの中の文法のミニゲーム（複数形など）の答�
   expect(isGrammarGame('be')).toBe(true)
   expect(isGrammarGame('en-ja')).toBe(false)
   expect(isGrammarGame('confusing')).toBe(false)
+})
+
+it('文法ドリル（複数形・be動詞など）は単語ゲームのミニゲームのメニューには出ない', () => {
+  render(<Quiz words={WORDS.slice(0, 8)} />)
+  fireEvent.click(document.querySelector('.mode-btn')!)
+  const menu = screen.getByRole('group', { name: 'ミニゲームの種類' })
+  expect(menu.textContent).not.toContain('👥 複数形')
+  expect(menu.textContent).not.toContain('🟰 be動詞')
+  expect(menu.textContent).toContain('⚠️ まちがえやすい単語')
 })

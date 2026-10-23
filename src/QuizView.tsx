@@ -14,6 +14,7 @@ import { useKeys } from './useKeys'
 import { Spell } from './SpellView'
 import { Irregular } from './IrregularView'
 import { Grammar, QUICK_PERFECT_COINS, RUN_BEST_XP } from './GrammarView'
+import type { GrammarDrill } from './grammardrills'
 import { TASK_XP } from './dailyread'
 import { CONFUSING } from './confusing'
 import { DEFS } from './definitions'
@@ -147,24 +148,24 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'bingo', label: '🎯 単語ビンゴ', group: 'パズル・ゲーム' },
   { id: 'mole', label: '🔨 単語もぐらたたき', group: 'パズル・ゲーム' },
   { id: 'wordsearch', label: '🔍 ことばさがし', group: 'パズル・ゲーム' },
-  { id: 'plural', label: '👥 複数形', group: '文法・読解' },
-  { id: 'past-ed', label: '⏪ 過去形のつづり', group: '文法・読解' },
-  { id: 'compare', label: '📏 比較級・最上級', group: '文法・読解' },
-  { id: 'be', label: '🟰 be動詞', group: '文法・読解' },
-  { id: 'article', label: '🅰️ a と an', group: '文法・読解' },
-  { id: 'neg', label: '🚫 否定文', group: '文法・読解' },
-  { id: 'placeprep', label: '📦 場所の前置詞', group: '文法・読解' },
-  { id: 'modal', label: '💪 助動詞', group: '文法・読解' },
-  { id: 'pronoun', label: '👤 代名詞', group: '文法・読解' },
-  { id: 'muchmany', label: '🔢 much と many', group: '文法・読解' },
+  { id: 'plural', label: '👥 複数形', group: '文法ドリル' },
+  { id: 'past-ed', label: '⏪ 過去形のつづり', group: '文法ドリル' },
+  { id: 'compare', label: '📏 比較級・最上級', group: '文法ドリル' },
+  { id: 'be', label: '🟰 be動詞', group: '文法ドリル' },
+  { id: 'article', label: '🅰️ a と an', group: '文法ドリル' },
+  { id: 'neg', label: '🚫 否定文', group: '文法ドリル' },
+  { id: 'placeprep', label: '📦 場所の前置詞', group: '文法ドリル' },
+  { id: 'modal', label: '💪 助動詞', group: '文法ドリル' },
+  { id: 'pronoun', label: '👤 代名詞', group: '文法ドリル' },
+  { id: 'muchmany', label: '🔢 much と many', group: '文法ドリル' },
   { id: 'ordinal', label: '🥇 〜番目（序数）', group: 'パズル・ゲーム' },
-  { id: 'waswere', label: '⏪ was と were', group: '文法・読解' },
+  { id: 'waswere', label: '⏪ was と were', group: '文法ドリル' },
   { id: 'homophone', label: '👂 同じ発音', group: 'パズル・ゲーム' },
-  { id: 'gmix', label: '🎲 文法ミックス', group: '文法・読解' },
-  { id: 'timeprep', label: '🗓 in・on・at（時）', group: '文法・読解' },
-  { id: 'wh', label: '❔ 疑問詞', group: '文法・読解' },
-  { id: 'third', label: '🧍 3単現の s', group: '文法・読解' },
-  { id: 'ing', label: '🏃 ing形のつづり', group: '文法・読解' },
+  { id: 'gmix', label: '🎲 文法ミックス', group: '文法ドリル' },
+  { id: 'timeprep', label: '🗓 in・on・at（時）', group: '文法ドリル' },
+  { id: 'wh', label: '❔ 疑問詞', group: '文法ドリル' },
+  { id: 'third', label: '🧍 3単現の s', group: '文法ドリル' },
+  { id: 'ing', label: '🏃 ing形のつづり', group: '文法ドリル' },
   { id: 'sequence', label: '📅 順番クイズ', group: 'パズル・ゲーム' },
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
@@ -179,14 +180,14 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'tiles', label: '🔤 文字タイル', group: '書く・並べる' },
   { id: 'blank', label: '📝 穴埋め', group: '書く・並べる' },
   { id: 'order', label: '🔀 並べ替え', group: '書く・並べる' },
-  { id: 'irregular', label: '🔁 不規則動詞', group: '文法・読解' },
-  { id: 'confusing', label: '⚠️ まちがえやすい単語', group: '文法・読解' },
-  { id: 'sounds', label: '👄 発音のコツ', group: '文法・読解' },
+  { id: 'irregular', label: '🔁 不規則動詞', group: '文法ドリル' },
+  { id: 'confusing', label: '⚠️ まちがえやすい単語', group: 'パズル・ゲーム' },
+  { id: 'sounds', label: '👄 発音のコツ', group: '聞く・話す' },
   { id: 'twister', label: '👅 早口ことば', group: '聞く・話す' },
 ]
 // いつも見えるところに出す人気のミニゲーム（ほかは「ミニゲームをえらぶ」から）
 const POPULAR: Direction[] = ['mix', 'memory', 'mole', 'riddle', 'rival']
-const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる', '文法・読解']
+const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる'] // 文法ドリルは文法チャレンジのページにある
 const COLLAPSE_KEY = 'eitan:quiz-collapsed'
 function loadCollapsed(): string[] {
   try {
@@ -237,6 +238,7 @@ type Props = {
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
+  onDrill?: (id: GrammarDrill) => void // 文法チャレンジの「文法ドリル」を選んだ
   onCards?: () => void // 指定すると、ゲームのタイルの先頭に「単語カード」を出す
   onDirection?: (d: Direction) => void // いま遊んでいるゲームの種類が決まった・かわったとき
   onGrammarAnswer?: Props['onAnswer'] // 文法のミニゲーム（複数形・be動詞など）の答え：文法のなかまが育つ
@@ -257,7 +259,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -461,7 +463,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
               <p className="mode-group-name">さいきん遊んだ種類</p>
               <div className="direction">
                 {recent
-                  .map((id) => DIRECTIONS.find((d) => d.id === id))
+                  .map((id) => DIRECTIONS.find((d) => d.id === id && d.group !== '文法ドリル'))
                   .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
                   .map((d) => (
                     <button key={d.id} aria-pressed={direction === d.id} onClick={() => restart(d.id)}>
@@ -813,7 +815,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar quickStart={grammarQuick} onAllGames={onCoins ? () => onCoins(ALL_GAMES_COINS) : undefined} onTaBest={onXp ? () => onXp(TA_BEST_XP) : undefined} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => {
+        <Grammar onDrill={onDrill} quickStart={grammarQuick} onAllGames={onCoins ? () => onCoins(ALL_GAMES_COINS) : undefined} onTaBest={onXp ? () => onXp(TA_BEST_XP) : undefined} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => {
           onCoins(DAILY_GRAMMAR_COINS)
           onXp?.(TASK_XP) // 今日の文法クリアで文法のなかまにも
         } : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />
