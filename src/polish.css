@@ -1774,3 +1774,17 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .shop .badge-grid .room-try:not([aria-pressed='true']) { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.12); color: var(--text); }
 }
 :root[data-theme="dark"] .shop .badge-grid .room-try:not([aria-pressed='true']) { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.12); color: var(--text); }
+
+/* ダークモード：ボス部屋の上の相棒カード・ボス戦の応援の行も暗い色に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .boss-ally { background: linear-gradient(90deg, rgb(139 92 246 / 0.22), rgb(59 130 246 / 0.18)); color: var(--text); }
+  :root:not([data-theme="light"]) .boss-ally-text small { color: #c4b5fd; }
+  :root:not([data-theme="light"]) .boss-ally.ally-grammar { background: linear-gradient(90deg, rgb(34 197 94 / 0.2), rgb(99 102 241 / 0.16)); color: var(--text); }
+  :root:not([data-theme="light"]) .boss-ally.ally-grammar small { color: #86efac; }
+  :root:not([data-theme="light"]) .boss-partner { background: rgb(255 255 255 / 0.08); color: var(--text); }
+}
+:root[data-theme="dark"] .boss-ally { background: linear-gradient(90deg, rgb(139 92 246 / 0.22), rgb(59 130 246 / 0.18)); color: var(--text); }
+:root[data-theme="dark"] .boss-ally-text small { color: #c4b5fd; }
+:root[data-theme="dark"] .boss-ally.ally-grammar { background: linear-gradient(90deg, rgb(34 197 94 / 0.2), rgb(99 102 241 / 0.16)); color: var(--text); }
+:root[data-theme="dark"] .boss-ally.ally-grammar small { color: #86efac; }
+:root[data-theme="dark"] .boss-partner { background: rgb(255 255 255 / 0.08); color: var(--text); }
