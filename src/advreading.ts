@@ -2411,4 +2411,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What do the largest leafcutter ants do?', choices: ['They defend the colony.', 'They grow the fungus.', 'They cut leaves.', 'They carry eggs to the surface.'], answer: 0, why: '第2段落 The largest ants defend the colony。' },
     ],
   },
+{
+    id: 'hs-town-guide',
+    title: 'Our English Town Guide',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last year, many tourists from abroad started visiting our small town to see the old temple and the rice fields. However, there were few signs in English, and some tourists looked lost. Our English teacher asked us, \"What can we do ( A ) help them?\" After talking in groups, our class decided to make a town guide in English.",
+      "We divided the work. Some students took pictures, and others interviewed shop owners. I was in charge of the page about the temple. Writing in English was harder than I thought. I had to check many words in the dictionary, and our teacher corrected my sentences again and again. When the guide was finished, the town office printed five hundred ( B ) and put them at the station.",
+      "One Sunday, I saw a woman holding our guide in front of the temple. She was smiling and taking pictures. I wanted to talk to her, but I was too shy. Then she came to me and asked, \"Excuse me, is this the temple in the guide?\" I answered, \"Yes! I wrote that page.\" She looked surprised and said, \"It's very easy to understand. Thank you.\" At that moment, I felt that the English I ( C ) at school was really useful.",
+    ],
+    ja: [
+      '去年、外国から来た多くの観光客が、古いお寺と田んぼを見に私たちの小さな町をおとずれはじめた。しかし、英語の案内表示はほとんどなく、道に迷っているように見える観光客もいた。英語の先生は私たちに「その人たちを助けるために、何ができるかな」と聞いた。グループで話し合ったあと、私たちのクラスは英語の町の案内を作ることに決めた。',
+      '私たちは仕事を分担した。写真をとる生徒もいれば、お店の人にインタビューする生徒もいた。私はお寺のページの担当だった。英語で書くのは思っていたよりむずかしかった。たくさんの単語を辞書で調べなければならず、先生は私の文を何度も直してくれた。案内が完成すると、町役場が500部を印刷して駅に置いてくれた。',
+      'ある日曜日、私はお寺の前で私たちの案内を持っている女性を見かけた。彼女はほほえみながら写真をとっていた。話しかけたかったが、はずかしくてできなかった。すると彼女が私のところへ来て「すみません、これが案内にあるお寺ですか」とたずねた。私は「はい！そのページは私が書きました」と答えた。彼女はおどろいた様子で「とてもわかりやすいです。ありがとう」と言った。そのとき私は、学校で学んでいる英語は本当に役に立つのだと感じた。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'by', 'with'], answer: 0, why: 'to help them「彼らを助けるために」（不定詞の副詞的用法）。' },
+      { id: 'B', choices: ['copies', 'pieces', 'pages', 'papers'], answer: 0, why: '印刷物の「部」は copy で数える。five hundred copies「500部」。' },
+      { id: 'C', choices: ['was learning', 'was learned', 'had learned to', 'learning'], answer: 0, why: '主節の felt（過去）に合わせて、「学校で学んでいる（最中の）英語」を過去進行形 was learning で表す。' },
+    ],
+    tf: [
+      { statement: '町には、もともと英語の案内表示がたくさんあった。', answer: false, why: '第1段落 there were few signs in English。' },
+      { statement: '筆者はお寺のページを担当した。', answer: true, why: '第2段落 I was in charge of the page about the temple。' },
+      { statement: '筆者は自分から女性に話しかけた。', answer: false, why: '第3段落 I was too shy. Then she came to me。' },
+    ],
+    qa: [
+      { q: 'Why did the class decide to make a town guide in English?', choices: ['To help tourists who looked lost.', 'To win a contest at school.', 'To sell it at the station.', 'To practice taking pictures.'], answer: 0, why: '第1段落 some tourists looked lost / What can we do to help them?' },
+    ],
+  },
 ]
