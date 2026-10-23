@@ -226,7 +226,7 @@ it('結果画面から、まちがえた単語をまとめて★に入れる', (
   const list = screen.getByRole('list', { name: 'まちがえた単語' })
   expect(list.querySelectorAll('li')).toHaveLength(2)
   for (const id of wrongs) expect(list.textContent).toContain(words.find((w) => w.id === id)!.ja)
-  fireEvent.click(screen.getByText('★ まちがえた単語をお気に入りに'))
+  fireEvent.click(screen.getByText('★ まちがいをお気に入りに'))
   expect(got).toEqual([wrongs])
   expect(screen.getByText('★に入れました')).toBeDisabled()
 })
@@ -244,7 +244,7 @@ it('結果画面から、まちがえた問題だけもう一度', () => {
     } else fireEvent.click(screen.getByRole('button', { name: w.ja }))
     fireEvent.click(screen.getByText('次へ'))
   }
-  fireEvent.click(screen.getByText('まちがえた 2問だけもう一度'))
+  fireEvent.click(screen.getByText('🔁 まちがい2問を復習'))
   expect(screen.getByText(/^1 \/ 2/)).toBeInTheDocument()
   expect(wrongs).toContain(document.querySelector('.quiz .en')!.textContent)
 })

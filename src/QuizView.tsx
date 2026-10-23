@@ -945,7 +945,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <MissedList words={missed} />
         {missed.length > 0 && !onRestart && (
           <button className="list-link" onClick={() => restart(direction, missed)}>
-            まちがえた {missed.length}問だけもう一度
+            🔁 まちがい{missed.length}問を復習
           </button>
         )}
         {missed.length > 0 && onFavorite && (
@@ -957,7 +957,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
               setFavDone(true)
             }}
           >
-            {favDone ? '★に入れました' : '★ まちがえた単語をお気に入りに'}
+            {favDone ? '★に入れました' : '★ まちがいをお気に入りに'}
           </button>
         )}
         <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>
