@@ -3123,4 +3123,33 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 
+{
+    id: 'hs-shogi',
+    title: 'Shogi with My Grandfather',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "When I was ten, my grandfather taught me how to play shogi. At first, I lost every game, and I often wanted to quit. My grandfather always smiled and said, \"Losing is the best teacher.\" After each game, he showed me ( A ) I had made a bad move, and we played the same position again.",
+      "Last spring, a student from Canada named Liam joined our class. He was interested in Japanese culture, so I invited him to my grandfather's house. My grandfather does not speak English, but he used his hands and the pieces to explain the rules. I helped by translating a few words. Liam was quick to learn, and by the end of the day he ( B ) win a game against me.",
+      "Now Liam and I play shogi every week after school. Sometimes I win, and sometimes he does. Through shogi, I learned that you can communicate with people even when you do not share a language. I also understood my grandfather's words better. Each time I lose, I think about my mistakes ( C ) of feeling sad. Losing really can be a good teacher.",
+    ],
+    ja: [
+      '10歳のとき、祖父が将棋のさし方を教えてくれた。はじめは毎回負けてしまい、何度もやめたくなった。祖父はいつもほほえんで「負けることがいちばんの先生だよ」と言った。1局終わるたびに、祖父は私がどこで悪い手をさしたのかを見せてくれ、同じ局面をもう一度さし直した。',
+      'この春、カナダからリアムという生徒が私たちのクラスに入ってきた。彼は日本の文化に興味があったので、私は彼を祖父の家にさそった。祖父は英語を話さないが、手と駒を使ってルールを説明した。私はいくつかの言葉を訳して手伝った。リアムは覚えるのが早く、その日の終わりには私に1局勝つことができた。',
+      '今では、リアムと私は毎週放課後に将棋をさしている。私が勝つときもあれば、彼が勝つときもある。将棋を通して、私は言葉が同じでなくても人と気持ちを通わせられることを学んだ。祖父の言葉の意味もよくわかるようになった。負けるたびに、私は悲しむかわりに自分のまちがいについて考える。負けることは、本当によい先生になりうるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'what', 'who', 'which'], answer: 0, why: '「どこで悪い手をさしたのか」という間接疑問。I had made a bad move は完全な文なので where。' },
+      { id: 'B', choices: ['was able to', 'could be', 'was able', 'is able'], answer: 0, why: 'be able to ＋ 原形「～できる」。過去の文なので was able to win。' },
+      { id: 'C', choices: ['instead', 'despite', 'although', 'during'], answer: 0, why: 'instead of ～ing「～するかわりに」。despite・although・during は of をとらない。' },
+    ],
+    tf: [
+      { statement: '筆者は、はじめから将棋で祖父に勝つことができた。', answer: false, why: '第1段落 At first, I lost every game。' },
+      { statement: '筆者の祖父は、英語を話さない。', answer: true, why: '第2段落 My grandfather does not speak English。' },
+      { statement: 'リアムは、その日のうちに筆者に1局勝った。', answer: true, why: '第2段落 by the end of the day he was able to win a game against me。' },
+      { statement: '今では、いつもリアムが勝っている。', answer: false, why: '第3段落 Sometimes I win, and sometimes he does。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn through shogi?', choices: ['People can communicate without sharing a language.', 'Shogi is easier than chess.', 'Winning is more important than practice.', 'Canada has its own kind of shogi.'], answer: 0, why: '第3段落 you can communicate with people even when you do not share a language。' },
+    ],
+  },
 ]
