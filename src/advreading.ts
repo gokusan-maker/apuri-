@@ -2607,4 +2607,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What question does the writer suggest we ask ourselves?', choices: ['Whether we would start the plan today, knowing what we know now.', 'How much money we have already spent.', 'What other people will think of us.', 'How to finish the plan as quickly as possible.'], answer: 0, why: '第3段落 "Knowing what I know now, would I start this today?"' },
     ],
   },
+{
+    id: 'hs-bento',
+    title: 'The Lunch Box I Made',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Every morning, my mother gets up at five to make lunch boxes for my brother and me. I never thought much about it. One night in February, she caught a bad cold and had to stay in bed. My father had to leave early the next day, so I decided to make the lunch boxes ( A ).",
+      "I set my alarm for five thirty, but it took me a long time to cook. The rice was too soft, and the eggs were a little burned. I put everything into the boxes and looked at them. They did not look as good as my mother's. When I left for school, my brother looked at his lunch box and said, \"It's OK. I'll eat it all.\"",
+      "At lunchtime, I opened my box. The food was not perfect, but I ate every piece. I thought about my mother. She has done this hard work every morning for years ( B ) complaining. That evening, I told her, \"Thank you for making our lunch every day.\" She smiled and said, \"Your eggs were better than mine.\" Now I make the lunch boxes every Saturday, ( C ) she can sleep a little longer.",
+    ],
+    ja: [
+      '毎朝、母は5時に起きて、弟と私のお弁当を作ってくれる。私はそれについてあまり考えたことがなかった。2月のある夜、母はひどいかぜをひいて、ねていなければならなくなった。次の日、父は早く出かけなければならなかったので、私は自分でお弁当を作ることにした。',
+      '私は目覚ましを5時半にセットしたが、作るのにとても時間がかかった。ごはんはやわらかすぎて、卵は少しこげてしまった。全部を箱につめてながめてみた。母のお弁当ほどおいしそうには見えなかった。私が学校へ出かけるとき、弟は自分のお弁当を見て「だいじょうぶ。全部食べるよ」と言った。',
+      '昼休みに、私はお弁当を開けた。料理は完ぺきではなかったが、私はひとつ残らず食べた。私は母のことを考えた。母は何年も、文句も言わずに毎朝この大変な仕事をしてきたのだ。その夜、私は母に「毎日お弁当を作ってくれてありがとう」と言った。母はほほえんで「あなたの卵のほうが私のよりおいしかったよ」と言った。今では、母が少し長くねられるように、私は毎週土曜日にお弁当を作っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['myself', 'me', 'mine', 'my'], answer: 0, why: 'make ～ myself「自分で～を作る」。再帰代名詞で「自分で」を表す。' },
+      { id: 'B', choices: ['without', 'with', 'by', 'from'], answer: 0, why: 'without ～ing「～しないで」。without complaining「文句を言わずに」。' },
+      { id: 'C', choices: ['so', 'but', 'or', 'because of'], answer: 0, why: 'so (that) ～「～できるように」。母が長くねられるように作る。' },
+    ],
+    tf: [
+      { statement: '筆者の母は、ふだん毎朝5時に起きてお弁当を作っている。', answer: true, why: '第1段落 my mother gets up at five to make lunch boxes。' },
+      { statement: '筆者が作ったお弁当は、母のものよりおいしそうに見えた。', answer: false, why: "第2段落 They did not look as good as my mother's。" },
+      { statement: '筆者は今、毎週土曜日にお弁当を作っている。', answer: true, why: '第3段落 Now I make the lunch boxes every Saturday。' },
+    ],
+    qa: [
+      { q: 'Why did the writer make the lunch boxes that day?', choices: ['The mother was sick, and the father had to leave early.', 'The writer wanted to win a cooking contest.', 'The brother asked for a special lunch.', 'There was no school lunch that day.'], answer: 0, why: '第1段落 she caught a bad cold / My father had to leave early。' },
+    ],
+  },
 ]
