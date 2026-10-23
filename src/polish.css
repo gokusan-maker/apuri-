@@ -1769,11 +1769,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .univ-floors li { background: rgb(255 255 255 / 0.06); }
 :root[data-theme="dark"] .boss-book-list li { background: rgb(255 255 255 / 0.06); }
 
-/* ダークモード：きせかえの「ためす」ボタンも暗く */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .shop .badge-grid .room-try:not([aria-pressed='true']) { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.12); color: var(--fg); }
-}
-:root[data-theme="dark"] .shop .badge-grid .room-try:not([aria-pressed='true']) { background: rgb(255 255 255 / 0.08); border-color: rgb(255 255 255 / 0.12); color: var(--fg); }
 
 /* ダークモード：ボス部屋の上の相棒カード・ボス戦の応援の行も暗い色に */
 @media (prefers-color-scheme: dark) {
