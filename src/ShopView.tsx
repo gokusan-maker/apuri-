@@ -119,7 +119,10 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
             }}
           >
             {favSnack === sn.id && <span className="fav-snack-tag">💕 きょうの好物 XP2倍！</span>}
-            {sn.icon} {sn.name} 🪙{sn.price}（+{favSnack === sn.id ? sn.xp * 2 : sn.xp}XP）
+            <span className="item-icon" aria-hidden="true">{sn.icon}</span>
+            <span className="item-name">{sn.name}</span>
+            <span className="item-meta">+{favSnack === sn.id ? sn.xp * 2 : sn.xp}XP</span>
+            <span className="item-price">🪙{sn.price}</span>
           </button>
         ))}
       </div>
@@ -144,7 +147,10 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           <div className="snacks">
             {BATTLE_ITEMS.map((it) => (
               <button key={it.id} className="good" disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
-                {it.icon} {it.name} 🪙{it.price}（{it.desc}・持っている数 {bag[it.id]}）
+                <span className="item-icon" aria-hidden="true">{it.icon}</span>
+                <span className="item-name">{it.name}</span>
+                <span className="item-meta">{it.desc}・持っている数 {bag[it.id]}</span>
+                <span className="item-price">🪙{it.price}</span>
               </button>
             ))}
           </div>
