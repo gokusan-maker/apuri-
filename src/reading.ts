@@ -1443,6 +1443,39 @@ export const PASSAGES: Passage[] = [
       { q: '大会では何回とべた？', choices: ['40回', '50回', '60回'], answer: 2 },
     ],
   },
+  {
+    id: 'bowling-day',
+    title: 'My First Strike',
+    text: 'Last Saturday, my family went bowling. At first, my ball always went into the side. My father showed me how to throw it straight. In the last game, I knocked down all ten pins! It was my first strike. Everyone gave me a high five.',
+    ja: 'この前の土曜日、家族でボウリングに行きました。最初は、私のボールはいつもみぞに落ちていました。父がまっすぐ投げる方法を教えてくれました。最後のゲームで、私は10本のピンを全部たおしました！ 初めてのストライクでした。みんながハイタッチしてくれました。',
+    questions: [
+      { q: '家族はどこへ行った？', choices: ['ボウリング場', '水族館', '動物園'], answer: 0 },
+      { q: 'だれが投げ方を教えてくれた？', choices: ['父', '母', '兄'], answer: 0 },
+      { q: '最後のゲームで何があった？', choices: ['初めてストライクを取った', 'ボールを落とした', '負けて泣いた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'strawberry-picking',
+    title: 'Strawberry Picking',
+    text: 'In March, we went strawberry picking at a farm near our town. The strawberries were red, big, and very sweet. We could eat as many as we wanted for thirty minutes. I ate about forty! I also took some home and made jam with my mother.',
+    ja: '3月に、町の近くの農園へいちごがりに行きました。いちごは赤くて大きくて、とてもあまかったです。30分間、好きなだけ食べることができました。私は40個くらい食べました！ いくつか家に持ち帰って、母といっしょにジャムも作りました。',
+    questions: [
+      { q: 'いちごがりに行ったのは何月？', choices: ['3月', '5月', '7月'], answer: 0 },
+      { q: '何分間食べられた？', choices: ['10分', '30分', '60分'], answer: 1 },
+      { q: '家で何を作った？', choices: ['ジャム', 'ケーキ', 'ジュース'], answer: 0 },
+    ],
+  },
+  {
+    id: 'tadpoles',
+    title: 'From Tadpoles to Frogs',
+    text: 'In spring, our class found some tadpoles in a pond and kept them in a tank. We fed them every day. After a few weeks, they grew back legs, and then front legs. Their tails became shorter and shorter. In June, they became small frogs, and we let them go back to the pond.',
+    ja: '春に、クラスで池からおたまじゃくしを見つけて、水そうで飼いました。私たちは毎日えさをあげました。数週間すると、後ろ足が生え、それから前足が生えました。しっぽはどんどん短くなりました。6月には小さなカエルになったので、池に帰してあげました。',
+    questions: [
+      { q: 'おたまじゃくしはどこで見つけた？', choices: ['池', '川', '海'], answer: 0 },
+      { q: '先に生えたのはどっち？', choices: ['後ろ足', '前足', 'しっぽ'], answer: 0 },
+      { q: 'カエルになったあと、どうした？', choices: ['池に帰した', 'ずっと飼った', '友だちにあげた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
