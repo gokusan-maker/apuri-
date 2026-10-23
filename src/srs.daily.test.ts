@@ -58,3 +58,16 @@ it('復習の上限を決めると、その数までしか復習を出さない'
   expect(buildQueue(words, progress, '2026-10-20', 0, 10, false, 3)).toHaveLength(3)
   expect(buildQueue(words, progress, '2026-10-20', 0, 10, false, 0)).toHaveLength(10)
 })
+
+it('順番どおりのときも、今日の新しい単語は日によって変わる（同じ日は同じ）', () => {
+  const words = Array.from({ length: 100 }, (_, i) => ({ id: `n${i}` }))
+  const day1 = buildQueue(words, {}, '2026-10-20', 0).map((w) => w.id)
+  expect(buildQueue(words, {}, '2026-10-20', 0).map((w) => w.id)).toEqual(day1)
+  const day2 = buildQueue(words, {}, '2026-10-21', 0).map((w) => w.id)
+  expect(day2).not.toEqual(day1)
+  // 5日でまだの単語の先頭50語をひとめぐりする（難しい単語に飛ばない）
+  const seen = new Set<string>()
+  for (let d = 20; d < 25; d++) buildQueue(words, {}, `2026-10-${d}`, 0).forEach((w) => seen.add(w.id))
+  expect(seen.size).toBe(50)
+  expect([...seen].every((id) => Number(id.slice(1)) < 50)).toBe(true)
+})

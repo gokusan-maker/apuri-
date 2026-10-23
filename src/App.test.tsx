@@ -1,12 +1,15 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
-import { dayKey } from './srs'
+import { buildQueue, dayKey } from './srs'
 import { missionsFor } from './missions'
 import { pickWordOfDay } from './wordOfDay'
 import { souvenirFor } from './souvenir'
 import { WORDS, wordsOf } from './words'
 import { SPECIES } from './monster'
+
+// 今日の新しい単語の順（日によって変わる）
+const FIRST = () => buildQueue(WORDS, {}, dayKey(), 0)
 
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
@@ -35,13 +38,13 @@ describe('App', () => {
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
     expect(screen.getByText(`今日の残り 10 語 ・ 定着 0 / ${WORDS.length} 語`)).toBeInTheDocument()
-    expect(screen.getByText(WORDS[0].en)).toBeInTheDocument()
+    expect(screen.getByText(FIRST()[0].en)).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('意味を見る'))
-    expect(screen.getByText(WORDS[0].ja)).toBeInTheDocument()
+    expect(screen.getByText(FIRST()[0].ja)).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('覚えた'))
-    expect(screen.getByText(WORDS[1].en)).toBeInTheDocument()
+    expect(screen.getByText(FIRST()[1].en)).toBeInTheDocument()
     expect(screen.getByText(new RegExp(`今日の残り 9 語`))).toBeInTheDocument()
   })
 
@@ -302,7 +305,7 @@ describe('App', () => {
     expect(screen.getByText('×1')).toBeInTheDocument()
     fireEvent.click(screen.getByText('クイズで復習'))
     expect(screen.getByText(/苦手だけ復習中（1語）/)).toBeInTheDocument()
-    expect(document.querySelector('.quiz .en')!.textContent).toBe(WORDS[0].en)
+    expect(document.querySelector('.quiz .en')!.textContent).toBe(FIRST()[0].en)
     expect(screen.getByText('1 / 1')).toBeInTheDocument()
   })
 
@@ -433,14 +436,14 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByLabelText('例文を聞く'))
-    expect(spoken).toEqual([WORDS[0].example])
+    expect(spoken).toEqual([FIRST()[0].example])
   })
 
   it('「まだ」にした単語はすぐには出ず、次の単語に進む', () => {
     render(<App />)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
-    expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[1].en)
+    expect(document.querySelector('.card .en')!.textContent).toBe(FIRST()[1].en)
   })
 
   it('ミッションを達成すると、お知らせとボーナスXP（日付を固定して確認）', () => {
@@ -1130,13 +1133,13 @@ describe('App', () => {
   it('カードの☆でお気に入りにして、記録画面からお気に入りだけ復習できる', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('お気に入り'))
-    expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([WORDS[0].id])
+    expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([FIRST()[0].id])
     navTo('ホーム')
     expect(screen.getByText('★ お気に入り（1語）')).toBeInTheDocument()
     const favSection = screen.getByText('★ お気に入り（1語）').nextElementSibling!
     fireEvent.click(favSection.querySelector('button')!) // カードで復習
     expect(screen.getByText(/お気に入りカードで復習中/)).toBeInTheDocument()
-    expect(document.querySelector('.card .en')!.textContent).toBe(WORDS[0].en)
+    expect(document.querySelector('.card .en')!.textContent).toBe(FIRST()[0].en)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('お気に入りカードを一周しました 💪')).toBeInTheDocument()

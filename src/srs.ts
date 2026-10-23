@@ -81,6 +81,13 @@ export function buildQueue<T extends { id: string }>(
   const reviews = reviewLimit > 0 ? allReviews.slice(0, reviewLimit) : allReviews
   const unseen = words.filter((w) => !progress[w.id])
   if (random) unseen.sort((a, b) => hash(today + a.id) - hash(today + b.id))
+  else {
+    // 順番どおりのときも、毎日同じ単語ばかりにならないよう、まだの単語の先頭から
+    // 5日分（上限×5語）の範囲を1日ずつずらして出す（やさしい単語のあたりはそのまま）
+    const days = Math.max(1, Math.min(5, Math.ceil(unseen.length / Math.max(1, limit))))
+    const off = (Math.floor(Date.parse(today) / 86400000) % days) * limit
+    if (off > 0 && off < unseen.length) unseen.push(...unseen.splice(0, off))
+  }
   const fresh = unseen.slice(0, Math.max(0, limit - newToday))
   // 今日「まだ」にした単語（箱0）は最後に回し、同じ単語が続けて出ないようにする
   const relearn = (w: T) => progress[w.id]?.box === 0 && progress[w.id]?.due === today
