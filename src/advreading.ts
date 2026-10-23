@@ -1683,4 +1683,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer and friends do to help the bakery?', choices: ['They made posters and wrote an article.', 'They worked at the bakery every day.', 'They opened a new bakery.', 'They asked the supermarket to close.'], answer: 0, why: '第3段落 We made posters ... wrote a short article。' },
     ],
   },
+  {
+    id: 'adv-handwriting',
+    title: 'The Slow Hand',
+    level: '難関大（評論）',
+    paragraphs: [
+      'In many classrooms, the sound of pens moving across paper has been replaced by the quiet tapping of keyboards. Typing is faster, neater, and easier to edit, so it seems obvious that it should be the better way to take notes. Some researchers, however, have suggested that the very slowness of handwriting may be ( A ) its greatest advantages.',
+      'The reasoning is as follows. Because most people can type almost as fast as a teacher speaks, students using laptops tend to record lectures word for word. Those writing by hand cannot keep up, so they are forced to decide what is important and to express it in their own words. This process of selecting and summarizing requires them to think about the material ( B ) they are still listening to it, and such thinking may lead to deeper understanding.',
+      'It would be a mistake, however, to conclude that keyboards are harmful. Later studies have produced mixed results, and typed notes can be searched, shared, and reorganized with ease. The real lesson may be that what matters is not the tool itself but how actively we use it. A student who types thoughtfully may learn more than one who copies by hand without thinking. Efficiency, in learning, is not ( C ) the same thing as effectiveness.',
+    ],
+    ja: [
+      '多くの教室で、紙の上をペンが走る音は、キーボードを打つ静かな音にとってかわられた。タイピングはより速く、よりきれいで、修正も簡単なので、それがノートをとるよりよい方法であるのは当然のように思える。しかし一部の研究者は、手書きの遅さこそが、その最大の利点の一つかもしれないと示している。',
+      'その理由は次のとおりだ。たいていの人は先生が話すのとほぼ同じ速さでタイピングできるため、ノートパソコンを使う学生は講義を一語一語記録しがちである。手で書く学生は追いつけないので、何が大切かを決め、それを自分のことばで表現せざるをえない。この選び、まとめるという過程では、まだ話を聞いているあいだに内容について考える必要があり、そうした思考がより深い理解につながるのかもしれない。',
+      'しかし、キーボードは有害だと結論づけるのはまちがいだろう。その後の研究ではさまざまな結果が出ており、タイピングしたノートは簡単に検索したり、共有したり、整理し直したりできる。本当の教訓は、大切なのは道具そのものではなく、それをどれだけ能動的に使うかだということかもしれない。考えながらタイピングする学生は、何も考えずに手で写す学生より多くを学ぶかもしれない。学習において、効率は必ずしも効果と同じものではないのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['one of', 'none of', 'instead of', 'because of'], answer: 0, why: 'one of its greatest advantages「その最大の利点の一つ」。one of ＋ 最上級 ＋ 複数名詞。' },
+      { id: 'B', choices: ['while', 'unless', 'until', 'though'], answer: 0, why: '「まだ聞いているあいだに」なので while。' },
+      { id: 'C', choices: ['necessarily', 'never', 'hardly', 'rarely'], answer: 0, why: 'not necessarily「必ずしも〜ではない」（部分否定）。' },
+    ],
+    tf: [
+      { statement: 'ノートパソコンを使う学生は、講義を一語一語記録しがちだとされている。', answer: true, why: '第2段落 tend to record lectures word for word。' },
+      { statement: '手で書く学生は、何が大切かを選ばなくてもよい。', answer: false, why: '第2段落 they are forced to decide what is important。' },
+      { statement: '筆者は、キーボードは学習に有害だと結論づけている。', answer: false, why: '第3段落 It would be a mistake ... to conclude that keyboards are harmful。' },
+    ],
+    qa: [
+      { q: 'According to the writer, what matters most in taking notes?', choices: ['How actively we use the tool.', 'Whether we use a pen or a keyboard.', 'How fast we can write.', 'How neat our notes look.'], answer: 0, why: '第3段落 what matters is not the tool itself but how actively we use it。' },
+    ],
+  },
 ]
