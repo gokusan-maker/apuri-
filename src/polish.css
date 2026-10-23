@@ -286,3 +286,29 @@ header h1 {
   box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent);
 }
 .speak-test { box-shadow: var(--shadow-sm); }
+
+/* ===== 見出し：左に色の帯 ===== */
+main h2 {
+  position: relative;
+  padding-left: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+main h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12%;
+  bottom: 12%;
+  width: 4px;
+  border-radius: 4px;
+  background: var(--accent-grad);
+}
+.shop-h,
+.settings-h {
+  font-weight: 800;
+  color: var(--fg);
+  border-bottom: none;
+  padding: 2px 0 2px 10px;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
+}
