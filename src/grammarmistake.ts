@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'supposed-to': { wrong: 'We are suppose to wear a uniform.', right: 'We are supposed to wear a uniform.', why: 'supposed は過去分詞。-d をわすれない。' },
   'most-of': { wrong: 'Most of students like games.', right: 'Most students like games.（Most of the students ...）', why: 'most of のあとには the・my などのついた名詞を置く。一般論なら most ＋ 名詞。' },
   'do-does': { wrong: 'Does she plays tennis?', right: 'Does she play tennis?', why: 'Does を使ったら動詞は原形にもどす。-s はつけない。' },
   'have-get-person': { wrong: 'I got my brother help me.', right: 'I got my brother to help me.', why: 'get ＋ 人 のあとは to ＋ 動詞の原形。have ＋ 人 なら原形のまま。' },
