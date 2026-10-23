@@ -967,7 +967,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
                       <MonsterFigure form={f} hidden={!seen.has(id)} />
                     </span>
                     <span className="badge-name">{seen.has(id) ? f.name : '？？？'}</span>
-                    <span className="badge-desc">{f.hint}</span>
+                    <span className="badge-desc" title={f.hint}>{f.hint.split('・')[0]}</span>
                   </button>
                 </li>
               )
