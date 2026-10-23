@@ -123,7 +123,7 @@ export function Card({ card, onAnswer, autoSpeak = false, autoStart = true, jaFi
 
   return (
     <section
-      className={`card${dx > 40 ? ' swipe-good' : dx < -40 ? ' swipe-again' : ''}`}
+      className={`card word-card${dx > 40 ? ' swipe-good' : dx < -40 ? ' swipe-again' : ''}`}
       aria-live="polite"
       style={dx ? { transform: `translateX(${dx}px) rotate(${dx / 30}deg)` } : undefined}
       {...swipe}

@@ -442,3 +442,32 @@ main h2::before {
   background: linear-gradient(180deg, #fb7185, #ef4444 55%, #b91c1c);
   box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.35);
 }
+
+/* ===== 単語カード：上に色の帯がある紙のカード ===== */
+.word-card {
+  overflow: hidden;
+  background:
+    radial-gradient(80% 50% at 50% 0%, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%),
+    var(--card);
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 10%, rgb(0 0 0 / 0.05)), var(--shadow-lg);
+}
+.word-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: var(--accent-grad);
+}
+.word-card .en { font-size: 2.6rem; font-weight: 900; letter-spacing: 0.01em; }
+.word-card .ja { font-weight: 800; }
+.word-card .example { font-style: italic; }
+
+/* 文法の問題文 */
+.grammar .reading-q,
+.blank-sentence {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: color-mix(in srgb, var(--accent) 6%, var(--card));
+  border: 1px solid var(--hair);
+  font-weight: 700;
+}
