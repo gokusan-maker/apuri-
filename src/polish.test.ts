@@ -53,3 +53,7 @@ it('背景を持たない部品の濃い文字色にも、ダークモードの�
   expect(css).toContain(':root[data-theme="dark"] .golden-boss-note')
   expect(css).toContain(':root:not([data-theme="light"]) .long-evidence-note')
 })
+
+it('中央ぞろえの短い文は text-wrap: balance で1文字だけ改行されないようにする', () => {
+  expect(css).toMatch(/\.boss-intro-ja[^{]*\.result-message[^{]*\{ text-wrap: balance; \}/)
+})
