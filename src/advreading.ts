@@ -2551,4 +2551,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer realize after the performance?', choices: ['Music can connect people of different generations.', 'Old songs are more difficult than pop songs.', 'Elderly people do not like music.', 'The chorus club should stop singing.'], answer: 0, why: '第3段落 I realized that music can connect people of different generations。' },
     ],
   },
+{
+    id: 'toefl-deep-light',
+    title: 'Living Lights of the Deep Sea',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Sunlight fades quickly as it passes through seawater. By a depth of about one thousand meters, almost no sunlight remains, and the ocean is completely dark. Yet the deep sea is not entirely without light. Many of the animals that live there can produce their own light through a chemical reaction inside their bodies, a process ( A ) bioluminescence. Some studies suggest that a large majority of deep-sea animals have this ability.",
+      "Light is used in several different ways. The anglerfish, for example, has a glowing lure that hangs in front of its mouth. Small animals that swim toward the light ( B ) themselves caught. Other creatures use light for protection. When some shrimp are attacked, they release a cloud of glowing liquid that confuses the predator and gives them a chance to escape.",
+      "One of the most clever uses of light is a kind of camouflage. In the dim water near the surface of the deep zone, a predator looking up can see the dark shape of an animal against the faint light from above. Certain fish and squid solve this problem by producing a soft glow on the undersides of their bodies, ( C ) matches the light coming from above. As a result, their outline almost disappears, and they become much harder to see.",
+    ],
+    ja: [
+      '日光は海水を通るうちにすぐに弱くなる。水深約1000メートルまでくると日光はほとんど残っておらず、海はまっ暗になる。それでも深海にまったく光がないわけではない。そこに住む動物の多くは、体内の化学反応によって自分で光を出すことができる。これは生物発光とよばれるしくみである。深海の動物の大多数がこの能力をもっていることを示す研究もある。',
+      '光はいくつかの異なる方法で使われている。たとえばチョウチンアンコウには、口の前にぶら下がる光るえさのようなものがある。その光に向かって泳いでくる小さな動物は、気がつけば自分がつかまっているのである。身を守るために光を使う生き物もいる。ある種のエビは、おそわれると光る液体の雲をはき出す。それが捕食者をまどわせ、にげるチャンスをあたえるのだ。',
+      '光の使い方の中でもっとも巧みなものの一つは、一種のカモフラージュである。深海の上のほうのうす暗い水の中では、上を見上げる捕食者には、上から届くかすかな光を背景に、動物の暗い影が見える。ある種の魚やイカは、体の下側からやわらかな光を出すことでこの問題を解決している。その光は上から届く光と同じくらいの明るさなのだ。その結果、輪郭がほとんど消え、ずっと見つけにくくなるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['known as', 'knowing as', 'knows as', 'to know'], answer: 0, why: 'a process known as ～「～として知られるしくみ」。過去分詞の後置修飾。' },
+      { id: 'B', choices: ['find', 'finds', 'finding', 'to find'], answer: 0, why: '主語 Small animals（複数）に合わせた現在形 find。find oneself caught「気がつくとつかまっている」。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'who'], answer: 0, why: 'コンマのあとで a soft glow を説明する非制限用法の which。that はコンマのあとに使えない。' },
+    ],
+    tf: [
+      { statement: '水深約1000メートルでは、まだたくさんの日光が届く。', answer: false, why: '第1段落 almost no sunlight remains。' },
+      { statement: 'あるエビは、おそわれると光る液体を出して身を守る。', answer: true, why: '第2段落の内容と合う。' },
+      { statement: '体の下側を光らせる魚は、下から見上げる捕食者に見つけにくくなる。', answer: true, why: '第3段落 their outline almost disappears。' },
+    ],
+    qa: [
+      { q: 'How does the anglerfish use light?', choices: ['To attract small animals toward its mouth.', 'To scare away larger predators.', 'To find its way home.', 'To warm the water around it.'], answer: 0, why: '第2段落 a glowing lure that hangs in front of its mouth / Small animals that swim toward the light find themselves caught。' },
+    ],
+  },
 ]
