@@ -33,3 +33,11 @@ describe('読解ミニ', () => {
     expect(screen.getByText(p.ja)).toBeInTheDocument()
   })
 })
+
+it('読解ミニの一覧：番号バッジがつき、解いた話はチェックになる', () => {
+  localStorage.clear()
+  const { container } = render(<Reading />)
+  const first = container.querySelector('.short-item .short-no')
+  expect(first?.textContent).toBe('1')
+  expect(container.querySelector('.short-done')).toBeNull()
+})

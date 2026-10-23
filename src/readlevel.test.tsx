@@ -60,7 +60,7 @@ describe('むずかしさごとの今日のおすすめ', () => {
 })
 
 describe('かんたんの短い読解も解いた本数を数える', () => {
-  it('全部答えた話が✅になり、本数がふえる', async () => {
+  it('全部答えた話がチェックになり、本数がふえる', async () => {
     const { render, screen, fireEvent } = await import('@testing-library/react')
     const { Reading } = await import('./ReadingView')
     const { PASSAGES } = await import('./reading')
@@ -72,7 +72,7 @@ describe('かんたんの短い読解も解いた本数を数える', () => {
       fireEvent.click(screen.getByText('次へ'))
     }
     fireEvent.click(screen.getByText('ほかの話を読む'))
-    expect(screen.getByText(`✅ ${p.title}`)).toBeInTheDocument()
+    expect(screen.getByText(p.title).closest('.short-item')?.classList.contains('short-done')).toBe(true)
     expect(screen.getByText(new RegExp(`解いた話 1 / ${PASSAGES.length}本`))).toBeInTheDocument()
   })
 })

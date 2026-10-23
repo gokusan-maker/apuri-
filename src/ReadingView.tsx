@@ -30,9 +30,12 @@ export function Reading({ onAnswer, start, onDone }: Props) {
       <section className="card grammar">
         <h2>読解ミニ</h2>
         <p className="stats-note">短い英文を読んで、内容の問題に答えよう。（解いた話 {PASSAGES.filter((x) => done.includes(x.id)).length} / {PASSAGES.length}本）</p>
+        <div className="zukan-pct short-pct" aria-hidden="true">
+          <span style={{ width: `${(PASSAGES.filter((x) => done.includes(x.id)).length / PASSAGES.length) * 100}%` }} />
+        </div>
         <ul className="grammar-list">
-          {PASSAGES.map((x) => (
-            <li key={x.id}>
+          {PASSAGES.map((x, i) => (
+            <li key={x.id} className={done.includes(x.id) ? 'short-item short-done' : 'short-item'}>
               <button
                 onClick={() => {
                   setP(x)
@@ -43,8 +46,10 @@ export function Reading({ onAnswer, start, onDone }: Props) {
                   setShowJa(false)
                 }}
               >
-                {done.includes(x.id) ? '✅ ' : ''}
-                {x.title}
+                <span className="short-no" aria-label={done.includes(x.id) ? '解いた' : undefined}>
+                  {done.includes(x.id) ? '✓' : i + 1}
+                </span>
+                <span className="short-title">{x.title}</span>
               </button>
             </li>
           ))}
