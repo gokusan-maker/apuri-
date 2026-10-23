@@ -31,7 +31,7 @@ it('ちがう2枚は伏せもどり、ペアをそろえると XP、全部でク
   }
   vi.useRealTimers()
   expect(got).toEqual([true, true, true, true, true, true])
-  expect(screen.getByText('ぜんぶそろった！ 7 手でクリア・自己ベスト！')).toBeInTheDocument()
+  expect(screen.getByRole('status').textContent).toMatch(/クリア！.*7手.*自己ベスト！/)
   expect(localStorage.getItem('eitan:best-memory')).toBe('7')
 })
 
@@ -51,6 +51,6 @@ it('全部そろえると onClear が呼ばれる', () => {
 
 it('むずかしい（8ペア）に切りかえられる', () => {
   render(<Memory words={WORDS} />)
-  fireEvent.click(screen.getByText('むずかしい（8ペア）'))
+  fireEvent.click(screen.getByRole('button', { name: /むずかしい/ }))
   expect(document.querySelectorAll('.memory-card')).toHaveLength(16)
 })

@@ -1931,3 +1931,11 @@ details[open] > summary::before { transform: rotate(90deg); }
 .boss-hint p + p { margin-top: 6px; }
 .boss-hint q { font-weight: 700; }
 .boss-hint-para { background: color-mix(in srgb, #facc15 22%, transparent); border-radius: 8px; box-shadow: 0 0 0 4px color-mix(in srgb, #facc15 22%, transparent); }
+
+/* 神経衰弱：進み具合はチップ、むずかしさのペア数は小さく、クリアは大きく */
+.memory-chips { justify-content: center; }
+.memory .counts .memory-pairs { margin-left: 4px; font-size: 0.72rem; opacity: 0.75; font-weight: 700; }
+.memory-clear { margin: 10px 0 4px; text-align: center; }
+.memory-clear-title { margin: 0 0 4px; font-size: 1.4rem; font-weight: 900; color: var(--accent); }
+.memory-clear .buddy-chips { justify-content: center; }
+.memory-best { background: color-mix(in srgb, #f59e0b 18%, transparent) !important; }

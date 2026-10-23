@@ -58,8 +58,10 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
 
   return (
     <section className="card quiz memory">
-      <p className="quiz-progress">
-        そろった {done.length / 2} / {deck.length / 2} ペア・{moves} 手{best !== null && `（ベスト ${best} 手）`}
+      <p className="buddy-chips memory-chips">
+        <span aria-label={`そろったペア ${done.length / 2} / ${deck.length / 2}`}>🃏 {done.length / 2}/{deck.length / 2}</span>
+        <span aria-label={`${moves} 手`}>👆 {moves}手</span>
+        {best !== null && <span aria-label={`ベスト ${best} 手`}>🏆 {best}手</span>}
       </p>
       <div className="counts" role="group" aria-label="むずかしさ">
         {[false, true].map((h) => (
@@ -75,7 +77,8 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
               setBest(loadLowBest(h ? `${MEMORY_BEST}-8` : MEMORY_BEST))
             }}
           >
-            {h ? 'むずかしい（8ペア）' : 'ふつう（6ペア）'}
+            {h ? 'むずかしい' : 'ふつう'}
+            <small className="memory-pairs">{h ? 8 : 6}ペア</small>
           </button>
         ))}
       </div>
@@ -96,7 +99,13 @@ export function Memory({ words, onAnswer, initialDeck, onClear }: Props) {
       </div>
       {cleared && (
         <>
-          <p className="level-up">ぜんぶそろった！ {moves} 手でクリア{newBest && '・自己ベスト！'}</p>
+          <div className="memory-clear" role="status">
+            <p className="memory-clear-title">🎉 クリア！</p>
+            <p className="buddy-chips">
+              <span>👆 {moves}手</span>
+              {newBest && <span className="memory-best">🏆 自己ベスト！</span>}
+            </p>
+          </div>
           <button
             className="flip"
             onClick={() => {
