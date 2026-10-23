@@ -1658,3 +1658,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 設定：画面の色・テーマカラーは1行におさめる */
 .levels.fit { flex-wrap: nowrap; gap: 4px; }
 .levels.fit button { flex: 1 1 auto; min-width: 0; padding-left: 4px; padding-right: 4px; font-size: 0.78rem; white-space: nowrap; }
+
+/* 相棒：いっしょに学んだ日・経験値はチップ */
+.buddy-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
+.buddy-chips > span { display: inline-flex; align-items: baseline; gap: 6px; padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--text); font-size: 0.8rem; font-weight: 800; }
+.buddy-chips small { color: var(--muted); font-size: 0.7rem; font-weight: 700; }

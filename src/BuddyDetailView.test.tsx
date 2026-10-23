@@ -10,7 +10,7 @@ it('文法のことばモンスター・読解の竜に名前をつけられ、�
   let b: Buddies = { grammar: { xp: 200 }, reading: { xp: 0 } }
   const { rerender } = render(<BuddyDetail buddies={b} onRename={(t, n) => (b = renameBuddy(b, t, n))} />)
   const g = screen.getByLabelText('文法のなかま')
-  expect(g.textContent).toMatch(/次のレベルまで あと \d+ XP/)
+  expect(g.textContent).toMatch(/あと \d+XP で Lv\.\d+/)
   expect(g.querySelectorAll('.buddy-forms li')).toHaveLength(8)
   fireEvent.click(within(g).getByText('✏️ 名前をつける'))
   fireEvent.change(screen.getByLabelText('なかまの名前'), { target: { value: 'ポチ' } })
@@ -35,8 +35,8 @@ it('なかまは属性ごとに入れかえられ、まだ仲間でない種類�
   // Lv.1 では2体目に鍵
   const hoshi = within(g).getByText(BUDDY_SPECIES.grammar[1].label).closest('button')!
   expect(hoshi).toBeDisabled()
-  expect(hoshi.textContent).toContain('Lv.5 にすると仲間に')
-  expect(hoshi.textContent).toContain('ショップの属性のタマゴ')
+  expect(hoshi.textContent).toContain('Lv.5 で仲間に')
+  expect(hoshi.getAttribute('title')).toContain('ショップの属性のタマゴ')
   // Lv.5 まで育てると入れかえられる
   b = { grammar: { xp: 100000 }, reading: { xp: 0 } }
   rerender(<BuddyDetail buddies={b} box={box} onRename={() => {}} onSwitch={(t, id) => ({ buddies: b, box } = switchBuddy(b, box, t, id))} />)
@@ -63,8 +63,8 @@ it('経験値をもらった日の数を「いっしょに学んだ日」とし�
   addBuddyToday('2026-10-21', 'reading', 0)
   expect(loadBuddyDays()).toEqual({ grammar: 2, reading: 0 })
   render(<BuddyDetail buddies={{ grammar: { xp: 13 }, reading: { xp: 0 } }} onRename={() => {}} />)
-  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('いっしょに学んだ日：2日')
-  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('いっしょに学んだ日：0日')
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('🗓 2日')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('🗓 0日')
 })
 
 it('進化した日を記録して、進化の一覧に「M/D に進化」と出す（2回目は上書きしない）', () => {
@@ -80,8 +80,8 @@ it('進化した日を記録して、進化の一覧に「M/D に進化」と出
 
 it('これまでにもらった経験値の合計を出す', () => {
   render(<BuddyDetail buddies={{ grammar: { xp: 345 }, reading: { xp: 12 } }} onRename={() => {}} />)
-  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('これまでの経験値：345 XP')
-  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('これまでの経験値：12 XP')
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('✨ 345XP')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('✨ 12XP')
 })
 
 it('種類ごとの英語のプロフィールを出し、🔊を押したときだけ読む', () => {
@@ -104,6 +104,6 @@ it('いっしょに学んだ日の記念メダル（7日🥉・30日🥈・100�
   localStorage.clear()
   localStorage.setItem('eitan:buddy-days', JSON.stringify({ grammar: 8, reading: 2 }))
   render(<BuddyDetail buddies={{ grammar: { xp: 0 }, reading: { xp: 0 } }} onRename={() => {}} />)
-  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('8日 🥉（あと22日で🥈）')
-  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('2日（あと5日で🥉）')
+  expect(screen.getByLabelText('文法のなかま')).toHaveTextContent('8日 🥉あと22日で🥈')
+  expect(screen.getByLabelText('読解のなかま')).toHaveTextContent('2日あと5日で🥉')
 })
