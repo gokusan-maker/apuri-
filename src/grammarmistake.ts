@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'group-prep': { wrong: 'Instead of take the bus, I walked.', right: 'Instead of taking the bus, I walked.', why: 'instead of のあとの動詞は動名詞（～ing）。' },
   despite: { wrong: 'Despite of the rain, we went out.', right: 'Despite the rain, we went out.', why: 'despite は of をつけない。in spite of と混ざらないように。' },
   'plural-forms': { wrong: 'I have two babys.', right: 'I have two babies.', why: '〈子音字 ＋ y〉で終わる語は y を i にかえて -es。' },
   'prevent-from': { wrong: 'The rain prevented us from go out.', right: 'The rain prevented us from going out.', why: 'from は前置詞なので、あとは動名詞（～ing）。' },
