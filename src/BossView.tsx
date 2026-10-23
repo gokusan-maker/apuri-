@@ -512,7 +512,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 {partner.name}の特技「{skill.name}」Lv{lv}：{skill.desc}
               </>
             ) : (
-              <>{partner.name}が応援しているよ！（生まれると特技が使える）</>
+              <>{partner.name}が応援しているよ！</>
             )}
           </span>
         </div>

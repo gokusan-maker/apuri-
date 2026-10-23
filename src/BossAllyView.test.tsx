@@ -7,6 +7,7 @@ it('ボス部屋の上に読解の竜と次の進化までが出る', () => {
   const el = screen.getByLabelText('いっしょに戦う読解の竜')
   expect(el.textContent).toContain('りゅうのタマゴ Lv.1')
   expect(el.textContent).toContain('あと1レベルで ？？？ に進化')
+  expect(el.textContent).not.toContain('正解すると育つ')
 })
 
 it('次の進化の姿は ？？？ でひみつ（わかったほうがワクワクしない）', async () => {
