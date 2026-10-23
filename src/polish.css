@@ -1908,3 +1908,9 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .gacha-pickup { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }
 }
 :root[data-theme="dark"] .gacha-pickup { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }
+
+/* ダークモード：大学入試の塔のカードも暗い地に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .univ-tower { background: linear-gradient(180deg, rgb(139 92 246 / 0.18), rgb(251 191 36 / 0.08)); color: var(--fg); border-color: rgb(167 139 250 / 0.25); }
+}
+:root[data-theme="dark"] .univ-tower { background: linear-gradient(180deg, rgb(139 92 246 / 0.18), rgb(251 191 36 / 0.08)); color: var(--fg); border-color: rgb(167 139 250 / 0.25); }
