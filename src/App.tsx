@@ -1613,8 +1613,11 @@ function App() {
           </div>
           {statsTab === 'log' && (
             <>
-              <p className="kimochi-diary">
-                📔 {monster.name ?? formOf(monster).name}のきもち日記：{kimochiDiary(studiedToday).icon} {kimochiDiary(studiedToday).text}
+              <p className="kimochi-diary" aria-label={`${monster.name ?? formOf(monster).name}のきもち日記`}>
+                <span className="kimochi-face" aria-hidden="true">
+                  {kimochiDiary(studiedToday).icon}
+                </span>
+                <span>{kimochiDiary(studiedToday).text}</span>
               </p>
               <p className="today-summary">
                 ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}

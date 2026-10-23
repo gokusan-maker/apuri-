@@ -945,7 +945,8 @@ describe('App', () => {
   it('記録タブに相棒のきもち日記が出る', () => {
     render(<App />)
     navTo('ホーム')
-    expect(screen.getByText(/のきもち日記：🥺/)).toBeInTheDocument()
+    const d = screen.getByLabelText(/のきもち日記$/)
+    expect(d.querySelector('.kimochi-face')!.textContent).toBe('🥺')
   })
 
   it('ホームのガチャボタンには何が出るかを書かない（お楽しみ）', async () => {
