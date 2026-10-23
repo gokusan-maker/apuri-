@@ -1587,3 +1587,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 今月の福袋：タイトル＋小さな説明の2段に */
 .gacha-btn.lucky-bag { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .gacha-btn.lucky-bag .gacha-multi-sub { white-space: normal; font-size: 0.74rem; }
+
+/* 今日の課題の行：内容が「…」で切れないよう2行まで見せる（何をやるかがわかる） */
+.today-task { align-items: center; min-height: 56px; }
+.today-task .today-task-text { white-space: normal; overflow: hidden; text-overflow: clip; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; font-size: 0.82rem; line-height: 1.4; text-align: left; }
