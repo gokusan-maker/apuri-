@@ -1963,4 +1963,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why have engineers studied termite mounds?', choices: ['To learn how to cool buildings using little electricity.', 'To find new kinds of soil.', 'To protect buildings from insects.', 'To make towers taller.'], answer: 0, why: '第3段落 for ideas about how to cool buildings without using much electricity。' },
     ],
   },
+  {
+    id: 'exam-shelter-dog',
+    title: 'Our New Family Member',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last summer, my family decided to get a dog. I wanted to buy a puppy at a pet shop, but my mother suggested visiting an animal shelter first. At the shelter, we learned that many dogs there had been left by their owners. Some of them had waited for a new family ( A ) more than a year.",
+      "One small brown dog stayed in the corner of its cage and did not come to us. The staff member said, 'His name is Kuri. He was afraid of people at first, but he is very gentle.' I sat down quietly near the cage and waited. After about ten minutes, Kuri slowly walked to me and smelled my hand. At that moment, I knew he was the dog ( B ) we wanted.",
+      "Now Kuri lives with us. At first, he hid under the table whenever the doorbell rang, but little by little he has become braver. Every morning, he waits for me at the door with his tail moving. Through Kuri, I learned that every animal has its own story. If more people ( C ) adopting animals from shelters, more dogs like Kuri could find a happy home.",
+    ],
+    ja: [
+      '去年の夏、私の家族は犬を飼うことに決めました。私はペットショップで子犬を買いたいと思いましたが、母がまず動物の保護施設に行ってみようと言いました。施設で、そこにいる犬の多くが飼い主に置いていかれたのだと知りました。新しい家族を1年以上待っている犬もいました。',
+      '茶色い小さな犬が1匹、おりのすみにいて、私たちのところに来ませんでした。職員さんは「この子の名前はクリです。最初は人をこわがっていたけれど、とてもおとなしい子なんですよ」と言いました。私はおりの近くに静かにすわって待ちました。10分ほどすると、クリはゆっくりと私のほうへ歩いてきて、私の手のにおいをかぎました。その瞬間、私はこの子こそ私たちがほしかった犬だとわかりました。',
+      '今、クリは私たちといっしょに暮らしています。最初はげんかんのチャイムが鳴るたびにテーブルの下にかくれていましたが、少しずつ勇気が出てきました。毎朝、クリはしっぽをふりながらドアのところで私を待っています。クリを通して、私はどの動物にもそれぞれの物語があることを学びました。もっと多くの人が保護施設から動物を引き取ることを考えれば、クリのような犬がもっと幸せな家を見つけられるでしょう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'since', 'during', 'by'], answer: 0, why: 'for more than a year「1年以上の間」。期間の長さは for。' },
+      { id: 'B', choices: ['that', 'who', 'what', 'where'], answer: 0, why: '先行詞 the dog を受ける関係代名詞 that（wanted の目的語）。' },
+      { id: 'C', choices: ['considered', 'consider', 'considering', 'to consider'], answer: 0, why: 'If ＋ 過去形 …, could 〜（仮定法過去）。consider -ing「〜することを考える」。' },
+    ],
+    tf: [
+      { statement: '母は最初にペットショップへ行こうと言った。', answer: false, why: '第1段落 my mother suggested visiting an animal shelter first。' },
+      { statement: 'クリは最初、人をこわがっていた。', answer: true, why: "第2段落 'He was afraid of people at first'。" },
+      { statement: 'クリは今でもチャイムが鳴るたびにかくれている。', answer: false, why: '第3段落 At first ... but little by little he has become braver。' },
+    ],
+    qa: [
+      { q: 'What did the writer do to make Kuri come closer?', choices: ['Sat down quietly and waited.', 'Called his name loudly.', 'Gave him some food.', 'Opened the cage door.'], answer: 0, why: '第2段落 I sat down quietly near the cage and waited。' },
+    ],
+  },
 ]
