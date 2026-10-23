@@ -112,7 +112,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
   const [dailyGot, setDailyGot] = useState(false) // この回で今日の1本のごほうびをもらった // この回で最短タイムを更新した
-  const [genre, setGenre] = useState<Genre | 'all'>('all')
+  const [pickedGenre, setGenre] = useState<Genre | 'all'>('all')
+  const shownGenres = GENRES.filter((g) => LIST.some((x) => genreOf(x) === g)) // 1本もないジャンルは出さない
+  const genre = pickedGenre !== 'all' && !shownGenres.includes(pickedGenre) ? 'all' : pickedGenre
 
   function openPassage(x: LongPassage) {
     const d = loadLongDraft(x.id)
@@ -295,13 +297,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             🎯 {readingLevel(history)!.name}のきみにおすすめ：{shownTitle(levelPick(readingLevel(history)!.name, record)!, LONG_PASSAGES.indexOf(levelPick(readingLevel(history)!.name, record)!))}
           </button>
         )}
-        <div className="sub-tabs genre-tabs" role="tablist" aria-label="読解の種類">
-          {(['all', ...GENRES] as const).map((g) => (
-            <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
-              {g === 'all' ? 'すべて' : g}
-            </button>
-          ))}
-        </div>
+        {shownGenres.length > 1 && (
+          <div className="sub-tabs genre-tabs" role="tablist" aria-label="読解の種類">
+            {(['all', ...shownGenres] as const).map((g) => (
+              <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
+                {g === 'all' ? 'すべて' : g}
+              </button>
+            ))}
+          </div>
+        )}
         {genre === 'all' ? (
           <>
             {LIST.some((x) => loadLongDraft(x.id)) && (
@@ -311,7 +315,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               </div>
             )}
             {bookmarks.length > 0 && <ul className="grammar-list">{LIST.filter((x) => bookmarks.includes(x.id)).map(passageItem)}</ul>}
-            {GENRES.map((g) => {
+            {shownGenres.map((g) => {
               const ps = LIST.filter((x) => genreOf(x) === g)
               return (
                 <details key={g} className="grammar-grade-fold long-genre-fold">
