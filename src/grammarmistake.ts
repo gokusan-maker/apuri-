@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'happen-to': { wrong: 'I happened meeting my teacher.', right: 'I happened to meet my teacher.', why: '「たまたま～する」は happen to ＋ 動詞の原形。' },
   'as-possible': { wrong: 'I ran as fast as I can yesterday.', right: 'I ran as fast as I could yesterday.', why: '過去の文では as ～ as 主語 could にする。' },
   'modal-passive': { wrong: 'Stars can seen from here.', right: 'Stars can be seen from here.', why: '助動詞の受け身は〈助動詞 ＋ be ＋ 過去分詞〉。be をわすれない。' },
   'place-prep': { wrong: 'The bank is next the post office.', right: 'The bank is next to the post office.', why: '「～のとなりに」は next to。to をわすれない。' },
