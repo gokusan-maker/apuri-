@@ -796,7 +796,13 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       </button>
       </div>
       <p className="pet-stamps" aria-label={`なでなでスタンプ ${petStamps.n % PET_STAMPS_FOR_TICKET} / ${PET_STAMPS_FOR_TICKET}`}>
-        🐾 なでなでスタンプ {'●'.repeat(petStamps.n % PET_STAMPS_FOR_TICKET)}{'○'.repeat(PET_STAMPS_FOR_TICKET - (petStamps.n % PET_STAMPS_FOR_TICKET))}（10こで🎟）
+        <span className="pet-stamps-label">🐾 なでなで</span>
+        <span className="stamp-dots" aria-hidden="true">
+          {Array.from({ length: PET_STAMPS_FOR_TICKET }, (_, i) => (
+            <i key={i} className={i < petStamps.n % PET_STAMPS_FOR_TICKET ? 'on' : undefined} />
+          ))}
+        </span>
+        <small className="pet-stamps-goal">10こで🎟</small>
       </p>
       {poke > 0 && (
         <p className={`pose-label pose-${poseAt(poke - 1).id}`}>

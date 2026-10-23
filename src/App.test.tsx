@@ -860,6 +860,14 @@ describe('App', () => {
     expect(screen.getByLabelText('なでなでスタンプ 0 / 10')).toBeInTheDocument()
   })
 
+  it('なでなでスタンプは10この丸で、たまった数だけ色がつく', () => {
+    localStorage.setItem('eitan:pet-stamps', JSON.stringify({ n: 3, last: '2026-10-19' }))
+    render(<App />)
+    const dots = screen.getByLabelText('なでなでスタンプ 3 / 10').querySelectorAll('.stamp-dots i')
+    expect(dots).toHaveLength(10)
+    expect([...dots].filter((d) => d.classList.contains('on'))).toHaveLength(3)
+  })
+
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
