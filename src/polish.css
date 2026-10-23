@@ -1697,3 +1697,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 押した感じの統一：専用の :active がないボタンも、押すと少しだけ縮む（:where で一番弱くし、専用の指定を上書きしない） */
 :where(button:not(:disabled)):active { transform: scale(0.97); }
 @media (prefers-reduced-motion: reduce) { :where(button:not(:disabled)):active { transform: none; } }
+
+/* バトルアイテム：アイコンを上、名前を下にして1行におさめる */
+.battle-item { flex-direction: column; justify-content: center; gap: 2px; padding: 8px 6px; text-align: center; }
+.battle-item .bi-name { flex: none; white-space: nowrap; font-size: 0.74rem; letter-spacing: -0.02em; }
