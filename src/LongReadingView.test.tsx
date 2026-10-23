@@ -34,7 +34,7 @@ it('読解を読んで記号で答え、採点すると点数と解説が出る'
   fireEvent.click(screen.getByText('← 読解の一覧'))
   expect(screen.getByText(/最高 13点 ★★☆/)).toBeInTheDocument()
   expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
-  expect(screen.getByText(new RegExp(`これまでに読んだ語数：${wordCount(p)}語`))).toBeInTheDocument()
+  expect(screen.getByText(new RegExp(`読んだ語数：${wordCount(p)}語`))).toBeInTheDocument()
 })
 
 it('下線部の意味と並べかえに答えられる', () => {
@@ -366,13 +366,13 @@ it('全部制覇チャレンジの進みぐあいが出る', () => {
   const rec = Object.fromEntries(LONG_PASSAGES.slice(0, 10).map((x) => [x.id, 1]))
   localStorage.setItem('eitan:long-reading', JSON.stringify(rec))
   render(<LongReading />)
-  expect(screen.getByText(new RegExp(`全部制覇チャレンジ：10 / ${LONG_PASSAGES.length}本.*🥉10本`))).toBeInTheDocument()
+  expect(screen.getByText(new RegExp(`全部制覇：10 / ${LONG_PASSAGES.length}本.*🥉10本`))).toBeInTheDocument()
 })
 
 it('読解の一覧に「空所でよく出る熟語」まとめが出る', () => {
   localStorage.clear()
   render(<LongReading />)
-  fireEvent.click(screen.getByText(/空所でよく出る熟語/))
+  fireEvent.click(screen.getByText(/よく出る熟語/))
   expect(screen.getByText('thank you for')).toBeTruthy()
 })
 
@@ -516,7 +516,7 @@ it('答えかけの読解は一覧の上の「✏️ とちゅうの読解」に
 it('読解の一覧：読んだ語数がピルで出て、ジャンルの数字は小さい補足になる', () => {
   localStorage.clear()
   render(<LongReading />)
-  expect(document.querySelector('.long-words')?.textContent).toMatch(/これまでに読んだ語数：0語/)
+  expect(document.querySelector('.long-words')?.textContent).toMatch(/読んだ語数：0語/)
   expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.getAttribute('aria-label')).toMatch(/本・解いた 0本/)
   expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.textContent).toMatch(/^0\/\d+$/)
 })

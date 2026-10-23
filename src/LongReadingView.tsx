@@ -204,7 +204,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           </button>
         )}
         <details className="long-types long-idioms">
-          <summary>📗 空所でよく出る熟語（{IDIOMS.length}個）</summary>
+          <summary>📗 よく出る熟語 <span className="fold-meta" aria-label={`熟語 ${IDIOMS.length}個`}>{IDIOMS.length}</span></summary>
           <ul>
             {IDIOMS.map(({ w, count }) => (
               <li key={w.id}>
@@ -259,10 +259,10 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             </ul>
           </details>
         )}
-        <p className="stats-note long-words">📚 これまでに読んだ語数：{readWords}語</p>
+        <p className="stats-note long-words">📚 読んだ語数：{readWords}語</p>
         <div className="long-challenge" aria-label={`解いた読解 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
           <p className="stats-note">
-            🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
+            🏁 全部制覇：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
           </p>
           <div className="zukan-pct">
             <span style={{ width: `${(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length / LIST.length) * 100}%` }} />
