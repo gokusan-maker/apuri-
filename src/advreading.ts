@@ -3093,4 +3093,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what does taking an "outside view" mean?', choices: ['Asking how long similar tasks actually took in the past.', 'Planning each step of the task in more detail.', 'Asking other people to do the task.', 'Working on the task outside the classroom.'], answer: 0, why: '第3段落 we can ask how long similar tasks actually took in the past。' },
     ],
   },
+{
+    id: 'toefl-blue-sky',
+    title: 'Why the Sky Is Blue',
+    level: 'TOEFL・IELTS（物理）',
+    paragraphs: [
+      "Sunlight looks white, but it is actually a mixture of many colors, from red to violet. Each color travels as a wave of a different length: red light has the longest waves, and blue and violet light have much shorter ones. When sunlight enters the atmosphere, it runs into countless tiny molecules of nitrogen and oxygen.",
+      "These molecules scatter light in all directions, but they do not treat every color equally. Shorter waves are scattered far more strongly than longer ones, ( A ) blue light is spread across the whole sky. Wherever we look, some of this scattered blue light reaches our eyes. This effect is called Rayleigh scattering, after the British physicist Lord Rayleigh, ( B ) explained it in the nineteenth century.",
+      "Violet light is scattered even more than blue, so why is the sky not violet? One reason is that sunlight contains less violet light than blue light. Another is that our eyes are much ( C ) sensitive to violet. At sunset, sunlight must pass through far more air before reaching us. Most of the blue light is scattered away along the way, which leaves the reds and oranges we see in the evening sky.",
+    ],
+    ja: [
+      '日光は白く見えるが、実際には赤からむらさきまで、たくさんの色がまざったものである。それぞれの色は長さのちがう波として進む。赤い光の波がいちばん長く、青やむらさきの光の波はずっと短い。日光が大気に入ると、数えきれないほどの小さな窒素や酸素の分子にぶつかる。',
+      'これらの分子は光をあらゆる方向に散らすが、すべての色を同じようにあつかうわけではない。短い波は長い波よりもずっと強く散らされるので、青い光が空全体に広がる。どこを見ても、この散らされた青い光の一部が目にとどく。この現象は、19世紀にそれを説明したイギリスの物理学者レイリー卿にちなんで、レイリー散乱とよばれる。',
+      'むらさきの光は青よりもさらに強く散らされるのに、なぜ空はむらさきではないのだろうか。理由の1つは、日光にふくまれるむらさきの光が青い光より少ないことである。もう1つは、私たちの目がむらさきをあまり感じとれないことである。夕方には、日光は私たちにとどくまでに、ずっと多くの空気を通りぬけなければならない。とちゅうで青い光のほとんどが散らされてしまうので、夕方の空に見える赤やオレンジが残るのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'unless', 'although', 'until'], answer: 0, why: '～, so …「～なので…」。短い波が強く散らされる → その結果、青い光が空に広がる。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: '人（Lord Rayleigh）を説明する関係代名詞 who。カンマのあとで「その人が～した」と補足。' },
+      { id: 'C', choices: ['less', 'least', 'fewer', 'little'], answer: 0, why: 'much less sensitive「ずっと感じにくい」。形容詞 sensitive の前で、比較級を強める much ＋ less。' },
+    ],
+    tf: [
+      { statement: '日光には、赤からむらさきまで多くの色がふくまれている。', answer: true, why: '第1段落 a mixture of many colors, from red to violet。' },
+      { statement: '空気の分子は、長い波の光ほど強く散らす。', answer: false, why: '第2段落 Shorter waves are scattered far more strongly than longer ones。' },
+      { statement: 'レイリー散乱は、イギリスの物理学者にちなんで名づけられた。', answer: true, why: '第2段落 after the British physicist Lord Rayleigh。' },
+      { statement: '夕方の空が赤いのは、日光が通る空気が少なくなるからである。', answer: false, why: '第3段落 sunlight must pass through far more air（より多くの空気を通る）。' },
+    ],
+    qa: [
+      { q: 'Why does the sky not look violet?', choices: ['Sunlight has less violet light, and our eyes are less sensitive to it.', 'Violet light is not scattered by air at all.', 'Violet light has the longest waves.', 'Clouds block all of the violet light.'], answer: 0, why: '第3段落 One reason ... Another is ...。' },
+    ],
+  },
 ]
