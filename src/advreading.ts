@@ -2803,4 +2803,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What makes Mr. Ito happy?', choices: ['When students say "Good morning" to him.', 'When he gets a new chair.', 'When the school is closed.', 'When he reads the newspaper.'], answer: 0, why: '第3段落 "When students say \'Good morning\' to me."' },
     ],
   },
+{
+    id: 'adv-explanatory-depth',
+    title: 'Do We Really Know How It Works?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us feel that we understand how everyday objects work. Ask people whether they know how a zipper or a flush toilet works, and they will probably say yes with some confidence. In studies published in the early 2000s, psychologists asked people to rate their understanding of such objects and then to write a detailed, step-by-step explanation of how each one works. ( A ) trying to explain, many participants lowered their ratings sharply. They had mistaken familiarity for knowledge.",
+      "Psychologists call this the illusion of explanatory depth. It arises partly because we can see the parts of many objects, and seeing feels like understanding. It is also encouraged by the way knowledge is shared in a society: we rely on experts, manuals, and repair shops, so we rarely need to know the details ourselves. Living in such a community of knowledge is efficient, ( B ) it makes it easy to confuse what others know with what we know.",
+      "The illusion matters beyond zippers. Later research found that people with strong opinions on policy questions often became less extreme after being asked to explain, step by step, how a proposed policy would actually work. Simply listing reasons for their position did not have the same effect. Explaining a mechanism, it seems, forces us to face the gaps in our own knowledge, ( C ) can make us more modest and more open to other views.",
+    ],
+    ja: [
+      '私たちのほとんどは、身の回りの物がどう動くのかをわかっていると感じている。ファスナーや水洗トイレのしくみを知っているかとたずねれば、人はたぶん、ある程度の自信をもって「はい」と答えるだろう。2000年代の初めに発表された研究で、心理学者たちは人々に、そうした物についての自分の理解度を評価してもらい、そのあとで、それぞれがどう動くのかを順を追ってくわしく説明する文を書いてもらった。説明しようとしたあと、多くの参加者は評価を大きく下げた。見なれていることを、知っていることと取りちがえていたのである。',
+      '心理学者たちは、これを「説明深度の錯覚」とよぶ。この錯覚が生じる理由の1つは、多くの物の部品が目に見えることであり、見えることは理解しているように感じさせる。また、社会の中での知識の分け合い方も、この錯覚をうながしている。私たちは専門家や説明書、修理店にたよっているので、自分でくわしいことを知る必要はめったにない。そのような知識の共同体の中で暮らすのは効率がよいが、他人が知っていることと自分が知っていることを取りちがえやすくもなる。',
+      'この錯覚は、ファスナーの話にとどまらない。その後の研究では、政策の問題について強い意見をもつ人々が、提案された政策が実際にどのように働くのかを順を追って説明するよう求められると、意見が極端でなくなることが多いとわかった。自分の立場の理由を並べるだけでは、同じ効果はなかった。どうやら、しくみを説明することで、私たちは自分の知識のすき間に向き合わざるをえなくなり、それによって、より謙虚になり、ほかの考えも受け入れやすくなるようだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['After', 'During', 'Unless', 'Because'], answer: 0, why: 'After trying to explain「説明しようとしたあと」。During・Because のあとに動詞の ～ing は置けず、Unless では意味が通らない。' },
+      { id: 'B', choices: ['but', 'so', 'unless', 'until'], answer: 0, why: '「効率がよい」と「取りちがえやすい」は反対の内容なので逆接の but。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける非制限用法の which。that はコンマのあとに使えない。' },
+    ],
+    tf: [
+      { statement: '研究の参加者の多くは、説明を書こうとしたあとで、自分の理解度の評価を下げた。', answer: true, why: '第1段落 many participants lowered their ratings sharply。' },
+      { statement: '筆者は、専門家や説明書にたよる社会のしくみは効率が悪いと述べている。', answer: false, why: '第2段落 Living in such a community of knowledge is efficient。' },
+      { statement: '自分の意見の理由を並べるだけでも、意見は同じようにおだやかになった。', answer: false, why: '第3段落 Simply listing reasons ... did not have the same effect。' },
+      { statement: 'しくみを説明すると、自分の知識のすき間に気づかされる。', answer: true, why: '第3段落 forces us to face the gaps in our own knowledge。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what had the participants mistaken for knowledge?', choices: ['Familiarity', 'Confidence in experts', 'Written manuals', 'Strong opinions'], answer: 0, why: '第1段落 They had mistaken familiarity for knowledge.' },
+    ],
+  },
 ]
