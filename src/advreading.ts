@@ -2495,4 +2495,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why can the warning reach distant places before the strong shaking?', choices: ['Electronic signals travel faster than seismic waves.', 'S waves stop before reaching cities.', 'P waves are stronger than S waves.', 'Earthquakes always happen at night.'], answer: 0, why: '第2段落 Because electronic signals travel far faster than seismic waves 〜。' },
     ],
   },
+{
+    id: 'adv-attention',
+    title: 'The Scarcest Resource',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We often say that we live in an age of information, but information itself is no longer scarce. Every day, far more is produced than anyone could possibly read, watch, or listen to. What has become scarce is something else: our attention. As the economist and psychologist Herbert Simon observed decades ago, an abundance of information tends to create a shortage of the attention needed ( A ) it.",
+      "Many online services are free to use, yet they are not free to run. Much of their income comes from advertising, and advertisers pay for the time and attention of users. As a result, these services have strong reasons to keep us engaged for as long as possible. Features such as endless feeds, automatic playback of the next video, and frequent alerts are designed, at least in part, to make it harder for us to stop.",
+      "None of this means that technology is simply harmful; the same tools allow us to learn, create, and stay in touch with others. The point is that attention, once spent, cannot be recovered, and it shapes what we come to care about. Protecting it may require deliberate habits, ( B ) turning off unnecessary alerts or setting aside time without screens. In a world competing for our attention, deciding where to place it may be one of the most important choices we make, ( C ) we are aware of making it or not.",
+    ],
+    ja: [
+      '私たちはよく情報の時代に生きていると言うが、情報そのものはもはや不足していない。毎日、だれかが読んだり見たり聞いたりできる量よりはるかに多くの情報が生み出されている。不足するようになったのは別のもの、つまり私たちの注意力である。経済学者であり心理学者でもあるハーバート・サイモンが何十年も前に指摘したように、情報があふれると、それを処理するのに必要な注意力が足りなくなりがちなのだ。',
+      '多くのオンラインサービスは無料で使えるが、運営するのは無料ではない。その収入の多くは広告から来ており、広告主は利用者の時間と注意に対してお金を払う。その結果、こうしたサービスには、私たちをできるだけ長く引きつけておく強い理由がある。終わりのないフィードや次の動画の自動再生、ひんぱんな通知といった機能は、少なくとも一部は、私たちがやめにくくなるように作られているのである。',
+      'このことは、技術が単に有害だということを意味するのではない。同じ道具によって、私たちは学び、創造し、他の人とつながっていられる。要点は、注意力は一度使ってしまうと取りもどせず、私たちが何を大切に思うようになるかを形づくるということだ。それを守るには、不要な通知を切ったり、画面を見ない時間をとっておいたりといった、意識的な習慣が必要かもしれない。注意を引こうと競い合う世界では、注意をどこに向けるかを決めることは、自分がそれを選んでいると気づいていようといまいと、私たちが行う最も重要な選択の一つかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to process', 'processing', 'processed', 'process'], answer: 0, why: 'the attention needed to process it「それを処理するのに必要な注意力」。目的を表す不定詞。' },
+      { id: 'B', choices: ['such as', 'as if', 'so that', 'even though'], answer: 0, why: '具体例を挙げる such as ～「たとえば～のような」。' },
+      { id: 'C', choices: ['whether', 'if only', 'unless', 'as long as'], answer: 0, why: 'whether A or not「A であろうとなかろうと」（譲歩）。' },
+    ],
+    tf: [
+      { statement: '筆者は、今の時代には情報が不足していると述べている。', answer: false, why: '第1段落 information itself is no longer scarce。' },
+      { statement: '多くの無料のオンラインサービスは、広告から収入を得ている。', answer: true, why: '第2段落 Much of their income comes from advertising。' },
+      { statement: '筆者は、技術は単に有害なので使うべきではないと主張している。', answer: false, why: '第3段落 None of this means that technology is simply harmful。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why do some services include features like endless feeds?', choices: ['To keep users engaged for a long time.', 'To reduce the amount of information.', 'To help users sleep better.', 'To make the services more expensive.'], answer: 0, why: '第2段落 these services have strong reasons to keep us engaged for as long as possible。' },
+    ],
+  },
 ]
