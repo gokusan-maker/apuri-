@@ -20,6 +20,6 @@ export function collectRecords(): RecordRow[] {
     { icon: '📕', label: 'ボス図鑑にのったボス', value: `${Object.keys(book).length}体` },
     { icon: '🎰', label: 'ガチャを引いた回数', value: `${loadGachaStats().total}回（ウルトラレア ${loadGachaStats().UR}回・今の仲間 ${party.members.length}匹）` },
     { icon: '📮', label: '文法スタンプ', value: `${grammarStamps(loadGrammar())}個` },
-    { icon: '📖', label: '長文読解 満点', value: `${perfectLong} / ${LONG_PASSAGES.length}本` },
+    { icon: '📖', label: '読解 満点', value: `${perfectLong} / ${LONG_PASSAGES.length}本` },
   ]
 }

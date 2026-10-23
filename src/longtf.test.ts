@@ -2,7 +2,7 @@ import { expect, it } from 'vitest'
 import { LONG_PASSAGES } from './longreading'
 import { makeTfQuiz } from './longtf'
 
-it('○×だけチャレンジは解いた長文の○×から重ならずに10問', () => {
+it('○×だけチャレンジは解いた読解の○×から重ならずに10問', () => {
   const ps = LONG_PASSAGES.slice(0, 3)
   const qs = makeTfQuiz(ps, () => 0)
   expect(qs).toHaveLength(10)

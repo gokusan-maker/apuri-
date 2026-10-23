@@ -6,7 +6,7 @@ import { BuddyDetail } from './BuddyDetailView'
 const speakMock = vi.hoisted(() => vi.fn())
 vi.mock('./speech', () => ({ speak: speakMock }))
 
-it('文法のことばモンスター・長文の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
+it('文法のことばモンスター・読解の竜に名前をつけられ、進化の一覧と次までのXPが出る', () => {
   let b: Buddies = { grammar: { xp: 200 }, reading: { xp: 0 } }
   const { rerender } = render(<BuddyDetail buddies={b} onRename={(t, n) => (b = renameBuddy(b, t, n))} />)
   const g = screen.getByLabelText('文法のなかま')

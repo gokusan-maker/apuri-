@@ -178,11 +178,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
   if (!p) {
     return (
       <section className="card grammar long-reading">
-        <h2>{title ?? '長文読解（入試形式）'}</h2>
+        <h2>{title ?? '読解（入試形式）'}</h2>
         {whole && <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
-          {Object.keys(record).length >= LONG_MEDAL ? `💯 長文${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた長文 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
+          {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
-        <p className="stats-note">{whole ? '私立高校の入試のような長文。' : ''}空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        <p className="stats-note">{whole ? '私立高校の入試のような読解。' : ''}空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
         {!whole && dailyPick(LIST, today) && (
           <button className="long-recommend daily-long level-daily" onClick={() => openPassage(dailyPick(LIST, today)!)}>
             📅 今日のおすすめ：<strong>{dailyPick(LIST, today)!.title}</strong>
@@ -195,12 +195,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         </button>}
         {Object.keys(record).length > 0 && (
           <button className="list-link" onClick={() => setVocabQuiz(true)}>
-            📒 重要語句クイズ（読んだ長文から5問）
+            📒 重要語句クイズ（読んだ読解から5問）
           </button>
         )}
         {Object.keys(record).length > 0 && (
           <button className="list-link" onClick={() => setTfQuiz(true)}>
-            ⭕❌ ○×だけチャレンジ（解いた長文から10問）
+            ⭕❌ ○×だけチャレンジ（解いた読解から10問）
           </button>
         )}
         <details className="long-types long-idioms">
@@ -215,7 +215,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         </details>
         {whole && gradeChallenge('中3', record).next && (
           <button className="list-link" onClick={() => openPassage(gradeChallenge('中3', record).next!)}>
-            🔥 中3チャレンジ（中3レベルの長文 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
+            🔥 中3チャレンジ（中3レベルの読解 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
           </button>
         )}
         <button className="list-link" onClick={() => {
@@ -223,7 +223,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             const pool = todo.length > 0 ? todo : LIST
             openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
           }}>
-          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（まだ解いていない長文から）' : ''}
+          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（まだ解いていない読解から）' : ''}
         </button>
         {whole && recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
@@ -233,7 +233,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         )}
         {LIST.some((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)) && (
           <div className="long-review">
-            <p className="long-review-title">🔁 もう一度ときたい長文（満点でないもの）</p>
+            <p className="long-review-title">🔁 もう一度ときたい読解（満点でないもの）</p>
             {LIST.filter((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)).map((x) => (
               <button key={x.id} className="list-link" onClick={() => openPassage(x)}>
                 {shownTitle(x, LONG_PASSAGES.indexOf(x))}（{record[x.id]} / {totalOf(x)}点）
@@ -260,7 +260,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           </details>
         )}
         <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
-        <div className="long-challenge" aria-label={`解いた長文 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
+        <div className="long-challenge" aria-label={`解いた読解 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
           <p className="stats-note">
             🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
           </p>
@@ -275,7 +275,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         )}
         {weekTop(weekRes, weekKey(today), weekKey).length > 0 && (
           <div className="long-week-rank">
-            <p className="stats-note">🏆 今週の長文ランキング</p>
+            <p className="stats-note">🏆 今週の読解ランキング</p>
             <ol>
               {weekTop(weekRes, weekKey(today), weekKey).map((r) => {
                 const x = LIST.find((y) => y.id === r.id)
@@ -295,7 +295,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             🎯 {readingLevel(history)!.name}のきみにおすすめ：{shownTitle(levelPick(readingLevel(history)!.name, record)!, LONG_PASSAGES.indexOf(levelPick(readingLevel(history)!.name, record)!))}
           </button>
         )}
-        <div className="sub-tabs genre-tabs" role="tablist" aria-label="長文の種類">
+        <div className="sub-tabs genre-tabs" role="tablist" aria-label="読解の種類">
           {(['all', ...GENRES] as const).map((g) => (
             <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
               {g === 'all' ? 'すべて' : g}
@@ -306,7 +306,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           <>
             {LIST.some((x) => loadLongDraft(x.id)) && (
               <div className="long-drafts">
-                <p className="stats-note">✏️ とちゅうの長文（続きから）</p>
+                <p className="stats-note">✏️ とちゅうの読解（続きから）</p>
                 <ul className="grammar-list">{LIST.filter((x) => loadLongDraft(x.id)).map(passageItem)}</ul>
               </div>
             )}
@@ -360,7 +360,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             setP(null)
           }}
         >
-          ← 長文の一覧
+          ← 読解の一覧
         </button>
         <span>
           {p.level}・{wordCount(p)}語・⏱ 目安{targetMinutes(p)}分
@@ -368,7 +368,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
       {grammarTags(p).length > 0 && (
-        <p className="long-gtags" aria-label="この長文に出てくる文法">
+        <p className="long-gtags" aria-label="この読解に出てくる文法">
           📘 {grammarTags(p).map((t) => (
             <span key={t.id} className="long-gtag">
               {t.title}
@@ -920,8 +920,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           </p>
           <p className={`level-verdict${levelVerdict(p, score, total).pass ? ' pass' : ''}`}>{levelVerdict(p, score, total).text}</p>
           {keyWords(p).length > 0 && (
-            <div className="long-key3" aria-label="この長文で覚えたい語句">
-              <p className="stats-note">📒 この長文で覚えたい語句</p>
+            <div className="long-key3" aria-label="この読解で覚えたい語句">
+              <p className="stats-note">📒 この読解で覚えたい語句</p>
               <ul>
                 {keyWords(p)
                   .slice(0, 3)
@@ -1016,7 +1016,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               window.scrollTo?.({ top: 0 })
             }}
           >
-            次の長文へ ▶ {shownTitle(nextLong(p.id, record), LONG_PASSAGES.indexOf(nextLong(p.id, record)))}
+            次の読解へ ▶ {shownTitle(nextLong(p.id, record), LONG_PASSAGES.indexOf(nextLong(p.id, record)))}
           </button>
         </div>
       ) : (

@@ -3,7 +3,7 @@ import { expect, it, vi } from 'vitest'
 import { LONG_PASSAGES, MARKS, shownTitle, totalOf, wordCount } from './longreading'
 import { LongReading } from './LongReadingView'
 
-it('長文を読んで記号で答え、採点すると点数と解説が出る', () => {
+it('読解を読んで記号で答え、採点すると点数と解説が出る', () => {
   localStorage.clear()
   const onAnswer = vi.fn()
   render(<LongReading onAnswer={onAnswer} />)
@@ -23,15 +23,15 @@ it('長文を読んで記号で答え、採点すると点数と解説が出る'
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/13 \/ 14 点/)).toBeInTheDocument()
   expect(screen.getByText(/レベル合格！/)).toBeInTheDocument()
-  expect(screen.getByLabelText('この長文で覚えたい語句').querySelectorAll('li').length).toBeGreaterThan(0)
+  expect(screen.getByLabelText('この読解で覚えたい語句').querySelectorAll('li').length).toBeGreaterThan(0)
   expect(screen.getByText('💡 つまずき解説')).toBeInTheDocument()
   expect(screen.getAllByText(/📌 根拠の文：/)).toHaveLength(1)
   expect(document.querySelectorAll('.long-tips li')).toHaveLength(1)
   expect(screen.getByText(/かかった時間 2分05秒/)).toBeInTheDocument()
   expect(screen.getAllByText(/⭕/).length).toBe(11)
   expect(onAnswer).toHaveBeenCalledTimes(14)
-  expect(screen.getByRole('button', { name: new RegExp(`次の長文へ ▶ ${LONG_PASSAGES[1].title.replace(/[?()]/g, '.')}`) })).toBeInTheDocument()
-  fireEvent.click(screen.getByText('← 長文の一覧'))
+  expect(screen.getByRole('button', { name: new RegExp(`次の読解へ ▶ ${LONG_PASSAGES[1].title.replace(/[?()]/g, '.')}`) })).toBeInTheDocument()
+  fireEvent.click(screen.getByText('← 読解の一覧'))
   expect(screen.getByText(/最高 13点 ★★☆/)).toBeInTheDocument()
   expect(screen.getByText(/内容一致（○×）：80%（4\/5）/)).toBeInTheDocument()
   expect(screen.getByText(new RegExp(`これまでに読んだ語数：${wordCount(p)}語`))).toBeInTheDocument()
@@ -81,7 +81,7 @@ it('会話文の空所に入る文を選べる', () => {
   expect(screen.getByRole('button', { name: `${MARKS[sb.answer]} ${sb.choices[sb.answer]}` })).toHaveAttribute('aria-pressed', 'true')
 })
 
-it('表を読みとる長文では表が出る', () => {
+it('表を読みとる読解では表が出る', () => {
   render(<LongReading />)
   fireEvent.click(screen.getByText(/Green City Sports Center/))
   expect(document.querySelectorAll('.long-table tbody tr')).toHaveLength(4)
@@ -113,31 +113,31 @@ it('指示語の問題では二重下線の語が出る', () => {
   expect(screen.getByRole('button', { name: 'ア the Shinkansen' })).toHaveAttribute('aria-pressed', 'true')
 })
 
-it('タイトル選択の長文はタイトルをかくして、選択肢から選ぶ', () => {
+it('タイトル選択の読解はタイトルをかくして、選択肢から選ぶ', () => {
   render(<LongReading />)
   expect(screen.queryByText(/The Clever Octopus/)).not.toBeInTheDocument()
   const n = LONG_PASSAGES.findIndex((p) => p.id === 'octopus')
-  fireEvent.click(screen.getByText(new RegExp(`タイトルを当てる長文 No.${n + 1}`)))
+  fireEvent.click(screen.getByText(new RegExp(`タイトルを当てる読解 No.${n + 1}`)))
   fireEvent.click(screen.getByRole('button', { name: 'イ The Clever Octopus' }))
   expect(screen.getByRole('button', { name: 'イ The Clever Octopus' })).toHaveAttribute('aria-pressed', 'true')
 })
 
-it('満点でない長文は「もう一度ときたい長文」に出る', () => {
+it('満点でない読解は「もう一度ときたい読解」に出る', () => {
   const p = LONG_PASSAGES[1]
   localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: 3 }))
   render(<LongReading />)
   fireEvent.click(screen.getByText(new RegExp(`${p.title}（3 / \\d+点）`)))
-  expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
+  expect(screen.getByText('← 読解の一覧')).toBeInTheDocument()
   localStorage.clear()
 })
 
-it('ランダム挑戦で、まだ解いていない長文が開く', () => {
+it('ランダム挑戦で、まだ解いていない読解が開く', () => {
   localStorage.clear()
   const done = Object.fromEntries(LONG_PASSAGES.slice(0, -1).map((x) => [x.id, 1]))
   localStorage.setItem('eitan:long-reading', JSON.stringify(done))
   render(<LongReading />)
   fireEvent.click(screen.getByText(/🎲 ランダム挑戦/))
-  expect(screen.getByText('← 長文の一覧')).toBeInTheDocument()
+  expect(screen.getByText('← 読解の一覧')).toBeInTheDocument()
   expect(screen.getAllByText(LONG_PASSAGES[LONG_PASSAGES.length - 1].paragraphs[1].split(' ( ')[0].slice(0, 15), { exact: false }).length).toBeGreaterThan(0)
 })
 
@@ -149,14 +149,14 @@ it('とちゅうで一覧にもどっても、もう一度開くと続きから'
   const b = p.blanks[0]
   const label = `${MARKS[b.answer]} ${b.choices[b.answer]}`
   fireEvent.click(screen.getAllByRole('button', { name: label }).find((x) => x.closest('.long-item')!.textContent!.includes(`( ${b.id} )`))!)
-  fireEvent.click(screen.getByText('← 長文の一覧'))
+  fireEvent.click(screen.getByText('← 読解の一覧'))
   expect(screen.getAllByText(/✏️とちゅう/).length).toBe(2) // 上の「とちゅうの長文」とジャンルの中の2か所
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
   expect(screen.getByText(/とちゅうから再開しました/)).toBeInTheDocument()
   expect(screen.getByRole('button', { name: /のこり 13問/ })).toBeDisabled()
 })
 
-it('種類のタブで長文をしぼりこめる', () => {
+it('種類のタブで読解をしぼりこめる', () => {
   localStorage.clear()
   render(<LongReading />)
   const all = document.querySelectorAll('.grammar-list li').length
@@ -260,13 +260,13 @@ it('満点をとると最短タイムが記録される', () => {
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/最短タイム更新！/)).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:long-best-time')!)[p.id]).toBe(60)
-  fireEvent.click(screen.getByText('← 長文の一覧'))
+  fireEvent.click(screen.getByText('← 読解の一覧'))
   expect(screen.getByText(/直近1本の正答率 100%/)).toBeInTheDocument()
   expect(screen.getByText(/📊 ジャンル別：.*100%/)).toBeInTheDocument()
-  expect(screen.getByText('🏆 今週の長文ランキング')).toBeInTheDocument()
+  expect(screen.getByText('🏆 今週の読解ランキング')).toBeInTheDocument()
 })
 
-it('今日の1本のボタンでその日の長文が開く', async () => {
+it('今日の1本のボタンでその日の読解が開く', async () => {
   const { dailyLong, shownTitle } = await import('./longreading')
   const { dayKey } = await import('./srs')
   localStorage.clear()
@@ -340,7 +340,7 @@ it('すぐに答えあわせモードでは、答えるとすぐ正解と解説�
   expect(screen.getByRole('button', { name: `(1) ${t.answer ? '×' : '○'}` })).toBeDisabled()
 })
 
-it('★のしおりをつけた長文は一覧の上に来る', () => {
+it('★のしおりをつけた読解は一覧の上に来る', () => {
   localStorage.clear()
   render(<LongReading />)
   const last = LONG_PASSAGES[LONG_PASSAGES.length - 1]
@@ -351,11 +351,11 @@ it('★のしおりをつけた長文は一覧の上に来る', () => {
   expect(document.querySelectorAll('.grammar-list li')[0].querySelector('.grammar-fav.on')).not.toBeNull()
 })
 
-it('読んだ長文があると重要語句クイズができる', () => {
+it('読んだ読解があると重要語句クイズができる', () => {
   localStorage.clear()
   localStorage.setItem('eitan:long-reading', JSON.stringify({ [LONG_PASSAGES[0].id]: 5, [LONG_PASSAGES[1].id]: 5 }))
   render(<LongReading />)
-  fireEvent.click(screen.getByText(/重要語句クイズ（読んだ長文から5問）/))
+  fireEvent.click(screen.getByText(/重要語句クイズ（読んだ読解から5問）/))
   expect(screen.getByText(/📒 重要語句クイズ 1 \//)).toBeInTheDocument()
   fireEvent.click(document.querySelector<HTMLButtonElement>('.long-vq .choice')!)
   expect(screen.getByText('次へ')).toBeInTheDocument()
@@ -369,14 +369,14 @@ it('全部制覇チャレンジの進みぐあいが出る', () => {
   expect(screen.getByText(new RegExp(`全部制覇チャレンジ：10 / ${LONG_PASSAGES.length}本.*🥉10本`))).toBeInTheDocument()
 })
 
-it('長文の一覧に「空所でよく出る熟語」まとめが出る', () => {
+it('読解の一覧に「空所でよく出る熟語」まとめが出る', () => {
   localStorage.clear()
   render(<LongReading />)
   fireEvent.click(screen.getByText(/空所でよく出る熟語/))
   expect(screen.getByText('thank you for')).toBeTruthy()
 })
 
-it('解いた長文があれば「○×だけチャレンジ」で10問とける', () => {
+it('解いた読解があれば「○×だけチャレンジ」で10問とける', () => {
   localStorage.clear()
   const p = LONG_PASSAGES[0]
   localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: 3, [LONG_PASSAGES[1].id]: 2 }))
@@ -413,7 +413,7 @@ it('「すべて」の一覧はジャンルごとに折りたたまれている'
   expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(LONG_PASSAGES.length)
 })
 
-it('採点したら「次の長文へ ▶」でまだ解いていない次の長文を開ける', () => {
+it('採点したら「次の読解へ ▶」でまだ解いていない次の読解を開ける', () => {
   localStorage.clear()
   const [a, b] = LONG_PASSAGES
   localStorage.setItem('eitan:long-draft', '{}')
@@ -427,12 +427,12 @@ it('採点したら「次の長文へ ▶」でまだ解いていない次の長
   for (const i of a.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${a.pick2!.statements[i]}` }))
   a.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
-  fireEvent.click(screen.getByRole('button', { name: /次の長文へ ▶/ }))
+  fireEvent.click(screen.getByRole('button', { name: /次の読解へ ▶/ }))
   expect(screen.getAllByText(new RegExp(b.title.replace(/[?()]/g, '.'))).length).toBeGreaterThan(0)
   expect(screen.getByRole('button', { name: /のこり/ })).toBeDisabled()
 })
 
-it('長文の本文の文字の大きさを小・中・大で変えられ、覚えている', () => {
+it('読解の本文の文字の大きさを小・中・大で変えられ、覚えている', () => {
   localStorage.clear()
   const p = LONG_PASSAGES[0]
   const { unmount } = render(<LongReading />)
@@ -446,7 +446,7 @@ it('長文の本文の文字の大きさを小・中・大で変えられ、覚�
   expect(document.querySelector('.long-text.font-l')).not.toBeNull()
 })
 
-it('長文を解いているあいだ「のこり○問」が上に出て、答えるとへる', () => {
+it('読解を解いているあいだ「のこり○問」が上に出て、答えるとへる', () => {
   localStorage.clear()
   const p = LONG_PASSAGES[0]
   render(<LongReading />)
@@ -457,7 +457,7 @@ it('長文を解いているあいだ「のこり○問」が上に出て、答�
   expect(document.querySelector('.long-remaining')!.textContent).toContain(`のこり ${total - 1}問`)
 })
 
-it('「中3チャレンジ」で中3レベルのまだ解いていない長文が開く', () => {
+it('「中3チャレンジ」で中3レベルのまだ解いていない読解が開く', () => {
   localStorage.clear()
   const p = LONG_PASSAGES.find((x) => x.level.startsWith('中3'))!
   render(<LongReading />)
@@ -466,14 +466,14 @@ it('「中3チャレンジ」で中3レベルのまだ解いていない長文�
   expect(document.querySelector('.long-remaining')).not.toBeNull()
 })
 
-it('長文を100本解くと記念メダル（それまでは解いた本数を表示）', () => {
+it('読解を100本解くと記念メダル（それまでは解いた本数を表示）', () => {
   localStorage.clear()
   const { unmount } = render(<LongReading />)
-  expect(screen.getByText('📚 解いた長文 0 / 100本（100本で記念メダル）')).toBeInTheDocument()
+  expect(screen.getByText('📚 解いた読解 0 / 100本（100本で記念メダル）')).toBeInTheDocument()
   unmount()
   localStorage.setItem('eitan:long-reading', JSON.stringify(Object.fromEntries(LONG_PASSAGES.slice(0, 100).map((x) => [x.id, 1]))))
   render(<LongReading />)
-  expect(screen.getByText('💯 長文100本クリア記念メダル！')).toBeInTheDocument()
+  expect(screen.getByText('💯 読解100本クリア記念メダル！')).toBeInTheDocument()
 })
 
 it('ジャンルごとの折りたたみに満点の本数が出る', () => {
@@ -503,7 +503,7 @@ it('採点すると本文の空所に正しい語が入り、まちがえた空�
   expect(document.querySelector('.long-blank.filled.ng')!.textContent).toBe(`( ${p.blanks[0].id} ) ${p.blanks[0].choices[p.blanks[0].answer]}`)
 })
 
-it('答えかけの長文は一覧の上の「✏️ とちゅうの長文」に出る', () => {
+it('答えかけの読解は一覧の上の「✏️ とちゅうの読解」に出る', () => {
   localStorage.clear()
   const p = LONG_PASSAGES[5]
   localStorage.setItem('eitan:long-draft', JSON.stringify({ [p.id]: { blanks: { A: 0 }, tf: {}, picks: [], order: [], sents: {}, qa: {}, gist: {}, comp: {} } }))

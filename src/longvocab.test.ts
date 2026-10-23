@@ -2,7 +2,7 @@ import { expect, it } from 'vitest'
 import { LONG_PASSAGES } from './longreading'
 import { keyWords } from './longvocab'
 
-it('長文から熟語とむずかしめの単語を拾う', () => {
+it('読解から熟語とむずかしめの単語を拾う', () => {
   const bee = keyWords(LONG_PASSAGES.find((p) => p.id === 'honeybees')!)
   expect(bee.length).toBeGreaterThan(0)
   for (const p of LONG_PASSAGES) {

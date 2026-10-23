@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest'
 import { LONG_PASSAGES, paraSeqQ, scoreLong, splitSentences, totalOf, typeResults } from './longreading'
 
-it('段落の文の並べかえ：2本以上の長文にあり、正しい順で並べると本文の段落にもどる', () => {
+it('段落の文の並べかえ：2本以上の読解にあり、正しい順で並べると本文の段落にもどる', () => {
   const ps = LONG_PASSAGES.filter((p) => p.paraSeq)
   expect(ps.length).toBeGreaterThanOrEqual(8)
   for (const p of ps) {

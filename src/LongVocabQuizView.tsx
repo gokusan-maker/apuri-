@@ -17,9 +17,9 @@ export function LongVocabQuiz({ readIds, onBack, onAnswer }: Props) {
     return (
       <section className="card grammar">
         <button className="stage-back" onClick={onBack}>
-          ← 長文の一覧
+          ← 読解の一覧
         </button>
-        <p className="stats-note">まず長文を読んで採点してみよう。</p>
+        <p className="stats-note">まず読解を読んで採点してみよう。</p>
       </section>
     )
   }
@@ -27,7 +27,7 @@ export function LongVocabQuiz({ readIds, onBack, onAnswer }: Props) {
     return (
       <section className="card result">
         <button className="stage-back" onClick={onBack}>
-          ← 長文の一覧
+          ← 読解の一覧
         </button>
         <p className="result-title">📒 重要語句クイズ</p>
         <p className="result-score">
@@ -40,7 +40,7 @@ export function LongVocabQuiz({ readIds, onBack, onAnswer }: Props) {
   return (
     <section className="card quiz grammar long-vq">
       <button className="stage-back" onClick={onBack}>
-        ← 長文の一覧
+        ← 読解の一覧
       </button>
       <p className="progress">
         📒 重要語句クイズ {step + 1} / {qs.length}

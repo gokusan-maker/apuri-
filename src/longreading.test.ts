@@ -3,7 +3,7 @@ import { LONG_PASSAGES, loadLongRecord, saveLongRecord, scoreLong } from './long
 
 beforeEach(() => localStorage.clear())
 
-it('長文は3本以上で、空所が本文にあり、選択肢は4つで正解がその中にある', () => {
+it('読解は3本以上で、空所が本文にあり、選択肢は4つで正解がその中にある', () => {
   expect(LONG_PASSAGES.length).toBeGreaterThanOrEqual(115)
   expect(new Set(LONG_PASSAGES.map((p) => p.id)).size).toBe(LONG_PASSAGES.length)
   for (const p of LONG_PASSAGES) {
@@ -128,7 +128,7 @@ it('段落の要旨の問題は、本文にある段落を指している', () =
   expect(scoreLong(p, {}, {}, [], { gist: Object.fromEntries(p.gist!.map((g, i) => [i, g.answer])) }).score).toBe(p.gist!.length)
 })
 
-it('タイトル選択の問題がある長文は、一覧でタイトルをかくす', async () => {
+it('タイトル選択の問題がある読解は、一覧でタイトルをかくす', async () => {
   const { shownTitle } = await import('./longreading')
   const ts = LONG_PASSAGES.filter((p) => p.titleQ)
   expect(ts.length).toBeGreaterThanOrEqual(3)
@@ -147,7 +147,7 @@ it('英文の完成の問題は選択肢4つで、3本以上にある', () => {
   }
 })
 
-it('苦手な設問タイプがある長文をおすすめする', async () => {
+it('苦手な設問タイプがある読解をおすすめする', async () => {
   const { recommendLong, weakTypes, hasType } = await import('./longreading')
   expect(weakTypes({ tf: [1, 5], blank: [9, 10] })).toEqual(['tf'])
   const r = recommendLong({ refer: [0, 2] }, {})!
@@ -156,7 +156,7 @@ it('苦手な設問タイプがある長文をおすすめする', async () => {
   expect(recommendLong({ blank: [10, 10] }, {})).toBeNull()
 })
 
-it('長文の語数を数え、読んだ語数の合計をためられる', async () => {
+it('読解の語数を数え、読んだ語数の合計をためられる', async () => {
   const { addReadWords, loadReadWords, wordCount } = await import('./longreading')
   localStorage.clear()
   const p = { ...LONG_PASSAGES[0], paragraphs: ['I like ( A ) cats.', 'They are cute!'] }
@@ -168,7 +168,7 @@ it('長文の語数を数え、読んだ語数の合計をためられる', asyn
   for (const x of LONG_PASSAGES) expect(wordCount(x)).toBeGreaterThan(0)
 })
 
-it('長文の最高点から★1〜3をつける', async () => {
+it('読解の最高点から★1〜3をつける', async () => {
   const { longStars } = await import('./longreading')
   expect(longStars(undefined, 10)).toBe(0)
   expect(longStars(10, 10)).toBe(3)
@@ -177,7 +177,7 @@ it('長文の最高点から★1〜3をつける', async () => {
   expect(longStars(0, 10)).toBe(1)
 })
 
-it('ランダム挑戦はまだ解いていない長文からえらぶ', async () => {
+it('ランダム挑戦はまだ解いていない読解からえらぶ', async () => {
   const { randomLong } = await import('./longreading')
   const done = Object.fromEntries(LONG_PASSAGES.slice(1).map((x) => [x.id, 1]))
   expect(randomLong(done, 0.99).id).toBe(LONG_PASSAGES[0].id)
@@ -186,7 +186,7 @@ it('ランダム挑戦はまだ解いていない長文からえらぶ', async (
   expect(randomLong({}, 0).id).toBe(LONG_PASSAGES[0].id)
 })
 
-it('長文の答えかけを保存して読みもどせる', async () => {
+it('読解の答えかけを保存して読みもどせる', async () => {
   const { loadLongDraft, saveLongDraft } = await import('./longreading')
   localStorage.clear()
   expect(loadLongDraft('x')).toBeNull()
@@ -202,7 +202,7 @@ it('長文の答えかけを保存して読みもどせる', async () => {
   expect(loadLongDraft('x')).toBeNull()
 })
 
-it('長文の種類を見分ける', async () => {
+it('読解の種類を見分ける', async () => {
   const { genreOf, GENRES } = await import('./longreading')
   const at = (id: string) => LONG_PASSAGES.find((x) => x.id === id)!
   expect(genreOf(at('chopsticks'))).toBe('説明文')
@@ -272,7 +272,7 @@ it('出来事の順番は全部の順番が合って1点', async () => {
   }
 })
 
-it('長文の最短タイムは短くなったときだけ更新', async () => {
+it('読解の最短タイムは短くなったときだけ更新', async () => {
   const { loadLongTimes, recordLongTime } = await import('./longreading')
   localStorage.clear()
   expect(recordLongTime('a', 300)).toBe(true)
@@ -292,7 +292,7 @@ it('今日の1本は日付で決まる', async () => {
   expect(loadDailyLongDay()).toBe('2026-10-20')
 })
 
-it('英問英答のある長文は13本以上で、選択肢は4つ', () => {
+it('英問英答のある読解は13本以上で、選択肢は4つ', () => {
   const ps = LONG_PASSAGES.filter((x) => x.qa)
   expect(ps.length).toBeGreaterThanOrEqual(13)
   for (const p of ps) for (const q of p.qa!) expect(q.choices).toHaveLength(4)
@@ -314,7 +314,7 @@ it('すべての設問の種類につまずき解説がある', async () => {
   for (const k of Object.keys(TYPE_LABEL)) expect((TYPE_TIPS as Record<string, string>)[k]).toBeTruthy()
 })
 
-it('読解レベルに合った、まだ解いていない長文をすすめる', async () => {
+it('読解レベルに合った、まだ解いていない読解をすすめる', async () => {
   const { levelPick } = await import('./longreading')
   const a = levelPick('上級', {})!
   expect(a.level).toContain('高校入試')
@@ -368,7 +368,7 @@ it('語句整序は8本以上で、並べる語と答えの語が同じ', () => 
   for (const p of ps) expect([...p.order!.words].sort()).toEqual(p.order!.answer.split(' ').sort())
 })
 
-it('今週のランキングは今週の結果だけで、同じ長文はベストの点', async () => {
+it('今週のランキングは今週の結果だけで、同じ読解はベストの点', async () => {
   const { weekTop } = await import('./longreading')
   const { weekKey } = await import('./rareboss')
   const list = [
@@ -382,7 +382,7 @@ it('今週のランキングは今週の結果だけで、同じ長文はベス�
   expect(weekTop(list, '2026-10-19', weekKey).map((r) => [r.id, r.pct])).toEqual([['a', 90], ['e', 80], ['b', 70]])
 })
 
-it('むずかしさは★1〜3で、いろいろな★の長文がある', async () => {
+it('むずかしさは★1〜3で、いろいろな★の読解がある', async () => {
   const { difficultyOf } = await import('./longreading')
   const ds = LONG_PASSAGES.map(difficultyOf)
   for (const d of ds) expect([1, 2, 3]).toContain(d)

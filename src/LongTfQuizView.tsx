@@ -16,7 +16,7 @@ export function LongTfQuiz({ readIds, onBack, onAnswer }: Props) {
   const [score, setScore] = useState(0)
   const back = (
     <button className="stage-back" onClick={onBack}>
-      ← 長文の一覧
+      ← 読解の一覧
     </button>
   )
   if (step >= qs.length) {
@@ -27,7 +27,7 @@ export function LongTfQuiz({ readIds, onBack, onAnswer }: Props) {
         <p className="result-score">
           {score} / {qs.length} 問正解
         </p>
-        <p className="result-message">{score === qs.length ? 'カンペキ！' : 'まちがえた長文を読み直してみよう'}</p>
+        <p className="result-message">{score === qs.length ? 'カンペキ！' : 'まちがえた読解を読み直してみよう'}</p>
       </section>
     )
   }

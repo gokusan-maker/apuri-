@@ -995,7 +995,7 @@ describe('App', () => {
     }
   })
 
-  it('ホームに単語・文法・長文の3体がいて、文法の答えは文法のなかま（動物）が育つ', async () => {
+  it('ホームに単語・文法・読解の3体がいて、文法の答えは文法のなかま（動物）が育つ', async () => {
     const { GRAMMAR } = await import('./grammar')
     render(<App />)
     const row = screen.getByLabelText('育てているなかま')

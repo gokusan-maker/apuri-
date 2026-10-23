@@ -11,7 +11,7 @@ const xpFor = (lv: number) => {
   return xp
 }
 
-it('文法のことばモンスター・長文の竜はオリジナルの絵（SVG）で、姿の名前がラベルになる', () => {
+it('文法のことばモンスター・読解の竜はオリジナルの絵（SVG）で、姿の名前がラベルになる', () => {
   const { container, rerender } = render(<BuddyFigure track="grammar" buddy={{ xp: 0 }} />)
   expect(container.querySelector('svg')!.getAttribute('aria-label')).toBe('ことばのタマゴ')
   rerender(<BuddyFigure track="reading" buddy={{ xp: 1000000 }} />)

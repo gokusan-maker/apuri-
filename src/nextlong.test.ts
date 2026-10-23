@@ -1,7 +1,7 @@
 import { expect, it } from 'vitest'
 import { LONG_PASSAGES, nextLong } from './longreading'
 
-it('次の長文は、今のあとのまだ解いていない長文（全部解いたら次）', () => {
+it('次の読解は、今のあとのまだ解いていない読解（全部解いたら次）', () => {
   const [a, b, c] = LONG_PASSAGES
   expect(nextLong(a.id, {})).toBe(b)
   expect(nextLong(a.id, { [b.id]: 3 })).toBe(c)

@@ -145,7 +145,7 @@ it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る'
   expect(screen.getByText(/エンドレスの塔（最高 2階）/)).toBeInTheDocument()
 })
 
-it('ステージのボスは読解問題（長文の本文つきで、空所補充・○×・英問英答）', async () => {
+it('ステージのボスは読解問題（読解の本文つきで、空所補充・○×・英問英答）', async () => {
   const { passageQs } = await import('./readingboss')
   const { LONG_PASSAGES } = await import('./longreading')
   const all = Object.fromEntries(stagesOf('中1').map((s) => [s.id, 1]))

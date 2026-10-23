@@ -4643,7 +4643,7 @@ export function saveTypeStats(s: TypeStats): void {
 }
 
 // 一覧・見出しに出す名前（タイトル選択の問題がある長文はタイトルをかくす）
-export const shownTitle = (p: LongPassage, n: number) => (p.titleQ ? `タイトルを当てる長文 No.${n + 1}` : p.title)
+export const shownTitle = (p: LongPassage, n: number) => (p.titleQ ? `タイトルを当てる読解 No.${n + 1}` : p.title)
 
 // 苦手な設問タイプ（正答率60%未満）がある長文のうち、まだ満点でないものをおすすめする
 export function hasType(p: LongPassage, k: QType): boolean {

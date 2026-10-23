@@ -3,7 +3,7 @@ import { ADV_PASSAGES } from './advreading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel } from './readlevel'
 
 describe('読解のむずかしさ', () => {
-  it('かんたん〜TOEFL・IELTS まで5段階あり、かんたん以外は長文がある', () => {
+  it('かんたん〜TOEFL・IELTS まで5段階あり、かんたん以外は読解がある', () => {
     expect(READ_LEVELS.map((l) => l.label)).toEqual(['かんたん', 'ふつう', '高校入試', '難関大', 'TOEFL・IELTS'])
     for (const l of READ_LEVELS.filter((x) => x.id !== 'easy')) expect(passagesFor(l.id).length, l.id).toBeGreaterThanOrEqual(15)
     expect(passagesFor('univ').every((p) => p.level.startsWith('難関大'))).toBe(true)
@@ -17,7 +17,7 @@ describe('読解のむずかしさ', () => {
   })
 })
 
-describe('難関大・TOEFL/IELTS の長文', () => {
+describe('難関大・TOEFL/IELTS の読解', () => {
   it('空所が本文にあり、訳は段落と同じ数、選択肢の答えは範囲内', () => {
     const ids = new Set<string>()
     for (const p of ADV_PASSAGES) {
