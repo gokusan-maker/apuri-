@@ -1444,3 +1444,9 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .grammar-list button.grammar-fav.on { background: linear-gradient(135deg, #fde68a, #fbbf24); border-color: #f59e0b; color: #fff; text-shadow: 0 1px 1px rgb(180 83 9 / 0.5); }
 .grammar-list button.grammar-fav:active { transform: scale(0.92); box-shadow: none; }
 .grammar-list button.grammar-fav { justify-content: center; text-align: center; }
+
+/* ホームの行動ボタン（今日のボス・おやつ・チャレンジ・おたんじょう日）：左よせの文字＋右に › の矢印。360pxでもなるべく1行に */
+.challenge-btn { position: relative; text-align: left; padding: 13px 38px 13px 16px; font-size: clamp(0.84rem, 4vw, 1rem); line-height: 1.45; border-radius: 18px; }
+.challenge-btn::after { content: '›'; position: absolute; right: 14px; top: 50%; transform: translateY(-52%); font-size: 1.6rem; font-weight: 400; line-height: 1; opacity: 0.55; }
+.challenge-btn .challenge-streak { display: inline-block; margin-left: 6px; }
+.challenge-btn .challenge-sub { display: block; margin-top: 1px; font-size: 0.74rem; font-weight: 700; opacity: 0.75; }

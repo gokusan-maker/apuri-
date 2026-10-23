@@ -1143,7 +1143,8 @@ function App() {
                 toContent()
               }}
             >
-              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」（おやつをあげる）
+              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」
+              <small className="challenge-sub">おやつをあげる</small>
             </button>
           )}
           {birthdayAge(bday, today) > 0 && (
