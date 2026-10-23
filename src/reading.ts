@@ -1641,6 +1641,17 @@ export const PASSAGES: Passage[] = [
       { q: 'テストの日はどうだった？', choices: ['まちがえずにふけた', '何度もまちがえた', 'テストを休んだ'], answer: 0 },
     ],
   },
+  {
+    id: 'talent-show',
+    title: 'The Talent Show',
+    text: 'Our school had a talent show last Friday. My friends and I decided to sing a song together. We practiced every day after school for two weeks. On the day of the show, I was so nervous that my voice was very small at first. But when I saw my mother smiling in the audience, I felt better and sang loudly. After our song, everyone clapped for a long time. We did not win first prize, but it was the best day of the year for me.',
+    ja: 'この前の金曜日、学校でタレントショーがありました。友だちと私は、いっしょに歌を歌うことにしました。2週間、毎日放課後に練習しました。ショーの当日、私はとても緊張していたので、はじめは声がとても小さくなってしまいました。でも、観客席でほほえんでいる母を見て、気持ちが楽になり、大きな声で歌えました。私たちの歌が終わると、みんなが長いあいだ拍手してくれました。1位にはなれませんでしたが、私にとって今年いちばんの日になりました。',
+    questions: [
+      { q: '筆者たちは何をした？', choices: ['歌を歌った', 'ダンスをおどった', '劇をした'], answer: 0 },
+      { q: 'どれくらい練習した？', choices: ['2週間', '1週間', '1か月'], answer: 0 },
+      { q: '歌い始めたとき、筆者はどうだった？', choices: ['緊張して声が小さかった', '大きな声で歌えた', '歌詞を忘れた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
