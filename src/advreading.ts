@@ -2164,7 +2164,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     title: 'The Wrong Train',
     level: '高校入試（体験文）',
     paragraphs: [
-      "Last summer, I went to see my aunt in Nagoya by myself. It was my first time to travel alone, so I was excited but also nervous. At the big station, I got on a train that was leaving soon. After a few minutes, I looked at the screen above the door and realized that I was going the wrong ( A ).",
+      "Last summer, I went to see my aunt in Nagoya by myself. It was my first time traveling alone, so I was excited but also nervous. At the big station, I got on a train that was leaving soon. After a few minutes, I looked at the screen above the door and realized that I was going the wrong ( A ).",
       "I did not know what to do, and I almost started to cry. Then an old woman sitting next to me asked, \"Are you all right?\" I showed her the name of my aunt's station. She smiled and said, \"Don't worry. Get off at the next station and take the train on the other side.\" She even wrote the time of the next train on a piece of paper ( B ) me.",
       "Thanks to her, I arrived at my aunt's house only thirty minutes late. I did not ask the woman's name, so I cannot thank her now. However, I decided one thing on that day. When I see someone ( C ) is in trouble, I will be the first person to say, \"Are you all right?\"",
     ],

@@ -1325,3 +1325,4 @@
 - 2026-10-23: 読解「TOEFL・IELTS」に「Why Cities Stay Warm at Night（ヒートアイランド）」を追加
 - 2026-10-23: 中1の文法単元「複数形の作り方（-s / -es / -ies / 不規則）」を追加（全200単元に）
 - 2026-10-23: 読解「高校入試」に「The Wrong Train（まちがえた電車）」を追加
+- 2026-10-23: 読解「The Wrong Train」の英文をより自然な表現に修正（my first time traveling alone）
