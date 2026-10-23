@@ -4750,6 +4750,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Seeds in fruit eaten by birds can come out in a different place.', answer: true, why: '第3段落の最後の文と合う。' },
     ],
   },
+  {
+    id: 'why-sneeze',
+    title: 'Why Do We Sneeze?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Ah-choo! Everyone sneezes sometimes. It may feel strange, but a sneeze is actually one of the ways your body protects you. When dust, pollen, or germs get inside your nose, the nose sends a message to the brain. Then the brain makes your body push the air out ( A ) and strongly.',
+      'A sneeze happens very fast, and you cannot easily stop it. Many muscles work together, from your chest to your throat. Your eyes also close by themselves. Because the air comes out so strongly, a sneeze can carry tiny drops of water a long way.',
+      'Some people sneeze when they suddenly look at bright sunlight. Scientists are still not sure why this happens, but it seems to run in families. If your parents sneeze in the sun, you may do the ( B ).',
+      'When you have a cold, sneezing can spread germs to other people. So it is important to cover your mouth and nose. Doctors say that using your elbow is better than using your hands, ( C ) your hands touch many things, such as doors and desks.',
+    ],
+    ja: [
+      'ハクション！ だれでもときどきくしゃみをします。ふしぎな感じがするかもしれませんが、くしゃみは実は体があなたを守る方法の一つなのです。ほこりや花粉、ばい菌が鼻の中に入ると、鼻は脳に知らせを送ります。すると脳は、体に空気をすばやく強くはき出させるのです。',
+      'くしゃみはとても速く起こり、かんたんには止められません。胸からのどまで、たくさんの筋肉がいっしょにはたらきます。目も自然に閉じます。空気がとても強く出るので、くしゃみは小さな水のつぶを遠くまで運ぶことがあります。',
+      '急に明るい日光を見たときにくしゃみをする人もいます。なぜそうなるのか科学者たちにもまだはっきりわかっていませんが、家族で似ることが多いようです。もしあなたの親が日光でくしゃみをするなら、あなたもそうなるかもしれません。',
+      'かぜをひいているとき、くしゃみはばい菌をほかの人に広げることがあります。だから口と鼻をおおうことが大切です。医者によると、手よりもひじを使うほうがよいそうです。手はドアや机など、いろいろなものにさわるからです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['quickly', 'quick', 'quicker than', 'quickness'], answer: 0, why: 'push the air out を修飾するので副詞 quickly。and strongly と副詞どうしで並ぶ。' },
+      { id: 'B', choices: ['same', 'similar', 'like', 'alike'], answer: 0, why: 'do the same「同じことをする」。' },
+      { id: 'C', choices: ['because', 'but', 'so', 'if'], answer: 0, why: 'ひじのほうがよい理由を述べるので because。' },
+    ],
+    underline: { phrase: 'it seems to run in families', choices: ['家族で似ることが多いようだ', '家族で走るのが好きなようだ', '家族の中で一人だけに起こる', '家族といると止まるようだ'], answer: 0, why: 'run in the family / run in families「（性質が）家族に受けつがれる」。seem to ～「～のようだ」。' },
+    tf: [
+      { statement: 'A sneeze helps protect your body.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'It is easy to stop a sneeze.', answer: false, why: '第2段落 you cannot easily stop it。' },
+      { statement: 'Your eyes stay open when you sneeze.', answer: false, why: '第2段落 Your eyes also close by themselves。' },
+      { statement: 'Scientists know exactly why some people sneeze in bright sunlight.', answer: false, why: '第3段落 Scientists are still not sure why。' },
+      { statement: 'Doctors say it is better to cover a sneeze with your elbow.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
