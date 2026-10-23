@@ -2719,4 +2719,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer remember from the teacher?', choices: ['To get down to a small child\'s eye level.', 'To call the police right away.', 'To give the child some candy.', 'To ask the child to wait alone.'], answer: 0, why: '第2段落 get down to their eye level。' },
     ],
   },
+{
+    id: 'adv-survivorship',
+    title: 'The Planes That Did Not Return',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A well-known story from the Second World War concerns the statistician Abraham Wald. Military officials studied the bombers that came back from missions and noted where they had been hit by enemy fire. The bullet holes were concentrated on the wings and the body, so the officials proposed adding armor to those areas. Wald argued the opposite. The planes they were examining were the ones that had survived; the places where returning planes showed no damage, ( A ) the engines, were probably the places where a hit brought a plane down.",
+      "This error of reasoning is now known as survivorship bias: drawing conclusions from the examples that remain visible while ignoring those that have disappeared. It appears in many areas of life. We hear about the few people who left school and became rich, but not about the many ( B ) did the same and failed. We admire old buildings for their durability, forgetting that poorly built ones from the same period have long since collapsed.",
+      "Survivorship bias is difficult to notice precisely because the missing evidence is, by definition, missing. Guarding against it therefore requires a deliberate question: what am I not seeing, and why? Asking this does not guarantee a correct answer, but it reminds us that the data in front of us may have been filtered in ways that make success look more common, or more predictable, ( C ) it really is.",
+    ],
+    ja: [
+      '第二次世界大戦のよく知られた話に、統計学者エイブラハム・ウォールドにまつわるものがある。軍の担当者たちは任務からもどってきた爆撃機を調べ、どこに敵の弾が当たっていたかを記録した。弾の穴は翼と胴体に集中していたので、担当者たちはそうした部分に装甲を加えることを提案した。ウォールドは反対のことを主張した。彼らが調べていたのは生きのびた機体であり、もどってきた機体に損傷が見られない場所、たとえばエンジンこそ、当たると機体が墜落してしまう場所だったのだろう、と。',
+      'このような推論の誤りは、今では生存者バイアスとして知られている。見えるまま残っている例から結論を引き出し、消えてしまった例を無視してしまうことである。これは生活のさまざまな場面にあらわれる。学校をやめてお金持ちになった少数の人のことは耳にするが、同じことをして失敗した多くの人のことは耳にしない。古い建物の丈夫さに感心するが、同じ時代のつくりの悪い建物はとっくにくずれ落ちていることを忘れている。',
+      '生存者バイアスに気づきにくいのは、欠けている証拠が、その定義からして欠けているからにほかならない。そのため、これを防ぐには意識的な問いが必要になる。自分には何が見えていないのか、そしてそれはなぜか。この問いを立てても正しい答えが保証されるわけではないが、目の前のデータが、成功を実際よりもありふれたものに、あるいは予測しやすいものに見せるようなしかたでふるい分けられているかもしれないことを、思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['such as', 'as if', 'even though', 'so that'], answer: 0, why: '具体例を挙げる such as ～「たとえば～」。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 the many (people)（人）を説明する主格の関係代名詞 who。' },
+      { id: 'C', choices: ['than', 'as', 'that', 'so'], answer: 0, why: 'more common, or more predictable, than ～ と比較級に続く than。' },
+    ],
+    tf: [
+      { statement: '担当者たちは、弾の穴が多い翼と胴体に装甲を加えることを提案した。', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'ウォールドは、もどってきた機体の損傷がない場所こそ大切だと考えた。', answer: true, why: '第1段落 the places where returning planes showed no damage ... were probably the places where a hit brought a plane down。' },
+      { statement: '筆者によれば、生存者バイアスは、欠けている証拠がはっきり見えるので気づきやすい。', answer: false, why: '第3段落 difficult to notice precisely because the missing evidence is ... missing。' },
+    ],
+    qa: [
+      { q: 'What question does the writer suggest asking to guard against survivorship bias?', choices: ['What am I not seeing, and why?', 'Who is the most successful person?', 'How many planes came back?', 'Which building is the oldest?'], answer: 0, why: '第3段落 what am I not seeing, and why?' },
+    ],
+  },
 ]
