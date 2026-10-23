@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'what-noun': { wrong: 'What do you like sport?', right: 'What sport do you like?', why: '「何の〜」は What のすぐあとに名詞を置く。' },
   'hardly-seldom': { wrong: "I can't hardly hear you.", right: 'I can hardly hear you.', why: 'hardly だけで「ほとんど〜ない」。not（can\'t）と重ねない。' },
   'what-is-called': { wrong: 'He is which is called a hero.', right: 'He is what is called a hero.', why: '「いわゆる」は what is called（関係代名詞 what）。' },
   'gerund-set': { wrong: 'I feel like to eat pizza.', right: 'I feel like eating pizza.', why: 'feel like の like は前置詞なので、あとは -ing。' },
