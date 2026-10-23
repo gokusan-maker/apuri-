@@ -15,6 +15,10 @@ it('16問答えると、おすすめの単語帳が出て切りかえられる',
     fireEvent.click(right ? btns.find((b) => b.textContent === w.ja)! : btns.find((b) => b.textContent !== w.ja)!)
   }
   expect(screen.getByText('おすすめの単語帳：中3')).toBeInTheDocument()
+  // 単語帳ごとの結果は横バーで、おすすめの単語帳が強調される
+  const rows = screen.getByRole('list', { name: 'レベルごとの結果' }).querySelectorAll('li')
+  expect(rows[0].querySelector('.placement-bar i')!.getAttribute('style')).toContain('width: 100%')
+  expect(rows[2].classList.contains('rec')).toBe(true)
   fireEvent.click(screen.getByText('「中3」で学習する'))
   expect(set).toEqual(['中3'])
 })

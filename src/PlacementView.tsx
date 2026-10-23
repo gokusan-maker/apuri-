@@ -16,10 +16,16 @@ export function Placement({ onSetLevels }: Props) {
     return (
       <section className="card result placement">
         <h2>診断結果</h2>
-        <ul className="missed-list" aria-label="レベルごとの結果">
+        <ul className="placement-bars" aria-label="レベルごとの結果">
           {PLACEMENT_LEVELS.map((l) => (
-            <li key={l}>
-              <strong>{l}</strong> {score[l] ?? 0} / {PER_LEVEL}
+            <li key={l} className={l === rec ? 'rec' : undefined}>
+              <strong>{l}</strong>
+              <span className="placement-bar" aria-hidden="true">
+                <i style={{ width: `${((score[l] ?? 0) / PER_LEVEL) * 100}%` }} />
+              </span>
+              <span className="placement-score">
+                {score[l] ?? 0} / {PER_LEVEL}
+              </span>
             </li>
           ))}
         </ul>
