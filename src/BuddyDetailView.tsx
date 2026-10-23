@@ -44,7 +44,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
               <p>
                 <strong>{buddyName(t, b)}</strong>{buddyName(t, b) !== formName(t, b) && `（${formName(t, b)}）`} Lv.{lv.level}
                 <button
-                  className="list-link"
+                  className="list-link buddy-rename-btn"
                   onClick={() => {
                     setDraft(b.name ?? '')
                     setEditing(t)
@@ -54,9 +54,12 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
                 </button>
               </p>
             )}
-            <p className="stats-note">
+            <p className="stats-note buddy-next">
               次のレベルまで あと {lv.need - lv.into} XP{next ? `・Lv.${next.minLv}で ？？？ に進化` : '・さいごの姿！'}
             </p>
+            <div className="buddy-xpbar" aria-hidden="true">
+              <i style={{ width: `${Math.min(100, Math.round((lv.into / Math.max(1, lv.need)) * 100))}%` }} />
+            </div>
             {SPECIES_PROFILE[speciesOf(t, b).id] && (
               <p className="buddy-profile">
                 <span className="ally-line">{SPECIES_PROFILE[speciesOf(t, b).id].en}</span>
