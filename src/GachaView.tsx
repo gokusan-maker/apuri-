@@ -170,7 +170,9 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             list.forEach(record)
           }}
         >
-          🎍 今月の福袋（3連ガチャ＋バトルアイテム3つ）🪙{LUCKY_BAG_PRICE}
+          <span className="gacha-multi-title">🎍 今月の福袋</span>
+          <span className="gacha-multi-sub">3連ガチャ＋バトルアイテム3つ</span>
+          <span className="gacha-multi-sub">🪙{LUCKY_BAG_PRICE}</span>
         </button>
       )}
       <label className="gacha-fast-toggle">

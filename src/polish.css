@@ -1584,3 +1584,6 @@ summary::-webkit-details-marker { display: none; }
 summary::before { content: '›'; display: inline-grid; place-items: center; width: 1.25em; height: 1.25em; margin-right: 6px; border-radius: 50%; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); font-size: 0.95em; font-weight: 900; line-height: 1; vertical-align: 0.05em; transition: transform 0.2s; }
 details[open] > summary::before { transform: rotate(90deg); }
 @media (prefers-reduced-motion: reduce) { summary::before { transition: none; } }
+/* 今月の福袋：タイトル＋小さな説明の2段に */
+.gacha-btn.lucky-bag { display: flex; flex-direction: column; align-items: center; gap: 2px; }
+.gacha-btn.lucky-bag .gacha-multi-sub { white-space: normal; font-size: 0.74rem; }
