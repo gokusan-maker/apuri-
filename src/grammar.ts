@@ -3227,7 +3227,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I bought a scarf for my grandmother.', ja: '祖母にマフラーを買った。' },
     ],
     questions: [
-      { sentence: 'She sent a letter ___ her friend in Canada.', choices: ['to', 'for', 'at'], answer: 0, why: 'send は相手に届ける動詞なので to。' },
+      { sentence: 'She sent a letter ___ her friend in Canada.', choices: ['to', 'with', 'at'], answer: 0, why: 'send は相手に届ける動詞なので to。' },
       { sentence: 'My mother cooked dinner ___ us.', choices: ['for', 'to', 'of'], answer: 0, why: 'cook は「相手のために～する」動詞なので for。' },
       { sentence: 'I have a new pen. I will give ___.', choices: ['it to you', 'you it', 'to you it'], answer: 0, why: '物が代名詞 it のときは give it to you の形にする。' },
     ],

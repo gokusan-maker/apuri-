@@ -2355,4 +2355,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer start doing after the tournament?', choices: ['Practicing footwork.', 'Quitting the badminton team.', 'Playing tennis instead.', 'Practicing only smashes.'], answer: 0, why: '第3段落 I have started practicing footwork, too。' },
     ],
   },
+{
+    id: 'adv-railway-time',
+    title: 'When Clocks Began to Agree',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, time was a local matter. Each town set its clocks by the position of the sun, so that noon was the moment when the sun stood highest in the sky. Because the sun appears to move from east to west, a town only a short distance to the west would be several minutes behind its neighbor. As long as people traveled slowly, ( A ) small differences caused little trouble.",
+      "The railway changed this. When trains began to carry passengers between distant cities at high speed, timetables based on dozens of local times became confusing and even dangerous. In Britain, railway companies in the 1840s began to use a single standard time throughout their networks, and in 1883 railroads in the United States and Canada introduced standard time zones. The following year, an international conference recommended Greenwich in London as the starting point for measuring longitude, ( B ) laid the foundation for the global system of time zones we use today.",
+      "What is striking about this history is that a technical solution also transformed how people experienced time. The hour shown on a clock was no longer tied to the sky above a particular place; it became a shared agreement, coordinated across great distances. Some critics at the time complained that \"railway time\" was artificial. Yet it is precisely this artificial agreement ( C ) allows millions of strangers to meet trains, join online meetings, and coordinate their lives.",
+    ],
+    ja: [
+      '人類の歴史の大部分で、時刻は地域ごとのものだった。それぞれの町は太陽の位置に合わせて時計を合わせていたので、正午とは太陽が空でいちばん高くなる瞬間のことだった。太陽は東から西へ動くように見えるので、少し西にある町はとなりの町より数分おくれていた。人々がゆっくり移動しているかぎり、そのような小さなちがいはほとんど問題にならなかった。',
+      '鉄道がこれを変えた。列車が遠くはなれた都市のあいだで乗客を高速で運ぶようになると、何十もの地方時にもとづく時刻表はわかりにくく、危険でさえあるものになった。イギリスでは1840年代に鉄道会社が路線網全体で1つの標準時を使いはじめ、1883年にはアメリカとカナダの鉄道が標準時間帯を導入した。翌年、国際会議がロンドンのグリニッジを経度を測る起点とするよう勧告し、それが今日私たちが使っている世界的な時間帯のしくみの土台となった。',
+      'この歴史で目をひくのは、技術的な解決策が人々の時間の感じ方まで変えたことである。時計の示す時刻は、もはや特定の場所の空と結びついたものではなくなった。それは遠くはなれた場所どうしで調整される、共有された取り決めになったのだ。当時の批評家の中には「鉄道時間」は人工的だと不満を言う人もいた。しかし、何百万もの見知らぬ人どうしが列車に間に合い、オンライン会議に参加し、生活を調整できるのは、まさにこの人工的な取り決めのおかげなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['such', 'so', 'very', 'too'], answer: 0, why: 'such ＋ 形容詞 ＋ 複数名詞「そのような小さなちがい」。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: '前の内容全体を受ける非制限用法の which。コンマのあとに that は使えない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'how'], answer: 0, why: 'It is ～ that … の強調構文。「…するのはまさにこの取り決めだ」。' },
+    ],
+    tf: [
+      { statement: '鉄道ができる前は、それぞれの町が太陽の位置で時計を合わせていた。', answer: true, why: '第1段落 Each town set its clocks by the position of the sun。' },
+      { statement: 'アメリカとカナダの鉄道は、1840年代に標準時間帯を導入した。', answer: false, why: '第2段落 in 1883 railroads in the United States and Canada introduced standard time zones。' },
+      { statement: '筆者は、鉄道時間は人工的なので役に立たないと結論づけている。', answer: false, why: '第3段落 it is precisely this artificial agreement that allows 〜。' },
+    ],
+    qa: [
+      { q: 'Why did timetables based on local times become a problem?', choices: ['Trains carried people quickly between distant cities.', 'People stopped using clocks.', 'The sun began to move differently.', 'Towns refused to build railways.'], answer: 0, why: '第2段落 When trains began to carry passengers between distant cities at high speed 〜。' },
+    ],
+  },
 ]
