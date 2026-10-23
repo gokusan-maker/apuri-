@@ -2539,7 +2539,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how to talk to ～「～にどうやって話しかければよいか」（疑問詞＋to）。' },
-      { id: 'B', choices: ['for', 'since', 'during', 'in'], answer: 0, why: 'for a long time「長いあいだ」。現在完了の否定と使う。' },
+      { id: 'B', choices: ['for', 'since', 'during', 'by'], answer: 0, why: 'for a long time「長いあいだ」。現在完了の否定と使う。' },
       { id: 'C', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'look forward to ～ing「～するのを楽しみにする」。' },
     ],
     tf: [
