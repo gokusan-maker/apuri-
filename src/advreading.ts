@@ -2159,4 +2159,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How do plants help cool their surroundings?', choices: ['By releasing water vapor from their leaves.', 'By absorbing heat from cars.', 'By reflecting all sunlight.', 'By making the soil darker.'], answer: 0, why: '第2段落 Plants cool their surroundings by releasing water vapor from their leaves。' },
     ],
   },
+{
+    id: 'hs-wrong-train',
+    title: 'The Wrong Train',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last summer, I went to see my aunt in Nagoya by myself. It was my first time to travel alone, so I was excited but also nervous. At the big station, I got on a train that was leaving soon. After a few minutes, I looked at the screen above the door and realized that I was going the wrong ( A ).",
+      "I did not know what to do, and I almost started to cry. Then an old woman sitting next to me asked, \"Are you all right?\" I showed her the name of my aunt's station. She smiled and said, \"Don't worry. Get off at the next station and take the train on the other side.\" She even wrote the time of the next train on a piece of paper ( B ) me.",
+      "Thanks to her, I arrived at my aunt's house only thirty minutes late. I did not ask the woman's name, so I cannot thank her now. However, I decided one thing on that day. When I see someone ( C ) is in trouble, I will be the first person to say, \"Are you all right?\"",
+    ],
+    ja: [
+      '去年の夏、私はひとりで名古屋のおばに会いに行った。ひとり旅は初めてだったので、わくわくしていたが、不安でもあった。大きな駅で、私はもうすぐ出発する電車に乗った。数分後、ドアの上の画面を見て、逆の方向に向かっていることに気づいた。',
+      'どうすればいいのかわからず、私は泣きだしそうになった。そのとき、となりにすわっていたおばあさんが「だいじょうぶ？」と聞いてくれた。私がおばの家の最寄り駅の名前を見せると、彼女はほほえんで「心配しないで。次の駅で降りて、反対側のホームの電車に乗りなさい」と言った。彼女は私のために、次の電車の時刻を紙に書いてくれさえした。',
+      '彼女のおかげで、私はたった30分おくれただけでおばの家に着いた。その女性の名前を聞かなかったので、今お礼を言うことはできない。けれども、その日私はひとつのことを決めた。困っている人を見かけたら、自分が最初に「だいじょうぶですか？」と声をかける人になろう、と。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['way', 'road', 'side', 'line'], answer: 0, why: 'go the wrong way「逆の方向に行く・道をまちがえる」。' },
+      { id: 'B', choices: ['for', 'to', 'with', 'from'], answer: 0, why: 'for me「私のために」。' },
+      { id: 'C', choices: ['who', 'which', 'what', 'whose'], answer: 0, why: '先行詞 someone（人）を説明する主格の関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '筆者は家族といっしょに名古屋へ行った。', answer: false, why: '第1段落 by myself / to travel alone。' },
+      { statement: 'おばあさんは、次の電車の時刻を紙に書いてくれた。', answer: true, why: '第2段落 She even wrote the time of the next train on a piece of paper for me。' },
+      { statement: '筆者はおばあさんの名前を知っているので、あとでお礼を言った。', answer: false, why: '第3段落 I did not ask the woman\'s name, so I cannot thank her now。' },
+    ],
+    qa: [
+      { q: 'What did the writer decide after this experience?', choices: ['To be the first to help people in trouble.', 'To never travel alone again.', 'To live with the aunt in Nagoya.', 'To learn the names of all stations.'], answer: 0, why: '第3段落 I will be the first person to say, "Are you all right?"' },
+    ],
+  },
 ]
