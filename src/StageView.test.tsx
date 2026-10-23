@@ -281,3 +281,12 @@ it('ステージは解放ずみのものだけ見え、クリアすると次の�
   expect(document.querySelectorAll('.stage-btn')).toHaveLength(2)
   expect(screen.getByLabelText('中1 ステージ2')).toBeEnabled()
 })
+
+it('解放が少ない単語帳は compact（3列にならぶ）、たくさん進んだ単語帳は横いっぱい', () => {
+  const s = stagesOf('中1')
+  const rec = Object.fromEntries(s.slice(0, 4).map((x) => [x.id, 3]))
+  render(<Stages levels={['中1', '中2']} record={rec} onClear={() => {}} />)
+  const lv = [...document.querySelectorAll('.stage-level')]
+  expect(lv[0].classList.contains('compact')).toBe(false)
+  expect(lv[1].classList.contains('compact')).toBe(true)
+})

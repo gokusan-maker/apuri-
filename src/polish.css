@@ -1715,3 +1715,11 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 文法の単元一覧：NEW は題名の前の小さなピル、まだの単元は「未挑戦」を出さない */
 .grammar-list .unit-new { display: inline-block; margin-right: 6px; padding: 1px 7px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.62rem; font-weight: 800; line-height: 1.4; vertical-align: 0.12em; }
 .grammar-list .grammar-score:empty { display: none; }
+
+/* ステージ表：解放が少ない単語帳は3列にならべて、縦に長くしない */
+.stage-levels { display: flex; flex-wrap: wrap; gap: 0 10px; }
+.stage-level { flex: 1 1 100%; min-width: 0; }
+.stage-level.compact { flex: 0 0 calc((100% - 20px) / 3); }
+.stage-level.compact h3 { font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.stage-level.compact .stage-grid { grid-template-columns: repeat(auto-fill, minmax(52px, 1fr)); }
+.stage-level.compact .stage-total { display: none; }

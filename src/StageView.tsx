@@ -584,11 +584,14 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           </button>
         ) : null
       })()}
+      <div className="stage-levels">
       {levels.map((level) => {
         const list = stagesOf(level)
         const stars = list.reduce((a, s) => a + (record[s.id] ?? 0), 0)
+        // 解放ずみが2つ以下でボスもまだなら、3列にならべて縦に長くしない
+        const compact = list.filter((s) => isUnlocked(s, record)).length <= 2 && !bossUnlocked(level, record)
         return (
-          <div key={level} className="stage-level">
+          <div key={level} className={`stage-level${compact ? ' compact' : ''}`}>
             <h3>
               {level} <span className="stage-total">★{stars}</span>
               {medalFor(learnedPct[level] ?? 0) && (
@@ -655,6 +658,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           </div>
         )
       })}
+      </div>
     </section>
   )
 }
