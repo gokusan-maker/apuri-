@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'ordinal-date': { wrong: 'My birthday is April two.', right: 'My birthday is April second.', why: '日付は序数（first・second・third …）で言う。' },
   'future-q-neg': { wrong: "I don't going to watch TV tonight.", right: "I'm not going to watch TV tonight.", why: 'be going to の否定は be 動詞のあとに not。' },
   'this-these': { wrong: 'This are my books.', right: 'These are my books.', why: '複数の物は these。be 動詞も are にそろえる。' },
   'not-a-but-b': { wrong: 'That animal is not a cat and a fox.', right: 'That animal is not a cat but a fox.', why: '「A ではなく B」は not A but B。and は使わない。' },
