@@ -2832,4 +2832,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what had the participants mistaken for knowledge?', choices: ['Familiarity', 'Confidence in experts', 'Written manuals', 'Strong opinions'], answer: 0, why: '第1段落 They had mistaken familiarity for knowledge.' },
     ],
   },
+{
+    id: 'toefl-permafrost',
+    title: 'The Ground That Never Thaws',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "In the far north of the planet, much of the ground never fully thaws. Scientists use the term permafrost for ground that remains at or below zero degrees Celsius for at least two years in a row. Permafrost lies beneath roughly a quarter of the land in the Northern Hemisphere, including large parts of Siberia, Alaska, and northern Canada. Above it lies the so-called active layer, a shallow zone of soil ( A ) thaws each summer and freezes again each winter.",
+      "Because the cold slows decay, permafrost has preserved enormous quantities of organic material: the remains of plants and animals that froze before they could break down. When permafrost thaws, microbes become active and begin to decompose this material, ( B ) carbon dioxide and methane into the atmosphere. Since both are greenhouse gases, their release can contribute to further warming, which in turn causes more thawing.",
+      "Thawing also causes practical problems. Much of the ground's strength comes from the ice that binds the soil together. When the ice melts, the ground can sink unevenly, damaging roads, buildings, and pipelines built on top of it. ( C ), engineers in permafrost regions sometimes raise buildings on posts so that heat from inside does not reach the frozen ground.",
+    ],
+    ja: [
+      '地球のはるか北のほうでは、地面の多くが完全にとけることはない。科学者たちは、少なくとも2年続けて0度以下のままの地面を「永久凍土」とよぶ。永久凍土は北半球の陸地のおよそ4分の1の下に広がっており、シベリア、アラスカ、カナダ北部の広い地域もふくまれる。その上には、いわゆる活動層がある。これは毎年夏にとけ、冬にまたこおる浅い土の層である。',
+      '寒さが分解をおそくするため、永久凍土には、ばく大な量の有機物、つまり分解される前にこおった植物や動物のなきがらが保存されてきた。永久凍土がとけると、微生物が活動を始め、この物質を分解しはじめて、二酸化炭素やメタンを大気中に放出する。どちらも温室効果ガスなので、それらが放出されるとさらなる温暖化につながりうる。そしてその温暖化が、さらに凍土をとかすのである。',
+      'とけることは、実際的な問題も引き起こす。地面の強さの多くは、土をつなぎとめている氷から来ている。氷がとけると地面がでこぼこにしずむことがあり、その上に作られた道路や建物、パイプラインがこわれてしまう。こうした理由から、永久凍土の地域の技術者たちは、建物の中の熱がこおった地面に届かないように、建物を柱の上に高く持ち上げて建てることがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'where', 'what', 'whose'], answer: 0, why: '先行詞 soil を受け、あとの thaws の主語になる関係代名詞 which。where のあとには主語のある文が必要。' },
+      { id: 'B', choices: ['releasing', 'released', 'release', 'releases'], answer: 0, why: 'コンマのあとで「そして～を放出する」と結果を表す分詞構文 releasing。' },
+      { id: 'C', choices: ['For this reason', 'However', 'In contrast', 'Otherwise'], answer: 0, why: '「地面がしずんで建物がこわれる」→「だから建物を持ち上げる」という因果関係。' },
+    ],
+    tf: [
+      { statement: '永久凍土とは、少なくとも2年続けて0度以下のままの地面のことである。', answer: true, why: '第1段落の定義と合う。' },
+      { statement: '活動層は、1年中こおったままである。', answer: false, why: '第1段落 thaws each summer and freezes again each winter。' },
+      { statement: '永久凍土がとけると、温室効果ガスが出ることがある。', answer: true, why: '第2段落 carbon dioxide and methane ... greenhouse gases。' },
+      { statement: '永久凍土の地域では、建物を地面に直接建てるのがよいとされている。', answer: false, why: '第3段落 raise buildings on posts。' },
+    ],
+    qa: [
+      { q: 'Why do engineers sometimes raise buildings on posts in permafrost regions?', choices: ['To keep heat from the buildings from reaching the frozen ground.', 'To let more sunlight reach the ground.', 'To make the active layer thicker.', 'To collect methane from the soil.'], answer: 0, why: '第3段落 so that heat from inside does not reach the frozen ground。' },
+    ],
+  },
 ]
