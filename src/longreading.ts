@@ -4480,6 +4480,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'A chameleon\'s color can show how it feels.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'snowflakes',
+    title: 'Letters from the Sky',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Have you ever looked at a snowflake closely? If you have, you may know that most snowflakes have six sides. But why are they shaped ( A ) that?',
+      'Snowflakes begin high in the clouds. When the air is very cold, water vapor freezes on a tiny piece of dust and becomes a small ice crystal. Because of the way water freezes, the crystal grows into a shape with six sides.',
+      'As the crystal falls, it passes through air of different temperatures. Each change makes it grow in a slightly different way. That is ( B ) people say that no two snowflakes are exactly the same.',
+      'A Japanese scientist named Ukichiro Nakaya studied snow crystals for many years. In 1936, he became the first person to make snow crystals in a laboratory. He said that snow crystals are "letters sent from the sky," because their shapes tell us ( C ) the air was like high above us.',
+    ],
+    ja: [
+      '雪の結晶をじっくり見たことはありますか。見たことがあれば、ほとんどの雪の結晶は六角形をしていることを知っているかもしれません。でも、なぜそのような形をしているのでしょうか。',
+      '雪の結晶は雲の高いところで生まれます。空気がとても冷たいと、水蒸気が小さなちりのつぶの上でこおり、小さな氷の結晶になります。水がこおるときのしくみのために、結晶は六角形に育っていくのです。',
+      '結晶は落ちていくあいだに、温度のちがう空気の中を通ります。変化のたびに、少しずつちがうふうに育ちます。だから、まったく同じ雪の結晶は2つとないと言われるのです。',
+      '中谷宇吉郎という日本の科学者は、何年も雪の結晶を研究しました。1936年、彼は実験室で雪の結晶を作った最初の人になりました。彼は雪の結晶を「天から送られた手紙」だと言いました。その形が、私たちのはるか上空の空気がどんなようすだったかを教えてくれるからです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['like', 'as', 'for', 'with'], answer: 0, why: 'shaped like that「そのような形の」。like は「〜のような」。' },
+      { id: 'B', choices: ['why', 'what', 'how', 'when'], answer: 0, why: 'That is why 〜「そういうわけで〜」。' },
+      { id: 'C', choices: ['what', 'how', 'which', 'who'], answer: 0, why: 'what 〜 was like「〜がどんなようすだったか」。like の目的語になる what。' },
+    ],
+    underline: { phrase: 'letters sent from the sky', choices: ['空から届いた手紙', '空に送る手紙', '空の色の文字', '空を飛ぶ鳥'], answer: 0, why: 'sent は send の過去分詞で「送られた」。雪の形が上空のようすを伝えることを「手紙」にたとえている。' },
+    tf: [
+      { statement: 'Most snowflakes have six sides.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Snowflakes start on the ground.', answer: false, why: '雲の高いところで生まれる。' },
+      { statement: 'Changes in temperature make each snowflake grow differently.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Nakaya made snow crystals in a laboratory in 1936.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'Nakaya thought snow crystals tell us nothing about the sky.', answer: false, why: '上空の空気のようすを教えてくれると言った。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
