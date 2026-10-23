@@ -2215,4 +2215,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to Ostrom, what helped communities maintain shared resources?', choices: ['Making and enforcing their own fair rules.', 'Selling the resources to one owner.', 'Letting each person take as much as they want.', 'Asking a distant government to decide everything.'], answer: 0, why: '第2段落 agree on their own rules, watch for cheating, and punish it fairly。' },
     ],
   },
+{
+    id: 'toefl-mangroves',
+    title: 'Forests That Grow in the Sea',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Along many tropical and subtropical coasts, there are forests whose trees stand directly in salty water. These are mangroves, a group of trees and shrubs that have adapted to conditions that would kill most other plants. Twice a day, the tide covers their roots with seawater, and the soft mud ( A ) they grow contains very little oxygen.",
+      "Mangroves cope with these challenges in remarkable ways. Some species block most of the salt at their roots, while others take it in and then release it through special glands on their leaves. To get oxygen, many mangroves send up small roots that stick out of the mud like pencils, allowing air to reach the parts of the root system buried below. Others are supported by curved roots that arch above the water, ( B ) the trees look as if they are standing on stilts.",
+      "These forests are valuable to people as well as to wildlife. Their dense roots slow down waves and help protect coastal communities from storms and erosion. The calm, shaded water among the roots provides a safe place for young fish to grow. Mangrove soils also store large amounts of carbon. Unfortunately, many mangrove forests have been cleared for farms and coastal development, ( C ) has led a number of countries to begin replanting them.",
+    ],
+    ja: [
+      '熱帯や亜熱帯の多くの海岸ぞいには、木々が塩水の中に直接立っている森がある。これがマングローブで、ほかのほとんどの植物なら枯れてしまうような環境に適応した木や低木のなかまである。1日に2回、潮が根を海水でおおい、マングローブが育つやわらかい泥にはほとんど酸素がふくまれていない。',
+      'マングローブは、おどろくべき方法でこうした困難に対処している。根で塩分の大部分をさえぎる種類もあれば、塩分をとりこんでから葉にある特別な腺から出す種類もある。酸素を得るために、多くのマングローブは鉛筆のように泥から突き出る小さな根をのばし、地中にうまった根の部分まで空気が届くようにしている。また、水面より上に弓のようにまがった根に支えられている種類もあり、そのため木々はまるで竹馬に乗って立っているように見える。',
+      'これらの森は、野生生物だけでなく人間にとっても価値がある。密集した根は波の勢いを弱め、海岸ぞいの地域を嵐や浸食から守るのに役立つ。根のあいだのおだやかで日かげになった水は、若い魚が育つ安全な場所になる。マングローブの土は大量の炭素もたくわえている。残念なことに、多くのマングローブ林が農地や沿岸の開発のために切りひらかれてきた。そのことがきっかけとなって、いくつかの国はマングローブを植えなおしはじめている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'what', 'where in'], answer: 0, why: 'they grow in the mud の in が関係代名詞の前に出た形で in which。' },
+      { id: 'B', choices: ['making', 'made', 'to make', 'makes'], answer: 0, why: '分詞構文「そして～させる」。主節の内容が木々を～のように見せる、という結果を表すので making。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'it'], answer: 0, why: '前の文の内容全体を受ける非制限用法の which。コンマのあとに that は使えない。' },
+    ],
+    tf: [
+      { statement: 'マングローブが育つ泥には、酸素がたくさんふくまれている。', answer: false, why: '第1段落 contains very little oxygen。' },
+      { statement: '塩分を葉から出すマングローブもある。', answer: true, why: '第2段落 release it through special glands on their leaves。' },
+      { statement: 'マングローブの根は、嵐から海岸の地域を守るのに役立つ。', answer: true, why: '第3段落 help protect coastal communities from storms and erosion。' },
+    ],
+    qa: [
+      { q: 'Why do some mangroves have roots that stick out of the mud?', choices: ['To let air reach the roots below.', 'To catch fish for food.', 'To store salt for later.', 'To keep birds away.'], answer: 0, why: '第2段落 allowing air to reach the parts of the root system buried below。' },
+    ],
+  },
 ]
