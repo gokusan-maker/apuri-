@@ -492,3 +492,26 @@ main h2::before {
 }
 .badge-grid li.active { outline: none; box-shadow: 0 0 0 2px var(--accent), var(--shadow-md); }
 .badge-grid .badge-icon { filter: drop-shadow(0 3px 3px rgb(15 23 42 / 0.2)); }
+
+/* ===== ボス部屋：ステージのマス・ボス図鑑 ===== */
+.stage-btn {
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.stage-btn:not(:disabled):not(.cleared) { border: 2px solid color-mix(in srgb, var(--accent) 60%, transparent); }
+.stage-btn:not(:disabled):active { transform: translateY(2px); box-shadow: none; }
+.stage-btn.cleared { border-color: rgb(245 158 11 / 0.5); background: linear-gradient(160deg, #fffbeb, #fde68a); color: #78350f; box-shadow: 0 2px 0 rgb(217 119 6 / 0.4), var(--shadow-sm); }
+.stage-btn:disabled { box-shadow: none; background: color-mix(in srgb, var(--muted) 8%, var(--card)); }
+.boss-book > summary {
+  padding: 10px 12px;
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  font-weight: 800;
+}
+.boss-book-list li { border-radius: 14px; }
+.boss-book-list li.got { background: var(--card); border: 1px solid var(--hair); box-shadow: var(--shadow-sm); }
