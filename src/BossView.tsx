@@ -562,7 +562,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <div className="battle-items">
           {BATTLE_ITEMS.filter((it) => bag[it.id] > 0).map((it) => (
             <button key={it.id} className="battle-item" disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)} onClick={() => applyItem(it.id)}>
-              {it.icon} {it.name}（あと{bag[it.id]}）
+              <span className="bi-icon" aria-hidden="true">{it.icon}</span>
+              <span className="bi-name">{it.name}</span>
+              <span className="bi-count" aria-label={`あと${bag[it.id]}こ`}>×{bag[it.id]}</span>
             </button>
           ))}
         </div>

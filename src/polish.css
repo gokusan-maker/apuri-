@@ -1483,3 +1483,20 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .long-choices.tf .long-choice { min-height: 46px; font-size: 1.25rem; font-weight: 900; line-height: 1; }
 .long-choices.tf .long-choice:first-child:not(.picked):not(.answer) { color: #16a34a; }
 .long-choices.tf .long-choice:last-child:not(.picked):not(.answer) { color: #dc2626; }
+
+/* ボス戦のアイテム：2列のアイテムタイル（アイコン＋名前＋のこり数のバッジ）にして、押せる形にそろえる */
+.battle-items { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 4px 0 10px; }
+.battle-item { position: relative; display: flex; align-items: center; gap: 6px; min-height: 46px; padding: 8px 10px; border: 1px solid rgb(245 158 11 / 0.45); border-radius: 14px; background: linear-gradient(180deg, #fffbeb, #fef3c7); color: #78350f; font-size: 0.78rem; font-weight: 800; text-align: left; box-shadow: 0 3px 0 rgb(217 119 6 / 0.35); }
+.battle-item:active:not(:disabled) { transform: translateY(3px); box-shadow: none; }
+.battle-item:disabled { opacity: 0.45; box-shadow: none; filter: grayscale(0.5); }
+.bi-icon { flex: none; font-size: 1.35rem; filter: drop-shadow(0 2px 1px rgb(0 0 0 / 0.2)); }
+.bi-name { flex: 1; min-width: 0; line-height: 1.25; overflow-wrap: anywhere; }
+.bi-count { position: absolute; top: -7px; right: -5px; min-width: 22px; padding: 1px 6px; border-radius: 999px; background: #f59e0b; color: #fff; font-size: 0.7rem; font-weight: 900; text-align: center; box-shadow: 0 1px 3px rgb(0 0 0 / 0.25); }
+/* 相棒のヒント：点線をやめて、押せるとわかるアンバーのピルボタンに */
+.hint-5050 { display: block; width: fit-content; max-width: 100%; margin: 10px auto 4px; padding: 8px 16px; border: 1px solid rgb(245 158 11 / 0.5); border-radius: 999px; background: linear-gradient(180deg, #fffbeb, #fde68a); color: #92400e; font-size: 0.82rem; font-weight: 800; box-shadow: 0 3px 0 rgb(217 119 6 / 0.35); }
+.hint-5050:active:not(:disabled) { transform: translateY(3px); box-shadow: none; }
+.hint-5050:disabled { opacity: 0.5; box-shadow: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .battle-item, :root:not([data-theme="light"]) .hint-5050 { background: linear-gradient(180deg, #3b2f14, #2d230d); color: #fde68a; }
+}
+:root[data-theme="dark"] .battle-item, :root[data-theme="dark"] .hint-5050 { background: linear-gradient(180deg, #3b2f14, #2d230d); color: #fde68a; }
