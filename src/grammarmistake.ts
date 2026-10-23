@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'take-idioms': { wrong: 'I took part the race.', right: 'I took part in the race.', why: '「〜に参加する」は take part in 〜。in をわすれない。' },
   'allow-to': { wrong: 'My mother allowed me go out.', right: 'My mother allowed me to go out.', why: 'allow 人 のあとは to ＋ 動詞の原形（let 人 ＋ 原形とのちがい）。' },
   'every-time': { wrong: 'The next time you will visit, bring your sister.', right: 'The next time you visit, bring your sister.', why: 'the next time のまとまりの中は、未来のことでも現在形。' },
   'one-it': { wrong: 'I lost my eraser, so I bought a new it.', right: 'I lost my eraser, so I bought a new one.', why: '同じ種類の「別の1つ」は one。it は「その物そのもの」。' },
