@@ -103,7 +103,7 @@ it('今日の文法を全問正解すると1日1回ボーナス', async () => {
   const bonus = vi.fn()
   render(<Grammar onDailyBonus={bonus} />)
   fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: u.title } })
-  fireEvent.click(within(document.querySelector('.grammar-list') as HTMLElement).getByText(u.title, { exact: false }))
+  fireEvent.click(within(document.querySelector('.grammar-list') as HTMLElement).getAllByText(u.title, { exact: false }).find((el) => (el.textContent ?? '').trim().startsWith(u.title))!)
   fireEvent.click(screen.getByText(/確認問題へ/))
   for (const q of u.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))

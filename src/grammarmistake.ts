@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'tag-imperative': { wrong: "Let's go home, will we?", right: "Let's go home, shall we?", why: "Let's 〜 の付加疑問は shall we。" },
   'fractions': { wrong: 'Two third of the water is gone.', right: 'Two thirds of the water is gone.', why: '分子が2以上のときは分母に s（two thirds）。' },
   'no-more-than': { wrong: 'As much as 100 students came.', right: 'As many as 100 students came.', why: '数えられる名詞（students）の数は as many as。' },
   'during-for': { wrong: 'I studied during three hours.', right: 'I studied for three hours.', why: '「3時間」のような長さは for。during は「いつの間か」に使う。' },
