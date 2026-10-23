@@ -2299,4 +2299,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did some small studies find about placebos?', choices: ['They can help even when patients know the pill has no active ingredients.', 'They only work when doctors lie to patients.', 'They are more effective than real drugs.', 'They have no effect on pain at all.'], answer: 0, why: '第3段落 placebos can help even when patients are told openly 〜。' },
     ],
   },
+{
+    id: 'toefl-seed-vault',
+    title: 'A Safe Box for the World\'s Seeds',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "Deep inside a mountain on a remote Norwegian island, about a thousand kilometers from the North Pole, there is a building that few people will ever enter. It is the Svalbard Global Seed Vault, which opened in 2008. Its purpose is to store copies of seeds from crop collections around the world, ( A ) that the genetic variety of our food plants is not lost.",
+      "Why are such copies needed? Many countries keep their own seed collections, known as gene banks, but these can be damaged by war, natural disasters, or simple accidents such as a broken freezer. The vault serves as a backup. The seeds are kept at about minus eighteen degrees Celsius, a temperature at which many types of seeds can survive for a very long time. Because the vault is built into frozen ground, the seeds would stay cold for some time ( B ) the electricity failed.",
+      "The vault has already proved its value. In 2015, researchers whose gene bank had been forced to move because of war in Syria withdrew some of their seeds from Svalbard in order to rebuild their collection elsewhere. Supporters argue that protecting crop diversity is essential, ( C ) plant varieties that seem unimportant today may one day help farmers deal with new diseases or a changing climate.",
+    ],
+    ja: [
+      '北極点から約1000キロはなれた、ノルウェーの遠くの島の山の奥深くに、ほとんどの人が中に入ることのない建物がある。2008年に開設されたスヴァールバル世界種子貯蔵庫だ。その目的は、世界中の作物のコレクションから種子の複製を保管し、食用植物の遺伝的な多様性が失われないようにすることである。',
+      'なぜそのような複製が必要なのだろうか。多くの国はジーンバンクとよばれる自前の種子コレクションをもっているが、これらは戦争や自然災害、あるいはこわれた冷凍庫のような単純な事故で損なわれることがある。貯蔵庫はそのバックアップの役目を果たす。種子はおよそマイナス18度で保管されている。これは多くの種類の種子がとても長いあいだ生きのびられる温度だ。貯蔵庫は凍った地面の中に作られているので、たとえ電気が止まっても、種子はしばらくのあいだ冷たいままだろう。',
+      'この貯蔵庫はすでにその価値を証明している。2015年、シリアでの戦争のためにジーンバンクの移転を余儀なくされた研究者たちが、別の場所でコレクションを立て直すために、スヴァールバルから種子の一部を引き出した。支持者たちは、作物の多様性を守ることは欠かせないと主張する。今日は重要でなさそうに見える植物の品種が、いつか農家が新しい病気や変わりゆく気候に対処するのを助けるかもしれないからだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'as', 'unless'], answer: 0, why: 'so that ～「～するように」。目的を表す。' },
+      { id: 'B', choices: ['even if', 'because', 'so that', 'unless'], answer: 0, why: '「たとえ電気が止まっても」なので even if。' },
+      { id: 'C', choices: ['since', 'although', 'unless', 'until'], answer: 0, why: '作物の多様性を守るのが大切な理由を述べるので since（～なので）。' },
+    ],
+    tf: [
+      { statement: 'スヴァールバル世界種子貯蔵庫は、2008年に開設された。', answer: true, why: '第1段落 which opened in 2008。' },
+      { statement: '各国のジーンバンクは、事故や災害でこわれることはない。', answer: false, why: '第2段落 these can be damaged by war, natural disasters, or simple accidents。' },
+      { statement: '2015年に、シリアの戦争の影響を受けた研究者たちが種子を引き出した。', answer: true, why: '第3段落の内容と合う。' },
+    ],
+    qa: [
+      { q: 'Why would the seeds stay cold for some time even without electricity?', choices: ['Because the vault is built into frozen ground.', 'Because the seeds are kept in water.', 'Because the island is near the equator.', 'Because the seeds produce their own cold.'], answer: 0, why: '第2段落 Because the vault is built into frozen ground。' },
+    ],
+  },
 ]
