@@ -44,11 +44,11 @@ export const BossAlly = ({ buddy, wins, total, hunter = false }: { buddy: Buddy;
     <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />
     {wins !== undefined && total !== undefined && (
       <p className="stats-note boss-record" aria-label="たおしたボスの数">
-        🏆 たおしたボス {wins} / {total}体{hunter ? '・🏹 称号「ボスハンター」' : '（全部たおすと称号と🎟）'}
+        🏆 たおしたボス {wins} / {total}体{hunter ? '・🏹 ボスハンター' : ''}
       </p>
     )}
     <p className="stats-note egg-pieces">
-      🥚 タマゴのかけら {loadEggPieces()} / {PIECES_FOR_EGG}（ボスに勝つと1つ。そろうと新しいなかまが生まれる）
+      🥚 タマゴのかけら {loadEggPieces()} / {PIECES_FOR_EGG}
     </p>
   </>
 )

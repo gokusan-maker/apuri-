@@ -135,6 +135,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         hp={endlessHp(f)}
         noBook
         title={`🗼 塔 ${f}階（最高 ${endlessBest}階）`}
+        note={f === 1 ? `負けるまでどこまでのぼれるか挑戦！ 10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟（最高 ${endlessBest}階）` : undefined}
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}
@@ -175,6 +176,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         level={lv}
         words={wordsOf([lv])}
         title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
+        note={rush.round === 0 ? (rush.ex ? `中3・高校基礎・熟語のボスと3連戦（ハートは引き継ぎ）。全部たおすと 🪙${RUSH_EX_COINS}＋🎟2` : `ボスと3連戦（ハートは引き継ぎ）。全部たおすと 🪙${RUSH_COINS}＋🎟`) : undefined}
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
@@ -211,6 +213,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         words={wordsOf([nb.level])}
         look={nb.look}
         title="🌃 ナイトボス"
+        note={`夜7時〜10時だけ出るボス「${nb.look.name}」。たおすと 🪙${NIGHT_COINS}`}
         partner={partner}
         power={power}
         bag={bag}
@@ -243,6 +246,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         words={wordsOf([wb.level])}
         look={wb.look}
         title="🌙 週末ボス"
+        note={`週末だけのボス「${wb.look.name}」（HP${WEEKEND_HP}）。たおすと 🎟1`}
         hp={WEEKEND_HP}
         partner={partner}
         power={power}
@@ -275,6 +279,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         words={wordsOf([rare.level])}
         look={rare.look}
         title="✨ 今週のレアボス"
+        note={`今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
         hp={RARE_HP}
         partner={partner}
         power={power}
@@ -311,6 +316,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         golden={fighting === goldenLevelOf(LEVELS, dayKey())}
         hp={dailyFight ? dailyHp(dailyFight) : strong ? STRONG_HP : undefined}
         title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : strong ? `💪 強化版の${fighting}ボス` : sudden ? `💀 サドンデス：${fighting}ボス` : undefined}
+        note={dailyFight && daily ? `今日のボス「${BOSSES[daily].name}」（${daily}）。勝つと 🪙${DAILY_BOSS_COINS}${dailyFight > 1 ? `×${dailyFight}` : ''}` : undefined}
         startHearts={sudden ? 1 : undefined}
         grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
@@ -447,7 +453,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         </p>
       )}
       <div className="gold-chest">
-        <span>🗝 金の宝箱の鍵 {'🔑'.repeat(Math.min(keys, KEYS_FOR_GOLD))}{'▫️'.repeat(Math.max(0, KEYS_FOR_GOLD - keys))}（ボスをたおすと1つ）</span>
+        <span>🗝 金の宝箱の鍵 {'🔑'.repeat(Math.min(keys, KEYS_FOR_GOLD))}{'▫️'.repeat(Math.max(0, KEYS_FOR_GOLD - keys))}</span>
         {keys >= KEYS_FOR_GOLD && onOpenGold && (
           <button className="treasure-btn" onClick={onOpenGold}>
             🎁 金の宝箱をあける（🎟＋🪙{GOLD_COINS}）
@@ -465,7 +471,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       />
       <details className="univ-tower" open={Object.keys(univ).length > 0}>
         <summary>
-          🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
+          🏯 大学入試の塔<span className="mode-badge" aria-label={`${Object.keys(univ).length} / ${UNIV_BOSSES.length} 階クリア`}>{Object.keys(univ).length}/{UNIV_BOSSES.length}階</span>
           <span className="univ-meter" aria-hidden="true">
             <i style={{ width: `${(Object.keys(univ).length / UNIV_BOSSES.length) * 100}%` }} />
           </span>
@@ -482,7 +488,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
             )
           )
         })()}
-        <p className="stats-note">大学にちなんだボスが待つ塔。下の階から順に挑戦しよう（高校基礎・熟語の単語と、4問に1問は文法問題）。</p>
+        <p className="stats-note">下の階から順に挑戦（高校基礎・熟語＋文法）</p>
         <ol className="univ-floors">
           {[...UNIV_BOSSES].reverse().map((b) => {
             const i = UNIV_BOSSES.indexOf(b)
@@ -513,34 +519,34 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       </details>
       <div className="boss-modes">
       <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
-        🗼 エンドレスの塔（最高 {endlessBest}階）10階ごとに 🪙{ENDLESS_REWARD_COINS}＋🎟
+        🗼 エンドレスの塔{endlessBest > 0 && <span className="mode-badge">最高 {endlessBest}階</span>}
       </button>
       {weekend && (
         <button className="boss-btn rush-boss ex" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false, ex: true })}>
-          {rushExDone ? '✅ 今日のボスラッシュEXは完全クリア！（もう一度挑戦）' : `🌟 週末限定ボスラッシュEX（中3・高校基礎・熟語）全部たおすと 🪙${RUSH_EX_COINS}＋🎟2`}
+          🌟 週末限定ボスラッシュEX{rushExDone && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
-        {rushDone ? '✅ 今日のボスラッシュは完全クリア！（もう一度挑戦）' : `🔥 ボスラッシュ（3連戦・ハート引き継ぎ）全部たおすと 🪙${RUSH_COINS}＋🎟`}
+        🔥 ボスラッシュ{rushDone && <span className="mode-badge">✅ クリア</span>}
       </button>
       {isNightTime(hour) && (
         <button className="boss-btn night-boss" onClick={() => setNightFight(true)}>
-          {nightDay === dayKey() ? `✅ 今夜のナイトボス「${nightBossOf(dayKey()).look.name}」はたおした（もう一度戦う）` : `🌃 ナイトボス「${nightBossOf(dayKey()).look.name}」（夜7時〜10時だけ）たおすと 🪙${NIGHT_COINS}`}
+          🌃 ナイトボス{nightDay === dayKey() && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       {weekend && (
         <button className="boss-btn weekend-boss" onClick={() => setWeekendFight(true)}>
-          {weekendWeek === week ? `✅ 週末ボス「${weekendBossOf(week).look.name}」はたおした！（もう一度戦う）` : `🌙 週末ボス「${weekendBossOf(week).look.name}」（HP${WEEKEND_HP}）たおすと 🎟1`}
+          🌙 週末ボス{weekendWeek === week && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       <button className="boss-btn rush-boss" onClick={() => setTimeAttack(true)}>
-        ⏱ ボスのタイムアタック（30秒で何ダメージ？）{loadBossTaBest() > 0 ? `　ベスト ${loadBossTaBest()}` : ''}
+        ⏱ ボスのタイムアタック{loadBossTaBest() > 0 && <span className="mode-badge">ベスト {loadBossTaBest()}</span>}
       </button>
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
-        {rareWeek === week ? `✅ 今週のレアボス「${rare.look.name}」はたおした！（もう一度戦う）` : `✨ 今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
+        ✨ 今週のレアボス{rareWeek === week && <span className="mode-badge">✅ クリア</span>}
       </button>
       </div>
-      {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日の金色ボス：{BOSSES[goldenLevelOf(LEVELS, dayKey())!].name}（{goldenLevelOf(LEVELS, dayKey())}）　たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
+      {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 金色ボス：{goldenLevelOf(LEVELS, dayKey())}（+🪙{GOLDEN_COINS}）</p>}
       {daily && (
         <button
           className="boss-btn daily-boss"
@@ -549,7 +555,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
             setFighting(daily)
           }}
         >
-          {dailyDone ? `✅ 今日のボス「${BOSSES[daily].name}」はたおした！（もう一度戦う）` : `⚔️ 今日のボス「${BOSSES[daily].name}」（${daily}）に勝つと 🪙${DAILY_BOSS_COINS}`}
+          ⚔️ 今日のボス{dailyDone && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       {daily && !dailyDone && (
@@ -569,7 +575,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           ))}
         </div>
       )}
-      <p className="stats-note">10語ずつのステージ。6問以上正解でクリアして、次のステージへ！</p>
+      <p className="stats-note">6問正解でクリア！</p>
       {(() => {
         const nextStage = levels.flatMap(stagesOf).find((st) => isUnlocked(st, record) && !(record[st.id] >= 1))
         return nextStage ? (

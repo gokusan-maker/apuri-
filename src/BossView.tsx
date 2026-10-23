@@ -27,6 +27,7 @@ type Props = {
   onSpend?: (coins: number) => boolean
   look?: BossLook // 指定がなければ単語帳のボス
   title?: string // 上に出す見出し
+  note?: string // 戦いの前に出すくわしい説明（ボス部屋のボタンは題名だけにして、説明はここで）
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
   reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
@@ -158,7 +159,7 @@ const rnd = () => Math.random()
 // 読解ボスの本文で、単語帳にある語をタップすると意味が出る
 const lookupWord = makeLookup(WORDS)
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0 }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0, note }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
@@ -412,6 +413,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </button>
         <span>{title ?? `${level} のボス`}</span>
       </div>
+      {note && index === 0 && picked === null && <p className="boss-mode-note">{note}</p>}
       {picked !== null && q && picked === q.answer && !won && (
         <p className="boss-hurt">
           {look.name}「{hurtLineOf(baseLook.name, corrects).en}」<span className="boss-intro-ja">{hurtLineOf(baseLook.name, corrects).ja}</span>

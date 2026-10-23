@@ -82,7 +82,7 @@ it('定着率でメダルが出る', () => {
 it('今日のボスに勝つと onDailyWin が呼ばれる', () => {
   let won = 0
   render(<Stages levels={['数']} record={{}} onClear={() => {}} onDailyWin={() => won++} />)
-  fireEvent.click(screen.getByText(/今日のボス/))
+  fireEvent.click(screen.getByText(/^⚔️ 今日のボス$/))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
   // ボスを最後までたおすのは BossView のテストで確かめているので、ここでは出現だけ確認
   expect(won).toBe(0)
@@ -106,7 +106,8 @@ it('まだ制覇していなければ合格証書は出ない', () => {
 
 it('今週のレアボスに挑戦できる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByText(/今週のレアボス「キラキラ.+」に勝つと 色ちがい確定のタマゴ！/))
+  fireEvent.click(screen.getByText(/✨ 今週のレアボス/))
+  expect(screen.getByText(/今週のレアボス「キラキラ.+」に勝つと 色ちがい確定のタマゴ！/)).toBeInTheDocument()
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
 })
@@ -114,7 +115,7 @@ it('今週のレアボスに挑戦できる', () => {
 it('ボスラッシュは3連戦で、勝つとハートを引き継いで次のボスへ', () => {
   const clear = vi.fn()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} onRushClear={clear} />)
-  fireEvent.click(screen.getByText(/ボスラッシュ（3連戦/))
+  fireEvent.click(screen.getByText(/^🔥 ボスラッシュ$/))
   for (let round = 1; round <= 3; round++) {
     expect(screen.getByText(`🔥 ボスラッシュ ${round} / 3`)).toBeInTheDocument()
     expect(document.querySelector('.boss-passage')).not.toBeNull() // ラッシュのボスも読解問題
@@ -126,13 +127,13 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
   }
   expect(clear).toHaveBeenCalledTimes(1)
   fireEvent.click(screen.getByText('ラッシュ完全クリア！ ステージにもどる'))
-  expect(screen.getByText(/ボスラッシュ（3連戦/)).toBeInTheDocument()
+  expect(screen.getByText(/^🔥 ボスラッシュ$/)).toBeInTheDocument()
 })
 
 it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る', () => {
   localStorage.clear()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByText(/エンドレスの塔（最高 0階）/))
+  fireEvent.click(screen.getByText(/🗼 エンドレスの塔/))
   for (let floor = 1; floor <= 2; floor++) {
     expect(screen.getByText(`🗼 塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
@@ -142,7 +143,7 @@ it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る'
     fireEvent.click(screen.getByText(new RegExp(`${floor + 1}階へ ▶`)))
   }
   fireEvent.click(screen.getByText('← にげる'))
-  expect(screen.getByText(/エンドレスの塔（最高 2階）/)).toBeInTheDocument()
+  expect(screen.getByText('最高 2階')).toBeInTheDocument()
 })
 
 it('ステージのボスは読解問題（読解の本文つきで、空所補充・○×・英問英答）', async () => {
@@ -196,7 +197,8 @@ it('週末ボスは週末だけ出て、HPが多い', () => {
   expect(screen.queryByText(/🌙 週末ボス/)).not.toBeInTheDocument()
   unmount()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
-  fireEvent.click(screen.getByText(/🌙 週末ボス「週末の/))
+  fireEvent.click(screen.getByText(/^🌙 週末ボス$/))
+  expect(screen.getByText(/週末だけのボス「週末の/)).toBeInTheDocument()
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
 })
@@ -227,7 +229,8 @@ it('ナイトボスは夜7時〜10時だけ出る', () => {
   unmount()
   const bonus = vi.fn()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={20} onRankBonus={bonus} />)
-  fireEvent.click(screen.getByText(/🌃 ナイトボス「夜の/))
+  fireEvent.click(screen.getByText(/^🌃 ナイトボス$/))
+  expect(screen.getByText(/夜7時〜10時だけ出るボス「夜の/)).toBeInTheDocument()
   expect(screen.getByText('🌃 ナイトボス')).toBeInTheDocument()
 })
 
@@ -259,4 +262,13 @@ it('ボス部屋のモード（エンドレス・ラッシュ・タイムアタ�
   expect(modes.querySelector('.endless-boss')).not.toBeNull()
   expect(modes.querySelector('.rare-boss')).not.toBeNull()
   expect(modes.querySelectorAll('.boss-btn').length).toBeGreaterThanOrEqual(4)
+})
+
+it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの画面の最初に出る', () => {
+  localStorage.removeItem('eitan:endless-best')
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  const btn = screen.getByText(/🗼 エンドレスの塔/).closest('button')!
+  expect(btn.textContent).toBe('🗼 エンドレスの塔')
+  fireEvent.click(btn)
+  expect(screen.getByText(/負けるまでどこまでのぼれるか挑戦！ 10階ごとに/)).toBeInTheDocument()
 })

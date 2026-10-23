@@ -1603,3 +1603,12 @@ details[open] > summary::before { transform: rotate(90deg); }
 .buddy-next { margin-bottom: 4px; }
 .buddy-xpbar { height: 8px; margin: 0 0 10px; border-radius: 999px; background: color-mix(in srgb, var(--fg) 8%, transparent); overflow: hidden; }
 .buddy-xpbar i { display: block; height: 100%; border-radius: inherit; background: var(--accent-grad); }
+
+/* ボス部屋：ボタンは題名だけ。記録・クリアは右はしの小さなバッジ。くわしい説明は戦いの画面の最初に出す */
+.boss-modes .boss-btn { display: flex; align-items: center; gap: 8px; font-size: 0.98rem; }
+.mode-badge { margin-left: auto; margin-right: 6px; padding: 2px 9px; border-radius: 999px; background: color-mix(in srgb, var(--mode-color, var(--accent)) 14%, transparent); color: var(--mode-color, var(--accent)); font-size: 0.7rem; font-weight: 800; white-space: nowrap; }
+.boss-btn.daily-boss .mode-badge { background: rgb(255 255 255 / 0.25); color: #fff; }
+.boss-mode-note { margin: 6px 0 10px; padding: 10px 14px; border-radius: 14px; background: rgb(255 255 255 / 0.75); border: 1px solid var(--hair, rgba(0,0,0,.08)); box-shadow: var(--shadow-sm); font-size: 0.85rem; font-weight: 700; line-height: 1.5; text-align: center; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-mode-note { background: rgb(255 255 255 / 0.08); } }
+:root[data-theme="dark"] .boss-mode-note { background: rgb(255 255 255 / 0.08); }
+.univ-tower > summary { display: flex; align-items: center; flex-wrap: wrap; } .univ-tower > summary .univ-meter { flex-basis: 100%; }
