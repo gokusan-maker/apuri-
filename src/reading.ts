@@ -1564,6 +1564,17 @@ export const PASSAGES: Passage[] = [
       { q: 'カードはどこにかくした？', choices: ['机の中', 'かばんの中', 'ベッドの下'], answer: 0 },
     ],
   },
+  {
+    id: 'talking-bird',
+    title: 'Our Talking Bird',
+    text: 'My grandmother has a small green bird named Piko. Piko can say a few words. Every morning, he says "Ohayo!" to my grandmother. When I visited her last weekend, I taught him to say "Hello!" in English. It took a long time, but on Sunday he finally said it. My grandmother laughed and said, "Piko speaks two languages now!"',
+    ja: '祖母はピコという小さな緑色の鳥を飼っています。ピコはいくつか言葉を話せます。毎朝、祖母に「おはよう！」と言います。先週末に祖母の家に行ったとき、私はピコに英語で「Hello!」と言うのを教えました。長い時間がかかったけれど、日曜日にとうとう言えました。祖母は笑って「ピコは今では2つの言葉を話すのね！」と言いました。',
+    questions: [
+      { q: 'ピコは何色の鳥？', choices: ['緑色', '青色', '黄色'], answer: 0 },
+      { q: '筆者はピコに何を教えた？', choices: ['英語の「Hello!」', '自分の名前', '歌'], answer: 0 },
+      { q: 'ピコがはじめて「Hello!」と言ったのはいつ？', choices: ['日曜日', '土曜日', '月曜日'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
