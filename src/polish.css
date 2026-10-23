@@ -402,3 +402,43 @@ main h2::before {
 .challenge-btn.done { border-color: rgb(34 197 94 / 0.35); box-shadow: 0 3px 0 rgb(22 163 74 / 0.35), var(--shadow-md); }
 .challenge-btn.daily-boss-go { border-color: rgb(124 58 237 / 0.3); background: linear-gradient(135deg, #ede9fe, #ddd6fe); color: #4c1d95; box-shadow: 0 3px 0 rgb(109 40 217 / 0.35), var(--shadow-md); }
 .challenge-btn.hungry-btn { border-color: rgb(251 146 60 / 0.35); background: linear-gradient(135deg, #fff7ed, #ffedd5); color: #9a3412; box-shadow: 0 3px 0 rgb(234 88 12 / 0.3), var(--shadow-md); }
+
+/* ===== 一覧（文法の単元・読解の話）：カード＋右の矢印 ===== */
+.grammar-list button:not(.grammar-fav) {
+  position: relative;
+  padding: 14px 36px 14px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  font-weight: 700;
+  text-align: left;
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 12%, rgb(0 0 0 / 0.06)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.grammar-list button:not(.grammar-fav)::after {
+  content: '';
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin-top: -5px;
+  border-top: 2.5px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  border-right: 2.5px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  transform: rotate(45deg);
+  border-radius: 1px;
+}
+.grammar-list button:not(.grammar-fav):active { transform: translateY(2px); box-shadow: none; }
+
+/* ===== ボス戦：つやのあるHPバー ===== */
+.boss-hp {
+  height: 14px;
+  border: 1px solid var(--hair);
+  background: color-mix(in srgb, var(--muted) 18%, var(--card));
+  box-shadow: inset 0 2px 3px rgb(0 0 0 / 0.12);
+}
+.boss-hp-fill {
+  border-radius: 999px;
+  background: linear-gradient(180deg, #fb7185, #ef4444 55%, #b91c1c);
+  box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.35);
+}
