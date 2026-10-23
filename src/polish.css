@@ -1671,3 +1671,4 @@ details[open] > summary::before { transform: rotate(90deg); }
 .badge-tile:active { transform: scale(0.96); }
 .badge-detail { margin: 6px 0 4px; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 8%, transparent); font-size: 0.85rem; line-height: 1.5; }
 .badge-detail small { color: var(--muted); }
+.records li:last-child:nth-child(odd) { grid-column: 1 / -1; }

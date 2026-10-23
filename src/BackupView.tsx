@@ -35,7 +35,7 @@ export function Backup() {
   return (
     <div className="backup">
       <h2>データの保存と復元</h2>
-      <p className="stats-note">機種変更のときなどに、学習データをファイルで持ち運べます。</p>
+      <p className="stats-note">学習データをファイルで持ち運べる</p>
       <div className="actions">
         <button className="good" onClick={download}>
           ファイルに保存
