@@ -2467,4 +2467,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What kind of evidence would be needed to support the learning-styles theory?', choices: ['That each type of learner learns more when taught in the matching way.', 'That people prefer some ways of learning.', 'That teachers like using pictures.', 'That music is easier than maps.'], answer: 0, why: '第2段落 a study would need to show that visual learners do better with pictures 〜, and not just that people have preferences。' },
     ],
   },
+{
+    id: 'toefl-quake-warning',
+    title: 'Seconds Before the Shaking',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "When an earthquake occurs, it sends out several kinds of waves through the ground. The first to arrive are called P waves. They travel quickly but usually cause relatively little shaking. They are followed by S waves, which move more slowly ( A ) tend to produce the strong shaking that damages buildings. The difference in speed between these two types of waves is the key to earthquake early warning systems.",
+      "Seismometers placed near the source of an earthquake can detect the P waves within moments. Computers then estimate the location and size of the earthquake and send out an alert. Because electronic signals travel far faster than seismic waves, the warning can reach places farther away before the S waves arrive. Japan began issuing such warnings to the public in 2007, and they are now sent to televisions and mobile phones across the country.",
+      "The warning time is short, ranging from a few seconds to perhaps a minute, depending on how far a place is from the source. Places very close to the source may receive no warning at all. Even so, a few seconds can be ( B ) to slow down trains, stop elevators at the nearest floor, or allow people to take cover under a table. Early warning cannot prevent earthquakes, but it can reduce the harm they cause ( C ) people know how to respond quickly.",
+    ],
+    ja: [
+      '地震が起きると、いくつかの種類の波が地面を伝わっていく。最初に届くのはP波とよばれる。P波は速く伝わるが、ふつうは比較的ゆれが小さい。そのあとにS波が続く。S波はゆっくり伝わり、建物をこわすような強いゆれを起こしやすい。この2種類の波の速さのちがいが、緊急地震速報のしくみのかぎである。',
+      '震源の近くに置かれた地震計は、すぐにP波をとらえることができる。そしてコンピューターが地震の場所と規模を推定し、警報を出す。電子の信号は地震の波よりはるかに速く伝わるので、より遠くの場所には、S波が届く前に警報が届くことがある。日本は2007年にこのような警報を一般に出しはじめ、今では全国のテレビや携帯電話に送られている。',
+      '警報が出てからの時間は短く、震源からどれだけはなれているかによって、数秒からおそらく1分ほどである。震源のすぐ近くでは、警報がまったく間に合わないこともある。それでも、数秒あれば列車をおそくしたり、エレベーターをいちばん近い階で止めたり、人がテーブルの下に身を守ったりするのに十分なことがある。緊急地震速報は地震を防ぐことはできないが、人々がすばやく行動するしかたを知っていれば、地震による被害を減らすことができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'or', 'so', 'nor'], answer: 0, why: '「ゆっくり伝わるが、強いゆれを起こしやすい」という対比なので but。' },
+      { id: 'B', choices: ['enough', 'too', 'very', 'so'], answer: 0, why: 'be enough to ～「～するのに十分だ」。' },
+      { id: 'C', choices: ['if', 'unless', 'although', 'before'], answer: 0, why: '「すばやく行動するしかたを知っていれば」という条件なので if。' },
+    ],
+    tf: [
+      { statement: 'P波はS波よりおそく伝わる。', answer: false, why: '第1段落 P waves travel quickly / S waves, which move more slowly。' },
+      { statement: '日本は2007年に緊急地震速報を一般に出しはじめた。', answer: true, why: '第2段落 Japan began issuing such warnings to the public in 2007。' },
+      { statement: '震源のすぐ近くでは、いつも1分以上前に警報が届く。', answer: false, why: '第3段落 Places very close to the source may receive no warning at all。' },
+    ],
+    qa: [
+      { q: 'Why can the warning reach distant places before the strong shaking?', choices: ['Electronic signals travel faster than seismic waves.', 'S waves stop before reaching cities.', 'P waves are stronger than S waves.', 'Earthquakes always happen at night.'], answer: 0, why: '第2段落 Because electronic signals travel far faster than seismic waves 〜。' },
+    ],
+  },
 ]
