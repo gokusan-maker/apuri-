@@ -1282,3 +1282,14 @@ main select:focus {
 }
 :root[data-theme="dark"] .boss-proverb { background: linear-gradient(180deg, #3a3222, #2e2819); border-color: #5c4d2a; color: #f2e3bb; }
 :root[data-theme="dark"] .boss-proverb .boss-intro-ja { color: #cdb889; }
+
+/* 大学入試の塔：進みぐあいメーター、階をつなぐ柱、いま挑める階を光らせる */
+.univ-tower { box-shadow: var(--shadow-sm); border: 1px solid rgba(124, 58, 237, .15); }
+.univ-meter { display: block; height: 8px; margin: 6px 0 2px; border-radius: 999px; background: rgba(124, 58, 237, .15); overflow: hidden; }
+.univ-meter i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #a78bfa, #f59e0b); }
+.univ-floors { gap: 10px; }
+.univ-floors li { position: relative; border: 1px solid rgba(0, 0, 0, .05); box-shadow: 0 1px 2px rgba(0, 0, 0, .05); }
+.univ-floors li + li::before { content: ''; position: absolute; left: 30px; top: -11px; width: 6px; height: 10px; border-radius: 2px; background: linear-gradient(90deg, #c4b5fd, #a78bfa); }
+.univ-floors li.open:not(.beaten) { background: #fff; border-color: #a78bfa; box-shadow: 0 0 0 3px rgba(167, 139, 250, .25), var(--shadow-sm); }
+.univ-floors li.beaten { background: linear-gradient(135deg, #fffbeb, #fff); }
+.univ-info strong { overflow-wrap: anywhere; }

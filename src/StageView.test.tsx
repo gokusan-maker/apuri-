@@ -246,3 +246,9 @@ it('ステージをクリアすると「次のステージへ ▶」ですぐ次
   const next = stagesOf('中1')[1].words
   expect(next.some((w) => w.en === document.querySelector('.quiz .en')!.textContent)).toBe(true)
 })
+
+it('大学入試の塔に進みぐあいメーターがある', () => {
+  localStorage.removeItem('eitan:univ')
+  const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(container.querySelector('.univ-meter i')?.getAttribute('style')).toContain('width: 0%')
+})

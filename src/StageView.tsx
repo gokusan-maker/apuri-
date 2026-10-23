@@ -466,6 +466,9 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <details className="univ-tower" open={Object.keys(univ).length > 0}>
         <summary>
           🏯 大学入試の塔（{Object.keys(univ).length} / {UNIV_BOSSES.length} 階クリア）
+          <span className="univ-meter" aria-hidden="true">
+            <i style={{ width: `${(Object.keys(univ).length / UNIV_BOSSES.length) * 100}%` }} />
+          </span>
         </summary>
         {(() => {
           const day = univGraduated(univ)
