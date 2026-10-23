@@ -1663,3 +1663,11 @@ details[open] > summary::before { transform: rotate(90deg); }
 .buddy-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 6px 0; }
 .buddy-chips > span { display: inline-flex; align-items: baseline; gap: 6px; padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--text); font-size: 0.8rem; font-weight: 800; }
 .buddy-chips small { color: var(--muted); font-size: 0.7rem; font-weight: 700; }
+
+/* バッジ：タイルは名前だけ、押すと条件が上に出る */
+.badges .badge-grid li { padding: 0; }
+.badge-tile { all: unset; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; width: 100%; min-height: 76px; padding: 10px 6px; border-radius: inherit; cursor: pointer; text-align: center; }
+.badge-tile:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.badge-tile:active { transform: scale(0.96); }
+.badge-detail { margin: 6px 0 4px; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, var(--accent) 8%, transparent); font-size: 0.85rem; line-height: 1.5; }
+.badge-detail small { color: var(--muted); }

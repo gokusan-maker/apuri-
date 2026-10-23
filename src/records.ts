@@ -14,12 +14,14 @@ export function collectRecords(): RecordRow[] {
   const party = loadParty()
   const perfectLong = LONG_PASSAGES.filter((p) => long[p.id] === totalOf(p)).length
   return [
-    { icon: '🗼', label: 'エンドレスの塔 最高到達', value: `${loadEndlessBest()}階` },
-    { icon: '⚔️', label: 'ボスをたおした回数', value: `${totalWins(book)}回` },
-    { icon: '🏅', label: 'Sランクを取ったボス', value: `${Object.values(book).filter((e) => e.best === 'S').length}体` },
-    { icon: '📕', label: 'ボス図鑑にのったボス', value: `${Object.keys(book).length}体` },
-    { icon: '🎰', label: 'ガチャを引いた回数', value: `${loadGachaStats().total}回（ウルトラレア ${loadGachaStats().UR}回・今の仲間 ${party.members.length}匹）` },
+    { icon: '🗼', label: 'エンドレスの塔', value: `${loadEndlessBest()}階` },
+    { icon: '⚔️', label: 'ボス撃破', value: `${totalWins(book)}回` },
+    { icon: '🏅', label: 'Sランクのボス', value: `${Object.values(book).filter((e) => e.best === 'S').length}体` },
+    { icon: '📕', label: 'ボス図鑑', value: `${Object.keys(book).length}体` },
+    { icon: '🎰', label: 'ガチャ', value: `${loadGachaStats().total}回` },
+    { icon: '🌈', label: 'ウルトラレア', value: `${loadGachaStats().UR}回` },
+    { icon: '🐾', label: 'いまの仲間', value: `${party.members.length}匹` },
     { icon: '📮', label: '文法スタンプ', value: `${grammarStamps(loadGrammar())}個` },
-    { icon: '📖', label: '読解 満点', value: `${perfectLong} / ${LONG_PASSAGES.length}本` },
+    { icon: '📖', label: '読解の満点', value: `${perfectLong} / ${LONG_PASSAGES.length}本` },
   ]
 }
