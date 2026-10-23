@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'future-progressive': { wrong: 'This time tomorrow, I will flying to Hawaii.', right: 'This time tomorrow, I will be flying to Hawaii.', why: '未来進行形は will be ＋ ～ing。be をわすれない。' },
   'supposed-to': { wrong: 'We are suppose to wear a uniform.', right: 'We are supposed to wear a uniform.', why: 'supposed は過去分詞。-d をわすれない。' },
   'most-of': { wrong: 'Most of students like games.', right: 'Most students like games.（Most of the students ...）', why: 'most of のあとには the・my などのついた名詞を置く。一般論なら most ＋ 名詞。' },
   'do-does': { wrong: 'Does she plays tennis?', right: 'Does she play tennis?', why: 'Does を使ったら動詞は原形にもどす。-s はつけない。' },
