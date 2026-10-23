@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'by-the-time': { wrong: 'By the time you will arrive, we will have eaten.', right: 'By the time you arrive, we will have eaten.', why: 'by the time の中は、未来のことでも現在形にする。' },
   'first-time': { wrong: 'This is the first time I eat sushi.', right: 'This is the first time I have eaten sushi.', why: 'This is the first time のあとは現在完了〈have ＋ 過去分詞〉。' },
   'almost-most': { wrong: 'Almost students like music.', right: 'Most students like music.（Almost all the students ...）', why: 'almost は副詞なので名詞の前に直接置けない。most か almost all を使う。' },
   'reported-question': { wrong: 'He asked me where did I live.', right: 'He asked me where I lived.', why: '間接疑問は〈疑問詞 ＋ 主語 ＋ 動詞〉の語順。did は使わない。' },
