@@ -905,3 +905,26 @@ main select:focus {
   :root:not([data-theme='light']) .boss-passage { background: linear-gradient(180deg, #1b2236, #182033); color: #e5e7eb; }
 }
 :root[data-theme='dark'] .boss-passage { background: linear-gradient(180deg, #1b2236, #182033); color: #e5e7eb; }
+
+/* ===== 記録の部屋：2行にできる一覧（項目名がつぶれないように） ===== */
+.records li {
+  display: grid;
+  grid-template-columns: 26px minmax(0, 1fr);
+  grid-template-areas: 'icon label' 'icon value';
+  column-gap: 10px;
+  row-gap: 2px;
+  margin: 0 0 8px;
+  padding: 10px 12px;
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+.records-icon { grid-area: icon; align-self: center; font-size: 1.3rem; }
+.records-label { grid-area: label; font-size: 0.8rem; color: var(--muted); }
+.records-value { grid-area: value; font-size: 1.05rem; font-weight: 900; color: var(--accent); }
+/* バッジ：取ったものはつやのあるメダル風、まだのものは控えめに */
+.badge-grid li.got { border-color: rgb(245 158 11 / 0.35); background: linear-gradient(160deg, #fffbeb, var(--card) 60%); }
+.badge-grid li.locked { opacity: 1; background: color-mix(in srgb, var(--muted) 6%, var(--card)); box-shadow: none; }
+.badge-grid li.locked .badge-icon { filter: grayscale(1); opacity: 0.6; }
