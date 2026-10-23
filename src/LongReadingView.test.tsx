@@ -511,3 +511,10 @@ it('答えかけの読解は一覧の上の「✏️ とちゅうの読解」に
   const box = document.querySelector('.long-drafts')!
   expect(box.textContent).toContain(shownTitle(p, 5))
 })
+
+it('読解の一覧：読んだ語数がピルで出て、ジャンルの数字は小さい補足になる', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  expect(document.querySelector('.long-words')?.textContent).toMatch(/これまでに読んだ語数：0語/)
+  expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.textContent).toMatch(/本・解いた 0本/)
+})

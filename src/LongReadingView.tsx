@@ -223,7 +223,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             const pool = todo.length > 0 ? todo : LIST
             openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
           }}>
-          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（まだ解いていない読解から）' : ''}
+          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（未読から）' : ''}
         </button>
         {whole && recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
@@ -259,7 +259,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             </ul>
           </details>
         )}
-        <p className="stats-note">📚 これまでに読んだ語数：{readWords}語</p>
+        <p className="stats-note long-words">📚 これまでに読んだ語数：{readWords}語</p>
         <div className="long-challenge" aria-label={`解いた読解 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
           <p className="stats-note">
             🏁 全部制覇チャレンジ：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
@@ -316,7 +316,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               return (
                 <details key={g} className="grammar-grade-fold long-genre-fold">
                   <summary>
-                    {g}（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 {ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本）
+                    {g}
+                    <span className="fold-meta">（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 {ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本）</span>
                   </summary>
                   <ul className="grammar-list">{ps.map(passageItem)}</ul>
                 </details>
