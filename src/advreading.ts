@@ -2383,4 +2383,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did timetables based on local times become a problem?', choices: ['Trains carried people quickly between distant cities.', 'People stopped using clocks.', 'The sun began to move differently.', 'Towns refused to build railways.'], answer: 0, why: '第2段落 When trains began to carry passengers between distant cities at high speed 〜。' },
     ],
   },
+{
+    id: 'toefl-leafcutter',
+    title: 'The Ants That Farm',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "In the forests of Central and South America, long lines of ants can be seen carrying pieces of leaves many times larger than their own heads. These are leafcutter ants. It might seem natural to assume that they eat the leaves, but they do not. Instead, they use the leaves to grow a fungus, ( A ) serves as the main food for the colony.",
+      "Inside the underground nest, workers chew the leaf pieces into a soft paste and spread it in special chambers. The fungus grows on this paste, and the ants feed on parts of it. The work is divided among workers of different sizes. The largest ants defend the colony, medium-sized ones cut and carry leaves, and the smallest ones tend the delicate fungus gardens. A mature colony can contain millions of individuals, ( B ) it one of the most complex societies in the animal world.",
+      "Like human farmers, the ants must protect their crop from pests. A harmful fungus can invade the gardens and destroy them. Researchers have found that many leafcutter ants carry bacteria on their bodies that produce chemicals able to stop the growth of this invader. In other words, the ants appear to have been using a kind of natural antibiotic long ( C ) humans discovered such medicines.",
+    ],
+    ja: [
+      '中南米の森では、自分の頭の何倍も大きい葉のかけらを運ぶアリの長い列が見られる。これがハキリアリだ。アリが葉を食べると考えるのは自然に思えるかもしれないが、そうではない。アリは葉を使って菌を育て、その菌がコロニーの主な食べ物になるのである。',
+      '地下の巣の中で、働きアリは葉のかけらをかんでやわらかいペースト状にし、特別な部屋に広げる。菌はこのペーストの上で育ち、アリはその一部を食べる。仕事は大きさのちがう働きアリのあいだで分担されている。いちばん大きいアリはコロニーを守り、中くらいのアリは葉を切って運び、いちばん小さいアリはこわれやすい菌の畑の世話をする。成熟したコロニーには何百万もの個体がいることがあり、そのためハキリアリは動物の世界でもっとも複雑な社会の一つとなっている。',
+      '人間の農家と同じように、アリも作物を害虫から守らなければならない。有害な菌が畑に入りこみ、畑をだめにしてしまうことがあるのだ。研究者たちは、多くのハキリアリが、この侵入者の成長を止める化学物質を作る細菌を体につけていることを発見した。つまり、アリは人間がそのような薬を発見するずっと前から、一種の天然の抗生物質を使ってきたらしいのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで a fungus を説明する非制限用法の which。that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['making', 'made', 'to make', 'makes'], answer: 0, why: '分詞構文「そしてそれは～にする」。前の内容の結果を表すので making。' },
+      { id: 'C', choices: ['before', 'after', 'since', 'until'], answer: 0, why: 'long before ～「～するずっと前に」。' },
+    ],
+    tf: [
+      { statement: 'ハキリアリは、運んだ葉をそのまま食べる。', answer: false, why: '第1段落 It might seem natural to assume that they eat the leaves, but they do not。' },
+      { statement: 'いちばん小さい働きアリは、菌の畑の世話をする。', answer: true, why: '第2段落 the smallest ones tend the delicate fungus gardens。' },
+      { statement: 'ハキリアリの体には、有害な菌の成長を止める物質を作る細菌がいる。', answer: true, why: '第3段落の内容と合う。' },
+    ],
+    qa: [
+      { q: 'What do the largest leafcutter ants do?', choices: ['They defend the colony.', 'They grow the fungus.', 'They cut leaves.', 'They carry eggs to the surface.'], answer: 0, why: '第2段落 The largest ants defend the colony。' },
+    ],
+  },
 ]
