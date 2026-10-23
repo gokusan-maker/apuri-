@@ -1462,3 +1462,10 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .counts button { min-height: 32px; padding: 4px 14px; border: none; border-radius: 999px; background: transparent; box-shadow: none; color: var(--muted); font-size: 0.82rem; }
 .counts button[aria-pressed='true'] { color: #fff; }
 .counts button:active { transform: scale(0.96); }
+
+/* ふつうのチェックボックス（演出を短くする・めくったら読み上げる など）：角の丸い、押しやすいチェックに（設定のトグルはそのまま） */
+:where(input[type='checkbox']:not(.setting.toggle input)) { -webkit-appearance: none; appearance: none; display: inline-grid; place-items: center; width: 22px; height: 22px; margin: 0 6px 0 0; vertical-align: -5px; border-radius: 7px; border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); background: var(--bg); cursor: pointer; transition: background 0.15s, border-color 0.15s; }
+:where(input[type='checkbox']:not(.setting.toggle input))::after { content: ''; width: 6px; height: 11px; margin-top: -2px; border: solid #fff; border-width: 0 3px 3px 0; transform: rotate(45deg) scale(0); transition: transform 0.12s; }
+:where(input[type='checkbox']:not(.setting.toggle input)):checked { background: var(--accent-grad); border-color: transparent; }
+:where(input[type='checkbox']:not(.setting.toggle input)):checked::after { transform: rotate(45deg) scale(1); }
+:where(input[type='checkbox']:not(.setting.toggle input)):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
