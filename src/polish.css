@@ -1961,3 +1961,18 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* ガチャ結果の「はじめて」：NEW! と名前をチップで1行に */
 .gacha-new-chips { justify-content: center; animation: pop 0.6s 1.6s both; }
 .gacha-new-chips > span.gacha-new { margin: 0; animation: none; background: color-mix(in srgb, #dc2626 12%, transparent); }
+
+
+/* ホームの大きなボタン（今日のボス・おやつ・今日のチャレンジ）：ダークでは明るいパステルが浮くので、色を少し入れた暗い地に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .challenge-btn { background: linear-gradient(135deg, color-mix(in srgb, #f59e0b 22%, var(--card)), color-mix(in srgb, #f59e0b 12%, var(--card))); color: #fcd34d; border-color: rgb(245 158 11 / 0.35); }
+  :root:not([data-theme="light"]) .challenge-btn.done { background: linear-gradient(135deg, color-mix(in srgb, #22c55e 20%, var(--card)), color-mix(in srgb, #22c55e 10%, var(--card))); color: #86efac; border-color: rgb(34 197 94 / 0.35); }
+  :root:not([data-theme="light"]) .challenge-btn.daily-boss-go { background: linear-gradient(135deg, color-mix(in srgb, #8b5cf6 26%, var(--card)), color-mix(in srgb, #8b5cf6 12%, var(--card))); color: #ddd6fe; border-color: rgb(139 92 246 / 0.4); }
+  :root:not([data-theme="light"]) .challenge-btn.hungry-btn { background: linear-gradient(135deg, color-mix(in srgb, #fb923c 22%, var(--card)), color-mix(in srgb, #fb923c 10%, var(--card))); color: #fed7aa; border-color: rgb(251 146 60 / 0.35); }
+  :root:not([data-theme="light"]) .challenge-btn.hungry-btn .challenge-sub { color: #fdba74; }
+}
+:root[data-theme="dark"] .challenge-btn { background: linear-gradient(135deg, color-mix(in srgb, #f59e0b 22%, var(--card)), color-mix(in srgb, #f59e0b 12%, var(--card))); color: #fcd34d; border-color: rgb(245 158 11 / 0.35); }
+:root[data-theme="dark"] .challenge-btn.done { background: linear-gradient(135deg, color-mix(in srgb, #22c55e 20%, var(--card)), color-mix(in srgb, #22c55e 10%, var(--card))); color: #86efac; border-color: rgb(34 197 94 / 0.35); }
+:root[data-theme="dark"] .challenge-btn.daily-boss-go { background: linear-gradient(135deg, color-mix(in srgb, #8b5cf6 26%, var(--card)), color-mix(in srgb, #8b5cf6 12%, var(--card))); color: #ddd6fe; border-color: rgb(139 92 246 / 0.4); }
+:root[data-theme="dark"] .challenge-btn.hungry-btn { background: linear-gradient(135deg, color-mix(in srgb, #fb923c 22%, var(--card)), color-mix(in srgb, #fb923c 10%, var(--card))); color: #fed7aa; border-color: rgb(251 146 60 / 0.35); }
+:root[data-theme="dark"] .challenge-btn.hungry-btn .challenge-sub { color: #fdba74; }
