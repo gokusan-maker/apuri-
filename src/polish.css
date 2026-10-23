@@ -1307,3 +1307,9 @@ main select:focus {
 .long-challenge .stats-note { margin: 0; }
 .long-challenge .zukan-pct { background: color-mix(in srgb, var(--fg) 8%, transparent); }
 .long-genre-fold .fold-meta { font-size: .78rem; font-weight: 500; color: var(--muted); margin-left: 2px; }
+
+/* はじめての案内：ページの点を、いまのページだけ横長のピルに */
+.onboarding-dots { display: flex; justify-content: center; gap: 8px; margin: 12px 0; letter-spacing: 0; }
+.onboarding-dots span { display: block; width: 8px; height: 8px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 25%, transparent); transition: width 0.25s, background 0.25s; }
+.onboarding-dots span.done { background: color-mix(in srgb, var(--accent) 55%, transparent); }
+.onboarding-dots span.on { width: 26px; background: var(--accent-grad); }

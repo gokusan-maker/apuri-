@@ -55,7 +55,9 @@ export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => voi
           </div>
         )}
         <p className="onboarding-dots" aria-hidden="true">
-          {STEPS.map((_, i) => (i === step ? '●' : '○')).join(' ')}
+          {STEPS.map((_, i) => (
+            <span key={i} className={i === step ? 'on' : i < step ? 'done' : undefined} />
+          ))}
         </p>
         <button className="flip" onClick={() => (last ? onDone() : setStep(step + 1))}>
           {last ? 'タマゴを受け取る 🥚' : 'つぎへ'}
