@@ -1557,3 +1557,9 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 .backup .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
 .backup .actions .good { min-height: 46px; padding: 8px 6px; background: var(--card); color: var(--accent); border: 1.5px solid color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 25%, transparent); font-size: clamp(0.8rem, 3.8vw, 0.95rem); white-space: nowrap; }
 .backup .actions .good:active { transform: translateY(3px); box-shadow: none; }
+/* ガチャのカプセルの色：指で押しやすい32pxの丸に（選んだ色は外側にリング） */
+.capsule-picker { gap: 8px; }
+.capsule-picker button { width: 32px; height: 32px; }
+.capsule-picker button.on { transform: none; box-shadow: 0 0 0 3px var(--card), 0 0 0 5px #7c3aed; }
+.capsule-picker { gap: 6px; white-space: nowrap; }
+.capsule-picker button { flex: none; width: 30px; height: 30px; }
