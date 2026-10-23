@@ -4420,6 +4420,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'It is safe to stand under a tall tree during a storm.', answer: false, why: '高い木からはなれるように書いてある。' },
     ],
   },
+  {
+    id: 'ears-pop',
+    title: 'Why Do Our Ears Pop on Planes?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'When an airplane goes up or comes down, your ears may feel strange. Sometimes they hurt a little, and then you hear a small "pop." Why ( A ) this happen?',
+      'The air around us pushes on everything. This push is called air pressure. High in the sky, the air pressure is lower than on the ground. When a plane goes up or down quickly, the air pressure inside the plane changes, too.',
+      'Inside your ear, there is a thin skin called the eardrum. There is also some air behind it. When the air pressure outside changes but the air behind the eardrum does not, the eardrum is pushed in or out. That is ( B ) your ears feel strange.',
+      'A small tube connects your ear to the back of your throat. When you swallow or yawn, this tube opens, and air moves in or out. Then the pressure on both sides becomes the same, and you hear the "pop." So on your next flight, try chewing gum or drinking some water. It will help your ears feel ( C ).',
+    ],
+    ja: [
+      '飛行機が上がったり下がったりするとき、耳がへんな感じになることがあります。少しいたくなって、そのあと小さく「ポン」と聞こえることもあります。なぜこうなるのでしょうか。',
+      '私たちのまわりの空気は、あらゆるものをおしています。このおす力は気圧とよばれます。空の高いところでは、気圧は地上より低くなっています。飛行機がすばやく上がったり下がったりすると、機内の気圧も変わります。',
+      '耳の中には、鼓膜とよばれるうすい膜があります。そのおくにも空気があります。外の気圧が変わったのに鼓膜のおくの空気が変わらないと、鼓膜は内側か外側におされます。だから耳がへんな感じになるのです。',
+      '耳とのどのおくは、小さな管でつながっています。つばを飲みこんだりあくびをしたりすると、この管が開いて、空気が出たり入ったりします。すると両側の気圧が同じになり、「ポン」と聞こえるのです。だから次に飛行機に乗るときは、ガムをかんだり水を飲んだりしてみてください。耳が楽になるのに役立ちますよ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['does', 'is', 'do', 'are'], answer: 0, why: '主語 this（3人称単数）の一般動詞の疑問文なので does。' },
+      { id: 'B', choices: ['why', 'what', 'which', 'who'], answer: 0, why: 'That is why 〜「そういうわけで〜」。' },
+      { id: 'C', choices: ['better', 'well', 'good', 'best'], answer: 0, why: 'feel better「（前より）楽になる」。比較級 better。' },
+    ],
+    underline: { phrase: 'the pressure on both sides becomes the same', choices: ['鼓膜の内と外の気圧が同じになる', '両方の耳がいたくなる', '飛行機の左右がゆれる', 'のどが空気でいっぱいになる'], answer: 0, why: '鼓膜の外側（機内）とおく（耳の中）の気圧がそろうことを言っている。' },
+    tf: [
+      { statement: 'Air pressure is higher high in the sky than on the ground.', answer: false, why: '空の高いところでは気圧は低い。' },
+      { statement: 'The eardrum is a thin skin inside the ear.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'A small tube connects the ear to the back of the throat.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'Swallowing can help open the tube.', answer: true, why: 'つばを飲みこむと管が開く。' },
+      { statement: 'Chewing gum makes your ears hurt more.', answer: false, why: 'ガムは耳を楽にするのに役立つ。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

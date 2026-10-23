@@ -1225,3 +1225,4 @@
 - 2026-10-23: 読解「高校入試」に随筆「The Bakery on My Street」を追加
 - 2026-10-23: 文法ゲームを1日に全12しゅるいあそんだら、ボタンを押して🪙10のごほうび（1日1回）
 - 2026-10-23: 中2の文法単元「take の熟語（take care of / take part in / take a look at）」を追加（全176単元に）
+- 2026-10-23: 読解「ふつう」に説明文「Why Do Our Ears Pop on Planes?」を追加
