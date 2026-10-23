@@ -822,3 +822,28 @@ main h2::before {
 }
 .pity-gauge > div { border-radius: 999px; box-shadow: inset 0 2px 0 rgb(255 255 255 / 0.4); }
 .gacha .gacha-btn + .gacha-btn, .gacha .gacha-btn { margin-top: 8px; }
+
+/* ===== 入力欄：角丸＋影＋選んだときに光るふち ===== */
+main input[type='text'],
+main input[type='search'],
+main input[type='date'],
+main input:not([type]),
+main textarea,
+main select {
+  border: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+  border-radius: 14px;
+  background: var(--card);
+  color: var(--fg);
+  box-shadow: inset 0 1px 2px rgb(15 23 42 / 0.06);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+main input[type='text']:focus,
+main input[type='search']:focus,
+main input[type='date']:focus,
+main input:not([type]):focus,
+main textarea:focus,
+main select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
+}
