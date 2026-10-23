@@ -1733,3 +1733,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .drill-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 4px 0 10px; }
 .drill-grid button { min-height: 44px; padding: 8px 6px; border: 1px solid var(--hair); border-radius: 14px; background: var(--card); color: var(--text); font-size: 0.82rem; font-weight: 700; box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 12%, rgb(0 0 0 / 0.06)); }
 .drill-grid button:active { transform: translateY(2px); box-shadow: none; }
+
+/* 単語のおさらい：テーマのボタンは3列にそろえる */
+.word-review .theme-practice .levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.word-review .theme-practice .levels button { min-width: 0; padding-left: 4px; padding-right: 4px; }
+.word-review > .list-link { display: block; margin: 6px auto 10px; }

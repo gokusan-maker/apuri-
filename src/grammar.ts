@@ -1221,7 +1221,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'She ___ to practice the piano every day.', choices: ['have', 'has', 'having'], answer: 1, why: '主語が三人称単数（She）なので has to。' },
       { sentence: "It's Sunday. You ___ have to go to school.", choices: ["don't", "doesn't", 'not'], answer: 0, why: '「〜しなくてよい」は don\'t have to。主語は You。' },
-      { sentence: 'Yesterday I ___ to clean my room.', choices: ['have', 'had', 'has'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
+      { sentence: 'Last night I ___ to finish my homework.', choices: ['have', 'had', 'has'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
     ],
   },
   {
@@ -1247,7 +1247,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Don't be afraid of making mistakes.", ja: 'まちがえることをこわがらないで。' },
     ],
     questions: [
-      { sentence: '___ quiet in the library.', choices: ['Be', 'Are', 'Do'], answer: 0, why: '形容詞（quiet）の命令文は Be ＋形容詞。' },
+      { sentence: '___ careful when you cross the street.', choices: ['Be', 'Are', 'Do'], answer: 0, why: '形容詞（careful）の命令文は Be ＋形容詞。' },
       { sentence: "Don't ___ late for school.", choices: ['are', 'be', 'is'], answer: 1, why: "Don't be ＋形容詞で「〜しないで」。" },
       { sentence: '___ kind to your friends.', choices: ['Be', 'Being', 'To be'], answer: 0, why: '命令文は動詞の原形で始めるので Be。' },
     ],
@@ -1359,7 +1359,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Why don't you ask your teacher?", ja: '先生に聞いてみたらどう？' },
     ],
     questions: [
-      { sentence: 'How about ___ lunch together?', choices: ['have', 'having', 'to have'], answer: 1, why: 'How about のあとは -ing 形。' },
+      { sentence: 'How about ___ to the park this afternoon?', choices: ['go', 'going', 'to go'], answer: 1, why: 'How about のあとは -ing 形。' },
       { sentence: "Why don't you ___ a rest?", choices: ['take', 'taking', 'took'], answer: 0, why: "Why don't you のあとは動詞の原形。" },
       { sentence: '___ about this red one?', choices: ['What', 'Who', 'Why'], answer: 0, why: 'What about 〜? でも「〜はどう？」と言える。' },
     ],
@@ -3635,7 +3635,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"Can you ride a bike?" "Yes, I can."', ja: '「自転車に乗れる？」「うん、乗れるよ。」' },
     ],
     questions: [
-      { sentence: 'My brother can ___ very fast.', choices: ['run', 'runs', 'running'], answer: 0, why: 'can のあとは動詞の原形。主語が3人称単数でも -s はつけない。' },
+      { sentence: 'Ken can ___ very fast.', choices: ['run', 'runs', 'running'], answer: 0, why: 'can のあとは動詞の原形。主語が3人称単数でも -s はつけない。' },
       { sentence: '"Can you swim?" "No, I ___."', choices: ["can't", "don't", 'am not'], answer: 0, why: 'Can you ～? には can を使って答える。' },
       { sentence: '___ your father cook?', choices: ['Can', 'Is', 'Are'], answer: 0, why: 'cook は動詞なので、「～できますか」は Can を前に出す。' },
     ],

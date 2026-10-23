@@ -208,3 +208,8 @@ it('全問正解した単元の数で段位が決まる', async () => {
   expect(danOf(65)).toEqual({ name: '三段', next: 25 })
   expect(danOf(95)).toEqual({ name: '達人', next: null })
 })
+
+it('文法の問題文は全単元で重ならない（同じ文だと答え合わせの検索がずれる）', () => {
+  const s = GRAMMAR.flatMap((u) => u.questions.map((q) => q.sentence))
+  expect(new Set(s).size).toBe(s.length)
+})
