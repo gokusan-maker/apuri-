@@ -511,6 +511,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
           })}
         </ol>
       </details>
+      <div className="boss-modes">
       <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
         🗼 エンドレスの塔（最高 {endlessBest}階）10階ごとに 🪙{ENDLESS_REWARD_COINS}＋🎟
       </button>
@@ -538,6 +539,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
         {rareWeek === week ? `✅ 今週のレアボス「${rare.look.name}」はたおした！（もう一度戦う）` : `✨ 今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
       </button>
+      </div>
       {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日の金色ボス：{BOSSES[goldenLevelOf(LEVELS, dayKey())!].name}（{goldenLevelOf(LEVELS, dayKey())}）　たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
       {daily && (
         <button

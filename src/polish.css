@@ -1339,3 +1339,16 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 @keyframes stage-next { 50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 8%, transparent), var(--shadow-sm); } }
 @media (prefers-reduced-motion: reduce) { .stage-btn:not(:disabled):not(.cleared) { animation: none; } }
 .boss-locked { display: inline-block; margin: 8px 0 4px; padding: 4px 12px; border-radius: 999px; font-size: .8rem; color: var(--muted); background: var(--surface-2, #f1f2f8); border: 1px dashed color-mix(in srgb, var(--muted) 40%, transparent); }
+
+/* ボス部屋：エンドレス・ボスラッシュ・タイムアタック・レアボスなどを1枚のリストカードにまとめる */
+.boss-modes { display: flex; flex-direction: column; margin: 12px 0; border-radius: 18px; overflow: hidden; background: var(--bg); border: 1px solid var(--hair, rgba(0,0,0,.08)); box-shadow: var(--shadow-sm); }
+.boss-modes .boss-btn { position: relative; display: block; width: 100%; margin: 0; padding: 13px 36px 13px 16px; border: none; border-radius: 0; box-shadow: none; background: transparent; color: var(--fg); text-align: left; font-size: .88rem; font-weight: 700; line-height: 1.45; border-left: 5px solid var(--mode-color, var(--accent)); }
+.boss-modes .boss-btn + .boss-btn { border-top: 1px solid var(--hair, rgba(0,0,0,.08)); }
+.boss-modes .boss-btn::after { content: '›'; position: absolute; right: 14px; top: 50%; transform: translateY(-50%); font-size: 1.4rem; font-weight: 400; color: var(--muted); }
+.boss-modes .boss-btn:active { background: color-mix(in srgb, var(--mode-color, var(--accent)) 10%, transparent); transform: none; }
+.boss-modes .endless-boss { --mode-color: #6d28d9; }
+.boss-modes .rush-boss { --mode-color: #ef4444; }
+.boss-modes .rush-boss.ex { --mode-color: #f59e0b; }
+.boss-modes .night-boss { --mode-color: #1e3a8a; }
+.boss-modes .weekend-boss { --mode-color: #7c3aed; }
+.boss-modes .rare-boss { --mode-color: #eab308; }

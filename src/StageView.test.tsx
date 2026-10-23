@@ -252,3 +252,11 @@ it('大学入試の塔に進みぐあいメーターがある', () => {
   const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
   expect(container.querySelector('.univ-meter i')?.getAttribute('style')).toContain('width: 0%')
 })
+
+it('ボス部屋のモード（エンドレス・ラッシュ・タイムアタック・レア）は1枚のリストにまとまる', () => {
+  const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  const modes = container.querySelector('.boss-modes')!
+  expect(modes.querySelector('.endless-boss')).not.toBeNull()
+  expect(modes.querySelector('.rare-boss')).not.toBeNull()
+  expect(modes.querySelectorAll('.boss-btn').length).toBeGreaterThanOrEqual(4)
+})
