@@ -95,11 +95,11 @@ describe('App', () => {
     const p = dailyShort(day)
     render(<App />)
     const tasks = () => screen.getByLabelText('今日の課題')
-    expect(tasks().textContent).toContain(`今日の単語 4択（${ws.map((w) => w.en).join('・')}）`)
+    expect(tasks().textContent).toContain(`4択で${ws.length}語`)
     expect(tasks().textContent).toContain(`📖 読解`)
-    expect(tasks().textContent).toContain(`今日の読解「${p.title}」`)
+    expect(tasks().textContent).toContain(p.title)
     // 単語：4択で今日の単語だけが出る
-    fireEvent.click(within(tasks()).getByText(/今日の単語 4択/))
+    fireEvent.click(within(tasks()).getByText(/4択で/))
     expect(screen.getByText(/📋 今日の単語（4択）/)).toBeInTheDocument()
     for (let i = 0; i < ws.length; i++) {
       const en = document.querySelector('.quiz .en, .quiz .word-en, .quiz h2')?.textContent ?? ''
@@ -111,7 +111,7 @@ describe('App', () => {
     expect(localStorage.getItem('eitan:today-words')).toBe(day)
     // 読解：今日の英文がすぐ開く
     navTo('ホーム')
-    fireEvent.click(within(tasks()).getByText(/今日の読解/))
+    fireEvent.click(within(tasks()).getByText(p.title))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
     for (const q of p.questions) {
       fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -286,6 +286,13 @@ describe('App', () => {
     expect(screen.getByText('1日')).toBeInTheDocument()
     expect(document.querySelector('.result-list')!.textContent).toContain('2問')
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
+  })
+
+  it('単語帳ボタンは3冊以上なら「中1 ほかN冊」と短く出て、全部の名前は title に入る', () => {
+    render(<App />)
+    const b = screen.getByText(/📚 単語帳：/)
+    expect(b.textContent).toMatch(/中1 ほか\d+冊/)
+    expect(b.getAttribute('title')).toContain('中2')
   })
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {

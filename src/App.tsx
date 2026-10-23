@@ -197,6 +197,11 @@ function learnedPct(ws: { id: string }[], progress: Record<string, { box: number
   return ws.length ? Math.round((ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length / ws.length) * 100) : 0
 }
 
+// 単語帳ボタンの表示：3冊以上は「中1 ほか5冊」と短く
+function bookLabel(names: string[]): string {
+  return names.length > 2 ? `${names[0]} ほか${names.length - 1}冊` : names.join('・')
+}
+
 function saveLucky(day: string) {
   try {
     localStorage.setItem('eitan:lucky', day)
@@ -1187,8 +1192,8 @@ function App() {
         )}
         {(mode === 'word' || mode === 'home') && (
           <>
-            <button className="book-toggle" aria-expanded={showBooks} onClick={() => setShowBooks(!showBooks)}>
-              📚 単語帳：{[...levels, ...(useMy ? ['マイ単語帳'] : [])].join('・')} {showBooks ? '▲' : '▼'}
+            <button className="book-toggle" aria-expanded={showBooks} title={[...levels, ...(useMy ? ['マイ単語帳'] : [])].join('・')} onClick={() => setShowBooks(!showBooks)}>
+              📚 単語帳：{bookLabel([...levels, ...(useMy ? ['マイ単語帳'] : [])])} {showBooks ? '▲' : '▼'}
             </button>
             {showBooks && (
               <div className="levels" role="group" aria-label="単語帳">

@@ -16,9 +16,9 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
   const r = dailyShort(today)
   const ws = todayWords(today)
   const items = [
-    { id: 'word' as const, icon: '🔤', label: '単語', task: `今日の単語 4択（${ws.map((w) => w.en).join('・')}）`, done: loadTodayWordsDay() === today },
-    { id: 'grammar' as const, icon: '📐', label: '文法', task: `今日の文法「${g.title}」`, done: loadDailyGrammarDay() === today },
-    { id: 'reading' as const, icon: '📖', label: '読解', task: `今日の読解「${r.title}」（今日の単語入り）`, done: loadDailyShortDay() === today },
+    { id: 'word' as const, icon: '🔤', label: '単語', task: `4択で${ws.length}語`, done: loadTodayWordsDay() === today },
+    { id: 'grammar' as const, icon: '📐', label: '文法', task: g.title.split('（')[0], done: loadDailyGrammarDay() === today },
+    { id: 'reading' as const, icon: '📖', label: '読解', task: r.title, done: loadDailyShortDay() === today },
   ]
   const n = items.filter((x) => x.done).length
   return (
