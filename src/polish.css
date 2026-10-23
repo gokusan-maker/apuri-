@@ -1362,3 +1362,14 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .speak:not(.small):active { transform: translateY(2px) scale(.96); box-shadow: none; }
 /* ミニゲームのヘッダー：「今日◯しゅるいあそんだ・あと◯で🪙5」を360pxでも1行に */
 .mode-btn .played-today { font-size: clamp(0.68rem, 3.2vw, 0.78rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ガチャ：3連・5連を横にならべ、値段や確定の説明は小さな2行目に */
+.gacha-multi { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.gacha-multi:empty { display: none; }
+.gacha-multi .gacha-btn { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; margin: 0; padding: 12px 6px; min-width: 0; }
+.gacha-multi-title { font-size: 1rem; font-weight: 800; white-space: nowrap; }
+.gacha-multi-sub { font-size: .74rem; font-weight: 700; opacity: .92; }
+.gacha-multi .gacha-btn small { font-size: .68rem; }
+.gacha .gacha-multi { margin: 10px 0; padding: 0; background: none; border: none; box-shadow: none; align-items: stretch; }
+.gacha-multi-sub { white-space: nowrap; }
+.gacha-multi > .gacha-btn { margin: 0 !important; height: 100%; }

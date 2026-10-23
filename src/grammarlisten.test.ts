@@ -14,3 +14,11 @@ it('例文の1語を空所にして、正解をふくむ3択を作る', () => {
     expect(x.shown).toContain('_____')
   }
 })
+
+it('T-shirt のようなハイフン入りの語は空所にしない（空所のない問題を作らない）', () => {
+  for (const r of [0, 0.3, 0.5, 0.7, 0.99]) {
+    const q = makeListen('How much is this T-shirt?', 'このTシャツはいくらですか。', r, ['apple', 'river', 'happy'], () => 0.5)!
+    expect(q.shown).toContain('_____')
+    expect(q.answer).not.toBe('Tshirt')
+  }
+})

@@ -756,6 +756,15 @@ describe('App', () => {
     expect(st.R + st.SR + st.UR).toBe(1)
   })
 
+  it('3連・5連ガチャは横にならび、5連には「レア以上1つ確定」と値段が出る', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 300, owned: [] }))
+    render(<App />)
+    fireEvent.click(screen.getByLabelText('コイン 300枚・ショップを開く'))
+    const row = document.querySelector('.gacha-multi')!
+    expect(row.querySelectorAll('.gacha-btn')).toHaveLength(2)
+    expect(screen.getByRole('button', { name: /5連ガチャ/ }).textContent).toMatch(/レア以上1つ確定🪙250/)
+  })
+
   it('おさんぽは1日1回で、単語を拾ってきて🪙3', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)

@@ -7,7 +7,8 @@ const clean = (w: string) => w.replace(/[^A-Za-z']/g, '')
 
 export function makeListen(en: string, ja: string, r: number, pool: string[], r2: () => number): ListenQ | null {
   const words = en.split(' ')
-  const idx = words.map((w, i) => (clean(w).length >= 3 ? i : -1)).filter((i) => i >= 0)
+  // T-shirt のようにハイフンなどをふくむ語は、記号をとると元の語の中に見つからず空所にできないので外す
+  const idx = words.map((w, i) => (clean(w).length >= 3 && w.includes(clean(w)) ? i : -1)).filter((i) => i >= 0)
   if (idx.length === 0) return null
   const k = idx[Math.floor(r * idx.length)]
   const answer = clean(words[k])

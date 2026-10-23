@@ -92,6 +92,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
+      <div className="gacha-multi">
       {onDrawMulti && !full && (
         <button
           className="good gacha-btn multi"
@@ -104,7 +105,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             list.forEach(record)
           }}
         >
-          🎰🎰🎰 3連ガチャ 🪙{price * MULTI}
+          <span className="gacha-multi-title">🎰 3連ガチャ</span>
+          <span className="gacha-multi-sub">🪙{price * MULTI}</span>
           {members + MULTI > PARTY_MAX && <small>（仲間の空きが3ひつよう）</small>}
         </button>
       )}
@@ -120,10 +122,13 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             list.forEach(record)
           }}
         >
-          🌈 5連ガチャ（レア以上1つ確定）🪙{price * MULTI5}
+          <span className="gacha-multi-title">🌈 5連ガチャ</span>
+          <span className="gacha-multi-sub">レア以上1つ確定</span>
+          <span className="gacha-multi-sub">🪙{price * MULTI5}</span>
           {members + MULTI5 > PARTY_MAX && <small>（仲間の空きが5ひつよう）</small>}
         </button>
       )}
+      </div>
       {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}
       {tickets > 0 && !full && (
         <button
