@@ -164,13 +164,13 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
       >
         {bookmarks.includes(x.id) ? '★' : '☆'}
       </button>
-      <button
-        onClick={() => openPassage(x)}
-      >
-        📖 {isNewLong(x, record) && <span className="long-new">NEW</span>}
-        {shownTitle(x, LONG_PASSAGES.indexOf(x))}
-        <span className="long-meta">
-          {x.level}・{'★'.repeat(difficultyOf(x))}・{wordCount(x)}語・{totalOf(x)}点・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
+      <button className="long-item" onClick={() => openPassage(x)}>
+        <span className="long-item-title">
+          {isNewLong(x, record) && <span className="long-new">NEW</span>}
+          {shownTitle(x, LONG_PASSAGES.indexOf(x))}
+        </span>
+        <span className="long-meta" title={x.level}>
+          {'★'.repeat(difficultyOf(x))}・{wordCount(x)}語・目安{targetMinutes(x)}分{loadLongDraft(x.id) ? '・✏️とちゅう' : ''}{loadLongTimes()[x.id] ? `・🏁${formatTime(loadLongTimes()[x.id])}` : ''}{record[x.id] !== undefined ? `・最高 ${record[x.id]}点 ${'★'.repeat(longStars(record[x.id], totalOf(x)))}${'☆'.repeat(3 - longStars(record[x.id], totalOf(x)))}` : ''}
         </span>
       </button>
     </li>

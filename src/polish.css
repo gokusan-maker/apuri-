@@ -1701,3 +1701,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* バトルアイテム：アイコンを上、名前を下にして1行におさめる */
 .battle-item { flex-direction: column; justify-content: center; gap: 2px; padding: 8px 6px; text-align: center; }
 .battle-item .bi-name { flex: none; white-space: nowrap; font-size: 0.74rem; letter-spacing: -0.02em; }
+
+/* 読解の一覧：題名を大きく、情報は1行の小さなメタに（NEW は題名の前の小さなピル） */
+.grammar-list button.long-item { display: block; }
+.long-item-title { display: block; font-size: 0.95rem; line-height: 1.35; }
+.long-item .long-new { display: inline-block; margin: 0 6px 0 0; padding: 1px 7px; border-radius: 999px; font-size: 0.62rem; line-height: 1.4; vertical-align: 0.12em; }
+.long-item .long-meta { margin-top: 3px; font-size: 0.72rem; }

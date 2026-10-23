@@ -536,3 +536,13 @@ it('1本もないジャンルは出さず、ジャンルが1つだけなら種�
   expect(document.querySelectorAll('details.long-genre-fold').length).toBe(new Set(exam.map(genreOf)).size)
   expect([...document.querySelectorAll('details.long-genre-fold .fold-meta')].every((e) => !/\/0/.test(e.textContent ?? ''))).toBe(true)
 })
+
+it('読解の一覧の1行は「題名」と短いメタ（★・語数・目安）だけ', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  const item = document.querySelector('.long-item')!
+  expect(item.querySelector('.long-item-title')).not.toBeNull()
+  const meta = item.querySelector('.long-meta')!.textContent ?? ''
+  expect(meta).toMatch(/^★+・\d+語・目安\d+分/)
+  expect(meta).not.toContain('点・')
+})
