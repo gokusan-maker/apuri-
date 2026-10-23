@@ -2948,4 +2948,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why may ships far out at sea hardly notice a tsunami?', choices: ['Because its height at the surface is often small.', 'Because it moves very slowly in deep water.', 'Because ships always sail near the coast.', 'Because it only happens at night.'], answer: 0, why: '第2段落 its height at the surface is often less than a meter. For this reason, ships ... may hardly notice it。' },
     ],
   },
+{
+    id: 'hs-grandma-field',
+    title: "My Grandmother's Vegetables (Speech)",
+    level: '高校入試（スピーチ）',
+    paragraphs: [
+      "Hello, everyone. Today I want to talk about my grandmother and the vegetables she grows. Every summer, I visit her house in the country. She has a small field behind her house, and she grows tomatoes, cucumbers, and eggplants there. Last summer, she asked me to help her, so I worked in the field with her ( A ) a week.",
+      "At first, I thought it would be easy. But it was very hot, and pulling weeds was hard work. My back hurt after only one hour. My grandmother has done this work every day for more than forty years. I was surprised and asked her, \"Why do you keep working so hard?\" She smiled and said, \"Because my vegetables make people ( B ).\"",
+      "On my last day, we cooked dinner with the vegetables we picked. They were the most delicious vegetables I have ever eaten. Now, when I buy vegetables at the supermarket, I think about the people who grew them. I want to say \"thank you\" to them ( C ) I eat. Thank you for listening.",
+    ],
+    ja: [
+      'みなさん、こんにちは。今日は、私の祖母と、祖母が育てている野菜について話したいと思います。毎年夏、私はいなかにある祖母の家をおとずれます。祖母は家の裏に小さな畑を持っていて、そこでトマトやきゅうり、なすを育てています。去年の夏、祖母に手伝ってほしいとたのまれたので、私は1週間、祖母といっしょに畑で働きました。',
+      'はじめは、かんたんだろうと思っていました。でも、とても暑く、草取りは大変な仕事でした。たった1時間で腰が痛くなりました。祖母は40年以上、この仕事を毎日続けています。私はおどろいて「どうしてそんなに一生けんめい働き続けるの？」とたずねました。祖母はほほえんで「わたしの野菜で、みんながうれしくなるからだよ」と言いました。',
+      '最後の日、私たちはとった野菜で夕食を作りました。それは、私が今までに食べた中でいちばんおいしい野菜でした。今では、スーパーで野菜を買うとき、それを育てた人たちのことを考えます。食べるたびに、その人たちに「ありがとう」と言いたいと思います。ご清聴ありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'since', 'until', 'by'], answer: 0, why: 'for a week「1週間」。期間の長さは for。' },
+      { id: 'B', choices: ['happy', 'happily', 'happiness', 'to happy'], answer: 0, why: 'make ＋人＋形容詞「人を～にする」。' },
+      { id: 'C', choices: ['whenever', 'unless', 'until', 'though'], answer: 0, why: '「食べるたびに」なので whenever。' },
+    ],
+    tf: [
+      { statement: '筆者は毎年夏に祖母の家をおとずれる。', answer: true, why: '第1段落 Every summer, I visit her house in the country.' },
+      { statement: '畑の仕事は、筆者が思っていたより楽だった。', answer: false, why: '第2段落 pulling weeds was hard work。' },
+      { statement: '祖母は40年以上、毎日畑の仕事をしている。', answer: true, why: '第2段落 every day for more than forty years。' },
+      { statement: '筆者はスーパーで野菜を買うのをやめた。', answer: false, why: '第3段落 when I buy vegetables at the supermarket, I think about the people who grew them。' },
+    ],
+    qa: [
+      { q: 'Why does the grandmother keep working so hard?', choices: ['Because her vegetables make people happy.', 'Because she needs a lot of money.', 'Because she does not like cooking.', 'Because the writer asked her to.'], answer: 0, why: '第2段落 Because my vegetables make people happy.' },
+    ],
+  },
 ]
