@@ -1419,3 +1419,4 @@
 - 2026-10-23: 中3の文法単元「almost と most の使い分け」を追加（全223単元に）
 - 2026-10-23: 読解「TOEFL・IELTS」に「Sea Otters and Underwater Forests（ラッコとケルプの森）」を追加
 - 2026-10-23: デザイン第73弾（ボタンの形）：データの保存と復元のボタンを白いサブボタンにして1行に（めったに使わない操作は控えめに）
+- 2026-10-23: 中3の文法単元「This is the first time I have ～ / for the first time」を追加（全224単元に）

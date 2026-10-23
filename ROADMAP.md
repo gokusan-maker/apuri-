@@ -1402,6 +1402,7 @@
 - [x] 読解「かんたん」をさらに1本（自作・引っこしの日）
 - [x] 中3の文法単元を追加：almost と most の使い分け（almost all / almost every）（自作）
 - [x] 読解「TOEFL・IELTS」をさらに1本（自作・ラッコとケルプの森）
+- [x] 中3の文法単元を追加：This is the first time I have ～ / for the first time（自作）
 
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
