@@ -523,3 +523,18 @@ it('読解ボスの本文で、単語帳にある語をタップすると意味�
   fireEvent.click(w)
   expect(screen.getByRole('status').textContent).toMatch(/：/)
 })
+
+it('読解ボスに負けたときは「本文をもう一度読もう」と出る', async () => {
+  localStorage.clear()
+  const { passageQs } = await import('./readingboss')
+  const { LONG_PASSAGES } = await import('./longreading')
+  const all = LONG_PASSAGES.flatMap(passageQs)
+  render(<Boss level="中1" words={wordsOf(['中1'])} reading startHearts={1} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const q = all.find((x) => x.word.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== q.choices[q.answer])!)
+  const next = screen.queryByRole('button', { name: /次へ|結果を見る/ })
+  if (next) fireEvent.click(next)
+  expect(screen.getByText(/本文をもう一度ゆっくり読んで/)).toBeInTheDocument()
+  expect(screen.queryByText(/苦手な単語を復習して/)).toBeNull()
+})

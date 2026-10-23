@@ -654,7 +654,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         <>
           <p className="boss-result">まけてしまった…</p>
           {partner && <p className="grammar-praise lose-cheer">🐣 {partner.name}「{cheerOnLose(corrects)}」</p>}
-          <p className="result-message">苦手な単語を復習して、もう一度挑戦しよう！</p>
+          <p className="result-message">{reading ? '本文をもう一度ゆっくり読んで、もう一度挑戦しよう！' : '苦手な単語を復習して、もう一度挑戦しよう！'}</p>
           {onSpend && !continued && hearts <= 0 && index < qs.length && (
             <button
               className="boss-btn continue-btn"
