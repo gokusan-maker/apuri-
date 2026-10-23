@@ -312,3 +312,41 @@ main h2::before {
   padding: 2px 0 2px 10px;
   border-left: 3px solid color-mix(in srgb, var(--accent) 60%, transparent);
 }
+
+/* ===== 結果画面：大きな数字とスコアのタイル ===== */
+.result-title { font-weight: 800; letter-spacing: 0.2em; font-size: 0.8rem; text-transform: uppercase; }
+.result-score {
+  font-size: 2.3rem;
+  font-weight: 900;
+  background: var(--accent-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.result-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(84px, 1fr)); gap: 8px; }
+.result-list > div {
+  padding: 10px 4px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: linear-gradient(180deg, var(--card), var(--surface-2));
+  box-shadow: var(--shadow-sm);
+}
+.result-list dt { font-size: 0.72rem; color: var(--muted); }
+.result-list dd { margin: 2px 0 0; font-size: 1.4rem; font-weight: 900; color: var(--fg); font-variant-numeric: tabular-nums; }
+
+/* ===== ガチャの結果：光る台座のカード ===== */
+.gacha-result {
+  border: 1px solid var(--hair);
+  border-radius: 22px;
+  background:
+    radial-gradient(60% 45% at 50% 32%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+    var(--card);
+  box-shadow: var(--shadow-lg);
+}
+.gacha-result.r-R { box-shadow: 0 0 0 2px #60a5fa, var(--shadow-lg); }
+.gacha-result.r-SR { box-shadow: 0 0 0 2px #f59e0b, 0 0 24px #fbbf2499, var(--shadow-lg); }
+.gacha-result.r-UR { box-shadow: 0 0 0 2px #e879f9, 0 0 30px #c084fc99, var(--shadow-lg); }
+.gacha-egg { display: inline-block; filter: drop-shadow(0 8px 6px rgb(15 23 42 / 0.25)); }
+.gacha-rarity { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.06em; }
+.gacha-name { font-size: 1.05rem; }
+.gacha-result .flip { margin-top: 12px; }
