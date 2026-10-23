@@ -1531,6 +1531,17 @@ export const PASSAGES: Passage[] = [
       { q: 'ひとりで乗れたのは何週間後？', choices: ['2週間後', '1週間後', '3週間後'], answer: 0 },
     ],
   },
+  {
+    id: 'planetarium',
+    title: 'At the Planetarium',
+    text: 'Last Saturday, I went to a planetarium with my mother. The room was dark and round. We sat in soft chairs and looked up at the ceiling. Soon, thousands of stars appeared above us. A woman told us the names of the stars. My favorite was the North Star. Now I look for it from my window every night.',
+    ja: 'この前の土曜日、私は母といっしょにプラネタリウムへ行きました。部屋は暗くて丸い形でした。私たちはやわらかいいすにすわって、天井を見上げました。まもなく、何千もの星が頭の上にあらわれました。女の人が星の名前を教えてくれました。私のお気に入りは北極星でした。今では毎晩、窓から北極星をさがしています。',
+    questions: [
+      { q: 'だれとプラネタリウムへ行った？', choices: ['母', '父', '友だち'], answer: 0 },
+      { q: '筆者のお気に入りの星は？', choices: ['北極星', '一番星', '流れ星'], answer: 0 },
+      { q: '今、毎晩何をしている？', choices: ['窓から北極星をさがす', '星の絵をかく', '星の本を読む'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）

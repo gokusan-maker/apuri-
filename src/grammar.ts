@@ -3195,7 +3195,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'I happened ___ an old friend in the park.', choices: ['to see', 'seeing', 'see'], answer: 0, why: 'happen to ＋ 原形「たまたま～する」。' },
       { sentence: 'The man turned out ___ a famous singer.', choices: ['to be', 'being', 'be'], answer: 0, why: 'turn out to be ～「～だとわかる」。' },
-      { sentence: 'It ___ out that he was right.', choices: ['turned', 'happened', 'came'], answer: 0, why: 'It turned out that ～「～だとわかった」。' },
+      { sentence: 'It ___ out that he was right.', choices: ['turned', 'happened', 'took'], answer: 0, why: 'It turned out that ～「～だとわかった」。' },
     ],
   },
 ]
