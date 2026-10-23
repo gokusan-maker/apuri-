@@ -1353,4 +1353,6 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .boss-modes .weekend-boss { --mode-color: #7c3aed; }
 .boss-modes .rare-boss { --mode-color: #eab308; }
 /* ゲームタイル：8文字以上の名前は少し小さくして1行に収める（モンスターラッシュ・単語もぐらたたき など） */
-.game-tile-name.long { font-size: clamp(0.68rem, 3.3vw, 0.8rem); letter-spacing: -0.02em; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.game-tile-name.long { font-size: clamp(0.6rem, 2.85vw, 0.8rem); letter-spacing: -0.03em; }
+.game-strip .game-tile:has(.game-tile-name.long) { padding-left: 2px; padding-right: 2px; }
+.game-strip .game-tile-name.long { font-size: clamp(0.58rem, 2.7vw, 0.75rem); letter-spacing: -0.04em; }
