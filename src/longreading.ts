@@ -4540,6 +4540,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Sloths move faster in water than on the ground.', answer: true, why: '水の中では約3倍速い。' },
     ],
   },
+  {
+    id: 'pill-bugs',
+    title: 'The Little Ball Under the Stone',
+    level: '中2（説明文）',
+    paragraphs: [
+      'If you lift a stone in a garden, you may find small gray animals called pill bugs. When you touch one, it rolls up ( A ) a tiny ball. This helps protect its soft body from enemies.',
+      'Many people think pill bugs are insects, but they are not. Insects have six legs, while pill bugs have fourteen. In fact, pill bugs are more closely related to shrimp and crabs than to insects.',
+      'Like their relatives in the sea, pill bugs need water to breathe. That is ( B ) they live in dark, wet places, such as under stones and fallen leaves. If the air becomes too dry, they cannot live long.',
+      'Pill bugs eat dead leaves and other old plants. By doing this, they help turn them into good soil. So the next time you see a pill bug, remember that this little animal is quietly ( C ) the garden healthy.',
+    ],
+    ja: [
+      '庭の石を持ち上げると、ダンゴムシとよばれる小さな灰色の生き物が見つかるかもしれません。さわると、小さなボールのように丸まります。こうして、やわらかい体を敵から守っているのです。',
+      '多くの人はダンゴムシをこん虫だと思っていますが、そうではありません。こん虫にはあしが6本ありますが、ダンゴムシには14本あります。実はダンゴムシは、こん虫よりもエビやカニに近い仲間なのです。',
+      '海にいる仲間と同じように、ダンゴムシは呼吸するのに水分が必要です。だから、石や落ち葉の下のような暗くてしめった場所に住んでいるのです。空気がかわきすぎると、長くは生きられません。',
+      'ダンゴムシはかれ葉やほかの古い植物を食べます。そうすることで、それらをよい土に変える手助けをしています。だから次にダンゴムシを見かけたら、この小さな生き物が静かに庭を元気に保っているのだと思い出してください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['into', 'on', 'at', 'from'], answer: 0, why: 'roll up into 〜「丸まって〜になる」。into は変化の結果を表す。' },
+      { id: 'B', choices: ['why', 'what', 'how', 'when'], answer: 0, why: 'That is why 〜「そういうわけで〜」。' },
+      { id: 'C', choices: ['keeping', 'keeps', 'kept', 'to keep'], answer: 0, why: 'is keeping で現在進行形。keep 〜 healthy「〜を元気に保つ」。' },
+    ],
+    underline: { phrase: 'more closely related to shrimp and crabs', choices: ['エビやカニにより近い仲間', 'エビやカニを食べる', 'エビやカニより大きい', 'エビやカニといっしょに住む'], answer: 0, why: 'be related to 〜「〜と関係がある・〜の仲間だ」。more closely で「より近い」。' },
+    tf: [
+      { statement: 'A pill bug rolls up into a ball when you touch it.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Pill bugs are insects.', answer: false, why: 'こん虫ではない。' },
+      { statement: 'Pill bugs have fourteen legs.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Pill bugs like dry and sunny places.', answer: false, why: '暗くてしめった場所に住む。' },
+      { statement: 'Pill bugs help make good soil.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
