@@ -137,7 +137,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         hp={endlessHp(f)}
         noBook
         title={`🗼 塔 ${f}階（最高 ${endlessBest}階）`}
-        note={f === 1 ? `負けるまでどこまでのぼれるか挑戦！ 10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟（最高 ${endlessBest}階）` : undefined}
+        note={f === 1 ? `負けるまでのぼろう！ 10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟` : undefined}
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}

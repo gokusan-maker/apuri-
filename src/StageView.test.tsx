@@ -271,7 +271,7 @@ it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの�
   const btn = screen.getByText(/🗼 エンドレスの塔/).closest('button')!
   expect(btn.textContent).toBe('🗼 エンドレスの塔')
   fireEvent.click(btn)
-  expect(screen.getByText(/負けるまでどこまでのぼれるか挑戦！ 10階ごとに/)).toBeInTheDocument()
+  expect(screen.getByText(/負けるまでのぼろう！ 10階ごとに/)).toBeInTheDocument()
 })
 
 it('ステージは解放ずみのものだけ見え、クリアすると次のステージが出てくる', () => {
