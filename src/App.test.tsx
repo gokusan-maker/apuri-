@@ -1479,7 +1479,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     navTo('ホーム')
-    expect(document.querySelector('.today-summary')!.textContent).toContain('1問・+5XP・新しい単語 1語')
+    expect([...document.querySelectorAll('.today-summary strong')].map((e) => e.textContent)).toEqual(['1問', '+5XP', '1語'])
   })
 
   it('定期テストの日を入れるとカウントダウンが出る', () => {

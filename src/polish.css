@@ -1688,3 +1688,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* きもち日記：顔アイコン＋ひとことだけ（見出しは読み上げ用ラベルに） */
 .kimochi-diary { display: flex; align-items: center; gap: 10px; }
 .kimochi-face { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--card); box-shadow: var(--shadow-sm); font-size: 1.2rem; }
+
+/* 今日のまとめ：問題数・XP・新しい単語をチップで横に */
+.today-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.today-summary > span:first-child { font-weight: 800; margin-right: 2px; }
+.today-summary > span + span { padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); font-size: 0.85rem; }

@@ -1619,9 +1619,17 @@ function App() {
                 </span>
                 <span>{kimochiDiary(studiedToday).text}</span>
               </p>
-              <p className="today-summary">
-                ☀️ 今日のまとめ：<strong>{studiedToday}問</strong>・<strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>・新しい単語{' '}
-                <strong>{newToday}語</strong>
+              <p className="today-summary" aria-label="今日のまとめ">
+                <span>☀️ 今日</span>
+                <span>
+                  📝 <strong>{studiedToday}問</strong>
+                </span>
+                <span>
+                  ⭐ <strong>+{todayXp.day === today ? todayXp.count : 0}XP</strong>
+                </span>
+                <span>
+                  🆕 <strong>{newToday}語</strong>
+                </span>
               </p>
               <button
                 className="list-link"
