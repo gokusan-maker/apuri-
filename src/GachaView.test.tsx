@@ -221,3 +221,12 @@ it('シール帳とガチャポイントは数をピルで短く出す', () => {
   expect(screen.getByLabelText(/ポイントでSR以上と交換/).textContent).toMatch(/^5\/\d+$/)
   expect(screen.getByText('✨ あと12回でSR以上確定')).toBeInTheDocument()
 })
+
+it('ガチャ結果の種類の説明はたたんであり、押すと読める', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('dragon') })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const d = screen.getByText(/「ドラコ」の仲間だ！/).closest('details')!
+  expect(d.open).toBe(false)
+  expect(d.textContent).toContain(speciesOf('dragon').desc)
+})

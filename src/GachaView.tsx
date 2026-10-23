@@ -316,7 +316,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>
           <p className="gacha-attr">
-            <span className="attr-badge attr-word">属性：単語</span> 単語の相棒のわくにおけるよ
+            <span className="attr-badge attr-word">属性：単語</span>
           </p>
           {partnerName && !result.mystery && result.kind.rarity !== 'N' && <p className="grammar-praise gacha-cheer">🐣 {partnerName}「{rareCheer(result.kind.rarity)}」</p>}
           {result.nth !== undefined && result.nth > 1 && <p className="gacha-nth">👥 {result.species.name} {result.nth}体目</p>}
@@ -366,7 +366,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           {!!result.lucky && <p className="gacha-lucky">🍀 ラッキーナンバー！ 通算{result.lucky}回目で 🪙{LUCKY_COINS}</p>}
           {!!result.refund && <p className="gacha-dup">かぶりボーナス！ 同じ子がいたので 🪙{result.refund} もどってきた</p>}
           <ShareButton text={gachaShareText([{ kindName: result.kind.name, normal: result.kind.id === 'normal', speciesName: result.species.name, rarity: RARITY_LABEL[result.kind.rarity] }])} />
-          {result.species.id !== 'mochi' && <p className="gacha-species">「{result.species.name}」の仲間だ！ {result.species.desc}</p>}
+          {result.species.id !== 'mochi' && (
+            <details className="gacha-species">
+              <summary>「{result.species.name}」の仲間だ！</summary>
+              {result.species.desc}
+            </details>
+          )}
           {onRaise && (
             <button
               className="flip"
