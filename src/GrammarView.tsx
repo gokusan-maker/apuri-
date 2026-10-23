@@ -469,7 +469,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
           </div>
         )}
         {stampMode && (
-          <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：関係代名詞・have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
+          <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
         )}
         {stampMode && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
         {stampMode && (
