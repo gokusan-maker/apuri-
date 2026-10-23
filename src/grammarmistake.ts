@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'the-last-to': { wrong: 'He is the last person telling a lie.', right: 'He is the last person to tell a lie.', why: 'the last ＋ 名詞 のあとは to ＋ 原形。' },
   'neither-nor': { wrong: 'I don\'t like neither cats nor dogs.', right: 'I like neither cats nor dogs.', why: 'neither に「～ない」の意味があるので not は入れない。' },
   'would-often': { wrong: 'When I was young, I would often to swim in the river.', right: 'When I was young, I would often swim in the river.', why: 'would のあとは to をつけない原形。' },
   'go-ing': { wrong: 'I went to shopping yesterday.', right: 'I went shopping yesterday.', why: 'go ～ing の形。to は入れない。' },
