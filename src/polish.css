@@ -1792,3 +1792,14 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* ガチャの結果カードは var(--card) の上なので、文字もテーマの色に（ダークで読めなくならないように） */
 .gacha-result { color: var(--fg); }
 .gacha-result .gacha-species, .gacha-result .stats-note, .gacha-result .muted { color: var(--muted); }
+
+/* ダークモード：相棒の「次の姿」・ステータス・あたためるボタン（白い背景に白い文字になっていた） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .evo-preview { background: rgb(139 92 246 / 0.14); }
+  :root:not([data-theme="light"]) .partner-status { background: rgb(255 255 255 / 0.06); }
+  :root:not([data-theme="light"]) .warm-btn { background: rgb(251 146 60 / 0.14); border-color: rgb(253 186 116 / 0.45); color: var(--fg); }
+}
+:root[data-theme="dark"] .evo-preview { background: rgb(139 92 246 / 0.14); }
+:root[data-theme="dark"] .partner-status { background: rgb(255 255 255 / 0.06); }
+:root[data-theme="dark"] .warm-btn { background: rgb(251 146 60 / 0.14); border-color: rgb(253 186 116 / 0.45); color: var(--fg); }
+.partner-status dl { grid-template-columns: 7.5em 1fr; }
