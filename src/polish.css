@@ -1864,7 +1864,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .boss-shield { color: #74accb; }
   :root:not([data-theme="light"]) .blank.filled, :root:not([data-theme="light"]) .gacha-lucky, :root:not([data-theme="light"]) .grammar-mistake .ok, :root:not([data-theme="light"]) .buddy-today { color: #7fcc9b; }
-  :root:not([data-theme="light"]) .long-vocab strong, :root:not([data-theme="light"]) .boss-preempt-result { color: #839eea; }
+  :root:not([data-theme="light"]) .long-vocab strong { color: #839eea; }
   :root:not([data-theme="light"]) .r-R .gacha-omen, :root:not([data-theme="light"]) .long-insert-mark { color: #87a9f4; }
   :root:not([data-theme="light"]) .boss-sleep { color: #9892e2; }
   :root:not([data-theme="light"]) .gacha-species, :root:not([data-theme="light"]) .univ-tower .stats-note { color: #9ca2a9; }
@@ -1879,7 +1879,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 }
 :root[data-theme="dark"] .boss-shield { color: #74accb; }
 :root[data-theme="dark"] .blank.filled, :root[data-theme="dark"] .gacha-lucky, :root[data-theme="dark"] .grammar-mistake .ok, :root[data-theme="dark"] .buddy-today { color: #7fcc9b; }
-:root[data-theme="dark"] .long-vocab strong, :root[data-theme="dark"] .boss-preempt-result { color: #839eea; }
+:root[data-theme="dark"] .long-vocab strong { color: #839eea; }
 :root[data-theme="dark"] .r-R .gacha-omen, :root[data-theme="dark"] .long-insert-mark { color: #87a9f4; }
 :root[data-theme="dark"] .boss-sleep { color: #9892e2; }
 :root[data-theme="dark"] .gacha-species, :root[data-theme="dark"] .univ-tower .stats-note { color: #9ca2a9; }
