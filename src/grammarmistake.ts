@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'trouble-ing': { wrong: 'I had trouble to find the station.', right: 'I had trouble finding the station.', why: 'have trouble のあとは ～ing。to 不定詞は使わない。' },
   'make-sure': { wrong: 'Make sure to locking the door.', right: 'Make sure to lock the door.', why: 'make sure to のあとは動詞の原形。' },
   'by-the-time': { wrong: 'By the time you will arrive, we will have eaten.', right: 'By the time you arrive, we will have eaten.', why: 'by the time の中は、未来のことでも現在形にする。' },
   'first-time': { wrong: 'This is the first time I eat sushi.', right: 'This is the first time I have eaten sushi.', why: 'This is the first time のあとは現在完了〈have ＋ 過去分詞〉。' },
