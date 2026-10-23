@@ -20,3 +20,10 @@ it('読解の文法タグはダークモードの色が2か所（端末の設定
   expect(css).toContain(':root:not([data-theme="light"]) .long-gtag {')
   expect(css).toContain(':root[data-theme="dark"] .long-gtag {')
 })
+
+it('明るい背景を使う部品（スタンプカード・金の宝箱・おみくじ・塔の階・ボス図鑑）にはダークモードの色がある', () => {
+  for (const sel of ['.stamp-card', '.gold-chest', '.omikuji', '.univ-floors li', '.boss-book-list li']) {
+    expect(css).toContain(`:root:not([data-theme="light"]) ${sel} {`)
+    expect(css).toContain(`:root[data-theme="dark"] ${sel} {`)
+  }
+})

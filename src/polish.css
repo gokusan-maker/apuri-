@@ -1744,3 +1744,27 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .long-gtag { background: rgb(96 165 250 / 0.16); color: #bfdbfe; }
 }
 :root[data-theme="dark"] .long-gtag { background: rgb(96 165 250 / 0.16); color: #bfdbfe; }
+
+/* ダークモード：スタンプカード・金の宝箱・おみくじの明るい背景をおさえる */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .stamp-card { background: rgb(251 146 60 / 0.08); border-color: rgb(253 186 116 / 0.45); }
+  :root:not([data-theme="light"]) .stamp { background: rgb(255 255 255 / 0.06); border-color: rgb(254 215 170 / 0.3); }
+  :root:not([data-theme="light"]) .stamp.on { background: rgb(251 113 133 / 0.22); border-color: #fb7185; }
+  :root:not([data-theme="light"]) .gold-chest { background: rgb(251 191 36 / 0.1); border-color: rgb(253 230 138 / 0.35); color: var(--text); }
+  :root:not([data-theme="light"]) .omikuji { background: rgb(248 113 113 / 0.12); color: #fecaca; }
+  :root:not([data-theme="light"]) .omikuji.o-daikichi { background: rgb(248 113 113 / 0.2); }
+}
+:root[data-theme="dark"] .stamp-card { background: rgb(251 146 60 / 0.08); border-color: rgb(253 186 116 / 0.45); }
+:root[data-theme="dark"] .stamp { background: rgb(255 255 255 / 0.06); border-color: rgb(254 215 170 / 0.3); }
+:root[data-theme="dark"] .stamp.on { background: rgb(251 113 133 / 0.22); border-color: #fb7185; }
+:root[data-theme="dark"] .gold-chest { background: rgb(251 191 36 / 0.1); border-color: rgb(253 230 138 / 0.35); color: var(--text); }
+:root[data-theme="dark"] .omikuji { background: rgb(248 113 113 / 0.12); color: #fecaca; }
+:root[data-theme="dark"] .omikuji.o-daikichi { background: rgb(248 113 113 / 0.2); }
+
+/* ダークモード：大学入試の塔の階・ボス図鑑のまだのボスも暗い背景に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .univ-floors li { background: rgb(255 255 255 / 0.06); }
+  :root:not([data-theme="light"]) .boss-book-list li { background: rgb(255 255 255 / 0.06); }
+}
+:root[data-theme="dark"] .univ-floors li { background: rgb(255 255 255 / 0.06); }
+:root[data-theme="dark"] .boss-book-list li { background: rgb(255 255 255 / 0.06); }
