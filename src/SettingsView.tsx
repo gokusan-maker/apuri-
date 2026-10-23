@@ -178,7 +178,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       </label>
 
       <label className="setting toggle">
-        <span>新しい単語をランダムな順に出す</span>
+        <span>新しい単語をランダムに出す</span>
         <input type="checkbox" checked={settings.randomNew} onChange={(e) => set({ randomNew: e.target.checked })} />
       </label>
 

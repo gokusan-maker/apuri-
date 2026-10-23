@@ -39,7 +39,7 @@ export function Install() {
       ) : isIOS() ? (
         <p className="stats-note">Safari の共有ボタン（□↑）→「ホーム画面に追加」で、アプリのように使えます。</p>
       ) : (
-        <p className="stats-note">ブラウザのメニューから「ホーム画面に追加」または「アプリをインストール」を選ぶと、アプリのように使えます。</p>
+        <p className="stats-note">ブラウザのメニューの「ホーム画面に追加」で、アプリのように使える</p>
       )}
     </div>
   )
