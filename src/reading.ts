@@ -1586,6 +1586,17 @@ export const PASSAGES: Passage[] = [
       { q: '花がさいたのはいつ？', choices: ['4月', '12月', '2月'], answer: 0 },
     ],
   },
+  {
+    id: 'moving-day',
+    title: 'Moving Day',
+    text: 'Last month, my family moved to a new town. On moving day, a big truck came to our old house. My room was empty, and I felt sad. But our new house has a small garden, and I can see a river from my window. The next day, a girl next door said, "Hi! Do you want to play?" Now she is my best friend.',
+    ja: '先月、私の家族は新しい町に引っこしました。引っこしの日、大きなトラックが前の家に来ました。私の部屋はからっぽになって、悲しくなりました。でも新しい家には小さな庭があって、窓から川が見えます。次の日、となりの家の女の子が「こんにちは！あそばない？」と言いました。今では、その子は私のいちばんの友だちです。',
+    questions: [
+      { q: '引っこしの日に何が来た？', choices: ['大きなトラック', 'バス', 'タクシー'], answer: 0 },
+      { q: '新しい家の窓から何が見える？', choices: ['川', '海', '山'], answer: 0 },
+      { q: 'となりの女の子は今、筆者にとって何？', choices: ['いちばんの友だち', 'いとこ', '先生'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
