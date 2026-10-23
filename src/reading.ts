@@ -1520,6 +1520,17 @@ export const PASSAGES: Passage[] = [
       { q: '筆者は豆をいくつ食べた？', choices: ['13個', '3個', '30個'], answer: 0 },
     ],
   },
+  {
+    id: 'unicycle',
+    title: 'My Unicycle Challenge',
+    text: 'There is a unicycle at our school. A unicycle has only one wheel, so it is very hard to ride. At first, I fell many times. I practiced every day after lunch with my friend Kenta. He held my hand at first. After two weeks, I rode from the gym to the gate by myself! Kenta clapped for me.',
+    ja: '私たちの学校には一輪車があります。一輪車にはタイヤが1つしかないので、乗るのがとてもむずかしいです。最初は何度も転びました。私は友だちのケンタと毎日昼食のあとに練習しました。はじめは彼が私の手をにぎってくれました。2週間後、私はひとりで体育館から門まで乗れました！ケンタは私に拍手してくれました。',
+    questions: [
+      { q: '一輪車のタイヤはいくつ？', choices: ['1つ', '2つ', '3つ'], answer: 0 },
+      { q: 'いつ練習した？', choices: ['昼食のあと', '朝ごはんの前', '夜'], answer: 0 },
+      { q: 'ひとりで乗れたのは何週間後？', choices: ['2週間後', '1週間後', '3週間後'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
