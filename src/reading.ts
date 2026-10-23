@@ -1630,6 +1630,17 @@ export const PASSAGES: Passage[] = [
       { q: '父は2人をどこに連れていった？', choices: ['アイスクリームを食べに', '映画館', '公園'], answer: 0 },
     ],
   },
+  {
+    id: 'recorder-test',
+    title: 'The Recorder Test',
+    text: 'Last month, we had a recorder test in music class. We had to play a song in front of our classmates. The song was short, but the last part was very fast. Every evening after dinner, I practiced for twenty minutes. At first, I made many mistakes, but my little sister always clapped for me. On the day of the test, my hands were shaking, but I played the whole song without a mistake. My teacher smiled and said, "Great job!"',
+    ja: '先月、音楽の授業でリコーダーのテストがありました。クラスメートの前で1曲ふかなければなりませんでした。曲は短かったのですが、最後の部分がとても速かったのです。毎晩、夕食のあとに20分練習しました。はじめはたくさんまちがえましたが、妹がいつも拍手してくれました。テストの日、手がふるえていましたが、1曲全部をまちがえずにふくことができました。先生はにっこりして「よくできました！」と言ってくれました。',
+    questions: [
+      { q: '曲のどの部分がとても速かった？', choices: ['最後の部分', '最初の部分', 'まん中の部分'], answer: 0 },
+      { q: '毎晩何分練習した？', choices: ['20分', '10分', '1時間'], answer: 0 },
+      { q: 'テストの日はどうだった？', choices: ['まちがえずにふけた', '何度もまちがえた', 'テストを休んだ'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
