@@ -71,7 +71,10 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         ← もどる
       </button>
       <h2>ショップ・着せ替え</h2>
-      <p className="stats-note">正解1問で🪙1枚。いまのコイン：🪙 {wallet.coins}</p>
+      <p className="shop-coins">
+        <span className="shop-coins-pill" aria-label={`いまのコイン ${wallet.coins}枚`}>🪙 {wallet.coins}</span>
+        <small>1問正解で🪙1</small>
+      </p>
       <div className={`shop-stage${shownRoom ? ` room-${shownRoom}` : ''}`}>
         <RoomScene room={shownRoom} align="xMaxYMax" />
         <div className="shop-preview">
@@ -131,7 +134,10 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       {tab === 'item' && (
         <>
       <h3 className="shop-h">
-        お休みチケット（持っている数 {wallet.freezes ?? 0} / {FREEZE_MAX}）
+        🎫 お休みチケット{' '}
+        <span className="fold-meta" aria-label={`持っている数 ${wallet.freezes ?? 0} / ${FREEZE_MAX}`}>
+          {wallet.freezes ?? 0}/{FREEZE_MAX}
+        </span>
       </h3>
       <p className="stats-note">1日休んでも連続記録が切れない</p>
       <button
@@ -149,7 +155,9 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
               <button key={it.id} className="good" disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
                 <span className="item-icon" aria-hidden="true">{it.icon}</span>
                 <span className="item-name">{it.name}</span>
-                <span className="item-meta">{it.desc}・持っている数 {bag[it.id]}</span>
+                <span className="item-meta">
+                  {it.desc}・<span aria-label={`持っている数 ${bag[it.id]}`}>×{bag[it.id]}</span>
+                </span>
                 <span className="item-price">🪙{it.price}</span>
               </button>
             ))}

@@ -81,3 +81,9 @@ it('属性のタマゴのボタンは題名・値段・短い説明だけ', () =
   const b = screen.getByText('🥚 属性のタマゴ').closest('button')!
   expect(b.textContent).toBe('🥚 属性のタマゴ🪙120文法・読解のなかま')
 })
+
+it('ショップの上にはいまのコインがピルで出て、お休みチケットの数はバッジ', () => {
+  render(<Shop initialTab="item" wallet={{ coins: 42, owned: [], freezes: 1 }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(screen.getByLabelText('いまのコイン 42枚').textContent).toBe('🪙 42')
+  expect(screen.getByLabelText(/持っている数 1 \//).textContent).toMatch(/^1\/\d+$/)
+})

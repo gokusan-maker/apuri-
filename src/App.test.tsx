@@ -526,7 +526,7 @@ describe('App', () => {
     fireEvent.click(screen.getByLabelText('コイン 30枚・ショップを開く'))
     fireEvent.click(screen.getByRole('tab', { name: /きせかえ/ }))
     fireEvent.click(screen.getByText('🪙30で買う'))
-    expect(screen.getByText(/いまのコイン：🪙 0/)).toBeInTheDocument()
+    expect(screen.getByLabelText('いまのコイン 0枚')).toBeInTheDocument()
     fireEvent.click(screen.getByText('つける'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].wear).toBe('ribbon')
     fireEvent.click(screen.getByText('はずす'))
