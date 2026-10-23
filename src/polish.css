@@ -1450,3 +1450,9 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .challenge-btn::after { content: '›'; position: absolute; right: 14px; top: 50%; transform: translateY(-52%); font-size: 1.6rem; font-weight: 400; line-height: 1; opacity: 0.55; }
 .challenge-btn .challenge-streak { display: inline-block; margin-left: 6px; }
 .challenge-btn .challenge-sub { display: block; margin-top: 1px; font-size: 0.74rem; font-weight: 700; opacity: 0.75; }
+
+/* 輪郭ボタン（list-link）にも下の厚みをつけて、ほかの3Dボタンと形をそろえる（押すと沈む） */
+.list-link { min-height: 40px; box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 22%, transparent), var(--shadow-sm); }
+.list-link:active { transform: translateY(2px) scale(0.98); box-shadow: 0 0 0 color-mix(in srgb, var(--accent) 22%, transparent); }
+.list-link:disabled { opacity: 0.5; box-shadow: none; }
+.daily-stars .list-link, .related-units .list-link { min-height: 32px; }
