@@ -59,12 +59,18 @@ export function Stats({ streakDays, studiedToday, learned, total, week, goal, we
       {accuracy && (
         <p className="study-time">
           🎯 今日の正答率：<strong>{accuracy.today ?? '―'}{accuracy.today !== null && '%'}</strong>
-          <br />
-          <span className="stats-note">
-            これまで：カード {accuracy.card ?? '―'}
-            {accuracy.card !== null && '%'}・クイズ {accuracy.quiz ?? '―'}
-            {accuracy.quiz !== null && '%'}・リスニング/スペル {accuracy.ear ?? '―'}
-            {accuracy.ear !== null && '%'}
+          <span className="acc-chips" aria-label="これまでの正答率">
+            {(
+              [
+                ['カード', accuracy.card],
+                ['クイズ', accuracy.quiz],
+                ['耳・スペル', accuracy.ear],
+              ] as const
+            ).map(([k, v]) => (
+              <span key={k} className="acc-chip">
+                {k} <b>{v === null ? '―' : `${v}%`}</b>
+              </span>
+            ))}
           </span>
         </p>
       )}

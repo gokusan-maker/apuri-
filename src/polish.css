@@ -1632,3 +1632,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 今日の文法：要点はたたんで、開くと読める */
 .today-grammar-point > summary { display: inline-flex; align-items: center; padding: 4px 12px 4px 6px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--accent); font-size: 0.8rem; font-weight: 800; }
 .today-grammar-point[open] > summary { margin-bottom: 6px; }
+
+/* これまでの正答率：3つの小さなチップ */
+.acc-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 6px; }
+.acc-chip { padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--muted); font-size: 0.74rem; font-weight: 700; white-space: nowrap; }
+.acc-chip b { color: var(--accent); font-weight: 800; }
