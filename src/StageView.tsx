@@ -1,3 +1,4 @@
+import { splitSoft } from './softbreak'
 import { BossTime } from './BossTimeView'
 import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
@@ -503,7 +504,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 </span>
                 <span className="univ-info">
                   <strong>
-                    {b.floor} {b.name}
+                    {b.floor} {splitSoft(b.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}
                   </strong>
                   <span className="univ-hint">{b.hint}</span>
                 </span>

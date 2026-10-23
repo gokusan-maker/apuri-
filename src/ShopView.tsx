@@ -7,6 +7,7 @@ import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
 import { pityLeft } from './gacha'
 import type { GachaResult } from './GachaView'
+import { splitSoft } from './softbreak'
 import { loadOutfits, saveOutfits, FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
 type Props = {
@@ -123,7 +124,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           >
             {favSnack === sn.id && <span className="fav-snack-tag">💕 好物 XP2倍！</span>}
             <span className="item-icon" aria-hidden="true">{sn.icon}</span>
-            <span className="item-name">{sn.name}</span>
+            <span className="item-name">{splitSoft(sn.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
             <span className="item-meta">+{favSnack === sn.id ? sn.xp * 2 : sn.xp}XP</span>
             <span className="item-price">🪙{sn.price}</span>
           </button>
@@ -154,7 +155,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
             {BATTLE_ITEMS.map((it) => (
               <button key={it.id} className="good" disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
                 <span className="item-icon" aria-hidden="true">{it.icon}</span>
-                <span className="item-name">{it.name}</span>
+                <span className="item-name">{splitSoft(it.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
                 <span className="item-meta">
                   {it.desc}・<span aria-label={`持っている数 ${bag[it.id]}`}>×{bag[it.id]}</span>
                 </span>

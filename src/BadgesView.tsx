@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { splitSoft } from './softbreak'
 import { BADGES, type Badge, type Earned } from './badges'
 
 // バッジ一覧：タイルは名前だけ。押すと上に条件（取った日）が出る
@@ -24,7 +25,7 @@ export function BadgeList({ earned }: { earned: Earned }) {
               <span className="badge-icon" aria-hidden="true">
                 {earned[b.id] ? b.icon : '🔒'}
               </span>
-              <span className="badge-name">{b.name}</span>
+              <span className="badge-name">{splitSoft(b.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
             </button>
           </li>
         ))}
