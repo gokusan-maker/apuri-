@@ -201,3 +201,15 @@ it('ガチャで出た子が英語であいさつ（🔊を押したときだけ
   fireEvent.click(screen.getByRole('button', { name: 'あいさつを聞く' }))
   expect(sp).toHaveBeenCalledWith(helloLine('mochi').en)
 })
+
+it('ガチャで出た子に、その場で名前をつけられる', () => {
+  const onNameNew = vi.fn()
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf('mochi') }))
+  render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={onDraw} onNameNew={onNameNew} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  fireEvent.click(screen.getByRole('button', { name: '✏️ 名前をつける' }))
+  fireEvent.change(screen.getByLabelText('出た子の名前'), { target: { value: 'ピカ' } })
+  fireEvent.click(screen.getByRole('button', { name: '決定' }))
+  expect(onNameNew).toHaveBeenCalledWith('ピカ')
+  expect(screen.getByText('🏷 「ピカ」と名前をつけたよ！')).toBeInTheDocument()
+})

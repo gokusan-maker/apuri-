@@ -51,12 +51,15 @@ type Props = {
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   onDrawMulti?: (n: number) => GachaResult[] // まとめて引く（3連ガチャ）
   onRaise?: () => void // 出たタマゴを相棒にする
+  onNameNew?: (name: string) => void // 出た子にその場で名前をつける
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise, onNameNew }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
+  const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
+  const [named, setNamed] = useState('')
   const [capsule, setCapsule] = useState(loadCapsule)
   const [fast, setFast] = useState(loadGachaFast)
   const [stats, setStats] = useState(loadGachaStats)
@@ -71,6 +74,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
     const k = onDraw(ticket)
     if (k) {
       setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
+      setNaming(null)
+      setNamed('')
       setMulti(null)
       record(k)
     }
@@ -215,6 +220,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
                 if (k) {
                   setMulti(null)
                   setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
+      setNaming(null)
+      setNamed('')
                   record(k)
                 }
               }}
@@ -305,6 +312,28 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
           </p>
+          {onNameNew && (named ? (
+            <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
+          ) : naming === null ? (
+            <button className="list-link" onClick={() => setNaming('')}>
+              ✏️ 名前をつける
+            </button>
+          ) : (
+            <form
+              className="buddy-rename"
+              onSubmit={(e) => {
+                e.preventDefault()
+                const n = naming.trim().slice(0, 10)
+                if (!n) return
+                onNameNew(n)
+                setNamed(n)
+                setNaming(null)
+              }}
+            >
+              <input aria-label="出た子の名前" value={naming} maxLength={10} onChange={(e) => setNaming(e.target.value)} />
+              <button type="submit">決定</button>
+            </form>
+          ))}
           <p className="gacha-hello">
             👋 「{helloLine(result.species.id).en}」<span className="muted">{helloLine(result.species.id).ja}</span>
             <button className="speak small" onClick={() => speak(helloLine(result.species.id).en)} aria-label="あいさつを聞く">

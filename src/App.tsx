@@ -1327,6 +1327,7 @@ function App() {
             setBag((b) => addItem(b, id))
           }}
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
+          onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           onGachaMulti={(n) => drawMany(false, n)}
           boostColor={kindOf(dailyColor(today)).name}

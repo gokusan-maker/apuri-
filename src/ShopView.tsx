@@ -25,6 +25,7 @@ type Props = {
   members?: number // 仲間の数（ガチャ用）
   onGacha?: (ticket: boolean) => GachaResult | null
   onRaiseNew?: () => void
+  onNameNew?: (name: string) => void // ガチャで出た子に名前をつける
   dragonUp?: boolean
   pickup?: Species // 日替わりピックアップ
   gachaPrice?: number // ガチャの値段
@@ -50,7 +51,7 @@ const SHOP_TABS: { id: ShopTab; label: string }[] = [
   { id: 'item', label: '🎒 アイテム' },
 ]
 
-export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
+export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, onGacha, onRaiseNew, onNameNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
   const [tryRoom, setTryRoom] = useState<string | null>(null) // 買う前に部屋をためす（プレビューだけ）
   const shownRoom = tryRoom && !wallet.owned.includes(tryRoom) ? tryRoom : wallet.room
   const form = formOf(monster)
@@ -102,7 +103,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         ))}
       </div>
       {tab === 'gacha' && attrEgg && <AttrEgg {...attrEgg} coins={wallet.coins} />}
-      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
+      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
       {tab === 'snack' && (
         <>
       <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
