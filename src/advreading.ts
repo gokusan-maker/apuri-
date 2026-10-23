@@ -2523,4 +2523,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, why do some services include features like endless feeds?', choices: ['To keep users engaged for a long time.', 'To reduce the amount of information.', 'To help users sleep better.', 'To make the services more expensive.'], answer: 0, why: '第2段落 these services have strong reasons to keep us engaged for as long as possible。' },
     ],
   },
+{
+    id: 'hs-care-home',
+    title: 'Songs at the Care Home',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last December, our chorus club visited a care home for elderly people. Before the visit, I was worried. I did not know ( A ) to talk to people who were much older than me. I thought they might not enjoy our songs because we usually sing new pop songs.",
+      "Our teacher suggested that we also sing some old Japanese songs. At the care home, when we started singing one of them, an old man in a wheelchair began to sing with us. His voice was small, but he remembered every word. After the song, a staff member told us that he usually did not talk much. \"I haven't seen him this happy ( B ) a long time,\" she said.",
+      "After our performance, the man held my hand and said, \"I sang that song when I was your age.\" I realized that music can connect people of different generations. I had thought that I had nothing to give them, but I was wrong. Now our club visits the care home every month, and I always look forward ( C ) seeing him.",
+    ],
+    ja: [
+      '去年の12月、私たちの合唱部はお年寄りのための介護施設を訪問した。訪問の前、私は不安だった。自分よりずっと年上の人たちにどうやって話しかければいいのかわからなかった。ふだんは新しいポップソングを歌っているので、私たちの歌を楽しんでもらえないかもしれないと思っていた。',
+      '先生は、昔の日本の歌も歌ってはどうかと提案した。施設で私たちがその中の1曲を歌いはじめると、車いすに乗ったおじいさんがいっしょに歌いだした。声は小さかったが、歌詞を全部覚えていた。歌のあと、職員の人が、その人はふだんあまり話さないのだと教えてくれた。「あんなにうれしそうな姿は、長いあいだ見ていませんでした」と彼女は言った。',
+      '発表のあと、そのおじいさんは私の手をにぎって「この歌は、きみくらいの年のころに歌ったんだよ」と言った。私は、音楽はちがう世代の人をつなげることができるのだと気づいた。自分にはあげられるものが何もないと思っていたが、それはまちがいだった。今では私たちの部は毎月その施設を訪問していて、私はいつも彼に会うのを楽しみにしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how to talk to ～「～にどうやって話しかければよいか」（疑問詞＋to）。' },
+      { id: 'B', choices: ['for', 'since', 'during', 'in'], answer: 0, why: 'for a long time「長いあいだ」。現在完了の否定と使う。' },
+      { id: 'C', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'look forward to ～ing「～するのを楽しみにする」。' },
+    ],
+    tf: [
+      { statement: '筆者は訪問の前から、きっとうまくいくと自信をもっていた。', answer: false, why: '第1段落 Before the visit, I was worried。' },
+      { statement: '車いすのおじいさんは、昔の歌の歌詞を全部覚えていた。', answer: true, why: '第2段落 he remembered every word。' },
+      { statement: '合唱部は今、毎月その施設を訪問している。', answer: true, why: '第3段落 Now our club visits the care home every month。' },
+    ],
+    qa: [
+      { q: 'What did the writer realize after the performance?', choices: ['Music can connect people of different generations.', 'Old songs are more difficult than pop songs.', 'Elderly people do not like music.', 'The chorus club should stop singing.'], answer: 0, why: '第3段落 I realized that music can connect people of different generations。' },
+    ],
+  },
 ]
