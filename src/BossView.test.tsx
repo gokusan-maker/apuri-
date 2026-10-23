@@ -279,7 +279,7 @@ it('ボスがアイテムをおとすことがある', () => {
   answer(true)
   rnd.mockRestore()
   expect(drop).toHaveBeenCalledWith('bomb')
-  expect(screen.getByText(/ボスが 💣 どっかんボンバー をおとした！/)).toBeInTheDocument()
+  expect(screen.getByText(/🎁 💣 どっかんボンバー ゲット！/)).toBeInTheDocument()
 })
 
 it('相棒がいると必殺技はキャラクターの技名になる', async () => {
