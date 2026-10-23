@@ -1652,6 +1652,17 @@ export const PASSAGES: Passage[] = [
       { q: '歌い始めたとき、筆者はどうだった？', choices: ['緊張して声が小さかった', '大きな声で歌えた', '歌詞を忘れた'], answer: 0 },
     ],
   },
+  {
+    id: 'baseball-game',
+    title: 'My First Baseball Game',
+    text: 'Last Saturday, my father took me to a baseball stadium for the first time. The stadium was very big, and there were thousands of people. We ate hot dogs and cheered for our team. In the seventh inning, a player hit a home run, and everyone stood up and shouted. Our team won by two runs. On the way home, I told my father, "I want to come again next month!"',
+    ja: 'この前の土曜日、父がはじめて私を野球場に連れていってくれました。球場はとても大きくて、何千人もの人がいました。私たちはホットドッグを食べて、自分たちのチームを応援しました。7回に、ある選手がホームランを打つと、みんなが立ち上がってさけびました。私たちのチームは2点差で勝ちました。帰り道、私は父に「来月もまた来たい！」と言いました。',
+    questions: [
+      { q: 'だれと野球場に行った？', choices: ['父', '母', '友だち'], answer: 0 },
+      { q: '球場で何を食べた？', choices: ['ホットドッグ', 'ラーメン', 'おにぎり'], answer: 0 },
+      { q: '試合はどうなった？', choices: ['応援したチームが2点差で勝った', '応援したチームが負けた', '引き分けだった'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
