@@ -1655,4 +1655,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did most scientists reject Wegener\'s idea at first?', choices: ['He could not explain what force moved the continents.', 'He had no fossils as evidence.', 'He said the continents never moved.', 'He studied only the ocean floor.'], answer: 0, why: '第2段落 he could not explain what force was strong enough to move entire continents。' },
     ],
   },
+  {
+    id: 'exam-bakery',
+    title: 'The Bakery on My Street',
+    level: '高校入試（随筆）',
+    paragraphs: [
+      "There is a small bakery on my street. An old couple, Mr. and Mrs. Mori, have run it for over forty years. When I was little, I often bought a melon bun there on my way home from kindergarten. Mrs. Mori always remembered my name and asked ( A ) my day had been.",
+      "Last winter, I heard that the bakery might close. A big supermarket had opened near the station, and fewer people were coming to the shop. Mr. Mori said, 'We are getting old. Maybe it's time to stop.' I felt very sad. The bakery was not just a place to buy bread. It was a place ( B ) people in our town could talk and smile.",
+      "I talked with my friends, and we decided to do something. We made posters about the bakery and asked the shops on our street to put them up. We also wrote a short article for our school newspaper. Little by little, more customers came back. Now the bakery is still open. Mrs. Mori told me, 'You gave us the energy to ( C ) going.' I learned that even students can help protect the things we love in our town.",
+    ],
+    ja: [
+      '私の家の通りには小さなパン屋があります。森さんというお年寄りの夫婦が、40年以上お店を続けています。小さいころ、私は幼稚園の帰りによくそこでメロンパンを買いました。森さんの奥さんはいつも私の名前を覚えていて、その日はどうだったかとたずねてくれました。',
+      'この前の冬、そのパン屋が閉店するかもしれないと聞きました。駅の近くに大きなスーパーができて、お店に来る人が少なくなっていたのです。森さんのご主人は「わしらも年をとった。そろそろやめる時かもしれない」と言いました。私はとても悲しくなりました。そのパン屋はただパンを買う場所ではありませんでした。町の人々が話したり笑ったりできる場所だったのです。',
+      '友だちと話し合い、私たちは何かをしようと決めました。パン屋についてのポスターを作り、通りのお店にはってくれるようたのみました。また、学校新聞に短い記事も書きました。少しずつ、お客さんがもどってきました。今もパン屋は開いています。森さんの奥さんは「あなたたちが、続けていく元気をくれたのよ」と言ってくれました。私は、中学生でも町の大好きなものを守る手助けができるのだと学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how my day had been「その日がどうだったか」（間接疑問）。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'when'], answer: 0, why: '場所（a place）を説明し、あとに完全な文（people could talk）が続くので関係副詞 where。' },
+      { id: 'C', choices: ['keep', 'keeps', 'kept', 'keeping'], answer: 0, why: '不定詞 to のあとは原形。keep -ing「〜し続ける」。' },
+    ],
+    tf: [
+      { statement: '森さん夫婦は40年以上パン屋を続けている。', answer: true, why: '第1段落 have run it for over forty years。' },
+      { statement: 'パン屋のお客さんが減ったのは、近くに大きなスーパーができたからだ。', answer: true, why: '第2段落 A big supermarket had opened near the station。' },
+      { statement: 'パン屋は結局閉店してしまった。', answer: false, why: '第3段落 Now the bakery is still open。' },
+    ],
+    qa: [
+      { q: 'What did the writer and friends do to help the bakery?', choices: ['They made posters and wrote an article.', 'They worked at the bakery every day.', 'They opened a new bakery.', 'They asked the supermarket to close.'], answer: 0, why: '第3段落 We made posters ... wrote a short article。' },
+    ],
+  },
 ]
