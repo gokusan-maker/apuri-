@@ -482,7 +482,8 @@ it('ジャンルごとの折りたたみに満点の本数が出る', () => {
   localStorage.setItem('eitan:long-reading', JSON.stringify({ [p.id]: totalOf(p), [LONG_PASSAGES[1].id]: 0 }))
   render(<LongReading />)
   const sums = [...document.querySelectorAll('details.long-genre-fold summary')].map((x) => x.textContent ?? '')
-  expect(sums.some((t) => t.includes('💯満点 1本'))).toBe(true)
+  expect(sums.some((t) => t.includes('💯1'))).toBe(true)
+  expect([...document.querySelectorAll('details.long-genre-fold summary .fold-meta')].some((e) => e.getAttribute('aria-label')!.includes('💯満点 1本'))).toBe(true)
 })
 
 it('採点すると本文の空所に正しい語が入り、まちがえた空所は色がかわる', () => {
@@ -516,5 +517,6 @@ it('読解の一覧：読んだ語数がピルで出て、ジャンルの数字�
   localStorage.clear()
   render(<LongReading />)
   expect(document.querySelector('.long-words')?.textContent).toMatch(/これまでに読んだ語数：0語/)
-  expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.textContent).toMatch(/本・解いた 0本/)
+  expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.getAttribute('aria-label')).toMatch(/本・解いた 0本/)
+  expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.textContent).toMatch(/^0\/\d+$/)
 })

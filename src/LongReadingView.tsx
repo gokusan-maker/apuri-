@@ -182,7 +182,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         {whole && <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
-        <p className="stats-note">{whole ? '私立高校の入試のような読解。' : ''}空所に入る語を記号で選び、本文の内容と合うものに○、合わないものに×をつけよう。</p>
+        <p className="stats-note">記号で答える入試形式の読解</p>
         {!whole && dailyPick(LIST, today) && (
           <button className="long-recommend daily-long level-daily" onClick={() => openPassage(dailyPick(LIST, today)!)}>
             📅 今日のおすすめ：<strong>{dailyPick(LIST, today)!.title}</strong>
@@ -317,7 +317,10 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                 <details key={g} className="grammar-grade-fold long-genre-fold">
                   <summary>
                     {g}
-                    <span className="fold-meta">（{ps.length}本・解いた {ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 {ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本）</span>
+                    <span className="fold-meta" aria-label={`${ps.length}本・解いた ${ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 ${ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本`}>
+                      {ps.filter((x) => record[x.id] !== undefined).length}/{ps.length}
+                      {ps.some((x) => (record[x.id] ?? -1) >= totalOf(x)) && ` 💯${ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}`}
+                    </span>
                   </summary>
                   <ul className="grammar-list">{ps.map(passageItem)}</ul>
                 </details>

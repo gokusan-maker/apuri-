@@ -1614,3 +1614,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .univ-tower > summary { display: flex; align-items: center; flex-wrap: wrap; } .univ-tower > summary .univ-meter { flex-basis: 100%; }
 /* ミニゲームをえらぶ：名前は1行（長い名前は少し小さく） */
 .mode-menu .direction button { white-space: nowrap; font-size: clamp(0.74rem, 3.5vw, 0.95rem); letter-spacing: -0.03em; padding-left: 10px; padding-right: 8px; }
+/* 読解のジャンル：解いた数は右はしの小さなバッジ（2行に割れない） */
+.long-genre-fold > summary { display: flex; align-items: center; }
+.long-genre-fold .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; white-space: nowrap; }
