@@ -38,3 +38,10 @@ it('かんたんモードでは選択肢が3つ', () => {
   expect(document.querySelectorAll('.choice')).toHaveLength(3)
   localStorage.removeItem('eitan:settings')
 })
+
+it('スコアボードで、いまの番の側が光る', () => {
+  const { container } = render(<Versus words={WORDS.slice(0, 40)} />)
+  expect(container.querySelector('.vs-p1')?.classList.contains('vs-turn')).toBe(true)
+  expect(container.querySelector('.vs-p2')?.classList.contains('vs-turn')).toBe(false)
+  expect(container.querySelector('.vs-board')?.getAttribute('aria-label')).toBe('0 対 0')
+})

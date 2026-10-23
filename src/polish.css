@@ -1257,3 +1257,14 @@ main select:focus {
 .chain-arrow { font-style: normal; color: var(--muted); margin: 0 4px; }
 .chain-now { background: var(--bg); color: var(--fg); font-size: 1.25rem; font-weight: 800; box-shadow: var(--shadow-sm); }
 .chain-tail { color: var(--accent); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; }
+
+/* 2人対戦：スコアボード（いまの番の側が光る） */
+.vs-board { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 8px; }
+.vs-side { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 8px 6px; border-radius: 14px; background: var(--surface-2, #f1f2f8); border: 2px solid transparent; opacity: .6; transition: opacity .2s, transform .2s; }
+.vs-name { font-size: .85rem; font-weight: 700; color: var(--muted); }
+.vs-score { font-size: 1.8rem; font-weight: 800; line-height: 1.1; font-variant-numeric: tabular-nums; }
+.vs-turn { opacity: 1; transform: translateY(-2px); box-shadow: var(--shadow-sm); background: var(--bg); }
+.vs-p1.vs-turn { border-color: #ef4444; }
+.vs-p2.vs-turn { border-color: #3b82f6; }
+.vs-p1 .vs-score { color: #dc2626; }
+.vs-p2 .vs-score { color: #2563eb; }

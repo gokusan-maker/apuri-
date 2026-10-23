@@ -59,8 +59,16 @@ export function Versus({ words }: { words: Word[] }) {
   const q = qs[index]
   return (
     <section className="card quiz versus">
+      <div className="vs-board" aria-label={`${scores[0]} 対 ${scores[1]}`}>
+        {PLAYERS.map((name, k) => (
+          <div key={name} className={k === turn ? `vs-side vs-p${k + 1} vs-turn` : `vs-side vs-p${k + 1}`}>
+            <span className="vs-name">{name.replace(' プレイヤー', ' P')}</span>
+            <span className="vs-score">{scores[k]}</span>
+          </div>
+        ))}
+      </div>
       <p className="quiz-progress">
-        {PLAYERS[turn]} の番（{Math.floor(index / 2) + 1} / {total / 2} 問目）・{scores[0]} 対 {scores[1]}
+        {PLAYERS[turn]} の番（{Math.floor(index / 2) + 1} / {total / 2} 問目）
       </p>
       {index === 0 && picked === null && (
         <div className="counts" role="group" aria-label="向き">
