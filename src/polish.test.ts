@@ -22,7 +22,7 @@ it('読解の文法タグはダークモードの色が2か所（端末の設定
 })
 
 it('明るい背景を使う部品（スタンプカード・金の宝箱・おみくじ・塔の階・ボス図鑑）にはダークモードの色がある', () => {
-  for (const sel of ['.stamp-card', '.gold-chest', '.omikuji', '.univ-floors li', '.boss-book-list li', '.boss-ally', '.boss-partner', '.evo-preview', '.partner-status', '.warm-btn', '.roulette-wheel li:not(.hit)', '.vs-p1 .vs-score', '.vs-p2 .vs-score', '.daily-grammar span', '.long-review-title', '.gacha-pity', '.gacha-pickup', '.univ-tower', '.missed-list::before', '.spell-ng']) {
+  for (const sel of ['.stamp-card', '.gold-chest', '.omikuji', '.univ-floors li', '.boss-book-list li', '.boss-ally', '.boss-partner', '.evo-preview', '.partner-status', '.warm-btn', '.roulette-wheel li:not(.hit)', '.vs-p1 .vs-score', '.vs-p2 .vs-score', '.daily-grammar span', '.long-review-title', '.gacha-pity', '.gacha-pickup', '.univ-tower', '.missed-list::before', '.spell-ng', '.long-evidence']) {
     expect(css).toContain(`:root:not([data-theme="light"]) ${sel} {`)
     expect(css).toContain(`:root[data-theme="dark"] ${sel} {`)
   }

@@ -456,7 +456,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
       </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
       <div className={`long-text font-${font}`}>
-        {done && evidence.length > 0 && <p className="long-evidence-note">🟨 まちがえた問題の根拠がある段落に色をつけたよ</p>}
+        {done && evidence.length > 0 && <p className="long-evidence-note">🟨 ＝ まちがえた問題の根拠</p>}
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
             <div className="long-para-row">

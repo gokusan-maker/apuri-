@@ -66,7 +66,7 @@ it('採点するとまちがえた問題の根拠の段落に色がつく', () =
   for (const i of p.pick2!.answers) fireEvent.click(screen.getByRole('button', { name: `${MARKS[i]} ${p.pick2!.statements[i]}` }))
   p.qa!.forEach((x) => fireEvent.click(screen.getByRole('button', { name: `${MARKS[x.answer]} ${x.choices[x.answer]}` })))
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
-  expect(screen.getByText(/根拠がある段落に色をつけたよ/)).toBeInTheDocument()
+  expect(screen.getByText(/まちがえた問題の根拠/)).toBeInTheDocument()
   expect(document.querySelectorAll('.long-evidence').length).toBe(3)
 })
 
