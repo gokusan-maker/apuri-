@@ -1261,3 +1261,4 @@
 - 2026-10-23: 中3の文法単元「each other（おたがい）と -self のちがい」を追加（全184単元に）
 - 2026-10-23: 読解「高校入試」に随筆「Grandma's Recipe Notebook」を追加
 - 2026-10-23: デザイン第14弾：設定の各項目を白いカードに、オン・オフをiOS風のスイッチに
+- 2026-10-23: 読解「TOEFL・IELTS」に生物「The Butterflies That Cross a Continent」（オオカバマダラの渡り）を追加

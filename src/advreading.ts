@@ -1823,4 +1823,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why will the writer keep the notebook?', choices: ['It holds the memories of the family.', 'The computer is broken.', 'The recipes are easy to read.', 'Grandmother asked the writer to sell it.'], answer: 0, why: '第3段落 It holds the memories of my family。' },
     ],
   },
+  {
+    id: 'toefl-monarch',
+    title: 'The Butterflies That Cross a Continent',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Every autumn, millions of monarch butterflies leave Canada and the northern United States and fly south to the mountain forests of central Mexico, a journey that can exceed 4,000 kilometers. What makes this migration remarkable is that no single butterfly completes the round trip. The insects that arrive in Mexico have never been there before, yet they find the same small groups of trees ( A ) their great-grandparents used.",
+      "The explanation lies partly in the butterflies' life cycle. Monarchs born in early summer usually live for only a few weeks. However, the generation that emerges at the end of summer is different: these butterflies delay reproduction and can survive for as long as eight months, long enough to fly to Mexico, spend the winter there, and begin the return trip in spring. Their children and grandchildren then ( B ) the journey north.",
+      "To find their way, monarchs appear to use the position of the sun, adjusting for its movement across the sky with an internal clock, part of which is located in their antennae. Some evidence suggests they may also sense the Earth's magnetic field. Unfortunately, the number of migrating monarchs has fallen sharply in recent decades, largely because the milkweed plants their caterpillars depend on have ( C ) in many areas.",
+    ],
+    ja: [
+      '毎年秋、何百万匹ものオオカバマダラ（チョウ）がカナダやアメリカ北部を出発し、メキシコ中部の山の森へと南に飛んでいく。その旅は4,000キロメートルをこえることもある。この渡りがおどろくべきなのは、1匹のチョウが往復を最後までやりとげることはないという点である。メキシコに着くチョウはそこに来たことが一度もないのに、ひいおじいさんやひいおばあさんの世代が使ったのと同じ小さな木の群れを見つけるのだ。',
+      'その説明の一部は、このチョウの一生のしくみにある。初夏に生まれたオオカバマダラは、ふつう数週間しか生きない。しかし、夏の終わりに羽化する世代はちがう。このチョウたちは繁殖を遅らせ、8か月も生きることができる。メキシコまで飛び、そこで冬をこし、春に帰りの旅を始めるのに十分な長さである。そして、その子や孫たちが北への旅を続けるのである。',
+      '道を見つけるために、オオカバマダラは太陽の位置を使っているらしい。太陽が空を動くのを体内時計で補正していて、その時計の一部は触角にある。地球の磁場を感じとっている可能性を示す証拠もある。残念なことに、渡りをするオオカバマダラの数はここ数十年で大きく減っている。その主な理由は、幼虫がたよっているトウワタという植物が多くの地域で減ってしまったことである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'who', 'what', 'where'], answer: 0, why: '先行詞 the same small groups of trees（もの）を受ける関係代名詞 that（used の目的語）。' },
+      { id: 'B', choices: ['continue', 'continues', 'continuing', 'to continue'], answer: 0, why: '主語 Their children and grandchildren（複数）に対する現在形の動詞なので continue。' },
+      { id: 'C', choices: ['declined', 'grown', 'risen', 'arrived'], answer: 0, why: 'トウワタが「減った（declined）」ので数が減った、という因果関係。' },
+    ],
+    tf: [
+      { statement: '1匹のオオカバマダラが、メキシコとの往復を最後までやりとげる。', answer: false, why: '第1段落 no single butterfly completes the round trip。' },
+      { statement: '夏の終わりに生まれる世代は、8か月も生きることがある。', answer: true, why: '第2段落 can survive for as long as eight months。' },
+      { statement: '渡りをするオオカバマダラの数は、ここ数十年でふえている。', answer: false, why: '第3段落 has fallen sharply in recent decades。' },
+    ],
+    qa: [
+      { q: 'How do monarchs appear to find their way?', choices: ['By using the sun and an internal clock.', 'By following older butterflies.', 'By smelling the forests in Mexico.', 'By flying only at night.'], answer: 0, why: '第3段落 use the position of the sun ... with an internal clock。' },
+    ],
+  },
 ]
