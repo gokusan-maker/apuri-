@@ -1396,3 +1396,8 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 /* 「ミニゲームをえらぶ（61種）▼」の▼だけ次の行にならないよう、360pxでは少しだけ小さく */
 .mode-btn .mode-change { white-space: nowrap; font-size: clamp(0.95rem, 4.6vw, 1.15rem); }
 .daily-stars .list-link { font-size: clamp(0.6rem, 2.75vw, 0.78rem); letter-spacing: -0.03em; padding-left: 2px; padding-right: 2px; }
+/* ダークモード：データを消すボタンの赤を明るくして読みやすく */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .danger-link { color: #fca5a5; border-color: rgb(248 113 113 / 0.5); background: rgb(248 113 113 / 0.08); }
+}
+:root[data-theme="dark"] .danger-link { color: #fca5a5; border-color: rgb(248 113 113 / 0.5); background: rgb(248 113 113 / 0.08); }
