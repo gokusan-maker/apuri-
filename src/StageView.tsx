@@ -382,7 +382,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 ))}
               </span>
             ) : (
-              '6問以上正解でクリア。もう一度！'
+              'おしい！ もう一度！'
             )}
             {firstThree && <span className="stage-bonus">はじめての★3！ 🪙{STAR3_COINS}</span>}
             {result > 0 &&
@@ -405,6 +405,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             {result > 0 && stagesOf(playing.level)[playing.no] && (
               <button
                 className="good next-unit-btn"
+                aria-label={`次のステージへ（${playing.level} ステージ${playing.no + 1}）`}
                 onClick={() => {
                   setPlaying(stagesOf(playing.level)[playing.no])
                   setResult(null)
@@ -412,7 +413,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                   window.scrollTo?.({ top: 0 })
                 }}
               >
-                次のステージへ ▶（{playing.level} ステージ{playing.no + 1}）
+                次のステージへ ▶
               </button>
             )}
             {result > 0 && (

@@ -243,7 +243,8 @@ it('ステージをクリアすると「次のステージへ ▶」ですぐ次
     fireEvent.click(screen.getByRole('button', { name: words.find((x) => x.en === en)!.ja }))
     fireEvent.click(screen.getByText('次へ'))
   }
-  fireEvent.click(screen.getByText('次のステージへ ▶（中1 ステージ2）'))
+  fireEvent.click(screen.getByRole('button', { name: '次のステージへ（中1 ステージ2）' }))
+  expect(screen.queryByText(/6問以上正解でクリア/)).toBeNull()
   expect(screen.getByText('中1 ステージ2')).toBeInTheDocument()
   expect(document.querySelector('.stage-result')).toBeNull()
   const next = stagesOf('中1')[1].words
