@@ -1738,3 +1738,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .word-review .theme-practice .levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
 .word-review .theme-practice .levels button { min-width: 0; padding-left: 4px; padding-right: 4px; }
 .word-review > .list-link { display: block; margin: 6px auto 10px; }
+
+/* 読解の文法タグ：ダークモードではまぶしくない色に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .long-gtag { background: rgb(96 165 250 / 0.16); color: #bfdbfe; }
+}
+:root[data-theme="dark"] .long-gtag { background: rgb(96 165 250 / 0.16); color: #bfdbfe; }

@@ -15,3 +15,8 @@ it('バトルアイテムの名前は1行（アイコンが上）', () => {
 it('単語のおさらいのテーマのボタンは3列', () => {
   expect(css).toContain('.word-review .theme-practice .levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr));')
 })
+
+it('読解の文法タグはダークモードの色が2か所（端末の設定・手動）に書いてある', () => {
+  expect(css).toContain(':root:not([data-theme="light"]) .long-gtag {')
+  expect(css).toContain(':root[data-theme="dark"] .long-gtag {')
+})
