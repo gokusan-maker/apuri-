@@ -1476,6 +1476,39 @@ export const PASSAGES: Passage[] = [
       { q: 'カエルになったあと、どうした？', choices: ['池に帰した', 'ずっと飼った', '友だちにあげた'], answer: 0 },
     ],
   },
+  {
+    id: 'sandcastle',
+    title: 'A Sandcastle at the Beach',
+    text: 'In August, my cousin and I built a big sandcastle at the beach. We used buckets and our hands. It had four towers and a long wall. Then a big wave came and broke one tower! We laughed and built it again. Before we went home, we took a picture of it.',
+    ja: '8月に、いとこと私は海で大きな砂のお城を作りました。バケツと手を使いました。お城には塔が4つと長いかべがありました。すると大きな波が来て、塔を1つこわしてしまいました！ 私たちは笑って、もう一度作りました。家に帰る前に、お城の写真をとりました。',
+    questions: [
+      { q: 'だれと砂のお城を作った？', choices: ['いとこ', '弟', '父'], answer: 0 },
+      { q: 'お城には塔がいくつあった？', choices: ['2つ', '3つ', '4つ'], answer: 2 },
+      { q: '波で塔がこわれたあと、どうした？', choices: ['笑ってもう一度作った', '泣いて帰った', 'あきらめた'], answer: 0 },
+    ],
+  },
+  {
+    id: 'halloween-party',
+    title: 'Our Halloween Party',
+    text: 'Our English club had a Halloween party in October. I wore a black hat and became a witch. My friend Sora became a pumpkin. We played games and ate orange cookies. Our teacher from Canada told us a scary story in English. It was a little scary, but very fun!',
+    ja: '英語部は10月にハロウィンパーティーをしました。私は黒いぼうしをかぶって魔女になりました。友だちのソラはかぼちゃになりました。私たちはゲームをして、オレンジ色のクッキーを食べました。カナダ出身の先生が英語でこわい話をしてくれました。少しこわかったけれど、とても楽しかったです！',
+    questions: [
+      { q: '筆者は何になった？', choices: ['魔女', 'かぼちゃ', 'おばけ'], answer: 0 },
+      { q: '何色のクッキーを食べた？', choices: ['オレンジ色', '黒', '白'], answer: 0 },
+      { q: '先生はどこの出身？', choices: ['カナダ', 'アメリカ', 'イギリス'], answer: 0 },
+    ],
+  },
+  {
+    id: 'xmas-tree',
+    title: 'Decorating the Tree',
+    text: 'In December, my family decorated a Christmas tree in the living room. My little sister put a gold star on the top. I hung red and blue balls on the branches. When we turned on the lights, the tree looked beautiful. We sang a song together in front of it.',
+    ja: '12月に、家族でリビングにクリスマスツリーをかざりました。妹がてっぺんに金色の星をつけました。私は赤と青の玉を枝につるしました。電気をつけると、ツリーはとてもきれいに見えました。私たちはツリーの前でいっしょに歌を歌いました。',
+    questions: [
+      { q: 'ツリーはどこにかざった？', choices: ['リビング', '玄関', '学校'], answer: 0 },
+      { q: '妹は何をつけた？', choices: ['金色の星', '赤い玉', '青いリボン'], answer: 0 },
+      { q: 'ツリーの前で何をした？', choices: ['歌を歌った', '写真をとった', 'プレゼントを開けた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
