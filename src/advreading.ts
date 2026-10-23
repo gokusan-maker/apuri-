@@ -1767,4 +1767,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did kendo teach the writer?', choices: ['Being strong also means respecting others.', 'Winning is the only important thing.', 'Cleaning is a waste of time.', 'Bowing is only for teachers.'], answer: 0, why: '第3段落 being strong is not only about winning. It is also about respecting others。' },
     ],
   },
+  {
+    id: 'adv-silence',
+    title: 'What Silence Says',
+    level: '難関大（評論）',
+    paragraphs: [
+      'In many classrooms and meetings, silence is treated as a problem to be solved. When a question is met with no reply, the speaker rushes to fill the gap, as if a few seconds without words were a sign of failure. Yet silence is not simply the absence of communication; it is often a form of communication ( A ).',
+      'The meaning of silence, however, depends heavily on culture and context. In some societies, a pause before answering shows that the listener is taking the question seriously, while in others the same pause may be interpreted as hesitation, disagreement, or even rudeness. Misunderstandings in international settings frequently arise ( B ) people read silence through the rules of their own culture without realizing that others follow different ones.',
+      'Teachers who allow a little more waiting time after asking a question often find that students give longer and more thoughtful answers. The silence that once seemed uncomfortable turns out to be the space in which thinking actually happens. Learning to tolerate such pauses, rather than hurrying to end them, may therefore be ( C ) an important communication skill as learning to speak well.',
+    ],
+    ja: [
+      '多くの教室や会議では、沈黙は解決すべき問題としてあつかわれる。質問に返事がないと、話し手はまるで言葉のない数秒が失敗のしるしであるかのように、あわててその間をうめようとする。しかし沈黙は、単にコミュニケーションがないことではない。それ自体が一つのコミュニケーションの形であることが多いのだ。',
+      'しかし、沈黙の意味は文化や状況に大きく左右される。ある社会では、答える前の間は聞き手が質問を真剣に受け止めていることを示すが、別の社会では同じ間が、ためらいや反対、さらには失礼だと受け取られることもある。国際的な場での誤解は、人々が他者はちがうルールに従っていることに気づかずに、自分の文化のルールで沈黙を読むことから生じることが多い。',
+      '質問をしたあと少し長めに待つ時間をとる教師は、生徒がより長く、よく考えられた答えを返すことに気づくことが多い。かつては居心地悪く思えた沈黙が、実は思考が起こる場所なのだとわかるのである。したがって、そうした間を急いで終わらせるのではなく、それにたえられるようになることは、うまく話せるようになることと同じくらい大切なコミュニケーションの技術なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in itself', 'by itself alone', 'for nothing', 'at least'], answer: 0, why: 'in itself「それ自体」。沈黙それ自体がコミュニケーションの形だということ。' },
+      { id: 'B', choices: ['when', 'unless', 'although', 'whether'], answer: 0, why: '「〜するときに誤解が生じる」なので when。' },
+      { id: 'C', choices: ['as', 'so', 'more', 'such'], answer: 0, why: 'as important ... as learning to speak well「うまく話すことと同じくらい大切」。as 〜 as の前の as。' },
+    ],
+    tf: [
+      { statement: '筆者は、沈黙は単にコミュニケーションがないことだと考えている。', answer: false, why: '第1段落 silence is not simply the absence of communication。' },
+      { statement: '沈黙の意味は、文化や状況によって変わる。', answer: true, why: '第2段落 depends heavily on culture and context。' },
+      { statement: '待つ時間を長くとると、生徒の答えは短くなる傾向がある。', answer: false, why: '第3段落 students give longer and more thoughtful answers。' },
+    ],
+    qa: [
+      { q: 'Why do misunderstandings about silence often occur in international settings?', choices: ['People interpret silence by the rules of their own culture.', 'People speak too slowly.', 'Silence has the same meaning everywhere.', 'Teachers do not ask enough questions.'], answer: 0, why: '第2段落 people read silence through the rules of their own culture。' },
+    ],
+  },
 ]
