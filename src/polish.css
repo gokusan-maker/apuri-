@@ -1331,3 +1331,5 @@ main select:focus {
 details.diary, details.theme-practice { margin: 8px 0; padding: 0 12px; border-radius: 14px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); }
 details.diary > summary, details.theme-practice > summary { padding: 10px 0; font-weight: 700; cursor: pointer; }
 details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
+/* 今日のボスの「強さを選ぶ」：上のボタンとくっつかないよう、うすいカードにまとめる */
+.daily-stars { margin: 10px 0 12px; padding: 8px 10px 10px; border-radius: 14px; background: color-mix(in srgb, #7c3aed 6%, var(--bg)); border: 1px solid color-mix(in srgb, #7c3aed 18%, transparent); }
