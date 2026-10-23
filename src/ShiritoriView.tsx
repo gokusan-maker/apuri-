@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Fragment, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { makeTurn, usable } from './shiritori'
 import { playCorrect, playWrong } from './sound'
@@ -49,7 +49,21 @@ export function Shiritori({ onAnswer }: Props) {
   return (
     <section className="card quiz shiritori">
       <p className="progress">つないだ数 {chain.length - 1}（ベスト {best}）</p>
-      <p className="shiritori-chain">{chain.slice(-4).map((w) => w.en).join(' → ')}</p>
+      <p className="shiritori-chain" aria-label={chain.slice(-4).map((w) => w.en).join(' → ')}>
+        {chain.slice(-4).map((w, i, arr) => (
+          <Fragment key={`${w.id}-${i}`}>
+            {i > 0 && <i className="chain-arrow" aria-hidden="true">→</i>}
+            {i === arr.length - 1 ? (
+              <span className="chain-word chain-now">
+                {w.en.slice(0, -1)}
+                <b className="chain-tail">{w.en.slice(-1)}</b>
+              </span>
+            ) : (
+              <span className="chain-word">{w.en}</span>
+            )}
+          </Fragment>
+        ))}
+      </p>
       {over ? (
         <>
           <p className="feedback">

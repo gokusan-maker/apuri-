@@ -1250,3 +1250,10 @@ main select:focus {
 .related-units .list-link { display: inline-block; margin: 0; padding: 4px 12px; font-size: 0.8rem; }
 .unit-extra { grid-template-columns: 1fr; grid-template-areas: 'icon' 'name' 'sub'; justify-items: center; text-align: center; row-gap: 2px; padding: 10px 6px; }
 .unit-extra-name { font-size: clamp(0.72rem, 3.4vw, 0.85rem); white-space: nowrap; }
+
+/* しりとり：つないだ単語をチップでならべ、次の頭文字を光らせる */
+.shiritori-chain { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 0; font-size: 1rem; }
+.chain-word { padding: 4px 10px; border-radius: 999px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); color: var(--muted); font-weight: 600; max-width: 100%; overflow-wrap: anywhere; }
+.chain-arrow { font-style: normal; color: var(--muted); margin: 0 4px; }
+.chain-now { background: var(--bg); color: var(--fg); font-size: 1.25rem; font-weight: 800; box-shadow: var(--shadow-sm); }
+.chain-tail { color: var(--accent); text-decoration: underline; text-decoration-thickness: 3px; text-underline-offset: 3px; }
