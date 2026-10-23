@@ -28,8 +28,12 @@ export function Reading({ onAnswer, start, onDone }: Props) {
   if (!p) {
     return (
       <section className="card grammar">
-        <h2>読解ミニ</h2>
-        <p className="stats-note">短い英文を読んで、内容の問題に答えよう。（解いた話 {PASSAGES.filter((x) => done.includes(x.id)).length} / {PASSAGES.length}本）</p>
+        <h2 className="short-head">
+          読解ミニ
+          <span className="fold-meta" aria-label={`解いた話 ${PASSAGES.filter((x) => done.includes(x.id)).length} / ${PASSAGES.length}本`}>
+            {PASSAGES.filter((x) => done.includes(x.id)).length}/{PASSAGES.length}
+          </span>
+        </h2>
         <div className="zukan-pct short-pct" aria-hidden="true">
           <span style={{ width: `${(PASSAGES.filter((x) => done.includes(x.id)).length / PASSAGES.length) * 100}%` }} />
         </div>

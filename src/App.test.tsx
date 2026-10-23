@@ -1048,7 +1048,7 @@ describe('App', () => {
     localStorage.clear()
     render(<App />)
     navTo('読解ステージ')
-    expect(screen.getByRole('heading', { name: '読解ミニ' })).toBeInTheDocument() // はじめは かんたん
+    expect(screen.getByRole('heading', { name: /^読解ミニ/ })).toBeInTheDocument() // はじめは かんたん
     fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
     expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
