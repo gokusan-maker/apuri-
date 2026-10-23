@@ -4510,6 +4510,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Nakaya thought snow crystals tell us nothing about the sky.', answer: false, why: '上空の空気のようすを教えてくれると言った。' },
     ],
   },
+  {
+    id: 'sloths',
+    title: 'The Slowest Animal in the Forest',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Sloths live in the rainforests of Central and South America. They are famous for being very slow. A sloth moves so slowly ( A ) green plants can grow on its fur!',
+      'Why are sloths so slow? They mainly eat leaves, and leaves do not give them much energy. So sloths save energy by moving very little. They also sleep for many hours a day, hanging upside down from tree branches.',
+      'Being slow can help sloths stay safe. Many animals that hunt notice things that move quickly. Because sloths hardly move, and the green plants on their fur make them look like part of the tree, it is difficult for enemies ( B ) find them.',
+      'Surprisingly, sloths are good swimmers. In the water, they can move about three times faster than on the ground. So the next time someone calls you "slow," remember that being slow is ( C ) always a bad thing!',
+    ],
+    ja: [
+      'ナマケモノは中央アメリカと南アメリカの熱帯雨林に住んでいます。とてもゆっくりなことで有名です。ナマケモノはとてもゆっくり動くので、毛に緑の植物が育つほどです！',
+      'なぜナマケモノはそんなにゆっくりなのでしょうか。ナマケモノは主に葉を食べますが、葉からはあまりエネルギーが得られません。そこでナマケモノは、ほとんど動かないことでエネルギーを節約しているのです。また、木の枝にさかさまにぶら下がって、1日に何時間もねむります。',
+      'ゆっくりなことは、ナマケモノが安全でいるのに役立つことがあります。えものをねらう動物の多くは、すばやく動くものに気づきます。ナマケモノはほとんど動かず、毛の緑の植物のせいで木の一部のように見えるので、敵がナマケモノを見つけるのはむずかしいのです。',
+      'おどろいたことに、ナマケモノは泳ぎがじょうずです。水の中では、地上より3倍ほど速く動けます。だから、次にだれかに「ゆっくりだね」と言われたら、ゆっくりなのはいつも悪いことではないと思い出してください！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'as', 'than', 'when'], answer: 0, why: 'so 〜 that …「とても〜なので…」。' },
+      { id: 'B', choices: ['to', 'for', 'of', 'at'], answer: 0, why: 'it is difficult for 人 to 〜「人が〜するのはむずかしい」。' },
+      { id: 'C', choices: ['not', 'no', 'never', "don't"], answer: 0, why: 'not always「いつも〜とはかぎらない」（部分否定）。' },
+    ],
+    underline: { phrase: 'hanging upside down', choices: ['さかさまにぶら下がって', '木にのぼって', '地面にねころんで', '水にうかんで'], answer: 0, why: 'hang は「ぶら下がる」、upside down は「さかさまに」。' },
+    tf: [
+      { statement: 'Sloths live in the rainforests of Africa.', answer: false, why: '中央アメリカと南アメリカの熱帯雨林に住む。' },
+      { statement: 'Leaves do not give sloths much energy.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Green plants on their fur help sloths hide.', answer: true, why: '木の一部のように見える。' },
+      { statement: 'Sloths cannot swim.', answer: false, why: '泳ぎがじょうず。' },
+      { statement: 'Sloths move faster in water than on the ground.', answer: true, why: '水の中では約3倍速い。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
