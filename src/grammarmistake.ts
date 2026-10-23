@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'why-how-relative': { wrong: 'This is the way how I learned English.', right: 'This is how I learned English.', why: 'the way と how はいっしょに使わない。どちらか一方にする。' },
   'too-many-much': { wrong: 'I have too many homework.', right: 'I have too much homework.', why: 'homework は数えられない名詞なので too much。' },
   'was-were': { wrong: 'Did you tired yesterday?', right: 'Were you tired yesterday?', why: 'tired は形容詞なので be動詞の文。疑問文は Were を前に出す。' },
   'second-ever': { wrong: 'This is the best book I have ever read it.', right: 'This is the best book I have ever read.', why: 'book が read の目的語なので、うしろに it を置かない。' },
