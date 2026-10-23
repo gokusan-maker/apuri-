@@ -2595,7 +2595,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['whatever', 'however', 'whoever', 'whenever'], answer: 0, why: 'whatever they decide「彼らが何を決めようとも」（譲歩）。' },
-      { id: 'B', choices: ['would', 'did', 'have', 'was'], answer: 0, why: '仮定の問い「今日これを始めるだろうか」なので would I start。' },
+      { id: 'B', choices: ['would', 'am', 'have', 'was'], answer: 0, why: '仮定の問い「今日これを始めるだろうか」なので would I start。' },
       { id: 'C', choices: ['of course', 'in addition', 'for example', 'as a result'], answer: 0, why: '「もちろん言うはやすく行うはかたし」。of course で当然のことを認める。' },
     ],
     tf: [

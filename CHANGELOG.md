@@ -1391,3 +1391,4 @@
 - 2026-10-23: 中3の文法単元「most / most of the ～ / all of / none of」を追加（全219単元に）
 - 2026-10-23: 読解「ふつう」に「Why Do We Sneeze?（くしゃみのしくみ）」を追加
 - 2026-10-23: 読解「難関大」に「Why We Keep Going When We Should Stop（サンクコストの誤り）」を追加（全31本に）
+- 2026-10-23: 読解「かんたん」に「Planting Tulip Bulbs（チューリップの球根）」を追加（全144本に）。サンクコストの空所Bの選択肢を明確化

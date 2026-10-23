@@ -1575,6 +1575,17 @@ export const PASSAGES: Passage[] = [
       { q: 'ピコがはじめて「Hello!」と言ったのはいつ？', choices: ['日曜日', '土曜日', '月曜日'], answer: 0 },
     ],
   },
+  {
+    id: 'tulip-bulbs',
+    title: 'Planting Tulip Bulbs',
+    text: 'In November, my class planted tulip bulbs in front of our school. A bulb looks like a small onion. Our teacher said, "Put them in the ground with the pointed end up." All winter, nothing happened, and I thought they were dead. But in April, red and yellow flowers came out. Everyone who walked by the school smiled at them.',
+    ja: '11月に、私のクラスは学校の前にチューリップの球根を植えました。球根は小さなタマネギのような形をしています。先生は「とがったほうを上にして土に入れてね」と言いました。冬のあいだずっと何も起こらなかったので、私は球根が死んでしまったのだと思いました。でも4月になると、赤や黄色の花がさきました。学校の前を通る人はみんな、花を見てほほえみました。',
+    questions: [
+      { q: '球根は何に似ている？', choices: ['小さなタマネギ', 'じゃがいも', 'りんご'], answer: 0 },
+      { q: '球根はどちらを上にして植えた？', choices: ['とがったほう', '丸いほう', 'どちらでもよい'], answer: 0 },
+      { q: '花がさいたのはいつ？', choices: ['4月', '12月', '2月'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
