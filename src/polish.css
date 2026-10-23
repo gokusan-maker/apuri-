@@ -471,3 +471,24 @@ main h2::before {
   border: 1px solid var(--hair);
   font-weight: 700;
 }
+
+/* ===== ショップ：すりガラスの売り場タブと商品カード ===== */
+.shop-tabs {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--card) 82%, transparent);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+}
+.shop-tabs button { border-radius: 12px; font-size: 0.78rem; letter-spacing: -0.01em; }
+.shop-tabs button.on { background: var(--accent-grad); color: #fff; box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent); }
+/* バッジ・商品・部屋のカード */
+.badge-grid li {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background-color: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.badge-grid li.active { outline: none; box-shadow: 0 0 0 2px var(--accent), var(--shadow-md); }
+.badge-grid .badge-icon { filter: drop-shadow(0 3px 3px rgb(15 23 42 / 0.2)); }
