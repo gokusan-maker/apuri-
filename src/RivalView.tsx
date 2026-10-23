@@ -77,7 +77,7 @@ export function Rival({ words, onAnswer, onWin, rng = Math.random }: Props) {
     <section className="card quiz rival">
       <div className="rival-score" aria-label={`あなた ${me} 対 ライバル ${cpu}`}>
         <span className="rival-me">あなた {me}</span>
-        <span>―</span>
+        <span className="rival-vs" aria-hidden="true">VS</span>
         <span className="rival-cpu">{cpu} ガリベンモチ</span>
       </div>
       {over ? (
