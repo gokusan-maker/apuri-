@@ -5,7 +5,7 @@ import { CountUp } from './CountUpView'
 import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingboss'
 import { speak } from './speech'
 import { makeLookup } from './glossary'
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useId, useRef, useState } from 'react'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
@@ -112,11 +112,27 @@ function BossDecoFront({ deco, look }: { deco: string; look: BossLook }) {
 
 // オリジナルのボス。単語帳ごとに色と名前が変わる
 export function BossFigure({ hit, look }: { hit: boolean; look: BossLook }) {
+  const uid = useId().replace(/[^a-zA-Z0-9]/g, '')
   return (
     <svg viewBox="0 0 100 100" className={`boss-svg${hit ? ' hit' : ''}`} aria-hidden="true">
+      <defs>
+        {/* 立体感：右下に落ちる陰影と左上のつや */}
+        <radialGradient id={`bs${uid}`} cx="0.36" cy="0.28" r="0.95">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.22" />
+          <stop offset="0.5" stopColor="#fff" stopOpacity="0" />
+          <stop offset="1" stopColor="#000" stopOpacity="0.32" />
+        </radialGradient>
+        <radialGradient id={`bg${uid}`} cx="0.5" cy="0.5" r="0.5">
+          <stop offset="0" stopColor="#fff" stopOpacity="0.75" />
+          <stop offset="1" stopColor="#fff" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <ellipse cx="50" cy="95" rx="34" ry="4" fill="#000" opacity="0.18" />
       {(!look.deco || look.deco === 'akamon') && <path d="M30 30 L24 8 L40 24 Z M70 30 L76 8 L60 24 Z" fill={look.color} stroke={look.line} strokeWidth="3" />}
       {look.deco && <BossDecoBack deco={look.deco} look={look} />}
       <path d="M12 72 Q12 24 50 22 Q88 24 88 72 Q88 92 50 92 Q12 92 12 72 Z" fill={look.color} stroke={look.line} strokeWidth="3" />
+      <path d="M13.5 72 Q13.5 25.5 50 23.5 Q86.5 25.5 86.5 72 Q86.5 90.5 50 90.5 Q13.5 90.5 13.5 72 Z" fill={`url(#bs${uid})`} pointerEvents="none" />
+      <ellipse cx="32" cy="36" rx="12" ry="6" fill={`url(#bg${uid})`} transform="rotate(-25 32 36)" />
       <path d="M30 50 L44 56 M70 50 L56 56" stroke={look.eye} strokeWidth="4" strokeLinecap="round" />
       <circle cx="38" cy="58" r="4" fill={look.eye} />
       <circle cx="62" cy="58" r="4" fill={look.eye} />
