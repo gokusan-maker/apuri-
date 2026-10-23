@@ -2919,4 +2919,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, why do people tend to value their own things more highly?', choices: ['Because giving something up feels like a loss.', 'Because their own things are always rarer.', 'Because buyers usually lie about prices.', 'Because owners always need more money.'], answer: 0, why: '第2段落 giving something up feels like a loss。' },
     ],
   },
+{
+    id: 'toefl-tsunami',
+    title: 'How Tsunamis Form',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "A tsunami is a series of ocean waves usually caused by a sudden movement of the seafloor. Most tsunamis are triggered by large undersea earthquakes, ( A ) a section of the seafloor is pushed up or dropped down, moving a huge volume of water above it. Landslides and volcanic eruptions can also produce tsunamis, though less often.",
+      "In the deep ocean, a tsunami can travel at roughly the speed of a jet airplane, yet its height at the surface is often less than a meter. For this reason, ships far out at sea may hardly notice it passing beneath them. ( B ), as the waves enter shallow water near the coast, they slow down and grow dramatically taller, sometimes reaching many meters in height.",
+      "Before a tsunami strikes, the sea sometimes pulls back from the shore, exposing parts of the seafloor. This can be a natural warning, but people who walk out to look at the unusual sight put themselves in great danger. Today, many countries rely on warning systems that combine earthquake data with sensors on the ocean floor, ( C ) gives coastal communities valuable minutes to move to higher ground.",
+    ],
+    ja: [
+      '津波とは、ふつう海底が急に動くことで起こる、ひと続きの海の波である。津波の多くは海底の大きな地震によって引き起こされ、そうした地震では海底の一部が押し上げられたり落ちこんだりして、その上にある大量の水が動かされる。地すべりや火山の噴火も、それほど多くはないが津波を起こすことがある。',
+      '深い海では、津波はジェット機とほぼ同じくらいの速さで進むことがあるが、海面での高さは1メートルに満たないことが多い。このため、沖にいる船は、津波が下を通りすぎてもほとんど気づかないことがある。しかし、波が海岸近くの浅い海に入ると、速さがおそくなり、高さが急激に高くなって、ときには何メートルにも達する。',
+      '津波が来る前に、海が岸から引いて、海底の一部があらわれることがある。これは自然の警告になりうるが、そのめずらしい光景を見に歩いて出ていく人は、自分の身を大きな危険にさらすことになる。今日、多くの国が、地震のデータと海底のセンサーを組み合わせた警報システムにたよっており、それによって沿岸の地域社会は高い場所へ移動するための貴重な数分間を得られる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'what', 'where it'], answer: 0, why: 'earthquakes を受けて「その地震では～」と、あとに完全な文が続くので前置詞＋関係代名詞の in which。' },
+      { id: 'B', choices: ['However', 'Therefore', 'For example', 'Similarly'], answer: 0, why: '「沖では低い」→「しかし浅い海では高くなる」という逆接なので However。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける非制限用法の which。that はコンマのあとに使えない。' },
+    ],
+    tf: [
+      { statement: '津波の多くは、海底の大きな地震によって起こる。', answer: true, why: '第1段落 Most tsunamis are triggered by large undersea earthquakes。' },
+      { statement: '深い海では、津波の波はとても高い。', answer: false, why: '第2段落 its height at the surface is often less than a meter。' },
+      { statement: '浅い海に入ると、津波の速さはおそくなる。', answer: true, why: '第2段落 they slow down and grow dramatically taller。' },
+      { statement: '海が岸から引いたら、近くまで行って見ても安全だ。', answer: false, why: '第3段落 put themselves in great danger。' },
+    ],
+    qa: [
+      { q: 'Why may ships far out at sea hardly notice a tsunami?', choices: ['Because its height at the surface is often small.', 'Because it moves very slowly in deep water.', 'Because ships always sail near the coast.', 'Because it only happens at night.'], answer: 0, why: '第2段落 its height at the surface is often less than a meter. For this reason, ships ... may hardly notice it。' },
+    ],
+  },
 ]
