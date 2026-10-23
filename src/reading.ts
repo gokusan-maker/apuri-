@@ -1542,6 +1542,17 @@ export const PASSAGES: Passage[] = [
       { q: '今、毎晩何をしている？', choices: ['窓から北極星をさがす', '星の絵をかく', '星の本を読む'], answer: 0 },
     ],
   },
+  {
+    id: 'sweet-potatoes',
+    title: 'Digging Sweet Potatoes',
+    text: 'In October, our class went to a farm to dig sweet potatoes. The farmer showed us how to pull them out of the ground. Some potatoes were very big, and one was as long as my arm! My hands got dirty, but it was a lot of fun. That evening, my mother baked them, and they were sweet and hot.',
+    ja: '10月に、私たちのクラスはさつまいもほりをしに農場へ行きました。農家の人が、土からいもを引きぬく方法を見せてくれました。とても大きないももあって、1本は私のうでと同じくらいの長さでした！手はどろだらけになったけれど、とても楽しかったです。その日の夕方、母がそれを焼いてくれて、あまくて熱々でした。',
+    questions: [
+      { q: 'いつ農場へ行った？', choices: ['10月', '4月', '12月'], answer: 0 },
+      { q: 'いちばん長いいもは何と同じくらいだった？', choices: ['筆者のうで', '筆者の足', '先生のかさ'], answer: 0 },
+      { q: '夕方、母はいもをどうした？', choices: ['焼いた', 'スープにした', 'となりの人にあげた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
