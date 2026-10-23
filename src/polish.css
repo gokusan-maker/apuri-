@@ -1010,3 +1010,32 @@ main select:focus {
 .gcard.back { background: linear-gradient(180deg, #fffdf7, #fffaf0); color: #1f2937; }
 .gcard-title { font-size: 1.3rem; }
 .gcard-ex { border-top-color: color-mix(in srgb, var(--accent) 25%, transparent); }
+
+/* ===== ボス戦の結果：大きな見出しとはげましのふきだし ===== */
+.boss-result { font-size: 1.7rem; font-weight: 900; letter-spacing: 0.04em; }
+.lose-cheer,
+.boss-buddy-cheer {
+  position: relative;
+  margin: 8px 0 12px;
+  padding: 10px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card) !important;
+  color: var(--fg) !important;
+  box-shadow: var(--shadow-md);
+}
+.lose-cheer::after,
+.boss-buddy-cheer::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: 32px;
+  width: 12px;
+  height: 12px;
+  background: var(--card);
+  border-right: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  transform: rotate(45deg);
+}
+/* 相棒の応援ふきだしは下のボタンのじゃまをしない（タップはそのまま下のボタンに届く・3秒で自動で消える） */
+.pet-cheer { pointer-events: none; }

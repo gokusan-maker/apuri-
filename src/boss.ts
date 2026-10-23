@@ -348,7 +348,7 @@ export const CHEER_STAMPS = ['👍 ナイス！', '💪 いいぞ！', '✨ す�
 export const cheerStampOf = (n: number) => CHEER_STAMPS[(((n - 1) % CHEER_STAMPS.length) + CHEER_STAMPS.length) % CHEER_STAMPS.length]
 
 // 負けたときの相棒のはげまし（たおせなかった回数で順番に）
-export const CHEER_ON_LOSE = ['だいじょうぶ！ つぎはきっと勝てるよ！', 'まちがえた単語をいっしょに覚えよう！', 'おしかった！ もう少しだったよ！', 'ぼくもいっしょにがんばるね！']
+export const CHEER_ON_LOSE = ['だいじょうぶ！ つぎはきっと勝てるよ！', '本文をいっしょにもう一度読もう！', 'おしかった！ もう少しだったよ！', 'ぼくもいっしょにがんばるね！']
 export const cheerOnLose = (n: number) => CHEER_ON_LOSE[((n % CHEER_ON_LOSE.length) + CHEER_ON_LOSE.length) % CHEER_ON_LOSE.length]
 
 // ボス部屋のボスを全部たおしたごほうび（1回だけ）：称号「ボスハンター」と🎟
