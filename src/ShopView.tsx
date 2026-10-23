@@ -118,7 +118,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
               setEating({ icon: sn.icon, key: Date.now() })
             }}
           >
-            {favSnack === sn.id && <span className="fav-snack-tag">💕 きょうの好物 XP2倍！</span>}
+            {favSnack === sn.id && <span className="fav-snack-tag">💕 好物 XP2倍！</span>}
             <span className="item-icon" aria-hidden="true">{sn.icon}</span>
             <span className="item-name">{sn.name}</span>
             <span className="item-meta">+{favSnack === sn.id ? sn.xp * 2 : sn.xp}XP</span>

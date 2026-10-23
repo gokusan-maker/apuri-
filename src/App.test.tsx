@@ -583,7 +583,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
     fireEvent.click(screen.getByRole('tab', { name: /おやつ/ }))
-    expect(screen.getByText('💕 きょうの好物 XP2倍！')).toBeInTheDocument() // テストの日はクッキーが好物
+    expect(screen.getByText('💕 好物 XP2倍！')).toBeInTheDocument() // テストの日はクッキーが好物
     fireEvent.click(screen.getByText(/サクサククッキン/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(40)
     expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
