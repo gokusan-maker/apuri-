@@ -4870,6 +4870,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Farmers grow special corn for popcorn.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'ice-floats',
+    title: 'Why Does Ice Float?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Put an ice cube in a glass of water, and it floats. This seems normal to us, but it is actually ( A ). Most things become heavier for their size when they change from a liquid to a solid, so they sink in their own liquid. Water is different.',
+      'When water freezes, its tiny parts line up in a special pattern with spaces between them. Because of these spaces, ice takes up about nine percent more space ( B ) the same amount of liquid water. This is why a full glass bottle of water can break in the freezer.',
+      'Floating ice is very important for living things. In winter, the water at the top of a lake freezes first. The ice stays on the surface and works like a blanket, so the water under it does not freeze easily. Fish and other animals can stay alive in the water ( C ) the ice until spring.',
+      'If ice sank, lakes would freeze from the bottom up, and in very cold places some of them might freeze completely. So the next time you see ice floating in your drink, remember that this small wonder helps life on Earth.',
+    ],
+    ja: [
+      '水の入ったコップに氷を1つ入れると、氷はうきます。これは私たちにはあたりまえに思えますが、じつはめずらしいことなのです。たいていの物は、液体から固体に変わると同じ大きさあたりで重くなるので、自分自身の液体の中ではしずみます。水はちがうのです。',
+      '水がこおるとき、水の小さなつぶは、あいだにすき間のある特別な形にならびます。このすき間のために、氷は同じ量の液体の水よりおよそ9パーセント多く場所をとります。だから、水をいっぱいに入れたガラスのびんは、冷凍庫の中で割れることがあるのです。',
+      'うく氷は、生き物にとってとても大切です。冬になると、湖の上のほうの水が先にこおります。氷は水面にとどまって毛布のような役目をするので、その下の水はなかなかこおりません。魚やほかの動物は、春になるまで氷の下の水の中で生きていられるのです。',
+      'もし氷がしずんだら、湖は底からこおっていき、とても寒い場所では完全にこおってしまう湖もあるかもしれません。だから今度、飲み物に氷がういているのを見たら、この小さなふしぎが地球の生き物を助けていることを思い出してください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['unusual', 'natural', 'heavy', 'easy'], answer: 0, why: '直後に「たいていの物は固体になるとしずむ。水はちがう」とあるので「めずらしい」。' },
+      { id: 'B', choices: ['than', 'as', 'to', 'of'], answer: 0, why: 'more ～ than …「…より多くの～」。' },
+      { id: 'C', choices: ['under', 'on', 'above', 'over'], answer: 0, why: '魚は氷の「下の」水の中で生きる。' },
+    ],
+    underline: { phrase: 'works like a blanket', choices: ['毛布のような役目をする', '毛布を作るのに使われる', '毛布のようにやわらかい', '毛布の上で働く'], answer: 0, why: 'work like ～「～のようにはたらく」。氷が下の水を寒さから守ることをたとえている。' },
+    tf: [
+      { statement: 'Ice floats in water.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Most things sink in their own liquid when they become solid.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Ice takes up less space than the same amount of liquid water.', answer: false, why: '第2段落 about nine percent more space。' },
+      { statement: 'In winter, the water at the bottom of a lake freezes first.', answer: false, why: '第3段落 the water at the top of a lake freezes first。' },
+      { statement: 'The ice on a lake helps keep the water under it from freezing.', answer: true, why: '第3段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

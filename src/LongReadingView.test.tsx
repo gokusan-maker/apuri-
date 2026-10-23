@@ -107,7 +107,7 @@ it('段落ごとに英語で読み上げられる（空所は読まない）', (
 
 it('指示語の問題では二重下線の語が出る', () => {
   render(<LongReading />)
-  fireEvent.click(screen.getByText(/The Shinkansen and Its Seven-Minute Team/))
+  fireEvent.click(screen.getAllByText(/The Shinkansen and Its Seven-Minute Team/)[0])
   expect(document.querySelector('.long-text .long-refer')!.textContent).toBe('it')
   fireEvent.click(screen.getByRole('button', { name: 'ア the Shinkansen' }))
   expect(screen.getByRole('button', { name: 'ア the Shinkansen' })).toHaveAttribute('aria-pressed', 'true')
