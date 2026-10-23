@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'even-if-though': { wrong: 'Even though it rains tomorrow, we will go.', right: 'Even if it rains tomorrow, we will go.', why: 'まだわからない未来のこと（仮定）は even if。even though は事実に使う。' },
   'when-future': { wrong: 'When he will come, let\'s start the party.', right: 'When he comes, let\'s start the party.', why: '時を表す when のあとは、未来のことでも現在形。' },
   'not-so-much': { wrong: 'She is not so much a singer than an actor.', right: 'She is not so much a singer as an actor.', why: 'not so much A as B。than ではなく as。' },
   'which-better': { wrong: 'Which do you like more good, tea or coffee?', right: 'Which do you like better, tea or coffee?', why: 'good・like の比較級は better。more good とは言わない。' },
