@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'allow-to': { wrong: 'My mother allowed me go out.', right: 'My mother allowed me to go out.', why: 'allow 人 のあとは to ＋ 動詞の原形（let 人 ＋ 原形とのちがい）。' },
   'every-time': { wrong: 'The next time you will visit, bring your sister.', right: 'The next time you visit, bring your sister.', why: 'the next time のまとまりの中は、未来のことでも現在形。' },
   'one-it': { wrong: 'I lost my eraser, so I bought a new it.', right: 'I lost my eraser, so I bought a new one.', why: '同じ種類の「別の1つ」は one。it は「その物そのもの」。' },
   'appositive-comma': { wrong: 'Ms. Ito, our music teachers, play the piano.', right: 'Ms. Ito, our music teacher, plays the piano.', why: '言いかえの名詞は前の名詞と数をそろえ、動詞は主語（Ms. Ito）に合わせる。' },
