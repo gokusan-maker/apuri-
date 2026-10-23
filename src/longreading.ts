@@ -4600,6 +4600,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'A slow wag may mean the dog is not sure about something.', answer: true, why: '第3段落の内容と合う。' },
     ],
   },
+  {
+    id: 'blue-sky',
+    title: 'Why Is the Sky Blue?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'On a sunny day, the sky looks bright blue. But at sunset, the same sky can turn orange and red. Why does the sky change its color like this? The answer has to ( A ) with sunlight and the air around the Earth.',
+      'Sunlight looks white, but it is really made of many colors, such as red, yellow, green, and blue. When sunlight comes into the air, it hits very small pieces of gas. These tiny pieces send blue light in every direction much more than red light. So when we look up, blue light comes to our eyes from all over the sky.',
+      'In the evening, the sun is low. Its light has to travel through much more air ( B ) it reaches us. On the way, most of the blue light is sent away in other directions. Only red and orange light can get through, so the sky near the sun looks red.',
+      'If there were no air, the sky would look black even during the day. In fact, astronauts on the Moon see a black sky because the Moon has almost no air. The next time you see a blue sky or a red sunset, remember that the air is ( C ) the colors for you.',
+    ],
+    ja: [
+      '晴れた日、空は明るい青色に見えます。でも夕方には、同じ空がオレンジ色や赤色に変わることがあります。空はなぜこのように色を変えるのでしょうか。その答えは、日光と地球をとりまく空気に関係があります。',
+      '日光は白く見えますが、実は赤、黄、緑、青などたくさんの色からできています。日光が空気の中に入ると、気体のとても小さなつぶに当たります。この小さなつぶは、赤い光よりも青い光をずっと多く、あらゆる方向に送り出します。だから私たちが見上げると、空全体から青い光が目に届くのです。',
+      '夕方には太陽が低くなります。その光は、私たちに届くまでにずっと多くの空気の中を通らなければなりません。そのとちゅうで、青い光のほとんどはほかの方向へ送り出されてしまいます。赤やオレンジの光だけが通りぬけられるので、太陽の近くの空は赤く見えるのです。',
+      'もし空気がなければ、昼間でも空は黒く見えるでしょう。実際、月にいる宇宙飛行士には黒い空が見えます。月にはほとんど空気がないからです。今度青い空や赤い夕焼けを見たら、空気があなたのために色を作ってくれているのだと思い出してください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['do', 'make', 'take', 'get'], answer: 0, why: 'have to do with 〜「〜と関係がある」。' },
+      { id: 'B', choices: ['before', 'after', 'because', 'while'], answer: 0, why: '「私たちに届く前に」なので before。' },
+      { id: 'C', choices: ['making', 'made', 'makes', 'to make'], answer: 0, why: 'is making で現在進行形「作ってくれている」。' },
+    ],
+    underline: { phrase: 'Only red and orange light can get through', choices: ['赤とオレンジの光だけが通りぬけられる', '赤とオレンジの光だけが消えてしまう', '赤とオレンジの光は通りぬけられない', '赤とオレンジの光だけが空にとどまる'], answer: 0, why: 'get through「通りぬける」。Only 〜 can …「〜だけが…できる」。' },
+    tf: [
+      { statement: 'Sunlight is made of only one color.', answer: false, why: '第2段落 it is really made of many colors。' },
+      { statement: 'Small pieces of gas send blue light in every direction more than red light.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'In the evening, sunlight travels through less air.', answer: false, why: '第3段落 much more air。' },
+      { statement: 'The sky on the Moon looks black because there is almost no air.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'Most of the blue light reaches us at sunset.', answer: false, why: '第3段落 most of the blue light is sent away。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
