@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'prevent-from': { wrong: 'The rain prevented us from go out.', right: 'The rain prevented us from going out.', why: 'from は前置詞なので、あとは動名詞（～ing）。' },
   'must-cant-be': { wrong: 'That must not be true.（はずがない、のつもりで）', right: "That can't be true.", why: '「～のはずがない」は can\'t ＋ 原形。must not は「～してはいけない」。' },
   'worth-ing': { wrong: 'This book is worth to read.', right: 'This book is worth reading.', why: 'be worth のあとは動名詞（～ing）。不定詞は使わない。' },
   'wh-subject': { wrong: 'Who did make this cake?', right: 'Who made this cake?', why: '疑問詞が主語のときは did を使わず〈疑問詞 ＋ 動詞〉の語順。' },
