@@ -328,7 +328,7 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   const got: [boolean, string][] = []
   render(<Quiz words={WORDS.slice(0, 8)} onAnswer={(c, _xp, id) => got.push([c, id])} />)
   vi.spyOn(Math, 'random').mockReturnValue(0.9) // 毎回、数の問題で 902
-  pickMode('🔢 数・時刻・日付の聞き取り')
+  pickMode('🔢 数字の聞き取り')
   expect(spoken[spoken.length - 1]).toBe(toEnglish(902))
   for (let i = 0; i < 10; i++) {
     expect(screen.getByText(`${i + 1} / 10 問目・正解 ${i}`)).toBeInTheDocument()

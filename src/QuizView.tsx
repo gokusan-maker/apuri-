@@ -169,7 +169,7 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'listen', label: '🎧 リスニング', group: '聞く・話す' },
   { id: 'emoji-ear', label: '👂 聞いて絵文字', group: '聞く・話す' },
   { id: 'through', label: '📻 聞き流し', group: '聞く・話す' },
-  { id: 'numbers', label: '🔢 数・時刻・日付の聞き取り', group: '聞く・話す' },
+  { id: 'numbers', label: '🔢 数字の聞き取り', group: '聞く・話す' },
   { id: 'order-ear', label: '🎧 聞き並べ', group: '聞く・話す' },
   { id: 'sentence', label: '🗣 例文リスニング', group: '聞く・話す' },
   { id: 'dictation', label: '🎧 書き取り', group: '聞く・話す' },
@@ -455,7 +455,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       )}
       {menu && (
         <div className="mode-menu" role="group" aria-label="ミニゲームの種類">
-          {featured && <p className="stats-note">⭐ は今日のおすすめ（その日はじめての正解で +{FEATURED_XP}XP）</p>}
+          {featured && <p className="stats-note">⭐ は今日のおすすめ（+{FEATURED_XP}XP）</p>}
           {recent.length > 0 && (
             <div className="mode-group mode-recent">
               <p className="mode-group-name">さいきん遊んだ種類</p>

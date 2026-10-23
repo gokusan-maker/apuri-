@@ -1612,3 +1612,5 @@ details[open] > summary::before { transform: rotate(90deg); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-mode-note { background: rgb(255 255 255 / 0.08); } }
 :root[data-theme="dark"] .boss-mode-note { background: rgb(255 255 255 / 0.08); }
 .univ-tower > summary { display: flex; align-items: center; flex-wrap: wrap; } .univ-tower > summary .univ-meter { flex-basis: 100%; }
+/* ミニゲームをえらぶ：名前は1行（長い名前は少し小さく） */
+.mode-menu .direction button { white-space: nowrap; font-size: clamp(0.74rem, 3.5vw, 0.95rem); letter-spacing: -0.03em; padding-left: 10px; padding-right: 8px; }
