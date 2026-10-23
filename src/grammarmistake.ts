@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'so-as-to-degree': { wrong: 'He was so kind as to helping me.', right: 'He was so kind as to help me.', why: 'so 〜 as to のあとは動詞の原形。' },
   'think-so': { wrong: '"Will he come?" "I think it."', right: '"Will he come?" "I think so."', why: '前の文の内容を受けるのは so。' },
   'take-idioms': { wrong: 'I took part the race.', right: 'I took part in the race.', why: '「〜に参加する」は take part in 〜。in をわすれない。' },
   'allow-to': { wrong: 'My mother allowed me go out.', right: 'My mother allowed me to go out.', why: 'allow 人 のあとは to ＋ 動詞の原形（let 人 ＋ 原形とのちがい）。' },
