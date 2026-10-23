@@ -1,3 +1,4 @@
+import { BuddyFigure } from './BuddyFigureView'
 import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useEffect, useMemo, useRef, useState } from 'react'
@@ -1910,7 +1911,16 @@ function App() {
           </div>
         </div>
       )}
-      {petCheer && <PetCheer key={petCheer.key} cheer={petCheer.cheer} form={formOf(monster)} kind={monster.kind} onClose={() => setPetCheer(null)} />}
+      {petCheer && (
+        <PetCheer
+          key={petCheer.key}
+          cheer={petCheer.cheer}
+          form={formOf(monster)}
+          kind={monster.kind}
+          figure={mode === 'grammar' ? <BuddyFigure track="grammar" buddy={buddies.grammar} size={44} /> : mode === 'reading' || mode === 'boss' ? <BuddyFigure track="reading" buddy={buddies.reading} size={44} /> : undefined}
+          onClose={() => setPetCheer(null)}
+        />
+      )}
       {missionToast.length > 0 && (
         <div className="badge-toast mission-toast" role="status" onClick={() => setToastQueue(dequeue)}>
           <span className="badge-icon" aria-hidden="true">
