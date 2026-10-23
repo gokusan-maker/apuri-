@@ -1907,4 +1907,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do cacti open their pores at night?', choices: ['To avoid losing too much water in the heat.', 'To catch more sunlight.', 'To protect themselves from animals.', 'To grow deeper roots.'], answer: 0, why: '第3段落 doing so in the desert heat would cause heavy water loss。' },
     ],
   },
+  {
+    id: 'exam-farewell',
+    title: 'A Farewell Gift for Ms. Green',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Ms. Green came to our school from New Zealand two years ago to teach English. She was always cheerful, and her classes were full of games and songs. Last month, we heard that she was going to ( A ) Japan at the end of March. Everyone in my class felt sad, and we decided to give her a special present.",
+      "At first, we wanted to buy something, but we did not have much money. Then my friend Haruto said, 'Why don't we make a video? We can show her how much we have learned.' Each student chose a favorite memory from her classes and practiced explaining it in English. Some students were shy and did not want to be filmed, so we let them draw pictures ( B ).",
+      "On her last day, we played the video in the classroom. When it ended, Ms. Green had tears in her eyes. She said, 'This is the best gift I have ever ( C ). Keep using English, and someday come and visit me in New Zealand.' I realized that a gift does not have to be expensive. What matters most is the feeling we put into it.",
+    ],
+    ja: [
+      'グリーン先生は2年前に英語を教えるためにニュージーランドから私たちの学校に来ました。先生はいつも明るく、授業はゲームや歌でいっぱいでした。先月、私たちは先生が3月の終わりに日本をはなれることを聞きました。クラスのみんなが悲しくなり、私たちは先生に特別なプレゼントをおくることにしました。',
+      '最初は何かを買おうと思いましたが、あまりお金がありませんでした。すると友だちのハルトが「動画を作ろうよ。どれだけ学んだかを先生に見せられるよ」と言いました。生徒はそれぞれ先生の授業でいちばんの思い出を選び、それを英語で説明する練習をしました。はずかしがって撮影されたくない生徒もいたので、その人たちにはかわりに絵をかいてもらいました。',
+      '先生の最後の日、私たちは教室で動画を流しました。終わると、グリーン先生の目にはなみだがうかんでいました。先生は「これは今までにもらった中で最高のプレゼントです。英語を使い続けてね。そして、いつかニュージーランドに会いに来てね」と言いました。私は、プレゼントは高価である必要はないのだと気づきました。いちばん大切なのは、そこにこめる気持ちなのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['leave', 'leaves', 'left', 'leaving'], answer: 0, why: 'be going to のあとは動詞の原形。leave「〜をはなれる」。' },
+      { id: 'B', choices: ['instead', 'together', 'again', 'already'], answer: 0, why: '撮影のかわりに絵をかいてもらった、なので instead「かわりに」。' },
+      { id: 'C', choices: ['received', 'receive', 'receiving', 'to receive'], answer: 0, why: 'the best 〜 I have ever ＋ 過去分詞「今までに〜した中でいちばん」。' },
+    ],
+    tf: [
+      { statement: 'グリーン先生はニュージーランドから来た。', answer: true, why: '第1段落 from New Zealand。' },
+      { statement: '生徒たちは高価なプレゼントを買った。', answer: false, why: '第2段落 we did not have much money / 動画を作った。' },
+      { statement: 'はずかしがりの生徒は、かわりに絵をかいた。', answer: true, why: '第2段落 we let them draw pictures instead。' },
+    ],
+    qa: [
+      { q: 'What did the writer realize?', choices: ['The feeling put into a gift matters most.', 'Gifts should always be expensive.', 'Videos are easy to make.', 'Ms. Green did not like the gift.'], answer: 0, why: '第3段落 What matters most is the feeling we put into it。' },
+    ],
+  },
 ]
