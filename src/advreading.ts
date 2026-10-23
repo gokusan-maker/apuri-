@@ -2691,4 +2691,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why is the sea otter called a "keystone species"?', choices: ['Its effect on its environment is much greater than its numbers suggest.', 'It is the largest animal in the kelp forest.', 'It builds homes out of stones.', 'It eats kelp more than any other animal.'], answer: 0, why: '第3段落 whose effect on its environment is far greater than its numbers would suggest。' },
     ],
   },
+{
+    id: 'hs-lost-boy',
+    title: 'A Boy at the Shopping Mall',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last Sunday, I went to a big shopping mall with my mother. While she was buying shoes, I waited near the fountain. Then I noticed a little boy standing alone. He was about four years old, and he was holding a toy car tightly. He looked around again and again, ( A ) he could not find anyone he knew.",
+      "I walked over to him and said, \"Are you OK? Where is your mom?\" He did not answer and started to cry. I did not know what to do, but I remembered something my teacher had said: \"When you help a small child, get down to their eye level.\" So I sat down next to him and asked about his toy car. He stopped crying and told me it was a police car. Then I took him to the information desk, and a staff member made an announcement.",
+      "A few minutes later, a woman ran to us. \"Kenta!\" she shouted. The boy jumped into her arms. She thanked me again and again. On the way home, I told my mother what had happened. She said, \"You did the right thing.\" I was glad that a small action could make someone feel safe. Since then, I have tried to notice people ( B ) need help, and to act without being ( C ).",
+    ],
+    ja: [
+      'この前の日曜日、私は母と大きなショッピングモールへ行った。母がくつを買っているあいだ、私はふん水の近くで待っていた。そのとき、小さな男の子がひとりで立っているのに気づいた。4歳くらいで、おもちゃの車をぎゅっとにぎっていた。男の子は何度もまわりを見回していたが、知っている人を見つけられなかった。',
+      '私は男の子のところへ行って「だいじょうぶ？お母さんはどこ？」と言った。男の子は答えずに泣きだした。どうしたらいいかわからなかったが、先生が言っていたことを思い出した。「小さな子を助けるときは、その子の目の高さまでしゃがみなさい」。そこで私は男の子のとなりにすわって、おもちゃの車のことを聞いた。男の子は泣きやんで、それはパトカーなんだと教えてくれた。それから私は男の子を案内所へ連れていき、係の人が呼び出しの放送をしてくれた。',
+      '数分後、ひとりの女性が走ってきた。「ケンタ！」と彼女はさけんだ。男の子は彼女の腕にとびこんだ。女性は何度も何度も私にお礼を言った。帰り道、私は何があったかを母に話した。母は「正しいことをしたね」と言った。小さな行動でだれかを安心させられたことがうれしかった。それ以来、私は助けを必要としている人に気づき、はずかしがらずに行動するよう心がけている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'so', 'because', 'if'], answer: 0, why: '「何度も見回した、しかし見つけられなかった」という逆接なので but。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）を説明する主格の関係代名詞 who。' },
+      { id: 'C', choices: ['shy', 'shyly', 'shyness', 'to shy'], answer: 0, why: 'without being ～「～にならずに」。being のあとは形容詞 shy。' },
+    ],
+    tf: [
+      { statement: '男の子は、おもちゃのパトカーを持っていた。', answer: true, why: '第1・2段落 holding a toy car / it was a police car。' },
+      { statement: '筆者は男の子の前に立ったまま話しかけ続けた。', answer: false, why: '第2段落 I sat down next to him（目の高さまでしゃがんだ）。' },
+      { statement: '係の人が放送をして、男の子の母親が見つかった。', answer: true, why: '第2・3段落の内容と合う。' },
+    ],
+    qa: [
+      { q: 'What did the writer remember from the teacher?', choices: ['To get down to a small child\'s eye level.', 'To call the police right away.', 'To give the child some candy.', 'To ask the child to wait alone.'], answer: 0, why: '第2段落 get down to their eye level。' },
+    ],
+  },
 ]
