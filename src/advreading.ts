@@ -2861,4 +2861,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do engineers sometimes raise buildings on posts in permafrost regions?', choices: ['To keep heat from the buildings from reaching the frozen ground.', 'To let more sunlight reach the ground.', 'To make the active layer thicker.', 'To collect methane from the soil.'], answer: 0, why: '第3段落 so that heat from inside does not reach the frozen ground。' },
     ],
   },
+{
+    id: 'hs-homestay',
+    title: 'Two Weeks in Australia',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last summer, I stayed with a host family in Australia for two weeks. Before I left Japan, I studied English very hard. But on the first night, I could not understand ( A ) my host mother said at dinner. She spoke so fast that I just smiled and said \"Yes\" to everything.",
+      "The next day, my host brother Liam asked me, \"Do you want to go swimming?\" I said \"Yes\" again, but I cannot swim well! At the beach, I had to tell him the truth. Liam laughed and said, \"You should say no when you mean no.\" From then on, I tried to ask questions ( B ) I did not understand something.",
+      "By the end of my stay, I could talk with my host family much more easily. My English did not become perfect in two weeks, but I learned something important. Speaking a foreign language is not about being perfect. It is about trying to understand each other. Now I am ( C ) to visiting Australia again someday.",
+    ],
+    ja: [
+      '去年の夏、私はオーストラリアのホストファミリーの家に2週間滞在した。日本を出発する前、私は英語をとても一生けんめい勉強した。しかし最初の夜、夕食のときにホストマザーが言ったことが理解できなかった。彼女があまりに速く話すので、私はただほほえんで、何にでも「イエス」と言っていた。',
+      '次の日、ホストブラザーのリアムが「泳ぎに行きたい？」とたずねた。私はまた「イエス」と言ったが、私はうまく泳げないのだ！ 浜辺で、私は本当のことを言わなければならなかった。リアムは笑って「ちがうときは『ノー』と言わなきゃ」と言った。それからは、何かわからないことがあるときは質問するようにした。',
+      '滞在の終わりには、ホストファミリーとずっと楽に話せるようになっていた。私の英語は2週間で完ぺきにはならなかったが、大切なことを学んだ。外国語を話すことは、完ぺきであることではない。おたがいを理解しようとすることなのだ。今、私はいつかまたオーストラリアをおとずれるのを楽しみにしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'that', 'which', 'who'], answer: 0, why: '「～が言ったこと」は関係代名詞 what（＝the thing which）。' },
+      { id: 'B', choices: ['when', 'so', 'but', 'than'], answer: 0, why: '「わからないことがあるときは」なので when。' },
+      { id: 'C', choices: ['looking forward', 'looked forward', 'looking for', 'look forward'], answer: 0, why: 'be looking forward to ～ing「～するのを楽しみにしている」。' },
+    ],
+    tf: [
+      { statement: '筆者はオーストラリアで2週間ホームステイをした。', answer: true, why: '第1段落 for two weeks。' },
+      { statement: '最初の夜、筆者はホストマザーの話がよくわかった。', answer: false, why: '第1段落 I could not understand。' },
+      { statement: '筆者は泳ぐのがとても得意だった。', answer: false, why: '第2段落 I cannot swim well。' },
+      { statement: 'リアムは、ちがうときは「ノー」と言うべきだと言った。', answer: true, why: '第2段落 You should say no when you mean no.' },
+    ],
+    qa: [
+      { q: 'What did the writer learn during the stay?', choices: ['Speaking a foreign language is about trying to understand each other.', 'You have to speak a foreign language perfectly.', 'You should always say yes to your host family.', 'Swimming is the most popular sport in Australia.'], answer: 0, why: '第3段落 It is about trying to understand each other.' },
+    ],
+  },
 ]
