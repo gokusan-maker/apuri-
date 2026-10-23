@@ -68,7 +68,11 @@ export function Mole({ words, onAnswer, onClear }: Props) {
       <h2>🔨 単語もぐらたたき</h2>
       {startAt === null ? (
         <>
-          <p className="stats-note">意味に合うもぐらをたたこう（{MOLE_SECONDS}秒）{best > 0 ? `・ベスト ${best}匹` : ''}</p>
+          <p className="stats-note">意味に合うもぐらをたたこう</p>
+          <p className="buddy-chips game-chips">
+            <span>⏱ {MOLE_SECONDS}秒</span>
+            {best > 0 && <span>🏆 ベスト {best}匹</span>}
+          </p>
           <button
             className="flip"
             onClick={() => {
@@ -81,11 +85,12 @@ export function Mole({ words, onAnswer, onClear }: Props) {
           </button>
         </>
       ) : result ? (
-        <div role="status">
-          <p className="level-up">
-            🔨 {result.score}匹たたいた！{result.best ? ' 🏆 ベスト記録！' : `（ベスト ${best}匹）`}
+        <div role="status" className="game-result">
+          <p className="game-result-title">🔨 {result.score}匹たたいた！</p>
+          <p className="buddy-chips game-chips">
+            {result.best ? <span className="game-best">🏆 ベスト記録！</span> : <span>🏆 ベスト {best}匹</span>}
+            <span aria-label={`まちがえてたたいた数 ${miss}`}>❌ ミス {miss}</span>
           </p>
-          <p className="stats-note">まちがえてたたいた数：{miss}</p>
           <button
             className="flip"
             onClick={() => {

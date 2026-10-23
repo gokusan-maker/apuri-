@@ -1951,3 +1951,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 /* 記録：単語帳ごとの定着はたたむ（見出しはほかの h2 と同じ大きさ） */
 .by-level > summary { cursor: pointer; font-weight: 800; font-size: 1.05rem; padding: 8px 0; list-style-position: inside; }
+
+/* ミニゲームの結果：大きなひとこと＋チップ（もぐらたたき など） */
+.game-chips { justify-content: center; }
+.game-result { margin: 10px 0 4px; text-align: center; }
+.game-result-title { margin: 0 0 6px; font-size: 1.4rem; font-weight: 900; color: var(--accent); }
+.game-best { background: color-mix(in srgb, #f59e0b 18%, transparent) !important; }

@@ -18,6 +18,6 @@ it('正しいもぐらをたたくと数がふえ、30秒で終わる', async ()
   await act(async () => {
     await new Promise((r) => setTimeout(r, 300))
   })
-  expect(screen.getByText(/1匹たたいた！ 🏆 ベスト記録！/)).toBeInTheDocument()
+  expect(screen.getByRole('status').textContent).toMatch(/1匹たたいた！.*🏆 ベスト記録！/)
   expect(localStorage.getItem('eitan:best-mole')).toBe('1')
 })
