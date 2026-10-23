@@ -1469,3 +1469,11 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 :where(input[type='checkbox']:not(.setting.toggle input)):checked { background: var(--accent-grad); border-color: transparent; }
 :where(input[type='checkbox']:not(.setting.toggle input)):checked::after { transform: rotate(45deg) scale(1); }
 :where(input[type='checkbox']:not(.setting.toggle input)):focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.snacks .fav-snack-tag { display: inline-block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .snacks .fav-snack-tag { background: rgb(236 72 153 / 0.2); color: #f9a8d4 !important; }
+  :root:not([data-theme="light"]) .snacks .fav-snack { background: linear-gradient(160deg, rgb(236 72 153 / 0.12), var(--card) 60%); }
+}
+:root[data-theme="dark"] .snacks .fav-snack-tag { background: rgb(236 72 153 / 0.2); color: #f9a8d4 !important; }
+:root[data-theme="dark"] .snacks .fav-snack { background: linear-gradient(160deg, rgb(236 72 153 / 0.12), var(--card) 60%); }
+.snacks .fav-snack-tag { min-width: max-content; }
