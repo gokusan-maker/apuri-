@@ -1516,3 +1516,4 @@
 - 2026-10-23: 文法に「比較の疑問文（Which do you like better, A or B?）」を追加（237単元）
 - 2026-10-23: ガチャ結果の文字をテーマの色に（ダークで読めない不具合）、無い色トークン var(--text) を --fg に直してテストで防ぐ
 - 2026-10-23: 高校入試読解（スピーチ）「My Grandmother's Vegetables」を追加
+- 2026-10-23: 文法に「not so much A as B / B rather than A」を追加（238単元）

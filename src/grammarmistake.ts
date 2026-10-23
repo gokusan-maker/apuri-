@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'not-so-much': { wrong: 'She is not so much a singer than an actor.', right: 'She is not so much a singer as an actor.', why: 'not so much A as B。than ではなく as。' },
   'which-better': { wrong: 'Which do you like more good, tea or coffee?', right: 'Which do you like better, tea or coffee?', why: 'good・like の比較級は better。more good とは言わない。' },
   'there-q-neg': { wrong: 'Are there a park near your house?', right: 'Is there a park near your house?', why: 'a park（単数）なので Is there ～?' },
   'remind-of': { wrong: 'This photo reminds me to my trip.', right: 'This photo reminds me of my trip.', why: 'remind A of B「A に B を思い出させる」。to ではなく of。' },
