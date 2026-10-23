@@ -3501,7 +3501,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'Make ___ you turn off the lights.', choices: ['sure', 'surely', 'sure to'], answer: 0, why: 'make sure (that) ＋ 主語 ＋ 動詞「必ず～するようにする」。' },
       { sentence: 'Make sure ___ your name on the paper.', choices: ['to write', 'writing', 'wrote'], answer: 0, why: 'make sure to ＋ 動詞の原形。' },
-      { sentence: 'Please make sure the door ___ locked.', choices: ['is', 'will be', 'be'], answer: 0, why: 'make sure の that 節の中は、未来のことでもふつう現在形。' },
+      { sentence: 'Please make sure the door ___ locked.', choices: ['is', 'being', 'be'], answer: 0, why: 'make sure の that 節の中は〈主語 ＋ 動詞〉。未来のことでもふつう現在形 is。' },
     ],
   },
 ]

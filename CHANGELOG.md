@@ -1431,3 +1431,4 @@
 - 2026-10-23: 読解「難関大」に「The Planes That Did Not Return（生存者バイアス）」を追加（全33本に）
 - 2026-10-23: 読解「かんたん」に「Our Lemonade Stand（レモネード屋さん）」を追加（全147本に）
 - 2026-10-23: 中3の文法単元「make sure (that) ～ / make sure to ～」を追加（全226単元に）
+- 2026-10-23: make sure 単元の選択肢を明確化（will be を外した）
