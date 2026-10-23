@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'what-is-called': { wrong: 'He is which is called a hero.', right: 'He is what is called a hero.', why: '「いわゆる」は what is called（関係代名詞 what）。' },
   'gerund-set': { wrong: 'I feel like to eat pizza.', right: 'I feel like eating pizza.', why: 'feel like の like は前置詞なので、あとは -ing。' },
   'be-about-to': { wrong: 'The bus is about to leaving.', right: 'The bus is about to leave.', why: 'be about to のあとは動詞の原形。' },
   'more-and-more': { wrong: 'It is getting more and more cold.', right: 'It is getting colder and colder.', why: 'cold は -er で比較級を作るので colder and colder。' },
