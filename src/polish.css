@@ -1477,3 +1477,9 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 :root[data-theme="dark"] .snacks .fav-snack-tag { background: rgb(236 72 153 / 0.2); color: #f9a8d4 !important; }
 :root[data-theme="dark"] .snacks .fav-snack { background: linear-gradient(160deg, rgb(236 72 153 / 0.12), var(--card) 60%); }
 .snacks .fav-snack-tag { min-width: max-content; }
+
+/* 読解の○×ボタン：横いっぱいの2つの大きなボタンに。○はみどり、×はあかの記号で見分けやすく */
+.long-choices.tf { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.long-choices.tf .long-choice { min-height: 46px; font-size: 1.25rem; font-weight: 900; line-height: 1; }
+.long-choices.tf .long-choice:first-child:not(.picked):not(.answer) { color: #16a34a; }
+.long-choices.tf .long-choice:last-child:not(.picked):not(.answer) { color: #dc2626; }
