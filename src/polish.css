@@ -1833,3 +1833,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .placement-bar { height: 10px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 20%, transparent); overflow: hidden; }
 .placement-bar i { display: block; height: 100%; border-radius: inherit; background: var(--accent-grad); }
 .placement-score { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* 読解の結果：次の読解の題名は小さく2行目に、つまずき解説はたたむ */
+.next-long-title { display: block; margin-top: 2px; font-size: 0.78rem; font-weight: 700; opacity: 0.9; }
+.long-tips > summary { cursor: pointer; }
+.long-tips:not([open]) { padding-bottom: 6px; }
+.long-result .long-score { font-size: 1.6rem; font-weight: 900; letter-spacing: 0.01em; }

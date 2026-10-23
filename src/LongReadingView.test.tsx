@@ -555,3 +555,20 @@ it('読解の本文画面：上の情報は短く（語数・分）、文法タ�
   expect(screen.getByText('🔊 全文')).toBeInTheDocument()
   for (const t of document.querySelectorAll('.long-gtag')) expect(t.textContent).not.toContain('（')
 })
+
+it('読解の結果：次の読解の題名は小さい2行目、つまずき解説はたたまれている', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  fireEvent.click(document.querySelector('.long-item')!)
+  for (const g of [...document.querySelectorAll('.long-choices')]) {
+    const b = g.querySelector('button:not(:disabled)') as HTMLButtonElement | null
+    if (b && !g.querySelector('[aria-pressed="true"]')) fireEvent.click(b)
+  }
+  const submit = screen.queryByRole('button', { name: '採点する' })
+  if (!submit) return // 並べかえなどボタン以外の問題がある読解なら、ここでは確かめない
+  fireEvent.click(submit)
+  expect(document.querySelector('.long-score')).not.toBeNull()
+  const tips = document.querySelector('details.long-tips') as HTMLDetailsElement | null
+  if (tips) expect(tips.open).toBe(false)
+  expect(document.querySelector('.next-long-title')).not.toBeNull()
+})

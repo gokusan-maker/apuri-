@@ -923,7 +923,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
 
       {done ? (
         <div className="long-result" role="status">
-          <p className="level-up">
+          <p className="level-up long-score">
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
           <p className={`level-verdict${levelVerdict(p, score, total).pass ? ' pass' : ''}`}>{levelVerdict(p, score, total).text}</p>
@@ -945,8 +945,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             </div>
           )}
           {score < total && (
-            <div className="long-tips">
-              <p className="long-tips-title">💡 つまずき解説</p>
+            <details className="long-tips">
+              <summary className="long-tips-title">💡 つまずき解説</summary>
               <ul>
                 {(Object.entries(typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq })) as [QType, [number, number]][])
                   .filter(([, [ok, n]]) => ok < n)
@@ -956,7 +956,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                     </li>
                   ))}
               </ul>
-            </div>
+            </details>
           )}
           {dailyGot && <p className="level-up">📅 今日の1本を満点クリア！ 🪙{DAILY_LONG_COINS}</p>}
           <p className="stats-note">
@@ -1024,7 +1024,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               window.scrollTo?.({ top: 0 })
             }}
           >
-            次の読解へ ▶ {shownTitle(nextLong(p.id, record), LONG_PASSAGES.indexOf(nextLong(p.id, record)))}
+            次の読解へ ▶ <small className="next-long-title">{shownTitle(nextLong(p.id, record), LONG_PASSAGES.indexOf(nextLong(p.id, record)))}</small>
           </button>
         </div>
       ) : (
