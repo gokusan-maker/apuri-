@@ -988,3 +988,25 @@ main select:focus {
   font-weight: 700;
   box-shadow: var(--shadow-md);
 }
+
+/* ===== 文法の要点カード ===== */
+.grammar-cards .progress { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 10px; }
+.gcard-count, .gcard-known { white-space: nowrap; }
+.gcard-known { padding: 0 10px; border-radius: 999px; background: color-mix(in srgb, #22c55e 14%, var(--card)); color: #15803d; font-weight: 800; }
+.gcard {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--hair);
+  border-radius: 20px;
+  background:
+    radial-gradient(80% 60% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
+    var(--card);
+  color: var(--fg);
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--accent) 22%, rgb(0 0 0 / 0.08)), var(--shadow-lg);
+  transition: transform 0.12s;
+}
+.gcard::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 6px; background: var(--accent-grad); }
+.gcard:active { transform: translateY(3px); }
+.gcard.back { background: linear-gradient(180deg, #fffdf7, #fffaf0); color: #1f2937; }
+.gcard-title { font-size: 1.3rem; }
+.gcard-ex { border-top-color: color-mix(in srgb, var(--accent) 25%, transparent); }

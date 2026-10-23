@@ -55,7 +55,8 @@ export function GrammarCards({ units: all, onBack, weak = [] }: Props) {
         ← 単元一覧
       </button>
       <p className="progress">
-        🃏 要点カード {Math.min(i, units.length - 1) + 1} / {units.length}　⭕ 覚えた {knownCount} / {all.length}
+        <span className="gcard-count">🃏 要点カード {Math.min(i, units.length - 1) + 1} / {units.length}</span>
+        <span className="gcard-known">⭕ 覚えた {knownCount} / {all.length}</span>
       </p>
       <label className="long-instant">
         <input
