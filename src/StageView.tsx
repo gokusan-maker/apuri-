@@ -549,7 +549,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
       )}
       {daily && !dailyDone && (
         <div className="daily-stars">
-          強さを選ぶ：
+          <span className="daily-stars-label">強さを選ぶ：</span>
           {[2, 3].map((n) => (
             <button
               key={n}

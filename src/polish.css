@@ -1203,3 +1203,8 @@ main select:focus {
 .snacks .fav-snack { border-color: rgb(236 72 153 / 0.5); background: linear-gradient(160deg, #fdf2f8, var(--card) 60%); }
 .snacks .fav-snack-tag { grid-column: 1 / -1; font-size: 0.7rem; }
 .snacks .fav-snack-tag { grid-column: 1 / -1; grid-row: 1; margin-bottom: 4px; padding: 2px 8px; border-radius: 999px; background: #fce7f3; color: #be185d !important; font-weight: 800; justify-self: start; }
+
+/* 今日のボス：強さを選ぶチップを横並びに */
+.daily-stars { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-items: center; }
+.daily-stars-label { grid-column: 1 / -1; font-weight: 700; color: var(--muted); }
+.daily-stars .list-link { display: block; margin: 0; padding: 6px 4px; font-size: clamp(0.66rem, 3vw, 0.78rem); text-align: center; white-space: nowrap; min-width: 0; }
