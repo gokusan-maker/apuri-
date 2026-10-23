@@ -1324,3 +1324,10 @@ main select:focus {
 .short-no { display: grid; place-items: center; flex: none; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 999px; font-size: .8rem; font-weight: 800; font-variant-numeric: tabular-nums; color: var(--accent); background: color-mix(in srgb, var(--accent) 12%, transparent); }
 .short-done .short-no { color: #fff; background: var(--good-grad, #22c55e); box-shadow: 0 2px 6px rgb(34 197 94 / 0.35); }
 .short-title { flex: 1; min-width: 0; text-align: left; overflow-wrap: anywhere; }
+
+/* 記録：ミッションのチェックを丸いチェックに、日記・テーマ練習の折りたたみをカードに */
+.mission-check { display: grid; place-items: center; flex: none; width: 22px; height: 22px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--accent) 45%, transparent); font-size: .8rem; font-weight: 900; color: #fff; }
+.mission-check.on { border-color: transparent; background: var(--good-grad, #22c55e); box-shadow: 0 2px 6px rgb(34 197 94 / 0.35); }
+details.diary, details.theme-practice { margin: 8px 0; padding: 0 12px; border-radius: 14px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); }
+details.diary > summary, details.theme-practice > summary { padding: 10px 0; font-weight: 700; cursor: pointer; }
+details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }

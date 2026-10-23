@@ -15,8 +15,8 @@ export function Missions({ state, today, weekly }: { state: MissionState; today:
           const ok = n >= m.target
           return (
             <li key={m.id} className={ok ? 'done' : ''}>
-              <span className="mission-check" aria-hidden="true">
-                {ok ? '✅' : '⬜'}
+              <span className={ok ? 'mission-check on' : 'mission-check'} aria-hidden="true">
+                {ok ? '✓' : ''}
               </span>
               <span className="mission-text">{m.text}</span>
               <span className="mission-progress">{ok ? `+${MISSION_XP}XP` : `${n}/${m.target}`}</span>
