@@ -1360,3 +1360,5 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 /* 発音ボタン（🔊・🐢）：まるいチップにして押せることがわかるように */
 .speak:not(.small) { display: inline-grid; place-items: center; width: 50px; height: 50px; margin: 4px 6px; padding: 0; border-radius: 50%; font-size: 1.4rem; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 12%, rgb(0 0 0 / 0.06)); transition: transform .08s; }
 .speak:not(.small):active { transform: translateY(2px) scale(.96); box-shadow: none; }
+/* ミニゲームのヘッダー：「今日◯しゅるいあそんだ・あと◯で🪙5」を360pxでも1行に */
+.mode-btn .played-today { font-size: clamp(0.68rem, 3.2vw, 0.78rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

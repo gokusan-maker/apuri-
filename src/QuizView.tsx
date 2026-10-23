@@ -418,7 +418,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <span className="mode-change">
           🎮 ミニゲームをえらぶ（{DIRECTIONS.length}種） {menu ? '▲' : '▼'}
         </span>
-        {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ{playedWordGames < WORD_GAMES_GOAL && onCoins ? `（あと${WORD_GAMES_GOAL - playedWordGames}しゅるいで🪙${WORD_GAMES_COINS}）` : ''}</span>}
+        {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ{playedWordGames < WORD_GAMES_GOAL && onCoins ? `・あと${WORD_GAMES_GOAL - playedWordGames}で🪙${WORD_GAMES_COINS}` : ''}</span>}
       </button>
       {onCoins && playedWordGames >= WORD_GAMES_GOAL && !wordClaimed && (
         <button

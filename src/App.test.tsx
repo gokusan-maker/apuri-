@@ -235,7 +235,7 @@ describe('App', () => {
     goMini()
     expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
     fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱'))
-    expect(screen.getByText(/^今日 1 しゅるいあそんだ（あと4しゅるいで/)).toBeInTheDocument()
+    expect(screen.getByText(/^今日 1 しゅるいあそんだ・あと4で🪙/)).toBeInTheDocument()
   })
 
   it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {
