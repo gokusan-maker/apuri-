@@ -40,3 +40,7 @@ it('汎用クラス .done に大きな余白などをつけない（クリアず
   expect(base).not.toMatch(/^\.done\s*\{/m)
   expect(base).toMatch(/^\.done-msg\s*\{/m)
 })
+
+it('カタカナの名前（バッジ・おやつ・ボス・ガチャ結果など）は単語のとちゅうで改行しない設定がある', () => {
+  expect(css).toMatch(/\.badge-name, [^{]*\.gacha-result p \{ word-break: keep-all; overflow-wrap: anywhere; \}/)
+})
