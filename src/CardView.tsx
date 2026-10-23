@@ -68,7 +68,7 @@ export function Card({ card, onAnswer, autoSpeak = false, autoStart = true, jaFi
 
   if (!card) {
     return (
-      <div className="done">
+      <div className="done-msg">
         <p>今日の学習は完了です 🎉 また明日！</p>
         {(onMore || onQuiz) && (
           <div className="actions">

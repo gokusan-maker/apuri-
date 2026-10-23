@@ -970,7 +970,7 @@ function App() {
                 onToggleFavorite={() => setFavorites((f) => toggleFavorite(f, focusCard.id))}
               />
             ) : (
-              <p className="done">{FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードを一周しました 💪</p>
+              <p className="done-msg">{FOCUS_LABEL[cardFocus.kind]}{cardFocus.kind === 'pick' ? 'の' : ''}カードを一周しました 💪</p>
             )}
           </>
         ) : showList ? (

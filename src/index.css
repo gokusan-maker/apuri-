@@ -41,8 +41,8 @@ input, select, textarea { font-family: inherit; }
 }
 
 h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); margin: 8px 0 4px; white-space: nowrap; }
-.stats, .done, .example-ja { color: var(--muted); }
-.done { text-align: center; margin-top: 48px; font-size: 1.1rem; }
+.stats, .done-msg, .example-ja { color: var(--muted); }
+.done-msg { text-align: center; margin-top: 48px; font-size: 1.1rem; }
 
 .card {
   margin-top: 16px;

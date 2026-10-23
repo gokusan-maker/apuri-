@@ -34,3 +34,9 @@ it('polish.css で使う色のトークンは定義ずみのものだけ（var(-
   const used = new Set([...css.matchAll(/var\((--[a-z0-9-]+)\)/g)].map((m) => m[1]))
   expect([...used].filter((t) => !defined.has(t))).toEqual([])
 })
+
+it('汎用クラス .done に大きな余白などをつけない（クリアずみの印として多くの部品で使うため。カード一周のメッセージは .done-msg）', () => {
+  const base = readFileSync('src/index.css', 'utf8')
+  expect(base).not.toMatch(/^\.done\s*\{/m)
+  expect(base).toMatch(/^\.done-msg\s*\{/m)
+})
