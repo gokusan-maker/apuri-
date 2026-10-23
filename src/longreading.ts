@@ -4810,6 +4810,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'A banana with a dark skin from the refrigerator cannot be eaten.', answer: false, why: '第4段落 the fruit inside is still good to eat。' },
     ],
   },
+  {
+    id: 'shadow-clock',
+    title: 'A Clock Made of Shadows',
+    level: '中2（説明文）',
+    paragraphs: [
+      'On a sunny day, your shadow follows you everywhere. A shadow is made when something blocks light. Your body stops the sunlight, so a dark shape appears on the ground ( A ) the sun.',
+      'Have you ever noticed that your shadow changes during the day? In the morning, when the sun is low in the east, your shadow is long and points to the west. Around noon, the sun is high in the sky, so your shadow becomes very short. In the evening, it grows long again and points to the east.',
+      'Long ago, people used these changes to tell the time. Thousands of years ago, people in ancient Egypt used shadow clocks. Later, sundials became common in many parts of the world. A sundial has a stick or a thin plate in the middle. As the sun moves across the sky, the shadow of the stick moves around the dial, ( B ) shows the time.',
+      'Of course, a sundial does not work at night or on cloudy days. Still, you can make a simple one ( C ). Put a stick in the ground on a sunny morning and mark the end of its shadow every hour. You will have your own clock made of shadows.',
+    ],
+    ja: [
+      '晴れた日には、かげがどこへでもついてきます。かげは、何かが光をさえぎるとできます。体が日光を止めるので、太陽と反対側の地面に暗い形があらわれるのです。',
+      '一日のあいだにかげが変わることに気づいたことはありますか。朝、太陽が東の低いところにあるとき、かげは長く、西を向いています。正午ごろには太陽が空の高いところにあるので、かげはとても短くなります。夕方には、かげはまた長くなり、東を向きます。',
+      'むかしの人々は、この変化を使って時刻を知りました。何千年も前、古代エジプトの人々はかげ時計を使っていました。のちに、日時計が世界の多くの場所で使われるようになりました。日時計のまん中には棒やうすい板があります。太陽が空を動くにつれて、棒のかげが文字盤の上を回り、それが時刻を示すのです。',
+      'もちろん、日時計は夜やくもりの日には使えません。それでも、自分でかんたんな日時計を作ることができます。晴れた日の朝に地面に棒を立て、1時間ごとにかげの先に印をつけてみましょう。かげでできた自分だけの時計ができあがります。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['opposite', 'next to', 'under', 'inside'], answer: 0, why: 'opposite ～「～の反対側に」。かげは太陽と反対側にできる。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（かげが動くこと）を受ける非制限用法の which。' },
+      { id: 'C', choices: ['yourself', 'yours', 'your', 'you'], answer: 0, why: 'make ～ yourself「自分で～を作る」。' },
+    ],
+    underline: { phrase: 'mark the end of its shadow every hour', choices: ['1時間ごとにかげの先に印をつける', '1時間ずっとかげを見ている', 'かげが消えるまで待つ', '毎朝かげの長さをはかる'], answer: 0, why: 'mark「印をつける」、the end of its shadow「かげの先」、every hour「1時間ごとに」。' },
+    tf: [
+      { statement: 'A shadow is made when something blocks light.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Your shadow is the longest around noon.', answer: false, why: '第2段落 Around noon ... your shadow becomes very short。' },
+      { statement: 'In the morning, your shadow points to the west.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'People in ancient Egypt used shadow clocks.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'A sundial works well on cloudy days.', answer: false, why: '第4段落 a sundial does not work at night or on cloudy days。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
