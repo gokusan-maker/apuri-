@@ -200,11 +200,11 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
       <button onClick={() => open(u)}>
         <span>
           {stampMode && weakIdsOf(note).includes(u.id) && <span className="unit-weak" aria-label="まちがえたことがある単元">⚠ </span>}
-          {u.title}
-          {stampMode && record[u.id] === undefined && !opened.includes(u.id) && <span className="unit-new"> NEW</span>}
+          {stampMode && record[u.id] === undefined && !opened.includes(u.id) && <span className="unit-new">NEW</span>}
+          <span className="unit-title">{u.title}</span>
         </span>
         <span className="grammar-score">
-          {record[u.id] === undefined ? '未挑戦' : `${record[u.id]} / ${u.questions.length}`}
+          {record[u.id] === undefined ? '' : `${record[u.id]} / ${u.questions.length}`}
           {record[u.id] === u.questions.length ? ' 👑' : ''}
           {stampMode && unitStars(clears[u.id] ?? 0) > 0 && <span className="unit-stars" aria-label={`レベル ★${unitStars(clears[u.id] ?? 0)}`}>{' ' + '★'.repeat(unitStars(clears[u.id] ?? 0))}</span>}
         </span>

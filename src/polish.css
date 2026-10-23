@@ -1711,3 +1711,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 読解：音読・全文・ゆっくりは1行の小さなチップボタン */
 .long-read-row { flex-wrap: nowrap; gap: 6px; margin: 6px 0; }
 .long-read-row .list-link { flex: 1 1 0; min-width: 0; margin: 0; padding: 8px 4px; font-size: 0.82rem; white-space: nowrap; }
+
+/* 文法の単元一覧：NEW は題名の前の小さなピル、まだの単元は「未挑戦」を出さない */
+.grammar-list .unit-new { display: inline-block; margin-right: 6px; padding: 1px 7px; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.62rem; font-weight: 800; line-height: 1.4; vertical-align: 0.12em; }
+.grammar-list .grammar-score:empty { display: none; }

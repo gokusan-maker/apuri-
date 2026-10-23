@@ -838,3 +838,12 @@ it('文法ゲームを全部あそんだ日は、ボタンでごほうびをも�
   render(<Grammar onAllGames={onAllGames} />)
   expect(screen.queryByRole('button', { name: /全部あそんだごほうび/ })).toBeNull()
 })
+
+it('単元一覧：まだの単元は「未挑戦」を出さず、NEW は題名の前のピル', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const t = screen.getAllByText(GRAMMAR[0].title)[0]
+  const btn = t.closest('button')!
+  expect(btn.textContent).not.toContain('未挑戦')
+  expect(btn.querySelector('.unit-new + .unit-title')).not.toBeNull()
+})
