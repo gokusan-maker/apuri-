@@ -87,3 +87,12 @@ it('ショップの上にはいまのコインがピルで出て、お休みチ�
   expect(screen.getByLabelText('いまのコイン 42枚').textContent).toBe('🪙 42')
   expect(screen.getByLabelText(/持っている数 1 \//).textContent).toMatch(/^1\/\d+$/)
 })
+
+it('バトルアイテムは短い効果だけ表示し、くわしい説明は title に入れる', () => {
+  const bag = { bomb: 0, charm: 0, clock: 0, lucky: 0 }
+  render(<Shop wallet={{ coins: 100, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} bag={bag} onBuyBattle={() => {}} />)
+  fireEvent.click(screen.getByRole('tab', { name: /アイテム/ }))
+  expect(document.body.textContent).toContain('会心タイム×2')
+  expect(document.body.textContent).not.toContain('会心の一撃の時間が2倍')
+  expect(screen.getByTitle('この戦いの間、会心の一撃の時間が2倍')).toBeInTheDocument()
+})
