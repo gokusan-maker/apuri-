@@ -39,3 +39,12 @@ it('今日の課題を3つクリアした日は、相棒の四角に🏅の印',
   render(<Monster monster={{ xp: 0 } as never} />)
   expect(document.querySelector('[aria-label="今日の課題3つクリア"]')).toBeNull()
 })
+
+it('🏅に連続達成日数（2日以上）が出る', async () => {
+  const { Monster } = await import('./MonsterView')
+  const { unmount } = render(<Monster monster={{ xp: 0 } as never} trioDone trioStreak={4} />)
+  expect(document.querySelector('[aria-label="今日の課題3つクリア 4日連続"]')?.textContent).toBe('🏅4')
+  unmount()
+  render(<Monster monster={{ xp: 0 } as never} trioDone trioStreak={1} />)
+  expect(document.querySelector('[aria-label="今日の課題3つクリア"]')?.textContent).toBe('🏅')
+})

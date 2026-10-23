@@ -40,6 +40,7 @@ type Props = {
   epithet?: string | null // 二つ名（ボスをたおした回数で変わる）
   mood100?: { points: number; max: number } // ごきげんメーター
   trioDone?: boolean // 今日の課題を3つクリアした日
+  trioStreak?: number // 今日の課題の連続達成日数
   onPetBonus?: () => void // 1日5回なでると「ごきげんMAX」のコイン
   onPetStampTicket?: () => void // なでなでスタンプが10こたまった
   evolved?: boolean
@@ -660,7 +661,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false, trioStreak = 0 }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -716,8 +717,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       <div className={`monster-stage${room ? ` room-${room}` : ''}${mood100 && mood100.points >= mood100.max ? ' stage-max' : ''}`}>
         <RoomScene room={room} align="xMaxYMax" />
         {trioDone && (
-          <span className="stage-trio" aria-label="今日の課題3つクリア">
-            🏅
+          <span className="stage-trio" aria-label={trioStreak >= 2 ? `今日の課題3つクリア ${trioStreak}日連続` : '今日の課題3つクリア'}>
+            🏅{trioStreak >= 2 && <small className="stage-trio-n">{trioStreak}</small>}
           </span>
         )}
       <button
