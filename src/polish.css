@@ -1144,3 +1144,19 @@ main select:focus {
 }
 .mode-menu .direction button { position: relative; padding-right: 10px; }
 .mode-menu .direction .new-mark { position: absolute; top: -6px; right: -4px; margin: 0; padding: 0 5px; font-size: 0.55rem; line-height: 1.5; border-radius: 999px; box-shadow: 0 2px 4px rgb(0 0 0 / 0.2); }
+
+/* ===== 単語ビンゴ：長い単語でもはみ出さない ===== */
+.bingo-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; max-width: 100%; }
+.bingo-cell { min-width: 0; padding: 4px; font-size: clamp(0.7rem, 3.4vw, 1rem); line-height: 1.2; overflow-wrap: anywhere; hyphens: auto; }
+.grammar-bingo .bingo-cell { font-size: 1.4rem; }
+/* ことばさがし：文字マスを立体タイルに */
+.ws-cell {
+  border: 1px solid var(--hair);
+  border-radius: 12px;
+  background: var(--card);
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 16%, rgb(0 0 0 / 0.08));
+  transition: transform 0.08s;
+}
+.ws-cell:active { transform: translateY(2px); }
+.ws-cell.picked { background: var(--accent-grad); color: #fff; border-color: transparent; }
+.ws-cell.found { background: var(--good-grad); color: #fff; border-color: transparent; box-shadow: 0 3px 0 #15803d; }
