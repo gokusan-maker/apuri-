@@ -68,7 +68,7 @@ export function Mole({ words, onAnswer, onClear }: Props) {
       <h2>🔨 単語もぐらたたき</h2>
       {startAt === null ? (
         <>
-          <p className="stats-note">意味に合う英単語のもぐらだけをたたこう！ {MOLE_SECONDS}秒でいくつたたけるかな？{best > 0 ? `　ベスト ${best}匹` : ''}</p>
+          <p className="stats-note">意味に合うもぐらをたたこう（{MOLE_SECONDS}秒）{best > 0 ? `・ベスト ${best}匹` : ''}</p>
           <button
             className="flip"
             onClick={() => {
