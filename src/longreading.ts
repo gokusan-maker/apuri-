@@ -4930,6 +4930,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: "The writer's father wanted to make the writer laugh.", answer: true, why: '第4段落 I wanted to make you laugh.' },
     ],
   },
+  {
+    id: 'cat-whiskers',
+    title: 'Why Do Cats Have Whiskers?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Cats have long, stiff hairs on their faces called whiskers. They may look like simple decorations, but they are actually important tools. Each whisker is thicker than normal hair, and its root goes deep into the skin, where there are many nerves. ( A ) of this, whiskers can feel even very small changes around the cat.',
+      "Whiskers help cats in many ways. They can feel the movement of air, so a cat can sense things around it even in the dark. A cat's whiskers are often about as wide as its body. By touching the sides of a narrow space with its whiskers, a cat can tell ( B ) it can fit through or not.",
+      'Cats also have whiskers above their eyes and on the back of their front legs. The whiskers on their legs help them feel a small animal that they are holding.',
+      "Whiskers fall out and grow back naturally, just like other hair. However, you should never cut a cat's whiskers. ( C ) them, a cat may feel confused and have trouble moving around.",
+    ],
+    ja: [
+      'ねこの顔には、ひげとよばれる長くてかたい毛があります。ただのかざりのように見えるかもしれませんが、じつは大切な道具なのです。ひげの1本1本はふつうの毛より太く、その根もとは皮ふの深くまで入っていて、そこにはたくさんの神経があります。このため、ひげはねこのまわりのとても小さな変化も感じとることができます。',
+      'ひげはいろいろな方法でねこを助けています。ひげは空気の動きを感じることができるので、ねこは暗い中でもまわりにある物に気づけます。ねこのひげは、体の幅とだいたい同じくらいの長さであることが多いです。せまいすき間の両側にひげでふれることで、ねこはそこを通りぬけられるかどうかがわかるのです。',
+      'ねこには、目の上や前足のうしろにもひげがあります。足のひげは、つかまえている小さな動物の様子を感じとるのに役立ちます。',
+      'ひげは、ほかの毛と同じように自然にぬけて、また生えてきます。でも、ねこのひげを切っては絶対にいけません。ひげがないと、ねこはとまどって、うまく動き回れなくなることがあるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because', 'Instead', 'In spite', 'Out'], answer: 0, why: 'Because of this「このため」。直前の「神経がたくさんある」が理由。' },
+      { id: 'B', choices: ['whether', 'that', 'what', 'which'], answer: 0, why: 'whether ～ or not「～かどうか」。' },
+      { id: 'C', choices: ['Without', 'With', 'By', 'For'], answer: 0, why: '「ひげがないと」なので without。' },
+    ],
+    underline: { phrase: 'have trouble moving around', choices: ['うまく動き回れない', '動き回るのが大好きだ', '動き回って問題を起こす', '動き回るのをやめる'], answer: 0, why: 'have trouble ～ing「～するのに苦労する」、move around「動き回る」。' },
+    tf: [
+      { statement: 'Whiskers are thicker than normal hair.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Cats can use their whiskers only in bright places.', answer: false, why: '第2段落 even in the dark。' },
+      { statement: 'Cats have whiskers only on their faces.', answer: false, why: '第3段落 above their eyes and on the back of their front legs。' },
+      { statement: 'Whiskers never grow back after they fall out.', answer: false, why: '第4段落 Whiskers fall out and grow back naturally。' },
+      { statement: "You should not cut a cat's whiskers.", answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
