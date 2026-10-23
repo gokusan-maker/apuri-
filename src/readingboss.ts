@@ -15,19 +15,22 @@ export function maskAnswer(why: string, answer: string): string {
 const STOP = new Set('a an the is are was were be been am to of and or in on at for it its he she they we i you that this with did does do not what why how who when where which his her their my our by from as have has had will would can could there them him me us so but very about into after before than then'.split(' '))
 const stems = (t: string) => new Set((t.toLowerCase().match(/[a-z]+/g) ?? []).filter((x) => x.length > 2 && !STOP.has(x)).map((x) => x.slice(0, 5)))
 
-// ヒント用：問題文（と答え）といちばん多く語が重なる本文の1文（根拠）。重なりが2語未満なら出さない
+// ヒント用：問題文（と答え）といちばん多く語が重なる本文の1文（根拠）。
+// 2語以上重なればその文、1語だけのときは、その1語をふくむ文が1つだけなら出す（あいまいなら出さない）
 export function evidenceSentence(p: LongPassage, text: string): string | undefined {
   const want = stems(text)
   let best: string | undefined
-  let score = 1
+  let score = 0
+  let ties = 0
   for (const sent of p.paragraphs.flatMap((t) => splitSentences(t))) {
     const n = [...stems(sent)].filter((x) => want.has(x)).length
     if (n > score) {
       score = n
       best = sent
-    }
+      ties = 1
+    } else if (n === score && n > 0) ties++
   }
-  return best
+  return score >= 2 || (score === 1 && ties === 1) ? best : undefined
 }
 
 // 単語帳のレベル → 長文のレベル（中1・中2は中2の長文、中3は中3、そのほかは高校入試。なければ全部から）

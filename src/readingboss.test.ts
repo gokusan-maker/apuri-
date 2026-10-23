@@ -64,3 +64,9 @@ it('ボスのヒント：空所は答えの語をかくした解説、○×と�
   expect(withQuote.length).toBeGreaterThan(0)
   for (const q of withQuote) expect(p.paragraphs.some((t) => t.includes(q.hint!.quote!))).toBe(true)
 })
+
+it('ボスのヒント：○×・英問英答の9割以上に根拠の1文が出る（あいまいなときは出さない）', () => {
+  const qs = LONG_PASSAGES.filter((p) => !p.titleQ && !p.paraSeq).flatMap(passageQs).filter((q) => !q.blank)
+  const withQuote = qs.filter((q) => q.hint?.quote).length
+  expect(withQuote / qs.length).toBeGreaterThan(0.9)
+})
