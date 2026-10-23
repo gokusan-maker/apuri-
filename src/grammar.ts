@@ -2989,8 +2989,8 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What happened to your bike?', ja: 'あなたの自転車に何があったの？' },
     ],
     questions: [
-      { sentence: 'Who ___ this picture? — My sister did.', choices: ['painted', 'did paint', 'did you paint'], answer: 0, why: 'Who が主語なので did を使わず Who painted 〜? の語順。' },
-      { sentence: 'Who ___ Chinese in your class?', choices: ['speaks', 'speak', 'does speak'], answer: 0, why: '疑問詞の主語は3人称単数あつかいなので speaks。' },
+      { sentence: 'Who ___ this picture? — My sister did.', choices: ['painted', 'did she paint', 'did you paint'], answer: 0, why: 'Who が主語なので did を使わず Who painted 〜? の語順。' },
+      { sentence: 'Who ___ Chinese in your class?', choices: ['speaks', 'speak', 'is speak'], answer: 0, why: '疑問詞の主語は3人称単数あつかいなので speaks。' },
       { sentence: 'Who cleaned the room? — Ken ___.', choices: ['did', 'was', 'cleaned it did'], answer: 0, why: '過去の文の答えは〈主語 ＋ did〉。' },
     ],
   },

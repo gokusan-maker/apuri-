@@ -4570,6 +4570,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Pill bugs help make good soil.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'dog-tails',
+    title: 'What Is a Dog Saying with Its Tail?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Many people think that a dog wags its tail only when it is happy. This is sometimes true, but not always. Dogs cannot talk like us, so they use their tails ( A ) send different messages to people and other dogs.',
+      'To understand a dog, look at how high its tail is. When a dog feels relaxed, its tail is usually at a natural height. When it holds its tail high, it may be excited or ready to defend itself. A tail held low or between the back legs often means that the dog is afraid or nervous.',
+      'The speed of the wag is also important. A slow wag may show that the dog is not sure about something. A fast, wide wag that moves the whole body usually means the dog is glad to see you. However, a quick, stiff wag with the tail held high can be a warning, ( B ) be careful.',
+      'Of course, a tail is only one part of the message. Dogs also use their ears, eyes, and the way they stand. If you watch all of these signs together, you will be able to understand a dog much ( C ) than before.',
+    ],
+    ja: [
+      '多くの人は、犬がしっぽをふるのはうれしいときだけだと思っています。それは正しいこともありますが、いつもではありません。犬は私たちのように話すことができないので、しっぽを使って人やほかの犬にさまざまなメッセージを送っているのです。',
+      '犬を理解するには、しっぽの高さを見てみましょう。犬がリラックスしているとき、しっぽはたいてい自然な高さにあります。しっぽを高く上げているときは、興奮しているか、身を守ろうとしているのかもしれません。しっぽが低かったり後ろ足のあいだに入っていたりするときは、たいてい犬がこわがっているか、不安になっていることを意味します。',
+      'しっぽをふる速さも大切です。ゆっくりふるのは、犬が何かについて自信がないことを示しているのかもしれません。体全体がゆれるほど速く大きくふるのは、たいていあなたに会えてうれしいという意味です。しかし、しっぽを高く上げたまま、すばやくかたくふるのは警告のことがあるので、気をつけましょう。',
+      'もちろん、しっぽはメッセージの一部にすぎません。犬は耳や目、立ち方も使います。これらのサインをすべていっしょに見れば、前よりもずっとよく犬のことがわかるようになるでしょう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'at', 'by'], answer: 0, why: '不定詞の副詞的用法「〜するために」。use 〜 to send「送るために〜を使う」。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'because'], answer: 0, why: '「警告のことがある、だから気をつけて」と結果を表すので so。' },
+      { id: 'C', choices: ['better', 'well', 'best', 'more good'], answer: 0, why: 'than があるので比較級。well の比較級は better。much は比較級を強める。' },
+    ],
+    underline: { phrase: 'ready to defend itself', choices: ['身を守る準備ができている', '遊ぶ準備ができている', '眠る準備ができている', '食べる準備ができている'], answer: 0, why: 'be ready to do「〜する準備ができている」、defend itself「自分の身を守る」。' },
+    tf: [
+      { statement: 'Dogs wag their tails only when they are happy.', answer: false, why: '第1段落 This is sometimes true, but not always。' },
+      { statement: 'A tail between the back legs often shows fear.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'A fast, wide wag usually means the dog is glad to see you.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Dogs use only their tails to send messages.', answer: false, why: '第4段落 Dogs also use their ears, eyes, and the way they stand。' },
+      { statement: 'A slow wag may mean the dog is not sure about something.', answer: true, why: '第3段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
