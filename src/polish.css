@@ -1224,3 +1224,29 @@ main select:focus {
   line-height: 1.35;
 }
 .stage-head > span { font-size: clamp(0.7rem, 3.3vw, 0.82rem); border-radius: 14px !important; text-align: center !important; }
+
+/* ===== 文法の単元ページ：ほかの練習のタイル・関連単元のチップ ===== */
+.unit-extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin: 12px 0; }
+.unit-extra {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  grid-template-areas: 'icon name' 'icon sub';
+  align-items: center;
+  column-gap: 6px;
+  padding: 10px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  color: var(--fg);
+  text-align: left;
+  box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.08)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.unit-extra:active { transform: translateY(2px); box-shadow: none; }
+.unit-extra-icon { grid-area: icon; font-size: 1.4rem; }
+.unit-extra-name { grid-area: name; font-size: 0.82rem; font-weight: 900; line-height: 1.25; }
+.unit-extra small { grid-area: sub; font-size: 0.68rem; color: var(--muted); }
+.related-units { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 0.8rem; color: var(--muted); }
+.related-units .list-link { display: inline-block; margin: 0; padding: 4px 12px; font-size: 0.8rem; }
+.unit-extra { grid-template-columns: 1fr; grid-template-areas: 'icon' 'name' 'sub'; justify-items: center; text-align: center; row-gap: 2px; padding: 10px 6px; }
+.unit-extra-name { font-size: clamp(0.72rem, 3.4vw, 0.85rem); white-space: nowrap; }

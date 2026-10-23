@@ -692,24 +692,34 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
             ))}
           </p>
         )}
-        {unit.examples.length > 0 && (
-          <button className="list-link grammar-order-btn" onClick={() => setOrdering(true)}>
-            🧩 例文の並べかえに挑戦（{unit.examples.length}問）
+        <div className="unit-extras" role="group" aria-label="ほかの練習">
+          {unit.examples.length > 0 && (
+            <button className="unit-extra" onClick={() => setOrdering(true)}>
+              <span className="unit-extra-icon" aria-hidden="true">🧩</span>
+              <span className="unit-extra-name">例文の並べかえ</span>
+              <small>{unit.examples.length}問に挑戦</small>
+            </button>
+          )}
+          <button className="unit-extra" onClick={() => setPrinting(true)}>
+            <span className="unit-extra-icon" aria-hidden="true">📄</span>
+            <span className="unit-extra-name">おさらいプリント</span>
+            <small>印刷できる</small>
           </button>
-        )}
-        <button className="list-link grammar-order-btn" onClick={() => setPrinting(true)}>
-          📄 おさらいプリント（印刷できる）
-        </button>
-        {unit.examples.length > 0 && (
-          <button className="list-link grammar-order-btn" onClick={() => setDict(true)}>
-            ✍️ 例文のディクテーション（聞いて書く）
-          </button>
-        )}
-        {unit.examples.length > 0 && (
-          <button className="list-link grammar-order-btn" onClick={() => setShadow(true)}>
-            🗣 例文のシャドーイング（聞いてまねする）
-          </button>
-        )}
+          {unit.examples.length > 0 && (
+            <button className="unit-extra" onClick={() => setDict(true)}>
+              <span className="unit-extra-icon" aria-hidden="true">✍️</span>
+              <span className="unit-extra-name">ディクテーション</span>
+              <small>聞いて書く</small>
+            </button>
+          )}
+          {unit.examples.length > 0 && (
+            <button className="unit-extra" onClick={() => setShadow(true)}>
+              <span className="unit-extra-icon" aria-hidden="true">🗣</span>
+              <span className="unit-extra-name">シャドーイング</span>
+              <small>聞いてまねする</small>
+            </button>
+          )}
+        </div>
         {stampMode && (
           <button
             className="boss-btn grammar-monster-btn"
