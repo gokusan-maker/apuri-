@@ -4840,6 +4840,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'A sundial works well on cloudy days.', answer: false, why: '第4段落 a sundial does not work at night or on cloudy days。' },
     ],
   },
+  {
+    id: 'popcorn',
+    title: 'Why Does Popcorn Pop?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Popcorn is a popular snack at movie theaters and parties. But have you ever wondered why a small, hard corn kernel suddenly turns into a big, white, fluffy snack? The secret is ( A ) inside the kernel.',
+      'Each kernel of popcorn has a hard outer shell. Inside the shell, there is soft starch and a tiny amount of water. When the kernel is heated, the water turns into steam. The steam cannot escape because the shell is so hard, so the pressure inside becomes higher and higher.',
+      'When the temperature reaches about 180 degrees Celsius, the shell finally breaks open with a loud pop. At that moment, the hot, soft starch inside spreads out quickly and then cools down. That is ( B ) popcorn becomes light and full of air.',
+      'Not every kind of corn can pop. The corn we usually eat at dinner has a softer shell, so the steam escapes before the pressure gets high enough. That is why farmers grow a special kind of corn just for popcorn. Next time you eat popcorn, think ( C ) the tiny explosion inside each kernel.',
+    ],
+    ja: [
+      'ポップコーンは映画館やパーティーで人気のおやつです。でも、小さくてかたいトウモロコシのつぶが、なぜ急に大きくて白い、ふわふわのおやつに変わるのか、ふしぎに思ったことはありますか。そのひみつは、つぶの中の水です。',
+      'ポップコーンのつぶには、かたい外側のからがあります。からの中には、やわらかいでんぷんとほんの少しの水があります。つぶを熱すると、水は水蒸気に変わります。からがとてもかたいので水蒸気はにげることができず、中の圧力がどんどん高くなっていきます。',
+      '温度がおよそ180度に達すると、からはついに大きなポンという音を立てて割れます。その瞬間、中の熱くてやわらかいでんぷんが急に広がり、そして冷えて固まります。だからポップコーンは軽くて、空気がたくさん入っているのです。',
+      'どんなトウモロコシでもはじけるわけではありません。夕食でふつう食べるトウモロコシは、からがやわらかいので、圧力が十分に高くなる前に水蒸気がにげてしまいます。そのため農家の人は、ポップコーン用の特別なトウモロコシを育てているのです。今度ポップコーンを食べるときは、ひとつぶひとつぶの中で起きている小さな爆発のことを考えてみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['water', 'sugar', 'air', 'oil'], answer: 0, why: '第2段落：つぶの中の少しの水が水蒸気になることが「ひみつ」。' },
+      { id: 'B', choices: ['why', 'what', 'where', 'when'], answer: 0, why: 'That is why ～「そういうわけで～」。' },
+      { id: 'C', choices: ['about', 'with', 'for', 'at'], answer: 0, why: 'think about ～「～について考える」。' },
+    ],
+    underline: { phrase: 'the steam escapes before the pressure gets high enough', choices: ['圧力が十分に高くなる前に水蒸気がにげてしまう', '水蒸気がにげたあとに圧力が高くなる', '圧力が高すぎて水蒸気がこおる', '水蒸気が圧力を下げずにとどまる'], answer: 0, why: 'escape「にげる」、before ～「～する前に」、high enough「十分に高い」。' },
+    tf: [
+      { statement: 'A popcorn kernel has a hard outer shell.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'There is no water inside a popcorn kernel.', answer: false, why: '第2段落 a tiny amount of water。' },
+      { statement: 'The shell breaks open at about 180 degrees Celsius.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Any kind of corn can become popcorn.', answer: false, why: '第4段落 Not every kind of corn can pop。' },
+      { statement: 'Farmers grow special corn for popcorn.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
