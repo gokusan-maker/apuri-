@@ -4900,6 +4900,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The ice on a lake helps keep the water under it from freezing.', answer: true, why: '第3段落の内容と合う。' },
     ],
   },
+  {
+    id: 'father-bento',
+    title: "My Father's Lunch Box",
+    level: '中2（物語）',
+    paragraphs: [
+      'My father works at a hospital, and he usually leaves home very early. One morning, my mother had a cold, so my father said, "I will make lunch for everyone today." I was ( A ) because he had never cooked before.',
+      'At lunchtime, I opened my lunch box. There was a big rice ball, a sausage, and an egg that was a little burned. I felt a little embarrassed, so I tried to eat quickly before my friends saw it.',
+      'But my friend Rina looked at it and said, "Wow, your rice ball looks like a cat!" I looked again. It really had two small ears made of seaweed. My friends gathered around my desk, and everyone said it was cute. I felt happy and proud ( B ) my father.',
+      'That evening, I said to my father, "Thank you for lunch. Everyone loved the cat." He smiled and said, "I wanted to make you laugh." Now I make my own lunch ( C ) Sunday. Someday, I want to make a lunch for my father, too.',
+    ],
+    ja: [
+      '父は病院で働いていて、ふだんはとても早く家を出ます。ある朝、母がかぜをひいたので、父は「今日はぼくがみんなのお弁当を作るよ」と言いました。父は一度も料理をしたことがなかったので、私は心配でした。',
+      'お昼の時間に、私はお弁当箱を開けました。大きなおにぎりと、ソーセージと、少しこげた卵が入っていました。私は少しはずかしかったので、友だちに見られる前に急いで食べようとしました。',
+      'ところが、友だちのリナがそれを見て「わあ、あなたのおにぎり、ネコみたい！」と言いました。もう一度見てみると、本当にのりで作られた小さな耳が2つついていたのです。友だちが私の机のまわりに集まってきて、みんなかわいいと言いました。私はうれしくなり、父のことをほこらしく思いました。',
+      'その夜、私は父に「お弁当ありがとう。ネコ、みんなに大人気だったよ」と言いました。父はにっこりして「笑わせたかったんだ」と言いました。今では、私は毎週日曜日に自分のお弁当を作っています。いつか、父のためにもお弁当を作りたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['worried', 'glad', 'bored', 'sleepy'], answer: 0, why: '父は一度も料理をしたことがなかったので「心配だった」。' },
+      { id: 'B', choices: ['of', 'at', 'for', 'with'], answer: 0, why: 'be proud of ～「～をほこりに思う」。' },
+      { id: 'C', choices: ['every', 'all', 'each of', 'many'], answer: 0, why: 'every Sunday「毎週日曜日に」。' },
+    ],
+    underline: { phrase: 'made of seaweed', choices: ['のりで作られた', 'のりを食べた', 'のりを買ってきた', 'のりがきらいな'], answer: 0, why: 'be made of ～「～で作られている」。seaweed は「のり・海そう」。' },
+    tf: [
+      { statement: "The writer's mother made lunch that morning.", answer: false, why: '第1段落 my father said, "I will make lunch for everyone today."' },
+      { statement: 'The egg in the lunch box was a little burned.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Rina said the rice ball looked like a dog.', answer: false, why: '第3段落 your rice ball looks like a cat。' },
+      { statement: 'The rice ball had ears made of seaweed.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: "The writer's father wanted to make the writer laugh.", answer: true, why: '第4段落 I wanted to make you laugh.' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
