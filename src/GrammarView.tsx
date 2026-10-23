@@ -492,8 +492,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
               return (
                 <details key={g} className="grammar-grade-fold">
                   <summary>
-                    {g}の単元（全問正解 {us.filter((u) => record[u.id] === u.questions.length).length} / {us.length}）
-                    {us.every((u) => record[u.id] === u.questions.length) && ' 🏅'}
+                    {g}の単元{us.every((u) => record[u.id] === u.questions.length) && ' 🏅'}
+                    <span className="fold-meta" aria-label={`全問正解 ${us.filter((u) => record[u.id] === u.questions.length).length} / ${us.length}`}>
+                      {us.filter((u) => record[u.id] === u.questions.length).length}/{us.length}
+                    </span>
                   </summary>
                   {us.every((u) => record[u.id] === u.questions.length) && (
                     <div className="grade-certificate" role="note" aria-label={`${g}の賞状`}>
@@ -511,7 +513,10 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         )}
         {stampMode ? (
           <details className="grammar-records">
-            <summary>📊 文法の記録（全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元）</summary>
+            <summary>
+              📊 文法の記録
+              <span className="fold-meta">{units.filter((u) => record[u.id] === u.questions.length).length}/{units.length}</span>
+            </summary>
         <p className="stats-note grammar-total">
           全問正解 {units.filter((u) => record[u.id] === u.questions.length).length} / {units.length} 単元
         </p>

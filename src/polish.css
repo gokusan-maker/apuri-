@@ -1617,3 +1617,5 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 読解のジャンル：解いた数は右はしの小さなバッジ（2行に割れない） */
 .long-genre-fold > summary { display: flex; align-items: center; }
 .long-genre-fold .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; white-space: nowrap; }
+.grammar-grade-fold > summary, .grammar-records > summary { display: flex; align-items: center; }
+.grammar-grade-fold .fold-meta, .grammar-records .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; white-space: nowrap; }
