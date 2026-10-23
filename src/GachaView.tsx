@@ -146,7 +146,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </span>
           <span>
             <strong>🎯 今日のピックアップ</strong>
-            <br />今日はだれかが出やすい日…？ なにが出るかはお楽しみ！
+            <br />だれが出やすいかはお楽しみ！
           </span>
         </div>
       )}

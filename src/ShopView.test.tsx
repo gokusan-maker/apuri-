@@ -75,3 +75,9 @@ it('部屋をためしているあいだ、名前と「この部屋を買う」�
   fireEvent.click(within(st).getByRole('button', { name: /この部屋を買う/ }))
   expect(onBuy).toHaveBeenCalledWith(target.id)
 })
+
+it('属性のタマゴのボタンは題名・値段・短い説明だけ', () => {
+  render(<Shop initialTab="gacha" wallet={{ coins: 500, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} attrEgg={{ price: 120, left: 3, onBuy: () => null }} />)
+  const b = screen.getByText('🥚 属性のタマゴ').closest('button')!
+  expect(b.textContent).toBe('🥚 属性のタマゴ🪙120文法・読解のなかま')
+})

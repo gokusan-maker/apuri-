@@ -249,8 +249,9 @@ function AttrEgg({ price, left, pieces, onBuy, coins }: { price: number; left: n
   return (
     <div className="attr-egg">
       <button className="attr-egg-btn" disabled={left === 0 || coins < price} onClick={() => setMsg(onBuy() ?? '')}>
-        🥚 属性のタマゴ（文法・読解のなかま）🪙{price}
-        <small>{left === 0 ? 'もう全員なかまになったよ！' : 'なにが生まれるかはお楽しみ！'}</small>
+        <span className="attr-egg-title">🥚 属性のタマゴ</span>
+        <span className="attr-egg-price">🪙{price}</span>
+        <small>{left === 0 ? 'もう全員なかまになったよ！' : '文法・読解のなかま'}</small>
       </button>
       {pieces !== undefined && left > 0 && (
         <p className="stats-note">🥚 タマゴのかけら {pieces} / {PIECES_FOR_EGG}</p>

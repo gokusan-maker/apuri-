@@ -163,7 +163,7 @@ describe('App', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 200, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('コイン 200枚・ショップを開く'))
-    fireEvent.click(screen.getByText(/属性のタマゴ（文法・読解のなかま）/))
+    fireEvent.click(screen.getByText('🥚 属性のタマゴ'))
     expect(screen.getByText(/タマゴのかけら 0 \/ 5/)).toBeInTheDocument()
     expect(screen.getByText(/が仲間になった！/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(80)

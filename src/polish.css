@@ -1637,3 +1637,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .acc-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 6px; }
 .acc-chip { padding: 3px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); color: var(--muted); font-size: 0.74rem; font-weight: 700; white-space: nowrap; }
 .acc-chip b { color: var(--accent); font-weight: 800; }
+
+/* 属性のタマゴ：題名＋値段のピル、下に短い説明 */
+.attr-egg-btn { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 8px; row-gap: 2px; text-align: left; padding: 12px 14px; }
+.attr-egg-btn .attr-egg-title { font-size: 1rem; font-weight: 800; }
+.attr-egg-btn .attr-egg-price { grid-row: span 2; padding: 4px 12px; border-radius: 999px; background: rgb(255 255 255 / 0.22); font-weight: 800; white-space: nowrap; }
+.attr-egg-btn small { opacity: 0.9; }

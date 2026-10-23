@@ -40,7 +40,7 @@ it('ガチャには出る確率や、何が出やすいかを書かない（お�
   expect(document.body.textContent).not.toMatch(/\d+%/)
   expect(document.body.textContent).not.toContain('コンコン')
   expect(document.body.textContent).not.toContain('ドラコ')
-  expect(screen.getByText(/なにが出るかはお楽しみ/)).toBeInTheDocument()
+  expect(screen.getByText(/お楽しみ/)).toBeInTheDocument()
 })
 
 it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {
