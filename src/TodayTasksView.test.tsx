@@ -18,3 +18,18 @@ it('今日の課題を3つクリアするとトリオボーナスを1日1回受�
   expect(screen.getByText(/トリオボーナス受け取りずみ/)).toBeInTheDocument()
   expect(localStorage.getItem('eitan:trio-day')).toBe(day)
 })
+
+it('トリオボーナスを受け取った瞬間だけ紙ふぶきが舞う（あとで開いたときは出ない）', () => {
+  localStorage.clear()
+  const day = '2026-10-22'
+  localStorage.setItem('eitan:today-words', day)
+  localStorage.setItem('eitan:grammar-daily', day)
+  localStorage.setItem('eitan:daily-short', day)
+  const { unmount } = render(<TodayTasks today={day} onGo={() => {}} onTrio={() => {}} />)
+  expect(screen.queryByLabelText('トリオ達成のお祝い')).toBeNull()
+  fireEvent.click(screen.getByText(/トリオボーナスを受け取る/))
+  expect(screen.getByLabelText('トリオ達成のお祝い').querySelectorAll('.confetti').length).toBe(12)
+  unmount()
+  render(<TodayTasks today={day} onGo={() => {}} onTrio={() => {}} />)
+  expect(screen.queryByLabelText('トリオ達成のお祝い')).toBeNull()
+})

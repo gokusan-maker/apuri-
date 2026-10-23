@@ -1165,3 +1165,4 @@ main select:focus {
 .gacha-attr { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 4px 6px; font-size: 0.78rem; color: var(--muted); }
 .gacha-hello { margin: 8px 0; padding: 8px 12px; border-radius: 14px; background: color-mix(in srgb, var(--accent) 6%, var(--card)); font-size: 0.9rem; }
 .gacha-result .flip + .flip { margin-top: 8px; }
+.today-tasks { position: relative; overflow: hidden; } .trio-party { position: absolute; inset: 0; pointer-events: none; }

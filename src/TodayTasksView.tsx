@@ -11,6 +11,7 @@ type Props = {
 // ホームの「今日の課題」：今日の単語（4択）・今日の文法・今日の読解（今日の単語が出てくるかんたんな短い英文）
 export function TodayTasks({ today, onGo, onTrio }: Props) {
   const [trio, setTrio] = useState(() => loadTrioDay() === today)
+  const [party, setParty] = useState(false) // 受け取った瞬間だけ紙ふぶき
   const g = dailyGrammar(today)
   const r = dailyShort(today)
   const ws = todayWords(today)
@@ -47,6 +48,7 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
             onClick={() => {
               saveTrioDay(today)
               setTrio(true)
+              setParty(true)
               const st = claimTrioStreak(today)
               onTrio?.(TRIO_XP, st.ticket, st.week)
             }}
@@ -54,6 +56,18 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
             🎁 3つクリア！ トリオボーナスを受け取る（3体に +{TRIO_XP}XP）
           </button>
         ))}
+      {party && (
+        <span className="trio-party" aria-label="トリオ達成のお祝い">
+          {Array.from({ length: 12 }, (_, i) => (
+            <span
+              key={i}
+              className="confetti"
+              aria-hidden="true"
+              style={{ left: `${(i * 83) % 100}%`, background: ['#f97316', '#facc15', '#22c55e', '#3b82f6', '#a855f7', '#ec4899'][i % 6], animationDelay: `${(i % 6) * 0.12}s` }}
+            />
+          ))}
+        </span>
+      )}
     </section>
   )
 }
