@@ -2271,4 +2271,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did Lucas mean by "the key that opened the door"?', choices: ['The notebook helped him make friends.', 'He found a real key in the notebook.', 'The notebook had the classroom key.', 'He wanted to go home to Brazil.'], answer: 0, why: '第3段落：ノートがきっかけでみんなと話せるようになった、というたとえ。' },
     ],
   },
+{
+    id: 'adv-placebo',
+    title: 'The Power of Expectation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When researchers test a new medicine, they usually give some patients the real drug and others a sugar pill that looks exactly the same. Surprisingly, a considerable number of patients who receive the sugar pill report that they feel better. This phenomenon, known as the placebo effect, has long been treated as a nuisance, something that must be subtracted from the results ( A ) the true effect of the drug can be measured.",
+      "In recent decades, however, scientists have begun to take the placebo effect seriously as a subject in its own right. Studies suggest that expectation can influence how the brain processes pain, and that the setting in which treatment is given, including the warmth and confidence of the doctor, may shape how patients feel. Even the color and price of a pill have been reported to make a difference. Such findings imply that healing is not ( B ) a matter of chemistry but also of meaning.",
+      "This raises an awkward ethical question. If a harmless pill can make people feel better, may doctors prescribe one without telling the truth? Most would answer no, since deceiving patients undermines the trust on ( C ) medicine depends. Interestingly, some small studies have found that placebos can help even when patients are told openly that they are taking a pill with no active ingredients. If this proves reliable, it may be possible to use the power of expectation without sacrificing honesty.",
+    ],
+    ja: [
+      '研究者が新しい薬を試すとき、ふつう一部の患者には本物の薬を、ほかの患者には見た目がまったく同じ砂糖の錠剤をあたえる。おどろいたことに、砂糖の錠剤をもらった患者のかなりの数が、具合がよくなったと報告する。プラセボ効果として知られるこの現象は、長いあいだやっかいなものとあつかわれてきた。つまり、薬の本当の効果を測るために、結果から差し引かなければならないものだったのである。',
+      'しかしここ数十年、科学者たちはプラセボ効果をそれ自体ひとつの研究対象として真剣にとらえはじめた。研究によれば、期待は脳が痛みを処理するしかたに影響しうるし、医師のあたたかさや自信もふくめ、治療があたえられる状況が患者の感じ方を左右するかもしれない。錠剤の色や値段でさえちがいを生むと報告されている。こうした発見は、いやしが化学の問題であるだけでなく、意味の問題でもあることを示している。',
+      'これは気まずい倫理的な問いを生む。害のない錠剤で人々の気分がよくなるなら、医師は本当のことを言わずにそれを処方してもよいのだろうか。たいていの人は「いいえ」と答えるだろう。患者をだますことは、医療がよりどころにしている信頼をそこなうからだ。興味深いことに、有効成分のない錠剤を飲んでいると患者にはっきり伝えた場合でも、プラセボが効くことがあると示した小規模な研究がいくつかある。もしこれが確かなものだとわかれば、正直さをぎせいにすることなく期待の力を使えるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'even if', 'as though', 'unless'], answer: 0, why: '「薬の本当の効果を測れるように」という目的なので so that（～できるように）。' },
+      { id: 'B', choices: ['only', 'never', 'hardly', 'less'], answer: 0, why: 'not only A but also B「A だけでなく B も」。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'whom'], answer: 0, why: 'medicine depends on the trust の on が前に出た形。前置詞のあとの関係代名詞（物）は which。that は前置詞のあとに置けない。' },
+    ],
+    tf: [
+      { statement: 'プラセボ効果は、長いあいだ薬の研究でじゃまなものとあつかわれてきた。', answer: true, why: '第1段落 has long been treated as a nuisance。' },
+      { statement: '筆者によれば、錠剤の色や値段は患者の感じ方に影響しないことがわかっている。', answer: false, why: '第2段落 Even the color and price of a pill have been reported to make a difference。' },
+      { statement: '筆者は、医師が患者をだましてプラセボを処方することを強くすすめている。', answer: false, why: '第3段落 deceiving patients undermines the trust。' },
+    ],
+    qa: [
+      { q: 'What did some small studies find about placebos?', choices: ['They can help even when patients know the pill has no active ingredients.', 'They only work when doctors lie to patients.', 'They are more effective than real drugs.', 'They have no effect on pain at all.'], answer: 0, why: '第3段落 placebos can help even when patients are told openly 〜。' },
+    ],
+  },
 ]
