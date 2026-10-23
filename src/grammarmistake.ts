@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'to-ing': { wrong: 'When it comes to cook, my father is the best.', right: 'When it comes to cooking, my father is the best.', why: 'when it comes to の to は前置詞。あとの動詞は ～ing。' },
   'trouble-ing': { wrong: 'I had trouble to find the station.', right: 'I had trouble finding the station.', why: 'have trouble のあとは ～ing。to 不定詞は使わない。' },
   'make-sure': { wrong: 'Make sure to locking the door.', right: 'Make sure to lock the door.', why: 'make sure to のあとは動詞の原形。' },
