@@ -1401,3 +1401,10 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
   :root:not([data-theme="light"]) .danger-link { color: #fca5a5; border-color: rgb(248 113 113 / 0.5); background: rgb(248 113 113 / 0.08); }
 }
 :root[data-theme="dark"] .danger-link { color: #fca5a5; border-color: rgb(248 113 113 / 0.5); background: rgb(248 113 113 / 0.08); }
+
+/* 結果画面の「まちがえた単語」：見出しつきのカードにして、英語と訳を2列で見やすく */
+.missed-list { margin: 12px 0; padding: 4px 14px; border-radius: 14px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); }
+.missed-list::before { content: attr(aria-label); display: block; padding: 8px 0 4px; font-size: .78rem; font-weight: 800; color: var(--again, #dc2626); letter-spacing: .04em; }
+.missed-list li { display: grid; grid-template-columns: minmax(0, 42%) 1fr; gap: 10px; align-items: baseline; padding: 7px 0; border-bottom: 1px solid var(--hair, rgba(0,0,0,.08)); }
+.missed-list li:last-child { border-bottom: none; }
+.missed-list strong { margin: 0; overflow-wrap: anywhere; }

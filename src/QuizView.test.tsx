@@ -226,7 +226,7 @@ it('結果画面から、まちがえた単語をまとめて★に入れる', (
   const list = screen.getByRole('list', { name: 'まちがえた単語' })
   expect(list.querySelectorAll('li')).toHaveLength(2)
   for (const id of wrongs) expect(list.textContent).toContain(words.find((w) => w.id === id)!.ja)
-  fireEvent.click(screen.getByText('まちがえた単語を★お気に入りに入れる'))
+  fireEvent.click(screen.getByText('★ まちがえた単語をお気に入りに'))
   expect(got).toEqual([wrongs])
   expect(screen.getByText('★に入れました')).toBeDisabled()
 })

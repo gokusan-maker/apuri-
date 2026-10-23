@@ -957,7 +957,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
               setFavDone(true)
             }}
           >
-            {favDone ? '★に入れました' : 'まちがえた単語を★お気に入りに入れる'}
+            {favDone ? '★に入れました' : '★ まちがえた単語をお気に入りに'}
           </button>
         )}
         <button className="flip" onClick={() => (onRestart ? onRestart() : restart())}>
