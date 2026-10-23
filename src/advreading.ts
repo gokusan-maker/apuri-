@@ -2103,4 +2103,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did the writer start the book box?', choices: ['To share books with people waiting for the bus.', 'To sell old books for money.', 'To stop people from using phones at school.', 'To find a lost picture book.'], answer: 0, why: '第1段落 I wondered if I could share some of my old books with them。' },
     ],
   },
+{
+    id: 'adv-curse-knowledge',
+    title: 'Why Experts Explain Badly',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It seems natural to assume that the people who know a subject best are also the best at teaching it. Experience, however, often suggests otherwise. A brilliant scientist may give a lecture that leaves students more confused than before, ( A ) a graduate student who learned the material only recently explains it with surprising clarity.",
+      "Psychologists call one reason for this the \"curse of knowledge.\" Once we understand something, it becomes remarkably difficult to imagine what it was like not to understand it. Experts skip steps that seem obvious to them, use terms they no longer notice are technical, and underestimate how long a beginner needs. Their knowledge, in other words, hides from them the very gaps they ought to be filling.",
+      "The curse cannot simply be removed by trying harder, since it works without our noticing it. What helps is to test our explanations against real learners: asking them to restate an idea in their own words, or watching where they hesitate. Seen in this light, a confused listener is not a failure ( B ) valuable evidence. Good teaching depends less on how much we know than on how willing we are to see our subject through ( C ) eyes.",
+    ],
+    ja: [
+      'ある分野をいちばんよく知っている人が、それを教えるのもいちばんうまいと考えるのは自然なことに思える。しかし経験は、しばしばそうではないことを示している。すぐれた科学者が、学生を前よりもかえって混乱させる講義をする一方で、その内容を最近学んだばかりの大学院生が、おどろくほどわかりやすく説明することがある。',
+      '心理学者は、その理由の一つを「知識の呪い」とよぶ。いったん何かを理解すると、それを理解していなかったときにどうだったかを想像するのが非常にむずかしくなる。専門家は自分には当たり前に思える手順を飛ばし、もはや専門用語だと気づかない言葉を使い、初心者に必要な時間を少なく見積もる。言いかえれば、専門家の知識そのものが、本来うめるべきまさにそのすき間を本人から見えなくしてしまうのである。',
+      'この呪いは、気づかないうちに働くので、がんばるだけではとりのぞけない。役に立つのは、実際の学習者を相手に自分の説明をためしてみることだ。考えを自分の言葉で言い直してもらったり、どこで言葉につまるかを観察したりするのである。このように考えると、とまどっている聞き手は失敗ではなく、貴重な証拠である。よい教え方は、どれだけ多くを知っているかよりも、自分の分野を他人の目を通して見ようとする気持ちがどれだけあるかにかかっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so that'], answer: 0, why: '「科学者は混乱させる一方で、大学院生はわかりやすく説明する」という対比なので while。' },
+      { id: 'B', choices: ['but', 'and', 'or', 'nor'], answer: 0, why: 'not A but B「A ではなく B」。' },
+      { id: 'C', choices: ["others'", 'other', 'another', 'the other'], answer: 0, why: "through others' eyes「他人の目を通して」。複数の他人の所有格 others'。" },
+    ],
+    tf: [
+      { statement: '筆者は、ある分野にいちばんくわしい人が、いつもいちばんよい教え手だと述べている。', answer: false, why: '第1段落 Experience, however, often suggests otherwise。' },
+      { statement: '「知識の呪い」とは、理解していなかったころの状態を想像しにくくなることである。', answer: true, why: '第2段落 it becomes remarkably difficult to imagine what it was like not to understand it。' },
+      { statement: '筆者は、この呪いは努力すれば簡単にとりのぞけると考えている。', answer: false, why: '第3段落 The curse cannot simply be removed by trying harder。' },
+    ],
+    qa: [
+      { q: 'According to the writer, what can help reduce the curse of knowledge?', choices: ['Testing explanations with real learners.', 'Using more technical terms.', 'Studying the subject for a longer time.', 'Giving shorter lectures.'], answer: 0, why: '第3段落 What helps is to test our explanations against real learners。' },
+    ],
+  },
 ]
