@@ -37,3 +37,21 @@ export function markPlayedGame(key: string): void {
     // 保存できなくても続ける
   }
 }
+
+// 文法ゲームを1日に全部あそんだごほうび（1日1回）
+export const ALL_GAMES_COINS = 10
+const ALL_KEY = 'eitan:all-games-day'
+export function allGamesClaimed(day: string): boolean {
+  try {
+    return localStorage.getItem(ALL_KEY) === day
+  } catch {
+    return false
+  }
+}
+export function claimAllGames(day: string): void {
+  try {
+    localStorage.setItem(ALL_KEY, day)
+  } catch {
+    // 保存できなくても続ける
+  }
+}

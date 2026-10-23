@@ -823,3 +823,18 @@ it('文法ゲームの見出しに、今日あそんだゲームのしゅるい�
   render(<Grammar />)
   expect(screen.getByText('・今日 1 しゅるいあそんだ')).toBeInTheDocument()
 })
+
+it('文法ゲームを全部あそんだ日は、ボタンでごほうびをもらえる（1日1回）', async () => {
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  const keys = ['まとめテスト', '例文リスニング', '要点カード', 'まちがいさがし', 'なかま分け', '2択スピード', '文法ビンゴ', 'タイムアタック', 'モンスターラッシュ', '連続正解', '語順ならべかえ', 'ランダム1問'].map((k) => `grammar:${k}`)
+  localStorage.setItem('eitan:games-today', JSON.stringify({ day: dayKey(), keys }))
+  const onAllGames = vi.fn()
+  const { unmount } = render(<Grammar onAllGames={onAllGames} />)
+  fireEvent.click(screen.getByRole('button', { name: /全部あそんだごほうび/ }))
+  expect(onAllGames).toHaveBeenCalledTimes(1)
+  expect(screen.getByText(/ごほうびは今日もらったよ/)).toBeInTheDocument()
+  unmount()
+  render(<Grammar onAllGames={onAllGames} />)
+  expect(screen.queryByRole('button', { name: /全部あそんだごほうび/ })).toBeNull()
+})
