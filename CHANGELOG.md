@@ -1438,3 +1438,4 @@
 - 2026-10-23: 高校の文法単元「have trouble ～ing / be busy ～ing」を追加（全227単元に）
 - 2026-10-23: 読解「TOEFL・IELTS」に「Reading the Past in Tree Rings（年輪が語る過去）」を追加
 - 2026-10-23: デザイン第81弾：モンスター図鑑の進化の条件を「Lv15」などの小さなピルにして、見出し（カード・クイズなど）と重ならない短い表示に
+- 2026-10-23: 読解「高校入試」に「The Person Who Keeps Our School Running（用務員さんへのインタビュー）」を追加

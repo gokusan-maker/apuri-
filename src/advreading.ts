@@ -2775,4 +2775,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why can researchers match living trees with old timber?', choices: ['Trees in the same region show similar ring patterns.', 'All trees grow at exactly the same speed.', 'Old timber has no rings.', 'Each tree has a written record.'], answer: 0, why: '第2段落 Trees in the same region tend to show similar sequences ... which allows researchers to match the patterns。' },
     ],
   },
+{
+    id: 'hs-custodian',
+    title: 'The Person Who Keeps Our School Running',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Our class makes a school newspaper every month. Last month, I was asked to interview someone at our school. Most of my classmates chose teachers, but I decided to interview Mr. Ito, the school custodian. I saw him every day, but I knew almost nothing ( A ) him.",
+      "Mr. Ito told me that he comes to school at six thirty every morning, two hours before most students arrive. He opens the gates, checks the heaters in winter, and fixes broken desks and chairs. \"Last week, I repaired five chairs in Class 2-B,\" he said with a smile. I was surprised. I had sat on one of those chairs, but I had never wondered ( B ) fixed it.",
+      "At the end of the interview, I asked him what makes him happy. He answered, \"When students say 'Good morning' to me.\" My article was printed in the newspaper, and many students read it. Now, more students greet Mr. Ito in the morning. I learned that many people work hard for us where we cannot see them, and that a few kind words ( C ) make them happy.",
+    ],
+    ja: [
+      '私たちのクラスは毎月、学校新聞を作っている。先月、私は学校のだれかにインタビューするよう頼まれた。クラスメートのほとんどは先生を選んだが、私は学校の用務員の伊藤さんにインタビューすることにした。毎日伊藤さんを見かけていたが、伊藤さんについてほとんど何も知らなかった。',
+      '伊藤さんは、毎朝6時半、ほとんどの生徒が来る2時間前に学校に来ると話してくれた。門を開け、冬には暖房を点検し、こわれた机やいすを直している。「先週は2年B組のいすを5つ直したよ」と伊藤さんはほほえみながら言った。私はおどろいた。私はそのいすの1つにすわっていたのに、だれが直したのか考えたこともなかったのだ。',
+      'インタビューの最後に、私は伊藤さんに何がうれしいかをたずねた。伊藤さんは「生徒が『おはようございます』と言ってくれるときだね」と答えた。私の記事は新聞にのり、多くの生徒が読んでくれた。今では、朝に伊藤さんにあいさつする生徒がふえている。私は、見えないところで私たちのために一生けんめい働いている人がたくさんいること、そして少しのやさしい言葉でその人たちをうれしい気持ちにできることを学んだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['about', 'with', 'for', 'at'], answer: 0, why: 'know nothing about ～「～について何も知らない」。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'where'], answer: 0, why: 'wondered who fixed it「だれが直したのか」。who が主語になる間接疑問。' },
+      { id: 'C', choices: ['can', 'must', 'should', 'had to'], answer: 0, why: '「うれしい気持ちにできる」という可能を表すので can。' },
+    ],
+    tf: [
+      { statement: 'クラスメートのほとんどは、先生にインタビューした。', answer: true, why: '第1段落 Most of my classmates chose teachers。' },
+      { statement: '伊藤さんは、毎朝ほとんどの生徒より2時間早く学校に来る。', answer: true, why: '第2段落 two hours before most students arrive。' },
+      { statement: '記事がのったあと、伊藤さんにあいさつする生徒はへった。', answer: false, why: '第3段落 more students greet Mr. Ito in the morning。' },
+    ],
+    qa: [
+      { q: 'What makes Mr. Ito happy?', choices: ['When students say "Good morning" to him.', 'When he gets a new chair.', 'When the school is closed.', 'When he reads the newspaper.'], answer: 0, why: '第3段落 "When students say \'Good morning\' to me."' },
+    ],
+  },
 ]
