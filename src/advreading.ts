@@ -2635,4 +2635,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did the writer make the lunch boxes that day?', choices: ['The mother was sick, and the father had to leave early.', 'The writer wanted to win a cooking contest.', 'The brother asked for a special lunch.', 'There was no school lunch that day.'], answer: 0, why: '第1段落 she caught a bad cold / My father had to leave early。' },
     ],
   },
+{
+    id: 'adv-defaults',
+    title: 'The Power of the Default',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we fill in a form, we rarely notice which boxes are already checked. Yet these pre-selected options, known as defaults, can have an enormous influence on what we end up choosing. Studies of organ donation, for example, have found that countries where people are automatically registered as donors unless they choose otherwise tend to have far higher registration rates than countries where people must actively sign up, ( A ) attitudes toward donation are similar.",
+      "Why should something as minor as a pre-checked box matter so much? One reason is inertia: changing an option requires effort, however small, and many people simply do not get around to it. Another is that a default can be read as a quiet recommendation. If an employer automatically enrolls workers in a savings plan, they may assume that the plan is a sensible choice, ( B ) they would otherwise have thought about it carefully.",
+      "The economist Richard Thaler and the legal scholar Cass Sunstein used the word \"nudge\" for this kind of gentle influence, which changes behavior without forbidding any options. Supporters argue that well-designed defaults can help people act in their own long-term interest. Critics reply that whoever designs the default holds a kind of hidden power, and that such power should be used openly. Both sides agree on one point: there is no truly neutral form. Every design has to set some default, so the real question is not ( C ) to influence people, but how to do so responsibly.",
+    ],
+    ja: [
+      '書類に記入するとき、どの欄にあらかじめチェックが入っているかに気づくことはめったにない。しかし、デフォルトとよばれるこうした初期設定の選択肢は、私たちが最終的に何を選ぶかに大きな影響をあたえうる。たとえば臓器提供に関する研究では、本人がそうしないと選ばないかぎり自動的に提供者として登録される国は、自分から申しこまなければならない国にくらべて、提供についての考え方が似ているにもかかわらず、登録率がはるかに高い傾向があることがわかっている。',
+      'あらかじめチェックされた欄のような小さなことが、なぜそれほど重要なのだろうか。一つの理由は惰性である。選択肢を変えるには、どんなに小さくても手間がかかり、多くの人はただそれをしないままになる。もう一つは、デフォルトがひかえめなおすすめとして受けとられうることだ。会社が働く人を自動的に貯蓄制度に加入させると、働く人はその制度を分別のある選択だと思いこむかもしれない。そうでなければ注意深く考えたかもしれないのに、である。',
+      '経済学者リチャード・セイラーと法学者キャス・サンスティーンは、どの選択肢も禁じずに行動を変えるこの種のやわらかな影響を「ナッジ」とよんだ。支持する人々は、よく考えられたデフォルトは人々が長い目で見て自分の利益になるように行動する助けになると主張する。批判する人々は、デフォルトを設計する人はある種の見えない力をもっており、その力は公然と使われるべきだと反論する。両者が一致する点が一つある。本当に中立な書類というものはない、ということだ。どんな設計でも何らかのデフォルトを決めなければならないのだから、本当の問題は人々に影響をあたえるかどうかではなく、どうすれば責任をもってそうできるかなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even when', 'as soon as', 'so that', 'in case'], answer: 0, why: '「考え方が似ているときでさえ」登録率に差が出る、という譲歩なので even when。' },
+      { id: 'B', choices: ['whereas', 'because', 'so', 'unless'], answer: 0, why: '「（デフォルトがなければ）注意深く考えたかもしれないのに」という対比なので whereas。' },
+      { id: 'C', choices: ['whether', 'what', 'which', 'that'], answer: 0, why: 'not whether A but how B「A かどうかではなく、どう B するか」。' },
+    ],
+    tf: [
+      { statement: '研究によれば、自動的に提供者として登録される国では、臓器提供の登録率が高い傾向がある。', answer: true, why: '第1段落の内容と合う。' },
+      { statement: '筆者によれば、デフォルトは選択肢を禁じることで人の行動を変える。', answer: false, why: '第3段落 changes behavior without forbidding any options。' },
+      { statement: '筆者は、どんな書類も完全に中立に作ることができると述べている。', answer: false, why: '第3段落 there is no truly neutral form。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why might people accept a default option?', choices: ['Changing it takes effort, and it may seem like a recommendation.', 'They are not allowed to change it.', 'Default options are always the cheapest.', 'They usually read every option carefully.'], answer: 0, why: '第2段落 inertia / a default can be read as a quiet recommendation。' },
+    ],
+  },
 ]
