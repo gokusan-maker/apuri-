@@ -1552,3 +1552,8 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 /* 「← もどる」「← にげる」：うすい丸ピルにして、押せる大きさ（36px）に */
 .stage-back { display: inline-flex; align-items: center; gap: 2px; min-height: 36px; padding: 4px 14px 4px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 8%, transparent); font-weight: 700; font-size: 0.9rem; }
 .stage-back:active { transform: scale(0.96); background: color-mix(in srgb, var(--accent) 16%, transparent); }
+
+/* データの保存と復元：めったに使わないので、白いサブボタンにして1行に */
+.backup .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.backup .actions .good { min-height: 46px; padding: 8px 6px; background: var(--card); color: var(--accent); border: 1.5px solid color-mix(in srgb, var(--accent) 40%, transparent); box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 25%, transparent); font-size: clamp(0.8rem, 3.8vw, 0.95rem); white-space: nowrap; }
+.backup .actions .good:active { transform: translateY(3px); box-shadow: none; }
