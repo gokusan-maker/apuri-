@@ -2243,4 +2243,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do some mangroves have roots that stick out of the mud?', choices: ['To let air reach the roots below.', 'To catch fish for food.', 'To store salt for later.', 'To keep birds away.'], answer: 0, why: '第2段落 allowing air to reach the parts of the root system buried below。' },
     ],
   },
+{
+    id: 'hs-classmate-brazil',
+    title: 'Words in Two Languages',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "In April, a new student named Lucas joined our class. He came from Brazil, and he could speak only a little Japanese. On his first day, he sat quietly and did not talk to anyone. I wanted to talk with him, but I did not know ( A ) to begin.",
+      "One day during lunch, I showed him a notebook. On each page, I wrote a Japanese word with a picture, and I asked him to write the same word in Portuguese. Lucas smiled for the first time. Soon our notebook was full of words like \"bread,\" \"rain,\" and \"friend.\" Other classmates became interested and joined us. Lucas taught us how to say \"Good morning\" in Portuguese, and we taught him words we use at school.",
+      "By summer, Lucas was talking with everyone. He told me, \"Your notebook was the key that opened the door.\" I learned that we don't need perfect language to make friends. What is important ( B ) to try to understand each other. Now I am studying Portuguese, and Lucas is studying for the Japanese test he will take ( C ) year.",
+    ],
+    ja: [
+      '4月、ルーカスという新しい生徒が私たちのクラスに入った。彼はブラジルから来て、日本語は少ししか話せなかった。最初の日、彼は静かにすわっていて、だれとも話さなかった。私は彼と話したかったが、どうやって始めればいいのかわからなかった。',
+      'ある日の昼休み、私は彼に1冊のノートを見せた。各ページに日本語の単語を絵といっしょに書き、同じ単語をポルトガル語で書いてくれるようたのんだ。ルーカスは初めてほほえんだ。まもなく私たちのノートは「パン」「雨」「友だち」のような言葉でいっぱいになった。ほかのクラスメートも興味をもって加わった。ルーカスはポルトガル語で「おはよう」の言い方を教えてくれ、私たちは学校で使う言葉を彼に教えた。',
+      '夏までに、ルーカスはみんなと話すようになった。彼は私に「きみのノートは、ドアを開けるかぎだったよ」と言った。友だちになるのに完ぺきな言葉はいらないのだと私は学んだ。大切なのは、おたがいを理解しようとすることだ。今、私はポルトガル語を勉強していて、ルーカスは来年受ける日本語の試験に向けて勉強している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how to begin「どうやって始めればよいか」（疑問詞＋to）。' },
+      { id: 'B', choices: ['is', 'are', 'was', 'be'], answer: 0, why: '主語 What is important（大切なこと）は単数あつかいで、現在の一般的な考えなので is。' },
+      { id: 'C', choices: ['next', 'last', 'every', 'this'], answer: 0, why: 'will take（未来）なので next year「来年」。' },
+    ],
+    tf: [
+      { statement: 'ルーカスは、日本に来たときすでに日本語を上手に話せた。', answer: false, why: '第1段落 he could speak only a little Japanese。' },
+      { statement: '筆者はノートを使ってルーカスと言葉を教え合った。', answer: true, why: '第2段落の内容と合う。' },
+      { statement: '筆者は、友だちになるには完ぺきな言葉が必要だと考えている。', answer: false, why: "第3段落 we don't need perfect language to make friends。" },
+    ],
+    qa: [
+      { q: 'What did Lucas mean by "the key that opened the door"?', choices: ['The notebook helped him make friends.', 'He found a real key in the notebook.', 'The notebook had the classroom key.', 'He wanted to go home to Brazil.'], answer: 0, why: '第3段落：ノートがきっかけでみんなと話せるようになった、というたとえ。' },
+    ],
+  },
 ]
