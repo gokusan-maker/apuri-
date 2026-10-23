@@ -11,7 +11,7 @@ const STEPS = [
   },
   {
     title: 'いろんな学び方',
-    body: '🃏カードで覚えて、❓クイズや🗺️ステージで力だめし。⏱タイムアタックで自己ベストをねらおう。',
+    body: '単語・文法・読解を、ゲームで楽しく学ぼう！',
   },
   {
     title: '相棒のタマゴ',
@@ -52,14 +52,14 @@ export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => voi
             ))}
             {onPlacement && (
               <button className="list-link" onClick={onPlacement}>
-                📋 わからないときは、レベル診断で決める
+                📋 レベル診断で決める
               </button>
             )}
           </div>
         )}
         <p className="onboarding-dots" aria-hidden="true">
           {STEPS.map((_, i) => (
-            <span key={i} className={i === step ? 'on' : i < step ? 'done' : undefined} />
+            <span key={i} className={i === step ? 'on' : i < step ? 'seen' : undefined} />
           ))}
         </p>
         <button className="flip" onClick={() => (last ? onDone() : setStep(step + 1))}>

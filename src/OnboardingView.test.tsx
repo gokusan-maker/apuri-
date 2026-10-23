@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it } from 'vitest'
 import { Onboarding } from './OnboardingView'
 
@@ -14,4 +14,12 @@ it('案内の題名は「へ」のあとでだけ改行できる（カタカナ�
   const t = document.querySelector('.onboarding-title')!
   expect(t.textContent).toBe('イングリッシュモンスターへようこそ！')
   expect(t.querySelectorAll('wbr').length).toBe(1)
+})
+
+it('ページの点は .done（ほかの画面の大きな余白がつくクラス）を使わず、1行にならぶ', () => {
+  render(<Onboarding onDone={() => {}} />)
+  fireEvent.click(screen.getByText('つぎへ'))
+  fireEvent.click(screen.getByText('つぎへ'))
+  const dots = document.querySelectorAll('.onboarding-dots span')
+  expect([...dots].map((d) => d.className)).toEqual(['seen', 'seen', 'on'])
 })
