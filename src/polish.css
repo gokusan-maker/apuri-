@@ -642,3 +642,28 @@ main h2::before {
 .memory-card:active { transform: translateY(3px); box-shadow: inset 0 0 0 3px rgb(255 255 255 / 0.25), 0 1px 0 color-mix(in srgb, var(--accent) 60%, #000); }
 .memory-card.shown { background: var(--card); color: var(--fg); box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--accent) 50%, transparent), 0 3px 0 color-mix(in srgb, var(--accent) 20%, rgb(0 0 0 / 0.1)); }
 .memory-card.done { background: var(--good-grad); color: #fff; box-shadow: 0 3px 0 #15803d; }
+
+/* ===== はじめての案内・お祝い：うしろをぼかす＋キャラの光る台 ===== */
+.celebrate {
+  -webkit-backdrop-filter: blur(6px) saturate(1.2);
+  backdrop-filter: blur(6px) saturate(1.2);
+}
+.celebrate-card {
+  border: 1px solid rgb(255 255 255 / 0.55);
+  border-radius: 28px;
+  box-shadow: 0 30px 60px -20px rgb(15 23 42 / 0.55), 0 0 0 6px rgb(255 255 255 / 0.12);
+}
+.onboarding-figure {
+  position: relative;
+  isolation: isolate;
+}
+.onboarding-figure::before {
+  content: '';
+  position: absolute;
+  inset: 10% 20%;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
+  filter: blur(6px);
+}
+.onboarding-dots span { transition: transform 0.2s; }
