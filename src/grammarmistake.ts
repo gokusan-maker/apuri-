@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'there-q-neg': { wrong: 'Are there a park near your house?', right: 'Is there a park near your house?', why: 'a park（単数）なので Is there ～?' },
   'remind-of': { wrong: 'This photo reminds me to my trip.', right: 'This photo reminds me of my trip.', why: 'remind A of B「A に B を思い出させる」。to ではなく of。' },
   'can-basic': { wrong: 'He can speaks English.', right: 'He can speak English.', why: 'can のあとは動詞の原形。-s はつけない。' },
   'ordinal-date': { wrong: 'My birthday is April two.', right: 'My birthday is April second.', why: '日付は序数（first・second・third …）で言う。' },
