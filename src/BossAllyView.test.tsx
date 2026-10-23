@@ -19,12 +19,12 @@ it('次の進化の姿は ？？？ でひみつ（わかったほうがワク�
 it('ボス部屋の上にタマゴのかけらの数が出る', () => {
   localStorage.setItem('eitan:egg-pieces', '3')
   render(<BossAlly buddy={{ xp: 0 }} />)
-  expect(screen.getByText(/タマゴのかけら 3 \/ 5/)).toBeInTheDocument()
+  expect(screen.getByLabelText('タマゴのかけら 3 / 5')).toBeInTheDocument()
 })
 
 it('ボス部屋の上に、たおしたボスの数が出る', () => {
   render(<BossAlly buddy={{ xp: 0 }} wins={3} total={19} />)
-  expect(screen.getByLabelText('たおしたボスの数').textContent).toContain('3 / 19体')
+  expect(screen.getByLabelText('たおしたボスの数').textContent).toContain('3/19体')
 })
 
 it('上のなかまをタップすると英語でひとこと（和訳つき）', async () => {
