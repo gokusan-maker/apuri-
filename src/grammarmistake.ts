@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'go-ing': { wrong: 'I went to shopping yesterday.', right: 'I went shopping yesterday.', why: 'go ～ing の形。to は入れない。' },
   'ready-willing': { wrong: "I'm ready for go.", right: "I'm ready to go.", why: '動詞が続くときは be ready to ＋ 原形。for のあとは名詞。' },
   'like-such-as': { wrong: 'This cloud looks a dog.', right: 'This cloud looks like a dog.', why: '名詞の前では look like ～「～のように見える」。' },
   'there-was': { wrong: 'There was many people at the park.', right: 'There were many people at the park.', why: 'many people（複数）なので were。' },
