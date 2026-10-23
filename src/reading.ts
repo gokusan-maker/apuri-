@@ -1597,6 +1597,17 @@ export const PASSAGES: Passage[] = [
       { q: 'となりの女の子は今、筆者にとって何？', choices: ['いちばんの友だち', 'いとこ', '先生'], answer: 0 },
     ],
   },
+  {
+    id: 'post-office',
+    title: 'A Package for Grandma',
+    text: 'My grandmother lives in Hokkaido. For her birthday, my sister and I made a scarf together. We took it to the post office in a box. The man at the counter weighed the box and said, "It will arrive in two days." Two days later, Grandma called us. She said, "It is very warm. I wear it every morning!"',
+    ja: '祖母は北海道に住んでいます。祖母の誕生日のために、姉と私はいっしょにマフラーを作りました。それを箱に入れて郵便局へ持っていきました。窓口の男の人は箱の重さをはかって「2日で着きますよ」と言いました。2日後、祖母から電話がありました。「とてもあたたかいわ。毎朝つけているのよ！」と言いました。',
+    questions: [
+      { q: '祖母はどこに住んでいる？', choices: ['北海道', '沖縄', '大阪'], answer: 0 },
+      { q: '姉と筆者は何を作った？', choices: ['マフラー', 'ぼうし', 'ケーキ'], answer: 0 },
+      { q: '荷物は何日で着いた？', choices: ['2日', '1日', '5日'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
