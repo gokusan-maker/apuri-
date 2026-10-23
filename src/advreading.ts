@@ -2890,4 +2890,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn during the stay?', choices: ['Speaking a foreign language is about trying to understand each other.', 'You have to speak a foreign language perfectly.', 'You should always say yes to your host family.', 'Swimming is the most popular sport in Australia.'], answer: 0, why: '第3段落 It is about trying to understand each other.' },
     ],
   },
+{
+    id: 'adv-endowment',
+    title: 'Why We Overvalue What We Own',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine you are given a coffee mug as a gift. A few minutes later, someone offers to buy it from you. How much would you ask for? In a well-known series of experiments, researchers gave mugs to half of the participants and allowed the other half to buy them. The owners typically asked for roughly twice as much money as the buyers were willing to pay, ( A ) the two groups had been chosen at random.",
+      "Psychologists call this tendency the endowment effect: we place a higher value on things simply because they belong to us. One explanation is that giving something up feels like a loss, and losses tend to weigh more heavily on our minds than gains of the same size. ( B ), the pain of parting with the mug outweighs the pleasure of receiving the money.",
+      "The effect helps explain some everyday puzzles, such as why people keep clothes they never wear, or why homeowners often ask for prices that buyers find unrealistic. Being aware of it does not make it disappear, but it can prompt a useful question when we are deciding whether to keep something: would I buy this item today ( C ) I did not already own it?",
+    ],
+    ja: [
+      'プレゼントとしてマグカップをもらったところを想像してほしい。数分後、だれかがそれを買い取りたいと申し出る。あなたはいくらを求めるだろうか。よく知られた一連の実験で、研究者たちは参加者の半分にマグカップをわたし、残りの半分にはそれを買えるようにした。2つのグループは無作為に選ばれていたにもかかわらず、持ち主たちはふつう、買い手が払ってもよいと思う金額のおよそ2倍を求めた。',
+      '心理学者はこの傾向を「保有効果」とよぶ。私たちは、物が自分のものだというだけで、それにより高い価値をつけるのである。1つの説明は、何かを手放すことは損失のように感じられ、損失は同じ大きさの得よりも心に重くのしかかりやすい、というものだ。言いかえれば、マグカップを手放す痛みが、お金を受け取るよろこびを上回るのである。',
+      'この効果は、日常のいくつかのなぞを説明する助けになる。たとえば、人がまったく着ない服を取っておく理由や、家の持ち主が買い手には非現実的だと思われる値段をつけがちな理由である。この効果を知っていてもそれが消えるわけではないが、何かを手元に残すかどうか決めるときに、役に立つ問いをうながしてくれる。「もしまだ持っていなかったとしたら、今日これを買うだろうか」という問いである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even though', 'because', 'so that', 'unless'], answer: 0, why: '「無作為に選ばれていた（＝差はないはず）のに、2倍の値段をつけた」という逆接なので even though。' },
+      { id: 'B', choices: ['In other words', 'On the other hand', 'For example', 'Instead'], answer: 0, why: '直前の「損失は得より重く感じる」を、マグカップの例で言いかえているので In other words。' },
+      { id: 'C', choices: ['if', 'unless', 'whether', 'though'], answer: 0, why: '「もし持っていなかったら」という仮定（仮定法過去）なので if。' },
+    ],
+    tf: [
+      { statement: '実験では、マグカップの持ち主は、買い手が払ってもよいと思う金額のおよそ2倍を求めた。', answer: true, why: '第1段落 roughly twice as much money as the buyers were willing to pay。' },
+      { statement: '筆者によると、損失は同じ大きさの得よりも軽く感じられやすい。', answer: false, why: '第2段落 losses tend to weigh more heavily on our minds than gains。' },
+      { statement: '保有効果は、それを知るだけで消える。', answer: false, why: '第3段落 Being aware of it does not make it disappear。' },
+      { statement: '筆者は、物を手元に残すか決めるときに役立つ問いを示している。', answer: true, why: '第3段落の最後の問いと合う。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why do people tend to value their own things more highly?', choices: ['Because giving something up feels like a loss.', 'Because their own things are always rarer.', 'Because buyers usually lie about prices.', 'Because owners always need more money.'], answer: 0, why: '第2段落 giving something up feels like a loss。' },
+    ],
+  },
 ]
