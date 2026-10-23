@@ -1920,3 +1920,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 .gm-win { display: flex; flex-direction: column; align-items: center; gap: 2px; }
 .gm-win-big { font-size: 1.25rem; font-weight: 900; color: var(--accent); }
 .gm-win .gm-name { color: var(--muted); font-weight: 700; }
+
+/* なかまの進化演出：名前を大きく1行で、説明は短く */
+.buddy-evolve .evo-name { display: block; font-size: 1.35rem; font-weight: 900; color: var(--fg); word-break: keep-all; overflow-wrap: anywhere; }
+.buddy-evolve .evo-track { display: block; margin-bottom: 6px; color: var(--muted); font-weight: 700; }

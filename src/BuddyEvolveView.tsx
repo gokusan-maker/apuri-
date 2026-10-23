@@ -11,8 +11,9 @@ export function BuddyEvolve({ track, form, buddy, onClose }: { track: Track; for
         </p>
         <p className="celebrate-title">{form.minLv === 2 ? 'タマゴがかえった！' : '進化した！'}</p>
         <p className="celebrate-text">
-          {TRACK_LABEL[track]}のなかまが「{formName(track, buddy)}」になった！
-          <br />🎉 お祝い 🪙{EVO_COINS}
+          <span className="evo-name">{formName(track, buddy)}</span>
+          <small className="evo-track">{TRACK_LABEL[track]}のなかま</small>
+          🎉 お祝い 🪙{EVO_COINS}
         </p>
         <button className="flip" onClick={onClose}>
           やったね！

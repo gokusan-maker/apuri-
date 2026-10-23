@@ -1103,6 +1103,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('タマゴがかえった！')
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('お祝い 🪙10')
+    expect(document.querySelector('.buddy-evolve .evo-name')?.textContent).toBeTruthy()
   })
 
   it('ホームの目立つ「ガチャをひく」ボタンでガチャ（ショップ）が開く', () => {
