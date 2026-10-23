@@ -1339,3 +1339,4 @@
 - 2026-10-23: 高校の文法単元「A as well as B（B だけでなく A も）と動詞の一致」を追加（全204単元に）
 - 2026-10-23: 読解「TOEFL・IELTS」に「Forests That Grow in the Sea（マングローブ）」を追加
 - 2026-10-23: 読解「高校入試」に「Words in Two Languages（ブラジルから来たクラスメート）」を追加
+- 2026-10-23: 中1の文法単元「場所を表す前置詞（under / next to / in front of / behind）」を追加（全205単元に）

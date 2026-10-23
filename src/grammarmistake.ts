@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'place-prep': { wrong: 'The bank is next the post office.', right: 'The bank is next to the post office.', why: '「～のとなりに」は next to。to をわすれない。' },
   'as-well-as': { wrong: 'The teacher, as well as the students, are excited.', right: 'The teacher, as well as the students, is excited.', why: 'A as well as B が主語のときは、動詞を A に合わせる。' },
   'change-adj': { wrong: 'It is getting darkly.', right: 'It is getting dark.', why: '「～になる」の get / become のあとは形容詞。副詞にしない。' },
   'group-prep': { wrong: 'Instead of take the bus, I walked.', right: 'Instead of taking the bus, I walked.', why: 'instead of のあとの動詞は動名詞（～ing）。' },
