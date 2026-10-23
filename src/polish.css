@@ -1395,3 +1395,4 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .shop-tabs button { padding-left: 0; padding-right: 0; font-size: clamp(0.66rem, 3.05vw, 0.78rem); letter-spacing: -0.03em; }
 /* 「ミニゲームをえらぶ（61種）▼」の▼だけ次の行にならないよう、360pxでは少しだけ小さく */
 .mode-btn .mode-change { white-space: nowrap; font-size: clamp(0.95rem, 4.6vw, 1.15rem); }
+.daily-stars .list-link { font-size: clamp(0.6rem, 2.75vw, 0.78rem); letter-spacing: -0.03em; padding-left: 2px; padding-right: 2px; }
