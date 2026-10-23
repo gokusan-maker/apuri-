@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'was-were': { wrong: 'Did you tired yesterday?', right: 'Were you tired yesterday?', why: 'tired は形容詞なので be動詞の文。疑問文は Were を前に出す。' },
   'second-ever': { wrong: 'This is the best book I have ever read it.', right: 'This is the best book I have ever read.', why: 'book が read の目的語なので、うしろに it を置かない。' },
   'infinitive-uses': { wrong: 'I want something to drink cold.', right: 'I want something cold to drink.', why: '-thing を説明する形容詞はすぐあと、不定詞はそのあと（something cold to drink）。' },
   'to-for-person': { wrong: 'I bought a cake to my sister.', right: 'I bought a cake for my sister.', why: 'buy は「相手のために」の動詞なので for を使う。' },
