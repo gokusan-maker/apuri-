@@ -517,7 +517,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </span>
         </div>
       )}
-      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると「会心の一撃」！ 正解でゲージがたまると必殺技が出せる</p>}
+      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると会心の一撃！</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">
           「{look.taunt.en}」<span>{look.taunt.ja}</span>
@@ -739,7 +739,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 setHintAt({ index, hide: wrongs[Math.floor(rnd() * wrongs.length)] })
               }}
             >
-              💡 {partner.name}のヒント（1戦1回・まちがいを1つ消す）
+              💡 {partner.name}のヒント（1つ消す）
             </button>
           )}
           <div className="choices">

@@ -316,7 +316,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         golden={fighting === goldenLevelOf(LEVELS, dayKey())}
         hp={dailyFight ? dailyHp(dailyFight) : strong ? STRONG_HP : undefined}
         title={dailyFight ? `⚔️ 今日のボス ${'★'.repeat(dailyFight)}` : strong ? `💪 強化版の${fighting}ボス` : sudden ? `💀 サドンデス：${fighting}ボス` : undefined}
-        note={dailyFight && daily ? `今日のボス「${BOSSES[daily].name}」（${daily}）。勝つと 🪙${DAILY_BOSS_COINS}${dailyFight > 1 ? `×${dailyFight}` : ''}` : undefined}
+        note={dailyFight && daily ? `今日のボス（${daily}）・勝つと🪙${DAILY_BOSS_COINS}${dailyFight > 1 ? `×${dailyFight}` : ''}` : undefined}
         startHearts={sudden ? 1 : undefined}
         grammar={GRAMMAR_BOSS_LEVELS.includes(fighting)}
         partner={partner}
