@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'during-for': { wrong: 'I studied during three hours.', right: 'I studied for three hours.', why: '「3時間」のような長さは for。during は「いつの間か」に使う。' },
   'adj-that': { wrong: "I'm glad to you came.", right: "I'm glad (that) you came.", why: 'あとに主語＋動詞が続くときは to ではなく that 節。' },
   'so-as-to-degree': { wrong: 'He was so kind as to helping me.', right: 'He was so kind as to help me.', why: 'so 〜 as to のあとは動詞の原形。' },
   'think-so': { wrong: '"Will he come?" "I think it."', right: '"Will he come?" "I think so."', why: '前の文の内容を受けるのは so。' },
