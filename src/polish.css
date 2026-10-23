@@ -1437,3 +1437,10 @@ details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 .shop .badge-grid .room-try { background: rgb(255 255 255 / 0.85); border: 1px solid rgb(0 0 0 / 0.08); color: #1f2937; box-shadow: 0 2px 0 rgb(0 0 0 / 0.08); }
 .shop .badge-grid .room-try[aria-pressed='true'] { background: #fde68a; border-color: #f59e0b; }
 .shop .badge-grid .room-try:active, .shop .badge-grid .shop-btn:active { transform: translateY(2px); box-shadow: none; }
+
+/* 文法の単元一覧：☆ボタンを丸いチップにして、行のまん中にそろえる（押すと金色にぬれる） */
+.grammar-list li.with-fav { align-items: center; gap: 6px; }
+.grammar-list button.grammar-fav { display: grid; place-items: center; align-self: center; width: 36px; height: 36px; padding: 0; border-radius: 50%; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); color: #94a3b8; font-size: 1.05rem; line-height: 1; box-shadow: 0 2px 0 rgb(0 0 0 / 0.06); }
+.grammar-list button.grammar-fav.on { background: linear-gradient(135deg, #fde68a, #fbbf24); border-color: #f59e0b; color: #fff; text-shadow: 0 1px 1px rgb(180 83 9 / 0.5); }
+.grammar-list button.grammar-fav:active { transform: scale(0.92); box-shadow: none; }
+.grammar-list button.grammar-fav { justify-content: center; text-align: center; }
