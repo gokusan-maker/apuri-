@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'as-possible': { wrong: 'I ran as fast as I can yesterday.', right: 'I ran as fast as I could yesterday.', why: '過去の文では as ～ as 主語 could にする。' },
   'modal-passive': { wrong: 'Stars can seen from here.', right: 'Stars can be seen from here.', why: '助動詞の受け身は〈助動詞 ＋ be ＋ 過去分詞〉。be をわすれない。' },
   'place-prep': { wrong: 'The bank is next the post office.', right: 'The bank is next to the post office.', why: '「～のとなりに」は next to。to をわすれない。' },
   'as-well-as': { wrong: 'The teacher, as well as the students, are excited.', right: 'The teacher, as well as the students, is excited.', why: 'A as well as B が主語のときは、動詞を A に合わせる。' },
