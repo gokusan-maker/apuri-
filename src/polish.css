@@ -1858,3 +1858,9 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .missed-list::before { color: #f87171; }
 }
 :root[data-theme="dark"] .missed-list::before { color: #f87171; }
+
+/* ダークモード：赤い文字（NEW・ボスの怒り・最大ダメージ・スペルのまちがい）も明るい赤に */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .gacha-new, :root:not([data-theme="light"]) .boss-rage, :root:not([data-theme="light"]) .boss-maxhit, :root:not([data-theme="light"]) .spell-ng { color: #f87171; }
+}
+:root[data-theme="dark"] .gacha-new, :root[data-theme="dark"] .boss-rage, :root[data-theme="dark"] .boss-maxhit, :root[data-theme="dark"] .spell-ng { color: #f87171; }
