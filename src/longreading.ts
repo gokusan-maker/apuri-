@@ -4780,6 +4780,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Doctors say it is better to cover a sneeze with your elbow.', answer: true, why: '第4段落の内容と合う。' },
     ],
   },
+  {
+    id: 'banana-ripen',
+    title: 'How Do Bananas Get Sweet?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Bananas are usually picked while they are still green and hard. They are then carried on ships to many countries. By the time they arrive at stores, ( A ) of them have turned yellow. How does this happen?',
+      'Bananas give off a natural gas called ethylene. This gas helps the fruit become ripe. As a banana ripens, the starch inside it slowly changes into sugar. That is why a yellow banana tastes much sweeter than a green one. Later, small brown spots appear on the skin, and the banana becomes even softer and sweeter.',
+      'You can use this gas to your advantage. If you want green bananas to ripen faster, put them in a paper bag. The gas stays inside the bag, so the bananas ripen ( B ). Putting an apple in the bag also helps, because apples give off the same gas.',
+      'What happens if you put bananas in the refrigerator? The cold makes the skin turn dark, but the fruit inside is still good to eat. So do not throw a banana away just ( C ) its skin is dark.',
+    ],
+    ja: [
+      'バナナはふつう、まだ緑色でかたいうちに収穫されます。そして船でいろいろな国へ運ばれます。お店に着くころには、その多くが黄色くなっています。どうしてこうなるのでしょうか。',
+      'バナナはエチレンという自然の気体を出しています。この気体は果物が熟すのを助けます。バナナが熟すにつれて、中のでんぷんが少しずつ糖に変わります。だから黄色いバナナは緑のバナナよりずっとあまいのです。そのあと皮に小さな茶色い点があらわれ、バナナはさらにやわらかく、あまくなります。',
+      'この気体をうまく利用することもできます。緑のバナナを早く熟させたいなら、紙ぶくろに入れてみましょう。気体がふくろの中にとどまるので、バナナは早く熟します。ふくろにりんごを入れるのも効果があります。りんごも同じ気体を出すからです。',
+      'バナナを冷蔵庫に入れるとどうなるでしょうか。冷たさで皮は黒っぽくなりますが、中の実はまだおいしく食べられます。だから、皮が黒いというだけでバナナを捨てないでください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['most', 'much', 'more', 'every'], answer: 0, why: 'most of them「それらのほとんど」。much は数えられない名詞、every は of them の前に置けない。' },
+      { id: 'B', choices: ['faster', 'fast', 'fastest', 'more fast'], answer: 0, why: '「（ふくろに入れないときより）早く熟す」なので比較級 faster。' },
+      { id: 'C', choices: ['because', 'so', 'if', 'though'], answer: 0, why: 'just because ～「～というだけの理由で」。' },
+    ],
+    underline: { phrase: 'You can use this gas to your advantage', choices: ['この気体をうまく利用できる', 'この気体はあぶないので使えない', 'この気体を作ることができる', 'この気体を止めることができる'], answer: 0, why: 'use ～ to one\'s advantage「～をうまく利用する」。' },
+    tf: [
+      { statement: 'Bananas are usually picked when they are yellow.', answer: false, why: '第1段落 picked while they are still green。' },
+      { statement: 'As a banana ripens, its starch changes into sugar.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Putting bananas in a paper bag makes them ripen more slowly.', answer: false, why: '第3段落 the bananas ripen faster。' },
+      { statement: 'Apples give off the same gas as bananas.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'A banana with a dark skin from the refrigerator cannot be eaten.', answer: false, why: '第4段落 the fruit inside is still good to eat。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
