@@ -1864,3 +1864,52 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .gacha-new, :root:not([data-theme="light"]) .boss-rage, :root:not([data-theme="light"]) .boss-maxhit, :root:not([data-theme="light"]) .spell-ng { color: #f87171; }
 }
 :root[data-theme="dark"] .gacha-new, :root[data-theme="dark"] .boss-rage, :root[data-theme="dark"] .boss-maxhit, :root[data-theme="dark"] .spell-ng { color: #f87171; }
+
+/* ダークモード：背景を持たない部品の濃い文字色（緑・赤・茶・青など）を、白に45%近づけた明るい色に（自動で作った一覧。ダークでも明るいままのガチャのカードの中の文字はのぞく） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .boss-shield { color: #74accb; }
+  :root:not([data-theme="light"]) .blank.filled, :root:not([data-theme="light"]) .gacha-lucky, :root:not([data-theme="light"]) .grammar-mistake .ok, :root:not([data-theme="light"]) .buddy-today { color: #7fcc9b; }
+  :root:not([data-theme="light"]) .long-vocab strong, :root:not([data-theme="light"]) .boss-preempt-result { color: #839eea; }
+  :root:not([data-theme="light"]) .r-R .gacha-omen, :root:not([data-theme="light"]) .long-insert-mark { color: #87a9f4; }
+  :root:not([data-theme="light"]) .boss-sleep { color: #9892e2; }
+  :root:not([data-theme="light"]) .gacha-species, :root:not([data-theme="light"]) .univ-tower .stats-note { color: #9ca2a9; }
+  :root:not([data-theme="light"]) .boss-minion { color: #af89ea; }
+  :root:not([data-theme="light"]) .rival-cpu, :root:not([data-theme="light"]) .epithet, :root:not([data-theme="light"]) .records-value, :root:not([data-theme="light"]) .gacha-nth { color: #b793f5; }
+  :root:not([data-theme="light"]) .long-evidence-note { color: #bc9d7a; }
+  :root:not([data-theme="light"]) .univ-diploma-day { color: #c3967a; }
+  :root:not([data-theme="light"]) .stage-bonus, :root:not([data-theme="light"]) .title-badge, :root:not([data-theme="light"]) .exam, :root:not([data-theme="light"]) .r-SR .gacha-omen, :root:not([data-theme="light"]) .gacha-dup, :root:not([data-theme="light"]) .boss-drop, :root:not([data-theme="light"]) .golden-boss, :root:not([data-theme="light"]) .golden-boss-note, :root:not([data-theme="light"]) .grammar-mistake-title, :root:not([data-theme="light"]) .hide-hint, :root:not([data-theme="light"]) .medal-100, :root:not([data-theme="light"]) .level-verdict.pass, :root:not([data-theme="light"]) .gcard-weak, :root:not([data-theme="light"]) .long-100.got { color: #d6a078; }
+  :root:not([data-theme="light"]) .mood-meter, :root:not([data-theme="light"]) .partner-reply { color: #db80a6; }
+  :root:not([data-theme="light"]) .boss-skill-pop, :root:not([data-theme="light"]) .gacha-bonus, :root:not([data-theme="light"]) .gacha-slot.win { color: #eb88b4; }
+  :root:not([data-theme="light"]) .ta-hurry, :root:not([data-theme="light"]) .boss-weak.hit, :root:not([data-theme="light"]) .boss-finisher, :root:not([data-theme="light"]) .grammar-mistake .ng { color: #ec8888; }
+}
+:root[data-theme="dark"] .boss-shield { color: #74accb; }
+:root[data-theme="dark"] .blank.filled, :root[data-theme="dark"] .gacha-lucky, :root[data-theme="dark"] .grammar-mistake .ok, :root[data-theme="dark"] .buddy-today { color: #7fcc9b; }
+:root[data-theme="dark"] .long-vocab strong, :root[data-theme="dark"] .boss-preempt-result { color: #839eea; }
+:root[data-theme="dark"] .r-R .gacha-omen, :root[data-theme="dark"] .long-insert-mark { color: #87a9f4; }
+:root[data-theme="dark"] .boss-sleep { color: #9892e2; }
+:root[data-theme="dark"] .gacha-species, :root[data-theme="dark"] .univ-tower .stats-note { color: #9ca2a9; }
+:root[data-theme="dark"] .boss-minion { color: #af89ea; }
+:root[data-theme="dark"] .rival-cpu, :root[data-theme="dark"] .epithet, :root[data-theme="dark"] .records-value, :root[data-theme="dark"] .gacha-nth { color: #b793f5; }
+:root[data-theme="dark"] .long-evidence-note { color: #bc9d7a; }
+:root[data-theme="dark"] .univ-diploma-day { color: #c3967a; }
+:root[data-theme="dark"] .stage-bonus, :root[data-theme="dark"] .title-badge, :root[data-theme="dark"] .exam, :root[data-theme="dark"] .r-SR .gacha-omen, :root[data-theme="dark"] .gacha-dup, :root[data-theme="dark"] .boss-drop, :root[data-theme="dark"] .golden-boss, :root[data-theme="dark"] .golden-boss-note, :root[data-theme="dark"] .grammar-mistake-title, :root[data-theme="dark"] .hide-hint, :root[data-theme="dark"] .medal-100, :root[data-theme="dark"] .level-verdict.pass, :root[data-theme="dark"] .gcard-weak, :root[data-theme="dark"] .long-100.got { color: #d6a078; }
+:root[data-theme="dark"] .mood-meter, :root[data-theme="dark"] .partner-reply { color: #db80a6; }
+:root[data-theme="dark"] .boss-skill-pop, :root[data-theme="dark"] .gacha-bonus, :root[data-theme="dark"] .gacha-slot.win { color: #eb88b4; }
+:root[data-theme="dark"] .ta-hurry, :root[data-theme="dark"] .boss-weak.hit, :root[data-theme="dark"] .boss-finisher, :root[data-theme="dark"] .grammar-mistake .ng { color: #ec8888; }
+
+/* ダークモード：ガチャのカードも暗い地に（明るいパステルのままだと文字が読めない） */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .gacha { background: radial-gradient(120% 60% at 20% 0%, rgb(255 255 255 / 0.06), transparent 55%), linear-gradient(160deg, #3a2a16, #3b1d3a 55%, #262150); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }
+  :root:not([data-theme="light"]) .gacha .stats-note, :root:not([data-theme="light"]) .gacha-odds { color: #b9c0cc; }
+  :root:not([data-theme="light"]) .gacha-step, :root:not([data-theme="light"]) .challenge-streak { color: #fdba74; }
+  :root:not([data-theme="light"]) .gacha-pity { color: #fcd34d; }
+}
+:root[data-theme="dark"] .gacha { background: radial-gradient(120% 60% at 20% 0%, rgb(255 255 255 / 0.06), transparent 55%), linear-gradient(160deg, #3a2a16, #3b1d3a 55%, #262150); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }
+:root[data-theme="dark"] .gacha .stats-note, :root[data-theme="dark"] .gacha-odds { color: #b9c0cc; }
+:root[data-theme="dark"] .gacha-step, :root[data-theme="dark"] .challenge-streak { color: #fdba74; }
+:root[data-theme="dark"] .gacha-pity { color: #fcd34d; }
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .gacha-pickup { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }
+}
+:root[data-theme="dark"] .gacha-pickup { background: rgb(255 255 255 / 0.06); border-color: rgb(255 255 255 / 0.1); color: var(--fg); }

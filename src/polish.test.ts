@@ -22,7 +22,7 @@ it('読解の文法タグはダークモードの色が2か所（端末の設定
 })
 
 it('明るい背景を使う部品（スタンプカード・金の宝箱・おみくじ・塔の階・ボス図鑑）にはダークモードの色がある', () => {
-  for (const sel of ['.stamp-card', '.gold-chest', '.omikuji', '.univ-floors li', '.boss-book-list li', '.boss-ally', '.boss-partner', '.evo-preview', '.partner-status', '.warm-btn', '.roulette-wheel li:not(.hit)', '.vs-p1 .vs-score', '.vs-p2 .vs-score', '.daily-grammar span', '.long-review-title', '.missed-list::before', '.spell-ng', ".shop .badge-grid .room-try:not([aria-pressed='true'])"]) {
+  for (const sel of ['.stamp-card', '.gold-chest', '.omikuji', '.univ-floors li', '.boss-book-list li', '.boss-ally', '.boss-partner', '.evo-preview', '.partner-status', '.warm-btn', '.roulette-wheel li:not(.hit)', '.vs-p1 .vs-score', '.vs-p2 .vs-score', '.daily-grammar span', '.long-review-title', '.gacha-pity', '.gacha-pickup', '.missed-list::before', '.spell-ng', ".shop .badge-grid .room-try:not([aria-pressed='true'])"]) {
     expect(css).toContain(`:root:not([data-theme="light"]) ${sel} {`)
     expect(css).toContain(`:root[data-theme="dark"] ${sel} {`)
   }
@@ -47,4 +47,9 @@ it('カタカナの名前（バッジ・おやつ・ボス・ガチャ結果な�
 
 it('今日のことばの訳は英語の下の行に置く', () => {
   expect(css).toContain('.wotd .wotd-ja { display: block;')
+})
+
+it('背景を持たない部品の濃い文字色にも、ダークモードの明るい色がある（自動で作った一覧）', () => {
+  expect(css).toContain(':root[data-theme="dark"] .golden-boss-note')
+  expect(css).toContain(':root:not([data-theme="light"]) .long-evidence-note')
 })
