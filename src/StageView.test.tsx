@@ -10,7 +10,7 @@ describe('ステージ画面', () => {
   it('ステージ1だけ遊べて、全問正解で星3つ', () => {
     const onClear = vi.fn()
     render(<Stages levels={['中1']} record={{}} onClear={onClear} />)
-    expect(screen.getByLabelText('中1 ステージ2（ロック中）')).toBeDisabled()
+    expect(screen.queryByLabelText(/中1 ステージ2/)).toBeNull() // ロック中のステージは見せない
     fireEvent.click(screen.getByLabelText('中1 ステージ1'))
     const words = stagesOf('中1')[0].words
     for (let i = 0; i < 10; i++) {
@@ -271,4 +271,13 @@ it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの�
   expect(btn.textContent).toBe('🗼 エンドレスの塔')
   fireEvent.click(btn)
   expect(screen.getByText(/負けるまでどこまでのぼれるか挑戦！ 10階ごとに/)).toBeInTheDocument()
+})
+
+it('ステージは解放ずみのものだけ見え、クリアすると次のステージが出てくる', () => {
+  const { rerender } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(document.querySelectorAll('.stage-btn')).toHaveLength(1)
+  expect(screen.queryByText('🔒')).toBeNull()
+  rerender(<Stages levels={['中1']} record={{ '中1-1': 2 }} onClear={() => {}} />)
+  expect(document.querySelectorAll('.stage-btn')).toHaveLength(2)
+  expect(screen.getByLabelText('中1 ステージ2')).toBeEnabled()
 })

@@ -596,7 +596,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         return (
           <div key={level} className="stage-level">
             <h3>
-              {level} <span className="stage-total">★{stars} / {list.length * 3}</span>
+              {level} <span className="stage-total">★{stars}</span>
               {medalFor(learnedPct[level] ?? 0) && (
                 <span className="stage-medal" role="img" aria-label={`メダル（定着率${learnedPct[level]}%）`}>
                   {medalFor(learnedPct[level] ?? 0)}
@@ -609,20 +609,19 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
               )}
             </h3>
             <div className="stage-grid">
-              {list.map((s) => {
-                const open = isUnlocked(s, record)
+              {/* まだ先が長く見えて疲れないよう、解放ずみのステージだけ見せる（クリアすると次が出てくる） */}
+              {list.filter((s) => isUnlocked(s, record)).map((s) => {
                 return (
                   <button
                     key={s.id}
                     className={`stage-btn${record[s.id] ? ' cleared' : ''}`}
-                    disabled={!open}
-                    aria-label={`${level} ステージ${s.no}${open ? '' : '（ロック中）'}`}
+                    aria-label={`${level} ステージ${s.no}`}
                     onClick={() => {
                       setPlaying(s)
                       setResult(null)
                     }}
                   >
-                    <span className="stage-no">{open ? s.no : '🔒'}</span>
+                    <span className="stage-no">{s.no}</span>
                     <span className="stage-stars">{starText(record[s.id] ?? 0)}</span>
                   </button>
                 )
@@ -657,7 +656,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
                 )}
               </>
             ) : (
-              <p className="boss-locked">🔒 全ステージをクリアするとボスが出現</p>
+              null
             )}
           </div>
         )
