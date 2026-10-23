@@ -1568,3 +1568,12 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 .grammar-monster-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding-top: 12px; padding-bottom: 12px; }
 .grammar-monster-btn .gm-main { font-size: clamp(0.88rem, 4.1vw, 1.02rem); line-height: 1.35; }
 .grammar-monster-btn .gm-sub { font-size: 0.72rem; font-weight: 700; opacity: 0.85; }
+/* チームLv：称号は1行、「あと◯で次の称号」は小さなピルで改行して表示 */
+.team-level { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.team-level .team-next { display: block; width: fit-content; margin: 3px auto 0; padding: 1px 10px; border-radius: 999px; background: var(--surface-2, #f1f2f8); font-size: 0.7rem; }
+
+/* 単語一覧のしぼりこみ・ならべかえ：1本のセグメントにして1行に */
+.word-filter, .word-sort { display: flex; flex-wrap: nowrap; width: fit-content; max-width: 100%; margin: 8px auto; padding: 3px; gap: 2px; border-radius: 999px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); }
+.word-filter button, .word-sort button { flex: none; min-height: 32px; padding: 4px clamp(7px, 2.6vw, 12px); border: none; border-radius: 999px; background: transparent; box-shadow: none; color: var(--muted); font-size: clamp(0.72rem, 3.3vw, 0.82rem); white-space: nowrap; }
+.word-filter button[aria-pressed='true'], .word-sort button[aria-pressed='true'] { background: var(--accent-grad); color: #fff; box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent); }
+.word-filter button { padding-left: clamp(5px, 1.9vw, 12px); padding-right: clamp(5px, 1.9vw, 12px); letter-spacing: -0.02em; }

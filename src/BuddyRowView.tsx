@@ -23,7 +23,7 @@ export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, danci
   return (
     <>
     <button className="team-level" aria-label="チームレベル" aria-expanded={showTitles} onClick={() => setShowTitles(!showTitles)}>
-      🤝 チームLv.{team.level}「{team.title}」{team.next !== null && <small>（あと{team.next}で次の称号）</small>}
+      🤝 チームLv.{team.level}「{team.title}」{team.next !== null && <small className="team-next">あと{team.next}で次の称号</small>}
     </button>
     {showTitles && (
       <ol className="team-titles" aria-label="チームの称号の一覧">
