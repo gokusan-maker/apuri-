@@ -1333,3 +1333,9 @@ details.diary > summary, details.theme-practice > summary { padding: 10px 0; fon
 details.diary[open], details.theme-practice[open] { padding-bottom: 10px; }
 /* 今日のボスの「強さを選ぶ」：上のボタンとくっつかないよう、うすいカードにまとめる */
 .daily-stars { margin: 10px 0 12px; padding: 8px 10px 10px; border-radius: 14px; background: color-mix(in srgb, #7c3aed 6%, var(--bg)); border: 1px solid color-mix(in srgb, #7c3aed 18%, transparent); }
+
+/* ステージ表：次に挑むステージをやさしく光らせ、ボス出現の案内をピルに */
+.stage-btn:not(:disabled):not(.cleared) { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent), var(--shadow-sm); animation: stage-next 1.8s ease-in-out infinite; }
+@keyframes stage-next { 50% { box-shadow: 0 0 0 7px color-mix(in srgb, var(--accent) 8%, transparent), var(--shadow-sm); } }
+@media (prefers-reduced-motion: reduce) { .stage-btn:not(:disabled):not(.cleared) { animation: none; } }
+.boss-locked { display: inline-block; margin: 8px 0 4px; padding: 4px 12px; border-radius: 999px; font-size: .8rem; color: var(--muted); background: var(--surface-2, #f1f2f8); border: 1px dashed color-mix(in srgb, var(--muted) 40%, transparent); }
