@@ -8,3 +8,10 @@ it('ページの点：いまのページだけ on になる', () => {
   expect(dots[0].className).toBe('on')
   expect(dots[1].className).toBe('')
 })
+
+it('案内の題名は「へ」のあとでだけ改行できる（カタカナのとちゅうで切れない）', () => {
+  render(<Onboarding onDone={() => {}} />)
+  const t = document.querySelector('.onboarding-title')!
+  expect(t.textContent).toBe('イングリッシュモンスターへようこそ！')
+  expect(t.querySelectorAll('wbr').length).toBe(1)
+})

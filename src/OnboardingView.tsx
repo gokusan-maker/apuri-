@@ -30,7 +30,10 @@ export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => voi
         <div className="onboarding-figure">
           <MonsterFigure form={FORMS[last ? 0 : 2]} mood="happy" />
         </div>
-        <p className="celebrate-title">{s.title}</p>
+        {/* 「へ」「、」のあとでだけ改行させる（カタカナのとちゅうで切れないように） */}
+        <p className="celebrate-title onboarding-title">
+          {s.title.split(/(?<=[へ、])/).flatMap((part, i) => (i > 0 ? [<wbr key={i} />, part] : [part]))}
+        </p>
         <p className="celebrate-text">{s.body}</p>
         {step === 1 && onGrade && (
           <div className="grade-pick" role="group" aria-label="学年">

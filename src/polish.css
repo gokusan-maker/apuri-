@@ -1817,3 +1817,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 }
 :root[data-theme="dark"] .vs-p1 .vs-score { color: #f87171; }
 :root[data-theme="dark"] .vs-p2 .vs-score { color: #60a5fa; }
+
+/* はじめての案内：題名はカタカナのとちゅうで改行しない */
+.onboarding-title { word-break: keep-all; overflow-wrap: anywhere; font-size: clamp(1.15rem, 5.6vw, 1.4rem); }
