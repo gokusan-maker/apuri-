@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'get-done': { wrong: 'I got lose in the city.', right: 'I got lost in the city.', why: 'get のあとは過去分詞（lost）。' },
   'even-only': { wrong: 'I have only ten minutes only.', right: 'I only have ten minutes. / I have only ten minutes.', why: 'only は1回だけ。動詞の前か、強めたい語の前に置く。' },
   'each-other': { wrong: 'Ken and I helped ourselves with our homework.（おたがいに）', right: 'Ken and I helped each other with our homework.', why: '「おたがいに」は each other。-selves は「自分自身」。' },
   'tag-imperative': { wrong: "Let's go home, will we?", right: "Let's go home, shall we?", why: "Let's 〜 の付加疑問は shall we。" },
