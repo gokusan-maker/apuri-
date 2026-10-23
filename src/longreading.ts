@@ -4936,7 +4936,8 @@ export const XP_LONG_ITEM = 5 // 1問正解ごと
 
 // 採点：空所と内容一致の正解数
 export const seqRight = (q: SeqQ, a: number[] | undefined) => !!a && a.length === q.answer.length && a.every((x, i) => x === q.answer[i])
-export const splitSentences = (t: string) => t.split(/(?<=[.!?]["”]?)\s+(?=[A-Z"“])/)
+// 英文を文ごとに分ける（Mr. / Mrs. / Ms. / Dr. / St. のあとでは切らない）
+export const splitSentences = (t: string) => t.split(/(?<=[.!?]["”]?)(?<!\b(?:Mr|Mrs|Ms|Dr|St)\.)\s+(?=[A-Z"“])/)
 // 段落の並べかえを「出来事の順番」と同じ形（events と answer）にする
 export function paraSeqQ(p: LongPassage): SeqQ | null {
   if (!p.paraSeq) return null
@@ -5397,7 +5398,7 @@ export function difficultyOf(p: LongPassage): 1 | 2 | 3 {
 export function keySentence(p: LongPassage, statement: string): string {
   const words = (t: string) => new Set(t.toLowerCase().replace(/[^a-z0-9' ]/g, ' ').split(/\s+/).filter((w) => w.length > 3))
   const target = words(statement)
-  const sentences = p.paragraphs.flatMap((t) => t.split(/(?<=[.!?])\s+/)).filter((t) => t.trim().length > 0)
+  const sentences = p.paragraphs.flatMap(splitSentences).filter((t) => t.trim().length > 0)
   let best = sentences[0] ?? ''
   let bestScore = -1
   for (const t of sentences) {

@@ -1,6 +1,6 @@
 // 読解ボス：ステージのボスは、その学年の長文2本から問題を出す（空所補充・内容一致○×・英問英答）
 import { BOSS_QUESTIONS } from './boss'
-import { LONG_PASSAGES, type LongPassage } from './longreading'
+import { LONG_PASSAGES, splitSentences, type LongPassage } from './longreading'
 import type { Level, Word } from './words'
 
 export type ReadingQ = { word: Word; choices: string[]; answer: number; passage: LongPassage; blank?: string } // blank：空所の問題ならその記号（A など）
@@ -16,10 +16,11 @@ const w = (en: string, ja: string): Word => ({ id: '', en, ja, example: '', exam
 
 // 長文1本ぶんの問題（本文の順：空所 → ○× → 英問英答）
 export function passageQs(p: LongPassage): ReadingQ[] {
-  const text = p.paragraphs.join(' ')
+  // 段落ごとに文に分ける（Mr. / Mrs. / Dr. などの略語のピリオドでは切らない：longreading の splitSentences）
+  const sentences = p.paragraphs.flatMap((t) => splitSentences(t))
   const out: ReadingQ[] = []
   for (const b of p.blanks) {
-    const sent = text.split(/(?<=[.!?"])\s+/).find((s) => s.includes(`( ${b.id} )`)) ?? `( ${b.id} )`
+    const sent = sentences.find((s) => s.includes(`( ${b.id} )`)) ?? `( ${b.id} )`
     out.push({ word: w(`（${b.id}）に入る語は？ ${sent}`, b.choices[b.answer]), choices: b.choices, answer: b.answer, passage: p, blank: b.id })
   }
   for (const t of p.tf) out.push({ word: w(`本文と合っている？ ${t.statement}`, t.answer ? '○' : '×'), choices: ['○ 合っている', '× 合っていない'], answer: t.answer ? 0 : 1, passage: p })

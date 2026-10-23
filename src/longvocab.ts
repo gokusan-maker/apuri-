@@ -1,6 +1,6 @@
 // 長文の重要語句：本文に出てくる熟語と、中2以上の単語を単語帳から拾う（意味は単語帳のもの）
 import { makeLookup } from './glossary'
-import type { LongPassage } from './longreading'
+import { splitSentences, type LongPassage } from './longreading'
 import { levelOf, WORDS, type Word } from './words'
 
 const lookup = makeLookup(WORDS)
@@ -49,7 +49,7 @@ export function blankIdioms(passages: LongPassage[]): { w: Word; count: number }
     for (const b of p.blanks) {
       const ans = b.choices[b.answer].toLowerCase()
       for (const para of p.paragraphs) {
-        const sent = para.split(/(?<=[.!?])\s+/).find((s) => s.includes(`( ${b.id} )`))
+        const sent = splitSentences(para).find((s) => s.includes(`( ${b.id} )`))
         if (!sent) continue
         const filled = sent.replace(`( ${b.id} )`, ans).toLowerCase()
         for (const w of PHRASES) {

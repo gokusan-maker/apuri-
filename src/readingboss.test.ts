@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { LONG_PASSAGES } from './longreading'
 import { passageQs, readingBossQs, readingPoolFor } from './readingboss'
+import { splitSentences } from './longreading'
 
 it('読解ボスの問題：読解の空所・○×・英問英答から作り、答えが選択肢の中にある', () => {
   const p = LONG_PASSAGES[0]
@@ -42,4 +43,9 @@ describe('答えがわかった空所を本文にうめる', () => {
     const qs = passageQs(LONG_PASSAGES[0])
     expect(qs.filter((q) => q.blank).length).toBe(LONG_PASSAGES[0].blanks.length)
   })
+})
+
+it('文に分けるとき Mr. / Mrs. のピリオドでは切らない（空所の問題文に前の文のかけらが入らない）', () => {
+  expect(splitSentences('Dear Mr. and Mrs. Green, thank you. I had fun!')).toEqual(['Dear Mr. and Mrs. Green, thank you.', 'I had fun!'])
+  for (const p of LONG_PASSAGES) for (const q of passageQs(p)) if (q.blank) expect(q.word.en).not.toMatch(/は？ (Green|Smith|Brown|Tanaka),/)
 })
