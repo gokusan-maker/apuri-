@@ -742,3 +742,54 @@ main h2::before {
 .long-choice.answer { border-color: transparent; background: var(--good-grad); color: #fff; box-shadow: 0 3px 0 #15803d; }
 .long-choice.picked:not(.answer):disabled { background: linear-gradient(135deg, #f87171, #dc2626); box-shadow: 0 3px 0 #991b1b; }
 .long-choices.tf { grid-template-columns: repeat(2, 84px); }
+
+/* ===== なかまのくわしい画面：ふきだしのプロフィールとタイムライン ===== */
+.buddy-profile {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 12px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow-sm);
+}
+.buddy-profile::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 28px;
+  width: 12px;
+  height: 12px;
+  background: var(--card);
+  border-left: 1px solid var(--hair);
+  border-top: 1px solid var(--hair);
+  transform: rotate(45deg);
+}
+.buddy-forms {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0 0 0 18px;
+  border-left: 3px solid color-mix(in srgb, var(--accent) 25%, transparent);
+}
+.buddy-forms li {
+  position: relative;
+  margin: 0 0 6px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+}
+.buddy-forms li::before {
+  content: '';
+  position: absolute;
+  left: -26px;
+  top: 50%;
+  width: 11px;
+  height: 11px;
+  margin-top: -6px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--muted) 35%, var(--card));
+  box-shadow: 0 0 0 3px var(--card);
+}
+.buddy-forms li.got { background: color-mix(in srgb, var(--accent) 8%, var(--card)); font-weight: 700; }
+.buddy-forms li.got::before { background: var(--accent-grad); }
+.buddy-forms li.locked { color: var(--muted); }

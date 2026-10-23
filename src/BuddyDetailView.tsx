@@ -42,7 +42,7 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
               </form>
             ) : (
               <p>
-                <strong>{buddyName(t, b)}</strong>（{formName(t, b)}）Lv.{lv.level}
+                <strong>{buddyName(t, b)}</strong>{buddyName(t, b) !== formName(t, b) && `（${formName(t, b)}）`} Lv.{lv.level}
                 <button
                   className="list-link"
                   onClick={() => {
