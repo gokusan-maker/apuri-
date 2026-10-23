@@ -55,7 +55,8 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
               </p>
             )}
             <p className="stats-note buddy-next">
-              あと {lv.need - lv.into}XP で Lv.{lv.level + 1}{next ? `・Lv.${next.minLv}で ？？？` : '・さいごの姿！'}
+              あと {lv.need - lv.into}XP で {next?.minLv === lv.level + 1 ? '？？？ に進化' : `Lv.${lv.level + 1}`}
+              {next ? next.minLv > lv.level + 1 && `・Lv.${next.minLv}で ？？？` : '・さいごの姿！'}
             </p>
             <div className="buddy-xpbar" aria-hidden="true">
               <i style={{ width: `${Math.min(100, Math.round((lv.into / Math.max(1, lv.need)) * 100))}%` }} />

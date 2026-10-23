@@ -10,7 +10,7 @@ it('文法のことばモンスター・読解の竜に名前をつけられ、�
   let b: Buddies = { grammar: { xp: 200 }, reading: { xp: 0 } }
   const { rerender } = render(<BuddyDetail buddies={b} onRename={(t, n) => (b = renameBuddy(b, t, n))} />)
   const g = screen.getByLabelText('文法のなかま')
-  expect(g.textContent).toMatch(/あと \d+XP で Lv\.\d+/)
+  expect(g.textContent).toMatch(/あと \d+XP で (Lv\.\d+|？？？ に進化)/)
   expect(g.querySelectorAll('.buddy-forms li')).toHaveLength(8)
   fireEvent.click(within(g).getByText('✏️ 名前をつける'))
   fireEvent.change(screen.getByLabelText('なかまの名前'), { target: { value: 'ポチ' } })
