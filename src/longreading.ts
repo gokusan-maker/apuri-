@@ -4797,7 +4797,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       'バナナを冷蔵庫に入れるとどうなるでしょうか。冷たさで皮は黒っぽくなりますが、中の実はまだおいしく食べられます。だから、皮が黒いというだけでバナナを捨てないでください。',
     ],
     blanks: [
-      { id: 'A', choices: ['most', 'much', 'more', 'every'], answer: 0, why: 'most of them「それらのほとんど」。much は数えられない名詞、every は of them の前に置けない。' },
+      { id: 'A', choices: ['most', 'much', 'each', 'every'], answer: 0, why: 'most of them「それらのほとんど」。much は数えられない名詞、every は of them の前に置けない。each of them は単数あつかいなので have と合わない。' },
       { id: 'B', choices: ['faster', 'fast', 'fastest', 'more fast'], answer: 0, why: '「（ふくろに入れないときより）早く熟す」なので比較級 faster。' },
       { id: 'C', choices: ['because', 'so', 'if', 'though'], answer: 0, why: 'just because ～「～というだけの理由で」。' },
     ],

@@ -9,7 +9,7 @@ export function Records() {
       <h2>🏆 記録の部屋</h2>
       <ul>
         {rows.map((r) => (
-          <li key={r.label}>
+          <li key={r.label} className={String(r.value).length > 10 ? 'wide' : undefined}>
             <span className="records-icon" aria-hidden="true">
               {r.icon}
             </span>

@@ -1517,3 +1517,17 @@ b.mark { display: inline-grid; place-items: center; flex: none; width: 1.6em; he
 .quick-grades { display: flex; width: fit-content; max-width: 100%; margin: 8px auto; padding: 3px; gap: 2px; border-radius: 999px; background: var(--surface-2, #f1f2f8); border: 1px solid var(--hair, rgba(0,0,0,.08)); }
 .quick-grades button { min-height: 32px; padding: 4px 12px; border: none; border-radius: 999px; background: transparent; box-shadow: none; color: var(--muted); font-size: 0.82rem; }
 .quick-grades button[aria-pressed='true'] { background: var(--accent-grad); color: #fff; box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent); }
+
+/* 記録の部屋：2列の小さな記録タイル（長い記録は横いっぱい）に */
+.records ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+.records li { margin: 0; min-width: 0; }
+.records li.wide { grid-column: 1 / -1; }
+.records-value { overflow-wrap: anywhere; }
+.records-label { font-size: 0.72rem; line-height: 1.3; }
+.records-value { font-size: 0.98rem; }
+/* バッジ：3列のコンパクトなタイルに（説明は小さく） */
+.badges .badge-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.badges .badge-grid li { padding: 8px 4px; }
+.badges .badge-grid .badge-icon { font-size: 1.5rem; }
+.badges .badge-grid .badge-name { font-size: 0.74rem; line-height: 1.25; }
+.badges .badge-grid .badge-desc { font-size: 0.62rem; line-height: 1.3; }
