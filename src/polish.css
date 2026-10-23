@@ -1803,3 +1803,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .partner-status { background: rgb(255 255 255 / 0.06); }
 :root[data-theme="dark"] .warm-btn { background: rgb(251 146 60 / 0.14); border-color: rgb(253 186 116 / 0.45); color: var(--fg); }
 .partner-status dl { grid-template-columns: 7.5em 1fr; }
+
+/* ダークモード：ルーレットのマスも暗い地に明るい文字 */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .roulette-wheel li:not(.hit) { background: rgb(251 191 36 / 0.14); color: #fde68a; }
+}
+:root[data-theme="dark"] .roulette-wheel li:not(.hit) { background: rgb(251 191 36 / 0.14); color: #fde68a; }
