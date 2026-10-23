@@ -17,3 +17,10 @@ it('はじめは NEW、あそぶと「✅ 今日」の印がつき、次の日�
   expect(screen.getByText('✅ 今日')).toBeInTheDocument()
   expect(loadTodayGames('2099-01-01')).toEqual([])
 })
+
+it('8文字以上の名前は long になって1行に収める', () => {
+  const { container } = render(<GameTile icon="👾" name="モンスターラッシュ" onClick={() => {}} />)
+  expect(container.querySelector('.game-tile-name')?.classList.contains('long')).toBe(true)
+  const { container: c2 } = render(<GameTile icon="🎯" name="文法ビンゴ" onClick={() => {}} />)
+  expect(c2.querySelector('.game-tile-name')?.classList.contains('long')).toBe(false)
+})

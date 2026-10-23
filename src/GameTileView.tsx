@@ -30,7 +30,7 @@ export function GameTile({ icon, name, sub, on = false, playKey, onClick }: Prop
       <span className="game-tile-icon" aria-hidden="true">
         {icon}
       </span>
-      <span className="game-tile-name">{name}</span>
+      <span className={name.length >= 8 ? 'game-tile-name long' : 'game-tile-name'}>{name}</span>
       {sub && <small className="game-tile-sub">{sub}</small>}
     </button>
   )
