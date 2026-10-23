@@ -1351,3 +1351,4 @@
 - 2026-10-23: 高校の文法単元「happen to ～ / turn out to be ～」を追加（全208単元に）
 - 2026-10-23: 読解「かんたん」に「At the Planetarium（プラネタリウム）」を追加（全140本に）。happen to 単元の選択肢を明確化
 - 2026-10-23: 読解「TOEFL・IELTS」に「A Safe Box for the World's Seeds（世界種子貯蔵庫）」を追加
+- 2026-10-23: 読解「高校入試」に「The Match I Lost（負けた試合から学んだこと）」を追加。種子貯蔵庫の空所Aの選択肢を明確化

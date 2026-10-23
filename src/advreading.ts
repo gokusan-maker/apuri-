@@ -2314,7 +2314,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'この貯蔵庫はすでにその価値を証明している。2015年、シリアでの戦争のためにジーンバンクの移転を余儀なくされた研究者たちが、別の場所でコレクションを立て直すために、スヴァールバルから種子の一部を引き出した。支持者たちは、作物の多様性を守ることは欠かせないと主張する。今日は重要でなさそうに見える植物の品種が、いつか農家が新しい病気や変わりゆく気候に対処するのを助けるかもしれないからだ。',
     ],
     blanks: [
-      { id: 'A', choices: ['so', 'such', 'as', 'unless'], answer: 0, why: 'so that ～「～するように」。目的を表す。' },
+      { id: 'A', choices: ['so', 'very', 'as', 'unless'], answer: 0, why: 'so that ～「～するように」。目的を表す。' },
       { id: 'B', choices: ['even if', 'because', 'so that', 'unless'], answer: 0, why: '「たとえ電気が止まっても」なので even if。' },
       { id: 'C', choices: ['since', 'although', 'unless', 'until'], answer: 0, why: '作物の多様性を守るのが大切な理由を述べるので since（～なので）。' },
     ],
@@ -2325,6 +2325,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'Why would the seeds stay cold for some time even without electricity?', choices: ['Because the vault is built into frozen ground.', 'Because the seeds are kept in water.', 'Because the island is near the equator.', 'Because the seeds produce their own cold.'], answer: 0, why: '第2段落 Because the vault is built into frozen ground。' },
+    ],
+  },
+{
+    id: 'hs-badminton-loss',
+    title: 'The Match I Lost',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "I have been on the badminton team for two years. Last summer, I played in the city tournament. I practiced harder than anyone else, so I was sure that I would win the first match. However, my opponent was a first-year student who was much ( A ) than me. I lost the match in only twenty minutes.",
+      "After the match, I sat alone in the corner of the gym and could not stop crying. Then the girl who beat me came over. She said, \"Your smash was really strong. I was afraid of it the whole time.\" I was surprised. I had thought only about my mistakes, but she had seen my strong point. We talked for a while, and she told me how she practiced her footwork every morning ( B ) school.",
+      "Since that day, I have started practicing footwork, too. I still lose sometimes, but I am not afraid of losing anymore. A match I lose can teach me more than a match I win. Next summer, I want to play against her again and show her ( C ) much I have improved.",
+    ],
+    ja: [
+      '私はバドミントン部に入って2年になる。去年の夏、市の大会に出場した。だれよりも一生けんめい練習していたので、1回戦は勝てると信じていた。しかし、相手は私よりずっと動きの速い1年生だった。私はたった20分で試合に負けた。',
+      '試合のあと、私は体育館のすみにひとりですわり、涙が止まらなかった。そのとき、私に勝った女の子がやって来た。彼女は「あなたのスマッシュ、本当に強かった。ずっとこわかったよ」と言った。私はおどろいた。私は自分のミスのことばかり考えていたのに、彼女は私の長所を見ていたのだ。私たちはしばらく話し、彼女は毎朝学校の前にフットワークの練習をしていると教えてくれた。',
+      'その日から、私もフットワークの練習を始めた。今でもときどき負けるが、もう負けることはこわくない。負けた試合は、勝った試合よりも多くのことを教えてくれることがある。来年の夏、もう一度彼女と対戦して、私がどれだけ上達したかを見せたい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['faster', 'fast', 'fastest', 'more fast'], answer: 0, why: 'than があるので比較級。fast の比較級は faster。much は比較級を強める。' },
+      { id: 'B', choices: ['before', 'during', 'between', 'since'], answer: 0, why: '「学校の前に（登校前に）」なので before。' },
+      { id: 'C', choices: ['how', 'what', 'so', 'very'], answer: 0, why: 'how much ～「どれだけ～」。show her の目的語になる間接疑問。' },
+    ],
+    tf: [
+      { statement: '筆者は1回戦で、1年生の選手に勝った。', answer: false, why: '第1段落 I lost the match in only twenty minutes。' },
+      { statement: '相手の女の子は、筆者のスマッシュをほめた。', answer: true, why: '第2段落 Your smash was really strong。' },
+      { statement: '筆者は今でも負けることをとてもこわがっている。', answer: false, why: '第3段落 I am not afraid of losing anymore。' },
+    ],
+    qa: [
+      { q: 'What did the writer start doing after the tournament?', choices: ['Practicing footwork.', 'Quitting the badminton team.', 'Playing tennis instead.', 'Practicing only smashes.'], answer: 0, why: '第3段落 I have started practicing footwork, too。' },
     ],
   },
 ]
