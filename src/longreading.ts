@@ -4660,6 +4660,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Dolphins and whales are fish.', answer: false, why: '第4段落 they are not fish。' },
     ],
   },
+  {
+    id: 'cat-purr',
+    title: 'Why Do Cats Purr?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'If you pet a cat, you may hear a soft, low sound like a small engine. This sound is called purring. Many people think that cats purr only when they are happy. That is often true, but cats also purr at other times.',
+      'How do cats make this sound? Muscles in the throat move very quickly, ( A ) the air shakes when the cat breathes in and out. Because of this, cats can purr for a long time without stopping, even while they are breathing.',
+      'Kittens begin to purr when they are only a few days old. They cannot see or hear well yet, so purring ( B ) them tell their mother that they are safe and drinking milk. Later, adult cats sometimes purr when they are sick, hurt, or nervous. Scientists think that purring may help them calm down.',
+      'Some scientists also believe that the low sound of purring may help a cat\'s body heal, but this idea has not been proved yet. There is still a lot we do not know ( C ) this familiar sound. The next time your cat purrs, try to guess what it is telling you.',
+    ],
+    ja: [
+      'ネコをなでると、小さなエンジンのような、やわらかく低い音が聞こえるかもしれません。この音はゴロゴロとよばれます。多くの人は、ネコはうれしいときだけゴロゴロ鳴らすと思っています。それはたいてい正しいのですが、ネコはほかのときにもゴロゴロ鳴らします。',
+      'ネコはどうやってこの音を出しているのでしょうか。のどの筋肉がとても速く動くので、ネコが息を吸ったりはいたりするときに空気がふるえるのです。このため、ネコは息をしながらでも、止まらずに長いあいだゴロゴロ鳴らすことができます。',
+      '子ネコは生まれてほんの数日でゴロゴロ鳴らしはじめます。まだよく見たり聞いたりできないので、ゴロゴロ鳴らすことで、自分が安全でミルクを飲んでいることを母ネコに伝えるのに役立ちます。のちに、おとなのネコは病気のときやけがをしたとき、不安なときにもゴロゴロ鳴らすことがあります。科学者たちは、ゴロゴロ鳴らすことで気持ちを落ち着けているのかもしれないと考えています。',
+      'ゴロゴロという低い音がネコの体を治すのに役立つのかもしれないと考える科学者もいますが、この考えはまだ証明されていません。このよく知られた音について、私たちが知らないことはまだたくさんあります。今度あなたのネコがゴロゴロ鳴らしたら、何を伝えようとしているのか想像してみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'but', 'or', 'if'], answer: 0, why: '「筋肉が速く動き、そして空気がふるえる」とつながるので and。' },
+      { id: 'B', choices: ['helps', 'help', 'helping', 'to help'], answer: 0, why: '主語 purring（動名詞）は単数あつかいなので helps。help 人 do「人が～するのを助ける」。' },
+      { id: 'C', choices: ['about', 'with', 'for', 'at'], answer: 0, why: 'know about ～「～について知っている」。' },
+    ],
+    underline: { phrase: 'this idea has not been proved yet', choices: ['この考えはまだ証明されていない', 'この考えはもう証明された', 'この考えはまちがいだとわかった', 'この考えはだれも知らない'], answer: 0, why: 'has not been proved yet は現在完了の受け身の否定「まだ証明されていない」。' },
+    tf: [
+      { statement: 'Cats purr only when they are happy.', answer: false, why: '第1段落 cats also purr at other times。' },
+      { statement: 'Cats can purr while they are breathing.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Kittens start to purr when they are a few days old.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Scientists have proved that purring heals a cat\'s body.', answer: false, why: '第4段落 this idea has not been proved yet。' },
+      { statement: 'Adult cats sometimes purr when they are nervous.', answer: true, why: '第3段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
