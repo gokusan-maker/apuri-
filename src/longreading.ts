@@ -4690,6 +4690,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Adult cats sometimes purr when they are nervous.', answer: true, why: '第3段落の内容と合う。' },
     ],
   },
+  {
+    id: 'bread-rise',
+    title: 'Why Does Bread Rise?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Have you ever made bread at home? At first, the dough is small and heavy. But after an hour or two, it becomes much ( A ). Why does this happen? The secret is a tiny living thing called yeast.',
+      'Yeast is a kind of fungus. It is so small that we cannot see it without a microscope. When yeast is mixed with flour, water, and a little sugar, it starts to eat the sugar. As it eats, it gives off a gas. This gas makes many small bubbles in the dough, and the dough grows bigger and softer.',
+      'Yeast likes warm places. If the room is too cold, the dough rises very slowly. But if the water is too hot, the yeast can die. That is why bakers use warm water, not boiling water. When the bread goes into the oven, the heat makes the bubbles bigger, and then the yeast stops working.',
+      'Look closely at a slice of bread. You can see many small holes in it. Each hole was once a bubble ( B ) by yeast. People have used yeast to make bread for thousands of years, ( C ) they could not see it.',
+    ],
+    ja: [
+      '家でパンを作ったことはありますか。はじめ、生地は小さくて重いです。でも1、2時間たつと、ずっと大きくなります。なぜこうなるのでしょうか。そのひみつは、イーストとよばれる小さな生き物です。',
+      'イーストは菌のなかまです。とても小さいので、けんび鏡なしでは見ることができません。イーストを小麦粉や水、少しの砂糖とまぜると、イーストは砂糖を食べはじめます。食べながら、イーストは気体を出します。この気体が生地の中にたくさんの小さなあわを作り、生地は大きく、やわらかくなるのです。',
+      'イーストはあたたかい場所が好きです。部屋が寒すぎると、生地はとてもゆっくりふくらみます。でも水が熱すぎると、イーストは死んでしまうことがあります。だからパン職人は、ふっとうしたお湯ではなく、ぬるま湯を使うのです。パンがオーブンに入ると、熱であわがさらに大きくなり、そしてイーストははたらくのをやめます。',
+      'パンの切れはしをよく見てください。小さな穴がたくさん見えるでしょう。それぞれの穴は、かつてイーストが作ったあわだったのです。人々は、目に見えなかったにもかかわらず、何千年ものあいだイーストを使ってパンを作ってきました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['bigger', 'big', 'biggest', 'more big'], answer: 0, why: 'much は比較級を強める。big の比較級は bigger。' },
+      { id: 'B', choices: ['made', 'making', 'make', 'makes'], answer: 0, why: 'a bubble made by yeast「イーストによって作られたあわ」。過去分詞の後置修飾。' },
+      { id: 'C', choices: ['though', 'because', 'so', 'until'], answer: 0, why: '「見えなかったけれども使ってきた」という逆接なので though。' },
+    ],
+    underline: { phrase: 'it gives off a gas', choices: ['気体を出す', '気体を吸いこむ', '気体をこわす', '気体を止める'], answer: 0, why: 'give off ～「（においや気体など）を出す」。' },
+    tf: [
+      { statement: 'We can see yeast without a microscope.', answer: false, why: '第2段落 we cannot see it without a microscope。' },
+      { statement: 'Yeast eats sugar and gives off a gas.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'Bakers use boiling water to make the dough rise faster.', answer: false, why: '第3段落 bakers use warm water, not boiling water。' },
+      { statement: 'The small holes in bread were once bubbles.', answer: true, why: '第4段落の内容と合う。' },
+      { statement: 'People started using yeast only a hundred years ago.', answer: false, why: '第4段落 for thousands of years。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
