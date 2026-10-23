@@ -490,28 +490,22 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         })()}
         <p className="stats-note">下の階から順に挑戦（高校基礎・熟語＋文法）</p>
         <ol className="univ-floors">
-          {[...UNIV_BOSSES].reverse().map((b) => {
-            const i = UNIV_BOSSES.indexOf(b)
-            const open = univUnlocked(i, univ)
+          {/* 先が長く見えないよう、たおした階といま挑める階だけ見せる */}
+          {[...UNIV_BOSSES].reverse().filter((b) => univUnlocked(UNIV_BOSSES.indexOf(b), univ)).map((b) => {
             return (
-              <li key={b.id} className={univ[b.id] ? 'beaten' : open ? 'open' : 'locked'}>
+              <li key={b.id} className={univ[b.id] ? 'beaten' : 'open'}>
                 <span className="univ-figure">
-                  <BossFigure hit={false} look={open ? b : { ...b, color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }} />
+                  <BossFigure hit={false} look={b} />
                 </span>
                 <span className="univ-info">
                   <strong>
-                    {b.floor} {open ? b.name : '？？？'}
+                    {b.floor} {b.name}
                   </strong>
-                  <span className="univ-hint">
-                    {b.hint}
-                    {open && `・HP${b.hp}・🪙${b.coins}`}
-                  </span>
+                  <span className="univ-hint">{b.hint}</span>
                 </span>
-                {open && (
-                  <button className="boss-btn" onClick={() => setUnivFight(b)}>
-                    {univ[b.id] ? '👑 もう一度' : '⚔ 挑戦'}
-                  </button>
-                )}
+                <button className="boss-btn" onClick={() => setUnivFight(b)}>
+                  {univ[b.id] ? '👑 もう一度' : '⚔ 挑戦'}
+                </button>
               </li>
             )
           })}
