@@ -1654,3 +1654,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 .shop-coins-pill { padding: 4px 14px; border-radius: 999px; background: linear-gradient(180deg, #fde68a, #fbbf24); color: #78350f; font-weight: 900; box-shadow: 0 2px 0 #d97706, 0 3px 8px rgb(217 119 6 / 0.25); }
 .shop-coins small { color: var(--muted); font-size: 0.74rem; font-weight: 700; }
 .shop-h .fold-meta { display: inline-block; margin-left: 4px; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; vertical-align: 0.1em; }
+
+/* 設定：画面の色・テーマカラーは1行におさめる */
+.levels.fit { flex-wrap: nowrap; }
+.levels.fit button { flex: 1 1 0; min-width: 0; padding-left: 6px; padding-right: 6px; white-space: nowrap; }

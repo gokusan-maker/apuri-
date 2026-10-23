@@ -18,7 +18,7 @@ type Props = {
 }
 
 const THEMES: { id: Theme; label: string }[] = [
-  { id: 'system', label: '端末に合わせる' },
+  { id: 'system', label: '自動' },
   { id: 'light', label: 'ライト' },
   { id: 'dark', label: 'ダーク' },
 ]
@@ -61,7 +61,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       )}
 
       <label className="setting">
-        <span>定期テストの日（カウントダウンを表示）</span>
+        <span>定期テストの日</span>
         <input
           type="date"
           className="date-input"
@@ -102,7 +102,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       <h3 className="settings-h">🎨 見た目</h3>
       <fieldset className="setting">
         <legend>画面の色</legend>
-        <div className="levels">
+        <div className="levels fit">
           {THEMES.map((t) => (
             <button key={t.id} aria-pressed={settings.theme === t.id} onClick={() => set({ theme: t.id })}>
               {t.label}
@@ -113,7 +113,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
 
       <fieldset className="setting">
         <legend>テーマカラー</legend>
-        <div className="levels">
+        <div className="levels fit">
           {THEME_COLORS.map((c) => (
             <button
               key={c.id}
@@ -173,7 +173,7 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
       </label>
 
       <label className="setting toggle">
-        <span>かんたんモード（4択クイズの選択肢を3つに）</span>
+        <span>かんたんモード（3択に）</span>
         <input type="checkbox" checked={settings.easy} onChange={(e) => set({ easy: e.target.checked })} />
       </label>
 

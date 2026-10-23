@@ -19,7 +19,7 @@ export function Cloud({ save = cloudSave, load = cloudLoad, onRestored = () => w
 
   return (
     <div className="cloud">
-      <p className="stats-note">学習データをクラウドに保存しておくと、機種変更しても「引き継ぎコード」で元にもどせます。一度保存すると、そのあとは1日1回自動で保存します。コードは人に教えないでね。</p>
+      <p className="stats-note">機種変更しても「引き継ぎコード」で元にもどせる（1日1回自動で保存）。コードは人に教えないでね。</p>
       <button
         className="flip"
         disabled={busy}

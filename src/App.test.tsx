@@ -343,7 +343,7 @@ describe('App', () => {
       voice: '',
       petVoice: true,
     })
-    fireEvent.click(screen.getByText('端末に合わせる'))
+    fireEvent.click(screen.getByText('自動'))
     expect(document.documentElement.dataset.theme).toBeUndefined()
   })
 
