@@ -847,3 +847,35 @@ main select:focus {
   border-color: var(--accent);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 18%, transparent);
 }
+
+/* ===== 文法ゲーム ===== */
+/* 文法モンスターのHP（span の中身が表示されていなかったのを修正） */
+.boss-hp-fill { display: block; }
+.grammar-monster-hp { display: block; min-width: 120px; }
+/* ビンゴのマス：立体タイル */
+.bingo-cell {
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: var(--card);
+  font-weight: 900;
+  font-size: 1.4rem;
+  color: var(--fg);
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--accent) 18%, rgb(0 0 0 / 0.08)), var(--shadow-sm);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.bingo-cell:not(:disabled):active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 18%, rgb(0 0 0 / 0.08)); }
+.bingo-cell.ok { background: var(--good-grad); color: #fff; border-color: transparent; box-shadow: 0 4px 0 #15803d; }
+.bingo-cell.ng { background: linear-gradient(135deg, #f87171, #dc2626); color: #fff; border-color: transparent; box-shadow: 0 4px 0 #991b1b; }
+/* まちがいさがしの英文：カード */
+.spot-text {
+  margin: 10px 0 12px;
+  padding: 16px 14px;
+  border: 1px solid var(--hair);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #fffdf7, #fffaf0);
+  color: #1f2937;
+  font-weight: 800;
+  font-size: 1.15rem;
+  box-shadow: var(--shadow-md);
+}
+.spot-buttons { justify-content: center; grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
