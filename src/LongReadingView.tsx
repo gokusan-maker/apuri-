@@ -370,16 +370,16 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         >
           ← 読解の一覧
         </button>
-        <span>
-          {p.level}・{wordCount(p)}語・⏱ 目安{targetMinutes(p)}分
+        <span title={p.level}>
+          {wordCount(p)}語・⏱ {targetMinutes(p)}分
         </span>
       </div>
       <h2>{shownTitle(p, LONG_PASSAGES.indexOf(p))}</h2>
       {grammarTags(p).length > 0 && (
         <p className="long-gtags" aria-label="この読解に出てくる文法">
           📘 {grammarTags(p).map((t) => (
-            <span key={t.id} className="long-gtag">
-              {t.title}
+            <span key={t.id} className="long-gtag" title={t.title}>
+              {t.title.split('（')[0]}
             </span>
           ))}
         </p>
@@ -394,7 +394,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               setAloudAt(nowMs())
             }}
           >
-            🎙 音読タイム（声に出して読む）
+            🎙 音読
           </button>
         ) : (
           <button
@@ -404,7 +404,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               setAloudAt(null)
             }}
           >
-            ⏹ 読みおわった！
+            ⏹ 読めた！
           </button>
         )}
         {readingAll ? (
@@ -415,7 +415,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               setReadingAll(false)
             }}
           >
-            ⏹ 読み上げをとめる
+            ⏹ とめる
           </button>
         ) : (
           ([false, true] as const).map((slow) => (
@@ -431,7 +431,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
                 )
               }}
             >
-              {slow ? '🐢 ゆっくり聞く' : '🔊 全文を聞く'}
+              {slow ? '🐢 ゆっくり' : '🔊 全文'}
             </button>
           ))
         )}
@@ -452,7 +452,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         ))}
       </p>
       <label className="long-instant">
-        <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつすぐに答えあわせ（空所補充・○×）
+        <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつ答えあわせ
       </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
       <div className={`long-text font-${font}`}>

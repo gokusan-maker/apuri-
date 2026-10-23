@@ -187,13 +187,13 @@ it('全文を聞くで段落を順番に読み上げ、とめられる', async (
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
-  fireEvent.click(screen.getByText('🔊 全文を聞く'))
+  fireEvent.click(screen.getByText('🔊 全文'))
   expect(seq).toHaveBeenCalledTimes(1)
   expect(seq.mock.calls[0][0]).toHaveLength(p.paragraphs.length)
-  fireEvent.click(screen.getByText('⏹ 読み上げをとめる'))
+  fireEvent.click(screen.getByText('⏹ とめる'))
   expect(cancel).toHaveBeenCalled()
-  expect(screen.getByText('🔊 全文を聞く')).toBeInTheDocument()
-  fireEvent.click(screen.getByText('🐢 ゆっくり聞く'))
+  expect(screen.getByText('🔊 全文')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('🐢 ゆっくり'))
   expect(seq.mock.calls[1][2]).toBe(true)
   seq.mockRestore()
   cancel.mockRestore()
@@ -294,9 +294,9 @@ it('音読タイムで1分あたりの語数が出る', () => {
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
-  fireEvent.click(screen.getByText('🎙 音読タイム（声に出して読む）'))
+  fireEvent.click(screen.getByText('🎙 音読'))
   vi.setSystemTime(Date.now() + 60000)
-  fireEvent.click(screen.getByText('⏹ 読みおわった！'))
+  fireEvent.click(screen.getByText('⏹ 読めた！'))
   expect(screen.getByText(new RegExp(`1分あたり ${wordCount(p)}語`))).toBeInTheDocument()
 })
 
@@ -333,7 +333,7 @@ it('すぐに答えあわせモードでは、答えるとすぐ正解と解説�
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
-  fireEvent.click(screen.getByLabelText(/1問ずつすぐに答えあわせ/))
+  fireEvent.click(screen.getByLabelText(/1問ずつ答えあわせ/))
   const t = p.tf[0]
   fireEvent.click(screen.getByRole('button', { name: `(1) ${t.answer ? '○' : '×'}` }))
   expect(screen.getByText(new RegExp(t.why.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))).toBeInTheDocument()
@@ -545,4 +545,13 @@ it('読解の一覧の1行は「題名」と短いメタ（★・語数・目安
   const meta = item.querySelector('.long-meta')!.textContent ?? ''
   expect(meta).toMatch(/^★+・\d+語・目安\d+分/)
   expect(meta).not.toContain('点・')
+})
+
+it('読解の本文画面：上の情報は短く（語数・分）、文法タグは（ ）の前だけ、音読・全文・ゆっくりは短いボタン', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  fireEvent.click(document.querySelector('.long-item')!)
+  expect(screen.getByText('🎙 音読')).toBeInTheDocument()
+  expect(screen.getByText('🔊 全文')).toBeInTheDocument()
+  for (const t of document.querySelectorAll('.long-gtag')) expect(t.textContent).not.toContain('（')
 })
