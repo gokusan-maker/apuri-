@@ -1619,6 +1619,17 @@ export const PASSAGES: Passage[] = [
       { q: 'お金で何を買った？', choices: ['母へのプレゼント', '新しいゲーム', 'アイスクリーム'], answer: 0 },
     ],
   },
+  {
+    id: 'car-wash',
+    title: 'Washing Dad\'s Car',
+    text: 'Last Sunday, my sister and I washed our father\'s car. First, we filled two buckets with warm water and soap. Then we washed the car with big sponges. My sister sprayed the car with a hose, and she got me wet, too! We both laughed. It took us about an hour. When our father saw his shiny car, he smiled and took us out for ice cream.',
+    ja: 'この前の日曜日、姉と私は父の車を洗いました。まず、2つのバケツにお湯とせっけんを入れました。それから、大きなスポンジで車を洗いました。姉がホースで車に水をかけたとき、私までぬれてしまいました！2人とも笑いました。1時間くらいかかりました。ぴかぴかの車を見た父はにっこりして、私たちをアイスクリームを食べに連れていってくれました。',
+    questions: [
+      { q: '車を何で洗った？', choices: ['大きなスポンジ', 'タオル', 'ブラシ'], answer: 0 },
+      { q: '洗うのにどれくらいかかった？', choices: ['1時間くらい', '10分くらい', '3時間くらい'], answer: 0 },
+      { q: '父は2人をどこに連れていった？', choices: ['アイスクリームを食べに', '映画館', '公園'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
