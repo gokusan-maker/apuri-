@@ -2663,4 +2663,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, why might people accept a default option?', choices: ['Changing it takes effort, and it may seem like a recommendation.', 'They are not allowed to change it.', 'Default options are always the cheapest.', 'They usually read every option carefully.'], answer: 0, why: '第2段落 inertia / a default can be read as a quiet recommendation。' },
     ],
   },
+{
+    id: 'toefl-otters-kelp',
+    title: 'Sea Otters and Underwater Forests',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Along parts of the North Pacific coast, tall seaweed called kelp forms dense underwater forests. These kelp forests provide food and shelter for many kinds of fish and other sea creatures. Surprisingly, the health of these forests depends to a large extent on a small, furry mammal: the sea otter.",
+      "Sea otters eat large numbers of sea urchins, spiny animals that feed on kelp. When otters are present, they keep the number of urchins under control, ( A ) the kelp can grow. In the eighteenth and nineteenth centuries, however, sea otters were hunted for their thick fur until they had disappeared from much of their range. Without otters, urchin populations grew rapidly, and in many places they ate the kelp until little remained. Areas that had once been rich forests became bare sea floors with few other living things.",
+      "After sea otters were protected by law in the twentieth century, they gradually returned to some of these coasts. Where they came back, urchin numbers fell and kelp forests began to recover. Ecologists use the term \"keystone species\" for an animal like the sea otter, whose effect on its environment is far greater than its numbers would suggest. Just as a keystone holds an arch together, removing such a species can cause the whole system ( B ) collapse. This example shows that protecting a single species can sometimes protect an entire community of life ( C ).",
+    ],
+    ja: [
+      '北太平洋の海岸の一部では、ケルプとよばれる背の高い海藻が密集した海の中の森を作っている。このケルプの森は、多くの種類の魚やほかの海の生き物にえさとすみかをあたえている。おどろいたことに、この森の健康は、ラッコという毛におおわれた小さなほ乳類に大きくかかっている。',
+      'ラッコは、ケルプを食べるとげのある動物、ウニを大量に食べる。ラッコがいると、ウニの数がおさえられるので、ケルプは育つことができる。しかし18世紀から19世紀にかけて、ラッコは厚い毛皮のために狩られ、すんでいた地域の多くから姿を消してしまった。ラッコがいなくなるとウニは急速にふえ、多くの場所でケルプがほとんど残らなくなるまで食べつくした。かつて豊かな森だった場所は、ほかの生き物がほとんどいない、むき出しの海底になってしまった。',
+      '20世紀に法律でラッコが保護されると、ラッコは少しずつこうした海岸のいくつかにもどってきた。ラッコがもどった場所では、ウニの数がへり、ケルプの森が回復しはじめた。生態学者は、ラッコのように、その数から想像されるよりもはるかに大きな影響を環境にあたえる動物を「キーストーン種」とよぶ。かなめ石がアーチ全体を支えているように、そのような種をとりのぞくと、しくみ全体がくずれてしまうことがある。この例は、1つの種を守ることが、ときに生き物の共同体全体を守ることにもなることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「ウニがおさえられる、だからケルプが育つ」という結果なので so。' },
+      { id: 'B', choices: ['to', 'for', 'of', 'from'], answer: 0, why: 'cause ＋ 目的語 ＋ to ～「…に～させる・～する原因になる」。' },
+      { id: 'C', choices: ['as well', 'as if', 'as soon', 'as long'], answer: 0, why: 'as well「～も（同様に）」。文末に置いて「共同体全体も守る」。' },
+    ],
+    tf: [
+      { statement: 'ウニはケルプを食べる。', answer: true, why: '第2段落 sea urchins, spiny animals that feed on kelp。' },
+      { statement: 'ラッコがいなくなると、ケルプの森はさらに大きく育った。', answer: false, why: '第2段落 urchin populations grew rapidly, and ... they ate the kelp until little remained。' },
+      { statement: 'ラッコが保護されてもどってきた場所では、ケルプの森が回復しはじめた。', answer: true, why: '第3段落の内容と合う。' },
+    ],
+    qa: [
+      { q: 'Why is the sea otter called a "keystone species"?', choices: ['Its effect on its environment is much greater than its numbers suggest.', 'It is the largest animal in the kelp forest.', 'It builds homes out of stones.', 'It eats kelp more than any other animal.'], answer: 0, why: '第3段落 whose effect on its environment is far greater than its numbers would suggest。' },
+    ],
+  },
 ]
