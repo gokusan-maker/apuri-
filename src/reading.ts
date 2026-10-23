@@ -1509,6 +1509,17 @@ export const PASSAGES: Passage[] = [
       { q: 'ツリーの前で何をした？', choices: ['歌を歌った', '写真をとった', 'プレゼントを開けた'], answer: 0 },
     ],
   },
+  {
+    id: 'setsubun',
+    title: 'Setsubun Night',
+    text: 'In early February, we have a festival called Setsubun in Japan. Last year, my father wore a red demon mask. My brother and I threw beans at him and shouted, "Demons out! Good luck in!" Then we ate the same number of beans as our age. I ate thirteen beans, but my grandmother ate a lot!',
+    ja: '日本では2月のはじめに節分という行事があります。去年、父が赤いおにのお面をつけました。弟と私は父に豆を投げて、「鬼は外！福は内！」とさけびました。それから、自分の年と同じ数の豆を食べました。私は13個食べましたが、祖母はたくさん食べました！',
+    questions: [
+      { q: '節分はいつ？', choices: ['2月のはじめ', '12月の終わり', '5月のはじめ'], answer: 0 },
+      { q: 'おにのお面をつけたのはだれ？', choices: ['父', '弟', '祖母'], answer: 0 },
+      { q: '筆者は豆をいくつ食べた？', choices: ['13個', '3個', '30個'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
