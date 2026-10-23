@@ -1711,4 +1711,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the writer, what matters most in taking notes?', choices: ['How actively we use the tool.', 'Whether we use a pen or a keyboard.', 'How fast we can write.', 'How neat our notes look.'], answer: 0, why: '第3段落 what matters is not the tool itself but how actively we use it。' },
     ],
   },
+  {
+    id: 'toefl-hibernation',
+    title: 'The Long Winter Sleep',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "For many animals, winter is a time of hardship. Food becomes scarce, and staying warm requires a great deal of energy. Some species solve this problem by migrating to warmer places, but others remain where they are and enter a state known as hibernation. During hibernation, an animal's body temperature, heart rate, and breathing all drop dramatically, ( A ) it to survive for months on the fat it stored during the autumn.",
+      "The degree of this slowdown varies widely. In some small mammals, such as ground squirrels, body temperature can fall to just a few degrees above freezing, and the heart may beat only a handful of times per minute. Curiously, these animals do not stay in this state continuously. Every week or two, they briefly warm up again before returning to their deep sleep. Scientists are still debating ( B ) these costly awakenings are necessary.",
+      "Bears are often described as hibernators, but their winter sleep is different. Their body temperature falls by only a few degrees, and they can wake up relatively quickly if disturbed. Remarkably, female bears may even give birth during this period. Researchers are studying how bears avoid losing muscle and bone strength despite months of inactivity, in the hope that the findings could one day help patients ( C ) must stay in bed for long periods.",
+    ],
+    ja: [
+      '多くの動物にとって、冬はつらい時期である。食べ物は少なくなり、体を温かく保つには多くのエネルギーが必要になる。暖かい場所へ移動することでこの問題を解決する種もいるが、その場にとどまって冬眠として知られる状態に入る種もいる。冬眠中は、動物の体温、心拍、呼吸がすべて大きく下がり、そのおかげで秋のあいだにたくわえた脂肪で何か月も生きのびることができる。',
+      'この活動の低下の度合いは種によって大きくちがう。ジリスのような小型のほ乳類では、体温が氷点よりほんの数度高いところまで下がることがあり、心臓は1分間にほんの数回しか打たないこともある。ふしぎなことに、こうした動物はずっとこの状態でいるわけではない。1〜2週間ごとに一時的に体温を上げてから、再び深いねむりにもどるのである。こうしたエネルギーのかかる目覚めがなぜ必要なのかについて、科学者たちは今も議論している。',
+      'クマはよく冬眠する動物だと言われるが、その冬のねむりはちがっている。体温は数度しか下がらず、じゃまされると比較的すぐに目を覚ますことができる。おどろくべきことに、メスのクマはこの期間に子どもを産むことさえある。研究者たちは、何か月も動かないにもかかわらず、クマがどのようにして筋肉や骨の強さを失わずにいるのかを研究しており、その成果がいつか長いあいだベッドにいなければならない患者の助けになることを期待している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['allowing', 'allowed', 'allows', 'to allow'], answer: 0, why: '分詞構文 allowing it to 〜「そしてそれによって〜できる」。前の文全体の結果を表す。' },
+      { id: 'B', choices: ['why', 'what', 'which', 'who'], answer: 0, why: '「なぜ目覚めが必要なのか」なので why（間接疑問）。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 patients（人）を説明する関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: '冬眠中は、体温・心拍・呼吸が大きく下がる。', answer: true, why: '第1段落 body temperature, heart rate, and breathing all drop dramatically。' },
+      { statement: 'ジリスは冬眠のあいだ、一度も目を覚まさない。', answer: false, why: '第2段落 Every week or two, they briefly warm up again。' },
+      { statement: 'クマは冬のねむりの間、体温が氷点近くまで下がる。', answer: false, why: '第3段落 Their body temperature falls by only a few degrees。' },
+    ],
+    qa: [
+      { q: 'Why are researchers studying bears during their winter sleep?', choices: ['To learn how they keep muscle and bone strength.', 'To find out where they migrate.', 'To make bears sleep longer.', 'To study how they find food in winter.'], answer: 0, why: '第3段落 how bears avoid losing muscle and bone strength。' },
+    ],
+  },
 ]
