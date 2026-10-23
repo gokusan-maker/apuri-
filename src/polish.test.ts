@@ -27,3 +27,10 @@ it('明るい背景を使う部品（スタンプカード・金の宝箱・お�
     expect(css).toContain(`:root[data-theme="dark"] ${sel} {`)
   }
 })
+
+it('polish.css で使う色のトークンは定義ずみのものだけ（var(--text) のような無いトークンを使わない）', () => {
+  const base = readFileSync('src/index.css', 'utf8') + css
+  const defined = new Set([...base.matchAll(/(--[a-z0-9-]+)\s*:/g)].map((m) => m[1]))
+  const used = new Set([...css.matchAll(/var\((--[a-z0-9-]+)\)/g)].map((m) => m[1]))
+  expect([...used].filter((t) => !defined.has(t))).toEqual([])
+})
