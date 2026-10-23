@@ -350,3 +350,55 @@ main h2::before {
 .gacha-rarity { font-size: 1.5rem; font-weight: 900; letter-spacing: 0.06em; }
 .gacha-name { font-size: 1.05rem; }
 .gacha-result .flip { margin-top: 12px; }
+
+/* ===== ホームのカードを統一（今日の課題・チャレンジ・ボス・おやつ） ===== */
+.today-tasks {
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-md);
+}
+.today-task {
+  border: 1px solid var(--hair);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: 0 2px 0 color-mix(in srgb, var(--accent) 14%, rgb(0 0 0 / 0.06));
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.today-task:active { transform: translateY(2px); box-shadow: none; }
+.today-task.done { opacity: 1; background: color-mix(in srgb, #22c55e 10%, var(--card)); }
+.today-task-tag {
+  display: inline-flex;
+  justify-content: center;
+  padding: 3px 0;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--accent) 12%, var(--card));
+  color: var(--accent);
+}
+.today-task-mark {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-grad);
+  color: #fff;
+  font-size: 0.7rem;
+  box-shadow: 0 3px 8px -3px color-mix(in srgb, var(--accent) 70%, transparent);
+}
+.today-task.done .today-task-mark { background: none; box-shadow: none; font-size: 1rem; }
+.today-trio { box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.3), 0 4px 0 rgb(0 0 0 / 0.14), 0 10px 20px -10px rgb(167 139 250 / 0.8); }
+.today-trio:active { transform: translateY(3px); }
+
+/* 今日のチャレンジ・今日のボス・おやつ：太いふちをやめて、色のついたカードに */
+.challenge-btn {
+  position: relative;
+  border: 1px solid rgb(245 158 11 / 0.35);
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: 0 3px 0 rgb(217 119 6 / 0.35), var(--shadow-md);
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.challenge-btn:active { transform: translateY(3px); box-shadow: 0 0 0 rgb(217 119 6 / 0.35); }
+.challenge-btn.done { border-color: rgb(34 197 94 / 0.35); box-shadow: 0 3px 0 rgb(22 163 74 / 0.35), var(--shadow-md); }
+.challenge-btn.daily-boss-go { border-color: rgb(124 58 237 / 0.3); background: linear-gradient(135deg, #ede9fe, #ddd6fe); color: #4c1d95; box-shadow: 0 3px 0 rgb(109 40 217 / 0.35), var(--shadow-md); }
+.challenge-btn.hungry-btn { border-color: rgb(251 146 60 / 0.35); background: linear-gradient(135deg, #fff7ed, #ffedd5); color: #9a3412; box-shadow: 0 3px 0 rgb(234 88 12 / 0.3), var(--shadow-md); }
