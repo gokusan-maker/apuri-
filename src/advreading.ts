@@ -1935,4 +1935,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer realize?', choices: ['The feeling put into a gift matters most.', 'Gifts should always be expensive.', 'Videos are easy to make.', 'Ms. Green did not like the gift.'], answer: 0, why: '第3段落 What matters most is the feeling we put into it。' },
     ],
   },
+  {
+    id: 'toefl-termite',
+    title: 'Air Conditioning Built by Insects',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "In parts of Africa, the landscape is dotted with tall towers of hardened soil, some of them several meters high. These structures are built by termites, small insects that live in colonies of up to a few million individuals. Strangely, most of the termites do not live inside the towers at all. The colony lives in a nest below the ground, and the tower above it serves ( A ) a kind of giant lung.",
+      "A large colony produces a great deal of heat and carbon dioxide. Without a way to remove them, the nest would quickly become too hot and the air unhealthy. The walls of the tower are full of tiny holes and channels. As the temperature outside rises and falls during the day, air moves through these channels, carrying stale air out of the nest and ( B ) fresh air in. In this way, the mound helps keep conditions inside the nest relatively stable.",
+      "Engineers have studied termite mounds for ideas about how to cool buildings without using much electricity. One well-known office complex in Zimbabwe, designed with such mounds in mind, uses natural airflow through chimneys and channels to stay cool. While scientists now think the real mounds work in a more complicated way than first believed, the insects have clearly inspired designs that ( C ) energy.",
+    ],
+    ja: [
+      'アフリカの一部の地域では、固まった土でできた高い塔が点々と見られ、その中には高さ数メートルになるものもある。これらの建造物を作るのはシロアリで、最大で数百万匹にもなるコロニー（集団）で暮らす小さな昆虫である。ふしぎなことに、ほとんどのシロアリは塔の中にはまったく住んでいない。コロニーは地下の巣で暮らしており、その上にある塔は一種の巨大な肺として働いているのである。',
+      '大きなコロニーは大量の熱と二酸化炭素を出す。それらを取りのぞく方法がなければ、巣はすぐに暑くなりすぎ、空気も体に悪くなってしまうだろう。塔のかべは小さな穴と通り道でいっぱいである。1日のうちに外の気温が上がったり下がったりするにつれて、空気がこれらの通り道を動き、巣からよごれた空気を運び出し、新鮮な空気を運びこむ。こうして塚は、巣の中の状態を比較的一定に保つのに役立っている。',
+      '技術者たちは、多くの電気を使わずに建物を冷やす方法のヒントを得るために、シロアリの塚を研究してきた。ジンバブエにあるよく知られたオフィスビルは、こうした塚を参考に設計され、煙突や通り道を通る自然の空気の流れを使って涼しさを保っている。今では科学者たちは、本物の塚は最初に考えられていたよりも複雑なしくみで働いていると考えているが、この昆虫がエネルギーを節約するデザインにヒントをあたえてきたことは明らかである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'for', 'by', 'with'], answer: 0, why: 'serve as 〜「〜として働く・〜の役目をする」。' },
+      { id: 'B', choices: ['bringing', 'brings', 'brought', 'to bring'], answer: 0, why: 'carrying 〜 and bringing 〜 と、分詞を and で並べている。' },
+      { id: 'C', choices: ['save', 'waste', 'need', 'cost'], answer: 0, why: '多くの電気を使わずに冷やす＝エネルギーを「節約する（save）」デザイン。' },
+    ],
+    tf: [
+      { statement: 'ほとんどのシロアリは、地上の塔の中で暮らしている。', answer: false, why: '第1段落 most of the termites do not live inside the towers at all。' },
+      { statement: '塔のかべには小さな穴と通り道がたくさんある。', answer: true, why: '第2段落 The walls of the tower are full of tiny holes and channels。' },
+      { statement: '科学者たちは、塚のしくみは最初に考えられていたより単純だと考えている。', answer: false, why: '第3段落 in a more complicated way than first believed。' },
+    ],
+    qa: [
+      { q: 'Why have engineers studied termite mounds?', choices: ['To learn how to cool buildings using little electricity.', 'To find new kinds of soil.', 'To protect buildings from insects.', 'To make towers taller.'], answer: 0, why: '第3段落 for ideas about how to cool buildings without using much electricity。' },
+    ],
+  },
 ]
