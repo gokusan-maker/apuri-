@@ -2739,6 +2739,23 @@ export const GRAMMAR: GrammarUnit[] = [
       { sentence: 'He read no ___ than fifty books this summer. Amazing!', choices: ['less', 'more', 'fewer'], answer: 0, why: '「50冊も」（多いと感じる）は no less than。' },
     ],
   },
+  {
+    id: 'fractions',
+    title: '分数の表現（one third / two thirds / half of）',
+    points: [
+      '分数は「分子（ふつうの数）＋ 分母（序数）」：1/3 ＝ one third、2/3 ＝ two thirds（分子が2以上なら分母に s）。1/2 ＝ half、1/4 ＝ a quarter。',
+      '「〜の…分の1」は 分数 ＋ of ＋ 名詞。動詞は of のあとの名詞に合わせる：Two thirds of the students are girls. / Half of the cake is gone.',
+    ],
+    examples: [
+      { en: 'About one third of the class walks to school.', ja: 'クラスの約3分の1が歩いて通学している。' },
+      { en: 'Three quarters of the money was used for books.', ja: 'そのお金の4分の3が本に使われた。' },
+    ],
+    questions: [
+      { sentence: '2/3 ＝ two ___', choices: ['thirds', 'third', 'threes'], answer: 0, why: '分子が2以上なので分母の序数に s をつける。' },
+      { sentence: 'Half of the apples ___ red.', choices: ['are', 'is', 'be'], answer: 0, why: 'of のあとの apples（複数）に合わせて are。' },
+      { sentence: 'A ___ of an hour is fifteen minutes.', choices: ['quarter', 'fourth of', 'half'], answer: 0, why: '1時間の4分の1 ＝ a quarter of an hour（15分）。' },
+    ],
+  },
 ]
 
 export type GrammarRecord = Record<string, number> // 単元id → 最高正解数
@@ -2841,7 +2858,7 @@ export const GRAMMAR_GRADES: GrammarGrade[] = ['中1', '中2', '中3', '高校']
 const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['during-for', 'take-idioms', 'one-it', 'thing-adjective', 'be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
-  中3: ['adj-that', 'think-so', 'passive-prep', 'it-is-said', 'still-anymore', 'find-leave-oc', 'unless', 'passive-progressive-perfect', 'compare-emphasis', 'keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
+  中3: ['fractions', 'adj-that', 'think-so', 'passive-prep', 'it-is-said', 'still-anymore', 'find-leave-oc', 'unless', 'passive-progressive-perfect', 'compare-emphasis', 'keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
   高校: ['no-more-than', 'so-as-to-degree', 'allow-to', 'every-time', 'appositive-comma', 'whether-concession', 'now-that-once', 'strong-negation', 'participle-idioms', 'be-used-to', 'in-order-to', 'may-well', 'no-sooner', 'the-adjective', 'if-inversion', 'as-long-as', 'it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
