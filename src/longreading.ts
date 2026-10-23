@@ -4450,6 +4450,36 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Chewing gum makes your ears hurt more.', answer: false, why: 'ガムは耳を楽にするのに役立つ。' },
     ],
   },
+  {
+    id: 'chameleon',
+    title: 'How Do Chameleons Change Color?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Chameleons are famous for changing color. Many people think they do this to hide from their enemies. That is partly true, but it is not the ( A ) reason.',
+      'Under a chameleon\'s skin, there are special cells with very tiny crystals inside. When the chameleon relaxes or gets excited, the space between these crystals changes. This changes the way light is reflected, so we see a different color.',
+      'Scientists have found that chameleons often change color to send messages to other chameleons. For example, a male may turn bright colors when he wants to look strong. They also change color when they feel hot or cold. A darker color takes in ( B ) heat from the sun.',
+      'So, a chameleon\'s color shows how it is feeling and what it wants to say. It is like a body ( C ) that uses colors instead of words!',
+    ],
+    ja: [
+      'カメレオンは色を変えることで有名です。多くの人は、敵からかくれるために色を変えると思っています。それは一部は正しいのですが、ただ一つの理由ではありません。',
+      'カメレオンの皮ふの下には、中にとても小さな結晶をもつ特別な細胞があります。カメレオンがリラックスしたり興奮したりすると、これらの結晶のあいだのすき間が変わります。それによって光のはね返り方が変わり、ちがう色に見えるのです。',
+      '科学者たちは、カメレオンがほかのカメレオンにメッセージを送るために色を変えることが多いとわかってきました。たとえば、オスは強く見せたいとき、あざやかな色になることがあります。また、暑いときや寒いときにも色を変えます。こい色は日光の熱をより多く取りこむのです。',
+      'つまり、カメレオンの色は、どう感じているか、何を伝えたいかを表しているのです。ことばのかわりに色を使う、ボディーランゲージのようなものですね！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['only', 'last', 'same', 'other'], answer: 0, why: 'the only reason「ただ一つの理由」。ほかにも理由があることが続く。' },
+      { id: 'B', choices: ['more', 'many', 'much', 'most'], answer: 0, why: '「より多くの熱」なので比較級 more。' },
+      { id: 'C', choices: ['language', 'part', 'size', 'heat'], answer: 0, why: 'body language「身ぶり・ボディーランゲージ」。ことばのかわりに色で気持ちを伝える。' },
+    ],
+    underline: { phrase: 'send messages to other chameleons', choices: ['ほかのカメレオンに気持ちや合図を伝える', 'ほかのカメレオンに手紙を書く', 'ほかのカメレオンから逃げる', 'ほかのカメレオンに食べ物をあげる'], answer: 0, why: 'このあと、強く見せたいときに色を変える例が出てくる。' },
+    tf: [
+      { statement: 'Chameleons change color only to hide from enemies.', answer: false, why: 'それだけが理由ではない。' },
+      { statement: 'There are cells with tiny crystals under a chameleon\'s skin.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'A male chameleon may turn bright colors to look strong.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'A darker color takes in less heat.', answer: false, why: 'こい色はより多くの熱を取りこむ。' },
+      { statement: 'A chameleon\'s color can show how it feels.', answer: true, why: '第4段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
