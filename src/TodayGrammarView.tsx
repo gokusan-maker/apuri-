@@ -19,8 +19,11 @@ export function TodayGrammar({ today, onAnswer, onClear }: Props) {
   const q = unit.questions[step]
   return (
     <section className="today-grammar" aria-label="今日の文法">
-      <p className="today-section-title">📐 今日の文法：{unit.title}</p>
-      <p className="today-grammar-point">📌 {unit.points[0]}</p>
+      <p className="today-section-title">📐 今日の文法：{unit.title.split('（')[0]}</p>
+      <details className="today-grammar-point">
+        <summary>📌 ポイント</summary>
+        {unit.points[0]}
+      </details>
       {q ? (
         <>
           <p className="today-grammar-q">
