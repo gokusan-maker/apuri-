@@ -3064,4 +3064,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer write the haiku about?', choices: ['The cicadas the writer hears every summer.', 'The writer\'s English teacher.', 'Clapping hands in class.', 'A trip to another country.'], answer: 0, why: '第3段落 I wrote about the cicadas I hear every summer.' },
     ],
   },
+{
+    id: 'adv-planning-fallacy',
+    title: 'Why Projects Finish Late',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Why do so many projects finish late? Psychologists use the term \"planning fallacy\" for our tendency to underestimate how long a task will take, ( A ) we have experienced similar delays many times before. The term was introduced by the psychologists Daniel Kahneman and Amos Tversky in the late 1970s.",
+      "In one well-known study, university students were asked to predict when they would finish their final research papers. They were also asked to estimate a \"worst-case\" date, assuming everything went badly. Remarkably, many students finished later than ( B ) their worst-case predictions. When imagining the future, people tend to focus on the specific steps of the plan and ignore the many small problems that usually appear along the way.",
+      "One effective remedy is to take what researchers call an \"outside view.\" Instead of asking how long this particular task should take, we can ask how long similar tasks actually took in the past. Such records are often less optimistic, and ( C ) more accurate, than our detailed but hopeful plans.",
+    ],
+    ja: [
+      'なぜ、これほど多くの計画が予定より遅れて終わるのだろうか。心理学者は、似たような遅れをこれまで何度も経験しているにもかかわらず、作業にかかる時間を少なく見積もってしまう傾向を「計画の錯誤」とよぶ。この用語は、1970年代の終わりに心理学者のダニエル・カーネマンとエイモス・トベルスキーによって導入された。',
+      'よく知られたある研究で、大学生たちは最終研究論文をいつ書き終えるかを予想するよう求められた。また、すべてがうまくいかなかった場合を想定した「最悪の場合」の日付も見積もるよう求められた。おどろくべきことに、多くの学生は自分の最悪の場合の予想よりさえも遅れて書き終えた。未来を想像するとき、人は計画の具体的な手順に注目し、ふつう途中で起こるたくさんの小さな問題を見落としがちなのである。',
+      '効果的な対策の1つは、研究者たちが「外側からの見方」とよぶものをとることだ。この作業にどれくらいかかるはずかを問うのではなく、似た作業が過去に実際にどれくらいかかったかを問うのである。そうした記録は、くわしいけれども希望的な私たちの計画よりも、楽観的でないことが多く、したがってより正確なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even though', 'because', 'unless', 'so that'], answer: 0, why: '「何度も経験しているのに、少なく見積もる」という逆接なので even though。' },
+      { id: 'B', choices: ['even', 'very', 'much', 'so'], answer: 0, why: 'later than even ～「～よりさえも遅く」。even は「～でさえ」。' },
+      { id: 'C', choices: ['therefore', 'however', 'instead', 'otherwise'], answer: 0, why: '「楽観的でない、だからより正確だ」という因果なので therefore。' },
+    ],
+    tf: [
+      { statement: '計画の錯誤とは、作業にかかる時間を長く見積もりすぎる傾向のことだ。', answer: false, why: '第1段落 underestimate how long a task will take（少なく見積もる）。' },
+      { statement: 'この用語は1970年代の終わりごろに導入された。', answer: true, why: '第1段落 in the late 1970s。' },
+      { statement: '研究では、最悪の場合の予想よりも遅れて終えた学生が多かった。', answer: true, why: '第2段落 many students finished later than even their worst-case predictions。' },
+      { statement: '筆者は、今回の計画をよりくわしく考えることを、いちばんの対策としてすすめている。', answer: false, why: '第3段落 似た作業が過去にどれくらいかかったかを問う「外側からの見方」をすすめている。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what does taking an "outside view" mean?', choices: ['Asking how long similar tasks actually took in the past.', 'Planning each step of the task in more detail.', 'Asking other people to do the task.', 'Working on the task outside the classroom.'], answer: 0, why: '第3段落 we can ask how long similar tasks actually took in the past。' },
+    ],
+  },
 ]
