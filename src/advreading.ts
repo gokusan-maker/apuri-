@@ -1795,4 +1795,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do misunderstandings about silence often occur in international settings?', choices: ['People interpret silence by the rules of their own culture.', 'People speak too slowly.', 'Silence has the same meaning everywhere.', 'Teachers do not ask enough questions.'], answer: 0, why: '第2段落 people read silence through the rules of their own culture。' },
     ],
   },
+  {
+    id: 'exam-recipe-notebook',
+    title: "Grandma's Recipe Notebook",
+    level: '高校入試（随筆）',
+    paragraphs: [
+      "When my grandmother moved into our house last year, she brought an old notebook with her. Its cover was brown and soft, and many of its pages had stains. It was full of recipes she ( A ) written by hand over fifty years. Some recipes had small notes like 'Your father loved this' or 'Use less salt next time.'",
+      "One Sunday, my grandmother caught a cold and could not cook. I decided to make her favorite miso soup by following the notebook. However, some words were hard to read, and one page said only 'a little' instead of an exact amount. I tasted the soup again and again ( B ) it was just right. When I brought it to her, she smiled and said, 'This tastes like my mother's soup.'",
+      "After that day, I started to cook with my grandmother every weekend. She tells me stories about each dish while we cook together. Now I am typing the recipes into a computer so that our family can keep them forever. But I will never throw the notebook away, because it holds more ( C ) recipes. It holds the memories of my family.",
+    ],
+    ja: [
+      '去年祖母が私たちの家にうつってきたとき、祖母は古いノートを持ってきました。表紙は茶色くてやわらかく、多くのページにしみがありました。そこには祖母が50年以上にわたって手で書いてきたレシピがいっぱいでした。「お父さんはこれが大好きだった」や「次は塩を少なめに」といった小さなメモがついたレシピもありました。',
+      'ある日曜日、祖母がかぜをひいて料理ができませんでした。私はノートを見ながら、祖母の大好きなみそ汁を作ることにしました。しかし、読みにくい字もあり、あるページには正確な量ではなく「少し」とだけ書いてありました。私はちょうどよくなるまで、何度も何度も味見をしました。それを持っていくと、祖母はほほえんで「私の母のみそ汁の味がする」と言いました。',
+      'その日から、私は毎週末祖母といっしょに料理をするようになりました。いっしょに料理をしながら、祖母はそれぞれの料理にまつわる話をしてくれます。今、私は家族がずっと残しておけるように、レシピをコンピューターに打ちこんでいます。でも、ノートは決して捨てません。そこにはレシピ以上のものがつまっているからです。家族の思い出がつまっているのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['had', 'has', 'have', 'was'], answer: 0, why: '去年持ってきた時点までに「書いてきた」ので過去完了 had written。' },
+      { id: 'B', choices: ['until', 'since', 'unless', 'because'], answer: 0, why: '「ちょうどよくなるまで」なので until。' },
+      { id: 'C', choices: ['than', 'as', 'then', 'that'], answer: 0, why: 'more than 〜「〜以上のもの」。' },
+    ],
+    tf: [
+      { statement: '祖母のノートには、手書きのレシピがたくさん書かれていた。', answer: true, why: '第1段落 full of recipes she had written by hand。' },
+      { statement: 'ノートのレシピには、すべて正確な量が書いてあった。', answer: false, why: '第2段落 one page said only "a little" instead of an exact amount。' },
+      { statement: '筆者はレシピをコンピューターに打ちこんだら、ノートを捨てるつもりだ。', answer: false, why: '第3段落 I will never throw the notebook away。' },
+    ],
+    qa: [
+      { q: 'Why will the writer keep the notebook?', choices: ['It holds the memories of the family.', 'The computer is broken.', 'The recipes are easy to read.', 'Grandmother asked the writer to sell it.'], answer: 0, why: '第3段落 It holds the memories of my family。' },
+    ],
+  },
 ]
