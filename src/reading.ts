@@ -1663,6 +1663,17 @@ export const PASSAGES: Passage[] = [
       { q: '試合はどうなった？', choices: ['応援したチームが2点差で勝った', '応援したチームが負けた', '引き分けだった'], answer: 0 },
     ],
   },
+  {
+    id: 'fire-station',
+    title: 'A Visit to the Fire Station',
+    text: 'Last week, our class visited a fire station near our school. A firefighter named Mr. Ota showed us a big red fire truck. He told us that firefighters can get ready and leave the station in about one minute. Then he let us try on a heavy helmet. It was much heavier than I thought! At the end, Mr. Ota said, "Please check the smoke alarm in your house." When I got home, I checked ours with my father.',
+    ja: '先週、私たちのクラスは学校の近くの消防署を見学しました。太田さんという消防士の方が、大きな赤い消防車を見せてくれました。消防士は約1分で準備をして署を出発できると教えてくれました。それから、重いヘルメットをかぶらせてくれました。思っていたよりずっと重かったです！最後に太田さんは「家のけむり感知器をたしかめてくださいね」と言いました。家に帰ってから、父といっしょにわが家のものをたしかめました。',
+    questions: [
+      { q: '消防士は約何分で出発できる？', choices: ['約1分', '約10分', '約30分'], answer: 0 },
+      { q: 'ヘルメットはどうだった？', choices: ['思っていたより重かった', '思っていたより軽かった', '小さすぎた'], answer: 0 },
+      { q: '家に帰って何をした？', choices: ['けむり感知器をたしかめた', '消防車の絵をかいた', 'ヘルメットを買った'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
