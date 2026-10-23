@@ -1991,4 +1991,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer do to make Kuri come closer?', choices: ['Sat down quietly and waited.', 'Called his name loudly.', 'Gave him some food.', 'Opened the cage door.'], answer: 0, why: '第2段落 I sat down quietly near the cage and waited。' },
     ],
   },
+  {
+    id: 'adv-maps',
+    title: 'Every Map Is a Choice',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We tend to think of maps as neutral pictures of the world, simple copies of what is really there. Yet every flat map of the Earth involves a compromise. Because the planet is round, it cannot be spread onto a flat surface without stretching or tearing it ( A ). Mapmakers must therefore decide which features to keep accurate and which to sacrifice.",
+      "The most famous example is the projection created by Gerardus Mercator in 1569. His map kept the angles between directions correct, which made it extremely useful for sailors steering across the ocean. The price, however, was that areas far from the equator appear much larger than they really are. On such a map, Greenland looks roughly the same size as Africa, ( B ) Africa is in fact about fourteen times larger.",
+      "Such distortions are not merely technical details. Because many people grow up seeing one kind of map, it can quietly shape their sense of which regions of the world are large and important. None of this means that maps are useless or dishonest. It means that a map answers a particular question, and that we should ask what question it was designed to answer ( C ) we accept the picture it gives us.",
+    ],
+    ja: [
+      '私たちは地図を、世界をかたよりなく写した絵、つまり実際にあるものの単純な写しだと考えがちである。しかし地球の平らな地図はどれも、ある種の妥協をふくんでいる。地球は丸いので、どこかを引きのばしたり切りさいたりせずに平らな面に広げることはできないのだ。したがって地図を作る人は、どの特徴を正確に保ち、どれをぎせいにするかを決めなければならない。',
+      'もっとも有名な例は、1569年にゲラルドゥス・メルカトルが考えた投影法である。彼の地図は方角どうしの角度を正しく保っていたため、海を進む船乗りにとってきわめて役に立った。しかしその代償として、赤道から遠い地域が実際よりずっと大きく見えてしまう。そのような地図では、グリーンランドはアフリカとほぼ同じ大きさに見えるが、実際にはアフリカのほうが約14倍も大きいのである。',
+      'こうしたゆがみは単なる技術的な細かい点ではない。多くの人はある一種類の地図を見て育つため、それが世界のどの地域が大きくて重要かという感覚を、知らないうちに形づくってしまうことがある。だからといって、地図が役に立たないとか不正直だというわけではない。地図はある特定の問いに答えるものであり、私たちはそれがえがく姿を受け入れる前に、その地図がどんな問いに答えるために作られたのかを問うべきだということなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['somewhere', 'nowhere', 'anyhow', 'already'], answer: 0, why: '「どこかを引きのばしたり切りさいたりせずには」なので somewhere。' },
+      { id: 'B', choices: ['although', 'because', 'unless', 'so that'], answer: 0, why: '「同じ大きさに見えるが、実際は14倍大きい」という逆接なので although。' },
+      { id: 'C', choices: ['before', 'after', 'since', 'until'], answer: 0, why: '「受け入れる前に問うべきだ」なので before。' },
+    ],
+    tf: [
+      { statement: '筆者は、平らな地図はどれも何らかの妥協をふくんでいると述べている。', answer: true, why: '第1段落 every flat map of the Earth involves a compromise。' },
+      { statement: 'メルカトルの地図では、赤道から遠い地域が実際より小さく見える。', answer: false, why: '第2段落 appear much larger than they really are。' },
+      { statement: '筆者は、地図は不正直なので使うべきではないと主張している。', answer: false, why: '第3段落 None of this means that maps are useless or dishonest。' },
+    ],
+    qa: [
+      { q: 'Why was the Mercator projection useful for sailors?', choices: ['It kept the angles between directions correct.', 'It showed the true size of every country.', 'It was printed on a round globe.', 'It made Greenland look smaller.'], answer: 0, why: '第2段落 His map kept the angles between directions correct。' },
+    ],
+  },
 ]
