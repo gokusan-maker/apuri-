@@ -2047,4 +2047,32 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How might the lime lumps have helped the concrete?', choices: ['They dissolved and hardened again to fill cracks.', 'They made the concrete lighter.', 'They kept water out completely.', 'They replaced the volcanic ash.'], answer: 0, why: '第3段落 these lumps could dissolve and then harden again, filling the gaps。' },
     ],
   },
+{
+    id: 'toefl-salmon-home',
+    title: 'How Salmon Find Their Way Home',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Many salmon begin life in small freshwater streams, travel down rivers to the ocean, and spend several years feeding far out at sea. Then, ( A ) they are ready to reproduce, a large number of them return to the very stream in which they hatched. This journey can cover hundreds or even thousands of kilometers.",
+      "Scientists believe that salmon rely on different senses at different stages of the trip. In the open ocean, where there are few landmarks, they may use the Earth's magnetic field as a kind of map. Studies of young salmon kept in tanks have shown that they respond to small changes in magnetic conditions ( B ) they would meet along their migration route.",
+      "Once salmon reach the coast, smell appears to take over. While they are young, salmon seem to memorize the particular mixture of chemicals in the water of their home stream. Years later, they follow this familiar scent upstream, choosing the correct branch at each fork in the river. Because of this, changes to rivers, such as pollution or dams, can make it ( C ) for salmon to complete their journey.",
+    ],
+    ja: [
+      '多くのサケは小さな淡水の川で生まれ、川を下って海へ行き、数年間を沖合で食べ物をとってすごす。そして、子孫を残す準備ができると、その多くが自分の生まれたまさにその川へもどってくる。この旅は数百キロ、ときには数千キロにもなる。',
+      '科学者たちは、サケは旅の段階ごとにちがう感覚にたよっていると考えている。目印のほとんどない外洋では、地球の磁場を一種の地図として使っているのかもしれない。水そうで育てた若いサケの研究では、回遊の道すじで出会うような磁気の小さな変化に反応することが示されている。',
+      'サケが沿岸にたどり着くと、においが主役になるようだ。サケは若いうちに、ふるさとの川の水にふくまれる化学物質の独特なまざり方を覚えているらしい。何年もあとに、サケはこのなじみのにおいをたどって川をさかのぼり、川の分かれ道ごとに正しい支流を選ぶ。そのため、よごれやダムといった川の変化は、サケが旅を終えるのをむずかしくすることがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'unless', 'although', 'whether'], answer: 0, why: '「子孫を残す準備ができると」なので時を表す when。' },
+      { id: 'B', choices: ['that', 'who', 'where', 'what'], answer: 0, why: '先行詞 changes in magnetic conditions を説明する目的格の関係代名詞 that（they would meet 〜 の目的語）。' },
+      { id: 'C', choices: ['harder', 'hardly', 'hard to', 'hardest'], answer: 0, why: 'make it 〜 for A to do「A が…するのを〜にする」。比較級 harder「よりむずかしく」。' },
+    ],
+    tf: [
+      { statement: '多くのサケは、生まれた川とは別の川で子孫を残す。', answer: false, why: '第1段落 return to the very stream in which they hatched。' },
+      { statement: '外洋では、サケは地球の磁場を手がかりにしているかもしれない。', answer: true, why: '第2段落 they may use the Earth\'s magnetic field as a kind of map。' },
+      { statement: 'サケはふるさとの川のにおいを、海に出てから初めて覚える。', answer: false, why: '第3段落 While they are young, salmon seem to memorize 〜。' },
+    ],
+    qa: [
+      { q: 'What helps salmon choose the right branch of a river?', choices: ['The familiar scent of their home stream.', 'The position of the sun.', 'The sound of other salmon.', 'The temperature of the ocean.'], answer: 0, why: '第3段落 they follow this familiar scent upstream, choosing the correct branch。' },
+    ],
+  },
 ]
