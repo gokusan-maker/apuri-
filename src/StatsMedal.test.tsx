@@ -14,3 +14,11 @@ it('これまでの正答率はカード・クイズ・耳スペルの3つのチ
   const chips = screen.getByLabelText('これまでの正答率').querySelectorAll('.acc-chip')
   expect([...chips].map((c) => c.textContent)).toEqual(['カード 80%', 'クイズ ―', '耳・スペル 75%'])
 })
+
+it('苦手・お気に入りが0のときは見出しごと出さず、単語帳ごとの定着はたたんでおく', () => {
+  const props = { streakDays: 0, studiedToday: 0, learned: 0, total: 0, week: [], goal: 20, weak: [], mistakes: {}, onReviewWeak: () => {}, schedule: [] } as unknown as Parameters<typeof Stats>[0]
+  render(<Stats {...props} byLevel={[{ level: '中1', learned: 1, total: 100 }]} />)
+  expect(screen.queryByText('苦手な単語')).toBeNull()
+  expect(screen.queryByText(/お気に入り/)).toBeNull()
+  expect(document.querySelector('details.by-level:not([open])')).not.toBeNull()
+})
