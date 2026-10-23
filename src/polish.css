@@ -1643,3 +1643,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .attr-egg-btn .attr-egg-title { font-size: 1rem; font-weight: 800; }
 .attr-egg-btn .attr-egg-price { grid-row: span 2; padding: 4px 12px; border-radius: 999px; background: rgb(255 255 255 / 0.22); font-weight: 800; white-space: nowrap; }
 .attr-egg-btn small { opacity: 0.9; }
+
+/* ガチャ：シール帳・ガチャポイントの数はピル */
+.gacha .sticker-book > summary, .gacha .gacha-points { display: flex; align-items: center; flex-wrap: wrap; gap: 6px; }
+.gacha .sticker-book .fold-meta, .gacha .gacha-points .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 10%, transparent); color: var(--accent); font-size: 0.74rem; font-weight: 800; white-space: nowrap; }
+.gacha .gacha-points .list-link { flex-basis: 100%; }

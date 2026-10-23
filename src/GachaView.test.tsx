@@ -213,3 +213,11 @@ it('ガチャで出た子に、その場で名前をつけられる', () => {
   expect(onNameNew).toHaveBeenCalledWith('ピカ')
   expect(screen.getByText('🏷 「ピカ」と名前をつけたよ！')).toBeInTheDocument()
 })
+
+it('シール帳とガチャポイントは数をピルで短く出す', () => {
+  localStorage.clear()
+  render(<Gacha coins={0} members={1} stickers={['⚽']} points={5} pityLeft={12} onDraw={() => null} />)
+  expect(screen.getByLabelText(/まい中 1まい/).textContent).toMatch(/^1\/\d+$/)
+  expect(screen.getByLabelText(/ポイントでSR以上と交換/).textContent).toMatch(/^5\/\d+$/)
+  expect(screen.getByText('✨ あと12回でSR以上確定')).toBeInTheDocument()
+})

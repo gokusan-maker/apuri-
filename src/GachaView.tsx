@@ -205,7 +205,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       {stickers && (
         <details className="sticker-book">
           <summary>
-            🏷 シール帳 {stickers.length} / {STICKERS.length}（全部そろうと🎟{STICKER_TICKETS}）
+            🏷 シール帳{' '}
+            <span className="fold-meta" aria-label={`${STICKERS.length}まい中 ${stickers.length}まい・全部そろうと🎟${STICKER_TICKETS}`}>
+              {stickers.length}/{STICKERS.length}
+            </span>
           </summary>
           <p className="sticker-grid">
             {STICKERS.map((s) => (
@@ -218,7 +221,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       )}
       {points !== undefined && (
         <p className="gacha-points">
-          🎫 ガチャポイント {Math.min(points, POINTS_FOR_SR)} / {POINTS_FOR_SR}（SR以上と交換）
+          🎫 ガチャポイント{' '}
+          <span className="fold-meta" aria-label={`${POINTS_FOR_SR}ポイントでSR以上と交換`}>
+            {Math.min(points, POINTS_FOR_SR)}/{POINTS_FOR_SR}
+          </span>
           {onExchange && points >= POINTS_FOR_SR && members < PARTY_MAX && (
             <button
               className="list-link"
@@ -240,7 +246,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       )}
       {pityLeft !== undefined && (
         <>
-          <p className="gacha-pity">✨ あと{pityLeft}回でスーパーレア以上が確定！</p>
+          <p className="gacha-pity">✨ あと{pityLeft}回でSR以上確定</p>
           <div className="pity-gauge" role="meter" aria-label="スーパーレア確定までのゲージ" aria-valuemin={0} aria-valuemax={PITY} aria-valuenow={PITY - pityLeft}>
             <div style={{ width: `${((PITY - pityLeft) / PITY) * 100}%` }} />
           </div>
