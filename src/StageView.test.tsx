@@ -134,7 +134,7 @@ it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る'
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
   fireEvent.click(screen.getByText(/エンドレスの塔（最高 0階）/))
   for (let floor = 1; floor <= 2; floor++) {
-    expect(screen.getByText(`🗼 エンドレスの塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
+    expect(screen.getByText(`🗼 塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
       answerReading()
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))

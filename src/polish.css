@@ -1208,3 +1208,19 @@ main select:focus {
 .daily-stars { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; align-items: center; }
 .daily-stars-label { grid-column: 1 / -1; font-weight: 700; color: var(--muted); }
 .daily-stars .list-link { display: block; margin: 0; padding: 6px 4px; font-size: clamp(0.66rem, 3vw, 0.78rem); text-align: center; white-space: nowrap; min-width: 0; }
+
+/* ===== ボス戦・ステージの上の見出し ===== */
+.stage-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.stage-head .stage-back { flex: none; white-space: nowrap; margin: 0; }
+.stage-head > span {
+  min-width: 0;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--accent) 10%, var(--card));
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-align: right;
+  line-height: 1.35;
+}
+.stage-head > span { font-size: clamp(0.7rem, 3.3vw, 0.82rem); border-radius: 14px !important; text-align: center !important; }

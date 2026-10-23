@@ -134,7 +134,7 @@ export function Stages({ levels, record, onClear, onTreasure, onAnswer, boss = {
         look={endlessLook(f)}
         hp={endlessHp(f)}
         noBook
-        title={`🗼 エンドレスの塔 ${f}階（最高 ${endlessBest}階）`}
+        title={`🗼 塔 ${f}階（最高 ${endlessBest}階）`}
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}
