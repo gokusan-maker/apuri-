@@ -223,7 +223,6 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
       <section className="card grammar">
         {/* 見出しだけ「文法チャレンジ」に（title はまとめテストのベスト記録の名前にも使うので変えない） */}
         <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
-        {stampMode && <p className="stats-note">あそびたいゲームをえらんでね</p>}
         {stampMode ? (
           <>
             <button
@@ -353,7 +352,7 @@ export function Grammar({ quickStart = false, units = GRAMMAR, title = '文法�
         )}
         {stampMode && (
           <details className="tense-table">
-            <summary>🕰 時制まとめ表（現在・過去・未来・進行形・完了形）</summary>
+            <summary>🕰 時制まとめ表</summary>
             <table>
               <tbody>
                 {TENSE_TABLE.map((t) => (
