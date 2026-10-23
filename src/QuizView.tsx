@@ -20,7 +20,7 @@ import { DEFS } from './definitions'
 import { EMOJI } from './emoji'
 import { claimFeatured, FEATURED_XP, featuredClaimed, featuredFor } from './featured'
 import { dayKey } from './srs'
-import { ALL_GAMES_COINS, loadTodayGames, markTodayGame } from './gamesplayed'
+import { ALL_GAMES_COINS, allGamesClaimed, claimAllGames, loadTodayGames, markTodayGame, WORD_GAMES_COINS, WORD_GAMES_GOAL } from './gamesplayed'
 import { quizShareText, shareText } from './shareText'
 import { isNew, loadPlayed, loadRecent, markPlayed, pushRecent } from './playedModes'
 import { Shiritori } from './ShiritoriView'
@@ -409,6 +409,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     setEarned(0)
   }
 
+  const [wordClaimed, setWordClaimed] = useState(() => allGamesClaimed(dayKey(), 'word'))
   const playedWordGames = loadTodayGames(dayKey()).filter((k) => k.startsWith('word:') && k !== 'word:cards').length
   const toggle = lockDirection ? null : (
     <>
@@ -417,8 +418,20 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         <span className="mode-change">
           🎮 ミニゲームをえらぶ（{DIRECTIONS.length}種） {menu ? '▲' : '▼'}
         </span>
-        {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ</span>}
+        {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ{playedWordGames < WORD_GAMES_GOAL && onCoins ? `（あと${WORD_GAMES_GOAL - playedWordGames}しゅるいで🪙${WORD_GAMES_COINS}）` : ''}</span>}
       </button>
+      {onCoins && playedWordGames >= WORD_GAMES_GOAL && !wordClaimed && (
+        <button
+          className="good"
+          onClick={() => {
+            claimAllGames(dayKey(), 'word')
+            setWordClaimed(true)
+            onCoins(WORD_GAMES_COINS)
+          }}
+        >
+          🎉 {WORD_GAMES_GOAL}しゅるいあそんだごほうび 🪙{WORD_GAMES_COINS} をもらう
+        </button>
+      )}
       {!menu && (
         <div className="game-grid game-strip" aria-label="人気のミニゲーム">
           {onCards && <GameTile playKey="word:cards" icon="🃏" name="単語カード" onClick={onCards} />}

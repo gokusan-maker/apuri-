@@ -218,13 +218,24 @@ describe('App', () => {
     expect(within(after).getByText('✅ 今日')).toBeInTheDocument()
   })
 
+  it('単語ゲームを1日に5しゅるいあそぶと、ボタンでごほうびをもらえる（1日1回）', async () => {
+    const { dayKey } = await import('./srs')
+    localStorage.clear()
+    localStorage.setItem('eitan:games-today', JSON.stringify({ day: dayKey(), keys: ['word:a', 'word:b', 'word:c', 'word:d', 'word:e'] }))
+    render(<App />)
+    goMini()
+    fireEvent.click(screen.getByRole('button', { name: /5しゅるいあそんだごほうび/ }))
+    expect(screen.queryByRole('button', { name: /5しゅるいあそんだごほうび/ })).toBeNull()
+    expect(localStorage.getItem('eitan:word-games-day')).toBe(dayKey())
+  })
+
   it('単語ゲームの「ミニゲームをえらぶ」ボタンに、今日あそんだしゅるいの数が出る', () => {
     localStorage.clear()
     render(<App />)
     goMini()
     expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
     fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱'))
-    expect(screen.getByText('今日 1 しゅるいあそんだ')).toBeInTheDocument()
+    expect(screen.getByText(/^今日 1 しゅるいあそんだ（あと4しゅるいで/)).toBeInTheDocument()
   })
 
   it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {

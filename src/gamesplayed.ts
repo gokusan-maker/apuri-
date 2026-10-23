@@ -40,17 +40,20 @@ export function markPlayedGame(key: string): void {
 
 // 文法ゲームを1日に全部あそんだごほうび（1日1回）
 export const ALL_GAMES_COINS = 10
-const ALL_KEY = 'eitan:all-games-day'
-export function allGamesClaimed(day: string): boolean {
+// 単語ゲームは1日に5しゅるいあそぶとごほうび
+export const WORD_GAMES_GOAL = 5
+export const WORD_GAMES_COINS = 5
+const CLAIM_KEYS = { grammar: 'eitan:all-games-day', word: 'eitan:word-games-day' }
+export function allGamesClaimed(day: string, kind: 'grammar' | 'word' = 'grammar'): boolean {
   try {
-    return localStorage.getItem(ALL_KEY) === day
+    return localStorage.getItem(CLAIM_KEYS[kind]) === day
   } catch {
     return false
   }
 }
-export function claimAllGames(day: string): void {
+export function claimAllGames(day: string, kind: 'grammar' | 'word' = 'grammar'): void {
   try {
-    localStorage.setItem(ALL_KEY, day)
+    localStorage.setItem(CLAIM_KEYS[kind], day)
   } catch {
     // 保存できなくても続ける
   }
