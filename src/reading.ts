@@ -1410,6 +1410,39 @@ export const PASSAGES: Passage[] = [
       { q: 'あそんだあと何を飲んだ？', choices: ['温かいココア', '冷たいジュース', 'お茶'], answer: 0 },
     ],
   },
+  {
+    id: 'lost-glove',
+    title: 'One Red Glove',
+    text: 'On my way home, I lost one of my red gloves. I looked everywhere, but I could not find it. The next morning, I saw my glove on top of a fence near the station. Someone kind had found it and put it there for me. My hand felt warm again.',
+    ja: '帰り道で、私は赤い手ぶくろを片方なくしました。あちこちさがしましたが、見つかりませんでした。次の朝、駅の近くのへいの上に自分の手ぶくろがあるのを見つけました。親切なだれかが見つけて、私のためにそこに置いてくれたのです。手がまた温かくなりました。',
+    questions: [
+      { q: '筆者は何をなくした？', choices: ['赤い手ぶくろの片方', '青いぼうし', 'マフラー'], answer: 0 },
+      { q: 'どこで見つかった？', choices: ['駅の近くのへいの上', '学校のげた箱', '公園のベンチ'], answer: 0 },
+      { q: 'だれがそこに置いた？', choices: ['親切なだれか', '筆者の母', '駅員さん'], answer: 0 },
+    ],
+  },
+  {
+    id: 'rice-balls',
+    title: 'Making Rice Balls',
+    text: 'Last Sunday, I made rice balls for our family picnic. My grandmother showed me how to do it. I put salmon in some and plum in others. My rice balls were not round, but everyone said they were delicious. Next time, I want to make them perfectly round.',
+    ja: 'この前の日曜日、私は家族のピクニックのためにおにぎりを作りました。祖母が作り方を教えてくれました。いくつかにはさけを、ほかのには梅を入れました。私のおにぎりは丸くありませんでしたが、みんながおいしいと言ってくれました。次はきれいな丸にしたいです。',
+    questions: [
+      { q: 'おにぎりは何のために作った？', choices: ['家族のピクニック', '学校のお弁当', '運動会'], answer: 0 },
+      { q: 'だれが作り方を教えてくれた？', choices: ['祖母', '母', '先生'], answer: 0 },
+      { q: '筆者の次の目標は？', choices: ['きれいな丸にすること', 'もっと大きく作ること', '早く作ること'], answer: 0 },
+    ],
+  },
+  {
+    id: 'jump-rope',
+    title: 'Jump Rope Challenge',
+    text: 'Our class had a jump rope contest. At first, I could jump only fifteen times without stopping. I practiced every day after school for two weeks. On the day of the contest, I jumped sixty times! My teacher gave me a big smile and a thumbs-up.',
+    ja: 'クラスでなわとび大会がありました。最初、私は止まらずに15回しかとべませんでした。2週間、毎日放課後に練習しました。大会の日、私は60回とべました！ 先生はにっこり笑って、親指を立ててくれました。',
+    questions: [
+      { q: '最初は何回とべた？', choices: ['15回', '30回', '60回'], answer: 0 },
+      { q: 'どのくらい練習した？', choices: ['1週間', '2週間', '1か月'], answer: 1 },
+      { q: '大会では何回とべた？', choices: ['40回', '50回', '60回'], answer: 2 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
