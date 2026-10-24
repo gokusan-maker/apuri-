@@ -110,7 +110,9 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
       {tab === 'snack' && (
         <>
-      <h3 className="shop-h">おやつ（今日あと{snacksLeft}回）</h3>
+      <h3 className="shop-h">
+        🍪 おやつ <span className="game-count" aria-label={`今日あと${snacksLeft}回`}>あと{snacksLeft}</span>
+      </h3>
       <div className="actions snacks">
         {SNACKS.map((sn) => (
           <button

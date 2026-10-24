@@ -598,7 +598,7 @@ describe('App', () => {
     expect(screen.getByText('💕 好物 XP2倍！')).toBeInTheDocument() // テストの日はクッキーが好物
     fireEvent.click(screen.getByText(/サクサククッキン/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(40)
-    expect(screen.getByText('おやつ（今日あと2回）')).toBeInTheDocument()
+    expect(screen.getByLabelText('今日あと2回')).toBeInTheDocument()
     expect(screen.getByText('😋 もぐもぐ')).toBeInTheDocument()
     expect(screen.getAllByText(/サクサク/).length).toBeGreaterThanOrEqual(2) // ボタンとひとこと
   })
@@ -998,7 +998,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByText(/「おなかすいた…」/))
     expect(screen.getByRole('tab', { name: /おやつ/ })).toHaveAttribute('aria-selected', 'true')
-    expect(screen.getByText(/おやつ（今日あと3回）/)).toBeInTheDocument()
+    expect(screen.getByLabelText('今日あと3回')).toBeInTheDocument()
   })
 
   it('ホームの「今日のボスに挑む」でステージ画面の今日のボス戦がすぐ始まる', () => {

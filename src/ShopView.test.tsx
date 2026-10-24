@@ -33,9 +33,9 @@ it('いまの着せかえをコーデに保存して、あとで切りかえら�
 it('ショップは「ガチャ」「おやつ」「きせかえ」「アイテム」のタブで切りかわる', () => {
   render(<Shop wallet={{ coins: 100, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} onGacha={() => null} />)
   expect(screen.getByRole('tab', { name: /ガチャ/ })).toHaveAttribute('aria-selected', 'true')
-  expect(screen.queryByText(/おやつ（今日あと/)).toBeNull()
+  expect(screen.queryByLabelText(/今日あと.回/)).toBeNull()
   fireEvent.click(screen.getByRole('tab', { name: /おやつ/ }))
-  expect(screen.getByText(/おやつ（今日あと3回）/)).toBeInTheDocument()
+  expect(screen.getByLabelText('今日あと3回')).toBeInTheDocument()
   expect(screen.queryByText('着せ替え')).toBeNull()
   fireEvent.click(screen.getByRole('tab', { name: /きせかえ/ }))
   expect(screen.getByText('着せ替え')).toBeInTheDocument()
