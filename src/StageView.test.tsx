@@ -70,7 +70,7 @@ it('ステージの10語をカードで予習できる', () => {
   let got: string[] = []
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} onStudy={(ws) => (got = ws.map((w) => w.id))} />)
   fireEvent.click(screen.getByLabelText('中1 ステージ1'))
-  fireEvent.click(screen.getByText('📖 カードで予習'))
+  fireEvent.click(screen.getByText('📖 予習'))
   expect(got).toEqual(stagesOf('中1')[0].words.map((w) => w.id))
 })
 

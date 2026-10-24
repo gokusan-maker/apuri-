@@ -1,8 +1,7 @@
-import { usePlaying } from './playing'
+import { PlayContext, usePlaying } from './playing'
 import { BossTime } from './BossTimeView'
-import type { ComponentProps, CSSProperties } from 'react'
+import { useContext, useState, type ComponentProps, type CSSProperties } from 'react'
 import { medalFor } from './medal'
-import { useState } from 'react'
 import type { Source } from './monster'
 import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
@@ -90,6 +89,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
 
+  const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   // ステージ・ボス戦の画面では、App の上に「ほかの問題をえらぶ」（おすとステージ・ボスの一覧へ）
   usePlaying(!!(univFight || endless || rush || timeAttack || nightFight || weekendFight || rareFight || fighting || playing), () => {
     setUnivFight(null)
@@ -368,22 +368,24 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   if (playing) {
     return (
       <section className="stage-play">
-        <div className="stage-head">
-          <button
-            className="stage-back"
-            onClick={() => {
-              setPlaying(null)
-              setResult(null)
-            }}
-          >
-            ← ステージ一覧
-          </button>
-          <span>
+        <div className="stage-head stage-play-head">
+          {!inApp && (
+            <button
+              className="stage-back"
+              onClick={() => {
+                setPlaying(null)
+                setResult(null)
+              }}
+            >
+              ← ステージ一覧
+            </button>
+          )}
+          <span className="stage-play-name">
             {playing.level} ステージ{playing.no}
           </span>
           {onStudy && result === null && (
-            <button className="note-btn" onClick={() => onStudy(playing.words)}>
-              📖 カードで予習
+            <button className="note-btn" title="このステージの10語をカードで予習" onClick={() => onStudy(playing.words)}>
+              📖 予習
             </button>
           )}
         </div>
