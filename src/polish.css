@@ -2648,3 +2648,15 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
   :root:not([data-theme='light']) .list-link.redo-pill { background: linear-gradient(180deg, #3b82f6, #1d4ed8); color: #fff; box-shadow: 0 3px 0 #1e3a8a; }
 }
 :root[data-theme='dark'] .list-link.redo-pill { background: linear-gradient(180deg, #3b82f6, #1d4ed8); color: #fff; box-shadow: 0 3px 0 #1e3a8a; }
+
+/* 文法カード：「⭕ 覚えた」は緑・「🔁 まだ」はピンク・「◀ まえ／つぎ ▶」は青の丸いゲームボタン（1行） */
+.list-link.gc-know, .list-link.gc-again, .list-link.gc-step { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 96px; padding: 8px 14px; border: none; border-radius: 999px; color: #fff; font-weight: 900; white-space: nowrap; text-decoration: none; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
+.list-link.gc-know { background: linear-gradient(180deg, #4ade80, #16a34a); box-shadow: 0 4px 0 #166534; }
+.list-link.gc-again { background: linear-gradient(180deg, #f472b6, #db2777); box-shadow: 0 4px 0 #9d174d; }
+.list-link.gc-step { background: linear-gradient(180deg, #60a5fa, #2563eb); box-shadow: 0 4px 0 #1e40af; }
+.list-link.gc-know:active, .list-link.gc-again:active, .list-link.gc-step:active { transform: translateY(3px); box-shadow: none; }
+.gcard-nav { gap: 8px; margin-top: 8px; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .list-link.gc-know, :root:not([data-theme='light']) .list-link.gc-again, :root:not([data-theme='light']) .list-link.gc-step { color: #fff; filter: brightness(0.9); }
+}
+:root[data-theme='dark'] .list-link.gc-know, :root[data-theme='dark'] .list-link.gc-again, :root[data-theme='dark'] .list-link.gc-step { color: #fff; filter: brightness(0.9); }

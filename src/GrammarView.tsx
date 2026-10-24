@@ -903,7 +903,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           </button>
         )}
         <button
-          className="list-link"
+          className="list-link share-go"
           onClick={() => {
             navigator.clipboard
               ?.writeText(grammarShareText(unit.title, score, unit.questions.length))

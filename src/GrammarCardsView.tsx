@@ -100,16 +100,16 @@ export function GrammarCards({ units: all, onBack, weak = [] }: Props) {
       </button>
       {flipped && (
         <div className="gcard-nav">
-          <button className="list-link" onClick={() => mark(true)}>
+          <button className="list-link gc-know" onClick={() => mark(true)}>
             ⭕ 覚えた
           </button>
-          <button className="list-link" onClick={() => mark(false)}>
+          <button className="list-link gc-again" onClick={() => mark(false)}>
             🔁 まだ
           </button>
         </div>
       )}
       <div className="gcard-nav">
-        <button className="list-link" onClick={() => go(-1)}>
+        <button className="list-link gc-step" onClick={() => go(-1)}>
           ◀ まえ
         </button>
         {flipped && u.examples[0] && (
@@ -117,7 +117,7 @@ export function GrammarCards({ units: all, onBack, weak = [] }: Props) {
             🔊
           </button>
         )}
-        <button className="list-link" onClick={() => go(1)}>
+        <button className="list-link gc-step" onClick={() => go(1)}>
           つぎ ▶
         </button>
       </div>

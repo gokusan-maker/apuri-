@@ -18,3 +18,9 @@ it('長文の並べかえの「やりなおす」は青の小さなボタン', (
   expect(readFileSync('src/LongReadingView.tsx', 'utf8').match(/list-link redo-pill/g)).toHaveLength(3)
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.list-link\.redo-pill \{[^}]*#2563eb/)
 })
+
+it('文法カードの「覚えた・まだ・まえ・つぎ」は色つきのゲームボタン、文法の結果コピーは水色', () => {
+  const src = readFileSync('src/GrammarCardsView.tsx', 'utf8')
+  for (const c of ['gc-know', 'gc-again', 'gc-step']) expect(src).toContain(`list-link ${c}`)
+  expect(readFileSync('src/GrammarView.tsx', 'utf8')).toContain('list-link share-go')
+})
