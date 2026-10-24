@@ -2660,3 +2660,10 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
   :root:not([data-theme='light']) .list-link.gc-know, :root:not([data-theme='light']) .list-link.gc-again, :root:not([data-theme='light']) .list-link.gc-step { color: #fff; filter: brightness(0.9); }
 }
 :root[data-theme='dark'] .list-link.gc-know, :root[data-theme='dark'] .list-link.gc-again, :root[data-theme='dark'] .list-link.gc-step { color: #fff; filter: brightness(0.9); }
+
+/* 上にはりつくバーのうしろは四角くぬらない（ダークで黒い帯に見えたため）。すける＋ぼかしで下の文字を目立たせない */
+.play-bar { background: transparent; border-radius: 22px; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .gcard-known { color: #86efac; }
+}
+:root[data-theme='dark'] .gcard-known { color: #86efac; }

@@ -24,3 +24,7 @@ it('文法カードの「覚えた・まだ・まえ・つぎ」は色つきの�
   for (const c of ['gc-know', 'gc-again', 'gc-step']) expect(src).toContain(`list-link ${c}`)
   expect(readFileSync('src/GrammarView.tsx', 'utf8')).toContain('list-link share-go')
 })
+
+it('上にはりつくバーはうしろを四角くぬらない（ダークの黒い帯をなくす）', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.play-bar \{ background: transparent;/)
+})
