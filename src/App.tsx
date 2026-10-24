@@ -1243,15 +1243,19 @@ function App() {
         </div>
         {home && (
           <>
-          {xpRate > 1 && <p className="weekend">🎉 週末はXP2倍！</p>}
+          {(xpRate > 1 || seasonEvent) && (
+            <p className="buddy-chips event-chips">
+              {xpRate > 1 && <span className="weekend">🎉 週末はXP2倍！</span>}
+              {seasonEvent && (
+                <span className="weekend season-event">
+                  {seasonEvent.icon} {seasonEvent.text}
+                </span>
+              )}
+            </p>
+          )}
           {hour >= 18 && studiedToday === 0 && streakDays > 0 && (
             <p className="weak-banner streak-warn" role="status">
               🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
-            </p>
-          )}
-          {seasonEvent && (
-            <p className="weekend season-event">
-              {seasonEvent.icon} {seasonEvent.text}
             </p>
           )}
           <Monster

@@ -2031,3 +2031,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 /* 読解のむずかしさタブの説明：語の切れ目（大学入試／レベル）でだけ改行 */
 .read-level-sub { word-break: keep-all; overflow-wrap: normal; }
+
+/* ホーム上のイベント（週末XP2倍・季節のイベント）はチップ1列に */
+.event-chips { justify-content: center; margin: 2px 0 6px; }
+.event-chips > span.weekend { margin: 0; }
