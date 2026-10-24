@@ -79,3 +79,7 @@ it('文法の学年・読解のジャンルの行は game-fold の色つきボ�
 it('文法のおすすめ単元は金色のゲームボタン', () => {
   expect(css).toMatch(/\.grammar-recommend \.rec-unit \{[^}]*linear-gradient\(135deg, #fde047, #f59e0b\)/)
 })
+
+it('文法の学年まとめテストは学年の色のゲームボタン', () => {
+  expect(css).toMatch(/\.grade-tests \.list-link \{ --gt-h: 160;[^}]*linear-gradient/)
+})

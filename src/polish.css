@@ -2141,3 +2141,10 @@ details[open] > summary::before { transform: rotate(90deg); }
 .grammar-recommend .rec-unit { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: none; border-radius: 14px; background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; font-weight: 800; box-shadow: 0 3px 0 #b45309, 0 5px 10px rgb(0 0 0 / 0.12); }
 .grammar-recommend .rec-unit::before { content: '⭐'; }
 .grammar-recommend .rec-unit:active { transform: translateY(2px); box-shadow: 0 1px 0 #b45309; }
+
+/* 文法の学年まとめテスト：学年の色（game-fold と同じ）のゲームボタン */
+.grade-tests .list-link { --gt-h: 160; border: none; background: linear-gradient(135deg, hsl(var(--gt-h) 75% 50%), hsl(calc(var(--gt-h) + 20) 70% 38%)); color: #fff; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 3px 0 hsl(var(--gt-h) 60% 28%); }
+.grade-tests .list-link:nth-child(2) { --gt-h: 225; }
+.grade-tests .list-link:nth-child(3) { --gt-h: 275; }
+.grade-tests .list-link:active { transform: translateY(2px); box-shadow: 0 1px 0 hsl(var(--gt-h) 60% 28%); }
+.grade-tests .grade-best { color: #fff; }
