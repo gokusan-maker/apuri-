@@ -203,8 +203,8 @@ function wrongPlurals(w: string): string[] {
 
 export function pluralQ(rng: Rng = Math.random): PuzzleQ {
   const [one, many] = PLURALS[Math.floor(rng() * PLURALS.length)]
-  // busses は辞書にもある別のつづりなので、誤答に出さない
-  const cands = [...new Set([...wrongPlurals(one), `${one}en`, `${one.slice(0, -1)}ies`])].filter((x) => x !== many && x !== one && x !== 'busses')
+  // busses・persons は辞書にもある別の形なので、誤答に出さない
+  const cands = [...new Set([...wrongPlurals(one), `${one}en`, `${one.slice(0, -1)}ies`])].filter((x) => x !== many && x !== one && x !== 'busses' && x !== 'persons')
   const wrong = shuffle(cands, rng).slice(0, 3)
   const choices = shuffle([many, ...wrong], rng)
   return { prompt: `「${one}」の複数形は？`, choices, answer: choices.indexOf(many), why: `${one} → ${many}`, wordId: idOf(one) ?? '' }
