@@ -97,13 +97,21 @@ export function BuddyDetail({ buddies, onRename, box = { grammar: {}, reading: {
               </div>
             )}
             <ol className="buddy-forms">
-              {BUDDY_FORMS[t].map((x) => (
-                <li key={x.name} className={lv.level >= x.minLv ? 'got' : 'locked'}>
-                  <span aria-hidden="true">{lv.level >= x.minLv ? x.icon : '❔'}</span>
-                  {lv.level >= x.minLv ? x.name : '？？？'}（Lv.{x.minLv}〜）
-                  {lv.level >= x.minLv && evoLog[t][x.name] && <small className="evo-day">・{evoDayLabel(evoLog[t][x.name])}</small>}
+              {BUDDY_FORMS[t]
+                .filter((x, i, a) => lv.level >= x.minLv || i === a.findIndex((y) => lv.level < y.minLv))
+                .map((x) => (
+                  <li key={x.name} className={lv.level >= x.minLv ? 'got' : 'locked'}>
+                    <span aria-hidden="true">{lv.level >= x.minLv ? x.icon : '❔'}</span>
+                    {lv.level >= x.minLv ? x.name : '？？？'}（Lv.{x.minLv}〜）
+                    {lv.level >= x.minLv && evoLog[t][x.name] && <small className="evo-day">・{evoDayLabel(evoLog[t][x.name])}</small>}
+                  </li>
+                ))}
+              {/* まだ先の姿はまとめて「？？？ ×N」にたたむ（文字を少なく） */}
+              {BUDDY_FORMS[t].filter((x) => lv.level < x.minLv).length > 1 && (
+                <li className="locked more" aria-label={`まだ見ぬ姿 あと${BUDDY_FORMS[t].filter((x) => lv.level < x.minLv).length - 1}つ`}>
+                  <span aria-hidden="true">❔</span>？？？ ×{BUDDY_FORMS[t].filter((x) => lv.level < x.minLv).length - 1}
                 </li>
-              ))}
+              )}
             </ol>
           </section>
         )

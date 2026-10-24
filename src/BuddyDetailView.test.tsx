@@ -11,7 +11,9 @@ it('文法のことばモンスター・読解の竜に名前をつけられ、�
   const { rerender } = render(<BuddyDetail buddies={b} onRename={(t, n) => (b = renameBuddy(b, t, n))} />)
   const g = screen.getByLabelText('文法のなかま')
   expect(g.textContent).toMatch(/あと \d+XP で (Lv\.\d+|？？？ に進化)/)
-  expect(g.querySelectorAll('.buddy-forms li')).toHaveLength(8)
+  const lis = [...g.querySelectorAll('.buddy-forms li')]
+  expect(lis.length).toBeLessThan(8) // まだ先の姿は「？？？ ×N」にまとめる
+  expect(lis.filter((li) => li.classList.contains('got')).length + lis.filter((li) => li.classList.contains('locked') && !li.classList.contains('more')).length + Number(lis.at(-1)!.textContent!.match(/×(\d+)/)?.[1] ?? 0)).toBe(8)
   fireEvent.click(within(g).getByText('✏️ 名前をつける'))
   fireEvent.change(screen.getByLabelText('なかまの名前'), { target: { value: 'ポチ' } })
   fireEvent.click(screen.getByText('決定'))
