@@ -43,7 +43,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         </details>
       )}
       <ul className="boss-book-list">
-        {all.map((b) => {
+        {all.filter((b) => book[b.name]).map((b) => {
           const e = book[b.name]
           return (
             <li key={b.name} className={e ? 'got' : 'locked'}>
@@ -68,6 +68,12 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
             </li>
           )
         })}
+        {/* まだたおしていないボスは1マスの「？×N」にまとめる */}
+        {all.some((b) => !book[b.name]) && (
+          <li className="locked zukan-more" aria-label={`まだたおしていないボス ${all.filter((b) => !book[b.name]).length}`}>
+            ？×{all.filter((b) => !book[b.name]).length}
+          </li>
+        )}
       </ul>
     </details>
   )

@@ -1,4 +1,3 @@
-import { splitSoft } from './softbreak'
 import { BossTime } from './BossTimeView'
 import type { ComponentProps } from 'react'
 import { medalFor } from './medal'
@@ -499,7 +498,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             )
           )
         })()}
-        <p className="stats-note">下の階から順に挑戦（高校基礎・熟語＋文法）</p>
+        <p className="stats-note" title="高校基礎・熟語＋文法">下の階から順に挑戦</p>
         <ol className="univ-floors">
           {/* 先が長く見えないよう、たおした階といま挑める階だけ見せる */}
           {[...UNIV_BOSSES].reverse().filter((b) => univUnlocked(UNIV_BOSSES.indexOf(b), univ)).map((b) => {
@@ -508,9 +507,9 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 <span className="univ-figure">
                   <BossFigure hit={false} look={b} />
                 </span>
-                <span className="univ-info">
+                <span className="univ-info" title={`${b.floor} ${b.name}`}>
                   <strong>
-                    {b.floor} {splitSoft(b.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}
+                    {b.floor} {b.name}
                   </strong>
                   <span className="univ-hint">{b.hint}</span>
                 </span>
