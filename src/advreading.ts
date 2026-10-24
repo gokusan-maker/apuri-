@@ -4660,4 +4660,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do many countries monitor rainfall and plant growth?', choices: ['To detect locust outbreaks early.', 'To help locusts find more food.', 'To change the color of the locusts.', 'To make the locusts live alone.'], answer: 0, why: '第3段落 in order to detect outbreaks early。' },
     ],
   },
+  {
+    id: 'toefl-chunking',
+    title: 'Remembering More by Grouping',
+    level: 'TOEFL・IELTS（心理）',
+    paragraphs: [
+      "In 1956, the psychologist George Miller published a famous paper suggesting that people can hold only about seven items in their short-term memory at once. Later research has suggested that the true limit may be even smaller, around four items. Yet people regularly remember long phone numbers and complex information. How is this ( A )?",
+      "One important answer is a strategy called chunking: grouping individual pieces of information into larger, meaningful units. For example, the letters F, B, I, C, I, A form a string of six separate items. But someone who recognizes the abbreviations FBI and CIA needs to remember only two chunks. In the same way, a ten-digit phone number is far easier to recall when it is ( C ) into three groups.",
+      "Chunking also helps explain why experts seem to have remarkable memories. In one classic study, experienced chess players looked at a board for just a few seconds and then rebuilt the positions of the pieces far more accurately than beginners. However, when the pieces were placed randomly, the experts' advantage almost disappeared. Their skill depended on recognizing familiar patterns, ( B ) allowed them to treat a group of pieces as a single unit.",
+    ],
+    ja: [
+      '1956年、心理学者ジョージ・ミラーは、人が短期記憶に一度におけるのはおよそ7つの項目だけだと示す有名な論文を発表した。その後の研究では、本当の限界はもっと小さく、4つほどかもしれないと示されている。それでも人は、長い電話番号や複雑な情報をふつうに覚えている。どうしてそれが可能なのだろうか。',
+      '重要な答えの一つは、チャンキングとよばれる方法、つまり、ばらばらの情報をより大きな意味のあるまとまりにすることである。たとえば、F、B、I、C、I、A という文字は、6つの別々の項目のならびである。しかし、FBI と CIA という略語を知っている人は、2つのかたまりを覚えるだけでよい。同じように、10けたの電話番号も、3つのグループに分けると、ずっと思い出しやすくなる。',
+      'チャンキングは、専門家がおどろくほどの記憶力をもっているように見える理由の説明にもなる。ある古典的な研究で、経験豊かなチェスの選手は、盤をほんの数秒見ただけで、初心者よりはるかに正確に駒の位置を再現した。しかし、駒がでたらめに置かれていると、専門家の強みはほとんど消えた。彼らの技能は、見なれたパターンを見分けることにもとづいていて、それによって駒のまとまりを1つの単位としてあつかうことができたのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['possible', 'possibly', 'possibility', 'possibilities'], answer: 0, why: 'be 動詞 is のあとに置く補語は形容詞 possible。How is this possible?「どうしてそれが可能なのか」。副詞や名詞は入らない。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（パターンを見分けること）を受ける関係代名詞 which。あとに動詞 allowed が続く。' },
+      { id: 'C', choices: ['divided', 'dividing', 'divide', 'to divide'], answer: 0, why: '電話番号は「分けられる」ので受け身 is divided。is のあとに原形や to 不定詞は置けず、dividing だと「分けている」になり目的語が必要。' },
+    ],
+    tf: [
+      { statement: 'ミラーは、短期記憶にはおよそ7つの項目しかおけないと述べた。', answer: true, why: '第1段落 people can hold only about seven items。' },
+      { statement: 'その後の研究で、限界はもっと大きいとわかった。', answer: false, why: '第1段落 the true limit may be even smaller。' },
+      { statement: '電話番号は、グループに分けると思い出しやすくなる。', answer: true, why: '第2段落 far easier to recall when it is divided into three groups。' },
+      { statement: '駒がでたらめに置かれても、専門家の強みは変わらなかった。', answer: false, why: '第3段落 the experts\' advantage almost disappeared。' },
+    ],
+    qa: [
+      { q: 'Why did the experts lose their advantage when the pieces were placed randomly?', choices: ['They could no longer recognize familiar patterns.', 'They had less time to look at the board.', 'The beginners had practiced more.', 'The random positions used more pieces.'], answer: 0, why: '第3段落 Their skill depended on recognizing familiar patterns。' },
+    ],
+  },
 ]
