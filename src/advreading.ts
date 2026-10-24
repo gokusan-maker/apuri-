@@ -430,7 +430,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     paragraphs: [
       "Deep beneath the surface of Antarctica lies a record of Earth's past climate. As snow falls year after year, it is gradually compressed into ice, trapping tiny bubbles of air. By drilling long cylinders of ice, known as ice cores, scientists can examine air that is hundreds of thousands of years ( A ).",
       'These air bubbles reveal how much carbon dioxide the atmosphere contained at different times. In addition, the chemical composition of the ice itself provides clues about past temperatures. ( B ) together, these two kinds of evidence show that carbon dioxide levels and temperatures have risen and fallen together over many cycles of ice ages and warmer periods.',
-      'The longest ice cores collected so far cover roughly 800,000 years. Throughout that entire period, carbon dioxide levels never ( C ) the levels measured in the air today. This comparison is one of the reasons many scientists regard current changes in the atmosphere as unusual.',
+      'The longest continuous ice-core records studied in detail so far cover roughly 800,000 years. Throughout that entire period, carbon dioxide levels never ( C ) the levels measured in the air today. This comparison is one of the reasons many scientists regard current changes in the atmosphere as unusual.',
     ],
     ja: [
       '南極の地表の深くには、地球の過去の気候の記録がねむっている。毎年雪がふり積もると、それは少しずつ押し固められて氷になり、小さな空気のあわを閉じこめる。氷床コアとよばれる長い円柱形の氷をほり出すことで、科学者たちは何十万年も前の空気を調べることができる。',
@@ -568,12 +568,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     title: 'Our Lunchtime Radio Show',
     level: '高校入試（体験文）',
     paragraphs: [
-      'At my school, the broadcasting club makes a short radio show every Wednesday at lunchtime. Last spring, I joined the club because I wanted to get better ( A ) speaking in front of people.',
+      'At my school, the broadcasting club makes a short radio show every Wednesday at lunchtime. Last spring, I joined the club because I wanted to get better ( A ) speaking in front of people. Our shows include school news, song requests, and interviews with teachers.',
       'My first show was a disaster. I spoke too fast, and I forgot to turn on the microphone for the first minute. Some students in the cafeteria laughed. After that, I practiced reading the script aloud every day and asked an older member ( B ) give me advice. She told me to imagine that I was talking to just one friend.',
       "Two months later, I introduced a song that a classmate had requested. After the show, a first-year student came up to me and said, 'Your voice helped me feel less lonely at lunch.' I was so happy. Now I know that what we say can reach people we have never ( C ).",
     ],
     ja: [
-      '私の学校では、放送部が毎週水曜日の昼休みに短いラジオ番組をつくっています。去年の春、私は人前で話すのが上手になりたくて、放送部に入りました。',
+      '私の学校では、放送部が毎週水曜日の昼休みに短いラジオ番組をつくっています。去年の春、私は人前で話すのが上手になりたくて、放送部に入りました。番組では、学校のニュースやリクエスト曲、先生へのインタビューを放送しています。',
       '私の最初の放送はさんざんでした。早口で話しすぎたうえ、最初の1分間マイクのスイッチを入れわすれました。食堂にいた何人かの生徒が笑いました。それから私は毎日原稿を声に出して読む練習をし、先輩にアドバイスをしてくれるようたのみました。先輩は、友だち一人だけに話しかけていると想像するように言ってくれました。',
       '2か月後、私はクラスメートがリクエストした曲を紹介しました。放送のあと、1年生の生徒が私のところに来て「あなたの声のおかげで、お昼にさびしくなくなりました」と言いました。私はとてもうれしかったです。今では、私たちの言葉は、会ったこともない人にも届くのだとわかります。',
     ],
@@ -597,12 +597,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: '高校入試（随筆）',
     paragraphs: [
       'Last summer, our town held a sports event where anyone could try wheelchair basketball. I thought it would be easy ( A ) I had played basketball for three years. I was wrong.',
-      'Moving the wheelchair and holding the ball at the same time was very difficult. I could not even get close to the basket. A player on the local team, Mr. Sato, showed me how to turn quickly by pushing only one wheel. He has used a wheelchair ( B ) a car accident twenty years ago.',
+      'Moving the wheelchair and holding the ball at the same time was very difficult. I could not even get close to the basket. A player on the local team, Mr. Sato, showed me how to turn quickly by pushing only one wheel. He has used a wheelchair ( B ) a car accident twenty years ago. After many tries, I finally scored my first basket.',
       "At the end of the day, we played a short game together. Mr. Sato moved so fast that nobody could stop him. He told me, 'People often see only what I cannot do. I want them to see what I ( C ) do.' Since that day, I have tried to look at people in a different way, paying attention to their strengths first.",
     ],
     ja: [
       '去年の夏、私たちの町で、だれでも車いすバスケットボールを体験できるスポーツイベントが開かれました。私はバスケットボールを3年間やっていたので、かんたんだろうと思っていました。でも、それはまちがいでした。',
-      '車いすを動かしながらボールを持つのは、とても難しかったです。ゴールに近づくことさえできませんでした。地元チームの選手の佐藤さんが、片方の車輪だけをおしてすばやく回る方法を教えてくれました。佐藤さんは20年前の交通事故以来、車いすを使っています。',
+      '車いすを動かしながらボールを持つのは、とても難しかったです。ゴールに近づくことさえできませんでした。地元チームの選手の佐藤さんが、片方の車輪だけをおしてすばやく回る方法を教えてくれました。佐藤さんは20年前の交通事故以来、車いすを使っています。何度も挑戦して、ついに初めてシュートを決めました。',
       'その日の最後に、いっしょに短い試合をしました。佐藤さんはとても速く動くので、だれも止められませんでした。佐藤さんは私に「人はよく、ぼくができないことばかりを見るんだ。ぼくは、ぼくにできることを見てほしい」と言いました。その日から私は、まず相手の得意なことに目を向けて、人をちがう見方で見るようにしています。',
     ],
     blanks: [
@@ -625,12 +625,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: '高校入試（体験文）',
     paragraphs: [
       'In our town, there is a cafe where some of the staff cannot hear. The first time I went there, I did not know how to order. A staff member smiled and pointed to a menu with pictures, so I was able to order ( A ) any problems.',
-      "After that, I became interested in sign language. I borrowed a book from the library and practiced simple words like 'thank you' and 'delicious' every night. At first my hands moved slowly, but little by little I got ( B ) at it.",
+      "After that, I became interested in sign language. I borrowed a book from the library and practiced simple words like 'thank you' and 'delicious' every night. I also watched videos online to see how people moved their hands. At first my hands moved slowly, but little by little I got ( B ) at it.",
       "A month later, I visited the cafe again and signed 'thank you' to the staff member. Her face lit up, and she signed something back. I did not understand everything, but I felt that we were really talking. I learned that communication is not only about the words we ( C ) with our mouths. Now I want to learn more signs.",
     ],
     ja: [
       '私の町には、耳の聞こえない店員さんが何人かはたらいているカフェがあります。はじめて行ったとき、私は注文のしかたがわかりませんでした。店員さんがほほえんで、写真つきのメニューを指さしてくれたので、何の問題もなく注文することができました。',
-      'それから私は手話に興味をもちました。図書館で本を借りて、「ありがとう」や「おいしい」のような簡単なことばを毎晩練習しました。はじめは手がゆっくりとしか動きませんでしたが、少しずつ上手になりました。',
+      'それから私は手話に興味をもちました。図書館で本を借りて、「ありがとう」や「おいしい」のような簡単なことばを毎晩練習しました。はじめは手がゆっくりとしか動きませんでしたが、少しずつ上手になりました。手の動かし方を見るために、インターネットの動画も見ました。',
       '1か月後、私はまたそのカフェに行き、店員さんに手話で「ありがとう」と伝えました。店員さんの顔がぱっと明るくなり、手話で何かを返してくれました。全部はわかりませんでしたが、本当に話をしていると感じました。コミュニケーションは、口で言うことばだけではないのだと学びました。今では、もっと手話を覚えたいと思っています。',
     ],
     blanks: [
@@ -820,12 +820,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     title: 'A Week Without Sweet Drinks',
     level: '高校入試（体験文）',
     paragraphs: [
-      'In health class, our teacher showed us how much sugar is in one bottle of a popular soft drink. It was more than ten sugar cubes! I was shocked because I usually drank ( A ) bottles a day.',
+      'In health class, our teacher showed us how much sugar is in one bottle of a popular soft drink. It was more than ten sugar cubes! I was shocked because I usually drank ( A ) bottles a day. I wanted to know how all that sugar was affecting my body.',
       'I decided to try an experiment: for one week, I would drink only water and tea. The first three days were hard. I kept thinking about soft drinks, especially after club practice. On the fourth day, however, I noticed that I was not as tired in the afternoon ( B ) before. I also started to enjoy the taste of cold green tea.',
       'By the end of the week, I had saved the money I usually spent on drinks, and I felt better. I have not stopped drinking soft drinks completely, but now I have one only on weekends. Small changes in our daily habits can make a big ( C ) to our health.',
     ],
     ja: [
-      '保健の授業で、先生が人気のある清涼飲料水1本にどれだけ砂糖が入っているかを見せてくれました。角砂糖10個以上でした！ 私はふだん1日に2本飲んでいたので、ショックを受けました。',
+      '保健の授業で、先生が人気のある清涼飲料水1本にどれだけ砂糖が入っているかを見せてくれました。角砂糖10個以上でした！ 私はふだん1日に2本飲んでいたので、ショックを受けました。その砂糖が自分の体にどんな影響をあたえているのか知りたいと思いました。',
       '私は実験をしてみることにしました。1週間、水とお茶だけを飲むのです。最初の3日間はつらかったです。特に部活のあとは、ジュースのことばかり考えていました。しかし4日目に、午後になっても前ほどつかれていないことに気づきました。冷たい緑茶の味も好きになってきました。',
       '1週間が終わるころには、ふだん飲み物に使っていたお金がたまり、体の調子もよくなっていました。ジュースを飲むのを完全にやめたわけではありませんが、今は週末にだけ1本飲むようにしています。毎日の習慣を少し変えるだけでも、健康に大きなちがいが生まれるのです。',
     ],
@@ -1046,12 +1046,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     paragraphs: [
       'Good morning, everyone. Today I want to talk about the small river that runs behind our school. Two years ago, it was full of plastic bags and cans, and nobody wanted to go ( A ) it.',
       'Our science club decided to do something. Every other Sunday, we picked up trash along the river, wearing gloves and carrying large bags. At first only five members came, but after we put up posters in town, many people started to join us. Last spring, more than fifty people, ( B ) children and elderly people, took part.',
-      "Now the water is much cleaner, and we can see small fish swimming again. This project taught me that one person cannot change much alone, but when people work together, they can make a big difference. Why don't you join us next Sunday? We would be very happy ( C ) you there. Thank you for listening.",
+      "Now the water is much cleaner, and we can see small fish swimming again. Some families even come to walk along the river on weekends. This project taught me that one person cannot change much alone, but when people work together, they can make a big difference. Why don't you join us next Sunday? We would be very happy ( C ) you there. Thank you for listening.",
     ],
     ja: [
       'みなさん、おはようございます。今日は、私たちの学校の裏を流れる小さな川についてお話ししたいと思います。2年前、その川はビニールぶくろや空きかんでいっぱいで、だれも近づこうとしませんでした。',
-      '私たちの科学部は、何かしようと決めました。1週間おきの日曜日に、手ぶくろをして大きなふくろを持ち、川ぞいのごみを拾いました。はじめは部員が5人しか来ませんでしたが、町にポスターをはると、たくさんの人が参加してくれるようになりました。この春には、子どもやお年寄りをふくめ、50人以上が参加しました。',
-      '今では水はずっときれいになり、また小さな魚が泳いでいるのが見られます。この活動から、一人では大きくは変えられないけれど、みんなで力を合わせれば大きなちがいを生むことができると学びました。次の日曜日、いっしょに参加しませんか。そこで会えたら、私たちはとてもうれしいです。ご清聴ありがとうございました。',
+      '私たちの科学部は、何かしようと決めました。1週間おきの日曜日に、手ぶくろをして大きなふくろを持ち、川ぞいのごみを拾いました。はじめは部員が5人しか来ませんでしたが、町にポスターをはると、たくさんの人が参加してくれるようになりました。この前の春には、子どもやお年寄りをふくめ、50人以上が参加しました。',
+      '今では水はずっときれいになり、また小さな魚が泳いでいるのが見られます。この活動から、一人では大きくは変えられないけれど、みんなで力を合わせれば大きなちがいを生むことができると学びました。次の日曜日、いっしょに参加しませんか。そこで会えたら、私たちはとてもうれしいです。ご清聴ありがとうございました。週末には川ぞいを散歩しに来る家族もいます。',
     ],
     blanks: [
       { id: 'A', choices: ['near', 'next', 'close', 'beside to'], answer: 0, why: 'go near 〜「〜に近づく」。close は close to 〜、next は next to 〜 の形で使う。' },
@@ -1633,7 +1633,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: 'TOEFL・IELTS（地学）',
     paragraphs: [
       "Look at a world map, and you may notice that the east coast of South America and the west coast of Africa seem to fit together like pieces of a puzzle. In 1912, a German scientist named Alfred Wegener suggested that this was no coincidence. He proposed that the continents had once been joined in a single huge landmass and had slowly drifted apart ( A ) millions of years.",
-      "Wegener collected impressive evidence. Fossils of the same ancient reptile were found in both South America and Africa, an animal that could not have swum across a wide ocean. Similar types of rock also appeared on coasts now separated by thousands of kilometers. Nevertheless, most scientists rejected his idea, mainly because he could not explain ( B ) force was strong enough to move entire continents.",
+      "Wegener collected impressive evidence. Fossils of the same ancient reptile, an animal that could not have swum across a wide ocean, were found in both South America and Africa. Similar types of rock also appeared on coasts now separated by thousands of kilometers. Nevertheless, most scientists rejected his idea, mainly because he could not explain ( B ) force was strong enough to move entire continents.",
       "The answer came decades later, after Wegener's death. In the 1950s and 1960s, studies of the ocean floor revealed that new crust is constantly forming along underwater mountain ranges and spreading outward. This discovery led to the theory of plate tectonics, which states that the Earth's surface is divided into large plates that move a few centimeters each year, roughly as fast as fingernails grow. Wegener's once-rejected idea had ( C ) to be largely correct.",
     ],
     ja: [
@@ -2179,7 +2179,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['who', 'which', 'what', 'whose'], answer: 0, why: '先行詞 someone（人）を説明する主格の関係代名詞 who。' },
     ],
     tf: [
-      { statement: '筆者は家族といっしょに名古屋へ行った。', answer: false, why: '第1段落 by myself / to travel alone。' },
+      { statement: '筆者は家族といっしょに名古屋へ行った。', answer: false, why: '第1段落 by myself（ひとりで）。' },
       { statement: 'おばあさんは、次の電車の時刻を紙に書いてくれた。', answer: true, why: '第2段落 She even wrote the time of the next train on a piece of paper for me。' },
       { statement: '筆者はおばあさんの名前を知っているので、あとでお礼を言った。', answer: false, why: '第3段落 I did not ask the woman\'s name, so I cannot thank her now。' },
     ],
@@ -2304,12 +2304,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     title: 'A Safe Box for the World\'s Seeds',
     level: 'TOEFL・IELTS（環境）',
     paragraphs: [
-      "Deep inside a mountain on a remote Norwegian island, about a thousand kilometers from the North Pole, there is a building that few people will ever enter. It is the Svalbard Global Seed Vault, which opened in 2008. Its purpose is to store copies of seeds from crop collections around the world, ( A ) that the genetic variety of our food plants is not lost.",
+      "Deep inside a mountain on a remote Norwegian island, about 1,300 kilometers from the North Pole, there is a building that few people will ever enter. It is the Svalbard Global Seed Vault, which opened in 2008. Its purpose is to store copies of seeds from crop collections around the world, ( A ) that the genetic variety of our food plants is not lost.",
       "Why are such copies needed? Many countries keep their own seed collections, known as gene banks, but these can be damaged by war, natural disasters, or simple accidents such as a broken freezer. The vault serves as a backup. The seeds are kept at about minus eighteen degrees Celsius, a temperature at which many types of seeds can survive for a very long time. Because the vault is built into frozen ground, the seeds would stay cold for some time ( B ) the electricity failed.",
       "The vault has already proved its value. In 2015, researchers whose gene bank had been forced to move because of war in Syria withdrew some of their seeds from Svalbard in order to rebuild their collection elsewhere. Supporters argue that protecting crop diversity is essential, ( C ) plant varieties that seem unimportant today may one day help farmers deal with new diseases or a changing climate.",
     ],
     ja: [
-      '北極点から約1000キロはなれた、ノルウェーの遠くの島の山の奥深くに、ほとんどの人が中に入ることのない建物がある。2008年に開設されたスヴァールバル世界種子貯蔵庫だ。その目的は、世界中の作物のコレクションから種子の複製を保管し、食用植物の遺伝的な多様性が失われないようにすることである。',
+      '北極点から約1300キロはなれた、ノルウェーの遠くの島の山の奥深くに、ほとんどの人が中に入ることのない建物がある。2008年に開設されたスヴァールバル世界種子貯蔵庫だ。その目的は、世界中の作物のコレクションから種子の複製を保管し、食用植物の遺伝的な多様性が失われないようにすることである。',
       'なぜそのような複製が必要なのだろうか。多くの国はジーンバンクとよばれる自前の種子コレクションをもっているが、これらは戦争や自然災害、あるいはこわれた冷凍庫のような単純な事故で損なわれることがある。貯蔵庫はそのバックアップの役目を果たす。種子はおよそマイナス18度で保管されている。これは多くの種類の種子がとても長いあいだ生きのびられる温度だ。貯蔵庫は凍った地面の中に作られているので、たとえ電気が止まっても、種子はしばらくのあいだ冷たいままだろう。',
       'この貯蔵庫はすでにその価値を証明している。2015年、シリアでの戦争のためにジーンバンクの移転を余儀なくされた研究者たちが、別の場所でコレクションを立て直すために、スヴァールバルから種子の一部を引き出した。支持者たちは、作物の多様性を守ることは欠かせないと主張する。今日は重要でなさそうに見える植物の品種が、いつか農家が新しい病気や変わりゆく気候に対処するのを助けるかもしれないからだ。',
     ],
@@ -3172,7 +3172,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['whether', 'what', 'which', 'unless'], answer: 0, why: 'question whether ～「～かどうかを問う」。whether のあとに完全な文（it deserves our trust）が続く。' },
     ],
     tf: [
-      { statement: 'アンカリング効果では、人は最初の数から十分に調整しすぎる傾向がある。', answer: false, why: '第1段落 we usually adjust too little（調整が足りない）。' },
+      { statement: 'アンカリング効果では、人は最初の数から大きく調整しすぎる傾向がある。', answer: false, why: '第1段落 we usually adjust too little（調整が足りない）。' },
       { statement: '実験のルーレットは、10か65で止まるように仕組まれていた。', answer: true, why: '第2段落 set to stop at either 10 or 65。' },
       { statement: '65を見た参加者は、10を見た参加者より高い推定をした。', answer: true, why: '第2段落 中央値 25 パーセントと 45 パーセント。' },
       { statement: '筆者は、アンカリング効果は知っているだけで完全になくせると述べている。', answer: false, why: '第3段落 Being aware of the effect does not remove it entirely。' },
