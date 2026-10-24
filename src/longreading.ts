@@ -5395,6 +5395,62 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The speaker never talks with neighbors.', answer: false, why: '第4段落 I try to talk with my neighbors when I meet them。' },
     ],
   },
+  {
+    id: 'letter-host-family',
+    title: 'An Email to My Host Family',
+    level: '中2（手紙・メール）',
+    paragraphs: [
+      'Dear Mr. and Mrs. Brown, how are you? I am Yuki, and I am going to stay with you for two weeks this summer. I am very excited, but I am also a little nervous ( A ) it will be my first time abroad.',
+      'Let me tell you about myself. I am fourteen years old, and I live in a small city near Nagoya. I am a member of the tennis club, and I practice four days a week. I also like cooking. I want to make some Japanese food ( B ) you, like rice balls and miso soup.',
+      'I have a question. What kind of clothes should I bring? I heard that summer in your town is not very hot, so I am not sure. Also, is there anything you want ( C ) from Japan? I would be happy to bring it.',
+      'I am looking forward to meeting you and your dog, Max. See you soon! Best wishes, Yuki',
+    ],
+    ja: [
+      'ブラウンさんご夫妻へ。お元気ですか。私はユキで、この夏2週間、お宅にホームステイすることになっています。とてもわくわくしていますが、はじめての海外なので、少し緊張もしています。',
+      '自己紹介をさせてください。私は14歳で、名古屋の近くの小さな市に住んでいます。テニス部に入っていて、週に4日練習しています。料理も好きです。おにぎりやみそしるのような日本の料理を作ってあげたいです。',
+      '質問があります。どんな服を持っていけばいいですか。そちらの町の夏はあまり暑くないと聞いたので、よくわかりません。また、日本から持ってきてほしいものはありますか。よろこんで持っていきます。',
+      'お二人と、犬のマックスに会えるのを楽しみにしています。ではまた！ ユキより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'during', 'despite'], answer: 0, why: 'あとに it will be my first time abroad という文が続くので接続詞の because。because of・during・despite は前置詞。' },
+      { id: 'B', choices: ['for', 'at', 'of', 'in'], answer: 0, why: 'make A for 人「人のために A を作る」。' },
+      { id: 'C', choices: ['me to bring', 'me bring', 'I bring', 'me bringing'], answer: 0, why: 'want 人 to ～「人に～してほしい」。want me to bring。' },
+    ],
+    tf: [
+      { statement: 'Yuki will stay with the Browns for two weeks.', answer: true, why: '第1段落 I am going to stay with you for two weeks。' },
+      { statement: 'Yuki has been abroad many times.', answer: false, why: '第1段落 it will be my first time abroad。' },
+      { statement: 'Yuki practices tennis every day.', answer: false, why: '第2段落 I practice four days a week。' },
+      { statement: 'The Browns have a dog named Max.', answer: true, why: '第4段落 your dog, Max。' },
+    ],
+  },
+  {
+    id: 'speech-reading-books',
+    title: 'Ten Minutes Before Bed',
+    level: '中2（スピーチ）',
+    paragraphs: [
+      'Good morning, everyone. Today, I would like to talk about reading. Last year, I hardly read any books. I spent most of my free time ( A ) games on my phone.',
+      'One day, my phone broke, and I had nothing to do for a week. My sister lent me a mystery novel. At first, I read only a few pages before bed, but the story was so exciting ( B ) I could not stop reading.',
+      'Since then, I have read twenty books. Reading has changed me in two ways. First, I can now read faster. Second, I have learned that books let me experience lives ( C ) are very different from mine.',
+      'I am not saying that games are bad. But if you have ten minutes before bed, why not try a book? It might open a new world for you. Thank you.',
+    ],
+    ja: [
+      'みなさん、おはようございます。今日は読書について話したいと思います。去年、私はほとんど本を読みませんでした。自由な時間のほとんどを、スマホのゲームをして過ごしていました。',
+      'ある日、スマホがこわれて、1週間することがなくなりました。姉がミステリー小説を貸してくれました。はじめは寝る前に数ページ読むだけでしたが、話がとてもおもしろかったので、読むのをやめられなくなりました。',
+      'それから、私は20冊の本を読みました。読書は2つの点で私を変えました。1つ目に、前より速く読めるようになりました。2つ目に、本は自分とはまったくちがう人生を体験させてくれると知りました。',
+      'ゲームが悪いと言っているのではありません。でも、寝る前に10分あるなら、本を読んでみませんか。あなたにとって新しい世界が開けるかもしれません。ありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['playing', 'to play', 'play', 'played'], answer: 0, why: 'spend ＋ 時間 ＋ ～ing「～して時間を過ごす」。spent most of my free time playing games。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'as'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。so exciting that I could not stop reading。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'whose'], answer: 0, why: '先行詞 lives（もの・こと）を説明する主格の関係代名詞 that（which も可）。what は先行詞をふくむ、who は人、whose は名詞が続く。' },
+    ],
+    tf: [
+      { statement: 'Last year, the speaker read a lot of books.', answer: false, why: '第1段落 Last year, I hardly read any books。' },
+      { statement: "The speaker's sister lent the speaker a mystery novel.", answer: true, why: '第2段落 My sister lent me a mystery novel。' },
+      { statement: 'The speaker has read twenty books since then.', answer: true, why: '第3段落 Since then, I have read twenty books。' },
+      { statement: 'The speaker says that games are bad.', answer: false, why: '第4段落 I am not saying that games are bad。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

@@ -1828,3 +1828,4 @@
 - 2026-10-24: 読解を3本追加：難関大「Same Facts, Different Feelings」（フレーミング効果）、高校入試「Grown by Students」（学校の畑の野菜を日曜市で売る）、かんたん「The Rubber Duck Race」（アヒルのレース）
 - 2026-10-24: ふつう（中2）の読解にスピーチ「My Dream Is to Drive a Bus」（町のバスの運転手になりたい、空所3・内容一致4）を追加
 - 2026-10-24: 読解のジャンルのタブ（説明文・物語・会話文など）を、アイコンつきの色タイルに（下のフォルダーと同じ色）
+- 2026-10-24: ふつう（中2）の読解に、メール「An Email to My Host Family」とスピーチ「Ten Minutes Before Bed」を追加（少ないジャンルをふやす）
