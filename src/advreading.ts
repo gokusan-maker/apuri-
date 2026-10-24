@@ -4117,6 +4117,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-glass',
+    title: 'From Sand to Glass',
+    level: 'TOEFL・IELTS（科学・歴史）',
+    paragraphs: [
+      "Glass is so common today that we rarely think about how it is made. Its main ingredient is silica, which is found in ordinary sand. Pure silica melts only at extremely high temperatures, ( A ) makes it difficult and expensive to work with.",
+      "To solve this problem, glassmakers add other materials. Soda ash lowers the melting point of the sand, and limestone makes the finished glass stronger and keeps it from dissolving in water. Most of the glass in windows and bottles today is made from this basic mixture.",
+      "People have been making glass for thousands of years. Early glass objects, such as small beads, were produced in Mesopotamia. Around two thousand years ago, craftsmen in the eastern Mediterranean discovered ( B ) they could blow air into melted glass through a tube. This made it possible to create thin, hollow containers quickly and cheaply.",
+      "One advantage of glass is that it can be recycled again and again ( C ) losing its quality. Used bottles are crushed, melted, and formed into new products, which saves energy and raw materials.",
+    ],
+    ja: [
+      'ガラスは今ではとてもありふれているので、どのようにつくられるかを考えることはめったにない。主な原料はシリカで、これはふつうの砂にふくまれている。純粋なシリカはとても高い温度でしかとけないので、あつかうのがむずかしく、費用もかかる。',
+      'この問題を解決するために、ガラス職人はほかの材料を加える。ソーダ灰は砂のとける温度を下げ、石灰石はできあがったガラスを強くし、水にとけないようにする。今日の窓やびんのガラスのほとんどは、この基本的な混ぜ合わせからつくられている。',
+      '人々は何千年も前からガラスをつくってきた。小さなビーズのような初期のガラス製品は、メソポタミアでつくられた。約2000年前、地中海の東の地域の職人たちは、管を通してとけたガラスに息をふきこめることを発見した。これにより、うすくて中が空洞の入れ物を、すばやく安くつくれるようになった。',
+      'ガラスのよい点の1つは、質を落とさずに何度でもリサイクルできることである。使い終わったびんはくだかれ、とかされ、新しい製品につくり直される。これによってエネルギーや原料が節約できる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の文の内容全体を受ける非制限用法の関係代名詞は which。that はコンマのあとに使わない。what は先行詞をふくむ。it だとコンマだけで文がつながってしまう。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'discover that ＋ 文「～ということを発見する」。あとが完全な文なので that。what・which は文の一部が欠けているときに使い、whose は名詞が続く。' },
+      { id: 'C', choices: ['without', 'not', 'no', 'none'], answer: 0, why: '前置詞 without ＋ 動名詞 losing「質を落とさずに」。not・no・none は前置詞ではない。' },
+    ],
+    tf: [
+      { statement: 'ガラスの主な原料は、ふつうの砂にふくまれるシリカである。', answer: true, why: '第1段落 Its main ingredient is silica, which is found in ordinary sand。' },
+      { statement: 'ソーダ灰を加えると、砂がとけにくくなる。', answer: false, why: '第2段落 Soda ash lowers the melting point of the sand（とけやすくなる）。' },
+      { statement: '約2000年前、地中海の東の地域で、とけたガラスに息をふきこむ方法が見つかった。', answer: true, why: '第3段落 Around two thousand years ago, craftsmen in the eastern Mediterranean discovered …。' },
+      { statement: 'ガラスは、リサイクルするたびに質が落ちていく。', answer: false, why: '第4段落 it can be recycled again and again without losing its quality。' },
+    ],
+    qa: [
+      { q: 'Why do glassmakers add limestone?', choices: ['To make the glass stronger and keep it from dissolving in water.', 'To make the sand melt at a higher temperature.', 'To change the color of the glass.', 'To make the glass lighter.'], answer: 0, why: '第2段落 limestone makes the finished glass stronger and keeps it from dissolving in water。' },
+    ],
+  },
+{
     id: 'toefl-camels',
     title: 'Built for the Desert',
     level: 'TOEFL・IELTS（生物）',
