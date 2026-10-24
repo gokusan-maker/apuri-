@@ -3418,6 +3418,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-notice-elevator',
+    title: 'Notice: Elevator Inspection',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Notice to all residents. The elevators in this building will be inspected on Thursday, November 12, from 9:00 a.m. to 4:00 p.m. During this time, only one elevator will be in service, so you may have to wait longer ( A ) usual.",
+      "Between 1:00 p.m. and 2:00 p.m., both elevators will stop completely while the workers test the safety system. If you need to move heavy items, please plan to do so before noon. The workers will also check the emergency phone inside each elevator, so you may hear a short alarm a few times during the day. Residents ( B ) have difficulty using the stairs should contact the management office in advance, and we will do our best to help.",
+      "We apologize for any inconvenience. This inspection is required by law every year ( C ) keep everyone safe. If you have any questions, please call the management office between 10:00 a.m. and 6:00 p.m. on weekdays. Management Office, Green Hill Apartments",
+    ],
+    ja: [
+      '住民のみなさまへのお知らせ。11月12日（木）午前9時から午後4時まで、この建物のエレベーターの点検を行います。この間は1台のエレベーターしか動かないため、いつもより長くお待ちいただくことがあります。',
+      '午後1時から2時までは、作業員が安全装置を試験するあいだ、両方のエレベーターが完全に止まります。重い荷物を運ぶ必要がある方は、正午までにすませるようご計画ください。作業員は各エレベーター内の非常用電話も点検しますので、日中に短い警報音が何回か聞こえることがあります。階段を使うのがむずかしい方は、前もって管理事務所にご連絡ください。できるかぎりお手伝いいたします。',
+      'ご不便をおかけしてもうしわけありません。この点検は、みなさまの安全を守るために、毎年法律で義務づけられているものです。ご質問があれば、平日の午前10時から午後6時までに管理事務所へお電話ください。グリーンヒル・アパート管理事務所',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'as', 'then', 'that'], answer: 0, why: '比較級 longer のあとは than。longer than usual「いつもより長く」。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 Residents（人）で、あとに動詞 have が続くので主格の関係代名詞 who。which は物、whose は名詞が続く、what は先行詞をふくむ。' },
+      { id: 'C', choices: ['to', 'for', 'so', 'that'], answer: 0, why: '「～するために」は to ＋ 動詞の原形（不定詞の副詞用法）。to keep everyone safe。' },
+    ],
+    tf: [
+      { statement: '点検の日は、エレベーターが1日中まったく使えない。', answer: false, why: '第1段落 only one elevator will be in service（1台は動く）。止まるのは午後1時〜2時だけ。' },
+      { statement: '午後1時から2時までは、両方のエレベーターが止まる。', answer: true, why: '第2段落 Between 1:00 p.m. and 2:00 p.m., both elevators will stop completely。' },
+      { statement: '階段を使うのがむずかしい人は、前もって管理事務所に連絡するとよい。', answer: true, why: '第2段落 should contact the management office in advance。' },
+      { statement: 'この点検は、住民の希望で今年だけ行われる。', answer: false, why: '第3段落 This inspection is required by law every year。' },
+    ],
+    qa: [
+      { q: 'When should residents move heavy items on the day of the inspection?', choices: ['Before noon.', 'Between 1:00 p.m. and 2:00 p.m.', 'After 6:00 p.m.', 'On Friday morning.'], answer: 0, why: '第2段落 please plan to do so before noon。' },
+    ],
+  },
+{
     id: 'adv-biz-meeting-email',
     title: 'An Email About the Sales Meeting',
     level: '難関大（ビジネスメール）',
