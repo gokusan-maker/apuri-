@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-walking-ideas',
+    title: 'Ideas on Foot',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many famous thinkers, from philosophers to scientists, were known for taking long walks. They often claimed that their best ideas came to them while they were walking. For a long time, this was only a personal impression. In recent years, however, researchers have begun to test ( A ) walking really helps people think.",
+      "In one well-known set of experiments at an American university, participants were asked to think of as many creative uses as possible for everyday objects, such as a button or a tire. Some did the task while sitting, and others did it while walking on a treadmill facing a blank wall. The walkers came up with significantly more ideas ( B ) the sitters did.",
+      "Interestingly, walking did not help with every kind of thinking. On tasks that required finding a single correct answer, walking gave no clear advantage. It seems that walking is most useful when we need to produce many possible ideas, not when we need to focus narrowly on one solution. Some researchers suggest that gentle, regular movement may relax the mind and allow thoughts to flow more freely.",
+      "These findings point to a simple strategy. When you are stuck on a problem that needs fresh ideas, a short walk may be more useful than ( C ) at your desk. On the other hand, when you need to check details carefully, sitting quietly may still be the better choice.",
+    ],
+    ja: [
+      '哲学者から科学者まで、多くの有名な思想家は長い散歩をすることで知られていた。彼らはよく、いちばんよいアイデアは歩いているときに浮かんだと語っていた。長いあいだ、これは個人の印象にすぎなかった。しかし近年、研究者たちは、歩くことが本当に考える助けになるのかどうかを確かめ始めている。',
+      'アメリカのある大学で行われたよく知られた一連の実験では、参加者は、ボタンやタイヤのような身近な物の独創的な使い方をできるだけ多く考えるよう求められた。座ったまま課題をした人もいれば、何もない壁に向かってルームランナーの上を歩きながら課題をした人もいた。歩いた人は、座っていた人よりもかなり多くのアイデアを思いついた。',
+      '興味深いことに、歩くことはあらゆる種類の思考に役立つわけではなかった。1つの正しい答えを見つける必要がある課題では、歩くことにはっきりとした利点はなかった。歩くことがもっとも役立つのは、たくさんの考えられるアイデアを生み出す必要があるときであり、1つの解決策にせまく集中する必要があるときではないようだ。おだやかで規則的な動きが心をほぐし、考えをより自由に流れさせるのかもしれないと言う研究者もいる。',
+      'これらの発見は、かんたんな作戦を示している。新しいアイデアが必要な問題で行きづまったときは、机を見つめているよりも、短い散歩のほうが役立つかもしれない。その一方で、細かい点を注意深く確認する必要があるときは、やはり静かに座っているほうがよい選択かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whether', 'unless', 'so', 'despite'], answer: 0, why: 'test の目的語になる名詞節「～かどうか」は whether。unless「～しないかぎり」・so「だから」は名詞節をつくらない。despite は前置詞。' },
+      { id: 'B', choices: ['than', 'as', 'then', 'that'], answer: 0, why: '比較級 more ideas のあとは than。more ～ than the sitters did「座っていた人より多くの～」。' },
+      { id: 'C', choices: ['staring', 'stare', 'stares', 'stared'], answer: 0, why: '前置詞のはたらきをする than のあとで、a short walk と比べる名詞のかたまりなので動名詞 staring「見つめること」。' },
+    ],
+    tf: [
+      { statement: '有名な思想家の中には、散歩中によいアイデアが浮かんだと語る人がいた。', answer: true, why: '第1段落 They often claimed that their best ideas came to them while they were walking。' },
+      { statement: '実験では、歩いた人のほうが座っていた人よりアイデアが少なかった。', answer: false, why: '第2段落 The walkers came up with significantly more ideas than the sitters did。' },
+      { statement: '歩くことは、どんな種類の考える作業にも役立つ。', answer: false, why: '第3段落 walking did not help with every kind of thinking。' },
+      { statement: '細かい点を確認するときは、静かに座っているほうがよいこともある。', answer: true, why: '第4段落 when you need to check details carefully, sitting quietly may still be the better choice。' },
+    ],
+    qa: [
+      { q: 'According to the passage, when is walking most useful?', choices: ['When we need to produce many possible ideas.', 'When we need to find one correct answer.', 'When we need to check details carefully.', 'When we feel very tired.'], answer: 0, why: '第3段落 walking is most useful when we need to produce many possible ideas。' },
+    ],
+  },
+{
     id: 'adv-decoy',
     title: 'The Popcorn That Nobody Buys',
     level: '難関大（評論）',
