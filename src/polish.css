@@ -2430,3 +2430,9 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .flip.ta-start { background: linear-gradient(135deg, #fb923c, #ef4444); color: #fff; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #b91c1c, 0 8px 18px rgb(239 68 68 / 0.3); }
 .flip.ta-start::before { content: '▶ '; }
 .flip.ta-start:active { transform: translateY(3px); box-shadow: 0 2px 0 #b91c1c; }
+
+/* ステージのクリア：次のステージへ・次のボスへはオレンジの▶（次へ進む系） */
+.stage-result .next-unit-btn, .boss .next-unit-btn { border: none; background: linear-gradient(135deg, #fbbf24, #f97316) !important; color: #fff !important; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #c2410c !important; }
+.stage-result .next-unit-btn:active, .boss .next-unit-btn:active { transform: translateY(3px); box-shadow: none !important; }
+/* 「次へ進む」ボタン（.next-unit-btn）はアプリ全体でオレンジ（ほかのミニゲーム・まちがいだけは別の色） */
+.next-unit-btn:not(.other-game-btn):not(.retry-missed) { border: none; background: linear-gradient(135deg, #fbbf24, #f97316) !important; color: #fff !important; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #c2410c !important; }
