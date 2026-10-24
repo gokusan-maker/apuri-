@@ -45,8 +45,8 @@ it('カタカナの名前（バッジ・おやつ・ボス・ガチャ結果な�
   expect(css).toMatch(/\.badge-name, [^{]*\.gacha-result p \{ word-break: keep-all; overflow-wrap: anywhere; \}/)
 })
 
-it('今日のことばの訳は英語の下の行に置く', () => {
-  expect(css).toContain('.wotd .wotd-ja { display: block;')
+it('今日のことばの訳は英語と同じ1行に置く', () => {
+  expect(css).toContain('.wotd .wotd-ja { display: inline;')
 })
 
 it('背景を持たない部品の濃い文字色にも、ダークモードの明るい色がある（自動で作った一覧）', () => {
