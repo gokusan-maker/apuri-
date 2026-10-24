@@ -5227,6 +5227,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer sometimes does the exercises alone now.', answer: true, why: '第4段落 I sometimes do the exercises alone in my room。' },
     ],
   },
+  {
+    id: 'class-goldfish',
+    title: 'Sunny, Our Class Goldfish',
+    level: '中2（物語）',
+    paragraphs: [
+      'In April, our teacher brought a small goldfish to our classroom. It was bright orange, so we decided ( A ) name it Sunny. Every day, two students had to feed it and clean its tank.',
+      'At first, everyone wanted to take care of Sunny. But after a few weeks, some students forgot their job. One Monday morning, the water in the tank was dirty, and Sunny was not moving much. I was ( B ) worried that I told our teacher right away.',
+      'Our teacher did not get angry. She said, "A living thing cannot tell us what it needs. We have to notice for it." That afternoon, our class made a checklist and put it next to the tank. Each person wrote their name ( C ) they finished their job.',
+      'Since then, nobody has forgotten. Sunny is now bigger than before, and it swims to the front of the tank when we come in. I learned that taking care of someone is not only about love but also about doing small things every day.',
+    ],
+    ja: [
+      '4月に、先生が小さな金魚を教室に持ってきました。あざやかなオレンジ色だったので、私たちはサニーと名づけることにしました。毎日、2人の生徒がえさをあげて水そうをそうじすることになりました。',
+      'はじめは、みんながサニーの世話をしたがりました。でも数週間たつと、自分の係をわすれる生徒が出てきました。ある月曜日の朝、水そうの水がよごれていて、サニーはあまり動いていませんでした。私はとても心配になって、すぐに先生に伝えました。',
+      '先生はおこりませんでした。「生き物は、何がほしいかを私たちに言えません。私たちが代わりに気づいてあげないといけないのです」と先生は言いました。その日の午後、クラスでチェック表を作って、水そうのとなりにはりました。一人ひとりが、係を終えたあとに名前を書くことにしました。',
+      'それからは、だれもわすれていません。サニーは前より大きくなり、私たちが教室に入ると水そうの前のほうに泳いできます。だれかの世話をするということは、愛情だけでなく、毎日小さなことを続けることでもあるのだと学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'of', 'at'], answer: 0, why: 'decide to ＋ 動詞の原形「～することに決める」。' },
+      { id: 'B', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。so worried that。' },
+      { id: 'C', choices: ['after', 'during', 'without', 'because of'], answer: 0, why: 'あとに they finished their job という文が続くので接続詞の after「～したあとで」。during・without・because of は前置詞。' },
+    ],
+    tf: [
+      { statement: 'The students named the goldfish Sunny.', answer: true, why: '第1段落 we decided to name it Sunny。' },
+      { statement: 'Everyone remembered their job all the time.', answer: false, why: '第2段落 some students forgot their job。' },
+      { statement: 'The teacher got very angry about the dirty water.', answer: false, why: '第3段落 Our teacher did not get angry。' },
+      { statement: 'The class made a checklist and put it next to the tank.', answer: true, why: '第3段落の内容と合う。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
