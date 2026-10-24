@@ -3387,6 +3387,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'hs-tea-ceremony',
+    title: 'A Bowl of Tea for a Guest',
+    level: '高校入試（スピーチ）',
+    paragraphs: [
+      "Hello, everyone. Last April, I joined the tea ceremony club ( A ) I wanted to try something new. At first, I was surprised that there were so many rules, for example, how to hold the bowl and how many times ( B ) turn it. My legs also hurt after sitting for a long time. I thought about quitting many times.",
+      "Our teacher, Ms. Mori, told us, \"Each rule has a meaning. Every movement is a way to show respect to your guest.\" After I heard this, I began to practice more carefully. I tried to think about the guest in front of me, not about the rules.",
+      "In October, our club served tea at the school festival. A woman from Australia came to our room. She looked a little nervous, so I explained the steps slowly in easy English. When she drank the tea, she smiled and said, \"I feel so calm. Thank you for your kindness.\"",
+      "Her words made me very happy. From this experience, I learned that a small action can make others happy ( C ) it is done with care. I want to keep practicing and share Japanese culture with more people. Thank you for listening.",
+    ],
+    ja: [
+      'みなさん、こんにちは。この前の4月、私は何か新しいことをやってみたかったので茶道部に入りました。はじめは、たとえば茶わんの持ち方や何回回すかなど、決まりがとても多いことにおどろきました。長い時間すわっていると足も痛くなりました。何度もやめようかと考えました。',
+      '顧問のモリ先生は「どの決まりにも意味があります。一つ一つの動きは、お客さまに敬意を表す方法なのです」と教えてくれました。これを聞いてから、私はもっとていねいに練習するようになりました。決まりのことではなく、目の前のお客さまのことを考えるようにしました。',
+      '10月、私たちの部は文化祭でお茶を出しました。オーストラリアから来た女性が私たちの部屋に来ました。少し緊張しているようだったので、私はかんたんな英語でゆっくり手順を説明しました。お茶を飲むと、その女性はほほえんで「とても落ち着きます。親切にしてくれてありがとう」と言いました。',
+      'その言葉がとてもうれしかったです。この経験から、小さな行動でも、心をこめて行えば人を幸せにできると学びました。これからも練習を続けて、もっと多くの人に日本の文化を伝えたいと思います。聞いてくれてありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'during', 'without'], answer: 0, why: 'あとに I wanted to … という文が続くので接続詞の because「～なので」。because of・during・without は前置詞。' },
+      { id: 'B', choices: ['to', 'for', 'of', 'at'], answer: 0, why: 'how many times to ＋ 原形「何回～するか」。疑問詞＋to 不定詞の形。' },
+      { id: 'C', choices: ['if', 'during', 'despite', 'because of'], answer: 0, why: 'あとに it is done with care という文が続くので接続詞の if「もし～なら」。during・despite・because of は前置詞。' },
+    ],
+    tf: [
+      { statement: '筆者は、はじめは茶道の決まりが多いことにおどろいた。', answer: true, why: '第1段落 I was surprised that there were so many rules。' },
+      { statement: 'モリ先生は、決まりにはあまり意味がないと言った。', answer: false, why: '第2段落 Each rule has a meaning。' },
+      { statement: 'オーストラリアから来た女性は、お茶を飲んで落ち着くと言った。', answer: true, why: '第3段落 "I feel so calm."' },
+      { statement: '筆者は、もう茶道をやめようと決めた。', answer: false, why: '第4段落 I want to keep practicing。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn from the experience at the school festival?', choices: ['A small action can make others happy if it is done with care.', 'Rules are more important than guests.', 'Tea ceremony is too difficult for foreign people.', 'Speaking English is the most important skill.'], answer: 0, why: '第4段落 a small action can make others happy if it is done with care。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
