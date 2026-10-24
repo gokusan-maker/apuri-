@@ -212,7 +212,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
         ))}
       </p>
       {stickers && (
-        <details className="sticker-book">
+        <details className="sticker-book chip-fold cf-2">
           <summary>
             🏷 シール帳{' '}
             <span className="fold-meta" aria-label={`${STICKERS.length}まい中 ${stickers.length}まい・全部そろうと🎟${STICKER_TICKETS}`}>

@@ -2734,3 +2734,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .tense-table.chip-fold { padding: 0; background: none; }
 .bulk.chip-fold > summary, .confusing-tip.chip-fold > summary, .today-grammar-point.chip-fold > summary { color: #fff; padding: 8px 14px; }
 .boss-passage.chip-fold > summary { border-bottom: none; font-size: 0.82rem; }
+/* ガチャのシール帳：オレンジの丸いボタン（枚数のバッジは白っぽく） */
+.gacha .sticker-book.chip-fold > summary { flex-wrap: nowrap; }
+.gacha .sticker-book.chip-fold .fold-meta { margin-left: auto; background: rgb(255 255 255 / 0.28); color: #fff; }
+.gacha .sticker-book.chip-fold > summary::before { margin-left: 4px; }

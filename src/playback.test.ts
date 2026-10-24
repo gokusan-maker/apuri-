@@ -103,3 +103,7 @@ it('今日はじめての単語・ボス戦の本文・つまずき解説のた�
   expect(readFileSync('src/BossView.tsx', 'utf8')).toContain('boss-passage chip-fold')
   expect(readFileSync('src/LongReadingView.tsx', 'utf8')).toContain('long-tips chip-fold')
 })
+
+it('ガチャのシール帳も色つきの丸いボタン', () => {
+  expect(readFileSync('src/GachaView.tsx', 'utf8')).toContain('sticker-book chip-fold cf-2')
+})
