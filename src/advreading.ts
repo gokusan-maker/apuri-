@@ -3329,6 +3329,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-ikea-effect',
+    title: 'Why We Love What We Build',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people feel especially proud of a bookshelf they put together themselves, even if it is a little uneven. Psychologists have found that this feeling is common: people tend to place a higher value ( A ) things they have made with their own hands. The pattern is known as the \"IKEA effect,\" named after the furniture company whose products customers usually assemble at home.",
+      "In a set of studies published in 2012, researchers asked some participants to assemble simple storage boxes, while others were shown identical boxes that came already assembled. Those who did the work were willing to pay more for the boxes they had built ( B ) for the ready-made ones. In another study, people who folded paper cranes valued their own amateur work almost as highly as models made by experts, even though other people saw little value in the beginners' cranes.",
+      "The effect, however, seems to depend on success. When participants built something and then took it apart, or ( C ) to finish it, the extra value largely disappeared. This suggests that effort makes us love a product mainly when it ends in a sense of achievement. Companies may use this tendency by inviting customers to take part in making things, but as buyers, we should remember that our own labor can make an ordinary object seem more valuable than it really is.",
+    ],
+    ja: [
+      '多くの人は、自分で組み立てた本棚に、少しがたついていても特別なほこりを感じる。心理学者たちは、この感覚がよくあるものだとわかった。人は自分の手で作ったものに、より高い価値を置く傾向があるのである。このパターンは「イケア効果」として知られており、客がふつう家で組み立てる製品を売る家具会社の名前にちなんでいる。',
+      '2012年に発表された一連の研究で、研究者たちは、一部の参加者には簡単な収納箱を組み立ててもらい、ほかの参加者には最初から組み立てられた同じ箱を見せた。作業をした人たちは、完成品よりも自分が組み立てた箱にお金を多くはらおうとした。別の研究では、紙で鶴を折った人たちは、自分のしろうとの作品を専門家が作った作品とほぼ同じくらい高く評価した。ほかの人たちは初心者の鶴にほとんど価値を感じなかったにもかかわらずである。',
+      'しかし、この効果は成功しだいのようである。参加者が何かを作ってからこわしたり、完成させられなかったりすると、上乗せされた価値はほとんど消えた。このことは、努力が製品を好きにさせるのは、おもにそれが達成感で終わったときだということを示している。企業は客をものづくりに参加させることで、この傾向を利用するかもしれない。しかし買い手としては、自分の労力のせいで、ふつうのものが実際より価値があるように見えることがあると覚えておくべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on', 'with', 'at', 'from'], answer: 0, why: 'place (a) value on ～「～に価値を置く」。' },
+      { id: 'B', choices: ['than', 'as', 'that', 'then'], answer: 0, why: 'pay more for A than for B「B より A に多くはらう」。比較級 more のあとは than。' },
+      { id: 'C', choices: ['failed', 'failing', 'fail', 'to fail'], answer: 0, why: 'built … and then took … , or failed to finish と、過去形の動詞を or でならべる。fail to ～「～できない」。' },
+    ],
+    tf: [
+      { statement: 'イケア効果とは、自分で作ったものに高い価値を置く傾向のことである。', answer: true, why: '第1段落 people tend to place a higher value on things they have made with their own hands。' },
+      { statement: '研究では、組み立てた人は完成品の箱により多くはらおうとした。', answer: false, why: '第2段落 willing to pay more for the boxes they had built than for the ready-made ones。' },
+      { statement: 'ほかの人たちも、初心者が折った鶴を高く評価した。', answer: false, why: '第2段落 other people saw little value in the beginners\' cranes。' },
+      { statement: '作ったものをこわしたり完成させられなかったりすると、効果はほとんど消えた。', answer: true, why: '第3段落 the extra value largely disappeared。' },
+    ],
+    qa: [
+      { q: 'According to the passage, when does effort make people value a product most?', choices: ['When the work ends in a sense of achievement.', 'When the product is made by experts.', 'When the product is already assembled.', 'When the work is taken apart afterward.'], answer: 0, why: '第3段落 effort makes us love a product mainly when it ends in a sense of achievement。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
