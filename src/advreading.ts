@@ -3656,6 +3656,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-shoe-repair',
+    title: 'Mr. Hara\'s Shoe Shop',
+    level: '高校入試（物語）',
+    paragraphs: [
+      "My favorite sneakers were ( A ) old that the bottom of one shoe came off during soccer practice. I wanted to buy a new pair, but my father said, \"Let's take them to Mr. Hara's shop first.\"",
+      "Mr. Hara's shop was small and smelled of leather. He was about seventy years old. He looked at my shoes carefully and said, \"These shoes have walked a long way. I can fix them by Saturday.\" I was surprised because I thought nobody repaired sneakers anymore.",
+      "On Saturday, I went back to the shop. My sneakers looked almost new, but they still felt like my own shoes. Mr. Hara told me that he had repaired shoes in this town for fifty years. \"Some people throw their shoes away as soon as they get a small hole,\" he said. \"But a good pair of shoes can last for many years ( B ) you take care of them.\"",
+      "Now I clean my shoes every Sunday. When something breaks, I first ask myself, \"Can this be fixed?\" Mr. Hara taught me that taking care of things is a way of ( C ) thanks to them.",
+    ],
+    ja: [
+      'お気に入りのスニーカーはとても古くなっていて、サッカーの練習中に片方の靴の底がはがれてしまいました。私は新しいのを買いたかったのですが、父は「まず原さんの店に持っていこう」と言いました。',
+      '原さんの店は小さくて、革のにおいがしました。原さんは70歳くらいでした。私の靴をじっくり見て、「この靴はずいぶん長い道のりを歩いてきたね。土曜日までに直せるよ」と言いました。もうスニーカーを直す人なんていないと思っていたので、私はおどろきました。',
+      '土曜日、私はまた店に行きました。スニーカーはほとんど新品のように見えましたが、それでも自分の靴だという感じがしました。原さんは、この町で50年間靴を直してきたと教えてくれました。「小さな穴があくとすぐに靴を捨ててしまう人もいる」と原さんは言いました。「でも、いい靴は、手入れをすれば何年ももつんだよ。」',
+      '今、私は毎週日曜日に靴をみがいています。何かがこわれたとき、まず「これは直せるかな」と自分に問いかけます。原さんは、物を大切にすることは、その物に感謝をあらわす1つの方法だと教えてくれました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。so old that。such は名詞をふくむ形（such old shoes that）、too・very は that とつながらない。' },
+      { id: 'B', choices: ['if', 'because of', 'without', 'during'], answer: 0, why: 'あとに you take care of them という文が続くので接続詞の if「もし～すれば」。because of・without・during は前置詞。' },
+      { id: 'C', choices: ['showing', 'show', 'to show', 'showed'], answer: 0, why: '前置詞 of のあとは動名詞（～ing）。a way of showing thanks「感謝をあらわす方法」。' },
+    ],
+    tf: [
+      { statement: '筆者は最初、新しいスニーカーを買いたいと思った。', answer: true, why: '第1段落 I wanted to buy a new pair。' },
+      { statement: '原さんは、その日のうちに靴を直してくれた。', answer: false, why: '第2段落 I can fix them by Saturday（土曜日までに）。' },
+      { statement: '原さんは、この町で50年間靴を直してきた。', answer: true, why: '第3段落 he had repaired shoes in this town for fifty years。' },
+      { statement: '筆者は今、毎週日曜日に新しい靴を買っている。', answer: false, why: '第4段落 Now I clean my shoes every Sunday（みがいている）。' },
+    ],
+    qa: [
+      { q: 'What did Mr. Hara say about a good pair of shoes?', choices: ['It can last for many years if you take care of it.', 'It should be thrown away when it gets a hole.', 'It is too expensive for young people.', 'It must be washed every day.'], answer: 0, why: '第3段落 a good pair of shoes can last for many years if you take care of them。' },
+    ],
+  },
+  {
     id: 'hs-seed-library',
     title: 'The Seed Library',
     level: '高校入試（説明文）',
