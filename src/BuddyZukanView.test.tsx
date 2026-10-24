@@ -9,7 +9,7 @@ it('なかま図鑑：会えた姿だけ絵が出て、まだの姿や会って�
   render(<BuddyZukan buddies={{ grammar: { xp: xpForLevel(6) }, reading: { xp: 0 } }} box={{ grammar: {}, reading: {} }} />)
   const row = screen.getByLabelText('ことばモンスターの図鑑')
   expect(row.querySelectorAll('svg')).toHaveLength(4) // Lv.6 までの4つの姿
-  expect(within(row).getAllByLabelText('まだ会っていない姿')).toHaveLength(4)
+  expect(within(row).getByLabelText('まだ会っていない姿 4').textContent).toBe('？×4') // まだの姿は1マスにまとめる
   expect(screen.getAllByLabelText(/^まだ会っていない種類 \d+$/).length).toBe(2) // まだ会っていない種類は数だけ（名前もひみつ）
   expect(document.querySelectorAll('.buddy-zukan-row')).toHaveLength(2) // 会えた種類（文法・読解の1つずつ）だけ行を出す
   expect(screen.getByText(/会えた姿 4 \/ 24/)).toBeInTheDocument()

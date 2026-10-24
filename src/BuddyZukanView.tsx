@@ -45,18 +45,20 @@ export function BuddyZukan({ buddies, box, onComp }: { buddies: Buddies; box: Bu
                     ))}
                 </p>
                 <ul>
-                  {BUDDY_FORMS[t].map((f) =>
-                    r.level >= f.minLv ? (
+                  {BUDDY_FORMS[t]
+                    .filter((f) => r.level >= f.minLv)
+                    .map((f) => (
                       <li key={f.name} title={r.sp.prefix + f.name}>
                         <button className="zukan-fig" aria-label={`${r.sp.prefix + f.name}（Lv.${f.minLv}〜）`} onClick={() => setPicked(`${r.sp.prefix + f.name}（Lv.${f.minLv}〜）`)}>
                           <BuddyFigure track={t} buddy={{ xp: xpForLevel(f.minLv), species: r.sp.id }} size={36} />
                         </button>
                       </li>
-                    ) : (
-                      <li key={f.name} className="locked" aria-label="まだ会っていない姿">
-                        ？
-                      </li>
-                    ),
+                    ))}
+                  {/* まだ会っていない姿は1マスにまとめて「？×N」 */}
+                  {BUDDY_FORMS[t].some((f) => r.level < f.minLv) && (
+                    <li className="locked more" aria-label={`まだ会っていない姿 ${BUDDY_FORMS[t].filter((f) => r.level < f.minLv).length}`}>
+                      ？×{BUDDY_FORMS[t].filter((f) => r.level < f.minLv).length}
+                    </li>
                   )}
                 </ul>
               </div>
