@@ -5479,6 +5479,62 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The family threw the puzzle away after they finished it.', answer: false, why: '第4段落 My father glued the puzzle and hung it on the wall。' },
     ],
   },
+  {
+    id: 'letter-swim-coach',
+    title: 'A Letter to My Swimming Coach',
+    level: '中2（手紙・メール）',
+    paragraphs: [
+      'Dear Ms. Tanaka, I am writing this letter to thank you for ( A ) me at the swimming school for three years. I am going to move to Osaka next month, so this is my last month in your class.',
+      'When I first joined your class, I was afraid of water. I could not even put my face in it. You never got angry with me. You always said, "Take your time." Little by little, I became able to swim.',
+      'Last summer, I swam 100 meters for the first time. I will never forget the moment I touched the wall. You were the first person ( B ) clapped for me.',
+      'I will keep swimming in Osaka. I hope I can swim in a race someday and show you how fast I have become. Please take care of yourself. I am looking forward to ( C ) you again. Sincerely, Yuto',
+    ],
+    ja: [
+      'タナカ先生へ。3年間、スイミングスクールで教えてくださったことにお礼を言いたくて、この手紙を書いています。来月、大阪に引っこすので、今月が先生のクラスで最後の月になります。',
+      'はじめて先生のクラスに入ったとき、ぼくは水がこわかったです。顔を水につけることさえできませんでした。先生は一度もぼくにおこりませんでした。いつも「ゆっくりでいいよ」と言ってくれました。少しずつ、ぼくは泳げるようになりました。',
+      '去年の夏、ぼくははじめて100メートル泳ぎました。かべにタッチした瞬間を、ぼくはけっしてわすれません。先生が、いちばん最初に拍手してくれた人でした。',
+      'ぼくは大阪でも水泳を続けます。いつか大会で泳いで、どれだけ速くなったかを先生に見せられたらいいなと思います。どうかお体に気をつけてください。またお会いできるのを楽しみにしています。ユウトより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['teaching', 'teach', 'taught', 'to teach'], answer: 0, why: '前置詞 for のあとは動名詞（～ing）。thank you for teaching me「教えてくれてありがとう」。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'whom'], answer: 0, why: '先行詞が人（the first person）で、あとに動詞 clapped が続くので主格の who。which は物、whose は名詞が続く、whom は目的格。' },
+      { id: 'C', choices: ['seeing', 'see', 'saw', 'seen'], answer: 0, why: 'look forward to のあとは動名詞（～ing）。to は前置詞なので原形は置けない。' },
+    ],
+    tf: [
+      { statement: 'Yuto went to the swimming school for three years.', answer: true, why: '第1段落 for three years。' },
+      { statement: 'When Yuto joined the class, he could already swim well.', answer: false, why: '第2段落 I was afraid of water。' },
+      { statement: 'Ms. Tanaka often got angry with Yuto.', answer: false, why: '第2段落 You never got angry with me。' },
+      { statement: 'Yuto swam 100 meters for the first time last summer.', answer: true, why: '第3段落 Last summer, I swam 100 meters for the first time。' },
+    ],
+  },
+  {
+    id: 'opinion-later-school',
+    title: 'Should School Start Later?',
+    level: '中3〜高校入試（意見文）',
+    paragraphs: [
+      'In many countries, people are discussing whether schools should start later in the morning. Some junior high schools in the United States have already changed their start time from around 7:30 to 8:30. I think Japanese schools should also think about this idea.',
+      'First, teenagers need a lot of sleep. Scientists say that people our age need about nine hours of sleep every night. However, many students go to bed late because of homework and club activities. If school started an hour later, students could sleep longer, ( A ) would help them feel less tired in class.',
+      'Second, a later start may help students study better. In some schools that changed their start time, students were late less often, and their grades improved a little. Being awake and ( B ) is important for learning.',
+      'Of course, there are some problems. Club activities would end later, and some parents might have trouble with their work schedules. However, I believe these problems can ( C ) if schools, families, and students talk together. Our health should come first.',
+    ],
+    ja: [
+      '多くの国で、学校の朝の始まりをおそくすべきかどうかが話し合われています。アメリカのいくつかの中学校では、すでに始業時間を7時30分ごろから8時30分に変えました。私は、日本の学校もこの考えについて考えるべきだと思います。',
+      '第一に、10代の人にはたくさんの睡眠が必要です。科学者によると、私たちの年代の人は毎晩およそ9時間の睡眠が必要です。しかし、宿題や部活動のために、多くの生徒がおそくねています。もし学校が1時間おそく始まれば、生徒はもっと長くねることができ、それが授業中のつかれを減らす助けになるでしょう。',
+      '第二に、始まりをおそくすると、生徒がよりよく勉強できるかもしれません。始業時間を変えたいくつかの学校では、生徒の遅刻が減り、成績が少し上がりました。目がさめていて集中していることは、学ぶためにたいせつです。',
+      'もちろん、いくつかの問題もあります。部活動が終わるのがおそくなり、仕事の予定に困る親もいるかもしれません。しかし、学校と家族と生徒がいっしょに話し合えば、これらの問題は解決できると私は信じています。私たちの健康がいちばんたいせつです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'that'], answer: 0, why: 'コンマのあとで前の内容（もっと長くねられること）を受ける関係代名詞 which。コンマのあとに that は使えない。what は先行詞をとらない、who は人。' },
+      { id: 'B', choices: ['focused', 'focus', 'focusing on', 'to focus'], answer: 0, why: 'Being awake and focused「目がさめていて集中している」。awake と同じく形容詞（過去分詞）をならべる。focusing on は目的語が必要。' },
+      { id: 'C', choices: ['be solved', 'solve', 'solved', 'solving'], answer: 0, why: '問題は「解決される」ので受け身。助動詞 can のあとは be ＋過去分詞。' },
+    ],
+    tf: [
+      { statement: 'Some junior high schools in the United States have changed their start time.', answer: true, why: '第1段落 have already changed their start time。' },
+      { statement: 'Scientists say that teenagers need about seven hours of sleep.', answer: false, why: '第2段落 about nine hours of sleep。' },
+      { statement: "In some schools that started later, students' grades improved a little.", answer: true, why: '第3段落 their grades improved a little。' },
+      { statement: 'The writer thinks a later start has no problems at all.', answer: false, why: '第4段落 Of course, there are some problems。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
