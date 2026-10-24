@@ -3,7 +3,7 @@ import { isGrammarGame } from './quizgames'
 import { addRiddle, loadRiddleBook } from './riddlebook'
 import { RiddleBook } from './RiddleBookView'
 import { MissedList } from './MissedListView'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { blankOut, canBlank } from './blank'
 import { quizXp, type Source } from './monster'
 import { makeQuestion, makeQuiz, shuffle, trimChoices, type Question } from './quiz'
@@ -240,6 +240,7 @@ type Props = {
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
   onDrill?: (id: GrammarDrill) => void // 文法チャレンジの「文法ドリル」を選んだ
   onCards?: () => void // 指定すると、ゲームのタイルの先頭に「単語カード」を出す
+  countSlot?: ReactNode // 指定すると、問題数（5・10・20問）のボタンのかわりにこれを出す（単語ゲームでは今日の単語のカード）
   onDirection?: (d: Direction) => void // いま遊んでいるゲームの種類が決まった・かわったとき
   onGrammarAnswer?: Props['onAnswer'] // 文法のミニゲーム（複数形・be動詞など）の答え：文法のなかまが育つ
 }
@@ -259,7 +260,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill }: Props) {
+export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill, countSlot }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -509,7 +510,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           ))}
         </div>
       )}
-      {!NO_COUNT.includes(direction) && (
+      {countSlot ?? (!NO_COUNT.includes(direction) && (
         <div className="counts" role="group" aria-label="問題数">
           {COUNTS.map((n) => (
             <button key={n} aria-pressed={count === n} onClick={() => changeCount(n)}>
@@ -517,7 +518,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
             </button>
           ))}
         </div>
-      )}
+      ))}
     </>
   )
 

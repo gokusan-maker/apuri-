@@ -37,6 +37,7 @@ describe('App', () => {
 
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(screen.getByLabelText(`今日の残り 10 語 ・ 定着 0 / ${WORDS.length} 語`)).toBeInTheDocument()
     expect(screen.getByText(FIRST()[0].en)).toBeInTheDocument()
 
@@ -51,8 +52,10 @@ describe('App', () => {
   it('「覚えた」でモンスターにXPが入り、保存される', () => {
     render(<App />)
     expect(screen.getByText('XP 0 / 20')).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    navTo('ホーム')
     expect(screen.getByText('XP 5 / 20')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(5)
   })
@@ -60,8 +63,9 @@ describe('App', () => {
   it('クイズで正解するとXP+10、タマゴがかえる', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 15 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     goMini()
-    const en = document.querySelector('.quiz .en')!.textContent
+    const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
     expect(screen.getAllByText('タマゴがかえった！').length).toBeGreaterThan(0)
@@ -74,13 +78,16 @@ describe('App', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 30, lastDay: '2000-01-01' }))
     render(<App />)
     expect(screen.getByText(/さみしそう/)).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    navTo('ホーム')
     expect(screen.queryByText(/さみしそう/)).not.toBeInTheDocument()
   })
 
   it('学習すると連続日数の🔥が1日になる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(screen.getByLabelText('連続学習 0 日')).toBeInTheDocument()
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
@@ -276,10 +283,11 @@ describe('App', () => {
 
   it('記録画面に連続日数・今日の学習数・定着語数が出る（クイズの不正解も学習数に入る）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     goMini()
-    const en = document.querySelector('.quiz .en')!.textContent
+    const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
     navTo('ホーム')
@@ -300,19 +308,21 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']) fireEvent.click(screen.getByRole('button', { name: l }))
     const n = wordsOf(['中1']).length
+    goMini()
     expect(screen.getByLabelText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])
   })
 
   it('まちがえた単語が記録の「苦手な単語」に出て、苦手だけ復習できる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     navTo('ホーム')
     expect(screen.getByText('×1')).toBeInTheDocument()
     fireEvent.click(screen.getByText('クイズで復習'))
     expect(screen.getByText(/苦手だけ復習中（1語）/)).toBeInTheDocument()
-    expect(document.querySelector('.quiz .en')!.textContent).toBe(FIRST()[0].en)
+    expect(document.querySelector('.quiz .en:not(.today-words .en)')!.textContent).toBe(FIRST()[0].en)
     expect(screen.getByText('1 / 1')).toBeInTheDocument()
   })
 
@@ -352,17 +362,20 @@ describe('App', () => {
     localStorage.setItem('eitan:today-count', JSON.stringify({ day: dayKey(), count: 9 }))
     render(<App />)
     expect(screen.getByText('🎯 今日の目標 9 / 10 問')).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('今日の目標達成！')).toBeInTheDocument()
     fireEvent.click(screen.getByText('やったね'))
     expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
+    navTo('ホーム')
     expect(screen.getByText('🎯 目標達成！')).toBeInTheDocument()
     expect(toast('🎒 おみやげ')).toBeInTheDocument()
     expect(screen.getByText(new RegExp(souvenirFor(dayKey()).name))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:souvenirs')!)).toEqual([souvenirFor(dayKey()).id])
     expect(screen.getByLabelText('かざってあるおみやげ 1こ').textContent).toBe(souvenirFor(dayKey()).icon)
     // もう一度答えてもお祝いは出ない
+    goMini()
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
@@ -370,6 +383,7 @@ describe('App', () => {
 
   it('初めて正解するとバッジ獲得のお知らせが出て、記録画面のバッジ一覧に並ぶ', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('バッジ獲得！')).toBeInTheDocument()
@@ -407,6 +421,7 @@ describe('App', () => {
     navTo('ホーム')
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
+    goMini()
     expect(screen.getByLabelText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
   })
 
@@ -421,6 +436,7 @@ describe('App', () => {
 
   it('記録画面に直近1週間のグラフが出て、学習すると今日の棒が伸びる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     navTo('ホーム')
@@ -441,6 +457,7 @@ describe('App', () => {
       speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
     })
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByLabelText('例文を聞く'))
     expect(spoken).toEqual([FIRST()[0].example])
@@ -448,6 +465,7 @@ describe('App', () => {
 
   it('「まだ」にした単語はすぐには出ず、次の単語に進む', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(document.querySelector('.card .en')!.textContent).toBe(FIRST()[1].en)
@@ -468,6 +486,7 @@ describe('App', () => {
     localStorage.setItem('eitan:lucky', today)
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: { [m!.counter]: m!.target - 1 }, claimed: [] }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(toast(/ミッション達成！ \+30XP/)).toBeInTheDocument()
@@ -480,6 +499,7 @@ describe('App', () => {
 
   it('単語一覧で検索でき、タップで例文が見える', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
@@ -492,6 +512,7 @@ describe('App', () => {
 
   it('単語一覧から1語だけカードで練習できる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
@@ -523,8 +544,10 @@ describe('App', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 24, owned: [] })) // +1（正解）+5（ログインボーナス）で30
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    navTo('ホーム')
     fireEvent.click(screen.getByLabelText('コイン 30枚・ショップを開く'))
     fireEvent.click(screen.getByRole('tab', { name: /きせかえ/ }))
     fireEvent.click(screen.getByText('🪙30で買う'))
@@ -534,7 +557,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('はずす'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].wear).toBeUndefined()
     fireEvent.click(screen.getByText('← もどる'))
-    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    expect(screen.getByLabelText('今日の課題')).toBeInTheDocument() // ショップを閉じるとホームにもどる
   })
 
   it('はじめての人には3ステップの案内が出て、終わると二度と出ない', () => {
@@ -884,6 +907,7 @@ describe('App', () => {
   it('おるすばん中の仲間がかえると知らせが出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 0 }, { xp: 19, name: 'タマ' }] }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(20)
@@ -896,6 +920,7 @@ describe('App', () => {
 
   it('3問続けて正解すると相棒が顔を出して励ましてくれる（小さいうちは日本語）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     for (let i = 0; i < 3; i++) {
       expect(document.querySelector('.pet-cheer')).toBeNull()
       fireEvent.click(screen.getByText('意味を見る'))
@@ -938,8 +963,9 @@ describe('App', () => {
   it('カード以外のタブでレベルが上がると「Lv UP!」バナーが出る', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     goMini()
-    const en = document.querySelector('.quiz .en')!.textContent
+    const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(screen.getByRole('button', { name: word.ja }))
     expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
@@ -1038,6 +1064,7 @@ describe('App', () => {
     })
     localStorage.setItem('eitan:settings', JSON.stringify({ autoSpeak: true }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(spoken).toEqual([])
     fireEvent.click(screen.getByText('意味を見る'))
     expect(spoken.length).toBe(1)
@@ -1119,8 +1146,9 @@ describe('App', () => {
     expect(document.querySelector('details.home-play')).toBeNull()
     expect(screen.getByLabelText('今日の課題')).toBeInTheDocument()
     expect(screen.getByLabelText('今日の文法')).toBeInTheDocument()
-    expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    expect(screen.queryByText('意味を見る')).toBeNull() // 今日の単語はホームではなく単語ゲームのページ
     goMini()
+    expect(screen.getByText('意味を見る')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
     navTo('文法チャレンジ')
     expect(document.querySelector('details.home-play')).toBeNull()
@@ -1152,6 +1180,7 @@ describe('App', () => {
   it('ドラゴンのタマゴがかえると、進化の画面にドラゴンの名前が出る', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 1, members: [{ xp: 18, species: 'dragon' }] }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByRole('dialog', { name: '進化' })).toHaveTextContent('ちびドラ')
@@ -1159,6 +1188,7 @@ describe('App', () => {
 
   it('記録画面に復習の予定が出る（「覚えた」の単語は明日）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     navTo('ホーム')
@@ -1167,6 +1197,7 @@ describe('App', () => {
 
   it('カードの☆でお気に入りにして、記録画面からお気に入りだけ復習できる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByLabelText('お気に入り'))
     expect(JSON.parse(localStorage.getItem('eitan:favorites')!)).toEqual([FIRST()[0].id])
     navTo('ホーム')
@@ -1192,6 +1223,7 @@ describe('App', () => {
   it('今日の分が終わったら「もう5語おぼえる」で新しい単語を追加できる', () => {
     localStorage.setItem('eitan:daily-new', JSON.stringify({ day: dayKey(), count: 10 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(screen.getByText('今日の学習は完了です 🎉 また明日！')).toBeInTheDocument()
     fireEvent.click(screen.getByText('もう5語おぼえる'))
     expect(screen.getByLabelText(/今日の残り 5 語/)).toBeInTheDocument()
@@ -1206,11 +1238,13 @@ describe('App', () => {
     localStorage.setItem('eitan:daily-new', JSON.stringify({ day: dayKey(), count: 10 }))
     render(<App />)
     expect(screen.queryByText('今日の学習は完了です 🎉 また明日！')).not.toBeInTheDocument()
+    goMini()
     expect(screen.getByLabelText(/今日の残り 5 語/)).toBeInTheDocument()
   })
 
   it('記録画面に「今日はじめて学んだ単語」が出る', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     const en = document.querySelector('.card .en')!.textContent!
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
@@ -1273,6 +1307,7 @@ describe('App', () => {
 
   it('記録画面のカレンダーに今日の学習が印される', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     navTo('ホーム')
@@ -1309,6 +1344,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('🎫 🪙50で買う'))
     expect(screen.getByLabelText('連続学習 4 日')).toBeInTheDocument()
     fireEvent.click(screen.getByText('← もどる'))
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByLabelText('連続学習 5 日')).toBeInTheDocument()
@@ -1329,6 +1365,7 @@ describe('App', () => {
   it('週間チャレンジを達成するとコインとXP', () => {
     localStorage.setItem('eitan:history', JSON.stringify({ [dayKey()]: 99 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(toast(/週間チャレンジ達成！/)).toBeInTheDocument()
@@ -1345,6 +1382,7 @@ describe('App', () => {
 
   it('記録画面に相棒のプロフィール（出会った日・学び方の割合）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     navTo('ホーム')
@@ -1357,6 +1395,7 @@ describe('App', () => {
 
   it('その日はじめての学習でログインボーナス🪙5（2回目からはなし）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText('ログインボーナス')).toBeInTheDocument()
@@ -1368,6 +1407,7 @@ describe('App', () => {
   it('朝5〜10時にその日はじめて学習すると早起きボーナス🪙3', () => {
     vi.setSystemTime(new Date(2026, 9, 20, 7))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText(/早起きえらい！ 🪙8/)).toBeInTheDocument()
@@ -1394,6 +1434,7 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByText(/ハロウィンウィーク/)).toBeInTheDocument()
     expect(screen.getByLabelText('飾り 🎃')).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(screen.getByText(/ハロウィンボーナスつき！ 今日もえらい！ 🪙15/)).toBeInTheDocument()
@@ -1404,8 +1445,10 @@ describe('App', () => {
     localStorage.setItem('eitan:streak', JSON.stringify({ last: '2026-10-19', count: 5 }))
     render(<App />)
     expect(screen.getByText(/連続5日をつなげよう/)).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    navTo('ホーム')
     expect(screen.queryByText(/連続5日をつなげよう/)).not.toBeInTheDocument()
   })
 
@@ -1419,6 +1462,7 @@ describe('App', () => {
     vi.setSystemTime(new Date(2026, 9, 24, 10)) // 土曜
     render(<App />)
     expect(screen.getByText('🎉 週末はXP2倍！')).toBeInTheDocument()
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(10)
@@ -1428,8 +1472,10 @@ describe('App', () => {
     localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, goals: 0, studyDays: 2 }))
     render(<App />)
     expect(document.querySelector('.title-badge')!.textContent).toContain('🎖 見習い')
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    navTo('ホーム')
     expect(document.querySelector('.title-badge')!.textContent).toContain('🎖 かけだし')
   })
 
@@ -1446,8 +1492,10 @@ describe('App', () => {
   it('10問ごとに相棒が応援してくれる', () => {
     localStorage.setItem('eitan:today-count', JSON.stringify({ day: dayKey(), count: 9 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    navTo('ホーム')
     expect(screen.getByText('Great job!')).toBeInTheDocument()
   })
 
@@ -1512,6 +1560,7 @@ describe('App', () => {
 
   it('記録画面に今日のまとめ（問題数・XP・新しい単語）', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     navTo('ホーム')
@@ -1532,6 +1581,7 @@ describe('App', () => {
 
   it('カードの進み具合バー', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(screen.getByLabelText('今日のカード 0 / 10')).toBeInTheDocument()
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
@@ -1540,8 +1590,10 @@ describe('App', () => {
 
   it('XPを受け取ると相棒のそばに +XP が浮かぶ', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    navTo('ホーム')
     expect(document.querySelector('.xp-float')!.textContent).toBe('+5')
   })
 
@@ -1555,6 +1607,7 @@ describe('App', () => {
 
   it('カードの「あとで」で、その単語を列のうしろに回せる', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     const first = document.querySelector('.card .en')!.textContent
     fireEvent.click(screen.getByText('⏭ あとで'))
     expect(document.querySelector('.card .en')!.textContent).not.toBe(first)
@@ -1580,6 +1633,7 @@ describe('App', () => {
   it('今日の復習を全部終えると🪙10（1日1回）', () => {
     localStorage.setItem('eitan:progress', JSON.stringify({ [WORDS[0].id]: { box: 1, due: dayKey() } }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     expect(document.querySelector('.card .en')?.textContent).toContain(WORDS[0].en)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
@@ -1591,6 +1645,7 @@ describe('App', () => {
   it('学習した日数でなつき度が上がると、相棒がお礼を言う', () => {
     localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, studyDays: 2 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(toast('💕 なつき度アップ！')).toBeInTheDocument()
@@ -1599,6 +1654,7 @@ describe('App', () => {
   it('学習した日数で称号が上がった日はお知らせが出る', () => {
     localStorage.setItem('eitan:totals', JSON.stringify({ answers: 0, correct: 0, perfect: 0, studyDays: 6 }))
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(toast('🎖 称号アップ')).toBeInTheDocument()
@@ -1607,6 +1663,7 @@ describe('App', () => {
 
   it('お知らせが重なると順番に出る', () => {
     render(<App />)
+    goMini() // 今日の単語のカードは単語ゲームのページにある
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText('ログインボーナス')).toBeInTheDocument()

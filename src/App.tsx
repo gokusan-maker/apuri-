@@ -1025,7 +1025,7 @@ function App() {
               onQuiz={() => setWordTab('mini')}
               onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
             />
-            {mode === 'word' && (
+            {mode === 'word' && wordTab !== 'mini' && (
               <button className="list-link" onClick={() => setShowList(true)}>
                 📚 単語一覧・さがす
               </button>
@@ -1368,10 +1368,6 @@ function App() {
               🎂 今日は{monster.name ?? formOf(monster).name}のおたんじょう日！（{birthdayAge(bday, today)}さい）お祝いする
             </button>
           )}
-          <p className="stats buddy-chips home-stats" aria-label={`今日の残り ${queue.length} 語 ・ 定着 ${learned} / ${words.length} 語`}>
-            <span>📖 のこり {queue.length}語</span>
-            <span>✅ 定着 {learned}/{words.length}</span>
-          </p>
           {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
             <p className="exam">
               📝 テストまであと <strong>{daysUntil(today, settings.testDate)}日</strong>・1日{' '}
@@ -1655,10 +1651,6 @@ function App() {
               toContent()
             }}
           />
-          <section className="today-words" aria-label="今日の単語">
-            <p className="today-section-title">🔤 今日の単語</p>
-            {cardStudy}
-          </section>
           <TodayGrammar
             today={today}
             onAnswer={onAnswerTrack('grammar')}
@@ -1854,6 +1846,18 @@ function App() {
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
+            countSlot={
+              mode === 'word' && !todayQuiz && !quizFocus ? (
+                <section className="today-words" aria-label="今日の単語">
+                  <p className="today-section-title">🔤 今日の単語</p>
+                  <p className="stats buddy-chips home-stats" aria-label={`今日の残り ${queue.length} 語 ・ 定着 ${learned} / ${words.length} 語`}>
+                    <span>📖 のこり {queue.length}語</span>
+                    <span>✅ 定着 {learned}/{words.length}</span>
+                  </p>
+                  {cardStudy}
+                </section>
+              ) : undefined
+            }
             onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
