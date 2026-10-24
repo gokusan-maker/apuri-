@@ -856,8 +856,9 @@ describe('App', () => {
   it('相棒をタップするとポーズがかわり、全部見ると称号', () => {
     render(<App />)
     for (let i = 0; i < 6; i++) fireEvent.click(screen.getByLabelText('相棒にさわる'))
-    expect(screen.getByText(/ポーズ 6 \/ 6/)).toBeInTheDocument()
-    expect(screen.getByText(/称号「ポーズマスター」/)).toBeInTheDocument()
+    expect(JSON.parse(localStorage.getItem('eitan:poses-seen') ?? '[]')).toHaveLength(6)
+    // ふえていく数（ポーズ n / N・なでなでスタンプ）は画面に出さない（オーナーの要望）
+    expect(screen.queryByText(/ポーズ \d+ \/ \d+/)).toBeNull()
   })
 
   it('ガチャポイントが20たまるとスーパーレア以上と交換できる', () => {
@@ -918,15 +919,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(screen.getByLabelText('相棒にさわる'))
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
-    expect(screen.getByLabelText('なでなでスタンプ 0 / 10')).toBeInTheDocument()
-  })
-
-  it('なでなでスタンプは10この丸で、たまった数だけ色がつく', () => {
-    localStorage.setItem('eitan:pet-stamps', JSON.stringify({ n: 3, last: '2026-10-19' }))
-    render(<App />)
-    const dots = screen.getByLabelText('なでなでスタンプ 3 / 10').querySelectorAll('.stamp-dots i')
-    expect(dots).toHaveLength(10)
-    expect([...dots].filter((d) => d.classList.contains('on'))).toHaveLength(3)
+    expect(screen.queryByLabelText(/なでなでスタンプ/)).toBeNull()
   })
 
   it('おるすばん中の仲間がかえると知らせが出る', () => {

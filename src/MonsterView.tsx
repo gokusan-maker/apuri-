@@ -4,7 +4,7 @@ import { bondHearts, bondLevel, daysToNext } from './bond'
 import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, growthOf, growthScale, growthText, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { completionPct } from './gacha'
-import { allPosesSeen, loadPosesSeen, poseAt, POSE_TITLE, POSES, savePosesSeen, seePose } from './pose'
+import { loadPosesSeen, poseAt, savePosesSeen, seePose } from './pose'
 import { canRelease, displayOrder, EGG_MILESTONES, MEMBERS_FOR_TICKET, releaseCoins, tradeableMembers, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
@@ -12,7 +12,7 @@ import { RoomScene } from './RoomSceneView'
 import { challengeOf } from './challenge'
 import { IDLE_MS, idleAt } from './idle'
 import type { SeasonFx } from './seasonfx'
-import { loadPetLog, loadPetStamps, nextPet, PET_BONUS, PET_STAMPS_FOR_TICKET, petReaction, savePetLog, stampPet, type PetReaction } from './pet'
+import { loadPetLog, loadPetStamps, nextPet, PET_BONUS, petReaction, savePetLog, stampPet, type PetReaction } from './pet'
 import { dayKey } from './srs'
 import { pickLineNow, rememberLine, type Line } from './talk'
 
@@ -776,11 +776,6 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           )}
         </span>
         {leveledUp && <span className="lvup-ring" aria-hidden="true" />}
-        {poke > 0 && poke % 10 === 0 && (
-          <span key={`s${poke}`} className="heart-shower" role="status">
-            💖 なでなで{poke}回！
-          </span>
-        )}
         {poke > 0 && (
           <span key={`h${poke}`} className={`poke-hearts${react === 'max' ? ' max' : ''}`} aria-hidden="true">
             <i>♥</i>
@@ -795,18 +790,9 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
         )}
       </button>
       </div>
-      <p className="pet-stamps" aria-label={`なでなでスタンプ ${petStamps.n % PET_STAMPS_FOR_TICKET} / ${PET_STAMPS_FOR_TICKET}`}>
-        <span className="pet-stamps-label">🐾 なでなで</span>
-        <span className="stamp-dots" aria-hidden="true">
-          {Array.from({ length: PET_STAMPS_FOR_TICKET }, (_, i) => (
-            <i key={i} className={i < petStamps.n % PET_STAMPS_FOR_TICKET ? 'on' : undefined} />
-          ))}
-        </span>
-        <small className="pet-stamps-goal">10こで🎟</small>
-      </p>
       {poke > 0 && (
         <p className={`pose-label pose-${poseAt(poke - 1).id}`}>
-          {poseAt(poke - 1).icon} {poseAt(poke - 1).name}（ポーズ {posesSeen.length} / {POSES.length}）{allPosesSeen(posesSeen) ? `　🏅 称号「${POSE_TITLE}」` : ''}
+          {poseAt(poke - 1).icon} {poseAt(poke - 1).name}
         </p>
       )}
       {(line ?? cheer) && (
