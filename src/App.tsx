@@ -842,8 +842,8 @@ function App() {
 
   // 「おまけのあそび」：設定のいちばん下に出す（ゲーム画面にはおかない）
   const playBox = (
-          <details className="home-play" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
-            <summary>🎁 おまけのあそび</summary>
+          <details className="home-play game-fold lg-1" open={playOpen} onToggle={(e) => togglePlay(e.currentTarget.open)}>
+            <summary><span className="lg-icon" aria-hidden="true">🎁</span>おまけのあそび</summary>
             <p className={`omikuji o-${omikujiOf(today).id}`}>
               ⛩ 今日のおみくじ：<strong>{omikujiOf(today).name}</strong>　{omikujiOf(today).text}
             </p>

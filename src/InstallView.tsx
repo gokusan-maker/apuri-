@@ -21,9 +21,9 @@ export function Install() {
 
   return (
     <div className="setting install">
-      <span>ホーム画面に追加</span>
+      <span>📲 ホーム画面に追加</span>
       {done ? (
-        <p className="stats-note">ホーム画面から使っています ✓</p>
+        <p className="stats-note">✓ 追加ずみ</p>
       ) : prompt ? (
         <button
           className="flip"
@@ -37,9 +37,9 @@ export function Install() {
           📲 ホーム画面に追加する
         </button>
       ) : isIOS() ? (
-        <p className="stats-note">共有（□↑）→「ホーム画面に追加」</p>
+        <p className="stats-note" title="共有（□↑）→「ホーム画面に追加」">共有□↑から</p>
       ) : (
-        <p className="stats-note">「ホーム画面に追加」でアプリに</p>
+        <p className="stats-note" title="ブラウザのメニューの「ホーム画面に追加」で、アプリのように使えます">メニューから</p>
       )}
     </div>
   )

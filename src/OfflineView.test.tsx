@@ -9,6 +9,6 @@ describe('オフライン表示', () => {
     act(() => {
       window.dispatchEvent(new Event('offline'))
     })
-    expect(screen.getByText(/いまはオフラインです/)).toBeInTheDocument()
+    expect(screen.getByText(/いまはオフライン/)).toBeInTheDocument()
   })
 })

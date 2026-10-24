@@ -1630,11 +1630,11 @@ describe('App', () => {
   it('設定画面で新しくなったことを見られる', () => {
     render(<App />)
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))
-    expect(screen.getByText('🆕 新しくなったこと')).toBeInTheDocument()
+    expect(screen.getByText('新しくなったこと')).toBeInTheDocument()
     const items = document.querySelectorAll('.whats-new:not(.help) li')
     expect(items.length).toBeGreaterThan(0)
     expect(items.length).toBeLessThanOrEqual(10)
-    expect(screen.getByText('❔ 遊び方')).toBeInTheDocument()
+    expect(screen.getByText('遊び方')).toBeInTheDocument()
   })
 
   it('今日の復習を全部終えると🪙10（1日1回）', () => {

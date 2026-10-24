@@ -2321,3 +2321,16 @@ details[open] > summary::before { transform: rotate(90deg); }
 .today-read-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #c2410c; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .today-read-btn { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; border: none; } }
 :root[data-theme="dark"] .today-read-btn { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; border: none; }
+
+/* 設定：ホーム画面に追加・オフラインは1行（名前と状態を横ならび）、遊び方などは色つきの .game-fold */
+.settings .setting.install, .settings .setting.offline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; }
+.settings .setting.install > span, .settings .setting.offline > span { font-weight: 800; white-space: nowrap; }
+.settings .setting.install .stats-note, .settings .setting.offline .stats-note { margin: 0 0 0 auto; white-space: nowrap; }
+.settings .setting.install .flip { flex-basis: 100%; margin-top: 4px; }
+.settings .whats-new.game-fold, .home-play.game-fold { padding: 0; border: none; background: none; box-shadow: none; }
+.settings .whats-new.game-fold[open] > :not(summary), .home-play.game-fold[open] > :not(summary) { margin-left: 4px; margin-right: 4px; }
+.settings .whats-new.game-fold > summary, .home-play.game-fold > summary { display: flex; align-items: center; gap: 10px; }
+.settings .whats-new.game-fold > summary::before, .home-play.game-fold > summary::before { order: 9; margin: 0 0 0 auto; background: rgb(255 255 255 / 0.25); color: #fff; }
+.settings .setting.install:not(:has(.flip)), .settings .setting.offline { flex-wrap: nowrap; }
+.settings .setting.install .stats-note, .settings .setting.offline .stats-note { flex: none; }
+.settings .setting.install .stats-note, .settings .setting.offline .stats-note { font-size: 0.78rem; }

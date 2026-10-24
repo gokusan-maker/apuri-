@@ -28,6 +28,6 @@ describe('ホーム画面に追加', () => {
       fireEvent.click(screen.getByText('📲 ホーム画面に追加する'))
     })
     expect(prompt).toHaveBeenCalled()
-    expect(screen.getByText('ホーム画面から使っています ✓')).toBeInTheDocument()
+    expect(screen.getByText('✓ 追加ずみ')).toBeInTheDocument()
   })
 })

@@ -20,10 +20,10 @@ export function OfflineStatus() {
 
   return (
     <div className="setting offline">
-      <span>オフライン</span>
-      <p className="stats-note">
-        {ready ? 'オフラインでも使えます ✓' : 'まだ準備中です（インターネットにつながった状態で一度開くと使えるようになります）'}
-        {!online && '　いまはオフラインです'}
+      <span>📶 オフライン</span>
+      <p className="stats-note" title={ready ? undefined : 'インターネットにつながった状態で一度開くと使えるようになります'}>
+        {ready ? '✓ 使える' : 'まだ準備中です'}
+        {!online && '（いまはオフライン）'}
       </p>
     </div>
   )

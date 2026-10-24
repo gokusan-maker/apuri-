@@ -5,8 +5,8 @@ export function WhatsNew() {
   const changes = recentChanges(changelog)
   if (changes.length === 0) return null
   return (
-    <details className="setting whats-new">
-      <summary>🆕 新しくなったこと</summary>
+    <details className="setting whats-new game-fold lg-2">
+      <summary><span className="lg-icon" aria-hidden="true">🆕</span>新しくなったこと</summary>
       <ul>
         {changes.map((c, i) => (
           <li key={i}>
