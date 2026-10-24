@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'cannot-too': { wrong: 'You cannot be careful too.', right: 'You cannot be too careful.', why: 'too は形容詞の前に置く：cannot be too careful。' },
   'thank-sorry-for': { wrong: 'Thank you for help me.', right: 'Thank you for helping me.', why: '前置詞 for のあとは ～ing。' },
   'give-to-for': { wrong: 'She made a cake to me.', right: 'She made a cake for me.', why: 'make は「人のために」なので for を使う。' },
   'of-with-abstract': { wrong: 'This book is of very useful.', right: 'This book is of great use.', why: 'of のあとは名詞（use）。「とても」は great を使う。' },
