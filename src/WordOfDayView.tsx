@@ -21,7 +21,7 @@ export function WordOfDay({ word, claimed = false }: { word: Word | undefined; c
       </p>
       {word.example && (
         <details className="wotd-ex">
-          <summary>例文</summary>
+          <summary className="wotd-ex-btn">📖 例文を見る</summary>
           <p className="example">{word.example}</p>
           <p className="example-ja">{word.exampleJa}</p>
         </details>

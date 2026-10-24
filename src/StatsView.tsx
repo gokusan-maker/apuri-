@@ -130,8 +130,10 @@ export function Stats({
         </div>
       )}
       {byLevel.length > 0 && (
-        <details className="by-level">
-          <summary>📚 単語帳ごとの定着</summary>
+        <details className="by-level game-fold lg-3">
+          <summary>
+            <span className="lg-icon" aria-hidden="true">📚</span>単語帳ごとの定着<span className="fold-meta">{byLevel.length}冊</span>
+          </summary>
           {byLevel.map((b) => (
             <div key={b.level} className="by-level-row">
               <span className="by-level-name">

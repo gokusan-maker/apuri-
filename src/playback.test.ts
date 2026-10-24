@@ -81,3 +81,8 @@ it('今日の文法・トレーニングの選択肢は白い丸ボタン、も�
   has('LongReadingView.tsx', 'pill-pink')
   has('OnboardingView.tsx', 'pill-purple')
 })
+
+it('記録の「単語帳ごとの定着」は色ボタン、今日のことばの「例文を見る」はむらさきの丸ボタン', () => {
+  expect(readFileSync('src/StatsView.tsx', 'utf8')).toContain('by-level game-fold lg-3')
+  expect(readFileSync('src/WordOfDayView.tsx', 'utf8')).toContain('wotd-ex-btn')
+})

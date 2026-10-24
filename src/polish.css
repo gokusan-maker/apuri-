@@ -2706,3 +2706,13 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 /* 満点でない長文の一覧はピンクの1行ボタン（左よせ・… で切る） */
 .long-review .list-link.pill-btn { display: flex; justify-content: flex-start; width: 100%; margin: 4px 0; padding: 7px 14px; font-size: 0.85rem; }
 .daily-gq-choices { gap: 8px; }
+
+/* 記録の「単語帳ごとの定着」は色ボタン（ほかの game-fold と同じ横ならび） */
+.by-level.game-fold > summary { display: flex; align-items: center; gap: 10px; padding: 12px 14px; font-size: 1rem; list-style: none; white-space: nowrap; }
+.by-level.game-fold > summary::before { order: 9; margin-left: 0; }
+.by-level.game-fold > summary .fold-meta { margin-left: auto; }
+.by-level.game-fold[open] > summary { margin-bottom: 8px; }
+/* 今日のことばの「例文を見る」はむらさきの小さな丸ボタン（1行） */
+.wotd .wotd-ex > summary.wotd-ex-btn { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; background: linear-gradient(180deg, #c084fc, #9333ea); color: #fff; font-size: 0.78rem; font-weight: 900; white-space: nowrap; list-style: none; box-shadow: 0 3px 0 #6b21a8; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
+.wotd .wotd-ex > summary.wotd-ex-btn::-webkit-details-marker { display: none; }
+.wotd .wotd-ex > summary.wotd-ex-btn::before { display: none; }
