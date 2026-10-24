@@ -2166,3 +2166,13 @@ details[open] > summary::before { transform: rotate(90deg); }
 .word-review > .theme-practice.game-fold { margin: 0 0 10px; padding: 0; border: none; background: none; box-shadow: none; }
 .word-review > .list-link { justify-content: flex-start; }
 .word-review > .theme-practice.game-fold > summary { padding: 14px 14px 14px 16px; }
+
+/* ボス部屋：ボス図鑑（赤）と大学入試の塔（むらさき）も色つきのゲームボタン */
+.boss-book.game-fold { --lg-h: 350; border: none; box-shadow: none; }
+.univ-tower.game-fold { --lg-h: 265; border: none; box-shadow: none; }
+.univ-tower.game-fold > summary { flex-wrap: wrap; }
+.univ-tower.game-fold > summary .mode-badge { margin-left: auto; background: rgb(255 255 255 / 0.25); color: #fff; }
+.univ-tower.game-fold > summary .univ-meter { background: rgb(255 255 255 / 0.25); }
+.univ-tower.game-fold > summary .univ-meter i { background: linear-gradient(90deg, #fde047, #f59e0b); }
+.game-fold > summary { border: none; }
+.univ-tower.game-fold > summary .univ-meter { order: 10; margin-bottom: 0; }

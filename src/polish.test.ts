@@ -92,3 +92,8 @@ it('単語のおさらいのボタンとテーマで練習は色つきのゲー�
   expect(css).toMatch(/\.word-review > \.list-link \{ --wr-h: 225;[^}]*linear-gradient/)
   expect(css).toContain('.word-review > .theme-practice.game-fold { margin: 0 0 10px;')
 })
+
+it('ボス図鑑と大学入試の塔も色つきのゲームボタン', () => {
+  expect(css).toContain('.boss-book.game-fold { --lg-h: 350;')
+  expect(css).toContain('.univ-tower.game-fold { --lg-h: 265;')
+})

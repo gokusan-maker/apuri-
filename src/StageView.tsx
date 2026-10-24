@@ -474,7 +474,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           }
         }}
       />
-      <details className="univ-tower" open={Object.keys(univ).length > 0}>
+      <details className="univ-tower game-fold" open={Object.keys(univ).length > 0}>
         <summary>
           🏯 大学入試の塔<span className="mode-badge" aria-label={`${Object.keys(univ).length} / ${UNIV_BOSSES.length} 階クリア`}>{Object.keys(univ).length}/{UNIV_BOSSES.length}階</span>
           <span className="univ-meter" aria-hidden="true">
