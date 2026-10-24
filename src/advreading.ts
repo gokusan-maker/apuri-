@@ -3716,6 +3716,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-food-bank',
+    title: 'One Can Is a Big Help',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last winter, my class visited a food bank in our city. A food bank collects food that is still safe to eat but cannot be sold, for example, cans with small dents or vegetables with strange shapes. Then it gives the food to people ( A ) need help, such as families with little money.",
+      "At the food bank, a staff member named Ms. Tanaka showed us a large room full of boxes. She said, \"Every year, a lot of food is thrown away in Japan, but some people do not have enough to eat. We want to connect these two problems.\" We helped her check the dates on cans and put rice and pasta into bags.",
+      "After two hours, my arms were tired, but I felt good. Ms. Tanaka told us that young people can help, too. \"You don't need to give a lot,\" she said. \"Even one can of food is a big help ( B ) many people do the same thing.\"",
+      "After the visit, our class decided to start a food drive at school. We put a box near the entrance and asked students to bring food ( C ) they did not need at home. In one month, we collected more than two hundred items and sent them to the food bank.",
+    ],
+    ja: [
+      'この前の冬、私のクラスは市のフードバンクをおとずれました。フードバンクは、まだ安全に食べられるのに売ることができない食べ物、たとえば小さなへこみのある缶づめや形の変わった野菜を集めています。そして、お金があまりない家族など、助けが必要な人々にその食べ物をわたしています。',
+      'フードバンクでは、田中さんという職員の方が、箱でいっぱいの大きな部屋を見せてくれました。「日本では毎年たくさんの食べ物がすてられていますが、十分に食べられない人もいます。私たちはこの2つの問題をつなげたいのです」と田中さんは言いました。私たちは、缶づめの日付を確認したり、お米やパスタをふくろにつめたりする手伝いをしました。',
+      '2時間後、うではつかれていましたが、気持ちはよかったです。田中さんは、若い人も力になれると教えてくれました。「たくさんあげる必要はありません」と田中さんは言いました。「多くの人が同じことをすれば、缶づめ1つでも大きな助けになるのです。」',
+      '訪問のあと、私たちのクラスは学校で食べ物を集める活動を始めることにしました。入り口の近くに箱を置き、家でいらない食べ物を持ってきてくれるよう生徒にたのみました。1か月で200個以上の食べ物が集まり、フードバンクに送りました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）で、あとに動詞 need が続くので主格の関係代名詞 who。which は物、whose は名詞が続く、what は先行詞をふくむ。' },
+      { id: 'B', choices: ['if', 'because of', 'during', 'without'], answer: 0, why: 'あとに many people do the same thing という文が続くので接続詞の if「もし～すれば」。because of・during・without は前置詞。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'whose'], answer: 0, why: '先行詞 food（物）を説明する目的格の関係代名詞 that（which も可）。what は先行詞をふくむので food のあとには置けない。who は人、whose は名詞が続く。' },
+    ],
+    tf: [
+      { statement: 'フードバンクは、売れなくても安全に食べられる食べ物を集めている。', answer: true, why: '第1段落 collects food that is still safe to eat but cannot be sold。' },
+      { statement: '田中さんは、たくさん寄付しなければ意味がないと言った。', answer: false, why: '第3段落 You don\'t need to give a lot。' },
+      { statement: '生徒たちは、缶づめの日付を確認する手伝いをした。', answer: true, why: '第2段落 We helped her check the dates on cans。' },
+      { statement: 'クラスは1か月で100個未満の食べ物しか集められなかった。', answer: false, why: '第4段落 we collected more than two hundred items。' },
+    ],
+    qa: [
+      { q: 'What did the class decide to do after the visit?', choices: ['Start a food drive at school.', 'Work at the food bank every day.', 'Sell vegetables with strange shapes.', 'Cook dinner for families.'], answer: 0, why: '第4段落 our class decided to start a food drive at school。' },
+    ],
+  },
+  {
     id: 'hs-light-pollution',
     title: 'Where Have the Stars Gone?',
     level: '高校入試（説明文）',
