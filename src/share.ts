@@ -19,6 +19,9 @@ function loadSvg(svg: string): Promise<HTMLImageElement | null> {
   })
 }
 
+// 画像に文字を描くときの日本語フォント（index.css の font-family と同じ考え方）
+export const JA_FONT = "'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic', Meiryo, sans-serif"
+
 // 600x600 のカード画像を作る。canvas が使えない環境では null
 export async function makeShareImage(s: ShareStats, monsterSvg: string | null): Promise<Blob | null> {
   const canvas = document.createElement('canvas')
@@ -38,13 +41,21 @@ export async function makeShareImage(s: ShareStats, monsterSvg: string | null): 
   }
   ctx.fillStyle = '#1f2937'
   ctx.textAlign = 'center'
-  ctx.font = 'bold 40px system-ui, sans-serif'
+  // 日本語の字形で描く（system-ui だと端末によって中国語の字形になる）
+  canvas.setAttribute('lang', 'ja')
+  ;(ctx as CanvasRenderingContext2D & { lang?: string }).lang = 'ja'
+  try {
+    await document.fonts?.load(`bold 40px ${JA_FONT}`)
+  } catch {
+    // フォントが読めなくても端末の日本語フォントで続ける
+  }
+  ctx.font = `bold 40px ${JA_FONT}`
   const lines = shareLines(s)
   ctx.fillText(lines[0], 300, 300)
-  ctx.font = '32px system-ui, sans-serif'
+  ctx.font = `32px ${JA_FONT}`
   lines.slice(1).forEach((l, i) => ctx.fillText(l, 300, 360 + i * 50))
   ctx.fillStyle = '#2563eb'
-  ctx.font = 'bold 28px system-ui, sans-serif'
+  ctx.font = `bold 28px ${JA_FONT}`
   ctx.fillText('イングリッシュモンスター', 300, 545)
   return new Promise((resolve) => canvas.toBlob((b) => resolve(b), 'image/png'))
 }
