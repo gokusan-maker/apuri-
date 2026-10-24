@@ -2220,3 +2220,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .read-levels button:not([aria-selected='true']) strong { color: hsl(var(--rl-h) 70% 80%); }
 .long-item-title { font-size: 0.86rem; }
 .unit-sort { white-space: nowrap; font-size: 0.8rem; } .unit-sort button { padding: 4px 10px; font-size: 0.8rem; }
+/* ボスのセリフ：英語・日本語それぞれ1行に収まりやすい大きさ */
+.boss-intro, .boss-taunt:not(.boss-defeat) { font-size: 0.88rem; }
+.boss-intro .boss-intro-ja, .boss-taunt:not(.boss-defeat) span { font-size: 0.76rem; }
