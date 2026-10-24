@@ -692,7 +692,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
     fireEvent.click(screen.getByLabelText(/をあたためる/))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(2)
-    expect(screen.getByText(/今日あと4回/)).toBeInTheDocument()
+    expect(screen.getByText(/あたためる ×4/)).toBeInTheDocument()
   })
 
   it('金の宝箱をあけるとチケットとコイン', () => {

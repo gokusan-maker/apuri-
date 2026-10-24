@@ -1178,8 +1178,8 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
                 </button>
               )}
               {onWarm && f.stage === 0 && (
-                <button className="warm-btn" disabled={warmLeft <= 0} aria-label={`${m.name ?? f.name}をあたためる`} onClick={() => onWarm(i)}>
-                  🔥 あたためる（今日あと{warmLeft}回）
+                <button className="warm-btn" disabled={warmLeft <= 0} aria-label={`${m.name ?? f.name}をあたためる`} title={`今日あと${warmLeft}回`} onClick={() => onWarm(i)}>
+                  🔥 あたためる ×{warmLeft}
                 </button>
               )}
               {onRelease && canRelease(party, i) && (
@@ -1221,21 +1221,22 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
             </li>
           )
         })}
-        {locked.map((m) => (
-          <li key={m.badge} className="locked">
+        {/* まだもらっていないタマゴは1枚の「？×N」にまとめる（もらえる条件は title） */}
+        {locked.length > 0 && (
+          <li className="locked" title={locked.map((m) => `${m.label}でタマゴ`).join('・')} aria-label={`まだのタマゴ ${locked.length}（${locked.map((m) => m.label).join('・')}）`}>
             <span className="badge-icon" aria-hidden="true">
               🥚
             </span>
-            <span className="badge-name">？？？</span>
-            <span className="badge-desc">{m.label}でタマゴ</span>
+            <span className="badge-name">？×{locked.length}</span>
+            <span className="badge-desc">{locked[0].label}でタマゴ</span>
           </li>
-        ))}
+        )}
       </ul>
     </div>
   )
 }
 
-const SRC_LABEL = { card: 'カード', quiz: 'クイズ', ear: 'リスニング・スペル' } as const
+const SRC_LABEL = { card: 'カード', quiz: 'クイズ', ear: '耳・スペル' } as const
 
 export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; studyDays?: number }) {
   const form = formOf(monster)
@@ -1262,20 +1263,24 @@ export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; stu
           {daysToNext(studyDays) !== null && <small>（あと{daysToNext(studyDays)}日学習で❤️）</small>}
         </dd>
       </dl>
-      <p className="stats-note">学び方の割合（Lv15 の進化先に影響）</p>
-      {(['card', 'quiz', 'ear'] as const).map((k) => {
-        const n = monster.src?.[k] ?? 0
-        const pct = total ? Math.round((n / total) * 100) : 0
-        return (
-          <div key={k} className="by-level-row">
-            <span className="by-level-name">{SRC_LABEL[k]}</span>
-            <div className="goal-bar">
-              <div className="goal-fill" style={{ width: `${pct}%` }} />
-            </div>
-            <span className="by-level-num">{pct}%</span>
-          </div>
-        )
-      })}
+      {total > 0 && (
+        <>
+          <p className="stats-note" title="Lv15 の進化先に影響">学び方の割合</p>
+          {(['card', 'quiz', 'ear'] as const).map((k) => {
+            const n = monster.src?.[k] ?? 0
+            const pct = Math.round((n / total) * 100)
+            return (
+              <div key={k} className="by-level-row">
+                <span className="by-level-name">{SRC_LABEL[k]}</span>
+                <div className="goal-bar">
+                  <div className="goal-fill" style={{ width: `${pct}%` }} />
+                </div>
+                <span className="by-level-num">{pct}%</span>
+              </div>
+            )
+          })}
+        </>
+      )}
     </div>
   )
 }
