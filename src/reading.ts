@@ -1730,6 +1730,17 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
+    id: 'grandpa-bonsai',
+    title: "Grandpa's Bonsai",
+    text: "My grandfather has a small pine tree in a pot. It is a bonsai, and it is older than my father! Every morning, Grandpa waters it and cuts a few small branches. He says, \"A bonsai grows slowly, so you need to be patient.\" Last Sunday, he let me cut one branch. My hands were shaking, but he smiled and said, \"Good job.\" I want to grow my own bonsai someday.",
+    ja: '私の祖父は、鉢に植えた小さな松の木を持っています。それは盆栽で、私の父よりも年上です！ 毎朝、祖父は水をやり、小さな枝を何本か切ります。「盆栽はゆっくり育つから、しんぼう強くないといけないよ」と祖父は言います。この前の日曜日、祖父は私に枝を1本切らせてくれました。手がふるえましたが、祖父はほほえんで「よくできたね」と言いました。いつか自分の盆栽を育ててみたいです。',
+    questions: [
+      { q: 'おじいさんの盆栽は何の木？', choices: ['松', '桜', 'もみじ'], answer: 0 },
+      { q: '盆栽はだれより年上？', choices: ['父', 'おじいさん', '「私」の弟'], answer: 0 },
+      { q: '日曜日、「私」は何をした？', choices: ['枝を1本切った', '水をやった', '新しい鉢を買った'], answer: 0 },
+    ],
+  },
+  {
     id: 'lighthouse-trip',
     title: 'A Visit to the Lighthouse',
     text: "During the summer, my family visited an old lighthouse by the sea. It was white and very tall. We climbed one hundred and twenty steps to the top. My legs were tired, but the view was amazing. We could see small boats and many islands. A guide told us that the light can be seen from thirty kilometers away at night. I want to come back and see the light in the dark.",

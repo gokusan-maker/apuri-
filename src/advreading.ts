@@ -3869,6 +3869,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-monsoon',
+    title: 'Winds That Change with the Seasons',
+    level: 'TOEFL・IELTS（気象）',
+    paragraphs: [
+      "The word \"monsoon\" is often used to mean heavy rain, but scientists use it to describe a seasonal change in the direction of the wind. The best-known example is the South Asian monsoon, which brings most of India's yearly rainfall between June and September.",
+      "Monsoons happen because land and sea heat up at different speeds. In summer, the land warms much faster than the ocean. Air above the hot land rises, and cooler, moist air from the ocean flows in to take its place. As this moist air moves over the land and rises, it cools and releases its water as rain. In winter, the pattern reverses: the land becomes cooler than the sea, ( A ) dry winds blow from the land toward the ocean.",
+      "For hundreds of millions of people, the monsoon is a matter of survival. Farmers depend on its rain to grow rice and other crops, and cities depend on it to refill rivers and reservoirs. ( B ) the rains arrive late or are weak, crops may fail. When they are too strong, they can cause serious floods.",
+      "Because so much depends on the monsoon, predicting it accurately is one of the most important tasks for weather scientists in the region. Today, they use satellites and computer models to forecast ( C ) the rains will begin each year.",
+    ],
+    ja: [
+      '「モンスーン」という語は大雨の意味で使われることが多いが、科学者は季節によって風向きが変わることを表すのにこの語を使う。もっともよく知られた例は南アジアのモンスーンで、インドの1年の降水量の大部分を6月から9月のあいだにもたらす。',
+      'モンスーンが起こるのは、陸と海が温まる速さがちがうからである。夏には、陸は海よりもずっと速く温まる。熱くなった陸の上の空気がのぼり、そのあとをうめるように、海からすずしくしめった空気が流れこむ。このしめった空気は陸の上を進みながらのぼると冷え、ふくんでいた水を雨として降らせる。冬にはこの流れが逆になる。陸は海より冷たくなり、乾いた風が陸から海へとふくのである。',
+      '何億人もの人々にとって、モンスーンは生きるか死ぬかの問題である。農家は米やほかの作物を育てるのにその雨にたよっており、都市は川や貯水池を満たすのにその雨にたよっている。雨がおそく来たり弱かったりすると、作物がとれないこともある。雨が強すぎると、深刻な洪水を引き起こすことがある。',
+      'これほど多くのことがモンスーンにかかっているので、それを正確に予測することは、その地域の気象学者にとってもっとも大切な仕事の1つである。今日では、人工衛星やコンピューターのモデルを使って、毎年いつ雨が始まるかを予報している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'despite', 'during', 'because of'], answer: 0, why: '2つの文（the land becomes cooler … ／ dry winds blow …）をつなぐのは接続詞 and。despite・during・because of は前置詞で、あとに文は続かない。' },
+      { id: 'B', choices: ['If', 'Despite', 'During', 'Without'], answer: 0, why: 'あとに the rains arrive late … という文が続くので接続詞の If「もし～なら」。Despite・During・Without は前置詞。' },
+      { id: 'C', choices: ['when', 'what', 'which', 'whose'], answer: 0, why: 'forecast の目的語で「いつ～するか」は when（間接疑問）。the rains will begin は完全な文なので what・which は使えず、whose は名詞が続く。' },
+    ],
+    tf: [
+      { statement: '科学者は「モンスーン」という語を、季節によって風向きが変わることを表すのに使う。', answer: true, why: '第1段落 scientists use it to describe a seasonal change in the direction of the wind。' },
+      { statement: '夏には、海のほうが陸よりも速く温まる。', answer: false, why: '第2段落 In summer, the land warms much faster than the ocean。' },
+      { statement: '冬には、乾いた風が陸から海へふく。', answer: true, why: '第2段落 dry winds blow from the land toward the ocean。' },
+      { statement: 'モンスーンの雨が強すぎても、問題は起こらない。', answer: false, why: '第3段落 When they are too strong, they can cause serious floods。' },
+    ],
+    qa: [
+      { q: 'Why does moist air from the ocean release rain over the land in summer?', choices: ['Because it rises and cools.', 'Because the ocean becomes warmer than the land.', 'Because the wind stops blowing.', 'Because farmers plant rice.'], answer: 0, why: '第2段落 As this moist air moves over the land and rises, it cools and releases its water as rain。' },
+    ],
+  },
+{
     id: 'toefl-geysers',
     title: 'Why Geysers Erupt',
     level: 'TOEFL・IELTS（地学）',
