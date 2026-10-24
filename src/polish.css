@@ -2379,3 +2379,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .word-review > .list-link { gap: 10px; }
 .word-review > .list-link .lg-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 12px; background: rgb(255 255 255 / 0.25); font-size: 1.15rem; text-shadow: none; }
 .word-review > .list-link .fold-meta { margin-left: auto; padding: 2px 10px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.74rem; }
+
+/* 単語カード：まだ（赤）・覚えた（緑）・かんたん（金）を色分けした1行のゲームボタン */
+.card .actions button { white-space: nowrap; font-size: clamp(0.9rem, 4.2vw, 1.05rem); padding-left: 4px; padding-right: 4px; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
+.card .actions .again { box-shadow: 0 4px 0 #991b1b; }
+.card .actions .good { background: linear-gradient(135deg, #4ade80, #16a34a); color: #fff; box-shadow: 0 4px 0 #166534; }
+.card .actions .easy { background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; text-shadow: none; box-shadow: 0 4px 0 #b45309; }
