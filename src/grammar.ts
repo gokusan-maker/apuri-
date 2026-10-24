@@ -2122,7 +2122,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She looked as if she had seen a ghost.', ja: '彼女はまるでゆうれいを見たかのような顔をしていた。' },
     ],
     questions: [
-      { sentence: 'He is only a student, but he acts as if he ___ the boss.', choices: ['were', 'is being', 'be'], answer: 0, why: '本当はちがうことの想像なので、as if のあとは were。' },
+      { sentence: 'He is only a student, but he acts as if he ___ the boss.', choices: ['were', 'been', 'be'], answer: 0, why: '本当はちがうことの想像なので、as if のあとは were。' },
       { sentence: 'She has never been abroad, but she speaks English as if she ___ in London.', choices: ['lived', 'lives', 'living'], answer: 0, why: '外国に行ったことがないので事実とちがう想像。as if ＋ 過去形 lived。' },
       { sentence: 'He looked as if he ___ not slept for days.', choices: ['had', 'has', 'was'], answer: 0, why: '「何日も寝ていなかったかのよう」と過去のことの想像なので as if ＋ had ＋ 過去分詞。' },
     ],
