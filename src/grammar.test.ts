@@ -5,8 +5,8 @@ describe('文法', () => {
   beforeEach(() => localStorage.clear())
 
   it('46単元、各3問。空欄は1つ、正解が選択肢に含まれ、選択肢は重複しない', () => {
-    expect(GRAMMAR).toHaveLength(270)
-    expect(new Set(GRAMMAR.map((u) => u.id)).size).toBe(270)
+    expect(GRAMMAR).toHaveLength(271)
+    expect(new Set(GRAMMAR.map((u) => u.id)).size).toBe(271)
     for (const u of GRAMMAR) {
       expect(u.questions, u.id).toHaveLength(3)
       expect(u.points.length).toBeGreaterThan(0)
