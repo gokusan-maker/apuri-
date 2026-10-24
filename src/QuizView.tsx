@@ -980,7 +980,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         )}
         {missed.length > 0 && onFavorite && (
           <button
-            className="list-link"
+            className="list-link pill-btn pill-pink"
             disabled={favDone}
             onClick={() => {
               onFavorite(missed.map((w) => w.id))

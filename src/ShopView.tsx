@@ -210,11 +210,11 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         <div className="outfits" role="group" aria-label="コーデ保存">
           {outfits.map((o, i) => (
             <span key={i} className="outfit">
-              <button className="list-link" disabled={o === null} onClick={() => onSetWear(o || undefined)}>
+              <button className="list-link pill-btn pill-purple" disabled={o === null} onClick={() => onSetWear(o || undefined)}>
                 👗 コーデ{i + 1}{o === null ? '（空き）' : o ? '' : '（なし）'}
               </button>
               <button
-                className="list-link"
+                className="list-link pill-btn pill-green"
                 aria-label={`いまの着せかえをコーデ${i + 1}に保存`}
                 onClick={() => {
                   const next = outfits.map((x, k) => (k === i ? (monster.wear ?? '') : x))

@@ -58,3 +58,12 @@ it('聞く・ゆっくり（水色）、音読（オレンジ赤）・読めた�
   has('WalkQuizView.tsx', 'pill-blue')
   has('HideSeekView.tsx', 'pill-green')
 })
+
+it('「まだ」だけめくる・まちがいをお気に入り（ピンク）、もう一度診断（青）、コーデ（むらさき・保存は緑）も色つき', () => {
+  const has = (f: string, c: string) => expect(readFileSync(`src/${f}`, 'utf8')).toContain(`list-link pill-btn ${c}`)
+  has('GrammarCardsView.tsx', 'pill-pink')
+  has('QuizView.tsx', 'pill-pink')
+  has('PlacementView.tsx', 'pill-blue')
+  has('ShopView.tsx', 'pill-purple')
+  has('ShopView.tsx', 'pill-green')
+})

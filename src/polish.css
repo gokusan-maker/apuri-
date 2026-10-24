@@ -2700,3 +2700,6 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .tense-table.game-fold > summary { display: flex; align-items: center; gap: 10px; padding: 12px 14px; white-space: nowrap; }
 .tense-table.game-fold > summary::before { margin-left: auto; }
 .tense-table.game-fold[open] > table { margin-top: 6px; }
+.outfits { gap: 8px; }
+.outfit { gap: 4px; }
+.outfit .list-link.pill-btn { padding: 6px 12px; font-size: 0.82rem; }

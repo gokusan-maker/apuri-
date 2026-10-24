@@ -27,7 +27,7 @@ export function GrammarCards({ units: all, onBack, weak = [] }: Props) {
   const knownCount = all.filter((x) => known.includes(x.id)).length
   const toggle = (
     <button
-      className="list-link"
+      className="list-link pill-btn pill-pink"
       onClick={() => {
         setDeck(all.filter((x) => !known.includes(x.id)))
         setOnlyNew(!onlyNew)

@@ -43,7 +43,7 @@ export function Placement({ onSetLevels }: Props) {
           </button>
         )}
         <button
-          className="list-link"
+          className="list-link pill-btn pill-blue"
           onClick={() => {
             setQs(makePlacement())
             setI(0)
