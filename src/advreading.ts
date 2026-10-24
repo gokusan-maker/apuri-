@@ -3476,6 +3476,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'hs-taiko',
+    title: 'The Beat That Brought Us Together',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "When I entered junior high school, I joined the taiko club. I thought it would be easy ( A ) I had played the drums in a band before. But taiko was different. Each drum is very large, and we have to use our whole body to play. After the first practice, my arms hurt so much that I could not hold my chopsticks at dinner.",
+      "The most difficult thing for me was playing together with the other members. I wanted to show my power, so I always hit the drum too hard and too fast. One day, our leader, Aya, stopped the practice and said, \"Kenta, taiko is not a race. Listen to everyone's sound, and then you will know when to hit.\"",
+      "At first, I did not understand her words. But I started to listen carefully to the other drums while I was playing. Little by little, our sounds began to match. In autumn, we performed at the town festival. When we finished, many people stood up and clapped ( B ) a long time. An old man came to me and said, \"Your beat made my heart warm.\"",
+      "From this experience, I learned that listening to others is as important ( C ) showing my own power. I will keep this lesson in mind, not only in taiko but also in my school life.",
+    ],
+    ja: [
+      '中学校に入学したとき、私は和太鼓部に入りました。前にバンドでドラムをたたいたことがあったので、かんたんだろうと思っていました。でも、和太鼓はちがいました。それぞれの太鼓はとても大きく、体全体を使ってたたかなければなりません。最初の練習のあと、腕がとても痛くて、夕食のときにはしを持てませんでした。',
+      '私にとっていちばんむずかしかったのは、ほかの部員といっしょに演奏することでした。自分の力を見せたかったので、いつも強すぎ、速すぎにたたいていました。ある日、リーダーのアヤさんが練習を止めて、「ケンタ、太鼓は競走じゃないよ。みんなの音を聞いて。そうすれば、いつたたけばいいかわかるよ」と言いました。',
+      'はじめは、その言葉がわかりませんでした。でも、演奏しながらほかの太鼓をよく聞くようにしました。少しずつ、私たちの音がそろい始めました。秋に、私たちは町の祭りで演奏しました。終わると、たくさんの人が立ち上がって長い間拍手をしてくれました。1人のおじいさんが私のところに来て、「きみたちのリズムで心があたたかくなったよ」と言ってくれました。',
+      'この経験から、私はほかの人の音を聞くことは、自分の力を見せることと同じくらい大切だと学びました。この教訓を、和太鼓だけでなく学校生活でも心にとめておくつもりです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'during', 'without'], answer: 0, why: 'あとに I had played … という文が続くので接続詞の because。because of・during・without は前置詞。' },
+      { id: 'B', choices: ['for', 'since', 'during', 'by'], answer: 0, why: 'for a long time「長い間」。期間の長さは for。' },
+      { id: 'C', choices: ['as', 'than', 'that', 'so'], answer: 0, why: 'as ＋ 形容詞 ＋ as …「…と同じくらい～」。as important as showing my own power。' },
+    ],
+    tf: [
+      { statement: 'ケンタは、和太鼓はかんたんだと最初は思っていた。', answer: true, why: '第1段落 I thought it would be easy。' },
+      { statement: 'アヤは、もっと強く速くたたくようにケンタに言った。', answer: false, why: '第2段落 taiko is not a race. Listen to everyone\'s sound。' },
+      { statement: '祭りの演奏のあと、多くの人が立ち上がって拍手した。', answer: true, why: '第3段落 many people stood up and clapped。' },
+      { statement: 'ケンタは、この教訓は和太鼓のときだけ大切だと考えている。', answer: false, why: '第4段落 not only in taiko but also in my school life。' },
+    ],
+    qa: [
+      { q: 'What did Kenta start to do after Aya spoke to him?', choices: ['He listened carefully to the other drums while playing.', 'He practiced alone after school.', 'He played faster than the other members.', 'He stopped playing the drums in a band.'], answer: 0, why: '第3段落 I started to listen carefully to the other drums while I was playing。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
