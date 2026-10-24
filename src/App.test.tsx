@@ -330,7 +330,7 @@ describe('App', () => {
     expect(screen.queryByRole('tab', { name: '🃏 カード' })).toBeNull()
     fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('単語カード'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
-    fireEvent.click(screen.getByText('← ミニゲームをえらぶ'))
+    backToPick() // カードも問題だけの画面。上の「← ほかの問題をえらぶ」でえらぶ画面へ
     expect(document.querySelector('.quiz-pick')).not.toBeNull()
     fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
     expect(screen.getByText('スタート')).toBeInTheDocument()
@@ -543,7 +543,6 @@ describe('App', () => {
   it('単語一覧で検索でき、タップで例文が見える', () => {
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
-    navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     expect(screen.getByText('1語')).toBeInTheDocument()
@@ -556,7 +555,6 @@ describe('App', () => {
   it('単語一覧から1語だけカードで練習できる', () => {
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
-    navTo('単語ゲーム')
     fireEvent.click(screen.getByText('📚 単語一覧・さがす'))
     fireEvent.change(screen.getByLabelText('単語をさがす'), { target: { value: 'library' } })
     fireEvent.click(within(document.querySelector('section.word-list') as HTMLElement).getByRole('button', { name: /library/ }))

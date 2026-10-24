@@ -405,7 +405,12 @@ function App() {
     setPlays((p) => [...p, { id, exit }])
     return () => setPlays((p) => p.filter((x) => x.id !== id))
   }, [])
-  const playOn = plays.length > 0 && !todayFocus && !showShop && !showChallenge
+  const cardPlay = mode === 'word' && wordTab === 'card' // 単語カードも、えらんだら問題だけの画面
+  const playOn = (plays.length > 0 || cardPlay) && !todayFocus && !showShop && !showChallenge
+  const exitPlay = () => {
+    if (plays.length > 0) plays[plays.length - 1].exit()
+    else if (cardPlay) setWordTab('mini')
+  }
   // 音読・読み上げは、ページが変わったら止める（タブ・ショップ・今日の課題の切りかえ、問題の画面から出たとき）
   const pageKey = `${mode}|${showShop}|${showChallenge}|${todayFocus ?? ''}|${wordTab}|${readLevel}`
   const prevPlays = useRef(0)
@@ -1465,7 +1470,7 @@ function App() {
           <button
             className="play-back"
             onClick={() => {
-              plays[plays.length - 1]?.exit()
+              exitPlay()
               window.scrollTo?.({ top: 0 })
             }}
           >
@@ -2036,7 +2041,7 @@ function App() {
         </>
       ) : (
         <>
-          {mode === 'word' && (
+          {mode === 'word' && !playOn && (
             <button className="stage-back game-back" onClick={() => setWordTab('mini')}>
               ← ミニゲームをえらぶ
             </button>
@@ -2130,7 +2135,8 @@ function App() {
             key={t.id}
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
-              if (t.id === mode && playOn) plays[plays.length - 1]?.exit() // 問題の画面でいまのタブをもう一度おすと、えらぶ画面へ
+              if (t.id === mode && playOn) exitPlay() // 問題の画面でいまのタブをもう一度おすと、えらぶ画面へ
+              if (t.id === 'word' && mode !== 'word') setWordTab('mini') // 単語ゲームのページは、えらぶ画面から
               setMode(t.id)
               setGrammarDrill(null)
               setDailyGo(false)
