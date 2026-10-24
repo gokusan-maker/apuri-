@@ -1730,6 +1730,17 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
+    id: 'duck-race',
+    title: 'The Rubber Duck Race',
+    text: "Every summer, our town has a rubber duck race on the river. People buy a yellow duck for 100 yen and write a number on it. This year, I got duck number 52. Hundreds of ducks floated down the river. Mine got stuck behind a rock, and I thought I would lose. Then a big wave pushed it, and it finished third! I won a small prize, a new pencil case.",
+    ja: '毎年夏、私の町では川でアヒルのおもちゃのレースがあります。人々は黄色いアヒルを100円で買って、それに番号を書きます。今年、私は52番のアヒルになりました。何百ものアヒルが川を流れていきました。私のアヒルは岩のうしろに引っかかってしまい、負けると思いました。すると大きな波がアヒルをおして、3着でゴールしました！ 私は小さな賞品の、新しい筆箱をもらいました。',
+    questions: [
+      { q: 'アヒルはいくらで買える？', choices: ['100円', '50円', '200円'], answer: 0 },
+      { q: '「私」のアヒルは何着だった？', choices: ['3着', '1着', '52着'], answer: 0 },
+      { q: '「私」は何をもらった？', choices: ['新しい筆箱', '新しいアヒル', '本'], answer: 0 },
+    ],
+  },
+  {
     id: 'night-market',
     title: 'The Night Market',
     text: "On Saturday night, my family went to a night market near the river. There were many small shops with bright lights. We ate grilled corn and drank cold mango juice. My little brother tried to catch a goldfish, but the paper net broke. He was sad, so the shop owner gave him a small toy fish. We walked home under the stars, and my brother held his toy fish all the way.",

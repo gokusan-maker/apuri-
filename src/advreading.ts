@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-framing',
+    title: 'Same Facts, Different Feelings',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine that a doctor tells you that an operation has a 90 percent survival rate. Now imagine another doctor saying that the same operation has a 10 percent death rate. The two statements contain exactly the same information, but many people feel much more comfortable with the first one. This tendency to react differently to the same facts depending on how they are presented is called the \"framing effect.\"",
+      "In one study, patients and even doctors were given information about treatments for a serious disease. When the results were described in terms of how many people survived, more of them chose surgery than ( A ) the same results were described in terms of how many people died.",
+      "Framing appears in everyday life as well. A store may advertise meat as \"80 percent lean\" rather than \"20 percent fat,\" and a product may be described as having a \"95 percent success rate\" instead of failing in one case out of twenty. Such choices of words are not lies, ( B ) they can strongly influence how we decide.",
+      "Being aware of framing can help us make better decisions. When we face an important choice, it is useful to restate the information in the opposite way, ( C ) \"90 percent survive\" becomes \"10 percent do not.\" If our feeling changes, we may be reacting to the words rather than to the facts.",
+    ],
+    ja: [
+      '医者から、ある手術の生存率は90パーセントだと言われたと想像してほしい。次に、別の医者が、同じ手術の死亡率は10パーセントだと言うところを想像してほしい。この2つの言い方はまったく同じ情報をふくんでいるが、多くの人は最初の言い方のほうにずっと安心感をおぼえる。同じ事実でも、示され方によってちがう反応をしてしまうこの傾向は「フレーミング効果」とよばれる。',
+      'ある研究では、患者や医者にさえも、重い病気の治療についての情報があたえられた。結果が何人生き残ったかという形で説明されたときは、同じ結果が何人亡くなったかという形で説明されたときよりも、手術を選ぶ人が多かった。',
+      'フレーミングは日常生活にもあらわれる。店は肉を「脂肪20パーセント」ではなく「赤身80パーセント」と宣伝するかもしれないし、製品は、20回に1回失敗するのではなく「成功率95パーセント」と説明されるかもしれない。こうした言葉の選び方はうそではないが、私たちの決め方に強いえいきょうをあたえることがある。',
+      'フレーミングを意識しておくと、よりよい決定をする助けになる。大切な選択をするときは、情報を逆の言い方で言い直してみるとよい。「90パーセントが生き残る」を「10パーセントは生き残らない」にするように。もし気持ちが変わるなら、私たちは事実ではなく言葉に反応しているのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'despite', 'because of'], answer: 0, why: 'than のあとに the same results were described … という文が続くので接続詞の when「～したとき（より）」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['but', 'despite', 'because of', 'during'], answer: 0, why: '2つの文（Such choices of words are not lies／they can strongly influence …）をつなぐ接続詞 but「しかし」。despite・because of・during は前置詞。' },
+      { id: 'C', choices: ['so that', 'in order', 'so as', 'such as'], answer: 0, why: 'あとに "90 percent survive" becomes … という文が続くので so that ＋ 文「～するように」。in order・so as は to ＋ 原形、such as は名詞の例が続く。' },
+    ],
+    tf: [
+      { statement: '「生存率90％」と「死亡率10％」は、ちがう情報をふくんでいる。', answer: false, why: '第1段落 The two statements contain exactly the same information。' },
+      { statement: '研究では、生き残った人数で説明されたときのほうが、手術を選ぶ人が多かった。', answer: true, why: '第2段落 more of them chose surgery than when … how many people died。' },
+      { statement: '店が「赤身80％」と書くのは、うそをついていることになる。', answer: false, why: '第3段落 Such choices of words are not lies。' },
+      { statement: '情報を逆の言い方にしてみると、言葉に反応しているかどうかに気づける。', answer: true, why: '第4段落 If our feeling changes, we may be reacting to the words rather than to the facts。' },
+    ],
+    qa: [
+      { q: 'What does the author suggest doing when we face an important choice?', choices: ['Restate the information in the opposite way.', 'Always ask a doctor for advice.', 'Choose the option described with more words.', 'Avoid reading any numbers.'], answer: 0, why: '第4段落 it is useful to restate the information in the opposite way。' },
+    ],
+  },
+{
     id: 'adv-spotlight',
     title: 'Nobody Is Watching as Closely as You Think',
     level: '難関大（評論）',
@@ -3806,6 +3837,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
+    ],
+  },
+  {
+    id: 'hs-garden-market',
+    title: 'Grown by Students',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Our school has a small garden behind the gym. Every spring, the students in the science club plant tomatoes, cucumbers, and eggplants there. Last year, we had so many vegetables ( A ) we could not eat all of them ourselves.",
+      "Then one of the members, Riku, had an idea. \"Why don't we sell them at the Sunday market in town?\" At first, I was worried, because none of us had ever sold anything before. But our teacher said it was a good chance to learn, so we decided ( B ) it.",
+      "On the day of the market, we put the vegetables on a table with a sign that said, \"Grown by students.\" Many people stopped to talk with us. An old man bought three tomatoes and told us how he grew vegetables when he was young. By noon, almost everything ( C ) sold.",
+      "We used the money to buy new seeds and gave the rest to a local children's center. I learned that the things we make can connect us with many people in our town. This year, we are planning to grow pumpkins, too.",
+    ],
+    ja: [
+      '私たちの学校には、体育館の後ろに小さな畑があります。毎年春、理科部の生徒がそこにトマトやきゅうり、なすを植えます。去年は野菜があまりにたくさんできたので、自分たちだけでは全部食べきれませんでした。',
+      'すると、部員の一人のリクがアイデアを出しました。「町の日曜市で売ってみない？」はじめ、私は心配でした。だれも物を売ったことがなかったからです。でも先生が、学ぶいい機会だと言ってくれたので、私たちはやってみることにしました。',
+      '市の日、私たちは「生徒が育てました」と書いた看板といっしょに、テーブルに野菜をならべました。たくさんの人が足を止めて、話しかけてくれました。あるおじいさんはトマトを3つ買って、若いころに野菜を育てていた話をしてくれました。正午までに、ほとんど全部が売れました。',
+      '私たちはそのお金で新しい種を買い、残りを地元の児童館に寄付しました。自分たちが作ったものが、町のたくさんの人とつながるきっかけになることを学びました。今年は、かぼちゃも育てる予定です。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'which', 'as'], answer: 0, why: 'so many ＋ 名詞 ＋ that …「とても多くの～なので…」。so many vegetables that we could not …。' },
+      { id: 'B', choices: ['to try', 'trying', 'try', 'tried'], answer: 0, why: 'decide to ～「～することに決める」。decide のあとは to ＋ 動詞の原形。' },
+      { id: 'C', choices: ['was', 'were', 'been', 'being'], answer: 0, why: '主語 almost everything は単数あつかいなので、過去の受け身は was sold。' },
+    ],
+    tf: [
+      { statement: '理科部は、体育館の後ろの畑で野菜を育てている。', answer: true, why: '第1段落 a small garden behind the gym … the students in the science club plant …。' },
+      { statement: '筆者ははじめから、野菜を売ることに自信があった。', answer: false, why: '第2段落 At first, I was worried。' },
+      { statement: '正午までに、ほとんどの野菜が売れた。', answer: true, why: '第3段落 By noon, almost everything was sold。' },
+      { statement: '売れたお金は、すべて新しい種を買うのに使った。', answer: false, why: '第4段落 gave the rest to a local children\'s center。' },
+    ],
+    qa: [
+      { q: 'What did the old man tell the students?', choices: ['How he grew vegetables when he was young.', 'Where to buy new seeds.', 'How much the tomatoes should cost.', 'When the market would close.'], answer: 0, why: '第3段落 told us how he grew vegetables when he was young。' },
     ],
   },
   {

@@ -1825,3 +1825,4 @@
 - 2026-10-24: 読解を2本追加：TOEFL・IELTS「Built for the Desert」（ラクダのこぶと水の節約）、ふつう（中2）「Grandma's Kendama」（祖母のけん玉）
 - 2026-10-24: 高校入試の読解に体験文「Mrs. Ueno's Warm Hand」（老人ホームの訪問、空所3・内容一致4・英問英答1）を追加
 - 2026-10-24: 設定の「🎓 学年・レベル」を学年ごとの色タイルに（えらんでいる学年は色がついて光る）
+- 2026-10-24: 読解を3本追加：難関大「Same Facts, Different Feelings」（フレーミング効果）、高校入試「Grown by Students」（学校の畑の野菜を日曜市で売る）、かんたん「The Rubber Duck Race」（アヒルのレース）
