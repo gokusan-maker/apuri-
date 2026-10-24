@@ -2628,3 +2628,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 
 /* ショップ：アイテムの説明はどの棚でも1行（全文は title） */
 .shop .item-meta, .shop > .stats-note { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* 問題の画面（上に「← ほかの問題をえらぶ」）では、ボス戦の中の「← にげる／もどる」は出さない（もどるボタンは1つ） */
+.play-bar ~ .boss > .stage-head .stage-back, .play-bar ~ * .boss > .stage-head .stage-back { display: none; }
+.play-bar ~ .boss > .stage-head, .play-bar ~ * .boss > .stage-head { justify-content: flex-end; }
