@@ -5020,6 +5020,40 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Twinkling makes it easier for scientists to study the sky.', answer: false, why: '第4段落 they are a problem for people who study the sky。' },
     ],
   },
+  {
+    id: 'email-sumo',
+    title: 'My First Sumo Match',
+    level: '中2（メール）',
+    paragraphs: [
+      'Dear Emma,',
+      'How are you? Last Sunday, my grandfather took me to see sumo for the first time. I had only watched it on TV before, so I was very excited. There are six big tournaments every year, and each one lasts ( A ) fifteen days.',
+      'Before each match, the wrestlers threw salt into the ring. My grandfather told me that they do this to make the ring clean. The matches themselves were very short. Some of them ended in only a few seconds! But the wrestlers looked so strong that I could not take my eyes off them.',
+      'My favorite wrestler is not very big, but he is very fast. He won his match, and everyone around us cheered loudly. I want to see sumo again ( B ) the next tournament. Do you have any traditional sports in your country? Please tell me about them ( C ) you write back.',
+      'Your friend,',
+      'Haruto',
+    ],
+    ja: [
+      'エマへ',
+      '元気ですか。この前の日曜日、祖父がはじめて私を相撲を見に連れて行ってくれました。前はテレビで見たことしかなかったので、とてもわくわくしました。毎年6つの大きな場所（大会）があり、それぞれ15日間続きます。',
+      '取組の前に、力士たちは土俵に塩をまきました。祖父は、土俵をきれいにするためにそうするのだと教えてくれました。取組そのものはとても短かったです。ほんの数秒で終わるものもありました！でも力士たちはとても強そうだったので、目がはなせませんでした。',
+      '私の好きな力士は、あまり大きくありませんが、とても速いです。彼は取組に勝ち、まわりのみんなが大きな声で声援を送りました。次の場所のときに、また相撲を見たいです。あなたの国には伝統的なスポーツがありますか。返事を書くときに、それについて教えてください。',
+      'あなたの友だち',
+      'ハルト',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'at', 'of', 'by'], answer: 0, why: '期間の「～のあいだ」は for。last for fifteen days「15日間続く」。' },
+      { id: 'B', choices: ['during', 'while', 'since', 'among'], answer: 0, why: 'during ＋ 名詞「～のあいだに」。the next tournament は名詞なので during。while は接続詞であとに文が続く。' },
+      { id: 'C', choices: ['when', 'during', 'of', 'between'], answer: 0, why: 'when ～「～するときに」。あとに文（you write back）が続くので接続詞の when。' },
+    ],
+    underline: { phrase: 'I could not take my eyes off them', choices: ['力士たちから目がはなせなかった', '力士たちを見るのをやめた', '目がつかれて見えなかった', '力士たちの目を見られなかった'], answer: 0, why: 'can\'t take one\'s eyes off ～「～から目がはなせない」。' },
+    tf: [
+      { statement: 'Haruto saw sumo at the stadium for the first time last Sunday.', answer: true, why: '第2段落 my grandfather took me to see sumo for the first time。' },
+      { statement: 'There are four big sumo tournaments every year.', answer: false, why: '第2段落 There are six big tournaments every year。' },
+      { statement: 'The wrestlers throw salt to make the ring clean.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: "Haruto's favorite wrestler is very big and slow.", answer: false, why: '第4段落 not very big, but he is very fast。' },
+      { statement: 'Haruto wants Emma to tell him about traditional sports in her country.', answer: true, why: '第4段落 Please tell me about them。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
