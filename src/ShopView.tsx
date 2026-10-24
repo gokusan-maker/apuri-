@@ -267,7 +267,7 @@ function AttrEgg({ price, left, pieces, onBuy, coins }: { price: number; left: n
         <span className="attr-egg-price">🪙{price}</span>
         <small>{left === 0 ? 'もう全員なかまになったよ！' : '文法・読解のなかま'}</small>
       </button>
-      {pieces !== undefined && left > 0 && (
+      {pieces !== undefined && pieces > 0 && left > 0 && (
         <p className="stats-note">🥚 タマゴのかけら {pieces} / {PIECES_FOR_EGG}</p>
       )}
       {msg && (
