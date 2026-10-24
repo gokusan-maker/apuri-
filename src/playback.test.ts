@@ -111,3 +111,7 @@ it('ガチャのシール帳も色つきの丸いボタン', () => {
 it('設定以外のチェックも、オン／オフのスイッチの形', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/:where\(input\[type='checkbox'\]:not\(\.setting\.toggle input\)\)::after \{ content: ''; position: absolute;/)
 })
+
+it('設定のえらぶボタンは、下に影のあるぷっくりしたゲームボタン', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.settings \.levels button\[aria-pressed='true'\] \{ box-shadow: 0 3px 0/)
+})

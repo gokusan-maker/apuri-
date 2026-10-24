@@ -2745,3 +2745,8 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 :where(input[type='checkbox']:not(.setting.toggle input)):checked { background: var(--accent-grad); }
 :where(input[type='checkbox']:not(.setting.toggle input)):checked::after { transform: translateX(16px); }
 :where(input[type='checkbox']:not(.setting.toggle input)):disabled { opacity: 0.5; cursor: default; }
+
+/* 設定のえらぶボタン（目標・音声・画面の色など）：ぷっくりしたゲームボタン。えらんだものは下に影、おすとしずむ */
+.settings .levels button { border-radius: 999px; box-shadow: 0 3px 0 color-mix(in srgb, var(--muted) 30%, transparent); }
+.settings .levels button[aria-pressed='true'] { box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 60%, #000), 0 4px 10px -4px color-mix(in srgb, var(--accent) 70%, transparent); }
+.settings .levels button:active { transform: translateY(2px); box-shadow: none; }
