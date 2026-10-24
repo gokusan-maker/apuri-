@@ -3299,4 +3299,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
     ],
   },
+{
+    id: 'toefl-hawaii-hotspot',
+    title: 'A Chain of Islands from One Hot Spot',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Most volcanoes form near the edges of tectonic plates, where plates pull apart or push against each other. The Hawaiian Islands, however, lie in the middle of the Pacific Plate, thousands of kilometers from the nearest plate boundary. To explain their existence, geologists developed the idea of a \"hotspot\": a place where unusually hot material rises from deep inside the Earth and melts ( A ) the crust above it.",
+      "The hotspot itself stays in roughly the same position, but the Pacific Plate moves slowly toward the northwest, at a rate of several centimeters per year. As the plate passes over the hotspot, magma breaks through and builds a volcano. Over time, the plate carries that volcano away from its source of magma, and a new volcano begins to form ( B ) the old one used to be.",
+      "This process explains a striking pattern. The island of Hawaii, at the southeastern end of the chain, is the youngest and still has active volcanoes, while the islands become older and more worn down toward the northwest. Southeast of Hawaii, an undersea volcano is already growing and may one day ( C ) above the ocean surface as the next island.",
+    ],
+    ja: [
+      'ほとんどの火山は、プレートが離れたり押し合ったりするプレートの境目の近くにできる。しかし、ハワイ諸島は太平洋プレートのまん中にあり、いちばん近いプレートの境目から何千キロもはなれている。その存在を説明するために、地質学者は「ホットスポット」という考えを生み出した。地球の深いところから異常に熱い物質がのぼってきて、その上の地殻をとかす場所である。',
+      'ホットスポットそのものはほぼ同じ場所にとどまっているが、太平洋プレートは1年に数センチの速さで、北西に向かってゆっくり動いている。プレートがホットスポットの上を通ると、マグマが地表をつきやぶって火山をつくる。時間がたつと、プレートはその火山をマグマの源から遠くへ運び、古い火山があった場所に新しい火山ができ始める。',
+      'このしくみによって、目を引く並び方が説明できる。列の南東のはしにあるハワイ島はいちばん新しく、今も活火山があるが、北西に向かうにつれて島は古くなり、けずられていく。ハワイ島の南東では、海底火山がすでに成長しており、いつか次の島として海面の上に姿をあらわすかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['through', 'among', 'during', 'since'], answer: 0, why: 'melt through ～「～をとかしてつきぬける」。地殻（the crust）をとかしてのぼってくる。' },
+      { id: 'B', choices: ['where', 'which', 'whom', 'whose'], answer: 0, why: '「古い火山があった場所に」は関係副詞 where（＝at the place where）。where のあとに完全な文（the old one used to be）が続く。' },
+      { id: 'C', choices: ['rise', 'raise', 'rising', 'risen'], answer: 0, why: 'may のあとは動詞の原形。rise は自動詞「のぼる・あらわれる」。raise は「～を上げる」で目的語が必要。' },
+    ],
+    tf: [
+      { statement: 'ハワイ諸島は、プレートの境目の近くにある。', answer: false, why: '第1段落 in the middle of the Pacific Plate, thousands of kilometers from the nearest plate boundary。' },
+      { statement: '太平洋プレートは北西に向かって動いている。', answer: true, why: '第2段落 the Pacific Plate moves slowly toward the northwest。' },
+      { statement: 'ハワイ島は、列の中でいちばん古い島である。', answer: false, why: '第3段落 The island of Hawaii ... is the youngest。' },
+      { statement: 'ハワイ島の南東では、新しい火山が海の中で成長している。', answer: true, why: '第3段落 an undersea volcano is already growing。' },
+    ],
+    qa: [
+      { q: 'Why do the islands become older toward the northwest?', choices: ['The plate carries each volcano northwest, away from the hotspot.', 'The hotspot moves toward the southeast every year.', 'Older islands are made by bigger volcanoes.', 'The ocean is deeper in the northwest.'], answer: 0, why: '第2段落 the plate carries that volcano away from its source of magma（プレートが北西へ運ぶ）。' },
+    ],
+  },
 ]
