@@ -2587,3 +2587,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 /* 相棒の部屋の名前は1行（長い名前は小さめ・… で切る） */
 .room-sample .room-name { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.82rem; letter-spacing: -0.02em; }
 .note-added { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* ガチャの「もう1回ひく」はオレンジ（色の決まり：もう1回） */
+.gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); box-shadow: 0 4px 0 #c2410c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); } }
+:root[data-theme="dark"] .gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); }
