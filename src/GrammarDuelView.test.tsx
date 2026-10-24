@@ -15,6 +15,6 @@ it('正しい英文を選んで10問答えるとタイムが出る', () => {
     if (i === 9) vi.setSystemTime(Date.now() + 20000)
     fireEvent.click(ok)
   }
-  expect(screen.getByText(/⏱ 20秒（まちがい 0） 🏆 ベスト記録！ 文法のなかまに \+20XP/)).toBeInTheDocument()
+  expect(screen.getByRole('status').textContent).toMatch(/⏱ 20秒.*ミス 0.*🏆 ベスト記録！.*\+20XP/)
   expect(best).toHaveBeenCalledTimes(1)
 })

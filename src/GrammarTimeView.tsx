@@ -40,7 +40,10 @@ export function GrammarTime({ onAnswer, onBack, units = GRAMMAR, label, onBest }
         </button>
         <p className="result-title">⏱ 文法タイムアタック{label ? `（${label}）` : ''}</p>
         <p className="result-score">{score} 問正解</p>
-        <p className="result-message">{record ? `🎉 ベスト記録更新！${!label && onBest ? ` 文法のなかまに +${TA_BEST_XP}XP` : ''}` : `ベスト記録 ${best} 問`}</p>
+        <p className="buddy-chips game-chips" role="status">
+          {record ? <span className="game-best">🎉 ベスト更新！</span> : <span>🏆 ベスト {best}問</span>}
+          {record && !label && onBest && <span>🐣 +{TA_BEST_XP}XP</span>}
+        </p>
       </section>
     )
   }

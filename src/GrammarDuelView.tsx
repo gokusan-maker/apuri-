@@ -46,15 +46,23 @@ export function GrammarDuel({ onBack, onBest }: Props) {
       <h2>⚡ 2択スピード</h2>
       {startAt === null ? (
         <>
-          <p className="stats-note">正しい英文はどっち？ {qs.length}問のタイムをきそおう（まちがいは +{DUEL_PENALTY}秒）{best > 0 ? `　ベスト ${best}秒` : ''}</p>
+          <p className="stats-note">正しい英文はどっち？</p>
+          <p className="buddy-chips game-chips">
+            <span>📝 {qs.length}問</span>
+            <span>❌ ミス +{DUEL_PENALTY}秒</span>
+            {best > 0 && <span>🏆 ベスト {best}秒</span>}
+          </p>
           <button className="flip" onClick={() => setStartAt(nowMs())}>
             スタート
           </button>
         </>
       ) : result ? (
-        <div role="status">
-          <p className="level-up">
-            ⏱ {result.sec}秒（まちがい {misses}）{result.best ? ` 🏆 ベスト記録！${onBest ? ` 文法のなかまに +${DUEL_BEST_XP}XP` : ''}` : `　ベスト ${best}秒`}
+        <div role="status" className="game-result">
+          <p className="game-result-title">⏱ {result.sec}秒</p>
+          <p className="buddy-chips game-chips">
+            <span aria-label={`まちがい ${misses}`}>❌ ミス {misses}</span>
+            {result.best ? <span className="game-best">🏆 ベスト記録！</span> : <span>🏆 ベスト {best}秒</span>}
+            {result.best && onBest && <span>🐣 +{DUEL_BEST_XP}XP</span>}
           </p>
           <button
             className="flip"
