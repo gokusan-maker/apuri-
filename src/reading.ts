@@ -1828,6 +1828,17 @@ export const PASSAGES: Passage[] = [
       { q: 'ろうそくは何本だった？', choices: ['10本', '5本', '12本'], answer: 0 },
     ],
   },
+  {
+    id: 'lantern-river',
+    title: 'Lanterns on the River',
+    text: 'Last night, my town had a lantern festival by the river. Many people wrote wishes on paper lanterns. I wrote, "I want to swim fast." My little sister wrote, "I want a puppy." At eight o\'clock, we put our lanterns on the water. They slowly moved down the river. The lights looked like small stars. It was very beautiful. I hope my wish comes true!',
+    ja: 'きのうの夜、私の町で川べりの灯ろう祭りがありました。たくさんの人が紙の灯ろうに願いごとを書きました。私は「速く泳げるようになりたい」と書きました。妹は「子犬がほしい」と書きました。8時に、私たちは灯ろうを水にうかべました。灯ろうはゆっくりと川を流れていきました。明かりは小さな星のように見えました。とてもきれいでした。願いがかなうといいな！',
+    questions: [
+      { q: '灯ろう祭りはどこであった？', choices: ['川べり', '海べ', '公園'], answer: 0 },
+      { q: '「私」の願いごとは？', choices: ['速く泳げるようになりたい', '子犬がほしい', '背が高くなりたい'], answer: 0 },
+      { q: '何時に灯ろうをうかべた？', choices: ['8時', '7時', '9時'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'

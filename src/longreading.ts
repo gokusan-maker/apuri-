@@ -5629,6 +5629,62 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Haruto has studied English for five years.', answer: false, why: 'ハルトの最後の発言 For three years。' },
     ],
   },
+  {
+    id: 'grandma-wind-chime',
+    title: "Grandma's Wind Chime",
+    level: '中2〜中3（物語）',
+    paragraphs: [
+      'Every summer, Sora visited his grandmother in the countryside. On her porch hung an old glass wind chime. When the wind blew, it made a clear, soft sound. "That sound makes me feel cool," his grandmother always said.',
+      'Last summer, a strong typhoon hit the town. The next morning, Sora found the wind chime on the ground. It was broken into pieces. His grandmother looked very sad ( A ) she saw it, because it was a present from Sora\'s grandfather.',
+      'Sora wanted to cheer her up. Back home in the city, he went to a glass workshop and learned how ( B ) a wind chime. It was not easy, and his first two tries failed. But he did not give up.',
+      'In winter, he sent his grandmother a small box. Inside was a blue wind chime ( C ) he had made himself. On the phone, she said, "I will hang it on the porch next summer. I can\'t wait to hear its sound with you."',
+    ],
+    ja: [
+      '毎年夏になると、ソラはいなかのおばあちゃんの家をたずねました。えんがわには古いガラスの風りんがつるしてありました。風がふくと、すんだやさしい音が鳴りました。「あの音を聞くとすずしくなるね」とおばあちゃんはいつも言っていました。',
+      '去年の夏、強い台風が町をおそいました。次の朝、ソラは風りんが地面に落ちているのを見つけました。こなごなにわれていました。それはおじいちゃんからのプレゼントだったので、おばあちゃんはそれを見てとても悲しそうでした。',
+      'ソラはおばあちゃんを元気づけたいと思いました。町の家にもどると、ガラス工房に行って、風りんの作り方を教わりました。かんたんではなく、最初の2回は失敗しました。でも、ソラはあきらめませんでした。',
+      '冬になって、ソラはおばあちゃんに小さな箱を送りました。中には、ソラが自分でつくった青い風りんが入っていました。電話でおばあちゃんは「来年の夏、えんがわにつるすね。あなたといっしょに音を聞くのが待ちきれないよ」と言いました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'because of', 'while to'], answer: 0, why: 'あとに she saw it という文が続くので接続詞 when「～したとき」。during・because of は前置詞で文は続かない。' },
+      { id: 'B', choices: ['to make', 'making', 'made', 'make'], answer: 0, why: 'how to ～「～のしかた」。learned how to make a wind chime「風りんの作り方を教わった」。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'whose'], answer: 0, why: '先行詞 a blue wind chime（もの）を説明する目的格の関係代名詞 that（which も可）。who は人、whose は名詞が続く、what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: 'The wind chime on the porch was made of glass.', answer: true, why: '第1段落 an old glass wind chime。' },
+      { statement: "Sora's grandmother lived in the city.", answer: false, why: '第1段落 his grandmother in the countryside。' },
+      { statement: "Sora's first try at making a wind chime went well.", answer: false, why: '第3段落 his first two tries failed。' },
+      { statement: 'Sora sent his grandmother a blue wind chime in winter.', answer: true, why: '第4段落 In winter … a blue wind chime。' },
+    ],
+  },
+  {
+    id: 'why-ships-float',
+    title: 'Why Can Heavy Ships Float?',
+    level: '中3〜高校入試（説明文）',
+    paragraphs: [
+      'A huge ship made of steel can weigh more than 100,000 tons. Yet if you drop a small steel nail into water, it sinks right away. Why ( A ) a heavy ship float when a tiny nail cannot?',
+      'The answer lies in a force called buoyancy. When an object is put in water, it pushes some water out of the way. The water pushes back up on the object with a force equal to the weight of the water that was pushed away. If this upward force is as large as the object\'s weight, the object floats.',
+      'A nail is small and solid, so it pushes away only a little water. A ship, on the other hand, has a wide body that is mostly filled with air. Because of its shape, it pushes away a very large amount of water, ( B ) creates enough upward force to hold up its heavy weight.',
+      'This idea was first explained more than 2,000 years ago by Archimedes, a Greek scientist. Today, engineers still use his idea when they design ships. They must also make sure that a ship does not take in water, because water ( C ) into the body would make it too heavy to float.',
+    ],
+    ja: [
+      '鉄でできた巨大な船は、10万トン以上の重さになることがあります。それなのに、小さな鉄のくぎを水に落とすと、すぐにしずんでしまいます。小さなくぎはうかないのに、なぜ重い船はうくのでしょうか。',
+      'その答えは、浮力とよばれる力にあります。物を水に入れると、その物はいくらかの水をおしのけます。水は、おしのけられた水の重さと同じ大きさの力で、物を上におし返します。この上向きの力が物の重さと同じくらい大きければ、物はうきます。',
+      'くぎは小さくて中身がつまっているので、少しの水しかおしのけません。一方、船は大部分が空気でみたされた広い船体をもっています。その形のおかげで、船はとてもたくさんの水をおしのけ、それが重い船体をささえるだけの上向きの力を生み出すのです。',
+      'この考えは、2000年以上前に、ギリシャの科学者アルキメデスによってはじめて説明されました。今でも技術者は、船を設計するときに彼の考えを使っています。また、船に水が入らないようにしなければなりません。船体に水が入ってくると、重くなりすぎてうかなくなってしまうからです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['does', 'do', 'is', 'has'], answer: 0, why: '主語 a heavy ship は3人称単数で、あとに動詞の原形 float があるので does。is・has のあとに原形は置けない。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（たくさんの水をおしのけること）を受ける関係代名詞 which。あとに動詞 creates が続く。' },
+      { id: 'C', choices: ['coming', 'comes', 'came', 'to come'], answer: 0, why: 'water coming into the body「船体に入ってくる水」。現在分詞が後ろから名詞を説明する。文の動詞は would make。' },
+    ],
+    tf: [
+      { statement: 'A small steel nail sinks in water.', answer: true, why: '第1段落 it sinks right away。' },
+      { statement: 'Buoyancy is a force that pushes objects down.', answer: false, why: '第2段落 The water pushes back up on the object（上向きの力）。' },
+      { statement: "A ship's body is mostly filled with air.", answer: true, why: '第3段落 a wide body that is mostly filled with air。' },
+      { statement: 'Archimedes explained this idea about 200 years ago.', answer: false, why: '第4段落 more than 2,000 years ago。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
