@@ -107,7 +107,7 @@ it('まだ制覇していなければ合格証書は出ない', () => {
 it('今週のレアボスに挑戦できる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
   fireEvent.click(screen.getByText(/✨ 今週のレアボス/))
-  expect(screen.getByText(/今週のレアボス「キラキラ.+」に勝つと 色ちがい確定のタマゴ！/)).toBeInTheDocument()
+  expect(screen.getByText('勝つと 色ちがい確定のタマゴ！')).toBeInTheDocument()
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
 })
@@ -198,7 +198,7 @@ it('週末ボスは週末だけ出て、HPが多い', () => {
   unmount()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
   fireEvent.click(screen.getByText(/^🌙 週末ボス$/))
-  expect(screen.getByText(/週末だけのボス「週末の/)).toBeInTheDocument()
+  expect(screen.getByText(/たおすと 🎟1（HP/)).toBeInTheDocument()
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
 })
@@ -271,7 +271,7 @@ it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの�
   const btn = screen.getByText(/🗼 エンドレスの塔/).closest('button')!
   expect(btn.textContent).toBe('🗼 エンドレスの塔')
   fireEvent.click(btn)
-  expect(screen.getByText(/負けるまでのぼろう！ 10階ごとに/)).toBeInTheDocument()
+  expect(screen.getByText(/^10階ごとに/)).toBeInTheDocument()
 })
 
 it('ステージは解放ずみのものだけ見え、クリアすると次のステージが出てくる', () => {

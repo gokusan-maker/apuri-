@@ -2219,3 +2219,4 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .read-levels button:not([aria-selected='true']) { background: hsl(var(--rl-h) 30% 20%); box-shadow: 0 3px 0 hsl(var(--rl-h) 30% 12%); }
 :root[data-theme="dark"] .read-levels button:not([aria-selected='true']) strong { color: hsl(var(--rl-h) 70% 80%); }
 .long-item-title { font-size: 0.86rem; }
+.unit-sort { white-space: nowrap; font-size: 0.8rem; } .unit-sort button { padding: 4px 10px; font-size: 0.8rem; }

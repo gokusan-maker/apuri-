@@ -137,7 +137,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         hp={endlessHp(f)}
         noBook
         title={`🗼 塔 ${f}階（最高 ${endlessBest}階）`}
-        note={f === 1 ? `負けるまでのぼろう！ 10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟` : undefined}
+        note={f === 1 ? `10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟` : undefined}
         startHearts={endless.hearts}
         winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
         partner={partner}
@@ -178,7 +178,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         level={lv}
         words={wordsOf([lv])}
         title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
-        note={rush.round === 0 ? (rush.ex ? `中3〜熟語のボスと3連戦！ 全勝で 🪙${RUSH_EX_COINS}＋🎟2（ハートは持ちこし）` : `ボスと3連戦！ 全勝で 🪙${RUSH_COINS}＋🎟（ハートは持ちこし）`) : undefined}
+        note={rush.round === 0 ? (rush.ex ? `3連戦！ 全勝で 🪙${RUSH_EX_COINS}＋🎟2` : `3連戦！ 全勝で 🪙${RUSH_COINS}＋🎟`) : undefined}
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
@@ -248,7 +248,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         words={wordsOf([wb.level])}
         look={wb.look}
         title="🌙 週末ボス"
-        note={`週末だけのボス「${wb.look.name}」（HP${WEEKEND_HP}）。たおすと 🎟1`}
+        note={`たおすと 🎟1（HP${WEEKEND_HP}）`}
         hp={WEEKEND_HP}
         partner={partner}
         power={power}
@@ -281,7 +281,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         words={wordsOf([rare.level])}
         look={rare.look}
         title="✨ 今週のレアボス"
-        note={`今週のレアボス「${rare.look.name}」に勝つと 色ちがい確定のタマゴ！`}
+        note={`勝つと 色ちがい確定のタマゴ！`}
         hp={RARE_HP}
         partner={partner}
         power={power}

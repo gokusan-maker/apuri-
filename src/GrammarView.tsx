@@ -594,7 +594,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         {stampMode && (
           <div className="stamp-card" aria-label={`文法スタンプ ${grammarStamps(record)}個`}>
             <p className="stamp-title">
-              📮 スタンプカード <span className="fold-meta">{grammarStamps(record)}/{GRAMMAR.length}</span>
+              📮 スタンプ <span className="fold-meta">{grammarStamps(record)}/{GRAMMAR.length}</span>
               <small className="stamp-next">あと{STAMP_EVERY - (grammarStamps(record) % STAMP_EVERY)}個で🎟</small>
             </p>
             <div className="stamp-grid">
@@ -613,7 +613,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
                 🎯 今週の目標：全問正解 {Math.min(weekGoal.cleared.length, weekGoal.goal)} / {weekGoal.goal} 単元{weekGoal.rewarded ? ' ✅ たっせい！' : '（たっせいで🎟1）'}
               </p>
             ) : (
-              <p>🎯 今週の目標を決めよう（全問正解する単元の数）</p>
+              <p title="全問正解する単元の数">🎯 今週の目標を決めよう</p>
             )}
             <div className="goal-choices">
               {GOAL_CHOICES.map((n) => (

@@ -46,7 +46,7 @@ export function BossTime({ words, onBack }: Props) {
       {startAt === null ? (
         <>
           <p className="stats-note">
-            {BOSS_TA_SECONDS}秒で何ダメージあたえられるかな？ 連続正解でダメージアップ！{best > 0 ? `　ベスト ${best}ダメージ` : ''}
+            {BOSS_TA_SECONDS}秒で何ダメージ出せる？{best > 0 ? `（ベスト ${best}）` : ''}
           </p>
           <button
             className="flip"
