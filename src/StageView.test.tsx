@@ -106,7 +106,7 @@ it('まだ制覇していなければ合格証書は出ない', () => {
 
 it('今週のレアボスに挑戦できる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByText(/✨ 今週のレアボス/))
+  fireEvent.click(screen.getByRole('button', { name: /今週のレアボス/ }))
   expect(screen.getByText('勝つと 色ちがい確定のタマゴ！')).toBeInTheDocument()
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
@@ -115,7 +115,7 @@ it('今週のレアボスに挑戦できる', () => {
 it('ボスラッシュは3連戦で、勝つとハートを引き継いで次のボスへ', () => {
   const clear = vi.fn()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} onRushClear={clear} />)
-  fireEvent.click(screen.getByText(/^🔥 ボスラッシュ$/))
+  fireEvent.click(screen.getByRole('button', { name: /^ボスラッシュ/ }))
   for (let round = 1; round <= 3; round++) {
     expect(screen.getByText(`🔥 ボスラッシュ ${round} / 3`)).toBeInTheDocument()
     expect(document.querySelector('.boss-passage')).not.toBeNull() // ラッシュのボスも読解問題
@@ -127,13 +127,13 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
   }
   expect(clear).toHaveBeenCalledTimes(1)
   fireEvent.click(screen.getByText('ラッシュ完全クリア！ ステージにもどる'))
-  expect(screen.getByText(/^🔥 ボスラッシュ$/)).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /^ボスラッシュ/ })).toBeInTheDocument()
 })
 
 it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る', () => {
   localStorage.clear()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByText(/🗼 エンドレスの塔/))
+  fireEvent.click(screen.getByRole('button', { name: /エンドレスの塔/ }))
   for (let floor = 1; floor <= 2; floor++) {
     expect(screen.getByText(`🗼 塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
@@ -194,10 +194,10 @@ it('今日のボスは★2・★3の強さを選べる', () => {
 it('週末ボスは週末だけ出て、HPが多い', () => {
   localStorage.clear()
   const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  expect(screen.queryByText(/🌙 週末ボス/)).not.toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: /週末ボス/ })).not.toBeInTheDocument()
   unmount()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
-  fireEvent.click(screen.getByText(/^🌙 週末ボス$/))
+  fireEvent.click(screen.getByRole('button', { name: /^週末ボス/ }))
   expect(screen.getByText(/たおすと 🎟1（HP/)).toBeInTheDocument()
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
@@ -225,11 +225,11 @@ it('たおしたボスにはサドンデス（ハート1つ）で挑める', () 
 it('ナイトボスは夜7時〜10時だけ出る', () => {
   localStorage.clear()
   const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={12} />)
-  expect(screen.queryByText(/🌃 ナイトボス/)).not.toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: /ナイトボス/ })).not.toBeInTheDocument()
   unmount()
   const bonus = vi.fn()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={20} onRankBonus={bonus} />)
-  fireEvent.click(screen.getByText(/^🌃 ナイトボス$/))
+  fireEvent.click(screen.getByRole('button', { name: /^ナイトボス/ }))
   expect(screen.getByText(/夜7時〜10時だけ出るボス「夜の/)).toBeInTheDocument()
   expect(screen.getByText('🌃 ナイトボス')).toBeInTheDocument()
 })
@@ -268,8 +268,8 @@ it('ボス部屋のモード（エンドレス・ラッシュ・タイムアタ�
 it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの画面の最初に出る', () => {
   localStorage.removeItem('eitan:endless-best')
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  const btn = screen.getByText(/🗼 エンドレスの塔/).closest('button')!
-  expect(btn.textContent).toBe('🗼 エンドレスの塔')
+  const btn = screen.getByRole('button', { name: /エンドレスの塔/ })
+  expect(btn.textContent).toBe('🗼エンドレスの塔')
   fireEvent.click(btn)
   expect(screen.getByText(/^10階ごとに/)).toBeInTheDocument()
 })

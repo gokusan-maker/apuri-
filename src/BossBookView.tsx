@@ -22,7 +22,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   return (
     <details className="boss-book game-fold">
       <summary>
-        📕 ボス図鑑（{beaten} / {all.length}体）{speedy > 0 && `・⚡ スピードクリア ${speedy}体`}
+        <span className="lg-icon" aria-hidden="true">📕</span>ボス図鑑
+        {speedy > 0 && <span className="fold-meta" aria-label={`スピードクリア ${speedy}体`}>⚡{speedy}</span>}
+        <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
+          {beaten}/{all.length}
+        </span>
       </summary>
       {loadProverbs().length > 0 && (
         <details className="proverb-book">

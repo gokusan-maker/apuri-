@@ -993,7 +993,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('tab', { name: '🗺 ステージ' }))
     expect(screen.getByRole('heading', { name: '🗺 単語ステージ' })).toBeInTheDocument()
     expect(document.querySelector('.stage-levels')).not.toBeNull()
-    expect(screen.queryByText('🗼 エンドレスの塔')).toBeNull()
+    expect(screen.queryByRole('button', { name: /エンドレスの塔/ })).toBeNull()
   })
 
   it('文法ドリル（複数形など）は文法チャレンジから開けて、← 文法チャレンジで戻れる', () => {

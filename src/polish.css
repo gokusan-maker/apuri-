@@ -2246,3 +2246,42 @@ details[open] > summary::before { transform: rotate(90deg); }
 .ta-ready .ta-start:active { transform: translateY(3px); box-shadow: 0 2px 0 #b91c1c; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .ta-ready .ta-best { color: #fcd34d; } }
 :root[data-theme="dark"] .ta-ready .ta-best { color: #fcd34d; }
+
+/* ボス部屋：ボタンのデザインを統一（オーナーの要望）。どの行も「アイコンの箱＋名前＋バッジ＋丸い › 」の色つきゲームボタン */
+.boss-modes .boss-btn { display: flex; align-items: center; gap: 10px; padding: 12px 14px; font-size: 1rem; font-weight: 800; }
+.boss-modes .boss-btn .lg-icon, .gold-chest .lg-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 12px; background: rgb(255 255 255 / 0.25); font-size: 1.15rem; text-shadow: none; }
+.boss-modes .boss-btn .mode-name { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.boss-modes .boss-btn::after { position: static; transform: none; flex: none; display: inline-grid; place-items: center; width: 1.25em; height: 1.25em; margin-left: 6px; border-radius: 50%; background: rgb(255 255 255 / 0.25); color: #fff; font-size: 0.95rem; font-weight: 900; line-height: 1; }
+.boss-modes .boss-btn:not(:has(.mode-badge))::after { margin-left: auto; }
+.boss-modes .boss-btn.rare-boss::after { background: rgb(255 255 255 / 0.45); color: #713f12; }
+.boss-modes .boss-btn.rare-boss .lg-icon { background: rgb(255 255 255 / 0.5); }
+/* ボス図鑑・大学入試の塔の見出しも同じ形（› は右） */
+.boss-book.game-fold > summary { gap: 10px; }
+.boss-book.game-fold > summary .fold-meta:first-of-type { margin-left: auto; }
+.boss-book.game-fold > summary .fold-meta + .fold-meta { margin-left: 0; }
+.boss-book.game-fold > summary::before { order: 9; margin: 0 0 0 2px; background: rgb(255 255 255 / 0.25); color: #fff; }
+.boss-book.game-fold > summary .fold-meta, .univ-tower.game-fold > summary .mode-badge { background: rgb(255 255 255 / 0.25); color: #fff; }
+.univ-tower.game-fold > summary { gap: 10px; }
+.univ-tower.game-fold > summary::before { order: 9; margin: 0 0 0 2px; background: rgb(255 255 255 / 0.25); color: #fff; }
+.univ-tower.game-fold > summary .univ-meter { flex-basis: 100%; }
+/* 金の宝箱の鍵：金色のゲームボタンの行 */
+.gold-chest { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; margin: 0 0 10px; padding: 12px 14px; border: none; border-radius: 16px; background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; font-weight: 800; box-shadow: 0 4px 0 #b45309, 0 6px 14px rgb(0 0 0 / 0.12); }
+.gold-chest .lg-icon { background: rgb(255 255 255 / 0.5); }
+.gold-chest .gold-keys { margin-left: auto; letter-spacing: 2px; white-space: nowrap; }
+.gold-chest .treasure-btn { flex-basis: 100%; }
+/* 今日のボスの強さ：★★はオレンジ、★★★は赤のゲームボタン */
+.daily-stars .star-pick { border: none; color: #fff; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); white-space: nowrap; }
+.daily-stars .star-2 { background: linear-gradient(135deg, #fb923c, #f97316); box-shadow: 0 3px 0 #c2410c; }
+.daily-stars .star-3 { background: linear-gradient(135deg, #ef4444, #991b1b); box-shadow: 0 3px 0 #7f1d1d; }
+.daily-stars .star-pick:active { transform: translateY(2px); box-shadow: none; }
+.gold-chest { flex-direction: row; }
+.boss-book.game-fold > summary { display: flex; align-items: center; }
+.boss-book.game-fold > summary .fold-meta { padding: 2px 10px; border-radius: 999px; font-size: 0.74rem; font-weight: 800; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .gold-chest { background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; border: none; } }
+:root[data-theme="dark"] .gold-chest { background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; border: none; }
+.boss-book.game-fold > summary .fold-meta { margin-left: auto; }
+.boss-book.game-fold > summary .fold-meta ~ .fold-meta { margin-left: 0; }
+/* 金の宝箱の鍵：鍵の数は丸いマス（とった鍵は金色の🔑） */
+.gold-chest .gold-keys { display: inline-flex; gap: 6px; }
+.gold-chest .gold-keys i { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: rgb(255 255 255 / 0.45); box-shadow: inset 0 1px 2px rgb(0 0 0 / 0.15); font-style: normal; font-size: 0.85rem; }
+.gold-chest .gold-keys i.got::before { content: '🔑'; }

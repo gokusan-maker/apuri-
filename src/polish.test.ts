@@ -100,3 +100,9 @@ it('ボタン・一覧の文字は1行（題名・タイルの説明・むずか
   expect(css).toMatch(/\.read-levels button strong, \.read-levels small \{ white-space: nowrap;/)
   expect(css).toMatch(/\.snacks \.item-name, \.snacks \.item-meta \{[^}]*white-space: nowrap/)
 })
+
+it('ボス部屋のボタンは同じ形（アイコンの箱・名前・バッジ・丸い ›）でそろえる', () => {
+  expect(css).toMatch(/\.boss-modes \.boss-btn \.lg-icon, \.gold-chest \.lg-icon \{/)
+  expect(css).toMatch(/\.gold-chest \{ display: flex;[^}]*linear-gradient\(135deg, #fde047, #f59e0b\)/)
+  expect(css).toMatch(/\.daily-stars \.star-3 \{/)
+})

@@ -458,7 +458,13 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         </p>
       )}
       <div className="gold-chest">
-        <span>🗝 金の宝箱の鍵 {'🔑'.repeat(Math.min(keys, KEYS_FOR_GOLD))}{'▫️'.repeat(Math.max(0, KEYS_FOR_GOLD - keys))}</span>
+        <span className="lg-icon" aria-hidden="true">🗝️</span>
+        <span className="mode-name">金の宝箱の鍵</span>
+        <span className="gold-keys" aria-label={`鍵 ${Math.min(keys, KEYS_FOR_GOLD)} / ${KEYS_FOR_GOLD}`}>
+          {Array.from({ length: KEYS_FOR_GOLD }, (_, i) => (
+            <i key={i} className={i < keys ? 'got' : undefined} />
+          ))}
+        </span>
         {keys >= KEYS_FOR_GOLD && onOpenGold && (
           <button className="treasure-btn" onClick={onOpenGold}>
             🎁 金の宝箱をあける（🎟＋🪙{GOLD_COINS}）
@@ -476,7 +482,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       />
       <details className="univ-tower game-fold" open={Object.keys(univ).length > 0}>
         <summary>
-          🏯 大学入試の塔<span className="mode-badge" aria-label={`${Object.keys(univ).length} / ${UNIV_BOSSES.length} 階クリア`}>{Object.keys(univ).length}/{UNIV_BOSSES.length}階</span>
+          <span className="lg-icon" aria-hidden="true">🏯</span>大学入試の塔<span className="mode-badge" aria-label={`${Object.keys(univ).length} / ${UNIV_BOSSES.length} 階クリア`}>{Object.keys(univ).length}/{UNIV_BOSSES.length}階</span>
           <span className="univ-meter" aria-hidden="true">
             <i style={{ width: `${(Object.keys(univ).length / UNIV_BOSSES.length) * 100}%` }} />
           </span>
@@ -518,31 +524,31 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       </details>
       <div className="boss-modes">
       <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
-        🗼 エンドレスの塔{endlessBest > 0 && <span className="mode-badge">最高 {endlessBest}階</span>}
+        <span className="lg-icon" aria-hidden="true">🗼</span><span className="mode-name">エンドレスの塔</span>{endlessBest > 0 && <span className="mode-badge">最高 {endlessBest}階</span>}
       </button>
       {weekend && (
         <button className="boss-btn rush-boss ex" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false, ex: true })}>
-          🌟 週末限定ボスラッシュEX{rushExDone && <span className="mode-badge">✅ クリア</span>}
+          <span className="lg-icon" aria-hidden="true">🌟</span><span className="mode-name">週末限定ボスラッシュEX</span>{rushExDone && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       <button className="boss-btn rush-boss" onClick={() => setRush({ round: 0, hearts: HEARTS, won: false })}>
-        🔥 ボスラッシュ{rushDone && <span className="mode-badge">✅ クリア</span>}
+        <span className="lg-icon" aria-hidden="true">🔥</span><span className="mode-name">ボスラッシュ</span>{rushDone && <span className="mode-badge">✅ クリア</span>}
       </button>
       {isNightTime(hour) && (
         <button className="boss-btn night-boss" onClick={() => setNightFight(true)}>
-          🌃 ナイトボス{nightDay === dayKey() && <span className="mode-badge">✅ クリア</span>}
+          <span className="lg-icon" aria-hidden="true">🌃</span><span className="mode-name">ナイトボス</span>{nightDay === dayKey() && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       {weekend && (
         <button className="boss-btn weekend-boss" onClick={() => setWeekendFight(true)}>
-          🌙 週末ボス{weekendWeek === week && <span className="mode-badge">✅ クリア</span>}
+          <span className="lg-icon" aria-hidden="true">🌙</span><span className="mode-name">週末ボス</span>{weekendWeek === week && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       <button className="boss-btn rush-boss" onClick={() => setTimeAttack(true)}>
-        ⏱ ボスのタイムアタック{loadBossTaBest() > 0 && <span className="mode-badge">ベスト {loadBossTaBest()}</span>}
+        <span className="lg-icon" aria-hidden="true">⏱️</span><span className="mode-name">ボスのタイムアタック</span>{loadBossTaBest() > 0 && <span className="mode-badge">ベスト {loadBossTaBest()}</span>}
       </button>
       <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
-        ✨ 今週のレアボス{rareWeek === week && <span className="mode-badge">✅ クリア</span>}
+        <span className="lg-icon" aria-hidden="true">✨</span><span className="mode-name">今週のレアボス</span>{rareWeek === week && <span className="mode-badge">✅ クリア</span>}
       </button>
       </div>
       {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日は「{goldenLevelOf(LEVELS, dayKey())}」のボスが金色 +🪙{GOLDEN_COINS}</p>}
@@ -570,7 +576,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           {[2, 3].map((n) => (
             <button
               key={n}
-              className="list-link"
+              className={`list-link star-pick star-${n}`}
               onClick={() => {
                 setDailyFight(n)
                 setFighting(daily)
