@@ -46,7 +46,7 @@ import { loadTraining } from './training'
 import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
-import { loadDailyGrammarDay, MASTER_TICKETS } from './grammar'
+import { dailyGrammar, loadDailyGrammarDay, MASTER_TICKETS } from './grammar'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -339,6 +339,7 @@ function App() {
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
   const [wordTab, setWordTab] = useState<WordTab>('mini') // 単語タブの中（ミニゲーム・カード・タイムアタック）
   const [trioDance, setTrioDance] = useState(false) // トリオボーナスで3体がおどる
+  const [grammarGo, setGrammarGo] = useState(false) // 文法チャレンジの上で今日の文法をひらいている
   const [todayQuiz, setTodayQuiz] = useState(false) // 今日の課題の「今日の単語（4択）」をやっている
   const [shortGo, setShortGo] = useState(false) // 今日の課題の「今日の読解」を開く
   const [cardTouched, setCardTouched] = useState(false) // カードを1枚でも答えたか（それまでは自動で発音しない）
@@ -1670,6 +1671,7 @@ function App() {
               if (w === 'reading') {
                 setShortGo(true)
               }
+              if (w === 'grammar') setGrammarGo(true)
               if (w === 'word') {
                 setWordTab('mini')
                 setTodayQuiz(true)
@@ -1854,7 +1856,13 @@ function App() {
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
           {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
-          {mode === 'grammar' && (
+          {mode === 'grammar' && !grammarGo && (
+            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
+              📐 今日の課題（文法）{loadDailyGrammarDay() === today ? ' ✅' : ''}
+              <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
+            </button>
+          )}
+          {mode === 'grammar' && grammarGo && (
             <TodayGrammar
               today={today}
               onAnswer={onAnswerTrack('grammar')}
@@ -2027,6 +2035,7 @@ function App() {
               setDailyGo(false)
               setTodayQuiz(false)
               setShortGo(false)
+              setGrammarGo(false)
               setShowShop(false)
               setShowChallenge(false)
               toContent()

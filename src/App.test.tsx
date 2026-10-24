@@ -43,7 +43,7 @@ describe('App', () => {
     navTo('単語ゲーム')
     expect(before(document.querySelector('.ally-word'), screen.getByRole('button', { name: /^今日の課題（単語）：/ }))).toBe(true)
     navTo('文法チャレンジ')
-    expect(before(document.querySelector('.ally-grammar'), screen.getByLabelText('今日の文法'))).toBe(true)
+    expect(before(document.querySelector('.ally-grammar'), screen.getByRole('button', { name: /^今日の課題（文法）：/ }))).toBe(true)
     navTo('読解ステージ')
     expect(before(document.querySelector('.ally-reading'), document.querySelector('.today-read-btn'))).toBe(true)
     navTo('ボス部屋')
@@ -1163,7 +1163,8 @@ describe('App', () => {
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /^今日の課題（単語）：/ })).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
     navTo('文法チャレンジ')
-    expect(screen.getByLabelText('今日の文法')).toBeInTheDocument() // 文法チャレンジのいちばん上は今日の文法
+    fireEvent.click(screen.getByRole('button', { name: /^今日の課題（文法）：/ })) // 文法チャレンジの上は今日の課題（文法）のボタン
+    expect(screen.getByLabelText('今日の文法')).toBeInTheDocument() // 押すと今日の文法の問題が出る
     navTo('単語ゲーム')
     expect(document.querySelector('details.home-play')).toBeNull()
     navTo('文法チャレンジ')
