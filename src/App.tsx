@@ -1894,7 +1894,7 @@ function App() {
       ) : (
         <>
           {mode === 'word' && (
-            <button className="stage-back" onClick={() => setWordTab('mini')}>
+            <button className="stage-back game-back" onClick={() => setWordTab('mini')}>
               ← ミニゲームをえらぶ
             </button>
           )}

@@ -2005,3 +2005,6 @@ details[open] > summary::before { transform: rotate(90deg); }
   :root:not([data-theme="light"]) .gacha .gacha-event { color: #fca5a5; }
 }
 :root[data-theme="dark"] .gacha .gacha-event { color: #fca5a5; }
+
+/* 単語ゲームの「← ミニゲームをえらぶ」：上のタブにくっつかないように */
+.game-back { margin-top: 10px; }
