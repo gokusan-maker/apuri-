@@ -421,7 +421,7 @@ it('ミニゲームの選択ボタンに、いまのゲーム名と「🎮 ミ�
   localStorage.clear()
   render(<Quiz words={WORDS} />)
   const btn = screen.getByText(/ミニゲームをえらぶ/).closest('button')!
-  expect(btn.textContent).toMatch(/いま：/)
+  expect(btn.querySelector('.mode-now')?.getAttribute('aria-label')).toMatch(/^いま：/)
   fireEvent.click(btn)
   expect(screen.getByRole('group', { name: 'ミニゲームの種類' })).toBeInTheDocument()
 })

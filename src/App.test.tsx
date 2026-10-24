@@ -254,7 +254,7 @@ describe('App', () => {
     goMini()
     const strip = screen.getByLabelText('人気のミニゲーム')
     expect(strip.querySelectorAll('.game-tile')).toHaveLength(6)
-    expect(screen.getByText(/ミニゲームをえらぶ（\d+種）/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/^いま：.+・全\d+種$/)).toBeInTheDocument()
     fireEvent.click(within(strip).getByText('神経衰弱'))
     expect(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')).toHaveAttribute('aria-pressed', 'true')
   })

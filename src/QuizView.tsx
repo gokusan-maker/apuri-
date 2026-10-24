@@ -417,9 +417,12 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const toggle = lockDirection ? null : (
     <>
       <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
-        <span className="mode-now">いま：{DIRECTIONS.find((d) => d.id === direction)?.label}</span>
         <span className="mode-change">
-          🎮 ミニゲームをえらぶ（{DIRECTIONS.length}種） {menu ? '▲' : '▼'}
+          🎮 ミニゲームをえらぶ
+          <span className="mode-now" aria-label={`いま：${DIRECTIONS.find((d) => d.id === direction)?.label}・全${DIRECTIONS.length}種`}>
+            {DIRECTIONS.find((d) => d.id === direction)?.label}
+          </span>
+          {menu ? '▲' : '▼'}
         </span>
         {playedWordGames > 0 && <span className="played-today">今日 {playedWordGames} しゅるいあそんだ{playedWordGames < WORD_GAMES_GOAL && onCoins ? `・あと${WORD_GAMES_GOAL - playedWordGames}で🪙${WORD_GAMES_COINS}` : ''}</span>}
       </button>
