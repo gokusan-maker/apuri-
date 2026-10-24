@@ -5589,6 +5589,46 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The students stayed at a traditional Japanese inn.', answer: true, why: '第3段落 we stayed at a traditional Japanese inn。' },
     ],
   },
+  {
+    id: 'talk-ticket-machine',
+    title: 'At the Ticket Machine (会話文)',
+    level: '中2（会話文）',
+    paragraphs: [
+      "Tourist: Excuse me. Could you help me? I want to go to Midori Station, but I don't know how ( A ) this machine.",
+      'Haruto: Sure. First, touch the English button here. Then choose "Ticket."',
+      'Tourist: OK. How much is it to Midori Station?',
+      "Haruto: Let me check the map. It's 220 yen. Put your money in here.",
+      'Tourist: I only have a 1,000-yen bill. Is that OK?',
+      'Haruto: Yes. The machine will give you the change. Here are your ticket and 780 yen.',
+      'Tourist: Thank you so much. Which platform should I go to?',
+      'Haruto: Platform 3. The train ( B ) every ten minutes.',
+      'Tourist: You are very kind. Your English is great! How long have you ( C ) English?',
+      'Haruto: For three years. Have a nice trip!',
+    ],
+    ja: [
+      '旅行者：すみません。手伝ってもらえますか。みどり駅に行きたいのですが、この機械の使い方がわからないんです。',
+      'ハルト：いいですよ。まず、ここの英語のボタンにさわってください。それから「きっぷ」を選んでください。',
+      '旅行者：わかりました。みどり駅まではいくらですか。',
+      'ハルト：路線図を見てみますね。220円です。ここにお金を入れてください。',
+      '旅行者：1000円札しか持っていないんです。だいじょうぶですか。',
+      'ハルト：はい。機械がおつりを出してくれます。はい、きっぷと780円です。',
+      '旅行者：本当にありがとう。何番線に行けばいいですか。',
+      'ハルト：3番線です。電車は10分ごとに来ますよ。',
+      '旅行者：とても親切ですね。英語がすばらしいです！ どのくらい英語を勉強しているのですか。',
+      'ハルト：3年です。よい旅を！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to use', 'using', 'use', 'used'], answer: 0, why: 'how to ～「～のしかた」。how to use this machine「この機械の使い方」。' },
+      { id: 'B', choices: ['comes', 'come', 'coming', 'to come'], answer: 0, why: '主語 The train は3人称単数で、いつものことを言う現在形なので comes。' },
+      { id: 'C', choices: ['studied', 'study', 'studying', 'studies'], answer: 0, why: 'How long have you ＋ 過去分詞 …?「どのくらい～していますか」（現在完了）。' },
+    ],
+    tf: [
+      { statement: 'The tourist wants to go to Midori Station.', answer: true, why: "旅行者の1つ目の発言 I want to go to Midori Station。" },
+      { statement: 'The ticket to Midori Station costs 280 yen.', answer: false, why: "ハルトの2つ目の発言 It's 220 yen。" },
+      { statement: 'The tourist paid with a 1,000-yen bill.', answer: true, why: '旅行者の3つ目の発言と、おつりが780円であることから。' },
+      { statement: 'Haruto has studied English for five years.', answer: false, why: 'ハルトの最後の発言 For three years。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

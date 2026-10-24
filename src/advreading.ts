@@ -4602,4 +4602,62 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What will happen to books that are due during the closure?', choices: ['They can be kept for two more weeks without a late fee.', 'They must be returned by December 1.', 'They will be moved to the second floor.', 'They can only be returned after January 15.'], answer: 0, why: '第2段落 may be kept for an extra two weeks without paying a late fee。' },
     ],
   },
+  {
+    id: 'adv-comparison-trap',
+    title: 'Everyday Lives and Other People\'s Highlights',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Social media allows us to see the lives of hundreds of people every day. Yet what appears on our screens is rarely a complete picture. Most people share their best moments, such as a trip abroad, a delicious meal, or a prize at a competition, while keeping their ordinary or difficult days to themselves, ( A ) means that what we see is a carefully selected version of reality.",
+      "Psychologists have long known that people judge themselves by ( B ) themselves with others. When the comparison is upward, toward people who seem more successful or happier, it can motivate us, but it can also make us feel that we are falling behind. Online, upward comparisons are almost unavoidable, because the most impressive posts are the ones most likely to be shared and seen.",
+      "This does not mean that we should stop using social media altogether. A more realistic approach is to remember that every post is an edited story, not the whole truth. Some researchers also suggest focusing on our own progress over time rather than on how we rank against others. Doing so may help us enjoy what we see online without ( C ) less satisfied with our own lives.",
+    ],
+    ja: [
+      'SNS を使えば、私たちは毎日何百人もの人の生活を見ることができる。しかし、画面にあらわれるものが全体像であることはめったにない。たいていの人は、海外旅行やおいしい食事、大会での受賞といったいちばんよい場面をのせ、ふつうの日やつらい日は自分の中にしまっておく。つまり、私たちが見ているのは、注意深く選ばれた現実なのである。',
+      '人が自分をほかの人とくらべることで自分を評価することは、心理学者のあいだで昔から知られている。くらべる相手が上向き、つまり自分より成功していたり幸せそうだったりする人の場合、それはやる気を生むこともあるが、自分が取り残されていると感じさせることもある。ネットでは、いちばん目を引く投稿ほど広まり見られやすいため、上向きの比較はほとんどさけられない。',
+      'だからといって、SNS をまったく使わないようにすべきだというわけではない。より現実的な方法は、どの投稿も編集された物語であり、真実のすべてではないと覚えておくことだ。また、ほかの人とくらべてどの順位にいるかではなく、時間をかけた自分自身の進歩に目を向けることをすすめる研究者もいる。そうすれば、自分の生活への満足感を下げずに、ネットで見るものを楽しめるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容全体を受ける関係代名詞 which。コンマのあとに that は使えず、what は先行詞をとらない。it では文が2つ接続詞なしでつながってしまう。' },
+      { id: 'B', choices: ['comparing', 'compare', 'compared', 'to compare'], answer: 0, why: '前置詞 by のあとは動名詞。by comparing A with B「A を B とくらべることによって」。' },
+      { id: 'C', choices: ['feeling', 'feel', 'felt', 'to feel'], answer: 0, why: '前置詞 without のあとは動名詞（～ing）。without feeling less satisfied「満足感を下げずに」。' },
+    ],
+    tf: [
+      { statement: 'たいていの人は、SNS に自分のいちばんよい場面をのせる。', answer: true, why: '第1段落 Most people share their best moments。' },
+      { statement: '上向きの比較は、いつも人をやる気にさせるだけである。', answer: false, why: '第2段落 it can also make us feel that we are falling behind。' },
+      { statement: '筆者は、SNS をまったく使わないようにすべきだと主張している。', answer: false, why: '第3段落 This does not mean that we should stop using social media altogether。' },
+      { statement: 'ほかの人との順位より、自分の進歩に目を向けることがすすめられている。', answer: true, why: '第3段落 focusing on our own progress over time rather than on how we rank against others。' },
+    ],
+    qa: [
+      { q: 'Why are upward comparisons almost unavoidable online?', choices: ['The most impressive posts are the most likely to be shared and seen.', 'People only post about their difficult days.', 'Psychologists tell people to compare themselves with others.', 'Social media hides the posts of successful people.'], answer: 0, why: '第2段落 because the most impressive posts are the ones most likely to be shared and seen。' },
+    ],
+  },
+  {
+    id: 'toefl-desert-locusts',
+    title: 'When Grasshoppers Become a Swarm',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Desert locusts are a kind of grasshopper found in dry regions of Africa, the Middle East, and South Asia. For most of the time, they are insects ( A ) live alone and tend to avoid one another. In this solitary phase, they are mostly green or brown and cause little harm to crops.",
+      "However, after heavy rains, plants grow quickly and locust populations increase. When the rains end and the plants begin to die, large numbers of locusts are forced ( B ) together in the few areas that still have food. Scientists have found that frequent contact between their back legs triggers a remarkable change. Within a few hours, the insects become attracted to one another, and over time they change color and shape.",
+      "In this crowded phase, locusts form enormous swarms that may contain billions of insects. A swarm can travel more than 100 kilometers in a single day, and each locust can eat roughly its own body weight in plants every day. As a result, swarms can destroy farmland ( C ) feeds millions of people. For this reason, many countries monitor rainfall and plant growth in order to detect outbreaks early.",
+    ],
+    ja: [
+      'サバクトビバッタは、アフリカや中東、南アジアの乾いた地域に見られるバッタの一種である。ふだんの多くの時期、彼らはひとりで暮らし、おたがいをさける傾向のある昆虫だ。この「孤独相」のときは、体はおもに緑か茶色で、作物にほとんど害をあたえない。',
+      'しかし、大雨のあとには植物が急に育ち、バッタの数がふえる。雨がやんで植物がかれはじめると、たくさんのバッタが、まだえさの残るわずかな場所に集まらざるをえなくなる。科学者は、後ろ足どうしがひんぱんにふれあうことが、おどろくべき変化を引き起こすことを発見した。数時間のうちにバッタはおたがいに引きよせられるようになり、やがて体の色や形も変わる。',
+      'この「群生相」になると、バッタは何十億匹にもなる巨大な群れをつくる。群れは1日で100キロ以上移動することがあり、1匹1匹が毎日、自分の体重とほぼ同じ量の植物を食べる。その結果、群れは何百万人もの人を養う農地をあらしてしまうことがある。そのため、多くの国が大発生を早く見つけるために、雨の量や植物の育ち方を見守っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 insects を説明する主格の関係代名詞 that。what は先行詞をとらない、where はあとに完全な文、whose はあとに名詞が必要。' },
+      { id: 'B', choices: ['to gather', 'gathering', 'gather', 'gathered'], answer: 0, why: 'be forced to ～「～せざるをえない」。force O to ～ の受け身なので to 不定詞が続く。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 farmland を説明し、あとに動詞 feeds が続くので主格の関係代名詞 that。where はあとに完全な文が必要。' },
+    ],
+    tf: [
+      { statement: 'サバクトビバッタは、ふだんはひとりで暮らしている。', answer: true, why: '第1段落 they are insects that live alone。' },
+      { statement: '大雨のあとには、バッタの数がへる。', answer: false, why: '第2段落 after heavy rains … locust populations increase。' },
+      { statement: '後ろ足がふれあうことが、変化のきっかけになる。', answer: true, why: '第2段落 frequent contact between their back legs triggers a remarkable change。' },
+      { statement: '群れは1日に10キロほどしか移動できない。', answer: false, why: '第3段落 more than 100 kilometers in a single day。' },
+    ],
+    qa: [
+      { q: 'Why do many countries monitor rainfall and plant growth?', choices: ['To detect locust outbreaks early.', 'To help locusts find more food.', 'To change the color of the locusts.', 'To make the locusts live alone.'], answer: 0, why: '第3段落 in order to detect outbreaks early。' },
+    ],
+  },
 ]

@@ -1817,6 +1817,17 @@ export const PASSAGES: Passage[] = [
       { q: 'その恐竜は何を食べていた？', choices: ['植物だけ', '肉だけ', '魚だけ'], answer: 0 },
     ],
   },
+  {
+    id: 'birthday-cake',
+    title: 'My Birthday Cake',
+    text: 'Today is my birthday. I am ten years old now. In the morning, my mother and I made a cake together. We used eggs, milk, and a lot of strawberries. I put the strawberries on top. In the evening, my father came home early. We turned off the lights, and my family sang "Happy Birthday" to me. I blew out ten candles at once. The cake was soft and sweet. It was the best birthday!',
+    ja: '今日はぼくの誕生日です。ぼくは10さいになりました。朝、お母さんといっしょにケーキをつくりました。たまごと牛にゅうと、たくさんのいちごを使いました。ぼくがいちごを上にのせました。夜、お父さんが早く帰ってきました。電気を消して、家族が「ハッピーバースデー」を歌ってくれました。ぼくは10本のろうそくを1回でふき消しました。ケーキはやわらかくてあまかったです。最高の誕生日でした！',
+    questions: [
+      { q: '何さいになった？', choices: ['10さい', '9さい', '12さい'], answer: 0 },
+      { q: 'ケーキの上に何をのせた？', choices: ['いちご', 'バナナ', 'チョコレート'], answer: 0 },
+      { q: 'ろうそくは何本だった？', choices: ['10本', '5本', '12本'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'
