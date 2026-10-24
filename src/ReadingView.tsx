@@ -166,7 +166,7 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
           </div>
           {picked !== null && (
             <button
-              className="flip"
+              className="flip go-next"
               onClick={() => {
                 setPicked(null)
                 setStep(step + 1)

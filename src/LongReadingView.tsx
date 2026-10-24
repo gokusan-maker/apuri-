@@ -975,7 +975,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
             {bestTime ? '　🏁 最短タイム更新！' : loadLongTimes()[p.id] ? `　（満点の最短 ${formatTime(loadLongTimes()[p.id])}）` : ''}
           </p>
           <button
-            className="flip"
+            className="flip go-retry"
             onClick={() => {
               setBlanks({})
               setTf({})
@@ -1001,7 +1001,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </button>
           {score < total && (
             <button
-              className="list-link"
+              className="list-link miss-retry"
               onClick={() => {
                 // まちがえた設問の答えだけを消して、もう一度とく
                 const keep = <T,>(m: Record<string | number, T>, ok: (k: string, v: T) => boolean) => Object.fromEntries(Object.entries(m).filter(([k, v]) => ok(k, v)))
@@ -1042,7 +1042,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         </div>
       ) : (
         <button
-          className="flip"
+          className="flip go-next"
           disabled={answered < total}
           onClick={() => {
             const sec = Math.round((Date.now() - startAt) / 1000)
