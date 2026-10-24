@@ -1112,7 +1112,7 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
       <h2>
         単語のなかま <span className="attr-badge attr-word">属性：単語</span>
       </h2>
-      <details className="party-help">
+      <details className="party-help chip-fold cf-4">
         <summary>ℹ️ なかまについて</summary>
         <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>
         {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}

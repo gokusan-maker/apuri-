@@ -4,7 +4,7 @@ import { RIDDLES } from './puzzles'
 export function RiddleBook({ solved }: { solved: string[] }) {
   const got = RIDDLES.filter((r) => solved.includes(r.q))
   return (
-    <details className="tense-table riddle-book">
+    <details className="tense-table riddle-book chip-fold cf-1">
       <summary>
         📚 なぞなぞ図鑑（{got.length} / {RIDDLES.length}）
       </summary>

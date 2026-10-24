@@ -30,7 +30,7 @@ export function BadgeList({ earned }: { earned: Earned }) {
       )}
       {count > 0 && <ul className="badge-grid">{BADGES.filter((b) => earned[b.id]).map(tile)}</ul>}
       {count < BADGES.length && (
-        <details className="badges-locked">
+        <details className="badges-locked chip-fold cf-1">
           <summary>
             🔒 まだのバッジ <span className="game-count">{BADGES.length - count}</span>
           </summary>

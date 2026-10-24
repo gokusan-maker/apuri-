@@ -9,7 +9,7 @@ export function DiaryBox({ today }: { today: string }) {
   const [saved, setSaved] = useState(false)
   const hint = DIARY_HINTS[Number(today.slice(-2)) % DIARY_HINTS.length]
   return (
-    <details className="diary">
+    <details className="diary chip-fold cf-3">
       <summary>📝 ひとこと英語日記{diary[today] ? '（今日は書いたよ）' : ''}</summary>
       <p className="stats-note">英語で1文書いてみよう。ヒント：{hint}</p>
       <textarea

@@ -944,7 +944,7 @@ function App() {
               )
             )}
             {walkDiary.length > 0 && (
-              <details className="walk-diary">
+              <details className="walk-diary chip-fold cf-0">
                 <summary>📔 おさんぽ日記（{walkDiary.length}こ）</summary>
                 <ul>
                   {walkDiary.map((e, i) => (

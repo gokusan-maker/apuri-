@@ -29,7 +29,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         </span>
       </summary>
       {loadProverbs().length > 0 && (
-        <details className="proverb-book">
+        <details className="proverb-book chip-fold cf-2">
           <summary>
             📜 ことわざ帳 {loadProverbs().length} / {PROVERBS.length}
           </summary>

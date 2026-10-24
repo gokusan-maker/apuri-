@@ -868,7 +868,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         )}
         {firstClear && <p className="level-up">🌟 初クリア！ XP+{GRAMMAR_CLEAR_XP}</p>}
         {unit.questions.some((x) => correctSentence(x)) && (
-          <details className="tense-table correct-list">
+          <details className="tense-table correct-list chip-fold cf-3">
             <summary>📖 この回の正しい英文（{unit.questions.filter((x) => correctSentence(x)).length}文）</summary>
             <ul>
               {unit.questions

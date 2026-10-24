@@ -86,3 +86,8 @@ it('記録の「単語帳ごとの定着」は色ボタン、今日のことば�
   expect(readFileSync('src/StatsView.tsx', 'utf8')).toContain('by-level game-fold lg-3')
   expect(readFileSync('src/WordOfDayView.tsx', 'utf8')).toContain('wotd-ex-btn')
 })
+
+it('おさんぽ日記・まだのバッジ・ことわざ帳・英語日記・重要語句などのたたみは、色つきの丸いボタン（chip-fold）', () => {
+  for (const f of ['App.tsx', 'BadgesView.tsx', 'BossBookView.tsx', 'DiaryView.tsx', 'LongReadingView.tsx', 'GrammarView.tsx', 'RiddleBookView.tsx', 'MonsterView.tsx']) expect(readFileSync(`src/${f}`, 'utf8')).toMatch(/chip-fold cf-\d/)
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.chip-fold > summary \{[^}]*white-space: nowrap/)
+})

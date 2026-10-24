@@ -2716,3 +2716,19 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .wotd .wotd-ex > summary.wotd-ex-btn { display: inline-flex; align-items: center; padding: 4px 12px; border-radius: 999px; background: linear-gradient(180deg, #c084fc, #9333ea); color: #fff; font-size: 0.78rem; font-weight: 900; white-space: nowrap; list-style: none; box-shadow: 0 3px 0 #6b21a8; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
 .wotd .wotd-ex > summary.wotd-ex-btn::-webkit-details-marker { display: none; }
 .wotd .wotd-ex > summary.wotd-ex-btn::before { display: none; }
+
+/* たたみ（details）の見出しを色つきの丸いゲームボタンに（文字はそのまま・1行・右に ›） */
+.chip-fold { --cf-a: #60a5fa; --cf-b: #2563eb; --cf-s: #1e40af; }
+.chip-fold.cf-0 { --cf-a: #4ade80; --cf-b: #16a34a; --cf-s: #166534; }
+.chip-fold.cf-1 { --cf-a: #c084fc; --cf-b: #9333ea; --cf-s: #6b21a8; }
+.chip-fold.cf-2 { --cf-a: #fbbf24; --cf-b: #f97316; --cf-s: #c2410c; }
+.chip-fold.cf-3 { --cf-a: #22d3ee; --cf-b: #0891b2; --cf-s: #0e7490; }
+.chip-fold.cf-4 { --cf-a: #60a5fa; --cf-b: #2563eb; --cf-s: #1e40af; }
+.chip-fold.cf-5 { --cf-a: #f472b6; --cf-b: #db2777; --cf-s: #9d174d; }
+.chip-fold > summary { display: flex; align-items: center; gap: 6px; max-width: 100%; margin: 4px 0; padding: 9px 14px; border-radius: 999px; background: linear-gradient(180deg, var(--cf-a), var(--cf-b)); color: #fff; font-size: 0.88rem; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; list-style: none; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 var(--cf-s); cursor: pointer; }
+.chip-fold > summary::-webkit-details-marker { display: none; }
+.chip-fold > summary::before { order: 9; margin: 0 0 0 auto; flex: none; background: rgb(255 255 255 / 0.25); color: #fff; }
+.chip-fold > summary:active { transform: translateY(3px); box-shadow: none; }
+.chip-fold > summary .game-count { background: rgb(255 255 255 / 0.25); color: #fff; }
+.chip-fold[open] > summary { margin-bottom: 8px; }
+.tense-table.chip-fold { padding: 0; background: none; }

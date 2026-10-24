@@ -252,7 +252,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </div>
         )}
         {Object.keys(types).length > 0 && (
-          <details className="long-types">
+          <details className="long-types chip-fold cf-4">
             <summary>📊 問題のタイプ別 正答率</summary>
             <ul>
               {(Object.keys(TYPE_LABEL) as QType[])
@@ -510,7 +510,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         {showJa ? '和訳をかくす' : '和訳を見る'}
       </button>
       {keyWords(p).length > 0 && (
-        <details className="long-vocab">
+        <details className="long-vocab chip-fold cf-5">
           <summary>📒 重要語句（{keyWords(p).length}）</summary>
           <ul>
             {keyWords(p).map((w) => (
