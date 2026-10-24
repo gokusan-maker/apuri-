@@ -83,3 +83,7 @@ it('文法のおすすめ単元は金色のゲームボタン', () => {
 it('文法の学年まとめテストは学年の色のゲームボタン', () => {
   expect(css).toMatch(/\.grade-tests \.list-link \{ --gt-h: 160;[^}]*linear-gradient/)
 })
+
+it('読解のランダム挑戦はサイコロのゲームボタン', () => {
+  expect(css).toMatch(/\.random-read-btn \{[^}]*linear-gradient\(135deg, #22d3ee, #6366f1\)/)
+})

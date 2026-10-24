@@ -221,12 +221,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             🔥 中3チャレンジ（中3レベルの読解 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
           </button>
         )}
-        <button className="list-link" onClick={() => {
+        <button className="list-link random-read-btn" title={LIST.some((x) => record[x.id] === undefined) ? 'まだ読んでいない読解から1本' : undefined} onClick={() => {
             const todo = LIST.filter((x) => record[x.id] === undefined)
             const pool = todo.length > 0 ? todo : LIST
             openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
           }}>
-          🎲 ランダム挑戦{LIST.some((x) => record[x.id] === undefined) ? '（未読から）' : ''}
+          🎲 ランダム挑戦
         </button>
         {whole && recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>

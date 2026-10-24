@@ -2148,3 +2148,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 .grade-tests .list-link:nth-child(3) { --gt-h: 275; }
 .grade-tests .list-link:active { transform: translateY(2px); box-shadow: 0 1px 0 hsl(var(--gt-h) 60% 28%); }
 .grade-tests .grade-best { color: #fff; }
+
+/* 読解のランダム挑戦：サイコロのゲームボタン */
+.random-read-btn { display: flex; align-items: center; justify-content: center; width: 100%; padding: 12px 16px; border: none; border-radius: 16px; background: linear-gradient(135deg, #22d3ee, #6366f1); color: #fff; font-size: 1rem; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 4px 0 #3730a3, 0 6px 14px rgb(0 0 0 / 0.12); }
+.random-read-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #3730a3; }
