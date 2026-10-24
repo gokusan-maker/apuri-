@@ -542,7 +542,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         {toggle}
         {now && (
           <button className="flip ta-start quiz-pick-start" onClick={() => restart(direction)}>
-            ▶ {now.label} をはじめる
+            {now.label} をはじめる
           </button>
         )}
       </section>

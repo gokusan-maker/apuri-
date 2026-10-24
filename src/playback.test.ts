@@ -120,3 +120,8 @@ it('ガチャの「最近のガチャ・ガチャの記録・〇〇の仲間だ�
   const src = readFileSync('src/GachaView.tsx', 'utf8')
   for (const c of ['gacha-log chip-fold', 'gacha-stats chip-fold', 'gacha-species chip-fold']) expect(src).toContain(c)
 })
+
+it('ミニゲームの「はじめる」は ▶ が1つだけ（CSS で付ける）、おさらいの色ボタンにも右に ›', () => {
+  expect(readFileSync('src/QuizView.tsx', 'utf8')).not.toContain('▶ {now.label} をはじめる')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.word-review > \.list-link::after \{ content: '›'/)
+})
