@@ -1652,8 +1652,8 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          {mode === 'boss' && buddyRow}
-          {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
+          {mode === 'boss' && !playOn && buddyRow}
+          {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && !playOn && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReading(today).p.title}`} onClick={() => setShortGo(true)}>

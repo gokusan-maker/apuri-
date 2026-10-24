@@ -1778,3 +1778,16 @@ it('学年が中3なら、今日の課題の読解は高校入試レベルの長
   expect(document.querySelector('.long-para')).not.toBeNull()
   expect(screen.queryByText('← 読解の一覧')).toBeNull()
 })
+
+it('ボス部屋でボスをえらぶと戦いだけの画面になり、上の「ほかの問題をえらぶ」でボスの一覧にもどる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  render(<App />)
+  navTo('ボス部屋')
+  fireEvent.click(screen.getByRole('button', { name: /中1のボス「.+」に挑戦/ }))
+  expect(screen.queryByLabelText('育てているなかま')).toBeNull()
+  expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull()
+  expect(screen.getByRole('group', { name: 'チーム' })).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
+  expect(screen.getByRole('group', { name: 'ボスをえらぶ' })).toBeInTheDocument()
+})

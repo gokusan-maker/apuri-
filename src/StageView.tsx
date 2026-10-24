@@ -1,3 +1,4 @@
+import { usePlaying } from './playing'
 import { BossTime } from './BossTimeView'
 import type { ComponentProps, CSSProperties } from 'react'
 import { medalFor } from './medal'
@@ -88,6 +89,22 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const week = weekKey(dayKey())
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
+
+  // ステージ・ボス戦の画面では、App の上に「ほかの問題をえらぶ」（おすとステージ・ボスの一覧へ）
+  usePlaying(!!(univFight || endless || rush || timeAttack || nightFight || weekendFight || rareFight || fighting || playing), () => {
+    setUnivFight(null)
+    setEndless(null)
+    setRush(null)
+    setTimeAttack(false)
+    setNightFight(false)
+    setWeekendFight(false)
+    setRareFight(false)
+    setFighting(null)
+    setDailyFight(0)
+    setPlaying(null)
+    setResult(null)
+    setTreasure(null)
+  })
 
   if (univFight) {
     const first = !univ[univFight.id]
