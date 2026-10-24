@@ -93,7 +93,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         return (
           <p className="room-trying" role="status">
             👀 おためし中：{r.icon} {r.name}
-            <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
+            <button className="shop-btn buy-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
               🪙{priceWith(wallet, r.price)}でこの部屋を買う
             </button>
           </p>
@@ -144,7 +144,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       </h3>
       <p className="stats-note">1日休んでも連続記録が切れない</p>
       <button
-        className="shop-btn freeze-btn"
+        className="shop-btn freeze-btn buy-btn"
         disabled={!onBuyFreeze || (wallet.freezes ?? 0) >= FREEZE_MAX || wallet.coins < FREEZE_PRICE}
         onClick={onBuyFreeze}
       >
@@ -194,7 +194,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
                   <button className="room-try" aria-pressed={tryRoom === r.id} onClick={() => setTryRoom(tryRoom === r.id ? null : r.id)}>
                     {tryRoom === r.id ? '👀 ためし中' : '👀 ためす'}
                   </button>
-                  <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
+                  <button className="shop-btn buy-btn" disabled={wallet.coins < priceWith(wallet, r.price)} onClick={() => onBuy(r.id)}>
                     🪙{priceWith(wallet, r.price)}で買う
                   </button>
                 </>
@@ -243,7 +243,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
                   {wearing ? 'はずす' : 'つける'}
                 </button>
               ) : (
-                <button className="shop-btn" disabled={wallet.coins < priceWith(wallet, it.price)} onClick={() => onBuy(it.id)}>
+                <button className="shop-btn buy-btn" disabled={wallet.coins < priceWith(wallet, it.price)} onClick={() => onBuy(it.id)}>
                   🪙{priceWith(wallet, it.price)}で買う
                 </button>
               )}
