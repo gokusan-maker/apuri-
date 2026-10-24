@@ -1624,3 +1624,4 @@
 - 2026-10-24: 文法の解説とまちがい例を総点検：言い切りすぎていた規則（help 人 to・stop to・時の when/if・could と was able to・There is ＋数えられない名詞・all ＋数えられない名詞）を正確に、まちがい例をはっきり誤りの文に（Who did made・don't go there など）
 - 2026-10-24: ミニゲームの問題データを総点検：反対語・なぞなぞで正解になってしまう誤答を出さない、場所の前置詞に日本語の手がかり、Mr. Sato→Ms. Sato、絵文字のかぶり（plane/airplane など）や合わない絵文字を削除、doctor の定義、busses・showed を誤答から外す、join の解説、単語数の表示を修正
 - 2026-10-24: 複数形クイズ：persons（かたい言い方で使う複数形）も誤答に出さない
+- 2026-10-24: 難関大の読解「Why the Familiar Feels Good」（単純接触効果・評論）を追加（39本）

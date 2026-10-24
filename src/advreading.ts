@@ -3210,4 +3210,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What allows a gecko to stick to smooth surfaces?', choices: ['Weak forces between molecules, multiplied by millions of tiny hair tips.', 'A sticky liquid produced by its feet.', 'Suction cups on the bottom of its toes.', 'Sharp claws that dig into the surface.'], answer: 0, why: '第2段落 van der Waals forces ... because there are so many of them。' },
     ],
   },
+{
+    id: 'adv-mere-exposure',
+    title: 'Why the Familiar Feels Good',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Why do we often grow to like a song after hearing it several times, even if it did not impress us at first? One explanation is what psychologists call the \"mere exposure effect\": simply being exposed to something again and again tends to make us feel more positively ( A ) it, even when nothing else about it has changed.",
+      "In a well-known series of studies published in 1968, the psychologist Robert Zajonc showed people unfamiliar items, such as made-up words and Chinese characters that the participants could not read. Some items were shown only once, while others were shown many times. Later, when asked to guess which items had pleasant meanings, participants tended to choose the ones they had seen ( B ) often, although they had been given no information about their meanings at all.",
+      "The effect has clear practical consequences. Advertisers repeat the same messages, and politicians repeat their names, partly because familiarity can turn into a sense of liking or trust. The effect has limits, however: too much repetition can lead to boredom, and familiarity cannot make something good if people already dislike it strongly. Understanding the effect may help us notice when our preferences are shaped less by quality ( C ) by simple repetition.",
+    ],
+    ja: [
+      'なぜ私たちは、最初はとくに印象に残らなかった曲でも、何度か聞くうちに好きになることが多いのだろうか。説明の1つは、心理学者が「単純接触効果」とよぶものである。ただ何度もくり返し何かにふれるだけで、ほかには何も変わっていなくても、それに対してより好意的に感じやすくなるのである。',
+      '1968年に発表されたよく知られた一連の研究で、心理学者ロバート・ザイアンスは、作られた単語や参加者が読めない漢字など、なじみのないものを人々に見せた。1回しか見せないものもあれば、何度も見せるものもあった。あとで、どれがよい意味をもつと思うか推測するよう求められると、参加者は、意味についての情報をまったくあたえられていなかったにもかかわらず、より多く見たものを選ぶ傾向があった。',
+      'この効果には、はっきりとした実際的な影響がある。広告主が同じメッセージをくり返し、政治家が自分の名前をくり返すのは、なじみが好意や信頼の感覚に変わりうることが理由の1つである。しかし、この効果には限界もある。くり返しが多すぎると退屈につながることがあり、人々がすでに強くきらっているものを、なじみによってよいものにすることはできない。この効果を理解すれば、自分の好みが質よりも単なるくり返しによって形づくられているときに、それに気づく助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['about', 'with', 'than', 'at'], answer: 0, why: 'feel positively about ～「～について好意的に感じる」。feel ... about ～ の形。' },
+      { id: 'B', choices: ['more', 'mostly', 'much', 'many'], answer: 0, why: 'more often「より多く（何度も）」。1回だけ見たものとくらべているので比較級。' },
+      { id: 'C', choices: ['than', 'as', 'that', 'then'], answer: 0, why: 'less A than B「A よりむしろ B によって」。less by quality than by simple repetition。' },
+    ],
+    tf: [
+      { statement: '単純接触効果とは、何度もふれるだけで好意的に感じやすくなる傾向のことである。', answer: true, why: '第1段落 simply being exposed to something again and again tends to make us feel more positively about it。' },
+      { statement: 'ザイアンスの研究では、参加者は見せられた単語の意味を事前に教えられていた。', answer: false, why: '第2段落 they had been given no information about their meanings at all。' },
+      { statement: '筆者は、くり返しはどれだけ多くても必ず好意を強めると述べている。', answer: false, why: '第3段落 too much repetition can lead to boredom。' },
+      { statement: '広告や政治家のくり返しは、この効果を利用している面がある。', answer: true, why: '第3段落 Advertisers repeat ... partly because familiarity can turn into a sense of liking or trust。' },
+    ],
+    qa: [
+      { q: 'Which items did participants tend to choose as having pleasant meanings?', choices: ['The ones they had seen more often.', 'The ones they had seen only once.', 'The ones that were easiest to read.', 'The ones explained by the researcher.'], answer: 0, why: '第2段落 participants tended to choose the ones they had seen more often。' },
+    ],
+  },
 ]
