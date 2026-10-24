@@ -3152,4 +3152,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn through shogi?', choices: ['People can communicate without sharing a language.', 'Shogi is easier than chess.', 'Winning is more important than practice.', 'Canada has its own kind of shogi.'], answer: 0, why: '第3段落 you can communicate with people even when you do not share a language。' },
     ],
   },
+{
+    id: 'adv-anchoring',
+    title: 'The Power of the First Number',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we have to guess a number, we rarely start from nothing. Instead, we tend to begin with whatever number is in front of us and then adjust. The trouble is that we usually adjust too little. Psychologists call this tendency the \"anchoring effect,\" because the first number holds our judgment in place ( A ) an anchor holds a ship.",
+      "In a famous experiment published in 1974, Amos Tversky and Daniel Kahneman spun a wheel of fortune that had been set to stop at either 10 or 65. Participants were then asked whether the percentage of African countries in the United Nations was higher or lower than that number, and then to give their own estimate. Although the wheel was obviously random, it shaped their answers: people who saw 10 gave a median estimate of 25 percent, ( B ) those who saw 65 gave a median of 45 percent.",
+      "Anchors influence many everyday decisions, from the prices we are willing to pay to the salaries we ask for. A high \"original price\" printed next to a discount can make the sale price seem cheap, even if it is not. Being aware of the effect does not remove it entirely, but deliberately considering reasons why the anchor might be wrong can reduce its pull. In other words, the best defense is not to ignore the first number but to question ( C ) it deserves our trust.",
+    ],
+    ja: [
+      '数を推測しなければならないとき、私たちはゼロから考え始めることはめったにない。そうではなく、目の前にある数から始めて、それを調整しがちである。問題は、私たちがふつう調整が足りないことだ。心理学者はこの傾向を「アンカリング効果」とよぶ。いかりが船をつなぎとめるように、最初の数が私たちの判断をつなぎとめるからである。',
+      '1974年に発表された有名な実験で、エイモス・トヴェルスキーとダニエル・カーネマンは、10か65のどちらかで止まるように仕組んだルーレットを回した。参加者は次に、国際連合に加盟しているアフリカの国の割合がその数より大きいか小さいかを答え、それから自分の推定値を答えるよう求められた。ルーレットが明らかに偶然であるにもかかわらず、それは答えに影響した。10を見た人々の推定値の中央値は25パーセントだったのに対し、65を見た人々の中央値は45パーセントだったのである。',
+      'アンカーは、払ってもよいと思う値段から、求める給料まで、日常の多くの判断に影響をあたえる。割引価格のとなりに高い「元の値段」が書かれていると、実際にはそうでなくても、売り値が安く思えることがある。この効果を知っていても、完全に取り除けるわけではないが、アンカーがまちがっているかもしれない理由を意識して考えることで、その引っぱる力を弱めることができる。言いかえれば、最善の防ぎ方は、最初の数を無視することではなく、それが信頼に値するかどうかを問うことなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['just as', 'such as', 'because of', 'in spite of'], answer: 0, why: 'just as ～「ちょうど～するように」。あとに文（an anchor holds a ship）が続くので接続詞の just as。such as・because of・in spite of のあとには文は続かない。' },
+      { id: 'B', choices: ['whereas', 'despite', 'instead of', 'rather than'], answer: 0, why: 'whereas「～である一方で」。10を見た人と65を見た人の結果を、文と文で対比している。despite・instead of は前置詞なので文は続かない。' },
+      { id: 'C', choices: ['whether', 'what', 'which', 'unless'], answer: 0, why: 'question whether ～「～かどうかを問う」。whether のあとに完全な文（it deserves our trust）が続く。' },
+    ],
+    tf: [
+      { statement: 'アンカリング効果では、人は最初の数から十分に調整しすぎる傾向がある。', answer: false, why: '第1段落 we usually adjust too little（調整が足りない）。' },
+      { statement: '実験のルーレットは、10か65で止まるように仕組まれていた。', answer: true, why: '第2段落 set to stop at either 10 or 65。' },
+      { statement: '65を見た参加者は、10を見た参加者より高い推定をした。', answer: true, why: '第2段落 中央値 25 パーセントと 45 パーセント。' },
+      { statement: '筆者は、アンカリング効果は知っているだけで完全になくせると述べている。', answer: false, why: '第3段落 Being aware of the effect does not remove it entirely。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what can reduce the anchoring effect?', choices: ['Thinking about reasons why the anchor might be wrong.', 'Looking at the first number for a longer time.', 'Choosing the highest price available.', 'Spinning a wheel before every decision.'], answer: 0, why: '第3段落 deliberately considering reasons why the anchor might be wrong can reduce its pull。' },
+    ],
+  },
 ]
