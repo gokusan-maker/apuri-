@@ -3747,6 +3747,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-lost-and-found',
+    title: 'The Lost and Found Board',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "At our school, there is a big box near the teachers' room. It is the lost and found box. Last spring, I was surprised to see how many things were in it: umbrellas, water bottles, jackets, and even a new pair of shoes. Most of the things had no names on them, so they stayed in the box ( A ) months.",
+      "As a member of the student council, I wanted to solve this problem. Our council decided to take photos of the items and put them on a board in the hallway. We also made a rule: if no one comes for an item within a month, it will be given ( B ) a charity.",
+      "The results were better than we expected. In the first two weeks, more than thirty items went back to their owners. One first-year student found her jacket on the board. She said, \"I thought I had lost it on the train. Thank you!\" Her smile made me happy.",
+      "Now, many students write their names on their things. I learned that a small idea can change people's actions. Next, our council wants to think about how to make the box itself ( C ) to find.",
+    ],
+    ja: [
+      '私たちの学校では、職員室の近くに大きな箱があります。落とし物の箱です。この前の春、中にあまりにたくさんの物が入っているのを見て、私はおどろきました。かさ、水とう、上着、それに新しいくつまでありました。ほとんどの物には名前が書いていなかったので、何か月も箱の中に残ったままでした。',
+      '生徒会の一員として、私はこの問題を解決したいと思いました。私たちの生徒会は、落とし物の写真をとって、廊下のボードにはることにしました。また、決まりも作りました。1か月以内にだれも取りに来なければ、その物は慈善団体に寄付されるというものです。',
+      '結果は、私たちが思っていたよりよいものでした。最初の2週間で、30個以上の物が持ち主のもとにもどりました。1年生のある生徒は、ボードで自分の上着を見つけました。「電車でなくしたと思っていました。ありがとうございます！」と彼女は言いました。彼女の笑顔を見て、私はうれしくなりました。',
+      '今では、多くの生徒が持ち物に名前を書いています。小さなアイデアが人の行動を変えられることを学びました。次に、私たちの生徒会は、箱そのものをもっと見つけやすくする方法を考えたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'since', 'at', 'by'], answer: 0, why: 'for ＋ 期間「～のあいだ」。for months「何か月も」。since は起点（since April など）、at・by は期間には使わない。' },
+      { id: 'B', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'give A to 人・団体「A を～にあたえる」。受け身で be given to ～「～にあたえられる」。' },
+      { id: 'C', choices: ['easier', 'easily', 'ease', 'more easily'], answer: 0, why: 'make ＋ O ＋ 形容詞「O を～にする」。make the box easier to find「箱を見つけやすくする」。easily・more easily は副詞、ease は名詞。' },
+    ],
+    tf: [
+      { statement: '落とし物の箱には、新しいくつも入っていた。', answer: true, why: '第1段落 even a new pair of shoes。' },
+      { statement: '生徒会は、落とし物の写真を廊下のボードにはった。', answer: true, why: '第2段落 take photos of the items and put them on a board in the hallway。' },
+      { statement: '最初の2週間で持ち主にもどった物は、10個に満たなかった。', answer: false, why: '第3段落 more than thirty items went back to their owners。' },
+      { statement: '今では、持ち物に名前を書く生徒はほとんどいない。', answer: false, why: '第4段落 Now, many students write their names on their things。' },
+    ],
+    qa: [
+      { q: 'What will happen to an item if no one comes for it within a month?', choices: ['It will be given to a charity.', 'It will be thrown away.', 'It will be sold at the school festival.', 'It will be sent to the train station.'], answer: 0, why: '第2段落 if no one comes for an item within a month, it will be given to a charity。' },
+    ],
+  },
+  {
     id: 'hs-food-bank',
     title: 'One Can Is a Big Help',
     level: '高校入試（体験文）',
