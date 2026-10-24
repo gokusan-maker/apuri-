@@ -3181,4 +3181,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what can reduce the anchoring effect?', choices: ['Thinking about reasons why the anchor might be wrong.', 'Looking at the first number for a longer time.', 'Choosing the highest price available.', 'Spinning a wheel before every decision.'], answer: 0, why: '第3段落 deliberately considering reasons why the anchor might be wrong can reduce its pull。' },
     ],
   },
+{
+    id: 'toefl-gecko',
+    title: 'How Geckos Walk on Ceilings',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Geckos are small lizards that can run up smooth walls and even hang upside down from ceilings. For a long time, people assumed their feet must be sticky, like tape, or that they worked like suction cups. Neither idea turned ( A ) to be correct: gecko feet leave no glue behind, and they still stick in conditions where suction would not work.",
+      "The secret lies in the structure of the toes. Each toe is covered with millions of extremely fine hairs called setae, and the tip of each seta splits into hundreds of even smaller ends. These ends are so tiny that they can come incredibly close to the surface. At that distance, weak attractive forces between molecules, known as van der Waals forces, begin to act. One tip produces only a very small force, but because there are so many of them, the total is ( B ) to hold the animal's weight.",
+      "Just as remarkable is how easily a gecko lets go. By changing the angle of its toes and peeling them off from the tip, it can release its grip in a fraction of a second. Engineers have studied this system closely, and it has ( C ) the development of dry adhesives that hold firmly yet can be removed cleanly and used many times.",
+    ],
+    ja: [
+      'ヤモリは、なめらかな壁をかけのぼり、天井からさかさまにぶら下がることさえできる小さなトカゲの仲間である。長いあいだ、人々は、ヤモリの足はテープのようにべたべたしているにちがいない、あるいは吸盤のようにはたらいているのだと思いこんでいた。どちらの考えも正しくないことがわかった。ヤモリの足はのりを残さないし、吸盤ではくっつかないような条件でもくっつくのである。',
+      'そのひみつは指のつくりにある。それぞれの指は剛毛（セタ）とよばれる何百万本ものきわめて細い毛におおわれており、それぞれの毛の先はさらに小さな何百もの先端に分かれている。これらの先端はとても小さいので、表面にきわめて近づくことができる。その距離になると、ファンデルワールス力として知られる、分子どうしの弱い引き合う力がはたらき始める。1つの先端が生む力はごくわずかだが、その数がとても多いので、合計するとヤモリの体重を支えるのに十分な大きさになる。',
+      '同じくらいおどろくべきなのは、ヤモリがいかにかんたんに足をはなせるかである。指の角度を変え、先のほうからはがしていくことで、ほんの一瞬でくっつく力をなくすことができる。技術者たちはこのしくみをくわしく研究してきた。そしてそれは、しっかりくっつくのにきれいにはがせて、何度も使える、のりを使わない接着材の開発につながっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['out', 'up', 'off', 'over'], answer: 0, why: 'turn out to be ～「～であるとわかる」。' },
+      { id: 'B', choices: ['enough', 'too', 'so', 'very'], answer: 0, why: '形容詞（large など）を省いた enough to ～「～するのに十分な」。the total is enough to hold ...「合計は支えるのに十分だ」。' },
+      { id: 'C', choices: ['inspired', 'inspiring', 'inspire', 'inspiration'], answer: 0, why: 'has ＋ 過去分詞の現在完了。has inspired「（開発の）きっかけになってきた」。' },
+    ],
+    tf: [
+      { statement: 'ヤモリの足は、のりのようなものを出してくっついている。', answer: false, why: '第1段落 gecko feet leave no glue behind。' },
+      { statement: 'ヤモリの指の毛の先は、さらに小さな多くの先端に分かれている。', answer: true, why: '第2段落 the tip of each seta splits into hundreds of even smaller ends。' },
+      { statement: '1つの先端が生む力だけで、ヤモリの体重を支えられる。', answer: false, why: '第2段落 One tip produces only a very small force（多くの先端の合計で支える）。' },
+      { statement: 'ヤモリは指を先のほうからはがして、すばやく足をはなす。', answer: true, why: '第3段落 peeling them off from the tip ... in a fraction of a second。' },
+    ],
+    qa: [
+      { q: 'What allows a gecko to stick to smooth surfaces?', choices: ['Weak forces between molecules, multiplied by millions of tiny hair tips.', 'A sticky liquid produced by its feet.', 'Suction cups on the bottom of its toes.', 'Sharp claws that dig into the surface.'], answer: 0, why: '第2段落 van der Waals forces ... because there are so many of them。' },
+    ],
+  },
 ]
