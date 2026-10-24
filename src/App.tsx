@@ -1368,8 +1368,9 @@ function App() {
               🎂 今日は{monster.name ?? formOf(monster).name}のおたんじょう日！（{birthdayAge(bday, today)}さい）お祝いする
             </button>
           )}
-          <p className="stats">
-            今日の残り {queue.length} 語 ・ 定着 {learned} / {words.length} 語
+          <p className="stats buddy-chips home-stats" aria-label={`今日の残り ${queue.length} 語 ・ 定着 ${learned} / ${words.length} 語`}>
+            <span>📖 のこり {queue.length}語</span>
+            <span>✅ 定着 {learned}/{words.length}</span>
           </p>
           {settings.testDate && daysUntil(today, settings.testDate) >= 0 && (
             <p className="exam">

@@ -37,7 +37,7 @@ describe('App', () => {
 
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
-    expect(screen.getByText(`今日の残り 10 語 ・ 定着 0 / ${WORDS.length} 語`)).toBeInTheDocument()
+    expect(screen.getByLabelText(`今日の残り 10 語 ・ 定着 0 / ${WORDS.length} 語`)).toBeInTheDocument()
     expect(screen.getByText(FIRST()[0].en)).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('意味を見る'))
@@ -45,7 +45,7 @@ describe('App', () => {
 
     fireEvent.click(screen.getByText('覚えた'))
     expect(screen.getByText(FIRST()[1].en)).toBeInTheDocument()
-    expect(screen.getByText(new RegExp(`今日の残り 9 語`))).toBeInTheDocument()
+    expect(screen.getByLabelText(new RegExp(`今日の残り 9 語`))).toBeInTheDocument()
   })
 
   it('「覚えた」でモンスターにXPが入り、保存される', () => {
@@ -300,7 +300,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']) fireEvent.click(screen.getByRole('button', { name: l }))
     const n = wordsOf(['中1']).length
-    expect(screen.getByText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
+    expect(screen.getByLabelText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中1'])
   })
 
@@ -407,7 +407,7 @@ describe('App', () => {
     navTo('ホーム')
     fireEvent.click(screen.getByText(/📚 単語帳：/))
     fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
-    expect(screen.getByText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
+    expect(screen.getByLabelText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
   })
 
   it('相棒に名前をつけられ、保存される', () => {
@@ -1193,11 +1193,11 @@ describe('App', () => {
     render(<App />)
     expect(screen.getByText('今日の学習は完了です 🎉 また明日！')).toBeInTheDocument()
     fireEvent.click(screen.getByText('もう5語おぼえる'))
-    expect(screen.getByText(/今日の残り 5 語/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/今日の残り 5 語/)).toBeInTheDocument()
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    expect(screen.getByText(/今日の残り 4 語/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/今日の残り 4 語/)).toBeInTheDocument()
   })
 
   it('設定で1日の新しい単語の数を変えられる', () => {
@@ -1205,7 +1205,7 @@ describe('App', () => {
     localStorage.setItem('eitan:daily-new', JSON.stringify({ day: dayKey(), count: 10 }))
     render(<App />)
     expect(screen.queryByText('今日の学習は完了です 🎉 また明日！')).not.toBeInTheDocument()
-    expect(screen.getByText(/今日の残り 5 語/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/今日の残り 5 語/)).toBeInTheDocument()
   })
 
   it('記録画面に「今日はじめて学んだ単語」が出る', () => {
@@ -1557,7 +1557,7 @@ describe('App', () => {
     const first = document.querySelector('.card .en')!.textContent
     fireEvent.click(screen.getByText('⏭ あとで'))
     expect(document.querySelector('.card .en')!.textContent).not.toBe(first)
-    expect(screen.getByText(/今日の残り 10 語/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/今日の残り 10 語/)).toBeInTheDocument()
   })
 
   it('設定画面に見出しがある', () => {
