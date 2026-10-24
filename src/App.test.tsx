@@ -109,7 +109,7 @@ describe('App', () => {
     goMini()
     const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
-    fireEvent.click(screen.getByRole('button', { name: word.ja }))
+    fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
     expect(screen.getAllByText('タマゴがかえった！').length).toBeGreaterThan(0)
     expect(screen.getByRole('dialog', { name: '進化' })).toBeInTheDocument()
     navTo('ホーム')
@@ -154,7 +154,7 @@ describe('App', () => {
       const en = document.querySelector('.quiz .en, .quiz .word-en, .quiz h2')?.textContent ?? ''
       const w = ws.find((x) => en.includes(x.en))!
       expect(w).toBeDefined()
-      fireEvent.click(screen.getByRole('button', { name: w.ja }))
+      fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: w.ja }))
       fireEvent.click(screen.getByText(/次へ|結果を見る/))
     }
     expect(localStorage.getItem('eitan:today-words')).toBe(day)
@@ -733,18 +733,18 @@ describe('App', () => {
     expect(screen.getByText('⚔️ ボスハンター')).toBeInTheDocument()
   })
 
-  it('なでるとごきげんがたまる', () => {
+  it('あいぼうの「ごきげん」メーターは出さない（オーナーの要望）', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     render(<App />)
     fireEvent.click(screen.getByLabelText('相棒にさわる'))
-    expect(screen.getByLabelText('ごきげん 1 / 20')).toBeInTheDocument()
+    expect(document.querySelector('.mood-meter')).toBeNull()
+    expect(screen.queryByText(/💗 ごきげん/)).toBeNull()
   })
 
   it('ごきげんMAXの日はXPが1.2倍', () => {
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 10, owned: [] }))
     localStorage.setItem('eitan:mood-meter', JSON.stringify({ day: dayKey(), points: 20 }))
     render(<App />)
-    expect(screen.getByText('💗 ごきげんMAX！ 今日はXP1.2倍')).toBeInTheDocument()
     fireEvent.click(screen.getByLabelText('コイン 10枚・ショップを開く'))
     fireEvent.click(screen.getByRole('tab', { name: /おやつ/ }))
     fireEvent.click(screen.getByText(/サクサククッキン/))
@@ -979,7 +979,8 @@ describe('App', () => {
     goMini()
     const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
-    fireEvent.click(screen.getByRole('button', { name: word.ja }))
+    // 「天気」などテーマで練習のボタンと同じ名前があるので、クイズの選択肢の中からえらぶ
+    fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
     expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
   })
 
@@ -1280,7 +1281,7 @@ describe('App', () => {
     render(<App />)
     navTo('単語ゲーム')
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
-    fireEvent.click(screen.getByRole('button', { name: '動物' }))
+    fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
   })
 
@@ -1289,7 +1290,7 @@ describe('App', () => {
     navTo('単語ゲーム')
     fireEvent.click(screen.getByText('🗂 テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
-    fireEvent.click(screen.getByRole('button', { name: '動物' }))
+    fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語だけ復習中/)).toBeInTheDocument()
   })
 

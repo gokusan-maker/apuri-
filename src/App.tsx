@@ -127,7 +127,7 @@ import { loadUniv, UNIV_BOSSES } from './univ'
 import { annivMonths, annivText, MONTHLY_COINS } from './monthly'
 import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
 import { ENDLESS_REWARD_COINS } from './endless'
-import { addMood, boosted, loadMood, MOOD_MAX, moodFull, moodNow, saveMood } from './moodmeter'
+import { addMood, boosted, loadMood, moodFull, saveMood } from './moodmeter'
 import { PET_BONUS } from './pet'
 import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
@@ -1299,7 +1299,6 @@ function App() {
             friends={party.members.map((m, i) => ({ m, i })).filter((x) => x.i !== party.active)}
             onSwitch={(i) => setParty((p) => ({ ...p, active: i }))}
             onPet={() => cheerUp(1)}
-            mood100={{ points: moodNow(moodMeter, today), max: MOOD_MAX }}
             trioDone={loadTrioDay() === today}
             trioStreak={trioStreakNow(today)}
             epithet={epithetOf(totalWins(loadBook()))}
