@@ -1696,6 +1696,17 @@ export const PASSAGES: Passage[] = [
       { q: '父は何を約束した？', choices: ['来年、気球に乗せてくれる', '来年もお祭りを見に来る', '妹にキャンディを買う'], answer: 0 },
     ],
   },
+  {
+    id: 'rice-planting',
+    title: 'Planting Rice',
+    text: "Last June, our class went to a farm to plant rice. The farmer, Mr. Kato, showed us how to do it. We took off our shoes and walked into the muddy field. The mud was cold and soft, and my feet went deep into it! We put the small rice plants into the mud one by one. It was hard work, but everyone laughed a lot. Mr. Kato said, \"In autumn, you can come back and cut the rice.\" I can't wait to eat the rice we planted.",
+    ja: 'この前の6月、私たちのクラスは田植えをしに農場へ行きました。農家のカトウさんがやり方を教えてくれました。私たちはくつをぬいで、どろどろの田んぼに入りました。どろは冷たくてやわらかく、足が深くしずみました！ 小さな稲の苗を1本ずつどろに植えました。大変な作業でしたが、みんなたくさん笑いました。カトウさんは「秋になったら、また来て稲をかればいいよ」と言いました。自分たちで植えたお米を食べるのが待ちきれません。',
+    questions: [
+      { q: 'クラスは6月に何をしに行った？', choices: ['田植え', '稲かり', '野菜の収穫'], answer: 0 },
+      { q: 'どろはどうだった？', choices: ['冷たくてやわらかかった', '熱くてかたかった', 'かわいていた'], answer: 0 },
+      { q: 'カトウさんは秋に何ができると言った？', choices: ['また来て稲をかる', 'お米を買う', '新しい苗を植える'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
