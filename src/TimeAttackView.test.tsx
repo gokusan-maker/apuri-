@@ -20,7 +20,7 @@ describe('TimeAttack', () => {
   it('60秒で終了し、正解数を自己ベストとして保存する', () => {
     const onAnswer = vi.fn()
     render(<TimeAttack words={WORDS} onAnswer={onAnswer} />)
-    expect(screen.getByText('自己ベスト 0 問')).toBeInTheDocument()
+    expect(screen.queryByText(/自己ベスト/)).toBeNull() // まだ記録がないときは出さない
     fireEvent.click(screen.getByText('スタート'))
     expect(screen.getByText(`⏱ ${TIME_LIMIT}秒`)).toBeInTheDocument()
     answerCorrect()

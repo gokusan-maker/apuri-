@@ -110,7 +110,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
           </button>
         </div>
         <p className="result-message">{length}秒で何問正解できるかな？</p>
-        <p className="best">自己ベスト {best} 問</p>
+        {best > 0 && <p className="best">自己ベスト {best} 問</p>}
         {top.length > 0 && (
           <ol className="ta-top" aria-label="これまでの記録">
             {top.map((t, i) => (
