@@ -647,7 +647,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         const nextStage = levels.flatMap(stagesOf).find((st) => isUnlocked(st, record) && !(record[st.id] >= 1))
         return nextStage ? (
           <button
-            className="flip continue-btn"
+            className="flip continue-btn stage-continue"
             onClick={() => {
               setPlaying(nextStage)
               setResult(null)
