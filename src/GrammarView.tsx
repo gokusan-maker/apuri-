@@ -719,7 +719,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             <span className="example-ja">{ex.ja}</span>
           </p>
         ))}
-        <button className="flip" onClick={() => setStep(0)}>
+        <button className="flip to-questions" onClick={() => setStep(0)}>
           確認問題へ（{unit.questions.length}問）
         </button>
         {relatedUnits(unit.id).length > 0 && (
