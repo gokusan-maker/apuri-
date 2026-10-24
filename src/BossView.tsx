@@ -182,6 +182,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
   const [trioAt, setTrioAt] = useState(-1) // 合体技を出した問題の番号
+  const [teamHits, setTeamHits] = useState<Record<TeamRole, number>>({ word: 0, grammar: 0, reading: 0 }) // なかまごとの正解数
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
@@ -255,6 +256,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep || comeback ? 2 : 1)
+      if (teamOn && 'team' in q) setTeamHits((t) => ({ ...t, [q.team as TeamRole]: t[q.team as TeamRole] + 1 }))
       const trio = teamOn && 'team' in q && isTeamCombo(q.team as TeamRole, c) ? TEAM_COMBO_DAMAGE : 0
       if (trio > 0) {
         setSkillMsg(`🤝 合体技「トリプルアタック」！ +${trio}`)
@@ -400,6 +402,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setMissed([])
     setGauge(0)
     setCorrects(0)
+    setTeamHits({ word: 0, grammar: 0, reading: 0 })
     setCrits(0)
     setUsedItems([])
     setDrop(null)
@@ -628,6 +631,16 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className="boss-taunt boss-defeat">
             「{defeatLineOf(look.name).en}」<span>{defeatLineOf(look.name).ja}</span>
           </p>
+          {teamOn && (
+            <p className="boss-team-result" aria-label={`チームの活やく 単語${teamHits.word}問・文法${teamHits.grammar}問・読解${teamHits.reading}問`}>
+              {TEAM_ORDER.map((r) => (
+                <span key={r} className={`team-${r}`}>
+                  {TEAM_ICON[r]}
+                  {TEAM_LABEL[r]} {teamHits[r]}問
+                </span>
+              ))}
+            </p>
+          )}
           {/* ランク・ハート・会心・ボーナスは1枚の横長カードにまとめる（カードを減らして見やすく） */}
           <div className="boss-rank-row">
             <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>

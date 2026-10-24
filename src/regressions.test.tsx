@@ -69,6 +69,7 @@ describe('再発防止', () => {
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
     expect(loadBuddies().reading.xp).toBe(expected) // 読解の番と勝ったボーナスの XP は長文のなかま（竜）へ
     expect(loadBuddies().grammar.xp).toBe(grammarXp) // 文法の番の XP は文法のなかまへ
+    expect(screen.getByLabelText(/^チームの活やく 単語\d+問・文法\d+問・読解\d+問$/)).toBeInTheDocument() // 勝った画面にチームの活やく
     expect(localStorage.getItem('eitan:egg-pieces')).toBe('1') // 勝つとタマゴのかけら
   })
 
