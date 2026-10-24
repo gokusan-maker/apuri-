@@ -123,7 +123,7 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
       answerReading()
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
-    if (round < 3) fireEvent.click(screen.getByText(/次のボスへ ▶（ハート3を引き継ぐ）/))
+    if (round < 3) fireEvent.click(screen.getByText(/次のボスへ ▶ ❤️3/))
   }
   expect(clear).toHaveBeenCalledTimes(1)
   fireEvent.click(screen.getByText('ラッシュ完全クリア！ ステージにもどる'))

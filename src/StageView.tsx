@@ -138,7 +138,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         title={`🗼 塔 ${f}階（最高 ${endlessBest}階）`}
         note={f === 1 ? `10階ごとに 🪙${ENDLESS_REWARD_COINS}＋🎟` : undefined}
         startHearts={endless.hearts}
-        winLabel={`${f + 1}階へ ▶（ハート${endless.hearts}を引き継ぐ）`}
+        winLabel={`${f + 1}階へ ▶ ❤️${endless.hearts}`}
         partner={partner}
         power={power}
         bag={bag}
@@ -179,7 +179,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
         note={rush.round === 0 ? (rush.ex ? `3連戦！ 全勝で 🪙${RUSH_EX_COINS}＋🎟2` : `3連戦！ 全勝で 🪙${RUSH_COINS}＋🎟`) : undefined}
         startHearts={rush.hearts}
-        winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
+        winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶ ❤️${rush.hearts}`}
         partner={partner}
         power={power}
         bag={bag}
