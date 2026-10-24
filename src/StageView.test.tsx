@@ -300,3 +300,14 @@ it('ボス部屋では、ボス1体ずつのタイル（絵と名前）から、
   fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
+
+it('ボス部屋のタイルで、今日の金色のボスに「✨金色」の印がつく', async () => {
+  const { goldenLevelOf } = await import('./boss')
+  const { LEVELS } = await import('./words')
+  const { dayKey } = await import('./srs')
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const g = goldenLevelOf(LEVELS, dayKey())!
+  const tile = screen.getByRole('button', { name: new RegExp(`^${g}のボス`) })
+  expect(tile.textContent).toContain('✨金色')
+  expect(document.querySelectorAll('.boss-pick-gold')).toHaveLength(1)
+})

@@ -486,6 +486,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               }}
             >
               {boss[lv] && <span className="boss-pick-crown" aria-hidden="true">👑</span>}
+              {lv === goldenLevelOf(LEVELS, dayKey()) && <span className="boss-pick-gold" title={`今日は金色（+🪙${GOLDEN_COINS}）`}>✨金色</span>}
               <span className="boss-pick-fig">
                 <BossFigure hit={false} look={BOSSES[lv]} />
               </span>

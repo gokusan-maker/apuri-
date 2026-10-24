@@ -2544,3 +2544,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .lvup-banner { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .play-bar ~ .lvup-banner { top: calc(68px + env(safe-area-inset-top)); }
 .boss-go-text small { white-space: nowrap; }
+.boss-pick-gold { position: absolute; top: -8px; left: -4px; padding: 1px 6px; border-radius: 999px; background: linear-gradient(180deg, #fef08a, #facc15); color: #78350f; font-size: 0.62rem; font-weight: 900; text-shadow: none; white-space: nowrap; box-shadow: 0 2px 0 #a16207; }
