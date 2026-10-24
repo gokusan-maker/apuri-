@@ -3,6 +3,9 @@ import { describe, expect, it, vi } from 'vitest'
 import { GRAMMAR } from './grammar'
 import { Grammar } from './GrammarView'
 
+// 単元一覧では題名の「（」より前だけを表示する
+const short = (t: string) => t.split('（')[0]
+
 describe('文法ミニ解説', () => {
   it('解説を読んで3問に答え、全問正解で記録が残る', () => {
     localStorage.clear()
@@ -11,7 +14,7 @@ describe('文法ミニ解説', () => {
     expect(screen.getByText(`全問正解 0 / ${GRAMMAR.length} 単元`)).toBeInTheDocument()
     expect(screen.getByText('見習い')).toBeInTheDocument()
     const unit = GRAMMAR[0]
-    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByRole('button', { name: unit.title }))
     expect(screen.getByText(unit.points[0])).toBeInTheDocument()
     fireEvent.click(screen.getByText('確認問題へ（3問）'))
     for (const q of unit.questions) {
@@ -43,7 +46,7 @@ it('スタンプが10個になるとガチャチケットのお知らせが呼�
   render(<Grammar onStampTicket={ticket} />)
   expect(screen.getByLabelText('文法スタンプ 9個')).toBeInTheDocument()
   const u = GRAMMAR[0]
-  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByRole('button', { name: u.title }))
   fireEvent.click(screen.getByText(/問題にチャレンジ|確認問題へ|問題へ/))
   for (const q of u.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -58,7 +61,7 @@ it('文法モンスターを全問正解でたおすとごほうび', () => {
   const win = vi.fn()
   render(<Grammar onMonsterWin={win} />)
   const u = GRAMMAR[0]
-  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByRole('button', { name: u.title }))
   fireEvent.click(screen.getByText(/「be動詞モンスター」と戦う/))
   expect(screen.getByRole('progressbar', { name: '文法モンスターのHP' })).toHaveAttribute('aria-valuenow', '3')
   for (const q of u.questions) {
@@ -103,7 +106,7 @@ it('今日の文法を全問正解すると1日1回ボーナス', async () => {
   const bonus = vi.fn()
   render(<Grammar onDailyBonus={bonus} />)
   fireEvent.change(screen.getByLabelText('単元をさがす'), { target: { value: u.title } })
-  fireEvent.click(within(document.querySelector('.grammar-list') as HTMLElement).getAllByText(u.title, { exact: false }).find((el) => (el.textContent ?? '').trim().startsWith(u.title))!)
+  fireEvent.click(within(document.querySelector('.grammar-list') as HTMLElement).getAllByRole('button', { name: u.title })[0])
   fireEvent.click(screen.getByText(/確認問題へ/))
   for (const q of u.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -117,9 +120,9 @@ it('学年のタブで単元をしぼりこめる', () => {
   render(<Grammar />)
   fireEvent.click(screen.getByRole('tab', { name: '高校' }))
   expect(screen.getAllByText(/過去完了/).length).toBeGreaterThan(0)
-  expect(screen.queryByText('be動詞（am / is / are）')).not.toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: 'be動詞（am / is / are）' })).not.toBeInTheDocument()
   fireEvent.click(screen.getByRole('tab', { name: 'すべて' }))
-  expect(screen.getByText('be動詞（am / is / are）')).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: 'be動詞（am / is / are）' })).toBeInTheDocument()
 })
 
 it('文法モンスターラッシュを3連勝するとごほうび', () => {
@@ -146,7 +149,7 @@ it('ヒントでまちがいの選択肢を1つ消せる', () => {
   const spend = vi.fn(() => true)
   render(<Grammar onSpend={spend} />)
   const u = GRAMMAR[0]
-  fireEvent.click(screen.getByText(u.title))
+  fireEvent.click(screen.getByRole('button', { name: u.title }))
   fireEvent.click(screen.getByText(/確認問題へ/))
   expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
   fireEvent.click(screen.getByText(/ヒント：1つ消す/))
@@ -169,7 +172,7 @@ it('確認問題の連続正解を数え、ベストを記録する', () => {
   localStorage.setItem('eitan:grammar-streak', JSON.stringify({ now: 0, best: 5 }))
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   unit.questions.forEach((q, i) => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -187,7 +190,7 @@ it('結果画面でシェア用の文をコピーできる', async () => {
   Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -204,10 +207,10 @@ it('単元に★をつけると一覧の上に来る', () => {
   const last = GRAMMAR[GRAMMAR.length - 1]
   fireEvent.click(screen.getByRole('button', { name: `${last.title}をお気に入りにする` }))
   const items = [...document.querySelectorAll('.grammar-list li')]
-  expect(items[0].textContent).toContain(last.title)
+  expect(items[0].textContent).toContain(short(last.title))
   expect(JSON.parse(localStorage.getItem('eitan:grammar-fav')!)).toEqual([last.id])
   fireEvent.click(screen.getAllByRole('button', { name: `${last.title}をお気に入りからはずす` })[0])
-  expect(document.querySelectorAll('.grammar-list li')[0].textContent).toContain(GRAMMAR[0].title)
+  expect(document.querySelectorAll('.grammar-list li')[0].textContent).toContain(short(GRAMMAR[0].title))
 })
 
 it('単元をはじめて全問正解するとXPボーナス（2回目はなし）', () => {
@@ -216,7 +219,7 @@ it('単元をはじめて全問正解するとXPボーナス（2回目はなし�
   render(<Grammar onFirstClear={onFirstClear} />)
   const unit = GRAMMAR[0]
   const solve = () => {
-    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByRole('button', { name: unit.title }))
     fireEvent.click(screen.getByText('確認問題へ（3問）'))
     for (const q of unit.questions) {
       fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -242,7 +245,7 @@ it('今週の目標を決めて、達成するとチケットのお知らせ', (
   render(<Grammar onWeeklyGoal={onWeeklyGoal} />)
   fireEvent.click(screen.getByRole('button', { name: '3単元' }))
   for (const unit of GRAMMAR.slice(0, 3)) {
-    fireEvent.click(screen.getByText(unit.title))
+    fireEvent.click(screen.getByRole('button', { name: unit.title }))
     fireEvent.click(screen.getByText('確認問題へ（3問）'))
     for (const q of unit.questions) {
       fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -260,7 +263,7 @@ it('解説の下によくあるまちがいが出る', () => {
   localStorage.clear()
   render(<Grammar />)
   const unit = GRAMMAR.find((u) => u.id === 'third')!
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   expect(screen.getByText('⚠ よくあるまちがい')).toBeInTheDocument()
   expect(screen.getByText('✕ He play soccer every day.')).toBeInTheDocument()
   expect(screen.getByText('○ He plays soccer every day.')).toBeInTheDocument()
@@ -270,7 +273,7 @@ it('まちがえた問題はまちがいノートに入り、正解すると消�
   localStorage.clear()
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   unit.questions.forEach((q, i) => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[i === 0 ? (q.answer + 1) % q.choices.length : q.answer] }))
@@ -305,7 +308,7 @@ it('全問正解すると単元に★がつく', () => {
   localStorage.setItem('eitan:grammar-clears', JSON.stringify({ [GRAMMAR[0].id]: 2 }))
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -339,7 +342,7 @@ it('全問正解すると相棒がほめてくれる', async () => {
   localStorage.clear()
   render(<Grammar partnerName="モチ" />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -355,7 +358,7 @@ it('文法を3日続けた日にボーナス', () => {
   const onStreakBonus = vi.fn()
   render(<Grammar onStreakBonus={onStreakBonus} />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   fireEvent.click(screen.getByRole('button', { name: unit.questions[0].choices[0] }))
   expect(onStreakBonus).toHaveBeenCalledTimes(1)
@@ -396,7 +399,7 @@ it('最後の単元を全問正解すると文法マスター', () => {
   const onMaster = vi.fn()
   render(<Grammar onMaster={onMaster} />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -438,7 +441,7 @@ it('3問連続正解すると相棒がひとことほめる', () => {
   localStorage.clear()
   render(<Grammar partnerName="モチ" />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   unit.questions.forEach((q, i) => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -451,7 +454,7 @@ it('正解した単元が「今月のチャンピオン単元」に出る', () =
   localStorage.clear()
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -467,7 +470,7 @@ it('確認問題のあとに「もう1問」（正しい文はどれ？）がと
   const onAnswer = vi.fn()
   render(<Grammar onAnswer={onAnswer} />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -528,7 +531,7 @@ it('確認問題のあとに「次の単元へ ▶」で次の単元を開ける
   const { nextUnit } = await import('./grammar')
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -552,7 +555,7 @@ it('確認問題でまちがえると「要点を見る」でその場で要点�
   localStorage.clear()
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   const q = unit.questions[0]
   fireEvent.click(screen.getByRole('button', { name: q.choices[(q.answer + 1) % q.choices.length] }))
@@ -585,7 +588,7 @@ it('答えあわせで「🔊 正しい英文を聞く」が出る', async () =>
   const { correctSentence } = await import('./grammar')
   render(<Grammar />)
   const unit = GRAMMAR.find((u) => correctSentence(u.questions[0]))!
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   const q = unit.questions[0]
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -597,7 +600,7 @@ it('文法の一覧に「今週の成績」が出て、正解すると今日の�
   render(<Grammar />)
   expect(screen.getByRole('img', { name: '今週の文法の正解数 0問' })).toBeInTheDocument()
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -611,7 +614,7 @@ it('確認問題を全問正解すると紙ふぶきが出る（まちがえた�
   localStorage.clear()
   const { unmount } = render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -621,7 +624,7 @@ it('確認問題を全問正解すると紙ふぶきが出る（まちがえた�
   unmount()
   localStorage.clear()
   render(<Grammar />)
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   unit.questions.forEach((q, i) => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[i === 0 ? (q.answer + 1) % q.choices.length : q.answer] }))
@@ -643,7 +646,7 @@ it('まちがえた問題があると「まちがえた問題だけもう一度�
   localStorage.clear()
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   unit.questions.forEach((q, i) => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[i === 1 ? (q.answer + 1) % q.choices.length : q.answer] }))
@@ -674,7 +677,7 @@ it('結果画面に「この回の正しい英文」がまとめて出る', asyn
   const { correctSentence } = await import('./grammar')
   render(<Grammar />)
   const unit = GRAMMAR.find((u) => u.questions.every((q) => correctSentence(q)))!
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   fireEvent.click(screen.getByText('確認問題へ（3問）'))
   for (const q of unit.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
@@ -689,7 +692,7 @@ it('単元の要点画面から「関連する単元」へ行ける', async () =
   const { relatedUnits } = await import('./grammar')
   render(<Grammar />)
   const unit = GRAMMAR[0]
-  fireEvent.click(screen.getByText(unit.title))
+  fireEvent.click(screen.getByRole('button', { name: unit.title }))
   const r = relatedUnits(unit.id)[0]
   fireEvent.click(screen.getAllByRole('button', { name: r.title }).at(-1)!)
   expect(screen.getByText(r.points[0])).toBeInTheDocument()
@@ -702,9 +705,9 @@ it('単元一覧を「まだの単元から」ならべかえられる', async (
   localStorage.setItem('eitan:grammar', JSON.stringify({ [first.id]: first.questions.length }))
   render(<Grammar />)
   const firstItem = () => document.querySelector('details.grammar-grade-fold li')!.textContent!
-  expect(firstItem()).toContain(first.title)
+  expect(firstItem()).toContain(short(first.title))
   fireEvent.click(screen.getByRole('button', { name: 'まだの単元から' }))
-  expect(firstItem()).not.toContain(first.title)
+  expect(firstItem()).not.toContain(short(first.title))
 })
 
 it('すぐ練習の5問を全問正解するとコインのごほうび', () => {
@@ -802,11 +805,27 @@ it('すぐ練習でまちがえると、結果に「まちがいノートに入�
   expect(screen.getByText(/まちがえた1問をまちがいノートに入れたよ/)).toBeInTheDocument()
 })
 
+it('はじめて見たときは単元に NEW を並べない（あとから追加された単元にだけつく）', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  expect(document.querySelector('.grammar-list .unit-new')).toBeNull()
+  expect(JSON.parse(localStorage.getItem('eitan:grammar-known')!)).toHaveLength(GRAMMAR.length)
+})
+
+it('単元一覧の題名は「（」より前だけで、全体は title とボタンの名前に', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const btn = screen.getAllByRole('button', { name: 'be動詞（am / is / are）' })[0]
+  expect(btn.querySelector('.unit-title')!.textContent).toBe('be動詞')
+  expect(btn.getAttribute('title')).toBe('be動詞（am / is / are）')
+})
+
 it('文法の単元一覧で、まだ開いていない単元に NEW 印がつき、開くと消える', () => {
   localStorage.clear()
+  localStorage.setItem('eitan:grammar-known', JSON.stringify(GRAMMAR.slice(1).map((u) => u.id))) // GRAMMAR[0] はあとから追加された単元
   const { unmount } = render(<Grammar />)
   const u = GRAMMAR[0]
-  const item = () => screen.getAllByText(u.title)[0].closest('button')!
+  const item = () => screen.getAllByRole('button', { name: u.title })[0]
   expect(item().textContent).toContain('NEW')
   fireEvent.click(item())
   unmount()
@@ -841,9 +860,9 @@ it('文法ゲームを全部あそんだ日は、ボタンでごほうびをも�
 
 it('単元一覧：まだの単元は「未挑戦」を出さず、NEW は題名の前のピル', () => {
   localStorage.clear()
+  localStorage.setItem('eitan:grammar-known', JSON.stringify(GRAMMAR.slice(1).map((u) => u.id))) // GRAMMAR[0] はあとから追加された単元
   render(<Grammar />)
-  const t = screen.getAllByText(GRAMMAR[0].title)[0]
-  const btn = t.closest('button')!
+  const btn = screen.getAllByRole('button', { name: GRAMMAR[0].title })[0]
   expect(btn.textContent).not.toContain('未挑戦')
   expect(btn.querySelector('.unit-new + .unit-title')).not.toBeNull()
 })

@@ -56,6 +56,18 @@ type Props = {
 export const QUICK_PERFECT_COINS = 5 // すぐ練習を全問正解したときのコイン
 // 一度でも開いた文法の単元（まだ開いていない・まだ答えていない単元に NEW 印）
 const OPENED_KEY = 'eitan:grammar-opened'
+// はじめて文法チャレンジを見たときにあった単元。NEW 印はそのあとに追加された単元だけにつける（最初から全部に NEW が並ばないように）
+const KNOWN_KEY = 'eitan:grammar-known'
+function loadKnownUnits(all: string[]): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(KNOWN_KEY) ?? 'null') as unknown
+    if (Array.isArray(v)) return v.filter((x): x is string => typeof x === 'string')
+    localStorage.setItem(KNOWN_KEY, JSON.stringify(all))
+  } catch {
+    // 保存できなくても続ける
+  }
+  return all
+}
 function loadOpened(): string[] {
   try {
     const v = JSON.parse(localStorage.getItem(OPENED_KEY) ?? '[]') as unknown
@@ -99,6 +111,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
   const [runBonus, setRunBonus] = useState(false) // ベスト更新のボーナスのお知らせ
   const [opened, setOpened] = useState(loadOpened) // 一度でも開いた単元（NEW 印を消す）
+  const [known] = useState(() => loadKnownUnits(GRAMMAR.map((u) => u.id))) // 最初からあった単元には NEW をつけない
   const [quickPerfect, setQuickPerfect] = useState(false) // すぐ練習を全問正解した（ごほうびのお知らせ）
   const stampMode = units === GRAMMAR
   const [record, setRecord] = useState(loadGrammar)
@@ -200,11 +213,11 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           {fav.includes(u.id) ? '★' : '☆'}
         </button>
       )}
-      <button onClick={() => open(u)}>
+      <button onClick={() => open(u)} aria-label={u.title} title={u.title}>
         <span>
           {stampMode && weakIdsOf(note).includes(u.id) && <span className="unit-weak" aria-label="まちがえたことがある単元">⚠ </span>}
-          {stampMode && record[u.id] === undefined && !opened.includes(u.id) && <span className="unit-new">NEW</span>}
-          <span className="unit-title">{u.title}</span>
+          {stampMode && record[u.id] === undefined && !opened.includes(u.id) && !known.includes(u.id) && <span className="unit-new">NEW</span>}
+          <span className="unit-title">{u.title.split('（')[0]}</span>
         </span>
         <span className="grammar-score">
           {record[u.id] === undefined ? '' : `${record[u.id]} / ${u.questions.length}`}
