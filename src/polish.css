@@ -2591,3 +2591,12 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); box-shadow: 0 4px 0 #c2410c; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); } }
 :root[data-theme="dark"] .gacha-result .gacha-again { background: linear-gradient(135deg, #fbbf24, #f97316); }
+
+/* 設定の学年・レベル：学年ごとの色タイル。えらんでいる学年は色がついて光る */
+.settings .levels .grade-btn { --g: #6366f1; border: 2px solid color-mix(in srgb, var(--g) 45%, transparent); background: color-mix(in srgb, var(--g) 10%, var(--card)); color: color-mix(in srgb, var(--g) 80%, var(--text, #1f2937)); font-weight: 900; white-space: nowrap; }
+.settings .levels .grade-btn[aria-pressed='true'] { border-color: transparent; background: linear-gradient(135deg, color-mix(in srgb, var(--g) 70%, #fff), var(--g)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 color-mix(in srgb, var(--g) 60%, #000), 0 0 0 3px color-mix(in srgb, var(--g) 30%, transparent); }
+.settings .levels .grade-btn.g-j1 { --g: #f97316; }
+.settings .levels .grade-btn.g-j2 { --g: #22c55e; }
+.settings .levels .grade-btn.g-j3 { --g: #0ea5e9; }
+.settings .levels .grade-btn.g-hs { --g: #8b5cf6; }
+.settings .levels .grade-btn.g-adult { --g: #475569; }

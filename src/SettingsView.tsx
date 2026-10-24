@@ -48,6 +48,7 @@ export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
             {GRADES.map((g) => (
               <button
                 key={g.id}
+                className={`grade-btn g-${g.id}`}
                 aria-pressed={pickedGrade === g.id}
                 onClick={() => {
                   setPickedGrade(g.id)
