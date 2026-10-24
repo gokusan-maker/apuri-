@@ -3418,6 +3418,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-biz-meeting-email',
+    title: 'An Email About the Sales Meeting',
+    level: '難関大（ビジネスメール）',
+    paragraphs: [
+      "Dear all, thank you for your hard work this month. I am writing to let you know about some changes to next week's sales meeting. The meeting was planned for Tuesday at 10 a.m. in Room 301. However, the room will be closed for repairs, so we have decided to move the meeting to Wednesday at 2 p.m. in Room 502.",
+      "Please note that this meeting will be longer than usual. In addition to the monthly sales report, we will discuss the new product ( A ) will be launched in December. Each team leader is asked to prepare a short presentation of about five minutes.",
+      "If you cannot attend, please tell your team leader by Monday ( B ) someone can share the information with you later. We will also send the slides to everyone after the meeting.",
+      "Lunch will not be provided, but coffee and snacks will be available in the room. If you have any questions, please contact me ( C ) extension 215. Thank you for your cooperation. Best regards, Aya Kimura, Sales Department",
+    ],
+    ja: [
+      'みなさま、今月もお疲れさまです。来週の営業会議の変更についてお知らせします。会議は火曜日の午前10時に301号室で行う予定でした。しかし、その部屋が修理のため使えなくなるので、会議を水曜日の午後2時、502号室に変更することにしました。',
+      'この会議はいつもより長くなりますので、ご注意ください。毎月の売上報告に加えて、12月に発売される新製品について話し合います。各チームリーダーは、5分ほどの短い発表を準備してください。',
+      '出席できない場合は、あとでだれかが情報を伝えられるように、月曜日までにチームリーダーに知らせてください。会議のあとで、スライドも全員に送ります。',
+      '昼食は出ませんが、部屋ではコーヒーと軽食をご用意しています。ご質問があれば、内線215番の私までご連絡ください。ご協力をお願いいたします。よろしくお願いいたします。営業部　木村亜矢',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'it'], answer: 0, why: '先行詞 the new product（もの）を説明する主格の関係代名詞は which。what は先行詞をふくむので名詞のあとには置けない。who は人。it では文がつながらない。' },
+      { id: 'B', choices: ['so that', 'in order', 'so as', 'because of'], answer: 0, why: 'あとに someone can share … という文が続くので、so that ＋ 主語 ＋ can「～が…できるように」。in order・so as は to ＋ 原形、because of は名詞が続く。' },
+      { id: 'C', choices: ['at', 'in', 'to', 'for'], answer: 0, why: '電話番号・内線番号で連絡するときは at：contact me at extension 215「内線215番で私に連絡する」。' },
+    ],
+    tf: [
+      { statement: '会議は火曜日の午前10時に行われる。', answer: false, why: '第1段落 move the meeting to Wednesday at 2 p.m.。' },
+      { statement: '会議の部屋が変わったのは、もとの部屋が修理で使えないからだ。', answer: true, why: '第1段落 the room will be closed for repairs。' },
+      { statement: 'チームリーダーは5分ほどの発表を準備する。', answer: true, why: '第2段落 Each team leader is asked to prepare a short presentation of about five minutes。' },
+      { statement: '会議では昼食が出る。', answer: false, why: '第4段落 Lunch will not be provided。' },
+    ],
+    qa: [
+      { q: 'What should people do if they cannot attend the meeting?', choices: ['Tell their team leader by Monday.', 'Call extension 215 on Wednesday.', 'Prepare a five-minute presentation.', 'Send the slides to everyone.'], answer: 0, why: '第3段落 please tell your team leader by Monday。' },
+    ],
+  },
+{
     id: 'adv-decoy',
     title: 'The Popcorn That Nobody Buys',
     level: '難関大（評論）',
