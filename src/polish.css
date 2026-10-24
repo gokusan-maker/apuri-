@@ -2421,3 +2421,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .word-sub-tabs button[aria-selected='true'] { background: linear-gradient(135deg, hsl(var(--st-h) 75% 50%), hsl(calc(var(--st-h) + 20) 70% 38%)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 hsl(var(--st-h) 60% 26%); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .word-sub-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); } }
 :root[data-theme="dark"] .word-sub-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); }
+
+/* 文法の学年タブ・読解のジャンルタブも、えらんだものを色つき（ほかのタブとそろえる） */
+.grade-tabs button[aria-selected='true'], .genre-tabs button[aria-selected='true'] { background: linear-gradient(135deg, #34d399, #059669); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 #065f46; }
+.genre-tabs button[aria-selected='true'] { background: linear-gradient(135deg, #60a5fa, #2563eb); box-shadow: 0 3px 0 #1e3a8a; }
