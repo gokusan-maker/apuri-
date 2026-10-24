@@ -547,3 +547,14 @@ it('読解ボスは「💡 ヒント」で解説（答えはかくす）か根�
   expect(document.querySelector('.boss-hint')!.textContent).toMatch(/💡|📍 根拠/)
   expect(screen.queryByRole('button', { name: '💡 ヒント' })).toBeNull()
 })
+
+it('勝ったあとのランク・ハート・ボーナスは1枚の横長カード（.boss-rank-row）にまとまる', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  const row = document.querySelector('.boss-rank-row')!
+  expect(row.querySelector('.battle-rank')).not.toBeNull()
+  expect(row.textContent).toMatch(/ボーナス \+/)
+})

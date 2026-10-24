@@ -614,16 +614,21 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <p className="boss-taunt boss-defeat">
             「{defeatLineOf(look.name).en}」<span>{defeatLineOf(look.name).ja}</span>
           </p>
-          <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
-            {battleRank(hearts, crits)}
-          </p>
-          <p className="stats-note" title={battleRank(hearts, crits) === 'S' ? undefined : 'ハートを減らさず会心3回でSランク'}>
-            ❤️{hearts}・⚡会心{crits}回{battleRank(hearts, crits) === 'S' ? `・Sランク 🪙${RANK_S_COINS}！` : ''}
-          </p>
-          <p className="result-message boss-bonus">
-            ボーナス +<CountUp to={bonus} />
-            XP
-          </p>
+          {/* ランク・ハート・会心・ボーナスは1枚の横長カードにまとめる（カードを減らして見やすく） */}
+          <div className="boss-rank-row">
+            <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
+              {battleRank(hearts, crits)}
+            </p>
+            <div className="boss-rank-info">
+              <p className="stats-note" title={battleRank(hearts, crits) === 'S' ? undefined : 'ハートを減らさず会心3回でSランク'}>
+                ❤️{hearts}・⚡会心{crits}回{battleRank(hearts, crits) === 'S' ? `・🪙${RANK_S_COINS}！` : ''}
+              </p>
+              <p className="result-message boss-bonus">
+                ボーナス +<CountUp to={bonus} />
+                XP
+              </p>
+            </div>
+          </div>
           {winBuddy && (
             <p className="grammar-praise boss-buddy-cheer">
               {winBuddy.icon} {winBuddy.name}「{winLine.en}」

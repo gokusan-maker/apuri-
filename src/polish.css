@@ -2226,3 +2226,13 @@ details[open] > summary::before { transform: rotate(90deg); }
 .gacha-name { font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
 .today-tasks .today-task .today-task-text { display: block; max-width: 100%; min-height: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } /* 今日の課題のタイルも1行（オーナーの要望） */
 .today-tasks .today-task-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .today-tasks .today-task { min-width: 0; }
+
+/* ボス勝利：ランク＋ハート・会心・ボーナスを1枚の横長カードに、負けたボスのセリフはカードなしの1行に */
+.boss-rank-row { display: flex; align-items: center; gap: 12px; margin: 10px 0; padding: 10px 14px; border-radius: 18px; background: color-mix(in srgb, var(--accent) 8%, var(--card)); text-align: left; }
+.boss-rank-row .battle-rank { flex: none; margin: 0; width: 56px; height: 56px; line-height: 56px; font-size: 2rem; }
+.boss-rank-info { min-width: 0; }
+.boss-rank-info p { margin: 0; text-align: left; white-space: nowrap; }
+.boss-rank-info .boss-bonus { font-size: 1.15rem; font-weight: 900; }
+.boss-taunt.boss-defeat { margin: 6px auto 8px; padding: 0; border: none; background: none; font-size: 0.9rem; }
+.boss-taunt.boss-defeat span { font-size: 0.78rem; }
+.boss-buddy-cheer { font-size: 0.88rem; padding: 10px 12px; } .boss-buddy-cheer small { font-size: 0.74rem; }
