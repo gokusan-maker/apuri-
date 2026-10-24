@@ -1103,8 +1103,13 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
       <h2>
         単語のなかま <span className="attr-badge attr-word">属性：単語</span>
       </h2>
-      <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>
-      {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}
+      <details className="party-help">
+        <summary>ℹ️ なかまについて</summary>
+        <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>
+        {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}
+        {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
+        {onTradeEggs && <p className="stats-note">🥚 タマゴのままの仲間10こで、🎟ガチャチケット1まいと交換できるよ（相棒とおきにいり★は数えない）。</p>}
+      </details>
       {onTradeEggs && tradeableEggs(party).length > 0 && (
         <button
           className="good egg-trade-btn"
@@ -1120,7 +1125,7 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
           </small>
         </button>
       )}
-      {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
+
       <ul className="badge-grid">
         {displayOrder(party).map((i) => {
           const m = party.members[i]
