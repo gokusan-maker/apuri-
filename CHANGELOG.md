@@ -1823,3 +1823,4 @@
 - 2026-10-24: 読解を3本追加：高校入試「Help from the Sky」（ドローンで薬や日用品を届ける）、難関大「Nobody Is Watching as Closely as You Think」（スポットライト効果）、かんたん「The Night Market」（夜市）
 - 2026-10-24: ガチャの結果の「🔁 もう1回ひく」を、色の決まりどおりオレンジに（ダークも）
 - 2026-10-24: 読解を2本追加：TOEFL・IELTS「Built for the Desert」（ラクダのこぶと水の節約）、ふつう（中2）「Grandma's Kendama」（祖母のけん玉）
+- 2026-10-24: 高校入試の読解に体験文「Mrs. Ueno's Warm Hand」（老人ホームの訪問、空所3・内容一致4・英問英答1）を追加

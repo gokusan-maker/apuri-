@@ -3809,6 +3809,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-nursing-home',
+    title: 'Mrs. Ueno\'s Warm Hand',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last month, my class visited a nursing home near our school. Before the visit, I was nervous because I did not know ( A ) to talk to elderly people I had never met.",
+      "When we arrived, a woman named Mrs. Ueno smiled and asked me to sit next to her. She was ninety-two years old. She told me about her childhood. When she was young, there were no televisions in her town, so children played outside until it got dark.",
+      "Then she asked me about my school life. I showed her some photos of our sports day on my tablet. She looked at them carefully and said, \"Young people today look very happy.\" I was glad that I could make her smile. Before we left, she held my hand and said, \"Please come again.\" Her hand was small but ( B ) warm.",
+      "From this experience, I learned that talking with people of different ages can teach us a lot. I am planning ( C ) the nursing home again during the winter vacation with my friends.",
+    ],
+    ja: [
+      '先月、私のクラスは学校の近くの老人ホームをたずねました。訪問の前、会ったことのないお年寄りとどう話せばいいのかわからなかったので、私は緊張していました。',
+      '着くと、上野さんという女性がほほえんで、となりにすわるように言ってくれました。上野さんは92歳でした。上野さんは子どものころの話をしてくれました。若いころ、町にはテレビがなかったので、子どもたちは暗くなるまで外で遊んだそうです。',
+      'それから上野さんは、私の学校生活についてたずねました。私はタブレットで運動会の写真を何枚か見せました。上野さんはじっくり見て、「今の若い人たちは、とても楽しそうね」と言いました。上野さんを笑顔にできて、私はうれしかったです。帰る前に、上野さんは私の手をにぎって「また来てね」と言いました。その手は小さかったけれど、とても温かかったです。',
+      'この経験から、ちがう年代の人と話すことで多くのことを学べると知りました。冬休みに、友だちといっしょにまた老人ホームをたずねる予定です。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how to ～「～のしかた・どう～すればよいか」。how to talk to elderly people。what・which・who では talk to のあとの形とつながらない。' },
+      { id: 'B', choices: ['very', 'much', 'many', 'few'], answer: 0, why: '形容詞 warm を強めるのは very。much は比較級を強める語、many・few は数えられる名詞につける。' },
+      { id: 'C', choices: ['to visit', 'visiting', 'visit', 'visited'], answer: 0, why: 'plan to ～「～する予定だ」。plan のあとは to ＋ 動詞の原形。' },
+    ],
+    tf: [
+      { statement: '筆者は訪問の前、緊張していた。', answer: true, why: '第1段落 I was nervous。' },
+      { statement: '上野さんは82歳だった。', answer: false, why: '第2段落 She was ninety-two years old（92歳）。' },
+      { statement: '上野さんが子どものころ、町にはテレビがなかった。', answer: true, why: '第2段落 there were no televisions in her town。' },
+      { statement: '筆者は、もう老人ホームに行くつもりはない。', answer: false, why: '第4段落 I am planning to visit the nursing home again。' },
+    ],
+    qa: [
+      { q: 'What did the writer show Mrs. Ueno?', choices: ['Photos of the school sports day.', 'A video of a soccer game.', 'A letter from the teacher.', 'A picture of the nursing home.'], answer: 0, why: '第3段落 I showed her some photos of our sports day on my tablet。' },
+    ],
+  },
+  {
     id: 'hs-drones',
     title: 'Help from the Sky',
     level: '高校入試（説明文）',
