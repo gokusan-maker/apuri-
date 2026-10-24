@@ -405,3 +405,9 @@ it('指示語の設問は本文にある語句で、8本以上', () => {
     expect(p.refer!.phrase).toContain(p.refer!.word)
   }
 })
+
+it('「（手紙・メール）」のタグの長文も、手紙・メールのジャンルに入る', async () => {
+  const { genreOf, LONG_PASSAGES: L } = await import('./longreading')
+  expect(genreOf(L.find((p) => p.id === 'letter-swim-coach')!)).toBe('手紙・メール')
+  expect(genreOf(L.find((p) => p.id === 'letter-homeroom-teacher')!)).toBe('手紙・メール')
+})

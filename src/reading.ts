@@ -1839,6 +1839,17 @@ export const PASSAGES: Passage[] = [
       { q: '何時に灯ろうをうかべた？', choices: ['8時', '7時', '9時'], answer: 0 },
     ],
   },
+  {
+    id: 'new-glasses',
+    title: 'My New Glasses',
+    text: 'Last month, I could not see the blackboard well. My teacher told my mother, and we went to an eye doctor. The doctor said that I needed glasses. I chose blue ones. On the first day, I was a little shy. But my friend Kenta said, "You look cool!" Now I can see the words on the blackboard clearly. I take good care of my glasses every day.',
+    ja: '先月、私は黒板がよく見えませんでした。先生がお母さんに伝えて、私たちは目のお医者さんに行きました。お医者さんは、私にはめがねが必要だと言いました。私は青いめがねをえらびました。最初の日は、少しはずかしかったです。でも、友だちのケンタが「かっこいいね！」と言ってくれました。今では、黒板の字がはっきり見えます。私は毎日めがねをたいせつにしています。',
+    questions: [
+      { q: '何がよく見えなかった？', choices: ['黒板', 'テレビ', '本'], answer: 0 },
+      { q: '何色のめがねをえらんだ？', choices: ['青', '赤', '黒'], answer: 0 },
+      { q: 'ケンタは何と言った？', choices: ['かっこいいね', 'おもしろいね', 'かわいいね'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'

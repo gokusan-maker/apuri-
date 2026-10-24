@@ -5685,6 +5685,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Archimedes explained this idea about 200 years ago.', answer: false, why: '第4段落 more than 2,000 years ago。' },
     ],
   },
+  {
+    id: 'letter-homeroom-teacher',
+    title: 'A Letter to My Homeroom Teacher',
+    level: '中3（手紙）',
+    paragraphs: [
+      'Dear Ms. Kato, I am writing to thank you for everything you have done for our class this year. Next week, we will graduate from junior high school. I can hardly believe that three years ( A ) so quickly.',
+      'When I was chosen as class leader in April, I was very nervous. I did not know how to make everyone listen to me. You told me, "A good leader is someone ( B ) listens first." After that, I tried to hear my classmates\' opinions before giving my own.',
+      'Our chorus contest in October is my favorite memory. We practiced every morning, and sometimes we argued. But in the end, we sang as one team and won second prize. I will never forget the smile on your face.',
+      'In high school, I want to keep ( C ) a good listener. Please come and see our school festival next year. Sincerely, Daiki',
+    ],
+    ja: [
+      'カトウ先生へ。今年、私たちのクラスのためにしてくださったすべてのことにお礼を言いたくて、この手紙を書いています。来週、私たちは中学校を卒業します。3年間がこんなに早くすぎたなんて、ほとんど信じられません。',
+      '4月に学級委員に選ばれたとき、ぼくはとても緊張していました。どうすればみんなに話を聞いてもらえるのか、わかりませんでした。先生は「よいリーダーとは、まず人の話を聞く人のことだよ」と言ってくれました。それからぼくは、自分の意見を言う前に、クラスのみんなの意見を聞くようにしました。',
+      '10月の合唱コンクールが、いちばんの思い出です。毎朝練習して、ときには言い合いもしました。でも最後には、ひとつのチームとして歌い、2位になりました。先生のあの笑顔をぼくはけっしてわすれません。',
+      '高校でも、よい聞き手でいつづけたいと思います。来年はぜひ、ぼくたちの学校の文化祭を見に来てください。ダイキより',
+    ],
+    blanks: [
+      { id: 'A', choices: ['have passed', 'has passed', 'passing', 'to pass'], answer: 0, why: '主語 three years は複数なので現在完了は have passed。passing・to pass は動詞として文をつくれない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞が人（someone）で、あとに動詞 listens が続くので主格の who。which は物、whose は名詞が続く、what は先行詞をとらない。' },
+      { id: 'C', choices: ['being', 'be', 'been', 'to being'], answer: 0, why: 'keep ～ing「～しつづける」。keep being a good listener「よい聞き手でいつづける」。' },
+    ],
+    tf: [
+      { statement: 'Daiki and his classmates will graduate next week.', answer: true, why: '第1段落 Next week, we will graduate。' },
+      { statement: 'Daiki was not nervous when he became class leader.', answer: false, why: '第2段落 I was very nervous。' },
+      { statement: 'The class practiced for the chorus contest every morning.', answer: true, why: '第3段落 We practiced every morning。' },
+      { statement: 'The class won first prize in the chorus contest.', answer: false, why: '第3段落 won second prize（2位）。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
@@ -5960,7 +5988,7 @@ export function genreOf(p: LongPassage): Genre {
   const tag = /（(.+)）/.exec(p.level)?.[1] ?? ''
   if (tag === '会話文') return '会話文'
   if (tag === 'スピーチ') return 'スピーチ'
-  if (['メール', '手紙', 'お知らせ'].includes(tag)) return '手紙・メール'
+  if (['メール', '手紙', '手紙・メール', 'お知らせ'].includes(tag)) return '手紙・メール'
   if (['物語', '日記', ''].includes(tag)) return '物語'
   return '説明文'
 }

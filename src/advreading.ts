@@ -4689,4 +4689,62 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why did the experts lose their advantage when the pieces were placed randomly?', choices: ['They could no longer recognize familiar patterns.', 'They had less time to look at the board.', 'The beginners had practiced more.', 'The random positions used more pieces.'], answer: 0, why: '第3段落 Their skill depended on recognizing familiar patterns。' },
     ],
   },
+  {
+    id: 'adv-navigation-apps',
+    title: 'The Hidden Cost of Never Getting Lost',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Satellite navigation has made getting lost almost a thing of the past. With a smartphone, we can walk through an unfamiliar city simply by following a blue dot on a map. Yet some researchers have begun to ask ( A ) this convenience comes at a hidden cost.",
+      "Studies suggest that people who rely heavily on turn-by-turn directions tend to form weaker mental maps of the places they travel through. When a device tells us exactly when to turn, we no longer need to notice landmarks, estimate distances, or keep track of our direction. The parts of the brain ( B ) are involved in these tasks may therefore receive less exercise.",
+      "None of this means that we should throw away our phones. Navigation apps are extremely useful, especially in emergencies or in places where getting lost could be dangerous. However, occasionally finding our way without them, by studying a map beforehand or paying attention to the streets around us, may help keep our sense of direction ( C ). Getting lost, it turns out, can sometimes be a valuable experience.",
+    ],
+    ja: [
+      '衛星ナビゲーションのおかげで、道に迷うことはほとんど過去のものになった。スマートフォンがあれば、地図の上の青い点を追うだけで、知らない町を歩くことができる。しかし、この便利さには見えない代償があるのではないかと問いはじめた研究者もいる。',
+      '研究によると、曲がる場所を1つずつ教える案内に強くたよる人は、通った場所について頭の中の地図が弱くなりがちだという。機械がいつ曲がればよいかを正確に教えてくれると、私たちは目印に気づいたり、きょりを見積もったり、自分の向きを追ったりする必要がなくなる。そのため、こうした作業にかかわる脳の部分が、あまりきたえられなくなるかもしれない。',
+      'だからといって、スマートフォンを捨てるべきだということではない。ナビのアプリは、とくに緊急のときや、迷うと危ない場所ではとても役に立つ。しかし、ときには前もって地図を調べたり、まわりの通りに注意をはらったりして、アプリなしで道を見つけることが、方向感覚をするどく保つ助けになるかもしれない。道に迷うことは、ときに価値のある経験になりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: 'ask whether ～「～かどうかを問う」。あとの文は this convenience comes at a hidden cost と完全なので、what・which・who は入らない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 The parts of the brain を説明し、あとに動詞 are involved が続くので主格の関係代名詞 that。where はあとに完全な文が必要。' },
+      { id: 'C', choices: ['sharp', 'sharply', 'sharpness', 'sharpen'], answer: 0, why: 'keep O ＋ 形容詞「O を～の状態に保つ」。副詞・名詞・動詞は補語にならない。' },
+    ],
+    tf: [
+      { statement: 'ナビの便利さには見えない代償があるのではと考える研究者がいる。', answer: true, why: '第1段落 some researchers have begun to ask whether this convenience comes at a hidden cost。' },
+      { statement: '案内に強くたよる人ほど、頭の中の地図がしっかりできる。', answer: false, why: '第2段落 tend to form weaker mental maps。' },
+      { statement: '筆者は、スマートフォンを捨てるべきだと主張している。', answer: false, why: '第3段落 None of this means that we should throw away our phones。' },
+      { statement: '筆者は、ときにはアプリなしで道を見つけることをすすめている。', answer: true, why: '第3段落 occasionally finding our way without them … may help keep our sense of direction sharp。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why might heavy use of navigation apps weaken our mental maps?', choices: ['We no longer need to notice landmarks or track our direction.', 'The apps often show the wrong route.', 'We walk faster when we use the apps.', 'The apps only work in emergencies.'], answer: 0, why: '第2段落 we no longer need to notice landmarks, estimate distances, or keep track of our direction。' },
+    ],
+  },
+  {
+    id: 'toefl-limestone-caves',
+    title: 'How Limestone Caves Form',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Many of the world's largest caves are found in areas made of limestone, a type of rock formed mainly from the shells and skeletons of ancient sea creatures. Limestone may seem hard and permanent, but it can slowly be dissolved by water ( A ) contains a weak acid.",
+      "Rainwater picks up carbon dioxide from the air and from the soil, forming a weak acid. As this water seeps into cracks in the limestone, it dissolves the rock little by little. Over hundreds of thousands of years, the cracks grow wider and eventually become passages and large chambers underground.",
+      "Caves also contain striking formations. When water dripping from a cave's ceiling loses some of its carbon dioxide, the dissolved minerals are left behind as solid rock. Drop by drop, icicle-shaped stalactites grow downward from the ceiling, while stalagmites build up from the floor ( B ) the drops land. These formations grow extremely slowly, often only a few centimeters in a thousand years, so scientists can use them ( C ) the climates of the distant past.",
+    ],
+    ja: [
+      '世界の大きな洞窟の多くは、石灰岩でできた地域にある。石灰岩は、おもに大昔の海の生き物の殻や骨からできた岩である。石灰岩はかたく、いつまでも変わらないように見えるかもしれないが、弱い酸をふくむ水によって少しずつとかされる。',
+      '雨水は、空気や土から二酸化炭素をとりこみ、弱い酸になる。この水が石灰岩のわれ目にしみこむと、岩を少しずつとかしていく。何十万年もかけて、われ目は広がり、やがて地下の通路や大きな空間になる。',
+      '洞窟には、目を見はるような形のものもある。天井からしたたる水が二酸化炭素の一部を失うと、とけていた鉱物が固い岩として残る。一滴ずつ、つららのような形の鍾乳石が天井から下へとのび、しずくが落ちる床からは石筍が積み上がっていく。これらはとてもゆっくり成長し、1000年でわずか数センチということも多いため、科学者はそれを使って遠い昔の気候を調べることができる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 water を説明し、あとに動詞 contains が続くので主格の関係代名詞 that。where はあとに完全な文、who は人。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'あとに the drops land という完全な文が続くので関係副詞 where「しずくが落ちる場所の」。which だと on などの前置詞が必要。' },
+      { id: 'C', choices: ['to study', 'studying', 'studied', 'study'], answer: 0, why: 'use O to ～「～するために O を使う」。目的を表す to 不定詞。' },
+    ],
+    tf: [
+      { statement: '石灰岩は、おもに大昔の海の生き物の殻や骨からできている。', answer: true, why: '第1段落 formed mainly from the shells and skeletons of ancient sea creatures。' },
+      { statement: '雨水は、二酸化炭素をとりこんで弱い酸になる。', answer: true, why: '第2段落 Rainwater picks up carbon dioxide … forming a weak acid。' },
+      { statement: '大きな洞窟は、数年でできる。', answer: false, why: '第2段落 Over hundreds of thousands of years。' },
+      { statement: '鍾乳石は、床から上へとのびる。', answer: false, why: '第3段落 stalactites grow downward from the ceiling（床から積み上がるのは石筍）。' },
+    ],
+    qa: [
+      { q: 'Why can scientists use cave formations to study past climates?', choices: ['They grow very slowly over long periods of time.', 'They are made of seashells.', 'They dissolve quickly in rain.', 'They are found only in cold places.'], answer: 0, why: '第3段落 These formations grow extremely slowly … so scientists can use them to study the climates of the distant past。' },
+    ],
+  },
 ]
