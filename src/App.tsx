@@ -1314,7 +1314,7 @@ function App() {
               requestAnimationFrame(() => document.querySelector('.buddy-detail')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
             }}
           >
-            🔁 なかまを入れかえる（属性ごと）
+            🔁 なかまを入れかえる
           </button>
           <button
             className="home-gacha-btn"
@@ -1339,7 +1339,7 @@ function App() {
                 toContent()
               }}
             >
-              ⚔ 今日のボスに挑む（勝つと🪙{DAILY_BOSS_COINS}）
+              ⚔ 今日のボスに挑む <span className="home-reward-pill">🪙{DAILY_BOSS_COINS}</span>
             </button>
           )}
           {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (

@@ -153,7 +153,7 @@ describe('App', () => {
 
   it('ホームの「なかまを入れかえる」で、属性ごとの入れかえ画面が開く', () => {
     render(<App />)
-    fireEvent.click(screen.getByText('🔁 なかまを入れかえる（属性ごと）'))
+    fireEvent.click(screen.getByText('🔁 なかまを入れかえる'))
     expect(screen.getByRole('tab', { name: 'あいぼう' })).toHaveAttribute('aria-selected', 'true')
     expect(screen.getByLabelText('文法のなかまを入れかえる')).toBeInTheDocument()
     expect(screen.getByLabelText('読解のなかまを入れかえる')).toBeInTheDocument()
