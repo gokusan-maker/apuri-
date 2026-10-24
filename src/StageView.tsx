@@ -90,6 +90,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
+  const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
   // ステージ・ボス戦の画面では、App の上に「ほかの問題をえらぶ」（おすとステージ・ボスの一覧へ）
   usePlaying(!!(univFight || endless || rush || timeAttack || nightFight || weekendFight || rareFight || fighting || playing), () => {
     setUnivFight(null)
@@ -110,6 +111,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     const first = !univ[univFight.id]
     return (
       <Boss
+        winLabel={backLabel}
         reading
         winBuddy={readingBuddy}
         key={univFight.id}
@@ -196,7 +198,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
         note={rush.round === 0 ? (rush.ex ? `3連戦！ 全勝で 🪙${RUSH_EX_COINS}＋🎟2` : `3連戦！ 全勝で 🪙${RUSH_COINS}＋🎟`) : undefined}
         startHearts={rush.hearts}
-        winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶ ❤️${rush.hearts}`}
+        winLabel={last ? `ラッシュ完全クリア！ ${backLabel}` : `次のボスへ ▶ ❤️${rush.hearts}`}
         partner={partner}
         power={power}
         bag={bag}
@@ -225,6 +227,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     const nb = nightBossOf(dayKey())
     return (
       <Boss
+        winLabel={backLabel}
         reading
         winBuddy={readingBuddy}
         level={nb.level}
@@ -258,6 +261,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     const wb = weekendBossOf(week)
     return (
       <Boss
+        winLabel={backLabel}
         reading
         winBuddy={readingBuddy}
         level={wb.level}
@@ -291,6 +295,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   if (rareFight) {
     return (
       <Boss
+        winLabel={backLabel}
         reading
         winBuddy={readingBuddy}
         level={rare.level}
@@ -325,6 +330,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     const nextLevel = !dailyFight && !strong && !sudden ? levels.slice(levels.indexOf(fighting) + 1).find((l) => bossUnlocked(l, record)) : undefined
     return (
       <Boss
+        winLabel={backLabel}
         key={fighting}
         reading
         winBuddy={readingBuddy}
