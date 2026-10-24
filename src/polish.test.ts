@@ -106,3 +106,7 @@ it('ボス部屋のボタンは同じ形（アイコンの箱・名前・バッ�
   expect(css).toMatch(/\.gold-chest \{ display: flex;[^}]*linear-gradient\(135deg, #fde047, #f59e0b\)/)
   expect(css).toMatch(/\.daily-stars \.star-3 \{/)
 })
+
+it('ホームの今日の目標は太い緑のゲージ', () => {
+  expect(css).toMatch(/\.goal \.goal-fill \{[^}]*linear-gradient\(90deg, #4ade80, #16a34a\)/)
+})
