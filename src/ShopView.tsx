@@ -184,7 +184,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
               <span className="badge-icon" aria-hidden="true">
                 {r.icon}
               </span>
-              <span className="badge-name">{splitSoft(r.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
+              <span className="badge-name room-name" title={r.name}>{r.name}</span>
               {owned ? (
                 <button className="shop-btn" onClick={() => onRoom?.(using ? undefined : r.id)}>
                   {using ? 'もとにもどす' : 'この部屋にする'}
