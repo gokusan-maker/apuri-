@@ -4,6 +4,7 @@ import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PlayContext, type PlayRegister } from './playing'
 import { todayReading } from './todayread'
+import { BossTeamContext, type BossTeam } from './bossteam'
 import type { LongPassage } from './longreading'
 import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
@@ -390,6 +391,12 @@ function App() {
     setPlays((p) => [...p, { id, exit }])
     return () => setPlays((p) => p.filter((x) => x.id !== id))
   }, [])
+  // ボス戦のチーム：単語（相棒）・文法・読解のなかまの絵と名前
+  const bossTeam: BossTeam = {
+    word: { name: monster.name ?? formOf(monster).name, fig: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" /> },
+    grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} /> },
+    reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} /> },
+  }
   const playOn = plays.length > 0 && !todayFocus && !showShop && !showChallenge
   // 音読・読み上げは、ページが変わったら止める（タブ・ショップ・今日の課題の切りかえ、問題の画面から出たとき）
   const pageKey = `${mode}|${showShop}|${showChallenge}|${todayFocus ?? ''}|${wordTab}|${readLevel}`
@@ -1294,6 +1301,7 @@ function App() {
 
   return (
     <PlayContext.Provider value={playRegister}>
+    <BossTeamContext.Provider value={bossTeam}>
     <main className="app">
       <header>
         <div className="top">
@@ -2137,6 +2145,7 @@ function App() {
         ))}
       </nav>
     </main>
+    </BossTeamContext.Provider>
     </PlayContext.Provider>
   )
 }

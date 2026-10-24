@@ -5,13 +5,14 @@ import { CountUp } from './CountUpView'
 import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingboss'
 import { speak } from './speech'
 import { makeLookup } from './glossary'
-import { useEffect, useId, useRef, useState } from 'react'
+import { useContext, useEffect, useId, useRef, useState } from 'react'
+import { BossTeamContext, TEAM_ICON, TEAM_LABEL } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -154,7 +155,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
-  const [qs, setQs] = useState(() => (reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q)))
+  // チームバトル：App が単語・文法・読解のなかまをわたしているときは、3体が順番に攻撃する（読解ボスは、読解の番に本文の問題）
+  const team = useContext(BossTeamContext)
+  const teamOn = !!team
+  const teamWords = words.length > 0 ? words : WORDS.filter((w) => w.level === level)
+  const makeQs = () => (teamOn ? teamBossQuestions(teamWords, rnd, BOSS_QUESTIONS, reading ? readingBossQs(level, rnd) : undefined) : reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q))
+  const [qs, setQs] = useState(makeQs)
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(startHearts)
@@ -375,7 +381,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setMinionAt(-1)
     startedAt.current = nowMs()
     setTime(null)
-    setQs((reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q)))
+    setQs(makeQs())
     setIndex(0)
     setHp(maxHp)
     setHearts(startHearts)
@@ -476,7 +482,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 {partner.name}の特技「{skill.name}」Lv{lv}：{skill.desc}
               </>
             ) : (
-              <>{partner.name}が応援中！</>
+              <>{teamOn ? '🤝 3人のチームで挑戦！' : `${partner.name}が応援中！`}</>
             )}
           </span>
         </div>
@@ -709,7 +715,27 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               )}
             </details>
           )}
-          <p className={`en${'passage' in q ? ' boss-reading-q' : ''}`}>{q.word.en}</p>
+          {teamOn && 'team' in q && (
+            <>
+              <div className="boss-team" role="group" aria-label="チーム">
+                {TEAM_ORDER.map((r) => (
+                  <span key={r} className={`boss-team-m team-${r}${q.team === r ? ' on' : ''}`} aria-current={q.team === r ? 'true' : undefined}>
+                    <span className="boss-team-fig" aria-hidden="true">
+                      {team![r].fig}
+                    </span>
+                    <small>
+                      {TEAM_ICON[r]}
+                      {TEAM_LABEL[r]}
+                    </small>
+                  </span>
+                ))}
+              </div>
+              <p className="boss-team-turn">
+                {TEAM_ICON[q.team as TeamRole]} {team![q.team as TeamRole].name}の{TEAM_LABEL[q.team as TeamRole]}アタック！
+              </p>
+            </>
+          )}
+          <p className={`en${'passage' in q ? ' boss-reading-q' : ''}${'team' in q && q.team !== 'word' ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
           {'passage' in q && picked === null && ((q as ReadingQ).hint?.note || (q as ReadingQ).hint?.quote) &&
             (tipAt === index ? (
               <div className="boss-hint" role="status">

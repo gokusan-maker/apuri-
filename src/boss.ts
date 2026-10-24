@@ -1,7 +1,8 @@
 // ボス戦：単語帳の全ステージをクリアすると挑戦できる。
 import { stagesOf, type StageRecord } from './stages'
 import { WORDS, type Level, type Word } from './words'
-import { makeQuiz } from './quiz'
+import { makeQuiz, shuffle } from './quiz'
+import { grammarForGrade } from './grammar'
 import { grammarMixQ } from './puzzles'
 
 export const BOSS_HP = 100
@@ -88,6 +89,41 @@ export function bossQuestions(words: Word[], grammar: boolean) {
     const g = grammarMixQ()
     return { word: { id: '', en: g.prompt, ja: g.choices[g.answer], example: '', exampleJa: '', level: '高校基礎' } as Word, choices: g.choices, answer: g.answer }
   })
+}
+
+// チームバトル：単語・文法・読解のなかまが順番にボスを攻撃する（オーナーの要望：ボス戦なのに単語だけにしない）
+// 単語＝単語の意味、文法＝___ 穴埋め（設定の学年の単元から）、読解＝英文を読んで意味をえらぶ
+export type TeamRole = 'word' | 'grammar' | 'reading'
+export const TEAM_ORDER: TeamRole[] = ['word', 'grammar', 'reading']
+export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamRole }
+
+// readingQs：読解ボスのときは、読解の番に本文の問題を順に出す
+export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[]): (TeamQ | (R & { team: 'reading' }))[] {
+  const wordQs = makeQuiz(WORDS, (w) => w.ja, n, rnd, words)
+  const units = grammarForGrade()
+  const sentences = words.filter((w) => w.example && w.exampleJa)
+  const pool = sentences.length >= 4 ? sentences : WORDS.filter((w) => w.example && w.exampleJa)
+  const out: (TeamQ | (R & { team: 'reading' }))[] = []
+  let ri = 0
+  for (let i = 0; i < n; i++) {
+    const role = TEAM_ORDER[i % TEAM_ORDER.length]
+    if (role === 'grammar') {
+      const u = units[Math.floor(rnd() * units.length)]
+      const g = u.questions[Math.floor(rnd() * u.questions.length)]
+      out.push({ word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer, team: 'grammar' })
+    } else if (role === 'reading' && readingQs && readingQs.length > 0) {
+      out.push({ ...readingQs[ri++ % readingQs.length], team: 'reading' })
+    } else if (role === 'reading') {
+      const w = pool[Math.floor(rnd() * pool.length)]
+      const others = shuffle(pool.filter((x) => x.exampleJa !== w.exampleJa), rnd)
+        .map((x) => x.exampleJa)
+        .filter((t, k, a) => a.indexOf(t) === k)
+        .slice(0, 3)
+      const choices = shuffle([w.exampleJa, ...others], rnd)
+      out.push({ word: { ...w, id: '', en: w.example, ja: w.exampleJa }, choices, answer: choices.indexOf(w.exampleJa), team: 'reading' })
+    } else out.push({ ...wordQs[i % wordQs.length], team: 'word' })
+  }
+  return out
 }
 
 // バトル結果のランク：ハートが減らず会心3回以上で S、ハートが2つ以上で A、それ以外は B

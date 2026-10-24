@@ -14,8 +14,21 @@ import { Quiz } from './QuizView'
 import { dayKey, loadProgress } from './srs'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
+import { GRAMMAR } from './grammar'
 import { WORDS } from './words'
 
+// ボス戦（チームバトル）の今の問題の正解：本文の問題・単語・文法・例文の訳のどれでも
+const PASSAGE_QS = LONG_PASSAGES.flatMap(passageQs)
+const GRAMMAR_QS = GRAMMAR.flatMap((u) => u.questions)
+function bossAnswer(en: string): string {
+  const r = PASSAGE_QS.find((x) => x.word.en === en)
+  if (r) return r.choices[r.answer]
+  const g = GRAMMAR_QS.find((x) => x.sentence === en)
+  if (g) return g.choices[g.answer]
+  const w = WORDS.find((x) => x.en === en)
+  if (w) return w.ja
+  return WORDS.find((x) => x.example === en)!.exampleJa
+}
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 // 単語ステージ（単語帳ごとのステージとそのボス）は単語ゲームの「🗺 ステージ」にある
 const toWordStages = () => {
@@ -43,12 +56,10 @@ describe('再発防止', () => {
     toWordStages()
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
-    const all = LONG_PASSAGES.flatMap(passageQs)
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
-      const q = all.find((x) => x.word.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       expected += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
@@ -73,12 +84,10 @@ describe('再発防止', () => {
     toWordStages()
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
-    const all = LONG_PASSAGES.flatMap(passageQs)
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
-      const q = all.find((x) => x.word.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       expected += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
@@ -101,12 +110,10 @@ describe('再発防止', () => {
     toWordStages()
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
-    const all = LONG_PASSAGES.flatMap(passageQs)
     let expected = BOSS_XP
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
-      const q = all.find((x) => x.word.en === en)!
-      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === q.choices[q.answer])!)
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       expected += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }

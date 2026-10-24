@@ -2511,3 +2511,18 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .play-back-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; text-align: left; }
 .quiz-pick-start { display: block; width: 100%; margin-top: 12px; }
 .boss-pick-title { margin: 0 0 4px; font-weight: 900; font-size: 0.95rem; }
+
+/* ボス戦のチーム：3体がならび、攻撃する番のなかまが前に出て光る */
+.boss-team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; margin: 4px 0 6px; }
+.boss-team-m { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 4px 2px 6px; border-radius: 14px; background: color-mix(in srgb, var(--accent) 6%, var(--card)); opacity: 0.55; transform: scale(0.92); transition: transform 0.2s, opacity 0.2s; }
+.boss-team-m small { font-size: 0.7rem; font-weight: 800; white-space: nowrap; }
+.boss-team-fig { display: block; width: 48px; height: 48px; }
+.boss-team-fig svg { width: 100%; height: 100%; }
+.boss-team-m.on { opacity: 1; transform: translateY(-4px) scale(1.04); box-shadow: 0 4px 0 color-mix(in srgb, var(--team-c) 55%, #000), 0 0 0 2px var(--team-c); background: color-mix(in srgb, var(--team-c) 16%, var(--card)); }
+.boss-team-m.team-word { --team-c: #f97316; }
+.boss-team-m.team-grammar { --team-c: #22c55e; }
+.boss-team-m.team-reading { --team-c: #8b5cf6; }
+.boss-team-turn { margin: 0 0 4px; overflow: hidden; font-weight: 900; text-align: center; white-space: nowrap; text-overflow: ellipsis; }
+.boss-team-turn small { margin-left: 6px; color: var(--muted); font-size: 0.78rem; font-weight: 700; }
+.en.boss-sentence-q { font-size: 1.1rem; line-height: 1.45; }
+@media (prefers-reduced-motion: reduce) { .boss-team-m { transition: none; } }
