@@ -62,3 +62,7 @@ it('文法ページの今日の文法は1画面に収まるよう、選択肢を
   expect(css).toContain('.today-grammar .choices { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));')
   expect(css).toContain('.today-grammar .flip { margin-top: 8px;')
 })
+
+it('ボス部屋のモード一覧は1行ずつ色つきのゲームボタン', () => {
+  expect(css).toMatch(/\.boss-modes \.boss-btn \{ padding: 14px 40px 14px 16px; border: none; border-radius: 16px; background: linear-gradient/)
+})

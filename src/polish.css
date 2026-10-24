@@ -2100,3 +2100,15 @@ details[open] > summary::before { transform: rotate(90deg); }
 .today-grammar .choice { min-height: 48px; padding: 8px 6px; font-size: 1rem; overflow-wrap: anywhere; }
 .today-grammar .feedback { margin-top: 8px; font-size: 0.95rem; text-wrap: pretty; word-break: auto-phrase; }
 .today-grammar .flip { margin-top: 8px; padding-block: 10px; }
+
+/* ボス部屋のモード一覧：1行ずつ色つきのゲームボタンに */
+.boss-modes { gap: 10px; overflow: visible; border: none; border-radius: 0; background: none; box-shadow: none; }
+.boss-modes .boss-btn { padding: 14px 40px 14px 16px; border: none; border-radius: 16px; background: linear-gradient(135deg, color-mix(in srgb, var(--mode-color, var(--accent)) 78%, #fff), var(--mode-color, var(--accent))); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 4px 0 color-mix(in srgb, var(--mode-color, var(--accent)) 55%, #000), 0 6px 14px rgb(0 0 0 / 0.14); }
+.boss-modes .boss-btn + .boss-btn { border-top: none; }
+.boss-modes .boss-btn::after { color: rgb(255 255 255 / 0.85); }
+.boss-modes .boss-btn:active { background: linear-gradient(135deg, color-mix(in srgb, var(--mode-color, var(--accent)) 78%, #fff), var(--mode-color, var(--accent))); transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--mode-color, var(--accent)) 55%, #000); }
+.boss-modes .boss-btn.rush-boss.ex { background: linear-gradient(90deg, #f59e0b, #ef4444, #a855f7); }
+.boss-modes .boss-btn.rare-boss { background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; text-shadow: none; }
+.boss-modes .boss-btn.rare-boss::after { color: #713f12; }
+.boss-modes .mode-badge { background: rgb(255 255 255 / 0.25); color: #fff; }
+.boss-modes .rare-boss .mode-badge { background: rgb(255 255 255 / 0.55); color: #713f12; }
