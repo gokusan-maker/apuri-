@@ -158,9 +158,12 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
               <button key={it.id} className="good" title={it.desc} disabled={wallet.coins < it.price || bag[it.id] >= BAG_MAX} onClick={() => onBuyBattle(it.id)}>
                 <span className="item-icon" aria-hidden="true">{it.icon}</span>
                 <span className="item-name">{splitSoft(it.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
-                <span className="item-meta">
-                  {it.short}・<span aria-label={`持っている数 ${bag[it.id]}`}>×{bag[it.id]}</span>
-                </span>
+                <span className="item-meta">{it.short}</span>
+                {bag[it.id] > 0 && (
+                  <span className="item-owned" aria-label={`持っている数 ${bag[it.id]}`}>
+                    ×{bag[it.id]}
+                  </span>
+                )}
                 <span className="item-price">🪙{it.price}</span>
               </button>
             ))}

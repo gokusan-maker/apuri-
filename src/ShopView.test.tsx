@@ -96,3 +96,10 @@ it('バトルアイテムは短い効果だけ表示し、くわしい説明は 
   expect(document.body.textContent).not.toContain('会心の一撃の時間が2倍')
   expect(screen.getByTitle('この戦いの間、会心の一撃の時間が2倍')).toBeInTheDocument()
 })
+
+it('バトルアイテムの持っている数は1つ以上のときだけ右上のバッジで出る', () => {
+  const bag = { bomb: 2, charm: 0, clock: 0, lucky: 0 }
+  render(<Shop wallet={{ coins: 100, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} bag={bag} onBuyBattle={() => {}} />)
+  fireEvent.click(screen.getByRole('tab', { name: /アイテム/ }))
+  expect([...document.querySelectorAll('.item-owned')].map((e) => e.textContent)).toEqual(['×2'])
+})
