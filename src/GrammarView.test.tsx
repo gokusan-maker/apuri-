@@ -652,13 +652,13 @@ it('まちがえた問題があると「まちがえた問題だけもう一度�
     fireEvent.click(screen.getByRole('button', { name: q.choices[i === 1 ? (q.answer + 1) % q.choices.length : q.answer] }))
     fireEvent.click(screen.getByText('次へ'))
   })
-  fireEvent.click(screen.getByText('🔁 まちがえた問題だけもう一度（1問）'))
+  fireEvent.click(screen.getByText('🔁 まちがい1問をもう一度'))
   const q = unit.questions[1]
   expect(document.querySelector('.grammar-progress')!.textContent).toBe('1 / 1 問目')
   fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.getByText('1 / 1 問正解')).toBeInTheDocument()
-  expect(screen.queryByText(/まちがえた問題だけもう一度/)).toBeNull()
+  expect(screen.queryByText(/まちがい\d+問をもう一度/)).toBeNull()
 })
 
 it('★をつけた単元だけから「お気に入り単元テスト」ができる', () => {

@@ -817,7 +817,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           {unit.id === 'streak-run' ? `🔥 ${score}問 連続正解！（ベスト ${runBest}問）` : `${score} / ${unit.questions.length} 問正解`}
         </p>
         {stampMode && missed.length > 0 && (
-          <p className="stats-note note-added">📓 まちがえた{missed.length}問をまちがいノートに入れたよ（文法ゲームの「まちがいノート」でとき直せる）</p>
+          <p className="stats-note note-added" title="文法ゲームの「まちがいノート」でとき直せる">📓 まちがえた{missed.length}問をまちがいノートに入れたよ</p>
         )}
         {unit.id === 'streak-run' && runBonus && <p className="level-up">🏆 ベスト更新！ 文法のなかまに +{RUN_BEST_XP}XP</p>}
         {(unit.id === 'mix-test' || unit.id === 'grade-test') && (
@@ -893,7 +893,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
               setStep(0)
             }}
           >
-            🔁 まちがえた問題だけもう一度（{missed.length}問）
+            🔁 まちがい{missed.length}問をもう一度
           </button>
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
@@ -913,7 +913,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         >
           {copied ? '✅ コピーしました' : '📋 結果をコピー'}
         </button>
-        <button className="flip" onClick={() => open(unit)}>
+        <button className="flip go-next" onClick={() => open(unit)}>
           もう一度
         </button>
       </section>

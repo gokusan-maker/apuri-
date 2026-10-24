@@ -2586,3 +2586,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .flip.go-next:active:not(:disabled), .flip.go-retry:active { transform: translateY(3px); box-shadow: none; }
 /* 相棒の部屋の名前は1行（長い名前は小さめ・… で切る） */
 .room-sample .room-name { display: block; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.82rem; letter-spacing: -0.02em; }
+.note-added { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
