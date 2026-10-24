@@ -688,24 +688,25 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             <div className="boss-team-cheer" aria-label="チームのはげまし">
               {TEAM_ORDER.map((r) => (
                 <p key={r} className={`team-${r}`} title={`${team![r].name}「${TEAM_LOSE_LINES[r]}」`}>
-                  {TEAM_ICON[r]} {team![r].name}「{TEAM_LOSE_LINES[r]}」
+                  {TEAM_ICON[r]}「{TEAM_LOSE_LINES[r]}」
                 </p>
               ))}
             </div>
           ) : (
             partner && <p className="grammar-praise lose-cheer">🐣 {partner.name}「{cheerOnLose(corrects)}」</p>
           )}
-          <p className="result-message">{reading ? '本文をもう一度ゆっくり読んで、もう一度挑戦しよう！' : '苦手な単語を復習して、もう一度挑戦しよう！'}</p>
+          {!teamOn && <p className="result-message">{reading ? '本文をもう一度ゆっくり読んで、もう一度挑戦しよう！' : '苦手な単語を復習して、もう一度挑戦しよう！'}</p>}
           {onSpend && !continued && hearts <= 0 && index < qs.length && (
             <button
               className="boss-btn continue-btn"
+              title={`🪙${CONTINUE_COST}でハート全回復して続きから`}
               onClick={() => {
                 if (!onSpend(CONTINUE_COST)) return
                 setHearts(HEARTS)
                 setContinued(true)
               }}
             >
-              🔥 コンティニュー（🪙{CONTINUE_COST}でハート全回復して続きから）
+              🔥 コンティニュー 🪙{CONTINUE_COST}
             </button>
           )}
           <MissedList words={missed} />

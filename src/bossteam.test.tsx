@@ -83,5 +83,6 @@ it('負けると、3体のなかまがそれぞれ1行ではげましてくれ�
   if (next) fireEvent.click(next)
   const cheer = screen.getByLabelText('チームのはげまし')
   expect(cheer.children).toHaveLength(3)
-  expect(cheer.textContent).toContain('コトバン')
+  expect(cheer.textContent).toContain('文法を見直せば勝てるよ！')
+  expect(cheer.querySelector('.team-grammar')!.getAttribute('title')).toContain('コトバン')
 })

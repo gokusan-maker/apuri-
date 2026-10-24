@@ -11,7 +11,7 @@ export const TEAM_LABEL: Record<TeamRole, string> = { word: '単語', grammar: '
 export const TEAM_ICON: Record<TeamRole, string> = { word: '🔤', grammar: '📐', reading: '📖' }
 // 負けたときのチームのはげまし（1人1行）
 export const TEAM_LOSE_LINES: Record<TeamRole, string> = {
-  word: 'まちがえた単語、いっしょに覚えよう！',
-  grammar: '文法のルールを見直せば勝てるよ！',
+  word: '単語をいっしょに覚えよう！',
+  grammar: '文法を見直せば勝てるよ！',
   reading: '次は本文をゆっくり読もう！',
 }
