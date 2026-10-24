@@ -104,8 +104,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             list.forEach(record)
           }}
         >
-          <span className="gacha-multi-title">🎰 3連ガチャ</span>
-          <span className="gacha-multi-sub">🪙{price * MULTI}</span>
+          <span className="gacha-multi-icon" aria-hidden="true">🎰</span>
+          <span className="gacha-multi-title">3連ガチャ</span>
+          <span className="gacha-multi-sub">タマゴ3つ</span>
+          <span className="gacha-price">🪙{price * MULTI}</span>
           {members + MULTI > PARTY_MAX && <small>（仲間の空きが3ひつよう）</small>}
         </button>
       )}
@@ -121,9 +123,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             list.forEach(record)
           }}
         >
-          <span className="gacha-multi-title">🌈 5連ガチャ</span>
+          <span className="gacha-multi-icon" aria-hidden="true">🌈</span>
+          <span className="gacha-multi-title">5連ガチャ</span>
           <span className="gacha-multi-sub">レア以上1つ確定</span>
-          <span className="gacha-multi-sub">🪙{price * MULTI5}</span>
+          <span className="gacha-price">🪙{price * MULTI5}</span>
           {members + MULTI5 > PARTY_MAX && <small>（仲間の空きが5ひつよう）</small>}
         </button>
       )}
@@ -132,9 +135,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       {tickets > 0 && !full && (
         <button
           className="good gacha-btn ticket"
+          aria-label={`🎟 チケットで引く（あと${tickets}枚）`}
           onClick={() => drawOne(true)}
         >
-          🎟 チケットで引く（あと{tickets}枚）
+          🎟 チケットで引く ×{tickets}
         </button>
       )}
       {stepLeft === 0 && (
@@ -158,7 +162,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </span>
           <span>
             <strong>🎯 今日のピックアップ</strong>
-            <br />だれが出やすいかはお楽しみ！
+            <br />出やすい子はお楽しみ！
           </span>
         </div>
       )}
