@@ -5141,6 +5141,35 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The class stopped growing tomatoes after this.', answer: false, why: '第4段落 ネットをはって、今もトマトは無事。' },
     ],
   },
+  {
+    id: 'manhole-art',
+    title: 'Art Under Your Feet',
+    level: '中3（説明文）',
+    paragraphs: [
+      'When you walk around a town in Japan, look down at the road. You may find a manhole cover with a beautiful picture on it. Many cities and towns in Japan have their own designs. Some show famous places, and others show local flowers, animals, or festivals.',
+      'Why do towns make such special covers? Manhole covers are needed ( A ) every town, so they are a good way to tell people about the town. A cover with a picture of a castle or a local fruit can make people feel proud of their home.',
+      'In recent years, these covers have become popular with visitors, too. Some people travel to different towns just to take pictures of them. Many towns also give out free "manhole cards," and each card shows one cover and explains ( B ) the picture means. People enjoy collecting them like trading cards.',
+      'Manhole covers are very useful, but most people do not pay attention to them. The designs teach us that even everyday things can become art and help people learn ( C ) a town.',
+    ],
+    ja: [
+      '日本の町を歩くときは、道路を見下ろしてみてください。きれいな絵がついたマンホールのふたが見つかるかもしれません。日本の多くの市や町には、それぞれ独自のデザインがあります。有名な場所を描いたものもあれば、地元の花や動物、祭りを描いたものもあります。',
+      'なぜ町はそのような特別なふたを作るのでしょうか。マンホールのふたはどの町にも必要なので、人々に町のことを伝えるのによい方法なのです。城や地元の果物の絵がついたふたは、人々に自分のふるさとをほこりに思わせることができます。',
+      '近年、これらのふたは観光客にも人気になっています。それらの写真をとるためだけに、いろいろな町へ旅をする人もいます。また多くの町では無料の「マンホールカード」を配っていて、それぞれのカードには1つのふたがのっていて、その絵が何を表しているかを説明しています。人々はそれをトレーディングカードのように集めて楽しんでいます。',
+      'マンホールのふたはとても役に立ちますが、ほとんどの人は気にとめません。これらのデザインは、毎日の身近なものでも芸術になり、人々が町について知る助けになることを教えてくれます。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'at', 'of', 'by'], answer: 0, why: 'in every town「どの町でも」。町（場所の中）なので in。' },
+      { id: 'B', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'explains what the picture means「その絵が何を意味するか」。means の目的語がないので what。how のあとは文が完全な形になる。' },
+      { id: 'C', choices: ['about', 'with', 'for', 'by'], answer: 0, why: 'learn about ～「～について学ぶ・知る」。' },
+    ],
+    underline: { phrase: 'even everyday things can become art', choices: ['毎日の身近なものでも芸術になりうる', '芸術は毎日見るべきものだ', '身近なものは芸術よりも大切だ', '毎日芸術を作る必要がある'], answer: 0, why: 'even ～「～でさえ」、everyday things「毎日の（身近な）もの」、can become art「芸術になりうる」。' },
+    tf: [
+      { statement: 'Many towns in Japan have their own manhole cover designs.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'Manhole covers are needed only in big cities.', answer: false, why: '第2段落 needed in every town（どの町にも必要）。' },
+      { statement: 'Some people travel to other towns to take pictures of manhole covers.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'Manhole cards are sold at a high price.', answer: false, why: '第3段落 free "manhole cards"（無料のカード）。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
