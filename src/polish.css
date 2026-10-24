@@ -2345,3 +2345,14 @@ details[open] > summary::before { transform: rotate(90deg); }
 .unit-extras .unit-extra:active { transform: translateY(3px); box-shadow: 0 1px 0 hsl(var(--ux-h) 60% 28%); }
 .grammar .flip.to-questions { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #c2410c, 0 8px 18px rgb(249 115 22 / 0.25); }
 .grammar .flip.to-questions::before { content: '▶ '; }
+
+/* ショップのタブ：読解のむずかしさタブと同じく、売り場ごとの色つきタイル（えらんだタブは色でぬる） */
+.shop-tabs { gap: 6px; padding: 6px; }
+.shop-tabs button { --st-h: 275; background: hsl(var(--st-h) 70% 95%); color: hsl(var(--st-h) 60% 32%); font-weight: 800; box-shadow: 0 3px 0 hsl(var(--st-h) 45% 80%); }
+.shop-tabs button:nth-child(2) { --st-h: 25; }
+.shop-tabs button:nth-child(3) { --st-h: 330; }
+.shop-tabs button:nth-child(4) { --st-h: 195; }
+.shop-tabs button.on { background: linear-gradient(135deg, hsl(var(--st-h) 75% 55%), hsl(calc(var(--st-h) + 20) 70% 40%)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 hsl(var(--st-h) 60% 28%); }
+.shop-tabs button:active { transform: translateY(2px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .shop-tabs button:not(.on) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); } }
+:root[data-theme="dark"] .shop-tabs button:not(.on) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); }
