@@ -2035,3 +2035,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* ホーム上のイベント（週末XP2倍・季節のイベント）はチップ1列に */
 .event-chips { justify-content: center; margin: 2px 0 6px; }
 .event-chips > span.weekend { margin: 0; }
+
+/* 相棒のひとこと（もう夜だよ…）も文節で改行 */
+.feeling { word-break: auto-phrase; }
