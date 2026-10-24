@@ -124,7 +124,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'I have ___ this movie three times.', choices: ['see', 'saw', 'seen'], answer: 2, why: 'have のあとは過去分詞 seen。' },
       { sentence: 'She has lived here ___ 2020.', choices: ['for', 'since', 'from'], answer: 1, why: '「2020年から（ずっと）」は since。' },
-      { sentence: 'I have ___ been to Hokkaido.', choices: ['never', 'yet', 'since'], answer: 0, why: '「一度も〜ない」は never。' },
+      { sentence: 'I have ___ been to Hokkaido.', choices: ['never', 'yet', 'ago'], answer: 0, why: '「一度も〜ない」は never。' },
     ],
   },
   {
@@ -506,7 +506,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'Please help ___ to the cookies.', choices: ['you', 'yourself', 'your'], answer: 1, why: 'help yourself で「自由に取って食べてね」。' },
-      { sentence: 'She looked at ___ in the mirror.', choices: ['her', 'herself', 'she'], answer: 1, why: '主語と同じ人（自分自身）を見るので herself。' },
+      { sentence: 'She looked at ___ in the mirror.', choices: ['hers', 'herself', 'she'], answer: 1, why: '主語と同じ人（自分自身）を見るので herself。' },
       { sentence: 'The children enjoyed ___ at the beach.', choices: ['themselves', 'them', 'their'], answer: 0, why: 'enjoy oneself で「楽しむ」。主語が複数なので themselves。' },
     ],
   },
@@ -534,7 +534,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'If it ___ sunny tomorrow, let\'s go to the beach.', choices: ['is', 'will be', 'was'], answer: 0, why: '未来のことでも if の中は現在形 is。' },
-      { sentence: 'If you hurry, you ___ catch the bus.', choices: ['can', 'could', 'were'], answer: 0, why: '「急げばバスに間に合う」は can。' },
+      { sentence: 'If you hurry, you ___ catch the bus.', choices: ['can', 'are', 'were'], answer: 0, why: '「急げばバスに間に合う」は can。' },
       { sentence: '___ you are tired, take a rest.', choices: ['If', 'But', 'So'], answer: 0, why: '「もし疲れているなら」は If。' },
     ],
   },
@@ -743,9 +743,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is one of the fastest runners on our team.', ja: '彼は私たちのチームでもっとも足の速い選手の1人です。' },
     ],
     questions: [
-      { sentence: 'This is one of the ___ books in the library.', choices: ['old', 'older', 'oldest'], answer: 2, why: 'one of the ＋最上級。' },
+      { sentence: 'This is one of the ___ books in the library.', choices: ['more old', 'much old', 'oldest'], answer: 2, why: 'one of the ＋最上級。' },
       { sentence: 'She is one of the best ___ in our class.', choices: ['singer', 'singers', 'singing'], answer: 1, why: 'one of the 〜 のあとの名詞は複数形。' },
-      { sentence: 'Soccer is one of the ___ popular sports in the world.', choices: ['more', 'most', 'much'], answer: 1, why: 'popular の最上級は most popular。' },
+      { sentence: 'Soccer is one of the ___ popular sports in the world.', choices: ['mostly', 'most', 'much'], answer: 1, why: 'popular の最上級は most popular。' },
     ],
   },
   {
@@ -870,7 +870,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'Nobody ___ his phone number.', choices: ['know', 'knows', 'knowing'], answer: 1, why: 'nobody は3人称単数あつかいなので knows。' },
-      { sentence: 'I had ___ to eat this morning.', choices: ['nothing', 'anything', 'something'], answer: 0, why: '「何も食べるものがなかった」は had nothing to eat（not がないので nothing）。' },
+      { sentence: 'I had ___ to eat this morning.', choices: ['nothing', 'anything', 'no'], answer: 0, why: '「何も食べるものがなかった」は had nothing to eat（not がないので nothing）。' },
       { sentence: "I don't have ___ money with me.", choices: ['no', 'any', 'nothing'], answer: 1, why: "not があるときは any（don't have any 〜 ＝ 少しも〜ない）。" },
     ],
   },
@@ -911,8 +911,8 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "There aren't any eggs in the fridge.", ja: '冷蔵庫には卵が1つもない。' },
     ],
     questions: [
-      { sentence: 'Do you have ___ pets?', choices: ['some', 'any', 'a'], answer: 1, why: 'ふつうの疑問文なので any。' },
-      { sentence: 'Would you like ___ cookies?', choices: ['some', 'any', 'many'], answer: 0, why: '人にすすめる疑問文なので some。' },
+      { sentence: 'Do you have ___ pets?', choices: ['much', 'any', 'a'], answer: 1, why: 'ふつうの疑問文なので any。' },
+      { sentence: 'Would you like ___ cookies?', choices: ['some', 'much', 'a'], answer: 0, why: '人にすすめる疑問文なので some。' },
       { sentence: "We didn't see ___ birds in the park.", choices: ['some', 'any', 'no'], answer: 1, why: "否定文（didn't）なので any。" },
     ],
   },
@@ -1009,7 +1009,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is what I wanted.', ja: 'これは私がほしかったものだ。' },
     ],
     questions: [
-      { sentence: 'Please show me ___ you bought.', choices: ['which', 'that', 'what'], answer: 2, why: '前に名詞がなく「買ったもの」なので what。' },
+      { sentence: 'Please show me ___ you bought.', choices: ['whose', 'that', 'what'], answer: 2, why: '前に名詞がなく「買ったもの」なので what。' },
       { sentence: 'I could not understand ___ the teacher said.', choices: ['what', 'who', 'whose'], answer: 0, why: '「先生が言ったこと」なので what。' },
       { sentence: 'This is the book ___ I wanted.', choices: ['what', 'which', 'whose'], answer: 1, why: '前に名詞 the book があるので which（what は使えない）。' },
     ],
@@ -1039,7 +1039,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'I fell asleep ___ I was watching TV.', choices: ['during', 'while', 'for'], answer: 1, why: '後ろに主語と動詞（I was watching）があるので while。' },
       { sentence: 'We visited many temples ___ our trip to Kyoto.', choices: ['while', 'during', 'when'], answer: 1, why: '後ろが名詞（our trip）なので前置詞 during。' },
-      { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooks', 'cook'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
+      { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooking', 'cook'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
     ],
   },
   {
@@ -1052,7 +1052,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'She has ___ cleaned her room.', choices: ['yet', 'already', 'ever'], answer: 1, why: '肯定文で「もう〜した」は already（have と過去分詞の間）。' },
-      { sentence: 'Have you eaten lunch ___?', choices: ['already', 'just', 'yet'], answer: 2, why: '疑問文の「もう」は文の最後に yet。' },
+      { sentence: 'Have you eaten lunch ___?', choices: ['still', 'just', 'yet'], answer: 2, why: '疑問文の「もう」は文の最後に yet。' },
       { sentence: 'I have not read the letter ___.', choices: ['yet', 'already', 'just'], answer: 0, why: '否定文の「まだ（〜していない）」は yet。' },
     ],
   },
@@ -1094,7 +1094,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'The pictures ___ the wall are beautiful.', choices: ['on', 'of', 'to'], answer: 0, why: '「かべに（かかっている）」は on the wall。' },
-      { sentence: 'The girl ___ glasses is my sister.', choices: ['in', 'with', 'by'], answer: 1, why: '「メガネをかけた」は with glasses。' },
+      { sentence: 'The girl ___ glasses is my sister.', choices: ['at', 'with', 'by'], answer: 1, why: '「メガネをかけた」は with glasses。' },
       { sentence: 'The cat under the table ___ sleeping.', choices: ['are', 'is', 'am'], answer: 1, why: '主語は The cat（単数）なので is。under the table は説明の部分。' },
     ],
   },
@@ -1137,7 +1137,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'She sings ___ than her sister.', choices: ['more well', 'better', 'gooder'], answer: 1, why: 'well の比較級は better。' },
       { sentence: 'This is the ___ movie I have ever seen.', choices: ['best', 'better', 'most good'], answer: 0, why: 'good の最上級は best。' },
-      { sentence: 'Which do you like ___, cats or dogs?', choices: ['best', 'better', 'well'], answer: 1, why: '2つをくらべるので better。' },
+      { sentence: 'Which do you like ___, cats or dogs?', choices: ['good', 'better', 'well'], answer: 1, why: '2つをくらべるので better。' },
     ],
   },
   {
@@ -1191,7 +1191,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Which bus goes to the station?', ja: 'どちらのバスが駅に行きますか。' },
     ],
     questions: [
-      { sentence: '___ notebook is this? — It is Yumi\'s.', choices: ['Whose', 'Who', 'Which'], answer: 0, why: '「だれの」は Whose ＋名詞。' },
+      { sentence: '___ notebook is this? — It is Yumi\'s.', choices: ['Whose', 'Who', 'Whom'], answer: 0, why: '「だれの」は Whose ＋名詞。' },
       { sentence: '___ do you like better, rice or bread?', choices: ['What', 'Which', 'Whose'], answer: 1, why: '2つから選ばせるときは Which。' },
       { sentence: 'Whose bag is that? — It is ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
     ],
@@ -1207,7 +1207,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'Sit ___ Ken and Mika, please.', choices: ['between', 'among', 'during'], answer: 0, why: '2人の間なので between A and B。' },
       { sentence: 'The singer is famous ___ teenagers.', choices: ['between', 'among', 'by'], answer: 1, why: '大勢（10代の若者）の間で人気なので among。' },
-      { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'to', 'and'], answer: 2, why: 'between A and B の形。' },
+      { sentence: 'The shop is open between 10 a.m. ___ 8 p.m.', choices: ['or', 'with', 'and'], answer: 2, why: 'between A and B の形。' },
     ],
   },
   {
@@ -1276,7 +1276,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'Wash your hands ___ you eat.', choices: ['before', 'during', 'since'], answer: 0, why: '「食べる前に」なので before ＋文。' },
-      { sentence: 'He went to bed ___ he finished the book.', choices: ['before', 'after', 'until'], answer: 1, why: '「本を読み終えたあとで」なので after。' },
+      { sentence: 'He went to bed ___ he finished the book.', choices: ['during', 'after', 'until'], answer: 1, why: '「本を読み終えたあとで」なので after。' },
       { sentence: 'Call me before you ___ the station.', choices: ['will leave', 'leave', 'left'], answer: 1, why: '未来のことでも before の中は現在形 leave。' },
     ],
   },
@@ -1290,7 +1290,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'I was tired, ___ I went to bed early.', choices: ['so', 'but', 'or'], answer: 0, why: '「つかれていた、だから早くねた」なので so。' },
-      { sentence: 'Do you want rice ___ bread?', choices: ['and', 'or', 'so'], answer: 1, why: '「ご飯かパンか」どちらかなので or。' },
+      { sentence: 'Do you want rice ___ bread?', choices: ['but', 'or', 'so'], answer: 1, why: '「ご飯かパンか」どちらかなので or。' },
       { sentence: 'He is young, ___ he is very wise.', choices: ['so', 'or', 'but'], answer: 2, why: '「若いが、かしこい」と反対の内容なので but。' },
     ],
   },
@@ -1305,7 +1305,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'She is good ___ playing the guitar.', choices: ['at', 'in', 'of'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
       { sentence: 'I am proud ___ my team.', choices: ['for', 'of', 'with'], answer: 1, why: 'be proud of 〜 で「〜をほこりに思う」。' },
-      { sentence: 'His idea is different ___ mine.', choices: ['from', 'to', 'at'], answer: 0, why: 'be different from 〜 で「〜とちがう」。' },
+      { sentence: 'His idea is different ___ mine.', choices: ['from', 'on', 'at'], answer: 0, why: 'be different from 〜 で「〜とちがう」。' },
     ],
   },
   {
@@ -1317,7 +1317,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please write your name with a pen.', ja: 'ペンで名前を書いてください。' },
     ],
     questions: [
-      { sentence: 'They came here ___ car.', choices: ['by', 'with', 'in a'], answer: 0, why: '乗り物の手段は by ＋名詞（a をつけない）。' },
+      { sentence: 'They came here ___ car.', choices: ['by', 'with', 'on'], answer: 0, why: '乗り物の手段は by ＋名詞（a をつけない）。' },
       { sentence: 'He cut the paper ___ scissors.', choices: ['by', 'with', 'on'], answer: 1, why: '道具を使うときは with。' },
       { sentence: 'I usually go to the park on ___.', choices: ['walk', 'foot', 'feet'], answer: 1, why: '「歩いて」は on foot。' },
     ],
@@ -1936,7 +1936,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'She studied hard ___ she could pass the exam.', choices: ['so that', 'such that', 'even if'], answer: 0, why: '「合格できるように」と目的を表すので so that。' },
-      { sentence: 'I wrote it down so that I ___ forget it.', choices: ["wouldn't", "didn't", "don't"], answer: 0, why: '過去の文の目的なので would の否定 wouldn\'t「忘れないように」。' },
+      { sentence: 'I wrote it down so that I ___ forget it.', choices: ["wouldn't", "not", "doesn't"], answer: 0, why: '過去の文の目的なので would の否定 wouldn\'t「忘れないように」。' },
       { sentence: 'Turn on the light so that we ___ see the map.', choices: ['can', 'could have', 'are'], answer: 0, why: '今これからの目的なので can「地図が見えるように」。' },
     ],
   },
@@ -2005,7 +2005,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'Do you mind ___ opening the window?', choices: ['my', 'I', 'mine'], answer: 0, why: '動名詞 opening の意味上の主語は所有格 my（または目的格 me）。I は使えない。' },
       { sentence: 'She was surprised at ___ coming so early.', choices: ['his', 'he', 'he is'], answer: 0, why: '「彼がとても早く来たこと」。動名詞の前は所有格 his。' },
-      { sentence: 'I remember my mother ___ me this song.', choices: ['singing', 'sang', 'to sing'], answer: 0, why: 'remember ＋ 人 ＋ -ing「人が〜したことを覚えている」。' },
+      { sentence: 'I remember my mother ___ me this song.', choices: ['singing', 'sung', 'to sing'], answer: 0, why: 'remember ＋ 人 ＋ -ing「人が〜したことを覚えている」。' },
     ],
   },
   {
@@ -2564,8 +2564,8 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Cheese is made from milk.', ja: 'チーズは牛乳から作られる。' },
     ],
     questions: [
-      { sentence: 'This chair is made ___ wood.', choices: ['of', 'from', 'by'], answer: 0, why: '材料（木）が見てわかるので made of。' },
-      { sentence: 'His name is known ___ everyone in the town.', choices: ['to', 'by', 'for'], answer: 0, why: 'be known to 〜「〜に知られている」。' },
+      { sentence: 'This chair is made ___ wood.', choices: ['of', 'at', 'by'], answer: 0, why: '材料（木）が見てわかるので made of。' },
+      { sentence: 'His name is known ___ everyone in the town.', choices: ['to', 'at', 'for'], answer: 0, why: 'be known to 〜「〜に知られている」。' },
       { sentence: 'The box was filled ___ old letters.', choices: ['with', 'of', 'to'], answer: 0, why: 'be filled with 〜「〜でいっぱいだ」。' },
     ],
   },
@@ -2736,7 +2736,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'As ___ as 2,000 people joined the marathon.', choices: ['many', 'much', 'more'], answer: 0, why: '人の数（数えられる）なので as many as。' },
       { sentence: 'The test took no ___ than ten minutes. It was very short.', choices: ['more', 'less', 'many'], answer: 0, why: '「たった10分」（少ないと感じる）は no more than。' },
-      { sentence: 'He read no ___ than fifty books this summer. Amazing!', choices: ['less', 'more', 'fewer'], answer: 0, why: '「50冊も」（多いと感じる）は no less than。' },
+      { sentence: 'He read no ___ than fifty books this summer. Amazing!', choices: ['less', 'many', 'much'], answer: 0, why: '「50冊も」（多いと感じる）は no less than。' },
     ],
   },
   {
@@ -2854,7 +2854,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'Tom is ___ of the two boys.', choices: ['the taller', 'taller', 'the tallest'], answer: 0, why: '2人のうちの「高いほう」なので the ＋ 比較級。' },
-      { sentence: 'Which is the ___ of the two answers?', choices: ['better', 'best', 'good'], answer: 0, why: '2つのうちなので比較級 better（the better）。' },
+      { sentence: 'Which is the ___ of the two answers?', choices: ['better', 'well', 'good'], answer: 0, why: '2つのうちなので比較級 better（the better）。' },
       { sentence: 'Mt. Fuji is the highest ___ the three mountains.', choices: ['of', 'in', 'than'], answer: 0, why: '3つ以上の中では最上級 ＋ of。' },
     ],
   },
@@ -2974,7 +2974,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'My teacher suggested that I ___ more books.', choices: ['read', 'reads', 'reading'], answer: 0, why: 'suggest that 〜 の節は (should) ＋ 原形。' },
       { sentence: 'She demanded that he ___ the money back at once.', choices: ['pay', 'pays', 'paid to'], answer: 0, why: '過去の文でも、要求の that 節は原形 pay（should pay も可）。' },
-      { sentence: 'It is important that everyone ___ the rules.', choices: ['follow', 'follows', 'following'], answer: 0, why: 'It is important that 〜 の節も (should) ＋ 原形。everyone でも follow のまま。' },
+      { sentence: 'It is important that everyone ___ the rules.', choices: ['follow', 'to follow', 'following'], answer: 0, why: 'It is important that 〜 の節も (should) ＋ 原形。everyone でも follow のまま。' },
     ],
   },
   {
@@ -3467,7 +3467,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'This is the first time I have ___ a horse.', choices: ['ridden', 'rode', 'ride'], answer: 0, why: 'This is the first time のあとは現在完了〈have ＋ 過去分詞〉。ride の過去分詞は ridden。' },
       { sentence: 'I visited Kyoto ___ the first time last spring.', choices: ['for', 'at', 'in'], answer: 0, why: 'for the first time「初めて」。' },
-      { sentence: 'Is this the first time you ___ to Japan?', choices: ['have come', 'came', 'come'], answer: 0, why: 'the first time ＋ 現在完了「～するのは初めて」。' },
+      { sentence: 'Is this the first time you ___ to Japan?', choices: ['have come', 'coming', 'come'], answer: 0, why: 'the first time ＋ 現在完了「～するのは初めて」。' },
     ],
   },
   {
@@ -3568,7 +3568,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'That animal is not a cat ___ a fox.', choices: ['but', 'and', 'or'], answer: 0, why: '「ネコではなくキツネ」は not A but B。' },
-      { sentence: 'He came here not to work but ___ rest.', choices: ['to', 'for', 'and'], answer: 0, why: 'not A but B の A と B は同じ形。not to work に合わせて to rest。' },
+      { sentence: 'He came here not to work but ___ rest.', choices: ['to', 'at', 'and'], answer: 0, why: 'not A but B の A と B は同じ形。not to work に合わせて to rest。' },
       { sentence: 'The concert is on Sunday, ___ on Saturday.', choices: ['not', 'but', 'no'], answer: 0, why: 'B, not A「A ではなく B」の形。' },
     ],
   },
