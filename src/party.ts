@@ -1,5 +1,5 @@
 // 仲間（複数の相棒）。節目でタマゴがもらえ、相棒を切り替えられる。
-import { feed, formOf, loadMonster, sanitizeMonster, type MonsterState } from './monster'
+import { feed, loadMonster, sanitizeMonster, type MonsterState } from './monster'
 
 export type Party = {
   active: number
@@ -113,15 +113,15 @@ export function releaseMember(p: Party, i: number): Party | null {
   return next
 }
 
-// タマゴ交換：まだタマゴのままの仲間（相棒・おきにいり★以外）10こで、ガチャチケット1まいと交換（オーナー要望）
-export const EGGS_FOR_TICKET = 10
-export const tradeableEggs = (p: Party): number[] => p.members.map((_, i) => i).filter((i) => canRelease(p, i) && formOf(p.members[i]).stage === 0)
-export function tradeEggs(p: Party): Party | null {
-  const eggs = tradeableEggs(p)
-  if (eggs.length < EGGS_FOR_TICKET) return null
+// キャラクター交換：仲間（相棒・おきにいり★以外）10体で、ガチャチケット1まいと交換（オーナー要望）
+export const MEMBERS_FOR_TICKET = 10
+export const tradeableMembers = (p: Party): number[] => p.members.map((_, i) => i).filter((i) => canRelease(p, i))
+export function tradeMembers(p: Party): Party | null {
+  const eggs = tradeableMembers(p)
+  if (eggs.length < MEMBERS_FOR_TICKET) return null
   // あとから来た子から順に（うしろから消すと番号がずれない）
   let next: Party | null = p
-  for (const i of eggs.slice(-EGGS_FOR_TICKET).reverse()) {
+  for (const i of eggs.slice(-MEMBERS_FOR_TICKET).reverse()) {
     next = next && releaseMember(next, i)
   }
   return next

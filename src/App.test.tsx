@@ -37,13 +37,13 @@ describe('App', () => {
 
 
 
-  it('タマゴの仲間10こで、ガチャチケット1まいと交換できる', () => {
-    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 10, members: [{ xp: 200 }, ...Array.from({ length: 10 }, () => ({ xp: 0 }))] }))
+  it('仲間10体で、ガチャチケット1まいと交換できる', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 10, members: [{ xp: 200 }, ...Array.from({ length: 10 }, (_, k) => ({ xp: k * 40 }))] }))
     const ok = vi.spyOn(window, 'confirm').mockReturnValue(true)
     render(<App />)
     navTo('ホーム')
     fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
-    fireEvent.click(screen.getByRole('button', { name: /🥚×10 → 🎟1 と交換/ }))
+    fireEvent.click(screen.getByRole('button', { name: /🐾×10 → 🎟1 と交換/ }))
     ok.mockRestore()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members).toHaveLength(1)
@@ -1169,10 +1169,16 @@ describe('App', () => {
     render(<App />)
     expect(document.querySelector('details.home-play')).toBeNull()
     expect(screen.getByLabelText('今日の課題')).toBeInTheDocument()
-    expect(screen.getByLabelText('今日の文法')).toBeInTheDocument()
+    expect(screen.queryByLabelText('今日の文法')).toBeNull() // 今日の文法はホームではなく文法チャレンジのいちばん上
     expect(screen.queryByText('意味を見る')).toBeNull() // 今日の単語はホームではなく単語ゲームのページ
+    // ホームは今日の課題のすぐ下が記録
+    expect(screen.getByLabelText('今日の課題').nextElementSibling!.textContent).toContain('📊 記録')
     goMini()
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^今日の単語：/ })).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
+    navTo('文法チャレンジ')
+    expect(screen.getByLabelText('今日の文法')).toBeInTheDocument() // 文法チャレンジのいちばん上は今日の文法
+    navTo('単語ゲーム')
     expect(document.querySelector('details.home-play')).toBeNull()
     navTo('文法チャレンジ')
     expect(document.querySelector('details.home-play')).toBeNull()

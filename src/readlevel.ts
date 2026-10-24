@@ -1,4 +1,4 @@
-// 読解ステージのむずかしさ：かんたんな短い英文から、難関大（京大レベル）・TOEFL/IELTS まで選べる
+// 読解ステージのむずかしさ：かんたんな短い英文から、難関大（大学入試レベル）・TOEFL/IELTS まで選べる
 import { ADV_PASSAGES } from './advreading'
 import { PASSAGES } from './reading'
 import { LONG_PASSAGES, type LongPassage, type LongRecord } from './longreading'
@@ -8,7 +8,7 @@ export const READ_LEVELS: { id: ReadLevel; label: string; sub: string }[] = [
   { id: 'easy', label: 'かんたん', sub: '短い英文' },
   { id: 'normal', label: 'ふつう', sub: '中2〜中3' },
   { id: 'exam', label: '高校入試', sub: '中3〜入試' },
-  { id: 'univ', label: '難関大', sub: '京大レベル' },
+  { id: 'univ', label: '難関大', sub: '大学入試レベル' },
   { id: 'toefl', label: 'TOEFL・IELTS', sub: '留学レベル' },
 ]
 

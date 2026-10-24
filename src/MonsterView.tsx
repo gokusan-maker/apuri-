@@ -5,7 +5,7 @@ import { useEffect, useId, useState, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, growthOf, growthScale, growthText, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { completionPct } from './gacha'
 import { allPosesSeen, loadPosesSeen, poseAt, POSE_TITLE, POSES, savePosesSeen, seePose } from './pose'
-import { canRelease, displayOrder, EGG_MILESTONES, EGGS_FOR_TICKET, releaseCoins, tradeableEggs, type Party as PartyState } from './party'
+import { canRelease, displayOrder, EGG_MILESTONES, MEMBERS_FOR_TICKET, releaseCoins, tradeableMembers, type Party as PartyState } from './party'
 import { speak } from './speech'
 import { shade } from './color'
 import { RoomScene } from './RoomSceneView'
@@ -1094,7 +1094,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
-export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, warmLeft = 0, onTradeEggs, ticketsFull = false }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void; onWarm?: (i: number) => void; warmLeft?: number; onTradeEggs?: () => void; ticketsFull?: boolean }) {
+export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, warmLeft = 0, onTradeMembers, ticketsFull = false }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void; onWarm?: (i: number) => void; warmLeft?: number; onTradeMembers?: () => void; ticketsFull?: boolean }) {
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
@@ -1108,20 +1108,20 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
         <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>
         {onRelease && party.members.length > 1 && <p className="stats-note">👋 でおわかれすると、レベルに応じてコインにかわるよ（なかま交換所。相棒とおきにいり★はおわかれできない）。</p>}
         {party.members.length > 1 && <p className="stats-note">タップで相棒を交代。相棒以外の子も、おるすばんで少しずつ育つよ（もらったXPの1割）。</p>}
-        {onTradeEggs && <p className="stats-note">🥚 タマゴのままの仲間10こで、🎟ガチャチケット1まいと交換できるよ（相棒とおきにいり★は数えない）。</p>}
+        {onTradeMembers && <p className="stats-note">🐾 仲間10体で、🎟ガチャチケット1まいと交換できるよ（新しく来た子から順に。相棒とおきにいり★は数えない）。</p>}
       </details>
-      {onTradeEggs && tradeableEggs(party).length > 0 && (
+      {onTradeMembers && tradeableMembers(party).length > 0 && (
         <button
           className="good egg-trade-btn"
-          disabled={tradeableEggs(party).length < EGGS_FOR_TICKET || ticketsFull}
-          title="まだタマゴのままの仲間（相棒・おきにいり★以外）10こで、ガチャチケット1まいと交換"
+          disabled={tradeableMembers(party).length < MEMBERS_FOR_TICKET || ticketsFull}
+          title="仲間（相棒・おきにいり★以外）10体で、ガチャチケット1まいと交換"
           onClick={() => {
-            if (window.confirm(`タマゴの仲間${EGGS_FOR_TICKET}ことおわかれして、🎟ガチャチケット1まいと交換しますか？（もとにもどせません）`)) onTradeEggs()
+            if (window.confirm(`仲間${MEMBERS_FOR_TICKET}体とおわかれして、🎟ガチャチケット1まいと交換しますか？（新しく来た子から順に。もとにもどせません）`)) onTradeMembers()
           }}
         >
-          🥚×{EGGS_FOR_TICKET} → 🎟1 と交換
+          🐾×{MEMBERS_FOR_TICKET} → 🎟1 と交換
           <small>
-            {ticketsFull ? 'チケットがいっぱい' : `タマゴ ${Math.min(tradeableEggs(party).length, EGGS_FOR_TICKET)}/${EGGS_FOR_TICKET}`}
+            {ticketsFull ? 'チケットがいっぱい' : `なかま ${Math.min(tradeableMembers(party).length, MEMBERS_FOR_TICKET)}/${MEMBERS_FOR_TICKET}`}
           </small>
         </button>
       )}

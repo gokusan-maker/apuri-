@@ -1,4 +1,4 @@
-// 難関大（京大レベル）・TOEFL/IELTS レベル（と一部の高校入試レベル）の読解。本文・訳・設問・解説はすべて自作
+// 難関大（大学入試レベル）・TOEFL/IELTS レベル（と一部の高校入試レベル）の読解。本文・訳・設問・解説はすべて自作
 import type { LongPassage } from './longreading'
 
 export const ADV_PASSAGES: LongPassage[] = [

@@ -77,7 +77,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeEggs, updateActive, WARM_XP, warmLeft } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
 import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
@@ -1413,6 +1413,19 @@ function App() {
           </>
         )}
       </header>
+      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && (
+        <button
+          className="long-recommend daily-long today-read-btn"
+          aria-label={`今日の単語：${todayWords(today).map((w) => w.en).join('・')}`}
+          onClick={() => {
+            setWordTab('mini')
+            setTodayQuiz(true)
+          }}
+        >
+          📋 今日の単語（4択）{loadTodayWordsDay() === today ? ' ✅' : ''}
+          <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
+        </button>
+      )}
       {mode === 'word' && !showShop && !showChallenge && (
         <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
           {WORD_TABS.map((t) => (
@@ -1657,14 +1670,6 @@ function App() {
               toContent()
             }}
           />
-          <TodayGrammar
-            today={today}
-            onAnswer={onAnswerTrack('grammar')}
-            onClear={(c) => {
-              setWallet((w) => ({ ...w, coins: w.coins + c }))
-              feedTrack('grammar', TASK_XP) // 今日の課題クリアのごほうびは文法のなかまへ
-            }}
-          />
           <p className="today-section-title home-records-title">📊 記録</p>
           <div className="sub-tabs" role="tablist" aria-label="記録の種類">
             {STATS_TABS.map((t) => (
@@ -1782,12 +1787,12 @@ function App() {
                   setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? feed(m, WARM_XP, null, today) : m)) }))
                 }}
                 ticketsFull={(wallet.tickets ?? 0) >= TICKET_MAX}
-                onTradeEggs={() => {
-                  const next = tradeEggs(party)
+                onTradeMembers={() => {
+                  const next = tradeMembers(party)
                   if (!next || (wallet.tickets ?? 0) >= TICKET_MAX) return
                   setParty(next)
                   setWallet((w) => addTicket(w))
-                  pushToast([{ id: 'egg-trade', text: '🥚×10 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
+                  pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
                 }}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)
@@ -1842,6 +1847,16 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
+          {mode === 'grammar' && (
+            <TodayGrammar
+              today={today}
+              onAnswer={onAnswerTrack('grammar')}
+              onClear={(c) => {
+                setWallet((w) => ({ ...w, coins: w.coins + c }))
+                feedTrack('grammar', TASK_XP) // 今日の課題クリアのごほうびは文法のなかまへ
+              }}
+            />
+          )}
           {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'word' && todayQuiz && (
             <p className="weak-banner">
