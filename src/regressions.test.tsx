@@ -57,14 +57,18 @@ describe('再発防止', () => {
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
+    let grammarXp = 0
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
-      expected += quizXp(c)
+      // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
+      if (c % 3 === 0) expected += quizXp(c)
+      if (c % 3 === 2) grammarXp += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
-    expect(loadBuddies().reading.xp).toBe(expected) // 読解ボスの XP は長文のなかま（竜）へ
+    expect(loadBuddies().reading.xp).toBe(expected) // 読解の番と勝ったボーナスの XP は長文のなかま（竜）へ
+    expect(loadBuddies().grammar.xp).toBe(grammarXp) // 文法の番の XP は文法のなかまへ
     expect(localStorage.getItem('eitan:egg-pieces')).toBe('1') // 勝つとタマゴのかけら
   })
 
@@ -85,10 +89,13 @@ describe('再発防止', () => {
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
+    let grammarXp = 0
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
-      expected += quizXp(c)
+      // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
+      if (c % 3 === 0) expected += quizXp(c)
+      if (c % 3 === 2) grammarXp += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
@@ -111,10 +118,13 @@ describe('再発防止', () => {
     fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
+    let grammarXp = 0
     for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
-      expected += quizXp(c)
+      // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
+      if (c % 3 === 0) expected += quizXp(c)
+      if (c % 3 === 2) grammarXp += quizXp(c)
       if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()

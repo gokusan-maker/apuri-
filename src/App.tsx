@@ -391,12 +391,6 @@ function App() {
     setPlays((p) => [...p, { id, exit }])
     return () => setPlays((p) => p.filter((x) => x.id !== id))
   }, [])
-  // ボス戦のチーム：単語（相棒）・文法・読解のなかまの絵と名前
-  const bossTeam: BossTeam = {
-    word: { name: monster.name ?? formOf(monster).name, fig: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" /> },
-    grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} /> },
-    reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} /> },
-  }
   const playOn = plays.length > 0 && !todayFocus && !showShop && !showChallenge
   // 音読・読み上げは、ページが変わったら止める（タブ・ショップ・今日の課題の切りかえ、問題の画面から出たとき）
   const pageKey = `${mode}|${showShop}|${showChallenge}|${todayFocus ?? ''}|${wordTab}|${readLevel}`
@@ -543,6 +537,12 @@ function App() {
   const onAnswerTrack = (track: Track) => (correct: boolean, xp: number, wordId: string, source: Source) => {
     onAnswer(correct, 0, wordId, source)
     if (correct && xp > 0) feedTrack(track, xp * xpRate)
+  }
+  // ボス戦のチーム：単語（相棒）・文法・読解のなかまの絵と名前
+  const bossTeam: BossTeam = {
+    word: { name: monster.name ?? formOf(monster).name, fig: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />, answer: onAnswer },
+    grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} />, answer: onAnswerTrack('grammar') },
+    reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} />, answer: onAnswerTrack('reading') },
   }
 
   function gainXp(raw: number, source: Source | null) {

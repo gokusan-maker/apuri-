@@ -161,6 +161,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const teamWords = words.length > 0 ? words : WORDS.filter((w) => w.level === level)
   const makeQs = () => (teamOn ? teamBossQuestions(teamWords, rnd, BOSS_QUESTIONS, reading ? readingBossQs(level, rnd) : undefined) : reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q))
   const [qs, setQs] = useState(makeQs)
+  // チームバトルでは、答えた番のなかまに XP（App がわたしていなければこれまでどおり onAnswer）
+  const answerFor = (x: (typeof qs)[number]) => (teamOn && 'team' in x ? (team![x.team as TeamRole].answer ?? onAnswer) : onAnswer)
   const [index, setIndex] = useState(0)
   const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(startHearts)
@@ -273,7 +275,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setHp(Math.max(0, nextHp))
       setHit(true)
       playComboCorrect(c)
-      onAnswer?.(true, quizXp(c), q.word.id, 'quiz')
+      answerFor(q)?.(true, quizXp(c), q.word.id, 'quiz')
       if (nextHp <= 0) win(nc)
     } else {
       setCombo(0)
@@ -301,7 +303,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       }
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
-      onAnswer?.(false, 0, q.word.id, 'quiz')
+      answerFor(q)?.(false, 0, q.word.id, 'quiz')
     }
   }
 
