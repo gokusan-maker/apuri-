@@ -230,3 +230,11 @@ it('ガチャ結果の種類の説明はたたんであり、押すと読める'
   expect(d.open).toBe(false)
   expect(d.textContent).toContain(speciesOf('dragon').desc)
 })
+
+it('ガチャの補足チップは「ℹ️ ガチャのひみつ」にたたんである', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => null} />)
+  const d = document.querySelector<HTMLDetailsElement>('details.gacha-info')!
+  expect(d.open).toBe(false)
+  expect(d.textContent).toContain('7日連続で1枚')
+})

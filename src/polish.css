@@ -2181,3 +2181,10 @@ details[open] > summary::before { transform: rotate(90deg); }
 .level-daily { display: flex; align-items: center; gap: 8px; width: 100%; margin: 8px 0; padding: 10px 14px; border: none; border-radius: 14px; background: linear-gradient(135deg, #a78bfa, #6d28d9); color: #fff; font-size: 0.85rem; font-weight: 800; text-align: left; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 3px 0 #4c1d95; }
 .level-daily strong { flex: 1; min-width: 0; font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .level-daily:active { transform: translateY(2px); box-shadow: 0 1px 0 #4c1d95; }
+
+/* ガチャの補足チップ（7日連続・ステップアップなど）は「ℹ️ ガチャのひみつ」にたたむ */
+.gacha-info { margin: 6px 0; text-align: center; }
+.gacha-info > summary { display: inline-flex; align-items: center; padding: 4px 12px 4px 6px; border-radius: 999px; background: rgb(255 255 255 / 0.6); color: var(--accent); font-size: 0.8rem; font-weight: 800; cursor: pointer; }
+.gacha-info[open] > summary { margin-bottom: 6px; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .gacha-info > summary { background: rgb(255 255 255 / 0.1); } }
+:root[data-theme="dark"] .gacha-info > summary { background: rgb(255 255 255 / 0.1); }

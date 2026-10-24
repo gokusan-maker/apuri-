@@ -137,12 +137,20 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           🎟 チケットで引く（あと{tickets}枚）
         </button>
       )}
-      <p className="buddy-chips gacha-chips">
-        <span>🎟 7日連続で1枚</span>
-        {stepLeft !== undefined && <span className={`gacha-step-chip${stepLeft === 0 ? ' sure' : ''}`}>{stepLeft === 0 ? '🔥 ステップアップ！ 次の1回はレア以上確定！' : `🔥 ${stepLeft + 1}回目でレア以上確定`}</span>}
-        {dragonUp && <span className="gacha-event-chip">🌙 週末はふしぎなことが…？</span>}
-        {boostColor && <span>🎨 ラッキーカラーの日…？</span>}
-      </p>
+      {stepLeft === 0 && (
+        <p className="buddy-chips gacha-chips">
+          <span className="gacha-step-chip sure">🔥 ステップアップ！ 次の1回はレア以上確定！</span>
+        </p>
+      )}
+      <details className="gacha-info">
+        <summary>ℹ️ ガチャのひみつ</summary>
+        <p className="buddy-chips gacha-chips">
+          <span>🎟 7日連続で1枚</span>
+          {stepLeft !== undefined && stepLeft > 0 && <span className="gacha-step-chip">{`🔥 ${stepLeft + 1}回目でレア以上確定`}</span>}
+          {dragonUp && <span className="gacha-event-chip">🌙 週末はふしぎなことが…？</span>}
+          {boostColor && <span>🎨 ラッキーカラーの日…？</span>}
+        </p>
+      </details>
       {pickup && (
         <div className="gacha-pickup">
           <span className="gacha-pickup-fig">
