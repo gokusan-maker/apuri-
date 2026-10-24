@@ -3269,6 +3269,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'hs-film-camera',
+    title: "My Grandfather's Film Camera",
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last spring, I found an old camera in a box at my grandfather's house. It was a film camera that he had used ( A ) he was young. When I asked him about it, he said, \"You can have it if you want. But you have to buy film for it.\"",
+      "I bought a roll of film for 24 pictures. With my smartphone, I take hundreds of photos every week and delete most of them. But with this camera, I could take only 24, and I could not see the pictures ( B ) they were developed at a shop. So I started to think carefully before pressing the button. I walked around my town and looked for things I really wanted to keep: the cherry trees by the river, my cat sleeping in the sun, and my grandfather working in his garden.",
+      "Two weeks later, I took the film to a shop. I had to wait three days for the pictures. When I finally got them, some were too dark, and one was not clear at all. But I was surprised that I remembered every moment ( C ) each picture was taken. My grandfather looked at the picture of himself in the garden and smiled. \"This is a good one,\" he said. \"You took it slowly, so it has your feelings in it.\"",
+      "Now I still use my smartphone, but I take pictures in a different way. Before I take one, I ask myself, \"Do I really want to remember this?\" I learned from the old camera that taking fewer pictures can make each one more special.",
+    ],
+    ja: [
+      'この前の春、私は祖父の家の箱の中で古いカメラを見つけました。それは祖父が若いころに使っていたフィルムカメラでした。そのことをたずねると、祖父は「ほしければあげるよ。でもフィルムは自分で買わないといけないよ」と言いました。',
+      '私は24枚撮りのフィルムを1本買いました。スマートフォンだと、私は毎週何百枚も写真を撮って、そのほとんどを消します。でもこのカメラでは24枚しか撮れず、店で現像されるまで写真を見ることもできませんでした。そこで私は、シャッターを押す前によく考えるようになりました。町を歩き回り、本当に残しておきたいものをさがしました。川ぞいの桜の木、日なたで眠っている私のねこ、そして庭で作業をしている祖父です。',
+      '2週間後、私はフィルムを店に持っていきました。写真ができるまで3日待たなければなりませんでした。やっと受け取ると、暗すぎる写真もあり、1枚はまったくはっきりしていませんでした。でも、それぞれの写真を撮った瞬間をすべて覚えていることにおどろきました。祖父は庭にいる自分の写真を見て、ほほえみました。「これはいい写真だね。ゆっくり撮ったから、きみの気持ちが入っているよ」と祖父は言いました。',
+      '今でも私はスマートフォンを使っていますが、写真の撮り方が変わりました。1枚撮る前に、「本当にこれを覚えておきたいかな」と自分に問いかけます。私は古いカメラから、撮る写真の数を減らすことで、1枚1枚をより特別なものにできると学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'for', 'about'], answer: 0, why: 'あとに he was young という文が続くので接続詞の when「～のころ」。during・for・about は前置詞なので文は続かない。' },
+      { id: 'B', choices: ['until', 'by', 'during', 'despite'], answer: 0, why: 'not ～ until …「…するまで～しない」。あとに they were developed という文が続くので接続詞の until。by・during・despite は前置詞。' },
+      { id: 'C', choices: ['when', 'what', 'who', 'whose'], answer: 0, why: '先行詞 moment（時）のあとに〈主語＋動詞〉が続くので関係副詞の when。every moment when each picture was taken「それぞれの写真が撮られた瞬間」。' },
+    ],
+    tf: [
+      { statement: 'カメラは、祖父が若いころに使っていたものだった。', answer: true, why: '第1段落 a film camera that he had used when he was young。' },
+      { statement: '筆者はフィルムカメラで、撮った写真をすぐにその場で確かめた。', answer: false, why: '第2段落 I could not see the pictures until they were developed at a shop。' },
+      { statement: '現像された写真は、すべてきれいに写っていた。', answer: false, why: '第3段落 some were too dark, and one was not clear at all。' },
+      { statement: '筆者は今、写真を撮る前に本当に覚えておきたいかを考える。', answer: true, why: '第4段落 Before I take one, I ask myself, "Do I really want to remember this?"' },
+    ],
+    qa: [
+      { q: 'What did the writer learn from the old camera?', choices: ['Taking fewer pictures can make each one more special.', 'Smartphones take better pictures than film cameras.', 'Pictures should always be taken quickly.', 'Film is cheaper than a smartphone.'], answer: 0, why: '第4段落 taking fewer pictures can make each one more special。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
