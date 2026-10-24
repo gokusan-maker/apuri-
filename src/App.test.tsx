@@ -1517,6 +1517,12 @@ describe('App', () => {
     expect([...document.querySelectorAll('.today-summary strong')].map((e) => e.textContent)).toEqual(['1問', '+5XP', '1語'])
   })
 
+  it('今日まだ1問も解いていないときは、0ばかりの今日のまとめを出さない', () => {
+    render(<App />)
+    navTo('ホーム')
+    expect(document.querySelector('.today-summary')).toBeNull()
+  })
+
   it('定期テストの日を入れるとカウントダウンが出る', () => {
     localStorage.setItem('eitan:settings', JSON.stringify({ testDate: '2026-10-30' }))
     render(<App />)

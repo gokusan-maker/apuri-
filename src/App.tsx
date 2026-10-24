@@ -1682,6 +1682,7 @@ function App() {
                 </span>
                 <span>{kimochiDiary(studiedToday).text}</span>
               </p>
+              {studiedToday > 0 && (
               <p className="today-summary" aria-label="今日のまとめ">
                 <span>☀️ 今日</span>
                 <span>
@@ -1694,6 +1695,7 @@ function App() {
                   🆕 <strong>{newToday}語</strong>
                 </span>
               </p>
+              )}
               <button
                 className="list-link"
                 onClick={() =>
