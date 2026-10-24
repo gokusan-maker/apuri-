@@ -5083,6 +5083,35 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Zoos paint their flamingos to keep them pink.', answer: false, why: '第3段落 zoos give their flamingos special food（えさをあたえる）。' },
     ],
   },
+  {
+    id: 'velcro-idea',
+    title: 'An Idea from a Walk in the Mountains',
+    level: '中3（説明文）',
+    paragraphs: [
+      'Have you ever used shoes or a bag with Velcro? You just press the two sides together, and they stick. This useful idea came from nature. It was invented by George de Mestral, an engineer ( A ) Switzerland.',
+      'One day in the 1940s, de Mestral went for a walk in the mountains with his dog. When they got home, he noticed that many small seeds were stuck to his clothes and to his dog. He wondered ( B ) they held on so strongly, so he looked at one under a microscope.',
+      'He saw that each seed was covered with tiny hooks. These hooks caught on the small loops of thread in his clothes. De Mestral thought, "If I can make hooks and loops like these, I can make a new way to join things." After years of hard work, he finally made a strong fastener with hooks on one side and loops on the other.',
+      'Today, Velcro is used in many places, from children\'s shoes to space suits. De Mestral\'s story shows that great ideas can come ( C ) we look carefully at the things around us.',
+    ],
+    ja: [
+      'マジックテープ（ベルクロ）のついたくつやかばんを使ったことがありますか。2つの面をおしつけるだけで、くっつきます。この便利なアイデアは自然から生まれました。発明したのは、スイスの技術者ジョルジュ・デ・メストラルです。',
+      '1940年代のある日、デ・メストラルは犬といっしょに山へ散歩に出かけました。家に帰ると、たくさんの小さな種が自分の服や犬にくっついていることに気づきました。なぜこんなに強くくっついているのか不思議に思い、彼は種の1つをけんび鏡で見てみました。',
+      '彼は、それぞれの種が小さなかぎでおおわれているのを見ました。このかぎが、服の糸の小さな輪に引っかかっていたのです。デ・メストラルは「このようなかぎと輪を作れたら、物をつなぐ新しい方法を作れる」と考えました。何年もの努力のあと、ついに一方にかぎ、もう一方に輪がついた、じょうぶな留め具を作りました。',
+      '今日、マジックテープは子どものくつから宇宙服まで、多くの場所で使われています。デ・メストラルの話は、身のまわりの物をよく見ると、すばらしいアイデアが生まれることがあると教えてくれます。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['from', 'at', 'to', 'by'], answer: 0, why: 'an engineer from ～「～出身の技術者」。' },
+      { id: 'B', choices: ['why', 'what', 'which', 'who'], answer: 0, why: 'wonder why ～「なぜ～か不思議に思う」。あとに完全な文（they held on so strongly）が続くので why。' },
+      { id: 'C', choices: ['when', 'during', 'between', 'among'], answer: 0, why: 'when ＋ 主語 ＋ 動詞「～するとき」。あとに文（we look carefully …）が続くので接続詞の when。' },
+    ],
+    underline: { phrase: 'These hooks caught on the small loops of thread', choices: ['これらのかぎが糸の小さな輪に引っかかった', 'これらのかぎが小さな糸を作った', 'これらのかぎが小さな輪からはなれた', 'これらのかぎが糸を切った'], answer: 0, why: 'catch on ～「～に引っかかる」、loop「輪」、thread「糸」。' },
+    tf: [
+      { statement: 'George de Mestral was an engineer from Switzerland.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'He found the seeds on his clothes after a walk in the city.', answer: false, why: '第2段落 a walk in the mountains（山の散歩）。' },
+      { statement: 'He looked at a seed under a microscope.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'He made the new fastener in only one day.', answer: false, why: '第3段落 After years of hard work（何年もの努力のあと）。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
