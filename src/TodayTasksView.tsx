@@ -24,18 +24,25 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
   return (
     <section className="today-tasks" aria-label="今日の課題">
       <p className="today-tasks-title">
-        📋 今日の課題 <span>{n} / 3 クリア{n === 3 ? ' 🎉' : ''}</span>
+        📋 今日の課題
+        <span className="today-stars" aria-label={`${n} / 3 クリア`}>
+          {'⭐'.repeat(n)}
+          {'☆'.repeat(3 - n)}
+        </span>
         {trioStreakNow(today) > 0 && <span className="trio-streak" aria-label="トリオボーナスの連続日数"> 🔥{trioStreakNow(today)}日</span>}
       </p>
+      <div className="today-task-grid">
       {items.map((x) => (
-        <button key={x.id} className={`today-task${x.done ? ' done' : ''}`} onClick={() => onGo(x.id)}>
-          <span className="today-task-tag">
-            {x.icon} {x.label}
+        <button key={x.id} className={`today-task t-${x.id}${x.done ? ' done' : ''}`} onClick={() => onGo(x.id)} aria-label={`${x.label}：${x.task}${x.done ? '（クリア）' : ''}`}>
+          <span className="today-task-icon" aria-hidden="true">
+            {x.icon}
           </span>
+          <span className="today-task-tag">{x.label}</span>
           <span className="today-task-text">{x.task}</span>
-          <span className="today-task-mark">{x.done ? '✅' : '▶'}</span>
+          <span className="today-task-mark">{x.done ? '⭐ CLEAR' : '▶ スタート'}</span>
         </button>
       ))}
+      </div>
       {n === 3 &&
         (trio ? (
           <p className="today-trio done">

@@ -2,7 +2,6 @@ import { fireEvent, render, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { buildQueue, dayKey } from './srs'
-import { missionsFor } from './missions'
 import { pickWordOfDay } from './wordOfDay'
 import { souvenirFor } from './souvenir'
 import { WORDS, wordsOf } from './words'
@@ -127,7 +126,7 @@ describe('App', () => {
     render(<App />)
     const tasks = () => screen.getByLabelText('今日の課題')
     expect(tasks().textContent).toContain(`4択で${ws.length}語`)
-    expect(tasks().textContent).toContain(`📖 読解`)
+    expect(tasks().textContent).toContain('読解')
     expect(tasks().textContent).toContain(p.title)
     // 単語：4択で今日の単語だけが出る
     fireEvent.click(within(tasks()).getByText(/4択で/))
@@ -493,32 +492,6 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(document.querySelector('.card .en')!.textContent).toBe(FIRST()[1].en)
-  })
-
-  it('ミッションを達成すると、お知らせとボーナスXP（日付を固定して確認）', () => {
-    vi.useFakeTimers({ toFake: ['Date'] })
-    // 「答える／正解」系のミッションがある日を探して固定する
-    let day = new Date(2026, 9, 1)
-    let m = undefined as ReturnType<typeof missionsFor>[number] | undefined
-    for (let i = 0; i < 60 && !m; i++) {
-      day = new Date(2026, 9, 1 + i)
-      if (day.getDay() === 0 || day.getDay() === 6) continue // 週末はXP2倍なので平日で
-      m = missionsFor(dayKey(day)).find((x) => x.counter === 'answers' || x.counter === 'correct' || x.counter === 'cardGood')
-    }
-    vi.setSystemTime(day)
-    const today = dayKey()
-    localStorage.setItem('eitan:lucky', today)
-    localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: { [m!.counter]: m!.target - 1 }, claimed: [] }))
-    render(<App />)
-    goMini() // 今日の単語のカードは単語ゲームのページにある
-    fireEvent.click(screen.getByText('意味を見る'))
-    fireEvent.click(screen.getByText('覚えた'))
-    expect(toast(/ミッション達成！ \+30XP/)).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(35)
-    expect(JSON.parse(localStorage.getItem('eitan:missions')!).claimed).toContain(m!.id)
-    navTo('ホーム')
-    expect(screen.getByText(/今日のミッション 1 \/ 3/)).toBeInTheDocument()
-    vi.useRealTimers()
   })
 
   it('単語一覧で検索でき、タップで例文が見える', () => {
@@ -966,11 +939,7 @@ describe('App', () => {
     await new Promise((r) => requestAnimationFrame(() => r(null)))
     expect(scroll).toHaveBeenCalledWith({ top: 0 })
     navTo('ホーム')
-    fireEvent.click(screen.getByText(/今日のチャレンジ：/))
-    expect(screen.getByText('チャレンジ開始！')).toBeInTheDocument()
     expect(document.querySelector('details.home-play')).toBeNull()
-    navTo('読解ステージ')
-    expect(screen.queryByText('チャレンジ開始！')).not.toBeInTheDocument()
   })
 
   it('相棒のおたんじょう日にお祝いするとガチャチケットがもらえる（1年に1回）', () => {
@@ -1043,14 +1012,17 @@ describe('App', () => {
     expect(screen.getAllByText(/トリオボーナス 🪙30/).length).toBeGreaterThan(0)
   })
 
-  it('今日おやつをまだあげていないと「おなかすいた」ボタンが出て、おやつ売り場が開く', () => {
-    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 30 }))
+  it('ホームに「ひとこと英語日記」「今日のミッション」「おなかすいた」「今日のチャレンジ」は出さない（オーナー要望）', () => {
+    localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
     render(<App />)
-    fireEvent.click(screen.getByText(/「おなかすいた…」/))
-    expect(screen.getByRole('tab', { name: /おやつ/ })).toHaveAttribute('aria-selected', 'true')
-    expect(screen.getByLabelText('今日あと3回')).toBeInTheDocument()
+    navTo('ホーム')
+    expect(screen.queryByText(/ひとこと英語日記/)).toBeNull()
+    expect(screen.queryByText(/今日のミッション/)).toBeNull()
+    expect(screen.queryByText(/おなかすいた/)).toBeNull()
+    expect(screen.queryByText(/今日のチャレンジ：/)).toBeNull()
+    expect(document.querySelector('.boss-go-btn')!.textContent).toContain('今日のボスに挑む') // 今日のボスは強そうなボタン
+    expect(document.querySelectorAll('.today-task-grid .today-task')).toHaveLength(3) // 今日の課題はゲームのタイル
   })
-
   it('ホームの「今日のボスに挑む」でステージ画面の今日のボス戦がすぐ始まる', () => {
     render(<App />)
     fireEvent.click(screen.getByText(/⚔ 今日のボスに挑む/))
@@ -1187,24 +1159,6 @@ describe('App', () => {
     expect(d.open).toBe(false)
     expect(d.querySelector('summary')!.textContent).toMatch(/おまけのあそび/)
     expect(d.textContent).toMatch(/おみくじ/)
-  })
-
-  it('今日のチャレンジ：5問クリアでコインがもらえ、ボタンがクリアずみになる', () => {
-    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
-    render(<App />)
-    fireEvent.click(screen.getByText(/今日のチャレンジ：/))
-    fireEvent.click(screen.getByText('チャレンジ開始！'))
-    for (let i = 0; i < 5; i++) {
-      const en = document.querySelector('.challenge .en')!.textContent!
-      const ja = WORDS.find((w) => w.en === en)!.ja
-      fireEvent.click(screen.getByRole('button', { name: ja }))
-      const next = screen.queryByText(/次へ|つぎへ/)
-      if (next) fireEvent.click(next)
-    }
-    expect(screen.getByText('チャレンジ成功！')).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeGreaterThanOrEqual(10)
-    expect(localStorage.getItem('eitan:challenge')).toBe('2026-10-20')
-    expect(localStorage.getItem('eitan:challenge-streak')).toBe('1')
   })
 
   it('ドラゴンのタマゴがかえると、進化の画面にドラゴンの名前が出る', () => {

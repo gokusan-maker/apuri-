@@ -31,8 +31,7 @@ import { Calendar } from './CalendarView'
 import { loadAccuracy, rate, recordAnswer, saveAccuracy } from './accuracy'
 import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
-import { bump, completedUnclaimed, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
-import { Missions } from './MissionsView'
+import { bump, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
 import { baseBeaten, epithetOf, loadBook, totalWins } from './bossbook'
 import { GOLD_COINS, KEYS_FOR_GOLD, loadKeys, saveKeys } from './treasure'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
@@ -65,7 +64,6 @@ import { loadMyWords, loadUseMy, saveMyWords, saveUseMy } from './myWords'
 import { MyWords } from './MyWordsView'
 import { bondHearts, bondLevel, bondWinCoins } from './bond'
 import { MissedList } from './MissedListView'
-import { DiaryBox } from './DiaryView'
 import { LearnedChart } from './LearnedChartView'
 import { lastLearned, loadLearnedLog, recordLearned, saveLearnedLog } from './learnedLog'
 import { GROUPS } from './puzzles'
@@ -134,7 +132,7 @@ import { PET_BONUS } from './pet'
 import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
-import { challengeStreakNow, challengeOf, difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
+import { difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { speak, speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
@@ -143,7 +141,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { roomLine, buyAndMove, MOVE_LINE, SNACKS_PER_DAY, favSnackOf, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { roomLine, buyAndMove, MOVE_LINE, favSnackOf, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
 import { PartnerStatus } from './PartnerStatusView'
 import { Records } from './RecordsView'
@@ -311,7 +309,7 @@ function App() {
   }, [cheer])
   const [totals, setTotals] = usePersistent(loadTotals, saveTotals)
 
-  const [missions, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
+  const [, setMissions] = usePersistent(() => loadMissions(today), saveMissions)
   const [wallet, setWallet] = usePersistent(loadWallet, saveWallet)
   const [rushDay, setRushDay] = usePersistent(loadRushDay, saveRushDay)
   const [rushExDay, setRushExDay] = usePersistent(loadRushExDay, saveRushExDay)
@@ -657,12 +655,7 @@ function App() {
     // pushToast・setWallet は毎回つくり直されるので、チームレベルがかわったときだけ動かす
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [teamLevel])
-  const finished = completedUnclaimed(missions, today)
-  if (finished.length > 0) {
-    setMissions({ ...missions, claimed: [...missions.claimed, ...finished.map((m) => m.id)] })
-    updateMonster((m) => feed(m, MISSION_XP * finished.length, null, today))
-    pushToast(finished)
-  }
+  // 今日のミッションはオーナーの要望で表示・ごほうびともにやめた（数えるだけ）
   useEffect(() => {
     if (!toastHead) return
     const id = window.setTimeout(() => setToastQueue(dequeue), 3000)
@@ -1337,27 +1330,21 @@ function App() {
           </button>
           {dailyBossDay !== today && (
             <button
-              className="challenge-btn daily-boss-go"
+              className="boss-go-btn"
               onClick={() => {
                 setDailyGo(true)
                 setMode('boss')
                 toContent()
               }}
             >
-              ⚔ 今日のボスに挑む <span className="home-reward-pill">🪙{DAILY_BOSS_COINS}</span>
-            </button>
-          )}
-          {snacksLeft(snacks, today) === SNACKS_PER_DAY && formOf(monster).stage > 0 && (
-            <button
-              className="challenge-btn hungry-btn"
-              onClick={() => {
-                setShopTab('snack')
-                setShowShop(true)
-                toContent()
-              }}
-            >
-              🍙 {monster.name ?? formOf(monster).name}「おなかすいた…」
-              <small className="challenge-sub">おやつをあげる</small>
+              <span className="boss-go-fig" aria-hidden="true">
+                👹
+              </span>
+              <span className="boss-go-text">
+                <strong>⚔ 今日のボスに挑む</strong>
+                <small>BOSS BATTLE</small>
+              </span>
+              <span className="home-reward-pill">🪙{DAILY_BOSS_COINS}</span>
             </button>
           )}
           {birthdayAge(bday, today) > 0 && (
@@ -1379,14 +1366,6 @@ function App() {
               <strong>{perDay(words.length - learned, daysUntil(today, settings.testDate))}語</strong> 覚えれば間にあうよ
             </p>
           )}
-          <button className={`challenge-btn${challengeDay === today ? ' done' : ''}`} onClick={() => {
-              setShowChallenge(true)
-              toContent()
-            }}>
-            ⚔ 今日のチャレンジ：{challengeOf(monster.species).icon} {challengeOf(monster.species).label}・{difficultyOf(formOf(monster).stage).label}
-            {challengeDay === today ? ' ✅クリア' : ''}
-            {challengeStreakNow(challengeDay, today) > 1 && <span className="challenge-streak">🔥{challengeStreakNow(challengeDay, today)}日連続</span>}
-          </button>
           <div className="goal" aria-label={`今日の目標 ${Math.min(studiedToday, settings.dailyGoal)} / ${settings.dailyGoal} 問`}>
             <span>{studiedToday >= settings.dailyGoal ? '🎯 目標達成！' : `🎯 今日の目標 ${studiedToday} / ${settings.dailyGoal} 問`}</span>
             <div className="goal-bar">
@@ -1722,7 +1701,6 @@ function App() {
                 📤 今週のレポートをシェア
               </button>
               <LearnedChart values={lastLearned(learnedLog, today)} />
-              <DiaryBox today={today} />
               <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>
               {firstToday.length > 0 && (
                 <details className="first-today">
@@ -1737,7 +1715,6 @@ function App() {
                 </p>
               )}
             <WordOfDay word={lucky} claimed={luckyDay === today} />
-            <Missions state={missions} today={today} weekly={[Math.min(weekDone, WEEKLY_TARGET), WEEKLY_TARGET]} />
             <Stats
               streakDays={streakDays}
               studiedToday={studiedToday}
