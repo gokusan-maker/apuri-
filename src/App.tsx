@@ -1674,7 +1674,7 @@ function App() {
             }}
           />
           <p className="today-section-title home-records-title">📊 記録</p>
-          <div className="sub-tabs" role="tablist" aria-label="記録の種類">
+          <div className="sub-tabs stats-tabs" role="tablist" aria-label="記録の種類">
             {STATS_TABS.map((t) => (
               <button key={t.id} role="tab" aria-selected={statsTab === t.id} onClick={() => setStatsTab(t.id)}>
                 {t.label}
