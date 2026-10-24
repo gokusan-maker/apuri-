@@ -262,7 +262,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
         </>
       )}
       {log.length > 0 && (
-        <details className="gacha-odds gacha-log">
+        <details className="gacha-odds gacha-log chip-fold cf-4">
           <summary>最近のガチャ（{log.length}回）</summary>
           <ul>
             {log.map((g, i) => (
@@ -275,7 +275,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
         </details>
       )}
       {stats.total > 0 && (
-        <details className="gacha-odds gacha-stats">
+        <details className="gacha-odds gacha-stats chip-fold cf-3">
           <summary>ガチャの記録（{stats.total}回）</summary>
           <ul>
             {(['UR', 'SR', 'R', 'N'] as const).map((r) => (
@@ -382,7 +382,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           {!!result.refund && <p className="gacha-dup" title="同じ子がいたのでコインがもどってきた">かぶりボーナス 🪙{result.refund}！</p>}
           <ShareButton text={gachaShareText([{ kindName: result.kind.name, normal: result.kind.id === 'normal', speciesName: result.species.name, rarity: RARITY_LABEL[result.kind.rarity] }])} />
           {result.species.id !== 'mochi' && (
-            <details className="gacha-species">
+            <details className="gacha-species chip-fold cf-0">
               <summary>「{result.species.name}」の仲間だ！</summary>
               {result.species.desc}
             </details>

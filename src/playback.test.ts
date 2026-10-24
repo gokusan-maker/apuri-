@@ -115,3 +115,8 @@ it('設定以外のチェックも、オン／オフのスイッチの形', () =
 it('設定のえらぶボタンは、下に影のあるぷっくりしたゲームボタン', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.settings \.levels button\[aria-pressed='true'\] \{ box-shadow: 0 3px 0/)
 })
+
+it('ガチャの「最近のガチャ・ガチャの記録・〇〇の仲間だ！」も色つきの丸いボタン', () => {
+  const src = readFileSync('src/GachaView.tsx', 'utf8')
+  for (const c of ['gacha-log chip-fold', 'gacha-stats chip-fold', 'gacha-species chip-fold']) expect(src).toContain(c)
+})
