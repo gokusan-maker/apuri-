@@ -21,10 +21,9 @@ export function PartnerStatus({ monster }: { monster: MonsterState }) {
           {speciesOf(sp).name}・Lv.{levelInfo(monster.xp).level}
         </dd>
         <dt>特技</dt>
-        <dd>
-          {skill.name} Lv{lv}（{skill.desc}）
-          {next !== undefined && <small>　あと{next - uses}回使うと Lv{lv + 1}</small>}
-          {f.stage === 0 && <small>　※生まれると使える</small>}
+        <dd title={`${skill.desc}${next !== undefined ? `・あと${next - uses}回使うと Lv${lv + 1}` : ''}${f.stage === 0 ? '・生まれると使える' : ''}`}>
+          {skill.name} Lv{lv}
+          {next !== undefined && <small className="skill-next" aria-label={`あと${next - uses}回使うと Lv${lv + 1}`}>　あと{next - uses}回</small>}
         </dd>
         <dt>必殺技</dt>
         <dd style={{ color: specialOf(monster.species).color }}>{specialOf(monster.species).name}</dd>

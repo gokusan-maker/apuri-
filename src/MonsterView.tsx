@@ -1260,7 +1260,7 @@ export function Profile({ monster, studyDays = 0 }: { monster: MonsterState; stu
         <dt>なつき度</dt>
         <dd aria-label={`なつき度 ${bondLevel(studyDays)}`}>
           {bondHearts(bondLevel(studyDays))}
-          {daysToNext(studyDays) !== null && <small>（あと{daysToNext(studyDays)}日学習で❤️）</small>}
+          {daysToNext(studyDays) !== null && <small title={`あと${daysToNext(studyDays)}日学習でハートがふえる`}> あと{daysToNext(studyDays)}日</small>}
         </dd>
       </dl>
       {total > 0 && (
