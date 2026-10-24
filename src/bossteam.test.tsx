@@ -69,3 +69,19 @@ it('チームバトルのはじめに「VS」が出る（答えると消える�
   fireEvent.click(document.querySelector<HTMLButtonElement>('.choices .choice')!)
   expect(document.querySelector('.boss-vs')).toBeNull()
 })
+
+it('負けると、3体のなかまがそれぞれ1行ではげましてくれる', () => {
+  render(
+    <BossTeamContext.Provider value={team}>
+      <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} startHearts={1} />
+    </BossTeamContext.Provider>,
+  )
+  const en = document.querySelector('.en')!.textContent!
+  const w = WORDS.find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choices .choice')].find((b) => b.textContent !== w.ja)!)
+  const next = screen.queryAllByRole('button').find((b) => /次へ|結果/.test(b.textContent ?? ''))
+  if (next) fireEvent.click(next)
+  const cheer = screen.getByLabelText('チームのはげまし')
+  expect(cheer.children).toHaveLength(3)
+  expect(cheer.textContent).toContain('コトバン')
+})

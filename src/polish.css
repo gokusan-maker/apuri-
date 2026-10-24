@@ -2557,3 +2557,8 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 @media (prefers-reduced-motion: reduce) { .boss-vs { display: none; } }
 .today-grade { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, var(--card)); color: var(--accent); font-size: 0.72rem; font-weight: 800; white-space: nowrap; vertical-align: middle; }
 .boss-pick-time { font-weight: 900; }
+.boss-team-cheer { display: grid; gap: 4px; margin: 6px 0; }
+.boss-team-cheer p { margin: 0; padding: 6px 10px; border-radius: 12px; border-left: 4px solid var(--team-c); background: color-mix(in srgb, var(--team-c) 12%, var(--card)); font-size: 0.85rem; font-weight: 800; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.boss-team-cheer .team-word { --team-c: #f97316; }
+.boss-team-cheer .team-grammar { --team-c: #22c55e; }
+.boss-team-cheer .team-reading { --team-c: #8b5cf6; }

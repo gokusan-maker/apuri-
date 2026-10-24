@@ -6,7 +6,7 @@ import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingb
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
-import { BossTeamContext, TEAM_ICON, TEAM_LABEL } from './bossteam'
+import { BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
@@ -684,7 +684,17 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       ) : lost && picked === null ? (
         <>
           <p className="boss-result">まけてしまった…</p>
-          {partner && <p className="grammar-praise lose-cheer">🐣 {partner.name}「{cheerOnLose(corrects)}」</p>}
+          {teamOn ? (
+            <div className="boss-team-cheer" aria-label="チームのはげまし">
+              {TEAM_ORDER.map((r) => (
+                <p key={r} className={`team-${r}`} title={`${team![r].name}「${TEAM_LOSE_LINES[r]}」`}>
+                  {TEAM_ICON[r]} {team![r].name}「{TEAM_LOSE_LINES[r]}」
+                </p>
+              ))}
+            </div>
+          ) : (
+            partner && <p className="grammar-praise lose-cheer">🐣 {partner.name}「{cheerOnLose(corrects)}」</p>
+          )}
           <p className="result-message">{reading ? '本文をもう一度ゆっくり読んで、もう一度挑戦しよう！' : '苦手な単語を復習して、もう一度挑戦しよう！'}</p>
           {onSpend && !continued && hearts <= 0 && index < qs.length && (
             <button
