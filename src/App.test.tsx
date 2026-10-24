@@ -338,17 +338,17 @@ describe('App', () => {
     expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
   })
 
-  it('単語帳ボタンは3冊以上なら「中1 ほかN冊」と短く出て、全部の名前は title に入る', () => {
+  it('単語帳の選択はホームには出さず（オーナーの要望）、設定にある', () => {
     render(<App />)
-    const b = screen.getByText(/📚 単語帳：/)
-    expect(b.textContent).toMatch(/中1 ほか\d+冊/)
-    expect(b.getAttribute('title')).toContain('中2')
+    expect(screen.queryByText(/📚 単語帳：/)).toBeNull()
+    navTo('設定')
+    expect(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: /^中2/ })).toBeInTheDocument()
   })
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
-    fireEvent.click(screen.getByText(/📚 単語帳：/))
-    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']) fireEvent.click(screen.getByRole('button', { name: l }))
+    navTo('設定')
+    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']) fireEvent.click(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: new RegExp('^' + l) }))
     const n = wordsOf(['中1']).length
     goCards()
     expect(screen.getByLabelText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()
@@ -460,9 +460,8 @@ describe('App', () => {
     fireEvent.change(screen.getByLabelText('意味'), { target: { value: 'ひまわり' } })
     fireEvent.click(screen.getByText('追加する'))
     expect(screen.getByText('マイ単語帳（1語）')).toBeInTheDocument()
-    navTo('ホーム')
-    fireEvent.click(screen.getByText(/📚 単語帳：/))
-    fireEvent.click(screen.getByRole('button', { name: 'マイ単語帳' }))
+    navTo('設定')
+    fireEvent.click(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: 'マイ単語帳' }))
     goCards()
     expect(screen.getByLabelText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
   })
@@ -1420,10 +1419,12 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(8)
   })
 
-  it('単語帳の選択はふだんたたまれていて、タップで開く', () => {
+  it('単語帳の選択はホーム・単語ゲームにはなく、設定で選ぶ', () => {
     render(<App />)
     expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
-    fireEvent.click(screen.getByText(/📚 単語帳：/))
+    navTo('単語ゲーム')
+    expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
+    navTo('設定')
     expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
   })
 
@@ -1431,7 +1432,7 @@ describe('App', () => {
     const p = Object.fromEntries(wordsOf(['曜日・月']).map((w) => [w.id, { box: 3, due: '2099-01-01' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    fireEvent.click(screen.getByText(/📚 単語帳：/))
+    navTo('設定')
     expect(screen.getByRole('group', { name: '単語帳' }).textContent).toContain('曜日・月 100%')
   })
 

@@ -199,10 +199,6 @@ function learnedPct(ws: { id: string }[], progress: Record<string, { box: number
   return ws.length ? Math.round((ws.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length / ws.length) * 100) : 0
 }
 
-// 単語帳ボタンの表示：3冊以上は「中1 ほか5冊」と短く
-function bookLabel(names: string[]): string {
-  return names.length > 2 ? `${names[0]} ほか${names.length - 1}冊` : names.join('・')
-}
 
 function saveLucky(day: string) {
   try {
@@ -221,7 +217,6 @@ function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
   const [mode, setMode] = useState<Tab>('home')
   const [showList, setShowList] = useState(false)
-  const [showBooks, setShowBooks] = useState(false) // 単語帳の選択を開いているか
   const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
   // 苦手／お気に入りのカード復習：記録画面から始める。一周するまで同じ単語は出さない
   type Focus = 'weak' | 'fav' | 'pick' | 'week' | 'thisweek'
@@ -1378,28 +1373,6 @@ function App() {
           </div>
           </>
         )}
-        {(mode === 'word' || mode === 'home') && (
-          <>
-            <button className="book-toggle" aria-expanded={showBooks} title={[...levels, ...(useMy ? ['マイ単語帳'] : [])].join('・')} onClick={() => setShowBooks(!showBooks)}>
-              📚 単語帳：{bookLabel([...levels, ...(useMy ? ['マイ単語帳'] : [])])} {showBooks ? '▲' : '▼'}
-            </button>
-            {showBooks && (
-              <div className="levels" role="group" aria-label="単語帳">
-                {LEVELS.map((l) => (
-                  <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
-                    {l}
-                    <small className="level-pct" aria-hidden="true"> {learnedPct(wordsOf([l]), progress)}%</small>
-                  </button>
-                ))}
-                {myWords.length > 0 && (
-                  <button aria-pressed={useMy} onClick={() => setUseMy(!useMy)}>
-                    マイ単語帳
-                  </button>
-                )}
-              </div>
-            )}
-          </>
-        )}
       </header>
       {mode === 'word' && !showShop && !showChallenge && (
         <div className="boss-ally ally-word" aria-label="単語の相棒（正解で育つ）">
@@ -1647,7 +1620,26 @@ function App() {
         </>
       ) : mode === 'settings' ? (
         <>
-          <SettingsPanel settings={settings} onChange={setSettings} onGrade={setLevels} />
+          <SettingsPanel
+            settings={settings}
+            onChange={setSettings}
+            onGrade={setLevels}
+            books={
+              <div className="levels" role="group" aria-label="単語帳">
+                {LEVELS.map((l) => (
+                  <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
+                    {l}
+                    <small className="level-pct" aria-hidden="true"> {learnedPct(wordsOf([l]), progress)}%</small>
+                  </button>
+                ))}
+                {myWords.length > 0 && (
+                  <button aria-pressed={useMy} onClick={() => setUseMy(!useMy)}>
+                    マイ単語帳
+                  </button>
+                )}
+              </div>
+            }
+          />
           {playBox}
         </>
       ) : mode === 'home' ? (

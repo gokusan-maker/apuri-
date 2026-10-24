@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import { Cloud } from './CloudView'
 import { Install } from './InstallView'
 import { OfflineStatus } from './OfflineView'
@@ -15,6 +16,7 @@ type Props = {
   settings: Settings
   onChange: (s: Settings) => void
   onGrade?: (levels: Level[]) => void
+  books?: ReactNode // 単語帳をえらぶボタン（ホームから設定へ移した）
 }
 
 const THEMES: { id: Theme; label: string }[] = [
@@ -28,7 +30,7 @@ const ACCENTS: { id: Accent; label: string }[] = [
   { id: 'en-GB', label: 'イギリス英語' },
 ]
 
-export function SettingsPanel({ settings, onChange, onGrade }: Props) {
+export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
   const [graded, setGraded] = useState('')
   const set = (patch: Partial<Settings>) => onChange({ ...settings, ...patch })
   return (
@@ -57,6 +59,12 @@ export function SettingsPanel({ settings, onChange, onGrade }: Props) {
               {graded}
             </p>
           )}
+        </fieldset>
+      )}
+      {books && (
+        <fieldset className="setting">
+          <legend>単語帳をえらぶ</legend>
+          {books}
         </fieldset>
       )}
 
