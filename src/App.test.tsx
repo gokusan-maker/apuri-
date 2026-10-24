@@ -35,6 +35,18 @@ describe('App', () => {
     localStorage.setItem('eitan:lucky', dayKey()) // ラッキー単語のボーナスは専用のテストだけで確かめる
   })
 
+
+  it('読解ステージのいちばん上に「今日の読解」があり、押すとその英文が始まる', async () => {
+    const { dailyShort } = await import('./dailyread')
+    render(<App />)
+    navTo('読解ステージ')
+    const p = dailyShort(dayKey())
+    const btn = screen.getByRole('button', { name: `今日の読解：${p.title}` })
+    expect(btn.compareDocumentPosition(document.querySelector('.read-levels')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    fireEvent.click(btn)
+    expect(screen.getAllByText(p.title).length).toBeGreaterThan(0)
+    expect(screen.queryByRole('button', { name: `今日の読解：${p.title}` })).toBeNull()
+  })
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
     goMini() // 今日の単語のカードは単語ゲームのページにある

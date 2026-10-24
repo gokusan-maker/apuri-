@@ -1575,6 +1575,12 @@ function App() {
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
           {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} />}
+          {mode === 'reading' && !shortGo && (
+            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
+              📅 今日の読解{loadDailyShortDay() === today ? ' ✅' : ''}
+              <strong>{dailyShort(today).title}</strong>
+            </button>
+          )}
           {mode === 'reading' && (
           <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
             {READ_LEVELS.map((t) => (
