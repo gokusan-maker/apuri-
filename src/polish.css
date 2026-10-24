@@ -2405,7 +2405,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 /* ホーム：なかまを入れかえる（むらさきの小さなゲームボタン）、記録のタブ（ショップと同じ色つきタイル） */
 .buddy-swap-link { width: fit-content; padding: 8px 18px; border: none; background: linear-gradient(135deg, #a78bfa, #7c3aed); color: #fff; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 #5b21b6; }
 .buddy-swap-link:active { transform: translateY(2px); box-shadow: none; }
-.stats-tabs { gap: 6px; padding: 6px; }
+.stats-tabs, .word-sub-tabs { gap: 6px; padding: 6px; }
 .stats-tabs button { --st-h: 225; background: hsl(var(--st-h) 70% 95%); color: hsl(var(--st-h) 60% 32%); font-weight: 800; box-shadow: 0 3px 0 hsl(var(--st-h) 45% 80%); }
 .stats-tabs button:nth-child(2) { --st-h: 330; }
 .stats-tabs button:nth-child(3) { --st-h: 40; }
@@ -2413,3 +2413,11 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .stats-tabs button[aria-selected='true'] { background: linear-gradient(135deg, hsl(var(--st-h) 75% 55%), hsl(calc(var(--st-h) + 20) 70% 40%)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 hsl(var(--st-h) 60% 28%); }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .stats-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); } }
 :root[data-theme="dark"] .stats-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); }
+
+/* 単語ゲームのタブ（ミニゲーム・タイムアタック・ステージ）も色つきタイル */
+.word-sub-tabs button { --st-h: 160; background: hsl(var(--st-h) 70% 95%); color: hsl(var(--st-h) 60% 28%); font-weight: 800; box-shadow: 0 3px 0 hsl(var(--st-h) 45% 80%); }
+.word-sub-tabs button:nth-child(2) { --st-h: 25; }
+.word-sub-tabs button:nth-child(3) { --st-h: 275; }
+.word-sub-tabs button[aria-selected='true'] { background: linear-gradient(135deg, hsl(var(--st-h) 75% 50%), hsl(calc(var(--st-h) + 20) 70% 38%)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 hsl(var(--st-h) 60% 26%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .word-sub-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); } }
+:root[data-theme="dark"] .word-sub-tabs button:not([aria-selected='true']) { background: hsl(var(--st-h) 30% 20%); color: hsl(var(--st-h) 70% 80%); box-shadow: 0 3px 0 hsl(var(--st-h) 30% 12%); }
