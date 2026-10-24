@@ -23,7 +23,7 @@ export function DailyGrammarQ({ day, onCorrect }: Props) {
           {q.choices.map((c, i) => (
             <button
               key={c}
-              className="list-link"
+              className="list-link pill-btn pill-choice"
               onClick={() => {
                 setPicked(i)
                 setDoneDay(day)

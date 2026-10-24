@@ -43,7 +43,7 @@ export function Training({ day, words, name, onChange }: Props) {
         {q.choices.map((c) => (
           <button
             key={c.id}
-            className="list-link"
+            className="list-link pill-btn pill-choice"
             onClick={() => {
               const right = c.id === q.w.id
               if (right) playCorrect()

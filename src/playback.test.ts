@@ -73,3 +73,11 @@ it('おさんぽクイズ（緑）・単語一覧（青）のボタンも色つ�
   expect(src).toContain('list-link pill-btn pill-green" onClick={() => setWalkQuizOpen(true)}')
   expect(src).toContain('list-link pill-btn pill-blue" onClick={() => setShowList(true)}')
 })
+
+it('今日の文法・トレーニングの選択肢は白い丸ボタン、もう一度ときたい長文はピンク、レベル診断はむらさき', () => {
+  const has = (f: string, c: string) => expect(readFileSync(`src/${f}`, 'utf8')).toContain(`list-link pill-btn ${c}`)
+  has('DailyGrammarQView.tsx', 'pill-choice')
+  has('TrainingView.tsx', 'pill-choice')
+  has('LongReadingView.tsx', 'pill-pink')
+  has('OnboardingView.tsx', 'pill-purple')
+})

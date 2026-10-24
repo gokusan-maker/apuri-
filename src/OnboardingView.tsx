@@ -52,7 +52,7 @@ export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => voi
               </button>
             ))}
             {onPlacement && (
-              <button className="list-link" onClick={onPlacement}>
+              <button className="list-link pill-btn pill-purple" onClick={onPlacement}>
                 📋 レベル診断で決める
               </button>
             )}

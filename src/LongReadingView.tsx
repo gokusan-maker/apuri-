@@ -245,7 +245,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           <div className="long-review">
             <p className="long-review-title">🔁 もう一度ときたい読解（満点でないもの）</p>
             {LIST.filter((x) => record[x.id] !== undefined && record[x.id] < totalOf(x)).map((x) => (
-              <button key={x.id} className="list-link" onClick={() => openPassage(x)}>
+              <button key={x.id} className="list-link pill-btn pill-pink" onClick={() => openPassage(x)}>
                 {shownTitle(x, LONG_PASSAGES.indexOf(x))}（{record[x.id]} / {totalOf(x)}点）
               </button>
             ))}

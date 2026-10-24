@@ -2703,3 +2703,6 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .outfits { gap: 8px; }
 .outfit { gap: 4px; }
 .outfit .list-link.pill-btn { padding: 6px 12px; font-size: 0.82rem; }
+/* 満点でない長文の一覧はピンクの1行ボタン（左よせ・… で切る） */
+.long-review .list-link.pill-btn { display: flex; justify-content: flex-start; width: 100%; margin: 4px 0; padding: 7px 14px; font-size: 0.85rem; }
+.daily-gq-choices { gap: 8px; }
