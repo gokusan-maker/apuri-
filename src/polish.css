@@ -1976,3 +1976,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .challenge-btn.daily-boss-go { background: linear-gradient(135deg, color-mix(in srgb, #8b5cf6 26%, var(--card)), color-mix(in srgb, #8b5cf6 12%, var(--card))); color: #ddd6fe; border-color: rgb(139 92 246 / 0.4); }
 :root[data-theme="dark"] .challenge-btn.hungry-btn { background: linear-gradient(135deg, color-mix(in srgb, #fb923c 22%, var(--card)), color-mix(in srgb, #fb923c 10%, var(--card))); color: #fed7aa; border-color: rgb(251 146 60 / 0.35); }
 :root[data-theme="dark"] .challenge-btn.hungry-btn .challenge-sub { color: #fdba74; }
+
+/* 文法チャレンジ：ゲーム数はバッジ、学年まとめは3列にそろえ、ベストは小さく下に */
+.game-count { display: inline-block; margin-left: 4px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, transparent); color: var(--accent); font-size: 0.78rem; font-weight: 800; vertical-align: 2px; }
+.grade-tests { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.grade-tests .list-link { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; margin: 0; padding: 8px 2px; font-size: 0.88rem; }
+.grade-best { font-size: 0.7rem; font-weight: 700; opacity: 0.8; }

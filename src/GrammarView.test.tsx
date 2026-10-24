@@ -287,7 +287,7 @@ it('学年まとめテストはその学年の問題だけで、ベストが残�
   const { gradeOf } = await import('./grammar')
   localStorage.clear()
   render(<Grammar />)
-  fireEvent.click(screen.getByRole('button', { name: /📝 中1まとめ/ }))
+  fireEvent.click(screen.getByRole('button', { name: /中1まとめ/ }))
   const pool = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
   for (let i = 0; i < 10; i++) {
     const text = document.querySelector('.blank-sentence')!.textContent!

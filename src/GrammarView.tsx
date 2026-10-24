@@ -245,7 +245,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
               ))}
             </div>
             <p className="game-grid-title">
-              🎮 文法ゲーム（{GAME_COUNT}しゅるい）
+              🎮 文法ゲーム <span className="game-count" aria-label={`${GAME_COUNT}しゅるい`}>{GAME_COUNT}</span>
               {playedToday > 0 && <span className="played-today">{playedToday >= GAME_COUNT ? '🎉 今日は全部あそんだ！' : `・今日 ${playedToday} しゅるいあそんだ`}</span>}
             </p>
             {onAllGames && playedToday >= GAME_COUNT && (
@@ -348,7 +348,8 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
                   setStep(0)
                 }}
               >
-                📝 {g}まとめ{mixBest[`grade:${g}`] !== undefined ? `（ベスト ${mixBest[`grade:${g}`]}/10）` : ''}
+                {g}まとめ
+                {mixBest[`grade:${g}`] !== undefined && <small className="grade-best" aria-label={`ベスト ${mixBest[`grade:${g}`]}/10`}>🏆{mixBest[`grade:${g}`]}/10</small>}
               </button>
             ))}
           </div>
