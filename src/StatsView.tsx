@@ -75,15 +75,23 @@ export function Stats({
         </div>
       </dl>
       <p className="stats-note">※ 定着＝3回続けて「覚えた」</p>
-      {minutes && (
+      {minutes && (minutes[1] > 0 || bestCombo > 0) && (
         <p className="study-time">
-          ⏳ 学習時間：今日 <strong>{minutes[0]}分</strong>・この7日{" "}
-          <strong>{minutes[1]}分</strong>
-          <br />
-          🔥 コンボの自己ベスト：<strong>{bestCombo}</strong>
+          {minutes[1] > 0 && (
+            <>
+              ⏳ 学習時間：今日 <strong>{minutes[0]}分</strong>・この7日{" "}
+              <strong>{minutes[1]}分</strong>
+            </>
+          )}
+          {minutes[1] > 0 && bestCombo > 0 && <br />}
+          {bestCombo > 0 && (
+            <>
+              🔥 コンボの自己ベスト：<strong>{bestCombo}</strong>
+            </>
+          )}
         </p>
       )}
-      {accuracy && (
+      {accuracy && (accuracy.today !== null || accuracy.card !== null || accuracy.quiz !== null || accuracy.ear !== null) && (
         <p className="study-time">
           🎯 今日の正答率：
           <strong>
@@ -97,11 +105,13 @@ export function Stats({
                 ["クイズ", accuracy.quiz],
                 ["耳・スペル", accuracy.ear],
               ] as const
-            ).map(([k, v]) => (
-              <span key={k} className="acc-chip">
-                {k} <b>{v === null ? "―" : `${v}%`}</b>
-              </span>
-            ))}
+            )
+              .filter(([, v]) => v !== null)
+              .map(([k, v]) => (
+                <span key={k} className="acc-chip">
+                  {k} <b>{`${v}%`}</b>
+                </span>
+              ))}
           </span>
         </p>
       )}

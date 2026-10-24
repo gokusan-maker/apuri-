@@ -1705,3 +1705,11 @@ it('記録：まだ0ばかりの「この1週間」と「復習の予定」は�
   expect(screen.queryByText('この1週間')).toBeNull()
   expect(screen.queryByText('復習の予定')).toBeNull()
 })
+
+it('記録：まだ0の学習時間・コンボ・正答率の行は出さない', () => {
+  localStorage.clear()
+  render(<App />)
+  expect(screen.queryByText(/学習時間：/)).toBeNull()
+  expect(screen.queryByText(/コンボの自己ベスト/)).toBeNull()
+  expect(screen.queryByText(/今日の正答率/)).toBeNull()
+})
