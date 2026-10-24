@@ -42,7 +42,8 @@ export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
       <h3 className="settings-h">📚 学習</h3>
       {onGrade && (
         <fieldset className="setting">
-          <legend>学年・レベル（単語帳・今日の課題・ボス戦のむずかしさ）</legend>
+          <legend>🎓 学年・レベル</legend>
+          <p className="stats-note grade-note">今日の課題・ボス戦のむずかしさが合う</p>
           <div className="levels">
             {GRADES.map((g) => (
               <button
