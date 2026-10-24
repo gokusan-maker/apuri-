@@ -162,13 +162,13 @@ export const LONG_PASSAGES: LongPassage[] = [
     level: '中3（説明文）',
     paragraphs: [
       'Honeybees are small, but they are very important ( A ) our lives. When they fly from flower to flower, they carry pollen. This helps many plants produce fruit and seeds. In fact, about one third of the food we eat depends ( B ) insects like bees.',
-      'Bees also have an interesting way of sharing information. When a bee finds a good place ( C ) a lot of flowers, it goes back to the hive and does a special "dance." The direction and speed of the dance tell the other bees where the flowers are.',
+      'Bees also have an interesting way of sharing information. When a bee finds a good place ( C ) a lot of flowers, it goes back to the hive and does a special "dance." The direction and length of the dance tell the other bees where the flowers are.',
       'Sadly, the number of bees is getting smaller in many parts of the world. Some scientists think this is ( D ) of chemicals used on farms. Others say that changes in the weather are also a problem.',
       'We can help bees in simple ways. For example, we can grow flowers on our balconies or in our gardens. If more people do this, bees will have more places ( E ) find food.',
     ],
     ja: [
       'ミツバチは小さいですが、私たちの生活にとってとても大切です。花から花へと飛ぶとき、ミツバチは花粉を運びます。これによって多くの植物が実や種をつけられるのです。実は、私たちが食べる食べ物のおよそ3分の1は、ミツバチのような昆虫にたよっています。',
-      'ミツバチには、情報を伝え合うおもしろい方法もあります。花がたくさんあるよい場所を見つけると、ミツバチは巣にもどって特別な「ダンス」をします。ダンスの向きと速さで、ほかのハチたちに花がどこにあるかを伝えるのです。',
+      'ミツバチには、情報を伝え合うおもしろい方法もあります。花がたくさんあるよい場所を見つけると、ミツバチは巣にもどって特別な「ダンス」をします。ダンスの向きと長さで、ほかのハチたちに花がどこにあるかを伝えるのです。',
       '悲しいことに、世界の多くの地域でミツバチの数が減ってきています。農場で使われる薬品のせいだと考える科学者もいます。天気の変化も問題だと言う人もいます。',
       '私たちはかんたんな方法でミツバチを助けることができます。たとえば、ベランダや庭で花を育てることです。もっと多くの人がこうすれば、ミツバチは食べ物を見つけられる場所がふえるでしょう。',
     ],
@@ -1620,7 +1620,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     qa: [{ q: 'What will Lisa make?', choices: ['The cover of the album.', 'A birthday cake.', 'A card for Kaito.', 'A song.'], answer: 0, why: 'リサは「表紙をつくる」と言っている。' }],
     tf: [
       { statement: "Ms. Mori's birthday is next Friday.", answer: true, why: '最初の発言と合う。' },
-      { statement: 'Ms. Mori is their math teacher.', answer: false, why: '英語で助けてくれる先生（英語の先生）。' },
+      { statement: 'Ms. Mori always helps them with their English.', answer: true, why: 'リサの1つ目の発言 She always helps us with our English と合う。' },
       { statement: 'Only Kaito and Lisa will write messages.', answer: false, why: 'クラスのみんなが書く。' },
       { statement: 'Lisa is good at drawing.', answer: true, why: 'リサの2つ目の発言と合う。' },
       { statement: 'They will give the album to Ms. Mori on Wednesday.', answer: false, why: 'わたすのは金曜日の授業の最後。' },
@@ -1754,7 +1754,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     paragraphs: [
       'Dear Mr. and Mrs. Green,',
       'Thank you very much ( A ) letting me stay at your house last week. I had a wonderful time in Australia.',
-      'I will never forget the day we went to the beach. It was my first time to see kangaroos in the wild. I also enjoyed the dinner you made for me ( B ) my last night. The meat pie was delicious!',
+      'I will never forget the day we went to the beach. It was the first time I had seen kangaroos in the wild. I also enjoyed the dinner you made for me ( B ) my last night. The meat pie was delicious!',
       'Before I came to Australia, I was worried ( C ) my English. But you always spoke slowly and listened to me kindly, so I became more confident. Now I want to study English harder.',
       'I am sending you some photos I took during my stay. I hope you can visit Japan someday. I would like to show you around my town. Please say hello ( D ) Lucy and her cat, Milo.',
       'With love,\nHaruka',
@@ -1806,7 +1806,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'C', choices: ['at', 'for', 'of', 'with'], answer: 1, why: 'safe for 〜 で「〜にとって安全な」。' },
       { id: 'D', choices: ['and', 'but', 'or', 'so'], answer: 0, why: 'cleaner and healthier で「よりきれいで、より健康的に」。' },
     ],
-    insert: { sentence: 'For these reasons, many people choose bicycles instead of cars.', after: [0, 1, 2, 3], answer: 2, why: '第3段落で自転車のよい点（空気・健康・安い）を説明したあとに「これらの理由で」と続く。' },
+    insert: { sentence: 'Because of these good points, many people choose bicycles instead of cars.', after: [0, 1, 2, 3], answer: 2, why: '第3段落で自転車のよい点（空気・健康・安い）を説明したあとに「これらの理由で」と続く。' },
     pick2: {
       statements: ['Amsterdam has many roads only for bicycles.', 'Riding a bicycle is more expensive than using a car.', 'The land of Amsterdam is flat.', 'There are no problems with bicycles.', 'Bicycles make the air dirty.', 'Nobody rides too fast.'],
       answers: [0, 2],
@@ -1907,7 +1907,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     ja: [
       '毎日、まだ食べられるのにたくさんの食べ物が捨てられています。これは「食品ロス」と呼ばれています。日本では毎年、何百万トンもの食べ物がむだになっています。',
-      '食品ロスはどこから出るのでしょうか。一部はお店やレストランから出ます。たとえば、お店は1日の終わりに売れなかったパンやお弁当を捨てます。しかし、大部分は私たちの家庭からも出ているのです。',
+      '食品ロスはどこから出るのでしょうか。一部はお店やレストランから出ます。たとえば、お店は1日の終わりに売れなかったパンやお弁当を捨てます。しかし、かなりの部分は私たちの家庭からも出ているのです。',
       '家では、食べ物を買いすぎて、食べるのをわすれてしまうことがよくあります。必要以上に料理をつくって、残りを捨ててしまう人もいます。また、まだ安全なのに「賞味期限」が過ぎたというだけで食べ物を捨ててしまう人もいます。',
       '食品ロスをへらすかんたんな方法があります。買い物の前に、冷蔵庫にもう何があるか確かめましょう。必要なものだけを買いましょう。レストランで食事を食べきれないときは、残りを持ち帰ってよいか聞いてみましょう。',
       'お店や団体も努力しています。売れなかった食べ物を、それを必要としている人たちにわたしているのです。一人ひとりが買う食べ物や料理する食べ物に気をつければ、未来に向けて大きなちがいを生むことができます。',
@@ -1921,7 +1921,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     summary: {
       text: 'Food loss comes from stores and also from our ( 1 ). To reduce it, we should buy only the food we ( 2 ).',
       blanks: [
-        { choices: ['homes', 'schools', 'cars', 'parks'], answer: 0, why: '第2段落「大部分は家庭からも出ている」。' },
+        { choices: ['homes', 'schools', 'cars', 'parks'], answer: 0, why: '第2段落「かなりの部分は家庭からも出ている」。' },
         { choices: ['need', 'sell', 'grow', 'draw'], answer: 0, why: '第4段落「必要なものだけを買いましょう」。' },
       ],
     },
@@ -2121,14 +2121,14 @@ export const LONG_PASSAGES: LongPassage[] = [
     paragraphs: [
       'The moon is the closest natural object ( A ) the Earth in space. It is about 380,000 kilometers away. If you could drive a car there, it would take about half a year.',
       'The moon does not make its own light. It looks bright because it reflects the light of the sun. The shape of the moon seems to change ( B ) about a month, from a thin line to a full circle and back again.',
-      'There is no air or water on the moon, so nothing can live there. Because there is no wind, the footprints left by astronauts in 1969 are probably still there today.',
+      'There is almost no air and no liquid water on the moon, so nothing can live there. Because there is no wind, the footprints left by astronauts in 1969 are probably still there today.',
       'The moon also affects our life on the Earth. It pulls the water of the sea, and this causes the tides. Without the moon, the sea ( C ) be very different.',
       'Today, many countries are planning to send people to the moon again. Some scientists hope to build a base there in the future. Maybe someday you will be able to travel ( D ) the moon.',
     ],
     ja: [
       '月は、宇宙で地球にいちばん近い自然の天体です。約38万キロメートルはなれています。もし車で行けるとしたら、半年くらいかかるでしょう。',
       '月は自分で光を出していません。太陽の光を反射しているので明るく見えるのです。月の形は約1か月で、細い線から満月まで変わって、またもとにもどるように見えます。',
-      '月には空気も水もないので、何も生きられません。風がないので、1969年に宇宙飛行士が残した足あとは、おそらく今もそこに残っています。',
+      '月には空気がほとんどなく、液体の水もないので、何も生きられません。風がないので、1969年に宇宙飛行士が残した足あとは、おそらく今もそこに残っています。',
       '月は地球の私たちの生活にも影響をあたえています。月は海の水を引っぱっていて、これが潮の満ち引きを起こします。月がなければ、海はずいぶんちがったものになるでしょう。',
       '今日、多くの国がふたたび月に人を送ることを計画しています。将来、そこに基地をつくりたいと考えている科学者もいます。いつかあなたも月へ旅行できるようになるかもしれません。',
     ],
@@ -2457,14 +2457,14 @@ export const LONG_PASSAGES: LongPassage[] = [
     level: '中3（説明文）',
     paragraphs: [
       'Have you ever noticed yellow blocks on sidewalks and train station floors? They are called tactile paving. They help people who cannot see well ( A ) walk safely.',
-      'These blocks were first made in Japan in 1967 by a man named Seiichi Miyake. Now they are used in many countries ( B ) the world.',
+      'These blocks were invented in Japan by a man named Seiichi Miyake, and they were first used in 1967. Now they are used in many countries ( B ) the world.',
       'There are two main kinds of blocks. Blocks with long lines show the direction to walk. Blocks with small dots mean "stop" or "be careful." You can find them in front of stairs and at the edge of train platforms.',
       'People with poor eyesight feel the blocks with their feet or a white cane. Yellow is used because it is easy to see for people who can see a little.',
       'However, some people put bikes or bags on the blocks without thinking. This can be very dangerous. We should keep the blocks clear so that everyone can walk ( C ) worry. Small actions like this make our town kinder ( D ) everyone.',
     ],
     ja: [
       '歩道や駅のゆかにある黄色いブロックに気づいたことはありますか。これは点字ブロック（視覚障害者誘導用ブロック）と呼ばれています。目がよく見えない人が安全に歩くのを助けています。',
-      'このブロックは1967年に、三宅精一という人によって日本で初めてつくられました。今では世界中の多くの国で使われています。',
+      'このブロックは日本で三宅精一という人によって考え出され、1967年に初めて使われました。今では世界中の多くの国で使われています。',
       'ブロックには主に2つの種類があります。長い線のあるブロックは、歩く方向を示しています。小さな点のあるブロックは「止まれ」や「注意」を意味します。階段の前や駅のホームのはしで見つけることができます。',
       '目の不自由な人は、足や白いつえでブロックを感じとります。少し見える人にとって見えやすいので、黄色が使われています。',
       'しかし、何も考えずにブロックの上に自転車やかばんを置いてしまう人もいます。これはとても危険です。だれもが心配なく歩けるように、ブロックの上には物を置かないようにしましょう。このような小さな行動が、町をすべての人にやさしくするのです。',
@@ -2482,7 +2482,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     },
     titleQ: { choices: ['How to Ride a Bike Safely', 'The Yellow Blocks on the Sidewalk', 'Train Stations in Japan', 'The History of the White Cane'], answer: 1, why: '歩道や駅にある黄色い点字ブロックについての文章。' },
     tf: [
-      { statement: 'Seiichi Miyake made the first blocks in 1967.', answer: true, why: '第2段落の内容と合う。' },
+      { statement: 'The blocks were first used in 1967.', answer: true, why: '第2段落の内容と合う。' },
       { statement: 'There are two main kinds of blocks.', answer: true, why: '第3段落の内容と合う。' },
       { statement: 'Blocks with small dots show the direction to walk.', answer: false, why: '方向を示すのは長い線のブロック。' },
       { statement: 'People feel the blocks with their hands.', answer: false, why: '足や白いつえで感じとる。' },
@@ -2869,7 +2869,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       'Dear Grandpa,',
       'How are you? Yesterday we had our sports day ( A ) school. I want to tell you about it.',
       'In the morning, I ran in the 100-meter race. I was nervous ( B ) the start, but I did my best and finished third. In the afternoon, our class did the tug of war. We pulled very hard and won!',
-      'The best part of the day was the class relay. I was the last runner. When I got the baton, we were in fourth place. I ran as fast as I could and passed two runners. We finished second. Everyone in my class was cheering ( C ) me.',
+      'The best part of the day was the class relay at the end of the day. I was the last runner. When I got the baton, we were in fourth place. I ran as fast as I could and passed two runners. We finished second. Everyone in my class was cheering ( C ) me.',
       'Mom took a lot of pictures. I\'ll send some of them to you. Next year, I want to win first place in the relay. Please come and watch me ( D ) you can.',
       'Love,\nShota',
     ],
@@ -3893,7 +3893,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Sora invites Mia to see a movie.', answer: true, why: 'ソラの発言と合う。' },
       { statement: 'Mia has a piano lesson in the afternoon.', answer: false, why: 'レッスンは午前中。' },
       { statement: 'They will meet in front of the station at one thirty.', answer: true, why: 'ソラの発言と合う。' },
-      { statement: 'The ticket is 1,000 yen for adults.', answer: false, why: '学生が1,000円。' },
+      { statement: 'The ticket is 2,000 yen for students.', answer: false, why: '学生は1,000円。' },
       { statement: 'They cannot eat outside food inside the theater.', answer: true, why: 'ソラの最後の発言と合う。' },
     ],
   },
@@ -4942,7 +4942,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     ja: [
       'ねこの顔には、ひげとよばれる長くてかたい毛があります。ただのかざりのように見えるかもしれませんが、じつは大切な道具なのです。ひげの1本1本はふつうの毛より太く、その根もとは皮ふの深くまで入っていて、そこにはたくさんの神経があります。このため、ひげはねこのまわりのとても小さな変化も感じとることができます。',
-      'ひげはいろいろな方法でねこを助けています。ひげは空気の動きを感じることができるので、ねこは暗い中でもまわりにある物に気づけます。ねこのひげは、体の幅とだいたい同じくらいの長さであることが多いです。せまいすき間の両側にひげでふれることで、ねこはそこを通りぬけられるかどうかがわかるのです。',
+      'ひげはいろいろな方法でねこを助けています。ひげは空気の動きを感じることができるので、ねこは暗い中でもまわりにある物に気づけます。ねこのひげの左右のはしからはしまでの幅は、体の幅とだいたい同じであることが多いです。せまいすき間の両側にひげでふれることで、ねこはそこを通りぬけられるかどうかがわかるのです。',
       'ねこには、目の上や前足のうしろにもひげがあります。足のひげは、つかまえている小さな動物の様子を感じとるのに役立ちます。',
       'ひげは、ほかの毛と同じように自然にぬけて、また生えてきます。でも、ねこのひげを切っては絶対にいけません。ひげがないと、ねこはとまどって、うまく動き回れなくなることがあるのです。',
     ],
@@ -5047,7 +5047,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     underline: { phrase: 'I could not take my eyes off them', choices: ['力士たちから目がはなせなかった', '力士たちを見るのをやめた', '目がつかれて見えなかった', '力士たちの目を見られなかった'], answer: 0, why: 'can\'t take one\'s eyes off ～「～から目がはなせない」。' },
     tf: [
-      { statement: 'Haruto saw sumo at the stadium for the first time last Sunday.', answer: true, why: '第2段落 my grandfather took me to see sumo for the first time。' },
+      { statement: 'Haruto saw sumo in person for the first time last Sunday.', answer: true, why: '第2段落 my grandfather took me to see sumo for the first time。' },
       { statement: 'There are four big sumo tournaments every year.', answer: false, why: '第2段落 There are six big tournaments every year。' },
       { statement: 'The wrestlers throw salt to make the ring clean.', answer: true, why: '第3段落の内容と合う。' },
       { statement: "Haruto's favorite wrestler is very big and slow.", answer: false, why: '第4段落 not very big, but he is very fast。' },
