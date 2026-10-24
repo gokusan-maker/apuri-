@@ -439,6 +439,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {charge && picked !== null && shieldUsed !== index && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
         <BossFigure hit={hit} look={look} />
+        {teamOn && index === 0 && picked === null && !won && (
+          <span className="boss-vs" aria-hidden="true">
+            VS
+          </span>
+        )}
         {hit && lastDmg > 0 && (
           <span key={`d${index}`} className={`dmg-pop${crit ? ' crit' : ''}`} aria-hidden="true">
             -{lastDmg}

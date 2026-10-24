@@ -2550,3 +2550,8 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .boss-team-m.on .boss-team-fig { animation: team-hop 0.9s ease-in-out infinite; transform-origin: 50% 100%; }
 @keyframes team-hop { 0%, 100% { transform: translateY(0) scale(1, 1); } 40% { transform: translateY(-6px) scale(0.97, 1.03); } 70% { transform: translateY(0) scale(1.05, 0.95); } }
 @media (prefers-reduced-motion: reduce) { .boss-team-m.on .boss-team-fig { animation: none; } }
+
+/* チームバトルのはじまり：ボスの前に「VS」がドンと出て消える */
+.boss-vs { position: absolute; left: 50%; top: 40%; z-index: 3; transform: translate(-50%, -50%); color: #fff; font-size: 3rem; font-weight: 900; font-style: italic; letter-spacing: 0.04em; text-shadow: 0 0 0 #000, 3px 3px 0 #dc2626, -2px -2px 0 #f97316, 0 4px 12px rgb(0 0 0 / 0.5); pointer-events: none; animation: vs-pop 1.4s ease-out forwards; }
+@keyframes vs-pop { 0% { opacity: 0; transform: translate(-50%, -50%) scale(2.4); } 25% { opacity: 1; transform: translate(-50%, -50%) scale(0.95); } 35% { transform: translate(-50%, -50%) scale(1.05); } 75% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .boss-vs { display: none; } }

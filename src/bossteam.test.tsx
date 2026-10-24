@@ -58,3 +58,14 @@ it('正解すると、答えた番のなかまの上に「+〇XP」が出る', (
   fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choices .choice')].find((b) => b.textContent === w.ja)!)
   expect(screen.getByLabelText(/モチまるに XP \+\d+/)).toBeInTheDocument()
 })
+
+it('チームバトルのはじめに「VS」が出る（答えると消える）', () => {
+  render(
+    <BossTeamContext.Provider value={team}>
+      <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+    </BossTeamContext.Provider>,
+  )
+  expect(document.querySelector('.boss-vs')).not.toBeNull()
+  fireEvent.click(document.querySelector<HTMLButtonElement>('.choices .choice')!)
+  expect(document.querySelector('.boss-vs')).toBeNull()
+})
