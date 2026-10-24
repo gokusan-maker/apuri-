@@ -1044,10 +1044,12 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           )}
         </ol>
       </div>
-      <details className="zukan-collection">
+      <details className="zukan-collection game-fold lg-3">
         <summary>
-          📒 コレクション表 {ownedCount} / {SPECIES.length * KINDS.length}
-          （コンプリート率 {pct}%）
+          <span className="lg-icon" aria-hidden="true">📒</span>コレクション表
+          <span className="fold-meta" aria-label={`コレクション表 ${ownedCount} / ${SPECIES.length * KINDS.length}・コンプリート率 ${pct}%`}>
+            {ownedCount}/{SPECIES.length * KINDS.length}
+          </span>
         </summary>
         <div className="zukan-pct" role="progressbar" aria-label="コンプリート率" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}>
           <span style={{ width: `${pct}%` }} />

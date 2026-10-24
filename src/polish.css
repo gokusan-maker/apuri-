@@ -2200,3 +2200,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .zukan-line.zukan-kinds { gap: 6px; flex-wrap: wrap; }
 .zukan-line.zukan-kinds > li { flex: 0 0 calc((100% - 18px) / 4); }
 .zukan-line.zukan-kinds > li.zukan-more { flex: 0 0 auto; min-width: 72px; }
+.zukan-collection.game-fold > summary { justify-content: flex-start; text-align: left; font-size: 1rem; white-space: nowrap; }
+.zukan-collection.game-fold > summary .fold-meta { white-space: nowrap; border-radius: 999px; }
+.game-fold > summary::before, .game-fold > summary .fold-meta { flex: none; }
