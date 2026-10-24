@@ -1707,6 +1707,17 @@ export const PASSAGES: Passage[] = [
       { q: 'カトウさんは秋に何ができると言った？', choices: ['また来て稲をかる', 'お米を買う', '新しい苗を植える'], answer: 0 },
     ],
   },
+  {
+    id: 'paper-planes',
+    title: 'The Paper Plane Contest',
+    text: "Last Friday, our class had a paper plane contest. Each student made a plane from one sheet of paper. My plane had long, thin wings. When I threw it, it went up high but fell down quickly. My friend Sota made a plane with short, wide wings. It did not fly high, but it flew slowly and very far. Sota won the contest! After school, he showed me how to fold his plane. Next time, I want to try his way.",
+    ja: 'この前の金曜日、私たちのクラスで紙飛行機大会がありました。生徒はそれぞれ1枚の紙で飛行機を作りました。私の飛行機は長くて細いつばさでした。投げると高く上がりましたが、すぐに落ちてしまいました。友だちのソウタは、短くて広いつばさの飛行機を作りました。高くは飛びませんでしたが、ゆっくりととても遠くまで飛びました。ソウタが優勝しました！ 放課後、ソウタが自分の飛行機の折り方を教えてくれました。次は彼のやり方をためしてみたいです。',
+    questions: [
+      { q: '「私」の飛行機はどうだった？', choices: ['高く上がったがすぐ落ちた', '遠くまで飛んだ', '飛ばなかった'], answer: 0 },
+      { q: 'ソウタの飛行機のつばさは？', choices: ['短くて広い', '長くて細い', 'つばさがなかった'], answer: 0 },
+      { q: '放課後、ソウタは何をしてくれた？', choices: ['飛行機の折り方を教えてくれた', '新しい紙をくれた', '飛行機をくれた'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
