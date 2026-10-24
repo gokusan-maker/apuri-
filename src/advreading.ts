@@ -4573,4 +4573,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why were bridges built as part of the aqueducts?', choices: ['To carry a channel across a valley.', 'To make the water flow uphill.', 'To store water for dry seasons.', 'To connect private homes to the baths.'], answer: 0, why: '第2段落 Bridges were built only where a channel had to cross a valley。' },
     ],
   },
+  {
+    id: 'adv-notice-library',
+    title: 'Notice: Library Renovation',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Notice to all library users. From December 1 to January 15, the Central Library will be partly closed for renovation work. During this period, the second floor, ( A ) the study rooms and the children's section are located, will not be available.",
+      "The first floor will remain open as usual, so you can still borrow and return books there. Children's events, such as the Saturday story time, will be held in the meeting room on the first floor. However, please note that the library will close at 6:00 p.m. instead of 8:00 p.m. on weekdays, as some of the work must be done in the evening. Books that are due during the closure may be kept for an extra two weeks without ( B ) a late fee.",
+      "After the renovation, the second floor will have more seats, free Wi-Fi, and a new space ( C ) students can study in groups. We apologize for any inconvenience and thank you for your understanding. Central Library Management Office",
+    ],
+    ja: [
+      '図書館をご利用のみなさまへのお知らせです。12月1日から1月15日まで、中央図書館は改装工事のため一部閉館します。この期間、学習室と児童コーナーがある2階はご利用いただけません。',
+      '1階はいつもどおり開いていますので、本の貸し出しと返却はそちらでできます。土曜日のおはなし会などの子ども向けの催しは、1階の会議室で行います。ただし、工事の一部を夜に行う必要があるため、平日は午後8時ではなく午後6時に閉館しますので、ご注意ください。閉館期間中に返却期限が来る本は、延滞料なしでさらに2週間お持ちいただけます。',
+      '改装後、2階には座席が増え、無料の Wi-Fi と、学生がグループで勉強できる新しいスペースができます。ご不便をおかけしますが、ご理解のほどよろしくお願いいたします。中央図書館 管理事務所',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'that'], answer: 0, why: 'あとに the study rooms … are located という完全な文が続くので関係副詞 where。which だと in が必要、コンマのあとに that・what は使えない。' },
+      { id: 'B', choices: ['paying', 'pay', 'paid', 'to pay'], answer: 0, why: '前置詞 without のあとは動名詞（～ing）。without paying a late fee「延滞料をはらわずに」。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'who'], answer: 0, why: 'あとに students can study in groups という完全な文が続くので関係副詞 where。which だと in などの前置詞が必要。' },
+    ],
+    tf: [
+      { statement: '2階は12月1日から1月15日まで使えない。', answer: true, why: '第1段落 From December 1 to January 15 … the second floor … will not be available。' },
+      { statement: '改装中は、1階でも本を借りられない。', answer: false, why: '第2段落 you can still borrow and return books there。' },
+      { statement: '改装中、平日は午後8時に閉館する。', answer: false, why: '第2段落 close at 6:00 p.m. instead of 8:00 p.m.。' },
+      { statement: '改装後、2階にはグループで勉強できる場所ができる。', answer: true, why: '第3段落 a new space where students can study in groups。' },
+    ],
+    qa: [
+      { q: 'What will happen to books that are due during the closure?', choices: ['They can be kept for two more weeks without a late fee.', 'They must be returned by December 1.', 'They will be moved to the second floor.', 'They can only be returned after January 15.'], answer: 0, why: '第2段落 may be kept for an extra two weeks without paying a late fee。' },
+    ],
+  },
 ]

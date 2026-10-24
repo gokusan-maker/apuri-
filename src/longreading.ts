@@ -5563,6 +5563,32 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The tofu shop owner said there were fewer children than before.', answer: false, why: '第3段落 I have not seen so many children here for twenty years（20年ぶりにたくさん）。' },
     ],
   },
+  {
+    id: 'diary-kyoto-trip',
+    title: 'My School Trip Diary',
+    level: '中2（日記）',
+    paragraphs: [
+      'May 20. Today was the first day of our school trip to Kyoto. We left school at seven in the morning. My friends and I enjoyed ( A ) cards on the bullet train, so the time went by fast.',
+      'In the afternoon, we visited a famous temple. It was built more than 1,200 years ago. Our guide told us that its big wooden stage was made without ( B ) a single nail. I was really surprised.',
+      'In the evening, we stayed at a traditional Japanese inn. The dinner had many small dishes, and some of them were new to me. After dinner, I was so tired ( C ) I fell asleep right away. I will write more tomorrow.',
+    ],
+    ja: [
+      '5月20日。今日は京都への修学旅行の1日目だった。朝7時に学校を出発した。友だちと私は新幹線でトランプを楽しんだので、時間があっというまにすぎた。',
+      '午後は、有名なお寺をおとずれた。そのお寺は1200年以上前に建てられた。ガイドさんが、大きな木の舞台はくぎを1本も使わずにつくられたと教えてくれた。本当におどろいた。',
+      '夜は、日本の伝統的な旅館にとまった。夕食には小さな料理がたくさんあって、はじめて食べるものもあった。夕食のあと、とてもつかれていたので、すぐにねむってしまった。続きは明日書こう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['playing', 'to play', 'play', 'played'], answer: 0, why: 'enjoy のあとは動名詞（～ing）。enjoyed playing cards「トランプをして楽しんだ」。' },
+      { id: 'B', choices: ['using', 'use', 'used', 'to use'], answer: 0, why: '前置詞 without のあとは動名詞（～ing）。without using「～を使わずに」。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'who'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。so tired that I fell asleep。' },
+    ],
+    tf: [
+      { statement: 'The school trip was to Kyoto.', answer: true, why: '第1段落 our school trip to Kyoto。' },
+      { statement: 'The students went to Kyoto by bus.', answer: false, why: '第1段落 on the bullet train（新幹線）。' },
+      { statement: 'The temple was built about 200 years ago.', answer: false, why: '第2段落 more than 1,200 years ago。' },
+      { statement: 'The students stayed at a traditional Japanese inn.', answer: true, why: '第3段落 we stayed at a traditional Japanese inn。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
