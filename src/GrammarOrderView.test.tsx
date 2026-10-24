@@ -13,9 +13,9 @@ it('例文をタップで並べなおして答えあわせする', () => {
       const btn = [...document.querySelectorAll<HTMLButtonElement>('.long-order-words button')].find((b) => b.textContent === w && !b.disabled)!
       fireEvent.click(btn)
     }
-    fireEvent.click(screen.getByText('答えあわせ'))
+    fireEvent.click(screen.getByText(/答えあわせ/))
     expect(screen.getByText('⭕ 正解！')).toBeInTheDocument()
-    fireEvent.click(screen.getByText('次へ'))
+    fireEvent.click(screen.getByText(/次へ/))
   }
   expect(screen.getByText(`${u.examples.length} / ${u.examples.length} 問正解`)).toBeInTheDocument()
   expect(onAnswer).toHaveBeenCalledTimes(u.examples.length)

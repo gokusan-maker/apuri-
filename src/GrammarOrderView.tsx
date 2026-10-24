@@ -46,18 +46,20 @@ export function GrammarOrder({ unit, onAnswer, onBack, onSpend }: Props) {
       </p>
       <div className="long-order-words">
         {q.tiles.map((w, i) => (
-          <button key={i} className="long-choice" disabled={checked !== null || picked.includes(i)} onClick={() => setPicked([...picked, i])}>
+          <button key={i} className={`long-choice order-tile${picked.includes(i) ? ' used' : ''}`} disabled={checked !== null || picked.includes(i)} onClick={() => setPicked([...picked, i])}>
             {w}
           </button>
         ))}
+      </div>
+      <div className="order-tools">
         {checked === null && picked.length > 0 && (
-          <button className="list-link" onClick={() => setPicked([])}>
-            やりなおす
+          <button className="order-tool redo" onClick={() => setPicked([])}>
+            ↺ やりなおす
           </button>
         )}
         {checked === null && picked.length === 0 && onSpend && (
           <button
-            className="hint-5050"
+            className="order-tool hint"
             onClick={() => {
               if (!onSpend(ORDER_HINT_COST)) return
               const first = q.en.split(' ')[0]
@@ -65,13 +67,13 @@ export function GrammarOrder({ unit, onAnswer, onBack, onSpend }: Props) {
               if (i >= 0) setPicked([i])
             }}
           >
-            💡 最初の1語を教えて（🪙{ORDER_HINT_COST}）
+            💡 最初の1語を教えて 🪙{ORDER_HINT_COST}
           </button>
         )}
       </div>
       {checked === null ? (
         <button
-          className="flip"
+          className="flip order-check"
           disabled={picked.length < q.tiles.length}
           onClick={() => {
             const ok = built === q.en
@@ -83,20 +85,20 @@ export function GrammarOrder({ unit, onAnswer, onBack, onSpend }: Props) {
             onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, `grammar:${unit.id}`, 'quiz')
           }}
         >
-          答えあわせ
+          ✔ 答えあわせ
         </button>
       ) : (
         <>
           <p className="feedback">{checked ? '⭕ 正解！' : `❌ 正解は「${q.en}」`}</p>
           <button
-            className="flip"
+            className="flip order-next"
             onClick={() => {
               setStep(step + 1)
               setPicked([])
               setChecked(null)
             }}
           >
-            次へ
+            次へ ▶
           </button>
         </>
       )}
