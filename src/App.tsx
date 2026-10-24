@@ -77,7 +77,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, WARM_XP, warmLeft } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeEggs, updateActive, WARM_XP, warmLeft } from './party'
 import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
@@ -1780,6 +1780,14 @@ function App() {
                   if (warmLeft(warm, today) <= 0) return
                   setWarm(nextWarm(warm, today))
                   setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? feed(m, WARM_XP, null, today) : m)) }))
+                }}
+                ticketsFull={(wallet.tickets ?? 0) >= TICKET_MAX}
+                onTradeEggs={() => {
+                  const next = tradeEggs(party)
+                  if (!next || (wallet.tickets ?? 0) >= TICKET_MAX) return
+                  setParty(next)
+                  setWallet((w) => addTicket(w))
+                  pushToast([{ id: 'egg-trade', text: '🥚×10 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
                 }}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)

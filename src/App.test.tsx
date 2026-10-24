@@ -36,6 +36,18 @@ describe('App', () => {
   })
 
 
+
+  it('タマゴの仲間10こで、ガチャチケット1まいと交換できる', () => {
+    localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 10, members: [{ xp: 200 }, ...Array.from({ length: 10 }, () => ({ xp: 0 }))] }))
+    const ok = vi.spyOn(window, 'confirm').mockReturnValue(true)
+    render(<App />)
+    navTo('ホーム')
+    fireEvent.click(screen.getByRole('tab', { name: 'あいぼう' }))
+    fireEvent.click(screen.getByRole('button', { name: /🥚×10 → 🎟1 と交換/ }))
+    ok.mockRestore()
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members).toHaveLength(1)
+  })
   it('読解ステージのいちばん上に「今日の読解」があり、押すとその英文が始まる', async () => {
     const { dailyShort } = await import('./dailyread')
     render(<App />)

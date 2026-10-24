@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { addEggs, canRelease, displayOrder, eggsEarned, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, warmLeft, WARM_PER_DAY } from './party'
+import { addEggs, canRelease, EGGS_FOR_TICKET, tradeableEggs, tradeEggs, displayOrder, eggsEarned, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, updateActive, warmLeft, WARM_PER_DAY } from './party'
 
 describe('なかま', () => {
   beforeEach(() => localStorage.clear())
@@ -69,4 +69,17 @@ it('タマゴあたためは1日5回まで', () => {
   expect(warmLeft(l, d)).toBe(0)
   saveWarm(l)
   expect(warmLeft(loadWarm(), '2026-10-22')).toBe(WARM_PER_DAY)
+})
+
+it('タマゴのままの仲間10こで、ガチャチケットと交換できる（相棒・おきにいり・育った子は数えない）', () => {
+  const egg = { xp: 0 }
+  const p = { active: 0, gacha: 12, members: [{ xp: 500 }, ...Array.from({ length: 11 }, () => ({ ...egg })), { xp: 0, fav: true }, { xp: 300 }] }
+  expect(tradeableEggs(p)).toHaveLength(11)
+  const next = tradeEggs(p)!
+  expect(next.members).toHaveLength(p.members.length - EGGS_FOR_TICKET)
+  expect(next.members[0].xp).toBe(500) // 相棒はのこる
+  expect(next.members.some((m) => m.fav)).toBe(true) // おきにいりものこる
+  expect(next.members.some((m) => m.xp === 300)).toBe(true) // 育った子ものこる
+  expect(tradeableEggs(next)).toHaveLength(1)
+  expect(tradeEggs(next)).toBeNull() // 10こに足りないと交換できない
 })
