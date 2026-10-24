@@ -1,6 +1,6 @@
 import { weekKey } from './rareboss'
-import { useEffect, useState } from 'react'
-import { usePlaying } from './playing'
+import { useContext, useEffect, useState } from 'react'
+import { PlayContext, usePlaying } from './playing'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
 import { blankIdioms, keyWords } from './longvocab'
@@ -119,6 +119,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const shownGenres = GENRES.filter((g) => LIST.some((x) => genreOf(x) === g)) // 1本もないジャンルは出さない
   const genre = pickedGenre !== 'all' && !shownGenres.includes(pickedGenre) ? 'all' : pickedGenre
 
+  const inApp = useContext(PlayContext) !== null // App の中では、一覧へは上の「ほかの問題をえらぶ」で
   usePlaying((!!p || tfQuiz || vocabQuiz) && !onClose, () => {
     cancelSpeech()
     setReadingAll(false)
@@ -368,7 +369,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         </p>
       )}
       <div className="stage-head">
-        {!onClose && (
+        {!onClose && !inApp && (
         <button
           className="stage-back"
           onClick={() => {
