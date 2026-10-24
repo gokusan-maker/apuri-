@@ -16,7 +16,7 @@ describe('読解ミニ', () => {
 
   it('本文の単語をタップすると意味が出る', () => {
     render(<Reading />)
-    fireEvent.click(screen.getByText(PASSAGES[0].title))
+    fireEvent.click(screen.getByRole('button', { name: new RegExp('^1' + PASSAGES[0].title) }))
     fireEvent.click(screen.getByRole('button', { name: 'cat.' }))
     expect(screen.getByRole('status').textContent).toContain('cat：')
   })
@@ -24,7 +24,7 @@ describe('読解ミニ', () => {
   it('読んで3問に答え、最後に訳が出る', () => {
     render(<Reading />)
     const p = PASSAGES[0]
-    fireEvent.click(screen.getByText(p.title))
+    fireEvent.click(document.querySelector<HTMLElement>(`.short-item button[title="${p.title}"]`)!)
     for (const q of p.questions) {
       fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
       fireEvent.click(screen.getByText('次へ'))
@@ -40,4 +40,15 @@ it('読解ミニの一覧：番号バッジがつき、解いた話はチェッ�
   const first = container.querySelector('.short-item .short-no')
   expect(first?.textContent).toBe('1')
   expect(container.querySelector('.short-done')).toBeNull()
+})
+
+it('かんたんの一覧は20話ずつの色つきの折りたたみで、読解ゲームのタイルがある', async () => {
+  const { Reading } = await import('./ReadingView')
+  localStorage.clear()
+  render(<Reading />)
+  const folds = [...document.querySelectorAll<HTMLDetailsElement>('details.short-fold.game-fold')]
+  expect(folds.length).toBe(Math.ceil(PASSAGES.length / 20))
+  expect(folds[0].open).toBe(true) // つぎの話がある所だけ開く
+  expect(folds.slice(1).every((d) => !d.open)).toBe(true)
+  expect(screen.getByLabelText('読解ゲーム').textContent).toContain('ランダム挑戦')
 })

@@ -5,10 +5,12 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { WORDS, type Word } from './words'
+import { GameTile } from './GameTileView'
 
 const lookup = makeLookup(WORDS)
 
 export const XP_READING = 15
+const CHUNK = 20 // 一覧は20話ずつ色つきの折りたたみにまとめる（文法の学年と同じ形）
 
 type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
@@ -25,6 +27,15 @@ export function Reading({ onAnswer, start, onDone }: Props) {
   const [showJa, setShowJa] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
 
+  const openP = (x: Passage) => {
+    setP(x)
+    setGloss(null)
+    setStep(0)
+    setPicked(null)
+    setScore(0)
+    setShowJa(false)
+  }
+
   if (!p) {
     return (
       <section className="card grammar">
@@ -37,28 +48,51 @@ export function Reading({ onAnswer, start, onDone }: Props) {
         <div className="zukan-pct short-pct" aria-hidden="true">
           <span style={{ width: `${(PASSAGES.filter((x) => done.includes(x.id)).length / PASSAGES.length) * 100}%` }} />
         </div>
-        <ul className="grammar-list">
-          {PASSAGES.map((x, i) => (
-            <li key={x.id} className={done.includes(x.id) ? 'short-item short-done' : 'short-item'}>
-              <button
-                title={x.title}
-                onClick={() => {
-                  setP(x)
-                  setGloss(null)
-                  setStep(0)
-                  setPicked(null)
-                  setScore(0)
-                  setShowJa(false)
-                }}
-              >
-                <span className="short-no" aria-label={done.includes(x.id) ? '解いた' : undefined}>
-                  {done.includes(x.id) ? '✓' : i + 1}
+        {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
+        <p className="game-grid-title">🎮 読解ゲーム</p>
+        <div className="game-grid read-games" aria-label="読解ゲーム">
+          {PASSAGES.some((x) => !done.includes(x.id)) && (
+            <GameTile icon="🎯" name="つぎの話" sub={PASSAGES.find((x) => !done.includes(x.id))!.title} onClick={() => openP(PASSAGES.find((x) => !done.includes(x.id))!)} />
+          )}
+          <GameTile
+            playKey="read:short-random"
+            icon="🎲"
+            name="ランダム挑戦"
+            sub={PASSAGES.some((x) => !done.includes(x.id)) ? 'まだの話から1本' : '全部から1本'}
+            onClick={() => {
+              const todo = PASSAGES.filter((x) => !done.includes(x.id))
+              const pool = todo.length > 0 ? todo : PASSAGES
+              openP(pool[Math.floor(Math.random() * pool.length)])
+            }}
+          />
+        </div>
+        {Array.from({ length: Math.ceil(PASSAGES.length / CHUNK) }, (_, c) => {
+          const part = PASSAGES.slice(c * CHUNK, (c + 1) * CHUNK)
+          const nextIdx = PASSAGES.findIndex((x) => !done.includes(x.id))
+          return (
+            <details key={c} className={`grammar-grade-fold short-fold game-fold lg-${c % 5}`} open={nextIdx >= c * CHUNK && nextIdx < (c + 1) * CHUNK}>
+              <summary>
+                <span className="lg-icon" aria-hidden="true">📖</span>
+                {c * CHUNK + 1}〜{c * CHUNK + part.length}話
+                <span className="fold-meta" aria-label={`解いた話 ${part.filter((x) => done.includes(x.id)).length} / ${part.length}本`}>
+                  {part.filter((x) => done.includes(x.id)).length}/{part.length}
                 </span>
-                <span className="short-title">{x.title}</span>
-              </button>
-            </li>
-          ))}
-        </ul>
+              </summary>
+              <ul className="grammar-list">
+                {part.map((x, j) => (
+                  <li key={x.id} className={done.includes(x.id) ? 'short-item short-done' : 'short-item'}>
+                    <button title={x.title} onClick={() => openP(x)}>
+                      <span className="short-no" aria-label={done.includes(x.id) ? '解いた' : undefined}>
+                        {done.includes(x.id) ? '✓' : c * CHUNK + j + 1}
+                      </span>
+                      <span className="short-title">{x.title}</span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </details>
+          )
+        })}
       </section>
     )
   }
