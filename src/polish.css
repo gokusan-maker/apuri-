@@ -2394,3 +2394,10 @@ details[open] > summary::before { transform: rotate(90deg); }
 .long-result > .flip:active, .long-result > .list-link:active, .long-result .next-unit-btn:active { transform: translateY(3px); box-shadow: none !important; }
 /* 読解ミニの結果の「もどる」もオレンジ */
 .reading .result-score ~ .flip { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; box-shadow: 0 5px 0 #c2410c; }
+
+/* 文法の結果：次の単元へ（オレンジ▶）・まちがいだけ（ピンク）・もう一度（青） */
+.grammar-result .next-unit-btn:not(.retry-missed) { border: none; background: linear-gradient(135deg, #fbbf24, #f97316) !important; color: #fff !important; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #c2410c !important; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.grammar-result .retry-missed { border: none; background: linear-gradient(135deg, #f472b6, #db2777) !important; color: #fff !important; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 #9d174d !important; }
+.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6366f1); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 #3730a3; }
+section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6366f1); box-shadow: 0 4px 0 #3730a3; }
+.grammar-result .grammar-one-more { display: block; width: 100%; border: none; background: linear-gradient(135deg, #a78bfa, #7c3aed); color: #fff; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 #5b21b6; white-space: nowrap; }
