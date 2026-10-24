@@ -3268,4 +3268,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did the writer learn from this experience?', choices: ['Small efforts can lead to big results if you continue them.', 'Calligraphy is easier than drawing pictures.', 'Big characters always look better.', 'Contests are the best way to practice.'], answer: 0, why: '第3段落 small efforts can lead to big results if you keep doing them every day。' },
     ],
   },
+{
+    id: 'hs-bus-driver',
+    title: 'A Letter to the Bus Driver',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Every morning, I take the same bus to school. The driver is a quiet man with gray hair. For a long time, I never talked to him. I just showed my pass and sat down ( A ) saying anything.",
+      "One rainy morning in June, I got on the bus and found that I had left my pass at home. I did not have any money, either. I did not know what to do, and my face turned red. Then the driver smiled and said, \"It's OK. You can pay me tomorrow.\" I was so surprised that I could only say, \"Thank you.\"",
+      "The next morning, I paid him and thanked him again. After that, I started to say \"Good morning\" every day. He always answered with a smile. Sometimes he told me about the weather or the flowers along the road. My mornings became much brighter.",
+      "Last week, I heard that he was going to retire at the end of the month. I decided to write him a letter. In the letter, I wrote that his kindness on that rainy day taught me ( B ) important a small action can be. I want to be a person who can help others ( C ) he helped me.",
+    ],
+    ja: [
+      '毎朝、私は同じバスで学校に行きます。運転手さんは白髪まじりの物静かな男の人です。長いあいだ、私は彼と話したことがありませんでした。ただ定期券を見せて、何も言わずに座っていました。',
+      '6月のある雨の朝、バスに乗ると、定期券を家に忘れてきたことに気づきました。お金も持っていませんでした。どうしたらいいかわからず、顔が赤くなりました。すると運転手さんがほほえんで、「だいじょうぶ。明日はらってくれればいいよ」と言いました。私はとてもおどろいて、「ありがとうございます」としか言えませんでした。',
+      '次の朝、私はお金をはらい、もう一度お礼を言いました。それから、毎日「おはようございます」と言うようになりました。彼はいつも笑顔で返してくれました。ときどき天気や道ぞいの花の話をしてくれました。私の朝はずっと明るくなりました。',
+      'この前の週、彼が月末で退職すると聞きました。私は彼に手紙を書くことにしました。手紙には、あの雨の日の彼の親切が、小さな行動がどれほど大切になりうるかを教えてくれたと書きました。私も、彼が私を助けてくれたように、ほかの人を助けられる人になりたいと思います。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'unless', 'although', 'because'], answer: 0, why: 'without ～ing「～しないで」。あとが saying（動名詞）なので前置詞の without。unless・although・because は接続詞であとに文が続く。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋ 形容詞 ＋ 主語 ＋ 動詞「どれほど～か」。how important a small action can be。' },
+      { id: 'C', choices: ['as', 'during', 'like a', 'such'], answer: 0, why: 'as ＋ 主語 ＋ 動詞「～のように」。as he helped me「彼が私を助けてくれたように」。' },
+    ],
+    tf: [
+      { statement: '筆者は、はじめから運転手さんとよく話していた。', answer: false, why: '第1段落 For a long time, I never talked to him。' },
+      { statement: '雨の朝、筆者は定期券もお金も持っていなかった。', answer: true, why: '第2段落 I had left my pass at home. I did not have any money, either。' },
+      { statement: '運転手さんは、その日は乗らないように言った。', answer: false, why: '第2段落 You can pay me tomorrow（明日はらえばいい）。' },
+      { statement: '筆者は運転手さんに手紙を書くことにした。', answer: true, why: '第4段落 I decided to write him a letter。' },
+    ],
+    qa: [
+      { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
+    ],
+  },
 ]
