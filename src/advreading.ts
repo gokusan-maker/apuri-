@@ -3240,6 +3240,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-peak-end',
+    title: 'How Endings Shape Memories',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we look back on an experience, we might expect our memory to work like a careful accountant, adding up every good and bad moment. Psychologists have found that it does not. Our memory of an experience is strongly influenced by just two points: its most intense moment, or the \"peak,\" and the way it ends. This pattern is known as the \"peak-end rule,\" and it suggests that the length of an experience matters surprisingly little ( A ) how we remember it.",
+      "In a well-known experiment published in 1993, Daniel Kahneman and his colleagues asked people to hold a hand in painfully cold water for 60 seconds. In another trial, the same people did this again for 60 seconds, but then kept their hand in the water for an extra 30 seconds while it was made slightly warmer. The longer trial contained more pain overall, ( B ) when participants were asked which one they would rather repeat, most chose the longer one. Its ending had been less unpleasant, and that ending shaped their memory of the whole experience.",
+      "The rule has practical uses. A doctor might end a painful treatment more gently, and a teacher might finish a difficult lesson with an activity students enjoy. However, the rule also warns us about our own judgments. If we pay attention only to how an experience ended, we may make choices that are not in our best interests, such as preferring a longer period of discomfort simply ( C ) it ends better.",
+    ],
+    ja: [
+      '経験をふり返るとき、私たちは記憶が注意深い会計係のように、よい瞬間と悪い瞬間をすべて足し合わせてくれると思うかもしれない。心理学者たちは、そうではないことを発見した。ある経験についての記憶は、たった2つの点に強く影響される。もっとも強烈な瞬間、つまり「ピーク」と、その経験の終わり方である。このパターンは「ピーク・エンドの法則」として知られており、経験の長さは、私たちがそれをどう記憶するかにとって、おどろくほど重要ではないことを示している。',
+      '1993年に発表されたよく知られた実験で、ダニエル・カーネマンと同僚たちは、人々に痛いほど冷たい水に片手を60秒間つけてもらった。別の試行では、同じ人たちがもう一度60秒間これを行い、そのあと水を少しだけ温かくしながら、さらに30秒間手を水につけたままにした。長いほうの試行のほうが全体としての痛みは多かったが、どちらをくり返したいかとたずねられると、ほとんどの参加者は長いほうを選んだ。その終わりのほうが不快さが少なく、その終わり方が経験全体の記憶を形づくったのである。',
+      'この法則には実際の使い道がある。医師は痛みをともなう治療をよりおだやかに終えるかもしれないし、教師はむずかしい授業を生徒が楽しめる活動で終えるかもしれない。しかし、この法則は私たち自身の判断についても注意をうながしている。経験がどう終わったかだけに注目すると、単に終わり方がよいという理由で、より長い不快な時間を選ぶといった、自分のためにならない選択をしてしまうかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'by', 'at', 'from'], answer: 0, why: 'matter to ～「～にとって重要である」。the length matters surprisingly little to how we remember it「長さは、どう記憶するかにとっておどろくほど重要ではない」。' },
+      { id: 'B', choices: ['yet', 'despite', 'because of', 'instead of'], answer: 0, why: '「痛みは多かった」→「それでも長いほうを選んだ」という逆接で、あとに文（most chose ...）が続くので接続詞の yet。despite・because of・instead of は前置詞なので文は続かない。' },
+      { id: 'C', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'simply because ＋ 主語 ＋ 動詞「単に～という理由で」。あとが it ends better という文なので接続詞の because。because of・due to・despite は前置詞。' },
+    ],
+    tf: [
+      { statement: 'ピーク・エンドの法則によると、記憶は経験のすべての瞬間を足し合わせて決まる。', answer: false, why: '第1段落 Psychologists have found that it does not ... strongly influenced by just two points。' },
+      { statement: '実験では、長いほうの試行の最後の30秒は水が少し温かくされた。', answer: true, why: '第2段落 an extra 30 seconds while it was made slightly warmer。' },
+      { statement: '実験の参加者のほとんどは、短いほうの試行をくり返したいと答えた。', answer: false, why: '第2段落 most chose the longer one。' },
+      { statement: '筆者は、終わり方だけで判断すると自分のためにならない選択をすることがあると述べている。', answer: true, why: '第3段落 we may make choices that are not in our best interests。' },
+    ],
+    qa: [
+      { q: 'Why did most participants choose to repeat the longer trial?', choices: ['Because its ending was less unpleasant.', 'Because it contained less pain overall.', 'Because the water was warm from the start.', 'Because it was shorter than the other trial.'], answer: 0, why: '第2段落 Its ending had been less unpleasant, and that ending shaped their memory of the whole experience。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
