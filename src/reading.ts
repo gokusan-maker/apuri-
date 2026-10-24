@@ -1685,6 +1685,17 @@ export const PASSAGES: Passage[] = [
       { q: '次の朝、2人は何をした？', choices: ['お礼を言って、また来ると約束した', 'おにぎりを作り直した', '家まで歩いて帰った'], answer: 0 },
     ],
   },
+  {
+    id: 'balloon-festival',
+    title: 'The Balloon Festival',
+    text: "Last summer, my family went to a hot air balloon festival. Early in the morning, we saw about thirty balloons in a big field. They were red, blue, yellow, and green. One balloon looked like a giant cat! At seven o'clock, the balloons slowly went up into the sky. My little sister clapped her hands and said, \"They look like flying candy!\" We did not ride a balloon this time, but my father promised to take us up next year.",
+    ja: 'この前の夏、私の家族は熱気球のお祭りに行きました。朝早く、広い野原に30個くらいの気球が見えました。赤、青、黄色、緑の気球がありました。1つは大きなねこのような形でした！ 7時に、気球はゆっくりと空へのぼっていきました。妹は手をたたいて「空をとぶキャンディみたい！」と言いました。今回は気球に乗りませんでしたが、父は来年乗せてくれると約束しました。',
+    questions: [
+      { q: '野原には気球がいくつくらいあった？', choices: ['30個くらい', '3個くらい', '300個くらい'], answer: 0 },
+      { q: '1つの気球は何のような形だった？', choices: ['大きなねこ', '大きなキャンディ', '大きな鳥'], answer: 0 },
+      { q: '父は何を約束した？', choices: ['来年、気球に乗せてくれる', '来年もお祭りを見に来る', '妹にキャンディを買う'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
