@@ -38,3 +38,9 @@ it('ガチャ・単語一覧・パズル・すごろくの素の文字ボタン�
   has('SugorokuView.tsx', 'pill-start')
   for (const f of ['GachaView.tsx', 'WordListView.tsx', 'PuzzleView.tsx', 'SugorokuView.tsx']) expect(readFileSync(`src/${f}`, 'utf8')).not.toMatch(/className="list-link"/)
 })
+
+it('文法ページの素の文字ボタンはなくなり、色つきの丸いゲームボタン', () => {
+  const src = readFileSync('src/GrammarView.tsx', 'utf8')
+  expect(src).not.toMatch(/className="list-link"/)
+  for (const c of ['pill-start', 'pill-orange', 'pill-pink', 'pill-green', 'pill-cyan', 'pill-purple']) expect(src).toContain(`list-link pill-btn ${c}`)
+})

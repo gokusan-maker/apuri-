@@ -377,7 +377,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             {GRAMMAR_GRADES.filter((g) => g !== '高校').map((g) => (
               <button
                 key={g}
-                className="list-link"
+                className="list-link pill-btn pill-start"
                 onClick={() => {
                   const qs = shuffle(GRAMMAR.filter((u) => gradeOf(u.id) === g).flatMap((u) => u.questions)).slice(0, 10)
                   setGradeKey(`grade:${g}`)
@@ -469,7 +469,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           <div className="grammar-almost">
             <p className="stats-note">🎯 あと1問で全問正解！</p>
             {almostUnits(record).map((u) => (
-              <button key={u.id} className="list-link" onClick={() => open(u)}>
+              <button key={u.id} className="list-link pill-btn pill-orange" onClick={() => open(u)}>
                 {`👉 ${u.title}（${record[u.id]} / ${u.questions.length}）`}
               </button>
             ))}
@@ -486,7 +486,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             <ol>
               {weakRanking(note).map((r) => (
                 <li key={r.unit.id}>
-                  <button className="list-link" onClick={() => open(r.unit)}>
+                  <button className="list-link pill-btn pill-pink" onClick={() => open(r.unit)}>
                     {`${r.unit.title}（${r.count}問）`}
                   </button>
                 </li>
@@ -748,7 +748,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           <p className="related-units">
             🔗 関連する単元：
             {relatedUnits(unit.id).map((u) => (
-              <button key={u.id} className="list-link" onClick={() => open(u)}>
+              <button key={u.id} className="list-link pill-btn pill-green" onClick={() => open(u)}>
                 {u.title}
               </button>
             ))}
@@ -1106,7 +1106,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           <p className="feedback">{picked === q.answer ? '正解！' : 'ざんねん'}</p>
           <p className="grammar-why">{q.why}</p>
           {correctSentence(q) && (
-            <button className="list-link" onClick={() => speak(correctSentence(q)!)}>
+            <button className="list-link pill-btn pill-cyan" onClick={() => speak(correctSentence(q)!)}>
               🔊 正しい英文を聞く：{correctSentence(q)}
             </button>
           )}
@@ -1118,13 +1118,13 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
                 ))}
               </ul>
             ) : (
-              <button className="list-link" onClick={() => setShowPoints(true)}>
+              <button className="list-link pill-btn pill-purple" onClick={() => setShowPoints(true)}>
                 📌 要点を見る（{unitOfQuestion(q)!.title}）
               </button>
             )
           )}
           {!GRAMMAR.some((g) => g.id === unit.id) && unitOfQuestion(q) && (
-            <button className="list-link" onClick={() => open(unitOfQuestion(q)!)}>
+            <button className="list-link pill-btn pill-purple" onClick={() => open(unitOfQuestion(q)!)}>
               📖 もっとくわしく：{unitOfQuestion(q)!.title}
             </button>
           )}

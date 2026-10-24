@@ -2686,3 +2686,12 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 }
 :root[data-theme='dark'] .list-link.pill-btn:not(.pill-gold):not(.pill-choice) { color: #fff; filter: brightness(0.92); }
 :root[data-theme='dark'] .list-link.pill-choice { background: #1e293b; color: #e2e8f0; border-color: #4f46e5; box-shadow: 0 4px 0 #312e81; }
+.list-link.pill-pink { background: linear-gradient(180deg, #f472b6, #db2777); box-shadow: 0 4px 0 #9d174d; }
+/* 文法：学年まとめテストは3色のタイル、苦手ランキング・あと1問の単元・関連する単元は1行の丸ボタン */
+.grade-tests .list-link.pill-btn { display: flex; flex-direction: column; border-radius: 16px; padding: 8px 2px; font-size: 0.88rem; }
+.grade-tests .list-link.pill-btn:nth-child(1) { background: linear-gradient(160deg, #4ade80, #16a34a); box-shadow: 0 4px 0 #166534; }
+.grade-tests .list-link.pill-btn:nth-child(2) { background: linear-gradient(160deg, #60a5fa, #2563eb); box-shadow: 0 4px 0 #1e40af; }
+.grade-tests .list-link.pill-btn:nth-child(3) { background: linear-gradient(160deg, #fb923c, #ef4444); box-shadow: 0 4px 0 #b91c1c; }
+.grade-tests .list-link.pill-btn small { color: #fff; }
+.weak-ranking li .list-link.pill-btn, .grammar-almost .list-link.pill-btn { margin: 3px 0; font-size: 0.82rem; padding: 6px 14px; }
+.related-units .list-link.pill-btn { padding: 5px 12px; }
