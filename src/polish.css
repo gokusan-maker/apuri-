@@ -1947,7 +1947,7 @@ details[open] > summary::before { transform: rotate(90deg); }
 :root[data-theme="dark"] .long-evidence { background: color-mix(in srgb, #facc15 16%, transparent); }
 
 /* 中央ぞろえの短い文（ボスのセリフ・結果のひとこと・お祝い）は、行の長さをそろえて最後の1〜2文字だけ次の行に落ちないように */
-.boss-intro, .boss-intro-ja, .result-message, .celebrate-text, .level-up, .stats-note, .boss-tip, .result-title, .boss-mode-note, .grammar-praise, .feedback, .grammar-why, .pet-cheer, .cheer-bubble, .gacha-result p, .boss-hint p, .unit-title, .gacha-pickup span { text-wrap: balance; word-break: auto-phrase; }
+.boss-intro, .boss-intro-ja, .result-message, .celebrate-text, .level-up, .stats-note, .boss-tip, .result-title, .boss-mode-note, .grammar-praise, .feedback, .grammar-why, .pet-cheer, .cheer-bubble, .gacha-result p, .boss-hint p, .unit-title, .gacha-pickup span, .read-levels small { text-wrap: balance; word-break: auto-phrase; }
 
 /* 記録：単語帳ごとの定着はたたむ（見出しはほかの h2 と同じ大きさ） */
 .by-level > summary { cursor: pointer; font-weight: 800; font-size: 1.05rem; padding: 8px 0; list-style-position: inside; }

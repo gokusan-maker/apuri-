@@ -1175,7 +1175,7 @@ describe('App', () => {
     expect(screen.getByLabelText('今日の課題').nextElementSibling!.textContent).toContain('📊 記録')
     goMini()
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /^今日の単語：/ })).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
+    expect(screen.getByRole('button', { name: /^今日の課題（単語）：/ })).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
     navTo('文法チャレンジ')
     expect(screen.getByLabelText('今日の文法')).toBeInTheDocument() // 文法チャレンジのいちばん上は今日の文法
     navTo('単語ゲーム')

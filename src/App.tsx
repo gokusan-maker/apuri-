@@ -1416,13 +1416,13 @@ function App() {
       {mode === 'word' && !showShop && !showChallenge && !todayQuiz && (
         <button
           className="long-recommend daily-long today-read-btn"
-          aria-label={`今日の単語：${todayWords(today).map((w) => w.en).join('・')}`}
+          aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
           onClick={() => {
             setWordTab('mini')
             setTodayQuiz(true)
           }}
         >
-          📋 今日の単語（4択）{loadTodayWordsDay() === today ? ' ✅' : ''}
+          📋 今日の課題（単語・4択）{loadTodayWordsDay() === today ? ' ✅' : ''}
           <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
         </button>
       )}
