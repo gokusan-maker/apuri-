@@ -1806,6 +1806,17 @@ export const PASSAGES: Passage[] = [
       { q: 'もちは何といっしょに食べた？', choices: ['あまいあんこ', 'しょうゆ', 'きなこ'], answer: 0 },
     ],
   },
+  {
+    id: 'museum-dinosaur',
+    title: 'The Dinosaur Bones',
+    text: 'Last Sunday, I went to a museum with my grandfather. The biggest room had the bones of a huge dinosaur. It was as long as a bus! A sign said that the dinosaur lived about seventy million years ago and ate only plants. My grandfather said, "I came here when I was a boy, too." In the gift shop, he bought me a small dinosaur toy. I put it on my desk at home.',
+    ja: 'この前の日曜日、私はおじいさんといっしょに博物館へ行きました。いちばん大きな部屋には、巨大な恐竜の骨がありました。バスと同じくらいの長さでした！ 説明の看板には、その恐竜はおよそ7000万年前に生きていて、植物だけを食べていたと書いてありました。おじいさんは「わたしも子どものころここに来たんだよ」と言いました。おみやげ売り場で、おじいさんは小さな恐竜のおもちゃを買ってくれました。私はそれを家のつくえの上にかざりました。',
+    questions: [
+      { q: 'だれと博物館へ行った？', choices: ['おじいさん', 'お父さん', '友だち'], answer: 0 },
+      { q: '恐竜の骨はどれくらいの長さだった？', choices: ['バスと同じくらい', '電車と同じくらい', '家と同じくらい'], answer: 0 },
+      { q: 'その恐竜は何を食べていた？', choices: ['植物だけ', '肉だけ', '魚だけ'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'

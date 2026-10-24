@@ -4513,4 +4513,64 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to one theory, what do anthocyanins do?', choices: ['They protect the leaf from strong light while nutrients are recovered.', 'They help the leaf absorb more sunlight for photosynthesis.', 'They make the leaf fall from the tree sooner.', 'They store nitrogen in the roots for the winter.'], answer: 0, why: '第3段落 anthocyanins act like a sunscreen, protecting the leaf from strong light while the tree recovers its nutrients。' },
     ],
   },
+  {
+    id: 'adv-biz-delay-email',
+    title: 'An Email About a Late Delivery',
+    level: '難関大（ビジネスメール）',
+    paragraphs: [
+      "Dear Mr. Lee, thank you for your order of 500 notebooks, which we received on October 3. Unfortunately, I must inform you that the delivery will be delayed by about one week. One of our printing machines broke down last Friday, and the replacement part will not arrive until next Tuesday.",
+      "We sincerely apologize for any inconvenience this may cause. To make up for the delay, we would like to offer you a 10 percent discount on this order. In addition, we can send the first 200 notebooks by express mail this Thursday, ( A ) you need some of them sooner.",
+      "Please let us know by Wednesday ( B ) you would like us to send part of the order early. If we do not hear from you, we will send all 500 notebooks together on October 20.",
+      "We value our relationship with your company and will do everything we can to prevent this kind of problem from ( C ) again. Thank you for your understanding. Best regards, Mika Sato, Customer Service, Nishi Paper Co.",
+    ],
+    ja: [
+      'リー様。ノート500冊のご注文をいただき、ありがとうございます。ご注文は10月3日に受けつけました。あいにくですが、配達がおよそ1週間おくれることをお知らせしなければなりません。先週の金曜日に印刷機の1台がこわれ、交換部品が来週の火曜日まで届かないためです。',
+      'ご不便をおかけし、心よりおわび申し上げます。おくれのおわびとして、このご注文を10パーセント値引きさせていただきたいと思います。さらに、一部を早くご入用の場合にそなえて、最初の200冊を今週の木曜日に速達でお送りすることもできます。',
+      '注文の一部を早めに送ってほしいかどうか、水曜日までにお知らせください。ご連絡がない場合は、10月20日に500冊すべてをまとめてお送りします。',
+      '私どもは貴社とのおつきあいをたいせつにしており、このような問題が二度と起こらないよう、できるかぎりのことをいたします。ご理解いただき、ありがとうございます。よろしくお願いいたします。ニシ製紙 お客様係 サトウ・ミカ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in case', 'in spite of', 'because of', 'instead of'], answer: 0, why: 'あとに you need … という文が続くので、接続詞の in case「～する場合にそなえて」。in spite of・because of・instead of は前置詞で、文は続かない。' },
+      { id: 'B', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: 'let us know whether ～「～かどうか知らせる」。あとの文は send part of the order と目的語までそろっているので、what・which・who は入らない。' },
+      { id: 'C', choices: ['happening', 'happen', 'happened', 'to happen'], answer: 0, why: 'prevent A from ～ing「A が～するのを防ぐ」。from は前置詞なので動名詞。' },
+    ],
+    tf: [
+      { statement: '注文は10月3日に受けつけられた。', answer: true, why: '第1段落 which we received on October 3。' },
+      { statement: '配達はおよそ1か月おくれる。', answer: false, why: '第1段落 delayed by about one week。' },
+      { statement: '会社はこの注文を10パーセント値引きする。', answer: true, why: '第2段落 a 10 percent discount on this order。' },
+      { statement: '返事がなければ、ノートは2回に分けて送られる。', answer: false, why: '第3段落 we will send all 500 notebooks together。' },
+    ],
+    qa: [
+      { q: 'Why will the delivery be delayed?', choices: ['One of the printing machines broke down.', 'The customer changed the order.', 'The notebooks were sent to the wrong address.', 'The express mail service was closed.'], answer: 0, why: '第1段落 One of our printing machines broke down last Friday。' },
+    ],
+  },
+  {
+    id: 'toefl-roman-aqueducts',
+    title: 'Water for an Ancient City',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      "Ancient Rome grew into one of the largest cities in the world, with perhaps a million residents at its peak. Supplying so many people with clean water was an enormous challenge, because the local springs and the Tiber River could not provide enough. The Romans solved this problem by building aqueducts, channels ( A ) carried water from distant hills into the city.",
+      "Although many people imagine aqueducts as tall stone bridges with rows of arches, most of their length actually ran underground. Engineers designed each channel with a very slight downward slope, so that gravity alone kept the water ( B ) for dozens of kilometers. Bridges were built only where a channel had to cross a valley.",
+      "Once the water reached Rome, it was distributed to public fountains, baths, and, for those who could pay, private homes. The system was so effective that parts of it are still in use today. One ancient aqueduct, after centuries of repairs, continues to supply water to fountains in the city, ( C ) the famous Trevi Fountain.",
+    ],
+    ja: [
+      '古代ローマは世界でもっとも大きな都市の一つに成長し、最も多いときにはおそらく100万人が住んでいた。地元の泉やテヴェレ川では足りなかったため、これほど多くの人にきれいな水を届けるのはたいへんな難題だった。ローマ人は、遠くの丘から都市の中へ水を運ぶ水路、つまり水道橋（水道）をつくることで、この問題を解決した。',
+      '多くの人は、水道といえばアーチがならぶ高い石の橋を思いうかべるが、実際にはその長さの大部分は地下を通っていた。技術者はそれぞれの水路にごくわずかな下りのかたむきをつけ、重力だけで水が何十キロも流れつづけるようにした。橋がつくられたのは、水路が谷をこえなければならない場所だけだった。',
+      '水はローマに着くと、公共の噴水や浴場、そしてお金をはらえる人の家へと分けられた。このしくみはとても優れていたので、その一部は今も使われている。ある古代の水道は、何世紀にもわたる修理をへて、有名なトレビの泉をふくむ市内の噴水に、今も水を送りつづけている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 channels（もの）を説明する主格の関係代名詞 that。what は先行詞をとらない、where はあとに完全な文、whose はあとに名詞が必要。' },
+      { id: 'B', choices: ['flowing', 'flow', 'flowed', 'to flow'], answer: 0, why: 'keep O ～ing「O を～しつづけさせる」。keep のあとに原形や to 不定詞は置けない。' },
+      { id: 'C', choices: ['including', 'include', 'included', 'includes'], answer: 0, why: 'including ～「～をふくめて」は前置詞のようにはたらき、名詞が続く。動詞の形は文の中に入らない。' },
+    ],
+    tf: [
+      { statement: '古代ローマでは、近くの泉と川だけで十分な水があった。', answer: false, why: '第1段落 the local springs and the Tiber River could not provide enough。' },
+      { statement: '水道の大部分は地下を通っていた。', answer: true, why: '第2段落 most of their length actually ran underground。' },
+      { statement: '水はポンプの力で運ばれていた。', answer: false, why: '第2段落 gravity alone kept the water flowing。' },
+      { statement: '古代の水道の一部は、今も使われている。', answer: true, why: '第3段落 parts of it are still in use today。' },
+    ],
+    qa: [
+      { q: 'Why were bridges built as part of the aqueducts?', choices: ['To carry a channel across a valley.', 'To make the water flow uphill.', 'To store water for dry seasons.', 'To connect private homes to the baths.'], answer: 0, why: '第2段落 Bridges were built only where a channel had to cross a valley。' },
+    ],
+  },
 ]

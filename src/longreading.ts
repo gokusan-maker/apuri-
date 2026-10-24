@@ -5535,6 +5535,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer thinks a later start has no problems at all.', answer: false, why: '第4段落 Of course, there are some problems。' },
     ],
   },
+  {
+    id: 'speech-shopping-street',
+    title: 'Our Old Shopping Street (Speech)',
+    level: '中3（スピーチ）',
+    paragraphs: [
+      'Good afternoon, everyone. Near our school, there is an old shopping street. When my parents were children, it was always crowded. Today, however, more than half of the shops ( A ) closed.',
+      "Last summer, our class did a project to help the street. We interviewed the shop owners and made a map ( B ) showed each shop's best item. We also posted short videos about the shops online.",
+      'The result surprised us. On weekends, young families started to visit the street with our map in their hands. The owner of the tofu shop told us, "I have not seen so many children here for twenty years."',
+      'From this project, I learned that even students can make a difference. A town is not just a place where we live. It is something we can help ( C ). Why don\'t you look around your own town? Thank you.',
+    ],
+    ja: [
+      'みなさん、こんにちは。私たちの学校の近くに、古い商店街があります。私の両親が子どものころ、そこはいつもにぎわっていました。しかし今では、半分以上の店が閉まってしまいました。',
+      '去年の夏、私たちのクラスは商店街を応援するプロジェクトをしました。お店の人にインタビューをして、それぞれの店のいちばんの品物がわかる地図をつくりました。お店を紹介する短い動画もインターネットにのせました。',
+      '結果に私たちはおどろきました。週末になると、若い家族が私たちの地図を手に商店街をおとずれるようになったのです。とうふ屋さんのご主人は「ここでこんなにたくさんの子どもを見たのは20年ぶりだよ」と話してくれました。',
+      'このプロジェクトから、私は生徒でも変化を起こせることを学びました。町は、ただ住むだけの場所ではありません。私たちが育てる手助けのできるものなのです。あなたも、自分の町を見まわしてみませんか。ありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['have', 'has', 'having', 'to have'], answer: 0, why: 'more than half of the shops（複数）が主語なので現在完了は have closed。has は単数、having・to have は動詞として文をつくれない。' },
+      { id: 'B', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 a map（もの）を説明する主格の関係代名詞 that。what は先行詞をとらない、who は人、where はあとに完全な文が必要。' },
+      { id: 'C', choices: ['grow', 'grew', 'grown', 'grows'], answer: 0, why: 'help ＋（O ＋）動詞の原形「～するのを手伝う」。過去形・過去分詞・三単現は置けない。' },
+    ],
+    tf: [
+      { statement: "The shopping street is near the speaker's school.", answer: true, why: '第1段落 Near our school, there is an old shopping street。' },
+      { statement: 'Most of the shops on the street are still open today.', answer: false, why: '第1段落 more than half of the shops have closed。' },
+      { statement: 'The class made a map of the shops.', answer: true, why: '第2段落 made a map that showed each shop\'s best item。' },
+      { statement: 'The tofu shop owner said there were fewer children than before.', answer: false, why: '第3段落 I have not seen so many children here for twenty years（20年ぶりにたくさん）。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
