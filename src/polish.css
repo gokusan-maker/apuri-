@@ -2611,3 +2611,17 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .genre-tabs .gt-3 { --g: #d97706; }
 .genre-tabs .gt-4 { --g: #9333ea; }
 .boss-team-lv { font-weight: 900; color: var(--team-c); }
+
+/* チームバトルで勝ったとき：いちばん活やくしたなかまのひとこと（1行） */
+.boss-team-win { margin: 4px 0; padding: 6px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: #fff7ed; color: #9a3412; }
+.boss-team-win small { margin-left: 6px; font-weight: 700; opacity: 0.85; }
+.boss-team-win.team-grammar { background: #f0fdf4; color: #166534; }
+.boss-team-win.team-reading { background: #f5f3ff; color: #5b21b6; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .boss-team-win { background: #431407; color: #fed7aa; }
+  :root:not([data-theme='light']) .boss-team-win.team-grammar { background: #052e16; color: #bbf7d0; }
+  :root:not([data-theme='light']) .boss-team-win.team-reading { background: #2e1065; color: #ddd6fe; }
+}
+:root[data-theme='dark'] .boss-team-win { background: #431407; color: #fed7aa; }
+:root[data-theme='dark'] .boss-team-win.team-grammar { background: #052e16; color: #bbf7d0; }
+:root[data-theme='dark'] .boss-team-win.team-reading { background: #2e1065; color: #ddd6fe; }

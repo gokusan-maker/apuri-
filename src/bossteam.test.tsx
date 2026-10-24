@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it } from 'vitest'
 import { teamBossQuestions, TEAM_ORDER } from './boss'
 import { Boss } from './BossView'
-import { BossTeamContext, type BossTeam } from './bossteam'
+import { BossTeamContext, TEAM_WIN_LINES, teamMvp, type BossTeam } from './bossteam'
 import { WORDS } from './words'
 
 const team: BossTeam = {
@@ -85,4 +85,11 @@ it('負けると、3体のなかまがそれぞれ1行ではげましてくれ�
   expect(cheer.children).toHaveLength(3)
   expect(cheer.textContent).toContain('文法を見直せば勝てるよ！')
   expect(cheer.querySelector('.team-grammar')!.getAttribute('title')).toContain('コトバン')
+})
+
+it('勝ったときのひとことは、いちばん正解したなかま（同じなら単語から）', () => {
+  expect(teamMvp({ word: 1, grammar: 3, reading: 2 })).toBe('grammar')
+  expect(teamMvp({ word: 2, grammar: 2, reading: 2 })).toBe('word')
+  expect(teamMvp({ word: 0, grammar: 1, reading: 4 })).toBe('reading')
+  for (const l of Object.values(TEAM_WIN_LINES)) expect(l.en.length).toBeLessThan(30)
 })

@@ -15,3 +15,13 @@ export const TEAM_LOSE_LINES: Record<TeamRole, string> = {
   grammar: '文法を見直せば勝てるよ！',
   reading: '次は本文をゆっくり読もう！',
 }
+// 勝ったときのチームのひとこと（いちばん活やくしたなかまが1行で）
+export const TEAM_WIN_LINES: Record<TeamRole, { en: string; ja: string }> = {
+  word: { en: 'Words are our sword!', ja: '単語はぼくらの剣だ！' },
+  grammar: { en: 'Grammar made us strong!', ja: '文法でチームが強くなった！' },
+  reading: { en: 'We read the boss well!', ja: 'ボスをしっかり読みきった！' },
+}
+// いちばん正解したなかま（同じなら単語→文法→読解の順）
+export function teamMvp(hits: Record<TeamRole, number>): TeamRole {
+  return (['word', 'grammar', 'reading'] as TeamRole[]).reduce((a, b) => (hits[b] > hits[a] ? b : a))
+}

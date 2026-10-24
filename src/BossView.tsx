@@ -6,7 +6,7 @@ import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingb
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
-import { BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES } from './bossteam'
+import { BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
@@ -646,6 +646,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               ))}
             </p>
           )}
+          {teamOn && (
+            <p className={`boss-team-win team-${teamMvp(teamHits)}`} title={`${team![teamMvp(teamHits)].name}「${TEAM_WIN_LINES[teamMvp(teamHits)].en}」（${TEAM_WIN_LINES[teamMvp(teamHits)].ja}）`}>
+              {TEAM_ICON[teamMvp(teamHits)]} 「{TEAM_WIN_LINES[teamMvp(teamHits)].en}」
+              <small>{TEAM_WIN_LINES[teamMvp(teamHits)].ja}</small>
+            </p>
+          )}
           {/* ランク・ハート・会心・ボーナスは1枚の横長カードにまとめる（カードを減らして見やすく） */}
           <div className="boss-rank-row">
             <p className={`battle-rank rank-${battleRank(hearts, crits)}`} aria-label={`ランク ${battleRank(hearts, crits)}`}>
@@ -661,7 +667,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               </p>
             </div>
           </div>
-          {winBuddy && (
+          {winBuddy && !teamOn && (
             <p className="grammar-praise boss-buddy-cheer">
               {winBuddy.icon} {winBuddy.name}「{winLine.en}」
               <button className="speak small" onClick={() => speak(winLine.en)} aria-label="竜のひとことを聞く">
