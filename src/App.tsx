@@ -10,6 +10,7 @@ import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
+import { TodayFocusBar, type TodayTask } from './TodayFocusView'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
@@ -351,6 +352,16 @@ function App() {
   }
   const toContent = () => requestAnimationFrame(() => window.scrollTo?.({ top: 0 }))
   const [showChallenge, setShowChallenge] = useState(false)
+  const todayFocus: TodayTask | null = showShop || showChallenge ? null : mode === 'word' && todayQuiz ? 'word' : mode === 'grammar' && grammarGo ? 'grammar' : mode === 'reading' && shortGo ? 'reading' : null // 今日の課題だけを画面いっぱいに出している
+  const goToday = (t: TodayTask) => {
+    setTodayQuiz(t === 'word')
+    setGrammarGo(t === 'grammar')
+    setShortGo(t === 'reading')
+    setGrammarDrill(null)
+    if (t === 'word') setWordTab('mini')
+    setMode(t)
+    window.scrollTo?.({ top: 0 })
+  }
   const home = mode === 'home' && !showShop && !showChallenge // ホーム（相棒・あそび・今日の課題・記録）
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
@@ -1376,7 +1387,20 @@ function App() {
           </>
         )}
       </header>
-      {mode === 'word' && !showShop && !showChallenge && (
+      {todayFocus && (
+        <TodayFocusBar
+          current={todayFocus}
+          done={{ word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }}
+          onBack={() => {
+            setTodayQuiz(false)
+            setGrammarGo(false)
+            setShortGo(false)
+            window.scrollTo?.({ top: 0 })
+          }}
+          onGo={goToday}
+        />
+      )}
+      {mode === 'word' && !showShop && !showChallenge && !todayFocus && (
         <div className="boss-ally ally-word" aria-label="単語の相棒（正解で育つ）">
           <span className="ally-fig" aria-hidden="true">
             <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />
@@ -1407,7 +1431,7 @@ function App() {
           <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
         </button>
       )}
-      {mode === 'word' && !showShop && !showChallenge && (
+      {mode === 'word' && !showShop && !showChallenge && !todayFocus && (
         <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
           {WORD_TABS.map((t) => (
             <button
@@ -1570,14 +1594,14 @@ function App() {
         <>
           {mode === 'boss' && buddyRow}
           {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
-          {mode === 'reading' && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
+          {mode === 'reading' && !shortGo && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
               📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
               <strong>{dailyShort(today).title}</strong>
             </button>
           )}
-          {mode === 'reading' && (
+          {mode === 'reading' && !shortGo && (
           <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
             {READ_LEVELS.map((t) => (
               <button
@@ -1608,6 +1632,7 @@ function App() {
             <Reading
               key={shortGo ? 'today' : 'list'}
               start={shortGo ? dailyShort(today) : undefined}
+              onClose={shortGo ? () => setShortGo(false) : undefined}
               onDone={() => {
                 if (shortGo && loadDailyShortDay() !== today) {
                   saveDailyShortDay(today)
@@ -1848,7 +1873,7 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
+          {mode === 'grammar' && !grammarGo && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
               📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
@@ -1865,18 +1890,13 @@ function App() {
               }}
             />
           )}
-          {mode === 'word' && todayQuiz && (
-            <p className="weak-banner">
-              📋 今日の単語（4択）：{todayWords(today).map((w) => w.en).join('・')}
-              <button onClick={() => setTodayQuiz(false)}>やめる</button>
-            </p>
-          )}
-          {quizFocus && focusList(quizFocus).length > 0 && (
+          {quizFocus && !todayFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
               <button onClick={() => setQuizFocus(null)}>やめる</button>
             </p>
           )}
+          {!(mode === 'grammar' && grammarGo) && (
           <Quiz
             key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
@@ -1917,6 +1937,7 @@ function App() {
               pushToast([{ id: 'stamp', text: '📮 文法スタンプが10個たまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
           />
+          )}
           {mode === 'word' && !todayQuiz && !quizFocus && wordReview}
         </>
       ) : (

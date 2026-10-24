@@ -2461,3 +2461,18 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .boss-pick-lv { padding: 0 8px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.66rem; font-weight: 800; white-space: nowrap; }
 .boss-pick-crown { position: absolute; top: -8px; right: -4px; font-size: 1.1rem; text-shadow: none; }
 .boss-pick-tile.locked { --boss-c: #94a3b8; justify-content: center; }
+
+/* 今日の課題の画面：上のバー（もどる・ほかの課題へ） */
+.today-focus { display: flex; flex-direction: column; gap: 8px; margin: 0 0 12px; }
+.today-focus-top { display: flex; align-items: center; gap: 10px; }
+.today-focus-back { flex: none; padding: 8px 14px; border: none; border-radius: 999px; background: #2563eb; color: #fff; font-weight: 900; box-shadow: 0 3px 0 #1e40af; white-space: nowrap; }
+.today-focus-back:active { transform: translateY(2px); box-shadow: none; }
+.today-focus-title { min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 1.05rem; }
+.today-focus-tasks { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.today-focus-task { display: flex; align-items: center; justify-content: center; gap: 4px; min-width: 0; padding: 9px 4px; border: none; border-radius: 14px; background: linear-gradient(160deg, #fb923c, #ea580c); color: #fff; font-weight: 900; white-space: nowrap; box-shadow: 0 3px 0 #9a3412; }
+.today-focus-task:active { transform: translateY(2px); box-shadow: none; }
+.today-focus-task[aria-current='page'] { background: #fff7ed; color: #9a3412; box-shadow: inset 0 0 0 2px #fb923c; opacity: 1; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .today-focus-task[aria-current='page'] { background: #431407; color: #fed7aa; }
+}
+:root[data-theme="dark"] .today-focus-task[aria-current='page'] { background: #431407; color: #fed7aa; }

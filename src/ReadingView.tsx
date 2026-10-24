@@ -15,10 +15,11 @@ const CHUNK = 20 // 一覧は20話ずつ色つきの折りたたみにまとめ�
 type Props = {
   onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void
   start?: Passage // はじめからこの話を開く（ホームの今日の読解）
+  onClose?: () => void // 今日の課題：一覧にもどらず、課題の画面をとじる
   onDone?: (score: number, total: number) => void // 1本ぜんぶ答えたとき
 }
 
-export function Reading({ onAnswer, start, onDone }: Props) {
+export function Reading({ onAnswer, start, onDone, onClose }: Props) {
   const [p, setP] = useState<Passage | null>(start ?? null)
   const [done, setDone] = useState(loadShortDone) // 解いた話
   const [step, setStep] = useState(0)
@@ -100,9 +101,11 @@ export function Reading({ onAnswer, start, onDone }: Props) {
   const q = p.questions[step]
   return (
     <section className="card grammar reading">
-      <button className="stage-back" onClick={() => setP(null)}>
-        ← 一覧
-      </button>
+      {!onClose && (
+        <button className="stage-back" onClick={() => setP(null)}>
+          ← 一覧
+        </button>
+      )}
       <h2>
         {p.title}
         <button className="speak small" onClick={() => speak(p.text)} aria-label="英文を聞く">
@@ -179,7 +182,7 @@ export function Reading({ onAnswer, start, onDone }: Props) {
           <p className="result-score">
             {score} / {p.questions.length} 問正解
           </p>
-          <button className="flip" onClick={() => setP(null)}>
+          <button className="flip" onClick={() => (onClose ? onClose() : setP(null))}>
             ほかの話を読む
           </button>
         </>

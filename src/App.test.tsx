@@ -149,7 +149,10 @@ describe('App', () => {
     expect(tasks().textContent).toContain(p.title)
     // 単語：4択で今日の単語だけが出る
     fireEvent.click(within(tasks()).getByText(/4択で/))
-    expect(screen.getByText(/📋 今日の単語（4択）/)).toBeInTheDocument()
+    // 今日の課題だけを画面いっぱいに出す（ほかの問題・タブは出さない）
+    const bar = () => screen.getByRole('navigation', { name: '今日の課題の切りかえ' })
+    expect(within(bar()).getByRole('button', { name: /今日の課題（単語）：いまの課題/ })).toBeDisabled()
+    expect(screen.queryByRole('tablist', { name: '単語の種類' })).not.toBeInTheDocument()
     for (let i = 0; i < ws.length; i++) {
       const en = document.querySelector('.quiz .en, .quiz .word-en, .quiz h2')?.textContent ?? ''
       const w = ws.find((x) => en.includes(x.en))!
@@ -158,15 +161,20 @@ describe('App', () => {
       fireEvent.click(screen.getByText(/次へ|結果を見る/))
     }
     expect(localStorage.getItem('eitan:today-words')).toBe(day)
-    // 読解：今日の英文がすぐ開く
-    navTo('ホーム')
-    fireEvent.click(within(tasks()).getByText(p.title))
+    // 読解：上のバーのボタンから、今日の英文がすぐ開く
+    fireEvent.click(within(bar()).getByRole('button', { name: /今日の課題（読解）へ/ }))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
+    expect(screen.queryByRole('tablist', { name: '読解のむずかしさ' })).not.toBeInTheDocument()
+    expect(screen.queryByText('← 一覧')).not.toBeInTheDocument()
     for (const q of p.questions) {
       fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(localStorage.getItem('eitan:daily-short')).toBe(day)
+    // もどると、いつもの読解ページにもどる
+    fireEvent.click(within(bar()).getByRole('button', { name: '← もどる' }))
+    expect(screen.queryByRole('navigation', { name: '今日の課題の切りかえ' })).not.toBeInTheDocument()
+    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
     // 今日の課題クリアのごほうび（+10XP）が読解のなかまに入る：問題の正解ぶんより10多い
     const before = JSON.parse(localStorage.getItem('eitan:buddy-today')!).reading
     expect(before).toBeGreaterThanOrEqual(10 + p.questions.length)
