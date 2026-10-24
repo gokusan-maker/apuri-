@@ -1619,3 +1619,4 @@
 - 2026-10-24: TOEFL読解「How Geckos Walk on Ceilings」（ヤモリの足とファンデルワールス力・生物）を追加
 - 2026-10-24: 単語3800語を総点検：例文の文法（has been learning・freezes）、和訳（雪の結晶）、不自然な例文（castanets・deficit・acid・finger・junior）、訳語（How often・card）を修正
 - 2026-10-24: 記録の部屋：まだ0の記録は出さない（全部0なら部屋ごと隠す）
+- 2026-10-24: モンスター図鑑：まだ1つも会っていない系統は「🔒 ？？？ ×4」の1行にたたむ

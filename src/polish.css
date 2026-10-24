@@ -2011,3 +2011,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 /* バッジ：まだのバッジはたたむ */
 .badges-locked > summary { cursor: pointer; margin: 8px 0; font-weight: 800; color: var(--muted); }
+
+/* モンスター図鑑：まだ会っていない系統は1行に */
+.zukan-row-locked { margin: 2px 0 8px; color: var(--muted); font-weight: 800; font-size: 0.85rem; text-align: center; }

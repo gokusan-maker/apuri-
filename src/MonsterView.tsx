@@ -947,6 +947,11 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
       {ZUKAN_ROWS.map((row) => (
         <div key={row.label} className="zukan-row">
           <span className="zukan-row-label">{row.label}</span>
+          {!row.ids.some((id) => seen.has(id)) ? (
+            <p className="zukan-row-locked" aria-label={`まだ出会っていない姿 ${row.ids.length}`}>
+              🔒 ？？？ ×{row.ids.length}
+            </p>
+          ) : (
           <ol className="zukan-line">
             {row.ids.map((id, i) => {
               const f = FORMS.find((x) => x.id === id)!
@@ -973,6 +978,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
               )
             })}
           </ol>
+          )}
         </div>
       ))}
       <div className="zukan-row">
