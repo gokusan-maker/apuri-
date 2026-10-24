@@ -3718,6 +3718,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-lichen',
+    title: 'Two Lives in One: Lichens',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "At first glance, a lichen looks like a single plant: a crusty, leafy, or branching growth on a rock or a tree. In fact, a lichen is a partnership between two very different organisms. One is a fungus, and the other is a partner that can carry out photosynthesis, usually a green alga or a cyanobacterium. Neither partner looks like a lichen ( A ) it lives on its own.",
+      "Each partner contributes something the other lacks. The photosynthetic partner uses sunlight to produce sugars, ( B ) feed both organisms. The fungus, in turn, forms the body of the lichen, protects its partner from strong sunlight and drying, and absorbs water and minerals from its surroundings.",
+      "This cooperation allows lichens to survive in places where few other living things can, such as bare rock, Arctic tundra, and deserts. Many lichens can dry out almost completely and become active again within minutes of getting wet. Because they grow very slowly, sometimes only a few millimeters a year, some lichen colonies are thought to be hundreds of years old.",
+      "Lichens also matter to ecosystems and to people. They slowly break down rock and help create the first thin layers of soil. In northern regions, reindeer depend on them for food in winter. Since lichens take in most of what they need directly from the air, they are ( C ) sensitive to air pollution. For this reason, scientists use them to judge the quality of the air in and around cities.",
+    ],
+    ja: [
+      'ひと目見ると、地衣類は1つの植物のように見える。岩や木の上にできる、かさぶたのような、葉のような、あるいは枝分かれしたものである。実際には、地衣類はまったくちがう2つの生物の共同生活である。1つは菌類で、もう1つは光合成ができる相手で、ふつうは緑藻かシアノバクテリアである。どちらの相手も、単独で生きているときには地衣類のようには見えない。',
+      'それぞれの相手は、もう一方に足りないものを提供する。光合成をする相手は日光を使って糖をつくり、その糖が両方の生物の栄養になる。一方、菌類は地衣類の体をつくり、相手を強い日光や乾燥から守り、まわりから水分や無機物を吸収する。',
+      'この協力のおかげで、地衣類は、むき出しの岩や北極のツンドラ、砂漠のように、ほかの生物がほとんど生きられない場所でも生き残ることができる。多くの地衣類は、ほとんど完全に乾いても、ぬれると数分のうちにまた活動を始められる。成長がとてもおそく、1年に数ミリしかのびないこともあるので、何百年も生きていると考えられている群落もある。',
+      '地衣類は、生態系や人間にとっても大切である。岩を少しずつくずし、最初のうすい土の層をつくる手助けをする。北の地域では、トナカイが冬の食べ物として地衣類にたよっている。地衣類は必要なものの大部分を空気から直接とり入れるので、大気汚染にとても敏感である。そのため、科学者は都市やその周辺の空気の質を判断するのに地衣類を使っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'despite', 'because of'], answer: 0, why: 'あとに it lives on its own という文が続くので接続詞の when「～するとき」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'they'], answer: 0, why: 'コンマのあとで sugars を説明する非制限用法の関係代名詞は which。that はコンマのあとに使わない。what は先行詞をふくむ。they だと文が2つコンマだけでつながってしまう。' },
+      { id: 'C', choices: ['highly', 'high', 'height', 'higher'], answer: 0, why: '形容詞 sensitive を修飾するのは副詞 highly「とても」。high・higher は形容詞（または副詞「高く」）、height は名詞。' },
+    ],
+    tf: [
+      { statement: '地衣類は1種類の植物である。', answer: false, why: '第1段落 a lichen is a partnership between two very different organisms。' },
+      { statement: '光合成をする相手が、両方の生物の栄養になる糖をつくる。', answer: true, why: '第2段落 The photosynthetic partner uses sunlight to produce sugars, which feed both organisms。' },
+      { statement: '多くの地衣類は、乾いたあとでも、ぬれると短い時間でまた活動できる。', answer: true, why: '第3段落 become active again within minutes of getting wet。' },
+      { statement: '地衣類は大気汚染に強いので、都市でよく育つ。', answer: false, why: '第4段落 they are highly sensitive to air pollution。' },
+    ],
+    qa: [
+      { q: 'Why do scientists use lichens to judge air quality?', choices: ['Because they take in most of what they need directly from the air.', 'Because they grow very fast in cities.', 'Because they need thick layers of soil.', 'Because reindeer eat them in winter.'], answer: 0, why: '第4段落 Since lichens take in most of what they need directly from the air, they are highly sensitive to air pollution。' },
+    ],
+  },
+{
     id: 'toefl-hawaii-hotspot',
     title: 'A Chain of Islands from One Hot Spot',
     level: 'TOEFL・IELTS（地学）',
