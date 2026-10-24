@@ -3358,6 +3358,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-eyeshine',
+    title: "Why Cats' Eyes Shine at Night",
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "If you shine a flashlight toward a cat in the dark, its eyes seem to glow green or gold. This \"eyeshine\" is not light produced by the eyes themselves. Instead, it comes from a mirror-like layer of tissue called the tapetum lucidum, which is located ( A ) the retina, the part of the eye that senses light.",
+      "The layer improves vision in dim conditions. Normally, some light passes through the retina without being absorbed by its light-sensitive cells. In animals with a tapetum, this light is reflected back through the retina, giving the cells a second chance ( B ) detect it. As a result, many animals that are active at night, such as cats, deer, and raccoons, can make better use of very small amounts of light. Part of the reflected light leaves the eye again, and that is the glow we see.",
+      "There is a cost, however. Because the reflected light spreads slightly, images can become a little less sharp. Humans lack this layer, ( C ) is why our eyes do not shine in the same way. The red eyes that sometimes appear in flash photographs have a different cause: the flash lights up blood vessels at the back of the eye.",
+    ],
+    ja: [
+      '暗やみでねこに懐中電灯を向けると、その目は緑や金色に光っているように見える。この「アイシャイン」は、目そのものが出している光ではない。そうではなく、網膜（目の中で光を感じる部分）のうしろにある、タペタムとよばれる鏡のような組織の層から来ているのである。',
+      'この層は、うす暗い中での見え方をよくする。ふつう、光の一部は、網膜の光を感じる細胞に吸収されないまま通りぬけてしまう。タペタムをもつ動物では、この光がはね返って網膜をもう一度通り、細胞にその光をとらえる2度目のチャンスをあたえる。その結果、ねこ、シカ、アライグマのような、夜に活動する多くの動物は、ごくわずかな光をよりうまく使える。はね返った光の一部はまた目から出ていき、それが私たちの見る光なのである。',
+      'しかし、代わりに失うものもある。はね返った光が少し広がるので、像が少しぼやけることがある。人間にはこの層がなく、そのため私たちの目は同じようには光らない。フラッシュをたいた写真でときどき目が赤くなるのは、別の原因による。フラッシュが目の奥の血管を照らすのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['behind', 'among', 'during', 'since'], answer: 0, why: 'behind ～「～のうしろに」。層は網膜のうしろにある。among は3つ以上のものの間、during・since は時を表す。' },
+      { id: 'B', choices: ['to', 'of', 'for', 'at'], answer: 0, why: 'a chance to ＋ 原形「～する機会」。あとが原形の detect なので to。of なら detecting の形になる。' },
+      { id: 'C', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '前の文の内容を受ける関係代名詞 which。, which is why ～「そしてそれが～の理由だ」。' },
+    ],
+    tf: [
+      { statement: 'ねこの目の光は、目そのものが出している光である。', answer: false, why: '第1段落 This "eyeshine" is not light produced by the eyes themselves。' },
+      { statement: 'タペタムは、網膜を通りぬけた光をはね返す。', answer: true, why: '第2段落 this light is reflected back through the retina。' },
+      { statement: 'タペタムがあると、像がより鮮明になる。', answer: false, why: '第3段落 images can become a little less sharp。' },
+      { statement: '写真で目が赤くなるのは、目の奥の血管がフラッシュで照らされるためである。', answer: true, why: '第3段落 the flash lights up blood vessels at the back of the eye。' },
+    ],
+    qa: [
+      { q: 'What is the main benefit of the tapetum lucidum?', choices: ['It helps animals see better in dim light.', 'It makes images sharper during the day.', 'It produces its own light at night.', 'It protects the eyes from bright flashes.'], answer: 0, why: '第2段落 The layer improves vision in dim conditions。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
