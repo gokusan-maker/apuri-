@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'what-time': { wrong: 'What time you get up?', right: 'What time do you get up?', why: 'What time のあとは疑問文の形（do / does ＋ 主語 ＋ 動詞）。' },
   'by-uses': { wrong: 'I came here by a bus.', right: 'I came here by bus.', why: '手段の by ＋ 乗り物には a や the をつけない。' },
   'on-ing': { wrong: 'On arrive at the station, I called her.', right: 'On arriving at the station, I called her.', why: '前置詞 on のあとは動名詞（～ing）。' },
   'the-last-to': { wrong: 'He is the last person telling a lie.', right: 'He is the last person to tell a lie.', why: 'the last ＋ 名詞 のあとは to ＋ 原形。' },
