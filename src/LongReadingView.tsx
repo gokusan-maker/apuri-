@@ -206,8 +206,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             ⭕❌ ○×だけチャレンジ（解いた読解から10問）
           </button>
         )}
-        <details className="long-types long-idioms">
-          <summary>📗 よく出る熟語 <span className="fold-meta" aria-label={`熟語 ${IDIOMS.length}個`}>{IDIOMS.length}</span></summary>
+        <details className="long-types long-idioms game-fold lg-2">
+          <summary><span className="lg-icon" aria-hidden="true">📗</span>よく出る熟語 <span className="fold-meta" aria-label={`熟語 ${IDIOMS.length}個`}>{IDIOMS.length}</span></summary>
           <ul>
             {IDIOMS.map(({ w, count }) => (
               <li key={w.id}>

@@ -574,3 +574,9 @@ it('読解の結果：次の読解の題名は小さい2行目、つまずき解
   if (tips) expect(tips.open).toBe(false)
   expect(document.querySelector('.next-long-title')).not.toBeNull()
 })
+
+it('読解の「よく出る熟語」もアイコンつきの色ボタン', () => {
+  localStorage.clear()
+  render(<LongReading />)
+  expect(document.querySelector('details.long-idioms.game-fold summary .lg-icon')?.textContent).toBe('📗')
+})
