@@ -3418,6 +3418,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-decoy',
+    title: 'The Popcorn That Nobody Buys',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine a movie theater that sells popcorn in two sizes: a small one for 300 yen and a large one for 700 yen. Many customers choose the small size. Now suppose the theater adds a medium size for 650 yen. Surprisingly, more people may start buying the large size, ( A ) almost nobody buys the medium one.",
+      "Researchers call this the \"decoy effect.\" The medium size works as a decoy: it is not really meant to be chosen, but to make another option look better. Compared with the medium size, the large size seems like a bargain, because it costs only 50 yen more for much more popcorn. Without the decoy, people compare only the small and large sizes, and the difference in price looks ( B ) bigger.",
+      "The decoy effect shows that our choices are not always based on the value of each option alone. Instead, we often judge an option by comparing it with ( C ) is placed beside it. Shops and online services can use this tendency to guide customers, so before you pay, it is worth asking yourself whether you really need the option you are about to choose.",
+    ],
+    ja: [
+      '映画館が、ポップコーンを2つのサイズで売っているとしよう。小は300円、大は700円である。多くの客は小を選ぶ。ここで、映画館が650円の中サイズを加えたとする。おどろいたことに、中サイズを買う人はほとんどいないのに、大サイズを買う人がふえることがある。',
+      '研究者はこれを「おとり効果」とよぶ。中サイズはおとりの役目をしている。つまり、本当に選ばれるためではなく、ほかの選択肢をよく見せるためにあるのだ。中サイズとくらべると、大サイズはたった50円高いだけでずっと多くのポップコーンが手に入るので、お買い得に見える。おとりがなければ、人々は小と大だけをくらべ、値段の差はずっと大きく見える。',
+      'おとり効果は、私たちの選択がいつもそれぞれの選択肢の価値だけにもとづいているわけではないことを示している。むしろ私たちは、ある選択肢を、そのとなりに置かれているものとくらべて判断することが多い。店やオンラインのサービスはこの傾向を使って客を誘導できるので、お金をはらう前に、選ぼうとしている選択肢が本当に必要かどうか自分に問いかけてみる価値がある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['although', 'despite', 'in spite of', 'due to'], answer: 0, why: 'あとに almost nobody buys … という文が続くので接続詞の although「～だけれども」。despite・in spite of・due to は前置詞で、文は続かない。' },
+      { id: 'B', choices: ['much', 'very', 'more', 'most'], answer: 0, why: '比較級 bigger を強めるのは much「ずっと」。very・more・most は比較級の前に置けない。' },
+      { id: 'C', choices: ['what', 'which', 'that', 'it'], answer: 0, why: '前置詞 with の目的語で、あとに is placed … が続くので、先行詞をふくむ関係代名詞 what「～するもの」。which・that は先行詞がないと使えない。' },
+    ],
+    tf: [
+      { statement: '中サイズを加えると、大サイズを買う人がふえることがある。', answer: true, why: '第1段落 more people may start buying the large size。' },
+      { statement: '中サイズは、いちばん多く売れるように用意されている。', answer: false, why: '第2段落 it is not really meant to be chosen。' },
+      { statement: 'おとりがないと、人々は小と大だけをくらべる。', answer: true, why: '第2段落 Without the decoy, people compare only the small and large sizes。' },
+      { statement: '筆者は、店がこの傾向を使うことはないと述べている。', answer: false, why: '第3段落 Shops and online services can use this tendency to guide customers。' },
+    ],
+    qa: [
+      { q: 'Why does the large size seem like a bargain after the medium size is added?', choices: ['Because it costs only a little more than the medium size.', 'Because it becomes cheaper than the small size.', 'Because the medium size is sold out.', 'Because the theater gives free drinks with it.'], answer: 0, why: '第2段落 it costs only 50 yen more for much more popcorn。' },
+    ],
+  },
+{
     id: 'adv-hindsight',
     title: 'I Knew It All Along',
     level: '難関大（評論）',
