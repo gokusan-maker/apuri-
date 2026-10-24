@@ -3807,6 +3807,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-geysers',
+    title: 'Why Geysers Erupt',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "A geyser is a rare type of hot spring that shoots water and steam into the air from time to time. Fewer than a thousand active geysers are known in the world, and about half of them are found in Yellowstone National Park in the United States. To form a geyser, nature needs three things at once: a strong source of heat, a steady supply of water, and an underground system of narrow cracks and chambers.",
+      "Rainwater and melted snow sink deep into the ground, where they are heated by hot rock near magma. Because the water deep underground is under great pressure from the water above it, it can become much hotter than 100°C ( A ) boiling. When a little of the water near the top finally turns into steam, it pushes some water out and lowers the pressure below. The very hot water then changes into steam almost at once and forces everything above it out of the ground.",
+      "Some geysers erupt on a fairly regular schedule. Old Faithful, the most famous geyser in Yellowstone, usually erupts roughly every 60 to 110 minutes, ( B ) visitors can often predict when to watch. Others erupt only once in several days or even years.",
+      "Geysers are also very fragile. An earthquake can change their underground plumbing and stop them completely. In some places, drilling for geothermal energy nearby has caused geysers to stop erupting. For this reason, many countries now protect the areas ( C ) geysers are found.",
+    ],
+    ja: [
+      '間欠泉は、ときどき水や蒸気を空中にふき上げる、めずらしい種類の温泉である。世界で知られている活動中の間欠泉は1000か所に満たず、その約半分はアメリカのイエローストーン国立公園にある。間欠泉ができるには、自然界に3つのものが同時に必要である。強い熱源、たえまない水の供給、そして地下のせまい割れ目と空洞のしくみである。',
+      '雨水や雪どけ水は地中深くにしみこみ、マグマの近くの熱い岩によって温められる。地下深くの水は、上にある水から大きな圧力を受けているので、沸とうせずに100℃よりずっと熱くなることができる。上のほうの水が少し蒸気に変わると、その蒸気が水の一部をおし出し、下の圧力を下げる。すると、とても熱い水がほとんど一度に蒸気に変わり、上にあるものすべてを地上へとおし出すのである。',
+      'かなり規則正しくふき出す間欠泉もある。イエローストーンでもっとも有名な間欠泉オールド・フェイスフルは、ふつうおよそ60分から110分ごとにふき出すので、観光客はいつ見ればよいかを予想できることが多い。ほかの間欠泉には、数日、あるいは数年に一度しかふき出さないものもある。',
+      '間欠泉はとてもこわれやすくもある。地震によって地下の水の通り道が変わり、完全に止まってしまうことがある。近くで地熱エネルギーのための掘削が行われ、間欠泉がふき出さなくなった場所もある。このため、今では多くの国が、間欠泉のある地域を保護している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'not', 'no', 'none'], answer: 0, why: '前置詞 without ＋ 動名詞 boiling「沸とうせずに」。not・no・none は前置詞ではないので、あとに boiling をつなげられない。' },
+      { id: 'B', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'あとに visitors can often predict … という文が続くので、接続詞 so「だから」。such・too・very は文と文をつなげない。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 the areas（場所）で、あとに geysers are found という完全な文が続くので関係副詞 where。which は前置詞がないと使えない（in which なら可）。' },
+    ],
+    tf: [
+      { statement: '世界の活動中の間欠泉の約半分は、イエローストーン国立公園にある。', answer: true, why: '第1段落 about half of them are found in Yellowstone National Park。' },
+      { statement: '地下深くの水は、圧力のために100℃をこえても沸とうしないことがある。', answer: true, why: '第2段落 it can become much hotter than 100°C without boiling。' },
+      { statement: 'すべての間欠泉は、決まった時間に必ずふき出す。', answer: false, why: '第3段落 Others erupt only once in several days or even years。' },
+      { statement: '地熱エネルギーのための掘削が、間欠泉に悪いえいきょうをあたえたことはない。', answer: false, why: '第4段落 drilling for geothermal energy nearby has caused geysers to stop erupting。' },
+    ],
+    qa: [
+      { q: 'Why can visitors often predict when Old Faithful will erupt?', choices: ['Because it erupts on a fairly regular schedule.', 'Because it erupts only once every few years.', 'Because it is the largest geyser in the world.', 'Because it never stops erupting.'], answer: 0, why: '第3段落 Some geysers erupt on a fairly regular schedule. Old Faithful … usually erupts roughly every 60 to 110 minutes。' },
+    ],
+  },
+{
     id: 'toefl-octopus-arms',
     title: 'Thinking with Eight Arms',
     level: 'TOEFL・IELTS（生物）',
