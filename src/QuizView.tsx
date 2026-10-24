@@ -958,7 +958,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
           {rate === 100 ? 'パーフェクト！すごい！' : rate >= 70 ? 'いい調子！' : 'もう1回で覚えちゃおう！'}
         </p>
         <button
-          className="list-link"
+          className="list-link share-go"
           onClick={() =>
             shareText(quizShareText(DIRECTIONS.find((d) => d.id === direction)?.label ?? 'クイズ', score, questions.length)).then((r) =>
               setShared(r === 'copied' ? 'コピーしました' : r === 'shared' ? '' : 'シェアできませんでした'),

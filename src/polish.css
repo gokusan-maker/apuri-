@@ -2632,3 +2632,11 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 /* 問題の画面（上に「← ほかの問題をえらぶ」）では、ボス戦の中の「← にげる／もどる」は出さない（もどるボタンは1つ） */
 .play-bar ~ .boss > .stage-head .stage-back, .play-bar ~ * .boss > .stage-head .stage-back { display: none; }
 .play-bar ~ .boss > .stage-head, .play-bar ~ * .boss > .stage-head { justify-content: flex-end; }
+
+/* シェアのボタンは水色のゲームボタン（1行） */
+.list-link.share-go { display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 9px 20px; border: none; border-radius: 999px; background: linear-gradient(180deg, #22d3ee, #0891b2); color: #fff; font-weight: 900; white-space: nowrap; text-decoration: none; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 #0e7490; }
+.list-link.share-go:active { transform: translateY(3px); box-shadow: 0 1px 0 #0e7490; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .list-link.share-go { background: linear-gradient(180deg, #0891b2, #0e7490); color: #fff; box-shadow: 0 4px 0 #164e63; }
+}
+:root[data-theme='dark'] .list-link.share-go { background: linear-gradient(180deg, #0891b2, #0e7490); color: #fff; box-shadow: 0 4px 0 #164e63; }

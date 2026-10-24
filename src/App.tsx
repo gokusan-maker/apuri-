@@ -1826,7 +1826,7 @@ function App() {
               </p>
               )}
               {weekCount(history, today) > 0 && <button
-                className="list-link"
+                className="list-link share-go"
                 onClick={() =>
                   shareText(
                     weekReportText({

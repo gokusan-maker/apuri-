@@ -6,7 +6,7 @@ export function ShareButton({ stats }: { stats: ShareStats }) {
   return (
     <div className="share">
       <button
-        className="list-link"
+        className="list-link share-go"
         onClick={async () => {
           const svg = document.querySelector('.monster-body svg')?.outerHTML ?? null
           const blob = await makeShareImage(stats, svg)
