@@ -2224,3 +2224,5 @@ details[open] > summary::before { transform: rotate(90deg); }
 .boss-intro, .boss-taunt:not(.boss-defeat) { font-size: 0.88rem; }
 .boss-intro .boss-intro-ja, .boss-taunt:not(.boss-defeat) span { font-size: 0.76rem; }
 .gacha-name { font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+.today-tasks .today-task .today-task-text { display: block; max-width: 100%; min-height: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; } /* 今日の課題のタイルも1行（オーナーの要望） */
+.today-tasks .today-task-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .today-tasks .today-task { min-width: 0; }
