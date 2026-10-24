@@ -3595,6 +3595,37 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
     ],
   },
+  {
+    id: 'hs-seed-library',
+    title: 'The Seed Library',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "In our town library, there is a small wooden box next to the picture books. It looks like a box for cards, but it is full of little paper bags. Each bag has seeds in it, and the name of a plant is written on it: tomatoes, beans, sunflowers, and many others. This is our town's \"seed library.\" Anyone with a library card can borrow up to three bags ( A ) free.",
+      "Borrowing seeds is a little different from borrowing books. You do not have to bring the seeds back. Instead, you plant them, take care of the plants, and at the end of the season you collect new seeds from the strongest ones. Then you bring some of those seeds back to the library ( B ) other people can use them next year.",
+      "Our librarian, Ms. Ono, started the seed library five years ago. She says that seeds from local gardens grow well here ( C ) they are already used to our weather and soil. Every year, the plants become a little better for our town. \"A seed library is like a library of stories,\" she says. \"Each bag carries the work of a gardener who grew the plant before you.\"",
+      "Last spring, I borrowed some bean seeds. My beans grew taller than my little brother, and we ate them for dinner many times. In autumn, I returned a bag of seeds with a note: \"These beans grew on our balcony. I hope they grow well for you, too.\" Now I feel that I am part of a long chain of gardeners in our town.",
+    ],
+    ja: [
+      '私たちの町の図書館には、絵本のとなりに小さな木の箱があります。カードを入れる箱のように見えますが、中には小さな紙の袋がいっぱい入っています。どの袋にも種が入っていて、トマト、豆、ひまわりなど、植物の名前が書いてあります。これが私たちの町の「種の図書館」です。図書館カードを持っている人ならだれでも、3袋まで無料で借りることができます。',
+      '種を借りることは、本を借りることと少しちがいます。その種を返す必要はありません。そのかわりに、種をまいて植物の世話をし、季節の終わりに、いちばんじょうぶな株から新しい種をとります。そして、次の年にほかの人が使えるように、その種の一部を図書館に返すのです。',
+      '図書館司書の小野さんは、5年前に種の図書館を始めました。小野さんによると、地元の庭でとれた種は、この町の天気や土にすでに慣れているので、ここでよく育つそうです。毎年、植物はこの町に少しずつ合ったものになっていきます。「種の図書館は、物語の図書館のようなものです」と小野さんは言います。「どの袋にも、あなたより前にその植物を育てた人の努力がつまっているのです。」',
+      'この前の春、私は豆の種を借りました。私の豆は弟よりも背が高くなり、私たちは何度も夕食にその豆を食べました。秋に、私はメモをそえて種を1袋返しました。「この豆はうちのベランダで育ちました。あなたのところでもよく育ちますように。」今、私は自分がこの町の、長くつながる育て手の輪の一員だと感じています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'by', 'with', 'at'], answer: 0, why: 'for free「無料で」。by・with・at free とは言わない。' },
+      { id: 'B', choices: ['so that', 'so as', 'in order', 'because of'], answer: 0, why: 'so that ＋ 主語 ＋ can ～「～が…できるように」。so as・in order のあとは to ＋ 原形、because of のあとは名詞なので、文（other people can use them）は続かない。' },
+      { id: 'C', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'あとに文（they are already used to ～）が続くので接続詞の because。because of・despite・during は前置詞で、あとに名詞が来る。' },
+    ],
+    tf: [
+      { statement: '種の図書館では、借りた種をそのまま返さなければならない。', answer: false, why: '第2段落 You do not have to bring the seeds back。' },
+      { statement: '図書館カードを持っていれば、だれでも3袋まで借りられる。', answer: true, why: '第1段落 Anyone with a library card can borrow up to three bags。' },
+      { statement: '小野さんは5年前に種の図書館を始めた。', answer: true, why: '第3段落 Ms. Ono, started the seed library five years ago。' },
+      { statement: '筆者が育てた豆は、弟よりも背が低かった。', answer: false, why: '第4段落 My beans grew taller than my little brother。' },
+    ],
+    qa: [
+      { q: 'Why do seeds from local gardens grow well in the town?', choices: ['Because they are already used to the town\'s weather and soil.', 'Because the library gives them special water.', 'Because Ms. Ono plants all of them herself.', 'Because they come from other countries.'], answer: 0, why: '第3段落 they are already used to our weather and soil。' },
+    ],
+  },
 {
     id: 'toefl-hawaii-hotspot',
     title: 'A Chain of Islands from One Hot Spot',
