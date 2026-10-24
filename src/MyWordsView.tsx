@@ -36,7 +36,7 @@ export function MyWords({ list, onChange }: Props) {
   return (
     <div className="my-words">
       <h2>{list.length > 0 ? `マイ単語帳（${list.length}語）` : 'マイ単語帳'}</h2>
-      <p className="stats-note">単語帳で「マイ単語帳」を選ぶと出題される</p>
+      <p className="stats-note">設定の「単語帳をえらぶ」でオンにすると出題</p>
       <form className="my-form" onSubmit={submit}>
         <input value={en} onChange={(e) => setEn(e.target.value)} placeholder="英語（例：sunflower）" aria-label="英語" autoCapitalize="none" />
         <input value={ja} onChange={(e) => setJa(e.target.value)} placeholder="意味（例：ひまわり）" aria-label="意味" />
