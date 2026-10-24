@@ -3507,6 +3507,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-pearl',
+    title: 'How a Pearl Is Made',
+    level: 'TOEFL・IELTS（科学）',
+    paragraphs: [
+      "A pearl is one of the few gems produced by a living animal. Pearls form inside mollusks such as oysters and mussels. The process begins ( A ) a small object, often a tiny piece of foreign material or a parasite, gets inside the shell and irritates the animal's soft body.",
+      "To protect itself, the mollusk covers the object with layers of a substance called nacre, the same material that lines the inside of its shell. Nacre is made mostly of calcium carbonate arranged in extremely thin layers. Over months or years, thousands of these layers build up around the object. Because light reflects off the many layers in slightly different ways, a good pearl has its famous soft shine, ( B ) is known as luster.",
+      "Natural pearls are very rare, ( C ) only a small number of mollusks ever produce one. In the late nineteenth century, Mikimoto Kokichi in Japan developed a way to grow pearls by placing a small object inside an oyster on purpose. These \"cultured\" pearls are formed by the same natural process, but people start it. Today, most pearls sold around the world are cultured.",
+    ],
+    ja: [
+      '真珠は、生き物がつくる数少ない宝石の1つである。真珠はカキやイガイのような貝の中でできる。その過程は、小さな物、よくあるのは小さな異物や寄生虫が殻の中に入り、貝のやわらかい体を刺激したときに始まる。',
+      '身を守るために、貝はその物を、殻の内側をおおっているのと同じ物質である真珠層でおおう。真珠層は主に炭酸カルシウムでできていて、とてもうすい層に重なっている。何か月も何年もかけて、何千ものこうした層が物のまわりに積み重なる。光がたくさんの層でそれぞれ少しずつちがうふうに反射するので、よい真珠には有名なやわらかい輝きがあり、それはラスター（照り）とよばれる。',
+      '天然の真珠はとてもめずらしい。なぜなら、真珠をつくる貝はごくわずかしかいないからである。19世紀の終わりに、日本の御木本幸吉が、わざとカキの中に小さな物を入れて真珠を育てる方法を開発した。こうした「養殖」真珠は同じ自然の過程でできるが、それを始めるのは人間である。今日では、世界中で売られている真珠のほとんどが養殖真珠である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'since then', 'among'], answer: 0, why: 'あとに a small object … gets inside という文が続くので接続詞の when「～するとき」。during・among は前置詞、since then は副詞句で文をつなげない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとの非制限用法で、前の a soft shine を受ける which。that は非制限用法では使えない。' },
+      { id: 'C', choices: ['because', 'because of', 'despite', 'due to'], answer: 0, why: 'あとに only a small number of mollusks ever produce one という文が続くので接続詞の because。because of・despite・due to は前置詞。' },
+    ],
+    tf: [
+      { statement: '真珠は、貝の中に入った小さな物を貝が真珠層でおおってできる。', answer: true, why: '第2段落 the mollusk covers the object with layers of a substance called nacre。' },
+      { statement: '真珠層は、厚い1枚の層でできている。', answer: false, why: '第2段落 arranged in extremely thin layers。' },
+      { statement: '天然の真珠はとてもめずらしい。', answer: true, why: '第3段落 Natural pearls are very rare。' },
+      { statement: '養殖真珠は、天然の真珠とはまったくちがう過程でできる。', answer: false, why: '第3段落 formed by the same natural process, but people start it。' },
+    ],
+    qa: [
+      { q: 'What gives a good pearl its soft shine?', choices: ['Light reflecting off many thin layers in slightly different ways.', 'A special paint added by people.', 'The color of the water around the oyster.', 'A single thick layer of calcium.'], answer: 0, why: '第2段落 Because light reflects off the many layers in slightly different ways。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
