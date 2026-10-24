@@ -84,7 +84,6 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   return (
     <div className="gacha">
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
-      <p className="stats-note">コインでタマゴを引こう！</p>
       <button
         className="good gacha-btn"
         disabled={full || coins < price}
