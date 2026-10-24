@@ -4,6 +4,7 @@ import { dailyGrammar, gradeOf, GRAMMAR } from './grammar'
 import { passagesFor } from './readlevel'
 import { todayReading } from './todayread'
 import { saveGrade } from './usergrade'
+import { levelOf } from './words'
 
 // 設定の学年・レベルに合わせて、今日の課題のむずかしさが変わる（オーナーの要望）
 beforeEach(() => localStorage.clear())
@@ -20,6 +21,13 @@ it('中1なら今日の文法は中1の単元、読解はかんたんな英文',
   expect(todayReading('2026-10-01').kind).toBe('short')
 })
 
+it('中2なら今日の単語は中2の単語帳から5語（level のない中学の単語もふくむ）', () => {
+  saveGrade('j2')
+  const ws = todayWords('2026-10-07')
+  expect(ws).toHaveLength(5)
+  expect(ws.every((w) => levelOf(w) === '中2')).toBe(true)
+})
+
 it('中3なら今日の単語は中3の単語帳から5語、読解は高校入試レベルの長文', () => {
   saveGrade('j3')
   const ws = todayWords('2026-10-05')
@@ -30,9 +38,9 @@ it('中3なら今日の単語は中3の単語帳から5語、読解は高校入�
   expect(passagesFor('exam').map((p) => p.id)).toContain(r.p.id)
 })
 
-it('社会人なら文法は中3〜高校、単語は高校基礎・熟語、読解は大学入試レベル', () => {
+it('社会人なら文法は中3〜高校、単語はビジネス・高校基礎、読解は大学入試レベル', () => {
   saveGrade('adult')
   for (let i = 1; i <= 20; i++) expect(['中3', '高校']).toContain(gradeOf(dailyGrammar(`2026-11-${String(i).padStart(2, '0')}`).id))
-  expect(todayWords('2026-11-01').every((w) => w.level === '高校基礎' || w.level === '熟語')).toBe(true)
+  expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎')).toBe(true)
   expect(passagesFor('univ').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
 })

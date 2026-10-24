@@ -4,12 +4,14 @@ import App from './App'
 import { buildQueue, dayKey } from './srs'
 import { pickWordOfDay } from './wordOfDay'
 import { souvenirFor } from './souvenir'
-import { WORDS, wordsOf } from './words'
+import { LEVELS, WORDS, wordsOf } from './words'
 import { SPECIES } from './monster'
 
 // 今日の新しい単語の順（日によって変わる）
 const FIRST = () => buildQueue(WORDS, {}, dayKey(), 0)
 
+// はじめの単語帳（ビジネスは社会人をえらんだときだけ）の語数
+const DEFAULT_N = wordsOf(LEVELS.filter((l) => l !== 'ビジネス')).length
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
   navTo('単語ゲーム')
@@ -87,7 +89,7 @@ describe('App', () => {
   it('カードをめくって「覚えた」で次の単語に進む', () => {
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
-    expect(screen.getByLabelText(`今日の残り 10 語 ・ 定着 0 / ${WORDS.length} 語`)).toBeInTheDocument()
+    expect(screen.getByLabelText(`今日の残り 10 語 ・ 定着 0 / ${DEFAULT_N} 語`)).toBeInTheDocument()
     expect(screen.getByText(FIRST()[0].en)).toBeInTheDocument()
 
     fireEvent.click(screen.getByText('意味を見る'))
@@ -361,7 +363,7 @@ describe('App', () => {
     navTo('ホーム')
     expect(screen.getByText('1日')).toBeInTheDocument()
     expect(document.querySelector('.result-list')!.textContent).toContain('2問')
-    expect(screen.getByText(`0 / ${WORDS.length}`)).toBeInTheDocument()
+    expect(screen.getByText(`0 / ${DEFAULT_N}`)).toBeInTheDocument()
   })
 
   it('単語帳の選択はホームには出さず（オーナーの要望）、設定にある', () => {
@@ -489,7 +491,7 @@ describe('App', () => {
     navTo('設定')
     fireEvent.click(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: 'マイ単語帳' }))
     goCards()
-    expect(screen.getByLabelText(new RegExp(`定着 0 / ${WORDS.length + 1} 語`))).toBeInTheDocument()
+    expect(screen.getByLabelText(new RegExp(`定着 0 / ${DEFAULT_N + 1} 語`))).toBeInTheDocument()
   })
 
   it('相棒に名前をつけられ、保存される', () => {

@@ -2,7 +2,7 @@
 import { makeLookup } from './glossary'
 import { PASSAGES, type Passage } from './reading'
 import { loadGrade, WORD_LEVELS_FOR } from './usergrade'
-import { WORDS, type Word } from './words'
+import { levelOf, WORDS, type Word } from './words'
 
 // あたりまえすぎて課題にしない語
 const SKIP = new Set(['a', 'an', 'the', 'i', 'is', 'am', 'are', 'was', 'were', 'be', 'to', 'of', 'in', 'on', 'at', 'and', 'but', 'or', 'it', 'he', 'she', 'we', 'you', 'they', 'my', 'your', 'his', 'her', 'our', 'their', 'me', 'him', 'us', 'them', 'this', 'that', 'do', 'does', 'did', 'have', 'has', 'not', 'no', 'yes', 'so', 'for', 'with', 'by', 'very'])
@@ -33,7 +33,7 @@ export function wordsInText(text: string, max = 5, words: Word[] = WORDS): Word[
 export function todayWords(day: string): Word[] {
   const g = loadGrade()
   if (!g || g === 'j1') return wordsInText(dailyShort(day).text)
-  const pool = WORDS.filter((w) => !!w.level && WORD_LEVELS_FOR[g].includes(w.level))
+  const pool = WORDS.filter((w) => WORD_LEVELS_FOR[g].includes(levelOf(w)))
   if (pool.length < 5) return wordsInText(dailyShort(day).text)
   const h = dayHash(day)
   const out: Word[] = []

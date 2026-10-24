@@ -5,8 +5,8 @@ import { LEVELS } from './words'
 describe('単語帳の選択', () => {
   beforeEach(() => localStorage.clear())
 
-  it('初期値は全レベル', () => {
-    expect(loadLevels()).toEqual(LEVELS)
+  it('初期値はビジネス（社会人向け）以外の全レベル', () => {
+    expect(loadLevels()).toEqual(LEVELS.filter((l) => l !== 'ビジネス'))
   })
 
   it('切り替えはレベル順を保ち、最後の1つは外せない', () => {
@@ -19,7 +19,7 @@ describe('単語帳の選択', () => {
     saveLevels(['中3'])
     expect(loadLevels()).toEqual(['中3'])
     localStorage.setItem('eitan:levels', '["大学"]')
-    expect(loadLevels()).toEqual(LEVELS)
+    expect(loadLevels()).toEqual(LEVELS.filter((l) => l !== 'ビジネス'))
   })
 })
 

@@ -1,6 +1,6 @@
-export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形' | '会話'
+export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形' | '会話' | 'ビジネス'
 
-export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']
+export const LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話', 'ビジネス']
 
 export type Word = {
   id: string
@@ -3866,8 +3866,42 @@ const WORDS_4: Word[] = [
   { id: 'see-you-around', en: 'See you around', ja: 'またどこかでね', example: 'It was nice talking to you. See you around!', exampleJa: '話せて楽しかったよ。またどこかでね！', level: '会話' },
 ]
 
+// ビジネス（社会人向け）：仕事でよく使う語。訳と例文は自作
+const WORDS_5: Word[] = [
+  { id: 'deadline', en: 'deadline', ja: '締め切り', example: 'The deadline for this report is next Friday.', exampleJa: 'このレポートの締め切りは来週の金曜日だ。', level: 'ビジネス' },
+  { id: 'invoice', en: 'invoice', ja: '請求書', example: 'We will send the invoice by email tomorrow.', exampleJa: '明日、請求書をメールで送ります。', level: 'ビジネス' },
+  { id: 'client', en: 'client', ja: '顧客・取引先', example: 'I have a meeting with a new client this afternoon.', exampleJa: '今日の午後、新しい取引先との打ち合わせがある。', level: 'ビジネス' },
+  { id: 'negotiate', en: 'negotiate', ja: '交渉する', example: 'They negotiated the price for two hours.', exampleJa: '彼らは2時間、価格について交渉した。', level: 'ビジネス' },
+  { id: 'proposal', en: 'proposal', ja: '提案・提案書', example: 'Our team prepared a proposal for the new service.', exampleJa: '私たちのチームは新しいサービスの提案書を準備した。', level: 'ビジネス' },
+  { id: 'postpone', en: 'postpone', ja: '（予定を）延期する・先にのばす', example: 'The meeting was postponed until next week.', exampleJa: '会議は来週に延期された。', level: 'ビジネス' },
+  { id: 'sales', en: 'sales', ja: '売上・販売', example: 'Our sales went up by ten percent last month.', exampleJa: '先月、売上が10パーセント上がった。', level: 'ビジネス' },
+  { id: 'employee', en: 'employee', ja: '従業員・社員', example: 'The company has about three hundred employees.', exampleJa: 'その会社には約300人の社員がいる。', level: 'ビジネス' },
+  { id: 'resign', en: 'resign', ja: '辞職する・辞める', example: 'She resigned from her job to start her own business.', exampleJa: '彼女は自分の事業を始めるために仕事を辞めた。', level: 'ビジネス' },
+  { id: 'commute', en: 'commute', ja: '通勤する', example: 'I commute to work by train every day.', exampleJa: '私は毎日、電車で通勤している。', level: 'ビジネス' },
+  { id: 'overtime', en: 'overtime', ja: '残業', example: 'I worked overtime yesterday to finish the report.', exampleJa: 'レポートを終わらせるために、昨日は残業した。', level: 'ビジネス' },
+  { id: 'shipment', en: 'shipment', ja: '発送・発送品', example: 'The shipment will arrive on Monday.', exampleJa: '発送品は月曜日に届きます。', level: 'ビジネス' },
+  { id: 'inventory', en: 'inventory', ja: '在庫', example: 'We need to check the inventory before the sale.', exampleJa: 'セールの前に在庫を確認する必要がある。', level: 'ビジネス' },
+  { id: 'purchase', en: 'purchase', ja: '購入する', example: 'You can purchase tickets online.', exampleJa: 'チケットはオンラインで購入できる。', level: 'ビジネス' },
+  { id: 'refund', en: 'refund', ja: '返金', example: 'I asked the store for a refund.', exampleJa: '私は店に返金を求めた。', level: 'ビジネス' },
+  { id: 'receipt', en: 'receipt', ja: '領収書・レシート', example: 'Please keep the receipt for one month.', exampleJa: 'レシートは1か月とっておいてください。', level: 'ビジネス' },
+  { id: 'reschedule', en: 'reschedule', ja: '予定を変更する', example: 'Can we reschedule the meeting to Thursday?', exampleJa: '打ち合わせを木曜日に変更できますか。', level: 'ビジネス' },
+  { id: 'feedback', en: 'feedback', ja: '意見・感想', example: 'Thank you for your helpful feedback.', exampleJa: '役に立つご意見をありがとうございます。', level: 'ビジネス' },
+  { id: 'workload', en: 'workload', ja: '仕事量', example: 'My workload is very heavy this month.', exampleJa: '今月は仕事量がとても多い。', level: 'ビジネス' },
+  { id: 'supervisor', en: 'supervisor', ja: '上司・監督者', example: 'Please ask your supervisor before you decide.', exampleJa: '決める前に上司にたずねてください。', level: 'ビジネス' },
+  { id: 'inquiry', en: 'inquiry', ja: '問い合わせ', example: 'Thank you for your inquiry about our products.', exampleJa: '弊社の製品についてお問い合わせいただき、ありがとうございます。', level: 'ビジネス' },
+  { id: 'cooperation', en: 'cooperation', ja: '協力', example: 'Thank you for your cooperation.', exampleJa: 'ご協力ありがとうございます。', level: 'ビジネス' },
+  { id: 'expense', en: 'expense', ja: '費用・経費', example: 'Please write your travel expenses on this form.', exampleJa: 'この用紙に交通費を書いてください。', level: 'ビジネス' },
+  { id: 'attendee', en: 'attendee', ja: '出席者・参加者', example: 'There were twenty attendees at the seminar.', exampleJa: 'セミナーには20人の参加者がいた。', level: 'ビジネス' },
+  { id: 'merchandise', en: 'merchandise', ja: '（店などの）商品・品物', example: 'The store sells a wide range of merchandise.', exampleJa: 'その店ははば広い商品を売っている。', level: 'ビジネス' },
+  { id: 'warehouse', en: 'warehouse', ja: '倉庫', example: 'The boxes are kept in the warehouse.', exampleJa: '箱は倉庫に保管されている。', level: 'ビジネス' },
+  { id: 'brochure', en: 'brochure', ja: 'パンフレット', example: 'Please take a brochure at the front desk.', exampleJa: '受付でパンフレットをお取りください。', level: 'ビジネス' },
+  { id: 'extension', en: 'extension', ja: '内線・延長', example: 'Please call me at extension 205.', exampleJa: '内線205番にお電話ください。', level: 'ビジネス' },
+  { id: 'reception', en: 'reception', ja: '受付・歓迎会', example: 'Please wait at the reception on the first floor.', exampleJa: '1階の受付でお待ちください。', level: 'ビジネス' },
+  { id: 'regards', en: 'regards', ja: '（手紙・メールの結び）よろしく', example: 'I ended my email with "Best regards."', exampleJa: '私はメールを「Best regards（よろしくお願いします）」で結んだ。', level: 'ビジネス' },
+]
+
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
-export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_2B, ...WORDS_3, ...WORDS_3B, ...WORDS_4]
+export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_2B, ...WORDS_3, ...WORDS_3B, ...WORDS_4, ...WORDS_5]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
 const LEVEL_OF: Record<string, Level> = Object.fromEntries([

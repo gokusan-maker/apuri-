@@ -68,6 +68,7 @@ export const BOSSES: Record<Level, BossLook> = {
   テーマ別: { name: 'ゴチャマゼモチ', desc: 'いろんなテーマをごちゃまぜにするモチ。', color: '#db2777', line: '#831843', eye: '#fdf2f8' },
   数: { name: 'カゾエモチ', desc: '数を数えるのが大すきだが、よくまちがえるモチ。', color: '#4f46e5', line: '#1e1b4b', eye: '#fef9c3' },
   '色・形': { name: 'ニジイロモチ', desc: '色と形をぬすんで虹にしてしまうモチ。', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
+  ビジネス: { name: 'シメキリモチ', desc: '締め切りをちらつかせて追いかけてくる、いそがしいモチ。', color: '#1d4ed8', line: '#1e3a8a', eye: '#fef3c7' },
   会話: { name: 'オシャベリモチ', desc: 'あいさつを聞くまで通してくれない、おしゃべりなモチ。', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
 }
 

@@ -46,7 +46,7 @@ it('全ステージをクリアするとボスに挑戦できる', () => {
   const all = Object.fromEntries(stagesOf('中3').map((s) => [s.id, 1]))
   render(<Stages levels={['中3']} record={all} onClear={() => {}} />)
   fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
-  expect(screen.getByText('コオリモチ')).toBeInTheDocument()
+  expect(screen.getAllByText(/コオリモチ/).length).toBeGreaterThan(0) // 日によっては「金色のコオリモチ」
   fireEvent.click(screen.getByText('← にげる'))
   expect(screen.getByText('ステージ')).toBeInTheDocument()
 })
@@ -167,7 +167,7 @@ it('週末はボスラッシュEXが出て、むずかしいボスと戦う', ()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
   fireEvent.click(screen.getByText(/週末限定ボスラッシュEX/))
   expect(screen.getByText('🔥 ボスラッシュEX 1 / 3')).toBeInTheDocument()
-  expect(screen.getByText('コオリモチ')).toBeInTheDocument() // 中3のボスから
+  expect(screen.getAllByText(/コオリモチ/).length).toBeGreaterThan(0) // 日によっては「金色のコオリモチ」 // 中3のボスから
 })
 
 it('鍵が3つあると金の宝箱をあけられる', () => {
