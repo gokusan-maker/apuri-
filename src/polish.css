@@ -1989,3 +1989,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 }
 :root[data-theme="dark"] .long-recommend { background: color-mix(in srgb, #f59e0b 16%, var(--card)); color: #fcd34d; }
 .long-recommend strong { color: var(--fg); }
+
+/* 明るいグラデーションの上の白い文字は、うすい影で読みやすく */
+.rush-boss.ex, .mode-change, .mode-now { text-shadow: 0 1px 2px rgb(0 0 0 / 0.28); }
