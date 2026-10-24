@@ -2610,3 +2610,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .genre-tabs .gt-2 { --g: #10b981; }
 .genre-tabs .gt-3 { --g: #d97706; }
 .genre-tabs .gt-4 { --g: #9333ea; }
+.boss-team-lv { font-weight: 900; color: var(--team-c); }

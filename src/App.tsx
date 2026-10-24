@@ -559,9 +559,9 @@ function App() {
   }
   // ボス戦のチーム：単語（相棒）・文法・読解のなかまの絵と名前
   const bossTeam: BossTeam = {
-    word: { name: monster.name ?? formOf(monster).name, fig: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />, answer: onAnswer },
-    grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} />, answer: onAnswerTrack('grammar') },
-    reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} />, answer: onAnswerTrack('reading') },
+    word: { name: monster.name ?? formOf(monster).name, fig: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />, answer: onAnswer, level: levelInfo(monster.xp).level },
+    grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} />, answer: onAnswerTrack('grammar'), level: buddyLevel(buddies.grammar).level },
+    reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} />, answer: onAnswerTrack('reading'), level: buddyLevel(buddies.reading).level },
   }
 
   function gainXp(raw: number, source: Source | null) {

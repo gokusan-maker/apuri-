@@ -5,7 +5,7 @@ import type { Source } from './monster'
 
 type AnswerFn = (correct: boolean, xp: number, wordId: string, source: Source) => void
 // answer：その番のなかまが答えた分の XP をそのなかまへ（単語→相棒・文法→ことばモンスター・読解→竜）
-export type BossTeam = Record<TeamRole, { name: string; fig: ReactNode; answer?: AnswerFn }>
+export type BossTeam = Record<TeamRole, { name: string; fig: ReactNode; answer?: AnswerFn; level?: number }>
 export const BossTeamContext = createContext<BossTeam | null>(null)
 export const TEAM_LABEL: Record<TeamRole, string> = { word: '単語', grammar: '文法', reading: '読解' }
 export const TEAM_ICON: Record<TeamRole, string> = { word: '🔤', grammar: '📐', reading: '📖' }

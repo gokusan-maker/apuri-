@@ -763,6 +763,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                     <small>
                       {TEAM_ICON[r]}
                       {TEAM_LABEL[r]}
+                      {team![r].level !== undefined && <b className="boss-team-lv"> Lv.{team![r].level}</b>}
                     </small>
                     {q.team === r && picked !== null && picked === q.answer && (
                       <i key={`xp${index}`} className="boss-team-xp" aria-label={`${team![r].name}に XP +${quizXp(combo)}`}>
