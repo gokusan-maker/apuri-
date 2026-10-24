@@ -456,7 +456,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         弱点：{speciesOf(weak).name}
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
       </p>
-      {partner && (
+      {partner && !won && !lost && (
         <div className="boss-partner">
           {picked !== null && q && picked === q.answer && !won && (
             <span key={`cheer${index}`} className="cheer-stamp" aria-label="おうえんスタンプ">

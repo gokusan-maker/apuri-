@@ -109,6 +109,14 @@ describe('ボス戦', () => {
     expect(screen.getByLabelText('竜のひとことを聞く')).toBeInTheDocument()
   })
 
+  it('勝ったあとは、相棒の特技の説明（戦い中の情報）を出さない', async () => {
+    const { FORMS } = await import('./monster')
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} partner={{ form: FORMS[1], name: 'モチ' }} />)
+    expect(document.querySelector('.boss-partner')).not.toBeNull()
+    answer(true)
+    expect(document.querySelector('.boss-partner')).toBeNull()
+  })
+
   it('3回まちがえると負け、もう一度挑戦できる', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     for (let i = 0; i < 3; i++) {
