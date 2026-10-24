@@ -151,8 +151,10 @@ export function Stats({
           ))}
         </details>
       )}
-      <WeekChart days={week} goal={goal} />
+      {week.some((d) => d.count > 0) && <WeekChart days={week} goal={goal} />}
       {calendar}
+      {schedule.some((n) => n > 0) && (
+        <>
       <h2>復習の予定</h2>
       <p className="stats-note">
         今日 {schedule[0]}語・<strong>明日 {schedule[1]}語</strong>
@@ -167,6 +169,8 @@ export function Stats({
           </li>
         ))}
       </ol>
+        </>
+      )}
       {weak.length > 0 && (
         <>
           <h2>苦手な単語</h2>

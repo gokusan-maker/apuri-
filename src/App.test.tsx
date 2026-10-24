@@ -1698,3 +1698,10 @@ it('キャラクターを6種そろえるとバッジとガチャチケットが
   render(<App />)
   expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
 })
+
+it('記録：まだ0ばかりの「この1週間」と「復習の予定」は出さない', () => {
+  localStorage.clear()
+  render(<App />)
+  expect(screen.queryByText('この1週間')).toBeNull()
+  expect(screen.queryByText('復習の予定')).toBeNull()
+})
