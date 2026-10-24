@@ -67,3 +67,9 @@ it('「まだ」だけめくる・まちがいをお気に入り（ピンク）�
   has('ShopView.tsx', 'pill-purple')
   has('ShopView.tsx', 'pill-green')
 })
+
+it('おさんぽクイズ（緑）・単語一覧（青）のボタンも色つき', () => {
+  const src = readFileSync('src/App.tsx', 'utf8')
+  expect(src).toContain('list-link pill-btn pill-green" onClick={() => setWalkQuizOpen(true)}')
+  expect(src).toContain('list-link pill-btn pill-blue" onClick={() => setShowList(true)}')
+})

@@ -959,7 +959,7 @@ function App() {
             (walkQuizOpen ? (
               <WalkQuiz diary={walkDiary} onAnswer={onAnswer} onClose={() => setWalkQuizOpen(false)} />
             ) : (
-              <button className="list-link" onClick={() => setWalkQuizOpen(true)}>
+              <button className="list-link pill-btn pill-green" onClick={() => setWalkQuizOpen(true)}>
                 🐾 おさんぽクイズ（拾った単語から3問）
               </button>
             ))}
@@ -1111,7 +1111,7 @@ function App() {
               onSkip={ordered.length > 1 ? () => setSkipped((s) => [...s.filter((x) => x !== card.id), card.id]) : undefined}
             />
             {mode === 'word' && wordTab !== 'mini' && (
-              <button className="list-link" onClick={() => setShowList(true)}>
+              <button className="list-link pill-btn pill-blue" onClick={() => setShowList(true)}>
                 📚 単語一覧・さがす
               </button>
             )}
