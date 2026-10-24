@@ -2028,3 +2028,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .egg-trade-btn small { font-size: 0.75rem; font-weight: 700; opacity: 0.85; }
 
 .party-help > summary { cursor: pointer; margin: 4px 0 8px; color: var(--muted); font-weight: 800; font-size: 0.85rem; }
+
+/* 読解のむずかしさタブの説明：語の切れ目（大学入試／レベル）でだけ改行 */
+.read-level-sub { word-break: keep-all; overflow-wrap: normal; }

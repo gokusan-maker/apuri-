@@ -157,6 +157,7 @@ import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak 
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
+import { splitSoft } from './softbreak'
 
 type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
 type WordTab = 'card' | 'mini' | 'time' | 'stage'
@@ -1609,7 +1610,7 @@ function App() {
               >
                 {readyFor(t.id, loadLongRecord(), loadShortDone()) && <span className="read-level-ready">⭐ちょうせん</span>}
                 <strong>{t.label}</strong>
-                <small>{t.sub}</small>
+                <small className="read-level-sub">{splitSoft(t.sub).flatMap((x, i) => (i > 0 ? [<wbr key={i} />, x] : [x]))}</small>
                 {solvedOf(t.id, loadLongRecord(), loadShortDone()) && (
                   <small className="read-level-done">
                     {solvedOf(t.id, loadLongRecord(), loadShortDone())!.done}/{solvedOf(t.id, loadLongRecord(), loadShortDone())!.total}本

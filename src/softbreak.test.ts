@@ -5,6 +5,7 @@ it('カタカナの合成語を語の切れ目で分ける（切れ目がなけ�
   expect(splitSoft('コレクションマスター')).toEqual(['コレクション', 'マスター'])
   expect(splitSoft('100問チャレンジ')).toEqual(['100問', 'チャレンジ'])
   expect(splitSoft('過去形モンスター')).toEqual(['過去形', 'モンスター'])
+  expect(splitSoft('大学入試レベル')).toEqual(['大学入試', 'レベル'])
   expect(splitSoft('スピードスター')).toEqual(['スピード', 'スター'])
   expect(splitSoft('ほしぞらステーション')).toEqual(['ほしぞら', 'ステーション'])
   expect(splitSoft('もぐもぐおにぎりん')).toEqual(['もぐもぐ', 'おにぎりん'])
