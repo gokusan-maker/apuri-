@@ -3447,6 +3447,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-woodpecker',
+    title: 'How Woodpeckers Avoid Headaches',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Woodpeckers strike tree trunks with their beaks again and again, sometimes many times per second, to find insects and to make holes for their nests. For humans, hitting our heads this hard would quickly cause injury. This has led scientists to ask ( A ) woodpeckers are able to avoid brain damage.",
+      "For many years, a popular explanation was that the bird's head works like a helmet that absorbs the shock. However, a study published in 2022 suggested a different answer. Using high-speed video, researchers found that a woodpecker's head acts more like a stiff hammer than a cushion. If the head absorbed much of the shock, the bird would have to hit even harder ( B ) make holes, which would waste energy.",
+      "So why is the brain safe? Part of the answer appears to be size. A woodpecker's brain is very small and light, so the forces acting on it during pecking are much lower than those that would harm a larger brain such as ours. The woodpecker also has a long tongue that wraps around the back of its skull when it is not in use. This feature, ( C ) is unusual among birds, helps the bird reach insects deep inside wood.",
+    ],
+    ja: [
+      'キツツキは、虫を見つけたり巣の穴を作ったりするために、ときには1秒に何回もくちばしで木の幹を何度もたたく。人間なら、これほど強く頭を打てばすぐにけがをしてしまう。そのため科学者たちは、キツツキがどうやって脳のダメージを防いでいるのかを問うようになった。',
+      '長年、よく知られた説明は、鳥の頭がヘルメットのように衝撃を吸収しているというものだった。しかし、2022年に発表されたある研究は、別の答えを示した。高速度ビデオを使って、研究者たちは、キツツキの頭がクッションというより、かたいハンマーのようにはたらいていることを発見した。もし頭が衝撃の多くを吸収していたら、鳥は穴をあけるためにもっと強く打たなければならず、エネルギーのむだになるだろう。',
+      'では、なぜ脳は安全なのだろうか。答えの一部は大きさにあるようだ。キツツキの脳はとても小さくて軽いので、つつくときに脳にかかる力は、私たちのようなもっと大きな脳を傷つける力よりずっと小さいのである。キツツキはまた、使っていないときには頭骨のうしろに巻きついている長い舌を持っている。この特徴は鳥の中ではめずらしく、木の奥深くにいる虫にとどくのに役立っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'ask how ～「どのように～かを問う」。あとが完全な文（woodpeckers are able to avoid brain damage）なので how。what・which は文の中に欠けた名詞が必要。' },
+      { id: 'B', choices: ['to', 'for', 'by', 'with'], answer: 0, why: 'あとが原形の make なので目的を表す不定詞 to「～するために」。' },
+      { id: 'C', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとの非制限用法なので which。that は非制限用法では使えず、who は人に使う。' },
+    ],
+    tf: [
+      { statement: 'キツツキは虫を見つけたり巣の穴を作ったりするために木をたたく。', answer: true, why: '第1段落 to find insects and to make holes for their nests。' },
+      { statement: '2022年の研究によると、キツツキの頭はクッションのように衝撃を吸収している。', answer: false, why: '第2段落 a woodpecker\'s head acts more like a stiff hammer than a cushion。' },
+      { statement: 'キツツキの脳が安全な理由の1つは、脳が小さくて軽いことである。', answer: true, why: '第3段落 A woodpecker\'s brain is very small and light。' },
+      { statement: '長い舌を持つことは、鳥の中ではふつうのことである。', answer: false, why: '第3段落 This feature, which is unusual among birds。' },
+    ],
+    qa: [
+      { q: 'Why would a shock-absorbing head be a disadvantage for a woodpecker?', choices: ['The bird would have to hit harder to make holes, wasting energy.', 'The bird would lose its long tongue.', 'The bird could not see insects clearly.', 'The bird would become too heavy to fly.'], answer: 0, why: '第2段落 the bird would have to hit even harder to make holes, which would waste energy。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
