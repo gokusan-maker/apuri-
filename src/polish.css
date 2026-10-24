@@ -2112,3 +2112,18 @@ details[open] > summary::before { transform: rotate(90deg); }
 .boss-modes .boss-btn.rare-boss::after { color: #713f12; }
 .boss-modes .mode-badge { background: rgb(255 255 255 / 0.25); color: #fff; }
 .boss-modes .rare-boss .mode-badge { background: rgb(255 255 255 / 0.55); color: #713f12; }
+
+/* 読解の一覧：ジャンルの行を色つきのゲームボタンに（アイコンつき） */
+.long-genre-fold { --lg-h: 225; }
+.long-genre-fold.lg-1 { --lg-h: 330; }
+.long-genre-fold.lg-2 { --lg-h: 160; }
+.long-genre-fold.lg-3 { --lg-h: 25; }
+.long-genre-fold.lg-4 { --lg-h: 275; }
+.long-genre-fold > summary { gap: 10px; padding: 12px 14px; border-radius: 16px; background: linear-gradient(135deg, hsl(var(--lg-h) 75% 55%), hsl(calc(var(--lg-h) + 20) 70% 40%)); color: #fff; font-weight: 800; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 4px 0 hsl(var(--lg-h) 60% 30%), 0 6px 14px rgb(0 0 0 / 0.12); }
+.long-genre-fold > summary:active { transform: translateY(3px); box-shadow: 0 1px 0 hsl(var(--lg-h) 60% 30%); }
+.long-genre-fold > summary .lg-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: none; border-radius: 12px; background: rgb(255 255 255 / 0.25); font-size: 1.15rem; text-shadow: none; }
+.long-genre-fold .fold-meta { background: rgb(255 255 255 / 0.25); color: #fff; }
+.long-genre-fold { padding: 0; margin: 10px 0; background: none; }
+.long-genre-fold > summary::before { order: 9; margin: 0 0 0 2px; background: rgb(255 255 255 / 0.25); color: #fff; }
+.long-genre-fold > summary .fold-meta { order: 8; }
+.long-genre-fold > .grammar-list { margin-top: 8px; }

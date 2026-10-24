@@ -513,10 +513,12 @@ it('答えかけの読解は一覧の上の「✏️ とちゅうの読解」に
   expect(box.textContent).toContain(shownTitle(p, 5))
 })
 
-it('読解の一覧：読んだ語数がピルで出て、ジャンルの数字は小さい補足になる', () => {
+it('読解の一覧：まだ0の読んだ語数・全部制覇は出さず、ジャンルはアイコンつきの色ボタンで数字は小さい補足', () => {
   localStorage.clear()
   render(<LongReading />)
-  expect(document.querySelector('.long-words')?.textContent).toMatch(/読んだ語数：0語/)
+  expect(document.querySelector('.long-words')).toBeNull()
+  expect(document.querySelector('.long-challenge')).toBeNull()
+  expect(document.querySelector('details.long-genre-fold.lg-0 summary .lg-icon')?.textContent).toBe('💡')
   expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.getAttribute('aria-label')).toMatch(/本・解いた 0本/)
   expect(document.querySelector('details.long-genre-fold summary .fold-meta')?.textContent).toMatch(/^0\/\d+$/)
 })

@@ -17,6 +17,7 @@ type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source:
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
 const IDIOMS = blankIdioms(LONG_PASSAGES)
+const GENRE_ICON: Record<Genre, string> = { 説明文: '💡', 物語: '📖', 会話文: '💬', '手紙・メール': '✉️', スピーチ: '🎤' }
 
 // 読み上げ用：空所は「ブランク」と読まず、少し間をあける
 const readable = (t: string) => t.replace(/\( [A-Z] \)|\[ \d \]/g, ', ... ,')
@@ -261,15 +262,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             </ul>
           </details>
         )}
-        <p className="stats-note long-words">📚 読んだ語数：{readWords}語</p>
-        <div className="long-challenge" aria-label={`解いた読解 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
+        {readWords > 0 && <p className="stats-note long-words">📚 読んだ語数：{readWords}語</p>}
+        {Object.keys(record).some((id) => LIST.some((x) => x.id === id)) && <div className="long-challenge" aria-label={`解いた読解 ${Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / ${LIST.length}本`}>
           <p className="stats-note">
             🏁 全部制覇：{Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length} / {LIST.length}本　{solvedBadges(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length, LIST.length).join(' ')}
           </p>
           <div className="zukan-pct">
             <span style={{ width: `${(Object.keys(record).filter((id) => LIST.some((x) => x.id === id)).length / LIST.length) * 100}%` }} />
           </div>
-        </div>
+        </div>}
         {readingLevel(history) && (
           <p className="stats-note reading-level">
             🎓 読解レベル：<strong>{readingLevel(history)!.name}</strong>（直近{history.length}本の正答率 {readingLevel(history)!.pct}%）
@@ -318,8 +319,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             {shownGenres.map((g) => {
               const ps = LIST.filter((x) => genreOf(x) === g)
               return (
-                <details key={g} className="grammar-grade-fold long-genre-fold">
+                <details key={g} className={`grammar-grade-fold long-genre-fold lg-${GENRES.indexOf(g)}`}>
                   <summary>
+                    <span className="lg-icon" aria-hidden="true">{GENRE_ICON[g]}</span>
                     {g}
                     <span className="fold-meta" aria-label={`${ps.length}本・解いた ${ps.filter((x) => record[x.id] !== undefined).length}本・💯満点 ${ps.filter((x) => (record[x.id] ?? -1) >= totalOf(x)).length}本`}>
                       {ps.filter((x) => record[x.id] !== undefined).length}/{ps.length}
