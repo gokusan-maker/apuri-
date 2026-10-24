@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'famous-full-similar': { wrong: 'This town is famous of its hot springs.', right: 'This town is famous for its hot springs.', why: '「～で有名だ」は be famous for ～。' },
   'times-a-week': { wrong: 'I go to the library two times in a week.', right: 'I go to the library twice a week.', why: '2回はふつう twice。「1週間に」は a week で、in はいらない。' },
   'what-time': { wrong: 'What time you get up?', right: 'What time do you get up?', why: 'What time のあとは疑問文の形（do / does ＋ 主語 ＋ 動詞）。' },
   'by-uses': { wrong: 'I came here by a bus.', right: 'I came here by bus.', why: '手段の by ＋ 乗り物には a や the をつけない。' },
