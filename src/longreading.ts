@@ -5199,6 +5199,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: "The writer could see the girl's face clearly in the photo.", answer: false, why: '第4段落 I could not see her face clearly。' },
     ],
   },
+  {
+    id: 'park-exercises',
+    title: 'Morning Exercises in the Park',
+    level: '中2（物語）',
+    paragraphs: [
+      'During the summer vacation, I stayed at my grandfather\'s house. Every morning, he woke me up at six. "Let\'s go to the park," he said. I did not want to get up so early, but I went with him ( A ) he looked so happy.',
+      'In the park, about twenty people were waiting. Most of them were older people, but there were some children, too. At six thirty, music came from a small radio, and everyone started to do exercises together. I knew the exercises from school, so it was easy for me ( B ) join them.',
+      'After the exercises, people talked and laughed. An old woman gave me a candy and said, "You are the youngest member today!" My grandfather told me that he did not know anyone in the park when he moved to this town. "I found many friends here ( C ) doing these exercises every morning," he said.',
+      'On the last day of the vacation, everyone gave me a card. It had many messages, like "Come back next summer!" Now I am back in my city, but I sometimes do the exercises alone in my room. When I hear the music, I remember the cool morning air and the smiling faces in the park.',
+    ],
+    ja: [
+      '夏休みのあいだ、私は祖父の家にとまりました。毎朝、祖父は6時に私を起こしました。「公園に行こう」と祖父は言いました。そんなに早く起きたくはありませんでしたが、祖父がとてもうれしそうだったので、いっしょに行きました。',
+      '公園では、20人くらいの人が待っていました。ほとんどはお年寄りでしたが、子どももいました。6時半に小さなラジオから音楽が流れ、みんながいっしょに体操を始めました。私は学校でその体操を知っていたので、加わるのはかんたんでした。',
+      '体操のあと、人々は話したり笑ったりしました。おばあさんが私にあめをくれて、「今日はあなたがいちばん若いメンバーね！」と言いました。祖父は、この町に引っこしてきたとき、公園にはだれも知り合いがいなかったと教えてくれました。「毎朝この体操をすることで、ここでたくさんの友だちができたんだよ」と祖父は言いました。',
+      '夏休みの最後の日、みんなが私にカードをくれました。「来年の夏もおいで！」など、たくさんのメッセージが書いてありました。今は自分の町にもどっていますが、ときどき部屋でひとりで体操をします。あの音楽を聞くと、すずしい朝の空気と、公園の笑顔を思い出します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'during', 'without'], answer: 0, why: 'あとに文（he looked so happy）が続くので接続詞の because「～なので」。because of・during・without は前置詞で、あとに名詞が来る。' },
+      { id: 'B', choices: ['to', 'for', 'of', 'with'], answer: 0, why: 'It is easy for 人 to ～「人にとって～するのはかんたんだ」。ここでは it was easy for me to join them。' },
+      { id: 'C', choices: ['by', 'with', 'to', 'at'], answer: 0, why: 'by ～ing「～することによって」。by doing these exercises「この体操をすることで」。' },
+    ],
+    tf: [
+      { statement: 'The writer wanted to get up early every morning.', answer: false, why: '第1段落 I did not want to get up so early。' },
+      { statement: 'There were some children in the park.', answer: true, why: '第2段落 there were some children, too。' },
+      { statement: 'The grandfather had many friends when he moved to the town.', answer: false, why: '第3段落 he did not know anyone in the park when he moved to this town。' },
+      { statement: 'The writer sometimes does the exercises alone now.', answer: true, why: '第4段落 I sometimes do the exercises alone in my room。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
