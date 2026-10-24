@@ -986,8 +986,8 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           🐾 キャラクター {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).length} / {SPECIES.length}（タマゴガチャで出るよ）
         </span>
         <ol className="zukan-line zukan-kinds zukan-species">
-          {SPECIES.map((sp) => {
-            const got = sp.id === 'mochi' || species.has(sp.id)
+          {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).map((sp) => {
+            const got = true
             return (
               <li key={sp.id} className={got ? 'got' : 'locked'}>
                 <button
@@ -1004,6 +1004,12 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
               </li>
             )
           })}
+          {/* まだ出会っていないキャラクターは1マスの「？×N」にまとめる */}
+          {SPECIES.some((sp) => sp.id !== 'mochi' && !species.has(sp.id)) && (
+            <li className="locked zukan-more" aria-label={`まだ出会っていないキャラクター ${SPECIES.filter((sp) => sp.id !== 'mochi' && !species.has(sp.id)).length}`}>
+              ？×{SPECIES.filter((sp) => sp.id !== 'mochi' && !species.has(sp.id)).length}
+            </li>
+          )}
         </ol>
       </div>
       {spDetail && (
@@ -1016,8 +1022,8 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}（タマゴガチャで出るよ）
         </span>
         <ol className="zukan-line zukan-kinds">
-          {KINDS.map((k) => {
-            const got = k.id === 'normal' || kinds.has(k.id)
+          {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).map((k) => {
+            const got = true
             return (
               <li key={k.id} className={got ? 'got' : 'locked'}>
                 <span className="zukan-pick" aria-label={got ? `${k.name}（${RARITY_LABEL[k.rarity]}）` : 'まだ出ていない色'}>
@@ -1030,6 +1036,12 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
               </li>
             )
           })}
+          {/* まだ出ていない色は1マスの「？×N」にまとめる */}
+          {KINDS.some((k) => k.id !== 'normal' && !kinds.has(k.id)) && (
+            <li className="locked zukan-more" aria-label={`まだ出ていない色 ${KINDS.filter((k) => k.id !== 'normal' && !kinds.has(k.id)).length}`}>
+              ？×{KINDS.filter((k) => k.id !== 'normal' && !kinds.has(k.id)).length}
+            </li>
+          )}
         </ol>
       </div>
       <details className="zukan-collection">

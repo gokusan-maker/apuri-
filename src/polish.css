@@ -2194,3 +2194,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .snacks .item-owned { position: absolute; top: -6px; right: -4px; min-width: 24px; padding: 1px 7px; border-radius: 999px; background: linear-gradient(135deg, #f472b6, #db2777); color: #fff; font-size: 0.72rem; font-weight: 900; text-align: center; box-shadow: 0 2px 0 #9d174d; }
 /* なかま図鑑：まだ会っていない姿は1マス（2列分）にまとめる */
 .buddy-zukan-row li.locked.more { grid-column: span 2; aspect-ratio: auto; font-size: 0.85rem; font-weight: 800; white-space: nowrap; }
+
+/* モンスター図鑑：まだのキャラクター・色は1マスの「？×N」 */
+.zukan-line .zukan-more { display: flex; align-items: center; justify-content: center; min-width: 56px; padding: 8px 12px; border-radius: 14px; background: color-mix(in srgb, var(--muted) 10%, var(--card)); color: var(--muted); font-weight: 900; white-space: nowrap; }
+.zukan-line.zukan-kinds { gap: 6px; flex-wrap: wrap; }
+.zukan-line.zukan-kinds > li { flex: 0 0 calc((100% - 18px) / 4); }
+.zukan-line.zukan-kinds > li.zukan-more { flex: 0 0 auto; min-width: 72px; }

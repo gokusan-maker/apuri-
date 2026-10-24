@@ -85,7 +85,7 @@ it('図鑑に色ちがいの集まり具合が出る', async () => {
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, kind: 'kin' }]} />)
   expect(screen.getByText(/色ちがい 2 \/ 8/)).toBeInTheDocument()
   expect(screen.getByLabelText('きんいろ（スーパーレア）')).toBeInTheDocument()
-  expect(screen.getAllByLabelText('まだ出ていない色')).toHaveLength(6)
+  expect(screen.getByLabelText('まだ出ていない色 6').textContent).toBe('？×6') // まだの色は1マスにまとめる
 })
 
 it('なかまの画面にそれぞれのレベル・XPバー・次の進化までが出る', async () => {
@@ -105,7 +105,7 @@ it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラ�
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon' }]} />)
   expect(screen.getByText(/キャラクター 2 \/ 6/)).toBeInTheDocument()
   expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
-  expect(screen.getAllByLabelText("まだ出会っていないキャラクター")).toHaveLength(4)
+  expect(screen.getByLabelText("まだ出会っていないキャラクター 4").textContent).toBe("？×4")
 })
 
 it('図鑑のキャラクターをタップすると説明とチャレンジの種類が出る', async () => {
