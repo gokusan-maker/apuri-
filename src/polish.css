@@ -2625,3 +2625,6 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 :root[data-theme='dark'] .boss-team-win { background: #431407; color: #fed7aa; }
 :root[data-theme='dark'] .boss-team-win.team-grammar { background: #052e16; color: #bbf7d0; }
 :root[data-theme='dark'] .boss-team-win.team-reading { background: #2e1065; color: #ddd6fe; }
+
+/* ショップ：アイテムの説明はどの棚でも1行（全文は title） */
+.shop .item-meta, .shop > .stats-note { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
