@@ -1263,7 +1263,7 @@ describe('App', () => {
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
     navTo('単語ゲーム')
-    fireEvent.click(screen.getByText('🗓 今週の単語（5語）'))
+    fireEvent.click(screen.getByRole('button', { name: '今週の単語5語' }))
     expect(screen.getByText(/今週学んだ単語だけ復習中（5語）/)).toBeInTheDocument()
   })
 
@@ -1272,14 +1272,14 @@ describe('App', () => {
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
     navTo('単語ゲーム')
-    fireEvent.click(screen.getByText('📅 1週間前の単語（4語）'))
+    fireEvent.click(screen.getByRole('button', { name: '1週間前の単語4語' }))
     expect(screen.getByText(/1週間前に学んだ単語だけ復習中（4語）/)).toBeInTheDocument()
   })
 
   it('単語ゲームの「テーマで練習」で、その仲間の単語をカードで練習できる', () => {
     render(<App />)
     navTo('単語ゲーム')
-    fireEvent.click(screen.getByText('🗂 テーマで練習'))
+    fireEvent.click(screen.getByText('テーマで練習'))
     fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
   })
@@ -1287,7 +1287,7 @@ describe('App', () => {
   it('「テーマで練習」はクイズでもできる', () => {
     render(<App />)
     navTo('単語ゲーム')
-    fireEvent.click(screen.getByText('🗂 テーマで練習'))
+    fireEvent.click(screen.getByText('テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
     fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語だけ復習中/)).toBeInTheDocument()
@@ -1296,10 +1296,10 @@ describe('App', () => {
   it('単語のおさらい（テーマで練習）は記録ではなく単語ゲームのミニゲームの下にある', () => {
     render(<App />)
     navTo('ホーム')
-    expect(screen.queryByText('🗂 テーマで練習')).toBeNull()
-    expect(screen.queryByText('📚 単語一覧・さがす')).toBeNull()
+    expect(screen.queryByText('テーマで練習')).toBeNull()
+    expect(screen.queryByRole('button', { name: '単語一覧・さがす' })).toBeNull()
     navTo('単語ゲーム')
-    expect(within(screen.getByLabelText('単語のおさらい')).getByText('🗂 テーマで練習')).toBeInTheDocument()
+    expect(within(screen.getByLabelText('単語のおさらい')).getByText('テーマで練習')).toBeInTheDocument()
   })
 
   it('記録画面に、定着した単語の数のグラフが出る', () => {

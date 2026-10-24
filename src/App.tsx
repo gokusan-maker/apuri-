@@ -1056,20 +1056,22 @@ function App() {
           setWordTab('card')
         }}
       >
-        📚 単語一覧・さがす
+        <span className="lg-icon" aria-hidden="true">📚</span>単語一覧・さがす
       </button>
       {thisWeekWords.length >= 4 && (
         <button className="list-link" onClick={() => startQuiz('thisweek')}>
-          🗓 今週の単語（{thisWeekWords.length}語）
+          <span className="lg-icon" aria-hidden="true">🗓</span>今週の単語<span className="fold-meta">{thisWeekWords.length}語</span>
         </button>
       )}
       {weekAgo.length > 0 && (
         <button className="list-link" onClick={() => startQuiz('week')}>
-          📅 1週間前の単語（{weekAgo.length}語）
+          <span className="lg-icon" aria-hidden="true">📅</span>1週間前の単語<span className="fold-meta">{weekAgo.length}語</span>
         </button>
       )}
       <details className="theme-practice game-fold lg-2">
-        <summary>🗂 テーマで練習</summary>
+        <summary>
+          <span className="lg-icon" aria-hidden="true">🗂</span>テーマで練習
+        </summary>
         <div className="counts" role="group" aria-label="練習のしかた">
           <button aria-pressed={!themeQuiz} onClick={() => setThemeQuiz(false)}>
             めくって覚える
