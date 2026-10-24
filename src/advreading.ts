@@ -4747,4 +4747,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why can scientists use cave formations to study past climates?', choices: ['They grow very slowly over long periods of time.', 'They are made of seashells.', 'They dissolve quickly in rain.', 'They are found only in cold places.'], answer: 0, why: '第3段落 These formations grow extremely slowly … so scientists can use them to study the climates of the distant past。' },
     ],
   },
+  {
+    id: 'toefl-abacus',
+    title: 'Beads That Count',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      "Long before electronic calculators, people needed reliable ways to handle large numbers for trade and taxes. One of the most successful tools for this purpose was the abacus, a frame holding rows of beads ( A ) can be slid back and forth to represent numbers.",
+      "Versions of the abacus appeared in many ancient civilizations, including Rome and China. The Chinese suanpan became widely used in business, and in the sixteenth century a form of it was brought to Japan, where it developed into the soroban. Over time, Japanese makers simplified the design. The modern soroban has one bead above a bar and four below it in each column, ( B ) makes reading numbers quick.",
+      "Even after calculators became cheap, the soroban did not disappear. Many Japanese children still attend soroban classes, and skilled users can calculate astonishingly fast. Some can even calculate without ( C ) a physical abacus at all, by moving imaginary beads in their minds. Researchers have studied this mental calculation as an example of how practice can change the way the brain handles numbers.",
+    ],
+    ja: [
+      '電子式の計算機ができるずっと前から、人々は商売や税金のために大きな数をあつかう確かな方法を必要としていた。そのためにもっともよく使われた道具の一つがそろばんである。そろばんは、数を表すために前後に動かせる玉の列をおさめたわくである。',
+      'そろばんのなかまは、ローマや中国など多くの古代文明にあらわれた。中国の算盤は商売で広く使われるようになり、16世紀にはその一つの形が日本に伝わって、そろばんへと発展した。時がたつにつれて、日本の職人は形を簡単にしていった。今のそろばんは、各けたに、はりの上に玉が1つ、下に4つあり、それによって数をすばやく読みとることができる。',
+      '電卓が安くなったあとも、そろばんは消えなかった。今でも多くの日本の子どもがそろばん教室に通い、上手な人はおどろくほど速く計算できる。頭の中で想像の玉を動かして、本物のそろばんをまったく使わずに計算できる人もいる。研究者たちは、練習によって脳の数のあつかい方がどう変わりうるかの例として、この暗算を研究してきた。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 rows of beads を説明し、あとに can be slid が続くので主格の関係代名詞 that。where はあとに完全な文、who は人。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（玉が上に1つ・下に4つあること）を受ける関係代名詞 which。あとに動詞 makes が続く。' },
+      { id: 'C', choices: ['using', 'use', 'used', 'to use'], answer: 0, why: '前置詞 without のあとは動名詞（～ing）。without using「～を使わずに」。' },
+    ],
+    tf: [
+      { statement: 'そろばんのなかまは、日本でだけ使われてきた。', answer: false, why: '第2段落 Versions of the abacus appeared in many ancient civilizations, including Rome and China。' },
+      { statement: 'そろばんのもとになる形は、16世紀に中国から日本に伝わった。', answer: true, why: '第2段落 in the sixteenth century a form of it was brought to Japan。' },
+      { statement: '今のそろばんは、各けたの上に玉が1つ、下に4つある。', answer: true, why: '第2段落 one bead above a bar and four below it in each column。' },
+      { statement: '電卓が安くなると、そろばんはすぐに使われなくなった。', answer: false, why: '第3段落 Even after calculators became cheap, the soroban did not disappear。' },
+    ],
+    qa: [
+      { q: 'What have researchers studied about skilled soroban users?', choices: ['How practice can change the way the brain handles numbers.', 'Why calculators became cheap.', 'How beads are made in factories.', 'Why Rome stopped using the abacus.'], answer: 0, why: '第3段落 as an example of how practice can change the way the brain handles numbers。' },
+    ],
+  },
 ]
