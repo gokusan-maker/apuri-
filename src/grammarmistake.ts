@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'as-many-much-noun': { wrong: 'I have as many money as you.', right: 'I have as much money as you.', why: 'money は数えられないので as much 〜 as。' },
   'a-an-the': { wrong: 'I have a umbrella.', right: 'I have an umbrella.', why: 'umbrella は母音の音（ア）で始まるので an。' },
   'cannot-too': { wrong: 'You cannot be careful too.', right: 'You cannot be too careful.', why: 'too は形容詞の前に置く：cannot be too careful。' },
   'thank-sorry-for': { wrong: 'Thank you for help me.', right: 'Thank you for helping me.', why: '前置詞 for のあとは ～ing。' },
