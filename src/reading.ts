@@ -1795,6 +1795,17 @@ export const PASSAGES: Passage[] = [
       { q: '「私」は次に何をしたい？', choices: ['暗い中で灯台の光を見る', '船に乗る', '島で泳ぐ'], answer: 0 },
     ],
   },
+  {
+    id: 'mochi-making',
+    title: 'Making Mochi',
+    text: "On New Year's Day, my family made mochi at my uncle's house. First, we cooked sticky rice. Then my uncle put the hot rice into a big stone bowl. He hit the rice with a heavy wooden hammer, and my aunt turned it with her wet hands. I tried the hammer too, but it was very heavy. After about twenty minutes, the rice became soft and smooth. We made small round mochi and ate them with sweet bean paste. They were delicious!",
+    ja: '元日に、私の家族はおじの家でもちをつくりました。まず、もち米をたきました。それから、おじが熱いお米を大きな石のうすに入れました。おじは重い木のきねでお米をたたき、おばがぬれた手でそれをひっくり返しました。私もきねをためしましたが、とても重かったです。20分ほどすると、お米はやわらかくなめらかになりました。私たちは小さな丸いもちをつくって、あまいあんこといっしょに食べました。とてもおいしかったです！',
+    questions: [
+      { q: 'もちはどこでつくった？', choices: ['おじの家', '学校', '自分の家'], answer: 0 },
+      { q: 'お米をぬれた手でひっくり返したのはだれ？', choices: ['おば', 'おじ', '「私」'], answer: 0 },
+      { q: 'もちは何といっしょに食べた？', choices: ['あまいあんこ', 'しょうゆ', 'きなこ'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'

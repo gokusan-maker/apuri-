@@ -4455,4 +4455,62 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do the islands become older toward the northwest?', choices: ['The plate carries each volcano northwest, away from the hotspot.', 'The hotspot moves toward the southeast every year.', 'Older islands are made by bigger volcanoes.', 'The ocean is deeper in the northwest.'], answer: 0, why: '第2段落 the plate carries that volcano away from its source of magma（プレートが北西へ運ぶ）。' },
     ],
   },
+  {
+    id: 'adv-halo-effect',
+    title: 'One Bright Feature',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we meet someone who is attractive or confident, we tend to assume that they also possess other good qualities, such as intelligence, kindness, or honesty. Psychologists call this tendency the halo effect, ( A ) the image of a bright ring of light around a saint's head. A single positive feature seems to cast its glow over everything else we know about the person.",
+      "The effect has been observed in many settings. Teachers have been found to give higher marks to essays when they believe the writer is a pleasant student, and interviewers may judge a well-dressed applicant as more capable ( B ) knowing anything about their skills. The reverse also occurs: one negative trait can make us view a person's other qualities more harshly than they deserve.",
+      "Why does the mind work this way? Forming a complete and balanced judgment of another person takes time and effort, so the brain relies on a quick overall impression and uses it to fill in the gaps. This shortcut is often useful in daily life, but it can lead to unfair decisions in schools, workplaces, and courts. Being aware of the halo effect will not make it ( C ), but it can remind us to judge each quality on its own evidence.",
+    ],
+    ja: [
+      '魅力的な人や自信のある人に会うと、私たちはその人がほかのよい性質、たとえば知性や親切さ、正直さももっていると思いこみがちである。心理学者はこの傾向をハロー効果とよぶ。聖人の頭のまわりにある、明るい光の輪のイメージにちなんだ名前である。ひとつのよい特徴が、その人について知っているほかのすべてに光を投げかけるように思えるのだ。',
+      'この効果は、さまざまな場面で観察されてきた。教師は、書き手が感じのよい生徒だと思っていると作文に高い点をつけることがわかっているし、面接官は、身なりのよい応募者を、その技能について何も知らないのに、より有能だと判断することがある。逆のことも起こる。ひとつの悪い特徴のせいで、その人のほかの性質を、実際よりもきびしく見てしまうことがあるのだ。',
+      'なぜ心はこのようにはたらくのだろうか。ほかの人について、完全でかたよりのない判断をするには時間と労力がかかる。そのため脳は、手早い全体の印象にたより、それを使ってすき間をうめる。この近道は日常生活ではしばしば役に立つが、学校や職場、裁判所で不公平な決定につながることがある。ハロー効果を知っていても、それが消えるわけではないが、ひとつひとつの性質をそれ自体の根拠で判断するよう、思い出させてくれるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['after', 'because', 'although', 'unless'], answer: 0, why: 'call A B, after ～「～にちなんで A を B とよぶ」。after のあとに名詞（the image）が続く。because・although・unless は接続詞で、あとに主語と動詞が必要。' },
+      { id: 'B', choices: ['without', 'despite of', 'unless', 'nor'], answer: 0, why: 'without ～ing「～しないで」。despite は of をとらない。unless・nor のあとに knowing だけを置くことはできない。' },
+      { id: 'C', choices: ['disappear', 'disappeared', 'to disappear', 'disappearing'], answer: 0, why: '使役の make O ＋動詞の原形「O を～させる」。to 不定詞や分詞は使えない。' },
+    ],
+    tf: [
+      { statement: '魅力的な人は、ほかのよい性質ももっていると思われやすい。', answer: true, why: '第1段落 we tend to assume that they also possess other good qualities。' },
+      { statement: 'ハロー効果は、よい印象についてだけ起こり、悪い印象では起こらない。', answer: false, why: '第2段落 The reverse also occurs: one negative trait can make us view ... more harshly。' },
+      { statement: '脳は、手早い全体の印象を使って、わからないところをうめる。', answer: true, why: '第3段落 the brain relies on a quick overall impression and uses it to fill in the gaps。' },
+      { statement: '筆者は、ハロー効果を知れば、その影響をまったく受けなくなると述べている。', answer: false, why: '第3段落 Being aware of the halo effect will not make it disappear。' },
+    ],
+    qa: [
+      { q: 'What does the author suggest we do about the halo effect?', choices: ['Judge each quality on its own evidence.', 'Trust our first impressions completely.', 'Avoid meeting confident people.', 'Stop forming any opinions about others.'], answer: 0, why: '第3段落 it can remind us to judge each quality on its own evidence。' },
+    ],
+  },
+  {
+    id: 'toefl-autumn-leaves',
+    title: 'Why Leaves Change Color',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "In many temperate forests, autumn turns green hillsides into shades of yellow, orange, and red. Although the change looks as if new colors were being added to the leaves, much of it is actually the result of a color being lost. During spring and summer, leaves are full of chlorophyll, the green pigment that absorbs sunlight for photosynthesis, and it is so abundant that it hides the other pigments ( A ) in the leaf.",
+      "As days grow shorter and temperatures fall, trees prepare for winter by breaking down chlorophyll and moving its valuable nutrients, such as nitrogen, into their branches and roots. Once the green fades, yellow and orange pigments called carotenoids, ( B ) were there all along, finally become visible.",
+      "Red colors have a different origin. In some species, leaves produce new pigments called anthocyanins in autumn, especially when days are sunny and nights are cool. Scientists are still debating why a tree would spend energy ( C ) pigments in leaves it is about to drop. One theory suggests that anthocyanins act like a sunscreen, protecting the leaf from strong light while the tree recovers its nutrients.",
+    ],
+    ja: [
+      '多くの温帯の森では、秋になると緑の丘が黄色やオレンジ、赤の色合いに変わる。この変化は、葉に新しい色が加えられているように見えるが、その多くは実際には、ある色が失われた結果である。春と夏のあいだ、葉は光合成のために日光を吸収する緑の色素、クロロフィルでいっぱいで、その量があまりにも多いため、葉にあるほかの色素をかくしてしまう。',
+      '日が短くなり気温が下がると、木はクロロフィルを分解し、窒素などの大切な栄養を枝や根に移すことで、冬にそなえる。緑が消えると、カロテノイドとよばれる黄色やオレンジの色素が、ついに見えるようになる。この色素は、ずっとそこにあったのである。',
+      '赤い色は、ちがうところから生まれる。いくつかの種では、秋になると葉がアントシアニンとよばれる新しい色素をつくる。とくに、昼は晴れて夜はすずしいときによくつくられる。木が、もうすぐ落とす葉に、なぜエネルギーを使って色素をつくるのかについては、科学者のあいだで今も議論が続いている。ひとつの説では、アントシアニンが日焼け止めのようにはたらき、木が栄養を回収するあいだ、強い光から葉を守っているという。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['present', 'presence', 'presently', 'presenting'], answer: 0, why: 'the other pigments present in the leaf「葉にあるほかの色素」。形容詞 present が後ろから名詞を説明する。presence は名詞、presently は副詞、presenting は目的語が必要。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで pigments を説明する関係代名詞 which（主格）。what は先行詞をとらない。who は人、where はあとに完全な文が必要。' },
+      { id: 'C', choices: ['making', 'make', 'made', 'makes'], answer: 0, why: 'spend ＋時間・エネルギー＋ ～ing「～するのに使う」。原形や過去形、三単現は置けない。' },
+    ],
+    tf: [
+      { statement: '秋の葉の色の変化の多くは、緑の色素が失われることで起こる。', answer: true, why: '第1段落 much of it is actually the result of a color being lost。' },
+      { statement: '黄色やオレンジの色素は、秋になって新しくつくられる。', answer: false, why: '第2段落 carotenoids, which were there all along。' },
+      { statement: '木は冬にそなえて、葉の栄養を枝や根に移す。', answer: true, why: '第2段落 moving its valuable nutrients ... into their branches and roots。' },
+      { statement: '赤い色素がつくられる理由は、すでにはっきりわかっている。', answer: false, why: '第3段落 Scientists are still debating why ...。' },
+    ],
+    qa: [
+      { q: 'According to one theory, what do anthocyanins do?', choices: ['They protect the leaf from strong light while nutrients are recovered.', 'They help the leaf absorb more sunlight for photosynthesis.', 'They make the leaf fall from the tree sooner.', 'They store nitrogen in the roots for the winter.'], answer: 0, why: '第3段落 anthocyanins act like a sunscreen, protecting the leaf from strong light while the tree recovers its nutrients。' },
+    ],
+  },
 ]
