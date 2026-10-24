@@ -3993,6 +3993,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-camels',
+    title: 'Built for the Desert',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Camels are famous for surviving in the desert, but one popular belief about them is wrong. Their humps do not store water. Instead, they store fat, ( A ) the camel can break down for energy when food is scarce.",
+      "Camels have other ways of dealing with the lack of water. They can lose about a quarter of their body weight in water and still survive, which would be deadly for most other mammals. When they finally find water, they can drink more than 100 liters in a short time.",
+      "Camels also save water by allowing their body temperature to change. During the hot day, a camel's temperature can rise by several degrees before it starts to sweat. At night, the camel cools down again. In this way, it loses much less water through sweating ( B ) it would otherwise.",
+      "Even the camel's face is adapted to the desert. Long eyelashes protect its eyes from blowing sand, and it can close its nostrils during sandstorms. Its thick fur may seem strange in such a hot place, but it actually helps ( C ) the camel from the strong sun.",
+    ],
+    ja: [
+      'ラクダは砂漠で生きぬくことで有名だが、ラクダについてのよく知られた考えの1つはまちがっている。こぶには水がたくわえられているわけではない。かわりにたくわえられているのは脂肪で、食べ物が少ないとき、ラクダはそれを分解してエネルギーにすることができる。',
+      'ラクダには、水が足りないことに対処するほかの方法もある。体重の約4分の1にあたる水分を失っても生きのびることができるが、これはほかのほとんどの哺乳類にとっては命にかかわる量である。ようやく水を見つけると、短い時間で100リットル以上飲むことができる。',
+      'ラクダはまた、体温が変わるのを許すことで水を節約している。暑い昼のあいだ、ラクダの体温は、汗をかき始める前に数度上がることがある。夜になると、ラクダの体はまた冷える。こうして、そうしなかった場合よりも、汗で失う水分がずっと少なくなるのである。',
+      'ラクダの顔でさえ、砂漠に合うようになっている。長いまつげは、ふきつける砂から目を守り、砂あらしのときには鼻のあなを閉じることができる。こんなに暑い場所で厚い毛は不思議に思えるかもしれないが、実は強い日差しからラクダを守るのに役立っているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'it'], answer: 0, why: 'コンマのあとで fat を説明し、break down の目的語になる非制限用法の関係代名詞 which。what は先行詞をふくむ、who は人、it では文がつながらない。' },
+      { id: 'B', choices: ['than', 'as', 'then', 'that'], answer: 0, why: '比較級 much less water のあとは than。much less … than it would otherwise「そうしなかった場合よりずっと少なく」。' },
+      { id: 'C', choices: ['protect', 'protecting', 'protected', 'protects'], answer: 0, why: 'help ＋（to）＋ 動詞の原形「～するのに役立つ」。helps protect the camel。' },
+    ],
+    tf: [
+      { statement: 'ラクダのこぶには、水がたくわえられている。', answer: false, why: '第1段落 Their humps do not store water. Instead, they store fat。' },
+      { statement: 'ラクダは、体重の約4分の1の水分を失っても生きのびられる。', answer: true, why: '第2段落 They can lose about a quarter of their body weight in water and still survive。' },
+      { statement: 'ラクダは、暑い昼でもすぐに汗をかいて体温を一定に保つ。', answer: false, why: '第3段落 a camel\'s temperature can rise by several degrees before it starts to sweat。' },
+      { statement: 'ラクダは、砂あらしのときに鼻のあなを閉じることができる。', answer: true, why: '第4段落 it can close its nostrils during sandstorms。' },
+    ],
+    qa: [
+      { q: "How does a camel's thick fur help it?", choices: ['It protects the camel from the strong sun.', 'It stores water for the camel.', 'It keeps sand out of the camel\'s eyes.', 'It helps the camel drink faster.'], answer: 0, why: '第4段落 it actually helps protect the camel from the strong sun。' },
+    ],
+  },
+{
     id: 'toefl-rubber',
     title: 'From Tree to Tire',
     level: 'TOEFL・IELTS（歴史・産業）',

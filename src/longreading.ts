@@ -5339,6 +5339,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer and the grandfather made a lot of noise near the birdhouse.', answer: false, why: '第3段落 We watched quietly from the window。' },
     ],
   },
+  {
+    id: 'kendama',
+    title: "Grandma's Kendama",
+    level: '中2（物語）',
+    paragraphs: [
+      'Last summer, my grandmother gave me an old kendama. It was made of wood, and the paint was a little worn. I tried to catch the ball on the cup, but it fell ( A ) time.',
+      'My grandmother laughed and showed me how to do it. She bent her knees a little and moved the ball up smoothly. "Use your legs, not only your hands," she said. I was surprised ( B ) she was still so good at it.',
+      'After that, I practiced for ten minutes every day. At first, I could catch the ball only once or twice. After two weeks, I could do it ten times in a row. I sent a video to my grandmother, and she called me right away. She sounded very happy.',
+      'Now I am learning a new trick. It is ( C ) difficult than the first one, but I am not giving up. Kendama taught me that practice and patience can make hard things possible.',
+    ],
+    ja: [
+      'この前の夏、祖母が古いけん玉をくれました。木でできていて、色が少しはげていました。玉を皿にのせようとしましたが、毎回落ちてしまいました。',
+      '祖母は笑って、やり方を見せてくれました。ひざを少し曲げて、玉をなめらかに上げました。「手だけじゃなくて、足も使うのよ」と祖母は言いました。祖母がまだそんなに上手なことに、私はおどろきました。',
+      'それから、私は毎日10分練習しました。はじめは、玉を1、2回しかのせられませんでした。2週間後には、10回続けてできるようになりました。祖母に動画を送ると、すぐに電話をくれました。とてもうれしそうな声でした。',
+      '今、私は新しい技を練習しています。最初の技よりむずかしいですが、あきらめていません。けん玉は、練習としんぼう強さでむずかしいことも可能になると教えてくれました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['every', 'all', 'both', 'many'], answer: 0, why: 'every time「毎回」。every のあとは単数名詞。all・both・many は time（回）を単数のままつなげられない。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'who'], answer: 0, why: 'be surprised that ＋ 文「～ということにおどろく」。what・which・who は文をそのままつなげない。' },
+      { id: 'C', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'あとに than があるので比較級。difficult は more difficult than。much・very だけでは比較級にならない。' },
+    ],
+    tf: [
+      { statement: 'The kendama was made of plastic.', answer: false, why: '第1段落 It was made of wood。' },
+      { statement: 'The grandmother told the writer to use the legs, too.', answer: true, why: '第2段落 Use your legs, not only your hands。' },
+      { statement: 'After two weeks, the writer could catch the ball ten times in a row.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'The writer has given up learning the new trick.', answer: false, why: '第4段落 I am not giving up。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
