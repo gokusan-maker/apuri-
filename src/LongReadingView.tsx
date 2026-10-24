@@ -166,7 +166,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
       >
         {bookmarks.includes(x.id) ? '★' : '☆'}
       </button>
-      <button className="long-item" onClick={() => openPassage(x)}>
+      <button className="long-item" title={shownTitle(x, LONG_PASSAGES.indexOf(x))} onClick={() => openPassage(x)}>
         <span className="long-item-title">
           {isNewLong(x, record) && <span className="long-new">NEW</span>}
           {shownTitle(x, LONG_PASSAGES.indexOf(x))}

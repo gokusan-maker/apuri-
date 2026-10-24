@@ -865,7 +865,7 @@ function App() {
                   if (w) speak(w.en)
                 }}
               >
-                🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く（1日1回）
+                🐾 {monster.name ?? formOf(monster).name}とおさんぽに行く
               </button>
             ) : (
               walkMsg && (

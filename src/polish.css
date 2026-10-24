@@ -2189,3 +2189,33 @@ details[open] > summary::before { transform: rotate(90deg); }
 .zukan-collection.game-fold > summary { justify-content: flex-start; text-align: left; font-size: 1rem; white-space: nowrap; }
 .zukan-collection.game-fold > summary .fold-meta { white-space: nowrap; border-radius: 999px; }
 .game-fold > summary::before, .game-fold > summary .fold-meta { flex: none; }
+
+/* ボタン・一覧の文字は1行（オーナーの要望：2行は長くて見にくい）。長い題名は … で切り、全文は title・次の画面で */
+.grammar-list li > button > span:has(> .unit-title) { flex: 1; min-width: 0; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.unit-title { text-wrap: nowrap; }
+.short-title, .long-item-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.grammar-list li { min-width: 0; }
+.grammar-list li > button { min-width: 0; }
+.long-item { flex: 1 1 0; min-width: 0; max-width: 100%; overflow: hidden; }
+.long-item-title { max-width: 100%; }
+.game-tile-sub { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/* ショップのおやつ・アイテム：アイコンを上にして名前を1行に */
+.snacks button.good { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'icon' 'name' 'meta' 'price'; justify-items: center; text-align: center; }
+.snacks button.good.fav-snack { grid-template-areas: 'tag' 'icon' 'name' 'meta' 'price'; }
+.snacks .item-name, .snacks .item-meta { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.snacks .item-price { justify-self: stretch; }
+/* 読解のむずかしさタブ：3つ＋2つの色つきゲームタイル（文字はすべて1行） */
+.read-levels { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 6px; }
+.read-levels button { --rl-h: 150; grid-column: span 2; padding: 7px 4px 6px; border: none; border-radius: 14px; background: hsl(var(--rl-h) 70% 95%); box-shadow: 0 3px 0 hsl(var(--rl-h) 45% 78%); }
+.read-levels button:nth-child(2) { --rl-h: 195; }
+.read-levels button:nth-child(3) { --rl-h: 225; }
+.read-levels button:nth-child(4) { --rl-h: 275; grid-column: span 3; }
+.read-levels button:nth-child(5) { --rl-h: 330; grid-column: span 3; }
+.read-levels button strong { color: hsl(var(--rl-h) 65% 30%); }
+.read-levels button strong, .read-levels small { white-space: nowrap; overflow-wrap: normal; word-break: keep-all; max-width: 100%; overflow: hidden; text-overflow: ellipsis; }
+.read-levels button[aria-selected='true'] { background: linear-gradient(135deg, hsl(var(--rl-h) 75% 52%), hsl(calc(var(--rl-h) + 20) 70% 38%)); box-shadow: 0 4px 0 hsl(var(--rl-h) 60% 28%), 0 6px 14px rgb(0 0 0 / 0.14); text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
+.read-levels button:active { transform: translateY(2px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .read-levels button:not([aria-selected='true']) { background: hsl(var(--rl-h) 30% 20%); box-shadow: 0 3px 0 hsl(var(--rl-h) 30% 12%); } :root:not([data-theme="light"]) .read-levels button:not([aria-selected='true']) strong { color: hsl(var(--rl-h) 70% 80%); } }
+:root[data-theme="dark"] .read-levels button:not([aria-selected='true']) { background: hsl(var(--rl-h) 30% 20%); box-shadow: 0 3px 0 hsl(var(--rl-h) 30% 12%); }
+:root[data-theme="dark"] .read-levels button:not([aria-selected='true']) strong { color: hsl(var(--rl-h) 70% 80%); }
+.long-item-title { font-size: 0.86rem; }

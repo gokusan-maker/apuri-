@@ -41,6 +41,7 @@ export function Reading({ onAnswer, start, onDone }: Props) {
           {PASSAGES.map((x, i) => (
             <li key={x.id} className={done.includes(x.id) ? 'short-item short-done' : 'short-item'}>
               <button
+                title={x.title}
                 onClick={() => {
                   setP(x)
                   setGloss(null)

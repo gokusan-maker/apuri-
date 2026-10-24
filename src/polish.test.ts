@@ -93,3 +93,10 @@ it('ボス図鑑と大学入試の塔も色つきのゲームボタン', () => {
   expect(css).toContain('.boss-book.game-fold { --lg-h: 350;')
   expect(css).toContain('.univ-tower.game-fold { --lg-h: 265;')
 })
+
+it('ボタン・一覧の文字は1行（題名・タイルの説明・むずかしさタブ・ショップの名前）', () => {
+  expect(css).toContain('.short-title, .long-item-title { overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }')
+  expect(css).toMatch(/\.game-tile-sub \{[^}]*white-space: nowrap/)
+  expect(css).toMatch(/\.read-levels button strong, \.read-levels small \{ white-space: nowrap;/)
+  expect(css).toMatch(/\.snacks \.item-name, \.snacks \.item-meta \{[^}]*white-space: nowrap/)
+})

@@ -26,7 +26,7 @@ export function Roulette({ done, onPrize }: Props) {
             onPrize(ROULETTE[i])
           }}
         >
-          🎡 今日のルーレットをまわす（1日1回）
+          🎡 今日のルーレットをまわす
         </button>
       ) : (
         <p className="level-up" role="status">

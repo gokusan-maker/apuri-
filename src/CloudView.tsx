@@ -19,7 +19,7 @@ export function Cloud({ save = cloudSave, load = cloudLoad, onRestored = () => w
 
   return (
     <div className="cloud">
-      <p className="stats-note">引き継ぎコードで機種変更後も元どおり（毎日自動保存）。コードは秘密に。</p>
+      <p className="stats-note" title="引き継ぎコードで機種変更後も元どおり（毎日自動保存）。コードは秘密に。">コードで機種変更OK・コードは秘密に</p>
       <button
         className="flip"
         disabled={busy}

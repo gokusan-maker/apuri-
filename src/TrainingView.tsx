@@ -29,8 +29,8 @@ export function Training({ day, words, name, onChange }: Props) {
   if (t.day === day && !qs) return msg ? <p className="walk-msg">{msg}</p> : <p className="stats-note">💪 {name}のちから {t.power} / {POWER_MAX}（今日のトレーニングはおわり）</p>
   if (!qs)
     return (
-      <button className="challenge-btn training-btn" disabled={words.length < 3} onClick={() => setQs(Array.from({ length: TRAIN_COUNT }, () => makeQ(words)))}>
-        💪 {name}とトレーニング（{TRAIN_COUNT}問全問正解でちから+1・いま {t.power} / {POWER_MAX}）
+      <button className="challenge-btn training-btn" title={`${TRAIN_COUNT}問全問正解でちから+1・いま ${t.power} / ${POWER_MAX}`} disabled={words.length < 3} onClick={() => setQs(Array.from({ length: TRAIN_COUNT }, () => makeQ(words)))}>
+        💪 {name}とトレーニング
       </button>
     )
   const q = qs[step]
