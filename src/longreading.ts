@@ -5054,6 +5054,35 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Haruto wants Emma to tell him about traditional sports in her country.', answer: true, why: '第4段落 Please tell me about them。' },
     ],
   },
+  {
+    id: 'pink-flamingo',
+    title: 'Why Are Flamingos Pink?',
+    level: '中2（説明文）',
+    paragraphs: [
+      'Flamingos are famous for their beautiful pink feathers. But did you know that flamingos are not pink when they are born? Baby flamingos are gray or white. They become pink slowly ( A ) they grow up.',
+      'The color comes from their food. Flamingos eat small shrimp and tiny plants called algae. This food has a natural color called carotenoid in it. It is the same kind of color that makes carrots orange. When flamingos eat a lot of this food, the color goes into their feathers, legs, and beaks.',
+      'So a flamingo that eats more of this food usually looks pinker. A flamingo that cannot get enough of it may slowly lose its bright color. For this reason, zoos give their flamingos special food ( B ) keeps them pink.',
+      'Next time you see a flamingo, remember that its color tells us something about ( C ) it eats. In a way, flamingos really are what they eat!',
+    ],
+    ja: [
+      'フラミンゴは美しいピンク色の羽で有名です。でも、フラミンゴは生まれたときはピンク色ではないことを知っていましたか。フラミンゴのひなは灰色か白です。成長するにつれて、ゆっくりとピンク色になっていきます。',
+      'その色はえさから来ています。フラミンゴは小さなエビや、藻とよばれるとても小さな植物を食べます。このえさにはカロテノイドとよばれる自然の色素がふくまれています。それはニンジンをオレンジ色にしているのと同じ種類の色素です。フラミンゴがこのえさをたくさん食べると、その色が羽や脚、くちばしに入っていきます。',
+      'ですから、このえさを多く食べるフラミンゴは、ふつうよりピンク色に見えます。このえさを十分にとれないフラミンゴは、少しずつあざやかな色を失うことがあります。このため、動物園ではフラミンゴがピンク色のままでいられるような特別なえさをあげています。',
+      '今度フラミンゴを見たら、その色が、フラミンゴが何を食べているかについて教えてくれていることを思い出してください。ある意味で、フラミンゴはまさに「食べたものでできている」のです！',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'during', 'between', 'among'], answer: 0, why: 'as ＋ 主語 ＋ 動詞「～するにつれて」。あとに文（they grow up）が続くので接続詞の as。during・between・among は前置詞。' },
+      { id: 'B', choices: ['that', 'what', 'who', 'where'], answer: 0, why: 'special food を説明する関係代名詞 that（主格）。food that keeps them pink「ピンク色に保つえさ」。' },
+      { id: 'C', choices: ['what', 'that', 'whose', 'them'], answer: 0, why: 'what it eats「それが食べるもの」。前に名詞がないので先行詞をふくむ what。' },
+    ],
+    underline: { phrase: 'may slowly lose its bright color', choices: ['少しずつあざやかな色を失うかもしれない', 'すぐにあざやかな色になる', '色を見つけられないかもしれない', 'ゆっくりと色をぬる'], answer: 0, why: 'may「～かもしれない」、lose「失う」、bright color「あざやかな色」。' },
+    tf: [
+      { statement: 'Baby flamingos are pink when they are born.', answer: false, why: '第1段落 Baby flamingos are gray or white。' },
+      { statement: 'The pink color comes from the food flamingos eat.', answer: true, why: '第2段落 The color comes from their food。' },
+      { statement: 'Carrots get their orange color from the same kind of color.', answer: true, why: '第2段落 the same kind of color that makes carrots orange。' },
+      { statement: 'Zoos paint their flamingos to keep them pink.', answer: false, why: '第3段落 zoos give their flamingos special food（えさをあたえる）。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
