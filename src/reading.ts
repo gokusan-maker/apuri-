@@ -1730,6 +1730,17 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
+    id: 'sea-glass',
+    title: 'Sea Glass',
+    text: "Last summer, my sister and I walked along the beach every morning. One day, she found a small green stone. It was smooth and round, and the light came through it. \"This is sea glass,\" my mother said. \"It was a broken bottle a long time ago. The waves and sand made it soft.\" After that, we looked for sea glass every day. We found green, white, and one rare blue piece. Now they are in a jar by my window.",
+    ja: 'この前の夏、妹と私は毎朝浜辺を歩きました。ある日、妹が小さな緑色の石を見つけました。なめらかで丸く、光が通りぬけていました。「それはシーグラスよ」と母が言いました。「ずっと前は、われたびんだったの。波と砂がそれをやわらかくしたのよ。」それから、私たちは毎日シーグラスをさがしました。緑や白、それにめずらしい青いかけらも1つ見つけました。今、それらは私の部屋の窓のそばのびんに入っています。',
+    questions: [
+      { q: '妹が最初に見つけたシーグラスは何色？', choices: ['緑', '青', '白'], answer: 0 },
+      { q: 'シーグラスは、もとは何だった？', choices: ['われたびん', '貝がら', '小さな石'], answer: 0 },
+      { q: '集めたシーグラスは今どこにある？', choices: ['窓のそばのびんの中', '浜辺', '母のかばんの中'], answer: 0 },
+    ],
+  },
+  {
     id: 'grandpa-bonsai',
     title: "Grandpa's Bonsai",
     text: "My grandfather has a small pine tree in a pot. It is a bonsai, and it is older than my father! Every morning, Grandpa waters it and cuts a few small branches. He says, \"A bonsai grows slowly, so you need to be patient.\" Last Sunday, he let me cut one branch. My hands were shaking, but he smiled and said, \"Good job.\" I want to grow my own bonsai someday.",
