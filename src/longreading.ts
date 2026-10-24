@@ -5713,6 +5713,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The class won first prize in the chorus contest.', answer: false, why: '第3段落 won second prize（2位）。' },
     ],
   },
+  {
+    id: 'how-echoes-work',
+    title: 'How Do Echoes Work?',
+    level: '中3〜高校入試（説明文）',
+    paragraphs: [
+      'Have you ever shouted "Hello!" in the mountains and heard your own voice come back? This sound is called an echo. But why ( A ) it happen?',
+      'Sound travels through the air as waves. When sound waves hit a hard, wide surface such as a cliff or a large wall, they bounce back, just like a ball bounces off a wall. If the surface is far enough away, the returning sound reaches your ears a moment after your first voice, so you hear it twice.',
+      'Sound moves at about 340 meters per second. Our brains can hear two sounds separately only if they are about a tenth of a second apart. This means the surface must be at least about 17 meters away. In a small room, the sound comes back too quickly ( B ) us to hear a clear echo.',
+      'Some animals use echoes in amazing ways. Bats and dolphins make sounds and listen to the echoes ( C ) back from objects around them. In this way, they can find food even in complete darkness.',
+    ],
+    ja: [
+      '山で「ヤッホー！」とさけんで、自分の声が返ってくるのを聞いたことがありますか。この音はこだま（エコー）とよばれます。でも、なぜこだまが起こるのでしょうか。',
+      '音は、波として空気の中を伝わります。音の波が、がけや大きなかべのようなかたくて広い面にあたると、ボールがかべではね返るのと同じように、はね返ります。その面が十分に遠ければ、返ってきた音は最初の声より少しおくれて耳にとどくので、2回聞こえるのです。',
+      '音は1秒におよそ340メートル進みます。私たちの脳が2つの音を別々に聞き分けられるのは、2つの音がおよそ10分の1秒はなれているときだけです。つまり、はね返す面は少なくとも約17メートルはなれていなければなりません。小さな部屋では、音がすぐに返ってきすぎて、はっきりしたこだまを聞くことができません。',
+      'こだまをおどろくような方法で使う動物もいます。コウモリやイルカは音を出して、まわりの物からはね返ってくるこだまを聞きます。こうして、まっ暗な中でもえさを見つけることができるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['does', 'do', 'is', 'has'], answer: 0, why: '主語 it は3人称単数で、あとに動詞の原形 happen があるので does。is・has のあとに原形は置けない。' },
+      { id: 'B', choices: ['for', 'of', 'with', 'by'], answer: 0, why: 'too ～ for 人 to …「あまりに～なので人は…できない」。不定詞の意味上の主語は for で表す。' },
+      { id: 'C', choices: ['coming', 'came', 'comes', 'to coming'], answer: 0, why: 'the echoes coming back「はね返ってくるこだま」。現在分詞が後ろから名詞を説明する。came・comes では動詞が2つになってしまう。' },
+    ],
+    tf: [
+      { statement: 'An echo is a sound that bounces back.', answer: true, why: '第2段落 they bounce back。' },
+      { statement: 'Sound moves at about 34 meters per second.', answer: false, why: '第3段落 about 340 meters per second。' },
+      { statement: 'To hear an echo, the surface must be at least about 17 meters away.', answer: true, why: '第3段落 at least about 17 meters away。' },
+      { statement: 'Bats can find food only in bright places.', answer: false, why: '第4段落 even in complete darkness。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
