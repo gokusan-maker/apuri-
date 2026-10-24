@@ -30,7 +30,7 @@ export const DEFS: Record<string, string> = {
   family: 'parents, children, brothers, and sisters',
   hungry: 'how you feel when you want to eat',
   tired: 'how you feel when you need to rest',
-  doctor: 'a person who helps sick people get well',
+  doctor: 'a person who finds out why you are sick and gives you medicine',
   nurse: 'a person who takes care of sick people in a hospital',
   farmer: 'a person who grows food or keeps animals on a farm',
   pilot: 'a person who flies a plane',

@@ -39,11 +39,14 @@ export const OPPOSITES: [string, string][] = [
 ]
 
 const idOf = (en: string) => WORDS.find((w) => w.en === en)?.id
+// ペアにはないが、反対語として正しくなってしまう組み合わせ
+const OPPOSITE_CLASH: Record<string, string[]> = { dark: ['light'], light: ['dark'], hard: ['easy'], easy: ['hard'], warm: ['cold'], cold: ['warm'], cool: ['hot'], hot: ['cool'], far: ['close'], bright: ['dark'], difficult: ['easy'] }
 
 export function oppositeQ(rng: Rng = Math.random): PuzzleQ {
   const [a, b] = OPPOSITES[Math.floor(rng() * OPPOSITES.length)]
   const [ask, ans] = rng() < 0.5 ? [a, b] : [b, a]
-  const used = new Set([a, b])
+  // ask の反対語になりうる語（ほかのペアの相手・似た意味の語）は誤答に出さない（dark に light、hard に easy など）
+  const used = new Set([a, b, ...OPPOSITES.filter((p) => p.includes(ask)).flat(), ...(OPPOSITE_CLASH[ask] ?? [])])
   const wrong = shuffle(OPPOSITES.flat().filter((w) => !used.has(w)), rng).slice(0, 3)
   const choices = shuffle([ans, ...wrong], rng)
   return {
@@ -200,7 +203,9 @@ function wrongPlurals(w: string): string[] {
 
 export function pluralQ(rng: Rng = Math.random): PuzzleQ {
   const [one, many] = PLURALS[Math.floor(rng() * PLURALS.length)]
-  const wrong = shuffle([...new Set(wrongPlurals(one))].filter((x) => x !== many), rng).slice(0, 3)
+  // busses は辞書にもある別のつづりなので、誤答に出さない
+  const cands = [...new Set([...wrongPlurals(one), `${one}en`, `${one.slice(0, -1)}ies`])].filter((x) => x !== many && x !== one && x !== 'busses')
+  const wrong = shuffle(cands, rng).slice(0, 3)
   const choices = shuffle([many, ...wrong], rng)
   return { prompt: `「${one}」の複数形は？`, choices, answer: choices.indexOf(many), why: `${one} → ${many}`, wordId: idOf(one) ?? '' }
 }
@@ -381,18 +386,18 @@ export function negQ(rng: Rng = Math.random): PuzzleQ {
 
 // 場所の前置詞：in（中に）、on（上に・接して）、under（下に）、by（そばに）
 const PLACE_PREPS: [string, 'in' | 'on' | 'under' | 'by', string][] = [
-  ['The cat is sleeping ___ the box.', 'in', '箱の「中」なので in'],
-  ['There is a cup ___ the table.', 'on', 'テーブルの「上」（接している）なので on'],
-  ['My shoes are ___ the bed.', 'under', 'ベッドの「下」なので under'],
-  ['He is standing ___ the window.', 'by', '窓の「そば」なので by'],
-  ['There are fish ___ the river.', 'in', '川の「中」なので in'],
-  ['A picture is ___ the wall.', 'on', '壁に接しているので on'],
-  ['The dog is lying ___ the tree.', 'under', '木の「下」なので under'],
-  ['We had lunch ___ the lake.', 'by', '湖の「そば」なので by'],
-  ['I live ___ Osaka.', 'in', '都市・国の「中」なので in'],
-  ['Your pen is ___ the desk.', 'on', '机の「上」なので on'],
-  ['Let\'s hide ___ the bridge.', 'under', '橋の「下」なので under'],
-  ['My house is ___ the station.', 'by', '駅の「そば」なので by'],
+  ['The cat is sleeping ___ the box.（箱の中で）', 'in', '箱の「中」なので in'],
+  ['There is a cup ___ the table.（テーブルの上に）', 'on', 'テーブルの「上」（接している）なので on'],
+  ['My shoes are ___ the bed.（ベッドの下に）', 'under', 'ベッドの「下」なので under'],
+  ['He is standing ___ the window.（窓のそばに）', 'by', '窓の「そば」なので by'],
+  ['There are fish ___ the river.（川の中に）', 'in', '川の「中」なので in'],
+  ['A picture is ___ the wall.（壁にかかって）', 'on', '壁に接しているので on'],
+  ['The dog is lying ___ the tree.（木の下に）', 'under', '木の「下」なので under'],
+  ['We had lunch ___ the lake.（湖のそばで）', 'by', '湖の「そば」なので by'],
+  ['I live ___ Osaka.（大阪に）', 'in', '都市・国の「中」なので in'],
+  ['Your pen is ___ the desk.（机の上に）', 'on', '机の「上」なので on'],
+  ['Let\'s hide ___ the bridge.（橋の下に）', 'under', '橋の「下」なので under'],
+  ['My house is ___ the station.（駅のそばに）', 'by', '駅の「そば」なので by'],
 ]
 
 export function placePrepQ(rng: Rng = Math.random): PuzzleQ {
@@ -427,7 +432,7 @@ const PRONOUNS: [string, string, string[], string][] = [
   ['This is Yumi. I like ___ very much.', 'her', ['she', 'her', 'hers'], '動詞 like のあと（〜を）なので her'],
   ['Tom has a dog. ___ dog is very big.', 'His', ['He', 'His', 'Him'], '「彼の」犬なので His'],
   ['My parents are kind. I love ___.', 'them', ['they', 'their', 'them'], '動詞 love のあと（〜を）なので them'],
-  ['We have a new teacher. ___ name is Mr. Sato.', 'Her', ['She', 'Her', 'Hers'], '「彼女の」名前なので Her'],
+  ['We have a new teacher. ___ name is Ms. Sato.', 'Her', ['She', 'Her', 'Hers'], '「彼女の」名前なので Her'],
   ['Aki and I are in the same class. ___ are good friends.', 'We', ['We', 'Our', 'Us'], '文の主語（〜は）なので We'],
   ['Please help ___. This box is heavy.', 'me', ['I', 'my', 'me'], '動詞 help のあと（〜を）なので me'],
   ['The students opened ___ books.', 'their', ['they', 'their', 'them'], '「彼らの」本なので their'],
@@ -600,9 +605,12 @@ export const RIDDLES: { q: string; ja: string; a: string; aja: string; trick: st
 // なぞなぞのヒント：答えの最初の文字と文字数
 export const riddleHint = (a: string) => `「${a[0]}」で始まる ${a.replace(/ /g, '').length}文字の英語${a.includes(' ') ? '（2語）' : ''}`
 
+// なぞなぞの答えになってしまう別の答え（どちらも正解に見えるもの）は誤答に出さない
+const RIDDLE_CLASH: Record<string, string[]> = { needle: ['storm', 'potato'], storm: ['needle', 'potato'], potato: ['needle', 'storm'], table: ['bed'], bed: ['table'], nose: ['river', 'fence', 'road'], river: ['nose'], word: ['promise'], promise: ['silence', 'word'], silence: ['promise'], phone: ['tree'], tree: ['phone'], book: ['dictionary'], dictionary: ['book'] }
 export function riddleQ(rng: Rng = Math.random): PuzzleQ {
   const r = RIDDLES[Math.floor(rng() * RIDDLES.length)]
-  const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a)
+  const bad = RIDDLE_CLASH[r.a] ?? []
+  const pool = [...new Set(RIDDLES.map((x) => x.a))].filter((x) => x !== r.a && !bad.includes(x))
   const choices = shuffle([r.a, ...shuffle(pool, rng).slice(0, 3)], rng)
   return { prompt: r.q, choices, answer: choices.indexOf(r.a), why: `${r.a}（${r.aja}）`, wordId: idOf(r.a) ?? '', explain: [`【訳】${r.ja}`, `【答え】${r.a}（${r.aja}）`, `【英語のしかけ】${r.trick}`], say: `${r.q} ${r.a}.`, hint: riddleHint(r.a) }
 }

@@ -985,7 +985,7 @@ export const CONFUSING: GrammarUnit[] = [
   {
     id: 'join-attend',
     title: 'join と attend',
-    points: ['join は「（グループ・活動に）加わる・参加する」。attend は「（会議・授業・式などに）出席する」で、少しかための言い方。どちらも後ろに in や to をつけない。'],
+    points: ['join は「（グループ・活動に）加わる・参加する」。attend は「（会議・授業・式などに）出席する」で、少しかための言い方。「クラブに入る」は join the club、「会議に出る」は attend the meeting のように、すぐあとにグループや会を置く（join to / attend to とは言わない。attend to は「対応する」という別の意味）。'],
     examples: [
       { en: 'I joined the brass band in April.', ja: '私は4月に吹奏楽部に入った。' },
       { en: 'Many parents attended the graduation ceremony.', ja: 'たくさんの保護者が卒業式に出席した。' },

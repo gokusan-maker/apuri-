@@ -98,12 +98,16 @@ export function verbOf(en: string): Verb | undefined {
   return VERBS.find((v) => v.base === en)
 }
 
+const ALSO_OK_PP: Record<string, string[]> = { show: ['showed'] }
+
 export function makeVerbQuestion(verb: Verb, tense: Tense, rng: Rng = Math.random): VerbQuestion {
   const correct = verb[tense]
   const other = tense === 'past' ? verb.pp : verb.past
   const wrong: string[] = []
+  // show の過去分詞は shown のほかに showed も使われるので、誤答に出さない
+  const alsoOk = tense === 'pp' ? (ALSO_OK_PP[verb.base] ?? []) : []
   const push = (w: string) => {
-    if (w !== correct && !wrong.includes(w) && wrong.length < 3) wrong.push(w)
+    if (w !== correct && !alsoOk.includes(w) && !wrong.includes(w) && wrong.length < 3) wrong.push(w)
   }
   // 同じ動詞の別の形・規則変化のまちがいを優先し、足りなければ他の動詞の同じ形
   ;[other, regularize(verb.base), verb.base].forEach(push)
