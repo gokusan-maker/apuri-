@@ -943,8 +943,8 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
       <h2>
         モンスター図鑑 {seen.size} / {FORMS.length}
       </h2>
-      <p className="stats-note">Lv15 からは、いちばん多く使った学び方で進化先が変わるよ。</p>
-      {ZUKAN_ROWS.map((row) => (
+      <p className="stats-note" title="Lv15 からは、いちばん多く使った学び方で進化先が変わるよ。">Lv15 から学び方で進化が変わる</p>
+      {ZUKAN_ROWS.filter((row) => row.ids.some((id) => seen.has(id)) || ZUKAN_ROWS.filter((r) => !r.ids.some((id) => seen.has(id))).length <= 1).map((row) => (
         <div key={row.label} className="zukan-row">
           <span className="zukan-row-label">{row.label}</span>
           {!row.ids.some((id) => seen.has(id)) ? (
@@ -981,9 +981,18 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
           )}
         </div>
       ))}
+      {/* まだ1つも会っていない系統が2つ以上なら、まとめて1行の「🔒 ？？？ ×N」にする */}
+      {ZUKAN_ROWS.filter((row) => !row.ids.some((id) => seen.has(id))).length > 1 && (
+        <div className="zukan-row">
+          <span className="zukan-row-label">🔒 まだの進化</span>
+          <p className="zukan-row-locked" aria-label={`まだ出会っていない姿 ${ZUKAN_ROWS.filter((row) => !row.ids.some((id) => seen.has(id))).reduce((n, r) => n + r.ids.length, 0)}`}>
+            🔒 ？？？ ×{ZUKAN_ROWS.filter((row) => !row.ids.some((id) => seen.has(id))).reduce((n, r) => n + r.ids.length, 0)}
+          </p>
+        </div>
+      )}
       <div className="zukan-row">
         <span className="zukan-row-label">
-          🐾 キャラクター {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).length} / {SPECIES.length}（タマゴガチャで出るよ）
+          🐾 キャラクター {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).length} / {SPECIES.length}
         </span>
         <ol className="zukan-line zukan-kinds zukan-species">
           {SPECIES.filter((sp) => sp.id === 'mochi' || species.has(sp.id)).map((sp) => {
@@ -1019,7 +1028,7 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
       )}
       <div className="zukan-row">
         <span className="zukan-row-label">
-          🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}（タマゴガチャで出るよ）
+          🎨 色ちがい {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).length} / {KINDS.length}
         </span>
         <ol className="zukan-line zukan-kinds">
           {KINDS.filter((k) => k.id === 'normal' || kinds.has(k.id)).map((k) => {

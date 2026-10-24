@@ -73,10 +73,10 @@ it('Lv15からはしっぽと模様、神話の姿はきらきら', () => {
 it('図鑑は系統ごとに進化の流れで並ぶ（全15種）', async () => {
   const { Zukan } = await import('./MonsterView')
   render(<Zukan monsters={[{ xp: 0 }]} />)
-  expect(document.querySelectorAll('.zukan-row')).toHaveLength(6) // 4系統＋キャラクター＋色ちがい
-  // まだ1つも会っていない系統（カード・クイズ・リスニング）は「🔒 ？？？ ×4」の1行にたたむ
+  expect(document.querySelectorAll('.zukan-row')).toHaveLength(4) // はじめ＋まだの進化（1行）＋キャラクター＋色ちがい
+  // まだ1つも会っていない系統（カード・クイズ・リスニング）はまとめて「🔒 ？？？ ×12」の1行にたたむ
   expect(document.querySelectorAll('.zukan-line:not(.zukan-kinds) li')).toHaveLength(3)
-  expect([...document.querySelectorAll('.zukan-row-locked')].map((e) => e.textContent)).toEqual(['🔒 ？？？ ×4', '🔒 ？？？ ×4', '🔒 ？？？ ×4'])
+  expect([...document.querySelectorAll('.zukan-row-locked')].map((e) => e.textContent)).toEqual(['🔒 ？？？ ×12'])
 })
 
 it('図鑑に色ちがいの集まり具合が出る', async () => {
