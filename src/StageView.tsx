@@ -178,7 +178,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         level={lv}
         words={wordsOf([lv])}
         title={`🔥 ボスラッシュ${rush.ex ? 'EX' : ''} ${rush.round + 1} / ${levels.length}`}
-        note={rush.round === 0 ? (rush.ex ? `中3・高校基礎・熟語のボスと3連戦（ハートは引き継ぎ）。全部たおすと 🪙${RUSH_EX_COINS}＋🎟2` : `ボスと3連戦（ハートは引き継ぎ）。全部たおすと 🪙${RUSH_COINS}＋🎟`) : undefined}
+        note={rush.round === 0 ? (rush.ex ? `中3〜熟語のボスと3連戦！ 全勝で 🪙${RUSH_EX_COINS}＋🎟2（ハートは持ちこし）` : `ボスと3連戦！ 全勝で 🪙${RUSH_COINS}＋🎟（ハートは持ちこし）`) : undefined}
         startHearts={rush.hearts}
         winLabel={last ? 'ラッシュ完全クリア！ ステージにもどる' : `次のボスへ ▶（ハート${rush.hearts}を引き継ぐ）`}
         partner={partner}
