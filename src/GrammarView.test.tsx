@@ -500,7 +500,7 @@ it('文法の一覧は「すぐ練習」と文法ゲームのタイルが上、�
   const sec = document.querySelector('section.grammar')!
   const kids = [...sec.children]
   expect(kids.indexOf(grid)).toBeLessThan(kids.indexOf(sec.querySelector('.grammar-records')!))
-  expect(sec.lastElementChild!.className).toBe('grammar-records')
+  expect(sec.lastElementChild!.classList.contains('grammar-records')).toBe(true)
   fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
   expect(screen.getByText(/ 5 問目/)).toBeInTheDocument()
 })
@@ -546,7 +546,7 @@ it('文法の一覧に「時制まとめ表」がある', async () => {
   localStorage.clear()
   const { TENSE_TABLE } = await import('./grammar')
   render(<Grammar />)
-  expect(screen.getByText(/🕰 時制まとめ表/)).toBeInTheDocument()
+  expect(screen.getByText(/時制まとめ表/)).toBeInTheDocument()
   expect(document.querySelectorAll('.tense-table tr')).toHaveLength(TENSE_TABLE.length)
   expect(screen.getByText('I have played tennis for three years.')).toBeInTheDocument()
 })
@@ -883,4 +883,10 @@ it('学年の単元の行はアイコンつきの色ボタン（game-fold）', (
   render(<Grammar />)
   const folds = [...document.querySelectorAll('details.grammar-grade-fold.game-fold')]
   expect(folds.map((d) => d.querySelector('.lg-icon')?.textContent)).toEqual(['🌱', '🌿', '🌳', '🎓'])
+})
+
+it('文法ドリル・時制まとめ表・文法の記録の行もアイコンつきの色ボタン（game-fold）', () => {
+  localStorage.clear()
+  render(<Grammar onDrill={() => {}} />)
+  for (const c of ['grammar-drills', 'tense-table', 'grammar-records']) expect(document.querySelector(`details.${c}.game-fold summary .lg-icon`)).not.toBeNull()
 })

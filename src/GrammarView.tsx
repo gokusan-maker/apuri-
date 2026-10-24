@@ -370,9 +370,9 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           </div>
         )}
         {stampMode && onDrill && (
-          <details className="grammar-drills">
+          <details className="grammar-drills game-fold lg-3">
             <summary>
-              🧩 文法ドリル <span className="fold-meta">{GRAMMAR_DRILLS.length}</span>
+              <span className="lg-icon" aria-hidden="true">🧩</span>文法ドリル <span className="fold-meta">{GRAMMAR_DRILLS.length}</span>
             </summary>
             <div className="drill-grid" role="group" aria-label="文法ドリル">
               {GRAMMAR_DRILLS.map((d) => (
@@ -384,8 +384,10 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           </details>
         )}
         {stampMode && (
-          <details className="tense-table">
-            <summary>🕰 時制まとめ表</summary>
+          <details className="tense-table game-fold lg-0">
+            <summary>
+              <span className="lg-icon" aria-hidden="true">🕰</span>時制まとめ表
+            </summary>
             <table>
               <tbody>
                 {TENSE_TABLE.map((t) => (
@@ -545,9 +547,9 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           <ul className="grammar-list">{favFirst(todoSort(searchUnits(units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade), keyword)), stampMode ? fav : []).map(unitItem)}</ul>
         )}
         {stampMode ? (
-          <details className="grammar-records">
+          <details className="grammar-records game-fold lg-4">
             <summary>
-              📊 文法の記録
+              <span className="lg-icon" aria-hidden="true">📊</span>文法の記録
               <span className="fold-meta">{units.filter((u) => record[u.id] === u.questions.length).length}/{units.length}</span>
             </summary>
         <p className="stats-note grammar-total">
