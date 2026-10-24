@@ -3239,4 +3239,33 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Which items did participants tend to choose as having pleasant meanings?', choices: ['The ones they had seen more often.', 'The ones they had seen only once.', 'The ones that were easiest to read.', 'The ones explained by the researcher.'], answer: 0, why: '第2段落 participants tended to choose the ones they had seen more often。' },
     ],
   },
+{
+    id: 'hs-calligraphy',
+    title: 'One Character a Day',
+    level: '高校入試（スピーチ）',
+    paragraphs: [
+      "Hello, everyone. Today I want to talk about calligraphy. When I was in elementary school, I did not like it at all. My characters were always too big, and my teacher often said they were not balanced. I wanted to quit, ( A ) my grandmother, who has practiced calligraphy for fifty years, gave me some advice.",
+      "She said, \"Don't try to write many characters. Write just one character every day, slowly and carefully.\" So I started writing one character after dinner each night. At first, it felt boring. But after a few months, I began to notice small changes. My lines became stronger, and I learned how to use the space on the paper.",
+      "Last winter, I entered a calligraphy contest for junior high school students. I wrote the word \"future\" in Japanese. I did not win first prize, but my work was chosen ( B ) the city museum. When my grandmother saw it there, she smiled and said, \"You did not give up.\" From this experience, I learned that small efforts can lead to big results if you keep ( C ) them every day. Thank you for listening.",
+    ],
+    ja: [
+      'みなさん、こんにちは。今日は書道について話したいと思います。小学生のころ、私は書道がまったく好きではありませんでした。私の字はいつも大きすぎて、先生にはよくバランスがよくないと言われました。やめたいと思っていましたが、50年間書道を続けている祖母がアドバイスをくれました。',
+      '祖母は「たくさんの字を書こうとしないで。毎日1字だけ、ゆっくりていねいに書きなさい」と言いました。そこで私は、毎晩夕食のあとに1字書くことを始めました。はじめは退屈に感じました。でも数か月たつと、小さな変化に気づき始めました。線が力強くなり、紙の余白の使い方もわかるようになりました。',
+      'この前の冬、私は中学生の書道コンテストに出品しました。「未来」という言葉を書きました。1位にはなれませんでしたが、作品が市の美術館に展示されることに選ばれました。それを美術館で見た祖母は、ほほえんで「あきらめなかったね」と言いました。この経験から、小さな努力も毎日続ければ大きな結果につながることを学びました。聞いてくれてありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'because of', 'during', 'without'], answer: 0, why: '「やめたかった」→「でも祖母がアドバイスをくれた」という逆接で、あとに文が続くので接続詞の but。because of・during・without は前置詞なので文は続かない。' },
+      { id: 'B', choices: ['for', 'of', 'than', 'since'], answer: 0, why: 'be chosen for ～「～のために（～に向けて）選ばれる」。美術館（の展示）のために選ばれた。' },
+      { id: 'C', choices: ['doing', 'to do', 'do', 'done'], answer: 0, why: 'keep ～ing「～し続ける」。keep のあとは動名詞。' },
+    ],
+    tf: [
+      { statement: '筆者は小学生のころから書道が好きだった。', answer: false, why: '第1段落 I did not like it at all。' },
+      { statement: '祖母は、毎日1字だけていねいに書くようにすすめた。', answer: true, why: '第2段落 Write just one character every day, slowly and carefully.' },
+      { statement: '筆者はコンテストで1位になった。', answer: false, why: '第3段落 I did not win first prize。' },
+      { statement: '筆者の作品は市の美術館で見ることができた。', answer: true, why: '第3段落 my work was chosen for the city museum / When my grandmother saw it there。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn from this experience?', choices: ['Small efforts can lead to big results if you continue them.', 'Calligraphy is easier than drawing pictures.', 'Big characters always look better.', 'Contests are the best way to practice.'], answer: 0, why: '第3段落 small efforts can lead to big results if you keep doing them every day。' },
+    ],
+  },
 ]
