@@ -187,9 +187,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         </p>}
         <p className="stats-note">記号で答える入試形式の読解</p>
         {!whole && dailyPick(LIST, today) && (
-          <button className="long-recommend daily-long level-daily" onClick={() => openPassage(dailyPick(LIST, today)!)}>
-            📅 今日のおすすめ：<strong>{dailyPick(LIST, today)!.title}</strong>
-            {record[dailyPick(LIST, today)!.id] !== undefined ? ' ✅ 解いた' : ''}
+          <button className="level-daily" aria-label={`このレベルのおすすめ：${dailyPick(LIST, today)!.title}`} onClick={() => openPassage(dailyPick(LIST, today)!)}>
+            🎯 おすすめ<strong>{dailyPick(LIST, today)!.title}</strong>
+            {record[dailyPick(LIST, today)!.id] !== undefined ? ' ✅' : ''}
           </button>
         )}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>

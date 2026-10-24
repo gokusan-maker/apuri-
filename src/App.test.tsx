@@ -1124,7 +1124,7 @@ describe('App', () => {
     expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/40本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
-    expect(screen.getByText(/📅 今日のおすすめ：/)).toBeInTheDocument() // そのレベルの中から日がわり
+    expect(screen.getByRole('button', { name: /^このレベルのおすすめ：/ })).toBeInTheDocument() // そのレベルの中から日がわり（今日の読解と見分けやすい小さなボタン）
     fireEvent.click(screen.getByRole('tab', { name: /^TOEFL・IELTS/ }))
     expect(screen.getAllByText(/Partners on the Reef/).length).toBeGreaterThan(0)
     expect(screen.queryByText(/The Value of Boredom/)).toBeNull()

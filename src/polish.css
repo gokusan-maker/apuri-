@@ -2176,3 +2176,8 @@ details[open] > summary::before { transform: rotate(90deg); }
 .univ-tower.game-fold > summary .univ-meter i { background: linear-gradient(90deg, #fde047, #f59e0b); }
 .game-fold > summary { border: none; }
 .univ-tower.game-fold > summary .univ-meter { order: 10; margin-bottom: 0; }
+
+/* 読解：レベルごとのおすすめは、上の「今日の読解」と見分けやすい むらさきの小さなゲームボタン */
+.level-daily { display: flex; align-items: center; gap: 8px; width: 100%; margin: 8px 0; padding: 10px 14px; border: none; border-radius: 14px; background: linear-gradient(135deg, #a78bfa, #6d28d9); color: #fff; font-size: 0.85rem; font-weight: 800; text-align: left; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 3px 0 #4c1d95; }
+.level-daily strong { flex: 1; min-width: 0; font-size: 0.95rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.level-daily:active { transform: translateY(2px); box-shadow: 0 1px 0 #4c1d95; }
