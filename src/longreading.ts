@@ -5451,6 +5451,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The speaker says that games are bad.', answer: false, why: '第4段落 I am not saying that games are bad。' },
     ],
   },
+  {
+    id: 'family-puzzle',
+    title: 'The Last Piece',
+    level: '中2（物語）',
+    paragraphs: [
+      'During the winter vacation, my family started a 1,000-piece jigsaw puzzle of a castle. We put it on the table in the living room, and everyone worked on it ( A ) they had free time.',
+      'My father was good at the edges, and my mother found the pieces of the blue sky. I liked working on the castle walls. My little brother was too young to help much, but he enjoyed ( B ) the pieces by color.',
+      'After ten days, only one piece was left, but we could not find it anywhere. We looked under the table and inside the sofa. Finally, my brother found it in our dog\'s bed! Everyone laughed.',
+      'When we put the last piece in, we all clapped. My father glued the puzzle and hung it on the wall. Now every time I see it, I remember the fun time we spent ( C ) together.',
+    ],
+    ja: [
+      '冬休みのあいだ、私の家族はお城の絵の1000ピースのジグソーパズルを始めました。居間のテーブルの上に置いて、みんな時間があるときはいつでも取り組みました。',
+      '父はふちの部分が得意で、母は青空のピースを見つけました。私はお城のかべの部分をやるのが好きでした。弟は小さくてあまり手伝えませんでしたが、ピースを色ごとに分けるのを楽しんでいました。',
+      '10日後、ピースは残り1つになりましたが、どこにも見つかりませんでした。テーブルの下やソファーの中もさがしました。ついに、弟が犬のベッドの中で見つけました！ みんな笑いました。',
+      '最後のピースをはめると、みんなで拍手しました。父はパズルをのりで固めて、かべにかざりました。今、それを見るたびに、いっしょに取り組んだ楽しい時間を思い出します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whenever', 'during', 'despite', 'because of'], answer: 0, why: 'あとに they had free time という文が続くので接続詞の whenever「～するときはいつでも」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['sorting', 'to sort', 'sort', 'sorted'], answer: 0, why: 'enjoy のあとは動名詞（～ing）。enjoyed sorting「分けるのを楽しんだ」。' },
+      { id: 'C', choices: ['working', 'to work', 'work', 'worked'], answer: 0, why: 'spend ＋ 時間 ＋ ～ing「～して時間を過ごす」。the fun time we spent working together。' },
+    ],
+    tf: [
+      { statement: 'The puzzle was a picture of a castle.', answer: true, why: '第1段落 a 1,000-piece jigsaw puzzle of a castle。' },
+      { statement: "The writer's mother worked on the castle walls.", answer: false, why: '第2段落 I liked working on the castle walls（筆者）。母は青空のピース。' },
+      { statement: "The last piece was found in the dog's bed.", answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'The family threw the puzzle away after they finished it.', answer: false, why: '第4段落 My father glued the puzzle and hung it on the wall。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

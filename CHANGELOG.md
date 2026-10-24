@@ -1833,3 +1833,4 @@
 - 2026-10-24: TOEFL・IELTS の読解に「From Sand to Glass」（ガラスの原料・吹きガラス・リサイクル、空所3・内容一致4・英問英答1）を追加
 - 2026-10-24: 読解を3本追加：難関大「The Task That Will Not Leave You Alone」（ツァイガルニク効果と先のばし）、高校入試「Uniforms or Our Own Clothes?」（制服についての話し合い）、かんたん「Mr. Smile」（かかし）
 - 2026-10-24: チームバトルの3体の下に、それぞれのレベル（📐文法 Lv.24 など）を表示
+- 2026-10-24: 読解を2本追加：TOEFL・IELTS「What Makes Lightning and Thunder?」（雷と雷鳴のしくみ）、ふつう（中2）「The Last Piece」（家族のジグソーパズル）

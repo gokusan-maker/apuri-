@@ -4179,6 +4179,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-lightning',
+    title: 'What Makes Lightning and Thunder?',
+    level: 'TOEFL・IELTS（気象）',
+    paragraphs: [
+      "Lightning is one of the most powerful events in nature. It forms inside tall storm clouds, where tiny pieces of ice and drops of water are carried up and down by strong winds. As they crash into each other, electric charges separate: the top of the cloud usually becomes positively charged, ( A ) the bottom becomes negatively charged.",
+      "When the difference between these charges becomes large enough, electricity suddenly flows through the air as a bolt of lightning. A single bolt can heat the air around it to about 30,000 degrees Celsius, which is several times hotter than the surface of the sun.",
+      "This sudden heating makes the air expand extremely quickly, and the result is the loud sound we call thunder. Because light travels much faster ( B ) sound, we see the flash before we hear the thunder. By counting the seconds between the two, we can estimate how far away the storm is: about three seconds for every kilometer.",
+      "Contrary to a popular saying, lightning can strike the same place more than once. Tall buildings and towers are often hit many times a year. For this reason, they are usually equipped with lightning rods, ( C ) guide the electricity safely into the ground.",
+    ],
+    ja: [
+      '雷は、自然の中でもっとも強力な現象の1つである。雷は高く発達した嵐の雲の中でできる。そこでは、小さな氷のつぶや水のしずくが強い風で上下に運ばれている。それらがぶつかり合うと、電気が分かれる。ふつう雲の上のほうはプラスの電気をおび、下のほうはマイナスの電気をおびるのである。',
+      'これらの電気の差が十分に大きくなると、電気がいきなり空気の中を雷として流れる。1回の雷で、まわりの空気はおよそ3万℃まで熱せられることがある。これは太陽の表面の何倍もの熱さである。',
+      'このいきなりの加熱によって空気がものすごい速さでふくらみ、その結果、雷鳴とよばれる大きな音が生まれる。光は音よりずっと速く進むので、私たちは雷鳴を聞く前に光を見る。光と音のあいだの秒数を数えれば、嵐がどれくらい遠くにあるかを見積もることができる。1キロメートルにつきおよそ3秒である。',
+      'よく言われることとはちがって、雷は同じ場所に2度以上落ちることがある。高い建物や塔は、1年に何度も落雷を受けることが多い。そのため、ふつうそうした建物には避雷針がつけられていて、電気を安全に地面へと導くのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'あとに the bottom becomes … という文が続くので、対比を表す接続詞 while「一方で」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['than', 'as', 'then', 'that'], answer: 0, why: '比較級 much faster のあとは than。faster than sound「音よりも速く」。' },
+      { id: 'C', choices: ['which', 'what', 'who', 'they'], answer: 0, why: 'コンマのあとで lightning rods を説明する非制限用法の関係代名詞 which。what は先行詞をふくむ、who は人、they だとコンマだけで文がつながってしまう。' },
+    ],
+    tf: [
+      { statement: '雷は、高く発達した嵐の雲の中でできる。', answer: true, why: '第1段落 It forms inside tall storm clouds。' },
+      { statement: '雷の熱は、太陽の表面より低い温度である。', answer: false, why: '第2段落 several times hotter than the surface of the sun。' },
+      { statement: '光は音より速いので、雷鳴を聞く前に光が見える。', answer: true, why: '第3段落 we see the flash before we hear the thunder。' },
+      { statement: '雷は、同じ場所に2度落ちることはない。', answer: false, why: '第4段落 lightning can strike the same place more than once。' },
+    ],
+    qa: [
+      { q: 'How can we estimate how far away a storm is?', choices: ['By counting the seconds between the flash and the thunder.', 'By measuring the size of the cloud.', 'By checking the color of the lightning.', 'By listening to the sound of the wind.'], answer: 0, why: '第3段落 By counting the seconds between the two, we can estimate how far away the storm is。' },
+    ],
+  },
+{
     id: 'toefl-glass',
     title: 'From Sand to Glass',
     level: 'TOEFL・IELTS（科学・歴史）',
