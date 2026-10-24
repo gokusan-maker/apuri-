@@ -143,7 +143,7 @@ export const PASSAGES: Passage[] = [
     questions: [
       { q: 'エマはどこから来た？', choices: ['アメリカ', 'カナダ', 'イギリス'], answer: 1 },
       { q: 'エマが大好きだったのは？', choices: ['納豆', 'みそ汁', 'すし'], answer: 1 },
-      { q: '今はどうしている？', choices: ['メッセージを送り合っている', '電話で話す', '会っていない'], answer: 0 },
+      { q: '今はどうしている？', choices: ['メッセージを送り合っている', '電話で話す', '毎日会っている'], answer: 0 },
     ],
   },
   {
@@ -357,7 +357,7 @@ export const PASSAGES: Passage[] = [
   },
   {
     id: 'volunteer',
-    title: 'Beach Cleanup',
+    title: 'Thirty Bags of Trash',
     text: 'Last Saturday, I joined a beach cleanup with my family. We picked up plastic bottles, cans, and fishing nets. In two hours, we filled thirty bags. I want to use less plastic from now on.',
     ja: 'この前の土曜日、家族と海岸清掃に参加しました。ペットボトルや空き缶、つりのあみを拾いました。2時間で30ふくろがいっぱいになりました。これからはプラスチックを使う量を減らしたいです。',
     questions: [
@@ -567,7 +567,7 @@ export const PASSAGES: Passage[] = [
   {
     id: 'bird-nest',
     title: 'A Nest by the Window',
-    text: 'In May, a bird made a nest near our kitchen window. Soon there were four small eggs in it. We watched quietly every morning. One day, the eggs hatched, and the babies began to sing for food.',
+    text: 'In May, a bird made a nest near our kitchen window. Soon there were four small eggs in it. We watched quietly every morning. One day, the eggs hatched, and the babies began to chirp for food.',
     ja: '5月に、鳥がうちの台所の窓の近くに巣を作りました。まもなく中に小さな卵が4つありました。私たちは毎朝静かに見守りました。ある日卵がかえり、ひなたちがエサをねだって鳴きはじめました。',
     questions: [
       { q: '巣はどこにあった？', choices: ['庭の木', '台所の窓の近く', '屋根の上'], answer: 1 },
@@ -677,8 +677,8 @@ export const PASSAGES: Passage[] = [
   {
     id: 'exam-day',
     title: 'The Entrance Exam',
-    text: 'My sister had her university entrance exam last Saturday. She studied English words every morning for a year. On the day of the exam, she was nervous, but she did her best. Last week, she got a letter saying she passed.',
-    ja: '姉はこの前の土曜日に大学の入試を受けました。1年間、毎朝英単語を勉強していました。試験の日は緊張していましたが、全力をつくしました。先週、合格したという手紙が届きました。',
+    text: 'My sister had her university entrance exam last month. She studied English words every morning for a year. On the day of the exam, she was nervous, but she did her best. Last week, she got a letter saying she passed.',
+    ja: '姉は先月、大学の入試を受けました。1年間、毎朝英単語を勉強していました。試験の日は緊張していましたが、全力をつくしました。先週、合格したという手紙が届きました。',
     questions: [
       { q: '姉は何を受けた？', choices: ['大学の入試', '英検', '運転免許の試験'], answer: 0 },
       { q: '毎朝何を勉強した？', choices: ['数学', '英単語', '歴史'], answer: 1 },
@@ -808,9 +808,9 @@ export const PASSAGES: Passage[] = [
   },
   {
     id: 'first-snow',
-    title: 'The First Snow',
+    title: 'A Snowman with a Carrot Nose',
     text: 'This morning, I looked out of the window and saw white snow everywhere. It was the first snow of the year. My little sister and I put on our coats and ran outside. We made a small snowman with a carrot nose.',
-    ja: '今朝窓の外を見ると、一面に白い雪が積もっていました。その年の初雪でした。妹と私はコートを着て外へかけ出しました。ニンジンの鼻の小さな雪だるまを作りました。',
+    ja: '今朝窓の外を見ると、一面に白い雪が積もっていました。今年の初雪でした。妹と私はコートを着て外へかけ出しました。ニンジンの鼻の小さな雪だるまを作りました。',
     questions: [
       { q: '今朝何が見えた？', choices: ['雨', '一面の雪', '虹'], answer: 1 },
       { q: 'だれと外へ出た？', choices: ['妹', '兄', '友だち'], answer: 0 },
@@ -864,10 +864,10 @@ export const PASSAGES: Passage[] = [
   {
     id: 'penpal-video',
     title: 'A Video Call',
-    text: 'Last night, I had a video call with my friend in New Zealand. It was morning there, and she was eating breakfast. We talked about our schools in English. Her school has no uniforms, so she was surprised that I wear one.',
-    ja: 'きのうの夜、ニュージーランドの友だちとビデオ通話をしました。向こうは朝で、彼女は朝ごはんを食べていました。英語でおたがいの学校について話しました。彼女の学校には制服がないので、私が制服を着ていることにおどろいていました。',
+    text: 'Last night, I had a video call with my friend in New York. It was morning there, and she was eating breakfast. We talked about our schools in English. Her school has no uniforms, so she was surprised that I wear one.',
+    ja: 'きのうの夜、ニューヨークの友だちとビデオ通話をしました。向こうは朝で、彼女は朝ごはんを食べていました。英語でおたがいの学校について話しました。彼女の学校には制服がないので、私が制服を着ていることにおどろいていました。',
     questions: [
-      { q: '友だちはどこに住んでいる？', choices: ['ニュージーランド', 'カナダ', 'イギリス'], answer: 0 },
+      { q: '友だちはどこに住んでいる？', choices: ['アメリカ', 'ニュージーランド', 'イギリス'], answer: 0 },
       { q: '向こうは何時ごろだった？', choices: ['夜', '朝', '昼'], answer: 1 },
       { q: '友だちは何におどろいた？', choices: ['私が制服を着ていること', '日本の天気', '私の名前'], answer: 0 },
     ],
@@ -1017,8 +1017,8 @@ export const PASSAGES: Passage[] = [
   {
     id: 'bread-baking',
     title: 'Baking Bread',
-    text: 'On Saturday, my sister and I baked bread for the first time. We mixed flour, water, and a little sugar. Then we waited for one hour. The bread was not very pretty, but it smelled wonderful and tasted great.',
-    ja: '土曜日、姉と私ははじめてパンを焼きました。小麦粉と水と少しの砂糖をまぜました。それから1時間待ちました。パンの見た目はあまりよくありませんでしたが、とてもいいにおいがして、おいしかったです。',
+    text: 'On Saturday, my sister and I baked bread for the first time. We mixed flour, water, yeast, and a little sugar. Then we waited for one hour. The bread was not very pretty, but it smelled wonderful and tasted great.',
+    ja: '土曜日、姉と私ははじめてパンを焼きました。小麦粉と水とイーストと少しの砂糖をまぜました。それから1時間待ちました。パンの見た目はあまりよくありませんでしたが、とてもいいにおいがして、おいしかったです。',
     questions: [
       { q: 'パンを焼いたのはいつ？', choices: ['土曜日', '日曜日', '金曜日'], answer: 0 },
       { q: 'どのくらい待った？', choices: ['10分', '30分', '1時間'], answer: 2 },
@@ -1238,9 +1238,9 @@ export const PASSAGES: Passage[] = [
     id: 'goldfish',
     title: 'Our Goldfish, Kintaro',
     text: 'Three years ago, I won a goldfish at a summer festival. I named him Kintaro. At first he was as small as my finger, but now he is almost ten centimeters long. Every morning, he swims to the front of the tank when he sees me, because he knows it is time for breakfast.',
-    ja: '3年前、夏祭りで金魚をもらいました。私はその金魚を金太郎と名づけました。はじめは私の指くらいの大きさでしたが、今ではほとんど10センチの長さです。毎朝、私を見ると水そうの前のほうに泳いできます。朝ごはんの時間だとわかっているからです。',
+    ja: '3年前、夏祭りの金魚すくいで金魚をとりました。私はその金魚を金太郎と名づけました。はじめは私の指くらいの大きさでしたが、今ではほとんど10センチの長さです。毎朝、私を見ると水そうの前のほうに泳いできます。朝ごはんの時間だとわかっているからです。',
     questions: [
-      { q: '金魚はどこでもらった？', choices: ['夏祭り', 'ペットショップ', '友だちの家'], answer: 0 },
+      { q: '金魚はどこで手に入れた？', choices: ['夏祭り', 'ペットショップ', '友だちの家'], answer: 0 },
       { q: '金太郎は今どれくらいの長さ？', choices: ['指くらい', 'ほとんど10センチ', '20センチ以上'], answer: 1 },
       { q: '毎朝、金太郎が前に泳いでくるのはなぜ？', choices: ['朝ごはんの時間だとわかっているから', '水がつめたいから', 'こわいから'], answer: 0 },
     ],
@@ -1446,7 +1446,7 @@ export const PASSAGES: Passage[] = [
   {
     id: 'bowling-day',
     title: 'My First Strike',
-    text: 'Last Saturday, my family went bowling. At first, my ball always went into the side. My father showed me how to throw it straight. In the last game, I knocked down all ten pins! It was my first strike. Everyone gave me a high five.',
+    text: 'Last Saturday, my family went bowling. At first, my ball always went into the gutter. My father showed me how to throw it straight. In the last game, I knocked down all ten pins! It was my first strike. Everyone gave me a high five.',
     ja: 'この前の土曜日、家族でボウリングに行きました。最初は、私のボールはいつもみぞに落ちていました。父がまっすぐ投げる方法を教えてくれました。最後のゲームで、私は10本のピンを全部たおしました！ 初めてのストライクでした。みんながハイタッチしてくれました。',
     questions: [
       { q: '家族はどこへ行った？', choices: ['ボウリング場', '水族館', '動物園'], answer: 0 },
