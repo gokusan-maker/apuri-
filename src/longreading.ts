@@ -5112,6 +5112,35 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'He made the new fastener in only one day.', answer: false, why: '第3段落 After years of hard work（何年もの努力のあと）。' },
     ],
   },
+  {
+    id: 'garden-mystery',
+    title: 'The Tomato Thief',
+    level: '中2（物語）',
+    paragraphs: [
+      'Our class grows tomatoes in a small garden behind the school. One morning in July, Yuta ran into the classroom and shouted, "Some of our tomatoes are gone!" We went to the garden and found that three red tomatoes were missing. There were small holes ( A ) the ground near the plants.',
+      'Everyone had a different idea. Some students thought a bird took them, and others thought a student from another class did it. Our teacher, Ms. Hara, said, "Let\'s not decide ( B ) we know the facts." So we put a small camera near the garden that evening.',
+      'The next morning, we checked the video together. At about two o\'clock at night, a small animal with a round face came into the garden. It was a tanuki, a raccoon dog! It looked around carefully and then ate a tomato. Everyone laughed. "The thief is ( C ) cute!" Yuta said.',
+      'We were glad that no one in the school had taken the tomatoes. Ms. Hara told us that tanuki sometimes come into towns to look for food. We decided to put a net around the plants. Now our tomatoes are safe, and we learned something important: we should find out the facts before we blame someone.',
+    ],
+    ja: [
+      '私たちのクラスは、学校の裏の小さな畑でトマトを育てています。7月のある朝、ユウタが教室にかけこんできて、「トマトがいくつかなくなってる！」とさけびました。畑に行ってみると、赤いトマトが3つなくなっていました。株の近くの地面には小さな穴がありました。',
+      'みんなの考えはばらばらでした。鳥が取ったと思う生徒もいれば、ほかのクラスの生徒がやったと思う生徒もいました。担任のハラ先生は「事実がわかるまでは決めつけないようにしましょう」と言いました。そこで私たちは、その日の夕方、畑の近くに小さなカメラを置きました。',
+      '次の朝、私たちはみんなで動画を確かめました。夜中の2時ごろ、丸い顔をした小さな動物が畑に入ってきました。タヌキでした！ タヌキは注意深くあたりを見回してから、トマトを1つ食べました。みんな笑いました。「犯人、すごくかわいい！」とユウタが言いました。',
+      '学校のだれもトマトを取っていなかったので、私たちはほっとしました。ハラ先生は、タヌキはときどき食べ物をさがして町に来ることがあると教えてくれました。私たちは株のまわりにネットをはることにしました。今ではトマトは無事で、私たちは大切なことを学びました。だれかを責める前に、事実を確かめるべきだということです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'for', 'of', 'to'], answer: 0, why: 'holes in the ground「地面の（地面にあいた）穴」。中にあるものは in。' },
+      { id: 'B', choices: ['until', 'by', 'during', 'without'], answer: 0, why: 'not ～ until …「…するまで～しない」。あとに we know the facts という文が続くので接続詞の until。by・during・without は前置詞。' },
+      { id: 'C', choices: ['so', 'such', 'very much', 'too much'], answer: 0, why: '形容詞 cute を強めるのは so。such は〈such ＋ (a) ＋ 形容詞 ＋ 名詞〉の形で使い、形容詞だけの前には置かない。' },
+    ],
+    underline: { phrase: 'we should find out the facts before we blame someone', choices: ['だれかを責める前に、事実を確かめるべきだ', 'だれかを責めたあとで、事実を話すべきだ', '事実がわからなければ、だれかを責めてもよい', 'だれも責めずに、事実をかくすべきだ'], answer: 0, why: 'find out ～「～を見つけ出す・確かめる」、blame「責める」、before ～「～する前に」。' },
+    tf: [
+      { statement: 'Three tomatoes were missing from the garden.', answer: true, why: '第1段落 three red tomatoes were missing。' },
+      { statement: 'Ms. Hara said a student from another class took the tomatoes.', answer: false, why: '第2段落 先生は「事実がわかるまで決めつけない」と言った。' },
+      { statement: 'The camera showed a tanuki eating a tomato at night.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'The class stopped growing tomatoes after this.', answer: false, why: '第4段落 ネットをはって、今もトマトは無事。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
