@@ -734,13 +734,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             ))}
           {partner && hintAt === null && picked === null && q.choices.length > 2 && (
             <button
-              className="hint-5050"
+              className="hint-5050 hint-erase"
+              title={`${partner.name}がまちがいを1つ消してくれる`}
               onClick={() => {
                 const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.answer)
                 setHintAt({ index, hide: wrongs[Math.floor(rnd() * wrongs.length)] })
               }}
             >
-              💡 {partner.name}のヒント（1つ消す）
+              ✂️ 1つ消す
             </button>
           )}
           <div className="choices">

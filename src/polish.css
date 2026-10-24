@@ -2362,3 +2362,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 .long-read-row .list-link:nth-child(2) { --lr-h: 215; }
 .long-read-row .list-link:nth-child(3) { --lr-h: 275; }
 .long-read-row .list-link:active { transform: translateY(2px); box-shadow: none; }
+/* ボス戦のヒント2つ（💡 ヒント・✂️ 1つ消す）は横にならべて1行に */
+.boss .hint-5050 { display: inline-flex; align-items: center; justify-content: center; width: calc(50% - 6px); margin: 6px 3px; padding: 8px 6px; white-space: nowrap; font-size: 0.85rem; vertical-align: top; }
+.boss .hint-5050.hint-erase { background: linear-gradient(135deg, #a78bfa, #7c3aed); color: #fff; border: none; box-shadow: 0 3px 0 #5b21b6; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
