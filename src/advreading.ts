@@ -3418,6 +3418,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-hindsight',
+    title: 'I Knew It All Along',
+    level: '難関大（評論）',
+    paragraphs: [
+      "After a sports match or an election, many people say, \"I knew that would happen.\" Often, however, they did not feel so sure before the result was known. Psychologists call this tendency \"hindsight bias\": once we know how events turned out, we tend to believe that the outcome was more predictable ( A ) it really was.",
+      "In a classic study from the 1970s, researchers asked people to estimate the chances of various possible outcomes of a political event before it happened. After the event, the same people were asked to recall their earlier estimates. Many remembered giving higher chances to the outcomes that actually occurred than they had in fact given. Their memories seemed to have been quietly rewritten by the new information.",
+      "Hindsight bias may seem harmless, but it can lead us to learn the wrong lessons. If a decision turns out badly, we may blame the person who made it, ( B ) the information available at the time did not point clearly to the problem. It can also make us overconfident about our ability to predict the future. One way to reduce the bias is to write down predictions ( C ) we learn the result, so that we can later compare what we actually expected with what happened.",
+    ],
+    ja: [
+      'スポーツの試合や選挙のあとで、多くの人は「そうなると思っていた」と言う。しかし実際には、結果がわかる前はそれほど確信していなかったことが多い。心理学者はこの傾向を「後知恵バイアス」とよぶ。いったん出来事がどうなったかを知ると、私たちはその結果が実際よりも予測しやすかったと思いこみがちなのである。',
+      '1970年代の古典的な研究で、研究者たちは人々に、ある政治的な出来事が起こる前に、考えられるさまざまな結果の可能性を見積もってもらった。出来事のあとで、同じ人たちに前の見積もりを思い出してもらった。多くの人は、実際に起こった結果に、本当に答えた値よりも高い可能性をつけていたと記憶していた。彼らの記憶は、新しい情報によって気づかないうちに書きかえられていたようなのである。',
+      '後知恵バイアスは害がないように思えるかもしれないが、まちがった教訓を学ぶことにつながりうる。ある決定が悪い結果になると、そのとき手に入った情報ははっきりと問題を示していなかったにもかかわらず、決定した人を責めてしまうかもしれない。また、未来を予測する自分の力について自信過剰にさせることもある。このバイアスを減らす1つの方法は、結果を知る前に予測を書きとめておき、あとで実際に予想していたことと起こったことをくらべられるようにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'as', 'that', 'then'], answer: 0, why: '比較級 more predictable のあとは than。more ～ than it really was「実際よりも～」。' },
+      { id: 'B', choices: ['even though', 'in spite of', 'because of', 'despite'], answer: 0, why: 'あとに the information … did not point という文が続くので接続詞の even though「～にもかかわらず」。in spite of・because of・despite は前置詞で文は続かない。' },
+      { id: 'C', choices: ['before', 'during', 'until then', 'prior'], answer: 0, why: 'あとに we learn the result という文が続くので接続詞の before「～する前に」。during・prior は前置詞・形容詞、until then は副詞句で文をつなげない。' },
+    ],
+    tf: [
+      { statement: '後知恵バイアスとは、結果を知ったあとで、それが実際より予測しやすかったと思う傾向である。', answer: true, why: '第1段落 we tend to believe that the outcome was more predictable than it really was。' },
+      { statement: '研究の参加者は、自分の前の見積もりを正確に思い出せた。', answer: false, why: '第2段落 Many remembered giving higher chances … than they had in fact given。' },
+      { statement: '筆者は、後知恵バイアスはまったく害がないと述べている。', answer: false, why: '第3段落 it can lead us to learn the wrong lessons。' },
+      { statement: '結果を知る前に予測を書きとめることで、バイアスを減らせる。', answer: true, why: '第3段落 One way to reduce the bias is to write down predictions before we learn the result。' },
+    ],
+    qa: [
+      { q: 'What happened to the participants\' memories in the 1970s study?', choices: ['They seemed to be changed by knowing the actual outcome.', 'They became more accurate over time.', 'They were completely forgotten.', 'They matched their earlier estimates exactly.'], answer: 0, why: '第2段落 Their memories seemed to have been quietly rewritten by the new information。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
