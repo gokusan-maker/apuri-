@@ -150,7 +150,7 @@ it('コインでハートを1つ回復できる（1戦1回）', () => {
 
 it('すぐに正解すると会心の一撃、ゆっくりだとふつうのダメージ', () => {
   const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
-  expect(screen.getByText(/3秒以内に正解すると/)).toBeInTheDocument()
+  expect(screen.getByText(/3秒以内で会心/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '91')
@@ -195,7 +195,7 @@ it('相棒がいっしょに戦う：ドラコは火の息で追加ダメージ�
 it('タマゴの相棒は応援だけ', async () => {
   const { FORMS } = await import('./monster')
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: FORMS[0], name: 'たまご' }} />)
-  expect(screen.getByText(/たまごが応援しているよ/)).toBeInTheDocument()
+  expect(screen.getByText(/たまごが応援中/)).toBeInTheDocument()
 })
 
 it('ノーミス＆会心でたおすとSランクでおまけコイン', () => {

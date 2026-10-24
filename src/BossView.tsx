@@ -476,12 +476,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 {partner.name}の特技「{skill.name}」Lv{lv}：{skill.desc}
               </>
             ) : (
-              <>{partner.name}が応援しているよ！</>
+              <>{partner.name}が応援中！</>
             )}
           </span>
         </div>
       )}
-      {index === 0 && picked === null && <p className="stats-note boss-tip">⚡ 3秒以内に正解すると会心の一撃！</p>}
+      {index === 0 && picked === null && <p className="stats-note boss-tip" title="3秒以内に正解すると会心の一撃">⚡ 3秒以内で会心！</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">
           「{look.taunt.en}」<span>{look.taunt.ja}</span>
