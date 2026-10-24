@@ -1713,3 +1713,10 @@ it('記録：まだ0の学習時間・コンボ・正答率の行は出さない
   expect(screen.queryByText(/コンボの自己ベスト/)).toBeNull()
   expect(screen.queryByText(/今日の正答率/)).toBeNull()
 })
+
+it('記録：今週まだ0問なら、今週のレポートのシェアと今週の比較は出さない', () => {
+  localStorage.clear()
+  render(<App />)
+  expect(screen.queryByText('📤 今週のレポートをシェア')).toBeNull()
+  expect(document.querySelector('.week-compare')).toBeNull()
+})
