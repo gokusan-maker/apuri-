@@ -5170,6 +5170,35 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Manhole cards are sold at a high price.', answer: false, why: '第3段落 free "manhole cards"（無料のカード）。' },
     ],
   },
+  {
+    id: 'randoseru-letter',
+    title: 'My Old School Bag',
+    level: '中2（物語）',
+    paragraphs: [
+      'When I finished elementary school, my mother asked me, "What should we do with your old school bag?" It was a red randoseru. I used it ( A ) six years, so it had many small scratches. I did not want to throw it away, but I did not need it anymore.',
+      'Then my teacher told us about a group that sends used school bags to children in other countries. Some of those children do not have bags, so they carry their notebooks in their hands. I decided to give my randoseru to the group.',
+      'Before I sent it, I cleaned it carefully. I also wrote a short letter in easy English and put it inside. It said, "This bag was with me every day. I hope it will help you ( B ) well at school."',
+      'A few months later, the group sent us some photos. In one photo, a girl was smiling and carrying a red randoseru. I could not see her face clearly, but I felt very happy. I learned that something old for me can become something new and important ( C ) someone else.',
+    ],
+    ja: [
+      '小学校を卒業したとき、母が「古いランドセルはどうしようか」とたずねました。それは赤いランドセルでした。6年間使ったので、小さな傷がたくさんありました。捨てたくはありませんでしたが、もう必要ありませんでした。',
+      'そのころ、先生が、使い終わったランドセルをほかの国の子どもたちに送っている団体について教えてくれました。その子どもたちの中にはかばんを持っていない子もいて、ノートを手に持って運んでいるそうです。私は自分のランドセルをその団体にあげることにしました。',
+      '送る前に、私はていねいにきれいにしました。また、かんたんな英語で短い手紙を書いて中に入れました。「このかばんは毎日私といっしょでした。学校でよく学ぶ助けになるといいな」と書きました。',
+      '数か月後、団体が何枚か写真を送ってくれました。その中の1枚では、女の子がほほえみながら赤いランドセルを背負っていました。顔ははっきり見えませんでしたが、私はとてもうれしくなりました。自分にとって古いものが、だれかにとっては新しくて大切なものになりうると学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'since', 'during', 'in'], answer: 0, why: 'for six years「6年間」。期間の長さは for。' },
+      { id: 'B', choices: ['study', 'studying', 'studied', 'studies'], answer: 0, why: 'help 人 ＋ 原形「人が～するのを助ける」。help you study。' },
+      { id: 'C', choices: ['for', 'of', 'with', 'by'], answer: 0, why: '～ for someone else「ほかのだれかにとって～」。' },
+    ],
+    underline: { phrase: 'something old for me can become something new and important', choices: ['自分にとって古いものが、だれかには新しく大切なものになりうる', '古いものは新しいものより大切だ', '新しいものを買うことが大切だ', '古いものはすぐに捨てるべきだ'], answer: 0, why: 'something old for me「自分にとって古いもの」、can become ～「～になりうる」。' },
+    tf: [
+      { statement: 'The writer used the randoseru for six years.', answer: true, why: '第1段落の内容と合う。' },
+      { statement: 'The writer threw the old bag away.', answer: false, why: '第2段落 ほかの国の子どもたちに送る団体にあげた。' },
+      { statement: 'The writer put a letter in the bag.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: "The writer could see the girl's face clearly in the photo.", answer: false, why: '第4段落 I could not see her face clearly。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
