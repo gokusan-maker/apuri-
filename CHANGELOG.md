@@ -1603,3 +1603,4 @@
 - 2026-10-24: 単語カードの「← ミニゲームをえらぶ」がタブにくっついていたので間をあける
 - 2026-10-24: 長文の空所補充の総点検：誤答が文法的に成り立ってしまう40問の選択肢を差しかえ（in both hands・as though・at dinner・five minutes to the station など）
 - 2026-10-24: 読解ふつう「My First Sumo Match」（中2メール・空所・下線部・内容一致）を追加
+- 2026-10-24: 文法「回数の言い方（once / twice / three times a week）」を追加（中1・253単元）

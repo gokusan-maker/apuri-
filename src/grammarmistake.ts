@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'times-a-week': { wrong: 'I go to the library two times in a week.', right: 'I go to the library twice a week.', why: '2回は twice、「1週間に」は a week（in は不要）。' },
   'what-time': { wrong: 'What time you get up?', right: 'What time do you get up?', why: 'What time のあとは疑問文の形（do / does ＋ 主語 ＋ 動詞）。' },
   'by-uses': { wrong: 'I came here by a bus.', right: 'I came here by bus.', why: '手段の by ＋ 乗り物には a や the をつけない。' },
   'on-ing': { wrong: 'On arrive at the station, I called her.', right: 'On arriving at the station, I called her.', why: '前置詞 on のあとは動名詞（～ing）。' },
