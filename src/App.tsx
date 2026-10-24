@@ -1509,7 +1509,7 @@ function App() {
         </div>
       )}
       {leveledUp && !home && (
-        <p className="lvup-banner" role="status">
+        <p className={`lvup-banner${playOn ? ' below-bar' : ''}`} role="status">
           ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
         </p>
       )}

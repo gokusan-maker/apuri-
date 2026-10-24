@@ -974,7 +974,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
         )}
         <MissedList words={missed} />
         {missed.length > 0 && !onRestart && (
-          <button className="list-link" onClick={() => restart(direction, missed)}>
+          <button className="list-link miss-retry" onClick={() => restart(direction, missed)}>
             🔁 まちがい{missed.length}問を復習
           </button>
         )}

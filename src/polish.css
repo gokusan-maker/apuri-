@@ -2577,3 +2577,6 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 }
 :root[data-theme="dark"] .hint-5050 { background: linear-gradient(135deg, #a855f7, #7e22ce); color: #fff; }
 .boss .hint-5050.hint-erase { background: linear-gradient(135deg, #a78bfa, #6d28d9); }
+/* 「まちがいだけ」はピンク。問題の画面の Lv UP は上のバーの下に */
+.miss-retry { border: none; background: linear-gradient(135deg, #f472b6, #db2777) !important; color: #fff !important; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 #9d174d; }
+.lvup-banner.below-bar { top: calc(68px + env(safe-area-inset-top)); }
