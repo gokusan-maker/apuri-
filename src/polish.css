@@ -2695,3 +2695,8 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .grade-tests .list-link.pill-btn small { color: #fff; }
 .weak-ranking li .list-link.pill-btn, .grammar-almost .list-link.pill-btn { margin: 3px 0; font-size: 0.82rem; padding: 6px 14px; }
 .related-units .list-link.pill-btn { padding: 5px 12px; }
+/* 時制まとめ表：ほかの色ボタンと同じ横ならび（アイコン・名前・右に ›） */
+.tense-table.game-fold { padding: 0; background: none; }
+.tense-table.game-fold > summary { display: flex; align-items: center; gap: 10px; padding: 12px 14px; white-space: nowrap; }
+.tense-table.game-fold > summary::before { margin-left: auto; }
+.tense-table.game-fold[open] > table { margin-top: 6px; }

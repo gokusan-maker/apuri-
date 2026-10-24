@@ -44,3 +44,7 @@ it('文法ページの素の文字ボタンはなくなり、色つきの丸い�
   expect(src).not.toMatch(/className="list-link"/)
   for (const c of ['pill-start', 'pill-orange', 'pill-pink', 'pill-green', 'pill-cyan', 'pill-purple']) expect(src).toContain(`list-link pill-btn ${c}`)
 })
+
+it('時制まとめ表の色ボタンは横ならび（アイコン・名前・右に ›）', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.tense-table\.game-fold > summary \{ display: flex;/)
+})
