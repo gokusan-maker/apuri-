@@ -67,14 +67,13 @@ export function Stats({
           <dt>今日の学習</dt>
           <dd>{studiedToday}問</dd>
         </div>
-        <div>
+        <div title="定着＝3回続けて「覚えた」">
           <dt>定着語数</dt>
           <dd>
             {learned} / {total}
           </dd>
         </div>
       </dl>
-      <p className="stats-note">※ 定着＝3回続けて「覚えた」</p>
       {minutes && (minutes[1] > 0 || bestCombo > 0) && (
         <p className="study-time">
           {minutes[1] > 0 && (
@@ -115,19 +114,21 @@ export function Stats({
           </span>
         </p>
       )}
-      <div
-        className="xp-bar"
-        role="progressbar"
-        aria-label="定着の割合"
-        aria-valuemin={0}
-        aria-valuemax={total}
-        aria-valuenow={learned}
-      >
+      {learned > 0 && (
         <div
-          className="xp-fill"
-          style={{ width: `${(learned / total) * 100}%` }}
-        />
-      </div>
+          className="xp-bar"
+          role="progressbar"
+          aria-label="定着の割合"
+          aria-valuemin={0}
+          aria-valuemax={total}
+          aria-valuenow={learned}
+        >
+          <div
+            className="xp-fill"
+            style={{ width: `${(learned / total) * 100}%` }}
+          />
+        </div>
+      )}
       {byLevel.length > 0 && (
         <details className="by-level">
           <summary>📚 単語帳ごとの定着</summary>

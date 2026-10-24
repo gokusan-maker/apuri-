@@ -1721,3 +1721,10 @@ it('記録：今週まだ0問なら、今週のレポートのシェアと今週
   expect(screen.queryByText('📤 今週のレポートをシェア')).toBeNull()
   expect(document.querySelector('.week-compare')).toBeNull()
 })
+
+it('記録：今月まだ学習0日ならカレンダーを出さず、定着0なら定着のバーも出さない', () => {
+  localStorage.clear()
+  render(<App />)
+  expect(document.querySelector('.calendar')).toBeNull()
+  expect(screen.queryByRole('progressbar', { name: '定着の割合' })).toBeNull()
+})

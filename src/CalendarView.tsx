@@ -7,6 +7,7 @@ export function Calendar({ history, today, goal }: { history: History; today: st
   const weeks = monthGrid(today)
   const [y, m] = today.split('-').map(Number)
   const studied = Object.entries(history).filter(([d, n]) => d.startsWith(today.slice(0, 7)) && n > 0).length
+  if (studied === 0) return null // 今月まだ0日のときはカレンダーごと出さない（0の欄はかくす）
   return (
     <div className="calendar">
       <h2>
