@@ -5367,6 +5367,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer has given up learning the new trick.', answer: false, why: '第4段落 I am not giving up。' },
     ],
   },
+  {
+    id: 'speech-bus-driver',
+    title: 'My Dream Is to Drive a Bus',
+    level: '中2（スピーチ）',
+    paragraphs: [
+      'Hello, everyone. Today, I want to talk about my dream. I want to be a bus driver in my town. Some of you may be surprised, ( A ) it is not a popular dream in our class.',
+      'When I was small, I was often sick, and I could not walk to the hospital. My mother and I always took the same bus. The driver was a kind man. He waited for us when we were late, and he always said, "Take care." I felt safe on his bus.',
+      'In our town, many elderly people do not drive cars. For them, buses are very important. Without buses, they cannot go shopping or see a doctor. I want to be a driver ( B ) helps these people every day.',
+      'To become a bus driver, I need to be careful and kind. I also need to be good at ( C ) with many kinds of people. So now I try to talk with my neighbors when I meet them. Thank you for listening.',
+    ],
+    ja: [
+      'みなさん、こんにちは。今日は私の夢について話したいと思います。私は自分の町のバスの運転手になりたいです。クラスではあまり多くない夢なので、おどろいた人もいるかもしれません。',
+      '小さいころ、私はよく病気になり、病院まで歩いて行けませんでした。母と私はいつも同じバスに乗りました。運転手さんはやさしい人でした。私たちがおくれると待っていてくれて、いつも「気をつけてね」と言ってくれました。私はそのバスの中で安心できました。',
+      '私たちの町では、多くのお年寄りが車を運転しません。その人たちにとって、バスはとても大切です。バスがなければ、買い物に行くことも、医者にみてもらうこともできません。私は、毎日こうした人たちを助ける運転手になりたいです。',
+      'バスの運転手になるには、注意深く、やさしくなければなりません。また、いろいろな人と話すのが得意でないといけません。だから今、近所の人に会ったら話しかけるようにしています。聞いてくれてありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'during', 'despite'], answer: 0, why: 'あとに it is not a popular dream … という文が続くので接続詞の because。because of・during・despite は前置詞。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 a driver（人）で、あとに動詞 helps が続くので主格の関係代名詞 who。which は物、whose は名詞が続く、what は先行詞をふくむ。' },
+      { id: 'C', choices: ['talking', 'talk', 'to talk', 'talked'], answer: 0, why: 'be good at ～ing「～するのが得意だ」。前置詞 at のあとは動名詞。' },
+    ],
+    tf: [
+      { statement: 'The speaker wants to be a bus driver.', answer: true, why: '第1段落 I want to be a bus driver in my town。' },
+      { statement: 'When the speaker was small, the speaker always walked to the hospital.', answer: false, why: '第2段落 I could not walk to the hospital … always took the same bus。' },
+      { statement: 'Many elderly people in the town do not drive cars.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'The speaker never talks with neighbors.', answer: false, why: '第4段落 I try to talk with my neighbors when I meet them。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
