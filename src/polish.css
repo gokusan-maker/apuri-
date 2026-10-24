@@ -2008,3 +2008,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 /* 単語ゲームの「← ミニゲームをえらぶ」：上のタブにくっつかないように */
 .game-back { margin-top: 10px; }
+
+/* バッジ：まだのバッジはたたむ */
+.badges-locked > summary { cursor: pointer; margin: 8px 0; font-weight: 800; color: var(--muted); }

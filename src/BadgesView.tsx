@@ -2,11 +2,21 @@ import { useState } from 'react'
 import { splitSoft } from './softbreak'
 import { BADGES, type Badge, type Earned } from './badges'
 
-// バッジ一覧：タイルは名前だけ。押すと上に条件（取った日）が出る
+// バッジ一覧：タイルは名前だけ。押すと上に条件（取った日）が出る。まだのバッジはたたんでおく（🔒 がずらっと並ばないように）
 export function BadgeList({ earned }: { earned: Earned }) {
   const count = BADGES.filter((b) => earned[b.id]).length
   const [sel, setSel] = useState<string | null>(null)
   const picked = BADGES.find((b) => b.id === sel)
+  const tile = (b: Badge) => (
+    <li key={b.id} className={`${earned[b.id] ? 'got' : 'locked'}${sel === b.id ? ' active' : ''}`}>
+      <button className="badge-tile" aria-pressed={sel === b.id} onClick={() => setSel(sel === b.id ? null : b.id)}>
+        <span className="badge-icon" aria-hidden="true">
+          {earned[b.id] ? b.icon : '🔒'}
+        </span>
+        <span className="badge-name">{splitSoft(b.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
+      </button>
+    </li>
+  )
   return (
     <div className="badges">
       <h2>
@@ -18,18 +28,15 @@ export function BadgeList({ earned }: { earned: Earned }) {
           {earned[picked.id] && <small>（{earned[picked.id]}）</small>}
         </p>
       )}
-      <ul className="badge-grid">
-        {BADGES.map((b) => (
-          <li key={b.id} className={`${earned[b.id] ? 'got' : 'locked'}${sel === b.id ? ' active' : ''}`}>
-            <button className="badge-tile" aria-pressed={sel === b.id} onClick={() => setSel(sel === b.id ? null : b.id)}>
-              <span className="badge-icon" aria-hidden="true">
-                {earned[b.id] ? b.icon : '🔒'}
-              </span>
-              <span className="badge-name">{splitSoft(b.name).flatMap((t, i) => (i > 0 ? [<wbr key={i} />, t] : [t]))}</span>
-            </button>
-          </li>
-        ))}
-      </ul>
+      {count > 0 && <ul className="badge-grid">{BADGES.filter((b) => earned[b.id]).map(tile)}</ul>}
+      {count < BADGES.length && (
+        <details className="badges-locked">
+          <summary>
+            🔒 まだのバッジ <span className="game-count">{BADGES.length - count}</span>
+          </summary>
+          <ul className="badge-grid">{BADGES.filter((b) => !earned[b.id]).map(tile)}</ul>
+        </details>
+      )}
     </div>
   )
 }
