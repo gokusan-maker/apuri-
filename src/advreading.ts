@@ -3300,6 +3300,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-honey',
+    title: 'Why Honey Lasts So Long',
+    level: 'TOEFL・IELTS（科学）',
+    paragraphs: [
+      "Most foods eventually spoil because bacteria and fungi grow ( A ) them. Honey is unusual: if it is stored properly, it can stay safe to eat for years. Scientists explain this long life by pointing to several features that work together.",
+      "The first is its chemistry. Honey is mostly sugar, and it contains so little water ( B ) most microbes cannot survive in it. In fact, the sugar pulls water out of any bacterial cell that lands in the honey, causing the cell to dry out. Honey is also fairly acidic, which makes it even harder for many microbes to grow. In addition, bees add an enzyme to the nectar they collect. When honey is diluted, this enzyme helps produce hydrogen peroxide, a substance that can kill bacteria.",
+      "However, honey is not completely free of living things. It can contain bacterial spores, which are inactive and very tough. Spores do not grow in honey, but they can survive in it, which is ( C ) doctors advise parents not to give honey to babies under one year old. Honey can also absorb moisture from the air if it is left uncovered, and with extra water it may begin to ferment. For this reason, honey lasts longest when it is kept in a closed container.",
+    ],
+    ja: [
+      'ほとんどの食品は、細菌やカビがその上で増えるので、やがて腐ってしまう。はちみつは変わっていて、きちんと保存すれば、何年も安全に食べられる状態のままでいられる。科学者たちは、この長もちを、いっしょにはたらくいくつかの特徴を挙げて説明している。',
+      '1つめはその化学的な性質である。はちみつはほとんどが糖で、水分がとても少ないので、ほとんどの微生物はその中で生きられない。実際、糖ははちみつに入った細菌の細胞から水を引き出し、細胞を乾かしてしまう。はちみつはまた、かなり酸性で、そのため多くの微生物にとってさらに増えにくくなっている。それに加えて、ミツバチは集めた花のみつに酵素を加える。はちみつがうすめられると、この酵素は細菌を殺すことができる物質である過酸化水素を作るのを助ける。',
+      'しかし、はちみつに生き物がまったくいないわけではない。はちみつには細菌の芽胞がふくまれていることがあり、芽胞は活動していない、とてもじょうぶなものである。芽胞ははちみつの中で増えることはないが、生き残ることはできる。そのため医師は、1歳未満の赤ちゃんにはちみつをあたえないよう親に助言している。また、はちみつはふたをせずに置いておくと空気中の水分を吸うことがあり、水分が増えると発酵し始めることがある。このため、はちみつはふたをした容器に入れておくと、いちばん長もちする。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on', 'of', 'at', 'to'], answer: 0, why: 'grow on ～「～の上で増える・生える」。細菌やカビが食品の上で増える。' },
+      { id: 'B', choices: ['that', 'which', 'what', 'as'], answer: 0, why: 'so ＋ 形容詞 ＋ 名詞 ＋ that …「とても～なので…」。so little water that most microbes cannot survive。' },
+      { id: 'C', choices: ['why', 'what', 'who', 'whose'], answer: 0, why: 'which is why ～「そういうわけで～」。前の内容（芽胞が生き残る）を which で受けて、その結果を why で続ける。' },
+    ],
+    tf: [
+      { statement: 'はちみつは水分がとても少ないので、ほとんどの微生物がその中で生きられない。', answer: true, why: '第2段落 it contains so little water that most microbes cannot survive in it。' },
+      { statement: 'ミツバチが加える酵素は、はちみつがうすめられると過酸化水素を作るのを助ける。', answer: true, why: '第2段落 When honey is diluted, this enzyme helps produce hydrogen peroxide。' },
+      { statement: 'はちみつの中には、細菌の芽胞もふくめて生き物はまったくいない。', answer: false, why: '第3段落 honey is not completely free of living things. It can contain bacterial spores。' },
+      { statement: 'はちみつは、ふたをせずに置いておくほうが長もちする。', answer: false, why: '第3段落 honey lasts longest when it is kept in a closed container。' },
+    ],
+    qa: [
+      { q: 'Why do doctors advise parents not to give honey to babies under one year old?', choices: ['Because honey can contain bacterial spores that survive in it.', 'Because honey contains too much water.', 'Because honey is not acidic enough.', 'Because honey quickly ferments in a closed container.'], answer: 0, why: '第3段落 Spores do not grow in honey, but they can survive in it, which is why doctors advise ...。' },
+    ],
+  },
+{
     id: 'hs-calligraphy',
     title: 'One Character a Day',
     level: '高校入試（スピーチ）',
