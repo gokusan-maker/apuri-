@@ -1,6 +1,7 @@
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
 import { useEffect, useRef, useState } from 'react'
+import { usePlaying } from './playing'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { easyIf, randomQuestion, type Question } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -25,6 +26,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
   const [best, setBest] = useState(() => loadBest(TIME_LIMIT))
   const [top, setTop] = useState(loadTop)
   const [newBest, setNewBest] = useState(false)
+  usePlaying(phase !== 'ready', () => setPhase('ready')) // 遊んでいるあいだは問題だけの画面（上の「ほかの問題をえらぶ」で最初の画面へ）
   const [q, setQ] = useState<Question<Word> | null>(null)
   const [flash, setFlash] = useState<'ok' | 'ng' | null>(null)
   const scoreRef = useRef(0)

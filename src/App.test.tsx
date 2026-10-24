@@ -1817,3 +1817,15 @@ it('今日の課題が3つともクリアなら、課題の画面に「🎉 ぜ�
   fireEvent.click(screen.getByRole('button', { name: '🎉 ぜんぶクリア！ ホームへ ▶' }))
   expect(screen.getByText('📊 記録')).toBeInTheDocument()
 })
+
+it('単語のタイムアタックも、スタートしたら問題だけの画面になり、上のバーで最初の画面にもどる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  render(<App />)
+  navTo('単語ゲーム')
+  fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
+  fireEvent.click(screen.getByText('スタート'))
+  expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
+  expect(screen.getByText('スタート')).toBeInTheDocument()
+})
