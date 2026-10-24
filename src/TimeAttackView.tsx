@@ -85,7 +85,8 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
 
   if (phase === 'ready') {
     return (
-      <section className="card result">
+      <section className="card result ta-ready">
+        <p className="ta-hero" aria-hidden="true">⏱️</p>
         <p className="result-title">タイムアタック</p>
         <div className="counts" role="group" aria-label="長さ">
           {LENGTHS.map((n) => (
@@ -110,7 +111,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
           </button>
         </div>
         <p className="result-message">{length}秒で何問正解できるかな？</p>
-        {best > 0 && <p className="best">自己ベスト {best} 問</p>}
+        {best > 0 && <p className="best ta-best">🏆 自己ベスト {best} 問</p>}
         {top.length > 0 && (
           <ol className="ta-top" aria-label="これまでの記録">
             {top.map((t, i) => (
@@ -120,7 +121,7 @@ export function TimeAttack({ words, onAnswer, onFinish }: Props) {
             ))}
           </ol>
         )}
-        <button className="flip" onClick={start}>
+        <button className="flip ta-start" onClick={start}>
           スタート
         </button>
       </section>
