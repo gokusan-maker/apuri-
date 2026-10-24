@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'play-the': { wrong: 'I play the soccer.', right: 'I play soccer.', why: 'スポーツには the をつけない（楽器は play the piano）。' },
   'independent-infinitive': { wrong: 'To say the truth, I was tired.', right: 'To tell the truth, I was tired.', why: '「実を言うと」は to tell the truth（say は使わない）。' },
   'directions': { wrong: 'How can I arrive to the station?', right: 'How can I get to the station?', why: '道をたずねるときは get to ～。arrive なら arrive at ～。' },
   'how-long-perfect': { wrong: 'How long do you have lived here?', right: 'How long have you lived here?', why: '現在完了の疑問文は have を主語の前に出す（do は使わない）。' },
