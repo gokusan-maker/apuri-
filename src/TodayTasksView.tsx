@@ -1,4 +1,6 @@
 import { todayReadingTitle } from './todayread'
+import { GRADES } from './grade'
+import { loadGrade } from './usergrade'
 import { dailyGrammar, loadDailyGrammarDay } from './grammar'
 import { useState } from 'react'
 import { trioStreakNow, claimTrioStreak, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
@@ -15,6 +17,7 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
   const [party, setParty] = useState(false) // 受け取った瞬間だけ紙ふぶき
   const g = dailyGrammar(today)
   const rTitle = todayReadingTitle(today)
+  const gradeLabel = GRADES.find((g) => g.id === loadGrade())?.label // 設定でえらんだ学年・レベル
   const ws = todayWords(today)
   const items = [
     { id: 'word' as const, icon: '🔤', label: '単語', task: `4択で${ws.length}語`, done: loadTodayWordsDay() === today },
@@ -26,6 +29,7 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
     <section className="today-tasks" aria-label="今日の課題">
       <p className="today-tasks-title">
         📋 今日の課題
+        {gradeLabel && <span className="today-grade" title="設定の学年・レベルに合わせた課題">{gradeLabel}</span>}
         <span className="today-stars" aria-label={`${n} / 3 クリア`}>
           {'⭐'.repeat(n)}
           {'☆'.repeat(3 - n)}

@@ -55,3 +55,11 @@ it('今日の課題の読解の題名は、タイトルを当てる問題があ�
     else expect(todayReadingTitle(day)).toBe(r.p.title)
   }
 })
+
+it('学年をえらぶと、ホームの今日の課題の見出しに学年が出る', async () => {
+  const { render, screen } = await import('@testing-library/react')
+  const { TodayTasks } = await import('./TodayTasksView')
+  saveGrade('j2')
+  render(<TodayTasks today="2026-10-01" onGo={() => {}} />)
+  expect(screen.getByText('中学2年')).toBeInTheDocument()
+})
