@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-testing-effect',
+    title: 'Close Your Notes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most students prepare for exams by reading their notes again and again. This feels productive, because the material becomes more and more familiar. However, a large body of research suggests that familiarity can be misleading. Recognizing information when we see it is very different from being able to ( A ) it when we need it.",
+      "In a typical experiment, students read a short text. One group then read it several more times, while another group read it once and then tried to write down everything they could remember without looking. A week later, the second group remembered considerably more, even though they had spent less time looking at the text. This finding is often called the \"testing effect.\"",
+      "Why does testing work so well? When we try to retrieve information from memory, we have to rebuild it, and this effort appears to strengthen the paths that lead back to it. Even when an attempt fails, checking the correct answer afterward can make the memory stronger than ( B ) reading it again.",
+      "The effect becomes even more powerful when practice tests are spread out over several days ( C ) crowded into one evening. Taken together, these studies suggest a clear lesson: instead of reading your notes once more, close them and ask yourself what you actually remember.",
+    ],
+    ja: [
+      'ほとんどの学生は、ノートを何度も読み返して試験の準備をする。内容にどんどん見覚えが出てくるので、これは身についているように感じられる。しかし、多くの研究は、見覚えがあるという感覚は人をあざむくことがあると示している。見たときに情報がわかることと、必要なときにそれを思い出せることとは、大きくちがうのである。',
+      'よくある実験では、学生たちが短い文章を読む。一方のグループはそのあと何回か読み返し、もう一方のグループは1回だけ読んで、見ないで思い出せることをすべて書き出そうとした。1週間後、文章を見ていた時間は短かったにもかかわらず、2つ目のグループのほうがかなり多くのことを覚えていた。この発見はしばしば「テスト効果」とよばれる。',
+      'なぜテストはこれほど効果があるのだろうか。記憶から情報を取り出そうとするとき、私たちはそれを組み立て直さなければならず、この努力が、その情報へもどる道すじを強めるようなのである。思い出そうとして失敗したときでさえ、あとで正しい答えを確認すれば、ただ読み返すよりも記憶を強くできることがある。',
+      'この効果は、練習テストを一晩につめこむのではなく、何日かに分けて行うと、さらに強くなる。これらの研究をまとめると、はっきりした教訓が見えてくる。ノートをもう一度読むかわりに、ノートを閉じて、自分が本当に何を覚えているかを自分に問いかけてみよう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['recall', 'recalling', 'recalled', 'to recall'], answer: 0, why: 'be able to のあとは動詞の原形。being able to recall it「それを思い出せること」。to recall だと to が2つ重なる。' },
+      { id: 'B', choices: ['simply', 'simple', 'simplicity', 'simpler'], answer: 0, why: '動名詞 reading を修飾するのは副詞 simply「ただ～するだけ」。simple・simpler は形容詞、simplicity は名詞。' },
+      { id: 'C', choices: ['rather than', 'instead', 'despite', 'although'], answer: 0, why: 'A rather than B「B ではなく A」。spread out over several days rather than crowded into one evening。instead は副詞（instead of なら可）、despite は前置詞で過去分詞の前に置けない、although は接続詞で文が続く。' },
+    ],
+    tf: [
+      { statement: 'ノートを何度も読み返すと、内容に見覚えが出てくる。', answer: true, why: '第1段落 the material becomes more and more familiar。' },
+      { statement: '実験では、何度も読み返したグループのほうが1週間後によく覚えていた。', answer: false, why: '第2段落 A week later, the second group remembered considerably more。' },
+      { statement: '思い出そうとして失敗しても、あとで答えを確認すれば記憶が強まることがある。', answer: true, why: '第3段落 Even when an attempt fails, checking the correct answer afterward can make the memory stronger。' },
+      { statement: '練習テストは、一晩にまとめてやるほうが効果が大きい。', answer: false, why: '第4段落 spread out over several days rather than crowded into one evening。' },
+    ],
+    qa: [
+      { q: 'What does the author suggest students do instead of rereading their notes?', choices: ['Close their notes and ask themselves what they remember.', 'Read their notes more slowly.', 'Copy their notes into a new notebook.', 'Study only on the night before the exam.'], answer: 0, why: '第4段落 close them and ask yourself what you actually remember。' },
+    ],
+  },
+{
     id: 'adv-walking-ideas',
     title: 'Ideas on Foot',
     level: '難関大（評論）',
