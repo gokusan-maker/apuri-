@@ -722,7 +722,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['at', 'for', 'in', 'on'], answer: 3, why: '曜日の前は on。' },
       { id: 'B', choices: ['at', 'for', 'in', 'on'], answer: 0, why: '時刻の前は at。' },
-      { id: 'C', choices: ['by', 'for', 'to', 'with'], answer: 1, why: 'make A for 人 で「人のために A を作る」。' },
+      { id: 'C', choices: ['by', 'for', 'to', 'of'], answer: 1, why: 'make A for 人 で「人のために A を作る」。' },
       { id: 'D', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'look forward to 〜 で「〜を楽しみにする」。' },
     ],
     sentences: [
@@ -931,7 +931,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「1週間」のように期間の長さは for。' },
-      { id: 'B', choices: ['by', 'in', 'to', 'with'], answer: 3, why: 'with both hands で「両手で」。' },
+      { id: 'B', choices: ['by', 'of', 'to', 'with'], answer: 3, why: 'with both hands で「両手で」。' },
       { id: 'C', choices: ['at', 'in', 'of', 'on'], answer: 1, why: '最上級＋in the world で「世界でいちばん〜」。' },
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'use A to ＋原形で「〜するために A を使う」。' },
     ],
@@ -1197,7 +1197,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'A', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「2週間」のように期間の長さは for。' },
       { id: 'B', choices: ['as', 'so', 'than', 'that'], answer: 0, why: 'as fast as he could で「できるだけ速く」。' },
       { id: 'C', choices: ['as', 'for', 'than', 'to'], answer: 2, why: 'more important than 〜 で「〜より大切」。' },
-      { id: 'D', choices: ['at', 'in', 'on', 'to'], answer: 1, why: 'run in the park で「公園（の中）を走る」。' },
+      { id: 'D', choices: ['of', 'in', 'on', 'for'], answer: 1, why: 'run in the park で「公園（の中）を走る」。' },
     ],
     refer: { phrase: 'he enjoys it', word: 'it', choices: ['running', 'the relay race', 'the park', 'the baton'], answer: 0, why: 'ハルトが楽しんでいるのは、毎朝走ること。' },
     seq: { events: ['Haruto got the baton in second place.', 'The teacher chose Haruto for the relay race.', 'Haruto and Sota practiced in the park.', 'Haruto\'s classmates ran to him with big smiles.'], answer: [1, 2, 0, 3], why: '選手に選ばれる → 公園で練習 → 2位でバトンを受け取る → クラスメートがかけよる。' },
@@ -1275,7 +1275,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['after', 'at', 'for', 'like'], answer: 2, why: 'look for 〜 で「〜をさがす」。' },
-      { id: 'B', choices: ['by', 'in', 'of', 'under'], answer: 0, why: 'by the window で「窓のそばに」。' },
+      { id: 'B', choices: ['by', 'in', 'of', 'to'], answer: 0, why: 'by the window で「窓のそばに」。' },
       { id: 'C', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「2週間」のように期間の長さは for。' },
       { id: 'D', choices: ['at', 'by', 'from', 'until'], answer: 3, why: '5時「まで（ずっと）」読めるので until。' },
     ],
@@ -1308,7 +1308,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['behind', 'between', 'during', 'since'], answer: 0, why: 'behind his house で「家のうらに」。' },
       { id: 'B', choices: ['at', 'by', 'on', 'with'], answer: 3, why: 'be (get) busy with 〜 で「〜でいそがしい」。' },
-      { id: 'C', choices: ['because', 'if', 'though', 'when'], answer: 2, why: 'even though 〜 で「〜だけれども」。' },
+      { id: 'C', choices: ['because', 'but', 'though', 'and'], answer: 2, why: 'even though 〜 で「〜だけれども」。' },
       { id: 'D', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'send 物 to 人 で「人に物を送る」。' },
     ],
     refer: { phrase: 'sent it', word: 'it', choices: ['the picture', 'the tomato', 'the plant', 'the garden'], answer: 0, why: 'おじいさんに送ったのはトマトの写真。' },
@@ -1491,7 +1491,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['at', 'in', 'on', 'to'], answer: 2, why: '日付・曜日の前は on。' },
-      { id: 'B', choices: ['at', 'for', 'of', 'with'], answer: 3, why: 'with his band で「バンドといっしょに」。' },
+      { id: 'B', choices: ['at', 'by', 'of', 'with'], answer: 3, why: 'with his band で「バンドといっしょに」。' },
       { id: 'C', choices: ['at', 'by', 'for', 'of'], answer: 0, why: 'at the gate で「門で」（場所の一点）。' },
       { id: 'D', choices: ['by', 'for', 'in', 'until'], answer: 0, why: '「水曜日までに（締め切り）」なので by。' },
     ],
@@ -1526,7 +1526,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['after', 'at', 'for', 'like'], answer: 2, why: 'look for 〜 で「〜をさがす」。' },
-      { id: 'B', choices: ['between', 'near', 'since', 'during'], answer: 1, why: 'near 〜 で「〜の近くに」。' },
+      { id: 'B', choices: ['until', 'near', 'since', 'during'], answer: 1, why: 'near 〜 で「〜の近くに」。' },
       { id: 'C', choices: ['at', 'into', 'on', 'over'], answer: 1, why: 'jump into her arms で「うでの中にとびこむ」。' },
       { id: 'D', choices: ['by', 'for', 'from', 'until'], answer: 2, why: 'from that day で「その日から」。' },
     ],
@@ -1991,8 +1991,8 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['at', 'from', 'on', 'to'], answer: 1, why: 'a sound from 〜 で「〜からの音」。' },
-      { id: 'B', choices: ['by', 'since', 'until', 'while'], answer: 2, why: '「家族が見つかるまで（ずっと）」なので until。' },
-      { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 2, why: 'on his bed で「ベッドの上で」。' },
+      { id: 'B', choices: ['by', 'since', 'until', 'during'], answer: 2, why: '「家族が見つかるまで（ずっと）」なので until。' },
+      { id: 'C', choices: ['at', 'of', 'on', 'to'], answer: 2, why: 'on his bed で「ベッドの上で」。' },
       { id: 'D', choices: ['after', 'before', 'during', 'until'], answer: 1, why: '「学校に行く前に」なので before going。' },
     ],
     seq: { events: ['Ren named the kitten Mocha.', 'Ren found a kitten in a box.', 'Ren\'s father said Ren could keep Mocha.', 'Ren took the kitten to an animal doctor.'], answer: [1, 3, 0, 2], why: '箱で子ねこを見つける → 動物のお医者さん → モカと名づける → お父さんが飼ってよいと言う。' },
@@ -2100,7 +2100,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['at', 'during', 'for', 'while'], answer: 1, why: '後ろが名詞（the night）で「夜の間に」なので during。' },
-      { id: 'B', choices: ['at', 'in', 'of', 'on'], answer: 1, why: '最上級のあとで場所の範囲を表すときは in（the biggest in the park）。' },
+      { id: 'B', choices: ['to', 'in', 'of', 'on'], answer: 1, why: '最上級のあとで場所の範囲を表すときは in（the biggest in the park）。' },
       { id: 'C', choices: ['as', 'than', 'that', 'then'], answer: 1, why: '比較級 taller のあとは than。' },
       { id: 'D', choices: ['at', 'by', 'in', 'with'], answer: 3, why: 'with a smile で「笑顔で」。' },
     ],
@@ -2188,7 +2188,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['at', 'for', 'in', 'of'], answer: 1, why: 'plans for 〜 で「〜の予定」。' },
       { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 2, why: '特定の曜日の朝は on（on Sunday morning）。' },
-      { id: 'C', choices: ['at', 'by', 'from', 'to'], answer: 2, why: 'five minutes from 〜 で「〜から5分」。' },
+      { id: 'C', choices: ['at', 'by', 'from', 'of'], answer: 2, why: 'five minutes from 〜 で「〜から5分」。' },
       { id: 'D', choices: ['at', 'in', 'on', 'to'], answer: 2, why: '曜日の前は on（See you on Sunday!）。' },
     ],
     qa: [{ q: 'What time will Mike and Rina meet?', choices: ['At eight forty.', 'At nine.', 'At eight.', 'At ten.'], answer: 0, why: 'リナの4つ目の発言「8時40分に駅で会いましょう」。' }],
@@ -2220,7 +2220,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「60年以上（の間）」のように期間の長さは for。' },
-      { id: 'B', choices: ['at', 'by', 'from', 'to'], answer: 2, why: 'from the beginning で「最初から」。' },
+      { id: 'B', choices: ['of', 'by', 'from', 'to'], answer: 2, why: 'from the beginning で「最初から」。' },
       { id: 'C', choices: ['fewer', 'less', 'many', 'much'], answer: 0, why: 'mistakes は数えられる名詞なので fewer（より少ない）。' },
       { id: 'D', choices: ['at', 'for', 'of', 'with'], answer: 1, why: 'Thank you for 〜ing で「〜してくれてありがとう」。' },
     ],
@@ -2295,7 +2295,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       '今では、ショウは毎週土曜日に太田さんをたずねています。重いものを運ぶのを手伝い、太田さんは昔の話をしてくれます。ショウは、かぎをわすれたことは人生でいちばん幸運なまちがいだったと思っています。',
     ],
     blanks: [
-      { id: 'A', choices: ['at', 'in', 'on', 'to'], answer: 2, why: 'on his desk で「机の上に」。' },
+      { id: 'A', choices: ['of', 'for', 'on', 'to'], answer: 2, why: 'on his desk で「机の上に」。' },
       { id: 'B', choices: ['by', 'for', 'of', 'with'], answer: 3, why: 'with her cat で「ねこといっしょに」。' },
       { id: 'C', choices: ['at', 'for', 'of', 'with'], answer: 3, why: 'talk with 人 で「人と話す」。' },
       { id: 'D', choices: ['at', 'for', 'in', 'on'], answer: 2, why: '最上級のあとで範囲を表す in（the luckiest mistake in his life）。' },
@@ -2330,7 +2330,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       'あなたの友だち、エマより',
     ],
     blanks: [
-      { id: 'A', choices: ['at', 'by', 'on', 'under'], answer: 2, why: 'on the coast で「海岸ぞいに」。' },
+      { id: 'A', choices: ['at', 'of', 'on', 'under'], answer: 2, why: 'on the coast で「海岸ぞいに」。' },
       { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 2, why: '特定の日（Christmas Day）の前は on。' },
       { id: 'C', choices: ['at', 'for', 'in', 'on'], answer: 2, why: 'in return で「お返しに」。' },
       { id: 'D', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'write to 人 で「人に手紙（メール）を書く」。' },
@@ -2473,7 +2473,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'A', choices: ['by', 'for', 'of', 'to'], answer: 3, why: 'help 人 (to) 〜 で「人が〜するのを助ける」。' },
       { id: 'B', choices: ['across', 'among', 'between', 'into'], answer: 0, why: 'across the world で「世界中で」。' },
       { id: 'C', choices: ['by', 'for', 'with', 'without'], answer: 3, why: 'without worry で「心配なく」。' },
-      { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 1, why: 'kinder for everyone で「すべての人にとってやさしい」。' },
+      { id: 'D', choices: ['at', 'for', 'of', 'by'], answer: 1, why: 'kinder for everyone で「すべての人にとってやさしい」。' },
     ],
     pick2: {
       statements: ['The blocks were first made in Japan.', 'Blocks with long lines mean "stop."', 'The blocks are used only in Japan.', 'Blocks with small dots are found in front of stairs.', 'Yellow is hard to see.', 'Putting bikes on the blocks is safe.'],
@@ -2510,7 +2510,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['during', 'for', 'since', 'while'], answer: 0, why: '後ろが名詞（meals）なので前置詞 during。' },
       { id: 'B', choices: ['about', 'at', 'for', 'with'], answer: 3, why: 'talk with 人 で「人と話す」。' },
-      { id: 'C', choices: ['at', 'during', 'since', 'until'], answer: 1, why: '「夕食の間に」なので during dinner。' },
+      { id: 'C', choices: ['on', 'during', 'since', 'until'], answer: 1, why: '「夕食の間に」なので during dinner。' },
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 1, why: 'Thank you for 〜ing で「〜してくれてありがとう」。' },
     ],
     qa: [{ q: 'What does the speaker do at nine p.m.?', choices: ['Puts the phone in the living room.', 'Watches videos.', 'Goes to bed.', 'Checks messages.'], answer: 0, why: '第3段落「夜9時にはスマートフォンを居間に置く」。' }],
@@ -2627,7 +2627,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['at', 'for', 'in', '（何も入らない）'], answer: 3, why: 'yesterday evening の前には前置詞をつけない（It started yesterday evening.）。' },
       { id: 'B', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「数日（の間）」は for a few days。' },
-      { id: 'C', choices: ['after', 'before', 'during', 'until'], answer: 0, why: '「毎食後に」なので after every meal。' },
+      { id: 'C', choices: ['after', 'since', 'for', 'until'], answer: 0, why: '「毎食後に」なので after every meal。' },
       { id: 'D', choices: ['at', 'for', 'in', 'since'], answer: 2, why: 'in three days で「3日たって（3日のうちに）」。' },
     ],
     qa: [{ q: 'What does the doctor say about soccer practice?', choices: ['Takumi should not go.', 'Takumi can go.', 'Takumi should go early.', 'The doctor will go with him.'], answer: 0, why: '医者は「残念ですが、だめです。休む必要があります」と言っている。' }],
@@ -2692,8 +2692,8 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['at', 'in', 'on', 'since'], answer: 1, why: '年の前は in（in 1707）。' },
-      { id: 'B', choices: ['all', 'both', 'each', 'every'], answer: 1, why: 'both day and night で「昼も夜も」。' },
-      { id: 'C', choices: ['by', 'for', 'of', 'with'], answer: 3, why: 'live with 〜 で「〜とともにくらす」。' },
+      { id: 'B', choices: ['either', 'both', 'each', 'neither'], answer: 1, why: 'both day and night で「昼も夜も」。' },
+      { id: 'C', choices: ['at', 'for', 'of', 'with'], answer: 3, why: 'live with 〜 で「〜とともにくらす」。' },
       { id: 'D', choices: ['at', 'for', 'of', 'to'], answer: 3, why: 'give 物 to 人 の形（the gifts that volcanoes give to us）。' },
     ],
     vocab: [{ word: 'erupted', choices: ['噴火した', 'くずれた', 'こおった', 'しずんだ'], answer: 0, why: '火山について「最後に〜したのは1707年」とあるので「噴火した」。' }],
@@ -2736,7 +2736,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'A', choices: ['during', 'for', 'in', 'since'], answer: 1, why: '「3年間」のように期間の長さは for。' },
       { id: 'B', choices: ['at', 'for', 'in', 'of'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
       { id: 'C', choices: ['at', 'for', 'to', 'with'], answer: 2, why: 'listen to 〜 で「〜を聞く」。' },
-      { id: 'D', choices: ['at', 'by', 'in', 'on'], answer: 2, why: 'in high school で「高校で（高校に入っても）」。' },
+      { id: 'D', choices: ['to', 'by', 'in', 'on'], answer: 2, why: 'in high school で「高校で（高校に入っても）」。' },
     ],
     gist: [{ para: 2, choices: ['部長の言葉で考えが変わったこと', 'トランペットの値段', 'コンクールの結果', '部活をやめた理由'], answer: 0, why: '第3段落は、部長の言葉をきっかけにほかの部員の音を聞くようになった話。' }],
     tf: [
@@ -2766,9 +2766,9 @@ export const LONG_PASSAGES: LongPassage[] = [
       'ヒナはほほえんで、その紙をノートにはさんでとっておきました。小さな親切は、たとえその人に一度も会わなくても、だれかを幸せにできるのだと学びました。',
     ],
     blanks: [
-      { id: 'A', choices: ['at', 'by', 'on', 'under'], answer: 2, why: 'on the path で「道の上で」。' },
+      { id: 'A', choices: ['at', 'of', 'on', 'under'], answer: 2, why: 'on the path で「道の上で」。' },
       { id: 'B', choices: ['at', 'for', 'in', 'to'], answer: 3, why: 'go to school で「学校へ行く」。' },
-      { id: 'C', choices: ['by', 'in', 'of', 'on'], answer: 3, why: 'on the fence で「フェンス（の表面）に」。' },
+      { id: 'C', choices: ['to', 'in', 'of', 'on'], answer: 3, why: 'on the fence で「フェンス（の表面）に」。' },
       { id: 'D', choices: ['because', 'if', 'so', 'when'], answer: 1, why: 'even if 〜 で「たとえ〜でも」。' },
     ],
     seq: { events: ['Hina saw the glove was still on the fence.', 'Hina found a little red glove.', 'Hina found a piece of paper on the fence.', 'Hina put the glove on top of a fence.'], answer: [1, 3, 0, 2], why: '手ぶくろを見つける → フェンスに置く → 帰りにまだある → 次の朝メモがある。' },
@@ -2800,7 +2800,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       '水はかぎりなくあるわけではありません。みんなが少しずつ節約すれば、世界中の人々や未来にとって大きなちがいを生むことができます。',
     ],
     blanks: [
-      { id: 'A', choices: ['and', 'but', 'or', 'so'], answer: 2, why: '「飲んだり、または農業に使ったり」なので or。' },
+      { id: 'A', choices: ['nor', 'but', 'or', 'so'], answer: 2, why: '「飲んだり、または農業に使ったり」なので or。' },
       { id: 'B', choices: ['at', 'for', 'in', 'since'], answer: 1, why: 'for hours で「何時間も」。' },
       { id: 'C', choices: ['as', 'so', 'than', 'that'], answer: 0, why: 'as soon as possible で「できるだけ早く」。' },
       { id: 'D', choices: ['at', 'by', 'for', 'of'], answer: 2, why: 'make a difference for 〜 で「〜にとってちがいを生む」。' },
@@ -2850,7 +2850,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'A', choices: ['at', 'for', 'of', 'to'], answer: 1, why: 'be ready for 〜 で「〜の準備ができている」。' },
       { id: 'B', choices: ['at', 'for', 'of', 'to'], answer: 2, why: 'in front of 〜 で「〜の前で」。' },
       { id: 'C', choices: ['at', 'for', 'in', 'on'], answer: 0, why: 'look at 〜 の at（not at your paper）。' },
-      { id: 'D', choices: ['at', 'for', 'of', 'with'], answer: 3, why: 'Good luck with 〜 で「〜がうまくいきますように」。' },
+      { id: 'D', choices: ['at', 'by', 'of', 'with'], answer: 3, why: 'Good luck with 〜 で「〜がうまくいきますように」。' },
     ],
     qa: [{ q: 'What advice did Ms. Kato give Rin?', choices: ['Speak slowly and look at the audience.', 'Speak faster.', 'Read the paper all the time.', 'Do not use pictures.'], answer: 0, why: '加藤先生の4つ目の発言。' }],
     tf: [
@@ -3061,7 +3061,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       'トム：もちろん。英語のカードをもらったらお母さんはよろこぶよ。',
     ],
     blanks: [
-      { id: 'A', choices: ['at', 'in', 'on', 'with'], answer: 1, why: 'in one\'s free time で「ひまなときに」。' },
+      { id: 'A', choices: ['at', 'in', 'on', 'by'], answer: 1, why: 'in one\'s free time で「ひまなときに」。' },
       { id: 'B', choices: ['for', 'of', 'on', 'to'], answer: 0, why: 'look for 〜 で「〜をさがす」。' },
       { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 0, why: '時刻の前は at（at ten）。' },
       { id: 'D', choices: ['for', 'of', 'to', 'with'], answer: 2, why: 'be happy to 〜 で「〜してうれしい」。' },
@@ -3634,7 +3634,7 @@ export const LONG_PASSAGES: LongPassage[] = [
       { id: 'A', choices: ['at', 'for', 'from', 'with'], answer: 2, why: 'come from 〜 で「〜から来る」。疑問詞 where とセットで文の最後に from が残る。' },
       { id: 'B', choices: ['down', 'off', 'out', 'over'], answer: 0, why: 'break down 〜 で「〜をくだく・分解する」。' },
       { id: 'C', choices: ['at', 'in', 'on', 'to'], answer: 1, why: 'stay in 〜 で「〜の中にとどまる」。' },
-      { id: 'D', choices: ['by', 'for', 'in', 'with'], answer: 3, why: 'cover A with B で「AをBでおおう」。' },
+      { id: 'D', choices: ['by', 'for', 'at', 'with'], answer: 3, why: 'cover A with B で「AをBでおおう」。' },
     ],
     qa: [
       { q: 'What carries salt to the sea?', choices: ['Rivers.', 'Fish.', 'The wind.', 'People.'], answer: 0, why: 'the rivers carry them to the sea とある。' },
@@ -4289,7 +4289,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['much', 'very', 'many', 'more'], answer: 1, why: '形容詞 hard を強めるのは very（とても）。' },
       { id: 'B', choices: ['at', 'in', 'on', 'to'], answer: 2, why: 'push on 〜 で「〜をおす（〜に力をかける）」。' },
-      { id: 'C', choices: ['what', 'which', 'who', 'whose'], answer: 1, why: 'which way で「どの方法」。いくつかの中から選ぶので which。' },
+      { id: 'C', choices: ['how', 'which', 'who', 'whose'], answer: 1, why: 'which way で「どの方法」。いくつかの中から選ぶので which。' },
     ],
     underline: { phrase: 'by themselves', choices: ['自然に（何もしなくても）', 'ほかの人といっしょに', '薬を飲んだあとに', '大きな音で'], answer: 0, why: 'by themselves は「ひとりでに・自然に」。数分たつと止まると書いてある。' },
     tf: [
@@ -4349,7 +4349,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['as', 'like', 'so', 'than'], answer: 0, why: 'just as ＋ 主語 ＋ 動詞「ちょうど〜と同じように」。あとに文が続くので as。' },
       { id: 'B', choices: ['for', 'of', 'to', 'with'], answer: 0, why: 'make it hard for 人 to 〜「人が〜するのをむずかしくする」。' },
-      { id: 'C', choices: ['answer', 'question', 'problem', 'color'], answer: 0, why: '直前の問いへの「答え（answer）」。' },
+      { id: 'C', choices: ['answer', 'question', 'problem', 'weather'], answer: 0, why: '直前の問いへの「答え（answer）」。' },
     ],
     underline: { phrase: 'far fewer of them', choices: ['それらのずっと少ない数', 'それらのずっと遠く', 'それらのほとんど全部', 'それらの少し多い数'], answer: 0, why: 'far は比較級を強めて「ずっと」。fewer は few の比較級で「より少ない数」。' },
     tf: [
@@ -4439,7 +4439,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['does', 'is', 'do', 'are'], answer: 0, why: '主語 this（3人称単数）の一般動詞の疑問文なので does。' },
       { id: 'B', choices: ['why', 'what', 'which', 'who'], answer: 0, why: 'That is why 〜「そういうわけで〜」。' },
-      { id: 'C', choices: ['better', 'well', 'good', 'best'], answer: 0, why: 'feel better「（前より）楽になる」。比較級 better。' },
+      { id: 'C', choices: ['better', 'well', 'more well', 'best'], answer: 0, why: 'feel better「（前より）楽になる」。比較級 better。' },
     ],
     underline: { phrase: 'the pressure on both sides becomes the same', choices: ['鼓膜の内と外の気圧が同じになる', '両方の耳がいたくなる', '飛行機の左右がゆれる', 'のどが空気でいっぱいになる'], answer: 0, why: '鼓膜の外側（機内）とおく（耳の中）の気圧がそろうことを言っている。' },
     tf: [
@@ -4798,7 +4798,7 @@ export const LONG_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['most', 'much', 'each', 'every'], answer: 0, why: 'most of them「それらのほとんど」。much は数えられない名詞、every は of them の前に置けない。each of them は単数あつかいなので have と合わない。' },
-      { id: 'B', choices: ['faster', 'fast', 'fastest', 'more fast'], answer: 0, why: '「（ふくろに入れないときより）早く熟す」なので比較級 faster。' },
+      { id: 'B', choices: ['faster', 'fastly', 'fastest', 'more fast'], answer: 0, why: '「（ふくろに入れないときより）早く熟す」なので比較級 faster。' },
       { id: 'C', choices: ['because', 'so', 'if', 'though'], answer: 0, why: 'just because ～「～というだけの理由で」。' },
     ],
     underline: { phrase: 'You can use this gas to your advantage', choices: ['この気体をうまく利用できる', 'この気体はあぶないので使えない', 'この気体を作ることができる', 'この気体を止めることができる'], answer: 0, why: 'use ～ to one\'s advantage「～をうまく利用する」。' },

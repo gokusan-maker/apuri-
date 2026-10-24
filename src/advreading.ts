@@ -158,7 +158,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '笑いはまた、うつるもののようだ。だれかの笑い声を聞くと、自分も笑う準備をする脳の部分が働く。だからお笑い番組の中には、録音した笑い声を加えるものがある。笑いはユーモアへの単なる反応どころか、人間がたがいにつながるための、最も古い道具の一つなのかもしれない。',
     ],
     blanks: [
-      { id: 'A', choices: ['rather', 'better', 'more', 'other'], answer: 0, why: 'A rather than B「BではなくA」。特におもしろいことではなく、ふつうの発言のあと。' },
+      { id: 'A', choices: ['rather', 'better', 'much', 'other'], answer: 0, why: 'A rather than B「BではなくA」。特におもしろいことではなく、ふつうの発言のあと。' },
       { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとの which は前の内容全体（いっしょに笑って親しみを示すこと）を指す。' },
       { id: 'C', choices: ['as', 'so', 'too', 'very'], answer: 0, why: 'as well「〜もまた」。自分も笑う準備をする。' },
     ],
@@ -664,7 +664,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['to repair', 'repairing', 'repaired', 'repair'], answer: 0, why: '不定詞の形容詞的用法 money to repair it「それを直すためのお金」。' },
       { id: 'B', choices: ['at', 'on', 'to', 'of'], answer: 0, why: 'at the station「駅で」。場所の一点を表す at。' },
-      { id: 'C', choices: ['bring', 'keep', 'break', 'send'], answer: 0, why: 'bring people together「人々を結びつける」。' },
+      { id: 'C', choices: ['bring', 'make', 'break', 'send'], answer: 0, why: 'bring people together「人々を結びつける」。' },
     ],
     tf: [
       { statement: '時計台はおよそ100年前に建てられた。', answer: true, why: '第1段落 It was built about one hundred years ago。' },
@@ -1084,7 +1084,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['without', 'with', 'for', 'by'], answer: 0, why: 'without anyone 〜ing「だれも〜しないまま」。' },
       { id: 'B', choices: ['wider', 'wide', 'widest', 'widely'], answer: 0, why: '反対意見がないチームとくらべて「より広い」範囲なので比較級 wider。a wide range of 〜 の比較級。' },
-      { id: 'C', choices: ['rather', 'better', 'more', 'sooner'], answer: 0, why: 'A rather than B「BではなくA」。友情へのおどしではなく、考えるための道具。' },
+      { id: 'C', choices: ['rather', 'better', 'much', 'sooner'], answer: 0, why: 'A rather than B「BではなくA」。友情へのおどしではなく、考えるための道具。' },
     ],
     tf: [
       { statement: '意見がくいちがうことを、気まずく感じる人は多い。', answer: true, why: '第1段落 Arguments can feel uncomfortable。' },
@@ -1419,7 +1419,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['than', 'as', 'that', 'then'], answer: 0, why: '比較級 harder のあとは than。much harder than I had imagined「想像していたよりずっと大変」。' },
-      { id: 'B', choices: ['if', 'though', 'because', 'so'], answer: 0, why: 'as if ＋ 過去形（were）で「まるで〜であるかのように」。' },
+      { id: 'B', choices: ['if', 'that', 'because', 'so'], answer: 0, why: 'as if ＋ 過去形（were）で「まるで〜であるかのように」。' },
       { id: 'C', choices: ['make', 'makes', 'made', 'making'], answer: 0, why: '不定詞 to のあとは原形。make 人 interested「人に興味をもたせる」。' },
     ],
     tf: [
@@ -1530,7 +1530,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '批判する人々は、こうした計画の恩恵を受けるのはごく一部の種だけであり、ゾウのような大きく知能の高い動物は、どれほど大切に世話をされても、とらわれの身で苦しむことが多いと反論する。おそらくもっとも筋の通った立場は、この二つの極端のあいだにあるだろう。動物園は、どれだけ多くの来園者を集めるかではなく、野生の種の存続にどれだけ貢献するかによって評価されるべきなのである。',
     ],
     blanks: [
-      { id: 'A', choices: ['as', 'so', 'too', 'very'], answer: 0, why: 'not as 〜 as …「…ほど〜ではない」。' },
+      { id: 'A', choices: ['as', 'such', 'too', 'very'], answer: 0, why: 'not as 〜 as …「…ほど〜ではない」。' },
       { id: 'B', choices: ['harm', 'help', 'feed', 'find'], answer: 0, why: '閉鎖すれば、守りたいはずの動物を「傷つける（harm）」ことになる、という逆説。' },
       { id: 'C', choices: ['contribute', 'belong', 'refer', 'object'], answer: 0, why: 'contribute to 〜「〜に貢献する」。' },
     ],
@@ -1923,7 +1923,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['leave', 'leaves', 'left', 'leaving'], answer: 0, why: 'be going to のあとは動詞の原形。leave「〜をはなれる」。' },
-      { id: 'B', choices: ['instead', 'together', 'again', 'already'], answer: 0, why: '撮影のかわりに絵をかいてもらった、なので instead「かわりに」。' },
+      { id: 'B', choices: ['instead', 'yet', 'again', 'already'], answer: 0, why: '撮影のかわりに絵をかいてもらった、なので instead「かわりに」。' },
       { id: 'C', choices: ['received', 'receive', 'receiving', 'to receive'], answer: 0, why: 'the best 〜 I have ever ＋ 過去分詞「今までに〜した中でいちばん」。' },
     ],
     tf: [
@@ -2120,7 +2120,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['while', 'because', 'unless', 'so that'], answer: 0, why: '「科学者は混乱させる一方で、大学院生はわかりやすく説明する」という対比なので while。' },
       { id: 'B', choices: ['but', 'and', 'or', 'nor'], answer: 0, why: 'not A but B「A ではなく B」。' },
-      { id: 'C', choices: ["others'", 'other', 'another', 'the other'], answer: 0, why: "through others' eyes「他人の目を通して」。複数の他人の所有格 others'。" },
+      { id: 'C', choices: ["others'", "other's", 'another', 'the other'], answer: 0, why: "through others' eyes「他人の目を通して」。複数の他人の所有格 others'。" },
     ],
     tf: [
       { statement: '筆者は、ある分野にいちばんくわしい人が、いつもいちばんよい教え手だと述べている。', answer: false, why: '第1段落 Experience, however, often suggests otherwise。' },
@@ -2146,7 +2146,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '気温が高くなると健康がそこなわれたり、エネルギーの使用がふえたりするので、多くの都市が解決策をさがしている。通りぞいに木をふやしている都市もあれば、植物でおおわれた「屋上緑化」をすすめている都市もある。日光を反射する明るい色で屋根をぬるのも、もう一つの簡単な方法だ。これらの対策のどれも現象を完全になくすことはできないが、組み合わせれば、暑い時期の都市の生活をはっきりと快適にすることができる。',
     ],
     blanks: [
-      { id: 'A', choices: ['though', 'because', 'if', 'until'], answer: 0, why: 'even though 〜「〜なのに」。日がしずんだのにあたたかい、という逆接。' },
+      { id: 'A', choices: ['though', 'because', 'so', 'until'], answer: 0, why: 'even though 〜「〜なのに」。日がしずんだのにあたたかい、という逆接。' },
       { id: 'B', choices: ['whereas', 'because', 'so', 'unless'], answer: 0, why: '植物は冷やす、コンクリートは冷やさない、という対比なので whereas「〜であるのに対して」。' },
       { id: 'C', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'comfortable の比較級は more comfortable。noticeably は比較級を強める副詞。' },
     ],
@@ -2260,7 +2260,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'how to begin「どうやって始めればよいか」（疑問詞＋to）。' },
       { id: 'B', choices: ['is', 'are', 'was', 'be'], answer: 0, why: '主語 What is important（大切なこと）は単数あつかいで、現在の一般的な考えなので is。' },
-      { id: 'C', choices: ['next', 'last', 'every', 'this'], answer: 0, why: 'will take（未来）なので next year「来年」。' },
+      { id: 'C', choices: ['next', 'last', 'every', 'past'], answer: 0, why: 'will take（未来）なので next year「来年」。' },
     ],
     tf: [
       { statement: 'ルーカスは、日本に来たときすでに日本語を上手に話せた。', answer: false, why: '第1段落 he could speak only a little Japanese。' },
@@ -2594,7 +2594,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'なぜ私たちはこれほど簡単にこのわなにはまるのだろうか。理由の一つは、損を認めるのはつらく、続けることでそのつらさを先のばしにできるからだ。もう一つは、方針を変える人はむだづかいをする人、一貫性のない人と見られるかもしれないからである。とはいえ、この誤りに気づくことは、最初の困難であきらめるべきだということではない。がんばり続けることには価値があることも多い。大切なのは、正しい問いを立てることだ。「もうどれだけつぎこんだか」ではなく、「今わかっていることをふまえて、今日これを始めるだろうか」と。正直に答えるのは、もちろん言うはやすく行うはかたしである。',
     ],
     blanks: [
-      { id: 'A', choices: ['whatever', 'however', 'whoever', 'whenever'], answer: 0, why: 'whatever they decide「彼らが何を決めようとも」（譲歩）。' },
+      { id: 'A', choices: ['whatever', 'no matter', 'whoever', 'whenever'], answer: 0, why: 'whatever they decide「彼らが何を決めようとも」（譲歩）。' },
       { id: 'B', choices: ['would', 'am', 'have', 'was'], answer: 0, why: '仮定の問い「今日これを始めるだろうか」なので would I start。' },
       { id: 'C', choices: ['of course', 'in addition', 'for example', 'as a result'], answer: 0, why: '「もちろん言うはやすく行うはかたし」。of course で当然のことを認める。' },
     ],
