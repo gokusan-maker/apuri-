@@ -27,7 +27,7 @@ function ShareButton({ text }: { text: string }) {
           .catch(() => setCopied(false))
       }}
     >
-      {copied ? '✅ コピーしました' : '📋 結果をコピー（シェア用）'}
+      {copied ? '✅ コピーしました' : '📋 結果をコピー'}
     </button>
   )
 }
@@ -375,7 +375,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             </p>
           )}
           {!!result.lucky && <p className="gacha-lucky">🍀 ラッキーナンバー！ 通算{result.lucky}回目で 🪙{LUCKY_COINS}</p>}
-          {!!result.refund && <p className="gacha-dup">かぶりボーナス！ 同じ子がいたので 🪙{result.refund} もどってきた</p>}
+          {!!result.refund && <p className="gacha-dup" title="同じ子がいたのでコインがもどってきた">かぶりボーナス 🪙{result.refund}！</p>}
           <ShareButton text={gachaShareText([{ kindName: result.kind.name, normal: result.kind.id === 'normal', speciesName: result.species.name, rarity: RARITY_LABEL[result.kind.rarity] }])} />
           {result.species.id !== 'mochi' && (
             <details className="gacha-species">

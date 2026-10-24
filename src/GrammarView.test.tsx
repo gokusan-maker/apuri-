@@ -196,7 +196,7 @@ it('結果画面でシェア用の文をコピーできる', async () => {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
     fireEvent.click(screen.getByText('次へ'))
   }
-  fireEvent.click(screen.getByText('📋 結果をコピー（シェア用）'))
+  fireEvent.click(screen.getByText('📋 結果をコピー'))
   expect(writeText).toHaveBeenCalledWith(expect.stringContaining(`「${unit.title}」に挑戦！ 3 / 3 問正解`))
   expect(await screen.findByText('✅ コピーしました')).toBeInTheDocument()
 })

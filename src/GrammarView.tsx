@@ -889,7 +889,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
               .catch(() => setCopied(false))
           }}
         >
-          {copied ? '✅ コピーしました' : '📋 結果をコピー（シェア用）'}
+          {copied ? '✅ コピーしました' : '📋 結果をコピー'}
         </button>
         <button className="flip" onClick={() => open(unit)}>
           もう一度

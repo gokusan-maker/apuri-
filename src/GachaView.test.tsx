@@ -72,7 +72,7 @@ it('レア度で確定演出が変わる（ウルトラレアは虹色、ふつ�
 it('かぶったときはコインがもどったことを知らせる', () => {
   render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('mochi'), refund: 15 })} />)
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
-  expect(screen.getByText('かぶりボーナス！ 同じ子がいたので 🪙15 もどってきた')).toBeInTheDocument()
+  expect(screen.getByText('かぶりボーナス 🪙15！')).toBeInTheDocument()
 })
 
 it('ステップアップの残り回数と確定のお知らせ', () => {

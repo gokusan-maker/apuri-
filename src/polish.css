@@ -2223,3 +2223,4 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* ボスのセリフ：英語・日本語それぞれ1行に収まりやすい大きさ */
 .boss-intro, .boss-taunt:not(.boss-defeat) { font-size: 0.88rem; }
 .boss-intro .boss-intro-ja, .boss-taunt:not(.boss-defeat) span { font-size: 0.76rem; }
+.gacha-name { font-size: 0.92rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }

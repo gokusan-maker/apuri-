@@ -840,7 +840,7 @@ describe('App', () => {
     expect(screen.getByText(/ミステリーカプセル！/)).toBeInTheDocument() // 乱数0.01なのでミステリーにもなる
     const writeText = vi.fn(() => Promise.resolve())
     Object.defineProperty(navigator, 'clipboard', { value: { writeText }, configurable: true })
-    fireEvent.click(screen.getByText('📋 結果をコピー（シェア用）'))
+    fireEvent.click(screen.getByText('📋 結果をコピー'))
     expect(writeText).toHaveBeenCalledWith(expect.stringContaining('イングリッシュモンスターのガチャで'))
   })
 
