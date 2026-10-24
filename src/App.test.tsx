@@ -161,6 +161,8 @@ describe('App', () => {
       fireEvent.click(screen.getByText(/次へ|結果を見る/))
     }
     expect(localStorage.getItem('eitan:today-words')).toBe(day)
+    // 終わると「次の課題へ ▶」（まだの課題）が出る
+    expect(screen.getByRole('button', { name: /次の課題へ ▶ 📐文法/ })).toBeInTheDocument()
     // 読解：上のバーのボタンから、今日の英文がすぐ開く
     fireEvent.click(within(bar()).getByRole('button', { name: /今日の課題（読解）へ/ }))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()

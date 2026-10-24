@@ -10,7 +10,8 @@ import { BuddyEvolve } from './BuddyEvolveView'
 import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
-import { TodayFocusBar, type TodayTask } from './TodayFocusView'
+import { TodayFocusBar } from './TodayFocusView'
+import { TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
 import { kimochiDiary } from './kimochi'
@@ -362,6 +363,13 @@ function App() {
     setMode(t)
     window.scrollTo?.({ top: 0 })
   }
+  const todayDone: Record<TodayTask, boolean> = { word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }
+  const todayNext = todayFocus && todayDone[todayFocus] ? TODAY_TASKS.find((t) => t !== todayFocus && !todayDone[t]) : undefined // 今日の課題を1つ終えたら、まだの課題へ
+  const todayNextBtn = todayNext && (
+    <button className="next-unit-btn today-next-btn" onClick={() => goToday(todayNext)}>
+      次の課題へ ▶ {TODAY_TASK_LABEL[todayNext]}
+    </button>
+  )
   const home = mode === 'home' && !showShop && !showChallenge // ホーム（相棒・あそび・今日の課題・記録）
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
@@ -1390,7 +1398,7 @@ function App() {
       {todayFocus && (
         <TodayFocusBar
           current={todayFocus}
-          done={{ word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }}
+          done={todayDone}
           onBack={() => {
             setTodayQuiz(false)
             setGrammarGo(false)
@@ -1644,6 +1652,7 @@ function App() {
           ) : (
           stagesView('boss')
           )}
+          {mode === 'reading' && todayNextBtn}
         </>
       ) : mode === 'settings' ? (
         <>
@@ -1890,6 +1899,7 @@ function App() {
               }}
             />
           )}
+          {mode === 'grammar' && todayNextBtn}
           {quizFocus && !todayFocus && focusList(quizFocus).length > 0 && (
             <p className="weak-banner">
               {FOCUS_LABEL[quizFocus]}だけ復習中（{focusList(quizFocus).length}語）
@@ -1938,6 +1948,7 @@ function App() {
             }}
           />
           )}
+          {mode === 'word' && todayNextBtn}
           {mode === 'word' && !todayQuiz && !quizFocus && wordReview}
         </>
       ) : (

@@ -2476,3 +2476,5 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
   :root:not([data-theme="light"]) .today-focus-task[aria-current='page'] { background: #431407; color: #fed7aa; }
 }
 :root[data-theme="dark"] .today-focus-task[aria-current='page'] { background: #431407; color: #fed7aa; }
+.today-next-btn { display: block; width: 100%; margin: 12px 0 0; border: none; background: linear-gradient(135deg, #fbbf24, #f97316) !important; color: #fff !important; font-size: 1.05rem; font-weight: 900; white-space: nowrap; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #c2410c !important; }
+.today-next-btn:active { transform: translateY(3px); box-shadow: none !important; }

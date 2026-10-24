@@ -1,11 +1,5 @@
 // 今日の課題をひらいたときの上のバー：もどる・ほかの課題へ（課題だけを画面いっぱいに出す）
-export type TodayTask = 'word' | 'grammar' | 'reading'
-
-const TASKS: { id: TodayTask; icon: string; name: string }[] = [
-  { id: 'word', icon: '🔤', name: '単語' },
-  { id: 'grammar', icon: '📐', name: '文法' },
-  { id: 'reading', icon: '📖', name: '読解' },
-]
+import { TODAY_TASK_INFO as TASKS, type TodayTask } from './todayfocus'
 
 type Props = {
   current: TodayTask
