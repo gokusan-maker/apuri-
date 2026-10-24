@@ -709,8 +709,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               ))}
             </div>
             {!done && seq.length > 0 && (
-              <button className="list-link" onClick={() => setSeq([])}>
-                やりなおす
+              <button className="list-link redo-pill" onClick={() => setSeq([])}>
+                ↺ やりなおす
               </button>
             )}
             {done && (
@@ -737,8 +737,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               ))}
             </div>
             {!done && pseq.length > 0 && (
-              <button className="list-link" onClick={() => setPseq([])}>
-                やりなおす
+              <button className="list-link redo-pill" onClick={() => setPseq([])}>
+                ↺ やりなおす
               </button>
             )}
             {done && (
@@ -918,8 +918,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                 </button>
               ))}
               {!done && order.length > 0 && (
-                <button className="list-link" onClick={() => setOrder([])}>
-                  やりなおす
+                <button className="list-link redo-pill" onClick={() => setOrder([])}>
+                  ↺ やりなおす
                 </button>
               )}
             </div>

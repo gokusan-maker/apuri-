@@ -2640,3 +2640,11 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
   :root:not([data-theme='light']) .list-link.share-go { background: linear-gradient(180deg, #0891b2, #0e7490); color: #fff; box-shadow: 0 4px 0 #164e63; }
 }
 :root[data-theme='dark'] .list-link.share-go { background: linear-gradient(180deg, #0891b2, #0e7490); color: #fff; box-shadow: 0 4px 0 #164e63; }
+
+/* 長文の並べかえの「↺ やりなおす」は青の小さなボタン（やり直す系は青） */
+.list-link.redo-pill { display: inline-flex; align-items: center; gap: 4px; margin: 6px auto 0; padding: 6px 16px; border: none; border-radius: 999px; background: linear-gradient(180deg, #60a5fa, #2563eb); color: #fff; font-size: 0.85rem; font-weight: 900; white-space: nowrap; text-decoration: none; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 #1e40af; }
+.list-link.redo-pill:active { transform: translateY(2px); box-shadow: 0 1px 0 #1e40af; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .list-link.redo-pill { background: linear-gradient(180deg, #3b82f6, #1d4ed8); color: #fff; box-shadow: 0 3px 0 #1e3a8a; }
+}
+:root[data-theme='dark'] .list-link.redo-pill { background: linear-gradient(180deg, #3b82f6, #1d4ed8); color: #fff; box-shadow: 0 3px 0 #1e3a8a; }

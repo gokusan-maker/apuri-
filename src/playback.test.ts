@@ -13,3 +13,8 @@ it('シェアのボタンは水色のゲームボタン（ダークは2スコー
   expect(css).toMatch(/:root\[data-theme='dark'\] \.list-link\.share-go/)
   for (const f of ['src/App.tsx', 'src/QuizView.tsx', 'src/ShareView.tsx']) expect(readFileSync(f, 'utf8')).toMatch(/list-link share-go/)
 })
+
+it('長文の並べかえの「やりなおす」は青の小さなボタン', () => {
+  expect(readFileSync('src/LongReadingView.tsx', 'utf8').match(/list-link redo-pill/g)).toHaveLength(3)
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.list-link\.redo-pill \{[^}]*#2563eb/)
+})
