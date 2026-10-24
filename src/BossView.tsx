@@ -12,7 +12,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -181,6 +181,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crits, setCrits] = useState(0)
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
+  const [trioAt, setTrioAt] = useState(-1) // 合体技を出した問題の番号
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
   const [drop, setDrop] = useState<BattleItemId | null>(null)
   const [continued, setContinued] = useState(false) // コンティニューは1戦1回
@@ -254,7 +255,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const base = (critical ? critDamage(damage(c)) : damage(c)) * (chance || asleep || comeback ? 2 : 1)
-      const nextHp = hp - base - extra - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
+      const trio = teamOn && 'team' in q && isTeamCombo(q.team as TeamRole, c) ? TEAM_COMBO_DAMAGE : 0
+      if (trio > 0) {
+        setSkillMsg(`🤝 合体技「トリプルアタック」！ +${trio}`)
+        setTrioAt(index)
+      }
+      const nextHp = hp - base - extra - trio - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (minion === 'here') {
@@ -732,6 +738,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                   </span>
                 ))}
               </div>
+              {trioAt === index && picked !== null && (
+                <p className="boss-trio-pop" role="status">
+                  🤝 合体技 トリプルアタック！ +{TEAM_COMBO_DAMAGE}
+                </p>
+              )}
               <p className="boss-team-turn">
                 {TEAM_ICON[q.team as TeamRole]} {team![q.team as TeamRole].name}の{TEAM_LABEL[q.team as TeamRole]}アタック！
               </p>

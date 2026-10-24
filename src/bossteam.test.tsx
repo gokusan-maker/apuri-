@@ -38,3 +38,11 @@ it('ボス戦では3体のなかまがならび、番のなかまが攻撃する
   fireEvent.click(screen.getByText(/次へ|つぎへ/))
   expect(screen.getByText(/コトバンの文法アタック！/)).toBeInTheDocument()
 })
+
+it('単語→文法→読解の3体が続けて正解すると、合体技でダメージが+15ふえる', async () => {
+  const { isTeamCombo, TEAM_COMBO_DAMAGE } = await import('./boss')
+  expect(TEAM_COMBO_DAMAGE).toBe(15)
+  expect(isTeamCombo('reading', 3)).toBe(true)
+  expect(isTeamCombo('reading', 2)).toBe(false)
+  expect(isTeamCombo('grammar', 5)).toBe(false)
+})

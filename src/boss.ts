@@ -126,6 +126,10 @@ export function teamBossQuestions<R extends { word: Word; choices: string[]; ans
   return out
 }
 
+// 合体技：単語→文法→読解の3体が続けて正解すると、読解の番で3体の合体技（ダメージ+15）
+export const TEAM_COMBO_DAMAGE = 15
+export const isTeamCombo = (role: TeamRole | undefined, combo: number) => role === 'reading' && combo >= 3
+
 // バトル結果のランク：ハートが減らず会心3回以上で S、ハートが2つ以上で A、それ以外は B
 export type Rank = 'S' | 'A' | 'B'
 export const RANK_S_COINS = 10
