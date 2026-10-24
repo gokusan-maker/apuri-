@@ -545,16 +545,23 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         ✨ 今週のレアボス{rareWeek === week && <span className="mode-badge">✅ クリア</span>}
       </button>
       </div>
-      {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 金色ボス：{goldenLevelOf(LEVELS, dayKey())}（+🪙{GOLDEN_COINS}）</p>}
+      {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日は「{goldenLevelOf(LEVELS, dayKey())}」のボスが金色 +🪙{GOLDEN_COINS}</p>}
       {daily && (
         <button
-          className="boss-btn daily-boss"
+          className="boss-go-btn daily-boss"
           onClick={() => {
             setDailyFight(1)
             setFighting(daily)
           }}
         >
-          ⚔️ 今日のボス{dailyDone && <span className="mode-badge">✅ クリア</span>}
+          <span className="boss-go-fig" aria-hidden="true">
+            👹
+          </span>
+          <span className="boss-go-text">
+            <strong>⚔️ 今日のボス</strong>
+            <small>BOSS BATTLE</small>
+          </span>
+          {dailyDone && <span className="mode-badge">✅ クリア</span>}
         </button>
       )}
       {daily && !dailyDone && (
