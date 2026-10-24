@@ -66,3 +66,8 @@ it('文法ページの今日の文法は1画面に収まるよう、選択肢を
 it('ボス部屋のモード一覧は1行ずつ色つきのゲームボタン', () => {
   expect(css).toMatch(/\.boss-modes \.boss-btn \{ padding: 14px 40px 14px 16px; border: none; border-radius: 16px; background: linear-gradient/)
 })
+
+it('設定のスイッチは1枚のカードにまとまり、見出しは色つきの札', () => {
+  expect(css).toContain('.settings .setting.toggle + .setting.toggle { padding-block: 10px;')
+  expect(css).toMatch(/\.settings \.settings-h \{[^}]*background: var\(--accent-grad\)/)
+})
