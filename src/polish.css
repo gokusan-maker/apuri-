@@ -2089,3 +2089,14 @@ details[open] > summary::before { transform: rotate(90deg); }
 .stage-btn:not(:disabled):not(.cleared):active { transform: translateY(3px); box-shadow: 0 1px 0 #312e81; }
 .stage-btn.cleared { border: 2px solid #fde68a; background: linear-gradient(160deg, #fcd34d, #f59e0b); color: #78350f; box-shadow: 0 4px 0 #b45309; }
 .stage-btn.cleared:active { transform: translateY(3px); box-shadow: 0 1px 0 #b45309; }
+
+/* 文法ページ：キャラクター〜今日の文法までをスマホ1画面に収める（オーナーの要望） */
+.boss-ally.ally-grammar:has(+ .today-grammar) { padding-block: 6px; }
+.boss-ally.ally-grammar:has(+ .today-grammar) .ally-line { display: none; }
+.today-grammar { margin: 8px 0; padding: 10px 12px; }
+.today-grammar .today-section-title { margin-bottom: 4px; font-size: 0.95rem; }
+.today-grammar .today-grammar-point { margin-bottom: 4px; }
+.today-grammar .choices { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr)); gap: 8px; margin-top: 8px; }
+.today-grammar .choice { min-height: 48px; padding: 8px 6px; font-size: 1rem; overflow-wrap: anywhere; }
+.today-grammar .feedback { margin-top: 8px; font-size: 0.95rem; text-wrap: pretty; word-break: auto-phrase; }
+.today-grammar .flip { margin-top: 8px; padding-block: 10px; }

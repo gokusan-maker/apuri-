@@ -57,3 +57,8 @@ it('背景を持たない部品の濃い文字色にも、ダークモードの�
 it('中央ぞろえの短い文は text-wrap: balance で1文字だけ改行されないようにする', () => {
   expect(css).toMatch(/\.boss-intro-ja[^{]*.result-message[^{]*\{ text-wrap: balance; word-break: auto-phrase; \}/)
 })
+
+it('文法ページの今日の文法は1画面に収まるよう、選択肢を横にならべてつめる', () => {
+  expect(css).toContain('.today-grammar .choices { grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));')
+  expect(css).toContain('.today-grammar .flip { margin-top: 8px;')
+})
