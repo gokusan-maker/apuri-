@@ -1999,3 +1999,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* ホームのボタンのごほうびは小さなピルに（「（勝つと🪙15）」の文をやめる） */
 .home-reward-pill { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, #f59e0b 18%, transparent); font-size: 0.8em; font-weight: 800; vertical-align: 1px; }
 .home-stats { justify-content: center; }
+
+/* ガチャの「週末はふしぎなことが…」：ダークで濃い赤の文字が暗い地にしずんでいた */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .gacha .gacha-event { color: #fca5a5; }
+}
+:root[data-theme="dark"] .gacha .gacha-event { color: #fca5a5; }
