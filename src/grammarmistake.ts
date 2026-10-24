@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'can-i-you': { wrong: 'Can I to use your pen?', right: 'Can I use your pen?', why: 'can のあとは to をつけない原形。' },
   'will-have-to': { wrong: 'You will must finish it by Friday.', right: 'You will have to finish it by Friday.', why: '助動詞を2つ並べることはできない。未来の「～しなければならないだろう」は will have to。' },
   'superlative-in-of': { wrong: 'She is the fastest runner of our school.', right: 'She is the fastest runner in our school.', why: '学校・クラスなど場所やグループの中では in。of は the three・all などの数の集まりに使う。' },
   else: { wrong: 'Do you want other anything?', right: 'Do you want anything else?', why: '「ほかに何か」は anything else。else は anything のあとに置く。' },
