@@ -158,7 +158,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'gerund',
     title: '動名詞（動詞の -ing 形で「〜すること」）',
-    points: ['動詞の -ing 形は「〜すること」という名詞のはたらきもする。', 'enjoy・finish・stop のあとは -ing 形。前置詞（at, of など）のあとも -ing 形。'],
+    points: ['動詞の -ing 形は「〜すること」という名詞のはたらきもする。', 'enjoy・finish・stop（〜するのをやめる）のあとは -ing 形。前置詞（at, of など）のあとも -ing 形。'],
     examples: [
       { en: 'I enjoy reading comics.', ja: '私はまんがを読むのを楽しむ。' },
       { en: 'She is good at drawing.', ja: '彼女は絵をかくのが得意だ。' },
@@ -186,7 +186,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'there',
     title: 'There is / There are（〜がある・いる）',
-    points: ['「（どこどこに）〜がある・いる」は There is ＋ 1つのもの／There are ＋ 2つ以上のもの。', '過去は There was / There were。'],
+    points: ['「（どこどこに）〜がある・いる」は There is ＋ 1つのもの・数えられない名詞／There are ＋ 2つ以上のもの。', '過去は There was / There were。'],
     examples: [
       { en: 'There is a cat under the table.', ja: 'テーブルの下にねこがいる。' },
       { en: 'There are three parks in my town.', ja: '私の町には公園が3つある。' },
@@ -214,7 +214,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'conjunction',
     title: '接続詞（when / if / because）',
-    points: ['when「〜するとき」、if「もし〜なら」、because「〜なので（理由）」で2つの文をつなぐ。', 'when や if の文では、未来のことでも現在形を使う。'],
+    points: ['when「〜するとき」、if「もし〜なら」、because「〜なので（理由）」で2つの文をつなぐ。', '「時」の when や「条件」の if の文では、未来のことでも現在形を使う（「〜かどうか」の if や「いつ〜か」の when は別）。'],
     examples: [
       { en: 'I was reading when you called.', ja: 'あなたが電話したとき、私は本を読んでいた。' },
       { en: 'If it rains, we will stay home.', ja: 'もし雨なら、家にいます。' },
@@ -611,7 +611,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'each-every',
     title: 'each / every / all',
-    points: ['each と every のあとは単数形の名詞で、動詞も3人称単数（Every student has ～）。', 'all のあとは複数形の名詞（all students）。'],
+    points: ['each と every のあとは単数形の名詞で、動詞も3人称単数（Every student has ～）。', 'all のあとは複数形の名詞か数えられない名詞（all students / all the water）。'],
     examples: [
       { en: 'Every student has a tablet.', ja: 'どの生徒もタブレットを持っている。' },
       { en: 'All the students were happy.', ja: '生徒たちはみんな喜んでいた。' },
@@ -793,7 +793,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'causative',
     title: '使役（make / let / help ＋人＋動詞の原形）',
-    points: ['make ＋人＋原形「（むりやり）〜させる」、let ＋人＋原形「（自由に）〜させてあげる」、help ＋人＋原形「人が〜するのを手伝う」。', '人のあとの動詞は to をつけない原形。'],
+    points: ['make ＋人＋原形「（むりやり）〜させる」、let ＋人＋原形「（自由に）〜させてあげる」、help ＋人＋原形「人が〜するのを手伝う」。', '人のあとの動詞は to をつけない原形（help だけは help 人 to 〜 も使える）。'],
     examples: [
       { en: 'My mother made me clean my room.', ja: '母は私に部屋をそうじさせた。' },
       { en: 'Let me carry your bag.', ja: 'あなたのかばんを運ばせてください。' },
@@ -1633,7 +1633,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'to-or-ing',
     title: 'to か -ing か（動詞による見分け）',
-    points: ['want・hope・decide・plan のあとは to ＋動詞の原形（want to go）。enjoy・finish・stop のあとは -ing（enjoy swimming）。', 'like・love・start・begin のあとは to も -ing もどちらも使える（start to run / start running）。'],
+    points: ['want・hope・decide・plan のあとは to ＋動詞の原形（want to go）。enjoy・finish・stop（やめる）のあとは -ing（enjoy swimming）。stop to 〜 は「〜するために立ち止まる」で意味がちがう。', 'like・love・start・begin のあとは to も -ing もどちらも使える（start to run / start running）。'],
     examples: [
       { en: 'I decided to study abroad.', ja: '私は留学することに決めた。' },
       { en: 'It started raining.', ja: '雨がふりはじめた。' },
@@ -1745,7 +1745,7 @@ export const GRAMMAR: GrammarUnit[] = [
   {
     id: 'be-able-to',
     title: 'be able to（〜できる）',
-    points: ['be able to ＋動詞の原形 で「〜することができる」（can とほぼ同じ意味）。', 'will のあとでは can を使えないので will be able to 〜 にする。過去の「できた」は could または was / were able to。'],
+    points: ['be able to ＋動詞の原形 で「〜することができる」（can とほぼ同じ意味）。', 'will のあとでは can を使えないので will be able to 〜 にする。過去の「できた」は could または was / were able to（1回うまくできたことは was / were able to を使う）。'],
     examples: [
       { en: 'I will be able to swim next summer.', ja: '来年の夏には泳げるようになるだろう。' },
       { en: 'She was able to finish the work.', ja: '彼女はその仕事を終えることができた。' },
@@ -3190,7 +3190,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     examples: [
       { en: 'Do you happen to know her phone number?', ja: 'ひょっとして彼女の電話番号を知っていますか。' },
-      { en: 'The difficult test turned out to be easier than I expected.', ja: 'むずかしいと思っていたテストは、予想より簡単だとわかった。' },
+      { en: 'The test turned out to be easier than I expected.', ja: 'テストは予想より簡単だとわかった。' },
     ],
     questions: [
       { sentence: 'I happened ___ an old friend in the park.', choices: ['to see', 'seeing', 'see'], answer: 0, why: 'happen to ＋ 原形「たまたま～する」。' },
@@ -3712,7 +3712,7 @@ export const GRAMMAR: GrammarUnit[] = [
     id: 'when-future',
     title: '時を表す when / until / before（未来のことでも現在形）',
     points: [
-      'when（～するとき）・after・before・until（～するまで）・as soon as のあとは、未来のことでも現在形を使う：Call me when you get home.「家に着いたら電話してね」。',
+      '時を表す when（～するとき）・after・before・until（～するまで）・as soon as のあとは、未来のことでも現在形を使う：Call me when you get home.「家に着いたら電話してね」。',
       'will を使うのは主節（電話する・待つ など）のほう：I will wait here until the rain stops.「雨がやむまでここで待つ」。',
     ],
     examples: [
@@ -3883,7 +3883,7 @@ export const GRAMMAR: GrammarUnit[] = [
     title: 'the last ～ to …（最も…しそうにない）',
     points: [
       'the last ＋ 名詞 ＋ to ＋ 原形 で「最も…しそうにない～」「決して…しない～」：He is the last person to tell a lie.',
-      'the last ＋ 名詞 ＋ (that) 主語 ＋ 動詞 は「いちばん…したくない～」：That is the last thing I want to hear.',
+      'the last ＋ 名詞 ＋ (that) 主語 ＋ 動詞 は「まさか…とは思わない・いちばん…したくない～」：That is the last thing I want to hear.「それはいちばん聞きたくないことだ」。',
     ],
     examples: [
       { en: 'My father is the last person to break a promise.', ja: '父は決して約束をやぶるような人ではない。' },
