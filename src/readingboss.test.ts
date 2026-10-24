@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { LONG_PASSAGES } from './longreading'
-import { maskAnswer, passageQs, readingBossQs, readingPoolFor } from './readingboss'
+import { passageQs, readingBossQs, readingPoolFor } from './readingboss'
 import { splitSentences } from './longreading'
 
 it('読解ボスの問題：読解の空所・○×・英問英答から作り、答えが選択肢の中にある', () => {
@@ -50,14 +50,12 @@ it('文に分けるとき Mr. / Mrs. のピリオドでは切らない（空所�
   for (const p of LONG_PASSAGES) for (const q of passageQs(p)) if (q.blank) expect(q.word.en).not.toMatch(/は？ (Green|Smith|Brown|Tanaka),/)
 })
 
-it('ボスのヒント：空所は答えの語をかくした解説、○×と英問英答は根拠の1文', () => {
-  expect(maskAnswer('through ～「～を通して」。Through は前置詞。', 'through')).toBe('＿＿ ～「～を通して」。＿＿ は前置詞。')
-  expect(maskAnswer('in time で「間に合って」', 'in')).toBe('＿＿ time で「間に合って」')
+it('ボスのヒント：前置詞などの核心をふくむくわしい解説（オーナー要望）と、○×・英問英答は根拠の1文', () => {
   for (const p of LONG_PASSAGES.slice(0, 30)) {
-    for (const q of passageQs(p)) {
-      if (q.blank) expect(q.hint?.note).not.toMatch(new RegExp(`(?<![A-Za-z])${q.choices[q.answer].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![A-Za-z])`, 'i'))
-    }
+    for (const q of passageQs(p)) expect(q.hint?.note).toBeTruthy()
   }
+  const b = LONG_PASSAGES.flatMap(passageQs).find((q) => q.blank && /^[a-z]+$/.test(q.choices[q.answer]) && q.hint!.note!.includes(q.choices[q.answer]))
+  expect(b).toBeTruthy() // 答えの前置詞などもかくさずに出す
   const p = LONG_PASSAGES[0]
   const qs = passageQs(p).filter((q) => !q.blank)
   const withQuote = qs.filter((q) => q.hint?.quote)

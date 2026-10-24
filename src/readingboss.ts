@@ -3,14 +3,8 @@ import { BOSS_QUESTIONS } from './boss'
 import { LONG_PASSAGES, splitSentences, type LongPassage } from './longreading'
 import type { Level, Word } from './words'
 
-export type BossHint = { note?: string; quote?: string } // note：答えの語をかくした解説、quote：根拠になる本文の1文
+export type BossHint = { note?: string; quote?: string } // note：前置詞などの核心をふくむくわしい解説、quote：根拠になる本文の1文
 export type ReadingQ = { word: Word; choices: string[]; answer: number; passage: LongPassage; blank?: string; hint?: BossHint } // blank：空所の問題ならその記号（A など）
-
-// ヒント用：解説の中の答えの語を ＿＿ にかくす
-export function maskAnswer(why: string, answer: string): string {
-  const esc = answer.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
-  return why.replace(new RegExp(`(?<![A-Za-z])${esc}(?![A-Za-z])`, 'gi'), '＿＿')
-}
 
 const STOP = new Set('a an the is are was were be been am to of and or in on at for it its he she they we i you that this with did does do not what why how who when where which his her their my our by from as have has had will would can could there them him me us so but very about into after before than then'.split(' '))
 const stems = (t: string) => new Set((t.toLowerCase().match(/[a-z]+/g) ?? []).filter((x) => x.length > 2 && !STOP.has(x)).map((x) => x.slice(0, 5)))
@@ -49,10 +43,10 @@ export function passageQs(p: LongPassage): ReadingQ[] {
   const out: ReadingQ[] = []
   for (const b of p.blanks) {
     const sent = sentences.find((s) => s.includes(`( ${b.id} )`)) ?? `( ${b.id} )`
-    out.push({ word: w(`（${b.id}）に入る語は？ ${sent}`, b.choices[b.answer]), choices: b.choices, answer: b.answer, passage: p, blank: b.id, hint: { note: maskAnswer(b.why, b.choices[b.answer]) } })
+    out.push({ word: w(`（${b.id}）に入る語は？ ${sent}`, b.choices[b.answer]), choices: b.choices, answer: b.answer, passage: p, blank: b.id, hint: { note: b.why } })
   }
-  for (const t of p.tf) out.push({ word: w(`本文と合っている？ ${t.statement}`, t.answer ? '○' : '×'), choices: ['○ 合っている', '× 合っていない'], answer: t.answer ? 0 : 1, passage: p, hint: { quote: evidenceSentence(p, t.statement) } })
-  for (const q of p.qa ?? []) out.push({ word: w(q.q, q.choices[q.answer]), choices: q.choices, answer: q.answer, passage: p, hint: { quote: evidenceSentence(p, `${q.q} ${q.choices[q.answer]}`) } })
+  for (const t of p.tf) out.push({ word: w(`本文と合っている？ ${t.statement}`, t.answer ? '○' : '×'), choices: ['○ 合っている', '× 合っていない'], answer: t.answer ? 0 : 1, passage: p, hint: { note: t.why, quote: evidenceSentence(p, t.statement) } })
+  for (const q of p.qa ?? []) out.push({ word: w(q.q, q.choices[q.answer]), choices: q.choices, answer: q.answer, passage: p, hint: { note: q.why, quote: evidenceSentence(p, `${q.q} ${q.choices[q.answer]}`) } })
   return out
 }
 
