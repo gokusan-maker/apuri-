@@ -1401,7 +1401,7 @@ function App() {
             setTodayQuiz(true)
           }}
         >
-          📋 今日の課題（単語・4択）{loadTodayWordsDay() === today ? ' ✅' : ''}
+          🔤 今日の課題{loadTodayWordsDay() === today ? ' ✅' : ''}
           <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
         </button>
       )}
@@ -1571,7 +1571,7 @@ function App() {
           {mode === 'reading' && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
-              📅 今日の読解{loadDailyShortDay() === today ? ' ✅' : ''}
+              📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
               <strong>{dailyShort(today).title}</strong>
             </button>
           )}
@@ -1849,7 +1849,7 @@ function App() {
           {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
-              📐 今日の課題（文法）{loadDailyGrammarDay() === today ? ' ✅' : ''}
+              📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
               <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
             </button>
           )}

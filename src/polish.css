@@ -2313,3 +2313,11 @@ details[open] > summary::before { transform: rotate(90deg); }
 /* 単語ゲームの「ミニゲームをえらぶ」：1行（いまのゲームは右のチップ） */
 .mode-btn .mode-change { display: flex; align-items: center; justify-content: center; gap: 8px; font-size: clamp(0.95rem, 4.4vw, 1.1rem); }
 .mode-btn .mode-change .mode-now { max-width: 40%; padding: 2px 10px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.75rem; font-weight: 800; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+/* 単語・文法・読解の「今日の課題」ボタン：3つとも同じ1行のゲームボタン（題名は … で切る） */
+.today-read-btn { display: flex; align-items: center; gap: 8px; width: 100%; padding: 12px 14px; border: none; border-radius: 16px; background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; font-size: 0.9rem; font-weight: 800; text-align: left; white-space: nowrap; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 4px 0 #c2410c, 0 6px 14px rgb(0 0 0 / 0.12); }
+.today-read-btn strong { flex: 1; min-width: 0; display: block; margin: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 1rem; color: #fff; }
+.today-read-btn::after { content: '▶'; flex: none; display: grid; place-items: center; width: 1.6em; height: 1.6em; border-radius: 50%; background: rgb(255 255 255 / 0.3); font-size: 0.8rem; }
+.today-read-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 #c2410c; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .today-read-btn { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; border: none; } }
+:root[data-theme="dark"] .today-read-btn { background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; border: none; }

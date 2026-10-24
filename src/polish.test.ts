@@ -110,3 +110,8 @@ it('ボス部屋のボタンは同じ形（アイコンの箱・名前・バッ�
 it('ホームの今日の目標は太い緑のゲージ', () => {
   expect(css).toMatch(/\.goal \.goal-fill \{[^}]*linear-gradient\(90deg, #4ade80, #16a34a\)/)
 })
+
+it('単語・文法・読解の今日の課題ボタンは同じ1行のゲームボタン', () => {
+  expect(css).toMatch(/\.today-read-btn \{ display: flex;[^}]*white-space: nowrap;/)
+  expect(css).toMatch(/\.today-read-btn strong \{[^}]*text-overflow: ellipsis;/)
+})
