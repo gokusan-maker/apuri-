@@ -1982,3 +1982,10 @@ details[open] > summary::before { transform: rotate(90deg); }
 .grade-tests { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
 .grade-tests .list-link { display: flex; flex-direction: column; align-items: center; justify-content: center; min-width: 0; margin: 0; padding: 8px 2px; font-size: 0.88rem; }
 .grade-best { font-size: 0.7rem; font-weight: 700; opacity: 0.8; }
+
+/* 読解の「今日のおすすめ」：ダークで明るいクリーム地に白い文字になり読めなかった */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .long-recommend { background: color-mix(in srgb, #f59e0b 16%, var(--card)); color: #fcd34d; }
+}
+:root[data-theme="dark"] .long-recommend { background: color-mix(in srgb, #f59e0b 16%, var(--card)); color: #fcd34d; }
+.long-recommend strong { color: var(--fg); }
