@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'how-long-perfect': { wrong: 'How long do you have lived here?', right: 'How long have you lived here?', why: '現在完了の疑問文は have を主語の前に出す（do は使わない）。' },
   'progressive-q-neg': { wrong: 'Do you studying now?', right: 'Are you studying now?', why: '進行形の疑問文は be動詞（Are）を前に出す。' },
   'there-will-be': { wrong: 'There will a test tomorrow.', right: 'There will be a test tomorrow.', why: 'There will のあとに be（原形）が必要。' },
   'irregular-past': { wrong: 'I buyed a new pen.', right: 'I bought a new pen.', why: 'buy の過去形は bought（不規則動詞）。' },
