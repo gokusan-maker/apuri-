@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'superlative-in-of': { wrong: 'She is the fastest runner of our school.', right: 'She is the fastest runner in our school.', why: '学校・クラスなど場所やグループの中では in。of は the three・all などの数の集まりに使う。' },
   else: { wrong: 'Do you want other anything?', right: 'Do you want anything else?', why: '「ほかに何か」は anything else。else は anything のあとに置く。' },
   'famous-full-similar': { wrong: 'This town is famous of its hot springs.', right: 'This town is famous for its hot springs.', why: '「～で有名だ」は be famous for ～。' },
   'times-a-week': { wrong: 'I go to the library two times in a week.', right: 'I go to the library twice a week.', why: '2回はふつう twice。「1週間に」は a week で、in はいらない。' },

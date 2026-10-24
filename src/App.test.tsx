@@ -145,7 +145,7 @@ describe('App', () => {
     fireEvent.click(within(tasks()).getByText(p.title))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
     for (const q of p.questions) {
-      fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+      fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(localStorage.getItem('eitan:daily-short')).toBe(day)
@@ -175,7 +175,7 @@ describe('App', () => {
     const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
     expect(bar()).toHaveAttribute('aria-valuenow', '0')
     const q = GRAMMAR[0].questions[0]
-    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
     expect(Number(bar().getAttribute('aria-valuenow'))).toBeGreaterThan(0)
     navTo('ホーム')
     expect(within(screen.getByLabelText('育てているなかま')).getByLabelText(/文法のなかま/).textContent).toMatch(/\+\d+/)
@@ -1117,7 +1117,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
-    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
     expect(JSON.parse(localStorage.getItem('eitan:buddies')!).grammar.xp).toBeGreaterThan(0)
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
   })
@@ -1152,7 +1152,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
-    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('タマゴがかえった！')
     expect(screen.getByRole('dialog', { name: 'なかまの進化' }).textContent).toContain('お祝い 🪙10')
     expect(document.querySelector('.buddy-evolve .evo-name')?.textContent).toBeTruthy()
