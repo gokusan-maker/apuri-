@@ -4,7 +4,7 @@ import type { ComponentProps, CSSProperties } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -463,6 +463,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     )
   }
 
+  const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
     <section className="card stages">
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
@@ -491,7 +492,10 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 <BossFigure hit={false} look={BOSSES[lv]} />
               </span>
               <span className="boss-pick-name">{BOSSES[lv].name}</span>
-              <small className="boss-pick-lv">{lv}</small>
+              <small className="boss-pick-lv">
+                {lv}
+                {bossTimes[BOSSES[lv].name] !== undefined && <span className="boss-pick-time" title={`最短タイム ${formatSec(bossTimes[BOSSES[lv].name])}`}> ⏱{Math.floor(bossTimes[BOSSES[lv].name] / 60)}:{String(bossTimes[BOSSES[lv].name] % 60).padStart(2, '0')}</span>}
+              </small>
             </button>
           ))}
         </div>

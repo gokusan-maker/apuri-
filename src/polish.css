@@ -2556,3 +2556,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 @keyframes vs-pop { 0% { opacity: 0; transform: translate(-50%, -50%) scale(2.4); } 25% { opacity: 1; transform: translate(-50%, -50%) scale(0.95); } 35% { transform: translate(-50%, -50%) scale(1.05); } 75% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1.2); visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .boss-vs { display: none; } }
 .today-grade { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: color-mix(in srgb, var(--accent) 14%, var(--card)); color: var(--accent); font-size: 0.72rem; font-weight: 800; white-space: nowrap; vertical-align: middle; }
+.boss-pick-time { font-weight: 900; }

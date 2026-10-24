@@ -311,3 +311,9 @@ it('ボス部屋のタイルで、今日の金色のボスに「✨金色」の�
   expect(tile.textContent).toContain('✨金色')
   expect(document.querySelectorAll('.boss-pick-gold')).toHaveLength(1)
 })
+
+it('ボス部屋のタイルに、そのボスの最短タイムが小さく出る', () => {
+  localStorage.setItem('eitan:boss-times', JSON.stringify({ ヤミモチ: 83 }))
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
+})
