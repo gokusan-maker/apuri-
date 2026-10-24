@@ -1889,18 +1889,6 @@ function App() {
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
-            countSlot={
-              mode === 'word' && !todayQuiz && !quizFocus ? (
-                <section className="today-words" aria-label="今日の単語">
-                  <p className="today-section-title">🔤 今日の単語</p>
-                  <p className="stats buddy-chips home-stats" aria-label={`今日の残り ${queue.length} 語 ・ 定着 ${learned} / ${words.length} 語`}>
-                    <span>📖 のこり {queue.length}語</span>
-                    <span>✅ 定着 {learned}/{words.length}</span>
-                  </p>
-                  {cardStudy}
-                </section>
-              ) : undefined
-            }
             onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
@@ -1945,6 +1933,10 @@ function App() {
               ← ミニゲームをえらぶ
             </button>
           )}
+          <p className="stats buddy-chips home-stats" aria-label={`今日の残り ${queue.length} 語 ・ 定着 ${learned} / ${words.length} 語`}>
+            <span>📖 のこり {queue.length}語</span>
+            <span>✅ 定着 {learned}/{words.length}</span>
+          </p>
           {cardStudy}
         </>
       )}
