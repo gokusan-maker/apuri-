@@ -1718,8 +1718,29 @@ export const PASSAGES: Passage[] = [
       { q: '放課後、ソウタは何をしてくれた？', choices: ['飛行機の折り方を教えてくれた', '新しい紙をくれた', '飛行機をくれた'], answer: 0 },
     ],
   },
+  {
+    id: 'library-card',
+    title: 'My First Library Card',
+    text: "Yesterday, I got my first library card. My mother took me to the city library after school. A kind woman at the desk wrote my name on a blue card. She said, \"You can borrow five books for two weeks.\" I chose two books about space and three comic books. On the way home, I started reading one of them on the bus. I almost missed our stop!",
+    ja: '昨日、私ははじめて図書館カードを作りました。放課後、母が市の図書館に連れていってくれました。受付のやさしい女の人が、青いカードに私の名前を書いてくれました。「本は5冊まで、2週間借りられますよ」と言いました。私は宇宙の本を2冊とまんがを3冊えらびました。帰り道、バスの中で1冊読み始めました。もう少しで、降りるバス停を乗りすごすところでした！',
+    questions: [
+      { q: 'カードは何色だった？', choices: ['青', '赤', '緑'], answer: 0 },
+      { q: '本は何冊まで借りられる？', choices: ['5冊', '2冊', '3冊'], answer: 0 },
+      { q: '帰りのバスで何があった？', choices: ['降りるバス停を乗りすごしそうになった', '本を落とした', 'カードをなくした'], answer: 0 },
+    ],
+  },
+  {
+    id: 'lighthouse-trip',
+    title: 'A Visit to the Lighthouse',
+    text: "During the summer, my family visited an old lighthouse by the sea. It was white and very tall. We climbed one hundred and twenty steps to the top. My legs were tired, but the view was amazing. We could see small boats and many islands. A guide told us that the light can be seen from thirty kilometers away at night. I want to come back and see the light in the dark.",
+    ja: '夏のあいだに、私の家族は海のそばの古い灯台をおとずれました。灯台は白くて、とても高かったです。私たちはてっぺんまで120段の階段をのぼりました。足はつかれましたが、ながめはすばらしかったです。小さな船やたくさんの島が見えました。ガイドさんが、夜にはその光が30キロはなれたところからでも見えると教えてくれました。また来て、暗い中で光を見てみたいです。',
+    questions: [
+      { q: '灯台は何色だった？', choices: ['白', '赤', '青'], answer: 0 },
+      { q: 'てっぺんまで何段のぼった？', choices: ['120段', '30段', '100段'], answer: 0 },
+      { q: '「私」は次に何をしたい？', choices: ['暗い中で灯台の光を見る', '船に乗る', '島で泳ぐ'], answer: 0 },
+    ],
+  },
 ]
-
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'
 export function loadShortDone(): string[] {
