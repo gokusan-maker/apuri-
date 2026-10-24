@@ -3747,6 +3747,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-octopus-arms',
+    title: 'Thinking with Eight Arms',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Octopuses are often described as the most intelligent invertebrates. In laboratories, they have learned to open jars, find their way through simple mazes, and even escape from their tanks. What makes this especially remarkable is that their nervous system is organized very differently from that of humans.",
+      "Roughly two-thirds of an octopus's neurons are located in its arms ( A ) in its central brain. As a result, each arm can taste, feel, and even make simple decisions on its own. An arm that has been separated from the body can still react to touch for a short time.",
+      "Octopuses are also masters of disguise. Their skin contains thousands of special cells called chromatophores, ( B ) allow them to change color in a fraction of a second. Some species can also change the texture of their skin so that they look like rocks or seaweed.",
+      "Surprisingly, these clever animals do not live long. Many species live only one or two years, and females usually die soon after their eggs hatch. Because young octopuses do not learn from their parents, scientists believe that much of their ability must come from their own experience ( C ) from instinct.",
+    ],
+    ja: [
+      'タコは、もっとも知能の高い無脊椎動物だと言われることが多い。実験室では、びんのふたを開けたり、かんたんな迷路を通りぬけたり、水そうからにげ出したりすることさえ学んできた。これがとくにおどろくべきなのは、タコの神経系のしくみが、人間のものとはまったくちがうからである。',
+      'タコの神経細胞のおよそ3分の2は、中心にある脳ではなく腕にある。そのため、それぞれの腕が、味を感じたり、さわったものを感じとったり、かんたんな判断をしたりすることさえ自分でできる。体から切りはなされた腕でも、しばらくのあいだはさわられると反応することがある。',
+      'タコは変装の名人でもある。皮ふには色素胞とよばれる特別な細胞が何千もあり、それによって一瞬で体の色を変えることができる。皮ふの表面の手ざわりまで変えて、岩や海藻のように見せる種類もいる。',
+      'おどろいたことに、これほどかしこい動物なのに、長くは生きない。多くの種は1〜2年しか生きず、メスはふつう卵がかえるとまもなく死んでしまう。若いタコは親から学ぶことがないので、その能力の多くは本能だけでなく、自分自身の経験から来ているにちがいないと科学者は考えている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'instead', 'despite', 'although'], answer: 0, why: 'A rather than B「B ではなく A」。in its arms rather than in its central brain。instead は副詞（instead of なら可）、despite は前置詞で in ～ の前に置けない、although は接続詞で文が続く。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'they'], answer: 0, why: 'コンマのあとで chromatophores を説明する非制限用法の関係代名詞は which。that はコンマのあとに使わない。what は先行詞をふくむ。they だとコンマだけで文がつながってしまう。' },
+      { id: 'C', choices: ['as well as', 'as long as', 'as soon as', 'as far as'], answer: 0, why: 'A as well as B「B だけでなく A も」。from their own experience as well as from instinct。as long as・as soon as・as far as は接続詞で、あとに文が続く。' },
+    ],
+    tf: [
+      { statement: 'タコの神経細胞の大部分は、脳ではなく腕にある。', answer: true, why: '第2段落 Roughly two-thirds of an octopus\'s neurons are located in its arms。' },
+      { statement: '体からはなれた腕は、すぐにまったく反応しなくなる。', answer: false, why: '第2段落 can still react to touch for a short time。' },
+      { statement: '皮ふの色だけでなく、手ざわりも変えられる種類がいる。', answer: true, why: '第3段落 Some species can also change the texture of their skin。' },
+      { statement: '多くのタコは10年以上生きる。', answer: false, why: '第4段落 Many species live only one or two years。' },
+    ],
+    qa: [
+      { q: 'Why do scientists think much of an octopus\'s ability comes from its own experience?', choices: ['Because young octopuses do not learn from their parents.', 'Because octopuses live for many years.', 'Because their brains are larger than human brains.', 'Because they always live in large groups.'], answer: 0, why: '第4段落 Because young octopuses do not learn from their parents。' },
+    ],
+  },
+{
     id: 'toefl-lichen',
     title: 'Two Lives in One: Lichens',
     level: 'TOEFL・IELTS（生物）',
