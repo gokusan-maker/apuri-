@@ -2443,3 +2443,10 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .shop-btn.buy-btn:not(:disabled), .snacks button.good:not(:disabled) .item-price { border: none; background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; font-weight: 900; text-shadow: none; box-shadow: 0 3px 0 #b45309; }
 .shop-btn.buy-btn:disabled, .snacks button.good:disabled .item-price { background: color-mix(in srgb, var(--muted) 25%, var(--card)); color: var(--muted); box-shadow: none; }
 .shop .badge-grid .shop-btn.buy-btn:not(:disabled), .shop .shop-btn.buy-btn:not(:disabled) { background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; border: none; box-shadow: 0 3px 0 #b45309; }
+
+/* ビンゴ：まだのマスは色つきのゲームタイル（9色）、正解は緑・まちがいは赤 */
+.bingo-cell:not(.ok):not(.ng) { border: none; background: linear-gradient(135deg, hsl(var(--bc-h, 240) 75% 58%), hsl(calc(var(--bc-h, 240) + 20) 70% 42%)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 4px 0 hsl(var(--bc-h, 240) 60% 28%); }
+.bingo-cell:nth-child(1) { --bc-h: 240; } .bingo-cell:nth-child(2) { --bc-h: 320; } .bingo-cell:nth-child(3) { --bc-h: 185; }
+.bingo-cell:nth-child(4) { --bc-h: 15; } .bingo-cell:nth-child(5) { --bc-h: 275; } .bingo-cell:nth-child(6) { --bc-h: 205; }
+.bingo-cell:nth-child(7) { --bc-h: 340; } .bingo-cell:nth-child(8) { --bc-h: 35; } .bingo-cell:nth-child(9) { --bc-h: 255; }
+.bingo-cell:not(.ok):not(.ng):active { transform: translateY(3px); box-shadow: none; }
