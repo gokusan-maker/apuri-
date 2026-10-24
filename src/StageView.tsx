@@ -1,5 +1,5 @@
 import { BossTime } from './BossTimeView'
-import type { ComponentProps } from 'react'
+import type { ComponentProps, CSSProperties } from 'react'
 import { medalFor } from './medal'
 import { useState } from 'react'
 import type { Source } from './monster'
@@ -451,6 +451,38 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
       {part !== 'stages' && (
       <>
+      {/* ボスをえらぶ：単語帳ごとのボスを色つきのタイルでならべ、タップで戦う（まだ出ていないボスは「？×N」1マス） */}
+      {part === 'boss' && (
+        <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
+          {LEVELS.filter((lv) => bossUnlocked(lv, record)).map((lv) => (
+            <button
+              key={lv}
+              className={`boss-pick-tile${boss[lv] ? ' beaten' : ''}`}
+              style={{ '--boss-c': BOSSES[lv].color } as CSSProperties}
+              aria-label={`${lv}のボス「${BOSSES[lv].name}」に挑戦${boss[lv] ? '（撃破ずみ）' : ''}`}
+              title={BOSSES[lv].desc}
+              onClick={() => {
+                setFighting(lv)
+                window.scrollTo?.({ top: 0 })
+              }}
+            >
+              {boss[lv] && <span className="boss-pick-crown" aria-hidden="true">👑</span>}
+              <span className="boss-pick-fig">
+                <BossFigure hit={false} look={BOSSES[lv]} />
+              </span>
+              <span className="boss-pick-name">{BOSSES[lv].name}</span>
+              <small className="boss-pick-lv">{lv}</small>
+            </button>
+          ))}
+          {LEVELS.some((lv) => !bossUnlocked(lv, record)) && (
+            <span className="boss-pick-tile locked" title="単語ステージを全部クリアすると、その単語帳のボスが出てくる" aria-label={`まだ出てこないボス ${LEVELS.filter((lv) => !bossUnlocked(lv, record)).length}`}>
+              <span className="boss-pick-fig" aria-hidden="true">🔒</span>
+              <span className="boss-pick-name">？×{LEVELS.filter((lv) => !bossUnlocked(lv, record)).length}</span>
+              <small className="boss-pick-lv">ステージで解放</small>
+            </span>
+          )}
+        </div>
+      )}
       {winStreak > 0 && (
         <p className="win-streak">
           🔥 ボス {winStreak}連勝中！（{STREAK_EVERY}連勝ごとに 🪙{STREAK_COINS}・負けるとリセット）

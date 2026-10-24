@@ -2450,3 +2450,14 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .bingo-cell:nth-child(4) { --bc-h: 15; } .bingo-cell:nth-child(5) { --bc-h: 275; } .bingo-cell:nth-child(6) { --bc-h: 205; }
 .bingo-cell:nth-child(7) { --bc-h: 340; } .bingo-cell:nth-child(8) { --bc-h: 35; } .bingo-cell:nth-child(9) { --bc-h: 255; }
 .bingo-cell:not(.ok):not(.ng):active { transform: translateY(3px); box-shadow: none; }
+
+/* ボス部屋：ボスをえらぶタイル（ボスの色のグラデーション・ボスの絵・名前・単語帳、たおしたボスは👑） */
+.boss-pick { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 8px; margin: 0 0 12px; padding-top: 8px; }
+.boss-pick-tile { position: relative; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 0; padding: 8px 4px 8px; border: none; border-radius: 16px; background: linear-gradient(160deg, color-mix(in srgb, var(--boss-c, #6d28d9) 70%, #fff), var(--boss-c, #6d28d9)); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.35); box-shadow: 0 4px 0 color-mix(in srgb, var(--boss-c, #6d28d9) 60%, #000); }
+.boss-pick-tile:active { transform: translateY(3px); box-shadow: none; }
+.boss-pick-fig { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: rgb(255 255 255 / 0.22); font-size: 1.5rem; }
+.boss-pick-fig svg { width: 46px; height: 46px; }
+.boss-pick-name { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.78rem; font-weight: 900; }
+.boss-pick-lv { padding: 0 8px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.66rem; font-weight: 800; white-space: nowrap; }
+.boss-pick-crown { position: absolute; top: -8px; right: -4px; font-size: 1.1rem; text-shadow: none; }
+.boss-pick-tile.locked { --boss-c: #94a3b8; justify-content: center; }

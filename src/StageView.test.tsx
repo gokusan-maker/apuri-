@@ -291,3 +291,13 @@ it('解放が少ない単語帳は compact（3列にならぶ）、たくさん�
   expect(lv[0].classList.contains('compact')).toBe(false)
   expect(lv[1].classList.contains('compact')).toBe(true)
 })
+
+it('ボス部屋では、絵と名前のタイルからボスをえらんで戦える（まだのボスは「？×N」）', () => {
+  const all = Object.fromEntries(stagesOf('中3').map((s) => [s.id, 1]))
+  render(<Stages part="boss" levels={['中3', '数']} record={all} onClear={() => {}} />)
+  const pick = screen.getByRole('group', { name: 'ボスをえらぶ' })
+  expect(pick.querySelectorAll('button.boss-pick-tile')).toHaveLength(1)
+  expect(pick.textContent).toMatch(/？×\d+/)
+  fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
+  expect(screen.getByText('← にげる')).toBeInTheDocument()
+})
