@@ -208,11 +208,11 @@ it('ノーミス＆会心でたおすとSランクでおまけコイン', () => 
   expect(document.querySelectorAll('.confetti.gold')).toHaveLength(16)
   expect(bonus).toHaveBeenCalledWith(10)
   const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.7) // 🪙20
-  fireEvent.click(screen.getByText('🎡 Sランクのごほうびルーレットをまわす'))
+  fireEvent.click(screen.getByText('🎡 ごほうびルーレット！'))
   rnd.mockRestore()
   expect(bonus).toHaveBeenCalledWith(20)
   expect(screen.getByText(/🪙20 が当たった！/)).toBeInTheDocument()
-  expect(screen.queryByText('🎡 Sランクのごほうびルーレットをまわす')).toBeNull()
+  expect(screen.queryByText('🎡 ごほうびルーレット！')).toBeNull()
 })
 
 it('チャンス問題が出る', () => {

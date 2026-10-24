@@ -571,7 +571,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                     else onDrop?.(p.id)
                   }}
                 >
-                  🎡 Sランクのごほうびルーレットをまわす
+                  🎡 ごほうびルーレット！
                 </button>
               ) : (
                 <p className="boss-drop">
