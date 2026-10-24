@@ -599,8 +599,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           )}
           <p className="boss-finisher" aria-hidden="true">💥 とどめ！</p>
           {mvp && (
-            <p className="boss-mvp">
-              🏅 MVP単語：<strong>{mvp.en}</strong>（{mvp.ja}）{(mvp.ms / 1000).toFixed(1)}秒で正解！
+            <p className="boss-mvp" title={`${mvp.en}（${mvp.ja}）を ${(mvp.ms / 1000).toFixed(1)}秒で正解`}>
+              🏅 MVP単語：<strong>{mvp.en}</strong>（{mvp.ja}）{(mvp.ms / 1000).toFixed(1)}秒
             </p>
           )}
           {proverb !== null && (
