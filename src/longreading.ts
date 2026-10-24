@@ -5311,6 +5311,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer did not enter any contest.', answer: false, why: '第3段落 I entered a calligraphy contest。' },
     ],
   },
+  {
+    id: 'birdhouse',
+    title: 'The Blue Birdhouse',
+    level: '中2（物語）',
+    paragraphs: [
+      'Last winter, my grandfather and I made a birdhouse in his garage. He cut the wood, and I painted it blue. We put it on a tree ( A ) our living room window.',
+      'For many weeks, no birds came. I checked the birdhouse every morning, but it was always empty. I said to my grandfather, "Maybe birds don\'t like the color." He laughed and said, "Be patient. Birds need time ( B ) they trust a new place."',
+      'In April, I finally saw a small brown bird carrying grass into the hole. A few weeks later, we heard tiny voices from inside. We watched quietly from the window ( C ) not to scare them.',
+      'Now there are baby birds in our birdhouse. Every time I see them, I remember my grandfather\'s words. Some good things take time, and waiting can be a part of the fun.',
+    ],
+    ja: [
+      'この前の冬、祖父と私はガレージで鳥の巣箱を作りました。祖父が木を切り、私がそれを青くぬりました。私たちは、それを居間の窓の近くの木に取りつけました。',
+      '何週間も、鳥は来ませんでした。毎朝巣箱を見に行きましたが、いつも空っぽでした。私は祖父に「鳥はこの色が好きじゃないのかも」と言いました。祖父は笑って、「しんぼう強く待ちなさい。鳥は、新しい場所を信用するまでに時間がかかるんだよ」と言いました。',
+      '4月、ついに小さな茶色の鳥が草を穴に運びこむのを見ました。数週間後、中から小さな鳴き声が聞こえてきました。私たちは鳥をこわがらせないように、窓からそっと見守りました。',
+      '今、巣箱にはひなたちがいます。ひなを見るたびに、祖父の言葉を思い出します。よいことの中には時間がかかるものもあり、待つことも楽しみの一部になりうるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['near', 'during', 'since', 'until'], answer: 0, why: 'near ～「～の近くに」（場所）。during・since・until は時を表す。' },
+      { id: 'B', choices: ['before', 'because of', 'during', 'without'], answer: 0, why: 'あとに they trust a new place という文が続くので接続詞の before「～する前に」。because of・during・without は前置詞。' },
+      { id: 'C', choices: ['so as', 'so that', 'such as', 'as if'], answer: 0, why: 'so as not to ～「～しないように」。so that・as if のあとは文、such as のあとは例になる名詞が来る。' },
+    ],
+    tf: [
+      { statement: 'The writer painted the birdhouse blue.', answer: true, why: '第1段落 I painted it blue。' },
+      { statement: 'Birds came to the birdhouse the next day.', answer: false, why: '第2段落 For many weeks, no birds came。' },
+      { statement: 'The writer saw a small brown bird carrying grass in April.', answer: true, why: '第3段落の内容と合う。' },
+      { statement: 'The writer and the grandfather made a lot of noise near the birdhouse.', answer: false, why: '第3段落 We watched quietly from the window。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

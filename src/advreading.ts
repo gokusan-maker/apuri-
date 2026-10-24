@@ -3931,6 +3931,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'toefl-rubber',
+    title: 'From Tree to Tire',
+    level: 'TOEFL・IELTS（歴史・産業）',
+    paragraphs: [
+      "Natural rubber comes from a milky liquid called latex, which flows from cuts made in the bark of the rubber tree. The tree is native to the Amazon region of South America, where people used latex for centuries to make balls and waterproof objects.",
+      "However, early rubber had serious problems. It became sticky and smelly in hot weather and hard and brittle in cold weather. In 1839, the American inventor Charles Goodyear found that heating rubber with sulfur made it strong and flexible at a wide range of temperatures. This process, ( A ) is called vulcanization, made rubber useful for countless products.",
+      "As demand grew, rubber trees were planted far from their original home. In the late nineteenth century, seeds were carried from Brazil to Britain and then to British colonies in Asia. Today, most of the world's natural rubber is produced in Southeast Asia, in countries ( B ) Thailand and Indonesia.",
+      "During the twentieth century, scientists also developed synthetic rubber made from petroleum. Synthetic rubber is now used more widely than natural rubber, but natural rubber is still preferred for some products, such as the large tires of airplanes and trucks, ( C ) it handles heat and stress well.",
+    ],
+    ja: [
+      '天然ゴムは、ゴムの木の樹皮につけた切れ目から流れ出る、ラテックスとよばれる乳白色の液体からつくられる。この木は南アメリカのアマゾン地域が原産で、そこでは人々が何世紀にもわたって、ラテックスを使ってボールや水を通さない物をつくってきた。',
+      'しかし、初期のゴムには深刻な問題があった。暑いとべたべたしてにおいが出て、寒いと固くもろくなったのである。1839年、アメリカの発明家チャールズ・グッドイヤーは、ゴムを硫黄といっしょに熱すると、はば広い温度で強くしなやかになることを発見した。加硫とよばれるこの方法によって、ゴムは数えきれないほどの製品に役立つようになった。',
+      '需要がふえるにつれて、ゴムの木は原産地から遠くはなれた場所にも植えられるようになった。19世紀の終わりに、種がブラジルからイギリスへ、そしてアジアのイギリスの植民地へと運ばれた。今日、世界の天然ゴムの大部分は、タイやインドネシアなどの東南アジアの国々で生産されている。',
+      '20世紀には、科学者たちが石油からつくる合成ゴムも開発した。現在では合成ゴムのほうが天然ゴムより広く使われているが、熱や負荷によく耐えるので、飛行機やトラックの大きなタイヤなど、一部の製品には今も天然ゴムが好まれている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマにはさまれて This process を説明する非制限用法の関係代名詞は which。that はコンマのあとに使わない。what は先行詞をふくむ。it では文がつながらない。' },
+      { id: 'B', choices: ['such as', 'as such', 'so as', 'as well'], answer: 0, why: 'such as ～「たとえば～のような」で例をあげる。countries such as Thailand and Indonesia。' },
+      { id: 'C', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'あとに it handles heat and stress well という文が続くので接続詞の because。because of・due to・despite は前置詞のはたらき。' },
+    ],
+    tf: [
+      { statement: '天然ゴムは、ゴムの木の樹皮の切れ目から出る液体からつくられる。', answer: true, why: '第1段落 latex, which flows from cuts made in the bark of the rubber tree。' },
+      { statement: '初期のゴムは、暑さにも寒さにも強かった。', answer: false, why: '第2段落 sticky … in hot weather and hard and brittle in cold weather。' },
+      { statement: '現在、天然ゴムの大部分は南アメリカで生産されている。', answer: false, why: '第3段落 most of the world\'s natural rubber is produced in Southeast Asia。' },
+      { statement: '飛行機の大きなタイヤなどには、今も天然ゴムが好まれている。', answer: true, why: '第4段落 natural rubber is still preferred for … the large tires of airplanes and trucks。' },
+    ],
+    qa: [
+      { q: 'What did Charles Goodyear discover?', choices: ['Heating rubber with sulfur made it strong and flexible.', 'Rubber trees could grow well in Asia.', 'Rubber could be made from petroleum.', 'Latex flows from the leaves of the tree.'], answer: 0, why: '第2段落 heating rubber with sulfur made it strong and flexible。' },
+    ],
+  },
+{
     id: 'toefl-monsoon',
     title: 'Winds That Change with the Seasons',
     level: 'TOEFL・IELTS（気象）',
