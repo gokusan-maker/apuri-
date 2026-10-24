@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { PlayContext, usePlaying } from './playing'
 import type { Source } from './monster'
 import { loadShortDone, markShortDone, PASSAGES, type Passage } from './reading'
 import { playCorrect, playWrong } from './sound'
@@ -27,6 +28,9 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
   const [score, setScore] = useState(0)
   const [showJa, setShowJa] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
+
+  const inApp = useContext(PlayContext) !== null // App の中では、上の「ほかの問題をえらぶ」で一覧へもどる
+  usePlaying(!!p && !onClose, () => setP(null)) // 今日の課題（onClose）は今日の課題のバーがある
 
   const openP = (x: Passage) => {
     setP(x)
@@ -101,7 +105,7 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
   const q = p.questions[step]
   return (
     <section className="card grammar reading">
-      {!onClose && (
+      {!onClose && !inApp && (
         <button className="stage-back" onClick={() => setP(null)}>
           ← 一覧
         </button>

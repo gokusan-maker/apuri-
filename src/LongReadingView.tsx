@@ -1,5 +1,6 @@
 import { weekKey } from './rareboss'
 import { useEffect, useState } from 'react'
+import { usePlaying } from './playing'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
 import { blankIdioms, keyWords } from './longvocab'
@@ -117,6 +118,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
   const [pickedGenre, setGenre] = useState<Genre | 'all'>('all')
   const shownGenres = GENRES.filter((g) => LIST.some((x) => genreOf(x) === g)) // 1本もないジャンルは出さない
   const genre = pickedGenre !== 'all' && !shownGenres.includes(pickedGenre) ? 'all' : pickedGenre
+
+  usePlaying(!!p || tfQuiz || vocabQuiz, () => {
+    cancelSpeech()
+    setReadingAll(false)
+    setP(null)
+    setTfQuiz(false)
+    setVocabQuiz(false)
+    window.scrollTo?.({ top: 0 })
+  })
 
   function openPassage(x: LongPassage) {
     const d = loadLongDraft(x.id)

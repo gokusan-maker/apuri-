@@ -15,6 +15,13 @@ const goMini = () => {
   navTo('単語ゲーム')
   fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
 }
+// ミニゲームはえらぶ画面が先。「▶ 〇〇 をはじめる」で問題だけの画面へ
+const playMini = () => {
+  goMini()
+  fireEvent.click(screen.getByRole('button', { name: /をはじめる$/ }))
+}
+// 問題の画面の上の「← ほかの問題をえらぶ」
+const backToPick = () => fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
 // 単語カード（単語ゲームの「🃏 単語カード」のタイルから）
 const goCards = () => {
   goMini()
@@ -106,7 +113,7 @@ describe('App', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 15 }))
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
-    goMini()
+    playMini()
     const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
@@ -198,12 +205,15 @@ describe('App', () => {
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     render(<App />)
     navTo('文法チャレンジ')
-    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
-    rnd.mockRestore()
     const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
     expect(bar()).toHaveAttribute('aria-valuenow', '0')
+    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+    rnd.mockRestore()
+    // 問題の画面では、なかまはかくれて問題だけ
+    expect(screen.queryByRole('progressbar', { name: '文法のなかまの経験値' })).toBeNull()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
+    backToPick()
     expect(Number(bar().getAttribute('aria-valuenow'))).toBeGreaterThan(0)
     navTo('ホーム')
     expect(within(screen.getByLabelText('育てているなかま')).getByLabelText(/文法のなかま/).textContent).toMatch(/\+\d+/)
@@ -266,6 +276,10 @@ describe('App', () => {
     expect(strip.querySelectorAll('.game-tile')).toHaveLength(6)
     expect(screen.getByLabelText(/^いま：.+・全\d+種$/)).toBeInTheDocument()
     fireEvent.click(within(strip).getByText('神経衰弱'))
+    // 問題の画面ではえらぶタイルはかくれ、上の「ほかの問題をえらぶ」でもどれる
+    expect(screen.queryByLabelText('人気のミニゲーム')).toBeNull()
+    expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull()
+    backToPick()
     expect(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')).toHaveAttribute('aria-pressed', 'true')
   })
 
@@ -276,6 +290,7 @@ describe('App', () => {
     const tile = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
     expect(within(tile).getByText('NEW')).toBeInTheDocument()
     fireEvent.click(tile)
+    backToPick()
     const after = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
     expect(within(after).getByText('✅ 今日')).toBeInTheDocument()
   })
@@ -297,6 +312,7 @@ describe('App', () => {
     goMini()
     expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
     fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱'))
+    backToPick()
     expect(screen.getByText(/^今日 1 しゅるいあそんだ・あと4で🪙/)).toBeInTheDocument()
   })
 
@@ -308,12 +324,12 @@ describe('App', () => {
     fireEvent.click(tab('単語'))
     expect(tab('単語')).toHaveAttribute('aria-current', 'page')
     // 単語ゲームはミニゲームが先。カードはミニゲームのタイルの1つ
-    expect(document.querySelector('.quiz')).not.toBeNull()
+    expect(document.querySelector('.quiz-pick')).not.toBeNull()
     expect(screen.queryByRole('tab', { name: '🃏 カード' })).toBeNull()
     fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('単語カード'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
     fireEvent.click(screen.getByText('← ミニゲームをえらぶ'))
-    expect(document.querySelector('.quiz')).not.toBeNull()
+    expect(document.querySelector('.quiz-pick')).not.toBeNull()
     fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
     expect(screen.getByText('スタート')).toBeInTheDocument()
     fireEvent.click(tab('文法'))
@@ -338,7 +354,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
-    goMini()
+    playMini()
     const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== word.ja)!)
@@ -978,7 +994,7 @@ describe('App', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
-    goMini()
+    playMini()
     const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
     const word = WORDS.find((w) => w.en === en)!
     // 「天気」などテーマで練習のボタンと同じ名前があるので、クイズの選択肢の中からえらぶ
@@ -1731,4 +1747,17 @@ it('記録：今月まだ学習0日ならカレンダーを出さず、定着0�
   render(<App />)
   expect(document.querySelector('.calendar')).toBeNull()
   expect(screen.queryByRole('progressbar', { name: '定着の割合' })).toBeNull()
+})
+
+it('音読・読み上げは、ページ（下のタブ）が変わると止まる', () => {
+  let cancels = 0
+  Object.defineProperty(window, 'speechSynthesis', { value: { cancel: () => cancels++, speak() {}, getVoices: () => [] }, configurable: true })
+  render(<App />)
+  const before = cancels
+  navTo('読解ステージ')
+  expect(cancels).toBeGreaterThan(before)
+  const mid = cancels
+  navTo('文法チャレンジ')
+  expect(cancels).toBeGreaterThan(mid)
+  delete (window as { speechSynthesis?: unknown }).speechSynthesis
 })

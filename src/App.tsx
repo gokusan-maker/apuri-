@@ -1,7 +1,8 @@
 import { BuddyFigure } from './BuddyFigureView'
 import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { PlayContext, type PlayRegister } from './playing'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
@@ -135,7 +136,7 @@ import { seasonFxOf } from './seasonfx'
 import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
-import { speak, speakPet } from './speech'
+import { cancelSpeech, speak, speakPet } from './speech'
 import { isNight } from './daytime'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
@@ -370,6 +371,23 @@ function App() {
       次の課題へ ▶ {TODAY_TASK_LABEL[todayNext]}
     </button>
   )
+  // 問題の画面をひらいているあいだ（子の画面が usePlaying で知らせる）は、相棒・タブ・今日の課題ボタンをかくし、上に「ほかの問題をえらぶ」
+  const [plays, setPlays] = useState<{ id: number; exit: () => void }[]>([])
+  const playSeq = useRef(0)
+  const playRegister = useCallback<PlayRegister>((exit) => {
+    const id = ++playSeq.current
+    setPlays((p) => [...p, { id, exit }])
+    return () => setPlays((p) => p.filter((x) => x.id !== id))
+  }, [])
+  const playOn = plays.length > 0 && !todayFocus && !showShop && !showChallenge
+  // 音読・読み上げは、ページが変わったら止める（タブ・ショップ・今日の課題の切りかえ、問題の画面から出たとき）
+  const pageKey = `${mode}|${showShop}|${showChallenge}|${todayFocus ?? ''}|${wordTab}|${readLevel}`
+  const prevPlays = useRef(0)
+  useEffect(() => () => cancelSpeech(), [pageKey]) // 前のページを閉じるときに止める（新しいページの自動読み上げは止めない）
+  useEffect(() => {
+    if (plays.length < prevPlays.current) cancelSpeech()
+    prevPlays.current = plays.length
+  }, [plays.length])
   const home = mode === 'home' && !showShop && !showChallenge // ホーム（相棒・あそび・今日の課題・記録）
   const [challengeDay, setChallengeDay] = usePersistent(loadChallengeDay, saveChallengeDay)
   const [snacks, setSnacks] = usePersistent(loadSnacks, saveSnacks)
@@ -1264,6 +1282,7 @@ function App() {
   )
 
   return (
+    <PlayContext.Provider value={playRegister}>
     <main className="app">
       <header>
         <div className="top">
@@ -1408,7 +1427,21 @@ function App() {
           onGo={goToday}
         />
       )}
-      {mode === 'word' && !showShop && !showChallenge && !todayFocus && (
+      {playOn && (
+        <div className="play-bar">
+          <button
+            className="play-back"
+            onClick={() => {
+              plays[plays.length - 1]?.exit()
+              window.scrollTo?.({ top: 0 })
+            }}
+          >
+            <span className="lg-icon" aria-hidden="true">{mode === 'word' ? '🎮' : mode === 'grammar' ? '📐' : mode === 'reading' ? '📖' : '👹'}</span>
+            <span className="play-back-name">← ほかの問題をえらぶ</span>
+          </button>
+        </div>
+      )}
+      {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
         <div className="boss-ally ally-word" aria-label="単語の相棒（正解で育つ）">
           <span className="ally-fig" aria-hidden="true">
             <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />
@@ -1426,7 +1459,7 @@ function App() {
           </div>
         </div>
       )}
-      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && (
+      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && (
         <button
           className="long-recommend daily-long today-read-btn"
           aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
@@ -1439,7 +1472,7 @@ function App() {
           <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
         </button>
       )}
-      {mode === 'word' && !showShop && !showChallenge && !todayFocus && (
+      {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
         <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
           {WORD_TABS.map((t) => (
             <button
@@ -1602,14 +1635,14 @@ function App() {
         <>
           {mode === 'boss' && buddyRow}
           {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
-          {mode === 'reading' && !shortGo && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
-          {mode === 'reading' && !shortGo && (
+          {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
+          {mode === 'reading' && !shortGo && !playOn && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
               📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
               <strong>{dailyShort(today).title}</strong>
             </button>
           )}
-          {mode === 'reading' && !shortGo && (
+          {mode === 'reading' && !shortGo && !playOn && (
           <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
             {READ_LEVELS.map((t) => (
               <button
@@ -1882,8 +1915,8 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'grammar' && !grammarGo && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
-          {mode === 'grammar' && !grammarGo && (
+          {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
+          {mode === 'grammar' && !grammarGo && !playOn && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
               📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
               <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
@@ -1949,7 +1982,7 @@ function App() {
           />
           )}
           {mode === 'word' && todayNextBtn}
-          {mode === 'word' && !todayQuiz && !quizFocus && wordReview}
+          {mode === 'word' && !todayQuiz && !quizFocus && !playOn && wordReview}
         </>
       ) : (
         <>
@@ -2077,6 +2110,7 @@ function App() {
         ))}
       </nav>
     </main>
+    </PlayContext.Provider>
   )
 }
 

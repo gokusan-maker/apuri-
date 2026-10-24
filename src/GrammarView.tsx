@@ -1,6 +1,7 @@
 import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
 import { useState } from 'react'
+import { usePlaying } from './playing'
 import { BossFigure } from './BossView'
 import { GrammarCards } from './GrammarCardsView'
 import { GrammarListen } from './GrammarListenView'
@@ -161,6 +162,25 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const daily = dailyGrammar(today)
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
   const [gradeKey, setGradeKey] = useState('') // 学年まとめテストのベストのキー（grade:中1 など）
+
+  // 問題の画面では、上に「ほかの問題をえらぶ」（App）。おすと単元・ゲームの一覧へ
+  usePlaying(!!unit || spot || cards || listen || odd || duel || bingo || timeAttack, () => {
+    setUnit(null)
+    setRush(null)
+    setBattle(false)
+    setOrdering(false)
+    setDict(false)
+    setPrinting(false)
+    setShadow(false)
+    setSpot(false)
+    setCards(false)
+    setListen(false)
+    setOdd(false)
+    setDuel(false)
+    setBingo(false)
+    setTimeAttack(false)
+    window.scrollTo?.({ top: 0 })
+  })
 
   function startBattle(u: GrammarUnit) {
     open(u)

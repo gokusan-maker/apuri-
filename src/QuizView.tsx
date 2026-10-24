@@ -3,7 +3,8 @@ import { isGrammarGame } from './quizgames'
 import { addRiddle, loadRiddleBook } from './riddlebook'
 import { RiddleBook } from './RiddleBookView'
 import { MissedList } from './MissedListView'
-import { useEffect, useState, type ReactNode } from 'react'
+import { useContext, useEffect, useState, type ReactNode } from 'react'
+import { PlayContext, usePlaying } from './playing'
 import { blankOut, canBlank } from './blank'
 import { quizXp, type Source } from './monster'
 import { makeQuestion, makeQuiz, shuffle, trimChoices, type Question } from './quiz'
@@ -269,6 +270,14 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     onDirection?.(direction)
   }, [direction, onDirection])
   const [menu, setMenu] = useState(false)
+  // 単語ミニゲーム：えらぶ画面（picking）と、問題だけの画面を分ける（オーナーの要望）。問題の画面では App の上に「ほかの問題をえらぶ」
+  const inApp = useContext(PlayContext) !== null // App の中（上に「ほかの問題をえらぶ」が出せる）ときだけ分ける
+  const [picking, setPicking] = useState(() => inApp && !lockDirection && !targets && initial !== 'placement')
+  usePlaying(inApp && !lockDirection && !picking, () => {
+    setPicking(true)
+    setMenu(false)
+    window.scrollTo?.({ top: 0 })
+  })
   // 今日のおすすめ：その種類でその日はじめて正解するとボーナスXP（ステージは対象外）
   const [today] = useState(() => dayKey())
   const featured = lockDirection ? null : featuredFor(today)
@@ -375,6 +384,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
     markTodayGame(`word:${d}`, dayKey())
     setDirection(d)
     setMenu(false)
+    setPicking(false)
     try {
       localStorage.setItem(MODE_KEY, d)
     } catch {
@@ -414,7 +424,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
 
   const [wordClaimed, setWordClaimed] = useState(() => allGamesClaimed(dayKey(), 'word'))
   const playedWordGames = loadTodayGames(dayKey()).filter((k) => k.startsWith('word:') && k !== 'word:cards').length
-  const toggle = lockDirection ? null : (
+  const toggle = lockDirection || (inApp && !picking) ? null : (
     <>
       <button className="mode-btn" aria-expanded={menu} onClick={() => setMenu(!menu)}>
         <span className="mode-change">
@@ -524,6 +534,20 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
       ))}
     </>
   )
+
+  if (picking && toggle) {
+    const now = DIRECTIONS.find((d) => d.id === direction)
+    return (
+      <section className="quiz-pick" aria-label="ミニゲームをえらぶ">
+        {toggle}
+        {now && (
+          <button className="flip ta-start quiz-pick-start" onClick={() => restart(direction)}>
+            ▶ {now.label} をはじめる
+          </button>
+        )}
+      </section>
+    )
+  }
 
   if (direction === 'order') {
     return (
