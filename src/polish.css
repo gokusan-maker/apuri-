@@ -2600,3 +2600,13 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .settings .levels .grade-btn.g-j3 { --g: #0ea5e9; }
 .settings .levels .grade-btn.g-hs { --g: #8b5cf6; }
 .settings .levels .grade-btn.g-adult { --g: #475569; }
+
+/* 読解のジャンルのタブ：下のフォルダーと同じ色の色タイル */
+.genre-tabs .genre-tab { --g: #6366f1; background: color-mix(in srgb, var(--g) 12%, var(--card)) !important; color: color-mix(in srgb, var(--g) 85%, var(--text, #1f2937)) !important; font-weight: 800; white-space: nowrap; }
+.genre-tabs .genre-tab[aria-selected='true'] { background: linear-gradient(135deg, color-mix(in srgb, var(--g) 70%, #fff), var(--g)) !important; color: #fff !important; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 color-mix(in srgb, var(--g) 60%, #000); }
+.genre-tabs .gt-all { --g: #2563eb; }
+.genre-tabs .gt-0 { --g: #3730a3; }
+.genre-tabs .gt-1 { --g: #db2777; }
+.genre-tabs .gt-2 { --g: #10b981; }
+.genre-tabs .gt-3 { --g: #d97706; }
+.genre-tabs .gt-4 { --g: #9333ea; }

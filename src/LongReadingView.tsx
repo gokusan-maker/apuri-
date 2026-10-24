@@ -308,8 +308,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         {shownGenres.length > 1 && (
           <div className="sub-tabs genre-tabs" role="tablist" aria-label="読解の種類">
             {(['all', ...shownGenres] as const).map((g) => (
-              <button key={g} role="tab" aria-selected={genre === g} onClick={() => setGenre(g)}>
-                {g === 'all' ? 'すべて' : g}
+              <button key={g} role="tab" className={`genre-tab gt-${g === 'all' ? 'all' : GENRES.indexOf(g)}`} aria-label={g === 'all' ? 'すべて' : g} aria-selected={genre === g} onClick={() => setGenre(g)}>
+                {g === 'all' ? 'すべて' : `${GENRE_ICON[g]} ${g}`}
               </button>
             ))}
           </div>
