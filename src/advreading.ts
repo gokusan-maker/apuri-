@@ -4666,8 +4666,8 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: 'TOEFL・IELTS（心理）',
     paragraphs: [
       "In 1956, the psychologist George Miller published a famous paper suggesting that people can hold only about seven items in their short-term memory at once. Later research has suggested that the true limit may be even smaller, around four items. Yet people regularly remember long phone numbers and complex information. How is this ( A )?",
-      "One important answer is a strategy called chunking: grouping individual pieces of information into larger, meaningful units. For example, the letters F, B, I, C, I, A form a string of six separate items. But someone who recognizes the abbreviations FBI and CIA needs to remember only two chunks. In the same way, a ten-digit phone number is far easier to recall when it is ( C ) into three groups.",
-      "Chunking also helps explain why experts seem to have remarkable memories. In one classic study, experienced chess players looked at a board for just a few seconds and then rebuilt the positions of the pieces far more accurately than beginners. However, when the pieces were placed randomly, the experts' advantage almost disappeared. Their skill depended on recognizing familiar patterns, ( B ) allowed them to treat a group of pieces as a single unit.",
+      "One important answer is a strategy called chunking: grouping individual pieces of information into larger, meaningful units. For example, the letters F, B, I, C, I, A form a string of six separate items. But someone who recognizes the abbreviations FBI and CIA needs to remember only two chunks. In the same way, a ten-digit phone number is far easier to recall when it is ( B ) into three groups.",
+      "Chunking also helps explain why experts seem to have remarkable memories. In one classic study, experienced chess players looked at a board for just a few seconds and then rebuilt the positions of the pieces far more accurately than beginners. However, when the pieces were placed randomly, the experts' advantage almost disappeared. Their skill depended on recognizing familiar patterns, ( C ) allowed them to treat a group of pieces as a single unit.",
     ],
     ja: [
       '1956年、心理学者ジョージ・ミラーは、人が短期記憶に一度におけるのはおよそ7つの項目だけだと示す有名な論文を発表した。その後の研究では、本当の限界はもっと小さく、4つほどかもしれないと示されている。それでも人は、長い電話番号や複雑な情報をふつうに覚えている。どうしてそれが可能なのだろうか。',
@@ -4676,8 +4676,8 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['possible', 'possibly', 'possibility', 'possibilities'], answer: 0, why: 'be 動詞 is のあとに置く補語は形容詞 possible。How is this possible?「どうしてそれが可能なのか」。副詞や名詞は入らない。' },
-      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（パターンを見分けること）を受ける関係代名詞 which。あとに動詞 allowed が続く。' },
-      { id: 'C', choices: ['divided', 'dividing', 'divide', 'to divide'], answer: 0, why: '電話番号は「分けられる」ので受け身 is divided。is のあとに原形や to 不定詞は置けず、dividing だと「分けている」になり目的語が必要。' },
+      { id: 'B', choices: ['divided', 'dividing', 'divide', 'to divide'], answer: 0, why: '電話番号は「分けられる」ので受け身 is divided。is のあとに原形や to 不定詞は置けず、dividing だと「分けている」になり目的語が必要。' },
+      { id: 'C', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（パターンを見分けること）を受ける関係代名詞 which。あとに動詞 allowed が続く。' },
     ],
     tf: [
       { statement: 'ミラーは、短期記憶にはおよそ7つの項目しかおけないと述べた。', answer: true, why: '第1段落 people can hold only about seven items。' },
