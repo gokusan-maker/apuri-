@@ -451,10 +451,12 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
       {part !== 'stages' && (
       <>
-      {/* ボスをえらぶ：単語帳ごとのボスを色つきのタイルでならべ、タップで戦う（まだ出ていないボスは「？×N」1マス） */}
+      {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
+        <>
+        <p className="boss-pick-title">🎯 ボスをえらんで勝負</p>
         <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
-          {LEVELS.filter((lv) => bossUnlocked(lv, record)).map((lv) => (
+          {LEVELS.map((lv) => (
             <button
               key={lv}
               className={`boss-pick-tile${boss[lv] ? ' beaten' : ''}`}
@@ -474,14 +476,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               <small className="boss-pick-lv">{lv}</small>
             </button>
           ))}
-          {LEVELS.some((lv) => !bossUnlocked(lv, record)) && (
-            <span className="boss-pick-tile locked" title="単語ステージを全部クリアすると、その単語帳のボスが出てくる" aria-label={`まだ出てこないボス ${LEVELS.filter((lv) => !bossUnlocked(lv, record)).length}`}>
-              <span className="boss-pick-fig" aria-hidden="true">🔒</span>
-              <span className="boss-pick-name">？×{LEVELS.filter((lv) => !bossUnlocked(lv, record)).length}</span>
-              <small className="boss-pick-lv">ステージで解放</small>
-            </span>
-          )}
         </div>
+        </>
       )}
       {winStreak > 0 && (
         <p className="win-streak">
@@ -608,12 +604,14 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <button
               key={n}
               className={`list-link star-pick star-${n}`}
+              title={`HP${dailyHp(n)}・コイン${n}倍`}
+              aria-label={`${'★'.repeat(n)}（HP${dailyHp(n)}・🪙×${n}）`}
               onClick={() => {
                 setDailyFight(n)
                 setFighting(daily)
               }}
             >
-              {'★'.repeat(n)}（HP{dailyHp(n)}・🪙×{n}）
+              <span aria-hidden="true">{'★'.repeat(n)}</span> {n === 2 ? 'つよい' : 'さいきょう'} 🪙×{n}
             </button>
           ))}
         </div>

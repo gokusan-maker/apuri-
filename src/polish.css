@@ -2457,7 +2457,7 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .boss-pick-tile:active { transform: translateY(3px); box-shadow: none; }
 .boss-pick-fig { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 14px; background: rgb(255 255 255 / 0.22); font-size: 1.5rem; }
 .boss-pick-fig svg { width: 46px; height: 46px; }
-.boss-pick-name { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.78rem; font-weight: 900; }
+.boss-pick-name { max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; font-size: 0.7rem; letter-spacing: -0.02em; font-weight: 900; }
 .boss-pick-lv { padding: 0 8px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.66rem; font-weight: 800; white-space: nowrap; }
 .boss-pick-crown { position: absolute; top: -8px; right: -4px; font-size: 1.1rem; text-shadow: none; }
 .boss-pick-tile.locked { --boss-c: #94a3b8; justify-content: center; }
@@ -2510,3 +2510,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .play-back .lg-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 12px; background: rgb(255 255 255 / 0.25); font-size: 1.3rem; text-shadow: none; }
 .play-back-name { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; text-align: left; }
 .quiz-pick-start { display: block; width: 100%; margin-top: 12px; }
+.boss-pick-title { margin: 0 0 4px; font-weight: 900; font-size: 0.95rem; }

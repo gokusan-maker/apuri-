@@ -186,7 +186,7 @@ it('ボスの連勝数が出る', () => {
 
 it('今日のボスは★2・★3の強さを選べる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByText(/★★★（HP180・🪙×3）/))
+  fireEvent.click(screen.getByRole('button', { name: /★★★（HP180・🪙×3）/ }))
   expect(screen.getByText('⚔️ 今日のボス ★★★')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '180')
 })
@@ -292,12 +292,11 @@ it('解放が少ない単語帳は compact（3列にならぶ）、たくさん�
   expect(lv[1].classList.contains('compact')).toBe(true)
 })
 
-it('ボス部屋では、絵と名前のタイルからボスをえらんで戦える（まだのボスは「？×N」）', () => {
-  const all = Object.fromEntries(stagesOf('中3').map((s) => [s.id, 1]))
-  render(<Stages part="boss" levels={['中3', '数']} record={all} onClear={() => {}} />)
+it('ボス部屋では、ボス1体ずつのタイル（絵と名前）から、どのボスもえらんで戦える', () => {
+  render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
   const pick = screen.getByRole('group', { name: 'ボスをえらぶ' })
-  expect(pick.querySelectorAll('button.boss-pick-tile')).toHaveLength(1)
-  expect(pick.textContent).toMatch(/？×\d+/)
+  expect(pick.querySelectorAll('button.boss-pick-tile').length).toBeGreaterThanOrEqual(10)
+  expect(pick.textContent).not.toMatch(/？×/)
   fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
