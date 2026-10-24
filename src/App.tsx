@@ -2116,6 +2116,7 @@ function App() {
             key={t.id}
             aria-current={mode === t.id && !showShop ? 'page' : undefined}
             onClick={() => {
+              if (t.id === mode && playOn) plays[plays.length - 1]?.exit() // 問題の画面でいまのタブをもう一度おすと、えらぶ画面へ
               setMode(t.id)
               setGrammarDrill(null)
               setDailyGo(false)

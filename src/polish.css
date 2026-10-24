@@ -2567,3 +2567,5 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .stage-continue:active { transform: translateY(3px); box-shadow: 0 2px 0 #b91c1c !important; }
 .stage-play-head { align-items: center; }
 .stage-play-head .stage-play-name, .stage-play-head .note-btn { white-space: nowrap; }
+/* 文法ゲーム（タイルからひらくもの）：App の中では一覧へもどるのは上の「← ほかの問題をえらぶ」 */
+.play-hide-back .stage-back { display: none; }

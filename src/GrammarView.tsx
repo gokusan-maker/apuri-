@@ -1,7 +1,7 @@
 import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
-import { useState } from 'react'
-import { usePlaying } from './playing'
+import { useContext, useState } from 'react'
+import { PlayContext, usePlaying } from './playing'
 import { GRAMMAR_GRADES_FOR, loadGrade, type GradeId } from './usergrade'
 import { BossFigure } from './BossView'
 import { GrammarCards } from './GrammarCardsView'
@@ -164,6 +164,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [mixBest, setMixBest] = useState(loadMixBest) // まとめテストのベスト（タイトルごと）
   const [gradeKey, setGradeKey] = useState('') // 学年まとめテストのベストのキー（grade:中1 など）
 
+  const inApp = useContext(PlayContext) !== null // App の中では、ゲームの「← もどる」は上の「ほかの問題をえらぶ」と同じなのでかくす
   // 問題の画面では、上に「ほかの問題をえらぶ」（App）。おすと単元・ゲームの一覧へ
   usePlaying(!!unit || spot || cards || listen || odd || duel || bingo || timeAttack, () => {
     setUnit(null)
@@ -210,13 +211,13 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
     setShuffleSeed(Math.floor(Math.random() * 1000))
   }
 
-  if (spot) return <GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
-  if (cards) return <GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} weak={weakIdsOf(note)} />
-  if (listen) return <GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} />
-  if (odd) return <GrammarOdd onAnswer={onAnswer} onBack={() => setOdd(false)} />
-  if (duel) return <GrammarDuel onBest={onTaBest} onBack={() => setDuel(false)} />
-  if (bingo) return <GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} />
-  if (timeAttack) return <GrammarTime onAnswer={onAnswer} onBest={onTaBest} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} />
+  if (spot) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} /></div>
+  if (cards) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarCards units={units.filter((u) => !stampMode || grade === 'all' || gradeOf(u.id) === grade)} onBack={() => setCards(false)} weak={weakIdsOf(note)} /></div>
+  if (listen) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarListen onAnswer={onAnswer} onBack={() => setListen(false)} /></div>
+  if (odd) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarOdd onAnswer={onAnswer} onBack={() => setOdd(false)} /></div>
+  if (duel) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarDuel onBest={onTaBest} onBack={() => setDuel(false)} /></div>
+  if (bingo) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarBingo onBack={() => setBingo(false)} onBingo={onBingo} /></div>
+  if (timeAttack) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarTime onAnswer={onAnswer} onBest={onTaBest} onBack={() => setTimeAttack(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} /></div>
 
   // 「まだの単元から」のときは、全問正解していない単元を先に
   const todoSort = <T extends GrammarUnit>(us: T[]) => (todoFirst ? [...us.filter((u) => record[u.id] !== u.questions.length), ...us.filter((u) => record[u.id] === u.questions.length)] : us)
@@ -691,7 +692,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
     )
   }
 
-  const back = (
+  const back = inApp ? null : ( // App の中では上の「← ほかの問題をえらぶ」が単元一覧へもどる
     <button
       className="stage-back"
       onClick={() => {

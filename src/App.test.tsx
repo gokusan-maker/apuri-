@@ -1793,3 +1793,15 @@ it('ボス部屋でボスをえらぶと戦いだけの画面になり、上の�
   fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
   expect(screen.getByRole('group', { name: 'ボスをえらぶ' })).toBeInTheDocument()
 })
+
+it('問題の画面で、いまのタブ（文法チャレンジ）をもう一度おすと、えらぶ画面にもどる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  render(<App />)
+  navTo('文法チャレンジ')
+  fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+  expect(screen.getByRole('button', { name: /ほかの問題をえらぶ/ })).toBeInTheDocument()
+  navTo('文法チャレンジ')
+  expect(screen.queryByRole('button', { name: /ほかの問題をえらぶ/ })).toBeNull()
+  expect(screen.getByText('✏️ すぐ練習（5問）')).toBeInTheDocument()
+})
