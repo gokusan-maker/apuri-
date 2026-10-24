@@ -5,6 +5,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'play-the': { wrong: 'I play the soccer.', right: 'I play soccer.', why: 'スポーツには the をつけない（楽器は play the piano）。' },
   'independent-infinitive': { wrong: 'To say the truth, I was tired.', right: 'To tell the truth, I was tired.', why: '「実を言うと」は to tell the truth（say は使わない）。' },
   'result-infinitive': { wrong: 'She grew up being a famous singer.', right: 'She grew up to be a famous singer.', why: '「成長して～になる」は grow up to be ～（結果の不定詞）。～ing は使わない。' },
+  'wherever-whenever': { wrong: 'Please come whatever you are free.', right: 'Please come whenever you are free.', why: '「ひまなときはいつでも」は時を表す whenever。whatever は「何でも」でものを表す。' },
   'directions': { wrong: 'How can I arrive to the station?', right: 'How can I get to the station?', why: '道をたずねるときは get to ～。arrive なら arrive at ～。' },
   'how-long-perfect': { wrong: 'How long do you have lived here?', right: 'How long have you lived here?', why: '現在完了の疑問文は have を主語の前に出す（do は使わない）。' },
   'progressive-q-neg': { wrong: 'Do you studying now?', right: 'Are you studying now?', why: '進行形の疑問文は be動詞（Are）を前に出す。' },
