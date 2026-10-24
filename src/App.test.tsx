@@ -1768,14 +1768,14 @@ it('音読・読み上げは、ページ（下のタブ）が変わると止ま�
 })
 
 it('学年が中3なら、今日の課題の読解は高校入試レベルの長文がその場で開く', async () => {
-  const { todayReading } = await import('./todayread')
+  const { todayReading, todayReadingTitle } = await import('./todayread')
   const { dayKey } = await import('./srs')
   localStorage.clear()
   localStorage.setItem('eitan:grade', 'j3')
   render(<App />)
   const r = todayReading(dayKey())
   expect(r.kind).toBe('long')
-  fireEvent.click(within(screen.getByLabelText('今日の課題')).getByText(r.p.title))
+  fireEvent.click(within(screen.getByLabelText('今日の課題')).getByText(todayReadingTitle(dayKey())))
   expect(screen.getByRole('navigation', { name: '今日の課題の切りかえ' })).toBeInTheDocument()
   expect(document.querySelector('.long-para')).not.toBeNull()
   expect(screen.queryByText('← 読解の一覧')).toBeNull()

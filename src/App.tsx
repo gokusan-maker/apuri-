@@ -3,7 +3,7 @@ import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PlayContext, type PlayRegister } from './playing'
-import { todayReading } from './todayread'
+import { todayReading, todayReadingTitle } from './todayread'
 import { BossTeamContext, type BossTeam } from './bossteam'
 import type { LongPassage } from './longreading'
 import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
@@ -1657,9 +1657,9 @@ function App() {
           {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && !playOn && (
-            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReading(today).p.title}`} onClick={() => setShortGo(true)}>
+            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
               📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
-              <strong>{todayReading(today).p.title}</strong>
+              <strong>{todayReadingTitle(today)}</strong>
             </button>
           )}
           {mode === 'reading' && !shortGo && !playOn && (

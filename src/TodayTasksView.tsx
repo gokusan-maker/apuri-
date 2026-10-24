@@ -1,4 +1,4 @@
-import { todayReading } from './todayread'
+import { todayReadingTitle } from './todayread'
 import { dailyGrammar, loadDailyGrammarDay } from './grammar'
 import { useState } from 'react'
 import { trioStreakNow, claimTrioStreak, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
@@ -14,12 +14,12 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
   const [trio, setTrio] = useState(() => loadTrioDay() === today)
   const [party, setParty] = useState(false) // 受け取った瞬間だけ紙ふぶき
   const g = dailyGrammar(today)
-  const r = todayReading(today).p
+  const rTitle = todayReadingTitle(today)
   const ws = todayWords(today)
   const items = [
     { id: 'word' as const, icon: '🔤', label: '単語', task: `4択で${ws.length}語`, done: loadTodayWordsDay() === today },
     { id: 'grammar' as const, icon: '📐', label: '文法', task: g.title.split('（')[0], done: loadDailyGrammarDay() === today },
-    { id: 'reading' as const, icon: '📖', label: '読解', task: r.title, done: loadDailyShortDay() === today },
+    { id: 'reading' as const, icon: '📖', label: '読解', task: rTitle, done: loadDailyShortDay() === today },
   ]
   const n = items.filter((x) => x.done).length
   return (

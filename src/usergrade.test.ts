@@ -44,3 +44,14 @@ it('社会人なら文法は中3〜高校、単語はビジネス・高校基礎
   expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎')).toBe(true)
   expect(passagesFor('univ').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
 })
+
+it('今日の課題の読解の題名は、タイトルを当てる問題があるときは答えをかくす', async () => {
+  const { todayReadingTitle } = await import('./todayread')
+  saveGrade('j3')
+  for (let i = 1; i <= 28; i++) {
+    const day = `2026-02-${String(i).padStart(2, '0')}`
+    const r = todayReading(day)
+    if (r.kind === 'long' && r.p.titleQ) expect(todayReadingTitle(day)).not.toBe(r.p.title)
+    else expect(todayReadingTitle(day)).toBe(r.p.title)
+  }
+})
