@@ -685,6 +685,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('tab', { name: 'コレクション' }))
     expect(screen.getByText('🏆 記録の部屋')).toBeInTheDocument()
     expect(screen.getByText('7階')).toBeInTheDocument()
+    expect([...document.querySelectorAll('.records-value')].some((e) => /^0(\D|$)/.test(e.textContent!))).toBe(false) // まだ0の記録は出さない
   })
 
   it('ボスをたおした回数で相棒に二つ名がつく', () => {

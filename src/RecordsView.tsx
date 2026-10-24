@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { collectRecords } from './records'
 
-// 記録の部屋：自己ベストの一覧
+// 記録の部屋：自己ベストの一覧。まだ0のものは出さない（全部0なら部屋ごと出さない）
 export function Records() {
-  const [rows] = useState(collectRecords)
+  const [all] = useState(collectRecords)
+  const rows = all.filter((r) => !/^0(\D|$)/.test(String(r.value).trim()))
+  if (rows.length === 0) return null
   return (
     <div className="records">
       <h2>🏆 記録の部屋</h2>
