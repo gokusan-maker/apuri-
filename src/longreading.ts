@@ -5255,6 +5255,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The class made a checklist and put it next to the tank.', answer: true, why: '第3段落の内容と合う。' },
     ],
   },
+  {
+    id: 'time-capsule',
+    title: 'A Letter from My Younger Self',
+    level: '中2（物語）',
+    paragraphs: [
+      'When I was in the sixth grade, our class made a time capsule. Each student wrote a letter to themselves ( A ) the future. Our teacher put all the letters into a metal box, and we buried it under the big cherry tree in the schoolyard.',
+      'Last month, three years later, we met at the school again to dig it up. Some of my friends had grown much taller, and I almost did not recognize them. When we opened the box, the letters were a little wet, but we could still read them.',
+      'In my letter, I wrote, "Are you still playing the piano? I hope you are." I stopped playing the piano two years ago ( B ) I joined the basketball team. I felt a little sad when I read it.',
+      'That evening, I opened the piano at home for the first time in a long time. My fingers were slow, but I still remembered my favorite song. Now I play for ten minutes every night. I am glad that my younger self reminded me of something important. I am going to write a new letter ( C ) my future self, too.',
+    ],
+    ja: [
+      '6年生のとき、私たちのクラスはタイムカプセルを作りました。生徒一人ひとりが、未来の自分にあてて手紙を書きました。先生がすべての手紙を金属の箱に入れ、私たちはそれを校庭の大きな桜の木の下にうめました。',
+      '先月、3年後に、私たちはそれをほり出すためにまた学校に集まりました。友だちの中にはずいぶん背がのびた人もいて、私はもう少しでだれかわからないところでした。箱を開けると、手紙は少しぬれていましたが、まだ読むことができました。',
+      '私の手紙には、「まだピアノをひいている？ ひいているといいな」と書いてありました。私はバスケットボール部に入ったとき、2年前にピアノをやめていました。それを読んで、少しさびしくなりました。',
+      'その晩、私はひさしぶりに家のピアノのふたを開けました。指はおそかったけれど、好きな曲をまだおぼえていました。今は毎晩10分ひいています。小さいころの自分が、大切なことを思い出させてくれてよかったと思います。私も未来の自分に、新しい手紙を書くつもりです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in the future「未来の・将来に」。a letter to themselves in the future「未来の自分への手紙」。' },
+      { id: 'B', choices: ['when', 'during', 'because of', 'by'], answer: 0, why: 'あとに I joined the basketball team という文が続くので接続詞の when「～したとき」。during・because of・by は前置詞。' },
+      { id: 'C', choices: ['to', 'at', 'with', 'on'], answer: 0, why: 'write a letter to 人「人に手紙を書く」。' },
+    ],
+    tf: [
+      { statement: 'The class buried the time capsule under a cherry tree.', answer: true, why: '第1段落 we buried it under the big cherry tree。' },
+      { statement: 'The letters were too wet to read.', answer: false, why: '第2段落 the letters were a little wet, but we could still read them。' },
+      { statement: 'The writer was still playing the piano when the capsule was opened.', answer: false, why: '第3段落 I stopped playing the piano two years ago。' },
+      { statement: 'The writer now plays the piano every night.', answer: true, why: '第4段落 Now I play for ten minutes every night。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
