@@ -2528,3 +2528,6 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 @media (prefers-reduced-motion: reduce) { .boss-team-m { transition: none; } }
 .boss-trio-pop { margin: 0 0 6px; padding: 6px 10px; border-radius: 999px; background: linear-gradient(90deg, #f97316, #22c55e, #8b5cf6); color: #fff; font-weight: 900; text-align: center; white-space: nowrap; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); animation: crit-pop 0.5s ease-out; }
 @media (prefers-reduced-motion: reduce) { .boss-trio-pop { animation: none; } }
+.boss-team-m { position: relative; }
+.boss-team-xp { position: absolute; top: -10px; right: -2px; padding: 1px 6px; border-radius: 999px; background: var(--team-c); color: #fff; font-size: 0.68rem; font-style: normal; font-weight: 900; white-space: nowrap; box-shadow: 0 2px 0 rgb(0 0 0 / 0.2); animation: crit-pop 0.45s ease-out; }
+@media (prefers-reduced-motion: reduce) { .boss-team-xp { animation: none; } }

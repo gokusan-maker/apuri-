@@ -735,6 +735,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                       {TEAM_ICON[r]}
                       {TEAM_LABEL[r]}
                     </small>
+                    {q.team === r && picked !== null && picked === q.answer && (
+                      <i key={`xp${index}`} className="boss-team-xp" aria-label={`${team![r].name}に XP +${quizXp(combo)}`}>
+                        +{quizXp(combo)}XP
+                      </i>
+                    )}
                   </span>
                 ))}
               </div>

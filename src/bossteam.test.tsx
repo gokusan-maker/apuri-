@@ -46,3 +46,15 @@ it('単語→文法→読解の3体が続けて正解すると、合体技でダ
   expect(isTeamCombo('reading', 2)).toBe(false)
   expect(isTeamCombo('grammar', 5)).toBe(false)
 })
+
+it('正解すると、答えた番のなかまの上に「+〇XP」が出る', () => {
+  render(
+    <BossTeamContext.Provider value={team}>
+      <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+    </BossTeamContext.Provider>,
+  )
+  const en = document.querySelector('.en')!.textContent!
+  const w = WORDS.find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choices .choice')].find((b) => b.textContent === w.ja)!)
+  expect(screen.getByLabelText(/モチまるに XP \+\d+/)).toBeInTheDocument()
+})
