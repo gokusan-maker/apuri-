@@ -1674,6 +1674,17 @@ export const PASSAGES: Passage[] = [
       { q: '家に帰って何をした？', choices: ['けむり感知器をたしかめた', '消防車の絵をかいた', 'ヘルメットを買った'], answer: 0 },
     ],
   },
+  {
+    id: 'sleepover',
+    title: "A Night at Grandma's House",
+    text: "Last Saturday, my little brother and I stayed at our grandmother's house for the first time without our parents. In the afternoon, Grandma taught us how to make rice balls. Mine were too big, but she said they looked delicious. After dinner, we played cards and laughed a lot. At night, my brother felt a little lonely, so Grandma told us an old story until he fell asleep. The next morning, we thanked her and promised to come again soon.",
+    ja: '先週の土曜日、弟と私は、はじめて両親といっしょではなく祖母の家にとまりました。午後、祖母がおにぎりの作り方を教えてくれました。私のは大きすぎましたが、祖母はおいしそうだと言ってくれました。夕食のあと、トランプをしてたくさん笑いました。夜、弟が少しさびしくなったので、祖母は弟がねむるまで昔話をしてくれました。次の朝、私たちは祖母にお礼を言い、またすぐに来ると約束しました。',
+    questions: [
+      { q: '午後、祖母は何を教えてくれた？', choices: ['おにぎりの作り方', 'トランプのルール', '昔話の読み方'], answer: 0 },
+      { q: '弟がさびしくなったとき、祖母はどうした？', choices: ['ねむるまで昔話をした', '両親に電話した', 'いっしょにテレビを見た'], answer: 0 },
+      { q: '次の朝、2人は何をした？', choices: ['お礼を言って、また来ると約束した', 'おにぎりを作り直した', '家まで歩いて帰った'], answer: 0 },
+    ],
+  },
 ]
 
 // 解いた短い読解（全部の問題に答えた話の id）
