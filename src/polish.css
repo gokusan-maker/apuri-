@@ -2537,3 +2537,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .boss-team-result .team-grammar { background: linear-gradient(160deg, #4ade80, #16a34a); }
 .boss-team-result .team-reading { background: linear-gradient(160deg, #a78bfa, #7c3aed); }
 .grade-note { margin: 0 0 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.boss-team-title { margin: 0 0 4px; font-size: 0.85rem; font-weight: 900; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }

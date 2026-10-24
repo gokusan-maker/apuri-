@@ -1652,6 +1652,7 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
+          {mode === 'boss' && !playOn && <p className="boss-team-title">⚔️ ボスと戦うチーム（単語・文法・読解）</p>}
           {mode === 'boss' && !playOn && buddyRow}
           {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
