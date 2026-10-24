@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { ATTR_LABEL, BUDDY_FORMS, claimZukanComp, loadZukanComp, xpForLevel, zukanOf, type Buddies, type BuddyBox, type Track } from './buddies'
 import { BuddyFigure } from './BuddyFigureView'
 
-// 文法・読解のなかま図鑑：種類ごとに、会えた姿だけ絵と名前。まだの姿は ？？？
+// 文法・読解のなかま図鑑：種類ごとに、会えた姿だけ絵と名前。まだの姿は ？。まだ会っていない種類は数だけ（？？？の行をならべない）
 export function BuddyZukan({ buddies, box, onComp }: { buddies: Buddies; box: BuddyBox; onComp?: () => void }) {
   const [picked, setPicked] = useState('') // タップした姿の名前
   const [comp, setComp] = useState(loadZukanComp) // コンプボーナスを受け取った種類
@@ -23,10 +23,10 @@ export function BuddyZukan({ buddies, box, onComp }: { buddies: Buddies; box: Bu
             <p className="stats-note">
               <span className={`attr-badge attr-${t}`}>属性：{ATTR_LABEL[t]}</span> 会えた姿 {seen} / {total}
             </p>
-            {rows.map((r) => (
+            {rows.filter((r) => r.level > 0).map((r) => (
               <div key={r.sp.id} className="buddy-zukan-row" aria-label={`${r.sp.label}の図鑑`}>
                 <p className="buddy-zukan-name">
-                  {r.level > 0 ? r.sp.label : '？？？'}
+                  {r.sp.label}
                   {r.seen === BUDDY_FORMS[t].length &&
                     (comp.includes(`${t}:${r.sp.id}`) ? (
                       <span className="zukan-comp"> 🏆 コンプ！</span>
@@ -61,6 +61,11 @@ export function BuddyZukan({ buddies, box, onComp }: { buddies: Buddies; box: Bu
                 </ul>
               </div>
             ))}
+            {rows.some((r) => r.level === 0) && (
+              <p className="buddy-zukan-more" aria-label={`まだ会っていない種類 ${rows.filter((r) => r.level === 0).length}`}>
+                🔒 ？？？ ×{rows.filter((r) => r.level === 0).length}
+              </p>
+            )}
           </div>
         )
       })}

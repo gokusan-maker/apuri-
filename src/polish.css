@@ -1992,3 +1992,6 @@ details[open] > summary::before { transform: rotate(90deg); }
 
 /* 明るいグラデーションの上の白い文字は、うすい影で読みやすく */
 .rush-boss.ex, .mode-change, .mode-now { text-shadow: 0 1px 2px rgb(0 0 0 / 0.28); }
+
+/* なかま図鑑：まだ会っていない種類は「🔒 ？？？ ×2」の1行だけ */
+.buddy-zukan-more { margin: 4px 0 10px; color: var(--muted); font-weight: 800; font-size: 0.85rem; }
