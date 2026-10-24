@@ -141,7 +141,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
                   )}
                   {onNote && <Note text={notes[w.id]} onSave={(t) => onNote(w.id, t)} />}
                   {onPractice && (
-                    <button className="list-link" onClick={() => onPractice(w.id)}>
+                    <button className="list-link pill-btn pill-orange" onClick={() => onPractice(w.id)}>
                       🃏 この単語をカードで練習
                     </button>
                   )}
@@ -152,7 +152,7 @@ export function WordList({ words, progress, onClose, favorites = [], onToggleFav
         })}
       </ul>
       {shown.length > limit && (
-        <button className="list-link" onClick={() => setLimit(limit + PAGE)}>
+        <button className="list-link pill-btn pill-blue" onClick={() => setLimit(limit + PAGE)}>
           もっと見る（あと{shown.length - limit}語）
         </button>
       )}

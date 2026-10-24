@@ -32,7 +32,7 @@ export function SugorokuBoard({ day, words, onGoal }: Props) {
             {turn.choices.map((c) => (
               <button
                 key={c.id}
-                className="list-link"
+                className="list-link pill-btn pill-choice"
                 onClick={() => {
                   const ok = c.id === turn.word.id
                   const r = moveAfter(s, turn.dice, ok, day)
@@ -54,7 +54,7 @@ export function SugorokuBoard({ day, words, onGoal }: Props) {
         msg && <p className="sugoroku-msg">{msg}</p>
       ) : (
         <button
-          className="list-link"
+          className="list-link pill-btn pill-start"
           disabled={words.length < 3}
           onClick={() => {
             const pick = () => words[Math.floor(rand() * words.length)]

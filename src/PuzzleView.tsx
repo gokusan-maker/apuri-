@@ -79,7 +79,7 @@ export function Puzzle({ make, onAnswer, onResult, count = PUZZLE_COUNT }: Props
         (hintOpen ? (
           <p className="puzzle-hint">💡 ヒント：{q.hint}</p>
         ) : (
-          <button className="list-link" onClick={() => setHintOpen(true)}>
+          <button className="list-link pill-btn pill-purple" onClick={() => setHintOpen(true)}>
             💡 英語のヒントを見る
           </button>
         ))}
@@ -99,7 +99,7 @@ export function Puzzle({ make, onAnswer, onResult, count = PUZZLE_COUNT }: Props
         <>
           <p className="feedback">{picked === q.answer ? '正解！' : `正解は「${q.choices[q.answer]}」`}</p>
           {q.say && (
-            <button className="list-link" onClick={() => speak(q.say!)}>
+            <button className="list-link pill-btn pill-cyan" onClick={() => speak(q.say!)}>
               🔊 問題と答えを英語で聞く
             </button>
           )}

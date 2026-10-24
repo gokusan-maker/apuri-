@@ -19,7 +19,7 @@ function ShareButton({ text }: { text: string }) {
   const [copied, setCopied] = useState(false)
   return (
     <button
-      className="list-link gacha-share"
+      className="list-link gacha-share share-go"
       onClick={() => {
         navigator.clipboard
           ?.writeText(text)
@@ -236,7 +236,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </span>
           {onExchange && points >= POINTS_FOR_SR && members < PARTY_MAX && (
             <button
-              className="list-link"
+              className="list-link pill-btn pill-gold"
               onClick={() => {
                 const k = onExchange()
                 if (k) {
@@ -309,7 +309,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             ))}
           </ul>
           <ShareButton text={gachaShareText(multi.list.map((k) => ({ kindName: k.kind.name, normal: k.kind.id === 'normal', speciesName: k.species.name, rarity: RARITY_LABEL[k.kind.rarity] })))} />
-          <button className="list-link" onClick={() => setMulti(null)}>
+          <button className="list-link pill-btn pill-blue" onClick={() => setMulti(null)}>
             とじる
           </button>
         </div>
@@ -343,7 +343,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           {onNameNew && (named ? (
             <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
           ) : naming === null ? (
-            <button className="list-link" onClick={() => setNaming('')}>
+            <button className="list-link pill-btn pill-green" onClick={() => setNaming('')}>
               ✏️ 名前をつける
             </button>
           ) : (
@@ -403,7 +403,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
               🔁 もう1回ひく{coins >= price ? `（🪙${price}）` : '（🎟1）'}
             </button>
           )}
-          <button className="list-link" onClick={() => setResult(null)}>
+          <button className="list-link pill-btn pill-blue" onClick={() => setResult(null)}>
             とじる
           </button>
         </div>

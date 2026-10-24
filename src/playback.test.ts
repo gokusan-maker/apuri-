@@ -28,3 +28,13 @@ it('文法カードの「覚えた・まだ・まえ・つぎ」は色つきの�
 it('上にはりつくバーはうしろを四角くぬらない（ダークの黒い帯をなくす）', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.play-bar \{ background: transparent;/)
 })
+
+it('ガチャ・単語一覧・パズル・すごろくの素の文字ボタンは、役割の色の丸いゲームボタン', () => {
+  const has = (f: string, c: string) => expect(readFileSync(`src/${f}`, 'utf8')).toContain(`list-link pill-btn ${c}`)
+  has('GachaView.tsx', 'pill-blue')
+  has('GachaView.tsx', 'pill-gold')
+  has('WordListView.tsx', 'pill-orange')
+  has('PuzzleView.tsx', 'pill-purple')
+  has('SugorokuView.tsx', 'pill-start')
+  for (const f of ['GachaView.tsx', 'WordListView.tsx', 'PuzzleView.tsx', 'SugorokuView.tsx']) expect(readFileSync(`src/${f}`, 'utf8')).not.toMatch(/className="list-link"/)
+})

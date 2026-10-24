@@ -2667,3 +2667,22 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
   :root:not([data-theme='light']) .gcard-known { color: #86efac; }
 }
 :root[data-theme='dark'] .gcard-known { color: #86efac; }
+
+/* 素の文字ボタンを色つきの丸いゲームボタンに（役割で色わけ・1行） */
+.list-link.pill-btn { display: inline-flex; align-items: center; justify-content: center; gap: 4px; max-width: 100%; padding: 8px 16px; border: none; border-radius: 999px; color: #fff; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-decoration: none; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); }
+.list-link.pill-btn:active:not(:disabled) { transform: translateY(3px); box-shadow: none; }
+.list-link.pill-btn:disabled { filter: grayscale(1); opacity: 0.6; }
+.list-link.pill-blue { background: linear-gradient(180deg, #60a5fa, #2563eb); box-shadow: 0 4px 0 #1e40af; }
+.list-link.pill-orange { background: linear-gradient(180deg, #fbbf24, #f97316); box-shadow: 0 4px 0 #c2410c; }
+.list-link.pill-start { background: linear-gradient(135deg, #fb923c, #ef4444); box-shadow: 0 4px 0 #b91c1c; }
+.list-link.pill-purple { background: linear-gradient(180deg, #c084fc, #9333ea); box-shadow: 0 4px 0 #6b21a8; }
+.list-link.pill-cyan { background: linear-gradient(180deg, #22d3ee, #0891b2); box-shadow: 0 4px 0 #0e7490; }
+.list-link.pill-green { background: linear-gradient(180deg, #4ade80, #16a34a); box-shadow: 0 4px 0 #166534; }
+.list-link.pill-gold { background: linear-gradient(180deg, #fde047, #f59e0b); color: #78350f; text-shadow: none; box-shadow: 0 4px 0 #b45309; }
+.list-link.pill-choice { background: #fff; color: #1e293b; text-shadow: none; border: 2px solid #c7d2fe; box-shadow: 0 4px 0 #a5b4fc; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .list-link.pill-btn:not(.pill-gold):not(.pill-choice) { color: #fff; filter: brightness(0.92); }
+  :root:not([data-theme='light']) .list-link.pill-choice { background: #1e293b; color: #e2e8f0; border-color: #4f46e5; box-shadow: 0 4px 0 #312e81; }
+}
+:root[data-theme='dark'] .list-link.pill-btn:not(.pill-gold):not(.pill-choice) { color: #fff; filter: brightness(0.92); }
+:root[data-theme='dark'] .list-link.pill-choice { background: #1e293b; color: #e2e8f0; border-color: #4f46e5; box-shadow: 0 4px 0 #312e81; }
