@@ -1844,7 +1844,7 @@ function App() {
               <LearnedChart values={lastLearned(learnedLog, today)} />
               {(weekCount(history, today) > 0 || lastWeekSummary(history, today).count > 0) && <p className="stats-note week-compare">📈 {weekCompare(weekCount(history, today), lastWeekSummary(history, today).count)}</p>}
               {firstToday.length > 0 && (
-                <details className="first-today">
+                <details className="first-today chip-fold cf-0">
                   <summary>🌱 今日はじめて学んだ単語（{firstToday.length}語）</summary>
                   <MissedList words={firstToday} label="今日はじめて学んだ単語" />
                 </details>

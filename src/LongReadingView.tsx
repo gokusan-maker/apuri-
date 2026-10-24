@@ -956,7 +956,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
             </div>
           )}
           {score < total && (
-            <details className="long-tips">
+            <details className="long-tips chip-fold cf-1">
               <summary className="long-tips-title">💡 つまずき解説</summary>
               <ul>
                 {(Object.entries(typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq })) as [QType, [number, number]][])

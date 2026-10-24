@@ -723,7 +723,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       ) : (
         <>
           {'passage' in q && (
-            <details className="boss-passage" open>
+            <details className="boss-passage chip-fold cf-3" open>
               <summary>📖 本文：{(q as ReadingQ).passage.title}</summary>
               {(q as ReadingQ).passage.paragraphs.map((t, i) => (
                 <p key={i} className={tipAt === index && picked === null && (q as ReadingQ).hint?.quote && t.includes((q as ReadingQ).hint!.quote!.replace(/\s+$/, '')) ? 'boss-hint-para' : undefined}>

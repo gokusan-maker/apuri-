@@ -97,3 +97,9 @@ it('まちがえやすい（ピンク）・今日の文法のポイント（む�
   expect(readFileSync('src/TodayGrammarView.tsx', 'utf8')).toContain('today-grammar-point chip-fold cf-1')
   expect(readFileSync('src/MyWordsView.tsx', 'utf8')).toContain('bulk chip-fold cf-4')
 })
+
+it('今日はじめての単語・ボス戦の本文・つまずき解説のたたみも色つきの丸いボタン', () => {
+  expect(readFileSync('src/App.tsx', 'utf8')).toContain('first-today chip-fold')
+  expect(readFileSync('src/BossView.tsx', 'utf8')).toContain('boss-passage chip-fold')
+  expect(readFileSync('src/LongReadingView.tsx', 'utf8')).toContain('long-tips chip-fold')
+})

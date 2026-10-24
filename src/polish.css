@@ -2733,3 +2733,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .chip-fold[open] > summary { margin-bottom: 8px; }
 .tense-table.chip-fold { padding: 0; background: none; }
 .bulk.chip-fold > summary, .confusing-tip.chip-fold > summary, .today-grammar-point.chip-fold > summary { color: #fff; padding: 8px 14px; }
+.boss-passage.chip-fold > summary { border-bottom: none; font-size: 0.82rem; }
