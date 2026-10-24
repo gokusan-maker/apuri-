@@ -3,6 +3,9 @@ import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PlayContext, type PlayRegister } from './playing'
+import { todayReading } from './todayread'
+import type { LongPassage } from './longreading'
+import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { Reading } from './ReadingView'
@@ -332,6 +335,14 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [readLevel, setReadLevel] = useState<ReadLevel>(loadReadLevel) // 読解ステージのむずかしさ
+  // 学年・レベルをえらんだら：単語帳と、読解のむずかしさもその学年に（今日の課題・ボス戦の文法もこれに合わせる）
+  const pickGrade = (lv: Level[], g?: GradeId) => {
+    setLevels(lv)
+    if (!g) return
+    saveGrade(g)
+    setReadLevel(READ_LEVEL_FOR[g])
+    saveReadLevel(READ_LEVEL_FOR[g])
+  }
   const [buddyBox, setBuddyBox] = usePersistent(loadBuddyBox, saveBuddyBox) // 入れかえて休んでいる文法・読解のなかま
   const [buddies, setBuddies] = usePersistent(loadBuddies, saveBuddies) // 文法のことばモンスター・読解の竜
   const [buddyEvo, setBuddyEvo] = useState<{ track: Track; form: BuddyForm; buddy: Buddy } | null>(null) // なかまの進化演出
@@ -1637,9 +1648,9 @@ function App() {
           {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && !playOn && (
-            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
+            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReading(today).p.title}`} onClick={() => setShortGo(true)}>
               📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
-              <strong>{dailyShort(today).title}</strong>
+              <strong>{todayReading(today).p.title}</strong>
             </button>
           )}
           {mode === 'reading' && !shortGo && !playOn && (
@@ -1667,7 +1678,23 @@ function App() {
             ))}
           </div>
           )}
-          {mode === 'reading' && readLevel !== 'easy' && !shortGo ? (
+          {mode === 'reading' && shortGo && todayReading(today).kind === 'long' ? (
+            <LongReading
+              key="today"
+              passages={[todayReading(today).p as LongPassage]}
+              start={todayReading(today).p as LongPassage}
+              onClose={() => setShortGo(false)}
+              onDone={() => {
+                if (loadDailyShortDay() !== today) {
+                  saveDailyShortDay(today)
+                  feedTrack('reading', TASK_XP) // 今日の課題クリアのごほうびは読解のなかまへ
+                }
+              }}
+              onAnswer={onAnswerTrack('reading')}
+              onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))}
+              onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
+            />
+          ) : mode === 'reading' && readLevel !== 'easy' && !shortGo ? (
             <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
             <Reading
@@ -1692,7 +1719,7 @@ function App() {
           <SettingsPanel
             settings={settings}
             onChange={setSettings}
-            onGrade={setLevels}
+            onGrade={pickGrade}
             books={
               <div className="levels" role="group" aria-label="単語帳">
                 {LEVELS.map((l) => (
@@ -2056,7 +2083,7 @@ function App() {
       )}
       {!onboarded && <Onboarding
           onDone={() => setOnboarded(true)}
-          onGrade={setLevels}
+          onGrade={pickGrade}
           onPlacement={() => {
             try {
               localStorage.setItem('eitan:quiz-mode', 'placement')

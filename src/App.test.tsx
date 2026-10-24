@@ -1353,7 +1353,10 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('button', { name: /設定/ }))
     fireEvent.click(screen.getByText('高校生'))
     expect(JSON.parse(localStorage.getItem('eitan:levels')!)).toEqual(['中3', '高校基礎', '熟語'])
-    expect(screen.getByText(/高校生向けの単語帳にしました/)).toBeInTheDocument()
+    expect(screen.getByText(/高校生向けにしました/)).toBeInTheDocument()
+    // 学年は今日の課題・読解のむずかしさにも使う
+    expect(localStorage.getItem('eitan:grade')).toBe('hs')
+    expect(localStorage.getItem('eitan:read-level')).toBe('univ')
   })
 
   it('お休みチケットを買うと、1日休んでも連続日数がつながる', () => {
@@ -1760,4 +1763,18 @@ it('音読・読み上げは、ページ（下のタブ）が変わると止ま�
   navTo('文法チャレンジ')
   expect(cancels).toBeGreaterThan(mid)
   delete (window as { speechSynthesis?: unknown }).speechSynthesis
+})
+
+it('学年が中3なら、今日の課題の読解は高校入試レベルの長文がその場で開く', async () => {
+  const { todayReading } = await import('./todayread')
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  localStorage.setItem('eitan:grade', 'j3')
+  render(<App />)
+  const r = todayReading(dayKey())
+  expect(r.kind).toBe('long')
+  fireEvent.click(within(screen.getByLabelText('今日の課題')).getByText(r.p.title))
+  expect(screen.getByRole('navigation', { name: '今日の課題の切りかえ' })).toBeInTheDocument()
+  expect(document.querySelector('.long-para')).not.toBeNull()
+  expect(screen.queryByText('← 読解の一覧')).toBeNull()
 })

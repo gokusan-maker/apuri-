@@ -1,6 +1,7 @@
+import { todayReading } from './todayread'
 import { dailyGrammar, loadDailyGrammarDay } from './grammar'
 import { useState } from 'react'
-import { trioStreakNow, claimTrioStreak, dailyShort, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
+import { trioStreakNow, claimTrioStreak, loadDailyShortDay, loadTodayWordsDay, loadTrioDay, loadTrioStreak, saveTrioDay, todayWords, TRIO_TICKET_DAYS, TRIO_XP } from './dailyread'
 
 type Props = {
   today: string
@@ -13,7 +14,7 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
   const [trio, setTrio] = useState(() => loadTrioDay() === today)
   const [party, setParty] = useState(false) // 受け取った瞬間だけ紙ふぶき
   const g = dailyGrammar(today)
-  const r = dailyShort(today)
+  const r = todayReading(today).p
   const ws = todayWords(today)
   const items = [
     { id: 'word' as const, icon: '🔤', label: '単語', task: `4択で${ws.length}語`, done: loadTodayWordsDay() === today },

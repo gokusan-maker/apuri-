@@ -1,4 +1,5 @@
 // 中学文法のミニ解説と確認問題（解説・例文・問題はすべて自作）
+import { GRAMMAR_GRADES_FOR, loadGrade, type GradeId } from './usergrade'
 export type GrammarQuestion = {
   sentence: string // ___ が空欄
   choices: string[]
@@ -4341,7 +4342,15 @@ export const weakUnits = (r: GrammarRecord) => GRAMMAR.filter((u) => r[u.id] !==
 export const DAILY_GRAMMAR_COINS = 5
 export function dailyGrammar(day: string): GrammarUnit {
   const n = [...day].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 11)
-  return GRAMMAR[n % GRAMMAR.length]
+  const list = grammarForGrade() // 設定の学年に合わせる（えらんでいなければ全部）
+  return list[n % list.length]
+}
+
+// 設定の学年に合う文法の単元（学年をえらんでいなければ全部）
+export function grammarForGrade(g: GradeId | '' = loadGrade()): GrammarUnit[] {
+  if (!g) return GRAMMAR
+  const list = GRAMMAR.filter((u) => GRAMMAR_GRADES_FOR[g].includes(gradeOf(u.id)))
+  return list.length > 0 ? list : GRAMMAR
 }
 const DAILY_KEY = 'eitan:grammar-daily'
 export function loadDailyGrammarDay(): string {

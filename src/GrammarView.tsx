@@ -2,6 +2,7 @@ import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
 import { useState } from 'react'
 import { usePlaying } from './playing'
+import { GRAMMAR_GRADES_FOR, loadGrade, type GradeId } from './usergrade'
 import { BossFigure } from './BossView'
 import { GrammarCards } from './GrammarCardsView'
 import { GrammarListen } from './GrammarListenView'
@@ -152,7 +153,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [ordering, setOrdering] = useState(false) // 並べかえクイズ
   const [spot, setSpot] = useState(false) // まちがいさがし
   const [timeAttack, setTimeAttack] = useState(false) // タイムアタック
-  const [grade, setGrade] = useState<GrammarGrade | 'all'>('all')
+  const [grade, setGrade] = useState<GrammarGrade | 'all'>(() => (loadGrade() ? GRAMMAR_GRADES_FOR[loadGrade() as GradeId].at(-1)! : 'all')) // 設定の学年に合わせる
   const [rush, setRush] = useState<{ list: GrammarUnit[]; at: number } | null>(null) // 文法モンスターラッシュ
   const [cards, setCards] = useState(false) // 要点カード
   const [hidden, setHidden] = useState<{ step: number; i: number } | null>(null) // ヒントで消した選択肢

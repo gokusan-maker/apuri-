@@ -3,6 +3,7 @@ import { FORMS } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { GRADES } from './grade'
 import type { Level } from './words'
+import type { GradeId } from './usergrade'
 
 const STEPS = [
   {
@@ -19,7 +20,7 @@ const STEPS = [
   },
 ]
 
-export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => void; onGrade?: (levels: Level[]) => void; onPlacement?: () => void }) {
+export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => void; onGrade?: (levels: Level[], grade?: GradeId) => void; onPlacement?: () => void }) {
   const [step, setStep] = useState(0)
   const [grade, setGrade] = useState<string | null>(null)
   const s = STEPS[step]
@@ -44,7 +45,7 @@ export function Onboarding({ onDone, onGrade, onPlacement }: { onDone: () => voi
                 aria-pressed={grade === g.id}
                 onClick={() => {
                   setGrade(g.id)
-                  onGrade(g.levels)
+                  onGrade(g.levels, g.id)
                 }}
               >
                 {g.label}

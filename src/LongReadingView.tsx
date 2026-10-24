@@ -14,7 +14,7 @@ import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string } // passages：このむずかしさの長文だけを出す
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -70,10 +70,10 @@ function Paragraph({ text, underline, refer, filled }: { text: string; underline
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, start, onDone, onClose }: Props) {
   const LIST = passages ?? LONG_PASSAGES
   const whole = !passages // 全部の長文を出すとき（むずかしさでしぼっていないとき）だけ出すもの：今日の1本・中3チャレンジなど
-  const [p, setP] = useState<LongPassage | null>(null)
+  const [p, setP] = useState<LongPassage | null>(start ?? null)
   const [starred, setStarred] = useState<string[]>([]) // この画面で★に入れた語
   const [blanks, setBlanks] = useState<Record<string, number>>({})
   const [tf, setTf] = useState<Record<number, boolean>>({})
@@ -81,7 +81,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
   const [under, setUnder] = useState<number | undefined>(undefined)
   const [order, setOrder] = useState<number[]>([]) // 並べた語の番号
   const [sents, setSents] = useState<Record<string, number>>({}) // 会話文の [ 1 ] に入る文
-  const [startAt, setStartAt] = useState(0) // 読みはじめた時刻
+  const [startAt, setStartAt] = useState(() => (start ? nowMs() : 0)) // 読みはじめた時刻
   const [qa, setQa] = useState<Record<number, number>>({}) // 英問英答
   const [refer, setRefer] = useState<number | undefined>(undefined) // 指示語
   const [gist, setGist] = useState<Record<number, number>>({}) // 段落の要旨
@@ -119,7 +119,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
   const shownGenres = GENRES.filter((g) => LIST.some((x) => genreOf(x) === g)) // 1本もないジャンルは出さない
   const genre = pickedGenre !== 'all' && !shownGenres.includes(pickedGenre) ? 'all' : pickedGenre
 
-  usePlaying(!!p || tfQuiz || vocabQuiz, () => {
+  usePlaying((!!p || tfQuiz || vocabQuiz) && !onClose, () => {
     cancelSpeech()
     setReadingAll(false)
     setP(null)
@@ -368,6 +368,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         </p>
       )}
       <div className="stage-head">
+        {!onClose && (
         <button
           className="stage-back"
           onClick={() => {
@@ -378,6 +379,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
         >
           ← 読解の一覧
         </button>
+        )}
         <span title={p.level}>
           {wordCount(p)}語・⏱ {targetMinutes(p)}分
         </span>
@@ -1025,6 +1027,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               🔁 まちがえた問題だけ解き直す
             </button>
           )}
+          {!onClose && (
           <button
             className="good next-unit-btn"
             onClick={() => {
@@ -1034,6 +1037,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           >
             次の読解へ ▶ <small className="next-long-title">{shownTitle(nextLong(p.id, record), LONG_PASSAGES.indexOf(nextLong(p.id, record)))}</small>
           </button>
+          )}
         </div>
       ) : (
         <button
@@ -1051,6 +1055,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
               onCoins?.(DAILY_LONG_COINS)
             }
             setDone(true)
+            onDone?.(score, total)
             if (score === total) playCorrect()
             else playWrong()
             const t = mergeTypes(types, typeResults(p, { blanks, tf, picks, underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq }))

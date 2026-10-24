@@ -8,6 +8,7 @@ import { VoicePicker } from './VoicePickerView'
 import { clearAllData } from './resetData'
 import { GRADES } from './grade'
 import type { Level } from './words'
+import { loadGrade, type GradeId } from './usergrade'
 import { useState } from 'react'
 import { speak } from './speech'
 import { DEFAULT_SETTINGS, GOALS, NEW_PER_DAY, REVIEW_CAPS, THEME_COLORS, type Accent, type Settings, type Theme } from './settings'
@@ -15,7 +16,7 @@ import { DEFAULT_SETTINGS, GOALS, NEW_PER_DAY, REVIEW_CAPS, THEME_COLORS, type A
 type Props = {
   settings: Settings
   onChange: (s: Settings) => void
-  onGrade?: (levels: Level[]) => void
+  onGrade?: (levels: Level[], grade?: GradeId) => void
   books?: ReactNode // 単語帳をえらぶボタン（ホームから設定へ移した）
 }
 
@@ -32,6 +33,7 @@ const ACCENTS: { id: Accent; label: string }[] = [
 
 export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
   const [graded, setGraded] = useState('')
+  const [pickedGrade, setPickedGrade] = useState(loadGrade)
   const set = (patch: Partial<Settings>) => onChange({ ...settings, ...patch })
   return (
     <section className="card settings">
@@ -40,14 +42,16 @@ export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
       <h3 className="settings-h">📚 学習</h3>
       {onGrade && (
         <fieldset className="setting">
-          <legend>学年から単語帳を選ぶ</legend>
+          <legend>学年・レベル（単語帳・今日の課題・ボス戦のむずかしさ）</legend>
           <div className="levels">
             {GRADES.map((g) => (
               <button
                 key={g.id}
+                aria-pressed={pickedGrade === g.id}
                 onClick={() => {
-                  onGrade(g.levels)
-                  setGraded(`${g.label}向けの単語帳にしました（${g.levels.join('・')}）`)
+                  setPickedGrade(g.id)
+                  onGrade(g.levels, g.id)
+                  setGraded(`${g.label}向けにしました（単語帳・今日の課題・ボス戦）`)
                 }}
               >
                 {g.label}

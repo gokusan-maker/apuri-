@@ -1,6 +1,7 @@
 // ホームの今日の課題：今日の読解（かんたんな短い英文）と、その英文に出てくる今日の単語
 import { makeLookup } from './glossary'
 import { PASSAGES, type Passage } from './reading'
+import { loadGrade, WORD_LEVELS_FOR } from './usergrade'
 import { WORDS, type Word } from './words'
 
 // あたりまえすぎて課題にしない語
@@ -28,7 +29,20 @@ export function wordsInText(text: string, max = 5, words: Word[] = WORDS): Word[
 }
 
 // 今日の単語：今日の読解に出てくる単語（4択で練習してから英文を読む）
-export const todayWords = (day: string): Word[] => wordsInText(dailyShort(day).text)
+// 学年をえらんでいて中1より上なら、その学年の単語帳から日ごとに5語（同じ日は同じ）
+export function todayWords(day: string): Word[] {
+  const g = loadGrade()
+  if (!g || g === 'j1') return wordsInText(dailyShort(day).text)
+  const pool = WORDS.filter((w) => !!w.level && WORD_LEVELS_FOR[g].includes(w.level))
+  if (pool.length < 5) return wordsInText(dailyShort(day).text)
+  const h = dayHash(day)
+  const out: Word[] = []
+  for (let i = 0; out.length < 5 && i < pool.length; i++) {
+    const w = pool[(h + i * 7919) % pool.length]
+    if (!out.includes(w)) out.push(w)
+  }
+  return out
+}
 
 function load(key: string): string {
   try {
