@@ -378,11 +378,25 @@ function App() {
   }
   const todayDone: Record<TodayTask, boolean> = { word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }
   const todayNext = todayFocus && todayDone[todayFocus] ? TODAY_TASKS.find((t) => t !== todayFocus && !todayDone[t]) : undefined // 今日の課題を1つ終えたら、まだの課題へ
-  const todayNextBtn = todayNext && (
+  const todayAllDone = !!todayFocus && TODAY_TASKS.every((t) => todayDone[t]) // 3つともクリア → ホームでトリオボーナス
+  const todayNextBtn = todayNext ? (
     <button className="next-unit-btn today-next-btn" onClick={() => goToday(todayNext)}>
       次の課題へ ▶ {TODAY_TASK_LABEL[todayNext]}
     </button>
-  )
+  ) : todayAllDone ? (
+    <button
+      className="next-unit-btn today-next-btn"
+      onClick={() => {
+        setTodayQuiz(false)
+        setGrammarGo(false)
+        setShortGo(false)
+        setMode('home')
+        window.scrollTo?.({ top: 0 })
+      }}
+    >
+      🎉 ぜんぶクリア！ ホームへ ▶
+    </button>
+  ) : null
   // 問題の画面をひらいているあいだ（子の画面が usePlaying で知らせる）は、相棒・タブ・今日の課題ボタンをかくし、上に「ほかの問題をえらぶ」
   const [plays, setPlays] = useState<{ id: number; exit: () => void }[]>([])
   const playSeq = useRef(0)

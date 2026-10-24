@@ -1805,3 +1805,17 @@ it('問題の画面で、いまのタブ（文法チャレンジ）をもう一�
   expect(screen.queryByRole('button', { name: /ほかの問題をえらぶ/ })).toBeNull()
   expect(screen.getByText('✏️ すぐ練習（5問）')).toBeInTheDocument()
 })
+
+it('今日の課題が3つともクリアなら、課題の画面に「🎉 ぜんぶクリア！ ホームへ ▶」が出て、ホームにもどれる', async () => {
+  const { dayKey } = await import('./srs')
+  const day = dayKey()
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  localStorage.setItem('eitan:today-words', day)
+  localStorage.setItem('eitan:grammar-daily', day)
+  localStorage.setItem('eitan:daily-short', day)
+  render(<App />)
+  fireEvent.click(within(screen.getByLabelText('今日の課題')).getByRole('button', { name: /^文法/ }))
+  fireEvent.click(screen.getByRole('button', { name: '🎉 ぜんぶクリア！ ホームへ ▶' }))
+  expect(screen.getByText('📊 記録')).toBeInTheDocument()
+})
