@@ -3840,6 +3840,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-speech-hello',
+    title: 'The Power of Saying Hello',
+    level: '高校入試（スピーチ）',
+    paragraphs: [
+      "Hello, everyone. Do you say \"Good morning\" to the people you meet on the way to school? Two years ago, I didn't. I was shy, and I thought it was strange to talk to people I didn't know. But one experience changed my mind.",
+      "One winter morning, I slipped on the ice and fell near the station. My bag opened, and my books flew everywhere. Many people walked past me, but an old woman stopped and helped me pick them up. She was the woman ( A ) I saw at the bus stop every day, but I had never spoken to her.",
+      "After that, I started saying \"Good morning\" to her. Soon, she began to tell me about her garden, and I told her about my club activities. Little by little, I started greeting other people in my neighborhood, too. Now I know the names of many of my neighbors, and they often ask me ( B ) my day was.",
+      "Saying hello takes only a second, but it can make a big difference. It can turn strangers into friends and make our town ( C ) a warmer place. Tomorrow morning, why don't you try it? Thank you for listening.",
+    ],
+    ja: [
+      'みなさん、こんにちは。学校へ行くとちゅうで会う人に「おはようございます」と言っていますか。2年前、私は言っていませんでした。はずかしがりやで、知らない人に話しかけるのは変だと思っていたのです。でも、ある経験が私の考えを変えました。',
+      'ある冬の朝、私は駅の近くで氷ですべって転びました。かばんが開いて、本があちこちに飛び散りました。多くの人が通りすぎていきましたが、あるおばあさんが立ち止まって、本をひろうのを手伝ってくれました。それは毎日バス停で見かけていた女性でしたが、私は一度も話したことがありませんでした。',
+      'それから、私はその人に「おはようございます」と言うようになりました。まもなく、その人は自分の庭の話をしてくれるようになり、私は部活動の話をしました。少しずつ、近所のほかの人にもあいさつするようになりました。今では近所の多くの人の名前を知っていて、みんなよく私に「今日はどうだった？」とたずねてくれます。',
+      'あいさつはほんの一瞬ですが、大きなちがいを生むことがあります。知らない人を友だちに変え、私たちの町をもっと温かい場所のように感じさせてくれます。明日の朝、ためしてみませんか。聞いてくれてありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whom', 'which', 'whose', 'what'], answer: 0, why: '先行詞 the woman（人）で、saw の目的語になる目的格の関係代名詞は whom（who・that も可）。which は物、whose は名詞が続く、what は先行詞をふくむ。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'who'], answer: 0, why: '「～がどうだったか」は how（間接疑問）。ask me how my day was。' },
+      { id: 'C', choices: ['feel like', 'feel', 'to feel like', 'feeling'], answer: 0, why: 'make ＋ O ＋ 動詞の原形「O を～させる」。feel like ＋ 名詞「～のように感じる」。make our town feel like a warmer place。' },
+    ],
+    tf: [
+      { statement: '筆者は2年前、知らない人に話しかけるのは変だと思っていた。', answer: true, why: '第1段落 I thought it was strange to talk to people I didn\'t know。' },
+      { statement: '筆者が転んだとき、多くの人が助けてくれた。', answer: false, why: '第2段落 Many people walked past me（通りすぎた）。助けたのはおばあさん1人。' },
+      { statement: '助けてくれた女性とは、前からよく話していた。', answer: false, why: '第2段落 I had never spoken to her。' },
+      { statement: '今では、筆者は近所の多くの人の名前を知っている。', answer: true, why: '第3段落 Now I know the names of many of my neighbors。' },
+    ],
+    qa: [
+      { q: 'What happened after the writer started saying "Good morning" to the woman?', choices: ['She began to tell the writer about her garden.', 'She moved to another town.', 'She gave the writer some books.', 'She stopped going to the bus stop.'], answer: 0, why: '第3段落 she began to tell me about her garden。' },
+    ],
+  },
+  {
     id: 'hs-garden-market',
     title: 'Grown by Students',
     level: '高校入試（体験文）',
