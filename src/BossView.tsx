@@ -594,8 +594,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           )}
           {revenge && <p className="level-up boss-revenge">🔥 リベンジ成功！ 🪙{REVENGE_COINS}</p>}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
-          {time && <p className="boss-maxhit">⏱ タイム {formatSec(time.sec)}{time.best ? '　🏁 最短記録！' : `（最短 ${formatSec(loadBossTimes()[look.name] ?? time.sec)}）`}</p>}
-          <p className="boss-maxhit">{newRecord > 0 ? `💥 最大ダメージ記録を更新！ ${newRecord}` : `💥 最大ダメージ記録 ${loadMaxHit()}`}</p>
+          <p className="buddy-chips game-chips boss-records">
+            {time && (
+              <span className={time.best ? 'game-best' : undefined} aria-label={`タイム ${formatSec(time.sec)}${time.best ? ' 最短記録！' : ''}`}>
+                ⏱ {formatSec(time.sec)}
+                {time.best ? ' 🏁 最短！' : ''}
+              </span>
+            )}
+            {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
+            <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
+              💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
+            </span>
+          </p>
           {drop && (
             <p className="boss-drop">
               🎁 {BATTLE_ITEMS.find((it) => it.id === drop)!.icon} {BATTLE_ITEMS.find((it) => it.id === drop)!.name} ゲット！

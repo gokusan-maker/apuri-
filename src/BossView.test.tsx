@@ -30,8 +30,8 @@ describe('ボス戦', () => {
     expect(screen.getByText('💥 とどめ！')).toBeInTheDocument()
     expect(document.querySelector('.boss-intro')).toBeNull()
     expect(document.querySelector('.boss-figure.finished')).not.toBeNull()
-    expect(screen.getByText(/最大ダメージ記録/)).toBeInTheDocument()
-    expect(screen.getByText(/⏱ タイム .*最短記録！/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/最大ダメージ記録/)).toBeInTheDocument()
+    expect(screen.getByLabelText(/タイム .*最短記録！/)).toBeInTheDocument()
     expect(screen.getByText(/🏅 MVP単語：/)).toBeInTheDocument()
   })
 
