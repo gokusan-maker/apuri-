@@ -2738,3 +2738,10 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .gacha .sticker-book.chip-fold > summary { flex-wrap: nowrap; }
 .gacha .sticker-book.chip-fold .fold-meta { margin-left: auto; background: rgb(255 255 255 / 0.28); color: #fff; }
 .gacha .sticker-book.chip-fold > summary::before { margin-left: 4px; }
+
+/* 設定以外のチェック（演出を短く・めくったら読み上げ・1問ずつ答えあわせ・訳もいっしょに）も設定と同じオン／オフのスイッチに */
+:where(input[type='checkbox']:not(.setting.toggle input)) { position: relative; flex: none; width: 40px; height: 24px; margin: 0 6px 0 0; border: none; border-radius: 999px; background: color-mix(in srgb, var(--muted) 35%, var(--card)); box-shadow: inset 0 1px 3px rgb(0 0 0 / 0.2); vertical-align: middle; cursor: pointer; transition: background 0.2s; }
+:where(input[type='checkbox']:not(.setting.toggle input))::after { content: ''; position: absolute; top: 3px; left: 3px; width: 18px; height: 18px; margin: 0; border: none; border-radius: 50%; background: #fff; box-shadow: 0 2px 4px rgb(0 0 0 / 0.25); transform: none; transition: transform 0.2s; }
+:where(input[type='checkbox']:not(.setting.toggle input)):checked { background: var(--accent-grad); }
+:where(input[type='checkbox']:not(.setting.toggle input)):checked::after { transform: translateX(16px); }
+:where(input[type='checkbox']:not(.setting.toggle input)):disabled { opacity: 0.5; cursor: default; }

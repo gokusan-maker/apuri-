@@ -107,3 +107,7 @@ it('今日はじめての単語・ボス戦の本文・つまずき解説のた�
 it('ガチャのシール帳も色つきの丸いボタン', () => {
   expect(readFileSync('src/GachaView.tsx', 'utf8')).toContain('sticker-book chip-fold cf-2')
 })
+
+it('設定以外のチェックも、オン／オフのスイッチの形', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/:where\(input\[type='checkbox'\]:not\(\.setting\.toggle input\)\)::after \{ content: ''; position: absolute;/)
+})
