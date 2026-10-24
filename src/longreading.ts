@@ -5283,6 +5283,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The writer now plays the piano every night.', answer: true, why: '第4段落 Now I play for ten minutes every night。' },
     ],
   },
+  {
+    id: 'calligraphy-lessons',
+    title: 'Shaky Characters',
+    level: '中2（物語）',
+    paragraphs: [
+      'This year, I started taking calligraphy lessons every Saturday. My teacher, Ms. Mori, is over eighty years old, but her back is very straight. At my first lesson, she told me to write the same kanji fifty times. I thought it was boring, ( A ) I did my best.',
+      'After a month, I wanted to give up. My characters still looked weak and shaky. One day, Ms. Mori showed me a piece of paper that she wrote when she was ten. Her characters were shaky, too! "Everyone starts like this," she said. "Your brush only gets better ( B ) you practice."',
+      'From then on, I practiced at home for fifteen minutes every evening. Slowly, my lines became stronger. In December, I entered a calligraphy contest and won a small prize. When I showed it to Ms. Mori, she said, "Your characters look ( C ) now."',
+      'Calligraphy taught me that small efforts every day can make a big difference. Now, when I feel like giving up on something, I remember the shaky characters that Ms. Mori wrote when she was a child.',
+    ],
+    ja: [
+      '今年、私は毎週土曜日に書道を習い始めました。先生の森さんは80歳をこえていますが、背中がとてもまっすぐです。最初のレッスンで、先生は同じ漢字を50回書くように言いました。退屈だと思いましたが、私はせいいっぱいがんばりました。',
+      '1か月たつと、やめたくなりました。私の字はまだ弱々しく、ふるえていました。ある日、森先生は10歳のときに書いた紙を見せてくれました。先生の字もふるえていたのです！「みんなこうして始まるのよ」と先生は言いました。「練習すれば、筆はうまくなるだけよ。」',
+      'それから私は、毎晩15分、家で練習しました。少しずつ、線が力強くなっていきました。12月、私は書道のコンクールに出て、小さな賞をとりました。それを森先生に見せると、「字が自信を持って見えるようになったわね」と言ってくれました。',
+      '書道は、毎日の小さな努力が大きなちがいを生むことを教えてくれました。今では、何かをあきらめたくなったとき、森先生が子どものころに書いたふるえた字を思い出します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'because of', 'during', 'without'], answer: 0, why: '2つの文（I thought it was boring／I did my best）をつなぐ接続詞 but「でも」。because of・during・without は前置詞。' },
+      { id: 'B', choices: ['if', 'despite', 'during', 'without'], answer: 0, why: 'あとに you practice という文が続くので接続詞の if「～すれば」。despite・during・without は前置詞。' },
+      { id: 'C', choices: ['confident', 'confidently', 'confidence', 'more confidently'], answer: 0, why: 'look ＋ 形容詞「～に見える」。look confident。confidently は副詞、confidence は名詞。' },
+    ],
+    tf: [
+      { statement: 'Ms. Mori is over eighty years old.', answer: true, why: '第1段落 Ms. Mori, is over eighty years old。' },
+      { statement: 'The writer enjoyed writing the same kanji fifty times.', answer: false, why: '第1段落 I thought it was boring。' },
+      { statement: "Ms. Mori's characters were shaky when she was ten.", answer: true, why: '第2段落 Her characters were shaky, too!' },
+      { statement: 'The writer did not enter any contest.', answer: false, why: '第3段落 I entered a calligraphy contest。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
