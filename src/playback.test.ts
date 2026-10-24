@@ -48,3 +48,13 @@ it('文法ページの素の文字ボタンはなくなり、色つきの丸い�
 it('時制まとめ表の色ボタンは横ならび（アイコン・名前・右に ›）', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.tense-table\.game-fold > summary \{ display: flex;/)
 })
+
+it('聞く・ゆっくり（水色）、音読（オレンジ赤）・読めた（緑）、和訳（むらさき）、とじる（青）も色つきの丸いボタン', () => {
+  const has = (f: string, c: string) => expect(readFileSync(`src/${f}`, 'utf8')).toContain(`list-link pill-btn ${c}`)
+  has('GrammarDictView.tsx', 'pill-cyan')
+  has('GrammarShadowView.tsx', 'pill-cyan')
+  has('LongReadingView.tsx', 'pill-start')
+  has('LongReadingView.tsx', 'pill-purple')
+  has('WalkQuizView.tsx', 'pill-blue')
+  has('HideSeekView.tsx', 'pill-green')
+})

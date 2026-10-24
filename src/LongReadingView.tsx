@@ -301,7 +301,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </p>
         )}
         {whole && readingLevel(history) && levelPick(readingLevel(history)!.name, record) && (
-          <button className="list-link" onClick={() => openPassage(levelPick(readingLevel(history)!.name, record)!)}>
+          <button className="list-link pill-btn pill-orange" onClick={() => openPassage(levelPick(readingLevel(history)!.name, record)!)}>
             🎯 {readingLevel(history)!.name}のきみにおすすめ：{shownTitle(levelPick(readingLevel(history)!.name, record)!, LONG_PASSAGES.indexOf(levelPick(readingLevel(history)!.name, record)!))}
           </button>
         )}
@@ -399,7 +399,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
       <div className="long-read-row">
         {aloudAt === null ? (
           <button
-            className="list-link"
+            className="list-link pill-btn pill-start"
             onClick={() => {
               setWpm(0)
               setAloudAt(nowMs())
@@ -409,7 +409,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </button>
         ) : (
           <button
-            className="list-link"
+            className="list-link pill-btn pill-green"
             onClick={() => {
               setWpm(wpmOf(wordCount(p), Math.max(1, Math.round((nowMs() - aloudAt) / 1000))))
               setAloudAt(null)
@@ -506,7 +506,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </table>
         </div>
       )}
-      <button className="list-link" onClick={() => setShowJa(!showJa)}>
+      <button className="list-link pill-btn pill-purple" onClick={() => setShowJa(!showJa)}>
         {showJa ? '和訳をかくす' : '和訳を見る'}
       </button>
       {keyWords(p).length > 0 && (

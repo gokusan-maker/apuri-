@@ -20,7 +20,7 @@ export function HideSeek({ day, name, onFound }: Props) {
   return (
     <div className="hideseek">
       {spot === null ? (
-        <button className="list-link" title={`1日1回・${HIDE_TRIES}回以内で見つけると🪙${HIDE_COINS}`} onClick={() => setSpot(hideSpot(rand()))}>
+        <button className="list-link pill-btn pill-green" title={`1日1回・${HIDE_TRIES}回以内で見つけると🪙${HIDE_COINS}`} onClick={() => setSpot(hideSpot(rand()))}>
           🙈 {name}とかくれんぼ
         </button>
       ) : (

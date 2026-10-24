@@ -38,7 +38,7 @@ export function GrammarShadow({ unit, onBack }: Props) {
           <p className="shadow-ja">{ex.ja}</p>
           <div className="shadow-btns">
             <button
-              className="list-link"
+              className="list-link pill-btn pill-cyan"
               onClick={() => {
                 speak(ex.en)
                 setHeard(true)
@@ -46,7 +46,7 @@ export function GrammarShadow({ unit, onBack }: Props) {
             >
               🔊 聞く
             </button>
-            <button className="list-link" onClick={() => speak(ex.en, true)}>
+            <button className="list-link pill-btn pill-cyan" onClick={() => speak(ex.en, true)}>
               🐢 ゆっくり
             </button>
           </div>

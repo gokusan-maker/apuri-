@@ -30,10 +30,10 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
             {step + 1} / {unit.examples.length}　（{ex.ja}）
           </p>
           <div className="shadow-btns">
-            <button className="list-link" onClick={() => speak(ex.en)}>
+            <button className="list-link pill-btn pill-cyan" onClick={() => speak(ex.en)}>
               🔊 聞く
             </button>
-            <button className="list-link" onClick={() => speak(ex.en, true)}>
+            <button className="list-link pill-btn pill-cyan" onClick={() => speak(ex.en, true)}>
               🐢 ゆっくり
             </button>
           </div>

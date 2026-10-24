@@ -21,7 +21,7 @@ export function WalkQuiz({ diary, onAnswer, onClose }: Props) {
         <p>
           🐾 おさんぽクイズ {score} / {qs.length} 問正解！
         </p>
-        <button className="list-link" onClick={onClose}>
+        <button className="list-link pill-btn pill-blue" onClick={onClose}>
           とじる
         </button>
       </div>
