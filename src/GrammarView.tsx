@@ -87,6 +87,8 @@ function markOpened(id: string): string[] {
 }
 
 const GAME_COUNT = 12 // 文法ゲームの種類（下のタイルの数）
+const GRADE_HUE: Record<GrammarGrade, number> = { 中1: 2, 中2: 0, 中3: 4, 高校: 1 } // 学年の行の色（game-fold の lg-N）
+const GRADE_ICON: Record<GrammarGrade, string> = { 中1: '🌱', 中2: '🌿', 中3: '🌳', 高校: '🎓' }
 // 連続正解チャレンジ：まちがえるまで全単元の問題が続く。ベスト記録を残す
 export const RUN_BEST_XP = 20 // 連続正解のベスト更新で文法のなかまにあげる XP
 const RUN_KEY = 'eitan:grammar-run-best'
@@ -520,8 +522,9 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             {GRAMMAR_GRADES.map((g) => {
               const us = todoSort(units.filter((u) => gradeOf(u.id) === g))
               return (
-                <details key={g} className="grammar-grade-fold">
+                <details key={g} className={`grammar-grade-fold game-fold lg-${GRADE_HUE[g]}`}>
                   <summary>
+                    <span className="lg-icon" aria-hidden="true">{GRADE_ICON[g]}</span>
                     {g}の単元{us.every((u) => record[u.id] === u.questions.length) && ' 🏅'}
                     <span className="fold-meta" aria-label={`全問正解 ${us.filter((u) => record[u.id] === u.questions.length).length} / ${us.length}`}>
                       {us.filter((u) => record[u.id] === u.questions.length).length}/{us.length}

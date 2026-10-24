@@ -319,7 +319,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             {shownGenres.map((g) => {
               const ps = LIST.filter((x) => genreOf(x) === g)
               return (
-                <details key={g} className={`grammar-grade-fold long-genre-fold lg-${GENRES.indexOf(g)}`}>
+                <details key={g} className={`grammar-grade-fold long-genre-fold game-fold lg-${GENRES.indexOf(g)}`}>
                   <summary>
                     <span className="lg-icon" aria-hidden="true">{GENRE_ICON[g]}</span>
                     {g}

@@ -71,3 +71,7 @@ it('設定のスイッチは1枚のカードにまとまり、見出しは色つ
   expect(css).toContain('.settings .setting.toggle + .setting.toggle { padding-block: 10px;')
   expect(css).toMatch(/\.settings \.settings-h \{[^}]*background: var\(--accent-grad\)/)
 })
+
+it('文法の学年・読解のジャンルの行は game-fold の色つきボタン', () => {
+  expect(css).toMatch(/\.game-fold > summary \{ gap: 10px;[^}]*linear-gradient/)
+})

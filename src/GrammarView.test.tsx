@@ -509,7 +509,7 @@ it('文法の単元一覧は学年ごとに折りたたまれている', () => {
   localStorage.clear()
   render(<Grammar />)
   const folds = [...document.querySelectorAll<HTMLDetailsElement>('details.grammar-grade-fold')]
-  expect(folds.map((d) => d.querySelector('summary')!.textContent!.slice(0, 2))).toEqual(['中1', '中2', '中3', '高校'])
+  expect(folds.map((d) => d.querySelector('summary')!.textContent!.replace(d.querySelector('.lg-icon')?.textContent ?? '', '').slice(0, 2))).toEqual(['中1', '中2', '中3', '高校'])
   expect(folds.every((d) => !d.open)).toBe(true)
   expect(folds.reduce((a, d) => a + d.querySelectorAll('li').length, 0)).toBe(GRAMMAR.length)
 })
@@ -876,4 +876,11 @@ it('文法チャレンジに「🧩 文法ドリル」があり、押すとそ�
   expect(g.querySelectorAll('button').length).toBe(GRAMMAR_DRILLS.length)
   fireEvent.click(within(g).getByText('👥 複数形'))
   expect(onDrill).toHaveBeenCalledWith('plural')
+})
+
+it('学年の単元の行はアイコンつきの色ボタン（game-fold）', () => {
+  localStorage.clear()
+  render(<Grammar />)
+  const folds = [...document.querySelectorAll('details.grammar-grade-fold.game-fold')]
+  expect(folds.map((d) => d.querySelector('.lg-icon')?.textContent)).toEqual(['🌱', '🌿', '🌳', '🎓'])
 })
