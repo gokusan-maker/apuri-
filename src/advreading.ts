@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-zeigarnik',
+    title: 'The Task That Will Not Leave You Alone',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the 1920s, a psychologist named Bluma Zeigarnik noticed something interesting in a restaurant. The waiters could remember long, complicated orders as long as the bills were unpaid. ( A ) the customers paid and left, however, the waiters seemed to forget the orders almost immediately.",
+      "Curious about this, Zeigarnik designed experiments in which people were given simple tasks, such as solving puzzles, and were interrupted before finishing some of them. Later, the participants tended to remember the unfinished tasks better than the ones they had completed. This tendency became known as the \"Zeigarnik effect.\"",
+      "Later studies have shown that the effect does not appear in every situation, but the basic idea has been influential. An unfinished task seems to stay active in our minds, ( B ) a small alarm that keeps ringing until we deal with it.",
+      "Some writers use this idea to fight procrastination. If you find it hard to start a large project, they suggest simply beginning it, even for five minutes. Once a task has been started, the feeling that it is unfinished may encourage you ( C ) back to it.",
+    ],
+    ja: [
+      '1920年代、ブルーマ・ゼイガルニクという心理学者が、あるレストランでおもしろいことに気づいた。ウェイターたちは、代金がはらわれていないあいだは、長く複雑な注文でもおぼえていられた。しかし客がお金をはらって帰ると、ウェイターはその注文をほとんどすぐに忘れてしまうようだった。',
+      'これに興味をもったゼイガルニクは、人々にパズルを解くなどのかんたんな課題をあたえ、いくつかの課題は終わる前に中断させる実験を考えた。あとで、参加者は終えた課題よりも、終わっていない課題のほうをよくおぼえている傾向があった。この傾向は「ツァイガルニク効果（ゼイガルニク効果）」として知られるようになった。',
+      'その後の研究で、この効果はどんな場面にも現れるわけではないことがわかっているが、基本的な考え方は大きなえいきょうをあたえてきた。終わっていない課題は、片づけるまで鳴りつづける小さな目覚まし時計のように、心の中で活動しつづけるようなのである。',
+      'この考えを、先のばしと戦うのに使う書き手もいる。大きな仕事を始めるのがむずかしいときは、たとえ5分でもいいから、とにかく始めてみることをすすめるのだ。いったん始めてしまえば、まだ終わっていないという気持ちが、その仕事にもどってくるよううながしてくれるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Once', 'Despite', 'During', 'Because of'], answer: 0, why: 'あとに the customers paid and left という文が続くので接続詞の Once「いったん～すると」。Despite・During・Because of は前置詞で、文は続かない。' },
+      { id: 'B', choices: ['like', 'alike', 'likely', 'liking'], answer: 0, why: '前置詞 like「～のように」＋名詞。like a small alarm。alike・likely は形容詞（副詞）、liking は名詞・動名詞で名詞の前に置けない。' },
+      { id: 'C', choices: ['to come', 'coming', 'come', 'came'], answer: 0, why: 'encourage 人 to ～「人に～するようにうながす」。encourage you to come back。' },
+    ],
+    tf: [
+      { statement: 'ウェイターは、代金がはらわれる前の注文をよくおぼえていた。', answer: true, why: '第1段落 could remember long, complicated orders as long as the bills were unpaid。' },
+      { statement: '実験では、終えた課題のほうがよく思い出された。', answer: false, why: '第2段落 remember the unfinished tasks better than the ones they had completed。' },
+      { statement: 'その後の研究で、この効果はどんな場面でも必ず現れるとわかった。', answer: false, why: '第3段落 the effect does not appear in every situation。' },
+      { statement: '大きな仕事は、5分だけでも始めてみるとよいと言う書き手がいる。', answer: true, why: '第4段落 they suggest simply beginning it, even for five minutes。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why might starting a task for just five minutes help?', choices: ['The feeling that it is unfinished may encourage you to come back to it.', 'Five minutes is enough to finish any task.', 'It makes you forget the task completely.', 'Waiters always work for five minutes.'], answer: 0, why: '第4段落 the feeling that it is unfinished may encourage you to come back to it。' },
+    ],
+  },
+{
     id: 'adv-framing',
     title: 'Same Facts, Different Feelings',
     level: '難関大（評論）',
@@ -3837,6 +3868,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
+    ],
+  },
+  {
+    id: 'hs-uniform-debate',
+    title: 'Uniforms or Our Own Clothes?',
+    level: '高校入試（会話・意見）',
+    paragraphs: [
+      "In our English class, we had a discussion about school uniforms. Some students wanted to keep them, ( A ) others wanted to wear their own clothes.",
+      "Mika said, \"I like our uniform. In the morning, I don't have to think about what to wear, so I can save time. Also, when we go on school trips, our teachers can find us easily in a crowd.\"",
+      "Kenta had a different opinion. \"Uniforms are expensive, and they are not comfortable in summer. If we could choose our own clothes, we could wear clothes that are better ( B ) the weather. We could also show our own style.\"",
+      "Our teacher said that both opinions had good points. Then she asked us to think about another idea: a uniform that students can choose parts of, such as pants or skirts, and short or long sleeves. Many students liked this idea ( C ) it could solve some of the problems Kenta talked about. I learned that when people disagree, we can sometimes find a new answer together.",
+    ],
+    ja: [
+      '英語の授業で、制服について話し合いました。制服を残したい生徒もいれば、自分の服を着たい生徒もいました。',
+      'ミカは言いました。「私は制服が好きです。朝、何を着るか考えなくていいので、時間を節約できます。それに、修学旅行に行ったとき、先生が人ごみの中で私たちを見つけやすいです。」',
+      'ケンタはちがう意見でした。「制服は高いし、夏は着ごこちがよくありません。自分で服をえらべたら、天気に合った服を着られます。自分らしいスタイルも見せられます。」',
+      '先生は、どちらの意見にもよい点があると言いました。そして、別の案について考えるように言いました。ズボンかスカートか、半そでか長そでかなど、生徒が一部をえらべる制服です。ケンタが話した問題のいくつかを解決できるかもしれないので、多くの生徒がこの案を気に入りました。意見が分かれたときでも、いっしょに新しい答えを見つけられることがあると学びました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'あとに others wanted … という文が続くので接続詞の while「～する一方で」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['for', 'at', 'with', 'by'], answer: 0, why: 'be good（better）for ～「～に合っている・～によい」。clothes that are better for the weather。' },
+      { id: 'C', choices: ['because', 'because of', 'during', 'despite'], answer: 0, why: 'あとに it could solve … という文が続くので接続詞の because。because of・during・despite は前置詞。' },
+    ],
+    tf: [
+      { statement: 'クラスの全員が、制服をなくしたいと思っていた。', answer: false, why: '第1段落 Some students wanted to keep them。' },
+      { statement: 'ミカは、制服があると朝の時間を節約できると言った。', answer: true, why: '第2段落 I don\'t have to think about what to wear, so I can save time。' },
+      { statement: 'ケンタは、制服は夏に着ごこちがよいと言った。', answer: false, why: '第3段落 they are not comfortable in summer。' },
+      { statement: '先生は、生徒が一部をえらべる制服という案を出した。', answer: true, why: '第4段落 a uniform that students can choose parts of。' },
+    ],
+    qa: [
+      { q: "Why did many students like the teacher's idea?", choices: ['It could solve some of the problems Kenta talked about.', 'It was cheaper than any other clothes.', 'Mika wanted to stop wearing uniforms.', 'The teacher said uniforms were bad.'], answer: 0, why: '第4段落 it could solve some of the problems Kenta talked about。' },
     ],
   },
   {

@@ -1730,6 +1730,17 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
+    id: 'scarecrow',
+    title: 'Mr. Smile',
+    text: "My grandfather has a small rice field. Every summer, birds come to eat the rice. So this year, my sister and I made a scarecrow. We used an old shirt, a straw hat, and a paper bag with a big smile drawn on it. Grandpa laughed and said, \"He looks friendly, not scary!\" But the birds still stayed away. Now we call him Mr. Smile.",
+    ja: '私の祖父は小さな田んぼを持っています。毎年夏になると、鳥がお米を食べに来ます。そこで今年、妹と私はかかしを作りました。古いシャツと麦わらぼうし、それに大きな笑顔をかいた紙ぶくろを使いました。祖父は笑って、「こわいどころか、やさしそうだね！」と言いました。それでも、鳥はちゃんと近づきませんでした。今、私たちはそのかかしをミスター・スマイルとよんでいます。',
+    questions: [
+      { q: 'かかしは何を使って作った？', choices: ['古いシャツと麦わらぼうし', '新しい服と傘', '木と石'], answer: 0 },
+      { q: 'おじいさんは何と言った？', choices: ['こわくなくてやさしそう', 'とてもこわい', '小さすぎる'], answer: 0 },
+      { q: 'かかしの名前は？', choices: ['ミスター・スマイル', 'ミスター・バード', 'ミスター・ハット'], answer: 0 },
+    ],
+  },
+  {
     id: 'duck-race',
     title: 'The Rubber Duck Race',
     text: "Every summer, our town has a rubber duck race on the river. People buy a yellow duck for 100 yen and write a number on it. This year, I got duck number 52. Hundreds of ducks floated down the river. Mine got stuck behind a rock, and I thought I would lose. Then a big wave pushed it, and it finished third! I won a small prize, a new pencil case.",

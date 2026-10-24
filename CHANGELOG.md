@@ -1831,3 +1831,4 @@
 - 2026-10-24: ふつう（中2）の読解に、メール「An Email to My Host Family」とスピーチ「Ten Minutes Before Bed」を追加（少ないジャンルをふやす）
 - 2026-10-24: 高校入試の読解にスピーチ「The Power of Saying Hello」（あいさつで近所の人とつながる、空所3・内容一致4・英問英答1）を追加
 - 2026-10-24: TOEFL・IELTS の読解に「From Sand to Glass」（ガラスの原料・吹きガラス・リサイクル、空所3・内容一致4・英問英答1）を追加
+- 2026-10-24: 読解を3本追加：難関大「The Task That Will Not Leave You Alone」（ツァイガルニク効果と先のばし）、高校入試「Uniforms or Our Own Clothes?」（制服についての話し合い）、かんたん「Mr. Smile」（かかし）
