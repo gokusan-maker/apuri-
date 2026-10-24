@@ -609,7 +609,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           </span>
           <span className="boss-go-text">
             <strong>⚔️ 今日のボス</strong>
-            <small>BOSS BATTLE</small>
+            <small title="単語・文法・読解の3人で戦う">TEAM BATTLE 🔤📐📖</small>
           </span>
           {dailyDone && <span className="mode-badge">✅ クリア</span>}
         </button>

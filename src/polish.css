@@ -2543,3 +2543,4 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .boss-mvp { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .lvup-banner { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .play-bar ~ .lvup-banner { top: calc(68px + env(safe-area-inset-top)); }
+.boss-go-text small { white-space: nowrap; }
