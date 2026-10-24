@@ -115,3 +115,7 @@ it('単語・文法・読解の今日の課題ボタンは同じ1行のゲーム
   expect(css).toMatch(/\.today-read-btn \{ display: flex;[^}]*white-space: nowrap;/)
   expect(css).toMatch(/\.today-read-btn strong \{[^}]*text-overflow: ellipsis;/)
 })
+
+it('読解の結果のボタンは色つき（次の読解へはオレンジ）', () => {
+  expect(css).toMatch(/\.long-result \.next-unit-btn \{[^}]*linear-gradient\(135deg, #fbbf24, #f97316\)/)
+})
