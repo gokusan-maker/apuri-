@@ -2,6 +2,7 @@
 export type Mistake = { wrong: string; right: string; why: string }
 
 export const MISTAKES: Record<string, Mistake> = {
+  'give-to-for': { wrong: 'She made a cake to me.', right: 'She made a cake for me.', why: 'make は「人のために」なので for を使う。' },
   'of-with-abstract': { wrong: 'This book is of very useful.', right: 'This book is of great use.', why: 'of のあとは名詞（use）。「とても」は great を使う。' },
   'be-born': { wrong: 'I born in Tokyo.', right: 'I was born in Tokyo.', why: '「生まれた」は was born。born だけでは動詞にならない。' },
   'can-i-you': { wrong: 'Can I to use your pen?', right: 'Can I use your pen?', why: 'can のあとは to をつけない原形。' },
