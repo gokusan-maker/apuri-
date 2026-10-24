@@ -3920,6 +3920,26 @@ const WORDS_5: Word[] = [
   { id: 'quotation', en: 'quotation', ja: '見積書・引用', example: 'We asked three companies for a quotation.', exampleJa: '私たちは3社に見積書をたのんだ。', level: 'ビジネス' },
   { id: 'lease', en: 'lease', ja: '賃貸借契約・リースする', example: 'The company leases ten cars for its staff.', exampleJa: 'その会社は社員のために車を10台リースしている。', level: 'ビジネス' },
   { id: 'warranty', en: 'warranty', ja: '保証・保証書', example: 'This camera has a one-year warranty.', exampleJa: 'このカメラには1年間の保証がついている。', level: 'ビジネス' },
+  // メール・電話のきまり文句
+  { id: 'look-forward-hearing', en: 'I look forward to hearing from you', ja: 'お返事をお待ちしています', example: 'I look forward to hearing from you soon.', exampleJa: 'お返事をお待ちしております。', level: 'ビジネス' },
+  { id: 'please-find-attached', en: 'Please find attached', ja: '添付をご確認ください', example: 'Please find attached the schedule for next week.', exampleJa: '来週の予定表を添付しましたので、ご確認ください。', level: 'ビジネス' },
+  { id: 'thanks-for-email', en: 'Thank you for your email', ja: 'メールをありがとうございます', example: 'Thank you for your email about the meeting.', exampleJa: '会議についてのメールをありがとうございます。', level: 'ビジネス' },
+  { id: 'may-i-speak-to', en: 'May I speak to ...?', ja: '（電話で）〜さんをお願いできますか', example: 'May I speak to Ms. Kato, please?', exampleJa: '加藤さんをお願いできますか。', level: 'ビジネス' },
+  { id: 'could-you-hold-on', en: 'Could you hold on?', ja: '（電話で）少々お待ちいただけますか', example: 'Could you hold on a moment, please?', exampleJa: '少々お待ちいただけますか。', level: 'ビジネス' },
+  { id: 'call-you-back', en: 'I\'ll call you back', ja: '折り返し電話します', example: 'I\'m in a meeting now. I\'ll call you back later.', exampleJa: '今会議中なので、あとで折り返し電話します。', level: 'ビジネス' },
+  { id: 'sorry-keep-waiting', en: 'Sorry to keep you waiting', ja: 'お待たせしてすみません', example: 'Sorry to keep you waiting. Let\'s begin.', exampleJa: 'お待たせしてすみません。始めましょう。', level: 'ビジネス' },
+  { id: 'speaking-phone', en: 'Speaking', ja: '（電話で）私です', example: '"Is this Mr. Mori?" "Yes, speaking."', exampleJa: '「森さんですか。」「はい、私です。」', level: 'ビジネス' },
+  { id: 'leave-a-message', en: 'Can I leave a message?', ja: '伝言をお願いできますか', example: '"Mr. Ito is out right now." "Can I leave a message?"', exampleJa: '「伊藤は今外出しております。」「伝言をお願いできますか。」', level: 'ビジネス' },
+  { id: 'im-afraid', en: 'I\'m afraid ...', ja: '（残念ながら）〜のようです', example: 'I\'m afraid I can\'t come to the meeting.', exampleJa: '残念ながら、会議に出られそうにありません。', level: 'ビジネス' },
+  { id: 'asap', en: 'as soon as possible', ja: 'できるだけ早く', example: 'Please reply as soon as possible.', exampleJa: 'できるだけ早くお返事ください。', level: 'ビジネス' },
+  { id: 'thanks-patience', en: 'Thank you for your patience', ja: 'お待ちいただきありがとうございます', example: 'Thank you for your patience while we fix the problem.', exampleJa: '問題を直すあいだお待ちいただき、ありがとうございます。', level: 'ビジネス' },
+  { id: 'please-let-me-know', en: 'Please let me know', ja: 'お知らせください', example: 'Please let me know if you have any questions.', exampleJa: 'ご質問があればお知らせください。', level: 'ビジネス' },
+  { id: 'business-card', en: 'Here is my business card', ja: 'こちらが私の名刺です', example: 'Nice to meet you. Here is my business card.', exampleJa: 'はじめまして。こちらが私の名刺です。', level: 'ビジネス' },
+  { id: 'get-back-to-you', en: 'I\'ll get back to you', ja: '（確認して）あとでご連絡します', example: 'Let me check, and I\'ll get back to you tomorrow.', exampleJa: '確認して、明日ご連絡します。', level: 'ビジネス' },
+  { id: 'spell-that', en: 'Could you spell that?', ja: 'つづりを教えていただけますか', example: 'Sorry, could you spell that for me?', exampleJa: 'すみません、つづりを教えていただけますか。', level: 'ビジネス' },
+  { id: 'late-reply', en: 'Sorry for the late reply', ja: '返信がおそくなってすみません', example: 'Sorry for the late reply. I was on a business trip.', exampleJa: '返信がおそくなってすみません。出張中でした。', level: 'ビジネス' },
+  { id: 'on-behalf-of', en: 'on behalf of ...', ja: '〜を代表して・〜に代わって', example: 'I am writing on behalf of my manager.', exampleJa: '上司に代わってご連絡しております。', level: 'ビジネス' },
+  { id: 'out-of-office', en: 'out of the office', ja: '外出中で・不在で', example: 'Ms. Ueda is out of the office until Monday.', exampleJa: '上田は月曜日まで不在にしております。', level: 'ビジネス' },
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
