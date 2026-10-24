@@ -4776,4 +4776,62 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What have researchers studied about skilled soroban users?', choices: ['How practice can change the way the brain handles numbers.', 'Why calculators became cheap.', 'How beads are made in factories.', 'Why Rome stopped using the abacus.'], answer: 0, why: '第3段落 as an example of how practice can change the way the brain handles numbers。' },
     ],
   },
+  {
+    id: 'adv-hedonic-adaptation',
+    title: 'Why New Things Stop Making Us Happy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we buy a new phone or move into a bigger apartment, we often feel a rush of happiness. Within a few weeks or months, however, that feeling tends to fade, and the new object becomes simply part of everyday life. Psychologists call this process hedonic adaptation, ( A ) refers to our tendency to return to a fairly stable level of happiness after positive or negative changes.",
+      "From an evolutionary point of view, adaptation makes sense. A mind that stayed excited about every improvement would have little reason to look for new opportunities, and a mind that stayed crushed by every loss would struggle to recover. Adaptation allows us to keep functioning ( B ) our circumstances change.",
+      "Yet adaptation also explains why chasing more and more possessions rarely leads to lasting satisfaction. Some researchers suggest that spending money on experiences, such as trips or classes, may slow the process, because experiences are varied and become part of the stories we tell about ourselves. Another strategy is to pause regularly and notice what we already have. Doing so may keep familiar pleasures from ( C ) invisible.",
+    ],
+    ja: [
+      '新しいスマートフォンを買ったり、もっと広い部屋に引っこしたりすると、私たちはしばしば幸せな気持ちがわき上がるのを感じる。しかし、数週間か数か月もすると、その気持ちはうすれていき、新しい物はただの日常の一部になる。心理学者はこの過程をヘドニック適応とよぶ。これは、よい変化や悪い変化のあとに、私たちがほぼ一定の幸福のレベルにもどっていく傾向のことである。',
+      '進化の観点から見れば、適応には理にかなったところがある。あらゆる改善にずっと興奮しつづける心は、新しい機会をさがす理由をほとんどもたないだろうし、あらゆる喪失にずっと打ちひしがれる心は、立ち直るのに苦労するだろう。適応のおかげで、私たちは状況が変わっても、ふつうに生活しつづけることができるのである。',
+      'しかし、適応は、物をどんどん追い求めても長続きする満足にはめったにつながらない理由も説明する。旅行や習いごとのような体験にお金を使うと、この過程がゆるやかになるかもしれないと考える研究者もいる。体験はさまざまで、私たちが自分について語る物語の一部になるからだ。もう一つの方法は、ときどき立ち止まって、すでにもっているものに目を向けることだ。そうすることで、なじみの楽しみが見えなくなるのを防げるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで hedonic adaptation を説明する関係代名詞 which。コンマのあとに that は使えず、what は先行詞をとらない。it では文が接続詞なしでつながってしまう。' },
+      { id: 'B', choices: ['as', 'during', 'despite', 'because of'], answer: 0, why: 'あとに our circumstances change という文が続くので接続詞 as「～するにつれて・～するときに」。during・despite・because of は前置詞で、文は続かない。' },
+      { id: 'C', choices: ['becoming', 'become', 'became', 'to become'], answer: 0, why: 'keep A from ～ing「A が～するのを防ぐ」。from は前置詞なので動名詞。' },
+    ],
+    tf: [
+      { statement: '新しい物を買ったときの幸せな気持ちは、ふつう長く続く。', answer: false, why: '第1段落 that feeling tends to fade。' },
+      { statement: 'ヘドニック適応は、よい変化のあとにも悪い変化のあとにも起こる。', answer: true, why: '第1段落 after positive or negative changes。' },
+      { statement: '筆者は、適応には進化の上での意味があると説明している。', answer: true, why: '第2段落 From an evolutionary point of view, adaptation makes sense。' },
+      { statement: '研究者は、体験よりも物にお金を使うことをすすめている。', answer: false, why: '第3段落 spending money on experiences … may slow the process。' },
+    ],
+    qa: [
+      { q: 'According to some researchers, why might experiences slow adaptation?', choices: ['They are varied and become part of the stories we tell about ourselves.', 'They are always cheaper than possessions.', 'They make us forget our old possessions.', 'They stop us from feeling any loss.'], answer: 0, why: '第3段落 because experiences are varied and become part of the stories we tell about ourselves。' },
+    ],
+  },
+  {
+    id: 'toefl-little-ice-age',
+    title: 'The Little Ice Age',
+    level: 'TOEFL・IELTS（気象）',
+    paragraphs: [
+      "Between roughly the fourteenth and the nineteenth centuries, many parts of the Northern Hemisphere experienced a period of cooler temperatures now known as the Little Ice Age. It was not a true ice age, but average temperatures fell enough ( A ) noticeable effects on daily life.",
+      "In Europe, glaciers in the Alps advanced and swallowed some farms and villages. Rivers that rarely freeze today, such as the Thames in London, froze over during several especially cold winters, and people held \"frost fairs\" on the ice. Shorter growing seasons led to poor harvests, ( B ) in turn caused food shortages in some regions.",
+      "Scientists still debate what caused the cooling. Possible factors include a series of large volcanic eruptions, which threw ash and gases into the atmosphere and blocked some sunlight, as well as a period of reduced activity on the Sun. Many researchers believe that a combination of these factors, rather than a single cause, was responsible. Studying this period helps scientists understand how ( C ) the climate can be to natural changes.",
+    ],
+    ja: [
+      'およそ14世紀から19世紀にかけて、北半球の多くの地域は、今では小氷期とよばれる気温の低い時代を経験した。それは本当の氷河期ではなかったが、平均気温は日々の生活にはっきりした影響が出るほど下がった。',
+      'ヨーロッパでは、アルプスの氷河が前に進み、いくつかの農場や村をのみこんだ。ロンドンのテムズ川のように、今ではめったにこおらない川が、とくに寒いいくつかの冬に一面こおり、人々は氷の上で「フロスト・フェア（氷上の市）」を開いた。作物の育つ期間が短くなったことで不作になり、それがさらに一部の地域で食料不足を引き起こした。',
+      'この寒冷化の原因については、科学者のあいだで今も議論が続いている。考えられる原因には、灰やガスを大気中にふき上げて日光の一部をさえぎった一連の大きな火山の噴火や、太陽の活動が弱まった時期がある。多くの研究者は、一つの原因ではなく、これらが組み合わさった結果だと考えている。この時代を研究することは、気候が自然の変化にどれほど敏感でありうるかを、科学者が理解する助けになる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to have', 'having', 'had', 'have'], answer: 0, why: '～ enough to …「…するほど～」。fell enough to have effects「影響が出るほど下がった」。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（不作）を受ける関係代名詞 which。あとに動詞 caused が続く。where はあとに完全な文が必要。' },
+      { id: 'C', choices: ['sensitive', 'sensitively', 'sensitivity', 'sense'], answer: 0, why: 'how ＋ 形容詞 ＋ S ＋ V「どれほど～か」。the climate can be のあとに来る補語なので形容詞 sensitive。' },
+    ],
+    tf: [
+      { statement: '小氷期は本当の氷河期だった。', answer: false, why: '第1段落 It was not a true ice age。' },
+      { statement: 'テムズ川がこおり、氷の上で市が開かれたことがある。', answer: true, why: '第2段落 the Thames … froze over … people held "frost fairs" on the ice。' },
+      { statement: '小氷期の原因は、一つにはっきり決まっている。', answer: false, why: '第3段落 Scientists still debate what caused the cooling。' },
+      { statement: '大きな火山の噴火が、日光の一部をさえぎった可能性がある。', answer: true, why: '第3段落 large volcanic eruptions … blocked some sunlight。' },
+    ],
+    qa: [
+      { q: 'What did shorter growing seasons lead to?', choices: ['Poor harvests and food shortages in some regions.', 'More frost fairs on the rivers.', 'Larger glaciers in London.', 'Fewer volcanic eruptions.'], answer: 0, why: '第2段落 Shorter growing seasons led to poor harvests, which in turn caused food shortages。' },
+    ],
+  },
 ]

@@ -5741,6 +5741,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Bats can find food only in bright places.', answer: false, why: '第4段落 even in complete darkness。' },
     ],
   },
+  {
+    id: 'speech-lake-bike',
+    title: 'Around the Lake by Bike (Speech)',
+    level: '中2（スピーチ）',
+    paragraphs: [
+      'Hello, everyone. Last summer, my father and I rode our bikes all the way around Lake Biwa. It is about 200 kilometers, so it took us three days. Today, I want to tell you ( A ) I learned from this trip.',
+      'On the first day, it was very hot, and my legs started to hurt after only thirty kilometers. I wanted to stop, but my father said, "Let\'s ride slowly and enjoy the view." On the second day, it rained hard, but we kept ( B ).',
+      'On the third evening, we finally came back to the place ( C ) we had started. I was very tired, but I felt proud.',
+      'From this trip, I learned that a big goal becomes possible if you take small steps one by one. Thank you for listening.',
+    ],
+    ja: [
+      'みなさん、こんにちは。去年の夏、父と私は自転車で琵琶湖をぐるっと1周しました。およそ200キロあるので、3日かかりました。今日は、この旅から学んだことをお話ししたいと思います。',
+      '1日目はとても暑く、たった30キロで足がいたくなりはじめました。私はやめたいと思いましたが、父は「ゆっくり走って、景色を楽しもう」と言いました。2日目は雨が強くふりましたが、私たちは進みつづけました。',
+      '3日目の夕方、私たちはついに出発した場所にもどってきました。とてもつかれていましたが、ほこらしい気持ちでした。',
+      'この旅から、大きな目標も、小さな一歩を1つずつ進めば実現できるということを学びました。聞いてくれてありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'which', 'who', 'whose'], answer: 0, why: 'tell you what I learned「私が学んだこと」。what は「～すること・もの」で、先行詞なしで使える。' },
+      { id: 'B', choices: ['going', 'go', 'went', 'to go'], answer: 0, why: 'keep ～ing「～しつづける」。kept going「進みつづけた」。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'who'], answer: 0, why: 'あとに we had started という完全な文が続くので関係副詞 where。which だと from などの前置詞が必要。' },
+    ],
+    tf: [
+      { statement: "The speaker rode around the lake with the speaker's father.", answer: true, why: '第1段落 my father and I rode our bikes。' },
+      { statement: 'The trip around the lake took only one day.', answer: false, why: '第1段落 it took us three days。' },
+      { statement: 'It was very cold on the first day.', answer: false, why: '第2段落 On the first day, it was very hot。' },
+      { statement: 'The speaker felt proud at the end of the trip.', answer: true, why: '第3段落 I felt proud。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと

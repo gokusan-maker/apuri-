@@ -1850,6 +1850,17 @@ export const PASSAGES: Passage[] = [
       { q: 'ケンタは何と言った？', choices: ['かっこいいね', 'おもしろいね', 'かわいいね'], answer: 0 },
     ],
   },
+  {
+    id: 'bird-feeder',
+    title: 'A Bird Feeder in Winter',
+    text: 'In winter, my grandfather and I made a bird feeder. We used an empty milk carton. We cut a small window in it and put seeds inside. Then we hung it on a tree in the garden. The next morning, two little birds came to eat. They were brown and white. My grandfather said, "They are sparrows." Now I check the feeder every morning before school.',
+    ja: '冬に、おじいさんと私は鳥のえさ台をつくりました。からっぽの牛にゅうパックを使いました。小さなまどを切って、中にたねを入れました。それから、それを庭の木につるしました。次の朝、小さな鳥が2羽、食べに来ました。茶色と白の鳥でした。おじいさんは「スズメだよ」と言いました。今では、毎朝学校に行く前にえさ台を見ています。',
+    questions: [
+      { q: 'えさ台は何でつくった？', choices: ['牛にゅうパック', 'ペットボトル', '木の箱'], answer: 0 },
+      { q: '次の朝、鳥は何羽来た？', choices: ['2羽', '1羽', '5羽'], answer: 0 },
+      { q: '来た鳥は何だった？', choices: ['スズメ', 'ハト', 'カラス'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'
