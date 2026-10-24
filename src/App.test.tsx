@@ -36,6 +36,20 @@ describe('App', () => {
 
 
 
+
+  it('単語・文法・読解のページは上にキャラクター、その下に今日の課題。ボス部屋のいちばん上は3体（オーナー要望）', () => {
+    render(<App />)
+    const before = (a: Element | null, b: Element | null) => !!a && !!b && !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
+    navTo('単語ゲーム')
+    expect(before(document.querySelector('.ally-word'), screen.getByRole('button', { name: /^今日の課題（単語）：/ }))).toBe(true)
+    navTo('文法チャレンジ')
+    expect(before(document.querySelector('.ally-grammar'), screen.getByLabelText('今日の文法'))).toBe(true)
+    navTo('読解ステージ')
+    expect(before(document.querySelector('.ally-reading'), document.querySelector('.today-read-btn'))).toBe(true)
+    navTo('ボス部屋')
+    expect(document.querySelector('.ally-reading')).toBeNull() // 竜だけの札ではなく
+    expect(before(document.querySelector('.buddy-row, [class*="buddy-row"]'), document.querySelector('.boss-chips'))).toBe(true) // 3体ならんだ列が上
+  })
   it('仲間10体で、ガチャチケット1まいと交換できる', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 10, members: [{ xp: 200 }, ...Array.from({ length: 10 }, (_, k) => ({ xp: k * 40 }))] }))
     const ok = vi.spyOn(window, 'confirm').mockReturnValue(true)

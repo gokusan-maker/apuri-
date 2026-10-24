@@ -39,9 +39,9 @@ export function TrackAlly({ track, buddy, label }: { track: Track; buddy: Buddy;
 }
 
 // ボス部屋のいちばん上：いっしょに戦う読解の竜
-export const BossAlly = ({ buddy, wins, total, hunter = false }: { buddy: Buddy; wins?: number; total?: number; hunter?: boolean }) => (
+export const BossAlly = ({ buddy, wins, total, hunter = false, hideAlly = false }: { buddy: Buddy; wins?: number; total?: number; hunter?: boolean; hideAlly?: boolean }) => (
   <>
-    <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />
+    {!hideAlly && <TrackAlly track="reading" buddy={buddy} label="いっしょに戦う読解の竜" />}
     <p className="boss-chips">
       {wins !== undefined && total !== undefined && (
         <span className="boss-record" aria-label="たおしたボスの数">

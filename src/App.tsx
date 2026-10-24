@@ -939,6 +939,27 @@ function App() {
             />
           </details>
   )
+  // 単語・文法・読解の3体（ホームとボス部屋のいちばん上）
+  const buddyRow = (
+      <BuddyRow
+        dancing={trioDance}
+        crowned={loadTodayWordsDay() === today && loadDailyGrammarDay() === today && loadDailyShortDay() === today}
+        todayGain={{ word: todayXp.day === today ? todayXp.count : 0, ...loadBuddyToday(today) }}
+        wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
+        wordName={monster.name ?? formOf(monster).name}
+        wordLevel={levelInfo(monster.xp).level}
+        buddies={buddies}
+        onGo={(w) => {
+          setShowShop(false)
+          setShowChallenge(false)
+          if (w === 'word') setWordTab('mini')
+          setMode(w === 'grammar' ? 'grammar' : w === 'reading' ? 'reading' : 'word')
+          const who = w === 'word' ? (monster.name ?? formOf(monster).name) : buddyName(w, buddies[w])
+          pushToast([{ id: `go-${w}`, text: `${who}「${GO_LINES[w].en}」（${GO_LINES[w].ja}）`, counter: 'answers', target: 0 }])
+          toContent()
+        }}
+      />
+  )
   // カードで学ぶ（ホームの「今日の単語」と、単語タブのカードで使う）
   const cardStudy = (
         cardFocus ? (
@@ -1287,24 +1308,7 @@ function App() {
               pushToast([{ id: 'pet-stamps', text: '🐾 なでなでスタンプが10こたまった！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
             }}
           />
-          <BuddyRow
-            dancing={trioDance}
-            crowned={loadTodayWordsDay() === today && loadDailyGrammarDay() === today && loadDailyShortDay() === today}
-            todayGain={{ word: todayXp.day === today ? todayXp.count : 0, ...loadBuddyToday(today) }}
-            wordFigure={<MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />}
-            wordName={monster.name ?? formOf(monster).name}
-            wordLevel={levelInfo(monster.xp).level}
-            buddies={buddies}
-            onGo={(w) => {
-              setShowShop(false)
-              setShowChallenge(false)
-              if (w === 'word') setWordTab('mini')
-              setMode(w === 'grammar' ? 'grammar' : w === 'reading' ? 'reading' : 'word')
-              const who = w === 'word' ? (monster.name ?? formOf(monster).name) : buddyName(w, buddies[w])
-              pushToast([{ id: `go-${w}`, text: `${who}「${GO_LINES[w].en}」（${GO_LINES[w].ja}）`, counter: 'answers', target: 0 }])
-              toContent()
-            }}
-          />
+          {buddyRow}
           <button
             className="list-link buddy-swap-link"
             onClick={() => {
@@ -1397,6 +1401,24 @@ function App() {
           </>
         )}
       </header>
+      {mode === 'word' && !showShop && !showChallenge && (
+        <div className="boss-ally ally-word" aria-label="単語の相棒（正解で育つ）">
+          <span className="ally-fig" aria-hidden="true">
+            <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />
+          </span>
+          <div className="boss-ally-text">
+            <strong>
+              {monster.name ?? formOf(monster).name} Lv.{levelInfo(monster.xp).level}
+            </strong>
+            <span className="buddy-bar ally-bar" role="progressbar" aria-label="単語の相棒の経験値" aria-valuemin={0} aria-valuemax={levelInfo(monster.xp).need} aria-valuenow={levelInfo(monster.xp).into}>
+              <span style={{ width: `${(levelInfo(monster.xp).into / levelInfo(monster.xp).need) * 100}%` }} />
+            </span>
+            <small>
+              XP {levelInfo(monster.xp).into}/{levelInfo(monster.xp).need}
+            </small>
+          </div>
+        </div>
+      )}
       {mode === 'word' && !showShop && !showChallenge && !todayQuiz && (
         <button
           className="long-recommend daily-long today-read-btn"
@@ -1571,7 +1593,9 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} />}
+          {mode === 'boss' && buddyRow}
+          {mode === 'boss' && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
+          {mode === 'reading' && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${dailyShort(today).title}`} onClick={() => setShortGo(true)}>
               📅 今日の読解{loadDailyShortDay() === today ? ' ✅' : ''}
@@ -1829,6 +1853,7 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
+          {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && (
             <TodayGrammar
               today={today}
@@ -1839,7 +1864,6 @@ function App() {
               }}
             />
           )}
-          {mode === 'grammar' && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'word' && todayQuiz && (
             <p className="weak-banner">
               📋 今日の単語（4択）：{todayWords(today).map((w) => w.en).join('・')}

@@ -2068,3 +2068,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .today-tasks .today-task .today-task-tag { display: block; padding: 0; background: none; color: #fff; text-shadow: 0 1px 0 rgb(0 0 0 / 0.2); }
 .today-tasks .today-task .today-task-mark { display: inline-block; width: auto; height: auto; place-items: unset; border-radius: 999px; background: #fff; color: #1f2937; }
 .today-tasks .today-task.done .today-task-mark { background: #fde047; color: #713f12; }
+
+/* 単語ゲームのいちばん上の単語の相棒：文法・読解のなかまと同じ大きさのカードに */
+.ally-word .ally-fig { display: grid; place-items: center; width: 56px; height: 56px; flex: none; }
+.ally-word .ally-fig > * { width: 56px !important; height: 56px !important; }
+.ally-word .ally-fig svg { width: 100%; height: 100%; }
+.ally-word .boss-ally-text strong { white-space: nowrap; }
