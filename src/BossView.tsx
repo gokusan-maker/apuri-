@@ -401,7 +401,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     <section className={`card quiz boss bg-${golden ? 'gold' : bossBgOf(level)}`}>
       <div className="stage-head">
         <button className="stage-back" onClick={onExit}>
-          ← にげる
+          {won || lost ? '← もどる' : '← にげる'}
         </button>
         <span>{title ?? `${level} のボス`}</span>
       </div>

@@ -28,6 +28,8 @@ describe('ボス戦', () => {
     expect(document.body.textContent).not.toContain('ハートを減らさず') // Sランクの条件は title にだけ（文字を減らす）
     expect(document.querySelectorAll('.boss .confetti:not(.gold)').length).toBe(12)
     expect(screen.getByText('💥 とどめ！')).toBeInTheDocument()
+    expect(screen.getByText('← もどる')).toBeInTheDocument() // 勝ったあとは「にげる」ではなく「もどる」
+    expect(screen.queryByText('← にげる')).toBeNull()
     expect(document.querySelector('.boss-intro')).toBeNull()
     expect(document.querySelector('.boss-figure.finished')).not.toBeNull()
     expect(screen.getByLabelText(/最大ダメージ記録/)).toBeInTheDocument()
