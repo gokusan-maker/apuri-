@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-bystander',
+    title: 'Why Crowds Hesitate',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When someone collapses on a busy street, we might expect that the more people there are nearby, the more likely it is that someone will help. Surprisingly, research suggests the opposite. Psychologists call this tendency the \"bystander effect\": people are less likely to help a person in need ( A ) many others are present.",
+      "In a famous series of experiments in the 1960s, participants heard over an intercom what sounded like another person having a medical emergency. When participants believed they were the only one who could hear it, most of them went to help quickly. When they believed several other people could also hear it, they were much slower to act, and some did not act at all.",
+      "One explanation is the \"diffusion of responsibility.\" When many people are present, each person feels less personally responsible, assuming that someone else will step in. People also look to others to decide whether a situation is truly an emergency. If everyone around them seems calm, they may conclude that nothing serious is happening, ( B ) help is in fact urgently needed.",
+      "Knowing about the bystander effect can help us overcome it. If you ever need help in a crowd, experts suggest ( C ) to one specific person and asking that person directly, for example, \"You in the blue jacket, please call an ambulance.\" This makes it clear who is responsible.",
+    ],
+    ja: [
+      'にぎやかな通りでだれかがたおれたとき、近くに人が多いほど、だれかが助ける可能性が高くなると思うかもしれない。おどろいたことに、研究はその逆を示している。心理学者はこの傾向を「傍観者効果」とよぶ。ほかの人がたくさんいると、人は助けを必要としている人を助けにくくなるのである。',
+      '1960年代の有名な一連の実験で、参加者はインターホンごしに、別の人が急病になったように聞こえる声を聞いた。自分だけがそれを聞いていると思った参加者の多くは、すぐに助けに行った。ほかにも何人かが聞いていると思った参加者は、行動するのがずっとおそく、まったく行動しない人もいた。',
+      '説明の1つは「責任の分散」である。多くの人がいると、一人ひとりが自分の責任を感じにくくなり、だれかほかの人が手を出すだろうと思いこむ。また人は、ほかの人を見て、その状況が本当に緊急かどうかを判断する。まわりのみんなが落ち着いているように見えると、実際には助けが急いで必要なのに、深刻なことは何も起きていないと結論づけてしまうことがある。',
+      '傍観者効果について知っておくと、それを乗りこえる助けになる。もし人ごみで助けが必要になったら、専門家は、特定の1人を指さして、その人に直接たのむことをすすめている。たとえば、「青い上着のあなた、救急車を呼んでください」のように言うのだ。こうすれば、だれに責任があるかがはっきりする。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'despite', 'because of'], answer: 0, why: 'あとに many others are present という文が続くので接続詞の when「～するとき」。during・despite・because of は前置詞。' },
+      { id: 'B', choices: ['even though', 'in spite of', 'because of', 'despite'], answer: 0, why: 'あとに help is … needed という文が続くので接続詞の even though「～にもかかわらず」。in spite of・because of・despite は前置詞で、文は続かない。' },
+      { id: 'C', choices: ['pointing', 'point', 'to point', 'pointed'], answer: 0, why: 'suggest のあとは動名詞（～ing）。suggest pointing … and asking …。suggest to do の形は使わない。' },
+    ],
+    tf: [
+      { statement: 'まわりに人が多いほど、助けてもらえる可能性が高くなると研究は示している。', answer: false, why: '第1段落 Surprisingly, research suggests the opposite。' },
+      { statement: '実験で、自分だけが聞いていると思った参加者の多くは、すぐに助けに行った。', answer: true, why: '第2段落 most of them went to help quickly。' },
+      { statement: 'まわりの人が落ち着いていると、深刻なことは起きていないと思ってしまうことがある。', answer: true, why: '第3段落 If everyone around them seems calm, they may conclude that nothing serious is happening。' },
+      { statement: '専門家は、人ごみではまわりの全員に大声で呼びかけるのがよいとすすめている。', answer: false, why: '第4段落 pointing to one specific person and asking that person directly。' },
+    ],
+    qa: [
+      { q: 'Why does each person feel less responsible when many others are present?', choices: ['They assume that someone else will step in.', 'They cannot hear the person who needs help.', 'They are too busy to stop.', 'They think that helping is not allowed.'], answer: 0, why: '第3段落 each person feels less personally responsible, assuming that someone else will step in。' },
+    ],
+  },
+{
     id: 'adv-testing-effect',
     title: 'Close Your Notes',
     level: '難関大（評論）',
