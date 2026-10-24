@@ -91,3 +91,9 @@ it('おさんぽ日記・まだのバッジ・ことわざ帳・英語日記・�
   for (const f of ['App.tsx', 'BadgesView.tsx', 'BossBookView.tsx', 'DiaryView.tsx', 'LongReadingView.tsx', 'GrammarView.tsx', 'RiddleBookView.tsx', 'MonsterView.tsx']) expect(readFileSync(`src/${f}`, 'utf8')).toMatch(/chip-fold cf-\d/)
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.chip-fold > summary \{[^}]*white-space: nowrap/)
 })
+
+it('まちがえやすい（ピンク）・今日の文法のポイント（むらさき）・まとめて追加（青）のたたみも色つきの丸いボタン', () => {
+  expect(readFileSync('src/CardView.tsx', 'utf8')).toContain('confusing-tip chip-fold cf-5')
+  expect(readFileSync('src/TodayGrammarView.tsx', 'utf8')).toContain('today-grammar-point chip-fold cf-1')
+  expect(readFileSync('src/MyWordsView.tsx', 'utf8')).toContain('bulk chip-fold cf-4')
+})

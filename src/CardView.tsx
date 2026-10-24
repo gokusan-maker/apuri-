@@ -219,7 +219,7 @@ export function Card({ card, onAnswer, autoSpeak = false, autoStart = true, jaFi
               <p className="example-ja">{card.exampleJa}</p>
             ))}
           {confusingFor(card.id) && (
-            <details className="confusing-tip">
+            <details className="confusing-tip chip-fold cf-5">
               <summary>⚠ まちがえやすい：{confusingFor(card.id)!.title}</summary>
               {confusingFor(card.id)!.points.map((p) => (
                 <p key={p}>{p}</p>

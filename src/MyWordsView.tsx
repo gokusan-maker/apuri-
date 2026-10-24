@@ -51,7 +51,7 @@ export function MyWords({ list, onChange }: Props) {
           追加する
         </button>
       </form>
-      <details className="bulk">
+      <details className="bulk chip-fold cf-4">
         <summary>まとめて追加する</summary>
         <p className="stats-note">1行に「英語,意味」で入力（例：sunflower,ひまわり）</p>
         <textarea value={bulk} onChange={(e) => setBulk(e.target.value)} rows={4} aria-label="まとめて追加" />
@@ -74,7 +74,7 @@ export function MyWords({ list, onChange }: Props) {
         )}
       </details>
       {list.length > 0 && (
-        <details className="bulk">
+        <details className="bulk chip-fold cf-4">
           <summary>テキストで書き出す</summary>
           <p className="stats-note">コピーして、ほかの端末の「まとめて追加」に貼りつけられます</p>
           <textarea readOnly value={exportText(list)} rows={4} aria-label="書き出したテキスト" />

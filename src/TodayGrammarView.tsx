@@ -20,7 +20,7 @@ export function TodayGrammar({ today, onAnswer, onClear }: Props) {
   return (
     <section className="today-grammar" aria-label="今日の文法">
       <p className="today-section-title">📐 今日の文法：{unit.title.split('（')[0]}</p>
-      <details className="today-grammar-point">
+      <details className="today-grammar-point chip-fold cf-1">
         <summary>📌 ポイント</summary>
         {unit.points[0]}
       </details>
