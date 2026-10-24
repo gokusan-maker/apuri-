@@ -1073,7 +1073,7 @@ function App() {
           📅 1週間前の単語（{weekAgo.length}語）
         </button>
       )}
-      <details className="theme-practice">
+      <details className="theme-practice game-fold lg-2">
         <summary>🗂 テーマで練習</summary>
         <div className="counts" role="group" aria-label="練習のしかた">
           <button aria-pressed={!themeQuiz} onClick={() => setThemeQuiz(false)}>
