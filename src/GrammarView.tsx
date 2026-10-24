@@ -495,8 +495,8 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           <div className="grammar-recommend">
             <p className="stats-note">🌟 おすすめ単元</p>
             {recommendUnits(units.filter((u) => grade === 'all' || gradeOf(u.id) === grade), clears, record).map((u) => (
-              <button key={u.id} className="list-link" onClick={() => open(u)}>
-                {`👉 ${u.title}`}
+              <button key={u.id} className="list-link rec-unit" aria-label={`おすすめ：${u.title}`} title={u.title} onClick={() => open(u)}>
+                {u.title.split('（')[0]}
               </button>
             ))}
           </div>

@@ -75,3 +75,7 @@ it('設定のスイッチは1枚のカードにまとまり、見出しは色つ
 it('文法の学年・読解のジャンルの行は game-fold の色つきボタン', () => {
   expect(css).toMatch(/\.game-fold > summary \{ gap: 10px;[^}]*linear-gradient/)
 })
+
+it('文法のおすすめ単元は金色のゲームボタン', () => {
+  expect(css).toMatch(/\.grammar-recommend \.rec-unit \{[^}]*linear-gradient\(135deg, #fde047, #f59e0b\)/)
+})

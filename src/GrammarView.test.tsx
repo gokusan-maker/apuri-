@@ -333,7 +333,7 @@ it('おすすめ単元から単元を開ける', () => {
   localStorage.clear()
   render(<Grammar />)
   expect(screen.getByText('🌟 おすすめ単元')).toBeInTheDocument()
-  fireEvent.click(screen.getByText(`👉 ${GRAMMAR[0].title}`))
+  fireEvent.click(screen.getByRole('button', { name: `おすすめ：${GRAMMAR[0].title}` }))
   expect(screen.getByText(GRAMMAR[0].points[0])).toBeInTheDocument()
 })
 

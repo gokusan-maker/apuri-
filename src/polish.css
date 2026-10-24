@@ -2135,3 +2135,9 @@ details[open] > summary::before { transform: rotate(90deg); }
 .settings .settings-h { display: flex; align-items: center; gap: 6px; width: fit-content; margin: 20px 0 8px; padding: 5px 14px 5px 10px; border: none; border-radius: 999px; background: var(--accent-grad); color: #fff; font-size: 0.9rem; text-shadow: 0 1px 2px rgb(0 0 0 / 0.2); box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 55%, #000); }
 .settings .speak-test { padding: 9px 18px; border: none; background: var(--accent-grad); color: #fff; font-weight: 800; box-shadow: 0 3px 0 color-mix(in srgb, var(--accent) 55%, #000); }
 .settings .speak-test:active { transform: translateY(2px); box-shadow: 0 1px 0 color-mix(in srgb, var(--accent) 55%, #000); }
+
+/* 文法のおすすめ単元：金色のゲームボタン（短い題名だけ） */
+.grammar-recommend { gap: 8px; }
+.grammar-recommend .rec-unit { display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border: none; border-radius: 14px; background: linear-gradient(135deg, #fde047, #f59e0b); color: #713f12; font-weight: 800; box-shadow: 0 3px 0 #b45309, 0 5px 10px rgb(0 0 0 / 0.12); }
+.grammar-recommend .rec-unit::before { content: '⭐'; }
+.grammar-recommend .rec-unit:active { transform: translateY(2px); box-shadow: 0 1px 0 #b45309; }
