@@ -84,10 +84,6 @@ it('文法の学年まとめテストは学年の色のゲームボタン', () =
   expect(css).toMatch(/\.grade-tests \.list-link \{ --gt-h: 160;[^}]*linear-gradient/)
 })
 
-it('読解のランダム挑戦はサイコロのゲームボタン', () => {
-  expect(css).toMatch(/\.random-read-btn \{[^}]*linear-gradient\(135deg, #22d3ee, #6366f1\)/)
-})
-
 it('単語のおさらいのボタンとテーマで練習は色つきのゲームボタン', () => {
   expect(css).toMatch(/\.word-review > \.list-link \{ --wr-h: 225;[^}]*linear-gradient/)
   expect(css).toContain('.word-review > .theme-practice.game-fold { margin: 0 0 10px;')

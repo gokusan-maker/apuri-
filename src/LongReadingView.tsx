@@ -11,6 +11,7 @@ import type { Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
+import { GameTile } from './GameTileView'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string } // passages：このむずかしさの長文だけを出す
 
@@ -186,26 +187,33 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         <p className="stats-note">記号で答える入試形式の読解</p>
-        {!whole && dailyPick(LIST, today) && (
-          <button className="level-daily" aria-label={`このレベルのおすすめ：${dailyPick(LIST, today)!.title}`} onClick={() => openPassage(dailyPick(LIST, today)!)}>
-            🎯 おすすめ<strong>{dailyPick(LIST, today)!.title}</strong>
-            {record[dailyPick(LIST, today)!.id] !== undefined ? ' ✅' : ''}
-          </button>
-        )}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}
         </button>}
-        {Object.keys(record).length > 0 && (
-          <button className="list-link" onClick={() => setVocabQuiz(true)}>
-            📒 重要語句クイズ（読んだ読解から5問）
-          </button>
-        )}
-        {Object.keys(record).length > 0 && (
-          <button className="list-link" onClick={() => setTfQuiz(true)}>
-            ⭕❌ ○×だけチャレンジ（解いた読解から10問）
-          </button>
-        )}
+        {/* 読解ゲーム：文法ゲーム・単語のミニゲームと同じ色つきタイルでならべる */}
+        <p className="game-grid-title">🎮 読解ゲーム</p>
+        <div className="game-grid read-games" aria-label="読解ゲーム">
+          {!whole && dailyPick(LIST, today) && (
+            <GameTile icon="🎯" name="おすすめ" sub={`${dailyPick(LIST, today)!.title}${record[dailyPick(LIST, today)!.id] !== undefined ? ' ✅' : ''}`} onClick={() => openPassage(dailyPick(LIST, today)!)} />
+          )}
+          <GameTile
+            playKey="read:random"
+            icon="🎲"
+            name="ランダム挑戦"
+            sub={LIST.some((x) => record[x.id] === undefined) ? 'まだの読解から1本' : '全部から1本'}
+            onClick={() => {
+              const todo = LIST.filter((x) => record[x.id] === undefined)
+              const pool = todo.length > 0 ? todo : LIST
+              openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
+            }}
+          />
+          {Object.keys(record).length > 0 && <GameTile playKey="read:vocab" icon="📒" name="重要語句クイズ" sub="読んだ読解から5問" onClick={() => setVocabQuiz(true)} />}
+          {Object.keys(record).length > 0 && <GameTile playKey="read:tf" icon="⭕" name="○×チャレンジ" sub="解いた読解から10問" onClick={() => setTfQuiz(true)} />}
+          {whole && gradeChallenge('中3', record).next && (
+            <GameTile icon="🔥" name="中3チャレンジ" sub={`${gradeChallenge('中3', record).done} / ${gradeChallenge('中3', record).total}本クリア`} onClick={() => openPassage(gradeChallenge('中3', record).next!)} />
+          )}
+        </div>
         <details className="long-types long-idioms game-fold lg-2">
           <summary><span className="lg-icon" aria-hidden="true">📗</span>よく出る熟語 <span className="fold-meta" aria-label={`熟語 ${IDIOMS.length}個`}>{IDIOMS.length}</span></summary>
           <ul>
@@ -216,18 +224,6 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title }: 
             ))}
           </ul>
         </details>
-        {whole && gradeChallenge('中3', record).next && (
-          <button className="list-link" onClick={() => openPassage(gradeChallenge('中3', record).next!)}>
-            🔥 中3チャレンジ（中3レベルの読解 {gradeChallenge('中3', record).done} / {gradeChallenge('中3', record).total}本クリア・次の1本へ）
-          </button>
-        )}
-        <button className="list-link random-read-btn" title={LIST.some((x) => record[x.id] === undefined) ? 'まだ読んでいない読解から1本' : undefined} onClick={() => {
-            const todo = LIST.filter((x) => record[x.id] === undefined)
-            const pool = todo.length > 0 ? todo : LIST
-            openPassage(whole ? randomLong(record, rand()) : pool[Math.floor(rand() * pool.length)])
-          }}>
-          🎲 ランダム挑戦
-        </button>
         {whole && recommendLong(types, record) && (
           <button className="long-recommend" onClick={() => openPassage(recommendLong(types, record)!.passage)}>
             💡 おすすめ：苦手な「{TYPE_LABEL[recommendLong(types, record)!.type]}」の練習に
