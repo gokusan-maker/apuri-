@@ -3685,6 +3685,35 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-light-pollution',
+    title: 'Where Have the Stars Gone?',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Have you ever looked up at night and seen only a few stars? In many cities, the sky is ( A ) bright at night that most stars cannot be seen. This problem is called light pollution. It happens when too much artificial light goes up into the sky. Many people who live in big cities have never seen the Milky Way with their own eyes.",
+      "Light pollution is not only a problem for people who like stars. It also affects animals. For example, baby sea turtles usually move toward the brightest place after they come out of their eggs on the beach. In nature, that place is the sea, but bright lights from hotels and roads can lead them in the wrong direction. Some birds that fly at night also become confused by city lights.",
+      "There are simple ways to reduce light pollution. We can turn off lights ( B ) we do not need them. Street lights can be covered on top so that they shine down onto the road, not up into the sky. Some towns around the world have made rules about outdoor lights, and now people come to visit them ( C ) see beautiful starry skies.",
+    ],
+    ja: [
+      '夜に空を見上げて、星が少ししか見えなかったことはありますか。多くの都市では、夜の空がとても明るいので、ほとんどの星が見えません。この問題は光害とよばれています。人工の光が空に向かって出すぎることで起こります。大都市に住む人の多くは、天の川を自分の目で見たことがありません。',
+      '光害は、星が好きな人だけの問題ではありません。動物にもえいきょうがあります。たとえば、海がめの赤ちゃんは、浜辺で卵から出てくると、ふつういちばん明るいほうへ進みます。自然の中ではそれは海ですが、ホテルや道路の明るい光が、赤ちゃんをまちがった方向へ導いてしまうことがあります。夜に飛ぶ鳥の中にも、都会の光でまよってしまうものがいます。',
+      '光害を減らすかんたんな方法があります。必要ないときは明かりを消すことができます。街灯の上をおおって、空ではなく道路を照らすようにすることもできます。世界には、屋外の明かりについて決まりを作った町もあり、今では美しい星空を見るために人々がおとずれています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。so bright that。such は名詞をふくむ形、too・very は that とつながらない。' },
+      { id: 'B', choices: ['when', 'during', 'without', 'because of'], answer: 0, why: 'あとに we do not need them という文が続くので接続詞の when「～するとき」。during・without・because of は前置詞。' },
+      { id: 'C', choices: ['to', 'for', 'so', 'that'], answer: 0, why: '「～するために」は to ＋ 動詞の原形。come to visit them to see ～「～を見るためにおとずれる」。' },
+    ],
+    tf: [
+      { statement: '光害は、人工の光が空に向かって出すぎることで起こる。', answer: true, why: '第1段落 It happens when too much artificial light goes up into the sky。' },
+      { statement: '光害で困るのは、星を見るのが好きな人だけである。', answer: false, why: '第2段落 Light pollution is not only a problem for people who like stars。' },
+      { statement: '海がめの赤ちゃんは、ふつういちばん明るいほうへ進む。', answer: true, why: '第2段落 baby sea turtles usually move toward the brightest place。' },
+      { statement: '街灯は、空を照らすように上に向けるのがよい。', answer: false, why: '第3段落 so that they shine down onto the road, not up into the sky。' },
+    ],
+    qa: [
+      { q: 'Why do people visit some towns that have rules about outdoor lights?', choices: ['To see beautiful starry skies.', 'To buy new street lights.', 'To watch baby sea turtles in hotels.', 'To work late at night.'], answer: 0, why: '第3段落 people come to visit them to see beautiful starry skies。' },
+    ],
+  },
+  {
     id: 'hs-shoe-repair',
     title: 'Mr. Hara\'s Shoe Shop',
     level: '高校入試（物語）',
