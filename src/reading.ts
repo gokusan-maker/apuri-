@@ -1730,6 +1730,17 @@ export const PASSAGES: Passage[] = [
     ],
   },
   {
+    id: 'night-market',
+    title: 'The Night Market',
+    text: "On Saturday night, my family went to a night market near the river. There were many small shops with bright lights. We ate grilled corn and drank cold mango juice. My little brother tried to catch a goldfish, but the paper net broke. He was sad, so the shop owner gave him a small toy fish. We walked home under the stars, and my brother held his toy fish all the way.",
+    ja: '土曜日の夜、私の家族は川の近くの夜市に行きました。明るい光のついた小さな店がたくさんありました。私たちは焼きとうもろこしを食べて、冷たいマンゴージュースを飲みました。弟は金魚すくいをしましたが、紙のあみがやぶれてしまいました。弟が悲しんでいたので、店の人が小さなおもちゃの魚をくれました。私たちは星空の下を歩いて帰り、弟はずっとそのおもちゃの魚をにぎっていました。',
+    questions: [
+      { q: '夜市はどこにあった？', choices: ['川の近く', '山の上', '駅の中'], answer: 0 },
+      { q: '弟はなぜ悲しかった？', choices: ['紙のあみがやぶれたから', 'ジュースをこぼしたから', '道にまよったから'], answer: 0 },
+      { q: '店の人は弟に何をくれた？', choices: ['おもちゃの魚', '本物の金魚', 'マンゴージュース'], answer: 0 },
+    ],
+  },
+  {
     id: 'sea-glass',
     title: 'Sea Glass',
     text: "Last summer, my sister and I walked along the beach every morning. One day, she found a small green stone. It was smooth and round, and the light came through it. \"This is sea glass,\" my mother said. \"It was a broken bottle a long time ago. The waves and sand made it soft.\" After that, we looked for sea glass every day. We found green, white, and one rare blue piece. Now they are in a jar by my window.",

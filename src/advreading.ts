@@ -3478,6 +3478,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-spotlight',
+    title: 'Nobody Is Watching as Closely as You Think',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever worried all day about a small stain on your shirt, sure that everyone was looking at it? Psychologists call this the \"spotlight effect\": the tendency to believe that other people notice our appearance and behavior much more ( A ) they actually do.",
+      "In a well-known study, college students were asked to wear a T-shirt showing a large picture of a singer whom most of them found embarrassing, and then to walk into a room full of other students. Afterward, the wearers guessed that about half of the people in the room had noticed the shirt. In reality, only about a quarter had.",
+      "Why do we overestimate how much others notice us? One reason is that we experience the world from the center of our own lives. We are so aware of our own feelings ( B ) we find it hard to remember that other people are busy thinking about themselves, not about us.",
+      "Understanding the spotlight effect can reduce unnecessary worry. A mistake in a speech or a bad hair day is likely to be forgotten by others much sooner than we expect. Knowing this may give us the courage to try new things ( C ) fearing that everyone is watching.",
+    ],
+    ja: [
+      'シャツについた小さなしみのことを、みんなに見られていると思いこんで一日じゅう気にしたことはないだろうか。心理学者はこれを「スポットライト効果」とよぶ。ほかの人が自分の見た目やふるまいに、実際よりずっと多く気づいていると思いこむ傾向である。',
+      'よく知られた研究で、大学生たちは、ほとんどの学生がはずかしいと感じる歌手の大きな絵がついたTシャツを着て、ほかの学生でいっぱいの部屋に入るよう求められた。あとで、シャツを着た学生たちは、部屋にいた人のおよそ半分がシャツに気づいたと予想した。実際に気づいていたのは、およそ4分の1だけだった。',
+      'なぜ私たちは、ほかの人が自分に気づく程度を大きく見積もってしまうのだろうか。1つの理由は、私たちが自分の人生の中心から世界を経験していることである。私たちは自分の気持ちをあまりに強く意識しているので、ほかの人は私たちのことではなく、自分のことを考えるのにいそがしいのだということを、思い出しにくいのである。',
+      'スポットライト効果を理解すると、よけいな心配を減らすことができる。スピーチでの失敗や、髪型がうまく決まらない日のことは、思っているよりずっと早くほかの人に忘れられるだろう。このことを知っていれば、みんなに見られていると恐れずに、新しいことに挑戦する勇気がわくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'as', 'then', 'that'], answer: 0, why: '比較級 much more のあとは than。much more than they actually do「実際よりずっと多く」。' },
+      { id: 'B', choices: ['that', 'which', 'what', 'as'], answer: 0, why: 'so ～ that …「とても～なので…」。so aware of our own feelings that we find it hard …。' },
+      { id: 'C', choices: ['without', 'not', 'no', 'none'], answer: 0, why: '前置詞 without ＋ 動名詞 fearing「恐れずに」。not・no・none は前置詞ではないので fearing をつなげられない。' },
+    ],
+    tf: [
+      { statement: 'スポットライト効果とは、ほかの人が自分に気づいている程度を、実際より大きく思う傾向である。', answer: true, why: '第1段落 notice our appearance and behavior much more than they actually do。' },
+      { statement: '実験でシャツに気づいた人は、着た学生の予想よりずっと多かった。', answer: false, why: '第2段落 guessed … about half … In reality, only about a quarter had。' },
+      { statement: '自分の気持ちを強く意識しているため、ほかの人も自分のことで頭がいっぱいだと忘れやすい。', answer: true, why: '第3段落 We are so aware of our own feelings that we find it hard to remember …。' },
+      { statement: 'スピーチでの失敗は、ほかの人にいつまでもおぼえられている。', answer: false, why: '第4段落 is likely to be forgotten by others much sooner than we expect。' },
+    ],
+    qa: [
+      { q: 'In the study, about how many people in the room actually noticed the T-shirt?', choices: ['About a quarter of them.', 'About half of them.', 'Almost all of them.', 'Nobody at all.'], answer: 0, why: '第2段落 In reality, only about a quarter had。' },
+    ],
+  },
+{
     id: 'adv-bystander',
     title: 'Why Crowds Hesitate',
     level: '難関大（評論）',
@@ -3775,6 +3806,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'How did the writer\'s mornings change after that rainy day?', choices: ['They became much brighter.', 'They became much busier.', 'The writer started to walk to school.', 'The writer stopped taking the bus.'], answer: 0, why: '第3段落 My mornings became much brighter。' },
+    ],
+  },
+  {
+    id: 'hs-drones',
+    title: 'Help from the Sky',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Have you ever seen a drone? A drone is a small flying machine that people control from the ground ( A ) a pilot inside. Many people use drones to take photos from the sky, but drones are also starting to help people in other ways.",
+      "In some countries, drones carry blood and medicine to hospitals in places that are hard to reach by car. The roads there are long and sometimes dangerous, so a trip by car can take hours. A drone can fly over mountains and rivers and arrive ( B ) a short time.",
+      "In Japan, too, some towns have tried using drones to send food and daily goods to people who live on small islands or in the mountains. Many of these people are elderly, ( C ) it is not easy for them to go shopping. With drones, they can get what they need without leaving home.",
+      "Of course, there are still problems. Drones cannot fly in strong wind or heavy rain, and they can carry only light things. However, many people believe that drones will become an important part of our lives in the future.",
+    ],
+    ja: [
+      'ドローンを見たことがありますか。ドローンは、中にパイロットが乗らずに、人が地上から操縦する小さな飛ぶ機械です。多くの人が空から写真をとるのにドローンを使っていますが、ドローンはほかの方法でも人々の役に立ち始めています。',
+      'ある国々では、車で行くのがむずかしい場所にある病院へ、ドローンが血液や薬を運んでいます。そこへの道は長く、ときには危険なので、車で行くと何時間もかかることがあります。ドローンなら山や川の上を飛んで、短い時間で着くことができます。',
+      '日本でも、小さな島や山の中に住む人々に、ドローンで食べ物や日用品を送る試みをした町があります。こうした人々の多くはお年寄りなので、買い物に行くのはかんたんではありません。ドローンがあれば、家を出なくても必要なものを手に入れることができます。',
+      'もちろん、まだ問題もあります。ドローンは強い風や大雨の中では飛べませんし、軽い物しか運べません。しかし、多くの人は、ドローンが将来、私たちの生活の大切な一部になると考えています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'not', 'no', 'none'], answer: 0, why: '前置詞 without ＋ 名詞「～なしで」。without a pilot inside「中にパイロットが乗らずに」。not・no・none は前置詞ではない。' },
+      { id: 'B', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in a short time「短い時間で」。期間の中で終わることは in で表す。' },
+      { id: 'C', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'あとに it is not easy … という文が続くので、接続詞 so「だから」。such・too・very は文と文をつなげない。' },
+    ],
+    tf: [
+      { statement: 'ドローンは、中に乗ったパイロットが操縦する。', answer: false, why: '第1段落 people control from the ground without a pilot inside。' },
+      { statement: 'ある国では、ドローンが病院に血液や薬を運んでいる。', answer: true, why: '第2段落 drones carry blood and medicine to hospitals。' },
+      { statement: '日本では、島や山に住む人に、ドローンで物を送る試みがある。', answer: true, why: '第3段落 some towns have tried using drones to send food and daily goods。' },
+      { statement: 'ドローンは、強い風や大雨の中でも問題なく飛べる。', answer: false, why: '第4段落 Drones cannot fly in strong wind or heavy rain。' },
+    ],
+    qa: [
+      { q: 'Why is it hard for some people on small islands to go shopping?', choices: ['Many of them are elderly.', 'They do not have any money.', 'Drones are too expensive for them.', 'There are no stores in Japan.'], answer: 0, why: '第3段落 Many of these people are elderly, so it is not easy for them to go shopping。' },
     ],
   },
   {

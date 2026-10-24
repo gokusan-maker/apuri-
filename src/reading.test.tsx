@@ -5,7 +5,7 @@ import { Reading } from './ReadingView'
 
 describe('読解ミニ', () => {
   it('90話、各3問で、正解が選択肢の中にある', () => {
-    expect(PASSAGES).toHaveLength(160)
+    expect(PASSAGES).toHaveLength(161)
     expect(new Set(PASSAGES.map((p) => p.id)).size).toBe(PASSAGES.length)
     for (const p of PASSAGES) {
       expect(p.questions).toHaveLength(3)
