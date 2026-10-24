@@ -52,7 +52,7 @@ export function GrammarDuel({ onBack, onBest }: Props) {
             <span>❌ ミス +{DUEL_PENALTY}秒</span>
             {best > 0 && <span>🏆 ベスト {best}秒</span>}
           </p>
-          <button className="flip" onClick={() => setStartAt(nowMs())}>
+          <button className="flip ta-start" onClick={() => setStartAt(nowMs())}>
             スタート
           </button>
         </>

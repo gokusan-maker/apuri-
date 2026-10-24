@@ -49,7 +49,7 @@ export function BossTime({ words, onBack }: Props) {
             {BOSS_TA_SECONDS}秒で何ダメージ出せる？{best > 0 ? `（ベスト ${best}）` : ''}
           </p>
           <button
-            className="flip"
+            className="flip ta-start"
             onClick={() => {
               const t = nowMs()
               setStartAt(t)

@@ -74,7 +74,7 @@ export function Mole({ words, onAnswer, onClear }: Props) {
             {best > 0 && <span>🏆 ベスト {best}匹</span>}
           </p>
           <button
-            className="flip"
+            className="flip ta-start"
             onClick={() => {
               const t = nowMs()
               setStartAt(t)

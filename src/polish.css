@@ -2425,3 +2425,8 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 /* 文法の学年タブ・読解のジャンルタブも、えらんだものを色つき（ほかのタブとそろえる） */
 .grade-tabs button[aria-selected='true'], .genre-tabs button[aria-selected='true'] { background: linear-gradient(135deg, #34d399, #059669); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 3px 0 #065f46; }
 .genre-tabs button[aria-selected='true'] { background: linear-gradient(135deg, #60a5fa, #2563eb); box-shadow: 0 3px 0 #1e3a8a; }
+
+/* スタートボタンはどのゲームでもオレンジの ▶（タイムアタック・もぐらたたき・ボスのタイムアタック・2択スピード） */
+.flip.ta-start { background: linear-gradient(135deg, #fb923c, #ef4444); color: #fff; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #b91c1c, 0 8px 18px rgb(239 68 68 / 0.3); }
+.flip.ta-start::before { content: '▶ '; }
+.flip.ta-start:active { transform: translateY(3px); box-shadow: 0 2px 0 #b91c1c; }
