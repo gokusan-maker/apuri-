@@ -4325,6 +4325,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'native-phone-free',
+    title: 'Two Days Without My Phone',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Last month, on a whim, I locked my phone in a drawer on Friday night and promised myself I wouldn't touch it until Monday morning. I told my family and close friends in advance, partly so they wouldn't panic and partly so I couldn't back out.",
+      "The first few hours were rough. I kept reaching for my pocket, and every time I sat down, my hand went looking for something to scroll. I hadn't realized how often I checked my phone out of pure habit, not ( A ) I actually needed anything. By Saturday afternoon, though, the itch had mostly worn off.",
+      "What surprised me most was how long the weekend felt. Without the constant stream of notifications, the hours stretched out. I finished a novel I had been meaning to read for months, cooked a proper dinner instead of grabbing takeout, and went for a long walk without once wondering what I was missing online. I even struck up a conversation with a neighbor I'd been nodding to for years.",
+      "I'm not going to pretend I've given up my phone for good. It's far too useful for that. But I now leave it in another room when I'm eating or reading, and I've turned off almost all notifications. If you've ever felt that your phone is running your life rather than the other way around, I'd recommend ( B ) it a try. You might be surprised by how much time you ( C ) back.",
+    ],
+    ja: [
+      '先月、思いつきで、金曜の夜にスマホを引き出しにしまってかぎをかけ、月曜の朝までさわらないと自分に約束した。家族と親しい友人には前もって伝えておいた。ひとつにはみんなをあわてさせないため、ひとつには自分が途中でやめられないようにするためだ。',
+      '最初の数時間はつらかった。ついポケットに手がのび、座るたびに、手がスクロールするものを探してしまうのだ。実際に何かが必要だったからではなく、ただの習慣でどれほどしょっちゅうスマホを見ていたか、それまで気づいていなかった。それでも、土曜の午後には、そのむずむずした感じはほとんどおさまっていた。',
+      'いちばんおどろいたのは、週末がとても長く感じられたことだ。たえまなく届く通知がないと、時間がのびていった。何か月も読もうと思っていた小説を読み終え、テイクアウトですませるかわりにちゃんとした夕食を作り、ネットで何を見のがしているかを一度も気にせずに長い散歩に出かけた。何年も会釈するだけだった近所の人と話しこみさえした。',
+      'スマホを永久にやめたふりをするつもりはない。そうするには便利すぎるのだ。でも今は、食事や読書のときは別の部屋に置いておき、通知もほとんど切ってある。もし、自分がスマホを使っているのではなくスマホに生活を動かされていると感じたことがあるなら、ためしてみることをすすめたい。どれほど多くの時間を取りもどせるか、おどろくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'despite', 'due to'], answer: 0, why: 'not A but … の形で「～だからではなく」。うしろが文（I actually needed anything）なので接続詞 because。because of・despite・due to は前置詞の働きでうしろに文を続けられない。' },
+      { id: 'B', choices: ['giving', 'give', 'to giving', 'gave'], answer: 0, why: 'recommend は（人を入れないとき）動名詞を目的語にとる。give it a try で「ためしてみる」。' },
+      { id: 'C', choices: ['get', 'getting', 'to get', 'gotten'], answer: 0, why: 'how much time you get back で「どれほどの時間を取りもどすか」。主語 you に続く動詞の現在形 get。' },
+    ],
+    tf: [
+      { statement: '筆者は、スマホを使わないことを前もって家族や友人に伝えた。', answer: true, why: '第1段落 I told my family and close friends in advance。' },
+      { statement: '筆者によれば、週末はとても短く感じられた。', answer: false, why: '第3段落 What surprised me most was how long the weekend felt。' },
+      { statement: '筆者は今では、スマホを永久に使わなくなった。', answer: false, why: '第4段落 I\'m not going to pretend I\'ve given up my phone for good。' },
+    ],
+    qa: [
+      { q: 'What does the writer do differently now?', choices: ['Leaves the phone in another room while eating or reading.', 'Uses the phone only on weekends.', 'Has stopped reading novels.', 'Checks notifications more often.'], answer: 0, why: '第4段落 I now leave it in another room when I\'m eating or reading。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
