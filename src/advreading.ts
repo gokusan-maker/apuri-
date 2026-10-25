@@ -4221,7 +4221,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '今日、QR コードは店での支払いから空港での搭乗手続きまで、あらゆることに使われている。もともと自動車の部品を追跡するために作られた道具が、毎日の暮らしの一部になったのである。',
     ],
     blanks: [
-      { id: 'A', choices: ['which', 'whose', 'that', 'whether'], answer: 0, why: 'which ＋名詞（which product）で「どの商品」。knows の目的語になる疑問詞のかたまり。whose は「だれの」、that・whether のうしろに名詞 product だけを置いて始めることはできない。' },
+      { id: 'A', choices: ['which', 'if', 'that', 'whether'], answer: 0, why: 'which ＋名詞（which product）で「どの商品」。knows の目的語になる疑問詞のかたまり。if・that・whether のうしろに名詞 product だけを置いて文を始めることはできない。' },
       { id: 'B', choices: ['because', 'because of', 'despite', 'due to'], answer: 0, why: 'うしろが文（extra information is built into …）なので接続詞 because。because of・despite・due to は前置詞の働きでうしろに文を続けられない。' },
       { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 A tool を説明し、was designed の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
     ],
