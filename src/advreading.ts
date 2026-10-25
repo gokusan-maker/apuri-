@@ -3079,6 +3079,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-job-ad',
+    title: 'Notice: Job Opening at Greenfield Foods',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Greenfield Foods, a fast-growing supplier of fresh vegetables to restaurants across the region, is looking for a full-time Customer Service Representative to join our team at our main office in Westport.",
+      "The successful candidate will answer calls and emails from restaurant owners, handle orders and changes to deliveries, and work closely with our drivers to make sure ( A ) every order arrives on time. Occasional weekend work may be required during busy seasons.",
+      "Applicants should have at least two years of experience in customer service and be comfortable using spreadsheets. Experience in the food industry is preferred but not required. Above all, we are looking for someone who stays calm under pressure and enjoys ( B ) problems.",
+      "We offer a competitive salary, paid holidays, and free lunches made with our own produce. New employees will receive two weeks of training before they begin working with customers on their own.",
+      "To apply, please send your résumé and a short cover letter to jobs@greenfieldfoods.example no later than April 30. Only candidates ( C ) are selected for an interview will be contacted.",
+    ],
+    ja: [
+      '地域全体のレストランに新鮮な野菜を届け、急成長している卸売業者グリーンフィールド・フーズは、ウエストポートの本社で私たちのチームに加わる、正社員の顧客サービス担当者を募集しています。',
+      '採用された方には、レストランの経営者からの電話やメールに対応し、注文や配達の変更を処理し、すべての注文が時間どおりに届くようにドライバーと密に協力していただきます。繁忙期には、ときどき週末の勤務が必要になることがあります。',
+      '応募者は、顧客サービスの経験が少なくとも2年あり、スプレッドシートを問題なく使えることが必要です。食品業界での経験があれば望ましいですが、必須ではありません。何よりも、重圧の中でも落ち着いていられ、問題を解決することを楽しめる人を求めています。',
+      '他社に負けない給与、有給休暇、そして自社の農産物で作った無料の昼食を用意しています。新しい社員は、ひとりでお客様の対応を始める前に、2週間の研修を受けます。',
+      '応募するには、履歴書と短い添え状を、4月30日までに jobs@greenfieldfoods.example へ送ってください。面接に選ばれた応募者にのみご連絡します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'which', 'whether to'], answer: 0, why: 'make sure (that) ＋文 で「必ず～するようにする」。うしろが完全な文（every order arrives on time）なので接続詞 that。what・which のうしろは欠けた文になり、whether to のうしろは動詞の原形。' },
+      { id: 'B', choices: ['solving', 'to solve', 'solve', 'solved'], answer: 0, why: 'enjoy は動名詞を目的語にとる。enjoy solving で「解決することを楽しむ」。enjoy のあとに to 不定詞・原形・過去分詞は続かない。' },
+      { id: 'C', choices: ['who', 'whom', 'whose', 'what'], answer: 0, why: '先行詞 candidates（人）を説明し、are selected の主語になる関係代名詞 who。whom は目的語、whose のうしろには名詞が必要で、what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: 'この仕事は、ときどき週末の勤務が必要になることがある。', answer: true, why: '第2段落 Occasional weekend work may be required during busy seasons。' },
+      { statement: '応募には、食品業界での経験が必須である。', answer: false, why: '第3段落 Experience in the food industry is preferred but not required。' },
+      { statement: '応募者は全員、会社から連絡を受ける。', answer: false, why: '第5段落 Only candidates who are selected for an interview will be contacted。' },
+    ],
+    qa: [
+      { q: 'What will new employees do before working with customers alone?', choices: ['Receive two weeks of training.', 'Visit restaurants in the region.', 'Work with drivers on weekends.', 'Send a cover letter to the company.'], answer: 0, why: '第4段落 New employees will receive two weeks of training before they begin working with customers on their own。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
