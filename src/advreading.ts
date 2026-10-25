@@ -3841,6 +3841,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-interview-email',
+    title: 'An Email About an Interview Schedule',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Nakamura, Thank you for applying for the position of Sales Assistant at Clearwater Office Supplies. We were impressed by your application and would like to invite you to an interview.",
+      "Your interview was originally scheduled for Tuesday, April 8, at 10:00 a.m. Unfortunately, our sales manager, who will be conducting the interview, has to attend an urgent meeting at our head office that day. We would therefore like to ask ( A ) you could come on Thursday, April 10, at the same time instead.",
+      "The interview will take about forty-five minutes. Please bring a copy of your résumé and a list of two people we may contact as references. Our office is on the third floor of the Lakeside Building. When you arrive, please check in at the reception desk, ( B ) a staff member will show you to the meeting room.",
+      "If Thursday is not convenient for you, please reply to this email by Friday, April 4, and let us know ( C ) days you are available next week. We apologize for any inconvenience and look forward to meeting you. Sincerely, Laura Kim, Human Resources",
+    ],
+    ja: [
+      'ナカムラ様　クリアウォーター事務用品の営業アシスタントの職にご応募いただき、ありがとうございます。応募書類を拝見して感銘を受け、面接にお招きしたいと考えております。',
+      '面接は当初、4月8日（火）午前10時に予定しておりました。あいにく、面接を担当する営業部長がその日、本社での急な会議に出席しなければならなくなりました。そのため、かわりに4月10日（木）の同じ時間にお越しいただけるかどうか、おうかがいしたいと存じます。',
+      '面接は45分ほどかかります。履歴書を1部と、当社が照会先として連絡できる方2名のリストをお持ちください。当社のオフィスはレイクサイド・ビルの3階にあります。到着されましたら受付でお申し出ください。スタッフが会議室へご案内いたします。',
+      '木曜日がご都合が悪い場合は、4月4日（金）までにこのメールにご返信いただき、来週ご都合のよい日をお知らせください。ご不便をおかけして申し訳ございません。お会いできるのを楽しみにしております。人事部　ローラ・キム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whether', 'what', 'that if', 'which'], answer: 0, why: 'ask whether ～ で「～かどうかをたずねる」。うしろは完全な文なので what・which は入らず、that if の形はない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで the reception desk（場所）を説明し、うしろが完全な文（a staff member will show you …）なので関係副詞 where。' },
+      { id: 'C', choices: ['which', 'that', 'whether', 'if'], answer: 0, why: 'which ＋名詞（which days）で「どの日」。うしろの you are available と合わせて「どの日が都合がよいか」。that・whether・if のうしろに名詞 days だけを置いて文を始めることはできない。' },
+    ],
+    tf: [
+      { statement: '面接はもともと4月10日に予定されていた。', answer: false, why: '第2段落 originally scheduled for Tuesday, April 8。' },
+      { statement: 'ナカムラさんは面接に履歴書を持っていく必要がある。', answer: true, why: '第3段落 Please bring a copy of your résumé。' },
+      { statement: '木曜日の都合が悪い場合は、4月4日までに返信する。', answer: true, why: '第4段落 please reply to this email by Friday, April 4。' },
+    ],
+    qa: [
+      { q: 'Why was the interview date changed?', choices: ['The sales manager has to attend an urgent meeting.', 'Mr. Nakamura asked for a different day.', 'The office will be closed on April 8.', 'The reception desk is being repaired.'], answer: 0, why: '第2段落 our sales manager … has to attend an urgent meeting at our head office that day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
