@@ -3070,3 +3070,12 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .long-text.pinned::after { content: '↕ 本文はこの中でスクロール'; display: block; position: sticky; bottom: -10px; margin: 6px -12px -10px; padding: 3px; text-align: center; font-size: 0.68rem; font-weight: 800; color: var(--muted); background: linear-gradient(transparent, var(--card) 40%); }
 .long-pin-btn { margin: 4px 0 6px; font-size: 0.8rem; min-height: 32px; padding: 4px 12px; }
 .long-pin-btn.on { background: #8b5cf6; color: #fff; }
+
+/* 単語コース（英検・語数） */
+.word-courses { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; margin: 0 0 10px; }
+.word-course { display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 8px 10px; border-radius: 14px; border: 2px solid color-mix(in srgb, var(--muted) 22%, transparent); background: var(--card); color: var(--fg); font: inherit; text-align: left; cursor: pointer; }
+.word-course b { font-size: 0.92rem; }
+.word-course small { font-size: 0.7rem; color: var(--muted); }
+.word-course.on { border-color: #7c3aed; background: color-mix(in srgb, #7c3aed 14%, var(--card)); }
+.word-course.on b::before { content: '✓ '; color: #7c3aed; }
+.word-course:disabled { opacity: 0.5; cursor: default; }

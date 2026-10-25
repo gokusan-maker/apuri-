@@ -16,6 +16,7 @@ import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
+import { COURSES, courseOf, courseReady } from './wordcourse'
 import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
@@ -1876,6 +1877,15 @@ function App() {
             onChange={setSettings}
             onGrade={pickGrade}
             books={
+              <>
+              <div className="word-courses" role="group" aria-label="単語コース">
+                {COURSES.map((c) => (
+                  <button key={c.id} className={`word-course${courseOf(levels)?.id === c.id ? ' on' : ''}`} aria-pressed={courseOf(levels)?.id === c.id} disabled={!courseReady(c)} onClick={() => setLevels(c.levels)}>
+                    <b>{c.label}</b>
+                    <small>{courseReady(c) ? c.sub : 'じゅんび中'}</small>
+                  </button>
+                ))}
+              </div>
               <div className="levels" role="group" aria-label="単語帳">
                 {LEVELS.map((l) => (
                   <button key={l} aria-pressed={levels.includes(l)} onClick={() => setLevels(toggleLevel(levels, l))}>
@@ -1889,6 +1899,7 @@ function App() {
                   </button>
                 )}
               </div>
+              </>
             }
           />
           {playBox}

@@ -69,7 +69,7 @@ export function SettingsPanel({ settings, onChange, onGrade, books }: Props) {
       )}
       {books && (
         <fieldset className="setting">
-          <legend>単語帳をえらぶ</legend>
+          <legend>単語コース（英検・語数）・単語帳をえらぶ</legend>
           {books}
         </fieldset>
       )}

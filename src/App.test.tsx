@@ -379,6 +379,16 @@ describe('App', () => {
     expect(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: /^中2/ })).toBeInTheDocument()
   })
 
+  it('設定で単語コース（英検の級・語数）をえらぶと、その単語帳になる', () => {
+    render(<App />)
+    navTo('設定')
+    const courses = () => screen.getByRole('group', { name: '単語コース' })
+    fireEvent.click(within(courses()).getByRole('button', { name: /英検準2級/ }))
+    expect(JSON.parse(localStorage.getItem('eitan:levels')!).sort()).toEqual(['熟語', '高校基礎'].sort())
+    expect(within(courses()).getByRole('button', { name: /英検準2級/ })).toHaveAttribute('aria-pressed', 'true')
+    expect(within(courses()).getByRole('button', { name: /英検1級/ })).toBeDisabled() // まだ単語がないコース
+  })
+
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
     navTo('設定')
