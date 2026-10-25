@@ -34,7 +34,7 @@ import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './gramm
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GameTile } from './GameTileView'
 import { ALL_GAMES_COINS, allGamesClaimed, claimAllGames, loadTodayGames } from './gamesplayed'
-import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -1198,15 +1198,12 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
         </span>
         {after}
       </p>
-      {onSpend && picked === null && hidden?.step !== step && (
+      {picked === null && hidden?.step !== step && (
         <button
           className="hint-5050"
-          onClick={() => {
-            if (!onSpend(GRAMMAR_HINT_COST)) return
-            setHidden({ step, i: -1 }) // 選択肢は消さず、考え方のヒントを出す
-          }}
+          onClick={() => setHidden({ step, i: -1 })} // 選択肢は消さず、考え方のヒントを出す（コインは使わない）
         >
-          💡 ヒント（🪙{GRAMMAR_HINT_COST}）
+          💡 ヒント
         </button>
       )}
       {picked === null && hidden?.step === step && <p className="read-hint-text">💡 {maskAnswer(q.why, q.choices[q.answer])}</p>}

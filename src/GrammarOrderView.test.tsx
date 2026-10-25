@@ -21,16 +21,10 @@ it('例文をタップで並べなおして答えあわせする', () => {
   expect(onAnswer).toHaveBeenCalledTimes(u.examples.length)
 })
 
-it('ヒントで最初の1語が置かれる（コインが足りなければ置かれない）', () => {
+it('ヒントで最初の1語が置かれる（コインは使わない）', () => {
   const u = GRAMMAR[0]
-  const spend = vi.fn(() => true)
-  const { unmount } = render(<GrammarOrder unit={u} onBack={() => {}} onSpend={spend} />)
+  render(<GrammarOrder unit={u} onBack={() => {}} />)
   fireEvent.click(screen.getByText(/最初の1語を教えて/))
-  expect(spend).toHaveBeenCalledWith(3)
   expect(screen.getByLabelText('並べた英文')).toHaveTextContent(u.examples[0].en.split(' ')[0])
   expect(screen.queryByText(/最初の1語を教えて/)).toBeNull()
-  unmount()
-  render(<GrammarOrder unit={u} onBack={() => {}} onSpend={() => false} />)
-  fireEvent.click(screen.getByText(/最初の1語を教えて/))
-  expect(screen.getByLabelText('並べた英文').textContent!.trim()).toBe('')
 })

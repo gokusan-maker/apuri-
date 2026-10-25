@@ -278,20 +278,16 @@ it('⏳ 10秒：時間切れはまちがい扱い、早く答えるとボーナ�
   vi.useRealTimers()
 })
 
-it('💡 ヒントはコインを使って、例文で考えるヒントを出す（選択肢は消さない・足りなければ出ない）', () => {
+it('💡 ヒントはコインを使わずに、例文で考えるヒントを出す（選択肢は消さない）', () => {
   let coins = 6
   const spend = (n: number) => (coins >= n ? ((coins -= n), true) : false)
   render(<Quiz words={WORDS.slice(0, 10)} count={2} onSpend={spend} />)
   fireEvent.click(screen.getByText(/💡 ヒント/))
   expect(document.querySelectorAll('.choice.removed')).toHaveLength(0)
-  expect(coins).toBe(1)
+  expect(coins).toBe(6)
   const en = document.querySelector('.quiz .en')!.textContent
   const w = WORDS.find((x) => x.en === en)!
   expect(document.querySelector('.read-hint-text')!.textContent).toContain(w.example)
-  fireEvent.click(screen.getByRole('button', { name: w.ja }))
-  fireEvent.click(screen.getByText('次へ'))
-  fireEvent.click(screen.getByText(/💡 ヒント/))
-  expect(document.querySelector('.read-hint-text')).toBeNull() // コインが足りない
 })
 
 it('メニューから選んだ種類は、次に開いたときも同じ', () => {

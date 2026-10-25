@@ -6,10 +6,9 @@ import { playCorrect, playWrong } from './sound'
 
 type Props = { unit: GrammarUnit; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onBack: () => void; onSpend?: (coins: number) => boolean }
 
-export const ORDER_HINT_COST = 3
 
 // 文法の並べかえクイズ：単元の例文をばらばらにして、タップで並べなおす
-export function GrammarOrder({ unit, onAnswer, onBack, onSpend }: Props) {
+export function GrammarOrder({ unit, onAnswer, onBack }: Props) {
   const [qs] = useState(() => unit.examples.map((ex) => ({ ...ex, tiles: shuffle(ex.en.split(' ')) })))
   const [step, setStep] = useState(0)
   const [picked, setPicked] = useState<number[]>([])
@@ -57,17 +56,16 @@ export function GrammarOrder({ unit, onAnswer, onBack, onSpend }: Props) {
             ↺ やりなおす
           </button>
         )}
-        {checked === null && picked.length === 0 && onSpend && (
+        {checked === null && picked.length === 0 && (
           <button
             className="order-tool hint"
             onClick={() => {
-              if (!onSpend(ORDER_HINT_COST)) return
               const first = q.en.split(' ')[0]
               const i = q.tiles.indexOf(first)
               if (i >= 0) setPicked([i])
             }}
           >
-            💡 最初の1語を教えて 🪙{ORDER_HINT_COST}
+            💡 最初の1語を教えて
           </button>
         )}
       </div>

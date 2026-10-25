@@ -153,7 +153,7 @@ it('ヒントは選択肢を消さず、答えをかくした解説を出す', (
   fireEvent.click(screen.getByText(/確認問題へ/))
   expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
   fireEvent.click(screen.getByText(/💡 ヒント/))
-  expect(spend).toHaveBeenCalledWith(5)
+  expect(spend).not.toHaveBeenCalled() // ヒントにコインは使わない
   expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
   const hint = document.querySelector('.read-hint-text')!.textContent!
   expect(hint).toContain('＿＿')

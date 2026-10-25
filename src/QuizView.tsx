@@ -263,7 +263,6 @@ type Props = {
 }
 
 export const QUESTION_TIME = 10
-export const HINT_COST = 5
 const COUNTS = [5, 10, 20]
 // 問題数を使わない種類（自分のペースで続ける・決まった数で遊ぶもの）
 const NO_COUNT: Direction[] = ['placement', 'twister', 'wordsearch', 'memory', 'bingo', 'mole', 'shiritori', 'versus', 'rival', 'through', 'reading', 'long-reading', 'grammar', 'confusing', 'sounds']
@@ -365,7 +364,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
 
   // 💡 ヒント：選択肢は消さずに、例文で考えるヒントを出す
   function fiftyFifty() {
-    if (!q || hintFor === index || !onSpend?.(HINT_COST)) return
+    if (!q || hintFor === index) return // ヒントにコインは使わない
     setHintFor(index)
   }
 
@@ -1092,9 +1091,9 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
           )
         })}
       </div>
-      {picked === null && onSpend && hintFor !== index && (
+      {picked === null && hintFor !== index && (
         <button className="hint-5050" onClick={fiftyFifty}>
-          💡 ヒント（🪙{HINT_COST}）
+          💡 ヒント
         </button>
       )}
       {picked === null && hintFor === index && <p className="read-hint-text">💡 {wordHint(q.word, q.choices[q.answer])}</p>}

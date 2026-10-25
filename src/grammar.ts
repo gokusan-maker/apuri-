@@ -4440,7 +4440,6 @@ export function gradeOf(id: string): GrammarGrade {
 }
 
 // 文法のヒント（まちがいの選択肢を1つ消す）のコイン
-export const GRAMMAR_HINT_COST = 5
 
 // 確認問題の連続正解記録（単元をまたいで続く。まちがえると0にもどる）
 export type GrammarStreak = { now: number; best: number }
