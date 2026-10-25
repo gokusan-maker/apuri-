@@ -3721,6 +3721,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-listening',
+    title: 'The Difficult Art of Listening',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We tend to think of conversation as a matter of speaking well. Schools hold speech contests, and books on communication are filled with advice on how to express ourselves clearly. Listening, by contrast, is rarely taught, perhaps because it seems to require no skill at all. After all, as long as our ears work, we cannot help ( A ) what others say.",
+      "Yet hearing and listening are not the same. Much of the time, while another person is talking, we are not really attending to their words but preparing our own reply. We wait for a pause so that we can tell a similar story about ourselves, or offer advice that nobody asked for. The speaker, sensing this, often stops before reaching what he or she most wanted to say.",
+      "To listen in the true sense is to put our own concerns aside for a while and to let the other person's thoughts take shape. This is harder than it sounds, because it requires us to tolerate silence and uncertainty. A good listener does not rush to fill every gap; he or she allows the speaker time to find the right words, ( B ) they come slowly.",
+      "Those who have been listened to in this way often say that they understood their own feelings better afterward. In this sense, listening is not a passive act but a quiet form of generosity, ( C ) gift lies in the attention we give rather than in the words we speak.",
+    ],
+    ja: [
+      '私たちは会話を、上手に話すことの問題だと考えがちだ。学校ではスピーチコンテストが開かれ、コミュニケーションについての本は、自分をはっきり表現する方法についての助言であふれている。それにひきかえ、聞くことはめったに教えられない。おそらく、まったく技術がいらないように思えるからだろう。なにしろ、耳がはたらいているかぎり、私たちは他人の言うことを聞かずにはいられないのだから。',
+      'しかし、耳に入ることと聞くことは同じではない。たいていの場合、相手が話しているあいだ、私たちは本当はその言葉に注意を向けておらず、自分の返事を準備している。自分についての似た話をするために、あるいはだれも求めていない助言をするために、話がとぎれるのを待っているのだ。話し手はそれを感じとり、いちばん言いたかったことに行きつく前に話すのをやめてしまうことが多い。',
+      '本当の意味で聞くとは、しばらくのあいだ自分の関心をわきに置き、相手の考えが形になるのを待つことである。これは思ったよりむずかしい。沈黙や不確かさにたえることを求められるからだ。よい聞き手は、すべてのすきまを急いでうめようとはしない。たとえ言葉がゆっくりとしか出てこなくても、話し手がふさわしい言葉を見つける時間を与えるのである。',
+      'このように聞いてもらった人は、そのあとで自分自身の気持ちがよくわかったとよく言う。この意味で、聞くことは受け身の行為ではなく、静かな形の思いやりであり、その贈り物は、私たちが話す言葉ではなく、私たちが向ける注意にあるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['hearing', 'hears', 'to hearing', 'heard'], answer: 0, why: 'cannot help ～ing で「～せずにはいられない」。help のあとに3人称単数の形や過去分詞は続かず、to hearing の形もない。' },
+      { id: 'B', choices: ['even if', 'despite', 'in spite of', 'regardless of'], answer: 0, why: 'うしろが文（they come slowly）なので接続詞 even if「たとえ～でも」。ほかは前置詞の働きで、うしろに文を続けられない。' },
+      { id: 'C', choices: ['whose', 'which', 'that', 'its'], answer: 0, why: '「その（思いやりの）贈り物は」と、うしろの名詞 gift につく所有格の関係代名詞 whose。which・that のうしろに無冠詞の gift lies … は続かず、its では2つの文をつなげない。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、聞くことは学校であまり教えられない。', answer: true, why: '第1段落 Listening, by contrast, is rarely taught。' },
+      { statement: '筆者は、耳に入ることと聞くことは同じだと述べている。', answer: false, why: '第2段落 hearing and listening are not the same。' },
+      { statement: 'よい聞き手は、話のすきまをすぐにうめようとする。', answer: false, why: '第3段落 A good listener does not rush to fill every gap。' },
+    ],
+    qa: [
+      { q: 'What do we often do while another person is talking, according to the writer?', choices: ['Prepare our own reply instead of attending to their words.', 'Take notes on everything they say.', 'Stay completely silent and patient.', 'Ask them to speak more slowly.'], answer: 0, why: '第2段落 we are not really attending to their words but preparing our own reply。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
