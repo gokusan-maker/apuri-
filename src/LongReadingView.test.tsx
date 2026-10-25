@@ -328,16 +328,27 @@ it('まちがえた問題だけ解き直せる', () => {
   expect(screen.getByText(/14 \/ 14 点/)).toBeInTheDocument()
 })
 
-it('すぐに答えあわせモードでは、答えるとすぐ正解と解説が出る', () => {
+it('はじめから1問ずつ答えあわせ：答えるとすぐ正解と解説が出る', () => {
   localStorage.clear()
   render(<LongReading />)
   const p = LONG_PASSAGES[0]
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
-  fireEvent.click(screen.getByLabelText(/1問ずつ答えあわせ/))
+  expect(screen.getByLabelText(/1問ずつ答えあわせ/)).toBeChecked()
   const t = p.tf[0]
   fireEvent.click(screen.getByRole('button', { name: `(1) ${t.answer ? '○' : '×'}` }))
   expect(screen.getByText(new RegExp(t.why.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')))).toBeInTheDocument()
   expect(screen.getByRole('button', { name: `(1) ${t.answer ? '×' : '○'}` })).toBeDisabled()
+})
+
+it('英問英答も1問ずつ答えと解説が出る。オフにしたら覚えておく', () => {
+  localStorage.clear()
+  const p = LONG_PASSAGES.find((x) => x.qa && x.qa.length > 0)!
+  render(<LongReading passages={[p]} start={p} />)
+  const x = p.qa![0]
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(x.choices[x.answer].replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) }))
+  expect(screen.getAllByText(/⭕ 正解/).length).toBeGreaterThan(0)
+  fireEvent.click(screen.getByLabelText(/1問ずつ答えあわせ/))
+  expect(localStorage.getItem('eitan:long-instant')).toBe('0')
 })
 
 it('★のしおりをつけた読解は一覧の上に来る', () => {

@@ -15,6 +15,7 @@ import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
 import { maskAnswer } from './readhint'
 import { ReadTower } from './ReadTowerView'
+import { loadInstant, saveInstant } from './longinstant'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
@@ -122,7 +123,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const [jaParas, setJaParas] = useState<number[]>([])
   const [aloudAt, setAloudAt] = useState<number | null>(null) // 音読を始めた時刻
   const [wpm, setWpm] = useState(0)
-  const [instant, setInstant] = useState(false) // すぐに答えあわせ（空所補充・○×） // 和訳を開いている段落
+  const [instant, setInstant] = useState(loadInstant) // 1問ずつ答えと解説（はじめから入。切ったら覚えておく）
   const [bestTime, setBestTime] = useState(false)
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyLongDay)
@@ -373,6 +374,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const pq = paraSeqQ(p)
   const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq })
   const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length + (p.seq && seq.length === p.seq.events.length ? 1 : 0) + (pq && pseq.length === pq.events.length ? 1 : 0)
+  const see = (v: unknown) => done || (instant && v !== undefined && v !== null) // その問題の答えと解説を見せる
   const markNow = (ok: boolean) => (done || instant ? (ok ? ' right' : ' wrong') : '')
 
   return (
@@ -477,7 +479,10 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         ))}
       </p>
       <label className="long-instant">
-        <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつ答えあわせ
+        <input type="checkbox" checked={instant} disabled={done} onChange={(e) => {
+          setInstant(e.target.checked)
+          saveInstant(e.target.checked)
+        }} /> ⚡ 1問ずつ答えあわせ
       </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
       <button
@@ -602,8 +607,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                 {sb.choices.map((c, i) => (
                   <button
                     key={c}
-                    className={`long-choice${sents[sb.id] === i ? ' picked' : ''}${done && i === sb.answer ? ' answer' : ''}`}
-                    disabled={done}
+                    className={`long-choice${sents[sb.id] === i ? ' picked' : ''}${see(sents[sb.id]) && i === sb.answer ? ' answer' : ''}`}
+                    disabled={see(sents[sb.id])}
                     aria-pressed={sents[sb.id] === i}
                     onClick={() => setSents({ ...sents, [sb.id]: i })}
                   >
@@ -611,7 +616,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                   </button>
                 ))}
               </div>
-              {done && (
+              {see(sents[sb.id]) && (
                 <p className={`long-why${sents[sb.id] === sb.answer ? ' right' : ' wrong'}`}>
                   {sents[sb.id] === sb.answer ? '⭕' : '❌'} 正解 {MARKS[sb.answer]}：{sb.why}
                 </p>
@@ -668,7 +673,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               </p>
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
-                  <button key={c} className={`long-choice${qa[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={qa[n] === i} onClick={() => setQa({ ...qa, [n]: i })}>
+                  <button key={c} className={`long-choice${qa[n] === i ? ' picked' : ''}${see(qa[n]) && i === x.answer ? ' answer' : ''}`} disabled={see(qa[n])} aria-pressed={qa[n] === i} onClick={() => setQa({ ...qa, [n]: i })}>
                     <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
@@ -679,7 +684,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                 </button>
               )}
               {!done && hints.includes(`qa${n}`) && <p className="read-hint-text">💡 根拠になる文：「{keySentence(p, `${x.q} ${x.why}`)}」</p>}
-              {done && (
+              {see(qa[n]) && (
                 <p className={`long-why${qa[n] === x.answer ? ' right' : ' wrong'}`}>
                   {qa[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
                 </p>
@@ -723,12 +728,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               </p>
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
-                  <button key={c} className={`long-choice${comp[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={comp[n] === i} onClick={() => setComp({ ...comp, [n]: i })}>
+                  <button key={c} className={`long-choice${comp[n] === i ? ' picked' : ''}${see(comp[n]) && i === x.answer ? ' answer' : ''}`} disabled={see(comp[n])} aria-pressed={comp[n] === i} onClick={() => setComp({ ...comp, [n]: i })}>
                     <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
-              {done && (
+              {see(comp[n]) && (
                 <p className={`long-why${comp[n] === x.answer ? ' right' : ' wrong'}`}>
                   {comp[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
                 </p>
@@ -802,12 +807,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               <p className="long-vocab-word">{v.word}</p>
               <div className="long-choices">
                 {v.choices.map((c, i) => (
-                  <button key={c} className={`long-choice${voc[n] === i ? ' picked' : ''}${done && i === v.answer ? ' answer' : ''}`} disabled={done} aria-pressed={voc[n] === i} onClick={() => setVoc({ ...voc, [n]: i })}>
+                  <button key={c} className={`long-choice${voc[n] === i ? ' picked' : ''}${see(voc[n]) && i === v.answer ? ' answer' : ''}`} disabled={see(voc[n])} aria-pressed={voc[n] === i} onClick={() => setVoc({ ...voc, [n]: i })}>
                     <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
-              {done && (
+              {see(voc[n]) && (
                 <p className={`long-why${voc[n] === v.answer ? ' right' : ' wrong'}`}>
                   {voc[n] === v.answer ? '⭕' : '❌'} 正解 {MARKS[v.answer]}：{v.why}
                 </p>
@@ -826,12 +831,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               <p className="long-tf-text">( {n + 1} )</p>
               <div className="long-choices">
                 {b.choices.map((c, i) => (
-                  <button key={c} className={`long-choice${summ[n] === i ? ' picked' : ''}${done && i === b.answer ? ' answer' : ''}`} disabled={done} aria-pressed={summ[n] === i} onClick={() => setSumm({ ...summ, [n]: i })}>
+                  <button key={c} className={`long-choice${summ[n] === i ? ' picked' : ''}${see(summ[n]) && i === b.answer ? ' answer' : ''}`} disabled={see(summ[n])} aria-pressed={summ[n] === i} onClick={() => setSumm({ ...summ, [n]: i })}>
                     <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
-              {done && (
+              {see(summ[n]) && (
                 <p className={`long-why${summ[n] === b.answer ? ' right' : ' wrong'}`}>
                   {summ[n] === b.answer ? '⭕' : '❌'} 正解 {MARKS[b.answer]}：{b.why}
                 </p>
@@ -848,12 +853,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
             <p className="long-insert-sentence">{p.insert.sentence}</p>
             <div className="long-choices">
               {p.insert.after.map((_, i) => (
-                <button key={i} className={`long-choice${ins === i ? ' picked' : ''}${done && i === p.insert!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={ins === i} onClick={() => setIns(i)}>
+                <button key={i} className={`long-choice${ins === i ? ' picked' : ''}${see(ins) && i === p.insert!.answer ? ' answer' : ''}`} disabled={see(ins)} aria-pressed={ins === i} onClick={() => setIns(i)}>
                   ［{MARKS[i]}］
                 </button>
               ))}
             </div>
-            {done && (
+            {see(ins) && (
               <p className={`long-why${ins === p.insert.answer ? ' right' : ' wrong'}`}>
                 {ins === p.insert.answer ? '⭕' : '❌'} 正解［{MARKS[p.insert.answer]}］：{p.insert.why}
               </p>
@@ -868,12 +873,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           <div className="long-item">
             <div className="long-choices one">
               {p.titleQ.choices.map((c, i) => (
-                <button key={c} className={`long-choice${titlePick === i ? ' picked' : ''}${done && i === p.titleQ!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={titlePick === i} onClick={() => setTitlePick(i)}>
+                <button key={c} className={`long-choice${titlePick === i ? ' picked' : ''}${see(titlePick) && i === p.titleQ!.answer ? ' answer' : ''}`} disabled={see(titlePick)} aria-pressed={titlePick === i} onClick={() => setTitlePick(i)}>
                   <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>
-            {done && (
+            {see(titlePick) && (
               <p className={`long-why${titlePick === p.titleQ.answer ? ' right' : ' wrong'}`}>
                 {titlePick === p.titleQ.answer ? '⭕' : '❌'} 正解 {MARKS[p.titleQ.answer]}：{p.titleQ.why}
               </p>
@@ -890,12 +895,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               <span className="long-label">第{x.para + 1}段落</span>
               <div className="long-choices one">
                 {x.choices.map((c, i) => (
-                  <button key={c} className={`long-choice${gist[n] === i ? ' picked' : ''}${done && i === x.answer ? ' answer' : ''}`} disabled={done} aria-pressed={gist[n] === i} onClick={() => setGist({ ...gist, [n]: i })}>
+                  <button key={c} className={`long-choice${gist[n] === i ? ' picked' : ''}${see(gist[n]) && i === x.answer ? ' answer' : ''}`} disabled={see(gist[n])} aria-pressed={gist[n] === i} onClick={() => setGist({ ...gist, [n]: i })}>
                     <b className="mark">{MARKS[i]}</b> {c}
                   </button>
                 ))}
               </div>
-              {done && (
+              {see(gist[n]) && (
                 <p className={`long-why${gist[n] === x.answer ? ' right' : ' wrong'}`}>
                   {gist[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}
                 </p>
@@ -911,12 +916,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           <div className="long-item">
             <div className="long-choices one">
               {p.refer.choices.map((c, i) => (
-                <button key={c} className={`long-choice${refer === i ? ' picked' : ''}${done && i === p.refer!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={refer === i} onClick={() => setRefer(i)}>
+                <button key={c} className={`long-choice${refer === i ? ' picked' : ''}${see(refer) && i === p.refer!.answer ? ' answer' : ''}`} disabled={see(refer)} aria-pressed={refer === i} onClick={() => setRefer(i)}>
                   <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>
-            {done && (
+            {see(refer) && (
               <p className={`long-why${refer === p.refer.answer ? ' right' : ' wrong'}`}>
                 {refer === p.refer.answer ? '⭕' : '❌'} 正解 {MARKS[p.refer.answer]}：{p.refer.why}
               </p>
@@ -931,12 +936,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           <div className="long-item">
             <div className="long-choices one">
               {p.underline.choices.map((c, i) => (
-                <button key={c} className={`long-choice${under === i ? ' picked' : ''}${done && i === p.underline!.answer ? ' answer' : ''}`} disabled={done} aria-pressed={under === i} onClick={() => setUnder(i)}>
+                <button key={c} className={`long-choice${under === i ? ' picked' : ''}${see(under) && i === p.underline!.answer ? ' answer' : ''}`} disabled={see(under)} aria-pressed={under === i} onClick={() => setUnder(i)}>
                   <b className="mark">{MARKS[i]}</b> {c}
                 </button>
               ))}
             </div>
-            {done && (
+            {see(under) && (
               <p className={`long-why${under === p.underline.answer ? ' right' : ' wrong'}`}>
                 {under === p.underline.answer ? '⭕' : '❌'} 正解 {MARKS[p.underline.answer]}：{p.underline.why}
               </p>
