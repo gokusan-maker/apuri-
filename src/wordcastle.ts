@@ -6,6 +6,8 @@ import type { Level, Word } from './words'
 
 export const WC_QS = 5
 export const WC_PASS = 4
+export const WC_MINIBOSS_PASS = 8 // 単元のミニボス：10問中8問でたおす
+export const WC_MINIBOSS_COINS = 10
 
 export type WcGame = 'en-ja' | 'ja-en' | 'listen' | 'timed' | 'sentence-read' | 'order' | 'spell' | 'dictation'
 export const WC_GAME_LABEL: Record<WcGame, string> = {

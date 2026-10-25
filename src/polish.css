@@ -3421,3 +3421,8 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .cc-list li.done .cc-name { font-weight: 800; }
 .barea-chest { position: absolute; transform: translate(-50%, -50%); width: 44px; height: 44px; border: none; border-radius: 12px; background: radial-gradient(circle, rgb(253 224 71 / 0.9), transparent 70%); font-size: 1.7rem; cursor: pointer; animation: barea-glow 1.2s ease-in-out infinite; }
 .barea-got { position: absolute; left: 50%; top: 8px; transform: translateX(-50%); margin: 0; padding: 4px 10px; border-radius: 999px; background: #fde047; color: #1c1917; font-weight: 900; font-size: 0.8rem; white-space: nowrap; }
+.wc-boss-btn { display: flex; align-items: center; gap: 10px; width: 100%; margin: 8px 0; text-align: left; }
+.wc-boss-btn small { display: block; font-size: 0.74rem; opacity: 0.9; }
+.wc-boss-fig { flex: none; display: block; width: 52px; height: 52px; }
+.wc-boss-fig > * { width: 100%; height: 100%; }
+.wc-boss-title { background: linear-gradient(135deg, #dc2626, #7c3aed); box-shadow: 0 3px 0 #7f1d1d; }

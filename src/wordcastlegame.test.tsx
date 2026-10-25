@@ -32,5 +32,10 @@ it('スペルの階：5語を書いて4問以上でクリア', () => {
   expect(screen.getByText('🎉 階クリア！')).toBeInTheDocument() // 紙ふぶきのお祝い
   expect(screen.getByText(/のとびらがひらいた！/)).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:wcastle')!)).toContain(f.id)
+  // 3階目をクリアするとミニボス出現。押すとこの単元の10語で勝負
+  expect(f.floor).toBe(2)
+  fireEvent.click(screen.getByRole('button', { name: /ミニボス「.+」出現！/ }))
+  expect(screen.getByText(/8問以上でたおせ！/)).toBeInTheDocument()
+  expect(screen.getByText(/1 \/ 10/)).toBeInTheDocument()
   vi.useRealTimers()
 })
