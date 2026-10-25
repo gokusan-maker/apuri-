@@ -152,6 +152,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
   const [free, setFree] = useState(false) // 城だけのページで「単元をえらんで自由に勉強」をおした
+  const [freeExam, setFreeExam] = useState(false) // 自由に勉強で「入試」のレベルをえらんだ
   const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
   const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
@@ -283,6 +284,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
   }
 
   const misc = stampMode && !castleOnly // 城だけのページ（App）では、ゲームや苦手などは出さない
+  const examView = castleOnly && freeExam // 自由に勉強：入試のレベルの単元
   if (!unit && stampMode && castleOnly && !free) {
     return (
       <section className="card grammar">
@@ -294,7 +296,16 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
           onOpen={openFloor}
         />
-        <button className="flip grammar-free-btn" onClick={() => setFree(true)}>
+        <button
+          className="flip grammar-free-btn"
+          onClick={() => {
+            // 自由に勉強は、いまの城のレベルの単元から
+            setFree(true)
+            const g = GRAMMAR_GRADES.find((x) => x === gcLevel)
+            setFreeExam(!g)
+            if (g) setGrade(g)
+          }}
+        >
           📚 単元をえらんで自由に勉強
         </button>
       </section>
@@ -310,7 +321,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           </button>
         )}
         {/* 見出しだけ「文法チャレンジ」に（title はまとめテストのベスト記録の名前にも使うので変えない） */}
-        <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
+        {!castleOnly && <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>}
         {stampMode ? (
           <>
             {!castleOnly && (
@@ -587,7 +598,24 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
             🔁 苦手な文法の復習（{weakUnits(record).length}単元）
           </button>
         )}
-        {stampMode && (
+        {castleOnly && (
+          <div className="sub-tabs grade-tabs free-levels" role="tablist" aria-label="レベル">
+            {([...GRAMMAR_GRADES, '入試'] as const).map((g) => (
+              <button
+                key={g}
+                role="tab"
+                aria-selected={g === '入試' ? freeExam : !freeExam && grade === g}
+                onClick={() => {
+                  setFreeExam(g === '入試')
+                  if (g !== '入試') setGrade(g)
+                }}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+        )}
+        {stampMode && !castleOnly && (
           <div className="sub-tabs grade-tabs" role="tablist" aria-label="学年">
             {(['all', ...GRAMMAR_GRADES] as const).map((g) => (
               <button key={g} role="tab" aria-selected={grade === g} onClick={() => setGrade(g)}>
@@ -596,7 +624,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
             ))}
           </div>
         )}
-        {stampMode && (
+        {stampMode && !examView && (
           <div className="grammar-recommend">
             <p className="stats-note">🌟 おすすめ単元</p>
             {recommendUnits(units.filter((u) => grade === 'all' || gradeOf(u.id) === grade), clears, record).map((u) => (
@@ -606,11 +634,11 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
             ))}
           </div>
         )}
-        {stampMode && (
+        {stampMode && !examView && (
           <input className="grammar-search" type="search" placeholder="🔍 単元をさがす（例：have）" aria-label="単元をさがす" value={keyword} onChange={(e) => setKeyword(e.target.value)} />
         )}
-        {stampMode && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
-        {stampMode && (
+        {stampMode && !examView && keyword && searchUnits(units, keyword).length === 0 && <p className="stats-note">見つかりませんでした</p>}
+        {stampMode && !examView && (
           <p className="unit-sort" role="group" aria-label="単元のならび">
             ならび：
             <button aria-pressed={!todoFirst} onClick={() => setTodoFirst(false)}>
@@ -621,7 +649,16 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
             </button>
           </p>
         )}
-        {stampMode && grade === 'all' && !keyword ? (
+        {examView ? (
+          <div className="exam-grammar-grid" role="group" aria-label="入試の文法">
+            {EXAM_GRAMMAR.map((u) => (
+              <button key={u.id} className="exam-tier" onClick={() => open(u)}>
+                {u.title.split('の文法')[0]}
+                <small>{u.questions.length}問</small>
+              </button>
+            ))}
+          </div>
+        ) : stampMode && grade === 'all' && !keyword ? (
           <>
             {fav.length > 0 && <ul className="grammar-list">{units.filter((u) => fav.includes(u.id)).map(unitItem)}</ul>}
             {GRAMMAR_GRADES.map((g) => {

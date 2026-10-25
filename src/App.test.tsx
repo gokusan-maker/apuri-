@@ -1848,7 +1848,11 @@ it('文法ページは城と今日の課題と「単元をえらんで自由に�
   expect(screen.queryByText('✏️ すぐ練習（5問）')).toBeNull()
   expect(document.querySelector('.castle')).not.toBeNull()
   fireEvent.click(screen.getByText('📚 単元をえらんで自由に勉強'))
-  expect(screen.getByRole('tablist', { name: '学年' })).toBeInTheDocument()
+  // 自由に勉強はレベルごと（中1〜高校・入試）。はじめは城のレベル（中1）
+  const lv = screen.getByRole('tablist', { name: 'レベル' })
+  expect(within(lv).getByRole('tab', { name: '中1' })).toHaveAttribute('aria-selected', 'true')
+  fireEvent.click(within(lv).getByRole('tab', { name: '入試' }))
+  expect(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /旧帝大/ })).toBeInTheDocument()
   expect(document.querySelector('.castle')).toBeNull()
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(document.querySelector('.castle')).not.toBeNull()
