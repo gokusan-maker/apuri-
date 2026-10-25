@@ -17,6 +17,7 @@ import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
 import { COURSES, courseOf, courseReady } from './wordcourse'
+import { EXAM_TIERS, loadExamTier, passagesForTier, saveExamTier } from './examtier'
 import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
@@ -340,6 +341,7 @@ function App() {
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
   const [showShop, setShowShop] = useState(false)
   const [readLevel, setReadLevel] = useState<ReadLevel>(loadReadLevel) // 読解ステージのむずかしさ
+  const [examTier, setExamTier] = useState(loadExamTier) // 難関大の入試レベル（共通テスト〜国立医学部）
   // 学年・レベルをえらんだら：単語帳と、読解のむずかしさもその学年に（今日の課題・ボス戦の文法もこれに合わせる）
   const pickGrade = (lv: Level[], g?: GradeId) => {
     setLevels(lv)
@@ -1851,7 +1853,27 @@ function App() {
               onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             />
           ) : mode === 'reading' && readLevel !== 'easy' && !shortGo ? (
-            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <>
+            {readLevel === 'univ' && !playOn && (
+              <div className="exam-tiers" role="group" aria-label="入試レベル">
+                {EXAM_TIERS.map((t) => (
+                  <button
+                    key={t.id}
+                    className={`exam-tier${examTier === t.id ? ' on' : ''}`}
+                    aria-pressed={examTier === t.id}
+                    onClick={() => {
+                      setExamTier(t.id)
+                      saveExamTier(t.id)
+                    }}
+                  >
+                    {t.label}
+                    <small>{passagesForTier(t.id).length}本</small>
+                  </button>
+                ))}
+              </div>
+            )}
+            <LongReading key={`${readLevel}-${readLevel === 'univ' ? examTier : ''}`} passages={readLevel === 'univ' ? passagesForTier(examTier) : passagesFor(readLevel)} title={readLevel === 'univ' && examTier !== 'all' ? `📖 ${EXAM_TIERS.find((t) => t.id === examTier)!.label}レベルの読解` : `📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            </>
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}

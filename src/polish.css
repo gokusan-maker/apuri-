@@ -3079,3 +3079,10 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .word-course.on { border-color: #7c3aed; background: color-mix(in srgb, #7c3aed 14%, var(--card)); }
 .word-course.on b::before { content: '✓ '; color: #7c3aed; }
 .word-course:disabled { opacity: 0.5; cursor: default; }
+
+/* 難関大の入試レベル（共通テスト〜国立医学部） */
+.exam-tiers { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; margin: 0 0 10px; }
+.exam-tier { display: flex; flex-direction: column; align-items: center; gap: 0; min-height: 44px; padding: 4px 2px; border-radius: 12px; border: 2px solid color-mix(in srgb, #7c3aed 25%, transparent); background: var(--card); color: var(--fg); font: inherit; font-size: 0.72rem; font-weight: 900; cursor: pointer; white-space: nowrap; }
+.exam-tier small { font-size: 0.62rem; font-weight: 700; color: var(--muted); }
+.exam-tier.on { background: linear-gradient(135deg, #7c3aed, #db2777); border-color: transparent; color: #fff; }
+.exam-tier.on small { color: #fde68a; }

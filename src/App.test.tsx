@@ -2006,3 +2006,18 @@ it('今日の課題は単語→文法→読解の順に、まだの課題へ進�
   expect(nextTodayTask('reading', { word: false, grammar: true, reading: true })).toBe('word')
   expect(nextTodayTask('reading', { word: true, grammar: true, reading: true })).toBeUndefined()
 })
+
+it('読解の難関大で、入試レベル（共通テスト〜国立医学部）をえらんでしぼりこめる', async () => {
+  const { passagesForTier } = await import('./examtier')
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  localStorage.setItem('eitan:read-level', 'univ')
+  render(<App />)
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('読解ステージ'))
+  const tiers = screen.getByRole('group', { name: '入試レベル' })
+  fireEvent.click(within(tiers).getByRole('button', { name: /国立医学部/ }))
+  expect(within(tiers).getByRole('button', { name: /国立医学部/ })).toHaveAttribute('aria-pressed', 'true')
+  expect(screen.getByText('📖 国立医学部レベルの読解')).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:exam-tier')).toBe('kokuritsu-med')
+  expect(passagesForTier('kokuritsu-med').length).toBeGreaterThanOrEqual(2)
+})
