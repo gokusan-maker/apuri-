@@ -2797,3 +2797,9 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .boss-team-m .boss-team-atk { position: absolute; top: 4px; right: 4px; margin: 0; }
 /* 単語カードの「まだ」はピンク（「まちがいだけ・まだ」の色にそろえる） */
 .card .actions .again { background: linear-gradient(135deg, #f472b6, #db2777); color: #fff; box-shadow: 0 4px 0 #9d174d; }
+
+/* 1日1回の無料ガチャ：緑のきらきらボタン。ホームのガチャボタンにも「🎁 今日1回無料」 */
+.gacha .gacha-btn.gacha-free { width: 100%; margin-bottom: 10px; background: linear-gradient(135deg, #4ade80, #10b981 55%, #0ea5e9); color: #fff; font-weight: 900; white-space: nowrap; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #047857, 0 0 16px rgb(16 185 129 / 0.45); animation: free-glow 1.8s ease-in-out infinite; }
+@keyframes free-glow { 50% { box-shadow: 0 5px 0 #047857, 0 0 26px rgb(16 185 129 / 0.75); } }
+.home-gacha-free { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: #dcfce7; color: #047857; font-size: 0.7rem; font-weight: 900; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .gacha .gacha-btn.gacha-free { animation: none; } }

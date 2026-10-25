@@ -1043,11 +1043,11 @@ describe('App', () => {
     expect(screen.getByRole('group', { name: '文法ドリル' })).toBeInTheDocument()
   })
 
-  it('記録タブに相棒のきもち日記が出る', () => {
+  it('記録の下に相棒のきもちのコメントは出さない（オーナーの要望）', () => {
     render(<App />)
     navTo('ホーム')
-    const d = screen.getByLabelText(/のきもち日記$/)
-    expect(d.querySelector('.kimochi-face')!.textContent).toBe('🥺')
+    expect(screen.queryByLabelText(/のきもち日記$/)).toBeNull()
+    expect(screen.queryByText(/ちょっとさみしい/)).toBeNull()
   })
 
   it('ホームのガチャボタンには何が出るかを書かない（お楽しみ）', async () => {
@@ -1856,4 +1856,19 @@ it('単語のタイムアタックも、スタートしたら問題だけの画�
   expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull()
   fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
   expect(screen.getByText('スタート')).toBeInTheDocument()
+})
+
+describe('ガチャは1日1回無料', () => {
+  it('コイン0でも今日の無料ガチャを1回引け、引いたあとは出ない。チケットは減らない', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [], tickets: 1 }))
+    render(<App />)
+    expect(screen.getByText('🎁 今日1回無料')).toBeInTheDocument()
+    fireEvent.click(screen.getByLabelText(/ショップを開く/))
+    const before = JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{}]}').members.length
+    fireEvent.click(screen.getByRole('button', { name: /今日の無料ガチャ/ }))
+    expect(JSON.parse(localStorage.getItem('eitan:party')!).members.length).toBe(before + 1)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(1)
+    expect(localStorage.getItem('eitan:gacha-free-day')).toBe(dayKey())
+    expect(screen.queryByRole('button', { name: /今日の無料ガチャ/ })).toBeNull()
+  })
 })

@@ -49,13 +49,15 @@ type Props = {
   price?: number // 1回の値段（ゴールデンタイムは安い）
   stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
+  free?: boolean // 今日の無料の1回がまだある
+  onFree?: () => GachaResult | null // 1日1回の無料ガチャ
   onDrawMulti?: (n: number) => GachaResult[] // まとめて引く（3連ガチャ）
   onRaise?: () => void // 出たタマゴを相棒にする
   onNameNew?: (name: string) => void // 出た子にその場で名前をつける
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, onDrawMulti, onRaise, onNameNew }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, onDrawMulti, onRaise, onNameNew }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -70,8 +72,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const recordLog = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
   const [multi, setMulti] = useState<{ list: GachaResult[]; key: number } | null>(null)
-  const drawOne = (ticket: boolean) => {
-    const k = onDraw(ticket)
+  const drawOne = (ticket: boolean | 'free') => {
+    const k = ticket === 'free' ? (onFree?.() ?? null) : onDraw(ticket)
     if (k) {
       setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
       setNaming(null)
@@ -84,6 +86,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   return (
     <div className="gacha">
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
+      {free && onFree && !full && (
+        <button className="good gacha-btn gacha-free" onClick={() => drawOne('free')}>
+          🎁 今日の無料ガチャ（1日1回）
+        </button>
+      )}
       <button
         className="good gacha-btn"
         disabled={full || coins < price}

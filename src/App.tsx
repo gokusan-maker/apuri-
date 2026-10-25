@@ -19,7 +19,6 @@ import { TodayFocusBar } from './TodayFocusView'
 import { TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
-import { kimochiDiary } from './kimochi'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
 import { BIRTHDAY_TICKETS, birthdayAge, loadBirthday, registerBirthday, saveBirthday } from './birthday'
 import { loadEarned, loadTotals, newlyEarned, rewardOf, saveEarned, saveTotals, type Badge } from './badges'
@@ -46,6 +45,7 @@ import { pickWordOfDay } from './wordOfDay'
 import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
+import { loadFreeGachaDay, saveFreeGachaDay } from './freegacha'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
 import { Training } from './TrainingView'
@@ -223,6 +223,7 @@ const BASE_BOSS_NAMES = [...Object.values(BOSSES).map((b) => b.name), ...UNIV_BO
 
 function App() {
   const [progress, setProgress] = usePersistent<ProgressMap>(loadProgress, saveProgress)
+  const [freeGachaDay, setFreeGachaDay] = usePersistent(loadFreeGachaDay, saveFreeGachaDay) // 1日1回の無料ガチャを使った日
   const [mode, setMode] = useState<Tab>('home')
   const [showList, setShowList] = useState(false)
   const [statsTab, setStatsTab] = useState<'log' | 'buddy' | 'collection' | 'data'>('log')
@@ -1408,6 +1409,7 @@ function App() {
             <span className="home-gacha-main">
               🎰 ガチャをひく！
               {wallet.tickets ? <small>🎟×{wallet.tickets}</small> : null}
+              {freeGachaDay !== today && <small className="home-gacha-free">🎁 今日1回無料</small>}
             </span>
             <span className="home-gacha-pickup">なにが出るかはお楽しみ！</span>
           </button>
@@ -1646,6 +1648,13 @@ function App() {
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
+          freeGacha={freeGachaDay !== today}
+          onFreeGacha={() => {
+            // 無料の1回は、チケット1枚をその場でつけて引くのと同じ
+            const k = drawMany(true, 1, { ...wallet, tickets: (wallet.tickets ?? 0) + 1 })[0] ?? null // 上限をこえても本物のチケットは減らない
+            if (k) setFreeGachaDay(today)
+            return k
+          }}
           onGachaMulti={(n) => drawMany(false, n)}
           boostColor={kindOf(dailyColor(today)).name}
           luckyBag={luckyMonth !== today.slice(0, 7) && wallet.coins >= LUCKY_BAG_PRICE}
@@ -1817,12 +1826,6 @@ function App() {
           </div>
           {statsTab === 'log' && (
             <>
-              <p className="kimochi-diary" aria-label={`${monster.name ?? formOf(monster).name}のきもち日記`}>
-                <span className="kimochi-face" aria-hidden="true">
-                  {kimochiDiary(studiedToday).icon}
-                </span>
-                <span>{kimochiDiary(studiedToday).text}</span>
-              </p>
               {studiedToday > 0 && (
               <p className="today-summary" aria-label="今日のまとめ">
                 <span>☀️ 今日</span>
