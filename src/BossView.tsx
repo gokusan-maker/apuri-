@@ -16,7 +16,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -256,6 +256,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
+  const elem = attackElemOf(baseLook.color) // こうげきの属性（炎・氷・いなずま・どく・やみ）
   // チームバトル：App が単語・文法・読解のなかまをわたしているときは、3体が順番に攻撃する（読解ボスは、読解の番に本文の問題）
   const team = useContext(BossTeamContext)
   const supportTypes = useContext(BossSupportContext)
@@ -586,7 +587,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}
       {charge && picked !== null && shieldUsed !== index && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
       {atk && atk.at === index && picked !== null && !won && (
-        <div key={`atk${index}`} className={`boss-atk-fx${atk.lose === 0 ? ' blocked' : ''}`} aria-hidden="true">
+        <div key={`atk${index}`} className={`boss-atk-fx elem-${elem.id}${atk.lose === 0 ? ' blocked' : ''}`} aria-hidden="true">
+          <span className="elem-icon">{elem.icon}</span>
           <span className="slash s1" />
           <span className="slash s2" />
           <span className="slash s3" />
@@ -1020,10 +1022,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                   {atk.who && teamOn
                     ? !atk.dmg
                       ? `🛡 ${look.name}の${atk.counter ? '反撃' : 'こうげき'}！ ガード！`
-                      : `${atk.counter ? '⚡' : '💥'} ${look.name}の${atk.counter ? '反撃' : 'こうげき'}！ ${TEAM_ICON[atk.who]}${TEAM_LABEL[atk.who]} -${atk.dmg}${atk.lose > 0 ? ' ダウン！' : ''}`
+                      : `${elem.icon} ${elem.name}の${atk.counter ? '反撃' : 'こうげき'}！ ${TEAM_ICON[atk.who]}${TEAM_LABEL[atk.who]} -${atk.dmg}${atk.lose > 0 ? ' ダウン！' : ''}`
                     : atk.lose === 0
                       ? `🛡 ${look.name}のこうげき！ ガード！`
-                      : `💥 ${look.name}のこうげき！ ❤️-${atk.lose}`}
+                      : `${elem.icon} ${elem.name}のこうげき！ ❤️-${atk.lose}`}
                 </p>
               )}
               <p className="feedback">

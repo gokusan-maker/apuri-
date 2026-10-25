@@ -185,3 +185,8 @@ it('英検2級〜ネイティブのボスは、色ちがいではなく形のち
   const decos = (['英検2級', '英検準1級', '英検1級', 'ネイティブ'] as const).map((l) => BOSSES[l].deco)
   expect(decos).toEqual(['mortarboard', 'scholar', 'lastboss', 'speaker'])
 })
+
+it('ボスのこうげきの属性は色で決まる（赤＝炎・青＝氷・黄＝いなずま・緑＝どく・灰色＝やみ）', async () => {
+  const { attackElemOf } = await import('./boss')
+  expect(['#dc2626', '#0ea5e9', '#eab308', '#16a34a', '#334155', '#7c3aed'].map((c) => attackElemOf(c).id)).toEqual(['fire', 'ice', 'thunder', 'poison', 'dark', 'dark'])
+})

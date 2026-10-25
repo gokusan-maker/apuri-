@@ -462,3 +462,29 @@ export function reviveOne(hp: TeamHp): TeamHp {
   const low = [...TEAM_ORDER].sort((a, b) => hp[a] - hp[b])[0]
   return { ...hp, [low]: Math.min(MEMBER_HP, hp[low] + Math.ceil(MEMBER_HP / 2)) }
 }
+
+// ボスのこうげきの属性：ボスの色で決まる（赤＝炎・青＝氷・黄＝いなずま・緑＝どく・それ以外＝やみ）
+export type AttackElem = { id: 'fire' | 'ice' | 'thunder' | 'poison' | 'dark'; icon: string; name: string }
+const ELEMS: Record<AttackElem['id'], AttackElem> = {
+  fire: { id: 'fire', icon: '🔥', name: 'ほのお' },
+  ice: { id: 'ice', icon: '❄', name: 'こおり' },
+  thunder: { id: 'thunder', icon: '⚡', name: 'いなずま' },
+  poison: { id: 'poison', icon: '🌿', name: 'どく' },
+  dark: { id: 'dark', icon: '🌑', name: 'やみ' },
+}
+export function attackElemOf(color: string): AttackElem {
+  const m = /^#?([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i.exec(color)
+  if (!m) return ELEMS.dark
+  const [r, g, b] = [m[1], m[2], m[3]].map((x) => parseInt(x, 16) / 255)
+  const max = Math.max(r, g, b)
+  const min = Math.min(r, g, b)
+  if (max - min < 0.15) return ELEMS.dark // 灰色・黒っぽいボス
+  const d = max - min
+  const h = max === r ? ((g - b) / d + 6) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4
+  const deg = h * 60
+  if (deg < 25 || deg >= 330) return ELEMS.fire
+  if (deg < 70) return ELEMS.thunder
+  if (deg < 165) return ELEMS.poison
+  if (deg < 250) return ELEMS.ice
+  return ELEMS.dark
+}

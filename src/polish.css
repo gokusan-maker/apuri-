@@ -3209,3 +3209,17 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 @keyframes gr-tapped { 0% { transform: scale(1.12) rotate(-8deg); } 50% { transform: scale(0.95) rotate(8deg); } 100% { transform: none; } }
 @media (prefers-reduced-motion: reduce) { .gr-tap, .gr-egg.tapped { animation: none; } }
 .gr-tap { white-space: nowrap; }
+/* ボスのこうげきの属性 */
+.boss-atk-fx .elem-icon { position: absolute; top: 30%; left: 50%; translate: -50% 0; font-size: 4rem; opacity: 0; animation: boss-elem 0.8s ease-out forwards; filter: drop-shadow(0 0 12px #fff); }
+@keyframes boss-elem { 0% { opacity: 0; scale: 0.4; } 30% { opacity: 1; scale: 1.2; } 100% { opacity: 0; scale: 1.6; } }
+.boss-atk-fx.elem-fire .slash { background: linear-gradient(180deg, transparent, #fef08a 20%, #f97316 60%, transparent); box-shadow: 0 0 16px #f97316; }
+.boss-atk-fx.elem-ice { background: radial-gradient(circle, transparent 40%, rgb(56 189 248 / 0.45)); }
+.boss-atk-fx.elem-ice .slash { background: linear-gradient(180deg, transparent, #fff 20%, #38bdf8 60%, transparent); box-shadow: 0 0 16px #38bdf8; }
+.boss-atk-fx.elem-thunder { background: radial-gradient(circle, transparent 40%, rgb(250 204 21 / 0.45)); }
+.boss-atk-fx.elem-thunder .slash { background: linear-gradient(180deg, transparent, #fff 20%, #facc15 60%, transparent); box-shadow: 0 0 18px #facc15; }
+.boss-atk-fx.elem-poison { background: radial-gradient(circle, transparent 40%, rgb(34 197 94 / 0.42)); }
+.boss-atk-fx.elem-poison .slash { background: linear-gradient(180deg, transparent, #d9f99d 20%, #22c55e 60%, transparent); box-shadow: 0 0 16px #22c55e; }
+.boss-atk-fx.elem-dark { background: radial-gradient(circle, transparent 40%, rgb(88 28 135 / 0.5)); }
+.boss-atk-fx.elem-dark .slash { background: linear-gradient(180deg, transparent, #e9d5ff 20%, #7c3aed 60%, transparent); box-shadow: 0 0 16px #7c3aed; }
+.boss-atk-fx.blocked .elem-icon { display: none; }
+@media (prefers-reduced-motion: reduce) { .boss-atk-fx .elem-icon { animation: none; opacity: 0; } }
