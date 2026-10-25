@@ -2765,3 +2765,15 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .stage-levels > .stage-level .stage-btn:not(:disabled):not(.cleared) { border-color: hsl(var(--st-h) 80% 85%); background: linear-gradient(160deg, hsl(var(--st-h) 80% 66%), hsl(var(--st-h) 70% 48%)); box-shadow: 0 4px 0 hsl(var(--st-h) 60% 30%), 0 0 0 4px hsl(var(--st-h) 80% 66% / 0.25); }
 /* タイムアタックの「▶ スタート」は、結果画面のオレンジより強く、スタートの色（オレンジ〜赤）に */
 section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #fb923c, #ef4444); box-shadow: 0 5px 0 #b91c1c, 0 8px 18px rgb(239 68 68 / 0.3); }
+
+/* ボス部屋の「とくべつイベント」：日によって1つだけ出現。光るわく・リボン・きらきらで特別感 */
+.special-event { position: relative; margin: 14px 0 12px; padding: 30px 10px 10px; border-radius: 22px; background: linear-gradient(135deg, #1e1b4b, #4c1d95 55%, #831843); box-shadow: 0 0 0 3px #fde047, 0 0 22px rgb(250 204 21 / 0.55), 0 8px 18px rgb(76 29 149 / 0.35); overflow: hidden; animation: se-glow 2.4s ease-in-out infinite; }
+.special-event::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 12% 30%, rgb(255 255 255 / 0.5) 0 1.5px, transparent 2.5px), radial-gradient(circle at 78% 18%, rgb(255 255 255 / 0.6) 0 1.5px, transparent 2.5px), radial-gradient(circle at 60% 85%, rgb(253 224 71 / 0.7) 0 2px, transparent 3px), radial-gradient(circle at 92% 70%, rgb(255 255 255 / 0.45) 0 1px, transparent 2px), radial-gradient(circle at 30% 75%, rgb(253 224 71 / 0.6) 0 1.5px, transparent 2.5px); pointer-events: none; animation: se-twinkle 1.6s ease-in-out infinite alternate; }
+.special-event-ribbon { position: absolute; top: 0; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 6px; margin: 0; padding: 4px 14px; border-radius: 0 0 14px 14px; background: linear-gradient(180deg, #fde047, #f59e0b); color: #78350f; font-size: 0.78rem; font-weight: 900; white-space: nowrap; box-shadow: 0 3px 0 #b45309; }
+.special-event-note { padding: 1px 8px; border-radius: 999px; background: rgb(120 53 15 / 0.15); font-size: 0.7rem; }
+.special-event .boss-modes { margin: 0; padding: 0; border: none; background: none; box-shadow: none; }
+.special-event .boss-modes .boss-btn { position: relative; margin: 0; }
+.special-event .gold-chest, .special-event .univ-tower { margin: 0; }
+@keyframes se-glow { 50% { box-shadow: 0 0 0 3px #fef08a, 0 0 32px rgb(250 204 21 / 0.8), 0 8px 18px rgb(76 29 149 / 0.35); } }
+@keyframes se-twinkle { from { opacity: 0.35; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .special-event, .special-event::before { animation: none; } }

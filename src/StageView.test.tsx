@@ -91,7 +91,7 @@ it('今日のボスに勝つと onDailyWin が呼ばれる', () => {
 it('大学入試の塔を全階制覇すると合格証書が出る', () => {
   const rec = Object.fromEntries(UNIV_BOSSES.map((b, i) => [b.id, `2026-10-${String(10 + i).padStart(2, '0')}`]))
   localStorage.setItem('eitan:univ', JSON.stringify(rec))
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="univ" />)
   expect(screen.getByText('🎓 合格証書')).toBeInTheDocument()
   expect(screen.getByText(/2026\/10\/18/)).toBeInTheDocument()
   localStorage.removeItem('eitan:univ')
@@ -99,13 +99,13 @@ it('大学入試の塔を全階制覇すると合格証書が出る', () => {
 
 it('まだ制覇していなければ合格証書は出ない', () => {
   localStorage.setItem('eitan:univ', JSON.stringify({ gate: '2026-10-20' }))
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="univ" />)
   expect(screen.queryByText('🎓 合格証書')).not.toBeInTheDocument()
   localStorage.removeItem('eitan:univ')
 })
 
 it('今週のレアボスに挑戦できる', () => {
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="rare" />)
   fireEvent.click(screen.getByRole('button', { name: /今週のレアボス/ }))
   expect(screen.getByText('勝つと 色ちがい確定のタマゴ！')).toBeInTheDocument()
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
@@ -114,7 +114,7 @@ it('今週のレアボスに挑戦できる', () => {
 
 it('ボスラッシュは3連戦で、勝つとハートを引き継いで次のボスへ', () => {
   const clear = vi.fn()
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} onRushClear={clear} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} onRushClear={clear} event="rush" />)
   fireEvent.click(screen.getByRole('button', { name: /^ボスラッシュ/ }))
   for (let round = 1; round <= 3; round++) {
     expect(screen.getByText(`🔥 ボスラッシュ ${round} / 3`)).toBeInTheDocument()
@@ -132,7 +132,7 @@ it('ボスラッシュは3連戦で、勝つとハートを引き継いで次の
 
 it('エンドレスの塔は勝つと次の階へ進み、最高記録が残る', () => {
   localStorage.clear()
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="endless" />)
   fireEvent.click(screen.getByRole('button', { name: /エンドレスの塔/ }))
   for (let floor = 1; floor <= 2; floor++) {
     expect(screen.getByText(`🗼 塔 ${floor}階（最高 ${floor - 1}階）`)).toBeInTheDocument()
@@ -161,10 +161,10 @@ it('ステージのボスは読解問題（読解の本文つきで、空所補�
 })
 
 it('週末はボスラッシュEXが出て、むずかしいボスと戦う', () => {
-  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="rush" />)
   expect(screen.queryByText(/ボスラッシュEX/)).not.toBeInTheDocument()
   unmount()
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend event="rush-ex" />)
   fireEvent.click(screen.getByText(/週末限定ボスラッシュEX/))
   expect(screen.getByText('🔥 ボスラッシュEX 1 / 3')).toBeInTheDocument()
   expect(screen.getAllByText(/コオリモチ/).length).toBeGreaterThan(0) // 日によっては「金色のコオリモチ」 // 中3のボスから
@@ -193,10 +193,10 @@ it('今日のボスは★2・★3の強さを選べる', () => {
 
 it('週末ボスは週末だけ出て、HPが多い', () => {
   localStorage.clear()
-  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  const { unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="rush" />)
   expect(screen.queryByRole('button', { name: /週末ボス/ })).not.toBeInTheDocument()
   unmount()
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} weekend event="weekend" />)
   fireEvent.click(screen.getByRole('button', { name: /^週末ボス/ }))
   expect(screen.getByText(/たおすと 🎟1（HP/)).toBeInTheDocument()
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
@@ -228,7 +228,7 @@ it('ナイトボスは夜7時〜10時だけ出る', () => {
   expect(screen.queryByRole('button', { name: /ナイトボス/ })).not.toBeInTheDocument()
   unmount()
   const bonus = vi.fn()
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={20} onRankBonus={bonus} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} hour={20} onRankBonus={bonus} event="night" />)
   fireEvent.click(screen.getByRole('button', { name: /^ナイトボス/ }))
   expect(screen.getByText(/夜7時〜10時だけ出るボス「夜の/)).toBeInTheDocument()
   expect(screen.getByText('🌃 ナイトボス')).toBeInTheDocument()
@@ -253,21 +253,24 @@ it('ステージをクリアすると「次のステージへ ▶」ですぐ次
 
 it('大学入試の塔に進みぐあいメーターがある', () => {
   localStorage.removeItem('eitan:univ')
-  const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="univ" />)
   expect(container.querySelector('.univ-meter i')?.getAttribute('style')).toContain('width: 0%')
 })
 
-it('ボス部屋のモード（エンドレス・ラッシュ・タイムアタック・レア）は1枚のリストにまとまる', () => {
-  const { container } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  const modes = container.querySelector('.boss-modes')!
-  expect(modes.querySelector('.endless-boss')).not.toBeNull()
-  expect(modes.querySelector('.rare-boss')).not.toBeNull()
-  expect(modes.querySelectorAll('.boss-btn').length).toBeGreaterThanOrEqual(4)
+it('ボス部屋の塔・ラッシュなどは横にならべず、とくべつイベントとして1つだけ出る', () => {
+  const { container, unmount } = render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="endless" />)
+  expect(container.querySelector('.special-event .endless-boss')).not.toBeNull()
+  expect(container.querySelectorAll('.boss-modes .boss-btn')).toHaveLength(1)
+  expect(screen.getByText(/とくべつイベント出現中！/)).toBeInTheDocument()
+  unmount()
+  const r = render(<Stages levels={['中1']} record={{}} onClear={() => {}} event={null} />)
+  expect(r.container.querySelector('.special-event')).toBeNull()
+  expect(r.container.querySelector('.boss-modes')).toBeNull()
 })
 
 it('ボス部屋のボタンは題名だけで、くわしい説明は戦いの画面の最初に出る', () => {
   localStorage.removeItem('eitan:endless-best')
-  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="endless" />)
   const btn = screen.getByRole('button', { name: /エンドレスの塔/ })
   expect(btn.textContent).toBe('🗼エンドレスの塔')
   fireEvent.click(btn)

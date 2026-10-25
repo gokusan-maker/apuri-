@@ -133,3 +133,9 @@ it('単語ステージのタイルは単語帳ごとに色がちがう', () => {
 it('タイムアタックの「スタート」はオレンジ〜赤（結果画面のオレンジに負けない）', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/section\.result\.ta-ready > \.flip\.ta-start \{ background: linear-gradient\(135deg, #fb923c, #ef4444\)/)
 })
+
+it('ボス部屋のとくべつイベントは光るわく・リボンつき', () => {
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.special-event \{[^}]*animation: se-glow/)
+  expect(css).toMatch(/\.special-event-ribbon \{[^}]*white-space: nowrap/)
+})
