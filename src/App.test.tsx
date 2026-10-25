@@ -1177,7 +1177,7 @@ describe('App', () => {
     fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
     expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
-    expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/59本/)
+    expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/60本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     expect(within(screen.getByLabelText('読解ゲーム')).getByRole('button', { name: /おすすめ/ })).toBeInTheDocument() // そのレベルの中から日がわり（読解ゲームのタイル）

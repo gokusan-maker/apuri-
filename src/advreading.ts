@@ -2271,6 +2271,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did Lucas mean by "the key that opened the door"?', choices: ['The notebook helped him make friends.', 'He found a real key in the notebook.', 'The notebook had the classroom key.', 'He wanted to go home to Brazil.'], answer: 0, why: '第3段落：ノートがきっかけでみんなと話せるようになった、というたとえ。' },
     ],
   },
+  {
+    id: 'adv-microbiome',
+    title: 'The Hidden Population Inside Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Each of us carries trillions of microorganisms, most of them living in the large intestine. For a long time, these bacteria were regarded mainly as passengers, or ( A ) as a source of disease. Over the past two decades, however, new techniques for reading the genetic material of entire microbial communities have shown that this hidden population, now called the gut microbiome, plays a far more active role in human health than anyone had imagined.",
+      "Gut bacteria break down fibers that our own enzymes cannot digest, producing compounds that nourish the cells lining the intestine. They also appear to train the immune system. Mice raised in completely sterile conditions, ( B ) any microbes at all, develop immune systems that are poorly regulated, and they respond abnormally to infections. Some researchers suspect that the rise of allergies in wealthy countries may be linked to reduced contact with a wide range of microbes in early childhood, although this idea, often called the hygiene hypothesis, remains controversial.",
+      "Such findings have encouraged enthusiasm, and sometimes exaggeration. Products ( C ) to improve the microbiome are now sold widely, yet for most of them there is little solid evidence of benefit. One treatment, however, has proved remarkably effective: transferring stool from a healthy donor to patients who suffer from a severe intestinal infection that keeps coming back. Its success shows that the microbiome can be deliberately reshaped. The challenge for medicine is to learn which changes help, for whom, and why, before promises run far ahead of proof.",
+    ],
+    ja: [
+      '私たちはだれもが何兆もの微生物をかかえており、そのほとんどは大腸にすんでいる。長いあいだ、これらの細菌は主に「乗客」、悪くすれば病気の原因と見なされていた。しかしこの20年ほどで、微生物の集団全体の遺伝物質を読み取る新しい技術によって、いまでは腸内細菌叢（マイクロバイオーム）とよばれるこのかくれた集団が、だれも想像しなかったほど積極的な役割を人間の健康で果たしていることが明らかになった。',
+      '腸内細菌は、私たち自身の酵素では消化できない食物繊維を分解し、腸の内側をおおう細胞に栄養をあたえる物質をつくる。また、免疫のしくみをきたえているようでもある。微生物がまったくいない完全な無菌の環境で育てられたマウスは、うまく調節されない免疫のしくみをもつようになり、感染に対して異常な反応をする。豊かな国でアレルギーが増えているのは、幼いころにさまざまな微生物とふれる機会が減ったことと関係があるのではないかと考える研究者もいるが、衛生仮説とよばれることの多いこの考えは、いまも議論が分かれている。',
+      'こうした発見は熱狂を、そしてときには誇張を生んできた。腸内細菌叢をよくするとうたう製品がいまでは広く売られているが、そのほとんどには効果を示す確かな証拠がほとんどない。しかし、ある治療法はめざましい効果をあげている。くり返しぶり返す重い腸の感染症に苦しむ患者に、健康な提供者の便を移すという方法だ。その成功は、腸内細菌叢を意図して作りかえられることを示している。医学にとっての課題は、約束が証拠よりはるか先に走ってしまう前に、どんな変化が、だれに、なぜ役立つのかを明らかにすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['at worst', 'at worse', 'worst at', 'the worst at'], answer: 0, why: 'at worst で「悪くすれば・最悪の場合」。at worse・worst at という言い方はない。' },
+      { id: 'B', choices: ['without', 'unless', 'except that', 'lacked'], answer: 0, why: 'うしろが名詞（any microbes）なので前置詞 without。unless・except that のあとには文が必要で、lacked では文の形にならない。' },
+      { id: 'C', choices: ['claiming', 'claim', 'claims', 'to claiming'], answer: 0, why: '動詞は are sold。名詞 products を「～とうたう」とうしろから説明する現在分詞 claiming。' },
+    ],
+    tf: [
+      { statement: 'かつて腸内細菌は、主に体に乗っているだけのものと考えられていた。', answer: true, why: '第1段落 regarded mainly as passengers。' },
+      { statement: '無菌の環境で育てたマウスは、感染症にふつうより強い免疫をもつ。', answer: false, why: '第2段落 develop immune systems that are poorly regulated, and they respond abnormally to infections。' },
+      { statement: '腸内細菌叢をよくするとうたう製品の多くは、効果の確かな証拠が少ない。', answer: true, why: '第3段落 for most of them there is little solid evidence of benefit。' },
+    ],
+    qa: [
+      { q: 'What do gut bacteria do with fibers that our enzymes cannot digest?', choices: ['They break them down into compounds that feed intestinal cells.', 'They turn them into new enzymes for the stomach.', 'They send them back to the small intestine.', 'They change them into antibiotics.'], answer: 0, why: '第2段落 break down fibers … producing compounds that nourish the cells lining the intestine。' },
+      { q: 'What does the success of transferring stool show?', choices: ['The microbiome can be deliberately reshaped.', 'All microbiome products are effective.', 'Allergies are caused by gut bacteria.', 'Mice should be raised in sterile conditions.'], answer: 0, why: '第3段落 Its success shows that the microbiome can be deliberately reshaped。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
