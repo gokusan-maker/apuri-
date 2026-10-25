@@ -4053,6 +4053,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-comets',
+    title: 'Visitors from the Edge of the Solar System',
+    level: 'TOEFL・IELTS（天文学）',
+    paragraphs: [
+      "Comets are among the most spectacular objects in the night sky, yet at their core they are surprisingly small and dark. A typical comet nucleus is a mixture of ice, dust, and rock only a few kilometers across. For most of its long orbit, it travels far from the Sun, where it is frozen and almost invisible.",
+      "Everything changes as a comet approaches the Sun. The increasing heat turns some of its ice directly into gas, a process ( A ) releases large amounts of dust as well. The gas and dust form a glowing cloud, called the coma, around the nucleus. Pressure from sunlight and the solar wind then pushes this material outward, creating one or more long tails. Interestingly, a comet's tail always points away from the Sun, ( B ) the comet is moving toward it or away from it.",
+      "Astronomers believe that many comets come from two distant regions. Short-period comets, which return within about 200 years, are thought to originate in a belt of icy objects beyond Neptune. Long-period comets may come from a much more distant cloud of icy bodies surrounding the solar system. Halley's Comet, perhaps the most famous example, returns roughly every 76 years.",
+      "Because comets have changed little since the solar system formed, scientists study them ( C ) clues about its early history. Some researchers even suggest that comets may have delivered part of Earth's water.",
+    ],
+    ja: [
+      'すい星は夜空でもっとも壮観な天体の1つだが、その中心はおどろくほど小さく暗い。典型的なすい星の核は、さしわたしわずか数キロメートルの、氷とちりと岩のまざりあったものである。長い軌道のほとんどのあいだ、すい星は太陽から遠く離れたところを進んでおり、そこでは凍っていてほとんど見えない。',
+      'すい星が太陽に近づくと、すべてが変わる。強まる熱によって氷の一部が直接気体に変わり、その過程で大量のちりも放出される。気体とちりは核のまわりに、コマとよばれる輝く雲をつくる。そして太陽光の圧力と太陽風がこの物質を外へ押し出し、1本以上の長い尾をつくる。おもしろいことに、すい星の尾は、すい星が太陽に向かっていても遠ざかっていても、つねに太陽と反対の方向を向いている。',
+      '天文学者たちは、多くのすい星が2つの遠い領域からやって来ると考えている。およそ200年以内にもどってくる短周期すい星は、海王星の外側にある氷の天体の帯で生まれると考えられている。長周期すい星は、太陽系を取り囲む、はるかに遠い氷の天体の雲から来るのかもしれない。おそらくもっとも有名な例であるハレーすい星は、およそ76年ごとにもどってくる。',
+      'すい星は太陽系ができたころからほとんど変わっていないので、科学者たちは太陽系の初期の歴史についての手がかりを求めてすい星を研究している。すい星が地球の水の一部を運んできたのかもしれないと考える研究者さえいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a process を説明し、releases の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['whether', 'despite', 'because of', 'in spite of'], answer: 0, why: 'whether A or B で「A であろうと B であろうと」。うしろが文（the comet is moving …）なので、前置詞の働きをする despite・because of・in spite of は入らない。' },
+      { id: 'C', choices: ['for', 'by', 'at', 'of'], answer: 0, why: 'study A for clues で「手がかりを求めて A を研究する」。目的・追求を表す for。' },
+    ],
+    tf: [
+      { statement: 'すい星の核は、ふつう数キロメートルほどの大きさである。', answer: true, why: '第1段落 only a few kilometers across。' },
+      { statement: 'すい星の尾は、つねにすい星の進む方向の後ろにのびる。', answer: false, why: '第2段落 a comet\'s tail always points away from the Sun（太陽と反対方向）。' },
+      { statement: 'ハレーすい星はおよそ76年ごとにもどってくる。', answer: true, why: '第3段落 returns roughly every 76 years。' },
+    ],
+    qa: [
+      { q: 'What happens when a comet approaches the Sun?', choices: ['Its ice turns into gas and forms a glowing cloud and tails.', 'It becomes completely frozen and invisible.', 'It stops moving along its orbit.', 'It breaks into many small planets.'], answer: 0, why: '第2段落 The increasing heat turns some of its ice directly into gas … The gas and dust form a glowing cloud … creating one or more long tails。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
