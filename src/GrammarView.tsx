@@ -14,6 +14,7 @@ import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMM
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
+import { GC_PASS, grammarCastleFloors, loadGcClears, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -144,6 +145,18 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [showPoints, setShowPoints] = useState(false) // まちがえたとき、その場で単元の要点を見る
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
+  const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
+  const gcFloors = stampMode ? grammarCastleFloors(grammarForGrade()) : []
+  // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
+  const openFloor = (id: string) => {
+    const f = gcFloors.find((x) => x.id === id)
+    if (!f) return
+    if (f.explain) open(f.explain)
+    else {
+      open({ id: f.id, title: f.label, points: [], examples: [], questions: f.questions })
+      setStep(0)
+    }
+  }
   const [gDays, setGDays] = useState(loadGrammarDays)
   const [master, setMaster] = useState(loadMaster)
   const [streakBonus, setStreakBonus] = useState(false)
@@ -212,7 +225,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
     setPicked(null)
     setScore(0)
     setMissed([])
-    setShuffleSeed(Math.floor(Math.random() * 1000))
+    setShuffleSeed((x) => x + 13) // 開くたびに選択肢の順番をずらす
   }
 
   if (spot) return <div className={inApp ? 'play-hide-back' : undefined}><GrammarSpot onAnswer={onAnswer} onBack={() => setSpot(false)} units={grade === 'all' ? GRAMMAR : GRAMMAR.filter((u) => gradeOf(u.id) === grade)} label={grade === 'all' ? undefined : grade} /></div>
@@ -273,8 +286,8 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
               name="文法の城"
               theme="green"
               onChest={onChest}
-              floors={grammarForGrade().map((u) => ({ id: u.id, label: u.title.split('（')[0], sub: gradeOf(u.id), cleared: (clears[u.id] ?? 0) > 0 }))}
-              onOpen={(id) => open(GRAMMAR.find((u) => u.id === id)!)}
+              floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
+              onOpen={openFloor}
             />
             <button
               className="flip grammar-quick-btn"
@@ -927,6 +940,12 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
           </button>
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
+        {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1] && (
+          <button className="good next-unit-btn" onClick={() => openFloor(gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].id)}>
+            🏰 次の階へ ▶ {gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].label}
+          </button>
+        )}
+        {unit.id.startsWith('gc:') && !gcClears.includes(unit.id) && <p className="stats-note">🏰 {GC_PASS}問以上正解で、この階をクリア！</p>}
         {!battle && nextUnit(unit.id) && (
           <button className="good next-unit-btn" onClick={() => open(nextUnit(unit.id)!)}>
             次の単元へ ▶ {nextUnit(unit.id)!.title}
@@ -1023,6 +1042,11 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
       if (rush && rush.at === rush.list.length - 1) onRushWin?.()
     }
     if (battle && rush && step === unit.questions.length - 1 && nextScore < unit.questions.length) setRush(null)
+    if (step === unit.questions.length - 1 && unit.id.startsWith('gc:') && nextScore >= Math.min(GC_PASS, unit.questions.length) && !gcClears.includes(unit.id)) {
+      const c = [...gcClears, unit.id]
+      setGcClears(c)
+      saveGcClears(c)
+    }
     if (step === unit.questions.length - 1 && nextScore === unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
       const c = { ...clears, [unit.id]: (clears[unit.id] ?? 0) + 1 }
       setClears(c)
