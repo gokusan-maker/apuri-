@@ -27,7 +27,7 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
   // 旧帝大：抽象度の高い評論（ことば・知識・科学のあり方）
   'adv-language-thought': 'kyutei', 'adv-language-loss': 'kyutei', 'adv-science-doubt': 'kyutei', 'adv-measure-target': 'kyutei', 'adv-crowds': 'kyutei', 'adv-maps': 'kyutei', 'adv-curse-knowledge': 'kyutei', 'adv-railway-time': 'kyutei', 'adv-explanatory-depth': 'kyutei', 'adv-survivorship': 'kyutei', 'adv-hindsight': 'kyutei',
   // 国立医学部：脳と心のしくみ
-  'adv-forgetting': 'kokuritsu-med', 'adv-microbiome': 'kokuritsu-med', 'adv-transplant': 'kokuritsu-med', 'adv-attention': 'kokuritsu-med', 'adv-hedonic-adaptation': 'kokuritsu-med', 'adv-curiosity': 'kokuritsu-med', 'adv-learning-styles': 'kokuritsu-med', 'adv-zeigarnik': 'kokuritsu-med', 'adv-peak-end': 'kokuritsu-med',
+  'adv-forgetting': 'kokuritsu-med', 'adv-microbiome': 'kokuritsu-med', 'adv-transplant': 'kokuritsu-med', 'adv-handwashing': 'kokuritsu-med', 'adv-attention': 'kokuritsu-med', 'adv-hedonic-adaptation': 'kokuritsu-med', 'adv-curiosity': 'kokuritsu-med', 'adv-learning-styles': 'kokuritsu-med', 'adv-zeigarnik': 'kokuritsu-med', 'adv-peak-end': 'kokuritsu-med',
 }
 
 export const tierOf = (p: LongPassage): Exclude<ExamTier, 'all'> => TIER_OF[p.id] ?? (p.level.startsWith('難関大（評論）') ? 'kokkoritsu' : 'kyotsu')

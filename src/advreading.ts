@@ -2500,6 +2500,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What role do some scientists think the appendix plays?', choices: ['It is a safe house for helpful gut bacteria.', 'It is where food is digested first.', 'It stores extra blood for emergencies.', 'It produces the bacteria that cause cholera.'], answer: 0, why: '第2段落 it serves as a safe house for helpful gut bacteria。' },
     ],
   },
+  {
+    id: 'adv-handwashing',
+    title: 'The Doctor Who Asked Doctors to Wash',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the 1840s, a Hungarian doctor named Ignaz Semmelweis noticed something disturbing at the hospital in Vienna ( A ) he worked. In one of its two maternity wards, where babies were delivered by doctors and medical students, many more mothers died of fever after giving birth than in the other ward, which was run by midwives.",
+      "Semmelweis searched for the cause. The turning point came when a colleague died of a similar illness after being cut by a student's knife during an autopsy. Semmelweis realized that the doctors, who often went straight from examining dead bodies to delivering babies, might be carrying something deadly on their hands. He ordered them to wash their hands in a chlorine solution before entering the ward, and the death rate fell sharply, ( B ) to roughly the level of the midwives' ward.",
+      "Remarkably, his idea was largely rejected. The germ theory of disease had not yet been accepted, so Semmelweis could not explain ( C ) handwashing worked, and many doctors were offended by the suggestion that they themselves were causing deaths. Only in the years after his death in 1865 did germ theory, supported by scientists such as Louis Pasteur and Robert Koch, become widely accepted and provide the explanation he had lacked. His story is often told as a warning: evidence alone is not always enough to change practice, especially when it ( D ) experts to admit that they have been wrong.",
+    ],
+    ja: [
+      '1840年代、イグナーツ・ゼンメルワイスというハンガリーの医師は、自分が働いていたウィーンの病院で気がかりなことに気づいた。病院の2つの産科病棟のうち、医師や医学生がお産を担当する病棟では、助産師が運営するもう一方の病棟よりもはるかに多くの母親が出産後に熱で亡くなっていたのである。',
+      'ゼンメルワイスは原因をさがした。転機となったのは、同僚が解剖中に学生のメスで切られたあと、同じような病気で亡くなったことだった。ゼンメルワイスは、遺体を調べたあとそのままお産に向かうことの多い医師たちが、手に何か命取りになるものをつけているのかもしれないと気づいた。彼は病棟に入る前に塩素の溶液で手を洗うよう命じ、死亡率は急激に下がって、助産師の病棟とほぼ同じ水準になった。',
+      'おどろくべきことに、彼の考えはほとんど受け入れられなかった。病気の細菌説はまだ受け入れられていなかったので、ゼンメルワイスは手洗いがなぜ効くのかを説明できず、多くの医師は自分たちこそが死をもたらしているという指摘に気分を害した。1865年に彼が亡くなったあとの数年でようやく、ルイ・パスツールやロベルト・コッホらに支えられた細菌説が広く受け入れられ、彼に欠けていた説明をあたえた。彼の物語は警告としてよく語られる。証拠だけでは、やり方を変えるのに十分とはかぎらない。とくに、専門家に自分がまちがっていたと認めさせる必要があるときには。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'that'], answer: 0, why: 'worked は目的語をとらないので、場所（the hospital）を受ける関係副詞 where（= in which）。' },
+      { id: 'B', choices: ['dropping', 'dropped it', 'drop', 'to dropping'], answer: 0, why: '前の文に続けて「（そして）～まで下がった」と付け加える分詞構文 dropping。drop だけでは文がつながらない。' },
+      { id: 'C', choices: ['why', 'what', 'which', 'that of'], answer: 0, why: 'うしろが完全な文（handwashing worked）なので、間接疑問の why（なぜ～か）。what・which のうしろには欠けた部分が必要。' },
+      { id: 'D', choices: ['requires', 'requiring', 'require', 'is required'], answer: 0, why: 'when 節の主語は it（単数）なので動詞は requires。require 人 to do で「人に～することを求める」。' },
+    ],
+    tf: [
+      { statement: '医師や医学生がお産を担当する病棟のほうが、母親の死亡が多かった。', answer: true, why: '第1段落 many more mothers died … than in the other ward, which was run by midwives。' },
+      { statement: 'ゼンメルワイスの考えは、すぐに多くの医師に受け入れられた。', answer: false, why: '第3段落 his idea was largely rejected。' },
+      { statement: '手を洗うようになると、死亡率は大きく下がった。', answer: true, why: '第2段落 the death rate fell sharply。' },
+    ],
+    qa: [
+      { q: 'Why could Semmelweis not explain why handwashing worked?', choices: ['The germ theory of disease had not yet been accepted.', 'He did not keep any records of deaths.', 'The midwives refused to help him.', 'Chlorine was not available in Vienna.'], answer: 0, why: '第3段落 The germ theory of disease had not yet been accepted, so Semmelweis could not explain why handwashing worked。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
