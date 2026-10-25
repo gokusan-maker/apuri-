@@ -3417,6 +3417,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-survey-notice',
+    title: 'Notice: Customer Survey at Harbor Hotel',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Dear Guests, Thank you for choosing Harbor Hotel. We are always looking for ways to make your stay more comfortable, and we would greatly appreciate your opinions about our services.",
+      "Before you check out, please take a few minutes to complete the short survey ( A ) in your room. It asks about the cleanliness of your room, the quality of our breakfast, and the helpfulness of our staff. You may also complete the survey online by scanning the code on the back of your room key.",
+      "All guests who complete the survey will receive a voucher for a free drink at our rooftop café. In addition, one guest will be chosen at random each month to win a free two-night stay. Winners will be contacted by email, so please make sure that the address you provide ( B ) correct.",
+      "Your answers will be used only to improve our services and will not be shared with any other companies. If you prefer not to give your name, you may leave that part blank.",
+      "Completed paper surveys can be left at the front desk or placed in the box ( C ) to the elevators on the first floor. We hope you have enjoyed your stay, and we look forward to welcoming you again soon. The Management",
+    ],
+    ja: [
+      'お客様各位　ハーバー・ホテルをお選びいただき、ありがとうございます。私どもはつねに、皆様のご滞在をより快適にする方法を探しており、当ホテルのサービスについてご意見をいただければ大変ありがたく存じます。',
+      'チェックアウトの前に、お部屋に置いてある短いアンケートに数分でお答えください。お部屋の清潔さ、朝食の質、スタッフの対応についてうかがうものです。ルームキーの裏のコードを読みとって、オンラインでお答えいただくこともできます。',
+      'アンケートにお答えいただいたお客様全員に、屋上カフェのドリンク1杯無料券を差し上げます。さらに、毎月お1人を抽選で選び、2泊の無料宿泊をプレゼントします。当選者にはメールでご連絡しますので、ご記入のアドレスが正しいことをお確かめください。',
+      'ご回答はサービスの改善にのみ使わせていただき、ほかの会社と共有することはありません。お名前を書きたくない場合は、その欄を空けておいてかまいません。',
+      '記入したアンケート用紙は、フロントにお渡しいただくか、1階のエレベーターのとなりにある箱に入れてください。ご滞在をお楽しみいただけたことを願うとともに、またのお越しを心よりお待ちしております。支配人',
+    ],
+    blanks: [
+      { id: 'A', choices: ['provided', 'providing', 'provides', 'to providing'], answer: 0, why: 'the short survey を後ろから説明する過去分詞 provided（部屋に用意されたアンケート）。アンケートは「用意される」側。provides は動詞で、すでに文の動詞 complete があるので入らない。' },
+      { id: 'B', choices: ['is', 'are', 'be', 'being'], answer: 0, why: 'make sure that ＋文。その文の主語 the address（単数）に対応する動詞 is。' },
+      { id: 'C', choices: ['next', 'beside', 'besides', 'nearby'], answer: 0, why: 'next to ～ で「～のとなりに」。beside・besides・nearby のうしろに to は続かない。' },
+    ],
+    tf: [
+      { statement: 'アンケートはオンラインでも答えられる。', answer: true, why: '第2段落 You may also complete the survey online by scanning the code。' },
+      { statement: 'アンケートに答えた人は全員、2泊の無料宿泊がもらえる。', answer: false, why: '第3段落 one guest will be chosen at random each month to win a free two-night stay（毎月1人）。' },
+      { statement: '回答はほかの会社と共有される。', answer: false, why: '第4段落 will not be shared with any other companies。' },
+    ],
+    qa: [
+      { q: 'What will every guest who completes the survey receive?', choices: ['A voucher for a free drink.', 'A free two-night stay.', 'A discount on breakfast.', 'A new room key.'], answer: 0, why: '第3段落 All guests who complete the survey will receive a voucher for a free drink。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
