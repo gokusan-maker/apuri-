@@ -4,7 +4,7 @@ import { BC_PASS } from './bosscastle'
 import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：5問。4問以上正解でクリア
-export function BossFloor({ title, qs, onDone, onBack }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void }) {
+export function BossFloor({ title, qs, onDone, onBack, taunt }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; taunt?: string }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -16,6 +16,7 @@ export function BossFloor({ title, qs, onDone, onBack }: { title: string; qs: Te
         <p className={`stage-result${score >= BC_PASS ? ' clear' : ''}`} role="status">
           {score >= BC_PASS ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${BC_PASS}問以上でクリア）`}
         </p>
+        {score >= BC_PASS && taunt && <p className="bfloor-taunt">{taunt}</p>}
         <button className="good next-unit-btn" onClick={onBack}>
           城にもどる
         </button>

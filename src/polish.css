@@ -3523,3 +3523,6 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .smap-node.now.side-l .smap-btn { right: calc(100% + 10px); }
 .sub-tabs.free-levels { flex-wrap: wrap; gap: 4px; }
 .sub-tabs.free-levels button { flex: 0 1 auto; padding: 6px 10px; }
+
+/* ボスの城：問題の階をクリアしたときのボスのひとこと */
+.bfloor-taunt { margin: 10px 0 4px; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, #dc2626 12%, transparent); font-weight: 700; line-height: 1.5; }

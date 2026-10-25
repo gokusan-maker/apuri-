@@ -365,3 +365,10 @@ it('ボスの城のボスをたおしたら「次のレベルのボスの城へ�
   expect(screen.getByRole('region', { name: '中3のボスの城' })).toBeInTheDocument()
   expect(screen.queryByRole('button', { name: /次のレベル/ })).toBeNull()
 })
+
+it('ボスの城の問題の階をクリアすると、上で待つボスがひとこと（のこりの階数つき）', async () => {
+  const { bossTaunt } = await import('./bosscastle')
+  expect(bossTaunt('ドラゴン', 0)).toContain('あと3階')
+  expect(bossTaunt('ドラゴン', 2)).toContain('あと1階')
+  expect(bossTaunt('ドラゴン', 3)).toContain('次の階で待っているぞ')
+})

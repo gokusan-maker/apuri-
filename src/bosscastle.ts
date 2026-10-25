@@ -102,3 +102,10 @@ export function saveBossLevel(id: CourseId): void {
     /* 保存できなくても動く */
   }
 }
+
+// 問題の階をクリアしたときの、上の階で待つボスのひとこと（floor：クリアした階 0〜3）
+export function bossTaunt(name: string, floor: number): string {
+  const left = BC_FLOORS - 2 - floor // ボスの階までに残る問題の階
+  if (left <= 0) return `👹 ${name}「よくぞここまで来た…次の階で待っているぞ！」`
+  return `👹 ${name}「ふん、なかなかやるな。あと${left}階…のぼって来られるかな？」`
+}

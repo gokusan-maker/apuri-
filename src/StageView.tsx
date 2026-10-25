@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -577,6 +577,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         key={bcFloor.id}
         title={`🏰 ${courseById(bcFloor.course).label}のボスの階　${BC_KIND[bcFloor.floor]}`}
         qs={bcFloor.qs}
+        taunt={bossTaunt(BOSSES[LEVEL_BOSS_LOOK[bcFloor.course]].name, bcFloor.floor)}
         onBack={() => setBcFloor(null)}
         onDone={(score) => {
           if (score >= BC_PASS && !bcClears.includes(bcFloor.id)) {
