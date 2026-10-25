@@ -3781,6 +3781,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sleepwalking',
+    title: 'Walking in Our Sleep',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine waking up in the morning and being told that you walked into the kitchen in the middle of the night, opened the refrigerator, and then went back to bed, all without ( A ) anything. This is what happens to people who sleepwalk. Sleepwalking is surprisingly common in children; experts estimate that a large proportion of children do it at least once, though most grow out of it by their teenage years.",
+      "Sleepwalking usually happens during the deepest stage of sleep, early in the night. In this state, part of the brain that controls movement is active, while the parts responsible for memory and judgment remain largely asleep. That is why sleepwalkers can perform fairly complex actions, such as opening doors or even getting dressed, but rarely remember anything the next day.",
+      "A popular belief says that you should never wake a sleepwalker because the shock could be dangerous. In fact, waking someone is not harmful, although the person may feel confused for a few moments. Experts usually recommend gently ( B ) the sleepwalker back to bed rather than trying to wake him or her suddenly.",
+      "Lack of sleep, stress, and an irregular schedule can make sleepwalking more likely. For most people, the best prevention is simple: go to bed at the same time every night and get enough rest. If sleepwalking happens often or leads to injuries, however, it is wise ( C ) a doctor.",
+    ],
+    ja: [
+      '朝起きたら、夜中に台所まで歩いていって冷蔵庫をあけ、それからベッドにもどったと聞かされたと想像してみてほしい。しかも、そのことを何も覚えていないのだ。これが夢遊病の人に起こることである。夢遊病は子どもにおどろくほど多い。専門家は、かなりの割合の子どもが少なくとも1度はそれを経験すると見積もっているが、ほとんどは10代までにおさまる。',
+      '夢遊病はふつう、夜の早い時間の、もっとも深いねむりの段階で起こる。この状態では、体の動きをつかさどる脳の部分ははたらいているが、記憶や判断を受けもつ部分はおおむねねむったままである。だから夢遊病の人は、ドアをあけたり、服を着たりといったかなり複雑な動作さえできるのに、翌日にはほとんど何も覚えていないのである。',
+      '夢遊病の人を決して起こしてはいけない、そのショックは危険だから、という俗説がある。実際には、起こしても害はないが、その人はしばらくのあいだ混乱するかもしれない。専門家はふつう、急に起こそうとするよりも、そっとベッドへ連れもどすことをすすめている。',
+      'ねむり不足、ストレス、不規則な生活は、夢遊病を起こりやすくすることがある。ほとんどの人にとって、いちばんの予防は簡単だ。毎晩同じ時間にねて、十分に休むことである。しかし、夢遊病がひんぱんに起こったり、けがにつながったりするなら、医者にみてもらうのが賢明だ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['remembering', 'remember', 'remembered', 'to remember'], answer: 0, why: '前置詞 without のあとは動名詞 remembering「何も覚えずに」。' },
+      { id: 'B', choices: ['guiding', 'guide', 'guided', 'guides'], answer: 0, why: 'recommend は（人を入れないとき）動名詞を目的語にとる。recommend guiding で「連れもどすことをすすめる」。gently は guiding を修飾する副詞。' },
+      { id: 'C', choices: ['to see', 'seeing', 'see', 'seen'], answer: 0, why: 'it is wise to 原形 で「～するのが賢明だ」（it は形式主語）。see a doctor で「医者にみてもらう」。' },
+    ],
+    tf: [
+      { statement: '夢遊病はふつう、夜の遅い時間の浅いねむりのときに起こる。', answer: false, why: '第2段落 usually happens during the deepest stage of sleep, early in the night。' },
+      { statement: '夢遊病の人は、翌日にはほとんど何も覚えていない。', answer: true, why: '第2段落 rarely remember anything the next day。' },
+      { statement: '筆者によれば、夢遊病の人を起こすと危険である。', answer: false, why: '第3段落 In fact, waking someone is not harmful。' },
+    ],
+    qa: [
+      { q: 'What do experts usually recommend doing when someone is sleepwalking?', choices: ['Gently guide the person back to bed.', 'Wake the person up with a loud noise.', 'Lock the person in the bedroom.', 'Give the person something to eat.'], answer: 0, why: '第3段落 Experts usually recommend gently guiding the sleepwalker back to bed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
