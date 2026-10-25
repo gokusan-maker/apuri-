@@ -14,6 +14,7 @@ import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
 import { hintHidden } from './readhint'
+import { ReadTower } from './ReadTowerView'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
@@ -210,6 +211,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         <p className="stats-note">記号で答える入試形式の読解</p>
+        {!whole && <ReadTower list={LIST} record={record} titleOf={(x) => shownTitle(x, LONG_PASSAGES.indexOf(x))} onOpen={openPassage} />}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}
