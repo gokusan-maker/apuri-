@@ -5,9 +5,9 @@ import { makeQuiz, shuffle } from './quiz'
 import { grammarForGrade } from './grammar'
 import { grammarMixQ } from './puzzles'
 
-export const BOSS_HP = 100
+export const BOSS_HP = 150 // オーナーの要望でボスの体力アップ（100→150）
 export const HEARTS = 3
-export const BOSS_QUESTIONS = 20
+export const BOSS_QUESTIONS = 30 // 体力アップ（×1.5）に合わせて問題数も×1.5
 export const BOSS_XP = 100
 export const HEAL_COST = 10 // ハート回復のコイン
 export const CONTINUE_COST = 20 // 負けたときのコンティニュー（1戦1回）
@@ -288,7 +288,7 @@ export function countBattle(): boolean {
 export const shinyLook = (l: BossLook): BossLook => ({ ...l, name: `✨色ちがいの${l.name}`, color: '#c4b5fd', line: '#5b21b6', eye: '#be185d' })
 
 // 今日のボスの強さ：★が1つふえるごとに HP+40、ごほうびは★の数の倍
-export const dailyHp = (stars: number) => BOSS_HP + (stars - 1) * 40
+export const dailyHp = (stars: number) => BOSS_HP + (stars - 1) * 60
 
 // ボス戦の背景：単語帳のレベルごとに変える
 export const BOSS_BGS = { field: '草原', forest: '森', mountain: '山', night: '夜空', castle: 'お城', sea: '海' } as const

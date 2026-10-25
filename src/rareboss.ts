@@ -2,7 +2,7 @@
 import { BOSSES, dailyBossLevel, type BossLook } from './boss'
 import type { Level } from './words'
 
-export const RARE_HP = 130
+export const RARE_HP = 200
 export const RARE_LEVELS: Level[] = ['中1', '中2', '中3', '高校基礎', '熟語']
 
 // その日をふくむ週の月曜日（YYYY-MM-DD）
@@ -41,7 +41,7 @@ export function saveRareWeek(w: string): void {
 }
 
 // 週末ボス：土日だけあらわれる強いボス。その週末の最初の撃破で🎟1
-export const WEEKEND_HP = 160
+export const WEEKEND_HP = 240
 export function weekendBossOf(week: string): { level: Level; look: BossLook } {
   const level = dailyBossLevel(RARE_LEVELS, `weekend-${week}`) ?? '中2'
   const base = BOSSES[level]

@@ -2,7 +2,7 @@
 import { dailyBossLevel, type BossLook } from './boss'
 import type { Level } from './words'
 
-export const QUEST_HP = 240
+export const QUEST_HP = 360
 export const QUEST_COINS = 60
 const QUEST_LEVELS: Level[] = ['中3', '高校基礎', '熟語']
 

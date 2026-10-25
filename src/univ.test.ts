@@ -32,7 +32,7 @@ it('塔のボス戦は4問に1問が文法問題', async () => {
   const { bossQuestions } = await import('./boss')
   const { wordsOf } = await import('./words')
   const qs = bossQuestions(wordsOf(['高校基礎']), true)
-  expect(qs.filter((q) => q.word.id === '')).toHaveLength(5)
+  expect(qs.filter((q) => q.word.id === '')).toHaveLength(7) // 30問の4問に1問
   expect(qs[3].choices[qs[3].answer]).toBe(qs[3].word.ja)
   expect(bossQuestions(wordsOf(['中1']), false).every((q) => q.word.id)).toBe(true)
 })

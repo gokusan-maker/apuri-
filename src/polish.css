@@ -2927,3 +2927,24 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* 演出を短くする・動きをへらす設定 */
 .gacha-reveal.quick .gr-capsule { animation-duration: 0.25s; }
 @media (prefers-reduced-motion: reduce) { .gacha-reveal *, .gacha-reveal::after { animation: none !important; } }
+
+/* ボスのこうげきの演出（まちがえたとき）：ボスが前にとびだし、赤いツメあと3本、画面がゆれて赤くなる。守ったときは青い光 */
+.boss-figure.attack { animation: boss-lunge 0.55s cubic-bezier(0.3, 1.4, 0.5, 1); }
+@keyframes boss-lunge { 30% { transform: translateY(18px) scale(1.25); } 60% { transform: translateY(6px) scale(1.1); } }
+.boss.hurt { animation: boss-hurt-shake 0.45s ease-out; }
+@keyframes boss-hurt-shake { 15% { transform: translate(-8px, 2px); } 30% { transform: translate(8px, -3px); } 45% { transform: translate(-6px, 2px); } 60% { transform: translate(5px, -1px); } 80% { transform: translate(-2px, 0); } }
+.boss-atk-fx { position: fixed; inset: 0; z-index: 60; pointer-events: none; background: radial-gradient(circle, transparent 40%, rgb(220 38 38 / 0.45)); animation: boss-atk-red 0.9s ease-out forwards; }
+.boss-atk-fx.blocked { background: radial-gradient(circle, transparent 40%, rgb(59 130 246 / 0.4)); }
+@keyframes boss-atk-red { from { opacity: 1; } to { opacity: 0; } }
+.boss-atk-fx .slash { position: absolute; top: 22%; left: 50%; width: 8px; height: 220px; border-radius: 999px; background: linear-gradient(180deg, transparent, #fff 20%, #ef4444 60%, transparent); box-shadow: 0 0 16px #ef4444; transform-origin: top center; opacity: 0; animation: boss-slash 0.45s ease-out forwards; }
+.boss-atk-fx .slash.s1 { margin-left: -34px; rotate: 28deg; }
+.boss-atk-fx .slash.s2 { margin-left: -4px; rotate: 28deg; animation-delay: 0.05s; }
+.boss-atk-fx .slash.s3 { margin-left: 26px; rotate: 28deg; animation-delay: 0.1s; }
+.boss-atk-fx.blocked .slash { background: linear-gradient(180deg, transparent, #fff 20%, #60a5fa 60%, transparent); box-shadow: 0 0 16px #60a5fa; }
+@keyframes boss-slash { from { opacity: 1; clip-path: inset(0 0 100% 0); } 60% { opacity: 1; clip-path: inset(0 0 0 0); } to { opacity: 0; clip-path: inset(0 0 0 0); } }
+.boss-atk-msg { margin: 4px 0; padding: 4px 12px; border-radius: 999px; background: #fee2e2; color: #b91c1c; font-weight: 900; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; animation: gr-pop 0.35s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .boss-atk-msg { background: #450a0a; color: #fecaca; }
+}
+:root[data-theme='dark'] .boss-atk-msg { background: #450a0a; color: #fecaca; }
+@media (prefers-reduced-motion: reduce) { .boss-figure.attack, .boss.hurt, .boss-atk-fx, .boss-atk-fx .slash { animation: none; } .boss-atk-fx { display: none; } }

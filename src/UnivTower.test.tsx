@@ -12,7 +12,7 @@ it('大学入試の塔：1階だけ挑戦でき、上の階はまだ見えない
   expect(document.querySelectorAll('.univ-floors li')).toHaveLength(1)
   fireEvent.click(screen.getByRole('button', { name: '⚔ 挑戦' }))
   expect(screen.getByText('🏯 大学入試の塔 1階')).toBeInTheDocument()
-  expect(screen.getByLabelText('ボスのHP')).toHaveAttribute('aria-valuemax', '100')
+  expect(screen.getByLabelText('ボスのHP')).toHaveAttribute('aria-valuemax', '150')
   expect(screen.getByText(/Only those who know their words may pass!/)).toBeInTheDocument()
 })
 

@@ -195,6 +195,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [combo, setCombo] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
+  const [atk, setAtk] = useState<{ at: number; lose: number } | null>(null) // まちがえたときのボスのこうげき（演出用）
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
   const [crit, setCrit] = useState(false)
@@ -307,6 +308,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
       }
       setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
+      setAtk(null)
       setHp(Math.max(0, nextHp))
       setHit(true)
       playComboCorrect(c)
@@ -318,6 +320,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const guard = skill?.id === 'guard' && canSave
       const revive = skill?.id === 'revive' && canSave && hearts - (charge ? 2 : 1) <= 0
       if (guard || revive) onSkill?.()
+      if (guard || revive || shield) setAtk({ at: index, lose: 0 }) // こうげきは来たけど守った
       if (guard) {
         setSaves(saves + 1)
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハートを守った`)
@@ -330,6 +333,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setShieldUsed(index)
       } else {
         const lose = charge ? 2 : 1
+        setAtk({ at: index, lose })
         setHearts(Math.max(0, hearts - lose))
         if (hearts - lose <= 0) {
           markLost(baseLook.name)
@@ -442,7 +446,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   return (
-    <section className={`card quiz boss bg-${golden ? 'gold' : bossBgOf(level)}`}>
+    <section className={`card quiz boss bg-${golden ? 'gold' : bossBgOf(level)}${atk && atk.at === index && picked !== null && atk.lose > 0 ? ' hurt' : ''}`}>
       <div className="stage-head">
         <button className="stage-back" onClick={onExit}>
           {won || lost ? '← もどる' : '← にげる'}
@@ -464,7 +468,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {shieldUsed === index && picked !== null && <p className="boss-shield">🛡 ことばの盾がハートを守った！</p>}
       {charge && !won && !lost && picked === null && <p className="boss-charge">⚠ {look.name}が力をためている！ まちがえるとハート2つへる</p>}
       {charge && picked !== null && shieldUsed !== index && <p className="boss-charge">{picked === q?.answer ? `💫 ${look.name}がひるんだ！ +${CHARGE_STUN}` : `💥 ${look.name}のためこうげき！ ハートが2つへった`}</p>}
-      <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}`}>
+      {atk && atk.at === index && picked !== null && !won && (
+        <div key={`atk${index}`} className={`boss-atk-fx${atk.lose === 0 ? ' blocked' : ''}`} aria-hidden="true">
+          <span className="slash s1" />
+          <span className="slash s2" />
+          <span className="slash s3" />
+        </div>
+      )}
+      <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
         <BossFigure hit={hit} look={look} />
         {teamOn && index === 0 && picked === null && !won && (
           <span className="boss-vs" aria-hidden="true">
@@ -866,6 +877,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </div>
           {picked !== null && (
             <>
+              {atk && atk.at === index && !won && (
+                <p className="boss-atk-msg" role="status">
+                  {atk.lose === 0 ? `🛡 ${look.name}のこうげき！ ガード！` : `💥 ${look.name}のこうげき！ ❤️-${atk.lose}`}
+                </p>
+              )}
               <p className="feedback">
                 {picked === q.answer ? `${damage(combo)} ダメージ！` : `正解は「${q.choices[q.answer]}」`}
               </p>

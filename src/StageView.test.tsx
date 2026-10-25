@@ -109,7 +109,7 @@ it('今週のレアボスに挑戦できる', () => {
   fireEvent.click(screen.getByRole('button', { name: /今週のレアボス/ }))
   expect(screen.getByText('勝つと 色ちがい確定のタマゴ！')).toBeInTheDocument()
   expect(screen.getByText('✨ 今週のレアボス')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '130')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '200')
 })
 
 it('ボスラッシュは3連戦で、勝つとハートを引き継いで次のボスへ', () => {
@@ -186,9 +186,9 @@ it('ボスの連勝数が出る', () => {
 
 it('今日のボスは★2・★3の強さを選べる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /★★★（HP180・🪙×3）/ }))
+  fireEvent.click(screen.getByRole('button', { name: /★★★（HP270・🪙×3）/ }))
   expect(screen.getByText('⚔️ 今日のボス ★★★')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '180')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '270')
 })
 
 it('週末ボスは週末だけ出て、HPが多い', () => {
@@ -200,7 +200,7 @@ it('週末ボスは週末だけ出て、HPが多い', () => {
   fireEvent.click(screen.getByRole('button', { name: /^週末ボス/ }))
   expect(screen.getByText(/たおすと 🎟1（HP/)).toBeInTheDocument()
   expect(screen.getByText('🌙 週末ボス')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '160')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '240')
 })
 
 it('たおしたボスには強化版で挑める（HPが多い）', () => {
@@ -210,7 +210,7 @@ it('たおしたボスには強化版で挑める（HPが多い）', () => {
   render(<Stages levels={['中1']} record={record} onClear={() => {}} boss={{ 中1: '2026-10-01' }} onRankBonus={bonus} />)
   fireEvent.click(screen.getByText(/強化版「/))
   expect(screen.getByText('💪 強化版の中1ボス')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '150')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '225')
 })
 
 it('たおしたボスにはサドンデス（ハート1つ）で挑める', () => {
@@ -321,10 +321,10 @@ it('ボス部屋のタイルに、そのボスの最短タイムが小さく出�
   expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
 })
 
-it('特別クエストでは攻略のむずかしい強いボス（HP240）と戦える', () => {
+it('特別クエストでは攻略のむずかしい強いボス（HP360）と戦える', () => {
   localStorage.clear()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
   fireEvent.click(screen.getByRole('button', { name: /特別クエスト：/ }))
   expect(screen.getByText(/^👑 特別クエスト：/)).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '240')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '360')
 })

@@ -13,7 +13,7 @@ export function endlessLevel(floor: number): Level {
   return floor % 2 ? '熟語' : '高校基礎'
 }
 
-export const endlessHp = (floor: number) => 30 + floor * 6
+export const endlessHp = (floor: number) => 45 + floor * 9
 
 export function endlessLook(floor: number): BossLook {
   const looks = Object.values(BOSSES)
