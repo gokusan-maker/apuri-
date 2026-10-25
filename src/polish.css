@@ -3419,3 +3419,5 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .cc-bar i { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b, #ef4444); }
 .cc-n { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
 .cc-list li.done .cc-name { font-weight: 800; }
+.barea-chest { position: absolute; transform: translate(-50%, -50%); width: 44px; height: 44px; border: none; border-radius: 12px; background: radial-gradient(circle, rgb(253 224 71 / 0.9), transparent 70%); font-size: 1.7rem; cursor: pointer; animation: barea-glow 1.2s ease-in-out infinite; }
+.barea-got { position: absolute; left: 50%; top: 8px; transform: translateX(-50%); margin: 0; padding: 4px 10px; border-radius: 999px; background: #fde047; color: #1c1917; font-weight: 900; font-size: 0.8rem; white-space: nowrap; }

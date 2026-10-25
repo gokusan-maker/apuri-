@@ -1,7 +1,8 @@
 import type { BossGroup } from './bossfilter'
 import type { BossLook } from './boss'
 import { BossFigure } from './BossView'
-import { roamSpots } from './bossroam'
+import { useState } from 'react'
+import { AREA_CHEST_COINS, chestSpot, loadAreaChests, roamSpots, saveAreaChests } from './bossroam'
 import { dayKey } from './srs'
 
 export type AreaBoss = { id: string; name: string; look: BossLook; beaten: boolean; golden: boolean; onClick: () => void }
@@ -16,8 +17,12 @@ const SPOTS = [
 ]
 
 // ボス部屋のエリアの地図：えらんだレベルの土地に、今日の特別なボスが出現する
-export function BossArea({ name, group, specials, bosses = [] }: { name: string; group: BossGroup; specials: AreaSpecial[]; bosses?: AreaBoss[] }) {
-  const roam = roamSpots(bosses.length, dayKey())
+export function BossArea({ name, group, specials, bosses = [], onCoins }: { name: string; group: BossGroup; specials: AreaSpecial[]; bosses?: AreaBoss[]; onCoins?: (n: number) => void }) {
+  const day = dayKey()
+  const roam = roamSpots(bosses.length, day)
+  const [opened, setOpened] = useState(() => loadAreaChests(day))
+  const [got, setGot] = useState(false) // いまひろった
+  const chest = chestSpot(group, day)
   return (
     <section className={`barea barea-${group}`} aria-label={`${name}のエリア`}>
       <p className="barea-title">🗺 {name}のエリア</p>
@@ -30,6 +35,27 @@ export function BossArea({ name, group, specials, bosses = [] }: { name: string;
         <span className="barea-deco d1" aria-hidden="true">{DECO[group][0]}</span>
         <span className="barea-deco d2" aria-hidden="true">{DECO[group][1]}</span>
         <span className="barea-deco d3" aria-hidden="true">{DECO[group][2]}</span>
+        {onCoins && !opened.includes(group) && (
+          <button
+            className="barea-chest"
+            style={{ left: `${chest.x}%`, top: `${chest.y}%` }}
+            aria-label={`落ちている宝箱をひろう（🪙${AREA_CHEST_COINS}）`}
+            onClick={() => {
+              const next = [...opened, group]
+              setOpened(next)
+              saveAreaChests(day, next)
+              setGot(true)
+              onCoins(AREA_CHEST_COINS)
+            }}
+          >
+            🎁
+          </button>
+        )}
+        {got && (
+          <p className="barea-got" role="status">
+            ✨ 宝箱をひろった！ 🪙{AREA_CHEST_COINS}
+          </p>
+        )}
         {bosses.slice(0, roam.length).map((b, i) => (
           <button key={b.id} className={`barea-roam${b.beaten ? ' beaten' : ''}`} style={{ left: `${roam[i].x}%`, top: `${roam[i].y}%`, animationDelay: `${i * 0.4}s` }} aria-label={`うろうろしている${b.name}と戦う${b.beaten ? '（撃破ずみ）' : ''}`} onClick={b.onClick}>
             <span className="barea-roam-fig">

@@ -387,3 +387,17 @@ it('ボスのエリアでは、ふつうのボスも地図の上をうろうろ�
   fireEvent.click(within(area).getAllByRole('button', { name: /^うろうろしている/ })[0])
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
+
+it('ボスのエリアには1日1回の宝箱。ひろうと🪙、同じ日はもう出ない', () => {
+  localStorage.clear()
+  const coins = vi.fn()
+  const r = render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onRankBonus={coins} />)
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
+  fireEvent.click(screen.getByRole('button', { name: /落ちている宝箱をひろう/ }))
+  expect(coins).toHaveBeenCalledWith(15)
+  expect(screen.getByText(/宝箱をひろった/)).toBeInTheDocument()
+  r.unmount()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onRankBonus={coins} />)
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
+  expect(screen.queryByRole('button', { name: /落ちている宝箱をひろう/ })).toBeNull()
+})

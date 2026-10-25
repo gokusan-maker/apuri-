@@ -575,6 +575,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               name={groupLabel(group)}
               group={group}
               specials={specials}
+              onCoins={onRankBonus}
               bosses={LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => ({
                 id: lv,
                 name: BOSSES[lv].name,
