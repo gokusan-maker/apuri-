@@ -3223,3 +3223,14 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .boss-atk-fx.elem-dark .slash { background: linear-gradient(180deg, transparent, #e9d5ff 20%, #7c3aed 60%, transparent); box-shadow: 0 0 16px #7c3aed; }
 .boss-atk-fx.blocked .elem-icon { display: none; }
 @media (prefers-reduced-motion: reduce) { .boss-atk-fx .elem-icon { animation: none; opacity: 0; } }
+
+/* 単語の城：単元の解説（10語） */
+.wc-title { margin: 0 0 6px; }
+.wc-words { list-style: none; margin: 8px 0 12px; padding: 0; display: grid; gap: 6px; }
+.wc-words li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; grid-template-areas: 'speak en ja' 'speak ex ex'; align-items: center; gap: 2px 8px; padding: 8px 10px; border-radius: 12px; background: color-mix(in srgb, #7c3aed 8%, var(--card)); border: 1px solid color-mix(in srgb, #7c3aed 25%, transparent); }
+.wc-words .speak { grid-area: speak; }
+.wc-en { grid-area: en; font-weight: 900; font-size: 1rem; }
+.wc-ja { grid-area: ja; font-weight: 700; color: var(--muted); font-size: 0.85rem; }
+.wc-ex { grid-area: ex; color: var(--muted); font-size: 0.75rem; }
+.wc-result { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.wc-words li { text-align: left; }

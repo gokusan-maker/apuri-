@@ -2038,14 +2038,25 @@ it('今日の課題を3つとも終えてトリオボーナスを受け取った
   expect(screen.queryByRole('button', { name: /今日の課題（文法）/ })).toBeNull()
 })
 
-it('単語ゲームのページにも単語の城：いまの階をおすと、そのステージがすぐ始まる', () => {
+it('単語ゲームのページに単語の城：単元の1階目は10語の解説 → 5問、4問以上でクリアして次の階へ', async () => {
+  const { wordCastleFloors } = await import('./wordcastle')
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
   render(<App />)
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
   const castle = screen.getByRole('region', { name: '単語の城' })
-  fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 ステージ1/ }))
-  expect(screen.queryByRole('region', { name: '単語の城' })).toBeNull()
-  expect(document.querySelector('.quiz, .stage-play, .choices')).not.toBeNull()
+  fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 単元1　1\/3/ }))
+  const f = wordCastleFloors(['中1'])[0]
+  expect(screen.getAllByText(f.stage.words[9].ja).length).toBeGreaterThan(0) // 10語の解説
+  fireEvent.click(screen.getByRole('button', { name: /5問に挑戦/ }))
+  for (let n = 0; n < 5; n++) {
+    const en = document.querySelector('.wc-play .quiz .en')!.textContent!
+    const w = f.words.find((x) => x.en === en)!
+    fireEvent.click(within(document.querySelector<HTMLElement>('.wc-play .choices')!).getByRole('button', { name: w.ja }))
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByText(/🏰 クリア！ 5\/5問正解/)).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /次の階へ ▶ 中1 単元1　2\/3/ })).toBeInTheDocument()
+  expect(JSON.parse(localStorage.getItem('eitan:wcastle')!)).toContain(f.id)
 })

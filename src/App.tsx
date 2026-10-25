@@ -687,6 +687,7 @@ function App() {
 
   const [stages, setStages] = usePersistent(loadStages, saveStages)
   const [stageGo, setStageGo] = useState<string | null>(null) // 単語ゲームの城からえらんだステージ
+  const [castleOn, setCastleOn] = useState(false) // 単語の城の階を遊んでいる（下のミニゲームはかくす）
   const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
   const [levels, setLevels] = usePersistent(loadLevels, saveLevels)
@@ -2145,17 +2146,8 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'word' && !todayQuiz && !playOn && (
-            <WordCastle
-              levels={levels}
-              record={stages}
-              onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
-              onOpen={(st) => {
-                setStageGo(st.id)
-                setWordTab('stage')
-                window.scrollTo?.({ top: 0 })
-              }}
-            />
+          {mode === 'word' && !todayQuiz && (
+            <WordCastle levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (
@@ -2181,7 +2173,7 @@ function App() {
               <button onClick={() => setQuizFocus(null)}>やめる</button>
             </p>
           )}
-          {!(mode === 'grammar' && grammarGo) && (
+          {!(mode === 'grammar' && grammarGo) && !(mode === 'word' && castleOn) && (
           <Quiz
             key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}

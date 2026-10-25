@@ -16,7 +16,6 @@ import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
-import { WordCastle } from './WordCastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup } from './bossfilter'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -525,17 +524,6 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   return (
     <section className="card stages">
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
-      {part === 'stages' && (
-        <WordCastle
-          levels={levels}
-          record={record}
-          onChest={onRankBonus}
-          onOpen={(st) => {
-            setPlaying(st)
-            setResult(null)
-          }}
-        />
-      )}
       {part !== 'stages' && (
       <>
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
