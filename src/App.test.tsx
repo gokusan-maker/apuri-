@@ -16,6 +16,8 @@ const DEFAULT_N = wordsOf(LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l))).leng
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
   navTo('単語ゲーム')
+  const b = screen.queryByRole('button', { name: /単語のミニゲーム/ }) // 城の下のボタンからミニゲームのえらぶ画面へ
+  if (b) fireEvent.click(b)
 }
 // 文法ページは城だけ。「単元をえらんで自由に勉強」から最初の単元の問題へ
 const freeGrammarFirst = async () => {
@@ -338,7 +340,9 @@ describe('App', () => {
     expect(screen.getByText('📊 記録')).toBeInTheDocument()
     fireEvent.click(tab('単語'))
     expect(tab('単語')).toHaveAttribute('aria-current', 'page')
-    // 単語ゲームはミニゲームが先。カードはミニゲームのタイルの1つ
+    // 単語ゲームは城が先。城の下の「単語のミニゲーム」でミニゲームのえらぶ画面へ
+    expect(document.querySelector('.quiz-pick')).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: /単語のミニゲーム/ }))
     expect(document.querySelector('.quiz-pick')).not.toBeNull()
     expect(screen.queryByRole('tab', { name: '🃏 カード' })).toBeNull()
     fireEvent.click(within(screen.getByLabelText('今日のミニゲーム')).getByText('単語カード'))
@@ -1302,7 +1306,7 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 5).map((w) => [w.id, { box: 1, due: '2099-01-01', first: '2026-10-19' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    navTo('単語ゲーム')
+    goMini()
     fireEvent.click(screen.getByRole('button', { name: '今週の単語5語' }))
     expect(screen.getByText(/今週学んだ単語だけ復習中（5語）/)).toBeInTheDocument()
   })
@@ -1311,14 +1315,14 @@ describe('App', () => {
     const p = Object.fromEntries(WORDS.slice(0, 4).map((w) => [w.id, { box: 2, due: '2099-01-01', first: '2026-10-13' }]))
     localStorage.setItem('eitan:progress', JSON.stringify(p))
     render(<App />)
-    navTo('単語ゲーム')
+    goMini()
     fireEvent.click(screen.getByRole('button', { name: '1週間前の単語4語' }))
     expect(screen.getByText(/1週間前に学んだ単語だけ復習中（4語）/)).toBeInTheDocument()
   })
 
   it('単語ゲームの「テーマで練習」で、その仲間の単語をカードで練習できる', () => {
     render(<App />)
-    navTo('単語ゲーム')
+    goMini()
     fireEvent.click(screen.getByText('テーマで練習'))
     fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
     expect(screen.getByText(/選んだ単語のカードで復習中/)).toBeInTheDocument()
@@ -1326,7 +1330,7 @@ describe('App', () => {
 
   it('「テーマで練習」はクイズでもできる', () => {
     render(<App />)
-    navTo('単語ゲーム')
+    goMini()
     fireEvent.click(screen.getByText('テーマで練習'))
     fireEvent.click(screen.getByRole('button', { name: '問題をとく' }))
     fireEvent.click(within(document.querySelector<HTMLElement>('.theme-practice')!).getByRole('button', { name: '動物' }))
@@ -1338,7 +1342,7 @@ describe('App', () => {
     navTo('ホーム')
     expect(screen.queryByText('テーマで練習')).toBeNull()
     expect(screen.queryByRole('button', { name: '単語一覧・さがす' })).toBeNull()
-    navTo('単語ゲーム')
+    goMini()
     expect(within(screen.getByLabelText('単語のおさらい')).getByText('テーマで練習')).toBeInTheDocument()
   })
 

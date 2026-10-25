@@ -10,6 +10,7 @@ it('今日のミニゲームは日がわりで6つ。どの日もタイルに名
     localStorage.clear(); localStorage.setItem('eitan:onboarded', '1')
     render(<App />)
     fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: /単語/ }))
+    fireEvent.click(screen.getByRole('button', { name: /単語のミニゲーム/ })) // 城の下のボタンから
     const names = [...document.querySelectorAll('[aria-label="今日のミニゲーム"] .game-tile-name')].map((x) => x.textContent)
     if (names.length < 6) { bad.push(`${d}:names=${names.length}`); cleanup(); vi.useRealTimers(); continue }
     const g = names[1]!

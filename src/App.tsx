@@ -685,6 +685,7 @@ function App() {
 
   const [stages, setStages] = usePersistent(loadStages, saveStages)
   const [gcLevel, setGcLevel] = useState(() => loadGcLevel(loadGrade())) // 文法の城のレベル（キャラの下でえらぶ）
+  const [wordMini, setWordMini] = useState(false) // 単語ページで「🎮 単語のミニゲーム」をおした（城のかわりにミニゲームのえらぶ画面）
   const [castleOn, setCastleOn] = useState(false) // 単語の城の階を遊んでいる（下のミニゲームはかくす）
   const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
@@ -2141,10 +2142,21 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
-          {mode === 'word' && !todayQuiz && (
+          {mode === 'word' && !todayQuiz && !wordMini && (
             <>
             <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の城` : '単語の城'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            {!castleOn && !quizFocus && (
+              <button className="word-mini-btn" onClick={() => setWordMini(true)}>
+                🎮 単語のミニゲーム
+                <small>4択・スペル・神経衰弱・もぐらたたき など</small>
+              </button>
+            )}
             </>
+          )}
+          {mode === 'word' && wordMini && !todayQuiz && !playOn && (
+            <button className="list-link word-mini-back" onClick={() => setWordMini(false)}>
+              ← 城にもどる
+            </button>
           )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && !playOn && (
@@ -2185,7 +2197,7 @@ function App() {
               <button onClick={() => setQuizFocus(null)}>やめる</button>
             </p>
           )}
-          {!(mode === 'grammar' && grammarGo) && !(mode === 'word' && castleOn) && (
+          {!(mode === 'grammar' && grammarGo) && !(mode === 'word' && (castleOn || (!todayQuiz && !wordMini && !quizFocus))) && (
           <Quiz
             key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
@@ -2230,7 +2242,7 @@ function App() {
           />
           )}
           {mode === 'word' && todayNextBtn}
-          {mode === 'word' && !todayQuiz && !quizFocus && !playOn && wordReview}
+          {mode === 'word' && wordMini && !todayQuiz && !quizFocus && !playOn && wordReview}
         </>
       ) : (
         <>
@@ -2318,6 +2330,7 @@ function App() {
             setOnboarded(true)
             setMode('word')
             setWordTab('mini')
+            setWordMini(true) // レベル診断はミニゲームの画面で
           }}
         />}
       {evoForm && FORMS.find((f) => f.id === evoForm) && (
@@ -2334,6 +2347,7 @@ function App() {
             onClick={() => {
               if (t.id === mode && playOn) exitPlay() // 問題の画面でいまのタブをもう一度おすと、えらぶ画面へ
               if (t.id === 'word' && mode !== 'word') setWordTab('mini') // 単語ゲームのページは、えらぶ画面から
+              if (t.id === 'word' && !(mode === 'word' && playOn)) setWordMini(false) // 単語のタブは城から
               setMode(t.id)
               setGrammarDrill(null)
               setDailyGo(false)
