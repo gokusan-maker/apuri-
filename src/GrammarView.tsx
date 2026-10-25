@@ -39,6 +39,7 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = {
+  castleOnly?: boolean // 文法ページ（App）：城と「単元をえらんで自由に勉強」だけにする
   castleLevel?: string // 文法の城のレベル（App のキャラの下でえらぶ。省略時は学年から）
   onChest?: (coins: number) => void // 城の宝箱のコイン
   onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
@@ -117,7 +118,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
+export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -149,6 +150,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
+  const [free, setFree] = useState(false) // 城だけのページで「単元をえらんで自由に勉強」をおした
   const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
   const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
@@ -279,13 +281,39 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
     setStep(0)
   }
 
+  const misc = stampMode && !castleOnly // 城だけのページ（App）では、ゲームや苦手などは出さない
+  if (!unit && stampMode && castleOnly && !free) {
+    return (
+      <section className="card grammar">
+        <h2>📐 文法チャレンジ</h2>
+        <Castle
+          key={gcLevel}
+          name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}
+          theme="green"
+          onChest={onChest}
+          floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
+          onOpen={openFloor}
+        />
+        <button className="flip grammar-free-btn" onClick={() => setFree(true)}>
+          📚 単元をえらんで自由に勉強
+        </button>
+      </section>
+    )
+  }
+
   if (!unit) {
     return (
       <section className="card grammar">
+        {free && (
+          <button className="list-link free-back" onClick={() => setFree(false)}>
+            ← 城にもどる
+          </button>
+        )}
         {/* 見出しだけ「文法チャレンジ」に（title はまとめテストのベスト記録の名前にも使うので変えない） */}
         <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
         {stampMode ? (
           <>
+            {!castleOnly && (
             <Castle
               key={gcLevel}
               name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}
@@ -294,6 +322,9 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
               floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
               onOpen={openFloor}
             />
+            )}
+            {!castleOnly && (
+            <>
             <button
               className="flip grammar-quick-btn"
               onClick={() => {
@@ -392,6 +423,8 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
                 }}
               />
             </div>
+            </>
+            )}
           </>
         ) : (
         <button
@@ -401,7 +434,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
           📝 まとめテスト（ランダム10問）{mixBest[title] !== undefined ? `　ベスト ${mixBest[title]}/10・${mixRank(mixBest[title], 10)}` : ''}
         </button>
         )}
-        {stampMode && (
+        {misc && (
           <div className="grade-tests" aria-label="学年まとめテスト">
             {GRAMMAR_GRADES.filter((g) => g !== '高校').map((g) => (
               <button
@@ -420,7 +453,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             ))}
           </div>
         )}
-        {stampMode && (
+        {misc && (
           <details className="exam-grammar game-fold lg-4">
             <summary>
               <span className="lg-icon" aria-hidden="true">🎓</span>入試の文法 <span className="fold-meta">{EXAM_GRAMMAR.length}</span>
@@ -439,7 +472,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             </div>
           </details>
         )}
-        {stampMode && onDrill && (
+        {misc && onDrill && (
           <details className="grammar-drills game-fold lg-3">
             <summary>
               <span className="lg-icon" aria-hidden="true">🧩</span>文法ドリル <span className="fold-meta">{GRAMMAR_DRILLS.length}</span>
@@ -453,7 +486,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             </div>
           </details>
         )}
-        {stampMode && (
+        {misc && (
           <details className="tense-table game-fold lg-0">
             <summary>
               <span className="lg-icon" aria-hidden="true">🕰</span>時制まとめ表
@@ -479,7 +512,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             </table>
           </details>
         )}
-        {stampMode && fav.length > 0 && (
+        {misc && fav.length > 0 && (
           <button
             className="list-link weak-grammar-btn fav-test-btn"
             onClick={() => {
@@ -491,7 +524,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             ★ お気に入り単元テスト（★{fav.length}単元から最大10問）
           </button>
         )}
-        {stampMode && yesterdayQuestions(wrongDays, today).length > 0 && (
+        {misc && yesterdayQuestions(wrongDays, today).length > 0 && (
           <button
             className="list-link weak-grammar-btn"
             onClick={() => {
@@ -502,7 +535,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             📅 きのうの復習（きのうまちがえた問題 {yesterdayQuestions(wrongDays, today).length}問）
           </button>
         )}
-        {stampMode && notebookQuestions(note).length > 0 && (
+        {misc && notebookQuestions(note).length > 0 && (
           <button
             className="list-link weak-grammar-btn"
             onClick={() => {
@@ -513,7 +546,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             📓 まちがいノート（{notebookQuestions(note).length}問）
           </button>
         )}
-        {stampMode && almostUnits(record).length > 0 && (
+        {misc && almostUnits(record).length > 0 && (
           <div className="grammar-almost">
             <p className="stats-note">🎯 あと1問で全問正解！</p>
             {almostUnits(record).map((u) => (
@@ -523,12 +556,12 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             ))}
           </div>
         )}
-        {stampMode && champOf(champ, today.slice(0, 7)) && (
+        {misc && champOf(champ, today.slice(0, 7)) && (
           <button className="list-link grammar-champ" onClick={() => open(champOf(champ, today.slice(0, 7))!.unit)}>
             🏆 今月のチャンピオン単元：{champOf(champ, today.slice(0, 7))!.unit.title}（{champOf(champ, today.slice(0, 7))!.count}問正解）
           </button>
         )}
-        {stampMode && weakRanking(note).length > 0 && (
+        {misc && weakRanking(note).length > 0 && (
           <div className="weak-ranking">
             <p className="stats-note">📉 苦手ランキング</p>
             <ol>
@@ -542,7 +575,7 @@ export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAM
             </ol>
           </div>
         )}
-        {stampMode && weakUnits(record).length > 0 && (
+        {misc && weakUnits(record).length > 0 && (
           <button
             className="list-link weak-grammar-btn"
             onClick={() => {

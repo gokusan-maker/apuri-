@@ -17,6 +17,13 @@ const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigat
 const goMini = () => {
   navTo('単語ゲーム')
 }
+// 文法ページは城だけ。「単元をえらんで自由に勉強」から最初の単元の問題へ
+const freeGrammarFirst = async () => {
+  const { GRAMMAR } = await import('./grammar')
+  fireEvent.click(screen.getByText('📚 単元をえらんで自由に勉強'))
+  fireEvent.click(screen.getAllByRole('button', { name: new RegExp(GRAMMAR[0].title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) })[0])
+  fireEvent.click(screen.getByText(/確認問題へ/))
+}
 // ミニゲームはえらぶ画面が先。「▶ 〇〇 をはじめる」で問題だけの画面へ
 const playMini = () => {
   goMini()
@@ -213,7 +220,7 @@ describe('App', () => {
     navTo('文法チャレンジ')
     const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
     expect(bar()).toHaveAttribute('aria-valuenow', '0')
-    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+    await freeGrammarFirst()
     rnd.mockRestore()
     // 問題の画面では、なかまはかくれて問題だけ
     expect(screen.queryByRole('progressbar', { name: '文法のなかまの経験値' })).toBeNull()
@@ -341,9 +348,8 @@ describe('App', () => {
     expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull() // 上の切りかえ（ミニゲーム・タイムアタック・ステージ）はない
     fireEvent.click(tab('文法'))
     expect(document.querySelector('.grammar')).not.toBeNull()
-    // 文法チャレンジは、まずゲームの種類をえらぶ画面（いきなり問題は出ない）
-    expect(screen.getByLabelText('文法ゲーム')).toBeInTheDocument()
-    expect(screen.getByText('✏️ すぐ練習（5問）')).toBeInTheDocument()
+    // 文法チャレンジは、まず城（いきなり問題は出ない）
+    expect(screen.getByText('📚 単元をえらんで自由に勉強')).toBeInTheDocument()
     expect(screen.queryByText(/\/ 5 問目/)).toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
     fireEvent.click(tab('読解'))
@@ -1037,16 +1043,6 @@ describe('App', () => {
     }
   })
 
-  it('文法ドリル（複数形など）は文法チャレンジから開けて、← 文法チャレンジで戻れる', () => {
-    render(<App />)
-    navTo('文法チャレンジ')
-    fireEvent.click(within(screen.getByRole('group', { name: '文法ドリル' })).getByText('👥 複数形'))
-    expect(screen.getByText('← 文法チャレンジ')).toBeInTheDocument()
-    expect(screen.queryByRole('group', { name: '文法ドリル' })).toBeNull()
-    fireEvent.click(screen.getByText('← 文法チャレンジ'))
-    expect(screen.getByRole('group', { name: '文法ドリル' })).toBeInTheDocument()
-  })
-
   it('記録の下に相棒のきもちのコメントは出さない（オーナーの要望）', () => {
     render(<App />)
     navTo('ホーム')
@@ -1146,7 +1142,7 @@ describe('App', () => {
     expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))
-    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+    await freeGrammarFirst()
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
@@ -1183,7 +1179,7 @@ describe('App', () => {
     render(<App />)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     navTo('文法チャレンジ')
-    fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+    await freeGrammarFirst()
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
     fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
@@ -1826,16 +1822,30 @@ it('ボス部屋でボスをえらぶと戦いだけの画面になり、上の�
   expect(screen.getByRole('group', { name: 'ボスをえらぶ' })).toBeInTheDocument()
 })
 
-it('問題の画面で、いまのタブ（文法チャレンジ）をもう一度おすと、えらぶ画面にもどる', () => {
+it('問題の画面で、いまのタブ（文法チャレンジ）をもう一度おすと、えらぶ画面にもどる', async () => {
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   render(<App />)
   navTo('文法チャレンジ')
-  fireEvent.click(screen.getByText('✏️ すぐ練習（5問）'))
+  await freeGrammarFirst()
   expect(screen.getByRole('button', { name: /ほかの問題をえらぶ/ })).toBeInTheDocument()
   navTo('文法チャレンジ')
   expect(screen.queryByRole('button', { name: /ほかの問題をえらぶ/ })).toBeNull()
-  expect(screen.getByText('✏️ すぐ練習（5問）')).toBeInTheDocument()
+})
+
+it('文法ページは城と今日の課題と「単元をえらんで自由に勉強」だけ。押すと単元の一覧、← 城にもどる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  render(<App />)
+  navTo('文法チャレンジ')
+  expect(screen.queryByLabelText('文法ゲーム')).toBeNull()
+  expect(screen.queryByText('✏️ すぐ練習（5問）')).toBeNull()
+  expect(document.querySelector('.castle')).not.toBeNull()
+  fireEvent.click(screen.getByText('📚 単元をえらんで自由に勉強'))
+  expect(screen.getByRole('tablist', { name: '学年' })).toBeInTheDocument()
+  expect(document.querySelector('.castle')).toBeNull()
+  fireEvent.click(screen.getByText('← 城にもどる'))
+  expect(document.querySelector('.castle')).not.toBeNull()
 })
 
 it('今日の課題が3つともクリアなら、課題の画面に「🎉 ぜんぶクリア！ ホームへ ▶」が出て、ホームにもどれる', async () => {
