@@ -21,7 +21,7 @@ it('城の1階：解説 → 5問 → 4問以上正解でクリアして「次の
   const castle = screen.getByRole('region', { name: '文法の城' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：時制①　1\/3/ }))
   expect(screen.getByText(/時制①（5単元）/)).toBeInTheDocument()
-  fireEvent.click(screen.getByText(/確認問題へ/))
+  fireEvent.click(screen.getByText(/問題に挑戦/))
   const f = grammarCastleFloors(GRAMMAR)[0]
   for (const q of f.questions) {
     fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))

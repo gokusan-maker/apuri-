@@ -14,6 +14,8 @@ import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMM
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
+import { GrammarFigure } from './GrammarFigView'
+import { figOf } from './grammarfig'
 import { GC_PASS, grammarCastleFloors, loadGcClears, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
@@ -754,6 +756,28 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         setOrdering(false)
         if (unit.id === 'order-mix') setUnit(null) // タイルから来たときは一覧へもどる
       }} />
+
+  if (step === -1 && unit.id.startsWith('gc:')) {
+    // 文法の城の解説：図で1画面に。下に問題へのボタン（ほかの練習は出さない）
+    return (
+      <section className="card grammar gc-explain">
+        {back}
+        <h2>{unit.title}</h2>
+        <GrammarFigure fig={figOf(unit.id)} />
+        {unit.examples.slice(0, 2).map((ex) => (
+          <p key={ex.en} className="gc-ex">
+            <span>{ex.en}</span>
+            <small>{ex.ja}</small>
+          </p>
+        ))}
+        <div className="gc-go-bar">
+          <button className="flip to-questions" onClick={() => setStep(0)}>
+            問題に挑戦（{unit.questions.length}問）
+          </button>
+        </div>
+      </section>
+    )
+  }
 
   if (step === -1) {
     return (
