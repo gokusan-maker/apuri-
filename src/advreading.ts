@@ -2300,6 +2300,34 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What does the success of transferring stool show?', choices: ['The microbiome can be deliberately reshaped.', 'All microbiome products are effective.', 'Allergies are caused by gut bacteria.', 'Mice should be raised in sterile conditions.'], answer: 0, why: '第3段落 Its success shows that the microbiome can be deliberately reshaped。' },
     ],
   },
+  {
+    id: 'adv-fever',
+    title: 'Why We Run a Temperature',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we catch a cold or the flu, one of the first signs is often a rise in body temperature. Because fever makes us feel miserable, many people reach for medicine to bring it down as soon as possible. Yet fever is not simply a symptom of illness; in many cases it is part of the body's defense, a response ( A ) by the immune system itself.",
+      "Chemical signals released during an infection act on the part of the brain that controls temperature, raising its target setting by a degree or two. The body then produces and keeps more heat, ( B ) shivering. Higher temperatures appear to slow the growth of some bacteria and viruses and to make certain immune cells work faster. Animals as different as lizards and fish, which cannot produce much heat of their own, move to warmer places when they are infected, suggesting that this strategy is very old.",
+      "This does not mean that fever should always be left alone. A very high temperature can be dangerous, especially for young children and older adults, and reducing it can make patients more comfortable and help them sleep. Most doctors therefore advise ( C ) a fever mainly when it causes real distress or rises above a certain level. The aim is not to fight the body's response but to keep it within safe limits.",
+    ],
+    ja: [
+      'かぜやインフルエンザにかかると、最初のしるしの1つは体温が上がることが多い。熱が出るとつらいので、多くの人はできるだけ早く下げようと薬に手をのばす。しかし熱はたんなる病気の症状ではない。多くの場合、それは体の防御の一部、つまり免疫のしくみそのものが引き起こす反応なのである。',
+      '感染のあいだに放出される化学的な信号は、体温を調節する脳の部分にはたらきかけ、目標の設定を1、2度上げる。すると体は、たとえば体をふるわせることで、より多くの熱をつくって保つ。体温が高くなると、ある種の細菌やウイルスの増殖がおそくなり、特定の免疫細胞のはたらきが速くなるようだ。自分ではあまり熱をつくれないトカゲや魚のようにまったくちがう動物も、感染するとあたたかい場所へ移動する。このことは、この戦略がとても古いものであることを示している。',
+      'だからといって、熱はいつでもほうっておくべきだということにはならない。とても高い熱は、とくに幼い子どもや高齢者にとって危険なことがあり、熱を下げると患者は楽になり、眠りやすくなる。そのため多くの医師は、熱が本当につらいときや一定の高さをこえたときを中心に熱の治療をすすめる。ねらいは体の反応と戦うことではなく、それを安全なはんいにおさえることなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['triggered', 'triggering', 'trigger', 'triggers'], answer: 0, why: '反応は免疫に「引き起こされる」側（by the immune system）なので過去分詞 triggered。' },
+      { id: 'B', choices: ['for example by', 'for example to', 'for example of', 'for example that'], answer: 0, why: '「～によって」と手段を表すのは by ＋動名詞（by shivering）。to・of・that のあとに shivering だけを置くことはできない。' },
+      { id: 'C', choices: ['treating', 'to treat', 'treat', 'treated'], answer: 0, why: 'advise は目的語（人）がないとき動名詞をとる（advise ～ing）。advise to do は人を入れて advise 人 to do の形。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、熱は多くの場合、体の防御の一部である。', answer: true, why: '第1段落 in many cases it is part of the body\'s defense。' },
+      { statement: 'トカゲや魚は感染すると、すずしい場所へ移動する。', answer: false, why: '第2段落 move to warmer places when they are infected。' },
+      { statement: '筆者は、熱はどんなときも下げてはいけないと主張している。', answer: false, why: '第3段落 This does not mean that fever should always be left alone。' },
+    ],
+    qa: [
+      { q: 'How can a higher body temperature help fight an infection?', choices: ['It can slow the growth of some germs and speed up certain immune cells.', 'It kills every virus in the body at once.', 'It stops the brain from sending chemical signals.', 'It makes the body produce more medicine.'], answer: 0, why: '第2段落 slow the growth of some bacteria and viruses and to make certain immune cells work faster。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
