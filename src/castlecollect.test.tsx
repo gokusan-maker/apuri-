@@ -15,7 +15,7 @@ it('城の制覇コレクション：てっぺんまで登った城を数えて�
 
 it('ボスの城を全部たおすと1城制覇。ごほうびの🎟は1回だけ', () => {
   localStorage.clear()
-  localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-01', 中2: '2026-10-01', 中3: '2026-10-01' }))
+  localStorage.setItem('eitan:lboss', JSON.stringify(Object.fromEntries(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'].map((k) => [k, '2026-10-01']))))
   const reward = vi.fn()
   render(<CastleCollection onReward={reward} />)
   expect(screen.getByLabelText(/^制覇 1 \//)).toBeInTheDocument()
@@ -32,7 +32,7 @@ it('ホームのキャラの上に城主の称号（1城以上制覇したら）
   const { unmount } = render(<CastleTitleChip />)
   expect(screen.queryByLabelText(/^城の称号/)).toBeNull()
   unmount()
-  localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-01', 中2: '2026-10-01', 中3: '2026-10-01' }))
+  localStorage.setItem('eitan:lboss', JSON.stringify(Object.fromEntries(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'].map((k) => [k, '2026-10-01']))))
   render(<CastleTitleChip />)
   expect(screen.getByLabelText('城の称号：城の見習い')).toBeInTheDocument()
 })

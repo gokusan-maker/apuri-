@@ -1,6 +1,6 @@
 import { passageQs } from './readingboss'
 import { LONG_PASSAGES } from './longreading'
-import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
@@ -295,52 +295,11 @@ it('解放が少ない単語帳は compact（3列にならぶ）、たくさん�
   expect(lv[1].classList.contains('compact')).toBe(true)
 })
 
-it('ボス部屋では、レベル（中学・高校・きほん）でしぼりこんで、タイルからボスをえらんで戦える', () => {
-  localStorage.removeItem('eitan:boss-group')
-  localStorage.setItem('eitan:grade', 'hs')
-  const r = render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
-  const tiles = () => [...screen.getByRole('group', { name: 'ボスをえらぶ' }).querySelectorAll('button.boss-pick-tile')].map((b) => b.getAttribute('aria-label')!.split('のボス')[0])
-  expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull() // まずレベルをえらぶページ
-  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
-  expect(tiles()).toEqual(['高校基礎', '熟語', 'ビジネス'])
-  const back = () => fireEvent.click(screen.getByText('← レベルをえらびなおす'))
-  back()
-  fireEvent.click(screen.getByRole('button', { name: /^上級（/ }))
-  expect(tiles()).toEqual(['英検2級', '英検準1級', '英検1級', 'ネイティブ'])
-  back()
-  fireEvent.click(screen.getByRole('button', { name: /^きほん（/ }))
-  expect(tiles()).toEqual(['曜日・月', 'テーマ別', '数', '色・形', '会話'])
-  back()
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  expect(tiles()).toEqual(['中1', '中2', '中3'])
-  expect(localStorage.getItem('eitan:boss-group')).toBe('jh')
-  localStorage.removeItem('eitan:grade')
-  r.unmount()
-  render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  localStorage.removeItem('eitan:boss-group')
-  fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
-  expect(screen.getByText('← にげる')).toBeInTheDocument()
-})
 
-it('ボス部屋のタイルで、今日の金色のボスに「✨金色」の印がつく', async () => {
-  const { goldenLevelOf } = await import('./boss')
-  const { LEVELS } = await import('./words')
-  const { dayKey } = await import('./srs')
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  const g = goldenLevelOf(LEVELS, dayKey())!
-  const { BOSS_GROUPS } = await import('./bossfilter')
-  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${BOSS_GROUPS.find((x) => x.levels.includes(g))!.label.replace(/^\S+ /, '')}（`) })) // 金色のボスのいるレベルへ
-  const tile = screen.getByRole('button', { name: new RegExp(`^${g}のボス`) })
-  expect(tile.textContent).toContain('✨金色')
-  expect(document.querySelectorAll('.boss-pick-gold')).toHaveLength(1)
-  localStorage.removeItem('eitan:boss-group')
-})
 
 it('ボス部屋のタイルに、そのボスの最短タイムが小さく出る', () => {
   localStorage.setItem('eitan:boss-times', JSON.stringify({ ヤミモチ: 83 }))
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
 })
 
@@ -352,72 +311,37 @@ it('特別クエストでは攻略のむずかしい強いボス（HP360）と�
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '360')
 })
 
-it('ボス部屋の城：ボスごとに1〜4階は単語・文法・読解・ミックスの問題、5階でボスと戦う', async () => {
-  const { bossFloorQs } = await import('./bosscastle')
+
+
+
+
+it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベルのボスが下から順に。1〜4階は問題、5階でボス', async () => {
+  const { bossFloorQs, bossCastleFloors } = await import('./bosscastle')
+  expect(bossCastleFloors()).toHaveLength(75)
   expect(bossFloorQs('中1', 0).every((q) => q.team === 'word')).toBe(true)
-  expect(bossFloorQs('中1', 1).every((q) => q.team === 'grammar')).toBe(true)
+  expect(bossFloorQs('東大', 1).every((q) => q.team === 'grammar')).toBe(true)
   expect(bossFloorQs('中1', 2).every((q) => q.team === 'reading')).toBe(true)
-  expect(bossFloorQs('中1', 3)).toHaveLength(5)
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  const castle = screen.getByRole('region', { name: '中学のボスの城' })
-  fireEvent.click(within(castle).getByRole('button', { name: /^1階：.+の手下　単語/ }))
-  expect(screen.getByText(/1階：単語/)).toBeInTheDocument()
-  // 5問とも正解すると1階クリア
+  expect(screen.queryByRole('region', { name: 'ボスの世界地図' })).toBeNull()
+  const castle = screen.getByRole('region', { name: 'ボスの城' })
+  fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1　単語/ }))
+  expect(screen.getByText(/中1のボスの階/)).toBeInTheDocument()
   for (let n = 0; n < 5; n++) {
-    const correct = document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')
-    const q = screen.getByText(/1 \/ 5|2 \/ 5|3 \/ 5|4 \/ 5|5 \/ 5/)
-    expect(q).toBeInTheDocument()
-    // 正解の選択肢をさがす：まちがえたら correct の印がつくので、答えたあとに正解の数を数える
-    fireEvent.click(correct[0])
+    fireEvent.click(document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')[0])
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
   }
-  expect(screen.getByRole('status').textContent).toMatch(/\/5問/)
   fireEvent.click(screen.getByText('城にもどる'))
-  expect(screen.getByRole('region', { name: '中学のボスの城' })).toBeInTheDocument()
-  // ボスをたおしたことがあれば、そのボスの1〜5階はクリアあつかい
-  cleanup()
-  render(<Stages part="boss" levels={['中1']} record={{}} boss={{ 中1: '2026-01-01' }} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  expect(within(screen.getByRole('region', { name: '中学のボスの城' })).getByRole('button', { name: /^6階：/ })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: 'ボスの城' })).toBeInTheDocument()
 })
 
-it('ボス部屋：エリアの地図に今日の特別なボスが出現し、押すとそのボスと戦える', () => {
+it('ボスの一覧から15レベルのボスを自由にえらべ、たおすとそのレベルのボスの5階までクリアあつかい', () => {
   localStorage.clear()
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
-  expect(screen.queryByRole('region', { name: /のエリア$/ })).toBeNull()
-  expect(screen.getByRole('region', { name: 'ボスの世界地図' }).textContent).toContain('上級の魔王城') // レベルをえらぶページは島の地図
-  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
-  const area = screen.getByRole('region', { name: '高校のエリア' })
-  expect(area.textContent).toContain('出現！')
-  fireEvent.click(within(area).getByRole('button', { name: /特別クエスト：/ }))
-  expect(screen.getByText(/^👑 特別クエスト：/)).toBeInTheDocument()
-})
-
-it('ボスのエリアでは、ふつうのボスも地図の上をうろうろ。押すと戦える。位置は日ごとにかわる', async () => {
-  const { roamSpots } = await import('./bossroam')
-  expect(roamSpots(3, '2026-10-25')).toHaveLength(3)
-  expect(new Set(roamSpots(5, '2026-10-25').map((p) => `${p.x},${p.y}`)).size).toBe(5)
-  expect(roamSpots(5, '2026-10-25')).toEqual(roamSpots(5, '2026-10-25'))
-  localStorage.clear()
+  localStorage.setItem('eitan:lboss', JSON.stringify({ 中1: '2026-10-01' }))
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  const area = screen.getByRole('region', { name: '中学のエリア' })
-  fireEvent.click(within(area).getAllByRole('button', { name: /^うろうろしている/ })[0])
+  const list = screen.getByRole('group', { name: 'ボスをえらぶ' })
+  expect(list.querySelectorAll('button.boss-pick-tile')).toHaveLength(15)
+  expect(within(screen.getByRole('region', { name: 'ボスの城' })).getByRole('button', { name: /^6階：中2　単語/ })).toBeInTheDocument()
+  fireEvent.click(within(list).getByRole('button', { name: /^東大のボス「.+」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
-})
-
-it('ボスのエリアには1日1回の宝箱。ひろうと🪙、同じ日はもう出ない', () => {
-  localStorage.clear()
-  const coins = vi.fn()
-  const r = render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onRankBonus={coins} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  fireEvent.click(screen.getByRole('button', { name: /落ちている宝箱をひろう/ }))
-  expect(coins).toHaveBeenCalledWith(15)
-  expect(screen.getByText(/宝箱をひろった/)).toBeInTheDocument()
-  r.unmount()
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onRankBonus={coins} />)
-  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
-  expect(screen.queryByRole('button', { name: /落ちている宝箱をひろう/ })).toBeNull()
 })

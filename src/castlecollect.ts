@@ -1,11 +1,9 @@
 // 城の制覇コレクション：てっぺんまで登った城の数で称号とごほうび（🎟）
-import { BOSS_GROUPS } from './bossfilter'
-import { loadBoss } from './boss'
+import { bossCastleFloors, loadBcClears, loadLevelBoss } from './bosscastle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears } from './grammarcastle'
 import { loadShortDone, PASSAGES } from './reading'
 import { COURSES, courseReady } from './wordcourse'
 import { loadWcClears, wordCastleFloorsFor } from './wordcastle'
-import { LEVELS } from './words'
 
 export type CastleInfo = { id: string; kind: '単語' | '文法' | '読解' | 'ボス'; name: string; floors: number; cleared: number }
 
@@ -13,7 +11,6 @@ export function allCastles(): CastleInfo[] {
   const wc = loadWcClears()
   const gc = loadGcClears()
   const short = loadShortDone()
-  const boss = loadBoss()
   return [
     ...COURSES.filter(courseReady).map((c) => {
       const fl = wordCastleFloorsFor(c.id)
@@ -24,10 +21,12 @@ export function allCastles(): CastleInfo[] {
       return { id: `g:${l.id}`, kind: '文法' as const, name: `${l.label}の文法の森`, floors: fl.length, cleared: fl.filter((f) => gc.includes(f.id)).length }
     }),
     { id: 'r:mini', kind: '読解' as const, name: '読解ミニの山', floors: PASSAGES.length, cleared: PASSAGES.filter((p) => short.includes(p.id)).length },
-    ...BOSS_GROUPS.map((g) => {
-      const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
-      return { id: `b:${g.id}`, kind: 'ボス' as const, name: `${g.label.replace(/^\S+ /, '')}のボスの城`, floors: lvs.length, cleared: lvs.filter((lv) => boss[lv]).length }
-    }),
+    (() => {
+      const lb = loadLevelBoss()
+      const bc = loadBcClears()
+      const fl = bossCastleFloors()
+      return { id: 'b:castle', kind: 'ボス' as const, name: 'ボスの城', floors: fl.length, cleared: fl.filter((f) => !!lb[f.course] || bc.includes(f.id)).length }
+    })(),
   ]
 }
 

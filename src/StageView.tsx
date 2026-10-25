@@ -16,11 +16,10 @@ import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
-import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
-import { BossArea, type AreaSpecial } from './BossAreaView'
-import { BossWorld } from './BossWorldView'
 import { BossFloor } from './BossFloorView'
-import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, loadBcClears, saveBcClears, type BcFloor } from './bosscastle'
+import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, LEVEL_BOSS_LOOK, loadBcClears, loadLevelBoss, saveBcClears, saveLevelBoss, type BcFloor } from './bosscastle'
+import { COURSES, courseById, courseWords, type CourseId } from './wordcourse'
+import { levelUnits } from './grammarcastle'
 import { CastleCollection } from './CastleCollectView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -105,15 +104,17 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const specialEvent = event !== undefined ? event : specialEventOf(dayKey(), { hour, weekend, goldReady: keys >= KEYS_FOR_GOLD && !!onOpenGold })
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
-  const [group, setGroup] = useState(loadBossGroup) // ボスをレベルでしぼりこむ
-  const [area, setArea] = useState<BossGroup | null>(null) // ボス部屋：まずレベルをえらぶページ、えらんだらそのエリアへ
   const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[] }) | null>(null) // ボスの城の問題の階（1〜4階）
   const [bcClears, setBcClears] = useState(loadBcClears)
+  const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
+  const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
   // ステージ・ボス戦の画面では、App の上に「ほかの問題をえらぶ」（おすとステージ・ボスの一覧へ）
-  usePlaying(!!(univFight || endless || rush || timeAttack || nightFight || weekendFight || rareFight || fighting || playing), () => {
+  usePlaying(!!(lvFight || bcFloor || univFight || endless || rush || timeAttack || nightFight || weekendFight || rareFight || fighting || playing), () => {
+    setLvFight(null)
+    setBcFloor(null)
     setUnivFight(null)
     setEndless(null)
     setRush(null)
@@ -383,6 +384,44 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     )
   }
 
+  // レベル（中1〜ネイティブ）のボス：そのレベルの単語・文法・読解で戦う
+  if (lvFight) {
+    const c = courseById(lvFight)
+    const first = !lboss[lvFight]
+    return (
+      <Boss
+        winLabel={backLabel}
+        key={`lv-${lvFight}`}
+        reading
+        winBuddy={readingBuddy}
+        level={c.level}
+        words={courseWords(lvFight)}
+        look={BOSSES[LEVEL_BOSS_LOOK[lvFight]]}
+        exam={{ passages: bossPassages(lvFight) ?? [], units: levelUnits(lvFight) }}
+        title={`👹 ${c.label}のボス`}
+        partner={partner}
+        power={power}
+        bag={bag}
+        onUseItem={onUseItem}
+        onDefeat={onBossDefeat}
+        onSkill={onSkill}
+        onDrop={onDrop}
+        onLose={onLose}
+        onRankBonus={onRankBonus}
+        bonus={first ? BOSS_XP : BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onReadingAnswer ?? onAnswer}
+        onWin={() => {
+          const next = { ...lboss, [lvFight]: dayKey() }
+          setLboss(next)
+          saveLevelBoss(next)
+          onBossWin?.(LEVEL_BOSS_LOOK[lvFight])
+        }}
+        onExit={() => setLvFight(null)}
+      />
+    )
+  }
+
   if (fighting) {
     const nextLevel = !dailyFight && !strong && !sudden ? levels.slice(levels.indexOf(fighting) + 1).find((l) => bossUnlocked(l, record)) : undefined
     return (
@@ -529,13 +568,12 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     )
   }
 
-  const groupLabel = (id: BossGroup) => BOSS_GROUPS.find((g) => g.id === id)!.label.replace(/^\S+ /, '')
   // ボスの城の問題の階
   if (part === 'boss' && bcFloor)
     return (
       <BossFloor
         key={bcFloor.id}
-        title={`🏰 ${BOSSES[bcFloor.level].name}の城　${bcFloor.floor + 1}階：${BC_KIND[bcFloor.floor]}`}
+        title={`🏰 ${courseById(bcFloor.course).label}のボスの階　${BC_KIND[bcFloor.floor]}`}
         qs={bcFloor.qs}
         onBack={() => setBcFloor(null)}
         onDone={(score) => {
@@ -547,37 +585,6 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         }}
       />
     )
-  // ボス部屋のさいしょ：レベルをえらぶページ（地図）
-  if (part === 'boss' && area === null)
-    return (
-      <section className="card stages">
-        <BossWorld
-          regions={BOSS_GROUPS.map((g) => {
-            const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
-            return { id: g.id, name: groupLabel(g.id), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
-          })}
-          onPick={(id) => {
-            setGroup(id)
-            saveBossGroup(id)
-            setArea(id)
-            window.scrollTo?.({ top: 0 })
-          }}
-        />
-        {onCastleReward && <CastleCollection onReward={onCastleReward} />}
-      </section>
-    )
-  // エリアに出現する特別なボス（今日のボス・とくべつイベント）
-  const specials: AreaSpecial[] = [
-    ...(daily ? [{ id: 'daily', icon: '👹', name: '今日のボス', badge: dailyDone ? '✅ クリア' : 'TEAM BATTLE', onClick: () => { setDailyFight(1); setFighting(daily) } }] : []),
-    ...(specialEvent === 'rare' ? [{ id: 'rare', icon: '✨', name: '今週のレアボス', badge: rareWeek === week ? '✅ クリア' : 'レア', onClick: () => setRareFight(true) }] : []),
-    ...(specialEvent === 'weekend' ? [{ id: 'weekend', icon: '🌙', name: '週末ボス', badge: weekendWeek === week ? '✅ クリア' : '週末だけ', onClick: () => setWeekendFight(true) }] : []),
-    ...(specialEvent === 'night' ? [{ id: 'night', icon: '🌃', name: 'ナイトボス', badge: nightDay === dayKey() ? '✅ クリア' : '夜だけ', onClick: () => setNightFight(true) }] : []),
-    ...(specialEvent === 'quest' ? [{ id: 'quest', icon: '👑', name: questBossOf(dayKey()).look.name, badge: questDay === dayKey() ? '✅ クリア' : '強敵', aria: `特別クエスト：${questBossOf(dayKey()).look.name}${questDay === dayKey() ? '（クリア）' : '（強敵）'}`, onClick: () => setQuestFight(true) }] : []),
-    ...(specialEvent === 'rush' ? [{ id: 'rush', icon: '🔥', name: 'ボスラッシュ', badge: rushDone ? '✅ クリア' : undefined, onClick: () => setRush({ round: 0, hearts: HEARTS, won: false }) }] : []),
-    ...(specialEvent === 'rush-ex' ? [{ id: 'rush-ex', icon: '🌟', name: 'ボスラッシュEX', badge: rushExDone ? '✅ クリア' : '週末限定', onClick: () => setRush({ round: 0, hearts: HEARTS, won: false, ex: true }) }] : []),
-    ...(specialEvent === 'endless' ? [{ id: 'endless', icon: '🗼', name: 'エンドレスの塔', badge: endlessBest > 0 ? `最高 ${endlessBest}階` : undefined, onClick: () => setEndless({ floor: 1, hearts: HEARTS, won: false }) }] : []),
-    ...(specialEvent === 'time' ? [{ id: 'time', icon: '⏱️', name: 'ボスのタイムアタック', badge: loadBossTaBest() > 0 ? `ベスト ${loadBossTaBest()}` : undefined, onClick: () => setTimeAttack(true) }] : []),
-  ]
 
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
@@ -588,88 +595,62 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
         <>
-        {area !== null && (
-          <>
-            <button className="list-link boss-area-back" onClick={() => setArea(null)}>
-              ← レベルをえらびなおす
-            </button>
-            <BossArea
-              name={groupLabel(group)}
-              group={group}
-              specials={specials}
-              onCoins={onRankBonus}
-              bosses={LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => ({
-                id: lv,
-                name: BOSSES[lv].name,
-                look: BOSSES[lv],
-                beaten: !!boss[lv],
-                golden: lv === goldenLevelOf(LEVELS, dayKey()),
-                onClick: () => {
-                  setFighting(lv)
-                  window.scrollTo?.({ top: 0 })
-                },
-              }))}
-            />
-          </>
-        )}
-        {(() => {
-          const lvs = LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv))
-          return (
-            <Castle
-              key={group}
-              name={`${BOSS_GROUPS.find((g) => g.id === group)!.label.replace(/^\S+ /, '')}のボスの城`}
-              theme="red"
-              floors={bossCastleFloors(lvs).map((f) => {
-                const isBoss = f.floor === BC_FLOORS - 1
-                const name = BOSSES[f.level].name
-                return {
-                  id: f.id,
-                  label: isBoss ? `👹 ${name}` : `${name}の手下　${BC_KIND[f.floor]}`,
-                  sub: isBoss ? `${f.level}のボス${f.level === goldenLevelOf(LEVELS, dayKey()) ? '・✨金色' : ''}` : `${BC_QS}問`,
-                  fig: isBoss ? <BossFigure hit={false} look={BOSSES[f.level]} /> : undefined,
-                  cleared: !!boss[f.level] || bcClears.includes(f.id),
-                }
-              })}
-              goLabel="⚔ のぼる"
-              againLabel="✅ もう一度"
-              onOpen={(id) => {
-                const f = bossCastleFloors(lvs).find((x) => x.id === id)!
-                window.scrollTo?.({ top: 0 })
-                if (f.floor === BC_FLOORS - 1) setFighting(f.level)
-                else setBcFloor({ ...f, qs: bossFloorQs(f.level, f.floor) })
-              }}
-            />
-          )
-        })()}
+        <Castle
+          name="ボスの城"
+          theme="red"
+          floors={bossCastleFloors().map((f) => {
+            const isBoss = f.floor === BC_FLOORS - 1
+            const c = courseById(f.course)
+            const look = BOSSES[LEVEL_BOSS_LOOK[f.course]]
+            return {
+              id: f.id,
+              label: isBoss ? `👹 ${look.name}` : `${c.label}　${BC_KIND[f.floor]}`,
+              sub: isBoss ? `${c.label}のボス` : `${BC_QS}問`,
+              fig: isBoss ? <BossFigure hit={false} look={look} /> : undefined,
+              cleared: !!lboss[f.course] || bcClears.includes(f.id),
+            }
+          })}
+          goLabel="⚔ のぼる"
+          againLabel="✅ もう一度"
+          onOpen={(id) => {
+            const f = bossCastleFloors().find((x) => x.id === id)!
+            window.scrollTo?.({ top: 0 })
+            if (f.floor === BC_FLOORS - 1) setLvFight(f.course)
+            else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor) })
+          }}
+        />
         <details className="boss-pick-fold">
           <summary>📋 ボスの一覧から自由にえらぶ</summary>
         <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
-          {LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => (
-            <button
-              key={lv}
-              className={`boss-pick-tile${boss[lv] ? ' beaten' : ''}`}
-              style={{ '--boss-c': BOSSES[lv].color } as CSSProperties}
-              aria-label={`${lv}のボス「${BOSSES[lv].name}」に挑戦${boss[lv] ? '（撃破ずみ）' : ''}`}
-              title={BOSSES[lv].desc}
-              onClick={() => {
-                setFighting(lv)
-                window.scrollTo?.({ top: 0 })
-              }}
-            >
-              {boss[lv] && <span className="boss-pick-crown" aria-hidden="true">👑</span>}
-              {lv === goldenLevelOf(LEVELS, dayKey()) && <span className="boss-pick-gold" title={`今日は金色（+🪙${GOLDEN_COINS}）`}>✨金色</span>}
-              <span className="boss-pick-fig">
-                <BossFigure hit={false} look={BOSSES[lv]} />
-              </span>
-              <span className="boss-pick-name">{BOSSES[lv].name}</span>
-              <small className="boss-pick-lv">
-                {lv}
-                {bossTimes[BOSSES[lv].name] !== undefined && <span className="boss-pick-time" title={`最短タイム ${formatSec(bossTimes[BOSSES[lv].name])}`}> ⏱{Math.floor(bossTimes[BOSSES[lv].name] / 60)}:{String(bossTimes[BOSSES[lv].name] % 60).padStart(2, '0')}</span>}
-              </small>
-            </button>
-          ))}
+          {COURSES.map((c) => {
+            const look = BOSSES[LEVEL_BOSS_LOOK[c.id]]
+            return (
+              <button
+                key={c.id}
+                className={`boss-pick-tile${lboss[c.id] ? ' beaten' : ''}`}
+                style={{ '--boss-c': look.color } as CSSProperties}
+                aria-label={`${c.label}のボス「${look.name}」に挑戦${lboss[c.id] ? '（撃破ずみ）' : ''}`}
+                title={look.desc}
+                onClick={() => {
+                  setLvFight(c.id)
+                  window.scrollTo?.({ top: 0 })
+                }}
+              >
+                {lboss[c.id] && <span className="boss-pick-crown" aria-hidden="true">👑</span>}
+                <span className="boss-pick-fig">
+                  <BossFigure hit={false} look={look} />
+                </span>
+                <span className="boss-pick-name">{look.name}</span>
+                <small className="boss-pick-lv">
+                  {c.label}
+                  {bossTimes[look.name] !== undefined && <span className="boss-pick-time" title={`最短タイム ${formatSec(bossTimes[look.name])}`}> ⏱{Math.floor(bossTimes[look.name] / 60)}:{String(bossTimes[look.name] % 60).padStart(2, '0')}</span>}
+                </small>
+              </button>
+            )
+          })}
         </div>
         </details>
+        {onCastleReward && <CastleCollection onReward={onCastleReward} />}
         </>
       )}
       {winStreak > 0 && (
@@ -686,7 +667,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           }
         }}
       />
-      {specialEvent && (part !== 'boss' || specialEvent === 'gold' || specialEvent === 'univ') && (
+      {specialEvent && (
         <div className={`special-event se-${specialEvent}`} role="region" aria-label="とくべつイベント">
           <p className="special-event-ribbon">
             ⚡ とくべつイベント出現中！<span className="special-event-note">{SPECIAL_EVENT_NOTE[specialEvent]}</span>
@@ -739,7 +720,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <p className="univ-rule">下の階から順に挑戦・高校の文法と入試の長文</p>
           </details>
           )}
-          {specialEvent !== 'gold' && specialEvent !== 'univ' && part !== 'boss' && (
+          {specialEvent !== 'gold' && specialEvent !== 'univ' && (
             <div className="boss-modes">
               {specialEvent === 'endless' && <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
         <span className="lg-icon" aria-hidden="true">🗼</span><span className="mode-name">エンドレスの塔</span>{endlessBest > 0 && <span className="mode-badge">最高 {endlessBest}階</span>}
@@ -772,7 +753,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         </div>
       )}
       {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日は「{goldenLevelOf(LEVELS, dayKey())}」のボスが金色 +🪙{GOLDEN_COINS}</p>}
-      {daily && part !== 'boss' && (
+      {daily && (
         <button
           className="boss-go-btn daily-boss"
           onClick={() => {

@@ -31,11 +31,10 @@ function bossAnswer(en: string): string {
   return WORDS.find((x) => x.example === en)!.exampleJa
 }
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
-// 熟語のボスとボス部屋で戦う（一覧から）
+// 熟語の見た目のボス（高2のレベルのボス）とボス部屋で戦う（一覧から）
 const toWordStages = () => {
   navTo('ボス部屋')
-  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
-  fireEvent.click(screen.getByRole('button', { name: /^熟語のボス「.+」に挑戦/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^高2のボス「.+」に挑戦/ }))
 }
 
 
