@@ -12,9 +12,10 @@ import { SPECIAL_EVENT_NOTE, specialEventOf, type SpecialEventId } from './bosse
 import { loadQuestDay, QUEST_COINS, QUEST_HP, questBossOf, saveQuestDay } from './questboss'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadNightDay, NIGHT_COINS, nightBossOf, saveNightDay, loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
-import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
+import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss } from './univ'
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
+import { Castle } from './CastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup } from './bossfilter'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -522,6 +523,19 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   return (
     <section className="card stages">
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
+      {part === 'stages' && (
+        <Castle
+          name="単語の城"
+          theme="purple"
+          floors={levels.flatMap((lv) => stagesOf(lv).map((st) => ({ id: st.id, label: `${lv} ステージ${st.no}`, sub: starText(record[st.id] ?? 0), cleared: (record[st.id] ?? 0) > 0 })))}
+          onOpen={(id) => {
+            const st = levels.flatMap((lv) => stagesOf(lv)).find((x) => x.id === id)
+            if (!st) return
+            setPlaying(st)
+            setResult(null)
+          }}
+        />
+      )}
       {part !== 'stages' && (
       <>
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
@@ -621,62 +635,15 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 )
               )
             })()}
-            <div className="univ-building">
-              <svg className="univ-roof" viewBox="0 0 320 70" aria-hidden="true">
-                <path d="M160 2 L166 14 L154 14 Z" fill="#fde047" stroke="#a16207" strokeWidth="1.5" />
-                <rect x="157" y="14" width="6" height="10" fill="#a16207" />
-                <path d="M30 52 Q160 8 290 52 L274 58 Q160 26 46 58 Z" fill="#7f1d1d" stroke="#450a0a" strokeWidth="2" />
-                <path d="M10 62 Q160 30 310 62 L294 68 Q160 42 26 68 Z" fill="#991b1b" stroke="#450a0a" strokeWidth="2" />
-                <path d="M30 52 Q24 44 18 46 M290 52 Q296 44 302 46" fill="none" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                <path d="M10 62 Q4 54 -2 56 M310 62 Q316 54 322 56" fill="none" stroke="#fbbf24" strokeWidth="3" strokeLinecap="round" />
-                <circle cx="160" cy="44" r="7" fill="#fbbf24" stroke="#a16207" strokeWidth="2" />
-              </svg>
-              <ol className="univ-floors">
-                {/* 先が長く見えないよう、開いた階と、そのすぐ上の1階（カギつき）だけ */}
-                {[...UNIV_BOSSES].reverse().filter((b) => univUnlocked(Math.max(0, UNIV_BOSSES.indexOf(b) - 1), univ)).map((b) => {
-                  const i = UNIV_BOSSES.indexOf(b)
-                  const open = univUnlocked(i, univ)
-                  const now = open && !univ[b.id]
-                  if (!open)
-                    return (
-                      <li key={b.id} className="locked" aria-label={`${b.floor}（まだ）`}>
-                        <span className="univ-plate">{b.floor}</span>
-                        <span className="univ-windows" aria-hidden="true">
-                          <i />
-                          <i />
-                          <i />
-                        </span>
-                        <span className="univ-lock">🔒 つぎの階</span>
-                      </li>
-                    )
-                  return (
-                    <li key={b.id} className={univ[b.id] ? 'beaten' : 'open now'}>
-                      <span className="univ-plate">{b.floor}</span>
-                      <span className="univ-figure" style={{ '--boss-c': b.color } as CSSProperties}>
-                        <BossFigure hit={false} look={b} />
-                      </span>
-                      <span className="univ-info" title={`${b.floor} ${b.name}`}>
-                        <strong>{b.name}</strong>
-                        <span className="univ-hint">{b.hint}</span>
-                        <span className="univ-spec">HP{b.hp}・🪙{b.coins}・{i >= 3 ? '難関大' : '入試'}の長文</span>
-                      </span>
-                      {now && <span className="univ-now" aria-hidden="true">いまここ</span>}
-                      <button className="boss-btn" onClick={() => setUnivFight(b)}>
-                        {univ[b.id] ? '👑 もう一度' : '⚔ 挑戦'}
-                      </button>
-                    </li>
-                  )
-                })}
-              </ol>
-              <div className="univ-gate" aria-hidden="true">
-                <span className="univ-torch" />
-                <span className="univ-door">
-                  <b>入試の塔</b>
-                </span>
-                <span className="univ-torch" />
-              </div>
-              <p className="univ-rule">下の階から順に挑戦・高校の文法と入試の長文</p>
-            </div>
+            <Castle
+              name="大学入試の塔"
+              theme="red"
+              goLabel="⚔ 挑戦"
+              againLabel="👑 もう一度"
+              floors={UNIV_BOSSES.map((b, i) => ({ id: b.id, label: b.name, sub: `${b.hint}・HP${b.hp}・🪙${b.coins}・${i >= 3 ? '難関大' : '入試'}の長文`, fig: <BossFigure hit={false} look={b} />, cleared: !!univ[b.id] }))}
+              onOpen={(id) => setUnivFight(UNIV_BOSSES.find((b) => b.id === id)!)}
+            />
+            <p className="univ-rule">下の階から順に挑戦・高校の文法と入試の長文</p>
           </details>
           )}
           {specialEvent !== 'gold' && specialEvent !== 'univ' && (

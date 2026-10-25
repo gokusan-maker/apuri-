@@ -22,5 +22,5 @@ it('読解の塔：いまの階・クリアした階・カギつきの次の階�
   expect(screen.queryByLabelText('6階（まだ）')).toBeNull() // 先は1階だけ
   fireEvent.click(screen.getByRole('button', { name: `4階：${list[3].title}` }))
   expect(open).toHaveBeenCalledWith(list[3])
-  expect(screen.getByText('⬇ ここまで 1階クリアずみ')).toBeInTheDocument()
+  expect(screen.getByText('⬇ 1階ぶん、制覇ずみ')).toBeInTheDocument()
 })

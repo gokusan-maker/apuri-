@@ -3134,3 +3134,62 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .boss-support { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 2px 0 4px; font-size: 0.72rem; font-weight: 800; color: var(--muted); }
 .boss-support span { padding: 1px 7px; border-radius: 999px; background: color-mix(in srgb, #f59e0b 18%, var(--card)); color: var(--fg); }
 .read-hint-text { margin: 6px 0 0; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, #f59e0b 14%, var(--card)); border-left: 4px solid #f59e0b; font-size: 0.85rem; line-height: 1.6; text-align: left; }
+
+/* ===== 城の塔（読解・文法・単語・入試の塔で共通） ===== */
+.castle { --sky1: #1e3a8a; --sky2: #0b1027; --roof: #1d4ed8; --roof2: #1e3a8a; --flag: #fbbf24; --glow: 96 165 250; position: relative; overflow: hidden; margin: 6px 0 14px; padding: 10px 8px 0; border-radius: 20px; border: 3px solid #fbbf24; background: radial-gradient(130% 80% at 50% 0%, var(--sky1) 0%, var(--sky2) 70%); color: #fef3c7; box-shadow: 0 10px 24px rgb(15 23 42 / 0.35), inset 0 0 0 2px rgb(255 255 255 / 0.08); }
+.castle-red { --sky1: #7f1d1d; --sky2: #1c0a0a; --roof: #b91c1c; --roof2: #7f1d1d; --flag: #fde047; --glow: 248 113 113; }
+.castle-green { --sky1: #14532d; --sky2: #05140b; --roof: #15803d; --roof2: #14532d; --flag: #fde047; --glow: 74 222 128; }
+.castle-purple { --sky1: #4c1d95; --sky2: #12062b; --roof: #7c3aed; --roof2: #4c1d95; --flag: #fde047; --glow: 196 181 253; }
+.castle::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(1.5px 1.5px at 8% 14%, #fff, transparent), radial-gradient(1px 1px at 22% 30%, #fff, transparent), radial-gradient(1.5px 1.5px at 46% 8%, #fde68a, transparent), radial-gradient(1px 1px at 64% 22%, #fff, transparent), radial-gradient(1px 1px at 92% 40%, #fff, transparent), radial-gradient(1.5px 1.5px at 4% 52%, #fff, transparent); animation: castle-twinkle 3s ease-in-out infinite alternate; }
+@keyframes castle-twinkle { to { opacity: 0.55; } }
+.castle-sky { position: absolute; left: 0; top: 0; width: 100%; height: 150px; pointer-events: none; }
+.castle-moon { fill: #fef9c3; filter: drop-shadow(0 0 10px #fde68a); }
+.castle-mount { fill: rgb(0 0 0 / 0.35); }
+.castle-head { position: relative; display: flex; align-items: center; gap: 8px; margin: 0 4px 2px; }
+.castle-name { font-weight: 900; font-size: 1.05rem; letter-spacing: 0.04em; color: #fff; text-shadow: 0 2px 0 rgb(0 0 0 / 0.5), 0 0 12px rgb(var(--glow) / 0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.castle-count { margin-left: auto; flex: none; padding: 3px 12px; border-radius: 999px; background: linear-gradient(#fde047, #f59e0b); color: #78350f; font-weight: 900; font-size: 0.8rem; box-shadow: 0 3px 0 #92400e; }
+.castle-top { position: relative; margin: 4px 0; text-align: center; font-weight: 900; color: #fde047; text-shadow: 0 0 10px #f59e0b; }
+.castle-body { position: relative; max-width: 400px; margin: 0 auto; }
+.castle-roof { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; filter: drop-shadow(0 6px 8px rgb(0 0 0 / 0.5)); }
+.castle-turret rect, .castle-keep { fill: #57534e; stroke: #292524; stroke-width: 2; }
+.castle-cone { fill: var(--roof); stroke: var(--roof2); stroke-width: 2; }
+.castle-cone.big { filter: drop-shadow(0 0 8px rgb(var(--glow) / 0.6)); }
+.castle-pole { stroke: #e7e5e4; stroke-width: 2; }
+.castle-flag { fill: var(--flag); transform-box: fill-box; transform-origin: left center; animation: castle-flag 1.4s ease-in-out infinite alternate; }
+@keyframes castle-flag { to { transform: skewY(-10deg) scaleX(0.85); } }
+.castle-crest { fill: var(--flag); stroke: #78350f; stroke-width: 2; }
+.castle-slit { fill: #1c1917; }
+.castle-window.lit { fill: #fde68a; filter: drop-shadow(0 0 8px #f59e0b); animation: castle-window 2.6s ease-in-out infinite alternate; }
+@keyframes castle-window { to { fill: #fbbf24; } }
+.castle-battle { fill: #78716c; stroke: #292524; stroke-width: 2; }
+.castle-floors { list-style: none; margin: 0 6px; padding: 0; border-left: 8px solid #44403c; border-right: 8px solid #44403c; background:
+  repeating-linear-gradient(0deg, rgb(0 0 0 / 0.35) 0 2px, transparent 2px 22px),
+  repeating-linear-gradient(90deg, rgb(0 0 0 / 0.25) 0 2px, transparent 2px 44px),
+  linear-gradient(90deg, #57534e, #78716c 50%, #57534e); }
+.castle-floors li { position: relative; display: grid; grid-template-columns: 34px auto minmax(0, 1fr); align-items: center; gap: 8px; padding: 10px 10px 10px 6px; border-bottom: 8px solid #44403c; box-shadow: inset 0 -3px 0 #a8a29e; }
+.castle-floors li:not(:has(.castle-arch)) { grid-template-columns: 34px minmax(0, 1fr); }
+.castle-floors li.locked { grid-template-columns: 34px 1fr; padding: 6px 10px 6px 6px; background: rgb(0 0 0 / 0.35); }
+.castle-floors li.cleared { background: linear-gradient(90deg, rgb(251 191 36 / 0.22), transparent 75%); }
+.castle-floors li.now { background: radial-gradient(120% 140% at 50% 50%, rgb(var(--glow) / 0.55), rgb(var(--glow) / 0.08)); box-shadow: inset 0 0 22px rgb(var(--glow) / 0.8), inset 0 -3px 0 #a8a29e; animation: castle-pulse 2.4s ease-in-out infinite; }
+@keyframes castle-pulse { 50% { box-shadow: inset 0 0 34px rgb(253 224 71 / 0.75), inset 0 -3px 0 #a8a29e; } }
+.castle-plate { justify-self: center; display: grid; place-items: center; width: 30px; height: 34px; clip-path: polygon(0 0, 100% 0, 100% 62%, 50% 100%, 0 62%); background: linear-gradient(#fde047, #d97706); color: #78350f; font-size: 0.82rem; font-weight: 900; text-shadow: 0 1px 0 #fef3c7; }
+.castle-gate-lock { font-size: 0.74rem; font-weight: 800; color: #d6d3d1; }
+.castle-arch { width: 52px; height: 52px; padding: 3px; border-radius: 26px 26px 6px 6px; background: radial-gradient(circle at 50% 75%, #fde68a, #1c1917 78%); border: 3px solid #a16207; box-shadow: inset 0 0 10px rgb(0 0 0 / 0.6); }
+.castle-arch svg { width: 100%; height: 100%; }
+.castle-btn { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; width: 100%; min-height: 44px; padding: 7px 10px; border: 2px solid rgb(255 255 255 / 0.18); border-radius: 12px; background: linear-gradient(rgb(28 25 23 / 0.55), rgb(28 25 23 / 0.75)); color: #fff; font: inherit; text-align: left; cursor: pointer; }
+.castle-label { flex: 1 1 100%; min-width: 0; font-weight: 900; font-size: 0.84rem; line-height: 1.3; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; overflow: hidden; }
+.castle-sub { flex: 1; min-width: 0; font-size: 0.68rem; color: #fde68a; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.castle-go { flex: none; margin-left: auto; padding: 3px 12px; border-radius: 999px; background: rgb(255 255 255 / 0.15); font-size: 0.72rem; font-weight: 900; }
+.castle-floors li.now .castle-go { background: linear-gradient(#f97316, #dc2626); box-shadow: 0 3px 0 #7f1d1d; }
+.castle-ribbon { position: absolute; top: -6px; left: 50%; translate: -50% 0; z-index: 1; padding: 1px 14px; background: linear-gradient(#ef4444, #b91c1c); color: #fff; font-size: 0.66rem; font-weight: 900; clip-path: polygon(0 0, 100% 0, 94% 50%, 100% 100%, 0 100%, 6% 50%); }
+.castle-torch { position: absolute; top: 14px; width: 6px; height: 18px; border-radius: 2px; background: #78350f; }
+.castle-torch.l { left: -12px; } .castle-torch.r { right: -12px; }
+.castle-torch::before { content: ''; position: absolute; left: -6px; top: -16px; width: 18px; height: 20px; border-radius: 50% 50% 40% 40%; background: radial-gradient(circle at 50% 70%, #fef08a, #f97316 55%, transparent 70%); animation: univ-fire 0.8s ease-in-out infinite alternate; filter: drop-shadow(0 0 6px #f97316); }
+.castle-below { position: relative; margin: 6px 0 0; text-align: center; font-size: 0.74rem; color: #fde68a; }
+.castle-gate { display: flex; justify-content: center; margin: 0 6px; padding-top: 8px; background: repeating-linear-gradient(90deg, rgb(0 0 0 / 0.25) 0 2px, transparent 2px 44px), linear-gradient(#57534e, #44403c); }
+.castle-door { position: relative; display: block; width: 92px; height: 58px; border-radius: 46px 46px 0 0; background: #1c1917; border: 4px solid #a16207; border-bottom: 0; overflow: hidden; }
+.castle-door i { position: absolute; inset: 0; background: repeating-linear-gradient(90deg, transparent 0 10px, #78716c 10px 13px), repeating-linear-gradient(0deg, transparent 0 12px, #78716c 12px 15px); opacity: 0.9; animation: castle-gate-up 3s ease-in-out infinite alternate; }
+@keyframes castle-gate-up { to { transform: translateY(-14px); } }
+.castle-moat { height: 18px; margin: 0 -8px; background: repeating-linear-gradient(90deg, #1d4ed8 0 16px, #2563eb 16px 32px); animation: castle-moat 4s linear infinite; box-shadow: inset 0 4px 6px rgb(0 0 0 / 0.4); }
+@keyframes castle-moat { to { background-position: 32px 0; } }
+@media (prefers-reduced-motion: reduce) { .castle::before, .castle-flag, .castle-window.lit, .castle-floors li.now, .castle-torch::before, .castle-door i, .castle-moat { animation: none; } }

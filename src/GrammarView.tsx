@@ -12,6 +12,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
+import { Castle } from './CastleView'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -28,7 +29,7 @@ import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './gramm
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GameTile } from './GameTileView'
 import { ALL_GAMES_COINS, allGamesClaimed, claimAllGames, loadTodayGames } from './gamesplayed'
-import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, grammarForGrade, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -266,6 +267,12 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
         {stampMode ? (
           <>
+            <Castle
+              name="文法の城"
+              theme="green"
+              floors={grammarForGrade().map((u) => ({ id: u.id, label: u.title.split('（')[0], sub: gradeOf(u.id), cleared: (clears[u.id] ?? 0) > 0 }))}
+              onOpen={(id) => open(GRAMMAR.find((u) => u.id === id)!)}
+            />
             <button
               className="flip grammar-quick-btn"
               onClick={() => {
