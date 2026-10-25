@@ -2729,6 +2729,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-blood-types',
+    title: 'Why Blood Must Be Matched',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For centuries, doctors dreamed of saving patients who had lost large amounts of blood by giving them blood from someone else. In the seventeenth century, a few physicians even tried giving patients the blood of animals such as lambs. Early attempts, however, often ended in disaster. Some patients recovered, but others became seriously ill or died soon after the transfusion, and no one could explain ( A ) the results were so different.",
+      "The answer came in 1901, when the Austrian scientist Karl Landsteiner mixed blood samples taken from different people. He noticed that in some combinations the red blood cells clumped together, while in others they did not. From these observations he identified the groups we now call A, B, and O, and a fourth group, AB, was found soon afterwards. A transfusion was dangerous, he realized, whenever the patient's blood ( B ) the donor's cells as foreign and attacked them.",
+      "Landsteiner's discovery made blood transfusion far safer and earned him a Nobel Prize in 1930. Today, donated blood is carefully tested and matched before it is given, and blood banks store donations so that they are ready when emergencies occur. Many operations that would once have been impossible now depend on a simple rule: blood can be shared, but only between people ( C ) blood types are compatible. Giving blood is therefore one of the simplest ways for healthy people to save lives.",
+    ],
+    ja: [
+      '何世紀ものあいだ、医師たちは、大量の血液を失った患者をほかの人の血液をあたえることで救うことを夢見てきた。17世紀には、子羊のような動物の血液を患者にあたえようとした医師さえいた。しかし初期のこころみは、しばしば悲惨な結果に終わった。回復する患者もいれば、輸血のすぐあとに重い病気になったり亡くなったりする患者もいて、なぜ結果がそれほどちがうのかをだれも説明できなかった。',
+      '答えが出たのは1901年、オーストリアの科学者カール・ランドシュタイナーが、ちがう人からとった血液のサンプルをまぜたときだった。彼は、ある組み合わせでは赤血球がかたまりあうのに、別の組み合わせではかたまらないことに気づいた。こうした観察から、彼は今日A型・B型・O型とよばれる血液型を見つけ、4つ目のAB型もそのすぐあとに見つかった。患者の血液が提供者の細胞を異物としてあつかい攻撃するときはいつでも、輸血は危険なのだと彼は気づいたのである。',
+      'ランドシュタイナーの発見によって輸血ははるかに安全になり、彼は1930年にノーベル賞を受けた。今日、提供された血液はあたえる前に注意深く検査され、型が合わせられる。また血液バンクは、緊急のときにそなえて提供された血液を保管している。かつては不可能だった多くの手術が、いまではかんたんな決まりにもとづいている。血液は分けあうことができるが、それは血液型が適合する人どうしのあいだだけなのである。だから献血は、健康な人が命を救うためのもっともかんたんな方法の1つなのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'whom'], answer: 0, why: 'explain の目的語になる間接疑問で「なぜ～か」。うしろの the results were so different は欠けたところのない文なので、what・which・whom は入らない。' },
+      { id: 'B', choices: ['treated', 'treating', 'to treat', 'treat'], answer: 0, why: 'whenever 節の主語 the patient\'s blood（単数）に続く動詞。過去の話なので treated。-ing・to 不定詞だけでは動詞にならず、treat は三人称単数の形ではない。' },
+      { id: 'C', choices: ['whose', 'who', 'which', 'that'], answer: 0, why: '「その人たちの血液型が」と所有を表すので whose blood types。who・which・that のあとに名詞をそのまま続けることはできない。' },
+    ],
+    tf: [
+      { statement: '輸血の初期のこころみは、いつもうまくいった。', answer: false, why: '第1段落 Early attempts, however, often ended in disaster。' },
+      { statement: 'ランドシュタイナーは、赤血球がかたまる組み合わせと、かたまらない組み合わせがあることに気づいた。', answer: true, why: '第2段落 in some combinations the red blood cells clumped together, while in others they did not。' },
+      { statement: 'AB型は、A型・B型・O型と同時に見つかった。', answer: false, why: '第2段落 a fourth group, AB, was found soon afterwards。' },
+    ],
+    qa: [
+      { q: 'According to Landsteiner, when was a transfusion dangerous?', choices: ['When the patient\'s blood treated the donor\'s cells as foreign.', 'When the donor had lost a large amount of blood.', 'When the blood had been stored in a blood bank.', 'When the patient and the donor had the same blood type.'], answer: 0, why: '第2段落 whenever the patient\'s blood treated the donor\'s cells as foreign and attacked them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
