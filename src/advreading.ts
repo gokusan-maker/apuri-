@@ -2587,6 +2587,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did Nishi Amane do?', choices: ['He created a Japanese word for philosophy.', 'He opened Japan to the West.', 'He started the first newspaper in Japan.', 'He taught English in China.'], answer: 0, why: '第2段落 Nishi Amane … created tetsugaku as a translation of philosophy。' },
     ],
   },
+  {
+    id: 'adv-phantom-limb',
+    title: 'Pain Without a Body Part',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people who lose an arm or a leg continue to feel it long after it is gone. They may sense that the missing hand is clenched into a fist or that the missing foot is itching. For a large majority, these phantom sensations include pain, which can be severe and ( A ) to treat.",
+      "For centuries, doctors suspected that such patients were imagining things. Today the phenomenon is understood as a product of the brain rather than of damaged nerves alone. The brain contains a kind of map of the body, and when signals from a limb suddenly stop, neighboring areas of the map may take over the silent region. The brain may then misread signals from these neighboring areas ( B ) they came from the lost limb.",
+      "One surprisingly simple treatment was developed by the neuroscientist V. S. Ramachandran in the 1990s. A patient places the remaining arm beside a mirror ( C ) that its reflection appears where the missing arm would be. When the patient moves the real arm, the brain sees the missing arm moving too, and in some patients the pain eases. Mirror therapy does not work for everyone, but it shows that what we feel depends not only on our bodies but also on ( D ) our brains make of the information they receive.",
+    ],
+    ja: [
+      '腕や脚を失った多くの人は、それがなくなってからずっとあとも、まだそれを感じつづける。ないはずの手がにぎりこぶしになっているように感じたり、ないはずの足がかゆく感じたりすることがある。大多数の人にとって、こうした幻の感覚には痛みもふくまれ、それははげしく、治療がむずかしいことがある。',
+      '何世紀ものあいだ、医師たちはこうした患者は思いこんでいるだけではないかと疑っていた。今日ではこの現象は、傷ついた神経だけでなく、脳が生み出すものだと理解されている。脳には体の地図のようなものがあり、手足からの信号が急にとだえると、地図のとなりの領域が、静かになった部分を乗っとることがある。すると脳は、こうしたとなりの領域からの信号を、まるで失った手足から来たかのように読みちがえることがあるのだ。',
+      'おどろくほどかんたんな治療法が、1990年代に神経科学者の V・S・ラマチャンドランによって考え出された。患者は、のこっている腕を鏡のそばに置き、その鏡像がないはずの腕の場所に見えるようにする。患者が本物の腕を動かすと、脳には失った腕も動いているように見え、一部の患者では痛みがやわらぐ。ミラー療法はだれにでも効くわけではないが、私たちが感じるものは体だけでなく、脳が受けとった情報をどう解釈するかにも左右されることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['difficult', 'difficulty', 'difficultly', 'to difficult'], answer: 0, why: 'severe and ～ と形容詞を並べ、～ to treat（治療するのが～）の形にするので形容詞 difficult。' },
+      { id: 'B', choices: ['as if', 'even', 'so as', 'in case of'], answer: 0, why: 'うしろが文（they came from …）で「まるで～かのように」なので as if。so as のあとは to、in case of のあとは名詞。' },
+      { id: 'C', choices: ['so', 'for', 'because of', 'due'], answer: 0, why: 'so that ～ で「～するように」（目的）。for that・because of that・due that という形はない。' },
+      { id: 'D', choices: ['what', 'that', 'which', 'how'], answer: 0, why: 'make of の目的語が欠けているので、先行詞をふくむ関係代名詞 what（脳が情報をどう受けとめるか）。前置詞 on のあとに that は置けず、how のうしろには完全な文が必要。' },
+    ],
+    tf: [
+      { statement: '手足を失った人の中には、もうない手足を感じる人がいる。', answer: true, why: '第1段落 continue to feel it long after it is gone。' },
+      { statement: '筆者によれば、幻の痛みは傷ついた神経だけが原因だとわかっている。', answer: false, why: '第2段落 a product of the brain rather than of damaged nerves alone。' },
+      { statement: 'ミラー療法は、だれにでも効く。', answer: false, why: '第3段落 Mirror therapy does not work for everyone。' },
+    ],
+    qa: [
+      { q: 'What happens in mirror therapy?', choices: ['The reflection of the remaining arm makes the missing arm seem to move.', 'The patient looks at photos of the lost arm.', 'Doctors attach a new arm with a mirror.', 'The patient sleeps in front of a mirror.'], answer: 0, why: '第3段落 When the patient moves the real arm, the brain sees the missing arm moving too。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',

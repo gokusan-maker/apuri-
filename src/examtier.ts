@@ -21,7 +21,7 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
   // 私立難関大：行動経済学・心理の評論
   'adv-choice': 'shiritsu', 'adv-false-news': 'shiritsu', 'adv-sunk-cost': 'shiritsu', 'adv-defaults': 'shiritsu', 'adv-anchoring': 'shiritsu', 'adv-decoy': 'shiritsu', 'adv-framing': 'shiritsu', 'adv-endowment': 'shiritsu', 'adv-ikea-effect': 'shiritsu', 'adv-halo-effect': 'shiritsu', 'adv-mere-exposure': 'shiritsu', 'adv-comparison-trap': 'shiritsu', 'adv-spotlight': 'shiritsu', 'adv-planning-fallacy': 'shiritsu',
   // 私立医学部：からだ・健康・学習の科学
-  'adv-placebo': 'shiritsu-med', 'adv-fever': 'shiritsu-med', 'adv-body-clock': 'shiritsu-med', 'adv-appendix': 'shiritsu-med', 'adv-multitasking': 'shiritsu-med', 'adv-spacing': 'shiritsu-med', 'adv-testing-effect': 'shiritsu-med', 'adv-walking-ideas': 'shiritsu-med',
+  'adv-placebo': 'shiritsu-med', 'adv-fever': 'shiritsu-med', 'adv-body-clock': 'shiritsu-med', 'adv-appendix': 'shiritsu-med', 'adv-phantom-limb': 'shiritsu-med', 'adv-multitasking': 'shiritsu-med', 'adv-spacing': 'shiritsu-med', 'adv-testing-effect': 'shiritsu-med', 'adv-walking-ideas': 'shiritsu-med',
   // 国公立大：社会・文化の評論
   'adv-translation': 'kokkoritsu', 'adv-cashless': 'kokkoritsu', 'adv-kindness': 'kokkoritsu', 'adv-repair': 'kokkoritsu', 'adv-mistakes': 'kokkoritsu', 'adv-zoo': 'kokkoritsu', 'adv-tourism': 'kokkoritsu', 'adv-handwriting': 'kokkoritsu', 'adv-silence': 'kokkoritsu', 'adv-commons': 'kokkoritsu', 'adv-bystander': 'kokkoritsu', 'adv-boredom': 'kokkoritsu',
   // 旧帝大：抽象度の高い評論（ことば・知識・科学のあり方）
