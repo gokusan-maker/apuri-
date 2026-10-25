@@ -3064,3 +3064,9 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .today-auto-next p { margin: 0 0 8px; font-weight: 900; }
 .today-auto-btns { display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
 .today-auto-btns .today-next-btn { margin: 0; }
+
+/* 読解：本文を上に固定して、問題といっしょに1画面で見る */
+.long-text.pinned { position: sticky; top: 72px; z-index: 6; max-height: 42vh; overflow-y: auto; overscroll-behavior: contain; padding: 10px 12px; border-radius: 16px; background: var(--card); border: 2px solid color-mix(in srgb, #8b5cf6 40%, transparent); box-shadow: 0 8px 18px rgb(15 23 42 / 0.18); }
+.long-text.pinned::after { content: '↕ 本文はこの中でスクロール'; display: block; position: sticky; bottom: -10px; margin: 6px -12px -10px; padding: 3px; text-align: center; font-size: 0.68rem; font-weight: 800; color: var(--muted); background: linear-gradient(transparent, var(--card) 40%); }
+.long-pin-btn { margin: 4px 0 6px; font-size: 0.8rem; min-height: 32px; padding: 4px 12px; }
+.long-pin-btn.on { background: #8b5cf6; color: #fff; }

@@ -1,5 +1,5 @@
 import { weekKey } from './rareboss'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useRef, useState } from 'react'
 import { PlayContext, usePlaying } from './playing'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
@@ -96,6 +96,15 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
+  const [pin, setPin] = useState(loadLongPin) // 本文を上に固定して、問題といっしょに見る
+  const textRef = useRef<HTMLDivElement>(null)
+  // 空所の問題をさわると、上の本文をその空所の段落までスクロール
+  const showBlank = (id: string) => {
+    const box = textRef.current
+    if (!pin || !box) return
+    const para = [...box.querySelectorAll<HTMLElement>('.long-para-row')].find((el) => el.textContent?.includes(`( ${id} )`))
+    if (para) box.scrollTo?.({ top: para.offsetTop - box.offsetTop - 8, behavior: 'smooth' })
+  }
   const [hints, setHints] = useState<string[]>([]) // ヒントを使った空所
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
@@ -469,7 +478,17 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         <input type="checkbox" checked={instant} disabled={done} onChange={(e) => setInstant(e.target.checked)} /> ⚡ 1問ずつ答えあわせ
       </label>
       {wpm > 0 && <p className="stats-note">🎙 音読スピード：1分あたり {wpm}語{wpm >= 100 ? '　すらすら読めたね！' : ''}</p>}
-      <div className={`long-text font-${font}`}>
+      <button
+        className={`list-link pill-btn long-pin-btn${pin ? ' on' : ''}`}
+        aria-pressed={pin}
+        onClick={() => {
+          setPin(!pin)
+          saveLongPin(!pin)
+        }}
+      >
+        📌 本文を上に固定{pin ? '中' : ''}
+      </button>
+      <div ref={textRef} className={`long-text font-${font}${pin ? ' pinned' : ''}`}>
         {done && evidence.length > 0 && <p className="long-evidence-note">🟨 ＝ まちがえた問題の根拠</p>}
         {p.paragraphs.map((t, i) => (
           <div key={i} className={evidence.includes(i) ? 'long-evidence' : undefined} aria-label={evidence.includes(i) ? `根拠の段落 ${i + 1}` : undefined}>
@@ -540,7 +559,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
 
       <h3 className="long-q">問1　本文の ( A )〜( {p.blanks.at(-1)!.id} ) に入る最も適切な語を、それぞれ ア〜エ から選びなさい。</h3>
       {p.blanks.map((b) => (
-        <div key={b.id} className="long-item">
+        <div key={b.id} className="long-item" onPointerDown={() => showBlank(b.id)}>
           <span className="long-label">( {b.id} )</span>
           <div className="long-choices">
             {b.choices.map((c, i) => (
@@ -1087,4 +1106,20 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
       )}
     </section>
   )
+}
+
+const PIN_KEY = 'eitan:long-pin'
+function loadLongPin(): boolean {
+  try {
+    return localStorage.getItem(PIN_KEY) !== '0' // はじめは固定する
+  } catch {
+    return true
+  }
+}
+function saveLongPin(on: boolean): void {
+  try {
+    localStorage.setItem(PIN_KEY, on ? '1' : '0')
+  } catch {
+    /* 保存できなくても動く */
+  }
 }

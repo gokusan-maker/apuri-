@@ -36,3 +36,14 @@ it('長文読解：空所ごとに💡ヒントで2択にしぼれる', () => {
   expect(btns.filter((x) => !x.disabled)).toHaveLength(2)
   expect(btns[b.answer].disabled).toBe(false)
 })
+
+it('長文読解：本文ははじめから上に固定（問題といっしょに見られる）。ボタンで固定をやめられる', () => {
+  localStorage.removeItem('eitan:long-pin')
+  const p = LONG_PASSAGES[0]
+  render(<LongReading start={p} passages={[p]} />)
+  expect(document.querySelector('.long-text')!.classList.contains('pinned')).toBe(true)
+  fireEvent.click(screen.getByRole('button', { name: /本文を上に固定/ }))
+  expect(document.querySelector('.long-text')!.classList.contains('pinned')).toBe(false)
+  expect(localStorage.getItem('eitan:long-pin')).toBe('0')
+  localStorage.removeItem('eitan:long-pin')
+})
