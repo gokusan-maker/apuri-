@@ -2645,6 +2645,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-brain-cleaning',
+    title: 'Cleaning the Brain While We Sleep',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a long time, scientists struggled to explain why animals spend so much of their lives asleep. An animal that is sleeping cannot look for food or watch for enemies, so sleep must provide a benefit large enough to outweigh these dangers. One possible answer has come from studies of how the brain gets rid of its waste.",
+      "Every organ produces waste as its cells work. In most of the body, a network of vessels called the lymphatic system carries this waste away, but the brain has almost none of these vessels inside it. Experiments with mice have suggested that it relies instead on the fluid that surrounds the brain, ( A ) flows through narrow spaces between cells and washes the waste out. Remarkably, these spaces appeared to widen during sleep, allowing the fluid to flow much more freely than when the animals were awake.",
+      "Among the substances removed in this way is a protein ( B ) build-up in the brain is linked to Alzheimer's disease. This has led some researchers to suggest that poor sleep over many years might raise the risk of the disease, although whether one actually causes the other has not been proven. Studies in humans are far more difficult to carry out, and results from mice do not always apply to people. Even so, the idea offers a new reason to take sleep seriously: rather than simply resting, the sleeping brain may be busy ( C ) itself.",
+    ],
+    ja: [
+      '長いあいだ、科学者たちは、動物がなぜ一生のうちこれほど多くの時間を眠ってすごすのかを説明するのに苦労してきた。眠っている動物はえさをさがすことも敵を見張ることもできないので、睡眠にはこうした危険を上まわるほど大きな利点があるはずだ。1つの答えになりそうなものが、脳がどのように老廃物をとりのぞいているかについての研究から出てきた。',
+      'どの器官も、細胞がはたらくにつれて老廃物を出す。体のほとんどの部分では、リンパ系とよばれる管の網がこの老廃物を運び去るが、脳の内部にはこうした管がほとんどない。マウスを使った実験は、脳がそのかわりに脳のまわりの液体にたよっていることを示している。その液体が細胞のあいだのせまいすき間を流れ、老廃物を洗い流すのだ。おどろくべきことに、このすき間は睡眠中に広がるようで、動物が起きているときよりもずっと自由に液体が流れるようになった。',
+      'このようにしてとりのぞかれる物質の中には、脳にたまるとアルツハイマー病と関係があるタンパク質がある。このことから一部の研究者は、何年にもわたる睡眠不足がこの病気の危険を高めるかもしれないと考えるようになった。もっとも、一方が実際にもう一方の原因になるのかどうかは証明されていない。人間での研究はずっと行いにくく、マウスの結果がいつも人にあてはまるとはかぎらない。それでも、この考えは睡眠を大切にする新しい理由を示している。眠っている脳はただ休んでいるのではなく、自分自身をそうじするのにいそがしいのかもしれないのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'it', 'where'], answer: 0, why: '先行詞 the fluid を説明し、flows の主語になる非制限用法の関係代名詞 which。what は先行詞をとらず、コンマのあとに it だけでは2つの文をつなげず、where は主語になれない。' },
+      { id: 'B', choices: ['whose', 'which', 'that', 'of which its'], answer: 0, why: '「そのタンパク質の（脳での）蓄積が」と所有を表すので whose build-up。which・that のあとに名詞 build-up をそのまま続けることはできない。' },
+      { id: 'C', choices: ['cleaning', 'to clean', 'cleaned', 'clean'], answer: 0, why: 'be busy ～ing で「～するのにいそがしい」。be busy to do の形はなく、過去分詞・原形も入らない。' },
+    ],
+    tf: [
+      { statement: '脳の内部には、体のほかの部分のようなリンパ系の管がほとんどない。', answer: true, why: '第2段落 the brain has almost none of these vessels inside it。' },
+      { statement: 'マウスの実験では、細胞のあいだのすき間は起きているときに広がった。', answer: false, why: '第2段落 these spaces appeared to widen during sleep。' },
+      { statement: '睡眠不足がアルツハイマー病の原因になることは、すでに証明されている。', answer: false, why: '第3段落 whether one actually causes the other has not been proven。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what may the brain be doing while we sleep?', choices: ['Washing out waste with the fluid that surrounds it.', 'Growing new lymphatic vessels.', 'Producing the protein linked to Alzheimer\'s disease.', 'Looking for food and watching for enemies.'], answer: 0, why: '第2・3段落 the fluid … washes the waste out … the sleeping brain may be busy cleaning itself。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
