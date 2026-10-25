@@ -4,7 +4,7 @@ import type { Word } from './words'
 import type { CourseId } from './wordcourse'
 
 type Up = Word & { band: CourseId }
-const lv = (band: CourseId) => (band === 'TOEIC' ? 'ビジネス' : band === '私学' || band === '私学難関' ? '英検2級' : band === '国公立' || band === '旧帝大' || band === 'TOEFL・IELTS' ? '英検準1級' : '英検1級')
+const lv = (band: CourseId) => (band === '高2' || band === '高3' ? '高校基礎' : band === 'TOEIC' ? 'ビジネス' : band === '私学' || band === '私学難関' ? '英検2級' : band === '国公立' || band === '旧帝大' || band === 'TOEFL・IELTS' ? '英検準1級' : '英検1級')
 const w = (band: CourseId, en: string, ja: string, example: string, exampleJa: string): Up => ({ id: `up-${en}`, en, ja, example, exampleJa, level: lv(band), band })
 
 export const WORDS_UPPER: Up[] = [
@@ -192,6 +192,26 @@ export const WORDS_UPPER: Up[] = [
   w('TOEFL・IELTS', 'carnivore', '肉食動物', 'Lions are carnivores that hunt other animals.', 'ライオンはほかの動物を狩る肉食動物だ。'),
   w('TOEFL・IELTS', 'herbivore', '草食動物', 'Herbivores such as deer feed on grass and leaves.', 'シカのような草食動物は草や葉を食べる。'),
   w('TOEFL・IELTS', 'inscription', '（石などに）刻まれた文字・碑文', 'The inscription on the stone was written in an old language.', '石に刻まれた文字は古いことばで書かれていた。'),
+  w('高2', 'ashamed', '恥じて', 'I was ashamed of my rude words.', '失礼なことを言ったのが恥ずかしかった。'),
+  w('高2', 'dare', '思いきって～する・～する勇気がある', 'Nobody dared to speak during the test.', 'テスト中はだれも口をきこうとしなかった。'),
+  w('高2', 'declare', '宣言する・はっきり言う', 'The country declared its independence in 1960.', 'その国は1960年に独立を宣言した。'),
+  w('高2', 'delight', '大喜び（させる）', 'To our delight, the rain stopped before the game.', 'うれしいことに、試合の前に雨がやんだ。'),
+  w('高2', 'divorce', '離婚（する）', 'His parents divorced when he was ten.', '彼の両親は彼が10歳のときに離婚した。'),
+  w('高2', 'elect', '（選挙で）選ぶ', 'She was elected captain of the team.', '彼女はチームのキャプテンに選ばれた。'),
+  w('高2', 'excuse', '言い訳・許す', 'He always has an excuse for being late.', '彼はいつも遅刻の言い訳を用意している。'),
+  w('高2', 'flash', 'ぴかっと光る・閃光', 'Lightning flashed across the sky.', 'いなずまが空にぴかっと光った。'),
+  w('高2', 'frighten', 'おびえさせる・ぎょっとさせる', 'The loud thunder frightened the dog.', '大きな雷の音が犬をこわがらせた。'),
+  w('高2', 'loyal', '忠実な・誠実な', 'Dogs are known as loyal animals.', '犬は忠実な動物として知られている。'),
+  w('高3', 'suspect', '疑う・容疑者', 'The police suspect that the fire was not an accident.', '警察は火事が事故ではなかったと疑っている。'),
+  w('高3', 'swear', '誓う・（悪態を）つく', 'I swear I will never tell anyone.', 'だれにも言わないと誓うよ。'),
+  w('高3', 'tempt', '（～する気に）させる・誘惑する', 'The smell of fresh bread tempted me to buy some.', '焼きたてのパンのにおいにつられて、つい買ってしまった。'),
+  w('高3', 'threaten', 'おどす・おびやかす', 'Rising seas threaten many coastal towns.', '海面の上昇が多くの海辺の町をおびやかしている。'),
+  w('高3', 'twist', 'ねじる・ひねる', 'I twisted my ankle while running.', '走っていて足首をひねった。'),
+  w('高3', 'weep', '（しくしく）泣く', 'Some people weep with joy at weddings.', '結婚式でうれし泣きする人もいる。'),
+  w('高3', 'worship', '崇拝する・礼拝する', 'People in the village worship the mountain as a god.', 'その村の人々は山を神として崇拝している。'),
+  w('高3', 'shed', '（涙・光などを）流す・落とす', 'Trees shed their leaves in autumn.', '木は秋に葉を落とす。'),
+  w('高3', 'mock', '（まねして）からかう・ばかにする', 'It is cruel to mock someone\'s accent.', '人のなまりをばかにするのはひどいことだ。'),
+  w('高3', 'rage', '激怒・猛威をふるう', 'A storm raged all night.', '嵐が一晩じゅう猛威をふるった。'),
   w('TOEIC', 'quarterly', '四半期ごとの', 'The quarterly report will be ready next week.', '四半期ごとの報告書は来週できあがる。'),
   w('TOEIC', 'merger', '（会社の）合併', 'The merger of the two banks was announced today.', '2つの銀行の合併が今日発表された。'),
   w('TOEIC', 'acquisition', '買収・獲得', 'The company grew quickly through acquisitions.', 'その会社は買収によって急成長した。'),
