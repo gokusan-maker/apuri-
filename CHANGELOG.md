@@ -2085,3 +2085,4 @@
 - 2026-10-25: 国公立・旧帝大の単語を40語追加（confluence・impending・implausible・jargon・laudable・pertinent など）
 - 2026-10-25: 京大・東大の単語を40語追加（ingenuous・levity・neophyte・incipient・onus・predilection など）
 - 2026-10-25: ネイティブの慣用句を30語追加（a blessing in disguise・kill two birds with one stone・the tip of the iceberg など）
+- 2026-10-25: 国公立・旧帝大の単語を40語追加（idiosyncratic・pervade・prudence・replete・rhetorical・sublime など）
