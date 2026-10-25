@@ -4023,6 +4023,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-open-office',
+    title: 'The Trouble with Open Offices',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the past few decades, many companies have torn down the walls between their employees' desks and created large open-plan offices. The idea seemed persuasive: without walls, people would talk more freely, share ideas, and work together more closely. Open offices were also cheaper, since more workers could fit into the same space.",
+      "Research, however, has produced results that few designers expected. In one well-known study, researchers measured how often employees spoke to each other face to face before and after their company moved into an open office. Far from increasing, face-to-face conversation fell sharply, while the number of emails and messages rose. It appears that when everyone can see and hear everyone else, people protect their privacy by ( A ) into their screens and headphones.",
+      "Noise is another problem. Work that requires deep concentration, such as writing or analyzing data, is easily disturbed by nearby conversations and ringing phones. Some workers report that they get their most important work done only early in the morning or at home, ( B ) the office is quiet or they are alone.",
+      "None of this means that open spaces have no value. Casual meetings and quick questions are easier when colleagues sit nearby. The lesson may be that no single design suits every task. Many companies are now creating a mix of spaces, including quiet rooms for focused work and open areas for collaboration, so that employees can choose the environment ( C ) fits what they are doing.",
+    ],
+    ja: [
+      'この数十年のあいだに、多くの会社が社員の机のあいだの壁を取りはらい、広いオープンプランのオフィスを作った。その考えは説得力があるように思えた。壁がなければ、人々はもっと自由に話し、考えを共有し、より密接に協力するだろうというのである。オープンなオフィスは、同じ広さにより多くの社員を入れられるので、安上がりでもあった。',
+      'しかし研究は、設計者がほとんど予想しなかった結果を生んだ。よく知られたある研究で、研究者たちは、会社がオープンなオフィスに移る前とあとで、社員が直接顔をあわせて話す頻度を測った。増えるどころか、対面の会話は大きく減り、メールやメッセージの数は増えた。だれもがほかの全員を見たり聞いたりできると、人々は画面やヘッドホンの中に引きこもることで、自分のプライバシーを守るようである。',
+      '騒音も問題である。文章を書いたりデータを分析したりといった、深い集中が必要な仕事は、近くの会話や鳴りひびく電話にすぐにさまたげられる。オフィスが静かなときやひとりのとき、つまり早朝や家でしか、いちばん大切な仕事を終えられないと言う社員もいる。',
+      'これは、オープンな空間に価値がないという意味ではない。気軽な打ち合わせやちょっとした質問は、同僚が近くに座っているほうがしやすい。教訓は、どの仕事にも合う1つの設計などないということなのかもしれない。いま多くの会社が、集中して作業するための静かな部屋や協力のための開かれた場所などをとりまぜた空間を作り、社員が自分のしていることに合った環境をえらべるようにしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['withdrawing', 'withdraw', 'withdrew', 'withdrawn'], answer: 0, why: '前置詞 by のあとは動名詞。by ～ing で「～することによって」。withdraw into ～ で「～の中に引きこもる」。' },
+      { id: 'B', choices: ['when', 'which', 'what', 'whose'], answer: 0, why: 'early in the morning or at home（時・場合）を受けて、うしろが完全な文（the office is quiet …）なので関係副詞 when「～するとき」。which・what のうしろは欠けた文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whom'], answer: 0, why: '先行詞 the environment を説明し、fits の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whom は人で目的語。' },
+    ],
+    tf: [
+      { statement: 'オープンなオフィスは、同じ広さにより多くの社員を入れられた。', answer: true, why: '第1段落 more workers could fit into the same space。' },
+      { statement: 'ある研究では、オープンなオフィスに移ると対面の会話が増えた。', answer: false, why: '第2段落 Far from increasing, face-to-face conversation fell sharply。' },
+      { statement: '筆者は、オープンな空間にはまったく価値がないと述べている。', answer: false, why: '第4段落 None of this means that open spaces have no value。' },
+    ],
+    qa: [
+      { q: 'What are many companies doing now, according to the last paragraph?', choices: ['Creating a mix of quiet rooms and open areas.', 'Building walls around every desk.', 'Asking all employees to work from home.', 'Banning emails in the office.'], answer: 0, why: '第4段落 Many companies are now creating a mix of spaces。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
