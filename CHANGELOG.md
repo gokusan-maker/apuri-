@@ -2040,3 +2040,4 @@
 - 2026-10-25: 私学難関レベルの長文「The Strange Feeling of Déjà Vu」（デジャヴ）を追加
 - 2026-10-25: 国公立レベルの長文「Giving the Streets Back to People」（車を入れない街・220語）を追加
 - 2026-10-25: 旧帝大レベルの長文「Two Languages, One Mind」（バイリンガル）を追加
+- 2026-10-25: 高3（共通テスト）レベルの長文「Libraries in the Digital Age」（変わる図書館・216語）を追加

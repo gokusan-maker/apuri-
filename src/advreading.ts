@@ -3599,6 +3599,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-library-change',
+    title: 'Libraries in the Digital Age',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When information can be found online in seconds, some people wonder whether public libraries are still necessary. In fact, the number of books borrowed from libraries has fallen in many places over the past twenty years. Yet libraries have not disappeared. Instead, many of them are changing the way they serve their communities.",
+      "One change is the kind of space a library offers. Quiet reading rooms remain, but many libraries now also have areas ( A ) people can talk, work together, or join events. Others lend not only books but also tools, musical instruments, and even fishing rods.",
+      "Libraries also play an important role for people who do not have internet access at home. For them, the library is a place to apply for jobs, contact government offices, or help their children with homework. Librarians, ( B ) are trained to find reliable information, can help users tell the difference between trustworthy sources and false ones.",
+      "In this sense, the purpose of a library has not changed as much as it might seem. Its goal has always been to give everyone equal access to knowledge. What is changing is simply the form that this access takes, and libraries that adapt to these changes are likely to remain ( C ) for many years to come.",
+    ],
+    ja: [
+      '情報がネットで数秒で見つかる時代に、公共図書館はまだ必要なのだろうかと思う人もいる。実際、図書館で借りられる本の数は、多くの地域でこの20年のあいだに減っている。しかし図書館は消えてはいない。それどころか、多くの図書館は地域の人々への役立ち方を変えつつある。',
+      '1つの変化は、図書館が提供する空間の種類である。静かな閲覧室は残っているが、いまでは多くの図書館に、人々が話したり、いっしょに作業したり、イベントに参加したりできる場所もある。本だけでなく、道具や楽器、さらには釣りざおまで貸し出しているところもある。',
+      '図書館はまた、家でインターネットを使えない人々にとって大切な役割を果たしている。そうした人にとって、図書館は仕事に応募したり、役所に連絡したり、子どもの宿題を手伝ったりする場所である。信頼できる情報を見つける訓練を受けた司書は、利用者が信頼できる情報源とうその情報源を見分ける手助けもできる。',
+      'この意味で、図書館の目的は、見かけほどには変わっていない。その目的はいつも、すべての人に知識への平等な機会を与えることだった。変わりつつあるのは、その機会がとる形だけであり、こうした変化に合わせていく図書館は、この先何年も役に立ち続けるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 areas（場所）を説明し、うしろが主語・動詞のそろった文（people can talk …）なので関係副詞 where。which のうしろは欠けた文、what は先行詞をとらず、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['who', 'that', 'which', 'whom'], answer: 0, why: 'コンマのあとで Librarians（人）を説明し、are trained の主語になる非制限用法の who。that は非制限用法で使えず、which は物に使い、whom は目的語。' },
+      { id: 'C', choices: ['useful', 'use', 'uses', 'usefulness of'], answer: 0, why: 'remain ＋形容詞 で「～のままである」。動詞の use・uses や、うしろに名詞が必要な usefulness of はこの位置に置けない。' },
+    ],
+    tf: [
+      { statement: '多くの地域で、図書館で借りられる本の数は減っている。', answer: true, why: '第1段落 the number of books borrowed from libraries has fallen in many places。' },
+      { statement: '筆者によれば、図書館には静かな閲覧室がもうない。', answer: false, why: '第2段落 Quiet reading rooms remain。' },
+      { statement: '筆者は、図書館の目的は大きく変わったと述べている。', answer: false, why: '第4段落 the purpose of a library has not changed as much as it might seem。' },
+    ],
+    qa: [
+      { q: 'How do libraries help people who do not have internet access at home?', choices: ['They provide a place to apply for jobs and contact government offices.', 'They sell computers at low prices.', 'They lend fishing rods to everyone.', 'They close their reading rooms.'], answer: 0, why: '第3段落 the library is a place to apply for jobs, contact government offices, or help their children with homework。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
