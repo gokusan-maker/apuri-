@@ -2763,3 +2763,5 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .stage-levels > .stage-level:nth-child(6n + 5) { --st-h: 195; }
 .stage-levels > .stage-level:nth-child(6n + 6) { --st-h: 275; }
 .stage-levels > .stage-level .stage-btn:not(:disabled):not(.cleared) { border-color: hsl(var(--st-h) 80% 85%); background: linear-gradient(160deg, hsl(var(--st-h) 80% 66%), hsl(var(--st-h) 70% 48%)); box-shadow: 0 4px 0 hsl(var(--st-h) 60% 30%), 0 0 0 4px hsl(var(--st-h) 80% 66% / 0.25); }
+/* タイムアタックの「▶ スタート」は、結果画面のオレンジより強く、スタートの色（オレンジ〜赤）に */
+section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #fb923c, #ef4444); box-shadow: 0 5px 0 #b91c1c, 0 8px 18px rgb(239 68 68 / 0.3); }

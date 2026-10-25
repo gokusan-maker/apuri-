@@ -129,3 +129,7 @@ it('ミニゲームの「はじめる」は ▶ が1つだけ（CSS で付ける
 it('単語ステージのタイルは単語帳ごとに色がちがう', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.stage-levels > \.stage-level \.stage-btn:not\(:disabled\):not\(\.cleared\) \{[^}]*hsl\(var\(--st-h\)/)
 })
+
+it('タイムアタックの「スタート」はオレンジ〜赤（結果画面のオレンジに負けない）', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/section\.result\.ta-ready > \.flip\.ta-start \{ background: linear-gradient\(135deg, #fb923c, #ef4444\)/)
+})
