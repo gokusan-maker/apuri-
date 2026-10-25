@@ -3543,3 +3543,4 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .chest-burst i:nth-child(3) { --cx: 40px; animation-delay: 0.2s; }
 @keyframes chest-coin { 0% { opacity: 1; transform: translate(0, 0) scale(0.6); } 70% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--cx), -48px) scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .chest-burst { display: none; } }
+.free-level-count { display: block; font-size: 0.68rem; opacity: 0.75; font-weight: 600; }

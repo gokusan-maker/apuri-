@@ -599,8 +599,12 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
         {castleOnly && (
           <div className="sub-tabs grade-tabs free-levels" role="tablist" aria-label="レベル">
             {GC_LEVELS.map((l) => (
-              <button key={l.id} role="tab" aria-selected={freeLevel === l.id} onClick={() => setFreeLevel(l.id)}>
+              <button key={l.id} role="tab" aria-label={l.label} aria-selected={freeLevel === l.id} onClick={() => setFreeLevel(l.id)}>
                 {l.label}
+                {/* そのレベルで全問正解した単元の数 */}
+                <small className="free-level-count">
+                  {levelUnits(l.id).filter((u) => record[u.id] === u.questions.length).length}/{levelUnits(l.id).length}
+                </small>
               </button>
             ))}
           </div>

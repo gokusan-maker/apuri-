@@ -891,3 +891,11 @@ it('文法ドリル・時制まとめ表・文法の記録の行もアイコン�
   render(<Grammar onDrill={() => {}} />)
   for (const c of ['grammar-drills', 'tense-table', 'grammar-records']) expect(document.querySelector(`details.${c}.game-fold summary .lg-icon`)).not.toBeNull()
 })
+
+it('文法の自由学習のレベルのタブに、全問正解した単元の数（n/m）を表示', () => {
+  localStorage.clear()
+  render(<Grammar castleOnly />)
+  fireEvent.click(screen.getByText(/単元をえらんで自由に勉強/))
+  const tab = screen.getByRole('tab', { name: '中1' })
+  expect(tab.querySelector('.free-level-count')?.textContent).toMatch(/^0\/\d+$/)
+})
