@@ -3569,6 +3569,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-bilingual',
+    title: 'Two Languages, One Mind',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, many parents and teachers believed that raising a child with two languages would cause confusion. Children, it was thought, would mix the languages and fall behind their classmates in both. As a result, families who had moved to a new country were sometimes advised to speak only the new language at home, even if they could not speak it well.",
+      "Research since then has largely rejected this view. Young children turn out to be remarkably good at keeping two languages apart, and while bilingual children may know fewer words in each language at first, the total number of words they know is usually similar to ( A ) of children who speak only one. Mixing words from two languages in a single sentence, once seen as a sign of confusion, is now understood as a normal and often skillful way of communicating.",
+      "Some studies have gone further, claiming that switching between languages trains the brain to control attention and that bilingual people therefore perform better on certain tasks. These claims have proved more controversial. Later studies with larger groups have often failed to find the same advantage, and researchers continue to debate ( B ) the effect is real.",
+      "Even if the hidden mental benefits turn out to be small, however, the practical and cultural value of speaking two languages is clear. A second language allows people to communicate with relatives, to read literature in the original, and to see the world from more than one point of view. Perhaps that is reason enough ( C ) encourage it.",
+    ],
+    ja: [
+      '20世紀の大半のあいだ、多くの親や教師は、子どもを2つの言語で育てると混乱が起きると信じていた。子どもは2つの言語をまぜてしまい、どちらの言語でもクラスメートに遅れをとるだろうと考えられていたのである。その結果、新しい国に移り住んだ家族は、たとえ上手に話せなくても、家では新しい言語だけを話すよう勧められることがあった。',
+      'その後の研究は、この考えをほぼ否定している。幼い子どもは2つの言語を区別しておくのが驚くほど得意だとわかっており、バイリンガルの子どもは最初はそれぞれの言語で知っている単語が少ないかもしれないが、知っている単語の総数は、ふつう1つの言語だけを話す子どもの総数と同じくらいである。1つの文の中で2つの言語の単語をまぜることは、かつては混乱のしるしと見られていたが、いまでは普通の、しばしば巧みな伝え方だと理解されている。',
+      'さらに進んで、言語を切りかえることで脳が注意をコントロールするよう鍛えられ、そのためバイリンガルの人はある種の課題でよい成績をあげると主張する研究もある。こうした主張は、より議論をよぶものであることがわかってきた。より大きな集団を対象にしたその後の研究では、同じ利点が見つからないことが多く、研究者たちはその効果が本当にあるのかどうかをいまも議論している。',
+      'しかし、たとえ目に見えない知的な利点が小さいとわかったとしても、2つの言語を話すことの実際的・文化的な価値は明らかである。第二の言語によって、人は親類と話したり、文学を原文で読んだり、世界を2つ以上の視点から見たりすることができる。おそらく、それだけでもそれを勧める十分な理由になるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'this', 'it', 'one'], answer: 0, why: 'the total number of words のくり返しをさけ、of ～ が後ろにつく代名詞 that（that of children = the total number of words of children）。this・it・one は of ～ をつけてこの意味では使えない。' },
+      { id: 'B', choices: ['whether', 'that if', 'what', 'unless'], answer: 0, why: 'debate の目的語になる「～かどうか」の whether。what のうしろは欠けた文になり、that if の形はなく、unless は目的語になれない。' },
+      { id: 'C', choices: ['to', 'for', 'of', 'that'], answer: 0, why: 'reason enough to ～ で「～するのに十分な理由」。うしろが動詞の原形 encourage なので to 不定詞の to。' },
+    ],
+    tf: [
+      { statement: 'かつては、2つの言語で子どもを育てると混乱すると信じられていた。', answer: true, why: '第1段落 many parents and teachers believed that raising a child with two languages would cause confusion。' },
+      { statement: 'バイリンガルの子どもが知っている単語の総数は、ふつう1つの言語の子どもよりずっと少ない。', answer: false, why: '第2段落 the total number of words they know is usually similar。' },
+      { statement: 'バイリンガルの人が注意のコントロールにすぐれるという主張は、いまも議論されている。', answer: true, why: '第3段落 researchers continue to debate whether the effect is real。' },
+    ],
+    qa: [
+      { q: 'How is mixing two languages in one sentence understood today?', choices: ['As a normal and often skillful way of communicating.', 'As a clear sign of confusion.', 'As a reason to stop learning a second language.', 'As something only adults can do.'], answer: 0, why: '第2段落 is now understood as a normal and often skillful way of communicating。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
