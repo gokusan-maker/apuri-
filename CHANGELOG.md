@@ -2065,3 +2065,4 @@
 - 2026-10-25: 私学難関の単語を15語、国公立・旧帝大の単語を15語追加（serene・shrewd・vigilant・prolific・stoic・tactful など）
 - 2026-10-25: 私学レベルの長文「Why Mosquitoes Prefer Some People」（蚊に刺されやすい人・241語）を追加
 - 2026-10-25: TOEICの単語を20語追加（appraisal・compliance・fiscal・installment・premises・surcharge など）
+- 2026-10-25: TOEFL・IELTSの学術単語を20語追加（aquifer・biodiversity・deforestation・germinate・vertebrate など）
