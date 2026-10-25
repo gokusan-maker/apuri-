@@ -27,7 +27,8 @@ export const READ_LEVELS: { id: ReadLevel; label: string; sub: string }[] = [
 const head = (p: LongPassage) => p.level.split('（')[0]
 const hsAdv = ADV_PASSAGES.filter((p) => head(p) === '高校入試')
 const univ = ADV_PASSAGES.filter((p) => head(p) === '難関大')
-const tier = (...ts: string[]) => univ.filter((p) => ts.includes(tierOf(p))).map((p) => withTranslation(p, univ))
+const todai = (p: LongPassage) => p.id.startsWith('todai-') // 東大レベル専用の長文
+const tier = (...ts: string[]) => univ.filter((p) => !todai(p) && ts.includes(tierOf(p))).map((p) => withTranslation(p, univ))
 
 // レベルごとの長文（中1 は短い読解なので空）
 export function passagesFor(level: ReadLevel): LongPassage[] {
@@ -53,7 +54,7 @@ export function passagesFor(level: ReadLevel): LongPassage[] {
     case '京大':
       return tier('kokuritsu-med')
     case '東大':
-      return tier('kyutei', 'kokuritsu-med')
+      return [...univ.filter(todai).map((p) => withTranslation(p, univ)), ...tier('kyutei', 'kokuritsu-med')]
     case 'TOEIC':
       return [...univ.filter((p) => /メール|お知らせ/.test(p.level)), ...LONG_PASSAGES.filter((p) => head(p).startsWith('中3') && /メール|お知らせ/.test(p.level))]
     case 'TOEFL・IELTS':

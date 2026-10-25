@@ -2785,6 +2785,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-dialects',
+    title: 'Why Dialects Survive',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When radio and television spread across the world in the twentieth century, many people predicted that local dialects would soon disappear. Hearing the same standard form of a language every day, they argued, listeners would gradually abandon the way their grandparents spoke. Yet in many countries, regional speech has proved far more durable than these predictions suggested, ( A ) it has changed in other ways.",
+      "One reason is that a way of speaking does more than carry information. It also signals ( B ) we belong. A teenager who adopts the accent of a distant city may sound fashionable on television, but at home the same accent can suggest that the speaker has turned away from friends and family. Linguists have found that some speakers, especially in close-knit communities, keep local features precisely because they express loyalty to a place.",
+      "This does not mean that dialects are frozen. Words connected with old ways of farming or fishing disappear when those jobs disappear, and young speakers often mix local and national forms depending on ( C ) they are talking to. What survives is not a fixed list of words but a flexible resource: people move between ways of speaking much as they move between formal and casual clothes. Seen in this light, the standard language and local dialects are less rivals than tools for different occasions.",
+    ],
+    ja: [
+      '20世紀にラジオとテレビが世界中に広まったとき、多くの人は地域の方言はまもなく消えるだろうと予想した。毎日同じ標準的な言葉を聞いていれば、聞き手は祖父母の話し方を少しずつ捨てていくだろうと彼らは主張したのである。しかし多くの国で、地域の言葉はこうした予想よりもずっと長持ちすることがわかった。もっとも、ほかの点では変わってきたのだが。',
+      '1つの理由は、話し方が情報を運ぶ以上のことをしているということだ。話し方は、私たちがどこに属しているかも示すのである。遠い都会のなまりをまねる10代の若者は、テレビの中ではおしゃれに聞こえるかもしれないが、地元では同じなまりが、その人が友人や家族に背を向けたことを示しうる。言語学者たちは、とくに結びつきの強い地域社会では、まさにその土地への忠誠を表すからこそ、地域の特徴を保つ話し手がいることを見いだしてきた。',
+      'だからといって、方言が固まって動かないわけではない。昔の農業や漁業に関係する言葉は、その仕事がなくなると消えていくし、若い話し手は、だれと話しているかによって地域の言い方と全国共通の言い方をまぜることが多い。生き残るのは決まった単語の一覧ではなく、柔軟に使える資源なのだ。人々は、改まった服とふだん着を着がえるのと同じように、話し方を行き来する。このように見ると、標準語と地域の方言は、ライバルというよりも、ちがう場面のための道具なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['although', 'despite', 'in spite of', 'because of'], answer: 0, why: 'うしろに文（it has changed in other ways）が続き「～ではあるが」と譲歩を加えるので接続詞 although。despite・in spite of・because of は前置詞の働きで、文を続けられない。' },
+      { id: 'B', choices: ['where', 'what', 'which', 'whose'], answer: 0, why: 'signals の目的語の間接疑問「どこに属しているか」。belong は自動詞で、うしろに欠けた目的語がないので where。what・which のうしろには欠けた部分が必要で、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['who', 'whose', 'where', 'that'], answer: 0, why: 'depending on のあとの間接疑問「だれと話しているか」。to の目的語が欠けているので who。where・that ではつながらず、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: '20世紀には、方言はすぐに消えると予想する人が多かった。', answer: true, why: '第1段落 many people predicted that local dialects would soon disappear。' },
+      { statement: '筆者によれば、話し方は情報を伝えるためだけのものである。', answer: false, why: '第2段落 a way of speaking does more than carry information。' },
+      { statement: '筆者は、方言は昔のまま少しも変わらないと述べている。', answer: false, why: '第3段落 This does not mean that dialects are frozen。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why do some speakers keep local features of their speech?', choices: ['To express loyalty to the place they come from.', 'Because they cannot understand the standard language.', 'Because television uses local dialects.', 'To sound fashionable to people in distant cities.'], answer: 0, why: '第2段落 keep local features precisely because they express loyalty to a place。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -101,3 +101,10 @@ describe('高校入試レベルの追加読解', () => {
     expect(passagesFor('国公立').some((p) => p.id.startsWith('exam-'))).toBe(false)
   })
 })
+
+describe('東大レベル専用の長文', () => {
+  it('東大のいちばんはじめに東大専用の長文（todai-）があり、旧帝大には入らない', () => {
+    expect(passagesFor('東大')[0].id).toBe('todai-dialects')
+    expect(passagesFor('旧帝大').some((p) => p.id.startsWith('todai-'))).toBe(false)
+  })
+})
