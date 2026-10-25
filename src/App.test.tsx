@@ -1004,6 +1004,8 @@ describe('App', () => {
     fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
     expect(document.querySelector('.lvup-banner')).toBeNull()
     expect(document.querySelector('.play-bar .play-lvup')?.textContent).toMatch(/⬆ Lv\.\d+/)
+    // 2レベルごとに攻撃力が上がる（レベル2になったら ⚔+1）
+    if (document.querySelector('.play-bar .play-lvup')!.textContent!.includes('Lv.2')) expect(document.querySelector('.play-bar .play-lvup')!.textContent).toContain('⚔+1')
   })
 
   it('問題の画面では、お知らせ（バッジ・なつき度など）や相棒のふきだしは出さず、えらぶ画面にもどってから出す', () => {

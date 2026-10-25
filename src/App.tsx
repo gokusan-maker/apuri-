@@ -157,7 +157,7 @@ import { Shop, type ShopTab } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, HUNTER_TICKETS, loadBossHunter, saveBossHunter, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { levelAttack, BOSS_REMATCH_XP, BOSS_XP, BOSSES, HUNTER_TICKETS, loadBossHunter, saveBossHunter, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -1489,6 +1489,7 @@ function App() {
           {leveledUp && (
             <span className="play-lvup" role="status" title={`${monster.name ?? formOf(monster).name} が Lv.${levelInfo(monster.xp).level} になった！`}>
               ⬆ Lv.{levelInfo(monster.xp).level}
+              {levelAttack(levelInfo(monster.xp).level) > levelAttack(levelInfo(monster.xp).level - 1) && ` ⚔+${levelAttack(levelInfo(monster.xp).level)}`}
             </span>
           )}
         </div>
@@ -1544,6 +1545,7 @@ function App() {
       {leveledUp && !home && !playOn && (
         <p className="lvup-banner" role="status">
           ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
+          {levelAttack(levelInfo(monster.xp).level) > levelAttack(levelInfo(monster.xp).level - 1) && ` ⚔攻撃力+${levelAttack(levelInfo(monster.xp).level)}`}
         </p>
       )}
 
