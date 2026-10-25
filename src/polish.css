@@ -2777,3 +2777,9 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 @keyframes se-glow { 50% { box-shadow: 0 0 0 3px #fef08a, 0 0 32px rgb(250 204 21 / 0.8), 0 8px 18px rgb(76 29 149 / 0.35); } }
 @keyframes se-twinkle { from { opacity: 0.35; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .special-event, .special-event::before { animation: none; } }
+
+/* 問題の画面の Lv UP：上のバーの右はしに小さなバッジ（下の問題をかくさない） */
+.play-bar { position: sticky; }
+.play-lvup { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); padding: 4px 10px; border-radius: 999px; background: linear-gradient(180deg, #fde047, #f59e0b); color: #78350f; font-size: 0.8rem; font-weight: 900; white-space: nowrap; box-shadow: 0 2px 0 #b45309; pointer-events: none; animation: lvup-chip 0.5s ease-out; }
+@keyframes lvup-chip { from { transform: translateY(-50%) scale(0.4); opacity: 0; } 70% { transform: translateY(-50%) scale(1.15); } }
+@media (prefers-reduced-motion: reduce) { .play-lvup { animation: none; } }

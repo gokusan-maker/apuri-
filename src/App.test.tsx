@@ -456,6 +456,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(screen.getByText('バッジ獲得！')).toBeInTheDocument()
     expect(screen.getByText('はじめの一歩')).toBeInTheDocument()
     navTo('ホーム')
@@ -945,6 +946,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[1].xp).toBe(20)
+    backToPick() // お知らせは問題の画面をはなれてから出る
     for (let i = 0; i < 6 && !screen.queryByText('おるすばん中のタマが「ちびモチ」にかえった！'); i++) {
       const t = document.querySelector('.mission-toast')
       if (t) fireEvent.click(t)
@@ -960,6 +962,7 @@ describe('App', () => {
       fireEvent.click(screen.getByText('意味を見る'))
       fireEvent.click(screen.getByText('覚えた'))
     }
+    backToPick() // お知らせは問題の画面をはなれてから出る
     const c = document.querySelector('.pet-cheer')!
     expect(c).not.toBeNull()
     expect(c.querySelector('.pet-cheer-text')!.textContent).toMatch(/[ぁ-んァ-ン]/)
@@ -990,7 +993,7 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:partner-birthday')!).lastYear).toBe(Number(dayKey().slice(0, 4)))
   })
 
-  it('カード以外のタブでレベルが上がると「Lv UP!」バナーが出る', () => {
+  it('問題の画面でレベルが上がると、上のバーの右はしに小さな「⬆ Lv.N」が出る（問題をかくさない）', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 45 }))
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
@@ -999,7 +1002,22 @@ describe('App', () => {
     const word = WORDS.find((w) => w.en === en)!
     // 「天気」などテーマで練習のボタンと同じ名前があるので、クイズの選択肢の中からえらぶ
     fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
-    expect(document.querySelector('.lvup-banner')?.textContent).toMatch(/Lv UP!.*Lv\.\d+ になった/)
+    expect(document.querySelector('.lvup-banner')).toBeNull()
+    expect(document.querySelector('.play-bar .play-lvup')?.textContent).toMatch(/⬆ Lv\.\d+/)
+  })
+
+  it('問題の画面では、お知らせ（バッジ・なつき度など）や相棒のふきだしは出さず、えらぶ画面にもどってから出す', () => {
+    render(<App />)
+    goCards()
+    playMini()
+    for (let i = 0; i < 3; i++) {
+      const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
+      const word = WORDS.find((w) => w.en === en)!
+      fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
+      expect(document.querySelector('.badge-toast')).toBeNull()
+      expect(document.querySelector('.pet-cheer')).toBeNull()
+      fireEvent.click(screen.getByText('次へ'))
+    }
   })
 
   it('単語のステージ（中1〜会話）は単語ゲームの「🗺 ステージ」にあり、ボス部屋にはボスだけが出る', () => {
@@ -1395,6 +1413,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast(/週間チャレンジ達成！/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(55) // 50 + ログインボーナス5
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(61)
@@ -1425,7 +1444,9 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(screen.getByText('ログインボーナス')).toBeInTheDocument()
+    goCards()
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(5)
@@ -1437,6 +1458,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(screen.getByText(/早起きえらい！ 🪙8/)).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(8)
   })
@@ -1466,6 +1488,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('まだ'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(screen.getByText(/ハロウィンボーナスつき！ 今日もえらい！ 🪙15/)).toBeInTheDocument()
   })
 
@@ -1666,6 +1689,7 @@ describe('App', () => {
     expect(document.querySelector('.card .en')?.textContent).toContain(WORDS[0].en)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast('📚 復習コンプリート！')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(16)
     expect(localStorage.getItem('eitan:review-done')).toBe(dayKey())
@@ -1677,6 +1701,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast('💕 なつき度アップ！')).toBeInTheDocument()
   })
 
@@ -1686,6 +1711,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast('🎖 称号アップ')).toBeInTheDocument()
     expect(screen.getByText('称号が「がんばり屋」になった！（学習7日）')).toBeInTheDocument()
   })
@@ -1695,6 +1721,7 @@ describe('App', () => {
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(screen.getByText('ログインボーナス')).toBeInTheDocument()
     fireEvent.click(document.querySelector('.mission-toast')!)
     expect(screen.queryByText('ログインボーナス')).not.toBeInTheDocument()
@@ -1710,6 +1737,7 @@ describe('App', () => {
     fireEvent.click(fav.querySelector('button')!)
     fireEvent.click(screen.getByText('意味を見る'))
     fireEvent.click(screen.getByText('覚えた'))
+    backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast('🍀 ラッキー！')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:party')!).members[0].xp).toBe(25)
   })

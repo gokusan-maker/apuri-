@@ -727,10 +727,11 @@ function App() {
   }, [teamLevel])
   // 今日のミッションはオーナーの要望で表示・ごほうびともにやめた（数えるだけ）
   useEffect(() => {
-    if (!toastHead) return
+    // 問題の画面ではお知らせを出さずに待つ（次の問題がかくれないように）。えらぶ画面にもどったら出す
+    if (!toastHead || playOn) return
     const id = window.setTimeout(() => setToastQueue(dequeue), 3000)
     return () => window.clearTimeout(id)
-  }, [toastHead])
+  }, [toastHead, playOn])
 
   // 今日の復習：開いたときにあった復習を全部終えたら🪙（1日1回）
   const [reviewStart] = useState(dueReviews)
@@ -793,15 +794,15 @@ function App() {
     setEggToast(true)
   }
   useEffect(() => {
-    if (!eggToast) return
+    if (!eggToast || playOn) return
     const id = window.setTimeout(() => setEggToast(false), 3500)
     return () => window.clearTimeout(id)
-  }, [eggToast])
+  }, [eggToast, playOn])
   useEffect(() => {
-    if (toast.length === 0) return
+    if (toast.length === 0 || playOn) return
     const id = window.setTimeout(() => setToast([]), 3000)
     return () => window.clearTimeout(id)
-  }, [toast])
+  }, [toast, playOn])
 
   const focusCard = cardFocus ? focusList(cardFocus.kind).find((w) => !cardFocus.done.includes(w.id)) : undefined
 
@@ -1477,6 +1478,12 @@ function App() {
             <span className="lg-icon" aria-hidden="true">{mode === 'word' ? '🎮' : mode === 'grammar' ? '📐' : mode === 'reading' ? '📖' : '👹'}</span>
             <span className="play-back-name">← ほかの問題をえらぶ</span>
           </button>
+          {/* 問題の画面の Lv UP は、上のバーの右はしに小さく（問題をかくさない） */}
+          {leveledUp && (
+            <span className="play-lvup" role="status" title={`${monster.name ?? formOf(monster).name} が Lv.${levelInfo(monster.xp).level} になった！`}>
+              ⬆ Lv.{levelInfo(monster.xp).level}
+            </span>
+          )}
         </div>
       )}
       {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
@@ -1527,8 +1534,8 @@ function App() {
           ))}
         </div>
       )}
-      {leveledUp && !home && (
-        <p className={`lvup-banner${playOn ? ' below-bar' : ''}`} role="status">
+      {leveledUp && !home && !playOn && (
+        <p className="lvup-banner" role="status">
           ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
         </p>
       )}
@@ -2054,8 +2061,8 @@ function App() {
         </>
       )}
 
-      <BadgeToast badges={toast} onClose={() => setToast([])} />
-      {eggToast && (
+      <BadgeToast badges={playOn ? [] : toast} onClose={() => setToast([])} />
+      {eggToast && !playOn && (
         <div className={`badge-toast${toast.length > 0 ? ' second' : ''}`} role="status" onClick={() => setEggToast(false)}>
           <span className="badge-icon" aria-hidden="true">
             🥚
@@ -2066,7 +2073,7 @@ function App() {
           </div>
         </div>
       )}
-      {petCheer && (
+      {petCheer && !playOn && (
         <PetCheer
           key={petCheer.key}
           cheer={petCheer.cheer}
@@ -2076,7 +2083,7 @@ function App() {
           onClose={() => setPetCheer(null)}
         />
       )}
-      {missionToast.length > 0 && (
+      {missionToast.length > 0 && !playOn && (
         <div className="badge-toast mission-toast" role="status" onClick={() => setToastQueue(dequeue)}>
           <span className="badge-icon" aria-hidden="true">
             ✅
