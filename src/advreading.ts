@@ -3479,6 +3479,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-phones-class',
+    title: 'Smartphones in the Classroom',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Should students be allowed to use smartphones at school? This question has become an important issue in many countries. Some schools ask students to hand in their phones every morning, while others let them use phones freely during lessons as ( A ) as they are used for study.",
+      "Those in favor of a ban point out that phones are a constant source of distraction. Even when a phone is turned off, simply having it on the desk may make it harder for students to concentrate. Teachers also worry that messages and social media during breaks can lead to bullying that is difficult for adults to notice.",
+      "Others argue that banning phones is not realistic. Phones can be useful tools for looking up words, taking photos of the board, or checking the schedule for the next train home. They believe it is better to teach students ( B ) to use phones responsibly than to simply take them away.",
+      "In practice, many schools are now trying a middle path. Phones must stay in bags during lessons unless the teacher gives permission, ( C ) students may use them during lunch breaks. Whichever rule a school chooses, it is important to explain the reasons clearly so that students understand and accept it.",
+    ],
+    ja: [
+      '生徒は学校でスマホを使うことを許されるべきだろうか。この問いは多くの国で重要な問題になっている。毎朝スマホを預けるよう生徒に求める学校もあれば、勉強のために使うかぎり、授業中に自由に使わせる学校もある。',
+      '禁止に賛成する人々は、スマホがたえず気を散らすもとになると指摘する。スマホの電源が切れているときでさえ、ただ机の上にあるだけで、生徒が集中しにくくなるかもしれない。先生たちはまた、休み時間のメッセージやSNSが、大人には気づきにくいいじめにつながりうることも心配している。',
+      '一方で、スマホを禁止するのは現実的ではないと主張する人々もいる。スマホは、単語を調べたり、黒板の写真をとったり、帰りの電車の時刻を確かめたりするのに役立つ道具になりうる。彼らは、ただ取り上げるよりも、責任をもって使う方法を生徒に教えるほうがよいと考えている。',
+      '実際には、いま多くの学校が中間の道を試している。授業中は、先生が許可しないかぎりスマホはかばんに入れておかなければならないが、一方で昼休みには使ってもよい。学校がどちらのルールを選ぶにしても、生徒が理解して受け入れられるよう、理由をはっきり説明することが大切である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['long', 'longer', 'longest', 'length'], answer: 0, why: 'as long as ～ で「～するかぎり」。as ～ as のあいだには形容詞・副詞の原級が入るので long。比較級・最上級・名詞は入らない。' },
+      { id: 'B', choices: ['how', 'what', 'that', 'which'], answer: 0, why: 'how to ～ で「～のしかた」。use の目的語 phones があるので what・which は入らず、that のうしろに to 不定詞は続かない。' },
+      { id: 'C', choices: ['but', 'despite', 'because of', 'instead of'], answer: 0, why: 'うしろが文（students may use them …）なので接続詞 but。ほかは前置詞の働きでうしろに文を続けられない。' },
+    ],
+    tf: [
+      { statement: '毎朝スマホを預けさせる学校もある。', answer: true, why: '第1段落 Some schools ask students to hand in their phones every morning。' },
+      { statement: '筆者によれば、電源の切れたスマホは集中のさまたげにならない。', answer: false, why: '第2段落 Even when a phone is turned off, simply having it on the desk may make it harder for students to concentrate。' },
+      { statement: '中間の道をとる学校では、昼休みにスマホを使ってもよい。', answer: true, why: '第4段落 students may use them during lunch breaks。' },
+    ],
+    qa: [
+      { q: 'What do people who oppose a ban believe?', choices: ['It is better to teach students to use phones responsibly.', 'Phones should be used only during lessons.', 'Teachers should check students\' messages.', 'Phones are never useful at school.'], answer: 0, why: '第3段落 it is better to teach students how to use phones responsibly than to simply take them away。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -2036,3 +2036,4 @@
 - 2026-10-25: TOEICレベルの専用長文「An Email About an Invoice Error」（請求書の訂正メール）を追加
 - 2026-10-25: TOEICレベルの専用長文「Notice: Customer Survey at Harbor Hotel」（ホテルのアンケート案内・217語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「Should High School Students Work Part-Time?」（高校生のアルバイト・216語）を追加
+- 2026-10-25: 高3（共通テスト）レベルの長文「Smartphones in the Classroom」（教室のスマホ・211語）を追加
