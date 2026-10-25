@@ -2105,3 +2105,4 @@
 - 2026-10-25: 高校の文法単元を3つ追加：過去完了進行形・完了形と受け身の動名詞・否定の目的（for fear of / so as not to）
 - 2026-10-25: 城を制覇するともらえるバッジを3つ追加（城の主・城めぐりの達人・大陸の覇者）
 - 2026-10-25: TOEFL・IELTSレベルの長文「Visitors from the Edge of the Solar System」（すい星・236語）を追加
+- 2026-10-25: TOEFL・IELTSレベルの長文「How Sand Dunes Move」（砂丘のしくみ）を追加

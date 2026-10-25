@@ -4083,6 +4083,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sand-dunes',
+    title: 'How Sand Dunes Move',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "Sand dunes are among the most striking landforms on Earth. They are found not only in deserts but also along coastlines and even on Mars. Although they may look permanent, dunes are constantly changing shape and, in many cases, slowly moving across the landscape.",
+      "A dune begins to form when wind carries loose grains of sand and drops them behind an obstacle, such as a rock or a bush. As more sand collects, the pile grows and starts to influence the wind itself. The side facing the wind, known as the windward slope, is usually long and gentle. Wind pushes sand grains up this slope in a series of short jumps. When the grains reach the top, they fall down the other side, ( A ) is called the slip face. Because the slip face is much steeper, the sand there often slides down in small avalanches.",
+      "This continuous process of sand being removed from one side and added to the other causes the entire dune to move in the direction ( B ) the wind blows. Some dunes travel several meters a year, which can create serious problems for nearby roads and villages.",
+      "The shape of a dune depends largely on the supply of sand and on how steady the wind is. Where sand is limited and the wind blows mainly from one direction, crescent-shaped dunes tend to form, ( C ) their tips pointing downwind.",
+    ],
+    ja: [
+      '砂丘は地球上でもっとも印象的な地形の1つである。砂丘は砂漠だけでなく、海岸ぞいや、さらには火星にも見られる。変わらないものに見えるかもしれないが、砂丘はたえず形を変えており、多くの場合、ゆっくりと地表を移動している。',
+      '砂丘は、風がばらばらの砂つぶを運び、岩やしげみのような障害物のうしろに落とすところから形づくられはじめる。砂がたまるにつれて山は大きくなり、風そのものに影響を与えはじめる。風を受ける側は風上斜面とよばれ、ふつう長くゆるやかである。風は砂つぶを短いジャンプのくり返しでこの斜面の上へと押し上げる。てっぺんに達すると、つぶは反対側に落ちる。そちらは滑落面とよばれる。滑落面はずっと急なので、そこの砂はしばしば小さななだれのようにすべり落ちる。',
+      '一方の側から砂がとりのぞかれ、もう一方の側に加わるというこのたえまない過程によって、砂丘全体が風のふく方向へと動いていく。1年に数メートル進む砂丘もあり、近くの道路や村に深刻な問題を引き起こすことがある。',
+      '砂丘の形は、おもに砂の量と、風がどれだけ一定であるかによって決まる。砂が少なく、風がおもに一方向からふく場所では、三日月の形をした砂丘ができやすく、その両はしは風下を向いている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで the other side を説明し、is called の主語になる非制限用法の関係代名詞 which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: 'the direction in which the wind blows「風がふく方向」。うしろが完全な文（the wind blows）なので「前置詞＋関係代名詞」の in which。which・what のうしろは欠けた文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['with', 'for', 'by', 'from'], answer: 0, why: '付帯状況の with ＋名詞＋ -ing「～が…した状態で」。with their tips pointing downwind で「両はしが風下を向いた状態で」。' },
+    ],
+    tf: [
+      { statement: '砂丘は砂漠にしか見られない。', answer: false, why: '第1段落 found not only in deserts but also along coastlines and even on Mars。' },
+      { statement: '風上斜面は、ふつう滑落面よりもゆるやかである。', answer: true, why: '第2段落 the windward slope, is usually long and gentle … the slip face is much steeper。' },
+      { statement: '1年に数メートル移動する砂丘もある。', answer: true, why: '第3段落 Some dunes travel several meters a year。' },
+    ],
+    qa: [
+      { q: 'Why does a whole dune move?', choices: ['Sand is removed from one side and added to the other.', 'Earthquakes push it across the land.', 'Rivers carry it downstream.', 'Plants grow under it and lift it.'], answer: 0, why: '第3段落 This continuous process of sand being removed from one side and added to the other causes the entire dune to move。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
