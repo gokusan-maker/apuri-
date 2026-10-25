@@ -56,7 +56,7 @@ export function todayWords(day: string): Word[] {
   return out
 }
 
-const PICK_KEY = 'eitan:today-words'
+const PICK_KEY = 'eitan:today-words-pick' // （eitan:today-words はクリアした日。べつのキーにする）
 function loadPicked(): { day: string; grade: string; ids: string[] } | null {
   try {
     const v = JSON.parse(localStorage.getItem(PICK_KEY) ?? 'null') as { day?: unknown; grade?: unknown; ids?: unknown } | null

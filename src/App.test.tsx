@@ -1914,3 +1914,20 @@ describe('正解しても苦手に入れる', () => {
     expect(JSON.parse(localStorage.getItem('eitan:mistakes')!)[word.id]).toBeUndefined()
   })
 })
+
+describe('今日の単語のクリア（学年をえらんだとき）', () => {
+  it('高校生でも、今日の単語を最後まで答えると「単語」がクリアになる', async () => {
+    const { dayKey } = await import('./srs')
+    localStorage.setItem('eitan:grade', 'hs')
+    render(<App />)
+    fireEvent.click(within(screen.getByLabelText('今日の課題')).getByText(/4択で/))
+    for (let i = 0; i < 10 && document.querySelector('.quiz .choices'); i++) {
+      const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
+      const w = WORDS.find((x) => x.en === en)!
+      fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: w.ja }))
+      fireEvent.click(screen.getByText(/次へ|結果を見る/))
+    }
+    expect(localStorage.getItem('eitan:today-words')).toBe(dayKey())
+    localStorage.removeItem('eitan:grade')
+  })
+})

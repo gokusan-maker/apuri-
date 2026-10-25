@@ -75,3 +75,11 @@ it('高校生なら今日の単語は高校基礎・熟語の単語帳から、�
   // 次の日は、覚えた語をさけてえらぶ
   expect(todayWords('2026-12-02').some((w) => first.includes(w))).toBe(false)
 })
+
+it('今日の5語の保存は、今日の単語のクリアの記録（eitan:today-words）をこわさない', async () => {
+  const { saveTodayWordsDay, loadTodayWordsDay } = await import('./dailyread')
+  saveGrade('hs')
+  saveTodayWordsDay('2026-12-05')
+  todayWords('2026-12-05')
+  expect(loadTodayWordsDay()).toBe('2026-12-05')
+})
