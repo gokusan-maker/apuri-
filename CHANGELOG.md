@@ -2088,3 +2088,4 @@
 - 2026-10-25: 国公立・旧帝大の単語を40語追加（idiosyncratic・pervade・prudence・replete・rhetorical・sublime など）
 - 2026-10-25: 私学・私学難関の単語を40語追加（acquaintance・compassion・courtesy・compulsory・confidential・controversial など）
 - 2026-10-25: 京大・東大の単語を40語追加（grandiose・propitious・quixotic・unequivocal・vicissitude など）
+- 2026-10-25: TOEFL・IELTSの学術単語を54語追加（igneous・asteroid・chromosome・peninsula・stratosphere など）で300語に
