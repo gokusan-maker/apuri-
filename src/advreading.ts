@@ -4387,6 +4387,66 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-reminiscence-bump',
+    title: 'Why the Songs of Our Youth Stay with Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Ask older adults to describe the most memorable events of their lives, and something interesting happens. A surprisingly large share of the memories they mention come from roughly the ages of ten to thirty. Psychologists call this pattern the 'reminiscence bump.' The same pattern appears when people are asked about their favorite songs, books, and films: many of them date from their teens and early twenties.",
+      "Several explanations have been offered. One is that this period is full of 'firsts': the first day at a new school, the first job, the first time living away from home. New experiences tend to be stored more vividly than routine ones, ( A ) they stand out from everyday life.",
+      "Another explanation focuses on identity. During adolescence and early adulthood, people are forming a sense of who they are. Memories from this time become part of the life story they tell about themselves, and they are recalled and retold ( B ) often that they become especially strong.",
+      "The reminiscence bump may explain why a song from high school can instantly bring back the smell of a classroom or the face of an old friend. It also suggests something hopeful for young people today: the experiences they are having now may well become ( C ) they treasure most decades from now.",
+    ],
+    ja: [
+      '高齢の人に人生でもっとも心に残る出来事をあげてもらうと、興味深いことが起こる。あげられる思い出のおどろくほど多くが、だいたい10歳から30歳ごろのものなのだ。心理学者はこのパターンを「レミニセンス・バンプ」とよんでいる。同じパターンは、好きな歌や本や映画をたずねたときにも見られ、その多くは10代から20代前半のころのものである。',
+      'いくつかの説明が示されている。1つは、この時期が「はじめて」に満ちているということだ。新しい学校の初日、はじめての仕事、はじめての一人暮らし。新しい経験は、日々の生活の中で目立つので、決まりきった経験よりも鮮やかに記憶されやすい。',
+      'もう1つの説明は、アイデンティティに注目する。思春期から大人になりはじめのころ、人は自分がだれなのかという感覚をつくっている。この時期の記憶は、自分について語る人生の物語の一部になり、何度も思い出され語り直されるので、とりわけ強くなるのである。',
+      'レミニセンス・バンプは、高校時代の歌が、教室のにおいや昔の友だちの顔を一瞬でよみがえらせる理由を説明しているのかもしれない。それはまた、今の若い人たちにとって希望のあることも示している。彼らがいましている経験は、何十年もたってから、いちばん大切にするものになるかもしれないのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'despite', 'because of', 'instead of'], answer: 0, why: 'うしろが文（they stand out from everyday life）なので接続詞 because。despite・because of・instead of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋副詞（often）＋ that … で「とても～なので…」。such は名詞の前、too・very は that と組めない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'those'], answer: 0, why: 'become の補語で、treasure の目的語が欠けたかたまり「いちばん大切にするもの」を作る関係代名詞 what。that・which は先行詞が必要で、those のうしろに主語と動詞を直接続けられない。' },
+    ],
+    tf: [
+      { statement: 'レミニセンス・バンプによれば、思い出の多くはだいたい10歳から30歳ごろのものだ。', answer: true, why: '第1段落 come from roughly the ages of ten to thirty。' },
+      { statement: '筆者によれば、決まりきった経験は新しい経験より鮮やかに記憶される。', answer: false, why: '第2段落 New experiences tend to be stored more vividly than routine ones。' },
+      { statement: '好きな歌や本も、10代から20代前半のころのものが多い。', answer: true, why: '第1段落 many of them date from their teens and early twenties。' },
+    ],
+    qa: [
+      { q: 'According to the identity explanation, why are memories from this period strong?', choices: ['They become part of the life story people tell and are retold often.', 'People have more free time when they are young.', 'Young people listen to more music.', 'Older adults forget recent events.'], answer: 0, why: '第3段落 Memories from this time become part of the life story … recalled and retold so often。' },
+    ],
+  },
+  {
+    id: 'adv-loss-aversion',
+    title: 'Why Losing Hurts More Than Winning Feels Good',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine finding a 1,000-yen note on the street. You would probably feel pleased. Now imagine losing a 1,000-yen note from your pocket. Many people say the second experience would upset them more than the first would please them, even though the amount of money is exactly the same. Researchers call this tendency 'loss aversion.'",
+      "Loss aversion helps explain many everyday behaviors. Shops know that customers react strongly to the idea of missing out, so they advertise offers as 'only until Sunday' or 'while stocks last.' People also tend to keep things they no longer use, ( A ) throwing them away feels like a loss. In experiments, participants often demanded more money to give up an object they had just been given than they were willing to pay to buy the same object.",
+      "Some scientists have suggested that this tendency once helped our ancestors survive. For people living close to the edge, losing food or shelter could be far more dangerous than gaining a little extra was helpful.",
+      "Being aware of loss aversion can help us make better decisions. When we feel reluctant to change, it may be worth asking whether we are judging the options fairly or simply fearing the loss of ( B ) we already have. Sometimes the small risk of losing is ( C ) taking for a much larger gain.",
+    ],
+    ja: [
+      '道で1000円札を拾ったと想像してみよう。おそらくうれしく感じるだろう。今度は、ポケットから1000円札を落としたと想像してみよう。多くの人は、金額はまったく同じなのに、あとの経験のほうが、前の経験がうれしいよりもずっといやだと言う。研究者はこの傾向を「損失回避」とよんでいる。',
+      '損失回避は、日々の多くのふるまいを説明する助けになる。店は、客がのがすという考えに強く反応することを知っているので、特売を「日曜日まで」や「在庫がなくなりしだい終了」と宣伝する。人はまた、もう使わない物をとっておきがちだ。捨てることが損失のように感じられるからである。実験では、参加者は、もらったばかりの物を手放すのに、同じ物を買うために払ってもよいと思う額よりも多くのお金を求めることが多かった。',
+      'この傾向は、かつて私たちの祖先が生きのびる助けになったのではないかと考える科学者もいる。ぎりぎりの暮らしをしていた人々にとって、食べ物やすみかを失うことは、少し余分に手に入れることが役に立つよりも、はるかに危険だったのかもしれない。',
+      '損失回避を意識することは、よりよい決定をする助けになる。変化をためらうとき、選択肢を公平に判断しているのか、それともすでにもっているものを失うことをただおそれているだけなのかを自問してみる価値がある。ときには、ずっと大きな利益のためなら、失う小さな危険はおかす価値があるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'despite', 'in spite of'], answer: 0, why: 'うしろが文（throwing them away feels like a loss）なので接続詞 because。because of・despite・in spite of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['what', 'that', 'which', 'whose'], answer: 0, why: '前置詞 of の目的語で、have の目的語が欠けたかたまり「すでにもっているもの」を作る関係代名詞 what。that は前置詞のあとに置けず、which は先行詞が必要、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['worth', 'worthy', 'value', 'valuable'], answer: 0, why: 'be worth ～ing で「～する価値がある」。worth は前置詞のように動名詞 taking を目的語にとる。worthy は worthy of の形、value は名詞・動詞、valuable は形容詞で -ing を続けられない。' },
+    ],
+    tf: [
+      { statement: '損失回避とは、同じ額でも失うほうが得るより強く感じられる傾向だ。', answer: true, why: '第1段落 the second experience would upset them more than the first would please them … loss aversion。' },
+      { statement: '実験では、参加者は物を手放すのに、それを買う額より少ないお金で満足した。', answer: false, why: '第2段落 demanded more money to give up an object … than they were willing to pay。' },
+      { statement: '筆者は、損失回避を意識することはよりよい決定の助けになると考えている。', answer: true, why: '第4段落 Being aware of loss aversion can help us make better decisions。' },
+    ],
+    qa: [
+      { q: 'Why do shops advertise offers as "only until Sunday"?', choices: ['Because customers react strongly to the idea of missing out.', 'Because shops are closed on Sundays.', 'Because customers prefer to shop on weekends.', 'Because prices always rise on Monday.'], answer: 0, why: '第2段落 customers react strongly to the idea of missing out。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

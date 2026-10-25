@@ -2128,3 +2128,4 @@
 - 2026-10-25: 高校の文法単元を3つ追加：名詞構文（his arrival）・時制の一致の例外（不変の真理・歴史的事実）・代不定詞（I'd love to.）
 - 2026-10-25: ネイティブレベルの専用エッセイ「Two Days Without My Phone」（スマホなしの2日間・248語）を追加
 - 2026-10-25: TOEICレベルの専用長文「Notice: Fire Drill on Thursday」（避難訓練のお知らせ・200語）を追加
+- 2026-10-25: 私学難関レベルの長文を2本追加（「Why the Songs of Our Youth Stay with Us」レミニセンス・バンプ・「Why Losing Hurts More Than Winning Feels Good」損失回避）
