@@ -5769,6 +5769,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'The speaker felt proud at the end of the trip.', answer: true, why: '第3段落 I felt proud。' },
     ],
   },
+  {
+    id: 'what-is-fog',
+    title: 'What Is Fog?',
+    level: '中3〜高校入試（説明文）',
+    paragraphs: [
+      'On some mornings, the whole town is covered in a thick white cloud, and you can hardly see the buildings across the street. This is fog. In fact, fog is simply a cloud ( A ) forms near the ground.',
+      'Air always contains some water vapor, a gas we cannot see. Warm air can hold more water vapor than cold air. When air cools down, it cannot hold all of its water vapor any longer, so some of the vapor changes into tiny drops of water. Billions of these drops floating in the air make fog.',
+      'Fog often appears on clear, calm nights. Without clouds, the ground loses its heat quickly, and the air near it becomes cold. By morning, the air is cold enough ( B ) fog. When the sun rises and warms the air again, the drops turn back into vapor, and the fog disappears.',
+      'Fog can be beautiful, but it can also be dangerous. Drivers and pilots cannot see far, so many accidents happen in thick fog. That is why airports and highways use special lights so that people ( C ) travel safely.',
+    ],
+    ja: [
+      '朝、町全体が厚い白い雲におおわれて、通りの向かいの建物もほとんど見えないことがあります。これが霧です。じつは、霧は地面の近くにできる雲にすぎないのです。',
+      '空気にはいつも、目に見えない気体である水蒸気がいくらかふくまれています。あたたかい空気は、冷たい空気よりもたくさんの水蒸気をふくむことができます。空気が冷えると、水蒸気をすべてはふくんでいられなくなり、その一部が小さな水のつぶに変わります。空気中にうかぶ何十億ものこのつぶが、霧をつくるのです。',
+      '霧は、晴れて風のない夜によく発生します。雲がないと地面はすぐに熱を失い、その近くの空気が冷たくなります。朝までに、空気は霧ができるほど冷たくなります。太陽がのぼって空気が再びあたたまると、つぶは水蒸気にもどり、霧は消えます。',
+      '霧は美しいこともありますが、危険なこともあります。運転する人やパイロットは遠くまで見えないので、濃い霧の中では多くの事故が起こります。そのため、空港や高速道路では、人々が安全に移動できるように特別なライトを使っているのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 a cloud を説明し、あとに動詞 forms が続くので主格の関係代名詞 that。where はあとに完全な文、who は人。' },
+      { id: 'B', choices: ['to form', 'forming', 'formed', 'form'], answer: 0, why: '～ enough to …「…するほど～」。cold enough to form fog「霧ができるほど冷たい」。' },
+      { id: 'C', choices: ['can', 'can to', 'are', 'being'], answer: 0, why: 'so that ＋ 主語 ＋ can ＋ 動詞の原形「～が…できるように」。can のあとに to は置かない。' },
+    ],
+    tf: [
+      { statement: 'Fog is a cloud that forms near the ground.', answer: true, why: '第1段落 fog is simply a cloud that forms near the ground。' },
+      { statement: 'Cold air can hold more water vapor than warm air.', answer: false, why: '第2段落 Warm air can hold more water vapor than cold air。' },
+      { statement: 'Fog often appears on clear, calm nights.', answer: true, why: '第3段落 Fog often appears on clear, calm nights。' },
+      { statement: 'Fog never causes accidents.', answer: false, why: '第4段落 many accidents happen in thick fog。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
