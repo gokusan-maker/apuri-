@@ -41,3 +41,21 @@ it('構文の城：1階目は構文の解説と、長文に出てくるその文
   fireEvent.click(screen.getByText('長文に挑戦'))
   expect(open).toHaveBeenCalled()
 })
+
+it('構文の城：2階目からも、長文に入る前にその長文に出てくる構文の文とコツを見せる', () => {
+  localStorage.clear()
+  const open = vi.fn()
+  const list = passagesFor('国公立')
+  const { container } = render(<ReadThemeCastle list={list} record={{}} onOpen={open} />)
+  fireEvent.click(screen.getByRole('button', { name: /^1階：/ }))
+  // 1階目は図の解説（コツの1行ではない）
+  expect(container.querySelector('.rc-tip')).toBeNull()
+  // 1階目の長文を満点にすると、2階目でもまず構文の文とコツが出る
+  fireEvent.click(screen.getByText('長文に挑戦'))
+  const p = open.mock.calls[0][0] as LongPassage
+  const rec = { [p.id]: 99 }
+  const r2 = render(<ReadThemeCastle list={list} record={rec} onOpen={open} />)
+  fireEvent.click(r2.getAllByRole('button', { name: /^2階：/ })[0])
+  expect(r2.container.querySelector('.rc-tip')).not.toBeNull()
+  expect(r2.getAllByText(/この長文に出てくる/).length).toBeGreaterThan(0)
+})
