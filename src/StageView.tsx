@@ -530,8 +530,6 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   if (part === 'boss' && area === null)
     return (
       <section className="card stages">
-        <h2>👹 ボス部屋</h2>
-        <p className="boss-pick-title">🎯 地図から行きたい地方をえらぼう</p>
         <BossWorld
           regions={BOSS_GROUPS.map((g) => {
             const lvs = LEVELS.filter((lv) => g.levels.includes(lv))

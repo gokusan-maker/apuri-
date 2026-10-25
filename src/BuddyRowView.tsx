@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import { growthOf, growthScale, growthText } from './monster'
 import type { ReactNode } from 'react'
 import { BuddyFigure } from './BuddyFigureView'
-import { buddyLevel, buddyName, teamOf, TEAM_TITLES, TRACK_LABEL, type Buddies, type Track } from './buddies'
+import { buddyLevel, buddyName, TRACK_LABEL, type Buddies, type Track } from './buddies'
 
 type Props = {
   wordFigure: ReactNode // 単語の相棒（モチなど）の絵
@@ -18,25 +17,8 @@ type Props = {
 // ホームの3体：単語の相棒・文法のことばモンスター・読解の竜
 export function BuddyRow({ wordFigure, wordName, wordLevel, buddies, onGo, dancing = false, todayGain, crowned = false }: Props) {
   const tracks: Track[] = ['grammar', 'reading']
-  const team = teamOf(wordLevel, buddies)
-  const [showTitles, setShowTitles] = useState(false) // 称号の一覧
   return (
     <>
-    <button className="team-level" aria-label="チームレベル" aria-expanded={showTitles} onClick={() => setShowTitles(!showTitles)}>
-      🤝 チームLv.{team.level}「{team.title}」{team.next !== null && <small className="team-next">あと{team.next}で次の称号</small>}
-    </button>
-    {showTitles && (
-      <ol className="team-titles" aria-label="チームの称号の一覧">
-        {TEAM_TITLES.map((t) => (
-          <li key={t.name} className={team.level >= t.min ? 'got' : 'locked'}>
-            {team.level >= t.min ? `🏅 ${t.name}` : '？？？'}（チームLv.{t.min}〜）
-          </li>
-        ))}
-      </ol>
-    )}
-    <span className="buddy-bar team-bar" role="progressbar" aria-label="次の称号まで" aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(team.progress * 100)}>
-      <span style={{ width: `${team.progress * 100}%` }} />
-    </span>
     <div className={`buddy-row${dancing ? ' dancing' : ''}${crowned ? ' crowned' : ''}`} aria-label="育てているなかま">
       <button className="buddy-card b-word" onClick={() => onGo('word')}>
         <span className="buddy-tag">単語</span>

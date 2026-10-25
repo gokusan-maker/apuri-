@@ -779,10 +779,11 @@ describe('App', () => {
     expect([...document.querySelectorAll('.records-value')].some((e) => /^0(\D|$)/.test(e.textContent!))).toBe(false) // まだ0の記録は出さない
   })
 
-  it('ボスをたおした回数で相棒に二つ名がつく', () => {
+  it('ホームのキャラの横に二つ名（かけだし勇者など）やチームの称号の文は出さない（オーナーの要望）', () => {
     localStorage.setItem('eitan:boss-book', JSON.stringify({ ヤミモチ: { wins: 10, best: 'A', first: '2026-10-01', look: { name: 'ヤミモチ', color: '#000', line: '#000', eye: '#fff' } } }))
     render(<App />)
-    expect(screen.getByText('⚔️ ボスハンター')).toBeInTheDocument()
+    expect(screen.queryByText('⚔️ ボスハンター')).toBeNull()
+    expect(screen.queryByLabelText('チームレベル')).toBeNull()
   })
 
   it('あいぼうの「ごきげん」メーターは出さない（オーナーの要望）', () => {
@@ -1138,12 +1139,6 @@ describe('App', () => {
     render(<App />)
     const row = screen.getByLabelText('育てているなかま')
     expect(row.querySelectorAll('.buddy-card')).toHaveLength(3)
-    expect(screen.getByLabelText('チームレベル').textContent).toMatch(/チームLv\.\d+「.+チーム」/)
-    expect(screen.getByRole('progressbar', { name: '次の称号まで' })).toBeInTheDocument()
-    fireEvent.click(screen.getByLabelText('チームレベル'))
-    const titles = screen.getByLabelText('チームの称号の一覧')
-    expect(titles.textContent).toContain('かけだしチーム')
-    expect(titles.textContent).toContain('？？？') // まだの称号はひみつ
     expect(row.textContent).toMatch(/単語.*文法.*読解/)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     fireEvent.click(within(row).getByLabelText(/文法のなかま/))

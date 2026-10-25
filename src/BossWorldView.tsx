@@ -14,7 +14,6 @@ const PLACE: Record<BossGroup, { x: number; y: number; mark: string; land: strin
 export function BossWorld({ regions, onPick }: { regions: WorldRegion[]; onPick: (id: BossGroup) => void }) {
   return (
     <section className="bworld" aria-label="ボスの世界地図">
-      <p className="bworld-title">🗺 ボスの世界地図</p>
       <div className="bworld-sea">
         <svg className="bworld-bg" viewBox="0 0 300 300" aria-hidden="true">
           <path className="bworld-island" d="M40 70 C 60 20, 140 15, 165 40 C 200 10, 280 30, 270 95 C 300 140, 285 230, 240 260 C 190 295, 120 290, 80 265 C 25 240, 10 160, 30 120 C 18 100, 25 85, 40 70 Z" />

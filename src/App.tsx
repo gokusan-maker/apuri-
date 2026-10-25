@@ -47,7 +47,7 @@ import { loadAccuracy, rate, recordAnswer, saveAccuracy } from './accuracy'
 import { loadTime, minutesToday, minutesWeek, saveTime } from './studyTime'
 import { useStudyTime } from './useStudyTime'
 import { bump, loadMissions, MISSION_XP, saveMissions, type Counter, type Mission } from './missions'
-import { baseBeaten, epithetOf, loadBook, totalWins } from './bossbook'
+import { baseBeaten, loadBook } from './bossbook'
 import { GOLD_COINS, KEYS_FOR_GOLD, loadKeys, saveKeys } from './treasure'
 import { ANNIV_COINS, dueAnniversary, loadDone, MILESTONES, saveDone } from './anniversary'
 import { pickWordOfDay } from './wordOfDay'
@@ -1507,7 +1507,6 @@ function App() {
             onPet={() => cheerUp(1)}
             trioDone={loadTrioDay() === today}
             trioStreak={trioStreakNow(today)}
-            epithet={epithetOf(totalWins(loadBook()))}
             onPetBonus={() => setWallet((w) => ({ ...w, coins: w.coins + PET_BONUS }))}
             onPetStampTicket={() => {
               setWallet((w) => addTicket(w))
@@ -1830,7 +1829,6 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          {mode === 'boss' && !playOn && <p className="boss-team-title">⚔️ ボスと戦うチーム（単語・文法・読解）</p>}
           {mode === 'boss' && !playOn && buddyRow}
           {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}

@@ -25,7 +25,6 @@ export function BossArea({ name, group, specials, bosses = [], onCoins }: { name
   const chest = chestSpot(group, day)
   return (
     <section className={`barea barea-${group}`} aria-label={`${name}のエリア`}>
-      <p className="barea-title">🗺 {name}のエリア</p>
       <div className="barea-land">
         <svg className="barea-bg" viewBox="0 0 300 180" preserveAspectRatio="none" aria-hidden="true">
           <path className="barea-hill b1" d="M0 120 C 60 80, 120 90, 170 115 S 260 100, 300 85 V180 H0 Z" />
