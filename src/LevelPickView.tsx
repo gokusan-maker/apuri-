@@ -8,7 +8,7 @@ export function LevelPick({ label, spots, current, onPick, unit = '' }: { label:
   return (
     <div className="lvpick">
       <button className="lvpick-btn" aria-expanded={open} aria-label={`${label}：${now?.name ?? 'えらぶ'}（変更）`} onClick={() => setOpen(!open)}>
-        <span className="lvpick-cap">🏰 {label}</span>
+        <span className="lvpick-cap">🗺 {label}</span>
         <b className="lvpick-now">{now?.name ?? 'えらぶ'}</b>
         <span className="lvpick-change">{open ? '▲ とじる' : '▼ 変更'}</span>
       </button>
