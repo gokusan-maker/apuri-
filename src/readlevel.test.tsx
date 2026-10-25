@@ -108,3 +108,8 @@ describe('東大レベル専用の長文', () => {
     expect(passagesFor('旧帝大').some((p) => p.id.startsWith('todai-'))).toBe(false)
   })
 })
+
+it('京大のいちばんはじめに京大専用の長文（kyodai-）、和訳の問題つき', () => {
+  expect(passagesFor('京大')[0].id).toBe('kyodai-ruins')
+  expect(passagesFor('京大')[0].gistKind).toBe('transl')
+})
