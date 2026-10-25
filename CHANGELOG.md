@@ -2080,3 +2080,4 @@
 - 2026-10-25: TOEFL・IELTSの学術単語を40語追加（estuary・excavation・amphibian・cognition・enzyme・membrane など）
 - 2026-10-25: 私学・私学難関の単語を40語追加（compromise・conscience・legitimate・nonetheless・threshold など）
 - 2026-10-25: 私学・私学難関の単語を40語追加（landmark・scenario・straightforward・incidence・readily・underlie など）
+- 2026-10-25: 京大・東大・旧帝大の単語を40語追加（dogged・fallible・elucidate・euphemism・allay・equitable など）
