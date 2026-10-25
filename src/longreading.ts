@@ -4245,10 +4245,10 @@ export const LONG_PASSAGES: LongPassage[] = [
     title: 'Why Do Onions Make Us Cry?',
     level: '中2（説明文）',
     paragraphs: [
-      'Have you ever cried while you were cutting an onion? Many people have. But onions do not make us cry because they are sad. There is a scientific reason ( A ) it.',
+      'Have you ever cried while you were cutting an onion? Many people have. But onions do not make us cry because they are sad. There is a scientific reason ( A ) this happens.',
       'An onion is made of many small cells. When you cut it, you break these cells, and some chemicals inside them mix together. They make a special gas. This gas goes up into the air and reaches your eyes.',
       'When the gas touches your eyes, they feel a little pain. Your eyes then make tears ( B ) wash the gas away. So crying is a way to protect your eyes.',
-      'There are some ways to cry less. For example, you can put the onion in the refrigerator before you cut it. A cold onion makes less gas. Using a sharp knife also helps, because it breaks ( C ) cells. Next time you cook, try one of these ideas.',
+      'There are some ways to cry less. For example, you can put the onion in the refrigerator before you cut it. A cold onion makes less gas. Using a sharp knife also helps, because it ( C ) fewer cells. Next time you cook, try one of these ideas.',
     ],
     ja: [
       'たまねぎを切っているときに泣いたことはありますか。多くの人があるでしょう。でも、たまねぎが悲しいから泣くわけではありません。それには科学的な理由があります。',
@@ -4257,9 +4257,9 @@ export const LONG_PASSAGES: LongPassage[] = [
       '泣くのを少なくする方法もあります。たとえば、切る前にたまねぎを冷蔵庫に入れておくことができます。冷たいたまねぎは気体を出す量が少なくなります。よく切れる包丁を使うのも役に立ちます。こわす細胞が少なくてすむからです。次に料理をするときは、これらのアイデアの一つをためしてみてください。',
     ],
     blanks: [
-      { id: 'A', choices: ['at', 'for', 'in', 'on'], answer: 1, why: 'a reason for 〜 で「〜の理由」。' },
+      { id: 'A', choices: ['why', 'what', 'which', 'who'], answer: 0, why: 'a reason why ～「～する理由」。あとに this happens という完全な文が続くので関係副詞 why。which だと for などの前置詞が必要。' },
       { id: 'B', choices: ['for', 'of', 'that', 'to'], answer: 3, why: '目的「〜するために」は to ＋動詞の原形（to wash）。' },
-      { id: 'C', choices: ['fewer', 'less', 'many', 'more'], answer: 0, why: 'よく切れる包丁は、こわす細胞が「より少ない」。cells は数えられる名詞なので fewer。' },
+      { id: 'C', choices: ['breaks', 'break', 'breaking', 'broken'], answer: 0, why: '主語 it（＝よく切れる包丁）は3人称単数で、いつものことを言う現在形なので breaks。' },
     ],
     underline: { phrase: 'wash the gas away', choices: ['気体を洗い流す', '気体をつくる', '気体を集める', '気体をあたためる'], answer: 0, why: 'wash 〜 away は「〜を洗い流す」。目は涙で気体を流して目を守る。' },
     tf: [
