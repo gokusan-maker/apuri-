@@ -3642,6 +3642,57 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
   },
   {
+    id: 'past-perfect-progressive',
+    title: '過去完了進行形（had been ～ing）',
+    points: [
+      'had been ＋ -ing で「（過去のある時まで）ずっと～し続けていた」。過去のある時点までの動作の継続を表す：I had been waiting for an hour when the bus came.',
+      '現在完了進行形（have been ～ing）を、基準の時点ごと過去にずらした形。for や since とよくいっしょに使う。',
+    ],
+    examples: [
+      { en: 'She had been studying for three hours before she took a break.', ja: '彼女は休けいする前に3時間ずっと勉強していた。' },
+      { en: 'It had been raining all night, so the ground was wet.', ja: '一晩じゅう雨が降り続いていたので、地面はぬれていた。' },
+    ],
+    questions: [
+      { sentence: 'We had been ___ for an hour when the train finally arrived.', choices: ['waiting', 'waited', 'wait'], answer: 0, why: 'had been ＋ -ing で「（その時まで）ずっと～していた」。' },
+      { sentence: 'He was tired because he ___ been running all morning.', choices: ['had', 'has', 'was'], answer: 0, why: '過去（was tired）の時点までの継続なので過去完了進行形 had been running。' },
+      { sentence: 'How long had you been ___ English before you went abroad?', choices: ['learning', 'learned', 'learn'], answer: 0, why: '過去完了進行形の疑問文。had been のあとは -ing。' },
+    ],
+  },
+  {
+    id: 'gerund-perfect-passive',
+    title: '完了形・受け身の動名詞（having done / being done）',
+    points: [
+      'having ＋過去分詞 の動名詞は、文の動詞より前のことを表す：He is proud of having won the prize.「（以前に）賞をとったことを誇りに思っている」。',
+      'being ＋過去分詞 の動名詞は「～されること」：She doesn\'t like being told what to do.「何をすべきか指図されるのが好きではない」。',
+    ],
+    examples: [
+      { en: 'I regret having said such a thing.', ja: 'あんなことを言ったのを後悔している。' },
+      { en: 'The child was afraid of being left alone.', ja: 'その子はひとりにされるのをこわがっていた。' },
+    ],
+    questions: [
+      { sentence: 'He denied ___ seen the man before.', choices: ['having', 'to have', 'had'], answer: 0, why: 'deny は動名詞を目的語にとる。以前のことなので完了形の動名詞 having seen。' },
+      { sentence: 'Nobody likes ___ laughed at.', choices: ['being', 'to being', 'been'], answer: 0, why: '「笑われること」は受け身の動名詞 being laughed at。' },
+      { sentence: 'She is proud of having ___ the race.', choices: ['won', 'win', 'winning'], answer: 0, why: 'having ＋過去分詞。win の過去分詞は won。' },
+    ],
+  },
+  {
+    id: 'for-fear-of',
+    title: '否定の目的（for fear of ～ / so as not to ～）',
+    points: [
+      'for fear of ～ing「～しないように・～するのをおそれて」：He walked slowly for fear of slipping on the ice.',
+      'so as not to ～ / in order not to ～「～しないように」は to の前に not を置く：She spoke quietly so as not to wake the baby.',
+    ],
+    examples: [
+      { en: 'I wrote down the address for fear of forgetting it.', ja: '忘れないように住所を書きとめた。' },
+      { en: 'We left early so as not to miss the bus.', ja: 'バスに乗りおくれないように早く出た。' },
+    ],
+    questions: [
+      { sentence: 'He took a map for fear ___ getting lost.', choices: ['of', 'to', 'that'], answer: 0, why: 'for fear of ～ing「～しないように」。' },
+      { sentence: 'She tiptoed so as ___ to wake her parents.', choices: ['not', 'no', 'never be'], answer: 0, why: 'so as not to ～ の語順。not は to の前。' },
+      { sentence: 'Take notes in order ___ forget the main points.', choices: ['not to', 'to no', 'no to'], answer: 0, why: 'in order not to ～「～しないように」。not を to の前に置く。no は動詞を否定できない。' },
+    ],
+  },
+  {
     id: 'less-least',
     title: '「より～でない」の比較（less ～ than / the least ～）',
     points: [
@@ -4534,7 +4585,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['play-the', 'progressive-q-neg', 'irregular-past', 'a-an-the', 'can-i-you', 'times-a-week', 'what-time', 'go-ing', 'there-q-neg', 'can-basic', 'ordinal-date', 'this-these', 'do-does', 'was-were', 'place-prep', 'plural-forms', 'what-noun', 'verb-prep', 'how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['directions', 'there-will-be', 'thank-sorry-for', 'give-to-for', 'be-born', 'superlative-in-of', 'else', 'famous-full-similar', 'by-uses', 'like-such-as', 'there-was', 'when-future', 'which-better', 'future-q-neg', 'need-to', 'too-many-much', 'infinitive-uses', 'to-for-person', 'wh-subject', 'more-and-more', 'during-for', 'take-idioms', 'one-it', 'thing-adjective', 'be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['how-long-perfect', 'as-many-much-noun', 'will-have-to', 'ready-willing', 'been-gone', 'not-a-but-b', 'make-sure', 'first-time', 'almost-most', 'most-of', 'second-ever', 'as-possible', 'modal-passive', 'change-adj', 'must-cant-be', 'be-about-to', 'get-done', 'each-other', 'tag-imperative', 'fractions', 'adj-that', 'think-so', 'passive-prep', 'it-is-said', 'still-anymore', 'find-leave-oc', 'unless', 'passive-progressive-perfect', 'compare-emphasis', 'keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['all-the-comparative', 'anything-but', 'what-is-more', 'as-relative', 'were-to', 'as-concession', 'independent-infinitive', 'result-infinitive', 'wherever-whenever', 'cannot-too', 'of-with-abstract', 'on-ing', 'the-last-to', 'neither-nor', 'would-often', 'number-of', 'even-if-though', 'not-so-much', 'remind-of', 'less-least', 'to-ing', 'trouble-ing', 'by-the-time', 'reported-question', 'future-progressive', 'supposed-to', 'have-get-person', 'why-how-relative', 'if-only', 'happen-to', 'as-well-as', 'group-prep', 'despite', 'prevent-from', 'worth-ing', 'suggest-that', 'hardly-seldom', 'what-is-called', 'gerund-set', 'of-the-two', 'even-only', 'no-more-than', 'so-as-to-degree', 'allow-to', 'every-time', 'appositive-comma', 'whether-concession', 'now-that-once', 'strong-negation', 'participle-idioms', 'be-used-to', 'in-order-to', 'may-well', 'no-sooner', 'the-adjective', 'if-inversion', 'as-long-as', 'it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['past-perfect-progressive', 'gerund-perfect-passive', 'for-fear-of', 'all-the-comparative', 'anything-but', 'what-is-more', 'as-relative', 'were-to', 'as-concession', 'independent-infinitive', 'result-infinitive', 'wherever-whenever', 'cannot-too', 'of-with-abstract', 'on-ing', 'the-last-to', 'neither-nor', 'would-often', 'number-of', 'even-if-though', 'not-so-much', 'remind-of', 'less-least', 'to-ing', 'trouble-ing', 'by-the-time', 'reported-question', 'future-progressive', 'supposed-to', 'have-get-person', 'why-how-relative', 'if-only', 'happen-to', 'as-well-as', 'group-prep', 'despite', 'prevent-from', 'worth-ing', 'suggest-that', 'hardly-seldom', 'what-is-called', 'gerund-set', 'of-the-two', 'even-only', 'no-more-than', 'so-as-to-degree', 'allow-to', 'every-time', 'appositive-comma', 'whether-concession', 'now-that-once', 'strong-negation', 'participle-idioms', 'be-used-to', 'in-order-to', 'may-well', 'no-sooner', 'the-adjective', 'if-inversion', 'as-long-as', 'it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
