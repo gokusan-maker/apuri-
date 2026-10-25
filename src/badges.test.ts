@@ -106,3 +106,12 @@ it('ボス図鑑の基本のボスを全部たおすとボス図鑑マスター'
   expect(ok({})).toBe(false)
   expect(rewardOf(['bossbook-all']).tickets).toBe(3)
 })
+
+it('城を制覇するとバッジ（1つ・5つ・15）', async () => {
+  const { BADGES } = await import('./badges')
+  const base = { answers: 0, correct: 0, streak: 0, learned: 0, level: 1, perfect: 0, bestTime: 0, goals: 0 }
+  const ids = (n: number) => BADGES.filter((b) => b.id.startsWith('castle-') && b.check({ ...base, castles: n })).map((b) => b.id)
+  expect(ids(0)).toEqual([])
+  expect(ids(1)).toEqual(['castle-1'])
+  expect(ids(15)).toEqual(['castle-1', 'castle-5', 'castle-15'])
+})

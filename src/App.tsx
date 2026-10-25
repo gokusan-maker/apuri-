@@ -761,6 +761,9 @@ function App() {
   const learnedAll = WORDS.filter((w) => (progress[w.id]?.box ?? 0) >= 3).length
   const level = Math.max(...party.members.map((m) => levelInfo(m.xp).level))
   const streakCount = streak?.count ?? 0
+  // 制覇した城の数（城から出たときやメニューを切りかえたときに数えなおす）
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const castlesDone = useMemo(() => conquered(allCastles()), [castleOn, mode])
   const got = newlyEarned(
     {
       ...totals,
@@ -784,6 +787,7 @@ function App() {
       collection: new Set(party.members.map((m) => `${m.species ?? 'mochi'}:${m.kind ?? 'normal'}`)).size,
       bossBook: baseBeaten(loadBook(), BASE_BOSS_NAMES),
       bossTotal: BASE_BOSS_NAMES.length,
+      castles: castlesDone,
     },
     earned,
   )

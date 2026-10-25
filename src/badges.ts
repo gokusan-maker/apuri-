@@ -25,6 +25,7 @@ export type BadgeStats = {
   bossTotal?: number // その全体の数
   modesPlayed?: number // 遊んだクイズの種類の数
   diaryDays?: number // 英語日記を書いた日数
+  castles?: number // 制覇した城（単語の海・文法の森・構文の山・ボスの城）の数
 }
 
 export type Badge = {
@@ -74,6 +75,9 @@ export const BADGES: Badge[] = [
   { id: 'species-all', icon: '🐾', name: 'キャラクター博士', desc: 'キャラクターを6種類ぜんぶ集める（ごほうび 🎟1）', check: (s) => (s.species ?? 1) >= 6 },
   { id: 'bossbook-all', icon: '📕', name: 'ボス図鑑マスター', desc: 'ステージと大学入試の塔のボスをぜんぶたおす（ごほうび 🎟3）', check: (s) => !!s.bossTotal && (s.bossBook ?? 0) >= s.bossTotal },
   { id: 'collect-all', icon: '🌈', name: 'コレクションマスター', desc: 'コレクション表の36マスをぜんぶうめる（ごほうび 🎟3・🪙200）', check: (s) => (s.collection ?? 0) >= 36 },
+  { id: 'castle-1', icon: '🏰', name: '城の主', desc: '城（海・森・山・ボスの城）を1つ制覇する', check: (s) => (s.castles ?? 0) >= 1 },
+  { id: 'castle-5', icon: '🗺️', name: '城めぐりの達人', desc: '城を5つ制覇する', check: (s) => (s.castles ?? 0) >= 5 },
+  { id: 'castle-15', icon: '👑', name: '大陸の覇者', desc: '城を15制覇する', check: (s) => (s.castles ?? 0) >= 15 },
   { id: 'answers-5000', icon: '🌠', name: '5000問の流れ星', desc: '累計5000問に答える', check: (s) => s.answers >= 5000 },
 ]
 
