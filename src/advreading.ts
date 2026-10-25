@@ -3293,6 +3293,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-daylight-saving',
+    title: 'Changing the Clocks',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Twice a year, people in many countries change their clocks. In spring they move them forward by one hour, and in autumn they move them back again. This system, known as daylight saving time, was introduced in several countries during the First World War. The idea was to make better use of natural light in the evening and ( A ) save fuel.",
+      "Supporters argue that longer evenings encourage people to spend time outdoors, to shop, and to play sports after work. Some studies have also suggested that there are fewer traffic accidents when it is still light during the evening rush hour.",
+      "However, the benefits are now widely questioned. Modern buildings use electricity all day, so the amount of energy saved is small, if there is any at all. More seriously, the sudden change in spring can disturb people's sleep. In the days ( B ) the clocks go forward, some researchers have reported a rise in heart problems and workplace accidents, perhaps because people are tired.",
+      "For these reasons, a number of countries have stopped changing their clocks, and others are debating whether to do the same. The difficulty is deciding which time to keep permanently. Choosing summer time would mean darker mornings in winter, ( C ) choosing standard time would mean losing the long summer evenings that many people enjoy.",
+      "The story of daylight saving time shows how a policy that made sense in one period can become harder to justify as society changes.",
+    ],
+    ja: [
+      '年に2回、多くの国の人々は時計を変える。春には1時間進め、秋にはまたもどす。サマータイムとして知られるこの制度は、第一次世界大戦中にいくつかの国で導入された。夕方の自然の光をよりよく使い、燃料を節約するという考えだった。',
+      '支持する人々は、夕方が長くなると、人々は仕事のあとに外で過ごしたり、買い物をしたり、スポーツをしたりするようになると主張する。夕方のラッシュアワーにまだ明るいと、交通事故が減ることを示した研究もある。',
+      'しかし、その利点はいまでは広く疑われている。現代の建物は1日じゅう電気を使うので、節約されるエネルギーの量は、たとえあったとしてもわずかである。より深刻なのは、春の急な変化が人々の睡眠を乱しうることだ。時計が進められたあとの数日間に、心臓の病気や職場の事故が増えたと報告している研究者もいる。おそらく人々が疲れているからだろう。',
+      'こうした理由から、時計を変えるのをやめた国もいくつかあり、同じようにするかどうか議論している国もある。むずかしいのは、どちらの時間をずっと使い続けるかを決めることだ。夏時間を選べば冬の朝が暗くなり、一方で標準時間を選べば、多くの人が楽しんでいる夏の長い夕方を失うことになる。',
+      'サマータイムの歴史は、ある時代には理にかなっていた政策が、社会が変わるにつれて正当化しにくくなりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'make better use … and so save fuel で「そうして燃料を節約する」。to make … and (so) save と to のあとの原形を and でつないでいる。such・too・very は動詞の前に置けない。' },
+      { id: 'B', choices: ['after', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the clocks go forward）なので接続詞として使える after「時計が進められたあとの数日間に」。during・despite・because of は前置詞の働きで、うしろに文を続けられない。' },
+      { id: 'C', choices: ['while', 'despite', 'instead of', 'in spite of'], answer: 0, why: '「～である一方で」と対比する接続詞 while。うしろが文（choosing standard time would mean …）なので、前置詞の despite・instead of・in spite of は入らない。' },
+    ],
+    tf: [
+      { statement: 'サマータイムは第一次世界大戦中にいくつかの国で導入された。', answer: true, why: '第1段落 was introduced in several countries during the First World War。' },
+      { statement: '筆者によれば、現代ではサマータイムで大量のエネルギーが節約される。', answer: false, why: '第3段落 the amount of energy saved is small, if there is any at all。' },
+      { statement: '夏時間を一年じゅう使うと、冬の朝が暗くなる。', answer: true, why: '第4段落 Choosing summer time would mean darker mornings in winter。' },
+    ],
+    qa: [
+      { q: 'Why might heart problems and accidents increase after the clocks go forward?', choices: ['Because people may be tired from disturbed sleep.', 'Because buildings use more electricity.', 'Because evenings become darker.', 'Because people play more sports.'], answer: 0, why: '第3段落 the sudden change in spring can disturb people\'s sleep … perhaps because people are tired。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
