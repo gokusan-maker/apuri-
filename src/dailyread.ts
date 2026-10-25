@@ -4,6 +4,8 @@ import { PASSAGES, type Passage } from './reading'
 import { loadGrade, WORD_LEVELS_FOR } from './usergrade'
 import { loadProgress } from './srs'
 import { levelOf, WORDS, type Word } from './words'
+import { courseOf } from './wordcourse'
+import { loadLevels } from './settings'
 
 // あたりまえすぎて課題にしない語
 const SKIP = new Set(['a', 'an', 'the', 'i', 'is', 'am', 'are', 'was', 'were', 'be', 'to', 'of', 'in', 'on', 'at', 'and', 'but', 'or', 'it', 'he', 'she', 'we', 'you', 'they', 'my', 'your', 'his', 'her', 'our', 'their', 'me', 'him', 'us', 'them', 'this', 'that', 'do', 'does', 'did', 'have', 'has', 'not', 'no', 'yes', 'so', 'for', 'with', 'by', 'very'])
@@ -33,14 +35,17 @@ export function wordsInText(text: string, max = 5, words: Word[] = WORDS): Word[
 // 学年をえらんでいて中1より上なら、その学年の単語帳から日ごとに5語（まだ覚えていない語を先に・同じ日は同じ）
 export function todayWords(day: string): Word[] {
   const g = loadGrade()
-  if (!g || g === 'j1') return wordsInText(dailyShort(day).text)
+  const course = courseOf(loadLevels()) // 単語コース（英検の級など）をえらんでいたら、そのコースの単語から
+  if (!course && (!g || g === 'j1')) return wordsInText(dailyShort(day).text)
+  const key = course ? `course:${course.id}` : g
   // その日にえらんだ5語は保存して、1日のあいだ変わらないようにする
   const saved = loadPicked()
-  if (saved && saved.day === day && saved.grade === g) {
+  if (saved && saved.day === day && saved.grade === key) {
     const ws = saved.ids.map((id) => WORDS.find((w) => w.id === id)).filter((w): w is Word => !!w)
     if (ws.length === saved.ids.length && ws.length > 0) return ws
   }
-  const pool = WORDS.filter((w) => WORD_LEVELS_FOR[g].includes(levelOf(w)))
+  const levels: string[] = course ? course.levels : g ? WORD_LEVELS_FOR[g] : []
+  const pool = WORDS.filter((w) => levels.includes(levelOf(w)))
   if (pool.length < 5) return wordsInText(dailyShort(day).text)
   // まだ覚えていない単語（定着していない語）を先に。かんたんすぎる日がないように
   const prog = loadProgress()
@@ -52,7 +57,7 @@ export function todayWords(day: string): Word[] {
     const w = from[(h + i * 7919) % from.length]
     if (!out.includes(w)) out.push(w)
   }
-  savePicked({ day, grade: g, ids: out.map((w) => w.id) })
+  savePicked({ day, grade: key ?? '', ids: out.map((w) => w.id) })
   return out
 }
 

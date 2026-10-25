@@ -64,3 +64,19 @@ describe('いまのトリオ連続日数', () => {
     expect(trioStreakNow('2026-10-24')).toBe(0)
   })
 })
+
+it('単語コース（英検1級など）をえらんでいると、今日の単語はそのコースの単語から（学年が中1でも）', async () => {
+  const { todayWords } = await import('./dailyread')
+  const { levelOf } = await import('./words')
+  localStorage.removeItem('eitan:today-words-pick')
+  localStorage.setItem('eitan:grade', 'j1')
+  localStorage.setItem('eitan:levels', JSON.stringify(['英検1級']))
+  const ws = todayWords('2026-10-25')
+  expect(ws).toHaveLength(5)
+  expect(ws.every((w) => levelOf(w) === '英検1級')).toBe(true)
+  localStorage.setItem('eitan:levels', JSON.stringify(['ネイティブ']))
+  expect(todayWords('2026-10-25').every((w) => levelOf(w) === 'ネイティブ')).toBe(true) // コースを変えたらその日でも変わる
+  localStorage.removeItem('eitan:grade')
+  localStorage.removeItem('eitan:levels')
+  localStorage.removeItem('eitan:today-words-pick')
+})
