@@ -18,3 +18,22 @@ export function todayReadingTitle(day: string): string {
   const r = todayReading(day)
   return r.kind === 'long' ? shownTitle(r.p, LONG_PASSAGES.indexOf(r.p)) : r.p.title
 }
+
+// 今日の課題は2問まで（多すぎないように）：空所2つ（足りなければ○×）だけ。ほかの空所は答えを本文にうめておく
+export const TODAY_READING_QS = 2
+export function trimForToday(p: LongPassage, n = TODAY_READING_QS): LongPassage {
+  const blanks = p.blanks.slice(0, n)
+  const tf = p.tf.slice(0, Math.max(0, n - blanks.length))
+  const fill = (t: string) =>
+    t
+      .replace(/\( ([A-Z]) \)/g, (m, id: string) => {
+        if (blanks.some((b) => b.id === id)) return m
+        const b = p.blanks.find((x) => x.id === id)
+        return b ? b.choices[b.answer] : m
+      })
+      .replace(/\[ (\d+) \]/g, (m, id: string) => {
+        const sb = p.sentences?.find((x) => x.id === id)
+        return sb ? sb.choices[sb.answer] : m
+      })
+  return { id: p.id, title: p.title, level: p.level, paragraphs: p.paragraphs.map(fill), ja: p.ja, blanks, tf, table: p.table }
+}

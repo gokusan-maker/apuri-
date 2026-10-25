@@ -181,7 +181,7 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
     expect(screen.queryByRole('tablist', { name: '読解のむずかしさ' })).not.toBeInTheDocument()
     expect(screen.queryByText('← 一覧')).not.toBeInTheDocument()
-    for (const q of p.questions) {
+    for (const q of p.questions.slice(0, 2)) { // 今日の課題は2問まで
       fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
       fireEvent.click(screen.getByText('次へ'))
     }
@@ -192,7 +192,7 @@ describe('App', () => {
     expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
     // 今日の課題クリアのごほうび（+10XP）が読解のなかまに入る：問題の正解ぶんより10多い
     const before = JSON.parse(localStorage.getItem('eitan:buddy-today')!).reading
-    expect(before).toBeGreaterThanOrEqual(10 + p.questions.length)
+    expect(before).toBeGreaterThanOrEqual(10 + Math.min(2, p.questions.length))
   })
 
   it('ホームの単語の相棒は、進化してから上がったレベルの数だけ星が出る', async () => {

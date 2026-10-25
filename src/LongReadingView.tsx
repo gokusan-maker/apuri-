@@ -557,7 +557,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         </details>
       )}
 
-      <h3 className="long-q">問1　本文の ( A )〜( {p.blanks.at(-1)!.id} ) に入る最も適切な語を、それぞれ ア〜エ から選びなさい。</h3>
+      {p.blanks.length > 0 && <h3 className="long-q">問1　本文の ( A )〜( {p.blanks.at(-1)!.id} ) に入る最も適切な語を、それぞれ ア〜エ から選びなさい。</h3>}
       {p.blanks.map((b) => (
         <div key={b.id} className="long-item" onPointerDown={() => showBlank(b.id)}>
           <span className="long-label">( {b.id} )</span>
@@ -616,7 +616,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         </>
       )}
 
-      <h3 className="long-q">問2　次の英文が本文の内容と合っていれば○、合っていなければ×を選びなさい。</h3>
+      {p.tf.length > 0 && <h3 className="long-q">問2　次の英文が本文の内容と合っていれば○、合っていなければ×を選びなさい。</h3>}
       {p.tf.map((t, i) => (
         <div key={i} className="long-item">
           <p className="long-statement">

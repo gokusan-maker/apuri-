@@ -47,3 +47,15 @@ it('長文読解：本文ははじめから上に固定（問題といっしょ�
   expect(localStorage.getItem('eitan:long-pin')).toBe('0')
   localStorage.removeItem('eitan:long-pin')
 })
+
+it('今日の読解の課題は2問まで：空所2つだけで、ほかの空所は本文にうめる', async () => {
+  const { trimForToday } = await import('./todayread')
+  const p = LONG_PASSAGES.find((x) => x.blanks.length >= 4)!
+  const t = trimForToday(p)
+  expect(t.blanks.length + t.tf.length).toBe(2)
+  expect(t.qa).toBeUndefined()
+  const text = t.paragraphs.join(' ')
+  expect(text).toContain(`( ${p.blanks[0].id} )`)
+  expect(text).not.toContain(`( ${p.blanks[3].id} )`)
+  expect(text).toContain(p.blanks[3].choices[p.blanks[3].answer])
+})

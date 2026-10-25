@@ -3,7 +3,7 @@ import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PlayContext, type PlayRegister } from './playing'
-import { todayReading, todayReadingTitle } from './todayread'
+import { todayReading, todayReadingTitle, trimForToday, TODAY_READING_QS } from './todayread'
 import { BossTeamContext, type BossTeam } from './bossteam'
 import type { LongPassage } from './longreading'
 import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
@@ -1837,8 +1837,8 @@ function App() {
           {mode === 'reading' && shortGo && todayReading(today).kind === 'long' ? (
             <LongReading
               key="today"
-              passages={[todayReading(today).p as LongPassage]}
-              start={todayReading(today).p as LongPassage}
+              passages={[trimForToday(todayReading(today).p as LongPassage)]}
+              start={trimForToday(todayReading(today).p as LongPassage)}
               onClose={() => setShortGo(false)}
               onDone={() => {
                 if (loadDailyShortDay() !== today) {
@@ -1855,7 +1855,7 @@ function App() {
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}
-              start={shortGo ? dailyShort(today) : undefined}
+              start={shortGo ? { ...dailyShort(today), questions: dailyShort(today).questions.slice(0, TODAY_READING_QS) } : undefined}
               onClose={shortGo ? () => setShortGo(false) : undefined}
               onDone={() => {
                 if (shortGo && loadDailyShortDay() !== today) {
