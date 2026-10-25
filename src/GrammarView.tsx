@@ -17,7 +17,7 @@ import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
 import { examFigs, figOf } from './grammarfig'
-import { GC_LEVELS, GC_PASS, gcFloorsFor, levelUnits, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
+import { floorMistake, GC_LEVELS, GC_PASS, gcFloorsFor, levelUnits, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -1031,6 +1031,14 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && score >= Math.min(GC_PASS, unit.questions.length) && <FloorClear next={gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1]?.label} />}
+        {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && floorMistake(unit.questions) && (
+          <div className="grammar-mistake" aria-label="この階のよくあるまちがい">
+            <p className="grammar-mistake-title">⚠ この階のよくあるまちがい</p>
+            <p className="ng">✕ {floorMistake(unit.questions)!.wrong}</p>
+            <p className="ok">○ {floorMistake(unit.questions)!.right}</p>
+            <p className="why">{floorMistake(unit.questions)!.why}</p>
+          </div>
+        )}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1] && (
           <button className="good next-unit-btn" onClick={() => openFloor(gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].id)}>
             🏰 次の階へ ▶ {gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].label}

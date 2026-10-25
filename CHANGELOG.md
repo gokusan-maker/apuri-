@@ -2056,3 +2056,4 @@
 - 2026-10-25: 旧帝大レベルの長文「What the Marshmallow Test Really Tells Us」（マシュマロ実験と自制心）を追加
 - 2026-10-25: 高2・高3の文法単元を3つ追加：関係代名詞の as・仮定法未来（were to / should）・譲歩の倒置（Young as he is）
 - 2026-10-25: 高2・高3の文法単元をさらに3つ追加：all the 比較級 for・否定語を使わない否定（anything but / fail to）・what is more / what S was
+- 2026-10-25: 文法の城の階をクリアすると、その階の単元の「よくあるまちがい」（✕と○と理由）を1つ見せるように

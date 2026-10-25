@@ -4,6 +4,7 @@ import { GRAMMAR, gradeOf, type GrammarQuestion, type GrammarUnit } from './gram
 import { EXAM_GRAMMAR } from './examgrammar'
 import { LEVEL_GRAMMAR } from './examgrammar2'
 import type { GradeId } from './usergrade'
+import { mistakeOf, type Mistake } from './grammarmistake'
 
 export const FLOOR_QS = 5
 export const FLOORS_PER_PART = 3
@@ -169,4 +170,14 @@ export function saveGcLevel(id: string): void {
   } catch {
     /* 保存できなくても動く */
   }
+}
+
+// 階をクリアしたら見せる「よくあるまちがい」：その階の問題が入っていた単元から1つ
+export function floorMistake(qs: GrammarQuestion[]): Mistake | undefined {
+  for (const q of qs) {
+    const u = GRAMMAR.find((x) => x.questions.includes(q))
+    const m = u && mistakeOf(u.id)
+    if (m) return m
+  }
+  return undefined
 }

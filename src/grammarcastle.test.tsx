@@ -50,3 +50,13 @@ it('文法のレベル：単語・読解と同じ15レベル（中1〜高3・私
   render(<Grammar castleLevel="東大" />)
   expect(screen.getByRole('region', { name: '東大の文法の森' })).toBeInTheDocument()
 })
+
+it('文法の城の階をクリアしたら、その階の単元の「よくあるまちがい」を1つ見せる', async () => {
+  const { floorMistake, gcFloorsFor } = await import('./grammarcastle')
+  for (const lv of ['中1', '高2', '高3']) {
+    const m = floorMistake(gcFloorsFor(lv)[0].questions)
+    expect(m, lv).toBeDefined()
+    expect(m!.wrong).not.toBe(m!.right)
+  }
+  expect(floorMistake([])).toBeUndefined()
+})
