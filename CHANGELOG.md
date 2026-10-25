@@ -2007,3 +2007,4 @@
 - 2026-10-25: 京大レベルの専用長文「The Pleasure of Waiting」（待つ楽しみ・252語）を追加
 - 2026-10-25: TOEICレベルの専用長文「An Email About a Conference Booking」（会議の予約メール・215語）を追加
 - 2026-10-25: ネイティブレベルの専用エッセイ「Being Bad at Something Again」（大人が初心者になる・260語）を追加
+- 2026-10-25: 私学難関〜東大の単語を30語追加（prolong・prudent・scrutinize・irrevocable など）
