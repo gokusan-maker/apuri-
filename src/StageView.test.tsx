@@ -393,3 +393,16 @@ it('レベルのボスをはじめてたおすと、負けおしみのひとこ�
   expect(bossFarewell('ドラゴン', '京大')).toContain('京大の力、みとめてやる')
   expect(bossFarewell('ドラゴン', '京大')).toContain('次のレベル')
 })
+
+it('ボスの城の問題の階をはじめてクリアすると、コインがもらえる（結果にも表示）', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs, BC_FLOOR_COINS } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 0)
+  render(<BossFloor title="t" qs={qs} reward={BC_FLOOR_COINS} onDone={() => {}} onBack={() => {}} />)
+  for (const q of qs) {
+    const btn = [...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!
+    fireEvent.click(btn)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByText(`🪙 ${BC_FLOOR_COINS}コイン ゲット！`)).toBeInTheDocument()
+})

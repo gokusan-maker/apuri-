@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -105,7 +105,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const specialEvent = event !== undefined ? event : specialEventOf(dayKey(), { hour, weekend, goldReady: keys >= KEYS_FOR_GOLD && !!onOpenGold })
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
-  const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[] }) | null>(null) // ボスの城の問題の階（1〜4階）
+  const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[]; first?: boolean }) | null>(null) // ボスの城の問題の階（1〜4階）
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
@@ -582,8 +582,10 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         qs={bcFloor.qs}
         taunt={bossTaunt(BOSSES[LEVEL_BOSS_LOOK[bcFloor.course]].name, bcFloor.floor)}
         onBack={() => setBcFloor(null)}
+        reward={bcFloor.first && onRankBonus ? BC_FLOOR_COINS : 0}
         onDone={(score) => {
           if (score >= BC_PASS && !bcClears.includes(bcFloor.id)) {
+            onRankBonus?.(BC_FLOOR_COINS)
             const next = [...bcClears, bcFloor.id]
             setBcClears(next)
             saveBcClears(next)
@@ -632,7 +634,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             const f = bossCastleFloors([bossLv]).find((x) => x.id === id)!
             window.scrollTo?.({ top: 0 })
             if (f.floor === BC_FLOORS - 1) setLvFight(f.course)
-            else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor) })
+            else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor), first: !bcClears.includes(f.id) })
           }}
         />
         {farewell && (

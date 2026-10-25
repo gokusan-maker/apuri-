@@ -10,6 +10,7 @@ import type { Level } from './words'
 export const BC_FLOORS = 5
 export const BC_QS = 5
 export const BC_PASS = 4
+export const BC_FLOOR_COINS = 5 // 問題の階をはじめてクリアしたときのコイン
 export const BC_KIND = ['単語', '文法', '読解', 'ミックス'] as const
 export type BcFloor = { id: string; course: CourseId; floor: number } // floor：0〜3 が問題の階、4 がボス
 
