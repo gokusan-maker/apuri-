@@ -4235,6 +4235,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-escalator',
+    title: 'Walk or Stand on the Escalator?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities, there is an unwritten rule on escalators: people who want to stand keep to one side, leaving the other side open for those in a hurry. Interestingly, the side differs from place to place. In some cities, people stand on the left, while in others, they stand on the right.",
+      "Recently, however, railway companies in several countries have been asking passengers to stand on both sides and not to walk. The main reason is safety. Escalators are not designed for walking, and people who rush up the steps can trip or bump into others. Older people and those ( A ) cannot hold the handrail on one side because of an injury may also feel uncomfortable standing in a fixed position.",
+      "Surprisingly, standing on both sides may also move more people. Tests at some busy stations have shown that on long escalators, few people actually choose to walk. As a result, the walking side is often half empty while a long line forms for the standing side. When everyone stands, the escalator carries ( B ) people overall, and the line at the bottom becomes shorter.",
+      "Changing a long-standing habit is not easy, and many passengers still walk out of habit. Even so, some stations have reported gradual progress by ( C ) up signs and making repeated announcements.",
+    ],
+    ja: [
+      '多くの都市で、エスカレーターには暗黙のルールがある。立って乗りたい人は片側に寄り、急いでいる人のためにもう片側を空けておくのだ。おもしろいことに、その側は場所によってちがう。左側に立つ都市もあれば、右側に立つ都市もある。',
+      'しかし最近、いくつかの国の鉄道会社は、乗客に両側に立って歩かないようにとよびかけている。おもな理由は安全である。エスカレーターは歩くように設計されておらず、段をかけ上がる人はつまずいたり、ほかの人にぶつかったりすることがある。高齢の人や、けがのせいで片側の手すりをつかめない人も、決まった位置に立つことに不安を感じるかもしれない。',
+      'おどろいたことに、両側に立つほうが、より多くの人を運べるかもしれない。混雑するいくつかの駅での試験では、長いエスカレーターでは、実際に歩くことをえらぶ人は少ないことがわかった。その結果、歩く側はしばしば半分空いているのに、立つ側には長い列ができる。全員が立つと、エスカレーターは全体としてより多くの人を運び、下の列は短くなるのである。',
+      '長年の習慣を変えるのは簡単ではなく、多くの乗客はいまも習慣で歩いている。それでも、表示をかかげたり、くり返し案内放送をしたりすることで、少しずつ成果が出ていると報告している駅もある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'whom', 'whose', 'which'], answer: 0, why: '先行詞 those（人）を説明し、cannot hold の主語になる関係代名詞 who。whom は目的語、whose のうしろには名詞が必要、which は物に使う。' },
+      { id: 'B', choices: ['more', 'much', 'very', 'a lot'], answer: 0, why: '可算名詞 people の前で「より多くの」を表す比較級 more。much は数えられない名詞に使い、very は名詞を修飾できず、a lot は a lot of の形が必要。' },
+      { id: 'C', choices: ['putting', 'put', 'puts', 'to put'], answer: 0, why: '前置詞 by のあとは動名詞。by ～ing で「～することによって」。put up a sign で「表示をかかげる」。' },
+    ],
+    tf: [
+      { statement: 'エスカレーターで立つ側は、どこでも同じである。', answer: false, why: '第1段落 the side differs from place to place。' },
+      { statement: '鉄道会社が両側に立つようよびかける主な理由は安全である。', answer: true, why: '第2段落 The main reason is safety。' },
+      { statement: '長いエスカレーターでは、歩くことをえらぶ人が多い。', answer: false, why: '第3段落 on long escalators, few people actually choose to walk。' },
+    ],
+    qa: [
+      { q: 'Why can standing on both sides move more people?', choices: ['Few people walk, so the walking side is often half empty.', 'Escalators move faster when people stand.', 'People take up less space when walking.', 'Stations add more escalators.'], answer: 0, why: '第3段落 few people actually choose to walk … the walking side is often half empty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
