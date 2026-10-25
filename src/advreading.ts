@@ -3139,6 +3139,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-food-waste',
+    title: 'Where Does Our Leftover Food Go?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, large amounts of food that is still safe to eat are thrown away. Supermarkets remove bread and rice balls from their shelves when the 'best before' date gets close, restaurants throw out what customers leave on their plates, and families forget about vegetables ( A ) at the back of the refrigerator.",
+      "Food waste is a problem for several reasons. First, it wastes money. Second, the water, energy, and labor used to grow and transport the food are wasted too. Third, food that is buried in the ground produces gases that contribute to global warming.",
+      "Some companies have started to take action. One convenience store chain now sells items that are close to their date at lower prices, and a few restaurants let customers take home what they cannot finish. There are also smartphone apps that tell users ( B ) nearby shops have extra food to sell cheaply at the end of the day.",
+      "However, businesses cannot solve the problem alone. Each of us can help by buying only what we need, checking the refrigerator before shopping, and ( C ) that 'best before' does not mean 'dangerous after.' Small changes at home, repeated by millions of people, can make a real difference.",
+    ],
+    ja: [
+      '毎日、まだ安全に食べられる大量の食べ物が捨てられている。スーパーは「賞味期限」が近づくとパンやおにぎりを棚から下げ、レストランは客が皿に残したものを捨て、家庭では冷蔵庫の奥に残った野菜のことを忘れてしまう。',
+      '食品ロスはいくつかの理由で問題である。第一に、お金のむだになる。第二に、食べ物を育て運ぶのに使われた水やエネルギーや労働もむだになる。第三に、地面にうめられた食べ物は、地球温暖化の原因となるガスを出す。',
+      '行動を始めた企業もある。あるコンビニのチェーンは、期限の近い商品を安い値段で売るようになり、食べきれなかったものを客が持ち帰れるようにしているレストランもいくつかある。また、近くの店が1日の終わりに安く売れる余った食べ物をもっているかどうかを、利用者に知らせてくれるスマホのアプリもある。',
+      'しかし、企業だけでこの問題を解決することはできない。私たち一人ひとりが、必要なものだけを買い、買い物の前に冷蔵庫を確かめ、「賞味期限」が「過ぎたら危険」という意味ではないことを覚えておくことで、手助けできる。何百万人もの人がくり返す家庭での小さな変化が、本当のちがいを生むことができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['left', 'leaving', 'leave', 'leaves'], answer: 0, why: 'vegetables を後ろから説明する過去分詞 left（冷蔵庫の奥に残された野菜）。野菜は「残される」側なので過去分詞。leave・leaves は動詞で、forget about のあとに文は続かない。' },
+      { id: 'B', choices: ['whether', 'what', 'unless', 'that if'], answer: 0, why: 'tell 人 whether ～ で「～かどうかを人に知らせる」。うしろが完全な文なので what は入らず、unless は tell の目的語になれず、that if の形はない。' },
+      { id: 'C', choices: ['remembering', 'remember', 'remembered', 'to remembering'], answer: 0, why: 'by buying …, checking …, and remembering … と、前置詞 by のあとの動名詞を3つ並べている。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、うめられた食べ物は地球温暖化の原因となるガスを出す。', answer: true, why: '第2段落 food that is buried in the ground produces gases that contribute to global warming。' },
+      { statement: 'あるコンビニのチェーンは、期限の近い商品を無料で配っている。', answer: false, why: '第3段落 sells items that are close to their date at lower prices（安く売っている）。' },
+      { statement: '筆者は、食品ロスは企業だけで解決できると考えている。', answer: false, why: '第4段落 businesses cannot solve the problem alone。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest individuals do?', choices: ['Buy only what they need and check the refrigerator before shopping.', 'Stop eating at restaurants.', 'Throw away food after the "best before" date.', 'Use apps to order more food.'], answer: 0, why: '第4段落 buying only what we need, checking the refrigerator before shopping。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
