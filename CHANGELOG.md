@@ -2043,3 +2043,4 @@
 - 2026-10-25: 高3（共通テスト）レベルの長文「Libraries in the Digital Age」（変わる図書館・216語）を追加
 - 2026-10-25: ネイティブの口語表現を25語追加（break a leg・my bad・hit the spot など）。ネイティブのレベルには wordsnative.ts の表現がすべて入るように
 - 2026-10-25: 高2・高3の単語を20語追加（declare・excuse・suspect・threaten など）
+- 2026-10-25: 私学難関レベルの長文「Are Emoji a New Language?」（絵文字は言語か・260語）を追加

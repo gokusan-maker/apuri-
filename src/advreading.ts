@@ -3629,6 +3629,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-emoji',
+    title: 'Are Emoji a New Language?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, billions of small pictures are sent around the world in text messages: smiling faces, hearts, thumbs-up signs, and countless others. These symbols, known as emoji, were first designed in Japan in the late 1990s and have since spread to almost every country ( A ) mobile phones are used.",
+      "Some people claim that emoji are becoming a new universal language. After all, a picture of a crying face seems to mean the same thing whether you live in Tokyo or Toronto. Emoji can also add feelings to a message that might otherwise sound cold. A short reply such as 'OK' can seem unfriendly, but the same reply followed by a smile feels much warmer.",
+      "Linguists, however, point out that emoji lack many features of a true language. They have no grammar ( B ) would allow them to express complex ideas, such as 'If it had not rained, we would have gone to the beach.' Moreover, their meanings are not as universal as they seem. A symbol that looks friendly in one culture may be read as rude or sarcastic in another, and even people of different ages sometimes understand the same emoji differently.",
+      "It may be more accurate, then, to see emoji not as a replacement for words but as a modern form of tone of voice and facial expression. In face-to-face conversation, we rely on smiles and gestures to show how we feel. In writing, where these signals are missing, emoji help to fill the gap. They do not replace language; they ( C ) it.",
+    ],
+    ja: [
+      '毎日、何十億もの小さな絵がメッセージで世界中に送られている。笑顔、ハート、親指を立てた手、そのほか数えきれないほどの絵である。絵文字として知られるこうした記号は、1990年代の終わりに日本で最初にデザインされ、それ以来、携帯電話が使われているほとんどすべての国に広まった。',
+      '絵文字は新しい世界共通語になりつつあると主張する人もいる。なんといっても、泣いている顔の絵は、東京に住んでいてもトロントに住んでいても、同じことを意味するように思える。絵文字は、そうでなければ冷たく聞こえるかもしれないメッセージに気持ちを加えることもできる。「OK」のような短い返事は無愛想に思えることがあるが、同じ返事に笑顔がつくとずっと温かく感じられる。',
+      'しかし言語学者たちは、絵文字には本当の言語がもつ多くの特徴が欠けていると指摘する。絵文字には、「雨が降らなかったら、海に行っていただろう」のような複雑な考えを表せるようにする文法がない。さらに、その意味は見かけほど世界共通ではない。ある文化では親しげに見える記号が、別の文化では失礼だったり皮肉だったりすると受けとられることがあり、年齢のちがう人々が同じ絵文字を別の意味に理解することさえある。',
+      'そうすると、絵文字は言葉にとってかわるものではなく、声の調子や表情の現代版と見るほうが正確かもしれない。顔をあわせた会話では、私たちは気持ちを示すのに笑顔や身ぶりにたよる。こうした合図が欠けている書き言葉では、絵文字がそのすきまをうめる助けになる。絵文字は言語にとってかわるのではなく、言語をおぎなうのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 every country（場所）を説明し、うしろが欠けたところのない文（mobile phones are used）なので関係副詞 where。which は used in のように前置詞が必要で、what は先行詞をとらず、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 grammar を説明し、would allow の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろには主語のそろった文が必要で、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['complement', 'complements', 'complementing', 'complementary'], answer: 0, why: '主語 they（複数）に続く現在形の動詞 complement「おぎなう」。complements は3人称単数、complementing は動詞だけでは使えず、complementary は形容詞。' },
+    ],
+    tf: [
+      { statement: '絵文字は1990年代の終わりに日本で最初にデザインされた。', answer: true, why: '第1段落 were first designed in Japan in the late 1990s。' },
+      { statement: '言語学者によれば、絵文字には複雑な考えを表す文法がある。', answer: false, why: '第3段落 They have no grammar that would allow them to express complex ideas。' },
+      { statement: '同じ絵文字でも、文化や年齢によって受けとり方がちがうことがある。', answer: true, why: '第3段落 may be read as rude or sarcastic in another … people of different ages sometimes understand the same emoji differently。' },
+    ],
+    qa: [
+      { q: 'According to the last paragraph, how should emoji be seen?', choices: ['As a modern form of tone of voice and facial expression.', 'As a complete replacement for words.', 'As a language with its own grammar.', 'As a sign that people no longer write well.'], answer: 0, why: '第4段落 see emoji not as a replacement for words but as a modern form of tone of voice and facial expression。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
