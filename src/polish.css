@@ -2803,3 +2803,5 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 @keyframes free-glow { 50% { box-shadow: 0 5px 0 #047857, 0 0 26px rgb(16 185 129 / 0.75); } }
 .home-gacha-free { margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: #dcfce7; color: #047857; font-size: 0.7rem; font-weight: 900; white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .gacha .gacha-btn.gacha-free { animation: none; } }
+/* 学年をまだえらんでいないときの「🎓 学年をえらぶ」（今日の課題の見出しの右） */
+.today-grade.today-grade-pick { border: none; background: linear-gradient(180deg, #c084fc, #9333ea); color: #fff; font-weight: 900; white-space: nowrap; cursor: pointer; box-shadow: 0 2px 0 #6b21a8; }

@@ -2,6 +2,7 @@
 import { makeLookup } from './glossary'
 import { PASSAGES, type Passage } from './reading'
 import { loadGrade, WORD_LEVELS_FOR } from './usergrade'
+import { loadProgress } from './srs'
 import { levelOf, WORDS, type Word } from './words'
 
 // あたりまえすぎて課題にしない語
@@ -29,19 +30,48 @@ export function wordsInText(text: string, max = 5, words: Word[] = WORDS): Word[
 }
 
 // 今日の単語：今日の読解に出てくる単語（4択で練習してから英文を読む）
-// 学年をえらんでいて中1より上なら、その学年の単語帳から日ごとに5語（同じ日は同じ）
+// 学年をえらんでいて中1より上なら、その学年の単語帳から日ごとに5語（まだ覚えていない語を先に・同じ日は同じ）
 export function todayWords(day: string): Word[] {
   const g = loadGrade()
   if (!g || g === 'j1') return wordsInText(dailyShort(day).text)
+  // その日にえらんだ5語は保存して、1日のあいだ変わらないようにする
+  const saved = loadPicked()
+  if (saved && saved.day === day && saved.grade === g) {
+    const ws = saved.ids.map((id) => WORDS.find((w) => w.id === id)).filter((w): w is Word => !!w)
+    if (ws.length === saved.ids.length && ws.length > 0) return ws
+  }
   const pool = WORDS.filter((w) => WORD_LEVELS_FOR[g].includes(levelOf(w)))
   if (pool.length < 5) return wordsInText(dailyShort(day).text)
+  // まだ覚えていない単語（定着していない語）を先に。かんたんすぎる日がないように
+  const prog = loadProgress()
+  const fresh = pool.filter((w) => (prog[w.id]?.box ?? 0) < 3)
+  const from = fresh.length >= 5 ? fresh : pool
   const h = dayHash(day)
   const out: Word[] = []
-  for (let i = 0; out.length < 5 && i < pool.length; i++) {
-    const w = pool[(h + i * 7919) % pool.length]
+  for (let i = 0; out.length < 5 && i < from.length; i++) {
+    const w = from[(h + i * 7919) % from.length]
     if (!out.includes(w)) out.push(w)
   }
+  savePicked({ day, grade: g, ids: out.map((w) => w.id) })
   return out
+}
+
+const PICK_KEY = 'eitan:today-words'
+function loadPicked(): { day: string; grade: string; ids: string[] } | null {
+  try {
+    const v = JSON.parse(localStorage.getItem(PICK_KEY) ?? 'null') as { day?: unknown; grade?: unknown; ids?: unknown } | null
+    if (!v || typeof v.day !== 'string' || typeof v.grade !== 'string' || !Array.isArray(v.ids)) return null
+    return { day: v.day, grade: v.grade, ids: v.ids.filter((x): x is string => typeof x === 'string') }
+  } catch {
+    return null
+  }
+}
+function savePicked(v: { day: string; grade: string; ids: string[] }) {
+  try {
+    localStorage.setItem(PICK_KEY, JSON.stringify(v))
+  } catch {
+    // 保存できなくても続ける
+  }
 }
 
 function load(key: string): string {

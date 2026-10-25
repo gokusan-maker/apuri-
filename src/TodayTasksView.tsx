@@ -9,10 +9,11 @@ type Props = {
   today: string
   onGo: (where: 'word' | 'grammar' | 'reading') => void
   onTrio?: (xp: number, ticket: boolean, week?: boolean) => void // 3つ全部クリアのトリオボーナスを受け取った（ticket：3日連続の🎟）
+  onPickGrade?: () => void // 学年をまだえらんでいないとき、設定の学年へ
 }
 
 // ホームの「今日の課題」：今日の単語（4択）・今日の文法・今日の読解（今日の単語が出てくるかんたんな短い英文）
-export function TodayTasks({ today, onGo, onTrio }: Props) {
+export function TodayTasks({ today, onGo, onTrio, onPickGrade }: Props) {
   const [trio, setTrio] = useState(() => loadTrioDay() === today)
   const [party, setParty] = useState(false) // 受け取った瞬間だけ紙ふぶき
   const g = dailyGrammar(today)
@@ -30,6 +31,11 @@ export function TodayTasks({ today, onGo, onTrio }: Props) {
       <p className="today-tasks-title">
         📋 今日の課題
         {gradeLabel && <span className="today-grade" title="設定の学年・レベルに合わせた課題">{gradeLabel}</span>}
+        {!gradeLabel && onPickGrade && (
+          <button className="today-grade today-grade-pick" title="学年・レベルをえらぶと、課題の単語・文法・読解のむずかしさが合う" onClick={onPickGrade}>
+            🎓 学年をえらぶ
+          </button>
+        )}
         <span className="today-stars" aria-label={`${n} / 3 クリア`}>
           {'⭐'.repeat(n)}
           {'☆'.repeat(3 - n)}

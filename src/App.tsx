@@ -1793,6 +1793,10 @@ function App() {
         <>
           <TodayTasks
             today={today}
+            onPickGrade={() => {
+              setMode('settings')
+              window.scrollTo?.({ top: 0 })
+            }}
             onTrio={(xp, ticket, week) => {
               if (week) {
                 setWallet((w) => addTicket(addTicket(w)))

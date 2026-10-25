@@ -41,7 +41,7 @@ it('中3なら今日の単語は中3の単語帳から5語、読解は高校入�
 it('社会人なら文法は中3〜高校、単語はビジネス・高校基礎、読解は大学入試レベル', () => {
   saveGrade('adult')
   for (let i = 1; i <= 20; i++) expect(['中3', '高校']).toContain(gradeOf(dailyGrammar(`2026-11-${String(i).padStart(2, '0')}`).id))
-  expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎')).toBe(true)
+  expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎' || w.level === '熟語')).toBe(true)
   expect(passagesFor('univ').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
 })
 
@@ -62,4 +62,16 @@ it('学年をえらぶと、ホームの今日の課題の見出しに学年が�
   saveGrade('j2')
   render(<TodayTasks today="2026-10-01" onGo={() => {}} />)
   expect(screen.getByText('中学2年')).toBeInTheDocument()
+})
+
+it('高校生なら今日の単語は高校基礎・熟語の単語帳から、まだ覚えていない語を先に5語（その日は変わらない）', () => {
+  saveGrade('hs')
+  const first = todayWords('2026-12-01')
+  expect(first).toHaveLength(5)
+  expect(first.every((w) => w.level === '高校基礎' || w.level === '熟語')).toBe(true)
+  // 覚えた語にしても、その日の5語は変わらない
+  localStorage.setItem('eitan:progress', JSON.stringify(Object.fromEntries(first.map((w) => [w.id, { box: 5, due: '2099-01-01' }]))))
+  expect(todayWords('2026-12-01').map((w) => w.id)).toEqual(first.map((w) => w.id))
+  // 次の日は、覚えた語をさけてえらぶ
+  expect(todayWords('2026-12-02').some((w) => first.includes(w))).toBe(false)
 })

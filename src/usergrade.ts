@@ -33,8 +33,8 @@ export const WORD_LEVELS_FOR: Record<GradeId, string[]> = {
   j1: ['中1'],
   j2: ['中2'],
   j3: ['中3'],
-  hs: ['高校基礎'],
-  adult: ['ビジネス', '高校基礎'],
+  hs: ['高校基礎', '熟語'],
+  adult: ['ビジネス', '高校基礎', '熟語'],
 }
 // 学年ごとの読解のむずかしさ（readlevel.ts の ReadLevel）
 export const READ_LEVEL_FOR: Record<GradeId, 'easy' | 'normal' | 'exam' | 'univ' | 'toefl'> = {

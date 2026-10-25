@@ -1874,3 +1874,12 @@ describe('ガチャは1日1回無料', () => {
     expect(screen.queryByRole('button', { name: /今日の無料ガチャ/ })).toBeNull()
   })
 })
+
+describe('今日の課題の学年', () => {
+  it('学年をえらんでいないときは「🎓 学年をえらぶ」で設定へ', () => {
+    localStorage.removeItem('eitan:grade')
+    render(<App />)
+    fireEvent.click(screen.getByRole('button', { name: /学年をえらぶ/ }))
+    expect(screen.getByText(/学年・レベル/)).toBeInTheDocument()
+  })
+})
