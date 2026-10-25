@@ -2073,3 +2073,4 @@
 - 2026-10-25: 私学〜東大の単語を40語追加（legacy・nostalgia・pivotal・predicament・judicious・veracity など）
 - 2026-10-25: 国公立〜東大の単語を40語追加（latent・pristine・premonition・qualm・serendipity・volition など）
 - 2026-10-25: 私学〜東大の単語を40語追加（precedent・rigorous・susceptible・solace・upheaval・preeminent など）
+- 2026-10-25: 京大・東大を中心に単語を40語追加（affable・epiphany・acumen・conundrum・fortuitous・ambiguity など）
