@@ -2038,3 +2038,4 @@
 - 2026-10-25: 高3（共通テスト）レベルの長文「Should High School Students Work Part-Time?」（高校生のアルバイト・216語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「Smartphones in the Classroom」（教室のスマホ・211語）を追加
 - 2026-10-25: 私学難関レベルの長文「The Strange Feeling of Déjà Vu」（デジャヴ）を追加
+- 2026-10-25: 国公立レベルの長文「Giving the Streets Back to People」（車を入れない街・220語）を追加

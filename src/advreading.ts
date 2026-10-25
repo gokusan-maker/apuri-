@@ -3539,6 +3539,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-car-free',
+    title: 'Giving the Streets Back to People',
+    level: '難関大（評論）',
+    paragraphs: [
+      "During the twentieth century, cities around the world were redesigned with the car at their center. Wide roads were built through old neighborhoods, and large areas of land were turned into parking lots. Today, a growing number of cities are trying to reverse this trend by ( A ) some of their central streets to cars.",
+      "When these plans are first announced, they often meet strong opposition. Shop owners fear that customers who usually arrive by car will stop coming, and drivers complain that traffic will simply move to other roads. Yet in many cases, the results have been surprisingly positive. After streets were closed to traffic, the number of people walking in the area increased, and many shops reported higher sales than before. Air pollution and noise also decreased, making the streets more pleasant places ( B ) time.",
+      "Of course, such changes do not work everywhere. They depend on good public transport, so that people who live far from the center can still reach it easily. Delivery trucks, ambulances, and people with disabilities must also be considered.",
+      "What these experiments show, however, is that the shape of a city is not fixed. The streets we take for granted were designed by people, and they can be redesigned ( C ) the needs of those who use them change.",
+    ],
+    ja: [
+      '20世紀のあいだに、世界中の都市は車を中心にすえて作りかえられた。古い地区をつらぬいて広い道路が作られ、広大な土地が駐車場に変えられた。今日、ますます多くの都市が、中心部の通りのいくつかを車に対して閉鎖することで、この流れを逆にしようとしている。',
+      'こうした計画が最初に発表されると、しばしば強い反対にあう。店の経営者は、ふだん車で来る客が来なくなることをおそれ、ドライバーは、交通がただほかの道路に移るだけだと不満を言う。しかし多くの場合、結果はおどろくほどよいものだった。通りが車に対して閉鎖されたあと、その地域を歩く人の数は増え、多くの店が以前より売り上げが増えたと報告した。大気汚染や騒音も減り、通りは時間を過ごすのにより快適な場所になった。',
+      'もちろん、こうした変化はどこでもうまくいくわけではない。中心部から遠くに住む人々も簡単に行けるように、よい公共交通が必要になる。配達のトラックや救急車、そして障がいのある人々のことも考えなければならない。',
+      'しかし、こうした試みが示しているのは、都市の形は固定されたものではないということだ。私たちが当たり前だと思っている通りは人によって設計されたものであり、それを使う人々の必要が変わるにつれて、設計しなおすことができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['closing', 'close', 'closed', 'to close'], answer: 0, why: '前置詞 by のあとは動名詞 closing。by ～ing で「～することによって」。close A to cars は「A を車に対して閉鎖する」。' },
+      { id: 'B', choices: ['to spend', 'spending', 'spend', 'spent'], answer: 0, why: 'places を後ろから説明する形容詞的用法の to 不定詞「時間を過ごすための場所」。原形・過去分詞・-ing ではこの意味にならない。' },
+      { id: 'C', choices: ['as', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the needs … change）なので、「～するにつれて」を表す接続詞 as。ほかは前置詞の働きでうしろに文を続けられない。' },
+    ],
+    tf: [
+      { statement: '20世紀の都市は、車を中心に作りかえられた。', answer: true, why: '第1段落 cities around the world were redesigned with the car at their center。' },
+      { statement: '通りを閉鎖すると、多くの店で売り上げが減った。', answer: false, why: '第2段落 many shops reported higher sales than before。' },
+      { statement: '筆者によれば、車を入れない通りはよい公共交通がなくてもうまくいく。', answer: false, why: '第3段落 They depend on good public transport。' },
+    ],
+    qa: [
+      { q: 'What is the main point of the last paragraph?', choices: ['Cities can be redesigned as people\'s needs change.', 'Cars should be banned from all cities.', 'Streets should never be changed.', 'Public transport is too expensive.'], answer: 0, why: '第4段落 the shape of a city is not fixed … they can be redesigned as the needs of those who use them change。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
