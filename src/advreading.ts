@@ -3049,6 +3049,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-mending',
+    title: 'On Mending Things',
+    level: '難関大（評論）',
+    paragraphs: [
+      "My grandmother never threw anything away if it could be mended. Socks with holes in them were sewn, broken chairs were glued, and a teapot whose handle had cracked was carefully tied with wire. As a child, I found this habit slightly embarrassing; ( A ) seemed to me that she simply could not afford new things. Only much later did I understand that mending was, for her, a way of thinking about the world.",
+      "To mend something is to pay attention to it. Before you can repair a chair, you have to look closely at how it was made, which joints carry the weight, and where it is likely to fail again. In this sense, repair is a form of learning. A person who has fixed a clock understands it far better ( B ) someone who has only looked at the time on it.",
+      "Mending also changes our relationship with objects. A mended cup is no longer just one cup among thousands made in a factory; it carries the story of the accident that broke it and the care that saved it. Such things are often loved more, not less, because of their scars.",
+      "Today it is usually cheaper to replace than to repair, and few people have the time or skill to do otherwise. Yet I sometimes wonder whether, in ( C ) the habit of mending, we have also lost a certain patience with things, and perhaps with people, that are not quite perfect.",
+    ],
+    ja: [
+      '祖母は、直せるものは決して捨てなかった。穴のあいた靴下はぬわれ、こわれたいすは接着され、取っ手にひびの入ったティーポットは針金でていねいにしばられた。子どものころ、私はこの習慣を少しはずかしく思っていた。祖母はただ新しい物を買う余裕がないのだと思えたのである。ずっとあとになってはじめて、直すことは祖母にとって世界についての1つの考え方だったのだと理解した。',
+      '何かを直すことは、それに注意を向けることである。いすを修理できるようになるには、それがどう作られているか、どの継ぎ目が重さを支えているか、そしてどこがまたこわれそうかを、よく見なければならない。この意味で、修理は学びの1つの形である。時計を直したことのある人は、時計で時刻を見たことしかない人よりも、はるかによく時計を理解している。',
+      '直すことはまた、物との関係を変える。直したカップは、もはや工場で作られた何千ものカップのうちの1つにすぎないものではない。それは、カップをこわした事故と、それを救った心づかいの物語を背負っている。そうした物は、その傷あとがあるからこそ、かえってより愛されることが多いのである。',
+      '今日では、たいてい修理するより取りかえるほうが安く、そうしないだけの時間や技術がある人はほとんどいない。それでも私はときどき、直すという習慣を失うことで、私たちは完全とは言えない物に対する、そしておそらく人に対する、ある種の忍耐も失ってしまったのではないかと思うのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['it', 'what', 'which', 'that is'], answer: 0, why: 'it seems to me that ～ で「私には～と思える」。形式主語の it が入る。what・which では文にならず、that is のうしろに seemed は続かない。' },
+      { id: 'B', choices: ['than', 'then', 'as', 'that'], answer: 0, why: '比較級 far better のあとで比べる相手を示すのは than。then は「そのとき」、as は as ～ as の形で使い、that では比較の文にならない。' },
+      { id: 'C', choices: ['losing', 'lose', 'lost', 'to lose'], answer: 0, why: '前置詞 in のうしろは動名詞。in losing ～ で「～を失うことで」。原形・過去分詞・to 不定詞は前置詞のあとに置けない。' },
+    ],
+    tf: [
+      { statement: '筆者は子どものころ、祖母の直す習慣を少しはずかしく思っていた。', answer: true, why: '第1段落 As a child, I found this habit slightly embarrassing。' },
+      { statement: '筆者によれば、直したカップは傷があるため、あまり愛されなくなる。', answer: false, why: '第3段落 Such things are often loved more, not less, because of their scars。' },
+      { statement: '筆者は、今日では修理するより取りかえるほうがふつう安いと述べている。', answer: true, why: '第4段落 Today it is usually cheaper to replace than to repair。' },
+    ],
+    qa: [
+      { q: 'Why does the writer call repair "a form of learning"?', choices: ['Because you must study closely how a thing is made in order to fix it.', 'Because repairing things is taught in schools.', 'Because new things are too expensive to buy.', 'Because clocks are difficult to read.'], answer: 0, why: '第2段落 you have to look closely at how it was made … In this sense, repair is a form of learning。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
