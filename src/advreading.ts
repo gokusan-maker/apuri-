@@ -3229,6 +3229,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-fitness-ad',
+    title: 'Notice: Grand Opening of Peak Fitness',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Peak Fitness is proud to announce the grand opening of our newest location on Maple Avenue, just two blocks from City Hall. The center will open on Monday, September 2, and will be open from 6:00 a.m. to 11:00 p.m. every day of the week.",
+      "Our new facility features modern exercise machines, a 25-meter indoor pool, and three studios for yoga and dance classes. Free parking is available for members in the building's underground garage.",
+      "To celebrate the opening, we are offering a special discount. Anyone who signs up ( A ) the end of September will pay no joining fee and will receive 30 percent off the monthly price for the first three months. Members who bring a friend ( B ) also joins will get one additional month free.",
+      "Personal trainers are available to help you create an exercise plan that suits your goals. The first session is free for all new members; additional sessions can be booked at the front desk or through our app.",
+      "Space in our group classes is limited, so we recommend ( C ) early. For more information, visit our website or call 555-0147.",
+    ],
+    ja: [
+      'ピーク・フィットネスは、市役所から2ブロックのメープル通りに、最新の店舗をグランドオープンすることをお知らせいたします。センターは9月2日（月）に開業し、毎日午前6時から午後11時まで営業します。',
+      '新しい施設には、最新の運動マシン、25メートルの屋内プール、ヨガやダンスのクラス用のスタジオが3つあります。会員はビルの地下駐車場を無料で利用できます。',
+      '開業を記念して、特別割引を行っています。9月末までに入会した方は入会金が無料になり、最初の3か月は月会費が30パーセント引きになります。いっしょに入会する友だちを連れてきた会員は、さらに1か月無料になります。',
+      '目標に合った運動の計画を作るお手伝いをするパーソナルトレーナーもいます。初回のセッションは新しい会員全員が無料です。2回目以降のセッションは、受付かアプリで予約できます。',
+      'グループクラスの定員にはかぎりがあるので、早めの予約をおすすめします。くわしくはウェブサイトをご覧いただくか、555-0147 までお電話ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by', 'until', 'since', 'during'], answer: 0, why: '「9月末までに（入会する）」としめ切りを表すのは by。until は「～までずっと」で1回の入会には使わない。' },
+      { id: 'B', choices: ['who', 'whom', 'whose', 'which'], answer: 0, why: '先行詞 a friend（人）を説明し、also joins の主語になる関係代名詞 who。whom は目的語、whose のうしろには名詞が必要、which は物に使う。' },
+      { id: 'C', choices: ['registering', 'to register', 'register', 'registered'], answer: 0, why: 'recommend は（人を入れないとき）動名詞を目的語にとる。recommend registering で「登録することをすすめる」。' },
+    ],
+    tf: [
+      { statement: '新しいセンターは毎日営業する。', answer: true, why: '第1段落 open from 6:00 a.m. to 11:00 p.m. every day of the week。' },
+      { statement: '9月末までに入会すると、最初の3か月は月会費が無料になる。', answer: false, why: '第3段落 will receive 30 percent off the monthly price for the first three months（30パーセント引き）。' },
+      { statement: 'パーソナルトレーナーの初回のセッションは、新しい会員なら無料である。', answer: true, why: '第4段落 The first session is free for all new members。' },
+    ],
+    qa: [
+      { q: 'What will members get if they bring a friend who also joins?', choices: ['One additional month free.', 'A free parking space.', 'A free personal training session.', 'No joining fee.'], answer: 0, why: '第3段落 Members who bring a friend who also joins will get one additional month free。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
