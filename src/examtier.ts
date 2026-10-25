@@ -23,7 +23,7 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
   // 私立医学部：からだ・健康・学習の科学
   'adv-placebo': 'shiritsu-med', 'adv-fever': 'shiritsu-med', 'adv-body-clock': 'shiritsu-med', 'adv-appendix': 'shiritsu-med', 'adv-multitasking': 'shiritsu-med', 'adv-spacing': 'shiritsu-med', 'adv-testing-effect': 'shiritsu-med', 'adv-walking-ideas': 'shiritsu-med',
   // 国公立大：社会・文化の評論
-  'adv-translation': 'kokkoritsu', 'adv-kindness': 'kokkoritsu', 'adv-repair': 'kokkoritsu', 'adv-mistakes': 'kokkoritsu', 'adv-zoo': 'kokkoritsu', 'adv-tourism': 'kokkoritsu', 'adv-handwriting': 'kokkoritsu', 'adv-silence': 'kokkoritsu', 'adv-commons': 'kokkoritsu', 'adv-bystander': 'kokkoritsu', 'adv-boredom': 'kokkoritsu',
+  'adv-translation': 'kokkoritsu', 'adv-cashless': 'kokkoritsu', 'adv-kindness': 'kokkoritsu', 'adv-repair': 'kokkoritsu', 'adv-mistakes': 'kokkoritsu', 'adv-zoo': 'kokkoritsu', 'adv-tourism': 'kokkoritsu', 'adv-handwriting': 'kokkoritsu', 'adv-silence': 'kokkoritsu', 'adv-commons': 'kokkoritsu', 'adv-bystander': 'kokkoritsu', 'adv-boredom': 'kokkoritsu',
   // 旧帝大：抽象度の高い評論（ことば・知識・科学のあり方）
   'adv-language-thought': 'kyutei', 'adv-language-loss': 'kyutei', 'adv-science-doubt': 'kyutei', 'adv-measure-target': 'kyutei', 'adv-crowds': 'kyutei', 'adv-maps': 'kyutei', 'adv-curse-knowledge': 'kyutei', 'adv-railway-time': 'kyutei', 'adv-explanatory-depth': 'kyutei', 'adv-survivorship': 'kyutei', 'adv-hindsight': 'kyutei',
   // 国立医学部：脳と心のしくみ

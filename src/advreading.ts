@@ -2529,6 +2529,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why could Semmelweis not explain why handwashing worked?', choices: ['The germ theory of disease had not yet been accepted.', 'He did not keep any records of deaths.', 'The midwives refused to help him.', 'Chlorine was not available in Vienna.'], answer: 0, why: '第3段落 The germ theory of disease had not yet been accepted, so Semmelweis could not explain why handwashing worked。' },
     ],
   },
+  {
+    id: 'adv-cashless',
+    title: 'The Disappearing Coin',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, cash is quietly disappearing. In Sweden, for example, only around one in ten purchases in shops is now paid for with notes or coins, and some cafés no longer accept them at all. Card and phone payments are fast and convenient, and they leave a record that makes theft and tax evasion ( A ) difficult.",
+      "Yet the shift has costs that are easy to overlook. Older people, people with disabilities, and those ( B ) have no bank account may find it hard to pay for everyday things. A cashless system also depends entirely on electricity and networks; when either fails, buying even a loaf of bread can become impossible. Some critics also worry about privacy, since every digital payment can be tracked.",
+      "For these reasons, several governments have begun to protect the right to pay in cash, ( C ) shops to accept notes and coins for basic goods. The debate is not really about money itself but about ( D ) kind of society we want: one that values speed and efficiency above all, or one that makes sure nobody is left behind.",
+    ],
+    ja: [
+      '多くの国で、現金が静かに姿を消しつつある。たとえばスウェーデンでは、店での買い物のうち紙幣や硬貨で支払われるのはいまやおよそ10回に1回にすぎず、現金をまったく受けつけないカフェもある。カードやスマートフォンでの支払いは速くて便利で、記録が残るので、盗みや脱税がよりむずかしくなる。',
+      'しかしこの変化には、見落としやすい代償もある。高齢者や障害のある人、銀行口座をもたない人は、日々のものの支払いに苦労するかもしれない。また、現金を使わないしくみは電気と通信網に完全にたよっている。どちらかが止まれば、パン1斤を買うことさえできなくなることがある。デジタルの支払いはすべて追跡できるので、プライバシーを心配する批判者もいる。',
+      'こうした理由から、いくつかの政府は現金で支払う権利を守りはじめ、店に生活必需品の代金として紙幣や硬貨を受けつけるよう求めている。この議論は、本当はお金そのものではなく、私たちがどんな社会を望むのかについての議論である。何よりも速さと効率を大切にする社会か、それとも、だれも取り残されないようにする社会か。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['more', 'much', 'the more', 'very more'], answer: 0, why: 'make O C の C に比較級 more difficult（よりむずかしく）。much difficult・very more という言い方はなく、the more はここでは使えない。' },
+      { id: 'B', choices: ['who', 'which', 'whom', 'whose'], answer: 0, why: 'those（人々）を説明し have の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['requiring', 'required', 'require', 'to requiring'], answer: 0, why: '前の文に「そして～を求めている」と付け加える分詞構文 requiring（政府が求める側なので現在分詞）。' },
+      { id: 'D', choices: ['what', 'whose', 'which of', 'how'], answer: 0, why: 'about のあとの名詞節「どんな種類の社会を～か」は what kind of ～。how kind of という形はない。' },
+    ],
+    tf: [
+      { statement: 'スウェーデンでは、店での買い物の大半がいまも現金で支払われている。', answer: false, why: '第1段落 only around one in ten purchases in shops is now paid for with notes or coins。' },
+      { statement: '現金を使わない社会では、電気や通信が止まると買い物ができなくなることがある。', answer: true, why: '第2段落 when either fails, buying even a loaf of bread can become impossible。' },
+      { statement: 'いくつかの政府は、現金で支払う権利を守ろうとしている。', answer: true, why: '第3段落 several governments have begun to protect the right to pay in cash。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what is the debate really about?', choices: ['What kind of society people want.', 'How to print more money.', 'Which bank is the safest.', 'How quickly cards can be made.'], answer: 0, why: '第3段落 not really about money itself but about what kind of society we want。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
