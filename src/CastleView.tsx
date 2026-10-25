@@ -65,6 +65,7 @@ export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goL
                 {isNow && <span className="castle-torch l" aria-hidden="true" />}
                 {isNow && <span className="castle-torch r" aria-hidden="true" />}
                 {isNow && <span className="castle-ribbon" aria-hidden="true">いまここ</span>}
+                {!isNow && <span className="castle-banner" aria-hidden="true">★</span>}
                 <span className="castle-plate">{i + 1}</span>
                 {f.fig && <span className="castle-arch">{f.fig}</span>}
                 <button className="castle-btn" aria-label={`${i + 1}${unit}：${f.label}${f.cleared ? '（クリア）' : ''}`} onClick={() => onOpen(f.id)}>

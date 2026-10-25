@@ -1938,3 +1938,4 @@
 - 2026-10-25: 私立難関大レベルの読解を1本追加（自作・うその情報が広まるわけ「Why False Stories Travel Fast」）
 - 2026-10-25: 私立医学部レベルの読解を1本追加（自作・虫垂の役割「The Organ We Thought Was Useless」）
 - 2026-10-25: 国立医学部レベルの読解を1本追加（自作・ゼンメルワイスと手洗い「The Doctor Who Asked Doctors to Wash」）
+- 2026-10-25: 城の塔のクリアした階に、かべにかかる勝利の旗（★）
