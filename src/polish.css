@@ -3086,3 +3086,16 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .exam-tier small { font-size: 0.62rem; font-weight: 700; color: var(--muted); }
 .exam-tier.on { background: linear-gradient(135deg, #7c3aed, #db2777); border-color: transparent; color: #fff; }
 .exam-tier.on small { color: #fde68a; }
+
+/* チームバトル：なかまの体力・ダメージ・ダウン */
+.boss-team-m { position: relative; }
+.boss-team-hp { display: block; width: 86%; height: 6px; margin: 0 auto 3px; border-radius: 999px; background: rgb(15 23 42 / 0.25); overflow: hidden; }
+.boss-team-hp i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #22c55e, #84cc16); transition: width 0.4s; }
+.boss-team-m.down .boss-team-hp i { background: #ef4444; }
+.boss-team-m.down .boss-team-fig { filter: grayscale(1) brightness(0.8); transform: rotate(-12deg); opacity: 0.7; }
+.boss-team-down { position: absolute; top: 8px; right: 6px; font-size: 1rem; animation: rare-twinkle 1.2s ease-in-out infinite; }
+.boss-team-m.hurt { animation: team-hurt 0.45s; }
+@keyframes team-hurt { 20% { transform: translateX(-4px); background-color: rgb(239 68 68 / 0.35); } 40% { transform: translateX(4px); } 60% { transform: translateX(-3px); } 100% { transform: none; } }
+.boss-team-dmg { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); font-style: normal; font-weight: 900; font-size: 1rem; color: #ef4444; text-shadow: 0 2px 0 #fff; animation: team-dmg 0.9s ease-out forwards; pointer-events: none; }
+@keyframes team-dmg { from { opacity: 1; translate: 0 0; } to { opacity: 0; translate: 0 -22px; } }
+@media (prefers-reduced-motion: reduce) { .boss-team-m.hurt, .boss-team-dmg, .boss-team-down { animation: none; } }

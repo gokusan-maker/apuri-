@@ -76,11 +76,16 @@ it('負けると、3体のなかまがそれぞれ1行ではげましてくれ�
       <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} startHearts={1} />
     </BossTeamContext.Provider>,
   )
-  const en = document.querySelector('.en')!.textContent!
-  const w = WORDS.find((x) => x.en === en)!
-  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choices .choice')].find((b) => b.textContent !== w.ja)!)
-  const next = screen.queryAllByRole('button').find((b) => /次へ|結果/.test(b.textContent ?? ''))
-  if (next) fireEvent.click(next)
+  // チームバトルでは、まちがえると番のなかまの体力が減り、体力0でダウン（ハート-1）→ 負け
+  for (let i = 0; i < 36 && !screen.queryByLabelText('チームのはげまし'); i++) {
+    const q = document.querySelector('.en')?.textContent ?? ''
+    const bs = [...document.querySelectorAll<HTMLButtonElement>('.choices .choice')]
+    if (bs.length === 0) break
+    const w = WORDS.find((x) => x.en === q)
+    fireEvent.click(w ? bs.find((b) => b.textContent !== w.ja)! : bs[bs.length - 1])
+    const next = screen.queryAllByRole('button').find((b) => /次へ|結果/.test(b.textContent ?? ''))
+    if (next) fireEvent.click(next)
+  }
   const cheer = screen.getByLabelText('チームのはげまし')
   expect(cheer.children).toHaveLength(3)
   expect(cheer.textContent).toContain('文法を見直せば勝てるよ！')
@@ -139,4 +144,35 @@ it('ボスの文法問題は、ボスの単語帳のレベルの単元から（�
   const ja = new Set(words.map((w) => w.ja))
   for (const q of qs.filter((x) => x.team === 'word')) expect(q.choices.every((c) => ja.has(c))).toBe(true)
   localStorage.removeItem('eitan:grade')
+})
+
+it('チームバトル：まちがえると番のなかまがこうげきを受けて体力が減り、0でダウンするとハートが減る', () => {
+  render(
+    <BossTeamContext.Provider value={team}>
+      <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+    </BossTeamContext.Provider>,
+  )
+  const hpOf = (name: string) => Number(screen.getByRole('progressbar', { name: `${name}の体力` }).getAttribute('aria-valuenow'))
+  expect(hpOf('モチまる')).toBe(40)
+  const wrong = () => {
+    const en = document.querySelector('.en')!.textContent!
+    const w = WORDS.find((x) => x.en === en)
+    const bs = [...document.querySelectorAll<HTMLButtonElement>('.choices .choice')]
+    fireEvent.click(bs.find((b) => b.textContent !== (w?.ja ?? '')) ?? bs[0])
+  }
+  wrong()
+  expect(hpOf('モチまる')).toBe(20)
+  expect(screen.getByText(/のこうげき！ 🔤単語 -20/)).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+})
+
+it('ボスの反撃は4問ごと、番の次のなかまへ。体力0のなかまはとばす', async () => {
+  const { counterTarget, hitMember, isCounterTurn, fullTeamHp, reviveOne, MEMBER_HP } = await import('./boss')
+  expect([0, 1, 2, 3, 7].map(isCounterTurn)).toEqual([false, false, false, true, true])
+  const hp = fullTeamHp()
+  expect(counterTarget(hp, 'word')).toBe('grammar')
+  expect(counterTarget({ ...hp, grammar: 0 }, 'word')).toBe('reading')
+  const r = hitMember({ ...hp, word: 15 }, 'word', 20)
+  expect(r).toEqual({ hp: { ...hp, word: 0 }, ko: true })
+  expect(reviveOne(r.hp).word).toBe(MEMBER_HP / 2)
 })

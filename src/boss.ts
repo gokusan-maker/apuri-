@@ -4,9 +4,9 @@ import { WORDS, type Level, type Word } from './words'
 import { makeQuiz, shuffle } from './quiz'
 import { GRAMMAR, gradeOf, type GrammarUnit } from './grammar'
 
-export const BOSS_HP = 150 // オーナーの要望でボスの体力アップ（100→150）
+export const BOSS_HP = 240 // オーナーの要望でボスの体力アップ（100→150→240）
 export const HEARTS = 3
-export const BOSS_QUESTIONS = 30 // 体力アップ（×1.5）に合わせて問題数も×1.5
+export const BOSS_QUESTIONS = 36 // 体力240：ボーナスなしだと36問中25問の正解が必要（負けそうで勝てる）
 export const BOSS_XP = 100
 export const HEAL_COST = 10 // ハート回復のコイン
 export const CONTINUE_COST = 20 // 負けたときのコンティニュー（1戦1回）
@@ -431,3 +431,34 @@ export function saveBossHunter(): void {
 
 // レベルに合わせた攻撃力：なかまのレベル2つごとに正解ダメージ+1（最大+10）
 export const levelAttack = (level?: number) => Math.min(10, Math.floor(Math.max(1, level ?? 1) / 2))
+
+// チームバトル：なかま1体ずつに体力がある。まちがえると番のなかまがボスのこうげきを受け、
+// 4問ごとにボスの反撃（正解しても来る）。体力が0になったなかまはダウンしてハートが1つ減る
+export const MEMBER_HP = 40
+export const MEMBER_HIT = 20 // まちがえたときのこうげき
+export const CHARGE_HIT = 35 // ためこうげきのとき
+export const COUNTER_EVERY = 4
+export const COUNTER_DMG = 10
+export type TeamHp = Record<TeamRole, number>
+export const fullTeamHp = (): TeamHp => ({ word: MEMBER_HP, grammar: MEMBER_HP, reading: MEMBER_HP })
+export const isCounterTurn = (index: number) => index % COUNTER_EVERY === COUNTER_EVERY - 1
+// こうげきを受けるなかま：番のなかま（ダウンしていたら、のこっているなかま）。みんなダウンなら undefined
+export function hitTarget(hp: TeamHp, prefer: TeamRole): TeamRole | undefined {
+  return hp[prefer] > 0 ? prefer : TEAM_ORDER.find((r) => hp[r] > 0)
+}
+// 反撃は番の次のなかまへ（たおれていない子）
+export function counterTarget(hp: TeamHp, turn: TeamRole): TeamRole | undefined {
+  const i = TEAM_ORDER.indexOf(turn)
+  return [1, 2, 3].map((k) => TEAM_ORDER[(i + k) % TEAM_ORDER.length]).find((r) => hp[r] > 0)
+}
+export function hitMember(hp: TeamHp, who: TeamRole, dmg: number): { hp: TeamHp; ko: boolean } {
+  const next = Math.max(0, hp[who] - dmg)
+  return { hp: { ...hp, [who]: next }, ko: hp[who] > 0 && next === 0 }
+}
+// ダウンしたなかまを体力半分で起こす（おまもり・回復）
+export function reviveOne(hp: TeamHp): TeamHp {
+  const down = TEAM_ORDER.find((r) => hp[r] <= 0)
+  if (down) return { ...hp, [down]: Math.ceil(MEMBER_HP / 2) }
+  const low = [...TEAM_ORDER].sort((a, b) => hp[a] - hp[b])[0]
+  return { ...hp, [low]: Math.min(MEMBER_HP, hp[low] + Math.ceil(MEMBER_HP / 2)) }
+}

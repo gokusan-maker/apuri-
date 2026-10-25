@@ -153,13 +153,13 @@ it('すぐに正解すると会心の一撃、ゆっくりだとふつうのダ�
   expect(screen.getByText(/3秒以内で会心/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '141')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '231')
   unmount()
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
   vi.setSystemTime(Date.now() + 5000)
   answer(true)
   expect(screen.queryByText('⚡ 会心の一撃！')).not.toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '144')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '234')
 })
 
 it('ゲージが満タンになると必殺技で大ダメージ', () => {
@@ -184,7 +184,7 @@ it('相棒がいっしょに戦う：ドラコは火の息で追加ダメージ�
   expect(screen.getByText(/特技「火の息」/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('あいぼうの火の息！ +3')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '138') // 会心9＋3
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '228') // 会心9＋3
   unmount()
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={grown('penguin')} />)
   answer(false)
@@ -239,7 +239,7 @@ it('バトルアイテム：ばくだんで20ダメージ、おまもりでハ�
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1, clock: 0, lucky: 0 }} onUseItem={(id) => used.push(id)} />)
   expect(screen.getByText(/まもりのおまもりん/).closest('button')).toBeDisabled() // ハート満タン
   fireEvent.click(screen.getByText(/どっかんボンバー/))
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '130')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '220')
   expect(screen.getByText(/どっかんボンバー/).closest('button')).toBeDisabled()
   answer(false)
   expect(screen.getByLabelText('のこりハート 2')).toBeInTheDocument()
@@ -328,7 +328,7 @@ it('弱点のキャラクターの相棒だと追加ダメージ', async () => {
   const sp = weakOf(BOSSES['中1'].name)
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], sp), species: sp === 'mochi' ? undefined : sp, name: 'あいぼう' }} />)
   expect(screen.getByText(/弱点をついている！/)).toBeInTheDocument()
-  const before = 150
+  const before = 240
   vi.setSystemTime(Date.now() + 10000) // 会心なし
   answer(true)
   const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
@@ -400,7 +400,7 @@ it('ボス戦は先制クイズなしで、すぐ問題が始まる', () => {
   expect(screen.queryByText(/先制クイズ/)).toBeNull()
   expect(document.querySelector('.boss-preempt')).toBeNull()
   expect(document.querySelectorAll('.choice').length).toBeGreaterThan(0)
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '150')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '240')
 })
 
 it('HPが半分になると子分があらわれ、次の正解でたおすと🪙2', () => {

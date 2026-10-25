@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { BOSS_HP, BOSSES, battleRank, bossUnlocked, critDamage, defeatLineOf, DEFEAT_LINES, isChance, isEnraged, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
+import { BOSS_HP, BOSS_QUESTIONS, BOSSES, battleRank, bossUnlocked, critDamage, defeatLineOf, DEFEAT_LINES, isChance, isEnraged, dailyBossLevel, damage, GAUGE_MAX, gaugeAfter, isCritical, loadBoss, saveBoss } from './boss'
 import { LEVELS } from './words'
 import { stagesOf } from './stages'
 
@@ -13,15 +13,16 @@ describe('ボス', () => {
     expect(bossUnlocked('高校基礎', { ...all, [list[0].id]: 0 })).toBe(false)
   })
 
-  it('連続正解でダメージが増え（最大10）、30問中ほぼ6割弱の正解で倒せる', () => {
+  it('連続正解でダメージが増え（最大10）、ボーナスなしだと36問中25問の正解が必要（負けそうで勝てる）', () => {
     expect(damage(1)).toBe(6)
     expect(damage(5)).toBe(10)
     expect(damage(9)).toBe(10)
-    // 全問正解なら16問以内に倒せる（体力150）
+    // 全問正解でも25問かかる（体力240）。会心・合体技・必殺技・なかまのレベルでもっと早く倒せる
     let hp = BOSS_HP
     let n = 0
     while (hp > 0) hp -= damage(++n)
-    expect(n).toBeLessThanOrEqual(16)
+    expect(n).toBe(25)
+    expect(BOSS_QUESTIONS).toBe(36)
   })
 
   it('保存と読み込み', () => {
@@ -98,7 +99,7 @@ it('今日の金色ボスは日付で決まり、名前に「金色の」がつ�
 
 it('今日のボスは★が高いほどHPが多い', async () => {
   const { dailyHp } = await import('./boss')
-  expect([dailyHp(1), dailyHp(2), dailyHp(3)]).toEqual([150, 210, 270])
+  expect([dailyHp(1), dailyHp(2), dailyHp(3)]).toEqual([240, 300, 360])
 })
 
 it('1撃の最大ダメージ記録は、上回ったときだけ更新される', async () => {

@@ -186,9 +186,9 @@ it('ボスの連勝数が出る', () => {
 
 it('今日のボスは★2・★3の強さを選べる', () => {
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /★★★（HP270・🪙×3）/ }))
+  fireEvent.click(screen.getByRole('button', { name: /★★★（HP360・🪙×3）/ }))
   expect(screen.getByText('⚔️ 今日のボス ★★★')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '270')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '360')
 })
 
 it('週末ボスは週末だけ出て、HPが多い', () => {
@@ -210,7 +210,7 @@ it('たおしたボスには強化版で挑める（HPが多い）', () => {
   render(<Stages levels={['中1']} record={record} onClear={() => {}} boss={{ 中1: '2026-10-01' }} onRankBonus={bonus} />)
   fireEvent.click(screen.getByText(/強化版「/))
   expect(screen.getByText('💪 強化版の中1ボス')).toBeInTheDocument()
-  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '225')
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '360')
 })
 
 it('たおしたボスにはサドンデス（ハート1つ）で挑める', () => {
