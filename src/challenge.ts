@@ -10,6 +10,9 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   dragon: { dir: 'sentence-read', label: '英文和訳', icon: '📜' },
   rabbit: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   cat: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
+  owl: { dir: 'sentence-read', label: '英文和訳', icon: '📜' },
+  turtle: { dir: 'en-ja', label: '単語', icon: '🔤' },
+  octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
 export const challengeOf = (species: string | undefined): ChallengeKind => CHALLENGE_BY_SPECIES[species ?? 'mochi'] ?? CHALLENGE_BY_SPECIES.mochi

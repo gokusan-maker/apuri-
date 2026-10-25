@@ -9,6 +9,9 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   rabbit: { id: 'cheer', name: 'ぴょんぴょん応援', desc: '2問正解ごとに必殺技ゲージ +1' },
   cat: { id: 'claw', name: 'ねこの目', desc: '会心の一撃が5秒以内まで出る' },
   mochi: { id: 'revive', name: 'もちもち根性', desc: '1回だけ、ハートが0になってもハート1でふんばる' },
+  owl: { id: 'cheer', name: 'ものしりの知恵', desc: '2問正解ごとに必殺技ゲージ +1' },
+  turtle: { id: 'guard', name: 'こうらシールド', desc: '1回だけ、まちがえてもハートを守る' },
+  octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
 export const skillOf = (species: string | undefined): Skill => PARTNER_SKILLS[species ?? 'mochi'] ?? PARTNER_SKILLS.mochi
@@ -41,6 +44,9 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   rabbit: { name: 'ムーンジャンプキック', color: '#ec4899' },
   cat: { name: 'ねこパンチ百連発', color: '#a855f7' },
   dragon: { name: 'ドラゴンブレス・ゼロ', color: '#ef4444' },
+  owl: { name: 'ミッドナイト・フクロウアイ', color: '#a16207' },
+  turtle: { name: 'こうらローリングアタック', color: '#16a34a' },
+  octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
 
@@ -60,5 +66,8 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   rabbit: { en: "Let's jump right in!", ja: 'さあ、とびこもう！' },
   cat: { en: 'I am not afraid of you.', ja: 'きみなんか、こわくないにゃ。' },
   dragon: { en: 'Feel the power of words!', ja: 'ことばの力を見せてやる！' },
+  owl: { en: 'I know the answer already.', ja: '答えはもうわかっているよ。' },
+  turtle: { en: 'Slow and steady wins!', ja: 'ゆっくり、でも確実に勝つよ！' },
+  octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

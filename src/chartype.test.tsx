@@ -35,3 +35,22 @@ it('なかま交換は、交換する10体をえらべる（10体えらぶまで
   fireEvent.click(screen.getByRole('button', { name: '🎟 この10体と交換' }))
   expect(got?.sort((a, b) => a - b)).toEqual([1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12].filter((x) => x !== 2))
 })
+
+it('新しいキャラ（フクロウ・カメ・タコ）は、色ちがいではなくちがう形のパーツで描かれる', async () => {
+  const { MonsterFigure } = await import('./MonsterView')
+  const { FORMS, withSpecies } = await import('./monster')
+  const paths = (sp: string) => {
+    const r = render(<MonsterFigure form={withSpecies(FORMS[2], sp)} />)
+    const d = [...r.container.querySelectorAll('path, circle')].map((e) => e.getAttribute('d') ?? `c${e.getAttribute('cx')},${e.getAttribute('cy')}`).join('|')
+    r.unmount()
+    return d
+  }
+  const base = paths('mochi')
+  for (const sp of ['owl', 'turtle', 'octopus']) {
+    expect(paths(sp)).not.toBe(base)
+    expect(SPECIES.some((s) => s.id === sp)).toBe(true)
+  }
+  expect(typeOf('turtle').name).toBe('シールド型')
+  expect(typeOf('owl').name).toBe('サポート型')
+  expect(typeOf('octopus').name).toBe('スピード型')
+})

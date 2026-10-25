@@ -68,8 +68,10 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  expect(count).toEqual({ mochi: 300, fox: 160, penguin: 160, rabbit: 160, cat: 120, dragon: 100 })
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.95)!
+  const want = { mochi: 180, fox: 130, penguin: 130, rabbit: 130, cat: 100, dragon: 80, owl: 90, turtle: 90, octopus: 70 }
+  expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
+  for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.7)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
@@ -90,13 +92,13 @@ it('天井：スーパーレア以上が出ないまま20回目はきんいろ�
   expect(r2.wallet.pity).toBe(0)
 })
 
-it('週末はドラコが出やすい（10%→20%、そのぶんモチが減る）', async () => {
+it('週末はドラコが出やすい（8%→18%、そのぶんモチが減る）', async () => {
   const { rollSpecies, SPECIES, speciesRate } = await import('./monster')
   const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, true), 0)
   expect(total).toBeCloseTo(1)
   let dragons = 0
   for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
-  expect(dragons).toBe(200)
+  expect(dragons).toBe(180)
 })
 
 it('最近のガチャの結果は新しい順に10回まで残る', async () => {

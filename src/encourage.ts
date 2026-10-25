@@ -13,6 +13,9 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   penguin: { streak: ['ペンペン！じょうずに並んだね！', 'よちよち、でも速いね！'], wrong: ['ペン…だいじょうぶ！', 'つるっとすべっただけだよ！'] },
   rabbit: { streak: ['ピョーン！耳がいいね！', 'ぴょんぴょんいい調子！'], wrong: ['ピョン…もう一回聞いてみよう！', '耳をすませばだいじょうぶ！'] },
   cat: { streak: ['ニャー！すごいニャ！', 'ごきげんだニャ！'], wrong: ['ニャ…おしいニャ！', '気にしないニャ、つぎつぎ！'] },
+  owl: { streak: ['ホーホー！よく読めてるね！', 'ものしりになってきたホー！'], wrong: ['ホー…もう一度読んでみよう！', 'あわてずじっくりだホー！'] },
+  turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
+  octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
 const EN: Record<CheerEvent, [string, string][]> = {
   streak: [
@@ -33,6 +36,9 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   penguin: { streak: [['Waddle on! Great order!', 'すすめー！きれいに並んだ！']], wrong: [['Just a little slip!', 'ちょっとすべっただけ！']] },
   rabbit: { streak: [['Great ears! Hop hop!', 'いい耳だね！ぴょんぴょん！']], wrong: [['Listen again carefully.', 'もう一度よく聞いてみよう。']] },
   cat: { streak: [['Purr-fect!', 'カンペキだニャ！']], wrong: [['No worries, try again!', '気にしないで、もう一回！']] },
+  owl: { streak: [['You read that well!', 'よく読めたね！']], wrong: [['Read it once more.', 'もう一度読んでみよう。']] },
+  turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
+  octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
 
 const EN_DRAGON: Record<CheerEvent, [string, string][]> = {
