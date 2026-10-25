@@ -3042,3 +3042,19 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .univ-tower .univ-floors .univ-info strong { word-break: normal; overflow-wrap: anywhere; font-size: 0.8rem; }
 .univ-tower .univ-floors li:not(.locked) { grid-template-columns: 30px 54px minmax(0, 1fr); }
 .univ-tower .univ-figure { width: 54px; height: 54px; }
+
+/* スーパーレア・ウルトラレアのすがた */
+.rare-rays { transform-box: view-box; transform-origin: 50px 58px; animation: rare-spin 18s linear infinite; }
+.ur-rings { transform-box: view-box; transform-origin: 50px 58px; animation: rare-spin 10s linear infinite reverse; }
+@keyframes rare-spin { to { transform: rotate(360deg); } }
+.rare-sweep { animation: rare-sweep 3.2s ease-in-out infinite; }
+@keyframes rare-sweep { 0%, 55% { transform: skewX(-20deg) translateX(0); } 100% { transform: skewX(-20deg) translateX(150px); } }
+.ur-body { animation: ur-hue 6s linear infinite; }
+@keyframes ur-hue { to { filter: hue-rotate(360deg); } }
+.rare-float > * { transform-box: fill-box; transform-origin: center; animation: rare-twinkle 2s ease-in-out infinite; }
+@keyframes rare-twinkle { 50% { transform: translateY(-3px) scale(1.2); opacity: 0.6; } }
+.rare-glint { animation: rare-glint 2.4s ease-in-out infinite; }
+@keyframes rare-glint { 0%, 70%, 100% { opacity: 0.95; } 85% { opacity: 0.2; } }
+.ur-wings { transform-box: view-box; transform-origin: 50px 56px; animation: ur-flap 2.2s ease-in-out infinite; }
+@keyframes ur-flap { 50% { transform: scaleX(1.06) translateY(-1px); } }
+@media (prefers-reduced-motion: reduce) { .rare-rays, .ur-rings, .rare-sweep, .ur-body, .rare-float > *, .rare-glint, .ur-wings { animation: none; } }

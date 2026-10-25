@@ -589,6 +589,115 @@ function WearOne({ id }: { id: string }) {
   }
 }
 
+// スーパーレア（きんいろ）・ウルトラレア（にじいろ）の特別なすがた
+// うしろ：SR は金の光の輪と放射、UR はにじのプリズムの光と二重の輪
+function RareBack({ ur, uid }: { ur: boolean; uid: string }) {
+  const rays = Array.from({ length: 12 }, (_, i) => i * 30)
+  const colors = ['#f87171', '#fb923c', '#facc15', '#4ade80', '#38bdf8', '#a78bfa']
+  return (
+    <g className="rare-back" pointerEvents="none">
+      <circle cx="50" cy="58" r="46" fill={`url(#r${uid})`} />
+      <g className="rare-rays">
+        {rays.map((a, i) => (
+          <path key={a} d="M50 58 L46 6 L54 6 Z" fill={ur ? colors[i % colors.length] : '#fde047'} opacity={ur ? 0.45 : 0.38} transform={`rotate(${a} 50 58)`} />
+        ))}
+      </g>
+      {ur && (
+        <g fill="none" strokeWidth="1.5" className="ur-rings">
+          <ellipse cx="50" cy="58" rx="44" ry="44" stroke="#f0abfc" strokeDasharray="3 5" opacity="0.8" />
+          <ellipse cx="50" cy="58" rx="38" ry="38" stroke="#7dd3fc" strokeDasharray="1 4" opacity="0.8" />
+        </g>
+      )}
+    </g>
+  )
+}
+
+// SR のマント・UR のクリスタルのつばさ（体のうしろ）
+function RareCape({ ur, uid }: { ur: boolean; uid: string }) {
+  if (ur)
+    return (
+      <g className="ur-wings" stroke="#7e22ce" strokeWidth="1.6" strokeLinejoin="round">
+        {[-1, 1].map((dir) => (
+          <g key={dir} transform={dir < 0 ? undefined : 'translate(100 0) scale(-1 1)'}>
+            <path d="M26 58 Q4 30 2 12 Q14 22 20 20 Q14 34 26 40 Z" fill={`url(#w${uid})`} />
+            <path d="M24 64 Q0 50 -2 30 Q10 40 16 38 Q12 52 26 54 Z" fill={`url(#w${uid})`} opacity="0.9" />
+            <path d="M24 70 Q4 68 0 52 Q10 58 16 56 Q14 66 26 64 Z" fill={`url(#w${uid})`} opacity="0.8" />
+            <path d="M20 22 L23 34 M14 40 L22 50 M10 58 L22 62" stroke="#fff" strokeWidth="1" opacity="0.7" />
+          </g>
+        ))}
+      </g>
+    )
+  return (
+    <g stroke="#7f1d1d" strokeWidth="2" strokeLinejoin="round">
+      <path d="M26 40 Q50 32 74 40 L90 92 Q50 100 10 92 Z" fill="#b91c1c" />
+      <path d="M26 40 Q50 32 74 40 L76 46 Q50 38 24 46 Z" fill="#fbbf24" stroke="#a16207" strokeWidth="1.5" />
+      <path d="M10 92 Q50 100 90 92" fill="none" stroke="#fbbf24" strokeWidth="3" />
+    </g>
+  )
+}
+
+// 前：SR は宝石のティアラと目の星、UR はプリズムの王冠と、まわる星
+function RareFront({ ur, crown }: { ur: boolean; crown: boolean }) {
+  return (
+    <g pointerEvents="none">
+      {!crown &&
+        (ur ? (
+          <g stroke="#6b21a8" strokeWidth="1.5" strokeLinejoin="round">
+            <path d="M32 32 L36 16 L42 26 L50 10 L58 26 L64 16 L68 32 Z" fill="#e9d5ff" />
+            <path d="M50 10 L54 22 L50 30 L46 22 Z" fill="#f0abfc" />
+            <circle cx="36" cy="17" r="2.6" fill="#7dd3fc" />
+            <circle cx="64" cy="17" r="2.6" fill="#86efac" />
+            <circle cx="50" cy="21" r="2.2" fill="#fde047" stroke="none" />
+          </g>
+        ) : (
+          <g stroke="#92400e" strokeWidth="1.5" strokeLinejoin="round">
+            <path d="M34 32 Q50 18 66 32 L62 26 L56 28 L50 18 L44 28 L38 26 Z" fill="#fde047" />
+            <circle cx="50" cy="24" r="3" fill="#ef4444" />
+            <circle cx="40" cy="28" r="1.8" fill="#38bdf8" stroke="none" />
+            <circle cx="60" cy="28" r="1.8" fill="#22c55e" stroke="none" />
+          </g>
+        ))}
+      {/* 宝石のペンダント */}
+      <g>
+        <path d="M32 78 Q50 90 68 78" fill="none" stroke={ur ? '#c084fc' : '#d97706'} strokeWidth="2.4" strokeDasharray="2.5 1.5" />
+        <path d="M50 84 L55 89 L50 96 L45 89 Z" fill={ur ? '#a5f3fc' : '#dc2626'} stroke={ur ? '#6b21a8' : '#7f1d1d'} strokeWidth="1.3" strokeLinejoin="round" />
+        <path d="M50 84 L52 89 L50 92 L48 89 Z" fill="#fff" opacity="0.7" />
+      </g>
+      {/* 目の中の星 */}
+      <g fill="#fff" className="rare-glint">
+        <path d="M40.5 54 l1 2.2 l2.2 1 l-2.2 1 l-1 2.2 l-1 -2.2 l-2.2 -1 l2.2 -1 Z" />
+        <path d="M60.5 54 l1 2.2 l2.2 1 l-2.2 1 l-1 2.2 l-1 -2.2 l-2.2 -1 l2.2 -1 Z" />
+      </g>
+      {/* ただよう光（SR は金貨、UR はにじの星） */}
+      <g className="rare-float">
+        {(ur
+          ? [
+              ['#f472b6', 8, 30],
+              ['#38bdf8', 92, 26],
+              ['#facc15', 90, 78],
+              ['#4ade80', 10, 80],
+              ['#a78bfa', 50, 4],
+            ]
+          : [
+              ['#fbbf24', 10, 34],
+              ['#fde047', 90, 30],
+              ['#f59e0b', 88, 80],
+            ]
+        ).map(([c, x, y], i) =>
+          ur ? (
+            <path key={i} d={`M${x} ${Number(y) - 5} l1.6 3.4 l3.4 1.6 l-3.4 1.6 l-1.6 3.4 l-1.6 -3.4 l-3.4 -1.6 l3.4 -1.6 Z`} fill={c as string} stroke="#fff" strokeWidth="0.6" style={{ animationDelay: `${i * 0.4}s` }} />
+          ) : (
+            <g key={i} style={{ animationDelay: `${i * 0.5}s` }}>
+              <circle cx={x} cy={y} r="4" fill={c as string} stroke="#a16207" strokeWidth="1" />
+              <path d={`M${Number(x) - 1.5} ${Number(y) - 1.5} h3 v3 h-3 Z`} fill="none" stroke="#a16207" strokeWidth="0.8" />
+            </g>
+          ),
+        )}
+      </g>
+    </g>
+  )
+}
+
 export function MonsterFigure({
   form: baseForm,
   mood = 'normal',
@@ -635,6 +744,25 @@ export function MonsterFigure({
         <stop offset="0" stopColor="#fff" stopOpacity="0.9" />
         <stop offset="1" stopColor="#fff" stopOpacity="0" />
       </radialGradient>
+      <radialGradient id={`r${uid}`}>
+        <stop offset="0" stopColor={rainbow ? '#f5d0fe' : '#fef08a'} stopOpacity="0.95" />
+        <stop offset="0.6" stopColor={rainbow ? '#a5f3fc' : '#fbbf24'} stopOpacity="0.35" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+      </radialGradient>
+      <linearGradient id={`w${uid}`} x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stopColor="#fbcfe8" />
+        <stop offset="0.35" stopColor="#bae6fd" />
+        <stop offset="0.7" stopColor="#ddd6fe" />
+        <stop offset="1" stopColor="#fef9c3" />
+      </linearGradient>
+      <linearGradient id={`x${uid}`} x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stopColor="#fff" stopOpacity="0" />
+        <stop offset="0.5" stopColor="#fff" stopOpacity="0.75" />
+        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+      </linearGradient>
+      <clipPath id={`c${uid}`}>
+        <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" />
+      </clipPath>
       <radialGradient id={`h${uid}`}>
         <stop offset="0" stopColor="#fef08a" stopOpacity="0.9" />
         <stop offset="1" stopColor="#fef08a" stopOpacity="0" />
@@ -670,6 +798,7 @@ export function MonsterFigure({
   return (
     <svg viewBox="0 0 100 100" className="monster-svg" aria-hidden="true">
       {defs}
+      {(gold || rainbow) && <RareBack ur={rainbow} uid={uid} />}
       {form.stage >= 5 && !hidden && <circle cx="50" cy="56" r="46" fill={`url(#h${uid})`} opacity={form.stage >= 6 ? 0.9 : 0.6} />}
       {form.stage >= 5 && !hidden && (
         <g className="aura">
@@ -686,7 +815,8 @@ export function MonsterFigure({
       )}
       {form.stage >= 3 && !hidden && <Particles form={form} />}
       <g transform={`translate(50 92) scale(${size}) translate(-50 -92)`}>
-        <g className={hidden ? undefined : 'monster-breathe'}>
+        <g className={hidden ? undefined : `monster-breathe${rainbow ? ' ur-body' : ''}`}>
+          {(gold || rainbow) && <RareCape ur={rainbow} uid={uid} />}
           {form.species && SPECIES_TAILS.includes(form.species) ? (
             form.stage >= 1 && <SpeciesTail species={form.species} fill={hidden ? fill : body} line={line} />
           ) : (
@@ -704,6 +834,11 @@ export function MonsterFigure({
           )}
           <path d="M18 70 Q18 28 50 26 Q82 28 82 70 Q82 90 50 90 Q18 90 18 70 Z" fill={body} stroke={line} strokeWidth="3" />
           {!hidden && <path d="M19.5 70 Q19.5 29.5 50 27.5 Q80.5 29.5 80.5 70 Q80.5 88.5 50 88.5 Q19.5 88.5 19.5 70 Z" fill={`url(#s${uid})`} pointerEvents="none" />}
+          {(gold || rainbow) && (
+            <g clipPath={`url(#c${uid})`}>
+              <rect className="rare-sweep" x="-30" y="20" width="22" height="80" fill={`url(#x${uid})`} transform="skewX(-20)" />
+            </g>
+          )}
           {!hidden && <ellipse cx="50" cy="77" rx="18" ry="10" fill="#fff" opacity="0.28" />}
           {!hidden && <ellipse cx="35" cy="39" rx="12" ry="7" fill={`url(#g${uid})`} transform="rotate(-25 35 39)" />}
           {!hidden && <ellipse cx="33" cy="37" rx="4" ry="2.2" fill="#fff" opacity="0.9" transform="rotate(-25 33 37)" />}
@@ -747,6 +882,7 @@ export function MonsterFigure({
           )}
           {!hidden && (form.species === 'penguin' || form.species === 'owl') && <path d="M45 62 L55 62 L50 68 Z" fill="#fb923c" stroke="#9a3412" strokeWidth="1.2" strokeLinejoin="round" />}
           {!hidden && <Wear id={wear} />}
+          {(gold || rainbow) && mood !== 'sleep' && <RareFront ur={rainbow} crown={form.stage >= 4 || wearList(wear).some((w) => slotOf(w) === 'head')} />}
         </g>
       </g>
     </svg>
