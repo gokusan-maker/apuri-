@@ -3521,3 +3521,5 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .smap-node.now .smap-btn { position: absolute; top: 50%; transform: translateY(-50%); width: min(56cqw, 190px); margin: 0; padding: 8px 10px; background: rgb(28 25 23 / 0.82); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
 .smap-node.now.side-r .smap-btn { left: calc(100% + 10px); }
 .smap-node.now.side-l .smap-btn { right: calc(100% + 10px); }
+.sub-tabs.free-levels { flex-wrap: wrap; gap: 4px; }
+.sub-tabs.free-levels button { flex: 0 1 auto; padding: 6px 10px; }

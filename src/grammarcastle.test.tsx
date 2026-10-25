@@ -33,14 +33,20 @@ it('城の1階：解説 → 5問 → 4問以上正解でクリアして「次の
   expect(screen.getByText('🎉 階クリア！')).toBeInTheDocument()
 })
 
-it('城の地図：学年と入試レベルの城。学年の城は学年の単元だけ、入試の城は1階目に解説', () => {
+it('文法のレベル：単語・読解と同じ15レベル（中1〜高3・私学〜東大・TOEIC・TOEFL/IELTS・ネイティブ）', async () => {
+  const { levelUnits } = await import('./grammarcastle')
   localStorage.clear()
-  expect(GC_LEVELS.map((l) => l.label)).toEqual(['中1', '中2', '中3', '高校', '共通テスト', '私立難関大', '私立医学部', '国公立大', '旧帝大', '国立医学部'])
+  expect(GC_LEVELS.map((l) => l.label)).toEqual(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'])
+  for (const l of GC_LEVELS) expect(gcFloorsFor(l.id).length, l.id).toBeGreaterThanOrEqual(3)
   expect(loadGcLevel('j3')).toBe('中3')
-  const ex = gcFloorsFor('exam-kyutei')
-  expect(ex.length).toBe(4)
-  expect(ex[0].explain).not.toBeNull()
-  expect(new Set([...gcFloorsFor('中1'), ...gcFloorsFor('中2')].map((f) => f.id)).size).toBe(gcFloorsFor('中1').length + gcFloorsFor('中2').length)
-  render(<Grammar castleLevel="exam-kyutei" />)
-  expect(screen.getByRole('region', { name: '旧帝大の文法の森' })).toBeInTheDocument()
+  // 高校の単元は高1・高2・高3に分かれ、重ならない
+  const hs = ['高1', '高2', '高3'].flatMap((l) => levelUnits(l).map((u) => u.id))
+  expect(new Set(hs).size).toBe(hs.length)
+  expect(levelUnits('高3').some((u) => u.title.includes('仮定法'))).toBe(true)
+  expect(levelUnits('高1').some((u) => u.title.includes('仮定法'))).toBe(false)
+  // まえのレベル（高校・入試）は新しいレベルへ
+  localStorage.setItem('eitan:grammar-castle', 'exam-kyutei')
+  expect(loadGcLevel('')).toBe('旧帝大')
+  render(<Grammar castleLevel="東大" />)
+  expect(screen.getByRole('region', { name: '東大の文法の森' })).toBeInTheDocument()
 })

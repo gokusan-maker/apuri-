@@ -17,7 +17,7 @@ import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
 import { examFigs, figOf } from './grammarfig'
-import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
+import { GC_LEVELS, GC_PASS, gcFloorsFor, levelUnits, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -152,7 +152,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
   const [free, setFree] = useState(false) // 城だけのページで「単元をえらんで自由に勉強」をおした
-  const [freeExam, setFreeExam] = useState(false) // 自由に勉強で「入試」のレベルをえらんだ
+  const [freeLevel, setFreeLevel] = useState('中1') // 自由に勉強でえらんだレベル（中1〜ネイティブ）
   const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
   const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
@@ -284,7 +284,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
   }
 
   const misc = stampMode && !castleOnly // 城だけのページ（App）では、ゲームや苦手などは出さない
-  const examView = castleOnly && freeExam // 自由に勉強：入試のレベルの単元
+  const examView = castleOnly // 自由に勉強：えらんだレベルの単元だけ
   if (!unit && stampMode && castleOnly && !free) {
     return (
       <section className="card grammar">
@@ -301,9 +301,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           onClick={() => {
             // 自由に勉強は、いまの城のレベルの単元から
             setFree(true)
-            const g = GRAMMAR_GRADES.find((x) => x === gcLevel)
-            setFreeExam(!g)
-            if (g) setGrade(g)
+            setFreeLevel(gcLevel)
           }}
         >
           📚 単元をえらんで自由に勉強
@@ -600,17 +598,9 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
         )}
         {castleOnly && (
           <div className="sub-tabs grade-tabs free-levels" role="tablist" aria-label="レベル">
-            {([...GRAMMAR_GRADES, '入試'] as const).map((g) => (
-              <button
-                key={g}
-                role="tab"
-                aria-selected={g === '入試' ? freeExam : !freeExam && grade === g}
-                onClick={() => {
-                  setFreeExam(g === '入試')
-                  if (g !== '入試') setGrade(g)
-                }}
-              >
-                {g}
+            {GC_LEVELS.map((l) => (
+              <button key={l.id} role="tab" aria-selected={freeLevel === l.id} onClick={() => setFreeLevel(l.id)}>
+                {l.label}
               </button>
             ))}
           </div>
@@ -650,14 +640,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           </p>
         )}
         {examView ? (
-          <div className="exam-grammar-grid" role="group" aria-label="入試の文法">
-            {EXAM_GRAMMAR.map((u) => (
-              <button key={u.id} className="exam-tier" onClick={() => open(u)}>
-                {u.title.split('の文法')[0]}
-                <small>{u.questions.length}問</small>
-              </button>
-            ))}
-          </div>
+          <ul className="grammar-list" aria-label={`${freeLevel}の単元`}>{todoSort(levelUnits(freeLevel)).map(unitItem)}</ul>
         ) : stampMode && grade === 'all' && !keyword ? (
           <>
             {fav.length > 0 && <ul className="grammar-list">{units.filter((u) => fav.includes(u.id)).map(unitItem)}</ul>}

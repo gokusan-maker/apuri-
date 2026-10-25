@@ -20,9 +20,9 @@ it('文法ページ：キャラの下でレベルをえらぶと、そのレベ�
   render(<App />)
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法チャレンジ'))
   fireEvent.click(screen.getByRole('button', { name: /^文法のレベル：/ }))
-  fireEvent.click(screen.getByRole('option', { name: /^国公立大/ }))
-  expect(screen.getByRole('region', { name: '国公立大の文法の森' })).toBeInTheDocument()
-  expect(localStorage.getItem('eitan:grammar-castle')).toBe('exam-kokkoritsu')
+  fireEvent.click(screen.getByRole('option', { name: /^京大/ }))
+  expect(screen.getByRole('region', { name: '京大の文法の森' })).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:grammar-castle')).toBe('京大')
 })
 
 it('単語ページ：上の切りかえはなく、レベルをえらぶとその級の城に変わる', () => {

@@ -1,7 +1,8 @@
 // 文法の城：単元を「大きな項目」（不定詞・動名詞など）にまとめ、1つの項目を 5問×3階 で登る。
 // 1階目のはじめにその項目の解説。15問（5単元）ごとに次のまとまりへ
-import { GRAMMAR, GRAMMAR_GRADES, gradeOf, type GrammarQuestion, type GrammarUnit } from './grammar'
+import { GRAMMAR, gradeOf, type GrammarQuestion, type GrammarUnit } from './grammar'
 import { EXAM_GRAMMAR } from './examgrammar'
+import { LEVEL_GRAMMAR } from './examgrammar2'
 import type { GradeId } from './usergrade'
 
 export const FLOOR_QS = 5
@@ -103,32 +104,60 @@ export function saveGcClears(ids: string[]): void {
   }
 }
 
-// 城の地図：学年（中1〜高校）と入試レベルの城
-export type GcLevel = { id: string; label: string; sub: string }
+// 文法のレベル（単語・読解と同じ15レベル）：中1〜中3・高1〜高3・私学〜東大・TOEIC・TOEFL/IELTS・ネイティブ
+export type GcLevel = { id: string; label: string; sub: string; unit?: string } // unit：入試・試験の単元（ないときは学年の単元）
 export const GC_LEVELS: GcLevel[] = [
-  ...GRAMMAR_GRADES.map((g) => ({ id: g, label: g, sub: g === '高校' ? '高校の文法' : `${g}の文法` })),
-  ...EXAM_GRAMMAR.map((u) => ({ id: u.id, label: u.title.replace(/の文法.*$/, ''), sub: '入試レベル' })),
+  { id: '中1', label: '中1', sub: '中学1年' },
+  { id: '中2', label: '中2', sub: '中学2年' },
+  { id: '中3', label: '中3', sub: '中学3年' },
+  { id: '高1', label: '高1', sub: '不定詞・動名詞・助動詞など' },
+  { id: '高2', label: '高2', sub: '関係詞・比較・完了形など' },
+  { id: '高3', label: '高3', sub: '仮定法・分詞構文・倒置など' },
+  { id: '私学', label: '私学', sub: '共通テスト・中堅私大', unit: 'exam-kyotsu' },
+  { id: '私学難関', label: '私学難関', sub: 'MARCH・早慶', unit: 'exam-shiritsu' },
+  { id: '国公立', label: '国公立', sub: '国公立大', unit: 'exam-kokkoritsu' },
+  { id: '旧帝大', label: '旧帝大', sub: '旧帝大', unit: 'exam-kyutei' },
+  { id: '京大', label: '京大', sub: '京都大（精読）', unit: 'exam-kyodai' },
+  { id: '東大', label: '東大', sub: '東京大（要約・英作文）', unit: 'exam-todai' },
+  { id: 'TOEIC', label: 'TOEIC', sub: 'ビジネス', unit: 'exam-toeic' },
+  { id: 'TOEFL・IELTS', label: 'TOEFL・IELTS', sub: '留学・アカデミック', unit: 'exam-toefl' },
+  { id: 'ネイティブ', label: 'ネイティブ', sub: '会話の文法', unit: 'exam-native' },
 ]
+export const ALL_EXAM_GRAMMAR: GrammarUnit[] = [...EXAM_GRAMMAR, ...LEVEL_GRAMMAR]
 
-// その城の階（学年の城は項目ごとに5問×3階、入試の城は5問ずつ・1階目は解説から）
+// 高校の単元を、項目で高1・高2・高3に分ける
+const HS_PART: Record<string, '高1' | '高2' | '高3'> = { 関係詞: '高2', '現在完了・完了形': '高2', 比較: '高2', 分詞: '高2', 接続詞: '高2', 仮定法: '高3', 分詞構文: '高3', '倒置・強調': '高3', 否定の表現: '高3' }
+export const hsPartOf = (u: GrammarUnit) => HS_PART[topicOf(u)] ?? '高1'
+export function levelUnits(level: string): GrammarUnit[] {
+  if (level === '中1' || level === '中2' || level === '中3') return GRAMMAR.filter((u) => gradeOf(u.id) === level)
+  if (level === '高1' || level === '高2' || level === '高3') return GRAMMAR.filter((u) => gradeOf(u.id) === '高校' && hsPartOf(u) === level)
+  const id = GC_LEVELS.find((l) => l.id === level)?.unit
+  return ALL_EXAM_GRAMMAR.filter((u) => u.id === id)
+}
+
+// その城の階（学年の城は項目ごとに5問×3階、入試・試験の城は5問ずつ・1階目は解説から）
 export function gcFloorsFor(level: string): GcFloor[] {
-  const exam = EXAM_GRAMMAR.find((u) => u.id === level)
-  if (!exam) return grammarCastleFloors(GRAMMAR.filter((u) => gradeOf(u.id) === level), `${level}|`)
-  const name = GC_LEVELS.find((l) => l.id === level)!.label
+  const lv = GC_LEVELS.find((l) => l.id === level)
+  const exam = lv?.unit ? ALL_EXAM_GRAMMAR.find((u) => u.id === lv.unit) : undefined
+  if (!exam) return grammarCastleFloors(levelUnits(level), `${level}|`)
+  const name = lv!.label
   const n = Math.ceil(exam.questions.length / FLOOR_QS)
   return Array.from({ length: n }, (_, f) => {
     const qs = exam.questions.slice(f * FLOOR_QS, (f + 1) * FLOOR_QS)
-    const id = `gc:${level}|${name}:${f + 1}`
+    const id = `gc:${exam.id}|${name}:${f + 1}`
     return { id, label: `${name}　${f + 1}/${n}`, sub: f === 0 ? '📖 解説から' : `${qs.length}問`, topic: name, floor: f, questions: qs, explain: f === 0 ? { ...exam, id, questions: qs } : null }
   })
 }
 
 const LEVEL_KEY = 'eitan:grammar-castle'
-const LEVEL_FOR: Record<GradeId, string> = { j1: '中1', j2: '中2', j3: '中3', hs: '高校', adult: '高校' }
+const LEVEL_FOR: Record<GradeId, string> = { j1: '中1', j2: '中2', j3: '中3', hs: '高1', adult: '高3' }
+// まえのレベル（高校・入試の id）から新しいレベルへ
+const OLD_LEVEL: Record<string, string> = { 高校: '高1', 'exam-kyotsu': '私学', 'exam-shiritsu': '私学難関', 'exam-shiritsu-med': '私学難関', 'exam-kokkoritsu': '国公立', 'exam-kyutei': '旧帝大', 'exam-kokuritsu-med': '旧帝大' }
 export function loadGcLevel(grade: GradeId | ''): string {
   try {
     const v = localStorage.getItem(LEVEL_KEY)
     if (v && GC_LEVELS.some((l) => l.id === v)) return v
+    if (v && OLD_LEVEL[v]) return OLD_LEVEL[v]
   } catch {
     /* 読めなくても動く */
   }

@@ -202,12 +202,14 @@ export function figOf(name: string): GrammarFig {
 }
 
 // 入試の文法の城：見出しのかっこの中の項目（時制・関係詞・倒置 など）から、項目ごとのかたちの図
-const EXAM_TOPIC: Record<string, string> = { 時制: '時制', 関係詞: '関係詞', 分詞: '分詞', 倒置: '倒置・強調', 強調: '倒置・強調', 同格: '倒置・強調', 仮定法: '仮定法', 準動詞: '不定詞', 慣用表現: '動詞の使い方' }
+const EXAM_TOPIC: Record<string, string> = { 時制: '時制', 関係詞: '関係詞', 分詞: '分詞', 倒置: '倒置・強調', 強調: '倒置・強調', 同格: '倒置・強調', 仮定法: '仮定法', 準動詞: '不定詞', 慣用表現: '動詞の使い方', 譲歩: '接続詞', 品詞: '形容詞・副詞', 前置詞: '前置詞' }
 export function examFigs(title: string): { name: string; fig: GrammarFig }[] {
   const inner = /（(.+)）/.exec(title)?.[1] ?? ''
-  return inner
-    .split('・')
+  // かっこの中に出てくる項目の名前（「関係詞の発展」「精読：同格」のような書き方でもひろう）
+  return Object.keys(EXAM_TOPIC)
+    .filter((t) => inner.includes(t))
     .map((t) => ({ name: t, key: EXAM_TOPIC[t] }))
-    .filter((t): t is { name: string; key: string } => !!t.key && !!GRAMMAR_FIGS[t.key])
+    .filter((t) => !!GRAMMAR_FIGS[t.key])
+    .filter((t, i, a) => a.findIndex((x) => x.key === t.key) === i)
     .map((t) => ({ name: t.name, fig: GRAMMAR_FIGS[t.key] }))
 }

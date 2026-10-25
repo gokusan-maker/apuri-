@@ -23,7 +23,7 @@ const goMini = () => {
 const freeGrammarFirst = async () => {
   const { GRAMMAR } = await import('./grammar')
   fireEvent.click(screen.getByText('📚 単元をえらんで自由に勉強'))
-  fireEvent.click(screen.getAllByRole('button', { name: new RegExp(GRAMMAR[0].title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) })[0])
+  fireEvent.click(screen.getByRole('button', { name: GRAMMAR[0].title }))
   fireEvent.click(screen.getByText(/確認問題へ/))
 }
 // ミニゲームはえらぶ画面が先。「▶ 〇〇 をはじめる」で問題だけの画面へ
@@ -1846,8 +1846,8 @@ it('文法ページは城と今日の課題と「単元をえらんで自由に�
   // 自由に勉強はレベルごと（中1〜高校・入試）。はじめは城のレベル（中1）
   const lv = screen.getByRole('tablist', { name: 'レベル' })
   expect(within(lv).getByRole('tab', { name: '中1' })).toHaveAttribute('aria-selected', 'true')
-  fireEvent.click(within(lv).getByRole('tab', { name: '入試' }))
-  expect(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /旧帝大/ })).toBeInTheDocument()
+  fireEvent.click(within(lv).getByRole('tab', { name: '東大' }))
+  expect(within(screen.getByRole('list', { name: '東大の単元' })).getByRole('button', { name: '東大の文法（要約・英作文：時制の一致・譲歩・強調）' })).toBeInTheDocument()
   expect(document.querySelector('.smap')).toBeNull()
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(document.querySelector('.smap')).not.toBeNull()
