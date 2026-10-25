@@ -211,7 +211,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         <p className="stats-note">記号で答える入試形式の読解</p>
-        {!whole && <ReadTower list={LIST} record={record} titleOf={(x) => shownTitle(x, LONG_PASSAGES.indexOf(x))} onOpen={openPassage} />}
+        {!whole && <ReadTower list={LIST} record={record} titleOf={(x) => shownTitle(x, LONG_PASSAGES.indexOf(x))} onOpen={openPassage} onChest={onCoins} />}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}

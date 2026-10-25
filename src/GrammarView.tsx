@@ -35,6 +35,7 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = {
+  onChest?: (coins: number) => void // 城の宝箱のコイン
   onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
   units?: GrammarUnit[] // 省略時は文法の単元
   title?: string
@@ -111,7 +112,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames }: Props) {
+export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -270,6 +271,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
             <Castle
               name="文法の城"
               theme="green"
+              onChest={onChest}
               floors={grammarForGrade().map((u) => ({ id: u.id, label: u.title.split('（')[0], sub: gradeOf(u.id), cleared: (clears[u.id] ?? 0) > 0 }))}
               onOpen={(id) => open(GRAMMAR.find((u) => u.id === id)!)}
             />

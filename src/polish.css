@@ -3196,3 +3196,9 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* クリアした階：かべにかかる勝利の旗 */
 .castle-banner { position: absolute; top: 0; right: 4px; width: 20px; height: 30px; display: grid; place-items: start center; padding-top: 3px; background: var(--roof); color: #fde047; font-size: 0.7rem; clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 80%, 0 100%); box-shadow: inset 0 3px 0 #fbbf24; text-shadow: 0 0 4px #f59e0b; }
 .castle-floors li.cleared .castle-btn { margin-right: 18px; width: calc(100% - 18px); }
+/* 城の宝箱（10階ごと） */
+.castle-chest-btn { position: relative; display: block; width: 100%; margin: 6px 0 2px; padding: 10px; border: 0; border-radius: 14px; background: linear-gradient(135deg, #fde047, #f59e0b 60%, #ea580c); color: #78350f; font: inherit; font-weight: 900; font-size: 0.9rem; box-shadow: 0 4px 0 #92400e, 0 0 18px rgb(253 224 71 / 0.6); cursor: pointer; animation: castle-chest 1.4s ease-in-out infinite; }
+@keyframes castle-chest { 50% { transform: scale(1.03); } }
+.castle-chest-got { position: relative; margin: 6px 0 2px; text-align: center; font-weight: 900; color: #fde047; }
+.castle-chest-mark { position: absolute; left: 28px; top: 2px; font-size: 0.9rem; filter: drop-shadow(0 0 4px #fde047); }
+@media (prefers-reduced-motion: reduce) { .castle-chest-btn { animation: none; } }

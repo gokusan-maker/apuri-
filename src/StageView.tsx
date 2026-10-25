@@ -527,6 +527,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <Castle
           name="単語の城"
           theme="purple"
+          onChest={onRankBonus}
           floors={levels.flatMap((lv) => stagesOf(lv).map((st) => ({ id: st.id, label: `${lv} ステージ${st.no}`, sub: starText(record[st.id] ?? 0), cleared: (record[st.id] ?? 0) > 0 })))}
           onOpen={(id) => {
             const st = levels.flatMap((lv) => stagesOf(lv)).find((x) => x.id === id)
@@ -638,6 +639,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <Castle
               name="大学入試の塔"
               theme="red"
+              onChest={onRankBonus}
               goLabel="⚔ 挑戦"
               againLabel="👑 もう一度"
               floors={UNIV_BOSSES.map((b, i) => ({ id: b.id, label: b.name, sub: `${b.hint}・HP${b.hp}・🪙${b.coins}・${i >= 3 ? '難関大' : '入試'}の長文`, fig: <BossFigure hit={false} look={b} />, cleared: !!univ[b.id] }))}

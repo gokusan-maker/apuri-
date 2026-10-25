@@ -9,3 +9,28 @@ export function castleShown(total: number, now: number): number[] {
     .filter((i) => i >= now - 2 && i <= now + 1)
     .reverse()
 }
+
+// 10階ごとに宝箱（クリアしたらあけられる。1つの城で1回ずつ）
+export const CHEST_EVERY = 10
+export const CHEST_COINS = 20
+const CHEST_KEY = 'eitan:castle-chests'
+export function loadChests(): Record<string, number[]> {
+  try {
+    const v = JSON.parse(localStorage.getItem(CHEST_KEY) ?? '{}') as unknown
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    return Object.fromEntries(Object.entries(v as Record<string, unknown>).map(([k, a]) => [k, Array.isArray(a) ? a.filter((x): x is number => typeof x === 'number') : []]))
+  } catch {
+    return {}
+  }
+}
+export function saveChests(c: Record<string, number[]>): void {
+  try {
+    localStorage.setItem(CHEST_KEY, JSON.stringify(c))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
+// あけられる宝箱の階（1から数えた階の番号）
+export function openableChests(cleared: number, opened: number[]): number[] {
+  return Array.from({ length: Math.floor(cleared / CHEST_EVERY) }, (_, i) => (i + 1) * CHEST_EVERY).filter((n) => !opened.includes(n))
+}
