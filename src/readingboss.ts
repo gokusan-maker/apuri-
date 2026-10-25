@@ -27,10 +27,11 @@ export function evidenceSentence(p: LongPassage, text: string): string | undefin
   return score >= 2 || (score === 1 && ties === 1) ? best : undefined
 }
 
-// 単語帳のレベル → 長文のレベル（中1・中2は中2の長文、中3は中3、そのほかは高校入試。なければ全部から）
+// 単語帳のレベル → 長文のレベル（高校基礎・熟語・ビジネスは中3〜高校入試、中3は中3、中1・中2と曜日・数などの基本は中2。なければ全部から）
 export function readingPoolFor(level: Level, list: LongPassage[] = LONG_PASSAGES): LongPassage[] {
-  const tag = level === '中1' || level === '中2' ? '中2' : level === '中3' ? '中3' : '高校入試'
-  const pool = list.filter((p) => p.level.startsWith(tag) && !p.titleQ && !p.paraSeq)
+  const hard = level === '高校基礎' || level === '熟語' || level === 'ビジネス'
+  const ok = (lv: string) => (hard ? lv.includes('高校入試') || lv.startsWith('中3') : level === '中3' ? lv.startsWith('中3') || lv.startsWith('中2〜中3') : lv.startsWith('中2'))
+  const pool = list.filter((p) => ok(p.level) && !p.titleQ && !p.paraSeq)
   return pool.length >= 2 ? pool : list.filter((p) => !p.titleQ && !p.paraSeq)
 }
 

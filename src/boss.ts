@@ -2,8 +2,7 @@
 import { stagesOf, type StageRecord } from './stages'
 import { WORDS, type Level, type Word } from './words'
 import { makeQuiz, shuffle } from './quiz'
-import { grammarForGrade } from './grammar'
-import { grammarMixQ } from './puzzles'
+import { GRAMMAR, gradeOf, type GrammarUnit } from './grammar'
 
 export const BOSS_HP = 150 // オーナーの要望でボスの体力アップ（100→150）
 export const HEARTS = 3
@@ -82,26 +81,44 @@ export function dailyBossLevel<T>(levels: T[], day: string): T | undefined {
 }
 
 // ボスの問題：単語の4択。grammar のときは4問に1問を文法問題にする（単語にひもづかないので id は空）
+// ボスの単語帳のレベルに合わせた文法の単元（中1のボスに高校の文法を出さない）
+export function grammarGradesForLevel(level: Level | undefined): ('中1' | '中2' | '中3' | '高校')[] {
+  if (level === '中2') return ['中1', '中2']
+  if (level === '中3') return ['中2', '中3']
+  if (level === '高校基礎' || level === '熟語' || level === 'ビジネス') return ['中3', '高校']
+  return ['中1'] // 中1と、曜日・数・色などの基本の単語帳
+}
+export function grammarForLevel(level: Level | undefined): GrammarUnit[] {
+  const grades = grammarGradesForLevel(level)
+  const list = GRAMMAR.filter((u) => grades.includes(gradeOf(u.id)))
+  return list.length > 0 ? list : GRAMMAR
+}
+
+// 単語の問題：まちがいの選択肢も同じ単語帳から（4つそろわないときだけ全部から）
+const wordQuiz = (words: Word[], n: number, rnd: () => number) => makeQuiz(words.length >= 8 ? words : WORDS, (w) => w.ja, n, rnd, words)
+
 export function bossQuestions(words: Word[], grammar: boolean) {
-  const qs = makeQuiz(WORDS, (w) => w.ja, BOSS_QUESTIONS, Math.random, words)
+  const qs = wordQuiz(words, BOSS_QUESTIONS, Math.random)
   if (!grammar) return qs
+  const units = grammarForLevel(words[0]?.level)
   return qs.map((q, i) => {
     if (i % 4 !== 3) return q
-    const g = grammarMixQ()
-    return { word: { id: '', en: g.prompt, ja: g.choices[g.answer], example: '', exampleJa: '', level: '高校基礎' } as Word, choices: g.choices, answer: g.answer }
+    const u = units[Math.floor(Math.random() * units.length)]
+    const g = u.questions[Math.floor(Math.random() * u.questions.length)]
+    return { word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer }
   })
 }
 
 // チームバトル：単語・文法・読解のなかまが順番にボスを攻撃する（オーナーの要望：ボス戦なのに単語だけにしない）
-// 単語＝単語の意味、文法＝___ 穴埋め（設定の学年の単元から）、読解＝英文を読んで意味をえらぶ
+// 単語＝単語の意味、文法＝___ 穴埋め（ボスの単語帳のレベルの単元から）、読解＝英文を読んで意味をえらぶ
 export type TeamRole = 'word' | 'grammar' | 'reading'
 export const TEAM_ORDER: TeamRole[] = ['word', 'grammar', 'reading']
 export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamRole }
 
 // readingQs：読解ボスのときは、読解の番に本文の問題を順に出す
 export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[]): (TeamQ | (R & { team: 'reading' }))[] {
-  const wordQs = makeQuiz(WORDS, (w) => w.ja, n, rnd, words)
-  const units = grammarForGrade()
+  const wordQs = wordQuiz(words, n, rnd)
+  const units = grammarForLevel(words[0]?.level)
   const sentences = words.filter((w) => w.example && w.exampleJa)
   const pool = sentences.length >= 4 ? sentences : WORDS.filter((w) => w.example && w.exampleJa)
   const out: (TeamQ | (R & { team: 'reading' }))[] = []

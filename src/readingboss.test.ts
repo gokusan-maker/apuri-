@@ -14,12 +14,12 @@ it('読解ボスの問題：読解の空所・○×・英問英答から作り�
   expect(qs[0].word.en).toContain(`( ${p.blanks[0].id} )`)
 })
 
-it('ボス1戦は学年に合う読解2本から最大20問', () => {
+it('ボス1戦は学年に合う読解2本から最大30問', () => {
   const qs = readingBossQs('中3', () => 0)
   expect(qs.length).toBeGreaterThanOrEqual(12)
-  expect(qs.length).toBeLessThanOrEqual(20)
+  expect(qs.length).toBeLessThanOrEqual(30)
   expect(new Set(qs.map((q) => q.passage.id)).size).toBe(2)
-  expect(qs.every((q) => q.passage.level.startsWith('中3'))).toBe(true)
+  expect(qs.every((q) => /^中(3|2〜中3)/.test(q.passage.level))).toBe(true)
   expect(readingPoolFor('中1').every((p) => p.level.startsWith('中2'))).toBe(true)
   expect(readingPoolFor('熟語').length).toBeGreaterThanOrEqual(2)
 })
@@ -67,4 +67,10 @@ it('ボスのヒント：○×・英問英答の9割以上に根拠の1文が出
   const qs = LONG_PASSAGES.filter((p) => !p.titleQ && !p.paraSeq).flatMap(passageQs).filter((q) => !q.blank)
   const withQuote = qs.filter((q) => q.hint?.quote).length
   expect(withQuote / qs.length).toBeGreaterThan(0.9)
+})
+
+it('基本の単語帳（数・色など）のボスに高校入試の長文を出さない。高校基礎は中3〜高校入試', () => {
+  for (const lv of ['数', '色・形', '曜日・月', '会話', 'テーマ別'] as const) expect(readingPoolFor(lv).every((p) => p.level.startsWith('中2'))).toBe(true)
+  expect(readingPoolFor('中3').every((p) => /^中(3|2〜中3)/.test(p.level))).toBe(true)
+  expect(readingPoolFor('高校基礎').every((p) => p.level.includes('高校入試') || p.level.startsWith('中3'))).toBe(true)
 })

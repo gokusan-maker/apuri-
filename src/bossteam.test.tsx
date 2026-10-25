@@ -125,3 +125,18 @@ it('チームバトルでは、答えたなかまのレベルの攻撃力のぶ�
   )
   expect(screen.getByTitle('攻撃力 +3').textContent).toContain('⚔+3')
 })
+
+it('ボスの文法問題は、ボスの単語帳のレベルの単元から（設定の学年ではなく）', async () => {
+  const { grammarForLevel } = await import('./boss')
+  const { gradeOf } = await import('./grammar')
+  localStorage.setItem('eitan:grade', 'adult')
+  expect(grammarForLevel('中1').every((u) => gradeOf(u.id) === '中1')).toBe(true)
+  expect(grammarForLevel('数').every((u) => gradeOf(u.id) === '中1')).toBe(true)
+  expect(grammarForLevel('中2').every((u) => ['中1', '中2'].includes(gradeOf(u.id)))).toBe(true)
+  expect(grammarForLevel('高校基礎').some((u) => gradeOf(u.id) === '高校')).toBe(true)
+  const words = WORDS.filter((w) => w.level === '中1')
+  const qs = teamBossQuestions(words)
+  const ja = new Set(words.map((w) => w.ja))
+  for (const q of qs.filter((x) => x.team === 'word')) expect(q.choices.every((c) => ja.has(c))).toBe(true)
+  localStorage.removeItem('eitan:grade')
+})
