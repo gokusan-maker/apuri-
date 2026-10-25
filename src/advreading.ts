@@ -3689,6 +3689,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-recycling-memo',
+    title: 'Notice: New Recycling Program',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: Starting on Monday, June 1, our company will begin a new recycling program at all three of our offices. The goal of the program is to reduce the amount of waste we send to landfills by half within the next two years.",
+      "Over the weekend, new recycling stations will be installed on every floor. Each station has four bins: blue for paper, yellow for plastic bottles, green for cans, and gray for general waste. Please make sure that bottles and cans are empty ( A ) you put them in the bins.",
+      "In addition, we will no longer provide paper cups in the break rooms. Instead, each employee will receive a free reusable mug with the company logo. Mugs will be handed out by the General Affairs Department on May 29. Employees who are away on that day can ( B ) up their mugs at the front desk the following week.",
+      "To encourage participation, the office that reduces its waste the most by the end of the year will receive a prize of $1,000 to spend on a team event. Monthly results will be shared in the company newsletter.",
+      "We appreciate your cooperation. Questions about the program should be ( C ) to Ms. Garcia in General Affairs.",
+    ],
+    ja: [
+      '全社員のみなさんへ：6月1日（月）から、当社は3つのオフィスすべてで新しいリサイクルの取り組みを始めます。この取り組みの目標は、今後2年以内に、埋め立て地に送るごみの量を半分に減らすことです。',
+      '週末のあいだに、各階に新しいリサイクルステーションが設置されます。それぞれのステーションには4つの箱があります。青は紙、黄色はペットボトル、緑は缶、灰色は一般ごみです。ペットボトルと缶は、箱に入れる前に必ず空にしてください。',
+      'また、休憩室での紙コップの提供をやめます。そのかわりに、社員一人ひとりに会社のロゴ入りのくり返し使えるマグカップを無料でお配りします。マグカップは5月29日に総務部から配られます。その日に不在の社員は、翌週に受付で受け取ることができます。',
+      '参加をうながすため、年末までにごみをもっとも減らしたオフィスには、チームのイベントに使える1,000ドルの賞金がおくられます。毎月の結果は社内報でお知らせします。',
+      'ご協力に感謝します。この取り組みについての質問は、総務部のガルシアさんにお寄せください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'during', 'by', 'until then'], answer: 0, why: 'うしろが文（you put them in the bins）なので、接続詞として使える before「～する前に」。during・by は前置詞の働きで、until then は副詞句なので、うしろに文を続けられない。' },
+      { id: 'B', choices: ['pick', 'picked', 'picking', 'to pick'], answer: 0, why: '助動詞 can のあとは動詞の原形。pick up ～ で「～を受け取る」。' },
+      { id: 'C', choices: ['directed', 'directing', 'direct', 'directs'], answer: 0, why: 'should be ＋過去分詞 の受け身。direct A to B で「A を B に向ける」。質問は「向けられる」側なので directed。' },
+    ],
+    tf: [
+      { statement: 'この取り組みは、2年以内にごみを半分に減らすことを目標にしている。', answer: true, why: '第1段落 reduce the amount of waste … by half within the next two years。' },
+      { statement: '休憩室では、これからも紙コップが使える。', answer: false, why: '第3段落 we will no longer provide paper cups in the break rooms。' },
+      { statement: 'ごみをもっとも減らしたオフィスには、1,000ドルの賞金がおくられる。', answer: true, why: '第4段落 will receive a prize of $1,000。' },
+    ],
+    qa: [
+      { q: 'What should employees who are away on May 29 do?', choices: ['Pick up their mugs at the front desk the following week.', 'Buy their own paper cups.', 'Contact the newsletter editor.', 'Install a recycling station.'], answer: 0, why: '第3段落 Employees who are away on that day can pick up their mugs at the front desk the following week。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

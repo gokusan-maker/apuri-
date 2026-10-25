@@ -2045,3 +2045,4 @@
 - 2026-10-25: 高2・高3の単語を20語追加（declare・excuse・suspect・threaten など）
 - 2026-10-25: 私学難関レベルの長文「Are Emoji a New Language?」（絵文字は言語か・260語）を追加
 - 2026-10-25: 私学難関レベルの長文「The Underrated Power of Saying Thank You」（感謝を伝える・236語）を追加
+- 2026-10-25: TOEICレベルの専用長文「Notice: New Recycling Program」（社内のリサイクルのお知らせ・212語）を追加
