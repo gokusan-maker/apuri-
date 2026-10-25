@@ -13,7 +13,7 @@ import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
-import { hintHidden } from './readhint'
+import { maskAnswer } from './readhint'
 import { ReadTower } from './ReadTowerView'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
@@ -106,7 +106,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
     const para = [...box.querySelectorAll<HTMLElement>('.long-para-row')].find((el) => el.textContent?.includes(`( ${id} )`))
     if (para) box.scrollTo?.({ top: para.offsetTop - box.offsetTop - 8, behavior: 'smooth' })
   }
-  const [hints, setHints] = useState<string[]>([]) // ヒントを使った空所
+  const [hints, setHints] = useState<string[]>([]) // ヒントを開いた問題（空所の記号・tf0・qa0）
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
@@ -569,8 +569,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
             {b.choices.map((c, i) => (
               <button
                 key={c}
-                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${(done || (instant && blanks[b.id] !== undefined)) && i === b.answer ? ' answer' : ''}${!done && hints.includes(b.id) && hintHidden(b.choices.length, b.answer).includes(i) ? ' hinted-out' : ''}`}
-                disabled={done || (instant && blanks[b.id] !== undefined) || (hints.includes(b.id) && hintHidden(b.choices.length, b.answer).includes(i))}
+                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${(done || (instant && blanks[b.id] !== undefined)) && i === b.answer ? ' answer' : ''}`}
+                disabled={done || (instant && blanks[b.id] !== undefined)}
                 aria-pressed={blanks[b.id] === i}
                 onClick={() => setBlanks({ ...blanks, [b.id]: i })}
               >
@@ -578,11 +578,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               </button>
             ))}
           </div>
-          {!done && blanks[b.id] === undefined && !hints.includes(b.id) && b.choices.length > 2 && (
+          {!done && blanks[b.id] === undefined && !hints.includes(b.id) && (
             <button className="list-link pill-btn pill-gold read-hint" aria-label={`( ${b.id} ) のヒント`} onClick={() => setHints([...hints, b.id])}>
               💡 ヒント
             </button>
           )}
+          {!done && hints.includes(b.id) && <p className="read-hint-text">💡 {maskAnswer(b.why, b.choices[b.answer])}</p>}
           {(done || (instant && blanks[b.id] !== undefined)) && (
             <p className={`long-why${markNow(blanks[b.id] === b.answer)}`}>
               {blanks[b.id] === b.answer ? '⭕' : '❌'} 正解 {MARKS[b.answer]}（{b.choices[b.answer]}）：{b.why}
@@ -640,6 +641,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               </button>
             ))}
           </div>
+          {!done && tf[i] === undefined && !hints.includes(`tf${i}`) && (
+            <button className="list-link pill-btn pill-gold read-hint" aria-label={`(${i + 1}) のヒント`} onClick={() => setHints([...hints, `tf${i}`])}>
+              💡 ヒント
+            </button>
+          )}
+          {!done && hints.includes(`tf${i}`) && <p className="read-hint-text">💡 根拠になる文：「{keySentence(p, t.why)}」</p>}
           {(done || (instant && tf[i] !== undefined)) && (
             <p className={`long-why${markNow(tf[i] === t.answer)}`}>
               {tf[i] === t.answer ? '⭕' : '❌'} 正解 {t.answer ? '○' : '×'}：{t.why}
@@ -666,6 +673,12 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                   </button>
                 ))}
               </div>
+              {!done && qa[n] === undefined && !hints.includes(`qa${n}`) && (
+                <button className="list-link pill-btn pill-gold read-hint" aria-label={`Q${n + 1} のヒント`} onClick={() => setHints([...hints, `qa${n}`])}>
+                  💡 ヒント
+                </button>
+              )}
+              {!done && hints.includes(`qa${n}`) && <p className="read-hint-text">💡 根拠になる文：「{keySentence(p, `${x.q} ${x.why}`)}」</p>}
               {done && (
                 <p className={`long-why${qa[n] === x.answer ? ' right' : ' wrong'}`}>
                   {qa[n] === x.answer ? '⭕' : '❌'} 正解 {MARKS[x.answer]}：{x.why}

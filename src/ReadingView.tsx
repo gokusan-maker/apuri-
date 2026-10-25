@@ -7,7 +7,7 @@ import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { WORDS, type Word } from './words'
 import { GameTile } from './GameTileView'
-import { hintHidden } from './readhint'
+import { evidenceOf } from './readhint'
 
 const lookup = makeLookup(WORDS)
 
@@ -145,15 +145,13 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
           <div className="choices">
             {q.choices.map((c, i) => {
               let cls = 'choice'
-              const out = hint && picked === null && hintHidden(q.choices.length, q.answer).includes(i)
               if (picked !== null && i === q.answer) cls += ' correct'
               else if (picked === i) cls += ' wrong'
-              if (out) cls += ' hinted-out'
               return (
                 <button
                   key={c}
                   className={cls}
-                  disabled={picked !== null || out}
+                  disabled={picked !== null}
                   onClick={() => {
                     setPicked(i)
                     const ok = i === q.answer
@@ -169,10 +167,15 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
               )
             })}
           </div>
-          {picked === null && !hint && q.choices.length > 2 && (
+          {picked === null && !hint && (
             <button className="list-link pill-btn pill-gold read-hint" onClick={() => setHint(true)}>
-              💡 ヒント（2択にしぼる）
+              💡 ヒント
             </button>
+          )}
+          {picked === null && hint && (
+            <p className="read-hint-text">
+              💡 {evidenceOf(p, step) ? `この文に答えがあるよ：「${evidenceOf(p, step)}」` : '質問のことばに近い英文をさがしてみよう。わからない単語はタップで意味が出るよ。'}
+            </p>
           )}
           {picked !== null && (
             <button

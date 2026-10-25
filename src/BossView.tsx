@@ -1,3 +1,4 @@
+import { maskAnswer } from './readhint'
 import { CHAR_TYPES, supportEffects } from './chartype'
 import type { LongPassage } from './longreading'
 import type { GrammarUnit } from './grammar'
@@ -898,7 +899,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           {'passage' in q && picked === null && ((q as ReadingQ).hint?.note || (q as ReadingQ).hint?.quote) &&
             (tipAt === index ? (
               <div className="boss-hint" role="status">
-                {(q as ReadingQ).hint!.note && <p>💡 {(q as ReadingQ).hint!.note}</p>}
+                {(q as ReadingQ).hint!.note && <p>💡 {maskAnswer((q as ReadingQ).hint!.note!, q.choices[q.answer])}</p>}
                 {(q as ReadingQ).hint!.quote && (
                   <p>
                     📍 根拠：<q lang="en">{(q as ReadingQ).hint!.quote}</q>

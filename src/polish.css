@@ -3133,3 +3133,4 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* ボス戦：応援なかまの効果 */
 .boss-support { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; margin: 2px 0 4px; font-size: 0.72rem; font-weight: 800; color: var(--muted); }
 .boss-support span { padding: 1px 7px; border-radius: 999px; background: color-mix(in srgb, #f59e0b 18%, var(--card)); color: var(--fg); }
+.read-hint-text { margin: 6px 0 0; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, #f59e0b 14%, var(--card)); border-left: 4px solid #f59e0b; font-size: 0.85rem; line-height: 1.6; text-align: left; }
