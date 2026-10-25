@@ -2016,3 +2016,4 @@
 - 2026-10-25: TOEICレベルの専用長文「Notice: Job Opening at Greenfield Foods」（求人広告・182語）を追加
 - 2026-10-25: ネイティブレベルの専用エッセイ「Taking the Long Way」（歩いて通勤する・233語）を追加
 - 2026-10-25: 私学レベルの単語を20語追加（accustomed・conceal・evacuate・vivid など）
+- 2026-10-25: 国公立・旧帝大の単語を20語追加（barren・nourish・bewilder・yearn など）
