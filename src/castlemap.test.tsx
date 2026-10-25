@@ -18,4 +18,9 @@ describe('城の地図', () => {
     fireEvent.click(screen.getByRole('tab', { name: /ふつう/ }))
     expect(pick).toHaveBeenCalledWith('b')
   })
+  it('fold：城をえらんでいたら地図はたたんで「～の城を攻略中」', () => {
+    const { container } = render(<CastleMap title="地図" fold current="b" spots={[{ id: 'a', name: '英検5級' }, { id: 'b', name: '英検4級' }]} onPick={() => {}} />)
+    expect(container.querySelector('details.cmap')).not.toHaveAttribute('open')
+    expect(container.querySelector('summary')!.textContent).toMatch(/英検4級の城攻略中/)
+  })
 })

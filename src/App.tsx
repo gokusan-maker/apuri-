@@ -10,6 +10,7 @@ import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { CastleMap } from './CastleMapView'
+import { loadWcClears, wordCastleFloors } from './wordcastle'
 import { Reading } from './ReadingView'
 import { recordEvo, addBuddyToday, loadBuddyToday, ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, GO_LINES, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
@@ -2137,7 +2138,23 @@ function App() {
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
           {mode === 'word' && !todayQuiz && (
-            <WordCastle levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <>
+            {!castleOn && (
+              <CastleMap
+                title="単語の城の地図"
+                tabsLabel="単語コースの城"
+                fold
+                current={courseOf(levels)?.id ?? ''}
+                spots={COURSES.filter(courseReady).map((c) => {
+                  const fl = wordCastleFloors(c.levels)
+                  const wc = loadWcClears()
+                  return { id: c.id, name: c.label, sub: c.sub, done: fl.filter((f) => wc.includes(f.id)).length, total: fl.length }
+                })}
+                onPick={(id) => setLevels(COURSES.find((c) => c.id === id)!.levels)}
+              />
+            )}
+            <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の城` : '単語の城'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            </>
           )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (

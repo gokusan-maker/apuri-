@@ -3293,3 +3293,10 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
   :root:not([data-theme='light']) .cmap-land { filter: brightness(0.78) saturate(0.9); }
 }
 :root[data-theme='dark'] .cmap-land { filter: brightness(0.78) saturate(0.9); }
+details.cmap > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 6px; }
+details.cmap > summary::-webkit-details-marker { display: none; }
+.cmap-change { margin-left: auto; padding: 2px 8px; border-radius: 999px; background: rgb(255 255 255 / 0.22); font-size: 0.72rem; }
+details.cmap[open] .cmap-change { visibility: hidden; }
+details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
+.cmap-now { padding: 1px 6px; border-radius: 6px; background: #dc2626; font-size: 0.66rem; }
+.cmap-change { white-space: nowrap; }
