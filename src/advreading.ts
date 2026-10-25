@@ -3961,6 +3961,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-diary',
+    title: 'On Keeping a Diary',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When I was fifteen, I began keeping a diary, and I have written in it, with long gaps, ever since. Reading the early pages now is an odd experience. The worries that once seemed enormous, a quarrel with a friend or a poor test score, now look small, while things I mentioned only in passing, such as a walk with my grandfather, have become ( A ) I treasure most.",
+      "This suggests that a diary is not simply a record of what happened. It is also a record of what we thought was important at the time, and the gap between the two can be surprising. We are poor judges of which moments will matter to our future selves.",
+      "There is another, quieter benefit. Writing forces us to slow down. In conversation, we can hide vague feelings behind quick words, but on the page, a sentence that does not say what we mean looks clumsy and unfinished. In searching for the right word, we often discover ( B ) we actually feel, which may differ from what we assumed.",
+      "Some people worry that a diary encourages too much attention to oneself. Yet the opposite may be true. A diary kept honestly over many years shows us how often we were mistaken, how quickly our moods passed, and how much we depended on others. Few things teach humility ( C ) effectively as the voice of one's younger self.",
+    ],
+    ja: [
+      '15歳のとき、私は日記をつけはじめ、長い空白をはさみながらも、それ以来ずっと書き続けている。いま最初のほうのページを読むのは奇妙な体験だ。かつてはとても大きく思えた悩み、たとえば友だちとのけんかや悪いテストの点は、いまでは小さく見える。一方で、ついでにふれただけのこと、たとえば祖父との散歩のようなことが、いまでは私がもっとも大切にしているものになっている。',
+      'このことは、日記が単に起きたことの記録ではないことを示している。それは、私たちがその時に何を大切だと思っていたかの記録でもあり、その2つのずれはおどろくほど大きいことがある。私たちは、どの瞬間が未来の自分にとって大切になるかを、うまく判断できないのである。',
+      'もう1つ、もっと静かな利点がある。書くことは、私たちに速度を落とさせる。会話では、あいまいな気持ちを手早い言葉のうしろに隠すことができるが、紙の上では、言いたいことを言えていない文はぎこちなく、未完成に見える。ふさわしい言葉を探すうちに、私たちは自分が実際に何を感じているかに気づくことが多く、それは思いこんでいたこととちがうかもしれない。',
+      '日記は自分自身に注意を向けすぎることにつながると心配する人もいる。しかし、その逆が正しいのかもしれない。何年も正直につけた日記は、私たちがどれほどしばしばまちがっていたか、気分がどれほど早く過ぎ去ったか、そしてどれほど他人にたよっていたかを示してくれる。若いころの自分の声ほど、効果的に謙虚さを教えてくれるものはほとんどない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'that', 'which', 'it'], answer: 0, why: 'have become の補語で、treasure の目的語が欠けたかたまり「私がもっとも大切にしているもの」を作る関係代名詞 what。that・which は先行詞が必要で、it では文がつながらない。' },
+      { id: 'B', choices: ['what', 'that', 'which', 'whom'], answer: 0, why: 'discover の目的語で、feel の目的語が欠けたかたまり「実際に感じていること」を作る関係代名詞 what。that のうしろは欠けたところのない文が必要で、which・whom は先行詞が必要（whom は人にしか使わない）。' },
+      { id: 'C', choices: ['as', 'so', 'than', 'more'], answer: 0, why: 'few things teach … as effectively as ～ で「～ほど効果的に…するものはほとんどない」。as ～ as の形なので最初も as。' },
+    ],
+    tf: [
+      { statement: '筆者は15歳のときから日記をつけている。', answer: true, why: '第1段落 When I was fifteen, I began keeping a diary。' },
+      { statement: '筆者によれば、私たちはどの瞬間が将来大切になるかをうまく判断できる。', answer: false, why: '第2段落 We are poor judges of which moments will matter to our future selves。' },
+      { statement: '筆者は、日記は自分に注意を向けすぎることにつながると結論づけている。', answer: false, why: '第4段落 Yet the opposite may be true。' },
+    ],
+    qa: [
+      { q: 'According to the writer, why does writing help us understand our feelings?', choices: ['Because searching for the right word makes us discover what we actually feel.', 'Because writing is faster than speaking.', 'Because other people read our diaries.', 'Because diaries only record important events.'], answer: 0, why: '第3段落 In searching for the right word, we often discover what we actually feel。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
