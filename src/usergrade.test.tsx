@@ -1,10 +1,10 @@
+import { courseWords } from './wordcourse'
 import { beforeEach, expect, it } from 'vitest'
 import { todayWords } from './dailyread'
 import { dailyGrammar, gradeOf, GRAMMAR } from './grammar'
 import { passagesFor } from './readlevel'
 import { todayReading } from './todayread'
 import { saveGrade } from './usergrade'
-import { levelOf } from './words'
 
 // 設定の学年・レベルに合わせて、今日の課題のむずかしさが変わる（オーナーの要望）
 beforeEach(() => localStorage.clear())
@@ -21,18 +21,18 @@ it('中1なら今日の文法は中1の単元、読解はかんたんな英文',
   expect(todayReading('2026-10-01').kind).toBe('short')
 })
 
-it('中2なら今日の単語は中2の単語帳から5語（level のない中学の単語もふくむ）', () => {
+it('中2なら今日の単語は中2のレベルの単語から5語', () => {
   saveGrade('j2')
   const ws = todayWords('2026-10-07')
   expect(ws).toHaveLength(5)
-  expect(ws.every((w) => levelOf(w) === '中2')).toBe(true)
+  expect(ws.every((w) => courseWords('中2').includes(w))).toBe(true)
 })
 
 it('中3なら今日の単語は中3の単語帳から5語、読解は高校入試レベルの長文', () => {
   saveGrade('j3')
   const ws = todayWords('2026-10-05')
   expect(ws).toHaveLength(5)
-  expect(ws.every((w) => w.level === '中3')).toBe(true)
+  expect(ws.every((w) => courseWords('中3').includes(w))).toBe(true)
   const r = todayReading('2026-10-05')
   expect(r.kind).toBe('long')
   expect(passagesFor('exam').map((p) => p.id)).toContain(r.p.id)
@@ -64,11 +64,11 @@ it('学年をえらぶと、ホームの今日の課題の見出しに学年が�
   expect(screen.getByText('中学2年')).toBeInTheDocument()
 })
 
-it('高校生なら今日の単語は高校基礎・熟語の単語帳から、まだ覚えていない語を先に5語（その日は変わらない）', () => {
+it('高校生なら今日の単語は高1のレベルの単語から、まだ覚えていない語を先に5語（その日は変わらない）', () => {
   saveGrade('hs')
   const first = todayWords('2026-12-01')
   expect(first).toHaveLength(5)
-  expect(first.every((w) => w.level === '高校基礎' || w.level === '熟語')).toBe(true)
+  expect(first.every((w) => courseWords('高1').includes(w))).toBe(true)
   // 覚えた語にしても、その日の5語は変わらない
   localStorage.setItem('eitan:progress', JSON.stringify(Object.fromEntries(first.map((w) => [w.id, { box: 5, due: '2099-01-01' }]))))
   expect(todayWords('2026-12-01').map((w) => w.id)).toEqual(first.map((w) => w.id))

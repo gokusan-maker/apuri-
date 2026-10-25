@@ -8,12 +8,12 @@ import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
 import { Scramble } from './ScrambleView'
 import { Spell } from './SpellView'
-import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PASS, wcCount, wordCastleFloors, type WcFloor } from './wordcastle'
-import { wordsOf, type Level } from './words'
+import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PASS, wcCount, wordCastleFloorsFor, type WcFloor } from './wordcastle'
+import { courseWords, type CourseId } from './wordcourse'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
-export function WordCastle({ levels, name = '単語の海', onAnswer, onChest, onSpend, onPlay }: { levels: Level[]; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
-  const floors = wordCastleFloors(levels)
+export function WordCastle({ course, name = '単語の海', onAnswer, onChest, onSpend, onPlay }: { course: CourseId; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
+  const floors = wordCastleFloorsFor(course)
   const [clears, setClears] = useState(loadWcClears)
   const [floor, setFloor] = useState<WcFloor | null>(null)
   const [phase, setPhase] = useState<'quiz' | 'done' | 'boss' | 'boss-done'>('quiz')
@@ -81,7 +81,7 @@ export function WordCastle({ levels, name = '単語の海', onAnswer, onChest, o
       {phase === 'quiz' && floor.direction !== 'spell' && floor.direction !== 'dictation' && floor.direction !== 'order' && (
         <Quiz
           key={round}
-          words={wordsOf([floor.stage.level])}
+          words={courseWords(course)}
           targets={floor.words}
           count={floor.words.length}
           direction={floor.direction}
@@ -96,7 +96,7 @@ export function WordCastle({ levels, name = '単語の海', onAnswer, onChest, o
           <p className="wc-game wc-boss-title">👹 ミニボス「{bossName}」：{WC_MINIBOSS_PASS}問以上でたおせ！</p>
           <Quiz
             key={`boss-${round}`}
-            words={wordsOf([floor.stage.level])}
+            words={courseWords(course)}
             targets={floor.stage.words}
             count={floor.stage.words.length}
             direction="mix"

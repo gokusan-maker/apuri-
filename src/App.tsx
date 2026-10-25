@@ -13,7 +13,7 @@ import { LevelPick } from './LevelPickView'
 import { CastleTitleChip } from './CastleCollectView'
 import { RareEggContext, WalkerContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
-import { loadWcClears, wordCastleFloors } from './wordcastle'
+import { loadWcClears, wordCastleFloorsFor } from './wordcastle'
 import { Reading } from './ReadingView'
 import { recordEvo, addBuddyToday, loadBuddyToday, ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, GO_LINES, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
@@ -21,7 +21,7 @@ import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
-import { COURSES, courseOf, courseReady } from './wordcourse'
+import { COURSES, courseById, courseReady, courseWords, loadCourse, saveCourse, type CourseId } from './wordcourse'
 import { WordCastle } from './WordCastleView'
 import { SUPPORT_MAX, typeOf } from './chartype'
 import { EXAM_TIERS, loadExamTier, passagesForTier, saveExamTier } from './examtier'
@@ -690,6 +690,11 @@ function App() {
   const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
   const [levels, setLevels] = usePersistent(loadLevels, saveLevels)
+  const [wordCourse, setWordCourseState] = useState<CourseId>(() => loadCourse(loadLevels())) // 単語のレベル（地図とミニゲームの単語）
+  const setWordCourse = (id: CourseId) => {
+    setWordCourseState(id)
+    saveCourse(id)
+  }
   const [myWords, setMyWords] = usePersistent(loadMyWords, saveMyWords)
   const [useMy, setUseMy] = usePersistent(loadUseMy, saveUseMy)
   const words = useMemo(
@@ -1641,13 +1646,13 @@ function App() {
       {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
         <LevelPick
                 label="単語のレベル"
-                current={courseOf(levels)?.id ?? ''}
+                current={wordCourse}
                 spots={COURSES.filter(courseReady).map((c) => {
-                  const fl = wordCastleFloors(c.levels)
+                  const fl = wordCastleFloorsFor(c.id)
                   const wc = loadWcClears()
                   return { id: c.id, name: c.label, sub: c.sub, done: fl.filter((f) => wc.includes(f.id)).length, total: fl.length }
                 })}
-                onPick={(id) => setLevels(COURSES.find((c) => c.id === id)!.levels)}
+                onPick={(id) => setWordCourse(id as CourseId)}
               />
       )}
       {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && !todayGone && (
@@ -1919,7 +1924,7 @@ function App() {
               <>
               <div className="word-courses" role="group" aria-label="単語コース">
                 {COURSES.map((c) => (
-                  <button key={c.id} className={`word-course${courseOf(levels)?.id === c.id ? ' on' : ''}`} aria-pressed={courseOf(levels)?.id === c.id} disabled={!courseReady(c)} onClick={() => setLevels(c.levels)}>
+                  <button key={c.id} className={`word-course${wordCourse === c.id ? ' on' : ''}`} aria-pressed={wordCourse === c.id} disabled={!courseReady(c)} onClick={() => setWordCourse(c.id)}>
                     <b>{c.label}</b>
                     <small>{courseReady(c) ? c.sub : 'じゅんび中'}</small>
                   </button>
@@ -2143,7 +2148,7 @@ function App() {
         <>
           {mode === 'word' && !todayQuiz && !wordMini && (
             <>
-            <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の海` : '単語の海'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <WordCastle key={wordCourse} name={`${courseById(wordCourse).label}の海`} course={wordCourse} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
             {!castleOn && !quizFocus && (
               <button className="word-mini-btn" onClick={() => setWordMini(true)}>
                 🎮 単語のミニゲーム
@@ -2198,7 +2203,7 @@ function App() {
           )}
           {!(mode === 'grammar' && grammarGo) && !(mode === 'word' && (castleOn || (!todayQuiz && !wordMini && !quizFocus))) && (
           <Quiz
-            key={`${mode}:${levelKey}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
+            key={`${mode}:${levelKey}:${wordCourse}${quizFocus ? `:${quizFocus}` : ''}${mode === 'word' && todayQuiz ? ':today' : ''}`}
             direction={mode === 'grammar' ? 'grammar' : todayQuiz ? 'en-ja' : undefined}
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
@@ -2206,7 +2211,7 @@ function App() {
             grammarLevel={gcLevel}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
-            words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
+            words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : mode === 'word' && !quizFocus ? [...courseWords(wordCourse), ...(useMy ? myWords : [])] : words} // 単語のミニゲームは、えらんだレベルの単語で
             targets={mode === 'word' && todayQuiz ? todayWords(today) : quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}
             onMarkWeak={mode === 'word' ? markWeak : undefined}

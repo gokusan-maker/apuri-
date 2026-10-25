@@ -32,6 +32,7 @@ it('単語ページ：上の切りかえはなく、レベルをえらぶとそ�
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
   expect(screen.queryByRole('tab', { name: '⏱ タイムアタック' })).toBeNull()
   fireEvent.click(screen.getByRole('button', { name: /^単語のレベル：/ }))
-  fireEvent.click(screen.getByRole('option', { name: /^英検3級/ }))
-  expect(screen.getByRole('region', { name: '英検3級の海' })).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('option', { name: /^東大/ }))
+  expect(screen.getByRole('region', { name: '東大の海' })).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: /^1階：東大 単元1/ })).toBeInTheDocument() // 東大をえらぶと、東大の単語の単元から（中学の単語にならない）
 })

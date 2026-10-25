@@ -4,7 +4,7 @@ import { loadBoss } from './boss'
 import { GC_LEVELS, gcFloorsFor, loadGcClears } from './grammarcastle'
 import { loadShortDone, PASSAGES } from './reading'
 import { COURSES, courseReady } from './wordcourse'
-import { loadWcClears, wordCastleFloors } from './wordcastle'
+import { loadWcClears, wordCastleFloorsFor } from './wordcastle'
 import { LEVELS } from './words'
 
 export type CastleInfo = { id: string; kind: '単語' | '文法' | '読解' | 'ボス'; name: string; floors: number; cleared: number }
@@ -16,7 +16,7 @@ export function allCastles(): CastleInfo[] {
   const boss = loadBoss()
   return [
     ...COURSES.filter(courseReady).map((c) => {
-      const fl = wordCastleFloors(c.levels)
+      const fl = wordCastleFloorsFor(c.id)
       return { id: `w:${c.id}`, kind: '単語' as const, name: `${c.label}の海`, floors: fl.length, cleared: fl.filter((f) => wc.includes(f.id)).length }
     }),
     ...GC_LEVELS.map((l) => {

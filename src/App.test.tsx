@@ -388,13 +388,13 @@ describe('App', () => {
     expect(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: /^中2/ })).toBeInTheDocument()
   })
 
-  it('設定で単語コース（英検の級・語数）をえらぶと、その単語帳になる', () => {
+  it('設定で単語のレベル（中1〜東大・TOEIC など）をえらべる', () => {
     render(<App />)
     navTo('設定')
     const courses = () => screen.getByRole('group', { name: '単語コース' })
-    fireEvent.click(within(courses()).getByRole('button', { name: /英検準2級/ }))
-    expect(JSON.parse(localStorage.getItem('eitan:levels')!).sort()).toEqual(['熟語', '高校基礎'].sort())
-    expect(within(courses()).getByRole('button', { name: /英検準2級/ })).toHaveAttribute('aria-pressed', 'true')
+    fireEvent.click(within(courses()).getByRole('button', { name: /^私学難関/ }))
+    expect(localStorage.getItem('eitan:word-course')).toBe('私学難関')
+    expect(within(courses()).getByRole('button', { name: /^私学難関/ })).toHaveAttribute('aria-pressed', 'true')
   })
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
@@ -2029,15 +2029,15 @@ it('今日の課題を3つとも終えてトリオボーナスを受け取った
 })
 
 it('単語ゲームのページに単語の城：単元の1階目は10語の解説 → 5問、4問以上でクリアして次の階へ', async () => {
-  const { wordCastleFloors } = await import('./wordcastle')
+  const { wordCastleFloorsFor } = await import('./wordcastle')
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
   render(<App />)
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
-  const castle = screen.getByRole('region', { name: '単語の海' })
+  const castle = screen.getByRole('region', { name: '中1の海' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 単元1　1\/3/ }))
-  const f = wordCastleFloors(['中1'])[0]
+  const f = wordCastleFloorsFor('中1')[0]
   expect(screen.queryByRole('button', { name: /5問に挑戦/ })).toBeNull() // 単語一覧はなく、いきなり問題から
   for (let n = 0; n < 5; n++) {
     const en = document.querySelector('.wc-play .quiz .en')!.textContent!

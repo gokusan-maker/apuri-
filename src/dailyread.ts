@@ -1,10 +1,10 @@
 // ホームの今日の課題：今日の読解（かんたんな短い英文）と、その英文に出てくる今日の単語
 import { makeLookup } from './glossary'
 import { PASSAGES, type Passage } from './reading'
-import { loadGrade, WORD_LEVELS_FOR } from './usergrade'
 import { loadProgress } from './srs'
-import { levelOf, WORDS, type Word } from './words'
-import { courseOf } from './wordcourse'
+import { WORDS, type Word } from './words'
+import { courseWords, hasCourse, legacyCourse, loadCourse } from './wordcourse'
+import { loadGrade } from './usergrade'
 import { loadLevels } from './settings'
 
 // あたりまえすぎて課題にしない語
@@ -34,18 +34,18 @@ export function wordsInText(text: string, max = 5, words: Word[] = WORDS): Word[
 // 今日の単語：今日の読解に出てくる単語（4択で練習してから英文を読む）
 // 学年をえらんでいて中1より上なら、その学年の単語帳から日ごとに5語（まだ覚えていない語を先に・同じ日は同じ）
 export function todayWords(day: string): Word[] {
-  const g = loadGrade()
-  const course = courseOf(loadLevels()) // 単語コース（英検の級など）をえらんでいたら、そのコースの単語から
-  if (!course && (!g || g === 'j1')) return wordsInText(dailyShort(day).text)
-  const key = course ? `course:${course.id}` : g
+  // えらんでいる単語のレベル（中1〜東大・TOEIC など）の単語から日ごとに5語（まだ覚えていない語を先に・同じ日は同じ）
+  // 学年もレベルもまだえらんでいない（中1）なら、今日の読解の英文に出てくる単語
+  if (!hasCourse() && !legacyCourse(loadLevels()) && (!loadGrade() || loadGrade() === 'j1')) return wordsInText(dailyShort(day).text)
+  const course = loadCourse(loadLevels())
+  const key = `course:${course}`
   // その日にえらんだ5語は保存して、1日のあいだ変わらないようにする
   const saved = loadPicked()
   if (saved && saved.day === day && saved.grade === key) {
     const ws = saved.ids.map((id) => WORDS.find((w) => w.id === id)).filter((w): w is Word => !!w)
     if (ws.length === saved.ids.length && ws.length > 0) return ws
   }
-  const levels: string[] = course ? course.levels : g ? WORD_LEVELS_FOR[g] : []
-  const pool = WORDS.filter((w) => levels.includes(levelOf(w)))
+  const pool = courseWords(course)
   if (pool.length < 5) return wordsInText(dailyShort(day).text)
   // まだ覚えていない単語（定着していない語）を先に。かんたんすぎる日がないように
   const prog = loadProgress()
@@ -57,7 +57,7 @@ export function todayWords(day: string): Word[] {
     const w = from[(h + i * 7919) % from.length]
     if (!out.includes(w)) out.push(w)
   }
-  savePicked({ day, grade: key ?? '', ids: out.map((w) => w.id) })
+  savePicked({ day, grade: key, ids: out.map((w) => w.id) })
   return out
 }
 
