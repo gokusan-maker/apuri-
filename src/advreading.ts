@@ -3261,6 +3261,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-left-handed',
+    title: 'Living in a Right-Handed World',
+    level: '難関大（評論）',
+    paragraphs: [
+      "About one in ten people around the world is left-handed, a proportion that seems to have stayed roughly the same for thousands of years. Researchers have found evidence of this even in ancient tools, ( A ) show wear patterns that suggest they were held in the left hand.",
+      "Despite being a natural variation, left-handedness was once treated as something to be corrected. In many countries, children who wrote with their left hand were forced to switch, sometimes by having their left hand tied behind their back. Today we know that forcing a child to change hands brings no benefit and may even cause stress.",
+      "Still, left-handed people face small difficulties every day. Scissors, can openers, and many kitchen tools are designed for right-handed users. Writing from left to right can cause a left-handed person's hand to rub against the ink, ( B ) smudges the words. Even the location of the buttons on a camera can be inconvenient.",
+      "Interestingly, being left-handed can be an advantage in some sports. In tennis, baseball, and fencing, left-handed players are found at the top level more often than their share of the population would suggest. One explanation is that opponents are simply less used to ( C ) against them, so their moves are harder to predict.",
+      "As more products are designed with both groups in mind, life in a right-handed world is slowly becoming easier for the left-handed minority.",
+    ],
+    ja: [
+      '世界中のおよそ10人に1人は左ききであり、その割合は何千年もほぼ変わっていないようだ。研究者は古代の道具の中にもその証拠を見つけている。それらの道具には、左手で持たれていたことを示すすりへり方が見られるのだ。',
+      '左ききは自然な個人差であるにもかかわらず、かつては直すべきものとしてあつかわれていた。多くの国で、左手で字を書く子どもは右手に変えるよう強いられ、ときには左手を背中にしばられることさえあった。今日では、子どもにきき手を変えさせても何の利点もなく、むしろストレスの原因になりうることがわかっている。',
+      'それでも、左ききの人は毎日小さな不便に出会う。はさみや缶切り、多くの台所の道具は右ききの人向けに作られている。左から右へ字を書くと、左ききの人の手がインクにこすれ、そのせいで字がにじむことがある。カメラのボタンの位置でさえ不便なことがある。',
+      'おもしろいことに、スポーツによっては左ききが有利になることがある。テニスや野球、フェンシングでは、左ききの選手が、人口にしめる割合から考えられるよりも多くトップレベルに見られる。1つの説明は、相手が左ききの選手と対戦することに単に慣れていないので、その動きが読みにくいということである。',
+      '両方の人を考えて設計される製品が増えるにつれて、右ききの世界での暮らしは、少数派である左ききの人にとって少しずつ楽になりつつある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'where'], answer: 0, why: 'コンマのあとで ancient tools を説明し、show の主語になる非制限用法の関係代名詞 which。that は非制限用法で使えず、what は先行詞をとらず、where のうしろには主語のそろった文が必要。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'it'], answer: 0, why: 'コンマのあとで前の内容（手がインクにこすれること）を受ける非制限用法の which。what は先行詞をとらず、who は人に使い、it では2つの文をつなげない。' },
+      { id: 'C', choices: ['playing', 'play', 'played', 'plays'], answer: 0, why: 'be used to ～ing で「～することに慣れている」。to は前置詞なので動名詞 playing。' },
+    ],
+    tf: [
+      { statement: '左ききの人の割合は、何千年もほぼ変わっていないようだ。', answer: true, why: '第1段落 a proportion that seems to have stayed roughly the same for thousands of years。' },
+      { statement: '筆者によれば、子どもにきき手を変えさせると、よい効果がある。', answer: false, why: '第2段落 forcing a child to change hands brings no benefit and may even cause stress。' },
+      { statement: 'テニスでは、左ききの選手がトップレベルに比較的多く見られる。', answer: true, why: '第4段落 left-handed players are found at the top level more often than their share of the population would suggest。' },
+    ],
+    qa: [
+      { q: 'Why might left-handed players have an advantage in some sports?', choices: ['Opponents are less used to playing against them.', 'They practice more than right-handed players.', 'Sports equipment is designed for them.', 'They are stronger than right-handed players.'], answer: 0, why: '第4段落 opponents are simply less used to playing against them, so their moves are harder to predict。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

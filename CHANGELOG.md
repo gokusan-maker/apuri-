@@ -2029,3 +2029,4 @@
 - 2026-10-25: 高3（共通テスト）レベルの長文「Should We Work Four Days a Week?」（週4日勤務・212語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「Is Esports a Real Club Activity?」（eスポーツ部・215語）を追加
 - 2026-10-25: TOEICレベルの専用長文「Notice: Grand Opening of Peak Fitness」（ジムの開業広告・191語）を追加
+- 2026-10-25: 私学難関レベルの長文「Living in a Right-Handed World」（左きき・263語）を追加
