@@ -1,3 +1,4 @@
+import { createContext } from 'react'
 // 城の塔：いま挑む階と、見せる階（クリアした2階・いまの階・カギつきの次の1階。上の階ほど上に）
 export const castleNow = (floors: { cleared: boolean }[]) => {
   const i = floors.findIndex((f) => !f.cleared)
@@ -30,7 +31,14 @@ export function saveChests(c: Record<string, number[]>): void {
     /* 保存できなくても動く */
   }
 }
+// 節目の階：10階ごとと、てっぺんの階（宝箱にレアの卵）
+export const isMilestone = (floor: number, total: number) => floor % CHEST_EVERY === 0 || floor === total
 // あけられる宝箱の階（1から数えた階の番号）
-export function openableChests(cleared: number, opened: number[]): number[] {
-  return Array.from({ length: Math.floor(cleared / CHEST_EVERY) }, (_, i) => (i + 1) * CHEST_EVERY).filter((n) => !opened.includes(n))
+export function openableChests(cleared: number, opened: number[], total = 0): number[] {
+  const out = Array.from({ length: Math.floor(cleared / CHEST_EVERY) }, (_, i) => (i + 1) * CHEST_EVERY)
+  if (total > 0 && cleared >= total && total % CHEST_EVERY !== 0) out.push(total)
+  return out.filter((n) => !opened.includes(n))
 }
+
+// 宝箱のレアの卵：App がわたす（なかまに入れて、入れた卵の名前を返す。いっぱいなら null）
+export const RareEggContext = createContext<(() => string | null) | null>(null)

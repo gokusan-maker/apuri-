@@ -1,15 +1,16 @@
-import { useState, type ReactNode } from 'react'
-import { CHEST_COINS, CHEST_EVERY, castleNow, castleShown, loadChests, openableChests, saveChests } from './castle'
+import { useContext, useState, type ReactNode } from 'react'
+import { CHEST_COINS, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests } from './castle'
 
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
 
 // 城の塔：1階ずつクリアしてのぼる。夜空・月・山・天守の屋根・旗・石の壁・たいまつ・門と堀
 export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple'; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
   const [chests, setChests] = useState(loadChests)
-  const [opened, setOpened] = useState<number | null>(null) // いまあけた宝箱の階
+  const [opened, setOpened] = useState<{ at: number; egg: string | null } | null>(null) // いまあけた宝箱の階と、出てきたレアの卵
+  const giveEgg = useContext(RareEggContext)
   if (floors.length === 0) return null
   const now = castleNow(floors)
-  const chest = onChest ? openableChests(now, chests[name] ?? [])[0] : undefined
+  const chest = onChest ? openableChests(now, chests[name] ?? [], floors.length)[0] : undefined
   const top = now >= floors.length
   return (
     <section className={`castle castle-${theme}`} aria-label={name}>
@@ -32,16 +33,16 @@ export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goL
             const next = { ...chests, [name]: [...(chests[name] ?? []), chest] }
             setChests(next)
             saveChests(next)
-            setOpened(chest)
+            setOpened({ at: chest, egg: giveEgg ? giveEgg() : null })
             onChest?.(CHEST_COINS)
           }}
         >
-          🎁 {chest}{unit}の宝箱をあける（🪙{CHEST_COINS}）
+          🎁 {chest}{unit}の宝箱をあける（🪙{CHEST_COINS}{giveEgg ? '＋🥚レアの卵' : ''}）
         </button>
       )}
       {opened !== null && chest === undefined && (
         <p className="castle-chest-got" role="status">
-          ✨ {opened}{unit}の宝箱から 🪙{CHEST_COINS} を手に入れた！
+          ✨ {opened.at}{unit}の宝箱から 🪙{CHEST_COINS}{opened.egg ? ` と 🥚${opened.egg}` : ''} を手に入れた！
         </p>
       )}
       <div className="castle-body">
@@ -83,13 +84,13 @@ export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goL
               )
             const isNow = i === now
             return (
-              <li key={f.id} className={`${isNow ? 'now' : 'cleared'}${(i + 1) % CHEST_EVERY === 0 ? ' chest' : ''}`}>
+              <li key={f.id} className={`${isNow ? 'now' : 'cleared'}${isMilestone(i + 1, floors.length) ? ' chest' : ''}`}>
                 {isNow && <span className="castle-torch l" aria-hidden="true" />}
                 {isNow && <span className="castle-torch r" aria-hidden="true" />}
                 {isNow && <span className="castle-ribbon" aria-hidden="true">いまここ</span>}
                 {!isNow && <span className="castle-banner" aria-hidden="true">★</span>}
                 <span className="castle-plate">{i + 1}</span>
-                {(i + 1) % CHEST_EVERY === 0 && <span className="castle-chest-mark" aria-label="宝箱の階">🎁</span>}
+                {isMilestone(i + 1, floors.length) && <span className="castle-chest-mark" aria-label="宝箱の階（レアの卵）">🎁🥚</span>}
                 {f.fig && <span className="castle-arch">{f.fig}</span>}
                 <button className="castle-btn" aria-label={`${i + 1}${unit}：${f.label}${f.cleared ? '（クリア）' : ''}`} onClick={() => onOpen(f.id)}>
                   <span className="castle-label">{f.label}</span>

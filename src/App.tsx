@@ -10,6 +10,7 @@ import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
+import { RareEggContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
 import { Reading } from './ReadingView'
@@ -1432,7 +1433,17 @@ function App() {
     />
   )
 
+  // 城の節目の宝箱から出るレアの卵（色ちがい確定）。なかまがいっぱいならコイン
+  const giveRareEgg = () => {
+    const r = rareEgg(party, rand(), rand())
+    if (r) setParty(r.party)
+    else setWallet((w) => ({ ...w, coins: w.coins + RARE_FULL_COINS }))
+    pushToast([{ id: 'castle-egg', text: r ? `🥚 城の宝箱から${r.kind.name}の${r.species.egg}！ 仲間になった（ショップの「なかま」で見られるよ）` : `🥚 城の宝箱からレアの卵…でも仲間がいっぱいなので 🪙${RARE_FULL_COINS}`, counter: 'answers', target: 0 }])
+    return r ? `${r.kind.name}の${r.species.egg}` : null
+  }
+
   return (
+    <RareEggContext.Provider value={giveRareEgg}>
     <PlayContext.Provider value={playRegister}>
     <BossTeamContext.Provider value={bossTeam}>
     <BossSupportContext.Provider value={supportTypes}>
@@ -2350,6 +2361,7 @@ function App() {
     </BossSupportContext.Provider>
     </BossTeamContext.Provider>
     </PlayContext.Provider>
+    </RareEggContext.Provider>
   )
 }
 

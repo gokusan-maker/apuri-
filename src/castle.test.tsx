@@ -39,3 +39,22 @@ it('10階ごとに宝箱：クリアしたらあけられて🪙20、1回だけ'
   expect(screen.queryByRole('button', { name: /宝箱をあける/ })).toBeNull()
   localStorage.removeItem('eitan:castle-chests')
 })
+
+it('節目の階（10階ごと・てっぺん）の宝箱からレアの卵', async () => {
+  const { openableChests, isMilestone, RareEggContext } = await import('./castle')
+  const { Castle } = await import('./CastleView')
+  const { render, screen, fireEvent } = await import('@testing-library/react')
+  expect(isMilestone(10, 23)).toBe(true)
+  expect(isMilestone(23, 23)).toBe(true)
+  expect(isMilestone(7, 23)).toBe(false)
+  expect(openableChests(4, [], 4)).toEqual([4]) // 4階の城は、てっぺんで宝箱
+  localStorage.clear()
+  const floors = Array.from({ length: 4 }, (_, i) => ({ id: `f${i}`, label: `階${i}`, cleared: true }))
+  render(
+    <RareEggContext.Provider value={() => '金色のタマゴ'}>
+      <Castle name="テスト城" floors={floors} onOpen={() => {}} onChest={() => {}} />
+    </RareEggContext.Provider>,
+  )
+  fireEvent.click(screen.getByText(/4階の宝箱をあける（🪙20＋🥚レアの卵）/))
+  expect(screen.getByRole('status').textContent).toContain('🥚金色のタマゴ')
+})
