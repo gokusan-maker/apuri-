@@ -386,6 +386,9 @@ function App() {
   const todayDone: Record<TodayTask, boolean> = { word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }
   const todayNext = todayFocus && todayDone[todayFocus] ? nextTodayTask(todayFocus, todayDone) : undefined // 今日の課題を1つ終えたら、まだの課題へ（単語→文法→読解の順）
   const todayAllDone = !!todayFocus && TODAY_TASKS.every((t) => todayDone[t]) // 3つともクリア → ホームでトリオボーナス
+  // 今日の課題を3つとも終えたら、その日は各ページの「今日の課題」ボタンを出さない（ホームはトリオボーナスを受け取ったら消す）
+  const todayGone = TODAY_TASKS.every((t) => todayDone[t])
+  const todayHomeGone = todayGone && loadTrioDay() === today
   // 今日の課題を1つ終えたら、数秒後に自動でまだの課題へ（単語→文法→読解。とめることもできる）
   const [autoNext, setAutoNext] = useState<{ to: TodayTask; left: number } | null>(null)
   const prevFocusDone = useRef('')
@@ -1617,7 +1620,7 @@ function App() {
           </div>
         </div>
       )}
-      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && (
+      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && !todayGone && (
         <button
           className="long-recommend daily-long today-read-btn"
           aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
@@ -1818,7 +1821,7 @@ function App() {
           {mode === 'boss' && !playOn && buddyRow}
           {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
-          {mode === 'reading' && !shortGo && !playOn && (
+          {mode === 'reading' && !shortGo && !playOn && !todayGone && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
               📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
               <strong>{todayReadingTitle(today)}</strong>
@@ -1941,7 +1944,7 @@ function App() {
         </>
       ) : mode === 'home' ? (
         <>
-          <TodayTasks
+          {!todayHomeGone && <TodayTasks
             today={today}
             onPickGrade={() => {
               setMode('settings')
@@ -1971,7 +1974,7 @@ function App() {
               setMode(w)
               toContent()
             }}
-          />
+          />}
           <p className="today-section-title home-records-title">📊 記録</p>
           <div className="sub-tabs stats-tabs" role="tablist" aria-label="記録の種類">
             {STATS_TABS.map((t) => (
@@ -2138,7 +2141,7 @@ function App() {
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
-          {mode === 'grammar' && !grammarGo && !playOn && (
+          {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
               📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
               <strong>{dailyGrammar(today).title.split('（')[0]}</strong>

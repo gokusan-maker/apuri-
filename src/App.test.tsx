@@ -2021,3 +2021,19 @@ it('読解の難関大で、入試レベル（共通テスト〜国立医学部�
   expect(localStorage.getItem('eitan:exam-tier')).toBe('kokuritsu-med')
   expect(passagesForTier('kokuritsu-med').length).toBeGreaterThanOrEqual(2)
 })
+
+it('今日の課題を3つとも終えてトリオボーナスを受け取ったら、その日は今日の課題を画面に出さない', async () => {
+  const { dayKey } = await import('./srs')
+  const day = dayKey()
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  for (const k of ['eitan:today-words', 'eitan:grammar-daily', 'eitan:daily-short']) localStorage.setItem(k, day)
+  const r = render(<App />)
+  expect(screen.getByLabelText('今日の課題')).toBeInTheDocument() // まだトリオボーナスを受け取っていない
+  r.unmount()
+  localStorage.setItem('eitan:trio-day', day)
+  render(<App />)
+  expect(screen.queryByLabelText('今日の課題')).toBeNull()
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法チャレンジ'))
+  expect(screen.queryByRole('button', { name: /今日の課題（文法）/ })).toBeNull()
+})
