@@ -3202,3 +3202,10 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .castle-chest-got { position: relative; margin: 6px 0 2px; text-align: center; font-weight: 900; color: #fde047; }
 .castle-chest-mark { position: absolute; left: 28px; top: 2px; font-size: 0.9rem; filter: drop-shadow(0 0 4px #fde047); }
 @media (prefers-reduced-motion: reduce) { .castle-chest-btn { animation: none; } }
+/* ガチャ：タマゴをタップしてわる */
+.gr-tap { position: absolute; left: 50%; bottom: 18%; translate: -50% 0; z-index: 5; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 12px 26px; border: 3px solid #fff; border-radius: 999px; background: linear-gradient(135deg, #f97316, #ec4899); color: #fff; font: inherit; font-weight: 900; font-size: 1.05rem; box-shadow: 0 6px 0 #9d174d, 0 0 24px rgb(253 224 71 / 0.7); cursor: pointer; animation: castle-chest 0.9s ease-in-out infinite; }
+.gr-tap small { font-size: 0.75rem; opacity: 0.9; }
+.gr-egg.tapped { animation: gr-tapped 0.35s ease-out; }
+@keyframes gr-tapped { 0% { transform: scale(1.12) rotate(-8deg); } 50% { transform: scale(0.95) rotate(8deg); } 100% { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .gr-tap, .gr-egg.tapped { animation: none; } }
+.gr-tap { white-space: nowrap; }
