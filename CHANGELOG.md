@@ -2063,3 +2063,4 @@
 - 2026-10-25: 国公立・旧帝大の単語を30語追加（adept・astute・bleak・erratic・lucid・mediocre など）
 - 2026-10-25: 私学の単語を20語、京大・東大の単語を20語追加（devour・rejoice・intrepid・opulent・succinct・enigma など）
 - 2026-10-25: 私学難関の単語を15語、国公立・旧帝大の単語を15語追加（serene・shrewd・vigilant・prolific・stoic・tactful など）
+- 2026-10-25: 私学レベルの長文「Why Mosquitoes Prefer Some People」（蚊に刺されやすい人・241語）を追加

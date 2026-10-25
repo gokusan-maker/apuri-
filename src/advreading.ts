@@ -3901,6 +3901,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-mosquito',
+    title: 'Why Mosquitoes Prefer Some People',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever noticed that at a summer barbecue, some people are covered in mosquito bites while others hardly get any? This is not just bad luck. Scientists have found that mosquitoes are attracted to certain people more than others, and they use several clues ( A ) find their targets.",
+      "First of all, only female mosquitoes bite. They need the protein in blood to produce their eggs, while males feed only on plant juices. To find a meal, a female mosquito first detects carbon dioxide, the gas we breathe out. People who breathe out more of it, such as larger adults or people who have been exercising, are easier for mosquitoes to find.",
+      "As a mosquito gets closer, it also uses body heat and the smell of the skin. Our skin is home to millions of tiny bacteria, and the chemicals they produce give each person a slightly different smell. Studies suggest that this smell, ( B ) depends partly on our genes, is one of the main reasons why some people are bitten much more often than others.",
+      "So what can you do? Wearing light-colored clothes, staying in a breeze, and getting rid of standing water where mosquitoes lay their eggs can all help. Unfortunately, there is little you can do to change the smell of your skin, so if you are one ( C ) the unlucky ones, insect repellent may be your best friend on summer evenings.",
+    ],
+    ja: [
+      '夏のバーベキューで、蚊にたくさん刺される人もいれば、ほとんど刺されない人もいることに気づいたことはないだろうか。これはただの運の悪さではない。科学者たちは、蚊がほかの人よりも特定の人に引きつけられること、そして獲物を見つけるためにいくつかの手がかりを使っていることを発見した。',
+      'まず、刺すのはメスの蚊だけである。メスは卵を作るために血の中のタンパク質を必要とするが、オスは植物の汁だけを吸う。食事を見つけるために、メスの蚊はまず、私たちがはき出す気体である二酸化炭素を感知する。体の大きい大人や運動をしていた人のように、二酸化炭素を多くはき出す人は、蚊に見つけられやすいのである。',
+      '近づくにつれて、蚊は体温や皮ふのにおいも使う。私たちの皮ふには何百万もの小さな細菌がすんでおり、それらが作る化学物質によって、人はそれぞれ少しずつちがうにおいをもつ。研究によると、遺伝子にも一部左右されるこのにおいが、ほかの人よりずっとよく刺される人がいるおもな理由の1つであるらしい。',
+      'では、どうすればよいのだろうか。明るい色の服を着ること、風の通るところにいること、蚊が卵を産むたまり水をなくすことは、どれも役に立つ。残念ながら、皮ふのにおいを変えるためにできることはほとんどないので、もしあなたが運の悪い一人なら、夏の夕方には虫よけがいちばんの味方かもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'for', 'so', 'in'], answer: 0, why: '目的を表す to 不定詞「獲物を見つけるために」。for・so・in のうしろに動詞の原形 find は続かない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'who'], answer: 0, why: 'コンマのあとで this smell を説明し、depends の主語になる非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、who は人に使う。' },
+      { id: 'C', choices: ['of', 'in', 'at', 'with'], answer: 0, why: 'one of the ＋複数名詞 で「～のうちの1人（1つ）」。in・at・with ではこの意味にならない。' },
+    ],
+    tf: [
+      { statement: '血を吸うのはメスの蚊だけである。', answer: true, why: '第2段落 only female mosquitoes bite。' },
+      { statement: '運動したばかりの人は、蚊に見つけられにくい。', answer: false, why: '第2段落 people who have been exercising, are easier for mosquitoes to find。' },
+      { statement: '筆者によれば、皮ふのにおいは簡単に変えられる。', answer: false, why: '第4段落 there is little you can do to change the smell of your skin。' },
+    ],
+    qa: [
+      { q: 'Why do female mosquitoes need blood?', choices: ['To get protein for producing eggs.', 'To keep their bodies warm.', 'To find carbon dioxide.', 'To feed on plant juices.'], answer: 0, why: '第2段落 They need the protein in blood to produce their eggs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
