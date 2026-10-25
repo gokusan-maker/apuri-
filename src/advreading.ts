@@ -2841,6 +2841,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-office-move',
+    title: 'Notice: Our Office Is Moving',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: As announced at last month's meeting, our office will move to the Harbor View Building on Saturday, March 14. The new office is a five-minute walk from Central Station, and all departments will be located on the eighth floor.",
+      "Please pack the items on your desk into the boxes provided by Wednesday, March 11. Each box should be labeled with your name and department. Computers and printers will be moved by the moving company, so please do not pack them yourself. Items ( A ) are not labeled may be left behind.",
+      "The office will be closed on Friday, March 13, so that the moving company can prepare. Employees who need to work that day are asked to work from home. Please make sure that you have saved all necessary files ( B ) leaving the office on Thursday.",
+      "We will begin working in the new office on Monday, March 16. Your new security card will be placed on your desk. If you have any questions about the move, please contact Ms. Tanaka in the General Affairs Department ( C ) the end of this week.",
+    ],
+    ja: [
+      '全社員のみなさんへ：先月の会議でお知らせしたとおり、当社のオフィスは3月14日（土）にハーバービュー・ビルへ移転します。新しいオフィスはセントラル駅から歩いて5分で、すべての部署が8階に入ります。',
+      '3月11日（水）までに、机の上の物を用意された箱につめてください。箱にはそれぞれ名前と部署を書いてください。コンピューターとプリンターは引っ越し業者が運ぶので、自分でつめないでください。名前の書かれていない物は置いていかれることがあります。',
+      '引っ越し業者が準備できるように、3月13日（金）はオフィスを閉めます。その日に仕事をする必要がある社員は、在宅で仕事をしてください。木曜日にオフィスを出る前に、必要なファイルはすべて保存しておいてください。',
+      '3月16日（月）から新しいオフィスで仕事を始めます。新しいセキュリティカードは机の上に置いておきます。移転について質問があれば、今週末までに総務部のタナカさんに連絡してください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'whose'], answer: 0, why: '先行詞 Items（物）を説明し、are not labeled の主語になる関係代名詞 that。what は先行詞をとらず、who は人に使い、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['before', 'during', 'until when', 'since then'], answer: 0, why: 'うしろが動名詞 leaving で「オフィスを出る前に」なので before。during のうしろは期間の名詞、until when・since then はこの形にならない。' },
+      { id: 'C', choices: ['by', 'until', 'since', 'for'], answer: 0, why: '「今週末までに（連絡する）」とし切りを表すのは by。until は「～までずっと」で、1回の連絡には使わない。' },
+    ],
+    tf: [
+      { statement: '新しいオフィスでは、すべての部署が8階に入る。', answer: true, why: '第1段落 all departments will be located on the eighth floor。' },
+      { statement: '社員は自分のコンピューターを箱につめなければならない。', answer: false, why: '第2段落 Computers and printers will be moved by the moving company, so please do not pack them yourself。' },
+      { statement: '3月13日（金）に仕事が必要な社員は、在宅で仕事をする。', answer: true, why: '第3段落 Employees who need to work that day are asked to work from home。' },
+    ],
+    qa: [
+      { q: 'When will employees start working in the new office?', choices: ['On Monday, March 16.', 'On Saturday, March 14.', 'On Friday, March 13.', 'On Wednesday, March 11.'], answer: 0, why: '第4段落 We will begin working in the new office on Monday, March 16。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

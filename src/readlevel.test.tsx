@@ -113,3 +113,9 @@ it('京大のいちばんはじめに京大専用の長文（kyodai-）、和訳
   expect(passagesFor('京大')[0].id).toBe('kyodai-ruins')
   expect(passagesFor('京大')[0].gistKind).toBe('transl')
 })
+
+it('TOEIC はメール・お知らせの長文だけ。メール・お知らせは高3（共通テスト）などには入らない', () => {
+  expect(passagesFor('TOEIC').every((p) => /メール|お知らせ/.test(p.level))).toBe(true)
+  expect(passagesFor('TOEIC').some((p) => p.id === 'toeic-office-move')).toBe(true)
+  expect(passagesFor('高3').some((p) => /メール|お知らせ/.test(p.level))).toBe(false)
+})
