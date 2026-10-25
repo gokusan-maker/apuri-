@@ -2701,6 +2701,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-container',
+    title: 'The Box That Changed Trade',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For centuries, loading a ship was slow and expensive work. Goods arrived at the port in sacks, barrels, and boxes of every shape, and teams of dockworkers carried them on board one by one. A ship could spend more time ( A ) in port than travelling at sea, and goods were often damaged or stolen along the way.",
+      "In 1956 an American trucking businessman named Malcolm McLean tried a different idea. He loaded fifty-eight large metal boxes onto an old tanker, the Ideal X, and sent it from New Jersey to Texas. Because the boxes were all the same size, they could be lifted by cranes straight from trucks onto the ship, and work that had once taken days could be finished in hours.",
+      "Standard containers soon spread around the world. As the cost of moving goods fell sharply, companies found it worth ( B ) parts and products across oceans, and many port cities had to change as cranes replaced crowds of workers. Today almost everything we buy, from clothes to phones, has spent part of its journey inside a steel box ( C ) basic design has hardly changed since the 1950s.",
+    ],
+    ja: [
+      '何世紀ものあいだ、船に荷物を積むのは時間もお金もかかる仕事だった。品物は袋やたる、さまざまな形の箱に入って港にとどき、港湾労働者のチームがそれを1つずつ船に運び入れた。船は海を航海しているよりも港で待っている時間のほうが長いこともあり、品物はとちゅうでいたんだり、ぬすまれたりすることも多かった。',
+      '1956年、マルコム・マクリーンというアメリカのトラック運送業者が、ちがう考えをためした。彼は58個の大きな金属の箱を古いタンカー、アイデアルX号に積み、ニュージャージーからテキサスへ送ったのだ。箱はすべて同じ大きさだったので、クレーンでトラックから船へそのままつり上げることができ、かつては何日もかかった作業が数時間で終わるようになった。',
+      '規格化されたコンテナはまもなく世界中に広まった。品物を運ぶ費用が大きく下がるにつれて、企業は部品や製品を海の向こうへ運ぶ価値があると考えるようになり、クレーンが大勢の労働者にとってかわったことで、多くの港町は変わらざるをえなかった。今日、服から電話まで、私たちが買うほとんどすべての物は、基本の設計が1950年代からほとんど変わっていない鋼鉄の箱の中で、旅の一部をすごしてきたのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['waiting', 'to wait', 'waited', 'wait'], answer: 0, why: 'spend ＋ 時間 ＋ ～ing で「～して時間をすごす」。spend time to do の形はなく、過去分詞・原形も入らない。' },
+      { id: 'B', choices: ['shipping', 'to ship', 'ship', 'shipped'], answer: 0, why: 'worth は前置詞のようにはたらき、うしろに動名詞をとる（worth ～ing「～する価値がある」）。worth to do の形はない。' },
+      { id: 'C', choices: ['whose', 'which', 'that', 'its'], answer: 0, why: '「その（箱の）基本の設計が」と所有を表すので whose basic design。which・that のあとに名詞をそのまま続けられず、its では2つの文をつなげない。' },
+    ],
+    tf: [
+      { statement: 'コンテナが使われる前は、船に荷物を積むのに時間がかかった。', answer: true, why: '第1段落 loading a ship was slow and expensive work。' },
+      { statement: 'マクリーンは最初の航海で、600個の箱を運んだ。', answer: false, why: '第2段落 He loaded fifty-eight large metal boxes。' },
+      { statement: 'コンテナの基本の設計は、1950年代から大きく変わった。', answer: false, why: '第3段落 basic design has hardly changed since the 1950s。' },
+    ],
+    qa: [
+      { q: 'Why could McLean\'s boxes be loaded so quickly?', choices: ['They were all the same size and could be lifted by cranes.', 'They were carried on board one by one by many workers.', 'They were made of light wood instead of metal.', 'They were loaded while the ship was at sea.'], answer: 0, why: '第2段落 Because the boxes were all the same size, they could be lifted by cranes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
