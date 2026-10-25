@@ -2795,3 +2795,5 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* 攻撃力のバッジはなかまのタイルの右上（ラベルを1行に収める） */
 .boss-team-m { position: relative; }
 .boss-team-m .boss-team-atk { position: absolute; top: 4px; right: 4px; margin: 0; }
+/* 単語カードの「まだ」はピンク（「まちがいだけ・まだ」の色にそろえる） */
+.card .actions .again { background: linear-gradient(135deg, #f472b6, #db2777); color: #fff; box-shadow: 0 4px 0 #9d174d; }

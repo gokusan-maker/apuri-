@@ -139,3 +139,7 @@ it('ボス部屋のとくべつイベントは光るわく・リボンつき', (
   expect(css).toMatch(/\.special-event \{[^}]*animation: se-glow/)
   expect(css).toMatch(/\.special-event-ribbon \{[^}]*white-space: nowrap/)
 })
+
+it('単語カードの「まだ」はピンク', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.card \.actions \.again \{ background: linear-gradient\(135deg, #f472b6, #db2777\)/)
+})
