@@ -4834,4 +4834,64 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What did shorter growing seasons lead to?', choices: ['Poor harvests and food shortages in some regions.', 'More frost fairs on the rivers.', 'Larger glaciers in London.', 'Fewer volcanic eruptions.'], answer: 0, why: '第2段落 Shorter growing seasons led to poor harvests, which in turn caused food shortages。' },
     ],
   },
+  {
+    id: 'adv-biz-launch-invite',
+    title: 'An Invitation to a Launch Event',
+    level: '難関大（ビジネスメール）',
+    paragraphs: [
+      "Dear Ms. Park, I hope this message finds you well. I am pleased to invite you to the launch event for our new line of eco-friendly office furniture, ( A ) will be held at the Grand Hotel on Friday, November 20, from 3:00 to 5:00 p.m.",
+      "During the event, our designers will explain how the products were developed using recycled materials. Guests will also be able to try the chairs and desks for themselves. Light refreshments will be served after the presentation.",
+      "As space is limited, we would appreciate it if you could let us know whether you will be able to attend by November 10. If you would like to bring a colleague, please include his or her name in your reply so that we can ( B ) a name card in advance.",
+      "We look forward to ( C ) you at the event. Best regards, Kenji Mori, Sales Manager, Green Office Co.",
+    ],
+    ja: [
+      'パク様。いかがお過ごしでしょうか。このたび、環境にやさしいオフィス家具の新シリーズの発表会にご招待できることをうれしく思います。発表会は11月20日（金）午後3時から5時まで、グランドホテルで行われます。',
+      '発表会では、製品がリサイクル素材を使ってどのように開発されたかを、当社のデザイナーがご説明します。また、ご来場のみなさまには、いすや机を実際にお試しいただけます。発表のあとには軽いお飲み物とお菓子をご用意しています。',
+      '席にかぎりがございますので、ご出席いただけるかどうかを11月10日までにお知らせいただけるとありがたく存じます。同僚の方とごいっしょにお越しになる場合は、名札を前もってご用意できるよう、ご返信にその方のお名前をおそえください。',
+      '発表会でお会いできるのを楽しみにしております。よろしくお願いいたします。グリーンオフィス社 営業部長 モリ・ケンジ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで the launch event を説明し、あとに will be held が続くので関係代名詞 which。where はあとに完全な文が必要、who は人。' },
+      { id: 'B', choices: ['prepare', 'preparing', 'prepared', 'to prepare'], answer: 0, why: 'so that ＋ 主語 ＋ can ＋ 動詞の原形「～が…できるように」。can のあとは原形。' },
+      { id: 'C', choices: ['seeing', 'see', 'saw', 'seen'], answer: 0, why: 'look forward to ～ing「～を楽しみにする」。to は前置詞なので動名詞。' },
+    ],
+    tf: [
+      { statement: '発表会は11月20日に開かれる。', answer: true, why: '第1段落 on Friday, November 20。' },
+      { statement: '軽いお飲み物とお菓子は、発表の前に出される。', answer: false, why: '第2段落 after the presentation。' },
+      { statement: '出席できるかどうかは、11月10日までに知らせる必要がある。', answer: true, why: '第3段落 let us know whether you will be able to attend by November 10。' },
+      { statement: '発表会に同僚を連れてくることはできない。', answer: false, why: '第3段落 If you would like to bring a colleague, please include his or her name。' },
+    ],
+    qa: [
+      { q: "Why does the writer ask guests to include a colleague's name?", choices: ['So that the company can prepare a name card in advance.', 'Because there is no limit on space.', 'So that the colleague can give a presentation.', 'Because the refreshments are only for colleagues.'], answer: 0, why: '第3段落 so that we can prepare a name card in advance。' },
+    ],
+  },
+  {
+    id: 'toefl-cane-toads',
+    title: 'A Plan That Went Wrong',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "An invasive species is a plant or animal ( A ) is brought into a new region and spreads quickly, often causing serious harm. Without the predators and diseases that controlled it in its original home, such a species can multiply rapidly and push out native species.",
+      "One well-known example is the cane toad in Australia. In 1935, about one hundred toads were brought from Hawaii to eat beetles that were damaging sugar cane crops. The plan failed: the toads did not control the beetles, but they spread across a huge area of northern Australia. Today, their number is estimated ( B ) in the hundreds of millions.",
+      "The toads also harm native animals. They carry a powerful poison in their skin, and predators such as snakes and lizards that try to eat them often die. Scientists are now testing ways to protect these predators, for example by teaching them to avoid toads. The cane toad's story shows ( C ) careful people must be before introducing a species to a new place.",
+    ],
+    ja: [
+      '外来侵入種とは、新しい地域に持ちこまれて急速に広がり、しばしば深刻な害をもたらす植物や動物のことである。もとのすみかでその数をおさえていた天敵や病気がいないため、このような生き物は急にふえ、もともといた種を追いやってしまうことがある。',
+      'よく知られた例が、オーストラリアのオオヒキガエルである。1935年、サトウキビの作物をあらしていた甲虫を食べさせるために、およそ100匹のヒキガエルがハワイから持ちこまれた。この計画は失敗した。ヒキガエルは甲虫をへらさず、オーストラリア北部の広い地域に広がってしまったのである。今では、その数は数億匹にのぼると見積もられている。',
+      'オオヒキガエルは、もともといた動物にも害をあたえる。皮ふに強い毒をもっており、ヒキガエルを食べようとしたヘビやトカゲなどの捕食者は死んでしまうことが多い。科学者たちは今、ヒキガエルをさけるよう捕食者に教えるなど、捕食者を守る方法をためしている。オオヒキガエルの話は、新しい場所に生き物を持ちこむ前に、人がどれほど慎重でなければならないかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a plant or animal を説明し、あとに動詞 is brought が続くので主格の関係代名詞 that。where はあとに完全な文、whose はあとに名詞が必要。' },
+      { id: 'B', choices: ['to be', 'being', 'been', 'be'], answer: 0, why: 'be estimated to be ～「～だと見積もられている」。受け身のあとは to 不定詞。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how ＋ 形容詞 ＋ S ＋ V「どれほど～か」。how careful people must be。that では careful のあとの語順が成り立たない。' },
+    ],
+    tf: [
+      { statement: '外来侵入種は、もとのすみかの天敵がいないため、急にふえることがある。', answer: true, why: '第1段落 Without the predators and diseases … can multiply rapidly。' },
+      { statement: 'オオヒキガエルは、甲虫をへらすことに成功した。', answer: false, why: '第2段落 the toads did not control the beetles。' },
+      { statement: 'オオヒキガエルは、今では数億匹いると見積もられている。', answer: true, why: '第2段落 in the hundreds of millions。' },
+      { statement: 'オオヒキガエルを食べた動物は、たいてい無事である。', answer: false, why: '第3段落 predators … that try to eat them often die。' },
+    ],
+    qa: [
+      { q: "What lesson does the cane toad's story teach?", choices: ['People must be careful before introducing a species to a new place.', 'Toads are the best way to control beetles.', 'Sugar cane cannot grow in Australia.', 'Snakes are an invasive species in Australia.'], answer: 0, why: "第3段落 The cane toad's story shows how careful people must be before introducing a species to a new place。" },
+    ],
+  },
 ]
