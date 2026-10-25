@@ -11,7 +11,7 @@ import { SPECIES } from './monster'
 const FIRST = () => buildQueue(WORDS, {}, dayKey(), 0)
 
 // はじめの単語帳（ビジネスは社会人をえらんだときだけ）の語数
-const DEFAULT_N = wordsOf(LEVELS.filter((l) => l !== 'ビジネス')).length
+const DEFAULT_N = wordsOf(LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級')).length
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
   navTo('単語ゲーム')
@@ -392,7 +392,7 @@ describe('App', () => {
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {
     render(<App />)
     navTo('設定')
-    for (const l of ['中2', '中3', '高校基礎', '熟語', '曜日・月', 'テーマ別', '数', '色・形', '会話']) fireEvent.click(within(screen.getByRole('group', { name: '単語帳' })).getByRole('button', { name: new RegExp('^' + l) }))
+    for (const b of within(screen.getByRole('group', { name: '単語帳' })).getAllByRole('button', { pressed: true })) if (!/^中1/.test(b.textContent ?? '')) fireEvent.click(b)
     const n = wordsOf(['中1']).length
     goCards()
     expect(screen.getByLabelText(new RegExp(`定着 0 / ${n} 語`))).toBeInTheDocument()

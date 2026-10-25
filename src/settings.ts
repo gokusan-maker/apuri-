@@ -14,7 +14,7 @@ export function loadLevels(): Level[] {
   } catch {
     // 壊れていたら初期値
   }
-  return LEVELS.filter((l) => l !== 'ビジネス') // ビジネス（社会人向け）は学年で「社会人・大人」をえらんだときだけ
+  return LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級') // ビジネス（社会人向け）は学年で「社会人・大人」、英検2級は単語コースでえらんだときだけ
 }
 
 export function saveLevels(levels: Level[]): void {
