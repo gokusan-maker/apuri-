@@ -3751,6 +3751,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-minimalism',
+    title: 'The Appeal of Owning Less',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, a lifestyle known as minimalism has attracted attention in many countries. Minimalists try to own only the things they truly need or love, and they give away or sell the rest. Books and videos showing nearly empty rooms have become popular, and many people say that clearing out their homes ( A ) them feel lighter and calmer.",
+      "Part of the appeal is practical. Fewer possessions mean less time spent cleaning, searching for lost items, and deciding what to wear. There is also a financial benefit: people who stop buying things they do not need often find that they can save more money. But many minimalists describe the change in deeper terms. They say that by letting go of objects, they have learned to value experiences and relationships more ( B ) things.",
+      "Critics, however, point out that minimalism is easier for some people than for others. Those with enough money can throw things away, knowing they can buy them again if necessary; people with less money may need to keep items just in case. Others note that the movement can turn into another form of consumption, ( C ) people buy expensive, carefully designed products in order to look minimalist.",
+      "Perhaps the most useful idea behind minimalism is not the number of things we own but the question it asks: what really makes our lives better? The answer will be different for each person, and finding it may require less shopping and more thinking.",
+    ],
+    ja: [
+      '近年、ミニマリズムとして知られる生活スタイルが多くの国で注目を集めている。ミニマリストは、本当に必要なものや大好きなものだけを持とうとし、残りは人にゆずったり売ったりする。ほとんど空っぽの部屋を見せる本や動画が人気になり、家の中を片づけると身も心も軽く落ち着いた気分になると言う人も多い。',
+      'その魅力の一部は実用的なものだ。持ち物が少なければ、そうじをしたり、なくしたものを探したり、何を着るか決めたりする時間が減る。お金の面での利点もある。必要のないものを買うのをやめた人は、より多くのお金をためられることに気づくことが多い。しかし多くのミニマリストは、その変化をもっと深い言葉で語る。物を手放すことで、物よりも経験や人間関係を大切にすることを学んだと言うのである。',
+      'しかし批判する人々は、ミニマリズムはある人にとってはほかの人よりも簡単だと指摘する。十分なお金のある人は、必要ならまた買えるとわかっているので物を捨てられるが、お金の少ない人は、念のために物をとっておく必要があるかもしれない。また、この運動が別の形の消費に変わりうると指摘する人もいる。その場合、人々はミニマリストらしく見せるために、高価で念入りにデザインされた製品を買うのである。',
+      'おそらく、ミニマリズムのうしろにあるもっとも役に立つ考えは、持ち物の数ではなく、それが投げかける問い、つまり、何が本当に私たちの生活をよくするのか、という問いである。その答えは人によってちがい、それを見つけるには、買い物を減らして、もっと考えることが必要なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['makes', 'make', 'making', 'to make'], answer: 0, why: 'that 節の主語は動名詞のかたまり clearing out their homes（単数あつかい）なので makes。make 人 ＋形容詞 で「人を～にする」。' },
+      { id: 'B', choices: ['than', 'as', 'then', 'that'], answer: 0, why: 'value A more than B で「B よりも A を大切にする」。比較級 more と組み合わせるのは than。' },
+      { id: 'C', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで another form of consumption を説明し、うしろが欠けたところのない文（people buy …）なので「前置詞＋関係代名詞」の in which。which・what のうしろは欠けた文になり、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: 'ミニマリストは、本当に必要なものや大好きなものだけを持とうとする。', answer: true, why: '第1段落 Minimalists try to own only the things they truly need or love。' },
+      { statement: '批判する人々によれば、ミニマリズムはだれにとっても同じように簡単だ。', answer: false, why: '第3段落 minimalism is easier for some people than for others。' },
+      { statement: '筆者は、もっとも大切なのは持ち物の数だと考えている。', answer: false, why: '第4段落 the most useful idea behind minimalism is not the number of things we own but the question it asks。' },
+    ],
+    qa: [
+      { q: 'Why might people with less money find minimalism difficult?', choices: ['They may need to keep items just in case.', 'They cannot find books about minimalism.', 'They spend too much time cleaning.', 'They prefer expensive products.'], answer: 0, why: '第3段落 people with less money may need to keep items just in case。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
