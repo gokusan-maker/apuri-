@@ -2385,6 +2385,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'Why do people who fly across several time zones suffer from jet lag?', choices: ['Their internal clock still follows the old schedule.', 'The air in planes is too dry.', 'They take medicine at the wrong dose.', 'Light cannot enter their eyes on the plane.'], answer: 0, why: '第2段落 their internal clock still follows the old schedule。' },
     ],
   },
+  {
+    id: 'adv-transplant',
+    title: 'The Gift That Saves Lives',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The first successful kidney transplant was carried out in 1954 between identical twins. Doctors chose twins deliberately: because the donor and the patient had the same genes, the patient's immune system did not treat the new kidney as an invader. In most later cases, ( A ), the donor was not a perfect genetic match, and the body's defenses attacked the transplanted organ.",
+      "This reaction, known as rejection, remained the greatest obstacle for years. The breakthrough came with drugs that weaken the immune response just enough to protect the new organ. These medicines have saved hundreds of thousands of lives, but they come at a price: patients must take them for the rest of their lives, ( B ) leaves them more vulnerable to infections and some types of cancer.",
+      "Today the main problem is not surgery but supply. In many countries, the number of patients ( C ) for an organ far exceeds the number of available donors. Some governments have adopted an opt-out system, in which everyone is considered a donor unless they have said otherwise; others rely on campaigns that encourage people to register. Meanwhile, researchers are exploring alternatives, such as growing tissue from a patient's own cells, which the immune system would recognize as its own. ( D ) these efforts succeed, the long wait for a matching donor may one day become a thing of the past.",
+    ],
+    ja: [
+      '最初に成功した腎臓移植は、1954年に一卵性双生児の間で行われた。医師たちはあえて双子を選んだ。提供者と患者が同じ遺伝子をもっていたので、患者の免疫のしくみは新しい腎臓を侵入者としてあつかわなかったのである。しかし、その後のほとんどの場合、提供者は遺伝的に完全には一致せず、体の防御のしくみが移植された臓器を攻撃した。',
+      '拒絶反応として知られるこの反応は、何年ものあいだ最大の障害でありつづけた。突破口となったのは、新しい臓器を守るのにちょうど足りるだけ免疫の反応を弱める薬だった。こうした薬は何十万人もの命を救ってきたが、代償もある。患者は一生その薬を飲みつづけなければならず、そのせいで感染症や一部のがんにかかりやすくなるのだ。',
+      '今日の主な問題は手術ではなく供給である。多くの国で、臓器を待っている患者の数は、提供できる人の数をはるかに上回っている。本人がことわらないかぎり全員を提供者とみなす「オプトアウト」方式を取り入れた政府もあれば、人々に登録をすすめる運動にたよる政府もある。そのあいだにも研究者たちは、患者自身の細胞から組織を育てるといった代わりの方法を探っている。そうした組織なら、免疫のしくみは自分のものと認識するだろう。もしこうした取り組みが成功すれば、合う提供者を長く待つことは、いつか過去のものになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['however', 'but', 'although', 'despite'], answer: 0, why: '文の途中にコンマではさんで入れられる副詞は however（しかし）。but・although は文の頭に置く接続詞、despite のうしろには名詞が必要。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'who'], answer: 0, why: '前の内容（薬を一生飲みつづけること）を受ける非制限用法の which。コンマのあとに that は使えず、what は先行詞をとらない。' },
+      { id: 'C', choices: ['waiting', 'waited', 'wait', 'to waiting'], answer: 0, why: '動詞は exceeds。名詞 patients を「待っている」とうしろから説明する現在分詞 waiting。' },
+      { id: 'D', choices: ['If', 'Despite', 'Because of', 'In case of'], answer: 0, why: 'うしろが文（these efforts succeed）なので接続詞 If。despite・because of・in case of のうしろは名詞。' },
+    ],
+    tf: [
+      { statement: '最初に成功した腎臓移植は、遺伝子がちがう二人の間で行われた。', answer: false, why: '第1段落 between identical twins … had the same genes。' },
+      { statement: '免疫を弱める薬を飲みつづける患者は、感染症にかかりやすくなる。', answer: true, why: '第2段落 leaves them more vulnerable to infections。' },
+      { statement: '筆者によれば、今日の移植医療の最大の問題は手術の技術である。', answer: false, why: '第3段落 Today the main problem is not surgery but supply。' },
+    ],
+    qa: [
+      { q: "Why would tissue grown from a patient's own cells be useful?", choices: ['The immune system would recognize it as its own.', 'It can be grown in a single day.', 'It does not need any surgery.', 'It is cheaper than all medicine.'], answer: 0, why: '第3段落 which the immune system would recognize as its own。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
