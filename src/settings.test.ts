@@ -1,12 +1,12 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { applyTheme, DEFAULT_SETTINGS, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
+import { applyTheme, DEFAULT_SETTINGS, loadLevels, OPT_IN_LEVELS, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { LEVELS } from './words'
 
 describe('単語帳の選択', () => {
   beforeEach(() => localStorage.clear())
 
   it('初期値はビジネス（社会人向け）以外の全レベル', () => {
-    expect(loadLevels()).toEqual(LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級'))
+    expect(loadLevels()).toEqual(LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級' && l !== '英検準1級'))
   })
 
   it('切り替えはレベル順を保ち、最後の1つは外せない', () => {
@@ -19,7 +19,7 @@ describe('単語帳の選択', () => {
     saveLevels(['中3'])
     expect(loadLevels()).toEqual(['中3'])
     localStorage.setItem('eitan:levels', '["大学"]')
-    expect(loadLevels()).toEqual(LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級'))
+    expect(loadLevels()).toEqual(LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l)))
   })
 })
 

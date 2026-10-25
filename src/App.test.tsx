@@ -1,3 +1,4 @@
+import { OPT_IN_LEVELS } from './settings'
 import { fireEvent, render, screen, within } from '@testing-library/react'
 import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
@@ -10,8 +11,8 @@ import { SPECIES } from './monster'
 // 今日の新しい単語の順（日によって変わる）
 const FIRST = () => buildQueue(WORDS, {}, dayKey(), 0)
 
-// はじめの単語帳（ビジネスは社会人をえらんだときだけ）の語数
-const DEFAULT_N = wordsOf(LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級')).length
+// はじめの単語帳（ビジネス・英検2級より上は入れない）の語数
+const DEFAULT_N = wordsOf(LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l))).length
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
   navTo('単語ゲーム')
@@ -386,7 +387,7 @@ describe('App', () => {
     fireEvent.click(within(courses()).getByRole('button', { name: /英検準2級/ }))
     expect(JSON.parse(localStorage.getItem('eitan:levels')!).sort()).toEqual(['熟語', '高校基礎'].sort())
     expect(within(courses()).getByRole('button', { name: /英検準2級/ })).toHaveAttribute('aria-pressed', 'true')
-    expect(within(courses()).getByRole('button', { name: /英検1級/ })).toBeDisabled() // まだ単語がないコース
+    expect(within(courses()).getByRole('button', { name: /^英検1級/ })).toBeDisabled() // まだ単語がないコース
   })
 
   it('単語帳を中1だけにすると、定着の母数が中1の語数になる', () => {

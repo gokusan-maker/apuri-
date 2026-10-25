@@ -69,6 +69,7 @@ export const BOSSES: Record<Level, BossLook> = {
   '色・形': { name: 'ニジイロモチ', desc: '色と形をぬすんで虹にしてしまうモチ。', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
   ビジネス: { name: 'シメキリモチ', desc: '締め切りをちらつかせて追いかけてくる、いそがしいモチ。', color: '#1d4ed8', line: '#1e3a8a', eye: '#fef3c7' },
   英検2級: { name: 'ゴウカクモチ', desc: '英検2級の合格の門を守る、きびしい試験官のモチ。', color: '#b45309', line: '#451a03', eye: '#fef3c7' },
+  英検準1級: { name: 'ハカセモチ', desc: '難しい単語の本を何冊も読みあさる、物知りの博士モチ。', color: '#4338ca', line: '#1e1b4b', eye: '#fde68a' },
   会話: { name: 'オシャベリモチ', desc: 'あいさつを聞くまで通してくれない、おしゃべりなモチ。', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
 }
 
@@ -86,7 +87,7 @@ export function dailyBossLevel<T>(levels: T[], day: string): T | undefined {
 export function grammarGradesForLevel(level: Level | undefined): ('中1' | '中2' | '中3' | '高校')[] {
   if (level === '中2') return ['中1', '中2']
   if (level === '中3') return ['中2', '中3']
-  if (level === '英検2級') return ['高校']
+  if (level === '英検2級' || level === '英検準1級') return ['高校']
   if (level === '高校基礎' || level === '熟語' || level === 'ビジネス') return ['中3', '高校']
   return ['中1'] // 中1と、曜日・数・色などの基本の単語帳
 }

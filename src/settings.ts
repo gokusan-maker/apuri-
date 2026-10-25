@@ -14,8 +14,10 @@ export function loadLevels(): Level[] {
   } catch {
     // 壊れていたら初期値
   }
-  return LEVELS.filter((l) => l !== 'ビジネス' && l !== '英検2級') // ビジネス（社会人向け）は学年で「社会人・大人」、英検2級は単語コースでえらんだときだけ
+  return LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l))
 }
+// はじめは入れない単語帳：ビジネス（社会人向け）は学年で「社会人・大人」、英検2級より上は単語コースでえらんだときだけ
+export const OPT_IN_LEVELS: Level[] = ['ビジネス', '英検2級', '英検準1級']
 
 export function saveLevels(levels: Level[]): void {
   try {
