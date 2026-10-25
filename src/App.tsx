@@ -84,7 +84,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
-import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY } from './gacha'
+import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP } from './gacha'
 import {
   feed,
   FORMS,
@@ -901,7 +901,7 @@ function App() {
     setWallet((w) => addTicket(w))
     pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
   }
-  function drawMany(ticket: boolean, n: number, start = wallet, rareForce = false): GachaResult[] {
+  function drawMany(ticket: boolean, n: number, start = wallet, rareForce = false, hatched = false): GachaResult[] {
     let w = start
     let p = party
     let st = gachaStep
@@ -929,7 +929,7 @@ function App() {
       if (st2.complete) stickerDone = true
       w = { ...r.wallet, coins: r.wallet.coins + (dup ? DUP_REFUND : 0) + (bonus?.kind === 'coins' ? bonus.amount : 0) + (lucky ? LUCKY_COINS : 0) + (slot.win ? SLOT_COINS : 0) + (mystery ? MYSTERY_COINS : 0) }
       if (bonus?.kind === 'xp') bonusXp += bonus.amount
-      p = r.party
+      p = hatched ? { ...r.party, members: r.party.members.map((m, j) => (j === r.party.members.length - 1 ? { ...m, xp: Math.max(m.xp, HATCH_XP) } : m)) } : r.party // キャラガチャは生まれた姿で
       out.push({ kind: r.kind, species: r.species, newKind, newSpecies, refund: dup ? DUP_REFUND : 0, ...(bonus ? { bonus: bonus.text } : {}), ...(lucky ? { lucky } : {}), slot, sticker, ...(mystery ? { mystery } : {}), nth: r.party.members.filter((m) => (m.species ?? 'mochi') === r.species.id).length })
     }
     if (out.length > 0) {
@@ -1699,6 +1699,13 @@ function App() {
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           ownedSpecies={party.members.map((m) => m.species ?? 'mochi')}
+          onCharaGacha={() => {
+            // キャラガチャ：タマゴガチャの代金に上のせぶんを先にはらう
+            const extra = CHARA_PRICE - (gachaPrice(hour) - omikujiDiscount(today))
+            if (wallet.coins < CHARA_PRICE) return null
+            return drawMany(false, 1, { ...wallet, coins: wallet.coins - extra }, false, true)[0] ?? null
+          }}
+          charaPrice={CHARA_PRICE}
           freeGacha={freeGachaDay !== today}
           rareTickets={wallet.rareTickets ?? 0}
           srTickets={wallet.srTickets ?? 0}

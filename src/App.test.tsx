@@ -1971,3 +1971,17 @@ describe('レア保証', () => {
     expect(localStorage.getItem('eitan:gacha-n-streak')).toBe('0')
   })
 })
+
+it('キャラガチャ：🪙100で、生まれた姿の仲間が1体ふえる', async () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 150, owned: [] }))
+  render(<App />)
+  fireEvent.click(screen.getByLabelText(/ショップを開く/))
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  fireEvent.click(screen.getByRole('button', { name: /キャラガチャを引く 🪙100/ }))
+  const party = JSON.parse(localStorage.getItem('eitan:party')!)
+  expect(party.members).toHaveLength(2)
+  expect(party.members[1].xp).toBeGreaterThanOrEqual(30)
+  expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeLessThan(100) // タマゴ1回ぶん（🪙50）より多くはらう（おまけのコインは最大40）
+})

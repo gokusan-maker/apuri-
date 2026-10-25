@@ -2987,3 +2987,13 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* 読解のヒント（2択にしぼる） */
 .read-hint.pill-btn { display: inline-flex; margin: 6px auto 0; font-size: 0.85rem; min-height: 34px; padding: 4px 14px; }
 .choice.hinted-out, .long-choice.hinted-out { opacity: 0.3; text-decoration: line-through; }
+
+/* ガチャの種類（タマゴ・キャラ） */
+.gacha-kinds { display: flex; gap: 6px; margin: 0 0 10px; padding: 4px; border-radius: 999px; background: color-mix(in srgb, var(--muted) 12%, var(--card)); }
+.gacha-kind-tab { flex: 1; min-height: 42px; border: 0; border-radius: 999px; background: transparent; color: var(--fg); font: inherit; font-weight: 900; font-size: 0.9rem; cursor: pointer; }
+.gacha-kind-tab.on { background: linear-gradient(135deg, #f59e0b, #ec4899); color: #fff; box-shadow: 0 3px 0 #9d174d; }
+.chara-gacha-note { margin: 0 0 8px; font-size: 0.85rem; color: var(--muted); }
+.chara-gacha-lineup { list-style: none; margin: 0 0 10px; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+.chara-gacha-lineup svg { width: 100%; height: auto; max-width: 56px; display: block; margin: 0 auto; }
+.chara-gacha-got { margin: 8px 0; padding: 8px 12px; border-radius: 12px; background: color-mix(in srgb, #f59e0b 16%, var(--card)); font-weight: 800; }
+.chara-btn { background: linear-gradient(135deg, #f97316, #ec4899) !important; }

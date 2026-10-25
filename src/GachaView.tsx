@@ -5,7 +5,7 @@ import { speak } from './speech'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
-import { loadNStreak, RARE_EVERY } from './gacha'
+import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
@@ -39,6 +39,8 @@ function ShareButton({ text }: { text: string }) {
 
 type Props = {
   ownedSpecies?: string[] // 持っているキャラクターの種類（図鑑用）
+  onChara?: () => GachaResult | null // キャラガチャ（生まれた姿で出る）
+  charaPrice?: number
   coins: number
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
@@ -70,7 +72,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -80,6 +82,15 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const [reveal, setReveal] = useState<GachaResult[] | null>(null) // 引いたら画面いっぱいの演出ページ
   const [stats, setStats] = useState(loadGachaStats)
   const [picks, setPicks] = useState<number[] | null>(null) // 交換する子をえらんでいるところ
+  const [tab, setTab] = useState<'egg' | 'chara'>('egg') // ガチャの種類
+  const [charaGot, setCharaGot] = useState('') // キャラガチャで出た子の名前
+  const drawChara = () => {
+    const k = onChara?.() ?? null
+    if (!k) return
+    setReveal([k])
+    record(k)
+    setCharaGot(`${k.kind.id === 'normal' ? '' : `${k.kind.name}の`}${k.species.name}`)
+  }
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
     recordLog(k)
@@ -112,7 +123,40 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           }}
         />
       )}
-      <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
+      {onChara && (
+        <div className="gacha-kinds" role="tablist" aria-label="ガチャの種類">
+          <button role="tab" aria-selected={tab === 'egg'} className={`gacha-kind-tab${tab === 'egg' ? ' on' : ''}`} onClick={() => setTab('egg')}>
+            🥚 タマゴガチャ
+          </button>
+          <button role="tab" aria-selected={tab === 'chara'} className={`gacha-kind-tab${tab === 'chara' ? ' on' : ''}`} onClick={() => setTab('chara')}>
+            🐣 キャラガチャ
+          </button>
+        </div>
+      )}
+      {tab === 'chara' && onChara ? (
+        <div className="chara-gacha">
+          <h3 className="shop-h">🐣 キャラガチャ（仲間 {members} / {PARTY_MAX}）</h3>
+          <p className="chara-gacha-note">タマゴではなく、もう生まれた姿で出てくるよ。すぐにボス戦でいっしょに戦える！</p>
+          <ul className="chara-gacha-lineup" aria-label="出てくるキャラクター">
+            {SPECIES.map((sp) => (
+              <li key={sp.id} title={`${sp.name}（${typeOf(sp.id).name}）`}>
+                <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!(ownedSpecies ?? []).includes(sp.id) && sp.id !== 'mochi'} />
+              </li>
+            ))}
+          </ul>
+          <button className="good gacha-btn chara-btn" disabled={full || coins < charaPrice} onClick={drawChara}>
+            {full ? '仲間がいっぱい' : `🐣 キャラガチャを引く 🪙${charaPrice}`}
+          </button>
+          {charaGot && (
+            <p className="chara-gacha-got" role="status">
+              🎉 {charaGot}が仲間になった！ 「記録」→「あいぼう」で相棒にできるよ
+            </p>
+          )}
+          {ownedSpecies && <CharBook owned={ownedSpecies} />}
+        </div>
+      ) : (
+        <>
+          <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
       {free && onFree && !full && (
         <button className="good gacha-btn gacha-free" onClick={() => drawOne('free')}>
           🎁 今日の無料ガチャ（1日1回）
@@ -525,6 +569,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             とじる
           </button>
         </div>
+      )}
+        </>
       )}
     </div>
   )

@@ -54,3 +54,17 @@ it('新しいキャラ（フクロウ・カメ・タコ）は、色ちがいで�
   expect(typeOf('owl').name).toBe('サポート型')
   expect(typeOf('octopus').name).toBe('スピード型')
 })
+
+it('ガチャは「タマゴガチャ」と「キャラガチャ」の2種類。キャラガチャは生まれた姿で出る', async () => {
+  const { CHARA_PRICE, HATCH_XP } = await import('./gacha')
+  const { formOf } = await import('./monster')
+  expect(formOf({ xp: HATCH_XP, species: 'owl' }).stage).toBeGreaterThanOrEqual(1)
+  let called = 0
+  const k = { kind: { id: 'normal', name: 'ふつう', rarity: 'N' as const, color: '', line: '' }, species: SPECIES.find((s) => s.id === 'turtle')! }
+  render(<Gacha partnerName="モチ" coins={CHARA_PRICE} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi']} onChara={() => (called++, k)} />)
+  expect(screen.getByRole('tab', { name: '🥚 タマゴガチャ' })).toHaveAttribute('aria-selected', 'true')
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  fireEvent.click(screen.getByRole('button', { name: `🐣 キャラガチャを引く 🪙${CHARA_PRICE}` }))
+  expect(called).toBe(1)
+  expect(screen.getByText(/カメスケが仲間になった/)).toBeInTheDocument()
+})

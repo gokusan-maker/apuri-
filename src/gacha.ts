@@ -4,6 +4,9 @@ import type { Party } from './party'
 import type { Wallet } from './shop'
 
 export const GACHA_PRICE = 50
+// キャラガチャ：タマゴではなく生まれた姿（ちび・Lv3）で出る。タマゴガチャの2倍
+export const CHARA_PRICE = GACHA_PRICE * 2
+export const HATCH_XP = 30
 export const PARTY_MAX = 500 // 仲間は500体まで（オーナーの要望）
 
 export const TICKET_MAX = 9
