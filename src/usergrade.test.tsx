@@ -35,14 +35,14 @@ it('中3なら今日の単語は中3の単語帳から5語、読解は高校入�
   expect(ws.every((w) => courseWords('中3').includes(w))).toBe(true)
   const r = todayReading('2026-10-05')
   expect(r.kind).toBe('long')
-  expect(passagesFor('exam').map((p) => p.id)).toContain(r.p.id)
+  expect(passagesFor('中3').map((p) => p.id)).toContain(r.p.id)
 })
 
 it('社会人なら文法は中3〜高校、単語はビジネス・高校基礎、読解は大学入試レベル', () => {
   saveGrade('adult')
   for (let i = 1; i <= 20; i++) expect(['中3', '高校']).toContain(gradeOf(dailyGrammar(`2026-11-${String(i).padStart(2, '0')}`).id))
   expect(todayWords('2026-11-01').every((w) => w.level === 'ビジネス' || w.level === '高校基礎' || w.level === '熟語')).toBe(true)
-  expect(passagesFor('univ').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
+  expect(passagesFor('高3').map((p) => p.id)).toContain(todayReading('2026-11-01').p.id)
 })
 
 it('今日の課題の読解の題名は、タイトルを当てる問題があるときは答えをかくす', async () => {

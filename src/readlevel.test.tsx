@@ -3,17 +3,22 @@ import { ADV_PASSAGES } from './advreading'
 import { loadReadLevel, passagesFor, READ_LEVELS, saveReadLevel } from './readlevel'
 
 describe('読解のむずかしさ', () => {
-  it('かんたん〜TOEFL・IELTS まで5段階あり、かんたん以外は読解がある', () => {
-    expect(READ_LEVELS.map((l) => l.label)).toEqual(['かんたん', 'ふつう', '高校入試', '難関大', 'TOEFL・IELTS'])
-    for (const l of READ_LEVELS.filter((x) => x.id !== 'easy')) expect(passagesFor(l.id).length, l.id).toBeGreaterThanOrEqual(15)
-    expect(passagesFor('univ').every((p) => p.level.startsWith('難関大'))).toBe(true)
+  it('単語・文法と同じ15レベルで、中1（短い読解）以外は長文がある', () => {
+    expect(READ_LEVELS.map((l) => l.label)).toEqual(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'])
+    for (const l of READ_LEVELS.filter((x) => x.id !== '中1')) expect(passagesFor(l.id).length, l.id).toBeGreaterThanOrEqual(6)
+    expect(passagesFor('国公立').every((p) => p.level.startsWith('難関大'))).toBe(true)
+    expect(passagesFor('中2').every((p) => /^(中2|初級)/.test(p.level))).toBe(true)
   })
 
   it('えらんだむずかしさを覚える（はじめは かんたん）', () => {
     localStorage.clear()
-    expect(loadReadLevel()).toBe('easy')
-    saveReadLevel('toefl')
-    expect(loadReadLevel()).toBe('toefl')
+    expect(loadReadLevel()).toBe('中1')
+    saveReadLevel('TOEFL・IELTS')
+    expect(loadReadLevel()).toBe('TOEFL・IELTS')
+    // まえのレベル（難関大＋入試レベル）は新しいレベルへ
+    localStorage.setItem('eitan:read-level', 'univ')
+    localStorage.setItem('eitan:exam-tier', 'kyutei')
+    expect(loadReadLevel()).toBe('旧帝大')
   })
 })
 
@@ -40,16 +45,16 @@ describe('難関大・TOEFL/IELTS の読解', () => {
 describe('むずかしさごとに解いた本数', () => {
   it('そのレベルで解いた本数と全部の本数（かんたんは数えない）', async () => {
     const { solvedOf } = await import('./readlevel')
-    expect(solvedOf('easy', {}, ['cat'])!.done).toBe(1)
-    const ps = passagesFor('univ')
-    expect(solvedOf('univ', { [ps[0].id]: 5, 'cat': 3 })).toEqual({ done: 1, total: ps.length })
+    expect(solvedOf('中1', {}, ['cat'])!.done).toBe(1)
+    const ps = passagesFor('国公立')
+    expect(solvedOf('国公立', { [ps[0].id]: 5, 'cat': 3 })).toEqual({ done: 1, total: ps.length })
   })
 })
 
 describe('むずかしさごとの今日のおすすめ', () => {
   it('そのレベルの中から日ごとに1本（同じ日は同じ）', async () => {
     const { dailyPick } = await import('./readlevel')
-    const list = passagesFor('toefl')
+    const list = passagesFor('TOEFL・IELTS')
     const p = dailyPick(list, '2026-10-22')!
     expect(list).toContain(p)
     expect(dailyPick(list, '2026-10-22')).toBe(p)
@@ -80,19 +85,19 @@ describe('かんたんの短い読解も解いた本数を数える', () => {
 describe('次のレベルへのちょうせん印', () => {
   it('1つ下のレベルを半分以上解くと、そのレベルに⭐ちょうせん', async () => {
     const { readyFor } = await import('./readlevel')
-    const univ = passagesFor('univ')
-    expect(readyFor('toefl', {})).toBe(false)
-    const half = Object.fromEntries(univ.slice(0, Math.ceil(univ.length / 2)).map((p) => [p.id, 5]))
-    expect(readyFor('toefl', half)).toBe(true)
-    expect(readyFor('easy', half)).toBe(false) // いちばん下には出ない
+    const prev = passagesFor('高3')
+    expect(readyFor('私学', {})).toBe(false)
+    const half = Object.fromEntries(prev.slice(0, Math.ceil(prev.length / 2)).map((p) => [p.id, 5]))
+    expect(readyFor('私学', half)).toBe(true)
+    expect(readyFor('中1', half)).toBe(false) // いちばん下には出ない
   })
 })
 
 describe('高校入試レベルの追加読解', () => {
   it('高校入試のむずかしさに、新しい自作の読解が入っている', () => {
-    const ids = passagesFor('exam').map((p) => p.id)
+    const ids = [...passagesFor('高1'), ...passagesFor('高2')].map((p) => p.id)
     expect(ids).toContain('exam-radio')
     expect(ids).toContain('exam-wheelchair')
-    expect(passagesFor('univ').some((p) => p.id.startsWith('exam-'))).toBe(false)
+    expect(passagesFor('国公立').some((p) => p.id.startsWith('exam-'))).toBe(false)
   })
 })

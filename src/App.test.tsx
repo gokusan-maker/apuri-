@@ -1150,24 +1150,24 @@ describe('App', () => {
     expect(JSON.parse(localStorage.getItem('eitan:party') ?? '{"members":[{"xp":0}]}').members[0].xp ?? 0).toBe(0)
   })
 
-  it('読解ステージはむずかしさを選べて（かんたん〜京大・TOEFL/IELTS）、ミニゲームには読解がない', () => {
+  it('読解ステージは15レベル（中1〜東大・TOEIC・TOEFL/IELTS・ネイティブ）から選べて、ミニゲームには読解がない', async () => {
+    const { passagesFor } = await import('./readlevel')
     localStorage.clear()
     render(<App />)
     navTo('読解ステージ')
-    expect(screen.getByRole('region', { name: '読解ミニの山' })).toBeInTheDocument() // はじめは かんたん（城の上の説明はない）
+    expect(screen.getByRole('region', { name: '読解ミニの山' })).toBeInTheDocument() // はじめは中1（城の上の説明はない）
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
-    fireEvent.click(screen.getByRole('option', { name: /^難関大/ }))
-    expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
-    expect(screen.queryByRole('heading', { name: /難関大の読解/ })).toBeNull() // 城の上の説明は出さない
+    fireEvent.click(screen.getByRole('option', { name: /^国公立/ }))
+    expect(screen.getByRole('region', { name: '構文の山' })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: /国公立の読解/ })).toBeNull() // 城の上の説明は出さない
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
-    expect(screen.getByRole('option', { name: /^難関大/ }).textContent).toMatch(/0\/77本/)
+    expect(screen.getByRole('option', { name: /^国公立/ }).textContent).toContain(`0/${passagesFor('国公立').length}本`)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     expect(within(screen.getByLabelText('読解ゲーム')).getByRole('button', { name: /おすすめ/ })).toBeInTheDocument() // そのレベルの中から日がわり（読解ゲームのタイル）
     fireEvent.click(screen.getByRole('option', { name: /^TOEFL・IELTS/ }))
     expect(screen.getAllByText(/Partners on the Reef/).length).toBeGreaterThan(0)
-    expect(screen.queryByText(/The Value of Boredom/)).toBeNull()
-    expect(localStorage.getItem('eitan:read-level')).toBe('toefl')
+    expect(localStorage.getItem('eitan:read-level')).toBe('TOEFL・IELTS')
     goMini()
     fireEvent.click(screen.getByText(/ミニゲームをえらぶ/))
     expect(screen.queryByRole('button', { name: /長文読解/ })).toBeNull()
@@ -1376,7 +1376,7 @@ describe('App', () => {
     expect(screen.getByText(/高校生向けにしました/)).toBeInTheDocument()
     // 学年は今日の課題・読解のむずかしさにも使う
     expect(localStorage.getItem('eitan:grade')).toBe('hs')
-    expect(localStorage.getItem('eitan:read-level')).toBe('univ')
+    expect(localStorage.getItem('eitan:read-level')).toBe('高1')
   })
 
   it('お休みチケットを買うと、1日休んでも連続日数がつながる', () => {
@@ -1997,19 +1997,10 @@ it('今日の課題は単語→文法→読解の順に、まだの課題へ進�
   expect(nextTodayTask('reading', { word: true, grammar: true, reading: true })).toBeUndefined()
 })
 
-it('読解の難関大で、入試レベル（共通テスト〜国立医学部）をえらんでしぼりこめる', async () => {
-  const { passagesForTier } = await import('./examtier')
-  localStorage.clear()
-  localStorage.setItem('eitan:onboarded', '1')
-  localStorage.setItem('eitan:read-level', 'univ')
-  render(<App />)
-  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('読解ステージ'))
-  const tiers = screen.getByRole('group', { name: '入試レベル' })
-  fireEvent.click(within(tiers).getByRole('button', { name: /国立医学部/ }))
-  expect(within(tiers).getByRole('button', { name: /国立医学部/ })).toHaveAttribute('aria-pressed', 'true')
-  expect(screen.queryByText('📖 国立医学部レベルの読解')).toBeNull() // 城の上の説明は出さない
-  expect(localStorage.getItem('eitan:exam-tier')).toBe('kokuritsu-med')
-  expect(passagesForTier('kokuritsu-med').length).toBeGreaterThanOrEqual(2)
+it('読解の京大・東大レベルは、和訳つきの難関大の長文から', async () => {
+  const { passagesFor } = await import('./readlevel')
+  for (const l of ['京大', '東大'] as const) expect(passagesFor(l).every((p) => p.level.startsWith('難関大'))).toBe(true)
+  expect(passagesFor('京大').some((p) => p.gistKind === 'transl')).toBe(true)
 })
 
 it('今日の課題を3つとも終えてトリオボーナスを受け取ったら、その日は今日の課題を画面に出さない', async () => {

@@ -1,3 +1,4 @@
+import type { ReadLevel } from './readlevel'
 // 設定でえらんだ学年・レベル（中1〜社会人）。今日の課題やボス戦の文法・単語・読解のむずかしさをこれに合わせる
 // 保存していない人（前からの人）は空 → これまでどおり全部から出す
 export type GradeId = 'j1' | 'j2' | 'j3' | 'hs' | 'adult'
@@ -36,11 +37,5 @@ export const WORD_LEVELS_FOR: Record<GradeId, string[]> = {
   hs: ['高校基礎', '熟語'],
   adult: ['ビジネス', '高校基礎', '熟語'],
 }
-// 学年ごとの読解のむずかしさ（readlevel.ts の ReadLevel）
-export const READ_LEVEL_FOR: Record<GradeId, 'easy' | 'normal' | 'exam' | 'univ' | 'toefl'> = {
-  j1: 'easy',
-  j2: 'normal',
-  j3: 'exam',
-  hs: 'univ',
-  adult: 'univ',
-}
+// 学年ごとの読解のレベル（readlevel.ts の ReadLevel）
+export const READ_LEVEL_FOR: Record<GradeId, ReadLevel> = { j1: '中1', j2: '中2', j3: '中3', hs: '高1', adult: '高3' }

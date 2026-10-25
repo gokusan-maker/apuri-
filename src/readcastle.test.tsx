@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
 import { READ_THEMES, readCastleFloors, themeSentence } from './readcastle'
-import { passagesFor } from './readlevel'
+import { passagesFor, READ_LEVELS } from './readlevel'
 import { ReadThemeCastle } from './ReadThemeCastleView'
 import type { LongPassage } from './longreading'
 
@@ -22,7 +22,7 @@ it('構文の見つけ方：本物の構文だけを拾う', () => {
 })
 
 it('テーマごとに最大3階。いまある長文で、どのテーマも1本以上', () => {
-  const all = [...passagesFor('normal'), ...passagesFor('exam'), ...passagesFor('univ'), ...passagesFor('toefl')]
+  const all = READ_LEVELS.flatMap((l) => passagesFor(l.id))
   const fl = readCastleFloors(all)
   for (const t of READ_THEMES) {
     const n = fl.filter((f) => f.theme.id === t.id).length
@@ -34,7 +34,7 @@ it('テーマごとに最大3階。いまある長文で、どのテーマも1�
 it('構文の城：1階目は構文の解説と、長文に出てくるその文。「長文に挑戦」で長文を開く', () => {
   localStorage.clear()
   const open = vi.fn()
-  const list = passagesFor('univ')
+  const list = passagesFor('国公立')
   render(<ReadThemeCastle list={list} record={{}} onOpen={open} />)
   fireEvent.click(screen.getByRole('button', { name: /^1階：/ }))
   expect(screen.getByText(/この長文に出てくる/)).toBeInTheDocument()
