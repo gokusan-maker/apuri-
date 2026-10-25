@@ -4113,6 +4113,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-study-music',
+    title: 'Should You Study with Music?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many students put on headphones as soon as they sit down to study. Some say that music helps them relax and concentrate, while others cannot work unless the room is completely silent. Who is right? According to researchers, the answer depends on both the kind of music and the kind of task.",
+      "Several studies have found that songs with lyrics tend to interfere with reading and writing. This is probably because the brain has to process two sets of words at once: the words on the page and the words in the song. When students listen to music with lyrics, they often remember less of what they have read, even if they feel ( A ) they are working well.",
+      "Instrumental music seems to cause fewer problems. For simple, repetitive tasks, such as copying notes or solving easy calculations, calm music without words may even improve mood and help people keep going. Loud or fast music, however, can be distracting regardless of ( B ) it has lyrics.",
+      "Personal differences also matter. People who are used to studying with music may be less disturbed by it than those who rarely listen. The best approach, then, may be to experiment. Try studying the same kind of material with and without music, and compare how much you actually remember, ( C ) how productive you feel.",
+    ],
+    ja: [
+      '多くの生徒は、勉強しようと座るとすぐにヘッドホンをつける。音楽のおかげでリラックスして集中できると言う人もいれば、部屋が完全に静かでないと勉強できない人もいる。どちらが正しいのだろうか。研究者によれば、その答えは音楽の種類と作業の種類の両方によって決まる。',
+      'いくつかの研究で、歌詞のある歌は読んだり書いたりする作業をさまたげやすいことがわかっている。これはおそらく、脳がページ上の言葉と歌の言葉という2組の言葉を同時に処理しなければならないからだろう。歌詞のある音楽を聞いていると、生徒は、自分ではうまく勉強できていると感じていても、読んだ内容を覚えている量が少なくなることが多い。',
+      '歌詞のない音楽は、問題を起こしにくいようだ。ノートを写したりやさしい計算を解いたりといった単純なくり返しの作業では、言葉のない落ち着いた音楽が、気分をよくし、作業を続ける助けになることさえある。しかし、大きな音やテンポの速い音楽は、歌詞があるかどうかに関係なく気を散らすことがある。',
+      '個人差も重要である。音楽を聞きながら勉強するのに慣れている人は、めったに聞かない人よりも、音楽にじゃまされにくいかもしれない。そうすると、いちばんよい方法は試してみることなのかもしれない。同じ種類の教材を、音楽ありとなしで勉強してみて、どれだけはかどったと感じるかではなく、実際にどれだけ覚えているかを比べてみよう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as if', 'despite', 'because of', 'in spite of'], answer: 0, why: 'feel as if ～ で「まるで～のように感じる」。うしろが文（they are working well）なので、前置詞の働きをする despite・because of・in spite of は入らない。' },
+      { id: 'B', choices: ['whether', 'that', 'what', 'which'], answer: 0, why: 'regardless of whether ～「～かどうかに関係なく」。前置詞 of のあとに that 節は置けず、what・which のうしろは欠けた文になる。' },
+      { id: 'C', choices: ['not', 'no', 'nor', 'none'], answer: 0, why: 'A, not B で「B ではなく A」。how much you actually remember, not how productive you feel「どれだけはかどったと感じるかではなく、実際にどれだけ覚えているか」。' },
+    ],
+    tf: [
+      { statement: '研究によれば、歌詞のある歌は読み書きの作業をさまたげやすい。', answer: true, why: '第2段落 songs with lyrics tend to interfere with reading and writing。' },
+      { statement: '大きな音の音楽は、歌詞がなければ気を散らさない。', answer: false, why: '第3段落 Loud or fast music … can be distracting regardless of whether it has lyrics。' },
+      { statement: '筆者は、音楽ありとなしで試して比べることをすすめている。', answer: true, why: '第4段落 Try studying the same kind of material with and without music, and compare。' },
+    ],
+    qa: [
+      { q: 'Why might songs with lyrics make reading harder?', choices: ['The brain must process two sets of words at once.', 'The music is always too loud.', 'Students stop reading to sing along.', 'Headphones make the room too quiet.'], answer: 0, why: '第2段落 the brain has to process two sets of words at once。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

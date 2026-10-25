@@ -2106,3 +2106,4 @@
 - 2026-10-25: 城を制覇するともらえるバッジを3つ追加（城の主・城めぐりの達人・大陸の覇者）
 - 2026-10-25: TOEFL・IELTSレベルの長文「Visitors from the Edge of the Solar System」（すい星・236語）を追加
 - 2026-10-25: TOEFL・IELTSレベルの長文「How Sand Dunes Move」（砂丘のしくみ）を追加
+- 2026-10-25: 私学難関レベルの長文「Should You Study with Music?」（音楽を聞きながら勉強）を追加
