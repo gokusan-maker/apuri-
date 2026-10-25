@@ -51,6 +51,9 @@ type Props = {
   stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   free?: boolean // 今日の無料の1回がまだある
+  rareTickets?: number // 💎レアチケット（レア以上確定）
+  srTickets?: number // 🌟SRチケット（スーパーレア以上確定）
+  onTier?: (tier: 'rare' | 'sr') => GachaResult | null
   tradeCount?: number // チケットと交換できる仲間（相棒・★以外）の数
   tradeDisabled?: boolean
   onTrade?: () => void // 仲間10体 → 🎟1まい
@@ -61,7 +64,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -76,8 +79,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const recordLog = (k: GachaResult) => setLog((l) => pushGachaLog(l, { day: new Date().toISOString().slice(0, 10), kind: k.kind.id, species: k.species.id }))
   const full = members >= PARTY_MAX
   const [multi, setMulti] = useState<{ list: GachaResult[]; key: number } | null>(null)
-  const drawOne = (ticket: boolean | 'free') => {
-    const k = ticket === 'free' ? (onFree?.() ?? null) : onDraw(ticket)
+  const drawOne = (ticket: boolean | 'free' | 'rare' | 'sr') => {
+    const k = ticket === 'free' ? (onFree?.() ?? null) : ticket === 'rare' || ticket === 'sr' ? (onTier?.(ticket) ?? null) : onDraw(ticket)
     if (k) {
       setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
       setNaming(null)
@@ -153,6 +156,22 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             {tradeDisabled ? 'チケットがいっぱい' : tradeCount >= MEMBERS_FOR_TICKET ? '🎟 交換する' : `あと${MEMBERS_FOR_TICKET - tradeCount}体`}
           </button>
           <small className="gacha-trade-note">相棒と★おきにいりの子は交換されないよ</small>
+        </div>
+      )}
+      {onTier && !full && (rareTickets > 0 || srTickets > 0) && (
+        <div className="gacha-tier-row">
+          {srTickets > 0 && (
+            <button className="good gacha-btn tier-sr" aria-label={`🌟 SRチケットで引く（スーパーレア以上確定・あと${srTickets}まい）`} onClick={() => drawOne('sr')}>
+              🌟 SR ×{srTickets}
+              <small>SR以上確定</small>
+            </button>
+          )}
+          {rareTickets > 0 && (
+            <button className="good gacha-btn tier-rare" aria-label={`💎 レアチケットで引く（レア以上確定・あと${rareTickets}まい）`} onClick={() => drawOne('rare')}>
+              💎 レア ×{rareTickets}
+              <small>レア以上確定</small>
+            </button>
+          )}
         </div>
       )}
       {tickets > 0 && !full && (

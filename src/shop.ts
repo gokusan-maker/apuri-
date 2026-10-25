@@ -34,7 +34,7 @@ export const isEarly = (hour: number) => hour >= 5 && hour < 10
 export const isEarlyNow = () => isEarly(new Date().getHours())
 export const LOGIN_WEEK_COINS = 20 // 7日連続ごと
 
-export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string; coupons?: number; tickets?: number; pity?: number }
+export type Wallet = { coins: number; owned: string[]; freezes?: number; room?: string; coupons?: number; tickets?: number; rareTickets?: number; srTickets?: number; pity?: number }
 
 // 相棒のレベルがこの数になったら割引券（次の着せ替え・部屋が半額）
 export const COUPON_LEVELS = [10, 20, 30]
@@ -108,6 +108,8 @@ export function loadWallet(): Wallet {
       ...(typeof v?.coupons === 'number' && v.coupons > 0 ? { coupons: Math.min(Math.floor(v.coupons), 9) } : {}),
       ...(typeof v?.pity === 'number' && v.pity > 0 ? { pity: Math.min(Math.floor(v.pity), 99) } : {}),
       ...(typeof v?.tickets === 'number' && v.tickets > 0 ? { tickets: Math.min(Math.floor(v.tickets), 9) } : {}),
+      ...(typeof v?.rareTickets === 'number' && v.rareTickets > 0 ? { rareTickets: Math.min(Math.floor(v.rareTickets), 9) } : {}),
+      ...(typeof v?.srTickets === 'number' && v.srTickets > 0 ? { srTickets: Math.min(Math.floor(v.srTickets), 9) } : {}),
     }
   } catch {
     return { coins: 0, owned: [] }

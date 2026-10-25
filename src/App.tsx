@@ -46,6 +46,7 @@ import { WordOfDay } from './WordOfDayView'
 import { isWeekend, lastWeekSummary, loadWeeklyClaimed, saveWeeklyClaimed, weekCompare, weekCount, weekStart, WEEKLY_COINS, WEEKLY_TARGET, WEEKLY_XP } from './weekly'
 import { usePersistent } from './usePersistent'
 import { loadFreeGachaDay, saveFreeGachaDay } from './freegacha'
+import { addTierTicket, dropsLeft, loadDrops, saveDrops, ticketDrop, TIER_INFO } from './tickets'
 import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
 import { Training } from './TrainingView'
@@ -539,6 +540,18 @@ function App() {
     if (correct && source === 'ear') count('ear')
     if (!correct && wordId) setMistakes((m) => addMistake(m, wordId)) // 単語にひもづかない問題（アルファベットなど）は記録しない
     if (correct && xp > 0) gainXp(xp * xpRate, source)
+    if (correct) maybeDropTicket()
+  }
+
+  // 学習で正解すると、ときどきチケットが出る（レア度つき・1日3まいまで）。お知らせは問題の画面をはなれてから
+  function maybeDropTicket() {
+    const d = loadDrops()
+    if (dropsLeft(d, today) <= 0) return
+    const tier = ticketDrop(rand(), rand())
+    if (!tier) return
+    saveDrops({ day: today, count: (d.day === today ? d.count : 0) + 1 })
+    setWallet((w) => addTierTicket(w, tier))
+    pushToast([{ id: 'ticket-drop', text: `${TIER_INFO[tier].icon} ${TIER_INFO[tier].name}が出た！（${TIER_INFO[tier].note}）`, counter: 'answers', target: 0 }])
   }
 
   // 文法・長文の答え：学習の記録はいつもどおり、XP はその項目のなかま（文法＝ペットモンスター、長文＝竜）へ
@@ -859,6 +872,22 @@ function App() {
   // ガチャを n 回まとめて引く（1回ずつ財布・仲間・ステップを引きついで計算する）
   // 正解しても自分で苦手に入れる（チェックをはずしたら1つもどす）
   const markWeak = (id: string, on: boolean) => setMistakes((m) => (on ? addMistake(m, id) : easeMistake(m, id)))
+  // 💎レアチケット（レア以上確定）・🌟SRチケット（スーパーレア以上確定）で引く
+  function drawTier(tier: 'rare' | 'sr'): GachaResult | null {
+    if (tier === 'rare') {
+      if ((wallet.rareTickets ?? 0) <= 0) return null
+      return drawMany(true, 1, { ...wallet, tickets: (wallet.tickets ?? 0) + 1, rareTickets: (wallet.rareTickets ?? 0) - 1 }, true)[0] ?? null
+    }
+    if ((wallet.srTickets ?? 0) <= 0) return null
+    const r = srEgg(party, rand(), rand())
+    if (!r) return null
+    setParty({ ...r.party, gacha: (party.gacha ?? 0) + 1 })
+    setWallet((w) => ({ ...w, srTickets: Math.max(0, (w.srTickets ?? 0) - 1) }))
+    saveGachaStats(addStats(loadGachaStats(), [r.kind.rarity]))
+    const newSpecies = r.species.id !== 'mochi' && !party.members.some((m) => m.species === r.species.id)
+    const newKind = !party.members.some((m) => m.kind === r.kind.id)
+    return { kind: r.kind, species: r.species, newKind, newSpecies }
+  }
   // なかま10体 → 🎟1まい（記録の「なかま」とガチャのページの両方から）
   function tradeTen() {
     const next = tradeMembers(party)
@@ -867,7 +896,7 @@ function App() {
     setWallet((w) => addTicket(w))
     pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
   }
-  function drawMany(ticket: boolean, n: number, start = wallet): GachaResult[] {
+  function drawMany(ticket: boolean, n: number, start = wallet, rareForce = false): GachaResult[] {
     let w = start
     let p = party
     let st = gachaStep
@@ -877,7 +906,7 @@ function App() {
     let sb = stickers
     let stickerDone = false
     for (let i = 0; i < n; i++) {
-      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
+      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, rareForce || stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
       if (!r) break
       st = nextStep(st, today)
       const dup = isDuplicate(p.members, r.species.id, r.kind.id)
@@ -1662,6 +1691,9 @@ function App() {
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           freeGacha={freeGachaDay !== today}
+          rareTickets={wallet.rareTickets ?? 0}
+          srTickets={wallet.srTickets ?? 0}
+          onTierGacha={drawTier}
           tradeCount={tradeableMembers(party).length}
           tradeDisabled={(wallet.tickets ?? 0) >= TICKET_MAX}
           onTrade={tradeTen}
@@ -2135,6 +2167,8 @@ function App() {
                 ? 'ログインボーナス'
                 : missionToast[0].id === 'weekly'
                 ? `週間チャレンジ達成！ +${WEEKLY_XP}XP`
+                : missionToast[0].id === 'ticket-drop'
+                ? '🎁 チケットドロップ！'
                 : ['quest', 'rush', 'rush-ex', 'weekend-boss', 'rare', 'endless'].includes(missionToast[0].id)
                 ? '⚔️ ボス討伐！'
                 : `ミッション達成！ +${MISSION_XP * missionToast.length}XP`}

@@ -2838,3 +2838,10 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 
 /* 4択で正解したあと「📌 正解したけど苦手に入れる」（スイッチつき・1行） */
 .mark-weak { display: flex; align-items: center; justify-content: center; gap: 4px; margin: 4px 0 8px; color: var(--muted); font-size: 0.85rem; font-weight: 800; white-space: nowrap; cursor: pointer; }
+
+/* レア度つきチケット：💎レア（青むらさきの宝石）・🌟SR（金と虹）で引くボタン */
+.gacha-tier-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); gap: 8px; margin: 8px 0; }
+.gacha .gacha-btn.tier-rare, .gacha .gacha-btn.tier-sr { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 6px; color: #fff; font-weight: 900; white-space: nowrap; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); }
+.gacha .gacha-btn.tier-rare { background: linear-gradient(135deg, #60a5fa, #8b5cf6); box-shadow: 0 5px 0 #5b21b6, 0 0 14px rgb(139 92 246 / 0.45); }
+.gacha .gacha-btn.tier-sr { background: linear-gradient(135deg, #fde047, #f59e0b 40%, #ec4899 75%, #8b5cf6); box-shadow: 0 5px 0 #92400e, 0 0 18px rgb(250 204 21 / 0.6); animation: free-glow 1.6s ease-in-out infinite; }
+.gacha .gacha-btn.tier-rare small, .gacha .gacha-btn.tier-sr small { font-size: 0.68rem; opacity: 0.95; }

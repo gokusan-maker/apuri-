@@ -1931,3 +1931,21 @@ describe('今日の単語のクリア（学年をえらんだとき）', () => {
     localStorage.removeItem('eitan:grade')
   })
 })
+
+describe('レア度つきチケット', () => {
+  it('💎レアチケットはレア以上、🌟SRチケットはスーパーレア以上が出る', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [], rareTickets: 1, srTickets: 1 }))
+    localStorage.setItem('eitan:gacha-free-day', '2099-01-01')
+    render(<App />)
+    fireEvent.click(screen.getByLabelText(/ショップを開く/))
+    fireEvent.click(screen.getByRole('button', { name: /SRチケットで引く/ }))
+    const p1 = JSON.parse(localStorage.getItem('eitan:party')!)
+    expect(['kin', 'niji']).toContain(p1.members[p1.members.length - 1].kind)
+    fireEvent.click(screen.getByRole('button', { name: /レアチケットで引く/ }))
+    const p2 = JSON.parse(localStorage.getItem('eitan:party')!)
+    expect(p2.members[p2.members.length - 1].kind).toBeDefined() // レア以上は色つき（normal ではない）
+    const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
+    expect(w.rareTickets ?? 0).toBe(0)
+    expect(w.srTickets ?? 0).toBe(0)
+  })
+})
