@@ -1,8 +1,9 @@
 // ボス戦：単語帳の全ステージをクリアすると挑戦できる。
 import { stagesOf, type StageRecord } from './stages'
-import { WORDS, type Level, type Word } from './words'
+import { levelOf, WORDS, type Level, type Word } from './words'
 import { makeQuiz, shuffle } from './quiz'
 import { GRAMMAR, gradeOf, type GrammarUnit } from './grammar'
+import { EXAM_GRAMMAR } from './examgrammar'
 import { maskAnswer } from './readhint'
 
 export const BOSS_HP = 240 // オーナーの要望でボスの体力アップ（100→150→240）
@@ -95,8 +96,11 @@ export function grammarGradesForLevel(level: Level | undefined): ('中1' | '中2
   return ['中1'] // 中1と、曜日・数・色などの基本の単語帳
 }
 export function grammarForLevel(level: Level | undefined): GrammarUnit[] {
+  // 英検2級より上のボスは、入試の文法もまぜる（英検2級＝共通テスト・私立、準1級＝国公立・旧帝大、1級・ネイティブ＝旧帝大・医学部）
+  const exam = level === '英検2級' ? ['exam-kyotsu', 'exam-shiritsu'] : level === '英検準1級' ? ['exam-kokkoritsu', 'exam-kyutei'] : level === '英検1級' || level === 'ネイティブ' ? ['exam-kyutei', 'exam-kokuritsu-med', 'exam-shiritsu-med'] : []
+  if (level === '英検1級' || level === 'ネイティブ') return EXAM_GRAMMAR.filter((u) => exam.includes(u.id))
   const grades = grammarGradesForLevel(level)
-  const list = GRAMMAR.filter((u) => grades.includes(gradeOf(u.id)))
+  const list = [...GRAMMAR.filter((u) => grades.includes(gradeOf(u.id))), ...EXAM_GRAMMAR.filter((u) => exam.includes(u.id))]
   return list.length > 0 ? list : GRAMMAR
 }
 
@@ -106,7 +110,7 @@ const wordQuiz = (words: Word[], n: number, rnd: () => number) => makeQuiz(words
 export function bossQuestions(words: Word[], grammar: boolean) {
   const qs = wordQuiz(words, BOSS_QUESTIONS, Math.random)
   if (!grammar) return qs
-  const units = grammarForLevel(words[0]?.level)
+  const units = grammarForLevel(words[0] ? levelOf(words[0]) : undefined)
   return qs.map((q, i) => {
     if (i % 4 !== 3) return q
     const u = units[Math.floor(Math.random() * units.length)]
@@ -124,7 +128,7 @@ export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamR
 // readingQs：読解ボスのときは、読解の番に本文の問題を順に出す
 export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[], grammarUnits?: GrammarUnit[]): (TeamQ | (R & { team: 'reading' }))[] {
   const wordQs = wordQuiz(words, n, rnd)
-  const units = grammarUnits && grammarUnits.length > 0 ? grammarUnits : grammarForLevel(words[0]?.level)
+  const units = grammarUnits && grammarUnits.length > 0 ? grammarUnits : grammarForLevel(words[0] ? levelOf(words[0]) : undefined)
   const sentences = words.filter((w) => w.example && w.exampleJa)
   const pool = sentences.length >= 4 ? sentences : WORDS.filter((w) => w.example && w.exampleJa)
   const out: (TeamQ | (R & { team: 'reading' }))[] = []

@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { BOSS_XP, BOSSES, STREAK_DRAGON_XP } from './boss'
 import { LONG_PASSAGES } from './longreading'
+import { ADV_PASSAGES } from './advreading'
 import { passageQs } from './readingboss'
 import { loadBuddies } from './buddies'
 import { loadMissions, missionsFor } from './missions'
@@ -18,7 +19,7 @@ import { GRAMMAR } from './grammar'
 import { WORDS } from './words'
 
 // ボス戦（チームバトル）の今の問題の正解：本文の問題・単語・文法・例文の訳のどれでも
-const PASSAGE_QS = LONG_PASSAGES.flatMap(passageQs)
+const PASSAGE_QS = [...LONG_PASSAGES, ...ADV_PASSAGES].flatMap(passageQs)
 const GRAMMAR_QS = GRAMMAR.flatMap((u) => u.questions)
 function bossAnswer(en: string): string {
   const r = PASSAGE_QS.find((x) => x.word.en === en)

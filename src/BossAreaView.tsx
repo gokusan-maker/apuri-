@@ -87,8 +87,8 @@ export function BossArea({ name, group, specials, bosses = [], onCoins }: { name
 }
 
 const DECO: Record<BossGroup, string[]> = {
-  jh: ['🌳', '🏫', '🌸'],
-  hs: ['🌵', '🏜', '🦂'],
-  adv: ['⛄', '❄️', '🌌'],
-  basic: ['🌷', '🍄', '🐣'],
+  jh: ['🦇', '💎', '🕯'],
+  hs: ['🔥', '🌋', '💥'],
+  adv: ['⚡', '🏯', '🌩'],
+  basic: ['🍄', '🕸', '🌲'],
 }

@@ -3443,3 +3443,27 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .gfig-row { display: grid; gap: 4px; }
 .gfig-row-name { font-size: 0.86rem; }
 .gfig-row-tip { font-size: 0.74rem; color: var(--muted); }
+
+/* ボスの世界は強そうに：どうくつ・火山・魔王城・まよいの森 */
+.bworld-sea { background: radial-gradient(circle at 30% 20%, #1e40af, #0c1445 80%); }
+.bworld-island { fill: #44403c; stroke: #78716c; }
+.bworld-r.jh { fill: #57534e; }
+.bworld-r.hs { fill: #b91c1c; }
+.bworld-r.adv { fill: #5b21b6; }
+.bworld-r.basic { fill: #14532d; }
+.bworld-road { stroke: #fbbf24; opacity: 0.85; }
+.bworld-mark { background: rgb(0 0 0 / 0.35); box-shadow: 0 0 14px rgb(251 146 60 / 0.6), 0 4px 0 rgb(0 0 0 / 0.4); }
+.bw-hs .bworld-mark { animation: bw-lava 1.4s ease-in-out infinite; }
+@keyframes bw-lava { 50% { box-shadow: 0 0 22px rgb(239 68 68 / 0.95), 0 4px 0 rgb(0 0 0 / 0.4); } }
+.barea-jh .barea-land { background: linear-gradient(180deg, #1c1917, #57534e 70%); }
+.barea-hs .barea-land { background: radial-gradient(circle at 70% 20%, #fb923c, transparent 40%), linear-gradient(180deg, #450a0a, #b91c1c 60%, #f97316); }
+.barea-adv .barea-land { background: linear-gradient(180deg, #0f0524, #4c1d95 60%, #7c3aed); }
+.barea-basic .barea-land { background: linear-gradient(180deg, #052e16, #166534 65%); }
+.barea-jh .barea-hill.b1 { fill: rgb(68 64 60 / 0.9); }
+.barea-jh .barea-hill.b2 { fill: rgb(41 37 36 / 0.95); }
+.barea-hs .barea-hill.b1 { fill: rgb(69 10 10 / 0.75); }
+.barea-hs .barea-hill.b2 { fill: rgb(28 25 23 / 0.9); }
+.barea-adv .barea-hill.b1 { fill: rgb(30 27 75 / 0.8); }
+.barea-adv .barea-hill.b2 { fill: rgb(17 24 39 / 0.95); }
+.barea-basic .barea-hill.b1 { fill: rgb(20 83 45 / 0.85); }
+.barea-basic .barea-hill.b2 { fill: rgb(5 46 22 / 0.95); }

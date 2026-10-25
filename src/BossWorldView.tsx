@@ -4,13 +4,13 @@ export type WorldRegion = { id: BossGroup; name: string; sub: string; done: numb
 
 // 地図の上の地方の位置（%）と目じるし
 const PLACE: Record<BossGroup, { x: number; y: number; mark: string; land: string }> = {
-  jh: { x: 28, y: 30, mark: '🌳', land: '森' },
-  hs: { x: 72, y: 30, mark: '🌵', land: '砂ばく' },
-  adv: { x: 72, y: 72, mark: '🗻', land: '雪山' },
-  basic: { x: 28, y: 72, mark: '🌷', land: '花畑' },
+  jh: { x: 28, y: 30, mark: '🦇', land: 'どうくつ' },
+  hs: { x: 72, y: 30, mark: '🌋', land: '火山' },
+  adv: { x: 72, y: 72, mark: '🏯', land: '魔王城' },
+  basic: { x: 28, y: 72, mark: '🍄', land: 'まよいの森' },
 }
 
-// ボス部屋のさいしょ：海にうかぶ島の地図。4つの地方（中学の森・高校の砂ばく・上級の雪山・きほんの花畑）から行き先をえらぶ
+// ボス部屋のさいしょ：海にうかぶ島の地図。4つの地方（中学のどうくつ・高校の火山・上級の魔王城・きほんのまよいの森）から行き先をえらぶ
 export function BossWorld({ regions, onPick }: { regions: WorldRegion[]; onPick: (id: BossGroup) => void }) {
   return (
     <section className="bworld" aria-label="ボスの世界地図">

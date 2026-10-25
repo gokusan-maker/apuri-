@@ -1,6 +1,8 @@
 // 読解ボス：ステージのボスは、その学年の長文2本から問題を出す（空所補充・内容一致○×・英問英答）
 import { BOSS_QUESTIONS } from './boss'
 import { LONG_PASSAGES, splitSentences, type LongPassage } from './longreading'
+import { ADV_PASSAGES } from './advreading'
+import { tierOf } from './examtier'
 import type { Level, Word } from './words'
 
 export type BossHint = { note?: string; quote?: string } // note：前置詞などの核心をふくむくわしい解説、quote：根拠になる本文の1文
@@ -28,11 +30,21 @@ export function evidenceSentence(p: LongPassage, text: string): string | undefin
 }
 
 // 単語帳のレベル → 長文のレベル（高校基礎・熟語・ビジネスは中3〜高校入試、中3は中3、中1・中2と曜日・数などの基本は中2。なければ全部から）
-export function readingPoolFor(level: Level, list: LongPassage[] = LONG_PASSAGES): LongPassage[] {
-  const hard = level === '高校基礎' || level === '熟語' || level === 'ビジネス' || level === '英検2級' || level === '英検準1級' || level === '英検1級' || level === 'ネイティブ'
-  const ok = (lv: string) => (hard ? lv.includes('高校入試') || lv.startsWith('中3') : level === '中3' ? lv.startsWith('中3') || lv.startsWith('中2〜中3') : lv.startsWith('中2'))
-  const pool = list.filter((p) => ok(p.level) && !p.titleQ && !p.paraSeq)
-  return pool.length >= 2 ? pool : list.filter((p) => !p.titleQ && !p.paraSeq)
+export function readingPoolFor(level: Level, list: LongPassage[] = [...LONG_PASSAGES, ...ADV_PASSAGES]): LongPassage[] {
+  // ボスのレベルに合った長文（英検2級より上は大学入試・留学レベルの長文）
+  const head = (p: LongPassage) => p.level.split('（')[0]
+  const tierIn = (p: LongPassage, ts: string[]) => head(p) === '難関大' && ts.includes(tierOf(p))
+  const ok = (p: LongPassage): boolean => {
+    if (level === '英検2級') return tierIn(p, ['kyotsu', 'shiritsu'])
+    if (level === '英検準1級') return tierIn(p, ['kokkoritsu', 'kyutei', 'shiritsu'])
+    if (level === '英検1級' || level === 'ネイティブ') return tierIn(p, ['kyutei', 'kokuritsu-med', 'shiritsu-med']) || head(p) === 'TOEFL・IELTS'
+    if (level === '高校基礎' || level === '熟語' || level === 'ビジネス') return ['高校入試', '中3〜高校入試'].includes(head(p))
+    if (level === '中3') return ['中3', '中2〜中3', '中3〜高校入試'].includes(head(p))
+    if (level === '中2') return ['中2', '中2〜中3'].includes(head(p))
+    return ['初級', '中2'].includes(head(p)) // 中1と、曜日・数・色などの基本の単語帳
+  }
+  const pool = list.filter((p) => ok(p) && !p.titleQ && !p.paraSeq)
+  return pool.length >= 2 ? pool : list.filter((p) => !p.titleQ && !p.paraSeq && !p.level.startsWith('難関大') && !p.level.startsWith('TOEFL'))
 }
 
 const w = (en: string, ja: string): Word => ({ id: '', en, ja, example: '', exampleJa: '', level: '中2' }) as Word

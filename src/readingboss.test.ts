@@ -20,7 +20,7 @@ it('ボス1戦は学年に合う読解2本から最大30問', () => {
   expect(qs.length).toBeLessThanOrEqual(30)
   expect(new Set(qs.map((q) => q.passage.id)).size).toBe(2)
   expect(qs.every((q) => /^中(3|2〜中3)/.test(q.passage.level))).toBe(true)
-  expect(readingPoolFor('中1').every((p) => p.level.startsWith('中2'))).toBe(true)
+  expect(readingPoolFor('中1').every((p) => /^(中2|初級)/.test(p.level))).toBe(true)
   expect(readingPoolFor('熟語').length).toBeGreaterThanOrEqual(2)
 })
 
@@ -70,7 +70,17 @@ it('ボスのヒント：○×・英問英答の9割以上に根拠の1文が出
 })
 
 it('基本の単語帳（数・色など）のボスに高校入試の長文を出さない。高校基礎は中3〜高校入試', () => {
-  for (const lv of ['数', '色・形', '曜日・月', '会話', 'テーマ別'] as const) expect(readingPoolFor(lv).every((p) => p.level.startsWith('中2'))).toBe(true)
+  for (const lv of ['数', '色・形', '曜日・月', '会話', 'テーマ別'] as const) expect(readingPoolFor(lv).every((p) => /^(中2|初級)/.test(p.level))).toBe(true)
   expect(readingPoolFor('中3').every((p) => /^中(3|2〜中3)/.test(p.level))).toBe(true)
   expect(readingPoolFor('高校基礎').every((p) => p.level.includes('高校入試') || p.level.startsWith('中3'))).toBe(true)
+})
+
+it('英検2級より上のボスは、入試・留学レベルの長文と入試の文法', async () => {
+  const { grammarForLevel } = await import('./boss')
+  expect(readingPoolFor('英検2級').every((p) => p.level.startsWith('難関大'))).toBe(true)
+  expect(readingPoolFor('英検1級').every((p) => /^(難関大|TOEFL)/.test(p.level))).toBe(true)
+  expect(readingPoolFor('英検1級').length).toBeGreaterThanOrEqual(10)
+  expect(grammarForLevel('英検1級').every((u) => u.id.startsWith('exam-'))).toBe(true)
+  expect(grammarForLevel('英検2級').some((u) => u.id === 'exam-kyotsu')).toBe(true)
+  expect(grammarForLevel('中1').some((u) => u.id.startsWith('exam-'))).toBe(false)
 })

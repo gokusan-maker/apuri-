@@ -367,7 +367,7 @@ it('ボス部屋：エリアの地図に今日の特別なボスが出現し、�
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
   expect(screen.queryByRole('region', { name: /のエリア$/ })).toBeNull()
-  expect(screen.getByRole('region', { name: 'ボスの世界地図' }).textContent).toContain('上級の雪山') // レベルをえらぶページは島の地図
+  expect(screen.getByRole('region', { name: 'ボスの世界地図' }).textContent).toContain('上級の魔王城') // レベルをえらぶページは島の地図
   fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
   const area = screen.getByRole('region', { name: '高校のエリア' })
   expect(area.textContent).toContain('出現！')
