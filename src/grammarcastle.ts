@@ -1,6 +1,8 @@
 // 文法の城：単元を「大きな項目」（不定詞・動名詞など）にまとめ、1つの項目を 5問×3階 で登る。
 // 1階目のはじめにその項目の解説。15問（5単元）ごとに次のまとまりへ
-import type { GrammarQuestion, GrammarUnit } from './grammar'
+import { GRAMMAR, GRAMMAR_GRADES, gradeOf, type GrammarQuestion, type GrammarUnit } from './grammar'
+import { EXAM_GRAMMAR } from './examgrammar'
+import type { GradeId } from './usergrade'
 
 export const FLOOR_QS = 5
 export const FLOORS_PER_PART = 3
@@ -34,7 +36,7 @@ export const topicOf = (u: GrammarUnit) => TOPICS.find(([, re]) => re.test(u.tit
 export type GcFloor = { id: string; label: string; sub: string; topic: string; floor: number; questions: GrammarQuestion[]; explain: GrammarUnit | null }
 
 // 単元の並び（学年順）から城の階をつくる
-export function grammarCastleFloors(units: GrammarUnit[]): GcFloor[] {
+export function grammarCastleFloors(units: GrammarUnit[], prefix = ''): GcFloor[] {
   const order: string[] = []
   const byTopic = new Map<string, GrammarUnit[]>()
   for (const u of units) {
@@ -67,7 +69,7 @@ export function grammarCastleFloors(units: GrammarUnit[]): GcFloor[] {
         // さいごの階は、あまりの問題もまとめて出す（5問より少なくならないように）
         const qsF = f === floors - 1 ? partQs.slice(f * FLOOR_QS) : partQs.slice(f * FLOOR_QS, (f + 1) * FLOOR_QS)
         out.push({
-          id: `gc:${name}:${f + 1}`,
+          id: `gc:${prefix}${name}:${f + 1}`,
           label: `${name}　${f + 1}/${floors}`,
           sub: f === 0 ? '📖 解説から' : `${qsF.length}問`,
           topic: name,
@@ -75,7 +77,7 @@ export function grammarCastleFloors(units: GrammarUnit[]): GcFloor[] {
           questions: qsF,
           explain:
             f === 0
-              ? { id: `gc:${name}:${f + 1}`, title: `${name}（${partUnits.length}単元）`, points: partUnits.flatMap((u) => u.points).slice(0, 8), examples: partUnits.flatMap((u) => u.examples).slice(0, 4), questions: qsF }
+              ? { id: `gc:${prefix}${name}:${f + 1}`, title: `${name}（${partUnits.length}単元）`, points: partUnits.flatMap((u) => u.points).slice(0, 8), examples: partUnits.flatMap((u) => u.examples).slice(0, 4), questions: qsF }
               : null,
         })
       }
@@ -96,6 +98,45 @@ export function loadGcClears(): string[] {
 export function saveGcClears(ids: string[]): void {
   try {
     localStorage.setItem(KEY, JSON.stringify(ids))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
+
+// 城の地図：学年（中1〜高校）と入試レベルの城
+export type GcLevel = { id: string; label: string; sub: string }
+export const GC_LEVELS: GcLevel[] = [
+  ...GRAMMAR_GRADES.map((g) => ({ id: g, label: g, sub: g === '高校' ? '高校の文法' : `${g}の文法` })),
+  ...EXAM_GRAMMAR.map((u) => ({ id: u.id, label: u.title.replace(/の文法.*$/, ''), sub: '入試レベル' })),
+]
+
+// その城の階（学年の城は項目ごとに5問×3階、入試の城は5問ずつ・1階目は解説から）
+export function gcFloorsFor(level: string): GcFloor[] {
+  const exam = EXAM_GRAMMAR.find((u) => u.id === level)
+  if (!exam) return grammarCastleFloors(GRAMMAR.filter((u) => gradeOf(u.id) === level), `${level}|`)
+  const name = GC_LEVELS.find((l) => l.id === level)!.label
+  const n = Math.ceil(exam.questions.length / FLOOR_QS)
+  return Array.from({ length: n }, (_, f) => {
+    const qs = exam.questions.slice(f * FLOOR_QS, (f + 1) * FLOOR_QS)
+    const id = `gc:${level}|${name}:${f + 1}`
+    return { id, label: `${name}　${f + 1}/${n}`, sub: f === 0 ? '📖 解説から' : `${qs.length}問`, topic: name, floor: f, questions: qs, explain: f === 0 ? { ...exam, id, questions: qs } : null }
+  })
+}
+
+const LEVEL_KEY = 'eitan:grammar-castle'
+const LEVEL_FOR: Record<GradeId, string> = { j1: '中1', j2: '中2', j3: '中3', hs: '高校', adult: '高校' }
+export function loadGcLevel(grade: GradeId | ''): string {
+  try {
+    const v = localStorage.getItem(LEVEL_KEY)
+    if (v && GC_LEVELS.some((l) => l.id === v)) return v
+  } catch {
+    /* 読めなくても動く */
+  }
+  return grade ? LEVEL_FOR[grade] : '中1'
+}
+export function saveGcLevel(id: string): void {
+  try {
+    localStorage.setItem(LEVEL_KEY, id)
   } catch {
     /* 保存できなくても動く */
   }

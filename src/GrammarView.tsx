@@ -16,7 +16,8 @@ import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
 import { GrammarFigure } from './GrammarFigView'
 import { figOf } from './grammarfig'
-import { GC_PASS, grammarCastleFloors, loadGcClears, saveGcClears } from './grammarcastle'
+import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears, saveGcLevel } from './grammarcastle'
+import { CastleMap } from './CastleMapView'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -33,7 +34,7 @@ import { champOf, countChamp, loadGrammarChamp, saveGrammarChamp } from './gramm
 import { clearForGoal, GOAL_CHOICES, loadGrammarGoal, saveGrammarGoal } from './grammargoal'
 import { GameTile } from './GameTileView'
 import { ALL_GAMES_COINS, allGamesClaimed, claimAllGames, loadTodayGames } from './gamesplayed'
-import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, grammarForGrade, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
+import { praiseEnOf, quickPractice, relatedUnits, choiceOrder, almostUnits, correctSentence, weakIdsOf, TENSE_TABLE, nextUnit, randomQuestion, gradeClearRates, danOf, loadWrongDays, markWrongDay, yesterdayQuestions, allCleared, loadMaster, saveMaster, unitOfQuestion, GRAMMAR_STREAK_COINS, GRAMMAR_STREAK_DAYS, loadGrammarDays, saveGrammarDays, studyGrammarDay, weakRanking, praiseOf, recommendUnits, searchUnits, loadClears, saveClears, unitStars, loadNotebook, notebookQuestions, noteAfter, saveNotebook, GRAMMAR_CLEAR_XP, favFirst, loadGrammarFav, saveGrammarFav, toggleGrammarFav, grammarShareText, loadGrammarStreak, saveGrammarStreak, streakAfter, GRAMMAR_HINT_COST, gradeOf, GRAMMAR_GRADES, type GrammarGrade, loadTaBest, dailyGrammar, loadDailyGrammarDay, saveDailyGrammarDay, GRAMMAR, grammarStamps, weakUnits, loadGrammar, loadMixBest, mixRank, saveGrammar, saveMixBest, STAMP_EVERY, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -148,7 +149,8 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
-  const gcFloors = stampMode ? grammarCastleFloors(grammarForGrade()) : []
+  const [gcLevel, setGcLevel] = useState(() => loadGcLevel(loadGrade())) // 地図でえらんだ文法の城
+  const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
   const openFloor = (id: string) => {
     const f = gcFloors.find((x) => x.id === id)
@@ -284,8 +286,23 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
         {stampMode ? (
           <>
+            <CastleMap
+              title="文法の城の地図"
+              tabsLabel="文法の城"
+              fold
+              current={gcLevel}
+              spots={GC_LEVELS.map((l) => {
+                const fl = gcFloorsFor(l.id)
+                return { id: l.id, name: l.label, sub: l.sub, done: fl.filter((f) => gcClears.includes(f.id)).length, total: fl.length }
+              })}
+              onPick={(id) => {
+                setGcLevel(id)
+                saveGcLevel(id)
+              }}
+            />
             <Castle
-              name="文法の城"
+              key={gcLevel}
+              name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}
               theme="green"
               onChest={onChest}
               floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
@@ -763,7 +780,15 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
       <section className="card grammar gc-explain">
         {back}
         <h2>{unit.title}</h2>
-        <GrammarFigure fig={figOf(unit.id)} />
+        {figOf(unit.id).uses.length > 0 ? (
+          <GrammarFigure fig={figOf(unit.id)} />
+        ) : (
+          <ul className="grammar-points">
+            {unit.points.slice(0, 4).map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+        )}
         {unit.examples.slice(0, 2).map((ex) => (
           <p key={ex.en} className="gc-ex">
             <span>{ex.en}</span>

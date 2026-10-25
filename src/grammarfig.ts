@@ -197,6 +197,6 @@ const FALLBACK: GrammarFig = { formula: [s('S'), v('V'), o('O')], uses: [], tip:
 
 // 城の解説の単元 id（gc:名前:1）から図を引く（①②… は取りのぞく）
 export function figOf(name: string): GrammarFig {
-  const base = name.replace(/^gc:/, '').replace(/:\d+$/, '').replace(/[①-⑩]$|\d+$/, '')
+  const base = name.replace(/^gc:/, '').replace(/^[^|]*\|/, '').replace(/:\d+$/, '').replace(/[①-⑩]$|\d+$/, '')
   return GRAMMAR_FIGS[base] ?? FALLBACK
 }
