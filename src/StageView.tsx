@@ -612,7 +612,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <LevelPick
           label="ボスのレベル"
           current={bossLv}
-          spots={COURSES.map((c) => ({ id: c.id, name: c.label, sub: `👹 ${BOSSES[LEVEL_BOSS_LOOK[c.id]].name}`, done: lboss[c.id] ? BC_FLOORS : bossCastleFloors([c.id]).filter((f) => bcClears.includes(f.id)).length, total: BC_FLOORS }))}
+          spots={COURSES.map((c) => ({ id: c.id, name: c.label, sub: `👹 ${BOSSES[LEVEL_BOSS_LOOK[c.id]].name}`, badge: bossTimes[BOSSES[LEVEL_BOSS_LOOK[c.id]].name] !== undefined ? `⏱ ${formatSec(bossTimes[BOSSES[LEVEL_BOSS_LOOK[c.id]].name])}` : undefined, done: lboss[c.id] ? BC_FLOORS : bossCastleFloors([c.id]).filter((f) => bcClears.includes(f.id)).length, total: BC_FLOORS }))}
           onPick={(id) => {
             setBossLv(id as CourseId)
             saveBossLevel(id as CourseId)

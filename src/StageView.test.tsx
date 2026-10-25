@@ -414,3 +414,13 @@ it('たおしたレベルのボスが5・10レベルになると、記念のコ�
   expect(newBossMilestones(10, [5])).toEqual([10])
   expect(newBossMilestones(12, [5, 10])).toEqual([])
 })
+
+it('ボス部屋のレベルえらびに、そのレベルのボスの最短タイムを表示', async () => {
+  const { BOSSES } = await import('./boss')
+  const { LEVEL_BOSS_LOOK } = await import('./bosscastle')
+  localStorage.clear()
+  localStorage.setItem('eitan:boss-times', JSON.stringify({ [BOSSES[LEVEL_BOSS_LOOK['中2']].name]: 95 }))
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /^ボスのレベル：/ }))
+  expect(screen.getByRole('option', { name: /中2/ })).toHaveTextContent('⏱ 1分35秒')
+})
