@@ -4355,6 +4355,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-fire-drill',
+    title: 'Notice: Fire Drill on Thursday',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all tenants of the Riverside Office Tower: A fire drill will be held on Thursday, October 17, at 10:30 a.m. All employees in the building are required to take part.",
+      "When the alarm sounds, please stop what you are doing, leave your belongings at your desk, and walk calmly to the nearest emergency exit. Do not use the elevators ( A ) any circumstances. Staff members wearing orange vests will guide you down the stairs and out to the parking lot behind the building.",
+      "Once outside, please gather with the other members of your company at the area marked with your company's name. Each company's safety officer will check that everyone is present and report to the building manager. The drill is expected to last about twenty minutes.",
+      "Visitors who are in the building at the time of the drill should follow the instructions of the staff. Employees ( B ) cannot use the stairs because of an injury or disability should inform their safety officer by Tuesday, so that special arrangements can be made.",
+      "Thank you for your cooperation. Regular drills help ensure that everyone knows ( C ) to do in a real emergency. Building Management Office",
+    ],
+    ja: [
+      'リバーサイド・オフィスタワーの入居者のみなさまへ：10月17日（木）午前10時30分に避難訓練を行います。ビル内のすべての従業員は参加してください。',
+      '警報が鳴ったら、作業をやめ、持ち物は机に置いたまま、最寄りの非常口へ落ち着いて歩いてください。どのような場合でもエレベーターは使わないでください。オレンジ色のベストを着た係員が、階段を下りてビルの裏の駐車場まで誘導します。',
+      '外に出たら、自社の名前が表示された場所に、同じ会社の人たちと集まってください。各社の安全担当者が全員そろっているかを確認し、ビルの管理者に報告します。訓練はおよそ20分かかる予定です。',
+      '訓練の時間にビル内にいる来訪者は、係員の指示に従ってください。けがや障がいのために階段を使えない従業員は、特別な手配ができるよう、火曜日までに安全担当者に知らせてください。',
+      'ご協力ありがとうございます。定期的な訓練は、本当の緊急時に何をすべきかを全員が確実にわかっているようにするのに役立ちます。ビル管理事務所',
+    ],
+    blanks: [
+      { id: 'A', choices: ['under', 'on', 'at', 'with'], answer: 0, why: 'under any circumstances で「どんな状況でも」（否定文で「決して～ない」）。circumstances の前は under。' },
+      { id: 'B', choices: ['who', 'whom', 'whose', 'which'], answer: 0, why: '先行詞 Employees（人）を説明し、cannot use の主語になる関係代名詞 who。whom は目的語、whose のうしろには名詞が必要、which は物に使う。' },
+      { id: 'C', choices: ['what', 'that', 'if', 'whether'], answer: 0, why: '疑問詞＋to 不定詞 what to do「何をすべきか」。do の目的語が欠けているので what。that・if は to 不定詞を続けられず、whether to do では do の目的語が欠けたままになる。' },
+    ],
+    tf: [
+      { statement: '避難訓練では、エレベーターを使ってもよい。', answer: false, why: '第2段落 Do not use the elevators under any circumstances。' },
+      { statement: '訓練はおよそ20分かかる予定だ。', answer: true, why: '第3段落 The drill is expected to last about twenty minutes。' },
+      { statement: '階段を使えない従業員は、火曜日までに安全担当者に知らせる。', answer: true, why: '第4段落 should inform their safety officer by Tuesday。' },
+    ],
+    qa: [
+      { q: 'Where should employees gather after leaving the building?', choices: ['At the area marked with their company\'s name.', 'In the lobby near the elevators.', 'At their desks.', 'In the building manager\'s office.'], answer: 0, why: '第3段落 gather with the other members of your company at the area marked with your company\'s name。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
