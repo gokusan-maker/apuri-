@@ -4447,6 +4447,64 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'exam-paper-plane',
+    title: 'The Paper Airplane Contest',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last fall, our science teacher held a paper airplane contest. The rule was simple: each student could use only one sheet of paper, and the plane that flew the farthest would win. At first, I thought it would be easy. However, my first plane fell to the floor after ( A ) two meters.",
+      "I decided to study why some planes fly better than others. I learned that the shape of the wings and the balance of the plane are very important. If the front is too light, the plane goes up quickly and then falls. So I folded the front part a few more times to make it heavier.",
+      "On the day of the contest, my plane flew almost fifteen meters. It did not win first prize, but it came in third. More importantly, I learned that ( B ) why something fails is the first step to making it better. Now I am interested in how real airplanes fly, and I want to learn more ( C ) science in high school.",
+    ],
+    ja: [
+      '去年の秋、理科の先生が紙飛行機コンテストを開きました。ルールは簡単で、生徒はそれぞれ紙を1枚しか使えず、いちばん遠くまで飛んだ飛行機が優勝です。最初は簡単だと思っていました。しかし、私の最初の飛行機はわずか2メートルで床に落ちてしまいました。',
+      '私は、なぜよく飛ぶ飛行機とそうでない飛行機があるのかを調べることにしました。つばさの形と飛行機のバランスがとても大切だとわかりました。前が軽すぎると、飛行機はすぐに上がって、それから落ちてしまいます。そこで、前の部分をさらに何回か折って重くしました。',
+      'コンテストの日、私の飛行機はほぼ15メートル飛びました。1位にはなれませんでしたが、3位に入りました。それより大切なのは、なぜ何かがうまくいかないのかを知ることが、それをよくするための第一歩だと学んだことです。今、私は本物の飛行機がどうやって飛ぶのかに興味があり、高校で理科についてもっと学びたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['only', 'alone', 'single', 'once'], answer: 0, why: 'only ＋数量で「わずか～・たった～」。after only two meters「わずか2メートルで」。alone・single・once は数量の前に置いてこの意味にならない。' },
+      { id: 'B', choices: ['knowing', 'know', 'knew', 'known'], answer: 0, why: 'that 節の主語になる動名詞 knowing「知ること」。knowing why something fails がまとまって主語。' },
+      { id: 'C', choices: ['about', 'to', 'at', 'into'], answer: 0, why: 'learn about ～「～について学ぶ」。to・at・into は learn more と結びつかない。' },
+    ],
+    tf: [
+      { statement: 'コンテストでは、紙を何枚でも使うことができた。', answer: false, why: '第1段落 each student could use only one sheet of paper。' },
+      { statement: '筆者は飛行機の前の部分を重くした。', answer: true, why: '第2段落 I folded the front part a few more times to make it heavier。' },
+      { statement: '筆者の飛行機は1位になった。', answer: false, why: '第3段落 It did not win first prize, but it came in third。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn from the contest?', choices: ['Knowing why something fails is the first step to improving it.', 'Paper airplanes cannot fly far.', 'Science is too difficult.', 'Winning first prize is the most important thing.'], answer: 0, why: '第3段落 knowing why something fails is the first step to making it better。' },
+    ],
+  },
+  {
+    id: 'exam-library-volunteer',
+    title: 'Reading to Children at the Library',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Every Saturday morning, I volunteer at the city library. My job is to read picture books to small children. When I started, I was very nervous because I had never read aloud to anyone ( A ) my little sister.",
+      "On my first day, I read a story about a lost bear. I read too quickly, and the children soon started talking to each other. After that, the librarian gave me some advice. She told me to read slowly, change my voice for each character, and show the pictures to everyone.",
+      "The next week, I tried her advice. When I used a low voice for the big bear, the children laughed. When the bear finally found his home, a small girl clapped her hands. After the story, she asked me, 'Will you read another one next week?' I was so happy ( B ) I almost cried.",
+      "Through this experience, I learned that reading aloud is not just reading words. It is a way of sharing feelings with others. I want to keep ( C ) this activity next year, too.",
+    ],
+    ja: [
+      '毎週土曜日の朝、私は市の図書館でボランティアをしています。私の仕事は小さな子どもたちに絵本を読むことです。始めたときは、妹以外のだれにも声に出して読んであげたことがなかったので、とても緊張しました。',
+      '最初の日、私は迷子のクマのお話を読みました。速く読みすぎて、子どもたちはすぐにおたがいに話しはじめてしまいました。そのあと、図書館の司書さんがアドバイスをくれました。ゆっくり読むこと、登場人物ごとに声を変えること、そして絵をみんなに見せることを教えてくれたのです。',
+      '次の週、私はそのアドバイスをためしました。大きなクマのところで低い声を使うと、子どもたちは笑いました。クマがついに家を見つけると、小さな女の子が手をたたきました。お話のあと、その子は「来週もまた読んでくれる？」とたずねました。私はとてもうれしくて、泣きそうになりました。',
+      'この経験を通して、声に出して読むことは、ただ言葉を読むことではないと学びました。それはほかの人と気持ちを分かちあう方法なのです。来年もこの活動を続けたいと思っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['except', 'unless', 'during', 'among'], answer: 0, why: 'anyone except ～「～以外のだれにも」。unless のうしろには文が必要で、during・among は意味が合わない。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'so ～ that …「とても～なので…」。前に so happy があるので that。' },
+      { id: 'C', choices: ['doing', 'do', 'to do', 'done'], answer: 0, why: 'keep ～ing「～し続ける」。keep のあとは動名詞。' },
+    ],
+    tf: [
+      { statement: '筆者は毎週土曜日の朝に図書館でボランティアをしている。', answer: true, why: '第1段落 Every Saturday morning, I volunteer at the city library。' },
+      { statement: '最初の日、子どもたちは静かに話を聞いていた。', answer: false, why: '第2段落 the children soon started talking to each other。' },
+      { statement: '司書さんは、ゆっくり読むようにとアドバイスした。', answer: true, why: '第2段落 She told me to read slowly。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn through this experience?', choices: ['Reading aloud is a way of sharing feelings.', 'Children do not like picture books.', 'Reading quickly is the best way.', 'Librarians should read to children.'], answer: 0, why: '第4段落 It is a way of sharing feelings with others。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

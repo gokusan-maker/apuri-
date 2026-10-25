@@ -2129,3 +2129,4 @@
 - 2026-10-25: ネイティブレベルの専用エッセイ「Two Days Without My Phone」（スマホなしの2日間・248語）を追加
 - 2026-10-25: TOEICレベルの専用長文「Notice: Fire Drill on Thursday」（避難訓練のお知らせ・200語）を追加
 - 2026-10-25: 私学難関レベルの長文を2本追加（「Why the Songs of Our Youth Stay with Us」レミニセンス・バンプ・「Why Losing Hurts More Than Winning Feels Good」損失回避）
+- 2026-10-25: 高1・高2（高校入試）レベルの長文を2本追加（紙飛行機コンテスト・図書館での読み聞かせ）
