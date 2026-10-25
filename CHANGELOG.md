@@ -2087,3 +2087,4 @@
 - 2026-10-25: ネイティブの慣用句を30語追加（a blessing in disguise・kill two birds with one stone・the tip of the iceberg など）
 - 2026-10-25: 国公立・旧帝大の単語を40語追加（idiosyncratic・pervade・prudence・replete・rhetorical・sublime など）
 - 2026-10-25: 私学・私学難関の単語を40語追加（acquaintance・compassion・courtesy・compulsory・confidential・controversial など）
+- 2026-10-25: 京大・東大の単語を40語追加（grandiose・propitious・quixotic・unequivocal・vicissitude など）
