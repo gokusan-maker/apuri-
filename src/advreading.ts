@@ -3509,6 +3509,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-deja-vu',
+    title: 'The Strange Feeling of Déjà Vu',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever walked into a room for the first time and suddenly felt that you had been there before? This feeling is called déjà vu, a French expression meaning 'already seen.' Surveys suggest that about two-thirds of people experience it at least once in ( A ) lives, and it seems to be most common among young adults.",
+      "For a long time, déjà vu was linked to mysterious ideas, such as memories from a past life. Scientists, however, have offered more ordinary explanations. One theory is that the brain sometimes sends a feeling of familiarity ( B ) the actual memory is not found. In other words, we feel that something is familiar without being able to say why.",
+      "Researchers have even tried to create déjà vu in the laboratory. In one type of experiment, people were shown pictures of places whose layout was similar to that of places they had seen earlier but had forgotten. Many of them reported a sense of familiarity they could not explain, which suggests that a forgotten but similar experience may be the source of the feeling.",
+      "Interestingly, déjà vu is usually not a sign of any problem. Some scientists think it may even show that the brain is checking its memories carefully, noticing that the feeling of familiarity does not match ( C ) it actually knows. Seen in this way, déjà vu is not a mistake but a small window into how memory works.",
+    ],
+    ja: [
+      'はじめて部屋に入ったのに、前にもそこにいたことがあるとふいに感じたことはないだろうか。この感覚は「デジャヴ」とよばれ、「すでに見た」という意味のフランス語の表現である。調査によると、およそ3人に2人が人生で少なくとも1度はこれを経験し、若い大人にもっとも多いようだ。',
+      '長いあいだ、デジャヴは前世の記憶のような神秘的な考えと結びつけられていた。しかし科学者たちは、もっとふつうの説明を示してきた。1つの説は、実際の記憶が見つからないのに、脳がときどき「なじみがある」という感覚を送ってしまうというものだ。言いかえれば、私たちは、なぜかを言えないまま何かをなじみ深いと感じるのである。',
+      '研究者たちは、実験室でデジャヴを作り出そうとさえしてきた。ある種の実験では、人々は、以前見たが忘れてしまった場所と配置が似ている場所の絵を見せられた。その多くが、説明できないなじみの感覚を報告した。このことは、忘れてしまったが似ている経験がその感覚のもとかもしれないことを示している。',
+      '興味深いことに、デジャヴはふつう何かの問題のしるしではない。それは脳が記憶をていねいに点検し、なじみの感覚が実際に知っていることと合わないことに気づいているしるしでさえあるかもしれない、と考える科学者もいる。このように見ると、デジャヴはまちがいではなく、記憶のしくみをのぞく小さな窓なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['their', 'they', 'them', 'theirs'], answer: 0, why: '名詞 lives の前には所有格 their「（その人たちの）人生で」。' },
+      { id: 'B', choices: ['even though', 'despite', 'in spite of', 'regardless of'], answer: 0, why: 'うしろが文（the actual memory is not found）なので接続詞 even though「～なのに」。ほかは前置詞の働きでうしろに文を続けられない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'it'], answer: 0, why: 'match の目的語で、knows の目的語が欠けたかたまり「（脳が）実際に知っていること」を作る関係代名詞 what。that・which は先行詞が必要で、it では文がつながらない。' },
+    ],
+    tf: [
+      { statement: '調査によれば、およそ3人に2人がデジャヴを経験する。', answer: true, why: '第1段落 about two-thirds of people experience it at least once。' },
+      { statement: '科学者たちは、デジャヴは前世の記憶だと考えている。', answer: false, why: '第2段落 Scientists, however, have offered more ordinary explanations。' },
+      { statement: '筆者によれば、デジャヴはふつう何かの問題のしるしである。', answer: false, why: '第4段落 déjà vu is usually not a sign of any problem。' },
+    ],
+    qa: [
+      { q: 'What did the laboratory experiments suggest about déjà vu?', choices: ['A forgotten but similar experience may cause it.', 'It happens only to older people.', 'It is caused by memories from a past life.', 'It cannot be studied scientifically.'], answer: 0, why: '第3段落 a forgotten but similar experience may be the source of the feeling。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
