@@ -6,7 +6,7 @@ describe('単語帳の選択', () => {
   beforeEach(() => localStorage.clear())
 
   it('初期値はビジネス（社会人向け）と英検2級より上をのぞく全レベル', () => {
-    expect(loadLevels()).toEqual(LEVELS.filter((l) => !['ビジネス', '英検2級', '英検準1級', '英検1級'].includes(l)))
+    expect(loadLevels()).toEqual(LEVELS.filter((l) => !['ビジネス', '英検2級', '英検準1級', '英検1級', 'ネイティブ'].includes(l)))
   })
 
   it('切り替えはレベル順を保ち、最後の1つは外せない', () => {

@@ -5,7 +5,7 @@ import type { Level } from './words'
 export type BossGroup = 'jh' | 'hs' | 'basic'
 export const BOSS_GROUPS: { id: BossGroup; label: string; levels: Level[] }[] = [
   { id: 'jh', label: '🏫 中学', levels: ['中1', '中2', '中3'] },
-  { id: 'hs', label: '🎓 高校・大人', levels: ['高校基礎', '熟語', '英検2級', '英検準1級', '英検1級', 'ビジネス'] },
+  { id: 'hs', label: '🎓 高校・大人', levels: ['高校基礎', '熟語', '英検2級', '英検準1級', '英検1級', 'ネイティブ', 'ビジネス'] },
   { id: 'basic', label: '🌱 きほん', levels: ['曜日・月', '数', '色・形', '会話', 'テーマ別'] },
 ]
 

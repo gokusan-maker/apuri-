@@ -14,7 +14,7 @@ export const COURSES: Course[] = [
   { id: 'eiken1', label: '英検1級', sub: '最上級', levels: ['英検1級'] },
   { id: 'v2000', label: '2000語', sub: '中学の全単語', levels: ['中1', '中2', '中3'] },
   { id: 'v3000', label: '3000語', sub: '＋高校基礎・熟語', levels: ['中1', '中2', '中3', '高校基礎', '熟語'] },
-  { id: 'native', label: 'ネイティブ', sub: '口語・句動詞', levels: [] },
+  { id: 'native', label: 'ネイティブ', sub: '口語・句動詞', levels: ['ネイティブ'] },
 ]
 
 export const courseReady = (c: Course) => c.levels.length > 0
