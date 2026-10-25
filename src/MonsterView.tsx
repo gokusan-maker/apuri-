@@ -1103,10 +1103,16 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
   )
 }
 
+const PARTY_PAGE = 24
+
 export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, warmLeft = 0, onTradeMembers, ticketsFull = false }: { party: PartyState; onSelect: (i: number) => void; onRename?: (i: number, name: string) => void; onFav?: (i: number) => void; onRelease?: (i: number) => void; onWarm?: (i: number) => void; warmLeft?: number; onTradeMembers?: () => void; ticketsFull?: boolean }) {
   const [editing, setEditing] = useState<number | null>(null)
   const [draft, setDraft] = useState('')
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
+  const [limit, setLimit] = useState(PARTY_PAGE) // 仲間は500体まで。はじめは24体だけ見せて「もっと見る」
+  const order = displayOrder(party)
+  // 相棒は、はじめの24体に入っていなくても必ず見せる
+  const shown = order.slice(0, limit).includes(party.active) ? order.slice(0, limit) : [party.active, ...order.slice(0, limit - 1)]
   return (
     <div className="party">
       <h2>
@@ -1136,7 +1142,7 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
       )}
 
       <ul className="badge-grid">
-        {displayOrder(party).map((i) => {
+        {shown.map((i) => {
           const m = party.members[i]
           const f = formOf(m)
           const active = i === party.active
@@ -1218,6 +1224,11 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
           </li>
         )}
       </ul>
+      {order.length > limit && (
+        <button className="list-link pill-btn pill-blue party-more" onClick={() => setLimit(limit + PARTY_PAGE)}>
+          もっと見る（あと{order.length - limit}体）
+        </button>
+      )}
     </div>
   )
 }

@@ -2834,3 +2834,4 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
   :root:not([data-theme='light']) .weak-remove { background: #500724; box-shadow: 0 2px 0 #831843; }
 }
 :root[data-theme='dark'] .weak-remove { background: #500724; box-shadow: 0 2px 0 #831843; }
+.party-more { display: flex; margin: 10px auto 0; }
