@@ -2093,3 +2093,4 @@
 - 2026-10-25: 国公立・旧帝大・京大・東大の単語を71語追加（milestone・rationale・repertoire・sovereignty など）で4レベルとも300語に
 - 2026-10-25: TOEICの単語を12語追加（mortgage・shareholder・subscription・vacancy など）で300語に
 - 2026-10-25: ネイティブの会話表現を45語追加（no worries・I'm down・I owe you one・fingers crossed・laid-back など）
+- 2026-10-25: ネイティブの会話表現を40語追加（you made my day・keep me posted・night owl・pain in the neck など）。上位レベルの単語がすべて300語以上に
