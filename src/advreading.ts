@@ -2442,6 +2442,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What will every volunteer receive?', choices: ['A free one-year museum pass.', 'Lunch every day for a year.', 'A science textbook.', 'Money for transportation.'], answer: 0, why: '第3段落 every volunteer will receive a free one-year museum pass。' },
     ],
   },
+  {
+    id: 'adv-false-news',
+    title: 'Why False Stories Travel Fast',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A false story can travel around the world while the truth is still putting on its shoes, as an old saying goes. Studies of social media suggest that the saying contains more than a grain of truth. One large study found that false news spread farther and faster than true news, and that this was ( A ) because of automated accounts than because of ordinary people sharing it.",
+      "Why should this be so? One explanation is novelty. False stories are often surprising, and surprising information feels worth passing on. Another is emotion: stories that make us angry or afraid are shared more readily than calm, accurate reports. We also tend to believe information ( B ) fits what we already think, a habit known as confirmation bias.",
+      "Correcting false stories is harder than it seems. Simply repeating a false claim in order to deny it can make it more familiar, and familiar statements feel truer. Some researchers therefore recommend ( C ) with the accurate information rather than the myth, and then explaining why the false version is wrong. Others argue that the best defense is to encourage people to pause for a moment before sharing anything, since even a brief pause makes us more likely to notice ( D ) a headline sounds doubtful.",
+    ],
+    ja: [
+      '古いことわざにあるように、うその話は、真実がまだ靴をはいているあいだに世界を一周してしまう。ソーシャルメディアの研究は、このことわざにかなりの真実がふくまれていることを示している。ある大規模な研究によると、うそのニュースは本当のニュースより遠く、速く広まり、それは自動アカウントのせいというよりも、ふつうの人々が共有したせいだった。',
+      'なぜそうなるのだろうか。1つの説明は目新しさである。うその話はおどろくような内容であることが多く、おどろくような情報は人に伝える価値があるように感じられる。もう1つは感情だ。私たちを怒らせたりこわがらせたりする話は、落ち着いた正確な報道よりも気軽に共有される。また私たちには、すでに考えていることに合う情報を信じやすい傾向があり、これは確証バイアスとして知られている。',
+      'うその話を正すのは、思うよりむずかしい。うその主張を否定するためにそれをくり返すだけで、その主張がなじみ深くなってしまうことがあり、なじみのある言葉は本当らしく感じられる。そのため、うわさではなく正確な情報から話しはじめ、そのあとでうその内容がなぜまちがっているかを説明することをすすめる研究者もいる。何かを共有する前に少し立ち止まるよう人々にうながすのが最善の防御だと主張する人もいる。ほんの短い間でも立ち止まると、見出しがあやしく聞こえるときに気づきやすくなるからだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['less', 'fewer', 'least', 'little'], answer: 0, why: 'あとの than と組む比較級。less A than B で「B ほど A ではない（A というより B）」。fewer は数えられる名詞にだけ使い、least・little は than と組めない。' },
+      { id: 'B', choices: ['that', 'what', 'who', 'it'], answer: 0, why: '名詞 information（物）を説明し fits の主語になる関係代名詞 that。what は先行詞をとらず、who は人だけ。' },
+      { id: 'C', choices: ['starting', 'to start', 'start', 'started'], answer: 0, why: 'recommend は（人を入れないとき）動名詞を目的語にとる。recommend starting で「始めることをすすめる」。' },
+      { id: 'D', choices: ['when', 'what', 'that which', 'during'], answer: 0, why: 'うしろが完全な文（a headline sounds doubtful）なので、notice の目的語になる when 節。what のうしろには欠けた部分が必要で、during のうしろは名詞。' },
+    ],
+    tf: [
+      { statement: 'ある研究によると、うその情報が広まったのは主に自動アカウントのせいだった。', answer: false, why: '第1段落 less because of automated accounts than because of ordinary people sharing it。' },
+      { statement: '人は、すでに考えていることに合う情報を信じやすい。', answer: true, why: '第2段落 We also tend to believe information that fits what we already think。' },
+      { statement: 'うその主張を否定するためにくり返すと、かえってその主張が本当らしく感じられることがある。', answer: true, why: '第3段落 repeating a false claim … can make it more familiar, and familiar statements feel truer。' },
+    ],
+    qa: [
+      { q: 'What do some researchers recommend when correcting false stories?', choices: ['Starting with the accurate information rather than the myth.', 'Repeating the false claim many times.', 'Stopping the use of social media completely.', 'Sharing stories faster than other people.'], answer: 0, why: '第3段落 recommend starting with the accurate information rather than the myth。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
