@@ -3325,6 +3325,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-overconfidence',
+    title: 'Knowing What We Do Not Know',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us believe that we are better than average at many things, from driving a car to judging other people's character. Of course, this cannot be true for everyone. ( A ) is more surprising is that, according to a well-known line of research, the people who perform worst on a task are often the ones who overestimate their ability the most.",
+      "The explanation offered by the researchers is simple but uncomfortable. The skills that are needed to do something well are often the same skills that are needed to recognize what doing it well looks like. A person who does not understand the rules of grammar, for example, may not notice the mistakes in his or her own writing, and therefore has no reason to doubt it. In other words, a lack of knowledge can hide ( B ).",
+      "Later studies have shown that the effect is not as large as early reports suggested, and that experts, too, can misjudge themselves, often by underestimating how difficult a task is for others. Nevertheless, the basic point remains useful. Confidence is not a reliable sign of competence, either in ourselves or in the people we choose to listen to.",
+      "What, then, can we do? One practical answer is to seek feedback regularly and to treat it as information rather than as a personal attack. Another is to cultivate the habit of asking, 'How would I know ( C ) I were wrong?' Learning to live with this question may be one of the most valuable results of a good education.",
+    ],
+    ja: [
+      '私たちのほとんどは、車の運転から他人の性格を見ぬくことまで、多くのことで自分は平均より上だと信じている。もちろん、これが全員にあてはまるはずはない。もっとおどろくべきなのは、よく知られた一連の研究によれば、ある課題でもっとも成績の悪い人々が、しばしば自分の能力をもっとも過大評価する人々だということである。',
+      '研究者たちが示す説明は、単純だが居心地の悪いものである。何かをうまくやるのに必要な技能は、うまくやるとはどういうことかを見分けるのに必要な技能と同じであることが多い。たとえば文法の規則を理解していない人は、自分の書いた文の誤りに気づかないかもしれず、それゆえそれを疑う理由がない。言いかえれば、知識の不足はそれ自体を隠してしまうことがあるのだ。',
+      'その後の研究では、この効果は初期の報告が示したほど大きくはないこと、そして専門家もまた、多くの場合ある課題がほかの人にとってどれほどむずかしいかを低く見積もることで、自分を見誤りうることがわかっている。それでも、基本的な論点は役に立つ。自信は、自分自身においても、私たちが耳をかたむけるとえらぶ人々においても、能力の信頼できるしるしではないのである。',
+      'では、私たちに何ができるのか。1つの実際的な答えは、定期的に意見を求め、それを個人への攻撃ではなく情報としてあつかうことだ。もう1つは、「もし自分がまちがっていたら、どうすればそれがわかるだろうか」と問う習慣を身につけることである。この問いとともに生きることを学ぶのは、よい教育がもたらすもっとも価値ある成果の1つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['What', 'That', 'Which', 'It'], answer: 0, why: '「もっとおどろくべきこと」と主語のかたまりを作る関係代名詞 What（What is more surprising is that …）。That・Which は先行詞が必要で、It では is が2つ並んでしまう。' },
+      { id: 'B', choices: ['itself', 'its', "it's", 'itselves'], answer: 0, why: '主語 a lack of knowledge 自身を目的語にするので再帰代名詞 itself「知識の不足はそれ自体を隠す」。its は所有格で目的語になれず、it\'s は it is の短縮形、itselves という形はない。' },
+      { id: 'C', choices: ['if', 'that', 'what', 'whom'], answer: 0, why: 'How would I know if I were wrong? で「もし自分がまちがっていたら、どうしてそれがわかるだろうか」。仮定法の if。that のうしろに仮定法の were は使えず、what・whom のうしろには欠けた部分のある文が必要。' },
+    ],
+    tf: [
+      { statement: '一連の研究によれば、成績のもっとも悪い人が能力をもっとも過大評価することが多い。', answer: true, why: '第1段落 the people who perform worst … overestimate their ability the most。' },
+      { statement: 'その後の研究では、この効果は初期の報告よりも大きいことがわかった。', answer: false, why: '第3段落 the effect is not as large as early reports suggested。' },
+      { statement: '筆者によれば、自信は能力の信頼できるしるしである。', answer: false, why: '第3段落 Confidence is not a reliable sign of competence。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why might a person with poor grammar not doubt his or her writing?', choices: ['He or she cannot notice the mistakes in it.', 'He or she has already received feedback.', 'He or she is an expert writer.', 'He or she writes very slowly.'], answer: 0, why: '第2段落 may not notice the mistakes in his or her own writing, and therefore has no reason to doubt it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

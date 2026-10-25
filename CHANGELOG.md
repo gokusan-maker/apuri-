@@ -2031,3 +2031,4 @@
 - 2026-10-25: TOEICレベルの専用長文「Notice: Grand Opening of Peak Fitness」（ジムの開業広告・191語）を追加
 - 2026-10-25: 私学難関レベルの長文「Living in a Right-Handed World」（左きき・237語）を追加
 - 2026-10-25: 国公立レベルの長文「Changing the Clocks」（サマータイム・248語）を追加
+- 2026-10-25: 旧帝大レベルの長文「Knowing What We Do Not Know」（自信と能力・260語）を追加
