@@ -13,7 +13,7 @@ export const READ_THEMES: ReadTheme[] = [
       { en: 'Walking along the beach, we found a small crab.', ja: '浜辺を歩いていると、私たちは小さなカニを見つけた。' },
       { en: 'Seen from the hill, the town looked tiny.', ja: '丘から見ると、町はとても小さく見えた。' },
     ],
-    re: /^(Having [a-z]+|(?!According|During|Nothing|Something|Everything|Morning|Evening|Spring|Swimming|Reading|Writing|Speaking)[A-Z][a-z]+ing\b[^,.]{3,60},|(Seen|Built|Written|Made|Surrounded|Given|Left|Compared|Faced|Born|Found|Used|Shocked|Encouraged|Inspired|Asked) [^,.]{2,60},)/,
+    re: /^(Having [a-z]+ed|(?!During|According|Nothing|Something|Everything|Anything|Morning|Evening|Spring|Building|Ceiling|Thing)[A-Z][a-z]+ing|Seen|Built|Written|Made|Surrounded|Given|Left|Compared|Faced|Born|Found|Used|Shocked|Encouraged|Inspired|Asked|Located|Viewed|Taken)\b[^,.;]{2,60}, (however, |then, )?(the|a|an|I|we|he|she|they|it|you|his|her|their|our|my|this|these|those|many|most|some|people|scientists|researchers|[A-Z][a-z]+)\b(?! seems| turns out)/,
   },
   {
     id: 'cleft',
@@ -23,7 +23,7 @@ export const READ_THEMES: ReadTheme[] = [
       { en: 'It was my grandmother who taught me to cook.', ja: '私に料理を教えてくれたのは祖母だった。' },
       { en: 'It is not money but time that we need most.', ja: '私たちがいちばん必要としているのは、お金ではなく時間だ。' },
     ],
-    re: /\bIt (is|was) (not until|only|not|in |because|this|these|the |his |her |their |our |my |what )[^.]{0,50}\b(that|who) /,
+    re: /\bIt (is|was) (not until|only|not|in |on |at |because|during )[^.]{0,60}\b(that|who) /,
   },
   {
     id: 'pseudo-cleft',
@@ -43,7 +43,7 @@ export const READ_THEMES: ReadTheme[] = [
       { en: 'Never have I seen such a beautiful sky.', ja: 'こんなに美しい空は見たことがない。' },
       { en: 'Only when it rained did the farmers relax.', ja: '雨が降ってはじめて、農家の人たちはほっとした。' },
     ],
-    re: /^(Never|Rarely|Seldom|Little|Not only|Not until|Only (when|after|by|then|in)|Hardly|Scarcely|No sooner|So [a-z]+ (was|were|did|is|has))\b/,
+    re: /^(Never|Rarely|Seldom|Hardly|Scarcely|No sooner|Little|Not only|Not until [^,]{1,60}|Only (in|when|after|by|then|at|through|once|recently|later)\b[^,]{0,60}?) (did|do|does|have|has|had|is|are|was|were|can|could|would|will)\b/,
   },
   {
     id: 'subjunctive',
@@ -53,7 +53,7 @@ export const READ_THEMES: ReadTheme[] = [
       { en: 'If I had more time, I would learn the piano.', ja: 'もっと時間があれば、ピアノを習うのに。' },
       { en: 'If she had left earlier, she would have caught the train.', ja: 'もっと早く出ていたら、彼女は電車に間に合っていただろう。' },
     ],
-    re: /\b(If [^.]{0,60}\b(would|could|might)( have)?\b|were to\b|I wish\b|as if\b|as though\b)/,
+    re: /\b(If [^.,]{0,60}\b(were|had|could|did|[a-z]+ed|went|knew|sank|fell|came|took|ran)\b[^.]{0,60}\b(would|could|might)\b(?! like)|I wish\b|as if\b|as though\b|were to\b)/,
   },
   {
     id: 'what',
