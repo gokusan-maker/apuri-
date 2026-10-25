@@ -2757,6 +2757,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-zebra-stripes',
+    title: 'Why Zebras Wear Stripes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few animals are as easy to recognize as the zebra, yet scientists have argued for more than a century about why it is striped. Early explanations suggested that the stripes help zebras hide in tall grass or confuse lions ( A ) a herd runs away. Others proposed that the pattern helps the animals stay cool under the hot African sun.",
+      "In recent years, however, much of the evidence has pointed in an unexpected direction: insects. In one study, researchers in Britain watched horseflies around horses and zebras kept on the same farm. The flies approached both kinds of animals, but they rarely managed to land on the zebras, often flying straight past them or bumping into them. When some horses were dressed in striped coats, they too were landed on far less often.",
+      "Why stripes should confuse flies is not yet fully understood. One idea is that the pattern makes it hard for an insect to judge its speed as it comes close, ( B ) it fails to slow down in time. Because biting flies in Africa can carry serious diseases, avoiding them may be worth the cost of being easy to see. The case of the zebra shows how a feature that seems obvious can hide a surprising answer, one ( C ) could only be found through careful experiments.",
+    ],
+    ja: [
+      'シマウマほど見分けやすい動物はほとんどいないが、なぜしまもようなのかについて、科学者たちは100年以上も議論してきた。初期の説明では、しまは背の高い草の中でシマウマがかくれるのを助けたり、群れがにげるときにライオンをまどわせたりするとされた。また、この模様がアフリカの暑い日ざしの下で体を涼しくたもつのに役立つと考える人もいた。',
+      'しかし近年、多くの証拠は思いがけない方向を指している。それは昆虫である。ある研究で、イギリスの研究者たちは、同じ農場で飼われている馬とシマウマのまわりのアブを観察した。アブはどちらの動物にも近づいたが、シマウマにはなかなかとまれず、そのまま通りすぎたり、ぶつかったりすることが多かった。何頭かの馬にしまもようのコートを着せると、その馬もアブにとまられることがずっと少なくなった。',
+      'なぜしまもようがハエやアブをまどわせるのかは、まだ十分にはわかっていない。1つの考えは、この模様のせいで虫が近づくときに自分の速さを判断しにくくなり、そのため間に合うように速度を落とせないというものだ。アフリカの血を吸うアブは重い病気を運ぶことがあるので、それをさけることは、目立ちやすいという代償に見合うのかもしれない。シマウマの例は、わかりきっているように見える特徴が、注意深い実験によってしか見つけられない、おどろくような答えをかくしていることがあると示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'what', 'which', 'during'], answer: 0, why: '「群れがにげるときに」と文（a herd runs away）をつなぐ接続詞 when。during は前置詞なのでうしろに文を置けず、what・which ではつながらない。' },
+      { id: 'B', choices: ['so', 'because of', 'despite', 'due to'], answer: 0, why: 'うしろに文（it fails to slow down）が続き「そのため～」と結果を表すので接続詞 so。because of・despite・due to は前置詞なので、文を続けられない。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'whose'], answer: 0, why: 'one（＝an answer）を説明し、could be found の主語になる関係代名詞 that。what は先行詞をとらず、who は人に使い、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: 'シマウマのしまの理由については、100年以上議論されてきた。', answer: true, why: '第1段落 scientists have argued for more than a century about why it is striped。' },
+      { statement: '研究では、アブはシマウマにまったく近づかなかった。', answer: false, why: '第2段落 The flies approached both kinds of animals。' },
+      { statement: 'しまもようのコートを着せた馬は、アブにとまられることが少なくなった。', answer: true, why: '第2段落 When some horses were dressed in striped coats, they too were landed on far less often。' },
+    ],
+    qa: [
+      { q: 'According to one idea, how might stripes protect zebras from flies?', choices: ['They make it hard for flies to judge their speed when coming close.', 'They keep the zebras cool so that flies are not attracted.', 'They help zebras hide from flies in tall grass.', 'They make the zebras smell unpleasant to insects.'], answer: 0, why: '第3段落 the pattern makes it hard for an insect to judge its speed as it comes close。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

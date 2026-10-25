@@ -1160,7 +1160,7 @@ describe('App', () => {
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
     expect(screen.queryByRole('heading', { name: /難関大の読解/ })).toBeNull() // 城の上の説明は出さない
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
-    expect(screen.getByRole('option', { name: /^難関大/ }).textContent).toMatch(/0\/76本/)
+    expect(screen.getByRole('option', { name: /^難関大/ }).textContent).toMatch(/0\/77本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     expect(within(screen.getByLabelText('読解ゲーム')).getByRole('button', { name: /おすすめ/ })).toBeInTheDocument() // そのレベルの中から日がわり（読解ゲームのタイル）
