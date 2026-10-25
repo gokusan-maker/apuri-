@@ -2754,3 +2754,12 @@ section.grammar-result > .flip { background: linear-gradient(135deg, #22d3ee, #6
 .word-review > .list-link::after { content: '›'; display: inline-grid; place-items: center; flex: none; width: 1.25em; height: 1.25em; margin-left: auto; border-radius: 50%; background: rgb(255 255 255 / 0.25); color: #fff; font-weight: 900; }
 .word-review > .list-link .fold-meta + ::after { margin-left: 6px; }
 .word-review > .list-link .fold-meta { margin-left: auto; margin-right: 6px; }
+
+/* 単語ステージ：単語帳ごとにタイルの色をかえる（ボス部屋と同じく見分けやすく） */
+.stage-levels > .stage-level { --st-h: 239; }
+.stage-levels > .stage-level:nth-child(6n + 2) { --st-h: 160; }
+.stage-levels > .stage-level:nth-child(6n + 3) { --st-h: 25; }
+.stage-levels > .stage-level:nth-child(6n + 4) { --st-h: 330; }
+.stage-levels > .stage-level:nth-child(6n + 5) { --st-h: 195; }
+.stage-levels > .stage-level:nth-child(6n + 6) { --st-h: 275; }
+.stage-levels > .stage-level .stage-btn:not(:disabled):not(.cleared) { border-color: hsl(var(--st-h) 80% 85%); background: linear-gradient(160deg, hsl(var(--st-h) 80% 66%), hsl(var(--st-h) 70% 48%)); box-shadow: 0 4px 0 hsl(var(--st-h) 60% 30%), 0 0 0 4px hsl(var(--st-h) 80% 66% / 0.25); }

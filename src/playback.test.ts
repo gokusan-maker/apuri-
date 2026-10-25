@@ -125,3 +125,7 @@ it('ミニゲームの「はじめる」は ▶ が1つだけ（CSS で付ける
   expect(readFileSync('src/QuizView.tsx', 'utf8')).not.toContain('▶ {now.label} をはじめる')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.word-review > \.list-link::after \{ content: '›'/)
 })
+
+it('単語ステージのタイルは単語帳ごとに色がちがう', () => {
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.stage-levels > \.stage-level \.stage-btn:not\(:disabled\):not\(\.cleared\) \{[^}]*hsl\(var\(--st-h\)/)
+})
