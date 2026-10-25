@@ -1953,3 +1953,20 @@ describe('レア度つきチケット', () => {
     expect(w.srTickets ?? 0).toBe(0)
   })
 })
+
+describe('レア保証', () => {
+  it('ノーマルが4回つづくと、5回目のガチャはレア以上確定', () => {
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 999, owned: [] }))
+    localStorage.setItem('eitan:gacha-free-day', '2099-01-01')
+    localStorage.setItem('eitan:gacha-step', JSON.stringify({ day: '2000-01-01', count: 0 }))
+    const rnd = vi.spyOn(Math, 'random').mockReturnValue(0.3) // ふつうが出る値
+    render(<App />)
+    fireEvent.click(screen.getByLabelText(/ショップを開く/))
+    localStorage.setItem('eitan:gacha-n-streak', '4')
+    fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+    rnd.mockRestore()
+    const p = JSON.parse(localStorage.getItem('eitan:party')!)
+    expect(p.members[p.members.length - 1].kind).toBeDefined()
+    expect(localStorage.getItem('eitan:gacha-n-streak')).toBe('0')
+  })
+})

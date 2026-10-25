@@ -5,6 +5,7 @@ import { speak } from './speech'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
+import { loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -199,6 +200,10 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           🎟 チケットで引く ×{tickets}
         </button>
       )}
+      {/* レア保証：ノーマルが4回つづいたら5回目はレア以上 */}
+      <p className="gacha-rare-due">
+        {RARE_EVERY - 1 - loadNStreak() === 0 ? '🌈 次の1回はレア以上確定！' : `🌈 あと${RARE_EVERY - 1 - loadNStreak()}回でレア以上確定（ノーマルがつづいたら）`}
+      </p>
       {stepLeft === 0 && (
         <p className="buddy-chips gacha-chips">
           <span className="gacha-step-chip sure">🔥 ステップアップ！ 次の1回はレア以上確定！</span>

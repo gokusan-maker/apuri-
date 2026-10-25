@@ -122,6 +122,27 @@ export const todaySteps = (s: GachaStep, today: string) => (s.day === today ? s.
 export const stepLeft = (s: GachaStep, today: string) => STEP_EVERY - 1 - (todaySteps(s, today) % STEP_EVERY)
 export const nextStep = (s: GachaStep, today: string): GachaStep => ({ day: today, count: todaySteps(s, today) + 1 })
 
+// レア保証（オーナーの要望）：ノーマルが4回つづいたら、5回目はレア以上確定（日をまたいでも数える）
+export const RARE_EVERY = 5
+const NSTREAK_KEY = 'eitan:gacha-n-streak'
+export function loadNStreak(): number {
+  try {
+    const v = Number(localStorage.getItem(NSTREAK_KEY) ?? '0')
+    return Number.isFinite(v) && v > 0 ? Math.min(Math.floor(v), RARE_EVERY - 1) : 0
+  } catch {
+    return 0
+  }
+}
+export function saveNStreak(n: number): void {
+  try {
+    localStorage.setItem(NSTREAK_KEY, String(n))
+  } catch {
+    // 保存できなくても続ける
+  }
+}
+// 次の1回がレア以上確定か（ノーマルが RARE_EVERY-1 回つづいたとき）
+export const rareDue = (nStreak: number) => nStreak >= RARE_EVERY - 1
+
 // おまけカプセル：5回に1回くらい、🪙10 か おやつ（XP+20）がおまけでつく
 export const BONUS_RATE = 0.2
 export type GachaBonus = { kind: 'coins' | 'xp'; amount: number; text: string }

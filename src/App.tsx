@@ -84,7 +84,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
-import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
+import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY } from './gacha'
 import {
   feed,
   FORMS,
@@ -900,15 +900,17 @@ function App() {
     let w = start
     let p = party
     let st = gachaStep
+    let ns = loadNStreak() // ノーマルがつづいた回数（5回目はレア以上）
     const out: GachaResult[] = []
     let bonusXp = 0
     const pulled = loadGachaStats().total
     let sb = stickers
     let stickerDone = false
     for (let i = 0; i < n; i++) {
-      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, rareForce || stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
+      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, rareForce || rareDue(ns) || stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
       if (!r) break
       st = nextStep(st, today)
+      ns = r.kind.rarity === 'N' ? Math.min(ns + 1, RARE_EVERY - 1) : 0
       const dup = isDuplicate(p.members, r.species.id, r.kind.id)
       const newSpecies = r.species.id !== 'mochi' && !p.members.some((m) => m.species === r.species.id)
       const newKind = r.kind.id !== 'normal' && !p.members.some((m) => m.kind === r.kind.id)
@@ -929,6 +931,7 @@ function App() {
       setWallet(w)
       setParty(p)
       setGachaStep(st)
+      saveNStreak(ns)
       saveGachaStats(addStats(loadGachaStats(), out.map((k) => k.kind.rarity)))
       setGachaPoints((pt) => pt + out.length)
       setStickers(sb)

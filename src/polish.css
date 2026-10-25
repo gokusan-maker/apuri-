@@ -2948,3 +2948,6 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 }
 :root[data-theme='dark'] .boss-atk-msg { background: #450a0a; color: #fecaca; }
 @media (prefers-reduced-motion: reduce) { .boss-figure.attack, .boss.hurt, .boss-atk-fx, .boss-atk-fx .slash { animation: none; } .boss-atk-fx { display: none; } }
+.gacha-rare-due { margin: 6px 0; padding: 4px 12px; border-radius: 999px; background: linear-gradient(90deg, #ede9fe, #fce7f3); color: #6d28d9; font-size: 0.8rem; font-weight: 900; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .gacha-rare-due { background: linear-gradient(90deg, #2e1065, #500724); color: #ddd6fe; } }
+:root[data-theme='dark'] .gacha-rare-due { background: linear-gradient(90deg, #2e1065, #500724); color: #ddd6fe; }
