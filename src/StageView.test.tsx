@@ -387,3 +387,9 @@ it('15レベルのボスを全部たおすと称号が出て、ごほうびの�
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onCastleReward={(n) => (got += n)} />)
   expect(screen.queryByRole('button', { name: /全レベルのボス制覇のごほうび/ })).toBeNull()
 })
+
+it('レベルのボスをはじめてたおすと、負けおしみのひとこと（次のレベルの予告つき）', async () => {
+  const { bossFarewell } = await import('./bosscastle')
+  expect(bossFarewell('ドラゴン', '京大')).toContain('京大の力、みとめてやる')
+  expect(bossFarewell('ドラゴン', '京大')).toContain('次のレベル')
+})

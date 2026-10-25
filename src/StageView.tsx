@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -109,6 +109,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
+  const [farewell, setFarewell] = useState<string | null>(null) // はじめてたおしたボスの負けおしみ（城にもどったら見せる）
   const [allClaimed, setAllClaimed] = useState(loadAllBossClaimed) // 全ボス制覇のごほうびをもらった
   const [bossLv, setBossLv] = useState<CourseId>(() => loadBossLevel(loadCourse(levels))) // えらんでいるボスのレベル（レベルごとに城とボス）
 
@@ -415,6 +416,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onSpend={onSpend}
         onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
+          if (first) setFarewell(bossFarewell(BOSSES[LEVEL_BOSS_LOOK[lvFight]].name, c.label))
           const next = { ...lboss, [lvFight]: dayKey() }
           setLboss(next)
           saveLevelBoss(next)
@@ -633,6 +635,11 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor) })
           }}
         />
+        {farewell && (
+          <p className="bfloor-taunt" role="status">
+            {farewell}
+          </p>
+        )}
         {lboss[bossLv] && COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1] && (
           <button
             className="good next-unit-btn boss-next-lv"

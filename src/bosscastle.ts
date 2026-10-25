@@ -129,3 +129,6 @@ export function saveAllBossClaimed(): void {
     /* 保存できなくても動く */
   }
 }
+
+// レベルのボスをはじめてたおしたときの、ボスの負けおしみのひとこと
+export const bossFarewell = (name: string, level: string) => `👹 ${name}「くっ…${level}の力、みとめてやる。だが次のレベルのボスは、もっと手ごわいぞ…！」`
