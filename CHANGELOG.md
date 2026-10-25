@@ -2059,3 +2059,4 @@
 - 2026-10-25: 文法の城の階をクリアすると、その階の単元の「よくあるまちがい」（✕と○と理由）を1つ見せるように
 - 2026-10-25: TOEICレベルの専用長文「An Email About an Interview Schedule」（面接日程の変更メール・191語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「Should School Start Later?」（始業時間をおそくする・201語）を追加
+- 2026-10-25: 私学難関の単語を15語、京大・東大の単語を20語追加（brisk・soothe・austere・quaint・blatant・stringent など）
