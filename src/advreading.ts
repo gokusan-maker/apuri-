@@ -3589,6 +3589,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['whether', 'that if', 'what', 'unless'], answer: 0, why: 'debate の目的語になる「～かどうか」の whether。what のうしろは欠けた文になり、that if の形はなく、unless は目的語になれない。' },
       { id: 'C', choices: ['to', 'for', 'of', 'that'], answer: 0, why: 'reason enough to ～ で「～するのに十分な理由」。うしろが動詞の原形 encourage なので to 不定詞の to。' },
     ],
+    underline: {
+      phrase: 'fall behind',
+      choices: ['make slower progress than', 'sit behind', 'fall down in front of', 'become more popular than'],
+      answer: 0,
+      why: 'fall behind ～ は「～に遅れをとる」。2つの言語のどちらでもクラスメートより進み方が遅くなる、という意味。',
+    },
+    order: {
+      words: ['turn', 'out', 'to', 'be', 'remarkably', 'good', 'at', 'keeping', 'two', 'languages', 'apart'],
+      rest: '',
+      answer: 'turn out to be remarkably good at keeping two languages apart',
+      ja: '（幼い子どもは）2つの言語を区別しておくのがおどろくほど得意だとわかる。（turn out to be ～＝～だとわかる）',
+    },
     tf: [
       { statement: 'かつては、2つの言語で子どもを育てると混乱すると信じられていた。', answer: true, why: '第1段落 many parents and teachers believed that raising a child with two languages would cause confusion。' },
       { statement: 'バイリンガルの子どもが知っている単語の総数は、ふつう1つの言語の子どもよりずっと少ない。', answer: false, why: '第2段落 the total number of words they know is usually similar。' },
@@ -3981,6 +3993,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['what', 'that', 'which', 'whom'], answer: 0, why: 'discover の目的語で、feel の目的語が欠けたかたまり「実際に感じていること」を作る関係代名詞 what。that のうしろは欠けたところのない文が必要で、which・whom は先行詞が必要（whom は人にしか使わない）。' },
       { id: 'C', choices: ['as', 'so', 'than', 'more'], answer: 0, why: 'few things teach … as effectively as ～ で「～ほど効果的に…するものはほとんどない」。as ～ as の形なので最初も as。' },
     ],
+    underline: {
+      phrase: 'in passing',
+      choices: ['briefly, without paying much attention', 'while walking past someone', 'after passing a test', 'in great detail'],
+      answer: 0,
+      why: 'mention ～ in passing は「（話の）ついでにちょっとふれる」。',
+    },
+    order: {
+      words: ['writing', 'forces', 'us', 'to', 'slow', 'down'],
+      rest: '',
+      answer: 'writing forces us to slow down',
+      ja: '書くことは私たちに速度を落とさせる。（force 人 to ～＝人に～させる・無生物主語）',
+    },
     tf: [
       { statement: '筆者は15歳のときから日記をつけている。', answer: true, why: '第1段落 When I was fifteen, I began keeping a diary。' },
       { statement: '筆者によれば、私たちはどの瞬間が将来大切になるかをうまく判断できる。', answer: false, why: '第2段落 We are poor judges of which moments will matter to our future selves。' },
@@ -4013,6 +4037,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a gap を説明し、has led の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
       { id: 'C', choices: ['taking', 'take', 'took', 'taken'], answer: 0, why: '前置詞 for のあとは動名詞。take part in ～ で「～に参加する」。' },
     ],
+    underline: {
+      phrase: 'close the gap',
+      choices: ['reduce the distance', 'shut the door', 'end the project', 'make a new gap'],
+      answer: 0,
+      why: 'close the gap between A and B は「A と B のへだたりをうめる・差を縮める」。',
+    },
+    order: {
+      words: ['they', 'count', 'birds', 'in', 'their', 'gardens'],
+      rest: '',
+      answer: 'they count birds in their gardens',
+      ja: '彼らは庭で鳥を数える。',
+    },
     tf: [
       { statement: '市民科学では、一般の人が鳥を数えたり昆虫の写真をとったりする。', answer: true, why: '第1段落 They count birds in their gardens, photograph insects。' },
       { statement: 'アマチュアが重要な発見をしたことは一度もない。', answer: false, why: '第2段落 amateurs have even made important discoveries。' },
@@ -4043,6 +4079,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['when', 'which', 'what', 'whose'], answer: 0, why: 'early in the morning or at home（時・場合）を受けて、うしろが完全な文（the office is quiet …）なので関係副詞 when「～するとき」。which・what のうしろは欠けた文、whose のうしろには名詞が必要。' },
       { id: 'C', choices: ['that', 'what', 'where', 'whom'], answer: 0, why: '先行詞 the environment を説明し、fits の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whom は人で目的語。' },
     ],
+    underline: {
+      phrase: 'Far from increasing',
+      choices: ['Instead of increasing', 'Increasing a little', 'Increasing in a faraway place', 'After increasing quickly'],
+      answer: 0,
+      why: 'far from ～ing は「～するどころか」。対面の会話は増えるどころか大きく減った、という意味。',
+    },
+    order: {
+      words: ['quick', 'questions', 'are', 'easier', 'when', 'colleagues', 'sit', 'nearby'],
+      rest: '',
+      answer: 'quick questions are easier when colleagues sit nearby',
+      ja: '（気軽な打ち合わせや）ちょっとした質問は、同僚が近くに座っているほうがしやすい。（when ＋文＝～するとき）',
+    },
     tf: [
       { statement: 'オープンなオフィスは、同じ広さにより多くの社員を入れられた。', answer: true, why: '第1段落 more workers could fit into the same space。' },
       { statement: 'ある研究では、オープンなオフィスに移ると対面の会話が増えた。', answer: false, why: '第2段落 Far from increasing, face-to-face conversation fell sharply。' },
