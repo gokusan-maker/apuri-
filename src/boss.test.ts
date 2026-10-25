@@ -180,3 +180,8 @@ it('おうえんスタンプは5種類を順番に', async () => {
   expect(cheerStampOf(5)).toBe(CHEER_STAMPS[4])
   expect(cheerStampOf(6)).toBe(CHEER_STAMPS[0])
 })
+
+it('英検2級〜ネイティブのボスは、色ちがいではなく形のちがう飾りをもつ', () => {
+  const decos = (['英検2級', '英検準1級', '英検1級', 'ネイティブ'] as const).map((l) => BOSSES[l].deco)
+  expect(decos).toEqual(['mortarboard', 'scholar', 'lastboss', 'speaker'])
+})

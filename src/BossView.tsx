@@ -59,6 +59,31 @@ type Props = {
 // 大学入試の塔のボスの飾り（体のうしろ）
 function BossDecoBack({ deco, look }: { deco: string; look: BossLook }) {
   switch (deco) {
+    case 'scholar':
+      return (
+        <g stroke="#1e1b4b" strokeWidth="1.5">
+          <rect x="4" y="52" width="16" height="22" rx="2" fill="#b45309" transform="rotate(-12 12 63)" />
+          <rect x="80" y="50" width="16" height="22" rx="2" fill="#0369a1" transform="rotate(10 88 61)" />
+          <path d="M8 56 h10 M83 54 h10" stroke="#fef3c7" />
+        </g>
+      )
+    case 'lastboss':
+      return (
+        <g fill="#1c0505" stroke="#7f1d1d" strokeWidth="2" strokeLinejoin="round">
+          <path d="M16 50 Q-6 30 2 10 Q10 26 18 22 Q12 38 24 44 Z" />
+          <path d="M84 50 Q106 30 98 10 Q90 26 82 22 Q88 38 76 44 Z" />
+          <path d="M30 28 Q18 10 26 0 Q30 16 40 22 Z M70 28 Q82 10 74 0 Q70 16 60 22 Z" fill="#e5e7eb" stroke="#57534e" />
+        </g>
+      )
+    case 'speaker':
+      return (
+        <g stroke="#0f766e" strokeWidth="1.5">
+          <path d="M2 30 h22 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-12 l-6 6 v-6 h-4 a4 4 0 0 1 -4 -4 v-10 a4 4 0 0 1 4 -4 Z" fill="#fff" />
+          <text x="13" y="43" fontSize="9" textAnchor="middle" fill="#0f766e" stroke="none" fontWeight="900">Hi!</text>
+          <path d="M76 24 h22 a4 4 0 0 1 4 4 v10 a4 4 0 0 1 -4 4 h-4 v6 l-6 -6 h-12 a4 4 0 0 1 -4 -4 v-10 a4 4 0 0 1 4 -4 Z" fill="#fde047" />
+          <text x="87" y="37" fontSize="8" textAnchor="middle" fill="#713f12" stroke="none" fontWeight="900">Yo!</text>
+        </g>
+      )
     case 'akamon':
       return <path d="M14 56 L0 30 L8 34 L4 20 L16 30 L18 22 L24 40 Z M86 56 L100 30 L92 34 L96 20 L84 30 L82 22 L76 40 Z" fill="#fca5a5" stroke={look.line} strokeWidth="2" strokeLinejoin="round" />
     case 'okuma':
@@ -75,6 +100,51 @@ function BossDecoBack({ deco, look }: { deco: string; look: BossLook }) {
 // 大学入試の塔のボスの飾り（体の上）
 function BossDecoFront({ deco, look }: { deco: string; look: BossLook }) {
   switch (deco) {
+    case 'mortarboard':
+      return (
+        <g>
+          <path d="M22 18 L50 8 L78 18 L50 28 Z" fill="#111827" stroke="#000" strokeWidth="1.5" strokeLinejoin="round" />
+          <path d="M34 22 V30 Q50 36 66 30 V22" fill="#1f2937" stroke="#000" strokeWidth="1.5" />
+          <path d="M50 18 L74 22 L76 36" fill="none" stroke="#fbbf24" strokeWidth="2" />
+          <circle cx="76" cy="38" r="3" fill="#fbbf24" />
+          <rect x="68" y="78" width="26" height="8" rx="4" fill="#fef3c7" stroke="#92400e" strokeWidth="1.5" transform="rotate(-20 81 82)" />
+          <path d="M80 77 v10" stroke="#dc2626" strokeWidth="2" transform="rotate(-20 81 82)" />
+        </g>
+      )
+    case 'scholar':
+      return (
+        <g>
+          <path d="M28 26 L50 -2 L72 26 Z" fill="#4338ca" stroke="#1e1b4b" strokeWidth="2" strokeLinejoin="round" />
+          <path d="M22 26 h56" stroke="#1e1b4b" strokeWidth="4" strokeLinecap="round" />
+          <path d="M44 8 l2 4 l4 1 l-4 1 l-2 4 l-2 -4 l-4 -1 l4 -1 Z M58 16 l1 2 l2 1 l-2 1 l-1 2 l-1 -2 l-2 -1 l2 -1 Z" fill="#fde047" />
+          <g fill="none" stroke="#fde68a" strokeWidth="2.5">
+            <circle cx="38" cy="58" r="8" />
+            <circle cx="62" cy="58" r="8" />
+            <path d="M46 58 h8" />
+          </g>
+        </g>
+      )
+    case 'lastboss':
+      return (
+        <g stroke="#450a0a" strokeWidth="2" strokeLinejoin="round">
+          <path d="M24 30 L28 4 L38 20 L44 0 L50 18 L56 0 L62 20 L72 4 L76 30 Z" fill="#111827" />
+          <path d="M26 30 h48" stroke="#fbbf24" strokeWidth="3" />
+          <path d="M50 22 l4 5 l-4 5 l-4 -5 Z" fill="#dc2626" stroke="#fbbf24" strokeWidth="1.2" />
+          <circle cx="34" cy="22" r="2" fill="#a855f7" stroke="none" />
+          <circle cx="66" cy="22" r="2" fill="#a855f7" stroke="none" />
+          <path d="M22 84 Q50 98 78 84" fill="none" stroke="#fbbf24" strokeWidth="2" opacity="0.8" />
+        </g>
+      )
+    case 'speaker':
+      return (
+        <g stroke="#042f2e" strokeWidth="2">
+          <path d="M16 54 Q16 18 50 16 Q84 18 84 54" fill="none" stroke="#111827" strokeWidth="5" />
+          <rect x="8" y="48" width="14" height="22" rx="6" fill="#f43f5e" />
+          <rect x="78" y="48" width="14" height="22" rx="6" fill="#f43f5e" />
+          <path d="M22 66 Q30 80 42 78" fill="none" stroke="#111827" strokeWidth="2.5" />
+          <circle cx="43" cy="78" r="2.5" fill="#111827" />
+        </g>
+      )
     case 'gate':
       return (
         <g fill="#dc2626" stroke="#7f1d1d" strokeWidth="1.5">

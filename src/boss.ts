@@ -68,10 +68,10 @@ export const BOSSES: Record<Level, BossLook> = {
   数: { name: 'カゾエモチ', desc: '数を数えるのが大すきだが、よくまちがえるモチ。', color: '#4f46e5', line: '#1e1b4b', eye: '#fef9c3' },
   '色・形': { name: 'ニジイロモチ', desc: '色と形をぬすんで虹にしてしまうモチ。', color: '#f43f5e', line: '#881337', eye: '#ecfeff' },
   ビジネス: { name: 'シメキリモチ', desc: '締め切りをちらつかせて追いかけてくる、いそがしいモチ。', color: '#1d4ed8', line: '#1e3a8a', eye: '#fef3c7' },
-  英検2級: { name: 'ゴウカクモチ', desc: '英検2級の合格の門を守る、きびしい試験官のモチ。', color: '#b45309', line: '#451a03', eye: '#fef3c7' },
-  英検準1級: { name: 'ハカセモチ', desc: '難しい単語の本を何冊も読みあさる、物知りの博士モチ。', color: '#4338ca', line: '#1e1b4b', eye: '#fde68a' },
-  英検1級: { name: 'ラスボスモチ', desc: '英検の頂上で待ちかまえる、最強の単語の王モチ。', color: '#7f1d1d', line: '#1c0505', eye: '#fde047' },
-  ネイティブ: { name: 'ペラペラモチ', desc: '早口のスラングで話しかけてくる、本場のおしゃべりモチ。', color: '#0f766e', line: '#042f2e', eye: '#fef08a' },
+  英検2級: { name: 'ゴウカクモチ', deco: 'mortarboard', desc: '英検2級の合格の門を守る、きびしい試験官のモチ。', color: '#b45309', line: '#451a03', eye: '#fef3c7' },
+  英検準1級: { name: 'ハカセモチ', deco: 'scholar', desc: '難しい単語の本を何冊も読みあさる、物知りの博士モチ。', color: '#4338ca', line: '#1e1b4b', eye: '#fde68a' },
+  英検1級: { name: 'ラスボスモチ', deco: 'lastboss', desc: '英検の頂上で待ちかまえる、最強の単語の王モチ。', color: '#7f1d1d', line: '#1c0505', eye: '#fde047' },
+  ネイティブ: { name: 'ペラペラモチ', deco: 'speaker', desc: '早口のスラングで話しかけてくる、本場のおしゃべりモチ。', color: '#0f766e', line: '#042f2e', eye: '#fef08a' },
   会話: { name: 'オシャベリモチ', desc: 'あいさつを聞くまで通してくれない、おしゃべりなモチ。', color: '#0891b2', line: '#164e63', eye: '#fefce8' },
 }
 
