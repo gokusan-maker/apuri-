@@ -4,7 +4,7 @@ import { GRAMMAR, gradeOf, type GrammarQuestion, type GrammarUnit } from './gram
 import { EXAM_GRAMMAR } from './examgrammar'
 import { LEVEL_GRAMMAR } from './examgrammar2'
 import type { GradeId } from './usergrade'
-import { mistakeOf, type Mistake } from './grammarmistake'
+import { examMistakeOf, mistakeOf, type Mistake } from './grammarmistake'
 
 export const FLOOR_QS = 5
 export const FLOORS_PER_PART = 3
@@ -178,6 +178,9 @@ export function floorMistake(qs: GrammarQuestion[]): Mistake | undefined {
     const u = GRAMMAR.find((x) => x.questions.includes(q))
     const m = u && mistakeOf(u.id)
     if (m) return m
+    // 入試・試験レベルの城：その単元の何階目かで、まちがいの例を順に
+    const e = ALL_EXAM_GRAMMAR.find((x) => x.questions.includes(q))
+    if (e) return examMistakeOf(e.id, Math.floor(e.questions.indexOf(q) / FLOOR_QS))
   }
   return undefined
 }

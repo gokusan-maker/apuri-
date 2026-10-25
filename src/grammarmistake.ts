@@ -293,3 +293,66 @@ export function oneMoreOf(unitId: string): { choices: string[]; answer: number; 
   const first = [...unitId].reduce((a, c) => a + c.charCodeAt(0), 0) % 2 === 0
   return { choices: first ? [m.right, m.wrong] : [m.wrong, m.right], answer: first ? 0 : 1, why: m.why }
 }
+
+// 入試・試験レベルの文法の城（exam-*）の「よくあるまちがい」：階ごとに順に見せる
+export const EXAM_MISTAKES: Record<string, Mistake[]> = {
+  'exam-kyotsu': [
+    { wrong: 'I look forward to see you.', right: 'I look forward to seeing you.', why: 'look forward to の to は前置詞。あとは動名詞。' },
+    { wrong: 'If it will rain tomorrow, we will stay home.', right: 'If it rains tomorrow, we will stay home.', why: '条件の if 節では未来のことも現在形で表す。' },
+    { wrong: 'She has lived here since ten years.', right: 'She has lived here for ten years.', why: '期間は for、起点は since。' },
+  ],
+  'exam-shiritsu': [
+    { wrong: 'No sooner had I sat down when the phone rang.', right: 'No sooner had I sat down than the phone rang.', why: 'no sooner は than と組む（hardly・scarcely は when）。' },
+    { wrong: 'It is high time you go to bed.', right: 'It is high time you went to bed.', why: 'It is (high) time のあとは仮定法過去。' },
+    { wrong: 'He insisted on to pay the bill.', right: 'He insisted on paying the bill.', why: '前置詞 on のあとは動名詞。' },
+  ],
+  'exam-shiritsu-med': [
+    { wrong: 'The patient was advised to avoid to eat salt.', right: 'The patient was advised to avoid eating salt.', why: 'avoid は動名詞を目的語にとる。' },
+    { wrong: 'The number of patients are increasing.', right: 'The number of patients is increasing.', why: 'the number of ～（～の数）は単数あつかい。' },
+    { wrong: 'This medicine is effective to colds.', right: 'This medicine is effective against colds.', why: '「～に効く」は effective against (for) ～。' },
+  ],
+  'exam-kokkoritsu': [
+    { wrong: 'She is used to get up early.', right: 'She is used to getting up early.', why: 'be used to ～ing「～に慣れている」。used to 原形（以前は～した）と区別。' },
+    { wrong: 'There is no point to worry about the past.', right: 'There is no point (in) worrying about the past.', why: 'There is no point (in) ～ing「～してもむだだ」。' },
+    { wrong: 'This is the reason which he quit his job.', right: 'This is the reason why he quit his job.', why: 'quit his job は欠けたところのない文なので関係副詞 why。' },
+  ],
+  'exam-kyutei': [
+    { wrong: 'So great the noise was that nobody heard him.', right: 'So great was the noise that nobody heard him.', why: 'So ＋形容詞が文頭に出ると倒置して was the noise。' },
+    { wrong: 'I object to be treated like a child.', right: 'I object to being treated like a child.', why: 'object to の to は前置詞。受け身の動名詞 being treated。' },
+    { wrong: 'He is no more a genius than I do.', right: 'He is no more a genius than I am.', why: 'no more A than B「B と同様に A でない」。be 動詞の文なので am。' },
+  ],
+  'exam-kokuritsu-med': [
+    { wrong: 'The data shows that the drug work well.', right: 'The data show that the drug works well.', why: 'that 節の主語 the drug は単数なので works。data は複数あつかいもできる。' },
+    { wrong: 'Had the patient arrived earlier, he would survive.', right: 'Had the patient arrived earlier, he would have survived.', why: '過去の反対（仮定法過去完了）なので would have ＋過去分詞。' },
+    { wrong: 'The symptoms are similar with those of a cold.', right: 'The symptoms are similar to those of a cold.', why: 'be similar to ～「～に似ている」。' },
+  ],
+  'exam-kyodai': [
+    { wrong: 'What little money he had were spent on books.', right: 'What little money he had was spent on books.', why: 'what little money ～（なけなしのお金のすべて）は単数あつかい。' },
+    { wrong: 'Seldom I have seen such a sight.', right: 'Seldom have I seen such a sight.', why: '否定の副詞が文頭に出ると疑問文の語順。' },
+    { wrong: 'He is not who he was ten years ago.', right: 'He is not what he was ten years ago.', why: '「昔の彼」は what he was（人柄・状態を表す what）。' },
+  ],
+  'exam-todai': [
+    { wrong: 'However you try hard, you cannot finish it in a day.', right: 'However hard you try, you cannot finish it in a day.', why: 'however ＋形容詞・副詞 ＋ S V の語順。' },
+    { wrong: 'The population of Tokyo is larger than Osaka.', right: 'The population of Tokyo is larger than that of Osaka.', why: '比べるのは人口どうし。くり返しをさける that of。' },
+    { wrong: 'She said that she has been to Paris the year before.', right: 'She said that she had been to Paris the year before.', why: '時制の一致。said より前のことなので過去完了。' },
+  ],
+  'exam-toeic': [
+    { wrong: 'Please submit the report until Friday.', right: 'Please submit the report by Friday.', why: 'しめ切り「～までに」は by。until は「～までずっと」。' },
+    { wrong: 'We look forward to work with you.', right: 'We look forward to working with you.', why: 'look forward to の to は前置詞。' },
+    { wrong: 'This product is very more expensive than that one.', right: 'This product is much more expensive than that one.', why: '比較級を強めるのは much・far。very は使えない。' },
+  ],
+  'exam-toefl': [
+    { wrong: 'The number of species are declining rapidly.', right: 'The number of species is declining rapidly.', why: 'the number of ～ は単数あつかい。' },
+    { wrong: 'Unlike mammals, reptiles cannot keep its bodies warm.', right: 'Unlike mammals, reptiles cannot keep their bodies warm.', why: 'reptiles（複数）を受けるのは their。' },
+    { wrong: 'Water is composed from hydrogen and oxygen.', right: 'Water is composed of hydrogen and oxygen.', why: 'be composed of ～「～から成る」。' },
+  ],
+  'exam-native': [
+    { wrong: 'I\'m used to get up early.', right: 'I\'m used to getting up early.', why: 'be used to ～ing「～に慣れている」。' },
+    { wrong: 'How come did you leave so early?', right: 'How come you left so early?', why: 'how come のあとはふつうの語順（主語＋動詞）。' },
+    { wrong: 'Would you mind if I open the window?', right: 'Would you mind if I opened the window?', why: 'Would you mind if のあとはていねいに過去形にするのがふつう。' },
+  ],
+}
+export function examMistakeOf(unitId: string, floor: number): Mistake | undefined {
+  const list = EXAM_MISTAKES[unitId]
+  return list && list.length ? list[floor % list.length] : undefined
+}

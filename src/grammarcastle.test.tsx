@@ -60,3 +60,19 @@ it('文法の城の階をクリアしたら、その階の単元の「よくあ�
   }
   expect(floorMistake([])).toBeUndefined()
 })
+
+it('入試・試験レベルの文法の城でも、階ごとにちがう「よくあるまちがい」を見せる', async () => {
+  const { floorMistake, gcFloorsFor, GC_LEVELS } = await import('./grammarcastle')
+  const { EXAM_MISTAKES } = await import('./grammarmistake')
+  for (const lv of GC_LEVELS.filter((l) => l.unit)) {
+    const fl = gcFloorsFor(lv.id)
+    const a = floorMistake(fl[0].questions)
+    const b = floorMistake(fl[1].questions)
+    expect(a, lv.id).toBeDefined()
+    expect(a!.wrong, lv.id).not.toBe(b!.wrong)
+  }
+  for (const list of Object.values(EXAM_MISTAKES)) for (const m of list) {
+    expect(m.wrong).not.toBe(m.right)
+    expect(m.why.length).toBeGreaterThan(5)
+  }
+})
