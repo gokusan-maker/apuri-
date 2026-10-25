@@ -30,6 +30,7 @@ it('城の1階：解説 → 5問 → 4問以上正解でクリアして「次の
   }
   expect(screen.getByRole('button', { name: `🏰 次の階へ ▶ ${gcFloorsFor('中1')[1].label}` })).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:gcastle')!)).toContain(f.id)
+  expect(screen.getByText('🎉 階クリア！')).toBeInTheDocument()
 })
 
 it('城の地図：学年と入試レベルの城。学年の城は学年の単元だけ、入試の城は1階目に解説', () => {

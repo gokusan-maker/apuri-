@@ -15,6 +15,7 @@ import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
 import { GrammarFigure } from './GrammarFigView'
+import { FloorClear } from './FloorClearView'
 import { figOf } from './grammarfig'
 import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
@@ -1008,6 +1009,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           </button>
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
+        {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && score >= Math.min(GC_PASS, unit.questions.length) && <FloorClear next={gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1]?.label} />}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1] && (
           <button className="good next-unit-btn" onClick={() => openFloor(gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].id)}>
             🏰 次の階へ ▶ {gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1].label}

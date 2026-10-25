@@ -3358,3 +3358,15 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .barea-name { padding: 1px 6px; border-radius: 8px; background: rgb(255 255 255 / 0.92); font-size: 0.74rem; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
 .barea-badge { font-size: 0.62rem; font-weight: 800; color: #fff; background: #7c3aed; border-radius: 6px; padding: 0 5px; }
 @keyframes barea-glow { 50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #facc15); } }
+
+/* 城の階クリアのお祝い */
+.floor-clear { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; gap: 4px; margin: 8px 0; padding: 14px 10px; border-radius: 16px; background: linear-gradient(135deg, #fde68a, #f9a8d4 55%, #c4b5fd); color: #1c1917; box-shadow: 0 5px 0 #b45309; animation: floor-pop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1); }
+.floor-clear-title { font-size: 1.3rem; font-weight: 900; text-shadow: 0 2px 0 #fff; }
+.floor-clear-door { font-size: 0.86rem; font-weight: 700; text-align: center; }
+.floor-clear-confetti { position: absolute; inset: 0; pointer-events: none; }
+.floor-clear-confetti i { position: absolute; top: -10px; width: 7px; height: 11px; border-radius: 2px; background: #ef4444; animation: floor-fall 1.8s ease-in infinite; }
+.floor-clear-confetti i:nth-child(3n) { background: #3b82f6; }
+.floor-clear-confetti i:nth-child(3n + 1) { background: #22c55e; }
+.floor-clear-confetti i:nth-child(4n) { background: #f59e0b; }
+@keyframes floor-pop { from { transform: scale(0.6); opacity: 0; } }
+@keyframes floor-fall { to { transform: translateY(120px) rotate(320deg); opacity: 0; } }

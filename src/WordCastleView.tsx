@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Castle } from './CastleView'
+import { FloorClear } from './FloorClearView'
 import type { Source } from './monster'
 import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
@@ -110,6 +111,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
           <p className={`stage-result${score >= Math.min(WC_PASS, total) ? ' clear' : ''}`}>
             {score >= Math.min(WC_PASS, total) ? `🏰 クリア！ ${score}/${total}問正解` : `あと少し！ ${score}/${total}問（${WC_PASS}問以上でクリア）`}
           </p>
+          {score >= Math.min(WC_PASS, total) && <FloorClear next={next?.label} />}
           {score >= Math.min(WC_PASS, total) && next && (
             <button className="good next-unit-btn" onClick={() => start(next)}>
               🏰 次の階へ ▶ {next.label}
