@@ -2075,3 +2075,4 @@
 - 2026-10-25: 私学〜東大の単語を40語追加（precedent・rigorous・susceptible・solace・upheaval・preeminent など）
 - 2026-10-25: 京大・東大を中心に単語を40語追加（affable・epiphany・acumen・conundrum・fortuitous・ambiguity など）
 - 2026-10-25: 京大・東大を中心に単語を40語追加（chagrin・evanescent・assiduous・efficacy・covet・auspicious など）
+- 2026-10-25: ネイティブの口語表現を30語追加（ace・chicken out・hands down・my treat・tell me about it など）
