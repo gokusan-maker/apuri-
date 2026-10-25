@@ -406,3 +406,11 @@ it('ボスの城の問題の階をはじめてクリアすると、コインが�
   }
   expect(screen.getByText(`🪙 ${BC_FLOOR_COINS}コイン ゲット！`)).toBeInTheDocument()
 })
+
+it('たおしたレベルのボスが5・10レベルになると、記念のコインを1回ずつ', async () => {
+  const { newBossMilestones } = await import('./bosscastle')
+  expect(newBossMilestones(4, [])).toEqual([])
+  expect(newBossMilestones(5, [])).toEqual([5])
+  expect(newBossMilestones(10, [5])).toEqual([10])
+  expect(newBossMilestones(12, [5, 10])).toEqual([])
+})

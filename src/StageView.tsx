@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -416,8 +416,14 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onSpend={onSpend}
         onAnswer={onReadingAnswer ?? onAnswer}
         onWin={() => {
-          if (first) setFarewell(bossFarewell(BOSSES[LEVEL_BOSS_LOOK[lvFight]].name, c.label))
           const next = { ...lboss, [lvFight]: dayKey() }
+          // 撃破数が5・10レベルになったら記念のコイン（1回ずつ）
+          const ms = newBossMilestones(COURSES.filter((x) => next[x.id]).length, loadBossMilestones())
+          if (ms.length > 0) {
+            saveBossMilestones([...loadBossMilestones(), ...ms])
+            onRankBonus?.(BOSS_MILESTONE_COINS * ms.length)
+          }
+          if (first) setFarewell(bossFarewell(BOSSES[LEVEL_BOSS_LOOK[lvFight]].name, c.label) + (ms.length > 0 ? `　🎉 ${ms[ms.length - 1]}レベルのボスを撃破！ 記念の🪙${BOSS_MILESTONE_COINS * ms.length}` : ''))
           setLboss(next)
           saveLevelBoss(next)
           onBossWin?.(LEVEL_BOSS_LOOK[lvFight])

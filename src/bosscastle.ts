@@ -133,3 +133,25 @@ export function saveAllBossClaimed(): void {
 
 // レベルのボスをはじめてたおしたときの、ボスの負けおしみのひとこと
 export const bossFarewell = (name: string, level: string) => `👹 ${name}「くっ…${level}の力、みとめてやる。だが次のレベルのボスは、もっと手ごわいぞ…！」`
+
+// たおしたレベルのボスが5・10レベルになったときの記念コイン（1回ずつ）
+export const BOSS_MILESTONES = [5, 10]
+export const BOSS_MILESTONE_COINS = 50
+const MS_KEY = 'eitan:lboss-milestone'
+export function loadBossMilestones(): number[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(MS_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is number => typeof x === 'number') : []
+  } catch {
+    return []
+  }
+}
+export function saveBossMilestones(v: number[]): void {
+  try {
+    localStorage.setItem(MS_KEY, JSON.stringify(v))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
+// いまの撃破数で新しくもらえる記念（まだもらっていないもの）
+export const newBossMilestones = (beaten: number, got: number[]) => BOSS_MILESTONES.filter((n) => beaten >= n && !got.includes(n))
