@@ -4143,6 +4143,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-power-nap',
+    title: 'The Power of a Short Nap',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In some countries, taking a nap in the middle of the day is seen as a sign of laziness. However, a growing number of schools and companies are now encouraging short naps. Why are they doing this?",
+      "Research suggests that a nap of about fifteen to twenty minutes can improve attention and memory for the rest of the afternoon. Many people feel sleepy after lunch, and a short rest helps them ( A ) more clearly afterward. Some schools in Japan have introduced a short 'nap time' after lunch, and teachers report that students seem more focused in their afternoon classes.",
+      "The length of the nap is important, though. If you sleep for more than about thirty minutes, you may fall into deep sleep. Waking up from deep sleep can leave you feeling heavy and confused, ( B ) is the opposite of what you want. Long naps late in the day can also make it harder to fall asleep at night.",
+      "Experts give a few simple tips. Nap early in the afternoon, set an alarm, and find a quiet place. Even if you cannot fall asleep, simply closing your eyes and resting ( C ) help you recharge.",
+    ],
+    ja: [
+      '国によっては、日中に昼寝をすることはなまけているしるしと見られる。しかし、短い昼寝をすすめる学校や会社がますます増えている。なぜそうしているのだろうか。',
+      '研究によると、15〜20分ほどの昼寝は、その日の午後の注意力や記憶力を高めることができる。昼食のあとにねむくなる人は多く、短い休けいをとると、そのあと頭がすっきりして考えられるようになる。日本のある学校では昼食のあとに短い「お昼寝タイム」を取り入れ、先生たちは、生徒が午後の授業でより集中しているようだと報告している。',
+      'ただし、昼寝の長さは大切だ。30分ほどより長くねむると、深いねむりに入ってしまうかもしれない。深いねむりから目覚めると、体が重く、ぼんやりした感じが残ることがあり、それはのぞんでいることとは正反対である。夕方おそくの長い昼寝は、夜にねつきにくくすることもある。',
+      '専門家はいくつかの簡単なコツをあげている。午後の早い時間に昼寝をすること、アラームをセットすること、静かな場所を見つけることだ。たとえねむれなくても、ただ目を閉じて休むだけで、元気を取りもどす助けになりうる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['think', 'thinking', 'thought', 'thinks'], answer: 0, why: 'help ＋人＋動詞の原形 で「人が～するのを助ける」。help them think で「彼らが考える助けになる」。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（体が重くぼんやりすること）を受ける非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
+      { id: 'C', choices: ['can', 'is', 'are', 'to'], answer: 0, why: '主語は simply closing your eyes and resting（動名詞のかたまり）。うしろの動詞の原形 help と結びつくのは助動詞 can。is・are・to のうしろに原形 help は続かない。' },
+    ],
+    tf: [
+      { statement: '研究によれば、15〜20分ほどの昼寝は午後の注意力を高める。', answer: true, why: '第2段落 a nap of about fifteen to twenty minutes can improve attention and memory。' },
+      { statement: '30分より長い昼寝は、いつも目覚めをよくする。', answer: false, why: '第3段落 Waking up from deep sleep can leave you feeling heavy and confused。' },
+      { statement: '専門家は、昼寝のときにアラームをセットすることをすすめている。', answer: true, why: '第4段落 set an alarm。' },
+    ],
+    qa: [
+      { q: 'Why can long naps late in the day be a problem?', choices: ['They can make it harder to fall asleep at night.', 'They make people hungry.', 'They are not allowed at school.', 'They improve memory too much.'], answer: 0, why: '第3段落 Long naps late in the day can also make it harder to fall asleep at night。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
