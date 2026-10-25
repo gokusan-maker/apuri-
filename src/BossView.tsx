@@ -20,7 +20,7 @@ import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTI
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
-import { LEVELS, WORDS, type Level, type Word } from './words'
+import { LEVELS, levelOf, WORDS, type Level, type Word } from './words'
 
 type Props = {
   level: Level
@@ -263,7 +263,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const sup = supportEffects(supportTypes) // 応援なかまのタイプの効果
   const memberMax = MEMBER_HP + sup.hp
   const teamOn = !!team
-  const teamWords = words.length > 0 ? words : WORDS.filter((w) => w.level === level)
+  const teamWords = words.length > 0 ? words : WORDS.filter((w) => levelOf(w) === level)
   const readQs = () => readingBossQs(level, rnd, BOSS_QUESTIONS, exam?.passages)
   const makeQs = () => (teamOn ? teamBossQuestions(teamWords, rnd, BOSS_QUESTIONS, reading ? readQs() : undefined, exam?.units) : reading ? readQs() : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q))
   const [qs, setQs] = useState(makeQs)

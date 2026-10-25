@@ -1,3 +1,4 @@
+import { LEVEL_FIX } from './wordlevelfix'
 import { WORDS_EIKEN2 } from './wordseiken2'
 import { WORDS_EIKENP1 } from './wordseikenp1'
 import { WORDS_EIKEN1 } from './wordseiken1'
@@ -3960,7 +3961,7 @@ const LEVEL_OF: Record<string, Level> = Object.fromEntries([
 ])
 
 export function levelOf(w: Word): Level {
-  return w.level ?? LEVEL_OF[w.id] ?? '中2'
+  return LEVEL_FIX[w.id] ?? w.level ?? LEVEL_OF[w.id] ?? '中2'
 }
 
 export function wordsOf(levels: Level[]): Word[] {

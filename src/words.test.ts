@@ -10,7 +10,7 @@ describe('WORDS', () => {
     expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(101)
     expect(new Set(WORDS.map((w) => w.en.toLowerCase())).size).toBe(WORDS.length) // 同じ英単語を2回入れない
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
-    expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(680)
+    expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(783) // CEFR-J で見直して中学から103語移した
   })
 
   it('すべての単語に訳と例文があり、例文に見出し語（またはその変化形）が含まれる', () => {
@@ -54,4 +54,13 @@ it('例文に見出し語（またはその変化形）が入っている', () =
     return !parts.every((p) => ex.includes(p.slice(0, Math.max(3, p.length - 2))))
   })
   expect(bad.map((w) => w.id)).toEqual([])
+})
+
+it('単語のレベルの見直し：CEFR-J で上級・使用頻度も低い語は中学から上の学年へ。基本語は中1のまま', () => {
+  const lv = (en: string) => levelOf(WORDS.find((w) => w.en === en)!)
+  expect(lv('seldom')).toBe('高校基礎')
+  expect(lv('tolerate')).toBe('高校基礎')
+  expect(lv('kitten')).toBe('中2')
+  expect(lv('sometimes')).toBe('中1')
+  expect(lv('season')).toBe('中1')
 })
