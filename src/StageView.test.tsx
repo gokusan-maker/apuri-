@@ -355,3 +355,13 @@ it('ボスの一覧から15レベルのボスを自由にえらべ、たおす�
   fireEvent.click(within(list).getByRole('button', { name: /^東大のボス「.+」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
+
+it('ボスの城のボスをたおしたら「次のレベルのボスの城へ」で次のレベルの城にかわる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:lboss', JSON.stringify({ 中2: '2026-10-01' }))
+  localStorage.setItem('eitan:boss-level', '中2')
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /次のレベル「中3」のボスの城へ/ }))
+  expect(screen.getByRole('region', { name: '中3のボスの城' })).toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: /次のレベル/ })).toBeNull()
+})

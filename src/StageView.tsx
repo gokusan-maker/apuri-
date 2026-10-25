@@ -631,6 +631,19 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor) })
           }}
         />
+        {lboss[bossLv] && COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1] && (
+          <button
+            className="good next-unit-btn boss-next-lv"
+            onClick={() => {
+              const next = COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].id
+              setBossLv(next)
+              saveBossLevel(next)
+              window.scrollTo?.({ top: 0 })
+            }}
+          >
+            ▶ 次のレベル「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
+          </button>
+        )}
         <details className="boss-pick-fold">
           <summary>📋 ボスの一覧から自由にえらぶ</summary>
         <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
