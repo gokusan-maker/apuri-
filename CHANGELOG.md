@@ -2002,3 +2002,4 @@
 - 2026-10-25: TOEICレベルの長文「Notice: Our Office Is Moving」（オフィス移転のお知らせ）を自作で追加。メール・お知らせの長文はTOEICだけに出す
 - 2026-10-25: ネイティブレベル専用の長文「In Defense of Small Talk」（世間話の大切さ・get away with / pitch in / roll one's eyes などの口語表現）を自作で追加
 - 2026-10-25: TOEICの単語17語（merger・revenue・invoice系の業務語）とTOEFL・IELTSの単語33語（photosynthesis・erosion・ecosystem など学術語）を自作の訳・例文で追加
+- 2026-10-25: 国公立〜東大の単語を13語追加（conspicuous・tacit・dichotomy など）
