@@ -10,6 +10,7 @@ import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
+import { allCastles, conquered } from './castlecollect'
 import { CastleTitleChip } from './CastleCollectView'
 import { RareEggContext, WalkerContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
@@ -92,7 +93,7 @@ import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } fro
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
-import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP } from './gacha'
+import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP , luckyRoll } from './gacha'
 import {
   feed,
   FORMS,
@@ -966,6 +967,7 @@ function App() {
     pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
   }
   function drawMany(ticket: boolean, n: number, start = wallet, rareForce = false, hatched = false): GachaResult[] {
+    const castleCount = conquered(allCastles()) // 制覇した城の数（多いほどレアが出やすい）
     let w = start
     let p = party
     let st = gachaStep
@@ -976,7 +978,7 @@ function App() {
     let sb = stickers
     let stickerDone = false
     for (let i = 0; i < n; i++) {
-      const r = drawEgg(w, p, rand(), ticket, rand(), isWeekend(today), pickupOf(today).id, rareForce || rareDue(ns) || stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
+      const r = drawEgg(w, p, luckyRoll(rand(), castleCount), ticket, rand(), isWeekend(today), pickupOf(today).id, rareForce || rareDue(ns) || stepLeft(st, today) === 0 || (n >= MULTI5 && i === n - 1 && out.every((k) => k.kind.rarity === 'N')), gachaPrice(hour) - omikujiDiscount(today), seasonalKindOf(today), dailyColor(today))
       if (!r) break
       st = nextStep(st, today)
       ns = r.kind.rarity === 'N' ? Math.min(ns + 1, RARE_EVERY - 1) : 0

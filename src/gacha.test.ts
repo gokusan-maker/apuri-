@@ -283,3 +283,13 @@ it('1つのキャラクターでふつうの6色がそろうと色コンプ', as
   expect(completedSpecies(six.slice(1).map((k) => ({ species: 'fox', kind: k })))).toEqual([])
   expect(completedSpecies([...six.map((k) => ({ kind: k === 'normal' ? undefined : k }))])).toEqual(['mochi'])
 })
+
+it('制覇した城が多いほどレアが出やすい（ふつうの範囲だけ上にずらす。上限+5%、スーパーレア以上は変わらない）', async () => {
+  const { castleLuck, luckyRoll, CASTLE_LUCK_MAX } = await import('./gacha')
+  expect(castleLuck(0)).toBe(0)
+  expect(castleLuck(3)).toBeCloseTo(0.03)
+  expect(castleLuck(20)).toBe(CASTLE_LUCK_MAX)
+  expect(luckyRoll(0.58, 5)).toBeCloseTo(0.63) // ふつう → レア
+  expect(luckyRoll(0.3, 0)).toBe(0.3)
+  expect(luckyRoll(0.95, 5)).toBe(0.95) // スーパーレアの範囲は動かさない
+})

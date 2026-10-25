@@ -389,3 +389,8 @@ export function helloLine(speciesId: string): { en: string; ja: string } {
   const n = [...speciesId].reduce((a, c) => a + c.charCodeAt(0), 0)
   return HELLO_LINES[n % HELLO_LINES.length]
 }
+
+// 制覇した城の数で、レアが出やすくなる（ふつうの範囲の乱数を少し上にずらす。1城で+1%、上限+5%。スーパーレア以上は変わらない）
+export const CASTLE_LUCK_MAX = 0.05
+export const castleLuck = (castles: number) => Math.min(CASTLE_LUCK_MAX, Math.max(0, castles) * 0.01)
+export const luckyRoll = (r: number, castles: number) => (r < 0.6 ? Math.min(0.899, r + castleLuck(castles)) : r)
