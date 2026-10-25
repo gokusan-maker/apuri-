@@ -42,6 +42,9 @@ export function openableChests(cleared: number, opened: number[], total = 0): nu
 
 // 宝箱のレアの卵：App がわたす（なかまに入れて、入れた卵の名前を返す。いっぱいなら null）
 export const RareEggContext = createContext<(() => string | null) | null>(null)
+// 宝箱のガチャチケット：てっぺんの宝箱と30階ごとの宝箱に入っている（App がわたす）
+export const ChestTicketContext = createContext<(() => void) | null>(null)
+export const chestHasTicket = (at: number, total: number) => at === total || at % 30 === 0
 
 // 地図（単語＝海・文法＝森・読解＝山）を歩くキャラ：App がわたす
 export type MapTheme = 'sea' | 'forest' | 'mountain'

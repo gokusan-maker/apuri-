@@ -12,7 +12,7 @@ import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
 import { allCastles, conquered } from './castlecollect'
 import { CastleTitleChip } from './CastleCollectView'
-import { RareEggContext, WalkerContext } from './castle'
+import { ChestTicketContext, RareEggContext, WalkerContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloorsFor } from './wordcastle'
 import { Reading } from './ReadingView'
@@ -1449,6 +1449,7 @@ function App() {
   )
 
   // 城の節目の宝箱から出るレアの卵（色ちがい確定）。なかまがいっぱいならコイン
+  const giveChestTicket = () => setWallet((w) => addTicket(w)) // 宝箱のガチャチケット
   const giveRareEgg = () => {
     const r = rareEgg(party, rand(), rand())
     if (r) setParty(r.party)
@@ -1459,6 +1460,7 @@ function App() {
 
   return (
     <RareEggContext.Provider value={giveRareEgg}>
+    <ChestTicketContext.Provider value={giveChestTicket}>
     <WalkerContext.Provider value={{ sea: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />, forest: <BuddyFigure track="grammar" buddy={buddies.grammar} />, mountain: <BuddyFigure track="reading" buddy={buddies.reading} /> }}>
     <PlayContext.Provider value={playRegister}>
     <BossTeamContext.Provider value={bossTeam}>
@@ -2370,6 +2372,7 @@ function App() {
     </BossTeamContext.Provider>
     </PlayContext.Provider>
     </WalkerContext.Provider>
+    </ChestTicketContext.Provider>
     </RareEggContext.Provider>
   )
 }

@@ -86,3 +86,10 @@ it('階クリアのなかまのひとことは、階ごとに順に変わる', a
   expect(floorCheer(1)).not.toBe(floorCheer(0))
   expect(floorCheer(FLOOR_CHEERS.length)).toBe(FLOOR_CHEERS[0])
 })
+
+it('地図の宝箱：てっぺんと30階ごとの宝箱にはガチャチケットが入っている', async () => {
+  const { chestHasTicket } = await import('./castle')
+  expect(chestHasTicket(10, 75)).toBe(false)
+  expect(chestHasTicket(30, 75)).toBe(true)
+  expect(chestHasTicket(75, 75)).toBe(true)
+})

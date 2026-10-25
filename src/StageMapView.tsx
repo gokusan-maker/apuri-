@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState, type CSSProperties } from 'react'
-import { CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
+import { ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 
 const ROW = 84 // ステージの間かく（px）
@@ -10,8 +10,9 @@ const GOAL: Record<MapTheme, string> = { sea: '🏝 宝の島に着いた！ こ
 // ステージの地図：レベルのステージを道にそって進む。キャラが次のステージへ歩いていく
 export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = '⚔ すすむ', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
   const [chests, setChests] = useState(loadChests)
-  const [opened, setOpened] = useState<{ at: number; egg: string | null } | null>(null)
+  const [opened, setOpened] = useState<{ at: number; egg: string | null; ticket?: boolean } | null>(null)
   const giveEgg = useContext(RareEggContext)
+  const giveTicket = useContext(ChestTicketContext)
   const walker = useContext(WalkerContext)[theme]
   const now = castleNow(floors)
   const total = floors.length
@@ -50,11 +51,13 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
             const next = { ...chests, [name]: [...(chests[name] ?? []), chest] }
             setChests(next)
             saveChests(next)
-            setOpened({ at: chest, egg: giveEgg ? giveEgg() : null })
+            const ticket = !!giveTicket && chestHasTicket(chest, total)
+            if (ticket) giveTicket()
+            setOpened({ at: chest, egg: giveEgg ? giveEgg() : null, ticket })
             onChest?.(CHEST_COINS)
           }}
         >
-          🎁 ステージ{chest}の宝箱をあける（🪙{CHEST_COINS}{giveEgg ? '＋🥚レアの卵' : ''}）
+          🎁 ステージ{chest}の宝箱をあける（🪙{CHEST_COINS}{giveEgg ? '＋🥚レアの卵' : ''}{giveTicket && chestHasTicket(chest, total) ? '＋🎟' : ''}）
         </button>
       )}
       {opened !== null && chest === undefined && (
@@ -65,7 +68,8 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
             <i>🪙</i>
           </span>
           ✨ ステージ{opened.at}の宝箱から 🪙{CHEST_COINS}
-          {opened.egg ? ` と 🥚${opened.egg}` : ''} を手に入れた！
+          {opened.egg ? ` と 🥚${opened.egg}` : ''}
+          {opened.ticket ? ' と 🎟ガチャチケット' : ''} を手に入れた！
         </p>
       )}
       <div className="smap-land" style={{ height: h }}>
