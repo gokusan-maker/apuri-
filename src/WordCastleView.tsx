@@ -12,7 +12,7 @@ import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBO
 import { wordsOf, type Level } from './words'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
-export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, onSpend, onPlay }: { levels: Level[]; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
+export function WordCastle({ levels, name = '単語の海', onAnswer, onChest, onSpend, onPlay }: { levels: Level[]; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
   const floors = wordCastleFloors(levels)
   const [clears, setClears] = useState(loadWcClears)
   const [floor, setFloor] = useState<WcFloor | null>(null)
@@ -38,7 +38,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
     return (
       <Castle
         name={name}
-        theme="purple"
+        theme="sea"
         onChest={onChest}
         floors={floors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: clears.includes(f.id) }))}
         onOpen={(id) => {

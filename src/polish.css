@@ -3474,3 +3474,50 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .bfloor-q { margin: 12px 0; font-size: 1.15rem; font-weight: 800; line-height: 1.5; }
 .castle-floors li.now .castle-go { white-space: nowrap; }
 .castle-floors li.now .castle-arch + .castle-btn .castle-go { font-size: 0.95rem; padding: 8px 10px; }
+
+/* ステージの地図（単語＝海・文法＝森・読解＝山）：道にそってステージを進む */
+.smap { position: relative; margin: 0 0 12px; border-radius: 22px; overflow: hidden; border: 3px solid #fbbf24; box-shadow: 0 6px 0 #b45309, 0 12px 26px rgb(0 0 0 / 0.25); container-type: inline-size; }
+.card > .smap:first-child { margin: -36px -21px 16px; }
+.smap-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; padding: 10px 12px; }
+.smap-name { font-weight: 900; font-size: 1.05rem; color: #fff; text-shadow: 0 2px 3px rgb(0 0 0 / 0.5); }
+.smap-sea { background: linear-gradient(180deg, #0c4a6e, #0284c7 30%, #38bdf8); }
+.smap-forest { background: linear-gradient(180deg, #052e16, #15803d 30%, #4ade80); }
+.smap-mountain { background: linear-gradient(180deg, #1e293b, #57534e 30%, #a8a29e); }
+.smap-land { position: relative; }
+.smap-sea .smap-land { background: repeating-linear-gradient(170deg, transparent 0 26px, rgb(255 255 255 / 0.08) 26px 30px); }
+.smap-forest .smap-land { background: radial-gradient(circle at 15% 30%, rgb(21 128 61 / 0.6) 0 12%, transparent 13%), radial-gradient(circle at 85% 65%, rgb(21 128 61 / 0.6) 0 10%, transparent 11%); }
+.smap-mountain .smap-land { background: linear-gradient(160deg, transparent 40%, rgb(68 64 60 / 0.35) 40% 60%, transparent 60%), linear-gradient(20deg, transparent 50%, rgb(120 113 108 / 0.35) 50% 70%, transparent 70%); }
+.smap-path { position: absolute; inset: 0; width: 100%; height: 100%; }
+.smap-path polyline { fill: none; stroke: #fef3c7; stroke-width: 7; stroke-dasharray: 2 12; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
+.smap-sea .smap-path polyline { stroke: #e0f2fe; }
+.smap-deco { position: absolute; font-size: 1.4rem; opacity: 0.85; }
+.smap-deco.d0 { left: 6%; top: 18%; }
+.smap-deco.d1 { right: 6%; top: 40%; }
+.smap-deco.d2 { left: 8%; top: 62%; }
+.smap-deco.d3 { right: 10%; top: 84%; }
+.smap-node { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; width: 30%; }
+.smap-spot { position: relative; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; font-size: 1.7rem; background: radial-gradient(circle, rgb(255 255 255 / 0.85) 0 55%, rgb(255 255 255 / 0.2) 70%); box-shadow: 0 4px 0 rgb(0 0 0 / 0.25); }
+.smap-star { position: absolute; right: -4px; top: -6px; font-style: normal; color: #facc15; font-size: 1rem; text-shadow: 0 1px 2px #000; }
+.smap-chest { position: absolute; left: calc(50% + 18px); top: -6px; font-size: 1rem; }
+.smap-node.locked { opacity: 0.6; }
+.smap-node.locked .smap-spot { background: rgb(0 0 0 / 0.35); font-size: 1.2rem; }
+.smap-node.locked .smap-no { color: #fff; font-weight: 800; }
+.smap-btn { display: flex; flex-direction: column; align-items: center; gap: 1px; width: 100%; margin-top: 4px; padding: 4px 6px; border: none; border-radius: 12px; background: rgb(28 25 23 / 0.72); color: #fff; font: inherit; cursor: pointer; }
+.smap-no { font-size: 0.62rem; opacity: 0.85; }
+.smap-label { font-weight: 900; font-size: 0.78rem; line-height: 1.25; text-align: center; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; }
+.smap-sub { font-size: 0.62rem; color: #fde68a; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.smap-go { margin-top: 2px; padding: 1px 10px; border-radius: 999px; background: rgb(255 255 255 / 0.18); font-size: 0.66rem; font-weight: 900; }
+.smap-node.now { z-index: 2; }
+.smap-node.now .smap-spot { width: 58px; height: 58px; font-size: 2rem; box-shadow: 0 0 0 4px #facc15, 0 0 18px rgb(250 204 21 / 0.8); }
+.smap-node.now .smap-go { width: 100%; padding: 8px 10px; border-radius: 12px; background: linear-gradient(#f97316, #dc2626); font-size: 1rem; box-shadow: 0 3px 0 #7f1d1d, 0 0 12px rgb(249 115 22 / 0.6); animation: castle-go-pulse 1.6s ease-in-out infinite; white-space: nowrap; text-align: center; }
+.smap-walker { --fx: 0px; --fy: 0px; position: absolute; z-index: 3; width: 54px; height: 54px; transform: translate(-50%, -50%); pointer-events: none; animation: smap-bob 1.2s ease-in-out infinite; filter: drop-shadow(0 4px 2px rgb(0 0 0 / 0.35)); }
+.smap-walker > * { width: 100%; height: 100%; }
+.smap-walker.walking { animation: smap-walk 1.6s ease-in-out both, smap-bob 0.3s ease-in-out 5 alternate; }
+@keyframes smap-walk { from { translate: var(--fx) var(--fy); } to { translate: 0 0; } }
+@keyframes smap-bob { 50% { margin-top: -5px; } }
+@media (prefers-reduced-motion: reduce) { .smap-walker, .smap-walker.walking { animation: none; } }
+.smap-node.cleared .smap-btn { width: auto; padding: 2px 8px; background: rgb(28 25 23 / 0.6); }
+.smap-node.now { width: auto; }
+.smap-node.now .smap-btn { position: absolute; top: 50%; transform: translateY(-50%); width: min(56cqw, 190px); margin: 0; padding: 8px 10px; background: rgb(28 25 23 / 0.82); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
+.smap-node.now.side-r .smap-btn { left: calc(100% + 10px); }
+.smap-node.now.side-l .smap-btn { right: calc(100% + 10px); }

@@ -56,7 +56,7 @@ it('かんたんの一覧は20話ずつの色つきの折りたたみで、読�
 it('かんたんレベルは城：解いた話の次の階が「いまここ」で、押すとその話が開く', () => {
   localStorage.setItem('eitan:short-done', JSON.stringify([PASSAGES[0].id]))
   render(<Reading />)
-  expect(screen.getByRole('region', { name: '読解ミニの城' })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '読解ミニの山' })).toBeInTheDocument()
   fireEvent.click(screen.getByRole('button', { name: `2階：${PASSAGES[1].title}` }))
   expect(screen.getAllByText(new RegExp(PASSAGES[1].questions[0].q)).length).toBeGreaterThan(0)
   localStorage.clear()

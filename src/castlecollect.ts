@@ -17,13 +17,13 @@ export function allCastles(): CastleInfo[] {
   return [
     ...COURSES.filter(courseReady).map((c) => {
       const fl = wordCastleFloors(c.levels)
-      return { id: `w:${c.id}`, kind: '単語' as const, name: `${c.label}の城`, floors: fl.length, cleared: fl.filter((f) => wc.includes(f.id)).length }
+      return { id: `w:${c.id}`, kind: '単語' as const, name: `${c.label}の海`, floors: fl.length, cleared: fl.filter((f) => wc.includes(f.id)).length }
     }),
     ...GC_LEVELS.map((l) => {
       const fl = gcFloorsFor(l.id)
-      return { id: `g:${l.id}`, kind: '文法' as const, name: `${l.label}の文法の城`, floors: fl.length, cleared: fl.filter((f) => gc.includes(f.id)).length }
+      return { id: `g:${l.id}`, kind: '文法' as const, name: `${l.label}の文法の森`, floors: fl.length, cleared: fl.filter((f) => gc.includes(f.id)).length }
     }),
-    { id: 'r:mini', kind: '読解' as const, name: '読解ミニの城', floors: PASSAGES.length, cleared: PASSAGES.filter((p) => short.includes(p.id)).length },
+    { id: 'r:mini', kind: '読解' as const, name: '読解ミニの山', floors: PASSAGES.length, cleared: PASSAGES.filter((p) => short.includes(p.id)).length },
     ...BOSS_GROUPS.map((g) => {
       const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
       return { id: `b:${g.id}`, kind: 'ボス' as const, name: `${g.label.replace(/^\S+ /, '')}のボスの城`, floors: lvs.length, cleared: lvs.filter((lv) => boss[lv]).length }

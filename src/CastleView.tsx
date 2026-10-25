@@ -1,10 +1,16 @@
 import { useContext, useState, type ReactNode } from 'react'
-import { CHEST_COINS, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests } from './castle'
+import { CHEST_COINS, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests, type MapTheme } from './castle'
+import { StageMap } from './StageMapView'
 
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
 
 // 城の塔：1階ずつクリアしてのぼる。夜空・月・山・天守の屋根・旗・石の壁・たいまつ・門と堀
-export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple'; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
+export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
+  if (theme === 'sea' || theme === 'forest' || theme === 'mountain') return <StageMap name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} onChest={onChest} againLabel={againLabel} />
+  return <CastleTower name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} goLabel={goLabel} againLabel={againLabel} onChest={onChest} />
+}
+
+function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: 'blue' | 'red' | 'green' | 'purple'; unit: string; goLabel: string; againLabel: string; onChest?: (coins: number) => void }) {
   const [chests, setChests] = useState(loadChests)
   const [opened, setOpened] = useState<{ at: number; egg: string | null } | null>(null) // いまあけた宝箱の階と、出てきたレアの卵
   const giveEgg = useContext(RareEggContext)

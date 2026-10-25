@@ -50,7 +50,7 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins }: Props) {
     return (
       <section className="card grammar">
         {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
-        <Castle name="読解ミニの城" theme="green" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
+        <Castle name="読解ミニの山" theme="mountain" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
         <p className="game-grid-title">🎮 読解ゲーム</p>
         <div className="game-grid read-games" aria-label="読解ゲーム">

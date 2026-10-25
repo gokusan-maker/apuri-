@@ -40,8 +40,8 @@ export function ReadThemeCastle({ list, record, onOpen, onChest }: { list: LongP
   }
   return (
     <Castle
-      name="構文の城"
-      theme="blue"
+      name="構文の山"
+      theme="mountain"
       onChest={onChest}
       floors={floors.map((f) => {
         const n = all.filter((x) => x.theme.id === f.theme.id).length

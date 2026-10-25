@@ -19,7 +19,7 @@ it('城の1階：解説 → 5問 → 4問以上正解でクリアして「次の
   localStorage.clear()
   render(<Grammar />)
   const f = gcFloorsFor('中1')[0]
-  const castle = screen.getByRole('region', { name: '中1の文法の城' })
+  const castle = screen.getByRole('region', { name: '中1の文法の森' })
   fireEvent.click(within(castle).getByRole('button', { name: new RegExp(`^1階：${f.label}`) }))
   expect(screen.getByText(new RegExp(f.explain!.title.replace(/[()（）]/g, '.')))).toBeInTheDocument()
   fireEvent.click(screen.getByText(/問題に挑戦/))
@@ -42,5 +42,5 @@ it('城の地図：学年と入試レベルの城。学年の城は学年の単�
   expect(ex[0].explain).not.toBeNull()
   expect(new Set([...gcFloorsFor('中1'), ...gcFloorsFor('中2')].map((f) => f.id)).size).toBe(gcFloorsFor('中1').length + gcFloorsFor('中2').length)
   render(<Grammar castleLevel="exam-kyutei" />)
-  expect(screen.getByRole('region', { name: '旧帝大の文法の城' })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '旧帝大の文法の森' })).toBeInTheDocument()
 })

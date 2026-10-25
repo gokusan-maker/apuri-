@@ -58,3 +58,25 @@ it('節目の階（10階ごと・てっぺん）の宝箱からレアの卵', as
   fireEvent.click(screen.getByText(/4階の宝箱をあける（🪙20＋🥚レアの卵）/))
   expect(screen.getByRole('status').textContent).toContain('🥚金色のタマゴ')
 })
+
+it('ステージの地図（海・森・山）：いまのステージと前後だけ見え、キャラが前にいたステージから歩いてくる', async () => {
+  const { mapShown, mapX, saveWalk, loadWalk, WalkerContext } = await import('./castle')
+  const { Castle } = await import('./CastleView')
+  const { render, screen } = await import('@testing-library/react')
+  expect(mapShown(10, 0)).toEqual([0, 1, 2, 3])
+  expect(mapShown(10, 5)).toEqual([4, 5, 6, 7])
+  expect(mapShown(10, 10)).toEqual([6, 7, 8, 9])
+  expect(mapX(0)).not.toBe(mapX(1))
+  localStorage.clear()
+  saveWalk('テストの海', 1)
+  const floors = Array.from({ length: 6 }, (_, i) => ({ id: `f${i}`, label: `ステージ${i}`, cleared: i < 3 }))
+  const { container } = render(
+    <WalkerContext.Provider value={{ sea: <b>キャラ</b> }}>
+      <Castle name="テストの海" theme="sea" floors={floors} onOpen={() => {}} />
+    </WalkerContext.Provider>,
+  )
+  expect(screen.getByRole('region', { name: 'テストの海' })).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: '4階：ステージ3' })).toBeInTheDocument()
+  expect(container.querySelector('.smap-walker.walking')).not.toBeNull() // ステージ2から4へ歩く
+  expect(loadWalk('テストの海')).toBe(3)
+})

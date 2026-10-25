@@ -11,7 +11,7 @@ import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
 import { CastleTitleChip } from './CastleCollectView'
-import { RareEggContext } from './castle'
+import { RareEggContext, WalkerContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
 import { Reading } from './ReadingView'
@@ -1450,6 +1450,7 @@ function App() {
 
   return (
     <RareEggContext.Provider value={giveRareEgg}>
+    <WalkerContext.Provider value={{ sea: <MonsterFigure form={formOf(monster)} kind={monster.kind} wear={monster.wear} mood="happy" />, forest: <BuddyFigure track="grammar" buddy={buddies.grammar} />, mountain: <BuddyFigure track="reading" buddy={buddies.reading} /> }}>
     <PlayContext.Provider value={playRegister}>
     <BossTeamContext.Provider value={bossTeam}>
     <BossSupportContext.Provider value={supportTypes}>
@@ -2142,7 +2143,7 @@ function App() {
         <>
           {mode === 'word' && !todayQuiz && !wordMini && (
             <>
-            <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の城` : '単語の城'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の海` : '単語の海'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
             {!castleOn && !quizFocus && (
               <button className="word-mini-btn" onClick={() => setWordMini(true)}>
                 🎮 単語のミニゲーム
@@ -2379,6 +2380,7 @@ function App() {
     </BossSupportContext.Provider>
     </BossTeamContext.Provider>
     </PlayContext.Provider>
+    </WalkerContext.Provider>
     </RareEggContext.Provider>
   )
 }

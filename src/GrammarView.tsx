@@ -290,8 +290,8 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
       <section className="card grammar">
         <Castle
           key={gcLevel}
-          name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}
-          theme="green"
+          name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の森`}
+          theme="forest"
           onChest={onChest}
           floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
           onOpen={openFloor}
@@ -327,8 +327,8 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
             {!castleOnly && (
             <Castle
               key={gcLevel}
-              name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}
-              theme="green"
+              name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の森`}
+              theme="forest"
               onChest={onChest}
               floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
               onOpen={openFloor}

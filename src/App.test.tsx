@@ -1154,7 +1154,7 @@ describe('App', () => {
     localStorage.clear()
     render(<App />)
     navTo('読解ステージ')
-    expect(screen.getByRole('region', { name: '読解ミニの城' })).toBeInTheDocument() // はじめは かんたん（城の上の説明はない）
+    expect(screen.getByRole('region', { name: '読解ミニの山' })).toBeInTheDocument() // はじめは かんたん（城の上の説明はない）
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
     fireEvent.click(screen.getByRole('option', { name: /^難関大/ }))
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
@@ -1841,16 +1841,16 @@ it('文法ページは城と今日の課題と「単元をえらんで自由に�
   navTo('文法チャレンジ')
   expect(screen.queryByLabelText('文法ゲーム')).toBeNull()
   expect(screen.queryByText('✏️ すぐ練習（5問）')).toBeNull()
-  expect(document.querySelector('.castle')).not.toBeNull()
+  expect(document.querySelector('.smap')).not.toBeNull()
   fireEvent.click(screen.getByText('📚 単元をえらんで自由に勉強'))
   // 自由に勉強はレベルごと（中1〜高校・入試）。はじめは城のレベル（中1）
   const lv = screen.getByRole('tablist', { name: 'レベル' })
   expect(within(lv).getByRole('tab', { name: '中1' })).toHaveAttribute('aria-selected', 'true')
   fireEvent.click(within(lv).getByRole('tab', { name: '入試' }))
   expect(within(screen.getByRole('group', { name: '入試の文法' })).getByRole('button', { name: /旧帝大/ })).toBeInTheDocument()
-  expect(document.querySelector('.castle')).toBeNull()
+  expect(document.querySelector('.smap')).toBeNull()
   fireEvent.click(screen.getByText('← 城にもどる'))
-  expect(document.querySelector('.castle')).not.toBeNull()
+  expect(document.querySelector('.smap')).not.toBeNull()
 })
 
 it('今日の課題が3つともクリアなら、課題の画面に「🎉 ぜんぶクリア！ ホームへ ▶」が出て、ホームにもどれる', async () => {
@@ -2035,7 +2035,7 @@ it('単語ゲームのページに単語の城：単元の1階目は10語の解�
   localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
   render(<App />)
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
-  const castle = screen.getByRole('region', { name: '単語の城' })
+  const castle = screen.getByRole('region', { name: '単語の海' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 単元1　1\/3/ }))
   const f = wordCastleFloors(['中1'])[0]
   expect(screen.queryByRole('button', { name: /5問に挑戦/ })).toBeNull() // 単語一覧はなく、いきなり問題から
