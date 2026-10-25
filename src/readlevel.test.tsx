@@ -73,7 +73,7 @@ describe('かんたんの短い読解も解いた本数を数える', () => {
     }
     fireEvent.click(screen.getByText('ほかの話を読む'))
     expect(screen.getAllByText(p.title).some((e) => e.closest('.short-item')?.classList.contains('short-done'))).toBe(true)
-    expect(screen.getByLabelText(`解いた話 1 / ${PASSAGES.length}本`).textContent).toBe(`1/${PASSAGES.length}`)
+    expect(screen.getByLabelText(`1 / ${PASSAGES.length} 階クリア`)).toBeInTheDocument() // 城の階の数
   })
 })
 

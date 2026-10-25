@@ -49,15 +49,6 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins }: Props) {
   if (!p) {
     return (
       <section className="card grammar">
-        <h2 className="short-head">
-          読解ミニ
-          <span className="fold-meta" aria-label={`解いた話 ${PASSAGES.filter((x) => done.includes(x.id)).length} / ${PASSAGES.length}本`}>
-            {PASSAGES.filter((x) => done.includes(x.id)).length}/{PASSAGES.length}
-          </span>
-        </h2>
-        <div className="zukan-pct short-pct" aria-hidden="true">
-          <span style={{ width: `${(PASSAGES.filter((x) => done.includes(x.id)).length / PASSAGES.length) * 100}%` }} />
-        </div>
         {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
         <Castle name="読解ミニの城" theme="green" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}

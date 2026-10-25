@@ -1155,11 +1155,11 @@ describe('App', () => {
     localStorage.clear()
     render(<App />)
     navTo('読解ステージ')
-    expect(screen.getByRole('heading', { name: /^読解ミニ/ })).toBeInTheDocument() // はじめは かんたん
+    expect(screen.getByRole('region', { name: '読解ミニの城' })).toBeInTheDocument() // はじめは かんたん（城の上の説明はない）
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
     fireEvent.click(screen.getByRole('option', { name: /^難関大/ }))
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
-    expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
+    expect(screen.queryByRole('heading', { name: /難関大の読解/ })).toBeNull() // 城の上の説明は出さない
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
     expect(screen.getByRole('option', { name: /^難関大/ }).textContent).toMatch(/0\/76本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
@@ -2004,7 +2004,7 @@ it('読解の難関大で、入試レベル（共通テスト〜国立医学部�
   const tiers = screen.getByRole('group', { name: '入試レベル' })
   fireEvent.click(within(tiers).getByRole('button', { name: /国立医学部/ }))
   expect(within(tiers).getByRole('button', { name: /国立医学部/ })).toHaveAttribute('aria-pressed', 'true')
-  expect(screen.getByText('📖 国立医学部レベルの読解')).toBeInTheDocument()
+  expect(screen.queryByText('📖 国立医学部レベルの読解')).toBeNull() // 城の上の説明は出さない
   expect(localStorage.getItem('eitan:exam-tier')).toBe('kokuritsu-med')
   expect(passagesForTier('kokuritsu-med').length).toBeGreaterThanOrEqual(2)
 })

@@ -207,11 +207,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   if (!p) {
     return (
       <section className="card grammar long-reading">
-        <h2>{title ?? '読解（入試形式）'}</h2>
+        {whole && <h2>{title ?? '読解（入試形式）'}</h2>}
         {whole && <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
-        <p className="stats-note">記号で答える入試形式の読解</p>
+        {whole && <p className="stats-note">記号で答える入試形式の読解</p>}
         {!whole && <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} />}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>

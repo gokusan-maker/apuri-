@@ -286,7 +286,6 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
   if (!unit && stampMode && castleOnly && !free) {
     return (
       <section className="card grammar">
-        <h2>📐 文法チャレンジ</h2>
         <Castle
           key={gcLevel}
           name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}

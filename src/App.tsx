@@ -10,7 +10,7 @@ import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
-import { CastleCollection, CastleTitleChip } from './CastleCollectView'
+import { CastleTitleChip } from './CastleCollectView'
 import { RareEggContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
@@ -1374,6 +1374,10 @@ function App() {
         pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
       }}
       onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
+      onCastleReward={(n) => {
+        setWallet((w) => Array.from({ length: n }).reduce<typeof w>((a) => addTicket(a), w))
+        pushToast([{ id: 'castle-collect', text: `🏰 城の制覇のごほうび！ 🎟ガチャチケット×${n}`, counter: 'answers', target: 0 }])
+      }}
       onQuestWin={() => {
         setWallet((w) => ({ ...addTicket(w), coins: w.coins + QUEST_COINS }))
         pushToast([{ id: 'quest', text: `👑 特別クエストの強敵をたおした！ 🪙${QUEST_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
@@ -1510,12 +1514,6 @@ function App() {
             }}
           />
           {buddyRow}
-          <CastleCollection
-            onReward={(n) => {
-              setWallet((w) => Array.from({ length: n }).reduce<typeof w>((a) => addTicket(a), w))
-              pushToast([{ id: 'castle-collect', text: `🏰 城の制覇のごほうび！ 🎟ガチャチケット×${n}`, counter: 'answers', target: 0 }])
-            }}
-          />
           <button
             className="list-link buddy-swap-link"
             onClick={() => {

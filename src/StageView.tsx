@@ -19,6 +19,7 @@ import { Castle } from './CastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
 import { BossArea, type AreaSpecial } from './BossAreaView'
 import { BossWorld } from './BossWorldView'
+import { CastleCollection } from './CastleCollectView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
@@ -41,6 +42,7 @@ type Props = {
   onUnivWin?: (boss: UnivBoss, first: boolean) => void // 大学入試の塔のボスに勝った（ごほうびはアプリ側）
   partner?: ComponentProps<typeof Boss>['partner'] // ボス戦にいっしょに出る相棒
   onRankBonus?: (coins: number) => void // ボス戦Sランクのおまけ
+  onCastleReward?: (tickets: number) => void // 城の制覇コレクションのごほうび（ボス部屋の世界地図の下に出す）
   onRushClear?: (ex: boolean) => void // ボスラッシュを全部たおした（ごほうびはアプリ側。ex は週末のEX）
   weekend?: boolean // 週末はボスラッシュEXが出る
   rushExDone?: boolean
@@ -73,7 +75,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin, onMarkWeak, startStage }: Props) {
+export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin, onMarkWeak, startStage, onCastleReward }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(() => (startStage ? (levels.flatMap((lv) => stagesOf(lv)).find((x) => x.id === startStage) ?? null) : null)) // 単語ゲームの城からえらんだステージはすぐ始める
@@ -542,6 +544,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             window.scrollTo?.({ top: 0 })
           }}
         />
+        {onCastleReward && <CastleCollection onReward={onCastleReward} />}
       </section>
     )
   // エリアに出現する特別なボス（今日のボス・とくべつイベント）
