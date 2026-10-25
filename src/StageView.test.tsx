@@ -374,3 +374,16 @@ it('ボス部屋：エリアの地図に今日の特別なボスが出現し、�
   fireEvent.click(within(area).getByRole('button', { name: /特別クエスト：/ }))
   expect(screen.getByText(/^👑 特別クエスト：/)).toBeInTheDocument()
 })
+
+it('ボスのエリアでは、ふつうのボスも地図の上をうろうろ。押すと戦える。位置は日ごとにかわる', async () => {
+  const { roamSpots } = await import('./bossroam')
+  expect(roamSpots(3, '2026-10-25')).toHaveLength(3)
+  expect(new Set(roamSpots(5, '2026-10-25').map((p) => `${p.x},${p.y}`)).size).toBe(5)
+  expect(roamSpots(5, '2026-10-25')).toEqual(roamSpots(5, '2026-10-25'))
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
+  const area = screen.getByRole('region', { name: '中学のエリア' })
+  fireEvent.click(within(area).getAllByRole('button', { name: /^うろうろしている/ })[0])
+  expect(screen.getByText('← にげる')).toBeInTheDocument()
+})

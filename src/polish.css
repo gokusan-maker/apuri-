@@ -3350,7 +3350,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .barea-deco { position: absolute; font-size: 1.4rem; }
 .barea-deco.d1 { left: 6%; top: 14%; }
 .barea-deco.d2 { right: 8%; top: 8%; }
-.barea-deco.d3 { left: 44%; top: 30%; }
+.barea-deco.d3 { left: 46%; top: 66%; }
 .barea-none { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 80%; margin: 0; padding: 8px 10px; border-radius: 12px; background: rgb(255 255 255 / 0.85); color: #44403c; font-size: 0.82rem; text-align: center; }
 .barea-spot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px; width: 34%; border: none; background: none; cursor: pointer; font: inherit; color: #1c1917; }
 .barea-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; font-size: 1.9rem; background: radial-gradient(circle, #fff 0 40%, #fde047 60%, transparent 72%); animation: barea-glow 1.4s ease-in-out infinite; }
@@ -3390,3 +3390,10 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .bworld-sub { margin-top: 1px; padding: 0 6px; border-radius: 6px; background: rgb(255 255 255 / 0.75); font-size: 0.66rem; font-weight: 700; }
 .bworld-spot.full .bworld-mark { background: #fde047; }
 .bworld-spot:active .bworld-mark { transform: scale(0.94); }
+.barea-land { height: 360px; }
+.barea-roam { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; width: 22%; padding: 0; border: none; background: none; cursor: pointer; font: inherit; animation: barea-wander 3.2s ease-in-out infinite; }
+.barea-roam-fig { display: block; width: 52px; height: 52px; }
+.barea-roam-fig > * { width: 100%; height: 100%; }
+.barea-roam-name { padding: 0 5px; border-radius: 6px; background: rgb(255 255 255 / 0.85); color: #1c1917; font-size: 0.62rem; font-weight: 800; white-space: nowrap; }
+.barea-roam.beaten { opacity: 0.75; }
+@keyframes barea-wander { 25% { translate: 6px -2px; } 50% { translate: 0 -4px; } 75% { translate: -6px -2px; } }

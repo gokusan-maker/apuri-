@@ -571,7 +571,22 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <button className="list-link boss-area-back" onClick={() => setArea(null)}>
               ← レベルをえらびなおす
             </button>
-            <BossArea name={groupLabel(group)} group={group} specials={specials} />
+            <BossArea
+              name={groupLabel(group)}
+              group={group}
+              specials={specials}
+              bosses={LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => ({
+                id: lv,
+                name: BOSSES[lv].name,
+                look: BOSSES[lv],
+                beaten: !!boss[lv],
+                golden: lv === goldenLevelOf(LEVELS, dayKey()),
+                onClick: () => {
+                  setFighting(lv)
+                  window.scrollTo?.({ top: 0 })
+                },
+              }))}
+            />
           </>
         )}
         {(() => {

@@ -1,17 +1,23 @@
 import type { BossGroup } from './bossfilter'
+import type { BossLook } from './boss'
+import { BossFigure } from './BossView'
+import { roamSpots } from './bossroam'
+import { dayKey } from './srs'
 
+export type AreaBoss = { id: string; name: string; look: BossLook; beaten: boolean; golden: boolean; onClick: () => void }
 export type AreaSpecial = { id: string; icon: string; name: string; badge?: string; aria?: string; onClick: () => void }
 
 // 出現位置（%）：地図の中にちらばる
 const SPOTS = [
-  { x: 22, y: 58 },
-  { x: 74, y: 40 },
-  { x: 48, y: 76 },
-  { x: 80, y: 78 },
+  { x: 20, y: 50 },
+  { x: 80, y: 50 },
+  { x: 35, y: 68 },
+  { x: 66, y: 68 },
 ]
 
 // ボス部屋のエリアの地図：えらんだレベルの土地に、今日の特別なボスが出現する
-export function BossArea({ name, group, specials }: { name: string; group: BossGroup; specials: AreaSpecial[] }) {
+export function BossArea({ name, group, specials, bosses = [] }: { name: string; group: BossGroup; specials: AreaSpecial[]; bosses?: AreaBoss[] }) {
+  const roam = roamSpots(bosses.length, dayKey())
   return (
     <section className={`barea barea-${group}`} aria-label={`${name}のエリア`}>
       <p className="barea-title">🗺 {name}のエリア</p>
@@ -24,7 +30,19 @@ export function BossArea({ name, group, specials }: { name: string; group: BossG
         <span className="barea-deco d1" aria-hidden="true">{DECO[group][0]}</span>
         <span className="barea-deco d2" aria-hidden="true">{DECO[group][1]}</span>
         <span className="barea-deco d3" aria-hidden="true">{DECO[group][2]}</span>
-        {specials.length === 0 && <p className="barea-none">いまは特別なボスはいない…（時間や曜日で出現するよ）</p>}
+        {bosses.slice(0, roam.length).map((b, i) => (
+          <button key={b.id} className={`barea-roam${b.beaten ? ' beaten' : ''}`} style={{ left: `${roam[i].x}%`, top: `${roam[i].y}%`, animationDelay: `${i * 0.4}s` }} aria-label={`うろうろしている${b.name}と戦う${b.beaten ? '（撃破ずみ）' : ''}`} onClick={b.onClick}>
+            <span className="barea-roam-fig">
+              <BossFigure hit={false} look={b.look} />
+            </span>
+            <small className="barea-roam-name">
+              {b.beaten ? '👑' : ''}
+              {b.golden ? '✨' : ''}
+              {b.name}
+            </small>
+          </button>
+        ))}
+        {specials.length === 0 && bosses.length === 0 && <p className="barea-none">いまは特別なボスはいない…（時間や曜日で出現するよ）</p>}
         {specials.slice(0, SPOTS.length).map((s, i) => (
           <button key={s.id} className="barea-spot" style={{ left: `${SPOTS[i].x}%`, top: `${SPOTS[i].y}%` }} aria-label={s.aria} onClick={s.onClick}>
             <span className="barea-appear" aria-hidden="true">
