@@ -3449,6 +3449,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-part-time-job',
+    title: 'Should High School Students Work Part-Time?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, it is common for high school students to have part-time jobs. They work in cafés, supermarkets, and convenience stores after school or on weekends. Some schools, however, do not allow students to work, ( A ) that it takes time away from their studies.",
+      "Those who support part-time work say that it teaches lessons that are hard to learn in a classroom. Students learn how to be on time, how to speak politely to customers, and how to cooperate with adults they have never met before. Earning their own money also helps them understand ( B ) hard it is to make a living, and many become more careful about how they spend.",
+      "On the other hand, working too many hours can cause problems. Students who come home late may be too tired to do their homework or may not get enough sleep. Some studies suggest that grades tend to fall when students work more than about fifteen hours a week.",
+      "It seems, then, that the question is not simply whether students should work, but how much. A few hours a week may bring real benefits, ( C ) long shifts every day are likely to harm both health and learning. Students, parents, and schools should talk together to find the right balance.",
+    ],
+    ja: [
+      '多くの国では、高校生がアルバイトをするのはふつうのことだ。彼らは放課後や週末に、カフェやスーパーやコンビニで働く。しかし、勉強の時間がうばわれると主張して、生徒が働くことを認めていない学校もある。',
+      'アルバイトを支持する人々は、教室では学びにくいことを教えてくれると言う。生徒は時間を守る方法、お客さんにていねいに話す方法、そして会ったことのない大人と協力する方法を学ぶ。また、自分でお金をかせぐことは、生活費をかせぐのがどれほど大変かを理解する助けになり、多くの生徒はお金の使い方に慎重になる。',
+      'その一方で、働く時間が長すぎると問題が起こりうる。帰りがおそくなる生徒は、つかれて宿題ができなかったり、十分にねむれなかったりするかもしれない。生徒が週におよそ15時間以上働くと成績が下がる傾向があることを示す研究もある。',
+      'そうすると、問題は単に生徒が働くべきかどうかではなく、どれだけ働くかであるようだ。週に数時間なら本当の利点がありうるが、一方で毎日の長いシフトは健康にも学習にも害をおよぼしやすい。生徒・保護者・学校がいっしょに話しあって、ちょうどよいバランスを見つけるべきである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['arguing', 'argue', 'argued them', 'to arguing'], answer: 0, why: '付帯状況・理由を表す分詞構文 arguing that ～（～と主張して）。主語 Some schools は「主張する」側なので現在分詞。' },
+      { id: 'B', choices: ['how', 'what', 'that', 'which'], answer: 0, why: 'how ＋形容詞（hard）で「どれほど～か」。what・that・which は形容詞の前に置いてこの意味を作れない。' },
+      { id: 'C', choices: ['while', 'despite', 'because of', 'instead of'], answer: 0, why: 'うしろが文（long shifts … are likely to harm …）なので、対比を表す接続詞 while「～である一方で」。ほかは前置詞の働きでうしろに文を続けられない。' },
+    ],
+    tf: [
+      { statement: '生徒がアルバイトをするのを認めていない学校もある。', answer: true, why: '第1段落 Some schools, however, do not allow students to work。' },
+      { statement: '研究によれば、週15時間以上働くと成績が上がる傾向がある。', answer: false, why: '第3段落 grades tend to fall when students work more than about fifteen hours a week。' },
+      { statement: '筆者は、大切なのはどれだけ働くかだと考えている。', answer: true, why: '第4段落 the question is not simply whether students should work, but how much。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest at the end of the passage?', choices: ['Students, parents, and schools should talk together to find a balance.', 'All students should work long shifts every day.', 'Schools should ban part-time jobs completely.', 'Students should stop doing homework.'], answer: 0, why: '第4段落 Students, parents, and schools should talk together to find the right balance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
