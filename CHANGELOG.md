@@ -2035,4 +2035,4 @@
 - 2026-10-25: 高3（共通テスト）レベルの長文「The New Popularity of Second-Hand Goods」（中古品の人気・210語）を追加
 - 2026-10-25: TOEICレベルの専用長文「An Email About an Invoice Error」（請求書の訂正メール）を追加
 - 2026-10-25: TOEICレベルの専用長文「Notice: Customer Survey at Harbor Hotel」（ホテルのアンケート案内・217語）を追加
-- 2026-10-25: 高3（共通テスト）レベルの長文「Should High School Students Work Part-Time?」（高校生のアルバイト・226語）を追加
+- 2026-10-25: 高3（共通テスト）レベルの長文「Should High School Students Work Part-Time?」（高校生のアルバイト・216語）を追加
