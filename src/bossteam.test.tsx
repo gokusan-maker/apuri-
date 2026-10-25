@@ -176,3 +176,19 @@ it('ボスの反撃は4問ごと、番の次のなかまへ。体力0のなか�
   expect(r).toEqual({ hp: { ...hp, word: 0 }, ko: true })
   expect(reviveOne(r.hp).word).toBe(MEMBER_HP / 2)
 })
+
+it('応援なかまのタイプでパッシブ効果：⚔攻撃+2・🛡最初からシールド・💪体力+10・📣ゲージ・⚡会心の時間', async () => {
+  const { supportEffects } = await import('./chartype')
+  expect(supportEffects(['attack', 'attack', 'guts'])).toEqual({ atk: 4, shield: false, gauge: 0, critMs: 0, hp: 10 })
+  expect(supportEffects(['shield', 'support', 'speed'])).toEqual({ atk: 0, shield: true, gauge: 1, critMs: 1000, hp: 0 })
+  const { BossSupportContext } = await import('./bossteam')
+  render(
+    <BossTeamContext.Provider value={team}>
+      <BossSupportContext.Provider value={['attack', 'guts', 'shield']}>
+        <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+      </BossSupportContext.Provider>
+    </BossTeamContext.Provider>,
+  )
+  expect(screen.getByLabelText(/応援なかまの効果：アタック型・ねばり型・シールド型/).textContent).toContain('⚔+2')
+  expect(screen.getByRole('progressbar', { name: 'モチまるの体力' })).toHaveAttribute('aria-valuemax', '50')
+})

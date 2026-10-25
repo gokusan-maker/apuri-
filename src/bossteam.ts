@@ -1,3 +1,4 @@
+import type { CharType } from './chartype'
 // ボス戦のチーム：単語・文法・読解のなかま（App が絵と名前をわたす）
 import { createContext, type ReactNode } from 'react'
 import type { TeamRole } from './boss'
@@ -7,6 +8,8 @@ type AnswerFn = (correct: boolean, xp: number, wordId: string, source: Source) =
 // answer：その番のなかまが答えた分の XP をそのなかまへ（単語→相棒・文法→ことばモンスター・読解→竜）
 export type BossTeam = Record<TeamRole, { name: string; fig: ReactNode; answer?: AnswerFn; level?: number }>
 export const BossTeamContext = createContext<BossTeam | null>(null)
+// 応援なかま（相棒以外）のタイプ。ボス戦でパッシブ効果になる
+export const BossSupportContext = createContext<CharType['id'][]>([])
 export const TEAM_LABEL: Record<TeamRole, string> = { word: '単語', grammar: '文法', reading: '読解' }
 export const TEAM_ICON: Record<TeamRole, string> = { word: '🔤', grammar: '📐', reading: '📖' }
 // 負けたときのチームのはげまし（1人1行）

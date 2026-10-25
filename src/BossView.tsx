@@ -1,3 +1,4 @@
+import { CHAR_TYPES, supportEffects } from './chartype'
 import type { LongPassage } from './longreading'
 import type { GrammarUnit } from './grammar'
 import { learnProverb, PROVERBS } from './proverbs'
@@ -8,7 +9,7 @@ import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingb
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
-import { BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
+import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
@@ -186,6 +187,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
   // チームバトル：App が単語・文法・読解のなかまをわたしているときは、3体が順番に攻撃する（読解ボスは、読解の番に本文の問題）
   const team = useContext(BossTeamContext)
+  const supportTypes = useContext(BossSupportContext)
+  const sup = supportEffects(supportTypes) // 応援なかまのタイプの効果
+  const memberMax = MEMBER_HP + sup.hp
   const teamOn = !!team
   const teamWords = words.length > 0 ? words : WORDS.filter((w) => w.level === level)
   const readQs = () => readingBossQs(level, rnd, BOSS_QUESTIONS, exam?.passages)
@@ -200,11 +204,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
   const [atk, setAtk] = useState<{ at: number; lose: number; who?: TeamRole; dmg?: number; counter?: boolean } | null>(null) // ボスのこうげき（演出用）。チームバトルでは受けたなかまとダメージ
-  const [teamHp, setTeamHp] = useState<TeamHp>(fullTeamHp) // チームバトル：なかまの体力
+  const [teamHp, setTeamHp] = useState<TeamHp>(() => fullTeamHp(memberMax)) // チームバトル：なかまの体力
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
   const [crit, setCrit] = useState(false)
-  const [gauge, setGauge] = useState(0)
+  const [gauge, setGauge] = useState(() => Math.min(GAUGE_MAX - 1, sup.gauge))
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
   const lv = skillLevel(partner?.skillUses ?? 0)
   const weak = weakOf(baseLook.name)
@@ -224,7 +228,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [tipAt, setTipAt] = useState<number | null>(null) // 読解のヒント（解説・根拠の文）を開いた問題の番号
   const [proverb, setProverb] = useState<number | null>(null) // たおしたときに教えてくれたことわざ
   const [revenge, setRevenge] = useState(false) // リベンジ成功
-  const [shield, setShield] = useState(false) // ことばの盾（3問連続正解でたまる）
+  const [shield, setShield] = useState(sup.shield) // ことばの盾（3問連続正解でたまる。シールド型の応援なかまがいると最初から）
   const [shieldUsed, setShieldUsed] = useState(-1) // 盾を使った問題の番号
   const [sPrize, setSPrize] = useState<ReturnType<typeof sRouletteOf> | null>(null)
   const [minion, setMinion] = useState<'none' | 'here' | 'beaten'>('none') // 子分
@@ -277,7 +281,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const ms = nowMs() - shownAt.current
       if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
-      const critical = isCritical(ms, (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow)
+      const critical = isCritical(ms, (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs)
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
@@ -296,7 +300,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setTrioAt(index)
       }
       const atk = teamOn && 'team' in q && !downTurn ? levelAttack(team![q.team as TeamRole].level) : 0 // なかまのレベルの攻撃力
-      const nextHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
+      const nextHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power - sup.atk
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (minion === 'here') {
@@ -467,7 +471,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setIndex(0)
     setHp(maxHp)
     setHearts(startHearts)
-    setTeamHp(fullTeamHp())
+    setTeamHp(fullTeamHp(memberMax))
     setCombo(0)
     setPicked(null)
     setHit(false)
@@ -790,7 +794,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               onClick={() => {
                 if (!onSpend(CONTINUE_COST)) return
                 setHearts(HEARTS)
-                setTeamHp(fullTeamHp())
+                setTeamHp(fullTeamHp(memberMax))
                 setContinued(true)
               }}
             >
@@ -845,8 +849,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               <div className="boss-team" role="group" aria-label="チーム">
                 {TEAM_ORDER.map((r) => (
                   <span key={r} className={`boss-team-m team-${r}${q.team === r ? ' on' : ''}${teamHp[r] <= 0 ? ' down' : ''}${atk && atk.at === index && picked !== null && atk.who === r && (atk.dmg ?? 0) > 0 ? ' hurt' : ''}`} aria-current={q.team === r ? 'true' : undefined}>
-                    <span className="boss-team-hp" role="progressbar" aria-label={`${team![r].name}の体力`} aria-valuemin={0} aria-valuemax={MEMBER_HP} aria-valuenow={teamHp[r]}>
-                      <i style={{ width: `${(teamHp[r] / MEMBER_HP) * 100}%` }} />
+                    <span className="boss-team-hp" role="progressbar" aria-label={`${team![r].name}の体力`} aria-valuemin={0} aria-valuemax={memberMax} aria-valuenow={teamHp[r]}>
+                      <i style={{ width: `${(teamHp[r] / memberMax) * 100}%` }} />
                     </span>
                     {teamHp[r] <= 0 && <b className="boss-team-down" aria-hidden="true">💫</b>}
                     {atk && atk.at === index && picked !== null && atk.who === r && (atk.dmg ?? 0) > 0 && (
@@ -873,6 +877,16 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               {trioAt === index && picked !== null && (
                 <p className="boss-trio-pop" role="status">
                   🤝 合体技 トリプルアタック！ +{TEAM_COMBO_DAMAGE}
+                </p>
+              )}
+              {supportTypes.length > 0 && (
+                <p className="boss-support" aria-label={`応援なかまの効果：${supportTypes.map((t) => CHAR_TYPES[t].name).join('・')}`}>
+                  🐾 応援
+                  {sup.atk > 0 && <span>⚔+{sup.atk}</span>}
+                  {sup.shield && <span>🛡</span>}
+                  {sup.gauge > 0 && <span>📣+{sup.gauge}</span>}
+                  {sup.critMs > 0 && <span>⚡+{sup.critMs / 1000}秒</span>}
+                  {sup.hp > 0 && <span>💪+{sup.hp}</span>}
                 </p>
               )}
               <p className="boss-team-turn">

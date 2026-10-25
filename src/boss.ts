@@ -440,7 +440,7 @@ export const CHARGE_HIT = 35 // ためこうげきのとき
 export const COUNTER_EVERY = 4
 export const COUNTER_DMG = 10
 export type TeamHp = Record<TeamRole, number>
-export const fullTeamHp = (): TeamHp => ({ word: MEMBER_HP, grammar: MEMBER_HP, reading: MEMBER_HP })
+export const fullTeamHp = (max = MEMBER_HP): TeamHp => ({ word: max, grammar: max, reading: max })
 export const isCounterTurn = (index: number) => index % COUNTER_EVERY === COUNTER_EVERY - 1
 // こうげきを受けるなかま：番のなかま（ダウンしていたら、のこっているなかま）。みんなダウンなら undefined
 export function hitTarget(hp: TeamHp, prefer: TeamRole): TeamRole | undefined {

@@ -14,3 +14,11 @@ export const CHAR_TYPES: Record<CharType['id'], CharType> = {
 const BY_SKILL: Record<SkillId, CharType['id']> = { fire: 'attack', foxfire: 'attack', guard: 'shield', revive: 'guts', cheer: 'support', claw: 'speed' }
 
 export const typeOf = (species: string | undefined): CharType => CHAR_TYPES[BY_SKILL[skillOf(species).id]]
+
+// ボス戦の応援なかま（相棒以外の上位3体）のタイプで、パッシブ効果
+export type SupportEffects = { atk: number; shield: boolean; gauge: number; critMs: number; hp: number }
+export const SUPPORT_MAX = 3
+export function supportEffects(types: CharType['id'][]): SupportEffects {
+  const n = (t: CharType['id']) => types.filter((x) => x === t).length
+  return { atk: n('attack') * 2, shield: n('shield') > 0, gauge: n('support'), critMs: n('speed') * 1000, hp: n('guts') * 10 }
+}

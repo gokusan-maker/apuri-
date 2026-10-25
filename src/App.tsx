@@ -4,7 +4,7 @@ import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { PlayContext, type PlayRegister } from './playing'
 import { todayReading, todayReadingTitle, trimForToday, TODAY_READING_QS } from './todayread'
-import { BossTeamContext, type BossTeam } from './bossteam'
+import { BossSupportContext, BossTeamContext, type BossTeam } from './bossteam'
 import type { LongPassage } from './longreading'
 import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
@@ -17,6 +17,7 @@ import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
 import { COURSES, courseOf, courseReady } from './wordcourse'
+import { SUPPORT_MAX, typeOf } from './chartype'
 import { EXAM_TIERS, loadExamTier, passagesForTier, saveExamTier } from './examtier'
 import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
@@ -627,6 +628,17 @@ function App() {
     grammar: { name: buddyName('grammar', buddies.grammar), fig: <BuddyFigure track="grammar" buddy={buddies.grammar} />, answer: onAnswerTrack('grammar'), level: buddyLevel(buddies.grammar).level },
     reading: { name: buddyName('reading', buddies.reading), fig: <BuddyFigure track="reading" buddy={buddies.reading} />, answer: onAnswerTrack('reading'), level: buddyLevel(buddies.reading).level },
   }
+
+  // ボス戦の応援なかま：相棒以外で生まれている子のうち、レベルの高い3体のタイプ
+  const supportTypes = useMemo(
+    () =>
+      party.members
+        .filter((m, i) => i !== party.active && formOf(m).stage >= 1)
+        .sort((a, b) => b.xp - a.xp)
+        .slice(0, SUPPORT_MAX)
+        .map((m) => typeOf(m.species).id),
+    [party],
+  )
 
   function gainXp(raw: number, source: Source | null) {
     const amount = boosted(raw, moodFull(moodMeter, today)) // ごきげんMAXの日は1.2倍
@@ -1420,6 +1432,7 @@ function App() {
   return (
     <PlayContext.Provider value={playRegister}>
     <BossTeamContext.Provider value={bossTeam}>
+    <BossSupportContext.Provider value={supportTypes}>
     <main className="app">
       <header>
         <div className="top">
@@ -2326,6 +2339,7 @@ function App() {
         ))}
       </nav>
     </main>
+    </BossSupportContext.Provider>
     </BossTeamContext.Provider>
     </PlayContext.Provider>
   )
