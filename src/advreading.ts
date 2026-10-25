@@ -1997,8 +1997,8 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: '難関大（評論）',
     paragraphs: [
       "We tend to think of maps as neutral pictures of the world, simple copies of what is really there. Yet every flat map of the Earth involves a compromise. Because the planet is round, it cannot be spread onto a flat surface without stretching or tearing it ( A ). Mapmakers must therefore decide which features to keep accurate and which to sacrifice.",
-      "The most famous example is the projection created by Gerardus Mercator in 1569. His map kept the angles between directions correct, which made it extremely useful for sailors steering across the ocean. The price, however, was that areas far from the equator appear much larger than they really are. On such a map, Greenland looks roughly the same size as Africa, ( B ) Africa is in fact about fourteen times larger.",
-      "Such distortions are not merely technical details. Because many people grow up seeing one kind of map, it can quietly shape their sense of which regions of the world are large and important. None of this means that maps are useless or dishonest. It means that a map answers a particular question, and that we should ask what question it was designed to answer ( C ) we accept the picture it gives us.",
+      "The most famous example is the projection created by Gerardus Mercator in 1569. His map kept the angles between directions correct, which made it extremely useful for sailors steering across the ocean. The price, however, was that areas far from the equator appear much larger than they really are. On such a map, Greenland looks roughly the same size as Africa, ( B ) is in fact about fourteen times larger.",
+      "Such distortions are not merely technical details. Because many people grow up seeing one kind of map, it can quietly shape their sense of which regions of the world are large and important. None of this means that maps are useless or dishonest. It means that a map answers a particular question, and that we should ask what question it was designed to answer before ( C ) the picture it gives us.",
     ],
     ja: [
       '私たちは地図を、世界をかたよりなく写した絵、つまり実際にあるものの単純な写しだと考えがちである。しかし地球の平らな地図はどれも、ある種の妥協をふくんでいる。地球は丸いので、どこかを引きのばしたり切りさいたりせずに平らな面に広げることはできないのだ。したがって地図を作る人は、どの特徴を正確に保ち、どれをぎせいにするかを決めなければならない。',
@@ -2007,8 +2007,8 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['somewhere', 'nowhere', 'anyhow', 'already'], answer: 0, why: '「どこかを引きのばしたり切りさいたりせずには」なので somewhere。' },
-      { id: 'B', choices: ['although', 'because', 'unless', 'so that'], answer: 0, why: '「同じ大きさに見えるが、実際は14倍大きい」という逆接なので although。' },
-      { id: 'C', choices: ['before', 'after', 'since', 'until'], answer: 0, why: '「受け入れる前に問うべきだ」なので before。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'it'], answer: 0, why: 'コンマのあとで Africa を説明し、あとに動詞 is が続くので関係代名詞 which（非制限用法）。what は先行詞をとらない、who は人、it では文が接続詞なしでつながってしまう。' },
+      { id: 'C', choices: ['accepting', 'accept', 'accepted', 'to accept'], answer: 0, why: '前置詞 before のあとは動名詞（～ing）。before accepting「受け入れる前に」。' },
     ],
     tf: [
       { statement: '筆者は、平らな地図はどれも何らかの妥協をふくんでいると述べている。', answer: true, why: '第1段落 every flat map of the Earth involves a compromise。' },
@@ -2333,7 +2333,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: '高校入試（体験文）',
     paragraphs: [
       "I have been on the badminton team for two years. Last summer, I played in the city tournament. I practiced harder than anyone else, so I was sure that I would win the first match. However, my opponent was a first-year student who was much ( A ) than me. I lost the match in only twenty minutes.",
-      "After the match, I sat alone in the corner of the gym and could not stop crying. Then the girl who beat me came over. She said, \"Your smash was really strong. I was afraid of it the whole time.\" I was surprised. I had thought only about my mistakes, but she had seen my strong point. We talked for a while, and she told me how she practiced her footwork every morning ( B ) school.",
+      "After the match, I sat alone in the corner of the gym and could not stop crying. Then the girl who beat me came over. She said, \"Your smash was really strong. I was afraid of it the whole time.\" I was surprised. I had thought only about my mistakes, but she had seen my strong point. We talked for a while, and she told me how she practiced her footwork every morning before ( B ) to school.",
       "Since that day, I have started practicing footwork, too. I still lose sometimes, but I am not afraid of losing anymore. A match I lose can teach me more than a match I win. Next summer, I want to play against her again and show her ( C ) much I have improved.",
     ],
     ja: [
@@ -2343,7 +2343,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['faster', 'fast', 'fastest', 'more fast'], answer: 0, why: 'than があるので比較級。fast の比較級は faster。much は比較級を強める。' },
-      { id: 'B', choices: ['before', 'during', 'between', 'since'], answer: 0, why: '「学校の前に（登校前に）」なので before。' },
+      { id: 'B', choices: ['going', 'go', 'went', 'to go'], answer: 0, why: '前置詞 before のあとは動名詞（～ing）。before going to school「学校に行く前に」。' },
       { id: 'C', choices: ['how', 'what', 'so', 'very'], answer: 0, why: 'how much ～「どれだけ～」。show her の目的語になる間接疑問。' },
     ],
     tf: [
@@ -2390,7 +2390,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     paragraphs: [
       "In the forests of Central and South America, long lines of ants can be seen carrying pieces of leaves many times larger than their own heads. These are leafcutter ants. It might seem natural to assume that they eat the leaves, but they do not. Instead, they use the leaves to grow a fungus, ( A ) serves as the main food for the colony.",
       "Inside the underground nest, workers chew the leaf pieces into a soft paste and spread it in special chambers. The fungus grows on this paste, and the ants feed on parts of it. The work is divided among workers of different sizes. The largest ants defend the colony, medium-sized ones cut and carry leaves, and the smallest ones tend the delicate fungus gardens. A mature colony can contain millions of individuals, ( B ) it one of the most complex societies in the animal world.",
-      "Like human farmers, the ants must protect their crop from pests. A harmful fungus can invade the gardens and destroy them. Researchers have found that many leafcutter ants carry bacteria on their bodies that produce chemicals able to stop the growth of this invader. In other words, the ants appear to have been using a kind of natural antibiotic long ( C ) humans discovered such medicines.",
+      "Like human farmers, the ants must protect their crop from pests. A harmful fungus can invade the gardens and destroy them. Researchers have found that many leafcutter ants carry bacteria on their bodies that produce chemicals able to stop the growth of this invader. In other words, the ants appear to have been using a kind of natural antibiotic long before humans ( C ) such medicines.",
     ],
     ja: [
       '中南米の森では、自分の頭の何倍も大きい葉のかけらを運ぶアリの長い列が見られる。これがハキリアリだ。アリが葉を食べると考えるのは自然に思えるかもしれないが、そうではない。アリは葉を使って菌を育て、その菌がコロニーの主な食べ物になるのである。',
@@ -2400,7 +2400,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで a fungus を説明する非制限用法の which。that はコンマのあとに使えない。' },
       { id: 'B', choices: ['making', 'made', 'to make', 'makes'], answer: 0, why: '分詞構文「そしてそれは～にする」。前の内容の結果を表すので making。' },
-      { id: 'C', choices: ['before', 'after', 'since', 'until'], answer: 0, why: 'long before ～「～するずっと前に」。' },
+      { id: 'C', choices: ['discovered', 'discovering', 'to discover', 'discovers'], answer: 0, why: 'long before のあとは主語＋動詞の文。過去のことなので過去形 discovered。humans は複数なので discovers は使えない。' },
     ],
     tf: [
       { statement: 'ハキリアリは、運んだ葉をそのまま食べる。', answer: false, why: '第1段落 It might seem natural to assume that they eat the leaves, but they do not。' },
