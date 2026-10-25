@@ -3659,6 +3659,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-gratitude',
+    title: 'The Underrated Power of Saying Thank You',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most of us were taught as children to say 'thank you,' yet as adults we often forget to express gratitude, especially to people we see every day. We may feel thankful toward a teacher who once helped us or a friend who supported us through a hard time, but we rarely tell them so. Psychologists have recently begun to ask why this is ( A ) and what we lose as a result.",
+      "In one series of studies, participants were asked to write a short letter of thanks to someone who had made a difference in their lives. Before sending it, they predicted how the receiver would feel. Most of them expected that the letter would make the person only slightly happy and that the person might even feel awkward. In reality, the receivers reported feeling far happier ( B ) the writers had imagined, and very few felt uncomfortable.",
+      "Why do we underestimate the effect of our thanks? One explanation is that we focus too much on how well we express ourselves. We worry that our words will sound clumsy, while the receiver pays attention mainly to the warmth behind them.",
+      "The lesson is simple. A few sincere words of thanks cost almost nothing, yet they can brighten someone's day and strengthen the relationship. If someone comes to mind as you read this, it might be worth ( C ) them a short message today.",
+    ],
+    ja: [
+      '私たちのほとんどは子どものころ「ありがとう」と言うように教わったが、大人になると、とくに毎日会う人に対して、感謝を伝えるのを忘れがちだ。かつて助けてくれた先生や、つらい時期を支えてくれた友人に感謝の気持ちをいだいていても、それを伝えることはめったにない。心理学者たちは最近、なぜそうなるのか、そしてその結果私たちが何を失っているのかを問いはじめた。',
+      'ある一連の研究で、参加者は、自分の人生に大きな影響を与えてくれた人に短い感謝の手紙を書くよう求められた。送る前に、彼らは受けとった人がどう感じるかを予想した。そのほとんどは、手紙で相手はほんの少しうれしくなるだけで、気まずく感じるかもしれないとさえ予想した。実際には、受けとった人は書いた人が想像していたよりもはるかにうれしく感じたと答え、居心地悪く感じた人はほとんどいなかった。',
+      'なぜ私たちは自分の感謝の効果を低く見積もるのだろうか。1つの説明は、私たちが自分の気持ちをどれほどうまく表現できるかに気をとられすぎるということだ。私たちは自分の言葉がぎこちなく聞こえることを心配するが、受けとる側はおもに言葉のうしろにある温かさに注意を向けているのである。',
+      '教訓は単純だ。心からの感謝の言葉はほとんど何も費用がかからないのに、だれかの1日を明るくし、関係を強めることができる。これを読みながらだれかの顔が思いうかんだなら、今日その人に短いメッセージを送ってみる価値があるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'that', 'very'], answer: 0, why: 'why this is so で「なぜそうなのか」。so は前の内容を受けて補語になる。such・very は形容詞や名詞の前で使い、that だけでは補語にならない。' },
+      { id: 'B', choices: ['than', 'as', 'that', 'then'], answer: 0, why: '比較級 far happier のあとで比べる相手を示すのは than。' },
+      { id: 'C', choices: ['sending', 'to send', 'send', 'sent'], answer: 0, why: 'be worth ～ing で「～する価値がある」。worth のあとは動名詞。' },
+    ],
+    tf: [
+      { statement: '研究の参加者の多くは、手紙で相手がとても喜ぶと予想した。', answer: false, why: '第2段落 Most of them expected that the letter would make the person only slightly happy。' },
+      { statement: '実際には、手紙を受けとった人の多くは予想以上に喜んだ。', answer: true, why: '第2段落 the receivers reported feeling far happier than the writers had imagined。' },
+      { statement: '筆者によれば、受けとる側はおもに言葉のうまさに注意を向ける。', answer: false, why: '第3段落 the receiver pays attention mainly to the warmth behind them。' },
+    ],
+    qa: [
+      { q: 'Why do people underestimate the effect of their thanks, according to the passage?', choices: ['They focus too much on how well they express themselves.', 'They think thank-you letters are too expensive.', 'They believe receivers do not read letters.', 'They forget the names of the people who helped them.'], answer: 0, why: '第3段落 we focus too much on how well we express ourselves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
