@@ -2983,3 +2983,7 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .boss-group { display: flex; gap: 6px; margin: 4px 0 6px; }
 .boss-group-btn { flex: 1; min-height: 40px; padding: 6px 4px; border-radius: 999px; border: 2px solid color-mix(in srgb, var(--muted) 25%, transparent); background: var(--card); color: var(--fg); font: inherit; font-weight: 800; font-size: 0.8rem; cursor: pointer; white-space: nowrap; }
 .boss-group-btn.on { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+
+/* 読解のヒント（2択にしぼる） */
+.read-hint.pill-btn { display: inline-flex; margin: 6px auto 0; font-size: 0.85rem; min-height: 34px; padding: 4px 14px; }
+.choice.hinted-out, .long-choice.hinted-out { opacity: 0.3; text-decoration: line-through; }

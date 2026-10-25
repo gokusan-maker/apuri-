@@ -7,6 +7,7 @@ import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { WORDS, type Word } from './words'
 import { GameTile } from './GameTileView'
+import { hintHidden } from './readhint'
 
 const lookup = makeLookup(WORDS)
 
@@ -28,6 +29,7 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
   const [score, setScore] = useState(0)
   const [showJa, setShowJa] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
+  const [hint, setHint] = useState(false) // この問題でヒントを使った
 
   const inApp = useContext(PlayContext) !== null // App の中では、上の「ほかの問題をえらぶ」で一覧へもどる
   usePlaying(!!p && !onClose, () => setP(null)) // 今日の課題（onClose）は今日の課題のバーがある
@@ -37,6 +39,7 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
     setGloss(null)
     setStep(0)
     setPicked(null)
+    setHint(false)
     setScore(0)
     setShowJa(false)
   }
@@ -142,13 +145,15 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
           <div className="choices">
             {q.choices.map((c, i) => {
               let cls = 'choice'
+              const out = hint && picked === null && hintHidden(q.choices.length, q.answer).includes(i)
               if (picked !== null && i === q.answer) cls += ' correct'
               else if (picked === i) cls += ' wrong'
+              if (out) cls += ' hinted-out'
               return (
                 <button
                   key={c}
                   className={cls}
-                  disabled={picked !== null}
+                  disabled={picked !== null || out}
                   onClick={() => {
                     setPicked(i)
                     const ok = i === q.answer
@@ -164,10 +169,16 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
               )
             })}
           </div>
+          {picked === null && !hint && q.choices.length > 2 && (
+            <button className="list-link pill-btn pill-gold read-hint" onClick={() => setHint(true)}>
+              💡 ヒント（2択にしぼる）
+            </button>
+          )}
           {picked !== null && (
             <button
               className="flip go-next"
               onClick={() => {
+                setHint(false)
                 setPicked(null)
                 setStep(step + 1)
                 if (step + 1 === p.questions.length) {

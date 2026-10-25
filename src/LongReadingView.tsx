@@ -13,6 +13,7 @@ import { playCorrect, playWrong } from './sound'
 import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
+import { hintHidden } from './readhint'
 
 type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
@@ -95,6 +96,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
+  const [hints, setHints] = useState<string[]>([]) // ヒントを使った空所
   const [record, setRecord] = useState(loadLongRecord)
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
@@ -133,6 +135,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
     const d = loadLongDraft(x.id)
     setStartAt(nowMs())
     setP(x)
+    setHints([])
     setBlanks(d?.blanks ?? {})
     setTf(d?.tf ?? {})
     setPicks(d?.picks ?? [])
@@ -543,8 +546,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
             {b.choices.map((c, i) => (
               <button
                 key={c}
-                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${(done || (instant && blanks[b.id] !== undefined)) && i === b.answer ? ' answer' : ''}`}
-                disabled={done || (instant && blanks[b.id] !== undefined)}
+                className={`long-choice${blanks[b.id] === i ? ' picked' : ''}${(done || (instant && blanks[b.id] !== undefined)) && i === b.answer ? ' answer' : ''}${!done && hints.includes(b.id) && hintHidden(b.choices.length, b.answer).includes(i) ? ' hinted-out' : ''}`}
+                disabled={done || (instant && blanks[b.id] !== undefined) || (hints.includes(b.id) && hintHidden(b.choices.length, b.answer).includes(i))}
                 aria-pressed={blanks[b.id] === i}
                 onClick={() => setBlanks({ ...blanks, [b.id]: i })}
               >
@@ -552,6 +555,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               </button>
             ))}
           </div>
+          {!done && blanks[b.id] === undefined && !hints.includes(b.id) && b.choices.length > 2 && (
+            <button className="list-link pill-btn pill-gold read-hint" aria-label={`( ${b.id} ) のヒント`} onClick={() => setHints([...hints, b.id])}>
+              💡 ヒント
+            </button>
+          )}
           {(done || (instant && blanks[b.id] !== undefined)) && (
             <p className={`long-why${markNow(blanks[b.id] === b.answer)}`}>
               {blanks[b.id] === b.answer ? '⭕' : '❌'} 正解 {MARKS[b.answer]}（{b.choices[b.answer]}）：{b.why}
