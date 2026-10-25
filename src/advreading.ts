@@ -2673,6 +2673,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-wobbly-bridge',
+    title: 'The Bridge That Walkers Shook',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When the Millennium Bridge, a footbridge across the River Thames in London, opened in June 2000, thousands of people crowded onto it to enjoy the view. Within minutes, the bridge began to sway from side to side, and many walkers had to hold on to the railings. Only two days later the bridge was closed, ( A ) its engineers puzzled about what had gone wrong.",
+      "The cause turned out to be the walkers themselves. When we walk, our bodies push slightly to the left and to the right with each step. At first the people on the bridge stepped at different moments, so these small sideways forces cancelled one another out. Once the bridge began to move a little, however, walkers unconsciously adjusted their steps to keep their balance, and in doing so they fell into step with the bridge's motion. The more people walked in time with the swaying, the stronger it became, which in turn made even more people ( B ) their steps to it.",
+      "Engineers solved the problem by adding devices called dampers, which absorb the energy of the movement, and the bridge reopened in 2002. The episode taught a lesson that reaches far beyond engineering: a system can behave in ways that none of its parts intend. No single walker was trying to shake the bridge, yet together they produced an effect that no one ( C ) predicted.",
+    ],
+    ja: [
+      'ロンドンのテムズ川にかかる歩行者専用の橋、ミレニアム・ブリッジが2000年6月に開通したとき、何千人もの人がながめを楽しもうと橋の上に集まった。数分のうちに橋は左右にゆれはじめ、多くの歩行者は手すりにつかまらなければならなかった。わずか2日後に橋は閉鎖され、技術者たちは何がまちがっていたのかと首をかしげることになった。',
+      '原因は、歩いている人たち自身だとわかった。歩くとき、私たちの体は一歩ごとに少しだけ左右に力をかける。はじめのうち、橋の上の人々はばらばらのタイミングで足をふみ出していたので、こうした小さな横向きの力はたがいに打ち消しあっていた。しかし橋が少し動きはじめると、歩行者たちはバランスをたもとうと無意識に歩き方を調整し、そうすることで橋の動きに歩調を合わせてしまった。ゆれに合わせて歩く人が多くなるほどゆれは強くなり、それがさらに多くの人に歩調をゆれに合わせさせたのである。',
+      '技術者たちは、動きのエネルギーを吸収するダンパーとよばれる装置をとりつけることでこの問題を解決し、橋は2002年にふたたび開通した。この出来事は、工学をはるかにこえる教訓を残した。あるしくみは、その部分のどれもが意図しないふるまいをすることがある、ということだ。橋をゆらそうとしていた歩行者は1人もいなかったが、全員がいっしょになって、だれも予想していなかった結果を生み出したのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['leaving', 'left', 'leave', 'leaves'], answer: 0, why: 'コンマのあとで「そして（その結果）技術者たちを当惑させたままにした」と結果をそえる分詞構文 leaving ＋ O ＋ C。主語のない left・leave・leaves は文をつなげない。' },
+      { id: 'B', choices: ['match', 'to match', 'matching', 'matched'], answer: 0, why: '使役の make ＋ 人 ＋ 動詞の原形（make people match）。能動の make のあとに to 不定詞・-ing・過去分詞は置けない。' },
+      { id: 'C', choices: ['had', 'have', 'been', 'being'], answer: 0, why: '「（それまでに）だれも予想していなかった」過去完了 had predicted。no one は単数あつかいなので have は不可、been・being だけでは動詞の形にならない。' },
+    ],
+    tf: [
+      { statement: 'ミレニアム・ブリッジは、開通してから数日で閉鎖された。', answer: true, why: '第1段落 Only two days later the bridge was closed。' },
+      { statement: '橋がゆれた原因は、川の上をふく強い風だった。', answer: false, why: '第2段落 The cause turned out to be the walkers themselves。' },
+      { statement: '筆者によれば、橋をゆらそうとしていた歩行者がいた。', answer: false, why: '第3段落 No single walker was trying to shake the bridge。' },
+    ],
+    qa: [
+      { q: 'How did the engineers solve the problem with the bridge?', choices: ['They added dampers that absorb the energy of the movement.', 'They allowed only a few people to cross at a time.', 'They asked walkers to keep in step with one another.', 'They built a completely new bridge in 2002.'], answer: 0, why: '第3段落 by adding devices called dampers, which absorb the energy of the movement。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
