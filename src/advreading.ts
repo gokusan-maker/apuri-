@@ -3019,6 +3019,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-tourism',
+    title: 'The Tourist Paradox',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Travelers often say that they want to see the 'real' life of a place: the small cafés where local people meet, the markets where farmers sell their vegetables, the quiet streets ( A ) children play after school. Yet the more travelers come looking for this kind of authenticity, the harder it becomes to find.",
+      "The reason is simple. When a quiet neighborhood becomes popular with visitors, rents begin to rise. Cafés that once served the same customers every morning start to offer menus in several languages, and shops selling everyday goods are replaced by shops selling souvenirs. Many residents, unable to pay the higher rents, move away. In the end, the visitors find a neighborhood that looks very much like the one they came to see, ( B ) the people who gave it its character are no longer there.",
+      "Some cities have responded by limiting the number of tourists or by charging a fee to enter the busiest areas. Such measures can reduce crowding, but they raise a difficult question: who has the right to enjoy a place? Residents argue that a city is first of all a home, while business owners point out that tourism provides jobs that many families depend ( C ).",
+      "There is probably no perfect answer. But it may help if travelers think of themselves not simply as consumers of experiences but as guests in someone else's home, with all the responsibilities that this implies.",
+    ],
+    ja: [
+      '旅行者はよく、その土地の「本当の」暮らしを見たいと言う。地元の人々が集まる小さなカフェ、農家が野菜を売る市場、放課後に子どもたちが遊ぶ静かな通りなどである。しかし、旅行者がこの種の本物らしさを求めてやって来れば来るほど、それを見つけるのはむずかしくなる。',
+      'その理由は単純だ。静かな地区が観光客に人気になると、家賃が上がりはじめる。かつては毎朝同じ客に料理を出していたカフェは、いくつもの言語のメニューを出すようになり、日用品を売る店はみやげ物を売る店に取ってかわられる。多くの住民は、高くなった家賃を払えずに引っこしていく。結局、観光客は自分たちが見に来たものによく似た地区を目にするが、そこに個性を与えていた人々はもういないのである。',
+      'いくつかの都市は、観光客の数を制限したり、いちばん混みあう地域に入るのに料金を取ったりすることで対応してきた。こうした対策は混雑を減らせるが、むずかしい問いを投げかける。ある場所を楽しむ権利はだれにあるのか、という問いだ。住民は、都市は何よりもまず家だと主張し、一方で事業者は、観光が多くの家族の頼りにしている仕事を生み出していると指摘する。',
+      'おそらく完璧な答えはない。しかし、旅行者が自分自身を、単に体験を消費する人としてではなく、だれか別の人の家に招かれた客として考えれば、助けになるかもしれない。それにともなうあらゆる責任をふくめて。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'when'], answer: 0, why: '先行詞 the quiet streets（場所）を説明し、うしろが主語・動詞のそろった文（children play after school）なので関係副詞 where。which は主語か目的語が欠けた文が続き、what は先行詞をとらず、when は時を表す先行詞に使う。' },
+      { id: 'B', choices: ['but', 'despite', 'because of', 'instead of'], answer: 0, why: '「よく似た地区を目にするが、人々はもういない」と、うしろの文（the people … are no longer there）をつなぐ接続詞 but。despite・because of・instead of は前置詞の働きで、うしろに文を続けられない。' },
+      { id: 'C', choices: ['on', 'at', 'in', 'with'], answer: 0, why: 'depend on ～ で「～に頼る」。jobs that many families depend on で「多くの家族が頼りにしている仕事」。at・in・with は depend と結びつかない。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、旅行者が本物らしさを求めるほど、それは見つけにくくなる。', answer: true, why: '第1段落 the more travelers come looking for this kind of authenticity, the harder it becomes to find。' },
+      { statement: '筆者は、観光客の数を制限すれば問題はすべて解決すると述べている。', answer: false, why: '第3段落 Such measures can reduce crowding, but they raise a difficult question／第4段落 There is probably no perfect answer。' },
+      { statement: '筆者は、旅行者を住民の家に招かれた客と考えることを提案している。', answer: true, why: '第4段落 think of themselves … as guests in someone else\'s home。' },
+    ],
+    qa: [
+      { q: 'Why do many residents move away from popular neighborhoods?', choices: ['They cannot pay the higher rents.', 'They want to open souvenir shops.', 'They dislike the menus in several languages.', 'The city charges them a fee to live there.'], answer: 0, why: '第2段落 Many residents, unable to pay the higher rents, move away。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
