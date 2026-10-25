@@ -3111,6 +3111,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'native-long-way',
+    title: 'Taking the Long Way',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A couple of years ago, my bus company changed its route, and the stop near my apartment disappeared overnight. Grumbling, I started walking the forty minutes to work, fully intending to buy a bike as soon as I got around ( A ) it. I never did. Somewhere along the way, the walk stopped being a chore and turned into the best part of my day.",
+      "On the bus, I used to spend the whole ride staring at my phone, and I would arrive at the office already worn out by the news. On foot, there is not much to do except notice things: the bakery that opens at seven sharp, the old man who waters his roses in his pajamas, the way the river looks different every single morning. By the time I sit down at my desk, my head feels clear, and I have usually worked out whatever problem was ( B ) me the night before.",
+      "I am not going to pretend that walking is always pleasant. There are days when it pours and I show up looking like a drowned rat. But I have come to think that the time we spend getting from one place to another does not have to be dead time. ( C ) we treat it as something to rush through, it can become a small daily gift that nobody else can take away.",
+    ],
+    ja: [
+      '2年ほど前、私が使っていたバス会社が路線を変え、アパートの近くの停留所がひと晩でなくなった。ぶつぶつ言いながら、私は職場まで40分歩くようになった。そのうち手が空いたらすぐに自転車を買うつもりでいたのである。けれども、結局買わなかった。いつのまにか、歩くことはいやな仕事ではなくなり、1日でいちばんよい時間に変わっていたのだ。',
+      'バスでは、乗っているあいだずっとスマホを見つめて過ごし、ニュースのせいで、会社に着くころにはもうくたくたになっていた。歩いていると、物事に気づくこと以外にはあまりすることがない。7時ちょうどに開くパン屋、パジャマ姿でバラに水をやるおじいさん、毎朝ちがって見える川のようす。机に座るころには頭がすっきりしていて、たいてい前の晩に悩んでいた問題がなんであれ、解決できている。',
+      '歩くのがいつも楽しいふりをするつもりはない。どしゃぶりの日もあり、ずぶぬれのネズミのような姿で着くこともある。それでも私は、ある場所から別の場所へ移動するのにかける時間は、むだな時間である必要はないと考えるようになった。急いで通りすぎるべきものとしてあつかうのでなければ、それはだれにもうばえない、毎日の小さな贈り物になりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'with', 'at', 'for'], answer: 0, why: 'get around to ～ で「（のびのびになっていたことに）やっと手をつける」。as soon as I got around to it で「手が空いたらすぐに」。with・at・for ではこの意味にならない。' },
+      { id: 'B', choices: ['bugging', 'bugged', 'bug', 'bugs'], answer: 0, why: 'was ＋ -ing の過去進行形で「（ずっと）悩ませていた」。bug は口語で「悩ませる・いらいらさせる」。うしろに目的語 me があるので受け身の was bugged は使えず、was のあとに原形 bug や bugs は置けない。work out は「（問題を）解決する」。' },
+      { id: 'C', choices: ['Unless', 'Despite', 'Without', 'Instead of'], answer: 0, why: 'うしろに文（we treat it as …）が続き「～しないかぎり」を表す接続詞 Unless。Despite・Without・Instead of は前置詞の働きで、うしろに文を続けられない。' },
+    ],
+    tf: [
+      { statement: '筆者は、バス停がなくなったあと自転車を買った。', answer: false, why: '第1段落 fully intending to buy a bike … I never did。' },
+      { statement: '筆者はバスに乗っていたころ、会社に着くまでにニュースで疲れていた。', answer: true, why: '第2段落 I would arrive at the office already worn out by the news。' },
+      { statement: '筆者は、歩くのはいつも楽しいと述べている。', answer: false, why: '第3段落 I am not going to pretend that walking is always pleasant。' },
+    ],
+    qa: [
+      { q: 'What does the writer mainly do while walking to work?', choices: ['Notice small things along the way.', 'Read the news on a phone.', 'Water roses in the morning.', 'Ride a bike part of the way.'], answer: 0, why: '第2段落 On foot, there is not much to do except notice things。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
