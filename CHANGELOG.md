@@ -2054,3 +2054,4 @@
 - 2026-10-25: 国公立レベルの長文「The Appeal of Owning Less」（ミニマリズム・248語）を追加
 - 2026-10-25: 私学レベルの長文「Walking in Our Sleep」（夢遊病・238語）を追加
 - 2026-10-25: 旧帝大レベルの長文「What the Marshmallow Test Really Tells Us」（マシュマロ実験と自制心）を追加
+- 2026-10-25: 高2・高3の文法単元を3つ追加：関係代名詞の as・仮定法未来（were to / should）・譲歩の倒置（Young as he is）
