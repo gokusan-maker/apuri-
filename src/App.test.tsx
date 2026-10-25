@@ -84,7 +84,7 @@ describe('App', () => {
     navTo('読解ステージ')
     const p = dailyShort(dayKey())
     const btn = screen.getByRole('button', { name: `今日の読解：${p.title}` })
-    expect(btn.compareDocumentPosition(document.querySelector('.read-levels')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(btn.compareDocumentPosition(document.querySelector('.cmap')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
     fireEvent.click(btn)
     expect(screen.getAllByText(p.title).length).toBeGreaterThan(0)
     expect(screen.queryByRole('button', { name: `今日の読解：${p.title}` })).toBeNull()

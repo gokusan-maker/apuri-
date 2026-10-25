@@ -9,6 +9,7 @@ import type { LongPassage } from './longreading'
 import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
+import { CastleMap } from './CastleMapView'
 import { Reading } from './ReadingView'
 import { recordEvo, addBuddyToday, loadBuddyToday, ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, GO_LINES, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
 import { BuddyEvolve } from './BuddyEvolveView'
@@ -168,7 +169,6 @@ import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak 
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
 import { SettingsPanel } from './SettingsView'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
-import { splitSoft } from './softbreak'
 
 type Tab = 'home' | 'word' | 'grammar' | 'reading' | 'boss' | 'settings'
 type WordTab = 'card' | 'mini' | 'time' | 'stage'
@@ -1834,29 +1834,18 @@ function App() {
             </button>
           )}
           {mode === 'reading' && !shortGo && !playOn && (
-          <div className="read-levels" role="tablist" aria-label="読解のむずかしさ">
-            {READ_LEVELS.map((t) => (
-              <button
-                key={t.id}
-                role="tab"
-                aria-selected={readLevel === t.id}
-                onClick={() => {
-                  setReadLevel(t.id)
-                  saveReadLevel(t.id)
-                  setShortGo(false)
-                }}
-              >
-                {readyFor(t.id, loadLongRecord(), loadShortDone()) && <span className="read-level-ready">⭐ちょうせん</span>}
-                <strong>{t.label}</strong>
-                <small className="read-level-sub">{splitSoft(t.sub).flatMap((x, i) => (i > 0 ? [<wbr key={i} />, x] : [x]))}</small>
-                {solvedOf(t.id, loadLongRecord(), loadShortDone()) && (
-                  <small className="read-level-done">
-                    {solvedOf(t.id, loadLongRecord(), loadShortDone())!.done}/{solvedOf(t.id, loadLongRecord(), loadShortDone())!.total}本
-                  </small>
-                )}
-              </button>
-            ))}
-          </div>
+          <CastleMap
+            title="読解の城の地図"
+            tabsLabel="読解のむずかしさ"
+            unit="本"
+            current={readLevel}
+            spots={READ_LEVELS.map((t) => ({ id: t.id, name: t.label, sub: t.sub, done: solvedOf(t.id, loadLongRecord(), loadShortDone())?.done, total: solvedOf(t.id, loadLongRecord(), loadShortDone())?.total, badge: readyFor(t.id, loadLongRecord(), loadShortDone()) ? '⭐ちょうせん' : undefined }))}
+            onPick={(id) => {
+              setReadLevel(id as ReadLevel)
+              saveReadLevel(id as ReadLevel)
+              setShortGo(false)
+            }}
+          />
           )}
           {mode === 'reading' && shortGo && todayReading(today).kind === 'long' ? (
             <LongReading
