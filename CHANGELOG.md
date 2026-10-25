@@ -2083,3 +2083,4 @@
 - 2026-10-25: 京大・東大・旧帝大の単語を40語追加（dogged・fallible・elucidate・euphemism・allay・equitable など）
 - 2026-10-25: 京大・東大の単語を40語追加（idyllic・pithy・precocious・hyperbole・panacea・plethora など）
 - 2026-10-25: 国公立・旧帝大の単語を40語追加（confluence・impending・implausible・jargon・laudable・pertinent など）
+- 2026-10-25: 京大・東大の単語を40語追加（ingenuous・levity・neophyte・incipient・onus・predilection など）
