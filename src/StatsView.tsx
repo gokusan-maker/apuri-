@@ -1,5 +1,5 @@
 import { medalFor } from "./medal";
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
 import type { Mistakes } from "./mistakes";
 import type { DayBar } from "./history";
 import { WeekChart } from "./WeekChartView";
@@ -16,6 +16,8 @@ type Props = {
   mistakes: Mistakes;
   onReviewWeak: () => void;
   onReviewWeakCards: () => void;
+  onRemoveWeak?: (id: string) => void; // 苦手から消す
+  onClearWeak?: () => void; // 苦手をぜんぶ消す
   schedule: number[]; // 今日から7日間の復習数
   favorites?: Word[];
   calendar?: ReactNode;
@@ -43,6 +45,8 @@ export function Stats({
   weak,
   mistakes,
   onReviewWeak,
+  onRemoveWeak,
+  onClearWeak,
   onReviewWeakCards,
   schedule,
   favorites = [],
@@ -55,6 +59,7 @@ export function Stats({
   accuracy,
   children,
 }: Props) {
+  const [askClear, setAskClear] = useState(false); // 苦手をぜんぶ消す前のかくにん
   return (
     <section className="card stats-view">
       <h2>📈 学習データ</h2>
@@ -193,6 +198,11 @@ export function Stats({
                 <span className="weak-en">{w.en}</span>
                 <span className="weak-ja">{w.ja}</span>
                 <span className="weak-count">×{mistakes[w.id]}</span>
+                {onRemoveWeak && (
+                  <button className="weak-remove" aria-label={`${w.en} を苦手から消す`} title="苦手から消す" onClick={() => onRemoveWeak(w.id)}>
+                    🗑
+                  </button>
+                )}
               </li>
             ))}
           </ol>
@@ -204,6 +214,22 @@ export function Stats({
               クイズで復習
             </button>
           </div>
+          {onClearWeak &&
+            (askClear ? (
+              <p className="weak-clear-ask">
+                苦手を{weak.length}語ぜんぶ消す？
+                <button className="list-link pill-btn pill-pink" onClick={() => { onClearWeak(); setAskClear(false) }}>
+                  消す
+                </button>
+                <button className="list-link pill-btn pill-blue" onClick={() => setAskClear(false)}>
+                  やめる
+                </button>
+              </p>
+            ) : (
+              <button className="list-link pill-btn pill-pink weak-clear" onClick={() => setAskClear(true)}>
+                🗑 苦手をぜんぶ消す
+              </button>
+            ))}
         </>
       )}
       {favorites.length > 0 && (

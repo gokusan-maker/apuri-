@@ -116,7 +116,7 @@ import {
   addDays,
   type ProgressMap,
 } from './srs'
-import { addMistake, easeMistake, loadMistakes, saveMistakes, weakWords } from './mistakes'
+import { addMistake, easeMistake, loadMistakes, removeMistake, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
 import { BossAlly, TrackAlly } from './BossAllyView'
 import { BuddyZukan } from './BuddyZukanView'
@@ -1897,6 +1897,8 @@ function App() {
               goal={settings.dailyGoal}
               weak={weak}
               mistakes={mistakes}
+              onRemoveWeak={(id) => setMistakes((m) => removeMistake(m, id))}
+              onClearWeak={() => setMistakes({})}
               onReviewWeak={() => startQuiz('weak')}
               favorites={favWords}
               calendar={<Calendar history={history} today={today} goal={settings.dailyGoal} />}

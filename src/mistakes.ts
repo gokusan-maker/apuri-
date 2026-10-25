@@ -16,6 +16,13 @@ export function easeMistake(m: Mistakes, id: string): Mistakes {
   return next
 }
 
+// 苦手から消す（オーナーの要望：もう苦手じゃない単語を自分で外せる）
+export function removeMistake(m: Mistakes, id: string): Mistakes {
+  const next = { ...m }
+  delete next[id]
+  return next
+}
+
 // 間違えた回数が多い順（同数なら元の並び順）
 export function weakWords<T extends { id: string }>(words: T[], m: Mistakes, limit = 20): T[] {
   return words

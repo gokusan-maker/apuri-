@@ -41,3 +41,10 @@ it('「覚えた」で苦手の回数が減り、0で外れる', () => {
   expect(easeMistake({ a: 1, b: 3 }, 'a')).toEqual({ b: 3 })
   expect(easeMistake({}, 'a')).toEqual({})
 })
+
+it('苦手から消すと、その単語は苦手の一覧から外れる', async () => {
+  const { removeMistake, weakWords } = await import('./mistakes')
+  const m = removeMistake({ a: 3, b: 1 }, 'a')
+  expect(m).toEqual({ b: 1 })
+  expect(weakWords([{ id: 'a' }, { id: 'b' }], m).map((w) => w.id)).toEqual(['b'])
+})

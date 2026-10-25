@@ -1883,3 +1883,17 @@ describe('今日の課題の学年', () => {
     expect(screen.getByText(/学年・レベル/)).toBeInTheDocument()
   })
 })
+
+describe('苦手な単語を消す', () => {
+  it('記録の苦手な単語は 🗑 で1語ずつ消せ、「ぜんぶ消す」はかくにんしてから消える', () => {
+    localStorage.setItem('eitan:mistakes', JSON.stringify({ [WORDS[0].id]: 3, [WORDS[1].id]: 2 }))
+    render(<App />)
+    navTo('ホーム')
+    fireEvent.click(screen.getByRole('button', { name: `${WORDS[0].en} を苦手から消す` }))
+    expect(JSON.parse(localStorage.getItem('eitan:mistakes')!)).toEqual({ [WORDS[1].id]: 2 })
+    fireEvent.click(screen.getByRole('button', { name: /苦手をぜんぶ消す/ }))
+    fireEvent.click(screen.getByRole('button', { name: '消す' }))
+    expect(JSON.parse(localStorage.getItem('eitan:mistakes')!)).toEqual({})
+    expect(screen.queryByText('苦手な単語')).toBeNull()
+  })
+})
