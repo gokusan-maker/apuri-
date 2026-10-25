@@ -2989,6 +2989,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'native-beginner',
+    title: 'Being Bad at Something Again',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Last spring, at the age of forty-two, I signed up for a beginners' pottery class. I had spent twenty years getting good at my job, and I had almost forgotten what it felt like to be truly terrible at something. On the first night, my bowl collapsed three times, and the twenty-year-old next to me had to show me how to keep the clay ( A ) spinning off the wheel.",
+      "It was embarrassing, but it was also strangely freeing. At work, people expect me to know the answers, and I feel the pressure to look competent all the time. In the pottery studio, nobody expected anything of me, so I could make mistakes without worrying about what anyone thought. For two hours a week, I was allowed to be clumsy, curious, and slow.",
+      "I have come to think that adults avoid new skills not because they lack time but because they are afraid of looking foolish. We get used to being good at things, and the thought of starting from zero feels like a step backward. Yet being a beginner is ( B ) teaches us patience, and it reminds us how much effort it took to learn everything we now take for granted.",
+      "My bowls are still a little lopsided, but I have stopped minding. If anything, I would recommend that everyone find one thing they are bad at and keep doing it. It is a small, cheap way of staying humble, and you might even end up ( C ) something useful to put your cereal in.",
+    ],
+    ja: [
+      '去年の春、42歳で、私は初心者向けの陶芸教室に申しこんだ。20年かけて仕事がうまくなってきた私は、何かが本当にへたであるというのがどんな感じなのか、ほとんど忘れていた。最初の夜、私の器は3回つぶれ、となりの20歳の人が、粘土がろくろから飛んでいかないようにする方法を教えてくれなければならなかった。',
+      'はずかしかったが、ふしぎと解放された気分でもあった。職場では、人は私が答えを知っていることを期待し、私はいつも有能に見せなければという重圧を感じている。陶芸の工房では、だれも私に何も期待していなかったので、だれにどう思われるかを気にせずに失敗できた。週に2時間、私は不器用で、好奇心いっぱいで、のろくてもよかったのである。',
+      '大人が新しい技術をさけるのは、時間がないからではなく、ばかに見えるのがこわいからだと私は考えるようになった。私たちは物事がうまいことに慣れてしまい、ゼロから始めると考えると後もどりのように感じる。しかし、初心者であることこそが私たちに忍耐を教えてくれるのであり、いまでは当たり前と思っているあらゆることを身につけるのに、どれほどの努力が必要だったかを思い出させてくれるのだ。',
+      '私の器はまだ少しゆがんでいるが、もう気にしなくなった。むしろ、だれもが自分のへたなことを1つ見つけて、それを続けることをすすめたい。それは小さくてお金のかからない、謙虚でいるための方法であり、ひょっとしたら、シリアルを入れるのに役立つ物を作ることになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['from', 'of', 'at', 'to'], answer: 0, why: 'keep A from -ing で「A が～しないようにする」。keep the clay from spinning off the wheel で「粘土がろくろから飛んでいかないようにする」。of・at・to ではこの形にならない。' },
+      { id: 'B', choices: ['what', 'that', 'which', 'it'], answer: 0, why: 'is のあとで「～するもの」という補語のかたまりを作り、teaches の主語にもなる関係代名詞 what（being a beginner is what teaches us patience）。that・which は先行詞が必要で、it では is と teaches の2つの動詞をつなげない。' },
+      { id: 'C', choices: ['making', 'make', 'made', 'to make'], answer: 0, why: 'end up ＋ -ing で「最後には～することになる」。end up のあとに原形・過去分詞・to 不定詞は続かない。' },
+    ],
+    tf: [
+      { statement: '筆者は42歳で陶芸教室に通いはじめた。', answer: true, why: '第1段落 at the age of forty-two, I signed up for a beginners\' pottery class。' },
+      { statement: '筆者は陶芸の工房でも、有能に見せなければという重圧を感じていた。', answer: false, why: '第2段落 In the pottery studio, nobody expected anything of me。' },
+      { statement: '筆者によれば、大人が新しい技術をさけるおもな理由は時間がないことだ。', answer: false, why: '第3段落 not because they lack time but because they are afraid of looking foolish。' },
+    ],
+    qa: [
+      { q: 'What does the writer recommend at the end of the essay?', choices: ['Finding one thing you are bad at and continuing to do it.', 'Quitting a hobby when you are not good at it.', 'Spending more time getting good at your job.', 'Buying better bowls for your cereal.'], answer: 0, why: '第4段落 I would recommend that everyone find one thing they are bad at and keep doing it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
