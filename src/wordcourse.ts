@@ -35,7 +35,9 @@ export function courseWords(id: CourseId): Word[] {
     const ids = id === 'TOEIC' ? BAND_IDS.TOEIC_ALL : (BAND_IDS[id] ?? [])
     // あとから増やした大学入試レベルの単語（wordsupper.ts）も、そのレベルに入れる
     const extra = WORDS_UPPER.filter((w) => w.band === id).map((w) => w.id)
-    cache.set(id, [...ids, ...extra].map((x) => byId.get(x)).filter((w): w is Word => !!w))
+    // ネイティブは、あとから wordsnative.ts に足した口語表現もすべて入れる
+    const native = id === 'ネイティブ' ? [...byId.values()].filter((w) => w.level === 'ネイティブ' && !ids.includes(w.id)).map((w) => w.id) : []
+    cache.set(id, [...ids, ...extra, ...native].map((x) => byId.get(x)).filter((w): w is Word => !!w))
   }
   return cache.get(id)!
 }
