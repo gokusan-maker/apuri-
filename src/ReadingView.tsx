@@ -8,6 +8,7 @@ import { makeLookup } from './glossary'
 import { WORDS, type Word } from './words'
 import { GameTile } from './GameTileView'
 import { evidenceOf } from './readhint'
+import { Castle } from './CastleView'
 
 const lookup = makeLookup(WORDS)
 
@@ -19,9 +20,10 @@ type Props = {
   start?: Passage // はじめからこの話を開く（ホームの今日の読解）
   onClose?: () => void // 今日の課題：一覧にもどらず、課題の画面をとじる
   onDone?: (score: number, total: number) => void // 1本ぜんぶ答えたとき
+  onCoins?: (n: number) => void // 城の宝箱
 }
 
-export function Reading({ onAnswer, start, onDone, onClose }: Props) {
+export function Reading({ onAnswer, start, onDone, onClose, onCoins }: Props) {
   const [p, setP] = useState<Passage | null>(start ?? null)
   const [done, setDone] = useState(loadShortDone) // 解いた話
   const [step, setStep] = useState(0)
@@ -56,6 +58,8 @@ export function Reading({ onAnswer, start, onDone, onClose }: Props) {
         <div className="zukan-pct short-pct" aria-hidden="true">
           <span style={{ width: `${(PASSAGES.filter((x) => done.includes(x.id)).length / PASSAGES.length) * 100}%` }} />
         </div>
+        {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
+        <Castle name="読解ミニの城" theme="green" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
         <p className="game-grid-title">🎮 読解ゲーム</p>
         <div className="game-grid read-games" aria-label="読解ゲーム">

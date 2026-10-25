@@ -1908,6 +1908,7 @@ function App() {
                 }
               }}
               onAnswer={onAnswerTrack('reading')}
+              onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             />
           ) : (
           stagesView('boss')
