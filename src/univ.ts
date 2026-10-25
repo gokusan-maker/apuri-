@@ -1,6 +1,13 @@
 // 大学入試の塔：大学にちなんだ（名前をアレンジした）ボスに、下の階から順に挑戦する
 import type { BossLook } from './boss'
 import type { Level } from './words'
+import { GRAMMAR, gradeOf } from './grammar'
+import { passagesFor } from './readlevel'
+
+// 入試レベルの問題：長文は1〜3階が高校入試、4階からは難関大。文法は高校の単元だけ
+export function univExam(floorIndex: number) {
+  return { passages: passagesFor(floorIndex < 3 ? 'exam' : 'univ'), units: GRAMMAR.filter((u) => gradeOf(u.id) === '高校') }
+}
 
 export type UnivBoss = BossLook & { id: string; floor: string; hint: string; levels: Level[]; hp: number; coins: number }
 

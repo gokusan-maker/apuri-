@@ -52,8 +52,9 @@ export function passageQs(p: LongPassage): ReadingQ[] {
 }
 
 // ボス1戦ぶん：長文を2本えらんで（r は 0〜1 の乱数）、最大20問
-export function readingBossQs(level: Level, r: () => number, n = BOSS_QUESTIONS): ReadingQ[] {
-  const pool = readingPoolFor(level)
+// pool をわたすと、その長文から（大学入試の塔は入試レベルの長文）
+export function readingBossQs(level: Level, r: () => number, n = BOSS_QUESTIONS, from?: LongPassage[]): ReadingQ[] {
+  const pool = from && from.length >= 2 ? from : readingPoolFor(level)
   const a = Math.floor(r() * pool.length)
   let b = Math.floor(r() * pool.length)
   if (b === a) b = (a + 1) % pool.length

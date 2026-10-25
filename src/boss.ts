@@ -116,9 +116,9 @@ export const TEAM_ORDER: TeamRole[] = ['word', 'grammar', 'reading']
 export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamRole }
 
 // readingQs：読解ボスのときは、読解の番に本文の問題を順に出す
-export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[]): (TeamQ | (R & { team: 'reading' }))[] {
+export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[], grammarUnits?: GrammarUnit[]): (TeamQ | (R & { team: 'reading' }))[] {
   const wordQs = wordQuiz(words, n, rnd)
-  const units = grammarForLevel(words[0]?.level)
+  const units = grammarUnits && grammarUnits.length > 0 ? grammarUnits : grammarForLevel(words[0]?.level)
   const sentences = words.filter((w) => w.example && w.exampleJa)
   const pool = sentences.length >= 4 ? sentences : WORDS.filter((w) => w.example && w.exampleJa)
   const out: (TeamQ | (R & { team: 'reading' }))[] = []

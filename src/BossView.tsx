@@ -1,3 +1,5 @@
+import type { LongPassage } from './longreading'
+import type { GrammarUnit } from './grammar'
 import { learnProverb, PROVERBS } from './proverbs'
 import { loadSettings } from './settings'
 import { MissedList } from './MissedListView'
@@ -32,6 +34,7 @@ type Props = {
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
   reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
+  exam?: { passages: LongPassage[]; units: GrammarUnit[] } // 入試レベル：この長文と文法の単元から出す（大学入試の塔）
   winBuddy?: { icon: string; name: string } // 勝ったときによろこぶ読解のなかま（竜）
   startHearts?: number // ボスラッシュではハートを引き継ぐ
   winLabel?: string // 勝ったあとのボタンの文字
@@ -177,7 +180,7 @@ const rnd = () => Math.random()
 // 読解ボスの本文で、単語帳にある語をタップすると意味が出る
 const lookupWord = makeLookup(WORDS)
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0, note }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0, note, exam }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
@@ -185,7 +188,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const team = useContext(BossTeamContext)
   const teamOn = !!team
   const teamWords = words.length > 0 ? words : WORDS.filter((w) => w.level === level)
-  const makeQs = () => (teamOn ? teamBossQuestions(teamWords, rnd, BOSS_QUESTIONS, reading ? readingBossQs(level, rnd) : undefined) : reading ? readingBossQs(level, rnd) : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q))
+  const readQs = () => readingBossQs(level, rnd, BOSS_QUESTIONS, exam?.passages)
+  const makeQs = () => (teamOn ? teamBossQuestions(teamWords, rnd, BOSS_QUESTIONS, reading ? readQs() : undefined, exam?.units) : reading ? readQs() : bossQuestions(words, grammar)).map((q) => easyIf(loadSettings().easy, q))
   const [qs, setQs] = useState(makeQs)
   // チームバトルでは、答えた番のなかまに XP（App がわたしていなければこれまでどおり onAnswer）
   const answerFor = (x: (typeof qs)[number]) => (teamOn && 'team' in x ? (team![x.team as TeamRole].answer ?? onAnswer) : onAnswer)
