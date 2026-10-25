@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { expect, it, vi } from 'vitest'
 import { Gacha } from './GachaView'
 import { GACHA_PRICE, PARTY_MAX } from './gacha'
@@ -248,4 +248,14 @@ it('ガチャのページに「なかま10体 → 🎟1まい」の交換カー�
   fireEvent.click(screen.getByRole('button', { name: '🎟 交換する' }))
   expect(trade).toHaveBeenCalled()
   expect(PARTY_MAX).toBe(500)
+})
+
+it('ガチャを引くと画面いっぱいの演出ページが開き、スキップで出てきた子を見られる', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('fox'), newSpecies: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  const dlg = screen.getByRole('dialog', { name: 'ガチャの演出' })
+  fireEvent.click(within(dlg).getByRole('button', { name: /スキップ/ }))
+  expect(within(dlg).getByText('SUPER RARE')).toBeInTheDocument()
+  fireEvent.click(within(dlg).getByRole('button', { name: /やったね！ とじる/ }))
+  expect(screen.queryByRole('dialog', { name: 'ガチャの演出' })).toBeNull()
 })

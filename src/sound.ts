@@ -91,3 +91,18 @@ export function playBossSound(kind: keyof typeof BOSS_SOUNDS) {
   if (!ready()) return
   BOSS_SOUNDS[kind].forEach(([f, start, dur]) => tone(f, start, dur))
 }
+
+// ガチャの演出の音（カプセルが落ちる・ゆれる・確定・われる・登場）
+export const GACHA_SOUNDS = {
+  drop: [[220, 0, 0.08], [165, 0.09, 0.12]],
+  shake: [[660, 0, 0.05], [700, 0.12, 0.05], [740, 0.24, 0.05]],
+  omen: [[523, 0, 0.12], [659, 0.1, 0.12], [784, 0.2, 0.12], [1047, 0.3, 0.12], [1319, 0.42, 0.4]],
+  crack: [[1200, 0, 0.04], [900, 0.05, 0.06], [1500, 0.12, 0.08]],
+  reveal: [[523, 0, 0.12], [659, 0.12, 0.12], [784, 0.24, 0.12], [1047, 0.36, 0.45]],
+  revealRare: [[523, 0, 0.1], [659, 0.1, 0.1], [784, 0.2, 0.1], [1047, 0.3, 0.1], [1319, 0.42, 0.1], [1568, 0.54, 0.6]],
+} satisfies Record<string, [number, number, number][]>
+
+export function playGachaSound(kind: keyof typeof GACHA_SOUNDS) {
+  if (!ready()) return
+  GACHA_SOUNDS[kind].forEach(([f, start, dur]) => tone(f, start, dur))
+}

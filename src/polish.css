@@ -2848,3 +2848,82 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 /* 単語ゲームの「🎲 今日のミニゲーム」（毎日かわる6つ） */
 .today-games-title { margin: 8px 0 4px; font-size: 0.95rem; font-weight: 900; white-space: nowrap; }
 .today-games-title small { margin-left: 6px; color: var(--muted); font-size: 0.72rem; font-weight: 700; }
+
+/* ===== ガチャの演出ページ（.gacha-reveal）：画面いっぱい。カプセル → タマゴ → 確定演出 → われる → 出てきたキャラクター ===== */
+.gacha-reveal { --gr-a: #1e1b4b; --gr-b: #312e81; --gr-glow: rgb(165 180 252 / 0.7); position: fixed; inset: 0; z-index: 200; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden; color: #fff; text-align: center; }
+.gacha-reveal.r-R { --gr-a: #0c4a6e; --gr-b: #1d4ed8; --gr-glow: rgb(96 165 250 / 0.85); }
+.gacha-reveal.r-SR { --gr-a: #451a03; --gr-b: #b45309; --gr-glow: rgb(250 204 21 / 0.9); }
+.gacha-reveal.r-UR { --gr-a: #4c1d95; --gr-b: #be185d; --gr-glow: rgb(244 114 182 / 0.9); }
+.gr-bg { position: absolute; inset: 0; background: radial-gradient(circle at 50% 45%, var(--gr-b), var(--gr-a) 70%, #020617); transition: background 0.6s; }
+/* ふつうに見えて、確定演出で色がかわる（レア度が上がっていくように） */
+.gacha-reveal.r-SR:not(.ph-omen):not(.ph-crack):not(.ph-reveal) .gr-bg, .gacha-reveal.r-UR:not(.ph-omen):not(.ph-crack):not(.ph-reveal) .gr-bg { background: radial-gradient(circle at 50% 45%, #1d4ed8, #0c4a6e 70%, #020617); }
+.gacha-reveal.r-UR.ph-reveal .gr-bg { background: radial-gradient(circle at 50% 45%, #f472b6, #8b5cf6 45%, #1e1b4b 80%); animation: gr-hue 4s linear infinite; }
+@keyframes gr-hue { to { filter: hue-rotate(360deg); } }
+.gr-rays { position: absolute; left: 50%; top: 42%; width: 180vmax; height: 180vmax; translate: -50% -50%; background: repeating-conic-gradient(from 0deg, rgb(255 255 255 / 0.16) 0deg 8deg, transparent 8deg 22deg); opacity: 0; animation: gr-spin 14s linear infinite; mask: radial-gradient(circle, #000 0 18%, transparent 55%); -webkit-mask: radial-gradient(circle, #000 0 18%, transparent 55%); }
+.gacha-reveal.ph-omen .gr-rays, .gacha-reveal.ph-reveal .gr-rays { opacity: 1; transition: opacity 0.5s; }
+@keyframes gr-spin { to { rotate: 360deg; } }
+.gr-stars i { position: absolute; width: 4px; height: 4px; border-radius: 50%; background: #fff; box-shadow: 0 0 6px #fff; animation: gr-twinkle 1.8s ease-in-out infinite alternate; }
+@keyframes gr-twinkle { from { opacity: 0.15; transform: scale(0.6); } to { opacity: 1; transform: scale(1.3); } }
+.gr-count { position: absolute; top: calc(14px + env(safe-area-inset-top)); left: 16px; margin: 0; padding: 3px 12px; border-radius: 999px; background: rgb(0 0 0 / 0.35); font-weight: 900; }
+.gr-skip { position: absolute; top: calc(12px + env(safe-area-inset-top)); right: 14px; z-index: 3; padding: 6px 14px; border: none; border-radius: 999px; background: rgb(255 255 255 / 0.2); color: #fff; font-weight: 900; white-space: nowrap; }
+/* カプセル：上から落ちて、バウンドして、パカッ */
+.gr-capsule { position: relative; z-index: 1; width: 120px; height: 120px; animation: gr-drop 0.9s cubic-bezier(0.3, 1.4, 0.5, 1) both; }
+.gr-cap-top, .gr-cap-bottom { position: absolute; left: 0; width: 120px; height: 60px; border: 4px solid rgb(0 0 0 / 0.25); }
+.gr-cap-top { top: 0; border-radius: 60px 60px 0 0; background: linear-gradient(180deg, #f87171, #dc2626); }
+.gacha-reveal.r-R .gr-cap-top { background: linear-gradient(180deg, #60a5fa, #2563eb); }
+.gr-cap-bottom { bottom: 0; border-radius: 0 0 60px 60px; background: linear-gradient(180deg, #f8fafc, #cbd5e1); }
+.gacha-reveal.ph-shake .gr-capsule { animation: none; }
+.gacha-reveal.ph-shake .gr-cap-top { animation: gr-open 0.5s ease-in forwards; }
+.gacha-reveal.ph-shake .gr-cap-bottom { animation: gr-fall 0.5s ease-in forwards; }
+@keyframes gr-drop { from { transform: translateY(-80vh) rotate(-30deg); } 70% { transform: translateY(0) rotate(8deg); } to { transform: translateY(0) rotate(0); } }
+@keyframes gr-open { to { transform: translate(-60px, -140px) rotate(-70deg); opacity: 0; } }
+@keyframes gr-fall { to { transform: translate(60px, 160px) rotate(50deg); opacity: 0; } }
+/* タマゴ：ゆれる → だんだん強く → ひびが入る */
+.gr-egg { position: absolute; top: 50%; left: 50%; z-index: 1; width: 170px; height: 170px; translate: -50% -50%; filter: drop-shadow(0 0 22px var(--gr-glow)); }
+.gr-egg svg { width: 100%; height: 100%; }
+.gacha-reveal.ph-shake .gr-egg { animation: gr-wobble 0.45s ease-in-out infinite; }
+.gacha-reveal.ph-omen .gr-egg { animation: gr-wobble 0.22s ease-in-out infinite; filter: drop-shadow(0 0 40px var(--gr-glow)) brightness(1.15); }
+@keyframes gr-wobble { 0%, 100% { rotate: 0deg; } 25% { rotate: -9deg; } 75% { rotate: 9deg; } }
+.gr-crack { position: absolute; inset: 0; opacity: 0; background: linear-gradient(115deg, transparent 46%, rgb(255 255 255 / 0.95) 47% 49%, transparent 50%), linear-gradient(65deg, transparent 52%, rgb(255 255 255 / 0.9) 53% 54.5%, transparent 55.5%); }
+.gacha-reveal.ph-omen .gr-crack { opacity: 0.6; }
+.gacha-reveal.ph-crack .gr-crack { opacity: 1; }
+.gacha-reveal.ph-crack .gr-egg { animation: gr-burst 0.5s ease-in forwards; }
+@keyframes gr-burst { 60% { transform: scale(1.25); } to { transform: scale(1.6); opacity: 0; } }
+/* 確定演出：「！？」と、いなずまのような光 */
+.gr-omen { position: absolute; top: 18%; z-index: 2; display: flex; flex-direction: column; align-items: center; margin: 0; }
+.gr-omen span { font-size: 4rem; font-weight: 900; text-shadow: 0 0 20px var(--gr-glow), 0 4px 0 rgb(0 0 0 / 0.4); animation: gr-pop 0.4s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.gr-omen b { padding: 4px 16px; border-radius: 999px; background: linear-gradient(90deg, #fde047, #f59e0b); color: #78350f; font-size: 1.1rem; white-space: nowrap; box-shadow: 0 0 24px var(--gr-glow); animation: gr-pop 0.5s 0.3s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.gacha-reveal.r-UR .gr-omen b { background: linear-gradient(90deg, #f472b6, #a78bfa, #60a5fa, #34d399, #fde047); color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.4); }
+.gacha-reveal.ph-omen::after { content: ''; position: absolute; inset: 0; z-index: 1; background: #fff; pointer-events: none; animation: gr-lightning 1.3s steps(1) both; }
+@keyframes gr-lightning { 0% { opacity: 0.85; } 8% { opacity: 0; } 18% { opacity: 0.6; } 24% { opacity: 0; } }
+@keyframes gr-pop { from { transform: scale(0.2); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+.gr-flash { position: absolute; inset: 0; z-index: 2; background: radial-gradient(circle, #fff 0 30%, rgb(255 255 255 / 0) 70%); animation: gr-flash 0.5s ease-out 0.25s both; pointer-events: none; }
+@keyframes gr-flash { from { opacity: 0; transform: scale(0.3); } 40% { opacity: 1; } to { opacity: 0; transform: scale(2.4); } }
+/* 登場：キャラクターがポンと出て、星・名前・紙ふぶき */
+.gr-show { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; width: min(92vw, 420px); }
+.gr-rank { display: flex; flex-direction: column; align-items: center; margin: 0 0 6px; animation: gr-pop 0.5s 0.15s cubic-bezier(0.3, 1.6, 0.5, 1) both; }
+.gr-stars-row { color: #fde047; font-size: 2rem; letter-spacing: 4px; text-shadow: 0 0 14px rgb(250 204 21 / 0.9), 0 3px 0 #92400e; }
+.gr-rank-en { margin-top: 2px; font-size: 1.5rem; font-weight: 900; letter-spacing: 2px; white-space: nowrap; text-shadow: 0 0 16px var(--gr-glow), 0 3px 0 rgb(0 0 0 / 0.4); }
+.gacha-reveal.r-UR .gr-rank-en { background: linear-gradient(90deg, #fde047, #f472b6, #a78bfa, #60a5fa, #34d399); -webkit-background-clip: text; background-clip: text; color: transparent; text-shadow: none; filter: drop-shadow(0 2px 0 rgb(0 0 0 / 0.5)); }
+.gr-fig { width: 210px; height: 210px; filter: drop-shadow(0 0 30px var(--gr-glow)); animation: gr-appear 0.8s cubic-bezier(0.25, 1.6, 0.5, 1) both, gr-float 2.4s 0.8s ease-in-out infinite; }
+.gr-fig svg { width: 100%; height: 100%; }
+@keyframes gr-appear { from { transform: scale(0) rotate(-20deg); opacity: 0; } to { transform: scale(1) rotate(0); opacity: 1; } }
+@keyframes gr-float { 50% { transform: translateY(-10px); } }
+.gacha-reveal.r-SR.ph-reveal .gr-show, .gacha-reveal.r-UR.ph-reveal .gr-show { animation: gr-quake 0.5s ease-out; }
+@keyframes gr-quake { 20% { transform: translate(-6px, 3px); } 40% { transform: translate(6px, -3px); } 60% { transform: translate(-4px, 2px); } 80% { transform: translate(3px, -1px); } }
+.gr-shell { position: absolute; top: 40%; width: 70px; height: 70px; border-radius: 50% 50% 10% 10%; background: linear-gradient(180deg, #fffbeb, #fde68a); border: 3px solid #d97706; pointer-events: none; }
+.gr-shell.left { left: 50%; animation: gr-shell-l 0.9s ease-out both; }
+.gr-shell.right { left: 50%; animation: gr-shell-r 0.9s ease-out both; }
+@keyframes gr-shell-l { from { transform: translate(-50%, 0) rotate(0); opacity: 1; } to { transform: translate(-190px, 220px) rotate(-200deg); opacity: 0; } }
+@keyframes gr-shell-r { from { transform: translate(-50%, 0) rotate(0); opacity: 1; } to { transform: translate(140px, 240px) rotate(220deg); opacity: 0; } }
+.gr-name { display: flex; align-items: center; gap: 8px; margin: 6px 0 2px; font-size: 1.4rem; font-weight: 900; white-space: nowrap; text-shadow: 0 2px 0 rgb(0 0 0 / 0.4); animation: gr-pop 0.5s 0.5s both; }
+.gr-new { padding: 2px 8px; border-radius: 999px; background: linear-gradient(180deg, #f87171, #dc2626); font-size: 0.8rem; animation: gr-blink 0.8s steps(1) infinite; }
+@keyframes gr-blink { 50% { opacity: 0.5; } }
+.gr-sub { margin: 0 0 14px; color: rgb(255 255 255 / 0.85); font-size: 0.82rem; white-space: nowrap; animation: gr-pop 0.5s 0.7s both; }
+.gr-next { width: min(80vw, 320px); animation: gr-pop 0.5s 0.9s both; }
+.gr-confetti { position: fixed; inset: 0; pointer-events: none; overflow: hidden; }
+.gr-confetti i { position: absolute; top: -20px; width: 9px; height: 14px; border-radius: 2px; animation: gr-confetti linear infinite; }
+@keyframes gr-confetti { to { transform: translateY(110vh) rotate(540deg); } }
+/* 演出を短くする・動きをへらす設定 */
+.gacha-reveal.quick .gr-capsule { animation-duration: 0.25s; }
+@media (prefers-reduced-motion: reduce) { .gacha-reveal *, .gacha-reveal::after { animation: none !important; } }

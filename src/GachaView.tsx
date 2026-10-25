@@ -8,6 +8,7 @@ import { MEMBERS_FOR_TICKET } from './party'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
+import { GachaReveal } from './GachaRevealView'
 
 const MULTI = 3
 const RANK = ['N', 'R', 'SR', 'UR'] as const
@@ -71,6 +72,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const [named, setNamed] = useState('')
   const [capsule, setCapsule] = useState(loadCapsule)
   const [fast, setFast] = useState(loadGachaFast)
+  const [reveal, setReveal] = useState<GachaResult[] | null>(null) // 引いたら画面いっぱいの演出ページ
   const [stats, setStats] = useState(loadGachaStats)
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
@@ -83,6 +85,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
     const k = ticket === 'free' ? (onFree?.() ?? null) : ticket === 'rare' || ticket === 'sr' ? (onTier?.(ticket) ?? null) : onDraw(ticket)
     if (k) {
       setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
+      setReveal([k])
       setNaming(null)
       setNamed('')
       setMulti(null)
@@ -92,6 +95,17 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
   return (
     <div className="gacha">
+      {reveal && reveal.length > 0 && (
+        <GachaReveal
+          list={reveal}
+          fast={fast}
+          onClose={() => {
+            setReveal(null)
+            // とじたら、下の結果（名前をつける・相棒にする など）へ
+            window.setTimeout(() => document.querySelector('.gacha-result, .gacha-multi')?.scrollIntoView?.({ block: 'center' }), 50)
+          }}
+        />
+      )}
       <h3 className="shop-h">🥚 タマゴガチャ（仲間 {members} / {PARTY_MAX}）</h3>
       {free && onFree && !full && (
         <button className="good gacha-btn gacha-free" onClick={() => drawOne('free')}>
@@ -115,6 +129,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             if (list.length === 0) return
             setResult(null)
             setMulti({ list, key: Date.now() })
+            setReveal(list)
             list.forEach(record)
           }}
         >
@@ -134,6 +149,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             if (list.length === 0) return
             setResult(null)
             setMulti({ list, key: Date.now() })
+            setReveal(list)
             list.forEach(record)
           }}
         >
@@ -218,6 +234,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             if (list.length === 0) return
             setResult(null)
             setMulti({ list, key: Date.now() })
+            setReveal(list)
             list.forEach(record)
           }}
         >
@@ -284,6 +301,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
                 if (k) {
                   setMulti(null)
                   setResult({ ...k, key: Date.now(), first: takeFirstPull(dayKey()) })
+                  setReveal([k])
       setNaming(null)
       setNamed('')
                   record(k)

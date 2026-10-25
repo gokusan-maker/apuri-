@@ -143,3 +143,9 @@ it('ボス部屋のとくべつイベントは光るわく・リボンつき', (
 it('単語カードの「まだ」はピンク', () => {
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.card \.actions \.again \{ background: linear-gradient\(135deg, #f472b6, #db2777\)/)
 })
+
+it('ガチャの演出ページ：カプセル・タマゴ・確定演出・登場のアニメがある', () => {
+  const css = readFileSync('src/polish.css', 'utf8')
+  for (const k of ['gr-drop', 'gr-wobble', 'gr-lightning', 'gr-flash', 'gr-appear', 'gr-confetti']) expect(css).toContain(`@keyframes ${k}`)
+  expect(readFileSync('src/GachaView.tsx', 'utf8')).toContain('<GachaReveal')
+})
