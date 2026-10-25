@@ -3199,6 +3199,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-esports-club',
+    title: 'Is Esports a Real Club Activity?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "More and more high schools have started esports clubs, where students compete against other schools in video games. When a school near my town announced that it would open one, many parents ( A ) surprised. Some asked whether playing games could really be called a club activity.",
+      "Teachers who support the clubs say that esports teaches many of the same things as traditional sports. Members must practice regularly, study their opponents, and above all work as a team. In a match, a player who ignores teammates usually loses, no matter how skillful he or she is. Some students who had never joined any club before have found a place where they feel they belong.",
+      "On the other hand, there are real concerns. Sitting in front of a screen for long hours is not good for the eyes or the body, and some students may find it hard to stop ( B ) once they start. For this reason, many clubs set strict rules about practice time and include stretching or light exercise in their schedule.",
+      "Whether esports should be treated in the same way as baseball or soccer is still debated. What seems clear, however, is that the answer depends less on the game itself ( C ) on how the club is run.",
+    ],
+    ja: [
+      'ビデオゲームでほかの学校と競いあうeスポーツ部を始める高校がますます増えている。私の町の近くの学校が部を作ると発表したとき、多くの保護者はおどろいた。ゲームをすることが本当に部活動とよべるのかとたずねる人もいた。',
+      'この部を支持する先生たちは、eスポーツは従来のスポーツと同じことを多く教えてくれると言う。部員は定期的に練習し、相手を研究し、そして何よりもチームとして動かなければならない。試合では、仲間を無視する選手は、どんなにうまくても、たいてい負ける。それまでどの部にも入ったことのなかった生徒の中には、自分の居場所だと感じられる場所を見つけた人もいる。',
+      'その一方で、本当の心配もある。長い時間画面の前に座っているのは目にも体にもよくないし、一度始めるとやめるのがむずかしいと感じる生徒もいるかもしれない。このため、多くの部は練習時間について厳しいルールを決め、予定にストレッチや軽い運動を入れている。',
+      'eスポーツを野球やサッカーと同じようにあつかうべきかどうかは、いまも議論されている。しかし、はっきりしていると思われるのは、その答えはゲームそのものよりも、部がどのように運営されるかによるということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['were', 'was', 'did', 'being'], answer: 0, why: 'be surprised で「おどろく」。主語 many parents は複数で過去の話なので were。was は単数の主語に使い、did のうしろは原形、being だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['playing', 'play', 'played', 'plays'], answer: 0, why: 'stop ～ing で「～するのをやめる」。stop のあとに原形・過去分詞・3人称単数の形は続かない。' },
+      { id: 'C', choices: ['than', 'as', 'that', 'then'], answer: 0, why: 'less A than B で「A よりも B による」。比較級 less と組み合わせるのは than。' },
+    ],
+    tf: [
+      { statement: '筆者の町の近くの学校がeスポーツ部を作ると、多くの保護者がおどろいた。', answer: true, why: '第1段落 many parents were surprised。' },
+      { statement: '筆者によれば、試合では仲間を無視しても、うまい選手なら勝てる。', answer: false, why: '第2段落 a player who ignores teammates usually loses, no matter how skillful he or she is。' },
+      { statement: '多くの部は、練習時間について厳しいルールを決めている。', answer: true, why: '第3段落 many clubs set strict rules about practice time。' },
+    ],
+    qa: [
+      { q: 'According to supporters, what does esports teach?', choices: ['Regular practice and teamwork.', 'How to sit for long hours.', 'How to beat other schools without practice.', 'How to become a professional player quickly.'], answer: 0, why: '第2段落 Members must practice regularly … and above all work as a team。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

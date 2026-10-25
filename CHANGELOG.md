@@ -2027,3 +2027,4 @@
 - 2026-10-25: 国公立・旧帝大の文法を10問ずつ追加（譲歩の as・but for・no matter how など。城が4階→6階に）
 - 2026-10-25: 高3（共通テスト）レベルの長文「Where Does Our Leftover Food Go?」（食品ロス・206語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「Should We Work Four Days a Week?」（週4日勤務・212語）を追加
+- 2026-10-25: 高3（共通テスト）レベルの長文「Is Esports a Real Club Activity?」（eスポーツ部・215語）を追加
