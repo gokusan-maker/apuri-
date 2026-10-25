@@ -4,7 +4,7 @@ import type { Party } from './party'
 import type { Wallet } from './shop'
 
 export const GACHA_PRICE = 50
-export const PARTY_MAX = 12
+export const PARTY_MAX = 500 // 仲間は500体まで（オーナーの要望）
 
 export const TICKET_MAX = 9
 export const PITY = 20 // スーパーレア以上が出ないまま20回目なら、きんいろが確定

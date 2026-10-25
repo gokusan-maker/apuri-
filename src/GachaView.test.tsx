@@ -107,7 +107,7 @@ it('3連ガチャは3つの結果が並び、いちばんレアな確定演出�
 it('3連ガチャはコインか仲間の空きが足りないと押せない', () => {
   const { rerender } = render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={() => null} onDrawMulti={() => []} />)
   expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
-  rerender(<Gacha coins={GACHA_PRICE * 3} members={10} onDraw={() => null} onDrawMulti={() => []} />)
+  rerender(<Gacha coins={GACHA_PRICE * 3} members={PARTY_MAX - 2} onDraw={() => null} onDrawMulti={() => []} />)
   expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
 })
 
@@ -237,4 +237,15 @@ it('ガチャの補足チップは「ℹ️ ガチャのひみつ」にたたん
   const d = document.querySelector<HTMLDetailsElement>('details.gacha-info')!
   expect(d.open).toBe(false)
   expect(d.textContent).toContain('7日連続で1枚')
+})
+
+it('ガチャのページに「なかま10体 → 🎟1まい」の交換カードがあり、10体そろうと交換できる', () => {
+  const trade = vi.fn()
+  const { rerender } = render(<Gacha coins={0} members={5} onDraw={() => null} tradeCount={4} onTrade={trade} />)
+  expect(screen.getByText(/なかま10体 → 🎟1まい/)).toBeInTheDocument()
+  expect(screen.getByRole('button', { name: 'あと6体' })).toBeDisabled()
+  rerender(<Gacha coins={0} members={12} onDraw={() => null} tradeCount={11} onTrade={trade} />)
+  fireEvent.click(screen.getByRole('button', { name: '🎟 交換する' }))
+  expect(trade).toHaveBeenCalled()
+  expect(PARTY_MAX).toBe(500)
 })

@@ -82,7 +82,7 @@ import { eventFor } from './events'
 import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
 import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
+import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
 import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX } from './gacha'
 import {
   feed,
@@ -857,6 +857,14 @@ function App() {
   }
 
   // ガチャを n 回まとめて引く（1回ずつ財布・仲間・ステップを引きついで計算する）
+  // なかま10体 → 🎟1まい（記録の「なかま」とガチャのページの両方から）
+  function tradeTen() {
+    const next = tradeMembers(party)
+    if (!next || (wallet.tickets ?? 0) >= TICKET_MAX) return
+    setParty(next)
+    setWallet((w) => addTicket(w))
+    pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
+  }
   function drawMany(ticket: boolean, n: number, start = wallet): GachaResult[] {
     let w = start
     let p = party
@@ -1651,6 +1659,9 @@ function App() {
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           freeGacha={freeGachaDay !== today}
+          tradeCount={tradeableMembers(party).length}
+          tradeDisabled={(wallet.tickets ?? 0) >= TICKET_MAX}
+          onTrade={tradeTen}
           onFreeGacha={() => {
             // 無料の1回は、チケット1枚をその場でつけて引くのと同じ
             const k = drawMany(true, 1, { ...wallet, tickets: (wallet.tickets ?? 0) + 1 })[0] ?? null // 上限をこえても本物のチケットは減らない
@@ -1931,13 +1942,7 @@ function App() {
                   setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? feed(m, WARM_XP, null, today) : m)) }))
                 }}
                 ticketsFull={(wallet.tickets ?? 0) >= TICKET_MAX}
-                onTradeMembers={() => {
-                  const next = tradeMembers(party)
-                  if (!next || (wallet.tickets ?? 0) >= TICKET_MAX) return
-                  setParty(next)
-                  setWallet((w) => addTicket(w))
-                  pushToast([{ id: 'egg-trade', text: '🐾 仲間10体 → 🎟 ガチャチケットと交換した！', counter: 'answers', target: 0 }])
-                }}
+                onTradeMembers={tradeTen}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)
                   if (!next) return

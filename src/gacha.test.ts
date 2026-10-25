@@ -233,7 +233,7 @@ it('ポイント交換のタマゴはスーパーレア以上', async () => {
   const p = { members: [{ xp: 0 }], active: 0 }
   expect(srEgg(p, 0, 0.5)!.kind.id).toBe('kin')
   expect(srEgg(p, 0.9, 0.5)!.kind.id).toBe('niji')
-  expect(srEgg({ members: Array.from({ length: 12 }, () => ({ xp: 0 })), active: 0 }, 0, 0)).toBeNull()
+  expect(srEgg({ members: Array.from({ length: PARTY_MAX }, () => ({ xp: 0 })), active: 0 }, 0, 0)).toBeNull()
   localStorage.clear()
   expect(loadGachaPoints()).toBe(0)
   saveGachaPoints(21)

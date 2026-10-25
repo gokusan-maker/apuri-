@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { speak } from './speech'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { MEMBERS_FOR_TICKET } from './party'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
@@ -50,6 +51,9 @@ type Props = {
   stepLeft?: number // ステップアップ：あと何回でレア以上確定（0なら次が確定）
   onDraw: (ticket: boolean) => GachaResult | null // 引けたら出た色ちがいと種類を返す
   free?: boolean // 今日の無料の1回がまだある
+  tradeCount?: number // チケットと交換できる仲間（相棒・★以外）の数
+  tradeDisabled?: boolean
+  onTrade?: () => void // 仲間10体 → 🎟1まい
   onFree?: () => GachaResult | null // 1日1回の無料ガチャ
   onDrawMulti?: (n: number) => GachaResult[] // まとめて引く（3連ガチャ）
   onRaise?: () => void // 出たタマゴを相棒にする
@@ -57,7 +61,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, onDrawMulti, onRaise, onNameNew }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -139,6 +143,18 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
       )}
       </div>
       {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}
+      {onTrade && tradeCount !== undefined && (
+        <div className="gacha-trade" aria-label={`なかま10体でチケット1まい（いま ${Math.min(tradeCount, MEMBERS_FOR_TICKET)}/${MEMBERS_FOR_TICKET}体）`}>
+          <p className="gacha-trade-title">🔁 なかま{MEMBERS_FOR_TICKET}体 → 🎟1まい</p>
+          <span className="gacha-trade-meter" aria-hidden="true">
+            <i style={{ width: `${(Math.min(tradeCount, MEMBERS_FOR_TICKET) / MEMBERS_FOR_TICKET) * 100}%` }} />
+          </span>
+          <button className="list-link pill-btn pill-gold gacha-trade-btn" disabled={tradeCount < MEMBERS_FOR_TICKET || tradeDisabled} onClick={onTrade}>
+            {tradeDisabled ? 'チケットがいっぱい' : tradeCount >= MEMBERS_FOR_TICKET ? '🎟 交換する' : `あと${MEMBERS_FOR_TICKET - tradeCount}体`}
+          </button>
+          <small className="gacha-trade-note">相棒と★おきにいりの子は交換されないよ</small>
+        </div>
+      )}
       {tickets > 0 && !full && (
         <button
           className="good gacha-btn ticket"
