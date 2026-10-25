@@ -2617,6 +2617,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
 {
+    id: 'adv-immune-memory',
+    title: 'How the Body Remembers Germs',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The first time the body meets a new germ, the immune system needs time to respond. It must find, among millions of cells, the few that can recognize the invader, and then multiply them into an army large enough to fight back. This process can take a week or more, ( A ) the germ may already have caused serious illness.",
+      "After the infection is over, most of these defenders die off, but a small number remain in the body for years as memory cells, much like veterans who still remember the face of an enemy they once defeated. If the same germ appears again, these cells recognize it at once and launch an attack so quickly that the person often never notices ( B ) ill at all. This is why people who have had measles almost never catch it a second time.",
+      "Vaccines make use of this memory. By introducing a harmless form of a germ, or only one of its parts, a vaccine allows the immune system to practice without the risk of the disease itself. For some diseases the memory fades over time, so extra doses, called boosters, are needed to remind the body ( C ) the enemy looks like. When enough people in a community are protected, a germ has difficulty spreading from person to person, which also shields those who cannot be vaccinated, such as newborn babies.",
+    ],
+    ja: [
+      '体が新しい病原体にはじめて出会うとき、免疫のしくみが反応するには時間がかかる。何百万もの細胞の中から、侵入者を見分けられるわずかな細胞を見つけ出し、反撃できるほど大きな軍隊になるまで増やさなければならないのだ。この過程には1週間以上かかることがあり、そのあいだに病原体がすでに重い病気を引き起こしているかもしれない。',
+      '感染が終わると、こうした防衛役の細胞のほとんどは死んでいくが、少数は、かつて打ち負かした敵の顔をいまもおぼえている古参兵のように、記憶細胞として何年も体内に残る。同じ病原体がふたたびあらわれると、これらの細胞はすぐにそれを見分け、とても速く攻撃を始めるので、本人は具合が悪くなったことにまったく気づかないことも多い。はしかにかかったことのある人が、2度目にかかることがほとんどないのはこのためである。',
+      'ワクチンはこの記憶を利用している。病原体の害のない形、あるいはその一部だけを体に入れることで、ワクチンは病気そのものの危険なしに免疫のしくみに練習をさせる。病気によっては時間がたつと記憶がうすれるので、敵がどんな姿をしているかを体に思い出させるために、追加接種とよばれる追加の接種が必要になる。地域社会で十分に多くの人が守られていると、病原体は人から人へ広がりにくくなり、それは生まれたばかりの赤ちゃんのように、ワクチンを受けられない人たちを守ることにもなる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['during which', 'which', 'what', 'during that'], answer: 0, why: '「その（1週間以上の）期間のあいだに」は during the process の during が前に出た前置詞＋関係代名詞 during which。うしろは文として完全なので which だけ・what は入らず、during that ではコンマのあとで前の文につなげられない。' },
+      { id: 'B', choices: ['being', 'to be', 'be', 'been'], answer: 0, why: 'notice は目的語に動名詞をとる（notice being ill「具合が悪いことに気づく」）。notice to be の形はなく、原形 be・過去分詞 been は目的語になれない。' },
+      { id: 'C', choices: ['what', 'that', 'how', 'which'], answer: 0, why: 'look like の like の目的語が欠けているので、「敵が何に似ているか＝どんな姿か」の what。how ～ looks like とは言わず、that・which では remind の2つ目の目的語になる節がつくれない。' },
+    ],
+    tf: [
+      { statement: '体がはじめての病原体に反応するには、時間がかかることがある。', answer: true, why: '第1段落 the immune system needs time to respond … can take a week or more。' },
+      { statement: '感染が終わると、病原体と戦った細胞はすべて体の中に残る。', answer: false, why: '第2段落 most of these defenders die off, but a small number remain。' },
+      { statement: '十分に多くの人がワクチンで守られると、ワクチンを受けられない人も守られる。', answer: true, why: '第3段落 which also shields those who cannot be vaccinated。' },
+    ],
+    qa: [
+      { q: 'Why do people who have had measles almost never catch it again?', choices: ['Memory cells recognize the virus and attack it very quickly.', 'The measles virus disappears from the world after one infection.', 'Their bodies become too warm for the virus to live.', 'They always receive a booster dose after getting sick.'], answer: 0, why: '第2段落 these cells recognize it at once and launch an attack so quickly … This is why people who have had measles almost never catch it a second time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
