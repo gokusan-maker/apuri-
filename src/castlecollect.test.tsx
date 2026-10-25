@@ -25,3 +25,14 @@ it('ボスの城を全部たおすと1城制覇。ごほうびの🎟は1回だ�
   expect(screen.queryByText(/ごほうびを受け取る/)).toBeNull()
   expect(localStorage.getItem('eitan:castle-collect')).toBe('1')
 })
+
+it('ホームのキャラの上に城主の称号（1城以上制覇したら）', async () => {
+  const { CastleTitleChip } = await import('./CastleCollectView')
+  localStorage.clear()
+  const { unmount } = render(<CastleTitleChip />)
+  expect(screen.queryByLabelText(/^城の称号/)).toBeNull()
+  unmount()
+  localStorage.setItem('eitan:boss', JSON.stringify({ 中1: '2026-10-01', 中2: '2026-10-01', 中3: '2026-10-01' }))
+  render(<CastleTitleChip />)
+  expect(screen.getByLabelText('城の称号：城の見習い')).toBeInTheDocument()
+})

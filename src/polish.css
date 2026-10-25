@@ -3426,3 +3426,4 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .wc-boss-fig { flex: none; display: block; width: 52px; height: 52px; }
 .wc-boss-fig > * { width: 100%; height: 100%; }
 .wc-boss-title { background: linear-gradient(135deg, #dc2626, #7c3aed); box-shadow: 0 3px 0 #7f1d1d; }
+.castle-title-chip { margin: 0 auto 6px; width: fit-content; padding: 2px 12px; border-radius: 999px; font-weight: 900; font-size: 0.82rem; color: #78350f; background: linear-gradient(135deg, #fde68a, #fbbf24); box-shadow: 0 2px 0 #b45309; }

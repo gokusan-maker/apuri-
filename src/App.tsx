@@ -10,7 +10,7 @@ import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
-import { CastleCollection } from './CastleCollectView'
+import { CastleCollection, CastleTitleChip } from './CastleCollectView'
 import { RareEggContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
@@ -1473,6 +1473,7 @@ function App() {
               🔥 今日はまだ学習していないよ。1問でも答えて、連続{streakDays}日をつなげよう！
             </p>
           )}
+          <CastleTitleChip />
           <Monster
             deco={seasonEvent?.icon}
             sleepy={hour >= 22 || hour < 5}

@@ -49,3 +49,14 @@ export function CastleCollection({ onReward }: { onReward: (tickets: number) => 
     </details>
   )
 }
+
+// ホームのキャラの上に出す城主の称号（制覇した城が1つ以上のとき）
+export function CastleTitleChip() {
+  const [title] = useState(() => titleOf(conquered(allCastles())))
+  if (!title) return null
+  return (
+    <p className="castle-title-chip" aria-label={`城の称号：${title}`}>
+      🏰 {title}
+    </p>
+  )
+}
