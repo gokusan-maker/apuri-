@@ -295,11 +295,22 @@ it('解放が少ない単語帳は compact（3列にならぶ）、たくさん�
   expect(lv[1].classList.contains('compact')).toBe(true)
 })
 
-it('ボス部屋では、ボス1体ずつのタイル（絵と名前）から、どのボスもえらんで戦える', () => {
+it('ボス部屋では、レベル（中学・高校・きほん）でしぼりこんで、タイルからボスをえらんで戦える', () => {
+  localStorage.removeItem('eitan:boss-group')
+  localStorage.setItem('eitan:grade', 'hs')
+  const r = render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
+  const tiles = () => [...screen.getByRole('group', { name: 'ボスをえらぶ' }).querySelectorAll('button.boss-pick-tile')].map((b) => b.getAttribute('aria-label')!.split('のボス')[0])
+  expect(tiles()).toEqual(['高校基礎', '熟語', 'ビジネス']) // 高校生ははじめ高校のボス
+  fireEvent.click(screen.getByRole('button', { name: '🌱 きほん' }))
+  expect(tiles()).toEqual(['曜日・月', 'テーマ別', '数', '色・形', '会話'])
+  fireEvent.click(screen.getByRole('button', { name: '🏫 中学' }))
+  expect(tiles()).toEqual(['中1', '中2', '中3'])
+  expect(localStorage.getItem('eitan:boss-group')).toBe('jh')
+  localStorage.removeItem('eitan:grade')
+  r.unmount()
   render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
-  const pick = screen.getByRole('group', { name: 'ボスをえらぶ' })
-  expect(pick.querySelectorAll('button.boss-pick-tile').length).toBeGreaterThanOrEqual(10)
-  expect(pick.textContent).not.toMatch(/？×/)
+  expect(screen.getByRole('button', { name: '🏫 中学' })).toHaveAttribute('aria-pressed', 'true')
+  localStorage.removeItem('eitan:boss-group')
   fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })

@@ -15,6 +15,7 @@ import { loadNightDay, NIGHT_COINS, nightBossOf, saveNightDay, loadRareWeek, loa
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
+import { BOSS_GROUPS, loadBossGroup, saveBossGroup } from './bossfilter'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
@@ -96,6 +97,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const specialEvent = event !== undefined ? event : specialEventOf(dayKey(), { hour, weekend, goldReady: keys >= KEYS_FOR_GOLD && !!onOpenGold })
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
+  const [group, setGroup] = useState(loadBossGroup) // ボスをレベルでしぼりこむ
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
@@ -524,9 +526,19 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
         <>
-        <p className="boss-pick-title">🎯 ボスをえらんで勝負</p>
+        <p className="boss-pick-title">🎯 レベルをえらんで、ボスと勝負</p>
+        <div className="boss-group" role="group" aria-label="ボスのレベル">
+          {BOSS_GROUPS.map((g) => (
+            <button key={g.id} className={`boss-group-btn${group === g.id ? ' on' : ''}`} aria-pressed={group === g.id} onClick={() => {
+                setGroup(g.id)
+                saveBossGroup(g.id)
+              }}>
+              {g.label}
+            </button>
+          ))}
+        </div>
         <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
-          {LEVELS.map((lv) => (
+          {LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => (
             <button
               key={lv}
               className={`boss-pick-tile${boss[lv] ? ' beaten' : ''}`}
