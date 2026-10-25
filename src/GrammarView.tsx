@@ -1,3 +1,4 @@
+import { maskAnswer } from './readhint'
 import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
 import { useContext, useState } from 'react'
@@ -159,7 +160,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [grade, setGrade] = useState<GrammarGrade | 'all'>(() => (loadGrade() ? GRAMMAR_GRADES_FOR[loadGrade() as GradeId].at(-1)! : 'all')) // 設定の学年に合わせる
   const [rush, setRush] = useState<{ list: GrammarUnit[]; at: number } | null>(null) // 文法モンスターラッシュ
   const [cards, setCards] = useState(false) // 要点カード
-  const [hidden, setHidden] = useState<{ step: number; i: number } | null>(null) // ヒントで消した選択肢
+  const [hidden, setHidden] = useState<{ step: number; i: number } | null>(null) // ヒントを開いた問題（i は -1：選択肢は消さない）
   const [listen, setListen] = useState(false) // 例文リスニング
   const [today] = useState(() => dayKey())
   const [dailyDay, setDailyDay] = useState(loadDailyGrammarDay)
@@ -1104,18 +1105,18 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         </span>
         {after}
       </p>
-      {onSpend && picked === null && q.choices.length > 2 && hidden?.step !== step && (
+      {onSpend && picked === null && hidden?.step !== step && (
         <button
           className="hint-5050"
           onClick={() => {
             if (!onSpend(GRAMMAR_HINT_COST)) return
-            const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.answer)
-            setHidden({ step, i: wrongs[0] })
+            setHidden({ step, i: -1 }) // 選択肢は消さず、考え方のヒントを出す
           }}
         >
-          💡 ヒント：1つ消す（🪙{GRAMMAR_HINT_COST}）
+          💡 ヒント（🪙{GRAMMAR_HINT_COST}）
         </button>
       )}
+      {picked === null && hidden?.step === step && <p className="read-hint-text">💡 {maskAnswer(q.why, q.choices[q.answer])}</p>}
       <div className="choices">
         {choiceOrder(q.choices.length, shuffleSeed + step).map((i) => {
           const c = q.choices[i]

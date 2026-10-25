@@ -3,6 +3,7 @@ import { stagesOf, type StageRecord } from './stages'
 import { WORDS, type Level, type Word } from './words'
 import { makeQuiz, shuffle } from './quiz'
 import { GRAMMAR, gradeOf, type GrammarUnit } from './grammar'
+import { maskAnswer } from './readhint'
 
 export const BOSS_HP = 240 // オーナーの要望でボスの体力アップ（100→150→240）
 export const HEARTS = 3
@@ -110,7 +111,7 @@ export function bossQuestions(words: Word[], grammar: boolean) {
     if (i % 4 !== 3) return q
     const u = units[Math.floor(Math.random() * units.length)]
     const g = u.questions[Math.floor(Math.random() * u.questions.length)]
-    return { word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer }
+    return { word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer, hint: maskAnswer(g.why, g.choices[g.answer]) }
   })
 }
 
@@ -118,7 +119,7 @@ export function bossQuestions(words: Word[], grammar: boolean) {
 // 単語＝単語の意味、文法＝___ 穴埋め（ボスの単語帳のレベルの単元から）、読解＝英文を読んで意味をえらぶ
 export type TeamRole = 'word' | 'grammar' | 'reading'
 export const TEAM_ORDER: TeamRole[] = ['word', 'grammar', 'reading']
-export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamRole }
+export type TeamQ = { word: Word; choices: string[]; answer: number; team: TeamRole; hint?: string } // hint：💡ヒントの解説（答えはかくす）
 
 // readingQs：読解ボスのときは、読解の番に本文の問題を順に出す
 export function teamBossQuestions<R extends { word: Word; choices: string[]; answer: number }>(words: Word[], rnd: () => number = Math.random, n = BOSS_QUESTIONS, readingQs?: R[], grammarUnits?: GrammarUnit[]): (TeamQ | (R & { team: 'reading' }))[] {
@@ -133,7 +134,7 @@ export function teamBossQuestions<R extends { word: Word; choices: string[]; ans
     if (role === 'grammar') {
       const u = units[Math.floor(rnd() * units.length)]
       const g = u.questions[Math.floor(rnd() * u.questions.length)]
-      out.push({ word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer, team: 'grammar' })
+      out.push({ word: { id: '', en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer, team: 'grammar', hint: maskAnswer(g.why, g.choices[g.answer]) })
     } else if (role === 'reading' && readingQs && readingQs.length > 0) {
       out.push({ ...readingQs[ri++ % readingQs.length], team: 'reading' })
     } else if (role === 'reading') {

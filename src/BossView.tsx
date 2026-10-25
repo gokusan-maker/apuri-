@@ -1,4 +1,4 @@
-import { maskAnswer } from './readhint'
+import { maskAnswer, wordHint } from './readhint'
 import { CHAR_TYPES, supportEffects } from './chartype'
 import type { LongPassage } from './longreading'
 import type { GrammarUnit } from './grammar'
@@ -990,17 +990,17 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                 💡 ヒント
               </button>
             ))}
-          {partner && hintAt === null && picked === null && q.choices.length > 2 && (
+          {partner && !('passage' in q) && hintAt === null && picked === null && (
             <button
               className="hint-5050 hint-erase"
-              title={`${partner.name}がまちがいを1つ消してくれる`}
-              onClick={() => {
-                const wrongs = q.choices.map((_, i) => i).filter((i) => i !== q.answer)
-                setHintAt({ index, hide: wrongs[Math.floor(rnd() * wrongs.length)] })
-              }}
+              title={`${partner.name}が考え方のヒントをくれる`}
+              onClick={() => setHintAt({ index, hide: -1 })}
             >
-              ✂️ 1つ消す
+              💡 ヒント
             </button>
+          )}
+          {!('passage' in q) && hintAt?.index === index && picked === null && (
+            <p className="read-hint-text boss-hint-text">💡 {(q as { hint?: string }).hint ?? wordHint(q.word, q.choices[q.answer])}</p>
           )}
           <div className="choices">
             {q.choices.map((c, i) => {

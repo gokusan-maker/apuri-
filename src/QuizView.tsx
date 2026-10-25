@@ -1,3 +1,4 @@
+import { wordHint } from './readhint'
 import { GameTile } from './GameTileView'
 import { isGrammarGame } from './quizgames'
 import { addRiddle, loadRiddleBook } from './riddlebook'
@@ -322,6 +323,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
   const [shared, setShared] = useState('')
   const [left, setLeft] = useState(QUESTION_TIME) // 制限時間モードの残り秒
   const [removed, setRemoved] = useState<number[]>([]) // 50:50 で消した選択肢
+  const [hintFor, setHintFor] = useState<number | null>(null) // 💡ヒントを開いた問題の番号
 
   const q = questions[index]
   const qd: Direction = q?.d ?? direction // この問題の種類（ミックスでは1問ごとに変わる）
@@ -360,10 +362,10 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
     if (timing && left <= 0) pick(-1)
   })
 
+  // 💡 ヒント：選択肢は消さずに、例文で考えるヒントを出す
   function fiftyFifty() {
-    if (!q || removed.length > 0 || !onSpend?.(HINT_COST)) return
-    const wrong = shuffle(q.choices.map((_, i) => i).filter((i) => i !== q.answer)).slice(0, 2)
-    setRemoved(wrong)
+    if (!q || hintFor === index || !onSpend?.(HINT_COST)) return
+    setHintFor(index)
   }
 
   function pick(i: number) {
@@ -392,6 +394,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
   function next() {
     setPicked(null)
     setRemoved([])
+    setHintFor(null)
     setLeft(QUESTION_TIME)
     setIndex(index + 1)
     if (index + 1 === questions.length) onFinish?.(score, questions.length)
@@ -413,6 +416,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
     setShared('')
     setLeft(QUESTION_TIME)
     setRemoved([])
+    setHintFor(null)
     setIndex(0)
     setPicked(null)
     setScore(0)
@@ -1087,11 +1091,12 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
           )
         })}
       </div>
-      {picked === null && onSpend && q.choices.length === 4 && removed.length === 0 && (
+      {picked === null && onSpend && hintFor !== index && (
         <button className="hint-5050" onClick={fiftyFifty}>
-          💡 50:50（🪙{HINT_COST}）
+          💡 ヒント（🪙{HINT_COST}）
         </button>
       )}
+      {picked === null && hintFor === index && <p className="read-hint-text">💡 {wordHint(q.word, q.choices[q.answer])}</p>}
       {picked === q.answer && combo > 0 && combo % 10 === 0 && (
         <p className="mega-combo" role="status">
           🔥{combo}コンボ！ すごい！

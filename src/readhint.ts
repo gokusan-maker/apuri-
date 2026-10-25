@@ -20,3 +20,10 @@ export function evidenceOf(p: Passage, qi: number): string | null {
   }
   return null
 }
+
+// 単語の問題のヒント：例文で考えさせる（英語の選択肢なら例文の答えの語をかくして和訳をそえる）
+export function wordHint(w: { en: string; ja: string; example?: string; exampleJa?: string }, answer: string): string {
+  if (w.example && answer === w.ja) return `例文で考えよう：「${w.example}」`
+  if (w.example && w.exampleJa) return `例文で考えよう：「${maskAnswer(w.example, w.en)}」（${w.exampleJa}）`
+  return `答えは「${answer.slice(0, 1)}」で始まるよ。`
+}

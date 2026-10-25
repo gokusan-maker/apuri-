@@ -144,7 +144,7 @@ it('文法モンスターラッシュを3連勝するとごほうび', () => {
   expect(rushWin).toHaveBeenCalledTimes(1)
 })
 
-it('ヒントでまちがいの選択肢を1つ消せる', () => {
+it('ヒントは選択肢を消さず、答えをかくした解説を出す', () => {
   localStorage.clear()
   const spend = vi.fn(() => true)
   render(<Grammar onSpend={spend} />)
@@ -152,10 +152,11 @@ it('ヒントでまちがいの選択肢を1つ消せる', () => {
   fireEvent.click(screen.getByRole('button', { name: u.title }))
   fireEvent.click(screen.getByText(/確認問題へ/))
   expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
-  fireEvent.click(screen.getByText(/ヒント：1つ消す/))
+  fireEvent.click(screen.getByText(/💡 ヒント/))
   expect(spend).toHaveBeenCalledWith(5)
-  expect(document.querySelectorAll('.choices .choice')).toHaveLength(2)
-  expect(screen.getByRole('button', { name: u.questions[0].choices[u.questions[0].answer] })).toBeInTheDocument()
+  expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
+  const hint = document.querySelector('.read-hint-text')!.textContent!
+  expect(hint).toContain('＿＿')
 })
 
 it('学年ごとの全問正解の進みぐあいがバーで出る', () => {

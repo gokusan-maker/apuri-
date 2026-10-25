@@ -469,16 +469,16 @@ it('相棒のちからの分だけ正解ダメージがふえる', () => {
   expect(b - a).toBe(3)
 })
 
-it('相棒のヒントでまちがいの選択肢が1つ消える（1戦1回）', async () => {
+it('相棒のヒントは選択肢を消さず、考え方のヒントを出す（1戦1回）', async () => {
   const { FORMS } = await import('./monster')
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} partner={{ form: FORMS[1], name: 'あいぼう' }} />)
   const before = document.querySelectorAll('.boss .choice').length
-  fireEvent.click(screen.getByTitle(/あいぼうがまちがいを1つ消して/))
-  expect(document.querySelectorAll('.boss .choice').length).toBe(before - 1)
-  expect(screen.queryByTitle(/あいぼうがまちがいを1つ消して/)).toBeNull()
+  fireEvent.click(screen.getByTitle(/あいぼうが考え方のヒントをくれる/))
+  expect(document.querySelectorAll('.boss .choice').length).toBe(before)
+  expect(document.querySelector('.boss-hint-text')!.textContent).toMatch(/例文で考えよう|で始まるよ/)
   answer(true)
   fireEvent.click(screen.getByText('次へ'))
-  expect(screen.queryByTitle(/あいぼうがまちがいを1つ消して/)).toBeNull()
+  expect(screen.queryByTitle(/あいぼうが考え方のヒントをくれる/)).toBeNull()
 })
 
 it('ラッキーコインを使うとSランクボーナスが2倍', () => {
