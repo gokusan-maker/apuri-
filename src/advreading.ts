@@ -4265,6 +4265,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-tipping',
+    title: 'Should We Tip?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Travelers are often confused by the custom of tipping. In some countries, customers are expected to leave an extra fifteen to twenty percent of the bill for restaurant staff, and failing to do so is considered rude. In others, such as Japan, tipping is rare, and an attempt to leave extra money may even cause embarrassment.",
+      "Supporters of tipping argue that it rewards good service. Because servers' income depends partly on customers' satisfaction, they have a reason to be attentive and friendly. Some customers also enjoy being able to show their appreciation ( A ) a way that feels personal.",
+      "Critics, however, point out several problems. In places where tips make up a large part of workers' pay, their income can change greatly from week to week, ( B ) makes it hard to plan their lives. Studies have also suggested that the size of a tip often depends less on the quality of the service than on factors such as the weather or the customer's mood. As a result, workers may be paid unfairly for the same effort.",
+      "For these reasons, some restaurants have replaced tipping with higher menu prices and fixed wages. Whether this approach will spread remains to be seen. What is clear is that a small custom ( C ) many people never think about raises large questions about fairness and the value of work.",
+    ],
+    ja: [
+      '旅行者はしばしばチップの習慣にとまどう。国によっては、客は飲食店の従業員のために請求額の15〜20パーセントを余分に置いていくことが期待され、そうしないと失礼だと考えられる。日本のような国ではチップはめったになく、余分なお金を置こうとすると、相手を困らせてしまうことさえある。',
+      'チップを支持する人々は、それがよいサービスに報いると主張する。給仕係の収入の一部が客の満足度にかかっているので、彼らには気配りがよく親しみやすくする理由がある。個人的だと感じられる方法で感謝を示せることを楽しむ客もいる。',
+      'しかし批判する人々は、いくつかの問題を指摘する。チップが働く人の給料の大部分をしめる場所では、収入が週ごとに大きく変わることがあり、そのせいで生活の計画を立てにくくなる。また研究によると、チップの額はサービスの質よりも、天気や客の気分のような要因によって決まることが多いらしい。その結果、同じ努力に対して不公平な支払いを受けることがある。',
+      'こうした理由から、チップのかわりにメニューの値段を上げ、決まった給料を払うようにしたレストランもある。このやり方が広まるかどうかは、まだわからない。はっきりしているのは、多くの人が考えたこともない小さな習慣が、公平さや働くことの価値についての大きな問いを投げかけているということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'by', 'at', 'on'], answer: 0, why: 'in a way that ～ で「～な方法で」。方法・やり方を表す way の前は in。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（収入が大きく変わること）を受ける非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a small custom を説明し、think about の目的語が欠けたかたまりを作る関係代名詞 that。what は先行詞をとらず、whose のうしろには名詞が必要、where のうしろは欠けたところのない文。' },
+    ],
+    tf: [
+      { statement: '日本ではチップはめったにない。', answer: true, why: '第1段落 In others, such as Japan, tipping is rare。' },
+      { statement: '研究によれば、チップの額はおもにサービスの質で決まる。', answer: false, why: '第3段落 depends less on the quality of the service than on factors such as the weather。' },
+      { statement: 'チップのかわりに決まった給料を払うようにしたレストランもある。', answer: true, why: '第4段落 some restaurants have replaced tipping with higher menu prices and fixed wages。' },
+    ],
+    qa: [
+      { q: 'Why can tipping make it hard for workers to plan their lives?', choices: ['Their income can change greatly from week to week.', 'They have to work longer hours.', 'Customers never leave tips.', 'Menu prices are too high.'], answer: 0, why: '第3段落 their income can change greatly from week to week, which makes it hard to plan their lives。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
