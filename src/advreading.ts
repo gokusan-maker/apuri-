@@ -4285,6 +4285,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（収入が大きく変わること）を受ける非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
       { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a small custom を説明し、think about の目的語が欠けたかたまりを作る関係代名詞 that。what は先行詞をとらず、whose のうしろには名詞が必要、where のうしろは欠けたところのない文。' },
     ],
+    underline: {
+      phrase: 'remains to be seen',
+      choices: ['is not known yet', 'has already been decided', 'cannot be seen clearly', 'is clearly impossible'],
+      answer: 0,
+      why: 'remain to be seen は「まだわからない・今後を見なければならない」。',
+    },
+    order: {
+      words: ['the', 'size', 'of', 'a', 'tip', 'often', 'depends', 'less'],
+      rest: 'on the quality of the service.',
+      answer: 'the size of a tip often depends less',
+      ja: 'チップの額は、サービスの質によって決まる度合いが小さいことが多い。（depend less on A than on B＝A より B による）',
+    },
     tf: [
       { statement: '日本ではチップはめったにない。', answer: true, why: '第1段落 In others, such as Japan, tipping is rare。' },
       { statement: '研究によれば、チップの額はおもにサービスの質で決まる。', answer: false, why: '第3段落 depends less on the quality of the service than on factors such as the weather。' },
@@ -4315,6 +4327,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['is', 'are', 'being', 'to be'], answer: 0, why: '主語は動名詞のかたまり Monitoring a system … （単数あつかい）なので is。after all は「なんといっても」。' },
       { id: 'C', choices: ['them', 'it', 'they', 'their'], answer: 0, why: 'keep them alive で「それら（の技術）を生かし続ける」。which が指す skills は複数なので them。it は単数、they は主語の形、their は所有格で目的語になれない。' },
     ],
+    underline: {
+      phrase: 'take over',
+      choices: ['take control', 'go home', 'give up', 'look around'],
+      answer: 0,
+      why: 'take over は「（仕事・操作を）引き継ぐ」。システムが故障したときに人間が操作を引き継ぐ、という意味。',
+    },
+    order: {
+      words: ['skills', 'that', 'are', 'not', 'practiced', 'fade'],
+      rest: '',
+      answer: 'skills that are not practiced fade',
+      ja: '練習されない技術はおとろえる。（that は主格の関係代名詞。主語は skills that are not practiced）',
+    },
     tf: [
       { statement: '自動化のパラドックスとは、システムが信頼できるほど人間が引き継ぐ準備ができなくなることだ。', answer: true, why: '第1段落 the more reliable an automated system becomes, the less prepared humans are to take over。' },
       { statement: '筆者は、自動化はさけるべきだと主張している。', answer: false, why: '第3段落 This does not mean that automation should be avoided。' },
@@ -4407,6 +4431,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋副詞（often）＋ that … で「とても～なので…」。such は名詞の前、too・very は that と組めない。' },
       { id: 'C', choices: ['what', 'that', 'which', 'those'], answer: 0, why: 'become の補語で、treasure の目的語が欠けたかたまり「いちばん大切にするもの」を作る関係代名詞 what。that・which は先行詞が必要で、those のうしろに主語と動詞を直接続けられない。' },
     ],
+    underline: {
+      phrase: 'stand out from everyday life',
+      choices: ['are clearly different from ordinary days', 'happen outside the house', 'are forgotten quickly', 'make everyday life boring'],
+      answer: 0,
+      why: 'stand out from ～ は「～の中で目立つ・きわだつ」。ふだんの日々とはっきりちがうので記憶に残る、という意味。',
+    },
+    order: {
+      words: ['tend', 'to', 'be', 'stored', 'more', 'vividly', 'than', 'routine', 'ones'],
+      rest: '',
+      answer: 'tend to be stored more vividly than routine ones',
+      ja: '（新しい経験は）決まりきった経験よりも鮮やかに記憶されやすい。（tend to ～＝～しがちだ、受け身 be stored）',
+    },
     tf: [
       { statement: 'レミニセンス・バンプによれば、思い出の多くはだいたい10歳から30歳ごろのものだ。', answer: true, why: '第1段落 come from roughly the ages of ten to thirty。' },
       { statement: '筆者によれば、決まりきった経験は新しい経験より鮮やかに記憶される。', answer: false, why: '第2段落 New experiences tend to be stored more vividly than routine ones。' },
@@ -4437,6 +4473,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['what', 'that', 'which', 'whose'], answer: 0, why: '前置詞 of の目的語で、have の目的語が欠けたかたまり「すでにもっているもの」を作る関係代名詞 what。that は前置詞のあとに置けず、which は先行詞が必要、whose のうしろには名詞が必要。' },
       { id: 'C', choices: ['worth', 'worthy', 'value', 'valuable'], answer: 0, why: 'be worth ～ing で「～する価値がある」。worth は前置詞のように動名詞 taking を目的語にとる。worthy は worthy of の形、value は名詞・動詞、valuable は形容詞で -ing を続けられない。' },
     ],
+    underline: {
+      phrase: 'people living close to the edge',
+      choices: ['people who had barely enough to survive', 'people who lived near high cliffs', 'people who were very brave', 'people who lived by the sea'],
+      answer: 0,
+      why: 'close to the edge は「（生活が）ぎりぎりの状態で」。直後の losing food or shelter could be far more dangerous から、生きるのにやっとの人々を指す。',
+    },
+    order: {
+      words: ['losing', 'food', 'or', 'shelter', 'could', 'be', 'far', 'more', 'dangerous'],
+      rest: 'than gaining a little extra was helpful.',
+      answer: 'losing food or shelter could be far more dangerous',
+      ja: '食べ物やすみかを失うことは、少し余分に手に入れることが役に立つよりも、はるかに危険だったかもしれない。（動名詞 losing ～ が主語・far ＋比較級）',
+    },
     tf: [
       { statement: '損失回避とは、同じ額でも失うほうが得るより強く感じられる傾向だ。', answer: true, why: '第1段落 the second experience would upset them more than the first would please them … loss aversion。' },
       { statement: '実験では、参加者は物を手放すのに、それを買う額より少ないお金で満足した。', answer: false, why: '第2段落 demanded more money to give up an object … than they were willing to pay。' },
