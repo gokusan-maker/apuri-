@@ -643,7 +643,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               window.scrollTo?.({ top: 0 })
             }}
           >
-            ▶ 次のレベル「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
+            ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
           </button>
         )}
         <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">
