@@ -2471,6 +2471,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'What do some researchers recommend when correcting false stories?', choices: ['Starting with the accurate information rather than the myth.', 'Repeating the false claim many times.', 'Stopping the use of social media completely.', 'Sharing stories faster than other people.'], answer: 0, why: '第3段落 recommend starting with the accurate information rather than the myth。' },
     ],
   },
+  {
+    id: 'adv-appendix',
+    title: 'The Organ We Thought Was Useless',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For much of the twentieth century, the appendix, a small finger-shaped pouch attached to the large intestine, was described in textbooks as a useless leftover of evolution. Because it can become infected and must sometimes be removed in an emergency, many people regarded it ( A ) nothing more than a source of trouble.",
+      "Recent research has challenged this view. The appendix contains a large amount of tissue belonging to the immune system, and some scientists believe it serves as a safe house for helpful gut bacteria. After a severe illness such as cholera has flushed the intestine of its bacteria, the appendix may help restore them ( B ) releasing the microbes it has been storing. Supporting this idea, the appendix appears to have evolved independently more than thirty times in different groups of mammals, which would be surprising for a structure with no function.",
+      "None of this means that an inflamed appendix should be left alone; appendicitis can be life-threatening if the organ bursts. ( C ), some doctors now treat mild cases with antibiotics instead of surgery, and studies suggest that many patients recover without losing the organ. The story of the appendix is a reminder that ( D ) we do not yet understand the purpose of a body part does not prove that it has none.",
+    ],
+    ja: [
+      '20世紀の大半のあいだ、大腸につながった指のような形の小さなふくろである虫垂は、教科書で進化の役に立たない名残だと説明されていた。感染を起こすことがあり、ときには緊急に取りのぞかなければならないので、多くの人は虫垂をやっかいのもとにすぎないと考えていた。',
+      '最近の研究は、この見方に疑問を投げかけている。虫垂には免疫のしくみに属する組織がたくさんふくまれており、役に立つ腸内細菌の避難所の役目を果たしていると考える科学者もいる。コレラのような重い病気で腸の細菌が洗い流されたあと、虫垂はたくわえていた微生物を放出することで、細菌をもとにもどす手助けをするのかもしれない。この考えを裏づけるように、虫垂はほ乳類のさまざまなグループで30回以上もそれぞれ独立に進化したようだ。はたらきのない構造なら、これはおどろくべきことだろう。',
+      'だからといって、炎症を起こした虫垂をほうっておいてよいわけではない。虫垂炎は、虫垂が破れると命にかかわることがある。しかし、軽い場合には手術ではなく抗生物質で治療する医師もいまはいて、多くの患者が虫垂を失わずに回復することを示す研究もある。虫垂の話は、体の部分の目的を私たちがまだ理解していないという事実が、その部分に目的がないことの証明にはならない、ということを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'for being', 'to be as', 'like as'], answer: 0, why: 'regard A as B で「A を B と見なす」。' },
+      { id: 'B', choices: ['by', 'with that', 'in order', 'so as'], answer: 0, why: '手段を表す by ＋動名詞（by releasing＝放出することによって）。in order・so as のあとは to が必要。' },
+      { id: 'C', choices: ['However', 'Although', 'Despite', 'Even though'], answer: 0, why: '文頭でコンマを置いて「しかし」とつなぐ副詞 However。Although・Even though のあとには文が続き、Despite のあとには名詞が必要。' },
+      { id: 'D', choices: ['the fact that', 'what', 'that of', 'which'], answer: 0, why: 'うしろが完全な文なので、同格の that を使った the fact that ～（～という事実）が主語になる。what・which のうしろには欠けた部分が必要。' },
+    ],
+    tf: [
+      { statement: '昔の教科書では、虫垂は役に立たないものとされていた。', answer: true, why: '第1段落 was described in textbooks as a useless leftover of evolution。' },
+      { statement: '虫垂は、ほ乳類のうちひとつのグループにしか見られない。', answer: false, why: '第2段落 evolved independently more than thirty times in different groups of mammals。' },
+      { statement: '筆者は、炎症を起こした虫垂はほうっておいてよいと述べている。', answer: false, why: '第3段落 None of this means that an inflamed appendix should be left alone。' },
+    ],
+    qa: [
+      { q: 'What role do some scientists think the appendix plays?', choices: ['It is a safe house for helpful gut bacteria.', 'It is where food is digested first.', 'It stores extra blood for emergencies.', 'It produces the bacteria that cause cholera.'], answer: 0, why: '第2段落 it serves as a safe house for helpful gut bacteria。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
