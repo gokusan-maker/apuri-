@@ -4205,6 +4205,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-qr-code',
+    title: 'From Barcodes to QR Codes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every time you buy something at a supermarket, a small pattern of black lines makes the checkout quick and accurate. This pattern, called a barcode, stores a number in the widths of its bars and spaces. When a scanner shines light on it, the reflected pattern is turned into the number, and the computer instantly knows ( A ) product it is and how much it costs. Barcodes began to be used in stores in the 1970s, and they soon spread around the world.",
+      "However, ordinary barcodes have a limit: they can hold only a small amount of information. In 1994, engineers at a Japanese company that made parts for cars developed a solution. Their new code stored information both horizontally and vertically in a square pattern of small black and white blocks. It was called the QR code, from the words 'quick response,' because it could be read very fast.",
+      "A QR code can hold far more data than a barcode, including website addresses and text. It also has a clever feature: even if part of the code is dirty or damaged, it can often still be read, ( B ) extra information is built into the pattern to correct errors.",
+      "Today, QR codes are used for everything from paying in shops to checking in at airports. A tool ( C ) was first designed to track car parts has become part of everyday life.",
+    ],
+    ja: [
+      'スーパーで何かを買うたびに、黒い線の小さな模様がレジでの会計を速く正確にしてくれる。バーコードとよばれるこの模様は、線とすき間の幅に数字をたくわえている。スキャナーが光を当てると、はね返った模様が数字に変えられ、コンピューターはそれがどの商品で、いくらなのかをすぐに知るのである。バーコードは1970年代に店で使われはじめ、すぐに世界中に広まった。',
+      'しかし、ふつうのバーコードには限界がある。わずかな情報しかたくわえられないのだ。1994年、自動車の部品を作っていた日本のある会社の技術者たちが、解決策を生み出した。その新しいコードは、小さな白黒のマスを四角くならべた模様の中に、横方向と縦方向の両方で情報をたくわえた。とても速く読みとれることから、「クイック・レスポンス」という言葉からとって QR コードと名づけられた。',
+      'QR コードは、ウェブサイトのアドレスや文章をふくめ、バーコードよりもはるかに多くのデータをたくわえられる。また、巧妙な特徴もある。コードの一部が汚れていたりこわれていたりしても、読みとれることが多いのだ。誤りを訂正するための余分な情報が模様の中に組みこまれているからである。',
+      '今日、QR コードは店での支払いから空港での搭乗手続きまで、あらゆることに使われている。もともと自動車の部品を追跡するために作られた道具が、毎日の暮らしの一部になったのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'whose', 'that', 'whether'], answer: 0, why: 'which ＋名詞（which product）で「どの商品」。knows の目的語になる疑問詞のかたまり。whose は「だれの」、that・whether のうしろに名詞 product だけを置いて始めることはできない。' },
+      { id: 'B', choices: ['because', 'because of', 'despite', 'due to'], answer: 0, why: 'うしろが文（extra information is built into …）なので接続詞 because。because of・despite・due to は前置詞の働きでうしろに文を続けられない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 A tool を説明し、was designed の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: 'バーコードは1970年代に店で使われはじめた。', answer: true, why: '第1段落 Barcodes began to be used in stores in the 1970s。' },
+      { statement: 'QR コードは、アメリカの自動車会社によって作られた。', answer: false, why: '第2段落 engineers at a Japanese company that made parts for cars。' },
+      { statement: 'QR コードは、一部がこわれていても読みとれることが多い。', answer: true, why: '第3段落 even if part of the code is dirty or damaged, it can often still be read。' },
+    ],
+    qa: [
+      { q: 'Why was the code named "QR"?', choices: ['Because it could be read very quickly.', 'Because it was square and red.', 'Because it was first used in Queensland.', 'Because it stored questions and replies.'], answer: 0, why: '第2段落 It was called the QR code, from the words "quick response," because it could be read very fast。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
