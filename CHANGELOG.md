@@ -2094,3 +2094,4 @@
 - 2026-10-25: TOEICの単語を12語追加（mortgage・shareholder・subscription・vacancy など）で300語に
 - 2026-10-25: ネイティブの会話表現を45語追加（no worries・I'm down・I owe you one・fingers crossed・laid-back など）
 - 2026-10-25: ネイティブの会話表現を40語追加（you made my day・keep me posted・night owl・pain in the neck など）。上位レベルの単語がすべて300語以上に
+- 2026-10-25: ネイティブレベルの専用エッセイ「Confessions of a Plant Killer」（植物を枯らしてしまう人・247語）を追加

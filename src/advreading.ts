@@ -3931,6 +3931,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'native-houseplants',
+    title: 'Confessions of a Plant Killer',
+    level: '難関大（評論）',
+    paragraphs: [
+      "I have a confession to make: I am a serial plant killer. Over the years, I have managed to kill cacti, which supposedly thrive on neglect, and a bamboo plant that the shop assistant swore was 'impossible to kill.' Every time I bring a new plant home, I promise myself that this one will be different, and every time, a few weeks later, I find myself staring at a sad brown stick ( A ) used to be a living thing.",
+      "For a long time I blamed bad luck. Then a friend who grows vegetables on her tiny balcony asked me a simple question: how often did I water them? The honest answer was 'whenever I remembered,' which turned out to mean either never or far too much. Plants, she explained, don't need grand gestures of love. They need small, boring routines.",
+      "So I tried something new. I chose one easygoing plant, put it by the kitchen window where I would see it every morning, and set a reminder on my phone. Watering it became part of my routine, ( B ) brushing my teeth.",
+      "Six months later, the plant is not just alive but actually growing. I am almost embarrassingly proud of it. More than that, it has taught me that most things worth caring for, from friendships to fitness, depend less on big efforts than on showing up regularly. It's a lesson I wish I ( C ) learned a few dozen plants earlier.",
+    ],
+    ja: [
+      '告白しなければならないことがある。私は植物を次々と枯らしてしまう人間なのだ。これまでに、放っておくほどよく育つはずのサボテンや、店員が「絶対に枯れない」と断言した竹まで枯らしてきた。新しい植物を家に持ち帰るたびに、今度こそちがうと自分に約束するのだが、そのたびに数週間後、かつて生き物だった、しょんぼりした茶色い棒を見つめることになる。',
+      '長いあいだ、私は運が悪いせいにしていた。そんなとき、小さなベランダで野菜を育てている友人が、ひとつ簡単な質問をした。どれくらいの頻度で水をやっていたのか、と。正直な答えは「思い出したとき」で、それは結局、まったくやらないか、やりすぎるかのどちらかを意味していた。植物には大げさな愛情表現はいらないのだと彼女は説明した。必要なのは、小さくて退屈な習慣なのだ。',
+      'そこで私は新しいことを試した。手のかからない植物を1つ選び、毎朝目に入る台所の窓辺に置き、スマホにリマインダーを設定した。水やりは、歯みがきと同じように、私の日課の一部になった。',
+      '6か月たった今、その植物は生きているどころか、ちゃんと育っている。自分でもはずかしいくらい誇らしい。それ以上に、この植物は、友情から体力づくりまで、大切にする価値のあるほとんどのことは、大きな努力よりも、きちんと続けることにかかっていると教えてくれた。何十本か植物を枯らす前に学べていればよかったのに、と思う教訓である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a sad brown stick を説明し、used to be の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['just like', 'as if', 'so that', 'even though'], answer: 0, why: 'うしろが動名詞のかたまり（brushing my teeth）なので、前置詞として使える just like「～とまったく同じように」。as if・so that・even though のうしろには主語と動詞のそろった文が必要。' },
+      { id: 'C', choices: ['had', 'have', 'would', 'was'], answer: 0, why: 'I wish ＋仮定法過去完了（had ＋過去分詞）で「（過去に）～していればよかったのに」。I wish のあとに現在完了 have learned は使えず、would・was のうしろに learned は続かない。' },
+    ],
+    tf: [
+      { statement: '筆者はサボテンを枯らしたことがある。', answer: true, why: '第1段落 I have managed to kill cacti。' },
+      { statement: '筆者は以前、決まった日に水をやっていた。', answer: false, why: '第2段落 The honest answer was "whenever I remembered"。' },
+      { statement: '筆者によれば、大切なことの多くは大きな努力よりも続けることにかかっている。', answer: true, why: '第4段落 depend less on big efforts than on showing up regularly。' },
+    ],
+    qa: [
+      { q: 'What did the writer do to keep the new plant alive?', choices: ['Put it where he or she would see it and set a reminder.', 'Bought a more expensive plant.', 'Asked the shop assistant to water it.', 'Moved it to a friend\'s balcony.'], answer: 0, why: '第3段落 put it by the kitchen window where I would see it every morning, and set a reminder on my phone。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
