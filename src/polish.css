@@ -3397,3 +3397,25 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .barea-roam-name { padding: 0 5px; border-radius: 6px; background: rgb(255 255 255 / 0.85); color: #1c1917; font-size: 0.62rem; font-weight: 800; white-space: nowrap; }
 .barea-roam.beaten { opacity: 0.75; }
 @keyframes barea-wander { 25% { translate: 6px -2px; } 50% { translate: 0 -4px; } 75% { translate: -6px -2px; } }
+
+/* ホームの城の制覇コレクション */
+.castle-collect { margin: 10px 0; border-radius: 16px; background: var(--card); border: 2px solid #a16207; box-shadow: 0 4px 0 #713f12; overflow: hidden; }
+.castle-collect > summary { display: flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; padding: 10px 12px; cursor: pointer; list-style: none; }
+.castle-collect > summary::-webkit-details-marker { display: none; }
+.cc-icon { font-size: 1.5rem; }
+.cc-head { font-weight: 900; }
+.cc-head b { margin-left: 4px; padding: 0 8px; border-radius: 999px; background: #f59e0b; color: #fff; }
+.cc-title { width: 100%; padding-left: 2.2em; color: var(--muted); font-weight: 700; }
+.cc-claim { margin: 0 12px 8px; width: calc(100% - 24px); }
+.cc-list { list-style: none; margin: 0; padding: 0 12px 12px; display: grid; gap: 4px; max-height: 320px; overflow-y: auto; }
+.cc-list li { display: grid; grid-template-columns: auto minmax(0, 1fr) 56px 54px; align-items: center; gap: 6px; font-size: 0.8rem; }
+.cc-kind { padding: 0 6px; border-radius: 6px; color: #fff; font-size: 0.66rem; font-weight: 800; background: #7c3aed; }
+.cc-kind.k-単語 { background: #8b5cf6; }
+.cc-kind.k-文法 { background: #16a34a; }
+.cc-kind.k-読解 { background: #0284c7; }
+.cc-kind.k-ボス { background: #dc2626; }
+.cc-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cc-bar { height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--muted) 25%, transparent); overflow: hidden; }
+.cc-bar i { display: block; height: 100%; background: linear-gradient(90deg, #f59e0b, #ef4444); }
+.cc-n { text-align: right; color: var(--muted); font-variant-numeric: tabular-nums; }
+.cc-list li.done .cc-name { font-weight: 800; }

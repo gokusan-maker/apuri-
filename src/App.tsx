@@ -10,6 +10,7 @@ import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
+import { CastleCollection } from './CastleCollectView'
 import { RareEggContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
@@ -1508,6 +1509,12 @@ function App() {
             }}
           />
           {buddyRow}
+          <CastleCollection
+            onReward={(n) => {
+              setWallet((w) => Array.from({ length: n }).reduce<typeof w>((a) => addTicket(a), w))
+              pushToast([{ id: 'castle-collect', text: `🏰 城の制覇のごほうび！ 🎟ガチャチケット×${n}`, counter: 'answers', target: 0 }])
+            }}
+          />
           <button
             className="list-link buddy-swap-link"
             onClick={() => {
