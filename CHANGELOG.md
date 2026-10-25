@@ -2079,3 +2079,4 @@
 - 2026-10-25: ネイティブの句動詞を30語追加（bump into・dig in・talk into・grow on・tag along など）
 - 2026-10-25: TOEFL・IELTSの学術単語を40語追加（estuary・excavation・amphibian・cognition・enzyme・membrane など）
 - 2026-10-25: 私学・私学難関の単語を40語追加（compromise・conscience・legitimate・nonetheless・threshold など）
+- 2026-10-25: 私学・私学難関の単語を40語追加（landmark・scenario・straightforward・incidence・readily・underlie など）
