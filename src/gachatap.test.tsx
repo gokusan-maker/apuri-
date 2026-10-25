@@ -20,13 +20,13 @@ it('ガチャの演出：タマゴを3回タップするとわれて、生まれ
   expect(screen.getByText(new RegExp(SPECIES[1].name))).toBeInTheDocument()
 })
 
-it('タップしなくても、しばらくすると自動でわれる', () => {
+it('タップしなくても、1.5秒ほどで自動でわれる', () => {
   render(<GachaReveal list={[k]} onClose={() => {}} />)
   act(() => {
     vi.advanceTimersByTime(1800)
   })
   act(() => {
-    vi.advanceTimersByTime(8000)
+    vi.advanceTimersByTime(1500)
   })
   act(() => {
     vi.advanceTimersByTime(600)

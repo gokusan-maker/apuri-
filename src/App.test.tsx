@@ -2035,8 +2035,7 @@ it('単語ゲームのページに単語の城：単元の1階目は10語の解�
   const castle = screen.getByRole('region', { name: '単語の城' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 単元1　1\/3/ }))
   const f = wordCastleFloors(['中1'])[0]
-  expect(screen.getAllByText(f.stage.words[9].ja).length).toBeGreaterThan(0) // 10語の解説
-  fireEvent.click(screen.getByRole('button', { name: /5問に挑戦/ }))
+  expect(screen.queryByRole('button', { name: /5問に挑戦/ })).toBeNull() // 単語一覧はなく、いきなり問題から
   for (let n = 0; n < 5; n++) {
     const en = document.querySelector('.wc-play .quiz .en')!.textContent!
     const w = f.words.find((x) => x.en === en)!

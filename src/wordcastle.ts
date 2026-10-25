@@ -1,5 +1,5 @@
 // 単語の城：単語ステージ（10語）を1つの単元にして、5問×3階で登る。
-// 1階目のはじめにその10語の解説（意味と例文）と4択。2・3階目は単元ごとにちがうミニゲーム（リスニング・10秒・スペル・ならべかえなど）
+// 学習前の単語一覧はなし。いきなり問題から（1階目は4択）。2・3階目は単元ごとにちがうミニゲーム（リスニング・10秒・スペル・ならべかえなど）
 import { canScramble } from './scramble'
 import { stagesOf, type Stage } from './stages'
 import type { Level, Word } from './words'
@@ -39,7 +39,7 @@ export function wordCastleFloors(levels: Level[]): WcFloor[] {
       if (g2 === 'order' && w2.filter((w) => canScramble(w.example)).length < 3) g2 = 'listen' // 例文がならべかえに向かない単元
       const g3 = THIRD[(st.no - 1) % THIRD.length]
       const fl: [Word[], WcGame, string][] = [
-        [a, 'en-ja', '📖 解説から'],
+        [a, 'en-ja', WC_GAME_LABEL['en-ja']],
         [w2, g2, WC_GAME_LABEL[g2]],
         [w3, g3, WC_GAME_LABEL[g3]],
       ]

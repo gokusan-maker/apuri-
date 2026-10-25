@@ -6,10 +6,9 @@ import { BossFigure } from './BossView'
 import type { Source } from './monster'
 import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
-import { speak } from './speech'
 import { Scramble } from './ScrambleView'
 import { Spell } from './SpellView'
-import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PASS, WC_QS, wcCount, wordCastleFloors, type WcFloor } from './wordcastle'
+import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PASS, wcCount, wordCastleFloors, type WcFloor } from './wordcastle'
 import { wordsOf, type Level } from './words'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
@@ -17,7 +16,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
   const floors = wordCastleFloors(levels)
   const [clears, setClears] = useState(loadWcClears)
   const [floor, setFloor] = useState<WcFloor | null>(null)
-  const [phase, setPhase] = useState<'explain' | 'quiz' | 'done' | 'boss' | 'boss-done'>('quiz')
+  const [phase, setPhase] = useState<'quiz' | 'done' | 'boss' | 'boss-done'>('quiz')
   const [score, setScore] = useState(0)
   const [round, setRound] = useState(0)
   const [tally, setTally] = useState({ n: 0, ok: 0 }) // スペル・ならべかえの答えた数と正解数
@@ -30,7 +29,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
   const start = (f: WcFloor) => {
     onPlay?.(true)
     setFloor(f)
-    setPhase(f.floor === 0 ? 'explain' : 'quiz')
+    setPhase('quiz') // 単語一覧は出さず、いきなり問題から
     setRound((r) => r + 1)
     setTally({ n: 0, ok: 0 })
     window.scrollTo?.({ top: 0 })
@@ -73,26 +72,6 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
   return (
     <section className="card wc-play" aria-label={`単語の城 ${floor.label}`}>
       <h2 className="wc-title">🏰 {floor.label}</h2>
-      {phase === 'explain' && (
-        <>
-          <p className="stats-note">まずはこの単元の10語をチェック。🔊で発音も聞けるよ</p>
-          <ul className="wc-words">
-            {floor.stage.words.map((w) => (
-              <li key={w.id}>
-                <button className="speak small" aria-label={`${w.en}を聞く`} onClick={() => speak(w.en)}>
-                  🔊
-                </button>
-                <span className="wc-en">{w.en}</span>
-                <span className="wc-ja">{w.ja}</span>
-                {w.example && <small className="wc-ex">{w.example}</small>}
-              </li>
-            ))}
-          </ul>
-          <button className="good next-unit-btn" onClick={() => setPhase('quiz')}>
-            ⚔ {WC_QS}問に挑戦
-          </button>
-        </>
-      )}
       {phase === 'quiz' && <p className="wc-game">{WC_GAME_LABEL[floor.direction]}</p>}
       {phase === 'quiz' && (floor.direction === 'spell' || floor.direction === 'dictation' || floor.direction === 'order') && (floor.direction === 'order' ? (
         <Scramble key={round} words={floor.words} count={floor.words.length} onAnswer={track} />

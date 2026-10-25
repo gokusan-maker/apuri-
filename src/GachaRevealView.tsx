@@ -23,7 +23,7 @@ function confetti(n: number) {
 }
 
 const TAPS = 3
-const TAP_WAIT_MS = 8000
+const TAP_WAIT_MS = 1500 // タップしなくても、すぐ自動でわれる（たたくともっと早い）
 
 export function GachaReveal({ list, fast = false, onClose }: { list: GachaResult[]; fast?: boolean; onClose: () => void }) {
   const [i, setI] = useState(0)
