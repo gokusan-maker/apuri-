@@ -3811,6 +3811,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-marshmallow',
+    title: 'What the Marshmallow Test Really Tells Us',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In a famous series of experiments begun in the 1960s, young children were offered a choice. They could eat one marshmallow right away, or, if they waited alone in a room for several minutes, they would receive two. Years later, the researchers followed up with some of the children and found that those who had waited longer tended to do better at school. The result was widely reported as proof ( A ) self-control in early childhood predicts success in life.",
+      "The story was attractive because it seemed to offer a simple lesson: teach children to wait, and they will succeed. Later research, however, has made the picture more complicated. When a larger and more varied group of children was studied, the link between waiting and later achievement became much weaker once factors such as family income and the home environment were taken into account.",
+      "This suggests that a child's decision to wait may depend not only on inner willpower but also on experience. A child who has learned that adults keep their promises has good reason to wait for the second marshmallow. A child ( B ) daily life is less predictable may reasonably decide that the treat in front of him or her is the safer choice.",
+      "None of this means that self-control is unimportant. But it reminds us that behavior which looks like a personal quality can also be a sensible response to circumstances, and that changing those circumstances may matter as much as ( C ) children to try harder.",
+    ],
+    ja: [
+      '1960年代に始まった有名な一連の実験で、幼い子どもたちはある選択をせまられた。マシュマロを1つすぐに食べてもよいし、部屋でひとりで数分待てば2つもらえる。何年もあとに研究者たちが一部の子どもたちを追跡調査したところ、長く待てた子どもほど学校の成績がよい傾向があることがわかった。この結果は、幼いころの自制心が人生の成功を予測するという証拠として広く報じられた。',
+      'この話は、単純な教訓を与えてくれるように思えたので魅力的だった。子どもに待つことを教えれば成功する、というのである。しかし、その後の研究は、話をもっと複雑にした。より大きく多様な子どもの集団を調べると、家庭の収入や家庭環境のような要因を考えに入れたとたん、待つことと後の成績とのつながりはずっと弱くなったのである。',
+      'このことは、子どもが待つかどうかの決定は、内面の意志の力だけでなく経験にもよるかもしれないことを示している。大人は約束を守るものだと学んできた子どもには、2つ目のマシュマロを待つ十分な理由がある。毎日の生活が予測しにくい子どもは、目の前のお菓子のほうが安全な選択だと判断するのも無理はないだろう。',
+      'これは、自制心が大切でないという意味ではない。しかしそれは、個人の性質のように見える行動が、状況に対する理にかなった反応でもありうること、そしてその状況を変えることが、子どもにもっとがんばるよう教えるのと同じくらい大切かもしれないことを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'which', 'what', 'whose'], answer: 0, why: 'proof that ～ で「～という証拠」（同格の that）。うしろが欠けたところのない文なので which・what は入らず、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['whose', 'who', 'which', 'that'], answer: 0, why: '「その子どもの毎日の生活が」と、うしろの名詞 daily life につく所有格の関係代名詞 whose。who・which・that のうしろに daily life is … と続けると主語が2つになってしまう。' },
+      { id: 'C', choices: ['teaching', 'teach', 'taught', 'teaches'], answer: 0, why: 'as much as のあとで、主語の changing those circumstances と比べる動名詞 teaching「（子どもに）教えること」。' },
+    ],
+    tf: [
+      { statement: '実験では、部屋でひとりで待てばマシュマロが2つもらえた。', answer: true, why: '第1段落 if they waited alone in a room for several minutes, they would receive two。' },
+      { statement: 'その後の研究で、待つことと後の成績のつながりはさらに強くなった。', answer: false, why: '第2段落 the link … became much weaker。' },
+      { statement: '筆者は、自制心はまったく大切ではないと述べている。', answer: false, why: '第4段落 None of this means that self-control is unimportant。' },
+    ],
+    qa: [
+      { q: 'Why might a child decide to eat the marshmallow right away?', choices: ['Because his or her daily life is less predictable.', 'Because he or she does not like marshmallows.', 'Because adults always keep their promises.', 'Because the room is too small.'], answer: 0, why: '第3段落 A child whose daily life is less predictable may reasonably decide that the treat in front of him or her is the safer choice。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
