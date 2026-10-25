@@ -2899,6 +2899,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'todai-imitation',
+    title: 'The Myth of the Original Genius',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We like to imagine that great artists and inventors create something out of nothing. The picture of the lonely genius, struck by an idea that no one has ever had before, is so familiar that we rarely question it. Yet when historians look closely at almost any famous work, they find that it grew out of a long chain of borrowing, copying, and small changes ( A ) by many hands.",
+      "Consider how young painters were trained for centuries. Before they were allowed to paint anything of their own, they spent years copying the works of their teachers, sometimes so carefully that experts today cannot tell the copy from the original. This was not seen as cheating. On the contrary, it was believed that only by imitating masters could a beginner learn to see as they saw, and only after seeing in that way could he or she begin to see with his or her ( B ) eyes.",
+      "The same pattern appears in science and technology. Many inventions were developed at almost the same time by people working in different countries, ( C ) suggests that the ideas were already 'in the air,' waiting for someone to combine them. What we call originality, then, may be less a matter of creating from nothing than of rearranging what already exists in a way that nobody had tried.",
+      "If this is true, it has an important lesson for education. Students are often told to be creative and original, but they are given few chances to imitate good models first. Perhaps the road to originality does not avoid imitation but passes straight through it.",
+    ],
+    ja: [
+      '私たちは、偉大な芸術家や発明家が無から何かを生み出すと想像したがる。だれも思いついたことのない考えにふいに打たれる孤独な天才という姿はあまりになじみ深いので、私たちはそれを疑うことがめったにない。しかし歴史家がほぼどんな有名な作品をくわしく調べても、それは多くの人の手によって加えられた、借用や模倣や小さな変更の長い連なりから生まれてきたものだとわかる。',
+      '何世紀ものあいだ、若い画家がどのように訓練されてきたかを考えてみよう。自分自身の作品をえがくことを許される前に、彼らは何年も師の作品を写し続けた。ときには、今日の専門家が写しと原画を見分けられないほど注意深く写したのである。これはずるいこととは見なされなかった。それどころか、名人をまねることによってのみ、初心者は名人が見たように見ることを学べるのであり、そのように見られるようになってはじめて、自分の目で見はじめることができると信じられていたのである。',
+      '同じ型は科学や技術にも見られる。多くの発明は、ちがう国で研究していた人々によってほぼ同じ時期に開発された。このことは、その考えがすでに「空気中にただよって」いて、だれかがそれを組み合わせるのを待っていたことを示している。そうだとすると、私たちが独創性とよぶものは、無から生み出すことというよりも、すでにあるものを、だれも試したことのないしかたで並べかえることなのかもしれない。',
+      'もしこれが正しいなら、教育にとって大切な教訓がある。生徒はよく、創造的で独創的であれと言われるが、まずよい手本をまねる機会はほとんど与えられない。独創性への道は、模倣をさけて通るのではなく、まっすぐその中を通っていくのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['made', 'making', 'to make', 'makes'], answer: 0, why: 'small changes を後ろから説明する過去分詞 made（多くの人の手によって加えられた変更）。changes は「加えられる」側なので過去分詞。making は「加える側」になり by many hands と合わない。makes は動詞で文が成り立たない。' },
+      { id: 'B', choices: ['own', 'self', 'alone', 'oneself'], answer: 0, why: 'with one\'s own eyes で「自分自身の目で」。所有格のあとで名詞 eyes を修飾できるのは own だけ。self・oneself は名詞・代名詞で eyes の前に置けず、alone は名詞の前に置けない。' },
+      { id: 'C', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の文全体を受ける非制限用法の関係代名詞 which。that は非制限用法で使えず、what は先行詞をとらない。it では接続詞がなく2つの文をつなげない。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、有名な作品の多くは、借用や模倣の長い連なりから生まれた。', answer: true, why: '第1段落 it grew out of a long chain of borrowing, copying, and small changes。' },
+      { statement: 'かつて、師の作品を写すことはずるいことと見なされていた。', answer: false, why: '第2段落 This was not seen as cheating。' },
+      { statement: '筆者は、生徒にはまずよい手本をまねる機会が必要かもしれないと考えている。', answer: true, why: '第4段落 they are given few chances to imitate good models first … the road to originality … passes straight through it。' },
+    ],
+    qa: [
+      { q: 'What does the fact that many inventions appeared at almost the same time suggest?', choices: ['The ideas were already available and waiting to be combined.', 'Inventors in different countries copied each other directly.', 'Only lonely geniuses can create something new.', 'Science develops more slowly than art.'], answer: 0, why: '第3段落 suggests that the ideas were already "in the air," waiting for someone to combine them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
