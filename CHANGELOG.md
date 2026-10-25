@@ -2033,3 +2033,4 @@
 - 2026-10-25: 国公立レベルの長文「Changing the Clocks」（サマータイム・248語）を追加
 - 2026-10-25: 旧帝大レベルの長文「Knowing What We Do Not Know」（自信と能力・260語）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「The New Popularity of Second-Hand Goods」（中古品の人気・210語）を追加
+- 2026-10-25: TOEICレベルの専用長文「An Email About an Invoice Error」（請求書の訂正メール）を追加

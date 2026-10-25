@@ -3385,6 +3385,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-invoice-email',
+    title: 'An Email About an Invoice Error',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Patel, Thank you for your recent order of office chairs from Brightline Furniture. I am writing to let you know about an error on the invoice ( A ) we sent you on October 3.",
+      "Our records show that you ordered twelve chairs, but the invoice charged you for fifteen. This mistake was caused by a problem with our new billing system, which has since been fixed. We sincerely apologize for any confusion this may have caused.",
+      "A corrected invoice is attached to this email. The total amount has been reduced from $2,250 to $1,800. If you have already paid the original amount, the difference of $450 will be returned to your account ( B ) five business days. You do not need to take any action.",
+      "As a way of thanking you for your patience, we would like to offer you a 10 percent discount on your next order. Simply enter the code THANKS10 when you order through our website before the end of the year.",
+      "If you have any questions about the corrected invoice, please feel free to contact me directly at 555-0182. We value your business and look forward to ( C ) you again. Best regards, Daniel Wright, Customer Accounts Manager",
+    ],
+    ja: [
+      'パテル様　先日はブライトライン家具にオフィス用のいすをご注文いただき、ありがとうございました。10月3日にお送りした請求書の誤りについてお知らせするため、ご連絡しております。',
+      '当社の記録では、いすを12脚ご注文いただいていますが、請求書では15脚分が請求されていました。この誤りは当社の新しい請求システムの問題によるもので、その後修正されております。ご迷惑をおかけしたことを心よりおわびいたします。',
+      '訂正した請求書をこのメールに添付しております。合計金額は2,250ドルから1,800ドルに減額されました。すでにもとの金額をお支払いいただいている場合は、差額の450ドルを5営業日以内に口座へお返しいたします。お客様のほうで何かしていただく必要はございません。',
+      'お待たせしたことへの感謝のしるしとして、次回のご注文を10パーセント割引させていただきます。年末までに当社のウェブサイトからご注文の際、コード THANKS10 を入力してください。',
+      '訂正した請求書についてご質問があれば、555-0182 まで私に直接お気軽にご連絡ください。お取引に感謝するとともに、またお役に立てることを楽しみにしております。顧客経理担当マネージャー　ダニエル・ライト',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'who'], answer: 0, why: '先行詞 the invoice（物）を説明し、sent の目的語になる関係代名詞 that。what は先行詞をとらず、whose のうしろには名詞が必要、who は人に使う。' },
+      { id: 'B', choices: ['within', 'until', 'since', 'by the time'], answer: 0, why: 'within ＋期間 で「～以内に」。until は「～までずっと」、since は起点、by the time のうしろには文が必要。' },
+      { id: 'C', choices: ['serving', 'serve', 'served', 'to serve'], answer: 0, why: 'look forward to の to は前置詞なので動名詞 serving。serve 人 で「人のお役に立つ・人に応対する」。' },
+    ],
+    tf: [
+      { statement: 'パテルさんは、いすを15脚注文した。', answer: false, why: '第2段落 you ordered twelve chairs, but the invoice charged you for fifteen。' },
+      { statement: '請求書の誤りは、新しい請求システムの問題が原因だった。', answer: true, why: '第2段落 This mistake was caused by a problem with our new billing system。' },
+      { statement: 'すでに支払っている場合、パテルさんは差額の返金を申しこまなければならない。', answer: false, why: '第3段落 You do not need to take any action。' },
+    ],
+    qa: [
+      { q: 'What is offered to Ms. Patel as a thank-you?', choices: ['A 10 percent discount on her next order.', 'Three free chairs.', 'A refund of $2,250.', 'Free delivery for a year.'], answer: 0, why: '第4段落 we would like to offer you a 10 percent discount on your next order。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
