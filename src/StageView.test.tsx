@@ -372,3 +372,18 @@ it('ボスの城の問題の階をクリアすると、上で待つボスがひ�
   expect(bossTaunt('ドラゴン', 2)).toContain('あと1階')
   expect(bossTaunt('ドラゴン', 3)).toContain('次の階で待っているぞ')
 })
+
+it('15レベルのボスを全部たおすと称号が出て、ごほうびのガチャチケットは1回だけもらえる', () => {
+  localStorage.clear()
+  const all = Object.fromEntries(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'].map((id) => [id, '2026-10-01']))
+  localStorage.setItem('eitan:lboss', JSON.stringify(all))
+  let got = 0
+  const { unmount } = render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onCastleReward={(n) => (got += n)} />)
+  expect(screen.getByLabelText('ボス撃破の数')).toHaveTextContent('15 / 15')
+  expect(screen.getByLabelText('ボス撃破の数')).toHaveTextContent('英語の覇王')
+  fireEvent.click(screen.getByRole('button', { name: /全レベルのボス制覇のごほうび/ }))
+  expect(got).toBe(3)
+  unmount()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onCastleReward={(n) => (got += n)} />)
+  expect(screen.queryByRole('button', { name: /全レベルのボス制覇のごほうび/ })).toBeNull()
+})

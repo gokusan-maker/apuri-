@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -109,6 +109,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
+  const [allClaimed, setAllClaimed] = useState(loadAllBossClaimed) // 全ボス制覇のごほうびをもらった
   const [bossLv, setBossLv] = useState<CourseId>(() => loadBossLevel(loadCourse(levels))) // えらんでいるボスのレベル（レベルごとに城とボス）
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
@@ -643,6 +644,22 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             }}
           >
             ▶ 次のレベル「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
+          </button>
+        )}
+        <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">
+          👹 撃破 {COURSES.filter((c) => lboss[c.id]).length} / {COURSES.length} レベル
+          {allBossBeaten(lboss) ? `　👑 称号「${ALL_BOSS_TITLE}」` : '（全部たおすと特別な称号）'}
+        </p>
+        {allBossBeaten(lboss) && !allClaimed && onCastleReward && (
+          <button
+            className="castle-chest-btn"
+            onClick={() => {
+              saveAllBossClaimed()
+              setAllClaimed(true)
+              onCastleReward(ALL_BOSS_TICKETS)
+            }}
+          >
+            🎁 全レベルのボス制覇のごほうび（🎟ガチャチケット×{ALL_BOSS_TICKETS}）
           </button>
         )}
         <details className="boss-pick-fold">

@@ -3526,3 +3526,6 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 
 /* ボスの城：問題の階をクリアしたときのボスのひとこと */
 .bfloor-taunt { margin: 10px 0 4px; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, #dc2626 12%, transparent); font-weight: 700; line-height: 1.5; }
+/* ボス部屋：撃破したレベルの数と、全制覇の称号 */
+.boss-all { margin: 10px 0 4px; text-align: center; font-weight: 700; font-size: 0.92rem; opacity: 0.85; }
+.boss-all.done { opacity: 1; color: #b45309; }

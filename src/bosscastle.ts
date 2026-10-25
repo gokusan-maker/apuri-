@@ -109,3 +109,23 @@ export function bossTaunt(name: string, floor: number): string {
   if (left <= 0) return `👹 ${name}「よくぞここまで来た…次の階で待っているぞ！」`
   return `👹 ${name}「ふん、なかなかやるな。あと${left}階…のぼって来られるかな？」`
 }
+
+// 15レベルのボスを全部たおしたごほうび（称号とガチャチケット。1回だけ）
+export const ALL_BOSS_TITLE = '英語の覇王'
+export const ALL_BOSS_TICKETS = 3
+const ALL_KEY = 'eitan:lboss-all'
+export const allBossBeaten = (r: Partial<Record<CourseId, string>>) => COURSES.every((c) => !!r[c.id])
+export function loadAllBossClaimed(): boolean {
+  try {
+    return localStorage.getItem(ALL_KEY) === '1'
+  } catch {
+    return false
+  }
+}
+export function saveAllBossClaimed(): void {
+  try {
+    localStorage.setItem(ALL_KEY, '1')
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
