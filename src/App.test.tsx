@@ -2037,3 +2037,15 @@ it('今日の課題を3つとも終えてトリオボーナスを受け取った
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法チャレンジ'))
   expect(screen.queryByRole('button', { name: /今日の課題（文法）/ })).toBeNull()
 })
+
+it('単語ゲームのページにも単語の城：いまの階をおすと、そのステージがすぐ始まる', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
+  render(<App />)
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
+  const castle = screen.getByRole('region', { name: '単語の城' })
+  fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 ステージ1/ }))
+  expect(screen.queryByRole('region', { name: '単語の城' })).toBeNull()
+  expect(document.querySelector('.quiz, .stage-play, .choices')).not.toBeNull()
+})

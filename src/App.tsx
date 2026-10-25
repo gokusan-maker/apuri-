@@ -17,6 +17,7 @@ import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
 import { COURSES, courseOf, courseReady } from './wordcourse'
+import { WordCastle } from './WordCastleView'
 import { SUPPORT_MAX, typeOf } from './chartype'
 import { EXAM_TIERS, loadExamTier, passagesForTier, saveExamTier } from './examtier'
 import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
@@ -685,6 +686,7 @@ function App() {
 
 
   const [stages, setStages] = usePersistent(loadStages, saveStages)
+  const [stageGo, setStageGo] = useState<string | null>(null) // 単語ゲームの城からえらんだステージ
   const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
   const [levels, setLevels] = usePersistent(loadLevels, saveLevels)
@@ -1284,6 +1286,8 @@ function App() {
   // ステージ（ボス部屋ではボスだけ、単語ゲームでは単語ステージだけ）
   const stagesView = (part: 'boss' | 'stages') => (
     <Stages
+      key={part === 'stages' ? `stages-${stageGo ?? ''}` : 'boss'}
+      startStage={part === 'stages' ? (stageGo ?? undefined) : undefined}
       onMarkWeak={markWeak}
       part={part}
       startDaily={dailyGo}
@@ -1642,6 +1646,7 @@ function App() {
               aria-selected={wordTab === t.id}
               onClick={() => {
                 setWordTab(t.id)
+                setStageGo(null)
                 setTodayQuiz(false)
               }}
             >
@@ -2140,6 +2145,18 @@ function App() {
         </>
       ) : (mode === 'word' && wordTab === 'mini') || mode === 'grammar' ? (
         <>
+          {mode === 'word' && !todayQuiz && !playOn && (
+            <WordCastle
+              levels={levels}
+              record={stages}
+              onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
+              onOpen={(st) => {
+                setStageGo(st.id)
+                setWordTab('stage')
+                window.scrollTo?.({ top: 0 })
+              }}
+            />
+          )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
           {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>

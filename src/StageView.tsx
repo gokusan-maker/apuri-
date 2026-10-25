@@ -16,12 +16,14 @@ import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
+import { WordCastle } from './WordCastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup } from './bossfilter'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
 
 type Props = {
+  startStage?: string // はじめからこのステージを遊ぶ（単語ゲームの城から）
   part?: 'all' | 'boss' | 'stages' // boss：ボス部屋（ボスだけ）／stages：単語ゲームの単語ステージ
   levels: Level[]
   record: StageRecord
@@ -70,10 +72,10 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin, onMarkWeak }: Props) {
+export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin, onMarkWeak, startStage }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
-  const [playing, setPlaying] = useState<Stage | null>(null)
+  const [playing, setPlaying] = useState<Stage | null>(() => (startStage ? (levels.flatMap((lv) => stagesOf(lv)).find((x) => x.id === startStage) ?? null) : null)) // 単語ゲームの城からえらんだステージはすぐ始める
   const [result, setResult] = useState<number | null>(null)
   const [round, setRound] = useState(0)
   const [fighting, setFighting] = useState<Level | null>(startDaily && daily ? daily : null)
@@ -524,14 +526,11 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     <section className="card stages">
       <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
       {part === 'stages' && (
-        <Castle
-          name="単語の城"
-          theme="purple"
+        <WordCastle
+          levels={levels}
+          record={record}
           onChest={onRankBonus}
-          floors={levels.flatMap((lv) => stagesOf(lv).map((st) => ({ id: st.id, label: `${lv} ステージ${st.no}`, sub: starText(record[st.id] ?? 0), cleared: (record[st.id] ?? 0) > 0 })))}
-          onOpen={(id) => {
-            const st = levels.flatMap((lv) => stagesOf(lv)).find((x) => x.id === id)
-            if (!st) return
+          onOpen={(st) => {
             setPlaying(st)
             setResult(null)
           }}
