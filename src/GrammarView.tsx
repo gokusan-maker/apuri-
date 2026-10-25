@@ -11,6 +11,7 @@ import { GrammarSpot } from './GrammarSpotView'
 import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
+import { EXAM_GRAMMAR } from './examgrammar'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -390,6 +391,25 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
               </button>
             ))}
           </div>
+        )}
+        {stampMode && (
+          <details className="exam-grammar game-fold lg-4">
+            <summary>
+              <span className="lg-icon" aria-hidden="true">🎓</span>入試の文法 <span className="fold-meta">{EXAM_GRAMMAR.length}</span>
+            </summary>
+            <div className="exam-grammar-grid" role="group" aria-label="入試の文法">
+              {EXAM_GRAMMAR.map((u) => (
+                <button
+                  key={u.id}
+                  className="exam-tier"
+                  onClick={() => open(u)}
+                >
+                  {u.title.split('の文法')[0]}
+                  <small>{u.questions.length}問</small>
+                </button>
+              ))}
+            </div>
+          </details>
         )}
         {stampMode && onDrill && (
           <details className="grammar-drills game-fold lg-3">
