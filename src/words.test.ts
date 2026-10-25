@@ -3,7 +3,7 @@ import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
   it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100＋英検1級100＋ネイティブ100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(4699)
+    expect(WORDS).toHaveLength(4719)
     expect(WORDS.filter((w) => levelOf(w) === 'ネイティブ')).toHaveLength(125)
     expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(175)
     expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(262)
