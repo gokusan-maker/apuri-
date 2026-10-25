@@ -2009,3 +2009,4 @@
 - 2026-10-25: ネイティブレベルの専用エッセイ「Being Bad at Something Again」（大人が初心者になる・260語）を追加
 - 2026-10-25: 私学難関〜東大の単語を30語追加（prolong・prudent・scrutinize・irrevocable など）
 - 2026-10-25: ボス部屋も単語・文法と同じくキャラの下でレベル（中1〜ネイティブ）をえらべるようにし、レベルごとに5階の城（1〜4階は問題・5階はそのレベルのボス）にした
+- 2026-10-25: TOEICの単語を10語追加（reimbursement・prototype・probation など）
