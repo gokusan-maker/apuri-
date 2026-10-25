@@ -3039,6 +3039,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['but', 'despite', 'because of', 'instead of'], answer: 0, why: '「よく似た地区を目にするが、人々はもういない」と、うしろの文（the people … are no longer there）をつなぐ接続詞 but。despite・because of・instead of は前置詞の働きで、うしろに文を続けられない。' },
       { id: 'C', choices: ['on', 'at', 'in', 'with'], answer: 0, why: 'depend on ～ で「～に頼る」。jobs that many families depend on で「多くの家族が頼りにしている仕事」。at・in・with は depend と結びつかない。' },
     ],
+    underline: {
+      phrase: 'unable to pay the higher rents',
+      choices: ['because they cannot pay the higher rents', 'although they can pay the higher rents', 'after paying the higher rents', 'so that they can pay the higher rents'],
+      answer: 0,
+      why: '形容詞 unable で始まる分詞構文のような形で、理由「高くなった家賃を払えないので」を表す。',
+    },
+    order: {
+      words: ['when', 'a', 'quiet', 'neighborhood', 'becomes', 'popular', 'with', 'visitors'],
+      rest: ', rents begin to rise.',
+      answer: 'when a quiet neighborhood becomes popular with visitors',
+      ja: '静かな地区が観光客に人気になると、家賃が上がりはじめる。（become popular with ～＝～に人気になる）',
+    },
     tf: [
       { statement: '筆者によれば、旅行者が本物らしさを求めるほど、それは見つけにくくなる。', answer: true, why: '第1段落 the more travelers come looking for this kind of authenticity, the harder it becomes to find。' },
       { statement: '筆者は、観光客の数を制限すれば問題はすべて解決すると述べている。', answer: false, why: '第3段落 Such measures can reduce crowding, but they raise a difficult question／第4段落 There is probably no perfect answer。' },
@@ -3069,6 +3081,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['than', 'then', 'as', 'that'], answer: 0, why: '比較級 far better のあとで比べる相手を示すのは than。then は「そのとき」、as は as ～ as の形で使い、that では比較の文にならない。' },
       { id: 'C', choices: ['losing', 'lose', 'lost', 'to lose'], answer: 0, why: '前置詞 in のうしろは動名詞。in losing ～ で「～を失うことで」。原形・過去分詞・to 不定詞は前置詞のあとに置けない。' },
     ],
+    underline: {
+      phrase: 'could not afford new things',
+      choices: ['did not have enough money to buy new things', 'did not like new things', 'could not find new things in the shops', 'did not need anything new'],
+      answer: 0,
+      why: 'cannot afford ～ は「～を買う（お金の）余裕がない」。',
+    },
+    order: {
+      words: ['to', 'mend', 'something', 'is', 'to', 'pay', 'attention', 'to', 'it'],
+      rest: '',
+      answer: 'to mend something is to pay attention to it',
+      ja: '何かを直すことは、それに注意を向けることである。（To ～ is to …＝～することは…することだ）',
+    },
     tf: [
       { statement: '筆者は子どものころ、祖母の直す習慣を少しはずかしく思っていた。', answer: true, why: '第1段落 As a child, I found this habit slightly embarrassing。' },
       { statement: '筆者によれば、直したカップは傷があるため、あまり愛されなくなる。', answer: false, why: '第3段落 Such things are often loved more, not less, because of their scars。' },
@@ -3559,6 +3583,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['to spend', 'spending', 'spend', 'spent'], answer: 0, why: 'places を後ろから説明する形容詞的用法の to 不定詞「時間を過ごすための場所」。原形・過去分詞・-ing ではこの意味にならない。' },
       { id: 'C', choices: ['as', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the needs … change）なので、「～するにつれて」を表す接続詞 as。ほかは前置詞の働きでうしろに文を続けられない。' },
     ],
+    underline: {
+      phrase: 'meet strong opposition',
+      choices: ['face strong disagreement', 'meet strong people', 'win strong support', 'hold a strong meeting'],
+      answer: 0,
+      why: 'meet opposition は「反対にあう」。meet は「（困難・反対など）に出あう」の意味。',
+    },
+    order: {
+      words: ['air', 'pollution', 'and', 'noise', 'also', 'decreased'],
+      rest: '',
+      answer: 'air pollution and noise also decreased',
+      ja: '大気汚染や騒音も減った。',
+    },
     tf: [
       { statement: '20世紀の都市は、車を中心に作りかえられた。', answer: true, why: '第1段落 cities around the world were redesigned with the car at their center。' },
       { statement: '通りを閉鎖すると、多くの店で売り上げが減った。', answer: false, why: '第2段落 many shops reported higher sales than before。' },
@@ -3783,6 +3819,18 @@ export const ADV_PASSAGES: LongPassage[] = [
       { id: 'B', choices: ['than', 'as', 'then', 'that'], answer: 0, why: 'value A more than B で「B よりも A を大切にする」。比較級 more と組み合わせるのは than。' },
       { id: 'C', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで another form of consumption を説明し、うしろが欠けたところのない文（people buy …）なので「前置詞＋関係代名詞」の in which。which・what のうしろは欠けた文になり、whose のうしろには名詞が必要。' },
     ],
+    underline: {
+      phrase: 'letting go of objects',
+      choices: ['giving up things they own', 'throwing objects into the air', 'letting objects go to waste', 'buying new objects'],
+      answer: 0,
+      why: 'let go of ～ は「～を手放す」。物を手放すこと、つまり持ち物を手放すという意味。',
+    },
+    order: {
+      words: ['fewer', 'possessions', 'mean', 'less', 'time', 'spent', 'cleaning'],
+      rest: '',
+      answer: 'fewer possessions mean less time spent cleaning',
+      ja: '持ち物が少なければ、そうじに使う時間が減る。（time spent ～ing＝～するのに使う時間）',
+    },
     tf: [
       { statement: 'ミニマリストは、本当に必要なものや大好きなものだけを持とうとする。', answer: true, why: '第1段落 Minimalists try to own only the things they truly need or love。' },
       { statement: '批判する人々によれば、ミニマリズムはだれにとっても同じように簡単だ。', answer: false, why: '第3段落 minimalism is easier for some people than for others。' },
