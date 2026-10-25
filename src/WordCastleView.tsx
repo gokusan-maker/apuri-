@@ -4,7 +4,9 @@ import type { Source } from './monster'
 import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
 import { speak } from './speech'
-import { loadWcClears, saveWcClears, WC_PASS, WC_QS, wordCastleFloors, type WcFloor } from './wordcastle'
+import { Scramble } from './ScrambleView'
+import { Spell } from './SpellView'
+import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_PASS, WC_QS, wcCount, wordCastleFloors, type WcFloor } from './wordcastle'
 import { wordsOf, type Level } from './words'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
@@ -15,6 +17,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
   const [phase, setPhase] = useState<'explain' | 'quiz' | 'done'>('quiz')
   const [score, setScore] = useState(0)
   const [round, setRound] = useState(0)
+  const [tally, setTally] = useState({ n: 0, ok: 0 }) // スペル・ならべかえの答えた数と正解数
   const leave = () => {
     setFloor(null)
     onPlay?.(false)
@@ -26,6 +29,7 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
     setFloor(f)
     setPhase(f.floor === 0 ? 'explain' : 'quiz')
     setRound((r) => r + 1)
+    setTally({ n: 0, ok: 0 })
     window.scrollTo?.({ top: 0 })
   }
   if (!floor)
@@ -41,6 +45,23 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
         }}
       />
     )
+  const total = wcCount(floor)
+  const finish = (s: number) => {
+    setScore(s)
+    setPhase('done')
+    if (s >= Math.min(WC_PASS, total) && !clears.includes(floor.id)) {
+      const c = [...clears, floor.id]
+      setClears(c)
+      saveWcClears(c)
+    }
+  }
+  // スペル・ならべかえ：1問ごとに数えて、ぜんぶ答えたら少し待って結果へ
+  const track = (correct: boolean, xp: number, wordId: string, source: Source) => {
+    onAnswer?.(correct, xp, wordId, source)
+    const t = { n: tally.n + 1, ok: tally.ok + (correct ? 1 : 0) }
+    setTally(t)
+    if (t.n >= total) window.setTimeout(() => finish(t.ok), 1200)
+  }
   const next = floors[floors.findIndex((x) => x.id === floor.id) + 1]
   return (
     <section className="card wc-play" aria-label={`単語の城 ${floor.label}`}>
@@ -65,7 +86,13 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
           </button>
         </>
       )}
-      {phase === 'quiz' && (
+      {phase === 'quiz' && <p className="wc-game">{WC_GAME_LABEL[floor.direction]}</p>}
+      {phase === 'quiz' && (floor.direction === 'spell' || floor.direction === 'dictation' || floor.direction === 'order') && (floor.direction === 'order' ? (
+        <Scramble key={round} words={floor.words} count={floor.words.length} onAnswer={track} />
+      ) : (
+        <Spell key={round} words={floor.words} count={floor.words.length} byEar={floor.direction === 'dictation'} onAnswer={track} />
+      ))}
+      {phase === 'quiz' && floor.direction !== 'spell' && floor.direction !== 'dictation' && floor.direction !== 'order' && (
         <Quiz
           key={round}
           words={wordsOf([floor.stage.level])}
@@ -75,23 +102,15 @@ export function WordCastle({ levels, name = '単語の城', onAnswer, onChest, o
           lockDirection
           onAnswer={onAnswer}
           onSpend={onSpend}
-          onFinish={(s) => {
-            setScore(s)
-            setPhase('done')
-            if (s >= Math.min(WC_PASS, floor.words.length) && !clears.includes(floor.id)) {
-              const c = [...clears, floor.id]
-              setClears(c)
-              saveWcClears(c)
-            }
-          }}
+          onFinish={finish}
         />
       )}
       {phase === 'done' && (
         <div className="wc-result" role="status">
-          <p className={`stage-result${score >= Math.min(WC_PASS, floor.words.length) ? ' clear' : ''}`}>
-            {score >= Math.min(WC_PASS, floor.words.length) ? `🏰 クリア！ ${score}/${floor.words.length}問正解` : `あと少し！ ${score}/${floor.words.length}問（${WC_PASS}問以上でクリア）`}
+          <p className={`stage-result${score >= Math.min(WC_PASS, total) ? ' clear' : ''}`}>
+            {score >= Math.min(WC_PASS, total) ? `🏰 クリア！ ${score}/${total}問正解` : `あと少し！ ${score}/${total}問（${WC_PASS}問以上でクリア）`}
           </p>
-          {score >= Math.min(WC_PASS, floor.words.length) && next && (
+          {score >= Math.min(WC_PASS, total) && next && (
             <button className="good next-unit-btn" onClick={() => start(next)}>
               🏰 次の階へ ▶ {next.label}
             </button>

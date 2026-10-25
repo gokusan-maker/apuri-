@@ -1,12 +1,28 @@
 // 単語の城：単語ステージ（10語）を1つの単元にして、5問×3階で登る。
-// 1階目のはじめにその10語の解説（意味と例文）、1階目は前半5語・2階目は後半5語・3階目は10語から日本語→英語で5問
+// 1階目のはじめにその10語の解説（意味と例文）と4択。2・3階目は単元ごとにちがうミニゲーム（リスニング・10秒・スペル・ならべかえなど）
+import { canScramble } from './scramble'
 import { stagesOf, type Stage } from './stages'
 import type { Level, Word } from './words'
 
 export const WC_QS = 5
 export const WC_PASS = 4
 
-export type WcFloor = { id: string; label: string; sub: string; stage: Stage; floor: number; words: Word[]; direction: 'en-ja' | 'ja-en' }
+export type WcGame = 'en-ja' | 'ja-en' | 'listen' | 'timed' | 'sentence-read' | 'order' | 'spell' | 'dictation'
+export const WC_GAME_LABEL: Record<WcGame, string> = {
+  'en-ja': '🔤 4択（英→日）',
+  'ja-en': '🔤 4択（日→英）',
+  listen: '🎧 リスニング',
+  timed: '⏳ 10秒クイズ',
+  'sentence-read': '📄 例文の訳',
+  order: '🧩 例文ならべかえ',
+  spell: '✍️ スペル',
+  dictation: '👂 聞いて書く',
+}
+// 2階目・3階目のミニゲーム（単元ごとに順番に変わる）
+const SECOND: WcGame[] = ['listen', 'timed', 'order', 'sentence-read']
+const THIRD: WcGame[] = ['spell', 'ja-en', 'dictation', 'timed']
+
+export type WcFloor = { id: string; label: string; sub: string; stage: Stage; floor: number; words: Word[]; direction: WcGame }
 
 export function wordCastleFloors(levels: Level[]): WcFloor[] {
   return levels.flatMap((lv) =>
@@ -15,10 +31,15 @@ export function wordCastleFloors(levels: Level[]): WcFloor[] {
       const a = st.words.slice(0, WC_QS)
       const b = st.words.slice(WC_QS)
       const review = st.words.filter((_, i) => i % 2 === 0).slice(0, WC_QS)
-      const fl: [Word[], 'en-ja' | 'ja-en', string][] = [
+      const w2 = b.length > 0 ? b : a
+      const w3 = review.length > 0 ? review : a
+      let g2 = SECOND[(st.no - 1) % SECOND.length]
+      if (g2 === 'order' && w2.filter((w) => canScramble(w.example)).length < 3) g2 = 'listen' // 例文がならべかえに向かない単元
+      const g3 = THIRD[(st.no - 1) % THIRD.length]
+      const fl: [Word[], WcGame, string][] = [
         [a, 'en-ja', '📖 解説から'],
-        [b.length > 0 ? b : a, 'en-ja', '英語→日本語'],
-        [review.length > 0 ? review : a, 'ja-en', 'ふりかえり：日本語→英語'],
+        [w2, g2, WC_GAME_LABEL[g2]],
+        [w3, g3, WC_GAME_LABEL[g3]],
       ]
       return fl.map(([words, direction, sub], f) => ({ id: `wc:${st.id}:${f + 1}`, label: `${name}　${f + 1}/3`, sub, stage: st, floor: f, words, direction }))
     }),
@@ -41,3 +62,6 @@ export function saveWcClears(ids: string[]): void {
     /* 保存できなくても動く */
   }
 }
+
+// そのゲームで出る問題の数（ならべかえは例文が向く語だけ）
+export const wcCount = (f: WcFloor) => (f.direction === 'order' ? f.words.filter((w) => canScramble(w.example)).length : f.words.length)
