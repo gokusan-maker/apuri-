@@ -2058,3 +2058,4 @@
 - 2026-10-25: 高2・高3の文法単元をさらに3つ追加：all the 比較級 for・否定語を使わない否定（anything but / fail to）・what is more / what S was
 - 2026-10-25: 文法の城の階をクリアすると、その階の単元の「よくあるまちがい」（✕と○と理由）を1つ見せるように
 - 2026-10-25: TOEICレベルの専用長文「An Email About an Interview Schedule」（面接日程の変更メール・191語）を追加
+- 2026-10-25: 高3（共通テスト）レベルの長文「Should School Start Later?」（始業時間をおそくする・201語）を追加

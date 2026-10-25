@@ -3871,6 +3871,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-school-start',
+    title: 'Should School Start Later?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many teenagers find it very hard to get up in the morning. Parents often think this is simply laziness, but scientists say there is a biological reason. During adolescence, the body's internal clock shifts, so teenagers naturally feel sleepy later at night and want to wake up later in the morning.",
+      "Because of this, some schools have tried starting classes later, for example at 8:30 or 9:00 instead of 7:45. In several of these schools, students got more sleep, were late ( A ) often, and said they felt more awake during morning lessons. Some schools also reported fewer car accidents among teenage drivers.",
+      "However, changing the start time is not easy. If school starts later, it also ends later, which can leave less time for club activities and part-time jobs. Parents who need to drop off their children on the way to work may find the new schedule difficult. Bus companies may also have to change their timetables, ( B ) can be expensive.",
+      "Even so, many experts believe the benefits are worth the effort. They argue that a school schedule should be designed around ( C ) students actually learn best, not only around what is convenient for adults.",
+    ],
+    ja: [
+      '多くの10代の若者は、朝起きるのがとてもつらい。親はそれをただのなまけだと思いがちだが、科学者たちは生物学的な理由があると言う。思春期のあいだに体内時計がずれるので、10代の若者は自然と夜おそくにねむくなり、朝おそくに起きたくなるのだ。',
+      'このため、たとえば7時45分ではなく8時30分や9時に授業を始めることを試した学校もある。そうした学校のいくつかでは、生徒のすいみん時間が増え、遅刻が減り、朝の授業でより目がさえていると感じると答えた。10代のドライバーの交通事故が減ったと報告した学校もある。',
+      'しかし、始業時間を変えるのは簡単ではない。学校の始まりがおそくなれば終わりもおそくなり、部活動やアルバイトの時間が減るかもしれない。仕事に行くとちゅうで子どもを送っていく必要がある親は、新しい時間割を不便に感じるかもしれない。バス会社も時刻表を変えなければならないかもしれず、それには費用がかかることがある。',
+      'それでも、多くの専門家はその利点は努力に見あうと考えている。学校の時間割は、大人にとって便利なことだけでなく、生徒が実際にいちばんよく学べるのはいつかを中心に考えて作られるべきだと彼らは主張している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['less', 'least', 'fewer', 'little'], answer: 0, why: '副詞 often を修飾して「より少なく（遅刻した）」を表す比較級 less。least は最上級、fewer は数えられる名詞の前で使い、little often という形はない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（時刻表を変えること）を受ける非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
+      { id: 'C', choices: ['when', 'that', 'which', 'whose'], answer: 0, why: '前置詞 around の目的語になる「いつ～か」の名詞のかたまり when students actually learn best。うしろが完全な文なので which は入らず、that のかたまりは前置詞のあとに置けず、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: '科学者によれば、10代の若者が朝起きにくいのにはなまけ以外の理由がある。', answer: true, why: '第1段落 scientists say there is a biological reason。' },
+      { statement: '始業をおそくした学校では、生徒のすいみん時間が減った。', answer: false, why: '第2段落 students got more sleep。' },
+      { statement: '始業がおそくなると、部活動の時間が減るかもしれない。', answer: true, why: '第3段落 can leave less time for club activities。' },
+    ],
+    qa: [
+      { q: 'Why do teenagers naturally want to wake up later?', choices: ['Their internal clock shifts during adolescence.', 'They stay up late playing games.', 'Their schools start too late.', 'They have too many club activities.'], answer: 0, why: '第1段落 During adolescence, the body\'s internal clock shifts。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
