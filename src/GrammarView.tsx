@@ -14,9 +14,9 @@ import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMM
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
-import { GrammarFigure } from './GrammarFigView'
+import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
-import { figOf } from './grammarfig'
+import { examFigs, figOf } from './grammarfig'
 import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
@@ -801,6 +801,8 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
         <h2>{unit.title}</h2>
         {figOf(unit.id).uses.length > 0 ? (
           <GrammarFigure fig={figOf(unit.id)} />
+        ) : examFigs(unit.title).length > 0 ? (
+          <GrammarFigRows rows={examFigs(unit.title)} />
         ) : (
           <ul className="grammar-points">
             {unit.points.slice(0, 4).map((p) => (

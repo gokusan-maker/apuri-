@@ -32,3 +32,24 @@ export function GrammarFigure({ fig }: { fig: GrammarFig }) {
     </div>
   )
 }
+
+// 入試の城の解説：項目ごとに、かたちの式を1行ずつ（ラベルつき）
+export function GrammarFigRows({ rows }: { rows: { name: string; fig: GrammarFig }[] }) {
+  return (
+    <ul className="gfig-rows">
+      {rows.map((r) => (
+        <li key={r.name} className="gfig-row">
+          <strong className="gfig-row-name">{r.name}</strong>
+          <p className="gfig-formula" aria-label={`${r.name}のかたち`}>
+            {r.fig.formula.map((c, i) => (
+              <span key={i} className={`gfig-chip gfig-${c.c}`}>
+                {c.t}
+              </span>
+            ))}
+          </p>
+          <small className="gfig-row-tip">💡 {r.fig.tip}</small>
+        </li>
+      ))}
+    </ul>
+  )
+}

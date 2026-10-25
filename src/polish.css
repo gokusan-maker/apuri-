@@ -3439,3 +3439,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .word-mini-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; width: 100%; margin: 12px 0; padding: 14px 12px; border: none; border-radius: 16px; background: linear-gradient(135deg, #22c55e, #0ea5e9 60%, #6366f1); color: #fff; font: inherit; font-size: 1.15rem; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 5px 0 #3730a3, 0 8px 18px rgb(99 102 241 / 0.3); cursor: pointer; }
 .word-mini-btn small { font-size: 0.74rem; font-weight: 700; opacity: 0.95; }
 .word-mini-back { margin: 0 0 8px; }
+.gfig-rows { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.gfig-row { display: grid; gap: 4px; }
+.gfig-row-name { font-size: 0.86rem; }
+.gfig-row-tip { font-size: 0.74rem; color: var(--muted); }

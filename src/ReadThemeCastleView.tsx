@@ -4,7 +4,7 @@ import { Castle } from './CastleView'
 import { LONG_PASSAGES, type LongPassage, type LongRecord } from './longreading'
 import { readCastleFloors, type RcFloor } from './readcastle'
 import { towerCleared } from './readtower'
-import { speak } from './speech'
+import { GrammarFigure } from './GrammarFigView'
 
 // 読解の城（構文ごと）：分詞構文・強調構文・分裂文・倒置・仮定法などのテーマを、その構文が入った長文で3階ずつ登る。
 // テーマの1階目は構文の解説から。いまのレベルの長文を先に使い、足りなければほかのレベルの長文も使う
@@ -25,22 +25,7 @@ export function ReadThemeCastle({ list, record, onOpen, onChest }: { list: LongP
           ← 城にもどる
         </button>
         <h2>🏰 {t.name}</h2>
-        <ul className="rc-points">
-          {t.points.map((x) => (
-            <li key={x}>{x}</li>
-          ))}
-        </ul>
-        {t.examples.map((ex) => (
-          <p key={ex.en} className="gc-ex">
-            <span>
-              {ex.en}{' '}
-              <button className="speak small" aria-label={`${ex.en} を聞く`} onClick={() => speak(ex.en)}>
-                🔊
-              </button>
-            </span>
-            <small>{ex.ja}</small>
-          </p>
-        ))}
+        <GrammarFigure fig={t.fig} />
         <div className="rc-find">
           <p className="rc-find-cap">🔍 この長文に出てくる「{t.name}」</p>
           <p className="rc-find-en">{explain.sentence}</p>

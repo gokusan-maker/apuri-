@@ -200,3 +200,14 @@ export function figOf(name: string): GrammarFig {
   const base = name.replace(/^gc:/, '').replace(/^[^|]*\|/, '').replace(/:\d+$/, '').replace(/[①-⑩]$|\d+$/, '')
   return GRAMMAR_FIGS[base] ?? FALLBACK
 }
+
+// 入試の文法の城：見出しのかっこの中の項目（時制・関係詞・倒置 など）から、項目ごとのかたちの図
+const EXAM_TOPIC: Record<string, string> = { 時制: '時制', 関係詞: '関係詞', 分詞: '分詞', 倒置: '倒置・強調', 強調: '倒置・強調', 同格: '倒置・強調', 仮定法: '仮定法', 準動詞: '不定詞', 慣用表現: '動詞の使い方' }
+export function examFigs(title: string): { name: string; fig: GrammarFig }[] {
+  const inner = /（(.+)）/.exec(title)?.[1] ?? ''
+  return inner
+    .split('・')
+    .map((t) => ({ name: t, key: EXAM_TOPIC[t] }))
+    .filter((t): t is { name: string; key: string } => !!t.key && !!GRAMMAR_FIGS[t.key])
+    .map((t) => ({ name: t.name, fig: GRAMMAR_FIGS[t.key] }))
+}

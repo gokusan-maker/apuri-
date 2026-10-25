@@ -21,3 +21,14 @@ describe('文法の城の解説図', () => {
     expect(screen.getByRole('button', { name: 'I want to swim. を聞く' })).toBeInTheDocument()
   })
 })
+
+it('入試の城の解説：見出しの項目（時制・関係詞など）ごとに、かたちの図', async () => {
+  const { examFigs } = await import('./grammarfig')
+  expect(examFigs('共通テストの文法（時制・関係詞・分詞）').map((r) => r.name)).toEqual(['時制', '関係詞', '分詞'])
+  expect(examFigs('私立医学部の文法（医療の英文で）')).toEqual([])
+})
+
+it('読解の構文のテーマにも、どれも図（かたちと使い方3つ）がある', async () => {
+  const { READ_THEMES } = await import('./readcastle')
+  for (const t of READ_THEMES) expect(t.fig.uses.length, t.id).toBe(3)
+})
