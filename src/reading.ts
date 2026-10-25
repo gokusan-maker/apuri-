@@ -1861,6 +1861,17 @@ export const PASSAGES: Passage[] = [
       { q: '来た鳥は何だった？', choices: ['スズメ', 'ハト', 'カラス'], answer: 0 },
     ],
   },
+  {
+    id: 'tall-sunflower',
+    title: 'The Tallest Sunflower',
+    text: 'In May, my class planted sunflower seeds next to the school gate. We gave them water every morning. In July, the sunflowers grew very tall. One of them was taller than our teacher! It was about two meters high. Its big yellow flower always faced the sun. In September, we collected the seeds from the flowers. We will plant them again next spring.',
+    ja: '5月に、私のクラスは校門のよこにヒマワリのたねを植えました。毎朝、水をあげました。7月になると、ヒマワリはとても高くなりました。その中の1本は、先生よりも高くなりました！ 高さはおよそ2メートルでした。大きな黄色の花は、いつも太陽のほうを向いていました。9月に、私たちは花からたねを集めました。来年の春、またそのたねを植えます。',
+    questions: [
+      { q: 'ヒマワリのたねはどこに植えた？', choices: ['校門のよこ', '教室の中', '公園'], answer: 0 },
+      { q: 'いちばん高いヒマワリはどれくらいだった？', choices: ['およそ2メートル', 'およそ1メートル', 'およそ5メートル'], answer: 0 },
+      { q: '9月に何をした？', choices: ['たねを集めた', 'たねを植えた', '花をかざった'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'
