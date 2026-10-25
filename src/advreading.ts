@@ -2959,6 +2959,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-conference-email',
+    title: 'An Email About a Conference Booking',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Lopez, Thank you for registering for the Pacific Retail Conference, which will be held at the Grand Lake Hotel from June 4 to June 6. This email confirms your registration for all three days, including the welcome dinner on the first evening.",
+      "We noticed that you also requested a room at the conference hotel. Unfortunately, the Grand Lake Hotel is now fully booked for the night of June 3. We have therefore reserved a room for you at the Riverside Inn, ( A ) is located just across the street, for that night only. From June 4, you will stay at the Grand Lake Hotel as planned. The conference will cover the cost of the extra night.",
+      "Please note that the workshop on online marketing that you selected has been moved from Room B to the main hall because of the large number of participants. If you would like to change to a different workshop, please let us know ( B ) May 25.",
+      "Your name badge and conference program will be ready at the registration desk in the hotel lobby. We recommend arriving ( C ) least thirty minutes before the opening speech, which begins at 9:00 a.m. on June 4. We look forward to seeing you. Sincerely, Emily Chen, Conference Coordinator",
+    ],
+    ja: [
+      'ロペス様　パシフィック小売業カンファレンスにご登録いただき、ありがとうございます。カンファレンスは6月4日から6日まで、グランドレイク・ホテルで開かれます。このメールは、初日の夜の歓迎ディナーをふくむ3日間すべてへのご登録を確認するものです。',
+      'また、カンファレンス会場のホテルのお部屋もご希望とうかがっています。あいにく、グランドレイク・ホテルは6月3日の夜はすでに満室です。そのため、その夜だけ、通りのすぐ向かいにあるリバーサイド・インにお部屋を予約しました。6月4日からは、予定どおりグランドレイク・ホテルにお泊まりいただけます。追加の1泊の費用はカンファレンスが負担します。',
+      'なお、お選びいただいたオンライン・マーケティングのワークショップは、参加者が多いため、B室から大ホールに移りました。別のワークショップに変更をご希望の場合は、5月25日までにお知らせください。',
+      '名札とカンファレンスのプログラムは、ホテルのロビーにある受付でご用意しています。6月4日午前9時に始まる開会のあいさつの少なくとも30分前にお越しになることをおすすめします。お会いできるのを楽しみにしています。カンファレンス・コーディネーター　エミリー・チェン',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'where', 'it'], answer: 0, why: 'コンマのあとで the Riverside Inn を説明し、is located の主語になる非制限用法の関係代名詞 which。where のうしろには主語のそろった文が必要で、what は先行詞をとらず、it では2つの文をつなげない。' },
+      { id: 'B', choices: ['by', 'until', 'since', 'during'], answer: 0, why: '「5月25日までに（知らせる）」としめ切りを表すのは by。until は「～までずっと」で1回の連絡には使わず、since・during は意味が合わない。' },
+      { id: 'C', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at least で「少なくとも」。at least thirty minutes before ～ で「～の少なくとも30分前に」。in・on・by は least と結びつかない。' },
+    ],
+    tf: [
+      { statement: 'ロペスさんは、6月3日の夜はリバーサイド・インに泊まる。', answer: true, why: '第2段落 reserved a room for you at the Riverside Inn … for that night only。' },
+      { statement: '追加の1泊の費用は、ロペスさんが自分で払う。', answer: false, why: '第2段落 The conference will cover the cost of the extra night。' },
+      { statement: 'オンライン・マーケティングのワークショップは、大ホールで行われる。', answer: true, why: '第3段落 has been moved from Room B to the main hall。' },
+    ],
+    qa: [
+      { q: 'Why was the workshop moved to the main hall?', choices: ['Because many people will take part in it.', 'Because Room B is being repaired.', 'Because Mr. Lopez asked for a change.', 'Because the hotel is fully booked.'], answer: 0, why: '第3段落 because of the large number of participants。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
