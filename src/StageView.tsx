@@ -591,7 +591,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
     <section className="card stages">
-      <h2>{part === 'stages' ? '🗺 単語ステージ' : part === 'boss' ? '👹 ボスに挑戦' : 'ステージ'}</h2>
+      {part !== 'boss' && <h2>{part === 'stages' ? '🗺 単語ステージ' : 'ステージ'}</h2>}{/* ボス部屋は単語・文法と同じく、城の上に見出しを出さない */}
       {part !== 'stages' && (
       <>
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
