@@ -1698,6 +1698,7 @@ function App() {
           onRaiseNew={() => setParty((p) => ({ ...p, active: p.members.length - 1 }))}
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
+          ownedSpecies={party.members.map((m) => m.species ?? 'mochi')}
           freeGacha={freeGachaDay !== today}
           rareTickets={wallet.rareTickets ?? 0}
           srTickets={wallet.srTickets ?? 0}

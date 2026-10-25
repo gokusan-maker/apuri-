@@ -7,7 +7,8 @@ import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFa
 import { MEMBERS_FOR_TICKET } from './party'
 import { loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
-import { FORMS, kindOf, RARITY_LABEL, speciesOf, withSpecies, type Kind, type Species } from './monster'
+import { typeOf } from './chartype'
+import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { GachaReveal } from './GachaRevealView'
 
@@ -36,6 +37,7 @@ function ShareButton({ text }: { text: string }) {
 }
 
 type Props = {
+  ownedSpecies?: string[] // 持っているキャラクターの種類（図鑑用）
   coins: number
   members: number // 今の仲間の数
   tickets?: number // ガチャチケットの枚数
@@ -66,7 +68,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew, ownedSpecies }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -326,6 +328,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           </div>
         </>
       )}
+      {ownedSpecies && <CharBook owned={ownedSpecies} />}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log chip-fold cf-4">
           <summary>最近のガチャ（{log.length}回）</summary>
@@ -474,5 +477,47 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
         </div>
       )}
     </div>
+  )
+}
+
+// キャラクター図鑑：ガチャで出るキャラ全部。まだ会っていない子はシルエットと「？？？」
+function CharBook({ owned }: { owned: string[] }) {
+  const got = new Set(['mochi', ...owned])
+  const [pick, setPick] = useState<string | null>(null)
+  const n = SPECIES.filter((sp) => got.has(sp.id)).length
+  return (
+    <details className="gacha-odds char-book chip-fold cf-1">
+      <summary aria-label={`キャラクター図鑑 ${n} / ${SPECIES.length}`}>📖 キャラクター図鑑（{n}/{SPECIES.length}）</summary>
+      <ul className="char-book-list">
+        {SPECIES.map((sp) => {
+          const ok = got.has(sp.id)
+          const t = typeOf(sp.id)
+          return (
+            <li key={sp.id} className={ok ? 'got' : 'locked'}>
+              <button className="char-book-pick" aria-label={ok ? `${sp.name}（${t.name}）` : 'まだ会っていないキャラクター'} onClick={() => setPick(pick === sp.id ? null : sp.id)}>
+                <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
+                <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
+                <span className={`char-type t-${t.id}`} title={t.desc}>
+                  {t.icon}
+                  {t.name.replace('型', '')}
+                </span>
+              </button>
+            </li>
+          )
+        })}
+      </ul>
+      {pick && (
+        <p className="zukan-detail" role="status">
+          {got.has(pick) ? (
+            <>
+              <strong>{speciesOf(pick).name}</strong>：{speciesOf(pick).desc}
+            </>
+          ) : (
+            <>{speciesOf(pick).egg}から生まれるらしい…</>
+          )}
+          （{typeOf(pick).icon} {typeOf(pick).name}：{typeOf(pick).desc}）
+        </p>
+      )}
+    </details>
   )
 }

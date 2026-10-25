@@ -1,3 +1,4 @@
+import { typeOf } from './chartype'
 import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
@@ -1156,6 +1157,9 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
                 <span className="badge-desc">
                   {active ? '相棒・' : ''}Lv.{levelInfo(m.xp).level}
                   {m.kind && <span className={`kind-tag r-${kindOf(m.kind).rarity}`}> {kindOf(m.kind).name}</span>}
+                </span>
+                <span className={`char-type t-${typeOf(m.species).id}`} title={typeOf(m.species).desc}>
+                  {typeOf(m.species).icon} {typeOf(m.species).name}
                 </span>
                 <span className="party-bar" aria-hidden="true">
                   <span style={{ width: `${Math.round((levelInfo(m.xp).into / levelInfo(m.xp).need) * 100)}%` }} />

@@ -2951,3 +2951,18 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .gacha-rare-due { margin: 6px 0; padding: 4px 12px; border-radius: 999px; background: linear-gradient(90deg, #ede9fe, #fce7f3); color: #6d28d9; font-size: 0.8rem; font-weight: 900; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme='light']) .gacha-rare-due { background: linear-gradient(90deg, #2e1065, #500724); color: #ddd6fe; } }
 :root[data-theme='dark'] .gacha-rare-due { background: linear-gradient(90deg, #2e1065, #500724); color: #ddd6fe; }
+
+/* ガチャのキャラクター図鑑 */
+.char-book-list { list-style: none; margin: 8px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.char-book-pick { width: 100%; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 6px 4px; border-radius: 14px; border: 2px solid color-mix(in srgb, var(--muted) 20%, transparent); background: var(--card); color: var(--fg); font: inherit; cursor: pointer; }
+.char-book-pick svg { width: 56px; height: 56px; }
+.char-book-list .locked .char-book-pick { background: color-mix(in srgb, var(--muted) 8%, var(--card)); }
+.char-book-name { font-weight: 900; font-size: 0.85rem; }
+.char-type { font-size: 0.7rem; font-weight: 800; padding: 1px 6px; border-radius: 999px; white-space: nowrap; background: color-mix(in srgb, var(--muted) 14%, transparent); }
+.char-type.t-attack { background: #fee2e2; color: #991b1b; }
+.char-type.t-shield { background: #dbeafe; color: #1e40af; }
+.char-type.t-guts { background: #fef3c7; color: #92400e; }
+.char-type.t-support { background: #fce7f3; color: #9d174d; }
+.char-type.t-speed { background: #ede9fe; color: #5b21b6; }
+.char-book .zukan-detail { display: block; }
+.char-book .char-type { font-size: 0.66rem; padding: 1px 5px; }
