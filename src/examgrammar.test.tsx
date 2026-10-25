@@ -4,7 +4,7 @@ import { EXAM_GRAMMAR } from './examgrammar'
 it('入試の文法：共通テスト〜国立医学部の6レベル、それぞれ10問。答えは選択肢の中、選択肢は4つでかぶらない', () => {
   expect(EXAM_GRAMMAR.map((u) => u.title.split('の文法')[0])).toEqual(['共通テスト', '私立難関大', '私立医学部', '国公立大', '旧帝大', '国立医学部'])
   for (const u of EXAM_GRAMMAR) {
-    expect(u.questions).toHaveLength(10)
+    expect(u.questions).toHaveLength(15)
     for (const q of u.questions) {
       expect(q.sentence.match(/___/g)).toHaveLength(1)
       expect(q.choices).toHaveLength(4)
