@@ -17,8 +17,9 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, LEVEL_BOSS_LOOK, loadBcClears, loadLevelBoss, saveBcClears, saveLevelBoss, type BcFloor } from './bosscastle'
-import { COURSES, courseById, courseWords, type CourseId } from './wordcourse'
+import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossPassages, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
+import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
 import { CastleCollection } from './CastleCollectView'
 import { Quiz } from './QuizView'
@@ -108,6 +109,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
+  const [bossLv, setBossLv] = useState<CourseId>(() => loadBossLevel(loadCourse(levels))) // えらんでいるボスのレベル（レベルごとに城とボス）
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
@@ -595,10 +597,20 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
         <>
+        <LevelPick
+          label="ボスのレベル"
+          current={bossLv}
+          spots={COURSES.map((c) => ({ id: c.id, name: c.label, sub: `👹 ${BOSSES[LEVEL_BOSS_LOOK[c.id]].name}`, done: lboss[c.id] ? BC_FLOORS : bossCastleFloors([c.id]).filter((f) => bcClears.includes(f.id)).length, total: BC_FLOORS }))}
+          onPick={(id) => {
+            setBossLv(id as CourseId)
+            saveBossLevel(id as CourseId)
+          }}
+        />
         <Castle
-          name="ボスの城"
+          key={bossLv}
+          name={`${courseById(bossLv).label}のボスの城`}
           theme="red"
-          floors={bossCastleFloors().map((f) => {
+          floors={bossCastleFloors([bossLv]).map((f) => {
             const isBoss = f.floor === BC_FLOORS - 1
             const c = courseById(f.course)
             const look = BOSSES[LEVEL_BOSS_LOOK[f.course]]
@@ -613,7 +625,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           goLabel="⚔ のぼる"
           againLabel="✅ もう一度"
           onOpen={(id) => {
-            const f = bossCastleFloors().find((x) => x.id === id)!
+            const f = bossCastleFloors([bossLv]).find((x) => x.id === id)!
             window.scrollTo?.({ top: 0 })
             if (f.floor === BC_FLOORS - 1) setLvFight(f.course)
             else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor) })

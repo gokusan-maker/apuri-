@@ -83,3 +83,22 @@ export function saveLevelBoss(r: Partial<Record<CourseId, string>>): void {
     /* 保存できなくても動く */
   }
 }
+
+// えらんでいるボスのレベル（単語・文法と同じく、レベルごとに城とボスがある）
+const LEVEL_KEY = 'eitan:boss-level'
+export function loadBossLevel(fallback: CourseId): CourseId {
+  try {
+    const v = localStorage.getItem(LEVEL_KEY)
+    if (v && COURSES.some((c) => c.id === v)) return v as CourseId
+  } catch {
+    /* 読めなくても動く */
+  }
+  return fallback
+}
+export function saveBossLevel(id: CourseId): void {
+  try {
+    localStorage.setItem(LEVEL_KEY, id)
+  } catch {
+    /* 保存できなくても動く */
+  }
+}

@@ -324,7 +324,7 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   expect(screen.queryByRole('region', { name: 'ボスの世界地図' })).toBeNull()
-  const castle = screen.getByRole('region', { name: 'ボスの城' })
+  const castle = screen.getByRole('region', { name: '中1のボスの城' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1　単語/ }))
   expect(screen.getByText(/中1のボスの階/)).toBeInTheDocument()
   for (let n = 0; n < 5; n++) {
@@ -332,7 +332,17 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
   }
   fireEvent.click(screen.getByText('城にもどる'))
-  expect(screen.getByRole('region', { name: 'ボスの城' })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '中1のボスの城' })).toBeInTheDocument()
+})
+
+it('ボス部屋もキャラの下でレベルをえらべ、レベルごとに5階の城とそのボスがある', () => {
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /^ボスのレベル：中1/ }))
+  fireEvent.click(screen.getByRole('option', { name: /東大/ }))
+  const castle = screen.getByRole('region', { name: '東大のボスの城' })
+  expect(within(castle).getByRole('button', { name: /^1階：東大　単語/ })).toBeInTheDocument()
+  expect(localStorage.getItem('eitan:boss-level')).toBe('東大')
 })
 
 it('ボスの一覧から15レベルのボスを自由にえらべ、たおすとそのレベルのボスの5階までクリアあつかい', () => {
@@ -341,7 +351,7 @@ it('ボスの一覧から15レベルのボスを自由にえらべ、たおす�
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   const list = screen.getByRole('group', { name: 'ボスをえらぶ' })
   expect(list.querySelectorAll('button.boss-pick-tile')).toHaveLength(15)
-  expect(within(screen.getByRole('region', { name: 'ボスの城' })).getByRole('button', { name: /^6階：中2　単語/ })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '中1のボスの城' })).toHaveTextContent('5/5')
   fireEvent.click(within(list).getByRole('button', { name: /^東大のボス「.+」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
