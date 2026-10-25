@@ -119,3 +119,8 @@ it('TOEIC はメール・お知らせの長文だけ。メール・お知らせ�
   expect(passagesFor('TOEIC').some((p) => p.id === 'toeic-office-move')).toBe(true)
   expect(passagesFor('高3').some((p) => /メール|お知らせ/.test(p.level))).toBe(false)
 })
+
+it('ネイティブのいちばんはじめに、くだけた言い方の多いエッセイ（native-）', () => {
+  expect(passagesFor('ネイティブ')[0].id).toBe('native-small-talk')
+  expect(passagesFor('国公立').some((p) => p.id.startsWith('native-'))).toBe(false)
+})

@@ -2000,3 +2000,4 @@
 - 2026-10-25: 東大レベル専用の長文「Why Dialects Survive」（方言が消えない理由・抽象的な評論）を自作で追加。東大の読解のいちばんはじめに出る
 - 2026-10-25: 京大レベル専用の長文「The Power of Ruins」（廃墟はなぜ心を動かすか・随筆的な評論、段落の和訳問題つき）を自作で追加
 - 2026-10-25: TOEICレベルの長文「Notice: Our Office Is Moving」（オフィス移転のお知らせ）を自作で追加。メール・お知らせの長文はTOEICだけに出す
+- 2026-10-25: ネイティブレベル専用の長文「In Defense of Small Talk」（世間話の大切さ・get away with / pitch in / roll one's eyes などの口語表現）を自作で追加

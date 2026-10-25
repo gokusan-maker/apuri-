@@ -2871,6 +2871,34 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'native-small-talk',
+    title: 'In Defense of Small Talk',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For years I thought small talk was a waste of time. Chatting about the weather or the traffic seemed like a polite way of saying nothing at all, and at parties I would much rather have been at home with a good book. If someone asked how my weekend went, I gave the shortest answer I could get away ( A ).",
+      "What changed my mind was a year I spent working in a small office where nobody knew each other well. The colleagues who seemed to get things done were not always the most talented ones but the ones who took a minute to ask about your kids or your cold. Those tiny conversations broke the ice, and when a real problem came up, people were far more willing to ( B ) in and help.",
+      "Sociologists have a name for this: small talk builds what they call 'weak ties,' the casual connections that link us to people outside our closest circle. Weak ties, it turns out, are often where new information and opportunities come from. So these days, when someone mentions the weather, I try to play along instead of ( C ) my eyes. You never know where a two-minute chat about the rain might lead.",
+    ],
+    ja: [
+      '何年ものあいだ、私は世間話は時間のむだだと思っていた。天気や道の混みぐあいについておしゃべりするのは、何も言わないことのていねいな言い方のように思えたし、パーティーではよい本を持って家にいるほうがずっとよかった。週末はどうだったかと聞かれると、許されるかぎりいちばん短い答えをしていた。',
+      '私の考えを変えたのは、だれもおたがいをよく知らない小さな会社で働いた1年だった。物事をちゃんと進めているように見えた同僚は、必ずしもいちばん才能のある人ではなく、子どものことや風邪のことを1分かけてたずねてくれる人たちだった。そうした小さな会話が場をなごませ、本当の問題が起きたとき、人々はずっと進んで協力してくれたのである。',
+      '社会学者はこれに名前をつけている。世間話は「弱いつながり」とよばれるもの、つまり、いちばん親しい仲間の外にいる人たちと私たちを結ぶ、気軽なつながりをつくるのだ。弱いつながりこそが、新しい情報や機会のもとになることが多いとわかっている。だから最近は、だれかが天気の話をしたら、あきれた顔をするかわりに話に乗るようにしている。雨についての2分のおしゃべりがどこへつながるかは、わからないのだから。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['with', 'from', 'by', 'to'], answer: 0, why: 'get away with ～ で「（大目に見られて）～ですませる」。the shortest answer I could get away with で「許されるかぎりいちばん短い答え」。' },
+      { id: 'B', choices: ['pitch', 'pitches', 'pitching', 'pitched'], answer: 0, why: 'be willing to ＋原形。pitch in で「（みんなで）手を貸す」。to のあとなので原形 pitch。' },
+      { id: 'C', choices: ['rolling', 'roll', 'rolled', 'to roll'], answer: 0, why: 'instead of は前置詞なので動名詞 rolling。roll one\'s eyes で「（あきれて）目を上に向ける」。' },
+    ],
+    tf: [
+      { statement: '筆者は以前、世間話は時間のむだだと思っていた。', answer: true, why: '第1段落 For years I thought small talk was a waste of time。' },
+      { statement: '筆者によれば、小さな会社で物事を進めていたのは、いちばん才能のある人たちだった。', answer: false, why: '第2段落 not always the most talented ones but the ones who took a minute to ask。' },
+      { statement: '「弱いつながり」は、新しい情報や機会のもとになることが多い。', answer: true, why: '第3段落 Weak ties … are often where new information and opportunities come from。' },
+    ],
+    qa: [
+      { q: 'What made the writer change their mind about small talk?', choices: ['Working in an office where small chats made people more willing to help.', 'Reading a good book at home during a party.', 'Learning that the weather is an interesting topic.', 'Meeting the most talented people in the office.'], answer: 0, why: '第2段落 What changed my mind was a year I spent working in a small office … people were far more willing to pitch in and help。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
