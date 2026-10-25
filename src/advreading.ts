@@ -3169,6 +3169,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-four-day-week',
+    title: 'Should We Work Four Days a Week?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, a number of companies around the world have tried a four-day working week. Employees work four days instead of five but ( A ) the same salary. The results of these trials have been discussed widely, and opinions are divided.",
+      "Supporters say that the change makes workers happier and healthier. With an extra day off, people have more time for their families, hobbies, and rest. Several companies reported that their employees took fewer sick days and that the amount of work they finished did not go down. Some workers said they had learned to waste less time in long meetings.",
+      "Critics, however, point out that a four-day week does not suit every job. Hospitals, schools, and stores need people to be there every day, so it is difficult for them to give all their staff an extra day off. Others worry that people will simply try to fit five days of work into four, ( B ) could make them more stressed, not less.",
+      "Perhaps the most important lesson from these trials is not the number of days itself. It is that the way we work can be changed, and that companies should think carefully about ( C ) their employees really need in order to do their best.",
+    ],
+    ja: [
+      '近年、世界中のいくつもの会社が週4日勤務を試してきた。社員は5日ではなく4日働くが、同じ給料を受け取る。こうした試みの結果は広く議論されており、意見は分かれている。',
+      '支持する人々は、この変化によって働く人はより幸せで健康になると言う。休みが1日増えれば、家族や趣味や休息にあてる時間が増える。いくつかの会社は、社員が病気で休む日が減り、仕上げる仕事の量も減らなかったと報告した。長い会議で時間をむだにしないことを学んだと言う社員もいた。',
+      'しかし批判する人々は、週4日勤務はすべての仕事に合うわけではないと指摘する。病院や学校や店は毎日人がいる必要があるので、すべての職員に休みをもう1日与えるのはむずかしい。また、人々が5日分の仕事をただ4日につめこもうとするだけになり、そのせいでストレスが減るどころか増えるかもしれないと心配する人もいる。',
+      'おそらく、これらの試みから得られるいちばん大切な教訓は、日数そのものではない。それは、働き方は変えられるということ、そして会社は、社員が最善をつくすのに本当に必要なものは何かを、よく考えるべきだということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['receive', 'receiving', 'to receive', 'receives'], answer: 0, why: 'Employees work … but receive … と、主語 Employees（複数）に続く2つ目の動詞を but で並べている。複数の主語なので receives ではなく receive。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容全体（5日分の仕事を4日につめこむこと）を受ける非制限用法の which。that は非制限用法で使えず、what は先行詞をとらず、it では文をつなげない。' },
+      { id: 'C', choices: ['what', 'that', 'which', 'whether'], answer: 0, why: 'need の目的語が欠けているので「～するもの」を表す what。前置詞 about のあとに that 節は置けず、which・whether のうしろは欠けたところのない文になる。' },
+    ],
+    tf: [
+      { statement: '週4日勤務の試みでは、社員の給料は減らされた。', answer: false, why: '第1段落 receive the same salary。' },
+      { statement: 'いくつかの会社では、社員が病気で休む日が減った。', answer: true, why: '第2段落 their employees took fewer sick days。' },
+      { statement: '筆者によれば、いちばん大切な教訓は働く日数そのものである。', answer: false, why: '第4段落 the most important lesson … is not the number of days itself。' },
+    ],
+    qa: [
+      { q: 'Why is a four-day week difficult for hospitals and stores?', choices: ['They need people to be there every day.', 'Their workers do not want an extra day off.', 'They have too many long meetings.', 'Their salaries are too low.'], answer: 0, why: '第3段落 Hospitals, schools, and stores need people to be there every day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
