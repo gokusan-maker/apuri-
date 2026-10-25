@@ -4295,6 +4295,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-automation-paradox',
+    title: 'The Paradox of Automation',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Automation is meant to make our lives safer and easier. Modern airplanes can fly themselves for most of a journey, and many cars can now keep their lane and brake on their own. Yet researchers have noticed a strange problem, often called the paradox of automation: the more reliable an automated system becomes, the less prepared humans are to take over ( A ) it fails.",
+      "The reason is simple. Skills that are not practiced fade. A pilot who rarely flies the plane by hand may find it difficult to do so in an emergency, precisely when manual flying matters most. Moreover, people who spend long periods simply watching a machine tend to lose attention. Monitoring a system that almost never goes wrong ( B ), after all, extremely boring.",
+      "This does not mean that automation should be avoided. On the whole, it has greatly reduced accidents and errors. Rather, the paradox suggests that the role of humans must be designed as carefully as the machines themselves. Some airlines, for example, require pilots to practice manual flying regularly, and some car makers check whether drivers are still paying attention.",
+      "The lesson extends beyond transport. As we rely more on calculators, navigation apps, and translation software, we may want to ask which skills we can safely hand over to machines and which we should keep ( C ) alive ourselves.",
+    ],
+    ja: [
+      '自動化は、私たちの生活をより安全に、より楽にするためのものである。現代の飛行機は飛行のほとんどを自動で行うことができ、いまでは多くの車が自分で車線を保ち、ブレーキをかけることができる。しかし研究者たちは、しばしば「自動化のパラドックス」とよばれる奇妙な問題に気づいている。自動化されたシステムが信頼できるものになればなるほど、それが故障したときに人間が引き継ぐ準備ができていなくなる、というものだ。',
+      'その理由は単純だ。練習しない技術はおとろえる。めったに手動で飛行機を操縦しないパイロットは、緊急時に、つまりまさに手動の操縦がもっとも重要なときに、それがむずかしいと感じるかもしれない。さらに、長い時間ただ機械を見ているだけの人は、注意力を失いがちである。ほとんど故障しないシステムを見守るのは、なんといっても、ひどく退屈なのだ。',
+      'これは、自動化をさけるべきだという意味ではない。全体として見れば、自動化は事故やまちがいを大きく減らしてきた。むしろこのパラドックスは、人間の役割も機械そのものと同じくらい注意深く設計しなければならないことを示している。たとえば、パイロットに定期的に手動の操縦を練習させる航空会社もあれば、運転する人がまだ注意を向けているかを確認する自動車メーカーもある。',
+      'この教訓は交通にとどまらない。電卓やナビアプリや翻訳ソフトにますますたよるようになるにつれて、どの技術なら安全に機械にまかせられ、どの技術は自分で生かし続けるべきかを問う必要があるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'which', 'what', 'during'], answer: 0, why: 'うしろが完全な文（it fails）で「～するときに」を表す接続詞 when。which・what のうしろは欠けた文になり、during は前置詞なので文を続けられない。' },
+      { id: 'B', choices: ['is', 'are', 'being', 'to be'], answer: 0, why: '主語は動名詞のかたまり Monitoring a system … （単数あつかい）なので is。after all は「なんといっても」。' },
+      { id: 'C', choices: ['them', 'it', 'they', 'their'], answer: 0, why: 'keep them alive で「それら（の技術）を生かし続ける」。which が指す skills は複数なので them。it は単数、they は主語の形、their は所有格で目的語になれない。' },
+    ],
+    tf: [
+      { statement: '自動化のパラドックスとは、システムが信頼できるほど人間が引き継ぐ準備ができなくなることだ。', answer: true, why: '第1段落 the more reliable an automated system becomes, the less prepared humans are to take over。' },
+      { statement: '筆者は、自動化はさけるべきだと主張している。', answer: false, why: '第3段落 This does not mean that automation should be avoided。' },
+      { statement: 'パイロットに定期的に手動の操縦を練習させる航空会社もある。', answer: true, why: '第3段落 Some airlines … require pilots to practice manual flying regularly。' },
+    ],
+    qa: [
+      { q: 'Why might a pilot find manual flying difficult in an emergency?', choices: ['Because skills that are not practiced fade.', 'Because planes cannot be flown by hand.', 'Because emergencies never happen.', 'Because automation increases accidents.'], answer: 0, why: '第2段落 Skills that are not practiced fade。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

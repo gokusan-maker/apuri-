@@ -2122,3 +2122,4 @@
 - 2026-10-25: 地図（海・森・山）のてっぺんと30階ごとの宝箱に、ガチャチケットが入っているように
 - 2026-10-25: 高校の文法単元を3つ追加：二重否定（never ～ without）・条件の接続詞（provided that / suppose）・those who と the former / the latter
 - 2026-10-25: 国公立レベルの長文「Should We Tip?」（チップの習慣・229語）を追加
+- 2026-10-25: 旧帝大レベルの長文「The Paradox of Automation」（自動化のパラドックス・229語）を追加
