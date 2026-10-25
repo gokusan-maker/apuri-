@@ -3355,6 +3355,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-second-hand',
+    title: 'The New Popularity of Second-Hand Goods',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, many people felt a little embarrassed about buying used clothes or furniture. Today, however, second-hand shopping has become popular, especially among young people. Smartphone apps make it easy to sell things you no longer need and ( A ) items that other people have used.",
+      "There are several reasons for this change. The most obvious one is price: a used jacket or bicycle often costs less than half of what a new one would. Another reason is the environment. Making new products uses large amounts of water and energy, so giving an item a second life helps reduce waste. Some young people also say they enjoy finding unique things ( B ) cannot be bought in ordinary stores.",
+      "Of course, second-hand shopping has its problems. Buyers cannot always check the condition of an item before paying, and sometimes the product that arrives is different from the one in the photo. To avoid trouble, it is wise to read the seller's reviews carefully and to ask questions before ( C ) a decision.",
+      "Still, the trend seems likely to continue. As people become more aware of the cost of throwing things away, buying second-hand may soon be seen not as something to hide but as a smart choice.",
+    ],
+    ja: [
+      '少し前まで、多くの人は古着や中古の家具を買うことを少しはずかしく感じていた。しかし今日では、中古品の買い物は、とくに若い人々のあいだで人気になっている。スマホのアプリを使えば、もういらなくなった物を売ったり、ほかの人が使った品物を買ったりするのがかんたんにできる。',
+      'この変化にはいくつかの理由がある。もっとも明らかなのは値段だ。中古のジャケットや自転車は、新品の半分以下の値段であることが多い。もう1つの理由は環境である。新しい製品を作るには大量の水やエネルギーが使われるので、品物に2度目の命を与えることはごみを減らす助けになる。ふつうの店では買えない、ほかにない物を見つけるのが楽しいと言う若い人もいる。',
+      'もちろん、中古品の買い物には問題もある。買う人は支払う前に品物の状態をいつも確かめられるわけではなく、届いた品物が写真のものとちがうこともある。トラブルをさけるには、売り手の評価をよく読み、決める前に質問するのが賢明だ。',
+      'それでも、この流れは続きそうだ。物を捨てることのコストに人々がより気づくようになるにつれて、中古品を買うことは、隠すべきことではなく賢い選択だと、まもなく見なされるようになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to buy', 'buying', 'bought', 'buys'], answer: 0, why: 'make it easy to sell … and to buy … と、形式目的語 it の中身になる to 不定詞を and で2つ並べている。' },
+      { id: 'B', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 unique things（物）を説明し、cannot be bought の主語になる関係代名詞 that。what は先行詞をとらず、who は人に使い、where のうしろには主語のそろった文が必要。' },
+      { id: 'C', choices: ['making', 'make', 'made', 'to make'], answer: 0, why: '前置詞 before のあとは動名詞 making。make a decision で「決める」。' },
+    ],
+    tf: [
+      { statement: '少し前まで、中古品を買うのを少しはずかしく感じる人が多かった。', answer: true, why: '第1段落 many people felt a little embarrassed about buying used clothes or furniture。' },
+      { statement: '筆者によれば、中古品の買い物にはまったく問題がない。', answer: false, why: '第3段落 second-hand shopping has its problems。' },
+      { statement: '筆者は、中古品の人気は続きそうだと考えている。', answer: true, why: '第4段落 the trend seems likely to continue。' },
+    ],
+    qa: [
+      { q: 'What does the writer recommend to avoid trouble when buying second-hand goods?', choices: ["Read the seller's reviews and ask questions first.", 'Buy only items that are new.', 'Pay before checking the photo.', 'Shop only in ordinary stores.'], answer: 0, why: "第3段落 read the seller's reviews carefully and to ask questions before making a decision。" },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
