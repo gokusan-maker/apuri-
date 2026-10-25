@@ -2558,6 +2558,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what is the debate really about?', choices: ['What kind of society people want.', 'How to print more money.', 'Which bank is the safest.', 'How quickly cards can be made.'], answer: 0, why: '第3段落 not really about money itself but about what kind of society we want。' },
     ],
   },
+  {
+    id: 'adv-new-words',
+    title: 'Words for New Ideas',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When Japan opened its doors to the West in the second half of the nineteenth century, scholars faced a problem that is easy to overlook: many Western ideas had no names in Japanese. How could one discuss philosophy, society, or individual rights ( A ) words for them existed?",
+      "Their solution was to build new words out of Chinese characters. The scholar Nishi Amane, for example, created tetsugaku as a translation of 'philosophy,' combining characters ( B ) meanings suggested wisdom and learning. Other new terms, such as the words for 'society' and 'science,' spread through newspapers and schools until they seemed as if they had always existed. Remarkably, many of these words later traveled to China and Korea, where they are still used today.",
+      "Yet a translated word is never a perfect copy. Each new term carried associations that the original lacked, and some carried ( C ) than their translators intended. Debates continue, for instance, about whether the Japanese word chosen for 'rights' fully captures the moral weight of the English term. The history of these words shows that translation is not simply a matter of exchanging one label for another; it is a creative act that shapes how an idea will ( D ) understood in its new home.",
+    ],
+    ja: [
+      '19世紀の後半に日本が西洋に門を開いたとき、学者たちは見落とされがちな問題に直面した。西洋の考えの多くには、日本語の名前がなかったのである。それを表すことばがないのに、どうやって哲学や社会、個人の権利について論じることができただろうか。',
+      '彼らの解決策は、漢字を組み合わせて新しいことばを作ることだった。たとえば学者の西周は、知恵と学問を思わせる意味をもつ文字を組み合わせて、「philosophy」の訳語として「哲学」を作った。「社会」や「科学」を表すことばのような、ほかの新しいことばも、新聞や学校を通じて広まり、まるで昔からあったかのように思われるまでになった。おどろくべきことに、こうしたことばの多くはのちに中国や韓国へと伝わり、今日でもそこで使われている。',
+      'しかし、翻訳されたことばは決して完全な写しではない。新しいことばはそれぞれ、もとのことばにはない連想をともなっており、訳した人の意図以上のものをになったことばもあった。たとえば、「rights」に選ばれた日本語が、英語のもつ道徳的な重みを十分にとらえているかどうかについては、いまも議論がつづいている。こうしたことばの歴史は、翻訳とは1つのラベルを別のラベルととりかえるだけの作業ではないことを示している。翻訳は、ある考えが新しい土地でどのように理解されるかを形づくる、創造的な行為なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when no', 'without', 'despite', 'because of'], answer: 0, why: 'うしろが文（words … existed）なので接続詞 when（～のときに）＋ no words。without・despite・because of のうしろには名詞しか置けない。' },
+      { id: 'B', choices: ['whose', 'which', 'what', 'that its'], answer: 0, why: '「その文字の意味」なので所有格の関係代名詞 whose（characters whose meanings …）。' },
+      { id: 'C', choices: ['more', 'much', 'most', 'many'], answer: 0, why: 'あとの than と組むのは比較級 more（～以上のもの）。much・most・many は than と組めない。' },
+      { id: 'D', choices: ['be', 'being', 'been', 'to be'], answer: 0, why: '助動詞 will のあとは原形。受け身なので will be understood。' },
+    ],
+    tf: [
+      { statement: '西洋の考えの多くには、当時日本語の名前がなかった。', answer: true, why: '第1段落 many Western ideas had no names in Japanese。' },
+      { statement: '明治の新しいことばは、中国や韓国には伝わらなかった。', answer: false, why: '第2段落 many of these words later traveled to China and Korea。' },
+      { statement: '筆者によれば、翻訳とはことばのラベルをとりかえるだけの作業である。', answer: false, why: '第3段落 translation is not simply a matter of exchanging one label for another。' },
+    ],
+    qa: [
+      { q: 'What did Nishi Amane do?', choices: ['He created a Japanese word for philosophy.', 'He opened Japan to the West.', 'He started the first newspaper in Japan.', 'He taught English in China.'], answer: 0, why: '第2段落 Nishi Amane … created tetsugaku as a translation of philosophy。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
