@@ -857,6 +857,8 @@ function App() {
   }
 
   // ガチャを n 回まとめて引く（1回ずつ財布・仲間・ステップを引きついで計算する）
+  // 正解しても自分で苦手に入れる（チェックをはずしたら1つもどす）
+  const markWeak = (id: string, on: boolean) => setMistakes((m) => (on ? addMistake(m, id) : easeMistake(m, id)))
   // なかま10体 → 🎟1まい（記録の「なかま」とガチャのページの両方から）
   function tradeTen() {
     const next = tradeMembers(party)
@@ -1186,6 +1188,7 @@ function App() {
   // ステージ（ボス部屋ではボスだけ、単語ゲームでは単語ステージだけ）
   const stagesView = (part: 'boss' | 'stages') => (
     <Stages
+      onMarkWeak={markWeak}
       part={part}
       startDaily={dailyGo}
       onReadingAnswer={onAnswerTrack('reading')}
@@ -2034,6 +2037,7 @@ function App() {
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}
             targets={mode === 'word' && todayQuiz ? todayWords(today) : quizFocus && focusList(quizFocus).length > 0 ? focusList(quizFocus) : undefined}
             onAnswer={mode === 'grammar' ? onAnswerTrack('grammar') : onAnswer}
+            onMarkWeak={mode === 'word' ? markWeak : undefined}
             onFinish={(score, total) => {
               if (mode === 'word' && todayQuiz && loadTodayWordsDay() !== today) {
                 saveTodayWordsDay(today)

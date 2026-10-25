@@ -2835,3 +2835,6 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 }
 :root[data-theme='dark'] .weak-remove { background: #500724; box-shadow: 0 2px 0 #831843; }
 .party-more { display: flex; margin: 10px auto 0; }
+
+/* 4択で正解したあと「📌 正解したけど苦手に入れる」（スイッチつき・1行） */
+.mark-weak { display: flex; align-items: center; justify-content: center; gap: 4px; margin: 4px 0 8px; color: var(--muted); font-size: 0.85rem; font-weight: 800; white-space: nowrap; cursor: pointer; }

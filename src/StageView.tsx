@@ -59,6 +59,7 @@ type Props = {
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
   onWeekendWin?: () => void // 週末ボスをその週末はじめて倒した
   onQuestWin?: () => void // 特別クエストの強いボスをその日はじめて倒した
+  onMarkWeak?: (wordId: string, on: boolean) => void // 正解しても苦手に入れる
 }
 
 export const STAR3_COINS = 20
@@ -67,7 +68,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin }: Props) {
+export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin, onMarkWeak }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -497,6 +498,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           count={STAGE_SIZE}
           lockDirection
           onAnswer={onAnswer}
+          onMarkWeak={onMarkWeak}
           onFinish={(score, total) => {
             const stars = starsFor(score, total)
             setResult(stars)

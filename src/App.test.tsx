@@ -1897,3 +1897,20 @@ describe('苦手な単語を消す', () => {
     expect(screen.queryByText('苦手な単語')).toBeNull()
   })
 })
+
+describe('正解しても苦手に入れる', () => {
+  it('4択で正解したあと「苦手に入れる」をチェックすると苦手な単語に入り、はずすと元にもどる', () => {
+    localStorage.removeItem('eitan:mistakes')
+    render(<App />)
+    goCards()
+    playMini()
+    const en = document.querySelector('.quiz .en:not(.today-words .en)')!.textContent
+    const word = WORDS.find((w) => w.en === en)!
+    fireEvent.click(within(document.querySelector<HTMLElement>('.quiz .choices')!).getByRole('button', { name: word.ja }))
+    const box = screen.getByLabelText(/正解したけど苦手に入れる/)
+    fireEvent.click(box)
+    expect(JSON.parse(localStorage.getItem('eitan:mistakes')!)[word.id]).toBe(1)
+    fireEvent.click(box)
+    expect(JSON.parse(localStorage.getItem('eitan:mistakes')!)[word.id]).toBeUndefined()
+  })
+})

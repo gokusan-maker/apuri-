@@ -237,6 +237,7 @@ type Props = {
   onGrammarMaster?: () => void // 文法の全単元クリア
   onXp?: (n: number) => void // XPのごほうび（文法の単元をはじめて全問正解など）
   onFavorite?: (ids: string[]) => void // まちがえた単語を★に入れる
+  onMarkWeak?: (wordId: string, on: boolean) => void // 正解しても自分で「苦手」に入れる（チェックをはずすと元にもどす）
   onRestart?: () => void // 指定すると「もう1回」でこれを呼ぶ（ステージ用）
   lockDirection?: boolean // 出題の向きを切り替えさせない（ステージ用）
   onDrill?: (id: GrammarDrill) => void // 文法チャレンジの「文法ドリル」を選んだ
@@ -261,7 +262,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill, countSlot }: Props) {
+export function Quiz({ onMarkWeak, words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill, countSlot }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -297,6 +298,7 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
   const [questions, setQuestions] = useState<Q[]>(() => build(words, initial, count, targets ?? words))
   const [index, setIndex] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
+  const [markedWeak, setMarkedWeak] = useState<string[]>([]) // 正解したけど自分で苦手に入れた単語
   const [score, setScore] = useState(0)
   const [combo, setCombo] = useState(0)
   const [maxCombo, setMaxCombo] = useState(0)
@@ -1101,6 +1103,20 @@ export function Quiz({ words, targets, direction: directionProp, count: countPro
               </p>
               <p className="example-ja">{q.word.exampleJa}</p>
             </div>
+          )}
+          {onMarkWeak && picked === q.answer && q.word.id && WORDS.some((w) => w.id === q.word.id) && (
+            <label className="mark-weak">
+              <input
+                type="checkbox"
+                checked={markedWeak.includes(q.word.id)}
+                onChange={(e) => {
+                  const on = e.target.checked
+                  setMarkedWeak((l) => (on ? [...l, q.word.id] : l.filter((x) => x !== q.word.id)))
+                  onMarkWeak(q.word.id, on)
+                }}
+              />
+              📌 正解したけど苦手に入れる
+            </label>
           )}
           <button className="flip" onClick={next}>
             次へ
