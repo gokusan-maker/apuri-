@@ -16,7 +16,8 @@ import { loadUniv, saveUniv, univExam, UNIV_BOSSES, univGraduated, type UnivBoss
 import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasure'
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
-import { BOSS_GROUPS, loadBossGroup, saveBossGroup } from './bossfilter'
+import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
+import { CastleMap } from './CastleMapView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
@@ -529,17 +530,38 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
         <>
-        <p className="boss-pick-title">🎯 レベルをえらんで、ボスと勝負</p>
-        <div className="boss-group" role="group" aria-label="ボスのレベル">
-          {BOSS_GROUPS.map((g) => (
-            <button key={g.id} className={`boss-group-btn${group === g.id ? ' on' : ''}`} aria-pressed={group === g.id} onClick={() => {
-                setGroup(g.id)
-                saveBossGroup(g.id)
-              }}>
-              {g.label}
-            </button>
-          ))}
-        </div>
+        <CastleMap
+          title="ボスの城の地図"
+          tabsLabel="ボスのレベル"
+          current={group}
+          spots={BOSS_GROUPS.map((g) => {
+            const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
+            return { id: g.id, name: g.label.replace(/^\S+ /, ''), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
+          })}
+          onPick={(id) => {
+            setGroup(id as BossGroup)
+            saveBossGroup(id as BossGroup)
+          }}
+        />
+        {(() => {
+          const lvs = LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv))
+          return (
+            <Castle
+              key={group}
+              name={`${BOSS_GROUPS.find((g) => g.id === group)!.label.replace(/^\S+ /, '')}のボスの城`}
+              theme="red"
+              goLabel="⚔ 戦う"
+              againLabel="👑 再戦"
+              floors={lvs.map((lv) => ({ id: lv, label: BOSSES[lv].name, sub: `${lv}${lv === goldenLevelOf(LEVELS, dayKey()) ? '・✨金色' : ''}`, fig: <BossFigure hit={false} look={BOSSES[lv]} />, cleared: !!boss[lv] }))}
+              onOpen={(id) => {
+                setFighting(id as Level)
+                window.scrollTo?.({ top: 0 })
+              }}
+            />
+          )
+        })()}
+        <details className="boss-pick-fold">
+          <summary>📋 ボスの一覧から自由にえらぶ</summary>
         <div className="boss-pick" role="group" aria-label="ボスをえらぶ">
           {LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv)).map((lv) => (
             <button
@@ -566,6 +588,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             </button>
           ))}
         </div>
+        </details>
         </>
       )}
       {winStreak > 0 && (
