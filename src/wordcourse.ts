@@ -11,7 +11,7 @@ export const COURSES: Course[] = [
   { id: 'eikenp2', label: '英検準2級', sub: '高校基礎・熟語', levels: ['高校基礎', '熟語'] },
   { id: 'eiken2', label: '英検2級', sub: '高校・大学入試', levels: ['英検2級'] },
   { id: 'eikenp1', label: '英検準1級', sub: '大学・社会人', levels: ['英検準1級'] },
-  { id: 'eiken1', label: '英検1級', sub: '最上級', levels: [] },
+  { id: 'eiken1', label: '英検1級', sub: '最上級', levels: ['英検1級'] },
   { id: 'v2000', label: '2000語', sub: '中学の全単語', levels: ['中1', '中2', '中3'] },
   { id: 'v3000', label: '3000語', sub: '＋高校基礎・熟語', levels: ['中1', '中2', '中3', '高校基礎', '熟語'] },
   { id: 'native', label: 'ネイティブ', sub: '口語・句動詞', levels: [] },

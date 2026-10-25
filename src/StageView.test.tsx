@@ -300,7 +300,7 @@ it('ボス部屋では、レベル（中学・高校・きほん）でしぼり�
   localStorage.setItem('eitan:grade', 'hs')
   const r = render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
   const tiles = () => [...screen.getByRole('group', { name: 'ボスをえらぶ' }).querySelectorAll('button.boss-pick-tile')].map((b) => b.getAttribute('aria-label')!.split('のボス')[0])
-  expect(tiles()).toEqual(['高校基礎', '熟語', 'ビジネス', '英検2級', '英検準1級']) // 高校生ははじめ高校のボス
+  expect(tiles()).toEqual(['高校基礎', '熟語', 'ビジネス', '英検2級', '英検準1級', '英検1級']) // 高校生ははじめ高校のボス
   fireEvent.click(screen.getByRole('button', { name: '🌱 きほん' }))
   expect(tiles()).toEqual(['曜日・月', 'テーマ別', '数', '色・形', '会話'])
   fireEvent.click(screen.getByRole('button', { name: '🏫 中学' }))

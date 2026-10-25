@@ -2,8 +2,9 @@ import { describe, expect, it } from 'vitest'
 import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
-  it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(4092)
+  it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100＋英検1級100あり、id が重複しない', () => {
+    expect(WORDS).toHaveLength(4192)
+    expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(100)
     expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(100)
     expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(101)
     expect(new Set(WORDS.map((w) => w.en.toLowerCase())).size).toBe(WORDS.length) // 同じ英単語を2回入れない
