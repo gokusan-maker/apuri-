@@ -22,6 +22,8 @@ const playMini = () => {
   goMini()
   fireEvent.click(screen.getByRole('button', { name: /をはじめる$/ }))
 }
+// 今日のミニゲームの1つ目（単語カードのつぎ）のゲームの名前
+const game1 = () => document.querySelectorAll('[aria-label="今日のミニゲーム"] .game-tile .game-tile-name, [aria-label="今日のミニゲーム"] .game-tile .gt-name')[1]?.textContent ?? ''
 // 問題の画面の上の「← ほかの問題をえらぶ」
 const backToPick = () => fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
 // 単語カード（単語ゲームの「🃏 単語カード」のタイルから）
@@ -274,26 +276,28 @@ describe('App', () => {
   it('単語ゲームのミニゲームは人気のゲームがタイルで見えていて、押すとそのゲームになる', () => {
     render(<App />)
     goMini()
-    const strip = screen.getByLabelText('人気のミニゲーム')
-    expect(strip.querySelectorAll('.game-tile')).toHaveLength(6)
+    const strip = screen.getByLabelText('今日のミニゲーム')
+    expect(strip.querySelectorAll('.game-tile')).toHaveLength(6) // 単語カード＋今日の5つ
     expect(screen.getByLabelText(/^いま：.+・全\d+種$/)).toBeInTheDocument()
-    fireEvent.click(within(strip).getByText('神経衰弱'))
+    const g = game1()
+    fireEvent.click(within(strip).getByText(g))
     // 問題の画面ではえらぶタイルはかくれ、上の「ほかの問題をえらぶ」でもどれる
-    expect(screen.queryByLabelText('人気のミニゲーム')).toBeNull()
+    expect(screen.queryByLabelText('今日のミニゲーム')).toBeNull()
     expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull()
     backToPick()
-    expect(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')).toHaveAttribute('aria-pressed', 'true')
+    expect(within(screen.getByLabelText('今日のミニゲーム')).getByText(g).closest('button')).toHaveAttribute('aria-pressed', 'true')
   })
 
   it('単語ゲームの人気タイルにも NEW の印がつき、あそぶと「✅ 今日」になる', () => {
     localStorage.clear()
     render(<App />)
     goMini()
-    const tile = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
+    const g = game1()
+    const tile = within(screen.getByLabelText('今日のミニゲーム')).getByText(g).closest('button')!
     expect(within(tile).getByText('NEW')).toBeInTheDocument()
     fireEvent.click(tile)
     backToPick()
-    const after = within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱').closest('button')!
+    const after = within(screen.getByLabelText('今日のミニゲーム')).getByText(g).closest('button')!
     expect(within(after).getByText('✅ 今日')).toBeInTheDocument()
   })
 
@@ -313,7 +317,7 @@ describe('App', () => {
     render(<App />)
     goMini()
     expect(screen.queryByText(/今日 \d+ しゅるいあそんだ/)).toBeNull()
-    fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('神経衰弱'))
+    fireEvent.click(within(screen.getByLabelText('今日のミニゲーム')).getByText(game1()))
     backToPick()
     expect(screen.getByText(/^今日 1 しゅるいあそんだ・あと4で🪙/)).toBeInTheDocument()
   })
@@ -328,7 +332,7 @@ describe('App', () => {
     // 単語ゲームはミニゲームが先。カードはミニゲームのタイルの1つ
     expect(document.querySelector('.quiz-pick')).not.toBeNull()
     expect(screen.queryByRole('tab', { name: '🃏 カード' })).toBeNull()
-    fireEvent.click(within(screen.getByLabelText('人気のミニゲーム')).getByText('単語カード'))
+    fireEvent.click(within(screen.getByLabelText('今日のミニゲーム')).getByText('単語カード'))
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
     backToPick() // カードも問題だけの画面。上の「← ほかの問題をえらぶ」でえらぶ画面へ
     expect(document.querySelector('.quiz-pick')).not.toBeNull()

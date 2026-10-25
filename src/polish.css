@@ -2845,3 +2845,6 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .gacha .gacha-btn.tier-rare { background: linear-gradient(135deg, #60a5fa, #8b5cf6); box-shadow: 0 5px 0 #5b21b6, 0 0 14px rgb(139 92 246 / 0.45); }
 .gacha .gacha-btn.tier-sr { background: linear-gradient(135deg, #fde047, #f59e0b 40%, #ec4899 75%, #8b5cf6); box-shadow: 0 5px 0 #92400e, 0 0 18px rgb(250 204 21 / 0.6); animation: free-glow 1.6s ease-in-out infinite; }
 .gacha .gacha-btn.tier-rare small, .gacha .gacha-btn.tier-sr small { font-size: 0.68rem; opacity: 0.95; }
+/* 単語ゲームの「🎲 今日のミニゲーム」（毎日かわる6つ） */
+.today-games-title { margin: 8px 0 4px; font-size: 0.95rem; font-weight: 900; white-space: nowrap; }
+.today-games-title small { margin-left: 6px; color: var(--muted); font-size: 0.72rem; font-weight: 700; }

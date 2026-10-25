@@ -187,7 +187,20 @@ const DIRECTIONS: { id: Direction; label: string; group: string }[] = [
   { id: 'twister', label: '👅 早口ことば', group: '聞く・話す' },
 ]
 // いつも見えるところに出す人気のミニゲーム（ほかは「ミニゲームをえらぶ」から）
-const POPULAR: Direction[] = ['mix', 'memory', 'mole', 'riddle', 'rival']
+// 今日のミニゲーム（オーナーの要望）：日がわりでランダムに5つ＋単語カードで6つ（同じ日は同じ）
+const DAILY_SKIP = ['placement', 'versus', 'through', 'speak', 'read', 'sounds']
+function todayGames(day: string): Direction[] {
+  const pool = DIRECTIONS.filter((d) => d.group !== '文法ドリル' && !DAILY_SKIP.includes(d.id)).map((d) => d.id)
+  let h = 7
+  for (const c of day) h = (h * 31 + c.charCodeAt(0)) >>> 0
+  const out: Direction[] = []
+  for (let i = 0; out.length < 5 && i < pool.length * 3; i++) {
+    h = (h * 1103515245 + 12345) >>> 0
+    const id = pool[h % pool.length]
+    if (!out.includes(id)) out.push(id)
+  }
+  return out
+}
 const GROUPS = ['4択', 'パズル・ゲーム', '聞く・話す', '書く・並べる'] // 文法ドリルは文法チャレンジのページにある
 const COLLAPSE_KEY = 'eitan:quiz-collapsed'
 function loadCollapsed(): string[] {
@@ -453,16 +466,18 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
         </button>
       )}
       {!menu && (
-        <div className="game-grid game-strip" aria-label="人気のミニゲーム">
+        <>
+        <p className="today-games-title">🎲 今日のミニゲーム<small>（毎日かわる）</small></p>
+        <div className="game-grid game-strip" aria-label="今日のミニゲーム">
           {onCards && <GameTile playKey="word:cards" icon="🃏" name="単語カード" onClick={onCards} />}
-          {POPULAR.map((id) => DIRECTIONS.find((d) => d.id === id))
+          {todayGames(dayKey()).map((id) => DIRECTIONS.find((d) => d.id === id))
             .filter((d): d is (typeof DIRECTIONS)[number] => !!d)
             .map((d) => (
               <GameTile
                 key={d.id}
                 playKey={`word:${d.id}`}
-                icon={d.label.split(' ')[0]}
-                name={d.label.split(' ').slice(1).join(' ')}
+                icon={d.label.includes(' ') ? d.label.split(' ')[0] : '📝'}
+                name={d.label.includes(' ') ? d.label.split(' ').slice(1).join(' ') : d.label}
                 on={direction === d.id}
                 onClick={() => {
                   setPlayed((p) => markPlayed(p, d.id))
@@ -472,6 +487,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
               />
             ))}
         </div>
+        </>
       )}
       {menu && (
         <div className="mode-menu" role="group" aria-label="ミニゲームの種類">
