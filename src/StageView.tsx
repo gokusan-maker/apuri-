@@ -3,7 +3,7 @@ import { BossTime } from './BossTimeView'
 import { useContext, useState, type ComponentProps, type CSSProperties } from 'react'
 import { medalFor } from './medal'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -19,6 +19,8 @@ import { Castle } from './CastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
 import { BossArea, type AreaSpecial } from './BossAreaView'
 import { BossWorld } from './BossWorldView'
+import { BossFloor } from './BossFloorView'
+import { BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, loadBcClears, saveBcClears, type BcFloor } from './bosscastle'
 import { CastleCollection } from './CastleCollectView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
@@ -105,6 +107,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
   const [group, setGroup] = useState(loadBossGroup) // ボスをレベルでしぼりこむ
   const [area, setArea] = useState<BossGroup | null>(null) // ボス部屋：まずレベルをえらぶページ、えらんだらそのエリアへ
+  const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[] }) | null>(null) // ボスの城の問題の階（1〜4階）
+  const [bcClears, setBcClears] = useState(loadBcClears)
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
@@ -526,6 +530,23 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   }
 
   const groupLabel = (id: BossGroup) => BOSS_GROUPS.find((g) => g.id === id)!.label.replace(/^\S+ /, '')
+  // ボスの城の問題の階
+  if (part === 'boss' && bcFloor)
+    return (
+      <BossFloor
+        key={bcFloor.id}
+        title={`🏰 ${BOSSES[bcFloor.level].name}の城　${bcFloor.floor + 1}階：${BC_KIND[bcFloor.floor]}`}
+        qs={bcFloor.qs}
+        onBack={() => setBcFloor(null)}
+        onDone={(score) => {
+          if (score >= BC_PASS && !bcClears.includes(bcFloor.id)) {
+            const next = [...bcClears, bcFloor.id]
+            setBcClears(next)
+            saveBcClears(next)
+          }
+        }}
+      />
+    )
   // ボス部屋のさいしょ：レベルをえらぶページ（地図）
   if (part === 'boss' && area === null)
     return (
@@ -598,12 +619,24 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               key={group}
               name={`${BOSS_GROUPS.find((g) => g.id === group)!.label.replace(/^\S+ /, '')}のボスの城`}
               theme="red"
-              goLabel="⚔ 戦う"
-              againLabel="👑 再戦"
-              floors={lvs.map((lv) => ({ id: lv, label: BOSSES[lv].name, sub: `${lv}${lv === goldenLevelOf(LEVELS, dayKey()) ? '・✨金色' : ''}`, fig: <BossFigure hit={false} look={BOSSES[lv]} />, cleared: !!boss[lv] }))}
+              floors={bossCastleFloors(lvs).map((f) => {
+                const isBoss = f.floor === BC_FLOORS - 1
+                const name = BOSSES[f.level].name
+                return {
+                  id: f.id,
+                  label: isBoss ? `👹 ${name}` : `${name}の手下　${BC_KIND[f.floor]}`,
+                  sub: isBoss ? `${f.level}のボス${f.level === goldenLevelOf(LEVELS, dayKey()) ? '・✨金色' : ''}` : `${BC_QS}問`,
+                  fig: isBoss ? <BossFigure hit={false} look={BOSSES[f.level]} /> : undefined,
+                  cleared: !!boss[f.level] || bcClears.includes(f.id),
+                }
+              })}
+              goLabel="⚔ のぼる"
+              againLabel="✅ もう一度"
               onOpen={(id) => {
-                setFighting(id as Level)
+                const f = bossCastleFloors(lvs).find((x) => x.id === id)!
                 window.scrollTo?.({ top: 0 })
+                if (f.floor === BC_FLOORS - 1) setFighting(f.level)
+                else setBcFloor({ ...f, qs: bossFloorQs(f.level, f.floor) })
               }}
             />
           )

@@ -1,6 +1,6 @@
 import { passageQs } from './readingboss'
 import { LONG_PASSAGES } from './longreading'
-import { fireEvent, render, screen, within } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
@@ -352,15 +352,35 @@ it('特別クエストでは攻略のむずかしい強いボス（HP360）と�
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '360')
 })
 
-it('ボス部屋は城：レベルの城をえらび、ボス1体が1階。倒したら次の階のボスへ', () => {
+it('ボス部屋の城：ボスごとに1〜4階は単語・文法・読解・ミックスの問題、5階でボスと戦う', async () => {
+  const { bossFloorQs } = await import('./bosscastle')
+  expect(bossFloorQs('中1', 0).every((q) => q.team === 'word')).toBe(true)
+  expect(bossFloorQs('中1', 1).every((q) => q.team === 'grammar')).toBe(true)
+  expect(bossFloorQs('中1', 2).every((q) => q.team === 'reading')).toBe(true)
+  expect(bossFloorQs('中1', 3)).toHaveLength(5)
   localStorage.clear()
-  render(<Stages part="boss" levels={['中1']} record={{}} boss={{ 中1: '2026-01-01' }} onClear={() => {}} />)
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   const castle = screen.getByRole('region', { name: '中学のボスの城' })
-  expect(within(castle).getByRole('button', { name: /^2階：/ }).textContent).toContain('戦う')
-  fireEvent.click(within(castle).getByRole('button', { name: /^2階：/ }))
-  expect(screen.getByText('← にげる')).toBeInTheDocument()
-  localStorage.clear()
+  fireEvent.click(within(castle).getByRole('button', { name: /^1階：.+の手下　単語/ }))
+  expect(screen.getByText(/1階：単語/)).toBeInTheDocument()
+  // 5問とも正解すると1階クリア
+  for (let n = 0; n < 5; n++) {
+    const correct = document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')
+    const q = screen.getByText(/1 \/ 5|2 \/ 5|3 \/ 5|4 \/ 5|5 \/ 5/)
+    expect(q).toBeInTheDocument()
+    // 正解の選択肢をさがす：まちがえたら correct の印がつくので、答えたあとに正解の数を数える
+    fireEvent.click(correct[0])
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByRole('status').textContent).toMatch(/\/5問/)
+  fireEvent.click(screen.getByText('城にもどる'))
+  expect(screen.getByRole('region', { name: '中学のボスの城' })).toBeInTheDocument()
+  // ボスをたおしたことがあれば、そのボスの1〜5階はクリアあつかい
+  cleanup()
+  render(<Stages part="boss" levels={['中1']} record={{}} boss={{ 中1: '2026-01-01' }} onClear={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
+  expect(within(screen.getByRole('region', { name: '中学のボスの城' })).getByRole('button', { name: /^6階：/ })).toBeInTheDocument()
 })
 
 it('ボス部屋：エリアの地図に今日の特別なボスが出現し、押すとそのボスと戦える', () => {

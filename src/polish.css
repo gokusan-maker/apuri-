@@ -3467,3 +3467,10 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .barea-adv .barea-hill.b2 { fill: rgb(17 24 39 / 0.95); }
 .barea-basic .barea-hill.b1 { fill: rgb(20 83 45 / 0.85); }
 .barea-basic .barea-hill.b2 { fill: rgb(5 46 22 / 0.95); }
+
+/* ボスの城の問題の階 */
+.bfloor-title { margin: 6px 0 2px; font-weight: 900; }
+.bfloor-count { margin: 0; color: var(--muted); font-size: 0.85rem; }
+.bfloor-q { margin: 12px 0; font-size: 1.15rem; font-weight: 800; line-height: 1.5; }
+.castle-floors li.now .castle-go { white-space: nowrap; }
+.castle-floors li.now .castle-arch + .castle-btn .castle-go { font-size: 0.95rem; padding: 8px 10px; }
