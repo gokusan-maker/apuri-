@@ -3370,3 +3370,23 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .floor-clear-confetti i:nth-child(4n) { background: #f59e0b; }
 @keyframes floor-pop { from { transform: scale(0.6); opacity: 0; } }
 @keyframes floor-fall { to { transform: translateY(120px) rotate(320deg); opacity: 0; } }
+
+/* ボス部屋のさいしょ：島の世界地図 */
+.bworld { margin: 0 0 12px; border-radius: 18px; overflow: hidden; border: 3px solid #a16207; box-shadow: 0 6px 0 #713f12, 0 10px 22px rgb(0 0 0 / 0.2); }
+.bworld-title { margin: 0; padding: 8px 12px; font-weight: 900; color: #fff7ed; background: linear-gradient(90deg, #92400e, #b45309); text-shadow: 0 1px 2px rgb(0 0 0 / 0.4); }
+.bworld-sea { position: relative; aspect-ratio: 1; background: radial-gradient(circle at 30% 20%, #7dd3fc, #0284c7 75%); }
+.bworld-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.bworld-island { fill: #fde68a; stroke: #fef3c7; stroke-width: 6; }
+.bworld-r { stroke: rgb(255 255 255 / 0.55); stroke-width: 1.5; stroke-dasharray: 4 4; }
+.bworld-r.jh { fill: #4ade80; }
+.bworld-r.hs { fill: #fbbf24; }
+.bworld-r.adv { fill: #e2e8f0; }
+.bworld-r.basic { fill: #f9a8d4; }
+.bworld-road { fill: none; stroke: #92400e; stroke-width: 3; stroke-dasharray: 3 6; stroke-linecap: round; opacity: 0.7; }
+.bworld-wave { fill: #e0f2fe; font-size: 16px; font-weight: 900; }
+.bworld-spot { position: absolute; transform: translate(-50%, -50%); width: 42%; display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px; border: none; background: none; cursor: pointer; font: inherit; color: #1c1917; }
+.bworld-mark { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 50%; font-size: 2rem; background: rgb(255 255 255 / 0.7); box-shadow: 0 4px 0 rgb(0 0 0 / 0.2); }
+.bworld-name { margin-top: 2px; padding: 2px 8px; border-radius: 10px; background: #fff; font-size: 0.86rem; box-shadow: 0 2px 0 rgb(0 0 0 / 0.2); white-space: nowrap; }
+.bworld-sub { margin-top: 1px; padding: 0 6px; border-radius: 6px; background: rgb(255 255 255 / 0.75); font-size: 0.66rem; font-weight: 700; }
+.bworld-spot.full .bworld-mark { background: #fde047; }
+.bworld-spot:active .bworld-mark { transform: scale(0.94); }

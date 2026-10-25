@@ -33,7 +33,7 @@ const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigat
 // 熟語のボスとボス部屋で戦う（一覧から）
 const toWordStages = () => {
   navTo('ボス部屋')
-  fireEvent.click(screen.getByRole('tab', { name: /^高校/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
   fireEvent.click(screen.getByRole('button', { name: /^熟語のボス「.+」に挑戦/ }))
 }
 

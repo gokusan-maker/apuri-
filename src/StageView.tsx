@@ -17,8 +17,8 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
-import { CastleMap } from './CastleMapView'
 import { BossArea, type AreaSpecial } from './BossAreaView'
+import { BossWorld } from './BossWorldView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
@@ -524,30 +524,24 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   }
 
   const groupLabel = (id: BossGroup) => BOSS_GROUPS.find((g) => g.id === id)!.label.replace(/^\S+ /, '')
-  const bossMap = (
-    <CastleMap
-      title="ボスの城の地図"
-      tabsLabel="ボスのレベル"
-      current={part === 'boss' && area === null ? '' : group}
-      spots={BOSS_GROUPS.map((g) => {
-        const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
-        return { id: g.id, name: groupLabel(g.id), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
-      })}
-      onPick={(id) => {
-        setGroup(id as BossGroup)
-        saveBossGroup(id as BossGroup)
-        setArea(id as BossGroup)
-        window.scrollTo?.({ top: 0 })
-      }}
-    />
-  )
   // ボス部屋のさいしょ：レベルをえらぶページ（地図）
   if (part === 'boss' && area === null)
     return (
       <section className="card stages">
         <h2>👹 ボス部屋</h2>
-        <p className="boss-pick-title">🎯 行きたいレベルの城をえらぼう</p>
-        {bossMap}
+        <p className="boss-pick-title">🎯 地図から行きたい地方をえらぼう</p>
+        <BossWorld
+          regions={BOSS_GROUPS.map((g) => {
+            const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
+            return { id: g.id, name: groupLabel(g.id), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
+          })}
+          onPick={(id) => {
+            setGroup(id)
+            saveBossGroup(id)
+            setArea(id)
+            window.scrollTo?.({ top: 0 })
+          }}
+        />
       </section>
     )
   // エリアに出現する特別なボス（今日のボス・とくべつイベント）

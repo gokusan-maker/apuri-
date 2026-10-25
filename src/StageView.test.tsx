@@ -301,23 +301,23 @@ it('ボス部屋では、レベル（中学・高校・きほん）でしぼり�
   const r = render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
   const tiles = () => [...screen.getByRole('group', { name: 'ボスをえらぶ' }).querySelectorAll('button.boss-pick-tile')].map((b) => b.getAttribute('aria-label')!.split('のボス')[0])
   expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull() // まずレベルをえらぶページ
-  fireEvent.click(screen.getByRole('tab', { name: /^高校/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
   expect(tiles()).toEqual(['高校基礎', '熟語', 'ビジネス'])
   const back = () => fireEvent.click(screen.getByText('← レベルをえらびなおす'))
   back()
-  fireEvent.click(screen.getByRole('tab', { name: /^上級/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^上級（/ }))
   expect(tiles()).toEqual(['英検2級', '英検準1級', '英検1級', 'ネイティブ'])
   back()
-  fireEvent.click(screen.getByRole('tab', { name: /^きほん/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^きほん（/ }))
   expect(tiles()).toEqual(['曜日・月', 'テーマ別', '数', '色・形', '会話'])
   back()
-  fireEvent.click(screen.getByRole('tab', { name: /^中学/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   expect(tiles()).toEqual(['中1', '中2', '中3'])
   expect(localStorage.getItem('eitan:boss-group')).toBe('jh')
   localStorage.removeItem('eitan:grade')
   r.unmount()
   render(<Stages part="boss" levels={['中3']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('tab', { name: /^中学/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   localStorage.removeItem('eitan:boss-group')
   fireEvent.click(screen.getByRole('button', { name: /中3のボス「コオリモチ」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
@@ -330,7 +330,7 @@ it('ボス部屋のタイルで、今日の金色のボスに「✨金色」の�
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   const g = goldenLevelOf(LEVELS, dayKey())!
   const { BOSS_GROUPS } = await import('./bossfilter')
-  fireEvent.click(screen.getByRole('tab', { name: new RegExp(`^${BOSS_GROUPS.find((x) => x.levels.includes(g))!.label.replace(/^\S+ /, '')}`) })) // 金色のボスのいるレベルへ
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${BOSS_GROUPS.find((x) => x.levels.includes(g))!.label.replace(/^\S+ /, '')}（`) })) // 金色のボスのいるレベルへ
   const tile = screen.getByRole('button', { name: new RegExp(`^${g}のボス`) })
   expect(tile.textContent).toContain('✨金色')
   expect(document.querySelectorAll('.boss-pick-gold')).toHaveLength(1)
@@ -340,7 +340,7 @@ it('ボス部屋のタイルで、今日の金色のボスに「✨金色」の�
 it('ボス部屋のタイルに、そのボスの最短タイムが小さく出る', () => {
   localStorage.setItem('eitan:boss-times', JSON.stringify({ ヤミモチ: 83 }))
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('tab', { name: /^中学/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
 })
 
@@ -355,7 +355,7 @@ it('特別クエストでは攻略のむずかしい強いボス（HP360）と�
 it('ボス部屋は城：レベルの城をえらび、ボス1体が1階。倒したら次の階のボスへ', () => {
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} boss={{ 中1: '2026-01-01' }} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('tab', { name: /^中学/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^中学（/ }))
   const castle = screen.getByRole('region', { name: '中学のボスの城' })
   expect(within(castle).getByRole('button', { name: /^2階：/ }).textContent).toContain('戦う')
   fireEvent.click(within(castle).getByRole('button', { name: /^2階：/ }))
@@ -367,7 +367,8 @@ it('ボス部屋：エリアの地図に今日の特別なボスが出現し、�
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
   expect(screen.queryByRole('region', { name: /のエリア$/ })).toBeNull()
-  fireEvent.click(screen.getByRole('tab', { name: /^高校/ }))
+  expect(screen.getByRole('region', { name: 'ボスの世界地図' }).textContent).toContain('上級の雪山') // レベルをえらぶページは島の地図
+  fireEvent.click(screen.getByRole('button', { name: /^高校（/ }))
   const area = screen.getByRole('region', { name: '高校のエリア' })
   expect(area.textContent).toContain('出現！')
   fireEvent.click(within(area).getByRole('button', { name: /特別クエスト：/ }))
