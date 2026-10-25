@@ -454,7 +454,7 @@ function App() {
       const n = (run.current.ok + run.current.ng * 3 + todayCount.count) * 7
       const c = encourage(monster.species, f.stage, ev, (n % 100) / 100)
       setPetCheer((p) => ({ cheer: c, key: (p?.key ?? 0) + 1 }))
-      if (settings.sound && settings.petVoice) speakPet(c.text, c.lang, f.stage >= 3 ? 1.2 : 1.6)
+      if (settings.sound && settings.petVoice && !playOn) speakPet(c.text, c.lang, f.stage >= 3 ? 1.2 : 1.6) // 問題の画面では声も出さない
     }
     count('answers')
     if (correct) count('correct')

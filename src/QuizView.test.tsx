@@ -453,3 +453,24 @@ it('文法ドリル（複数形・be動詞など）は単語ゲームのミニ�
   expect(menu.textContent).not.toContain('🟰 be動詞')
   expect(menu.textContent).toContain('⚠️ まちがえやすい単語')
 })
+
+it('えらぶ画面（App の中）では、リスニングの音声を勝手に流さない', async () => {
+  const { PlayContext } = await import('./playing')
+  const spoken: string[] = []
+  Object.assign(window, {
+    SpeechSynthesisUtterance: class {
+      text: string
+      constructor(t: string) {
+        this.text = t
+      }
+    },
+    speechSynthesis: { cancel() {}, speak: (u: { text: string }) => spoken.push(u.text), getVoices: () => [] },
+  })
+  render(
+    <PlayContext.Provider value={() => () => {}}>
+      <Quiz words={WORDS.slice(0, 8)} count={3} direction="listen" />
+    </PlayContext.Provider>,
+  )
+  expect(document.querySelector('.quiz-pick')).not.toBeNull()
+  expect(spoken).toEqual([])
+})

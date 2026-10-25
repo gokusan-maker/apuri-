@@ -329,10 +329,12 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
   })
 
   // リスニングは問題が変わるたびに自動で読み上げる
+  // えらぶ画面（picking）では鳴らさない（オーナーの要望：単語ページで勝手に音が出ないように）
   useEffect(() => {
+    if (picking) return
     if ((qd === 'listen' || qd === 'emoji-ear') && q) speak(q.word.en)
     if (qd === 'sentence' && q) speak(q.word.example)
-  }, [qd, q])
+  }, [qd, q, picking])
 
   // 制限時間モード：1秒ずつ減らし、0になったら時間切れ（まちがい扱い）
   const timing = direction === 'timed' && picked === null && !!q
