@@ -7,6 +7,7 @@ import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
 import { pityLeft } from './gacha'
 import type { GachaResult } from './GachaView'
+import { CORRECT_PER_COIN, loadCoinProgress } from './shop'
 import { splitSoft } from './softbreak'
 import { loadOutfits, saveOutfits, FREEZE_MAX, FREEZE_PRICE, priceWith, wearList, ROOMS, shopItems, SNACKS, type Wallet } from './shop'
 
@@ -82,7 +83,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       <h2>ショップ・着せ替え</h2>
       <p className="shop-coins">
         <span className="shop-coins-pill" aria-label={`いまのコイン ${wallet.coins}枚`}>🪙 {wallet.coins}</span>
-        <small>1問正解で🪙1</small>
+        <small>10問正解で🪙1（あと{CORRECT_PER_COIN - loadCoinProgress()}問）</small>
       </p>
       <div className={`shop-stage${shownRoom ? ` room-${shownRoom}` : ''}`}>
         <RoomScene room={shownRoom} align="xMaxYMax" />

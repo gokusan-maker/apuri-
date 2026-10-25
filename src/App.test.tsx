@@ -588,7 +588,8 @@ describe('App', () => {
 
   it('正解でコインがたまり、ショップで買って相棒に着せられる', () => {
     localStorage.setItem('eitan:monster', JSON.stringify({ xp: 100 }))
-    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 24, owned: [] })) // +1（正解）+5（ログインボーナス）で30
+    localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 24, owned: [] })) // +1（正解10回め）+5（ログインボーナス）で30
+    localStorage.setItem('eitan:coin-progress', '9') // あと1問で🪙1
     render(<App />)
     goCards() // 単語カードは単語ゲームの「単語カード」から
     fireEvent.click(screen.getByText('意味を見る'))
@@ -1697,7 +1698,7 @@ describe('App', () => {
     fireEvent.click(screen.getByText('覚えた'))
     backToPick() // お知らせは問題の画面をはなれてから出る
     expect(toast('📚 復習コンプリート！')).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(16)
+    expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBe(15) // 復習🪙10＋ログイン🪙5（正解のコインは10問で1まい）
     expect(localStorage.getItem('eitan:review-done')).toBe(dayKey())
   })
 

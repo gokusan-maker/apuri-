@@ -164,3 +164,10 @@ describe('部屋をかえたときの相棒のひとこと', () => {
     expect(roomLine(undefined).ja).toMatch(/もとの部屋/)
   })
 })
+
+it('コインは正解10回で🪙1（1ゲームで1まいくらい）', async () => {
+  const { coinStep, CORRECT_PER_COIN } = await import('./shop')
+  expect(CORRECT_PER_COIN).toBe(10)
+  expect(coinStep(0)).toEqual({ prog: 1, coins: 0 })
+  expect(coinStep(9)).toEqual({ prog: 0, coins: 1 })
+})

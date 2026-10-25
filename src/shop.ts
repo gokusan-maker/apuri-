@@ -28,6 +28,29 @@ export function shopItems(eventId: string | undefined, owned: string[]): Item[] 
 }
 
 export const COIN_PER_CORRECT = 1
+// コインは1ゲーム（10問）で🪙1くらい（オーナーの要望）。正解10回で🪙1
+export const CORRECT_PER_COIN = 10
+const COIN_PROG_KEY = 'eitan:coin-progress'
+export function loadCoinProgress(): number {
+  try {
+    const v = Number(localStorage.getItem(COIN_PROG_KEY) ?? '0')
+    return Number.isFinite(v) && v > 0 ? Math.min(Math.floor(v), CORRECT_PER_COIN - 1) : 0
+  } catch {
+    return 0
+  }
+}
+export function saveCoinProgress(n: number): void {
+  try {
+    localStorage.setItem(COIN_PROG_KEY, String(n))
+  } catch {
+    // 保存できなくても続ける
+  }
+}
+// 正解1回ぶん進める。CORRECT_PER_COIN 回ごとに🪙1
+export function coinStep(prog: number): { prog: number; coins: number } {
+  const n = prog + 1
+  return n >= CORRECT_PER_COIN ? { prog: 0, coins: COIN_PER_CORRECT } : { prog: n, coins: 0 }
+}
 export const LOGIN_COINS = 5 // その日はじめての学習
 export const EARLY_COINS = 3 // 朝5〜10時にその日はじめての学習（早起きボーナス）
 export const isEarly = (hour: number) => hour >= 5 && hour < 10

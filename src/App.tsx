@@ -150,7 +150,7 @@ import { loadBest } from './timeAttack'
 import { TimeAttack } from './TimeAttackView'
 import { loadStages, recordStars, saveStages } from './stages'
 import { Stages, STAR3_COINS } from './StageView'
-import { roomLine, buyAndMove, MOVE_LINE, favSnackOf, buyFreeze, couponsBetween, toggleWear, COIN_PER_CORRECT, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
+import { roomLine, buyAndMove, MOVE_LINE, favSnackOf, buyFreeze, couponsBetween, toggleWear, coinStep, loadCoinProgress, saveCoinProgress, EARLY_COINS, isEarlyNow, LOGIN_COINS, LOGIN_WEEK_COINS, eat, loadSnacks, loadWallet, saveSnacks, saveWallet, snacksLeft } from './shop'
 import type { GachaResult } from './GachaView'
 import { PartnerStatus } from './PartnerStatusView'
 import { Records } from './RecordsView'
@@ -458,7 +458,12 @@ function App() {
     }
     count('answers')
     if (correct) count('correct')
-    if (correct) setWallet((w) => ({ ...w, coins: w.coins + COIN_PER_CORRECT }))
+    if (correct) {
+      // 正解10回で🪙1（1ゲームで1まいくらい）
+      const c = coinStep(loadCoinProgress())
+      saveCoinProgress(c.prog)
+      if (c.coins > 0) setWallet((w) => ({ ...w, coins: w.coins + c.coins }))
+    }
     if (correct) cheerUp(1)
     const r = recordStudyWithFreeze(streak, today, wallet.freezes ?? 0)
     setStreak(r.streak)
