@@ -2070,3 +2070,4 @@
 - 2026-10-25: 国公立・旧帝大の単語を24語、京大・東大の単語を16語追加（archaic・copious・dispel・connoisseur・digress など）
 - 2026-10-25: 私学〜旧帝大の単語を40語追加（ingenious・hindsight・integral・fallacy・epitome・fraught など）
 - 2026-10-25: 国公立〜東大の単語を40語追加（heyday・immaculate・impetus・impromptu・harbinger・hubris など）
+- 2026-10-25: 私学〜東大の単語を40語追加（legacy・nostalgia・pivotal・predicament・judicious・veracity など）
