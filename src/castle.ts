@@ -72,3 +72,7 @@ export function saveWalk(name: string, i: number): void {
     /* 保存できなくても動く */
   }
 }
+
+// 階をクリアしたときの、なかまのひとこと（階ごとに順に変わる）
+export const FLOOR_CHEERS = ['やったね！ この調子で次の階へ！', 'すごい！ どんどん強くなってるよ！', 'ナイス！ 宝箱まであと少しかも？', 'さすが！ てっぺんが見えてきた！', 'よくがんばったね！ ひと休みしてもいいよ']
+export const floorCheer = (floor: number) => FLOOR_CHEERS[Math.abs(floor) % FLOOR_CHEERS.length]

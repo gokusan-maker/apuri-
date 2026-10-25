@@ -80,3 +80,9 @@ it('ステージの地図（海・森・山）：いまのステージと前後�
   expect(container.querySelector('.smap-walker.walking')).not.toBeNull() // ステージ2から4へ歩く
   expect(loadWalk('テストの海')).toBe(3)
 })
+it('階クリアのなかまのひとことは、階ごとに順に変わる', async () => {
+  const { floorCheer, FLOOR_CHEERS } = await import('./castle')
+  expect(floorCheer(0)).toBe(FLOOR_CHEERS[0])
+  expect(floorCheer(1)).not.toBe(floorCheer(0))
+  expect(floorCheer(FLOOR_CHEERS.length)).toBe(FLOOR_CHEERS[0])
+})
