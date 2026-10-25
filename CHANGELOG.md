@@ -2089,3 +2089,4 @@
 - 2026-10-25: 私学・私学難関の単語を40語追加（acquaintance・compassion・courtesy・compulsory・confidential・controversial など）
 - 2026-10-25: 京大・東大の単語を40語追加（grandiose・propitious・quixotic・unequivocal・vicissitude など）
 - 2026-10-25: TOEFL・IELTSの学術単語を54語追加（igneous・asteroid・chromosome・peninsula・stratosphere など）で300語に
+- 2026-10-25: 私学の単語を23語・私学難関の単語を25語追加（dignity・diagnosis・discrimination・initiative など）で両レベル300語に

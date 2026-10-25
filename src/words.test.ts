@@ -3,11 +3,11 @@ import { levelOf, LEVELS, WORDS, wordsOf } from './words'
 
 describe('WORDS', () => {
   it('中学2033語＋高校基礎680語＋熟語280＋曜日・月25＋テーマ別544＋数44＋色・形24＋会話190＋ビジネス71＋英検2級101＋英検準1級100＋英検1級100＋ネイティブ100あり、id が重複しない', () => {
-    expect(WORDS).toHaveLength(5643)
+    expect(WORDS).toHaveLength(5691)
     expect(WORDS.filter((w) => levelOf(w) === 'ネイティブ')).toHaveLength(215)
     expect(WORDS.filter((w) => levelOf(w) === '英検1級')).toHaveLength(457)
     expect(WORDS.filter((w) => levelOf(w) === '英検準1級')).toHaveLength(600)
-    expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(413)
+    expect(WORDS.filter((w) => levelOf(w) === '英検2級')).toHaveLength(461)
     expect(new Set(WORDS.map((w) => w.en.toLowerCase())).size).toBe(WORDS.length) // 同じ英単語を2回入れない
     expect(new Set(WORDS.map((w) => w.id)).size).toBe(WORDS.length)
     expect(WORDS.filter((w) => levelOf(w) === '高校基礎')).toHaveLength(803) // CEFR-J で見直して中学から103語移した
