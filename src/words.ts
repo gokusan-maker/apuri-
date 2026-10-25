@@ -1,6 +1,7 @@
 import { LEVEL_FIX } from './wordlevelfix'
 import { WORDS_EIKEN2 } from './wordseiken2'
 import { WORDS_EIKENP1 } from './wordseikenp1'
+import { WORDS_UPPER } from './wordsupper'
 import { WORDS_EIKEN1 } from './wordseiken1'
 import { WORDS_NATIVE } from './wordsnative'
 export type Level = '中1' | '中2' | '中3' | '高校基礎' | '熟語' | '曜日・月' | 'テーマ別' | '数' | '色・形' | '会話' | 'ビジネス' | '英検2級' | '英検準1級' | '英検1級' | 'ネイティブ'
@@ -3948,7 +3949,7 @@ const WORDS_5: Word[] = [
 ]
 
 // TypeScript が大きな配列リテラルの型を計算しきれないので、いくつかに分けてつなぐ
-export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_2B, ...WORDS_3, ...WORDS_3B, ...WORDS_4, ...WORDS_5, ...WORDS_EIKEN2, ...WORDS_EIKENP1, ...WORDS_EIKEN1, ...WORDS_NATIVE]
+export const WORDS: Word[] = [...WORDS_1, ...WORDS_2, ...WORDS_2B, ...WORDS_3, ...WORDS_3B, ...WORDS_4, ...WORDS_5, ...WORDS_EIKEN2, ...WORDS_EIKENP1, ...WORDS_EIKEN1, ...WORDS_NATIVE, ...WORDS_UPPER]
 
 // 中学の単語の学年（目安）。ここに無い中学の単語は中2として扱う。
 const LEVEL_OF: Record<string, Level> = Object.fromEntries([

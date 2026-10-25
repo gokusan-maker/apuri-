@@ -1,6 +1,7 @@
 // 単語コース（単語のレベル）：中1〜高3・大学入試（私学〜東大）・TOEIC・TOEFL/IELTS・ネイティブ。
 // えらんだレベルの単語だけで地図（ステージ）とミニゲームを出す。どの語がどのレベルかは wordband.ts（CEFR-J・使用頻度・学年で作成）
 import { BAND_IDS } from './wordband'
+import { WORDS_UPPER } from './wordsupper'
 import { loadGrade, type GradeId } from './usergrade'
 import { WORDS, type Level, type Word } from './words'
 
@@ -32,7 +33,9 @@ const cache = new Map<CourseId, Word[]>()
 export function courseWords(id: CourseId): Word[] {
   if (!cache.has(id)) {
     const ids = id === 'TOEIC' ? BAND_IDS.TOEIC_ALL : (BAND_IDS[id] ?? [])
-    cache.set(id, ids.map((x) => byId.get(x)).filter((w): w is Word => !!w))
+    // あとから増やした大学入試レベルの単語（wordsupper.ts）も、そのレベルに入れる
+    const extra = WORDS_UPPER.filter((w) => w.band === id).map((w) => w.id)
+    cache.set(id, [...ids, ...extra].map((x) => byId.get(x)).filter((w): w is Word => !!w))
   }
   return cache.get(id)!
 }

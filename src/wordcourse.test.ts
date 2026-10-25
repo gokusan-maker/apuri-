@@ -26,3 +26,9 @@ it('まえの単語コース（英検・3000語など）からも、新しいレ
   expect(loadCourse(['英検1級'])).toBe('東大')
   expect(loadCourse([])).toBe('中1')
 })
+
+it('大学入試レベルの単語を増やした分も、そのレベルに入る', () => {
+  expect(courseWords('東大').some((w) => w.en === 'albeit')).toBe(true)
+  expect(courseWords('私学').some((w) => w.en === 'convey')).toBe(true)
+  expect(courseWords('中3').some((w) => w.en === 'paradox')).toBe(false)
+})
