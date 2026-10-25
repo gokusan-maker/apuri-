@@ -4,7 +4,7 @@ import type { Word } from './words'
 import type { CourseId } from './wordcourse'
 
 type Up = Word & { band: CourseId }
-const lv = (band: CourseId) => (band === '私学' || band === '私学難関' ? '英検2級' : band === '国公立' || band === '旧帝大' ? '英検準1級' : '英検1級')
+const lv = (band: CourseId) => (band === 'TOEIC' ? 'ビジネス' : band === '私学' || band === '私学難関' ? '英検2級' : band === '国公立' || band === '旧帝大' || band === 'TOEFL・IELTS' ? '英検準1級' : '英検1級')
 const w = (band: CourseId, en: string, ja: string, example: string, exampleJa: string): Up => ({ id: `up-${en}`, en, ja, example, exampleJa, level: lv(band), band })
 
 export const WORDS_UPPER: Up[] = [
@@ -64,4 +64,56 @@ export const WORDS_UPPER: Up[] = [
   w('東大', 'nuance', '微妙な違い・ニュアンス', 'Translators must pay attention to every nuance.', '翻訳者はあらゆる微妙な違いに注意しなければならない。'),
   w('東大', 'entrench', '（考え・習慣を）定着させる', 'These habits become entrenched over many years.', 'こうした習慣は長い年月をかけて定着してしまう。'),
   w('東大', 'repercussion', '（よくない）影響・反響', 'The decision had serious repercussions for workers.', 'その決定は労働者に深刻な影響を及ぼした。'),
+  // TOEIC（ビジネス）②
+  w('TOEIC', 'quarterly', '四半期ごとの', 'The quarterly report will be ready next week.', '四半期ごとの報告書は来週できあがる。'),
+  w('TOEIC', 'merger', '（会社の）合併', 'The merger of the two banks was announced today.', '2つの銀行の合併が今日発表された。'),
+  w('TOEIC', 'acquisition', '買収・獲得', 'The company grew quickly through acquisitions.', 'その会社は買収によって急成長した。'),
+  w('TOEIC', 'minutes', '議事録', 'Ms. Kato will take the minutes at today\'s meeting.', '今日の会議ではカトウさんが議事録をとる。'),
+  w('TOEIC', 'courier', '宅配便業者・使い走り', 'The documents were sent by courier.', '書類は宅配便で送られた。'),
+  w('TOEIC', 'payroll', '給与支払い（名簿）', 'The payroll department pays salaries on the 25th.', '給与課は25日に給料を支払う。'),
+  w('TOEIC', 'subsidiary', '子会社', 'The firm opened a subsidiary in Singapore.', 'その会社はシンガポールに子会社を開いた。'),
+  w('TOEIC', 'revenue', '収益・歳入', 'Online sales now make up half of our revenue.', 'いまではネット販売が当社の収益の半分を占めている。'),
+  w('TOEIC', 'expenditure', '支出', 'We must reduce our expenditure on travel.', '出張の支出を減らさなければならない。'),
+  w('TOEIC', 'procurement', '調達・購買', 'All orders must go through the procurement team.', '注文はすべて購買チームを通さなければならない。'),
+  w('TOEIC', 'stakeholder', '利害関係者', 'The plan was explained to all stakeholders.', '計画はすべての利害関係者に説明された。'),
+  w('TOEIC', 'benchmark', '基準・指標', 'Last year\'s sales will serve as a benchmark.', '昨年の売上高が基準になる。'),
+  w('TOEIC', 'liability', '（法的な）責任・負債', 'The company accepted liability for the accident.', '会社はその事故の責任を認めた。'),
+  w('TOEIC', 'clearance', '在庫一掃・許可', 'The store is holding a clearance sale this weekend.', 'その店は今週末、在庫一掃セールを行う。'),
+  w('TOEIC', 'tenant', '（建物の）借り主・テナント', 'The new tenant will move in next month.', '新しい借り主は来月入居する。'),
+  w('TOEIC', 'voucher', '引換券・割引券', 'Customers will receive a voucher for a free drink.', 'お客さまには無料の飲み物の引換券がもらえる。'),
+  w('TOEIC', 'affiliate', '系列会社・提携する', 'Our affiliate in Osaka handles the shipping.', '大阪の系列会社が発送を担当している。'),
+  // TOEFL・IELTS（アカデミック）②
+  w('TOEFL・IELTS', 'photosynthesis', '光合成', 'Plants make food through photosynthesis.', '植物は光合成によって養分をつくる。'),
+  w('TOEFL・IELTS', 'erosion', '浸食', 'Trees help prevent soil erosion.', '木は土の浸食を防ぐのに役立つ。'),
+  w('TOEFL・IELTS', 'sediment', '堆積物', 'Layers of sediment built up at the bottom of the lake.', '湖の底に堆積物の層が積み重なった。'),
+  w('TOEFL・IELTS', 'mutation', '（遺伝子の）突然変異', 'A single mutation can change the color of a flower.', '1つの突然変異で花の色が変わることがある。'),
+  w('TOEFL・IELTS', 'ecosystem', '生態系', 'Wetlands support a rich ecosystem.', '湿地は豊かな生態系をささえている。'),
+  w('TOEFL・IELTS', 'predator', '捕食者', 'The rabbit froze when it saw a predator.', 'ウサギは捕食者を見ると動かなくなった。'),
+  w('TOEFL・IELTS', 'nutrient', '栄養素', 'Vegetables provide many important nutrients.', '野菜は多くの大切な栄養素をあたえてくれる。'),
+  w('TOEFL・IELTS', 'molecule', '分子', 'A water molecule contains two hydrogen atoms.', '水の分子には水素原子が2つふくまれている。'),
+  w('TOEFL・IELTS', 'particle', '粒子', 'Tiny particles of dust floated in the light.', '光の中を小さなほこりの粒子がただよっていた。'),
+  w('TOEFL・IELTS', 'velocity', '速度', 'The rocket reached a velocity of 11 kilometers per second.', 'ロケットは秒速11キロメートルの速度に達した。'),
+  w('TOEFL・IELTS', 'friction', '摩擦', 'Friction between the tires and the road slows the car.', 'タイヤと道路のあいだの摩擦が車をおそくする。'),
+  w('TOEFL・IELTS', 'precipitation', '降水（量）', 'Annual precipitation in the desert is very low.', '砂漠の年間降水量はとても少ない。'),
+  w('TOEFL・IELTS', 'migration', '（動物の）渡り・移動', 'The migration of birds begins in autumn.', '鳥の渡りは秋に始まる。'),
+  w('TOEFL・IELTS', 'extinction', '絶滅', 'Many frogs are in danger of extinction.', '多くのカエルが絶滅の危機にある。'),
+  w('TOEFL・IELTS', 'adaptation', '適応', 'Thick fur is an adaptation to cold weather.', '厚い毛は寒さへの適応である。'),
+  w('TOEFL・IELTS', 'symbiosis', '共生', 'The fish and the coral live in symbiosis.', 'その魚とサンゴは共生している。'),
+  w('TOEFL・IELTS', 'metabolism', '代謝', 'Exercise can speed up your metabolism.', '運動は代謝を速めることがある。'),
+  w('TOEFL・IELTS', 'hormone', 'ホルモン', 'This hormone controls how we sleep.', 'このホルモンは私たちの眠り方を調節している。'),
+  w('TOEFL・IELTS', 'neuron', '神経細胞・ニューロン', 'Neurons send signals throughout the body.', '神経細胞は体じゅうに信号を送る。'),
+  w('TOEFL・IELTS', 'cortex', '（脳の）皮質', 'The cortex plays a key role in thinking.', '皮質は思考で重要な役割を果たしている。'),
+  w('TOEFL・IELTS', 'genome', 'ゲノム（全遺伝情報）', 'Scientists have read the genome of the rice plant.', '科学者たちはイネのゲノムを読み取った。'),
+  w('TOEFL・IELTS', 'pollen', '花粉', 'Bees carry pollen from flower to flower.', 'ハチは花から花へと花粉を運ぶ。'),
+  w('TOEFL・IELTS', 'tectonic', '（地殻の）構造の・プレートの', 'Earthquakes are caused by tectonic movement.', '地震はプレートの動きによって起こる。'),
+  w('TOEFL・IELTS', 'volcanic', '火山の', 'The island is made of volcanic rock.', 'その島は火山の岩でできている。'),
+  w('TOEFL・IELTS', 'lava', '溶岩', 'Hot lava flowed down the side of the mountain.', '熱い溶岩が山の斜面を流れ下った。'),
+  w('TOEFL・IELTS', 'crust', '地殻・（パンの）皮', 'The Earth\'s crust is thinner under the oceans.', '地球の地殻は海の下のほうがうすい。'),
+  w('TOEFL・IELTS', 'mantle', '（地球の）マントル', 'The mantle lies between the crust and the core.', 'マントルは地殻と核のあいだにある。'),
+  w('TOEFL・IELTS', 'lunar', '月の', 'A lunar eclipse happens when the Earth blocks the sun\'s light.', '月食は、地球が太陽の光をさえぎるときに起こる。'),
+  w('TOEFL・IELTS', 'spectrum', '（光の）スペクトル・範囲', 'A rainbow shows the spectrum of visible light.', 'にじは目に見える光のスペクトルを示している。'),
+  w('TOEFL・IELTS', 'archaeology', '考古学', 'She studied archaeology at university.', '彼女は大学で考古学を学んだ。'),
+  w('TOEFL・IELTS', 'empire', '帝国', 'The empire once ruled much of the continent.', 'その帝国はかつて大陸の大部分を支配していた。'),
+  w('TOEFL・IELTS', 'colonial', '植民地の', 'The city still has many colonial buildings.', 'その都市にはいまも植民地時代の建物が多い。'),
+  w('TOEFL・IELTS', 'agrarian', '農業の・農地の', 'Most of the population lived in agrarian communities.', '人口の大部分は農業の地域社会で暮らしていた。'),
 ]

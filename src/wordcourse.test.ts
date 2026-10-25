@@ -17,7 +17,7 @@ it('レベルの単語は重ならず（TOEIC・TOEFL はほかと重なって�
   expect(courseWords('東大').filter((w) => levelOf(w) === '英検1級' || levelOf(w) === '英検準1級').length).toBeGreaterThan(courseWords('東大').length * 0.8)
   expect(courseWords('高3').some((w) => levelOf(w) === '中1')).toBe(false)
   expect(courseWords('中1').some((w) => w.en === 'have')).toBe(true)
-  expect(ids.length + courseWords('TOEIC').filter((w) => levelOf(w) === 'ビジネス').length).toBe(WORDS.length)
+  expect(ids.length + courseWords('TOEIC').filter((w) => levelOf(w) === 'ビジネス').length + courseWords('TOEFL・IELTS').filter((w) => w.id.startsWith('up-')).length).toBe(WORDS.length)
 })
 
 it('まえの単語コース（英検・3000語など）からも、新しいレベルにうつる', () => {
