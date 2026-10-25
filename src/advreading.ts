@@ -2328,6 +2328,34 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'How can a higher body temperature help fight an infection?', choices: ['It can slow the growth of some germs and speed up certain immune cells.', 'It kills every virus in the body at once.', 'It stops the brain from sending chemical signals.', 'It makes the body produce more medicine.'], answer: 0, why: '第2段落 slow the growth of some bacteria and viruses and to make certain immune cells work faster。' },
     ],
   },
+  {
+    id: 'adv-language-loss',
+    title: 'When a Language Falls Silent',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Of the roughly seven thousand languages spoken in the world today, linguists estimate that around half may no longer be spoken by the end of this century. A language rarely disappears in a single dramatic event. More often, parents ( A ) the language at home stop passing it on to their children, usually because another language seems to offer better jobs and a brighter future. Within a few generations, the only fluent speakers left are elderly.",
+      "Why should this loss matter to anyone who has never heard of these languages? One answer is that each language preserves a particular way of organizing experience. Some languages describe directions only in terms of north and south, never left and right; others have words for kinds of snow, plants, or family relations ( B ) no simple translation exists in English. When such a language disappears, knowledge built up over centuries, from medicine to local ecology, can vanish with it.",
+      "Yet it would be a mistake to treat endangered languages merely as museum pieces to be recorded before they die. Recordings and dictionaries are valuable, but a language lives only when people use it in daily life. Some communities have shown that decline can be reversed: in New Zealand, schools in which young children are taught entirely in Maori have helped revive a language that was once rarely heard. Such efforts suggest that the fate of a language depends less on its number of speakers than on ( C ) its speakers believe it has a future.",
+    ],
+    ja: [
+      '今日世界で話されているおよそ7000の言語のうち、今世紀の終わりまでに約半分が話されなくなるかもしれないと言語学者は見積もっている。言語がひとつの劇的な出来事で消えることはめったにない。多くの場合、家庭でその言語を話す親が、子どもにそれを受けつがなくなるのだ。たいていは、別の言語のほうがよい仕事や明るい未来をもたらしてくれそうに思えるからである。数世代のうちに、のこった流ちょうな話し手は高齢者だけになる。',
+      'こうした言語を聞いたこともない人にとって、なぜこの喪失が問題なのだろうか。1つの答えは、それぞれの言語が経験を整理する独自のしかたを保存しているということだ。方角を左右ではなく、北と南だけで表す言語もあれば、雪や植物、親族関係の種類を表す、英語にかんたんな訳語のないことばをもつ言語もある。そうした言語が消えるとき、薬から地域の生態系まで、何世紀にもわたって積み上げられた知識もいっしょに消えてしまうことがある。',
+      'しかし、消えそうな言語を、なくなる前に記録しておくべき博物館の展示品としてだけあつかうのはまちがいだろう。録音や辞書は貴重だが、言語は人々が日々の生活で使うときにだけ生きている。言語のおとろえは逆転できることを示した地域社会もある。ニュージーランドでは、幼い子どもがすべてマオリ語で教わる学校が、かつてはめったに聞かれなかった言語の復活を助けてきた。こうした取り組みは、言語の運命が話し手の数よりも、話し手たちがその言語に未来があると信じているかどうかにかかっていることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who speak', 'whom speak', 'which speaks', 'speaks'], answer: 0, why: '名詞 parents（人・複数）を説明する主格の関係代名詞 who ＋ speak。whom は主語になれず、which は人に使わない。' },
+      { id: 'B', choices: ['for which', 'which', 'what', 'in that'], answer: 0, why: 'no simple translation exists for the words の for が前に出た形。うしろは文として完全なので前置詞＋関係代名詞 for which。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'if or not'], answer: 0, why: '前置詞 on の目的語になり「～かどうか」を表すのは whether。前置詞のあとに that 節は置けず、what のうしろには欠けた部分が必要。' },
+    ],
+    tf: [
+      { statement: '言語は多くの場合、ひとつの劇的な出来事で突然消える。', answer: false, why: '第1段落 A language rarely disappears in a single dramatic event。' },
+      { statement: '筆者によれば、言語が消えると、何世紀もかけて積み上げた知識も失われることがある。', answer: true, why: '第2段落 knowledge built up over centuries … can vanish with it。' },
+      { statement: '筆者は、消えそうな言語は録音して保存すればそれで十分だと考えている。', answer: false, why: '第3段落 a language lives only when people use it in daily life。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what usually causes a language to decline?', choices: ['Parents stop passing it on because another language seems more useful.', 'A war destroys the people who speak it.', 'The government bans it in schools.', 'Linguists stop recording it.'], answer: 0, why: '第1段落 parents … stop passing it on to their children, usually because another language seems to offer better jobs。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
