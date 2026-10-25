@@ -2929,6 +2929,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-waiting',
+    title: 'The Pleasure of Waiting',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When I was a child, the week before a school trip always felt longer than the trip itself. I would lie awake at night imagining the bus, the mountains, and the food we would eat, and by the time the day finally came, I had already enjoyed it a dozen times in my head. Looking back, I am not sure the trip was ever quite as wonderful as the days I spent ( A ) for it.",
+      "This experience is far from unusual. Researchers who have asked people about their holidays report that the happiness people feel tends to rise in the weeks before they leave, and often fades soon after they return. It seems that much of the pleasure we take in good things lies not in having them but in looking forward to ( B ).",
+      "Modern life, however, is designed to remove waiting wherever possible. We can watch a film the moment it is released, order a book and receive it the next morning, and send a message that arrives in less than a second. These conveniences are real, and few of us would give them up. Yet by making everything available at once, we may be losing a quiet kind of happiness that only time can produce.",
+      "None of this means that we should make our lives harder on purpose. But it may be worth leaving a little space between wanting something and getting it, ( C ) our imagination has room to prepare the pleasure in advance.",
+    ],
+    ja: [
+      '子どものころ、遠足の前の1週間は、いつも遠足そのものよりも長く感じられた。夜はねむれずに横になって、バスや山や、食べるはずのごちそうを思いうかべ、ようやくその日が来たころには、頭の中ですでに何十回もそれを楽しんでいた。ふり返ってみると、遠足が、それを待ちながら過ごした日々ほどすばらしかったことがあったかどうか、自信がない。',
+      'このような経験は決してめずらしいものではない。人々に休暇についてたずねた研究者たちは、人が感じる幸福は出発前の数週間に高まる傾向があり、帰ってくるとすぐに薄れることが多いと報告している。私たちがよいものから得る喜びの多くは、それを手にすることではなく、それを楽しみに待つことにあるようだ。',
+      'しかし現代の生活は、できるかぎり待つことをなくすように作られている。私たちは映画を公開されたその瞬間に見ることができるし、本を注文して翌朝には受け取れるし、1秒もかからずに届くメッセージを送れる。こうした便利さは本物であり、それを手放す人はほとんどいないだろう。けれども、あらゆるものをすぐに手に入るようにすることで、私たちは時間だけが生み出せる、静かな種類の幸福を失いつつあるのかもしれない。',
+      'これは、わざと生活を不便にすべきだということではない。しかし、何かをほしいと思うことと、それを手に入れることのあいだに少しの余白を残しておくのは、価値があるかもしれない。そうすれば、私たちの想像力が前もって喜びを準備するゆとりができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['waiting', 'waited', 'to wait', 'wait'], answer: 0, why: 'spend ＋時間＋ -ing で「～して（時間を）過ごす」。the days I spent waiting for it で「それを待ちながら過ごした日々」。spend のあとに to 不定詞や原形・過去分詞は続かない。' },
+      { id: 'B', choices: ['them', 'have', 'it is', 'what'], answer: 0, why: 'look forward to の to は前置詞なので、うしろは名詞・代名詞か動名詞。good things を受ける代名詞 them。have（原形）や it is（文）は前置詞のあとに置けず、what のうしろには文が必要。' },
+      { id: 'C', choices: ['so that', 'in case of', 'because of', 'such'], answer: 0, why: 'うしろに文（our imagination has room …）が続き「～するように・そうすれば」と目的を表すのは so that。in case of・because of のうしろは名詞で、such だけでは文をつなげない。' },
+    ],
+    tf: [
+      { statement: '筆者は子どものころ、遠足の前の週のほうが遠足そのものより長く感じた。', answer: true, why: '第1段落 the week before a school trip always felt longer than the trip itself。' },
+      { statement: '研究によれば、休暇の幸福感は帰ってきたあとに最も高まる。', answer: false, why: '第2段落 happiness … tends to rise in the weeks before they leave, and often fades soon after they return。' },
+      { statement: '筆者は、わざと生活を不便にすべきだと主張している。', answer: false, why: '第4段落 None of this means that we should make our lives harder on purpose。' },
+    ],
+    qa: [
+      { q: 'What may we be losing by making everything available at once?', choices: ['A quiet kind of happiness that comes from waiting.', 'The ability to watch films and read books.', 'Our interest in school trips and holidays.', 'The speed of sending messages.'], answer: 0, why: '第3段落 we may be losing a quiet kind of happiness that only time can produce。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

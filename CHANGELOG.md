@@ -2004,3 +2004,4 @@
 - 2026-10-25: TOEICの単語17語（merger・revenue・invoice系の業務語）とTOEFL・IELTSの単語33語（photosynthesis・erosion・ecosystem など学術語）を自作の訳・例文で追加
 - 2026-10-25: 国公立〜東大の単語を13語追加（conspicuous・tacit・dichotomy など）
 - 2026-10-25: 東大レベルの専用長文「The Myth of the Original Genius」（模倣と独創性・267語）を追加
+- 2026-10-25: 京大レベルの専用長文「The Pleasure of Waiting」（待つ楽しみ・252語）を追加
