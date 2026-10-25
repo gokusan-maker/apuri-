@@ -33,7 +33,25 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
 export const tierOf = (p: LongPassage): Exclude<ExamTier, 'all'> => TIER_OF[p.id] ?? (p.level.startsWith('難関大（評論）') ? 'kokkoritsu' : 'kyotsu')
 
 export function passagesForTier(tier: ExamTier, list: LongPassage[] = ADV_PASSAGES.filter((p) => p.level.startsWith('難関大'))): LongPassage[] {
-  return tier === 'all' ? list : list.filter((p) => tierOf(p) === tier)
+  return (tier === 'all' ? list : list.filter((p) => tierOf(p) === tier)).map((p) => withTranslation(p, list))
+}
+
+// 国公立大・旧帝大・国立医学部（と私立医学部）は、段落の和訳をえらぶ難しい問題もつける
+export const HARD_TIERS: ExamTier[] = ['kokkoritsu', 'kyutei', 'kokuritsu-med', 'shiritsu-med']
+const seedOf = (s: string) => [...s].reduce((a, c) => (a * 31 + c.charCodeAt(0)) % 9973, 7)
+export function withTranslation(p: LongPassage, pool: LongPassage[] = ADV_PASSAGES): LongPassage {
+  if (!HARD_TIERS.includes(tierOf(p)) || p.gist || p.paragraphs.length < 2 || p.ja.length !== p.paragraphs.length) return p
+  const others = pool.filter((x) => x.id !== p.id && tierOf(x) === tierOf(p)).flatMap((x) => x.ja)
+  const paras = p.paragraphs.length >= 3 ? [1, p.paragraphs.length - 1] : [0, 1]
+  const gist = paras.map((para) => {
+    const right = p.ja[para]
+    const wrong = [...p.ja.filter((_, i) => i !== para), ...others].filter((t, i, a) => t !== right && a.indexOf(t) === i).slice(0, 3)
+    const choices = [right, ...wrong]
+    const k = (seedOf(p.id) + para) % choices.length
+    const order = [...choices.slice(k), ...choices.slice(0, k)]
+    return { para, choices: order, answer: order.indexOf(right), why: `第${para + 1}段落の英文を、文ごとに意味をたしかめよう。ほかの選択肢は別の段落・別の文章の和訳。` }
+  })
+  return { ...p, gist, gistKind: 'transl' }
 }
 
 const KEY = 'eitan:exam-tier'

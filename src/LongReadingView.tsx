@@ -497,11 +497,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               <button className="speak small long-speak" aria-label={`第${i + 1}段落を聞く`} onClick={() => speak(readable(t))}>
                 🔊
               </button>
-              <button className="speak small long-speak" aria-label={`第${i + 1}段落の和訳`} aria-pressed={jaParas.includes(i)} onClick={() => setJaParas(jaParas.includes(i) ? jaParas.filter((x) => x !== i) : [...jaParas, i])}>
+              {!(p.gistKind === 'transl' && !done) && <button className="speak small long-speak" aria-label={`第${i + 1}段落の和訳`} aria-pressed={jaParas.includes(i)} onClick={() => setJaParas(jaParas.includes(i) ? jaParas.filter((x) => x !== i) : [...jaParas, i])}>
                 訳
-              </button>
+              </button>}
             </div>
-            {(showJa || jaParas.includes(i)) && <p className="long-ja">{p.ja[i]}</p>}
+            {(showJa || jaParas.includes(i)) && !(p.gistKind === 'transl' && !done) && <p className="long-ja">{p.ja[i]}</p>}
             {p.insert && p.insert.after.includes(i) && <p className="long-insert-mark">［{MARKS[p.insert.after.indexOf(i)]}］</p>}
           </div>
         ))}
@@ -528,9 +528,11 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           </table>
         </div>
       )}
-      <button className="list-link pill-btn pill-purple" onClick={() => setShowJa(!showJa)}>
-        {showJa ? '和訳をかくす' : '和訳を見る'}
-      </button>
+      {!(p.gistKind === 'transl' && !done) && (
+        <button className="list-link pill-btn pill-purple" onClick={() => setShowJa(!showJa)}>
+          {showJa ? '和訳をかくす' : '和訳を見る'}
+        </button>
+      )}
       {keyWords(p).length > 0 && (
         <details className="long-vocab chip-fold cf-5">
           <summary>📒 重要語句（{keyWords(p).length}）</summary>
@@ -867,9 +869,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
 
       {p.gist && (
         <>
-          <h3 className="long-q">問　次の段落の内容に最も合う見出しを、それぞれ ア〜エ から選びなさい。</h3>
+          <h3 className="long-q">{p.gistKind === 'transl' ? '問　次の段落の和訳として最も適切なものを、それぞれ ア〜エ から選びなさい。' : '問　次の段落の内容に最も合う見出しを、それぞれ ア〜エ から選びなさい。'}</h3>
           {p.gist.map((x, n) => (
-            <div key={n} className="long-item">
+            <div key={n} className={`long-item${p.gistKind === 'transl' ? ' long-transl' : ''}`}>
               <span className="long-label">第{x.para + 1}段落</span>
               <div className="long-choices one">
                 {x.choices.map((c, i) => (

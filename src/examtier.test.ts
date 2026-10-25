@@ -14,3 +14,18 @@ it('難関大の長文はどれか1つのレベルに入り、どのレベルに
   for (const t of EXAM_TIERS) expect(passagesForTier(t.id).length, t.label).toBeGreaterThanOrEqual(2)
   expect(passagesForTier('kyotsu').every((p) => p.paragraphs.join(' ').split(/\s+/).length < 220)).toBe(true) // 共通テストは長すぎない
 })
+
+it('国公立大より上のレベルは「段落の和訳をえらぶ」難しい問題がつく（正解は本文の和訳、選択肢は4つでかぶらない）', async () => {
+  const { tierOf } = await import('./examtier')
+  for (const tier of ['kokkoritsu', 'kyutei', 'kokuritsu-med'] as const) {
+    for (const p of passagesForTier(tier)) {
+      expect(p.gistKind, p.id).toBe('transl')
+      for (const g of p.gist!) {
+        expect(g.choices[g.answer]).toBe(p.ja[g.para])
+        expect(new Set(g.choices).size).toBe(4)
+      }
+    }
+  }
+  expect(passagesForTier('kyotsu').every((p) => p.gistKind === undefined)).toBe(true)
+  expect(tierOf(passagesForTier('kyutei')[0])).toBe('kyutei')
+})

@@ -20,7 +20,7 @@ export type VocabQ = { word: string; choices: string[]; answer: number; why: str
 export type SummaryQ = { text: string; blanks: { choices: string[]; answer: number; why: string }[] }
 export type InsertQ = { sentence: string; after: number[]; answer: number; why: string }
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答（complete では q が文の前半）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[]; seq?: SeqQ; paraSeq?: ParaSeq }
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[]; seq?: SeqQ; paraSeq?: ParaSeq; gistKind?: 'transl' } // gistKind：gist を「段落の和訳をえらぶ」問題として出す（国立レベル以上）
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
