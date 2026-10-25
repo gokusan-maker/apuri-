@@ -2019,3 +2019,4 @@
 - 2026-10-25: 国公立・旧帝大の単語を20語追加（barren・nourish・bewilder・yearn など）
 - 2026-10-25: 京大・東大の単語を12語追加（quintessential・vicarious・cogent・sanguine など）
 - 2026-10-25: TOEFL・IELTSの学術単語を22語追加（nocturnal・irrigation・dynasty・pollinate など）
+- 2026-10-25: 京大・東大の文法を10問ずつ追加（倒置・仮定法・関係詞・時制など。城が3階→5階に）
