@@ -2818,12 +2818,12 @@ export const ADV_PASSAGES: LongPassage[] = [
     level: '難関大（評論）',
     paragraphs: [
       "There is something strange about the way people travel long distances to look at ruins. A broken wall or a temple without a roof is, in practical terms, less useful than the building it once was. Yet visitors often find such places more moving than buildings that are complete and still in use, as if ( A ) is missing spoke more powerfully than what remains.",
-      "One explanation is that a ruin invites the imagination to work. A finished building tells us exactly how it looks; a ruin asks us to picture the rooms, the voices, and the daily routines that once filled it. In this sense the visitor becomes a partner in completing the scene, ( B ) the pleasure is partly a pleasure in one's own creativity.",
+      "One explanation is that a ruin invites the imagination to work. A finished building tells us exactly how it looks; a ruin asks us to picture the rooms, the voices, and the daily routines that once filled it. Many travelers say that the silence of an empty courtyard tells them more about the past than a crowded museum ever could. In this sense the visitor becomes a partner in completing the scene, ( B ) the pleasure is partly a pleasure in one's own creativity.",
       "Ruins also remind us of time in a way that is both sad and comforting. They show that even the strongest works of human hands will eventually give way to wind and rain. At the same time, they suggest that something of human effort can outlast the people who made it. Standing among old stones, we are reminded that our own lives are short, ( C ) not without meaning.",
     ],
     ja: [
       '人々が遠くまで旅をして廃墟を見に行くことには、どこか奇妙なところがある。こわれた壁や屋根のない寺は、実用的に言えば、かつてそうであった建物よりも役に立たない。それなのに訪れる人は、こうした場所を、完成していていまも使われている建物よりも心を動かされるものと感じることが多い。まるで、なくなっているもののほうが、残っているものよりも力強く語りかけてくるかのように。',
-      '1つの説明は、廃墟が想像力をはたらかせるよう誘うということだ。完成した建物は、それがどう見えるかを正確に教えてくれる。一方、廃墟は、かつてそこを満たしていた部屋や声や日々の営みを思いえがくよう私たちに求める。この意味で、訪れる人はその情景を完成させる協力者となり、その喜びは、一部には自分自身の創造力による喜びなのである。',
+      '1つの説明は、廃墟が想像力をはたらかせるよう誘うということだ。完成した建物は、それがどう見えるかを正確に教えてくれる。一方、廃墟は、かつてそこを満たしていた部屋や声や日々の営みを思いえがくよう私たちに求める。多くの旅行者は、人のいない中庭の静けさのほうが、混みあった博物館よりもずっと多くのことを過去について語ってくれると言う。この意味で、訪れる人はその情景を完成させる協力者となり、その喜びは、一部には自分自身の創造力による喜びなのである。',
       '廃墟はまた、悲しくもあり、なぐさめにもなるしかたで、時間を思い出させる。人の手によるもっとも頑丈な作品でさえ、いつかは風雨に屈することを示すのだ。同時に廃墟は、人の努力の何かが、それを作った人々よりも長く残りうることを示している。古い石のあいだに立つと、私たちは自分の人生が短いこと、しかし意味がないわけではないことを思い出すのである。',
     ],
     blanks: [
