@@ -3991,6 +3991,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-citizen-science',
+    title: 'Science by Everyone',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of history, scientific research was carried out by a small number of trained experts. Today, however, millions of ordinary people around the world are taking part in what is known as citizen science. They count birds in their gardens, photograph insects with their smartphones, and even help classify images of distant galaxies from their living rooms.",
+      "The benefits for science are clear. Many research projects require far more data than professional scientists could ever collect ( A ) their own. A single team cannot watch every river or forest, but thousands of volunteers spread across a country can. In several cases, amateurs have even made important discoveries, such as new species or unusual objects in space.",
+      "Citizen science also benefits the volunteers themselves. Participants often report that they pay more attention to the natural world around them and understand better how scientists work. In this way, the projects help close the gap between researchers and the public, a gap ( B ) has sometimes led to distrust of science.",
+      "Of course, data collected by non-experts can contain mistakes. To deal with this problem, many projects ask several volunteers to check the same observation, or use computer programs to identify results that look unusual. With such safeguards, researchers have found that the data are often surprisingly reliable.",
+      "Citizen science suggests that curiosity, not a degree, is the most basic requirement for ( C ) part in the search for knowledge.",
+    ],
+    ja: [
+      '歴史の大部分において、科学研究は少数の訓練を受けた専門家によって行われてきた。しかし今日では、世界中の何百万もの一般の人々が、市民科学として知られるものに参加している。彼らは庭で鳥を数え、スマホで昆虫の写真をとり、さらには居間から遠くの銀河の画像の分類を手伝ったりもしている。',
+      '科学にとっての利点は明らかだ。多くの研究計画には、専門の科学者が自分たちだけでとうてい集めきれないほど多くのデータが必要である。1つのチームですべての川や森を見守ることはできないが、国じゅうに散らばった何千人ものボランティアならそれができる。アマチュアが新種や宇宙の変わった天体のような重要な発見をしたことさえ、いくつかある。',
+      '市民科学はボランティア自身にも利益をもたらす。参加者は、身のまわりの自然により注意を向けるようになり、科学者がどのように研究するかをよりよく理解するようになったとよく報告している。このようにして、こうした計画は研究者と一般の人々とのへだたりをうめる助けになる。そのへだたりは、ときに科学への不信をまねいてきたのである。',
+      'もちろん、専門家でない人が集めたデータには誤りがふくまれることがある。この問題に対処するため、多くの計画は複数のボランティアに同じ観察を確認してもらったり、コンピューターのプログラムで変わった結果を見つけたりしている。そうした安全策があれば、データはおどろくほど信頼できることが多いと研究者たちは気づいている。',
+      '市民科学は、知識の探求に参加するためのもっとも基本的な条件は、学位ではなく好奇心であることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on', 'in', 'at', 'with'], answer: 0, why: 'on one\'s own で「自分（たち）だけで」。in・at・with ではこの意味にならない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a gap を説明し、has led の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは主語のそろった文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['taking', 'take', 'took', 'taken'], answer: 0, why: '前置詞 for のあとは動名詞。take part in ～ で「～に参加する」。' },
+    ],
+    tf: [
+      { statement: '市民科学では、一般の人が鳥を数えたり昆虫の写真をとったりする。', answer: true, why: '第1段落 They count birds in their gardens, photograph insects。' },
+      { statement: 'アマチュアが重要な発見をしたことは一度もない。', answer: false, why: '第2段落 amateurs have even made important discoveries。' },
+      { statement: '研究者によれば、安全策があればボランティアのデータは信頼できることが多い。', answer: true, why: '第4段落 the data are often surprisingly reliable。' },
+    ],
+    qa: [
+      { q: 'How do many projects deal with mistakes in data collected by volunteers?', choices: ['They ask several volunteers to check the same observation.', 'They only accept data from professional scientists.', 'They stop collecting data from the public.', 'They pay volunteers to work more slowly.'], answer: 0, why: '第4段落 many projects ask several volunteers to check the same observation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
