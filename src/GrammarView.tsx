@@ -16,8 +16,7 @@ import { EXAM_GRAMMAR } from './examgrammar'
 import { Castle } from './CastleView'
 import { GrammarFigure } from './GrammarFigView'
 import { figOf } from './grammarfig'
-import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears, saveGcLevel } from './grammarcastle'
-import { CastleMap } from './CastleMapView'
+import { GC_LEVELS, GC_PASS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -40,6 +39,7 @@ import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = {
+  castleLevel?: string // 文法の城のレベル（App のキャラの下でえらぶ。省略時は学年から）
   onChest?: (coins: number) => void // 城の宝箱のコイン
   onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
   units?: GrammarUnit[] // 省略時は文法の単元
@@ -117,7 +117,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
+export function Grammar({ castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -149,7 +149,7 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
   const [wrongDays, setWrongDays] = useState(loadWrongDays)
   const [clears, setClears] = useState(loadClears)
   const [gcClears, setGcClears] = useState(loadGcClears) // 文法の城のクリアした階
-  const [gcLevel, setGcLevel] = useState(() => loadGcLevel(loadGrade())) // 地図でえらんだ文法の城
+  const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
   const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
   const openFloor = (id: string) => {
@@ -286,20 +286,6 @@ export function Grammar({ onDrill, quickStart = false, units = GRAMMAR, title = 
         <h2>{stampMode ? '📐 文法チャレンジ' : title}</h2>
         {stampMode ? (
           <>
-            <CastleMap
-              title="文法の城の地図"
-              tabsLabel="文法の城"
-              fold
-              current={gcLevel}
-              spots={GC_LEVELS.map((l) => {
-                const fl = gcFloorsFor(l.id)
-                return { id: l.id, name: l.label, sub: l.sub, done: fl.filter((f) => gcClears.includes(f.id)).length, total: fl.length }
-              })}
-              onPick={(id) => {
-                setGcLevel(id)
-                saveGcLevel(id)
-              }}
-            />
             <Castle
               key={gcLevel}
               name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の城`}

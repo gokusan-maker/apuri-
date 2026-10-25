@@ -3300,3 +3300,17 @@ details.cmap[open] .cmap-change { visibility: hidden; }
 details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .cmap-now { padding: 1px 6px; border-radius: 6px; background: #dc2626; font-size: 0.66rem; }
 .cmap-change { white-space: nowrap; }
+
+/* キャラの下の小さなレベルえらび */
+.lvpick { position: relative; margin: 0 0 10px; }
+.lvpick-btn { width: 100%; display: flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 14px; border: 2px solid #a16207; background: linear-gradient(90deg, #92400e, #b45309); color: #fff7ed; font: inherit; cursor: pointer; box-shadow: 0 3px 0 #713f12; }
+.lvpick-cap { font-size: 0.8rem; opacity: 0.9; white-space: nowrap; }
+.lvpick-now { font-size: 1rem; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.35); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.lvpick-change { margin-left: auto; padding: 2px 8px; border-radius: 999px; background: rgb(255 255 255 / 0.22); font-size: 0.72rem; white-space: nowrap; }
+.lvpick-list { list-style: none; margin: 6px 0 0; padding: 6px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px; border-radius: 14px; background: var(--card); border: 2px solid #a16207; box-shadow: 0 8px 20px rgb(0 0 0 / 0.18); }
+.lvpick-opt { width: 100%; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; padding: 6px 8px; border-radius: 10px; border: 2px solid transparent; background: var(--surface-2); color: var(--fg); font: inherit; text-align: left; cursor: pointer; }
+.lvpick-opt b { font-size: 0.88rem; }
+.lvpick-opt small { font-size: 0.68rem; color: var(--muted); }
+.lvpick-opt.on { border-color: #f59e0b; background: color-mix(in srgb, #f59e0b 18%, var(--surface-2)); }
+.lvpick-badge { color: #b45309 !important; font-weight: 800; }
+.lvpick-prog { font-weight: 700; }

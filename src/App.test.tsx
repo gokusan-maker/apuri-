@@ -16,7 +16,6 @@ const DEFAULT_N = wordsOf(LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l))).leng
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
   navTo('単語ゲーム')
-  fireEvent.click(screen.getByRole('tab', { name: '🎮 ミニゲーム' }))
 }
 // ミニゲームはえらぶ画面が先。「▶ 〇〇 をはじめる」で問題だけの画面へ
 const playMini = () => {
@@ -84,7 +83,7 @@ describe('App', () => {
     navTo('読解ステージ')
     const p = dailyShort(dayKey())
     const btn = screen.getByRole('button', { name: `今日の読解：${p.title}` })
-    expect(btn.compareDocumentPosition(document.querySelector('.cmap')!) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy()
+    expect(btn.compareDocumentPosition(document.querySelector('.lvpick')!) & Node.DOCUMENT_POSITION_PRECEDING).toBeTruthy() // レベルえらびはキャラのすぐ下
     fireEvent.click(btn)
     expect(screen.getAllByText(p.title).length).toBeGreaterThan(0)
     expect(screen.queryByRole('button', { name: `今日の読解：${p.title}` })).toBeNull()
@@ -180,7 +179,7 @@ describe('App', () => {
     // 読解：上のバーのボタンから、今日の英文がすぐ開く
     fireEvent.click(within(bar()).getByRole('button', { name: /今日の課題（読解）へ/ }))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
-    expect(screen.queryByRole('tablist', { name: '読解のむずかしさ' })).not.toBeInTheDocument()
+    expect(screen.queryByRole('button', { name: /^読解のレベル：/ })).not.toBeInTheDocument()
     expect(screen.queryByText('← 一覧')).not.toBeInTheDocument()
     for (const q of p.questions.slice(0, 2)) { // 今日の課題は2問まで
       fireEvent.click(screen.getAllByRole('button', { name: q.choices[q.answer] }).find((b) => !b.closest('.today-grammar'))!) // 上の今日の文法のボタンではなく、練習の問題のボタン
@@ -190,7 +189,7 @@ describe('App', () => {
     // もどると、いつもの読解ページにもどる
     fireEvent.click(within(bar()).getByRole('button', { name: '← もどる' }))
     expect(screen.queryByRole('navigation', { name: '今日の課題の切りかえ' })).not.toBeInTheDocument()
-    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^読解のレベル：/ })).toBeInTheDocument()
     // 今日の課題クリアのごほうび（+10XP）が読解のなかまに入る：問題の正解ぶんより10多い
     const before = JSON.parse(localStorage.getItem('eitan:buddy-today')!).reading
     expect(before).toBeGreaterThanOrEqual(10 + Math.min(2, p.questions.length))
@@ -260,7 +259,7 @@ describe('App', () => {
     render(<App />)
     fireEvent.click(within(screen.getByLabelText('育てているなかま')).getByLabelText(/読解のなかま/))
     expect(screen.getByText(/Let's read a story together\./)).toBeInTheDocument()
-    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^読解のレベル：/ })).toBeInTheDocument()
   })
 
   it('トリオボーナスを受け取ると、ホームの3体がおどる', async () => {
@@ -339,8 +338,7 @@ describe('App', () => {
     expect(screen.getByText('意味を見る')).toBeInTheDocument()
     backToPick() // カードも問題だけの画面。上の「← ほかの問題をえらぶ」でえらぶ画面へ
     expect(document.querySelector('.quiz-pick')).not.toBeNull()
-    fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
-    expect(screen.getByText('スタート')).toBeInTheDocument()
+    expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull() // 上の切りかえ（ミニゲーム・タイムアタック・ステージ）はない
     fireEvent.click(tab('文法'))
     expect(document.querySelector('.grammar')).not.toBeNull()
     // 文法チャレンジは、まずゲームの種類をえらぶ画面（いきなり問題は出ない）
@@ -349,7 +347,7 @@ describe('App', () => {
     expect(screen.queryByText(/\/ 5 問目/)).toBeNull()
     expect(screen.queryByText(/ミニゲームをえらぶ/)).toBeNull()
     fireEvent.click(tab('読解'))
-    expect(screen.getByRole('tablist', { name: '読解のむずかしさ' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /^読解のレベル：/ })).toBeInTheDocument()
     expect(screen.queryByRole('tab', { name: '👹 ボス' })).toBeNull()
     fireEvent.click(tab('ボス部屋'))
     expect(document.querySelector('section.stages')).not.toBeNull()
@@ -1039,19 +1037,6 @@ describe('App', () => {
     }
   })
 
-  it('単語のステージ（中1〜会話）は単語ゲームの「🗺 ステージ」にあり、ボス部屋にはボスだけが出る', () => {
-    render(<App />)
-    navTo('ボス部屋')
-    expect(screen.getByRole('heading', { name: '👹 ボスに挑戦' })).toBeInTheDocument()
-    expect(document.querySelector('.stage-levels')).toBeNull()
-    expect(screen.queryByText(/つづきから（/)).toBeNull()
-    navTo('単語ゲーム')
-    fireEvent.click(screen.getByRole('tab', { name: '🗺 ステージ' }))
-    expect(screen.getByRole('heading', { name: '🗺 単語ステージ' })).toBeInTheDocument()
-    expect(document.querySelector('.stage-levels')).not.toBeNull()
-    expect(screen.queryByRole('button', { name: /エンドレスの塔/ })).toBeNull()
-  })
-
   it('文法ドリル（複数形など）は文法チャレンジから開けて、← 文法チャレンジで戻れる', () => {
     render(<App />)
     navTo('文法チャレンジ')
@@ -1174,14 +1159,16 @@ describe('App', () => {
     render(<App />)
     navTo('読解ステージ')
     expect(screen.getByRole('heading', { name: /^読解ミニ/ })).toBeInTheDocument() // はじめは かんたん
-    fireEvent.click(screen.getByRole('tab', { name: /^難関大/ }))
+    fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
+    fireEvent.click(screen.getByRole('option', { name: /^難関大/ }))
     expect(screen.getAllByText(/The Value of Boredom/).length).toBeGreaterThan(0)
     expect(screen.getByRole('heading', { name: /難関大の読解/ })).toBeInTheDocument()
-    expect(screen.getByRole('tab', { name: /^難関大/ }).textContent).toMatch(/0\/71本/)
+    fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
+    expect(screen.getByRole('option', { name: /^難関大/ }).textContent).toMatch(/0\/71本/)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
     expect(within(screen.getByLabelText('読解ゲーム')).getByRole('button', { name: /おすすめ/ })).toBeInTheDocument() // そのレベルの中から日がわり（読解ゲームのタイル）
-    fireEvent.click(screen.getByRole('tab', { name: /^TOEFL・IELTS/ }))
+    fireEvent.click(screen.getByRole('option', { name: /^TOEFL・IELTS/ }))
     expect(screen.getAllByText(/Partners on the Reef/).length).toBeGreaterThan(0)
     expect(screen.queryByText(/The Value of Boredom/)).toBeNull()
     expect(localStorage.getItem('eitan:read-level')).toBe('toefl')
@@ -1863,18 +1850,6 @@ it('今日の課題が3つともクリアなら、課題の画面に「🎉 ぜ�
   fireEvent.click(within(screen.getByLabelText('今日の課題')).getByRole('button', { name: /^文法/ }))
   fireEvent.click(screen.getByRole('button', { name: '🎉 ぜんぶクリア！ ホームへ ▶' }))
   expect(screen.getByText('📊 記録')).toBeInTheDocument()
-})
-
-it('単語のタイムアタックも、スタートしたら問題だけの画面になり、上のバーで最初の画面にもどる', () => {
-  localStorage.clear()
-  localStorage.setItem('eitan:onboarded', '1')
-  render(<App />)
-  navTo('単語ゲーム')
-  fireEvent.click(screen.getByRole('tab', { name: '⏱ タイムアタック' }))
-  fireEvent.click(screen.getByText('スタート'))
-  expect(screen.queryByRole('tablist', { name: '単語の種類' })).toBeNull()
-  fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
-  expect(screen.getByText('スタート')).toBeInTheDocument()
 })
 
 describe('ガチャは1日1回無料', () => {

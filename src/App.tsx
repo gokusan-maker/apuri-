@@ -6,10 +6,11 @@ import { PlayContext, type PlayRegister } from './playing'
 import { todayReading, todayReadingTitle, trimForToday, TODAY_READING_QS } from './todayread'
 import { BossSupportContext, BossTeamContext, type BossTeam } from './bossteam'
 import type { LongPassage } from './longreading'
-import { READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
+import { loadGrade, READ_LEVEL_FOR, saveGrade, type GradeId } from './usergrade'
 import { loadPlayOpen, savePlayOpen } from './homeplay'
 import { LongReading } from './LongReadingView'
-import { CastleMap } from './CastleMapView'
+import { LevelPick } from './LevelPickView'
+import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloors } from './wordcastle'
 import { Reading } from './ReadingView'
 import { recordEvo, addBuddyToday, loadBuddyToday, ATTR_EGG_PRICE, ATTR_LABEL, claimTeamTitle, GO_LINES, loadEggPieces, PIECES_FOR_EGG, PIECES_FULL_COINS, saveEggPieces, EVO_COINS, teamIndex, teamOf, TEAM_TITLES, hatchAttrEgg, lockedSpecies, buddyForm, buddyLevel, buddyName, feedBuddy, loadBuddyBox, saveBuddyBox, switchBuddy, loadBuddies, renameBuddy, saveBuddies, type Buddy, type BuddyForm, type Buddies, type Track } from './buddies'
@@ -181,12 +182,6 @@ const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'reading', icon: '📖', label: '読解ステージ' },
   { id: 'boss', icon: '👹', label: 'ボス部屋' },
   { id: 'settings', icon: '⚙️', label: '設定' },
-]
-// 単語ゲームはミニゲームが先。カードはミニゲームのタイル「🃏 単語カード」から
-const WORD_TABS: { id: WordTab; label: string }[] = [
-  { id: 'mini', label: '🎮 ミニゲーム' },
-  { id: 'time', label: '⏱ タイムアタック' },
-  { id: 'stage', label: '🗺 ステージ' },
 ]
 
 
@@ -687,7 +682,7 @@ function App() {
 
 
   const [stages, setStages] = usePersistent(loadStages, saveStages)
-  const [stageGo, setStageGo] = useState<string | null>(null) // 単語ゲームの城からえらんだステージ
+  const [gcLevel, setGcLevel] = useState(() => loadGcLevel(loadGrade())) // 文法の城のレベル（キャラの下でえらぶ）
   const [castleOn, setCastleOn] = useState(false) // 単語の城の階を遊んでいる（下のミニゲームはかくす）
   const [boss, setBoss] = usePersistent(loadBoss, saveBoss)
 
@@ -1288,8 +1283,7 @@ function App() {
   // ステージ（ボス部屋ではボスだけ、単語ゲームでは単語ステージだけ）
   const stagesView = (part: 'boss' | 'stages') => (
     <Stages
-      key={part === 'stages' ? `stages-${stageGo ?? ''}` : 'boss'}
-      startStage={part === 'stages' ? (stageGo ?? undefined) : undefined}
+      key={part === 'stages' ? 'stages' : 'boss'}
       onMarkWeak={markWeak}
       part={part}
       startDaily={dailyGo}
@@ -1626,6 +1620,18 @@ function App() {
           </div>
         </div>
       )}
+      {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
+        <LevelPick
+                label="単語のレベル"
+                current={courseOf(levels)?.id ?? ''}
+                spots={COURSES.filter(courseReady).map((c) => {
+                  const fl = wordCastleFloors(c.levels)
+                  const wc = loadWcClears()
+                  return { id: c.id, name: c.label, sub: c.sub, done: fl.filter((f) => wc.includes(f.id)).length, total: fl.length }
+                })}
+                onPick={(id) => setLevels(COURSES.find((c) => c.id === id)!.levels)}
+              />
+      )}
       {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && !todayGone && (
         <button
           className="long-recommend daily-long today-read-btn"
@@ -1638,24 +1644,6 @@ function App() {
           🔤 今日の課題{loadTodayWordsDay() === today ? ' ✅' : ''}
           <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
         </button>
-      )}
-      {mode === 'word' && !showShop && !showChallenge && !todayFocus && !playOn && (
-        <div className="sub-tabs word-sub-tabs" role="tablist" aria-label="単語の種類">
-          {WORD_TABS.map((t) => (
-            <button
-              key={t.id}
-              role="tab"
-              aria-selected={wordTab === t.id}
-              onClick={() => {
-                setWordTab(t.id)
-                setStageGo(null)
-                setTodayQuiz(false)
-              }}
-            >
-              {t.label}
-            </button>
-          ))}
-        </div>
       )}
       {leveledUp && !home && !playOn && (
         <p className="lvup-banner" role="status">
@@ -1828,16 +1816,9 @@ function App() {
           {mode === 'boss' && !playOn && buddyRow}
           {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
-          {mode === 'reading' && !shortGo && !playOn && !todayGone && (
-            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
-              📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
-              <strong>{todayReadingTitle(today)}</strong>
-            </button>
-          )}
           {mode === 'reading' && !shortGo && !playOn && (
-          <CastleMap
-            title="読解の城の地図"
-            tabsLabel="読解のむずかしさ"
+          <LevelPick
+            label="読解のレベル"
             unit="本"
             current={readLevel}
             spots={READ_LEVELS.map((t) => ({ id: t.id, name: t.label, sub: t.sub, done: solvedOf(t.id, loadLongRecord(), loadShortDone())?.done, total: solvedOf(t.id, loadLongRecord(), loadShortDone())?.total, badge: readyFor(t.id, loadLongRecord(), loadShortDone()) ? '⭐ちょうせん' : undefined }))}
@@ -1847,6 +1828,12 @@ function App() {
               setShortGo(false)
             }}
           />
+          )}
+          {mode === 'reading' && !shortGo && !playOn && !todayGone && (
+            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
+              📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
+              <strong>{todayReadingTitle(today)}</strong>
+            </button>
           )}
           {mode === 'reading' && shortGo && todayReading(today).kind === 'long' ? (
             <LongReading
@@ -2139,24 +2126,25 @@ function App() {
         <>
           {mode === 'word' && !todayQuiz && (
             <>
-            {!castleOn && (
-              <CastleMap
-                title="単語の城の地図"
-                tabsLabel="単語コースの城"
-                fold
-                current={courseOf(levels)?.id ?? ''}
-                spots={COURSES.filter(courseReady).map((c) => {
-                  const fl = wordCastleFloors(c.levels)
-                  const wc = loadWcClears()
-                  return { id: c.id, name: c.label, sub: c.sub, done: fl.filter((f) => wc.includes(f.id)).length, total: fl.length }
-                })}
-                onPick={(id) => setLevels(COURSES.find((c) => c.id === id)!.levels)}
-              />
-            )}
             <WordCastle key={levels.join('|')} name={courseOf(levels) ? `${courseOf(levels)!.label}の城` : '単語の城'} levels={levels} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
             </>
           )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}
+          {mode === 'grammar' && !grammarGo && !playOn && (
+            <LevelPick
+              label="文法のレベル"
+              current={gcLevel}
+              spots={GC_LEVELS.map((l) => {
+                const fl = gcFloorsFor(l.id)
+                const gc = loadGcClears()
+                return { id: l.id, name: l.label, sub: l.sub, done: fl.filter((f) => gc.includes(f.id)).length, total: fl.length }
+              })}
+              onPick={(id) => {
+                setGcLevel(id)
+                saveGcLevel(id)
+              }}
+            />
+          )}
           {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (
             <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
               📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
@@ -2187,6 +2175,7 @@ function App() {
             count={mode === 'word' && todayQuiz ? todayWords(today).length : undefined}
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
             onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
+            grammarLevel={gcLevel}
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : words}

@@ -30,10 +30,11 @@ function bossAnswer(en: string): string {
   return WORDS.find((x) => x.example === en)!.exampleJa
 }
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
-// 単語ステージ（単語帳ごとのステージとそのボス）は単語ゲームの「🗺 ステージ」にある
+// 熟語のボスとボス部屋で戦う（一覧から）
 const toWordStages = () => {
-  navTo('単語ゲーム')
-  fireEvent.click(screen.getByRole('tab', { name: '🗺 ステージ' }))
+  navTo('ボス部屋')
+  fireEvent.click(screen.getByRole('tab', { name: /^高校/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^熟語のボス「.+」に挑戦/ }))
 }
 
 
@@ -54,11 +55,10 @@ describe('再発防止', () => {
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
     toWordStages()
-    fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
     let grammarXp = 0
-    for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
+    for (let c = 1; c <= 80 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
@@ -87,11 +87,10 @@ describe('再発防止', () => {
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
     toWordStages()
-    fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
     let grammarXp = 0
-    for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
+    for (let c = 1; c <= 80 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
@@ -116,11 +115,10 @@ describe('再発防止', () => {
     localStorage.setItem('eitan:missions', JSON.stringify({ day: today, counts: {}, claimed: missionsFor(today).map((m) => m.id) }))
     render(<App />)
     toWordStages()
-    fireEvent.click(screen.getByText(/👹 ボス「.+」に挑戦！/))
     // ステージのボスは読解問題なので、長文の問題から正解をさがして答える
     let expected = BOSS_XP
     let grammarXp = 0
-    for (let c = 1; c <= 20 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
+    for (let c = 1; c <= 80 && !screen.queryByText('ボスをたおした！ 🎉'); c++) {
       const en = document.querySelector('.boss .en')!.textContent
       fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === bossAnswer(en!))!)
       // チームバトル：単語→文法→読解の順。読解の番の XP は竜、文法の番はことばモンスターへ
