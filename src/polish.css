@@ -3534,3 +3534,12 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 /* ガチャ：制覇した城のボーナス */
 .gacha-castle-luck { margin: 6px 0; text-align: center; font-weight: 700; font-size: 0.9rem; color: #b45309; }
 .bfloor-reward { margin: 8px 0 0; text-align: center; font-weight: 800; color: #b45309; }
+/* 宝箱をあけたとき：コインが飛び出す */
+.castle-chest-got { position: relative; }
+.chest-burst { position: absolute; left: 50%; top: 0; pointer-events: none; }
+.chest-burst i { position: absolute; font-style: normal; animation: chest-coin 0.9s ease-out forwards; opacity: 0; }
+.chest-burst i:nth-child(1) { --cx: -40px; }
+.chest-burst i:nth-child(2) { --cx: 0px; animation-delay: 0.1s; }
+.chest-burst i:nth-child(3) { --cx: 40px; animation-delay: 0.2s; }
+@keyframes chest-coin { 0% { opacity: 1; transform: translate(0, 0) scale(0.6); } 70% { opacity: 1; } 100% { opacity: 0; transform: translate(var(--cx), -48px) scale(1.2); } }
+@media (prefers-reduced-motion: reduce) { .chest-burst { display: none; } }

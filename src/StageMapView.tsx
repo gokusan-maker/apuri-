@@ -59,6 +59,11 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
       )}
       {opened !== null && chest === undefined && (
         <p className="castle-chest-got" role="status">
+          <span className="chest-burst" aria-hidden="true">
+            <i>🪙</i>
+            <i>🪙</i>
+            <i>🪙</i>
+          </span>
           ✨ ステージ{opened.at}の宝箱から 🪙{CHEST_COINS}
           {opened.egg ? ` と 🥚${opened.egg}` : ''} を手に入れた！
         </p>
