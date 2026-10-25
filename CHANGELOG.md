@@ -2020,3 +2020,4 @@
 - 2026-10-25: 京大・東大の単語を12語追加（quintessential・vicarious・cogent・sanguine など）
 - 2026-10-25: TOEFL・IELTSの学術単語を22語追加（nocturnal・irrigation・dynasty・pollinate など）
 - 2026-10-25: 京大・東大の文法を10問ずつ追加（倒置・仮定法・関係詞・時制など。城が3階→5階に）
+- 2026-10-25: TOEICの文法を10問追加（品詞・時制・相関接続詞・倒置の Should など。城が3階→5階に）
