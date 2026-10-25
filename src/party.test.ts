@@ -81,3 +81,14 @@ it('仲間10体で、ガチャチケットと交換できる（相棒・おき�
   expect(tradeMembers(next)).toBeNull() // 10体に足りないと交換できない
   expect(MEMBERS_FOR_TICKET).toBe(10)
 })
+
+it('えらんだ10体とチケット交換できる（相棒・★の子や10体でないときはだめ）', async () => {
+  const members = Array.from({ length: 14 }, (_, i) => ({ xp: 0, name: `子${i}`, fav: i === 3 }))
+  const p = { members, active: 0 }
+  const picks = [1, 2, 4, 5, 6, 7, 8, 9, 10, 13]
+  const next = tradeMembers(p, picks)!
+  expect(next.members.map((m) => m.name)).toEqual(['子0', '子3', '子11', '子12'])
+  expect(tradeMembers(p, picks.slice(1))).toBeNull()
+  expect(tradeMembers(p, [0, ...picks.slice(1)])).toBeNull()
+  expect(tradeMembers(p, [3, ...picks.slice(1)])).toBeNull()
+})

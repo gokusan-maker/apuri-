@@ -894,8 +894,8 @@ function App() {
     return { kind: r.kind, species: r.species, newKind, newSpecies }
   }
   // なかま10体 → 🎟1まい（記録の「なかま」とガチャのページの両方から）
-  function tradeTen() {
-    const next = tradeMembers(party)
+  function tradeTen(picks?: number[]) {
+    const next = tradeMembers(party, picks)
     if (!next || (wallet.tickets ?? 0) >= TICKET_MAX) return
     setParty(next)
     setWallet((w) => addTicket(w))
@@ -1706,6 +1706,7 @@ function App() {
           tradeCount={tradeableMembers(party).length}
           tradeDisabled={(wallet.tickets ?? 0) >= TICKET_MAX}
           onTrade={tradeTen}
+          tradePool={tradeableMembers(party).map((i) => ({ index: i, member: party.members[i] }))}
           onFreeGacha={() => {
             // 無料の1回は、チケット1枚をその場でつけて引くのと同じ
             const k = drawMany(true, 1, { ...wallet, tickets: (wallet.tickets ?? 0) + 1 })[0] ?? null // 上限をこえても本物のチケットは減らない
@@ -1988,7 +1989,7 @@ function App() {
                   setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === i ? feed(m, WARM_XP, null, today) : m)) }))
                 }}
                 ticketsFull={(wallet.tickets ?? 0) >= TICKET_MAX}
-                onTradeMembers={tradeTen}
+                onTradeMembers={() => tradeTen()}
                 onRelease={(i) => {
                   const next = releaseMember(party, i)
                   if (!next) return

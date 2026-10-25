@@ -8,6 +8,7 @@ import { MEMBERS_FOR_TICKET } from './party'
 import { loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
 import { typeOf } from './chartype'
+import { formOf, levelInfo, type MonsterState } from './monster'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { GachaReveal } from './GachaRevealView'
@@ -60,7 +61,8 @@ type Props = {
   onTier?: (tier: 'rare' | 'sr') => GachaResult | null
   tradeCount?: number // チケットと交換できる仲間（相棒・★以外）の数
   tradeDisabled?: boolean
-  onTrade?: () => void // 仲間10体 → 🎟1まい
+  onTrade?: (picks?: number[]) => void
+  tradePool?: { index: number; member: MonsterState }[] // 交換できる子（えらんで交換） // 仲間10体 → 🎟1まい
   onFree?: () => GachaResult | null // 1日1回の無料ガチャ
   onDrawMulti?: (n: number) => GachaResult[] // まとめて引く（3連ガチャ）
   onRaise?: () => void // 出たタマゴを相棒にする
@@ -68,7 +70,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, onDrawMulti, onRaise, onNameNew, ownedSpecies }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -77,6 +79,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
   const [fast, setFast] = useState(loadGachaFast)
   const [reveal, setReveal] = useState<GachaResult[] | null>(null) // 引いたら画面いっぱいの演出ページ
   const [stats, setStats] = useState(loadGachaStats)
+  const [picks, setPicks] = useState<number[] | null>(null) // 交換する子をえらんでいるところ
   const record = (k: GachaResult) => {
     setStats(loadGachaStats())
     recordLog(k)
@@ -171,10 +174,57 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
           <span className="gacha-trade-meter" aria-hidden="true">
             <i style={{ width: `${(Math.min(tradeCount, MEMBERS_FOR_TICKET) / MEMBERS_FOR_TICKET) * 100}%` }} />
           </span>
-          <button className="list-link pill-btn pill-gold gacha-trade-btn" disabled={tradeCount < MEMBERS_FOR_TICKET || tradeDisabled} onClick={onTrade}>
-            {tradeDisabled ? 'チケットがいっぱい' : tradeCount >= MEMBERS_FOR_TICKET ? '🎟 交換する' : `あと${MEMBERS_FOR_TICKET - tradeCount}体`}
+          <button
+            className="list-link pill-btn pill-gold gacha-trade-btn"
+            disabled={tradeCount < MEMBERS_FOR_TICKET || tradeDisabled}
+            onClick={() => (tradePool ? setPicks(picks ? null : tradePool.slice(-MEMBERS_FOR_TICKET).map((x) => x.index)) : onTrade())}
+          >
+            {tradeDisabled ? 'チケットがいっぱい' : tradeCount >= MEMBERS_FOR_TICKET ? (tradePool ? '🎟 えらんで交換' : '🎟 交換する') : `あと${MEMBERS_FOR_TICKET - tradeCount}体`}
           </button>
           <small className="gacha-trade-note">相棒と★おきにいりの子は交換されないよ</small>
+          {picks && tradePool && (
+            <div className="trade-pick">
+              <p className="trade-pick-head" role="status">
+                交換する子をえらぶ（{picks.length}/{MEMBERS_FOR_TICKET}体）
+              </p>
+              <ul className="trade-pick-list">
+                {tradePool.map(({ index, member }) => {
+                  const on = picks.includes(index)
+                  const f = formOf(member)
+                  return (
+                    <li key={index}>
+                      <button
+                        className={`trade-pick-item${on ? ' on' : ''}`}
+                        aria-pressed={on}
+                        aria-label={`${member.name ?? f.name} Lv.${levelInfo(member.xp).level}`}
+                        disabled={!on && picks.length >= MEMBERS_FOR_TICKET}
+                        onClick={() => setPicks(on ? picks.filter((x) => x !== index) : [...picks, index])}
+                      >
+                        <MonsterFigure form={f} kind={member.kind} />
+                        <span>{member.name ?? f.name}</span>
+                        <small>Lv.{levelInfo(member.xp).level}</small>
+                      </button>
+                    </li>
+                  )
+                })}
+              </ul>
+              <div className="trade-pick-btns">
+                <button
+                  className="good gacha-btn"
+                  disabled={picks.length !== MEMBERS_FOR_TICKET}
+                  onClick={() => {
+                    onTrade(picks)
+                    setPicks(null)
+                  }}
+                >
+                  🎟 この{MEMBERS_FOR_TICKET}体と交換
+                </button>
+                <button className="list-link pill-btn pill-blue" onClick={() => setPicks(null)}>
+                  やめる
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       )}
       {onTier && !full && (rareTickets > 0 || srTickets > 0) && (

@@ -116,12 +116,15 @@ export function releaseMember(p: Party, i: number): Party | null {
 // キャラクター交換：仲間（相棒・おきにいり★以外）10体で、ガチャチケット1まいと交換（オーナー要望）
 export const MEMBERS_FOR_TICKET = 10
 export const tradeableMembers = (p: Party): number[] => p.members.map((_, i) => i).filter((i) => canRelease(p, i))
-export function tradeMembers(p: Party): Party | null {
+// picks をわたすと、えらんだ10体と交換（ちょうど10体・どれも交換できる子のときだけ）
+export function tradeMembers(p: Party, picks?: number[]): Party | null {
   const eggs = tradeableMembers(p)
   if (eggs.length < MEMBERS_FOR_TICKET) return null
+  const chosen = picks ? [...new Set(picks)].sort((a, b) => a - b) : eggs.slice(-MEMBERS_FOR_TICKET)
+  if (chosen.length !== MEMBERS_FOR_TICKET || chosen.some((i) => !eggs.includes(i))) return null
   // あとから来た子から順に（うしろから消すと番号がずれない）
   let next: Party | null = p
-  for (const i of eggs.slice(-MEMBERS_FOR_TICKET).reverse()) {
+  for (const i of [...chosen].reverse()) {
     next = next && releaseMember(next, i)
   }
   return next

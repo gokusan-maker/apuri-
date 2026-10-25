@@ -33,7 +33,8 @@ type Props = {
   onTierGacha?: (tier: 'rare' | 'sr') => GachaResult | null // 💎レア・🌟SRチケットで引く
   tradeCount?: number // チケットと交換できる仲間の数
   tradeDisabled?: boolean // チケットがいっぱいで交換できない
-  onTrade?: () => void // 仲間10体 → 🎟1まい
+  onTrade?: (picks?: number[]) => void // 仲間10体 → 🎟1まい（picks：えらんだ子の番号）
+  tradePool?: { index: number; member: MonsterState }[] // 交換できる子
   onFreeGacha?: () => GachaResult | null
   onRaiseNew?: () => void
   onNameNew?: (name: string) => void // ガチャで出た子に名前をつける
@@ -62,7 +63,7 @@ const SHOP_TABS: { id: ShopTab; label: string }[] = [
   { id: 'item', label: '🎒 アイテム' },
 ]
 
-export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, ownedSpecies, onGacha, freeGacha = false, onFreeGacha, rareTickets, srTickets, onTierGacha, tradeCount, tradeDisabled, onTrade, onRaiseNew, onNameNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
+export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, onClose, snacksLeft, onEat, onBuyFreeze, onRoom, eventId, members = 1, ownedSpecies, onGacha, freeGacha = false, onFreeGacha, rareTickets, srTickets, onTierGacha, tradeCount, tradeDisabled, onTrade, tradePool, onRaiseNew, onNameNew, dragonUp = false, pickup, favSnack, stepLeft, bag, onBuyBattle, gachaPrice, onGachaMulti, gachaPoints, onExchange, stickers, boostColor, luckyBag, onLuckyBag, attrEgg }: Props) {
   const [tryRoom, setTryRoom] = useState<string | null>(null) // 買う前に部屋をためす（プレビューだけ）
   const shownRoom = tryRoom && !wallet.owned.includes(tryRoom) ? tryRoom : wallet.room
   const form = formOf(monster)
@@ -117,7 +118,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         ))}
       </div>
       {tab === 'gacha' && attrEgg && <AttrEgg {...attrEgg} coins={wallet.coins} />}
-      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} ownedSpecies={ownedSpecies} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} free={freeGacha} onFree={onFreeGacha} rareTickets={rareTickets} srTickets={srTickets} onTier={onTierGacha} tradeCount={tradeCount} tradeDisabled={tradeDisabled} onTrade={onTrade} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
+      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} ownedSpecies={ownedSpecies} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} free={freeGacha} onFree={onFreeGacha} rareTickets={rareTickets} srTickets={srTickets} onTier={onTierGacha} tradeCount={tradeCount} tradeDisabled={tradeDisabled} onTrade={onTrade} tradePool={tradePool} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
       {tab === 'snack' && (
         <>
       <h3 className="shop-h">
