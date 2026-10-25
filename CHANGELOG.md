@@ -2077,3 +2077,4 @@
 - 2026-10-25: 京大・東大を中心に単語を40語追加（chagrin・evanescent・assiduous・efficacy・covet・auspicious など）
 - 2026-10-25: ネイティブの口語表現を30語追加（ace・chicken out・hands down・my treat・tell me about it など）
 - 2026-10-25: ネイティブの句動詞を30語追加（bump into・dig in・talk into・grow on・tag along など）
+- 2026-10-25: TOEFL・IELTSの学術単語を40語追加（estuary・excavation・amphibian・cognition・enzyme・membrane など）
