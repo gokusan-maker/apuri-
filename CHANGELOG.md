@@ -2068,3 +2068,4 @@
 - 2026-10-25: TOEFL・IELTSの学術単語を20語追加（aquifer・biodiversity・deforestation・germinate・vertebrate など）
 - 2026-10-25: 私学・私学難関の単語を30語、京大・東大の単語を10語追加（abide・ascertain・benign・camaraderie・anomaly など）
 - 2026-10-25: 国公立・旧帝大の単語を24語、京大・東大の単語を16語追加（archaic・copious・dispel・connoisseur・digress など）
+- 2026-10-25: 私学〜旧帝大の単語を40語追加（ingenious・hindsight・integral・fallacy・epitome・fraught など）
