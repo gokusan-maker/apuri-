@@ -97,6 +97,32 @@ function BossDecoFront({ deco, look }: { deco: string; look: BossLook }) {
       )
     case 'machikane':
       return <path d="M36 80 L40 76 L44 80 L48 76 L52 80 L56 76 L60 80 L64 76" fill="none" stroke="#f8fafc" strokeWidth="2.5" />
+    case 'crown':
+      // 特別クエスト：マオウモチの王冠
+      return (
+        <g stroke="#92400e" strokeWidth="2" strokeLinejoin="round">
+          <path d="M30 26 L32 6 L41 16 L50 2 L59 16 L68 6 L70 26 Z" fill="#facc15" />
+          <circle cx="50" cy="18" r="3" fill="#ef4444" />
+          <circle cx="38" cy="21" r="2" fill="#3b82f6" />
+          <circle cx="62" cy="21" r="2" fill="#3b82f6" />
+        </g>
+      )
+    case 'helmet':
+      // 特別クエスト：ヨロイモチのかぶと
+      return (
+        <g stroke="#0f172a" strokeWidth="2" strokeLinejoin="round">
+          <path d="M20 36 Q50 -4 80 36 Q50 28 20 36 Z" fill="#94a3b8" />
+          <path d="M47 4 L53 4 L53 32 L47 32 Z" fill="#e2e8f0" />
+        </g>
+      )
+    case 'thunder':
+      // 特別クエスト：ライジンモチのいなずま
+      return (
+        <g fill="#fde047" stroke="#a16207" strokeWidth="1.5" strokeLinejoin="round">
+          <path d="M8 26 L20 26 L14 42 L24 42 L6 68 L12 48 L4 48 Z" />
+          <path d="M92 26 L80 26 L86 42 L76 42 L94 68 L88 48 L96 48 Z" />
+        </g>
+      )
     case 'tokeidai':
       return (
         <g stroke={look.line} strokeWidth="2">

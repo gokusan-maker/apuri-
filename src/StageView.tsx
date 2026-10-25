@@ -651,8 +651,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <span className="lg-icon" aria-hidden="true">⏱️</span><span className="mode-name">ボスのタイムアタック</span>{loadBossTaBest() > 0 && <span className="mode-badge">ベスト {loadBossTaBest()}</span>}
       </button>}
               {specialEvent === 'quest' && (
-                <button className="boss-btn quest-boss" onClick={() => setQuestFight(true)}>
-                  <span className="lg-icon" aria-hidden="true">👑</span><span className="mode-name">特別クエスト：{questBossOf(dayKey()).look.name}</span>{questDay === dayKey() ? <span className="mode-badge">✅ クリア</span> : <span className="mode-badge">強敵</span>}
+                <button className="boss-btn quest-boss" aria-label={`特別クエスト：${questBossOf(dayKey()).look.name}${questDay === dayKey() ? '（クリア）' : '（強敵）'}`} onClick={() => setQuestFight(true)}>
+                  <span className="lg-icon" aria-hidden="true">👑</span><span className="mode-name">{questBossOf(dayKey()).look.name}</span>{questDay === dayKey() ? <span className="mode-badge">✅ クリア</span> : <span className="mode-badge">強敵</span>}
                 </button>
               )}
               {specialEvent === 'rare' && <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
