@@ -2108,3 +2108,4 @@
 - 2026-10-25: TOEFL・IELTSレベルの長文「How Sand Dunes Move」（砂丘のしくみ）を追加
 - 2026-10-25: 私学難関レベルの長文「Should You Study with Music?」（音楽を聞きながら勉強）を追加
 - 2026-10-25: 高3（共通テスト）レベルの長文「The Power of a Short Nap」（短い昼寝の効果・199語）を追加
+- 2026-10-25: TOEICレベルの専用長文「Notice: Changes to the Staff Cafeteria」（社員食堂の変更のお知らせ・194語）を追加

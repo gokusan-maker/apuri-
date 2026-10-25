@@ -4173,6 +4173,38 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-cafeteria-notice',
+    title: 'Notice: Changes to the Staff Cafeteria',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: Starting Monday, May 6, the staff cafeteria on the second floor will introduce several changes based on the results of last month's survey.",
+      "First, the cafeteria will open earlier. Breakfast will now be served from 7:30 a.m., ( A ) of 8:00 a.m., for employees who start work early. Lunch hours will remain the same, from 11:30 a.m. to 2:00 p.m.",
+      "Second, a new healthy menu will be added. Each day, at least one dish under 600 calories will be available, and the calorie count of every dish will be shown on the menu board. Vegetarian options will also be offered every day.",
+      "Third, payment will become easier. In addition to cash, employees will be able to pay with their ID cards. The amount will be deducted from their monthly salary. Employees who wish to use this service must register at the General Affairs Department ( B ) May 3.",
+      "The cafeteria will be closed on Saturday, May 4, so that the new equipment can be installed. We apologize for any inconvenience. Suggestions about the menu are always welcome and can ( C ) placed in the box near the entrance.",
+    ],
+    ja: [
+      '全社員のみなさんへ：5月6日（月）から、2階の社員食堂は、先月のアンケートの結果をもとにいくつかの変更を行います。',
+      'まず、食堂の開店時間を早めます。朝早くから仕事を始める社員のために、朝食は午前8時ではなく午前7時30分から出します。昼食の時間は午前11時30分から午後2時までで変わりません。',
+      '次に、新しく健康メニューを加えます。毎日少なくとも1品は600キロカロリー以下の料理を用意し、すべての料理のカロリーをメニューボードに表示します。ベジタリアン向けの料理も毎日用意します。',
+      'さらに、支払いが簡単になります。現金に加えて、社員証で支払えるようになります。金額は毎月の給料から差し引かれます。このサービスを利用したい社員は、5月3日までに総務部で登録してください。',
+      '新しい設備を取りつけるため、5月4日（土）は食堂を閉めます。ご不便をおかけして申し訳ありません。メニューについてのご意見はいつでも歓迎しますので、入り口近くの箱に入れてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['instead', 'rather', 'even', 'unless'], answer: 0, why: 'instead of ～ で「～のかわりに」。rather は rather than の形で使い、even・unless のうしろに of は続かない。' },
+      { id: 'B', choices: ['by', 'until', 'since', 'during'], answer: 0, why: '「5月3日までに（登録する）」としめ切りを表すのは by。until は「～までずっと」で、1回の登録には使わない。' },
+      { id: 'C', choices: ['be', 'being', 'been', 'to be'], answer: 0, why: '助動詞 can のあとは動詞の原形。can be placed で「入れることができる（入れられる）」。' },
+    ],
+    tf: [
+      { statement: '朝食は午前7時30分から出されるようになる。', answer: true, why: '第2段落 Breakfast will now be served from 7:30 a.m.' },
+      { statement: '昼食の時間は短くなる。', answer: false, why: '第2段落 Lunch hours will remain the same。' },
+      { statement: '5月4日（土）は食堂が閉まる。', answer: true, why: '第5段落 The cafeteria will be closed on Saturday, May 4。' },
+    ],
+    qa: [
+      { q: 'What must employees do to pay with their ID cards?', choices: ['Register at the General Affairs Department by May 3.', 'Fill out a survey at the cafeteria.', 'Pay in cash first.', 'Bring a new ID card on May 6.'], answer: 0, why: '第4段落 must register at the General Affairs Department by May 3。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
