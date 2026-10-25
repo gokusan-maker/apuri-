@@ -320,3 +320,11 @@ it('ボス部屋のタイルに、そのボスの最短タイムが小さく出�
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
 })
+
+it('特別クエストでは攻略のむずかしい強いボス（HP240）と戦える', () => {
+  localStorage.clear()
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
+  fireEvent.click(screen.getByRole('button', { name: /特別クエスト：/ }))
+  expect(screen.getByText(/^👑 特別クエスト：/)).toBeInTheDocument()
+  expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuemax', '240')
+})

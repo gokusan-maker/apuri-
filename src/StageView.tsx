@@ -9,6 +9,7 @@ import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
 import { SPECIAL_EVENT_NOTE, specialEventOf, type SpecialEventId } from './bossevent'
+import { loadQuestDay, QUEST_COINS, QUEST_HP, questBossOf, saveQuestDay } from './questboss'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadNightDay, NIGHT_COINS, nightBossOf, saveNightDay, loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
 import { loadUniv, saveUniv, UNIV_BOSSES, univGraduated, univUnlocked, type UnivBoss } from './univ'
@@ -57,6 +58,7 @@ type Props = {
   event?: SpecialEventId | null // とくべつイベントを決めて出す（テスト用。ふだんは日がわり）
   onRareWin?: () => void // 今週のレアボスをはじめて倒した（ごほうびはアプリ側）
   onWeekendWin?: () => void // 週末ボスをその週末はじめて倒した
+  onQuestWin?: () => void // 特別クエストの強いボスをその日はじめて倒した
 }
 
 export const STAR3_COINS = 20
@@ -65,7 +67,7 @@ const GRAMMAR_BOSS_LEVELS: Level[] = ['中1', '中2', '中3']
 
 const starText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n)
 
-export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event }: Props) {
+export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAnswer, boss = {}, onBossWin, onSpend, onStudy, learnedPct = {}, dailyDone = false, onDailyWin, onUnivWin, partner, power = 0, hour = 12, onRareWin, onWeekendWin, onRankBonus, onRushClear, rushDone = false, weekend = false, rushExDone = false, onEndlessReward, bag, onUseItem, onBossDefeat, onSkill, onDrop, keys = 0, onOpenGold, winStreak = 0, onLose, startDaily = false, onReadingAnswer, readingBuddy, event, onQuestWin }: Props) {
   const daily = dailyBossLevel(levels, dayKey())
   const [dailyFight, setDailyFight] = useState(startDaily && daily ? 1 : 0) // 今日のボスの強さ（0は今日のボスではない）
   const [playing, setPlaying] = useState<Stage | null>(null)
@@ -79,6 +81,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [rareFight, setRareFight] = useState(false)
   const [weekendWeek, setWeekendWeek] = usePersistent(loadWeekendWeek, saveWeekendWeek)
   const [weekendFight, setWeekendFight] = useState(false)
+  const [questFight, setQuestFight] = useState(false)
+  const [questDay, setQuestDay] = usePersistent(loadQuestDay, saveQuestDay)
   const [timeAttack, setTimeAttack] = useState(false)
   const [strong, setStrong] = useState(false) // 強化版のボス
   const [sudden, setSudden] = useState(false) // サドンデス（ハート1つ）
@@ -256,6 +260,41 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           onRankBonus?.(NIGHT_COINS)
         }}
         onExit={() => setNightFight(false)}
+      />
+    )
+  }
+
+  if (questFight) {
+    const qb = questBossOf(dayKey())
+    return (
+      <Boss
+        winLabel={backLabel}
+        reading
+        winBuddy={readingBuddy}
+        level={qb.level}
+        words={wordsOf([qb.level])}
+        look={qb.look}
+        title={`👑 特別クエスト：${qb.look.name}`}
+        note={`とても強いボス！ たおすと 🪙${QUEST_COINS}・🎟1（HP${QUEST_HP}）`}
+        hp={QUEST_HP}
+        partner={partner}
+        power={power}
+        bag={bag}
+        onUseItem={onUseItem}
+        onDefeat={onBossDefeat}
+        onSkill={onSkill}
+        onDrop={onDrop}
+        onLose={onLose}
+        onRankBonus={onRankBonus}
+        bonus={BOSS_REMATCH_XP}
+        onSpend={onSpend}
+        onAnswer={onReadingAnswer ?? onAnswer}
+        onWin={() => {
+          if (questDay === dayKey()) return
+          setQuestDay(dayKey())
+          onQuestWin?.()
+        }}
+        onExit={() => setQuestFight(false)}
       />
     )
   }
@@ -611,6 +650,11 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               {specialEvent === 'time' && <button className="boss-btn rush-boss" onClick={() => setTimeAttack(true)}>
         <span className="lg-icon" aria-hidden="true">⏱️</span><span className="mode-name">ボスのタイムアタック</span>{loadBossTaBest() > 0 && <span className="mode-badge">ベスト {loadBossTaBest()}</span>}
       </button>}
+              {specialEvent === 'quest' && (
+                <button className="boss-btn quest-boss" onClick={() => setQuestFight(true)}>
+                  <span className="lg-icon" aria-hidden="true">👑</span><span className="mode-name">特別クエスト：{questBossOf(dayKey()).look.name}</span>{questDay === dayKey() ? <span className="mode-badge">✅ クリア</span> : <span className="mode-badge">強敵</span>}
+                </button>
+              )}
               {specialEvent === 'rare' && <button className="boss-btn rare-boss" onClick={() => setRareFight(true)}>
         <span className="lg-icon" aria-hidden="true">✨</span><span className="mode-name">今週のレアボス</span>{rareWeek === week && <span className="mode-badge">✅ クリア</span>}
       </button>}

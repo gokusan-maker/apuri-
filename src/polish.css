@@ -2783,3 +2783,15 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .play-lvup { position: absolute; top: 50%; right: 12px; transform: translateY(-50%); padding: 4px 10px; border-radius: 999px; background: linear-gradient(180deg, #fde047, #f59e0b); color: #78350f; font-size: 0.8rem; font-weight: 900; white-space: nowrap; box-shadow: 0 2px 0 #b45309; pointer-events: none; animation: lvup-chip 0.5s ease-out; }
 @keyframes lvup-chip { from { transform: translateY(-50%) scale(0.4); opacity: 0; } 70% { transform: translateY(-50%) scale(1.15); } }
 @media (prefers-reduced-motion: reduce) { .play-lvup { animation: none; } }
+
+/* チームの3体の Lv のよこに攻撃力（⚔+N）。特別クエストの強敵ボタンは黒と赤 */
+.boss-team-atk { margin-left: 3px; padding: 0 5px; border-radius: 999px; background: #fee2e2; color: #b91c1c; font-size: 0.66rem; font-style: normal; font-weight: 900; white-space: nowrap; }
+.special-event .boss-btn.quest-boss { background: linear-gradient(135deg, #111827, #7f1d1d 60%, #dc2626); color: #fff; box-shadow: 0 4px 0 #450a0a; }
+.special-event .boss-btn.quest-boss .mode-badge { background: #fde047; color: #7f1d1d; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) .boss-team-atk { background: #450a0a; color: #fecaca; }
+}
+:root[data-theme='dark'] .boss-team-atk { background: #450a0a; color: #fecaca; }
+/* 攻撃力のバッジはなかまのタイルの右上（ラベルを1行に収める） */
+.boss-team-m { position: relative; }
+.boss-team-m .boss-team-atk { position: absolute; top: 4px; right: 4px; margin: 0; }

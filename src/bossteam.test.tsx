@@ -93,3 +93,35 @@ it('勝ったときのひとことは、いちばん正解したなかま（同�
   expect(teamMvp({ word: 0, grammar: 1, reading: 4 })).toBe('reading')
   for (const l of Object.values(TEAM_WIN_LINES)) expect(l.en.length).toBeLessThan(30)
 })
+
+it('なかまのレベルが上がると攻撃力も上がる（2レベルごとに+1、最大+10）', async () => {
+  const { levelAttack } = await import('./boss')
+  expect(levelAttack(1)).toBe(0)
+  expect(levelAttack(4)).toBe(2)
+  expect(levelAttack(9)).toBe(4)
+  expect(levelAttack(40)).toBe(10)
+})
+
+it('チームバトルでは、答えたなかまのレベルの攻撃力のぶんダメージがふえる', () => {
+  const hpAfter = (level: number) => {
+    const t: BossTeam = { word: { ...team.word, level }, grammar: { ...team.grammar, level }, reading: { ...team.reading, level } }
+    const r = render(
+      <BossTeamContext.Provider value={t}>
+        <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+      </BossTeamContext.Provider>,
+    )
+    const en = document.querySelector('.en')!.textContent!
+    const w = WORDS.find((x) => x.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choices .choice')].find((b) => b.textContent === w.ja)!)
+    const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+    r.unmount()
+    return hp
+  }
+  expect(hpAfter(1) - hpAfter(20)).toBe(10)
+  render(
+    <BossTeamContext.Provider value={{ ...team, word: { ...team.word, level: 6 } }}>
+      <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
+    </BossTeamContext.Provider>,
+  )
+  expect(screen.getByTitle('攻撃力 +3').textContent).toContain('⚔+3')
+})

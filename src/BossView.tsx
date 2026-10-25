@@ -12,7 +12,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -262,7 +262,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`🤝 合体技「トリプルアタック」！ +${trio}`)
         setTrioAt(index)
       }
-      const nextHp = hp - base - extra - trio - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
+      const atk = teamOn && 'team' in q ? levelAttack(team![q.team as TeamRole].level) : 0 // なかまのレベルの攻撃力
+      const nextHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (minion === 'here') {
@@ -769,7 +770,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                     <small>
                       {TEAM_ICON[r]}
                       {TEAM_LABEL[r]}
-                      {team![r].level !== undefined && <b className="boss-team-lv"> Lv.{team![r].level}</b>}
+                      {team![r].level !== undefined && <b className="boss-team-lv" title={`攻撃力 +${levelAttack(team![r].level)}`}> Lv.{team![r].level}{levelAttack(team![r].level) > 0 && <i className="boss-team-atk">⚔+{levelAttack(team![r].level)}</i>}</b>}
                     </small>
                     {q.team === r && picked !== null && picked === q.answer && (
                       <i key={`xp${index}`} className="boss-team-xp" aria-label={`${team![r].name}に XP +${quizXp(combo)}`}>

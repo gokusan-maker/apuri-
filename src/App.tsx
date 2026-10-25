@@ -130,6 +130,7 @@ import { feelingFor } from './feeling'
 import { cheerFor, snackLine, type Line } from './talk'
 import { cheerEvent, encourage, type Cheer } from './encourage'
 import { PetCheer } from './PetCheerView'
+import { QUEST_COINS } from './questboss'
 import { loadUniv, UNIV_BOSSES } from './univ'
 import { annivMonths, annivText, MONTHLY_COINS } from './monthly'
 import { addItem, BAG_MAX, BATTLE_ITEMS, loadBag, saveBag, spendItem } from './battleitems'
@@ -1263,6 +1264,10 @@ function App() {
         pushToast([{ id: 'rush', text: `🔥 ボスラッシュ完全クリア！ 🪙${RUSH_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
       }}
       onRankBonus={(c) => setWallet((w) => ({ ...w, coins: w.coins + c }))}
+      onQuestWin={() => {
+        setWallet((w) => ({ ...addTicket(w), coins: w.coins + QUEST_COINS }))
+        pushToast([{ id: 'quest', text: `👑 特別クエストの強敵をたおした！ 🪙${QUEST_COINS}・🎟ガチャチケット`, counter: 'answers', target: 0 }])
+      }}
       onWeekendWin={() => {
         setWallet((w) => addTicket(w))
         pushToast([{ id: 'weekend-boss', text: '🌙 週末ボスをたおした！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
@@ -2110,6 +2115,8 @@ function App() {
                 ? 'ログインボーナス'
                 : missionToast[0].id === 'weekly'
                 ? `週間チャレンジ達成！ +${WEEKLY_XP}XP`
+                : ['quest', 'rush', 'rush-ex', 'weekend-boss', 'rare', 'endless'].includes(missionToast[0].id)
+                ? '⚔️ ボス討伐！'
                 : `ミッション達成！ +${MISSION_XP * missionToast.length}XP`}
             </p>
             <p className="badge-toast-name">{missionToast.map((m) => m.text).join('・')}</p>

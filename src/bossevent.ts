@@ -1,10 +1,10 @@
 // ボス部屋の「とくべつイベント」：塔・ボスラッシュなどは横にならべず、日によって1つだけ出現する（出ない日もある）
 import { isNightTime } from './rareboss'
 
-export type SpecialEventId = 'gold' | 'night' | 'rush-ex' | 'weekend' | 'endless' | 'rush' | 'time' | 'rare' | 'univ'
+export type SpecialEventId = 'gold' | 'night' | 'rush-ex' | 'weekend' | 'endless' | 'rush' | 'time' | 'rare' | 'univ' | 'quest'
 
 // ふだんの日のまわり順（null はイベントのない日）
-const DAILY: (SpecialEventId | null)[] = ['endless', 'rush', null, 'time', 'rare', 'univ', null]
+const DAILY: (SpecialEventId | null)[] = ['endless', 'quest', 'rush', null, 'time', 'rare', 'quest', 'univ', null]
 
 const dayNumber = (day: string) => {
   const [y, m, d] = day.split('-').map(Number)
@@ -32,4 +32,5 @@ export const SPECIAL_EVENT_NOTE: Record<SpecialEventId, string> = {
   time: '今日だけ',
   rare: '今日だけ',
   univ: '今日だけ',
+  quest: '今日だけ・強敵',
 }

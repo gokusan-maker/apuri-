@@ -406,3 +406,6 @@ export function saveBossHunter(): void {
     // 保存できなくても続ける
   }
 }
+
+// レベルに合わせた攻撃力：なかまのレベル2つごとに正解ダメージ+1（最大+10）
+export const levelAttack = (level?: number) => Math.min(10, Math.floor(Math.max(1, level ?? 1) / 2))
