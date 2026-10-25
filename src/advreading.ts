@@ -4894,4 +4894,62 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: "What lesson does the cane toad's story teach?", choices: ['People must be careful before introducing a species to a new place.', 'Toads are the best way to control beetles.', 'Sugar cane cannot grow in Australia.', 'Snakes are an invasive species in Australia.'], answer: 0, why: "第3段落 The cane toad's story shows how careful people must be before introducing a species to a new place。" },
     ],
   },
+  {
+    id: 'adv-fast-fashion',
+    title: 'The Real Price of Cheap Clothes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Over the past few decades, clothing has become remarkably cheap. Many retailers now release new designs every few weeks, encouraging shoppers to buy more items and wear each one fewer times. This business model, often called fast fashion, ( A ) made trendy clothes available to almost everyone.",
+      "The low prices, however, hide significant costs. Producing clothing requires large amounts of water and energy, and synthetic fabrics such as polyester are made from oil. Moreover, a large share of discarded garments ends up in landfills or is burned rather than recycled. Critics also point out that keeping prices low often depends on poorly paid workers ( B ) work long hours in difficult conditions.",
+      "Some consumers are responding by buying second-hand clothes, repairing what they own, or choosing fewer, better-made items. Such choices cannot solve the problem on their own, since much depends on how companies design and produce their goods. Still, asking how long a piece of clothing is likely to be worn before buying it may be a simple first step toward ( C ) less waste.",
+    ],
+    ja: [
+      'ここ数十年で、服はおどろくほど安くなった。多くの小売店は今や数週間ごとに新しいデザインを出し、買い物客により多くの服を買わせ、1着を着る回数をへらすようにうながしている。ファストファッションとよばれることの多いこの商売のやり方は、流行の服をほとんどだれもが手に入れられるものにした。',
+      'しかし、その安さはかなりの代償をかくしている。服をつくるには大量の水とエネルギーが必要で、ポリエステルのような合成繊維は石油からつくられる。さらに、捨てられた服の大部分は、リサイクルされずに埋め立て地に行くか、燃やされてしまう。また、値段を低くおさえることは、むずかしい条件で長時間はたらく、賃金の安い労働者にたよっていることが多いと、批判する人たちは指摘している。',
+      'これに対して、古着を買ったり、持っている服を直したり、数は少なくてもよくつくられた服を選んだりする消費者もいる。こうした選択だけで問題を解決することはできない。多くは、会社がどのように商品を設計し、つくるかにかかっているからだ。それでも、買う前にその服をどのくらい長く着そうかを考えることは、ごみをへらすための簡単な第一歩になるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['has', 'have', 'having', 'to have'], answer: 0, why: '主語 This business model（単数）の現在完了なので has made。having・to have では文の動詞にならない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞が人（workers）で、あとに動詞 work が続くので主格の who。' },
+      { id: 'C', choices: ['producing', 'produce', 'produced', 'to produce'], answer: 0, why: 'toward は前置詞なので、あとは動名詞。toward producing less waste「ごみをへらすことへ向けて」。' },
+    ],
+    tf: [
+      { statement: 'ファストファッションは、流行の服を多くの人が手に入れられるものにした。', answer: true, why: '第1段落 made trendy clothes available to almost everyone。' },
+      { statement: '捨てられた服の大部分はリサイクルされている。', answer: false, why: '第2段落 ends up in landfills or is burned rather than recycled。' },
+      { statement: 'ポリエステルは石油からつくられる。', answer: true, why: '第2段落 synthetic fabrics such as polyester are made from oil。' },
+      { statement: '筆者は、消費者の選択だけで問題は解決できると述べている。', answer: false, why: '第3段落 Such choices cannot solve the problem on their own。' },
+    ],
+    qa: [
+      { q: 'What does the author suggest as a simple first step?', choices: ['Asking how long a piece of clothing will be worn before buying it.', 'Buying new designs every few weeks.', 'Burning old clothes instead of throwing them away.', 'Choosing only clothes made of polyester.'], answer: 0, why: '第3段落 asking how long a piece of clothing is likely to be worn before buying it may be a simple first step。' },
+    ],
+  },
+  {
+    id: 'toefl-desalination',
+    title: 'Fresh Water from the Sea',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "Although about 70 percent of Earth's surface is covered by water, only a tiny fraction of it is fresh water that people can easily use. In dry regions such as the Middle East, many countries have turned to desalination, the process of removing salt from seawater to make it ( A ) for drinking and farming.",
+      "The most common method today is reverse osmosis. In this process, seawater is pushed at high pressure through special membranes with extremely small holes. Water molecules can pass through the holes, but most of the salt cannot. Older plants instead heated seawater until it evaporated and then collected the steam, a method that uses even more energy.",
+      "Desalination has drawbacks. It requires a great deal of energy, which can make the water expensive and increase carbon emissions if the power comes from fossil fuels. The process also produces brine, a very salty liquid ( B ) can harm marine life if it is released back into the sea carelessly. Researchers are therefore searching for ways ( C ) desalination cheaper and cleaner, for example by using solar power to run the plants.",
+    ],
+    ja: [
+      '地球の表面のおよそ70パーセントは水におおわれているが、人がかんたんに使える淡水はそのごく一部にすぎない。中東のような乾いた地域では、多くの国が淡水化にたよるようになった。淡水化とは、海水から塩分をとりのぞいて、飲み水や農業に使えるようにすることである。',
+      '今いちばん広く使われている方法は逆浸透である。この方法では、とても小さな穴のあいた特別な膜に、海水を高い圧力でおしつける。水の分子は穴を通りぬけられるが、塩分のほとんどは通りぬけられない。古い施設では、かわりに海水を熱して蒸発させ、その水蒸気を集めていたが、この方法はさらに多くのエネルギーを使う。',
+      '淡水化には欠点もある。たくさんのエネルギーが必要なので、水が高くなることがあり、電気が化石燃料からつくられていれば二酸化炭素の排出もふえる。また、この過程ではブラインとよばれるとても塩からい液体が出る。これを不注意に海にもどすと、海の生き物に害をあたえることがある。そのため研究者たちは、たとえば太陽光の電気で施設を動かすなど、淡水化をもっと安く、きれいにする方法をさがしている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['suitable', 'suitably', 'suitability', 'suit'], answer: 0, why: 'make O ＋ 形容詞「O を～にする」。補語には形容詞 suitable。副詞・名詞・動詞は補語にならない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a very salty liquid を説明し、あとに動詞 can harm が続くので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['to make', 'making', 'made', 'make'], answer: 0, why: 'ways to ～「～する方法」。名詞を後ろから説明する to 不定詞。' },
+    ],
+    tf: [
+      { statement: '地球の表面のおよそ70パーセントは水におおわれている。', answer: true, why: '第1段落 about 70 percent of Earth\'s surface is covered by water。' },
+      { statement: '逆浸透では、塩分も水も膜を通りぬける。', answer: false, why: '第2段落 most of the salt cannot。' },
+      { statement: '淡水化には多くのエネルギーが必要である。', answer: true, why: '第3段落 It requires a great deal of energy。' },
+      { statement: 'ブラインは海の生き物に害をあたえることはない。', answer: false, why: '第3段落 can harm marine life。' },
+    ],
+    qa: [
+      { q: 'Why can desalination increase carbon emissions?', choices: ['It needs a lot of energy, which may come from fossil fuels.', 'It releases salt into the air.', 'It uses oil to make the membranes.', 'It heats the whole ocean.'], answer: 0, why: '第3段落 increase carbon emissions if the power comes from fossil fuels。' },
+    ],
+  },
 ]

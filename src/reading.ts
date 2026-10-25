@@ -1872,6 +1872,17 @@ export const PASSAGES: Passage[] = [
       { q: '9月に何をした？', choices: ['たねを集めた', 'たねを植えた', '花をかざった'], answer: 0 },
     ],
   },
+  {
+    id: 'train-alone',
+    title: 'My First Train Ride Alone',
+    text: 'Last Saturday, I took the train alone for the first time. I went to my aunt\'s house in the next town. My mother gave me a map and said, "Get off at the third station." On the train, I counted the stations carefully. At the third station, I got off. My aunt was waiting for me with a big smile. I felt proud. Next time, I want to go to the zoo by train.',
+    ja: 'この前の土曜日、私ははじめてひとりで電車に乗りました。となりの町のおばさんの家に行きました。お母さんは地図をくれて「3つ目の駅でおりてね」と言いました。電車の中で、私は駅の数をていねいに数えました。3つ目の駅で、私はおりました。おばさんがにこにこして待っていてくれました。私はほこらしい気持ちになりました。次は、電車で動物園に行きたいです。',
+    questions: [
+      { q: 'どこへ行った？', choices: ['おばさんの家', '動物園', '学校'], answer: 0 },
+      { q: '何番目の駅でおりた？', choices: ['3つ目', '2つ目', '5つ目'], answer: 0 },
+      { q: '次は電車でどこへ行きたい？', choices: ['動物園', '海', '図書館'], answer: 0 },
+    ],
+  },
 ]
 // 解いた短い読解（全部の問題に答えた話の id）
 const DONE_KEY = 'eitan:short-done'

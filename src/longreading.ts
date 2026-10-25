@@ -5865,6 +5865,34 @@ export const LONG_PASSAGES: LongPassage[] = [
       { statement: 'Both schools have open days next week.', answer: false, why: 'イトウ先生の最後の発言 next month。' },
     ],
   },
+  {
+    id: 'speech-english-diary',
+    title: 'My English Diary (Speech)',
+    level: '中3（スピーチ）',
+    paragraphs: [
+      'Hello, everyone. Do you keep a diary? For the past year, I have written a short diary in English every night. Today, I would like to tell you ( A ) I started and what I have learned.',
+      'Last spring, my English teacher said, "Writing three sentences a day is better than writing nothing." I thought that sounded easy, so I tried it. At first, I only wrote things like "I ate curry. It was good." But little by little, I began ( B ) about my feelings and my dreams.',
+      'Keeping a diary has helped me in two ways. First, I can now write sentences much faster. Second, I have become better at looking back on my day. When something bad happens, writing about it in English makes me calm, because I have to think carefully about every word.',
+      'You do not need a special notebook or a lot of time. Just three sentences a night is enough. If you start today, you will be surprised at how much your English ( C ) in a year. Thank you.',
+    ],
+    ja: [
+      'みなさん、こんにちは。日記をつけていますか。この1年間、私は毎晩英語で短い日記を書いてきました。今日は、なぜ始めたのか、そして何を学んだのかをお話ししたいと思います。',
+      '去年の春、英語の先生が「1日3文書くのは、何も書かないよりいい」と言いました。かんたんそうだと思ったので、ためしてみました。はじめは「カレーを食べた。おいしかった」のようなことしか書きませんでした。でも少しずつ、自分の気持ちや夢について書くようになりました。',
+      '日記をつけることは、2つの点で私の役に立ちました。1つ目に、前よりずっと速く文が書けるようになりました。2つ目に、1日をふり返るのがうまくなりました。いやなことがあったとき、それを英語で書くと気持ちが落ちつきます。1語1語をよく考えなければならないからです。',
+      '特別なノートも、たくさんの時間もいりません。1晩に3文だけで十分です。今日始めれば、1年で自分の英語がどれだけ変わるかにおどろくでしょう。ありがとうございました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'which', 'who', 'whose'], answer: 0, why: 'tell you why I started「なぜ始めたのか」。あとに I started という文が続く間接疑問。which・who・whose ではつながらない。' },
+      { id: 'B', choices: ['writing', 'wrote', 'written', 'writes'], answer: 0, why: 'begin ～ing「～し始める」。began のあとに過去形・過去分詞・三単現は置けない。' },
+      { id: 'C', choices: ['will change', 'changing', 'to change', 'changed to'], answer: 0, why: 'how much ＋ 主語 ＋ 動詞「どれだけ～か」。これから1年のことなので will change。changing・to change では文の動詞にならない。' },
+    ],
+    tf: [
+      { statement: 'The speaker has written a diary in English for a year.', answer: true, why: '第1段落 For the past year, I have written a short diary in English every night。' },
+      { statement: 'The teacher told the students to write ten sentences a day.', answer: false, why: '第2段落 Writing three sentences a day。' },
+      { statement: 'At first, the speaker wrote about feelings and dreams.', answer: false, why: '第2段落 At first, I only wrote things like "I ate curry. It was good."。' },
+      { statement: 'Writing in English helps the speaker feel calm.', answer: true, why: '第3段落 writing about it in English makes me calm。' },
+    ],
+  },
 ]
 
 export const XP_LONG_ITEM = 5 // 1問正解ごと
