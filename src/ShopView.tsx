@@ -6,6 +6,7 @@ import { MonsterFigure } from './MonsterView'
 import { RoomScene } from './RoomSceneView'
 import { Gacha } from './GachaView'
 import { pityLeft } from './gacha'
+import { allCastles, conquered } from './castlecollect'
 import type { GachaResult } from './GachaView'
 import { CORRECT_PER_COIN, loadCoinProgress } from './shop'
 import { splitSoft } from './softbreak'
@@ -120,7 +121,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
         ))}
       </div>
       {tab === 'gacha' && attrEgg && <AttrEgg {...attrEgg} coins={wallet.coins} />}
-      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} ownedSpecies={ownedSpecies} onChara={onCharaGacha} charaPrice={charaPrice} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} free={freeGacha} onFree={onFreeGacha} rareTickets={rareTickets} srTickets={srTickets} onTier={onTierGacha} tradeCount={tradeCount} tradeDisabled={tradeDisabled} onTrade={onTrade} tradePool={tradePool} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
+      {tab === 'gacha' && onGacha && <Gacha partnerName={monster.name ?? form.name} coins={wallet.coins} members={members} ownedSpecies={ownedSpecies} onChara={onCharaGacha} charaPrice={charaPrice} tickets={wallet.tickets} pityLeft={pityLeft(wallet)} castles={conquered(allCastles())} dragonUp={dragonUp} pickup={pickup} stepLeft={stepLeft} price={gachaPrice} onDraw={onGacha} free={freeGacha} onFree={onFreeGacha} rareTickets={rareTickets} srTickets={srTickets} onTier={onTierGacha} tradeCount={tradeCount} tradeDisabled={tradeDisabled} onTrade={onTrade} tradePool={tradePool} onDrawMulti={onGachaMulti} onRaise={onRaiseNew} onNameNew={onNameNew} points={gachaPoints} onExchange={onExchange} stickers={stickers} boostColor={boostColor} luckyBag={luckyBag} onLuckyBag={onLuckyBag} />}
       {tab === 'snack' && (
         <>
       <h3 className="shop-h">

@@ -3,7 +3,7 @@ import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
 import { speak } from './speech'
 import { STICKERS, STICKER_TICKETS } from './stickers'
-import { helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
+import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
@@ -46,6 +46,7 @@ type Props = {
   tickets?: number // ガチャチケットの枚数
   partnerName?: string // レア以上が出たときによろこぶ相棒の名前
   pityLeft?: number // あと何回でスーパーレア以上が確定
+  castles?: number // 制覇した城の数（多いほどレアが出やすい）
   points?: number // ガチャポイント
   stickers?: string[] // 集めたシール
   boostColor?: string // 今日のおすすめ色の名前
@@ -72,7 +73,7 @@ type Props = {
 }
 
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
-export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
+export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
@@ -421,6 +422,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, poin
             <div style={{ width: `${((PITY - pityLeft) / PITY) * 100}%` }} />
           </div>
         </>
+      )}
+      {castles > 0 && (
+        <p className="gacha-castle-luck" aria-label="城のボーナス">
+          🏰 城のボーナス：レアが出やすさ +{Math.round(castleLuck(castles) * 100)}%（制覇した城 {castles}）
+        </p>
       )}
       {ownedSpecies && <CharBook owned={ownedSpecies} />}
       {log.length > 0 && (

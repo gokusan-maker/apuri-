@@ -259,3 +259,8 @@ it('ガチャを引くと画面いっぱいの演出ページが開き、スキ�
   fireEvent.click(within(dlg).getByRole('button', { name: /やったね！ とじる/ }))
   expect(screen.queryByRole('dialog', { name: 'ガチャの演出' })).toBeNull()
 })
+
+it('制覇した城があれば、ガチャに城のボーナス（レアの出やすさ +n%）を表示', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} castles={3} onDraw={() => null} />)
+  expect(screen.getByLabelText('城のボーナス')).toHaveTextContent('+3%')
+})
