@@ -2356,6 +2356,35 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: 'According to the passage, what usually causes a language to decline?', choices: ['Parents stop passing it on because another language seems more useful.', 'A war destroys the people who speak it.', 'The government bans it in schools.', 'Linguists stop recording it.'], answer: 0, why: '第1段落 parents … stop passing it on to their children, usually because another language seems to offer better jobs。' },
     ],
   },
+  {
+    id: 'adv-body-clock',
+    title: 'The Clock Inside Every Cell',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Almost every cell in the human body keeps time. A small group of nerve cells deep in the brain acts as a master clock, coordinating cycles of roughly twenty-four hours ( A ) are known as circadian rhythms. These rhythms influence when we feel sleepy, when our body temperature rises and falls, and even when certain hormones are released into the blood.",
+      "The master clock is reset each day mainly by light. When light enters the eyes in the morning, signals travel to the brain and shift the clock slightly ( B ) it stays in step with the sun. This is why people who fly across several time zones suffer from jet lag: their internal clock still follows the old schedule, and it can take several days to adjust. Shift workers face an even more serious problem, ( C ) their clocks may never fully adapt to working at night.",
+      "Doctors are now paying attention to timing as well as to dosage. Some studies suggest that certain medicines work better, or cause fewer side effects, when ( D ) at a particular time of day. Research on long-term night workers has also linked disturbed rhythms to a higher risk of conditions such as obesity and heart disease. Although much remains uncertain, the idea that when we do something can matter as much as what we do is changing how scientists think about health.",
+    ],
+    ja: [
+      '人間の体のほとんどすべての細胞は時を刻んでいる。脳の奥深くにある小さな神経細胞の集まりが親時計としてはたらき、概日リズムとして知られる、およそ24時間の周期をまとめている。こうしたリズムは、私たちがいつ眠くなるか、体温がいつ上がり下がりするか、さらには特定のホルモンがいつ血液中に放出されるかにまで影響している。',
+      '親時計は、主に光によって毎日合わせ直される。朝、光が目に入ると、信号が脳に伝わり、時計が太陽と歩調を合わせたままでいられるように少しずらす。いくつもの時間帯をこえて飛行機で移動した人が時差ぼけになるのはこのためだ。体内の時計はまだ以前のスケジュールにしたがっていて、合わせるのに数日かかることがある。交代勤務で働く人は、さらに深刻な問題に直面する。夜に働くことに、時計が完全には慣れないかもしれないからである。',
+      '医師たちはいま、薬の量だけでなくタイミングにも注目している。ある種の薬は、1日の特定の時間に飲むと、よく効いたり副作用が少なくなったりすることを示す研究もある。長年夜に働いてきた人々についての研究は、乱れたリズムを、肥満や心臓病といった病気のリスクの高さとも結びつけている。まだわからないことは多いが、何をするかと同じくらい、いつするかが大切になりうるという考えは、科学者の健康の考え方を変えつつある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'they'], answer: 0, why: '名詞 cycles を説明する主格の関係代名詞 that。what は先行詞をとらず、who は人だけ、they では文がつながらない。' },
+      { id: 'B', choices: ['so that', 'in order to', 'such that a', 'so as'], answer: 0, why: 'うしろが文（it stays …）なので、目的を表す接続詞 so that。in order to・so as のあとは動詞の原形。' },
+      { id: 'C', choices: ['since', 'because of', 'due to', 'owing to'], answer: 0, why: 'うしろが文（their clocks may …）なので理由を表す接続詞 since。because of・due to・owing to のあとは名詞。' },
+      { id: 'D', choices: ['taken', 'taking', 'take', 'they taken'], answer: 0, why: '薬は「飲まれる」側なので when (they are) taken。when のあとの主語と be 動詞が省かれた形。' },
+    ],
+    tf: [
+      { statement: '概日リズムは、眠気や体温の変化に影響している。', answer: true, why: '第1段落 These rhythms influence when we feel sleepy, when our body temperature rises and falls。' },
+      { statement: '親時計は、主に食事の時間によって毎日合わせ直される。', answer: false, why: '第2段落 The master clock is reset each day mainly by light。' },
+      { statement: '筆者によれば、薬を飲む時間によって効き方が変わる可能性がある。', answer: true, why: '第3段落 certain medicines work better … when taken at a particular time of day。' },
+    ],
+    qa: [
+      { q: 'Why do people who fly across several time zones suffer from jet lag?', choices: ['Their internal clock still follows the old schedule.', 'The air in planes is too dry.', 'They take medicine at the wrong dose.', 'Light cannot enter their eyes on the plane.'], answer: 0, why: '第2段落 their internal clock still follows the old schedule。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
