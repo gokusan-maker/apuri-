@@ -18,6 +18,7 @@ import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BOSS_GROUPS, loadBossGroup, saveBossGroup, type BossGroup } from './bossfilter'
 import { CastleMap } from './CastleMapView'
+import { BossArea, type AreaSpecial } from './BossAreaView'
 import { Quiz } from './QuizView'
 import { allThreeStars, isUnlocked, starsFor, stagesOf, STAGE_SIZE, type Stage, type StageRecord } from './stages'
 import { LEVELS, WORDS, wordsOf, type Level, type Word } from './words'
@@ -101,6 +102,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
   const [group, setGroup] = useState(loadBossGroup) // ボスをレベルでしぼりこむ
+  const [area, setArea] = useState<BossGroup | null>(null) // ボス部屋：まずレベルをえらぶページ、えらんだらそのエリアへ
 
   const inApp = useContext(PlayContext) !== null // App の中では、もどるは上の「ほかの問題をえらぶ」
   const backLabel = part === 'boss' ? '👹 ボスの一覧へ' : 'ステージにもどる' // 勝ったあとのボタン
@@ -521,6 +523,46 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     )
   }
 
+  const groupLabel = (id: BossGroup) => BOSS_GROUPS.find((g) => g.id === id)!.label.replace(/^\S+ /, '')
+  const bossMap = (
+    <CastleMap
+      title="ボスの城の地図"
+      tabsLabel="ボスのレベル"
+      current={part === 'boss' && area === null ? '' : group}
+      spots={BOSS_GROUPS.map((g) => {
+        const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
+        return { id: g.id, name: groupLabel(g.id), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
+      })}
+      onPick={(id) => {
+        setGroup(id as BossGroup)
+        saveBossGroup(id as BossGroup)
+        setArea(id as BossGroup)
+        window.scrollTo?.({ top: 0 })
+      }}
+    />
+  )
+  // ボス部屋のさいしょ：レベルをえらぶページ（地図）
+  if (part === 'boss' && area === null)
+    return (
+      <section className="card stages">
+        <h2>👹 ボス部屋</h2>
+        <p className="boss-pick-title">🎯 行きたいレベルの城をえらぼう</p>
+        {bossMap}
+      </section>
+    )
+  // エリアに出現する特別なボス（今日のボス・とくべつイベント）
+  const specials: AreaSpecial[] = [
+    ...(daily ? [{ id: 'daily', icon: '👹', name: '今日のボス', badge: dailyDone ? '✅ クリア' : 'TEAM BATTLE', onClick: () => { setDailyFight(1); setFighting(daily) } }] : []),
+    ...(specialEvent === 'rare' ? [{ id: 'rare', icon: '✨', name: '今週のレアボス', badge: rareWeek === week ? '✅ クリア' : 'レア', onClick: () => setRareFight(true) }] : []),
+    ...(specialEvent === 'weekend' ? [{ id: 'weekend', icon: '🌙', name: '週末ボス', badge: weekendWeek === week ? '✅ クリア' : '週末だけ', onClick: () => setWeekendFight(true) }] : []),
+    ...(specialEvent === 'night' ? [{ id: 'night', icon: '🌃', name: 'ナイトボス', badge: nightDay === dayKey() ? '✅ クリア' : '夜だけ', onClick: () => setNightFight(true) }] : []),
+    ...(specialEvent === 'quest' ? [{ id: 'quest', icon: '👑', name: questBossOf(dayKey()).look.name, badge: questDay === dayKey() ? '✅ クリア' : '強敵', aria: `特別クエスト：${questBossOf(dayKey()).look.name}${questDay === dayKey() ? '（クリア）' : '（強敵）'}`, onClick: () => setQuestFight(true) }] : []),
+    ...(specialEvent === 'rush' ? [{ id: 'rush', icon: '🔥', name: 'ボスラッシュ', badge: rushDone ? '✅ クリア' : undefined, onClick: () => setRush({ round: 0, hearts: HEARTS, won: false }) }] : []),
+    ...(specialEvent === 'rush-ex' ? [{ id: 'rush-ex', icon: '🌟', name: 'ボスラッシュEX', badge: rushExDone ? '✅ クリア' : '週末限定', onClick: () => setRush({ round: 0, hearts: HEARTS, won: false, ex: true }) }] : []),
+    ...(specialEvent === 'endless' ? [{ id: 'endless', icon: '🗼', name: 'エンドレスの塔', badge: endlessBest > 0 ? `最高 ${endlessBest}階` : undefined, onClick: () => setEndless({ floor: 1, hearts: HEARTS, won: false }) }] : []),
+    ...(specialEvent === 'time' ? [{ id: 'time', icon: '⏱️', name: 'ボスのタイムアタック', badge: loadBossTaBest() > 0 ? `ベスト ${loadBossTaBest()}` : undefined, onClick: () => setTimeAttack(true) }] : []),
+  ]
+
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
     <section className="card stages">
@@ -530,19 +572,14 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       {/* ボスをえらぶ：単語帳ごとのボスを1体ずつ色つきのタイルでならべ、どのボスもタップで戦える（オーナーの要望） */}
       {part === 'boss' && (
         <>
-        <CastleMap
-          title="ボスの城の地図"
-          tabsLabel="ボスのレベル"
-          current={group}
-          spots={BOSS_GROUPS.map((g) => {
-            const lvs = LEVELS.filter((lv) => g.levels.includes(lv))
-            return { id: g.id, name: g.label.replace(/^\S+ /, ''), sub: { jh: '中1〜中3', hs: '高校・熟語', adv: '英検2級〜', basic: '数・色など' }[g.id], done: lvs.filter((lv) => boss[lv]).length, total: lvs.length }
-          })}
-          onPick={(id) => {
-            setGroup(id as BossGroup)
-            saveBossGroup(id as BossGroup)
-          }}
-        />
+        {area !== null && (
+          <>
+            <button className="list-link boss-area-back" onClick={() => setArea(null)}>
+              ← レベルをえらびなおす
+            </button>
+            <BossArea name={groupLabel(group)} group={group} specials={specials} />
+          </>
+        )}
         {(() => {
           const lvs = LEVELS.filter((lv) => BOSS_GROUPS.find((g) => g.id === group)!.levels.includes(lv))
           return (
@@ -605,7 +642,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           }
         }}
       />
-      {specialEvent && (
+      {specialEvent && (part !== 'boss' || specialEvent === 'gold' || specialEvent === 'univ') && (
         <div className={`special-event se-${specialEvent}`} role="region" aria-label="とくべつイベント">
           <p className="special-event-ribbon">
             ⚡ とくべつイベント出現中！<span className="special-event-note">{SPECIAL_EVENT_NOTE[specialEvent]}</span>
@@ -658,7 +695,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <p className="univ-rule">下の階から順に挑戦・高校の文法と入試の長文</p>
           </details>
           )}
-          {specialEvent !== 'gold' && specialEvent !== 'univ' && (
+          {specialEvent !== 'gold' && specialEvent !== 'univ' && part !== 'boss' && (
             <div className="boss-modes">
               {specialEvent === 'endless' && <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>
         <span className="lg-icon" aria-hidden="true">🗼</span><span className="mode-name">エンドレスの塔</span>{endlessBest > 0 && <span className="mode-badge">最高 {endlessBest}階</span>}
@@ -691,7 +728,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         </div>
       )}
       {goldenLevelOf(LEVELS, dayKey()) && <p className="golden-boss-note">✨ 今日は「{goldenLevelOf(LEVELS, dayKey())}」のボスが金色 +🪙{GOLDEN_COINS}</p>}
-      {daily && (
+      {daily && part !== 'boss' && (
         <button
           className="boss-go-btn daily-boss"
           onClick={() => {

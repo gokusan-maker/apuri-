@@ -3327,3 +3327,34 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .rc-find { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: color-mix(in srgb, #0ea5e9 14%, transparent); border-left: 4px solid #0ea5e9; }
 .rc-find-cap { margin: 0 0 4px; font-weight: 800; font-size: 0.85rem; }
 .rc-find-en { margin: 0; line-height: 1.5; }
+
+/* ボス部屋のエリア：特別なボスが出現する地図 */
+.boss-area-back { margin: 0 0 8px; }
+.barea { margin: 0 0 12px; border-radius: 18px; overflow: hidden; border: 3px solid #7f1d1d; box-shadow: 0 6px 0 #450a0a, 0 10px 22px rgb(0 0 0 / 0.2); }
+.barea-title { margin: 0; padding: 8px 12px; font-weight: 900; color: #fff7ed; background: linear-gradient(90deg, #7f1d1d, #b91c1c); text-shadow: 0 1px 2px rgb(0 0 0 / 0.4); }
+.barea-land { position: relative; height: 230px; }
+.barea-jh .barea-land { background: linear-gradient(180deg, #7dd3fc, #bbf7d0 60%); }
+.barea-hs .barea-land { background: linear-gradient(180deg, #fdba74, #fde68a 60%); }
+.barea-adv .barea-land { background: linear-gradient(180deg, #1e1b4b, #6d28d9 55%, #c4b5fd); }
+.barea-basic .barea-land { background: linear-gradient(180deg, #f9a8d4, #fef9c3 60%); }
+.barea-bg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.barea-hill.b1 { fill: rgb(22 163 74 / 0.55); }
+.barea-hill.b2 { fill: rgb(21 128 61 / 0.75); }
+.barea-hs .barea-hill.b1 { fill: rgb(217 119 6 / 0.5); }
+.barea-hs .barea-hill.b2 { fill: rgb(180 83 9 / 0.7); }
+.barea-adv .barea-hill.b1 { fill: rgb(226 232 240 / 0.7); }
+.barea-adv .barea-hill.b2 { fill: rgb(203 213 225 / 0.9); }
+.barea-basic .barea-hill.b1 { fill: rgb(132 204 22 / 0.5); }
+.barea-basic .barea-hill.b2 { fill: rgb(101 163 13 / 0.7); }
+.barea-road { fill: none; stroke: #fef3c7; stroke-width: 6; stroke-dasharray: 2 9; stroke-linecap: round; vector-effect: non-scaling-stroke; }
+.barea-deco { position: absolute; font-size: 1.4rem; }
+.barea-deco.d1 { left: 6%; top: 14%; }
+.barea-deco.d2 { right: 8%; top: 8%; }
+.barea-deco.d3 { left: 44%; top: 30%; }
+.barea-none { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 80%; margin: 0; padding: 8px 10px; border-radius: 12px; background: rgb(255 255 255 / 0.85); color: #44403c; font-size: 0.82rem; text-align: center; }
+.barea-spot { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; gap: 1px; padding: 4px; width: 34%; border: none; background: none; cursor: pointer; font: inherit; color: #1c1917; }
+.barea-icon { display: grid; place-items: center; width: 52px; height: 52px; border-radius: 50%; font-size: 1.9rem; background: radial-gradient(circle, #fff 0 40%, #fde047 60%, transparent 72%); animation: barea-glow 1.4s ease-in-out infinite; }
+.barea-appear { padding: 0 6px; border-radius: 6px; background: #dc2626; color: #fff; font-size: 0.6rem; font-weight: 900; }
+.barea-name { padding: 1px 6px; border-radius: 8px; background: rgb(255 255 255 / 0.92); font-size: 0.74rem; line-height: 1.25; text-align: center; overflow-wrap: anywhere; }
+.barea-badge { font-size: 0.62rem; font-weight: 800; color: #fff; background: #7c3aed; border-radius: 6px; padding: 0 5px; }
+@keyframes barea-glow { 50% { transform: scale(1.08); filter: drop-shadow(0 0 8px #facc15); } }
