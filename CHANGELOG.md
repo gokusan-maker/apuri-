@@ -2090,3 +2090,4 @@
 - 2026-10-25: 京大・東大の単語を40語追加（grandiose・propitious・quixotic・unequivocal・vicissitude など）
 - 2026-10-25: TOEFL・IELTSの学術単語を54語追加（igneous・asteroid・chromosome・peninsula・stratosphere など）で300語に
 - 2026-10-25: 私学の単語を23語・私学難関の単語を25語追加（dignity・diagnosis・discrimination・initiative など）で両レベル300語に
+- 2026-10-25: 国公立・旧帝大・京大・東大の単語を71語追加（milestone・rationale・repertoire・sovereignty など）で4レベルとも300語に
