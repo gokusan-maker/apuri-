@@ -172,8 +172,10 @@ describe('App', () => {
       fireEvent.click(screen.getByText(/次へ|結果を見る/))
     }
     expect(localStorage.getItem('eitan:today-words')).toBe(day)
-    // 終わると「次の課題へ ▶」（まだの課題）が出る
-    expect(screen.getByRole('button', { name: /次の課題へ ▶ 📐文法/ })).toBeInTheDocument()
+    // 終わると「〇秒後に 次の課題へ」が出て、自動で次の課題（文法）へ進む
+    expect(screen.getByText(/3秒後に 次の課題「📐文法」へ/)).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'いますぐ ▶' })).toBeInTheDocument()
+    expect(await screen.findByRole('button', { name: /今日の課題（文法）：いまの課題/ }, { timeout: 4500 })).toBeDisabled()
     // 読解：上のバーのボタンから、今日の英文がすぐ開く
     fireEvent.click(within(bar()).getByRole('button', { name: /今日の課題（読解）へ/ }))
     expect(screen.getByRole('heading', { name: new RegExp(p.title) })).toBeInTheDocument()
@@ -1984,4 +1986,13 @@ it('キャラガチャ：🪙100で、生まれた姿の仲間が1体ふえる',
   expect(party.members).toHaveLength(2)
   expect(party.members[1].xp).toBeGreaterThanOrEqual(30)
   expect(JSON.parse(localStorage.getItem('eitan:wallet')!).coins).toBeLessThan(100) // タマゴ1回ぶん（🪙50）より多くはらう（おまけのコインは最大40）
+})
+
+it('今日の課題は単語→文法→読解の順に、まだの課題へ進む（最後までいったら最初へ）', async () => {
+  const { nextTodayTask } = await import('./todayfocus')
+  expect(nextTodayTask('word', { word: true, grammar: false, reading: false })).toBe('grammar')
+  expect(nextTodayTask('grammar', { word: false, grammar: true, reading: false })).toBe('reading')
+  expect(nextTodayTask('word', { word: true, grammar: true, reading: false })).toBe('reading')
+  expect(nextTodayTask('reading', { word: false, grammar: true, reading: true })).toBe('word')
+  expect(nextTodayTask('reading', { word: true, grammar: true, reading: true })).toBeUndefined()
 })

@@ -16,7 +16,7 @@ import { BuddyRow } from './BuddyRowView'
 import { TodayTasks } from './TodayTasksView'
 import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
-import { TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
+import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
 import { WalkQuiz } from './WalkQuizView'
 import { addPiece, loadPieces, PIECES_FOR_TICKET, savePieces } from './ticketpiece'
@@ -380,9 +380,50 @@ function App() {
     window.scrollTo?.({ top: 0 })
   }
   const todayDone: Record<TodayTask, boolean> = { word: loadTodayWordsDay() === today, grammar: loadDailyGrammarDay() === today, reading: loadDailyShortDay() === today }
-  const todayNext = todayFocus && todayDone[todayFocus] ? TODAY_TASKS.find((t) => t !== todayFocus && !todayDone[t]) : undefined // 今日の課題を1つ終えたら、まだの課題へ
+  const todayNext = todayFocus && todayDone[todayFocus] ? nextTodayTask(todayFocus, todayDone) : undefined // 今日の課題を1つ終えたら、まだの課題へ（単語→文法→読解の順）
   const todayAllDone = !!todayFocus && TODAY_TASKS.every((t) => todayDone[t]) // 3つともクリア → ホームでトリオボーナス
-  const todayNextBtn = todayNext ? (
+  // 今日の課題を1つ終えたら、数秒後に自動でまだの課題へ（単語→文法→読解。とめることもできる）
+  const [autoNext, setAutoNext] = useState<{ to: TodayTask; left: number } | null>(null)
+  const prevFocusDone = useRef('')
+  const focusDoneKey = todayFocus ? `${todayFocus}:${todayDone[todayFocus]}` : ''
+  useEffect(() => {
+    const prev = prevFocusDone.current
+    prevFocusDone.current = focusDoneKey
+    if (!todayFocus) setAutoNext(null)
+    else if (prev === `${todayFocus}:false` && todayDone[todayFocus] && todayNext) setAutoNext({ to: todayNext, left: AUTO_NEXT_SEC })
+  }, [focusDoneKey]) // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    if (!autoNext) return
+    const id = window.setTimeout(() => {
+      if (autoNext.left > 1) setAutoNext({ ...autoNext, left: autoNext.left - 1 })
+      else {
+        setAutoNext(null)
+        goToday(autoNext.to)
+      }
+    }, 1000)
+    return () => window.clearTimeout(id)
+  }, [autoNext]) // eslint-disable-line react-hooks/exhaustive-deps
+  const todayNextBtn = autoNext ? (
+    <div className="today-auto-next" role="status">
+      <p>
+        ✅ クリア！ {autoNext.left}秒後に 次の課題「{TODAY_TASK_LABEL[autoNext.to]}」へ
+      </p>
+      <div className="today-auto-btns">
+        <button
+          className="next-unit-btn today-next-btn"
+          onClick={() => {
+            setAutoNext(null)
+            goToday(autoNext.to)
+          }}
+        >
+          いますぐ ▶
+        </button>
+        <button className="list-link pill-btn pill-blue" onClick={() => setAutoNext(null)}>
+          ここにのこる
+        </button>
+      </div>
+    </div>
+  ) : todayNext ? (
     <button className="next-unit-btn today-next-btn" onClick={() => goToday(todayNext)}>
       次の課題へ ▶ {TODAY_TASK_LABEL[todayNext]}
     </button>

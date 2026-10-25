@@ -3058,3 +3058,9 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .ur-wings { transform-box: view-box; transform-origin: 50px 56px; animation: ur-flap 2.2s ease-in-out infinite; }
 @keyframes ur-flap { 50% { transform: scaleX(1.06) translateY(-1px); } }
 @media (prefers-reduced-motion: reduce) { .rare-rays, .ur-rings, .rare-sweep, .ur-body, .rare-float > *, .rare-glint, .ur-wings { animation: none; } }
+
+/* 今日の課題：自動で次へ */
+.today-auto-next { margin: 12px 0; padding: 12px; border-radius: 16px; background: linear-gradient(135deg, #dcfce7, #e0f2fe); border: 2px solid #22c55e; text-align: center; color: #14532d; animation: fade-in 0.3s; }
+.today-auto-next p { margin: 0 0 8px; font-weight: 900; }
+.today-auto-btns { display: flex; gap: 8px; justify-content: center; align-items: center; flex-wrap: wrap; }
+.today-auto-btns .today-next-btn { margin: 0; }
