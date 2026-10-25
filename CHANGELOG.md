@@ -2066,3 +2066,4 @@
 - 2026-10-25: 私学レベルの長文「Why Mosquitoes Prefer Some People」（蚊に刺されやすい人・241語）を追加
 - 2026-10-25: TOEICの単語を20語追加（appraisal・compliance・fiscal・installment・premises・surcharge など）
 - 2026-10-25: TOEFL・IELTSの学術単語を20語追加（aquifer・biodiversity・deforestation・germinate・vertebrate など）
+- 2026-10-25: 私学・私学難関の単語を30語、京大・東大の単語を10語追加（abide・ascertain・benign・camaraderie・anomaly など）
