@@ -16,7 +16,7 @@ export const EXAM_TIERS: { id: ExamTier; label: string }[] = [
 // 長文ごとの入試レベル（話題と長さで分ける。医学部は医療・脳・からだの話題）
 const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
   // 共通テスト：お知らせ・メールなどの実用文と、短めの評論
-  'adv-notice-elevator': 'kyotsu', 'adv-notice-library': 'kyotsu', 'adv-biz-meeting-email': 'kyotsu', 'adv-biz-delay-email': 'kyotsu', 'adv-biz-launch-invite': 'kyotsu',
+  'adv-notice-elevator': 'kyotsu', 'adv-notice-volunteers': 'kyotsu', 'adv-notice-library': 'kyotsu', 'adv-biz-meeting-email': 'kyotsu', 'adv-biz-delay-email': 'kyotsu', 'adv-biz-launch-invite': 'kyotsu',
   'adv-advertising': 'kyotsu', 'adv-self-driving': 'kyotsu', 'adv-nostalgia': 'kyotsu', 'adv-disagreement': 'kyotsu', 'adv-procrastination': 'kyotsu', 'adv-stories': 'kyotsu', 'adv-fast-fashion': 'kyotsu', 'adv-navigation-apps': 'kyotsu',
   // 私立難関大：行動経済学・心理の評論
   'adv-choice': 'shiritsu', 'adv-sunk-cost': 'shiritsu', 'adv-defaults': 'shiritsu', 'adv-anchoring': 'shiritsu', 'adv-decoy': 'shiritsu', 'adv-framing': 'shiritsu', 'adv-endowment': 'shiritsu', 'adv-ikea-effect': 'shiritsu', 'adv-halo-effect': 'shiritsu', 'adv-mere-exposure': 'shiritsu', 'adv-comparison-trap': 'shiritsu', 'adv-spotlight': 'shiritsu', 'adv-planning-fallacy': 'shiritsu',

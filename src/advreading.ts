@@ -2414,6 +2414,34 @@ export const ADV_PASSAGES: LongPassage[] = [
       { q: "Why would tissue grown from a patient's own cells be useful?", choices: ['The immune system would recognize it as its own.', 'It can be grown in a single day.', 'It does not need any surgery.', 'It is cheaper than all medicine.'], answer: 0, why: '第3段落 which the immune system would recognize as its own。' },
     ],
   },
+  {
+    id: 'adv-notice-volunteers',
+    title: 'Notice: Volunteers Wanted for Family Science Day',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Riverside Science Museum is looking for volunteers to help at our Family Science Day on Saturday, July 20. No special knowledge is required, ( A ) all volunteers must attend a one-hour training session on July 13.",
+      "Volunteers will guide visitors, help children with simple experiments, and answer questions at the information desk. Each volunteer will work a four-hour shift, either in the morning (9:00-13:00) or in the afternoon (13:00-17:00). Lunch will be provided for everyone ( B ) works the morning shift. Please wear comfortable shoes, as you will be on your feet for most of the day.",
+      "To apply, please fill out the form on our website by June 30. Applicants under 16 must have permission from a parent or guardian. As a thank-you, every volunteer will receive a free one-year museum pass. If you have any questions, please contact Ms. Ellis at the front desk or send an email to the address ( C ) below.",
+    ],
+    ja: [
+      'リバーサイド科学館では、7月20日（土）の「家族の科学の日」を手伝ってくださるボランティアをさがしています。特別な知識は必要ありませんが、ボランティアの方は全員、7月13日の1時間の研修に参加しなければなりません。',
+      'ボランティアの方には、来館者の案内、子どもたちのかんたんな実験の手伝い、案内所での質問への対応をしていただきます。各ボランティアは、午前（9時〜13時）か午後（13時〜17時）のどちらかの4時間のシフトで働きます。午前のシフトで働く方には全員に昼食をご用意します。ほとんどの時間立っていることになるので、はきなれた靴でお越しください。',
+      '応募するには、6月30日までに当館のウェブサイトのフォームに記入してください。16歳未満の方は、保護者の許可が必要です。お礼として、ボランティアの方には全員、1年間の無料入館パスをさしあげます。ご質問があれば、受付のエリスまでお問い合わせいただくか、下に示したアドレスにメールをお送りください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'despite', 'although of', 'in spite'], answer: 0, why: 'うしろが文（all volunteers must …）なので接続詞 but。despite のうしろは名詞、although of・in spite（of がない）という形はない。' },
+      { id: 'B', choices: ['who', 'which', 'whom', 'whose'], answer: 0, why: 'everyone（人）を説明し、works の主語になる関係代名詞 who。' },
+      { id: 'C', choices: ['shown', 'showing', 'shows', 'to showing'], answer: 0, why: 'アドレスは「示される」側なので過去分詞 shown（the address shown below＝下に示したアドレス）。' },
+    ],
+    tf: [
+      { statement: 'ボランティアをするには、特別な知識が必要だ。', answer: false, why: '第1段落 No special knowledge is required。' },
+      { statement: '午前のシフトで働くボランティアには昼食が出る。', answer: true, why: '第2段落 Lunch will be provided for everyone who works the morning shift。' },
+      { statement: '16歳未満の人は応募できない。', answer: false, why: '第3段落 Applicants under 16 must have permission from a parent or guardian（許可があれば応募できる）。' },
+    ],
+    qa: [
+      { q: 'What will every volunteer receive?', choices: ['A free one-year museum pass.', 'Lunch every day for a year.', 'A science textbook.', 'Money for transportation.'], answer: 0, why: '第3段落 every volunteer will receive a free one-year museum pass。' },
+    ],
+  },
 {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
