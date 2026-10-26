@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'want-done': { wrong: 'I want this shirt washing.', right: 'I want this shirt washed.', why: 'シャツは「洗われる」側なので過去分詞。' },
   'too-to-so-that': { wrong: "This box is so heavy that I can't carry.", right: "This box is so heavy that I can't carry it.", why: 'so ～ that の文では carry の目的語 it が必要（too ～ to の文ではいらない）。' },
   'at-first-last': { wrong: 'At the first, I was nervous.', right: 'At first, I was nervous.', why: 'at first には the をつけない。' },
   'linking-phrases': { wrong: 'On the other hands, it is expensive.', right: 'On the other hand, it is expensive.', why: 'on the other hand の hand は単数。' },
