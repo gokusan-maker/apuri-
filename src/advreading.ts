@@ -4943,6 +4943,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-matthew-effect',
+    title: 'Why Small Advantages Grow',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1968, the sociologist Robert K. Merton noticed a curious pattern in science. When a famous researcher and an unknown one made similar discoveries, the famous researcher usually received most of the credit. Merton named this the 'Matthew effect,' after a line in the Bible suggesting that those who already have will be given more.",
+      "The effect is not limited to science. Consider youth sports. In many countries, children are grouped by the year in which they were born. A child born early in the year may be almost twelve months older than a teammate born late in the year, and at the age of eight, that difference can make the older child noticeably bigger and stronger. Coaches, seeing this, tend to select the older children for special teams, ( A ) they receive better training and more practice. Over time, a small early advantage grows into a real difference in skill. Studies of ice hockey players in Canada, for example, have found that a disproportionate number of professionals were born in the first few months of the year.",
+      "What makes the Matthew effect troubling is that the initial advantage often has little to do with talent. A slightly older child or a researcher at a well-known university gets more opportunities, and those opportunities then produce the success ( B ) seems to justify the original choice.",
+      "Recognizing the effect allows us to reduce it. Some sports clubs now take birth dates into account ( C ) selecting players, and some journals hide authors' names from reviewers. Such measures cannot remove every unfair advantage, but they can help ensure that rewards depend more on ability than on luck.",
+    ],
+    ja: [
+      '1968年、社会学者のロバート・K・マートンは、科学の世界にある奇妙なパターンに気づいた。有名な研究者と無名の研究者がにたような発見をすると、たいてい有名な研究者のほうが手柄のほとんどを得るのだ。マートンはこれを、すでに持っている者はさらに与えられるという聖書の一節にちなんで、「マタイ効果」と名づけた。',
+      'この効果は科学にかぎらない。子どものスポーツを考えてみよう。多くの国では、子どもは生まれた年ごとに分けられる。年のはじめに生まれた子は、年の終わりに生まれたチームメイトより、ほぼ12か月年上のこともあり、8歳では、その差によって年上の子のほうがはっきりと体が大きく力も強くなりうる。これを見たコーチは、年上の子を選抜チームに選びがちで、そこで彼らはよりよい指導とより多くの練習を受ける。やがて、はじめの小さな有利さは、技術の本当の差へと育っていく。たとえばカナダのアイスホッケー選手の研究では、プロ選手のうち年のはじめの数か月に生まれた人が、割合から考えられるよりずっと多いことがわかっている。',
+      'マタイ効果がやっかいなのは、はじめの有利さが、才能とはほとんど関係ないことが多い点だ。少し年上の子や、有名な大学の研究者は、より多くの機会を得る。そしてその機会が成功を生み、その成功がもとの選択を正しかったように見せてしまうのである。',
+      'この効果に気づけば、それを小さくすることができる。選手を選ぶときに生まれた月を考えに入れるスポーツクラブや、審査する人に著者の名前をかくす学術誌も出てきている。こうした対策で不公平な有利さをすべてなくすことはできないが、報いが運よりも能力によって決まるようにする助けにはなるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'that', 'what'], answer: 0, why: 'コンマのあとで special teams（場所）を受け、うしろが欠けのない文（they receive …）なので関係副詞 where。which・that・what のうしろには欠けた部分が必要で、that はコンマのあとにも使えない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the success を説明し、seems の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['when', 'during', 'among', 'between'], answer: 0, why: 'when ＋ -ing「～するときに」（when they select の they are が省略された形）。during・among・between のうしろに -ing のかたまりは続かない。' },
+    ],
+    underline: {
+      phrase: 'a disproportionate number of professionals',
+      choices: ['more professionals than would be expected', 'very few professionals', 'exactly half of the professionals', 'professionals of the same height'],
+      answer: 0,
+      why: 'disproportionate は「つり合いのとれない・不釣り合いに多い（少ない）」。ここでは、年のはじめに生まれたプロが、ふつう予想されるよりずっと多いという意味。',
+    },
+    order: {
+      words: ['grows', 'into', 'a', 'real', 'difference', 'in', 'skill'],
+      rest: '',
+      answer: 'grows into a real difference in skill',
+      ja: '（小さな有利さが）技術の本当の差へと育つ。（grow into ～＝育って～になる）',
+    },
+    tf: [
+      { statement: 'マートンによれば、有名な研究者と無名の研究者は、同じように手柄を得る。', answer: false, why: '第1段落 the famous researcher usually received most of the credit。' },
+      { statement: '8歳では、生まれた月のちがいで体の大きさに差が出ることがある。', answer: true, why: '第2段落 at the age of eight, that difference can make the older child noticeably bigger and stronger。' },
+      { statement: '筆者によれば、はじめの有利さは才能と強く結びついていることが多い。', answer: false, why: '第3段落 the initial advantage often has little to do with talent。' },
+      { statement: '審査する人に著者の名前をかくす学術誌がある。', answer: true, why: '第4段落 some journals hide authors\' names from reviewers。' },
+    ],
+    qa: [
+      { q: 'Why do older children in youth sports often become more skilled?', choices: ['They are chosen for special teams and get more training.', 'They are always more talented from birth.', 'They practice alone more often.', 'They are given easier games to play.'], answer: 0, why: '第2段落 Coaches … tend to select the older children for special teams, where they receive better training and more practice。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
