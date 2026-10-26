@@ -5524,6 +5524,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-loanwords',
+    title: 'Words That Travel',
+    level: '難関大（評論）',
+    paragraphs: [
+      "No language lives in isolation. Whenever people from different cultures meet to trade, travel, or rule, words cross from one language into another. These borrowed words, called loanwords, are like souvenirs ( A ) tell the story of past contact.",
+      "English is full of them. After the Normans from France conquered England in 1066, French became the language of the ruling class for centuries. This history can still be seen at the dinner table. The names of farm animals, such as 'cow' and 'pig,' come from Old English, the language of the people who raised them. The names of the meat, 'beef' and 'pork,' come from French, the language of those who ate it.",
+      "Borrowing goes in every direction. Japanese has taken in thousands of words from English, ( B ) English has borrowed words such as 'tsunami,' 'karaoke,' and 'emoji' from Japanese. Sometimes a borrowed word changes its meaning along the way. Japanese also creates new expressions from English parts, so English speakers may not understand them.",
+      "Some people worry that too many foreign words will damage their language. Yet history suggests that languages are remarkably good at absorbing new words and making them their own. A loanword that sounds strange today may sound perfectly natural to the next generation, ( C ) will probably not even realize where it came from.",
+    ],
+    ja: [
+      'ほかの言語とかかわらずに生きている言語はない。ちがう文化の人々が交易や旅、支配のために出会うたびに、ことばはある言語から別の言語へとわたっていく。こうした借りてきたことばは外来語とよばれ、過去の出会いの物語を伝えるおみやげのようなものである。',
+      '英語には外来語がたくさんある。1066年にフランスから来たノルマン人がイングランドを征服したあと、フランス語は何世紀にもわたって支配階級のことばになった。この歴史は、今でも夕食のテーブルで見ることができる。「cow（牛）」や「pig（豚）」のような家畜の名前は、それを育てた人々のことばである古英語から来ている。一方、肉の名前「beef（牛肉）」や「pork（豚肉）」は、それを食べた人々のことばであるフランス語から来ているのだ。',
+      '借用はあらゆる方向に起こる。日本語は英語から何千もの単語をとり入れてきたが、英語も「tsunami」「karaoke」「emoji」のような単語を日本語から借りている。借りたことばは、途中で意味が変わることもある。また日本語は英語の部品から新しい表現をつくるので、英語を話す人にはわからないこともある。',
+      '外国のことばが多すぎると自分の言語がそこなわれる、と心配する人もいる。しかし歴史を見ると、言語は新しいことばを吸収して自分のものにするのがとても得意なようだ。今日は変に聞こえる外来語も、次の世代にはまったく自然に聞こえるかもしれない。その世代の人たちは、おそらくそのことばがどこから来たのかさえ気づかないだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 souvenirs を説明し、tell の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'unlike'], answer: 0, why: 'うしろが文（English has borrowed …）なので、対比の接続詞 while「一方で」。during・despite・unlike のうしろは名詞。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: 'コンマのあとで the next generation（人々）を受け、will realize の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+    ],
+    underline: {
+      phrase: 'in isolation',
+      choices: ['completely separated from others', 'in a large group', 'in good health', 'for a very long time'],
+      answer: 0,
+      why: 'isolation は「孤立・切りはなされていること」。in isolation で「ほかから切りはなされて・単独で」。',
+    },
+    order: {
+      words: ['the', 'language', 'of', 'the', 'ruling', 'class'],
+      rest: '',
+      answer: 'the language of the ruling class',
+      ja: '支配階級のことば。（ruling＝支配している）',
+    },
+    tf: [
+      { statement: '1066年以後、フランス語はイングランドの支配階級のことばになった。', answer: true, why: '第2段落 French became the language of the ruling class for centuries。' },
+      { statement: '「beef」や「pork」は古英語から来たことばだ。', answer: false, why: '第2段落 The names of the meat, \'beef\' and \'pork,\' come from French。' },
+      { statement: '英語は日本語からもことばを借りている。', answer: true, why: '第3段落 English has borrowed words such as \'tsunami,\' \'karaoke,\' and \'emoji\' from Japanese。' },
+    ],
+    qa: [
+      { q: 'What does history suggest about languages, according to the writer?', choices: ['They are good at absorbing new words and making them their own.', 'They are always damaged by foreign words.', 'They never change their meanings.', 'They stop borrowing words after a few years.'], answer: 0, why: '第4段落 languages are remarkably good at absorbing new words and making them their own。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
