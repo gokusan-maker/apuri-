@@ -8169,6 +8169,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-local-mascots',
+    title: 'Mascots That Sell Towns',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Across Japan, many towns and cities have their own mascot characters. These cute, round figures appear at festivals, on posters, and on local products. They are often called \"yuru-chara,\" and some of them have become ( A ) famous that people visit their hometowns just to meet them.",
+      "One of the most successful examples is Kumamon, a black bear character created for Kumamoto Prefecture in 2010. Companies can use his image on their products, and goods featuring Kumamon have sold well across Japan and abroad. Local officials say the character has helped more people learn about the prefecture.",
+      "However, not every mascot is a success. Making costumes, holding events, and advertising all cost money, and some characters are soon forgotten. Critics also point out that when there are too many mascots, it becomes hard ( B ) any of them to stand out.",
+      "Supporters argue that the real value of a mascot is not only economic. A friendly character can give local people something to be proud of and bring them together. Whether a mascot succeeds may depend less on its design than on how much the community ( C ) it.",
+    ],
+    ja: [
+      '日本中で、多くの町や市が自分たちのマスコットキャラクターをもっている。こうしたかわいくて丸い姿のキャラクターは、祭りやポスター、地元の産品に登場する。よく「ゆるキャラ」とよばれ、中には、会うためだけに人々がその地元を訪れるほど有名になったものもある。',
+      'もっとも成功した例の1つが、2010年に熊本県のために作られた黒いクマのキャラクター、くまモンだ。企業は自社の商品にくまモンの絵を使うことができ、くまモンの商品は日本中や海外でよく売れている。地元の担当者は、このキャラクターのおかげで、県について知る人がふえたと言う。',
+      'しかし、すべてのマスコットが成功するわけではない。着ぐるみを作ったり、催しを開いたり、宣伝したりするのにはどれもお金がかかり、すぐに忘れられてしまうキャラクターもいる。批判する人たちは、マスコットが多すぎると、どれも目立ちにくくなるとも指摘している。',
+      '支持する人たちは、マスコットの本当の価値はお金の面だけではないと主張する。親しみやすいキャラクターは、地元の人々にほこりに思えるものをあたえ、人々を1つにまとめることができる。マスコットが成功するかどうかは、デザインよりも、地域の人々がどれだけそのキャラクターを応援するかによるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋ 形容詞 ＋ that ～「とても…なので～」。such のあとは（形容詞 ＋）名詞、too・very は that と組まない。' },
+      { id: 'B', choices: ['for', 'of', 'to', 'with'], answer: 0, why: 'it is hard for A to ～「A が～するのは難しい」。for は不定詞の意味上の主語を示す。' },
+      { id: 'C', choices: ['supports', 'supporting', 'support', 'to support'], answer: 0, why: 'how much ＋ 主語 ＋ 動詞（間接疑問）。主語 the community は単数なので supports。' },
+    ],
+    underline: {
+      phrase: 'stand out',
+      choices: ['be easily noticed', 'stand up', 'go outside', 'give up'],
+      answer: 0,
+      why: 'stand out は「目立つ」。be easily noticed と同じ意味。',
+    },
+    order: {
+      words: ['something', 'to', 'be', 'proud', 'of'],
+      rest: '',
+      answer: 'something to be proud of',
+      ja: 'ほこりに思える何か（不定詞の形容詞用法・前置詞 of が最後に残る）',
+    },
+    tf: [
+      { statement: 'くまモンは、熊本県のために作られたキャラクターである。', answer: true, why: '第2段落 Kumamon, a black bear character created for Kumamoto Prefecture。' },
+      { statement: 'ゆるキャラはどれも成功している。', answer: false, why: '第3段落 not every mascot is a success。' },
+      { statement: '支持する人たちは、マスコットの価値はお金の面だけだと考えている。', answer: false, why: '第4段落 the real value of a mascot is not only economic。' },
+    ],
+    qa: [
+      { q: 'According to critics, what happens when there are too many mascots?', choices: ['It becomes hard for any of them to stand out.', 'Towns always make more money.', 'People visit more festivals.', 'Costumes become cheaper to make.'], answer: 0, why: '第3段落 when there are too many mascots, it becomes hard for any of them to stand out。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
