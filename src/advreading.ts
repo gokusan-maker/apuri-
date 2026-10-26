@@ -6018,6 +6018,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-first-race',
+    title: 'My First Race',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last November, I ran in a city marathon for the first time. To be exact, it was not a full marathon but a ten-kilometer race for students. Before that, the longest distance I had ever run ( A ) three kilometers in P.E. class.",
+      "I started practicing two months before the race. At first, I could only run for ten minutes without stopping. My older sister, who is on her university's track team, gave me some advice. \"Don't try to run fast,\" she said. \"Just run a little farther every week.\" I followed her advice and kept a notebook ( B ) I wrote down how far I ran each day.",
+      "On the day of the race, it was cold and windy. Around the seventh kilometer, my legs hurt so much that I wanted to stop. Then I heard people along the road cheering, \"You can do it!\" Their voices gave me energy, and I kept going.",
+      "I finished the race in sixty-two minutes. It was not a fast time, but I was proud of ( C ). Through this experience, I learned that small efforts every day can lead to big results. Next year, I want to try the half marathon.",
+    ],
+    ja: [
+      '去年の11月、私ははじめて市のマラソン大会に出ました。正確に言うと、フルマラソンではなく、学生向けの10キロのレースでした。それまで私が走ったいちばん長いきょりは、体育の授業の3キロでした。',
+      '私はレースの2か月前に練習を始めました。はじめは、止まらずに10分しか走れませんでした。大学の陸上部に入っている姉が、アドバイスをくれました。「速く走ろうとしないで。毎週少しずつ長く走ればいいよ」と姉は言いました。私はそのアドバイスに従い、毎日どれだけ走ったかを書きこむノートをつけました。',
+      'レースの日は寒くて風が強い日でした。7キロのあたりで、足がとても痛くなってやめたくなりました。そのとき、道ぞいの人たちが「がんばれ！」と応援する声が聞こえました。その声が力をくれて、私は走り続けました。',
+      '私は62分でゴールしました。速いタイムではありませんでしたが、自分をほこらしく思いました。この経験を通して、毎日の小さな努力が大きな結果につながることを学びました。来年はハーフマラソンに挑戦したいです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['was', 'were', 'is', 'been'], answer: 0, why: '主語は the longest distance（単数）で、過去の話なので was。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'that'], answer: 0, why: '「ノートの中に書いた」なので in which（＝ where）。うしろの文（I wrote down how far …）に欠けた部分がないので、which・what・that だけでは入らない。' },
+      { id: 'C', choices: ['myself', 'me', 'I', 'mine'], answer: 0, why: '主語 I と同じ人なので再帰代名詞 myself（be proud of oneself「自分をほこりに思う」）。' },
+    ],
+    tf: [
+      { statement: '筆者が出たのは、フルマラソンだった。', answer: false, why: '第1段落 it was not a full marathon but a ten-kilometer race for students。' },
+      { statement: '姉は「速く走ろうとしないで」とアドバイスした。', answer: true, why: '第2段落 "Don\'t try to run fast," she said。' },
+      { statement: '筆者は7キロのあたりで足が痛くなった。', answer: true, why: '第3段落 Around the seventh kilometer, my legs hurt。' },
+      { statement: '筆者は、もう走るのはやめようと思っている。', answer: false, why: '第4段落 Next year, I want to try the half marathon。' },
+    ],
+    qa: [
+      { q: 'What helped the writer keep going during the race?', choices: ['People along the road cheering.', 'A cold drink.', 'Running with the sister.', 'A short rest at the seventh kilometer.'], answer: 0, why: '第3段落 Their voices gave me energy, and I kept going。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

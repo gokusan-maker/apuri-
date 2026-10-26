@@ -2223,3 +2223,4 @@
 - 2026-10-26: 文法に「be known for ／ be known as」と「be familiar with ／ be familiar to」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: TOEIC の長文（メール文）に「値上げのお知らせ」を追加（空所・下線部・語句整序つき）
 - 2026-10-26: 文法に「apologize to 人 for ／ thank 人 for」と「accuse 人 of ／ blame 人 for」の単元を追加（よくあるまちがいつき）
+- 2026-10-26: 高校入試レベルの長文（体験文）「はじめてのレース」を追加
