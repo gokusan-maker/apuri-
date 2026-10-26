@@ -1505,7 +1505,7 @@
 - [x] スペル・数の聞き取り・文法のディクテーションで2問以上続けて正解すると「🔥 n連続正解！」
 - [x] 高校の文法単元を2つ追加：It occurs to 人 that ～・not because A but because B
 - [x] 長文：TOEIC をさらに1本（経費アプリのお知らせ）
-- [x] 高校の文法単元を2つ追加：whereas ／ while（対比）・given (that) ～
+- [x] 高校の文法単元を4つ追加：whereas ／ while（対比）・given (that) ～・tend to ／ be bound to・What if ～?
 - [x] 長文：共通テストレベルをさらに1本（自動販売機の国）
 - [x] スペル・数の聞き取りの結果に星（★★★）を表示
 ## アイデア（未整理）
