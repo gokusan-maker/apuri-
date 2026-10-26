@@ -6049,6 +6049,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-city-birds',
+    title: 'Singing Over the Noise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a small bird, singing is serious business. Songs are used to attract mates and to warn rivals away from a territory. A song that cannot be heard is therefore almost useless. This creates a problem for birds living in cities, ( A ) traffic, construction, and machines produce a constant low roar.",
+      "Researchers have found that some birds adjust. In the early 2000s, scientists in the Netherlands reported that great tits living in noisy parts of cities sang at a higher pitch than those in quieter forests. Because most urban noise is low in pitch, higher notes are less likely to be drowned out. Other studies have found that certain birds simply sing louder, or move their singing to times of day when the city is quieter.",
+      "One study in Britain found that European robins in some urban areas had begun singing at night. It was first assumed that streetlights were confusing the birds, but the researchers found that daytime noise was a better predictor. In the quiet hours, a robin's song could travel much ( B ) than it could during the busy day.",
+      "These changes show how flexible animals can be, but they may also have costs. Singing at night uses energy that would otherwise be saved for sleep, and a higher song may be less attractive to some mates. Cities, it seems, are not only changing where animals live but also how they communicate. Reducing noise in parks and green spaces may help ( C ) the birds that share our cities a chance to be heard.",
+    ],
+    ja: [
+      '小さな鳥にとって、歌うことは大切な仕事である。歌は、つがいの相手を引きつけたり、なわばりからライバルを追いはらったりするのに使われる。だから、聞こえない歌はほとんど役に立たない。このことが、交通や工事、機械がたえず低いごう音を出している都市にすむ鳥たちにとって問題になる。',
+      '研究者たちは、適応する鳥がいることを発見した。2000年代のはじめ、オランダの科学者たちは、都市のさわがしい地域にすむシジュウカラが、静かな森にすむシジュウカラよりも高い音で歌っていると報告した。都市の騒音の多くは低い音なので、高い音ほどかき消されにくいのだ。また、単に大きな声で歌ったり、都市が静かになる時間帯に歌う時間をずらしたりする鳥がいることを見つけた研究もある。',
+      'イギリスのある研究では、一部の都市部のヨーロッパコマドリが夜に歌いはじめていることがわかった。はじめは街灯が鳥をまどわせているのだと考えられたが、研究者たちは、昼間の騒音のほうがよりよい手がかりになることを見つけた。静かな時間帯には、コマドリの歌はにぎやかな昼間よりもずっと遠くまで届いたのである。',
+      'こうした変化は、動物がいかに柔軟であるかを示しているが、代償もあるかもしれない。夜に歌うことは、本来ならねむるためにとっておくエネルギーを使うし、高い歌はつがいの相手によっては魅力が少ないかもしれない。都市は、動物がすむ場所だけでなく、動物の連絡のとり方まで変えているようだ。公園や緑地の騒音を減らすことは、私たちと都市を分かち合う鳥たちに、声を届ける機会をあたえる助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで cities（場所）を受け、うしろが欠けのない文（traffic … produce a constant low roar）なので関係副詞 where。which・what のうしろには欠けた部分が必要、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['farther', 'far', 'farthest', 'more far'], answer: 0, why: 'あとに than があるので比較級。far の比較級は farther（more far とは言わない）。much は比較級を強めている。' },
+      { id: 'C', choices: ['give', 'giving', 'gave', 'given'], answer: 0, why: 'help (to) ＋ 原形「～するのに役立つ」。help のあとは原形 give。' },
+    ],
+    underline: {
+      phrase: 'drowned out',
+      choices: ['covered by a louder sound', 'carried far away', 'repeated many times', 'made more beautiful'],
+      answer: 0,
+      why: 'drown out ～ は「（大きな音が）～をかき消す」。高い音は低い騒音にかき消されにくい、ということ。',
+    },
+    order: {
+      words: ['sang', 'at', 'a', 'higher', 'pitch', 'than', 'those', 'in', 'quieter', 'forests'],
+      rest: '',
+      answer: 'sang at a higher pitch than those in quieter forests',
+      ja: '静かな森にすむものよりも高い音で歌った。（those＝great tits のくり返しをさける代名詞）',
+    },
+    tf: [
+      { statement: 'さわがしい都市のシジュウカラは、森のシジュウカラより高い音で歌っていた。', answer: true, why: '第2段落 great tits living in noisy parts of cities sang at a higher pitch than those in quieter forests。' },
+      { statement: 'コマドリが夜に歌うのは、街灯のせいだとはっきりわかった。', answer: false, why: '第3段落 the researchers found that daytime noise was a better predictor。' },
+      { statement: '筆者は、鳥の変化には代償もあるかもしれないと述べている。', answer: true, why: '第4段落 they may also have costs。' },
+    ],
+    qa: [
+      { q: 'Why are higher notes useful for birds in cities?', choices: ['Most urban noise is low in pitch, so higher notes are heard more easily.', 'Higher notes use less energy.', 'Birds in forests cannot sing high notes.', 'Higher notes attract more insects.'], answer: 0, why: '第2段落 Because most urban noise is low in pitch, higher notes are less likely to be drowned out。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
