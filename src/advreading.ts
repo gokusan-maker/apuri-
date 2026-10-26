@@ -8054,6 +8054,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-school-play',
+    title: 'The Tree in the School Play',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "In October, my class performed a play at the school festival. When the roles were decided, I got the part of a tree. I had only one line in the whole play. At first, I was disappointed ( A ) I wanted a bigger part.",
+      "During practice, I stood on the stage for a long time without moving. It was boring, so I started to watch my classmates carefully. I noticed that Yuki, who had the main role, was always nervous before her long speech. One day, I told her, \"You can do it. I'm right behind you.\" She smiled and said, \"Thanks. That helps a lot.\"",
+      "On the day of the play, the hall was full of people. Just before Yuki's big speech, I saw her hands shaking. So I said my one line, \"The wind is gentle tonight,\" as warmly as I could. She looked at me and took a deep breath. Then she spoke clearly and ( B ) everyone in the audience.",
+      "After the play, Yuki thanked me. I realized that even a small role can be important. Now I know that every member of a team has something ( C ) give.",
+    ],
+    ja: [
+      '10月、私のクラスは文化祭で劇をしました。役が決まったとき、私は木の役になりました。劇全体で、せりふは1つしかありませんでした。最初は、もっと大きな役がほしかったので、がっかりしました。',
+      '練習の間、私は舞台の上に長い時間動かずに立っていました。たいくつだったので、クラスメートをよく見るようになりました。主役のユキが、長いせりふの前にいつも緊張していることに気づきました。ある日、私は彼女に「できるよ。私がすぐうしろにいるから」と言いました。彼女はほほえんで「ありがとう。すごく助かる」と言いました。',
+      '劇の当日、会場は人でいっぱいでした。ユキの大事なせりふの直前、私は彼女の手がふるえているのを見ました。そこで私は、自分のたった1つのせりふ「今夜の風はやさしい」を、できるだけ温かく言いました。彼女は私を見て、深呼吸をしました。そして、はっきりと話し、観客みんなを感動させたのです。',
+      '劇のあと、ユキは私にお礼を言ってくれました。私は、小さな役でも大切になりうるのだと気づきました。今では、チームのだれもが何かしら役に立てるものをもっているのだとわかっています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'うしろが文（I wanted a bigger part）なので接続詞 because。because of・due to・despite のあとは名詞。' },
+      { id: 'B', choices: ['moved', 'moving', 'to move', 'move'], answer: 0, why: 'spoke clearly and moved everyone と、過去形の動詞を and で並べている。move「感動させる」。' },
+      { id: 'C', choices: ['to', 'for', 'of', 'with'], answer: 0, why: 'something to give「あたえるべき何か」（不定詞の形容詞用法）。' },
+    ],
+    tf: [
+      { statement: '筆者は劇で木の役をした。', answer: true, why: '第1段落 I got the part of a tree。' },
+      { statement: '筆者のせりふはたくさんあった。', answer: false, why: '第1段落 I had only one line in the whole play。' },
+      { statement: 'ユキは主役で、長いせりふの前に緊張していた。', answer: true, why: '第2段落 Yuki, who had the main role, was always nervous before her long speech。' },
+      { statement: '劇の当日、会場はほとんど空いていた。', answer: false, why: '第3段落 the hall was full of people。' },
+    ],
+    qa: [
+      { q: 'What did the writer learn from the school play?', choices: ['Even a small role can be important.', 'Big parts are always better.', 'Plays are boring to watch.', 'Practice is not necessary.'], answer: 0, why: '第4段落 I realized that even a small role can be important。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
