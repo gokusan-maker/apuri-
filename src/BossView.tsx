@@ -16,7 +16,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, traitAfterHit, bossTraits, type BossTrait } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, traitAfterHit, bossTraits, type BossTrait } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -291,7 +291,13 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
   const traits = traitsProp ?? bossTraits(baseLook.name) // ボスのとくぎ
-  const [traitMsg, setTraitMsg] = useState('') // とくぎが発動したとき
+  const [traitMsg, setTraitMsgRaw] = useState('') // とくぎが発動したとき
+  const fired = useRef(false) // このバトルでとくぎが1回でも発動した（とくぎ封じの判定）
+  const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
+  const setTraitMsg = (m: string) => {
+    if (m) fired.current = true
+    setTraitMsgRaw(m)
+  }
   const [regenUsed, setRegenUsed] = useState(false)
   const [trioAt, setTrioAt] = useState(-1) // 合体技を出した問題の番号
   const [teamHits, setTeamHits] = useState<Record<TeamRole, number>>({ word: 0, grammar: 0, reading: 0 }) // なかまごとの正解数
@@ -358,7 +364,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const ms = nowMs() - shownAt.current
       if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
-      const critical = isCritical(ms, ((skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs) * (traits.includes('quick') ? QUICK_RATE : 1))
+      const critMs = (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs
+      const critical = isCritical(ms, critMs * (traits.includes('quick') ? QUICK_RATE : 1))
+      if (!critical && traits.includes('quick') && isCritical(ms, critMs)) setTraitMsg(`${BOSS_TRAITS.quick.icon} ${look.name}の${BOSS_TRAITS.quick.name}！ 会心をかわされた`)
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
@@ -524,6 +532,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (d) onDrop!(d)
     onWinHearts?.(hearts)
     if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS * (usedItems.includes('lucky') ? 2 : 1))
+    if (!fired.current) {
+      setSealed(true)
+      onRankBonus?.(SEAL_COINS)
+    }
   }
 
   function next() {
@@ -570,6 +582,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setSkillMsg('')
     setTraitMsg('')
     setRegenUsed(false)
+    fired.current = false
+    setSealed(false)
   }
 
   return (
@@ -838,6 +852,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               <p className="stats-note" title={battleRank(hearts, crits) === 'S' ? undefined : 'ハートを減らさず会心3回でSランク'}>
                 ❤️{hearts}・⚡会心{crits}回{battleRank(hearts, crits) === 'S' ? `・🪙${RANK_S_COINS}！` : ''}
               </p>
+              {sealed && <p className="boss-seal">🔒 とくぎ封じ！ 🪙{SEAL_COINS}</p>}
               <p className="result-message boss-bonus">
                 ボーナス +<CountUp to={bonus} />
                 XP

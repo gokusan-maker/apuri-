@@ -74,3 +74,15 @@ it('最短タイムが1分未満のボスに「⚡ スピードクリア」', ()
   render(<BossBook />)
   expect(screen.queryByText(/⚡ スピードクリア/)).toBeNull()
 })
+
+it('とくぎを1回も発動させずに勝つと「とくぎ封じ」でコインがもらえる', async () => {
+  const { SEAL_COINS } = await import('./boss')
+  localStorage.clear()
+  const got: number[] = []
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} onRankBonus={(n) => got.push(n)} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  expect(screen.getByText(`🔒 とくぎ封じ！ 🪙${SEAL_COINS}`)).toBeInTheDocument()
+  expect(got).toContain(SEAL_COINS)
+})

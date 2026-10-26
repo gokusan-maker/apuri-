@@ -3578,3 +3578,6 @@ header .event-chips { margin: 0 0 2px; }
 .boss-book-trait { display: block; font-size: 0.7rem; font-weight: 700; color: #7c3aed; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-book-trait { color: #c4b5fd; } }
 :root[data-theme="dark"] .boss-book-trait { color: #c4b5fd; }
+.boss-seal { margin: 2px 0; font-size: 0.78rem; font-weight: 800; color: #7c3aed; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-seal { color: #c4b5fd; } }
+:root[data-theme="dark"] .boss-seal { color: #c4b5fd; }

@@ -507,6 +507,7 @@ export const REGEN_RATE = 0.15 // さいせい：最大HPの15%
 export const ARMOR_BLOCK = 2
 export const DRAIN_HEAL = 6
 export const QUICK_RATE = 0.7 // すばやさ：会心の時間が7割に
+export const SEAL_COINS = 5 // とくぎ封じ：とくぎを1回も発動させずに勝つ
 export function traitOf(name: string): BossTrait {
   const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
   return TRAIT_ORDER[k % TRAIT_ORDER.length]
