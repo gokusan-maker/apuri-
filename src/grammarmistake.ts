@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'to-ing-2': { wrong: 'He saved money with a view to buy a house.', right: 'He saved money with a view to buying a house.', why: 'with a view to の to は前置詞なので ～ing。' },
   'sure-of-to': { wrong: 'I am sure of win.', right: 'I am sure of winning.', why: '前置詞 of のあとは -ing。' },
   'so-far-by-then': { wrong: 'So far, I visited five countries.', right: 'So far, I have visited five countries.', why: 'so far（今までのところ）は現在完了といっしょに使う。' },
   'afraid-of-to': { wrong: "Don't be afraid of make mistakes.", right: "Don't be afraid of making mistakes.", why: '前置詞 of のあとは -ing。' },
