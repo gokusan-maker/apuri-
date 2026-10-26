@@ -1647,6 +1647,8 @@
 
 - [x] 文法の単元「be reluctant to ～ ／ hesitate to ～ ／ be inclined to ～」を追加（よくあるまちがいつき）
 
+- [x] TOEIC に自作のメール文「Email: Your Warranty Request」を追加（保証の修理・175語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

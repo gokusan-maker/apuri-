@@ -2315,3 +2315,4 @@
 - 2026-10-26: 高3（共通テスト）に長文「The Repair Café」（修理カフェ）を追加
 - 2026-10-26: とくぎ封じで勝った回数を数えて、バッジ2つと記録の部屋に追加
 - 2026-10-26: 文法に「be reluctant to ～ ／ hesitate to ～ ／ be inclined to ～」の単元を追加
+- 2026-10-26: TOEIC にメール文「Email: Your Warranty Request」（保証の修理）を追加

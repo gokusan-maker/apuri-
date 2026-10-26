@@ -7110,6 +7110,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-warranty',
+    title: 'Email: Your Warranty Request',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Patel, Thank you for contacting Brightline Electronics about your coffee maker. We are sorry to hear that it stopped heating after only four months. Since the product is still under our one-year warranty, we will repair or replace it ( A ) charge.",
+      "To start the process, please pack the coffee maker in its original box, if possible, and include a copy of your receipt. You do not need to pay for shipping. Simply print the prepaid label ( B ) to this email and attach it to the box.",
+      "Once we receive your item, our technicians will examine it within five business days. If the problem can be fixed, we will repair it and send it back to you. If not, we will send you a new coffee maker of the same model.",
+      "Please note that the warranty does not cover damage caused by dropping the product or using it incorrectly. If you have any questions, ( C ) free to reply to this email. Sincerely, Daniel Wu, Customer Support, Brightline Electronics",
+    ],
+    ja: [
+      'パテル様。コーヒーメーカーについてブライトライン・エレクトロニクスにご連絡いただき、ありがとうございます。わずか4か月で温まらなくなったとのこと、申しわけございません。製品はまだ1年間の保証期間内ですので、無料で修理または交換いたします。',
+      '手続きを始めるため、できればコーヒーメーカーを元の箱に入れ、レシートのコピーを同封してください。送料をお支払いいただく必要はありません。このメールに添付した料金支払い済みのラベルを印刷し、箱にはってください。',
+      '品物が届きしだい、技術者が5営業日以内に点検いたします。問題を直せる場合は修理してお返しします。直せない場合は、同じ型の新しいコーヒーメーカーをお送りします。',
+      'なお、製品を落としたり、正しくない使い方をしたりしたことによる損傷は、保証の対象外ですのでご注意ください。ご不明な点があれば、どうぞお気軽にこのメールにご返信ください。ブライトライン・エレクトロニクス　お客様サポート　ダニエル・ウー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['free of', 'free by', 'free with', 'free at'], answer: 0, why: 'free of charge「無料で」は決まった言い方。by・with・at では言わない。' },
+      { id: 'B', choices: ['attached', 'attaching', 'attach', 'to attach'], answer: 0, why: 'ラベルはメールに「添付された」ものなので、名詞を後ろから説明する過去分詞 attached。the label attached to this email「このメールに添付されたラベル」。' },
+      { id: 'C', choices: ['feel', 'feeling', 'to feel', 'felt'], answer: 0, why: 'feel free to ～「えんりょなく～してください」。命令文なので原形 feel で始める。' },
+    ],
+    underline: {
+      phrase: 'examine',
+      choices: ['check carefully', 'throw away', 'pay for', 'sell'],
+      answer: 0,
+      why: 'examine は「よく調べる・点検する」。check carefully と同じ意味。',
+    },
+    order: {
+      words: ['does', 'not', 'cover', 'damage'],
+      rest: 'caused by dropping the product',
+      answer: 'does not cover damage',
+      ja: '（保証は）損傷を対象にしていない（cover＝ふくむ・対象にする）',
+    },
+    tf: [
+      { statement: 'コーヒーメーカーは、まだ保証期間内である。', answer: true, why: '第1段落 the product is still under our one-year warranty。' },
+      { statement: '送料はパテルさんがはらう。', answer: false, why: '第2段落 You do not need to pay for shipping。' },
+      { statement: '製品を落としてこわした場合も、保証の対象になる。', answer: false, why: '第4段落 the warranty does not cover damage caused by dropping the product。' },
+    ],
+    qa: [
+      { q: 'What will the company do if the coffee maker cannot be repaired?', choices: ['Send a new one of the same model.', 'Return her money in cash.', 'Send it back without repairing it.', 'Give her a different product.'], answer: 0, why: '第3段落 If not, we will send you a new coffee maker of the same model。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
