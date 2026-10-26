@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'lie-lay': { wrong: 'I laid down on the sofa.', right: 'I lay down on the sofa.', why: '「横になった」は lie の過去形 lay。laid は「（物を）横にした」。' },
+  'rise-raise': { wrong: 'Prices have raised a lot.', right: 'Prices have risen a lot.', why: '目的語がないので rise（rise – rose – risen）。' },
   'its-its': { wrong: 'The dog wagged it\'s tail.', right: 'The dog wagged its tail.', why: '「それの」は its。it\'s は it is の短縮形。' },
   'their-there': { wrong: 'The students left there bags.', right: 'The students left their bags.', why: '「彼らの」は their。there は「そこに」。' },
   'friend-of-mine': { wrong: 'She is a my friend.', right: 'She is a friend of mine.', why: 'a と my はならべて使えない。a friend of mine にする。' },
