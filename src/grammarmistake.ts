@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'every-other': { wrong: 'The bus comes every ten minute.', right: 'The bus comes every ten minutes.', why: 'every ＋ 数 のあとは複数形（every other day なら単数）。' },
+  'rather-than': { wrong: 'He is a writer rather then a scientist.', right: 'He is a writer rather than a scientist.', why: '「～よりむしろ」は rather than。then は「そのとき・それから」。' },
   'nothing-but': { wrong: 'The work is anything but finished.（ほとんど終わった、のつもり）', right: 'The work is all but finished.', why: '「ほとんど～」は all but。anything but は「少しも～ない」で意味が反対になる。' },
   'quite-a-few': { wrong: 'Quite a few money was spent.', right: 'Quite a lot of money was spent.', why: 'quite a few は数えられる名詞の複数に。money など数えられない名詞には quite a lot of。' },
   'cannot-but': { wrong: 'I could not but laughing.', right: 'I could not but laugh.', why: 'cannot but のあとは -ing ではなく原形（cannot help のあとは -ing）。' },

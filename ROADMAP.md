@@ -1496,7 +1496,7 @@
 - [x] 高校の文法単元を4つ追加：接続詞 lest・might as well・cannot but・be on the point of -ing
 - [x] 地図の下に「🎁 次の宝箱まで あとnステージ」、宝箱のステージのすすむの札に「🎁 クリアで宝箱！」を表示
 - [x] 長文：私学レベル（辛さのしくみ）と国公立レベル（シフティング・ベースライン）を1本ずつ
-- [x] 高校の文法単元を2つ追加：nothing but ／ all but・quite a few ／ not a few
+- [x] 高校の文法単元を4つ追加：nothing but ／ all but・quite a few ／ not a few・every other・A rather than B
 - [x] 単語・文法の城の階クリアのお祝いに「宝箱がひらけるよ」「次の宝箱まで あとn階」を表示
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
