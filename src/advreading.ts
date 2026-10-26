@@ -4691,6 +4691,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-learning-by-teaching',
+    title: 'Learning by Teaching',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever noticed that you understand something better after explaining it to a friend? Many teachers believe that teaching is one of the best ways to learn, and research supports this idea.",
+      "In one kind of experiment, students study the same material, but some are told they will take a test, ( A ) others are told they will have to teach it to someone else. The students who expect to teach often remember more and organize the information better. Preparing to teach seems to make people look for the main points and the connections between ideas.",
+      "Actually explaining the material helps, too. When we try to put an idea into our own words, we quickly discover the parts we do not really understand. A question from a listener can show us a gap ( B ) we did not know existed.",
+      "You do not need a classroom to use this method. You can explain a lesson to a family member, or even pretend to teach it to an empty chair. The important thing is to explain the ideas clearly enough ( C ) someone else could understand them.",
+    ],
+    ja: [
+      '友だちに説明したあとで、そのことがよくわかるようになったと気づいたことはないだろうか。教えることは学ぶための最もよい方法の1つだと考える先生は多く、研究もこの考えを支持している。',
+      'ある種類の実験では、学生たちが同じ内容を勉強するが、一部はテストを受けると言われ、ほかの学生はそれをだれかに教えなければならないと言われる。教えるつもりの学生のほうが、多くを覚えていて、情報をうまく整理していることが多い。教える準備をすると、人は要点や考えどうしのつながりをさがすようになるらしい。',
+      '実際に説明することも役に立つ。考えを自分のことばで言いかえようとすると、本当はわかっていない部分にすぐ気づく。聞き手からの質問が、あるとは知らなかった理解の穴を教えてくれることもある。',
+      'この方法を使うのに教室はいらない。家族にその日の授業を説明してもいいし、だれもいないいすに教えるふりをしてもよい。大切なのは、ほかの人がわかるくらいはっきりと考えを説明することだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（others are told …）なので、対比の接続詞 while「一方で」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a gap を説明する関係代名詞 that（we did not know ＿ existed で existed の主語が欠けている）。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'because of'], answer: 0, why: '副詞＋enough that ～「～なくらい十分に…」。what・which は先行詞や欠けた部分がないので入らず、because of のうしろに文は続かない。' },
+    ],
+    underline: {
+      phrase: 'put an idea into our own words',
+      choices: ['explain an idea in our own way', 'write an idea down in a notebook', 'translate an idea into English', 'repeat an idea exactly as it is written'],
+      answer: 0,
+      why: 'put ～ into one\'s own words は「～を自分のことばで言いかえる」。教科書の文をそのままくり返すのではなく、自分なりに説明すること。',
+    },
+    order: {
+      words: ['look', 'for', 'the', 'main', 'points', 'and', 'the', 'connections', 'between', 'ideas'],
+      rest: '',
+      answer: 'look for the main points and the connections between ideas',
+      ja: '要点と、考えどうしのつながりをさがす。（look for ～＝～をさがす、between ～＝～の間の）',
+    },
+    tf: [
+      { statement: '教えるつもりで勉強した学生のほうが、多くを覚えていることが多い。', answer: true, why: '第2段落 The students who expect to teach often remember more。' },
+      { statement: '考えを自分のことばで言いかえると、わかっていない部分に気づける。', answer: true, why: '第3段落 we quickly discover the parts we do not really understand。' },
+      { statement: '筆者は、この方法は教室でしか使えないと言っている。', answer: false, why: '第4段落 You do not need a classroom to use this method。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest you can do without a classroom?', choices: ['Explain a lesson to a family member or an empty chair.', 'Take more tests at home.', 'Read the textbook many times silently.', 'Ask a teacher to explain everything again.'], answer: 0, why: '第4段落 You can explain a lesson to a family member, or even pretend to teach it to an empty chair。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
