@@ -93,3 +93,15 @@ it('熟語は単語の区切りの空白が自動で入る', async () => {
   expect(builtSpelling('look for', [...'lookf'])).toBe('look f')
   expect(builtSpelling('look for', [...'lookfor'])).toBe('look for')
 })
+
+it('スペルも2問続けて正解すると連続正解のコンボが出る', () => {
+  const ws = WORDS.slice(0, 2)
+  render(<Spell words={ws} count={2} />)
+  for (let i = 0; i < 2; i++) {
+    const w = current()
+    tapSpelling(w.en)
+    fireEvent.click(screen.getByText('こたえる'))
+    if (i === 0) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('🔥 2連続正解！')).toBeInTheDocument()
+})

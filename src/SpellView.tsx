@@ -24,6 +24,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [hints, setHints] = useState(0)
   const [result, setResult] = useState<'ok' | 'ng' | null>(null)
   const [score, setScore] = useState(0)
+  const [streak, setStreak] = useState(0) // 連続正解
 
   const w = list[index]
   // 文字のボタン：答えの文字（空白はのぞく）をまぜたもの。キーボードで打たずに、ボタンを押してつづる
@@ -38,11 +39,13 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
     if (result || picked.length === 0) return
     if (isCorrectSpelling(input, w.en)) {
       setResult('ok')
+      setStreak(streak + 1)
       setScore(score + 1)
       playCorrect()
       onAnswer?.(true, spellXp(hints), w.id, 'ear')
     } else {
       setResult('ng')
+      setStreak(0)
       playWrong()
       onAnswer?.(false, 0, w.id, 'ear')
     }
@@ -63,6 +66,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
     setHints(0)
     setResult(null)
     setScore(0)
+    setStreak(0)
   }
 
   if (!w) {
@@ -128,6 +132,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
       {result && (
         <>
           <p className="feedback">{result === 'ok' ? '正解！' : `正解は「${w.en}」`}</p>
+          {result === 'ok' && streak >= 2 && <p className="num-streak">🔥 {streak}連続正解！</p>}
           {result === 'ng' && (
             <p className="spell-diff" aria-label="あなたの答え">
               {markSpelling(input, w.en).map((x, i) => (

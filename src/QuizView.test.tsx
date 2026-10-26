@@ -331,6 +331,7 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
     const opts = [...screen.getByLabelText('答えの選択肢').querySelectorAll('button')] // 打ちこまず、4択のボタンでえらぶ
     expect(opts).toHaveLength(4)
     fireEvent.click(opts.find((x) => (i < 9 ? x.textContent === '902' : x.textContent !== '902'))!)
+    if (i === 1) expect(screen.getByText('🔥 2連続正解！')).toBeInTheDocument() // 連続正解のコンボ
     fireEvent.click(screen.getByText('次へ'))
   }
   vi.restoreAllMocks()

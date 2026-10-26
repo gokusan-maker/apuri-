@@ -15,6 +15,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
   const [choices, setChoices] = useState(() => numChoices(q))
   const [result, setResult] = useState<boolean | null>(null)
   const [score, setScore] = useState({ ok: 0, all: 0 })
+  const [streak, setStreak] = useState(0) // 連続正解
 
   useEffect(() => {
     speak(q.say)
@@ -33,6 +34,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
     if (ok) playCorrect()
     else playWrong()
     setResult(ok)
+    setStreak((n) => (ok ? n + 1 : 0))
     setScore((s) => ({ ok: s.ok + (ok ? 1 : 0), all: s.all + 1 }))
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, q.id, 'ear')
   }
@@ -61,6 +63,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
           className="flip"
           onClick={() => {
             setScore({ ok: 0, all: 0 })
+            setStreak(0)
             setDone(false)
             newQ()
             setText('')
@@ -97,6 +100,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
           <p className="feedback" role="status">
             {result ? '正解！' : `ざんねん… 正解は ${q.answer}`}　{q.answer} = {q.say}
           </p>
+          {result && streak >= 2 && <p className="num-streak">🔥 {streak}連続正解！</p>}
           <button className="flip" onClick={next}>
             次へ
           </button>
