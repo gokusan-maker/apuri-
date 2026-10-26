@@ -3601,3 +3601,8 @@ header .event-chips { margin: 0 0 2px; }
 .tower-clouds { height: 34px; margin: -6px -8px 0; background: radial-gradient(28px 18px at 10% 70%, #e0e7ff 98%, transparent), radial-gradient(34px 22px at 30% 80%, #c7d2fe 98%, transparent), radial-gradient(30px 18px at 52% 72%, #e0e7ff 98%, transparent), radial-gradient(36px 22px at 74% 82%, #c7d2fe 98%, transparent), radial-gradient(28px 18px at 94% 70%, #e0e7ff 98%, transparent); animation: tower-clouds 6s ease-in-out infinite alternate; }
 @keyframes tower-clouds { to { background-position: 12px 0; } }
 @media (prefers-reduced-motion: reduce) { .tower-crystal, .tower-clouds { animation: none; } }
+/* 今日の課題：終わったあとは「再挑戦」ボタン（色をおさえて、まだの課題と見分ける） */
+.today-read-btn.today-retry { background: linear-gradient(135deg, #34d399, #0ea5e9); box-shadow: 0 4px 0 #0369a1, 0 6px 14px rgb(0 0 0 / 0.12); }
+.today-read-btn.today-retry:active { box-shadow: 0 1px 0 #0369a1; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .today-read-btn.today-retry { background: linear-gradient(135deg, #34d399, #0ea5e9); } }
+:root[data-theme="dark"] .today-read-btn.today-retry { background: linear-gradient(135deg, #34d399, #0ea5e9); }

@@ -1445,9 +1445,9 @@ function App() {
     : undefined
   // 読解の今日の課題：城（地図）のすぐ下に出す
   const readTodayBtn =
-    mode === 'reading' && !shortGo && !playOn && !todayGone ? (
-      <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
-        📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
+    mode === 'reading' && !shortGo && !playOn ? (
+      <button className={`long-recommend daily-long today-read-btn${loadDailyShortDay() === today ? ' today-retry' : ''}`} aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
+        {loadDailyShortDay() === today ? '🔁 今日の課題に再挑戦' : '📖 今日の課題'}
         <strong>{todayReadingTitle(today)}</strong>
       </button>
     ) : undefined
@@ -2110,16 +2110,16 @@ function App() {
           {mode === 'word' && !todayQuiz && !wordMini && (
             <>
             <WordCastle key={wordCourse} name={`${courseById(wordCourse).label}の海`} course={wordCourse} next={nextWordMap} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
-            {!castleOn && !quizFocus && !playOn && !todayGone && !showShop && !showChallenge && (
+            {!castleOn && !quizFocus && !playOn && !showShop && !showChallenge && (
               <button
-                className="long-recommend daily-long today-read-btn"
+                className={`long-recommend daily-long today-read-btn${loadTodayWordsDay() === today ? ' today-retry' : ''}`}
                 aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
                 onClick={() => {
                   setWordTab('mini')
                   setTodayQuiz(true)
                 }}
               >
-                🔤 今日の課題{loadTodayWordsDay() === today ? ' ✅' : ''}
+                {loadTodayWordsDay() === today ? '🔁 今日の課題に再挑戦' : '🔤 今日の課題'}
                 <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
               </button>
             )}
@@ -2182,9 +2182,9 @@ function App() {
               saveGcLevel(id)
             }}
             grammarBelow={
-              mode === 'grammar' && !grammarGo && !playOn && !todayGone ? (
-                <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
-                  📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
+              mode === 'grammar' && !grammarGo && !playOn ? (
+                <button className={`long-recommend daily-long today-read-btn${loadDailyGrammarDay() === today ? ' today-retry' : ''}`} aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
+                  {loadDailyGrammarDay() === today ? '🔁 今日の課題に再挑戦' : '📐 今日の課題'}
                   <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
                 </button>
               ) : undefined

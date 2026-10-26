@@ -1990,7 +1990,7 @@ it('読解の京大・東大レベルは、和訳つきの難関大の長文か�
   expect(passagesFor('京大').some((p) => p.gistKind === 'transl')).toBe(true)
 })
 
-it('今日の課題を3つとも終えてトリオボーナスを受け取ったら、その日は今日の課題を画面に出さない', async () => {
+it('今日の課題を3つとも終えてトリオボーナスを受け取ったら、ホームには出さない。各ページは「再挑戦」ボタンになる', async () => {
   const { dayKey } = await import('./srs')
   const day = dayKey()
   localStorage.clear()
@@ -2003,7 +2003,10 @@ it('今日の課題を3つとも終えてトリオボーナスを受け取った
   render(<App />)
   expect(screen.queryByLabelText('今日の課題')).toBeNull()
   fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法'))
-  expect(screen.queryByRole('button', { name: /今日の課題（文法）/ })).toBeNull()
+  // 文法のページでは「🔁 今日の課題に再挑戦」で、もう一度とける（ごほうびは1日1回のまま）
+  const retry = screen.getByRole('button', { name: /今日の課題（文法）/ })
+  expect(retry.textContent).toContain('🔁 今日の課題に再挑戦')
+  expect(retry.className).toContain('today-retry')
 })
 
 it('単語ゲームのページに単語の城：単元の1階目は10語の解説 → 5問、4問以上でクリアして次の階へ', async () => {
