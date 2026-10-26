@@ -7269,6 +7269,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-water-shutoff',
+    title: 'Notice: Water Shut-Off',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Notice to All Residents of Maple Court Apartments: The water supply to the entire building will be shut off on Thursday, March 12, from 9:00 a.m. to 3:00 p.m. During this time, workers will replace old pipes in the basement ( A ) were installed more than thirty years ago.",
+      "We recommend that you fill some bottles or containers with water the night before. Please also avoid ( B ) your washing machine or dishwasher right after the water is turned back on, as the water may look brown for a short time.",
+      "The management office will place large bottles of drinking water in the lobby for residents who need them. If you or someone in your home has special needs, such as a medical condition that requires water, please contact us by March 10 so that we can make arrangements.",
+      "We apologize for any inconvenience this may cause and thank you for your patience. The new pipes will improve water pressure and reduce the risk of leaks ( C ) the future. Maple Court Management Office",
+    ],
+    ja: [
+      'メープル・コート・アパートの居住者の皆さまへのお知らせ：3月12日（木）午前9時から午後3時まで、建物全体の給水を止めます。この間、作業員が地下にある、30年以上前に取りつけられた古い水道管を取りかえます。',
+      '前の晩に、びんや容器に水をためておくことをおすすめします。また、水がもどった直後は、しばらく水が茶色く見えることがありますので、洗濯機や食器洗い機を使うのはおひかえください。',
+      '管理事務所は、必要な居住者のために、ロビーに大きなボトルの飲み水を置きます。ご自身やご家族に、水が必要な病気など特別な事情がある場合は、準備ができるよう3月10日までにご連絡ください。',
+      'ご不便をおかけすることをおわびするとともに、ご理解に感謝いたします。新しい水道管によって水圧がよくなり、今後の水もれの危険も減ります。メープル・コート管理事務所',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 old pipes（物）を説明し、were installed の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、who は人。' },
+      { id: 'B', choices: ['using', 'to use', 'use', 'used'], answer: 0, why: 'avoid のあとは動名詞：avoid -ing「～するのをさける」。' },
+      { id: 'C', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in the future「将来・今後」は決まった言い方。' },
+    ],
+    underline: {
+      phrase: 'inconvenience',
+      choices: ['trouble', 'cost', 'noise', 'danger'],
+      answer: 0,
+      why: 'inconvenience は「不便・めいわく」。trouble が近い。apologize for any inconvenience「ご不便をおわびする」はお知らせ文の決まり文句。',
+    },
+    order: {
+      words: ['fill', 'some', 'bottles', 'or', 'containers'],
+      rest: 'with water',
+      answer: 'fill some bottles or containers',
+      ja: 'びんや容器に（水を）ためる（fill A with B「A を B で満たす」）',
+    },
+    tf: [
+      { statement: '断水は、木曜日の午前9時から午後3時までである。', answer: true, why: '第1段落 on Thursday, March 12, from 9:00 a.m. to 3:00 p.m.。' },
+      { statement: '水がもどった直後は、水が茶色く見えることがある。', answer: true, why: '第2段落 the water may look brown for a short time。' },
+      { statement: '特別な事情がある人は、断水の当日に連絡すればよい。', answer: false, why: '第3段落 please contact us by March 10。' },
+    ],
+    qa: [
+      { q: 'Why will the water be shut off?', choices: ['Old pipes in the basement will be replaced.', 'The lobby will be cleaned.', 'The washing machines are broken.', 'The building will be painted.'], answer: 0, why: '第1段落 workers will replace old pipes in the basement。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
