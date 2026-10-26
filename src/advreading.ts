@@ -5934,6 +5934,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-cocktail-party',
+    title: 'Hearing One Voice in a Crowd',
+    level: 'TOEFL・IELTS（心理）',
+    paragraphs: [
+      "Imagine standing in a crowded room where dozens of people are talking at once. Somehow, you can follow the conversation of the person in front of you while the other voices fade into the background. Psychologists call this ability the 'cocktail party effect,' a term ( A ) by the British scientist Colin Cherry in the 1950s.",
+      "Cherry studied the effect with headphones that played a different message into each ear. Participants were asked to repeat aloud the message in one ear. Afterward, they could say very little about the message in the other ear; many did not even notice when it switched to a different language. ( B ), they usually noticed whether the voice was male or female.",
+      "Later research revealed an interesting exception. When a participant's own name was spoken in the ignored ear, a significant number of people noticed it. This suggests that the brain does not simply block out unattended sounds. Instead, it continues to monitor them at some level, ready to bring important information to our attention.",
+      "Understanding this ability is valuable for practical reasons. People with hearing loss often find noisy places especially tiring, ( C ) separating voices requires good hearing in both ears. Engineers are now using what psychologists have learned to design hearing aids and voice assistants that can pick out a single speaker in a noisy environment.",
+    ],
+    ja: [
+      '何十人もの人がいっせいに話している、こみ合った部屋に立っているところを想像してほしい。どういうわけか、ほかの声が背景にうすれていく中で、目の前の人の話についていくことができる。心理学者はこの能力を「カクテルパーティー効果」とよぶ。1950年代にイギリスの科学者コリン・チェリーが使いはじめたことばである。',
+      'チェリーは、左右の耳にそれぞれちがうメッセージを流すヘッドホンでこの効果を研究した。参加者は、片方の耳のメッセージを声に出してくり返すように言われた。あとで、参加者はもう一方の耳のメッセージについてほとんど何も言えず、それが別の言語に切りかわっても気づかない人も多かった。しかし、声が男性か女性かには、たいてい気づいていた。',
+      'その後の研究で、興味深い例外が明らかになった。無視しているほうの耳で参加者自身の名前が流れると、かなりの数の人がそれに気づいたのである。このことは、脳が注意を向けていない音をただしめ出しているのではないことを示している。そうではなく、脳はある程度それらを見張り続け、大切な情報があれば注意を向けさせる準備をしているのだ。',
+      'この能力を理解することは、実用的な理由からも価値がある。声を聞き分けるには両耳がよく聞こえることが必要なので、聴力が落ちた人は、さわがしい場所をとくにつかれると感じることが多い。技術者たちは今、心理学者がわかったことを使って、さわがしい場所でも1人の話し手の声だけを拾える補聴器や音声アシスタントを設計している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['introduced', 'introducing', 'introduce', 'to introduce'], answer: 0, why: 'a term を「（チェリーによって）使いはじめられた」とうしろから説明する過去分詞 introduced。' },
+      { id: 'B', choices: ['However', 'Although', 'Despite', 'Because'], answer: 0, why: '文頭で前の文を受け「しかし」とつなぐ副詞 However。Although・Because は接続詞でうしろにコンマを置かずに文が続き、Despite のうしろは名詞。' },
+      { id: 'C', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'うしろが文（separating voices requires …）なので接続詞 because。because of・despite・during は前置詞の働きで文を続けられない。' },
+    ],
+    underline: {
+      phrase: 'fade into the background',
+      choices: ['become less noticeable', 'become much louder', 'stop completely', 'move closer to you'],
+      answer: 0,
+      why: 'fade は「うすれる・弱まる」、background は「背景」。ほかの声があまり気にならなくなる、ということ。',
+    },
+    order: {
+      words: ['repeat', 'aloud', 'the', 'message', 'in', 'one', 'ear'],
+      rest: '',
+      answer: 'repeat aloud the message in one ear',
+      ja: '片方の耳のメッセージを声に出してくり返す。（aloud＝声に出して）',
+    },
+    tf: [
+      { statement: 'カクテルパーティー効果ということばは、1950年代に使われはじめた。', answer: true, why: '第1段落 a term introduced by … Colin Cherry in the 1950s。' },
+      { statement: '参加者は、無視した耳のメッセージの内容をよく覚えていた。', answer: false, why: '第2段落 they could say very little about the message in the other ear。' },
+      { statement: '無視している耳で自分の名前が流れると、気づく人がかなりいた。', answer: true, why: '第3段落 a significant number of people noticed it。' },
+    ],
+    qa: [
+      { q: 'What does the "own name" finding suggest about the brain?', choices: ['It keeps monitoring sounds we are not paying attention to.', 'It completely blocks out all unattended sounds.', 'It can understand two languages at once.', 'It hears only female voices.'], answer: 0, why: '第3段落 it continues to monitor them at some level。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

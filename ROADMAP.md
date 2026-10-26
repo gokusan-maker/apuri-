@@ -1537,7 +1537,7 @@
 - [x] 高校の文法単元を2つ追加：be eager to ／ be anxious to・to make matters worse ／ what is worse
 - [x] 高校の文法単元を4つ追加：while -ing ／ when -ing（接続詞を残した分詞構文）・if possible ／ if necessary・hope と wish のちがい・insist on -ing
 - [x] スペルで全問正解すると「🏆 パーフェクト！」
-- [x] 長文：私立医学部レベルをさらに1本（自分をくすぐれないわけ）
+- [x] 長文：私立医学部（自分をくすぐれないわけ）・TOEFL（カクテルパーティー効果）を1本ずつ
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
