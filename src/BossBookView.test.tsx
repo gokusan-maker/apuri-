@@ -157,3 +157,20 @@ it('ボス図鑑の、たおしたボスのカードには戦った舞台が背�
   const { container } = render(<BossBook />)
   expect(container.querySelector('.boss-book-fig .boss-arena.arena-field')).not.toBeNull()
 })
+
+it('ボス図鑑はとくぎでしぼりこめる（もう一度おすと全部にもどる）', async () => {
+  const { BossBook } = await import('./BossBookView')
+  const { BOSSES, BOSS_TRAITS, traitOf } = await import('./boss')
+  localStorage.clear()
+  const book = Object.fromEntries(Object.values(BOSSES).map((b) => [b.name, { look: b, wins: 1, best: 'A', first: '2026-10-01' }]))
+  localStorage.setItem('eitan:boss-book', JSON.stringify(book))
+  const { container } = render(<BossBook />)
+  const all = container.querySelectorAll('.boss-book-list li.got').length
+  const t = traitOf(BOSSES['中1'].name)
+  fireEvent.click(screen.getByRole('button', { name: BOSS_TRAITS[t].name }))
+  const shown = container.querySelectorAll('.boss-book-list li.got').length
+  expect(shown).toBe(Object.values(BOSSES).filter((b) => traitOf(b.name) === t).length)
+  expect(shown).toBeLessThan(all)
+  fireEvent.click(screen.getByRole('button', { name: BOSS_TRAITS[t].name }))
+  expect(container.querySelectorAll('.boss-book-list li.got').length).toBe(all)
+})

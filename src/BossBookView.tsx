@@ -18,6 +18,7 @@ const arenaOf = (name: string) => {
 export function BossBook({ onFight }: { onFight?: (name: string) => void } = {}) {
   const [book] = useState(loadBook)
   const [times] = useState(loadBossTimes)
+  const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
   const extra = Object.values(book)
     .map((e) => e.look)
@@ -63,8 +64,20 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           </ul>
         </details>
       )}
+      {beaten > 0 && (
+        <div className="trait-filter" role="group" aria-label="とくぎでしぼる">
+          <button className={only === null ? 'on' : ''} aria-pressed={only === null} onClick={() => setOnly(null)}>
+            すべて
+          </button>
+          {(Object.keys(BOSS_TRAITS) as (keyof typeof BOSS_TRAITS)[]).map((t) => (
+            <button key={t} className={only === t ? 'on' : ''} aria-pressed={only === t} aria-label={BOSS_TRAITS[t].name} onClick={() => setOnly(only === t ? null : t)}>
+              {BOSS_TRAITS[t].icon}
+            </button>
+          ))}
+        </div>
+      )}
       <ul className="boss-book-list">
-        {all.filter((b) => book[b.name]).map((b) => {
+        {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only)).map((b) => {
           const e = book[b.name]
           return (
             <li key={b.name} className={e ? 'got' : 'locked'}>
