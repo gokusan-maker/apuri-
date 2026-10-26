@@ -2390,3 +2390,4 @@
 - 2026-10-26: 文法に「congratulate A on B ／ praise A for B」の単元を追加（文法は430単元に）
 - 2026-10-26: TOEFL（地学）に長文「Where Rivers Build Land」（川のデルタ）を追加
 - 2026-10-26: とくぎ封じを、とくぎの種類ごとにも数えてボス図鑑に表示
+- 2026-10-26: 文法に「sound like ／ smell like ／ taste like ＋ 名詞」の単元を追加（よくあるまちがいつき）
