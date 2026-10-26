@@ -8459,6 +8459,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-yawning',
+    title: 'Why Do We Yawn?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Almost everyone yawns several times a day, and even unborn babies have been seen yawning. Yet scientists still do not fully agree on ( A ) we do it. For a long time, many people believed that we yawn because our bodies need more oxygen.",
+      "However, this idea has not been supported by experiments. In one well-known study, people breathed air with extra oxygen, but they did not yawn any less. Some researchers now suggest a different idea: yawning may help to cool the brain, just as a fan cools a computer that is working hard.",
+      "Another mystery is that yawning is contagious. When we see someone yawn, or even read about yawning, we often start yawning ourselves. Interestingly, studies have found that people are more likely to catch a yawn from family members and close friends ( B ) from strangers. This has led some scientists to think that contagious yawning may be connected to our ability to understand other people's feelings.",
+      "So the next time you yawn while reading, do not worry. It may simply be a sign that your brain is ( C ) hard, or that you care about the people around you.",
+    ],
+    ja: [
+      'ほとんどだれもが1日に何回かあくびをし、生まれる前の赤ちゃんでさえあくびをするのが見られている。それなのに、なぜ私たちがあくびをするのかについては、科学者たちの意見はまだ完全には一致していない。長い間、多くの人は、体がもっと酸素を必要としているからあくびをするのだと信じていた。',
+      'しかし、この考えは実験では裏づけられていない。よく知られた研究の1つでは、人々は酸素を多くした空気を吸ったが、あくびが減ることはなかった。いま一部の研究者は別の考えを示している。それは、懸命に動いているコンピューターをファンが冷やすのと同じように、あくびは脳を冷やすのに役立っているのかもしれないというものだ。',
+      'もう1つのなぞは、あくびがうつるということだ。だれかがあくびをするのを見たり、あくびについて読んだりするだけでも、私たちはよく自分もあくびをし始める。興味深いことに、人は見知らぬ人からよりも、家族や親しい友だちからのほうがあくびがうつりやすいことが、研究でわかっている。このことから、あくびがうつるのは、他人の気持ちを理解する能力と関係があるのかもしれないと考える科学者もいる。',
+      'だから、今度読書中にあくびが出ても心配しなくていい。それは単に脳が懸命に働いているしるしか、あるいはまわりの人たちを大切に思っているしるしなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'that'], answer: 0, why: 'agree on why ～「なぜ～かについて意見が一致する」。うしろが完全な文（we do it）なので why。what・which は文の中に欠けた名詞が必要で、前置詞 on のあとに that 節は置けない。' },
+      { id: 'B', choices: ['than', 'as', 'to', 'then'], answer: 0, why: 'more likely … than ～「～よりも…しやすい」。比較級 more と組むのは than。' },
+      { id: 'C', choices: ['working', 'work', 'worked', 'to work'], answer: 0, why: 'is ＋ -ing の進行形「（いま）働いている」。is work・is to work（予定）では意味が通らず、is worked は受け身になる。' },
+    ],
+    underline: {
+      phrase: 'contagious',
+      choices: ['spreading from one person to another', 'very dangerous', 'hard to stop', 'happening only at night'],
+      answer: 0,
+      why: 'contagious は「うつる・伝染する」。あとの文 When we see someone yawn, … we often start yawning ourselves がその説明。',
+    },
+    order: {
+      words: ['are', 'more', 'likely', 'to', 'catch'],
+      rest: 'a yawn from family members',
+      answer: 'are more likely to catch',
+      ja: '家族からのほうがあくびがうつりやすい（be likely to ～ の比較級）',
+    },
+    tf: [
+      { statement: '酸素を多くした空気を吸うと、あくびが減ることが実験で示された。', answer: false, why: '第2段落 they did not yawn any less。減らなかった。' },
+      { statement: 'あくびは脳を冷やすのに役立つかもしれないという考えがある。', answer: true, why: '第2段落 yawning may help to cool the brain。' },
+      { statement: 'あくびは、見知らぬ人からのほうがうつりやすい。', answer: false, why: '第3段落 more likely to catch a yawn from family members and close friends than from strangers。' },
+    ],
+    qa: [
+      { q: 'What have some scientists connected contagious yawning to?', choices: ["Our ability to understand other people's feelings.", 'A lack of oxygen in the room.', 'The temperature outside.', 'How much sleep we got the night before.'], answer: 0, why: "第3段落 contagious yawning may be connected to our ability to understand other people's feelings。" },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

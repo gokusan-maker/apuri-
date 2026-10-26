@@ -1845,6 +1845,8 @@
 
 - [x] 文法：形容詞＋前置詞④（be satisfied with ／ be crowded with ／ be angry with）
 
+- [x] 長文（共通テスト）：評論「Why Do We Yawn?」（あくびのなぞ）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
