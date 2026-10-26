@@ -9,6 +9,7 @@ import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
 import { BossBook } from './BossBookView'
 import { SPECIAL_EVENT_NOTE, specialEventOf, type SpecialEventId } from './bossevent'
+import { EventScene } from './EventSceneView'
 import { loadQuestDay, QUEST_COINS, QUEST_HP, questBossOf, saveQuestDay } from './questboss'
 import { ENDLESS_REWARD_COINS, endlessHp, endlessLevel, endlessLook, loadEndlessBest, rewardsBetween, saveEndlessBest } from './endless'
 import { loadNightDay, NIGHT_COINS, nightBossOf, saveNightDay, loadRareWeek, loadWeekendWeek, RARE_HP, rareBossOf, saveRareWeek, saveWeekendWeek, WEEKEND_HP, weekendBossOf, weekKey } from './rareboss'
@@ -782,6 +783,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             <p className="univ-rule">下の階から順に挑戦・高校の文法と入試の長文</p>
           </details>
           )}
+          {specialEvent !== 'gold' && specialEvent !== 'univ' && <EventScene id={specialEvent} />}
           {specialEvent !== 'gold' && specialEvent !== 'univ' && (
             <div className="boss-modes">
               {specialEvent === 'endless' && <button className="boss-btn endless-boss" onClick={() => setEndless({ floor: 1, hearts: HEARTS, won: false })}>

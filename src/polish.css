@@ -3715,3 +3715,38 @@ header .event-chips { margin: 0 0 2px; }
 .lair-lava i:nth-child(3) { left: 80%; animation-delay: 1.5s; }
 @keyframes lair-bubble { from { transform: scale(0.3); opacity: 1; } to { transform: translateY(-8px) scale(1.2); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .castle-lair::before, .lair-eye, .lair-orb, .lair-lava i { animation: none; } }
+
+/* ===== その日のイベント：イベントごとに色と絵を変える（城とはちがう見た目） ===== */
+.event-scene { position: relative; display: block; width: 100%; height: auto; max-height: 112px; margin: 0 0 8px; }
+.special-event.se-endless { background: linear-gradient(180deg, #1e1b4b, #3730a3 60%, #6366f1); }
+.special-event.se-rush { background: linear-gradient(180deg, #450a0a, #b91c1c 60%, #f97316); }
+.special-event.se-rush-ex { background: linear-gradient(180deg, #2e1065, #9333ea 55%, #f59e0b); }
+.special-event.se-night { background: linear-gradient(180deg, #020617, #1e1b4b 70%, #312e81); }
+.special-event.se-weekend { background: linear-gradient(180deg, #1e1b4b, #6d28d9 70%, #a78bfa); }
+.special-event.se-time { background: linear-gradient(180deg, #083344, #0e7490 60%, #22d3ee); }
+.special-event.se-rare { background: linear-gradient(135deg, #831843, #a21caf 45%, #f59e0b); }
+.special-event.se-quest { background: linear-gradient(180deg, #0c0a09, #450a0a 60%, #991b1b); }
+.special-event.se-gold { background: linear-gradient(180deg, #451a03, #b45309 60%, #fbbf24); }
+.es-floor { animation: es-rise 2.4s ease-in-out infinite alternate; }
+@keyframes es-rise { to { transform: translateY(-2px); } }
+.es-window { animation: castle-window 2.6s ease-in-out infinite alternate; }
+.es-cloud { animation: es-cloud 6s ease-in-out infinite alternate; }
+.es-cloud.c2 { animation-duration: 8s; animation-direction: alternate-reverse; }
+@keyframes es-cloud { to { transform: translateX(14px); } }
+.es-boss { animation: es-boss 1.6s ease-in-out infinite; }
+@keyframes es-boss { 50% { transform: translateY(-3px); } }
+.es-flame { animation: es-flame 0.9s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: bottom center; }
+@keyframes es-flame { to { transform: scaleY(1.12) scaleX(0.94); opacity: 0.85; } }
+.es-vs { paint-order: stroke; stroke: rgb(0 0 0 / 0.5); stroke-width: 3px; }
+.es-moon { filter: drop-shadow(0 0 8px #fef08a); }
+.es-star { animation: scn-star 1.8s ease-in-out infinite alternate; }
+.es-star:nth-of-type(2n) { animation-delay: 0.9s; }
+.es-hand { transform-box: view-box; transform-origin: 160px 54px; animation: es-tick 12s steps(12) infinite; }
+.es-hand.fast { animation: es-tick 2s linear infinite; }
+@keyframes es-tick { to { transform: rotate(360deg); } }
+.es-speed { animation: es-speed 0.8s ease-in-out infinite alternate; }
+@keyframes es-speed { to { transform: translateX(6px); opacity: 0.4; } }
+.es-gem { animation: es-gem 2.2s ease-in-out infinite; }
+@keyframes es-gem { 50% { transform: translateY(-5px); filter: drop-shadow(0 0 8px #fff); } }
+.es-crown { animation: es-gem 2.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .event-scene * { animation: none !important; } }
