@@ -4775,6 +4775,46 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-goosebumps',
+    title: 'Why Do We Get Goosebumps?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When you feel cold or hear a moving piece of music, tiny bumps may suddenly appear on your arms. These are called goosebumps, because the skin begins to look like that of a bird ( A ) feathers have been removed.",
+      "Goosebumps are caused by very small muscles attached to the base of each hair. When these muscles tighten, the hairs stand up and the skin around them is pushed up into little bumps. For our furry ancestors, this reaction was useful. Raised hair traps a layer of air near the skin, which helps keep the body warm. It also makes an animal look bigger, ( B ) may frighten away an enemy. You can see the same thing when a cat's fur stands up as it faces a dog.",
+      "Humans have lost most of their body hair, so goosebumps no longer keep us warm. Yet the reaction has survived. Interestingly, it is linked not only to cold and fear but also to strong emotions such as awe. Some scientists think goosebumps are simply a leftover from our past, while others believe they may still ( C ) a role in how we experience powerful feelings.",
+    ],
+    ja: [
+      '寒さを感じたり、心を動かす音楽を聞いたりすると、うでに小さなぶつぶつが急に出てくることがある。これは「鳥はだ」とよばれる。皮ふが、羽をむしられた鳥の皮ふのように見えはじめるからだ。',
+      '鳥はだは、1本1本の毛の根もとについているとても小さな筋肉によって起こる。この筋肉がちぢむと毛が立ち、そのまわりの皮ふがおし上げられて小さなぶつぶつになる。毛におおわれていた私たちの祖先にとって、この反応は役に立った。立った毛は皮ふの近くに空気の層をとじこめ、それが体をあたたかく保つのに役立つ。また、動物を大きく見せ、それが敵をおどして追いはらうこともある。犬と向き合ったねこの毛が逆立つときにも、同じことが見られる。',
+      '人間は体の毛のほとんどを失ったので、鳥はだはもう体をあたためてはくれない。それでも、この反応は残った。おもしろいことに、鳥はだは寒さや恐怖だけでなく、畏敬の念のような強い感情とも結びついている。鳥はだは過去のなごりにすぎないと考える科学者もいれば、強い感情の感じ方に今も役割を果たしているかもしれないと考える科学者もいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'which', 'that', 'what'], answer: 0, why: 'a bird と feathers の関係は「鳥の羽」なので所有格の関係代名詞 whose。うしろの文（feathers have been removed）に欠けた部分がないので which・that・what は入らない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容（大きく見えること）を受け、may frighten の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では接続詞がなく2つの文がつながらない。' },
+      { id: 'C', choices: ['play', 'playing', 'played', 'to play'], answer: 0, why: '助動詞 may のあとは動詞の原形。play a role in ～「～で役割を果たす」。' },
+    ],
+    underline: {
+      phrase: 'frighten away an enemy',
+      choices: ['scare an enemy so that it leaves', 'make friends with an enemy', 'fight an enemy for a long time', 'hide quietly from an enemy'],
+      answer: 0,
+      why: 'frighten away ～ は「～をおどして追いはらう」。frighten は「こわがらせる」、away は「はなれて」。',
+    },
+    order: {
+      words: ['helps', 'keep', 'the', 'body', 'warm'],
+      rest: '',
+      answer: 'helps keep the body warm',
+      ja: '体をあたたかく保つのに役立つ。（help ＋ 原形＝～するのに役立つ、keep O C＝O を C に保つ）',
+    },
+    tf: [
+      { statement: '鳥はだは、毛の根もとの小さな筋肉がちぢむことで起こる。', answer: true, why: '第2段落 Goosebumps are caused by very small muscles … When these muscles tighten。' },
+      { statement: '鳥はだは今でも人間の体をあたためるのに役立っている。', answer: false, why: '第3段落 goosebumps no longer keep us warm。' },
+      { statement: '鳥はだは、寒さや恐怖のときだけに出る。', answer: false, why: '第3段落 not only to cold and fear but also to strong emotions such as awe。' },
+    ],
+    qa: [
+      { q: 'How did raised hair help our furry ancestors?', choices: ['It kept them warm and made them look bigger.', 'It helped them hear music better.', 'It made their feathers grow faster.', 'It allowed them to run away quickly.'], answer: 0, why: '第2段落 helps keep the body warm … makes an animal look bigger。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
