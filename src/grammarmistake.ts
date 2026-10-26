@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'adj-prep-2': { wrong: 'I am fond to music.', right: 'I am fond of music.', why: 'be fond of ～「～が好きだ」。' },
   'judgment-to': { wrong: 'You were careless leave your bag.', right: 'You were careless to leave your bag.', why: '「～するなんて」は to ＋ 原形。' },
   'as-as-ever': { wrong: 'He is as a good player as anyone.', right: 'He is as good a player as anyone.', why: 'as ＋ 形容詞 ＋ a ＋ 名詞 ＋ as の語順。' },
   'enough-position': { wrong: 'She is enough tall to reach the shelf.', right: 'She is tall enough to reach the shelf.', why: '形容詞のときは enough をうしろに置く。' },
