@@ -5681,6 +5681,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-wetlands',
+    title: 'The Hidden Value of Wetlands',
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "For much of history, wetlands such as marshes, swamps, and bogs were seen as useless land. They were difficult to farm, hard to build on, and full of mosquitoes. As a result, people drained them ( A ) they could be turned into fields or towns.",
+      "Scientists now recognize that wetlands perform valuable services. They act like giant sponges, soaking up rainwater and releasing it slowly, which reduces flooding downstream. Their plants and soils also trap mud and absorb chemicals, ( B ) helps keep rivers and lakes clean.",
+      "Wetlands are important for the climate, too. Peatlands, a type of wetland in which dead plants build up over thousands of years, cover only about three percent of the world's land. Yet they are estimated to store more carbon than all the world's forests combined. When peatlands are drained, the stored carbon is gradually released into the air as carbon dioxide.",
+      "In 1971, countries meeting in the Iranian city of Ramsar signed an agreement to protect important wetlands. Since then, many damaged wetlands have been restored by blocking drainage ditches and allowing water to return. Such projects show that land once considered worthless may in fact be ( C ) the most valuable on Earth.",
+    ],
+    ja: [
+      '歴史の大部分で、沼地や湿原のような湿地は役に立たない土地だと見なされてきた。耕すのがむずかしく、建物を建てにくく、蚊だらけだったからだ。その結果、人々は湿地を畑や町に変えられるように、水をぬいて干拓した。',
+      '今では科学者たちは、湿地が貴重なはたらきをしていることを認めている。湿地は巨大なスポンジのように雨水を吸いこみ、ゆっくりと放出するので、下流の洪水を減らす。また湿地の植物や土は泥をとらえ、化学物質を吸収し、それが川や湖をきれいに保つ助けになる。',
+      '湿地は気候にとっても大切だ。泥炭地は、枯れた植物が何千年もかけて積み重なってできた湿地の一種で、世界の陸地のわずか3パーセントほどしかおおっていない。それでも、世界中の森林を合わせたよりも多くの炭素をたくわえていると推定されている。泥炭地の水がぬかれると、たくわえられていた炭素が二酸化炭素として少しずつ空気中に放出される。',
+      '1971年、イランの都市ラムサールに集まった国々が、大切な湿地を守るための条約に署名した。それ以来、排水用のみぞをふさいで水をもどすことで、こわされた多くの湿地が回復されてきた。こうした取り組みは、かつて価値がないと考えられていた土地が、実は地球でもっとも価値のある土地の1つかもしれないことを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'in order to', 'so as to', 'due to'], answer: 0, why: 'うしろが文（they could be turned …）なので so that S can「S が～できるように」。in order to・so as to のうしろは原形、due to のうしろは名詞。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容を受け、helps の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では2つの文がつながらない。' },
+      { id: 'C', choices: ['among', 'between', 'within', 'beside'], answer: 0, why: 'among the most ＋ 形容詞「もっとも～なものの1つ」。between・within・beside はこの形で使えない。' },
+    ],
+    underline: {
+      phrase: 'soaking up rainwater',
+      choices: ['taking in rainwater like a sponge', 'making rainwater dirty', 'sending rainwater away quickly', 'turning rainwater into ice'],
+      answer: 0,
+      why: 'soak up ～ は「（液体を）吸いこむ」。スポンジのように雨水を吸いこむ、ということ。',
+    },
+    order: {
+      words: ['turned', 'into', 'fields', 'or', 'towns'],
+      rest: '',
+      answer: 'turned into fields or towns',
+      ja: '畑や町に変えられる。（turn A into B＝A を B に変える、の受け身）',
+    },
+    tf: [
+      { statement: '湿地は昔から、価値のある土地だと考えられてきた。', answer: false, why: '第1段落 wetlands … were seen as useless land。' },
+      { statement: '湿地は雨水を吸いこみ、下流の洪水を減らす。', answer: true, why: '第2段落 soaking up rainwater … which reduces flooding downstream。' },
+      { statement: '泥炭地は世界の陸地のおよそ3パーセントをおおっている。', answer: true, why: '第3段落 cover only about three percent of the world\'s land。' },
+    ],
+    qa: [
+      { q: 'What happens when peatlands are drained?', choices: ['Stored carbon is released as carbon dioxide.', 'They store even more carbon.', 'Forests grow on them immediately.', 'Mosquitoes disappear from the area.'], answer: 0, why: '第3段落 When peatlands are drained, the stored carbon is gradually released into the air as carbon dioxide。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
