@@ -6995,6 +6995,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-paper-recycling',
+    title: 'A Second Life for Paper',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Every day, we use a lot of paper: notebooks, newspapers, boxes, and tissues. Have you ever wondered what happens to old paper after you put it in the recycling box? In fact, much of it ( A ) into new paper.",
+      "First, the used paper is taken to a factory. There, it is mixed with water and broken down into tiny pieces called fibers. This soft mixture, ( B ) looks a little like oatmeal, is called pulp. Next, the ink is removed from the pulp so that the new paper will not look dirty. Finally, the pulp is spread thin, pressed, and dried to make new sheets.",
+      "However, paper cannot be recycled forever. Each time it is recycled, the fibers become shorter and weaker. After about five to seven times, they are too short ( C ) into paper again. That is why factories often add some new fibers from trees.",
+      "So, next time you finish a notebook, don't throw it away with the trash. Put it in the recycling box. Your old paper may come back to you as a new notebook someday.",
+    ],
+    ja: [
+      '毎日、私たちはノート、新聞、箱、ティッシュなど、たくさんの紙を使っています。リサイクルの箱に入れたあと、古い紙がどうなるのか考えたことはありますか。実は、その多くが新しい紙に作り変えられているのです。',
+      'まず、使い終わった紙は工場に運ばれます。そこで水とまぜられ、繊維とよばれるとても小さなかけらにくだかれます。オートミールに少しにているこのやわらかいまぜものは、パルプとよばれます。次に、新しい紙がよごれて見えないように、パルプからインクが取りのぞかれます。最後に、パルプはうすく広げられ、おされて、かわかされ、新しい紙になります。',
+      'しかし、紙はいつまでもリサイクルできるわけではありません。リサイクルされるたびに、繊維は短く、弱くなります。5回から7回ほどで、繊維は短すぎてもう紙にすることができなくなります。だから工場では、木からとった新しい繊維を加えることが多いのです。',
+      'だから、次にノートを使い終わったら、ごみといっしょに捨てないでください。リサイクルの箱に入れましょう。あなたの古い紙が、いつか新しいノートになってもどってくるかもしれません。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is made', 'makes', 'is making', 'made'], answer: 0, why: '紙は「作られる」側なので受け身 is made。make A into B「A を B に作り変える」の受け身で is made into ～。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで This soft mixture（物）を説明し、looks の主語になる関係代名詞 which。what は先行詞をとらない、who は人、where のうしろは欠けのない文。' },
+      { id: 'C', choices: ['to be made', 'making', 'made', 'be made'], answer: 0, why: 'too ～ to ...「～すぎて…できない」。繊維は紙に「される」側なので to be made。' },
+    ],
+    tf: [
+      { statement: '古い紙はすべて燃やされている。', answer: false, why: '第1段落 much of it is made into new paper。' },
+      { statement: 'パルプは、紙を水とまぜて作られる。', answer: true, why: '第2段落 it is mixed with water … This soft mixture … is called pulp。' },
+      { statement: '紙は何度でもリサイクルできる。', answer: false, why: '第3段落 paper cannot be recycled forever。' },
+      { statement: '工場では、木からとった新しい繊維を加えることが多い。', answer: true, why: '第3段落 factories often add some new fibers from trees。' },
+    ],
+    qa: [
+      { q: 'Why is the ink removed from the pulp?', choices: ['So that the new paper will not look dirty.', 'So that the paper will become heavier.', 'Because the fibers are too long.', 'Because the ink makes the paper wet.'], answer: 0, why: '第2段落 the ink is removed from the pulp so that the new paper will not look dirty。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
