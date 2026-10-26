@@ -6639,6 +6639,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-giraffe',
+    title: 'Life at the Top',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "The giraffe is the tallest animal on land. An adult male can grow to more than five meters, ( A ) is taller than a two-story house. Its long neck lets it eat leaves from the tops of trees that other animals cannot reach.",
+      "Surprisingly, a giraffe's neck has only seven bones, the same number as a human's neck. Each bone, however, is very long. A giraffe also has a very long tongue, about forty-five centimeters, which it uses to pull leaves off thorny branches.",
+      "Having such a long neck is not always easy. To send blood all the way up to its head, a giraffe needs a large and powerful heart. Drinking water is also difficult. A giraffe has to spread its front legs wide and bend down, a position ( B ) makes it easier for lions to attack.",
+      "Giraffes also sleep very little. In the wild, they often sleep for only a few minutes at a time, and sometimes less than two hours ( C ) total in a day. Staying awake helps them watch for danger on the wide grasslands.",
+    ],
+    ja: [
+      'キリンは陸上でいちばん背の高い動物です。おとなのオスは5メートル以上になることがあり、それは2階建ての家より高いのです。長い首のおかげで、キリンはほかの動物がとどかない木のてっぺんの葉を食べることができます。',
+      'おどろいたことに、キリンの首の骨は7つしかなく、人の首の骨と同じ数です。しかし、1つ1つの骨がとても長いのです。キリンには約45センチのとても長い舌もあり、それを使ってとげのある枝から葉をとります。',
+      'こんなに長い首をもつのは、いつも楽なわけではありません。頭まで血を送るために、キリンには大きくて力強い心臓が必要です。水を飲むのもたいへんです。キリンは前足を大きく広げてかがまなければならず、その姿勢はライオンにおそわれやすくなるのです。',
+      'キリンはほとんどねむりません。野生では、1回に数分しかねむらないことが多く、1日の合計で2時間未満のこともあります。起きていることで、広い草原で危険を見張ることができるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（5メートル以上になること）を受け、is の主語になる非制限用法の which。what は先行詞をとらず、that はコンマのあとに使えず、it では文がつながらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a position を説明し、makes の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'in total「合計で」の決まった形。' },
+    ],
+    tf: [
+      { statement: 'キリンの首の骨の数は、人の首の骨と同じだ。', answer: true, why: '第2段落 only seven bones, the same number as a human\'s neck。' },
+      { statement: 'キリンは水を飲むのがとてもかんたんだ。', answer: false, why: '第3段落 Drinking water is also difficult。' },
+      { statement: '野生のキリンは、1日に10時間くらいねむる。', answer: false, why: '第4段落 sometimes less than two hours in total in a day。' },
+      { statement: 'キリンは長い舌を使って、とげのある枝から葉をとる。', answer: true, why: '第2段落 which it uses to pull leaves off thorny branches。' },
+    ],
+    qa: [
+      { q: 'Why does a giraffe need a large and powerful heart?', choices: ['To send blood all the way up to its head.', 'To run faster than lions.', 'To drink a lot of water.', 'To sleep for a long time.'], answer: 0, why: '第3段落 To send blood all the way up to its head, a giraffe needs a large and powerful heart。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
