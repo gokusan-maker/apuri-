@@ -7970,6 +7970,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-veg-stands',
+    title: 'Stands Without Sellers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On country roads in Japan, you may find small wooden stands selling fresh vegetables. There is no one ( A ) the stand. Customers simply choose what they want and put the money in a box. These are called unstaffed vegetable stands, and they have existed for many years.",
+      "For farmers, the stands are a simple way to sell vegetables that are slightly misshapen and cannot be sent to supermarkets. For customers, they offer fresh food at low prices. Visitors from abroad are often amazed that such a system works, ( B ) it depends completely on trust.",
+      "However, the system is not perfect. Some people take vegetables without paying, and in recent years a few stands have installed cameras or locked boxes. Others now accept payment by smartphone, which makes it easier to keep track of sales.",
+      "Even so, many farmers continue to run their stands in the traditional way. One farmer explained that most people are honest, and that the stand helps him feel connected ( C ) his neighbors. For him, it is not only a way to sell vegetables but also a small sign of trust in the community.",
+    ],
+    ja: [
+      '日本のいなか道では、新鮮な野菜を売る小さな木の売り場を見かけることがある。売り場を見はっている人はだれもいない。客はほしいものを選び、お金を箱に入れるだけだ。これは無人の野菜売り場とよばれ、何年も前からある。',
+      '農家にとって、この売り場は、形が少し悪くてスーパーに出せない野菜を売るかんたんな方法だ。客にとっては、新鮮な食べ物を安い値段で買える。このしくみは完全に信頼にたよっているので、外国から来た人は、それでうまくいっていることにおどろくことが多い。',
+      'しかし、このしくみは完ぺきではない。お金をはらわずに野菜を持っていく人もいて、近年はカメラやかぎのかかる箱を取りつけた売り場もある。スマートフォンで支払えるようにした売り場もあり、そのおかげで売り上げを記録しやすくなっている。',
+      'それでも、多くの農家は昔ながらのやり方で売り場を続けている。ある農家は、ほとんどの人は正直で、売り場のおかげで近所の人たちとつながっていると感じられると説明した。彼にとって売り場は、野菜を売る方法であるだけでなく、地域への信頼の小さなしるしでもあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['watching', 'watched', 'to watching', 'watch'], answer: 0, why: 'There is no one ＋ -ing「～している人はだれもいない」。no one（人）が「見はる」側なので -ing。' },
+      { id: 'B', choices: ['since', 'despite', 'because of', 'during'], answer: 0, why: 'うしろが文（it depends …）なので、理由の接続詞 since「～なので」。despite・because of・during のあとは名詞。' },
+      { id: 'C', choices: ['to', 'at', 'for', 'on'], answer: 0, why: 'feel connected to ～「～とつながっていると感じる」。' },
+    ],
+    underline: {
+      phrase: 'misshapen',
+      choices: ['having an unusual shape', 'very expensive', 'not fresh', 'grown abroad'],
+      answer: 0,
+      why: 'misshapen は「形が悪い・ゆがんだ」。mis（悪く）＋ shape（形）。',
+    },
+    order: {
+      words: ['keep', 'track', 'of', 'sales'],
+      rest: '',
+      answer: 'keep track of sales',
+      ja: '売り上げを記録する（keep track of ～「～の記録をつける・把握する」）',
+    },
+    tf: [
+      { statement: '無人の野菜売り場では、客が自分でお金を箱に入れる。', answer: true, why: '第1段落 Customers simply choose what they want and put the money in a box。' },
+      { statement: '無人売り場の野菜は、スーパーより高いことが多い。', answer: false, why: '第2段落 they offer fresh food at low prices。' },
+      { statement: 'カメラを取りつけた売り場もある。', answer: true, why: '第3段落 a few stands have installed cameras or locked boxes。' },
+    ],
+    qa: [
+      { q: 'Why do farmers sell some vegetables at the stands?', choices: ['They are slightly misshapen and cannot be sent to supermarkets.', 'Supermarkets are too far away from the farms.', 'The vegetables are too expensive for supermarkets.', 'Visitors from abroad ask them to.'], answer: 0, why: '第2段落 a simple way to sell vegetables that are slightly misshapen and cannot be sent to supermarkets。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

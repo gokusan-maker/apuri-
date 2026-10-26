@@ -2376,3 +2376,4 @@
 - 2026-10-26: TOEFL（科学）に長文「Fighting Noise with Noise」（ノイズキャンセリングのしくみ）を追加
 - 2026-10-26: ボス図鑑で、とくぎごとにボスをしぼりこめるように
 - 2026-10-26: 文法に「go for a walk ／ go on a trip ／ go to bed」の単元を追加
+- 2026-10-26: 高3（共通テスト）に長文「Stands Without Sellers」（無人の野菜売り場）を追加
