@@ -6911,6 +6911,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-board-games',
+    title: 'The Return of Board Games',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In an age of smartphones and online games, you might expect traditional board games to disappear. Surprisingly, the opposite has happened. In many cities, board game cafés have opened, ( A ) customers pay a small fee to play hundreds of different games while enjoying a drink.",
+      "One reason for this popularity is that board games bring people face to face. When you play online, your opponent may be on the other side of the world, and you never see their reaction. Around a table, ( B ), you can watch your friends laugh, worry, and celebrate.",
+      "Board games also offer a break from screens. Some players say that after a long day of looking at a computer, they enjoy holding real cards and moving wooden pieces with their own hands.",
+      "Teachers have noticed these benefits, too. Games that require players to plan ahead, negotiate, or ( C ) losing gracefully can teach skills that are hard to learn from a textbook. Perhaps the oldest form of play still has something new to offer.",
+    ],
+    ja: [
+      'スマートフォンやオンラインゲームの時代には、昔ながらのボードゲームは消えてしまうと思うかもしれない。おどろいたことに、その反対のことが起きている。多くの都市でボードゲームカフェが開店し、そこでは客が少しの料金をはらって、飲み物を楽しみながら何百種類ものゲームで遊んでいる。',
+      'この人気の理由の1つは、ボードゲームが人と人を向かい合わせることだ。オンラインで遊ぶとき、相手は世界の反対側にいるかもしれず、その反応を見ることはない。しかし、テーブルを囲めば、友だちが笑ったり、心配したり、喜んだりするのを見ることができる。',
+      'ボードゲームは、画面から離れるひとときも与えてくれる。1日じゅうコンピューターを見たあとで、本物のカードを持ったり、木のこまを自分の手で動かしたりするのが楽しいと言う人もいる。',
+      '教師たちも、こうした良さに気づいている。先を考えて計画したり、交渉したり、いさぎよく負けを受け入れたりすることが必要なゲームは、教科書からは学びにくい力を教えてくれる。いちばん古い遊びの形が、今も新しい何かを与えてくれるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'who'], answer: 0, why: 'うしろは主語・動詞・目的語のそろった文（customers pay a small fee …）なので、場所を表す関係副詞 where（＝at which）。which・who はうしろに欠けた語が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['however', 'but', 'although', 'despite'], answer: 0, why: 'コンマではさんで文の中に入れられるのは副詞の however「しかし」。but は文頭で文と文をつなぐ接続詞、although は後ろに文が必要、despite は後ろに名詞が必要。' },
+      { id: 'C', choices: ['accept', 'accepting', 'accepted', 'accepts'], answer: 0, why: 'require players to plan …, negotiate, or accept … と、to のあとの原形を3つ並べている（並列）。' },
+    ],
+    underline: {
+      phrase: 'face to face',
+      choices: ['in person', 'by phone', 'one by one', 'in secret'],
+      answer: 0,
+      why: 'face to face は「向かい合って・直接会って」。in person と同じ意味。',
+    },
+    order: {
+      words: ['the', 'opposite', 'has', 'happened'],
+      rest: '',
+      answer: 'the opposite has happened',
+      ja: 'その反対のことが起きている（現在完了）',
+    },
+    tf: [
+      { statement: 'ボードゲームカフェでは、少しの料金で多くのゲームを遊べる。', answer: true, why: '第1段落 customers pay a small fee to play hundreds of different games。' },
+      { statement: 'オンラインのゲームでは、相手の反応がいつもよく見える。', answer: false, why: '第2段落 you never see their reaction。' },
+      { statement: '教師たちは、ボードゲームが教科書では学びにくい力を教えられると気づいている。', answer: true, why: '第4段落 can teach skills that are hard to learn from a textbook。' },
+    ],
+    qa: [
+      { q: 'Why do some players enjoy board games after a long day?', choices: ['They want a break from looking at screens.', 'They want to earn some money.', 'They cannot use computers at home.', 'They need to study for a test.'], answer: 0, why: '第3段落 Board games also offer a break from screens … after a long day of looking at a computer。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
