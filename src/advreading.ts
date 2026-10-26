@@ -7928,6 +7928,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-noise-canceling',
+    title: 'Fighting Noise with Noise',
+    level: 'TOEFL・IELTS（科学）',
+    paragraphs: [
+      "On a long flight, the steady roar of the engines can make it hard to relax. Noise-canceling headphones offer a solution, and the way they work is surprisingly clever. Instead of simply blocking sound, they fight noise by ( A ) more sound.",
+      "Sound travels as waves of air pressure, with high points and low points. Tiny microphones on the headphones pick up the sound around you. A small computer chip then creates a new sound wave that is the exact opposite of the noise. When the two waves meet, they cancel each ( B ) out, and you hear much less.",
+      "This method works best on steady, low sounds, such as the hum of an engine or an air conditioner. It is less effective against sudden or high-pitched sounds, ( C ) change too quickly for the chip to follow. For these, the soft cushions that cover the ears help by physically blocking the sound.",
+      "The same idea is now used in other places, too. Some cars, for example, use it to reduce road noise inside, making long drives more comfortable.",
+    ],
+    ja: [
+      '長い飛行機の旅では、エンジンのたえまないごう音のせいで、くつろぎにくいことがある。ノイズキャンセリング・ヘッドホンはその解決策で、そのしくみはおどろくほどかしこい。ただ音をさえぎるのではなく、音を加えることで騒音と戦うのである。',
+      '音は、空気の圧力の波として伝わり、高いところと低いところがある。ヘッドホンについている小さなマイクが、まわりの音をひろう。次に、小さなコンピューターチップが、騒音とちょうど反対の新しい音の波を作り出す。2つの波が出会うと、たがいに打ち消し合い、聞こえる音はずっと小さくなる。',
+      'この方法は、エンジンやエアコンのうなりのような、一定の低い音にいちばんよく効く。とつぜんの音や高い音には効果が小さい。そうした音は変化が速すぎて、チップが追いつけないからだ。そうした音には、耳をおおうやわらかいクッションが、物理的に音をさえぎることで役立つ。',
+      '同じ考え方は、今ではほかの場所でも使われている。たとえば、車の中の道路の騒音を減らすために使い、長いドライブを快適にしている車もある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['adding', 'add', 'added', 'to add'], answer: 0, why: '前置詞 by のあとは動名詞：by -ing「～することによって」。' },
+      { id: 'B', choices: ['other', 'another', 'others', 'the other'], answer: 0, why: 'cancel each other out「たがいに打ち消し合う」。each other は決まった形。' },
+      { id: 'C', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで sudden or high-pitched sounds（物）を説明し、change の主語になる非制限用法の which。' },
+    ],
+    underline: {
+      phrase: 'effective',
+      choices: ['successful in working', 'expensive', 'popular', 'dangerous'],
+      answer: 0,
+      why: 'effective は「効果がある・よく効く」。less effective「効果が小さい」。',
+    },
+    order: {
+      words: ['the', 'exact', 'opposite', 'of'],
+      rest: 'the noise',
+      answer: 'the exact opposite of',
+      ja: '～のちょうど反対（exact は「まさにその」）',
+    },
+    tf: [
+      { statement: 'ノイズキャンセリング・ヘッドホンは、音をさえぎるだけのしくみである。', answer: false, why: '第1段落 Instead of simply blocking sound, they fight noise by adding more sound。' },
+      { statement: 'エンジンのうなりのような一定の低い音に、いちばんよく効く。', answer: true, why: '第3段落 This method works best on steady, low sounds, such as the hum of an engine。' },
+      { statement: '同じ考え方は、車にも使われている。', answer: true, why: '第4段落 Some cars … use it to reduce road noise inside。' },
+    ],
+    qa: [
+      { q: 'Why are noise-canceling headphones less effective against sudden sounds?', choices: ['Those sounds change too quickly for the chip to follow.', 'The microphones turn off for sudden sounds.', 'The ear cushions are too soft.', 'Sudden sounds are always very low.'], answer: 0, why: '第3段落 sudden or high-pitched sounds, which change too quickly for the chip to follow。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
