@@ -5723,6 +5723,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sento',
+    title: 'The Neighborhood Bath',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, many Japanese homes did not have their own bathtubs, so people went to public baths called sento. In the late 1960s, there were nearly eighteen thousand sento across the country. Today, only a small fraction remain, ( A ) most homes now have a bath.",
+      "Yet sento have not disappeared. Some owners have found new ways to attract customers. They hold music events, sell local drinks, or invite artists to paint new pictures on the walls. The large paintings of Mount Fuji seen in many sento have become popular with young people and tourists ( B ) enjoy their old-fashioned charm.",
+      "For many regular customers, though, the real value of a sento is the community. Elderly people who live alone may chat with neighbors there every day. Parents bring small children, who learn bath manners from older users, such as washing their bodies before ( C ) the bath.",
+      "A sento is more than a place to get clean. It is a place where people of all ages can relax together, and that may be the reason it continues to survive.",
+    ],
+    ja: [
+      'それほど昔ではないころ、日本の多くの家には自分の家の浴そうがなかったので、人々は銭湯とよばれる公衆浴場に通った。1960年代の終わりには、全国に1万8千近くの銭湯があった。今ではほとんどの家にふろがあるので、残っているのはそのほんの一部である。',
+      'それでも、銭湯は消えてはいない。新しいやり方で客を集める店主もいる。音楽のもよおしを開いたり、地元の飲み物を売ったり、画家をよんでかべに新しい絵をかいてもらったりしているのだ。多くの銭湯に見られる大きな富士山の絵は、その昔ながらの魅力を楽しむ若者や観光客に人気になっている。',
+      'しかし多くの常連客にとって、銭湯の本当の価値は地域のつながりにある。一人暮らしのお年寄りは、毎日そこで近所の人とおしゃべりするかもしれない。親は小さな子どもを連れてきて、子どもたちは湯船に入る前に体を洗うといったおふろのマナーを、年上の利用客から学ぶ。',
+      '銭湯は、体をきれいにするだけの場所ではない。あらゆる年代の人がいっしょにくつろげる場所であり、それこそが銭湯が生き残り続けている理由なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'うしろが文（most homes now have a bath）なので接続詞 because。because of・despite・during は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 young people and tourists（人）を説明し、enjoy の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'C', choices: ['entering', 'enter', 'to enter', 'entered'], answer: 0, why: '前置詞 before のあとは動名詞 entering。' },
+    ],
+    underline: {
+      phrase: 'a small fraction',
+      choices: ['a small part', 'almost all', 'exactly half', 'none at all'],
+      answer: 0,
+      why: 'fraction は「一部・わずかな部分」。only a small fraction remain で「ほんの一部しか残っていない」。',
+    },
+    order: {
+      words: ['have', 'found', 'new', 'ways', 'to', 'attract', 'customers'],
+      rest: '',
+      answer: 'have found new ways to attract customers',
+      ja: '客を集める新しいやり方を見つけた。（形容詞的用法の不定詞 ways to attract）',
+    },
+    tf: [
+      { statement: '1960年代の終わりには、全国に1万8千近くの銭湯があった。', answer: true, why: '第1段落 there were nearly eighteen thousand sento across the country。' },
+      { statement: '銭湯の富士山の絵は、若者や観光客にはまったく人気がない。', answer: false, why: '第2段落 have become popular with young people and tourists。' },
+      { statement: '子どもたちは、年上の利用客からおふろのマナーを学ぶ。', answer: true, why: '第3段落 who learn bath manners from older users。' },
+    ],
+    qa: [
+      { q: 'According to the writer, why may sento continue to survive?', choices: ['They are places where people of all ages can relax together.', 'Most homes still have no bathtub.', 'They are cheaper than hotels.', 'They are open only to tourists.'], answer: 0, why: '第4段落 It is a place where people of all ages can relax together, and that may be the reason it continues to survive。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -1530,6 +1530,7 @@
 - [x] 高校の文法単元を4つ追加：It was not long before ～・superior to ／ inferior to ／ senior to・can afford to・ever since
 - [x] 長文読解：その長文ではじめて満点をとると 🪙5 のボーナス
 - [x] 高校の文法単元を2つ追加：make it a rule to ～・take it for granted that ～
+- [x] 長文：共通テストレベルをさらに1本（銭湯）
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
