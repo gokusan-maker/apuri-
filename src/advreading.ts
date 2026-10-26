@@ -8357,6 +8357,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-coffee-machines',
+    title: 'Memo: New Coffee Machines in the Break Rooms',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To: All Staff. From: Facilities Department. Subject: New coffee machines. Starting Monday, May 12, the old coffee makers in the break rooms on the second and fourth floors will be replaced ( A ) new machines that can make coffee, tea, and hot chocolate.",
+      "Drinks from the new machines will no longer be free. Each cup will cost 50 cents, but employees can pay with their staff ID cards, so there is no need to carry coins. The cost will be taken out of your monthly pay automatically.",
+      "To keep the machines working well, each department will take turns cleaning them. A schedule will be posted next to each machine. On your department's day, please empty the used coffee grounds and wipe the drip tray before you ( B ) home.",
+      "Installation will take place on Friday afternoon, May 9, so the break rooms will be closed from 1:00 p.m. that day. If you have any questions, please contact Tom Reyes at extension 214. We hope you will enjoy the wider choice of drinks.",
+    ],
+    ja: [
+      '宛先：全社員　差出人：施設管理部　件名：新しいコーヒーマシン。5月12日（月）から、2階と4階の休憩室にある古いコーヒーメーカーを、コーヒー・紅茶・ホットチョコレートを作れる新しいマシンに取りかえます。',
+      '新しいマシンの飲み物は、今後は無料ではなくなります。1杯50セントですが、社員証で支払えるので、硬貨を持ち歩く必要はありません。代金は毎月の給与から自動的に差し引かれます。',
+      'マシンの調子をよく保つために、各部署が交代で掃除をします。予定表は各マシンの横に貼り出します。自分の部署の当番の日は、帰宅する前に使用済みのコーヒーかすを捨て、受け皿をふいてください。',
+      '設置作業は5月9日（金）の午後に行うため、その日は午後1時から休憩室を閉鎖します。ご質問があれば、内線214のトム・レイエスまでご連絡ください。飲み物の種類が増えたことを楽しんでいただければ幸いです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['with', 'for', 'to', 'of'], answer: 0, why: 'replace A with B「A を B に取りかえる」の受け身 A will be replaced with B。for・to・of ではこの意味にならない。' },
+      { id: 'B', choices: ['go', 'will go', 'went', 'going'], answer: 0, why: '時を表す before ～ の中では、未来のことも現在形で表す。主語 you なので go。' },
+    ],
+    tf: [
+      { statement: '新しいマシンの飲み物は無料で飲める。', answer: false, why: '第2段落 Drinks from the new machines will no longer be free. Each cup will cost 50 cents。' },
+      { statement: '飲み物の代金は社員証で支払える。', answer: true, why: '第2段落 employees can pay with their staff ID cards。' },
+      { statement: 'マシンの掃除は施設管理部がすべて行う。', answer: false, why: '第3段落 each department will take turns cleaning them。各部署が交代で掃除する。' },
+    ],
+    qa: [
+      { q: 'What will happen on the afternoon of May 9?', choices: ['The break rooms will be closed.', 'Employees will get free drinks.', 'A new cleaning schedule will start.', 'Tom Reyes will give a training session.'], answer: 0, why: '第4段落 Installation will take place on Friday afternoon, May 9, so the break rooms will be closed from 1:00 p.m.。' },
+      { q: 'How will employees pay for their drinks?', choices: ['The cost will be taken out of their monthly pay.', 'They will put coins into the machine.', 'They will pay at the reception desk.', 'Each department will pay once a year.'], answer: 0, why: '第2段落 The cost will be taken out of your monthly pay automatically。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
