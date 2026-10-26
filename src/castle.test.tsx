@@ -103,3 +103,18 @@ it('地図の道はまん中をさけ、いまのステージの札は広い側�
   expect(mapRoom(20)).toBe(80)
   expect(mapRoom(80)).toBe(80)
 })
+
+it('次の宝箱まで、あといくつかを数える（10ごとと、てっぺん）', async () => {
+  const { nextChestIn } = await import('./castle')
+  expect(nextChestIn(0, 25)).toBe(10)
+  expect(nextChestIn(9, 25)).toBe(1)
+  expect(nextChestIn(10, 25)).toBe(10)
+  expect(nextChestIn(21, 25)).toBe(4)
+  expect(nextChestIn(25, 25)).toBeNull()
+})
+
+it('地図の下に「次の宝箱まで あとnステージ」が出る', () => {
+  const floors = Array.from({ length: 12 }, (_, i) => ({ id: `m${i}`, label: `S${i}`, cleared: i < 3 }))
+  render(<Castle name="テストの海" floors={floors} onOpen={() => {}} theme="sea" />)
+  expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('あと7ステージ')
+})

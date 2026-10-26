@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState, type CSSProperties } from 'react'
-import { mapRoom, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
+import { mapRoom, nextChestIn, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 
 const ROW = 68 // ステージの間かく（px）。地図が1画面におさまるように
@@ -116,6 +116,11 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
           </span>
         )}
       </div>
+      {chest === undefined && nextChestIn(now, total) !== null && (
+        <p className="smap-next-chest" aria-label="次の宝箱まで">
+          🎁 次の宝箱まで あと{nextChestIn(now, total)}ステージ
+        </p>
+      )}
       {shown[0] > 0 && <p className="castle-below">⬇ {shown[0]}ステージぶん、クリアずみ</p>}
     </section>
   )

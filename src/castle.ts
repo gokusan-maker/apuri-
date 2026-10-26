@@ -40,6 +40,12 @@ export function openableChests(cleared: number, opened: number[], total = 0): nu
   return out.filter((n) => !opened.includes(n))
 }
 
+// 次の宝箱まで、あといくつクリアすればよいか（てっぺんまで行ったら null）
+export function nextChestIn(cleared: number, total: number): number | null {
+  for (let m = cleared + 1; m <= total; m++) if (isMilestone(m, total)) return m - cleared
+  return null
+}
+
 // 宝箱のレアの卵：App がわたす（なかまに入れて、入れた卵の名前を返す。いっぱいなら null）
 export const RareEggContext = createContext<(() => string | null) | null>(null)
 // 宝箱のガチャチケット：てっぺんの宝箱と30階ごとの宝箱に入っている（App がわたす）
