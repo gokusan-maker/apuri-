@@ -3763,3 +3763,7 @@ header .event-chips { margin: 0 0 2px; }
 .boss-figure.rage .boss-arena { animation: arena-rage 0.9s ease-in-out infinite alternate; }
 @keyframes arena-rage { from { box-shadow: inset 0 0 0 2px rgb(255 255 255 / 0.25), 0 0 0 rgb(239 68 68 / 0); } to { box-shadow: inset 0 0 30px rgb(239 68 68 / 0.55), 0 0 18px rgb(239 68 68 / 0.6); } }
 @media (prefers-reduced-motion: reduce) { .boss-figure.rage .boss-arena { animation: none; box-shadow: inset 0 0 24px rgb(239 68 68 / 0.5); } }
+/* ボス図鑑：たおしたボスのカードに、戦った舞台を小さく */
+.boss-book-fig { position: relative; display: grid; place-items: center; }
+.boss-book-fig .boss-arena { position: absolute; inset: 0; left: 0; top: 0; width: 100%; height: 100%; transform: none; border-radius: 12px; box-shadow: none; }
+.boss-book-fig > svg:not(.boss-arena) { position: relative; z-index: 1; }

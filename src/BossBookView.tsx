@@ -1,11 +1,17 @@
 import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
-import { BOSSES, BOSS_TRAITS, formatSec, loadBossTimes, traitOf, type BossLook } from './boss'
+import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, traitOf, type BossLook } from './boss'
+import { BossArena } from './BossArenaView'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
 import { UNIV_BOSSES } from './univ'
 
 const GRAY = { color: '#9ca3af', line: '#6b7280', eye: '#e5e7eb' }
+// 図鑑のカードの背景：そのボスと戦った舞台（単語帳のボスはレベルの舞台、それ以外は城）
+const arenaOf = (name: string) => {
+  const lv = (Object.keys(BOSSES) as (keyof typeof BOSSES)[]).find((k) => BOSSES[k].name === name)
+  return lv ? bossBgOf(lv) : 'castle'
+}
 
 // ボス図鑑：ステージのボス・大学入試の塔のボス・倒したレアボスを並べる。まだ倒していないボスはシルエット
 // onFight：たおしたことのある単語帳のボスと再戦する（名前で知らせる）
@@ -63,6 +69,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           return (
             <li key={b.name} className={e ? 'got' : 'locked'}>
               <span className="boss-book-fig">
+                {e && <BossArena bg={arenaOf(b.name)} color={b.color} />}
                 <BossFigure hit={false} look={e ? b : { ...b, ...GRAY }} />
               </span>
               <span className="badge-name">{e ? b.name : '？？？'}</span>

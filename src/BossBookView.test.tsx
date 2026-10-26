@@ -148,3 +148,12 @@ it('とくぎ封じが10回目のとき、ガチャチケットももらえる',
   expect(tickets).toBe(1)
   expect(screen.getByText(/＋🎟（10回ごとのごほうび）/)).toBeInTheDocument()
 })
+
+it('ボス図鑑の、たおしたボスのカードには戦った舞台が背景に出る', async () => {
+  const { BossBook } = await import('./BossBookView')
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  localStorage.setItem('eitan:boss-book', JSON.stringify({ [BOSSES['中1'].name]: { look: BOSSES['中1'], wins: 1, best: 'A', first: '2026-10-01' } }))
+  const { container } = render(<BossBook />)
+  expect(container.querySelector('.boss-book-fig .boss-arena.arena-field')).not.toBeNull()
+})
