@@ -555,3 +555,7 @@ export function traitAfterHit(trait: BossTrait | BossTrait[], hp: number, nextHp
   }
   return { hp: n, blocked, healed }
 }
+
+// ボス戦の舞台の季節：12〜2月は雪、3〜4月はさくらの花びらが舞う
+export type ArenaSeason = 'snow' | 'sakura' | null
+export const arenaSeasonOf = (month: number): ArenaSeason => (month === 11 || month <= 1 ? 'snow' : month === 2 || month === 3 ? 'sakura' : null)

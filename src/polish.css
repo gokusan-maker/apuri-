@@ -3783,3 +3783,8 @@ header .event-chips { margin: 0 0 2px; }
 .seal-live { margin: 0 auto 2px; width: fit-content; padding: 1px 10px; border-radius: 999px; background: rgb(124 58 237 / 0.12); color: #7c3aed; font-size: 0.7rem; font-weight: 900; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seal-live { color: #c4b5fd; background: rgb(196 181 253 / 0.15); } }
 :root[data-theme="dark"] .seal-live { color: #c4b5fd; background: rgb(196 181 253 / 0.15); }
+/* ボス戦の舞台の季節：雪・さくら */
+.arena-season circle { animation: arena-fall 4s linear infinite; }
+.arena-season.s-sakura circle { animation-duration: 5s; }
+@keyframes arena-fall { from { transform: translate(0, 0); opacity: 0; } 10% { opacity: 1; } to { transform: translate(-14px, 160px); opacity: 0.2; } }
+@media (prefers-reduced-motion: reduce) { .arena-season { display: none; } }

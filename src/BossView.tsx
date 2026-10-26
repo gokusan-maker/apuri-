@@ -19,7 +19,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, traitAfterHit, bossTraits, type BossTrait } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, traitAfterHit, bossTraits, type BossTrait, arenaSeasonOf } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -294,6 +294,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
   const [night] = useState(() => isNight(new Date().getHours())) // 夜は舞台の空を暗く
+  const [season] = useState(() => arenaSeasonOf(new Date().getMonth())) // 季節の雪・さくら
   const traits = traitsProp ?? bossTraits(baseLook.name) // ボスのとくぎ
   const [traitMsg, setTraitMsgRaw] = useState('') // とくぎが発動したとき
   const fired = useRef(false) // このバトルでとくぎが1回でも発動した（とくぎ封じの判定）
@@ -634,7 +635,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </div>
       )}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
-        <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} night={night} />
+        <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} night={night} season={season} />
         <BossFigure hit={hit} look={look} />
         {teamOn && index === 0 && picked === null && !won && (
           <span className="boss-vs" aria-hidden="true">

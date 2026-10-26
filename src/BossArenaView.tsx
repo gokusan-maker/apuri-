@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import type { BossBg } from './boss'
+import type { ArenaSeason, BossBg } from './boss'
 
 // ボス戦の舞台：ボスのうしろの景色（ステージごと）と、ボスの色のオーラ・足もとの台
 const W = 320
@@ -86,7 +86,7 @@ function Scenery({ bg }: { bg: Arena }) {
   }
 }
 
-export function BossArena({ bg, color, night = false }: { bg: Arena; color: string; night?: boolean }) {
+export function BossArena({ bg, color, night = false, season = null }: { bg: Arena; color: string; night?: boolean; season?: ArenaSeason }) {
   const id = useId().replace(/:/g, '')
   const [a, b] = SKY[bg]
   return (
@@ -109,6 +109,13 @@ export function BossArena({ bg, color, night = false }: { bg: Arena; color: stri
           <rect width={W} height={H} fill="#0b1027" opacity="0.5" />
           {[24, 70, 120, 200, 250, 296].map((x, k) => (
             <circle key={x} cx={x} cy={10 + ((k * 17) % 40)} r={k % 2 ? 1 : 1.5} fill="#fff" className="arena-star" />
+          ))}
+        </g>
+      )}
+      {season && bg !== 'sea' && bg !== 'gold' && (
+        <g className={`arena-season s-${season}`}>
+          {[20, 60, 100, 150, 200, 240, 280, 310].map((x, k) => (
+            <circle key={x} cx={x} cy={-6 - (k % 3) * 20} r={season === 'snow' ? 2 : 2.6} fill={season === 'snow' ? '#fff' : '#f9a8d4'} style={{ animationDelay: `${(k * 0.45) % 3}s` }} />
           ))}
         </g>
       )}
