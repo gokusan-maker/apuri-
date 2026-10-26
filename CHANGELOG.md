@@ -2239,3 +2239,4 @@
 - 2026-10-26: 文法に「provide A with B ／ provide B for A」と「replace A with B ／ compare A with B」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: TOEIC の長文（お知らせ文）に「新しい社員証のお知らせ」を追加（空所・下線部・語句整序つき）
 - 2026-10-26: スペルの連続正解に自己ベストを記録し、更新すると結果に「🎉 自己ベスト更新！」を表示
+- 2026-10-26: 文法に「be similar to ／ be responsible for ／ be aware of」と「take pride in ／ be proud of」の単元を追加（よくあるまちがいつき）

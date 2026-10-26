@@ -1550,6 +1550,7 @@
 - [x] 高校の文法単元を2つ追加：provide A with B ／ provide B for A・replace A with B ／ compare A with B
 - [x] 長文：TOEIC をさらに1本（新しい社員証のお知らせ）
 - [x] スペルの連続正解に自己ベスト（更新すると「🎉 自己ベスト更新！」）
+- [x] 高校の文法単元を2つ追加：be similar to ／ be responsible for ／ be aware of・take pride in ／ be proud of
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
