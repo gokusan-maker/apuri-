@@ -5650,6 +5650,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-braille',
+    title: 'Reading with Fingers',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Have you ever touched the small raised dots on elevator buttons or on some ticket machines at train stations? These dots are braille, a system of reading and writing ( A ) people who cannot see use with their fingers.",
+      "Braille was created by a French boy named Louis Braille. He lost his sight in an accident when he was three years old. At school, he learned a military code that used raised dots so that soldiers could read messages at night without light. Louis thought the code was too difficult, so he made a simpler one. He was only about fifteen years old ( B ) he finished the first version.",
+      "In braille, each letter is made from up to six dots arranged in two columns of three. By feeling which dots are raised, a reader can tell one letter from another. Today braille is used in many languages, including Japanese.",
+      "Japan also invented something that helps people who cannot see: tactile paving, the yellow blocks with raised lines and dots on sidewalks and train platforms. They were first used in Okayama in 1967 and are now found all over the world. Next time you see them, please do not ( C ) bicycles or bags on them.",
+    ],
+    ja: [
+      'エレベーターのボタンや、駅の券売機の一部にある、小さくもり上がった点にさわったことはありますか。この点は点字といい、目の見えない人が指で使う、読み書きのしくみです。',
+      '点字は、ルイ・ブライユというフランスの少年がつくりました。彼は3歳のときに事故で視力を失いました。学校で、兵士が明かりなしで夜にメッセージを読めるように、もり上がった点を使う軍隊の符号を習いました。ルイはその符号がむずかしすぎると思ったので、もっとかんたんなものをつくりました。最初のものを完成させたとき、彼はまだ15歳くらいでした。',
+      '点字では、1つの文字は、3つずつ2列にならんだ最大6つの点でできています。どの点がもり上がっているかをさわって確かめることで、読む人は文字を見分けることができます。今日、点字は日本語をふくむ多くの言語で使われています。',
+      '日本も、目の見えない人を助けるものを発明しました。歩道や駅のホームにある、もり上がった線や点のついた黄色いブロック、点字ブロックです。点字ブロックは1967年に岡山ではじめて使われ、今では世界中で見られます。今度点字ブロックを見かけたら、その上に自転車やかばんを置かないでください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 a system of reading and writing を説明し、use の目的語が欠けているので関係代名詞 that。what は先行詞をとらず、who は人に使い、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['when', 'during', 'at'], answer: 0, why: 'うしろが文（he finished the first version）なので接続詞 when。during・at は前置詞でうしろに文を続けられない。' },
+      { id: 'C', choices: ['leave', 'leaving', 'to leave', 'left'], answer: 0, why: '命令文 please do not ＋ 原形「～しないでください」。' },
+    ],
+    tf: [
+      { statement: 'ルイ・ブライユは、生まれたときから目が見えなかった。', answer: false, why: '第2段落 He lost his sight in an accident when he was three years old。' },
+      { statement: '点字の1つの文字は、最大6つの点でできている。', answer: true, why: '第3段落 each letter is made from up to six dots。' },
+      { statement: '点字ブロックは岡山ではじめて使われた。', answer: true, why: '第4段落 They were first used in Okayama in 1967。' },
+      { statement: '点字は今、フランス語だけで使われている。', answer: false, why: '第3段落 Today braille is used in many languages, including Japanese。' },
+    ],
+    qa: [
+      { q: 'Why did Louis Braille make a new code?', choices: ['He thought the military code was too difficult.', 'Soldiers asked him to make one.', 'He wanted to write letters at night.', 'His school did not have any books.'], answer: 0, why: '第2段落 Louis thought the code was too difficult, so he made a simpler one。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
