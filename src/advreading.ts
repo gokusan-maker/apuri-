@@ -7855,6 +7855,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-paralympics',
+    title: 'How the Paralympics Began',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Every four years, athletes from around the world take part in the Paralympic Games. These games are for athletes with disabilities. But how did the Paralympics start?",
+      "The story began in England in 1948. A doctor named Ludwig Guttmann was working at a hospital for soldiers ( A ) were injured in the war. He believed that sports could help his patients become stronger and feel hopeful again. So he held an archery competition for patients in wheelchairs on the same day as the opening of the London Olympics.",
+      "The competition became bigger every year. In 1960, the first Paralympic Games were held in Rome, and about 400 athletes from 23 countries took part. Since 1988, the Paralympics have been held in the same city as the Olympics, a few weeks after them.",
+      "The word \"Para\" means \"beside.\" It shows that the two games stand side by side. Today, the Paralympics show the world ( B ) much people can do. Tokyo has hosted the Paralympics twice, in 1964 and in 2021. Many people who watched the games were moved by the athletes' strong spirit and ( C ) to try new things themselves.",
+    ],
+    ja: [
+      '4年ごとに、世界中の選手がパラリンピックに参加します。この大会は、障がいのある選手のための大会です。では、パラリンピックはどのように始まったのでしょうか。',
+      'その話は1948年のイギリスで始まりました。ルートヴィヒ・グットマンという医師が、戦争でけがをした兵士のための病院で働いていました。彼は、スポーツが患者たちを強くし、もう一度希望をもてるようにする助けになると信じていました。そこで、ロンドン・オリンピックの開会と同じ日に、車いすの患者たちのためのアーチェリーの大会を開いたのです。',
+      'その大会は年々大きくなりました。1960年には最初のパラリンピックがローマで開かれ、23か国からおよそ400人の選手が参加しました。1988年からは、パラリンピックはオリンピックと同じ都市で、その数週間後に開かれています。',
+      '「パラ」という言葉は「となりに」という意味です。2つの大会が並んで立っていることを表しているのです。今日、パラリンピックは、人がどれほど多くのことをできるかを世界に示しています。東京は1964年と2021年の2回、パラリンピックを開きました。大会を見た多くの人が、選手たちの強い心に感動し、自分も新しいことに挑戦しようと決めました。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 soldiers（人）を説明し、were injured の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'that'], answer: 0, why: 'how much ＋ 主語 ＋ 動詞「どれほど多く～するか」（間接疑問）。what・which・that は much の前に置けない。' },
+      { id: 'C', choices: ['decided', 'deciding', 'decide', 'to deciding'], answer: 0, why: 'were moved … and decided と、過去の動詞を and で並べている。decide to ～「～しようと決める」。' },
+    ],
+    tf: [
+      { statement: 'パラリンピックは、障がいのある選手のための大会である。', answer: true, why: '第1段落 These games are for athletes with disabilities。' },
+      { statement: 'グットマン医師は、スポーツが患者の助けになると信じていた。', answer: true, why: '第2段落 He believed that sports could help his patients。' },
+      { statement: '最初のパラリンピックは、ロンドンで開かれた。', answer: false, why: '第3段落 the first Paralympic Games were held in Rome。' },
+      { statement: '東京では、パラリンピックは一度も開かれていない。', answer: false, why: '第4段落 Tokyo has hosted the Paralympics twice。' },
+    ],
+    qa: [
+      { q: 'When are the Paralympics held now?', choices: ['A few weeks after the Olympics, in the same city.', 'Before the Olympics, in a different country.', 'Every two years in Rome.', 'Only in England.'], answer: 0, why: '第3段落 the Paralympics have been held in the same city as the Olympics, a few weeks after them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
