@@ -1548,7 +1548,7 @@
 - [x] ボス部屋：撃破の数の横に「🎯 あとnレベルで記念の🪙」を表示
 - [x] バッジを2つ追加：パーフェクト職人（全問正解10回）・完ぺき王（50回）
 - [x] 高校の文法単元を2つ追加：provide A with B ／ provide B for A・replace A with B ／ compare A with B
-- [x] 長文：TOEIC をさらに1本（新しい社員証のお知らせ）
+- [x] 長文：TOEIC（新しい社員証）・京大型エッセイ（質問する勇気）を1本ずつ
 - [x] スペルの連続正解に自己ベスト（更新すると「🎉 自己ベスト更新！」）
 - [x] 高校の文法単元を2つ追加：be similar to ／ be responsible for ／ be aware of・take pride in ／ be proud of
 ## アイデア（未整理）

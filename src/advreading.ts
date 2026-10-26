@@ -6260,6 +6260,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-questions',
+    title: 'The Courage to Ask',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When I was a student, I rarely asked questions in class. I was afraid that my question would reveal how little I understood, and I assumed that everyone else already knew the answer. Only later did I realize that this fear had cost me ( A ) chances to learn.",
+      "A good question is not a sign of ignorance but of attention. To ask one, you must first notice exactly where your understanding stops. 'I don't get it' is a feeling; 'Why does the second step follow from the first?' is a question. The difference between them is the beginning of thinking.",
+      "Teachers often say that the students who ask the most questions are not the weakest ones but the most engaged. Questions also help the person ( B ) answers them. Many experts have had the experience of discovering, while answering a simple question from a beginner, that they did not understand their own field as clearly as they had thought.",
+      "Perhaps schools should value questions as much as answers. A test usually asks students to answer questions that someone else has prepared. But in life and in research, the hardest and most important task is often to find the right question to ask. Learning to ask well may be ( C ) to learning to answer well.",
+    ],
+    ja: [
+      '学生のころ、私は授業でめったに質問しなかった。自分の質問で、どれほどわかっていないかが知られてしまうのがこわかったし、ほかのみんなはもう答えを知っていると思いこんでいた。その恐れのせいで、学ぶ機会をたくさん失っていたと気づいたのは、ずっとあとになってからだった。',
+      'よい質問は、無知のしるしではなく、注意深さのしるしである。質問するには、まず自分の理解がどこで止まっているのかを正確に見つけなければならない。「わからない」は気持ちだが、「なぜ1つめの段階から2つめの段階が出てくるのか」は質問である。この2つのちがいこそが、考えることのはじまりなのだ。',
+      'いちばん多く質問する生徒は、いちばんできない生徒ではなく、いちばん熱心な生徒だと、先生たちはよく言う。質問は、それに答える人の助けにもなる。多くの専門家は、初心者からのかんたんな質問に答えているうちに、自分の分野を思っていたほどはっきりとは理解していなかったと気づく経験をしている。',
+      '学校は、答えと同じくらい質問を大切にするべきなのかもしれない。テストではたいてい、だれかが用意した問いに答えることが求められる。しかし人生でも研究でも、いちばんむずかしく大切な仕事は、しばしば正しい問いを見つけることである。上手に問うことを学ぶのは、上手に答えることを学ぶのと同じくらい大切なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['many', 'much', 'a lot', 'plenty'], answer: 0, why: 'chances は数えられる名詞の複数なので many。much は数えられない名詞に使い、a lot・plenty は of がないと名詞の前に置けない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 the person（人）を説明し、answers の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'C', choices: ['equal', 'equally', 'equality', 'equals'], answer: 0, why: 'be equal to ～「～と同じくらい（価値がある）」。be のあとは形容詞 equal。' },
+    ],
+    underline: {
+      phrase: 'reveal how little I understood',
+      choices: ['show others that I understood very little', 'hide my lack of understanding', 'prove that I was clever', 'explain the lesson to others'],
+      answer: 0,
+      why: 'reveal は「明らかにする・見せてしまう」、how little I understood は「自分がどれほどわかっていないか」。',
+    },
+    order: {
+      words: ['notice', 'exactly', 'where', 'your', 'understanding', 'stops'],
+      rest: '',
+      answer: 'notice exactly where your understanding stops',
+      ja: '自分の理解がどこで止まっているかを正確に見つける。（間接疑問 where S V）',
+    },
+    tf: [
+      { statement: '筆者は学生のころ、授業でよく質問していた。', answer: false, why: '第1段落 I rarely asked questions in class。' },
+      { statement: '筆者によれば、よい質問は注意深さのしるしだ。', answer: true, why: '第2段落 A good question is not a sign of ignorance but of attention。' },
+      { statement: '質問は、答える人の助けにもなる。', answer: true, why: '第3段落 Questions also help the person who answers them。' },
+      { statement: '筆者は、テストの問いだけで十分だと考えている。', answer: false, why: '第4段落 the hardest and most important task is often to find the right question to ask。' },
+    ],
+    qa: [
+      { q: 'According to the writer, what is often the hardest task in life and research?', choices: ['Finding the right question to ask.', 'Answering questions quickly.', 'Remembering many facts.', 'Passing every test.'], answer: 0, why: '第4段落 the hardest and most important task is often to find the right question to ask。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
