@@ -7625,6 +7625,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-lotus-leaf',
+    title: 'The Secret of the Lotus Leaf',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "The lotus is a plant that grows in muddy ponds. Even so, its large leaves always look clean. Why don't they get dirty? Scientists became ( A ) in this question and studied the leaves with a special microscope.",
+      "They found that the surface of a lotus leaf is covered with very tiny bumps, and the bumps are covered with wax. Because of this, water cannot spread out on the leaf. Instead, it forms round drops, ( B ) roll off easily.",
+      "When the drops roll off, they pick up dirt on the way. So every time it rains, the leaf is cleaned naturally. This is called the \"lotus effect.\"",
+      "People have used this idea to make new products. For example, some paints for buildings work like lotus leaves, so the walls stay clean when it rains. There are also umbrellas and clothes ( C ) do not get wet easily. Nature can be a great teacher for scientists.",
+    ],
+    ja: [
+      'ハスは、どろの多い池で育つ植物です。それなのに、その大きな葉はいつもきれいに見えます。どうしてよごれないのでしょうか。科学者たちはこの疑問に興味をもち、特別な顕微鏡で葉を調べました。',
+      'すると、ハスの葉の表面はとても小さなでこぼこでおおわれていて、そのでこぼこがろうでおおわれていることがわかりました。そのため、水は葉の上で広がることができません。そのかわりに丸い水のつぶになり、かんたんに転がり落ちていきます。',
+      '水のつぶは転がり落ちるとき、とちゅうでよごれをいっしょに運んでいきます。だから雨がふるたびに、葉は自然にきれいになるのです。これは「ロータス効果」とよばれています。',
+      '人々はこの考え方を使って、新しい製品を作ってきました。たとえば、建物用のペンキの中には、ハスの葉のように働き、雨がふるとかべがきれいなままになるものがあります。ぬれにくいかさや服もあります。自然は、科学者にとってすばらしい先生になりうるのです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['interested', 'interesting', 'interest', 'to interest'], answer: 0, why: 'become interested in ～「～に興味をもつ」。人が「興味をもたされる」ので -ed の形。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'it'], answer: 0, why: 'コンマのあとで round drops（物）を説明し、roll の主語になる関係代名詞 which。what は先行詞をとらない、who は人、it だとコンマだけで文がつながってしまう。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 umbrellas and clothes を説明し、do not get の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+    ],
+    tf: [
+      { statement: 'ハスは、どろの多い池で育つ。', answer: true, why: '第1段落 a plant that grows in muddy ponds。' },
+      { statement: 'ハスの葉の表面はつるつるで、でこぼこがない。', answer: false, why: '第2段落 the surface of a lotus leaf is covered with very tiny bumps。' },
+      { statement: '雨がふるたびに、ハスの葉は自然にきれいになる。', answer: true, why: '第3段落 every time it rains, the leaf is cleaned naturally。' },
+      { statement: 'ハスの葉のしくみは、まだ何の製品にも使われていない。', answer: false, why: '第4段落 some paints for buildings work like lotus leaves。' },
+    ],
+    qa: [
+      { q: 'Why do drops of water roll off a lotus leaf easily?', choices: ['The leaf is covered with tiny bumps and wax.', 'The leaf is always wet.', 'The pond is full of mud.', 'The leaf is very large.'], answer: 0, why: '第2段落 covered with very tiny bumps, and the bumps are covered with wax。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
