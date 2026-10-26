@@ -2317,3 +2317,4 @@
 - 2026-10-26: 文法に「be reluctant to ～ ／ hesitate to ～ ／ be inclined to ～」の単元を追加
 - 2026-10-26: TOEIC にメール文「Email: Your Warranty Request」（保証の修理）を追加
 - 2026-10-26: ボス部屋のレベルのボスを元の城にもどした。今日のボスのボタンに今日のボスの姿と名前
+- 2026-10-26: 文法に「end up -ing（結局～することになる）」の単元を追加
