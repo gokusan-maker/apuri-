@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'go-for-on': { wrong: "Let's go to a walk.", right: "Let's go for a walk.", why: '「散歩に行く」は go for a walk。' },
   'since-as-reason': { wrong: 'Because of it was cold, I wore a coat.', right: 'Since it was cold, I wore a coat.', why: 'because of のあとは名詞。文を続けるなら since・as・because。' },
   'reported-statement': { wrong: 'He said me that he was busy.', right: 'He told me that he was busy.', why: 'say のあとに人を直接置かない。「人に言った」は told ＋ 人（said to ＋ 人）。' },
   'easy-to-read': { wrong: 'This book is easy to read it.', right: 'This book is easy to read.', why: '主語の this book が read の目的語なので it はいらない。' },
