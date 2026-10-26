@@ -138,7 +138,7 @@ export function WordCastle({ course, name = '単語の海', onAnswer, onChest, o
             {score >= Math.min(WC_PASS, total) ? `🏰 クリア！ ${score}/${total}問正解` : `あと少し！ ${score}/${total}問（${WC_PASS}問以上でクリア）`}
           </p>
           {total > 0 && score === total && <p className="wc-perfect">⭐ パーフェクト！ 全問正解</p>}
-          {score >= Math.min(WC_PASS, total) && <FloorClear next={next?.label} floor={floors.findIndex((x) => x.id === floor.id)} />}
+          {score >= Math.min(WC_PASS, total) && <FloorClear next={next?.label} floor={floors.findIndex((x) => x.id === floor.id)} total={floors.length} />}
           {score >= Math.min(WC_PASS, total) && floor.floor === 2 && (
             <button className="boss-btn wc-boss-btn" onClick={() => setPhase('boss')}>
               <span className="wc-boss-fig" aria-hidden="true">

@@ -1036,7 +1036,7 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
           </button>
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
-        {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && score >= Math.min(GC_PASS, unit.questions.length) && <FloorClear next={gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1]?.label} floor={gcFloors.findIndex((f) => f.id === unit.id)} />}
+        {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && score >= Math.min(GC_PASS, unit.questions.length) && <FloorClear next={gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1]?.label} floor={gcFloors.findIndex((f) => f.id === unit.id)} total={gcFloors.length} />}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && floorMistake(unit.questions) && (
           <div className="grammar-mistake" aria-label="この階のよくあるまちがい">
             <p className="grammar-mistake-title">⚠ この階のよくあるまちがい</p>

@@ -128,3 +128,12 @@ it('いまのステージが宝箱のステージなら、すすむの札に「�
   render(<Castle name="宝の海2" floors={f2} onOpen={() => {}} theme="sea" />)
   expect(screen.queryByText('🎁 クリアで宝箱！')).toBeNull()
 })
+
+it('階クリアのお祝いに、宝箱があけられることや次の宝箱までの階の数が出る', async () => {
+  const { FloorClear } = await import('./FloorClearView')
+  const { unmount } = render(<FloorClear next="B" floor={9} total={25} />)
+  expect(screen.getByText(/宝箱がひらけるよ/)).toBeInTheDocument()
+  unmount()
+  render(<FloorClear next="C" floor={2} total={25} />)
+  expect(screen.getByText('🎁 次の宝箱まで あと7階')).toBeInTheDocument()
+})

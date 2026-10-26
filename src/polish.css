@@ -3547,4 +3547,5 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .chest-burst { display: none; } }
 .free-level-count { display: block; font-size: 0.68rem; opacity: 0.75; font-weight: 600; }
 .floor-clear-cheer { display: block; margin-top: 4px; font-weight: 700; font-size: 0.92rem; }
+.floor-clear-chest { display: block; margin-top: 4px; font-weight: 800; font-size: 0.86rem; }
 .wc-perfect { margin: 4px 0; text-align: center; font-weight: 900; color: #d97706; font-size: 1.05rem; }
