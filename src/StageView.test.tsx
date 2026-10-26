@@ -424,3 +424,13 @@ it('ボス部屋のレベルえらびに、そのレベルのボスの最短タ�
   fireEvent.click(screen.getByRole('button', { name: /^ボスのレベル：/ }))
   expect(screen.getByRole('option', { name: /中2/ })).toHaveTextContent('⏱ 1分35秒')
 })
+
+it('ボスの城のいちばん上の階に、そのボスのとくぎ（2つ）のアイコンが出る', async () => {
+  const { bossTraits, BOSS_TRAITS, BOSSES } = await import('./boss')
+  const { LEVEL_BOSS_LOOK } = await import('./bosscastle')
+  localStorage.clear()
+  localStorage.setItem('eitan:lboss', JSON.stringify({ 中1: '2026-10-01' }))
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const icons = bossTraits(BOSSES[LEVEL_BOSS_LOOK['中1']].name, true).map((t) => BOSS_TRAITS[t].icon).join('')
+  expect(screen.getByRole('region', { name: '中1のボスの城' })).toHaveTextContent(`中1のボス・とくぎ ${icons}`)
+})

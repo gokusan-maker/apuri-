@@ -3,7 +3,7 @@ import { BossTime } from './BossTimeView'
 import { useContext, useState, type ComponentProps, type CSSProperties } from 'react'
 import { medalFor } from './medal'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits, BOSS_TRAITS } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -631,7 +631,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             return {
               id: f.id,
               label: isBoss ? `👹 ${look.name}` : `${c.label}　${BC_KIND[f.floor]}`,
-              sub: isBoss ? `${c.label}のボス` : `${BC_QS}問`,
+              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `${BC_QS}問`,
               fig: isBoss ? <BossFigure hit={false} look={look} /> : undefined,
               cleared: !!lboss[f.course] || bcClears.includes(f.id),
             }
