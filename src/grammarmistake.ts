@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'as-good-as': { wrong: 'The car is as good than new.', right: 'The car is as good as new.', why: '「～も同然」は as good as。than は使わない。' },
+  'what-little': { wrong: 'He sold what little books he owned.', right: 'He sold what few books he owned.', why: '数えられる名詞の複数には what few、数えられない名詞には what little。' },
   'if-any': { wrong: 'He seldom, if any, eats breakfast.', right: 'He seldom, if ever, eats breakfast.', why: '回数（seldom）なら if ever、名詞（few / little）なら if any。' },
   'not-that': { wrong: 'Not what I dislike it.', right: 'Not that I dislike it.', why: '「～というわけではない」は Not that ＋ 文。' },
   'however-therefore': { wrong: 'It was cold, however we went swimming.', right: 'It was cold. However, we went swimming.', why: 'however は副詞。コンマだけで2つの文をつなげないので、ピリオドかセミコロンで区切る。' },

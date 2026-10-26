@@ -1519,6 +1519,7 @@
 - [x] 高校の文法単元を4つ追加：however ／ therefore（つなぎの副詞）・not a single・few, if any ／ seldom, if ever・Not that ～
 - [x] スペルでヒントを使わずに正解すると「✨ノーヒント」
 - [x] 数の聞き取りで全問正解すると「🏆 パーフェクト！」
+- [x] 高校の文法単元を2つ追加：as good as（～も同然）・what little ／ what few
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
