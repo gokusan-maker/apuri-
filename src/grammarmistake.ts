@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'no-point-ing': { wrong: 'There is no point in ask him.', right: 'There is no point in asking him.', why: '前置詞 in のあとは動名詞。' },
+  'regret-ing': { wrong: 'I regret to say that to her yesterday.（後悔のつもり）', right: 'I regret saying that to her yesterday.', why: '過去にしたことの後悔は regret -ing。regret to は「残念ながら～する」。' },
   'come-to-do': { wrong: 'I became to like jazz.', right: 'I came to like jazz.', why: '「～するようになる」は come to / get to ＋ 原形。become to とは言わない。' },
   'all-you-have-to': { wrong: 'All you have to do are wait.', right: 'All you have to do is wait.', why: 'All は「すべてのこと」で単数あつかい。is を使う。' },
   'absolute-participle': { wrong: 'Being Sunday, the bank was closed.', right: 'It being Sunday, the bank was closed.', why: '主節の主語（the bank）とちがうので、分詞の前に主語 It を置く。' },
