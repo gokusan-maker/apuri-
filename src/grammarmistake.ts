@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'present-for-future': { wrong: 'What time is the movie start tonight?', right: 'What time does the movie start tonight?', why: 'start は一般動詞なので疑問文は does。決まった予定は現在形。' },
   'wonder-if': { wrong: 'I wonder where does he live.', right: 'I wonder where he lives.', why: 'I wonder のあとの疑問詞は 主語 ＋ 動詞 の語順。' },
   'not-ing': { wrong: "I'm sorry for calling not you.", right: "I'm sorry for not calling you.", why: '動名詞の否定は -ing の直前に not。' },
   'perception-done': { wrong: 'I heard my name calling.', right: 'I heard my name called.', why: '名前は「呼ばれる」側なので過去分詞。' },
