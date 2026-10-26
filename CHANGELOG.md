@@ -2357,3 +2357,4 @@
 - 2026-10-26: 文法に「比較で使う that of ／ those of」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: TOEFL（歴史）に長文「Building the Great Pyramid」（ピラミッドの建て方）を追加
 - 2026-10-26: 文法に「There is something wrong with ～」の単元を追加（よくあるまちがいつき）
+- 2026-10-26: 高校入試（体験文）に長文「Choco Comes Home」（いなくなった犬が見つかった話）を追加

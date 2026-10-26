@@ -7698,6 +7698,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-lost-dog',
+    title: 'Choco Comes Home',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "One Sunday morning last winter, our dog, Choco, ran out of the house when my brother opened the door. We called her name again and again, but she did not come back. My family was very worried because it was ( A ) cold that day.",
+      "My mother made posters with Choco's picture, and my brother and I put them up around our town. We also asked people on the street, \"Have you seen this dog?\" Nobody had seen her, but many people promised ( B ) us if they saw her.",
+      "That evening, the phone rang. It was an old woman who lived near the station. \"I think your dog is in my garden,\" she said. We ran there and found Choco sleeping under a tree. She was cold and hungry, but she was safe.",
+      "The woman told us that she had seen one of our posters at the supermarket. I realized that many people in our town had helped us. Since then, I always say hello to the people ( C ) I meet in my neighborhood.",
+    ],
+    ja: [
+      '去年の冬のある日曜日の朝、兄がドアをあけたとき、うちの犬のチョコが家から走り出てしまいました。私たちは何度も名前をよびましたが、チョコはもどってきませんでした。その日はとても寒かったので、家族はとても心配しました。',
+      '母はチョコの写真をのせたポスターを作り、兄と私はそれを町じゅうにはりました。道で人々に「この犬を見ませんでしたか」とたずねもしました。だれも見ていませんでしたが、たくさんの人が、見かけたら電話すると約束してくれました。',
+      'その夜、電話が鳴りました。駅の近くに住むおばあさんからでした。「お宅の犬がうちの庭にいると思うんです」と言いました。私たちが走っていくと、チョコが木の下でねむっていました。寒くておなかがすいていましたが、無事でした。',
+      'おばあさんは、スーパーで私たちのポスターを見たのだと話してくれました。私は、町のたくさんの人が私たちを助けてくれたのだと気づきました。それ以来、私は近所で会う人にいつもあいさつをしています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['very', 'much', 'many', 'so much'], answer: 0, why: '形容詞 cold を強めるのは very。much・many・so much は形容詞の原級の前で使わない。' },
+      { id: 'B', choices: ['to call', 'calling', 'call', 'called'], answer: 0, why: 'promise to ＋ 原形「～すると約束する」。' },
+      { id: 'C', choices: ['whom', 'whose', 'what', 'where'], answer: 0, why: '先行詞 the people（人）を説明し、meet の目的語になる関係代名詞 whom（that も可・省略も可）。whose のうしろには名詞が必要、what は先行詞をとらない、where のうしろは欠けのない文。' },
+    ],
+    tf: [
+      { statement: 'チョコは、兄がドアをあけたときに外へ走り出た。', answer: true, why: '第1段落 ran out of the house when my brother opened the door。' },
+      { statement: '道でたずねた人の中に、チョコを見た人がいた。', answer: false, why: '第2段落 Nobody had seen her。' },
+      { statement: 'チョコは、駅の近くに住むおばあさんの庭で見つかった。', answer: true, why: '第3段落 an old woman who lived near the station … your dog is in my garden。' },
+      { statement: 'おばあさんは、テレビのニュースでチョコのことを知った。', answer: false, why: '第4段落 she had seen one of our posters at the supermarket。' },
+    ],
+    qa: [
+      { q: 'How did the old woman know about Choco?', choices: ['She saw a poster at the supermarket.', 'She heard about it on the radio.', 'The writer visited her house.', 'Choco used to be her dog.'], answer: 0, why: '第4段落 she had seen one of our posters at the supermarket。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
