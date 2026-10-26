@@ -1,7 +1,7 @@
 import { weekKey } from './rareboss'
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { PlayContext, usePlaying } from './playing'
-import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, LONG_PERFECT_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
@@ -109,6 +109,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   }
   const [hints, setHints] = useState<string[]>([]) // ヒントを開いた問題（空所の記号・tf0・qa0）
   const [record, setRecord] = useState(loadLongRecord)
+  const [firstFull, setFirstFull] = useState(false) // この長文ではじめて満点をとった（ボーナスのコイン）
   const [types, setTypes] = useState(loadTypeStats)
   const [readWords, setReadWords] = useState(loadReadWords)
   const [history, setHistory] = useState(loadLongHistory)
@@ -987,6 +988,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           <p className="level-up long-score">
             {score} / {total} 点{score === total ? ' 🎉 満点！' : ''}
           </p>
+          {firstFull && onCoins && <p className="wc-perfect">🪙{LONG_PERFECT_COINS} はじめての満点ボーナス</p>}
           <p className={`level-verdict${levelVerdict(p, score, total).pass ? ' pass' : ''}`}>{levelVerdict(p, score, total).text}</p>
           {keyWords(p).length > 0 && (
             <div className="long-key3" aria-label="この読解で覚えたい語句">
@@ -1105,6 +1107,9 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               saveDailyLongDay(today)
               onCoins?.(DAILY_LONG_COINS)
             }
+            const first = score === total && (record[p.id] ?? -1) < total
+            setFirstFull(first)
+            if (first) onCoins?.(LONG_PERFECT_COINS)
             setDone(true)
             onDone?.(score, total)
             if (score === total) playCorrect()

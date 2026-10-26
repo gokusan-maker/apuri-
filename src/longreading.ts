@@ -6197,6 +6197,7 @@ export function recordLongTime(id: string, sec: number): boolean {
 
 // 今日の1本：日替わりのおすすめ長文。その日に満点をとると🪙10（1日1回）
 export const DAILY_LONG_COINS = 10
+export const LONG_PERFECT_COINS = 5 // その長文ではじめて満点をとったときのボーナス
 export function dailyLong(day: string, list: LongPassage[] = LONG_PASSAGES): LongPassage {
   let h = 5
   for (const c of `long-${day}`) h = (h * 31 + c.charCodeAt(0)) >>> 0

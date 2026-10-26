@@ -245,9 +245,10 @@ it('出来事の順番をタップで並べられる', () => {
   expect(screen.getByLabelText('並べた順番')).toHaveTextContent(p.seq!.answer.map((i) => MARKS[i]).join(' → '))
 })
 
-it('満点をとると最短タイムが記録される', () => {
+it('満点をとると最短タイムが記録される（はじめての満点はボーナスのコイン）', () => {
   localStorage.clear()
-  render(<LongReading />)
+  const coins = vi.fn()
+  render(<LongReading onCoins={coins} />)
   const keys = ['pick2', 'underline', 'order', 'sentences', 'qa', 'table', 'refer', 'gist', 'titleQ', 'complete', 'insert', 'summary', 'vocab', 'seq']
   const p = LONG_PASSAGES.find((x) => keys.every((k) => !(k in x)))!
   fireEvent.click(screen.getAllByText(new RegExp(p.title)).at(-1)!)
@@ -260,6 +261,8 @@ it('満点をとると最短タイムが記録される', () => {
   fireEvent.click(screen.getByRole('button', { name: '採点する' }))
   expect(screen.getByText(/最短タイム更新！/)).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:long-best-time')!)[p.id]).toBe(60)
+  expect(coins).toHaveBeenCalledWith(5)
+  expect(screen.getByText(/はじめての満点ボーナス/)).toBeInTheDocument()
   fireEvent.click(screen.getByText('← 読解の一覧'))
   expect(screen.getByText(/直近1本の正答率 100%/)).toBeInTheDocument()
   expect(screen.getByText(/📊 ジャンル別：.*100%/)).toBeInTheDocument()
