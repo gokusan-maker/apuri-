@@ -131,3 +131,20 @@ it('ボスをたおしたときの紙ふぶきに、そのボスの色がまざ�
   const rgb = `rgb(${[1, 3, 5].map((k) => parseInt(hex.slice(k, k + 2), 16)).join(', ')})`
   expect(document.querySelector<HTMLElement>('.boss .confetti:not(.gold)')!.style.background).toBe(rgb)
 })
+
+it('とくぎ封じが10回目のとき、ガチャチケットももらえる', async () => {
+  const { ChestTicketContext } = await import('./castle')
+  localStorage.clear()
+  localStorage.setItem('eitan:seal-wins', '9')
+  let tickets = 0
+  render(
+    <ChestTicketContext.Provider value={() => tickets++}>
+      <Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={['armor']} />
+    </ChestTicketContext.Provider>,
+  )
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  expect(tickets).toBe(1)
+  expect(screen.getByText(/＋🎟（10回ごとのごほうび）/)).toBeInTheDocument()
+})

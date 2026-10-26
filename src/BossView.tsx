@@ -12,13 +12,14 @@ import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
 import { BossArena } from './BossArenaView'
 import { isNight } from './daytime'
+import { ChestTicketContext } from './castle'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, addSealWin, traitAfterHit, bossTraits, type BossTrait } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, traitAfterHit, bossTraits, type BossTrait } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -297,6 +298,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [traitMsg, setTraitMsgRaw] = useState('') // とくぎが発動したとき
   const fired = useRef(false) // このバトルでとくぎが1回でも発動した（とくぎ封じの判定）
   const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
+  const [sealTicket, setSealTicket] = useState(false) // とくぎ封じ10回ごとのチケット
+  const giveTicket = useContext(ChestTicketContext)
   const setTraitMsg = (m: string) => {
     if (m) fired.current = true
     setTraitMsgRaw(m)
@@ -537,7 +540,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (battleRank(hearts, c) === 'S') onRankBonus?.(RANK_S_COINS * (usedItems.includes('lucky') ? 2 : 1))
     if (!fired.current) {
       setSealed(true)
-      addSealWin()
+      if (addSealWin() % SEAL_TICKET_EVERY === 0 && giveTicket) {
+        giveTicket()
+        setSealTicket(true)
+      }
       onRankBonus?.(SEAL_COINS)
     }
   }
@@ -588,6 +594,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setRegenUsed(false)
     fired.current = false
     setSealed(false)
+    setSealTicket(false)
   }
 
   return (
@@ -862,7 +869,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               <p className="stats-note" title={battleRank(hearts, crits) === 'S' ? undefined : 'ハートを減らさず会心3回でSランク'}>
                 ❤️{hearts}・⚡会心{crits}回{battleRank(hearts, crits) === 'S' ? `・🪙${RANK_S_COINS}！` : ''}
               </p>
-              {sealed && <p className="boss-seal">🔒 とくぎ封じ！ 🪙{SEAL_COINS}</p>}
+              {sealed && <p className="boss-seal">🔒 とくぎ封じ！ 🪙{SEAL_COINS}{sealTicket ? ` ＋🎟（${SEAL_TICKET_EVERY}回ごとのごほうび）` : ''}</p>}
               <p className="result-message boss-bonus">
                 ボーナス +<CountUp to={bonus} />
                 XP

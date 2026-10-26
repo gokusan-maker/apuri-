@@ -508,6 +508,7 @@ export const ARMOR_BLOCK = 2
 export const DRAIN_HEAL = 6
 export const QUICK_RATE = 0.7 // すばやさ：会心の時間が7割に
 export const SEAL_COINS = 5 // とくぎ封じ：とくぎを1回も発動させずに勝つ
+export const SEAL_TICKET_EVERY = 10 // とくぎ封じ10回ごとにガチャチケット
 const SEAL_KEY = 'eitan:seal-wins'
 // とくぎ封じで勝った回数
 export function loadSealWins(): number {
