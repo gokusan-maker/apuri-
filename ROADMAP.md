@@ -1554,6 +1554,7 @@
 - [x] 長文：国公立（在宅勤務）・TOEFL（日食と月食）を1本ずつ
 - [x] 文法のディクテーションで全文正解すると「🏆 パーフェクト！」
 - [x] 高校の文法単元を4つ追加：句動詞 look up to ／ look down on ／ put up with・get along with ／ run out of ／ come up with・句動詞と代名詞の位置（turn it on）・carry out ／ call off ／ find out
+- [x] 長文：TOEIC をさらに1本（ホテルの予約確認メール）
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

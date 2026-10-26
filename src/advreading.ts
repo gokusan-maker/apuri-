@@ -6387,6 +6387,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-hotel-confirmation',
+    title: 'Email: Your Hotel Reservation',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Okada, Thank you for choosing the Lakeside Hotel. We are pleased to confirm your reservation for a double room from June 12 to June 15. Your confirmation number is LH-48213. Please keep this number, as you will need it ( A ) you check in.",
+      "Check-in begins at 3:00 p.m., and check-out is at 11:00 a.m. If you expect to arrive later than 10:00 p.m., please let us know in advance ( B ) we can hold your room.",
+      "Breakfast is served in the Garden Restaurant from 6:30 to 10:00 a.m. and is included in your room rate. Guests can also use our indoor pool and fitness center free of charge. A shuttle bus to the airport ( C ) every hour from the front entrance.",
+      "If you need to change or cancel your reservation, please do so at least 48 hours before your arrival date to avoid a cancellation fee. We look forward to welcoming you. Best regards, Sarah Lin, Reservations Manager",
+    ],
+    ja: [
+      'オカダ様。レイクサイド・ホテルをお選びいただきありがとうございます。6月12日から6月15日までのダブルルームのご予約を確認いたしました。確認番号は LH-48213 です。チェックインのときに必要になりますので、この番号を保管しておいてください。',
+      'チェックインは午後3時から、チェックアウトは午前11時です。午後10時より遅くご到着の予定でしたら、お部屋をおさえておけるよう、前もってお知らせください。',
+      '朝食はガーデン・レストランで午前6時30分から10時まで提供しており、宿泊料金にふくまれています。屋内プールとフィットネスセンターも無料でご利用いただけます。空港行きのシャトルバスは、正面入口から1時間ごとに出発します。',
+      'ご予約の変更や取り消しが必要な場合は、取消料がかからないよう、到着日の少なくとも48時間前までにお願いいたします。お会いできるのを楽しみにしております。予約担当マネージャー サラ・リン',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'at', 'by'], answer: 0, why: 'うしろが文（you check in）なので接続詞 when。during・at・by は前置詞で文を続けられない。' },
+      { id: 'B', choices: ['so that', 'in order to', 'so as to', 'due to'], answer: 0, why: 'うしろが文（we can hold your room）なので so that S can「S が～できるように」。in order to・so as to のうしろは原形、due to のうしろは名詞。' },
+      { id: 'C', choices: ['leaves', 'leaving', 'leave', 'to leave'], answer: 0, why: '主語 A shuttle bus（三人称単数）の述語。決まった予定なので現在形 leaves。' },
+    ],
+    underline: {
+      phrase: 'free of charge',
+      choices: ['without paying', 'for a small fee', 'only on weekends', 'after checking out'],
+      answer: 0,
+      why: 'free of charge は「無料で」。charge は「料金」。',
+    },
+    order: {
+      words: ['at', 'least', '48', 'hours', 'before', 'your', 'arrival', 'date'],
+      rest: '',
+      answer: 'at least 48 hours before your arrival date',
+      ja: '到着日の少なくとも48時間前に。（at least＝少なくとも）',
+    },
+    tf: [
+      { statement: '宿泊料金には朝食がふくまれている。', answer: true, why: '第3段落 is included in your room rate。' },
+      { statement: 'プールを使うには追加料金がかかる。', answer: false, why: '第3段落 Guests can also use our indoor pool and fitness center free of charge。' },
+      { statement: '予約の取り消しは、到着の前日でも料金がかからない。', answer: false, why: '第4段落 at least 48 hours before your arrival date to avoid a cancellation fee。' },
+    ],
+    qa: [
+      { q: 'What should Mr. Okada do if he will arrive after 10:00 p.m.?', choices: ['Let the hotel know in advance.', 'Take the shuttle bus.', 'Cancel the reservation.', 'Call the airport.'], answer: 0, why: '第2段落 If you expect to arrive later than 10:00 p.m., please let us know in advance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
