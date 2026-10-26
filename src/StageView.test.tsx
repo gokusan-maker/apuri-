@@ -444,3 +444,9 @@ it('今日のボスのボタンに、そのボスのとくぎが出る', async (
   const t = BOSS_TRAITS[bossTraits(BOSSES[lv as keyof typeof BOSSES].name)[0]]
   expect(document.querySelector('.boss-go-trait')?.textContent).toBe(`とくぎ ${t.icon} ${t.name}`)
 })
+
+it('今日のボスのボタンの丸に、そのボスの舞台が出る', () => {
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(document.querySelector('.boss-go-fig .boss-arena')).not.toBeNull()
+})
