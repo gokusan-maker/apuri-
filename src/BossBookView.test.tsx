@@ -175,3 +175,18 @@ it('ボス図鑑はとくぎでしぼりこめる（もう一度おすと全部�
   fireEvent.click(screen.getByRole('button', { name: BOSS_TRAITS[t].name }))
   expect(container.querySelectorAll('.boss-book-list li.got').length).toBe(all)
 })
+
+it('バトル中、とくぎが発動するまでは「🔒 とくぎ封じ中」が出て、発動すると消える', () => {
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['drain']} />)
+  expect(screen.getByText('🔒 とくぎ封じ中')).toBeInTheDocument()
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  // まちがえて HP が減っていない状態では drain は回復しない（満タン）ので、先に1問正解してから まちがえる
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  fireEvent.click(screen.getByText('次へ'))
+  const en2 = document.querySelector('.boss .en')!.textContent
+  const w2 = wordsOf(['中1']).find((x) => x.en === en2)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== w2.ja)!)
+  expect(screen.queryByText('🔒 とくぎ封じ中')).toBeNull()
+})

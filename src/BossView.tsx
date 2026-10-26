@@ -300,8 +300,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
   const [sealTicket, setSealTicket] = useState(false) // とくぎ封じ10回ごとのチケット
   const giveTicket = useContext(ChestTicketContext)
+  const [firedShown, setFiredShown] = useState(false) // 画面の「封じ中」表示用
   const setTraitMsg = (m: string) => {
-    if (m) fired.current = true
+    if (m) {
+      fired.current = true
+      setFiredShown(true)
+    }
     setTraitMsgRaw(m)
   }
   const [regenUsed, setRegenUsed] = useState(false)
@@ -593,6 +597,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setTraitMsg('')
     setRegenUsed(false)
     fired.current = false
+    setFiredShown(false)
     setSealed(false)
     setSealTicket(false)
   }
@@ -673,6 +678,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       {index === 0 && picked === null && hp === maxHp && traits.length > 0 && (
         <p className={`trait-cutin t-${traits[0]}`} aria-hidden="true">
           {traits.map((t) => BOSS_TRAITS[t].icon).join('')} {look.name}のとくぎ「{traits.map((t) => BOSS_TRAITS[t].name).join('・')}」
+        </p>
+      )}
+      {traits.length > 0 && !won && !lost && !firedShown && (
+        <p className="seal-live" title="とくぎを発動させずに勝つと とくぎ封じ">
+          🔒 とくぎ封じ中
         </p>
       )}
       {traits.map((t) => (

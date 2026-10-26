@@ -3779,3 +3779,7 @@ header .event-chips { margin: 0 0 2px; }
 .trait-cutin.t-armor { background: linear-gradient(90deg, transparent, rgb(37 99 235 / 0.92) 15%, rgb(37 99 235 / 0.92) 85%, transparent); }
 .trait-cutin.t-drain { background: linear-gradient(90deg, transparent, rgb(159 18 57 / 0.92) 15%, rgb(159 18 57 / 0.92) 85%, transparent); }
 .trait-cutin.t-quick { background: linear-gradient(90deg, transparent, rgb(8 145 178 / 0.92) 15%, rgb(8 145 178 / 0.92) 85%, transparent); }
+/* バトル中：まだとくぎを発動させていないときの「封じ中」 */
+.seal-live { margin: 0 auto 2px; width: fit-content; padding: 1px 10px; border-radius: 999px; background: rgb(124 58 237 / 0.12); color: #7c3aed; font-size: 0.7rem; font-weight: 900; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seal-live { color: #c4b5fd; background: rgb(196 181 253 / 0.15); } }
+:root[data-theme="dark"] .seal-live { color: #c4b5fd; background: rgb(196 181 253 / 0.15); }
