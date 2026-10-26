@@ -2408,3 +2408,4 @@
 - 2026-10-26: TOEIC の長文に、お知らせ「New Coffee Machines in the Break Rooms」（休憩室の新しいコーヒーマシン）を追加
 - 2026-10-26: ボス戦のHPバーに、格闘ゲームのような「減ったぶん」の白いバーを追加（少し遅れて縮む）
 - 2026-10-26: 文法に「前置詞 for『～のことで』（thank ／ praise ／ punish 人 for ～）」の単元を追加
+- 2026-10-26: 高3（共通テスト）の長文に、評論「Lunch Boxes for the Journey」（駅弁の歴史と今）を追加

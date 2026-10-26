@@ -8387,6 +8387,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ekiben',
+    title: 'Lunch Boxes for the Journey',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In Japan, many train stations sell special lunch boxes called \"ekiben.\" The word comes from \"eki,\" meaning station, and \"bento,\" meaning boxed meal. It is often said that the first ekiben was sold in the 1880s and was nothing more than a few rice balls wrapped in bamboo sheaths.",
+      "Today, ekiben are much more than a quick meal. Many of them use ingredients ( A ) the local area, such as crab from the coast or beef from a nearby farm, and some come in boxes shaped like trains or traditional pots. For many travelers, choosing an ekiben is one of the pleasures of a trip.",
+      "However, the ekiben business has faced difficulties. Faster trains mean that journeys are shorter, so passengers have less time to enjoy a meal on board. Convenience stores inside stations also offer cheaper food. As a result, some small ekiben makers have had to close.",
+      "Even so, ekiben have found new fans. Department stores hold ekiben fairs where people can buy lunch boxes from all over the country ( B ) leaving their own city. For some customers, eating an ekiben at home is a way to imagine a journey they have not taken yet, and for the makers, it is a chance to introduce their hometown ( C ) people far away.",
+    ],
+    ja: [
+      '日本では、多くの駅で「駅弁」とよばれる特別な弁当が売られている。この言葉は、駅を意味する「えき」と、箱に入った食事を意味する「べんとう」からできている。最初の駅弁は1880年代に売られ、竹の皮に包んだおにぎり数個にすぎなかったとよく言われる。',
+      '今日、駅弁は手早くすませる食事以上のものになっている。その多くは、海辺のカニや近くの牧場の牛肉など、地元でとれた食材を使っており、列車や昔ながらのつぼの形をした容器に入ったものもある。多くの旅行者にとって、駅弁を選ぶことは旅の楽しみの1つだ。',
+      'しかし、駅弁の商売は困難に直面してきた。列車が速くなるということは移動時間が短くなるということであり、乗客が車内で食事を楽しむ時間は少なくなる。駅の中のコンビニエンスストアも、より安い食べ物を売っている。その結果、閉店しなければならなくなった小さな駅弁業者もある。',
+      'それでも、駅弁は新しいファンを得ている。デパートでは駅弁フェアが開かれ、人々は自分の町を離れずに全国の弁当を買うことができる。家で駅弁を食べることは、まだしていない旅を思いうかべる方法だという客もおり、作り手にとっては、遠くに住む人々に自分の地元を紹介する機会になっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['from', 'at', 'on', 'by'], answer: 0, why: 'ingredients from the local area「地元でとれた食材」。出どころを表す from。' },
+      { id: 'B', choices: ['without', 'unless', 'instead', 'except'], answer: 0, why: 'without ～ing「～せずに」。unless は接続詞なので文が続き、instead は of がないと名詞を続けられず、except ～ing では「離れること以外」となり意味が通らない。' },
+      { id: 'C', choices: ['to', 'for', 'with', 'at'], answer: 0, why: 'introduce A to B「A を B に紹介する」。' },
+    ],
+    underline: {
+      phrase: 'nothing more than',
+      choices: ['only', 'much better than', 'not as good as', 'a lot of'],
+      answer: 0,
+      why: 'nothing more than ～ は「～にすぎない」。only と同じ意味。',
+    },
+    order: {
+      words: ['have', 'less', 'time', 'to', 'enjoy'],
+      rest: 'a meal on board',
+      answer: 'have less time to enjoy',
+      ja: '食事を楽しむ時間が少ない（less ＋ 名詞 ＋ 不定詞の形容詞用法）',
+    },
+    tf: [
+      { statement: '最初の駅弁は、おにぎり数個だけの簡単なものだったと言われている。', answer: true, why: '第1段落 nothing more than a few rice balls wrapped in bamboo sheaths。' },
+      { statement: '列車が速くなったので、車内で食事をする時間がふえた。', answer: false, why: '第3段落 passengers have less time to enjoy a meal on board。時間は減った。' },
+      { statement: 'デパートの駅弁フェアでは、遠くの地方の駅弁も買える。', answer: true, why: '第4段落 people can buy lunch boxes from all over the country。' },
+    ],
+    qa: [
+      { q: 'Why have some small ekiben makers had to close?', choices: ['Shorter journeys and cheaper food in stations have reduced sales.', 'The government has banned eating on trains.', 'Local ingredients are no longer available.', 'Department stores refuse to sell ekiben.'], answer: 0, why: '第3段落 Faster trains … less time … Convenience stores … offer cheaper food. As a result, …。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
