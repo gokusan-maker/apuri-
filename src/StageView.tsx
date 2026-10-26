@@ -623,9 +623,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <Castle
           key={bossLv}
           name={`${courseById(bossLv).label}のボスの城`}
-          title={`${courseById(bossLv).label}の魔王の塔`}
-          tint={BOSSES[LEVEL_BOSS_LOOK[bossLv]].color}
-          theme="lair"
+          theme="red"
           floors={bossCastleFloors([bossLv]).map((f) => {
             const isBoss = f.floor === BC_FLOORS - 1
             const c = courseById(f.course)
@@ -662,7 +660,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               window.scrollTo?.({ top: 0 })
             }}
           >
-            ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」の魔王の塔へ
+            ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
           </button>
         )}
         <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">
@@ -826,10 +824,10 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           }}
         >
           <span className="boss-go-fig" aria-hidden="true">
-            👹
+            <BossFigure hit={false} look={BOSSES[daily]} />
           </span>
           <span className="boss-go-text">
-            <strong>⚔️ 今日のボス</strong>
+            <strong>⚔️ 今日のボス：{BOSSES[daily].name}</strong>
             <small title="単語・文法・読解の3人で戦う">TEAM BATTLE 🔤📐📖</small>
           </span>
           {dailyDone && <span className="mode-badge">✅ クリア</span>}
