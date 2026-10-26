@@ -7583,6 +7583,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-store-hours',
+    title: 'Notice: Our New Store Hours',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Dear Customers, Thank you for shopping at Riverside Books. Starting on July 1, our store hours will change. We will open at 10:00 a.m. instead of 9:00 a.m., and we will stay open until 9:00 p.m. on weekdays, ( A ) is two hours later than before.",
+      "We are making this change because many of our customers have told us that they would like to shop after work. Our café on the second floor will also follow the new hours, so you can enjoy a cup of coffee ( B ) choosing a book in the evening.",
+      "Weekend hours will remain the same: 10:00 a.m. to 7:00 p.m. on Saturdays and 11:00 a.m. to 6:00 p.m. on Sundays. Please note that the store will be closed on June 30 so that our staff can prepare for the change.",
+      "We look forward to seeing you during our new hours. If you have any questions, please ask any member of our staff or visit our website. ( C ) regards, The Riverside Books Team",
+    ],
+    ja: [
+      'お客さま各位。リバーサイド・ブックスをご利用いただき、ありがとうございます。7月1日より、営業時間が変わります。開店は午前9時ではなく午前10時になり、平日は午後9時まで営業します。これは以前より2時間おそい時間です。',
+      'この変更は、多くのお客さまから、仕事のあとに買い物をしたいという声をいただいたためです。2階のカフェも新しい営業時間に合わせますので、夜に本を選びながらコーヒーを楽しんでいただけます。',
+      '週末の営業時間は変わらず、土曜日は午前10時から午後7時、日曜日は午前11時から午後6時です。なお、スタッフが変更の準備をするため、6月30日は休業いたしますのでご注意ください。',
+      '新しい営業時間でのご来店をお待ちしております。ご質問があれば、スタッフにおたずねいただくか、ウェブサイトをご覧ください。リバーサイド・ブックス一同',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（午後9時まで営業すること）を受ける非制限用法の which。that はコンマのあとで使えない、what は先行詞をとらない、it だとコンマだけで文がつながってしまう。' },
+      { id: 'B', choices: ['while', 'during', 'unless', 'although'], answer: 0, why: 'while -ing「～しながら」。during のあとは名詞、unless・although のあとは主語のある文が必要。' },
+      { id: 'C', choices: ['Best', 'Most', 'Much', 'Very'], answer: 0, why: 'Best regards「よろしくお願いします（手紙・メールの結び）」は決まった言い方。' },
+    ],
+    underline: {
+      phrase: 'remain',
+      choices: ['stay', 'change', 'start', 'close'],
+      answer: 0,
+      why: 'remain は「～のままである」。remain the same「変わらない」。stay と同じ意味。',
+    },
+    order: {
+      words: ['would', 'like', 'to', 'shop'],
+      rest: 'after work',
+      answer: 'would like to shop',
+      ja: '買い物をしたい（would like to ～「～したい」）',
+    },
+    tf: [
+      { statement: '7月1日からは、店は午前9時に開く。', answer: false, why: '第1段落 We will open at 10:00 a.m. instead of 9:00 a.m.。' },
+      { statement: '平日は、以前より2時間おそくまで開いている。', answer: true, why: '第1段落 which is two hours later than before。' },
+      { statement: '6月30日は、店が休みになる。', answer: true, why: '第3段落 the store will be closed on June 30。' },
+    ],
+    qa: [
+      { q: 'Why is the store changing its hours?', choices: ['Many customers want to shop after work.', 'The café on the second floor is closing.', 'The staff want longer weekends.', 'The store is moving to a new building.'], answer: 0, why: '第2段落 many of our customers have told us that they would like to shop after work。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
