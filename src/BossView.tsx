@@ -16,7 +16,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, traitAfterHit, traitOf } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, traitAfterHit, bossTraits, type BossTrait } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -36,6 +36,7 @@ type Props = {
   hp?: number // ボスのHP（大学入試の塔は強い）
   grammar?: boolean // 4問に1問を文法問題にする（大学入試の塔）
   reading?: boolean // 読解ボス：その学年の長文から問題を出す（ステージのボス）
+  traits?: BossTrait[] // ボスのとくぎ（ないときは名前で1つ）。城の最上階は2つ
   exam?: { passages: LongPassage[]; units: GrammarUnit[] } // 入試レベル：この長文と文法の単元から出す（大学入試の塔）
   winBuddy?: { icon: string; name: string } // 勝ったときによろこぶ読解のなかま（竜）
   startHearts?: number // ボスラッシュではハートを引き継ぐ
@@ -252,7 +253,7 @@ const rnd = () => Math.random()
 // 読解ボスの本文で、単語帳にある語をタップすると意味が出る
 const lookupWord = makeLookup(WORDS)
 
-export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0, note, exam }: Props) {
+export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpend, look: lookProp, title, hp: maxHp = BOSS_HP, grammar = false, reading = false, winBuddy, partner, onRankBonus, startHearts = HEARTS, winLabel = 'ステージにもどる', nextBoss, onWinHearts, noBook = false, bag, onUseItem, onDefeat, onSkill, onDrop, onLose, golden = false, power = 0, note, exam, traits: traitsProp }: Props) {
   const baseLook = lookProp ?? BOSSES[level]
   const [shiny] = useState(() => countBattle() && !golden)
   const look = golden ? goldenLook(baseLook) : shiny ? shinyLook(baseLook) : baseLook
@@ -289,7 +290,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crits, setCrits] = useState(0)
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
-  const trait = traitOf(baseLook.name) // ボスのとくぎ
+  const traits = traitsProp ?? bossTraits(baseLook.name) // ボスのとくぎ
   const [traitMsg, setTraitMsg] = useState('') // とくぎが発動したとき
   const [regenUsed, setRegenUsed] = useState(false)
   const [trioAt, setTrioAt] = useState(-1) // 合体技を出した問題の番号
@@ -357,7 +358,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const ms = nowMs() - shownAt.current
       if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
-      const critical = isCritical(ms, ((skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs) * (trait === 'quick' ? QUICK_RATE : 1))
+      const critical = isCritical(ms, ((skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs) * (traits.includes('quick') ? QUICK_RATE : 1))
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
@@ -377,7 +378,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       }
       const atk = teamOn && 'team' in q && !downTurn ? levelAttack(team![q.team as TeamRole].level) : 0 // なかまのレベルの攻撃力
       const rawHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power - sup.atk
-      const tr = traitAfterHit(trait, hp, rawHp, maxHp, regenUsed)
+      const tr = traitAfterHit(traits, hp, rawHp, maxHp, regenUsed)
       const nextHp = tr.hp
       if (tr.blocked > 0) setTraitMsg(`${BOSS_TRAITS.armor.icon} ${look.name}の${BOSS_TRAITS.armor.name}！ ダメージ -${tr.blocked}`)
       if (tr.healed > 0) {
@@ -458,7 +459,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           onLose?.()
         }
       }
-      if (trait === 'drain' && hp < maxHp) {
+      if (traits.includes('drain') && hp < maxHp) {
         setHp(Math.min(maxHp, hp + DRAIN_HEAL))
         setTraitMsg(`${BOSS_TRAITS.drain.icon} ${look.name}の${BOSS_TRAITS.drain.name}！ HP +${Math.min(DRAIN_HEAL, maxHp - hp)}`)
       }
@@ -643,9 +644,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         弱点：{speciesOf(weak).name}
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
       </p>
-      <p className="boss-trait" title={BOSS_TRAITS[trait].desc}>
-        とくぎ：{BOSS_TRAITS[trait].icon} {BOSS_TRAITS[trait].name}（{BOSS_TRAITS[trait].desc}）
-      </p>
+      {traits.map((t) => (
+        <p key={t} className="boss-trait" title={BOSS_TRAITS[t].desc}>
+          {traits.length > 1 ? '👑 ' : ''}とくぎ：{BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}（{BOSS_TRAITS[t].desc}）
+        </p>
+      ))}
       {traitMsg && picked !== null && !won && (
         <p key={traitMsg + index} className="boss-trait-pop" role="status">
           {traitMsg}

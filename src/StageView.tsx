@@ -3,7 +3,7 @@ import { BossTime } from './BossTimeView'
 import { useContext, useState, type ComponentProps, type CSSProperties } from 'react'
 import { medalFor } from './medal'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -402,6 +402,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         words={courseWords(lvFight)}
         look={BOSSES[LEVEL_BOSS_LOOK[lvFight]]}
         exam={{ passages: bossPassages(lvFight) ?? [], units: levelUnits(lvFight) }}
+        traits={bossTraits(BOSSES[LEVEL_BOSS_LOOK[lvFight]].name, true)}
         title={`👹 ${c.label}のボス`}
         partner={partner}
         power={power}

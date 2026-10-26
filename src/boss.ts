@@ -511,17 +511,23 @@ export function traitOf(name: string): BossTrait {
   const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
   return TRAIT_ORDER[k % TRAIT_ORDER.length]
 }
+// 城の最上階のボスは、とくぎを2つ持つ（名前で決まる1つ目と、ちがう2つ目）
+export function bossTraits(name: string, strong = false): BossTrait[] {
+  const t = traitOf(name)
+  return strong ? [t, TRAIT_ORDER[(TRAIT_ORDER.indexOf(t) + 2) % TRAIT_ORDER.length]] : [t]
+}
 // 正解したあとのボスのHP（とくぎ込み）。armor：ダメージ-2（最低1）、regen：半分を切ったら1回だけ回復
-export function traitAfterHit(trait: BossTrait, hp: number, nextHp: number, maxHp: number, regenUsed: boolean): { hp: number; blocked: number; healed: number } {
+export function traitAfterHit(trait: BossTrait | BossTrait[], hp: number, nextHp: number, maxHp: number, regenUsed: boolean): { hp: number; blocked: number; healed: number } {
+  const ts = Array.isArray(trait) ? trait : [trait]
   let n = nextHp
   let blocked = 0
-  if (trait === 'armor' && n > 0) {
+  if (ts.includes('armor') && n > 0) {
     const m = Math.min(hp - 1, n + ARMOR_BLOCK)
     blocked = Math.max(0, m - n)
     n = Math.max(n, m)
   }
   let healed = 0
-  if (trait === 'regen' && !regenUsed && n > 0 && n <= maxHp / 2) {
+  if (ts.includes('regen') && !regenUsed && n > 0 && n <= maxHp / 2) {
     healed = Math.min(maxHp - n, Math.round(maxHp * REGEN_RATE))
     n += healed
   }

@@ -210,3 +210,12 @@ describe('ボスのとくぎ', () => {
     expect(traitAfterHit('quick', 60, 45, 100, false).hp).toBe(45)
   })
 })
+
+it('城の最上階のボスはとくぎが2つ（ちがう種類）', async () => {
+  const { bossTraits, traitOf, traitAfterHit } = await import('./boss')
+  expect(bossTraits('ヤミモチ')).toEqual([traitOf('ヤミモチ')])
+  const two = bossTraits('ヤミモチ', true)
+  expect(two).toHaveLength(2)
+  expect(two[0]).not.toBe(two[1])
+  expect(traitAfterHit(['armor', 'regen'], 60, 47, 100, false)).toEqual({ hp: 64, blocked: 2, healed: 15 })
+})
