@@ -197,6 +197,7 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle
           <p className="result-score">
             {score} / {p.questions.length} 問正解
           </p>
+          {score === p.questions.length && p.questions.length > 0 && <p className="wc-perfect">🎉 全問正解！ この話はばっちり</p>}
           <button className="flip" onClick={() => (onClose ? onClose() : setP(null))}>
             ほかの話を読む
           </button>
