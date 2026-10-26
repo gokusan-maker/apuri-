@@ -35,6 +35,7 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle
   const [showJa, setShowJa] = useState(false)
   const [gloss, setGloss] = useState<Word | null>(null)
   const [hint, setHint] = useState(false) // この問題でヒントを使った
+  const [free, setFree] = useState(false) // 城のページで「話をえらんで自由に読む」をおした
 
   const inApp = useContext(PlayContext) !== null // App の中では、上の「ほかの問題をえらぶ」で一覧へもどる
   usePlaying(!!p && !onClose, () => setP(null)) // 今日の課題（onClose）は今日の課題のバーがある
@@ -49,12 +50,25 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle
     setShowJa(false)
   }
 
-  if (!p) {
+  // 城のページは、城と今日の課題と「話をえらんで自由に読む」だけ。一覧やゲームはボタンの先に
+  if (!p && !free) {
     return (
       <section className="card grammar">
         {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
         <Castle name="読解ミニの山" theme="mountain" onChest={onCoins} next={next} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
         {belowCastle}
+        <button className="flip grammar-free-btn" onClick={() => setFree(true)}>
+          📚 話をえらんで自由に読む
+        </button>
+      </section>
+    )
+  }
+  if (!p) {
+    return (
+      <section className="card grammar">
+        <button className="list-link free-back" onClick={() => setFree(false)}>
+          ← 城にもどる
+        </button>
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
         <p className="game-grid-title">🎮 読解ゲーム</p>
         <div className="game-grid read-games" aria-label="読解ゲーム">

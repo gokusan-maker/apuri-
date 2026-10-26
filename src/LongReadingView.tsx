@@ -119,6 +119,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const [weekRes, setWeekRes] = useState(loadWeekResults)
   const [vocabQuiz, setVocabQuiz] = useState(false)
   const [tfQuiz, setTfQuiz] = useState(false)
+  const [free, setFree] = useState(false) // 城のページで「長文をえらんで自由に読む」をおした
   const [font, setFont] = useState(loadLongFont)
   const [resumed, setResumed] = useState(false)
   const [readingAll, setReadingAll] = useState(false)
@@ -206,16 +207,31 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   )
   if (!p && tfQuiz) return <LongTfQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setTfQuiz(false)} />
   if (!p && vocabQuiz) return <LongVocabQuiz readIds={Object.keys(record)} onAnswer={onAnswer} onBack={() => setVocabQuiz(false)} />
+  // 読解ページ（レベルでしぼったとき）は、城と今日の課題と「長文をえらんで自由に読む」だけ。一覧やゲームはボタンの先に
+  if (!p && !whole && !free) {
+    return (
+      <section className="card grammar long-reading">
+        <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} next={next} />
+        {belowCastle}
+        <button className="flip grammar-free-btn" onClick={() => setFree(true)}>
+          📚 長文をえらんで自由に読む
+        </button>
+      </section>
+    )
+  }
   if (!p) {
     return (
       <section className="card grammar long-reading">
+        {!whole && (
+          <button className="list-link free-back" onClick={() => setFree(false)}>
+            ← 城にもどる
+          </button>
+        )}
         {whole && <h2>{title ?? '読解（入試形式）'}</h2>}
         {whole && <p className={`long-100${Object.keys(record).length >= LONG_MEDAL ? ' got' : ''}`}>
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         {whole && <p className="stats-note">記号で答える入試形式の読解</p>}
-        {!whole && <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} next={next} />}
-        {!whole && belowCastle}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}

@@ -3319,7 +3319,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .lvpick-prog { font-weight: 700; }
 
 /* 文法ページ：城の下の「単元をえらんで自由に勉強」 */
-.grammar .flip.grammar-free-btn { width: 100%; margin-top: 12px; background: linear-gradient(135deg, #22c55e, #0ea5e9); color: #fff; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #0369a1, 0 8px 18px rgb(14 165 233 / 0.25); }
+.grammar .flip.grammar-free-btn { width: 100%; margin-top: 6px; padding: 10px 14px; background: linear-gradient(135deg, #22c55e, #0ea5e9); color: #fff; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.25); box-shadow: 0 5px 0 #0369a1, 0 8px 18px rgb(14 165 233 / 0.25); }
 .free-back { margin-bottom: 8px; }
 .wc-game { margin: 0 auto 8px; width: fit-content; padding: 3px 12px; border-radius: 999px; font-weight: 800; color: #fff; background: linear-gradient(135deg, #8b5cf6, #ec4899); box-shadow: 0 3px 0 #6d28d9; }
 
@@ -3480,8 +3480,8 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 
 /* ステージの地図（単語＝海・文法＝森・読解＝山）：道にそってステージを進む */
 .smap { position: relative; margin: 0 0 12px; border-radius: 22px; overflow: hidden; border: 3px solid #fbbf24; box-shadow: 0 6px 0 #b45309, 0 12px 26px rgb(0 0 0 / 0.25); container-type: inline-size; }
-.card > .smap:first-child { margin: -36px -21px 16px; }
-.smap-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; padding: 10px 12px; }
+.card > .smap:first-child { margin: -36px -21px 12px; }
+.smap-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin: 0; padding: 6px 12px; }
 .smap-name { font-weight: 900; font-size: 1.05rem; color: #fff; text-shadow: 0 2px 3px rgb(0 0 0 / 0.5); }
 .smap-sea { background: linear-gradient(180deg, #0c4a6e, #0284c7 30%, #38bdf8); }
 .smap-forest { background: linear-gradient(180deg, #052e16, #15803d 30%, #4ade80); }

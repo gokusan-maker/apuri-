@@ -1163,8 +1163,11 @@ describe('App', () => {
     expect(screen.getByRole('option', { name: /^国公立/ }).textContent).toContain(`0/${passagesFor('国公立').length}本`)
     expect(screen.queryByText(/今日の1本/)).toBeNull() // むずかしさでしぼったときは、ほかのレベルの長文へのボタンを出さない
     expect(screen.queryByText(/中3チャレンジ/)).toBeNull()
+    expect(screen.queryByLabelText('読解ゲーム')).toBeNull() // 城のページは城と今日の課題と「長文をえらんで自由に読む」だけ
+    fireEvent.click(screen.getByText('📚 長文をえらんで自由に読む'))
     expect(within(screen.getByLabelText('読解ゲーム')).getByRole('button', { name: /おすすめ/ })).toBeInTheDocument() // そのレベルの中から日がわり（読解ゲームのタイル）
     fireEvent.click(screen.getByRole('option', { name: /^TOEFL・IELTS/ }))
+    fireEvent.click(screen.getByText('📚 長文をえらんで自由に読む')) // レベルを変えると城にもどる
     expect(screen.getAllByText(/Partners on the Reef/).length).toBeGreaterThan(0)
     expect(localStorage.getItem('eitan:read-level')).toBe('TOEFL・IELTS')
     goMini()

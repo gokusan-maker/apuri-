@@ -544,11 +544,13 @@ it('1本もないジャンルは出さず、ジャンルが1つだけなら種�
   const univ = (['高3', '私学', '私学難関', '国公立', '旧帝大', '京大'] as const).flatMap((l) => passagesFor(l))
   const genres = new Set(univ.map(genreOf))
   const { unmount } = render(<LongReading passages={univ} />)
+  fireEvent.click(screen.getByText('📚 長文をえらんで自由に読む'))
   expect(document.querySelectorAll('details.long-genre-fold').length).toBe(genres.size)
   if (genres.size < 2) expect(screen.queryByRole('tablist', { name: '読解の種類' })).toBeNull()
   unmount()
   const exam = [...passagesFor('中3'), ...passagesFor('高1'), ...passagesFor('高2')]
   render(<LongReading passages={exam} />)
+  fireEvent.click(screen.getByText('📚 長文をえらんで自由に読む'))
   expect(document.querySelectorAll('details.long-genre-fold').length).toBe(new Set(exam.map(genreOf)).size)
   expect([...document.querySelectorAll('details.long-genre-fold .fold-meta')].every((e) => !/\/0/.test(e.textContent ?? ''))).toBe(true)
 })
