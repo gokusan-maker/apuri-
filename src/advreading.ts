@@ -4815,6 +4815,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-damaged-order',
+    title: 'Email: Your Damaged Order',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Patel, Thank you for contacting Brightline Home Goods. We are sorry to hear that the table lamp you ordered arrived with a cracked base. We understand how disappointing it is to receive a damaged item, especially one ( A ) was meant as a gift.",
+      "We have already sent a replacement lamp by express delivery at no extra charge. It should arrive within two business days. You do not need to return the damaged lamp; please feel free to recycle it or throw it away.",
+      "In addition, we have added a 15 percent discount to your account, which can be used on your next purchase. The discount will be applied automatically when you check out, ( B ) there is no need to enter a code.",
+      "We have also shared your report with our packing team so that we can prevent similar problems in the future. If the new lamp does not arrive by Friday, please do not hesitate ( C ) reply to this email. Sincerely, Daniel Kim, Customer Service",
+    ],
+    ja: [
+      'パテル様。ブライトライン・ホームグッズにご連絡いただきありがとうございます。ご注文の卓上ランプが、台の部分が割れた状態で届いたとのこと、申し訳ございません。こわれた品物を受け取るのがどれほど残念なことか、とくに贈り物のつもりだった品物ならなおさらだと、よくわかります。',
+      'すでに代わりのランプを、追加料金なしの速達でお送りしました。2営業日以内に届くはずです。こわれたランプを返品していただく必要はありません。リサイクルするか処分するか、ご自由にどうぞ。',
+      'さらに、次回のお買い物で使える15パーセントの割引をお客さまのアカウントに追加しました。割引はお会計のときに自動で適用されるので、コードを入力する必要はありません。',
+      'また、同じような問題を今後防げるよう、ご報告を梱包チームにも伝えました。新しいランプが金曜日までに届かない場合は、遠慮なくこのメールに返信してください。カスタマーサービス ダニエル・キム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 one（＝ item）を説明し、was meant の主語になる関係代名詞 that。what は先行詞をとらず、whose のうしろには名詞が必要、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['so', 'because of', 'despite', 'during'], answer: 0, why: 'コンマのあとで「だから～」と結果を続ける接続詞 so。because of・despite・during は前置詞の働きで、うしろに文（there is …）を続けられない。' },
+      { id: 'C', choices: ['to', 'of', 'on', 'at'], answer: 0, why: 'hesitate to 原形「～するのをためらう」。do not hesitate to ～ で「遠慮なく～してください」。' },
+    ],
+    underline: {
+      phrase: 'feel free to recycle it',
+      choices: ['recycle it if you like', 'be sure to recycle it today', 'pay a fee to recycle it', 'never recycle it'],
+      answer: 0,
+      why: 'feel free to ～ は「自由に～してよい・遠慮なく～してください」。リサイクルしてもかまわない、という許可の言い方。',
+    },
+    order: {
+      words: ['prevent', 'similar', 'problems', 'in', 'the', 'future'],
+      rest: '',
+      answer: 'prevent similar problems in the future',
+      ja: '同じような問題を今後防ぐ。（prevent ～＝～を防ぐ、in the future＝今後）',
+    },
+    tf: [
+      { statement: 'パテルさんは、こわれたランプを店に送り返さなければならない。', answer: false, why: '第2段落 You do not need to return the damaged lamp。' },
+      { statement: '割引を使うには、コードを入力する必要がある。', answer: false, why: '第3段落 there is no need to enter a code。' },
+      { statement: '代わりのランプには追加料金がかからない。', answer: true, why: '第2段落 at no extra charge。' },
+    ],
+    qa: [
+      { q: 'What should Ms. Patel do if the new lamp does not arrive by Friday?', choices: ['Reply to the email.', 'Visit the store in person.', 'Return the damaged lamp.', 'Place a new order online.'], answer: 0, why: '第4段落 If the new lamp does not arrive by Friday, please do not hesitate to reply to this email。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
