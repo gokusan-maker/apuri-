@@ -6218,6 +6218,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-id-badges',
+    title: 'Notice: New ID Badges',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: Starting May 1, all staff will need to use new electronic ID badges to enter the building. The old paper badges will no longer be accepted ( A ) that date.",
+      "New badges will be handed out at the security desk in the main lobby from April 22 to April 30, between 9:00 a.m. and 5:00 p.m. Please bring a photo ID, such as a driver's license or passport, ( B ) you come to pick up your badge. It takes only a few minutes to take your photo and print the badge.",
+      "Each badge has a small chip that will open the doors you are allowed to use. If you lose your badge, report it to the security desk immediately ( C ) it can be turned off. A replacement badge costs $10.",
+      "Thank you for helping us keep our workplace safe. If you have any questions, please contact the Facilities Department at extension 310.",
+    ],
+    ja: [
+      '従業員のみなさまへ：5月1日から、すべての従業員はビルに入るときに新しい電子式の社員証を使う必要があります。その日以降、古い紙の社員証は使えなくなります。',
+      '新しい社員証は、4月22日から4月30日までの午前9時から午後5時の間、正面ロビーの警備受付で配ります。受け取りに来るときは、運転免許証やパスポートなど、写真つきの身分証明書を持ってきてください。写真をとって社員証を印刷するのに数分しかかかりません。',
+      'それぞれの社員証には、入ることを許されたドアを開ける小さなチップがついています。社員証をなくしたら、使えないようにできるよう、すぐに警備受付に知らせてください。再発行には10ドルかかります。',
+      '安全な職場づくりにご協力いただきありがとうございます。ご質問は、内線310の施設管理部までお問い合わせください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['after', 'among', 'beside', 'into'], answer: 0, why: 'after that date「その日以降」。among・beside・into は時を表さない。' },
+      { id: 'B', choices: ['when', 'during', 'at', 'by'], answer: 0, why: 'うしろが文（you come to pick up …）なので接続詞 when。during・at・by は前置詞で文を続けられない。' },
+      { id: 'C', choices: ['so that', 'in order to', 'so as to', 'due to'], answer: 0, why: 'うしろが文（it can be turned off）なので so that S can「S が～できるように」。in order to・so as to のうしろは原形、due to のうしろは名詞。' },
+    ],
+    underline: {
+      phrase: 'handed out',
+      choices: ['given to people', 'collected from people', 'thrown away', 'sold online'],
+      answer: 0,
+      why: 'hand out ～ は「～を配る」。be handed out で「配られる」。',
+    },
+    order: {
+      words: ['open', 'the', 'doors', 'you', 'are', 'allowed', 'to', 'use'],
+      rest: '',
+      answer: 'open the doors you are allowed to use',
+      ja: '使うことを許されたドアを開ける。（the doors (that) you are allowed to use、関係代名詞の省略）',
+    },
+    tf: [
+      { statement: '5月1日以降も、古い紙の社員証が使える。', answer: false, why: '第1段落 The old paper badges will no longer be accepted after that date。' },
+      { statement: '新しい社員証を受け取るときは、写真つきの身分証明書が必要だ。', answer: true, why: '第2段落 Please bring a photo ID。' },
+      { statement: '社員証をなくしたら、再発行に10ドルかかる。', answer: true, why: '第3段落 A replacement badge costs $10。' },
+    ],
+    qa: [
+      { q: 'Where can employees get their new badges?', choices: ['At the security desk in the main lobby.', 'At the Facilities Department.', 'At the photo shop nearby.', 'At their own desks.'], answer: 0, why: '第2段落 New badges will be handed out at the security desk in the main lobby。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
