@@ -6176,6 +6176,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-static',
+    title: 'The Spark at the Door Handle',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever felt a sudden shock when touching a door handle on a cold winter day? That small spark is caused by static electricity. More than two thousand years ago, people in ancient Greece noticed that amber, a hardened tree resin, could attract bits of straw after it ( A ) rubbed with cloth. In fact, the word 'electricity' comes from the Greek word for amber.",
+      "Everything around us is made of tiny particles, some of which carry electric charges. When two materials rub against each other, electrons can move from one to the other. One material then has extra negative charge, while the other is left with a positive charge. When your charged body comes close to a metal object, the extra charge suddenly jumps across the gap, ( B ) you feel as a shock.",
+      "Static shocks are much more common in winter. In humid weather, a thin layer of moisture on surfaces allows charge to leak away gradually. Dry winter air does not, so charge builds up on our bodies and clothes.",
+      "There are simple ways to avoid shocks. Touching a wall before you touch metal can release the charge slowly. Using hand cream and choosing cotton clothes instead of wool or polyester may also help. Static electricity is not only a nuisance, however. It is used in copy machines and air cleaners, ( C ) it helps attract toner or dust.",
+    ],
+    ja: [
+      '寒い冬の日、ドアノブにさわったとき急にビリッとしたことはないだろうか。その小さな火花は静電気によって起こる。2000年以上前、古代ギリシャの人々は、木のやにが固まった琥珀を布でこすると、わらのくずを引きつけることに気づいた。実は、「電気（electricity）」ということばは、琥珀を意味するギリシャ語から来ている。',
+      '私たちのまわりのものはすべて小さな粒でできていて、その中には電気を帯びたものもある。2つの物がこすれ合うと、電子が一方からもう一方へ移ることがある。すると、一方はマイナスの電気が多くなり、もう一方はプラスの電気をもつようになる。電気を帯びた体が金属に近づくと、余分な電気がすき間を一気に飛びこえ、それをショックとして感じるのである。',
+      '静電気のショックは冬にずっと多い。しめった天気のときは、物の表面にうすい水分の膜があって、電気が少しずつにげていく。冬のかわいた空気ではそうならないので、電気が体や服にたまってしまうのだ。',
+      'ショックをさけるかんたんな方法もある。金属にさわる前にかべにさわると、電気をゆっくりにがすことができる。ハンドクリームを使ったり、ウールやポリエステルではなく綿の服をえらんだりするのも役に立つかもしれない。しかし、静電気はやっかいなだけのものではない。コピー機や空気清浄機にも使われていて、そこではトナーやほこりを引きつけるのに役立っているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['was', 'were', 'been', 'being'], answer: 0, why: '主語 it（＝ amber、単数）の過去の受け身 was rubbed。been・being だけでは述語にならない。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（電気が飛びこえること）を受け、feel の目的語になる非制限用法の which。what は先行詞をとらず、that はコンマのあとに使えず、it では文がつながらない。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで copy machines and air cleaners（場面・場所）を受け、うしろが欠けのない文（it helps attract …）なので関係副詞 where。' },
+    ],
+    underline: {
+      phrase: 'leak away gradually',
+      choices: ['escape slowly, little by little', 'build up very quickly', 'disappear all at once', 'become much stronger'],
+      answer: 0,
+      why: 'leak away は「（少しずつ）もれてなくなる」、gradually は「だんだんと」。電気が少しずつにげていく、ということ。',
+    },
+    order: {
+      words: ['comes', 'from', 'the', 'Greek', 'word', 'for', 'amber'],
+      rest: '',
+      answer: 'comes from the Greek word for amber',
+      ja: '琥珀を意味するギリシャ語から来ている。（the word for ～＝～を表すことば）',
+    },
+    tf: [
+      { statement: '「電気」ということばは、琥珀を意味するギリシャ語から来ている。', answer: true, why: '第1段落 the word \'electricity\' comes from the Greek word for amber。' },
+      { statement: '静電気のショックは、しめった夏に多い。', answer: false, why: '第3段落 Static shocks are much more common in winter。' },
+      { statement: '静電気はコピー機にも使われている。', answer: true, why: '第4段落 It is used in copy machines and air cleaners。' },
+    ],
+    qa: [
+      { q: 'Why does charge build up more easily in winter?', choices: ['Dry air does not let charge leak away.', 'People touch more door handles.', 'Clothes are thinner in winter.', 'Metal becomes colder.'], answer: 0, why: '第3段落 Dry winter air does not, so charge builds up on our bodies and clothes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
