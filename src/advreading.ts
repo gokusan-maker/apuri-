@@ -5028,6 +5028,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyodai-recipe',
+    title: 'My Grandmother\'s "Enough"',
+    level: '難関大（評論）',
+    paragraphs: [
+      "My grandmother never used a recipe. When I asked her how much salt to put in the soup, she would say, 'Enough,' and when I asked how long to cook the beans, she would answer, 'Until they are ready.' At the time, these replies seemed to me ( A ) more than a way of avoiding the question.",
+      "Only years later, standing in my own kitchen, did I begin to understand what she meant. Her knowledge was not stored in numbers but in her eyes, her hands, and her nose. She knew the soup had enough salt by tasting it, and she knew the beans were ready by the way they gave way under a spoon. Such knowledge cannot easily be written down, ( B ) it was acquired through thousands of repetitions rather than through instruction.",
+      "Philosophers sometimes call this 'tacit knowledge': knowledge that we have but cannot fully put into words. Most cyclists cannot explain exactly how they keep their balance, yet they do not fall. An experienced doctor may sense that something is wrong before any test confirms it. In each case, the knowledge lives in practice, not in rules.",
+      "Recipes and manuals are valuable, of course; they allow knowledge to travel far beyond the person who first had it. But they also tempt us to believe that everything worth knowing can be reduced to instructions. My grandmother's 'Enough' was not a refusal to teach. It was an invitation to learn in the same way ( C ) she had learned: by paying attention, again and again, until the knowledge became my own.",
+    ],
+    ja: [
+      '祖母はレシピを使ったことがなかった。スープに塩をどれくらい入れるのかとたずねると「ちょうどいいだけ」と言い、豆をどれくらい煮るのかとたずねると「できあがるまで」と答えるのだった。当時の私には、こうした返事は質問をはぐらかすやり方にすぎないように思えた。',
+      '何年もたって、自分の台所に立ってはじめて、祖母の言いたかったことがわかりはじめた。祖母の知識は、数字ではなく、目や手や鼻の中にたくわえられていた。スープの塩かげんは味見をしてわかり、豆が煮えたことは、スプーンでおしたときのくずれ方でわかったのだ。こうした知識は、教わることではなく何千回ものくり返しによって身についたものなので、かんたんには書きとめられない。',
+      '哲学者はこれを「暗黙知」とよぶことがある。もっているのに、ことばでは完全に言いあらわせない知識のことだ。たいていの自転車に乗る人は、どうやってバランスをとっているのかを正確には説明できないが、それでもたおれない。経験をつんだ医師は、どんな検査で確かめるよりも前に、何かがおかしいと感じとることがある。どの場合も、知識は規則の中ではなく、実践の中に生きているのである。',
+      'もちろん、レシピや手引き書には価値がある。知識を、それを最初にもっていた人のはるか先まで伝えてくれるからだ。しかし同時に、知る価値のあることはすべて手順にまとめられると、私たちに思いこませもする。祖母の「ちょうどいいだけ」は、教えるのをことわったのではなかった。それは、祖母自身が学んだのと同じやり方で、つまり、何度も何度も注意をはらい、その知識が自分のものになるまで続けることで学びなさい、というさそいだったのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['little', 'few', 'fewer', 'a few'], answer: 0, why: 'little more than ～「～にすぎない」。way は単数なので、数を表す few・fewer・a few は使えない。' },
+      { id: 'B', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'うしろが文（it was acquired …）なので接続詞 because。because of・despite・during は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'who'], answer: 0, why: 'the same way that S V「S が V したのと同じやり方で」。先行詞 way のあとに関係副詞の働きをする that。what は先行詞をとらず、whose のうしろには名詞が必要、who は人に使う。' },
+    ],
+    underline: {
+      phrase: 'gave way under a spoon',
+      choices: ['became soft and broke apart when pressed with a spoon', 'stuck firmly to the spoon', 'jumped out of the pot', 'changed color when touched'],
+      answer: 0,
+      why: 'give way は「（力におされて）くずれる・へこむ」。豆をスプーンでおすと、やわらかくくずれることで煮えたとわかった、ということ。',
+    },
+    order: {
+      words: ['knowledge', 'cannot', 'easily', 'be', 'written', 'down'],
+      rest: '',
+      answer: 'knowledge cannot easily be written down',
+      ja: '（こうした）知識はかんたんには書きとめられない。（助動詞の受け身 cannot be written down）',
+    },
+    tf: [
+      { statement: '祖母は、塩の量を数字で正確に教えてくれた。', answer: false, why: '第1段落 she would say, \'Enough,\'。' },
+      { statement: '筆者は子どものころから、祖母の返事の意味をよく理解していた。', answer: false, why: '第2段落 Only years later … did I begin to understand what she meant。' },
+      { statement: '暗黙知とは、もっていてもことばで完全には言いあらわせない知識のことだ。', answer: true, why: '第3段落 knowledge that we have but cannot fully put into words。' },
+      { statement: '筆者は、レシピや手引き書には価値がないと考えている。', answer: false, why: '第4段落 Recipes and manuals are valuable, of course。' },
+    ],
+    qa: [
+      { q: 'What did the writer finally understand about the grandmother\'s answer "Enough"?', choices: ['It was an invitation to learn through repeated attention.', 'It was a way of refusing to teach.', 'It meant she had forgotten the recipe.', 'It showed that salt was not important.'], answer: 0, why: '第4段落 My grandmother\'s \'Enough\' was not a refusal to teach. It was an invitation to learn …。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
