@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'at-first-last': { wrong: 'At the first, I was nervous.', right: 'At first, I was nervous.', why: 'at first には the をつけない。' },
   'linking-phrases': { wrong: 'On the other hands, it is expensive.', right: 'On the other hand, it is expensive.', why: 'on the other hand の hand は単数。' },
   'prep-phrases-purpose': { wrong: "I didn't break it by purpose.", right: "I didn't break it on purpose.", why: '「わざと」は on purpose。by mistake（まちがえて）とまぜない。' },
   'present-for-future': { wrong: 'What time is the movie start tonight?', right: 'What time does the movie start tonight?', why: 'start は一般動詞なので疑問文は does。決まった予定は現在形。' },

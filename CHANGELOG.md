@@ -2340,3 +2340,4 @@
 - 2026-10-26: ボスをたおしたときの紙ふぶきに、そのボスの色をまぜる
 - 2026-10-26: 文法に「文をつなぐ言葉（as a result ／ in fact ／ on the other hand ／ after all）」の単元を追加
 - 2026-10-26: TOEIC にお知らせ文「Notice: New Carpool Program」（車の相乗り制度）を追加
+- 2026-10-26: 文法に「at first ／ at last ／ in the end」の単元を追加（よくあるまちがいつき）
