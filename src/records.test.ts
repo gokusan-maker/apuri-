@@ -31,3 +31,12 @@ it('記録の部屋にスペル・数の聞き取り・書き取りの自己ベ�
   expect(collectRecords().find((r) => r.label === '制覇した城')!.value).toMatch(/^\d+ \/ \d+$/)
   localStorage.clear()
 })
+
+it('記録の部屋に最高コンボとパーフェクトの回数も出る', () => {
+  localStorage.setItem('eitan:totals', JSON.stringify({ answers: 5, correct: 5, perfect: 2, goals: 0, bestCombo: 12 }))
+  const rows = collectRecords()
+  const v = (l: string) => rows.find((r) => r.label === l)!.value
+  expect(v('最高コンボ')).toBe('12問')
+  expect(v('パーフェクト')).toBe('2回')
+  localStorage.clear()
+})
