@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'eager-to': { wrong: 'He is willing for help us.', right: 'He is willing to help us.', why: 'be willing / eager / anxious のあとは to ＋ 原形。' },
+  'what-is-worse': { wrong: 'What is more bad, it began to rain.', right: 'What is worse, it began to rain.', why: 'bad の比較級は worse。more bad とは言わない。' },
   'need-ing': { wrong: 'My bike needs to repair.', right: 'My bike needs repairing. / My bike needs to be repaired.', why: '物が主語で「～される必要がある」は need -ing か need to be 過去分詞。' },
   otherwise: { wrong: 'I left early; otherwise, I will miss the train.', right: 'I left early; otherwise, I would have missed the train.', why: '過去の事実の反対を仮定するので would have ＋ 過去分詞。' },
   'whether-to': { wrong: 'I can\'t decide if to go or not.', right: 'I can\'t decide whether to go or not.', why: 'to 不定詞と組めるのは whether。if to とは言わない。' },

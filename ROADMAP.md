@@ -1534,6 +1534,7 @@
 - [x] 高校の文法単元を4つ追加：whether to 原形・What ～ for?・need -ing（～される必要がある）・otherwise
 - [x] 長文：国立医学部（聴診器）・TOEIC（書店の改装のお知らせ）を1本ずつ
 - [x] 単語の海・文法の森を制覇すると「▶ 次は〇〇へ」ボタンで次のレベルへ
+- [x] 高校の文法単元を2つ追加：be eager to ／ be anxious to・to make matters worse ／ what is worse
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
