@@ -83,6 +83,7 @@ describe('ボス戦', () => {
     const chips = container.querySelector('.boss-chips')!
     expect(chips.querySelector('.boss-weak')!.textContent).toMatch(/^弱点：/)
     expect(chips.textContent).toMatch(/3秒以内で会心/)
+    expect((plate.querySelector('.boss-hp-ghost') as HTMLElement).style.width).toBe('100%')
     expect((container.querySelector('.battle-v2') as HTMLElement).style.getPropertyValue('--boss')).toBe(BOSSES['中1'].color)
   })
 
@@ -90,6 +91,8 @@ describe('ボス戦', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
     expect(screen.getByText('のこりHP 300 / 300')).toBeInTheDocument()
     answer(true)
+    // 減ったぶんの白いバーも、いまのHPの幅へ追いかける
+    expect((document.querySelector('.boss-hp-ghost') as HTMLElement).style.width).toBe((document.querySelector('.boss-hp-fill') as HTMLElement).style.width)
     const m = /のこりHP (\d+) \/ 300/.exec(document.querySelector('.boss-hp-num')!.textContent!)!
     expect(Number(m[1])).toBeLessThan(300)
   })
