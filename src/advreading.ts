@@ -8211,6 +8211,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-chocolate',
+    title: 'The Long Journey of Chocolate',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "Chocolate is loved by people all over the world. But do you know where it comes from? Chocolate is made from the seeds of the cacao tree. These trees grow only in hot and wet places near the equator.",
+      "Long ago, people in Central America made a drink from cacao seeds. It was very different from the sweet chocolate we know today. It was bitter, and sometimes chili was added to it. Cacao was so valuable that the seeds were even used ( A ) money.",
+      "In the 1500s, cacao was brought to Europe. People there began to add sugar and milk to the drink, and it became popular among rich people. Later, in the 1800s, a new way of making chocolate was developed, and people were able to enjoy chocolate as a solid bar ( B ) the first time.",
+      "Today, most of the world's cacao is grown in West Africa. Many farmers there work very hard, but some of them earn only a little money. Some companies now pay farmers a fair price so that they ( C ) a better life. When you eat chocolate next time, think about the people who grew the cacao.",
+    ],
+    ja: [
+      'チョコレートは世界中の人々に愛されています。でも、どこから来るのか知っていますか。チョコレートはカカオの木の種から作られます。この木は、赤道に近い暑くて雨の多い場所でしか育ちません。',
+      'むかし、中央アメリカの人々は、カカオの種から飲み物を作っていました。それは、今私たちが知っている甘いチョコレートとはまったくちがいました。苦くて、ときにはとうがらしが入れられていました。カカオはとても大切なものだったので、その種はお金としてさえ使われていました。',
+      '1500年代、カカオはヨーロッパへ運ばれました。そこの人々は飲み物に砂糖やミルクを入れるようになり、お金持ちの間で人気になりました。その後1800年代に、チョコレートの新しい作り方が生まれ、人々ははじめて固い板チョコとしてチョコレートを楽しめるようになりました。',
+      '今日、世界のカカオのほとんどは西アフリカで育てられています。そこの農家の多くはいっしょうけんめい働いていますが、少ししかお金をかせげない人もいます。今では、農家がよりよい暮らしができるように、公正な値段をはらう会社もあります。次にチョコレートを食べるとき、カカオを育てた人々のことを考えてみてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'by', 'at', 'of'], answer: 0, why: 'be used as ～「～として使われる」。' },
+      { id: 'B', choices: ['for', 'at', 'in', 'on'], answer: 0, why: 'for the first time「はじめて」。' },
+      { id: 'C', choices: ['can live', 'can living', 'could to live', 'can to live'], answer: 0, why: 'so that ＋ 主語 ＋ can ＋ 原形「～できるように」。助動詞のあとは原形で、to はつかない。' },
+    ],
+    tf: [
+      { statement: 'カカオの木は、暑くて雨の多い場所でしか育たない。', answer: true, why: '第1段落 These trees grow only in hot and wet places near the equator。' },
+      { statement: 'むかしの中央アメリカのカカオの飲み物は、とても甘かった。', answer: false, why: '第2段落 It was bitter。' },
+      { statement: 'カカオは1500年代にヨーロッパへ運ばれた。', answer: true, why: '第3段落 In the 1500s, cacao was brought to Europe。' },
+      { statement: '今、世界のカカオのほとんどは南アメリカで育てられている。', answer: false, why: '第4段落 most of the world\'s cacao is grown in West Africa。' },
+    ],
+    qa: [
+      { q: 'What did people in Europe add to the cacao drink?', choices: ['Sugar and milk.', 'Chili and salt.', 'Coffee and tea.', 'Only water.'], answer: 0, why: '第3段落 People there began to add sugar and milk to the drink。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
