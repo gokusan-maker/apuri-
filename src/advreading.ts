@@ -6869,6 +6869,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-moon-phases',
+    title: 'Why the Moon Changes Shape',
+    level: 'TOEFL・IELTS（天文学）',
+    paragraphs: [
+      "Over about a month, the Moon seems to grow from a thin sliver to a full circle and then shrink again. These changes, known as phases, can make it seem as if the Moon itself is changing. In fact, the Moon produces no light of its own; ( A ) we see is sunlight reflected from its surface.",
+      "At any moment, the Sun lights up half of the Moon. The phase we observe depends on how much of this bright half is turned toward Earth. When the Moon lies roughly between Earth and the Sun, its lit side faces away from us, and we see almost nothing. This is called a new moon. About two weeks later, when the Moon is on the opposite side of Earth from the Sun, the entire lit side faces us, ( B ) a full moon.",
+      "A common misunderstanding is that Earth's shadow causes the phases. However, Earth's shadow falls on the Moon only during a lunar eclipse, which happens just a few times a year. The ordinary monthly phases are simply a matter of viewing angle.",
+      "The full cycle of phases takes about 29.5 days, slightly longer than the 27.3 days the Moon needs to circle Earth once. This difference exists ( C ) Earth is also moving around the Sun, so the Moon must travel a little farther to return to the same position relative to the Sun.",
+    ],
+    ja: [
+      'およそ1か月の間に、月は細い弓形から丸い円へと大きくなり、また小さくなっていくように見える。満ち欠けとよばれるこの変化は、月そのものが変わっているかのように思わせることがある。実は、月は自分では光を出していない。私たちが見ているのは、月の表面で反射した太陽の光なのである。',
+      'どの瞬間でも、太陽は月の半分を照らしている。私たちが見る形は、この明るい半分のうちどれだけが地球の方を向いているかによって決まる。月がだいたい地球と太陽の間にあるとき、光っている側は私たちと反対を向いているので、ほとんど何も見えない。これを新月という。約2週間後、月が太陽から見て地球の反対側にあるとき、光っている側が全部こちらを向き、満月になる。',
+      'よくある誤解は、地球の影が満ち欠けを起こすというものだ。しかし、地球の影が月にかかるのは月食のときだけで、それは1年に数回しか起こらない。ふだんの毎月の満ち欠けは、ただ見る角度の問題なのである。',
+      '満ち欠けがひと回りするのには約29.5日かかり、月が地球を1周するのに必要な27.3日より少し長い。この差があるのは、地球も太陽のまわりを動いているからで、月は太陽に対して同じ位置にもどるために、少し余分に進まなければならないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['what', 'which', 'that', 'it'], answer: 0, why: '先行詞のない「～するもの」は what。what we see が文の主語になる。which・that は先行詞が必要、it では we see とつながらない。' },
+      { id: 'B', choices: ['producing', 'produced', 'produce', 'to producing'], answer: 0, why: 'コンマのあとで「その結果～を生む」と続ける分詞構文。目的語 a full moon をとるので能動の -ing。' },
+      { id: 'C', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'うしろが文（Earth is also moving …）なので接続詞 because。because of・due to・despite のあとは名詞。' },
+    ],
+    underline: {
+      phrase: 'sliver',
+      choices: ['a thin piece', 'a bright star', 'a dark shadow', 'a round ball'],
+      answer: 0,
+      why: 'sliver は「細長いかけら・細い一片」。満ち欠けのはじめの細い月の形のこと。',
+    },
+    order: {
+      words: ['is', 'turned', 'toward', 'Earth'],
+      rest: '',
+      answer: 'is turned toward Earth',
+      ja: '地球の方に向けられている（受け身 be turned toward ～）',
+    },
+    tf: [
+      { statement: '月は自分で光を出している。', answer: false, why: '第1段落 the Moon produces no light of its own。' },
+      { statement: '新月のとき、月の光っている側は地球と反対を向いている。', answer: true, why: '第2段落 its lit side faces away from us … This is called a new moon。' },
+      { statement: '毎月の満ち欠けは、地球の影によって起こる。', answer: false, why: '第3段落 Earth\'s shadow falls on the Moon only during a lunar eclipse … a matter of viewing angle。' },
+    ],
+    qa: [
+      { q: 'Why does the cycle of phases take longer than one trip of the Moon around Earth?', choices: ['Because Earth is also moving around the Sun.', 'Because the Moon slows down every month.', "Because Earth's shadow covers the Moon.", 'Because the Moon produces its own light.'], answer: 0, why: '第4段落 This difference exists because Earth is also moving around the Sun。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
