@@ -1743,6 +1743,8 @@
 
 - [x] 文法の単元「It is believed that ～ ＝ S is believed to ～」を追加（よくあるまちがいつき）。文法は420単元に
 
+- [x] TOEIC に自作のお知らせ文「Notice: Employee Referral Program」を追加（社員紹介制度）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

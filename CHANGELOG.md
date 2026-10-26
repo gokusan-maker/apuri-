@@ -2363,3 +2363,4 @@
 - 2026-10-26: 高3（共通テスト）に長文「The Return of Night Trains」（夜行列車の復活）を追加
 - 2026-10-26: ボスがいかったら、ボス戦の舞台が赤く脈打つように
 - 2026-10-26: 文法に「It is believed that ～ ＝ S is believed to ～」の単元を追加（文法は420単元に）
+- 2026-10-26: TOEIC にお知らせ文「Notice: Employee Referral Program」（社員紹介制度）を追加

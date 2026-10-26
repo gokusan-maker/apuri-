@@ -7771,6 +7771,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-referral',
+    title: 'Notice: Employee Referral Program',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: As our company continues to grow, we need to hire more talented people. To help us find them, we are starting an employee referral program this month. If you know someone ( A ) would be a good fit for one of our open positions, we encourage you to recommend them.",
+      "To refer a candidate, simply send their résumé to the Human Resources Department with a short note explaining why you think they would do well here. Current job openings are listed on the company intranet and are updated every Monday.",
+      "If the person you refer is hired and stays with the company for at least three months, you will receive a bonus of $500. There is no limit to the number of people you can refer. Please note, however, that managers are not eligible ( B ) the bonus.",
+      "We believe that our employees know best what it takes to succeed here. Thank you for helping us ( C ) a strong team. If you have any questions, please contact Maria Lopez in Human Resources at extension 214.",
+    ],
+    ja: [
+      '社員の皆さまへ：会社が成長を続けているため、より多くの優秀な人材を採用する必要があります。そうした人を見つけるため、今月から社員紹介制度を始めます。募集中の職に合いそうな人を知っていれば、ぜひ推薦してください。',
+      '候補者を紹介するには、その人の履歴書を、ここでよい仕事ができると思う理由を書いた短いメモといっしょに人事部へ送ってください。現在の求人は社内ネットに出ていて、毎週月曜日に更新されます。',
+      '紹介した人が採用され、3か月以上会社で働いた場合、500ドルのボーナスが出ます。紹介できる人数に制限はありません。ただし、部長（マネージャー）はボーナスの対象外ですのでご注意ください。',
+      'ここで成功するには何が必要かを、いちばんよく知っているのは社員の皆さんだと考えています。強いチーム作りへのご協力に感謝します。ご質問があれば、人事部のマリア・ロペス（内線214）までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 someone（人）を説明し、would be の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['for', 'to', 'of', 'at'], answer: 0, why: 'be eligible for ～「～を受ける資格がある」。' },
+      { id: 'C', choices: ['build', 'to building', 'built', 'builds'], answer: 0, why: 'help ＋ 人 ＋ 原形「人が～するのを手伝う」（to build も可）。' },
+    ],
+    underline: {
+      phrase: 'candidate',
+      choices: ['a person who applies for a job', 'a manager', 'a customer', 'a teacher'],
+      answer: 0,
+      why: 'candidate は「候補者・（仕事などの）応募者」。',
+    },
+    order: {
+      words: ['at', 'least', 'three', 'months'],
+      rest: '',
+      answer: 'at least three months',
+      ja: '少なくとも3か月',
+    },
+    tf: [
+      { statement: '紹介した人が採用されて3か月以上働くと、500ドルのボーナスがもらえる。', answer: true, why: '第3段落 is hired and stays … at least three months, you will receive a bonus of $500。' },
+      { statement: '紹介できる人数は3人までである。', answer: false, why: '第3段落 There is no limit to the number of people you can refer。' },
+      { statement: '部長（マネージャー）もボーナスを受け取れる。', answer: false, why: '第3段落 managers are not eligible for the bonus。' },
+    ],
+    qa: [
+      { q: 'Where can employees find the current job openings?', choices: ['On the company intranet.', 'In the cafeteria.', 'In a local newspaper.', 'From their customers.'], answer: 0, why: '第2段落 Current job openings are listed on the company intranet。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
