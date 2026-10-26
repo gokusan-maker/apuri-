@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'due-to': { wrong: 'The game was canceled due to it rained.', right: 'The game was canceled due to the rain. / … because it rained.', why: 'due to のあとは名詞。文を続けるなら because。' },
+  'owe-to': { wrong: 'I owe my success for my teachers.', right: 'I owe my success to my teachers.', why: 'owe A to B「A は B のおかげだ」。前置詞は to。' },
   'similar-to': { wrong: 'My idea is similar with yours.', right: 'My idea is similar to yours.', why: 'similar は to と組む。' },
   'take-pride': { wrong: 'She takes proud in her work.', right: 'She takes pride in her work.', why: 'take のあとは名詞 pride。proud は be proud of で使う。' },
   'provide-with': { wrong: 'They provided us food.', right: 'They provided us with food. / They provided food for us.', why: 'provide は 人 with 物 か 物 for 人 の形。' },
