@@ -4733,6 +4733,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-parking-repair',
+    title: 'Notice: Parking Lot Repairs',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: The employee parking lot on the east side of our building will be repaved next week. The work will begin on Monday, March 3, and is expected to be completed ( A ) Friday, March 7, if the weather stays dry.",
+      "While the lot is closed, staff who usually drive to work may park at the Greenview Shopping Center on Hill Street. The center's manager has kindly agreed to let us use the upper level of its garage at no cost. A free shuttle bus will run between the shopping center and our main entrance every fifteen minutes from 7:00 a.m. to 7:00 p.m.",
+      "To use the garage, you will need a temporary parking pass. Passes can be picked up at the reception desk starting this Wednesday. Please display the pass on your dashboard ( B ) that security staff can see it clearly.",
+      "We also encourage employees to consider ( C ) public transportation or sharing rides with coworkers during this period. We understand that this change may be inconvenient, and we appreciate your understanding. Facilities Management",
+    ],
+    ja: [
+      '従業員のみなさまへ：ビルの東側にある従業員用駐車場を、来週舗装し直します。工事は3月3日（月）に始まり、天気がよければ3月7日（金）までに終わる予定です。',
+      '駐車場が使えない間、ふだん車で通勤している人は、ヒル通りのグリーンビュー・ショッピングセンターに駐車できます。センターの支配人が、立体駐車場の上の階を無料で使わせてくれることに快く同意してくれました。ショッピングセンターと当社の正面入口の間には、午前7時から午後7時まで15分おきに無料のシャトルバスが運行します。',
+      '立体駐車場を使うには、臨時の駐車券が必要です。駐車券は今週の水曜日から受付で受け取れます。警備員がはっきり見えるように、駐車券はダッシュボードの上に置いてください。',
+      'この期間は、公共交通機関を使ったり、同僚と車に乗り合わせたりすることもぜひ考えてください。この変更でご不便をおかけしますが、ご理解に感謝します。施設管理部',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by', 'since', 'among', 'along'], answer: 0, why: 'by ＋ 時「～までに」（期限）。be completed by Friday で「金曜日までに完了する」。since は過去からの起点で未来の予定に使えず、among・along は時を表さない。' },
+      { id: 'B', choices: ['so', 'because', 'although', 'even'], answer: 0, why: 'so that S can ～「S が～できるように」（目的）。because・although・even のうしろに that 節を続ける形はない。' },
+      { id: 'C', choices: ['using', 'to use', 'use', 'used'], answer: 0, why: 'consider は動名詞を目的語にとる（consider -ing「～することを考える」）。to 不定詞や原形・過去分詞は続かない。' },
+    ],
+    underline: {
+      phrase: 'at no cost',
+      choices: ['for free', 'at a low price', 'for a short time', 'with some difficulty'],
+      answer: 0,
+      why: 'at no cost は「費用なしで」＝ for free「無料で」。cost は「費用」。',
+    },
+    order: {
+      words: ['will', 'run', 'between', 'the', 'shopping', 'center', 'and', 'our', 'main', 'entrance'],
+      rest: '',
+      answer: 'will run between the shopping center and our main entrance',
+      ja: '（シャトルバスが）ショッピングセンターと当社の正面入口の間を運行する。（between A and B＝A と B の間）',
+    },
+    tf: [
+      { statement: '工事は天気がよければ金曜日までに終わる予定だ。', answer: true, why: '第1段落 is expected to be completed by Friday, March 7, if the weather stays dry。' },
+      { statement: 'ショッピングセンターの駐車場は、1日ごとに料金がかかる。', answer: false, why: '第2段落 let us use the upper level of its garage at no cost。' },
+      { statement: '臨時の駐車券は受付で受け取れる。', answer: true, why: '第3段落 Passes can be picked up at the reception desk。' },
+    ],
+    qa: [
+      { q: 'How can employees get from the shopping center to the office?', choices: ['By taking a free shuttle bus.', 'By renting a bicycle at the center.', 'By walking through a new tunnel.', 'By calling a taxi paid for by the company.'], answer: 0, why: '第2段落 A free shuttle bus will run between the shopping center and our main entrance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
