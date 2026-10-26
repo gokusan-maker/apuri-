@@ -275,7 +275,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [combo, setCombo] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
-  const [atk, setAtk] = useState<{ at: number; lose: number; who?: TeamRole; dmg?: number; counter?: boolean } | null>(null) // ボスのこうげき（演出用）。チームバトルでは受けたなかまとダメージ
+  const [atk, setAtk] = useState<{ at: number; lose: number; who?: TeamRole; dmg?: number; counter?: boolean; ko?: boolean } | null>(null) // ボスのこうげき（演出用）。チームバトルでは受けたなかまとダメージ
   const [teamHp, setTeamHp] = useState<TeamHp>(() => fullTeamHp(memberMax)) // チームバトル：なかまの体力
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
@@ -420,10 +420,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setCombo(0)
       const canSave = !!skill && saves < skillSaves(skill.id, lv)
       const guard = skill?.id === 'guard' && canSave
-      // チームバトル：番のなかまがこうげきを受ける（体力0でダウン→ハート-1）
+      // まちがえたら必ずハートがへる（ためこうげきは2つ）。チームバトルでは番のなかまも体力がへる
+      const lose = charge ? 2 : 1
       const who = teamOn && 'team' in q ? hitTarget(teamHp, q.team as TeamRole) : undefined
       const teamHit = who ? hitMember(teamHp, who, charge ? CHARGE_HIT : MEMBER_HIT) : null
-      const revive = skill?.id === 'revive' && canSave && (teamHit ? teamHit.ko && hearts - 1 <= 0 : hearts - (charge ? 2 : 1) <= 0)
+      const revive = skill?.id === 'revive' && canSave && hearts - lose <= 0
       if (guard || revive) onSkill?.()
       if (guard || revive || shield) setAtk({ at: index, lose: 0 }) // こうげきは来たけど守った
       if (guard) {
@@ -431,25 +432,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setSkillMsg(`${partner!.name}の${skill!.name}！ ハートを守った`)
       } else if (revive) {
         setSaves(saves + 1)
-        setHearts(teamHit ? hearts : 1)
-        if (teamHit && who) setTeamHp({ ...teamHit.hp, [who]: 1 })
-        setSkillMsg(`${partner!.name}の${skill!.name}！ ${teamHit && who ? `${team![who].name}が体力1で` : 'ハート1で'}ふんばった`)
+        setHearts(1)
+        if (teamHit && who) setTeamHp({ ...teamHit.hp, [who]: Math.max(1, teamHit.hp[who]) })
+        setSkillMsg(`${partner!.name}の${skill!.name}！ ハート1でふんばった`)
       } else if (shield) {
         setShield(false)
         setShieldUsed(index)
-      } else if (teamHit && who) {
-        setTeamHp(teamHit.hp)
-        setAtk({ at: index, lose: teamHit.ko ? 1 : 0, who, dmg: charge ? CHARGE_HIT : MEMBER_HIT })
-        if (teamHit.ko) {
-          setHearts(Math.max(0, hearts - 1))
-          if (hearts - 1 <= 0) {
-            markLost(baseLook.name)
-            onLose?.()
-          }
-        }
       } else {
-        const lose = charge ? 2 : 1
-        setAtk({ at: index, lose })
+        if (teamHit && who) setTeamHp(teamHit.hp)
+        setAtk(teamHit && who ? { at: index, lose, who, dmg: charge ? CHARGE_HIT : MEMBER_HIT, ko: teamHit.ko } : { at: index, lose })
         setHearts(Math.max(0, hearts - lose))
         if (hearts - lose <= 0) {
           markLost(baseLook.name)
@@ -1022,7 +1013,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
                   {atk.who && teamOn
                     ? !atk.dmg
                       ? `🛡 ${look.name}の${atk.counter ? '反撃' : 'こうげき'}！ ガード！`
-                      : `${elem.icon} ${elem.name}の${atk.counter ? '反撃' : 'こうげき'}！ ${TEAM_ICON[atk.who]}${TEAM_LABEL[atk.who]} -${atk.dmg}${atk.lose > 0 ? ' ダウン！' : ''}`
+                      : `${elem.icon} ${elem.name}の${atk.counter ? '反撃' : 'こうげき'}！ ${TEAM_ICON[atk.who]}${TEAM_LABEL[atk.who]} -${atk.dmg}${atk.counter ? (atk.lose > 0 ? ' ダウン！' : '') : `${atk.ko ? ' ダウン！' : ''} ❤️-${atk.lose}`}`
                     : atk.lose === 0
                       ? `🛡 ${look.name}のこうげき！ ガード！`
                       : `${elem.icon} ${elem.name}のこうげき！ ❤️-${atk.lose}`}

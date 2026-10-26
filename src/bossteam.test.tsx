@@ -76,7 +76,7 @@ it('負けると、3体のなかまがそれぞれ1行ではげましてくれ�
       <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} startHearts={1} />
     </BossTeamContext.Provider>,
   )
-  // チームバトルでは、まちがえると番のなかまの体力が減り、体力0でダウン（ハート-1）→ 負け
+  // チームバトルでも、まちがえるとハートが減る → 負け
   for (let i = 0; i < 36 && !screen.queryByLabelText('チームのはげまし'); i++) {
     const q = document.querySelector('.en')?.textContent ?? ''
     const bs = [...document.querySelectorAll<HTMLButtonElement>('.choices .choice')]
@@ -146,7 +146,7 @@ it('ボスの文法問題は、ボスの単語帳のレベルの単元から（�
   localStorage.removeItem('eitan:grade')
 })
 
-it('チームバトル：まちがえると番のなかまがこうげきを受けて体力が減り、0でダウンするとハートが減る', () => {
+it('チームバトル：まちがえるとハートが1つ減り、番のなかまもこうげきを受けて体力が減る', () => {
   render(
     <BossTeamContext.Provider value={team}>
       <Boss level="中1" words={WORDS.filter((w) => w.level === '中1')} onAnswer={() => {}} onWin={() => {}} onExit={() => {}} />
@@ -162,8 +162,8 @@ it('チームバトル：まちがえると番のなかまがこうげきを受�
   }
   wrong()
   expect(hpOf('モチまる')).toBe(20)
-  expect(screen.getByText(/のこうげき！ 🔤単語 -20/)).toBeInTheDocument()
-  expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
+  expect(screen.getByText(/のこうげき！ 🔤単語 -20 ❤️-1/)).toBeInTheDocument()
+  expect(screen.getByLabelText('のこりハート 2')).toBeInTheDocument() // まちがえたら必ずハートが減る
 })
 
 it('ボスの反撃は4問ごと、番の次のなかまへ。体力0のなかまはとばす', async () => {
