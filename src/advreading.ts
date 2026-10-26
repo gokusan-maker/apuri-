@@ -7311,6 +7311,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-salty-sea',
+    title: 'Why Is the Sea Salty?',
+    level: '高校入試（説明文）',
+    paragraphs: [
+      "If you have ever swum in the sea, you know that seawater tastes salty. But river water and rain are not salty. So ( A ) does the salt in the sea come from?",
+      "The answer begins with rain. When rain falls on the land, it slowly breaks down tiny parts of rocks. These parts contain minerals, including salt. Rivers carry the minerals to the sea. In this way, a small amount of salt is added to the sea every day.",
+      "Then why don't rivers become salty? It is because river water keeps moving and does not stay in one place for long. In the sea, however, the sun heats the water, and some of it goes up into the air. The water goes up, but the salt is left ( B ) in the sea. This has continued for millions of years.",
+      "Today, about 3.5 percent of seawater is salt. Some lakes, such as the Dead Sea, are even saltier. The water there is so salty that people can float on it easily, ( C ) reading a newspaper.",
+    ],
+    ja: [
+      '海で泳いだことがあれば、海水がしょっぱいことを知っているでしょう。でも、川の水や雨はしょっぱくありません。では、海の塩はどこから来るのでしょうか。',
+      '答えは雨から始まります。雨が陸にふると、岩の小さな部分を少しずつくだきます。その部分には、塩をふくむミネラルが入っています。川がそのミネラルを海へ運びます。こうして、毎日少しずつ塩が海に加わっているのです。',
+      'では、なぜ川はしょっぱくならないのでしょうか。それは、川の水は動き続けていて、1か所に長くとどまらないからです。しかし海では、太陽が水を温め、その一部が空気の中へ上がっていきます。水は上がっていきますが、塩は海に残されます。これが何百万年も続いてきたのです。',
+      '今日、海水のおよそ3.5パーセントは塩です。死海のように、さらにしょっぱい湖もあります。そこの水はとてもしょっぱいので、新聞を読みながらでも、人はかんたんに浮くことができます。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'what', 'which', 'how'], answer: 0, why: 'come from ～「～から来る」の「どこから」をたずねるので where。Where does it come from? の形。' },
+      { id: 'B', choices: ['behind', 'ago', 'until', 'since'], answer: 0, why: 'be left behind「あとに残される」。ago・until・since はここでは文として成り立たない。' },
+      { id: 'C', choices: ['even while', 'even during', 'even though', 'even so'], answer: 0, why: 'while -ing「～しながら」。during のあとは名詞、though のあとは主語のある文が必要、even so は「それでも」という副詞で -ing は続かない。' },
+    ],
+    tf: [
+      { statement: '川の水や雨はしょっぱくない。', answer: true, why: '第1段落 river water and rain are not salty。' },
+      { statement: '雨は岩を少しずつくだき、塩をふくむミネラルを運び出す。', answer: true, why: '第2段落 it slowly breaks down tiny parts of rocks. These parts contain minerals, including salt。' },
+      { statement: '水が空気中に上がるとき、塩もいっしょに上がっていく。', answer: false, why: '第3段落 The water goes up, but the salt is left behind in the sea。' },
+      { statement: '死海の水は、ふつうの海水よりも塩が少ない。', answer: false, why: '第4段落 Some lakes, such as the Dead Sea, are even saltier。' },
+    ],
+    qa: [
+      { q: 'How does salt get into the sea?', choices: ['Rivers carry minerals from rocks to the sea.', 'People put salt into the sea.', 'Rain clouds are full of salt.', 'Fish make salt in the sea.'], answer: 0, why: '第2段落 These parts contain minerals, including salt. Rivers carry the minerals to the sea。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
