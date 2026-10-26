@@ -5608,6 +5608,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-jevons',
+    title: 'When Saving Energy Means Using More',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1865, the English economist William Stanley Jevons made an observation that seemed to contradict common sense. Steam engines had become ( A ) efficient that they needed much less coal to do the same amount of work. One might expect that Britain's coal use would therefore fall. Instead, it rose sharply.",
+      "Jevons's explanation was that efficiency made coal-powered machines cheaper to run. As a result, factories used them for more tasks, and new industries appeared that would not have been profitable before. The savings from each machine were more than ( B ) out by the growing number of machines.",
+      "Economists now call this pattern the 'rebound effect,' and they continue to debate how large it is. Examples are easy to find. When LED bulbs made lighting much cheaper, many people began lighting their homes and gardens more brightly and for longer hours. Drivers of fuel-efficient cars may choose to drive more often or live farther from work. In such cases, part of the energy saved is used again in other ways.",
+      "This does not mean that efficiency is pointless. In most cases, total energy use is still lower than it would have been without the improvement. But Jevons's insight warns us that technology alone may not be enough to reduce consumption. Policies and personal choices also matter, because what we do with our savings can determine ( C ) the planet actually benefits.",
+    ],
+    ja: [
+      '1865年、イギリスの経済学者ウィリアム・スタンレー・ジェヴォンズは、常識に反するように思える観察をした。蒸気機関はとても効率がよくなり、同じ量の仕事をするのに必要な石炭がずっと少なくなっていた。そうなるとイギリスの石炭の使用量は減るはずだと思うかもしれない。ところが、実際には急に増えたのである。',
+      'ジェヴォンズの説明は、効率がよくなったことで、石炭で動く機械を動かす費用が安くなった、というものだった。その結果、工場はより多くの作業に機械を使い、以前ならもうからなかったはずの新しい産業も生まれた。1台ごとの節約分は、ふえていく機械の数によって打ち消されてなお余りあったのだ。',
+      '今日、経済学者はこのパターンを「リバウンド効果」とよび、それがどれほど大きいかについて議論を続けている。例はかんたんに見つかる。LED電球で明かりがずっと安くなると、多くの人が家や庭をより明るく、より長い時間照らすようになった。燃費のよい車に乗る人は、より頻繁に運転したり、職場から遠くに住んだりするかもしれない。こうした場合、節約されたエネルギーの一部が、別の形でまた使われてしまうのである。',
+      'だからといって、効率化に意味がないわけではない。たいていの場合、エネルギーの使用量の合計は、改良がなかった場合よりはまだ少ない。しかしジェヴォンズの洞察は、技術だけでは消費を減らすのに十分でないかもしれないと警告している。節約した分で何をするかによって、地球が実際に得をするかどうかが決まりうるので、政策や個人の選択も大切なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'such', 'too', 'very'], answer: 0, why: 'so ＋ 形容詞 ＋ that …「とても～なので…」。such のうしろは名詞、too・very は that と組まない。' },
+      { id: 'B', choices: ['canceled', 'canceling', 'cancel', 'to cancel'], answer: 0, why: 'The savings were ＿ out by ～ は受け身。cancel out ～「～を打ち消す」の過去分詞 canceled。' },
+      { id: 'C', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: 'determine の目的語になる名詞節「～かどうか」の whether。うしろが欠けのない文なので what・which・who は入らない。' },
+    ],
+    underline: {
+      phrase: 'contradict common sense',
+      choices: ['go against what most people would expect', 'agree with ordinary ideas', 'explain a common habit', 'prove an old theory'],
+      answer: 0,
+      why: 'contradict は「～と矛盾する・～に反する」、common sense は「常識」。ふつうの人が予想することに反する、ということ。',
+    },
+    order: {
+      words: ['part', 'of', 'the', 'energy', 'saved', 'is', 'used', 'again'],
+      rest: '',
+      answer: 'part of the energy saved is used again',
+      ja: '節約されたエネルギーの一部がまた使われる。（the energy saved＝節約されたエネルギー、過去分詞がうしろから説明）',
+    },
+    tf: [
+      { statement: '蒸気機関の効率がよくなったあと、イギリスの石炭の使用量は減った。', answer: false, why: '第1段落 Instead, it rose sharply。' },
+      { statement: '効率がよくなると機械を動かす費用が安くなり、使われる場面がふえた。', answer: true, why: '第2段落 efficiency made coal-powered machines cheaper to run … factories used them for more tasks。' },
+      { statement: '筆者は、効率化にはまったく意味がないと考えている。', answer: false, why: '第4段落 This does not mean that efficiency is pointless。' },
+    ],
+    qa: [
+      { q: 'What does Jevons\'s insight warn us about?', choices: ['Technology alone may not be enough to reduce consumption.', 'Efficient machines always use more energy than old ones.', 'LED bulbs are more expensive than old bulbs.', 'Coal will never run out.'], answer: 0, why: '第4段落 technology alone may not be enough to reduce consumption。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
