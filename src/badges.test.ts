@@ -159,3 +159,11 @@ it('長文読解の満点1本で「読解の満点」、20本で「読解マス�
   expect(b.check({ ...zero, longPerfect: 19 })).toBe(false)
   expect(b.check({ ...zero, longPerfect: 20 })).toBe(true)
 })
+
+it('今日の課題3つを3日・7日続けてクリアするとバッジ', () => {
+  const a = BADGES.find((b) => b.id === 'trio-3')!
+  const b = BADGES.find((x) => x.id === 'trio-7')!
+  expect(a.check({ ...zero, trioStreak: 2 })).toBe(false)
+  expect(a.check({ ...zero, trioStreak: 3 })).toBe(true)
+  expect(b.check({ ...zero, trioStreak: 7 })).toBe(true)
+})

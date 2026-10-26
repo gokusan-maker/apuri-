@@ -135,7 +135,7 @@ import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord, perfectLongCount } from './longreading'
 import { loadShortDone } from './reading'
 import { loadReadLevel, passagesFor, READ_LEVELS, readyFor, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
-import { trioStreakNow, loadTrioDay, dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
+import { trioStreakNow, loadTrioDay, loadTrioStreak, dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
 import { titleFor } from './titles'
 import { daysUntil, perDay } from './exam'
 import { feelingFor } from './feeling'
@@ -795,6 +795,7 @@ function App() {
       dictStreak: loadDictBest(),
       chests: chestsOpened(loadChests()),
       longPerfect: perfectLongCount(),
+      trioStreak: loadTrioStreak().count,
     },
     earned,
   )
