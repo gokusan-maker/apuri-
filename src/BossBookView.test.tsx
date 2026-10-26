@@ -119,3 +119,15 @@ it('ボス図鑑に「とくぎのしくみ」：4しゅるいのとくぎと説
   expect(guide.textContent).toContain('さいせい')
   expect(guide.textContent).toContain('とくぎ封じ')
 })
+
+it('ボスをたおしたときの紙ふぶきに、そのボスの色がまざる', async () => {
+  const { BOSSES } = await import('./boss')
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  const hex = BOSSES['中1'].color
+  const rgb = `rgb(${[1, 3, 5].map((k) => parseInt(hex.slice(k, k + 2), 16)).join(', ')})`
+  expect(document.querySelector<HTMLElement>('.boss .confetti:not(.gold)')!.style.background).toBe(rgb)
+})

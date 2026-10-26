@@ -771,7 +771,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               aria-hidden="true"
               style={{
                 left: `${(i * 83) % 100}%`,
-                background: ['#f97316', '#facc15', '#22c55e', '#3b82f6', '#a855f7', '#ec4899'][i % 6],
+                background: [look.color, '#facc15', look.color, '#3b82f6', '#ffffff', '#ec4899'][i % 6], // たおしたボスの色をまぜる
                 animationDelay: `${(i % 6) * 0.12}s`,
               }}
             />
