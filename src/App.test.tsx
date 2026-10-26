@@ -1202,8 +1202,8 @@ describe('App', () => {
     expect(screen.queryByText('意味を見る')).toBeNull() // 今日の単語はホームではなく単語ゲームのページ
     // ホームは今日の課題のすぐ下が記録
     expect(screen.getByLabelText('今日の課題').nextElementSibling!.textContent).toContain('📊 記録')
-    goMini()
-    expect(screen.getByRole('button', { name: /^今日の課題（単語）：/ })).toBeInTheDocument()
+    navTo('単語ゲーム')
+    expect(screen.getByRole('button', { name: /^今日の課題（単語）：/ })).toBeInTheDocument() // 海の地図の下
     goCards()
     expect(screen.getByText('意味を見る')).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
     navTo('文法チャレンジ')

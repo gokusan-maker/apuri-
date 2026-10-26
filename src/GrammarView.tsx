@@ -1,7 +1,7 @@
 import { maskAnswer } from './readhint'
 import { splitSoft } from './softbreak'
 import { GRAMMAR_DRILLS, type GrammarDrill } from './grammardrills'
-import { useContext, useState } from 'react'
+import { useContext, useState, type ReactNode } from 'react'
 import { PlayContext, usePlaying } from './playing'
 import { GRAMMAR_GRADES_FOR, loadGrade, type GradeId } from './usergrade'
 import { BossFigure } from './BossView'
@@ -41,6 +41,7 @@ import { speak } from './speech'
 
 type Props = {
   castleOnly?: boolean // 文法ページ（App）：城と「単元をえらんで自由に勉強」だけにする
+  belowCastle?: ReactNode // 城のすぐ下に出すもの（App の今日の課題）
   castleLevel?: string // 文法の城のレベル（App のキャラの下でえらぶ。省略時は学年から）
   onChest?: (coins: number) => void // 城の宝箱のコイン
   onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
@@ -119,7 +120,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
+export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -296,6 +297,7 @@ export function Grammar({ castleOnly = false, castleLevel, onDrill, quickStart =
           floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
           onOpen={openFloor}
         />
+        {belowCastle}
         <button
           className="flip grammar-free-btn"
           onClick={() => {

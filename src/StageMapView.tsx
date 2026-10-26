@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState, type CSSProperties } from 'react'
-import { ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
+import { mapRoom, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 
-const ROW = 84 // ステージの間かく（px）
+const ROW = 68 // ステージの間かく（px）。地図が1画面におさまるように
 const NODE: Record<MapTheme, string> = { sea: '🏝', forest: '🌳', mountain: '⛰️' }
 const DECO: Record<MapTheme, string[]> = { sea: ['🐬', '🐙', '⛵', '🐟'], forest: ['🍄', '🦉', '🌲', '🐿'], mountain: ['🦅', '🪨', '❄️', '🐐'] }
 const GOAL: Record<MapTheme, string> = { sea: '🏝 宝の島に着いた！ この海を制覇', forest: '🌳 森の奥に着いた！ この森を制覇', mountain: '🏔 山頂に着いた！ この山を制覇' }
@@ -25,7 +25,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
   const chest = onChest ? openableChests(now, chests[name] ?? [], total)[0] : undefined
   const shown = mapShown(total, now)
   const h = shown.length * ROW + 64
-  const yOf = (i: number) => h - 80 - shown.indexOf(i) * ROW
+  const yOf = (i: number) => h - 72 - shown.indexOf(i) * ROW
   // 前のステージから歩いてくる
   const start = from !== null && from < at ? Math.max(from, shown[0]) : null // 地図の外からなら、見えているいちばん下から
   const walkFrom = start !== null && start < at ? start : null
@@ -83,7 +83,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
         ))}
         {shown.map((i) => {
           const f = floors[i]
-          const style = { left: `${mapX(i)}%`, top: yOf(i) } as CSSProperties
+          const style = { left: `${mapX(i)}%`, top: yOf(i), '--room': `${mapRoom(mapX(i))}cqw` } as CSSProperties
           const chestMark = isMilestone(i + 1, total) && <span className="smap-chest" aria-label="宝箱のステージ（レアの卵）">🎁</span>
           if (i > now)
             return (

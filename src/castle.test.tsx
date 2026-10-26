@@ -93,3 +93,13 @@ it('地図の宝箱：てっぺんと30階ごとの宝箱にはガチャチケ�
   expect(chestHasTicket(30, 75)).toBe(true)
   expect(chestHasTicket(75, 75)).toBe(true)
 })
+
+it('地図の道はまん中をさけ、いまのステージの札は広い側に入る（はみ出さない）', async () => {
+  const { mapX, mapRoom } = await import('./castle')
+  for (let i = 0; i < 8; i++) {
+    expect(Math.abs(mapX(i) - 50)).toBeGreaterThanOrEqual(12)
+    expect(mapRoom(mapX(i))).toBeGreaterThanOrEqual(62)
+  }
+  expect(mapRoom(20)).toBe(80)
+  expect(mapRoom(80)).toBe(80)
+})

@@ -233,6 +233,7 @@ function loadMode(fallback: Direction): Direction {
 
 type Props = {
   grammarLevel?: string // 文法の城のレベル
+  grammarBelow?: ReactNode // 文法の城のすぐ下に出すもの（今日の課題）
   words: Word[]
   targets?: Word[] // 出題する単語（省略時は words 全部）
   direction?: Direction
@@ -276,7 +277,7 @@ function loadCount(fallback: number): number {
   }
 }
 
-export function Quiz({ onMarkWeak, words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill, countSlot, grammarLevel }: Props) {
+export function Quiz({ onMarkWeak, words, targets, direction: directionProp, count: countProp = 10, onAnswer: onAnswerProp, onFinish, onRestart, lockDirection = false, onCombo, onSpend, onRivalWin, onFavorite, onGame, onSetLevels, onTicket, onCoins, onXp, onGoalTicket, partnerName, onGrammarMaster, grammarQuick = false, onCards, onDirection, onGrammarAnswer, onDrill, countSlot, grammarLevel, grammarBelow }: Props) {
   // 種類：指定がなければ最後に遊んだ種類（ステージは英→日）
   const [initial] = useState<Direction>(() => directionProp ?? (lockDirection ? 'en-ja' : loadMode('en-ja')))
   const [riddles, setRiddles] = useState(loadRiddleBook) // なぞなぞ図鑑
@@ -867,7 +868,7 @@ export function Quiz({ onMarkWeak, words, targets, direction: directionProp, cou
     return (
       <>
         <div className="card-tabs">{toggle}</div>
-        <Grammar castleOnly castleLevel={grammarLevel} onDrill={onDrill} onChest={onCoins} quickStart={grammarQuick} onAllGames={onCoins ? () => onCoins(ALL_GAMES_COINS) : undefined} onTaBest={onXp ? () => onXp(TA_BEST_XP) : undefined} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => {
+        <Grammar castleOnly belowCastle={grammarBelow} castleLevel={grammarLevel} onDrill={onDrill} onChest={onCoins} quickStart={grammarQuick} onAllGames={onCoins ? () => onCoins(ALL_GAMES_COINS) : undefined} onTaBest={onXp ? () => onXp(TA_BEST_XP) : undefined} onRunBest={onXp ? () => onXp(RUN_BEST_XP) : undefined} onQuickPerfect={onCoins ? () => onCoins(QUICK_PERFECT_COINS) : undefined} onAnswer={onAnswer} onMaster={onGrammarMaster} partnerName={partnerName} onStreakBonus={onCoins ? () => onCoins(GRAMMAR_STREAK_COINS) : undefined} onBingo={onCoins ? () => onCoins(BINGO_COINS) : undefined} onWeeklyGoal={onGoalTicket} onFirstClear={onXp ? () => onXp(GRAMMAR_CLEAR_XP) : undefined} onStampTicket={onTicket} onMonsterWin={onCoins ? () => onCoins(GRAMMAR_MONSTER_COINS) : undefined} onDailyBonus={onCoins ? () => {
           onCoins(DAILY_GRAMMAR_COINS)
           onXp?.(TASK_XP) // 今日の文法クリアで文法のなかまにも
         } : undefined} onRushWin={onCoins ? () => onCoins(RUSH_GRAMMAR_COINS) : undefined} onSpend={onSpend} />

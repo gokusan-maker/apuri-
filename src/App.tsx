@@ -1458,6 +1458,15 @@ function App() {
     return r ? `${r.kind.name}の${r.species.egg}` : null
   }
 
+  // 読解の今日の課題：城（地図）のすぐ下に出す
+  const readTodayBtn =
+    mode === 'reading' && !shortGo && !playOn && !todayGone ? (
+      <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
+        📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
+        <strong>{todayReadingTitle(today)}</strong>
+      </button>
+    ) : undefined
+
   return (
     <RareEggContext.Provider value={giveRareEgg}>
     <ChestTicketContext.Provider value={giveChestTicket}>
@@ -1661,27 +1670,14 @@ function App() {
                 onPick={(id) => setWordCourse(id as CourseId)}
               />
       )}
-      {mode === 'word' && !showShop && !showChallenge && !todayQuiz && !playOn && !todayGone && (
-        <button
-          className="long-recommend daily-long today-read-btn"
-          aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
-          onClick={() => {
-            setWordTab('mini')
-            setTodayQuiz(true)
-          }}
-        >
-          🔤 今日の課題{loadTodayWordsDay() === today ? ' ✅' : ''}
-          <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
-        </button>
-      )}
-      {leveledUp && !home && !playOn && (
+      {leveledUp && !home && !playOn && mode !== 'word' && mode !== 'grammar' && mode !== 'reading' && (
         <p className="lvup-banner" role="status">
           ⬆ Lv UP! {monster.name ?? formOf(monster).name} が Lv.{levelInfo(monster.xp).level} になった！
           {levelAttack(levelInfo(monster.xp).level) > levelAttack(levelInfo(monster.xp).level - 1) && ` ⚔攻撃力+${levelAttack(levelInfo(monster.xp).level)}`}
         </p>
       )}
 
-      {reviewWeek && lastWeek.count > 0 && onboarded && (
+      {home && reviewWeek && lastWeek.count > 0 && onboarded && (
         <p className="weak-banner week-review" role="status">
           📊 先週のふりかえり：{lastWeek.count}問・{lastWeek.days}日 学習しました{lastWeek.days >= 5 ? '。すばらしい！' : '。今週もがんばろう！'}
           <button onClick={() => setReviewWeek(false)} aria-label="ふりかえりをとじる">
@@ -1689,7 +1685,7 @@ function App() {
           </button>
         </p>
       )}
-      {greet && dueReviews > 0 && onboarded && (
+      {home && greet && dueReviews > 0 && onboarded && (
         <p className="weak-banner today-banner" role="status">
           📚 今日の復習が {dueReviews}語 あります
           <span>
@@ -1857,12 +1853,6 @@ function App() {
             }}
           />
           )}
-          {mode === 'reading' && !shortGo && !playOn && !todayGone && (
-            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の読解：${todayReadingTitle(today)}`} onClick={() => setShortGo(true)}>
-              📖 今日の課題{loadDailyShortDay() === today ? ' ✅' : ''}
-              <strong>{todayReadingTitle(today)}</strong>
-            </button>
-          )}
           {mode === 'reading' && shortGo && todayReading(today).kind === 'long' ? (
             <LongReading
               key="today"
@@ -1880,7 +1870,7 @@ function App() {
               onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             />
           ) : mode === 'reading' && readLevel !== '中1' && !shortGo ? (
-            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} belowCastle={readTodayBtn} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}
@@ -1894,6 +1884,7 @@ function App() {
               }}
               onAnswer={onAnswerTrack('reading')}
               onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
+              belowCastle={readTodayBtn}
             />
           ) : (
           stagesView('boss')
@@ -2135,6 +2126,19 @@ function App() {
           {mode === 'word' && !todayQuiz && !wordMini && (
             <>
             <WordCastle key={wordCourse} name={`${courseById(wordCourse).label}の海`} course={wordCourse} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            {!castleOn && !quizFocus && !playOn && !todayGone && !showShop && !showChallenge && (
+              <button
+                className="long-recommend daily-long today-read-btn"
+                aria-label={`今日の課題（単語）：${todayWords(today).map((w) => w.en).join('・')}`}
+                onClick={() => {
+                  setWordTab('mini')
+                  setTodayQuiz(true)
+                }}
+              >
+                🔤 今日の課題{loadTodayWordsDay() === today ? ' ✅' : ''}
+                <strong>{todayWords(today).map((w) => w.en).join('・')}</strong>
+              </button>
+            )}
             {!castleOn && !quizFocus && (
               <button className="word-mini-btn" onClick={() => setWordMini(true)}>
                 🎮 単語のミニゲーム
@@ -2164,12 +2168,6 @@ function App() {
               }}
             />
           )}
-          {mode === 'grammar' && !grammarGo && !playOn && !todayGone && (
-            <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
-              📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
-              <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
-            </button>
-          )}
           {mode === 'grammar' && grammarGo && (
             <TodayGrammar
               today={today}
@@ -2195,6 +2193,14 @@ function App() {
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
             onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
             grammarLevel={gcLevel}
+            grammarBelow={
+              mode === 'grammar' && !grammarGo && !playOn && !todayGone ? (
+                <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>
+                  📐 今日の課題{loadDailyGrammarDay() === today ? ' ✅' : ''}
+                  <strong>{dailyGrammar(today).title.split('（')[0]}</strong>
+                </button>
+              ) : undefined
+            }
             onGrammarAnswer={mode === 'word' ? onAnswerTrack('grammar') : undefined}
             lockDirection={mode === 'grammar' || (mode === 'word' && todayQuiz)}
             words={quizFocus === 'fav' ? [...words, ...favWords.filter((f) => !words.includes(f))] : mode === 'word' && !quizFocus ? [...courseWords(wordCourse), ...(useMy ? myWords : [])] : words} // 単語のミニゲームは、えらんだレベルの単語で

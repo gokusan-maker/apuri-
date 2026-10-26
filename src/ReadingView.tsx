@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react'
+import { useContext, useState, type ReactNode } from 'react'
 import { PlayContext, usePlaying } from './playing'
 import type { Source } from './monster'
 import { loadShortDone, markShortDone, PASSAGES, type Passage } from './reading'
@@ -21,9 +21,10 @@ type Props = {
   onClose?: () => void // 今日の課題：一覧にもどらず、課題の画面をとじる
   onDone?: (score: number, total: number) => void // 1本ぜんぶ答えたとき
   onCoins?: (n: number) => void // 城の宝箱
+  belowCastle?: ReactNode // 城のすぐ下に出すもの（App の今日の課題）
 }
 
-export function Reading({ onAnswer, start, onDone, onClose, onCoins }: Props) {
+export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle }: Props) {
   const [p, setP] = useState<Passage | null>(start ?? null)
   const [done, setDone] = useState(loadShortDone) // 解いた話
   const [step, setStep] = useState(0)
@@ -51,6 +52,7 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins }: Props) {
       <section className="card grammar">
         {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
         <Castle name="読解ミニの山" theme="mountain" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
+        {belowCastle}
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
         <p className="game-grid-title">🎮 読解ゲーム</p>
         <div className="game-grid read-games" aria-label="読解ゲーム">

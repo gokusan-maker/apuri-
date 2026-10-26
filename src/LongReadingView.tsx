@@ -1,5 +1,5 @@
 import { weekKey } from './rareboss'
-import { useContext, useEffect, useRef, useState } from 'react'
+import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { PlayContext, usePlaying } from './playing'
 import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
@@ -17,7 +17,7 @@ import { maskAnswer } from './readhint'
 import { ReadThemeCastle } from './ReadThemeCastleView'
 import { loadInstant, saveInstant } from './longinstant'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void; belowCastle?: ReactNode } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -73,7 +73,7 @@ function Paragraph({ text, underline, refer, filled }: { text: string; underline
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, start, onDone, onClose }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, start, onDone, onClose, belowCastle }: Props) {
   const LIST = passages ?? LONG_PASSAGES
   const whole = !passages // 全部の長文を出すとき（むずかしさでしぼっていないとき）だけ出すもの：今日の1本・中3チャレンジなど
   const [p, setP] = useState<LongPassage | null>(start ?? null)
@@ -213,6 +213,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
         </p>}
         {whole && <p className="stats-note">記号で答える入試形式の読解</p>}
         {!whole && <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} />}
+        {!whole && belowCastle}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>
           {dailyDay === today ? ' ✅ クリア' : `（満点で🪙${DAILY_LONG_COINS}）`}

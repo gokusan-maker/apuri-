@@ -55,7 +55,10 @@ export function mapShown(total: number, now: number): number[] {
   const from = Math.max(0, Math.min(now - 1, total - 4))
   return Array.from({ length: total }, (_, i) => i).filter((i) => i >= from && i <= from + 3)
 }
-export const mapX = (i: number) => [24, 50, 76, 50][i % 4] // ジグザグの道
+// ジグザグの道。まん中（50%）をさけて、いまのステージの横に「すすむ」の札がはみ出さずに入るように
+export const mapX = (i: number) => [20, 38, 80, 62][i % 4]
+// いまのステージの札を出す側の広さ（%）：左寄りなら右側、右寄りなら左側
+export const mapRoom = (x: number) => (x > 50 ? x : 100 - x)
 
 // キャラが前にいたステージ（地図ごと）：次に開いたとき、そこから歩いてくる
 const WALK_KEY = 'eitan:map-walk'

@@ -3495,7 +3495,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .smap-deco.d1 { right: 6%; top: 40%; }
 .smap-deco.d2 { left: 8%; top: 62%; }
 .smap-deco.d3 { right: 10%; top: 84%; }
-.smap-node { position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; width: 30%; }
+.smap-node { --room: 50cqw; position: absolute; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; width: 30%; }
 .smap-spot { position: relative; display: grid; place-items: center; width: 48px; height: 48px; border-radius: 50%; font-size: 1.7rem; background: radial-gradient(circle, rgb(255 255 255 / 0.85) 0 55%, rgb(255 255 255 / 0.2) 70%); box-shadow: 0 4px 0 rgb(0 0 0 / 0.25); }
 .smap-star { position: absolute; right: -4px; top: -6px; font-style: normal; color: #facc15; font-size: 1rem; text-shadow: 0 1px 2px #000; }
 .smap-chest { position: absolute; left: calc(50% + 18px); top: -6px; font-size: 1rem; }
@@ -3518,7 +3518,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 @media (prefers-reduced-motion: reduce) { .smap-walker, .smap-walker.walking { animation: none; } }
 .smap-node.cleared .smap-btn { width: auto; padding: 2px 8px; background: rgb(28 25 23 / 0.6); }
 .smap-node.now { width: auto; }
-.smap-node.now .smap-btn { position: absolute; top: 50%; transform: translateY(-50%); width: min(56cqw, 190px); margin: 0; padding: 8px 10px; background: rgb(28 25 23 / 0.82); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
+.smap-node.now .smap-btn { position: absolute; top: 50%; transform: translateY(-50%); width: min(190px, calc(var(--room) - 44px)); margin: 0; padding: 8px 10px; background: rgb(28 25 23 / 0.82); box-shadow: 0 6px 16px rgb(0 0 0 / 0.35); }
 .smap-node.now.side-r .smap-btn { left: calc(100% + 10px); }
 .smap-node.now.side-l .smap-btn { right: calc(100% + 10px); }
 .sub-tabs.free-levels { flex-wrap: wrap; gap: 4px; }
