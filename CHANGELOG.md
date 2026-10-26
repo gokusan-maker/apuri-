@@ -2413,3 +2413,4 @@
 - 2026-10-26: 文法に「talk 人 into ～ing ／ talk 人 out of ～ing（説得して～させる・やめさせる）」の単元を追加
 - 2026-10-26: TOEIC の長文に、お知らせ「Window Cleaning Next Week」（ビルの窓清掃）を追加
 - 2026-10-26: ボスの城の問題の階に、クリアまでの正解数を星で表示（「あと○問正解でクリア」）
+- 2026-10-26: 文法に「形容詞 ＋ 前置詞 ④（be satisfied with ／ be crowded with ／ be angry with）」の単元を追加
