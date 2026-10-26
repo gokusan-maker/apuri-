@@ -6555,6 +6555,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-webinar',
+    title: 'Email: Free Online Seminar',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Customer, We would like to invite you to a free online seminar, 'Getting the Most from Your Smart Thermostat,' on Wednesday, September 18, from 7:00 to 8:00 p.m. During the session, our product specialists will explain how to set up schedules ( A ) can lower your energy bills.",
+      "The seminar will be held on our video platform. To join, simply click the link in this email a few minutes before the start time. No special software is needed; the seminar can be viewed in any standard web browser. Participants will also be able to ask questions ( B ) the session through the chat window.",
+      "If you are unable to attend, don't worry. A recording will be sent to everyone who registers, ( C ) you can watch it at a convenient time.",
+      "Space is limited to 500 participants, so please register by September 15. We look forward to seeing you online. Sincerely, The Brightway Home Customer Team",
+    ],
+    ja: [
+      'お客さまへ。9月18日（水）午後7時から8時まで、無料のオンラインセミナー「スマートサーモスタットを使いこなす」にご招待いたします。セミナーでは、当社の製品の専門スタッフが、電気代を下げられる運転スケジュールの設定のしかたを説明します。',
+      'セミナーは当社のビデオ配信の場で行います。参加するには、開始時刻の数分前にこのメールのリンクをクリックするだけです。特別なソフトは必要なく、ふつうのウェブブラウザで見ることができます。参加者は、セミナー中にチャット欄から質問することもできます。',
+      '参加できなくても心配はいりません。登録した方全員に録画をお送りしますので、ご都合のよいときにご覧いただけます。',
+      '定員は500名ですので、9月15日までにご登録ください。オンラインでお会いできるのを楽しみにしております。ブライトウェイ・ホーム カスタマーチーム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 schedules を説明し、can lower の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['during', 'while', 'when', 'since'], answer: 0, why: 'うしろが名詞（the session）なので前置詞 during「～の間に」。while・when は接続詞でうしろに文が必要。' },
+      { id: 'C', choices: ['so', 'such', 'because of', 'despite'], answer: 0, why: 'コンマのあとで「だから～」と結果を続ける接続詞 so。such・because of・despite のうしろに文は続かない。' },
+    ],
+    underline: {
+      phrase: 'Getting the Most from',
+      choices: ['Using in the best possible way', 'Buying more of', 'Repairing quickly', 'Getting rid of'],
+      answer: 0,
+      why: 'get the most from ～ は「～を最大限に活用する」。サーモスタットを上手に使いこなす、という題名。',
+    },
+    order: {
+      words: ['click', 'the', 'link', 'in', 'this', 'email'],
+      rest: '',
+      answer: 'click the link in this email',
+      ja: 'このメールのリンクをクリックする。',
+    },
+    tf: [
+      { statement: 'セミナーを見るには、特別なソフトが必要だ。', answer: false, why: '第2段落 No special software is needed。' },
+      { statement: '参加できなかった人にも、録画が送られる。', answer: true, why: '第3段落 A recording will be sent to everyone who registers。' },
+      { statement: 'セミナーの定員は500名だ。', answer: true, why: '第4段落 Space is limited to 500 participants。' },
+    ],
+    qa: [
+      { q: 'How can participants ask questions during the seminar?', choices: ['Through the chat window.', 'By phone after the seminar.', 'By visiting a store.', 'By sending a letter.'], answer: 0, why: '第2段落 ask questions during the session through the chat window。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
