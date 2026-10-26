@@ -6754,6 +6754,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-subtitles',
+    title: 'Subtitles or Dubbing?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people watch a film made in another language, they usually have two choices: read subtitles or watch a dubbed version, ( A ) the actors' voices are replaced by voice actors speaking the viewers' own language. Which one people prefer often depends on where they grew up. In some countries, almost all foreign programs are dubbed, while in others, subtitles are the norm.",
+      "Some researchers think this habit may affect language learning. In several small countries in northern Europe, where foreign shows are rarely dubbed, many young people speak English surprisingly well. They have heard real English voices since childhood, often without ( B ) that they were learning anything at all.",
+      "However, subtitles are not magic. Experts point out that these countries also start English lessons early, and that their languages are closely related to English. It is difficult to say how much of their success comes from television alone.",
+      "Even so, watching with subtitles costs nothing and can be fun. If you want to try it, choose a show you already know well, so that you can ( C ) on the sounds instead of the story.",
+    ],
+    ja: [
+      'ほかの言語で作られた映画を見るとき、ふつう選択肢は2つある。字幕を読むか、吹き替え版を見るかだ。吹き替え版では、俳優の声が、見る人自身の言語を話す声優の声に置きかえられている。どちらを好むかは、どこで育ったかによることが多い。外国の番組のほとんどすべてが吹き替えられる国もあれば、字幕がふつうの国もある。',
+      'この習慣が言語の学習に影響するかもしれないと考える研究者もいる。外国の番組がめったに吹き替えられない北ヨーロッパのいくつかの小さな国では、多くの若者がおどろくほど上手に英語を話す。彼らは子どものころから本物の英語の声を聞いてきたのであり、何かを学んでいるとはまったく気づかないことも多い。',
+      'しかし、字幕は魔法ではない。専門家は、こうした国々では英語の授業も早くから始まり、その国の言語が英語と近い関係にあることを指摘している。彼らの成功のどれだけがテレビだけによるものなのかを言うのはむずかしい。',
+      'それでも、字幕つきで見るのはお金がかからず、楽しいこともある。ためしてみたいなら、すでによく知っている番組を選ぶとよい。そうすれば、話の筋ではなく音に集中できる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'who'], answer: 0, why: 'うしろは主語・動詞がそろった完全な文（the actors\' voices are replaced …）なので、場所・場面を表す関係副詞 where（＝in which）。which・who はうしろに主語か目的語が欠けた文が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['realizing', 'realize', 'realized', 'to realize'], answer: 0, why: '前置詞 without のあとは動名詞。without -ing「～しないで」。' },
+      { id: 'C', choices: ['focus', 'focusing', 'focused', 'to focus'], answer: 0, why: '助動詞 can のあとは原形。focus on ～「～に集中する」。' },
+    ],
+    underline: {
+      phrase: 'the norm',
+      choices: ['the usual way', 'a rare choice', 'a new law', 'an expensive option'],
+      answer: 0,
+      why: 'the norm は「ふつうのこと・標準」。直前の almost all … are dubbed と対比して、字幕がふつうの国もあると言っている。',
+    },
+    order: {
+      words: ['how', 'much', 'of', 'their', 'success'],
+      rest: '',
+      answer: 'how much of their success',
+      ja: '彼らの成功のどれだけが（how much of ～＝～のどれだけ）',
+    },
+    tf: [
+      { statement: '吹き替えと字幕のどちらを好むかは、育った場所によることが多い。', answer: true, why: '第1段落 Which one people prefer often depends on where they grew up。' },
+      { statement: '専門家は、英語が上手なのはテレビのおかげだけだと断言している。', answer: false, why: '第3段落 It is difficult to say how much of their success comes from television alone。' },
+      { statement: '筆者は、よく知っている番組を字幕で見ることをすすめている。', answer: true, why: '第4段落 choose a show you already know well。' },
+    ],
+    qa: [
+      { q: 'Why does the writer suggest choosing a show you already know well?', choices: ['So that you can pay attention to the sounds.', 'Because new shows are always dubbed.', 'Because subtitles are too expensive.', 'So that you can finish it more quickly.'], answer: 0, why: '第4段落 so that you can focus on the sounds instead of the story。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
