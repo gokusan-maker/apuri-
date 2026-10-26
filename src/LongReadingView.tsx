@@ -14,10 +14,11 @@ import { cancelSpeech, speak, speakSeq } from './speech'
 import { dayKey } from './srs'
 import { GameTile } from './GameTileView'
 import { maskAnswer } from './readhint'
+import type { NextMap } from './StageMapView'
 import { ReadThemeCastle } from './ReadThemeCastleView'
 import { loadInstant, saveInstant } from './longinstant'
 
-type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void; belowCastle?: ReactNode } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
+type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onFavorite?: (ids: string[]) => void; onCoins?: (n: number) => void; passages?: LongPassage[]; title?: string; start?: LongPassage; onDone?: (score: number, total: number) => void; onClose?: () => void; belowCastle?: ReactNode; next?: NextMap } // start：はじめからこの長文を開く（今日の課題）。onClose があると一覧にはもどらない // passages：このむずかしさの長文だけを出す
 
 const nowMs = () => Date.now() // ボタンを押したときだけ呼ぶ
 const rand = () => Math.random()
@@ -73,7 +74,7 @@ function Paragraph({ text, underline, refer, filled }: { text: string; underline
 }
 
 // 長文読解（入試形式）：空所補充（記号）と内容一致（○×）をまとめて答えて採点する
-export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, start, onDone, onClose, belowCastle }: Props) {
+export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, start, onDone, onClose, belowCastle, next }: Props) {
   const LIST = passages ?? LONG_PASSAGES
   const whole = !passages // 全部の長文を出すとき（むずかしさでしぼっていないとき）だけ出すもの：今日の1本・中3チャレンジなど
   const [p, setP] = useState<LongPassage | null>(start ?? null)
@@ -213,7 +214,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           {Object.keys(record).length >= LONG_MEDAL ? `💯 読解${LONG_MEDAL}本クリア記念メダル！` : `📚 解いた読解 ${Object.keys(record).length} / ${LONG_MEDAL}本（${LONG_MEDAL}本で記念メダル）`}
         </p>}
         {whole && <p className="stats-note">記号で答える入試形式の読解</p>}
-        {!whole && <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} />}
+        {!whole && <ReadThemeCastle list={LIST} record={record} onOpen={openPassage} onChest={onCoins} next={next} />}
         {!whole && belowCastle}
         {whole && <button className={`long-recommend daily-long${dailyDay === today ? ' done' : ''}`} onClick={() => openPassage(dailyLong(today))}>
           📅 今日の1本：<strong>{shownTitle(dailyLong(today), LONG_PASSAGES.indexOf(dailyLong(today)))}</strong>

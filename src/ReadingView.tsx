@@ -9,6 +9,7 @@ import { WORDS, type Word } from './words'
 import { GameTile } from './GameTileView'
 import { evidenceOf } from './readhint'
 import { Castle } from './CastleView'
+import type { NextMap } from './StageMapView'
 
 const lookup = makeLookup(WORDS)
 
@@ -22,9 +23,10 @@ type Props = {
   onDone?: (score: number, total: number) => void // 1本ぜんぶ答えたとき
   onCoins?: (n: number) => void // 城の宝箱
   belowCastle?: ReactNode // 城のすぐ下に出すもの（App の今日の課題）
+  next?: NextMap // 山を制覇したとき、次のレベルへ
 }
 
-export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle }: Props) {
+export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle, next }: Props) {
   const [p, setP] = useState<Passage | null>(start ?? null)
   const [done, setDone] = useState(loadShortDone) // 解いた話
   const [step, setStep] = useState(0)
@@ -51,7 +53,7 @@ export function Reading({ onAnswer, start, onDone, onClose, onCoins, belowCastle
     return (
       <section className="card grammar">
         {/* かんたんレベルの城：短い話1本が1階。全部答えたらクリアして次の階へ */}
-        <Castle name="読解ミニの山" theme="mountain" onChest={onCoins} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
+        <Castle name="読解ミニの山" theme="mountain" onChest={onCoins} next={next} floors={PASSAGES.map((x) => ({ id: x.id, label: x.title, cleared: done.includes(x.id) }))} onOpen={(id) => openP(PASSAGES.find((x) => x.id === id)!)} />
         {belowCastle}
         {/* 読解ゲーム：文法・単語のページと同じ色つきタイル */}
         <p className="game-grid-title">🎮 読解ゲーム</p>

@@ -157,3 +157,14 @@ it('地図を制覇すると「次は〇〇へ」のボタンが出て、押す�
   fireEvent.click(screen.getByRole('button', { name: '▶ 次は「中2の海」へ' }))
   expect(go).toHaveBeenCalled()
 })
+
+it('読解ミニの山を制覇すると、次のレベルの読解へ進むボタンが出る', async () => {
+  const { Reading } = await import('./ReadingView')
+  const { PASSAGES } = await import('./reading')
+  localStorage.setItem('eitan:short-done', JSON.stringify(PASSAGES.map((p) => p.id)))
+  const go = vi.fn()
+  render(<Reading next={{ label: '中2の読解', go }} />)
+  fireEvent.click(screen.getByRole('button', { name: '▶ 次は「中2の読解」へ' }))
+  expect(go).toHaveBeenCalled()
+  localStorage.clear()
+})

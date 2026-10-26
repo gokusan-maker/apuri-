@@ -1462,6 +1462,18 @@ function App() {
   const readyCourses = COURSES.filter(courseReady)
   const nextCourse = readyCourses[readyCourses.findIndex((c) => c.id === wordCourse) + 1]
   const nextWordMap = nextCourse ? { label: `${nextCourse.label}の海`, go: () => setWordCourse(nextCourse.id as CourseId) } : undefined
+  // 読解の山を制覇したら、次のレベルへ
+  const nextRead = READ_LEVELS[READ_LEVELS.findIndex((l) => l.id === readLevel) + 1]
+  const nextReadMap = nextRead
+    ? {
+        label: `${nextRead.label}の読解`,
+        go: () => {
+          setReadLevel(nextRead.id as ReadLevel)
+          saveReadLevel(nextRead.id as ReadLevel)
+          setShortGo(false)
+        },
+      }
+    : undefined
   // 読解の今日の課題：城（地図）のすぐ下に出す
   const readTodayBtn =
     mode === 'reading' && !shortGo && !playOn && !todayGone ? (
@@ -1874,7 +1886,7 @@ function App() {
               onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
             />
           ) : mode === 'reading' && readLevel !== '中1' && !shortGo ? (
-            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} belowCastle={readTodayBtn} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <LongReading key={readLevel} passages={passagesFor(readLevel)} title={`📖 ${READ_LEVELS.find((l) => l.id === readLevel)!.label}の読解（${READ_LEVELS.find((l) => l.id === readLevel)!.sub}）`} onAnswer={onAnswerTrack('reading')} onFavorite={(ids) => setFavorites((f) => addFavorites(f, ids))} belowCastle={readTodayBtn} next={nextReadMap} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
           ) : mode === 'reading' ? (
             <Reading
               key={shortGo ? 'today' : 'list'}
@@ -1889,6 +1901,7 @@ function App() {
               onAnswer={onAnswerTrack('reading')}
               onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))}
               belowCastle={readTodayBtn}
+              next={nextReadMap}
             />
           ) : (
           stagesView('boss')

@@ -1533,7 +1533,7 @@
 - [x] 長文：共通テストレベルをさらに1本（銭湯）
 - [x] 高校の文法単元を4つ追加：whether to 原形・What ～ for?・need -ing（～される必要がある）・otherwise
 - [x] 長文：国立医学部（聴診器）・TOEIC（書店の改装のお知らせ）・国公立（決断疲れ）を1本ずつ
-- [x] 単語の海・文法の森を制覇すると「▶ 次は〇〇へ」ボタンで次のレベルへ
+- [x] 単語の海・文法の森・読解の山を制覇すると「▶ 次は〇〇へ」ボタンで次のレベルへ
 - [x] 高校の文法単元を2つ追加：be eager to ／ be anxious to・to make matters worse ／ what is worse
 - [x] 高校の文法単元を4つ追加：while -ing ／ when -ing（接続詞を残した分詞構文）・if possible ／ if necessary・hope と wish のちがい・insist on -ing
 - [x] スペルで全問正解すると「🏆 パーフェクト！」

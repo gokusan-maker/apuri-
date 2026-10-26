@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ADV_PASSAGES } from './advreading'
 import { Castle } from './CastleView'
+import type { NextMap } from './StageMapView'
 import { LONG_PASSAGES, type LongPassage, type LongRecord } from './longreading'
 import { readCastleFloors, type RcFloor } from './readcastle'
 import { towerCleared } from './readtower'
@@ -8,7 +9,7 @@ import { GrammarFigure } from './GrammarFigView'
 
 // 読解の城（構文ごと）：分詞構文・強調構文・分裂文・倒置・仮定法などのテーマを、その構文が入った長文で3階ずつ登る。
 // テーマの1階目は構文の解説から（2階目からは、その長文に出てくる構文の文とひとことのコツ）。いまのレベルの長文を先に使い、足りなければほかのレベルの長文も使う
-export function ReadThemeCastle({ list, record, onOpen, onChest }: { list: LongPassage[]; record: LongRecord; onOpen: (p: LongPassage) => void; onChest?: (coins: number) => void }) {
+export function ReadThemeCastle({ list, record, onOpen, onChest, next }: { list: LongPassage[]; record: LongRecord; onOpen: (p: LongPassage) => void; onChest?: (coins: number) => void; next?: NextMap }) {
   const [explain, setExplain] = useState<RcFloor | null>(null)
   const ids = new Set(list.map((p) => p.id))
   const pool = [...list, ...[...LONG_PASSAGES, ...ADV_PASSAGES].filter((p) => !ids.has(p.id))]
@@ -43,6 +44,7 @@ export function ReadThemeCastle({ list, record, onOpen, onChest }: { list: LongP
       name="構文の山"
       theme="mountain"
       onChest={onChest}
+      next={next}
       floors={floors.map((f) => {
         const n = all.filter((x) => x.theme.id === f.theme.id).length
         return { id: f.id, label: `${f.theme.name}　${f.floor + 1}/${n}`, sub: f.floor === 0 ? '📖 解説から' : f.passage.title, cleared: towerCleared(f.passage, record) }
