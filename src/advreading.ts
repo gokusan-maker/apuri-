@@ -6303,6 +6303,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-remote-work',
+    title: 'The Office at Home',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Before 2020, working from home was unusual for most office workers. Then, almost overnight, millions of people began working from their kitchens and bedrooms. Many companies discovered that much of their work could be done remotely, and some decided never to return fully to the office.",
+      "Remote work has clear advantages. Workers save the time and money they once spent commuting, and many report having more control over their day. Companies can hire talented people ( A ) they live. Yet there are costs as well. Some workers feel lonely, and the boundary between work and private life can become blurred when the office is also the living room.",
+      "Researchers have also raised questions about creativity and learning. Casual conversations in hallways and at lunch, ( B ) may seem unimportant, often lead to new ideas and help new employees learn from experienced colleagues. Such chance meetings are hard to recreate in video calls, which usually have a fixed agenda.",
+      "As a result, many organizations are now trying a mix of the two: employees work from home on some days and come to the office on others. Whether this 'hybrid' model will last is not yet clear. What does seem clear is that the question is no longer ( C ) people can work away from the office, but how they can do so well.",
+    ],
+    ja: [
+      '2020年より前、家で働くことは、ほとんどの会社員にとってめずらしいことだった。ところが、ほとんど一夜にして、何百万もの人が台所や寝室で働きはじめた。多くの会社は、仕事の多くがはなれた場所でもできることに気づき、すっかり会社にもどるのはやめると決めた会社もあった。',
+      '在宅勤務には、はっきりとした利点がある。働く人は、以前は通勤に使っていた時間とお金を節約でき、多くの人が一日の過ごし方を自分で決めやすくなったと言う。会社は、才能のある人をどこに住んでいてもやとうことができる。しかし代償もある。さびしさを感じる人もいるし、職場が居間でもあると、仕事と私生活の境目があいまいになりがちだ。',
+      '研究者たちは、創造性や学びについても疑問を投げかけている。ろうかや昼食でのなにげない会話は、大事ではなさそうに見えても、新しいアイデアにつながったり、新人が経験豊かな同僚から学ぶ助けになったりすることが多い。こうした偶然の出会いは、たいてい決まった議題のあるビデオ会議では再現しにくい。',
+      'その結果、今では多くの組織が両方を組み合わせることを試している。従業員はある日は家で働き、別の日は職場に来るのだ。この「ハイブリッド」なやり方が続くかどうかは、まだはっきりしない。はっきりしていそうなのは、もはや問題は人が職場をはなれて働けるかどうかではなく、どうすればそれをうまくできるかだ、ということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['wherever', 'whenever', 'whatever', 'whoever'], answer: 0, why: '場所について「どこに住んでいても」なので wherever。whenever は時、whatever・whoever は物・人について使う。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマにはさまれた非制限用法で Casual conversations を受け、may seem の主語になる which。what は先行詞をとらず、that はコンマのあとに使えず、it では文がつながらない。' },
+      { id: 'C', choices: ['whether', 'that', 'what', 'which'], answer: 0, why: 'not A but B の A にあたる「～かどうか」の whether。うしろの文（people can work …）は欠けがないので what・which は入らない。' },
+    ],
+    underline: {
+      phrase: 'become blurred',
+      choices: ['become unclear', 'become stronger', 'disappear completely', 'become much longer'],
+      answer: 0,
+      why: 'blurred は「ぼやけた・あいまいな」。仕事と私生活の境目がはっきりしなくなる、ということ。',
+    },
+    order: {
+      words: ['save', 'the', 'time', 'and', 'money', 'they', 'once', 'spent', 'commuting'],
+      rest: '',
+      answer: 'save the time and money they once spent commuting',
+      ja: '以前は通勤に使っていた時間とお金を節約する。（spend 時間・お金 -ing＝～するのに使う、関係代名詞の省略）',
+    },
+    tf: [
+      { statement: '2020年より前から、ほとんどの会社員は家で働いていた。', answer: false, why: '第1段落 Before 2020, working from home was unusual for most office workers。' },
+      { statement: '在宅勤務では、さびしさを感じる人もいる。', answer: true, why: '第2段落 Some workers feel lonely。' },
+      { statement: 'ハイブリッドなやり方が続くかどうかは、まだはっきりしない。', answer: true, why: '第4段落 Whether this \'hybrid\' model will last is not yet clear。' },
+    ],
+    qa: [
+      { q: 'Why are casual conversations at work valuable, according to the passage?', choices: ['They lead to new ideas and help new employees learn.', 'They make meetings shorter.', 'They save money on lunch.', 'They are easy to recreate in video calls.'], answer: 0, why: '第3段落 often lead to new ideas and help new employees learn from experienced colleagues。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
