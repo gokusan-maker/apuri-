@@ -62,7 +62,6 @@ import { Roulette } from './RouletteView'
 import { Janken } from './JankenView'
 import { Training } from './TrainingView'
 import { loadTraining } from './training'
-import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
 import { dailyGrammar, loadDailyGrammarDay, loadDictBest, MASTER_TICKETS } from './grammar'
@@ -91,8 +90,6 @@ import { shareText, weekReportText } from './shareText'
 import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
 import { eventFor } from './events'
-import { addSouvenir, loadSouvenirs, saveSouvenirs, souvenirFor, SOUVENIRS } from './souvenir'
-import { SouvenirList } from './SouvenirView'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
 import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
 import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP , luckyRoll } from './gacha'
@@ -293,7 +290,6 @@ function App() {
   useStudyTime(setTimeLog, today)
 
   const [celebrate, setCelebrate] = useState(false)
-  const [souvenirs, setSouvenirs] = usePersistent(loadSouvenirs, saveSouvenirs)
   const [dailyBossDay, setDailyBossDay] = usePersistent(
     () => {
       try {
@@ -332,12 +328,8 @@ function App() {
   const [stickers, setStickers] = usePersistent(loadStickers, saveStickers)
   const [luckyMonth, setLuckyMonth] = usePersistent(loadLuckyBagMonth, saveLuckyBagMonth)
   const [power, setPower] = useState(() => loadTraining().power)
-  const [giftDay, setGiftDay] = usePersistent(loadGiftDay, saveGiftDay)
   const [pieces, setPieces] = usePersistent(loadPieces, savePieces)
   const [bday, setBday] = usePersistent(() => registerBirthday(loadBirthday(), today, formOf(monster).stage >= 1), saveBirthday)
-  const [giftMsg, setGiftMsg] = useState('')
-  // 1日の目標を達成したら、次の日のおみやげを予約する
-  if (studiedToday >= settings.dailyGoal && giftDay !== today && !giftReady(giftDay, today)) setGiftDay(today)
   const [winStreak, setWinStreak] = usePersistent(loadWinStreak, saveWinStreak)
   const cheerUp = (n: number) => setMoodMeter((m) => addMood(m, today, n))
   const streakDays = currentStreakWithFreeze(streak, today, wallet.freezes ?? 0)
@@ -548,11 +540,6 @@ function App() {
     const reached = studiedToday < settings.dailyGoal && next.count >= settings.dailyGoal
     if (reached) {
       setCelebrate(true)
-      // 相棒がおでかけして、おみやげを見つけてくる
-      const sv = souvenirFor(today)
-      setSouvenirs((l) => addSouvenir(l, sv.id))
-      setWallet((w) => ({ ...w, coins: w.coins + sv.coins }))
-      pushToast([{ id: 'souvenir', text: `${monster.name ?? formOf(monster).name}が「${sv.icon} ${sv.name}」を見つけてきた！ 🪙${sv.coins}`, counter: 'answers', target: 0 }])
     }
     setTotals((t) => ({
       ...t,
@@ -779,8 +766,6 @@ function App() {
       studyDays: totals.studyDays ?? 0,
       formsSeen: new Set(party.members.flatMap(seenForms)).size,
       formsTotal: FORMS.length,
-      souvenirs: souvenirs.length,
-      souvenirsTotal: SOUVENIRS.length,
       modesPlayed: loadPlayed().length,
       diaryDays: Object.keys(loadDiary()).length,
       completeBooks: LEVELS.filter((l) => wordsOf([l]).every((w) => (progress[w.id]?.box ?? 0) >= 3)).length,
@@ -1099,30 +1084,6 @@ function App() {
                 pushToast([{ id: 'sugoroku', text: '🏁 英語すごろくでゴール！ 🎟ガチャチケットをもらった', counter: 'answers', target: 0 }])
               }}
             />
-            {giftReady(giftDay, today) ? (
-              <button
-                className="challenge-btn gift-btn"
-                onClick={() => {
-                  const st = stickerOf(rand())
-                  const r = addSticker(stickers, st)
-                  setStickers(r.book)
-                  setGiftDay('')
-                  setGiftMsg(`🎁 ${monster.name ?? formOf(monster).name}が「${st}」のシールをくれた！（きのう目標を達成したおれい）`)
-                  if (r.complete) {
-                    setWallet((x) => addTicket(addTicket(x)))
-                    pushToast([{ id: 'stickers', text: `🏷 シール帳がコンプリート！ 🎟ガチャチケットを${STICKER_TICKETS}まいもらった`, counter: 'answers', target: 0 }])
-                  }
-                }}
-              >
-                🎁 {monster.name ?? formOf(monster).name}からおみやげがとどいてる！
-              </button>
-            ) : (
-              giftMsg && (
-                <p className="walk-msg" role="status">
-                  {giftMsg}
-                </p>
-              )
-            )}
             <Training day={today} words={words} name={monster.name ?? formOf(monster).name} onChange={(t) => setPower(t.power)} />
             <DailyGrammarQ day={today} onCorrect={() => gainXp(DAILY_Q_XP, null)} />
             <HideSeek day={today} name={monster.name ?? formOf(monster).name} onFound={() => setWallet((w) => ({ ...w, coins: w.coins + HIDE_COINS }))} />
@@ -1530,7 +1491,6 @@ function App() {
             night={isNight(hour)}
             season={seasonFxOf(today)}
             learned={learnedSample}
-            shelf={SOUVENIRS.filter((sv) => souvenirs.includes(sv.id)).map((sv) => sv.icon)}
             monster={monster}
             onRename={(name) => updateMonster((m) => rename(m, name))}
             coins={wallet.coins}
@@ -2120,7 +2080,6 @@ function App() {
               <BadgeList earned={earned} />
               <Zukan monsters={party.members} />
               <BossDex record={boss} />
-              <SouvenirList got={souvenirs} />
             </section>
           )}
           {statsTab === 'data' && (
@@ -2321,8 +2280,6 @@ function App() {
                 ? '🎖 称号アップ'
                 : missionToast[0].id === 'coupon'
                 ? '🎟 割引券ゲット'
-                : missionToast[0].id === 'souvenir'
-                ? '🎒 おみやげ'
                 : missionToast[0].id === 'snack'
                 ? '😋 もぐもぐ'
                 : missionToast[0].id === 'bond'

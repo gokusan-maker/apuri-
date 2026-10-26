@@ -4,7 +4,6 @@ import { beforeEach, describe, expect, it, vi } from 'vitest'
 import App from './App'
 import { buildQueue, dayKey } from './srs'
 import { pickWordOfDay } from './wordOfDay'
-import { souvenirFor } from './souvenir'
 import { LEVELS, WORDS, wordsOf } from './words'
 import { SPECIES } from './monster'
 
@@ -464,10 +463,7 @@ describe('App', () => {
     expect(screen.queryByText('今日の目標達成！')).not.toBeInTheDocument()
     navTo('ホーム')
     expect(screen.getByText('🎯 目標達成！')).toBeInTheDocument()
-    expect(toast('🎒 おみやげ')).toBeInTheDocument()
-    expect(screen.getByText(new RegExp(souvenirFor(dayKey()).name))).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:souvenirs')!)).toEqual([souvenirFor(dayKey()).id])
-    expect(screen.getByLabelText('かざってあるおみやげ 1こ').textContent).toBe(souvenirFor(dayKey()).icon)
+    expect(screen.queryByText(/おみやげ/)).toBeNull() // おみやげはなくした（オーナー依頼）
     // もう一度答えてもお祝いは出ない
     goCards()
     fireEvent.click(screen.getByText('意味を見る'))
@@ -930,16 +926,6 @@ describe('App', () => {
     expect(screen.getByText('🏷 おまけシール ⚽')).toBeInTheDocument()
     expect(JSON.parse(localStorage.getItem('eitan:wallet')!).tickets).toBe(2)
     expect(JSON.parse(localStorage.getItem('eitan:stickers')!).rewarded).toBe(true)
-  })
-
-  it('きのう目標を達成していたら、相棒からおみやげのシール', () => {
-    localStorage.setItem('eitan:partner-gift', '2026-10-19')
-    render(<App />)
-    navTo('設定')
-    fireEvent.click(screen.getByText(/からおみやげがとどいてる！/))
-    expect(screen.getByText(/のシールをくれた！/)).toBeInTheDocument()
-    expect(JSON.parse(localStorage.getItem('eitan:stickers')!).got).toHaveLength(1)
-    expect(localStorage.getItem('eitan:partner-gift')).toBe('')
   })
 
   it('月に1回の福袋で3連ガチャとバトルアイテムがもらえる', () => {

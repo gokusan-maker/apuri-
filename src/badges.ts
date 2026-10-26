@@ -16,8 +16,6 @@ export type BadgeStats = {
   studyDays?: number // 学習した日数（連続でなくてよい）
   formsSeen?: number // 図鑑で見たすがたの数
   formsTotal?: number // 図鑑のすがたの総数
-  souvenirs?: number // 集めたおみやげの種類
-  souvenirsTotal?: number
   towerFloors?: number // 大学入試の塔でクリアした階の数
   species?: number // 集めたキャラクターの種類
   collection?: number // コレクション表で埋まったマス（キャラクター×色）
@@ -79,7 +77,6 @@ export const BADGES: Badge[] = [
   { id: 'boss-all', icon: '🏆', name: 'ボスマスター', desc: 'すべての単語帳のボスをたおす', check: (s) => (s.bosses ?? 0) >= 10 },
   { id: 'coins-100', icon: '💰', name: 'こつこつ貯金', desc: 'コインを100枚ためる', check: (s) => (s.coins ?? 0) >= 100 },
   { id: 'zukan-all', icon: '📖', name: '図鑑コンプリート', desc: '図鑑のすがたを全部見る', check: (s) => (s.formsTotal ?? 0) > 0 && (s.formsSeen ?? 0) >= (s.formsTotal ?? 0) },
-  { id: 'souvenir-all', icon: '🎒', name: 'おみやげ名人', desc: 'おみやげを全種類集める', check: (s) => (s.souvenirsTotal ?? 0) > 0 && (s.souvenirs ?? 0) >= (s.souvenirsTotal ?? 0) },
   { id: 'modes-15', icon: '🎓', name: 'クイズ博士', desc: 'クイズの種類を15種類遊ぶ', check: (s) => (s.modesPlayed ?? 0) >= 15 },
   { id: 'diary-7', icon: '📝', name: '日記の達人', desc: '英語日記を7日分書く', check: (s) => (s.diaryDays ?? 0) >= 7 },
   { id: 'members-2', icon: '🤝', name: 'なかまが増えた', desc: '2匹目の相棒に出会う', check: (s) => (s.members ?? 1) >= 2 },

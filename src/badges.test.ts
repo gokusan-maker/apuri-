@@ -60,11 +60,6 @@ it('図鑑のすがたを全部見るとバッジ', () => {
   expect(newlyEarned({ ...zero }, {}).map((b) => b.id)).not.toContain('zukan-all')
 })
 
-it('おみやげを全種類集めるとバッジ', () => {
-  expect(newlyEarned({ ...zero, souvenirs: 10, souvenirsTotal: 10 }, {}).map((b) => b.id)).toContain('souvenir-all')
-  expect(newlyEarned({ ...zero, souvenirs: 9, souvenirsTotal: 10 }, {}).map((b) => b.id)).not.toContain('souvenir-all')
-})
-
 it('1000語定着のバッジ', () => {
   expect(newlyEarned({ ...zero, learned: 1000 }, {}).map((b) => b.id)).toContain('learned-1000')
   expect(newlyEarned({ ...zero, learned: 999 }, {}).map((b) => b.id)).not.toContain('learned-1000')

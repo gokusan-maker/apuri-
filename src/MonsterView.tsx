@@ -46,7 +46,6 @@ type Props = {
   onPetStampTicket?: () => void // なでなでスタンプが10こたまった
   evolved?: boolean
   deco?: string // 季節のイベントの飾り（🎃 など）
-  shelf?: string[] // 部屋にかざるおみやげ（絵文字）
   sleepy?: boolean // 夜おそく（💤 を出す）
   learned?: { en: string; ja: string }[] // 覚えた単語（ときどき話題にする）
 }
@@ -889,7 +888,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, shelf = [], sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false, trioStreak = 0 }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false, trioStreak = 0 }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -930,11 +929,6 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       {sleepy && (
         <span className="monster-zzz" aria-label="ねむそう">
           💤
-        </span>
-      )}
-      {shelf.length > 0 && (
-        <span className="monster-shelf" aria-label={`かざってあるおみやげ ${shelf.length}こ`}>
-          {shelf.join('')}
         </span>
       )}
       {deco && (
