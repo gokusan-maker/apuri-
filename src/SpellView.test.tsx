@@ -26,7 +26,7 @@ describe('Spell', () => {
     expect(screen.getByLabelText('ヒント').textContent!.startsWith(w.en[0] + ' ')).toBe(true)
     tapSpelling(w.en)
     fireEvent.click(screen.getByText('こたえる'))
-    expect(screen.getByText('正解！')).toBeInTheDocument()
+    expect(screen.getByText('正解！')).toBeInTheDocument() // ヒントを使ったので「ノーヒント」は出ない
     expect(onAnswer).toHaveBeenCalledWith(true, 8, w.id, 'ear')
   })
 
@@ -66,7 +66,7 @@ describe('ディクテーション', () => {
     expect(screen.queryByText(w.en)).not.toBeInTheDocument()
     tapSpelling(w.en)
     fireEvent.click(screen.getByText('こたえる'))
-    expect(screen.getByText('正解！')).toBeInTheDocument()
+    expect(screen.getByText('正解！ ✨ノーヒント')).toBeInTheDocument()
   })
 })
 

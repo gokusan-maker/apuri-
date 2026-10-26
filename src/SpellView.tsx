@@ -140,7 +140,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
       )}
       {result && (
         <>
-          <p className="feedback">{result === 'ok' ? '正解！' : `正解は「${w.en}」`}</p>
+          <p className="feedback">{result === 'ok' ? (hints === 0 ? '正解！ ✨ノーヒント' : '正解！') : `正解は「${w.en}」`}</p>
           {result === 'ok' && streak >= 2 && <p className="num-streak">🔥 {streak}連続正解！</p>}
           {result === 'ng' && (
             <p className="spell-diff" aria-label="あなたの答え">
