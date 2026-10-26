@@ -1516,7 +1516,7 @@
 - [x] 単語の城・文法の城：はじめてクリアした階が全問正解なら 🪙3 のボーナス
 - [x] 高校の文法単元を4つ追加：There is no point in -ing・regret -ing ／ regret to・How come ～?・let alone
 - [x] 長文：国公立（花粉を運ぶ生き物）・私立医学部（近視がふえるわけ）を1本ずつ
-- [x] 高校の文法単元を2つ追加：however ／ therefore（つなぎの副詞）・not a single
+- [x] 高校の文法単元を4つ追加：however ／ therefore（つなぎの副詞）・not a single・few, if any ／ seldom, if ever・Not that ～
 - [x] スペルでヒントを使わずに正解すると「✨ノーヒント」
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
