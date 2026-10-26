@@ -6712,6 +6712,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-cat-landing',
+    title: 'Why Cats Land on Their Feet',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Drop a cat upside down from a safe height onto a soft cushion, and it will almost always land on its feet. This ability, called the righting reflex, appears when kittens are only a few weeks old. For a long time, however, scientists could not explain how a falling cat could turn over without anything to push ( A ).",
+      "In 1894, the French scientist Étienne-Jules Marey took a series of rapid photographs of a falling cat. The pictures showed that the cat did not turn as a single solid body. Instead, it twisted the front half of its body one way and then the back half, bending in the middle. By pulling in some legs and stretching out others, the cat could control how each half turned.",
+      "The cat's flexible spine and its sense of balance, which comes from organs in the inner ear, make this possible. A cat first works out which way is up, then turns its head, ( B ) the rest of its body follows. The whole movement can take less than half a second.",
+      "This does not mean that cats are safe from any height. Falls from high windows and balconies can seriously injure them, so pet owners are advised to keep windows closed or ( C ) with screens.",
+    ],
+    ja: [
+      '安全な高さから、ねこをあお向けにしてやわらかいクッションの上に落とすと、ほとんどいつも足から着地する。立ち直り反射とよばれるこの能力は、子ねこが生後わずか数週間のころにあらわれる。しかし長い間、科学者たちは、落ちているねこが、何もおすものがないのにどうやって体をひっくり返せるのかを説明できなかった。',
+      '1894年、フランスの科学者エティエンヌ＝ジュール・マレーは、落ちていくねこを連続ですばやく写真にとった。写真からは、ねこが1つのかたい体としてまわっているのではないことがわかった。そうではなく、体を真ん中で曲げて、前半分をある方向にひねり、それから後ろ半分をひねっていたのだ。何本かの足を引っこめ、ほかの足をのばすことで、ねこはそれぞれの半分のまわり方を調節できたのである。',
+      'ねこのやわらかい背骨と、内耳の器官から来るバランス感覚が、これを可能にしている。ねこはまずどちらが上かを見きわめ、次に頭をまわし、そして体のほかの部分がそれに続く。この動き全体は0.5秒もかからないことがある。',
+      'だからといって、ねこがどんな高さからでも安全だというわけではない。高い窓やベランダから落ちると大けがをすることがあるので、飼い主は窓を閉めておくか、網をはっておくようにすすめられている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['against', 'among', 'since', 'until'], answer: 0, why: 'push against ～「～をおす（ささえにしておす）」。anything to push against「おすための何か」。among・since・until はここでは意味が通らず形もおかしい。' },
+      { id: 'B', choices: ['and', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the rest of its body follows）なので、文をつなぐ接続詞 and。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['covered', 'covering', 'cover', 'to cover'], answer: 0, why: 'keep O C の C。closed と同じく「（網で）おおわれた」状態なので過去分詞 covered。' },
+    ],
+    underline: {
+      phrase: 'works out which way is up',
+      choices: ['figures out which direction is up', 'exercises very hard', 'leaves the room quickly', 'forgets the direction'],
+      answer: 0,
+      why: 'work out ～ は「～を見きわめる・解き明かす」。どちらが上かを判断する、ということ。',
+    },
+    order: {
+      words: ['twisted', 'the', 'front', 'half', 'of', 'its', 'body'],
+      rest: '',
+      answer: 'twisted the front half of its body',
+      ja: '体の前半分をひねった。（half of ～＝～の半分）',
+    },
+    tf: [
+      { statement: '立ち直り反射は、子ねこが生後数週間のころにあらわれる。', answer: true, why: '第1段落 appears when kittens are only a few weeks old。' },
+      { statement: 'マレーの写真では、ねこは1つのかたい体としてまわっていた。', answer: false, why: '第2段落 the cat did not turn as a single solid body。' },
+      { statement: 'ねこはどんな高さから落ちても安全だ。', answer: false, why: '第4段落 This does not mean that cats are safe from any height。' },
+    ],
+    qa: [
+      { q: 'What makes the righting reflex possible?', choices: ['A flexible spine and a sense of balance from the inner ear.', 'Very long whiskers.', 'Sharp claws on the back legs.', 'Strong eyesight at night.'], answer: 0, why: '第3段落 The cat\'s flexible spine and its sense of balance … make this possible。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
