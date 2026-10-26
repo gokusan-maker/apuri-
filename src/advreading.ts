@@ -6513,6 +6513,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-dog-domestication',
+    title: 'From Wolf to Best Friend',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Dogs are the oldest domesticated animals. Genetic studies suggest that they descended from a population of ancient wolves at least fifteen thousand years ago, long before people began farming. How a fierce hunter became a loyal companion is one of the most interesting questions in the study of animals.",
+      "One popular explanation is that wolves partly domesticated themselves. Wolves that were less afraid of humans may have come close to camps to eat leftover food. Those animals had more to eat and raised more young, ( A ) over many generations a population of friendlier animals developed.",
+      "A famous experiment supports this idea. Beginning in the 1950s, scientists in the Soviet Union bred silver foxes, choosing only the calmest animals in each generation. Within a few decades, the foxes not only became friendly but also began to show features ( B ) are common in dogs, such as floppy ears, curly tails, and spotted coats. Selecting for tameness alone seems to have changed many other traits at the same time.",
+      "Domestication also changed the dog's mind. Dogs are remarkably good at reading human signals. In some studies, they followed a person's pointing finger to find hidden food better than chimpanzees did, even though chimpanzees are our close relatives. This skill may be the result of thousands of years of living ( C ) humans.",
+    ],
+    ja: [
+      '犬は、もっとも古くから家畜化された動物である。遺伝子の研究によると、犬は、人間が農業を始めるずっと前の、少なくとも1万5千年前に、大昔のオオカミの集団から生まれたらしい。どう猛な狩りの名手が、どのようにして忠実な仲間になったのかは、動物研究のもっとも興味深い問いの1つだ。',
+      'よく知られた説明の1つは、オオカミが自分たちでなかば家畜化した、というものだ。人間をあまりこわがらないオオカミは、食べ残しを食べるために野営地の近くに来たのかもしれない。そうしたオオカミはより多く食べ、より多くの子を育て、何世代もかけて、より人なつこい動物の集団ができていったのである。',
+      '有名な実験がこの考えを支えている。1950年代から、ソ連の科学者たちは、各世代でいちばんおとなしい個体だけをえらんでギンギツネを繁殖させた。数十年のうちに、キツネは人なつこくなっただけでなく、たれた耳や巻いた尾、ぶちの毛並みなど、犬によく見られる特徴もあらわれはじめた。おとなしさだけでえらんだことが、同時にほかの多くの性質も変えたらしいのだ。',
+      '家畜化は、犬の心も変えた。犬は人間の合図を読みとるのがとても得意だ。いくつかの研究では、かくした食べ物を見つけるのに、犬は人が指さす方向に、チンパンジーよりもうまく従った。チンパンジーは私たちに近い親せきであるにもかかわらずだ。この能力は、何千年も人間とともに暮らしてきた結果なのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（a population … developed）なので、文と文をつなぐ接続詞 and「そして」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 features を説明し、are の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['alongside', 'aside', 'apart', 'away'], answer: 0, why: 'alongside ～「～とならんで・～とともに」。aside・apart・away は副詞で、うしろに名詞（humans）を直接続けられない。' },
+    ],
+    underline: {
+      phrase: 'descended from',
+      choices: ['came from as their ancestors', 'went down from', 'were hunted by', 'ran away from'],
+      answer: 0,
+      why: 'descend from ～ は「～の子孫である・～から出てくる」。犬の祖先が大昔のオオカミだということ。',
+    },
+    order: {
+      words: ['followed', 'a', "person's", 'pointing', 'finger', 'to', 'find', 'hidden', 'food'],
+      rest: '',
+      answer: "followed a person's pointing finger to find hidden food",
+      ja: 'かくした食べ物を見つけるために、人が指さす方向に従った。（目的の不定詞 to find）',
+    },
+    tf: [
+      { statement: '犬は、人間が農業を始めたあとに家畜化された。', answer: false, why: '第1段落 long before people began farming。' },
+      { statement: 'キツネの実験では、おとなしい個体だけをえらんで繁殖させた。', answer: true, why: '第3段落 choosing only the calmest animals in each generation。' },
+      { statement: '犬は人の指さしに従うのが、チンパンジーよりうまいことがあった。', answer: true, why: '第4段落 they followed a person\'s pointing finger … better than chimpanzees did。' },
+    ],
+    qa: [
+      { q: 'What happened to the silver foxes in the experiment?', choices: ['They became friendly and developed dog-like features.', 'They became more afraid of humans.', 'They turned into wolves.', 'They stopped having young.'], answer: 0, why: '第3段落 the foxes not only became friendly but also began to show features that are common in dogs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
