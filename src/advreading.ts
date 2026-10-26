@@ -7185,6 +7185,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-seed-travel',
+    title: 'How Seeds Travel',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Plants cannot walk, yet their seeds often end up far from the parent plant. This matters because a seedling ( A ) grows right next to its parent must compete with it for light, water, and nutrients. Over millions of years, plants have developed several clever ways to send their seeds on a journey.",
+      "Some plants rely on the wind. Dandelion seeds are attached to tiny parachutes that can carry them for kilometers, while maple seeds have wing-like shapes that make them spin slowly as they fall. Other plants use water. Coconuts can float in the ocean for weeks and ( B ) root on a distant beach.",
+      "Many plants depend on animals. Birds and mammals eat sweet fruits and later drop the seeds, often far away, in their waste. Other seeds have tiny hooks that catch on animal fur. In the 1940s, a Swiss engineer noticed such seeds stuck to his dog and ( C ) inspired to invent the hook-and-loop fastener known today as Velcro.",
+      "Finally, a few plants launch their own seeds. When the ripe pods of some species are touched, they burst open and throw seeds several meters. Whether by wind, water, animals, or force, each method helps plants spread to new places.",
+    ],
+    ja: [
+      '植物は歩けないが、その種は親の植物から遠くはなれた所にたどり着くことが多い。これが大切なのは、親のすぐとなりで育つ芽は、光・水・養分を親と取り合わなければならないからだ。何百万年もかけて、植物は種を旅に出すためのかしこい方法をいくつも身につけてきた。',
+      '風にたよる植物もある。タンポポの種は小さなパラシュートについていて、何キロメートルも運ばれることがある。一方、カエデの種はつばさのような形をしていて、落ちるときにゆっくり回転する。水を使う植物もある。ココヤシの実は何週間も海に浮かび、遠くの浜辺で根を下ろすことができる。',
+      '動物にたよる植物も多い。鳥やほ乳類は甘い果実を食べ、あとで、たいていは遠く離れた場所で、ふんといっしょに種を落とす。小さなかぎがついていて、動物の毛にくっつく種もある。1940年代、スイスのある技術者は、自分の犬にくっついたそうした種に気づき、それをヒントに、今日マジックテープ（ベルクロ）として知られる面ファスナーを発明した。',
+      '最後に、自分で種を飛ばす植物もいくつかある。ある種類の植物の熟したさやは、さわられるとはじけて開き、種を数メートルも飛ばす。風、水、動物、あるいは自分の力のどれによっても、それぞれの方法が、植物が新しい場所に広がる助けになっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a seedling を説明し、grows の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['take', 'taking', 'took', 'to taking'], answer: 0, why: 'can float … and take root と、助動詞 can のあとの原形を and で並べている。take root「根づく」。' },
+      { id: 'C', choices: ['was', 'were', 'had', 'did'], answer: 0, why: '技術者は「ヒントをもらった」側なので受け身 was inspired to ～「～する気になった」。主語は a Swiss engineer（単数）なので were ではない。' },
+    ],
+    underline: {
+      phrase: 'compete with',
+      choices: ['struggle against', 'agree with', 'look after', 'grow next to'],
+      answer: 0,
+      why: 'compete with ～ は「～と競い合う・取り合う」。struggle against「～と争う」が近い。',
+    },
+    order: {
+      words: ['known', 'today', 'as', 'Velcro'],
+      rest: '',
+      answer: 'known today as Velcro',
+      ja: '今日ベルクロとして知られている（known as ～「～として知られる」）',
+    },
+    tf: [
+      { statement: 'タンポポの種は、小さなパラシュートで運ばれる。', answer: true, why: '第2段落 Dandelion seeds are attached to tiny parachutes。' },
+      { statement: 'ココヤシの実は、海に浮かぶことができない。', answer: false, why: '第2段落 Coconuts can float in the ocean for weeks。' },
+      { statement: 'すべての植物は、動物の助けがないと種を運べない。', answer: false, why: '第2・4段落 風・水を使う植物や、自分で種を飛ばす植物もある。' },
+    ],
+    qa: [
+      { q: 'Why is it a problem for a seedling to grow right next to its parent?', choices: ['It must compete with the parent for light, water, and nutrients.', 'Animals will eat it right away.', 'The wind cannot reach it.', 'It cannot produce any fruit.'], answer: 0, why: '第1段落 a seedling that grows right next to its parent must compete with it for light, water, and nutrients。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

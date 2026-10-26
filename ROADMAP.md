@@ -1659,6 +1659,8 @@
 
 - [x] 文法の単元「名詞の数と量（a large number of ／ a large amount of ／ a great deal of）」を追加（よくあるまちがいつき）
 
+- [x] TOEFL（生物）に自作の長文「How Seeds Travel」を追加（種の旅・207語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

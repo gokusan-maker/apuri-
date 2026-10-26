@@ -2321,3 +2321,4 @@
 - 2026-10-26: 高校入試（体験文）に長文「Three Days at the Fire Station」（消防署の職場体験）を追加
 - 2026-10-26: ボス戦の最初に、ボスのとくぎのカットインを出す
 - 2026-10-26: 文法に「名詞の数と量（a large number of ／ a great deal of など）」の単元を追加
+- 2026-10-26: TOEFL（生物）に長文「How Seeds Travel」（種の旅）を追加
