@@ -5313,6 +5313,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-retirement-party',
+    title: 'Email: A Party for Robert',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear team, As many of you already know, Robert Chen will retire at the end of this month after thirty-two years with our company. Robert joined us as a junior engineer and went on to lead the design department, ( A ) he trained many of the engineers who work here today.",
+      "To thank Robert for his many years of service, we will hold a retirement party on Friday, March 28, from 6:00 p.m. in the Garden Room of the Hotel Belmont. Dinner will be served, and there will be a short slide show of photos from Robert's career. If you have any old photos of Robert, please send them to me by March 21.",
+      "We are also collecting money for a gift. Anyone ( B ) would like to contribute may leave an envelope with Sarah at the front desk. Please do not feel any pressure; any amount is welcome.",
+      "Please let me know whether you will be able to attend by replying to this email no later than March 24. I hope ( C ) see many of you there to celebrate Robert's remarkable career. Best regards, Emily Tanaka, Human Resources",
+    ],
+    ja: [
+      'チームのみなさんへ。すでにご存じの方も多いと思いますが、ロバート・チェンさんが、当社での32年間を終えて今月末に退職されます。ロバートさんは若手の技術者として入社し、やがて設計部を率いるようになり、そこで今ここで働いている技術者の多くを育てました。',
+      '長年の勤務に感謝して、3月28日（金）午後6時から、ホテル・ベルモントのガーデンルームで退職パーティーを開きます。夕食が出され、ロバートさんの仕事の歩みをふり返る写真の短いスライドショーもあります。ロバートさんの昔の写真をお持ちの方は、3月21日までに私に送ってください。',
+      'また、贈り物のためのお金を集めています。協力したい方は、受付のサラさんに封筒をあずけてください。決して無理はなさらないでください。金額はいくらでも歓迎します。',
+      '出席できるかどうかを、3月24日までにこのメールに返信してお知らせください。たくさんの方にお会いして、ロバートさんのすばらしい歩みをいっしょにお祝いできることを願っています。人事部 エミリー・タナカ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'that', 'what'], answer: 0, why: 'コンマのあとで the design department（場所）を受け、うしろが欠けのない文（he trained many of the engineers …）なので関係副詞 where。which・that・what のうしろには欠けた部分が必要。' },
+      { id: 'B', choices: ['who', 'whom', 'whose', 'which'], answer: 0, why: '先行詞 Anyone（人）を説明し、would like の主語になる関係代名詞 who。whom は目的語、whose のうしろには名詞が必要、which は物に使う。' },
+      { id: 'C', choices: ['to', 'for', 'that', 'with'], answer: 0, why: 'hope to ＋ 原形「～したいと思う」。that のあとなら主語が必要で、for・with のあとに原形は続かない。' },
+    ],
+    underline: {
+      phrase: 'no later than March 24',
+      choices: ['on or before March 24', 'sometime after March 24', 'only on the day of March 24', 'around the end of March'],
+      answer: 0,
+      why: 'no later than ～ は「～より遅くならないで・～までに」。3月24日かそれより前に返信する、ということ。',
+    },
+    order: {
+      words: ['went', 'on', 'to', 'lead', 'the', 'design', 'department'],
+      rest: '',
+      answer: 'went on to lead the design department',
+      ja: 'やがて設計部を率いるようになった。（go on to ～＝続けて（やがて）～する）',
+    },
+    tf: [
+      { statement: 'ロバートさんは、32年間この会社で働いた。', answer: true, why: '第1段落 after thirty-two years with our company。' },
+      { statement: '昔の写真は、3月24日までに送ればよい。', answer: false, why: '第2段落 please send them to me by March 21。' },
+      { statement: '贈り物のお金は、全員が同じ金額を出さなければならない。', answer: false, why: '第3段落 any amount is welcome。' },
+    ],
+    qa: [
+      { q: 'Where will the retirement party be held?', choices: ['In the Garden Room of the Hotel Belmont.', 'In the design department.', 'At the front desk.', 'In Robert\'s home.'], answer: 0, why: '第2段落 in the Garden Room of the Hotel Belmont。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

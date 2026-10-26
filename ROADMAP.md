@@ -1511,7 +1511,7 @@
 - [x] 高校の文法単元を4つ追加：need not ／ needn't have done・ought to ／ ought not to・the former ／ the latter・It is up to 人 to ～
 - [x] ホーム画面で、今日の課題のボタンまで最初の画面（360×740）におさまるように（オーナーの依頼）
 - [x] 高校の文法単元を4つ追加：独立分詞構文（It being ～ / weather permitting）・without so much as ／ not even・come to ／ get to 原形・All you have to do is ～
-- [x] 長文：旧帝大（グッドハートの法則）・高校入試（海岸のそうじ）を1本ずつ
+- [x] 長文：旧帝大（グッドハートの法則）・高校入試（海岸のそうじ）・TOEIC（退職パーティーのメール）を1本ずつ
 - [x] 宝箱まであと1つのときは「次のステージをクリアすると宝箱！ もう少し！」と応援
 - [x] 単語の城：はじめてクリアした階が全問正解なら 🪙3 のボーナス
 - [x] 高校の文法単元を2つ追加：There is no point in -ing・regret -ing ／ regret to
