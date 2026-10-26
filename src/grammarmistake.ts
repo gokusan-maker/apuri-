@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'perception-done': { wrong: 'I heard my name calling.', right: 'I heard my name called.', why: '名前は「呼ばれる」側なので過去分詞。' },
   'subject-verb-number': { wrong: 'Each of the students have a tablet.', right: 'Each of the students has a tablet.', why: 'each of ～ は単数あつかいなので has。' },
   'number-amount': { wrong: 'A large amount of people came to the concert.', right: 'A large number of people came to the concert.', why: 'people は数えられるので amount ではなく number。' },
   'end-up-ing': { wrong: 'We ended up to walk home.', right: 'We ended up walking home.', why: 'end up のあとは -ing。' },
