@@ -109,7 +109,7 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
         </ol>
         {onChest && chest === undefined && nextChestIn(now, floors.length) !== null && (
           <p className="castle-next-chest" aria-label="次の宝箱まで">
-            🎁 次の宝箱まで あと{nextChestIn(now, floors.length)}{unit}
+            {nextChestIn(now, floors.length) === 1 ? `🎁 次の${unit}をクリアすると宝箱！ もう少し！` : `🎁 次の宝箱まで あと${nextChestIn(now, floors.length)}${unit}`}
           </p>
         )}
         {now > 2 && <p className="castle-below">⬇ {now - 2}{unit}ぶん、制覇ずみ</p>}

@@ -118,7 +118,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
       </div>
       {chest === undefined && nextChestIn(now, total) !== null && (
         <p className="smap-next-chest" aria-label="次の宝箱まで">
-          🎁 次の宝箱まで あと{nextChestIn(now, total)}ステージ
+          {nextChestIn(now, total) === 1 ? '🎁 次のステージをクリアすると宝箱！ もう少し！' : `🎁 次の宝箱まで あと${nextChestIn(now, total)}ステージ`}
         </p>
       )}
       {shown[0] > 0 && <p className="castle-below">⬇ {shown[0]}ステージぶん、クリアずみ</p>}

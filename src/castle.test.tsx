@@ -143,3 +143,9 @@ it('城の塔（宝箱あり）にも「次の宝箱まで あとn階」が出�
   render(<Castle name="テストの城" floors={floors} onOpen={() => {}} onChest={() => {}} />)
   expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('あと8階')
 })
+
+it('宝箱まであと1つのときは「もう少し！」と応援する', () => {
+  const floors = Array.from({ length: 12 }, (_, i) => ({ id: `n${i}`, label: `S${i}`, cleared: i < 9 }))
+  render(<Castle name="もう少しの海" floors={floors} onOpen={() => {}} theme="sea" />)
+  expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('もう少し！')
+})
