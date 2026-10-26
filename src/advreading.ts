@@ -8127,6 +8127,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-river-deltas',
+    title: 'Where Rivers Build Land',
+    level: 'TOEFL・IELTS（地学）',
+    paragraphs: [
+      "When a river reaches the sea, it often does something remarkable: it builds new land. As the river enters the calm water, it slows down and can no longer carry the sand and mud ( A ) has picked up along its journey. These materials settle on the bottom, and over time they form a delta.",
+      "The word \"delta\" comes from the Greek letter Δ. Over two thousand years ago, the Greek historian Herodotus noticed that the land at the mouth of the Nile River had a triangular shape, ( B ) reminded him of this letter. As the land grows, the river often splits into several smaller channels that spread out toward the sea.",
+      "Deltas are among the most fertile places on Earth, because the river keeps bringing new soil rich in nutrients. As a result, many of them, such as the Nile and Ganges deltas, support large farming populations.",
+      "Today, however, many deltas are in danger. Dams built upstream trap much of the sediment ( C ) would otherwise reach the coast. At the same time, rising sea levels are pushing salt water onto the land. Without new soil, some deltas are slowly shrinking.",
+    ],
+    ja: [
+      '川が海に着くと、おどろくべきことをすることが多い。新しい陸地を作るのだ。川がおだやかな水の中に入ると、流れがおそくなり、旅のとちゅうで運んできた砂やどろをもう運べなくなる。そうした物は底にしずみ、時間がたつとデルタ（三角州）になる。',
+      '「デルタ」という言葉は、ギリシャ文字のΔから来ている。2000年以上前、ギリシャの歴史家ヘロドトスは、ナイル川の河口の陸地が三角形をしていることに気づき、それがこの文字を思い出させたのである。陸地が大きくなるにつれ、川はしばしばいくつかの小さな流れに分かれ、海に向かって広がっていく。',
+      'デルタは地球上でもっとも土地が肥えた場所の1つである。川が養分の豊かな新しい土を運び続けるからだ。その結果、ナイル川やガンジス川のデルタのように、多くのデルタが、農業で暮らすたくさんの人々をささえている。',
+      'しかし今日、多くのデルタが危機にある。上流に作られたダムが、本来なら海岸に届くはずの土砂の多くをせき止めてしまう。同時に、海面の上昇によって塩水が陸地におしよせている。新しい土がなければ、少しずつ小さくなっていくデルタもある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['it', 'which', 'what', 'that'], answer: 0, why: 'the sand and mud (that) it has picked up「川が拾ってきた砂やどろ」。目的格の関係代名詞が省略されていて、空所には主語 it が入る。which・that だと picked up の目的語がなくなる、what は先行詞をとらない。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'it'], answer: 0, why: 'コンマのあとで前の内容（三角形をしていること）を受ける非制限用法の which。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the sediment を説明し、would reach の主語になる関係代名詞 that。' },
+    ],
+    underline: {
+      phrase: 'fertile',
+      choices: ['good for growing crops', 'very dry', 'full of rocks', 'dangerous to live in'],
+      answer: 0,
+      why: 'fertile は「（土地が）肥えた・作物がよく育つ」。',
+    },
+    order: {
+      words: ['can', 'no', 'longer', 'carry'],
+      rest: 'the sand and mud',
+      answer: 'can no longer carry',
+      ja: 'もう運べない（no longer「もはや～ない」）',
+    },
+    tf: [
+      { statement: '川が海に入ると流れがおそくなり、砂やどろがしずむ。', answer: true, why: '第1段落 it slows down … These materials settle on the bottom。' },
+      { statement: '「デルタ」という言葉はラテン語から来ている。', answer: false, why: '第2段落 comes from the Greek letter Δ。' },
+      { statement: '上流のダムが、海岸に届く土砂を減らしている。', answer: true, why: '第4段落 Dams built upstream trap much of the sediment。' },
+    ],
+    qa: [
+      { q: 'Why are deltas good places for farming?', choices: ['The river keeps bringing new soil rich in nutrients.', 'They are always dry.', 'Dams protect them from the sea.', 'Salt water makes the soil better.'], answer: 0, why: '第3段落 because the river keeps bringing new soil rich in nutrients。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
