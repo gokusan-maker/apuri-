@@ -6091,6 +6091,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-punctual-trains',
+    title: 'Trains That Run on Time',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Japanese trains are famous around the world for being on time. On the Shinkansen, the average delay per train is often reported to be less than one minute, even including delays ( A ) by bad weather.",
+      "Several things make this possible. Drivers and conductors are trained to follow schedules down to the second. Staff point at signals and say what they see out loud, a habit called 'pointing and calling,' which helps them avoid mistakes. Stations are also designed so that passengers can get on and off quickly.",
+      "Passengers play a part, too. Many people line up in neat rows on the platform and wait for others to get off before ( B ) the train. In some cases, when a train has left even a little early, the railway company has publicly apologized.",
+      "Some visitors find this attention to detail surprising, ( C ) others see it as a sign of respect for everyone's time. Either way, it shows how many small efforts by many people can work together to make a large system run smoothly.",
+    ],
+    ja: [
+      '日本の電車は、時間に正確なことで世界中に知られている。新幹線では、悪天候による遅れもふくめて、1本あたりの平均の遅れが1分未満だとよく報告されている。',
+      'これを可能にしていることがいくつかある。運転士や車掌は、秒単位で時刻表どおりに動くよう訓練されている。係員は信号を指さして、見たことを声に出して言う。「指差喚呼」とよばれるこの習慣は、ミスをふせぐのに役立つ。駅も、乗客がすばやく乗り降りできるように設計されている。',
+      '乗客も役割を果たしている。多くの人がホームにきちんと列を作り、電車に乗る前にほかの人が降りるのを待つ。電車がほんの少し早く出発しただけで、鉄道会社が公式におわびしたこともある。',
+      'この細かいところへの気配りにおどろく旅行者もいれば、みんなの時間を大切にしているしるしだと考える旅行者もいる。いずれにしても、たくさんの人の小さな努力が組み合わさって、大きなしくみをなめらかに動かせることを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['caused', 'causing', 'cause', 'to cause'], answer: 0, why: 'delays を「（悪天候によって）引き起こされた」とうしろから説明する過去分詞 caused。' },
+      { id: 'B', choices: ['boarding', 'board', 'to board', 'boarded'], answer: 0, why: '前置詞 before のあとは動名詞 boarding。' },
+      { id: 'C', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（others see it as …）なので、対比の接続詞 while。during・despite・because of は前置詞の働きで文を続けられない。' },
+    ],
+    underline: {
+      phrase: 'down to the second',
+      choices: ['very exactly, even counting seconds', 'roughly, within an hour', 'only on weekdays', 'at a slower speed'],
+      answer: 0,
+      why: 'down to ～ は「（細かいところ）まで」。down to the second で「秒単位まで正確に」。',
+    },
+    order: {
+      words: ['wait', 'for', 'others', 'to', 'get', 'off'],
+      rest: '',
+      answer: 'wait for others to get off',
+      ja: 'ほかの人が降りるのを待つ。（wait for 人 to ～＝人が～するのを待つ）',
+    },
+    tf: [
+      { statement: '新幹線の平均の遅れは、1本あたり1分未満だとよく報告されている。', answer: true, why: '第1段落 the average delay per train is often reported to be less than one minute。' },
+      { statement: '「指差喚呼」は、ミスをふせぐのに役立つ。', answer: true, why: '第2段落 which helps them avoid mistakes。' },
+      { statement: '旅行者はみな、この気配りをすばらしいと思っている。', answer: false, why: '第4段落 Some visitors find this attention to detail surprising, while others see it as a sign of respect。' },
+    ],
+    qa: [
+      { q: 'How do passengers help trains run on time?', choices: ['They line up and wait for others to get off first.', 'They drive the trains themselves.', 'They point at signals.', 'They arrive at the station late.'], answer: 0, why: '第3段落 Many people line up … and wait for others to get off before boarding the train。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

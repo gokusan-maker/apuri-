@@ -1540,7 +1540,7 @@
 - [x] 長文：私立医学部（自分をくすぐれないわけ）・TOEFL（カクテルパーティー効果）・TOEIC（値上げのメール）を1本ずつ
 - [x] 高校の文法単元を2つ追加：be known for ／ be known as・be familiar with ／ be familiar to
 - [x] 高校の文法単元を4つ追加：apologize to 人 for ／ thank 人 for・accuse 人 of ／ blame 人 for・consist of ／ be made up of・result in ／ result from
-- [x] 長文：高校入試（はじめてのレース）・国公立（都会の鳥の歌）を1本ずつ
+- [x] 長文：高校入試（はじめてのレース）・国公立（都会の鳥の歌）・共通テスト（時間どおりの電車）を1本ずつ
 - [x] 数の聞き取りに自己ベスト（問題中に「🏅ベスト」、更新すると「🎉 自己ベスト更新！」）
 - [x] 高校の文法単元を2つ追加：agree with ／ agree to ／ agree on・depend on ／ It depends
 ## アイデア（未整理）
