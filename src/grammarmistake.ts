@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'whether-to': { wrong: 'I can\'t decide if to go or not.', right: 'I can\'t decide whether to go or not.', why: 'to 不定詞と組めるのは whether。if to とは言わない。' },
+  'what-for': { wrong: 'Why did you buy this for?', right: 'What did you buy this for? / Why did you buy this?', why: '文の最後に for を残すなら What ～ for?。Why と for はいっしょに使わない。' },
   'make-it-a-rule': { wrong: 'I make a rule to walk every day.', right: 'I make it a rule to walk every day.', why: '形式目的語の it をわすれない。' },
   'take-for-granted': { wrong: 'We take it for grant that water is safe.', right: 'We take it for granted that water is safe.', why: 'for のあとは過去分詞の granted（決まった形）。' },
   'afford-to': { wrong: 'I can\'t afford buying a new car.', right: 'I can\'t afford to buy a new car.', why: 'afford のあとは to ＋ 原形（または名詞）。' },
