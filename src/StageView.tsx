@@ -19,7 +19,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -107,7 +107,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const specialEvent = event !== undefined ? event : specialEventOf(dayKey(), { hour, weekend, goldReady: keys >= KEYS_FOR_GOLD && !!onOpenGold })
   const rare = rareBossOf(week)
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
-  const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[]; first?: boolean }) | null>(null) // ボスの城の問題の階（1〜4階）
+  const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[]; first?: boolean; round?: number }) | null>(null) // ボスの城の問題の階（1〜4階）
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
@@ -586,14 +586,15 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   if (part === 'boss' && bcFloor)
     return (
       <BossFloor
-        key={bcFloor.id}
+        key={`${bcFloor.id}:${bcFloor.round ?? 0}`}
         title={`🏰 ${courseById(bcFloor.course).label}のボスの階　${BC_KIND[bcFloor.floor]}`}
         qs={bcFloor.qs}
         taunt={bossTaunt(BOSSES[LEVEL_BOSS_LOOK[bcFloor.course]].name, bcFloor.floor)}
         onBack={() => setBcFloor(null)}
+        onRetry={() => setBcFloor((cur) => (cur ? { ...cur, qs: bossFloorQs(cur.course, cur.floor), first: !loadBcClears().includes(cur.id), round: (cur.round ?? 0) + 1 } : cur))}
         reward={bcFloor.first && onRankBonus ? BC_FLOOR_COINS : 0}
         onDone={(score) => {
-          if (score >= BC_PASS && !bcClears.includes(bcFloor.id)) {
+          if (score >= bcPassOf(bcFloor.qs.length) && !bcClears.includes(bcFloor.id)) {
             onRankBonus?.(BC_FLOOR_COINS)
             const next = [...bcClears, bcFloor.id]
             setBcClears(next)
@@ -632,7 +633,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             return {
               id: f.id,
               label: isBoss ? `👹 ${look.name}` : `${c.label}　${BC_KIND[f.floor]}`,
-              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `${BC_QS}問`,
+              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `${f.floor === 0 ? BC_WORD_QS : BC_QS}問`,
               fig: isBoss ? <BossFigure hit={false} look={look} /> : undefined,
               cleared: !!lboss[f.course] || bcClears.includes(f.id),
             }

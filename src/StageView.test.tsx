@@ -319,6 +319,9 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
   const { bossFloorQs, bossCastleFloors } = await import('./bosscastle')
   expect(bossCastleFloors()).toHaveLength(75)
   expect(bossFloorQs('中1', 0).every((q) => q.team === 'word')).toBe(true)
+  expect(bossFloorQs('中1', 0)).toHaveLength(10)
+  expect(new Set(bossFloorQs('東大', 0).map((q) => q.word.en)).size).toBe(10)
+  expect(bossFloorQs('中1', 1)).toHaveLength(5)
   expect(bossFloorQs('東大', 1).every((q) => q.team === 'grammar')).toBe(true)
   expect(bossFloorQs('中1', 2).every((q) => q.team === 'reading')).toBe(true)
   localStorage.clear()
@@ -327,11 +330,23 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
   const castle = screen.getByRole('region', { name: '中1のボスの城' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1　単語/ }))
   expect(screen.getByText(/中1のボスの階/)).toBeInTheDocument()
-  for (let n = 0; n < 5; n++) {
+  expect(screen.getByText('1 / 10')).toBeInTheDocument() // 単語の階は10問（オーナーの要望）
+  for (let n = 0; n < 10; n++) {
     fireEvent.click(document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')[0])
+    if (n === 9) expect(screen.getByText('🔁 すぐに再チャレンジ')).toBeInTheDocument()
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
   }
-  fireEvent.click(screen.getByText('城にもどる'))
+  // 結果のあと、すぐに同じ階をもう一度（新しい10問）
+  fireEvent.click(screen.getByText('🔁 再チャレンジ（10問）'))
+  expect(screen.getByText('1 / 10')).toBeInTheDocument()
+  for (let n = 0; n < 10; n++) {
+    fireEvent.click(document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')[0])
+    if (n < 9) fireEvent.click(screen.getByText('次へ'))
+  }
+  // 最後の問題に答えたらすぐ再チャレンジ
+  fireEvent.click(screen.getByText('🔁 すぐに再チャレンジ'))
+  expect(screen.getByText('1 / 10')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('← 城にもどる'))
   expect(screen.getByRole('region', { name: '中1のボスの城' })).toBeInTheDocument()
 })
 
@@ -449,4 +464,10 @@ it('今日のボスのボタンの丸に、そのボスの舞台が出る', () =
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   expect(document.querySelector('.boss-go-fig .boss-arena')).not.toBeNull()
+})
+
+it('ボスの城の単語の階は10問で8問以上正解でクリア（ほかの階は5問で4問）', async () => {
+  const { bcPassOf } = await import('./bosscastle')
+  expect(bcPassOf(10)).toBe(8)
+  expect(bcPassOf(5)).toBe(4)
 })

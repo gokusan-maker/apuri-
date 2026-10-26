@@ -1,24 +1,31 @@
 import { useState } from 'react'
 import type { TeamQ } from './boss'
-import { BC_PASS } from './bosscastle'
+import { bcPassOf } from './bosscastle'
 import { playCorrect, playWrong } from './sound'
 
-// ボスの城の問題の階：5問。4問以上正解でクリア
-export function BossFloor({ title, qs, onDone, onBack, taunt, reward = 0 }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; taunt?: string; reward?: number }) {
+// ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
+export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0 }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [hint, setHint] = useState(false)
   const q = qs[i]
+  const pass = bcPassOf(qs.length)
+  const retryBtn = onRetry && (
+    <button className="good next-unit-btn bfloor-retry" onClick={onRetry}>
+      🔁 再チャレンジ（{qs.length}問）
+    </button>
+  )
   if (!q)
     return (
       <section className="card bfloor" aria-label={title}>
-        <p className={`stage-result${score >= BC_PASS ? ' clear' : ''}`} role="status">
-          {score >= BC_PASS ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${BC_PASS}問以上でクリア）`}
+        <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
+          {score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
-        {score >= BC_PASS && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
-        {score >= BC_PASS && taunt && <p className="bfloor-taunt">{taunt}</p>}
-        <button className="good next-unit-btn" onClick={onBack}>
+        {score >= pass && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
+        {score >= pass && taunt && <p className="bfloor-taunt">{taunt}</p>}
+        {retryBtn}
+        <button className={`${onRetry ? 'list-link' : 'good next-unit-btn'}`} onClick={onBack}>
           城にもどる
         </button>
       </section>
@@ -69,6 +76,18 @@ export function BossFloor({ title, qs, onDone, onBack, taunt, reward = 0 }: { ti
           }}
         >
           {i === qs.length - 1 ? '結果を見る' : '次へ'}
+        </button>
+      )}
+      {/* 最後の問題に答えたら、結果を見なくてもすぐ再チャレンジできる */}
+      {picked !== null && i === qs.length - 1 && onRetry && (
+        <button
+          className="list-link bfloor-retry-now"
+          onClick={() => {
+            onDone(score)
+            onRetry()
+          }}
+        >
+          🔁 すぐに再チャレンジ
         </button>
       )}
     </section>

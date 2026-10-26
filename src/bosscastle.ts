@@ -1,5 +1,5 @@
 // ボスの城：15レベル（中1〜東大・TOEIC・TOEFL/IELTS・ネイティブ）のボスが下から順にいる。
-// ボスごとに5階：1〜4階は単語・文法・読解・ミックスの問題（5問・4問正解で次へ）、5階でそのレベルのボスと戦う
+// ボスごとに5階：1〜4階は単語・文法・読解・ミックスの問題（単語は10問・8問正解、ほかは5問・4問正解で次へ）、5階でそのレベルのボスと戦う
 import { teamBossQuestions, type TeamQ } from './boss'
 import { levelUnits } from './grammarcastle'
 import { passagesFor, type ReadLevel } from './readlevel'
@@ -10,6 +10,9 @@ import type { Level } from './words'
 export const BC_FLOORS = 5
 export const BC_QS = 5
 export const BC_PASS = 4
+export const BC_WORD_QS = 10 // 単語の階は10問（オーナーの要望：5問→10問）。8問以上でクリア
+// その問題数でクリアに必要な正解数（5問なら4問、10問なら8問）
+export const bcPassOf = (n: number): number => (n > BC_QS ? Math.ceil(n * 0.8) : BC_PASS)
 export const BC_FLOOR_COINS = 5 // 問題の階をはじめてクリアしたときのコイン
 export const BC_KIND = ['単語', '文法', '読解', 'ミックス'] as const
 export type BcFloor = { id: string; course: CourseId; floor: number } // floor：0〜3 が問題の階、4 がボス
@@ -40,11 +43,11 @@ export function bossCastleFloors(courses: CourseId[] = COURSES.map((c) => c.id))
 // そのレベルの読解の長文（中1 は短い読解しかないので、ボスは単語の例文の訳で読解の番をする）
 export const bossPassages = (course: CourseId): LongPassage[] | undefined => (course === '中1' ? undefined : passagesFor(course as ReadLevel))
 
-// 問題の階の5問（そのレベルの単語・文法・例文の訳から）
+// 問題の階の問題（単語は10問、ほかは5問。そのレベルの単語・文法・例文の訳から）
 export function bossFloorQs(course: CourseId, floor: number, rnd: () => number = Math.random): TeamQ[] {
-  const all = teamBossQuestions(courseWords(course), rnd, 24, undefined, levelUnits(course)) as TeamQ[]
+  const all = teamBossQuestions(courseWords(course), rnd, 36, undefined, levelUnits(course)) as TeamQ[]
   const by = (t: TeamQ['team']) => all.filter((q) => q.team === t)
-  if (floor === 0) return by('word').slice(0, BC_QS)
+  if (floor === 0) return by('word').slice(0, BC_WORD_QS)
   if (floor === 1) return by('grammar').slice(0, BC_QS)
   if (floor === 2) return by('reading').slice(0, BC_QS)
   return [...by('word').slice(5, 7), ...by('grammar').slice(5, 7), ...by('reading').slice(5, 6)]
