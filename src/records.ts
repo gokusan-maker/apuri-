@@ -2,9 +2,11 @@
 import { loadBook, totalWins } from './bossbook'
 import { loadEndlessBest } from './endless'
 import { loadGachaStats } from './gacha'
-import { grammarStamps, loadGrammar } from './grammar'
+import { grammarStamps, loadDictBest, loadGrammar } from './grammar'
 import { loadLongRecord, LONG_PASSAGES, totalOf } from './longreading'
+import { loadNumbersBest } from './numbers'
 import { loadParty } from './party'
+import { loadSpellBest } from './spell'
 
 export type RecordRow = { icon: string; label: string; value: string }
 
@@ -23,5 +25,8 @@ export function collectRecords(): RecordRow[] {
     { icon: '🐾', label: 'いまの仲間', value: `${party.members.length}匹` },
     { icon: '📮', label: '文法スタンプ', value: `${grammarStamps(loadGrammar())}個` },
     { icon: '📖', label: '読解の満点', value: `${perfectLong} / ${LONG_PASSAGES.length}本` },
+    { icon: '🔤', label: 'スペル連続正解', value: `${loadSpellBest()}問` },
+    { icon: '👂', label: '数の聞き取り', value: `${loadNumbersBest()} / 10問` },
+    { icon: '✍️', label: '書き取り連続', value: `${loadDictBest()}文` },
   ]
 }

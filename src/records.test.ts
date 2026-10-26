@@ -16,3 +16,15 @@ it('自己ベストをまとめる', () => {
   expect(v('いまの仲間')).toMatch(/^\d+匹$/)
   expect(rows.every((r) => r.label.length <= 8)).toBe(true)
 })
+
+it('記録の部屋にスペル・数の聞き取り・書き取りの自己ベストも出る', () => {
+  localStorage.setItem('eitan:spell-best-streak', '7')
+  localStorage.setItem('eitan:numbers-best', '9')
+  localStorage.setItem('eitan:dict-best-streak', '3')
+  const rows = collectRecords()
+  const v = (l: string) => rows.find((r) => r.label === l)!.value
+  expect(v('スペル連続正解')).toBe('7問')
+  expect(v('数の聞き取り')).toBe('9 / 10問')
+  expect(v('書き取り連続')).toBe('3文')
+  localStorage.clear()
+})
