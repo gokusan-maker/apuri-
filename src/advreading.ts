@@ -5071,6 +5071,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-expense-app',
+    title: 'Notice: New Expense App',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: Starting on June 1, all business expenses must be submitted through the new ExpenseEasy app ( A ) of on paper forms. The app can be downloaded to your smartphone from the company intranet.",
+      "With the app, you simply take a photo of your receipt, choose a category such as travel or meals, and press 'Submit.' Your manager will receive a notification and can approve the request from any device. Most requests are expected to be approved within three business days, ( B ) is much faster than under the current system.",
+      "To help everyone get used to the app, the IT Department will hold short training sessions in Meeting Room 4 on May 20 and May 22. Each session will last about thirty minutes. Please sign up for one of the sessions by May 15 ( C ) the online calendar.",
+      "Paper forms will still be accepted until May 31. After that date, only expenses submitted through the app will be paid back. Questions may be sent to Lisa Moreno in the Accounting Department.",
+    ],
+    ja: [
+      '従業員のみなさまへ：6月1日から、すべての業務上の経費は、紙の用紙ではなく新しいアプリ「エクスペンスイージー」で申請してください。アプリは社内ネットからスマートフォンにダウンロードできます。',
+      'アプリでは、領収書の写真をとり、出張や食事などの区分をえらんで「送信」を押すだけです。上司に通知が届き、どの機器からでも申請を承認できます。ほとんどの申請は3営業日以内に承認される見こみで、これは今のやり方よりずっと速くなります。',
+      'みなさんがアプリに慣れられるよう、IT部が5月20日と5月22日に第4会議室で短い講習会を開きます。各回およそ30分です。5月15日までに、オンラインのカレンダーを使ってどちらかの回に申しこんでください。',
+      '紙の用紙は5月31日まではまだ受けつけます。その日を過ぎると、アプリで申請された経費だけが支払われます。ご質問は経理部のリサ・モレノまでお送りください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['instead', 'rather', 'because', 'in spite'], answer: 0, why: 'instead of ～「～ではなく・～の代わりに」。rather of という形はなく、because of・in spite of では「紙の用紙のせいで・にもかかわらず」となり、うしろの on paper forms とつながらない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容（3営業日以内に承認されること）を受け、is の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では2つの文がつながらない。' },
+      { id: 'C', choices: ['using', 'to using', 'used', 'use'], answer: 0, why: '「～を使って」と手段をそえる分詞 using。to using という形はなく、used・use では文の形がこわれる。' },
+    ],
+    underline: {
+      phrase: 'get used to the app',
+      choices: ['become comfortable using the app', 'stop using the app', 'pay money for the app', 'design a new app'],
+      answer: 0,
+      why: 'get used to ～ は「～に慣れる」。to のうしろは名詞（the app）。used to 原形「以前は～した」とはちがう。',
+    },
+    order: {
+      words: ['take', 'a', 'photo', 'of', 'your', 'receipt'],
+      rest: '',
+      answer: 'take a photo of your receipt',
+      ja: '領収書の写真をとる。（take a photo of ～＝～の写真をとる）',
+    },
+    tf: [
+      { statement: '6月1日からは、経費はアプリで申請する。', answer: true, why: '第1段落 Starting on June 1, all business expenses must be submitted through the new ExpenseEasy app。' },
+      { statement: '講習会は1回およそ2時間かかる。', answer: false, why: '第3段落 Each session will last about thirty minutes。' },
+      { statement: '紙の用紙は6月以降も受けつけられる。', answer: false, why: '第4段落 Paper forms will still be accepted until May 31。' },
+    ],
+    qa: [
+      { q: 'By when should employees sign up for a training session?', choices: ['May 15', 'May 20', 'May 31', 'June 1'], answer: 0, why: '第3段落 Please sign up for one of the sessions by May 15。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
