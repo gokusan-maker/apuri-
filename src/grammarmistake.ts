@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'friend-of-mine': { wrong: 'She is a my friend.', right: 'She is a friend of mine.', why: 'a と my はならべて使えない。a friend of mine にする。' },
+  'by-difference': { wrong: 'She is older than me for two years.', right: 'She is older than me by two years.', why: '差を表すのは by。' },
   uncountable: { wrong: 'He gave me many advices.', right: 'He gave me a lot of advice. / He gave me many pieces of advice.', why: 'advice は数えられない名詞。-s をつけず、数えるなら pieces of。' },
   'noun-number': { wrong: 'The news were surprising.', right: 'The news was surprising.', why: 'news は -s で終わるが単数あつかい。' },
   'what-do-you-say': { wrong: 'What do you say to go for a walk?', right: 'What do you say to going for a walk?', why: 'to は前置詞なので、うしろは動名詞。' },
