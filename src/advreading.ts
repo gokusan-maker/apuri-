@@ -5398,6 +5398,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-myopia',
+    title: 'Why More Children Need Glasses',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In parts of East Asia, as many as eight or nine out of ten young adults are now nearsighted, meaning they can see nearby objects clearly but distant ones appear blurry. Only a few generations ago, the figure was far lower. Genes alone cannot explain such a rapid change, ( A ) our genes do not change that quickly.",
+      "For many years, people blamed reading and, more recently, screens. Spending long hours focusing on close objects may indeed play a role. However, researchers have found a factor that seems to matter even more: time spent outdoors. Children who spend more time outside tend to be less likely to become nearsighted, ( B ) of how much they read.",
+      "Why would being outdoors help? One leading explanation involves light. Outdoor light, even on a cloudy day, is many times brighter than typical indoor lighting. Bright light is thought to trigger the release of dopamine in the retina, a chemical that may slow the excessive growth of the eyeball that causes nearsightedness.",
+      "These findings have encouraged some schools to change their routines. In Taiwan, for example, schools were encouraged to give students about two hours of outdoor activity a day, and the rise in nearsightedness among schoolchildren slowed. Such programs suggest that a simple and inexpensive change in daily habits may help protect the eyesight of an entire generation. Glasses, after all, correct blurry vision; they do not ( C ) the eye from changing shape.",
+    ],
+    ja: [
+      '東アジアの一部では、今や若者の10人に8人か9人もが近視である。近視とは、近くのものははっきり見えるが、遠くのものはぼやけて見える状態のことだ。ほんの数世代前には、その割合はずっと低かった。遺伝子はそんなに速くは変わらないので、遺伝子だけではこうした急な変化を説明できない。',
+      '長年、人々は読書のせいにし、最近では画面のせいにしてきた。近くのものに長時間ピントを合わせることが、たしかにかかわっているのかもしれない。しかし研究者たちは、さらに重要らしい要因を見つけた。外ですごす時間である。外ですごす時間が長い子どもは、どれだけ本を読むかに関係なく、近視になりにくい傾向がある。',
+      'なぜ外にいることが役立つのだろうか。有力な説明の1つは、光にかかわるものだ。屋外の光は、くもりの日でさえ、ふつうの室内の明かりより何倍も明るい。明るい光は、網膜でドーパミンが出るきっかけになると考えられている。ドーパミンは、近視の原因となる眼球の伸びすぎを遅らせるかもしれない化学物質である。',
+      'こうした発見を受けて、日々の過ごし方を変えた学校もある。たとえば台湾では、学校が生徒に1日およそ2時間の屋外での活動をさせるようすすめられ、小学生の近視の増え方がゆるやかになった。こうした取り組みは、日々の習慣をかんたんに、お金をかけずに変えるだけで、ある世代全体の視力を守る助けになるかもしれないことを示している。けっきょく、めがねはぼやけた見え方を補正するが、目の形が変わるのを防いではくれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'うしろが文（our genes do not change that quickly）なので接続詞 because。because of・despite・during は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['regardless', 'regard', 'regarding', 'regards'], answer: 0, why: 'regardless of ～「～に関係なく」。regard・regarding・regards は of と組んでこの意味にならない。' },
+      { id: 'C', choices: ['prevent', 'avoid', 'refuse', 'deny'], answer: 0, why: 'prevent A from -ing「A が～するのを防ぐ」。avoid・refuse・deny は A from -ing の形をとらない。' },
+    ],
+    underline: {
+      phrase: 'play a role',
+      choices: ['have some effect', 'perform in a play', 'cause no change at all', 'become more popular'],
+      answer: 0,
+      why: 'play a role は「役割を果たす・関係している」。近くを見続けることも、近視に何らかの影響をあたえているかもしれないということ。',
+    },
+    order: {
+      words: ['tend', 'to', 'be', 'less', 'likely', 'to', 'become', 'nearsighted'],
+      rest: '',
+      answer: 'tend to be less likely to become nearsighted',
+      ja: '近視になりにくい傾向がある。（tend to ～＝～しがちだ、be likely to ～＝～しそうだ）',
+    },
+    tf: [
+      { statement: '数世代前も、東アジアの若者の近視の割合は今と同じくらい高かった。', answer: false, why: '第1段落 Only a few generations ago, the figure was far lower。' },
+      { statement: '外ですごす時間が長い子どもは、近視になりにくい傾向がある。', answer: true, why: '第2段落 Children who spend more time outside tend to be less likely to become nearsighted。' },
+      { statement: 'くもりの日の屋外の光は、ふつうの室内の明かりより暗い。', answer: false, why: '第3段落 Outdoor light, even on a cloudy day, is many times brighter than typical indoor lighting。' },
+    ],
+    qa: [
+      { q: 'What happened in Taiwan after schools gave students more outdoor time?', choices: ['The rise in nearsightedness among schoolchildren slowed.', 'Students stopped reading books.', 'All students stopped wearing glasses.', 'Indoor lights became brighter.'], answer: 0, why: '第4段落 the rise in nearsightedness among schoolchildren slowed。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
