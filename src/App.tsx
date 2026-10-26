@@ -2133,7 +2133,7 @@ function App() {
           )}
           {mode === 'word' && wordMini && !todayQuiz && !playOn && (
             <button className="list-link word-mini-back" onClick={() => setWordMini(false)}>
-              ← 城にもどる
+              ← もどる
             </button>
           )}
           {mode === 'grammar' && !grammarGo && !playOn && <TrackAlly track="grammar" buddy={buddies.grammar} label="文法のなかま（正解で育つ）" />}

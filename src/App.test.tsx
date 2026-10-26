@@ -2030,3 +2030,15 @@ it('単語ゲームのページに単語の城：単元の1階目は10語の解�
   expect(screen.getByRole('button', { name: /次の階へ ▶ 中1 単元1　2\/3/ })).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:wcastle')!)).toContain(f.id)
 })
+
+it('単語のミニゲームから戻るボタンは「← もどる」（城にもどる ではない）', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:onboarded', '1')
+  render(<App />)
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語'))
+  fireEvent.click(screen.getByRole('button', { name: /単語のミニゲーム/ }))
+  expect(screen.getByRole('button', { name: '← もどる' })).toBeInTheDocument()
+  expect(screen.queryByText('← 城にもどる')).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: '← もどる' }))
+  expect(screen.getByRole('button', { name: /単語のミニゲーム/ })).toBeInTheDocument()
+})
