@@ -434,3 +434,13 @@ it('ボスの城のいちばん上の階に、そのボスのとくぎ（2つ）
   const icons = bossTraits(BOSSES[LEVEL_BOSS_LOOK['中1']].name, true).map((t) => BOSS_TRAITS[t].icon).join('')
   expect(screen.getByRole('region', { name: '中1のボスの城' })).toHaveTextContent(`中1のボス・とくぎ ${icons}`)
 })
+
+it('今日のボスのボタンに、そのボスのとくぎが出る', async () => {
+  const { bossTraits, BOSS_TRAITS, BOSSES, dailyBossLevel } = await import('./boss')
+  const { dayKey } = await import('./srs')
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const lv = dailyBossLevel(['中1'], dayKey())!
+  const t = BOSS_TRAITS[bossTraits(BOSSES[lv as keyof typeof BOSSES].name)[0]]
+  expect(document.querySelector('.boss-go-trait')?.textContent).toBe(`とくぎ ${t.icon} ${t.name}`)
+})

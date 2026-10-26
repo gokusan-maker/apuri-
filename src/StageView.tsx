@@ -828,6 +828,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
           </span>
           <span className="boss-go-text">
             <strong>⚔️ 今日のボス：{BOSSES[daily].name}</strong>
+            <small className="boss-go-trait">とくぎ {BOSS_TRAITS[bossTraits(BOSSES[daily].name)[0]].icon} {BOSS_TRAITS[bossTraits(BOSSES[daily].name)[0]].name}</small>
             <small title="単語・文法・読解の3人で戦う">TEAM BATTLE 🔤📐📖</small>
           </span>
           {dailyDone && <span className="mode-badge">✅ クリア</span>}
