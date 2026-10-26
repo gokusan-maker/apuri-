@@ -1789,6 +1789,8 @@
 
 - [x] 文法の単元「前置詞 in の使い方（in English ／ in a loud voice ／ the girl in red）」を追加（よくあるまちがいつき）
 
+- [x] TOEIC に自作のお知らせ文「Notice: Annual Company Picnic」を追加（会社のピクニック）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

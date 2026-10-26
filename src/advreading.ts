@@ -8085,6 +8085,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-company-picnic',
+    title: 'Notice: Annual Company Picnic',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Dear Colleagues, We are happy to announce that our annual company picnic will be held on Saturday, September 14, at Green Hill Park. The picnic will start at 11:00 a.m. and end at 4:00 p.m. Employees are welcome to bring their families, ( A ) children under twelve.",
+      "Lunch and drinks will be provided by our cafeteria staff. There will also be games for all ages, such as a tug-of-war and a treasure hunt. Prizes will be given to the winners of each game.",
+      "To help us prepare enough food, please let us know how many people will come with you by September 6. You can reply by email or sign up on the sheet ( B ) next to the elevator on the first floor.",
+      "If it rains, the picnic will be moved to the gym at our main office. Please check the company website on the morning of the event for any updates. We hope you can join us for a fun day of food, games, and ( C ).",
+    ],
+    ja: [
+      '社員の皆さまへ。毎年恒例の会社のピクニックを、9月14日（土）にグリーン・ヒル公園で開くことをお知らせします。ピクニックは午前11時に始まり、午後4時に終わります。12歳未満の子どもをふくめ、ご家族もどうぞお連れください。',
+      '昼食と飲み物は、社員食堂のスタッフが用意します。綱引きや宝さがしなど、どの年れいでも楽しめるゲームもあります。それぞれのゲームの勝者には賞品がおくられます。',
+      '十分な食事を用意するため、何人で来られるかを9月6日までにお知らせください。メールで返信するか、1階のエレベーターの横にはってある用紙に記入してください。',
+      '雨の場合、ピクニックは本社の体育館に場所を移します。当日の朝、最新の情報を会社のウェブサイトで確認してください。食事とゲームと親ぼくの楽しい一日に、ぜひご参加ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['including', 'included', 'include', 'to include'], answer: 0, why: '前置詞の including ～「～をふくめて」。' },
+      { id: 'B', choices: ['posted', 'posting', 'post', 'to post'], answer: 0, why: '用紙は「はられた」側なので、名詞を後ろから説明する過去分詞 posted。the sheet posted next to ～「～の横にはってある用紙」。' },
+      { id: 'C', choices: ['friendship', 'friendly', 'friend', 'befriend'], answer: 0, why: 'food, games, and ～ と名詞を並べるので名詞 friendship。friendly は形容詞、befriend は動詞、friend は数えられる名詞で a がいる。' },
+    ],
+    underline: {
+      phrase: 'provided',
+      choices: ['given', 'sold', 'cooked', 'ordered'],
+      answer: 0,
+      why: 'provide は「用意する・提供する」。will be provided「用意される（あたえられる）」。',
+    },
+    order: {
+      words: ['how', 'many', 'people', 'will', 'come'],
+      rest: 'with you',
+      answer: 'how many people will come',
+      ja: '何人来るか（間接疑問なので 主語 ＋ 動詞 の語順）',
+    },
+    tf: [
+      { statement: 'ピクニックはグリーン・ヒル公園で開かれる。', answer: true, why: '第1段落 at Green Hill Park。' },
+      { statement: 'ピクニックに家族を連れてくることはできない。', answer: false, why: '第1段落 Employees are welcome to bring their families。' },
+      { statement: '雨の場合、ピクニックは中止になる。', answer: false, why: '第4段落 If it rains, the picnic will be moved to the gym。' },
+    ],
+    qa: [
+      { q: 'What should employees do by September 6?', choices: ['Tell how many people will come with them.', 'Pay for their lunch.', 'Bring prizes for the games.', 'Check the weather report.'], answer: 0, why: '第3段落 please let us know how many people will come with you by September 6。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
