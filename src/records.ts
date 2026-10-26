@@ -1,5 +1,6 @@
 // 記録の部屋：いろいろな自己ベストを1か所に集める（どれも端末の保存データから読むだけ）
 import { loadBook, totalWins } from './bossbook'
+import { chestsOpened, loadChests } from './castle'
 import { loadEndlessBest } from './endless'
 import { loadGachaStats } from './gacha'
 import { grammarStamps, loadDictBest, loadGrammar } from './grammar'
@@ -28,5 +29,6 @@ export function collectRecords(): RecordRow[] {
     { icon: '🔤', label: 'スペル連続正解', value: `${loadSpellBest()}問` },
     { icon: '👂', label: '数の聞き取り', value: `${loadNumbersBest()} / 10問` },
     { icon: '✍️', label: '書き取り連続', value: `${loadDictBest()}文` },
+    { icon: '🎁', label: 'あけた宝箱', value: `${chestsOpened(loadChests())}個` },
   ]
 }
