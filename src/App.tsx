@@ -1458,6 +1458,10 @@ function App() {
     return r ? `${r.kind.name}の${r.species.egg}` : null
   }
 
+  // 単語の海を制覇したら、次のレベルの海へ
+  const readyCourses = COURSES.filter(courseReady)
+  const nextCourse = readyCourses[readyCourses.findIndex((c) => c.id === wordCourse) + 1]
+  const nextWordMap = nextCourse ? { label: `${nextCourse.label}の海`, go: () => setWordCourse(nextCourse.id as CourseId) } : undefined
   // 読解の今日の課題：城（地図）のすぐ下に出す
   const readTodayBtn =
     mode === 'reading' && !shortGo && !playOn && !todayGone ? (
@@ -2125,7 +2129,7 @@ function App() {
         <>
           {mode === 'word' && !todayQuiz && !wordMini && (
             <>
-            <WordCastle key={wordCourse} name={`${courseById(wordCourse).label}の海`} course={wordCourse} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
+            <WordCastle key={wordCourse} name={`${courseById(wordCourse).label}の海`} course={wordCourse} next={nextWordMap} onAnswer={onAnswer} onSpend={spend} onPlay={setCastleOn} onChest={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
             {!castleOn && !quizFocus && !playOn && !todayGone && !showShop && !showChallenge && (
               <button
                 className="long-recommend daily-long today-read-btn"

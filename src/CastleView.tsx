@@ -1,12 +1,12 @@
 import { useContext, useState, type ReactNode } from 'react'
 import { CHEST_COINS, nextChestIn, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests, type MapTheme } from './castle'
-import { StageMap } from './StageMapView'
+import { StageMap, type NextMap } from './StageMapView'
 
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
 
 // 城の塔：1階ずつクリアしてのぼる。夜空・月・山・天守の屋根・旗・石の壁・たいまつ・門と堀
-export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
-  if (theme === 'sea' || theme === 'forest' || theme === 'mountain') return <StageMap name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} onChest={onChest} againLabel={againLabel} />
+export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest, next }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
+  if (theme === 'sea' || theme === 'forest' || theme === 'mountain') return <StageMap name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} onChest={onChest} againLabel={againLabel} next={next} />
   return <CastleTower name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} goLabel={goLabel} againLabel={againLabel} onChest={onChest} />
 }
 

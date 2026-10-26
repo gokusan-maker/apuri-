@@ -8,11 +8,12 @@ import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
 import { Scramble } from './ScrambleView'
 import { Spell } from './SpellView'
+import type { NextMap } from './StageMapView'
 import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PERFECT_COINS, WC_PASS, wcCount, wordCastleFloorsFor, type WcFloor } from './wordcastle'
 import { courseWords, type CourseId } from './wordcourse'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
-export function WordCastle({ course, name = '単語の海', onAnswer, onChest, onSpend, onPlay }: { course: CourseId; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
+export function WordCastle({ course, name = '単語の海', onAnswer, onChest, onSpend, onPlay, next: nextMap }: { course: CourseId; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void; next?: NextMap }) {
   const floors = wordCastleFloorsFor(course)
   const [clears, setClears] = useState(loadWcClears)
   const [perfectBonus, setPerfectBonus] = useState(false) // いま全問正解ボーナスをもらった
@@ -41,6 +42,7 @@ export function WordCastle({ course, name = '単語の海', onAnswer, onChest, o
         name={name}
         theme="sea"
         onChest={onChest}
+        next={nextMap}
         floors={floors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: clears.includes(f.id) }))}
         onOpen={(id) => {
           const f = floors.find((x) => x.id === id)

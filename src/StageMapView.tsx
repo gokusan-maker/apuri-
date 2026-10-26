@@ -2,13 +2,16 @@ import { useContext, useEffect, useState, type CSSProperties } from 'react'
 import { mapRoom, nextChestIn, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 
+// 地図を制覇したとき、次のレベルの地図へ進むボタン
+export type NextMap = { label: string; go: () => void }
+
 const ROW = 68 // ステージの間かく（px）。地図が1画面におさまるように
 const NODE: Record<MapTheme, string> = { sea: '🏝', forest: '🌳', mountain: '⛰️' }
 const DECO: Record<MapTheme, string[]> = { sea: ['🐬', '🐙', '⛵', '🐟'], forest: ['🍄', '🦉', '🌲', '🐿'], mountain: ['🦅', '🪨', '❄️', '🐐'] }
 const GOAL: Record<MapTheme, string> = { sea: '🏝 宝の島に着いた！ この海を制覇', forest: '🌳 森の奥に着いた！ この森を制覇', mountain: '🏔 山頂に着いた！ この山を制覇' }
 
 // ステージの地図：レベルのステージを道にそって進む。キャラが次のステージへ歩いていく
-export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = '⚔ すすむ', againLabel = '✅ もう一度', onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void }) {
+export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = '⚔ すすむ', againLabel = '✅ もう一度', onChest, next }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
   const [chests, setChests] = useState(loadChests)
   const [opened, setOpened] = useState<{ at: number; egg: string | null; ticket?: boolean } | null>(null)
   const giveEgg = useContext(RareEggContext)
@@ -44,6 +47,11 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
         </span>
       </p>
       {now >= total && <p className="castle-top">{GOAL[theme]}</p>}
+      {now >= total && next && (
+        <button className="smap-next-map" onClick={next.go}>
+          ▶ 次は「{next.label}」へ
+        </button>
+      )}
       {chest !== undefined && (
         <button
           className="castle-chest-btn"

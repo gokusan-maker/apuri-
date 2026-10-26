@@ -3149,6 +3149,7 @@ section.result.ta-ready > .flip.ta-start { background: linear-gradient(135deg, #
 .castle-name { font-weight: 900; font-size: 1.05rem; letter-spacing: 0.04em; color: #fff; text-shadow: 0 2px 0 rgb(0 0 0 / 0.5), 0 0 12px rgb(var(--glow) / 0.8); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .castle-count { margin-left: auto; flex: none; padding: 3px 12px; border-radius: 999px; background: linear-gradient(#fde047, #f59e0b); color: #78350f; font-weight: 900; font-size: 0.8rem; box-shadow: 0 3px 0 #92400e; }
 .castle-top { position: relative; margin: 4px 0; text-align: center; font-weight: 900; color: #fde047; text-shadow: 0 0 10px #f59e0b; }
+.smap-next-map { position: relative; display: block; margin: 6px auto; padding: 8px 18px; border: none; border-radius: 999px; background: linear-gradient(135deg, #fbbf24, #f97316); color: #fff; font-weight: 900; text-shadow: 0 1px 2px rgb(0 0 0 / 0.3); box-shadow: 0 3px 0 #c2410c; }
 .castle-body { position: relative; max-width: 400px; margin: 0 auto; }
 .castle-roof { display: block; width: 100%; height: auto; margin-top: 6px; overflow: visible; filter: drop-shadow(0 6px 8px rgb(0 0 0 / 0.5)); }
 .castle-turret rect, .castle-keep { fill: #57534e; stroke: #292524; stroke-width: 2; }

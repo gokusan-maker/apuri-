@@ -149,3 +149,11 @@ it('宝箱まであと1つのときは「もう少し！」と応援する', () 
   render(<Castle name="もう少しの海" floors={floors} onOpen={() => {}} theme="sea" />)
   expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('もう少し！')
 })
+
+it('地図を制覇すると「次は〇〇へ」のボタンが出て、押すと次のレベルへ', () => {
+  const floors = Array.from({ length: 4 }, (_, i) => ({ id: `g${i}`, label: `S${i}`, cleared: true }))
+  const go = vi.fn()
+  render(<Castle name="ゴールの海" floors={floors} onOpen={() => {}} theme="sea" next={{ label: '中2の海', go }} />)
+  fireEvent.click(screen.getByRole('button', { name: '▶ 次は「中2の海」へ' }))
+  expect(go).toHaveBeenCalled()
+})
