@@ -118,4 +118,14 @@ it('まちがえても、それまでの最高の連続正解は結果に残る'
     fireEvent.click(screen.getByText('次へ'))
   }
   expect(screen.getByText('🔥 最高 2連続正解')).toBeInTheDocument()
+  expect(screen.queryByText('🏆 パーフェクト！ 全問正解')).toBeNull() // 1問まちがえたのでパーフェクトではない
+})
+
+it('スペルで全問正解すると「パーフェクト」', () => {
+  const w = WORDS.find((x) => x.id === 'apple')!
+  render(<Spell words={[w]} count={1} />)
+  tapSpelling(w.en)
+  fireEvent.click(screen.getByText('こたえる'))
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('🏆 パーフェクト！ 全問正解')).toBeInTheDocument()
 })

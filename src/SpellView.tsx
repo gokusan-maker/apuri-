@@ -80,6 +80,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
         <p className="result-score">
           {score} / {list.length} 問正解
         </p>
+        {score === list.length && list.length > 0 && <p className="wc-perfect">🏆 パーフェクト！ 全問正解</p>}
         {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score, list.length)}`}>
           {'★'.repeat(starsFor(score, list.length))}
