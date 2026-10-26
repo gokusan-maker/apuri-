@@ -7729,6 +7729,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-night-trains',
+    title: 'The Return of Night Trains',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Not long ago, many people believed that night trains belonged to the past. Airplanes were faster, and budget airlines made flying cheap. As a result, many overnight routes in Europe were cut. In recent years, however, night trains have been making a comeback.",
+      "One reason is concern about the environment. A train journey usually produces far less carbon dioxide than a flight of the same distance. Some travelers choose trains ( A ) they want to reduce their impact on the climate, even if the trip takes longer.",
+      "Night trains also offer a different kind of convenience. Passengers board in the evening, sleep in a bed, and arrive in the city center the next morning. This saves them both the time needed to travel to an airport and the cost of a hotel. For business travelers, a night train can feel like a hotel ( B ) moves.",
+      "Not everything is easy, though. Running night trains is expensive, and tickets for private rooms can cost more than a plane ticket. Supporters argue that governments should help ( C ) the service affordable, while critics question whether the money would be better spent elsewhere.",
+    ],
+    ja: [
+      '少し前まで、夜行列車は過去のものだと多くの人が思っていた。飛行機のほうが速く、格安航空会社のおかげで空の旅は安くなった。その結果、ヨーロッパでは多くの夜行の路線がなくなった。しかし近年、夜行列車が復活しつつある。',
+      '理由の1つは、環境への心配である。列車の旅は、同じきょりの飛行機よりも、ふつうずっと少ない二酸化炭素しか出さない。時間が長くかかっても、気候への影響を減らしたいという理由で列車を選ぶ旅行者もいる。',
+      '夜行列車には、ちがった種類の便利さもある。乗客は夜に乗りこみ、ベッドでねむり、次の朝には町の中心に着く。これで、空港まで行くのに必要な時間とホテル代の両方が節約できる。出張する人にとって、夜行列車は動くホテルのように感じられることもある。',
+      'とはいえ、すべてがかんたんなわけではない。夜行列車を走らせるにはお金がかかり、個室のきっぷは飛行機のきっぷより高いこともある。支持する人たちは、政府がこのサービスを手ごろな値段にする手助けをすべきだと主張し、一方で批判する人たちは、そのお金はほかに使ったほうがよいのではないかと疑問をもっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'うしろが文（they want to reduce …）なので接続詞 because。because of・due to・despite のあとは名詞。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a hotel を説明し、moves の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['make', 'making', 'made', 'to making'], answer: 0, why: 'help ＋ 原形「～するのを手伝う」（help to make も可）。make A B「A を B にする」。' },
+    ],
+    underline: {
+      phrase: 'making a comeback',
+      choices: ['becoming popular again', 'disappearing quickly', 'getting cheaper', 'changing their names'],
+      answer: 0,
+      why: 'make a comeback は「復活する・返り咲く」。becoming popular again が近い。',
+    },
+    order: {
+      words: ['far', 'less', 'carbon', 'dioxide'],
+      rest: 'than a flight',
+      answer: 'far less carbon dioxide',
+      ja: 'ずっと少ない二酸化炭素（far は比較級を強める）',
+    },
+    tf: [
+      { statement: 'かつて、ヨーロッパでは多くの夜行列車の路線がなくなった。', answer: true, why: '第1段落 many overnight routes in Europe were cut。' },
+      { statement: '列車の旅は、同じきょりの飛行機より二酸化炭素を多く出す。', answer: false, why: '第2段落 A train journey usually produces far less carbon dioxide than a flight。' },
+      { statement: '個室のきっぷは、飛行機のきっぷより高いこともある。', answer: true, why: '第4段落 tickets for private rooms can cost more than a plane ticket。' },
+    ],
+    qa: [
+      { q: 'How can a night train save passengers money?', choices: ['They do not need to pay for a hotel.', 'Its tickets are always cheaper than flights.', 'Meals on board are free.', 'They can work during the trip.'], answer: 0, why: '第3段落 This saves them both the time needed to travel to an airport and the cost of a hotel。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
