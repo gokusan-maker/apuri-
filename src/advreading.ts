@@ -4857,6 +4857,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-spicy',
+    title: 'Why Spicy Food Feels Hot',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Bite into a hot chili pepper and your mouth may feel as if it were on fire. Yet the pepper is not actually hot at all; its temperature is the same as that of the room. The burning feeling is ( A ) by a chemical called capsaicin.",
+      "Our mouths contain nerve cells with special receptors that normally respond to dangerous heat, such as a sip of very hot tea. Capsaicin happens to switch on these same receptors. The nerves then send a message to the brain, ( B ) interprets it as burning heat. This is why people eating spicy food often sweat and turn red, just as they would on a hot day.",
+      "Why would a plant produce such a chemical? One explanation involves the spreading of seeds. Mammals, whose teeth can crush seeds, are put off by capsaicin. Birds, however, are not sensitive to it, so they eat the peppers and carry the undamaged seeds far away in their droppings. In this way, the plant protects its seeds from animals that would destroy them while still getting help from animals that spread them.",
+      "If you ever eat something too spicy, drinking cold water may not help much. Capsaicin does not dissolve well in water, so the water simply spreads it around your mouth. A glass of milk is a better choice, ( C ) proteins in milk help wash the capsaicin away.",
+    ],
+    ja: [
+      '辛いとうがらしをかじると、口の中が燃えているように感じることがある。しかし、とうがらしは実際にはまったく熱くない。その温度は部屋の温度と同じだ。焼けるような感じは、カプサイシンという化学物質によって引き起こされている。',
+      '私たちの口には、ふつうはとても熱いお茶をすすったときのような危険な熱に反応する、特別な受容体をもつ神経細胞がある。カプサイシンは、たまたまこれと同じ受容体のスイッチを入れてしまう。すると神経が脳に信号を送り、脳はそれを焼けるような熱だと解釈する。辛いものを食べる人が、暑い日と同じように汗をかいたり顔が赤くなったりすることが多いのは、このためである。',
+      'なぜ植物はこんな化学物質をつくるのだろうか。1つの説明は、種をまき散らすことにかかわっている。歯で種をかみくだける哺乳類は、カプサイシンをいやがる。しかし鳥はカプサイシンを感じにくいので、とうがらしを食べ、傷ついていない種をふんにまじえて遠くまで運ぶ。このようにして植物は、種をこわしてしまう動物から種を守りつつ、種を広げてくれる動物の助けは得ているのである。',
+      'もし辛すぎるものを食べてしまったら、冷たい水を飲んでもあまり効かないかもしれない。カプサイシンは水にとけにくいので、水はそれを口の中に広げるだけだ。牛乳を1杯飲むほうがよい。牛乳のたんぱく質がカプサイシンを洗い流すのを助けるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['caused', 'causing', 'cause', 'to cause'], answer: 0, why: 'The burning feeling is ＿ by ～ で「～によって引き起こされる」受け身。be ＋ 過去分詞 caused。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで the brain を受け、interprets の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では2つの文がつながらない。' },
+      { id: 'C', choices: ['because', 'because of', 'due to', 'despite'], answer: 0, why: 'うしろが文（proteins in milk help …）なので接続詞 because。because of・due to・despite は前置詞の働きで文を続けられない。' },
+    ],
+    underline: {
+      phrase: 'are put off by capsaicin',
+      choices: ['dislike capsaicin and avoid it', 'are strongly attracted to capsaicin', 'are not affected by capsaicin at all', 'are made sleepy by capsaicin'],
+      answer: 0,
+      why: 'be put off by ～ は「～でいやになる・～に興味をなくす」。哺乳類はカプサイシンをいやがって、とうがらしを食べなくなるということ。',
+    },
+    order: {
+      words: ['carry', 'the', 'undamaged', 'seeds', 'far', 'away'],
+      rest: '',
+      answer: 'carry the undamaged seeds far away',
+      ja: '傷ついていない種を遠くまで運ぶ。（far away＝遠くへ）',
+    },
+    tf: [
+      { statement: 'とうがらしは、実際に部屋よりも温度が高い。', answer: false, why: '第1段落 its temperature is the same as that of the room。' },
+      { statement: 'カプサイシンは、熱に反応するのと同じ受容体のスイッチを入れる。', answer: true, why: '第2段落 Capsaicin happens to switch on these same receptors。' },
+      { statement: '鳥はカプサイシンを感じにくいので、とうがらしを食べる。', answer: true, why: '第3段落 Birds, however, are not sensitive to it, so they eat the peppers。' },
+      { statement: '辛すぎるときは、牛乳より冷たい水のほうが効く。', answer: false, why: '第4段落 drinking cold water may not help much … A glass of milk is a better choice。' },
+    ],
+    qa: [
+      { q: 'According to the passage, how does capsaicin help the pepper plant?', choices: ['It keeps away mammals that would crush the seeds.', 'It makes the peppers grow faster.', 'It attracts mammals that plant the seeds.', 'It keeps the plant warm in winter.'], answer: 0, why: '第3段落 Mammals, whose teeth can crush seeds, are put off by capsaicin … protects its seeds from animals that would destroy them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
