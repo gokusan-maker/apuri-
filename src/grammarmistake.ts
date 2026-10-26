@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'were-it-not': { wrong: 'If it is not for your help, I could not finish.', right: 'If it were not for your help, I could not finish.', why: '仮定法なので were を使う。' },
   'try-ing': { wrong: 'He tried lift the box.', right: 'He tried to lift the box.', why: '「～しようとする」は try to ＋ 原形。原形だけは続かない。' },
   'mean-ing': { wrong: 'I didn\'t mean hurt you.', right: 'I didn\'t mean to hurt you.', why: '「～するつもり」は mean to ＋ 原形。' },
   'lie-lay-forms': { wrong: 'I laid down on the sofa.', right: 'I lay down on the sofa.', why: '「横になった」は lie の過去形 lay。laid は「（物を）横にした」。' },
