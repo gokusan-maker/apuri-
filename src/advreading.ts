@@ -6670,6 +6670,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sleep-memory',
+    title: 'Learning While We Sleep',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Students who stay up all night before an exam often believe they are making the best use of their time. Research on sleep suggests the opposite. Sleep is not simply a period of rest ( A ) which the brain switches off; it is an active time in which new memories are strengthened.",
+      "In a typical experiment, people learn a list of word pairs in the evening. Some are then allowed to sleep, while others stay awake. The next day, those who slept usually remember more of the pairs, even though both groups spent the same amount of time studying.",
+      "Studies in animals have offered a clue to what is happening. When rats run through a maze, particular cells in a part of the brain called the hippocampus become active in a certain order. During sleep afterward, the same cells often fire again in a similar order, as if the brain ( B ) replaying the route. Many scientists believe that this kind of replay helps move information into long-term memory.",
+      "These findings have practical implications. Spreading study over several days, with sleep in between, is likely to be more effective than cramming everything into one long night. Giving up sleep to study may therefore mean giving up some of ( C ) one has studied.",
+    ],
+    ja: [
+      '試験の前の晩に徹夜する学生は、時間をいちばんうまく使っていると思いがちだ。しかし睡眠の研究は、その反対を示している。睡眠は、脳のスイッチが切れるただの休みの時間ではない。新しい記憶が強められる、活発な時間なのである。',
+      'よくある実験では、人々は夜に単語のペアのリストを覚える。そのあと一部の人はねむり、ほかの人は起きている。次の日、ねむった人のほうがふつう多くのペアを覚えている。どちらのグループも勉強した時間は同じなのにである。',
+      '動物の研究が、何が起きているのかの手がかりをあたえてくれた。ネズミが迷路を走ると、海馬とよばれる脳の部分の特定の細胞が、決まった順番で活動する。そのあとねむっている間に、同じ細胞がにたような順番でもう一度活動することが多い。まるで脳が道すじをくり返し再生しているかのようだ。多くの科学者は、こうした再生が、情報を長期記憶へ移すのに役立っていると考えている。',
+      'これらの発見は、実際の役に立つ。いくつもの日に勉強を分け、その間にねむるほうが、ひと晩にすべてをつめこむより効果的である可能性が高い。だから、勉強のために睡眠をけずることは、勉強したことの一部を手ばなすことになるのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['during', 'while', 'when', 'because'], answer: 0, why: '前置詞 ＋ 関係代名詞 during which「その間に」。while・when・because は接続詞で、which と組めない。' },
+      { id: 'B', choices: ['were', 'be', 'being', 'been'], answer: 0, why: 'as if のあとの仮定法過去。主語が単数でも be 動詞は were を使う（as if the brain were replaying）。' },
+      { id: 'C', choices: ['what', 'which', 'that', 'whose'], answer: 0, why: '「勉強したこと」は先行詞をふくむ関係代名詞 what（studied の目的語が欠けている）。which・that は先行詞が必要、whose のうしろには名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'cramming everything into one long night',
+      choices: ['trying to study everything in a single night', 'sleeping for a very long time', 'spreading study over many days', 'forgetting what one has studied'],
+      answer: 0,
+      why: 'cram ～ into … は「～を…につめこむ」。ひと晩ですべてをつめこんで勉強する、ということ。',
+    },
+    order: {
+      words: ['remember', 'more', 'of', 'the', 'pairs'],
+      rest: '',
+      answer: 'remember more of the pairs',
+      ja: 'ペアのうち、より多くを覚えている。（more of ～＝～のうちより多く）',
+    },
+    tf: [
+      { statement: '筆者によれば、睡眠中は脳のスイッチが切れている。', answer: false, why: '第1段落 Sleep is not simply a period of rest during which the brain switches off。' },
+      { statement: '実験では、ねむった人のほうが多くの単語のペアを覚えていた。', answer: true, why: '第2段落 those who slept usually remember more of the pairs。' },
+      { statement: 'ネズミの研究では、ねむっている間に同じ細胞がにた順番で活動した。', answer: true, why: '第3段落 the same cells often fire again in a similar order。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest is more effective than studying all night?', choices: ['Spreading study over several days with sleep in between.', 'Studying only in the morning.', 'Studying with rats.', 'Taking no breaks at all.'], answer: 0, why: '第4段落 Spreading study over several days, with sleep in between, is likely to be more effective。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
