@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'so-far-by-then': { wrong: 'So far, I visited five countries.', right: 'So far, I have visited five countries.', why: 'so far（今までのところ）は現在完了といっしょに使う。' },
   'afraid-of-to': { wrong: "Don't be afraid of make mistakes.", right: "Don't be afraid of making mistakes.", why: '前置詞 of のあとは -ing。' },
   'go-on-ing-to': { wrong: 'She went on to talking for an hour.', right: 'She went on talking for an hour.', why: '「～し続ける」は go on -ing。to はいらない。' },
   'it-seems-that': { wrong: 'He seems that he is tired.', right: 'It seems that he is tired.', why: 'that ＋ 文を続けるときの主語は It。人を主語にするなら He seems to be tired.' },

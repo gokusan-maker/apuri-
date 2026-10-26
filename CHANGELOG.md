@@ -2302,3 +2302,4 @@
 - 2026-10-26: 文法に「be afraid of -ing ／ be afraid to ～」「go on -ing ／ go on to ～」の単元を追加
 - 2026-10-26: TOEIC にメール文「Email: Your Catering Order」（ケータリングの注文）を追加
 - 2026-10-26: 地図で新しいゾーンに入ると「新しいゾーンに到着！」のお知らせが出るように
+- 2026-10-26: 文法に「完了形と時の言葉（so far ／ by then ／ by the end of ～）」の単元を追加
