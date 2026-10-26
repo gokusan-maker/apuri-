@@ -1543,6 +1543,7 @@
 - [x] 長文：高校入試（はじめてのレース）・国公立（都会の鳥の歌）・共通テスト（時間どおりの電車）を1本ずつ
 - [x] 数の聞き取りに自己ベスト（問題中に「🏅ベスト」、更新すると「🎉 自己ベスト更新！」）
 - [x] 高校の文法単元を2つ追加：agree with ／ agree to ／ agree on・depend on ／ It depends
+- [x] 高校の文法単元を2つ追加：succeed in -ing ／ fail to・graduate from ／ complain about ／ complain to
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

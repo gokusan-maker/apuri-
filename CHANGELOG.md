@@ -2230,3 +2230,4 @@
 - 2026-10-26: 数の聞き取りの問題中に自己ベスト（🏅ベスト n）を表示
 - 2026-10-26: 文法に「agree with ／ agree to ／ agree on」と「depend on ／ It depends」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: 共通テストレベルの長文「時間どおりに走る電車」を追加（空所・下線部・語句整序つき）
+- 2026-10-26: 文法に「succeed in -ing ／ fail to」と「graduate from ／ complain about ／ complain to」の単元を追加（よくあるまちがいつき）
