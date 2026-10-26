@@ -6953,6 +6953,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-catering',
+    title: 'Email: Your Catering Order',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Kato, Thank you for choosing Green Table Catering for your company's anniversary party on June 14. As requested, we will provide lunch for 60 guests, including sandwiches, salads, fruit, and drinks. We will arrive at your office at 11:00 a.m. to set everything up ( A ) the party begins at noon.",
+      "In your last email, you mentioned that eight of your guests do not eat meat. We would be happy to prepare vegetarian meals for them at no extra cost. Please also let us know if any guests have food allergies, ( B ) we can plan the menu carefully.",
+      "The total price for the order is $1,200. A deposit of 30 percent is required to confirm the reservation, and the remaining amount can be paid on the day of the event. Please note that changes to the number of guests must be made no later than June 7.",
+      "If you have any questions, please do not hesitate to contact me. We look forward to ( C ) your special day a success. Best regards, Lisa Moreno, Event Coordinator, Green Table Catering",
+    ],
+    ja: [
+      '加藤様。6月14日の御社の創立記念パーティーにグリーン・テーブル・ケータリングをお選びいただき、ありがとうございます。ご依頼のとおり、サンドイッチ、サラダ、果物、飲み物をふくむ60名様分の昼食をご用意いたします。正午にパーティーが始まる前に準備をすべて整えるため、午前11時に御社へうかがいます。',
+      '前回のメールで、お客様のうち8名が肉を召し上がらないとうかがいました。その方々には、追加料金なしでベジタリアンの食事をご用意いたします。メニューを注意深く考えられるよう、食物アレルギーのある方がいらっしゃればお知らせください。',
+      'ご注文の合計金額は1,200ドルです。予約の確定には30パーセントの前払い金が必要で、残りの金額はイベント当日にお支払いいただけます。人数の変更は6月7日までにお願いいたします。',
+      'ご不明な点があれば、どうぞお気軽にご連絡ください。特別な一日が成功するよう、お手伝いできることを楽しみにしております。グリーン・テーブル・ケータリング　イベント担当　リサ・モレノ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'by', 'during', 'despite'], answer: 0, why: 'うしろが文（the party begins at noon）なので接続詞 before「～する前に」。by・during・despite は前置詞で、文を続けられない。' },
+      { id: 'B', choices: ['so that', 'in order', 'because of', 'such'], answer: 0, why: 'so that ＋ 主語 ＋ can ～「～が…できるように」。in order のあとは to ＋ 原形、because of のあとは名詞。' },
+      { id: 'C', choices: ['making', 'make', 'made', 'to make'], answer: 0, why: 'look forward to ～ の to は前置詞なので、あとは動名詞 making。make A B「A を B にする」。' },
+    ],
+    underline: {
+      phrase: 'no later than',
+      choices: ['by', 'after', 'around', 'instead of'],
+      answer: 0,
+      why: 'no later than ～ は「～よりおそくなく」＝「～までに」。by と同じ意味。',
+    },
+    order: {
+      words: ['at', 'no', 'extra', 'cost'],
+      rest: '',
+      answer: 'at no extra cost',
+      ja: '追加料金なしで',
+    },
+    tf: [
+      { statement: 'パーティーは正午に始まる。', answer: true, why: '第1段落 the party begins at noon。' },
+      { statement: '肉を食べない8人のための食事には、追加料金がかかる。', answer: false, why: '第2段落 at no extra cost。' },
+      { statement: '人数の変更は6月7日までにしなければならない。', answer: true, why: '第3段落 changes to the number of guests must be made no later than June 7。' },
+    ],
+    qa: [
+      { q: 'How much must be paid to confirm the reservation?', choices: ['30 percent of the total price.', 'The full $1,200.', 'Nothing until the event.', '$60 for each guest.'], answer: 0, why: '第3段落 A deposit of 30 percent is required to confirm the reservation。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

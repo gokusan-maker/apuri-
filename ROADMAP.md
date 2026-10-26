@@ -1617,6 +1617,8 @@
 
 - [x] 文法の単元「be afraid of -ing ／ be afraid to ～」と「go on -ing ／ go on to ～」を追加（よくあるまちがいつき）
 
+- [x] TOEIC に自作のメール文「Email: Your Catering Order」を追加（ケータリングの注文・185語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
