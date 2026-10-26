@@ -2365,3 +2365,4 @@
 - 2026-10-26: 文法に「It is believed that ～ ＝ S is believed to ～」の単元を追加（文法は420単元に）
 - 2026-10-26: TOEIC にお知らせ文「Notice: Employee Referral Program」（社員紹介制度）を追加
 - 2026-10-26: 文法に「部分を表す言葉と動詞の形（half of など）」の単元を追加
+- 2026-10-26: TOEFL（生物）に長文「Tiny Masters of the Air」（ハチドリ）を追加

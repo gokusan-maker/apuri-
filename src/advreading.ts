@@ -7813,6 +7813,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-hummingbirds',
+    title: 'Tiny Masters of the Air',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Hummingbirds, found only in the Americas, are among the most remarkable birds in the world. The smallest species, the bee hummingbird of Cuba, is only about five centimeters long and weighs about two grams. Despite their size, these birds are skilled fliers.",
+      "A hummingbird's wings can beat dozens of times per second, ( A ) makes the humming sound that gives the bird its name. Unlike most birds, hummingbirds can hover in one place and even fly backward. This allows them to drink nectar from flowers while staying still in the air.",
+      "Such flying requires a huge amount of energy. To get enough fuel, a hummingbird must visit hundreds of flowers every day. At night, when it cannot feed, it may enter a sleep-like state called torpor, ( B ) its heart rate and body temperature drop sharply to save energy.",
+      "As they feed, hummingbirds carry pollen from one flower to another, helping plants ( C ) seeds. Many flowers that depend on hummingbirds are red and shaped like long tubes, which fit the birds' long beaks.",
+    ],
+    ja: [
+      'アメリカ大陸にだけすむハチドリは、世界でもっともおどろくべき鳥のなかまである。いちばん小さい種類であるキューバのマメハチドリは、体長わずか5センチメートルほどで、体重は約2グラムしかない。小さな体なのに、この鳥たちは飛ぶのがとても上手だ。',
+      'ハチドリのつばさは1秒に何十回もはばたくことができ、それがこの鳥の名前のもとになったブーンという音を生む。ほとんどの鳥とちがって、ハチドリは1か所でとどまって飛んだり、後ろ向きに飛んだりさえできる。そのおかげで、空中でじっとしたまま花のみつを飲むことができる。',
+      'このような飛び方には、ばく大なエネルギーが必要だ。十分なエネルギーを得るため、ハチドリは毎日何百もの花を訪れなければならない。食べることのできない夜には、休眠状態とよばれるねむりのような状態に入ることがある。その状態では、エネルギーを節約するために心拍数と体温が大きく下がる。',
+      'みつを吸うとき、ハチドリは花から花へと花粉を運び、植物が種を作るのを助けている。ハチドリにたよる花の多くは赤く、長い管のような形をしていて、ハチドリの長いくちばしにぴったり合う。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（つばさのはばたき）を受ける非制限用法の which。that はコンマのあとで使えない、what は先行詞をとらない、it だとコンマだけで文がつながってしまう。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'where in'], answer: 0, why: '「その状態の中で」心拍数が下がるので in which（＝ where）。うしろは欠けのない文なので which だけでは使えない。' },
+      { id: 'C', choices: ['produce', 'producing', 'produced', 'to producing'], answer: 0, why: 'help ＋ 人・物 ＋ 原形「～が…するのを助ける」（to produce も可）。' },
+    ],
+    underline: {
+      phrase: 'remarkable',
+      choices: ['worth noticing', 'very common', 'very dangerous', 'easily forgotten'],
+      answer: 0,
+      why: 'remarkable は「注目すべき・おどろくべき」。worth noticing と同じ意味。',
+    },
+    order: {
+      words: ['hover', 'in', 'one', 'place'],
+      rest: '',
+      answer: 'hover in one place',
+      ja: '1か所でとどまって飛ぶ（hover＝空中にとどまる）',
+    },
+    tf: [
+      { statement: 'ハチドリは、アメリカ大陸にしかいない。', answer: true, why: '第1段落 found only in the Americas。' },
+      { statement: 'ハチドリは、後ろ向きに飛ぶことはできない。', answer: false, why: '第2段落 hummingbirds can hover in one place and even fly backward。' },
+      { statement: 'ハチドリは、夜にエネルギーを節約することがある。', answer: true, why: '第3段落 its heart rate and body temperature drop sharply to save energy。' },
+    ],
+    qa: [
+      { q: 'Why must hummingbirds visit so many flowers each day?', choices: ['Their way of flying uses a huge amount of energy.', 'They need to build many nests.', 'They live inside flowers.', 'They carry water to other birds.'], answer: 0, why: '第3段落 Such flying requires a huge amount of energy. To get enough fuel, a hummingbird must visit hundreds of flowers every day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
