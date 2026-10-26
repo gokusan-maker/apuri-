@@ -178,10 +178,10 @@ type WordTab = 'card' | 'mini' | 'time' | 'stage'
 
 const TABS: { id: Tab; icon: string; label: string }[] = [
   { id: 'home', icon: '🏠', label: 'ホーム' },
-  { id: 'word', icon: '🔤', label: '単語ゲーム' },
-  { id: 'grammar', icon: '📐', label: '文法チャレンジ' },
-  { id: 'reading', icon: '📖', label: '読解ステージ' },
-  { id: 'boss', icon: '👹', label: 'ボス部屋' },
+  { id: 'word', icon: '🔤', label: '単語' },
+  { id: 'grammar', icon: '📐', label: '文法' },
+  { id: 'reading', icon: '📖', label: '読解' },
+  { id: 'boss', icon: '👹', label: 'ボス' },
   { id: 'settings', icon: '⚙️', label: '設定' },
 ]
 
@@ -2101,7 +2101,7 @@ function App() {
       ) : mode === 'grammar' && grammarDrill ? (
         <>
           <button className="stage-back" onClick={() => setGrammarDrill(null)}>
-            ← 文法チャレンジ
+            ← 文法
           </button>
           <Quiz key={`drill:${grammarDrill}`} direction={grammarDrill} lockDirection words={words} onAnswer={onAnswerTrack('grammar')} onXp={(n) => feedTrack('grammar', n)} onCoins={(n) => setWallet((w) => ({ ...w, coins: w.coins + n }))} />
         </>

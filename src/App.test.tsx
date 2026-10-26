@@ -14,7 +14,7 @@ const FIRST = () => buildQueue(WORDS, {}, dayKey(), 0)
 const DEFAULT_N = wordsOf(LEVELS.filter((l) => !OPT_IN_LEVELS.includes(l))).length
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
 const goMini = () => {
-  navTo('単語ゲーム')
+  navTo('単語')
   const b = screen.queryByRole('button', { name: /単語のミニゲーム/ }) // 城の下のボタンからミニゲームのえらぶ画面へ
   if (b) fireEvent.click(b)
 }
@@ -64,13 +64,13 @@ describe('App', () => {
   it('単語・文法・読解のページは上にキャラクター、その下に今日の課題。ボス部屋のいちばん上は3体（オーナー要望）', () => {
     render(<App />)
     const before = (a: Element | null, b: Element | null) => !!a && !!b && !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
-    navTo('単語ゲーム')
+    navTo('単語')
     expect(before(document.querySelector('.ally-word'), screen.getByRole('button', { name: /^今日の課題（単語）：/ }))).toBe(true)
-    navTo('文法チャレンジ')
+    navTo('文法')
     expect(before(document.querySelector('.ally-grammar'), screen.getByRole('button', { name: /^今日の課題（文法）：/ }))).toBe(true)
-    navTo('読解ステージ')
+    navTo('読解')
     expect(before(document.querySelector('.ally-reading'), document.querySelector('.today-read-btn'))).toBe(true)
-    navTo('ボス部屋')
+    navTo('ボス')
     expect(document.querySelector('.ally-reading')).toBeNull() // 竜だけの札ではなく
     expect(before(document.querySelector('.buddy-row, [class*="buddy-row"]'), document.querySelector('.boss-chips'))).toBe(true) // 3体ならんだ列が上
   })
@@ -88,7 +88,7 @@ describe('App', () => {
   it('読解ステージのいちばん上に「今日の読解」があり、押すとその英文が始まる', async () => {
     const { dailyShort } = await import('./dailyread')
     render(<App />)
-    navTo('読解ステージ')
+    navTo('読解')
     const p = dailyShort(dayKey())
     const btn = screen.getByRole('button', { name: `今日の読解：${p.title}` })
     expect(btn.compareDocumentPosition(document.querySelector('.lvpick')!) & Node.DOCUMENT_POSITION_PRECEDING).toBeTruthy() // レベルえらびはキャラのすぐ下
@@ -218,7 +218,7 @@ describe('App', () => {
     localStorage.clear()
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
     render(<App />)
-    navTo('文法チャレンジ')
+    navTo('文法')
     const bar = () => screen.getByRole('progressbar', { name: '文法のなかまの経験値' })
     expect(bar()).toHaveAttribute('aria-valuenow', '0')
     await freeGrammarFirst()
@@ -332,7 +332,7 @@ describe('App', () => {
     expect(screen.getByText(/^今日 1 しゅるいあそんだ・あと4で🪙/)).toBeInTheDocument()
   })
 
-  it('画面下のタブで ホーム／単語ゲーム／文法チャレンジ／読解ステージ／ボス部屋／設定 を切り替えられる', () => {
+  it('画面下のタブで ホーム／単語／文法／読解／ボス／設定 を切り替えられる', () => {
     render(<App />)
     const tab = (name: string) => within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByRole('button', { name: new RegExp(name) })
     expect(tab('ホーム')).toHaveAttribute('aria-current', 'page')
@@ -358,9 +358,9 @@ describe('App', () => {
     fireEvent.click(tab('読解'))
     expect(screen.getByRole('button', { name: /^読解のレベル：/ })).toBeInTheDocument()
     expect(screen.queryByRole('tab', { name: '👹 ボス' })).toBeNull()
-    fireEvent.click(tab('ボス部屋'))
+    fireEvent.click(tab('ボス'))
     expect(document.querySelector('section.stages')).not.toBeNull()
-    expect(tab('ボス部屋')).toHaveAttribute('aria-current', 'page')
+    expect(tab('ボス')).toHaveAttribute('aria-current', 'page')
     fireEvent.click(tab('設定'))
     expect(tab('設定')).toHaveAttribute('aria-current', 'page')
   })
@@ -747,7 +747,7 @@ describe('App', () => {
     localStorage.setItem('eitan:keys', '3')
     localStorage.setItem('eitan:wallet', JSON.stringify({ coins: 0, owned: [] }))
     render(<App />)
-    navTo('ボス部屋')
+    navTo('ボス')
     fireEvent.click(screen.getByText(/金の宝箱をあける/))
     const w = JSON.parse(localStorage.getItem('eitan:wallet')!)
     expect(w.coins).toBe(30)
@@ -985,7 +985,7 @@ describe('App', () => {
     window.scrollTo = scroll as unknown as typeof window.scrollTo
     render(<App />)
     expect(screen.getByText('🎰 ガチャをひく！')).toBeInTheDocument()
-    navTo('ボス部屋')
+    navTo('ボス')
     expect(screen.queryByText('📊 記録')).toBeNull()
     expect(screen.queryByText('🎰 ガチャをひく！')).not.toBeInTheDocument()
     await new Promise((r) => requestAnimationFrame(() => r(null)))
@@ -1139,7 +1139,7 @@ describe('App', () => {
     const { passagesFor } = await import('./readlevel')
     localStorage.clear()
     render(<App />)
-    navTo('読解ステージ')
+    navTo('読解')
     expect(screen.getByRole('region', { name: '読解ミニの山' })).toBeInTheDocument() // はじめは中1（城の上の説明はない）
     fireEvent.click(screen.getByRole('button', { name: /^読解のレベル：/ }))
     fireEvent.click(screen.getByRole('option', { name: /^国公立/ }))
@@ -1166,7 +1166,7 @@ describe('App', () => {
     localStorage.setItem('eitan:buddies', JSON.stringify({ grammar: { xp: 19 }, reading: { xp: 0 } }))
     render(<App />)
     const rnd = vi.spyOn(Math, 'random').mockReturnValue(0)
-    navTo('文法チャレンジ')
+    navTo('文法')
     await freeGrammarFirst()
     rnd.mockRestore()
     const q = GRAMMAR[0].questions[0]
@@ -1191,16 +1191,16 @@ describe('App', () => {
     expect(screen.queryByText('意味を見る')).toBeNull() // 今日の単語はホームではなく単語ゲームのページ
     // ホームは今日の課題のすぐ下が記録
     expect(screen.getByLabelText('今日の課題').nextElementSibling!.textContent).toContain('📊 記録')
-    navTo('単語ゲーム')
+    navTo('単語')
     expect(screen.getByRole('button', { name: /^今日の課題（単語）：/ })).toBeInTheDocument() // 海の地図の下
     goCards()
     expect(screen.getByText('意味を見る')).toBeInTheDocument() // 単語ゲームのいちばん上は今日の課題（単語）
-    navTo('文法チャレンジ')
+    navTo('文法')
     fireEvent.click(screen.getByRole('button', { name: /^今日の課題（文法）：/ })) // 文法チャレンジの上は今日の課題（文法）のボタン
     expect(screen.getByLabelText('今日の文法')).toBeInTheDocument() // 押すと今日の文法の問題が出る
-    navTo('単語ゲーム')
+    navTo('単語')
     expect(document.querySelector('details.home-play')).toBeNull()
-    navTo('文法チャレンジ')
+    navTo('文法')
     expect(document.querySelector('details.home-play')).toBeNull()
     navTo('設定')
     const d = document.querySelector('details.home-play') as HTMLDetailsElement
@@ -1456,7 +1456,7 @@ describe('App', () => {
   it('単語帳の選択はホーム・単語ゲームにはなく、設定で選ぶ', () => {
     render(<App />)
     expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
-    navTo('単語ゲーム')
+    navTo('単語')
     expect(screen.queryByRole('group', { name: '単語帳' })).not.toBeInTheDocument()
     navTo('設定')
     expect(screen.getByRole('group', { name: '単語帳' })).toBeInTheDocument()
@@ -1775,10 +1775,10 @@ it('音読・読み上げは、ページ（下のタブ）が変わると止ま�
   Object.defineProperty(window, 'speechSynthesis', { value: { cancel: () => cancels++, speak() {}, getVoices: () => [] }, configurable: true })
   render(<App />)
   const before = cancels
-  navTo('読解ステージ')
+  navTo('読解')
   expect(cancels).toBeGreaterThan(before)
   const mid = cancels
-  navTo('文法チャレンジ')
+  navTo('文法')
   expect(cancels).toBeGreaterThan(mid)
   delete (window as { speechSynthesis?: unknown }).speechSynthesis
 })
@@ -1801,7 +1801,7 @@ it('ボス部屋でボスをえらぶと戦いだけの画面になり、上の�
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   render(<App />)
-  navTo('ボス部屋')
+  navTo('ボス')
   fireEvent.click(screen.getByRole('button', { name: /中1のボス「.+」に挑戦/ }))
   expect(screen.queryByLabelText('育てているなかま')).toBeNull()
   expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull()
@@ -1814,10 +1814,10 @@ it('問題の画面で、いまのタブ（文法チャレンジ）をもう一�
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   render(<App />)
-  navTo('文法チャレンジ')
+  navTo('文法')
   await freeGrammarFirst()
   expect(screen.getByRole('button', { name: /ほかの問題をえらぶ/ })).toBeInTheDocument()
-  navTo('文法チャレンジ')
+  navTo('文法')
   expect(screen.queryByRole('button', { name: /ほかの問題をえらぶ/ })).toBeNull()
 })
 
@@ -1825,7 +1825,7 @@ it('文法ページは城と今日の課題と「単元をえらんで自由に�
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
   render(<App />)
-  navTo('文法チャレンジ')
+  navTo('文法')
   expect(screen.queryByLabelText('文法ゲーム')).toBeNull()
   expect(screen.queryByText('✏️ すぐ練習（5問）')).toBeNull()
   expect(document.querySelector('.smap')).not.toBeNull()
@@ -2002,7 +2002,7 @@ it('今日の課題を3つとも終えてトリオボーナスを受け取った
   localStorage.setItem('eitan:trio-day', day)
   render(<App />)
   expect(screen.queryByLabelText('今日の課題')).toBeNull()
-  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法チャレンジ'))
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('文法'))
   expect(screen.queryByRole('button', { name: /今日の課題（文法）/ })).toBeNull()
 })
 
@@ -2012,7 +2012,7 @@ it('単語ゲームのページに単語の城：単元の1階目は10語の解�
   localStorage.setItem('eitan:onboarded', '1')
   localStorage.setItem('eitan:levels', JSON.stringify(['中1']))
   render(<App />)
-  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語ゲーム'))
+  fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText('単語'))
   const castle = screen.getByRole('region', { name: '中1の海' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1 単元1　1\/3/ }))
   const f = wordCastleFloorsFor('中1')[0]
