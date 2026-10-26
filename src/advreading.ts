@@ -7152,6 +7152,39 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-fire-station',
+    title: 'Three Days at the Fire Station',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last month, I joined a three-day work experience program at a fire station near my school. Before that, I thought firefighters only put out fires. However, I soon learned that their job is much bigger than that.",
+      "On the first day, a firefighter named Mr. Ota showed me the trucks and the equipment. The protective clothes were so heavy that I could hardly walk in them. He told me that firefighters train every day ( A ) they can move quickly even in heavy clothes.",
+      "The next day, an emergency call came while we were eating lunch. In less than one minute, everyone had left the table and was in the truck. Later, I learned that most of their calls are not about fires. Many are about people ( B ) are sick or injured.",
+      "On the last day, I helped the firefighters teach fire safety to small children. The children practiced crawling low under the smoke and calling 119. When they did it well, Mr. Ota smiled and said, \"Teaching people how to protect themselves is as important as ( C ) out fires.\"",
+      "Through this program, I learned that firefighters protect our town in many ways. I want to thank them, and I also want to learn more about how I can help keep my family safe.",
+    ],
+    ja: [
+      '先月、私は学校の近くの消防署で、3日間の職場体験に参加しました。それまでは、消防士は火を消すだけだと思っていました。しかし、その仕事はそれよりずっと大きいことを、すぐに知りました。',
+      '1日目、太田さんという消防士が、消防車や道具を見せてくれました。防火服はとても重くて、着たままではほとんど歩けませんでした。太田さんは、重い服を着ていてもすばやく動けるように、消防士は毎日訓練していると教えてくれました。',
+      '次の日、私たちが昼ごはんを食べているときに、緊急の通報が入りました。1分もしないうちに、みんなテーブルをはなれて消防車に乗っていました。あとで、通報のほとんどは火事についてのものではないと知りました。多くは、病気やけがをした人についての通報なのです。',
+      '最終日、私は消防士たちが小さな子どもたちに火の安全を教えるのを手伝いました。子どもたちは、けむりの下を低くはって進む練習と、119番に電話する練習をしました。子どもたちが上手にできると、太田さんはほほえんで言いました。「自分の身を守る方法を教えることは、火を消すことと同じくらい大切なんだよ。」',
+      'この体験を通して、消防士はいろいろな方法で私たちの町を守っていると知りました。消防士の皆さんに感謝したいですし、家族の安全を守るために自分に何ができるかも、もっと学びたいと思います。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'because of', 'such as', 'in order'], answer: 0, why: 'so that ＋ 主語 ＋ can ～「～が…できるように」。because of・such as のあとは名詞、in order のあとは to ＋ 原形。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）を説明し、are の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'C', choices: ['putting', 'put', 'puts', 'to putting'], answer: 0, why: '主語の Teaching（動名詞）と形をそろえて、as important as putting out fires「火を消すことと同じくらい大切」。前置詞のはたらきの as のあとは -ing。' },
+    ],
+    tf: [
+      { statement: '筆者は以前、消防士は火を消すだけだと思っていた。', answer: true, why: '第1段落 I thought firefighters only put out fires。' },
+      { statement: '防火服は軽くて、とても動きやすかった。', answer: false, why: '第2段落 The protective clothes were so heavy that I could hardly walk in them。' },
+      { statement: '消防署への通報のほとんどは、火事についてのものだ。', answer: false, why: '第3段落 most of their calls are not about fires。' },
+      { statement: '最終日、筆者は小さな子どもたちに火の安全を教える手伝いをした。', answer: true, why: '第4段落 I helped the firefighters teach fire safety to small children。' },
+    ],
+    qa: [
+      { q: 'What did the children practice on the last day?', choices: ['Crawling low under the smoke and calling 119.', 'Driving a fire truck.', 'Putting on heavy clothes.', 'Cooking lunch for the firefighters.'], answer: 0, why: '第4段落 The children practiced crawling low under the smoke and calling 119。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
