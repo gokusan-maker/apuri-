@@ -4986,6 +4986,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-fermentation',
+    title: 'Fermentation: Cooking with Invisible Helpers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long before anyone knew that microorganisms existed, people around the world were using them to make food. Bread, cheese, yogurt, soy sauce, and kimchi all depend on fermentation, a process in which tiny living things such as bacteria and yeasts break down sugars in food. Our ancestors did not understand what was happening, but they noticed ( A ) certain conditions turned milk into yogurt or cabbage into a sour, long-lasting dish.",
+      "Fermentation was valuable mainly because it helped food last longer. When lactic acid bacteria ferment vegetables or milk, they produce acid, which makes it difficult for harmful bacteria to grow. In a world without refrigerators, this was one of the few ways to store food through a long winter. Fermentation can also change flavors and textures, ( B ) explains why the same cabbage can taste completely different after a few weeks in a jar.",
+      "Today, scientists are studying fermented foods for another reason. Some fermented foods contain live bacteria, and researchers are investigating whether these microbes might affect the community of bacteria living in our digestive system. The results so far are promising but not yet conclusive, and experts warn against believing every claim made on product labels.",
+      "Whatever science eventually discovers, fermentation remains a remarkable example of human creativity. Without understanding the biology, people learned to work with invisible organisms, ( C ) foods that are still enjoyed by millions of people every day.",
+    ],
+    ja: [
+      '微生物が存在することをだれも知らなかったずっと前から、世界中の人々は微生物を使って食べ物をつくっていた。パン、チーズ、ヨーグルト、しょうゆ、キムチは、どれも発酵にたよっている。発酵とは、細菌や酵母のような小さな生き物が食べ物の糖を分解するはたらきのことだ。祖先たちは何が起きているのかわかっていなかったが、ある条件のもとで、牛乳がヨーグルトに、キャベツがすっぱくて長もちする料理に変わることに気づいていた。',
+      '発酵が貴重だったのは、おもに食べ物を長もちさせたからである。乳酸菌が野菜や牛乳を発酵させると酸ができ、それが有害な細菌をふえにくくする。冷蔵庫のない世界では、これは長い冬のあいだ食べ物をたくわえる数少ない方法の1つだった。発酵は味や食感を変えることもあり、それが、同じキャベツがびんの中で数週間たつとまったくちがう味になる理由である。',
+      '今日、科学者たちは別の理由で発酵食品を研究している。発酵食品の中には生きた細菌をふくむものがあり、研究者は、こうした微生物が私たちの消化管にすむ細菌の集まりに影響するかどうかを調べている。これまでの結果は有望だが、まだ決定的ではなく、専門家は商品のラベルに書かれた主張をすべて信じないよう注意している。',
+      '科学が最終的に何を明らかにするにせよ、発酵は人間の創意工夫のすばらしい例であることに変わりはない。生物学を理解しないまま、人々は目に見えない生き物と協力することを学び、今も毎日何百万もの人に楽しまれている食べ物を生み出してきたのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'noticed の目的語になる名詞節を作る接続詞 that。うしろの文（certain conditions turned …）に欠けた部分がないので、what・which・whose は入らない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の文の内容を受け、explains の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では2つの文がつながらない。' },
+      { id: 'C', choices: ['producing', 'produced', 'produce', 'to producing'], answer: 0, why: 'コンマのあとに「そして～を生み出した」と結果をそえる分詞構文 producing。produced・produce では接続詞なしで動詞が2つ並び、to producing という形もない。' },
+    ],
+    underline: {
+      phrase: 'not yet conclusive',
+      choices: ['not yet certain enough to be accepted as fact', 'already completely proven', 'clearly wrong', 'not interesting to scientists'],
+      answer: 0,
+      why: 'conclusive は「決定的な・結論を出せる」。not yet conclusive で「まだはっきりした結論は出ていない」という意味。',
+    },
+    order: {
+      words: ['helped', 'food', 'last', 'longer'],
+      rest: '',
+      answer: 'helped food last longer',
+      ja: '食べ物を長もちさせた。（help O 原形＝O が～するのを助ける、last＝もつ・続く）',
+    },
+    tf: [
+      { statement: '昔の人は、微生物のはたらきを理解したうえで発酵食品をつくっていた。', answer: false, why: '第1段落 Our ancestors did not understand what was happening。' },
+      { statement: '乳酸菌がつくる酸は、有害な細菌をふえにくくする。', answer: true, why: '第2段落 they produce acid, which makes it difficult for harmful bacteria to grow。' },
+      { statement: '発酵食品が体によいことは、すでに完全に証明されている。', answer: false, why: '第3段落 The results so far are promising but not yet conclusive。' },
+    ],
+    qa: [
+      { q: 'Why was fermentation especially valuable in the past?', choices: ['It helped people store food through long winters.', 'It made food cheaper to buy.', 'It removed all bacteria from food.', 'It made cooking faster.'], answer: 0, why: '第2段落 In a world without refrigerators, this was one of the few ways to store food through a long winter。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
