@@ -493,3 +493,37 @@ export function attackElemOf(color: string): AttackElem {
   if (deg < 250) return ELEMS.ice
   return ELEMS.dark
 }
+
+// ボスのとくぎ：ボスごとに1つ（名前で決まる）。バトル中に発動してじゃまをする
+export type BossTrait = 'regen' | 'armor' | 'drain' | 'quick'
+export const BOSS_TRAITS: Record<BossTrait, { icon: string; name: string; desc: string }> = {
+  regen: { icon: '💚', name: 'さいせい', desc: 'HPが半分を切ると、1回だけHPを回復' },
+  armor: { icon: '🛡', name: 'かたいウロコ', desc: '正解のダメージ -2' },
+  drain: { icon: '🧛', name: 'きゅうしゅう', desc: 'まちがえるとボスのHPが回復' },
+  quick: { icon: '💨', name: 'すばやさ', desc: '会心の一撃の時間が短い' },
+}
+const TRAIT_ORDER: BossTrait[] = ['regen', 'armor', 'drain', 'quick']
+export const REGEN_RATE = 0.15 // さいせい：最大HPの15%
+export const ARMOR_BLOCK = 2
+export const DRAIN_HEAL = 6
+export const QUICK_RATE = 0.7 // すばやさ：会心の時間が7割に
+export function traitOf(name: string): BossTrait {
+  const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
+  return TRAIT_ORDER[k % TRAIT_ORDER.length]
+}
+// 正解したあとのボスのHP（とくぎ込み）。armor：ダメージ-2（最低1）、regen：半分を切ったら1回だけ回復
+export function traitAfterHit(trait: BossTrait, hp: number, nextHp: number, maxHp: number, regenUsed: boolean): { hp: number; blocked: number; healed: number } {
+  let n = nextHp
+  let blocked = 0
+  if (trait === 'armor' && n > 0) {
+    const m = Math.min(hp - 1, n + ARMOR_BLOCK)
+    blocked = Math.max(0, m - n)
+    n = Math.max(n, m)
+  }
+  let healed = 0
+  if (trait === 'regen' && !regenUsed && n > 0 && n <= maxHp / 2) {
+    healed = Math.min(maxHp - n, Math.round(maxHp * REGEN_RATE))
+    n += healed
+  }
+  return { hp: n, blocked, healed }
+}

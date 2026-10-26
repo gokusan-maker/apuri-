@@ -16,7 +16,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp } from './boss'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, traitAfterHit, traitOf } from './boss'
 import { quizXp, speciesOf, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
@@ -289,6 +289,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crits, setCrits] = useState(0)
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
+  const trait = traitOf(baseLook.name) // ボスのとくぎ
+  const [traitMsg, setTraitMsg] = useState('') // とくぎが発動したとき
+  const [regenUsed, setRegenUsed] = useState(false)
   const [trioAt, setTrioAt] = useState(-1) // 合体技を出した問題の番号
   const [teamHits, setTeamHits] = useState<Record<TeamRole, number>>({ word: 0, grammar: 0, reading: 0 }) // なかまごとの正解数
   const [usedItems, setUsedItems] = useState<BattleItemId[]>([]) // 1戦1回ずつ
@@ -342,6 +345,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (picked !== null || won || lost) return
     setPicked(i)
     setSkillMsg('')
+    setTraitMsg('')
     if (i === q.answer) {
       const rq = q as Partial<ReadingQ>
       if (rq.blank && rq.passage) setSolved((v) => [...v, `${rq.passage!.id}:${rq.blank}`])
@@ -353,7 +357,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const ms = nowMs() - shownAt.current
       if (q.word.id && (!mvp || ms < mvp.ms)) setMvp({ en: q.word.en, ja: q.word.ja, ms })
       const slow = usedItems.includes('clock') ? 2 : 1
-      const critical = isCritical(ms, (skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs)
+      const critical = isCritical(ms, ((skill ? skillCritMs(skill.id, CRIT_MS, lv) : CRIT_MS) * slow + sup.critMs) * (trait === 'quick' ? QUICK_RATE : 1))
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
         onSkill?.()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
@@ -372,7 +376,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setTrioAt(index)
       }
       const atk = teamOn && 'team' in q && !downTurn ? levelAttack(team![q.team as TeamRole].level) : 0 // なかまのレベルの攻撃力
-      const nextHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power - sup.atk
+      const rawHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power - sup.atk
+      const tr = traitAfterHit(trait, hp, rawHp, maxHp, regenUsed)
+      const nextHp = tr.hp
+      if (tr.blocked > 0) setTraitMsg(`${BOSS_TRAITS.armor.icon} ${look.name}の${BOSS_TRAITS.armor.name}！ ダメージ -${tr.blocked}`)
+      if (tr.healed > 0) {
+        setRegenUsed(true)
+        setTraitMsg(`${BOSS_TRAITS.regen.icon} ${look.name}の${BOSS_TRAITS.regen.name}！ HP +${tr.healed}`)
+      }
       setCrit(critical)
       setLastDmg(hp - nextHp)
       if (minion === 'here') {
@@ -446,6 +457,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           markLost(baseLook.name)
           onLose?.()
         }
+      }
+      if (trait === 'drain' && hp < maxHp) {
+        setHp(Math.min(maxHp, hp + DRAIN_HEAL))
+        setTraitMsg(`${BOSS_TRAITS.drain.icon} ${look.name}の${BOSS_TRAITS.drain.name}！ HP +${Math.min(DRAIN_HEAL, maxHp - hp)}`)
       }
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
@@ -552,6 +567,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setSleepAt(-1)
     setSaves(0)
     setSkillMsg('')
+    setTraitMsg('')
+    setRegenUsed(false)
   }
 
   return (
@@ -626,6 +643,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         弱点：{speciesOf(weak).name}
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
       </p>
+      <p className="boss-trait" title={BOSS_TRAITS[trait].desc}>
+        とくぎ：{BOSS_TRAITS[trait].icon} {BOSS_TRAITS[trait].name}（{BOSS_TRAITS[trait].desc}）
+      </p>
+      {traitMsg && picked !== null && !won && (
+        <p key={traitMsg + index} className="boss-trait-pop" role="status">
+          {traitMsg}
+        </p>
+      )}
       {partner && !won && !lost && (
         <div className="boss-partner">
           {picked !== null && q && picked === q.answer && !won && (

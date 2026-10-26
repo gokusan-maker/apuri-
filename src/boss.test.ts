@@ -190,3 +190,23 @@ it('ボスのこうげきの属性は色で決まる（赤＝炎・青＝氷・�
   const { attackElemOf } = await import('./boss')
   expect(['#dc2626', '#0ea5e9', '#eab308', '#16a34a', '#334155', '#7c3aed'].map((c) => attackElemOf(c).id)).toEqual(['fire', 'ice', 'thunder', 'poison', 'dark', 'dark'])
 })
+
+describe('ボスのとくぎ', () => {
+  it('ボスごとに名前で決まり、4種類がそろっている', async () => {
+    const { BOSSES, BOSS_TRAITS, traitOf } = await import('./boss')
+    const names = Object.values(BOSSES).map((b) => b.name)
+    expect(traitOf(names[0])).toBe(traitOf(names[0]))
+    expect(new Set(names.map(traitOf)).size).toBeGreaterThanOrEqual(3)
+    for (const t of Object.values(BOSS_TRAITS)) expect(t.desc.length).toBeLessThan(25)
+  })
+  it('かたいウロコはダメージ-2（最低1）、さいせいは半分を切ったら1回だけ回復', async () => {
+    const { traitAfterHit } = await import('./boss')
+    expect(traitAfterHit('armor', 100, 90, 100, false)).toEqual({ hp: 92, blocked: 2, healed: 0 })
+    expect(traitAfterHit('armor', 100, 99, 100, false).hp).toBe(99) // 最低1ダメージ
+    expect(traitAfterHit('armor', 10, 0, 100, false).hp).toBe(0) // たおす一撃はふせがない
+    expect(traitAfterHit('regen', 60, 45, 100, false)).toEqual({ hp: 60, blocked: 0, healed: 15 })
+    expect(traitAfterHit('regen', 60, 45, 100, true).hp).toBe(45) // 2回目はない
+    expect(traitAfterHit('regen', 10, 0, 100, false).hp).toBe(0)
+    expect(traitAfterHit('quick', 60, 45, 100, false).hp).toBe(45)
+  })
+})

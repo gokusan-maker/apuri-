@@ -3568,3 +3568,10 @@ header .list-link.buddy-swap-link { min-height: 0; padding: 4px 14px; }
 .today-tasks .today-task:not(.done) .today-task-mark { display: none; } /* タイル全体がボタンなので「スタート」の札は省く（済みの ✅ だけ出す） */
 header .monster { margin: 4px 0; padding: 6px 10px; }
 header .event-chips { margin: 0 0 2px; }
+
+/* ボスのとくぎ */
+.boss-trait { margin: -2px 0 4px; text-align: center; font-size: 0.72rem; font-weight: 700; color: #7c3aed; }
+.boss-trait-pop { margin: 4px auto; padding: 4px 12px; width: fit-content; border-radius: 999px; background: #7c3aed; color: #fff; font-size: 0.82rem; font-weight: 800; animation: trait-pop 0.3s ease-out; }
+@keyframes trait-pop { from { opacity: 0; transform: scale(0.6); } 70% { transform: scale(1.1); } }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-trait { color: #c4b5fd; } }
+:root[data-theme="dark"] .boss-trait { color: #c4b5fd; }
