@@ -31,6 +31,7 @@ it('聞いた英文を語のボタンでつくって答えあわせする（打�
 })
 
 it('ディクテーションも続けて正解すると連続正解のコンボが出る', async () => {
+  localStorage.clear()
   const speech = await import('./speech')
   const sp = vi.spyOn(speech, 'speak').mockImplementation(() => {})
   const u = GRAMMAR.find((x) => x.examples.length >= 2)!
@@ -47,6 +48,6 @@ it('ディクテーションも続けて正解すると連続正解のコンボ�
     fireEvent.click(screen.getByText('答えあわせ'))
   }
   fireEvent.click(screen.getByText('次へ'))
-  expect(screen.getByText('🔥 最高 2連続正解')).toBeInTheDocument() // 結果に最高の連続正解
+  expect(screen.getByText(/🔥 最高 2連続正解/).textContent).toContain('自己ベスト更新') // 結果に最高の連続正解（はじめてなので自己ベスト）
   sp.mockRestore()
 })

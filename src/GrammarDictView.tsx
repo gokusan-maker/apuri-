@@ -1,5 +1,5 @@
 import { useMemo, useState } from 'react'
-import { dictTokens, sameSentence, type GrammarUnit } from './grammar'
+import { dictTokens, loadDictBest, sameSentence, saveDictBest, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
@@ -17,6 +17,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
   const [score, setScore] = useState(0)
   const [streak, setStreak] = useState(0) // 連続正解
   const [best, setBest] = useState(0) // 連続正解の最高
+  const [record] = useState(loadDictBest) // 始めたときの自己ベスト
   const done = step >= unit.examples.length
   const ex = unit.examples[Math.min(step, unit.examples.length - 1)]
   const tiles = useMemo(() => shuffle(dictTokens(ex.en)), [ex])
@@ -32,7 +33,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
           <p className="level-up">
             {score} / {unit.examples.length} 文正解
           </p>
-          {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
+          {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解{best > record ? '　🎉 自己ベスト更新！' : ''}</p>}
           <p className="result-stars" aria-label={`星 ${starsFor(score, unit.examples.length)}`}>
             {'★'.repeat(starsFor(score, unit.examples.length))}
             {'☆'.repeat(3 - starsFor(score, unit.examples.length))}
@@ -75,6 +76,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
                 setChecked(ok)
                 setStreak(ok ? streak + 1 : 0)
                 if (ok) setBest(Math.max(best, streak + 1))
+                if (ok && streak + 1 > loadDictBest()) saveDictBest(streak + 1)
                 if (ok) {
                   playCorrect()
                   setScore(score + 1)

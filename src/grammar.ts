@@ -6190,6 +6190,23 @@ export function weakRanking(list: string[], n = 3): { unit: GrammarUnit; count: 
 // ディクテーションの答えあわせ：大文字小文字・記号・空白のちがいは気にしない（’ と ' は同じ）
 const norm = (t: string) => t.toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim()
 export const sameSentence = (a: string, b: string) => norm(a) === norm(b)
+// 文法のディクテーションの連続正解の自己ベスト
+const DICT_BEST_KEY = 'eitan:dict-best-streak'
+export function loadDictBest(): number {
+  try {
+    const v = Number(localStorage.getItem(DICT_BEST_KEY) ?? '0')
+    return Number.isFinite(v) ? v : 0
+  } catch {
+    return 0
+  }
+}
+export function saveDictBest(n: number): void {
+  try {
+    localStorage.setItem(DICT_BEST_KEY, String(n))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
 // ディクテーションの語のボタン：英文を語に分け、前後の記号をとる
 export const dictTokens = (en: string) => en.split(/\s+/).map((t) => t.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9'%°]+$/g, '')).filter(Boolean)
 
