@@ -8326,6 +8326,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-exchange-student',
+    title: 'My First Friend from Germany',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last September, an exchange student named Lena came to our class from Germany. She was going to stay in Japan for three months. Our teacher asked me to help her ( A ) used to life at our school.",
+      "At first, Lena was very quiet. Later, she told me that she had felt nervous because she could not read the signs in the school. So I made a small notebook for her with pictures and simple Japanese words, such as \"library,\" \"nurse's office,\" and \"lunch.\" She carried it everywhere.",
+      "One day, Lena asked me to teach her how to write her name in katakana. She practiced again and again, and soon she could write it beautifully. In return, she taught me some German words. I was surprised that learning a new language ( B ) so much fun.",
+      "On her last day, Lena gave me a letter. It was written in Japanese, with a few mistakes. \"Thank you for being my first friend in Japan,\" it said. I realized that I had learned as much ( C ) her as she had learned from me. We still send messages to each other every week.",
+    ],
+    ja: [
+      'この前の9月、レナという交換留学生が、ドイツから私たちのクラスに来ました。彼女は3か月間日本に滞在する予定でした。先生は私に、彼女が私たちの学校の生活に慣れるのを手伝うようにたのみました。',
+      '最初、レナはとても静かでした。あとで、学校の中の案内が読めなくて不安だったのだと話してくれました。そこで私は、「図書館」「保健室」「給食」のような、絵とかんたんな日本語の言葉をのせた小さなノートを作ってあげました。彼女はそれをどこにでも持ち歩きました。',
+      'ある日、レナは自分の名前をカタカナで書く方法を教えてほしいと言いました。彼女は何度も何度も練習し、すぐにきれいに書けるようになりました。お返しに、彼女は私にドイツ語の言葉をいくつか教えてくれました。新しい言葉を学ぶことがこんなに楽しいなんて、とおどろきました。',
+      '最後の日、レナは私に手紙をくれました。それは日本語で書かれていて、少しまちがいがありました。「日本での最初の友だちになってくれてありがとう」と書いてありました。私は、彼女が私から学んだのと同じくらい、私も彼女から学んだのだと気づきました。今でも私たちは毎週メッセージを送り合っています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['get', 'getting', 'got', 'to getting'], answer: 0, why: 'help ＋ 人 ＋ 原形「人が～するのを手伝う」。get used to ～「～に慣れる」。' },
+      { id: 'B', choices: ['could be', 'could being', 'can to be', 'could to be'], answer: 0, why: '助動詞 could のあとは原形 be。助動詞のあとに to は来ない。' },
+      { id: 'C', choices: ['from', 'to', 'at', 'on'], answer: 0, why: 'learn A from B「B から A を学ぶ」。as much from her as she had learned from me「彼女が私から学んだのと同じくらい彼女から」。' },
+    ],
+    tf: [
+      { statement: 'レナはドイツから来た交換留学生だった。', answer: true, why: '第1段落 an exchange student named Lena came to our class from Germany。' },
+      { statement: 'レナは最初からとても明るくたくさん話した。', answer: false, why: '第2段落 At first, Lena was very quiet。' },
+      { statement: '筆者はレナにドイツ語を教えた。', answer: false, why: '第3段落 she taught me some German words（ドイツ語を教えたのはレナ）。' },
+      { statement: '二人は今も連絡を取り合っている。', answer: true, why: '第4段落 We still send messages to each other every week。' },
+    ],
+    qa: [
+      { q: 'Why did the writer make a small notebook for Lena?', choices: ['Because Lena could not read the signs in the school.', 'Because Lena wanted to learn German.', 'Because the teacher lost her notebook.', 'Because Lena liked drawing pictures.'], answer: 0, why: '第2段落 she could not read the signs in the school. So I made a small notebook for her。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
