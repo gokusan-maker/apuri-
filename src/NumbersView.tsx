@@ -95,6 +95,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
     <section className="card quiz numbers">
       <p className="quiz-progress">
         {Math.min(score.all + (result === null ? 1 : 0), round)} / {round} 問目・正解 {score.ok}
+        {loadNumbersBest() > 0 && `・🏅ベスト ${loadNumbersBest()}`}
       </p>
       <p className="prompt">{q.kind === 'time' ? '聞こえた時刻をえらぼう' : q.kind === 'date' ? '聞こえた日付（月/日）をえらぼう' : q.kind === 'price' ? '聞こえた値段（ドル）をえらぼう' : '聞こえた数をえらぼう'}</p>
       <button className="speak" onClick={() => speak(q.say)} aria-label="もう一度聞く">

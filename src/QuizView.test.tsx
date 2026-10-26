@@ -327,7 +327,7 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   pickMode('🔢 数字の聞き取り')
   expect(spoken[spoken.length - 1]).toBe(toEnglish(902))
   for (let i = 0; i < 10; i++) {
-    expect(screen.getByText(`${i + 1} / 10 問目・正解 ${i}`)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`^${i + 1} / 10 問目・正解 ${i}`))).toBeInTheDocument()
     const opts = [...screen.getByLabelText('答えの選択肢').querySelectorAll('button')] // 打ちこまず、4択のボタンでえらぶ
     expect(opts).toHaveLength(4)
     fireEvent.click(opts.find((x) => (i < 9 ? x.textContent === '902' : x.textContent !== '902'))!)
@@ -340,7 +340,7 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   expect(screen.getByLabelText('星 2').textContent).toBe('★★☆') // 9/10 は星2
   expect(screen.getByText('🔥 最高 9連続正解')).toBeInTheDocument()
   fireEvent.click(screen.getByText('もう1回'))
-  expect(screen.getByText('1 / 10 問目・正解 0')).toBeInTheDocument()
+  expect(screen.getByText(/^1 \/ 10 問目・正解 0/)).toBeInTheDocument() // 2回目は自己ベストも出る
 })
 
 it('新しく増えた種類は、遊ぶまで NEW マークが出る', () => {

@@ -119,3 +119,14 @@ it('数の聞き取りで全問正解すると「パーフェクト」', async (
   expect(screen.getByText(/自己ベスト更新！/)).toBeInTheDocument() // はじめてなので自己ベスト
   expect(localStorage.getItem('eitan:numbers-best')).toBe('2')
 })
+
+it('数の聞き取りの問題中に自己ベストが出る', async () => {
+  const { render, screen } = await import('@testing-library/react')
+  const { createElement } = await import('react')
+  const { Numbers } = await import('./NumbersView')
+  Object.assign(window, { SpeechSynthesisUtterance: class {}, speechSynthesis: { cancel() {}, speak() {}, getVoices: () => [] } })
+  localStorage.setItem('eitan:numbers-best', '7')
+  render(createElement(Numbers, { round: 2 }))
+  expect(screen.getByText(/🏅ベスト 7/)).toBeInTheDocument()
+  localStorage.clear()
+})
