@@ -10,6 +10,7 @@ import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingb
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
+import { BossArena } from './BossArenaView'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -618,6 +619,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </div>
       )}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
+        <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} />
         <BossFigure hit={hit} look={look} />
         {teamOn && index === 0 && picked === null && !won && (
           <span className="boss-vs" aria-hidden="true">

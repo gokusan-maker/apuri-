@@ -14,7 +14,7 @@ function answer(correct: boolean) {
 describe('ボス戦', () => {
   it('正解を続けるとボスをたおせる', () => {
     const onWin = vi.fn()
-    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={onWin} onExit={() => {}} />)
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={onWin} onExit={() => {}} traits={[]} />) // とくぎなし（ダメージの計算をたしかめる）
     expect(document.querySelector('.boss-intro')).not.toBeNull()
     expect(document.querySelector('.boss.bg-field')).not.toBeNull()
     for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
@@ -218,7 +218,7 @@ it('ノーミス＆会心でたおすとSランクでおまけコイン', () => 
 })
 
 it('チャンス問題が出る', () => {
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={26} />)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={26} traits={[]} />)
   const slow = () => {
     vi.setSystemTime(Date.now() + 5000) // ゆっくり答えて会心にしない
     answer(true)

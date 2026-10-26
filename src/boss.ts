@@ -509,8 +509,9 @@ export const DRAIN_HEAL = 6
 export const QUICK_RATE = 0.7 // すばやさ：会心の時間が7割に
 export const SEAL_COINS = 5 // とくぎ封じ：とくぎを1回も発動させずに勝つ
 export function traitOf(name: string): BossTrait {
-  const k = [...name].reduce((a, c) => a + c.charCodeAt(0), 0)
-  return TRAIT_ORDER[k % TRAIT_ORDER.length]
+  // 名前の文字を混ぜて決める（「～モチ」のように似た名前でも、とくぎがばらける）
+  const k = [...name].reduce((a, c) => (Math.imul(a, 31) + c.charCodeAt(0)) >>> 0, 7)
+  return TRAIT_ORDER[(k >>> 3) % TRAIT_ORDER.length]
 }
 // 城の最上階のボスは、とくぎを2つ持つ（名前で決まる1つ目と、ちがう2つ目）
 export function bossTraits(name: string, strong = false): BossTrait[] {
