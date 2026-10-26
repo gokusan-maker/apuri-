@@ -8242,6 +8242,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-online-training',
+    title: 'Email: New Online Training Course',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Team, As part of our effort to improve customer service, all employees in the Sales Department are required to complete a new online training course by the end of next month. The course consists of six short lessons, each ( A ) about twenty minutes.",
+      "You can take the lessons at any time from your computer or smartphone. After each lesson, there is a short quiz. You need to answer at least 80 percent of the questions correctly ( B ) on to the next lesson.",
+      "Employees who finish the course will receive a certificate, which will be added to their personnel file. Those who complete it by the end of this month will also receive a $30 gift card as a thank-you.",
+      "If you have any technical problems, please contact the IT help desk. For questions about the content of the course, please ( C ) me directly. Best regards, Hannah Clark, Sales Manager",
+    ],
+    ja: [
+      'チームの皆さんへ。お客様へのサービス向上の取り組みの一つとして、営業部の全社員は、来月末までに新しいオンライン研修を修了しなければなりません。研修は6つの短いレッスンからなり、それぞれおよそ20分かかります。',
+      'レッスンは、パソコンやスマートフォンからいつでも受けられます。各レッスンのあとには短い小テストがあります。次のレッスンに進むには、問題の少なくとも80パーセントに正解する必要があります。',
+      '研修を修了した社員には修了証がわたされ、人事記録に加えられます。今月末までに修了した人には、お礼として30ドルのギフトカードも出ます。',
+      '技術的な問題があれば、ITヘルプデスクに連絡してください。研修の内容についての質問は、直接私に連絡してください。営業部長　ハンナ・クラーク',
+    ],
+    blanks: [
+      { id: 'A', choices: ['taking', 'took', 'takes', 'taken'], answer: 0, why: 'six short lessons, each taking about twenty minutes「それぞれが約20分かかる」（each を意味上の主語にした分詞構文）。takes・took だとコンマだけで文がつながってしまう。' },
+      { id: 'B', choices: ['to move', 'to moving', 'moved', 'moves'], answer: 0, why: '「次に進むために」は目的を表す不定詞 to ＋ 原形。move on to ～「～へ進む」。' },
+      { id: 'C', choices: ['contact', 'contacting', 'to contact', 'contacts'], answer: 0, why: 'please ＋ 命令文なので原形 contact。' },
+    ],
+    underline: {
+      phrase: 'consists of',
+      choices: ['is made up of', 'is different from', 'is cheaper than', 'is followed by'],
+      answer: 0,
+      why: 'consist of ～ は「～からなる・できている」。is made up of と同じ意味。',
+    },
+    order: {
+      words: ['at', 'least', '80', 'percent'],
+      rest: 'of the questions',
+      answer: 'at least 80 percent',
+      ja: '少なくとも80パーセント',
+    },
+    tf: [
+      { statement: '研修は6つの短いレッスンからなる。', answer: true, why: '第1段落 The course consists of six short lessons。' },
+      { statement: 'レッスンは会社のパソコンでしか受けられない。', answer: false, why: '第2段落 from your computer or smartphone。' },
+      { statement: '今月末までに修了した人は、ギフトカードももらえる。', answer: true, why: '第3段落 Those who complete it by the end of this month will also receive a $30 gift card。' },
+    ],
+    qa: [
+      { q: 'Who should employees contact about technical problems?', choices: ['The IT help desk.', 'Hannah Clark.', 'The Human Resources Department.', 'Their customers.'], answer: 0, why: '第4段落 If you have any technical problems, please contact the IT help desk。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

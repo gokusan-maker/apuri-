@@ -2396,3 +2396,4 @@
 - 2026-10-26: 文法に「enough の位置（enough money ／ old enough）」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: 高校入試（説明文）に長文「The Long Journey of Chocolate」（チョコレートの歴史）を追加
 - 2026-10-26: 文法に「as ～ as ever ／ as ～ as any」の単元を追加（よくあるまちがいつき）
+- 2026-10-26: TOEIC にメール文「Email: New Online Training Course」（オンライン研修）を追加
