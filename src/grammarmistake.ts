@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'it-occurs-to': { wrong: 'It occurred for me that I was wrong.', right: 'It occurred to me that I was wrong.', why: '「人の頭にうかぶ」は occur to 人。for は使わない。' },
+  'not-because': { wrong: 'He won not because luck but because hard work.', right: 'He won not because of luck but because of hard work.', why: '名詞が続くときは because of。because のうしろは文。' },
   'make-oneself-understood': { wrong: 'I could not make myself understand in English.', right: 'I could not make myself understood in English.', why: '自分が「理解される」側なので過去分詞 understood。' },
   'there-seems': { wrong: 'There seems to be many problems.', right: 'There seem to be many problems.', why: 'うしろの名詞が複数なら seem（s をつけない）。' },
   'by-far': { wrong: 'This bag is very cheaper than that one.', right: 'This bag is much cheaper than that one.', why: '比較級を強めるのは much / far / even。very は使えない。' },
