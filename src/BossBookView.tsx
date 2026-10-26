@@ -28,6 +28,21 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
           {beaten}/{all.length}
         </span>
       </summary>
+      <details className="trait-guide chip-fold cf-1">
+        <summary>🔮 とくぎのしくみ（4しゅるい）</summary>
+        <ul>
+          {(Object.keys(BOSS_TRAITS) as (keyof typeof BOSS_TRAITS)[]).map((t) => (
+            <li key={t}>
+              <strong>
+                {BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}
+              </strong>
+              ：{BOSS_TRAITS[t].desc}
+              <small>（{all.filter((b) => traitOf(b.name) === t).length}体）</small>
+            </li>
+          ))}
+          <li>🔒 とくぎを1回も発動させずに勝つと「とくぎ封じ」で🪙ボーナス</li>
+        </ul>
+      </details>
       {loadProverbs().length > 0 && (
         <details className="proverb-book chip-fold cf-2">
           <summary>

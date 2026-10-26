@@ -109,3 +109,13 @@ it('バトルの最初に、ボスのとくぎのカットインが出る（と�
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={[]} />)
   expect(document.querySelector('.trait-cutin')).toBeNull()
 })
+
+it('ボス図鑑に「とくぎのしくみ」：4しゅるいのとくぎと説明、とくぎ封じのこと', async () => {
+  const { BossBook } = await import('./BossBookView')
+  localStorage.clear()
+  render(<BossBook />)
+  const guide = document.querySelector('.trait-guide')!
+  expect(guide.querySelectorAll('li')).toHaveLength(5)
+  expect(guide.textContent).toContain('さいせい')
+  expect(guide.textContent).toContain('とくぎ封じ')
+})

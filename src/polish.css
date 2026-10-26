@@ -3751,3 +3751,6 @@ header .event-chips { margin: 0 0 2px; }
 .trait-cutin { position: absolute; left: 0; right: 0; top: 38%; z-index: 8; margin: 0; padding: 10px 12px; background: linear-gradient(90deg, transparent, rgb(124 58 237 / 0.92) 15%, rgb(124 58 237 / 0.92) 85%, transparent); color: #fff; font-weight: 900; font-size: 1rem; text-align: center; text-shadow: 0 2px 3px rgb(0 0 0 / 0.4); pointer-events: none; animation: trait-cutin 2.8s ease-out 0.6s both; }
 @keyframes trait-cutin { 0% { opacity: 0; transform: translateX(-60%); } 15% { opacity: 1; transform: translateX(0); } 80% { opacity: 1; transform: translateX(0); } 100% { opacity: 0; transform: translateX(40%); visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .trait-cutin { display: none; } }
+/* ボス図鑑：とくぎのしくみ */
+.trait-guide ul { margin: 6px 0 0; padding-left: 1.1em; font-size: 0.82rem; line-height: 1.6; }
+.trait-guide small { color: var(--muted); margin-left: 4px; }
