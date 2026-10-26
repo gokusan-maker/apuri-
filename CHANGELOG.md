@@ -2378,3 +2378,4 @@
 - 2026-10-26: 文法に「go for a walk ／ go on a trip ／ go to bed」の単元を追加
 - 2026-10-26: 高3（共通テスト）に長文「Stands Without Sellers」（無人の野菜売り場）を追加
 - 2026-10-26: とくぎのカットインを、とくぎごとの色にする
+- 2026-10-26: 文法に「regard A as B と受け身 be regarded as」の単元を追加（よくあるまちがいつき）
