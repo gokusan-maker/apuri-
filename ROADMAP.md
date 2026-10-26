@@ -1520,7 +1520,7 @@
 - [x] スペルでヒントを使わずに正解すると「✨ノーヒント」
 - [x] 数の聞き取りで全問正解すると「🏆 パーフェクト！」
 - [x] 高校の文法単元を2つ追加：as good as（～も同然）・what little ／ what few
-- [x] 高校の文法単元を2つ追加：The reason ～ is that …・some ～, others ／ the others
+- [x] 高校の文法単元を4つ追加：The reason ～ is that …・some ～, others ／ the others・as to ／ as for・It costs 人 金額 to ～
 - [x] 長文：共通テストレベルをさらに1本（カラオケ）
 - [x] 短い読解（読解ミニ）で全問正解すると「🎉 全問正解！」のお祝い
 ## アイデア（未整理）
