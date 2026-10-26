@@ -1546,7 +1546,7 @@
 - [x] 高校の文法単元を4つ追加：succeed in -ing ／ fail to・graduate from ／ complain about ／ complain to・be used for -ing ／ be used to 原形・It is true ～, but …
 - [x] 長文：旧帝大（テセウスの船）・私学（静電気）を1本ずつ
 - [x] ボス部屋：撃破の数の横に「🎯 あとnレベルで記念の🪙」を表示
-- [x] バッジを2つ追加：パーフェクト職人（全問正解10回）・完ぺき王（50回）
+- [x] バッジを4つ追加：パーフェクト職人（全問正解10回）・完ぺき王（50回）・つづりの達人（スペル10連続正解）・聞き取り名人（数の聞き取り全問正解）
 - [x] 高校の文法単元を2つ追加：provide A with B ／ provide B for A・replace A with B ／ compare A with B
 - [x] 長文：TOEIC（新しい社員証）・京大型エッセイ（質問する勇気）を1本ずつ
 - [x] スペル・文法のディクテーションの連続正解に自己ベスト（更新すると「🎉 自己ベスト更新！」）

@@ -24,6 +24,8 @@ import { TodayGrammar } from './TodayGrammarView'
 import { TodayFocusBar } from './TodayFocusView'
 import { COURSES, courseById, courseReady, courseWords, loadCourse, saveCourse, type CourseId } from './wordcourse'
 import { WordCastle } from './WordCastleView'
+import { loadSpellBest } from './spell'
+import { loadNumbersBest } from './numbers'
 import { SUPPORT_MAX, typeOf } from './chartype'
 import { AUTO_NEXT_SEC, nextTodayTask, TODAY_TASK_LABEL, TODAY_TASKS, type TodayTask } from './todayfocus'
 import { BuddyDetail } from './BuddyDetailView'
@@ -788,6 +790,8 @@ function App() {
       bossBook: baseBeaten(loadBook(), BASE_BOSS_NAMES),
       bossTotal: BASE_BOSS_NAMES.length,
       castles: castlesDone,
+      spellStreak: loadSpellBest(),
+      numbersBest: loadNumbersBest(),
     },
     earned,
   )

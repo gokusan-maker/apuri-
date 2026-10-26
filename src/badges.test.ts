@@ -125,3 +125,12 @@ it('パーフェクトを10回・50回でバッジ（パーフェクト職人・
   expect(p50.check({ ...base, perfect: 49 })).toBe(false)
   expect(p50.check({ ...base, perfect: 50 })).toBe(true)
 })
+
+it('スペル10連続正解で「つづりの達人」、数の聞き取り10問全問正解で「聞き取り名人」', () => {
+  const sp = BADGES.find((b) => b.id === 'spell-10')!
+  const nm = BADGES.find((b) => b.id === 'numbers-10')!
+  expect(sp.check({ ...zero, spellStreak: 9 })).toBe(false)
+  expect(sp.check({ ...zero, spellStreak: 10 })).toBe(true)
+  expect(nm.check(zero)).toBe(false)
+  expect(nm.check({ ...zero, numbersBest: 10 })).toBe(true)
+})
