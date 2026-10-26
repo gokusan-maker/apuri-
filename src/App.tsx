@@ -65,7 +65,7 @@ import { loadTraining } from './training'
 import { giftReady, loadGiftDay, saveGiftDay } from './gift'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
-import { dailyGrammar, loadDailyGrammarDay, MASTER_TICKETS } from './grammar'
+import { dailyGrammar, loadDailyGrammarDay, loadDictBest, MASTER_TICKETS } from './grammar'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -792,6 +792,7 @@ function App() {
       castles: castlesDone,
       spellStreak: loadSpellBest(),
       numbersBest: loadNumbersBest(),
+      dictStreak: loadDictBest(),
     },
     earned,
   )

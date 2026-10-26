@@ -134,3 +134,9 @@ it('スペル10連続正解で「つづりの達人」、数の聞き取り10問
   expect(nm.check(zero)).toBe(false)
   expect(nm.check({ ...zero, numbersBest: 10 })).toBe(true)
 })
+
+it('文法のディクテーションで5文連続正解すると「書き取り名人」', () => {
+  const b = BADGES.find((x) => x.id === 'dict-5')!
+  expect(b.check({ ...zero, dictStreak: 4 })).toBe(false)
+  expect(b.check({ ...zero, dictStreak: 5 })).toBe(true)
+})
