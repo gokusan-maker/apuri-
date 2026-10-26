@@ -6429,6 +6429,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-exercise-brain',
+    title: 'Exercise for the Brain',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most people know that exercise is good for the heart and muscles. Fewer realize that it may be just as good for the brain. When we exercise, our heart pumps more blood, ( A ) carries extra oxygen and nutrients to the brain.",
+      "Exercise also seems to increase the production of a protein called BDNF, which helps brain cells grow and form new connections. Some scientists have even described it as a kind of fertilizer for the brain. In one well-known study, older adults who walked briskly three times a week for a year showed growth in the hippocampus, a part of the brain ( B ) plays an important role in memory. A comparison group that only did stretching did not show the same growth.",
+      "The benefits are not limited to older people. Studies of schoolchildren suggest that short periods of physical activity can improve attention in the classroom afterward. Even a brisk ten-minute walk may help students concentrate better on difficult tasks.",
+      "None of this means that exercise is a magic cure. Researchers are still working out exactly how much and what kind of activity works best. Still, the evidence is strong enough that many experts now recommend moving the body as a way of caring for the mind. A walk around the block may be one of the simplest ways to ( C ) your brain healthy.",
+    ],
+    ja: [
+      '運動が心臓や筋肉によいことは、ほとんどの人が知っている。運動が脳にも同じくらいよいかもしれないと気づいている人は、それほど多くない。運動すると心臓はより多くの血液を送り出し、それが余分な酸素と栄養を脳に運ぶ。',
+      '運動はまた、BDNF というたんぱく質がつくられるのを増やすらしい。BDNF は脳の細胞が育ち、新しいつながりをつくるのを助ける。脳の肥料のようなものだと説明する科学者もいるほどだ。よく知られたある研究では、1年間週に3回早足で歩いたお年寄りは、記憶に大切な役割を果たす脳の部分である海馬が大きくなった。ストレッチだけをしたくらべるためのグループには、同じような成長は見られなかった。',
+      'よい効果はお年寄りにかぎらない。小学生を対象にした研究によると、短い時間体を動かすと、そのあとの授業での集中力が高まることがあるという。わずか10分早歩きするだけでも、むずかしい課題により集中できるようになるかもしれない。',
+      'だからといって、運動が魔法の薬だということではない。どのくらいの量の、どんな種類の運動がいちばんよいのか、研究者たちはまだ正確に解明しようとしているところだ。それでも証拠は十分に強く、今では多くの専門家が、心を大切にする方法として体を動かすことをすすめている。近所をひと回り歩くことは、脳を健康に保つもっともかんたんな方法の1つなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで more blood を受け、carries の主語になる非制限用法の which。what は先行詞をとらず、that はコンマのあとに使えず、it では文がつながらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a part of the brain を説明し、plays の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['keep', 'keeping', 'kept', 'to keep'], answer: 0, why: 'ways to ＋ 原形「～する方法」。to のあとは原形 keep（keep O C＝O を C に保つ）。' },
+    ],
+    underline: {
+      phrase: 'working out',
+      choices: ['trying to find out', 'doing physical exercise', 'throwing away', 'forgetting about'],
+      answer: 0,
+      why: 'work out ～ は「（答えなどを）解明する・考え出す」。ここでは運動の意味ではなく、研究者がまだ調べて明らかにしようとしている、ということ。',
+    },
+    order: {
+      words: ['improve', 'attention', 'in', 'the', 'classroom', 'afterward'],
+      rest: '',
+      answer: 'improve attention in the classroom afterward',
+      ja: 'そのあとの授業での集中力を高める。（afterward＝そのあとで）',
+    },
+    tf: [
+      { statement: '運動すると、脳に運ばれる酸素や栄養がふえる。', answer: true, why: '第1段落 our heart pumps more blood, which carries extra oxygen and nutrients to the brain。' },
+      { statement: 'ストレッチだけをしたグループでも、海馬が同じように大きくなった。', answer: false, why: '第2段落 A comparison group that only did stretching did not show the same growth。' },
+      { statement: '筆者は、運動が魔法の薬だと主張している。', answer: false, why: '第4段落 None of this means that exercise is a magic cure。' },
+    ],
+    qa: [
+      { q: 'What did the study of older adults who walked briskly show?', choices: ['Growth in the hippocampus.', 'Weaker memory.', 'No change at all in the brain.', 'Faster heartbeats while sleeping.'], answer: 0, why: '第2段落 showed growth in the hippocampus。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
