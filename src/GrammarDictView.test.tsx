@@ -26,6 +26,7 @@ it('聞いた英文を語のボタンでつくって答えあわせする（打�
     fireEvent.click(screen.getByText('次へ'))
   }
   expect(screen.getByText(`1 / ${u.examples.length} 文正解`)).toBeInTheDocument()
+  expect(screen.getByLabelText(/^星 /)).toBeInTheDocument() // 結果に星
   sp.mockRestore()
 })
 

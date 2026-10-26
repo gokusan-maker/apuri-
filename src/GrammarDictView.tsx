@@ -4,6 +4,7 @@ import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
+import { starsFor } from './stages'
 
 type Props = { unit: GrammarUnit; onBack: () => void; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
@@ -26,9 +27,15 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
       </button>
       <h2>✍️ ディクテーション：{unit.title}</h2>
       {done ? (
-        <p className="level-up">
-          {score} / {unit.examples.length} 文正解
-        </p>
+        <>
+          <p className="level-up">
+            {score} / {unit.examples.length} 文正解
+          </p>
+          <p className="result-stars" aria-label={`星 ${starsFor(score, unit.examples.length)}`}>
+            {'★'.repeat(starsFor(score, unit.examples.length))}
+            {'☆'.repeat(3 - starsFor(score, unit.examples.length))}
+          </p>
+        </>
       ) : (
         <>
           <p className="progress">
