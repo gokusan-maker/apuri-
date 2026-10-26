@@ -42,6 +42,7 @@ describe('Spell', () => {
     expect(screen.getByLabelText('あなたの答え').querySelectorAll('.spell-ng').length).toBeGreaterThan(0)
     fireEvent.click(screen.getByText('次へ'))
     expect(screen.getByText('0 / 1 問正解')).toBeInTheDocument()
+    expect(screen.getByLabelText('星 0').textContent).toBe('☆☆☆') // 結果に星
   })
 })
 

@@ -7,6 +7,7 @@ import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { builtSpelling, hintText, isCorrectSpelling, letterCount, spellXp } from './spell'
+import { starsFor } from './stages'
 import type { Word } from './words'
 
 type Props = {
@@ -75,6 +76,10 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
         <p className="result-title">結果</p>
         <p className="result-score">
           {score} / {list.length} 問正解
+        </p>
+        <p className="result-stars" aria-label={`星 ${starsFor(score, list.length)}`}>
+          {'★'.repeat(starsFor(score, list.length))}
+          {'☆'.repeat(3 - starsFor(score, list.length))}
         </p>
         <button className="flip" onClick={restart}>
           もう1回

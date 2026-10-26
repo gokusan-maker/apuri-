@@ -3,6 +3,7 @@ import { XP_QUIZ_CORRECT, type Source } from './monster'
 import { isRight, numChoices, pickQ } from './numbers'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
+import { starsFor } from './stages'
 
 const ROUND = 10 // 1回の問題数
 
@@ -57,6 +58,10 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
         <h2>結果</h2>
         <p className="result-score">
           {score.ok} / {round} 問正解
+        </p>
+        <p className="result-stars" aria-label={`星 ${starsFor(score.ok, round)}`}>
+          {'★'.repeat(starsFor(score.ok, round))}
+          {'☆'.repeat(3 - starsFor(score.ok, round))}
         </p>
         <p className="result-message">獲得XP +{score.ok * XP_QUIZ_CORRECT}</p>
         <button
