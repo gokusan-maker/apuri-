@@ -1695,6 +1695,8 @@
 
 - [x] 文法の単元「接続詞のように文をつなぐ言葉（as a result ／ in fact ／ on the other hand ／ after all）」を追加（よくあるまちがいつき）
 
+- [x] TOEIC に自作のお知らせ文「Notice: New Carpool Program」を追加（車の相乗り制度・176語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

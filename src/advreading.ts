@@ -7426,6 +7426,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-carpool',
+    title: 'Notice: New Carpool Program',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: Starting next month, Westfield Industries will launch a carpool program to reduce traffic in our parking lot and cut down on air pollution. Employees who live near each other will be matched so that they can share rides to and from work.",
+      "To join, simply fill out the online form on the company website by May 20. You will be asked to enter your address, your usual working hours, and ( A ) you would prefer to drive or to ride as a passenger.",
+      "Participants will receive several benefits. Drivers will get a free parking space close to the main entrance, ( B ) passengers will receive a monthly transportation allowance of $50. In addition, carpool groups will be given priority if they need to leave early because of bad weather.",
+      "We hope as many employees as possible will take part. If you have any questions about the program, please contact Rachel Kim in the General Affairs Department. Thank you for helping to make our workplace ( C ) friendly to the environment.",
+    ],
+    ja: [
+      '全社員の皆さまへ：来月から、ウェストフィールド工業は、駐車場の混雑を減らし大気汚染をおさえるため、車の相乗り制度を始めます。近くに住む社員どうしを組み合わせ、通勤の行き帰りに車をいっしょに使えるようにします。',
+      '参加するには、5月20日までに会社のウェブサイトにあるオンラインのフォームに記入してください。住所、ふだんの勤務時間、運転する側と同乗する側のどちらがよいかを入力していただきます。',
+      '参加者にはいくつかの特典があります。運転する人は正面入口近くの駐車スペースを無料で使え、一方、同乗する人には毎月50ドルの交通手当が出ます。さらに、天気が悪くて早く帰る必要があるときは、相乗りのグループが優先されます。',
+      'できるだけ多くの社員に参加していただけることを願っています。制度についてご質問があれば、総務部のレイチェル・キムまでご連絡ください。職場をより環境にやさしいものにするためのご協力に感謝いたします。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whether', 'because', 'unless', 'although'], answer: 0, why: 'enter ～ の目的語として「～するかどうか」を表す whether（whether A or B「A か B か」）。because・unless・although は目的語になる名詞のまとまりを作れない。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'in spite'], answer: 0, why: 'うしろが文（passengers will receive …）なので、対比の接続詞 while「一方で」。during・despite は前置詞、in spite は of が必要。' },
+      { id: 'C', choices: ['more', 'much', 'many', 'better'], answer: 0, why: 'make A more friendly「A をもっとやさしいものにする」。friendly の比較級として more を使う（friendlier も可）。much・many・better は friendly の前に置けない。' },
+    ],
+    underline: {
+      phrase: 'priority',
+      choices: ['a more important place in order', 'a higher price', 'a free gift', 'a longer break'],
+      answer: 0,
+      why: 'priority は「優先・先に扱われること」。be given priority「優先される」。',
+    },
+    order: {
+      words: ['as', 'many', 'employees', 'as', 'possible'],
+      rest: 'will take part',
+      answer: 'as many employees as possible',
+      ja: 'できるだけ多くの社員（as many ～ as possible）',
+    },
+    tf: [
+      { statement: '相乗り制度への申しこみは、会社のウェブサイトのフォームで行う。', answer: true, why: '第2段落 fill out the online form on the company website。' },
+      { statement: '運転する人は、毎月50ドルの交通手当をもらえる。', answer: false, why: '第3段落 50ドルの手当をもらうのは passengers（同乗する人）。' },
+      { statement: '天気が悪いとき、相乗りのグループは早く帰るのを優先される。', answer: true, why: '第3段落 carpool groups will be given priority if they need to leave early because of bad weather。' },
+    ],
+    qa: [
+      { q: 'What will drivers in the program receive?', choices: ['A free parking space near the main entrance.', 'A monthly allowance of $50.', 'A new company car.', 'Extra days off.'], answer: 0, why: '第3段落 Drivers will get a free parking space close to the main entrance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
