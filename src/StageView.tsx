@@ -622,7 +622,9 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <Castle
           key={bossLv}
           name={`${courseById(bossLv).label}のボスの城`}
-          theme="red"
+          title={`${courseById(bossLv).label}の魔王の塔`}
+          tint={BOSSES[LEVEL_BOSS_LOOK[bossLv]].color}
+          theme="lair"
           floors={bossCastleFloors([bossLv]).map((f) => {
             const isBoss = f.floor === BC_FLOORS - 1
             const c = courseById(f.course)
@@ -659,7 +661,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
               window.scrollTo?.({ top: 0 })
             }}
           >
-            ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
+            ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」の魔王の塔へ
           </button>
         )}
         <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">

@@ -3684,3 +3684,34 @@ header .event-chips { margin: 0 0 2px; }
 /* 地図の下の文（宝箱まで・クリアずみ）：明るい空でも読めるように、うすい帯をしく */
 .smap .smap-next-chest, .smap > .castle-below { margin: 0; padding: 4px 8px; background: rgb(15 23 42 / 0.42); color: #fef3c7; }
 .smap > .castle-below { padding-top: 0; font-size: 0.72rem; }
+
+/* ===== ボス部屋の魔王の塔：黒い石・マグマのひび・てっぺんにボスの顔（--tint はボスの色）。のぼっていく形はそのまま ===== */
+.castle-lair { --tint: #ef4444; --sky1: #3b0a0a; --sky2: #0c0a09; --glow: 249 115 22; border-color: color-mix(in srgb, var(--tint) 70%, #fbbf24); background: radial-gradient(120% 70% at 50% 0%, color-mix(in srgb, var(--tint) 45%, #1c0a0a) 0%, #0c0a09 70%); box-shadow: 0 10px 24px rgb(0 0 0 / 0.5), 0 0 22px color-mix(in srgb, var(--tint) 45%, transparent), inset 0 0 0 2px rgb(255 255 255 / 0.06); }
+.castle-lair::before { background-image: radial-gradient(2px 2px at 10% 20%, #fb923c, transparent), radial-gradient(1.5px 1.5px at 28% 60%, #fdba74, transparent), radial-gradient(2px 2px at 70% 30%, #f97316, transparent), radial-gradient(1.5px 1.5px at 86% 70%, #fdba74, transparent), radial-gradient(2px 2px at 50% 86%, #fb923c, transparent); animation: lair-ember 3s ease-in-out infinite alternate; }
+@keyframes lair-ember { to { opacity: 0.4; transform: translateY(-6px); } }
+.castle-lair .castle-sky, .castle-lair .castle-mount { display: none; }
+.castle-lair .castle-count { background: linear-gradient(#fdba74, #ea580c); color: #431407; box-shadow: 0 3px 0 #7c2d12; }
+.lair-horn { fill: #e7e5e4; stroke: #292524; stroke-width: 2.5; stroke-linejoin: round; }
+.lair-head { fill: color-mix(in srgb, var(--tint) 55%, #1c1917); stroke: #0c0a09; stroke-width: 3; }
+.lair-eye { fill: #fde047; filter: drop-shadow(0 0 6px #f97316); animation: lair-eye 3.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+@keyframes lair-eye { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.1); } }
+.lair-fang { fill: #fafaf9; stroke: #292524; stroke-width: 1.5; stroke-linejoin: round; }
+.lair-spike { fill: #292524; stroke: #0c0a09; stroke-width: 2; }
+.lair-orb { fill: #c084fc; filter: drop-shadow(0 0 8px #a855f7); animation: lair-orb 2.8s ease-in-out infinite alternate; }
+.lair-orb.o2 { animation-delay: 0.9s; }
+.lair-orb.o3 { animation-delay: 1.7s; }
+@keyframes lair-orb { to { transform: translateY(-8px); opacity: 0.5; } }
+.castle-lair .castle-floors { border-left-color: #1c1917; border-right-color: #1c1917; background: linear-gradient(115deg, transparent 46%, rgb(249 115 22 / 0.35) 47%, transparent 49%), linear-gradient(65deg, transparent 70%, rgb(249 115 22 / 0.25) 71%, transparent 73%), repeating-linear-gradient(0deg, rgb(255 255 255 / 0.04) 0 2px, transparent 2px 20px), linear-gradient(#292524, #1c1917); }
+.castle-lair .castle-floors li { border-bottom-color: #0c0a09; box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--tint) 60%, #57534e); }
+.castle-lair .castle-floors li.locked { background: rgb(0 0 0 / 0.45); }
+.castle-lair .castle-floors li.cleared { background: linear-gradient(90deg, rgb(249 115 22 / 0.2), transparent 75%); }
+.castle-lair .castle-floors li.now { background: radial-gradient(120% 140% at 50% 50%, color-mix(in srgb, var(--tint) 55%, transparent), rgb(0 0 0 / 0.2)); box-shadow: inset 0 0 22px color-mix(in srgb, var(--tint) 80%, transparent), inset 0 -3px 0 color-mix(in srgb, var(--tint) 60%, #57534e); }
+.castle-lair .castle-floors li.now .castle-go { background: linear-gradient(#a855f7, #7e22ce); box-shadow: 0 4px 0 #3b0764, 0 0 14px rgb(168 85 247 / 0.6); }
+.castle-lair .castle-plate { filter: hue-rotate(-20deg) saturate(1.2); }
+.lair-lava { position: relative; height: 26px; margin: 0 -8px; overflow: hidden; background: linear-gradient(#f97316, #b91c1c); box-shadow: inset 0 6px 8px rgb(0 0 0 / 0.45); }
+.lair-lava i { position: absolute; top: 8px; width: 10px; height: 10px; border-radius: 50%; background: #fde047; box-shadow: 0 0 8px #fde047; animation: lair-bubble 2.4s ease-in infinite; }
+.lair-lava i:nth-child(1) { left: 18%; }
+.lair-lava i:nth-child(2) { left: 52%; animation-delay: 0.8s; }
+.lair-lava i:nth-child(3) { left: 80%; animation-delay: 1.5s; }
+@keyframes lair-bubble { from { transform: scale(0.3); opacity: 1; } to { transform: translateY(-8px) scale(1.2); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .castle-lair::before, .lair-eye, .lair-orb, .lair-lava i { animation: none; } }

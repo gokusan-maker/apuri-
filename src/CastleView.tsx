@@ -1,16 +1,16 @@
-import { useContext, useState, type ReactNode } from 'react'
+import { useContext, useState, type CSSProperties, type ReactNode } from 'react'
 import { CHEST_COINS, nextChestIn, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests, type MapTheme } from './castle'
 import { StageMap, type NextMap } from './StageMapView'
 
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
 
 // 城の塔：1階ずつクリアしてのぼる。夜空・月・山・天守の屋根・旗・石の壁・たいまつ・門と堀
-export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest, next }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | 'tower' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
+export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest, next, title, tint }: { name: string; title?: string; tint?: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | 'tower' | 'lair' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
   if (theme === 'sea' || theme === 'forest' || theme === 'mountain') return <StageMap name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} onChest={onChest} againLabel={againLabel} next={next} />
-  return <CastleTower name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} goLabel={goLabel} againLabel={againLabel} onChest={onChest} />
+  return <CastleTower name={name} title={title} tint={tint} floors={floors} onOpen={onOpen} theme={theme} unit={unit} goLabel={goLabel} againLabel={againLabel} onChest={onChest} />
 }
 
-function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: 'blue' | 'red' | 'green' | 'purple' | 'tower'; unit: string; goLabel: string; againLabel: string; onChest?: (coins: number) => void }) {
+function CastleTower({ name, title, tint, floors, onOpen, theme, unit, goLabel, againLabel, onChest }: { name: string; title?: string; tint?: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: 'blue' | 'red' | 'green' | 'purple' | 'tower' | 'lair'; unit: string; goLabel: string; againLabel: string; onChest?: (coins: number) => void }) {
   const [chests, setChests] = useState(loadChests)
   const [opened, setOpened] = useState<{ at: number; egg: string | null } | null>(null) // いまあけた宝箱の階と、出てきたレアの卵
   const giveEgg = useContext(RareEggContext)
@@ -19,20 +19,22 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
   const chest = onChest ? openableChests(now, chests[name] ?? [], floors.length)[0] : undefined
   const top = now >= floors.length
   const tower = theme === 'tower' // イベントの塔：城とはちがう、細長い1本の塔（雲の上・星空）
+  const lair = theme === 'lair' // ボス部屋の魔王の塔：黒い石とマグマ。てっぺんにボスの顔（色はボスの色）
+  const shown = title ?? name // 見せる名前（name は宝箱の記録のキーなので変えない）
   return (
-    <section className={`castle castle-${theme}`} aria-label={name}>
+    <section className={`castle castle-${theme}`} aria-label={shown} style={tint ? ({ '--tint': tint } as CSSProperties) : undefined}>
       <svg className="castle-sky" viewBox="0 0 360 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
         <circle className="castle-moon" cx="236" cy="34" r="13" />
         <path d="M0 120 L40 70 L80 100 L130 55 L180 95 L230 60 L280 100 L320 75 L360 105 L360 120 Z" className="castle-mount" />
       </svg>
       <p className="castle-head">
-        <span className="castle-name">{tower ? '🗼' : '🏰'} {name}</span>
+        <span className="castle-name">{lair ? '👹' : tower ? '🗼' : '🏰'} {shown}</span>
         <span className="castle-count" aria-label={`${now} / ${floors.length} ${unit}クリア`}>
           {now}/{floors.length}
           {unit}
         </span>
       </p>
-      {top && <p className="castle-top">{tower ? '👑 てっぺん制覇！ 塔をのぼりきった' : '👑 てっぺん制覇！ 城の主になった'}</p>}
+      {top && <p className="castle-top">{tower || lair ? '👑 てっぺん制覇！ 塔をのぼりきった' : '👑 てっぺん制覇！ 城の主になった'}</p>}
       {chest !== undefined && (
         <button
           className="castle-chest-btn"
@@ -53,7 +55,19 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
         </p>
       )}
       <div className="castle-body">
-        {tower ? (
+        {lair ? (
+          <svg className="castle-roof lair-roof" viewBox="0 0 320 130" aria-hidden="true">
+            {/* 魔王の塔のてっぺん：つの・光る目・きば。まわりに火の玉 */}
+            <path d="M104 64 L92 14 L128 52 Z M216 64 L228 14 L192 52 Z" className="lair-horn" />
+            <path d="M96 130 L96 70 Q 160 20 224 70 L224 130 Z" className="lair-head" />
+            <path d="M120 84 L148 92 L146 100 L118 94 Z M200 84 L172 92 L174 100 L202 94 Z" className="lair-eye" />
+            <path d="M122 108 Q 160 118 198 108 L192 116 L186 128 L180 117 L166 119 L160 131 L154 119 L140 117 L134 128 L128 116 Z" className="lair-fang" />
+            <path d="M84 130 L84 112 L96 104 L96 130 Z M236 130 L236 112 L224 104 L224 130 Z" className="lair-spike" />
+            <circle cx="40" cy="70" r="7" className="lair-orb" />
+            <circle cx="280" cy="56" r="6" className="lair-orb o2" />
+            <circle cx="60" cy="24" r="4" className="lair-orb o3" />
+          </svg>
+        ) : tower ? (
           <svg className="castle-roof tower-roof" viewBox="0 0 320 120" aria-hidden="true">
             {/* てっぺんの光る水晶と、細長い尖塔 */}
             <path d="M160 2 L172 22 L160 42 L148 22 Z" className="tower-crystal" />
@@ -130,7 +144,13 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
           </p>
         )}
         {now > 2 && <p className="castle-below">⬇ {now - 2}{unit}ぶん、制覇ずみ</p>}
-        {tower ? (
+        {lair ? (
+          <div className="lair-lava" aria-hidden="true">
+            <i />
+            <i />
+            <i />
+          </div>
+        ) : tower ? (
           <div className="tower-clouds" aria-hidden="true" />
         ) : (
           <>

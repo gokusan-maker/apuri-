@@ -177,3 +177,12 @@ it('イベントの塔（theme="tower"）は城とちがう見た目：細い塔
   expect(container.querySelector('.castle-moat')).toBeNull()
   expect(container.querySelector('.castle-name')?.textContent).toBe('🗼 大学入試の塔')
 })
+
+it('ボス部屋の魔王の塔（theme="lair"）：見せる名前は title、ボスの色、マグマ（宝箱の記録は name のまま）', async () => {
+  const { Castle } = await import('./CastleView')
+  const { container } = render(<Castle name="中1のボスの城" title="中1の魔王の塔" tint="#7c3aed" theme="lair" floors={[{ id: 'a', label: 'A', cleared: false }]} onOpen={() => {}} />)
+  expect(screen.getByRole('region', { name: '中1の魔王の塔' })).toBeInTheDocument()
+  expect(container.querySelector('.lair-roof .lair-eye')).not.toBeNull()
+  expect(container.querySelector('.lair-lava')).not.toBeNull()
+  expect((container.querySelector('.castle-lair') as HTMLElement).style.getPropertyValue('--tint')).toBe('#7c3aed')
+})

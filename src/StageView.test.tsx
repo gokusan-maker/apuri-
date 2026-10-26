@@ -324,7 +324,7 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
   localStorage.clear()
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   expect(screen.queryByRole('region', { name: 'ボスの世界地図' })).toBeNull()
-  const castle = screen.getByRole('region', { name: '中1のボスの城' })
+  const castle = screen.getByRole('region', { name: '中1の魔王の塔' })
   fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1　単語/ }))
   expect(screen.getByText(/中1のボスの階/)).toBeInTheDocument()
   for (let n = 0; n < 5; n++) {
@@ -332,7 +332,7 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
   }
   fireEvent.click(screen.getByText('城にもどる'))
-  expect(screen.getByRole('region', { name: '中1のボスの城' })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '中1の魔王の塔' })).toBeInTheDocument()
 })
 
 it('ボス部屋もキャラの下でレベルをえらべ、レベルごとに5階の城とそのボスがある', () => {
@@ -340,7 +340,7 @@ it('ボス部屋もキャラの下でレベルをえらべ、レベルごとに5
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   fireEvent.click(screen.getByRole('button', { name: /^ボスのレベル：中1/ }))
   fireEvent.click(screen.getByRole('option', { name: /東大/ }))
-  const castle = screen.getByRole('region', { name: '東大のボスの城' })
+  const castle = screen.getByRole('region', { name: '東大の魔王の塔' })
   expect(within(castle).getByRole('button', { name: /^1階：東大　単語/ })).toBeInTheDocument()
   expect(localStorage.getItem('eitan:boss-level')).toBe('東大')
 })
@@ -351,7 +351,7 @@ it('ボスの一覧から15レベルのボスを自由にえらべ、たおす�
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
   const list = screen.getByRole('group', { name: 'ボスをえらぶ' })
   expect(list.querySelectorAll('button.boss-pick-tile')).toHaveLength(15)
-  expect(screen.getByRole('region', { name: '中1のボスの城' })).toHaveTextContent('5/5')
+  expect(screen.getByRole('region', { name: '中1の魔王の塔' })).toHaveTextContent('5/5')
   fireEvent.click(within(list).getByRole('button', { name: /^東大のボス「.+」に挑戦/ }))
   expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
@@ -361,9 +361,9 @@ it('ボスの城のボスをたおしたら「次のレベルのボスの城へ�
   localStorage.setItem('eitan:lboss', JSON.stringify({ 中2: '2026-10-01' }))
   localStorage.setItem('eitan:boss-level', '中2')
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  fireEvent.click(screen.getByRole('button', { name: /次は「中3」のボスの城へ/ }))
-  expect(screen.getByRole('region', { name: '中3のボスの城' })).toBeInTheDocument()
-  expect(screen.queryByRole('button', { name: /のボスの城へ/ })).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: /次は「中3」の魔王の塔へ/ }))
+  expect(screen.getByRole('region', { name: '中3の魔王の塔' })).toBeInTheDocument()
+  expect(screen.queryByRole('button', { name: /の魔王の塔へ/ })).toBeNull()
 })
 
 it('ボスの城の問題の階をクリアすると、上で待つボスがひとこと（のこりの階数つき）', async () => {
