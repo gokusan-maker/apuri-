@@ -6838,6 +6838,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-furoshiki',
+    title: 'A Square of Cloth',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "When my grandmother visited us last month, she brought a present wrapped in a large square cloth with a pattern of blue waves. After I opened the present, she folded the cloth and said, \"Keep this. It is a furoshiki. You can use it ( A ) many things.\"",
+      "At first, I did not know what to do with it. Then my grandmother, ( B ) learned these ways of wrapping from her own mother, showed me how to wrap a bottle, a box, and even a watermelon. With a few simple knots, the cloth became a bag with handles. I was surprised that one piece of cloth could change its shape so easily.",
+      "Furoshiki have been used in Japan for hundreds of years. Today, some people are interested in them again because they can be used many times. If you carry a furoshiki when you go shopping, you do not need a plastic bag.",
+      "Now I always keep the furoshiki in my school bag. Last week, it started to rain suddenly, and I used it to cover my head. My friends laughed, but they also asked me ( C ) to tie it. I think old ideas can sometimes help us solve new problems.",
+    ],
+    ja: [
+      '先月、祖母が家に来たとき、青い波の模様の大きな四角い布で包んだプレゼントを持ってきてくれました。私がプレゼントをあけると、祖母は布をたたんで言いました。「これを持っておきなさい。ふろしきというのよ。いろいろなことに使えるわ。」',
+      '最初は、それをどうすればいいのかわかりませんでした。すると、この包み方を自分の母親から教わった祖母が、びん、箱、そしてスイカまで包む方法を見せてくれました。かんたんな結び目をいくつか作るだけで、布は持ち手のついたバッグになりました。1枚の布がこんなにかんたんに形を変えられることにおどろきました。',
+      'ふろしきは、日本で何百年も使われてきました。今日、何度も使えるという理由で、ふたたびふろしきに興味をもつ人もいます。買い物に行くときにふろしきを持っていけば、ビニール袋はいりません。',
+      '今、私はいつもふろしきを通学かばんに入れています。先週、急に雨がふりだしたので、私はそれで頭をおおいました。友だちは笑いましたが、結び方も聞いてきました。古い知恵が、ときには新しい問題を解決する助けになるのだと思います。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['for', 'to', 'at', 'by'], answer: 0, why: 'use A for B「A を B に使う」。to・at・by では意味の通る形にならない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: 'コンマのあとで my grandmother（人）を説明し、learned の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'why'], answer: 0, why: 'how to ～「～のしかた」。tie it は目的語 it がそろっているので what・which は入らない。why to ～ という形はない。' },
+    ],
+    tf: [
+      { statement: '祖母は、青い波の模様の布でプレゼントを包んできた。', answer: true, why: '第1段落 wrapped in a large square cloth with a pattern of blue waves。' },
+      { statement: '祖母は、ふろしきの包み方を本で学んだ。', answer: false, why: '第2段落 learned these ways of wrapping from her own mother。' },
+      { statement: 'ふろしきを持って買い物に行けば、ビニール袋はいらない。', answer: true, why: '第3段落 If you carry a furoshiki when you go shopping, you do not need a plastic bag。' },
+      { statement: '筆者の友だちは、ふろしきにまったく興味を示さなかった。', answer: false, why: '第4段落 they also asked me how to tie it。' },
+    ],
+    qa: [
+      { q: 'What did the writer use the furoshiki for when it started to rain?', choices: ['To cover the head.', 'To carry a watermelon.', 'To wrap a present.', 'To dry the school bag.'], answer: 0, why: '第4段落 I used it to cover my head。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
