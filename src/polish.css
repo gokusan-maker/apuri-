@@ -3606,3 +3606,81 @@ header .event-chips { margin: 0 0 2px; }
 .today-read-btn.today-retry:active { box-shadow: 0 1px 0 #0369a1; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .today-read-btn.today-retry { background: linear-gradient(135deg, #34d399, #0ea5e9); } }
 :root[data-theme="dark"] .today-read-btn.today-retry { background: linear-gradient(135deg, #34d399, #0ea5e9); }
+
+/* ===== 地図のゾーン（ステージを進むと景色が変わる）：空・遠景・中景・手前の重ね絵＋うごく演出 ===== */
+.smap { --road: #fef3c7; --edge: #92400e; }
+.smap-sea .smap-land, .smap-forest .smap-land, .smap-mountain .smap-land { background: none; }
+.smap-land { isolation: isolate; }
+.smap-scene { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; }
+.smap .smap-path { z-index: 1; }
+.smap .smap-node { z-index: 2; }
+.smap .smap-node.now { z-index: 4; }
+.smap .smap-walker { z-index: 5; }
+.smap .smap-path polyline { fill: none; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; stroke-dasharray: none; }
+.smap .smap-path .smap-road-edge { stroke: var(--edge); stroke-width: 17; opacity: 0.55; }
+.smap .smap-path .smap-road { stroke: var(--road); stroke-width: 11; }
+.smap .smap-path .smap-road-dash { stroke: var(--edge); stroke-width: 2.5; stroke-dasharray: 1 10; opacity: 0.55; }
+.smap-zone { position: absolute; left: 8px; top: 6px; z-index: 3; padding: 2px 10px; border-radius: 999px; background: rgb(15 23 42 / 0.45); border: 1px solid rgb(255 255 255 / 0.4); color: #fff; font-size: 0.68rem; font-weight: 900; letter-spacing: 0.04em; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); backdrop-filter: blur(3px); }
+.smap .smap-deco { z-index: 1; font-size: 1.15rem; opacity: 0.9; filter: drop-shadow(0 2px 2px rgb(0 0 0 / 0.3)); animation: smap-deco 3.6s ease-in-out infinite; }
+.smap .smap-deco.d0 { left: 4%; top: 30%; }
+.smap .smap-deco.d1 { animation-delay: 1.2s; }
+.smap .smap-deco.d2 { animation-delay: 2.1s; }
+@keyframes smap-deco { 50% { transform: translateY(-5px) rotate(-4deg); } }
+/* ステージの印：メダルのように（ゾーンの色のふち＋影） */
+.smap .smap-spot { font-size: 1.45rem; background: radial-gradient(circle at 35% 30%, #fff 0 32%, color-mix(in srgb, var(--accent) 30%, #fff) 62%, var(--accent) 100%); box-shadow: 0 0 0 3px #fff, 0 0 0 5.5px var(--edge), 0 6px 0 5px rgb(0 0 0 / 0.22); }
+.smap .smap-node.locked { opacity: 0.8; }
+.smap .smap-node.locked .smap-spot { background: radial-gradient(circle at 35% 30%, #f5f5f4, #a8a29e 70%, #57534e); box-shadow: 0 0 0 3px #d6d3d1, 0 0 0 5px #44403c, 0 5px 0 4px rgb(0 0 0 / 0.25); font-size: 1.05rem; }
+.smap .smap-node.locked .smap-no { margin-top: 3px; padding: 0 6px; border-radius: 999px; background: rgb(15 23 42 / 0.55); }
+.smap .smap-node.now .smap-spot { box-shadow: 0 0 0 3px #fff, 0 0 0 6px var(--accent), 0 0 24px 8px color-mix(in srgb, var(--accent) 70%, transparent); }
+.smap .smap-node.now .smap-spot::after { content: ''; position: absolute; inset: -12px; border-radius: 50%; border: 2px dashed #fff; opacity: 0.8; animation: smap-ring 6s linear infinite; }
+@keyframes smap-ring { to { transform: rotate(360deg); } }
+.smap .smap-node.cleared .smap-btn { background: color-mix(in srgb, var(--edge) 80%, transparent); }
+.smap .smap-node.now .smap-btn { background: rgb(15 23 42 / 0.85); border: 2px solid color-mix(in srgb, var(--accent) 70%, #fff); }
+/* 景色のうごき */
+.scn-wave { animation: scn-wave 5s ease-in-out infinite alternate; }
+.scn-wave.w1 { animation-duration: 7s; animation-direction: alternate-reverse; }
+@keyframes scn-wave { to { transform: translateX(-14px); } }
+.scn-foam { animation: scn-foam 3s ease-in-out infinite alternate; }
+@keyframes scn-foam { to { transform: translateY(4px); opacity: 0.4; } }
+.scn-bolt { opacity: 0; animation: scn-bolt 4.5s steps(1) infinite; filter: drop-shadow(0 0 8px #fde047); }
+@keyframes scn-bolt { 0%, 88%, 92%, 100% { opacity: 0; } 89%, 91% { opacity: 1; } }
+.scn-rays { opacity: 0.16; animation: scn-rays 4s ease-in-out infinite alternate; }
+@keyframes scn-rays { to { opacity: 0.32; } }
+.scn-star { animation: scn-star 2.4s ease-in-out infinite alternate; }
+.scn-star:nth-of-type(2n) { animation-delay: 1.1s; }
+@keyframes scn-star { to { opacity: 0.3; } }
+.scn-sun { animation: scn-sun 5s ease-in-out infinite alternate; transform-origin: center; transform-box: fill-box; }
+@keyframes scn-sun { to { transform: scale(1.08); } }
+.scn-cloudsea { animation: scn-wave 8s ease-in-out infinite alternate; }
+/* ゾーンの演出のつぶ */
+.smap-fx { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
+.smap-fx i { position: absolute; display: block; }
+.fx-sparkle i { width: 6px; height: 6px; background: #fff; clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%); animation: fx-twinkle 2.2s ease-in-out infinite; }
+.fx-sparkle i:nth-child(n + 7) { display: none; }
+@keyframes fx-twinkle { 0%, 100% { opacity: 0; transform: scale(0.4); } 50% { opacity: 1; transform: scale(1.2); } }
+.fx-bubbles i { width: 7px; height: 7px; border-radius: 50%; border: 1.5px solid rgb(255 255 255 / 0.8); animation: fx-rise 4s ease-in infinite; }
+@keyframes fx-rise { from { transform: translateY(30px); opacity: 0; } 20% { opacity: 1; } to { transform: translateY(-60px); opacity: 0; } }
+.fx-rain i { width: 1.5px; height: 16px; background: rgb(226 232 240 / 0.55); transform: rotate(14deg); animation: fx-rain 0.9s linear infinite; }
+@keyframes fx-rain { from { translate: 10px -60px; } to { translate: -14px 80px; } }
+.fx-leaves i { width: 8px; height: 6px; border-radius: 80% 0 80% 0; background: #f9a8d4; animation: fx-fall 5s ease-in-out infinite; }
+.fx-leaves i:nth-child(3n) { background: #fde047; }
+.fx-leaves i:nth-child(n + 9) { display: none; }
+@keyframes fx-fall { from { translate: 0 -40px; rotate: 0deg; opacity: 0; } 20% { opacity: 1; } 50% { translate: 14px 10px; } to { translate: -6px 70px; rotate: 300deg; opacity: 0; } }
+.fx-sunrays i { width: 4px; height: 4px; border-radius: 50%; background: #fef9c3; box-shadow: 0 0 6px #fef08a; animation: fx-float 6s ease-in-out infinite; }
+.fx-sunrays i:nth-child(n + 8) { display: none; }
+@keyframes fx-float { 0%, 100% { opacity: 0; translate: 0 0; } 50% { opacity: 0.9; translate: 8px -14px; } }
+.fx-spores i { width: 5px; height: 5px; border-radius: 50%; background: #f0abfc; box-shadow: 0 0 8px 2px #e879f9; animation: fx-rise 6s ease-in-out infinite; }
+.fx-fireflies i { width: 5px; height: 5px; border-radius: 50%; background: #fef08a; box-shadow: 0 0 10px 3px #facc15; animation: fx-firefly 4s ease-in-out infinite; }
+@keyframes fx-firefly { 0%, 100% { opacity: 0.1; translate: 0 0; } 30% { opacity: 1; translate: 10px -8px; } 60% { opacity: 0.4; translate: -6px -16px; } }
+.fx-clouds i { width: 64px; height: 18px; border-radius: 999px; background: rgb(255 255 255 / 0.5); filter: blur(2px); animation: fx-drift 14s linear infinite; }
+.fx-clouds i:nth-child(n + 4) { display: none; }
+@keyframes fx-drift { from { translate: -40px 0; } to { translate: 60px 0; } }
+.fx-snow i { width: 5px; height: 5px; border-radius: 50%; background: #fff; box-shadow: 0 0 3px #fff; animation: fx-snow 5s linear infinite; }
+@keyframes fx-snow { from { translate: 0 -50px; opacity: 0; } 15% { opacity: 1; } 50% { translate: 8px 20px; } to { translate: -4px 90px; opacity: 0; } }
+.fx-blizzard i { width: 4px; height: 4px; border-radius: 50%; background: #fff; animation: fx-blizzard 1.4s linear infinite; }
+@keyframes fx-blizzard { from { translate: 60px -40px; opacity: 0; } 20% { opacity: 1; } to { translate: -80px 60px; opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .smap-fx i, .scn-wave, .scn-foam, .scn-bolt, .scn-rays, .scn-star, .scn-sun, .scn-cloudsea, .smap .smap-deco, .smap .smap-node.now .smap-spot::after { animation: none; } .smap-fx { display: none; } }
+.scn-moon { filter: drop-shadow(0 0 6px rgb(254 249 195 / 0.7)); }
+/* 地図の下の文（宝箱まで・クリアずみ）：明るい空でも読めるように、うすい帯をしく */
+.smap .smap-next-chest, .smap > .castle-below { margin: 0; padding: 4px 8px; background: rgb(15 23 42 / 0.42); color: #fef3c7; }
+.smap > .castle-below { padding-top: 0; font-size: 0.72rem; }
