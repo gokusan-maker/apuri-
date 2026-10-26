@@ -31,6 +31,7 @@ export type BadgeStats = {
   longPerfect?: number // 満点をとった長文の数
   trioStreak?: number // 今日の課題を3つ全部クリアした連続日数
   sealWins?: number // ボスのとくぎを封じて勝った回数
+  grammarStamps?: number // 全問正解した文法の単元の数
 }
 
 export type Badge = {
@@ -57,6 +58,9 @@ export const BADGES: Badge[] = [
   { id: 'long-1', icon: '📖', name: '読解の満点', desc: '長文読解で1本満点をとる', check: (s) => (s.longPerfect ?? 0) >= 1 },
   { id: 'long-20', icon: '📚', name: '読解マスター', desc: '長文読解で20本満点をとる', check: (s) => (s.longPerfect ?? 0) >= 20 },
   { id: 'trio-3', icon: '🎖', name: '課題コンプリート', desc: '今日の課題を3つとも3日続けてクリアする', check: (s) => (s.trioStreak ?? 0) >= 3 },
+  { id: 'grammar-10', icon: '📐', name: '文法の見習い', desc: '文法の単元を10個、全問正解する', check: (s) => (s.grammarStamps ?? 0) >= 10 },
+  { id: 'grammar-50', icon: '📏', name: '文法の職人', desc: '文法の単元を50個、全問正解する', check: (s) => (s.grammarStamps ?? 0) >= 50 },
+  { id: 'grammar-200', icon: '🏛', name: '文法の大先生', desc: '文法の単元を200個、全問正解する', check: (s) => (s.grammarStamps ?? 0) >= 200 },
   { id: 'seal-5', icon: '🔒', name: 'とくぎ封じ', desc: 'ボスのとくぎを発動させずに5回勝つ', check: (s) => (s.sealWins ?? 0) >= 5 },
   { id: 'seal-30', icon: '🗝', name: 'とくぎ封じの達人', desc: 'ボスのとくぎを発動させずに30回勝つ', check: (s) => (s.sealWins ?? 0) >= 30 },
   { id: 'trio-7', icon: '🏵', name: '課題の鉄人', desc: '今日の課題を3つとも7日続けてクリアする', check: (s) => (s.trioStreak ?? 0) >= 7 },

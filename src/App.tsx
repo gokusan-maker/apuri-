@@ -64,7 +64,7 @@ import { Training } from './TrainingView'
 import { loadTraining } from './training'
 import { DailyGrammarQ } from './DailyGrammarQView'
 import { DAILY_Q_XP } from './grammarq'
-import { dailyGrammar, loadDailyGrammarDay, loadDictBest, MASTER_TICKETS } from './grammar'
+import { dailyGrammar, grammarStamps, loadDailyGrammarDay, loadDictBest, loadGrammar, MASTER_TICKETS } from './grammar'
 import { HideSeek } from './HideSeekView'
 import { HIDE_COINS } from './hideseek'
 import { addSticker, loadStickers, saveStickers, stickerOf, STICKER_TICKETS } from './stickers'
@@ -782,6 +782,7 @@ function App() {
       longPerfect: perfectLongCount(),
       trioStreak: loadTrioStreak().count,
       sealWins: loadSealWins(),
+      grammarStamps: grammarStamps(loadGrammar()),
     },
     earned,
   )

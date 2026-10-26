@@ -162,3 +162,9 @@ it('今日の課題3つを3日・7日続けてクリアするとバッジ', () =
   expect(a.check({ ...zero, trioStreak: 3 })).toBe(true)
   expect(b.check({ ...zero, trioStreak: 7 })).toBe(true)
 })
+
+it('文法の単元を10・50・200個全問正解するとバッジ', () => {
+  expect(newlyEarned({ ...zero, grammarStamps: 10 }, {}).map((b) => b.id)).toContain('grammar-10')
+  expect(newlyEarned({ ...zero, grammarStamps: 9 }, {}).map((b) => b.id)).not.toContain('grammar-10')
+  expect(newlyEarned({ ...zero, grammarStamps: 200 }, {}).map((b) => b.id)).toEqual(expect.arrayContaining(['grammar-10', 'grammar-50', 'grammar-200']))
+})
