@@ -3575,3 +3575,6 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes trait-pop { from { opacity: 0; transform: scale(0.6); } 70% { transform: scale(1.1); } }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-trait { color: #c4b5fd; } }
 :root[data-theme="dark"] .boss-trait { color: #c4b5fd; }
+.boss-book-trait { display: block; font-size: 0.7rem; font-weight: 700; color: #7c3aed; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .boss-book-trait { color: #c4b5fd; } }
+:root[data-theme="dark"] .boss-book-trait { color: #c4b5fd; }

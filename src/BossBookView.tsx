@@ -1,6 +1,6 @@
 import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
-import { BOSSES, formatSec, loadBossTimes, type BossLook } from './boss'
+import { BOSSES, BOSS_TRAITS, formatSec, loadBossTimes, traitOf, type BossLook } from './boss'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
 import { UNIV_BOSSES } from './univ'
@@ -55,6 +55,11 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                 <span className="badge-desc">
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
                   {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
+                </span>
+              )}
+              {e && (
+                <span className="boss-book-trait" title={BOSS_TRAITS[traitOf(b.name)].desc}>
+                  とくぎ：{BOSS_TRAITS[traitOf(b.name)].icon} {BOSS_TRAITS[traitOf(b.name)].name}
                 </span>
               )}
               {e && onFight && Object.values(BOSSES).some((x) => x.name === b.name) && (

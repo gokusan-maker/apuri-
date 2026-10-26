@@ -3,6 +3,7 @@ import { expect, it } from 'vitest'
 import { Boss } from './BossView'
 import { BossBook } from './BossBookView'
 import { wordsOf } from './words'
+import { BOSS_TRAITS, traitOf } from './boss'
 
 it('ボスを倒すとボス図鑑にのる', () => {
   localStorage.clear()
@@ -16,6 +17,7 @@ it('ボスを倒すとボス図鑑にのる', () => {
   expect(screen.getByText('ヤミモチ')).toBeInTheDocument()
   expect(screen.getByText(/1回たおした/)).toBeInTheDocument()
   expect(screen.getByText('🔒 あと2回たおすとひみつが読める')).toBeInTheDocument()
+  expect(document.querySelector('.boss-book-trait')?.textContent).toContain(BOSS_TRAITS[traitOf('ヤミモチ')].name) // 図鑑にとくぎ
   expect(screen.getByText(/📜 ことわざ帳 1 \//)).toBeInTheDocument()
 })
 
