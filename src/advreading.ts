@@ -6133,6 +6133,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-theseus',
+    title: 'Is It Still the Same Ship?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "An ancient puzzle, recorded by the Greek writer Plutarch, asks a simple question. The ship of the hero Theseus was kept in a harbor for many years as a memorial. As its wooden planks rotted, they were replaced one by one, until eventually no original plank remained. Was it still the same ship?",
+      "The puzzle becomes even harder in a version ( A ) by the English philosopher Thomas Hobbes. Suppose someone collected all the old planks as they were removed and later rebuilt them into a second ship. Now there are two candidates. One has the history and the name; the other has the original material. Which, if either, is the real ship of Theseus?",
+      "The question is not merely a game. Many of the cells in our bodies are replaced over the years, although some, such as most brain cells, last a lifetime. Our opinions, habits, and memories also change. Yet we usually feel that we remain the same person from childhood to old age. Philosophers have suggested that identity may depend less on what something is made of ( B ) on the continuity of its form, function, and story.",
+      "The puzzle also appears in everyday life. A sports team may replace every player and coach over the decades and still be considered the same team by its fans. A city may be rebuilt after a disaster and keep its name and spirit. Perhaps identity is not something an object simply has, but something we give to it through the way we remember and treat it. If so, the ship of Theseus is the same ship as long as people ( C ) it that way.",
+    ],
+    ja: [
+      'ギリシャの著述家プルタルコスが書き残した古いなぞは、かんたんな問いを投げかける。英雄テセウスの船は、記念として長年港に保存されていた。木の板がくさるたびに1枚ずつ取りかえられ、やがて元の板は1枚も残らなくなった。それでも、それは同じ船だったのだろうか。',
+      'イギリスの哲学者トマス・ホッブズがつけ加えた形では、なぞはさらにむずかしくなる。だれかが、取り外された古い板をすべて集めておき、あとでそれを組み立てて2隻目の船をつくったとしよう。すると、候補が2つになる。一方には歴史と名前があり、もう一方には元の材料がある。どちらかが本物だとしたら、どちらがテセウスの本物の船なのだろうか。',
+      'この問いは、ただの遊びではない。私たちの体の細胞の多くは年月とともに入れかわるが、たいていの脳の細胞のように一生もつものもある。意見や習慣、記憶も変わる。それでも私たちはふつう、子どものころから年をとるまで同じ人間であり続けていると感じる。哲学者たちは、同一性は、物が何でできているかよりも、その形やはたらき、物語が続いていることによって決まるのかもしれないと考えてきた。',
+      'このなぞは、日常生活にもあらわれる。スポーツのチームは、何十年もの間に選手や監督が全員入れかわっても、ファンからは同じチームだと考えられる。都市は災害のあとで建て直されても、その名前と心を受けつぐことがある。同一性とは、物がただもっているものではなく、私たちがそれを覚え、あつかうやり方を通してあたえるものなのかもしれない。もしそうなら、人々がそう見ているかぎり、テセウスの船は同じ船なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['added', 'adding', 'add', 'to add'], answer: 0, why: 'a version を「（ホッブズによって）つけ加えられた」とうしろから説明する過去分詞 added。' },
+      { id: 'B', choices: ['than', 'as', 'to', 'that'], answer: 0, why: 'less A than B「B ほど A ではない・A よりむしろ B」。less と組むのは than。' },
+      { id: 'C', choices: ['see', 'seeing', 'to see', 'seen'], answer: 0, why: 'as long as ＋ 主語 ＋ 動詞。主語 people（複数）の現在形 see。' },
+    ],
+    underline: {
+      phrase: 'if either',
+      choices: ['if one of them is the real ship at all', 'if both of them are real', 'because neither of them exists', 'if the ship finally sinks'],
+      answer: 0,
+      why: 'if either は「（2つのうち）どちらかがそうだとすれば」。どちらも本物ではない可能性もふくめた言い方。',
+    },
+    order: {
+      words: ['rebuilt', 'them', 'into', 'a', 'second', 'ship'],
+      rest: '',
+      answer: 'rebuilt them into a second ship',
+      ja: 'それらを組み立てて2隻目の船にした。（build A into B＝A を組み立てて B にする）',
+    },
+    tf: [
+      { statement: 'テセウスの船は、最後には元の板が1枚も残らなかった。', answer: true, why: '第1段落 until eventually no original plank remained。' },
+      { statement: 'ホッブズの形では、本物の候補が2つになる。', answer: true, why: '第2段落 Now there are two candidates。' },
+      { statement: '筆者によれば、体の細胞はすべて7年ごとに入れかわる。', answer: false, why: '第3段落 some, such as most brain cells, last a lifetime。' },
+      { statement: '筆者は、同一性は材料だけで決まると主張している。', answer: false, why: '第3段落 identity may depend less on what something is made of than on the continuity …。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest at the end of the passage?', choices: ['Identity may be something we give to objects through how we remember and treat them.', 'Old ships should never be repaired.', 'Sports teams should keep the same players forever.', 'Only the original material makes something real.'], answer: 0, why: '第4段落 Perhaps identity is not something an object simply has, but something we give to it …。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
