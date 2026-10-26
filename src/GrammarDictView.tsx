@@ -14,6 +14,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
   const [picked, setPicked] = useState<number[]>([])
   const [checked, setChecked] = useState<boolean | null>(null)
   const [score, setScore] = useState(0)
+  const [streak, setStreak] = useState(0) // 連続正解
   const done = step >= unit.examples.length
   const ex = unit.examples[Math.min(step, unit.examples.length - 1)]
   const tiles = useMemo(() => shuffle(dictTokens(ex.en)), [ex])
@@ -63,6 +64,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
               onClick={() => {
                 const ok = sameSentence(text, ex.en)
                 setChecked(ok)
+                setStreak(ok ? streak + 1 : 0)
                 if (ok) {
                   playCorrect()
                   setScore(score + 1)
@@ -77,6 +79,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
               <p className={`long-why${checked ? ' right' : ' wrong'}`}>
                 {checked ? '⭕ 正解！' : '❌ おしい！'} {ex.en}
               </p>
+              {checked && streak >= 2 && <p className="num-streak">🔥 {streak}連続正解！</p>}
               <button
                 className="flip"
                 onClick={() => {

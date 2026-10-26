@@ -28,3 +28,17 @@ it('聞いた英文を語のボタンでつくって答えあわせする（打�
   expect(screen.getByText(`1 / ${u.examples.length} 文正解`)).toBeInTheDocument()
   sp.mockRestore()
 })
+
+it('ディクテーションも続けて正解すると連続正解のコンボが出る', async () => {
+  const speech = await import('./speech')
+  const sp = vi.spyOn(speech, 'speak').mockImplementation(() => {})
+  const u = GRAMMAR.find((x) => x.examples.length >= 2)!
+  render(<GrammarDict unit={u} onBack={() => {}} />)
+  tapWords(dictTokens(u.examples[0].en))
+  fireEvent.click(screen.getByText('答えあわせ'))
+  fireEvent.click(screen.getByText('次へ'))
+  tapWords(dictTokens(u.examples[1].en))
+  fireEvent.click(screen.getByText('答えあわせ'))
+  expect(screen.getByText('🔥 2連続正解！')).toBeInTheDocument()
+  sp.mockRestore()
+})
