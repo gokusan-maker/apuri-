@@ -39,3 +39,21 @@ export function builtSpelling(answer: string, letters: string[]): string {
   }
   return out
 }
+
+// スペルの連続正解の自己ベスト
+const STREAK_KEY = 'eitan:spell-best-streak'
+export function loadSpellBest(): number {
+  try {
+    const v = Number(localStorage.getItem(STREAK_KEY) ?? '0')
+    return Number.isFinite(v) ? v : 0
+  } catch {
+    return 0
+  }
+}
+export function saveSpellBest(n: number): void {
+  try {
+    localStorage.setItem(STREAK_KEY, String(n))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}

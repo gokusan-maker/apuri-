@@ -6,7 +6,7 @@ import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
-import { builtSpelling, hintText, isCorrectSpelling, letterCount, spellXp } from './spell'
+import { builtSpelling, hintText, isCorrectSpelling, letterCount, loadSpellBest, saveSpellBest, spellXp } from './spell'
 import { starsFor } from './stages'
 import type { Word } from './words'
 
@@ -27,6 +27,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [score, setScore] = useState(0)
   const [streak, setStreak] = useState(0) // 連続正解
   const [best, setBest] = useState(0) // 連続正解の最高
+  const [record] = useState(loadSpellBest) // これまでの自己ベスト（始めたときの）
 
   const w = list[index]
   // 文字のボタン：答えの文字（空白はのぞく）をまぜたもの。キーボードで打たずに、ボタンを押してつづる
@@ -43,6 +44,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
       setResult('ok')
       setStreak(streak + 1)
       setBest(Math.max(best, streak + 1))
+      if (streak + 1 > loadSpellBest()) saveSpellBest(streak + 1)
       setScore(score + 1)
       playCorrect()
       onAnswer?.(true, spellXp(hints), w.id, 'ear')
@@ -81,7 +83,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
           {score} / {list.length} 問正解
         </p>
         {score === list.length && list.length > 0 && <p className="wc-perfect">🏆 パーフェクト！ 全問正解</p>}
-        {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
+        {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解{best > record ? '　🎉 自己ベスト更新！' : ''}</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score, list.length)}`}>
           {'★'.repeat(starsFor(score, list.length))}
           {'☆'.repeat(3 - starsFor(score, list.length))}

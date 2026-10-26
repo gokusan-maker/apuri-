@@ -108,6 +108,7 @@ it('スペルも2問続けて正解すると連続正解のコンボが出る', 
 })
 
 it('まちがえても、それまでの最高の連続正解は結果に残る', () => {
+  localStorage.clear()
   const ws = WORDS.slice(0, 3)
   render(<Spell words={ws} count={3} />)
   for (let i = 0; i < 3; i++) {
@@ -117,7 +118,8 @@ it('まちがえても、それまでの最高の連続正解は結果に残る'
     fireEvent.click(screen.getByText('こたえる'))
     fireEvent.click(screen.getByText('次へ'))
   }
-  expect(screen.getByText('🔥 最高 2連続正解')).toBeInTheDocument()
+  expect(screen.getByText(/🔥 最高 2連続正解/).textContent).toContain('自己ベスト更新') // はじめてなので自己ベスト
+  expect(localStorage.getItem('eitan:spell-best-streak')).toBe('2')
   expect(screen.queryByText('🏆 パーフェクト！ 全問正解')).toBeNull() // 1問まちがえたのでパーフェクトではない
 })
 
