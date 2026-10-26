@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  lest: { wrong: 'He set an alarm lest he should not oversleep.', right: 'He set an alarm lest he should oversleep.', why: 'lest に「～しないように」の否定が入っているので not はつけない。' },
+  'might-as-well': { wrong: 'We might as well to take a taxi.', right: 'We might as well take a taxi.', why: 'might as well のあとは to のない原形。' },
   'pro-infinitive': { wrong: 'Would you like to come? — Yes, I\'d love it.', right: 'Would you like to come? — Yes, I\'d love to.', why: 'くり返しをさける代不定詞は to だけ残す。' },
   'never-without': { wrong: 'I never see this photo without remember my trip.', right: 'I never see this photo without remembering my trip.', why: '前置詞 without のあとは動名詞。' },
   'provided-that': { wrong: 'You can go out provide that you finish your homework.', right: 'You can go out provided that you finish your homework.', why: '「～という条件で」は provided (that) ～。' },
