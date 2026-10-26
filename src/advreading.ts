@@ -6345,6 +6345,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-eclipses',
+    title: 'When the Sun Goes Dark',
+    level: 'TOEFL・IELTS（天文学）',
+    paragraphs: [
+      "A solar eclipse occurs when the Moon passes directly between the Sun and Earth, blocking the Sun's light. During a total eclipse, the sky darkens in the middle of the day, the temperature drops, and the Sun's faint outer atmosphere, ( A ) is normally hidden by its bright surface, becomes visible.",
+      "Total eclipses are possible because of a remarkable coincidence. The Sun is about four hundred times wider than the Moon, but it is also about four hundred times farther away. As a result, the two appear almost exactly the same size in our sky.",
+      "If the Moon goes around Earth about once a month, why don't eclipses happen every month? The reason is that the Moon's orbit is tilted by about five degrees compared with Earth's path around the Sun. In most months, the Moon passes slightly above or below the line ( B ) connects Earth and the Sun.",
+      "A lunar eclipse is the reverse situation: Earth passes between the Sun and the Moon, and Earth's shadow falls on the Moon. Instead of disappearing completely, the Moon often turns a deep red. This happens because some sunlight is bent as it travels through Earth's atmosphere, which scatters blue light and lets red light pass ( C ) to reach the Moon.",
+    ],
+    ja: [
+      '日食は、月が太陽と地球のちょうど間を通り、太陽の光をさえぎるときに起こる。皆既日食のときは、真昼に空が暗くなり、気温が下がり、ふだんは太陽の明るい表面にかくれている、太陽のかすかな外側の大気が見えるようになる。',
+      '皆既日食が起こるのは、おどろくべき偶然のおかげである。太陽は月のおよそ400倍の大きさだが、およそ400倍遠くにもある。その結果、空では2つがほとんどちょうど同じ大きさに見えるのだ。',
+      '月がおよそ1か月に1回地球のまわりを回っているなら、なぜ日食は毎月起こらないのだろうか。その理由は、月の通り道が、地球が太陽のまわりを回る道にくらべて約5度かたむいているからだ。たいていの月は、地球と太陽を結ぶ線の少し上か下を月が通っていく。',
+      '月食はその逆の状況で、地球が太陽と月の間を通り、地球の影が月に落ちる。月は完全に消えるのではなく、深い赤色になることが多い。これは、太陽の光の一部が地球の大気を通るときに曲げられ、大気が青い光を散らして、赤い光を通りぬけさせて月に届かせるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'where'], answer: 0, why: 'コンマにはさまれた非制限用法で outer atmosphere を受け、is hidden の主語になる which。what は先行詞をとらず、that はコンマのあとに使えず、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the line を説明し、connects の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['through', 'between', 'among', 'beside'], answer: 0, why: 'pass through「通りぬける」。大気の中を通りぬけて月に届く、ということ。' },
+    ],
+    underline: {
+      phrase: 'a remarkable coincidence',
+      choices: ['a surprising chance agreement', 'a careful plan', 'a common mistake', 'a very strong force'],
+      answer: 0,
+      why: 'coincidence は「偶然の一致」、remarkable は「おどろくべき」。太陽と月がたまたま同じ大きさに見えることを指す。',
+    },
+    order: {
+      words: ['appear', 'almost', 'exactly', 'the', 'same', 'size'],
+      rest: '',
+      answer: 'appear almost exactly the same size',
+      ja: 'ほとんどちょうど同じ大きさに見える。（appear ＋ 補語＝～に見える）',
+    },
+    tf: [
+      { statement: '太陽は月よりおよそ400倍大きく、およそ400倍遠くにある。', answer: true, why: '第2段落 about four hundred times wider … about four hundred times farther away。' },
+      { statement: '月の通り道がかたむいているので、日食は毎月は起こらない。', answer: true, why: '第3段落 the Moon\'s orbit is tilted by about five degrees。' },
+      { statement: '月食のとき、月は完全に見えなくなる。', answer: false, why: '第4段落 Instead of disappearing completely, the Moon often turns a deep red。' },
+    ],
+    qa: [
+      { q: 'Why does the Moon often look red during a lunar eclipse?', choices: ['Earth\'s atmosphere scatters blue light and lets red light reach the Moon.', 'The Moon gets very hot.', 'The Sun turns red during an eclipse.', 'The Moon reflects light from Mars.'], answer: 0, why: '第4段落 Earth\'s atmosphere … scatters blue light and lets red light pass through to reach the Moon。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
