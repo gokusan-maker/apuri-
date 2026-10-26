@@ -213,3 +213,11 @@ it('文法の問題文は全単元で重ならない（同じ文だと答え合�
   const s = GRAMMAR.flatMap((u) => u.questions.map((q) => q.sentence))
   expect(new Set(s).size).toBe(s.length)
 })
+
+it('文法単元の id は「まちがえやすい単語」と重ならない（前からある7つをのぞく）', async () => {
+  const { GRAMMAR } = await import('./grammar')
+  const { CONFUSING } = await import('./confusing')
+  const old = ['ago-before', 'almost-most', 'another-other', 'between-among', 'by-until', 'few-little', 'make-do', 'say-tell']
+  const ids = new Set(CONFUSING.map((u) => u.id))
+  expect(GRAMMAR.filter((u) => ids.has(u.id) && !old.includes(u.id)).map((u) => u.id)).toEqual([])
+})
