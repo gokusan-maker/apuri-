@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'need-not': { wrong: 'You need not to come today.', right: 'You need not come today.', why: '助動詞の need not のあとは to のない原形。' },
+  'ought-to': { wrong: 'You ought to eating less sugar.', right: 'You ought to eat less sugar.', why: 'ought to のあとは動詞の原形。' },
   'tend-to': { wrong: 'People tend to forgetting names.', right: 'People tend to forget names.', why: 'tend to のあとは動詞の原形。' },
   'what-if': { wrong: 'What if it will rain tomorrow?', right: 'What if it rains tomorrow?', why: 'if のあとは未来のことでも現在形。' },
   whereas: { wrong: 'Unlike the old phone was heavy, the new one is light.', right: 'Whereas the old phone was heavy, the new one is light.', why: 'うしろが文なら接続詞 whereas / while。unlike のうしろは名詞。' },

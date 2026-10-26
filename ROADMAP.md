@@ -1508,6 +1508,7 @@
 - [x] 高校の文法単元を4つ追加：whereas ／ while（対比）・given (that) ～・tend to ／ be bound to・What if ～?
 - [x] 長文：共通テスト（自動販売機の国）・私学（シェアサイクル）を1本ずつ
 - [x] スペル・数の聞き取りの結果に星（★★★）と「最高 n連続正解」を表示
+- [x] 高校の文法単元を2つ追加：need not ／ needn't have done・ought to ／ ought not to
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
