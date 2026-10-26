@@ -6597,6 +6597,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-counting-tens',
+    title: 'Why We Count in Tens',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Why do most people count in groups of ten? The most likely answer is literally at our fingertips. Because we have ten fingers, early humans probably used them to count, and many number systems grew from this habit. It is no accident that the English word 'digit' can mean both a number and a finger.",
+      "Not every culture chose ten, however. The Maya of Central America used a system based on twenty, perhaps counting both fingers and toes. Traces of counting by twenty survive in some modern languages, too. In French, for example, the word for eighty, quatre-vingts, literally means 'four twenties.'",
+      "Perhaps the most influential alternative came from ancient Mesopotamia, ( A ) people used a system based on sixty. Sixty can be divided evenly by many numbers, including 2, 3, 4, 5, 6, 10, 12, 15, 20, and 30, ( B ) made it convenient for trade and astronomy. We still live with this legacy every day: there are sixty seconds in a minute and sixty minutes in an hour.",
+      "Computers, meanwhile, work in base two, using only 0 and 1, because electronic switches have two states: on and off. These examples show that number systems are not fixed laws of nature but human inventions, shaped by our bodies, our needs, and our tools. The way we count, ( C ) natural it may seem, is part of our culture.",
+    ],
+    ja: [
+      'なぜほとんどの人は10ずつまとめて数えるのだろうか。いちばんありそうな答えは、文字どおり指先にある。人には指が10本あるので、大昔の人はおそらく指を使って数え、多くの数のしくみがこの習慣から生まれた。英語の digit ということばが「数字」と「指」の両方を意味するのは、偶然ではないのである。',
+      'しかし、すべての文化が10をえらんだわけではない。中央アメリカのマヤの人々は、おそらく手と足の指の両方を数えて、20をもとにしたしくみを使っていた。20ずつ数えたなごりは、今の言語にも残っている。たとえばフランス語で80を表す quatre-vingts は、文字どおりには「20が4つ」という意味だ。',
+      'おそらくもっとも大きな影響をあたえたもう1つのしくみは、古代メソポタミアから生まれた。そこの人々は60をもとにしたしくみを使っていた。60は、2、3、4、5、6、10、12、15、20、30など多くの数で割り切れるので、交易や天文学に便利だったのだ。私たちは今もこの遺産とともに毎日暮らしている。1分は60秒、1時間は60分なのである。',
+      '一方、コンピューターは0と1だけを使う2進法で動いている。電子のスイッチには入と切の2つの状態しかないからだ。こうした例は、数のしくみが変わることのない自然の法則ではなく、私たちの体や必要、道具によって形づくられた人間の発明であることを示している。数え方は、どれほど自然に思えても、文化の一部なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで ancient Mesopotamia（場所）を受け、うしろが欠けのない文（people used a system …）なので関係副詞 where。which・what のうしろには欠けた部分が必要、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の文の内容（多くの数で割り切れること）を受け、made の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では文がつながらない。' },
+      { id: 'C', choices: ['however', 'although', 'whatever', 'whenever'], answer: 0, why: 'however ＋ 形容詞 ＋ S may V「どれほど～でも」。although のうしろに形容詞を先に出す形はなく、whatever・whenever は形容詞と組まない。' },
+    ],
+    underline: {
+      phrase: 'at our fingertips',
+      choices: ['right here on our own hands', 'far away from us', 'written in old books', 'hidden under the ground'],
+      answer: 0,
+      why: 'at one\'s fingertips は「すぐ手元に」。ここでは文字どおり「指先に（＝10本の指に）」という意味もかけている。',
+    },
+    order: {
+      words: ['can', 'be', 'divided', 'evenly', 'by', 'many', 'numbers'],
+      rest: '',
+      answer: 'can be divided evenly by many numbers',
+      ja: '多くの数で割り切れる。（助動詞の受け身 can be divided、evenly＝余りなく）',
+    },
+    tf: [
+      { statement: 'マヤの人々は、20をもとにした数のしくみを使っていた。', answer: true, why: '第2段落 The Maya … used a system based on twenty。' },
+      { statement: '1分が60秒なのは、古代メソポタミアの60のしくみのなごりだ。', answer: true, why: '第3段落 We still live with this legacy every day: there are sixty seconds in a minute。' },
+      { statement: '筆者は、数のしくみは変わらない自然の法則だと考えている。', answer: false, why: '第4段落 number systems are not fixed laws of nature but human inventions。' },
+    ],
+    qa: [
+      { q: 'Why do computers use base two?', choices: ['Electronic switches have only two states.', 'Computers have two fingers.', 'Base two is used in French.', 'It was invented in Mesopotamia.'], answer: 0, why: '第4段落 because electronic switches have two states: on and off。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
