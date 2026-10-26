@@ -11,6 +11,7 @@ import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
 import { BossArena } from './BossArenaView'
+import { isNight } from './daytime'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
 import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
@@ -291,6 +292,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [crits, setCrits] = useState(0)
   const [saves, setSaves] = useState(0) // ガード・根性を使った回数
   const [skillMsg, setSkillMsg] = useState('')
+  const [night] = useState(() => isNight(new Date().getHours())) // 夜は舞台の空を暗く
   const traits = traitsProp ?? bossTraits(baseLook.name) // ボスのとくぎ
   const [traitMsg, setTraitMsgRaw] = useState('') // とくぎが発動したとき
   const fired = useRef(false) // このバトルでとくぎが1回でも発動した（とくぎ封じの判定）
@@ -620,7 +622,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </div>
       )}
       <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
-        <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} />
+        <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} night={night} />
         <BossFigure hit={hit} look={look} />
         {teamOn && index === 0 && picked === null && !won && (
           <span className="boss-vs" aria-hidden="true">

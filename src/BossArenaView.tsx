@@ -86,7 +86,7 @@ function Scenery({ bg }: { bg: Arena }) {
   }
 }
 
-export function BossArena({ bg, color }: { bg: Arena; color: string }) {
+export function BossArena({ bg, color, night = false }: { bg: Arena; color: string; night?: boolean }) {
   const id = useId().replace(/:/g, '')
   const [a, b] = SKY[bg]
   return (
@@ -103,6 +103,15 @@ export function BossArena({ bg, color }: { bg: Arena; color: string }) {
       </defs>
       <rect width={W} height={H} fill={`url(#${id}-sky)`} />
       <Scenery bg={bg} />
+      {/* 夜（19時〜5時）は空を暗くして星を出す（もともと夜の舞台はそのまま） */}
+      {night && bg !== 'night' && (
+        <g className="arena-nightfall">
+          <rect width={W} height={H} fill="#0b1027" opacity="0.5" />
+          {[24, 70, 120, 200, 250, 296].map((x, k) => (
+            <circle key={x} cx={x} cy={10 + ((k * 17) % 40)} r={k % 2 ? 1 : 1.5} fill="#fff" className="arena-star" />
+          ))}
+        </g>
+      )}
       {/* ボスの色のオーラと、足もとの台 */}
       <circle cx={W / 2} cy="66" r="70" fill={`url(#${id}-aura)`} className="arena-aura" />
       <ellipse cx={W / 2} cy="124" rx="70" ry="12" fill="#0f172a" opacity="0.35" />

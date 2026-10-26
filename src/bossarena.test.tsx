@@ -15,3 +15,10 @@ it('ボス戦の舞台：ステージごとの景色に、ボスの色のオー�
 it('ボスのとくぎは、似た名前のボスでもばらける（4種類とも使われる）', () => {
   expect(new Set(Object.values(BOSSES).map((b) => traitOf(b.name))).size).toBe(4)
 })
+
+it('夜は舞台の空が暗くなり星が出る（夜の舞台はもとから夜なので重ねない）', () => {
+  const { container, unmount } = render(<BossArena bg="field" color="#ff0000" night />)
+  expect(container.querySelector('.arena-nightfall')).not.toBeNull()
+  unmount()
+  expect(render(<BossArena bg="night" color="#ff0000" night />).container.querySelector('.arena-nightfall')).toBeNull()
+})
