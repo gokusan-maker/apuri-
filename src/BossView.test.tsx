@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { Boss } from './BossView'
+import { BOSSES } from './boss'
 import { wordsOf } from './words'
 
 function answer(correct: boolean) {
@@ -71,6 +72,18 @@ describe('ボス戦', () => {
     }
     fireEvent.click(screen.getByText('次のボスへ ▶ テスト'))
     expect(onNext).toHaveBeenCalled()
+  })
+
+  it('ボス戦の画面：名前とHPはネームプレートに、弱点・会心はチップにまとまる', () => {
+    const { container } = render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
+    const plate = container.querySelector('.boss-plate')!
+    expect(plate.querySelector('.boss-name')!.textContent).toBe(BOSSES['中1'].name)
+    expect(plate.querySelector('[role="progressbar"]')).not.toBeNull()
+    expect(plate.querySelector('.boss-hp-num')!.textContent).toBe('のこりHP 300 / 300')
+    const chips = container.querySelector('.boss-chips')!
+    expect(chips.querySelector('.boss-weak')!.textContent).toMatch(/^弱点：/)
+    expect(chips.textContent).toMatch(/3秒以内で会心/)
+    expect((container.querySelector('.battle-v2') as HTMLElement).style.getPropertyValue('--boss')).toBe(BOSSES['中1'].color)
   })
 
   it('ボスのHPが数字でも出て、正解すると減る', () => {

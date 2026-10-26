@@ -10,6 +10,7 @@ import { filledParts, readingBossQs, WIN_LINES, type ReadingQ } from './readingb
 import { speak } from './speech'
 import { makeLookup } from './glossary'
 import { useContext, useEffect, useId, useRef, useState } from 'react'
+import type { CSSProperties } from 'react'
 import { BossArena } from './BossArenaView'
 import { isNight } from './daytime'
 import { ChestTicketContext } from './castle'
@@ -609,7 +610,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   return (
-    <section className={`card quiz boss bg-${golden ? 'gold' : bossBgOf(level)}${atk && atk.at === index && picked !== null && atk.lose > 0 ? ' hurt' : ''}`}>
+    <section className={`card quiz boss battle-v2 bg-${golden ? 'gold' : bossBgOf(level)}${atk && atk.at === index && picked !== null && atk.lose > 0 ? ' hurt' : ''}${enraged && !won ? ' enraged' : ''}`} style={{ '--boss': look.color } as CSSProperties}>
       <div className="stage-head">
         <button className="stage-back" onClick={onExit}>
           {won || lost ? '← もどる' : '← にげる'}
@@ -653,6 +654,19 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </span>
         )}
       </div>
+      {/* ネームプレート：ボスの名前と HP（格闘ゲームのように舞台の下に重ねる） */}
+      <div className="boss-plate">
+        <p className="boss-name">
+          {look.name}
+          {traits.length > 1 && <span className="boss-plate-crown"> 👑</span>}
+        </p>
+        <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={maxHp} aria-valuenow={hp}>
+          <div className={`boss-hp-fill${hp / maxHp <= 0.25 ? ' low' : hp / maxHp <= 0.5 ? ' mid' : ''}`} style={{ width: `${(hp / maxHp) * 100}%` }} />
+        </div>
+        <p className="boss-hp-num">
+          のこりHP {hp} / {maxHp}
+        </p>
+      </div>
       {hit && crit && (
         <p key={index} className="boss-crit" role="status">
           ⚡ 会心の一撃！
@@ -665,7 +679,6 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       )}
       {shiny && <p className="golden-boss shiny-boss">✨ 色ちがいのボスがあらわれた！ たおすとボス図鑑に記録されるよ</p>}
       {golden && <p className="golden-boss">✨ 金色ボスがあらわれた！ たおすと 🪙{GOLDEN_COINS} のおまけ</p>}
-      <p className="boss-name">{look.name}</p>
       {index === 0 && picked === null && hp === maxHp && (
         <div className="battle-start" aria-hidden="true">
           ⚔ バトルスタート！
@@ -677,25 +690,34 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <span className="boss-intro-ja">{introLineOf(look.name).ja}</span>
         </p>
       )}
-      <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
-        弱点：{speciesOf(weak).name}
-        {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
-      </p>
       {index === 0 && picked === null && hp === maxHp && traits.length > 0 && (
         <p className={`trait-cutin t-${traits[0]}`} aria-hidden="true">
           {traits.map((t) => BOSS_TRAITS[t].icon).join('')} {look.name}のとくぎ「{traits.map((t) => BOSS_TRAITS[t].name).join('・')}」
         </p>
       )}
-      {traits.length > 0 && !won && !lost && !firedShown && (
-        <p className="seal-live" title="とくぎを発動させずに勝つと とくぎ封じ">
-          🔒 とくぎ封じ中
-        </p>
+      {/* 情報はチップで1〜2行にまとめる：弱点・とくぎ・封じ中・会心 */}
+      {!won && (
+        <div className="boss-chips">
+          <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
+            弱点：{speciesOf(weak).name}
+            {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
+          </p>
+          {traits.map((t) => (
+            <p key={t} className={`boss-trait t-${t}`} title={BOSS_TRAITS[t].desc}>
+              とくぎ：{BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}
+            </p>
+          ))}
+          {traits.length > 0 && !lost && !firedShown && (
+            <p className="seal-live" title="とくぎを発動させずに勝つと とくぎ封じ">
+              🔒 とくぎ封じ中
+            </p>
+          )}
+          {index === 0 && picked === null && <p className="stats-note boss-tip" title="3秒以内に正解すると会心の一撃">⚡ 3秒以内で会心！</p>}
+        </div>
       )}
-      {traits.map((t) => (
-        <p key={t} className="boss-trait" title={BOSS_TRAITS[t].desc}>
-          {traits.length > 1 ? '👑 ' : ''}とくぎ：{BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}（{BOSS_TRAITS[t].desc}）
-        </p>
-      ))}
+      {!won && traits.length > 0 && index === 0 && picked === null && (
+        <p className="boss-trait-desc">{traits.map((t) => `${BOSS_TRAITS[t].icon} ${BOSS_TRAITS[t].desc}`).join('　')}</p>
+      )}
       {traitMsg && picked !== null && !won && (
         <p key={traitMsg + index} className="boss-trait-pop" role="status">
           {traitMsg}
@@ -726,7 +748,6 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </span>
         </div>
       )}
-      {index === 0 && picked === null && <p className="stats-note boss-tip" title="3秒以内に正解すると会心の一撃">⚡ 3秒以内で会心！</p>}
       {look.taunt && index === 0 && picked === null && (
         <p className="boss-taunt">
           「{look.taunt.en}」<span>{look.taunt.ja}</span>
@@ -737,12 +758,6 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           {partner.name}：「{replyOf(partner.species).en}」<span>{replyOf(partner.species).ja}</span>
         </p>
       )}
-      <div className="boss-hp" role="progressbar" aria-label="ボスのHP" aria-valuemin={0} aria-valuemax={maxHp} aria-valuenow={hp}>
-        <div className="boss-hp-fill" style={{ width: `${(hp / maxHp) * 100}%` }} />
-      </div>
-      <p className="boss-hp-num">
-        のこりHP {hp} / {maxHp}
-      </p>
       <p className="boss-status">
         <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
         {comeback && !won && <span className="comeback-badge">⚡逆転チャンス！ダメージ2倍</span>}
