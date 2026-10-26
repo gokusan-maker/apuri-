@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'used-for': { wrong: 'Bamboo is used for make baskets.', right: 'Bamboo is used to make baskets. / Bamboo is used for making baskets.', why: 'for のあとは名詞・-ing、to のあとは原形。' },
+  'it-is-true-but': { wrong: 'It is truth that he is young, but he is wise.', right: 'It is true that he is young, but he is wise.', why: 'It is のあとは形容詞 true。' },
   'succeed-in': { wrong: 'She succeeded to pass the exam.', right: 'She succeeded in passing the exam.', why: '成功は succeed in -ing。to ＋ 原形と組むのは fail。' },
   'graduate-from': { wrong: 'He complained the noise.', right: 'He complained about the noise.', why: 'complain は自動詞なので、事柄の前に about が必要。' },
   'agree-with-to': { wrong: 'I agree to you.', right: 'I agree with you.', why: '人に賛成するのは agree with。agree to は提案・計画を受け入れるとき。' },

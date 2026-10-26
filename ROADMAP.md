@@ -1543,7 +1543,7 @@
 - [x] 長文：高校入試（はじめてのレース）・国公立（都会の鳥の歌）・共通テスト（時間どおりの電車）を1本ずつ
 - [x] 数の聞き取りに自己ベスト（問題中に「🏅ベスト」、更新すると「🎉 自己ベスト更新！」）
 - [x] 高校の文法単元を2つ追加：agree with ／ agree to ／ agree on・depend on ／ It depends
-- [x] 高校の文法単元を2つ追加：succeed in -ing ／ fail to・graduate from ／ complain about ／ complain to
+- [x] 高校の文法単元を4つ追加：succeed in -ing ／ fail to・graduate from ／ complain about ／ complain to・be used for -ing ／ be used to 原形・It is true ～, but …
 - [x] 長文：旧帝大レベルをさらに1本（テセウスの船）
 - [x] ボス部屋：撃破の数の横に「🎯 あとnレベルで記念の🪙」を表示
 ## アイデア（未整理）
