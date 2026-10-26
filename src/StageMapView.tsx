@@ -64,7 +64,14 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
           {now}/{total}
         </span>
       </p>
-      {now >= total && <p className="castle-top">{GOAL[theme]}</p>}
+      {now >= total && (
+        <p className="castle-top">
+          {GOAL[theme]}
+          <span className="smap-zone-stamps" aria-label="制覇したゾーン">
+            {MAP_ZONES[theme].map((z) => z.icon).join('')}
+          </span>
+        </p>
+      )}
       {now >= total && next && (
         <button className="smap-next-map" onClick={next.go}>
           ▶ 次は「{next.label}」へ

@@ -44,3 +44,12 @@ it('地図の見出しに5つのゾーンのどこまで来たかの点', async 
   expect(dots.querySelectorAll('i.done')).toHaveLength(2)
   expect(dots.querySelectorAll('i.now')).toHaveLength(1)
 })
+
+it('地図を全部制覇すると、5つのゾーンの印がならぶ', async () => {
+  const { render, screen } = await import('@testing-library/react')
+  const { StageMap } = await import('./StageMapView')
+  const { MAP_ZONES } = await import('./mapzone')
+  localStorage.clear()
+  render(<StageMap name="全部" theme="mountain" floors={Array.from({ length: 10 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: true }))} onOpen={() => {}} />)
+  expect(screen.getByLabelText('制覇したゾーン').textContent).toBe(MAP_ZONES.mountain.map((z) => z.icon).join(''))
+})

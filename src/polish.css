@@ -3754,3 +3754,4 @@ header .event-chips { margin: 0 0 2px; }
 /* ボス図鑑：とくぎのしくみ */
 .trait-guide ul { margin: 6px 0 0; padding-left: 1.1em; font-size: 0.82rem; line-height: 1.6; }
 .trait-guide small { color: var(--muted); margin-left: 4px; }
+.smap-zone-stamps { display: block; margin-top: 2px; letter-spacing: 4px; font-size: 1.1rem; }
