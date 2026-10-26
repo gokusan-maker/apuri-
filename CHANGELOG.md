@@ -2387,3 +2387,4 @@
 - 2026-10-26: ボス戦の舞台に季節の雪・さくらの花びらを追加
 - 2026-10-26: 文法に「前置詞 in の使い方（in English ／ the girl in red など）」の単元を追加
 - 2026-10-26: TOEIC にお知らせ文「Notice: Annual Company Picnic」（会社のピクニック）を追加
+- 2026-10-26: 文法に「congratulate A on B ／ praise A for B」の単元を追加（文法は430単元に）

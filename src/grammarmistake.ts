@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'congratulate-on': { wrong: 'He praised me to my speech.', right: 'He praised me for my speech.', why: 'praise A for B「B のことで A をほめる」。' },
   'prep-in-manner': { wrong: 'Please answer by English.', right: 'Please answer in English.', why: '「英語で」は in English。' },
   'these-days-tense': { wrong: 'I have met him the other day.', right: 'I met him the other day.', why: 'the other day（先日）は過去の時なので過去形。' },
   'it-is-pity-that': { wrong: 'This is natural that he is angry.', right: 'It is natural that he is angry.', why: 'that 以下を指す形式主語は It。' },
