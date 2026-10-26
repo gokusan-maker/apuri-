@@ -5239,6 +5239,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-goodhart',
+    title: 'When Numbers Become Targets',
+    level: '難関大（評論）',
+    paragraphs: [
+      "'When a measure becomes a target, it ceases to be a good measure.' This idea, usually called Goodhart's law, is named after the British economist Charles Goodhart, ( A ) made a similar observation about economic policy in the 1970s. It describes a problem that appears in schools, hospitals, businesses, and governments alike.",
+      "Numbers are useful because they summarize complicated situations. A school's test scores, for instance, can tell us something about how well its students are learning. The trouble begins when people are rewarded or punished according to the number itself. Teachers may then spend more time preparing students for the test and less time on subjects the test does not cover. Scores rise, but learning may not improve at all.",
+      "A frequently told story illustrates the point. To reduce the number of dangerous snakes in a city, officials are said to have offered a reward for every dead snake. Some residents responded by breeding snakes ( B ) they could collect the reward. When the officials discovered this and ended the program, the breeders released their now worthless snakes, and the city ended up with more snakes than before.",
+      "None of this means we should stop measuring things. Without numbers, it would be hard to notice problems or compare results. The lesson is rather that a single number should not be treated as the goal itself. Using several measures, and remembering what they were ( C ) to show, can help keep our attention on what really matters.",
+    ],
+    ja: [
+      '「ある指標が目標になると、それはよい指標ではなくなる」。ふつう「グッドハートの法則」とよばれるこの考えは、1970年代に経済政策についてにたような指摘をしたイギリスの経済学者チャールズ・グッドハートにちなんで名づけられている。この法則は、学校や病院、企業、政府のどこにでも見られる問題を説明している。',
+      '数字が役に立つのは、複雑な状況をまとめてくれるからだ。たとえば学校のテストの点数は、生徒がどれくらいよく学んでいるかについて何かを教えてくれる。問題が始まるのは、その数字そのものによって人がほめられたり罰せられたりするようになったときだ。すると先生は、テストの準備により多くの時間を使い、テストに出ない科目にはあまり時間を使わなくなるかもしれない。点数は上がっても、学びはまったく向上しないかもしれないのである。',
+      'よく語られる話が、この点をよく示している。ある町で危険なヘビを減らすため、役人がヘビの死がい1つごとにほうびを出したといわれている。住民の中には、ほうびを受け取れるようにヘビを育てて対応する者がいた。役人がこれに気づいて制度をやめると、育てていた人たちは価値のなくなったヘビを放し、町のヘビは前よりふえてしまった。',
+      'だからといって、物事を測るのをやめるべきだということではない。数字がなければ、問題に気づいたり結果をくらべたりするのはむずかしいだろう。教訓はむしろ、1つの数字をそれ自体が目標であるかのようにあつかうべきではない、ということだ。いくつもの指標を使い、それらが本来何を示すためのものだったかを忘れないことが、本当に大切なことに目を向け続ける助けになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whom', 'whose'], answer: 0, why: 'コンマのあとで Charles Goodhart（人）を説明し、made の主語になる関係代名詞 who。which は物、whom は目的語、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['so that', 'in order to', 'so as to', 'due to'], answer: 0, why: 'うしろが文（they could collect the reward）なので so that S can「S が～できるように」。in order to・so as to のうしろは原形、due to のうしろは名詞。' },
+      { id: 'C', choices: ['meant', 'mean', 'to mean', 'means'], answer: 0, why: 'be meant to ～「～するためのものである」。were のあとは過去分詞 meant。' },
+    ],
+    underline: {
+      phrase: 'ceases to be a good measure',
+      choices: ['stops being a good measure', 'becomes an even better measure', 'is measured once again', 'was never used as a measure'],
+      answer: 0,
+      why: 'cease to ～ は「～しなくなる・～でなくなる」（＝ stop ～ing）。目標にされると、よい指標ではなくなるということ。',
+    },
+    order: {
+      words: ['spend', 'more', 'time', 'preparing', 'students', 'for', 'the', 'test'],
+      rest: '',
+      answer: 'spend more time preparing students for the test',
+      ja: '生徒にテストの準備をさせることに、より多くの時間を使う。（spend 時間 ～ing＝～するのに時間を使う）',
+    },
+    tf: [
+      { statement: 'グッドハートの法則は、学校だけに見られる問題を説明している。', answer: false, why: '第1段落 appears in schools, hospitals, businesses, and governments alike。' },
+      { statement: 'テストの点数が上がっても、学びが向上しないことがある。', answer: true, why: '第2段落 Scores rise, but learning may not improve at all。' },
+      { statement: 'ヘビの話では、制度をやめたあと町のヘビは前より減った。', answer: false, why: '第3段落 the city ended up with more snakes than before。' },
+      { statement: '筆者は、物事を測るのをやめるべきだと主張している。', answer: false, why: '第4段落 None of this means we should stop measuring things。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest at the end of the passage?', choices: ['Use several measures and remember their purpose.', 'Stop using numbers completely.', 'Reward people only for test scores.', 'Measure everything with a single number.'], answer: 0, why: '第4段落 Using several measures, and remembering what they were meant to show, can help …。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
