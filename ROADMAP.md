@@ -1839,6 +1839,8 @@
 
 - [x] 文法：talk 人 into ～ing ／ talk 人 out of ～ing（persuade 人 to ～）
 
+- [x] 長文（TOEIC）：お知らせ「Window Cleaning Next Week」
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

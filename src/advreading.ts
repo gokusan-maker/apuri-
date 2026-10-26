@@ -8429,6 +8429,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-window-cleaning',
+    title: 'Notice: Window Cleaning Next Week',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all tenants of the Parkview Tower: The outside windows of our building will be cleaned next week. The work will be carried ( A ) by Brightline Cleaning, a company we have used for many years.",
+      "Cleaning will take place from Monday, June 2, to Thursday, June 5, between 9:00 a.m. and 4:00 p.m. Workers will start at the top floor and move down two floors each day. A schedule showing which floors will be cleaned on which day is posted in the lobby.",
+      "On the day your floor is cleaned, please keep your windows closed and remove any items from the window sills. We also recommend that you ( B ) your blinds closed if you do not want the workers to see into your office. If it rains, the work will be moved to the following day.",
+      "We apologize for any inconvenience. If you have any questions, please contact the Building Management Office at extension 100.",
+    ],
+    ja: [
+      'パークビュー・タワーのテナントの皆様へ：来週、当ビルの外側の窓の清掃を行います。作業は、長年お願いしているブライトライン・クリーニング社が行います。',
+      '清掃は6月2日（月）から6月5日（木）まで、午前9時から午後4時の間に行います。作業員は最上階から始め、毎日2階ずつ下へ進みます。どの階を何日に清掃するかを示した予定表をロビーに貼り出しています。',
+      'ご自分の階が清掃される日は、窓を閉めたままにし、窓枠の上の物をどけてください。作業員にオフィスの中を見られたくない場合は、ブラインドを閉めておくこともおすすめします。雨の場合、作業は翌日に延期されます。',
+      'ご不便をおかけして申し訳ございません。ご質問があれば、内線100のビル管理事務所までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['out', 'off', 'away', 'over'], answer: 0, why: 'carry out ～「～を実行する」の受け身 be carried out。off・away・over では「作業が行われる」の意味にならない。' },
+      { id: 'B', choices: ['keep', 'kept', 'keeping', 'to keeping'], answer: 0, why: 'recommend that ～ の that 節の中では動詞の原形（should の省略）を使う。主語 you なので keep。' },
+    ],
+    tf: [
+      { statement: '清掃は最上階から始まる。', answer: true, why: '第2段落 Workers will start at the top floor。' },
+      { statement: '清掃の予定表はロビーで見られる。', answer: true, why: '第2段落 A schedule … is posted in the lobby。' },
+      { statement: '雨の日も予定どおり清掃する。', answer: false, why: '第3段落 If it rains, the work will be moved to the following day。' },
+    ],
+    qa: [
+      { q: 'What are tenants asked to do on the day their floor is cleaned?', choices: ['Keep their windows closed.', 'Leave the building by 9:00 a.m.', 'Open all the blinds.', 'Call Brightline Cleaning.'], answer: 0, why: '第3段落 please keep your windows closed。' },
+      { q: 'How many floors will be cleaned each day?', choices: ['Two.', 'One.', 'Four.', 'All of them.'], answer: 0, why: '第2段落 move down two floors each day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
