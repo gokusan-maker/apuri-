@@ -53,3 +53,12 @@ it('地図を全部制覇すると、5つのゾーンの印がならぶ', async 
   render(<StageMap name="全部" theme="mountain" floors={Array.from({ length: 10 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: true }))} onOpen={() => {}} />)
   expect(screen.getByLabelText('制覇したゾーン').textContent).toBe(MAP_ZONES.mountain.map((z) => z.icon).join(''))
 })
+
+it('ゾーンの札に、そのゾーンの何ステージ目かが出る', async () => {
+  const { render } = await import('@testing-library/react')
+  const { StageMap } = await import('./StageMapView')
+  localStorage.clear()
+  // 50ステージ → ゾーン2はステージ11〜20。いまはステージ13（12までクリア）
+  const { container } = render(<StageMap name="札" theme="sea" floors={Array.from({ length: 50 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: i < 12 }))} onOpen={() => {}} />)
+  expect(container.querySelector('.smap-zone-step')?.textContent).toBe('3/10')
+})

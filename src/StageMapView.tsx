@@ -123,6 +123,9 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
         )}
         <span className="smap-zone" aria-label={`ゾーン${zi + 1}：${zone.name}（ステージ${zFrom}〜${zTo}）`}>
           {zone.icon} {zone.name}
+          <small className="smap-zone-step">
+            {Math.min(at + 1, zTo) - zFrom + 1}/{zTo - zFrom + 1}
+          </small>
         </span>
         {zone.deco.map((d, k) => (
           <span key={k} className={`smap-deco d${k}`} aria-hidden="true">

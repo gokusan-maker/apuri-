@@ -3756,3 +3756,4 @@ header .event-chips { margin: 0 0 2px; }
 .trait-guide small { color: var(--muted); margin-left: 4px; }
 .smap-zone-stamps { display: block; margin-top: 2px; letter-spacing: 4px; font-size: 1.1rem; }
 .boss-go-trait { display: block; font-size: 0.7rem; font-weight: 800; opacity: 0.95; }
+.smap-zone-step { margin-left: 6px; padding: 0 6px; border-radius: 999px; background: rgb(255 255 255 / 0.25); font-size: 0.62rem; }
