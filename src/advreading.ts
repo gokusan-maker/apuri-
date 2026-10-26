@@ -5440,6 +5440,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-telegraph',
+    title: 'The Telegraph: Messages at the Speed of Electricity',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      "Before the nineteenth century, a message could travel no faster than the person or animal ( A ) carried it. News from another continent might take weeks to arrive by ship. The electric telegraph changed this almost overnight.",
+      "In 1844, the American inventor Samuel Morse sent a message by wire from Washington, D.C., to Baltimore, a distance of about sixty kilometers. The message was carried by electrical signals that were turned on and off in patterns. Morse and his partners developed a code in which each letter was represented by a combination of short and long signals, known as dots and dashes.",
+      "Telegraph lines spread rapidly across North America and Europe. Railroads used them to coordinate train schedules, newspapers used them to report events from distant cities, and businesses used them to send orders and prices. In 1858, a cable was laid across the floor of the Atlantic Ocean, ( B ) it failed after only a few weeks. A lasting connection was not established until 1866.",
+      "The telegraph is sometimes called the 'Victorian Internet' because it allowed people to communicate across great distances almost instantly. It also raised new questions that sound surprisingly modern, such as how to protect private messages and how to deal with the flood of information ( C ) arrived every day.",
+    ],
+    ja: [
+      '19世紀より前、知らせは、それを運ぶ人や動物より速く伝わることはできなかった。別の大陸からのニュースは、船で届くまでに何週間もかかることがあった。電信は、これをほとんど一夜にして変えてしまった。',
+      '1844年、アメリカの発明家サミュエル・モールスは、ワシントンD.C.からおよそ60キロはなれたボルティモアまで、電線で知らせを送った。その知らせは、決まったパターンで入ったり切れたりする電気の信号によって運ばれた。モールスと仲間たちは、それぞれの文字を短い信号と長い信号の組み合わせ、つまり「トン」と「ツー」で表す符号をつくった。',
+      '電信線は北アメリカとヨーロッパに急速に広がった。鉄道は列車の時刻を調整するために、新聞は遠くの町の出来事を伝えるために、会社は注文や値段を送るために電信を使った。1858年には大西洋の海底にケーブルがしかれたが、わずか数週間で使えなくなった。長く使えるつながりができたのは、1866年になってからだった。',
+      '電信は、遠くはなれた人どうしがほぼ一瞬で連絡を取り合えるようにしたので、「ヴィクトリア朝のインターネット」とよばれることもある。また、個人の知らせをどう守るか、毎日届く大量の情報にどう対処するかといった、おどろくほど現代的に聞こえる新しい問題も生み出したのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the person or animal を説明し、carried の主語になる関係代名詞 that。what は先行詞をとらず、whose のうしろには名詞が必要、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['but', 'despite', 'in spite of', 'because of'], answer: 0, why: 'コンマのあとに文（it failed …）を続けて「しかし」とつなぐ接続詞 but。despite・in spite of・because of は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the flood of information を説明し、arrived の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'almost overnight',
+      choices: ['very quickly', 'after many centuries', 'only during the night', 'very slowly'],
+      answer: 0,
+      why: 'overnight は「一夜にして・急に」。almost overnight で「ほとんど一夜にして・あっという間に」という意味。',
+    },
+    order: {
+      words: ['represented', 'by', 'a', 'combination', 'of', 'short', 'and', 'long', 'signals'],
+      rest: '',
+      answer: 'represented by a combination of short and long signals',
+      ja: '短い信号と長い信号の組み合わせで表された。（受け身 be represented by ～）',
+    },
+    tf: [
+      { statement: 'モールスは1844年に、ワシントンD.C.からボルティモアへ電線で知らせを送った。', answer: true, why: '第2段落 In 1844 … sent a message by wire from Washington, D.C., to Baltimore。' },
+      { statement: '1858年の大西洋のケーブルは、何十年も使われ続けた。', answer: false, why: '第3段落 it failed after only a few weeks。' },
+      { statement: '電信は、新聞や会社にも使われた。', answer: true, why: '第3段落 newspapers used them … businesses used them。' },
+    ],
+    qa: [
+      { q: 'Why is the telegraph sometimes called the "Victorian Internet"?', choices: ['It let people communicate across great distances almost instantly.', 'It was invented by Queen Victoria.', 'It used computers to send messages.', 'It was used only in Britain.'], answer: 0, why: '第4段落 because it allowed people to communicate across great distances almost instantly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
