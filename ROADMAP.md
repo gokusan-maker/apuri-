@@ -1523,7 +1523,7 @@
 - [x] 高校の文法単元を4つ追加：The reason ～ is that …・some ～, others ／ the others・as to ／ as for・It costs 人 金額 to ～
 - [x] 長文：共通テスト（カラオケ）・私学（旅することば＝外来語）・TOEIC（会議室の予約）を1本ずつ
 - [x] 短い読解（読解ミニ）で全問正解すると「🎉 全問正解！」のお祝い
-- [x] 文法のディクテーションの結果にも星（★★★）
+- [x] 文法のディクテーションの結果にも星（★★★）と「最高 n連続正解」
 - [x] 高校の文法単元を2つ追加：make use of ／ take advantage of ／ make the most of・be capable of ／ be able to
 - [x] 高校の文法単元を2つ追加：There is nothing like ～ ／ Nothing is more ～ than・for all ／ with all
 - [x] 長文：旧帝大レベルをさらに1本（ジェヴォンズのパラドックス）

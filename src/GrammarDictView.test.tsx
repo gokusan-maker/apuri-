@@ -41,5 +41,12 @@ it('ディクテーションも続けて正解すると連続正解のコンボ�
   tapWords(dictTokens(u.examples[1].en))
   fireEvent.click(screen.getByText('答えあわせ'))
   expect(screen.getByText('🔥 2連続正解！')).toBeInTheDocument()
+  for (let i = 2; i < u.examples.length; i++) {
+    fireEvent.click(screen.getByText('次へ'))
+    tapWords(dictTokens(u.examples[i].en).slice(0, 1))
+    fireEvent.click(screen.getByText('答えあわせ'))
+  }
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('🔥 最高 2連続正解')).toBeInTheDocument() // 結果に最高の連続正解
   sp.mockRestore()
 })
