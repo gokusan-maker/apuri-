@@ -7886,6 +7886,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-flight-change',
+    title: 'Email: A Change to Your Flight',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Suzuki, We are writing to inform you of a change to your flight. Your flight SA 208 from Tokyo to Sydney on August 3, ( A ) was scheduled to depart at 9:00 p.m., will now leave at 11:30 p.m. We apologize for any inconvenience this may cause.",
+      "This change is due to a technical inspection of the aircraft. Your seat and meal request remain the same. If the new departure time is not convenient for you, you may change to another flight on the same day or the following day at no extra cost.",
+      "Please note that check-in will open three hours before the new departure time. To save time at the airport, we recommend ( B ) in online up to 24 hours before your flight.",
+      "As a small apology, we have added 2,000 bonus miles to your frequent flyer account. If you have any questions, please contact our customer service center, which is open 24 hours a day. We look forward to ( C ) you on board soon. Sincerely, Sky Air Customer Relations",
+    ],
+    ja: [
+      '鈴木様。ご予約の便の変更についてお知らせいたします。8月3日の東京発シドニー行き SA208便は、午後9時出発の予定でしたが、午後11時30分の出発となります。ご不便をおかけしますことをおわびいたします。',
+      'この変更は、機体の技術点検のためです。座席と機内食のご希望はそのままです。新しい出発時刻のご都合が悪い場合は、追加料金なしで、同じ日または翌日の別の便に変更していただけます。',
+      'チェックインは新しい出発時刻の3時間前に始まりますのでご注意ください。空港での時間を節約するため、出発の24時間前までのオンラインチェックインをおすすめします。',
+      'ささやかなおわびとして、お客さまのマイレージ口座に2,000ボーナスマイルを加算いたしました。ご質問があれば、24時間受付のカスタマーサービスセンターまでご連絡ください。まもなくご搭乗いただけることを楽しみにしております。スカイエア　お客様担当',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'where'], answer: 0, why: 'コンマのあとで flight SA 208 を説明し、was scheduled の主語になる非制限用法の which。that はコンマのあとで使えない、what は先行詞をとらない、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['checking', 'to check', 'check', 'checked'], answer: 0, why: 'recommend のあとは動名詞：recommend -ing「～することをすすめる」。check in「チェックインする」。' },
+      { id: 'C', choices: ['welcoming', 'welcome', 'welcomed', 'to welcome'], answer: 0, why: 'look forward to の to は前置詞なので、あとは動名詞 welcoming。' },
+    ],
+    underline: {
+      phrase: 'depart',
+      choices: ['leave', 'arrive', 'land', 'return'],
+      answer: 0,
+      why: 'depart は「出発する」。leave と同じ意味。departure は「出発」。',
+    },
+    order: {
+      words: ['up', 'to', '24', 'hours'],
+      rest: 'before your flight',
+      answer: 'up to 24 hours',
+      ja: '最大24時間（前）まで（up to ～「～まで」）',
+    },
+    tf: [
+      { statement: '新しい出発時刻は午後11時30分である。', answer: true, why: '第1段落 will now leave at 11:30 p.m.。' },
+      { statement: '便の変更は、天気が悪いためである。', answer: false, why: '第2段落 This change is due to a technical inspection of the aircraft。' },
+      { statement: '翌日の便に変えるには、追加料金がかかる。', answer: false, why: '第2段落 at no extra cost。' },
+    ],
+    qa: [
+      { q: 'What has the airline given Mr. Suzuki as an apology?', choices: ['2,000 bonus miles.', 'A free hotel room.', 'A seat upgrade.', 'A free meal at the airport.'], answer: 0, why: '第4段落 we have added 2,000 bonus miles to your frequent flyer account。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
