@@ -5034,6 +5034,8 @@ export function weakRanking(list: string[], n = 3): { unit: GrammarUnit; count: 
 // ディクテーションの答えあわせ：大文字小文字・記号・空白のちがいは気にしない（’ と ' は同じ）
 const norm = (t: string) => t.toLowerCase().replace(/[’‘]/g, "'").replace(/[^a-z0-9' ]/g, ' ').replace(/\s+/g, ' ').trim()
 export const sameSentence = (a: string, b: string) => norm(a) === norm(b)
+// ディクテーションの語のボタン：英文を語に分け、前後の記号をとる
+export const dictTokens = (en: string) => en.split(/\s+/).map((t) => t.replace(/^[^A-Za-z0-9']+|[^A-Za-z0-9'%°]+$/g, '')).filter(Boolean)
 
 // 文法の連続ボーナス：文法を3日続けるごとに🪙10
 export const GRAMMAR_STREAK_DAYS = 3

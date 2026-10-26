@@ -1,3 +1,4 @@
+import { shuffle } from './quiz'
 // 数の聞き取り：数を英語の読み方にする（0〜9999）
 const ONES = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
 const TENS = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
@@ -101,4 +102,27 @@ export function isRight(q: NumQ, text: string): boolean {
     return !!m && `${m[1]}/${m[2]}` === q.answer
   }
   return parseAnswer(t) === Number(q.answer)
+}
+
+const pad2 = (n: number) => String(n).padStart(2, '0')
+
+// 4択の選択肢：正解と、聞きまちがえやすい答え3つ（thirteen と thirty、15分ずれ など）。キーボードで打たずにボタンでえらぶ
+export function numChoices(q: NumQ): string[] {
+  const near: string[] = []
+  if (q.kind === 'number') {
+    const n = Number(q.answer)
+    const partner = n >= 13 && n <= 19 ? (n - 10) * 10 : n >= 30 && n <= 90 && n % 10 === 0 ? n / 10 + 10 : null
+    for (const x of [partner, n + 10, n - 10, n + 1, n + 100, n - 1]) if (x !== null && x > 0) near.push(String(x))
+  } else if (q.kind === 'time') {
+    const [h, m] = q.answer.split(':').map(Number)
+    near.push(`${h}:${pad2((m + 15) % 60)}`, `${(h % 12) + 1}:${pad2(m)}`, `${((h + 10) % 12) + 1}:${pad2(m)}`, `${h}:${pad2((m + 30) % 60)}`)
+  } else if (q.kind === 'date') {
+    const [mo, d] = q.answer.split('/').map(Number)
+    near.push(`${mo}/${(d % 28) + 1}`, `${(mo % 12) + 1}/${Math.min(d, 28)}`, `${((mo + 10) % 12) + 1}/${Math.min(d, 28)}`)
+  } else {
+    const [d, c] = q.answer.split('.').map(Number)
+    near.push(`${d}.${pad2((c + 50) % 100)}`, `${d + 1}.${pad2(c)}`, `${d === 1 ? 3 : d - 1}.${pad2(c)}`)
+  }
+  const others = [...new Set(near)].filter((x) => x !== q.answer).slice(0, 3)
+  return shuffle([q.answer, ...others])
 }

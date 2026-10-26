@@ -1,19 +1,23 @@
-import { useState } from 'react'
-import { sameSentence, type GrammarUnit } from './grammar'
+import { useMemo, useState } from 'react'
+import { dictTokens, sameSentence, type GrammarUnit } from './grammar'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
+import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
 type Props = { unit: GrammarUnit; onBack: () => void; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }
 
-// 文法の例文ディクテーション：例文を聞いて、英文を入力する
+// 文法の例文ディクテーション：例文を聞いて、語のボタンを順に押して英文をつくる（キーボードで打たない）
+
 export function GrammarDict({ unit, onBack, onAnswer }: Props) {
   const [step, setStep] = useState(0)
-  const [text, setText] = useState('')
+  const [picked, setPicked] = useState<number[]>([])
   const [checked, setChecked] = useState<boolean | null>(null)
   const [score, setScore] = useState(0)
   const done = step >= unit.examples.length
   const ex = unit.examples[Math.min(step, unit.examples.length - 1)]
+  const tiles = useMemo(() => shuffle(dictTokens(ex.en)), [ex])
+  const text = picked.map((i) => tiles[i]).join(' ')
   return (
     <section className="card grammar grammar-dict">
       <button className="stage-back" onClick={onBack}>
@@ -37,11 +41,25 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
               🐢 ゆっくり
             </button>
           </div>
-          <input className="grammar-search" aria-label="聞こえた英文" value={text} disabled={checked !== null} onChange={(e) => setText(e.target.value)} placeholder="聞こえた英文を入力" autoCapitalize="none" />
+          <p className="dict-built" aria-label="聞こえた英文">
+            {text || '（下の語を、聞こえた順に押そう）'}
+          </p>
+          {checked === null && (
+            <div className="dict-tiles" aria-label="語のボタン">
+              {tiles.map((t, i) => (
+                <button key={i} className="dict-tile" aria-label={`語 ${t}`} disabled={picked.includes(i)} onClick={() => setPicked([...picked, i])}>
+                  {t}
+                </button>
+              ))}
+              <button className="dict-tile back" onClick={() => setPicked(picked.slice(0, -1))} disabled={picked.length === 0}>
+                ⌫ 1語消す
+              </button>
+            </div>
+          )}
           {checked === null ? (
             <button
               className="flip"
-              disabled={!text.trim()}
+              disabled={picked.length === 0}
               onClick={() => {
                 const ok = sameSentence(text, ex.en)
                 setChecked(ok)
@@ -63,7 +81,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
                 className="flip"
                 onClick={() => {
                   setStep(step + 1)
-                  setText('')
+                  setPicked([])
                   setChecked(null)
                 }}
               >

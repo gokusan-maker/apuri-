@@ -250,6 +250,19 @@ h1 { font-size: clamp(1.15rem, 5.5vw, 1.6rem); margin: 8px 0 4px; white-space: n
 .spell-input.ok { border-color: #16a34a; animation: pop 0.3s; }
 .spell-input.ng { border-color: var(--again); animation: shake 0.3s; }
 .spell .actions { margin-top: 12px; }
+.dict-built { min-height: 3rem; margin: 10px 0 0; padding: 10px 12px; border: 2px solid var(--muted); border-radius: 12px; font-weight: 700; line-height: 1.5; }
+.dict-tiles { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0; }
+.dict-tile { min-height: 40px; padding: 4px 10px; border-radius: 10px; border: 2px solid var(--accent); background: var(--bg); color: var(--fg); font-weight: 700; font-size: 1rem; }
+.dict-tile:disabled { opacity: 0.25; }
+.dict-tile.back { border-style: dashed; }
+
+.num-choices { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0; }
+
+.spell-built { margin: 0; min-height: 3.2rem; letter-spacing: 0.18em; font-weight: 700; word-break: break-all; }
+.spell-tiles { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; margin-top: 12px; }
+.spell-tile { min-width: 42px; min-height: 44px; padding: 0 8px; font-size: 1.2rem; font-weight: 800; border-radius: 10px; border: 2px solid var(--accent); background: var(--card, var(--bg)); color: var(--fg); }
+.spell-tile:disabled { opacity: 0.25; }
+
 .hint-btn { background: var(--muted) !important; }
 .hint-btn:disabled { opacity: 0.5; }
 

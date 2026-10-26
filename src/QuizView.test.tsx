@@ -124,7 +124,7 @@ describe('リスニング', () => {
 it('クイズの「✏️ スペル」でスペル入力に切り替わる', () => {
   render(<Quiz words={WORDS.slice(0, 8)} count={2} />)
   pickMode('✏️ スペル')
-  expect(screen.getByLabelText('英単語を入力')).toBeInTheDocument()
+  expect(screen.getByLabelText('あなたのつづり')).toBeInTheDocument()
   pickMode('英→日')
   expect(document.querySelector('.choice')).not.toBeNull()
 })
@@ -328,8 +328,9 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   expect(spoken[spoken.length - 1]).toBe(toEnglish(902))
   for (let i = 0; i < 10; i++) {
     expect(screen.getByText(`${i + 1} / 10 問目・正解 ${i}`)).toBeInTheDocument()
-    fireEvent.change(screen.getByLabelText('答え'), { target: { value: i < 9 ? '902' : '1' } })
-    fireEvent.click(screen.getByText('答える'))
+    const opts = [...screen.getByLabelText('答えの選択肢').querySelectorAll('button')] // 打ちこまず、4択のボタンでえらぶ
+    expect(opts).toHaveLength(4)
+    fireEvent.click(opts.find((x) => (i < 9 ? x.textContent === '902' : x.textContent !== '902'))!)
     fireEvent.click(screen.getByText('次へ'))
   }
   vi.restoreAllMocks()

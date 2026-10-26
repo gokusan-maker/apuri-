@@ -3,6 +3,15 @@ import { expect, it, vi } from 'vitest'
 import { wordCastleFloorsFor, WC_GAME_LABEL } from './wordcastle'
 import { WordCastle } from './WordCastleView'
 
+// 文字のボタンを押して、つづりをつくる
+function tapSpelling(en: string) {
+  for (const c of [...en].filter((x) => x !== ' ')) {
+    const b = screen.getAllByRole('button', { name: `文字 ${c}` }).find((x) => !(x as HTMLButtonElement).disabled)!
+    fireEvent.click(b)
+  }
+}
+
+
 it('単語の城：2・3階目は単元ごとにちがうミニゲーム', () => {
   const fl = wordCastleFloorsFor('中1')
   expect(fl[0].direction).toBe('en-ja')
@@ -23,7 +32,7 @@ it('スペルの階：5語を書いて4問以上でクリア', () => {
   expect(screen.getByText(WC_GAME_LABEL.spell)).toBeInTheDocument()
   for (let i = 0; i < f.words.length; i++) {
     const w = f.words.find((x) => screen.queryAllByText(x.ja).length > 0)!
-    fireEvent.change(screen.getByLabelText('英単語を入力'), { target: { value: w.en } })
+    tapSpelling(w.en)
     fireEvent.click(screen.getByText('こたえる'))
     if (i < f.words.length - 1) fireEvent.click(screen.getByText(/次へ|つぎへ/))
   }

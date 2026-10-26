@@ -84,3 +84,20 @@ describe('値段', () => {
     expect(isRight(one, '1')).toBe(true)
   })
 })
+
+it('数の聞き取りは4択：正解1つと、聞きまちがえやすい答え3つ（どれもちがう）', async () => {
+  const { numChoices } = await import('./numbers')
+  const qs = [
+    { kind: 'number' as const, say: 'thirteen', answer: '13', id: 'x' },
+    { kind: 'time' as const, say: 'seven thirty', answer: '7:30', id: 'x' },
+    { kind: 'date' as const, say: 'May third', answer: '5/3', id: 'x' },
+    { kind: 'price' as const, say: 'three dollars and fifty cents', answer: '3.50', id: 'x' },
+  ]
+  for (const q of qs) {
+    const c = numChoices(q)
+    expect(c).toHaveLength(4)
+    expect(new Set(c).size).toBe(4)
+    expect(c).toContain(q.answer)
+  }
+  expect(numChoices(qs[0])).toContain('30') // thirteen と thirty
+})

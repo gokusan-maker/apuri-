@@ -1,12 +1,12 @@
 import { EMOJI } from './emoji'
 import { loadSettings } from './settings'
 import { markSpelling } from './spellDiff'
-import { useEffect, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import type { Source } from './monster'
 import { shuffle } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
-import { hintText, isCorrectSpelling, letterCount, spellXp } from './spell'
+import { builtSpelling, hintText, isCorrectSpelling, letterCount, spellXp } from './spell'
 import type { Word } from './words'
 
 type Props = {
@@ -20,20 +20,22 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [easy] = useState(() => loadSettings().easy)
   const [list, setList] = useState(() => shuffle(words).slice(0, count))
   const [index, setIndex] = useState(0)
-  const [input, setInput] = useState('')
+  const [picked, setPicked] = useState<number[]>([]) // 押した文字のボタン（番号）
   const [hints, setHints] = useState(0)
   const [result, setResult] = useState<'ok' | 'ng' | null>(null)
   const [score, setScore] = useState(0)
 
   const w = list[index]
+  // 文字のボタン：答えの文字（空白はのぞく）をまぜたもの。キーボードで打たずに、ボタンを押してつづる
+  const tiles = useMemo(() => (w ? shuffle([...w.en].filter((c) => c !== ' ')) : []), [w])
+  const input = w ? builtSpelling(w.en, picked.map((i) => tiles[i])) : ''
 
   useEffect(() => {
     if (byEar && w) speak(w.en)
   }, [byEar, w])
 
-  function submit(e: FormEvent) {
-    e.preventDefault()
-    if (result || !input.trim()) return
+  function submit() {
+    if (result || picked.length === 0) return
     if (isCorrectSpelling(input, w.en)) {
       setResult('ok')
       setScore(score + 1)
@@ -49,7 +51,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
 
   function next() {
     setIndex(index + 1)
-    setInput('')
+    setPicked([])
     setHints(0)
     setResult(null)
   }
@@ -57,7 +59,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   function restart() {
     setList(shuffle(words).slice(0, count))
     setIndex(0)
-    setInput('')
+    setPicked([])
     setHints(0)
     setResult(null)
     setScore(0)
@@ -87,7 +89,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
           <button className="listen" type="button" onClick={() => speak(w.en)} aria-label="もう一度聞く">
             🔊
           </button>
-          <p className="example-ja">聞こえた英単語を書こう（意味：{w.ja}）</p>
+          <p className="example-ja">聞こえた英単語を、文字のボタンでつくろう（意味：{w.ja}）</p>
         </>
       ) : (
         <p className="en ja-prompt">
@@ -98,35 +100,31 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
       <p className="hint" aria-label="ヒント">
         {hintText(w.en, hints)}
       </p>
-      <form onSubmit={submit}>
-        <input
-          className={`spell-input${result ? ` ${result}` : ''}`}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          aria-label="英単語を入力"
-          autoCapitalize="none"
-          autoComplete="off"
-          autoCorrect="off"
-          spellCheck={false}
-          readOnly={result !== null}
-          autoFocus
-        />
-        {result === null ? (
+      <p className={`spell-input spell-built${result ? ` ${result}` : ''}`} aria-label="あなたのつづり">
+        {[...w.en].map((c, i) => (c === ' ' ? '\u00a0\u00a0' : (input[i] ?? '_')))}
+      </p>
+      {result === null && (
+        <>
+          <div className="spell-tiles" aria-label="文字のボタン">
+            {tiles.map((c, i) => (
+              <button key={i} type="button" className="spell-tile" aria-label={`文字 ${c}`} disabled={picked.includes(i)} onClick={() => picked.length < tiles.length && setPicked([...picked, i])}>
+                {c}
+              </button>
+            ))}
+          </div>
           <div className="actions">
-            <button
-              type="button"
-              className="again hint-btn"
-              onClick={() => setHints(hints + 1)}
-              disabled={hints >= letterCount(w.en) - 1}
-            >
+            <button type="button" className="again" onClick={() => setPicked(picked.slice(0, -1))} disabled={picked.length === 0}>
+              ⌫ 1文字消す
+            </button>
+            <button type="button" className="again hint-btn" onClick={() => setHints(hints + 1)} disabled={hints >= letterCount(w.en) - 1}>
               1文字ヒント
             </button>
-            <button type="submit" className="good">
+            <button type="button" className="good" onClick={submit} disabled={picked.length === 0}>
               こたえる
             </button>
           </div>
-        ) : null}
-      </form>
+        </>
+      )}
       {result && (
         <>
           <p className="feedback">{result === 'ok' ? '正解！' : `正解は「${w.en}」`}</p>

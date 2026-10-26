@@ -28,3 +28,14 @@ export const XP_SPELL_HINT = 8 // ヒントを使ったとき
 export function spellXp(hints: number): number {
   return hints > 0 ? XP_SPELL_HINT : XP_SPELL
 }
+
+// 押した文字を、答えの空白の位置に空白をはさんでならべる（熟語は単語の区切りを自動で入れる）
+export function builtSpelling(answer: string, letters: string[]): string {
+  let k = 0
+  let out = ''
+  for (const c of answer) {
+    if (k >= letters.length) break
+    out += c === ' ' ? ' ' : letters[k++]
+  }
+  return out
+}

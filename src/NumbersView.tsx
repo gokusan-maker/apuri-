@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
-import { isRight, pickQ } from './numbers'
+import { isRight, numChoices, pickQ } from './numbers'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
@@ -11,7 +11,8 @@ type Props = { onAnswer?: (correct: boolean, xp: number, wordId: string, source:
 // 数の聞き取り：読み上げた数を数字で答える
 export function Numbers({ onAnswer, round = ROUND }: Props) {
   const [q, setQ] = useState(() => pickQ())
-  const [text, setText] = useState('')
+  const [text, setText] = useState('') // えらんだ答え
+  const [choices, setChoices] = useState(() => numChoices(q))
   const [result, setResult] = useState<boolean | null>(null)
   const [score, setScore] = useState({ ok: 0, all: 0 })
 
@@ -19,9 +20,16 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
     speak(q.say)
   }, [q])
 
-  function check() {
-    if (text.trim() === '' || result !== null) return
-    const ok = isRight(q, text)
+  function newQ() {
+    const nq = pickQ()
+    setQ(nq)
+    setChoices(numChoices(nq))
+  }
+
+  function check(pick: string) {
+    if (result !== null) return
+    setText(pick)
+    const ok = isRight(q, pick)
     if (ok) playCorrect()
     else playWrong()
     setResult(ok)
@@ -36,7 +44,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
       setDone(true)
       return
     }
-    setQ(pickQ())
+    newQ()
     setText('')
     setResult(null)
   }
@@ -54,7 +62,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
           onClick={() => {
             setScore({ ok: 0, all: 0 })
             setDone(false)
-            setQ(pickQ())
+            newQ()
             setText('')
             setResult(null)
           }}
@@ -70,44 +78,30 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
       <p className="quiz-progress">
         {Math.min(score.all + (result === null ? 1 : 0), round)} / {round} 問目・正解 {score.ok}
       </p>
-      <p className="prompt">{q.kind === 'time' ? '聞こえた時刻を 7:30 のように書こう' : q.kind === 'date' ? '聞こえた日付を 5/3 のように書こう' : q.kind === 'price' ? '聞こえた値段（ドル）を 3.50 のように書こう' : '聞こえた数を数字で書こう'}</p>
+      <p className="prompt">{q.kind === 'time' ? '聞こえた時刻をえらぼう' : q.kind === 'date' ? '聞こえた日付（月/日）をえらぼう' : q.kind === 'price' ? '聞こえた値段（ドル）をえらぼう' : '聞こえた数をえらぼう'}</p>
       <button className="speak" onClick={() => speak(q.say)} aria-label="もう一度聞く">
         🔊
       </button>
       <button className="speak small" onClick={() => speak(q.say, true)} aria-label="ゆっくり聞く">
         🐢
       </button>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault()
-          if (result === null) check()
-          else next()
-        }}
-      >
-        <input
-          className="spell-input"
-          inputMode={q.kind === 'number' ? 'numeric' : 'text'}
-          aria-label="答え"
-          value={text}
-          disabled={result !== null}
-          onChange={(e) => setText(e.target.value)}
-          autoFocus
-        />
-        {result === null ? (
-          <button className="flip" type="submit" disabled={text.trim() === ''}>
-            答える
+      <div className="num-choices" aria-label="答えの選択肢">
+        {choices.map((c) => (
+          <button key={c} className={`choice${result !== null && c === q.answer ? ' correct' : ''}${result === false && c === text ? ' wrong' : ''}`} disabled={result !== null} onClick={() => check(c)}>
+            {q.kind === 'price' ? `$${c}` : c}
           </button>
-        ) : (
-          <>
-            <p className="feedback" role="status">
-              {result ? '正解！' : `ざんねん… 正解は ${q.answer}`}　{q.answer} = {q.say}
-            </p>
-            <button className="flip" type="submit">
-              次へ
-            </button>
-          </>
-        )}
-      </form>
+        ))}
+      </div>
+      {result !== null && (
+        <>
+          <p className="feedback" role="status">
+            {result ? '正解！' : `ざんねん… 正解は ${q.answer}`}　{q.answer} = {q.say}
+          </p>
+          <button className="flip" onClick={next}>
+            次へ
+          </button>
+        </>
+      )}
     </section>
   )
 }
