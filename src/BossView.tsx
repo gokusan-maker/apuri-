@@ -661,6 +661,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         弱点：{speciesOf(weak).name}
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
       </p>
+      {index === 0 && picked === null && hp === maxHp && traits.length > 0 && (
+        <p className="trait-cutin" aria-hidden="true">
+          {traits.map((t) => BOSS_TRAITS[t].icon).join('')} {look.name}のとくぎ「{traits.map((t) => BOSS_TRAITS[t].name).join('・')}」
+        </p>
+      )}
       {traits.map((t) => (
         <p key={t} className="boss-trait" title={BOSS_TRAITS[t].desc}>
           {traits.length > 1 ? '👑 ' : ''}とくぎ：{BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}（{BOSS_TRAITS[t].desc}）

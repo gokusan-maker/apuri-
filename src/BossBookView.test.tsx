@@ -100,3 +100,12 @@ it('とくぎ封じで勝った回数を数え、5回でバッジ・記録の部
   expect(newlyEarned({ answers: 0, correct: 0, streak: 0, sealWins: 5 } as never, {}).map((b) => b.id)).toContain('seal-5')
   expect(collectRecords().some((r) => r.label === 'とくぎ封じ' && r.value === '1回')).toBe(true)
 })
+
+it('バトルの最初に、ボスのとくぎのカットインが出る（とくぎなしなら出ない）', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['regen', 'armor']} />)
+  expect(document.querySelector('.trait-cutin')?.textContent).toContain('のとくぎ「さいせい・かたいウロコ」')
+  unmount()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={[]} />)
+  expect(document.querySelector('.trait-cutin')).toBeNull()
+})
