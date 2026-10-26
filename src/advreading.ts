@@ -6471,6 +6471,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-street-piano',
+    title: '"Play Me"',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In train stations and shopping malls around the world, you may come across a piano with a simple sign: 'Play me.' Anyone ( A ) passes by is welcome to sit down and play. One well-known project of this kind began in Britain in 2008, when an artist placed pianos on the streets of a city, and similar pianos soon appeared in many other countries.",
+      "These pianos create surprising moments. A businessman on his way to work might stop and play a short piece. A child who has just started lessons might bravely play a simple tune while strangers listen. Sometimes two people who have never met end up playing together, ( B ) a small crowd gathers around them.",
+      "Of course, not everyone is happy. Some people complain about noise, and the pianos need regular tuning and protection from rain. For this reason, many are placed indoors and can only be played during certain hours.",
+      "Still, supporters believe the pianos bring something valuable to busy public places. They remind people that music is not only for professionals on stage, and they give strangers a reason to smile at each other. A few minutes of music can ( C ) an ordinary trip to work into a small adventure.",
+    ],
+    ja: [
+      '世界中の駅やショッピングモールで、「ひいてください」というシンプルな札がついたピアノに出会うことがある。通りかかった人はだれでも、すわってひいてよいのだ。この種の取り組みでよく知られたものの1つは、2008年にイギリスで始まった。ある芸術家が町の通りにピアノを置き、まもなく、にたようなピアノがほかの多くの国にもあらわれた。',
+      'こうしたピアノは、思いがけない瞬間を生み出す。仕事に向かうとちゅうの会社員が立ち止まって、短い曲をひくかもしれない。レッスンを始めたばかりの子どもが、知らない人たちが聞いている中で、勇気を出してかんたんな曲をひくかもしれない。会ったこともない2人がいっしょにひくことになり、その間に小さな人だかりができることもある。',
+      'もちろん、みんなが喜んでいるわけではない。うるさいと文句を言う人もいるし、ピアノは定期的な調律や雨よけが必要だ。そのため、多くは屋内に置かれ、決まった時間しかひけないようになっている。',
+      'それでも、支持する人たちは、ピアノがいそがしい公共の場所に価値あるものをもたらすと信じている。音楽は舞台のプロだけのものではないことを思い出させ、知らない人どうしがほほえみ合うきっかけをくれる。数分間の音楽が、ふつうの通勤を小さな冒険に変えることもあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 Anyone（人）を説明し、passes の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（a small crowd gathers …）なので接続詞 while「～する間に」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['turn', 'turning', 'turned', 'to turn'], answer: 0, why: '助動詞 can のあとは原形。turn A into B「A を B に変える」。' },
+    ],
+    underline: {
+      phrase: 'come across',
+      choices: ['find by chance', 'buy', 'try to avoid', 'carry'],
+      answer: 0,
+      why: 'come across ～ は「～に偶然出会う・～を偶然見つける」。',
+    },
+    order: {
+      words: ['end', 'up', 'playing', 'together'],
+      rest: '',
+      answer: 'end up playing together',
+      ja: '結局いっしょにひくことになる。（end up -ing＝結局～することになる）',
+    },
+    tf: [
+      { statement: 'この種の取り組みの1つは、2008年にイギリスで始まった。', answer: true, why: '第1段落 began in Britain in 2008。' },
+      { statement: 'ピアノについて文句を言う人はまったくいない。', answer: false, why: '第3段落 Some people complain about noise。' },
+      { statement: '支持する人たちは、音楽はプロだけのものではないと考えている。', answer: true, why: '第4段落 music is not only for professionals on stage。' },
+    ],
+    qa: [
+      { q: 'Why are many of the pianos placed indoors?', choices: ['They need tuning and protection from rain.', 'They are too heavy to move outside.', 'Only professionals can play them.', 'They are too expensive to buy.'], answer: 0, why: '第3段落 the pianos need regular tuning and protection from rain. For this reason, many are placed indoors。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
