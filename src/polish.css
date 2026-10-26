@@ -3550,3 +3550,20 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .floor-clear-cheer { display: block; margin-top: 4px; font-weight: 700; font-size: 0.92rem; }
 .floor-clear-chest { display: block; margin-top: 4px; font-weight: 800; font-size: 0.86rem; }
 .wc-perfect { margin: 4px 0; text-align: center; font-weight: 900; color: #d97706; font-size: 1.05rem; }
+
+/* ホーム：今日の課題のボタンまで最初の画面（スマホ縦）におさまるように、上の部品を少しずつ小さく */
+header .monster-stage { width: 88px; height: 88px; }
+header .buddy-row { margin: 6px 0; }
+header .buddy-card { padding: 4px 4px 6px; }
+header .buddy-fig, header .buddy-fig svg { width: 40px; height: 40px; }
+header .buddy-swap-link { margin: -2px auto 4px; padding: 5px 16px; font-size: 0.8rem; }
+header .home-gacha-btn { margin: 6px 0 2px; padding: 9px 12px; }
+header .boss-go-btn { margin: 6px 0; padding: 7px 12px; }
+header .goal { margin: 4px 0 4px; padding: 5px 12px; }
+.today-tasks { margin-top: 6px; padding-top: 8px; padding-bottom: 8px; }
+.today-tasks .today-task { padding: 7px 6px 6px; gap: 2px; }
+.today-tasks .today-task-icon { font-size: 1.4rem; }
+header .list-link.buddy-swap-link { min-height: 0; padding: 4px 14px; }
+.today-tasks .today-task:not(.done) .today-task-mark { display: none; } /* タイル全体がボタンなので「スタート」の札は省く（済みの ✅ だけ出す） */
+header .monster { margin: 4px 0; padding: 6px 10px; }
+header .event-chips { margin: 0 0 2px; }

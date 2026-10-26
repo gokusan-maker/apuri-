@@ -119,3 +119,9 @@ it('単語・文法・読解の今日の課題ボタンは同じ1行のゲーム
 it('読解の結果のボタンは色つき（次の読解へはオレンジ）', () => {
   expect(css).toMatch(/\.long-result \.next-unit-btn \{[^}]*linear-gradient\(135deg, #fbbf24, #f97316\)/)
 })
+
+it('ホームは今日の課題のボタンまで1画面におさまるよう、上の部品を小さめに（スタートの札は省き、済みの印だけ）', () => {
+  expect(css).toContain('header .buddy-fig, header .buddy-fig svg { width: 40px; height: 40px; }')
+  expect(css).toContain('header .monster-stage { width: 88px; height: 88px; }')
+  expect(css).toContain('.today-tasks .today-task:not(.done) .today-task-mark { display: none; }')
+})
