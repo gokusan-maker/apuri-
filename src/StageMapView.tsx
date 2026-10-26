@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState, type CSSProperties } from 'rea
 import { mapRoom, nextChestIn, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 import { MapScenery } from './MapSceneryView'
-import { MAP_ZONES, stageIcon, ZONE_COINS, zoneIndex, zoneRange } from './mapzone'
+import { MAP_ZONES, stageIcon, walkerGear, ZONE_COINS, zoneIndex, zoneRange } from './mapzone'
 
 // 地図を制覇したとき、次のレベルの地図へ進むボタン
 export type NextMap = { label: string; go: () => void }
@@ -164,6 +164,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
         {walker && (
           <span className={`smap-walker${walkFrom !== null ? ' walking' : ''}`} style={walkStyle} aria-hidden="true">
             {walker}
+            {walkerGear(zone) && <i className="smap-gear">{walkerGear(zone)}</i>}
           </span>
         )}
       </div>

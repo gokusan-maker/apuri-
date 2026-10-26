@@ -67,3 +67,7 @@ export function zoneRange(z: number, total: number): [number, number] {
     }
   return [from + 1, to + 1]
 }
+
+// 地図を歩くキャラの持ちもの：ゾーンの演出に合わせて変わる（雨ならかさ、雪ならマフラー）
+const GEAR: Partial<Record<MapFx, string>> = { rain: '☂️', snow: '🧣', blizzard: '🧣', fireflies: '🏮', bubbles: '🤿', sunrays: '🕶️', leaves: '🌸' }
+export const walkerGear = (z: MapZone): string | undefined => GEAR[z.fx]

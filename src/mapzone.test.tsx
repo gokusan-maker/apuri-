@@ -62,3 +62,10 @@ it('ゾーンの札に、そのゾーンの何ステージ目かが出る', asyn
   const { container } = render(<StageMap name="札" theme="sea" floors={Array.from({ length: 50 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: i < 12 }))} onOpen={() => {}} />)
   expect(container.querySelector('.smap-zone-step')?.textContent).toBe('3/10')
 })
+
+it('地図を歩くキャラは、ゾーンに合った持ちものを持つ（嵐の海はかさ、雪の峠はマフラー）', async () => {
+  const { MAP_ZONES, walkerGear } = await import('./mapzone')
+  expect(walkerGear(MAP_ZONES.sea[3])).toBe('☂️')
+  expect(walkerGear(MAP_ZONES.mountain[2])).toBe('🧣')
+  expect(walkerGear(MAP_ZONES.sea[0])).toBeUndefined()
+})
