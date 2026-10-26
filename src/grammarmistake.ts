@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'that-of-those-of': { wrong: 'The population of Tokyo is larger than Osaka.', right: 'The population of Tokyo is larger than that of Osaka.', why: '人口と人口を比べるので that of ～ にする（東京の人口と大阪という町を比べてしまわない）。' },
   'some-of-whom': { wrong: 'I have three brothers, all of who live in Tokyo.', right: 'I have three brothers, all of whom live in Tokyo.', why: 'of のあとの人は whom。' },
   'negative-question': { wrong: "Don't you like it? — Yes, I don't.", right: "Don't you like it? — No, I don't.", why: '答えの内容が否定なら No。Yes と don\'t はいっしょに使わない。' },
   'want-done': { wrong: 'I want this shirt washing.', right: 'I want this shirt washed.', why: 'シャツは「洗われる」側なので過去分詞。' },
