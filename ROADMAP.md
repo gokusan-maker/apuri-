@@ -1539,6 +1539,7 @@
 - [x] スペルで全問正解すると「🏆 パーフェクト！」
 - [x] 長文：私立医学部（自分をくすぐれないわけ）・TOEFL（カクテルパーティー効果）・TOEIC（値上げのメール）を1本ずつ
 - [x] 高校の文法単元を2つ追加：be known for ／ be known as・be familiar with ／ be familiar to
+- [x] 高校の文法単元を2つ追加：apologize to 人 for ／ thank 人 for・accuse 人 of ／ blame 人 for
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
