@@ -5155,6 +5155,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-bike-sharing',
+    title: 'Bikes for Everyone',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many cities around the world, rows of identical bicycles wait on street corners for anyone to use. With a smartphone app, a rider can unlock a bike, ride it across town, and leave it at another station. Bike-sharing systems like these have spread rapidly over the past twenty years, ( A ) they offer a cheap and healthy way to make short trips.",
+      "Supporters point out that shared bicycles can reduce traffic and air pollution. They are especially useful for the so-called 'last mile,' the short distance between a train station and a person's home or office. A trip that would take twenty minutes on foot may take only five by bicycle.",
+      "The systems have not been free of problems, however. In some cities, companies placed so many bikes on the streets that sidewalks became blocked. Because some systems allowed riders to leave bikes anywhere, broken or abandoned bicycles piled up in parks and along rivers. Cities have since introduced rules ( B ) limit the number of bikes and require them to be parked in marked areas.",
+      "Bike-sharing works best when it is part of a wider plan. Safe bicycle lanes, clear parking areas, and good connections to trains and buses all make people more likely to choose a bicycle. When these pieces fit together, a simple shared bike can become an important ( C ) of how a city moves.",
+    ],
+    ja: [
+      '世界の多くの都市では、同じ形の自転車が街角にずらりとならび、だれでも使えるようになっている。スマートフォンのアプリで自転車のかぎを開け、町の反対側まで乗って、別のステーションに置いていくことができる。こうしたシェアサイクルのしくみは、短い移動を安く健康的にする方法として、この20年ほどで急速に広まった。',
+      '支持する人たちは、シェアサイクルが交通渋滞や大気汚染を減らせると指摘する。とくに、駅から家や職場までの短いきょり、いわゆる「ラストワンマイル」に役立つ。歩けば20分かかる道のりも、自転車ならわずか5分ですむかもしれない。',
+      'しかし、このしくみに問題がなかったわけではない。会社が通りにあまりに多くの自転車を置いたため、歩道がふさがってしまった都市もある。自転車をどこにでも置いていけるしくみもあったので、こわれた自転車や乗りすてられた自転車が公園や川ぞいに積み上がった。その後、都市は自転車の数を制限し、決められた場所にとめるよう求める規則を導入した。',
+      'シェアサイクルは、より大きな計画の一部であるときにいちばんうまくいく。安全な自転車レーン、わかりやすい駐輪場、電車やバスとのよい接続がそろうと、人々は自転車をえらびやすくなる。こうした部品がかみ合えば、シンプルなシェア自転車が、都市の人の動き方の大切な一部になりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because of', 'despite', 'in spite of'], answer: 0, why: 'うしろが文（they offer …）なので接続詞 because。because of・despite・in spite of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 rules を説明し、limit の主語になる関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['part', 'parts', 'partly', 'partial'], answer: 0, why: 'an important のあとは単数の名詞 part「一部」。an があるので複数形 parts は使えず、partly（副詞）・partial（形容詞）は名詞の代わりにならない。' },
+    ],
+    underline: {
+      phrase: 'free of problems',
+      choices: ['without any problems', 'full of problems', 'too expensive to use', 'popular with everyone'],
+      answer: 0,
+      why: 'free of ～ は「～がない」。free of problems で「問題がない」。have not been free of problems なので「問題がなかったわけではない」。',
+    },
+    order: {
+      words: ['make', 'people', 'more', 'likely', 'to', 'choose', 'a', 'bicycle'],
+      rest: '',
+      answer: 'make people more likely to choose a bicycle',
+      ja: '人々が自転車をえらびやすくする。（make O C＝O を C にする、be likely to ～＝～しそうだ）',
+    },
+    tf: [
+      { statement: 'シェアサイクルは、この20年ほどで急速に広まった。', answer: true, why: '第1段落 have spread rapidly over the past twenty years。' },
+      { statement: 'シェアサイクルには、これまで問題がまったくなかった。', answer: false, why: '第3段落 The systems have not been free of problems。' },
+      { statement: '筆者は、シェアサイクルは大きな計画の一部であるときにいちばんうまくいくと考えている。', answer: true, why: '第4段落 Bike-sharing works best when it is part of a wider plan。' },
+    ],
+    qa: [
+      { q: 'What is the "last mile" in the passage?', choices: ['The short distance between a station and a home or office.', 'The longest road in a city.', 'The final day of a bike rental.', 'The last station on a train line.'], answer: 0, why: '第2段落 the short distance between a train station and a person\'s home or office。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
