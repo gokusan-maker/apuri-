@@ -28,6 +28,7 @@ it('前に開いたときより先のゾーンに入ったら「新しいゾー�
   const coins: number[] = []
   render(<StageMap name="テスト" theme="sea" floors={floors(11)} onOpen={() => {}} onChest={(n) => coins.push(n)} />)
   expect(screen.getByRole('status').textContent).toContain('新しいゾーン「さんごの浅瀬」に到着！ 🪙10')
+  expect(screen.getByRole('status').textContent).toContain('🤿 を持って進もう！') // さんご礁はシュノーケル
   expect(coins).toEqual([10]) // 到着ボーナスは1回だけ
   cleanup()
   render(<StageMap name="テスト" theme="sea" floors={floors(12)} onOpen={() => {}} onChest={(n) => coins.push(n)} />)

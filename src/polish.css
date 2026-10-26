@@ -3789,3 +3789,4 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes arena-fall { from { transform: translate(0, 0); opacity: 0; } 10% { opacity: 1; } to { transform: translate(-14px, 160px); opacity: 0.2; } }
 @media (prefers-reduced-motion: reduce) { .arena-season { display: none; } }
 .trait-sealed { margin-left: 6px; padding: 0 6px; border-radius: 999px; background: #7c3aed; color: #fff; font-size: 0.7rem; font-weight: 900; }
+.smap-arrive-gear { font-size: 0.75rem; font-weight: 700; opacity: 0.9; }

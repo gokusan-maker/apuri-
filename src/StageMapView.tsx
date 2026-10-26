@@ -119,6 +119,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
               {zone.icon}
             </span>
             新しいゾーン「{zone.name}」に到着！{onChest ? ` 🪙${ZONE_COINS}` : ''}
+            {walkerGear(zone) && <small className="smap-arrive-gear">{walkerGear(zone)} を持って進もう！</small>}
           </p>
         )}
         <span className="smap-zone" aria-label={`ゾーン${zi + 1}：${zone.name}（ステージ${zFrom}〜${zTo}）`}>
