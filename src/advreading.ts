@@ -8284,6 +8284,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-how-soap-works',
+    title: 'How Soap Cleans',
+    level: 'TOEFL・IELTS（科学）',
+    paragraphs: [
+      "Water alone cannot remove oily dirt from our hands, because oil and water do not mix. Soap solves this problem thanks to the special shape of its molecules. Each soap molecule has two different ends: a \"head\" that is attracted to water and a long \"tail\" ( A ) is attracted to oil.",
+      "When you wash your hands, the tails of countless soap molecules push into the oil, while the heads stay in the water. Soon the oil is surrounded by soap molecules, ( B ) form tiny balls with the oil trapped inside. Because the outside of each ball faces the water, the balls can easily be rinsed away.",
+      "Soap is also effective against some germs. Certain viruses are covered by a thin layer of fat. Soap molecules can break this layer apart, ( C ) the virus unable to cause infection. This is one reason health experts recommend washing hands with soap for at least twenty seconds.",
+      "People have made soap for thousands of years, usually by heating fats with ashes or other substances. Although modern soaps contain many added ingredients, the basic science behind them has not changed.",
+    ],
+    ja: [
+      '水だけでは、手についた油っぽいよごれを落とすことはできない。油と水はまざらないからである。せっけんは、その分子の特別な形のおかげで、この問題を解決する。せっけんの分子にはそれぞれ2つのちがう端がある。水に引きつけられる「頭」と、油に引きつけられる長い「しっぽ」である。',
+      '手を洗うと、数えきれないせっけんの分子のしっぽが油の中に入りこみ、一方で頭は水の中にとどまる。やがて油はせっけんの分子に囲まれ、それらが油を中に閉じこめた小さな玉を作る。それぞれの玉の外側は水の方を向いているので、玉はかんたんに洗い流せるのである。',
+      'せっけんは、ある種の病原体にも効果がある。うすい脂肪の膜におおわれたウイルスもある。せっけんの分子はこの膜をこわすことができ、その結果、ウイルスは感染を起こせなくなる。これが、専門家が少なくとも20秒間せっけんで手を洗うようすすめる理由の1つである。',
+      '人々は何千年も前から、ふつうは脂肪を灰などといっしょに熱してせっけんを作ってきた。今のせっけんには多くの成分が加えられているが、その基本となる科学は変わっていない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a long "tail" を説明し、is attracted の主語になる関係代名詞 that。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'they'], answer: 0, why: 'コンマのあとで soap molecules（物）を説明し、form の主語になる非制限用法の which。they だとコンマだけで文がつながってしまう。' },
+      { id: 'C', choices: ['leaving', 'left', 'leave', 'to leaving'], answer: 0, why: 'コンマのあとで「その結果～の状態にする」と続ける分詞構文。leave A unable「A を～できない状態にする」。' },
+    ],
+    underline: {
+      phrase: 'countless',
+      choices: ['too many to count', 'very few', 'very large', 'broken'],
+      answer: 0,
+      why: 'countless は「数えきれない（ほど多い）」。count（数える）＋ less（～できない）。',
+    },
+    order: {
+      words: ['do', 'not', 'mix'],
+      rest: '',
+      answer: 'do not mix',
+      ja: 'まざらない',
+    },
+    tf: [
+      { statement: '油と水はよくまざる。', answer: false, why: '第1段落 oil and water do not mix。' },
+      { statement: 'せっけんの分子には、水に引きつけられる部分と油に引きつけられる部分がある。', answer: true, why: '第1段落 a "head" that is attracted to water and a long "tail" that is attracted to oil。' },
+      { statement: 'せっけんは何千年も前から作られている。', answer: true, why: '第4段落 People have made soap for thousands of years。' },
+    ],
+    qa: [
+      { q: 'Why can the tiny balls of oil and soap be rinsed away easily?', choices: ['The outside of each ball faces the water.', 'The balls are very heavy.', 'The oil turns into water.', 'The tails stay outside the balls.'], answer: 0, why: '第2段落 Because the outside of each ball faces the water, the balls can easily be rinsed away。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
