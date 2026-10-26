@@ -155,3 +155,9 @@ export function saveBossMilestones(v: number[]): void {
 }
 // いまの撃破数で新しくもらえる記念（まだもらっていないもの）
 export const newBossMilestones = (beaten: number, got: number[]) => BOSS_MILESTONES.filter((n) => beaten >= n && !got.includes(n))
+
+// 次の記念（BOSS_MILESTONES）まで、あと何レベルのボスをたおせばよいか（全部すんだら null）
+export function nextBossMilestone(beaten: number): { at: number; left: number } | null {
+  const at = BOSS_MILESTONES.find((m) => m > beaten)
+  return at === undefined ? null : { at, left: at - beaten }
+}

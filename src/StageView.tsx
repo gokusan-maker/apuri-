@@ -17,7 +17,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, BC_PASS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -664,6 +664,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">
           👹 撃破 {COURSES.filter((c) => lboss[c.id]).length} / {COURSES.length} レベル
           {allBossBeaten(lboss) ? `　👑 称号「${ALL_BOSS_TITLE}」` : '（全部たおすと特別な称号）'}
+          {nextBossMilestone(COURSES.filter((c) => lboss[c.id]).length) && <small className="boss-next-ms">　🎯 あと{nextBossMilestone(COURSES.filter((c) => lboss[c.id]).length)!.left}レベルで記念の🪙{BOSS_MILESTONE_COINS}</small>}
         </p>
         {allBossBeaten(lboss) && !allClaimed && onCastleReward && (
           <button
