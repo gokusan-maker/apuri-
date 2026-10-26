@@ -5482,6 +5482,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-karaoke',
+    title: 'An Empty Orchestra',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The word 'karaoke' comes from two Japanese words: kara, meaning 'empty,' and oke, short for 'orchestra.' In other words, it is music without a singer, waiting for someone to fill the empty space. Karaoke machines first appeared in Japan in the early 1970s, and a musician named Daisuke Inoue is often credited ( A ) creating one of the first.",
+      "At first, people sang in bars in front of strangers, which made many shy singers nervous. Later, 'karaoke boxes' became popular. These are small private rooms ( B ) groups of friends or coworkers can sing without being heard by others.",
+      "Today karaoke is enjoyed all over the world. Some people use it to relax after work, others to celebrate birthdays, and still others to practice singing. Language learners have also found it useful. Singing along to songs in a foreign language can help them remember words and get used to the rhythm of the language.",
+      "Perhaps the secret of karaoke's success is simple: it allows ordinary people to feel, for a few minutes, like stars. You do not need to be a great singer ( C ) enjoy it.",
+    ],
+    ja: [
+      '「カラオケ」ということばは、2つの日本語からできている。「から」は「空（から）」、「オケ」は「オーケストラ」を短くしたものだ。つまり、だれかが空いているところをうめてくれるのを待っている、歌い手のいない音楽なのである。カラオケの機械は1970年代のはじめに日本で登場し、井上大佑という音楽家が最初期のものの1つをつくったとよく言われる。',
+      'はじめは、人々はバーで知らない人の前で歌っていたので、はずかしがりやの多くの人はきんちょうした。のちに「カラオケボックス」が人気になった。これは、友だちや同僚のグループがほかの人に聞かれずに歌える、小さな個室である。',
+      '今日、カラオケは世界中で楽しまれている。仕事のあとにくつろぐために使う人もいれば、誕生日を祝うために使う人も、歌の練習のために使う人もいる。外国語を学ぶ人たちも、カラオケが役に立つことに気づいた。外国語の歌に合わせて歌うことは、単語を覚えたり、その言語のリズムに慣れたりする助けになるのだ。',
+      'カラオケが成功したひみつは、シンプルなことなのかもしれない。ふつうの人が、数分間だけスターになった気分を味わえるのである。カラオケを楽しむのに、歌がとてもうまい必要はない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['with', 'to', 'at', 'by'], answer: 0, why: 'be credited with -ing「～したと（功績を）認められる・～したとされる」。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 small private rooms（場所）を説明し、うしろが欠けのない文（groups … can sing …）なので関係副詞 where。which・what のうしろには欠けた部分が必要、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['to', 'for', 'that', 'with'], answer: 0, why: '目的を表す不定詞 to enjoy「楽しむために」。for・that・with のあとに原形 enjoy は続かない。' },
+    ],
+    underline: {
+      phrase: 'get used to the rhythm',
+      choices: ['become familiar with the rhythm', 'forget the rhythm', 'change the rhythm', 'write down the rhythm'],
+      answer: 0,
+      why: 'get used to ～ は「～に慣れる」。外国語のリズムになじんでいく、ということ。',
+    },
+    order: {
+      words: ['without', 'being', 'heard', 'by', 'others'],
+      rest: '',
+      answer: 'without being heard by others',
+      ja: 'ほかの人に聞かれずに。（without ＋ 動名詞の受け身 being heard）',
+    },
+    tf: [
+      { statement: '「カラオケ」の「から」は「空（から）」という意味だ。', answer: true, why: '第1段落 kara, meaning \'empty\'。' },
+      { statement: 'カラオケボックスでは、知らない人の前で歌わなければならない。', answer: false, why: '第2段落 can sing without being heard by others。' },
+      { statement: 'カラオケは外国語を学ぶ人にも役立つ。', answer: true, why: '第3段落 Language learners have also found it useful。' },
+    ],
+    qa: [
+      { q: 'According to the writer, what may be the secret of karaoke\'s success?', choices: ['It lets ordinary people feel like stars for a few minutes.', 'It is only for great singers.', 'It is always free.', 'It teaches people to play instruments.'], answer: 0, why: '第4段落 it allows ordinary people to feel, for a few minutes, like stars。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
