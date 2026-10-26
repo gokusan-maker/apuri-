@@ -93,3 +93,12 @@ it('文法の城：はじめてクリアした階が全問正解なら、パー�
   expect(coins).toHaveBeenCalledWith(3)
   expect(document.querySelector('.wc-perfect')!.textContent).toContain('🪙3 ボーナス')
 })
+
+it('文法の森を制覇すると「次は〇〇の文法の森へ」のボタンで次のレベルへ', () => {
+  localStorage.clear()
+  localStorage.setItem('eitan:gcastle', JSON.stringify(gcFloorsFor('中1').map((f) => f.id)))
+  const go = vi.fn()
+  render(<Grammar castleOnly castleLevel="中1" onCastleLevel={go} />)
+  fireEvent.click(screen.getByRole('button', { name: '▶ 次は「中2の文法の森」へ' }))
+  expect(go).toHaveBeenCalledWith('中2')
+})

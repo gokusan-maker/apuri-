@@ -2197,6 +2197,10 @@ function App() {
             onCards={mode === 'word' ? () => setWordTab('card') : undefined}
             onDrill={mode === 'grammar' ? setGrammarDrill : undefined}
             grammarLevel={gcLevel}
+            onGrammarLevel={(id) => {
+              setGcLevel(id)
+              saveGcLevel(id)
+            }}
             grammarBelow={
               mode === 'grammar' && !grammarGo && !playOn && !todayGone ? (
                 <button className="long-recommend daily-long today-read-btn" aria-label={`今日の課題（文法）：${dailyGrammar(today).title}`} onClick={() => setGrammarGo(true)}>

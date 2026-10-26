@@ -43,6 +43,7 @@ type Props = {
   castleOnly?: boolean // 文法ページ（App）：城と「単元をえらんで自由に勉強」だけにする
   belowCastle?: ReactNode // 城のすぐ下に出すもの（App の今日の課題）
   castleLevel?: string // 文法の城のレベル（App のキャラの下でえらぶ。省略時は学年から）
+  onCastleLevel?: (id: string) => void // 森を制覇したとき「次のレベルの森へ」で呼ぶ
   onChest?: (coins: number) => void // 城の宝箱のコイン
   onDrill?: (id: GrammarDrill) => void // 文法ドリル（単語ゲームから移したことばの形の練習）を選んだ
   units?: GrammarUnit[] // 省略時は文法の単元
@@ -120,7 +121,7 @@ function saveRunBest(n: number): void {
   }
 }
 
-export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
+export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest, onCastleLevel }: Props) {
   const [gcPerfect, setGcPerfect] = useState<string | null>(null) // 全問正解ボーナスをもらった城の階
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
@@ -156,6 +157,8 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
   const [free, setFree] = useState(false) // 城だけのページで「単元をえらんで自由に勉強」をおした
   const [freeLevel, setFreeLevel] = useState('中1') // 自由に勉強でえらんだレベル（中1〜ネイティブ）
   const gcLevel = castleLevel ?? loadGcLevel(loadGrade()) // キャラの下でえらんだ文法の城
+  const nextLv = GC_LEVELS[GC_LEVELS.findIndex((l) => l.id === gcLevel) + 1]
+  const nextForest = onCastleLevel && nextLv ? { label: `${nextLv.label}の文法の森`, go: () => onCastleLevel(nextLv.id) } : undefined
   const gcFloors = stampMode ? gcFloorsFor(gcLevel) : []
   // 城の階をひらく：1階目は解説から、2・3階目はすぐ問題
   const openFloor = (id: string) => {
@@ -295,6 +298,7 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
           name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の森`}
           theme="forest"
           onChest={onChest}
+          next={nextForest}
           floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
           onOpen={openFloor}
         />
@@ -331,6 +335,7 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
               name={`${GC_LEVELS.find((l) => l.id === gcLevel)!.label}の文法の森`}
               theme="forest"
               onChest={onChest}
+              next={nextForest}
               floors={gcFloors.map((f) => ({ id: f.id, label: f.label, sub: f.sub, cleared: gcClears.includes(f.id) }))}
               onOpen={openFloor}
             />
