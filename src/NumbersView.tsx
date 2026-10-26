@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { XP_QUIZ_CORRECT, type Source } from './monster'
-import { isRight, numChoices, pickQ } from './numbers'
+import { isRight, loadNumbersBest, numChoices, pickQ, saveNumbersBest } from './numbers'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 import { starsFor } from './stages'
@@ -43,9 +43,13 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
   }
 
   const [done, setDone] = useState(false)
+  const [newBest, setNewBest] = useState(false) // 自己ベストを更新した
 
   function next() {
     if (score.all >= round) {
+      const nb = score.ok > loadNumbersBest()
+      if (nb) saveNumbersBest(score.ok)
+      setNewBest(nb)
       setDone(true)
       return
     }
@@ -63,6 +67,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
         </p>
         {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
         {score.ok === round && <p className="wc-perfect">🏆 パーフェクト！ 全問正解</p>}
+        {newBest && <p className="num-streak">🎉 自己ベスト更新！（{score.ok}問）</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score.ok, round)}`}>
           {'★'.repeat(starsFor(score.ok, round))}
           {'☆'.repeat(3 - starsFor(score.ok, round))}

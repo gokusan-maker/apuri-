@@ -126,3 +126,21 @@ export function numChoices(q: NumQ): string[] {
   const others = [...new Set(near)].filter((x) => x !== q.answer).slice(0, 3)
   return shuffle([q.answer, ...others])
 }
+
+// 数の聞き取りの自己ベスト（10問中の正解数）
+const BEST_KEY = 'eitan:numbers-best'
+export function loadNumbersBest(): number {
+  try {
+    const v = Number(localStorage.getItem(BEST_KEY) ?? '0')
+    return Number.isFinite(v) ? v : 0
+  } catch {
+    return 0
+  }
+}
+export function saveNumbersBest(n: number): void {
+  try {
+    localStorage.setItem(BEST_KEY, String(n))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}

@@ -116,4 +116,6 @@ it('数の聞き取りで全問正解すると「パーフェクト」', async (
   }
   vi.restoreAllMocks()
   expect(screen.getByText('🏆 パーフェクト！ 全問正解')).toBeInTheDocument()
+  expect(screen.getByText(/自己ベスト更新！/)).toBeInTheDocument() // はじめてなので自己ベスト
+  expect(localStorage.getItem('eitan:numbers-best')).toBe('2')
 })
