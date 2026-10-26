@@ -5355,6 +5355,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-pollinators',
+    title: 'The Small Workers Behind Our Food',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When we think of the food on our plates, we rarely think of insects. Yet many of the fruits and vegetables we eat depend on animals, mostly insects such as bees, ( A ) carry pollen from one flower to another. Without this process, called pollination, many plants cannot produce seeds or fruit.",
+      "It is estimated that around three-quarters of the world's major types of food crops benefit at least partly from animal pollination. Staple grains such as rice, wheat, and corn are pollinated by the wind, so a world without bees would not starve. It would, however, lose much of its variety. Apples, almonds, strawberries, and many other foods would become far scarcer and more expensive.",
+      "In recent decades, many pollinator populations have declined. Scientists point to several causes, including the loss of wildflower habitats, the use of certain pesticides, and the spread of diseases. In some regions, farmers already depend on beekeepers who transport hives by truck ( B ) the crops are in bloom. California's almond orchards, for example, require huge numbers of rented honeybee colonies each spring.",
+      "Protecting pollinators does not always require large projects. Planting native flowers, leaving some areas of grass uncut, and reducing pesticide use in gardens can all help. Because pollinators move across farms, parks, and private gardens, their survival depends on the choices of many people, not just a few experts. In this sense, a single flower bed may matter more than it ( C ).",
+    ],
+    ja: [
+      '自分の皿の上の食べ物について考えるとき、私たちが昆虫のことを考えることはめったにない。しかし、私たちが食べる果物や野菜の多くは、ある花から別の花へ花粉を運ぶ動物、おもにハチのような昆虫にたよっている。受粉とよばれるこのはたらきがなければ、多くの植物は種や実をつくることができない。',
+      '世界のおもな食用作物の種類のおよそ4分の3は、少なくとも部分的には動物による受粉の恩恵を受けていると推定されている。米や小麦、トウモロコシのような主食の穀物は風で受粉するので、ハチのいない世界でも人々がうえ死にすることはないだろう。しかし、その世界は食べ物の多様さの多くを失うことになる。リンゴやアーモンド、イチゴなど多くの食べ物は、ずっと手に入りにくく、高くなるだろう。',
+      'ここ数十年、多くの花粉を運ぶ生き物の数が減ってきた。科学者たちは、野草の生える場所の消失、ある種の農薬の使用、病気の広がりなど、いくつかの原因をあげている。地域によっては、農家はすでに、作物の花がさいている間、巣箱をトラックで運んでくる養蜂家にたよっている。たとえばカリフォルニアのアーモンド畑では、毎年春に、借りてきた非常に多くのミツバチの群れが必要になる。',
+      '花粉を運ぶ生き物を守るのに、いつも大がかりな計画が必要なわけではない。在来の花を植えること、草をかり残しておく場所をつくること、庭で使う農薬を減らすことは、どれも役に立つ。花粉を運ぶ生き物は、農地や公園、個人の庭を行き来するので、その生き残りは、一部の専門家だけでなく多くの人の選択にかかっている。この意味で、たった1つの花だんが、見た目以上に大きな意味をもつかもしれないのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'whose', 'what', 'where'], answer: 0, why: '先行詞 insects such as bees を説明し、carry の主語になる関係代名詞 which。whose のうしろには名詞が必要、what は先行詞をとらず、where のうしろは欠けのない文。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the crops are in bloom）なので接続詞 while「～している間」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['seems', 'seeming', 'to seem', 'seem'], answer: 0, why: '比較の than のあとの文 it seems「（そう）見える」。主語 it は三人称単数なので seems。' },
+    ],
+    underline: {
+      phrase: 'would not starve',
+      choices: ['would still have enough basic food to survive', 'would have no food at all', 'would grow much more fruit', 'would stop growing rice and wheat'],
+      answer: 0,
+      why: 'starve は「うえ死にする・ひどくうえる」。主食の穀物は風で受粉するので、ハチがいなくても生きるための基本の食べ物はある、ということ。',
+    },
+    order: {
+      words: ['leaving', 'some', 'areas', 'of', 'grass', 'uncut'],
+      rest: '',
+      answer: 'leaving some areas of grass uncut',
+      ja: '草をかり残しておく場所をつくる。（leave O C＝O を C のままにしておく）',
+    },
+    tf: [
+      { statement: '米や小麦は、おもに風で受粉する。', answer: true, why: '第2段落 rice, wheat, and corn are pollinated by the wind。' },
+      { statement: 'ハチがいなくなると、世界中の人がうえ死にする。', answer: false, why: '第2段落 a world without bees would not starve。' },
+      { statement: 'カリフォルニアのアーモンド畑では、借りたミツバチの群れが使われている。', answer: true, why: '第3段落 require huge numbers of rented honeybee colonies。' },
+      { statement: '筆者は、花粉を運ぶ生き物を守るには大がかりな計画しかないと考えている。', answer: false, why: '第4段落 Protecting pollinators does not always require large projects。' },
+    ],
+    qa: [
+      { q: 'Why does the survival of pollinators depend on many people?', choices: ['Because pollinators move across farms, parks, and private gardens.', 'Because only experts can keep bees.', 'Because bees live only in cities.', 'Because pesticides are used only by farmers.'], answer: 0, why: '第4段落 Because pollinators move across farms, parks, and private gardens, their survival depends on the choices of many people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
