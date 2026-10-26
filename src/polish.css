@@ -3964,3 +3964,8 @@ header .event-chips { margin: 0 0 2px; }
 .battle-v2 .boss-plate .boss-hp-fill { position: relative; z-index: 1; }
 .boss-hp-ghost { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(180deg, #fff, #fecaca); transition: width 0.6s ease-in 0.55s; }
 @media (prefers-reduced-motion: reduce) { .boss-hp-ghost { transition: none; } }
+/* ボスの城の問題の階：クリアまでの星 */
+.bfloor-goal { margin: 0 0 6px; font-size: 0.9rem; letter-spacing: 0.08em; color: #f59e0b; }
+.bfloor-goal span { margin-left: 4px; font-size: 0.72rem; letter-spacing: 0; color: var(--muted); font-weight: 700; }
+.bfloor-goal.done { color: #16a34a; }
+.bfloor-goal.done span { color: #16a34a; }

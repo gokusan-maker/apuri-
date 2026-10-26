@@ -471,3 +471,14 @@ it('ボスの城の単語の階は10問で8問以上正解でクリア（ほか�
   expect(bcPassOf(10)).toBe(8)
   expect(bcPassOf(5)).toBe(4)
 })
+
+it('ボスの城の問題の階に、クリアまでの正解数（星）が出る', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 0)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  expect(screen.getByLabelText('正解 0問 ／ クリアは8問')).toHaveTextContent('☆☆☆☆☆☆☆☆ あと8問正解でクリア')
+  const btn = [...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === qs[0].choices[qs[0].answer])!
+  fireEvent.click(btn)
+  expect(screen.getByLabelText('正解 1問 ／ クリアは8問')).toHaveTextContent('★☆☆☆☆☆☆☆ あと7問正解でクリア')
+})
