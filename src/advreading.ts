@@ -5197,6 +5197,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-photoperiod',
+    title: 'How Plants Know When to Flower',
+    level: 'TOEFL・IELTS（生物）',
+    paragraphs: [
+      "Many plants flower at roughly the same time every year. Cherry trees in Japan, for example, bloom in spring, while chrysanthemums bloom in autumn. How do plants, ( A ) have no eyes or brains, know what time of year it is?",
+      "One important clue is day length. In the early twentieth century, scientists discovered that many plants flower only when the days reach a certain length. So-called 'short-day plants,' such as chrysanthemums, flower when days become shorter in late summer and autumn. 'Long-day plants,' such as spinach, flower when days grow longer in late spring and early summer. This response to the length of day and night is called photoperiodism.",
+      "Later experiments revealed something surprising. What plants actually measure is not the length of the day but the length of the night. When researchers interrupted a long night with a short flash of light, short-day plants failed to flower, ( B ) the total hours of darkness were still large.",
+      "Farmers and flower growers have put this knowledge to practical use. In Japan, some chrysanthemum growers light their greenhouses at night to delay flowering, so that the flowers can be shipped ( C ) demand is highest. Understanding how plants keep track of the seasons also helps scientists predict how crops may respond as the climate changes.",
+    ],
+    ja: [
+      '多くの植物は、毎年だいたい同じ時期に花をさかせる。たとえば日本の桜は春に、菊は秋に花をさかせる。目も脳もない植物は、どうやって一年のうちのいつなのかを知るのだろうか。',
+      '大切な手がかりの1つは、昼の長さである。20世紀のはじめ、科学者たちは、多くの植物が昼の長さがある長さになったときにだけ花をさかせることを発見した。菊のようないわゆる「短日植物」は、夏の終わりから秋に昼が短くなると花をさかせる。ほうれんそうのような「長日植物」は、春の終わりから夏のはじめに昼が長くなると花をさかせる。このように昼と夜の長さに反応することを、光周性という。',
+      'その後の実験で、おどろくべきことがわかった。植物が実際に測っているのは、昼の長さではなく夜の長さなのである。研究者が長い夜の途中で短く光を当てると、暗い時間の合計はまだ長かったにもかかわらず、短日植物は花をさかせなかった。',
+      '農家や花の生産者は、この知識を実際に役立ててきた。日本では、菊の生産者の中に、夜に温室を照らして花のさく時期をおくらせ、需要がいちばん高まるときに花を出荷できるようにしている人たちがいる。植物がどのように季節を知るのかを理解することは、気候が変わるにつれて作物がどう反応するかを、科学者が予測する助けにもなる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'that', 'what', 'whose'], answer: 0, why: 'コンマにはさまれた非制限用法で plants を説明し、have の主語になる which。that はコンマのあとに使えず、what は先行詞をとらず、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['even though', 'despite', 'because of', 'during'], answer: 0, why: 'うしろが文（the total hours … were still large）なので接続詞 even though「～にもかかわらず」。despite・because of・during は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['when', 'during', 'at', 'for'], answer: 0, why: 'うしろが文（demand is highest）なので接続詞 when「～するときに」。during・at・for は前置詞で文を続けられない。' },
+    ],
+    underline: {
+      phrase: 'put this knowledge to practical use',
+      choices: ['used this knowledge in their real work', 'quickly forgot this knowledge', 'tested this knowledge only in a laboratory', 'kept this knowledge secret'],
+      answer: 0,
+      why: 'put ～ to use は「～を利用する・役立てる」、practical は「実際の」。知識を実際の仕事に役立ててきたということ。',
+    },
+    order: {
+      words: ['light', 'their', 'greenhouses', 'at', 'night', 'to', 'delay', 'flowering'],
+      rest: '',
+      answer: 'light their greenhouses at night to delay flowering',
+      ja: '花のさく時期をおくらせるために、夜に温室を照らす。（目的の不定詞 to delay）',
+    },
+    tf: [
+      { statement: '菊は短日植物で、昼が短くなると花をさかせる。', answer: true, why: '第2段落 short-day plants, such as chrysanthemums, flower when days become shorter。' },
+      { statement: '植物が実際に測っているのは、昼の長さである。', answer: false, why: '第3段落 What plants actually measure is not the length of the day but the length of the night。' },
+      { statement: '長い夜の途中で短く光を当てると、短日植物は花をさかせなかった。', answer: true, why: '第3段落 short-day plants failed to flower。' },
+    ],
+    qa: [
+      { q: 'Why do some chrysanthemum growers in Japan light their greenhouses at night?', choices: ['To delay flowering until demand is highest.', 'To keep the plants warm in winter.', 'To make the flowers change color.', 'To help insects find the flowers.'], answer: 0, why: '第4段落 light their greenhouses at night to delay flowering, so that the flowers can be shipped when demand is highest。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
