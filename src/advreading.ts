@@ -5976,6 +5976,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-price-change',
+    title: 'Email: A Change in Prices',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Alvarez, Thank you for your continued business with Harbor Paper Supply. We are writing to inform you that, ( A ) April 1, the price of our standard copy paper will increase by 6 percent.",
+      "This change is due to a sharp rise in the cost of raw materials and transportation over the past year. We have worked hard to keep our prices low, and this is the first increase in three years. Prices for all other products will stay the same.",
+      "As a valued customer, you can lock in the current price by placing an order before March 31. Orders of 50 boxes or more will also receive free delivery, ( B ) of the delivery address.",
+      "If you have any questions about this change, please feel free to contact me directly. We appreciate your understanding and look forward to ( C ) you for many years to come. Sincerely, Tom Becker, Sales Manager",
+    ],
+    ja: [
+      'アルバレス様。いつもハーバー・ペーパー・サプライをご利用いただきありがとうございます。4月1日より、当社の標準のコピー用紙の価格が6パーセント上がることをお知らせいたします。',
+      'この変更は、この1年で原材料費と輸送費が急に上がったためです。当社は価格を低くおさえるよう努めてまいりましたが、今回は3年ぶりの値上げとなります。ほかの商品の価格は変わりません。',
+      '大切なお客さまとして、3月31日までにご注文いただければ、今の価格のままご購入いただけます。また、50箱以上のご注文は、配送先にかかわらず送料無料となります。',
+      'この変更についてご質問があれば、どうぞ私に直接ご連絡ください。ご理解に感謝するとともに、これから先も長くお役に立てることを楽しみにしております。営業部長 トム・ベッカー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['effective', 'effect', 'effectively', 'affecting'], answer: 0, why: 'effective ＋ 日付「～から有効で・～付けで」。お知らせ文でよく使う決まった形。' },
+      { id: 'B', choices: ['regardless', 'regard', 'regarding', 'regards'], answer: 0, why: 'regardless of ～「～に関係なく」。regard・regarding・regards は of と組んでこの意味にならない。' },
+      { id: 'C', choices: ['serving', 'serve', 'served', 'to serve'], answer: 0, why: 'look forward to -ing「～するのを楽しみにする」。to は前置詞なので動名詞 serving。' },
+    ],
+    underline: {
+      phrase: 'lock in the current price',
+      choices: ['keep the present price for your order', 'pay a much higher price', 'cancel your order', 'ask for a special discount'],
+      answer: 0,
+      why: 'lock in ～ は「～を固定する・確保する」。今の価格のまま買えるようにする、ということ。',
+    },
+    order: {
+      words: ['the', 'first', 'increase', 'in', 'three', 'years'],
+      rest: '',
+      answer: 'the first increase in three years',
+      ja: '3年ぶりの値上げ。（in ＋ 期間＝～の間で（はじめての））',
+    },
+    tf: [
+      { statement: 'コピー用紙の価格は4月1日から上がる。', answer: true, why: '第1段落 April 1, the price of our standard copy paper will increase。' },
+      { statement: '今回の値上げは、毎年行われているものだ。', answer: false, why: '第2段落 this is the first increase in three years。' },
+      { statement: '50箱以上注文すると、送料が無料になる。', answer: true, why: '第3段落 Orders of 50 boxes or more will also receive free delivery。' },
+    ],
+    qa: [
+      { q: 'How can Ms. Alvarez keep paying the current price?', choices: ['By placing an order before March 31.', 'By ordering fewer than 50 boxes.', 'By calling the delivery company.', 'By waiting until April.'], answer: 0, why: '第3段落 you can lock in the current price by placing an order before March 31。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
