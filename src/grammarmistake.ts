@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'known-for-as': { wrong: 'Kyoto is known as its old temples.', right: 'Kyoto is known for its old temples.', why: '有名な理由・特徴は be known for。as は呼び名・立場。' },
+  'familiar-with': { wrong: 'This song is familiar with many people.', right: 'This song is familiar to many people.', why: '物事が主語なら be familiar to 人。人が主語なら be familiar with 物事。' },
   'hope-wish': { wrong: 'I wish it will be sunny tomorrow.', right: 'I hope it will be sunny tomorrow.', why: '実現しそうなことを望むのは hope。wish のうしろは仮定法。' },
   'insist-on': { wrong: 'He insisted on to pay.', right: 'He insisted on paying.', why: '前置詞 on のあとは動名詞。' },
   'conj-ing': { wrong: 'Be careful while cross the street.', right: 'Be careful while crossing the street.', why: '接続詞を残した分詞構文は while ＋ -ing。' },
