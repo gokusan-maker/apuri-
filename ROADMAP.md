@@ -1527,7 +1527,7 @@
 - [x] 高校の文法単元を2つ追加：make use of ／ take advantage of ／ make the most of・be capable of ／ be able to
 - [x] 高校の文法単元を2つ追加：There is nothing like ～ ／ Nothing is more ～ than・for all ／ with all
 - [x] 長文：旧帝大（ジェヴォンズのパラドックス）・高校入試（点字）を1本ずつ
-- [x] 高校の文法単元を2つ追加：It was not long before ～・superior to ／ inferior to ／ senior to
+- [x] 高校の文法単元を4つ追加：It was not long before ～・superior to ／ inferior to ／ senior to・can afford to・ever since
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
