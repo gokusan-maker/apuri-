@@ -9,6 +9,7 @@ import { examMistakeOf, mistakeOf, type Mistake } from './grammarmistake'
 export const FLOOR_QS = 5
 export const FLOORS_PER_PART = 3
 export const GC_PASS = 4 // 5問中4問正解でその階をクリア
+export const GC_PERFECT_COINS = 3 // はじめてクリアした階が全問正解なら、ボーナスのコイン
 
 // 上から順に当てはめる（最初にあたったものの項目）
 const TOPICS: [string, RegExp][] = [

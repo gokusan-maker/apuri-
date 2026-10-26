@@ -17,7 +17,7 @@ import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
 import { examFigs, figOf } from './grammarfig'
-import { floorMistake, GC_LEVELS, GC_PASS, gcFloorsFor, levelUnits, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
+import { floorMistake, GC_LEVELS, GC_PASS, GC_PERFECT_COINS, gcFloorsFor, levelUnits, loadGcClears, loadGcLevel, saveGcClears } from './grammarcastle'
 import { dayKey } from './srs'
 import { mistakeOf } from './grammarmistake'
 import { GrammarBingo } from './GrammarBingoView'
@@ -121,6 +121,7 @@ function saveRunBest(n: number): void {
 }
 
 export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill, quickStart = false, units = GRAMMAR, title = '文法ミニ解説', onAnswer, onStampTicket, onMonsterWin, onDailyBonus, onRushWin, onSpend, onFirstClear, onWeeklyGoal, onBingo, partnerName, onStreakBonus, onMaster, onQuickPerfect, onRunBest, onTaBest, onAllGames, onChest }: Props) {
+  const [gcPerfect, setGcPerfect] = useState<string | null>(null) // 全問正解ボーナスをもらった城の階
   const playedToday = loadTodayGames(dayKey()).filter((k) => k.startsWith('grammar:')).length
   const [allClaimed, setAllClaimed] = useState(() => allGamesClaimed(dayKey()))
   const [runBest, setRunBest] = useState(loadRunBest) // 連続正解チャレンジのベスト
@@ -1036,6 +1037,7 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
           </button>
         )}
         {!battle && <GrammarOneMore key={unit.id} unitId={unit.id} onAnswer={onAnswer} />}
+        {gcPerfect === unit.id && <p className="wc-perfect">⭐ パーフェクト！ 全問正解　🪙{GC_PERFECT_COINS} ボーナス</p>}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && score >= Math.min(GC_PASS, unit.questions.length) && <FloorClear next={gcFloors[gcFloors.findIndex((f) => f.id === unit.id) + 1]?.label} floor={gcFloors.findIndex((f) => f.id === unit.id)} total={gcFloors.length} />}
         {unit.id.startsWith('gc:') && gcClears.includes(unit.id) && floorMistake(unit.questions) && (
           <div className="grammar-mistake" aria-label="この階のよくあるまちがい">
@@ -1151,6 +1153,10 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
       const c = [...gcClears, unit.id]
       setGcClears(c)
       saveGcClears(c)
+      if (nextScore === unit.questions.length && onChest) {
+        onChest(GC_PERFECT_COINS)
+        setGcPerfect(unit.id)
+      }
     }
     if (step === unit.questions.length - 1 && nextScore === unit.questions.length && GRAMMAR.some((g) => g.id === unit.id)) {
       const c = { ...clears, [unit.id]: (clears[unit.id] ?? 0) + 1 }

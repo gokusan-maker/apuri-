@@ -1,5 +1,5 @@
 import { fireEvent, render, screen, within } from '@testing-library/react'
-import { expect, it } from 'vitest'
+import { expect, it, vi } from 'vitest'
 import { GRAMMAR } from './grammar'
 import { FLOOR_QS, gcFloorsFor, GC_LEVELS, grammarCastleFloors, loadGcLevel, topicOf } from './grammarcastle'
 import { Grammar } from './GrammarView'
@@ -75,4 +75,21 @@ it('入試・試験レベルの文法の城でも、階ごとにちがう「よ�
     expect(m.wrong).not.toBe(m.right)
     expect(m.why.length).toBeGreaterThan(5)
   }
+})
+
+it('文法の城：はじめてクリアした階が全問正解なら、パーフェクトのボーナスのコイン', () => {
+  localStorage.clear()
+  const coins = vi.fn()
+  render(<Grammar onChest={coins} />)
+  const f = gcFloorsFor('中1')[0]
+  const castle = screen.getByRole('region', { name: '中1の文法の森' })
+  fireEvent.click(within(castle).getByRole('button', { name: new RegExp(`^1階：${f.label}`) }))
+  fireEvent.click(screen.getByText(/問題に挑戦/))
+  for (const q of f.questions) {
+    fireEvent.click(screen.getByRole('button', { name: q.choices[q.answer] }))
+    const next = screen.queryByText(/次の問題|次へ|結果を見る/)
+    if (next) fireEvent.click(next)
+  }
+  expect(coins).toHaveBeenCalledWith(3)
+  expect(document.querySelector('.wc-perfect')!.textContent).toContain('🪙3 ボーナス')
 })

@@ -1513,7 +1513,7 @@
 - [x] 高校の文法単元を4つ追加：独立分詞構文（It being ～ / weather permitting）・without so much as ／ not even・come to ／ get to 原形・All you have to do is ～
 - [x] 長文：旧帝大（グッドハートの法則）・高校入試（海岸のそうじ）・TOEIC（退職パーティーのメール）を1本ずつ
 - [x] 宝箱まであと1つのときは「次のステージをクリアすると宝箱！ もう少し！」と応援
-- [x] 単語の城：はじめてクリアした階が全問正解なら 🪙3 のボーナス
+- [x] 単語の城・文法の城：はじめてクリアした階が全問正解なら 🪙3 のボーナス
 - [x] 高校の文法単元を4つ追加：There is no point in -ing・regret -ing ／ regret to・How come ～?・let alone
 - [x] 長文：国公立レベルをさらに1本（花粉を運ぶ生き物）
 ## アイデア（未整理）
