@@ -7656,6 +7656,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-pyramids',
+    title: 'Building the Great Pyramid',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      "The Great Pyramid of Giza in Egypt was built about 4,500 years ago as a tomb for the king Khufu. It was originally about 146 meters tall, and for more than 3,800 years it remained the tallest structure ( A ) by humans.",
+      "The pyramid contains more than two million blocks of stone, many of ( B ) weigh over two tons. How the ancient Egyptians moved such heavy stones without modern machines has long puzzled researchers. Most experts now believe that workers pulled the blocks on wooden sledges and used ramps to raise them.",
+      "One clever trick may have made this work easier. An ancient wall painting shows a person pouring water onto the sand in front of a sledge carrying a huge statue. Experiments have shown that sand with the right amount of water is firmer, so a sledge slides over it with much less effort.",
+      "Another long-held belief has also changed. People once imagined that the pyramids were built by slaves. However, archaeologists have found the remains of a village where workers lived, along with their tombs near the pyramids. This evidence suggests that the builders were skilled laborers ( C ) were fed and cared for, not slaves.",
+    ],
+    ja: [
+      'エジプトのギザの大ピラミッドは、およそ4500年前に、クフ王の墓として建てられた。もともとの高さは約146メートルで、3800年以上もの間、人間が建てたもっとも高い建造物であり続けた。',
+      'ピラミッドには200万個以上の石のブロックが使われていて、その多くは2トンをこえる重さがある。古代エジプト人が現代の機械なしにこれほど重い石をどうやって動かしたのかは、長い間研究者たちをなやませてきた。今ではほとんどの専門家が、労働者たちは木のそりにブロックをのせて引き、坂道を使って持ち上げたと考えている。',
+      'あるかしこい工夫が、この仕事を楽にしたのかもしれない。古代の壁画には、大きな像をのせたそりの前の砂に、人が水をかけているようすがえがかれている。実験によって、ちょうどよい量の水をふくんだ砂は固くなり、そりがずっと少ない力ですべることがわかっている。',
+      '長く信じられてきたもう1つの考えも変わった。人々はかつて、ピラミッドは奴隷によって建てられたと考えていた。しかし考古学者たちは、ピラミッドの近くで、労働者たちが住んでいた村のあとや、彼らの墓を見つけた。この証拠は、建てた人々が奴隷ではなく、食事を与えられ世話をされていた熟練の労働者だったことを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['built', 'building', 'to build', 'builds'], answer: 0, why: 'the tallest structure built by humans「人間によって建てられたもっとも高い建造物」。建造物は「建てられる」側なので過去分詞。' },
+      { id: 'B', choices: ['which', 'them', 'that', 'what'], answer: 0, why: 'many of which「そのうちの多くは」。物を受けて of のあとなので which。them だとコンマだけで文がつながってしまう、that・what はこの形で使えない。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 skilled laborers（人）を説明し、were fed の主語になる関係代名詞 who。' },
+    ],
+    underline: {
+      phrase: 'puzzled',
+      choices: ['confused', 'pleased', 'paid', 'helped'],
+      answer: 0,
+      why: 'puzzle は「（人を）なやませる・とまどわせる」。has puzzled researchers「研究者をなやませてきた」。confused が近い。',
+    },
+    order: {
+      words: ['with', 'much', 'less', 'effort'],
+      rest: '',
+      answer: 'with much less effort',
+      ja: 'ずっと少ない力で（much は比較級を強める）',
+    },
+    tf: [
+      { statement: 'ギザの大ピラミッドは、王の墓として建てられた。', answer: true, why: '第1段落 as a tomb for the king Khufu。' },
+      { statement: '大ピラミッドの石は、どれも1トンより軽い。', answer: false, why: '第2段落 many of which weigh over two tons。' },
+      { statement: '今では、ピラミッドは奴隷によって建てられたと考えられている。', answer: false, why: '第4段落 the builders were skilled laborers … not slaves。' },
+    ],
+    qa: [
+      { q: 'What does the ancient wall painting show?', choices: ['A person pouring water onto the sand in front of a sledge.', 'Slaves building a pyramid.', 'A king choosing stones for his tomb.', 'Workers cooking food in a village.'], answer: 0, why: '第3段落 a person pouring water onto the sand in front of a sledge carrying a huge statue。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
