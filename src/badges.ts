@@ -42,6 +42,8 @@ export const BADGES: Badge[] = [
   { id: 'answers-100', icon: '💯', name: '100問チャレンジ', desc: '累計100問に答える', check: (s) => s.answers >= 100 },
   { id: 'answers-500', icon: '🏔️', name: '500問の山', desc: '累計500問に答える', check: (s) => s.answers >= 500 },
   { id: 'perfect', icon: '👑', name: 'パーフェクト', desc: 'クイズ10問を全問正解する', check: (s) => s.perfect >= 1 },
+  { id: 'perfect-10', icon: '💎', name: 'パーフェクト職人', desc: 'クイズ10問の全問正解を10回する', check: (s) => s.perfect >= 10 },
+  { id: 'perfect-50', icon: '🌟', name: '完ぺき王', desc: 'クイズ10問の全問正解を50回する', check: (s) => s.perfect >= 50 },
   { id: 'streak-3', icon: '🔥', name: '3日連続', desc: '3日続けて学習する', check: (s) => s.streak >= 3 },
   { id: 'streak-7', icon: '🔥', name: '7日連続', desc: '7日続けて学習する', check: (s) => s.streak >= 7 },
   { id: 'streak-30', icon: '🌋', name: '30日連続', desc: '30日続けて学習する', check: (s) => s.streak >= 30 },

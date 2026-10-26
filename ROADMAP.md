@@ -1546,6 +1546,7 @@
 - [x] 高校の文法単元を4つ追加：succeed in -ing ／ fail to・graduate from ／ complain about ／ complain to・be used for -ing ／ be used to 原形・It is true ～, but …
 - [x] 長文：旧帝大（テセウスの船）・私学（静電気）を1本ずつ
 - [x] ボス部屋：撃破の数の横に「🎯 あとnレベルで記念の🪙」を表示
+- [x] バッジを2つ追加：パーフェクト職人（全問正解10回）・完ぺき王（50回）
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

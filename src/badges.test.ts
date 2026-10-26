@@ -115,3 +115,13 @@ it('城を制覇するとバッジ（1つ・5つ・15）', async () => {
   expect(ids(1)).toEqual(['castle-1'])
   expect(ids(15)).toEqual(['castle-1', 'castle-5', 'castle-15'])
 })
+
+it('パーフェクトを10回・50回でバッジ（パーフェクト職人・完ぺき王）', () => {
+  const base = { answers: 0, correct: 0, streak: 0, learned: 0, level: 1, perfect: 9, bestTime: 0, goals: 0 }
+  const p10 = BADGES.find((b) => b.id === 'perfect-10')!
+  const p50 = BADGES.find((b) => b.id === 'perfect-50')!
+  expect(p10.check(base)).toBe(false)
+  expect(p10.check({ ...base, perfect: 10 })).toBe(true)
+  expect(p50.check({ ...base, perfect: 49 })).toBe(false)
+  expect(p50.check({ ...base, perfect: 50 })).toBe(true)
+})
