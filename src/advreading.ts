@@ -5765,6 +5765,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-stethoscope',
+    title: 'A Rolled-Up Sheet of Paper',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1816, a French doctor named René Laennec faced an awkward situation. A young woman with heart trouble had come to see him, and the usual method of listening to the heart, ( A ) the doctor pressed an ear directly against the patient's chest, seemed inappropriate. Laennec rolled a sheet of paper into a tube, placed one end on her chest, and put his ear to the other.",
+      "To his surprise, he could hear the heartbeat far more clearly than before. He soon replaced the paper with a wooden tube and named his invention the stethoscope, from Greek words meaning 'chest' and 'to examine.' Over the following decades, doctors learned to connect particular sounds with particular diseases, and listening to the body became a central part of medical examination.",
+      "Today, doctors can see inside the body with ultrasound and other imaging technologies that Laennec could never have imagined. Some have even predicted that the stethoscope will soon become a museum piece. Yet it remains one of the most recognizable symbols of the medical profession, and many doctors continue to use it every day.",
+      "Part of its value may have little to do with sound. When a doctor listens carefully to a patient's chest, the patient feels attended to. In an age of busy hospitals and computer screens, such moments of direct attention may help build the trust ( B ) good care depends. The simple tube reminds us that medicine is not only a science but also a relationship ( C ) two people.",
+    ],
+    ja: [
+      '1816年、ルネ・ラエンネックというフランスの医師は、気まずい状況にあった。心臓の悪い若い女性が診察を受けに来ていたのだが、医師が患者の胸に直接耳をおし当てるという、心臓の音を聞くふつうの方法は、ふさわしくないように思えたのである。ラエンネックは1枚の紙を丸めて筒にし、片方のはしを女性の胸に当て、もう一方に耳を当てた。',
+      'おどろいたことに、彼はそれまでよりずっとはっきりと心臓の音を聞くことができた。彼はまもなく紙を木の筒にかえ、その発明を「胸」と「調べる」を意味するギリシャ語から聴診器と名づけた。その後の数十年で、医師たちは特定の音を特定の病気と結びつけることを学び、体の音を聞くことは診察の中心的な部分になった。',
+      '今日では、医師は超音波など、ラエンネックには想像もできなかった画像の技術で体の中を見ることができる。聴診器はまもなく博物館に入るものになるだろうと予測する人までいる。それでも聴診器は、医師という職業のもっともよく知られた象徴の1つであり続け、多くの医師が毎日使い続けている。',
+      'その価値の一部は、音とはほとんど関係がないのかもしれない。医師が患者の胸の音に注意深く耳をかたむけると、患者は自分にきちんと向き合ってもらえていると感じる。いそがしい病院とコンピューターの画面の時代に、こうした直接注意を向けてもらえる瞬間は、よい医療が頼りにしている信頼を築く助けになるのかもしれない。このシンプルな筒は、医療が科学であるだけでなく、2人の人間の間の関係でもあることを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in which', 'which', 'what', 'that'], answer: 0, why: 'コンマのあとで the usual method を受け、うしろが欠けのない文（the doctor pressed …）なので「前置詞 ＋ 関係代名詞」の in which。which・what のうしろには欠けた部分が必要、that はコンマのあとに使えない。' },
+      { id: 'B', choices: ['on which', 'which', 'that', 'what'], answer: 0, why: 'depend on ～ の on が前に出た on which（good care depends on the trust）。which・that だけでは depends のうしろの on が足りず、what は先行詞をとらない。' },
+      { id: 'C', choices: ['between', 'among', 'within', 'along'], answer: 0, why: '2人の間なので between。among は3つ（3人）以上に使う。' },
+    ],
+    underline: {
+      phrase: 'feels attended to',
+      choices: ['feels that someone is paying attention to them', 'feels lonely and ignored', 'feels pain in the chest', 'feels that the doctor is in a hurry'],
+      answer: 0,
+      why: 'attend to ～ は「～の世話をする・～に注意を向ける」。feels attended to は受け身で「自分に注意を向けてもらえていると感じる」。',
+    },
+    order: {
+      words: ['listening', 'to', 'the', 'body', 'became', 'a', 'central', 'part'],
+      rest: '',
+      answer: 'listening to the body became a central part',
+      ja: '体の音を聞くことが中心的な部分になった。（動名詞 listening が主語）',
+    },
+    tf: [
+      { statement: 'ラエンネックは、はじめは紙を丸めて筒にした。', answer: true, why: '第1段落 Laennec rolled a sheet of paper into a tube。' },
+      { statement: '聴診器という名前は、ラテン語から来ている。', answer: false, why: '第2段落 from Greek words meaning \'chest\' and \'to examine\'。' },
+      { statement: '今では、聴診器を使う医師はいない。', answer: false, why: '第3段落 many doctors continue to use it every day。' },
+      { statement: '筆者は、聴診器の価値の一部は音とは関係ないかもしれないと考えている。', answer: true, why: '第4段落 Part of its value may have little to do with sound。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest the stethoscope reminds us of?', choices: ['Medicine is also a relationship between two people.', 'Paper is better than wood for medical tools.', 'Ultrasound is always wrong.', 'Doctors should not use computers.'], answer: 0, why: '第4段落 medicine is not only a science but also a relationship between two people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
