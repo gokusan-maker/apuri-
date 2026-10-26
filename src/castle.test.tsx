@@ -137,3 +137,9 @@ it('階クリアのお祝いに、宝箱があけられることや次の宝箱�
   render(<FloorClear next="C" floor={2} total={25} />)
   expect(screen.getByText('🎁 次の宝箱まで あと7階')).toBeInTheDocument()
 })
+
+it('城の塔（宝箱あり）にも「次の宝箱まで あとn階」が出る', () => {
+  const floors = Array.from({ length: 12 }, (_, i) => ({ id: `t${i}`, label: `F${i}`, cleared: i < 2 }))
+  render(<Castle name="テストの城" floors={floors} onOpen={() => {}} onChest={() => {}} />)
+  expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('あと8階')
+})

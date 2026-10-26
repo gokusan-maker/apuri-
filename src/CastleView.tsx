@@ -1,5 +1,5 @@
 import { useContext, useState, type ReactNode } from 'react'
-import { CHEST_COINS, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests, type MapTheme } from './castle'
+import { CHEST_COINS, nextChestIn, castleNow, castleShown, isMilestone, loadChests, openableChests, RareEggContext, saveChests, type MapTheme } from './castle'
 import { StageMap } from './StageMapView'
 
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
@@ -107,6 +107,11 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
             )
           })}
         </ol>
+        {onChest && chest === undefined && nextChestIn(now, floors.length) !== null && (
+          <p className="castle-next-chest" aria-label="次の宝箱まで">
+            🎁 次の宝箱まで あと{nextChestIn(now, floors.length)}{unit}
+          </p>
+        )}
         {now > 2 && <p className="castle-below">⬇ {now - 2}{unit}ぶん、制覇ずみ</p>}
         <div className="castle-gate" aria-hidden="true">
           <span className="castle-door">
