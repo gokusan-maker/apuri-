@@ -7384,6 +7384,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-school-lunch',
+    title: 'Lunch as a Lesson',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, students buy lunch at a cafeteria or bring food from home. In most Japanese elementary and junior high schools, however, lunch is a shared experience. Students eat the same meal together in their classroom, and they take turns ( A ) the food to their classmates.",
+      "Visitors from abroad are often surprised to see children in white coats and caps carrying large pots of soup and rice. For many Japanese schools, this is not just a way to save money on staff. It is part of education. By serving and cleaning up, students learn responsibility and cooperation.",
+      "The meals themselves are planned by nutritionists, ( B ) make sure that each lunch is balanced. Many schools also use vegetables and fish from nearby farms and ports, so students learn about the food produced in their own area. This kind of learning is sometimes called food education.",
+      "Of course, the system is not perfect. Some children have allergies, and preparing safe meals for everyone requires careful work. Still, many people believe that eating together teaches lessons ( C ) cannot be learned from textbooks alone.",
+    ],
+    ja: [
+      '多くの国では、生徒はカフェテリアで昼食を買うか、家から食べ物を持ってくる。しかし日本のほとんどの小学校と中学校では、昼食はみんなでいっしょにするものだ。生徒は教室で同じ食事をいっしょに食べ、交代でクラスメートに食べ物を配る。',
+      '外国から来た人は、白い服と帽子を身につけた子どもたちが、スープやご飯の大きななべを運んでいるのを見ておどろくことが多い。日本の多くの学校にとって、これは職員の費用を節約するための方法というだけではない。教育の一部なのだ。配ったり片づけたりすることで、生徒は責任感と協力を学ぶ。',
+      '食事そのものは栄養士が計画し、どの給食もバランスがとれるようにしている。近くの農場や港でとれた野菜や魚を使う学校も多く、生徒は自分の地域でつくられる食べ物について学ぶ。このような学びは、食育とよばれることもある。',
+      'もちろん、この仕組みは完ぺきではない。アレルギーのある子どももいて、全員に安全な食事を用意するには注意深い仕事が必要だ。それでも、多くの人は、いっしょに食べることは教科書だけでは学べないことを教えてくれると信じている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['serving', 'to serving', 'serve', 'served'], answer: 0, why: 'take turns -ing「交代で～する」。' },
+      { id: 'B', choices: ['who', 'which', 'what', 'whose'], answer: 0, why: 'コンマのあとで nutritionists（人）を説明し、make の主語になる関係代名詞 who。which は物、what は先行詞をとらない、whose のうしろには名詞が必要。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 lessons を説明し、cannot be learned の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'responsibility',
+      choices: ['a duty to do things properly', 'a large amount of money', 'a kind of school food', 'a feeling of fear'],
+      answer: 0,
+      why: 'responsibility は「責任・責任感」。自分の役目をきちんと果たすこと。',
+    },
+    order: {
+      words: ['is', 'not', 'just', 'a', 'way'],
+      rest: 'to save money on staff',
+      answer: 'is not just a way',
+      ja: '～のための方法というだけではない（not just ～「ただ～だけではない」）',
+    },
+    tf: [
+      { statement: '日本の多くの小中学校では、生徒は教室で同じ昼食を食べる。', answer: true, why: '第1段落 Students eat the same meal together in their classroom。' },
+      { statement: '給食当番は、職員の費用を節約するためだけの仕組みである。', answer: false, why: '第2段落 this is not just a way to save money on staff. It is part of education。' },
+      { statement: 'アレルギーのある子どもへの注意は必要ない。', answer: false, why: '第4段落 Some children have allergies, and preparing safe meals for everyone requires careful work。' },
+    ],
+    qa: [
+      { q: 'Who plans the school lunches?', choices: ['Nutritionists.', 'The students themselves.', 'Farmers near the school.', 'Visitors from abroad.'], answer: 0, why: '第3段落 The meals themselves are planned by nutritionists。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
