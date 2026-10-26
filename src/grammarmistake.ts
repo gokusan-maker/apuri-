@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'had-hoped': { wrong: 'I have hoped to see you yesterday.', right: 'I had hoped to see you yesterday.', why: 'yesterday（過去）があるので現在完了は使えない。実現しなかった望みは had hoped to ～。' },
   'likely-that-to': { wrong: 'He is possible to come tomorrow.', right: 'It is possible that he will come tomorrow.', why: 'possible は人を主語にして to ～ を続けられない。It is possible that ～ で言う。' },
   'were-it-not': { wrong: 'If it is not for your help, I could not finish.', right: 'If it were not for your help, I could not finish.', why: '仮定法なので were を使う。' },
   'try-ing': { wrong: 'He tried lift the box.', right: 'He tried to lift the box.', why: '「～しようとする」は try to ＋ 原形。原形だけは続かない。' },
