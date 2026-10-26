@@ -46,6 +46,11 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
     <section className={`smap smap-${theme} smap-z${zi}${zone.night ? ' smap-night' : ''}`} aria-label={name} style={{ '--road': zone.road, '--edge': zone.edge, '--accent': zone.accent, background: `linear-gradient(${zone.sky[0]}, ${zone.sky[1]})` } as CSSProperties}>
       <p className="smap-head">
         <span className="smap-name">🗺 {name}</span>
+        <span className="smap-zdots" aria-label={`ゾーン ${zi + 1} / ${MAP_ZONES[theme].length}`}>
+          {MAP_ZONES[theme].map((z, k) => (
+            <i key={z.name} className={k < zi ? 'done' : k === zi ? 'now' : ''} title={z.name} />
+          ))}
+        </span>
         <span className="castle-count" aria-label={`${now} / ${total} ${unit}クリア`}>
           {now}/{total}
         </span>

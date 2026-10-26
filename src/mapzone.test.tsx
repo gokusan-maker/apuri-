@@ -31,3 +31,13 @@ it('前に開いたときより先のゾーンに入ったら「新しいゾー�
   render(<StageMap name="テスト" theme="sea" floors={floors(12)} onOpen={() => {}} />)
   expect(screen.queryByText(/新しいゾーン/)).toBeNull()
 })
+
+it('地図の見出しに5つのゾーンのどこまで来たかの点', async () => {
+  const { render, screen } = await import('@testing-library/react')
+  const { StageMap } = await import('./StageMapView')
+  localStorage.clear()
+  render(<StageMap name="点" theme="forest" floors={Array.from({ length: 50 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: i < 25 }))} onOpen={() => {}} />)
+  const dots = screen.getByLabelText('ゾーン 3 / 5')
+  expect(dots.querySelectorAll('i.done')).toHaveLength(2)
+  expect(dots.querySelectorAll('i.now')).toHaveLength(1)
+})

@@ -3755,3 +3755,9 @@ header .event-chips { margin: 0 0 2px; }
 .smap-arrive-icon { font-size: 2rem; line-height: 1; }
 @keyframes smap-arrive { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); } 12% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); } 18%, 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1); visibility: hidden; } }
 @media (prefers-reduced-motion: reduce) { .smap-arrive { animation: none; transform: translate(-50%, -50%); } }
+/* 地図の見出し：5つのゾーンのどこまで来たか */
+.smap-zdots { display: inline-flex; gap: 4px; margin-left: auto; margin-right: 2px; }
+.smap-zdots i { width: 8px; height: 8px; border-radius: 50%; background: rgb(255 255 255 / 0.35); box-shadow: 0 1px 2px rgb(0 0 0 / 0.4); }
+.smap-zdots i.done { background: #fde047; }
+.smap-zdots i.now { background: #fff; box-shadow: 0 0 0 2px var(--accent, #facc15), 0 0 6px var(--accent, #facc15); }
+.smap-head .smap-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
