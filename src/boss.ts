@@ -497,8 +497,8 @@ export function attackElemOf(color: string): AttackElem {
 // ボスのとくぎ：ボスごとに1つ（名前で決まる）。バトル中に発動してじゃまをする
 export type BossTrait = 'regen' | 'armor' | 'drain' | 'quick'
 export const BOSS_TRAITS: Record<BossTrait, { icon: string; name: string; desc: string }> = {
-  regen: { icon: '💚', name: 'さいせい', desc: 'HPが半分を切ると、1回だけHPを回復' },
-  armor: { icon: '🛡', name: 'かたいウロコ', desc: '正解のダメージ -2' },
+  regen: { icon: '💚', name: 'さいせい', desc: 'HP半分で1回回復（会心なら止まる）' },
+  armor: { icon: '🛡', name: 'かたいウロコ', desc: 'ダメージ -2（会心は防げない）' },
   drain: { icon: '🧛', name: 'きゅうしゅう', desc: 'まちがえるとボスのHPが回復' },
   quick: { icon: '💨', name: 'すばやさ', desc: '会心の一撃の時間が短い' },
 }
@@ -558,21 +558,26 @@ export function bossTraits(name: string, strong = false): BossTrait[] {
   return strong ? [t, TRAIT_ORDER[(TRAIT_ORDER.indexOf(t) + 2) % TRAIT_ORDER.length]] : [t]
 }
 // 正解したあとのボスのHP（とくぎ込み）。armor：ダメージ-2（最低1）、regen：半分を切ったら1回だけ回復
-export function traitAfterHit(trait: BossTrait | BossTrait[], hp: number, nextHp: number, maxHp: number, regenUsed: boolean): { hp: number; blocked: number; healed: number } {
+// 会心の一撃（critical）なら、かたいウロコは防げず、さいせいも止められる（regenSealed）
+export function traitAfterHit(trait: BossTrait | BossTrait[], hp: number, nextHp: number, maxHp: number, regenUsed: boolean, critical = false): { hp: number; blocked: number; healed: number; regenSealed: boolean } {
   const ts = Array.isArray(trait) ? trait : [trait]
   let n = nextHp
   let blocked = 0
-  if (ts.includes('armor') && n > 0) {
+  if (ts.includes('armor') && n > 0 && !critical) {
     const m = Math.min(hp - 1, n + ARMOR_BLOCK)
     blocked = Math.max(0, m - n)
     n = Math.max(n, m)
   }
   let healed = 0
+  let regenSealed = false
   if (ts.includes('regen') && !regenUsed && n > 0 && n <= maxHp / 2) {
-    healed = Math.min(maxHp - n, Math.round(maxHp * REGEN_RATE))
-    n += healed
+    if (critical) regenSealed = true
+    else {
+      healed = Math.min(maxHp - n, Math.round(maxHp * REGEN_RATE))
+      n += healed
+    }
   }
-  return { hp: n, blocked, healed }
+  return { hp: n, blocked, healed, regenSealed }
 }
 
 // ボス戦の舞台の季節：12〜2月は雪、3〜4月はさくらの花びらが舞う

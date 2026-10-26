@@ -397,8 +397,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       }
       const atk = teamOn && 'team' in q && !downTurn ? levelAttack(team![q.team as TeamRole].level) : 0 // なかまのレベルの攻撃力
       const rawHp = hp - base - extra - trio - atk - (hitsWeak ? WEAK_BONUS : 0) - (charge ? CHARGE_STUN : 0) - power - sup.atk
-      const tr = traitAfterHit(traits, hp, rawHp, maxHp, regenUsed)
+      const tr = traitAfterHit(traits, hp, rawHp, maxHp, regenUsed, critical)
       const nextHp = tr.hp
+      if (tr.regenSealed) {
+        setRegenUsed(true)
+        setSkillMsg(`⚡ 会心の一撃で ${BOSS_TRAITS.regen.icon}${BOSS_TRAITS.regen.name} を止めた！`)
+      }
       if (tr.blocked > 0) setTraitMsg(`${BOSS_TRAITS.armor.icon} ${look.name}の${BOSS_TRAITS.armor.name}！ ダメージ -${tr.blocked}`)
       if (tr.healed > 0) {
         setRegenUsed(true)

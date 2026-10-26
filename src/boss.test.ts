@@ -201,10 +201,10 @@ describe('ボスのとくぎ', () => {
   })
   it('かたいウロコはダメージ-2（最低1）、さいせいは半分を切ったら1回だけ回復', async () => {
     const { traitAfterHit } = await import('./boss')
-    expect(traitAfterHit('armor', 100, 90, 100, false)).toEqual({ hp: 92, blocked: 2, healed: 0 })
+    expect(traitAfterHit('armor', 100, 90, 100, false)).toEqual({ hp: 92, blocked: 2, healed: 0, regenSealed: false })
     expect(traitAfterHit('armor', 100, 99, 100, false).hp).toBe(99) // 最低1ダメージ
     expect(traitAfterHit('armor', 10, 0, 100, false).hp).toBe(0) // たおす一撃はふせがない
-    expect(traitAfterHit('regen', 60, 45, 100, false)).toEqual({ hp: 60, blocked: 0, healed: 15 })
+    expect(traitAfterHit('regen', 60, 45, 100, false)).toEqual({ hp: 60, blocked: 0, healed: 15, regenSealed: false })
     expect(traitAfterHit('regen', 60, 45, 100, true).hp).toBe(45) // 2回目はない
     expect(traitAfterHit('regen', 10, 0, 100, false).hp).toBe(0)
     expect(traitAfterHit('quick', 60, 45, 100, false).hp).toBe(45)
@@ -217,5 +217,12 @@ it('城の最上階のボスはとくぎが2つ（ちがう種類）', async () 
   const two = bossTraits('ヤミモチ', true)
   expect(two).toHaveLength(2)
   expect(two[0]).not.toBe(two[1])
-  expect(traitAfterHit(['armor', 'regen'], 60, 47, 100, false)).toEqual({ hp: 64, blocked: 2, healed: 15 })
+  expect(traitAfterHit(['armor', 'regen'], 60, 47, 100, false)).toEqual({ hp: 64, blocked: 2, healed: 15, regenSealed: false })
+})
+
+it('会心の一撃なら、かたいウロコは防げず、さいせいは止まる（とくぎ封じのチャンス）', async () => {
+  const { traitAfterHit } = await import('./boss')
+  expect(traitAfterHit('armor', 100, 90, 100, false, true)).toEqual({ hp: 90, blocked: 0, healed: 0, regenSealed: false })
+  expect(traitAfterHit('regen', 60, 45, 100, false, true)).toEqual({ hp: 45, blocked: 0, healed: 0, regenSealed: true })
+  expect(traitAfterHit('regen', 60, 45, 100, false).regenSealed).toBe(false)
 })
