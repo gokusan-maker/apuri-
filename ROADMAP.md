@@ -1553,6 +1553,7 @@
 - [x] 高校の文法単元を4つ追加：be similar to ／ be responsible for ／ be aware of・take pride in ／ be proud of・due to ／ be due to 原形・owe A to B
 - [x] 長文：国公立レベルをさらに1本（家が職場になる＝在宅勤務）
 - [x] 文法のディクテーションで全文正解すると「🏆 パーフェクト！」
+- [x] 高校の文法単元を2つ追加：句動詞 look up to ／ look down on ／ put up with・get along with ／ run out of ／ come up with
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
