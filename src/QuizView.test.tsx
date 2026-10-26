@@ -338,6 +338,7 @@ it('数の聞き取り：読み上げた数を数字で答える', () => {
   expect(got.filter(([c]) => c)).toHaveLength(9)
   expect(screen.getByText('9 / 10 問正解')).toBeInTheDocument()
   expect(screen.getByLabelText('星 2').textContent).toBe('★★☆') // 9/10 は星2
+  expect(screen.getByText('🔥 最高 9連続正解')).toBeInTheDocument()
   fireEvent.click(screen.getByText('もう1回'))
   expect(screen.getByText('1 / 10 問目・正解 0')).toBeInTheDocument()
 })

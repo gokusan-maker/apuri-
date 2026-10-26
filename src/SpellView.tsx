@@ -26,6 +26,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
   const [result, setResult] = useState<'ok' | 'ng' | null>(null)
   const [score, setScore] = useState(0)
   const [streak, setStreak] = useState(0) // 連続正解
+  const [best, setBest] = useState(0) // 連続正解の最高
 
   const w = list[index]
   // 文字のボタン：答えの文字（空白はのぞく）をまぜたもの。キーボードで打たずに、ボタンを押してつづる
@@ -41,6 +42,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
     if (isCorrectSpelling(input, w.en)) {
       setResult('ok')
       setStreak(streak + 1)
+      setBest(Math.max(best, streak + 1))
       setScore(score + 1)
       playCorrect()
       onAnswer?.(true, spellXp(hints), w.id, 'ear')
@@ -68,6 +70,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
     setResult(null)
     setScore(0)
     setStreak(0)
+    setBest(0)
   }
 
   if (!w) {
@@ -77,6 +80,7 @@ export function Spell({ words, count = 10, onAnswer, byEar = false }: Props) {
         <p className="result-score">
           {score} / {list.length} 問正解
         </p>
+        {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score, list.length)}`}>
           {'★'.repeat(starsFor(score, list.length))}
           {'☆'.repeat(3 - starsFor(score, list.length))}

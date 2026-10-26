@@ -17,6 +17,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
   const [result, setResult] = useState<boolean | null>(null)
   const [score, setScore] = useState({ ok: 0, all: 0 })
   const [streak, setStreak] = useState(0) // 連続正解
+  const [best, setBest] = useState(0) // 連続正解の最高
 
   useEffect(() => {
     speak(q.say)
@@ -36,6 +37,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
     else playWrong()
     setResult(ok)
     setStreak((n) => (ok ? n + 1 : 0))
+    if (ok) setBest((b) => Math.max(b, streak + 1))
     setScore((s) => ({ ok: s.ok + (ok ? 1 : 0), all: s.all + 1 }))
     onAnswer?.(ok, ok ? XP_QUIZ_CORRECT : 0, q.id, 'ear')
   }
@@ -59,6 +61,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
         <p className="result-score">
           {score.ok} / {round} 問正解
         </p>
+        {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score.ok, round)}`}>
           {'★'.repeat(starsFor(score.ok, round))}
           {'☆'.repeat(3 - starsFor(score.ok, round))}
@@ -69,6 +72,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
           onClick={() => {
             setScore({ ok: 0, all: 0 })
             setStreak(0)
+            setBest(0)
             setDone(false)
             newQ()
             setText('')

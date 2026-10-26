@@ -106,3 +106,16 @@ it('スペルも2問続けて正解すると連続正解のコンボが出る', 
   }
   expect(screen.getByText('🔥 2連続正解！')).toBeInTheDocument()
 })
+
+it('まちがえても、それまでの最高の連続正解は結果に残る', () => {
+  const ws = WORDS.slice(0, 3)
+  render(<Spell words={ws} count={3} />)
+  for (let i = 0; i < 3; i++) {
+    const w = current()
+    if (i < 2) tapSpelling(w.en)
+    else tapSpelling(w.en.replace(/ /g, '').slice(0, 1))
+    fireEvent.click(screen.getByText('こたえる'))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('🔥 最高 2連続正解')).toBeInTheDocument()
+})
