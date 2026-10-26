@@ -7068,6 +7068,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-repair-cafe',
+    title: 'The Repair Café',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When a toaster stops working or a jacket loses a button, many people simply throw it away and buy a new one. But in a growing number of towns, there is another choice: the repair café. The first one was held in Amsterdam in 2009, and today there are thousands of them around the world.",
+      "A repair café is not really a café. It is an event, often held once a month in a community center. There, volunteers with repair skills help visitors ( A ) their broken things for free. Visitors bring lamps, clothes, bicycles, and even toys, and they usually stay to watch or even to help.",
+      "The goal is not only to save money. Every item that is repaired is one less item in the trash. Organizers also hope to change the way people think about the things they own. ( B ) seeing how a machine works inside, visitors often realize that a small problem does not mean the end of an object's life.",
+      "Of course, not everything can be fixed, and some products are designed in ways that make repairs difficult. Still, many visitors leave with more than a working lamp. They leave with the confidence ( C ) they can solve problems with their own hands.",
+    ],
+    ja: [
+      'トースターが動かなくなったり、上着のボタンが取れたりすると、多くの人はそれをあっさり捨てて新しいものを買う。しかし、もう1つの選択肢がある町がふえている。リペア・カフェ（修理カフェ）だ。最初のリペア・カフェは2009年にアムステルダムで開かれ、今では世界中に何千もある。',
+      'リペア・カフェは、本当のカフェではない。多くは月に1回、地域のセンターで開かれる催しである。そこでは、修理の技術をもつボランティアが、訪れた人がこわれたものを直すのを無料で手伝う。人々はランプ、服、自転車、おもちゃまで持ってきて、たいていはそのまま見学したり、手伝ったりもする。',
+      '目的はお金を節約することだけではない。修理された品物は、どれもごみが1つ減ったということだ。主催者たちは、人々が自分の持ち物について考える考え方を変えたいとも思っている。機械の中がどう動いているのかを見たあと、訪れた人は、小さな故障が物の寿命の終わりを意味するわけではないと気づくことが多い。',
+      'もちろん、すべてが直せるわけではなく、修理しにくいように作られている製品もある。それでも、多くの人は動くようになったランプ以上のものを持って帰る。自分の手で問題を解決できるという自信を持って帰るのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['fix', 'fixing', 'fixed', 'to fixing'], answer: 0, why: 'help ＋ 人 ＋ 原形「人が～するのを手伝う」（to ＋ 原形も可）。-ing・過去分詞・to ＋ -ing は続けられない。' },
+      { id: 'B', choices: ['After', 'Unless', 'Although', 'Because'], answer: 0, why: 'うしろが -ing（seeing …）なので、前置詞としても使える After「～したあとで」。Unless・Although・Because は接続詞で、うしろに主語のある文が必要。' },
+      { id: 'C', choices: ['that', 'which', 'what', 'where'], answer: 0, why: 'the confidence that ＋ 完全な文「～という自信」（同格の that）。which・what はうしろに欠けた語が必要、where は場所を表す名詞のあと。' },
+    ],
+    underline: {
+      phrase: 'for free',
+      choices: ['without paying', 'for a short time', 'for a good reason', 'without help'],
+      answer: 0,
+      why: 'for free は「無料で」。without paying「お金をはらわずに」と同じ意味。',
+    },
+    order: {
+      words: ['the', 'way', 'people', 'think'],
+      rest: 'about the things they own',
+      answer: 'the way people think',
+      ja: '人々の考え方（the way ＋ 主語 ＋ 動詞「～のしかた」）',
+    },
+    tf: [
+      { statement: '最初のリペア・カフェは、2009年にアムステルダムで開かれた。', answer: true, why: '第1段落 The first one was held in Amsterdam in 2009。' },
+      { statement: 'リペア・カフェでは、修理に料金がかかる。', answer: false, why: '第2段落 help visitors fix their broken things for free。' },
+      { statement: 'リペア・カフェでは、どんなものでも直すことができる。', answer: false, why: '第4段落 not everything can be fixed。' },
+    ],
+    qa: [
+      { q: 'What do the organizers of repair cafés hope to change?', choices: ['The way people think about the things they own.', 'The price of new products.', 'The number of cafés in Amsterdam.', 'The design of community centers.'], answer: 0, why: '第3段落 Organizers also hope to change the way people think about the things they own。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
