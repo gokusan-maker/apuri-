@@ -1510,6 +1510,7 @@
 - [x] スペル・数の聞き取りの結果に星（★★★）と「最高 n連続正解」を表示
 - [x] 高校の文法単元を4つ追加：need not ／ needn't have done・ought to ／ ought not to・the former ／ the latter・It is up to 人 to ～
 - [x] ホーム画面で、今日の課題のボタンまで最初の画面（360×740）におさまるように（オーナーの依頼）
+- [x] 高校の文法単元を2つ追加：独立分詞構文（It being ～ / weather permitting）・without so much as ／ not even
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
