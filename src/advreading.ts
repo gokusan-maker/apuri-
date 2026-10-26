@@ -5850,6 +5850,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-decision-fatigue',
+    title: 'Too Many Choices in One Day',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day we make hundreds of decisions, from what to wear to how to answer an email. Some psychologists have argued that making many choices in a row can leave us mentally tired, a state they call 'decision fatigue.' When we are tired in this way, we may start choosing whatever option requires the ( A ) effort.",
+      "One frequently cited study looked at decisions made by judges. It reported that judges were more likely to grant requests early in the day and just after breaks, and less likely to do so as a session went on. Other researchers, however, have questioned this interpretation, pointing out that the order of cases may not have been random. The debate is a reminder that striking findings deserve careful examination.",
+      "Whatever the exact cause, many people do find that their judgment is weaker at the end of a long day. Some successful people try to reduce the number of small decisions they face, for example by wearing similar clothes every day or planning meals for the week in advance. This frees their attention ( B ) the choices that really matter.",
+      "We cannot avoid making decisions, but we can arrange our lives so that important ones are made when we are rested. Scheduling difficult choices for the morning, or simply taking a short break before deciding, may help us choose more wisely than we ( C ) otherwise.",
+    ],
+    ja: [
+      '私たちは毎日、何を着るかからメールにどう返事をするかまで、何百もの決定をしている。続けて多くの選択をすると心がつかれてしまうことがあると主張する心理学者もおり、彼らはこの状態を「決断疲れ」とよんでいる。こうしてつかれていると、私たちはいちばん手間のかからない選択肢を何でもえらぶようになるかもしれない。',
+      'よく引用されるある研究は、裁判官の決定を調べた。その研究によれば、裁判官は一日のはじめや休憩の直後には申し立てを認めやすく、審理が進むにつれて認めにくくなっていたという。しかし別の研究者たちは、事件の順番がでたらめではなかったかもしれないと指摘し、この解釈に疑問を投げかけている。この議論は、目を引く発見ほど注意深く調べる必要があることを思い出させてくれる。',
+      '正確な原因が何であれ、長い一日の終わりには判断力が落ちると実感している人は多い。成功している人の中には、毎日にたような服を着たり、1週間分の食事を前もって計画したりして、目の前の小さな決定の数を減らそうとする人もいる。そうすることで、本当に大切な選択に注意を向けられるようになるのだ。',
+      '決定することをさけることはできないが、大切な決定はつかれていないときにするように、生活を整えることはできる。むずかしい選択を朝にしたり、決める前に少し休んだりするだけでも、そうしなかった場合よりかしこくえらぶ助けになるかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['least', 'less', 'fewest', 'fewer'], answer: 0, why: 'the ＋ 最上級 least「いちばん少ない」。effort は数えられない名詞なので few の形は使えず、the があるので比較級 less も入らない。' },
+      { id: 'B', choices: ['for', 'to', 'at', 'with'], answer: 0, why: 'free A for B「A を B のために空ける」。注意を大切な選択のために使えるようにする、ということ。' },
+      { id: 'C', choices: ['would', 'being', 'to', 'been'], answer: 0, why: 'than we would (choose) otherwise「そうでなければ（えらぶ）よりも」。仮定法の would。being・to・been では文が成り立たない。' },
+    ],
+    underline: {
+      phrase: 'deserve careful examination',
+      choices: ['should be checked carefully', 'should be ignored completely', 'are always correct', 'are easy to understand'],
+      answer: 0,
+      why: 'deserve ～ は「～に値する・～されるべきだ」、examination は「調べること」。目を引く発見ほど注意深く調べるべきだ、ということ。',
+    },
+    order: {
+      words: ['reduce', 'the', 'number', 'of', 'small', 'decisions', 'they', 'face'],
+      rest: '',
+      answer: 'reduce the number of small decisions they face',
+      ja: '目の前の小さな決定の数を減らす。（decisions they face＝彼らが直面する決定、関係代名詞の省略）',
+    },
+    tf: [
+      { statement: '裁判官の研究の解釈には、疑問を投げかける研究者もいる。', answer: true, why: '第2段落 Other researchers, however, have questioned this interpretation。' },
+      { statement: '筆者は、裁判官の研究の結論は完全に証明されていると述べている。', answer: false, why: '第2段落 striking findings deserve careful examination。' },
+      { statement: '小さな決定を減らすために、毎日にたような服を着る人もいる。', answer: true, why: '第3段落 by wearing similar clothes every day。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest doing with important decisions?', choices: ['Making them when we are rested.', 'Making them late at night.', 'Letting others make them.', 'Making them as quickly as possible.'], answer: 0, why: '第4段落 we can arrange our lives so that important ones are made when we are rested。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
