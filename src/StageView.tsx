@@ -770,7 +770,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             })()}
             <Castle
               name="大学入試の塔"
-              theme="red"
+              theme="tower"
               onChest={onRankBonus}
               goLabel="⚔ 挑戦"
               againLabel="👑 もう一度"

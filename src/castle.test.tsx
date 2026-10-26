@@ -168,3 +168,12 @@ it('読解ミニの山を制覇すると、次のレベルの読解へ進むボ�
   expect(go).toHaveBeenCalled()
   localStorage.clear()
 })
+
+it('イベントの塔（theme="tower"）は城とちがう見た目：細い塔と雲（堀・門はない）', async () => {
+  const { Castle } = await import('./CastleView')
+  const { container } = render(<Castle name="大学入試の塔" theme="tower" floors={[{ id: 'a', label: 'A', cleared: false }, { id: 'b', label: 'B', cleared: false }]} onOpen={() => {}} />)
+  expect(container.querySelector('.castle-tower .tower-roof')).not.toBeNull()
+  expect(container.querySelector('.tower-clouds')).not.toBeNull()
+  expect(container.querySelector('.castle-moat')).toBeNull()
+  expect(container.querySelector('.castle-name')?.textContent).toBe('🗼 大学入試の塔')
+})

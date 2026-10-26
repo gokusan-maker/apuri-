@@ -5,12 +5,12 @@ import { StageMap, type NextMap } from './StageMapView'
 export type CastleFloor = { id: string; label: string; sub?: string; fig?: ReactNode; cleared: boolean }
 
 // 城の塔：1階ずつクリアしてのぼる。夜空・月・山・天守の屋根・旗・石の壁・たいまつ・門と堀
-export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest, next }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
+export function Castle({ name, floors, onOpen, theme = 'blue', unit = '階', goLabel = '⚔ のぼる', againLabel = '✅ もう一度', onChest, next }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme?: 'blue' | 'red' | 'green' | 'purple' | 'tower' | MapTheme; unit?: string; goLabel?: string; againLabel?: string; onChest?: (coins: number) => void; next?: NextMap }) {
   if (theme === 'sea' || theme === 'forest' || theme === 'mountain') return <StageMap name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} onChest={onChest} againLabel={againLabel} next={next} />
   return <CastleTower name={name} floors={floors} onOpen={onOpen} theme={theme} unit={unit} goLabel={goLabel} againLabel={againLabel} onChest={onChest} />
 }
 
-function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: 'blue' | 'red' | 'green' | 'purple'; unit: string; goLabel: string; againLabel: string; onChest?: (coins: number) => void }) {
+function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, onChest }: { name: string; floors: CastleFloor[]; onOpen: (id: string) => void; theme: 'blue' | 'red' | 'green' | 'purple' | 'tower'; unit: string; goLabel: string; againLabel: string; onChest?: (coins: number) => void }) {
   const [chests, setChests] = useState(loadChests)
   const [opened, setOpened] = useState<{ at: number; egg: string | null } | null>(null) // いまあけた宝箱の階と、出てきたレアの卵
   const giveEgg = useContext(RareEggContext)
@@ -18,6 +18,7 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
   const now = castleNow(floors)
   const chest = onChest ? openableChests(now, chests[name] ?? [], floors.length)[0] : undefined
   const top = now >= floors.length
+  const tower = theme === 'tower' // イベントの塔：城とはちがう、細長い1本の塔（雲の上・星空）
   return (
     <section className={`castle castle-${theme}`} aria-label={name}>
       <svg className="castle-sky" viewBox="0 0 360 120" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
@@ -25,13 +26,13 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
         <path d="M0 120 L40 70 L80 100 L130 55 L180 95 L230 60 L280 100 L320 75 L360 105 L360 120 Z" className="castle-mount" />
       </svg>
       <p className="castle-head">
-        <span className="castle-name">🏰 {name}</span>
+        <span className="castle-name">{tower ? '🗼' : '🏰'} {name}</span>
         <span className="castle-count" aria-label={`${now} / ${floors.length} ${unit}クリア`}>
           {now}/{floors.length}
           {unit}
         </span>
       </p>
-      {top && <p className="castle-top">👑 てっぺん制覇！ 城の主になった</p>}
+      {top && <p className="castle-top">{tower ? '👑 てっぺん制覇！ 塔をのぼりきった' : '👑 てっぺん制覇！ 城の主になった'}</p>}
       {chest !== undefined && (
         <button
           className="castle-chest-btn"
@@ -52,6 +53,21 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
         </p>
       )}
       <div className="castle-body">
+        {tower ? (
+          <svg className="castle-roof tower-roof" viewBox="0 0 320 120" aria-hidden="true">
+            {/* てっぺんの光る水晶と、細長い尖塔 */}
+            <path d="M160 2 L172 22 L160 42 L148 22 Z" className="tower-crystal" />
+            <path d="M160 42 L196 96 L124 96 Z" className="tower-spire" />
+            <path d="M160 42 L160 96" className="tower-spire-line" />
+            <rect x="116" y="94" width="88" height="10" rx="2" className="tower-ledge" />
+            <rect x="126" y="104" width="68" height="16" className="tower-stone" />
+            <rect x="150" y="66" width="20" height="22" rx="10" className="castle-window lit" />
+            <circle cx="40" cy="30" r="2" className="tower-star" />
+            <circle cx="80" cy="60" r="1.5" className="tower-star" />
+            <circle cx="262" cy="22" r="2" className="tower-star" />
+            <circle cx="292" cy="70" r="1.5" className="tower-star" />
+          </svg>
+        ) : (
         <svg className="castle-roof" viewBox="0 0 320 110" aria-hidden="true">
           {/* 左右の小さな塔 */}
           <g className="castle-turret">
@@ -78,6 +94,7 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
           {/* 城壁のぎざぎざ */}
           <path d="M0 110 V96 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h14 v8 h14 v-8 h12 V110 Z" className="castle-battle" />
         </svg>
+        )}
         <ol className="castle-floors">
           {castleShown(floors.length, now).map((i) => {
             const f = floors[i]
@@ -113,12 +130,18 @@ function CastleTower({ name, floors, onOpen, theme, unit, goLabel, againLabel, o
           </p>
         )}
         {now > 2 && <p className="castle-below">⬇ {now - 2}{unit}ぶん、制覇ずみ</p>}
-        <div className="castle-gate" aria-hidden="true">
-          <span className="castle-door">
-            <i />
-          </span>
-        </div>
-        <div className="castle-moat" aria-hidden="true" />
+        {tower ? (
+          <div className="tower-clouds" aria-hidden="true" />
+        ) : (
+          <>
+            <div className="castle-gate" aria-hidden="true">
+              <span className="castle-door">
+                <i />
+              </span>
+            </div>
+            <div className="castle-moat" aria-hidden="true" />
+          </>
+        )}
       </div>
     </section>
   )
