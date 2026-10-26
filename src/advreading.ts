@@ -5808,6 +5808,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-store-renovation',
+    title: 'Notice: Bookstore Renovation',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Dear Valued Customers: Greenleaf Books will be closed from July 8 to July 21 for renovation. During this period, we will be expanding our children's section and adding a small café ( A ) customers can enjoy a cup of coffee while they browse.",
+      "Our online store will remain open as usual, and orders placed during the closure will be shipped at no extra ( B ). Customers who have reserved books may pick them up at our second location on Maple Avenue, which will be open from 10:00 a.m. to 8:00 p.m. every day.",
+      "We are also pleased to announce a reopening celebration on Saturday, July 22. The first fifty customers ( C ) arrive that morning will receive a free tote bag, and all books will be 20 percent off throughout the day. Local authors will also be visiting to sign copies of their latest works.",
+      "We apologize for any inconvenience and look forward to welcoming you back to our newly improved store. Sincerely, The Greenleaf Books Team",
+    ],
+    ja: [
+      'お客さまへ：グリーンリーフ書店は、改装のため7月8日から7月21日まで休業いたします。この期間に、子ども向けの売り場を広げ、本をながめながらコーヒーを楽しめる小さなカフェをつくります。',
+      'オンラインストアはふだんどおり営業し、休業中のご注文は追加料金なしで発送いたします。本を予約されているお客さまは、メープル通りの2号店でお受け取りいただけます。2号店は毎日午前10時から午後8時まで営業しています。',
+      'また、7月22日（土）に再オープンのお祝いを開くことをお知らせします。その日の朝に来店された先着50名さまにトートバッグを差し上げ、一日中すべての本が20パーセント引きになります。地元の作家も来店し、新作にサインをしてくれます。',
+      'ご不便をおかけしますことをおわびし、新しくなったお店でまたお会いできるのを楽しみにしております。グリーンリーフ書店一同',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a small café（場所）を説明し、うしろが欠けのない文（customers can enjoy …）なので関係副詞 where。which・what のうしろには欠けた部分が必要、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['charge', 'charging', 'charged', 'to charge'], answer: 0, why: 'at no extra charge「追加料金なしで」。extra のあとは名詞 charge。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 The first fifty customers（人）を説明し、arrive の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+    ],
+    underline: {
+      phrase: 'while they browse',
+      choices: ['while they look through the books in a relaxed way', 'while they pay for their books', 'while they wait outside the store', 'while they write their names'],
+      answer: 0,
+      why: 'browse は「（店で品物を）ぶらぶら見る・拾い読みする」。本をのんびりながめながら、ということ。',
+    },
+    order: {
+      words: ['look', 'forward', 'to', 'welcoming', 'you', 'back'],
+      rest: '',
+      answer: 'look forward to welcoming you back',
+      ja: 'またお会いできるのを楽しみにしています。（look forward to -ing＝～するのを楽しみにする）',
+    },
+    tf: [
+      { statement: '休業中は、オンラインストアも閉まる。', answer: false, why: '第2段落 Our online store will remain open as usual。' },
+      { statement: '予約した本は、メープル通りの2号店で受け取れる。', answer: true, why: '第2段落 may pick them up at our second location on Maple Avenue。' },
+      { statement: '再オープンの日は、すべての本が20パーセント引きになる。', answer: true, why: '第3段落 all books will be 20 percent off throughout the day。' },
+    ],
+    qa: [
+      { q: 'What will the first fifty customers on July 22 receive?', choices: ['A free tote bag.', 'A free cup of coffee.', 'A signed book.', 'A discount card.'], answer: 0, why: '第3段落 The first fifty customers who arrive that morning will receive a free tote bag。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
