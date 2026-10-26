@@ -105,6 +105,7 @@ it('バトルの最初に、ボスのとくぎのカットインが出る（と�
   localStorage.clear()
   const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['regen', 'armor']} />)
   expect(document.querySelector('.trait-cutin')?.textContent).toContain('のとくぎ「さいせい・かたいウロコ」')
+  expect(document.querySelector('.trait-cutin')?.classList.contains('t-regen')).toBe(true) // とくぎごとの色
   unmount()
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={[]} />)
   expect(document.querySelector('.trait-cutin')).toBeNull()

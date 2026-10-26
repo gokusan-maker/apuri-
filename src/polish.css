@@ -3774,3 +3774,8 @@ header .event-chips { margin: 0 0 2px; }
 .trait-filter { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
 .trait-filter button { padding: 4px 12px; border-radius: 999px; border: 1px solid var(--hair, rgb(0 0 0 / 0.12)); background: var(--bg); color: var(--fg); font-size: 0.85rem; font-weight: 800; }
 .trait-filter button.on { background: #7c3aed; border-color: #7c3aed; color: #fff; }
+/* とくぎのカットインは、とくぎごとの色 */
+.trait-cutin.t-regen { background: linear-gradient(90deg, transparent, rgb(22 163 74 / 0.92) 15%, rgb(22 163 74 / 0.92) 85%, transparent); }
+.trait-cutin.t-armor { background: linear-gradient(90deg, transparent, rgb(37 99 235 / 0.92) 15%, rgb(37 99 235 / 0.92) 85%, transparent); }
+.trait-cutin.t-drain { background: linear-gradient(90deg, transparent, rgb(159 18 57 / 0.92) 15%, rgb(159 18 57 / 0.92) 85%, transparent); }
+.trait-cutin.t-quick { background: linear-gradient(90deg, transparent, rgb(8 145 178 / 0.92) 15%, rgb(8 145 178 / 0.92) 85%, transparent); }

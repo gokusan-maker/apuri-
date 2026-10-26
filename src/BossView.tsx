@@ -671,7 +671,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
       </p>
       {index === 0 && picked === null && hp === maxHp && traits.length > 0 && (
-        <p className="trait-cutin" aria-hidden="true">
+        <p className={`trait-cutin t-${traits[0]}`} aria-hidden="true">
           {traits.map((t) => BOSS_TRAITS[t].icon).join('')} {look.name}のとくぎ「{traits.map((t) => BOSS_TRAITS[t].name).join('・')}」
         </p>
       )}
