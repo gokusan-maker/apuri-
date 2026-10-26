@@ -5113,6 +5113,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-vending-machines',
+    title: 'A Country of Vending Machines',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Visitors to Japan are often surprised by the number of vending machines they see. They stand on busy streets, in train stations, and even beside quiet country roads ( A ) few people pass by. Japan has millions of these machines, and many of them sell both hot and cold drinks.",
+      "Several reasons are often given for this. Japan is generally a safe country, so machines left outside are rarely damaged or robbed. Land in cities is expensive, and a vending machine takes up much less space than a shop. Machines also work twenty-four hours a day without staff, ( B ) makes them convenient for both customers and businesses.",
+      "Some machines play a role in emergencies, too. 'Disaster-support' vending machines can be switched to give out drinks for free when a large earthquake or other disaster strikes. Others show news or weather information on a screen.",
+      "However, vending machines use a lot of electricity, especially those that keep drinks hot or cold all day. Makers have worked hard to develop machines that use less energy, and some machines now turn off their lights at night. The number of machines has also been ( C ) slowly in recent years.",
+    ],
+    ja: [
+      '日本をおとずれた人は、目にする自動販売機の多さにおどろくことが多い。自動販売機は、にぎやかな通りや駅、さらにはほとんど人の通らない静かな田舎の道ばたにも立っている。日本にはこうした機械が何百万台もあり、その多くは温かい飲み物と冷たい飲み物の両方を売っている。',
+      'この理由として、いくつかのことがよくあげられる。日本はおおむね安全な国なので、外に置かれた機械がこわされたり、ぬすまれたりすることはめったにない。都市の土地は高く、自動販売機は店よりずっと場所をとらない。また、機械は店員なしで24時間動くので、客にとっても会社にとっても便利なのである。',
+      '緊急時に役立つ機械もある。「災害支援型」の自動販売機は、大きな地震などの災害が起きたとき、飲み物を無料で配るように切りかえることができる。画面にニュースや天気の情報を表示する機械もある。',
+      'しかし、自動販売機は、とくに一日中飲み物を温めたり冷やしたりしておくものは、多くの電気を使う。メーカーは使う電力の少ない機械の開発に力を入れており、夜は明かりを消す機械も出てきた。また、機械の数は近年、少しずつ減ってきている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'that', 'what'], answer: 0, why: '先行詞 country roads（場所）を説明し、うしろが欠けのない文（few people pass by）なので関係副詞 where。which・that・what のうしろには欠けた部分が必要。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の文の内容を受け、makes の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、it では2つの文がつながらない。' },
+      { id: 'C', choices: ['decreasing', 'decrease', 'to decrease', 'decreases'], answer: 0, why: 'has been ＋ -ing で現在完了進行形「（ずっと）減ってきている」。been のあとに原形・to 不定詞・三人称単数形は続かない。' },
+    ],
+    underline: {
+      phrase: 'give out drinks for free',
+      choices: ['hand out drinks without asking for money', 'sell drinks at a higher price', 'stop selling drinks completely', 'keep drinks cold for a long time'],
+      answer: 0,
+      why: 'give out ～ は「～を配る」、for free は「無料で」。災害のとき、お金をとらずに飲み物を配るということ。',
+    },
+    order: {
+      words: ['takes', 'up', 'much', 'less', 'space', 'than', 'a', 'shop'],
+      rest: '',
+      answer: 'takes up much less space than a shop',
+      ja: '（自動販売機は）店よりずっと場所をとらない。（take up＝場所をとる、much ＋ 比較級＝ずっと）',
+    },
+    tf: [
+      { statement: '自動販売機は、人の少ない田舎の道ばたにもある。', answer: true, why: '第1段落 even beside quiet country roads where few people pass by。' },
+      { statement: '災害支援型の自動販売機は、災害のとき飲み物を無料で配れる。', answer: true, why: '第3段落 can be switched to give out drinks for free。' },
+      { statement: '自動販売機の数は、近年どんどんふえている。', answer: false, why: '第4段落 The number of machines has also been decreasing slowly in recent years。' },
+    ],
+    qa: [
+      { q: 'Which is NOT given as a reason for the large number of vending machines in Japan?', choices: ['They use very little electricity.', 'Japan is generally safe.', 'Land in cities is expensive.', 'They work all day without staff.'], answer: 0, why: '第4段落 vending machines use a lot of electricity。ほかの3つは第2段落にある理由。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
