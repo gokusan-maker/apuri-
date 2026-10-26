@@ -1,6 +1,6 @@
 import { loadProverbs, PROVERBS } from './proverbs'
 import { useState } from 'react'
-import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, traitOf, type BossLook } from './boss'
+import { BOSSES, BOSS_TRAITS, bossBgOf, formatSec, loadBossTimes, loadSealTraits, traitOf, type BossLook } from './boss'
 import { BossArena } from './BossArenaView'
 import { loadBook, SECRET_WINS, secretOf } from './bossbook'
 import { BossFigure } from './BossView'
@@ -19,6 +19,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const [book] = useState(loadBook)
   const [times] = useState(loadBossTimes)
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
+  const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
   const extra = Object.values(book)
     .map((e) => e.look)
@@ -45,6 +46,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               </strong>
               ：{BOSS_TRAITS[t].desc}
               <small>（{all.filter((b) => traitOf(b.name) === t).length}体）</small>
+              {(sealT[t] ?? 0) > 0 && <span className="trait-sealed">🔒×{sealT[t]}</span>}
             </li>
           ))}
           <li>🔒 とくぎを1回も発動させずに勝つと「とくぎ封じ」で🪙ボーナス</li>

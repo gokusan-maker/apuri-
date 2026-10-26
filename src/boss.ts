@@ -519,6 +519,25 @@ export function loadSealWins(): number {
     return 0
   }
 }
+// とくぎの種類ごとの、とくぎ封じで勝った回数
+const SEAL_TRAIT_KEY = 'eitan:seal-traits'
+export function loadSealTraits(): Partial<Record<BossTrait, number>> {
+  try {
+    const v = JSON.parse(localStorage.getItem(SEAL_TRAIT_KEY) ?? '{}') as unknown
+    return v && typeof v === 'object' && !Array.isArray(v) ? (v as Partial<Record<BossTrait, number>>) : {}
+  } catch {
+    return {}
+  }
+}
+export function addSealTraits(traits: BossTrait[]): void {
+  const v = loadSealTraits()
+  for (const t of traits) v[t] = (v[t] ?? 0) + 1
+  try {
+    localStorage.setItem(SEAL_TRAIT_KEY, JSON.stringify(v))
+  } catch {
+    /* 保存できなくても動く */
+  }
+}
 export function addSealWin(): number {
   const n = loadSealWins() + 1
   try {

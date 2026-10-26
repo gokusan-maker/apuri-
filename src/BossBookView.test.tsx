@@ -190,3 +190,17 @@ it('バトル中、とくぎが発動するまでは「🔒 とくぎ封じ中�
   fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== w2.ja)!)
   expect(screen.queryByText('🔒 とくぎ封じ中')).toBeNull()
 })
+
+it('とくぎ封じは、とくぎの種類ごとにも数えて、図鑑の「とくぎのしくみ」に🔒×回数が出る', async () => {
+  const { BossBook } = await import('./BossBookView')
+  const { loadSealTraits } = await import('./boss')
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={['armor', 'quick']} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  expect(loadSealTraits()).toEqual({ armor: 1, quick: 1 })
+  unmount()
+  render(<BossBook />)
+  expect(document.querySelector('.trait-guide')!.textContent).toContain('🔒×1')
+})
