@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'gerund-verbs-2': { wrong: 'Try to avoid to eat too much sugar.', right: 'Try to avoid eating too much sugar.', why: 'avoid のあとは動名詞。' },
+  'inf-verbs-2': { wrong: 'She refused taking the money.', right: 'She refused to take the money.', why: 'refuse のあとは to 不定詞。' },
   'phrasal-pronoun': { wrong: 'Please turn on it.', right: 'Please turn it on.', why: '代名詞の目的語は、動詞と副詞の間に入れる。' },
   'carry-out': { wrong: 'The game was called out because of rain.', right: 'The game was called off because of rain.', why: '「中止する」は call off。' },
   'look-up-to': { wrong: 'I can\'t put up this noise.', right: 'I can\'t put up with this noise.', why: '「がまんする」は put up with。with までがセット。' },

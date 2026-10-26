@@ -1556,6 +1556,7 @@
 - [x] 高校の文法単元を4つ追加：句動詞 look up to ／ look down on ／ put up with・get along with ／ run out of ／ come up with・句動詞と代名詞の位置（turn it on）・carry out ／ call off ／ find out
 - [x] 長文：TOEIC をさらに1本（ホテルの予約確認メール）
 - [x] バッジ「書き取り名人」（文法のディクテーションで5文連続正解）
+- [x] 高校の文法単元を2つ追加：動名詞をとる動詞（admit / deny / avoid / put off）・不定詞をとる動詞（refuse / promise / manage / pretend）
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
