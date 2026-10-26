@@ -119,6 +119,7 @@ it('ボス図鑑に「とくぎのしくみ」：4しゅるいのとくぎと説
   expect(guide.querySelectorAll('li')).toHaveLength(5)
   expect(guide.textContent).toContain('さいせい')
   expect(guide.textContent).toContain('とくぎ封じ')
+  expect(guide.querySelectorAll('.trait-tip')).toHaveLength(4) // とくぎごとの封じのコツ
 })
 
 it('ボスをたおしたときの紙ふぶきに、そのボスの色がまざる', async () => {

@@ -496,11 +496,11 @@ export function attackElemOf(color: string): AttackElem {
 
 // ボスのとくぎ：ボスごとに1つ（名前で決まる）。バトル中に発動してじゃまをする
 export type BossTrait = 'regen' | 'armor' | 'drain' | 'quick'
-export const BOSS_TRAITS: Record<BossTrait, { icon: string; name: string; desc: string }> = {
-  regen: { icon: '💚', name: 'さいせい', desc: 'HP半分で1回回復（会心なら止まる）' },
-  armor: { icon: '🛡', name: 'かたいウロコ', desc: 'ダメージ -2（会心は防げない）' },
-  drain: { icon: '🧛', name: 'きゅうしゅう', desc: 'まちがえるとボスのHPが回復' },
-  quick: { icon: '💨', name: 'すばやさ', desc: '会心の一撃の時間が短い' },
+export const BOSS_TRAITS: Record<BossTrait, { icon: string; name: string; desc: string; tip: string }> = {
+  regen: { icon: '💚', name: 'さいせい', desc: 'HP半分で1回回復（会心なら止まる）', tip: 'HPが半分になる一撃を会心にする' },
+  armor: { icon: '🛡', name: 'かたいウロコ', desc: 'ダメージ -2（会心は防げない）', tip: '全部の問題を会心の速さで答える' },
+  drain: { icon: '🧛', name: 'きゅうしゅう', desc: 'まちがえるとボスのHPが回復', tip: '1問もまちがえない' },
+  quick: { icon: '💨', name: 'すばやさ', desc: '会心の一撃の時間が短い', tip: 'とにかく速く答えて会心を出す' },
 }
 const TRAIT_ORDER: BossTrait[] = ['regen', 'armor', 'drain', 'quick']
 export const REGEN_RATE = 0.15 // さいせい：最大HPの15%

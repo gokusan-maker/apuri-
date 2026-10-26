@@ -47,6 +47,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               ：{BOSS_TRAITS[t].desc}
               <small>（{all.filter((b) => traitOf(b.name) === t).length}体）</small>
               {(sealT[t] ?? 0) > 0 && <span className="trait-sealed">🔒×{sealT[t]}</span>}
+              <span className="trait-tip">🔑 封じのコツ：{BOSS_TRAITS[t].tip}</span>
             </li>
           ))}
           <li>🔒 とくぎを1回も発動させずに勝つと「とくぎ封じ」で🪙ボーナス</li>
