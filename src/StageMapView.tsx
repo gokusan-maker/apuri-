@@ -104,7 +104,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
               <button className="smap-btn" aria-label={`${i + 1}${unit}：${f.label}${f.cleared ? '（クリア）' : ''}`} onClick={() => onOpen(f.id)}>
                 {isNow && <small className="smap-no">ステージ{i + 1}</small>}
                 {isNow && <span className="smap-label">{f.label}</span>}
-                {isNow && f.sub && <small className="smap-sub">{f.sub}</small>}
+                {isNow && isMilestone(i + 1, total) ? <small className="smap-chest-now">🎁 クリアで宝箱！</small> : isNow && f.sub && <small className="smap-sub">{f.sub}</small>}
                 <span className="smap-go">{isNow ? goLabel : againLabel}</span>
               </button>
             </div>

@@ -3507,6 +3507,7 @@ details.cmap > summary { font-size: 0.95rem; white-space: nowrap; }
 .smap-no { font-size: 0.62rem; opacity: 0.85; }
 .smap-label { font-weight: 900; font-size: 0.78rem; line-height: 1.25; text-align: center; overflow: hidden; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; line-clamp: 2; }
 .smap-sub { font-size: 0.62rem; color: #fde68a; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.smap-chest-now { font-size: 0.66rem; font-weight: 800; color: #fcd34d; }
 .smap-go { margin-top: 2px; padding: 1px 10px; border-radius: 999px; background: rgb(255 255 255 / 0.18); font-size: 0.66rem; font-weight: 900; }
 .smap-node.now { z-index: 2; }
 .smap-node.now .smap-spot { width: 58px; height: 58px; font-size: 2rem; box-shadow: 0 0 0 4px #facc15, 0 0 18px rgb(250 204 21 / 0.8); }

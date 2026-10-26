@@ -118,3 +118,13 @@ it('地図の下に「次の宝箱まで あとnステージ」が出る', () =>
   render(<Castle name="テストの海" floors={floors} onOpen={() => {}} theme="sea" />)
   expect(screen.getByLabelText('次の宝箱まで').textContent).toContain('あと7ステージ')
 })
+
+it('いまのステージが宝箱のステージなら、すすむの札に「クリアで宝箱！」が出る', () => {
+  const floors = Array.from({ length: 12 }, (_, i) => ({ id: `q${i}`, label: `S${i}`, cleared: i < 9 }))
+  const { unmount } = render(<Castle name="宝の海" floors={floors} onOpen={() => {}} theme="sea" />)
+  expect(screen.getByText('🎁 クリアで宝箱！')).toBeInTheDocument()
+  unmount()
+  const f2 = floors.map((f, i) => ({ ...f, cleared: i < 4 }))
+  render(<Castle name="宝の海2" floors={f2} onOpen={() => {}} theme="sea" />)
+  expect(screen.queryByText('🎁 クリアで宝箱！')).toBeNull()
+})
