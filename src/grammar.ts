@@ -3914,6 +3914,40 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
   },
   {
+    id: 'nothing-but',
+    title: '否定語を使った表現 nothing but ～（～だけ）／ all but ～（ほとんど～）',
+    points: [
+      'nothing but ～ で「～だけ・～にすぎない」（＝ only）。but は「～以外」の意味：He ate nothing but bread.「パンしか食べなかった」。',
+      'all but ～ で「ほとんど～」（＝ almost）：The work is all but finished.「仕事はほとんど終わった」。anything but ～「少しも～ない」とまちがえないように。',
+    ],
+    examples: [
+      { en: 'She drinks nothing but water.', ja: '彼女は水しか飲まない。' },
+      { en: 'It was all but impossible to find a seat.', ja: '席を見つけるのは、ほとんど不可能だった。' },
+    ],
+    questions: [
+      { sentence: 'He ate nothing ___ bread for lunch.', choices: ['but', 'only', 'unless'], answer: 0, why: 'nothing but ～「～だけ」。nothing only・nothing unless という形はない。' },
+      { sentence: 'The work is all but ___.', choices: ['finished', 'finishing', 'finish'], answer: 0, why: 'all but ～「ほとんど～」。仕事は「終えられる」側なので過去分詞 finished。' },
+      { sentence: 'It was ___ but impossible to get tickets.', choices: ['all', 'any', 'every'], answer: 0, why: 'all but impossible「ほとんど不可能」。any but・every but という形はない（anything but なら「少しも～ない」）。' },
+    ],
+  },
+  {
+    id: 'quite-a-few',
+    title: '名詞の数量の表現 quite a few ／ not a few（かなり多くの）',
+    points: [
+      'quite a few ＋ 数えられる名詞の複数形 で「かなり多くの」。not a few も同じ意味（かたい言い方）。a few「少しの」とは反対に近い意味になる。',
+      '数えられない名詞なら quite a lot of ～ / quite a bit of ～ を使う：quite a lot of money「かなりのお金」。',
+    ],
+    examples: [
+      { en: 'Quite a few students walk to school.', ja: 'かなり多くの生徒が歩いて通学している。' },
+      { en: 'Not a few people agreed with her.', ja: '少なからぬ人が彼女に賛成した。' },
+    ],
+    questions: [
+      { sentence: 'Quite a ___ people came to the party.', choices: ['few', 'little', 'lot'], answer: 0, why: 'people は数えられる名詞の複数なので quite a few。quite a lot なら of が必要、little は数えられない名詞に使う。' },
+      { sentence: 'There were not a ___ mistakes in his report.', choices: ['few', 'little', 'much'], answer: 0, why: 'mistakes は数えられる名詞の複数なので not a few「少なからぬ」。little・much は数えられない名詞に使う。' },
+      { sentence: 'She spent quite a ___ of money on the trip.', choices: ['lot', 'few', 'many'], answer: 0, why: 'money は数えられない名詞なので quite a lot of。few・many は数えられる名詞に使い、a many という形もない。' },
+    ],
+  },
+  {
     id: 'less-least',
     title: '「より～でない」の比較（less ～ than / the least ～）',
     points: [
@@ -4806,7 +4840,7 @@ const GRADE_IDS: Record<GrammarGrade, string[]> = {
   中1: ['play-the', 'progressive-q-neg', 'irregular-past', 'a-an-the', 'can-i-you', 'times-a-week', 'what-time', 'go-ing', 'there-q-neg', 'can-basic', 'ordinal-date', 'this-these', 'do-does', 'was-were', 'place-prep', 'plural-forms', 'what-noun', 'verb-prep', 'how-many-much', 'make-do', 'it-weather', 'take-uses', 'a-piece-of', 'time-no-prep', 'short-answer', 'by-with', 'and-but-or-so', 'be-imperative', 'whose-which', 'how-adj', 'possessive', 'be', 'third', 'past', 'progressive', 'imperative', 'wh', 'pronoun', 'preposition', 'countable', 'frequency', 'adverb', 'there'],
   中2: ['directions', 'there-will-be', 'thank-sorry-for', 'give-to-for', 'be-born', 'superlative-in-of', 'else', 'famous-full-similar', 'by-uses', 'like-such-as', 'there-was', 'when-future', 'which-better', 'future-q-neg', 'need-to', 'too-many-much', 'infinitive-uses', 'to-for-person', 'wh-subject', 'more-and-more', 'during-for', 'take-idioms', 'one-it', 'thing-adjective', 'be-able-to', 'say-tell', 'so-do-i', 'to-or-ing', 'would-like', 'another-other', 'same-different', 'phrasal-look', 'get-uses', 'adj-order', 'help-do', 'ago-before', 'because-of', 'number-expr', 'how-about', 'call-ab', 'adj-prep', 'after-before', 'look-adj', 'have-to', 'may-might', 'between-among', 'both-either', 'good-better', 'few-little', 'prep-gerund', 'prep-phrase', 'shall', 'to-adjective', 'by-until', 'past-progressive', 'future', 'compare', 'as-as', 'one-of-the', 'infinitive', 'gerund', 'want-to', 'conjunction', 'svoo-svoc', 'if-present', 'modal', 'polite-request', 'feeling-to', 'too-also-either', 'each-every', 'passive', 'passive-q-neg', 'gerund-idioms', 'that-clause', 'reflexive', 'some-any'],
   中3: ['how-long-perfect', 'as-many-much-noun', 'will-have-to', 'ready-willing', 'been-gone', 'not-a-but-b', 'make-sure', 'first-time', 'almost-most', 'most-of', 'second-ever', 'as-possible', 'modal-passive', 'change-adj', 'must-cant-be', 'be-about-to', 'get-done', 'each-other', 'tag-imperative', 'fractions', 'adj-that', 'think-so', 'passive-prep', 'it-is-said', 'still-anymore', 'find-leave-oc', 'unless', 'passive-progressive-perfect', 'compare-emphasis', 'keep-ing', 'spend-ing', 'so-such', 'ing-two', 'relative-that', 'not-to', 'as-soon-as', 'perfect-done', 'times-as', 'while', 'whose', 'relative-what', 'perfect', 'perfect-experience', 'for-since', 'perfect-progressive', 'relative', 'relative-omit', 'participle', 'indirect', 'wh-to', 'it-for-to', 'subjunctive', 'so-that', 'too-enough', 'what-a', 'tag-exclaim', 'tag-q', 'causative', 'if-whether', 'it-takes', 'imperative-and-or', 'nobody-nothing', 'though', 'not-only', 'emotion-participle', 'perception'],
-  高校: ['cannot-but', 'on-the-point-of', 'lest', 'might-as-well', 'noun-construction', 'tense-agreement-exception', 'pro-infinitive', 'never-without', 'provided-that', 'those-who', 'causative-passive', 'no-wonder', 'the-very', 'past-perfect-progressive', 'gerund-perfect-passive', 'for-fear-of', 'all-the-comparative', 'anything-but', 'what-is-more', 'as-relative', 'were-to', 'as-concession', 'independent-infinitive', 'result-infinitive', 'wherever-whenever', 'cannot-too', 'of-with-abstract', 'on-ing', 'the-last-to', 'neither-nor', 'would-often', 'number-of', 'even-if-though', 'not-so-much', 'remind-of', 'less-least', 'to-ing', 'trouble-ing', 'by-the-time', 'reported-question', 'future-progressive', 'supposed-to', 'have-get-person', 'why-how-relative', 'if-only', 'happen-to', 'as-well-as', 'group-prep', 'despite', 'prevent-from', 'worth-ing', 'suggest-that', 'hardly-seldom', 'what-is-called', 'gerund-set', 'of-the-two', 'even-only', 'no-more-than', 'so-as-to-degree', 'allow-to', 'every-time', 'appositive-comma', 'whether-concession', 'now-that-once', 'strong-negation', 'participle-idioms', 'be-used-to', 'in-order-to', 'may-well', 'no-sooner', 'the-adjective', 'if-inversion', 'as-long-as', 'it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
+  高校: ['nothing-but', 'quite-a-few', 'cannot-but', 'on-the-point-of', 'lest', 'might-as-well', 'noun-construction', 'tense-agreement-exception', 'pro-infinitive', 'never-without', 'provided-that', 'those-who', 'causative-passive', 'no-wonder', 'the-very', 'past-perfect-progressive', 'gerund-perfect-passive', 'for-fear-of', 'all-the-comparative', 'anything-but', 'what-is-more', 'as-relative', 'were-to', 'as-concession', 'independent-infinitive', 'result-infinitive', 'wherever-whenever', 'cannot-too', 'of-with-abstract', 'on-ing', 'the-last-to', 'neither-nor', 'would-often', 'number-of', 'even-if-though', 'not-so-much', 'remind-of', 'less-least', 'to-ing', 'trouble-ing', 'by-the-time', 'reported-question', 'future-progressive', 'supposed-to', 'have-get-person', 'why-how-relative', 'if-only', 'happen-to', 'as-well-as', 'group-prep', 'despite', 'prevent-from', 'worth-ing', 'suggest-that', 'hardly-seldom', 'what-is-called', 'gerund-set', 'of-the-two', 'even-only', 'no-more-than', 'so-as-to-degree', 'allow-to', 'every-time', 'appositive-comma', 'whether-concession', 'now-that-once', 'strong-negation', 'participle-idioms', 'be-used-to', 'in-order-to', 'may-well', 'no-sooner', 'the-adjective', 'if-inversion', 'as-long-as', 'it-is-time', 'would-rather', 'without-but-for', 'perfect-participle', 'perfect-infinitive', 'negative-participle', 'as-if', 'no-matter-how', 'superlative-compare', 'appositive-that', 'emphatic-do', 'be-to', 'have-something-done', 'not-until', 'partial-negation', 'gerund-subject', 'formal-object-it', 'tense-agreement', 'relative-nonrestrictive', 'so-that-purpose', 'modal-perfect', 'future-perfect', 'compound-relative', 'with-attendant', 'participle-clause', 'subjunctive-past-perfect', 'it-cleft', 'negative-inversion', 'seem-to', 'the-more', 'stop-remember', 'past-perfect', 'relative-adverb', 'used-to', 'had-better', 'wh-do-you-think', 'it-of-to', 'prep-relative'],
 }
 export const gradeListed = (id: string) => GRAMMAR_GRADES.some((g) => GRADE_IDS[g].includes(id))
 export function gradeOf(id: string): GrammarGrade {
