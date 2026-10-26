@@ -4649,6 +4649,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-system-maintenance',
+    title: 'Email: Ordering System Maintenance',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear colleagues, This is to let you know that our online ordering system will be unavailable from 9:00 p.m. on Friday, November 8, ( A ) 6:00 a.m. on Saturday, November 9. During this time, our technical team will install new software that will make the system faster and more secure.",
+      "Customers will not be able to place orders online while the work is being done. If a customer calls to place an order during this period, please write down the details and enter them into the system ( B ) it is available again.",
+      "Please make sure that all your work ( C ) before 8:45 p.m. on Friday. Anything you have not saved by then may be lost. Printers and email will not be affected.",
+      "If you have any questions, please contact the IT help desk at extension 204. We apologize for any inconvenience and thank you for your patience. Mark Ellis, IT Department",
+    ],
+    ja: [
+      'みなさまへ。オンライン注文システムが、11月8日（金）午後9時から11月9日（土）午前6時まで使えなくなることをお知らせします。この間に技術チームが、システムをより速く、より安全にする新しいソフトウェアを導入します。',
+      '作業中、お客さまはオンラインで注文できません。この時間にお客さまから電話で注文があった場合は、内容を書きとめておき、システムがまた使えるようになったら入力してください。',
+      '金曜日の午後8時45分までに、すべての作業を必ず保存してください。それまでに保存していないものは、消えてしまうおそれがあります。プリンターとメールには影響ありません。',
+      'ご質問があれば、内線204のITヘルプデスクにご連絡ください。ご不便をおかけしますが、ご理解とご協力をお願いします。IT部 マーク・エリス',
+    ],
+    blanks: [
+      { id: 'A', choices: ['until', 'by', 'since', 'during'], answer: 0, why: 'from A until B で「A から B まで」（期間の終わり）。by は「～までに」（期限）で from と組めず、since・during はうしろに終わりの時刻をとれない。' },
+      { id: 'B', choices: ['once', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（it is available again）なので、接続詞 once「いったん～したら」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'C', choices: ['is saved', 'saving', 'to save', 'been saved'], answer: 0, why: 'that 節の中には述語動詞が必要。work は「保存される」側なので受け身 is saved。saving・to save は述語にならず、been saved は be 動詞（has など）がないと使えない。' },
+    ],
+    underline: {
+      phrase: 'thank you for your patience',
+      choices: ['thank you for waiting without complaining', 'thank you for your hard work', 'thank you for your many orders', 'thank you for your questions'],
+      answer: 0,
+      why: 'patience は「がまん強さ・しんぼう」。thank you for your patience は「（待たせて不便をかけるが）がまんして待ってくれてありがとう」という決まり文句。',
+    },
+    order: {
+      words: ['make', 'the', 'system', 'faster', 'and', 'more', 'secure'],
+      rest: '',
+      answer: 'make the system faster and more secure',
+      ja: 'システムをより速く、より安全にする。（make A B＝A を B にする、比較級 faster / more secure）',
+    },
+    tf: [
+      { statement: 'システムは土曜日の午前6時まで使えない。', answer: true, why: '第1段落 from 9:00 p.m. on Friday … until 6:00 a.m. on Saturday。' },
+      { statement: '作業中も、お客さまはオンラインで注文できる。', answer: false, why: '第2段落 Customers will not be able to place orders online while the work is being done。' },
+      { statement: '保存していない作業は、消えてしまうおそれがある。', answer: true, why: '第3段落 Anything you have not saved by then may be lost。' },
+    ],
+    qa: [
+      { q: 'What should employees do if a customer calls to order during the maintenance?', choices: ['Write down the details and enter them later.', 'Tell the customer to call back next week.', 'Enter the order into the system right away.', 'Contact the IT help desk immediately.'], answer: 0, why: '第2段落 please write down the details and enter them into the system once it is available again。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
