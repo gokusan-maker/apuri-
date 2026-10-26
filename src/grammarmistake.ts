@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'nothing-like': { wrong: 'Nothing is most important than health.', right: 'Nothing is more important than health.', why: 'than があるので比較級 more を使う。' },
+  'for-all': { wrong: 'For all he is rich, he is not happy.', right: 'For all his money, he is not happy. / Although he is rich, he is not happy.', why: 'for all のうしろは名詞。文を続けるなら although。' },
   'make-use-of': { wrong: 'Make good using of your time.', right: 'Make good use of your time.', why: 'make use of の use は名詞。good のあとも名詞 use。' },
   'capable-of': { wrong: 'She is capable to solve it.', right: 'She is capable of solving it. / She is able to solve it.', why: 'capable は of ＋ -ing、able は to ＋ 原形と組む。' },
   'as-to': { wrong: 'There is doubt as to what he will come.', right: 'There is doubt as to whether he will come.', why: 'うしろが欠けのない文なら whether「～かどうか」。' },

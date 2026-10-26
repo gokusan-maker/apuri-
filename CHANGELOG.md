@@ -2196,3 +2196,4 @@
 - 2026-10-26: 文法のディクテーションの結果にも、正解の数に応じた星（★★★）を表示
 - 2026-10-26: 文法に「make use of ／ take advantage of ／ make the most of」と「be capable of ／ be able to」の単元を追加（よくあるまちがいつき）
 - 2026-10-26: TOEIC の長文（お知らせ文）に「会議室の予約のお知らせ」を追加（空所・下線部・語句整序つき）
+- 2026-10-26: 文法に「There is nothing like ～ ／ Nothing is more ～ than」と「for all ／ with all（～にもかかわらず）」の単元を追加（よくあるまちがいつき）

@@ -1525,6 +1525,7 @@
 - [x] 短い読解（読解ミニ）で全問正解すると「🎉 全問正解！」のお祝い
 - [x] 文法のディクテーションの結果にも星（★★★）
 - [x] 高校の文法単元を2つ追加：make use of ／ take advantage of ／ make the most of・be capable of ／ be able to
+- [x] 高校の文法単元を2つ追加：There is nothing like ～ ／ Nothing is more ～ than・for all ／ with all
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
