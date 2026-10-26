@@ -7342,6 +7342,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-meteor-showers',
+    title: 'Shooting Stars',
+    level: 'TOEFL・IELTS（天文学）',
+    paragraphs: [
+      "On a clear night, you may see a bright streak of light flash across the sky. People often call it a \"shooting star,\" but it is not a star at all. It is a meteor: a tiny piece of space rock or dust, often no larger than a grain of sand, ( A ) burns up as it enters Earth's atmosphere at tremendous speed.",
+      "At certain times of the year, many meteors appear in a single night. These events, known as meteor showers, happen when Earth passes through a trail of dust left behind by a comet. Because Earth crosses the same trails each year, the showers return at about the same time. The Perseids, for example, can be seen every August, ( B ) the Geminids appear in December.",
+      "During a shower, the meteors seem to come from one point in the sky, called the radiant. Each shower is named after the constellation in which its radiant lies; the Perseids, for instance, appear to come from Perseus.",
+      "To enjoy a meteor shower, find a place far from city lights and give your eyes time to adjust to the dark. Most pieces burn up completely, but occasionally a larger one survives the journey and lands on the ground. Such a rock, ( C ) a meteorite, can teach scientists about the early solar system.",
+    ],
+    ja: [
+      '晴れた夜、明るい光のすじが空を横切るのを見ることがある。人々はよくそれを「流れ星」とよぶが、それはまったく星ではない。それは流星である。たいていは砂つぶほどの大きさしかない宇宙の岩やちりのかけらが、ものすごい速さで地球の大気に入るときに燃えつきるのだ。',
+      '1年のある時期には、ひと晩にたくさんの流星があらわれる。流星群とよばれるこうした現象は、地球がすい星の残したちりの通り道を通過するときに起こる。地球は毎年同じ通り道を横切るので、流星群はほぼ同じ時期にもどってくる。たとえば、ペルセウス座流星群は毎年8月に見られ、一方ふたご座流星群は12月にあらわれる。',
+      '流星群の間、流星は空の1点から飛んでくるように見える。この点は放射点とよばれる。それぞれの流星群は放射点のある星座にちなんで名づけられている。たとえば、ペルセウス座流星群はペルセウス座から飛んでくるように見える。',
+      '流星群を楽しむには、町の明かりから遠い場所を見つけ、目が暗さに慣れるまで時間をとるとよい。ほとんどのかけらは完全に燃えつきるが、ときどき大きなものが旅を生きのびて地上に落ちる。いん石とよばれるそうした岩は、科学者に初期の太陽系について教えてくれることがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a tiny piece of space rock or dust を説明し、burns の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（the Geminids appear …）なので、対比の接続詞 while「一方で」。during・despite・because of は前置詞。' },
+      { id: 'C', choices: ['called', 'calling', 'to call', 'calls'], answer: 0, why: 'Such a rock, called a meteorite,「いん石とよばれる、そうした岩」。岩は「よばれる」側なので過去分詞。' },
+    ],
+    underline: {
+      phrase: 'tremendous',
+      choices: ['extremely great', 'very slow', 'quite normal', 'always changing'],
+      answer: 0,
+      why: 'tremendous は「ものすごい・とてつもない」。extremely great と同じ意味。',
+    },
+    order: {
+      words: ['named', 'after', 'the', 'constellation'],
+      rest: 'in which its radiant lies',
+      answer: 'named after the constellation',
+      ja: 'その星座にちなんで名づけられている（name A after B「B にちなんで A と名づける」の受け身）',
+    },
+    tf: [
+      { statement: '流れ星は、本物の星である。', answer: false, why: '第1段落 it is not a star at all。' },
+      { statement: '流星群は、地球がすい星の残したちりの中を通るときに起こる。', answer: true, why: '第2段落 happen when Earth passes through a trail of dust left behind by a comet。' },
+      { statement: '流星はすべて地上に落ちてくる。', answer: false, why: '第4段落 Most pieces burn up completely。' },
+    ],
+    qa: [
+      { q: 'Why do meteor showers return at about the same time every year?', choices: ['Earth crosses the same dust trails each year.', 'Comets visit Earth every month.', 'The radiant moves every night.', 'City lights are turned off once a year.'], answer: 0, why: '第2段落 Because Earth crosses the same trails each year, the showers return at about the same time。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
