@@ -5566,6 +5566,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-room-booking',
+    title: 'Notice: Booking Meeting Rooms',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: Beginning next Monday, meeting rooms on the fifth and sixth floors must be reserved through the new online booking system. Rooms can no longer be reserved by writing your name on the paper sheet ( A ) on each door.",
+      "To make a reservation, log in to the system with your employee ID, choose a room and a time, and enter the number of people attending. Each reservation may last up to two hours. If you need a room for longer, please contact the General Affairs Department.",
+      "Please cancel your reservation as soon as possible if your meeting is called off, ( B ) that other teams can use the room. Rooms that remain empty for fifteen minutes after the start of a reservation will automatically be released.",
+      "A short guide to the system is available on the company intranet. We appreciate your cooperation as we work to make the best ( C ) of our limited meeting space.",
+    ],
+    ja: [
+      '従業員のみなさまへ：来週の月曜日から、5階と6階の会議室は新しいオンラインの予約システムで予約してください。各ドアにはられた紙に名前を書いて予約することは、もうできません。',
+      '予約するには、社員番号でシステムにログインし、部屋と時間をえらんで、出席する人数を入力してください。1回の予約は最長2時間です。それより長く部屋が必要なときは、総務部にご連絡ください。',
+      '会議が中止になったら、ほかのチームが部屋を使えるよう、できるだけ早く予約を取り消してください。予約の開始から15分たっても使われていない部屋は、自動的に予約が解除されます。',
+      'システムのかんたんな手引きは社内ネットで見られます。限られた会議室をできるだけうまく使えるよう取り組んでまいりますので、ご協力をお願いします。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['posted', 'posting', 'to post', 'post'], answer: 0, why: '紙は「はられた」側なので、名詞 the paper sheet をうしろから説明する過去分詞 posted。' },
+      { id: 'B', choices: ['so', 'because', 'although', 'even'], answer: 0, why: 'so that S can ～「S が～できるように」（目的）。because・although・even のうしろに that 節を続ける形はない。' },
+      { id: 'C', choices: ['use', 'using', 'used', 'uses'], answer: 0, why: 'make the best use of ～「～をできるだけうまく使う」。the best のあとは名詞 use。' },
+    ],
+    underline: {
+      phrase: 'is called off',
+      choices: ['is canceled', 'is moved to another room', 'is made longer', 'is recorded on video'],
+      answer: 0,
+      why: 'call off ～ は「～を中止する」（＝ cancel）。is called off で「中止される」。',
+    },
+    order: {
+      words: ['enter', 'the', 'number', 'of', 'people', 'attending'],
+      rest: '',
+      answer: 'enter the number of people attending',
+      ja: '出席する人数を入力する。（people attending＝出席する人々、現在分詞がうしろから説明）',
+    },
+    tf: [
+      { statement: '来週からは、ドアの紙に名前を書いて会議室を予約できない。', answer: true, why: '第1段落 Rooms can no longer be reserved by writing your name on the paper sheet。' },
+      { statement: '1回の予約で、会議室を最長4時間使える。', answer: false, why: '第2段落 Each reservation may last up to two hours。' },
+      { statement: '予約の開始から15分使われない部屋は、自動的に予約が解除される。', answer: true, why: '第3段落 will automatically be released。' },
+    ],
+    qa: [
+      { q: 'What should staff do if they need a room for more than two hours?', choices: ['Contact the General Affairs Department.', 'Make two reservations at once.', 'Write their name on the door.', 'Use a room on another floor.'], answer: 0, why: '第2段落 If you need a room for longer, please contact the General Affairs Department。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
