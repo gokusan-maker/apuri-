@@ -7499,6 +7499,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-desert-nights',
+    title: 'Cold Nights in Hot Deserts',
+    level: 'TOEFL・IELTS（気象）',
+    paragraphs: [
+      "Many people imagine deserts as places that are always hot. During the day, this is often true: in parts of the Sahara, the temperature can rise above 40 degrees Celsius. Yet after the sun goes down, the same desert can become surprisingly cold, and the temperature sometimes falls by more than 20 degrees in a single night.",
+      "The main reason is the lack of water in the air. In humid places, water vapor and clouds act like a blanket. They absorb heat ( A ) rises from the ground at night and send part of it back down, keeping the surface warm. Desert air, however, is extremely dry, and the sky is usually clear, so the heat escapes easily into space.",
+      "The ground itself also plays a role. Sand and rock heat up quickly in sunlight, but they also lose heat quickly. Water, by contrast, ( B ) a long time to warm up and cool down. This is why coastal areas, which are near large bodies of water, have much smaller temperature changes between day and night.",
+      "Animals that live in deserts have adapted to these extremes. Many stay underground during the hottest hours and come out at night, while others are active mainly in the early morning, ( C ) the temperature is mild.",
+    ],
+    ja: [
+      '多くの人は、砂漠をいつも暑い場所だと思っている。昼間はたいていそのとおりで、サハラ砂漠の一部では気温が40℃をこえることもある。しかし日がしずむと、同じ砂漠がおどろくほど寒くなり、ひと晩で気温が20℃以上下がることもある。',
+      'おもな理由は、空気の中に水分が少ないことである。しめった場所では、水蒸気や雲が毛布のような働きをする。夜に地面から上がってくる熱を吸収し、その一部を下にもどして、地表を温かく保つのだ。しかし砂漠の空気はとてもかわいていて、空もたいてい晴れているので、熱はかんたんに宇宙へにげてしまう。',
+      '地面そのものも関係している。砂や岩は日光ですぐに温まるが、熱を失うのも速い。これに対して水は、温まるのにも冷えるのにも長い時間がかかる。だから、大きな水のそばにある海岸の地域は、昼と夜の気温の差がずっと小さいのである。',
+      '砂漠に住む動物たちは、こうした極端な変化に適応してきた。多くはいちばん暑い時間は地下にいて夜に出てくるし、気温がおだやかな早朝におもに活動するものもいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 heat を説明し、rises の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、who は人。' },
+      { id: 'B', choices: ['takes', 'take', 'taking', 'to take'], answer: 0, why: '主語は Water（数えられない名詞・単数あつかい）で、現在の一般的な事実なので takes。It takes a long time to ～ と同じ take。' },
+      { id: 'C', choices: ['when', 'which', 'what', 'who'], answer: 0, why: 'the early morning（時）を説明し、うしろが欠けのない文（the temperature is mild）なので関係副詞 when。' },
+    ],
+    underline: {
+      phrase: 'extremes',
+      choices: ['very great differences', 'small changes', 'dry winds', 'long trips'],
+      answer: 0,
+      why: 'extremes は「極端（なもの）」。ここでは昼と夜の大きな気温の差のこと。',
+    },
+    order: {
+      words: ['act', 'like', 'a', 'blanket'],
+      rest: '',
+      answer: 'act like a blanket',
+      ja: '毛布のような働きをする（act like ～「～のようにふるまう・働く」）',
+    },
+    tf: [
+      { statement: '砂漠では、夜になると気温が大きく下がることがある。', answer: true, why: '第1段落 the temperature sometimes falls by more than 20 degrees in a single night。' },
+      { statement: '砂漠の空は、たいてい雲が多い。', answer: false, why: '第2段落 the sky is usually clear。' },
+      { statement: '海の近くの地域は、昼と夜の気温の差が大きい。', answer: false, why: '第3段落 coastal areas … have much smaller temperature changes between day and night。' },
+    ],
+    qa: [
+      { q: 'Why does heat escape easily from deserts at night?', choices: ['The air is dry and the sky is usually clear.', 'The sand keeps heat for a long time.', 'There are many clouds over deserts.', 'Animals carry the heat away.'], answer: 0, why: '第2段落 Desert air, however, is extremely dry, and the sky is usually clear, so the heat escapes easily into space。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
