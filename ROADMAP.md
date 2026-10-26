@@ -1539,7 +1539,7 @@
 - [x] スペルで全問正解すると「🏆 パーフェクト！」
 - [x] 長文：私立医学部（自分をくすぐれないわけ）・TOEFL（カクテルパーティー効果）・TOEIC（値上げのメール）を1本ずつ
 - [x] 高校の文法単元を2つ追加：be known for ／ be known as・be familiar with ／ be familiar to
-- [x] 高校の文法単元を2つ追加：apologize to 人 for ／ thank 人 for・accuse 人 of ／ blame 人 for
+- [x] 高校の文法単元を4つ追加：apologize to 人 for ／ thank 人 for・accuse 人 of ／ blame 人 for・consist of ／ be made up of・result in ／ result from
 - [x] 長文：高校入試レベルをさらに1本（はじめてのマラソン）
 - [x] 数の聞き取りに自己ベスト（更新すると「🎉 自己ベスト更新！」）
 ## アイデア（未整理）

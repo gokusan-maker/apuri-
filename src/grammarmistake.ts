@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'consist-of': { wrong: 'Japan is consisted of many islands.', right: 'Japan consists of many islands.', why: 'consist of は受け身にしない（be made up of なら受け身の形）。' },
+  'result-in': { wrong: 'The accident resulted in careless driving.（不注意運転が原因のつもり）', right: 'The accident resulted from careless driving.', why: '結果 ＋ result from ＋ 原因、原因 ＋ result in ＋ 結果。' },
   'apologize-for': { wrong: 'I apologized her for being late.', right: 'I apologized to her for being late.', why: 'apologize のあとの人の前には to が必要。' },
   'accuse-of': { wrong: 'They accused him for stealing.', right: 'They accused him of stealing.', why: 'accuse は of、blame は for と組む。' },
   'known-for-as': { wrong: 'Kyoto is known as its old temples.', right: 'Kyoto is known for its old temples.', why: '有名な理由・特徴は be known for。as は呼び名・立場。' },
