@@ -132,7 +132,7 @@ import { addMistake, easeMistake, loadMistakes, removeMistake, saveMistakes, wea
 import { Quiz } from './QuizView'
 import { BossAlly, TrackAlly } from './BossAllyView'
 import { BuddyZukan } from './BuddyZukanView'
-import { loadLongRecord } from './longreading'
+import { loadLongRecord, perfectLongCount } from './longreading'
 import { loadShortDone } from './reading'
 import { loadReadLevel, passagesFor, READ_LEVELS, readyFor, saveReadLevel, solvedOf, type ReadLevel } from './readlevel'
 import { trioStreakNow, loadTrioDay, dailyShort, loadDailyShortDay, loadTodayWordsDay, saveDailyShortDay, saveTodayWordsDay, TASK_XP, todayWords } from './dailyread'
@@ -794,6 +794,7 @@ function App() {
       numbersBest: loadNumbersBest(),
       dictStreak: loadDictBest(),
       chests: chestsOpened(loadChests()),
+      longPerfect: perfectLongCount(),
     },
     earned,
   )

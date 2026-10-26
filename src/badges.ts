@@ -30,6 +30,7 @@ export type BadgeStats = {
   numbersBest?: number // 数の聞き取りの自己ベスト（10問中）
   dictStreak?: number // 文法のディクテーションの連続正解の自己ベスト
   chests?: number // 城・地図であけた宝箱の数
+  longPerfect?: number // 満点をとった長文の数
 }
 
 export type Badge = {
@@ -53,6 +54,8 @@ export const BADGES: Badge[] = [
   { id: 'dict-5', icon: '✍️', name: '書き取り名人', desc: '文法のディクテーションで5文連続正解する', check: (s) => (s.dictStreak ?? 0) >= 5 },
   { id: 'chest-5', icon: '🎁', name: '宝箱ハンター', desc: '城や地図の宝箱を5個あける', check: (s) => (s.chests ?? 0) >= 5 },
   { id: 'chest-20', icon: '💰', name: '宝箱コレクター', desc: '城や地図の宝箱を20個あける', check: (s) => (s.chests ?? 0) >= 20 },
+  { id: 'long-1', icon: '📖', name: '読解の満点', desc: '長文読解で1本満点をとる', check: (s) => (s.longPerfect ?? 0) >= 1 },
+  { id: 'long-20', icon: '📚', name: '読解マスター', desc: '長文読解で20本満点をとる', check: (s) => (s.longPerfect ?? 0) >= 20 },
   { id: 'streak-3', icon: '🔥', name: '3日連続', desc: '3日続けて学習する', check: (s) => s.streak >= 3 },
   { id: 'streak-7', icon: '🔥', name: '7日連続', desc: '7日続けて学習する', check: (s) => s.streak >= 7 },
   { id: 'streak-30', icon: '🌋', name: '30日連続', desc: '30日続けて学習する', check: (s) => s.streak >= 30 },

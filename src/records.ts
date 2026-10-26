@@ -4,7 +4,7 @@ import { chestsOpened, loadChests } from './castle'
 import { loadEndlessBest } from './endless'
 import { loadGachaStats } from './gacha'
 import { grammarStamps, loadDictBest, loadGrammar } from './grammar'
-import { loadLongRecord, LONG_PASSAGES, totalOf } from './longreading'
+import { LONG_PASSAGES, perfectLongCount } from './longreading'
 import { loadNumbersBest } from './numbers'
 import { loadParty } from './party'
 import { loadSpellBest } from './spell'
@@ -13,9 +13,8 @@ export type RecordRow = { icon: string; label: string; value: string }
 
 export function collectRecords(): RecordRow[] {
   const book = loadBook()
-  const long = loadLongRecord()
   const party = loadParty()
-  const perfectLong = LONG_PASSAGES.filter((p) => long[p.id] === totalOf(p)).length
+  const perfectLong = perfectLongCount()
   return [
     { icon: '🗼', label: 'エンドレスの塔', value: `${loadEndlessBest()}階` },
     { icon: '⚔️', label: 'ボス撃破', value: `${totalWins(book)}回` },

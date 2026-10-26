@@ -5951,6 +5951,8 @@ export function saveLongRecord(r: LongRecord): void {
 
 // 長文の点数の合計（一覧に出す）
 export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0) + (p.seq ? 1 : 0) + (p.paraSeq ? 1 : 0)
+// 満点をとった長文の数
+export const perfectLongCount = (rec: LongRecord = loadLongRecord()) => LONG_PASSAGES.filter((p) => rec[p.id] === totalOf(p)).length
 
 // まちがえた問題の根拠の段落（0から数える）。空所・下線部は本文の位置から、内容一致は解説の「第N段落」から
 export function evidenceParas(p: LongPassage, wrongBlanks: string[], wrongTf: number[], underlineWrong = false): number[] {

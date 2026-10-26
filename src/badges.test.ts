@@ -150,3 +150,12 @@ it('宝箱を5個・20個あけるとバッジ（宝箱ハンター・宝箱コ�
   expect(h.check({ ...zero, chests: 5 })).toBe(true)
   expect(c.check({ ...zero, chests: 20 })).toBe(true)
 })
+
+it('長文読解の満点1本で「読解の満点」、20本で「読解マスター」', () => {
+  const a = BADGES.find((b) => b.id === 'long-1')!
+  const b = BADGES.find((x) => x.id === 'long-20')!
+  expect(a.check(zero)).toBe(false)
+  expect(a.check({ ...zero, longPerfect: 1 })).toBe(true)
+  expect(b.check({ ...zero, longPerfect: 19 })).toBe(false)
+  expect(b.check({ ...zero, longPerfect: 20 })).toBe(true)
+})
