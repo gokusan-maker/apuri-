@@ -28,5 +28,6 @@ it('記録の部屋にスペル・数の聞き取り・書き取りの自己ベ�
   expect(v('書き取り連続')).toBe('3文')
   localStorage.setItem('eitan:castle-chests', JSON.stringify({ a: [10, 20] }))
   expect(collectRecords().find((r) => r.label === 'あけた宝箱')!.value).toBe('2個')
+  expect(collectRecords().find((r) => r.label === '制覇した城')!.value).toMatch(/^\d+ \/ \d+$/)
   localStorage.clear()
 })
