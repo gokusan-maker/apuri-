@@ -5892,6 +5892,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-tickle',
+    title: 'Why You Cannot Tickle Yourself',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Try tickling yourself, and you will probably feel almost nothing. Yet the same touch from a friend can make you laugh uncontrollably. Why does the brain treat these two experiences so differently?",
+      "The answer seems to lie in prediction. Whenever we move, the brain sends a copy of the movement command to areas that predict its sensory results. If the sensation we actually feel matches the prediction, the brain turns down its response. This is why we do not constantly notice the feeling of our own clothes as we walk, ( A ) we would certainly notice a stranger's hand on our shoulder.",
+      "In the late 1990s, researchers in London tested this idea with a simple machine. Participants moved a handle that controlled a soft piece of foam touching their palm. When the foam moved at exactly the same time as the handle, the touch felt weak. When the researchers added a short delay between the two, participants rated the touch as more ticklish. The longer the delay, the less the brain's prediction matched what actually happened, and the ( B ) intense the feeling became.",
+      "This ability to cancel out the results of our own actions is more than a curiosity. It helps us notice what is truly new in our surroundings. Some scientists also think that problems with this system may help explain certain symptoms, such as feeling that one's own thoughts or movements are ( C ) by someone else.",
+    ],
+    ja: [
+      '自分で自分をくすぐってみても、たぶんほとんど何も感じないだろう。ところが、友だちに同じようにさわられると、笑いが止まらなくなることがある。なぜ脳は、この2つの経験をこれほどちがうようにあつかうのだろうか。',
+      '答えは予測にあるようだ。私たちが体を動かすたびに、脳はその動きの命令の写しを、それによって生じる感覚を予測する部分に送る。実際に感じた感覚が予測と一致すると、脳は反応を弱めるのだ。歩いているときに自分の服がふれる感じにずっと気づくことはないが、知らない人の手が肩にふれれば必ず気づくのは、このためである。',
+      '1990年代の終わりに、ロンドンの研究者たちは、かんたんな機械でこの考えを確かめた。参加者は、手のひらにふれるやわらかいスポンジを動かすハンドルを操作した。スポンジがハンドルとまったく同時に動くと、さわられた感じは弱かった。研究者が両者の間にわずかな時間差を加えると、参加者はよりくすぐったいと評価した。時間差が長いほど、脳の予測は実際に起きたこととずれ、感覚はより強くなったのである。',
+      '自分の行動の結果を打ち消すこの能力は、単なるおもしろい現象ではない。それによって私たちは、まわりで本当に新しいことに気づくことができる。また、このしくみの不具合が、自分の考えや動きがだれかほかの人にあやつられていると感じるといった、ある種の症状を説明する助けになるかもしれないと考える科学者もいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろが文（we would certainly notice …）なので、対比の接続詞 while「～である一方」。during・despite・because of は前置詞の働きで文を続けられない。' },
+      { id: 'B', choices: ['more', 'most', 'much', 'many'], answer: 0, why: 'The 比較級 ～, the 比較級 …「～すればするほど…」。前の The longer に合わせて the more intense。' },
+      { id: 'C', choices: ['controlled', 'controlling', 'control', 'to control'], answer: 0, why: '考えや動きが「あやつられる」側なので受け身 are controlled by ～。' },
+    ],
+    underline: {
+      phrase: 'turns down its response',
+      choices: ['makes its reaction weaker', 'makes its reaction much stronger', 'refuses to respond forever', 'reacts more quickly'],
+      answer: 0,
+      why: 'turn down ～ は「（音量などを）下げる・弱める」。予測どおりの感覚には、脳が反応を弱めるということ。',
+    },
+    order: {
+      words: ['sends', 'a', 'copy', 'of', 'the', 'movement', 'command'],
+      rest: '',
+      answer: 'sends a copy of the movement command',
+      ja: '動きの命令の写しを送る。（a copy of ～＝～の写し）',
+    },
+    tf: [
+      { statement: '自分で自分をくすぐると、ふつうはとても強く感じる。', answer: false, why: '第1段落 you will probably feel almost nothing。' },
+      { statement: '実験では、時間差を加えると、よりくすぐったく感じられた。', answer: true, why: '第3段落 participants rated the touch as more ticklish。' },
+      { statement: 'この能力は、まわりの本当に新しいことに気づく助けになる。', answer: true, why: '第4段落 It helps us notice what is truly new in our surroundings。' },
+    ],
+    qa: [
+      { q: 'What happens when a sensation matches the brain\'s prediction?', choices: ['The brain turns down its response.', 'The brain makes the feeling stronger.', 'The person always starts laughing.', 'The movement stops immediately.'], answer: 0, why: '第2段落 If the sensation we actually feel matches the prediction, the brain turns down its response。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
