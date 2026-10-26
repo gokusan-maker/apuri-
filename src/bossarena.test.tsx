@@ -22,3 +22,8 @@ it('夜は舞台の空が暗くなり星が出る（夜の舞台はもとから�
   unmount()
   expect(render(<BossArena bg="night" color="#ff0000" night />).container.querySelector('.arena-nightfall')).toBeNull()
 })
+
+it('ボスがいかると舞台が赤く脈打つ（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.boss-figure\.rage \.boss-arena \{ animation: arena-rage/)
+})
