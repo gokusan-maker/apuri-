@@ -1,5 +1,6 @@
 // 記録の部屋：いろいろな自己ベストを1か所に集める（どれも端末の保存データから読むだけ）
 import { loadTotals } from './badges'
+import { loadSealWins } from './boss'
 import { loadBook, totalWins } from './bossbook'
 import { chestsOpened, loadChests } from './castle'
 import { allCastles, conquered } from './castlecollect'
@@ -33,6 +34,7 @@ export function collectRecords(): RecordRow[] {
     { icon: '🔥', label: '最高コンボ', value: `${loadTotals().bestCombo ?? 0}問` },
     { icon: '👑', label: 'パーフェクト', value: `${loadTotals().perfect}回` },
     { icon: '🎁', label: 'あけた宝箱', value: `${chestsOpened(loadChests())}個` },
+    { icon: '🔒', label: 'とくぎ封じ', value: `${loadSealWins()}回` },
     { icon: '🏰', label: '制覇した城', value: `${conquered(allCastles())} / ${allCastles().length}` },
   ]
 }

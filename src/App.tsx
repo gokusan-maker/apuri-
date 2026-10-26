@@ -166,7 +166,7 @@ import { Shop, type ShopTab } from './ShopView'
 import { Onboarding } from './OnboardingView'
 import { ShareButton } from './ShareView'
 import { loadOnboarded, saveOnboarded } from './onboarding'
-import { levelAttack, BOSS_REMATCH_XP, BOSS_XP, BOSSES, HUNTER_TICKETS, loadBossHunter, saveBossHunter, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay } from './boss'
+import { levelAttack, BOSS_REMATCH_XP, BOSS_XP, BOSSES, HUNTER_TICKETS, loadBossHunter, saveBossHunter, DAILY_BOSS_COINS, loadWinStreak, saveWinStreak, STREAK_COINS, STREAK_DRAGON_XP, STREAK_EVERY, loadBoss, loadRushDay, loadRushExDay, RUSH_COINS, RUSH_EX_COINS, saveBoss, saveRushDay, saveRushExDay, loadSealWins } from './boss'
 import { addToday, loadCardsToday, loadTodayCount, loadTodayXp, saveCardsToday, saveTodayCount, saveTodayXp } from './stats'
 import { currentStreakWithFreeze, loadStreak, recordStudyWithFreeze, saveStreak } from './streak'
 import { applyColor, applyTextSize, applyTheme, loadLevels, loadSettings, saveLevels, saveSettings, toggleLevel } from './settings'
@@ -781,6 +781,7 @@ function App() {
       chests: chestsOpened(loadChests()),
       longPerfect: perfectLongCount(),
       trioStreak: loadTrioStreak().count,
+      sealWins: loadSealWins(),
     },
     earned,
   )

@@ -86,3 +86,17 @@ it('とくぎを1回も発動させずに勝つと「とくぎ封じ」でコイ
   expect(screen.getByText(`🔒 とくぎ封じ！ 🪙${SEAL_COINS}`)).toBeInTheDocument()
   expect(got).toContain(SEAL_COINS)
 })
+
+it('とくぎ封じで勝った回数を数え、5回でバッジ・記録の部屋にも出る', async () => {
+  const { loadSealWins } = await import('./boss')
+  const { newlyEarned } = await import('./badges')
+  const { collectRecords } = await import('./records')
+  localStorage.clear()
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={['armor']} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  expect(loadSealWins()).toBe(1)
+  expect(newlyEarned({ answers: 0, correct: 0, streak: 0, sealWins: 5 } as never, {}).map((b) => b.id)).toContain('seal-5')
+  expect(collectRecords().some((r) => r.label === 'とくぎ封じ' && r.value === '1回')).toBe(true)
+})

@@ -508,6 +508,25 @@ export const ARMOR_BLOCK = 2
 export const DRAIN_HEAL = 6
 export const QUICK_RATE = 0.7 // すばやさ：会心の時間が7割に
 export const SEAL_COINS = 5 // とくぎ封じ：とくぎを1回も発動させずに勝つ
+const SEAL_KEY = 'eitan:seal-wins'
+// とくぎ封じで勝った回数
+export function loadSealWins(): number {
+  try {
+    const n = Number(localStorage.getItem(SEAL_KEY) ?? 0)
+    return Number.isFinite(n) && n > 0 ? Math.floor(n) : 0
+  } catch {
+    return 0
+  }
+}
+export function addSealWin(): number {
+  const n = loadSealWins() + 1
+  try {
+    localStorage.setItem(SEAL_KEY, String(n))
+  } catch {
+    /* 保存できなくても動く */
+  }
+  return n
+}
 export function traitOf(name: string): BossTrait {
   // 名前の文字を混ぜて決める（「～モチ」のように似た名前でも、とくぎがばらける）
   const k = [...name].reduce((a, c) => (Math.imul(a, 31) + c.charCodeAt(0)) >>> 0, 7)
