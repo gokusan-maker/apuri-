@@ -3750,3 +3750,8 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes es-gem { 50% { transform: translateY(-5px); filter: drop-shadow(0 0 8px #fff); } }
 .es-crown { animation: es-gem 2.6s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) { .event-scene * { animation: none !important; } }
+/* 新しいゾーンに入ったときの到着のお知らせ（地図の高さは変えず、上にかさねて数秒で消える） */
+.smap-arrive { position: absolute; left: 50%; top: 42%; z-index: 6; display: flex; flex-direction: column; align-items: center; gap: 2px; width: max-content; max-width: 86%; margin: 0; padding: 10px 18px; border-radius: 18px; background: rgb(15 23 42 / 0.82); border: 2px solid var(--accent, #facc15); color: #fff; font-weight: 900; font-size: 0.92rem; text-align: center; box-shadow: 0 0 24px color-mix(in srgb, var(--accent, #facc15) 60%, transparent); pointer-events: none; animation: smap-arrive 4s ease-out both; }
+.smap-arrive-icon { font-size: 2rem; line-height: 1; }
+@keyframes smap-arrive { 0% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); } 12% { opacity: 1; transform: translate(-50%, -50%) scale(1.06); } 18%, 80% { opacity: 1; transform: translate(-50%, -50%) scale(1); } 100% { opacity: 0; transform: translate(-50%, -50%) scale(1); visibility: hidden; } }
+@media (prefers-reduced-motion: reduce) { .smap-arrive { animation: none; transform: translate(-50%, -50%); } }

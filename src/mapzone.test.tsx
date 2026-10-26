@@ -18,3 +18,16 @@ it('ステージの目印はステージごとに変わる', () => {
   expect(stageIcon('sea', 0, 50)).not.toBe(stageIcon('sea', 1, 50))
   expect(stageIcon('sea', 45, 50)).toBe(MAP_ZONES.sea[4].node[45 % 4])
 })
+
+it('前に開いたときより先のゾーンに入ったら「新しいゾーンに到着！」が出る（同じゾーンなら出ない）', async () => {
+  const { render, screen, cleanup } = await import('@testing-library/react')
+  const { StageMap } = await import('./StageMapView')
+  const floors = (now: number) => Array.from({ length: 50 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: i < now }))
+  localStorage.clear()
+  localStorage.setItem('eitan:map-walk', JSON.stringify({ テスト: 8 }))
+  render(<StageMap name="テスト" theme="sea" floors={floors(11)} onOpen={() => {}} />)
+  expect(screen.getByRole('status').textContent).toContain('新しいゾーン「さんごの浅瀬」に到着！')
+  cleanup()
+  render(<StageMap name="テスト" theme="sea" floors={floors(12)} onOpen={() => {}} />)
+  expect(screen.queryByText(/新しいゾーン/)).toBeNull()
+})

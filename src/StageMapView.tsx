@@ -29,6 +29,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
   const zi = zoneIndex(at, total) // いまのゾーン（ステージを進むと景色が変わる）
   const zone = MAP_ZONES[theme][zi]
   const [zFrom, zTo] = zoneRange(zi, total)
+  const arrived = from !== null && from < at && zoneIndex(from, total) < zi // 前に開いたときより先のゾーンに入った
   const shown = mapShown(total, now)
   const h = shown.length * ROW + 60
   const yOf = (i: number) => h - 66 - shown.indexOf(i) * ROW
@@ -91,6 +92,14 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
           <polyline className="smap-road" points={shown.map((i) => `${mapX(i)},${yOf(i)}`).join(' ')} />
           <polyline className="smap-road-dash" points={shown.map((i) => `${mapX(i)},${yOf(i)}`).join(' ')} />
         </svg>
+        {arrived && (
+          <p className="smap-arrive" role="status">
+            <span className="smap-arrive-icon" aria-hidden="true">
+              {zone.icon}
+            </span>
+            新しいゾーン「{zone.name}」に到着！
+          </p>
+        )}
         <span className="smap-zone" aria-label={`ゾーン${zi + 1}：${zone.name}（ステージ${zFrom}〜${zTo}）`}>
           {zone.icon} {zone.name}
         </span>
