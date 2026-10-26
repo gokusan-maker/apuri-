@@ -7227,6 +7227,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-gap-year',
+    title: 'Taking a Gap Year',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In countries such as the United Kingdom and Australia, many young people take a \"gap year\" between finishing high school and starting university. During this year, they might work to save money, volunteer abroad, or travel. The idea is still unusual in Japan, ( A ) most students go straight to university.",
+      "Supporters say a gap year helps students grow. By living on their own and facing new challenges, they become more independent. Some also discover what they really want to study, so they are less likely to change their major later. Some universities even encourage students ( B ) a gap year.",
+      "Others, however, point out the risks. A year away from studying can make it harder to return to schoolwork, and traveling abroad can be expensive. Students from families with less money may not be able to enjoy the same experiences, ( C ) could make inequality worse.",
+      "In the end, a gap year is neither good nor bad in itself. What matters is how it is used. A year spent with a clear plan can be valuable, while a year without one may simply be lost.",
+    ],
+    ja: [
+      'イギリスやオーストラリアなどの国では、多くの若者が、高校を卒業してから大学に入るまでの間に「ギャップイヤー」をとる。この1年の間に、お金をためるために働いたり、海外でボランティアをしたり、旅をしたりする。ほとんどの学生がまっすぐ大学に進む日本では、この考え方はまだめずらしい。',
+      '支持する人たちは、ギャップイヤーは学生を成長させると言う。自分で暮らし、新しい困難に立ち向かうことで、学生はより自立する。本当に学びたいことを見つける人もいるので、あとで専攻を変えることが少なくなる。学生にギャップイヤーをとるようすすめる大学さえある。',
+      'しかし、危険を指摘する人もいる。1年間勉強から離れると学校の勉強にもどりにくくなることがあり、海外旅行はお金がかかることもある。お金の少ない家庭の学生は同じ経験を楽しめないかもしれず、それが不平等を大きくするおそれがある。',
+      '結局のところ、ギャップイヤーはそれ自体がよいものでも悪いものでもない。大切なのは、それがどう使われるかだ。はっきりした計画をもってすごした1年は価値あるものになりうるが、計画のない1年はただ失われるだけかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'Japan（場所）を説明し、うしろは欠けのない文（most students go …）なので関係副詞 where。which・what はうしろに欠けた語が必要、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['to take', 'taking', 'take', 'taken'], answer: 0, why: 'encourage ＋ 人 ＋ to ＋ 原形「人に～するようすすめる」。' },
+      { id: 'C', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（同じ経験を楽しめないこと）を受ける非制限用法の which。that はコンマのあとで使えない、what は先行詞をとらない、it だとコンマだけで文がつながってしまう。' },
+    ],
+    underline: {
+      phrase: 'in itself',
+      choices: ['by its own nature', 'at the end', 'for a moment', 'in public'],
+      answer: 0,
+      why: 'in itself は「それ自体は・本来は」。by its own nature が近い。',
+    },
+    order: {
+      words: ['What', 'matters', 'is', 'how'],
+      rest: 'it is used',
+      answer: 'What matters is how',
+      ja: '大切なのは、どう～かだ（what matters「大切なこと」が主語）',
+    },
+    tf: [
+      { statement: 'ギャップイヤーは、日本ではまだめずらしい。', answer: true, why: '第1段落 The idea is still unusual in Japan。' },
+      { statement: '支持する人は、ギャップイヤーで学生が自立できると言う。', answer: true, why: '第2段落 they become more independent。' },
+      { statement: '筆者は、ギャップイヤーはいつも時間のむだだと考えている。', answer: false, why: '第4段落 a gap year is neither good nor bad in itself. What matters is how it is used。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why might gap years make inequality worse?', choices: ['Students from families with less money may not enjoy the same experiences.', 'Universities only accept students who took a gap year.', 'Gap years are only allowed in the United Kingdom.', 'Traveling abroad is free for some students.'], answer: 0, why: '第3段落 Students from families with less money may not be able to enjoy the same experiences, which could make inequality worse。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
