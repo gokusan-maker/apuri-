@@ -8012,6 +8012,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-beavers',
+    title: "Nature's Engineers",
+    level: 'TOEFL・IELTS（環境）',
+    paragraphs: [
+      "Beavers are sometimes called nature's engineers. Using branches, stones, and mud, they build dams across streams. The water collects behind the dam and forms a pond, ( A ) the beavers build a home called a lodge.",
+      "These ponds change the landscape in important ways. They create wetlands that provide homes for fish, frogs, insects, and birds. Because the water moves slowly, mud and pollution settle to the bottom, so the water ( B ) flows downstream is often cleaner.",
+      "Beaver ponds also help people. During heavy rain, they hold back water and can reduce flooding in towns below. In dry seasons, they release water slowly, keeping streams flowing longer.",
+      "In some parts of Europe, beavers disappeared long ago because they were hunted for their fur. Recently, several countries have brought them back. Not everyone is pleased, ( C ), because beaver dams can flood farmland. Finding ways for people and beavers to live together remains a challenge.",
+    ],
+    ja: [
+      'ビーバーは、ときに「自然の技術者」とよばれる。枝や石、どろを使って、小川にダムを作るのだ。ダムのうしろに水がたまって池ができ、ビーバーはそこにロッジとよばれる巣を作る。',
+      'こうした池は、景色を大切な形で変える。魚、カエル、虫、鳥のすみかとなる湿地を生み出すのだ。水がゆっくり流れるので、どろやよごれが底にしずみ、下流へ流れていく水はきれいになっていることが多い。',
+      'ビーバーの池は人間の役にも立つ。大雨のときには水をせき止め、下流の町の洪水を減らすことができる。かわいた季節には水を少しずつ流し、小川が長く流れ続けるようにする。',
+      'ヨーロッパの一部では、毛皮のために狩られたせいで、ビーバーはずっと昔にいなくなった。最近、いくつかの国がビーバーをもどしている。しかし、だれもが喜んでいるわけではない。ビーバーのダムで農地が水びたしになることがあるからだ。人とビーバーがともに暮らす方法を見つけることは、今も課題である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'who'], answer: 0, why: 'コンマのあとで a pond（場所）を説明し、うしろは欠けのない文（the beavers build a home）なので関係副詞 where。which・who はうしろに欠けた語が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'who'], answer: 0, why: '先行詞 the water を説明し、flows の主語になる関係代名詞 that。' },
+      { id: 'C', choices: ['however', 'but', 'although', 'despite'], answer: 0, why: '文の中にコンマではさんで入れられるのは副詞の however「しかし」。but・although は接続詞、despite は前置詞。' },
+    ],
+    underline: {
+      phrase: 'settle',
+      choices: ['sink and stay', 'fly away', 'grow quickly', 'mix together'],
+      answer: 0,
+      why: 'settle to the bottom は「底にしずんでたまる」。',
+    },
+    order: {
+      words: ['hold', 'back', 'water'],
+      rest: '',
+      answer: 'hold back water',
+      ja: '水をせき止める（hold back ～「～をおさえる・せき止める」）',
+    },
+    tf: [
+      { statement: 'ビーバーは、枝や石、どろでダムを作る。', answer: true, why: '第1段落 Using branches, stones, and mud, they build dams。' },
+      { statement: 'ビーバーの池は、下流の水をよごす。', answer: false, why: '第2段落 the water that flows downstream is often cleaner。' },
+      { statement: 'ビーバーがもどってくることを、すべての人が喜んでいる。', answer: false, why: '第4段落 Not everyone is pleased。' },
+    ],
+    qa: [
+      { q: 'How can beaver ponds help towns during heavy rain?', choices: ['They hold back water and reduce flooding.', 'They make the rain stop.', 'They send all the water to the towns quickly.', 'They keep the beavers away from towns.'], answer: 0, why: '第3段落 During heavy rain, they hold back water and can reduce flooding in towns below。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
