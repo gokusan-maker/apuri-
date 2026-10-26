@@ -5282,6 +5282,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-beach-cleanup',
+    title: 'A Morning at the Beach',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last summer, my friend Aoi asked me to join a beach cleanup. I said yes, but to be honest, I was not very excited. I thought it would be hot and boring. On Sunday morning, we met at the beach with about thirty other people, ( A ) were holding bags and gloves.",
+      "At first, the beach looked clean. But when I looked closely, I found many small pieces of plastic in the sand. There were bottle caps, broken straws, and tiny colorful pieces I could not even name. A woman from the group told us that small pieces of plastic like these are sometimes eaten by fish and birds. I was shocked ( B ) hear that.",
+      "In two hours, our group collected more than fifty bags of trash. My back hurt, but I felt proud. Aoi smiled and said, \"The beach looks happier now.\"",
+      "Since that day, I have changed some of my habits. I carry my own bottle, and I say no to plastic straws. These are small things, but I believe that if many people do small things, the sea will become cleaner. Next summer, I want to invite my family ( C ) the cleanup with me.",
+    ],
+    ja: [
+      '去年の夏、友だちのアオイが私を海岸のそうじにさそってくれました。私は「いいよ」と答えましたが、正直に言うと、あまり乗り気ではありませんでした。暑くてたいくつだろうと思っていたのです。日曜日の朝、私たちは海岸で、袋と手ぶくろを持ったほかの30人ほどの人たちと集まりました。',
+      'はじめ、海岸はきれいに見えました。でもよく見ると、砂の中にたくさんの小さなプラスチックのかけらが見つかりました。ペットボトルのふた、折れたストロー、それに名前もわからない小さな色とりどりのかけらがありました。グループの女の人が、こうした小さなプラスチックのかけらは、魚や鳥に食べられてしまうことがあると教えてくれました。私はそれを聞いてショックを受けました。',
+      '2時間で、私たちのグループは50袋以上のごみを集めました。腰が痛くなりましたが、私はほこらしい気持ちになりました。アオイはほほえんで「海岸がうれしそうに見えるね」と言いました。',
+      'その日から、私はいくつかの習慣を変えました。自分の水とうを持ち歩き、プラスチックのストローはことわっています。小さなことですが、たくさんの人が小さなことをすれば、海はもっときれいになると信じています。次の夏は、家族にもいっしょにそうじに参加してもらうつもりです。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: 'コンマのあとで thirty other people（人）を説明し、were holding の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['to', 'for', 'at', 'with'], answer: 0, why: '感情の原因を表す不定詞 be shocked to ＋ 原形「～してショックを受ける」。for・at・with のあとに動詞の原形は続かない。' },
+      { id: 'C', choices: ['to join', 'joining', 'join', 'joined'], answer: 0, why: 'invite 人 to ＋ 原形「人を～するようにさそう」。' },
+    ],
+    tf: [
+      { statement: '筆者は、はじめから海岸のそうじをとても楽しみにしていた。', answer: false, why: '第1段落 to be honest, I was not very excited。' },
+      { statement: '小さなプラスチックのかけらは、魚や鳥に食べられることがある。', answer: true, why: '第2段落 are sometimes eaten by fish and birds。' },
+      { statement: 'グループは2時間で50袋以上のごみを集めた。', answer: true, why: '第3段落 In two hours, our group collected more than fifty bags of trash。' },
+      { statement: '筆者は今もプラスチックのストローをよく使っている。', answer: false, why: '第4段落 I say no to plastic straws。' },
+    ],
+    qa: [
+      { q: 'What does the writer want to do next summer?', choices: ['Invite the family to the cleanup.', 'Stop going to the beach.', 'Buy more plastic bottles.', 'Clean the beach alone.'], answer: 0, why: '第4段落 Next summer, I want to invite my family to join the cleanup with me。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
