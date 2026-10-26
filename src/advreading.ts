@@ -6796,6 +6796,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-orientation',
+    title: 'Memo: Orientation for New Employees',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all department managers: Next month, twelve new employees will join our company. To help them settle in quickly, Human Resources will hold a two-day orientation on May 8 and 9 in Conference Room B.",
+      "On the first day, the new staff will learn about our company's history, rules, and safety procedures. On the second day, they will visit each department and meet the people ( A ) they will be working with. We would like each manager to give a short talk of about ten minutes explaining what your team does.",
+      "In addition, we are asking each department to choose one experienced employee to act as a \"buddy\" for the new staff. Buddies will answer everyday questions, such as where to find supplies or how to book a meeting room, ( B ) the first month.",
+      "Please send the name of your buddy to Human Resources by April 25. If you are unable to give your talk on May 9, let us know as soon as possible so that we can ( C ) the schedule. Thank you for your cooperation. Human Resources Department",
+    ],
+    ja: [
+      '部長の皆さまへ。来月、12名の新入社員が入社します。早くなじめるように、人事部は5月8日と9日の2日間、会議室Bでオリエンテーションを行います。',
+      '1日目、新入社員は会社の歴史・規則・安全の手順を学びます。2日目は各部署をたずね、いっしょに働くことになる人たちと会います。各部長には、チームの仕事を説明する10分ほどの短いお話をお願いしたいと思います。',
+      'さらに、各部署から経験のある社員を1人選び、新入社員の「バディ」になってもらうようお願いしています。バディは最初の1か月の間、備品の場所や会議室の予約のしかたなど、日々の質問に答えます。',
+      'バディの名前を4月25日までに人事部へお送りください。5月9日にお話ができない場合は、予定を調整できるよう、できるだけ早くお知らせください。ご協力ありがとうございます。人事部',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whom', 'whose', 'what', 'where'], answer: 0, why: '先行詞 the people（人）で、work with の目的語が欠けているので関係代名詞 whom。whose のうしろには名詞が必要、what は先行詞をとらない、where はうしろに欠けのない文が必要。' },
+      { id: 'B', choices: ['during', 'while', 'although', 'meanwhile'], answer: 0, why: 'うしろが名詞（the first month）なので前置詞 during「～の間」。while・although は接続詞でうしろに文が必要、meanwhile は副詞。' },
+      { id: 'C', choices: ['adjust', 'adjusting', 'adjusted', 'to adjust'], answer: 0, why: 'so that we can ～ の助動詞 can のあとは原形。adjust「調整する」。' },
+    ],
+    underline: {
+      phrase: 'settle in',
+      choices: ['get used to a new place', 'leave the company', 'pay a fee', 'sit down quietly'],
+      answer: 0,
+      why: 'settle in は「（新しい場所・仕事に）なじむ・落ち着く」。',
+    },
+    order: {
+      words: ['where', 'to', 'find', 'supplies'],
+      rest: '',
+      answer: 'where to find supplies',
+      ja: '備品をどこで見つければよいか（疑問詞＋to 原形）',
+    },
+    tf: [
+      { statement: 'オリエンテーションは2日間行われる。', answer: true, why: '第1段落 a two-day orientation。' },
+      { statement: '新入社員は1日目に各部署をたずねる。', answer: false, why: '第2段落 On the second day, they will visit each department。' },
+      { statement: '各部署はバディの名前を4月25日までに人事部へ送る。', answer: true, why: '第4段落 send the name of your buddy to Human Resources by April 25。' },
+    ],
+    qa: [
+      { q: 'What are managers asked to do on the second day?', choices: ['Give a short talk about their team.', 'Teach the safety procedures.', 'Book a meeting room.', 'Interview the new employees.'], answer: 0, why: '第2段落 We would like each manager to give a short talk … explaining what your team does。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

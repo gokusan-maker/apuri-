@@ -1585,6 +1585,8 @@
 
 - [x] 文法の単元「It is likely that ～ ＝ 人 is likely to ～（文の書きかえ）」を追加（possible は人を主語にできない、のまちがいつき）
 
+- [x] TOEIC に自作のお知らせ文「Memo: Orientation for New Employees」を追加（新入社員研修・185語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
