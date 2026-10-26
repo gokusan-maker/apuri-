@@ -12,7 +12,7 @@ import { LongReading } from './LongReadingView'
 import { LevelPick } from './LevelPickView'
 import { allCastles, conquered } from './castlecollect'
 import { CastleTitleChip } from './CastleCollectView'
-import { ChestTicketContext, RareEggContext, WalkerContext } from './castle'
+import { ChestTicketContext, chestsOpened, loadChests, RareEggContext, WalkerContext } from './castle'
 import { GC_LEVELS, gcFloorsFor, loadGcClears, loadGcLevel, saveGcLevel } from './grammarcastle'
 import { loadWcClears, wordCastleFloorsFor } from './wordcastle'
 import { Reading } from './ReadingView'
@@ -793,6 +793,7 @@ function App() {
       spellStreak: loadSpellBest(),
       numbersBest: loadNumbersBest(),
       dictStreak: loadDictBest(),
+      chests: chestsOpened(loadChests()),
     },
     earned,
   )

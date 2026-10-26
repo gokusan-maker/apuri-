@@ -140,3 +140,13 @@ it('文法のディクテーションで5文連続正解すると「書き取り
   expect(b.check({ ...zero, dictStreak: 4 })).toBe(false)
   expect(b.check({ ...zero, dictStreak: 5 })).toBe(true)
 })
+
+it('宝箱を5個・20個あけるとバッジ（宝箱ハンター・宝箱コレクター）', async () => {
+  const { chestsOpened } = await import('./castle')
+  expect(chestsOpened({ a: [10, 20], b: [10] })).toBe(3)
+  const h = BADGES.find((b) => b.id === 'chest-5')!
+  const c = BADGES.find((b) => b.id === 'chest-20')!
+  expect(h.check({ ...zero, chests: 4 })).toBe(false)
+  expect(h.check({ ...zero, chests: 5 })).toBe(true)
+  expect(c.check({ ...zero, chests: 20 })).toBe(true)
+})

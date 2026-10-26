@@ -31,6 +31,9 @@ export function saveChests(c: Record<string, number[]>): void {
     /* 保存できなくても動く */
   }
 }
+// これまでにあけた宝箱の数（すべての城・地図の合計）
+export const chestsOpened = (c: Record<string, number[]>) => Object.values(c).reduce((n, a) => n + a.length, 0)
+
 // 節目の階：10階ごとと、てっぺんの階（宝箱にレアの卵）
 export const isMilestone = (floor: number, total: number) => floor % CHEST_EVERY === 0 || floor === total
 // あけられる宝箱の階（1から数えた階の番号）
