@@ -4900,6 +4900,49 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-shifting-baseline',
+    title: 'Forgetting What Nature Used to Be',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1995, the marine biologist Daniel Pauly described a problem he called 'shifting baseline syndrome.' Each generation of scientists, he argued, tends to accept the state of nature ( A ) they first encountered at the start of their careers as normal. When fish populations decline further, they measure the loss against this starting point, not against the much richer seas of earlier times.",
+      "The same thing happens to ordinary people. A child who grows up near a river with few birds may think that is simply how rivers are. The child's grandparents might remember the same river full of life, but such memories are often dismissed as exaggeration. As a result, each generation's sense of what is 'natural' becomes a little poorer, and the gradual loss goes largely unnoticed.",
+      "Shifting baselines matter because what we notice shapes what we try to protect. If people do not realize how much has been lost, they are unlikely to demand that it ( B ) restored. Targets for conservation may also be set too low, aiming only to return to the recent past rather than to a healthier state.",
+      "To fight this tendency, researchers have turned to unusual sources of information, such as old photographs, fishing records, and even restaurant menus, ( C ) reveal which species were once common. Listening carefully to the memories of older people can help too. By recovering a longer view of the past, we can better judge how much nature has changed and what is worth restoring.",
+    ],
+    ja: [
+      '1995年、海洋生物学者のダニエル・ポーリーは「シフティング・ベースライン症候群」とよぶ問題を説明した。彼によれば、科学者の各世代は、研究を始めたころにはじめて目にした自然の状態を、ふつうのものとして受け入れがちだという。魚の数がさらに減ると、彼らはその損失を、昔のもっと豊かな海とではなく、この出発点とくらべて測ってしまうのである。',
+      '同じことは、ふつうの人にも起こる。鳥の少ない川の近くで育った子どもは、川とはそういうものだと思うかもしれない。その子の祖父母は、同じ川が生き物でいっぱいだったことを覚えているかもしれないが、そうした記憶は大げさだとして相手にされないことが多い。その結果、各世代の「自然な状態」の感覚は少しずつ貧しくなり、ゆるやかな損失はほとんど気づかれないままになる。',
+      'ベースラインの移り変わりが重要なのは、何に気づくかが、何を守ろうとするかを左右するからだ。どれほど多くが失われたかに気づかなければ、人々はそれをもとにもどすよう求めることはまずないだろう。また、保全の目標が低く設定されすぎ、より健全な状態ではなく、最近の過去にもどることしか目指さないこともある。',
+      'この傾向に対抗するため、研究者たちは、古い写真や漁業の記録、さらにはレストランのメニューといった、かつてどの種がふつうにいたかを明らかにしてくれる変わった情報源に目を向けてきた。お年寄りの記憶に注意深く耳をかたむけることも役に立つ。過去をもっと長い目で取りもどすことで、自然がどれほど変わったか、そして何をもとにもどす価値があるかを、よりよく判断できるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the state of nature を説明し、encountered の目的語が欠けているので関係代名詞 that。what は先行詞をとらず、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['be', 'being', 'to be', 'been'], answer: 0, why: 'demand that S (should) 原形。要求を表す動詞のあとの that 節では原形 be を使う（受け身 be restored）。' },
+      { id: 'C', choices: ['which', 'that', 'what', 'they'], answer: 0, why: 'コンマのあとで前の情報源を受け、reveal の主語になる非制限用法の which。that はコンマのあとに使えず、what は先行詞をとらず、they では2つの文がつながらない。' },
+    ],
+    underline: {
+      phrase: 'goes largely unnoticed',
+      choices: ['is mostly not noticed by people', 'is quickly reported in the news', 'is completely stopped', 'is noticed by almost everyone'],
+      answer: 0,
+      why: 'go unnoticed は「気づかれないままである」、largely は「大部分は・ほとんど」。損失がほとんどだれにも気づかれない、ということ。',
+    },
+    order: {
+      words: ['measure', 'the', 'loss', 'against', 'this', 'starting', 'point'],
+      rest: '',
+      answer: 'measure the loss against this starting point',
+      ja: 'その損失を、この出発点とくらべて測る。（measure A against B＝A を B とくらべて測る）',
+    },
+    tf: [
+      { statement: 'ポーリーによれば、科学者は研究を始めたころの自然の状態をふつうだと考えがちだ。', answer: true, why: '第1段落 tends to accept the state of nature that they first encountered … as normal。' },
+      { statement: '祖父母の記憶は、いつも正確なものとして大切にされている。', answer: false, why: '第2段落 such memories are often dismissed as exaggeration。' },
+      { statement: '研究者は、レストランのメニューも情報源として使っている。', answer: true, why: '第4段落 old photographs, fishing records, and even restaurant menus。' },
+      { statement: '筆者は、保全の目標は最近の過去にもどることで十分だと考えている。', answer: false, why: '第3段落 Targets … may also be set too low, aiming only to return to the recent past。' },
+    ],
+    qa: [
+      { q: 'Why does the writer think shifting baselines matter?', choices: ['Because what we notice shapes what we try to protect.', 'Because fish are becoming more common.', 'Because old photographs are often fake.', 'Because children do not like rivers.'], answer: 0, why: '第3段落 Shifting baselines matter because what we notice shapes what we try to protect。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
