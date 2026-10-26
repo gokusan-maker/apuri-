@@ -33,6 +33,7 @@ export function GrammarDict({ unit, onBack, onAnswer }: Props) {
           <p className="level-up">
             {score} / {unit.examples.length} 文正解
           </p>
+          {score === unit.examples.length && unit.examples.length > 0 && <p className="wc-perfect">🏆 パーフェクト！ 全文正解</p>}
           {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解{best > record ? '　🎉 自己ベスト更新！' : ''}</p>}
           <p className="result-stars" aria-label={`星 ${starsFor(score, unit.examples.length)}`}>
             {'★'.repeat(starsFor(score, unit.examples.length))}

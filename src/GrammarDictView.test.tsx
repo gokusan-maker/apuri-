@@ -51,3 +51,17 @@ it('ディクテーションも続けて正解すると連続正解のコンボ�
   expect(screen.getByText(/🔥 最高 2連続正解/).textContent).toContain('自己ベスト更新') // 結果に最高の連続正解（はじめてなので自己ベスト）
   sp.mockRestore()
 })
+
+it('ディクテーションで全文正解すると「パーフェクト」', async () => {
+  const speech = await import('./speech')
+  const sp = vi.spyOn(speech, 'speak').mockImplementation(() => {})
+  const u = GRAMMAR[0]
+  render(<GrammarDict unit={u} onBack={() => {}} />)
+  for (let i = 0; i < u.examples.length; i++) {
+    tapWords(dictTokens(u.examples[i].en))
+    fireEvent.click(screen.getByText('答えあわせ'))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('🏆 パーフェクト！ 全文正解')).toBeInTheDocument()
+  sp.mockRestore()
+})
