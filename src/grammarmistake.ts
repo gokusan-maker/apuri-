@@ -50,6 +50,8 @@ export const MISTAKES: Record<string, Mistake> = {
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
+  'make-it-a-rule': { wrong: 'I make a rule to walk every day.', right: 'I make it a rule to walk every day.', why: '形式目的語の it をわすれない。' },
+  'take-for-granted': { wrong: 'We take it for grant that water is safe.', right: 'We take it for granted that water is safe.', why: 'for のあとは過去分詞の granted（決まった形）。' },
   'afford-to': { wrong: 'I can\'t afford buying a new car.', right: 'I can\'t afford to buy a new car.', why: 'afford のあとは to ＋ 原形（または名詞）。' },
   'ever-since': { wrong: 'I live here ever since I was a child.', right: 'I have lived here ever since I was a child.', why: '「～以来ずっと」の主節は現在完了形。' },
   'not-long-before': { wrong: 'It will not be long before spring will come.', right: 'It will not be long before spring comes.', why: 'before のかたまりの中は、未来のことでも現在形。' },
