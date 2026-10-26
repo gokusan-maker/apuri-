@@ -101,3 +101,19 @@ it('数の聞き取りは4択：正解1つと、聞きまちがえやすい答�
   }
   expect(numChoices(qs[0])).toContain('30') // thirteen と thirty
 })
+
+it('数の聞き取りで全問正解すると「パーフェクト」', async () => {
+  const { render, screen, fireEvent } = await import('@testing-library/react')
+  const { createElement } = await import('react')
+  const { Numbers } = await import('./NumbersView')
+  const { vi } = await import('vitest')
+  Object.assign(window, { SpeechSynthesisUtterance: class {}, speechSynthesis: { cancel() {}, speak() {}, getVoices: () => [] } })
+  vi.spyOn(Math, 'random').mockReturnValue(0.9) // 毎回 902
+  render(createElement(Numbers, { round: 2 }))
+  for (let i = 0; i < 2; i++) {
+    fireEvent.click(screen.getByRole('button', { name: '902' }))
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  vi.restoreAllMocks()
+  expect(screen.getByText('🏆 パーフェクト！ 全問正解')).toBeInTheDocument()
+})

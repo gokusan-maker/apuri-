@@ -62,6 +62,7 @@ export function Numbers({ onAnswer, round = ROUND }: Props) {
           {score.ok} / {round} 問正解
         </p>
         {best >= 2 && <p className="num-streak">🔥 最高 {best}連続正解</p>}
+        {score.ok === round && <p className="wc-perfect">🏆 パーフェクト！ 全問正解</p>}
         <p className="result-stars" aria-label={`星 ${starsFor(score.ok, round)}`}>
           {'★'.repeat(starsFor(score.ok, round))}
           {'☆'.repeat(3 - starsFor(score.ok, round))}
