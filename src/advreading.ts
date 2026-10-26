@@ -7468,6 +7468,37 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'hs-station-staff',
+    title: 'A Kind Station Worker',
+    level: '高校入試（体験文）',
+    paragraphs: [
+      "Last spring, I went to a city I had never visited before to take part in a piano contest. It was my first time to travel alone by train. I was nervous, but I had checked the route many times ( A ) I left home.",
+      "However, when I arrived at a big station to change trains, I could not find my platform. There were so many signs and people that I did not know where to go. The contest was going to start in one hour, and I began to feel like crying.",
+      "Then a station worker noticed me and asked, \"Are you all right?\" I showed her my ticket and explained my problem. She not only told me the way but also walked with me to the right platform. \"Good luck at your contest,\" she said with a smile. Thanks to her, I was able ( B ) the train.",
+      "At the contest, I did not win a prize, but I played my best. On my way home, I thought about the station worker. She did not have to help me so much, but she did. Since that day, I have tried to help people ( C ) look lost, like I was.",
+    ],
+    ja: [
+      'この前の春、私はピアノのコンテストに出るために、一度も行ったことのない町へ行きました。ひとりで電車に乗って出かけるのは初めてでした。緊張していましたが、家を出る前に何度も道順を確かめていました。',
+      'ところが、乗りかえのために大きな駅に着くと、自分のホームが見つかりませんでした。案内や人がとても多くて、どこへ行けばいいのかわかりませんでした。コンテストは1時間後に始まる予定で、私は泣きたい気持ちになってきました。',
+      'そのとき、ひとりの駅員さんが私に気づいて「だいじょうぶ？」と声をかけてくれました。私はきっぷを見せて、困っていることを説明しました。駅員さんは道を教えてくれただけでなく、正しいホームまでいっしょに歩いてくれました。「コンテスト、がんばってね」と、ほほえんで言ってくれました。駅員さんのおかげで、私は電車に間に合いました。',
+      'コンテストでは賞はとれませんでしたが、全力でひきました。帰り道、私はあの駅員さんのことを考えました。あんなに助けてくれる必要はなかったのに、助けてくれたのです。その日から、私も、あのときの私のように道に迷っていそうな人を助けるようにしています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'during', 'by', 'ago'], answer: 0, why: 'うしろが文（I left home）なので接続詞 before「～する前に」。during・by は前置詞、ago は副詞で、文を続けられない。' },
+      { id: 'B', choices: ['to catch', 'catching', 'catch', 'caught'], answer: 0, why: 'be able to ＋ 原形「～することができる」。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）を説明し、look の主語になる関係代名詞 who。which は物、whose のうしろには名詞が必要、what は先行詞をとらない。' },
+    ],
+    tf: [
+      { statement: '筆者は、以前にもその町へ行ったことがあった。', answer: false, why: '第1段落 a city I had never visited before。' },
+      { statement: '大きな駅で、筆者は乗りかえのホームを見つけられなかった。', answer: true, why: '第2段落 I could not find my platform。' },
+      { statement: '駅員は道を教えただけで、いっしょには行かなかった。', answer: false, why: '第3段落 She not only told me the way but also walked with me to the right platform。' },
+      { statement: '筆者はコンテストで賞をとれなかった。', answer: true, why: '第4段落 I did not win a prize。' },
+    ],
+    qa: [
+      { q: 'What has the writer tried to do since that day?', choices: ['Help people who look lost.', 'Practice the piano every day.', 'Travel alone by train every week.', 'Work at a station.'], answer: 0, why: '第4段落 I have tried to help people who look lost。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
