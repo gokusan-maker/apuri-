@@ -7026,6 +7026,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toefl-paper-money',
+    title: 'The Birth of Paper Money',
+    level: 'TOEFL・IELTS（歴史）',
+    paragraphs: [
+      "For most of history, people paid for goods with coins made of metal such as copper, silver, or gold. Coins were useful, but they were also heavy. A merchant who traveled far to buy large amounts of goods had to carry bags of metal, ( A ) was both tiring and dangerous.",
+      "The solution first appeared in China. Over a thousand years ago, merchants began leaving their coins with trusted shops and receiving paper receipts in return. These receipts could be carried easily and exchanged for coins later. In the early eleventh century, the Song government took control of the system and issued the world's first official paper money.",
+      "When the Italian traveler Marco Polo visited China in the thirteenth century, he was amazed to see people ( B ) pieces of paper as money. In Europe, however, paper money did not appear until much later; the first European banknotes were issued in Sweden in 1661.",
+      "Paper money has one weakness: its value depends entirely on trust. A piece of paper is worth something only ( C ) people believe it can be exchanged for goods. When governments printed too much money, prices rose quickly, and people lost confidence in it. This lesson is still important today.",
+    ],
+    ja: [
+      '歴史のほとんどの間、人々は銅・銀・金などの金属でできた硬貨で品物の代金をはらってきた。硬貨は便利だったが、重くもあった。大量の品物を買うために遠くまで旅する商人は、金属の入った袋を運ばなければならず、それはつかれるうえに危険だった。',
+      'その解決策は、まず中国にあらわれた。1000年以上前、商人たちは信頼できる店に硬貨を預け、そのかわりに紙の受取証を受け取るようになった。この受取証は持ち運びやすく、あとで硬貨と交換することができた。11世紀のはじめ、宋の政府がこのしくみを管理するようになり、世界で最初の公式の紙幣を発行した。',
+      'イタリアの旅行家マルコ・ポーロが13世紀に中国を訪れたとき、人々が紙切れをお金として使っているのを見ておどろいた。しかしヨーロッパでは、紙幣はずっとあとになるまであらわれなかった。ヨーロッパで最初の紙幣は、1661年にスウェーデンで発行されたのである。',
+      '紙幣には1つの弱点がある。その価値は完全に信頼にかかっているということだ。1枚の紙に価値があるのは、それが品物と交換できると人々が信じている間だけである。政府がお金を刷りすぎると、物の値段は急に上がり、人々はお金への信頼を失った。この教訓は今日でも大切である。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の内容（金属の袋を運ぶこと）を受けて説明する、非制限用法の which。that はコンマのあとで使えない、what は先行詞をとらない、it だとコンマだけで文がつながってしまう。' },
+      { id: 'B', choices: ['using', 'used', 'to using', 'uses'], answer: 0, why: 'see ＋ 人 ＋ -ing「人が～しているのを見る」。人々は紙を「使う」側なので using。' },
+      { id: 'C', choices: ['as long as', 'unless', 'despite', 'in case of'], answer: 0, why: 'only as long as ＋ 文「～する間だけ・～するかぎり」。despite・in case of のあとは名詞、only unless とは言わない。' },
+    ],
+    underline: {
+      phrase: 'confidence',
+      choices: ['trust', 'money', 'power', 'interest'],
+      answer: 0,
+      why: 'confidence は「信頼・自信」。lose confidence in ～「～への信頼を失う」。前の文の trust を言いかえている。',
+    },
+    order: {
+      words: ['did', 'not', 'appear', 'until'],
+      rest: 'much later',
+      answer: 'did not appear until',
+      ja: 'ずっとあとになるまであらわれなかった（not ～ until …「…まで～ない」＝…になってはじめて～した）',
+    },
+    tf: [
+      { statement: '紙幣は最初にヨーロッパで生まれた。', answer: false, why: '第2段落 The solution first appeared in China。' },
+      { statement: 'ヨーロッパで最初の紙幣は、1661年にスウェーデンで発行された。', answer: true, why: '第3段落 the first European banknotes were issued in Sweden in 1661。' },
+      { statement: '紙幣の価値は、人々の信頼によって決まる。', answer: true, why: '第4段落 its value depends entirely on trust。' },
+    ],
+    qa: [
+      { q: 'Why did merchants begin leaving their coins with trusted shops?', choices: ['Carrying heavy coins was tiring and dangerous.', 'Coins were not accepted in China.', 'The government ordered them to.', 'Paper was more valuable than gold.'], answer: 0, why: '第1段落 had to carry bags of metal, which was both tiring and dangerous。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

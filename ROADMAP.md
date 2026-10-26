@@ -1635,6 +1635,8 @@
 
 - [x] 文法の単元「前置詞の to ＋ ～ing ②（devote oneself to / be committed to / with a view to）」を追加（よくあるまちがいつき）。これで文法は400単元
 
+- [x] TOEFL（歴史）に自作の長文「The Birth of Paper Money」を追加（紙幣の始まり・207語）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
