@@ -27,7 +27,8 @@ it('スペルの階：5語を書いて4問以上でクリア', () => {
   const f = fl.find((x) => x.direction === 'spell')!
   const before = fl.slice(0, fl.indexOf(f)).map((x) => x.id)
   localStorage.setItem('eitan:wcastle', JSON.stringify(before))
-  render(<WordCastle course="中1" />)
+  const coins = vi.fn()
+  render(<WordCastle course="中1" onChest={coins} />)
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fl.indexOf(f) + 1}階：`) }))
   expect(screen.getByText(WC_GAME_LABEL.spell)).toBeInTheDocument()
   for (let i = 0; i < f.words.length; i++) {
@@ -38,7 +39,8 @@ it('スペルの階：5語を書いて4問以上でクリア', () => {
   }
   act(() => vi.advanceTimersByTime(1500))
   expect(screen.getByText(/クリア！ 5\/5問正解/)).toBeInTheDocument()
-  expect(screen.getByText('⭐ パーフェクト！ 全問正解')).toBeInTheDocument() // 全問正解ならパーフェクトの星
+  expect(screen.getByText(/⭐ パーフェクト！ 全問正解/).textContent).toContain('🪙3 ボーナス') // はじめての全問正解はボーナスのコイン
+  expect(coins).toHaveBeenCalledWith(3)
   expect(screen.getByText('🎉 階クリア！')).toBeInTheDocument() // 紙ふぶきのお祝い
   expect(screen.getByText(/のとびらがひらいた！/)).toBeInTheDocument()
   expect(JSON.parse(localStorage.getItem('eitan:wcastle')!)).toContain(f.id)

@@ -8,13 +8,14 @@ import { usePlaying } from './playing'
 import { Quiz } from './QuizView'
 import { Scramble } from './ScrambleView'
 import { Spell } from './SpellView'
-import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PASS, wcCount, wordCastleFloorsFor, type WcFloor } from './wordcastle'
+import { loadWcClears, saveWcClears, WC_GAME_LABEL, WC_MINIBOSS_COINS, WC_MINIBOSS_PASS, WC_PERFECT_COINS, WC_PASS, wcCount, wordCastleFloorsFor, type WcFloor } from './wordcastle'
 import { courseWords, type CourseId } from './wordcourse'
 
 // 単語の城：単元（10語）ごとに 5問×3階 で登る。1階目は単語の解説から
 export function WordCastle({ course, name = '単語の海', onAnswer, onChest, onSpend, onPlay }: { course: CourseId; name?: string; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void; onChest?: (coins: number) => void; onSpend?: (n: number) => boolean; onPlay?: (on: boolean) => void }) {
   const floors = wordCastleFloorsFor(course)
   const [clears, setClears] = useState(loadWcClears)
+  const [perfectBonus, setPerfectBonus] = useState(false) // いま全問正解ボーナスをもらった
   const [floor, setFloor] = useState<WcFloor | null>(null)
   const [phase, setPhase] = useState<'quiz' | 'done' | 'boss' | 'boss-done'>('quiz')
   const [score, setScore] = useState(0)
@@ -51,6 +52,9 @@ export function WordCastle({ course, name = '単語の海', onAnswer, onChest, o
   const finish = (s: number) => {
     setScore(s)
     setPhase('done')
+    const bonus = total > 0 && s === total && !clears.includes(floor.id)
+    setPerfectBonus(bonus)
+    if (bonus) onChest?.(WC_PERFECT_COINS)
     if (s >= Math.min(WC_PASS, total) && !clears.includes(floor.id)) {
       const c = [...clears, floor.id]
       setClears(c)
@@ -137,7 +141,7 @@ export function WordCastle({ course, name = '単語の海', onAnswer, onChest, o
           <p className={`stage-result${score >= Math.min(WC_PASS, total) ? ' clear' : ''}`}>
             {score >= Math.min(WC_PASS, total) ? `🏰 クリア！ ${score}/${total}問正解` : `あと少し！ ${score}/${total}問（${WC_PASS}問以上でクリア）`}
           </p>
-          {total > 0 && score === total && <p className="wc-perfect">⭐ パーフェクト！ 全問正解</p>}
+          {total > 0 && score === total && <p className="wc-perfect">⭐ パーフェクト！ 全問正解{perfectBonus && onChest ? `　🪙${WC_PERFECT_COINS} ボーナス` : ''}</p>}
           {score >= Math.min(WC_PASS, total) && <FloorClear next={next?.label} floor={floors.findIndex((x) => x.id === floor.id)} total={floors.length} />}
           {score >= Math.min(WC_PASS, total) && floor.floor === 2 && (
             <button className="boss-btn wc-boss-btn" onClick={() => setPhase('boss')}>
