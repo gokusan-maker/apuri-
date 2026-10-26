@@ -7541,6 +7541,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-library-of-things',
+    title: 'Libraries of Things',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When you hear the word \"library,\" you probably think of books. However, some public libraries now lend out much more: tools, sewing machines, camping tents, musical instruments, and even cake pans. These collections are often called \"libraries of things.\"",
+      "The idea is simple. Many items are used only a few times a year. A family ( A ) needs a drill to hang one picture does not really need to own one. By borrowing instead of buying, people can save money and storage space at home.",
+      "Supporters also point to environmental benefits. When fewer products are made, less energy and fewer materials are used. In addition, borrowing allows people to try a new hobby, ( B ) as playing the guitar, without spending a lot of money first.",
+      "There are challenges, of course. Libraries must check that tools are safe and clean them after each use, which takes time and staff. Some items are also returned broken. Even so, many libraries believe these programs help them stay ( C ) to their communities in a changing world.",
+    ],
+    ja: [
+      '「図書館」という言葉を聞くと、たぶん本を思いうかべるだろう。しかし、今ではもっと多くのものを貸し出している公共図書館もある。工具、ミシン、キャンプ用のテント、楽器、さらにはケーキの型まである。こうした品ぞろえは、よく「物の図書館」とよばれる。',
+      '考え方はかんたんだ。多くの品物は、1年に数回しか使われない。絵を1枚かけるためにドリルが必要な家族は、本当はドリルを持っている必要はない。買うかわりに借りることで、人々はお金と家の収納場所を節約できる。',
+      '支持する人たちは、環境へのよい点も挙げる。作られる製品が少なくなれば、使われるエネルギーや材料も少なくなる。さらに、借りることで、ギターをひくことのような新しい趣味を、最初にたくさんのお金を使わずにためすことができる。',
+      'もちろん、課題もある。図書館は道具が安全か確かめ、使われるたびにきれいにしなければならず、それには時間と人手がかかる。こわれて返ってくる品物もある。それでも多くの図書館は、こうした取り組みが、変わっていく世の中で地域の役に立ち続ける助けになると信じている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 A family を説明し、needs の主語になる関係代名詞 that。what は先行詞をとらない、where のうしろは欠けのない文、whose のうしろには名詞が必要。' },
+      { id: 'B', choices: ['such', 'so', 'too', 'very'], answer: 0, why: 'such as ～「たとえば～のような」。so as・too as・very as とは言わない。' },
+      { id: 'C', choices: ['useful', 'usefully', 'use', 'usefulness'], answer: 0, why: 'stay ＋ 形容詞「～のままでいる」。stay useful to ～「～の役に立ち続ける」。' },
+    ],
+    underline: {
+      phrase: 'point to',
+      choices: ['mention as a reason', 'walk toward', 'argue against', 'forget about'],
+      answer: 0,
+      why: 'point to ～ は「（理由・証拠として）～を挙げる・指摘する」。',
+    },
+    order: {
+      words: ['save', 'money', 'and', 'storage', 'space'],
+      rest: 'at home',
+      answer: 'save money and storage space',
+      ja: 'お金と収納場所を節約する',
+    },
+    tf: [
+      { statement: '一部の公共図書館は、本以外の物も貸し出している。', answer: true, why: '第1段落 some public libraries now lend out much more。' },
+      { statement: '借りることで、お金と家の収納場所を節約できる。', answer: true, why: '第2段落 people can save money and storage space at home。' },
+      { statement: '図書館は、道具が安全か確かめる必要がない。', answer: false, why: '第4段落 Libraries must check that tools are safe。' },
+    ],
+    qa: [
+      { q: 'According to the passage, how can a library of things help people try a new hobby?', choices: ['They can try it without spending a lot of money first.', 'They can get free lessons from librarians.', 'They can sell their old tools there.', 'They can keep the items forever.'], answer: 0, why: '第3段落 borrowing allows people to try a new hobby … without spending a lot of money first。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
