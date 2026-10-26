@@ -44,6 +44,7 @@ export const MAP_ZONES: Record<MapTheme, MapZone[]> = {
 }
 
 export const ZONES_PER_MAP = 5
+export const ZONE_COINS = 10 // 新しいゾーンに着いたときのボーナス
 // i 番目（0から）のステージは、どのゾーンか（地図のステージ数を5つに分ける）
 export function zoneIndex(i: number, total: number): number {
   if (total <= 1) return 0

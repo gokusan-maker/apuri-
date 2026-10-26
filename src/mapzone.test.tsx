@@ -25,11 +25,14 @@ it('前に開いたときより先のゾーンに入ったら「新しいゾー�
   const floors = (now: number) => Array.from({ length: 50 }, (_, i) => ({ id: 'f' + i, label: 'S' + i, cleared: i < now }))
   localStorage.clear()
   localStorage.setItem('eitan:map-walk', JSON.stringify({ テスト: 8 }))
-  render(<StageMap name="テスト" theme="sea" floors={floors(11)} onOpen={() => {}} />)
-  expect(screen.getByRole('status').textContent).toContain('新しいゾーン「さんごの浅瀬」に到着！')
+  const coins: number[] = []
+  render(<StageMap name="テスト" theme="sea" floors={floors(11)} onOpen={() => {}} onChest={(n) => coins.push(n)} />)
+  expect(screen.getByRole('status').textContent).toContain('新しいゾーン「さんごの浅瀬」に到着！ 🪙10')
+  expect(coins).toEqual([10]) // 到着ボーナスは1回だけ
   cleanup()
-  render(<StageMap name="テスト" theme="sea" floors={floors(12)} onOpen={() => {}} />)
+  render(<StageMap name="テスト" theme="sea" floors={floors(12)} onOpen={() => {}} onChest={(n) => coins.push(n)} />)
   expect(screen.queryByText(/新しいゾーン/)).toBeNull()
+  expect(coins).toEqual([10])
 })
 
 it('地図の見出しに5つのゾーンのどこまで来たかの点', async () => {

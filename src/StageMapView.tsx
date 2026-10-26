@@ -1,8 +1,8 @@
-import { useContext, useEffect, useState, type CSSProperties } from 'react'
+import { useContext, useEffect, useRef, useState, type CSSProperties } from 'react'
 import { mapRoom, nextChestIn, ChestTicketContext, chestHasTicket, CHEST_COINS, castleNow, isMilestone, loadChests, loadWalk, mapShown, mapX, openableChests, RareEggContext, saveChests, saveWalk, WalkerContext, type MapTheme } from './castle'
 import type { CastleFloor } from './CastleView'
 import { MapScenery } from './MapSceneryView'
-import { MAP_ZONES, stageIcon, zoneIndex, zoneRange } from './mapzone'
+import { MAP_ZONES, stageIcon, ZONE_COINS, zoneIndex, zoneRange } from './mapzone'
 
 // 地図を制覇したとき、次のレベルの地図へ進むボタン
 export type NextMap = { label: string; go: () => void }
@@ -24,6 +24,15 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
   useEffect(() => {
     if (total > 0) saveWalk(name, at)
   }, [name, at, total])
+  // 新しいゾーンに着いたら、1回だけ到着ボーナスのコイン
+  const paid = useRef(false)
+  const reachedNew = total > 0 && from !== null && from < at && zoneIndex(from, total) < zoneIndex(at, total)
+  useEffect(() => {
+    if (reachedNew && onChest && !paid.current) {
+      paid.current = true
+      onChest(ZONE_COINS)
+    }
+  }, [reachedNew, onChest])
   if (total === 0) return null
   const chest = onChest ? openableChests(now, chests[name] ?? [], total)[0] : undefined
   const zi = zoneIndex(at, total) // いまのゾーン（ステージを進むと景色が変わる）
@@ -102,7 +111,7 @@ export function StageMap({ name, floors, onOpen, theme, unit = '階', goLabel = 
             <span className="smap-arrive-icon" aria-hidden="true">
               {zone.icon}
             </span>
-            新しいゾーン「{zone.name}」に到着！
+            新しいゾーン「{zone.name}」に到着！{onChest ? ` 🪙${ZONE_COINS}` : ''}
           </p>
         )}
         <span className="smap-zone" aria-label={`ゾーン${zi + 1}：${zone.name}（ステージ${zFrom}〜${zTo}）`}>
