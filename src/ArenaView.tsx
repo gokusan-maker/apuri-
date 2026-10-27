@@ -175,9 +175,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 {f > ARENA_TOP ? '☁️' : '🌱'}
               </div>
             ) : (
-              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
+              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}${f === ARENA_TOP ? ' summit' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
                 <span className="af-num">{f + 1}階</span>
                 <span className="af-lv">{arenaCourse(f).label}</span>
+                {f === ARENA_TOP && <span className="af-summit">👑 頂上</span>}
                 {arenaTitleIconAt(f) && <span className="af-title" title={`ここから称号「${arenaTitle(f)}」`}>{arenaTitleIconAt(f)}</span>}
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
                 {f === shown && <span className={`af-me${me ? ' has-fig' : ''}`} aria-hidden="true">

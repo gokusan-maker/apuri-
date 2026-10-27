@@ -4173,3 +4173,7 @@ header .event-chips { margin: 0 0 2px; }
 .arena-quick { margin: 0 0 4px; font-weight: 900; color: #fde047; font-style: italic; animation: trait-pop 0.25s ease-out; }
 .arena-q { position: relative; }
 .arena-speak { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); padding: 2px 6px; border: none; border-radius: 8px; background: rgb(255 255 255 / 0.12); font-size: 1rem; }
+/* 闘技場の頂上（15階）は金色 */
+.arena-floor.summit { border-left-color: #facc15; background: linear-gradient(90deg, rgb(250 204 21 / 0.25), rgb(255 255 255 / 0.05)); }
+.arena-floor.summit.here { box-shadow: 0 0 22px rgb(250 204 21 / 0.8); }
+.af-summit { font-size: 0.72rem; color: #fde047; }

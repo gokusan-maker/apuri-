@@ -837,3 +837,13 @@ it('闘技場の単語の問題には 🔊（発音を聞く）ボタン', async
   render(<Arena start={0} onExit={() => {}} />)
   expect(screen.getByRole('button', { name: '発音を聞く' })).toBeInTheDocument()
 })
+
+it('闘技場の頂上（15階）は金色で「👑 頂上」', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { ARENA_TOP } = await import('./arena')
+  localStorage.clear()
+  render(<Arena start={ARENA_TOP} onExit={() => {}} />)
+  const top = document.querySelector('.arena-floor.here')!
+  expect(top.classList.contains('summit')).toBe(true)
+  expect(top.textContent).toContain('👑 頂上')
+})
