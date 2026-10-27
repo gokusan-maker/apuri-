@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaEndlessTicket, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { COURSES } from './wordcourse'
 import { playCorrect, playWrong } from './sound'
@@ -43,6 +43,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
   const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
   const [newRecord, setNewRecord] = useState(false)
+  const [endlessTicket, setEndlessTicket] = useState(false) // この答えで無限の階の50階ごとのチケット
   const [newTitle, setNewTitle] = useState<string | null>(null) // はじめて着いた称号（ガチャチケット1枚）
   const correct = picked !== null && picked === q.answer
   const jump = picked !== null && isArenaJump(correct, streak)
@@ -93,6 +94,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           setNewTitle(arenaTitle(up))
           onTicket?.(1)
         } else setNewTitle(null)
+        // 無限の階では、最高記録で50階ごとにもガチャチケット1枚
+        const et = isArenaEndlessTicket(record, up)
+        setEndlessTicket(et)
+        if (et) onTicket?.(1)
       } else {
         setNewRecord(false)
         setNewTitle(null)
@@ -328,6 +333,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}
+            </p>
+          )}
+          {correct && newRecord && endlessTicket && (
+            <p className="arena-record arena-title-get" role="status">
+              ♾ 無限の階 {nextLv + 1}階 到達！ 🎟ガチャチケット×1
             </p>
           )}
           {correct && newTitle && (

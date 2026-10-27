@@ -925,6 +925,25 @@ it('闘技場：次のレベルまで あと何階 かを出す', async () => {
   expect(screen.getByLabelText('中2レベルまで あと2階')).toBeInTheDocument()
 })
 
+it('闘技場の無限の階：最高記録で50階ごとにガチャチケット', async () => {
+  const { isArenaEndlessTicket, ARENA_ENDLESS } = await import('./arena')
+  const E = ARENA_ENDLESS
+  expect(isArenaEndlessTicket(E + 48, E + 49)).toBe(false)
+  expect(isArenaEndlessTicket(E + 49, E + 50)).toBe(true)
+  expect(isArenaEndlessTicket(E + 48, E + 50)).toBe(true)
+  expect(isArenaEndlessTicket(E + 50, E + 51)).toBe(false)
+  expect(isArenaEndlessTicket(E - 1, E)).toBe(false)
+  expect(isArenaEndlessTicket(E + 99, E + 100)).toBe(true)
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  localStorage.setItem('eitan:arena-best-floor', String(E + 49))
+  const ticket = vi.fn()
+  render(<Arena start={E + 49} onExit={() => {}} onTicket={ticket} />)
+  arenaPick(true)
+  expect(ticket).toHaveBeenCalledWith(1)
+  expect(screen.getByText(`♾ 無限の階 ${E + 51}階 到達！ 🎟ガチャチケット×1`)).toBeInTheDocument()
+})
+
 it('闘技場：前の「レベル」で保存した最高記録は、そのレベルの1階目として読む', async () => {
   const { loadArenaBest, recordArenaBest } = await import('./arena')
   localStorage.clear()

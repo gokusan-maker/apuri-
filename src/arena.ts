@@ -12,6 +12,9 @@ export const ARENA_PER = 20
 export const ARENA_ENDLESS = COURSES.length * ARENA_PER // ここ（0から数えた階）から上は無限の階
 export const ARENA_BEST_COINS = 5 // 最高記録で新しいレベルに着いたとき
 export const ARENA_QUICK_MS = 3000 // 3秒以内に正解すると「はやい！」
+export const ARENA_ENDLESS_TICKET_EVERY = 50 // 無限の階では、最高記録で50階ごとにガチャチケット
+// 最高記録 from → to で、無限の階の50階ごとの区切りをこえたか
+export const isArenaEndlessTicket = (from: number, to: number) => to > from && to >= ARENA_ENDLESS + ARENA_ENDLESS_TICKET_EVERY && Math.floor((to - ARENA_ENDLESS) / ARENA_ENDLESS_TICKET_EVERY) > Math.floor((Math.max(from, ARENA_ENDLESS) - ARENA_ENDLESS) / ARENA_ENDLESS_TICKET_EVERY)
 export const ARENA_ENDLESS_EVERY = 10 // 無限の階では10階ごとにお祝い
 const LAST = COURSES.length - 1
 const atLeast0 = (f: number) => Math.max(0, Math.floor(f))
