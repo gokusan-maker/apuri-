@@ -9070,6 +9070,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-motion-sickness',
+    title: 'Why Do We Get Carsick?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many people feel sick when they read a book in a moving car. Their heads start to ache, and they may even feel like throwing up. This uncomfortable feeling is called motion sickness, and it can also happen on boats, planes, and amusement park rides.",
+      "The most common explanation is that the brain receives information that does not match. When you are reading in a car, your eyes are fixed on a page that is not moving, so they tell the brain that you are sitting still. ( A ), the balance organs in your inner ear feel every turn and bump, so they report that you are moving.",
+      "Because these two messages disagree, the brain becomes confused. Some scientists think the brain reacts as if the body ( B ) eaten something harmful, which is why people feel sick.",
+      "Fortunately, there are simple ways to reduce motion sickness. Looking out of the window at the horizon helps the eyes and ears send the same message. Sitting in the front seat, getting fresh air, and avoiding reading during the ride can also help. Interestingly, drivers rarely get carsick, probably because they can predict every movement of the car.",
+    ],
+    ja: [
+      '動いている車の中で本を読むと、気分が悪くなる人は多い。頭が痛くなり、はき気がすることさえある。この不快な感じは乗り物酔いとよばれ、船や飛行機、遊園地の乗り物でも起こることがある。',
+      'もっともよく知られている説明は、脳が食いちがう情報を受け取るというものだ。車の中で本を読んでいると、目は動いていないページに向けられているので、自分はじっとすわっていると脳に伝える。一方で、内耳にあるバランスをとる器官は、カーブやゆれを1つ残らず感じとるので、自分は動いていると伝える。',
+      'この2つの信号が食いちがうため、脳は混乱する。脳は、まるで体が何か有害なものを食べたかのように反応するのだと考える科学者もいて、それが気分が悪くなる理由だという。',
+      'さいわい、乗り物酔いを減らす簡単な方法がある。窓の外の地平線をながめると、目と耳が同じ信号を送るのに役立つ。前の席にすわること、新鮮な空気を入れること、乗っている間に本を読まないことも役に立つ。興味深いことに、運転している人はめったに車酔いしない。おそらく車の動きを1つ1つ予測できるからだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Meanwhile', 'While', 'Because', 'Although'], answer: 0, why: 'コンマのあとに文が1つだけ続くので、副詞の Meanwhile「一方で」。While・Because・Although は接続詞なので、2つの文をつなぐ形が必要。' },
+      { id: 'B', choices: ['had', 'has been', 'having', 'to have'], answer: 0, why: 'as if のあとは仮定法。「（実際にはそうではないのに）食べたかのように」なので過去完了 had eaten。has been eaten は受け身になり、having・to have では動詞がない。' },
+    ],
+    underline: {
+      phrase: 'predict',
+      choices: ['know before it happens', 'forget quickly', 'feel strongly', 'stop suddenly'],
+      answer: 0,
+      why: 'predict は「予測する」。起こる前にわかるということ。',
+    },
+    order: {
+      words: ['helps', 'the', 'eyes', 'and', 'ears', 'send'],
+      rest: 'the same message',
+      answer: 'helps the eyes and ears send',
+      ja: '目と耳が同じ信号を送るのを助ける（help ＋ 目的語 ＋ 原形）',
+    },
+    tf: [
+      { statement: '乗り物酔いは、車の中でしか起こらない。', answer: false, why: '第1段落 it can also happen on boats, planes, and amusement park rides。' },
+      { statement: '本を読んでいるとき、目は「じっとしている」と脳に伝える。', answer: true, why: '第2段落 they tell the brain that you are sitting still。' },
+      { statement: '運転している人は、乗り物酔いしやすい。', answer: false, why: '第4段落 drivers rarely get carsick。' },
+    ],
+    qa: [
+      { q: 'Why does looking at the horizon help?', choices: ['It helps the eyes and ears send the same message.', 'It makes the car move more slowly.', 'It helps people fall asleep.', 'It stops the inner ear from working.'], answer: 0, why: '第4段落 Looking out of the window at the horizon helps the eyes and ears send the same message。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
