@@ -10,6 +10,7 @@ import { speak } from './speech'
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
 // 1レベル20階。レベルの区切りをこえると「LEVEL UP!」の演出。いちばん上のレベルの上は無限の階
 const SHAFT = 2 // いまの階の上下に見せる階の数
+const GOAL = 5 // この回の目標：はじめの階から5階上
 const CLIMB_EVERY = 10 // この回で10階のぼるごとにお祝い
 const SHIELD_EVERY = 5 // 5連続正解ごとに盾（次のまちがいで1回だけ階が落ちない）
 const floorColor = (f: number) => (isArenaEndless(f) ? `hsl(${(f * 37) % 360} 80% 55%)` : `hsl(${150 - (arenaLevel(f) ?? 0) * 11} 75% 48%)`)
@@ -33,6 +34,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [base, setBase] = useState(start) // この回のはじめの階（きょう何階のぼったかを数える）
+  const [goalDone, setGoalDone] = useState(false)
+  const [goalJust, setGoalJust] = useState(false) // この答えで目標に着いた
   const [climbed, setClimbed] = useState<number | null>(null) // この答えで「きょう10階ごと」に着いた
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
   const [prevBest, setPrevBest] = useState(loadArenaBest)
@@ -67,6 +70,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       setShield(false)
       setGuards(guards + 1)
     }
+    const reach = i === q.answer && !goalDone && arenaNext(lv, true, streak + 1) >= base + GOAL
+    setGoalJust(reach)
+    if (reach) setGoalDone(true)
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
@@ -173,6 +179,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setGuards(0)
             setTop(lv)
             setBase(lv)
+            setGoalDone(false)
           }}
         >
           ⚔ 続きから戦う
@@ -191,6 +198,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setLv(start)
               setTop(start)
               setBase(start)
+              setGoalDone(false)
               setQ(arenaQuestionAt(start, 0))
               setPicked(null)
             }}
@@ -269,6 +277,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <span className="arena-now-title">{arenaTitle(shown)}</span>
       </p>
       {/* 次のレベルまでの進み（1レベル20階） */}
+      {!goalDone && <p className="arena-goal">🎯 この回の目標：{base + GOAL + 1}階</p>}
       <div className="arena-tonext" aria-label={`${arenaToNext(shown).label}まで あと${arenaToNext(shown).floors}階`}>
         <span className="atn-bar" aria-hidden="true">
           <i style={{ width: `${arenaToNext(shown).progress * 100}%` }} />
@@ -305,6 +314,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
           {correct && quick && <p className="arena-quick">{quicks >= 3 ? `⚡⚡⚡ 電光石火！ ${quicks}問続けて はやい！` : '⚡ はやい！'}</p>}
+          {correct && goalJust && <p className="arena-record">🎯 目標達成！ {base + GOAL + 1}階に着いた</p>}
           {correct && climbed && <p className="arena-record">🏆 この回で {climbed}階 のぼった！</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">

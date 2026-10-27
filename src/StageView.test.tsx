@@ -877,6 +877,21 @@ it('闘技場の結果：最高記録を更新できなかったら、あと何�
   expect(screen.getByText('最高記録 11階（中1レベル）（あと5階で更新）')).toBeInTheDocument()
 })
 
+it('闘技場：この回の目標（はじめの階から5階上）に着くと「🎯 目標達成！」', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={40} onExit={() => {}} />)
+  expect(screen.getByText('🎯 この回の目標：46階')).toBeInTheDocument()
+  let done = false
+  for (let k = 0; k < 5 && !done; k++) {
+    arenaPick(true)
+    done = !!screen.queryByText('🎯 目標達成！ 46階に着いた')
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(done).toBe(true)
+  expect(screen.queryByText(/この回の目標/)).toBeNull()
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
