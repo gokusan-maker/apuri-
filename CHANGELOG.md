@@ -2625,3 +2625,4 @@
 - 2026-10-27: 文法に「前置詞 from ～ to … の熟語 from top to bottom ／ from head to toe ／ from door to door」の単元を追加
 - 2026-10-27: 長文読解（TOEIC お知らせ文）に「駐車場の補修工事のお知らせ」を追加
 - 2026-10-27: ボスの城の問題の階のはじめに「⚔ スタート！」の合図を表示
+- 2026-10-27: 文法に「前置詞の熟語㉞ under repair ／ under discussion ／ under way（修理中で・話し合い中で・進行中で）」の単元を追加
