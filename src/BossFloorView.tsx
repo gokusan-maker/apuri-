@@ -39,7 +39,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   const bossHp = Math.max(0, pass - score)
   const bossView = boss && (
     <div className={`bfloor-boss${bossHp === 0 ? ' down' : ''}`}>
-      <div className="boss-figure">
+      <div className={`boss-figure${hurt ? ' attack' : ''}`}>
         <BossArena bg="castle" color={boss.color} />
         <BossFigure hit={picked !== null && picked === q?.answer} look={boss} />
       </div>
@@ -81,6 +81,19 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <p className="bfloor-title">{title}</p>
       {bossView}
       {lifeView}
+      {/* まちがえたら階のボスのこうげき（ボス戦と同じ演出） */}
+      {hurt && boss && (
+        <>
+          <div key={`atk${i}`} className="boss-atk-fx" aria-hidden="true">
+            <span className="slash s1" />
+            <span className="slash s2" />
+            <span className="slash s3" />
+          </div>
+          <p className="bfloor-atk" role="status">
+            💥 {boss.name}のこうげき！ ライフ -1
+          </p>
+        </>
+      )}
       <p className="bfloor-count">
         {i + 1} / {qs.length}
       </p>

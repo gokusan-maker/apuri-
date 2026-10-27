@@ -545,6 +545,21 @@ it('ボスの城の問題の階：まちがえると自分のライフがへり�
   expect(screen.getByRole('status')).toHaveTextContent('💀 ライフがなくなった… 0/5問正解')
 })
 
+it('ボスの城の問題の階：まちがえると階のボスがこうげきしてくる', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs, floorBossLook } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  const boss = floorBossLook('中1', 1)
+  render(<BossFloor title="t" qs={qs} boss={boss} onDone={() => {}} onBack={() => {}} />)
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === qs[0].choices[qs[0].answer])!)
+  expect(document.querySelector('.boss-atk-fx')).toBeNull()
+  fireEvent.click(screen.getByText('次へ'))
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent !== qs[1].choices[qs[1].answer])!)
+  expect(document.querySelector('.boss-atk-fx')).not.toBeNull()
+  expect(document.querySelector('.bfloor .boss-figure')!.classList.contains('attack')).toBe(true)
+  expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
+})
+
 it('ボスの城の問題の階：全問正解でパーフェクト、前の最高より上なら自己ベスト更新', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')
