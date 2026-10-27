@@ -59,6 +59,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-time': { wrong: 'At presently, she lives in Osaka.', right: 'At present, she lives in Osaka.', why: 'at present「現在は」。at のあとは present（presently は副詞なので at のあとに置かない）。' },
   'prep-idiom-cost': { wrong: 'He wants to win at all cost.', right: 'He wants to win at all costs.', why: 'at all costs「どんなことをしても」。costs と複数形にする。' },
   'prep-idiom-way': { wrong: 'Your bag is on the way. Please move it.', right: 'Your bag is in the way. Please move it.', why: 'in the way「じゃまになって」。on the way は「とちゅうで」なので意味がちがう。' },
+  'prep-idiom-on-at': { wrong: 'On averagely, I sleep seven hours.', right: 'On average, I sleep seven hours.', why: 'on average「平均して」。on のあとは名詞 average（averagely という形は使わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
