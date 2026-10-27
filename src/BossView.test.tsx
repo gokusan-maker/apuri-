@@ -87,6 +87,26 @@ describe('ボス戦', () => {
     expect((container.querySelector('.battle-v2') as HTMLElement).style.getPropertyValue('--boss')).toBe(BOSSES['中1'].color)
   })
 
+  it('3コンボで問題のパネルが燃え、大コンボで青い炎になる', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} hp={9999} onWin={() => {}} onExit={() => {}} />)
+    const en = () => document.querySelector('.boss .en')!
+    for (let n = 0; n < 3; n++) {
+      expect(en().classList.contains('on-fire')).toBe(false)
+      answer(true)
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(en().classList.contains('on-fire')).toBe(true)
+    expect(en().classList.contains('blue')).toBe(false)
+    for (let n = 0; n < 2; n++) {
+      answer(true)
+      fireEvent.click(screen.getByText('次へ'))
+    }
+    expect(en().classList.contains('blue')).toBe(true)
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+    expect(en().classList.contains('on-fire')).toBe(false)
+  })
+
   it('ボスのHPが数字でも出て、正解すると減る', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
     expect(screen.getByText('のこりHP 300 / 300')).toBeInTheDocument()

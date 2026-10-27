@@ -3971,3 +3971,9 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-goal.done span { color: #16a34a; }
 .bfloor-perfect { margin: 4px 0; font-size: 1.1rem; font-weight: 900; color: #f59e0b; animation: trait-pop 0.3s ease-out; }
 .bfloor-best { margin: 2px 0 6px; font-size: 0.85rem; font-weight: 800; color: #16a34a; }
+/* コンボ中の問題パネル：炎のオーラ */
+.battle-v2 .en.on-fire { border-color: #fb923c; animation: v2-fire 0.9s ease-in-out infinite alternate; }
+.battle-v2 .en.on-fire.blue { border-color: #38bdf8; animation-name: v2-fire-blue; }
+@keyframes v2-fire { from { box-shadow: 0 0 10px rgb(249 115 22 / 0.5), inset 0 -10px 18px rgb(249 115 22 / 0.25); } to { box-shadow: 0 0 22px rgb(249 115 22 / 0.85), inset 0 -16px 26px rgb(250 204 21 / 0.35); } }
+@keyframes v2-fire-blue { from { box-shadow: 0 0 12px rgb(56 189 248 / 0.55), inset 0 -10px 18px rgb(56 189 248 / 0.25); } to { box-shadow: 0 0 26px rgb(56 189 248 / 0.9), inset 0 -16px 26px rgb(165 243 252 / 0.4); } }
+@media (prefers-reduced-motion: reduce) { .battle-v2 .en.on-fire { animation: none; box-shadow: 0 0 16px rgb(249 115 22 / 0.7); } }

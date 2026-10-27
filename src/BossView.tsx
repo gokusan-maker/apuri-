@@ -1051,7 +1051,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               </p>
             </>
           )}
-          <p className={`en${'passage' in q ? ' boss-reading-q' : ''}${'team' in q && q.team !== 'word' ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
+          {/* コンボ中は問題のパネルが燃える（3コンボで炎、大コンボで青い炎） */}
+          <p className={`en${'passage' in q ? ' boss-reading-q' : ''}${'team' in q && q.team !== 'word' ? ' boss-sentence-q' : ''}${combo >= BIG_COMBO ? ' on-fire blue' : combo >= 3 ? ' on-fire' : ''}`}>{q.word.en}</p>
           {'passage' in q && picked === null && ((q as ReadingQ).hint?.note || (q as ReadingQ).hint?.quote) &&
             (tipAt === index ? (
               <div className="boss-hint" role="status">
