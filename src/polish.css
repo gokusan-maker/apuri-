@@ -4229,3 +4229,8 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-rank.rank-A { background: linear-gradient(180deg, #60a5fa, #2563eb); }
 @media (prefers-reduced-motion: reduce) { .bfloor-rank { animation: none; } }
 @keyframes rank-stamp { from { transform: scale(2.5) rotate(-12deg); opacity: 0; } }
+/* 闘技場：相棒のひとこと（ふきだし） */
+.af-me { position: relative; }
+.af-say { position: absolute; right: 100%; top: -6px; margin-right: 4px; padding: 2px 8px; border-radius: 10px; background: #fff; color: #1e293b; font-size: 0.7rem; font-weight: 800; white-space: nowrap; animation: say-pop 1.6s ease-out forwards; }
+@keyframes say-pop { 0% { transform: scale(0.4); opacity: 0; } 15% { transform: scale(1.1); opacity: 1; } 80% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .af-say { animation: none; } }

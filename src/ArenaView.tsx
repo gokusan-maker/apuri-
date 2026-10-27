@@ -237,6 +237,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}${picked !== null && !correct ? ' ouch' : ''}`} aria-hidden="true">
                     {streak >= 3 && '🔥'}
                     {me ?? '🦸'}
+                    {/* 相棒のひとこと：レベルアップで喜び、盾がまもると強がる */}
+                    {levelUp && <span className="af-say">やったー！</span>}
+                    {picked !== null && !correct && guarded && <span className="af-say">セーフ！</span>}
                   </span>}
               </div>
             ),

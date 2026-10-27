@@ -736,6 +736,7 @@ it('闘技場：レベルの区切り（20階ごと）をこえると LEVEL UP! 
   expect(document.querySelector('.arena-levelup')).toHaveTextContent('LEVEL UP!中2レベルに上がった！')
   expect(document.querySelector('.arena-confetti')).not.toBeNull() // 紙ふぶき
   expect(document.querySelector('.arena-floor.here .af-me')!.classList.contains('cheer')).toBe(true) // 相棒がとびはねる
+  expect(document.querySelector('.arena-floor.here .af-say')).toHaveTextContent('やったー！')
   expect(screen.getByText('⬆ レベルアップ！ 21階（中2レベル）へ')).toBeInTheDocument()
   fireEvent.click(screen.getByText('次へ（中2）'))
   expect(document.querySelector('.arena-confetti')).toBeNull()
@@ -804,6 +805,7 @@ it('闘技場：5連続正解で盾をもらい、次のまちがいで1回だ�
   const at = floor()
   arenaPick(false)
   expect(screen.getByText('🛡 盾がまもった！ 階はそのまま')).toBeInTheDocument()
+  expect(document.querySelector('.arena-floor.here .af-say')).toHaveTextContent('セーフ！')
   expect(floor()).toBe(at)
   fireEvent.click(screen.getByText(/^次へ/))
   expect(document.querySelector('.arena-shield')).toBeNull()
