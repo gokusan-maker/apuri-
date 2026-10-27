@@ -112,6 +112,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[]; first?: boolean; round?: number }) | null>(null) // ボスの城の問題の階（1〜4階）
   const [bcClears, setBcClears] = useState(loadBcClears)
   const [arenaOn, setArenaOn] = useState(false) // 城の下の闘技場
+  const lean = part === 'boss' // ボス部屋は城と闘技場だけ（オーナーの要望）
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
   const [farewell, setFarewell] = useState<string | null>(null) // はじめてたおしたボスの負けおしみ（城にもどったら見せる）
@@ -674,6 +675,24 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             ⚔ 闘技場で戦う（{courseById(bossLv).label}から）
           </button>
         </div>
+        {/* 城と闘技場だけの画面でも、受け取れるごほうびがあるときだけボタンを出す */}
+        {lean && keys >= KEYS_FOR_GOLD && onOpenGold && (
+          <button className="treasure-btn" onClick={onOpenGold}>
+            🎁 金の宝箱をあける（🎟＋🪙{GOLD_COINS}）
+          </button>
+        )}
+        {lean && allBossBeaten(lboss) && !allClaimed && onCastleReward && (
+          <button
+            className="castle-chest-btn"
+            onClick={() => {
+              saveAllBossClaimed()
+              setAllClaimed(true)
+              onCastleReward(ALL_BOSS_TICKETS)
+            }}
+          >
+            🎁 全レベルのボス制覇のごほうび（🎟ガチャチケット×{ALL_BOSS_TICKETS}）
+          </button>
+        )}
         {farewell && (
           <p className="bfloor-taunt" role="status">
             {farewell}
@@ -692,6 +711,9 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             ▶ 次は「{COURSES[COURSES.findIndex((c) => c.id === bossLv) + 1].label}」のボスの城へ
           </button>
         )}
+        {/* オーナーの要望：ボス部屋は「城」と「闘技場」だけ。ほかの表示は出さない */}
+        {!lean && (
+        <>
         <p className={`boss-all${allBossBeaten(lboss) ? ' done' : ''}`} aria-label="ボス撃破の数">
           👹 撃破 {COURSES.filter((c) => lboss[c.id]).length} / {COURSES.length} レベル
           {allBossBeaten(lboss) ? `　👑 称号「${ALL_BOSS_TITLE}」` : '（全部たおすと特別な称号）'}
@@ -742,7 +764,11 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         </details>
         {onCastleReward && <CastleCollection onReward={onCastleReward} />}
         </>
+        )}
+        </>
       )}
+      {!lean && (
+      <>
       {winStreak > 0 && (
         <p className="win-streak">
           🔥 ボス {winStreak}連勝中！（{STREAK_EVERY}連勝ごとに 🪙{STREAK_COINS}・負けるとリセット）
@@ -882,6 +908,8 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             </button>
           ))}
         </div>
+      )}
+      </>
       )}
       </>
       )}

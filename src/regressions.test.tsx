@@ -31,10 +31,12 @@ function bossAnswer(en: string): string {
   return WORDS.find((x) => x.example === en)!.exampleJa
 }
 const navTo = (name: string) => fireEvent.click(within(screen.getByRole('navigation', { name: '画面の切り替え' })).getByText(name))
-// 熟語の見た目のボス（高2のレベルのボス）とボス部屋で戦う（一覧から）
+// 熟語の見た目のボス（高2のレベルのボス）とボス部屋で戦う（城の5階から。1〜4階はクリアずみにしておく）
 const toWordStages = () => {
+  localStorage.setItem('eitan:boss-level', '高2')
+  localStorage.setItem('eitan:bcastle', JSON.stringify([1, 2, 3, 4].map((f) => `lb:高2:${f}`)))
   navTo('ボス')
-  fireEvent.click(screen.getByRole('button', { name: /^高2のボス「.+」に挑戦/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^5階：/ }))
 }
 
 

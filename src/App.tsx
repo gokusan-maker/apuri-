@@ -127,7 +127,7 @@ import {
 } from './srs'
 import { addMistake, easeMistake, loadMistakes, removeMistake, saveMistakes, weakWords } from './mistakes'
 import { Quiz } from './QuizView'
-import { BossAlly, TrackAlly } from './BossAllyView'
+import { TrackAlly } from './BossAllyView'
 import { BuddyZukan } from './BuddyZukanView'
 import { loadLongRecord, perfectLongCount } from './longreading'
 import { loadShortDone } from './reading'
@@ -1823,8 +1823,7 @@ function App() {
         />
       ) : mode === 'reading' || mode === 'boss' ? (
         <>
-          {mode === 'boss' && !playOn && buddyRow}
-          {mode === 'boss' && !playOn && <BossAlly buddy={buddies.reading} wins={Object.keys(boss).filter((k) => k in BOSSES).length} total={Object.keys(BOSSES).length} hunter={loadBossHunter()} hideAlly />}
+          {/* オーナーの要望：ボス部屋の城の上には、なかま3人の列などを出さない */}
           {mode === 'reading' && !shortGo && !playOn && <TrackAlly track="reading" buddy={buddies.reading} label="読解のなかま（正解で育つ）" />}
           {mode === 'reading' && !shortGo && !playOn && (
           <LevelPick

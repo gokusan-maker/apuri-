@@ -297,12 +297,6 @@ it('解放が少ない単語帳は compact（3列にならぶ）、たくさん�
 
 
 
-it('ボス部屋のタイルに、そのボスの最短タイムが小さく出る', () => {
-  localStorage.setItem('eitan:boss-times', JSON.stringify({ ヤミモチ: 83 }))
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  expect(screen.getByRole('button', { name: /^中1のボス/ }).textContent).toContain('⏱1:23')
-})
-
 it('特別クエストでは攻略のむずかしい強いボス（HP360）と戦える', () => {
   localStorage.clear()
   render(<Stages levels={['中1']} record={{}} onClear={() => {}} event="quest" />)
@@ -360,15 +354,12 @@ it('ボス部屋もキャラの下でレベルをえらべ、レベルごとに5
   expect(localStorage.getItem('eitan:boss-level')).toBe('東大')
 })
 
-it('ボスの一覧から15レベルのボスを自由にえらべ、たおすとそのレベルのボスの5階までクリアあつかい', () => {
+it('レベルのボスをたおすと、そのレベルの城は5階までクリアあつかい。ボス部屋にボスの一覧は出さない（オーナーの要望）', () => {
   localStorage.clear()
   localStorage.setItem('eitan:lboss', JSON.stringify({ 中1: '2026-10-01' }))
   render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
-  const list = screen.getByRole('group', { name: 'ボスをえらぶ' })
-  expect(list.querySelectorAll('button.boss-pick-tile')).toHaveLength(15)
+  expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull()
   expect(screen.getByRole('region', { name: '中1のボスの城' })).toHaveTextContent('5/5')
-  fireEvent.click(within(list).getByRole('button', { name: /^東大のボス「.+」に挑戦/ }))
-  expect(screen.getByText('← にげる')).toBeInTheDocument()
 })
 
 it('ボスの城のボスをたおしたら「次のレベルのボスの城へ」で次のレベルの城にかわる', () => {
@@ -388,14 +379,12 @@ it('ボスの城の問題の階をクリアすると、上で待つボスがひ�
   expect(bossTaunt('ドラゴン', 3)).toContain('次の階で待っているぞ')
 })
 
-it('15レベルのボスを全部たおすと称号が出て、ごほうびのガチャチケットは1回だけもらえる', () => {
+it('15レベルのボスを全部たおすと、ごほうびのガチャチケットは1回だけもらえる', () => {
   localStorage.clear()
   const all = Object.fromEntries(['中1', '中2', '中3', '高1', '高2', '高3', '私学', '私学難関', '国公立', '旧帝大', '京大', '東大', 'TOEIC', 'TOEFL・IELTS', 'ネイティブ'].map((id) => [id, '2026-10-01']))
   localStorage.setItem('eitan:lboss', JSON.stringify(all))
   let got = 0
   const { unmount } = render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onCastleReward={(n) => (got += n)} />)
-  expect(screen.getByLabelText('ボス撃破の数')).toHaveTextContent('15 / 15')
-  expect(screen.getByLabelText('ボス撃破の数')).toHaveTextContent('英語の覇王')
   fireEvent.click(screen.getByRole('button', { name: /全レベルのボス制覇のごほうび/ }))
   expect(got).toBe(3)
   unmount()
@@ -454,7 +443,7 @@ it('今日のボスのボタンに、そのボスのとくぎが出る', async (
   const { bossTraits, BOSS_TRAITS, BOSSES, dailyBossLevel } = await import('./boss')
   const { dayKey } = await import('./srs')
   localStorage.clear()
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
   const lv = dailyBossLevel(['中1'], dayKey())!
   const t = BOSS_TRAITS[bossTraits(BOSSES[lv as keyof typeof BOSSES].name)[0]]
   expect(document.querySelector('.boss-go-trait')?.textContent).toBe(`とくぎ ${t.icon} ${t.name}`)
@@ -462,7 +451,7 @@ it('今日のボスのボタンに、そのボスのとくぎが出る', async (
 
 it('今日のボスのボタンの丸に、そのボスの舞台が出る', () => {
   localStorage.clear()
-  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  render(<Stages levels={['中1']} record={{}} onClear={() => {}} />)
   expect(document.querySelector('.boss-go-fig .boss-arena')).not.toBeNull()
 })
 

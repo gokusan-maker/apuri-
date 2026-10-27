@@ -61,7 +61,7 @@ describe('App', () => {
 
 
 
-  it('単語・文法・読解のページは上にキャラクター、その下に今日の課題。ボス部屋のいちばん上は3体（オーナー要望）', () => {
+  it('単語・文法・読解のページは上にキャラクター、その下に今日の課題。ボス部屋は城と闘技場だけ（オーナー要望）', () => {
     render(<App />)
     const before = (a: Element | null, b: Element | null) => !!a && !!b && !!(a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
     navTo('単語')
@@ -72,7 +72,10 @@ describe('App', () => {
     expect(before(document.querySelector('.ally-reading'), document.querySelector('.today-read-btn'))).toBe(true)
     navTo('ボス')
     expect(document.querySelector('.ally-reading')).toBeNull() // 竜だけの札ではなく
-    expect(before(document.querySelector('.buddy-row, [class*="buddy-row"]'), document.querySelector('.boss-chips'))).toBe(true) // 3体ならんだ列が上
+    expect(document.querySelector('.buddy-row, [class*="buddy-row"]')).toBeNull() // 城の上に3体の列は出さない
+    expect(screen.getByRole('region', { name: '闘技場' })).toBeInTheDocument()
+    expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull() // 闘技場の下には何も出さない
+    expect(screen.queryByLabelText('ボス撃破の数')).toBeNull()
   })
   it('仲間10体で、ガチャチケット1まいと交換できる', () => {
     localStorage.setItem('eitan:party', JSON.stringify({ active: 0, gacha: 10, members: [{ xp: 200 }, ...Array.from({ length: 10 }, (_, k) => ({ xp: k * 40 }))] }))
@@ -1797,17 +1800,18 @@ it('学年が中3なら、今日の課題の読解は高校入試レベルの長
   expect(screen.queryByText('← 読解の一覧')).toBeNull()
 })
 
-it('ボス部屋でボスをえらぶと戦いだけの画面になり、上の「ほかの問題をえらぶ」でボスの一覧にもどる', () => {
+it('ボス部屋で城のボスをえらぶと戦いだけの画面になり、上の「ほかの問題をえらぶ」で城にもどる', () => {
   localStorage.clear()
   localStorage.setItem('eitan:onboarded', '1')
+  localStorage.setItem('eitan:bcastle', JSON.stringify([1, 2, 3, 4].map((f) => `lb:中1:${f}`)))
   render(<App />)
   navTo('ボス')
-  fireEvent.click(screen.getByRole('button', { name: /中1のボス「.+」に挑戦/ }))
+  fireEvent.click(screen.getByRole('button', { name: /^5階：/ }))
   expect(screen.queryByLabelText('育てているなかま')).toBeNull()
-  expect(screen.queryByRole('group', { name: 'ボスをえらぶ' })).toBeNull()
+  expect(screen.queryByRole('region', { name: '中1のボスの城' })).toBeNull()
   expect(screen.getByRole('group', { name: 'チーム' })).toBeInTheDocument()
   fireEvent.click(screen.getByRole('button', { name: /ほかの問題をえらぶ/ }))
-  expect(screen.getByRole('group', { name: 'ボスをえらぶ' })).toBeInTheDocument()
+  expect(screen.getByRole('region', { name: '中1のボスの城' })).toBeInTheDocument()
 })
 
 it('問題の画面で、いまのタブ（文法チャレンジ）をもう一度おすと、えらぶ画面にもどる', async () => {
