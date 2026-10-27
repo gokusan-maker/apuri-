@@ -691,3 +691,13 @@ it('闘技場の単語の答えは学習の記録になり、正解で相棒に 
   expect(ans).toHaveBeenCalledWith(true, expect.any(Number), w.id, 'quiz')
   expect(ans.mock.calls[0][1]).toBeGreaterThan(0)
 })
+
+it('闘技場：5階・10階・15階に上がるとお祝い', async () => {
+  const { isArenaMilestone } = await import('./arena')
+  expect(isArenaMilestone(3, 4)).toBe(true) // 4→5階
+  expect(isArenaMilestone(2, 4)).toBe(true) // ジャンプで5階
+  expect(isArenaMilestone(4, 5)).toBe(false)
+  expect(isArenaMilestone(5, 4)).toBe(false) // 下がったときはなし
+  expect(isArenaMilestone(8, 10)).toBe(true) // 10階をとびこえても
+  expect(isArenaMilestone(13, 14)).toBe(true)
+})

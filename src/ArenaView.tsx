@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -136,6 +136,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
           )}
         </div>
         {dir === 'up' && <span key={`u${count}`} className="arena-arrow up" aria-hidden="true">{jump ? '🚀' : '⬆'}</span>}
+        {picked !== null && isArenaMilestone(lv, nextLv) && (
+          <span key={`m${count}`} className="arena-milestone" role="status">
+            🎉 {nextLv + 1}階 到達！
+          </span>
+        )}
         {dir === 'down' && <span key={`d${count}`} className="arena-arrow down" aria-hidden="true">⬇</span>}
       </div>
       <p className="arena-now">

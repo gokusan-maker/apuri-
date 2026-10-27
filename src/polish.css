@@ -4110,3 +4110,6 @@ header .event-chips { margin: 0 0 2px; }
 .battle-v2.arena > .stage-head { padding-bottom: 4px; }
 @media (prefers-reduced-motion: reduce) { .arena-shaft, .af-me, .arena-arrow { animation: none !important; } }
 .arena-answer { margin: 0 0 4px; font-size: 0.85rem; color: #e2e8f0; }
+.arena-milestone { position: absolute; z-index: 3; left: 50%; top: 50%; padding: 6px 16px; border-radius: 999px; background: linear-gradient(180deg, #fde047, #f59e0b); color: #451a03; font-weight: 900; font-size: 1.1rem; white-space: nowrap; box-shadow: 0 0 24px rgb(250 204 21 / 0.8); transform: translate(-50%, -50%); animation: milestone-pop 1.6s ease-out forwards; pointer-events: none; }
+@keyframes milestone-pop { 0% { transform: translate(-50%, -50%) scale(0.3); opacity: 0; } 15% { transform: translate(-50%, -50%) scale(1.15); opacity: 1; } 25% { transform: translate(-50%, -50%) scale(1); } 80% { opacity: 1; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .arena-milestone { animation: none; } }

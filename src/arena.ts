@@ -8,7 +8,9 @@ import { COURSES, courseWords, type CourseId } from './wordcourse'
 import type { Word } from './words'
 
 export const ARENA_TOP = COURSES.length - 1
-export const ARENA_BEST_COINS = 5 // いままでの最高より上の階に着くたびに
+export const ARENA_BEST_COINS = 5
+export const ARENA_MILESTONES = [5, 10, 15] // この階に上がったときはお祝い
+export const isArenaMilestone = (from: number, to: number) => to > from && ARENA_MILESTONES.some((m) => m - 1 > from && m - 1 <= to) // いままでの最高より上の階に着くたびに
 const clamp = (lv: number) => Math.max(0, Math.min(ARENA_TOP, lv))
 // 正解なら上へ、まちがいなら下へ（いちばん上・下ではそのまま）。
 // streak（この答えを入れた連続正解の数）が3の倍数になったら、2階ジャンプ
