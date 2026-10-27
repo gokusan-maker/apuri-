@@ -2419,3 +2419,4 @@
 - 2026-10-27: 文法に「自動詞 ＋ 前置詞（belong to ／ reply to ／ apply for）」の単元を追加
 - 2026-10-27: TOEIC の長文に、メール「Your Magazine Subscription」（雑誌の定期購読の更新）を追加
 - 2026-10-27: ボス戦で、コンボ中は問題のパネルが燃えるように（3コンボで炎、5コンボで青い炎）
+- 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑤（be suitable for ／ be jealous of ／ be independent of）」の単元を追加
