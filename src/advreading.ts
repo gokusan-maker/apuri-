@@ -8572,6 +8572,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-earworms',
+    title: 'Songs That Get Stuck in Your Head',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever had a song playing over and over in your head, even though you did not want to hear it? This common experience is sometimes called an \"earworm.\" Surveys suggest that most people get earworms at least once a week, and they usually last only a short time.",
+      "Earworms are often parts of songs with simple, repeated melodies, such as the chorus of a pop song or a jingle from a commercial. They tend to appear when we have recently heard the song many times, or when our minds are not busy, ( A ) when we are walking or taking a shower.",
+      "Why does the brain do this? One idea is that the brain treats an unfinished song like an unfinished task. If we hear only part of a song, the brain keeps ( B ) it, as if it wants to reach the end. This may explain why listening to the whole song sometimes makes an earworm go away.",
+      "There are other tricks, too. In one study, people who chewed gum had fewer earworms, possibly because chewing uses the same muscles we use when we sing quietly to ourselves. Doing a task that needs attention, such as a puzzle, may also help. Still, most earworms are harmless, and ( C ) people even enjoy them.",
+    ],
+    ja: [
+      '聞きたくもないのに、ある歌が頭の中で何度もくり返し流れていたことはないだろうか。このよくある経験は「イヤーワーム」とよばれることがある。調査によると、ほとんどの人が少なくとも週に1回はイヤーワームを経験し、たいていは短い時間しか続かないようだ。',
+      'イヤーワームは、ポップソングのサビやコマーシャルのジングルなど、単純でくり返しの多いメロディーの部分であることが多い。最近その歌を何度も聞いたときや、歩いているときやシャワーを浴びているときのように頭がいそがしくないときに、あらわれやすい。',
+      'なぜ脳はこんなことをするのだろうか。1つの考えは、脳は終わっていない歌を、終わっていない作業のようにあつかうというものだ。歌の一部しか聞かないと、脳はまるで最後までたどり着きたいかのように、それをくり返し続ける。このことは、歌を最後まで聞くとイヤーワームが消えることがある理由を説明するかもしれない。',
+      'ほかにもこつがある。ある研究では、ガムをかんだ人はイヤーワームが少なかった。おそらく、かむことには、小声で歌うときに使うのと同じ筋肉を使うからだろう。パズルのような注意が必要な作業をするのも役に立つかもしれない。それでも、ほとんどのイヤーワームは害がなく、それを楽しむ人さえいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['such as', 'so that', 'even if', 'as if'], answer: 0, why: 'such as ～「たとえば～など」で例をあげる。うしろの when we are walking … は「頭がいそがしくないとき」の例。' },
+      { id: 'B', choices: ['repeating', 'repeat', 'to repeat', 'repeated'], answer: 0, why: 'keep ～ing「～し続ける」。keep のあとに不定詞や原形は置けない。' },
+      { id: 'C', choices: ['some', 'any', 'much', 'every'], answer: 0, why: 'some people「～する人もいる」。肯定文で複数名詞 people の前なので some。much は数えられない名詞、every は単数名詞につく。' },
+    ],
+    underline: {
+      phrase: 'harmless',
+      choices: ['not causing any damage', 'very loud', 'difficult to forget', 'easy to sing'],
+      answer: 0,
+      why: 'harmless は「害のない」。harm（害）＋ -less（～がない）。',
+    },
+    order: {
+      words: ['makes', 'an', 'earworm', 'go', 'away'],
+      rest: '',
+      answer: 'makes an earworm go away',
+      ja: 'イヤーワームを消す（make ＋ 目的語 ＋ 原形「～させる」）',
+    },
+    tf: [
+      { statement: 'イヤーワームは、たいてい何日も続く。', answer: false, why: '第1段落 they usually last only a short time。' },
+      { statement: '単純でくり返しの多いメロディーはイヤーワームになりやすい。', answer: true, why: '第2段落 Earworms are often parts of songs with simple, repeated melodies。' },
+      { statement: 'ある研究では、ガムをかんだ人のほうがイヤーワームが多かった。', answer: false, why: '第4段落 people who chewed gum had fewer earworms。少なかった。' },
+    ],
+    qa: [
+      { q: 'According to one idea, why does the brain keep playing part of a song?', choices: ['It treats the unfinished song like an unfinished task.', 'It wants to learn the words in a foreign language.', 'It is trying to forget the song.', 'It needs more sleep.'], answer: 0, why: '第3段落 the brain treats an unfinished song like an unfinished task。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
