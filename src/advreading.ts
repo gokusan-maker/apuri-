@@ -9466,6 +9466,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-internship',
+    title: 'Notice: Summer Internship Program',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Riverside Design Studio is now accepting applications for its summer internship program. The program will run for six weeks, from July 7 to August 15, and is open to university students who are interested in graphic design or web design.",
+      "Interns will work on real projects with our design team and attend weekly workshops led by senior designers. At the end of the program, each intern will present a project to the whole company. Interns will receive a weekly allowance to cover travel and lunch ( A ).",
+      "To apply, please send your résumé, a short letter explaining why you are interested in the program, and three examples of your design work to internships@riversidedesign.com. Applications must be received ( B ) May 31. Selected applicants will be invited to an online interview in early June.",
+      "Last year, two of our interns were offered full-time positions after graduating. We look forward to hearing from talented and creative students.",
+    ],
+    ja: [
+      'リバーサイド・デザインスタジオは、現在、夏のインターンシップの応募を受けつけています。プログラムは7月7日から8月15日までの6週間で、グラフィックデザインやウェブデザインに興味のある大学生が対象です。',
+      'インターンは、当社のデザインチームと一緒に実際の仕事に取り組み、ベテランのデザイナーが進める毎週のワークショップに参加します。プログラムの最後には、各インターンが会社全体に向けて作品を発表します。インターンには、交通費と昼食代をまかなうための手当が毎週支給されます。',
+      '応募するには、履歴書、プログラムに興味をもった理由を説明する短い手紙、デザイン作品の例を3つ、internships@riversidedesign.com まで送ってください。応募は5月31日までに届く必要があります。選ばれた応募者は、6月上旬のオンライン面接に招待されます。',
+      '昨年は、インターン2名が卒業後に正社員の職を提示されました。才能があり創造的な学生のみなさんからのご応募をお待ちしています。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['costs', 'costed', 'costing', 'costly'], answer: 0, why: 'travel and lunch costs「交通費と昼食代」。cover の目的語になる名詞 costs が必要。costly は形容詞、costed・costing は動詞の形なので合わない。' },
+      { id: 'B', choices: ['by', 'among', 'since', 'unless'], answer: 0, why: '「5月31日までに（届く）」と期限を表すのは前置詞 by。among は「～の間で」、since は「～以来」、unless は接続詞なので合わない。' },
+    ],
+    tf: [
+      { statement: 'インターンシップは6週間行われる。', answer: true, why: '第1段落 The program will run for six weeks。' },
+      { statement: 'インターンは給料も手当ももらえない。', answer: false, why: '第2段落 Interns will receive a weekly allowance。' },
+      { statement: '面接は会社に行って受ける。', answer: false, why: '第3段落 an online interview。オンライン面接。' },
+    ],
+    qa: [
+      { q: 'What must applicants send?', choices: ['A résumé, a short letter, and three examples of design work.', 'Only a résumé.', 'A letter from their university.', 'A video presentation.'], answer: 0, why: '第3段落 please send your résumé, a short letter …, and three examples of your design work。' },
+      { q: 'What will each intern do at the end of the program?', choices: ['Present a project to the whole company.', 'Take a written test.', 'Lead a weekly workshop.', 'Interview new applicants.'], answer: 0, why: '第2段落 each intern will present a project to the whole company。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
