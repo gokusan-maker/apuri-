@@ -2488,3 +2488,4 @@
 - 2026-10-27: 文法に「群前置詞 in charge of ／ on behalf of ／ in favor of」の単元を追加
 - 2026-10-27: 高3（共通テスト）の長文に、評論「Why Is the Sky Blue?」（空が青く、夕焼けが赤いわけ）を追加
 - 2026-10-27: ボス戦で、会心の一撃のときに画面がゆれる演出を追加
+- 2026-10-27: 文法に「群前置詞② regardless of ／ apart from ／ for the sake of」の単元を追加

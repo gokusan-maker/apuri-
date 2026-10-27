@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'group-prep-regardless': { wrong: 'Everyone is welcome, regard of age.', right: 'Everyone is welcome, regardless of age.', why: '「～に関係なく」は regardless of ～。' },
   'group-prep-charge': { wrong: 'Who is in charges of this project?', right: 'Who is in charge of this project?', why: 'in charge of ～。charge は s をつけない。' },
   'phrasal-down-up-on': { wrong: 'This jacket is nice. I will put on it.', right: 'This jacket is nice. I will put it on.', why: '目的語が代名詞のときは put it on の語順。' },
   'adj-prep-8': { wrong: 'He is very popular of his classmates.', right: 'He is very popular with his classmates.', why: 'be popular with ～「～に人気がある」。' },
