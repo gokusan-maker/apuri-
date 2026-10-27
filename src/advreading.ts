@@ -8531,6 +8531,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-hiccups',
+    title: 'The Puzzle of Hiccups',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hiccups are something almost everyone has experienced. They happen when the diaphragm, the large muscle below the lungs that helps us breathe, suddenly tightens. A moment later, the opening between our vocal cords closes, ( A ) produces the familiar \"hic\" sound.",
+      "Hiccups often start when we eat too quickly, drink fizzy drinks, or feel excited. In most cases, they stop by themselves within a few minutes. People have invented many ways to stop them, such as holding their breath, drinking a glass of water quickly, or being surprised by a friend. However, there is little scientific evidence that even one of these methods really ( B ).",
+      "What is more puzzling is why hiccups exist at all. They do not seem to help adults in any way. Interestingly, babies hiccup much more often than adults, and they even hiccup before they are born. Some scientists think hiccups may help babies remove air from their stomachs while they are drinking milk.",
+      "Whatever their purpose, hiccups remind us that our bodies still hold many small mysteries. Even something as ordinary as a hiccup can raise questions that scientists have not yet been able to answer.",
+    ],
+    ja: [
+      'しゃっくりは、ほとんどだれもが経験したことのあるものだ。しゃっくりは、肺の下にあって呼吸を助ける大きな筋肉である横隔膜が、急に縮むときに起こる。その一瞬あとに声帯のあいだのすき間が閉じ、それがあのおなじみの「ヒック」という音を出す。',
+      'しゃっくりは、急いで食べたり、炭酸飲料を飲んだり、興奮したりしたときによく始まる。ほとんどの場合、数分のうちに自然に止まる。人々は、息を止める、コップ1杯の水を急いで飲む、友だちにおどかしてもらうなど、しゃっくりを止めるたくさんの方法を考え出してきた。しかし、これらの方法のうち1つでも本当に効くという科学的な証拠はほとんどない。',
+      'もっとなぞなのは、そもそもなぜしゃっくりがあるのかということだ。しゃっくりは、大人にとっては何の役にも立っていないように見える。興味深いことに、赤ちゃんは大人よりもずっとよくしゃっくりをし、生まれる前でさえしゃっくりをする。しゃっくりは、赤ちゃんがミルクを飲んでいる間に胃から空気を出すのに役立っているのかもしれないと考える科学者もいる。',
+      'その目的が何であれ、しゃっくりは、私たちの体にはまだ小さななぞがたくさんあることを思い出させてくれる。しゃっくりのようにありふれたものでさえ、科学者たちがまだ答えられていない疑問を生むことがあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の文の内容（声帯のすき間が閉じること）を受ける非制限用法の which。that はコンマのあとに使えず、it では文をつなげない。' },
+      { id: 'B', choices: ['works', 'work', 'working', 'to work'], answer: 0, why: 'that 節の主語は one of these methods（単数）なので三人称単数の works。working・to work では動詞がなくなる。' },
+    ],
+    underline: {
+      phrase: 'by themselves',
+      choices: ['without anyone doing anything', 'only at night', 'because of other people', 'very slowly'],
+      answer: 0,
+      why: 'stop by themselves は「自然に止まる」。何もしなくても止まるという意味。',
+    },
+    order: {
+      words: ['why', 'hiccups', 'exist', 'at', 'all'],
+      rest: '',
+      answer: 'why hiccups exist at all',
+      ja: 'そもそもなぜしゃっくりがあるのか（間接疑問＋at all）',
+    },
+    tf: [
+      { statement: 'しゃっくりは横隔膜が急に縮むことで起こる。', answer: true, why: '第1段落 when the diaphragm … suddenly tightens。' },
+      { statement: '水を急いで飲むとしゃっくりが止まることは、科学的に証明されている。', answer: false, why: '第2段落 there is little scientific evidence that even one of these methods really works。' },
+      { statement: '赤ちゃんは大人よりもしゃっくりが少ない。', answer: false, why: '第3段落 babies hiccup much more often than adults。' },
+    ],
+    qa: [
+      { q: 'What do some scientists think hiccups may do for babies?', choices: ['Help them remove air from their stomachs.', 'Help them fall asleep.', 'Make their lungs bigger.', 'Help them learn to talk.'], answer: 0, why: '第3段落 hiccups may help babies remove air from their stomachs while they are drinking milk。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
