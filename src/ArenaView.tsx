@@ -10,6 +10,7 @@ import { speak } from './speech'
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
 // 1レベル20階。レベルの区切りをこえると「LEVEL UP!」の演出。いちばん上のレベルの上は無限の階
 const SHAFT = 2 // いまの階の上下に見せる階の数
+const CLIMB_EVERY = 10 // この回で10階のぼるごとにお祝い
 const SHIELD_EVERY = 5 // 5連続正解ごとに盾（次のまちがいで1回だけ階が落ちない）
 const floorColor = (f: number) => (isArenaEndless(f) ? `hsl(${(f * 37) % 360} 80% 55%)` : `hsl(${150 - (arenaLevel(f) ?? 0) * 11} 75% 48%)`)
 // onAnswer：単語の問題の正誤を学習の記録に入れ、相棒のモンスターに XP（ボス戦と同じ）
@@ -30,6 +31,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [quick, setQuick] = useState(false)
   const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
+  const [base, setBase] = useState(start) // この回のはじめの階（きょう何階のぼったかを数える）
+  const [climbed, setClimbed] = useState<number | null>(null) // この答えで「きょう10階ごと」に着いた
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
   const [prevBest, setPrevBest] = useState(loadArenaBest)
   // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
@@ -67,6 +70,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       setMaxStreak(Math.max(maxStreak, streak + 1))
       const up = arenaNext(lv, true, streak + 1)
       setTop(Math.max(top, up))
+      const k = Math.floor((up - base) / CLIMB_EVERY)
+      setClimbed(up > top && k > 0 && k > Math.floor((top - base) / CLIMB_EVERY) ? k * CLIMB_EVERY : null)
       if (up > record) {
         setRecord(up)
         setNewRecord(true)
@@ -159,6 +164,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setMaxStreak(0)
             setGuards(0)
             setTop(lv)
+            setBase(lv)
           }}
         >
           ⚔ 続きから戦う
@@ -176,6 +182,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setGuards(0)
               setLv(start)
               setTop(start)
+              setBase(start)
               setQ(arenaQuestionAt(start, 0))
               setPicked(null)
             }}
@@ -286,6 +293,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
           {correct && quick && <p className="arena-quick">⚡ はやい！</p>}
+          {correct && climbed && <p className="arena-record">🏆 この回で {climbed}階 のぼった！</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}

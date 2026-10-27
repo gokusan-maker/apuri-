@@ -791,6 +791,20 @@ it('闘技場：5連続正解で盾をもらい、次のまちがいで1回だ�
   expect(screen.getByText('🛡 盾がまもった：1回')).toBeInTheDocument()
 })
 
+it('闘技場：この回で10階のぼるごとに「🏆 この回で10階 のぼった！」', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={40} onExit={() => {}} />)
+  let seen = false
+  for (let k = 0; k < 9 && !seen; k++) {
+    arenaPick(true)
+    seen = !!screen.queryByText('🏆 この回で 10階 のぼった！')
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(seen).toBe(true)
+  expect(Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))).toBeGreaterThanOrEqual(51)
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
