@@ -536,7 +536,10 @@ it('ボスの城の問題の階：まちがえると自分のライフがへり�
   expect(life()).toHaveAccessibleName('のこりライフ 1')
   expect(document.querySelector('.bfloor-life .heart-break')).not.toBeNull()
   expect(document.querySelector('.card.bfloor')!.classList.contains('hurt')).toBe(true)
+  expect(screen.queryByText(/ピンチ/)).toBeNull() // 答えたあとは出さない
   fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('⚠ ピンチ！ あと1回まちがえると負け')).toBeInTheDocument()
+  expect(document.querySelector('.card.bfloor')!.classList.contains('pinch')).toBe(true)
   miss(qs[1])
   expect(screen.getByText('💀 ライフがなくなった！')).toBeInTheDocument()
   expect(screen.getByText('🔁 すぐに再チャレンジ')).toBeInTheDocument()

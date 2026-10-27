@@ -80,13 +80,15 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       </section>
     )
   return (
-    <section className={`card bfloor battle-v2${hurt ? ' hurt' : ''}`} aria-label={title}>
+    <section className={`card bfloor battle-v2${hurt ? ' hurt' : ''}${lives === 1 && maxLives > 1 ? ' pinch' : ''}`} aria-label={title}>
       <button className="list-link" onClick={onBack}>
         ← 城にもどる
       </button>
       <p className="bfloor-title">{title}</p>
       {bossView}
       {lifeView}
+      {/* のこりライフ1つ：あと1回まちがえると負け */}
+      {lives === 1 && maxLives > 1 && picked === null && <p className="bfloor-pinch">⚠ ピンチ！ あと1回まちがえると負け</p>}
       {/* まちがえたら階のボスのこうげき（ボス戦と同じ演出） */}
       {hurt && boss && (
         <>
