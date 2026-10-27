@@ -24,6 +24,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [shield, setShield] = useState(false)
   const [gotShield, setGotShield] = useState(false) // この答えで盾をもらった
   const [guarded, setGuarded] = useState(false) // この答えのまちがいを盾がまもった
+  const [guards, setGuards] = useState(0) // 盾がまもった回数（結果で見せる）
   const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
   const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
   const [quick, setQuick] = useState(false)
@@ -56,7 +57,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     setGotShield(earn)
     setGuarded(i !== q.answer && shield)
     if (earn) setShield(true)
-    else if (i !== q.answer && shield) setShield(false)
+    else if (i !== q.answer && shield) {
+      setShield(false)
+      setGuards(guards + 1)
+    }
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
@@ -129,6 +133,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
         {maxStreak >= 2 && <p className="arena-max-streak">🔥 いちばん長い連続正解：{maxStreak}問</p>}
+        {guards > 0 && <p className="arena-max-streak">🛡 盾がまもった：{guards}回</p>}
         {missed.length > 0 && (
           <div className="arena-missed" aria-label="まちがえた問題">
             <p className="arena-missed-title">📝 ふりかえり（{missed.length}問）</p>
@@ -152,6 +157,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setRight(0)
             setStreak(0)
             setMaxStreak(0)
+            setGuards(0)
             setTop(lv)
           }}
         >
@@ -167,7 +173,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setRight(0)
               setStreak(0)
               setMaxStreak(0)
+              setGuards(0)
             setMaxStreak(0)
+            setGuards(0)
               setLv(start)
               setTop(start)
               setQ(arenaQuestionAt(start, 0))

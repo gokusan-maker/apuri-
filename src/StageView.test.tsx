@@ -787,6 +787,8 @@ it('闘技場：5連続正解で盾をもらい、次のまちがいで1回だ�
   expect(document.querySelector('.arena-shield')).toBeNull()
   arenaPick(false)
   expect(floor()).toBe(at - 1) // 盾は1回だけ
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByText('🛡 盾がまもった：1回')).toBeInTheDocument()
 })
 
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
