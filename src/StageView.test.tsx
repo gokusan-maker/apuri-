@@ -863,6 +863,16 @@ it('闘技場の結果：5問以上答えると正答率でランク（90%以上
   expect(screen.getByLabelText('ランク A')).toBeInTheDocument()
 })
 
+it('闘技場の結果：最高記録を更新できなかったら、あと何階で更新かを出す', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  localStorage.setItem('eitan:arena-best-floor', '10') // 最高は11階
+  render(<Arena start={5} onExit={() => {}} />)
+  arenaPick(true) // 6→7階
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByText('最高記録 11階（中1レベル）（あと5階で更新）')).toBeInTheDocument()
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()

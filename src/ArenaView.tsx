@@ -160,7 +160,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             </ul>
           </div>
         )}
-        <p className="arena-result-best">{ended.newBest ? `🏅 最高記録 更新！ ${arenaFloor(top)}` : `最高記録 ${arenaFloor(ended.best)}`}</p>
+        <p className="arena-result-best">{ended.newBest ? `🏅 最高記録 更新！ ${arenaFloor(top)}` : `最高記録 ${arenaFloor(ended.best)}（あと${ended.best - top + 1}階で更新）`}</p>
         <button
           className="good next-unit-btn"
           onClick={() => {
