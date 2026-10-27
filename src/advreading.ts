@@ -10898,6 +10898,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-wrong-item',
+    title: 'E-mail: Wrong Item Received',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Customer Service, I am writing about my recent online order, number 58213. I ordered a blue backpack, size large, on June 3, and the package arrived yesterday. Unfortunately, when I opened it, I found a small red backpack ( A ).",
+      "I need the backpack for a hiking trip that starts on June 20, so I would like to receive the correct item as soon as possible. I have kept the red backpack in its original box with all the tags still attached, and I can send it back to you at any time.",
+      "Could you please tell me how to return the wrong item? I would also like to know whether I have to pay for the return shipping. Since the mistake was not mine, I hope that the cost will ( B ) by your company.",
+      "I have attached a photo of the item I received and a copy of my order confirmation. Thank you for your help, and I look forward to your reply. Sincerely, Mika Tanaka",
+    ],
+    ja: [
+      'カスタマーサービスご担当者様　先日のオンライン注文（注文番号58213）についてご連絡しています。6月3日に青いリュックサックのLサイズを注文し、荷物は昨日とどきました。ところが開けてみると、かわりに小さい赤いリュックサックが入っていました。',
+      '6月20日から始まるハイキング旅行にリュックサックが必要なので、正しい商品をできるだけ早く受け取りたいです。赤いリュックサックはタグをすべてつけたまま元の箱に入れてあり、いつでもお返しできます。',
+      'まちがった商品の返し方を教えていただけますか。また、返送料を私がはらう必要があるかどうかも知りたいです。まちがいは私のものではないので、費用は御社に負担していただけるとありがたいです。',
+      'とどいた商品の写真と、注文確認書のコピーを添付しました。どうぞよろしくお願いいたします。お返事をお待ちしています。田中ミカ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['instead', 'instead of', 'in place', 'rather of'], answer: 0, why: '文の最後に1語で「（その）かわりに」を表す副詞 instead。instead of・in place（of）はうしろに名詞が必要で、rather of という形はない。' },
+      { id: 'B', choices: ['be paid', 'pay', 'paying', 'to be paid'], answer: 0, why: '主語 the cost（費用）は「はらわれる」ので受け身。will のあとは原形なので be paid。pay では「費用がはらう」になり、paying・to be paid は will のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'as soon as possible',
+      choices: ['very quickly, without waiting', 'next year', 'only on weekends', 'very slowly'],
+      answer: 0,
+      why: 'as soon as possible は「できるだけ早く」。旅行に間に合うよう早く受け取りたいという意味。',
+    },
+    order: {
+      words: ['could', 'you', 'please', 'tell', 'me', 'how', 'to'],
+      rest: 'return the wrong item',
+      answer: 'could you please tell me how to',
+      ja: '～のしかたを教えていただけますか（how to ～「～のしかた」）',
+    },
+    tf: [
+      { statement: '田中さんは、赤いリュックサックを注文した。', answer: false, why: '第1段落 I ordered a blue backpack, size large。' },
+      { statement: '田中さんは、とどいたリュックサックのタグを取ってしまった。', answer: false, why: '第2段落 with all the tags still attached。' },
+      { statement: 'メールには、とどいた商品の写真がついている。', answer: true, why: '第4段落 I have attached a photo of the item I received。' },
+    ],
+    qa: [
+      { q: 'Why does Ms. Tanaka want the correct item soon?', choices: ['She needs it for a hiking trip on June 20.', 'She wants to give it as a present.', 'The red backpack is broken.', 'She is moving to a new house.'], answer: 0, why: '第2段落 I need the backpack for a hiking trip that starts on June 20。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
