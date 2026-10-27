@@ -8501,6 +8501,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-subscription-renewal',
+    title: 'Email: Your Magazine Subscription',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Patel, Thank you for reading Garden Life Monthly. Our records show that your one-year subscription will end with the March issue. To continue receiving the magazine without a break, please renew your subscription ( A ) February 28.",
+      "If you renew now, you can choose between two plans. The one-year plan costs $48, and the two-year plan costs $84, which saves you $12 compared with paying for two separate years. Both plans include free access to our online archive, where you can read every issue published since 2015.",
+      "Renewing is easy. Simply visit our website and enter the customer number printed on the back cover of your magazine. You can also call our customer service team, ( B ) is available from 9:00 a.m. to 6:00 p.m. on weekdays.",
+      "We hope you will stay with us for another year of gardening tips and ideas. Sincerely, Helen Brooks, Subscription Services",
+    ],
+    ja: [
+      'パテル様　『ガーデン・ライフ・マンスリー』をご愛読いただき、ありがとうございます。記録によりますと、お客様の1年間の定期購読は3月号で終了します。とぎれることなく雑誌をお受け取りいただくには、2月28日までに定期購読を更新してください。',
+      '今更新される場合、2つのプランからお選びいただけます。1年プランは48ドル、2年プランは84ドルで、1年ずつ2回払うのに比べて12ドルお得です。どちらのプランにも、2015年以降に発行されたすべての号が読めるオンライン・アーカイブの無料利用がついています。',
+      '更新は簡単です。当社のウェブサイトにアクセスし、雑誌の裏表紙に印刷されたお客様番号を入力するだけです。平日の午前9時から午後6時まで対応しているカスタマーサービスに、お電話いただくこともできます。',
+      'ガーデニングのこつやアイデアをお届けするもう1年を、ご一緒できれば幸いです。定期購読サービス　ヘレン・ブルックス',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by', 'until', 'since', 'during'], answer: 0, why: '「2月28日までに（更新する）」と期限を表すのは by。until は「～までずっと」で状態の継続、since・during は意味が合わない。' },
+      { id: 'B', choices: ['which', 'what', 'where', 'it'], answer: 0, why: 'コンマのあとで our customer service team を説明し、うしろに主語が欠けているので関係代名詞 which。where はうしろが完全な文のとき、it では2つの文をつなげない。' },
+    ],
+    tf: [
+      { statement: 'パテルさんの定期購読は3月号で終わる。', answer: true, why: '第1段落 your one-year subscription will end with the March issue。' },
+      { statement: '2年プランは、1年ずつ2回払うより12ドル安い。', answer: true, why: '第2段落 which saves you $12 compared with paying for two separate years。' },
+      { statement: 'オンライン・アーカイブは2年プランだけについている。', answer: false, why: '第2段落 Both plans include free access to our online archive。' },
+    ],
+    qa: [
+      { q: 'Where can Ms. Patel find her customer number?', choices: ['On the back cover of her magazine.', 'In the online archive.', 'On the first page of this email.', 'On her credit card.'], answer: 0, why: '第3段落 the customer number printed on the back cover of your magazine。' },
+      { q: 'How much does the two-year plan cost?', choices: ['$84.', '$48.', '$96.', '$12.'], answer: 0, why: '第2段落 the two-year plan costs $84。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
