@@ -10611,6 +10611,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-water-outage',
+    title: 'Notice: Water Will Be Shut Off',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all residents of Sunrise Apartments: Please note that the water supply to the entire building will be shut off on Thursday, July 10, from 9:00 A.M. to 4:00 P.M. This is necessary because workers will be replacing the old water pipes on the first floor.",
+      "During these hours, you will not be able to use the taps, showers, or toilets in your apartment. We strongly recommend that you store some water in bottles or buckets the night ( A ). The work may finish earlier than planned, but please do not turn on any taps until you receive a message from the building office.",
+      "When the water comes back on, it may look slightly brown for a few minutes. This is normal and is caused by small pieces of rust moved during the work. Simply let the water run until it ( B ) clear.",
+      "We apologize for the trouble this will cause. Thanks to the new pipes, water pressure in the building should be much better. If you have any concerns, especially if someone in your home has special medical needs, please contact the building manager, Ms. Rivera, at 555-0186.",
+    ],
+    ja: [
+      'サンライズ・アパートの住人のみなさまへ：7月10日（木）の午前9時から午後4時まで、建物全体の水道を止めますのでご注意ください。作業員が1階の古い水道管を取りかえるため、必要な作業です。',
+      'この時間は、お部屋の蛇口、シャワー、トイレが使えません。前の晩に、ペットボトルやバケツに水をためておくことを強くおすすめします。作業が予定より早く終わることもありますが、管理室から連絡があるまでは蛇口を開けないでください。',
+      '水がまた出るようになると、数分間、少し茶色く見えることがあります。これはふつうのことで、作業中に動いた小さなさびのかけらが原因です。きれいになるまで水を流しておいてください。',
+      'ご不便をおかけして申し訳ありません。新しい水道管のおかげで、建物の水の勢いはずっとよくなるはずです。ご心配なことがあれば、とくにご家族に特別な医療の必要がある方は、管理人のリベラさん（555-0186）までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'ago', 'later of', 'previous to'], answer: 0, why: 'the night before「（その）前の晩に」。名詞のうしろに置いて「その前の」を表すのは副詞 before。ago は今から数えるときにしか使えず、later of・previous to はうしろに名詞が必要。' },
+      { id: 'B', choices: ['runs', 'run', 'running', 'to run'], answer: 0, why: 'until のあとの文の動詞で、主語 it（三人称単数）なので runs（run clear「きれいな水が出る」）。時を表す until 節では未来のことも現在形で表す。run は主語と合わず、running・to run だけでは文の動詞にならない。' },
+    ],
+    underline: {
+      phrase: 'concerns',
+      choices: ['worries', 'payments', 'parties', 'tools'],
+      answer: 0,
+      why: 'concern は名詞で「心配・気がかり」。ご心配なことがあれば連絡してください、という意味。',
+    },
+    order: {
+      words: ['you', 'will', 'not', 'be', 'able', 'to', 'use'],
+      rest: 'the taps, showers, or toilets',
+      answer: 'you will not be able to use',
+      ja: '～を使うことができないでしょう（will not be able to ～「～できないだろう」）',
+    },
+    tf: [
+      { statement: '水道が止まるのは午前中だけだ。', answer: false, why: '第1段落 from 9:00 A.M. to 4:00 P.M.。' },
+      { statement: '作業が早く終わったら、すぐに蛇口を開けてよい。', answer: false, why: '第2段落 please do not turn on any taps until you receive a message from the building office。' },
+      { statement: '水が茶色く見えるのは、さびのかけらのせいだ。', answer: true, why: '第3段落 is caused by small pieces of rust moved during the work。' },
+    ],
+    qa: [
+      { q: 'Why will the water be shut off?', choices: ['Old water pipes will be replaced.', 'The building will be painted.', 'There is not enough rain.', 'A new office will open.'], answer: 0, why: '第1段落 workers will be replacing the old water pipes on the first floor。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
