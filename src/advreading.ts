@@ -11103,6 +11103,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-puddles',
+    title: 'Where Do Puddles Go?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "After a rainy night, the playground is often full of puddles. By the afternoon, however, many of them have disappeared. The water has not been cleaned up by anyone. Instead, it has slowly ( A ) into the air.",
+      "This process is called evaporation. The tiny particles of water at the surface of a puddle are always moving. Some of them move fast enough to escape from the liquid and become water vapor, a gas we cannot see. Little by little, the puddle becomes smaller.",
+      "Several things make puddles dry faster. Sunshine warms the water, so the particles move more quickly. Wind carries the water vapor away from the surface, making room for more water to escape. Dry air can also take in more vapor than wet air, ( B ) puddles disappear more slowly on humid days.",
+      "Some of the water also sinks into the ground, especially when the soil is soft. Either way, the water is not gone forever. It will become part of a cloud or a river again someday.",
+    ],
+    ja: [
+      '雨の夜が明けると、運動場はよく水たまりだらけになっている。ところが午後になると、その多くはなくなっている。だれかが水をかたづけたわけではない。そうではなく、水はゆっくりと空気の中へ消えていったのだ。',
+      'このはたらきは蒸発とよばれる。水たまりの表面の小さな水の粒は、いつも動いている。その中には、液体からぬけ出せるほど速く動き、目に見えない気体である水蒸気になるものがある。少しずつ、水たまりは小さくなっていく。',
+      '水たまりを早くかわかすものはいくつかある。日光は水を温めるので、粒が速く動くようになる。風は水蒸気を表面から運び去り、さらに多くの水がぬけ出せる場所をつくる。また、かわいた空気はしめった空気より多くの水蒸気を取りこめるので、しめっぽい日には水たまりはなかなかなくならない。',
+      '水の一部は、とくに土がやわらかいときには地面にしみこむ。いずれにしても、水が永遠に消えてしまうわけではない。いつかまた雲や川の一部になるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['disappeared', 'disappear', 'disappearing', 'to disappear'], answer: 0, why: '現在完了 has slowly ＋過去分詞なので disappeared。disappear・disappearing・to disappear は has のあとに置けない。' },
+      { id: 'B', choices: ['so', 'because of', 'such as', 'instead of'], answer: 0, why: 'うしろに主語と動詞（puddles disappear）が続き、「それで」と結果を表す接続詞 so。because of・such as・instead of は前置詞のはたらきで、うしろに文をとれない。' },
+    ],
+    underline: {
+      phrase: 'humid',
+      choices: ['with a lot of water in the air', 'very cold', 'very windy', 'without clouds'],
+      answer: 0,
+      why: 'humid は「しめっぽい・湿度が高い」。空気にすでに水蒸気が多いので、水たまりがなかなかかわかない。',
+    },
+    order: {
+      words: ['some', 'of', 'the', 'water', 'also', 'sinks', 'into'],
+      rest: 'the ground',
+      answer: 'some of the water also sinks into',
+      ja: '水の一部は～にもしみこむ（sink into ～「～にしみこむ」）',
+    },
+    tf: [
+      { statement: '水たまりの水は、だれかがかたづけて消える。', answer: false, why: '第1段落 The water has not been cleaned up by anyone。' },
+      { statement: '風は、水たまりを早くかわかす。', answer: true, why: '第3段落 Wind carries the water vapor away ... making room for more water to escape。' },
+      { statement: '蒸発した水は、永遠になくなってしまう。', answer: false, why: '第4段落 the water is not gone forever。' },
+    ],
+    qa: [
+      { q: 'Why do puddles disappear more slowly on humid days?', choices: ['Because wet air cannot take in as much water vapor.', 'Because the sun is hotter.', 'Because the wind is stronger.', 'Because the ground is softer.'], answer: 0, why: '第3段落 Dry air can also take in more vapor than wet air, so puddles disappear more slowly on humid days。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
