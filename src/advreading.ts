@@ -10160,6 +10160,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-stale-bread',
+    title: 'Why Bread Goes Hard',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Fresh bread is soft and smells wonderful, but after a few days it becomes hard and dry. Most people think this happens because the bread loses its water. Surprisingly, that is only part of the story. Even bread kept in a closed bag ( A ) hard over time.",
+      "Bread is made mostly from flour, and flour contains a lot of starch. When bread is baked, the heat and water make the starch soft and loose. As the bread cools, however, the starch slowly returns to a hard, tight form. This change, not just drying, is the main reason old bread feels hard.",
+      "Interestingly, this change happens fastest at temperatures just above freezing. That is why bread kept in a refrigerator often goes hard more quickly than bread left on the kitchen table. In a freezer, on the other hand, the change almost stops, so frozen bread stays fresh much longer.",
+      "There is good news, too. If you warm hard bread in an oven or toaster for a short time, the starch becomes soft again, and the bread tastes almost fresh. So the next time your bread seems too old to eat, try heating it ( B ) throwing it away.",
+    ],
+    ja: [
+      '焼きたてのパンはやわらかく、とてもいいにおいがするが、数日たつとかたくてパサパサになる。たいていの人は、パンが水分を失うからだと思っている。おどろくことに、それは話の一部にすぎない。とじた袋に入れておいたパンでも、時間がたつとかたくなるのだ。',
+      'パンはおもに小麦粉から作られ、小麦粉にはでんぷんがたくさんふくまれている。パンを焼くと、熱と水ででんぷんはやわらかく、ゆるい形になる。ところがパンが冷めていくと、でんぷんはゆっくりとかたく、ぎゅっとつまった形にもどっていく。古いパンがかたく感じるおもな理由は、かわくことだけではなく、この変化なのだ。',
+      'おもしろいことに、この変化は、こおる温度より少し上の温度でいちばん速く起こる。そのため、冷蔵庫に入れたパンは、台所のテーブルに置いたパンより早くかたくなることが多い。一方、冷凍庫の中ではこの変化がほとんど止まるので、冷凍したパンはずっと長く新しいままでいられる。',
+      'よい知らせもある。かたくなったパンをオーブンやトースターで少しのあいだ温めると、でんぷんがまたやわらかくなり、パンはほとんど焼きたてのような味になる。だから次にパンが古くて食べられないように思えたら、すててしまわずに温めてみよう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['becomes', 'become', 'becoming', 'to become'], answer: 0, why: '主語 bread（数えられない名詞で単数あつかい）に続く文の動詞なので becomes。become は主語と合わず、becoming・to become だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['instead of', 'instead', 'rather', 'unless'], answer: 0, why: 'うしろに動名詞 throwing が続くので、前置詞のはたらきをする instead of「～するかわりに」。instead・rather は副詞で名詞（動名詞）を目的語にとれず、unless は接続詞なので主語と動詞が必要。' },
+    ],
+    underline: {
+      phrase: 'on the other hand',
+      choices: ['showing a different or opposite point', 'giving an example', 'adding the same idea', 'showing a result'],
+      answer: 0,
+      why: 'on the other hand は「一方で」。冷蔵庫では早くかたくなるのと反対に、冷凍庫では変化がほとんど止まると対比している。',
+    },
+    order: {
+      words: ['the', 'starch', 'slowly', 'returns', 'to'],
+      rest: 'a hard, tight form',
+      answer: 'the starch slowly returns to',
+      ja: 'でんぷんはゆっくりと～にもどる（return to ～「～にもどる」）',
+    },
+    tf: [
+      { statement: 'パンがかたくなるのは、水分を失うことだけが理由だ。', answer: false, why: '第1段落 that is only part of the story。第2段落 This change, not just drying, is the main reason。' },
+      { statement: '冷蔵庫に入れたパンは、テーブルに置いたパンより早くかたくなりやすい。', answer: true, why: '第3段落 bread kept in a refrigerator often goes hard more quickly than bread left on the kitchen table。' },
+      { statement: 'かたくなったパンは、温めてもやわらかくならない。', answer: false, why: '第4段落 If you warm hard bread ... the starch becomes soft again。' },
+    ],
+    qa: [
+      { q: 'Why does frozen bread stay fresh longer?', choices: ['Because the change in the starch almost stops in a freezer.', 'Because a freezer adds water to bread.', 'Because frozen bread has no starch.', 'Because a freezer warms the bread.'], answer: 0, why: '第3段落 In a freezer ... the change almost stops, so frozen bread stays fresh much longer。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
