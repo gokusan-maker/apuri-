@@ -9283,6 +9283,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-blue-sky',
+    title: 'Why Is the Sky Blue?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Small children often ask why the sky is blue, and many adults find the question surprisingly hard to answer. The secret lies in sunlight itself. Although sunlight looks white, it is actually a mixture of all the colors of the rainbow.",
+      "As sunlight passes through the air, it hits tiny particles of gas. These particles scatter, or spread out, some of the light in every direction. Blue light travels in shorter waves than red light, so it is scattered much more ( A ). As a result, blue light reaches our eyes from all parts of the sky, and the whole sky looks blue.",
+      "This also explains the beautiful colors of sunsets. When the sun is low, its light has to pass through much more air before it reaches us. By the time it arrives, most of the blue light ( B ) scattered away, leaving mainly orange and red light.",
+      "Interestingly, the sky on Mars looks very different. Because of fine red dust in its thin air, the daytime sky there appears yellowish-brown, while sunsets look bluish. The color of a sky, it seems, depends on what the air is made of.",
+    ],
+    ja: [
+      '小さな子どもはよく空がなぜ青いのかをたずねるが、多くの大人はその質問に答えるのが意外に難しいと感じる。その秘密は日光そのものにある。日光は白く見えるが、実はにじのすべての色がまざったものなのだ。',
+      '日光は空気の中を通るとき、気体の小さな粒子にぶつかる。これらの粒子は、光の一部をあらゆる方向に散乱させる、つまり広げる。青い光は赤い光より波が短いので、ずっと簡単に散乱する。その結果、青い光が空のあらゆる部分から私たちの目に届き、空全体が青く見える。',
+      'このことは、夕焼けの美しい色も説明する。太陽が低いと、その光は私たちに届くまでにずっと多くの空気を通りぬけなければならない。届くころには、青い光のほとんどは散乱して消えてしまい、主にオレンジや赤の光が残る。',
+      '興味深いことに、火星の空はまったくちがって見える。うすい大気の中に細かい赤いちりがあるため、そこでは昼間の空は黄色っぽい茶色に見え、夕焼けは青っぽく見える。空の色は、どうやら空気が何でできているかによるようだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['easily', 'easy', 'ease', 'easier'], answer: 0, why: '動詞 is scattered を修飾するので副詞 easily（much more easily「ずっと簡単に」）。easy・easier は形容詞、ease は名詞・動詞。' },
+      { id: 'B', choices: ['has been', 'have been', 'being', 'to be'], answer: 0, why: '主語 most of the blue light（数えられない名詞 light）は単数あつかいなので has been scattered（現在完了の受け身）。being・to be では文の動詞にならない。' },
+    ],
+    underline: {
+      phrase: 'scatter',
+      choices: ['spread out in many directions', 'make brighter', 'turn into a different color', 'stop completely'],
+      answer: 0,
+      why: 'scatter は「まき散らす・散乱させる」。本文でも or spread out と言いかえている。',
+    },
+    order: {
+      words: ['depends', 'on', 'what', 'the', 'air', 'is', 'made', 'of'],
+      rest: '',
+      answer: 'depends on what the air is made of',
+      ja: '空気が何でできているかによる（depend on ＋ 間接疑問）',
+    },
+    tf: [
+      { statement: '日光は、いくつもの色がまざったものだ。', answer: true, why: '第1段落 it is actually a mixture of all the colors of the rainbow。' },
+      { statement: '赤い光は、青い光より散乱しやすい。', answer: false, why: '第2段落 Blue light … is scattered much more easily。青い光のほうが散乱しやすい。' },
+      { statement: '火星の昼間の空は、青く見える。', answer: false, why: '第4段落 the daytime sky there appears yellowish-brown。' },
+    ],
+    qa: [
+      { q: 'Why are sunsets orange and red?', choices: ['Most of the blue light has been scattered away before it reaches us.', 'The sun becomes colder in the evening.', 'Red dust in the air blocks the sunlight.', 'Our eyes cannot see blue light at night.'], answer: 0, why: '第3段落 most of the blue light has been scattered away, leaving mainly orange and red light。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
