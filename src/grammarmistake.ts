@@ -72,6 +72,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-on-the': { wrong: 'Prices are on the rising.', right: 'Prices are on the rise.', why: 'on the rise「上がって・ふえて」。the のあとは名詞 rise。' },
   'prep-idiom-out-of-2': { wrong: 'Going out in this storm is out of question.', right: 'Going out in this storm is out of the question.', why: 'out of the question「問題外で・ありえない」。the をわすれない（out of question は「疑いなく」という別の意味）。' },
   'prep-idiom-notice': { wrong: 'Please come ahead of times.', right: 'Please come ahead of time.', why: 'ahead of time「前もって・予定より早く」。time は単数のまま。' },
+  'prep-idiom-on-trip': { wrong: 'My father went to Osaka on a business.', right: 'My father went to Osaka on business.', why: 'on business「仕事で」。a はつけない。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
