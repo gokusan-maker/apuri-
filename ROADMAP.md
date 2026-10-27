@@ -1997,6 +1997,8 @@
 
 - [x] 文法：群前置詞② regardless of ／ apart from ／ for the sake of
 
+- [x] 長文（TOEIC）：お知らせ「Changes to Our Loyalty Card」（カフェのポイントカード）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

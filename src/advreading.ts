@@ -9324,6 +9324,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-loyalty-card',
+    title: 'Notice: Changes to Our Loyalty Card',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Dear Customers, Thank you for using the Sunbeam Café loyalty card. We are writing to let you know about some changes that will take ( A ) on July 1.",
+      "Currently, customers receive one stamp for every drink they buy, and ten stamps can be exchanged for a free drink. From July 1, the paper cards will be replaced by our new smartphone app. Instead of stamps, you will earn one point for every dollar you spend, and 50 points can be used for a free drink or pastry.",
+      "If you still have a paper card with stamps on it, please do not throw it away. You can bring it to any of our shops until September 30, and our staff will ( B ) your stamps into points on the app. Each stamp will be worth five points.",
+      "The app also lets you order ahead and pick up your drink without waiting in line. We hope you enjoy these new benefits. Sunbeam Café Customer Service",
+    ],
+    ja: [
+      'お客様へ　サンビーム・カフェのポイントカードをご利用いただき、ありがとうございます。7月1日から行われるいくつかの変更についてお知らせします。',
+      '現在、お客様は飲み物を1杯買うごとにスタンプを1つ受け取り、スタンプ10個で飲み物1杯と交換できます。7月1日から、紙のカードは新しいスマートフォンのアプリにかわります。スタンプのかわりに、1ドル使うごとに1ポイントがたまり、50ポイントで飲み物1杯または焼き菓子1つと交換できます。',
+      'スタンプのついた紙のカードをまだお持ちの場合は、捨てないでください。9月30日までに当店のどの店舗にお持ちいただいても、スタッフがスタンプをアプリのポイントに変えます。スタンプ1つは5ポイントになります。',
+      'アプリでは、事前に注文して、列に並ばずに飲み物を受け取ることもできます。これらの新しい特典をお楽しみいただければ幸いです。サンビーム・カフェ　カスタマーサービス',
+    ],
+    blanks: [
+      { id: 'A', choices: ['effect', 'effective', 'effectively', 'affected'], answer: 0, why: 'take effect「（規則などが）実施される・効力を生じる」。take のあとに名詞 effect。' },
+      { id: 'B', choices: ['turn', 'turns', 'turning', 'turned'], answer: 0, why: '助動詞 will のあとは動詞の原形。turn A into B「A を B に変える」。' },
+    ],
+    tf: [
+      { statement: '7月1日からは、紙のカードのかわりにアプリを使う。', answer: true, why: '第2段落 the paper cards will be replaced by our new smartphone app。' },
+      { statement: 'スタンプのついた紙のカードは、すぐに捨てる必要がある。', answer: false, why: '第3段落 please do not throw it away。' },
+      { statement: 'スタンプ1つは、アプリの10ポイントになる。', answer: false, why: '第3段落 Each stamp will be worth five points。5ポイント。' },
+    ],
+    qa: [
+      { q: 'How many points are needed for a free drink with the app?', choices: ['50 points.', '10 points.', '5 points.', '100 points.'], answer: 0, why: '第2段落 50 points can be used for a free drink or pastry。' },
+      { q: 'What else can customers do with the app?', choices: ['Order ahead and skip the line.', 'Get a free pastry every day.', 'Use paper stamps after September 30.', 'Pay with stamps instead of money.'], answer: 0, why: '第4段落 The app also lets you order ahead and pick up your drink without waiting in line。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
