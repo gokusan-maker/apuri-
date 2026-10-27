@@ -4137,3 +4137,8 @@ header .event-chips { margin: 0 0 2px; }
 /* ボス戦・闘技場：答えたら A〜D の札が ✓ ／ ✕ に変わる */
 .battle-v2 .choice.correct::before { content: '✓'; color: #fff; background: #15803d; }
 .battle-v2 .choice.wrong::before { content: '✕'; color: #fff; background: #991b1b; }
+/* 闘技場：上の階へ上がると 🦸 がぴょんとはねる・下がるとしょんぼり */
+.arena-shaft.move-up .af-me { animation: me-hop 0.6s cubic-bezier(0.3, 1.6, 0.5, 1); }
+.arena-shaft.move-down .af-me { animation: me-slump 0.6s ease-out; }
+@keyframes me-hop { 40% { transform: translateY(-14px) scale(1.15); } }
+@keyframes me-slump { 40% { transform: translateY(5px) scale(0.85) rotate(-10deg); } }

@@ -130,3 +130,8 @@ it('ボス戦の選択肢は、答えたら A〜D の札が ✓ ／ ✕ に変�
   expect(css).toContain(".battle-v2 .choice.correct::before { content: '✓';")
   expect(css).toContain(".battle-v2 .choice.wrong::before { content: '✕';")
 })
+
+it('闘技場：上がると 🦸 がはね、下がるとしょんぼりする', () => {
+  expect(css).toContain('.arena-shaft.move-up .af-me { animation: me-hop')
+  expect(css).toContain('.arena-shaft.move-down .af-me { animation: me-slump')
+})
