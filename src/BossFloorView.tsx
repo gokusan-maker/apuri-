@@ -43,6 +43,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <div className={`boss-figure${hurt ? ' attack' : ''}`}>
         <BossArena bg="castle" color={boss.color} />
         <BossFigure hit={picked !== null && picked === q?.answer} look={boss} />
+        {/* HP が0になったら、ボス戦と同じ K.O. のはんこ */}
+        {bossHp === 0 && (
+          <span className="boss-ko" aria-hidden="true">
+            K.O.!
+          </span>
+        )}
       </div>
       <div className="boss-plate">
         <p className="boss-name">{bossHp === 0 ? `${boss.name}をたおした！` : `階のボス ${boss.name}`}</p>
