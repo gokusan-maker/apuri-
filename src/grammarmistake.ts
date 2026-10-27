@@ -50,6 +50,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-in-by': { wrong: 'Please explain it in detailed.', right: 'Please explain it in detail.', why: 'in detail「くわしく」。in のあとは名詞 detail を使う。' },
   'prep-idiom-for-in': { wrong: 'He tried in vainly to open the door.', right: 'He tried in vain to open the door.', why: 'in vain「むだに」。in のあとは vain のまま（vainly は副詞なので in のあとに置かない）。' },
   'prep-idiom-out-at': { wrong: 'At time, he forgets his homework.', right: 'At times, he forgets his homework.', why: 'at times「ときどき」。times と複数形にする。' },
+  'prep-idiom-in-at': { wrong: 'In generally, babies sleep a lot.', right: 'In general, babies sleep a lot.', why: 'in general「一般に」。in のあとに副詞 generally は置かない（Generally, ～ なら in はいらない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
