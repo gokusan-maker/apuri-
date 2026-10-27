@@ -55,6 +55,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-state-2': { wrong: 'She was in tear after the movie.', right: 'She was in tears after the movie.', why: 'in tears「泣いて」。tears と複数形にする。' },
   'prep-idiom-state-3': { wrong: 'She is kind by natural.', right: 'She is kind by nature.', why: 'by nature「生まれつき」。by のあとは名詞 nature（natural は形容詞）。' },
   'prep-idiom-in-2': { wrong: 'The meeting is in progressing.', right: 'The meeting is in progress.', why: 'in progress「進行中で」。in のあとは名詞 progress。' },
+  'prep-idiom-at-2': { wrong: 'We have a lot of common.', right: 'We have a lot in common.', why: 'have ～ in common「～を共通に持つ」。in common の in をわすれない。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
