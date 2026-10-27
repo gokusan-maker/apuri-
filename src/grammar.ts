@@ -7394,7 +7394,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'She often travels to Singapore on ___.', choices: ['business', 'businesses', 'busy'], answer: 0, why: 'on business「仕事で」。on のあとは a のない単数の business。' },
-      { sentence: 'We were on ___ in Hokkaido last summer.', choices: ['vacation', 'vacations', 'vacationing'], answer: 0, why: 'on vacation「休暇で」。on のあとは単数の vacation。' },
+      { sentence: 'We were on ___ in Hokkaido last summer.', choices: ['vacation', 'vacant', 'vacationing'], answer: 0, why: 'on vacation「休暇で」。on のあとは単数の vacation。' },
       { sentence: 'Mr. Sato is on ___ until next week.', choices: ['leave', 'leaving', 'left'], answer: 0, why: 'on leave「休みをとって」。ここでの leave は「休暇」という名詞。' },
     ],
   },
