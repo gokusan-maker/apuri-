@@ -2433,3 +2433,4 @@
 - 2026-10-27: 文法に「自動詞 ＋ 前置詞 ④（concentrate on ／ participate in ／ care about）」の単元を追加
 - 2026-10-27: 高3（共通テスト）の長文に、評論「The Hidden Work of Blinking」（まばたきのかくれた役目）を追加
 - 2026-10-27: 闘技場で、階が変わると新しい相手が登場する演出を追加（上の階は上から・下の階は下から、「⬆ 2階」の札）
+- 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑥（be short of ／ be ashamed of ／ be curious about）」の単元を追加
