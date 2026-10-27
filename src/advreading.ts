@@ -10406,6 +10406,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-cafeteria',
+    title: 'Notice: Changes to the Staff Cafeteria',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees of Northgate Electronics: Starting Monday, November 3, the staff cafeteria on the second floor will introduce several changes. These changes are based on the results of last month's employee survey, in which more than 300 of you shared your opinions.",
+      "First, the cafeteria will open 30 minutes earlier, at 7:30 A.M., so that staff who start work early can have breakfast. Lunch will still be served from 11:30 A.M. to 2:00 P.M. Second, a new vegetarian dish will be offered every day, and the menu for the whole week will be posted online every Friday.",
+      "In addition, cash will no longer be accepted. Payments can be made with your staff ID card or a smartphone. If you have not yet ( A ) up your ID card for payments, please visit the general affairs office before October 31.",
+      "Finally, to reduce waste, staff who bring their own cups will receive a 20-yen discount on coffee and tea. We hope these changes will make lunchtime more enjoyable ( B ) everyone. Any further comments can be sent to the cafeteria manager, Mr. Ito.",
+    ],
+    ja: [
+      'ノースゲート・エレクトロニクスの全社員のみなさまへ：11月3日（月）から、2階の社員食堂でいくつかの変更をおこないます。これらの変更は、300人をこえるみなさまに意見を寄せていただいた先月の社員アンケートの結果にもとづいています。',
+      'まず、朝早く仕事を始めるスタッフが朝食をとれるよう、食堂は30分早い午前7時30分に開きます。昼食はこれまでどおり午前11時30分から午後2時までです。次に、毎日新しいベジタリアン料理を出し、1週間分のメニューを毎週金曜日にオンラインでお知らせします。',
+      'また、現金は使えなくなります。お支払いは社員証かスマートフォンでおこなえます。まだ社員証を支払いに使えるよう設定していない方は、10月31日までに総務部へお越しください。',
+      '最後に、ごみをへらすため、自分のカップを持ってきたスタッフは、コーヒーと紅茶が20円引きになります。これらの変更で、みなさまの昼休みがより楽しいものになることを願っています。ほかのご意見は、食堂マネージャーのイトウさんまでお寄せください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['set', 'setting', 'to set', 'sets'], answer: 0, why: '現在完了 have not yet ＋過去分詞。set の過去分詞は set（set up ～「～を設定する」）。setting・to set・sets は have のあとに置けない。' },
+      { id: 'B', choices: ['for', 'at', 'in', 'on'], answer: 0, why: 'make ～ enjoyable for ＋人「（人）にとって～を楽しいものにする」。「～にとって」は for。at・in・on は「人にとって」の意味にならず、この形では使えない。' },
+    ],
+    underline: {
+      phrase: 'no longer',
+      choices: ['not anymore', 'more than before', 'only sometimes', 'for a long time'],
+      answer: 0,
+      why: 'no longer は「もはや～ない」。これまで使えた現金が、これからは使えないという意味。',
+    },
+    order: {
+      words: ['staff', 'who', 'bring', 'their', 'own', 'cups'],
+      rest: 'will receive a 20-yen discount',
+      answer: 'staff who bring their own cups',
+      ja: '自分のカップを持ってくるスタッフ（who 以下が staff を説明する）',
+    },
+    tf: [
+      { statement: '食堂は、これまでより30分早く開く。', answer: true, why: '第2段落 the cafeteria will open 30 minutes earlier。' },
+      { statement: '11月3日からも、現金で支払える。', answer: false, why: '第3段落 cash will no longer be accepted。' },
+      { statement: '1週間分のメニューは、毎週月曜日にお知らせされる。', answer: false, why: '第2段落 the menu for the whole week will be posted online every Friday。' },
+    ],
+    qa: [
+      { q: 'What are these changes based on?', choices: ['The results of an employee survey.', 'A new law about food.', 'The opinion of the company president.', 'A newspaper article.'], answer: 0, why: '第1段落 These changes are based on the results of last month\'s employee survey。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
