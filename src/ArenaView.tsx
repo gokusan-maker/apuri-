@@ -34,7 +34,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
   const [quick, setQuick] = useState(false)
   const [quicks, setQuicks] = useState(0) // 続けて「はやい！」で正解した数
-  const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
+  const [missed, setMissed] = useState<{ en: string; ja: string; kind: keyof typeof KIND_LABEL }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [base, setBase] = useState(start) // この回のはじめの階（きょう何階のぼったかを数える）
   const [goals, setGoals] = useState(0) // 達成した目標の数（目標は5階ごとに次々と出る）
@@ -109,7 +109,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       }
       playCorrect()
     } else {
-      if (!missed.some((m) => m.en === q.word.en)) setMissed([...missed, { en: q.word.en, ja: q.choices[q.answer] }])
+      if (!missed.some((m) => m.en === q.word.en)) setMissed([...missed, { en: q.word.en, ja: q.choices[q.answer], kind }])
       setStreak(0)
       setNewRecord(false)
       setNewTitle(null)
@@ -178,6 +178,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             <ul>
               {missed.slice(0, 8).map((m) => (
                 <li key={m.en}>
+                  <span className="am-kind" aria-label={KIND_LABEL[m.kind].split(' ')[1]}>
+                    {KIND_LABEL[m.kind].split(' ')[0]}
+                  </span>
                   <span className="am-en">{m.en}</span>
                   <span className="am-ja">{m.ja}</span>
                 </li>

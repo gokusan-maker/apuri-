@@ -949,6 +949,7 @@ it('闘技場の結果に、単語・文法・読解それぞれの正解数を�
   }
   fireEvent.click(screen.getByText('🏁 終了'))
   expect(screen.getByLabelText('種類ごとの正解')).toHaveTextContent('🔤 単語 2/2 📐 文法 0/1 📖 読解 1/1')
+  expect(within(screen.getByLabelText('まちがえた問題')).getByLabelText('文法')).toHaveTextContent('📐') // ふりかえりに種類のしるし
 })
 
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
