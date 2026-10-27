@@ -11267,6 +11267,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-system-maintenance',
+    title: 'Notice: System Maintenance This Weekend',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: Our computer system will be unavailable from 10:00 P.M. on Friday, March 14, until 6:00 A.M. on Sunday, March 16, because of scheduled maintenance. During this time, the IT department will install new security software and ( A ) the main servers.",
+      "While the system is down, you will not be able to access your work e-mail, shared files, or the online booking system for meeting rooms. Please save any important documents to your computer before you leave the office on Friday.",
+      "If you must work over the weekend, you can still use your computer for tasks that do not need the network, such as writing documents. Any e-mails sent to you during this period will not be lost; they will arrive once the system is running again.",
+      "After the work is finished, you will be asked to change your password when you first log in. Your new password must be at least twelve characters long. If you have any trouble ( B ) in on Monday morning, please call the IT help desk at extension 300.",
+    ],
+    ja: [
+      '全スタッフのみなさまへ：予定されている点検のため、3月14日（金）午後10時から3月16日（日）午前6時まで、社内のコンピューターシステムが使えなくなります。このあいだに、IT部が新しいセキュリティソフトを入れ、メインのサーバーを最新の状態にします。',
+      'システムが止まっているあいだは、会社のメール、共有ファイル、会議室のオンライン予約システムが使えません。大事な書類は、金曜日に会社を出る前に自分のパソコンに保存しておいてください。',
+      '週末に仕事をしなければならない場合でも、文書を書くなど、ネットワークのいらない作業にはパソコンを使えます。この期間に送られてきたメールはなくならず、システムがまた動きだせば届きます。',
+      '作業が終わったあと、はじめてログインするときにパスワードの変更をもとめられます。新しいパスワードは12文字以上にしてください。月曜日の朝にログインでこまったことがあれば、IT ヘルプデスク（内線300）にお電話ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['update', 'updates', 'updating', 'updated'], answer: 0, why: 'will のあとの install と and でならぶので、同じく動詞の原形 update。updates・updating・updated は will のあとに置けない。' },
+      { id: 'B', choices: ['logging', 'log', 'to log', 'logged'], answer: 0, why: 'have trouble ～ing「～するのにこまる」。trouble のあとは動名詞 logging（log in「ログインする」）。log・to log・logged はこの形にならない。' },
+    ],
+    underline: {
+      phrase: 'unavailable',
+      choices: ['not possible to use', 'very fast', 'free of charge', 'easy to find'],
+      answer: 0,
+      why: 'unavailable は「使えない・利用できない」（⇔ available）。点検のあいだシステムが使えないという意味。',
+    },
+    order: {
+      words: ['your', 'new', 'password', 'must', 'be', 'at', 'least'],
+      rest: 'twelve characters long',
+      answer: 'your new password must be at least',
+      ja: '新しいパスワードは少なくとも～でなければならない（at least「少なくとも」）',
+    },
+    tf: [
+      { statement: '点検のあいだも、会社のメールは使える。', answer: false, why: '第2段落 you will not be able to access your work e-mail。' },
+      { statement: '点検中に送られたメールは、なくなってしまう。', answer: false, why: '第3段落 Any e-mails sent to you during this period will not be lost。' },
+      { statement: '点検のあと、パスワードを変える必要がある。', answer: true, why: '第4段落 you will be asked to change your password when you first log in。' },
+    ],
+    qa: [
+      { q: 'What should staff do before leaving the office on Friday?', choices: ['Save important documents to their computers.', 'Change their passwords.', 'Book a meeting room.', 'Call the IT help desk.'], answer: 0, why: '第2段落 Please save any important documents to your computer before you leave the office on Friday。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
