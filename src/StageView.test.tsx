@@ -580,6 +580,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(floor()).toBe(1)
   fireEvent.click(screen.getByText('🏁 終了'))
   expect(screen.getByRole('status')).toHaveTextContent('いまのあなたは 1階（中1レベル）')
+  expect(screen.getByText('称号：🌱 見習い')).toBeInTheDocument()
   expect(screen.getByText('🏅 最高記録 更新！ 2階（中2レベル）')).toBeInTheDocument()
   expect(loadArenaBest()).toBe(1)
   fireEvent.click(screen.getByText('← 城にもどる'))
@@ -606,4 +607,12 @@ it('闘技場：いままでの最高より上の階に着くたびに🪙5（�
   expect(coins).toHaveBeenCalledWith(ARENA_BEST_COINS)
   expect(screen.getByText(`🆕 最高記録！ 🪙${ARENA_BEST_COINS}`)).toBeInTheDocument()
   expect(loadArenaBest()).toBe(2)
+})
+
+it('闘技場の階ごとの称号', async () => {
+  const { arenaTitle, ARENA_TOP } = await import('./arena')
+  expect(arenaTitle(0)).toBe('🌱 見習い')
+  expect(arenaTitle(3)).toBe('🗡 戦士')
+  expect(arenaTitle(9)).toBe('⚔ 勇者')
+  expect(arenaTitle(ARENA_TOP)).toBe('👑 伝説の英語王')
 })

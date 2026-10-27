@@ -4078,3 +4078,4 @@ header .event-chips { margin: 0 0 2px; }
 .arena-banner.up { background: #16a34a; color: #fff; }
 .arena-banner.down { background: #dc2626; color: #fff; }
 @media (prefers-reduced-motion: reduce) { .arena-foe { animation: none !important; } }
+.arena-title-badge { display: inline-block; margin: 2px 0 6px; padding: 3px 12px; border-radius: 999px; background: linear-gradient(180deg, #fde68a, #f59e0b); color: #451a03; font-weight: 900; font-size: 0.9rem; }

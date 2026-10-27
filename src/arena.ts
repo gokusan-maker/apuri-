@@ -13,6 +13,16 @@ const clamp = (lv: number) => Math.max(0, Math.min(ARENA_TOP, lv))
 export const arenaNext = (lv: number, correct: boolean): number => clamp(lv + (correct ? 1 : -1))
 export const arenaCourse = (lv: number) => COURSES[clamp(lv)]
 export const arenaFloor = (lv: number): string => `${clamp(lv) + 1}階（${arenaCourse(lv).label}レベル）`
+// 階ごとの称号（結果で伝える）
+const TITLES: [number, string][] = [
+  [14, '👑 伝説の英語王'],
+  [12, '🦸 英雄'],
+  [9, '⚔ 勇者'],
+  [6, '🛡 騎士'],
+  [3, '🗡 戦士'],
+  [0, '🌱 見習い'],
+]
+export const arenaTitle = (lv: number): string => TITLES.find(([min]) => clamp(lv) >= min)![1]
 // そのレベルの相手：そのレベルのボスのキャラクター
 export const arenaLook = (lv: number): BossLook => BOSSES[LEVEL_BOSS_LOOK[arenaCourse(lv).id]]
 export const arenaStart = (course: CourseId): number => clamp(COURSES.findIndex((c) => c.id === course))
