@@ -174,8 +174,6 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setStreak(0)
               setMaxStreak(0)
               setGuards(0)
-            setMaxStreak(0)
-            setGuards(0)
               setLv(start)
               setTop(start)
               setQ(arenaQuestionAt(start, 0))
