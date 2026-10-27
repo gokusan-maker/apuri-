@@ -2445,3 +2445,4 @@
 - 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑦（be harmful to ／ be related to ／ be grateful for）」の単元を追加
 - 2026-10-27: 高3（共通テスト）の長文に、評論「The Science of Brain Freeze」（冷たいものを食べたときの頭痛のしくみ）を追加
 - 2026-10-27: 闘技場の結果に「次の称号まであと○階」を表示
+- 2026-10-27: 文法に「自動詞 ＋ 前置詞 ⑦（dream of ／ approve of ／ prepare for）」の単元を追加
