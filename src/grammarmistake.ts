@@ -66,6 +66,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-sight': { wrong: 'We saw a ship in a distance.', right: 'We saw a ship in the distance.', why: 'in the distance「遠くに」。a ではなく the を使う。' },
   'prep-idiom-the': { wrong: 'Let\'s rest in a shade.', right: 'Let\'s rest in the shade.', why: 'in the shade「日かげで」。a ではなく the を使う。' },
   'prep-idiom-case': { wrong: 'In any cases, call me tomorrow.', right: 'In any case, call me tomorrow.', why: 'in any case「とにかく」。any のあとは単数の case。' },
+  'prep-idiom-no-way': { wrong: 'He is in no ways to blame.', right: 'He is in no way to blame.', why: 'in no way「決して～ない」。no のあとは単数の way。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
