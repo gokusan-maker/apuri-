@@ -760,3 +760,24 @@ it('闘技場の塔で、新しい称号が始まる階にそのアイコンが�
   expect(arenaTitleIconAt(4)).toBeNull()
   expect(arenaTitleIconAt(14)).toBe('👑')
 })
+
+it('闘技場：3回続けてまちがえると応援が出る', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  const { levelUnits } = await import('./grammarcastle')
+  localStorage.clear()
+  render(<Arena start={3} onExit={() => {}} />)
+  const miss = () => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
+    const g = COURSES.slice(0, 5).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent !== (w ? w.ja : g!.choices[g!.answer]))!)
+  }
+  miss()
+  fireEvent.click(screen.getByText(/^次へ/))
+  miss()
+  expect(screen.queryByText(/ドンマイ/)).toBeNull()
+  fireEvent.click(screen.getByText(/^次へ/))
+  miss()
+  expect(screen.getByText('💪 ドンマイ！ 1問ずつ取りもどそう')).toBeInTheDocument()
+})

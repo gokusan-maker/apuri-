@@ -16,6 +16,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
   const [count, setCount] = useState(0)
   const [right, setRight] = useState(0)
   const [streak, setStreak] = useState(0)
+  const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
   const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
@@ -37,6 +38,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
     setPicked(i)
     setCount(count + 1)
     if (!isArenaGrammar(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
+    setMisses(i === q.answer ? 0 : misses + 1)
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
@@ -179,6 +181,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
             {correct ? (nextLv > lv ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : '⬆ レベルアップ！'} ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
           </p>
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
+          {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}

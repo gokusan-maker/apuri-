@@ -4155,3 +4155,4 @@ header .event-chips { margin: 0 0 2px; }
 .am-en { font-weight: 800; color: #fff; overflow-wrap: anywhere; }
 .am-ja { color: #cbd5e1; text-align: right; }
 .af-title { font-size: 0.85rem; opacity: 0.9; }
+.arena-cheer { margin: 0 0 6px; font-size: 0.85rem; font-weight: 800; color: #fde68a; animation: trait-pop 0.3s ease-out; }
