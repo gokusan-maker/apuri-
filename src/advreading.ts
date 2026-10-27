@@ -8756,6 +8756,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-bike-parking',
+    title: 'Notice: New Bicycle Parking',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff: We are happy to announce that a new bicycle parking area will open behind the main building on Monday, April 7. The area has a roof, so bikes will stay dry even on rainy days, and it can hold up to sixty bicycles.",
+      "To use the area, you must first ( A ) your bicycle with the Facilities Office. You will then receive a sticker to put on your bike. Bicycles without a sticker may be removed after a warning.",
+      "The parking area will be open from 6:30 a.m. to 9:00 p.m. every day. Security cameras have been installed, but please remember to lock your bike. The company is not responsible for bicycles that are lost or ( B ).",
+      "Shower rooms on the first floor are also available for staff who ride to work. We hope this will encourage more employees to choose a healthy and environmentally friendly way to commute. Facilities Office",
+    ],
+    ja: [
+      '全社員のみなさんへ：4月7日（月）に、本館の裏に新しい自転車置き場がオープンすることをお知らせします。置き場には屋根があるので、雨の日でも自転車がぬれることはなく、最大60台まで置けます。',
+      '置き場を使うには、まず施設管理室で自転車を登録する必要があります。登録すると、自転車にはるステッカーがもらえます。ステッカーのない自転車は、警告のあとに撤去されることがあります。',
+      '自転車置き場は毎日午前6時30分から午後9時まで開いています。防犯カメラを設置しましたが、自転車には忘れずにかぎをかけてください。なくなったり、ぬすまれたりした自転車について、会社は責任を負いません。',
+      '自転車で通勤する社員のために、1階のシャワールームも利用できます。これによって、より多くの社員が健康的で環境にやさしい通勤方法を選ぶようになることを願っています。施設管理室',
+    ],
+    blanks: [
+      { id: 'A', choices: ['register', 'registers', 'registering', 'registered'], answer: 0, why: '助動詞 must のあとは動詞の原形。' },
+      { id: 'B', choices: ['stolen', 'stole', 'steal', 'stealing'], answer: 0, why: 'that are lost or stolen で「なくなったり、ぬすまれたりした」。lost と並ぶ受け身の過去分詞 stolen。' },
+    ],
+    tf: [
+      { statement: '新しい自転車置き場には屋根がある。', answer: true, why: '第1段落 The area has a roof。' },
+      { statement: 'ステッカーがなくても、自転車を自由に置ける。', answer: false, why: '第2段落 Bicycles without a sticker may be removed after a warning。' },
+      { statement: '自転車置き場は24時間開いている。', answer: false, why: '第3段落 open from 6:30 a.m. to 9:00 p.m.。' },
+    ],
+    qa: [
+      { q: 'What must staff do before using the parking area?', choices: ['Register their bicycle with the Facilities Office.', 'Buy a new lock.', 'Take a shower on the first floor.', 'Pay a monthly fee.'], answer: 0, why: '第2段落 you must first register your bicycle with the Facilities Office。' },
+      { q: 'How many bicycles can the area hold?', choices: ['Up to sixty.', 'Up to six.', 'Up to sixteen.', 'Up to six hundred.'], answer: 0, why: '第1段落 it can hold up to sixty bicycles。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

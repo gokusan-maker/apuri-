@@ -1899,6 +1899,8 @@
 
 - [x] 文法：自動詞＋前置詞⑥（rely on ／ respond to ／ refer to）
 
+- [x] 長文（TOEIC）：お知らせ「New Bicycle Parking」
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
