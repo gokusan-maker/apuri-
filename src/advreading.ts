@@ -8827,6 +8827,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-library-due',
+    title: 'Email: Your Books Are Due Soon',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Tanaka, This is a reminder from Maple Grove Public Library. The three books you borrowed on June 2 are due on Monday, June 23. Please return them by the end of that day to avoid a late fee of 25 cents per book per day.",
+      "If you need more time, you can renew the books online by logging in to your library account. Each book can be renewed up to two times, as long as no other member ( A ) it. Renewed books will be due two weeks after the original due date.",
+      "Books can be returned at the front desk during opening hours or through the return box next to the main entrance, which is available 24 hours a day. Please do not leave books outside the box, as they may be ( B ) by rain.",
+      "Thank you for using Maple Grove Public Library. Sincerely, Library Services",
+    ],
+    ja: [
+      'タナカ様　メープルグローブ公立図書館からのお知らせです。6月2日に借りられた3冊の本の返却期限は、6月23日（月）です。1冊につき1日25セントの延滞料がかからないよう、その日のうちに返却してください。',
+      'もっと時間が必要な場合は、図書館のアカウントにログインして、オンラインで本の貸出を延長できます。ほかの会員が予約していない限り、1冊につき2回まで延長できます。延長した本の返却期限は、もとの返却期限の2週間後になります。',
+      '本は、開館時間中は受付で、または正面入口の横にある24時間利用できる返却ボックスで返却できます。雨でぬれることがあるので、本をボックスの外に置かないでください。',
+      'メープルグローブ公立図書館をご利用いただき、ありがとうございます。図書館サービス',
+    ],
+    blanks: [
+      { id: 'A', choices: ['has reserved', 'have reserved', 'reserving', 'to reserve'], answer: 0, why: '主語 no other member は単数なので has reserved（現在完了）。reserving・to reserve では動詞がなくなる。' },
+      { id: 'B', choices: ['damaged', 'damage', 'damaging', 'to damage'], answer: 0, why: '本は雨に「いためられる」側なので、be ＋ 過去分詞の受け身 be damaged。' },
+    ],
+    tf: [
+      { statement: '本の返却期限は6月23日だ。', answer: true, why: '第1段落 are due on Monday, June 23。' },
+      { statement: '本の貸出は何回でも延長できる。', answer: false, why: '第2段落 Each book can be renewed up to two times。2回まで。' },
+      { statement: '返却ボックスは24時間使える。', answer: true, why: '第3段落 the return box … which is available 24 hours a day。' },
+    ],
+    qa: [
+      { q: 'How much is the late fee?', choices: ['25 cents per book per day.', '25 cents per day for all books.', '$2 per book.', 'There is no late fee.'], answer: 0, why: '第1段落 a late fee of 25 cents per book per day。' },
+      { q: 'How can Mr. Tanaka renew the books?', choices: ['By logging in to his library account online.', 'By calling the library at night.', 'By leaving them outside the return box.', 'By paying a late fee in advance.'], answer: 0, why: '第2段落 you can renew the books online by logging in to your library account。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
