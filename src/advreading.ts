@@ -9212,6 +9212,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-wrinkly-fingers',
+    title: 'Why Fingers Wrinkle in the Bath',
+    level: '難関大（評論）',
+    paragraphs: [
+      "After a long bath or a swim, the skin on our fingers and toes often becomes wrinkled, like a dried fruit. For many years, people believed this simply happened because the skin soaked up water and swelled.",
+      "However, doctors noticed something surprising. In people whose finger nerves had been damaged, the skin did not wrinkle ( A ) staying in water for a long time. This showed that wrinkling is not just a matter of water. It is actually controlled by the nervous system, which makes the blood vessels under the skin narrower and pulls the skin into folds.",
+      "Why would the body do this on purpose? One interesting idea is that wrinkled fingers work like the tread on a car's tires. The folds may help water flow away, ( B ) it easier to hold wet objects. In one experiment, people with wrinkled fingers moved wet marbles from one box to another faster than people with smooth fingers.",
+      "Not every study has found the same result, so scientists are still discussing the idea. Even so, it suggests that something as small as wrinkled fingers might once have helped our ancestors catch fish or walk on wet rocks.",
+    ],
+    ja: [
+      '長いおふろや水泳のあと、手足の指の皮ふは、干した果物のようにしわしわになることが多い。長年、人々はこれは単に皮ふが水を吸ってふくらむから起こるのだと信じていた。',
+      'しかし、医者たちはおどろくべきことに気づいた。指の神経が傷ついている人では、長い時間水につかっていても皮ふにしわができなかったのだ。このことは、しわができるのは単に水だけの問題ではないことを示した。それは実は神経のしくみによって調節されていて、皮ふの下の血管を細くし、皮ふを引っぱってひだにしているのだ。',
+      'なぜ体はわざわざこんなことをするのだろうか。おもしろい考えの1つは、しわしわの指は車のタイヤのみぞのようにはたらくというものだ。ひだが水を流れ出やすくし、ぬれた物をつかみやすくしているのかもしれない。ある実験では、しわしわの指の人は、なめらかな指の人よりも、ぬれたビー玉をある箱から別の箱へ速く移した。',
+      'すべての研究で同じ結果が出たわけではないので、科学者たちはまだこの考えについて議論している。それでも、しわしわの指のような小さなことが、かつて私たちの祖先が魚をとったり、ぬれた岩の上を歩いたりするのに役立っていたのかもしれないことを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even after', 'even though', 'even if', 'so that'], answer: 0, why: 'うしろが staying（動名詞）なので、前置詞をふくむ even after「～したあとでさえ」。even though・even if・so that は接続詞なので、うしろに主語と動詞のある文が必要。' },
+      { id: 'B', choices: ['making', 'makes', 'made', 'to making'], answer: 0, why: 'コンマのあとに分詞構文 making ～「（その結果）～にする」。makes を置くと接続詞なしで動詞が2つ並び、made（受け身の意味）では目的語 it と合わない。' },
+    ],
+    underline: {
+      phrase: 'on purpose',
+      choices: ['for a reason, not by accident', 'by mistake', 'very quickly', 'without water'],
+      answer: 0,
+      why: 'on purpose は「わざと・目的があって」。by accident（偶然に）の反対。',
+    },
+    order: {
+      words: ['is', 'not', 'just', 'a', 'matter', 'of'],
+      rest: 'water',
+      answer: 'is not just a matter of',
+      ja: '単に～だけの問題ではない（a matter of ～）',
+    },
+    tf: [
+      { statement: '指のしわは、皮ふが水を吸ってふくらむことだけで起こる。', answer: false, why: '第2段落 wrinkling is not just a matter of water. It is actually controlled by the nervous system。' },
+      { statement: '神経が傷ついている人の指は、水につかってもしわができなかった。', answer: true, why: '第2段落 In people whose finger nerves had been damaged, the skin did not wrinkle。' },
+      { statement: 'しわしわの指の考えについては、科学者の意見がすでに一致している。', answer: false, why: '第4段落 scientists are still discussing the idea。' },
+    ],
+    qa: [
+      { q: 'What happened in the experiment with wet marbles?', choices: ['People with wrinkled fingers moved them faster.', 'People with smooth fingers moved them faster.', 'Nobody could hold the marbles.', 'The marbles made the fingers wrinkle.'], answer: 0, why: '第3段落 people with wrinkled fingers moved wet marbles … faster than people with smooth fingers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
