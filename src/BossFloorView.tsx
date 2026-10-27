@@ -7,7 +7,7 @@ import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
 // まちがえると自分のライフ（❤️）がへり、0になったら負け（オーナーの要望）
-export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, best, boss }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; best?: number; boss?: BossLook }) {
+export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, perfectBonus = 0, best, boss }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; perfectBonus?: number; best?: number; boss?: BossLook }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -84,7 +84,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
             {bcRankOf(maxLives - lives)}
           </p>
         )}
-        {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！</p>}
+        {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！{perfectBonus > 0 ? ` ボーナス 🪙${perfectBonus}` : ''}</p>}
         {best !== undefined && score > best && <p className="bfloor-best">🏅 自己ベスト更新！（前回まで {best}問）</p>}
         {score >= pass && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
         {score >= pass && taunt && <p className="bfloor-taunt">{taunt}</p>}

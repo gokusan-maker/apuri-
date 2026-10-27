@@ -642,6 +642,21 @@ it('ボスの城の問題の階：全問正解でパーフェクト、前の最�
   expect(screen.getByText('🏅 自己ベスト更新！（前回まで 3問）')).toBeInTheDocument()
 })
 
+it('ボスの城の問題の階：全問正解でパーフェクトボーナス🪙（何回でも）', async () => {
+  const { BC_PERFECT_COINS, BC_FLOOR_COINS } = await import('./bosscastle')
+  localStorage.clear()
+  const bonus = vi.fn()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} onRankBonus={bonus} />)
+  fireEvent.click(within(screen.getByRole('region', { name: '中1のボスの城' })).getByRole('button', { name: /^1階：中1　単語/ }))
+  for (let n = 0; n < 10; n++) {
+    bfPick(true)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByText(`💯 パーフェクト！ ボーナス 🪙${BC_PERFECT_COINS}`)).toBeInTheDocument()
+  expect(bonus).toHaveBeenCalledWith(BC_PERFECT_COINS)
+  expect(bonus).toHaveBeenCalledWith(BC_FLOOR_COINS) // はじめてのクリア
+})
+
 it('ボスの城の問題の階も、ボス戦と同じ暗いゲーム画面（battle-v2）', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')

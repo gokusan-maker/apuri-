@@ -22,7 +22,7 @@ import { BossFloor } from './BossFloorView'
 import { Arena } from './ArenaView'
 import { MonsterFigure } from './MonsterView'
 import { arenaFloor, arenaStart, loadArenaBest } from './arena'
-import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, retryFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, BC_PERFECT_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, retryFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -601,10 +601,12 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onBack={() => setBcFloor(null)}
         onRetry={() => setBcFloor((cur) => (cur ? { ...cur, qs: retryFloorQs(cur.qs), first: !loadBcClears().includes(cur.id), round: (cur.round ?? 0) + 1 } : cur))}
         reward={bcFloor.first && onRankBonus ? BC_FLOOR_COINS : 0}
+        perfectBonus={onRankBonus ? BC_PERFECT_COINS : 0}
         best={loadBcBest()[bcFloor.id]}
         boss={floorBossLook(bcFloor.course, bcFloor.floor)}
         onDone={(score) => {
           recordBcBest(bcFloor.id, score)
+          if (score === bcFloor.qs.length) onRankBonus?.(BC_PERFECT_COINS)
           if (score >= bcPassOf(bcFloor.qs.length) && !bcClears.includes(bcFloor.id)) {
             onRankBonus?.(BC_FLOOR_COINS)
             const next = [...bcClears, bcFloor.id]

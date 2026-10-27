@@ -14,6 +14,7 @@ export const BC_PASS = 4
 export const BC_WORD_QS = 10 // 単語の階は10問（オーナーの要望：5問→10問）。8問以上でクリア
 // その問題数でクリアに必要な正解数（5問なら4問、10問なら8問）
 export const bcPassOf = (n: number): number => (n > BC_QS ? Math.ceil(n * 0.8) : BC_PASS)
+export const BC_PERFECT_COINS = 3 // 問題の階を全問正解したときのボーナス（何回でも）
 export const BC_FLOOR_COINS = 5 // 問題の階をはじめてクリアしたときのコイン
 export const BC_KIND = ['単語', '文法', '読解', 'ミックス'] as const
 export type BcFloor = { id: string; course: CourseId; floor: number } // floor：0〜3 が問題の階、4 がボス
