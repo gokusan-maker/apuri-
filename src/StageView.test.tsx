@@ -678,6 +678,21 @@ it('闘技場：いちばん上のレベルの上は、いろいろなレベル�
   expect(screen.getByText('次へ（♾ ランダム）')).toBeInTheDocument()
 })
 
+it('闘技場の結果：はじめのレベルより上のレベルまで上がれたら「📈 中1 → 中2」', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={19} onExit={() => {}} />)
+  arenaPick(true) // 20→21階（中2）
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(false) // 21→20階（中1）
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByText('📈 中1 → 中2 まで上がった！')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('⚔ 続きから戦う'))
+  arenaPick(false)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.queryByText(/まで上がった！/)).toBeNull()
+})
+
 it('闘技場：次のレベルまで あと何階 かを出す', async () => {
   const { arenaToNext, ARENA_ENDLESS } = await import('./arena')
   expect(arenaToNext(0)).toEqual({ floors: 20, label: '中2レベル', progress: 0 })

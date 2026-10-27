@@ -101,6 +101,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           いまのあなたは <strong>{arenaFloor(lv)}</strong>
         </p>
         <p className="arena-title-badge">称号：{arenaTitle(lv)}</p>
+        {/* きょう、はじめのレベルより上のレベルまで上がれたら */}
+        {arenaLvLabel(top) !== arenaLvLabel(start) && top > start && (
+          <p className="arena-lv-climb">
+            📈 {arenaLvLabel(start)} → {arenaLvLabel(top)} まで上がった！
+          </p>
+        )}
         {arenaNextTitle(lv) && (
           <p className="arena-next-title">
             次の称号「{arenaNextTitle(lv)!.title}」まで あと{arenaNextTitle(lv)!.floors}階

@@ -9791,6 +9791,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-elevator',
+    title: 'Notice: Elevator Replacement Work',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all tenants of the Harbor View Office Building: We are pleased to announce that both elevators in the building will be replaced with new, energy-saving models. The work will take place from Monday, March 3, to Friday, March 21.",
+      "During this period, only one elevator will be in service at a time. Please expect longer waiting times, especially in the morning between 8:30 and 9:30. We kindly ask tenants on the second and third floors to use the stairs whenever ( A ). Visitors with heavy deliveries should contact the front desk in advance so that a time can be arranged.",
+      "The work will be noisiest on weekdays between 10:00 A.M. and 3:00 P.M. If your office is planning an important meeting or an online event during these hours, please let the building office know. We will do our best to ( B ) the loudest work for other times.",
+      "The new elevators will use about 30 percent less electricity and will have larger doors, which will make it easier to move furniture and wheelchairs. We apologize for any inconvenience and thank you for your patience. For questions, please contact the building office at extension 100.",
+    ],
+    ja: [
+      'ハーバービュー・オフィスビルの全テナントのみなさまへ：ビルのエレベーター2基をどちらも、省エネ型の新しい機種に入れかえることをお知らせします。工事は3月3日（月）から3月21日（金）までおこないます。',
+      'この期間中、動いているエレベーターは一度に1基だけです。とくに朝8時30分から9時30分のあいだは、待ち時間が長くなると思ってください。2階と3階のテナントのみなさまには、できるときはいつでも階段をご利用いただくようお願いします。重い配達物があるお客さまは、時間を調整できるよう、前もって受付にご連絡ください。',
+      '工事の音がいちばん大きいのは平日の午前10時から午後3時です。この時間に大事な会議やオンラインのイベントを予定している事務所は、ビル管理室にお知らせください。いちばん音の大きい作業を別の時間に予定するよう、できるかぎりつとめます。',
+      '新しいエレベーターは電気の使用量が約30パーセント少なく、ドアも広くなるので、家具や車いすを運びやすくなります。ご不便をおかけしますが、ご理解とご協力に感謝します。ご質問は、内線100番のビル管理室までどうぞ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['possible', 'possibly', 'possibility', 'possibilities'], answer: 0, why: 'whenever possible「できるときはいつでも」（whenever it is possible の省略）。possibly は副詞、possibility・possibilities は名詞で、この形にならない。' },
+      { id: 'B', choices: ['schedule', 'scheduled', 'scheduling', 'schedules'], answer: 0, why: 'do one’s best to ～「～するようにつとめる」。to のあとは動詞の原形なので schedule（schedule ～ for ＋時「～を（時）に予定する」）。' },
+    ],
+    underline: {
+      phrase: 'in service',
+      choices: ['working and available to use', 'being repaired', 'closed to visitors', 'used only by workers'],
+      answer: 0,
+      why: 'in service は「運転中・使える状態で」（⇔ out of service「運転休止中」）。',
+    },
+    order: {
+      words: ['make', 'it', 'easier', 'to', 'move', 'furniture'],
+      rest: 'and wheelchairs',
+      answer: 'make it easier to move furniture',
+      ja: '家具を運ぶのを楽にする（make it ＋形容詞＋to ～「～するのを…にする」）',
+    },
+    tf: [
+      { statement: '工事のあいだ、エレベーターは2基とも止まる日がある。', answer: false, why: '第2段落 only one elevator will be in service at a time。1基は動いている。' },
+      { statement: '重い配達物があるときは、前もって受付に連絡する。', answer: true, why: '第2段落 Visitors with heavy deliveries should contact the front desk in advance。' },
+      { statement: '新しいエレベーターはドアが広くなる。', answer: true, why: '第4段落 will have larger doors。' },
+    ],
+    qa: [
+      { q: 'What should an office do if it has an important meeting at 11:00 A.M.?', choices: ['Tell the building office about it.', 'Use only the stairs.', 'Move the meeting to the weekend.', 'Call extension 300.'], answer: 0, why: '第3段落 If your office is planning an important meeting ... please let the building office know。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
