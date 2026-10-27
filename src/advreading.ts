@@ -8898,6 +8898,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-holiday-closure',
+    title: 'Notice: Holiday Office Closure',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Please be informed that the offices of Bright Path Travel will be closed from Saturday, December 28, to Friday, January 3, for the New Year holidays. Regular business hours will ( A ) on Monday, January 6.",
+      "During the closure, our customer service phone line will not be available. However, customers can still make, change, or cancel bookings on our website at any time. Emails sent during the holidays will be answered in the order they were received after we reopen.",
+      "If you have an emergency while you are traveling, such as a missed flight or a lost passport, please call our 24-hour support number printed on your travel documents. Staff members ( B ) on duty throughout the holiday period to help you.",
+      "We are also pleased to announce that our new spring tour packages will be available on our website from January 6. We thank you for choosing Bright Path Travel this year and wish you a happy New Year.",
+    ],
+    ja: [
+      'ブライト・パス旅行社の事務所は、年末年始の休暇のため、12月28日（土）から1月3日（金）まで休業いたしますので、お知らせします。通常の営業時間は、1月6日（月）から再開します。',
+      '休業期間中、カスタマーサービスの電話窓口はご利用いただけません。しかし、お客様は当社のウェブサイトで、いつでも予約、予約の変更、取り消しができます。休暇中に送られたメールには、再開後、受けつけた順にお返事します。',
+      '飛行機に乗りおくれた、パスポートをなくしたなど、旅行中に緊急のことがあった場合は、旅行書類に印刷されている24時間サポート番号にお電話ください。休暇の期間中も、お客様をお手伝いするスタッフが勤務しています。',
+      'また、新しい春のツアーパッケージを1月6日から当社のウェブサイトでご案内いたします。今年もブライト・パス旅行社をお選びいただき、ありがとうございました。よいお年をおむかえください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['resume', 'resumes', 'resuming', 'resumed'], answer: 0, why: '助動詞 will のあとは動詞の原形。' },
+      { id: 'B', choices: ['will be', 'will', 'being', 'to be'], answer: 0, why: '主語 Staff members に対する動詞が必要。will be on duty「勤務している予定だ」。will だけでは be がなく、being・to be では文の動詞にならない。' },
+    ],
+    tf: [
+      { statement: '事務所は1月3日まで休業する。', answer: true, why: '第1段落 closed from Saturday, December 28, to Friday, January 3。' },
+      { statement: '休業中は、ウェブサイトで予約を変更できない。', answer: false, why: '第2段落 customers can still make, change, or cancel bookings on our website at any time。' },
+      { statement: '旅行中の緊急のときは、24時間サポート番号に電話できる。', answer: true, why: '第3段落 please call our 24-hour support number。' },
+    ],
+    qa: [
+      { q: 'When will regular business hours start again?', choices: ['On Monday, January 6.', 'On Friday, January 3.', 'On Saturday, December 28.', 'On Saturday, January 4.'], answer: 0, why: '第1段落 Regular business hours will resume on Monday, January 6。' },
+      { q: 'What will happen to emails sent during the holidays?', choices: ['They will be answered in order after the office reopens.', 'They will be deleted.', 'They will be answered on December 28.', 'They will be sent back to customers.'], answer: 0, why: '第2段落 will be answered in the order they were received after we reopen。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
