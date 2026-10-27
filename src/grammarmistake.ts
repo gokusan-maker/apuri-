@@ -81,6 +81,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-under-2': { wrong: 'The road is under repairing.', right: 'The road is under repair.', why: 'under repair「修理中で」。under のあとは名詞 repair。' },
   'prep-beyond': { wrong: 'The view was beyond describe.', right: 'The view was beyond description.', why: 'beyond description「言葉で表せないほど」。beyond のあとは名詞 description。' },
   'prep-within': { wrong: 'The station is within walk distance.', right: 'The station is within walking distance.', why: 'within walking distance「歩いて行ける距離に」。walking の形で決まっている。' },
+  'prep-against-2': { wrong: 'Running in the hall is against rule.', right: 'Running in the hall is against the rules.', why: 'against the rules「規則違反で」。the と複数形の rules にする。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
