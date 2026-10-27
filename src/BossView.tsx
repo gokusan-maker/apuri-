@@ -608,7 +608,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   }
 
   return (
-    <section className={`card quiz boss battle-v2 bg-${golden ? 'gold' : bossBgOf(level)}${atk && atk.at === index && picked !== null && atk.lose > 0 ? ' hurt' : ''}${enraged && !won ? ' enraged' : ''}`} style={{ '--boss': look.color } as CSSProperties}>
+    <section className={`card quiz boss battle-v2 bg-${golden ? 'gold' : bossBgOf(level)}${atk && atk.at === index && picked !== null && atk.lose > 0 ? ' hurt' : ''}${enraged && !won ? ' enraged' : ''}${hearts === 1 && !won && !lost ? ' pinch' : ''}`} style={{ '--boss': look.color } as CSSProperties}>
       <div className="stage-head">
         <button className="stage-back" onClick={onExit}>
           {won || lost ? '← もどる' : '← にげる'}

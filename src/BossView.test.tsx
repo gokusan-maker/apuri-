@@ -116,6 +116,16 @@ describe('ボス戦', () => {
     expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '220')
   })
 
+  it('ハートがのこり1つになると、画面のふちが赤く脈打つ（ピンチ）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+    const card = () => document.querySelector('.card.boss')!
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+    expect(card().classList.contains('pinch')).toBe(false)
+    answer(false)
+    expect(card().classList.contains('pinch')).toBe(true)
+  })
+
   it('ボスをたおすと K.O. のはんこが出る', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
     expect(document.querySelector('.boss-ko')).toBeNull()
