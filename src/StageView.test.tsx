@@ -627,3 +627,31 @@ it('闘技場は3問に1問、そのレベルの文法の問題が出る', async
   expect(g.choices[g.answer]).toBe(g.word.ja)
   expect(isArenaGrammar(arenaQuestionAt(9, 5))).toBe(true)
 })
+
+it('闘技場：3連続正解ごとに2階ジャンプ', async () => {
+  const { arenaNext, isArenaJump } = await import('./arena')
+  expect(arenaNext(2, true, 1)).toBe(3)
+  expect(arenaNext(2, true, 3)).toBe(4)
+  expect(arenaNext(2, true, 6)).toBe(4)
+  expect(arenaNext(2, false, 3)).toBe(1)
+  expect(isArenaJump(true, 2)).toBe(false)
+  const { Arena } = await import('./ArenaView')
+  const { courseWords } = await import('./wordcourse')
+  const { levelUnits } = await import('./grammarcastle')
+  const { COURSES } = await import('./wordcourse')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  const pickRight = () => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
+    const g = COURSES.slice(0, 5).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
+    const right = w ? w.ja : g!.choices[g!.answer]
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === right)!)
+  }
+  pickRight()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pickRight()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pickRight()
+  expect(document.querySelector('.arena-move')).toHaveTextContent('🚀 3連続！ 2階ジャンプ！ 5階（高2レベル）へ')
+})

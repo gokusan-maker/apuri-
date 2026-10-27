@@ -10,8 +10,11 @@ import type { Word } from './words'
 export const ARENA_TOP = COURSES.length - 1
 export const ARENA_BEST_COINS = 5 // いままでの最高より上の階に着くたびに
 const clamp = (lv: number) => Math.max(0, Math.min(ARENA_TOP, lv))
-// 正解なら上へ、まちがいなら下へ（いちばん上・下ではそのまま）
-export const arenaNext = (lv: number, correct: boolean): number => clamp(lv + (correct ? 1 : -1))
+// 正解なら上へ、まちがいなら下へ（いちばん上・下ではそのまま）。
+// streak（この答えを入れた連続正解の数）が3の倍数になったら、2階ジャンプ
+export const ARENA_JUMP_EVERY = 3
+export const isArenaJump = (correct: boolean, streak = 0) => correct && streak > 0 && streak % ARENA_JUMP_EVERY === 0
+export const arenaNext = (lv: number, correct: boolean, streak = 0): number => clamp(lv + (correct ? (isArenaJump(correct, streak) ? 2 : 1) : -1))
 export const arenaCourse = (lv: number) => COURSES[clamp(lv)]
 export const arenaFloor = (lv: number): string => `${clamp(lv) + 1}階（${arenaCourse(lv).label}レベル）`
 // 階ごとの称号（結果で伝える）

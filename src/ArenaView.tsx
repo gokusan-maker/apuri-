@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaTitle, arenaLook, arenaNext, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaTitle, arenaLook, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
 import { playCorrect, playWrong } from './sound'
@@ -22,7 +22,8 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
   const [moved, setMoved] = useState<'up' | 'down' | null>(null) // 階が変わった直後：新しい相手が登場
   const look = arenaLook(lv)
   const correct = picked !== null && picked === q.answer
-  const nextLv = picked === null ? lv : arenaNext(lv, correct)
+  const jump = picked !== null && isArenaJump(correct, streak)
+  const nextLv = picked === null ? lv : arenaNext(lv, correct, correct ? streak : 0)
 
   function pick(i: number) {
     if (picked !== null) return
@@ -31,7 +32,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
-      const up = arenaNext(lv, true)
+      const up = arenaNext(lv, true, streak + 1)
       setTop(Math.max(top, up))
       if (up > record) {
         setRecord(up)
@@ -127,7 +128,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
       {picked !== null && (
         <>
           <p className={`arena-move ${correct ? 'up' : 'down'}`} role="status">
-            {correct ? (nextLv > lv ? `⬆ レベルアップ！ ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : `${nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ　` : ''}正解は「${q.choices[q.answer]}」`}
+            {correct ? (nextLv > lv ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : '⬆ レベルアップ！'} ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : `${nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ　` : ''}正解は「${q.choices[q.answer]}」`}
           </p>
           {correct && newRecord && (
             <p className="arena-record" role="status">
