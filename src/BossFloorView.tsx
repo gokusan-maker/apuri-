@@ -18,7 +18,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   )
   if (!q)
     return (
-      <section className="card bfloor" aria-label={title}>
+      <section className="card bfloor battle-v2" aria-label={title}>
         <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
           {score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
@@ -33,7 +33,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       </section>
     )
   return (
-    <section className="card bfloor" aria-label={title}>
+    <section className="card bfloor battle-v2" aria-label={title}>
       <button className="list-link" onClick={onBack}>
         ← 城にもどる
       </button>

@@ -512,3 +512,10 @@ it('ボスの城の問題の階：全問正解でパーフェクト、前の最�
   expect(screen.getByText('💯 パーフェクト！')).toBeInTheDocument()
   expect(screen.getByText('🏅 自己ベスト更新！（前回まで 3問）')).toBeInTheDocument()
 })
+
+it('ボスの城の問題の階も、ボス戦と同じ暗いゲーム画面（battle-v2）', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  render(<BossFloor title="t" qs={bossFloorQs('中1', 1)} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.card.bfloor')!.classList.contains('battle-v2')).toBe(true)
+})
