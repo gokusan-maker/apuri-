@@ -113,6 +113,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       )}
       {bossView}
       {lifeView}
+      {/* はじめの問題では、ボス戦と同じ「スタート！」の合図 */}
+      {i === 0 && picked === null && (
+        <div className="battle-start" aria-hidden="true">
+          ⚔ スタート！
+        </div>
+      )}
       {/* 3連続正解からコンボの表示 */}
       {picked !== null && combo >= 3 && (
         <p key={`combo${i}`} className="bfloor-combo" role="status">
