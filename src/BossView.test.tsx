@@ -126,6 +126,13 @@ describe('ボス戦', () => {
     expect(card().classList.contains('pinch')).toBe(true)
   })
 
+  it('まちがえると問題のパネルがゆれる（miss）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+    expect(document.querySelector('.boss .en')!.classList.contains('miss')).toBe(false)
+    answer(false)
+    expect(document.querySelector('.boss .en')!.classList.contains('miss')).toBe(true)
+  })
+
   it('ボスをたおすと K.O. のはんこが出る', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
     expect(document.querySelector('.boss-ko')).toBeNull()

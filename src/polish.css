@@ -4126,3 +4126,7 @@ header .event-chips { margin: 0 0 2px; }
 .card.boss.battle-v2.pinch::after { content: ''; position: absolute; inset: 0; z-index: 7; border-radius: inherit; pointer-events: none; box-shadow: inset 0 0 0 2px rgb(239 68 68 / 0.6), inset 0 0 40px rgb(239 68 68 / 0.45); animation: pinch-pulse 1s ease-in-out infinite; }
 @keyframes pinch-pulse { 50% { box-shadow: inset 0 0 0 2px rgb(239 68 68 / 0.2), inset 0 0 18px rgb(239 68 68 / 0.15); } }
 @media (prefers-reduced-motion: reduce) { .card.boss.battle-v2.pinch::after { animation: none; } }
+/* ボス戦：まちがえると問題のパネルがゆれて赤く光る */
+.battle-v2 .en.miss { border-color: #ef4444; box-shadow: 0 0 16px rgb(239 68 68 / 0.6); animation: panel-miss 0.4s ease-in-out; }
+@keyframes panel-miss { 20% { transform: translateX(-8px); } 40% { transform: translateX(7px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(3px); } }
+@media (prefers-reduced-motion: reduce) { .battle-v2 .en.miss { animation: none; } }
