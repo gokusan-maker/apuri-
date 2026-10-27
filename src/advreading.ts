@@ -10570,6 +10570,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-seahorse',
+    title: 'Seahorse Fathers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Seahorses look so unusual that many people do not realize they are fish. They swim standing up, they have a head shaped like a horse's, and they hold on to plants with their long tails. But the most surprising thing about seahorses is that the fathers, not the mothers, ( A ) birth to the babies.",
+      "A male seahorse has a special pouch on the front of his body. The female puts her eggs into this pouch, and the male carries them for two to four weeks. During this time, he gives the growing babies oxygen and keeps them safe from danger.",
+      "When the babies are ready, the father pushes them out of the pouch, sometimes hundreds or even more than a thousand at once. The tiny seahorses must take care of themselves from the first day. Sadly, only a few of them survive to become adults, ( B ) many are eaten by other sea animals.",
+      "Scientists are still studying why seahorse fathers carry the eggs. One idea is that it allows the female to prepare a new set of eggs more quickly, so the pair can have more babies in one season.",
+    ],
+    ja: [
+      'タツノオトシゴはとても変わった見た目なので、魚だと気づかない人も多い。立ったまま泳ぎ、頭は馬のような形で、長いしっぽで海草につかまる。しかし、タツノオトシゴでいちばんおどろくのは、母親ではなく父親が赤ちゃんを産むことだ。',
+      'オスのタツノオトシゴは、体の前に特別なふくろを持っている。メスはこのふくろに卵を入れ、オスは2週間から4週間それを運ぶ。そのあいだ、オスは育っていく赤ちゃんに酸素をあたえ、危険から守る。',
+      '赤ちゃんの準備ができると、父親はふくろから赤ちゃんをおし出す。一度に何百、ときには千びきをこえることもある。小さなタツノオトシゴは、最初の日から自分の身を自分で守らなければならない。残念なことに、多くがほかの海の生き物に食べられてしまうので、おとなになれるのはほんのわずかだ。',
+      '科学者たちは、なぜタツノオトシゴの父親が卵を運ぶのかを今も研究している。1つの考えは、そうすることでメスが次の卵を早く用意でき、1つの季節にペアがより多くの赤ちゃんを持てるというものだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['give', 'gives', 'giving', 'given'], answer: 0, why: 'that 節の主語 the fathers（複数）に続く動詞なので give（give birth to ～「～を産む」）。gives は単数の主語の形で、giving・given だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['because', 'because of', 'due to', 'thanks to'], answer: 0, why: 'うしろに主語と動詞（many are eaten）が続くので接続詞 because。because of・due to・thanks to は前置詞のはたらきで、名詞しかとれない。' },
+    ],
+    underline: {
+      phrase: 'pouch',
+      choices: ['a small bag-like part', 'a long tail', 'a kind of plant', 'a hard shell'],
+      answer: 0,
+      why: 'pouch は「ふくろ」。カンガルーのおなかのふくろも pouch という。卵を入れて運ぶ場所のこと。',
+    },
+    order: {
+      words: ['keeps', 'them', 'safe', 'from', 'danger'],
+      rest: '',
+      answer: 'keeps them safe from danger',
+      ja: 'それらを危険から守る（keep ～ safe from ...「～を…から守る」）',
+    },
+    tf: [
+      { statement: 'タツノオトシゴは魚のなかまだ。', answer: true, why: '第1段落 many people do not realize they are fish。' },
+      { statement: '卵を運ぶのはメスのタツノオトシゴだ。', answer: false, why: '第2段落 the male carries them for two to four weeks。' },
+      { statement: '生まれた赤ちゃんのほとんどは、おとなになれる。', answer: false, why: '第3段落 only a few of them survive to become adults。' },
+    ],
+    qa: [
+      { q: 'What does the male seahorse do while he carries the eggs?', choices: ['He gives the babies oxygen and keeps them safe.', 'He looks for a new pouch.', 'He stops eating completely.', 'He swims to a different sea.'], answer: 0, why: '第2段落 he gives the growing babies oxygen and keeps them safe from danger。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
