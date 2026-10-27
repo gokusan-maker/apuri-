@@ -49,6 +49,9 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         <div className="boss-hp" role="progressbar" aria-label="階のボスのHP" aria-valuemin={0} aria-valuemax={pass} aria-valuenow={bossHp}>
           <div className={`boss-hp-fill${bossHp / pass <= 0.25 ? ' low' : bossHp / pass <= 0.5 ? ' mid' : ''}`} style={{ width: `${(bossHp / pass) * 100}%` }} />
         </div>
+        <p key={`hp${bossHp}`} className={`boss-hp-num${bossHp < pass ? ' hp-pop' : ''}`}>
+          のこりHP {bossHp} / {pass}
+        </p>
       </div>
     </div>
   )

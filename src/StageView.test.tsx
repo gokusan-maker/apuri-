@@ -11,19 +11,22 @@ import { levelUnits as allLevelUnits } from './grammarcastle'
 // ボスの城の単語の階の正しい答え
 const bfPick = (right: boolean) => {
   const en = document.querySelector('.bfloor-q')!.textContent!
-  const ans = ALL_COURSES.flatMap((c) => allCourseWords(c.id)).find((x) => x.en === en)!.ja
+  const choices = [...document.querySelectorAll('.bfloor .choice')].map((b) => b.textContent)
+  const ans = ALL_COURSES.flatMap((c) => allCourseWords(c.id)).filter((x) => x.en === en).map((x) => x.ja).find((ja) => choices.includes(ja))!
   fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => (right ? b.textContent === ans : b.textContent !== ans))!)
 }
 // 闘技場の問題（単語・文法・読解）の正しい答え
 function arenaRight(): string {
   const en = document.querySelector('.arena .en')!.textContent!
   const ws = ALL_COURSES.flatMap((c) => allCourseWords(c.id))
-  const w = ws.find((x) => x.en === en)
-  if (w) return w.ja
-  const r = ws.find((x) => x.example === en)
-  if (r) return r.exampleJa!
-  const g = ALL_COURSES.flatMap((c) => allLevelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)!
-  return g.choices[g.answer]
+  // 同じ英語が別の訳で何度か出ることがあるので、選択肢にある訳をえらぶ
+  const cands = [
+    ...ws.filter((x) => x.en === en).map((x) => x.ja),
+    ...ws.filter((x) => x.example === en).map((x) => x.exampleJa!),
+    ...ALL_COURSES.flatMap((c) => allLevelUnits(c.id)).flatMap((u) => u.questions).filter((x) => x.sentence === en).map((g) => g.choices[g.answer]),
+  ]
+  const choices = [...document.querySelectorAll('.arena .choice')].map((b) => b.textContent)
+  return cands.find((c) => choices.includes(c))!
 }
 const arenaPick = (right: boolean) => {
   const ans = arenaRight()
@@ -561,6 +564,16 @@ it('ボスの城の問題の階：まちがえると階のボスがこうげき�
   expect(document.querySelector('.boss-atk-fx')).not.toBeNull()
   expect(document.querySelector('.bfloor .boss-figure')!.classList.contains('attack')).toBe(true)
   expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
+})
+
+it('ボスの城の問題の階：階のボスののこりHPを数字でも出す', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs, floorBossLook } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} boss={floorBossLook('中1', 1)} onDone={() => {}} onBack={() => {}} />)
+  expect(screen.getByText('のこりHP 4 / 4')).toBeInTheDocument()
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === qs[0].choices[qs[0].answer])!)
+  expect(screen.getByText('のこりHP 3 / 4')).toBeInTheDocument()
 })
 
 it('ボスの城の問題の階：最後の問題で「🔔 ラスト1問！」', async () => {
