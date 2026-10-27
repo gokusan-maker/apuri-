@@ -9253,6 +9253,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-visitor-signin',
+    title: 'Memo: New Visitor Sign-In System',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To: All Staff. From: Security Office. Beginning on Monday, November 3, all visitors to our building will need to sign in using a tablet at the front desk. The paper visitor book will no longer be ( A ).",
+      "When visitors arrive, they will type their name, company, and the name of the employee they are visiting. The system will then print a visitor badge and automatically send a message to that employee. Visitors must wear the badge at all times while they are in the building and return it when they leave.",
+      "To make the process faster, employees who are expecting a visitor can register the visitor's name in advance on the company website. Registered visitors will only need to ( B ) photo identification on arrival.",
+      "We believe this new system will make our building safer and save time at the front desk. If you have any questions, please contact the Security Office at extension 110.",
+    ],
+    ja: [
+      '宛先：全社員　差出人：警備室。11月3日（月）から、当ビルへのすべての来訪者は、受付のタブレットを使って受付手続きをする必要があります。紙の来訪者名簿はもう使われなくなります。',
+      '来訪者は到着したら、名前、会社名、訪問先の社員の名前を入力します。するとシステムが来訪者用の名札を印刷し、その社員に自動でメッセージを送ります。来訪者はビルにいる間はずっと名札をつけ、帰るときに返却しなければなりません。',
+      '手続きを速くするために、来訪者の予定がある社員は、会社のウェブサイトで来訪者の名前を前もって登録できます。登録された来訪者は、到着したときに写真つきの身分証明書を見せるだけですみます。',
+      'この新しいしくみによって、当ビルがより安全になり、受付での時間も節約できると考えています。ご質問があれば、内線110の警備室までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['used', 'use', 'using', 'to use'], answer: 0, why: '名簿は「使われる」側なので、be ＋ 過去分詞の受け身 will no longer be used。' },
+      { id: 'B', choices: ['show', 'showing', 'shown', 'shows'], answer: 0, why: 'need to ＋ 動詞の原形「～する必要がある」。' },
+    ],
+    tf: [
+      { statement: '11月3日からも、紙の来訪者名簿は使われる。', answer: false, why: '第1段落 The paper visitor book will no longer be used。' },
+      { statement: '来訪者が受付すると、訪問先の社員にメッセージが自動で送られる。', answer: true, why: '第2段落 automatically send a message to that employee。' },
+      { statement: '来訪者は、帰るときに名札を持ち帰ってよい。', answer: false, why: '第2段落 return it when they leave。返却する。' },
+    ],
+    qa: [
+      { q: 'What can employees do to make the process faster?', choices: ['Register the visitor\'s name in advance.', 'Print the badge themselves.', 'Meet the visitor outside the building.', 'Call the Security Office.'], answer: 0, why: '第3段落 employees … can register the visitor\'s name in advance on the company website。' },
+      { q: 'What will registered visitors need to show?', choices: ['Photo identification.', 'A paper invitation.', 'Their company badge.', 'A parking ticket.'], answer: 0, why: '第3段落 Registered visitors will only need to show photo identification on arrival。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
