@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'through-toward-past': { wrong: 'We walked passed the park.', right: 'We walked past the park.', why: '「～のそばを通りすぎて」は前置詞 past（passed は動詞）。' },
   'beside-besides': { wrong: 'Beside soccer, he likes baseball.', right: 'Besides soccer, he likes baseball.', why: '「～のほかに」は besides（beside は「～のそばに」）。' },
   'have-fun-ing': { wrong: 'We had fun to play games.', right: 'We had fun playing games.', why: 'have fun ～ing「～して楽しむ」。to ＋ 原形は使わない。' },
   'force-require-to': { wrong: 'We were forced wait for an hour.', right: 'We were forced to wait for an hour.', why: 'be forced to ～「～せざるをえない」。to が必要。' },
