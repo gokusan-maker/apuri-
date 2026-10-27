@@ -10037,6 +10037,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-starfish',
+    title: 'The Amazing Starfish',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Starfish are common in the sea, but they are full of surprises. First of all, they are not fish at all. They have no bones and no fins, and they belong to the same animal group as sea urchins. For this reason, many scientists prefer the name sea star, which ( A ) less confusing.",
+      "Most sea stars have five arms, although some kinds have more than twenty. On the bottom of each arm are hundreds of tiny tube feet. By moving these feet one after another, a sea star can slowly walk across rocks and even climb up glass walls in an aquarium.",
+      "Perhaps the most amazing thing about sea stars is their ability to grow new body parts. If a sea star loses an arm to a hungry bird or crab, it can grow a new one over several months. A few kinds can even grow a whole new body from a single arm, ( B ) part of the center is still attached.",
+      "Sea stars also play an important role in the ocean. Many of them eat shellfish, and they stop these animals from covering every rock. Without sea stars, the balance of life along the coast would change greatly.",
+    ],
+    ja: [
+      'ヒトデは海ではよく見かけるが、おどろきに満ちている。まず、ヒトデはまったく魚ではない。骨もひれもなく、ウニと同じ動物のなかまに入る。このため、多くの科学者は「シースター（海の星）」という名前のほうを好む。そのほうがまぎらわしくないからだ。',
+      'ほとんどのヒトデには腕が5本あるが、20本より多い種類もいる。それぞれの腕の裏側には、何百もの小さな管足（かんそく）がある。この足を次々に動かすことで、ヒトデは岩の上をゆっくり歩き、水族館のガラスのかべをのぼることさえできる。',
+      'ヒトデのいちばんおどろくべき点は、体の一部を新しく生やす力だろう。おなかをすかせた鳥やカニに腕を1本取られても、数か月かけて新しい腕を生やすことができる。中には、体の中心部の一部さえついていれば、1本の腕から体全体をまるごと生やせる種類もいる。',
+      'ヒトデは海の中で大切な役目も果たしている。多くのヒトデは貝を食べ、貝がすべての岩をおおいつくさないようにしている。ヒトデがいなければ、海岸の生き物のつり合いは大きく変わってしまうだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is', 'are', 'being', 'to be'], answer: 0, why: '関係代名詞 which（＝the name sea star、単数）のあとの動詞なので is。are は単数と合わず、being・to be だけでは関係詞節の動詞にならない。' },
+      { id: 'B', choices: ['as long as', 'in case of', 'because of', 'instead of'], answer: 0, why: 'うしろに主語と動詞（part of the center is still attached）が続くので接続詞 as long as「～さえすれば・～するかぎり」。in case of・because of・instead of は前置詞のはたらきで、文の前には置けない。' },
+    ],
+    underline: {
+      phrase: 'confusing',
+      choices: ['making people mistake one thing for another', 'very easy to say', 'beautiful to look at', 'used only by scientists'],
+      answer: 0,
+      why: 'confusing は「まぎらわしい・混乱させる」。starfish（星の魚）という名前だと魚だと思われやすいので、sea star のほうがまぎらわしくないという流れ。',
+    },
+    order: {
+      words: ['they', 'stop', 'these', 'animals', 'from', 'covering'],
+      rest: 'every rock',
+      answer: 'they stop these animals from covering',
+      ja: 'それらの動物が～をおおうのをふせぐ（stop A from ～ing「Aが～するのをふせぐ」）',
+    },
+    tf: [
+      { statement: 'ヒトデは魚のなかまで、骨がある。', answer: false, why: '第1段落 they are not fish at all. They have no bones。' },
+      { statement: 'ヒトデは管足を動かして、ガラスのかべをのぼれる。', answer: true, why: '第2段落 can ... even climb up glass walls in an aquarium。' },
+      { statement: 'ヒトデは、なくした腕を数日で生やす。', answer: false, why: '第3段落 it can grow a new one over several months。数日ではなく数か月。' },
+    ],
+    qa: [
+      { q: 'Why do many scientists prefer the name "sea star"?', choices: ['Because starfish are not really fish.', 'Because it is shorter.', 'Because sea stars live only in deep water.', 'Because it sounds more beautiful.'], answer: 0, why: '第1段落 they are not fish at all ... For this reason, many scientists prefer the name sea star。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
