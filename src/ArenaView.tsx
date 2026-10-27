@@ -191,7 +191,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
                 {arenaTitleIconAt(f) && <span className="af-title" title={`ここから称号「${arenaTitle(f)}」`}>{arenaTitleIconAt(f)}</span>}
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
-                {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}`} aria-hidden="true">
+                {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}${picked !== null && !correct ? ' ouch' : ''}`} aria-hidden="true">
                     {streak >= 3 && '🔥'}
                     {me ?? '🦸'}
                   </span>}

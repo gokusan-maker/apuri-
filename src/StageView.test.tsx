@@ -688,6 +688,7 @@ it('闘技場：レベルの区切り（20階ごと）をこえると LEVEL UP! 
   expect(document.querySelector('.arena-floor.here')!.classList.contains('lv-gate')).toBe(true)
   arenaPick(false)
   expect(screen.getByText('⬇ レベルダウン… 20階（中1レベル）へ')).toBeInTheDocument()
+  expect(document.querySelector('.arena-floor.here .af-me')!.classList.contains('ouch')).toBe(true) // まちがえると相棒がよろける
 })
 
 it('闘技場：いちばん上のレベルの上は、いろいろなレベルの問題がランダムに出る無限の階', async () => {

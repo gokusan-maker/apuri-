@@ -4215,3 +4215,7 @@ header .event-chips { margin: 0 0 2px; }
 .arena-confetti i { --k: 0; position: absolute; top: -10%; left: calc(8% + var(--k) * 16%); font-style: normal; font-size: 1.2rem; animation: confetti-fall 1.8s ease-in forwards; animation-delay: calc(var(--k) * 0.08s); }
 @keyframes confetti-fall { to { transform: translateY(260px) rotate(320deg); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .af-me.cheer, .arena-confetti i { animation: none; } }
+/* 闘技場：まちがえると相棒がよろける */
+.af-me.ouch { animation: me-ouch 0.5s ease-out; filter: saturate(0.6); }
+@keyframes me-ouch { 20% { transform: translateX(-5px) rotate(-10deg); } 50% { transform: translateX(4px) rotate(6deg); } 80% { transform: translateX(-2px); } }
+@media (prefers-reduced-motion: reduce) { .af-me.ouch { animation: none; } }
