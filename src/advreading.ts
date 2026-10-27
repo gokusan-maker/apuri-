@@ -8928,6 +8928,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-cat-purr',
+    title: 'The Mystery of the Purring Cat',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Anyone who has held a happy cat knows the soft, steady sound it makes. This sound, called purring, is one of the most familiar animal sounds in the world. ( A ), scientists still do not fully understand why cats do it.",
+      "We know something about how purring is made. Muscles in a cat's throat move very quickly, which causes the air to shake as the cat breathes in and out. Unlike most sounds animals make, a purr can continue while the cat is both inhaling and exhaling, so it can go on for a long time without a break.",
+      "Most people think purring simply means that a cat is happy. However, cats also purr when they are hurt, frightened, or giving birth. This suggests that purring may be a way for cats ( B ) themselves down, not just a sign of pleasure.",
+      "Some researchers have even suggested that the low vibrations of purring might help bones and muscles heal, although this idea has not been proven. Whatever the reason, purring reminds us that even the animals we live with every day still hold secrets.",
+    ],
+    ja: [
+      '機嫌のいいネコをだっこしたことがある人なら、ネコが出す静かで一定の音を知っている。のどを鳴らすというこの音は、世界でもっともおなじみの動物の音の1つだ。それでも、ネコがなぜそうするのか、科学者たちはまだ完全にはわかっていない。',
+      'のどを鳴らす音がどのように出るのかについては、ある程度わかっている。ネコののどの筋肉がとても速く動き、それによって、ネコが息を吸ったりはいたりするときに空気がふるえる。動物が出すほとんどの音とちがって、のどを鳴らす音は息を吸うときにもはくときにも続けられるので、とぎれずに長い間続く。',
+      'ほとんどの人は、のどを鳴らすのは単にネコが幸せだという意味だと考えている。しかし、ネコはけがをしたときや、こわがっているとき、子どもを産むときにものどを鳴らす。このことは、のどを鳴らすのが、喜びのしるしだけでなく、ネコが自分を落ち着かせる方法なのかもしれないことを示している。',
+      'のどを鳴らす低い振動が骨や筋肉の回復を助けるのかもしれないと言う研究者さえいるが、この考えは証明されていない。理由が何であれ、のどを鳴らすことは、毎日いっしょに暮らしている動物でさえ、まだ秘密をもっていることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Even so', 'Even though', 'Even if', 'So that'], answer: 0, why: 'コンマのあとに文が1つだけ続くので、副詞のはたらきをする Even so「それでも」。Even though・Even if・So that は接続詞なので、2つの文をつなぐ形が必要。' },
+      { id: 'B', choices: ['to calm', 'calming', 'calmed', 'calm'], answer: 0, why: 'a way for A to ～「A が～する方法」。for cats は不定詞の意味上の主語で、そのあとは to ＋ 原形。' },
+    ],
+    underline: {
+      phrase: 'inhaling',
+      choices: ['breathing in', 'breathing out', 'sleeping', 'eating'],
+      answer: 0,
+      why: 'inhale は「息を吸う」（反対は exhale「息をはく」）。前の文の breathes in and out とも対応している。',
+    },
+    order: {
+      words: ['is', 'one', 'of', 'the', 'most', 'familiar', 'animal', 'sounds'],
+      rest: 'in the world',
+      answer: 'is one of the most familiar animal sounds',
+      ja: 'もっともおなじみの動物の音の1つだ（one of the 最上級 ＋ 複数名詞）',
+    },
+    tf: [
+      { statement: 'ネコがのどを鳴らす理由は、完全に解明されている。', answer: false, why: '第1段落 scientists still do not fully understand why cats do it。' },
+      { statement: 'ネコは、息を吸うときにもはくときにものどを鳴らせる。', answer: true, why: '第2段落 a purr can continue while the cat is both inhaling and exhaling。' },
+      { statement: 'ネコがのどを鳴らすのは、うれしいときだけだ。', answer: false, why: '第3段落 cats also purr when they are hurt, frightened, or giving birth。' },
+    ],
+    qa: [
+      { q: 'What idea about purring has not been proven?', choices: ['That it helps bones and muscles heal.', 'That it is made by muscles in the throat.', 'That cats purr when they are happy.', 'That cats purr while breathing in.'], answer: 0, why: '第4段落 might help bones and muscles heal, although this idea has not been proven。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
