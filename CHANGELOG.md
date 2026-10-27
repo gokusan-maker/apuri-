@@ -2503,3 +2503,4 @@
 - 2026-10-27: 文法に「群前置詞⑥ on account of ／ in accordance with ／ with the exception of」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「Summer Internship Program」（デザイン会社の夏のインターン募集）を追加
 - 2026-10-27: 闘技場の塔の空の色が階で変わるように（下の階は青空・中ほどは夕焼け・上は星空）
+- 2026-10-27: 文法に「群前置詞⑦ as a result of ／ in search of ／ at the risk of」の単元を追加
