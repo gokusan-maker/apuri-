@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaTitle, arenaLook, arenaNext, arenaQuestion, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaTitle, arenaLook, arenaNext, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
 import { playCorrect, playWrong } from './sound'
@@ -8,7 +8,7 @@ import { playCorrect, playWrong } from './sound'
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える
 export function Arena({ start, onExit, onCoins }: { start: number; onExit: () => void; onCoins?: (n: number) => void }) {
   const [lv, setLv] = useState(start)
-  const [q, setQ] = useState(() => arenaQuestion(start))
+  const [q, setQ] = useState(() => arenaQuestionAt(start, 0))
   const [picked, setPicked] = useState<number | null>(null)
   const [count, setCount] = useState(0)
   const [right, setRight] = useState(0)
@@ -49,7 +49,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
   function next() {
     setMoved(nextLv > lv ? 'up' : nextLv < lv ? 'down' : null)
     setLv(nextLv)
-    setQ(arenaQuestion(nextLv, Math.random, q.word.id))
+    setQ(arenaQuestionAt(nextLv, count, Math.random, q.word.id))
     setPicked(null)
   }
   function finish() {
@@ -116,7 +116,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
           <div className="boss-hp-fill" style={{ width: `${((lv + 1) / (ARENA_TOP + 1)) * 100}%` }} />
         </div>
       </div>
-      <p className="en">{q.word.en}</p>
+      <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
       <div className="choices">
         {q.choices.map((c, i) => (
           <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}`} disabled={picked !== null} onClick={() => pick(i)}>

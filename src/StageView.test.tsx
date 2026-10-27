@@ -616,3 +616,14 @@ it('闘技場の階ごとの称号', async () => {
   expect(arenaTitle(9)).toBe('⚔ 勇者')
   expect(arenaTitle(ARENA_TOP)).toBe('👑 伝説の英語王')
 })
+
+it('闘技場は3問に1問、そのレベルの文法の問題が出る', async () => {
+  const { arenaQuestionAt, isArenaGrammar } = await import('./arena')
+  expect(isArenaGrammar(arenaQuestionAt(0, 0))).toBe(false)
+  expect(isArenaGrammar(arenaQuestionAt(0, 1))).toBe(false)
+  const g = arenaQuestionAt(0, 2)
+  expect(isArenaGrammar(g)).toBe(true)
+  expect(g.word.en).toContain('___')
+  expect(g.choices[g.answer]).toBe(g.word.ja)
+  expect(isArenaGrammar(arenaQuestionAt(9, 5))).toBe(true)
+})
