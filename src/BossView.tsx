@@ -638,7 +638,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <span className="slash s3" />
         </div>
       )}
-      <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
+      <div className={`boss-figure${enraged && !won ? ' rage' : ''}${won ? ' finished' : ''}${!won && hp > 0 && hp / maxHp <= 0.25 ? ' weak' : ''}${atk && atk.at === index && picked !== null ? ' attack' : ''}`}>
         <BossArena bg={golden ? 'gold' : bossBgOf(level)} color={look.color} night={night} season={season} />
         <BossFigure hit={hit} look={look} />
         {teamOn && index === 0 && picked === null && !won && (

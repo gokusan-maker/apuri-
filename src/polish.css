@@ -4158,3 +4158,7 @@ header .event-chips { margin: 0 0 2px; }
 .arena-cheer { margin: 0 0 6px; font-size: 0.85rem; font-weight: 800; color: #fde68a; animation: trait-pop 0.3s ease-out; }
 /* 闘技場の塔の空：下は青空、中ほどは夕焼け、上は星空 */
 .arena-tower { --sky1: #0ea5e9; --sky2: #1e3a8a; background: linear-gradient(180deg, color-mix(in srgb, var(--sky1) 55%, #0b1020), color-mix(in srgb, var(--sky2) 70%, #0b1020)); transition: background 0.6s; }
+/* ボス戦：HP が4分の1以下になると、ボスがふらふらする */
+.battle-v2 .boss-figure.weak > svg:not(.boss-arena) { animation: boss-wobble 1.2s ease-in-out infinite; transform-origin: 50% 90%; }
+@keyframes boss-wobble { 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
+@media (prefers-reduced-motion: reduce) { .battle-v2 .boss-figure.weak > svg:not(.boss-arena) { animation: none; } }

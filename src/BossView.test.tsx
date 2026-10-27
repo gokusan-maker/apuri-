@@ -141,6 +141,18 @@ describe('ボス戦', () => {
     expect(document.querySelector('.card.boss')!.classList.contains('crit-shake')).toBe(true)
   })
 
+  it('ボスの HP が4分の1以下になると、ボスがふらふらする（weak）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={40} />)
+    expect(document.querySelector('.boss-figure')!.classList.contains('weak')).toBe(false)
+    answer(true) // 会心で9ダメージ以上
+    fireEvent.click(screen.getByText('次へ'))
+    answer(true)
+    fireEvent.click(screen.getByText('次へ'))
+    answer(true)
+    const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
+    expect(document.querySelector('.boss-figure')!.classList.contains('weak')).toBe(hp > 0 && hp <= 10)
+  })
+
   it('まちがえると問題のパネルがゆれる（miss）', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     expect(document.querySelector('.boss .en')!.classList.contains('miss')).toBe(false)
