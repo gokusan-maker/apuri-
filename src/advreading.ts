@@ -10201,6 +10201,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-self-checkout',
+    title: 'Notice: New Self-Checkout Machines at Hillside Library',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Hillside City Library is happy to announce that four self-checkout machines will be installed near the main entrance on Saturday, September 6. With these machines, library users will be able to borrow books without ( A ) in line at the front desk.",
+      "Using the machines is simple. Place your library card on the reader, put your books on the shelf below the screen, and follow the instructions. A receipt showing the return date will be printed automatically. You can also choose to receive the receipt by e-mail instead of on paper.",
+      "The machines cannot be used for DVDs, magazines from the last month, or books that another user has reserved. These items must still be checked out at the front desk. If a machine does not read one of your books, please do not try again more than twice; instead, take the book to a staff member.",
+      "Library staff will be standing next to the machines during the first two weeks to help anyone who is ( B ) with the new system. We hope these machines will make your visits faster and more convenient. For more information, please visit our website or ask at the front desk.",
+    ],
+    ja: [
+      'ヒルサイド市立図書館は、9月6日（土）に正面入口の近くへ自動貸出機を4台設置することをお知らせします。この機械を使えば、図書館の利用者は受付に列をつくってならばなくても本を借りられるようになります。',
+      '機械の使い方は簡単です。図書館カードを読み取り機に置き、画面の下の台に本をのせて、案内にしたがってください。返却日が書かれたレシートが自動で印刷されます。紙のかわりにメールでレシートを受け取ることもできます。',
+      'DVD、最新1か月の雑誌、ほかの利用者が予約している本には、この機械は使えません。これらはこれまでどおり受付で貸出の手続きをしてください。機械が本を読み取らないときは、2回より多くやり直さず、職員のところへ本を持ってきてください。',
+      '最初の2週間は、新しいしくみになれていない人を手伝うため、職員が機械のとなりに立っています。この機械で、みなさまの来館がより早く便利になることを願っています。くわしくは、ウェブサイトをごらんいただくか、受付でおたずねください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['waiting', 'wait', 'waited', 'to wait'], answer: 0, why: '前置詞 without のあとは動名詞なので waiting（wait in line「列にならんで待つ」）。wait・waited・to wait は前置詞のあとに置けない。' },
+      { id: 'B', choices: ['unfamiliar', 'unfamiliarly', 'unfamiliarity', 'familiarize'], answer: 0, why: 'be動詞 is のあとに形容詞 unfamiliar（be unfamiliar with ～「～になれていない」）。unfamiliarly は副詞、unfamiliarity は名詞、familiarize は動詞で、is のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'convenient',
+      choices: ['easy and useful for you', 'quiet and calm', 'expensive', 'difficult to understand'],
+      answer: 0,
+      why: 'convenient は「便利な・都合のよい」。faster と並んで、来館がより楽になるという意味。',
+    },
+    order: {
+      words: ['a', 'receipt', 'showing', 'the', 'return', 'date'],
+      rest: 'will be printed automatically',
+      answer: 'a receipt showing the return date',
+      ja: '返却日を示すレシート（showing ～ が receipt をうしろから説明する）',
+    },
+    tf: [
+      { statement: '自動貸出機ではDVDも借りられる。', answer: false, why: '第3段落 The machines cannot be used for DVDs。' },
+      { statement: 'レシートはメールで受け取ることもできる。', answer: true, why: '第2段落 You can also choose to receive the receipt by e-mail。' },
+      { statement: '最初の2週間は、機械のそばに職員がいる。', answer: true, why: '第4段落 Library staff will be standing next to the machines during the first two weeks。' },
+    ],
+    qa: [
+      { q: 'What should users do if a machine does not read a book after two tries?', choices: ['Take the book to a staff member.', 'Try again five more times.', 'Send an e-mail to the library.', 'Leave the book on the machine.'], answer: 0, why: '第3段落 please do not try again more than twice; instead, take the book to a staff member。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
