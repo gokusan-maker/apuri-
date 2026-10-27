@@ -10652,6 +10652,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-pufferfish',
+    title: 'The Pufferfish’s Secret Weapon',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Pufferfish are slow swimmers, so they cannot easily escape from bigger fish. Instead, they have a surprising way to protect themselves. When a pufferfish is in danger, it quickly swallows a large amount of water and ( A ) into a ball several times its normal size.",
+      "This trick works well. A hungry fish that sees a small, easy meal suddenly finds a large, round ball that is hard to bite. Some kinds of pufferfish also have sharp spines on their skin, which stand up when the body grows bigger.",
+      "Many pufferfish have another defense as well: a strong poison in their bodies. This poison is far more powerful than many other natural poisons, and an animal that eats a pufferfish may die. Interestingly, the fish do not make the poison themselves. They get it from bacteria in the food ( B ) eat.",
+      "In Japan, pufferfish, called fugu, are eaten as a special dish. Only cooks with a special license are allowed to prepare it, because they must carefully remove the poisonous parts.",
+    ],
+    ja: [
+      'フグは泳ぐのがおそいので、大きな魚から簡単にはにげられない。そのかわり、身を守るおどろくべき方法を持っている。フグは危険がせまると、すばやくたくさんの水を飲みこみ、ふだんの何倍もの大きさのボールのようにふくらむのだ。',
+      'この作戦はよくきく。小さくて食べやすいえさだと思ったおなかのすいた魚は、急に、かみつきにくい大きな丸いボールを見つけることになる。皮ふにするどいとげを持つ種類もいて、体が大きくなるととげが立つ。',
+      '多くのフグには、もう1つの守りもある。体の中の強い毒だ。この毒はほかの多くの自然の毒よりもずっと強く、フグを食べた動物は死んでしまうこともある。おもしろいことに、フグは自分で毒を作っているのではない。食べるえさの中の細菌から毒を取りこんでいるのだ。',
+      '日本ではフグは特別な料理として食べられている。毒のある部分をていねいに取りのぞかなければならないので、特別な免許を持つ料理人しか調理することがゆるされていない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['blows up', 'blow up', 'blowing up', 'to blow up'], answer: 0, why: 'and で swallows とならぶ文の動詞。主語 it（三人称単数）なので blows up（blow up「ふくらむ」）。blow up は主語と合わず、blowing up・to blow up だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['they', 'them', 'their', 'theirs'], answer: 0, why: 'the food (that) they eat「かれらが食べるえさ」。関係代名詞が省略されていて、eat の主語が入るので主格の they。them・their・theirs は主語にならない。' },
+    ],
+    underline: {
+      phrase: 'defense',
+      choices: ['a way of protecting yourself', 'a kind of food', 'a fast way to swim', 'a place to sleep'],
+      answer: 0,
+      why: 'defense は「守り・防御」。毒も、ふくらむのと同じように身を守る方法の1つだという意味。',
+    },
+    order: {
+      words: ['only', 'cooks', 'with', 'a', 'special', 'license'],
+      rest: 'are allowed to prepare it',
+      answer: 'only cooks with a special license',
+      ja: '特別な免許を持つ料理人だけ（with ～「～を持った」）',
+    },
+    tf: [
+      { statement: 'フグは泳ぐのが速いので、大きな魚からにげられる。', answer: false, why: '第1段落 Pufferfish are slow swimmers。' },
+      { statement: 'フグは、自分の体の中で毒を作っている。', answer: false, why: '第3段落 the fish do not make the poison themselves。' },
+      { statement: '日本では、免許を持つ料理人しかフグを調理できない。', answer: true, why: '第4段落 Only cooks with a special license are allowed to prepare it。' },
+    ],
+    qa: [
+      { q: 'What does a pufferfish do when it is in danger?', choices: ['It swallows water and becomes much bigger.', 'It swims away very fast.', 'It hides in the sand.', 'It changes its color.'], answer: 0, why: '第1段落 it quickly swallows a large amount of water and blows up into a ball。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
