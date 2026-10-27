@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'group-prep-exchange': { wrong: 'In respond to your email, I am sending the file.', right: 'In response to your email, I am sending the file.', why: 'in response to ～。in のあとは名詞 response。' },
   'group-prep-ahead': { wrong: 'We arrived ahead to the others.', right: 'We arrived ahead of the others.', why: '「～より先に」は ahead of ～。' },
   'group-prep-place': { wrong: 'There is a vase on the top the table.', right: 'There is a vase on top of the table.', why: '「～の上に」は on top of ～。of をわすれない。' },
   'group-prep-regardless': { wrong: 'Everyone is welcome, regard of age.', right: 'Everyone is welcome, regardless of age.', why: '「～に関係なく」は regardless of ～。' },

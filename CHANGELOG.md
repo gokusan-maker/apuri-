@@ -2497,3 +2497,4 @@
 - 2026-10-27: 文法に「群前置詞④ close to ／ ahead of ／ prior to」の単元を追加
 - 2026-10-27: TOEIC の長文に、メール「Your Car Rental Reservation」（レンタカーの予約確認）を追加
 - 2026-10-27: 闘技場の塔で、新しい称号が始まる階にその称号のアイコン（🗡・🛡・⚔ など）を表示
+- 2026-10-27: 文法に「群前置詞⑤ in exchange for ／ in response to ／ in contrast to」の単元を追加
