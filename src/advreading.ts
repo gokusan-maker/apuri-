@@ -10463,7 +10463,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '科学者たちは今、海の健康についてもっと知るために、クラゲを研究している。クラゲの数の変わり方を見ると、海そのものがどう変わってきているかがわかるのだ。',
     ],
     blanks: [
-      { id: 'A', choices: ['did', 'do', 'doing', 'done'], answer: 0, why: '比較の than のあとで、前の動詞 have lived をくり返すかわりの代動詞。恐竜はむかしの生き物なので過去形 did。doing・done は代動詞として文の動詞にならず、do は現在のことになって合わない。' },
+      { id: 'A', choices: ['did', 'doing', 'done', 'to do'], answer: 0, why: '比較の than のあとで、動詞 lived をくり返すかわりの代動詞。恐竜はむかしの生き物なので過去形 did。doing・done・to do だけでは than のあとの文の動詞にならない。' },
       { id: 'B', choices: ['causing', 'causes', 'caused', 'to causing'], answer: 0, why: 'コンマのあとに分詞構文 causing ～「（そして）～を引き起こす」。causes を置くと接続詞なしで動詞が2つ並ぶ。caused（受け身の意味）では目的語 problems と合わず、to causing は形として成り立たない。' },
     ],
     underline: {
