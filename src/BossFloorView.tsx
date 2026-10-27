@@ -100,6 +100,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         ← 城にもどる
       </button>
       <p className="bfloor-title">{title}</p>
+      {/* はじめの問題の前だけ、これまでの最高を出す（目標にする） */}
+      {best !== undefined && i === 0 && picked === null && (
+        <p className="bfloor-prev-best">
+          🏅 これまでの最高 {best} / {qs.length}問
+        </p>
+      )}
       {bossView}
       {lifeView}
       {/* 3連続正解からコンボの表示 */}

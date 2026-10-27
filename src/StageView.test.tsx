@@ -634,9 +634,11 @@ it('ボスの城の問題の階：全問正解でパーフェクト、前の最�
   const { bossFloorQs } = await import('./bosscastle')
   const qs = bossFloorQs('中1', 1)
   render(<BossFloor title="t" qs={qs} best={3} onDone={() => {}} onBack={() => {}} />)
+  expect(screen.getByText('🏅 これまでの最高 3 / 5問')).toBeInTheDocument() // はじめに目標として出す
   for (const q of qs) {
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
+    expect(screen.queryByText(/これまでの最高/)).toBeNull()
   }
   expect(screen.getByText('💯 パーフェクト！')).toBeInTheDocument()
   expect(screen.getByText('🏅 自己ベスト更新！（前回まで 3問）')).toBeInTheDocument()
