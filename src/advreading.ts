@@ -9679,6 +9679,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-speaker-invite',
+    title: 'Email: Invitation to Speak at a Conference',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Dr. Okafor, I am writing on behalf of the Northern Food Industry Association. We would like to invite you to speak at our annual conference, which will be held at the Bayview Convention Center on October 22 and 23.",
+      "This year's theme is reducing food waste. Several of our members read your recent article on packaging, and they ( A ) that your ideas would be of great interest to our audience. We would be happy if you could give a 40-minute talk, followed by a short question-and-answer session.",
+      "We will cover your travel costs and provide a room at a hotel near the convention center for two nights. In addition, you will receive a speaker's fee of $800. Your talk will be recorded, and with your permission, the video will be shared with association members ( B ) the event.",
+      "Could you please let us know whether you are available by August 15? If you have any questions, feel free to contact me directly. Sincerely, Paul Kramer, Conference Coordinator",
+    ],
+    ja: [
+      'オカフォー博士　北部食品産業協会を代表してご連絡いたします。10月22日と23日にベイビュー・コンベンションセンターで開かれる年次会議で、ご講演いただきたくご案内申し上げます。',
+      '今年のテーマは食品ロスの削減です。会員の何人かが包装についての博士の最近の記事を読み、博士のお考えは聞き手にとってとても興味深いものになるだろうと考えております。40分のご講演と、それに続く短い質疑応答をしていただければ幸いです。',
+      '交通費は当協会が負担し、会場近くのホテルの部屋を2泊ご用意いたします。さらに、講演料として800ドルをお支払いします。ご講演は録画され、お許しをいただければ、その動画は会議のあとに協会の会員と共有されます。',
+      '8月15日までに、ご都合がつくかどうかをお知らせいただけますでしょうか。ご質問があれば、私まで直接お気軽にご連絡ください。会議担当　ポール・クレイマー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['believe', 'belief', 'believable', 'believing'], answer: 0, why: '主語 they に続く動詞が必要なので believe。belief は名詞、believable は形容詞、believing だけでは動詞にならない。' },
+      { id: 'B', choices: ['after', 'afterward', 'later', 'then'], answer: 0, why: 'うしろの名詞 the event をつなぐ前置詞 after「～のあとで」。afterward・later・then は副詞で、うしろに名詞を置けない。' },
+    ],
+    tf: [
+      { statement: '会議の今年のテーマは、食品ロスの削減だ。', answer: true, why: '第2段落 This year\'s theme is reducing food waste。' },
+      { statement: '講演者はホテル代を自分で払う必要がある。', answer: false, why: '第3段落 provide a room at a hotel … for two nights。協会が用意する。' },
+      { statement: '講演の動画は、許可があれば会員と共有される。', answer: true, why: '第3段落 with your permission, the video will be shared with association members。' },
+    ],
+    qa: [
+      { q: 'Why did the association choose Dr. Okafor?', choices: ['Members read her recent article on packaging.', 'She is a member of the association.', 'She gave a talk last year.', 'She works at the convention center.'], answer: 0, why: '第2段落 Several of our members read your recent article on packaging。' },
+      { q: 'By when should Dr. Okafor reply?', choices: ['August 15.', 'October 22.', 'October 23.', 'There is no deadline.'], answer: 0, why: '第4段落 Could you please let us know whether you are available by August 15?' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

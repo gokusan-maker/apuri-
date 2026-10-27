@@ -2519,3 +2519,4 @@
 - 2026-10-27: 高3（共通テスト）の長文に、評論「The Changing Colors of a Bruise」（あざの色が変わるわけ）を追加
 - 2026-10-27: 闘技場で、3秒以内に正解すると「⚡ はやい！」と出るように
 - 2026-10-27: 文法に「前置詞の熟語④ under construction ／ under control ／ under pressure」の単元を追加
+- 2026-10-27: TOEIC の長文に、メール「Invitation to Speak at a Conference」（会議での講演の依頼）を追加
