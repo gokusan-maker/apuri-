@@ -691,6 +691,12 @@ it('闘技場：いちばん上のレベルの上は、いろいろなレベル�
   arenaPick(true)
   expect(document.querySelector('.arena-levelup')).toHaveTextContent('♾ 無限の階へ！')
   expect(screen.getByText('次へ（♾ ランダム）')).toBeInTheDocument()
+  expect(document.querySelector('.endless-lv')).toBeNull() // 300階まではレベルの札なし
+  fireEvent.click(screen.getByText('次へ（♾ ランダム）'))
+  expect(document.querySelector('.endless-lv')!.textContent).toMatch(/^♾ .+レベルの問題$/)
+  const q = arenaQuestionAt(ARENA_ENDLESS, 0, () => 0.99)
+  expect(q.lv).toBe(COURSES.length - 1)
+  expect(arenaQuestionAt(0, 0).lv).toBe(0)
 })
 
 it('闘技場の結果：はじめのレベルより上のレベルまで上がれたら「📈 中1 → 中2」', async () => {

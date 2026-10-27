@@ -4201,3 +4201,4 @@ header .event-chips { margin: 0 0 2px; }
 .atn-text { white-space: nowrap; }
 .arena-lv-climb { margin: 4px 0; color: #4ade80; font-weight: 800; }
 .bfloor-atk { margin: 2px 0; color: #f87171; font-weight: 800; text-align: center; animation: heart-break 0.6s ease-out; }
+.arena-qtag.endless-lv { background: rgb(168 85 247 / 0.2); color: #d8b4fe; }

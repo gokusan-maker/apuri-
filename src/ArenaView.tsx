@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
 import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaToNext, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
+import { COURSES } from './wordcourse'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
@@ -218,6 +219,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {arenaToNext(shown).label}まで あと{arenaToNext(shown).floors}階
         </span>
       </div>
+      {/* 無限の階は毎問ちがうレベルから出るので、どのレベルの問題かを見せる */}
+      {isArenaEndless(lv) && <p className="arena-qtag endless-lv">♾ {COURSES[q.lv].label}レベルの問題</p>}
       {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
       {isArenaReading(q) && <p className="arena-qtag reading">📖 読解　文の意味をえらぼう</p>}
       <div className="arena-q">

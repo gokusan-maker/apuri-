@@ -107,16 +107,18 @@ function arenaReadingQ(lv: number, rnd: () => number): Question<Word> | null {
 export type ArenaKind = 'word' | 'grammar' | 'reading'
 export const arenaKindAt = (n: number): ArenaKind => (['word', 'grammar', 'reading'] as const)[n % 3]
 // f は階。無限の階では、毎問ランダムなレベルから出す
-export function arenaQuestionAt(f: number, n: number, rnd: () => number = Math.random, avoid?: string): Question<Word> {
+// lv：その問題のレベル（0〜14。無限の階で「どのレベルの問題か」を見せる）
+export type ArenaQuestion = Question<Word> & { lv: number }
+export function arenaQuestionAt(f: number, n: number, rnd: () => number = Math.random, avoid?: string): ArenaQuestion {
   const lv = arenaLevel(f) ?? Math.floor(rnd() * COURSES.length)
   const kind = arenaKindAt(n)
   const make = kind === 'grammar' ? arenaGrammarQ : kind === 'reading' ? arenaReadingQ : null
   if (make) {
     let q = make(lv, rnd)
     for (let k = 0; k < 3 && q && avoid && q.word.id === avoid; k++) q = make(lv, rnd)
-    if (q) return q
+    if (q) return { ...q, lv }
   }
-  return arenaWordQ(lv, rnd, avoid)
+  return { ...arenaWordQ(lv, rnd, avoid), lv }
 }
 // そのレベル（0〜14）の単語から1問（直前と同じ単語は避ける）
 function arenaWordQ(lv: number, rnd: () => number, avoid?: string): Question<Word> {
