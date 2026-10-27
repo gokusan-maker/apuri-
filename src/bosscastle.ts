@@ -53,6 +53,29 @@ export function bossFloorQs(course: CourseId, floor: number, rnd: () => number =
   return [...by('word').slice(5, 7), ...by('grammar').slice(5, 7), ...by('reading').slice(5, 6)]
 }
 
+// 問題の階ごとの最高得点（階の id → 正解数）
+const BEST_KEY = 'eitan:bcastle-best'
+export function loadBcBest(): Record<string, number> {
+  try {
+    const v = JSON.parse(localStorage.getItem(BEST_KEY) ?? '{}') as unknown
+    if (!v || typeof v !== 'object' || Array.isArray(v)) return {}
+    return Object.fromEntries(Object.entries(v as Record<string, unknown>).filter((e): e is [string, number] => typeof e[1] === 'number'))
+  } catch {
+    return {}
+  }
+}
+// 最高得点を更新したら true
+export function recordBcBest(id: string, score: number): boolean {
+  const best = loadBcBest()
+  if ((best[id] ?? -1) >= score) return false
+  try {
+    localStorage.setItem(BEST_KEY, JSON.stringify({ ...best, [id]: score }))
+  } catch {
+    /* 保存できなくても動く */
+  }
+  return true
+}
+
 const KEY = 'eitan:bcastle'
 export function loadBcClears(): string[] {
   try {

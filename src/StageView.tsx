@@ -19,7 +19,7 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
-import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
+import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
 import { levelUnits } from './grammarcastle'
@@ -593,7 +593,9 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onBack={() => setBcFloor(null)}
         onRetry={() => setBcFloor((cur) => (cur ? { ...cur, qs: bossFloorQs(cur.course, cur.floor), first: !loadBcClears().includes(cur.id), round: (cur.round ?? 0) + 1 } : cur))}
         reward={bcFloor.first && onRankBonus ? BC_FLOOR_COINS : 0}
+        best={loadBcBest()[bcFloor.id]}
         onDone={(score) => {
+          recordBcBest(bcFloor.id, score)
           if (score >= bcPassOf(bcFloor.qs.length) && !bcClears.includes(bcFloor.id)) {
             onRankBonus?.(BC_FLOOR_COINS)
             const next = [...bcClears, bcFloor.id]
@@ -604,6 +606,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       />
     )
 
+  const bcBest = loadBcBest() // ボスの城の問題の階ごとの最高得点
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
     <section className="card stages">
@@ -633,7 +636,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             return {
               id: f.id,
               label: isBoss ? `👹 ${look.name}` : `${c.label}　${BC_KIND[f.floor]}`,
-              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `${f.floor === 0 ? BC_WORD_QS : BC_QS}問`,
+              sub: isBoss ? `${c.label}のボス・とくぎ ${bossTraits(look.name, true).map((t) => BOSS_TRAITS[t].icon).join('')}` : `${f.floor === 0 ? BC_WORD_QS : BC_QS}問${bcBest[f.id] !== undefined ? `・最高 ${bcBest[f.id]}問` : ''}`,
               fig: isBoss ? <BossFigure hit={false} look={look} /> : undefined,
               cleared: !!lboss[f.course] || bcClears.includes(f.id),
             }

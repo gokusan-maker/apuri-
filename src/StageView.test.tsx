@@ -482,3 +482,33 @@ it('ボスの城の問題の階に、クリアまでの正解数（星）が出�
   fireEvent.click(btn)
   expect(screen.getByLabelText('正解 1問 ／ クリアは8問')).toHaveTextContent('★☆☆☆☆☆☆☆ あと7問正解でクリア')
 })
+
+it('ボスの城の問題の階：最高得点を記録し、城の階にも出す', async () => {
+  const { loadBcBest, recordBcBest } = await import('./bosscastle')
+  localStorage.clear()
+  expect(recordBcBest('lb:中1:1', 6)).toBe(true)
+  expect(recordBcBest('lb:中1:1', 5)).toBe(false)
+  expect(loadBcBest()).toEqual({ 'lb:中1:1': 6 })
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const castle = screen.getByRole('region', { name: '中1のボスの城' })
+  expect(within(castle).getByText(/10問・最高 6問/)).toBeInTheDocument()
+  fireEvent.click(within(castle).getByRole('button', { name: /^1階：中1　単語/ }))
+  for (let n = 0; n < 10; n++) {
+    fireEvent.click(document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')[0])
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(loadBcBest()['lb:中1:1']).toBeGreaterThanOrEqual(6)
+})
+
+it('ボスの城の問題の階：全問正解でパーフェクト、前の最高より上なら自己ベスト更新', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} best={3} onDone={() => {}} onBack={() => {}} />)
+  for (const q of qs) {
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(screen.getByText('💯 パーフェクト！')).toBeInTheDocument()
+  expect(screen.getByText('🏅 自己ベスト更新！（前回まで 3問）')).toBeInTheDocument()
+})
