@@ -701,3 +701,12 @@ it('闘技場：5階・10階・15階に上がるとお祝い', async () => {
   expect(isArenaMilestone(8, 10)).toBe(true) // 10階をとびこえても
   expect(isArenaMilestone(13, 14)).toBe(true)
 })
+
+it('闘技場の塔に、いままでの最高の階の🚩が出る', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  localStorage.setItem('eitan:arena-best', '5') // 最高は6階
+  render(<Arena start={4} onExit={() => {}} />)
+  const flag = document.querySelector('.af-best')!
+  expect(flag.closest('.arena-floor')!.textContent).toContain('6階')
+})
