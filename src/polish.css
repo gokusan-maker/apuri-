@@ -4162,3 +4162,7 @@ header .event-chips { margin: 0 0 2px; }
 .battle-v2 .boss-figure.weak > svg:not(.boss-arena) { animation: boss-wobble 1.2s ease-in-out infinite; transform-origin: 50% 90%; }
 @keyframes boss-wobble { 25% { transform: rotate(-6deg); } 75% { transform: rotate(6deg); } }
 @media (prefers-reduced-motion: reduce) { .battle-v2 .boss-figure.weak > svg:not(.boss-arena) { animation: none; } }
+/* 闘技場：相棒のモンスターが塔をのぼる */
+.af-me.has-fig { display: inline-flex; align-items: center; gap: 2px; }
+.af-fig { display: inline-block; width: 30px; height: 30px; }
+.af-fig > svg { width: 100%; height: 100%; }

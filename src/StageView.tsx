@@ -20,6 +20,7 @@ import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
 import { Arena } from './ArenaView'
+import { MonsterFigure } from './MonsterView'
 import { arenaFloor, arenaStart, loadArenaBest } from './arena'
 import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
@@ -587,7 +588,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   }
 
   // 闘技場（城の下）：エンドレス
-  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} onAnswer={onAnswer} />
+  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} onAnswer={onAnswer} me={partner ? <span className="af-fig"><MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood="happy" /></span> : undefined} />
 
   // ボスの城の問題の階
   if (part === 'boss' && bcFloor)

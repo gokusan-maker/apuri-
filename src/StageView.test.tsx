@@ -805,3 +805,11 @@ it('闘技場の結果から、はじめの階にもどって戦える', async (
   fireEvent.click(screen.getByText('🔁 はじめの階（3階（中3レベル））から'))
   expect(screen.getByRole('progressbar', { name: '闘技場の階' })).toHaveAttribute('aria-valuenow', '3')
 })
+
+it('闘技場の塔をのぼるのは相棒のモンスター（いなければ 🦸）', async () => {
+  const { FORMS } = await import('./monster')
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} partner={{ form: FORMS[1], name: 'モチ' }} />)
+  fireEvent.click(within(screen.getByRole('region', { name: '闘技場' })).getByRole('button', { name: /闘技場で戦う/ }))
+  expect(document.querySelector('.arena-floor.here .af-fig svg')).not.toBeNull()
+})
