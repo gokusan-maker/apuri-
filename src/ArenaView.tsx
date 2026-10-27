@@ -3,10 +3,12 @@ import type { CSSProperties } from 'react'
 import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaLook, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
+import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える
-export function Arena({ start, onExit, onCoins, onTicket }: { start: number; onExit: () => void; onCoins?: (n: number) => void; onTicket?: (n: number) => void }) {
+// onAnswer：単語の問題の正誤を学習の記録に入れ、相棒のモンスターに XP（ボス戦と同じ）
+export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: number; onExit: () => void; onCoins?: (n: number) => void; onTicket?: (n: number) => void; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }) {
   const [lv, setLv] = useState(start)
   const [q, setQ] = useState(() => arenaQuestionAt(start, 0))
   const [picked, setPicked] = useState<number | null>(null)
@@ -30,6 +32,7 @@ export function Arena({ start, onExit, onCoins, onTicket }: { start: number; onE
     if (picked !== null) return
     setPicked(i)
     setCount(count + 1)
+    if (!isArenaGrammar(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)

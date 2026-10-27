@@ -586,7 +586,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   }
 
   // 闘技場（城の下）：エンドレス
-  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} />
+  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} onAnswer={onAnswer} />
 
   // ボスの城の問題の階
   if (part === 'boss' && bcFloor)

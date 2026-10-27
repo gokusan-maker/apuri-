@@ -687,3 +687,16 @@ it('闘技場：最高記録で新しい称号に上がると、ガチャチケ�
   pick(true) // また4階：記録更新ではないのでチケットなし
   expect(ticket).toHaveBeenCalledTimes(1)
 })
+
+it('闘技場の単語の答えは学習の記録になり、正解で相棒に XP（文法の問題は記録しない）', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { courseWords } = await import('./wordcourse')
+  localStorage.clear()
+  const ans = vi.fn()
+  render(<Arena start={0} onExit={() => {}} onAnswer={ans} />)
+  const en = document.querySelector('.arena .en')!.textContent
+  const w = courseWords('中1').find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  expect(ans).toHaveBeenCalledWith(true, expect.any(Number), w.id, 'quiz')
+  expect(ans.mock.calls[0][1]).toBeGreaterThan(0)
+})
