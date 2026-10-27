@@ -9182,6 +9182,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-health-checkup',
+    title: 'Notice: Annual Health Checkups',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: This year's health checkups will be held in the large meeting room on the fifth floor from Monday, September 8, to Friday, September 12. All full-time employees are required to take the checkup, which is provided free of ( A ) by the company.",
+      "Each checkup takes about forty minutes and includes a blood test, an eye test, and a short interview with a doctor. Please do not eat anything for at least eight hours before your appointment, as this may affect the results of the blood test. You may drink water.",
+      "Appointments can be booked on the company website until August 29. Please choose a time that does not ( B ) with important meetings. If you cannot attend during the checkup week, you may visit Westside Clinic instead, but you must make the appointment yourself.",
+      "Your results will be sent to your home address about three weeks after the checkup. For questions, please contact the Human Resources Department.",
+    ],
+    ja: [
+      '全社員のみなさんへ：今年の健康診断は、9月8日（月）から9月12日（金）まで、5階の大会議室で行います。正社員は全員、健康診断を受ける必要があり、費用は会社が負担するので無料です。',
+      '健康診断は1人40分ほどで、血液検査、視力検査、医師との短い面談があります。血液検査の結果に影響することがあるので、予約時間の少なくとも8時間前からは何も食べないでください。水は飲んでもかまいません。',
+      '予約は8月29日まで会社のウェブサイトでできます。大切な会議と重ならない時間を選んでください。健康診断の週に受けられない場合は、かわりにウエストサイド・クリニックで受けてもかまいませんが、予約は自分でとる必要があります。',
+      '結果は、健康診断の約3週間後に自宅の住所へ送られます。ご質問は人事部までお願いします。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['charge', 'charging', 'charged', 'to charge'], answer: 0, why: 'free of charge「無料で」。前置詞 of のあとに名詞 charge。' },
+      { id: 'B', choices: ['conflict', 'conflicts', 'conflicting', 'conflicted'], answer: 0, why: '助動詞 does（not）のあとは動詞の原形。conflict with ～「～と重なる」。' },
+    ],
+    tf: [
+      { statement: '健康診断は会社の5階で行われる。', answer: true, why: '第1段落 in the large meeting room on the fifth floor。' },
+      { statement: '健康診断の前に水を飲んではいけない。', answer: false, why: '第2段落 You may drink water。' },
+      { statement: '結果は、健康診断の当日にわたされる。', answer: false, why: '第4段落 Your results will be sent to your home address about three weeks after the checkup。' },
+    ],
+    qa: [
+      { q: 'Why should employees not eat before the checkup?', choices: ['It may affect the results of the blood test.', 'The meeting room will be closed.', 'The doctor will be busy.', 'It will take more than forty minutes.'], answer: 0, why: '第2段落 as this may affect the results of the blood test。' },
+      { q: 'What must employees do if they go to Westside Clinic?', choices: ['Make the appointment themselves.', 'Pay for the checkup.', 'Contact the doctor by August 29.', 'Visit during the checkup week.'], answer: 0, why: '第3段落 you must make the appointment yourself。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
