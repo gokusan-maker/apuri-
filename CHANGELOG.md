@@ -2521,3 +2521,4 @@
 - 2026-10-27: 文法に「前置詞の熟語④ under construction ／ under control ／ under pressure」の単元を追加
 - 2026-10-27: TOEIC の長文に、メール「Invitation to Speak at a Conference」（会議での講演の依頼）を追加
 - 2026-10-27: 闘技場の単語の問題に 🔊（発音を聞く）ボタンを追加
+- 2026-10-27: 文法に「前置詞の熟語⑤ on duty ／ on display ／ on board（勤務中・展示中・乗って）」の単元を追加
