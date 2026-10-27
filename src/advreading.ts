@@ -9638,6 +9638,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-bruises',
+    title: 'The Changing Colors of a Bruise',
+    level: '難関大（評論）',
+    paragraphs: [
+      "If you bump your leg against a table, a dark mark may appear on your skin a little later. This mark, called a bruise, forms when tiny blood vessels under the skin break. Blood leaks out of them into the surrounding area, but because the skin is not cut, the blood has nowhere to go.",
+      "At first, a bruise usually looks red or purple. Over the next several days, however, it slowly changes color. It may turn blue, then green, and finally yellow ( A ) it fades away completely. These changes are a sign that the body is cleaning up the leaked blood.",
+      "The colors come from the red substance in blood that carries oxygen. As the body breaks this substance down, it turns into new substances, first a green one and then a yellow one. So the color of a bruise can even give doctors a rough idea of how old it is.",
+      "Most bruises heal by themselves within about two weeks. Putting something cold on the area soon after the injury can reduce swelling. However, people who bruise very easily, or whose bruises appear ( B ) any clear reason, should see a doctor.",
+    ],
+    ja: [
+      'テーブルに足をぶつけると、少したってから皮ふに黒っぽいあとができることがある。このあとは「あざ」とよばれ、皮ふの下の小さな血管がやぶれるとできる。血液は血管から周りの部分にもれ出るが、皮ふは切れていないので、血液の行き場がない。',
+      '最初、あざはたいてい赤か紫に見える。しかし、その後の数日間で、少しずつ色が変わっていく。青くなり、次に緑になり、最後に黄色になってから、完全に消えていくこともある。こうした変化は、体がもれた血液をそうじしているしるしなのだ。',
+      'その色は、酸素を運ぶ血液中の赤い物質から来ている。体がこの物質を分解するにつれて、それはまず緑の物質、次に黄色の物質へと、新しい物質に変わっていく。だから、あざの色から、医者はそれがどのくらい前にできたかのおおよその見当をつけることさえできる。',
+      'ほとんどのあざは、2週間ほどで自然に治る。けがのすぐあとに冷たいものを当てると、はれをおさえられる。しかし、とてもあざができやすい人や、はっきりした理由もなくあざができる人は、医者にみてもらうべきだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['before', 'during', 'among', 'despite'], answer: 0, why: 'うしろが文（it fades away completely）なので接続詞 before「～する前に」。during・among・despite は前置詞で、うしろに文は置けない。' },
+      { id: 'B', choices: ['without', 'unless', 'although', 'whether'], answer: 0, why: 'うしろが名詞句（any clear reason）なので前置詞 without「～なしに」。unless・although・whether は接続詞で、うしろに文が必要。' },
+    ],
+    underline: {
+      phrase: 'fades away',
+      choices: ['slowly disappears', 'gets darker', 'starts to hurt', 'moves to another place'],
+      answer: 0,
+      why: 'fade away は「だんだん消えていく」。slowly disappears と同じ意味。',
+    },
+    order: {
+      words: ['has', 'nowhere', 'to', 'go'],
+      rest: '',
+      answer: 'has nowhere to go',
+      ja: '行き場がない（nowhere to ～「～する場所がない」）',
+    },
+    tf: [
+      { statement: 'あざは、皮ふの下の小さな血管がやぶれるとできる。', answer: true, why: '第1段落 forms when tiny blood vessels under the skin break。' },
+      { statement: 'あざは、最初から最後までずっと同じ色のままだ。', answer: false, why: '第2段落 it slowly changes color。' },
+      { statement: 'ほとんどのあざは、2週間ほどで自然に治る。', answer: true, why: '第4段落 Most bruises heal by themselves within about two weeks。' },
+    ],
+    qa: [
+      { q: 'Why does a bruise change color?', choices: ['The body breaks down a substance in the leaked blood into new substances.', 'The skin becomes thinner every day.', 'Cold weather changes the blood.', 'New blood vessels grow on the skin.'], answer: 0, why: '第3段落 As the body breaks this substance down, it turns into new substances, first a green one and then a yellow one。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
