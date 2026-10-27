@@ -9395,6 +9395,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-car-rental',
+    title: 'Email: Your Car Rental Reservation',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Lee, Thank you for choosing Coastline Car Rental. This email confirms your reservation for a compact car from Friday, May 16, to Monday, May 19. You can pick up the car at our airport office, which is located on the ground floor of Terminal 2.",
+      "When you arrive, please show your driver's license and the credit card you used to make the reservation. The car will come with a full tank of gas, and it must be returned with a full tank as well. If it is not, a refueling ( A ) will be added to your bill.",
+      "Your reservation includes basic insurance. For an extra $12 per day, you can upgrade to full insurance, which covers all damage to the car. This option can be added at the counter or online ( B ) your pickup date.",
+      "If your flight is delayed, please call us at 555-0187 so that we can hold the car for you. We look forward to serving you. Coastline Car Rental",
+    ],
+    ja: [
+      'リー様　コーストライン・レンタカーをお選びいただき、ありがとうございます。このメールで、5月16日（金）から5月19日（月）までの小型車のご予約を確認いたします。車は、第2ターミナルの1階にある空港営業所でお受け取りいただけます。',
+      'ご到着の際は、運転免許証と、ご予約に使われたクレジットカードをお見せください。車はガソリン満タンでお渡しし、ご返却の際も満タンにしていただく必要があります。満タンでない場合は、請求額に給油料金が加わります。',
+      'ご予約には基本保険がふくまれています。1日あたり追加12ドルで、車のすべての損害を補償する完全保険に変更できます。このオプションは、お受け取り日より前に、カウンターまたはオンラインで追加できます。',
+      '飛行機が遅れた場合は、車をお取り置きできるよう 555-0187 までお電話ください。ご利用をお待ちしております。コーストライン・レンタカー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['charge', 'charging', 'charged', 'charges'], answer: 0, why: 'a refueling charge「給油料金」。冠詞 a のあとの名詞なので単数の charge。' },
+      { id: 'B', choices: ['prior to', 'prior', 'priority', 'prioritize'], answer: 0, why: 'prior to ～「～より前に」。prior だけでは名詞をつなげず、priority は名詞、prioritize は動詞。' },
+    ],
+    tf: [
+      { statement: '車は空港の第2ターミナルで受け取れる。', answer: true, why: '第1段落 our airport office, which is located on the ground floor of Terminal 2。' },
+      { statement: '車はガソリンを空にして返してよい。', answer: false, why: '第2段落 it must be returned with a full tank as well。' },
+      { statement: '完全保険は、1日12ドルの追加料金がかかる。', answer: true, why: '第3段落 For an extra $12 per day, you can upgrade to full insurance。' },
+    ],
+    qa: [
+      { q: 'What should Mr. Lee bring when he picks up the car?', choices: ['His driver\'s license and the credit card he used.', 'A full tank of gas.', 'His flight ticket and passport.', 'A printed copy of the insurance.'], answer: 0, why: '第2段落 please show your driver\'s license and the credit card you used to make the reservation。' },
+      { q: 'What should Mr. Lee do if his flight is delayed?', choices: ['Call the rental company.', 'Cancel the reservation online.', 'Upgrade the insurance.', 'Go to Terminal 1.'], answer: 0, why: '第4段落 If your flight is delayed, please call us at 555-0187。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
