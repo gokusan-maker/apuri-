@@ -7,6 +7,7 @@ import { COURSES, courseWords, type CourseId } from './wordcourse'
 import type { Word } from './words'
 
 export const ARENA_TOP = COURSES.length - 1
+export const ARENA_BEST_COINS = 5 // いままでの最高より上の階に着くたびに
 const clamp = (lv: number) => Math.max(0, Math.min(ARENA_TOP, lv))
 // 正解なら上へ、まちがいなら下へ（いちばん上・下ではそのまま）
 export const arenaNext = (lv: number, correct: boolean): number => clamp(lv + (correct ? 1 : -1))

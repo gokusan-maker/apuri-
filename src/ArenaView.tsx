@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_TOP, arenaCourse, arenaFloor, arenaLook, arenaNext, arenaQuestion, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaLook, arenaNext, arenaQuestion, loadArenaBest, recordArenaBest } from './arena'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
 import { playCorrect, playWrong } from './sound'
 
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える
-export function Arena({ start, onExit }: { start: number; onExit: () => void }) {
+export function Arena({ start, onExit, onCoins }: { start: number; onExit: () => void; onCoins?: (n: number) => void }) {
   const [lv, setLv] = useState(start)
   const [q, setQ] = useState(() => arenaQuestion(start))
   const [picked, setPicked] = useState<number | null>(null)
@@ -15,7 +15,10 @@ export function Arena({ start, onExit }: { start: number; onExit: () => void }) 
   const [streak, setStreak] = useState(0)
   const [top, setTop] = useState(start)
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
-  const [prevBest] = useState(loadArenaBest)
+  const [prevBest, setPrevBest] = useState(loadArenaBest)
+  // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
+  const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
+  const [newRecord, setNewRecord] = useState(false)
   const look = arenaLook(lv)
   const correct = picked !== null && picked === q.answer
   const nextLv = picked === null ? lv : arenaNext(lv, correct)
@@ -27,10 +30,18 @@ export function Arena({ start, onExit }: { start: number; onExit: () => void }) 
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
-      setTop(Math.max(top, arenaNext(lv, true)))
+      const up = arenaNext(lv, true)
+      setTop(Math.max(top, up))
+      if (up > record) {
+        setRecord(up)
+        setNewRecord(true)
+        recordArenaBest(up)
+        onCoins?.(ARENA_BEST_COINS)
+      } else setNewRecord(false)
       playCorrect()
     } else {
       setStreak(0)
+      setNewRecord(false)
       playWrong()
     }
   }
@@ -41,7 +52,9 @@ export function Arena({ start, onExit }: { start: number; onExit: () => void }) 
   }
   function finish() {
     const best = Math.max(top, prevBest ?? 0)
-    setEnded({ newBest: recordArenaBest(top), best })
+    recordArenaBest(top)
+    setEnded({ newBest: prevBest === null || top > prevBest, best })
+    setPrevBest(best)
   }
 
   if (ended)
@@ -106,6 +119,11 @@ export function Arena({ start, onExit }: { start: number; onExit: () => void }) 
           <p className={`arena-move ${correct ? 'up' : 'down'}`} role="status">
             {correct ? (nextLv > lv ? `⬆ レベルアップ！ ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : `${nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ　` : ''}正解は「${q.choices[q.answer]}」`}
           </p>
+          {correct && newRecord && (
+            <p className="arena-record" role="status">
+              🆕 最高記録！ 🪙{ARENA_BEST_COINS}
+            </p>
+          )}
           <button className="good next-unit-btn" onClick={next}>
             次へ（{arenaCourse(nextLv).label}）
           </button>

@@ -583,3 +583,25 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/最高 2階（中2レベル）/)).toBeInTheDocument()
 })
+
+it('闘技場：いままでの最高より上の階に着くたびに🪙5（最高記録はその場で保存）', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { ARENA_BEST_COINS, loadArenaBest } = await import('./arena')
+  const { courseWords } = await import('./wordcourse')
+  localStorage.clear()
+  localStorage.setItem('eitan:arena-best', '1') // 最高は2階
+  const coins = vi.fn()
+  render(<Arena start={0} onExit={() => {}} onCoins={coins} />)
+  const pickRight = () => {
+    const en = document.querySelector('.arena .en')!.textContent
+    const w = [...courseWords('中1'), ...courseWords('中2'), ...courseWords('中3')].find((x) => x.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  }
+  pickRight() // 1階→2階：最高と同じなのでなし
+  expect(coins).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pickRight() // 2階→3階：記録更新
+  expect(coins).toHaveBeenCalledWith(ARENA_BEST_COINS)
+  expect(screen.getByText(`🆕 最高記録！ 🪙${ARENA_BEST_COINS}`)).toBeInTheDocument()
+  expect(loadArenaBest()).toBe(2)
+})

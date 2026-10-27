@@ -4066,3 +4066,4 @@ header .event-chips { margin: 0 0 2px; }
 .arena-result-floor strong { display: block; margin-top: 4px; font-size: 1.6rem; color: #fde047; text-shadow: 0 0 14px rgb(250 204 21 / 0.6); }
 .arena-result-sub { margin: 4px 0; font-size: 0.82rem; color: var(--muted); }
 .arena-result-best { margin: 6px 0 12px; font-weight: 800; color: #fcd34d; }
+.arena-record { margin: 0 0 6px; font-weight: 900; color: #fde047; text-shadow: 0 0 10px rgb(250 204 21 / 0.6); animation: trait-pop 0.3s ease-out; }
