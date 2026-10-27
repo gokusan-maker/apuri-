@@ -8517,7 +8517,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'ガーデニングのこつやアイデアをお届けするもう1年を、ご一緒できれば幸いです。定期購読サービス　ヘレン・ブルックス',
     ],
     blanks: [
-      { id: 'A', choices: ['by', 'until', 'since', 'during'], answer: 0, why: '「2月28日までに（更新する）」と期限を表すのは by。until は「～までずっと」で状態の継続、since・during は意味が合わない。' },
+      { id: 'A', choices: ['by', 'among', 'since', 'during'], answer: 0, why: '「2月28日までに（更新する）」と期限を表すのは by。among は「（3つ以上）の間で」で日付には使わず、since・during は意味が合わない。' },
       { id: 'B', choices: ['which', 'what', 'where', 'it'], answer: 0, why: 'コンマのあとで our customer service team を説明し、うしろに主語が欠けているので関係代名詞 which。where はうしろが完全な文のとき、it では2つの文をつなげない。' },
     ],
     tf: [
@@ -8966,6 +8966,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     qa: [
       { q: 'What idea about purring has not been proven?', choices: ['That it helps bones and muscles heal.', 'That it is made by muscles in the throat.', 'That cats purr when they are happy.', 'That cats purr while breathing in.'], answer: 0, why: '第4段落 might help bones and muscles heal, although this idea has not been proven。' },
+    ],
+  },
+  {
+    id: 'toeic-new-laptops',
+    title: 'Memo: New Laptops for All Staff',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To: All Staff. From: IT Department. We are pleased to announce that every employee will receive a new laptop this month. The new computers are faster and lighter than the current ones, which are now more than five years old.",
+      "Laptops will be handed out department by department, starting with Sales on Monday, March 10. Your manager will tell you the exact time. Before that day, please save all of your important files to the shared drive. Files that are only saved on your old computer will not be ( A ) to the new one.",
+      "When you receive your new laptop, a member of the IT team will help you set it up. This should take about thirty minutes. Old laptops must be returned to the IT office ( B ) Friday, March 21, so that they can be recycled safely.",
+      "If you have any questions, please send an email to it-help@brightwaycorp.com. Thank you for your cooperation. IT Department",
+    ],
+    ja: [
+      '宛先：全社員　差出人：IT部。今月、全社員に新しいノートパソコンが配られることをお知らせします。新しいパソコンは、5年以上前の今のものより速くて軽いものです。',
+      'ノートパソコンは部署ごとに配られ、3月10日（月）の営業部から始まります。正確な時間は上司からお知らせします。その日までに、大切なファイルをすべて共有ドライブに保存してください。古いパソコンにしか保存されていないファイルは、新しいパソコンには移されません。',
+      '新しいノートパソコンを受け取ったら、IT部のスタッフが設定を手伝います。これは30分ほどかかります。古いノートパソコンは、安全にリサイクルできるよう、3月21日（金）までにIT部の部屋に返却してください。',
+      'ご質問があれば、it-help@brightwaycorp.com までメールを送ってください。ご協力をお願いします。IT部',
+    ],
+    blanks: [
+      { id: 'A', choices: ['moved', 'move', 'moving', 'to move'], answer: 0, why: 'ファイルは「移される」側なので、be ＋ 過去分詞の受け身 will not be moved。' },
+      { id: 'B', choices: ['by', 'among', 'since', 'during'], answer: 0, why: '「3月21日までに（返却する）」と期限を表すのは by。among は「（3つ以上）の間で」で日付には使わず、since・during は意味が合わない。' },
+    ],
+    tf: [
+      { statement: '新しいノートパソコンは、今のものより軽い。', answer: true, why: '第1段落 The new computers are faster and lighter than the current ones。' },
+      { statement: '古いパソコンにだけ保存したファイルも、自動で新しいパソコンに移される。', answer: false, why: '第2段落 Files that are only saved on your old computer will not be moved to the new one。' },
+      { statement: '古いノートパソコンは、各自で処分してよい。', answer: false, why: '第3段落 Old laptops must be returned to the IT office。' },
+    ],
+    qa: [
+      { q: 'Which department will receive new laptops first?', choices: ['Sales.', 'IT.', 'Human Resources.', 'Accounting.'], answer: 0, why: '第2段落 starting with Sales on Monday, March 10。' },
+      { q: 'What should employees do before they receive their new laptops?', choices: ['Save important files to the shared drive.', 'Return their old laptops.', 'Buy a new bag.', 'Email the IT office.'], answer: 0, why: '第2段落 please save all of your important files to the shared drive。' },
     ],
   },
   {
