@@ -8857,6 +8857,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-foot-asleep',
+    title: 'When Your Foot Falls Asleep',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Have you ever sat on the floor with your legs folded for a long time and then found that you could not feel your foot? When you tried to stand up, your foot may have felt strange and full of tiny needles. People often say that their foot has \"fallen asleep.\"",
+      "This happens because of pressure. When you sit in one position for a long time, the weight of your body presses on the nerves in your leg. Nerves carry messages between your body and your brain, so when they are pressed, the messages cannot travel ( A ). The pressure can also reduce the flow of blood to the nerves.",
+      "When you finally change position, the pressure is removed and the nerves start working again. However, they do not return to normal all at once. For a short time, they send confused signals, ( B ) is why you feel that tingling, needle-like feeling.",
+      "In most cases, this is completely harmless, and the feeling disappears within a few minutes. Moving your foot gently or walking around slowly can help. Still, if the feeling happens often without any clear reason, it may be a good idea to see a doctor.",
+    ],
+    ja: [
+      '長い時間、足を折りたたんで床にすわったあと、足の感覚がなくなっていたことはないだろうか。立ち上がろうとしたとき、足が変な感じで、小さな針がたくさんささっているように感じたかもしれない。人はよく、足が「しびれた（眠ってしまった）」と言う。',
+      'これは圧迫によって起こる。長い時間同じ姿勢ですわっていると、体の重さが足の神経をおしつける。神経は体と脳の間で信号を運んでいるので、おしつけられると信号がうまく伝わらなくなる。圧迫は、神経への血の流れを減らすこともある。',
+      'ようやく姿勢を変えると、圧迫がなくなり、神経はまた働き始める。しかし、神経はいっぺんにもとにもどるわけではない。しばらくの間、神経は混乱した信号を送り、それが、あのじんじんと針でさされるような感じがする理由だ。',
+      'ほとんどの場合、これはまったく害がなく、その感じは数分のうちに消える。足をゆっくり動かしたり、ゆっくり歩き回ったりすると役に立つ。それでも、はっきりした理由もなくその感じがよく起こるなら、医者にみてもらうのがよいかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['properly', 'proper', 'property', 'more proper'], answer: 0, why: '動詞 travel を修飾するので副詞 properly「きちんと」。proper は形容詞、property は名詞。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: 'コンマのあとで前の文の内容を受ける非制限用法の which（, which is why ～「それが～の理由だ」）。that はコンマのあとに使えず、what は先行詞をふくむので前の文を受けられない。' },
+    ],
+    underline: {
+      phrase: 'all at once',
+      choices: ['suddenly and at the same time', 'very slowly', 'one by one', 'never'],
+      answer: 0,
+      why: 'all at once は「いっぺんに・一度に」。not … all at once で「いっぺんに～するわけではない」。',
+    },
+    order: {
+      words: ['the', 'messages', 'cannot', 'travel'],
+      rest: 'properly',
+      answer: 'the messages cannot travel',
+      ja: '信号が（きちんと）伝わらない',
+    },
+    tf: [
+      { statement: '足がしびれるのは、体の重さが足の神経をおしつけるからだ。', answer: true, why: '第2段落 the weight of your body presses on the nerves in your leg。' },
+      { statement: '姿勢を変えると、神経はすぐに完全にもとにもどる。', answer: false, why: '第3段落 they do not return to normal all at once。' },
+      { statement: '足のしびれは、ほとんどの場合害がない。', answer: true, why: '第4段落 In most cases, this is completely harmless。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest if the feeling happens often without a clear reason?', choices: ['Seeing a doctor.', 'Sitting on the floor longer.', 'Drinking cold water.', 'Sleeping with your legs folded.'], answer: 0, why: '第4段落 it may be a good idea to see a doctor。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
