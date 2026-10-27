@@ -63,6 +63,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-time-2': { wrong: 'She fell in love with him at first sights.', right: 'She fell in love with him at first sight.', why: 'at first sight「ひと目で」。sight は単数のまま。' },
   'freq-idioms': { wrong: 'I visit my grandma once in while.', right: 'I visit my grandma once in a while.', why: 'once in a while「ときどき」。a をわすれない。' },
   'prep-idiom-meantime': { wrong: 'In the mean time, please wait here.', right: 'In the meantime, please wait here.', why: 'in the meantime「そのあいだに」。meantime は1語で書く。' },
+  'prep-idiom-sight': { wrong: 'We saw a ship in a distance.', right: 'We saw a ship in the distance.', why: 'in the distance「遠くに」。a ではなく the を使う。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
