@@ -42,7 +42,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   const bossHp = Math.max(0, pass - score)
   const bossView = boss && (
     <div className={`bfloor-boss${bossHp === 0 ? ' down' : ''}`}>
-      <div className={`boss-figure${hurt ? ' attack' : ''}`}>
+      <div className={`boss-figure${hurt ? ' attack' : ''}${bossHp === 1 ? ' weak' : ''}`}>
         <BossArena bg="castle" color={boss.color} />
         <BossFigure hit={picked !== null && picked === q?.answer} look={boss} />
         {/* HP が0になったら、ボス戦と同じ K.O. のはんこ */}
@@ -53,7 +53,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         )}
       </div>
       <div className="boss-plate">
-        <p className="boss-name">{bossHp === 0 ? `${boss.name}をたおした！` : `階のボス ${boss.name}`}</p>
+        <p className="boss-name">{bossHp === 0 ? `${boss.name}をたおした！` : bossHp === 1 ? `階のボス ${boss.name}（ふらふら…あと1撃！）` : `階のボス ${boss.name}`}</p>
         <div className="boss-hp" role="progressbar" aria-label="階のボスのHP" aria-valuemin={0} aria-valuemax={pass} aria-valuenow={bossHp}>
           <div className={`boss-hp-fill${bossHp / pass <= 0.25 ? ' low' : bossHp / pass <= 0.5 ? ' mid' : ''}`} style={{ width: `${(bossHp / pass) * 100}%` }} />
         </div>

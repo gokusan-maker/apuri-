@@ -576,10 +576,12 @@ it('ボスの城の問題の階：階のボスののこりHPを数字でも出�
   expect(screen.getByText('のこりHP 4 / 4')).toBeInTheDocument()
   fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === qs[0].choices[qs[0].answer])!)
   expect(screen.getByText('のこりHP 3 / 4')).toBeInTheDocument()
+  expect(document.querySelector('.bfloor .boss-figure')!.classList.contains('weak')).toBe(false)
   expect(document.querySelector('.bfloor .boss-ko')).toBeNull()
   for (const q of qs.slice(1, 4)) {
     fireEvent.click(screen.getByText('次へ'))
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+    if (q === qs[2]) expect(screen.getByText(/ふらふら…あと1撃！/)).toBeInTheDocument() // HP 1 でふらふら
   }
   expect(document.querySelector('.bfloor .boss-ko')).not.toBeNull() // 4問正解でボスをたおして K.O.!
 })
