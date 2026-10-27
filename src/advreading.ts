@@ -8999,6 +8999,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-stomach-growl',
+    title: 'Why Does Your Stomach Growl?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It is the middle of a quiet test, and suddenly your stomach makes a loud growling noise. Everyone looks at you, and your face turns red. Although this is embarrassing, it is a completely normal part of how the body ( A ).",
+      "The sound comes from the muscles of the stomach and intestines. These muscles squeeze again and again to push food, liquid, and gas through the body. When gas and liquid are pushed through these narrow tubes, they make rumbling sounds. In fact, this happens all the time, even when we are full.",
+      "So why do we notice it most when we are hungry? When the stomach is empty, there is no food to soften the sound, so the noise is louder. In addition, a few hours after a meal, the body starts a regular cleaning wave that sweeps leftover food along. Hunger signals also make the stomach muscles more ( B ), which adds to the noise.",
+      "Eating small snacks or drinking water can quiet a growling stomach for a while. But there is no need to feel ashamed. A growl is simply a sign that your digestive system is doing its job.",
+    ],
+    ja: [
+      '静かなテストの最中に、とつぜんおなかが大きくグーッと鳴る。みんながあなたを見て、顔が赤くなる。これははずかしいことだが、体がはたらくしくみのまったくふつうの一部なのだ。',
+      'その音は、胃や腸の筋肉から出ている。これらの筋肉は、食べ物や液体、ガスを体の中で送るために、何度もくり返し縮む。ガスや液体がこの細い管の中をおし進められるときに、ゴロゴロという音がする。実は、これはおなかがいっぱいのときでさえ、いつも起こっている。',
+      'では、なぜおなかがすいているときにいちばんそれに気づくのだろうか。胃が空っぽだと、音をやわらげる食べ物がないので、音が大きくなる。さらに、食事の数時間後には、体は残った食べ物を送り出す定期的なそうじの波を始める。空腹の信号は胃の筋肉をさらに活発にもするので、それが音を大きくする。',
+      '小さなおやつを食べたり水を飲んだりすると、しばらくは鳴るおなかを静められる。でも、はずかしく思う必要はない。おなかが鳴るのは、消化のしくみがきちんとはたらいているしるしにすぎないのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['works', 'work', 'working', 'to work'], answer: 0, why: 'how ＋ 主語 ＋ 動詞（間接疑問）。主語 the body は三人称単数なので works。working・to work では動詞がない。' },
+      { id: 'B', choices: ['active', 'actively', 'activity', 'act'], answer: 0, why: 'make ＋ 目的語 ＋ 形容詞「～を…にする」。the stomach muscles のあとに形容詞 active。副詞 actively や名詞 activity は入らない。' },
+    ],
+    underline: {
+      phrase: 'ashamed',
+      choices: ['embarrassed', 'hungry', 'surprised', 'proud'],
+      answer: 0,
+      why: 'feel ashamed は「はずかしく思う」。embarrassed とほぼ同じ意味。',
+    },
+    order: {
+      words: ['there', 'is', 'no', 'food', 'to', 'soften'],
+      rest: 'the sound',
+      answer: 'there is no food to soften',
+      ja: '音をやわらげる食べ物がない（不定詞の形容詞用法）',
+    },
+    tf: [
+      { statement: 'おなかの音は、胃や腸の筋肉の動きから出る。', answer: true, why: '第2段落 The sound comes from the muscles of the stomach and intestines。' },
+      { statement: 'おなかがいっぱいのときは、胃や腸はまったく音を出さない。', answer: false, why: '第2段落 this happens all the time, even when we are full。' },
+      { statement: '胃が空っぽだと、音が大きく聞こえる。', answer: true, why: '第3段落 When the stomach is empty, … the noise is louder。' },
+    ],
+    qa: [
+      { q: 'What does the writer say a growling stomach shows?', choices: ['That the digestive system is doing its job.', 'That the person is sick.', 'That the person ate too much.', 'That the stomach is too small.'], answer: 0, why: '第4段落 A growl is simply a sign that your digestive system is doing its job。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
