@@ -2250,6 +2250,8 @@
 
 - [x] 文法：前置詞 by の熟語 one by one ／ step by step ／ side by side
 
+- [x] 長文（共通テスト）：ゾウガメが長生きするわけ（Why Some Tortoises Live So Long）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

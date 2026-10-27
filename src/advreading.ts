@@ -10857,6 +10857,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-tortoise',
+    title: 'Why Some Tortoises Live So Long',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Some giant tortoises can live for more than 150 years. One famous tortoise living on an island in the Atlantic Ocean is believed to have been born in the 1830s. Few other animals with backbones ( A ) such long lives.",
+      "Scientists have several ideas about why these tortoises live so long. One reason is that they live slowly. Their hearts beat only a few times a minute, and they move and breathe slowly. Because their bodies use very little energy, they may wear out more slowly than the bodies of active animals.",
+      "Their hard shells are another reason. Adult giant tortoises have very few enemies, because few animals can break through such a thick shell. When animals are safe from being eaten, they are more likely to grow old.",
+      "Recent studies suggest that tortoises are also good at repairing damage to their bodies. Their cells may fix small problems ( B ) they become serious. Scientists hope that learning more about these slow, quiet animals may one day help humans stay healthy longer, too.",
+    ],
+    ja: [
+      'ゾウガメの中には、150年以上も生きるものがいる。大西洋のある島にいる有名なカメは、1830年代に生まれたと考えられている。背骨のある動物で、これほど長く生きるものはほとんどいない。',
+      '科学者たちは、なぜこのカメたちがそんなに長生きなのかについて、いくつかの考えを持っている。理由の1つは、ゆっくり生きていることだ。心臓は1分間に数回しか打たず、動くのも息をするのもゆっくりだ。体がほとんどエネルギーを使わないので、活発な動物の体よりもゆっくりおとろえるのかもしれない。',
+      'かたいこうらも理由の1つだ。おとなのゾウガメには敵がほとんどいない。こんなに厚いこうらをこわせる動物はほとんどいないからだ。動物は食べられる心配がないと、年をとるまで生きやすくなる。',
+      '最近の研究では、カメは体の傷を治すのもじょうずだとわかってきている。カメの細胞は、小さな問題が大きくなる前に直しているのかもしれない。科学者たちは、このゆっくりで静かな動物についてもっと知ることで、いつか人間がより長く健康でいられるようになることも願っている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['have', 'has', 'having', 'to have'], answer: 0, why: '主語 Few other animals（複数）に続く文の動詞なので have。has は単数の主語の形で、having・to have だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['before', 'during', 'ago', 'in front of'], answer: 0, why: 'うしろに主語と動詞（they become）が続くので接続詞 before「～する前に」。during・in front of は前置詞（句）、ago は副詞なので、文の前に置けない。' },
+    ],
+    underline: {
+      phrase: 'wear out',
+      choices: ['become weak or damaged from use', 'grow bigger', 'become more active', 'change color'],
+      answer: 0,
+      why: 'wear out は「使われてだめになる・おとろえる」。体がゆっくりおとろえるという意味。',
+    },
+    order: {
+      words: ['few', 'animals', 'can', 'break', 'through'],
+      rest: 'such a thick shell',
+      answer: 'few animals can break through',
+      ja: '～をこわせる動物はほとんどいない（few「ほとんど～ない」）',
+    },
+    tf: [
+      { statement: 'ゾウガメの中には、150年以上生きるものがいる。', answer: true, why: '第1段落 Some giant tortoises can live for more than 150 years。' },
+      { statement: 'ゾウガメの心臓は、1分間にとてもたくさん打つ。', answer: false, why: '第2段落 Their hearts beat only a few times a minute。' },
+      { statement: 'おとなのゾウガメには敵が多い。', answer: false, why: '第3段落 Adult giant tortoises have very few enemies。' },
+    ],
+    qa: [
+      { q: 'Why are adult giant tortoises safe from most enemies?', choices: ['Because few animals can break their thick shells.', 'Because they run very fast.', 'Because they live in the sea.', 'Because they are poisonous.'], answer: 0, why: '第3段落 few animals can break through such a thick shell。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
