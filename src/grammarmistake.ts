@@ -87,6 +87,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'group-prep-contrary': { wrong: 'Contrary of what I expected, the test was easy.', right: 'Contrary to what I expected, the test was easy.', why: 'contrary to ～「～に反して」。contrary のあとは to。' },
   'group-prep-regard': { wrong: 'With regards to your question, we will reply soon.', right: 'With regard to your question, we will reply soon.', why: 'with regard to ～「～に関して」。regard は単数のまま（regards は手紙の結びの言葉）。' },
   'group-prep-event': { wrong: 'In the event for rain, the game will be canceled.', right: 'In the event of rain, the game will be canceled.', why: 'in the event of ～「～の場合には」。event のあとは of。' },
+  'group-prep-expense': { wrong: 'He worked hard at the expenses of his health.', right: 'He worked hard at the expense of his health.', why: 'at the expense of ～「～をぎせいにして」。expense は単数のまま。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
