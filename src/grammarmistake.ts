@@ -76,6 +76,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-mood': { wrong: 'I\'m not in the moody for games.', right: 'I\'m not in the mood for games.', why: 'be in the mood for ～「～したい気分だ」。the のあとは名詞 mood（moody は形容詞）。' },
   'by-by-idioms': { wrong: 'The students came in one by ones.', right: 'The students came in one by one.', why: 'one by one「1人ずつ・1つずつ」。one は単数のまま。' },
   'by-by-idioms-2': { wrong: 'His English is getting better little by littles.', right: 'His English is getting better little by little.', why: 'little by little「少しずつ」。by の前後は同じ little のまま。' },
+  'pair-prep-idioms': { wrong: 'We talked face to faces.', right: 'We talked face to face.', why: 'face to face「面と向かって」。名詞は単数のまま、a もつけない。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
