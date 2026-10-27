@@ -9996,6 +9996,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-bike-parking',
+    title: 'Notice: New Bicycle Parking Rules',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff at Riverside Business Park: Starting on Monday, June 2, new rules will apply to the bicycle parking area behind Building C. More and more employees are cycling to work, and the area has become too crowded.",
+      "All bicycles must display a parking sticker. Stickers are free and can be picked up at the security office on the first floor of Building A. Please bring your staff ID card when you come. Bicycles without a sticker ( A ) removed after June 16.",
+      "To make more room, we have added 40 new parking spaces next to the main gate. Covered spaces are also available for staff who cycle in all kinds of weather. These spaces will be given out on a first-come, first-served basis, so please apply soon if you are interested.",
+      "In addition, bicycles may not be left in the parking area for more than three days in a row. If you are going on a business trip or a holiday, please take your bicycle home ( B ) you leave. We thank you for your cooperation in keeping the area safe and tidy. If you have any questions, please contact Ken Morita in the facilities department.",
+    ],
+    ja: [
+      'リバーサイド・ビジネスパークのスタッフのみなさまへ：6月2日（月）から、C棟の裏の自転車置き場に新しいきまりができます。自転車で通勤する社員がますます増え、置き場がこみすぎるようになったためです。',
+      'すべての自転車に駐輪ステッカーをはってください。ステッカーは無料で、A棟1階の警備室で受け取れます。来るときは社員証を持ってきてください。ステッカーのない自転車は、6月16日以降は撤去されます。',
+      '場所を広げるため、正門の横に新しく40台分の駐輪スペースを作りました。どんな天気でも自転車で来るスタッフのために、屋根つきのスペースもあります。これらのスペースは先着順でわりあてるので、希望する人は早めに申しこんでください。',
+      'また、自転車を3日より長く続けて置き場に置いておくことはできません。出張や休暇に出かけるときは、出かける前に自転車を家に持ち帰ってください。置き場を安全できれいにたもつためのご協力に感謝します。ご質問は、施設部のモリタ・ケンまでどうぞ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['will be', 'will', 'being', 'to be'], answer: 0, why: '主語 Bicycles without a sticker に続く文の動詞で、「撤去される」という受け身の未来なので will be removed。will だけでは be がなく、being・to be だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['before', 'during', 'by', 'in front of'], answer: 0, why: 'うしろに主語と動詞（you leave）が続くので接続詞 before「～する前に」。during・by・in front of は前置詞（句）なので、主語と動詞の文の前には置けない。' },
+    ],
+    underline: {
+      phrase: 'on a first-come, first-served basis',
+      choices: ['in the order that people ask', 'only to managers', 'by drawing lots', 'for a high price'],
+      answer: 0,
+      why: 'first-come, first-served は「先着順」。早く申しこんだ人から順にわりあてるという意味。',
+    },
+    order: {
+      words: ['bicycles', 'may', 'not', 'be', 'left', 'in'],
+      rest: 'the parking area',
+      answer: 'bicycles may not be left in',
+      ja: '自転車を～に置いておくことはできない（may not「～してはいけない」＋受け身）',
+    },
+    tf: [
+      { statement: '駐輪ステッカーはお金をはらって買う。', answer: false, why: '第2段落 Stickers are free。' },
+      { statement: '新しい駐輪スペースは、正門の横に作られた。', answer: true, why: '第3段落 we have added 40 new parking spaces next to the main gate。' },
+      { statement: '自転車は1週間まで続けて置いておける。', answer: false, why: '第4段落 may not be left ... for more than three days in a row。' },
+    ],
+    qa: [
+      { q: 'What should staff bring to get a parking sticker?', choices: ['Their staff ID card.', 'Their bicycle.', 'A photo of their bicycle.', 'A letter from their manager.'], answer: 0, why: '第2段落 Please bring your staff ID card when you come。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
