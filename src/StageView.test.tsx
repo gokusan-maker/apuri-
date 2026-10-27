@@ -624,6 +624,9 @@ it('ボスの城の問題の階の結果に、のこりライフを出す', asyn
     fireEvent.click(screen.getByText(/次へ|結果を見る/))
   })
   expect(screen.getByLabelText('のこりライフ 1 / 2')).toHaveTextContent('のこりライフ ❤️🤍')
+  expect(screen.getByLabelText('ランク A')).toBeInTheDocument() // まちがい1つでクリアは A
+  const { bcRankOf } = await import('./bosscastle')
+  expect([bcRankOf(0), bcRankOf(1), bcRankOf(2)]).toEqual(['S', 'A', 'B'])
 })
 
 it('ボスの城の問題の階：全問正解でパーフェクト、前の最高より上なら自己ベスト更新', async () => {

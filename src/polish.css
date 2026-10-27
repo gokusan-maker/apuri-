@@ -4223,3 +4223,9 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-combo { margin: 2px 0; color: #fb923c; font-weight: 900; text-align: center; animation: heart-break 0.5s ease-out; }
 .arena-shield { color: #93c5fd; }
 .bfloor-last { margin: 2px 0; color: #fde047; font-weight: 900; text-align: center; animation: pinch-blink 1s ease-in-out infinite; }
+/* ボスの城の階：クリアのランク */
+.bfloor-rank { margin: 4px auto; width: 56px; height: 56px; display: grid; place-items: center; border-radius: 50%; font-size: 2rem; font-weight: 900; font-style: italic; color: #fff; background: #64748b; animation: rank-stamp 0.5s cubic-bezier(0.2, 1.4, 0.4, 1) both; }
+.bfloor-rank.rank-S { background: linear-gradient(180deg, #fde047, #f59e0b); color: #451a03; box-shadow: 0 0 18px rgb(250 204 21 / 0.8); }
+.bfloor-rank.rank-A { background: linear-gradient(180deg, #60a5fa, #2563eb); }
+@media (prefers-reduced-motion: reduce) { .bfloor-rank { animation: none; } }
+@keyframes rank-stamp { from { transform: scale(2.5) rotate(-12deg); opacity: 0; } }

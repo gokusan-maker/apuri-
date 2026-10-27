@@ -2,7 +2,7 @@ import { useState } from 'react'
 import type { BossLook, TeamQ } from './boss'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
-import { bcLivesOf, bcPassOf } from './bosscastle'
+import { bcLivesOf, bcPassOf, bcRankOf } from './bosscastle'
 import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
@@ -77,6 +77,11 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
           <p className="bfloor-life-left" aria-label={`のこりライフ ${lives} / ${maxLives}`}>
             のこりライフ {'❤️'.repeat(lives)}
             {'🤍'.repeat(maxLives - lives)}
+          </p>
+        )}
+        {score >= pass && (
+          <p className={`bfloor-rank rank-${bcRankOf(maxLives - lives)}`} aria-label={`ランク ${bcRankOf(maxLives - lives)}`}>
+            {bcRankOf(maxLives - lives)}
           </p>
         )}
         {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！</p>}

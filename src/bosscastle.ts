@@ -60,6 +60,8 @@ export function retryFloorQs(qs: TeamQ[], rnd: () => number = Math.random): Team
     return { ...q, choices, answer: choices.indexOf(q.choices[q.answer]) }
   })
 }
+// クリアしたときのランク：まちがい0で S、1つで A、それより多いと B
+export const bcRankOf = (misses: number): 'S' | 'A' | 'B' => (misses <= 0 ? 'S' : misses === 1 ? 'A' : 'B')
 // 階のライフ：まちがえてもクリアできる回数＋1（単語10問は❤️3つ、5問の階は❤️2つ）。0になったら負け
 export const bcLivesOf = (n: number): number => n - bcPassOf(n) + 1
 
