@@ -74,15 +74,14 @@ describe('ボス戦', () => {
     expect(onNext).toHaveBeenCalled()
   })
 
-  it('ボス戦の画面：名前とHPはネームプレートに、弱点・会心はチップにまとまる', () => {
+  it('ボス戦の画面：名前とHPはネームプレートに。弱点・とくぎ・会心などの説明は出さない（オーナーの要望）', () => {
     const { container } = render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
     const plate = container.querySelector('.boss-plate')!
     expect(plate.querySelector('.boss-name')!.textContent).toBe(BOSSES['中1'].name)
     expect(plate.querySelector('[role="progressbar"]')).not.toBeNull()
     expect(plate.querySelector('.boss-hp-num')!.textContent).toBe('のこりHP 300 / 300')
-    const chips = container.querySelector('.boss-chips')!
-    expect(chips.querySelector('.boss-weak')!.textContent).toMatch(/^弱点：/)
-    expect(chips.textContent).toMatch(/3秒以内で会心/)
+    expect(container.querySelector('.boss-chips')).toBeNull()
+    expect(screen.queryByText(/3秒以内で会心/)).toBeNull()
     expect((plate.querySelector('.boss-hp-ghost') as HTMLElement).style.width).toBe('100%')
     expect((container.querySelector('.battle-v2') as HTMLElement).style.getPropertyValue('--boss')).toBe(BOSSES['中1'].color)
   })
@@ -105,6 +104,16 @@ describe('ボス戦', () => {
     answer(false)
     fireEvent.click(screen.getByText('次へ'))
     expect(en().classList.contains('on-fire')).toBe(false)
+  })
+
+  it('アイテムは🎒ボタンを押すと一覧が出る（1画面に問題まで見えるように）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 1, charm: 0, clock: 0, lucky: 0 }} />)
+    expect(document.querySelector('.battle-items')).toBeNull()
+    fireEvent.click(screen.getByRole('button', { name: '🎒 アイテム' }))
+    expect(screen.getByRole('menu', { name: 'アイテム' })).toHaveTextContent('20ダメージ')
+    fireEvent.click(screen.getByRole('menuitem', { name: /どっかんボンバー/ }))
+    expect(document.querySelector('.battle-items')).toBeNull() // 使うと閉じる
+    expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '220')
   })
 
   it('ボスのHPが数字でも出て、正解すると減る', () => {
@@ -147,11 +156,9 @@ describe('ボス戦', () => {
     expect(screen.getByLabelText('竜のひとことを聞く')).toBeInTheDocument()
   })
 
-  it('勝ったあとは、相棒の特技の説明（戦い中の情報）を出さない', async () => {
+  it('相棒の特技の説明はボス戦の画面に出さない（オーナーの要望）', async () => {
     const { FORMS } = await import('./monster')
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} partner={{ form: FORMS[1], name: 'モチ' }} />)
-    expect(document.querySelector('.boss-partner')).not.toBeNull()
-    answer(true)
     expect(document.querySelector('.boss-partner')).toBeNull()
   })
 
@@ -186,7 +193,6 @@ it('コインでハートを1つ回復できる（1戦1回）', () => {
 
 it('すぐに正解すると会心の一撃、ゆっくりだとふつうのダメージ', () => {
   const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
-  expect(screen.getByText(/3秒以内で会心/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('⚡ 会心の一撃！')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '231')
@@ -217,7 +223,6 @@ it('相棒がいっしょに戦う：ドラコは火の息で追加ダメージ�
   const { FORMS, withSpecies } = await import('./monster')
   const grown = (sp: string) => ({ form: withSpecies(FORMS[1], sp), species: sp, name: 'あいぼう' })
   const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={grown('dragon')} />)
-  expect(screen.getByText(/特技「火の息」/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('あいぼうの火の息！ +3')).toBeInTheDocument()
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '228') // 会心9＋3
@@ -226,12 +231,6 @@ it('相棒がいっしょに戦う：ドラコは火の息で追加ダメージ�
   answer(false)
   expect(screen.getByText('あいぼうのペンギンガード！ ハートを守った')).toBeInTheDocument()
   expect(screen.getByLabelText('のこりハート 3')).toBeInTheDocument()
-})
-
-it('タマゴの相棒は応援だけ', async () => {
-  const { FORMS } = await import('./monster')
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: FORMS[0], name: 'たまご' }} />)
-  expect(screen.getByText(/たまごが応援中/)).toBeInTheDocument()
 })
 
 it('ノーミス＆会心でたおすとSランクでおまけコイン', () => {
@@ -273,9 +272,11 @@ it('チャンス問題が出る', () => {
 it('バトルアイテム：ばくだんで20ダメージ、おまもりでハート回復（1戦1回）', () => {
   const used: string[] = []
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 2, charm: 1, clock: 0, lucky: 0 }} onUseItem={(id) => used.push(id)} />)
+  fireEvent.click(screen.getByText('🎒 アイテム'))
   expect(screen.getByText(/まもりのおまもりん/).closest('button')).toBeDisabled() // ハート満タン
   fireEvent.click(screen.getByText(/どっかんボンバー/))
   expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '220')
+  fireEvent.click(screen.getByText('🎒 アイテム'))
   expect(screen.getByText(/どっかんボンバー/).closest('button')).toBeDisabled()
   answer(false)
   expect(screen.getByLabelText('のこりハート 2')).toBeInTheDocument()
@@ -295,7 +296,6 @@ it('特技が出ると onSkill が呼ばれ、Lv3のドラコは +5', async () =
   const { FORMS, withSpecies } = await import('./monster')
   const skill = vi.fn()
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onSkill={skill} partner={{ form: withSpecies(FORMS[1], 'dragon'), species: 'dragon', name: 'ドラ', skillUses: 30 }} />)
-  expect(screen.getByText(/特技「火の息」Lv3/)).toBeInTheDocument()
   answer(true)
   expect(screen.getByText('ドラの火の息！ +5')).toBeInTheDocument()
   expect(skill).toHaveBeenCalledTimes(1)
@@ -363,19 +363,11 @@ it('弱点のキャラクターの相棒だと追加ダメージ', async () => {
   const { BOSSES } = await import('./boss')
   const sp = weakOf(BOSSES['中1'].name)
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], sp), species: sp === 'mochi' ? undefined : sp, name: 'あいぼう' }} />)
-  expect(screen.getByText(/弱点をついている！/)).toBeInTheDocument()
   const before = 240
   vi.setSystemTime(Date.now() + 10000) // 会心なし
   answer(true)
   const hp = Number(screen.getByRole('progressbar', { name: 'ボスのHP' }).getAttribute('aria-valuenow'))
   expect(before - hp).toBeGreaterThanOrEqual(6 + 4)
-})
-
-it('ボスのセリフに相棒が言い返す', async () => {
-  const { FORMS, withSpecies } = await import('./monster')
-  const { UNIV_BOSSES } = await import('./univ')
-  render(<Boss level="高校基礎" words={wordsOf(['高校基礎'])} look={UNIV_BOSSES[0]} onWin={() => {}} onExit={() => {}} partner={{ form: withSpecies(FORMS[1], 'cat'), species: 'cat', name: 'ニャ' }} />)
-  expect(screen.getByText(/ニャ：「I am not afraid of you.」/)).toBeInTheDocument()
 })
 
 it('ハートがなくなると onLose が呼ばれる', () => {
@@ -424,6 +416,7 @@ it('3問連続正解でことばの盾がたまり、次のまちがいでハー
 it('スローどけいを使うと、5秒かかっても会心の一撃', () => {
   const used: string[] = []
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} bag={{ bomb: 0, charm: 0, clock: 1, lucky: 0 }} onUseItem={(id) => used.push(id)} />)
+  fireEvent.click(screen.getByText('🎒 アイテム'))
   fireEvent.click(screen.getByText(/スローどけい/))
   expect(used).toEqual(['clock'])
   vi.setSystemTime(Date.now() + 5000)
@@ -520,6 +513,7 @@ it('相棒のヒントは選択肢を消さず、考え方のヒントを出す�
 it('ラッキーコインを使うとSランクボーナスが2倍', () => {
   const bonus = vi.fn()
   render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} onRankBonus={bonus} bag={{ bomb: 0, charm: 0, clock: 0, lucky: 1 }} onUseItem={() => {}} />)
+  fireEvent.click(screen.getByText('🎒 アイテム'))
   fireEvent.click(screen.getByText(/ラッキーコイン/))
   for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
     answer(true)
@@ -527,13 +521,6 @@ it('ラッキーコインを使うとSランクボーナスが2倍', () => {
   }
   expect(screen.getByLabelText('ランク S')).toBeInTheDocument()
   expect(bonus).toHaveBeenCalledWith(20)
-})
-
-it('相棒がいると正解したときにおうえんスタンプが出る', async () => {
-  const { FORMS } = await import('./monster')
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={500} partner={{ form: FORMS[1], name: 'あいぼう' }} />)
-  answer(true)
-  expect(screen.getByLabelText('おうえんスタンプ')).toHaveTextContent('👍 ナイス！')
 })
 
 it('読解ボスで空所の問題に正解すると、本文のその空所に答えが入る', async () => {

@@ -14,7 +14,6 @@ it('大学入試の塔：1階だけ挑戦でき、上の階はまだ見えない
   fireEvent.click(screen.getByRole('button', { name: '1階：キョーツーゲートン' }))
   expect(screen.getByText('🏯 大学入試の塔 1階')).toBeInTheDocument()
   expect(screen.getByLabelText('ボスのHP')).toHaveAttribute('aria-valuemax', '150')
-  expect(screen.getByText(/Only those who know their words may pass!/)).toBeInTheDocument()
 })
 
 it('倒した階の次の階が開く', () => {

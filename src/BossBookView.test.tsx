@@ -101,14 +101,11 @@ it('とくぎ封じで勝った回数を数え、5回でバッジ・記録の部
   expect(collectRecords().some((r) => r.label === 'とくぎ封じ' && r.value === '1回')).toBe(true)
 })
 
-it('バトルの最初に、ボスのとくぎのカットインが出る（とくぎなしなら出ない）', () => {
+it('バトル中はとくぎの説明（カットイン・封じ中の表示）を出さない（オーナーの要望：セリフのすぐ下はアイテム）', () => {
   localStorage.clear()
-  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['regen', 'armor']} />)
-  expect(document.querySelector('.trait-cutin')?.textContent).toContain('のとくぎ「さいせい・かたいウロコ」')
-  expect(document.querySelector('.trait-cutin')?.classList.contains('t-regen')).toBe(true) // とくぎごとの色
-  unmount()
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={[]} />)
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['regen', 'armor']} />)
   expect(document.querySelector('.trait-cutin')).toBeNull()
+  expect(screen.queryByText('🔒 とくぎ封じ中')).toBeNull()
 })
 
 it('ボス図鑑に「とくぎのしくみ」：4しゅるいのとくぎと説明、とくぎ封じのこと', async () => {
@@ -175,21 +172,6 @@ it('ボス図鑑はとくぎでしぼりこめる（もう一度おすと全部�
   expect(shown).toBeLessThan(all)
   fireEvent.click(screen.getByRole('button', { name: BOSS_TRAITS[t].name }))
   expect(container.querySelectorAll('.boss-book-list li.got').length).toBe(all)
-})
-
-it('バトル中、とくぎが発動するまでは「🔒 とくぎ封じ中」が出て、発動すると消える', () => {
-  localStorage.clear()
-  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} traits={['drain']} />)
-  expect(screen.getByText('🔒 とくぎ封じ中')).toBeInTheDocument()
-  const en = document.querySelector('.boss .en')!.textContent
-  const w = wordsOf(['中1']).find((x) => x.en === en)!
-  // まちがえて HP が減っていない状態では drain は回復しない（満タン）ので、先に1問正解してから まちがえる
-  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
-  fireEvent.click(screen.getByText('次へ'))
-  const en2 = document.querySelector('.boss .en')!.textContent
-  const w2 = wordsOf(['中1']).find((x) => x.en === en2)!
-  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent !== w2.ja)!)
-  expect(screen.queryByText('🔒 とくぎ封じ中')).toBeNull()
 })
 
 it('とくぎ封じは、とくぎの種類ごとにも数えて、図鑑の「とくぎのしくみ」に🔒×回数が出る', async () => {

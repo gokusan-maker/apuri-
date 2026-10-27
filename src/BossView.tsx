@@ -15,13 +15,12 @@ import { BossArena } from './BossArenaView'
 import { isNight } from './daytime'
 import { ChestTicketContext } from './castle'
 import { BossSupportContext, BossTeamContext, TEAM_ICON, TEAM_LABEL, TEAM_LOSE_LINES, TEAM_WIN_LINES, teamMvp } from './bossteam'
-import { MonsterFigure } from './MonsterView'
 import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } from './battleitems'
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
-import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, replyOf, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, cheerStampOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, addSealTraits, traitAfterHit, bossTraits, type BossTrait, arenaSeasonOf } from './boss'
-import { quizXp, speciesOf, type Form, type Source } from './monster'
+import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
+import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, addSealTraits, traitAfterHit, bossTraits, type BossTrait, arenaSeasonOf } from './boss'
+import { quizXp, type Form, type Source } from './monster'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
 import { LEVELS, levelOf, WORDS, type Level, type Word } from './words'
@@ -302,11 +301,9 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [sealed, setSealed] = useState(false) // とくぎ封じで勝った
   const [sealTicket, setSealTicket] = useState(false) // とくぎ封じ10回ごとのチケット
   const giveTicket = useContext(ChestTicketContext)
-  const [firedShown, setFiredShown] = useState(false) // 画面の「封じ中」表示用
   const setTraitMsg = (m: string) => {
     if (m) {
       fired.current = true
-      setFiredShown(true)
     }
     setTraitMsgRaw(m)
   }
@@ -505,6 +502,8 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     if (nextHp <= 0) win(crits)
   }
 
+  const [itemsOpen, setItemsOpen] = useState(false)
+  const hasItems = !!bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0 || bag.clock > 0 || bag.lucky > 0)
   function applyItem(id: BattleItemId) {
     if (!bag || bag[id] <= 0 || usedItems.includes(id) || won || lost) return
     setUsedItems([...usedItems, id])
@@ -604,7 +603,6 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setTraitMsg('')
     setRegenUsed(false)
     fired.current = false
-    setFiredShown(false)
     setSealed(false)
     setSealTicket(false)
   }
@@ -692,72 +690,14 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <span className="boss-intro-ja">{introLineOf(look.name).ja}</span>
         </p>
       )}
-      {index === 0 && picked === null && hp === maxHp && traits.length > 0 && (
-        <p className={`trait-cutin t-${traits[0]}`} aria-hidden="true">
-          {traits.map((t) => BOSS_TRAITS[t].icon).join('')} {look.name}のとくぎ「{traits.map((t) => BOSS_TRAITS[t].name).join('・')}」
-        </p>
-      )}
-      {/* 情報はチップで1〜2行にまとめる：弱点・とくぎ・封じ中・会心 */}
-      {!won && (
-        <div className="boss-chips">
-          <p className={`boss-weak${hitsWeak ? ' hit' : ''}`}>
-            弱点：{speciesOf(weak).name}
-            {hitsWeak && `　⚡ 弱点をついている！ 正解ごとに +${WEAK_BONUS}`}
-          </p>
-          {traits.map((t) => (
-            <p key={t} className={`boss-trait t-${t}`} title={BOSS_TRAITS[t].desc}>
-              とくぎ：{BOSS_TRAITS[t].icon} {BOSS_TRAITS[t].name}
-            </p>
-          ))}
-          {traits.length > 0 && !lost && !firedShown && (
-            <p className="seal-live" title="とくぎを発動させずに勝つと とくぎ封じ">
-              🔒 とくぎ封じ中
-            </p>
-          )}
-          {index === 0 && picked === null && <p className="stats-note boss-tip" title="3秒以内に正解すると会心の一撃">⚡ 3秒以内で会心！</p>}
-        </div>
-      )}
-      {!won && traits.length > 0 && index === 0 && picked === null && (
-        <p className="boss-trait-desc">{traits.map((t) => `${BOSS_TRAITS[t].icon} ${BOSS_TRAITS[t].desc}`).join('　')}</p>
-      )}
       {traitMsg && picked !== null && !won && (
         <p key={traitMsg + index} className="boss-trait-pop" role="status">
           {traitMsg}
         </p>
       )}
-      {partner && !won && !lost && (
-        <div className="boss-partner">
-          {picked !== null && q && picked === q.answer && !won && (
-            <span key={`cheer${index}`} className="cheer-stamp" aria-label="おうえんスタンプ">
-              {cheerStampOf(corrects)}
-            </span>
-          )}
-          <span className="boss-partner-fig">
-            <MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood={hit ? 'happy' : 'normal'} />
-          </span>
-          <span className="boss-partner-text">
-            {skillMsg ? (
-              <strong key={skillMsg + index} className="boss-skill-pop">
-                {skillMsg}
-              </strong>
-            ) : skill ? (
-              <>
-                {partner.name}の特技「{skill.name}」Lv{lv}：{skill.desc}
-              </>
-            ) : (
-              <>{teamOn ? '🤝 3人のチームで挑戦！' : `${partner.name}が応援中！`}</>
-            )}
-          </span>
-        </div>
-      )}
-      {look.taunt && index === 0 && picked === null && (
-        <p className="boss-taunt">
-          「{look.taunt.en}」<span>{look.taunt.ja}</span>
-        </p>
-      )}
-      {look.taunt && partner && skill && index === 0 && picked === null && (
-        <p className="boss-taunt partner-reply">
-          {partner.name}：「{replyOf(partner.species).en}」<span>{replyOf(partner.species).ja}</span>
+      {skillMsg && !won && !lost && (
+        <p key={skillMsg + index} className="boss-skill-pop" role="status">
+          {skillMsg}
         </p>
       )}
       <p className="boss-status">
@@ -773,6 +713,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             <i key={i} className={i < gauge ? 'on' : ''} />
           ))}
         </span>
+        {/* アイテムはボタンを押すと一覧が出る（オーナーの要望：1画面に問題まで見えるように） */}
+        {hasItems && (
+          <button className={`bag-btn${itemsOpen ? ' open' : ''}`} aria-expanded={itemsOpen} onClick={() => setItemsOpen(!itemsOpen)}>
+            🎒 アイテム
+          </button>
+        )}
         {onSpend && !healed && !won && hearts > 0 && hearts < HEARTS && (
           <button
             className="hint-5050"
@@ -787,13 +733,23 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           </button>
         )}
       </p>
-      {bag && !won && !lost && (bag.bomb > 0 || bag.charm > 0 || bag.clock > 0 || bag.lucky > 0) && (
-        <div className="battle-items">
-          {BATTLE_ITEMS.filter((it) => bag[it.id] > 0).map((it) => (
-            <button key={it.id} className="battle-item" disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)} onClick={() => applyItem(it.id)}>
+      {hasItems && itemsOpen && (
+        <div className="battle-items" role="menu" aria-label="アイテム">
+          {BATTLE_ITEMS.filter((it) => bag![it.id] > 0).map((it) => (
+            <button
+              key={it.id}
+              role="menuitem"
+              className="battle-item"
+              disabled={usedItems.includes(it.id) || (it.id === 'charm' && hearts >= HEARTS)}
+              onClick={() => {
+                applyItem(it.id)
+                setItemsOpen(false)
+              }}
+            >
               <span className="bi-icon" aria-hidden="true">{it.icon}</span>
               <span className="bi-name">{it.name}</span>
-              <span className="bi-count" aria-label={`あと${bag[it.id]}こ`}>×{bag[it.id]}</span>
+              <span className="bi-short">{it.short}</span>
+              <span className="bi-count" aria-label={`あと${bag![it.id]}こ`}>×{bag![it.id]}</span>
             </button>
           ))}
         </div>

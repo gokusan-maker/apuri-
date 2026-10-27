@@ -4013,3 +4013,25 @@ header .event-chips { margin: 0 0 2px; }
 .battle-v2 .bfloor-boss .boss-arena { top: -10px; height: 140px; }
 .bfloor-boss .boss-plate { margin-top: 4px; padding: 6px 12px; }
 .bfloor-boss.down .boss-figure > svg:not(.boss-arena) { filter: grayscale(1) brightness(0.6); transform: rotate(-12deg) translateY(10px); transition: 0.4s; }
+/* ボス戦を1画面に：舞台を低く、セリフは舞台に重ねる、HPの数字はネームプレートの右に。アイテムは🎒で開く */
+.card.boss.battle-v2 { padding-bottom: 14px; }
+.battle-v2 .boss-figure { width: 112px; height: 112px; margin-top: 2px; }
+.battle-v2 .boss-arena { top: -48px; height: 172px; }
+.battle-v2 .boss-intro { position: absolute; z-index: 5; left: 50%; top: 50px; width: max-content; max-width: 78%; margin: 0; padding: 5px 10px; font-size: 0.78rem; transform: translateX(-50%); animation: v2-say 0.25s ease-out; }
+.battle-v2 .boss-intro::before { top: auto; bottom: -7px; border-top: 7px solid #f8fafc; border-bottom: 0; }
+.battle-v2 .boss-intro .boss-intro-ja { display: none; }
+.battle-v2 .boss-plate { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 8px; margin: 4px 0 6px; padding: 6px 10px; }
+.battle-v2 .boss-plate .boss-name { margin: 0; font-size: 0.92rem; }
+.battle-v2 .boss-plate .boss-hp { grid-column: 1 / -1; grid-row: 2; height: 13px; margin-top: 4px; }
+.battle-v2 .boss-plate .boss-hp-num { grid-column: 2; grid-row: 1; margin: 0; font-size: 0.7rem; }
+.battle-v2 .boss-status { margin: 0 0 6px; padding: 4px 8px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; }
+.battle-v2 .en { margin: 4px 0 2px; padding: 10px 8px; font-size: 1.7rem; }
+.battle-v2 .choices { margin-top: 10px; gap: 7px; }
+.battle-v2 .choice { padding-top: 11px; padding-bottom: 11px; }
+.bag-btn { padding: 3px 10px; border-radius: 999px; border: 1px solid rgb(255 255 255 / 0.25); background: rgb(255 255 255 / 0.1); color: #fff; font-size: 0.78rem; font-weight: 800; }
+.bag-btn.open { background: #f59e0b; color: #1f2937; }
+.battle-v2 .battle-items { position: relative; z-index: 6; display: grid; gap: 6px; margin: 0 0 8px; padding: 8px; border-radius: 14px; background: rgb(2 6 23 / 0.92); border: 1px solid rgb(255 255 255 / 0.18); box-shadow: 0 8px 20px rgb(0 0 0 / 0.4); animation: v2-say-in 0.18s ease-out; }
+@keyframes v2-say-in { from { transform: translateY(-6px); opacity: 0; } }
+.battle-v2 .battle-item { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 8px; text-align: left; color: #fff; background: rgb(255 255 255 / 0.07); border: 1px solid rgb(255 255 255 / 0.14); border-radius: 10px; padding: 7px 10px; }
+.battle-v2 .battle-item:disabled { opacity: 0.4; }
+.battle-v2 .bi-short { font-size: 0.72rem; color: #fcd34d; font-weight: 800; }
