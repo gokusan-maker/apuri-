@@ -2622,3 +2622,4 @@
 - 2026-10-27: 文法に「前置詞をはさむ熟語 face to face ／ hand in hand ／ from time to time（面と向かって・手をつないで・ときどき）」の単元を追加
 - 2026-10-27: 長文読解（共通テスト）に「卵のからの強さ」を追加
 - 2026-10-27: 闘技場で10連続正解ごとに大きなお祝いを表示
+- 2026-10-27: 文法に「前置詞 from ～ to … の熟語 from top to bottom ／ from head to toe ／ from door to door」の単元を追加
