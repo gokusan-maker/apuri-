@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'adj-prep-7': { wrong: 'I am grateful of your help.', right: 'I am grateful for your help.', why: '感謝する「こと」には for、「人」には to。' },
   'verb-prep-rely': { wrong: 'Please respond my email.', right: 'Please respond to my email.', why: 'respond to ～「～に答える」。to が必要。' },
   'verb-prep-from': { wrong: 'My opinion is differ from yours.', right: 'My opinion differs from yours.', why: 'differ は動詞なので be をつけない（be different from なら OK）。' },
   'adj-prep-6': { wrong: 'She is curious to the news.', right: 'She is curious about the news.', why: 'be curious about ～「～に興味しんしんだ」。' },

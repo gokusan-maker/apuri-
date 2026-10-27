@@ -2442,3 +2442,4 @@
 - 2026-10-27: 文法に「自動詞 ＋ 前置詞 ⑥（rely on ／ respond to ／ refer to）」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「New Bicycle Parking」（新しい自転車置き場）を追加
 - 2026-10-27: 闘技場で、3連続正解ごとに2階ジャンプ（🚀）するように
+- 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑦（be harmful to ／ be related to ／ be grateful for）」の単元を追加
