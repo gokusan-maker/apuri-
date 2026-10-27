@@ -572,6 +572,8 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(screen.getByText('⬆ レベルアップ！ 2階（中2レベル）へ')).toBeInTheDocument()
   fireEvent.click(screen.getByText('次へ（中2）'))
   expect(floor()).toBe(2)
+  expect(document.querySelector('.arena-foe')!.classList.contains('enter-up')).toBe(true) // 新しい相手が上から登場
+  expect(document.querySelector('.arena-banner')!.textContent).toBe('⬆ 2階')
   pickAnswer(false)
   expect(screen.getByRole('status')).toHaveTextContent('⬇ レベルダウン… 1階（中1レベル）へ')
   fireEvent.click(screen.getByText('次へ（中1）'))

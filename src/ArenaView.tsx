@@ -19,6 +19,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
   // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
   const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
   const [newRecord, setNewRecord] = useState(false)
+  const [moved, setMoved] = useState<'up' | 'down' | null>(null) // 階が変わった直後：新しい相手が登場
   const look = arenaLook(lv)
   const correct = picked !== null && picked === q.answer
   const nextLv = picked === null ? lv : arenaNext(lv, correct)
@@ -46,6 +47,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
     }
   }
   function next() {
+    setMoved(nextLv > lv ? 'up' : nextLv < lv ? 'down' : null)
     setLv(nextLv)
     setQ(arenaQuestion(nextLv, Math.random, q.word.id))
     setPicked(null)
@@ -96,7 +98,14 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
       </div>
       <div className="boss-figure">
         <BossArena bg="castle" color={look.color} />
-        <BossFigure hit={correct} look={look} />
+        <span key={lv} className={`arena-foe${moved ? ` enter-${moved}` : ''}`}>
+          <BossFigure hit={correct} look={look} />
+        </span>
+        {moved && picked === null && (
+          <span key={`b${lv}`} className={`arena-banner ${moved}`} aria-hidden="true">
+            {moved === 'up' ? `⬆ ${lv + 1}階` : `⬇ ${lv + 1}階`}
+          </span>
+        )}
       </div>
       <div className="boss-plate">
         <p className="boss-name">{look.name}</p>
