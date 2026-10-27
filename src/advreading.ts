@@ -11185,6 +11185,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-restaurant-booking',
+    title: 'E-mail: Your Reservation Is Confirmed',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Wong, Thank you for choosing Bella Vista Restaurant. This e-mail is to confirm your reservation for a party of twelve on Saturday, December 13, at 7:00 P.M. We have reserved our private room on the second floor, which has a beautiful view of the harbor.",
+      "As you requested, we will prepare our special holiday course for all guests. Please let us know by December 6 if any of your guests have food allergies or do not eat meat, so that our chef can prepare other dishes ( A ).",
+      "A deposit of 10,000 yen is required to keep the private room. You can pay it online through the link below or at the restaurant. If you need to cancel, please contact us at least three days before your visit. Otherwise, the deposit will not be ( B ).",
+      "Free parking is available behind the restaurant for up to five cars. We look forward to welcoming you and your guests. Warm regards, Marco Rossi, Restaurant Manager",
+    ],
+    ja: [
+      'ウォン様　ベラ・ヴィスタ・レストランをお選びいただき、ありがとうございます。12月13日（土）午後7時、12名様でのご予約を確認するメールです。港の美しいながめが見える2階の個室をご用意しました。',
+      'ご希望どおり、ゲストのみなさまに特別なホリデーコースをご用意します。料理長がほかの料理を用意できるよう、食物アレルギーのある方や肉を召し上がらない方がいらっしゃる場合は、12月6日までにお知らせください。',
+      '個室を確保するには、1万円の予約金が必要です。下のリンクからオンラインで、または店でおしはらいいただけます。キャンセルの場合は、ご来店の少なくとも3日前までにご連絡ください。そうでない場合、予約金はお返しできません。',
+      'レストランの裏に、5台まで無料でとめられる駐車場があります。みなさまのお越しを楽しみにお待ちしております。レストラン支配人　マルコ・ロッシ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['instead', 'instead of', 'rather of', 'in place'], answer: 0, why: '文の最後に1語で「そのかわりに」を表す副詞 instead。instead of・in place（of）はうしろに名詞が必要で、rather of という形はない。' },
+      { id: 'B', choices: ['returned', 'return', 'returning', 'to return'], answer: 0, why: 'will not be ＋過去分詞の受け身「返されない」なので returned。return・returning・to return は will not be のあとで受け身にならない。' },
+    ],
+    underline: {
+      phrase: 'deposit',
+      choices: ['money paid first to keep a reservation', 'a gift for the chef', 'a kind of dessert', 'a parking ticket'],
+      answer: 0,
+      why: 'deposit は「予約金・手付金」。個室を確保するために先にはらうお金のこと。',
+    },
+    order: {
+      words: ['so', 'that', 'our', 'chef', 'can', 'prepare'],
+      rest: 'other dishes instead',
+      answer: 'so that our chef can prepare',
+      ja: '料理長が～を用意できるように（so that ～ can ...「～が…できるように」）',
+    },
+    tf: [
+      { statement: '予約は12人での食事だ。', answer: true, why: '第1段落 a party of twelve。' },
+      { statement: 'アレルギーのことは、当日に知らせればよい。', answer: false, why: '第2段落 Please let us know by December 6。' },
+      { statement: '駐車場は10台までとめられる。', answer: false, why: '第4段落 for up to five cars。' },
+    ],
+    qa: [
+      { q: 'What happens if Ms. Wong cancels two days before the visit?', choices: ['The deposit will not be returned.', 'She must pay 20,000 yen more.', 'The restaurant will move the date.', 'She will get a free dinner.'], answer: 0, why: '第3段落 please contact us at least three days before your visit. Otherwise, the deposit will not be returned。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
