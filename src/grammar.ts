@@ -7530,7 +7530,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'The beach is within ___ distance of the hotel.', choices: ['walking', 'walk', 'walked'], answer: 0, why: 'within walking distance「歩いて行ける距離に」。distance の前は walking。' },
-      { sentence: 'Keep the medicine out of the children\'s reach, not within ___.', choices: ['reach', 'reaching', 'reached'], answer: 0, why: 'within reach「手のとどくところに」。within のあとは名詞 reach。' },
+      { sentence: 'Put the TV remote within ___ of Grandpa.', choices: ['reach', 'reaching', 'reached'], answer: 0, why: 'within reach「手のとどくところに」。within のあとは名詞 reach。' },
       { sentence: 'You can play games, but only within ___.', choices: ['limits', 'limited', 'limiting'], answer: 0, why: 'within limits「限度内で・ほどほどに」。limits と複数形にする。' },
     ],
   },

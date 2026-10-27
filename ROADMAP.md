@@ -2286,6 +2286,8 @@
 
 - [x] 文法：前置詞 within の熟語 within walking distance ／ within reach ／ within limits
 
+- [x] 文法 within の熟語：2問めの問題文を自然な文に直す
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
