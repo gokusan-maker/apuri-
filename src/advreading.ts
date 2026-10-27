@@ -9873,6 +9873,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-moon-illusion',
+    title: 'The Moon Illusion',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The moon often looks huge when it is rising, but much smaller when it is high in the sky. Many people think it is closer to Earth near the horizon. In fact, the distance hardly changes during one night, and the moon ( A ) the same size in photographs taken at both times.",
+      "Scientists call this the moon illusion, and it happens in our brains, not in the sky. When the moon is low, we see it next to trees and buildings. Our brains compare the moon with these familiar objects and decide that it must be very large.",
+      "Another idea is that our brains think of the sky as a flat dome. Objects near the horizon seem farther away than objects above our heads. If two things look the same size but one seems farther away, the brain decides that the farther one must be bigger. As a result, the low moon ( B ) larger.",
+      "You can test this yourself by looking at a big moon through a paper tube. Without the trees and buildings around it, the moon suddenly seems to shrink. It is a good reminder that what we see is not always what is really there.",
+    ],
+    ja: [
+      '月はのぼってくるときはとても大きく見えるのに、空高くにあるときはずっと小さく見えることが多い。地平線の近くでは月が地球に近いのだと考える人は多い。実は、ひと晩のあいだに距離はほとんど変わらず、どちらのときに写した写真でも、月は同じ大きさに写っている。',
+      '科学者はこれを「月の錯覚」とよび、それは空ではなく私たちの脳の中で起きている。月が低いとき、私たちは木や建物のとなりに月を見る。脳は月をこうした見なれた物とくらべて、月はとても大きいにちがいないと判断するのだ。',
+      'もう1つの考え方は、脳が空を平たい丸天井のように思っているというものだ。地平線の近くの物は、頭の上の物よりも遠くにあるように思える。2つの物が同じ大きさに見えても、一方がより遠くにあるように思えると、脳は遠いほうが大きいにちがいないと判断する。その結果、低い月は大きく見えるのだ。',
+      '大きな月を紙のつつを通して見れば、自分でためしてみることもできる。まわりの木や建物がなくなると、月は急にちぢんだように見える。私たちに見えているものがいつも本当にそこにあるものとはかぎらないと、思い出させてくれるよい例だ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['appears', 'appear', 'appearing', 'to appear'], answer: 0, why: '接続詞 and のあとの文の動詞。主語 the moon（三人称単数）なので appears。appear は主語と合わず、appearing・to appear だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['looks', 'look', 'looking', 'to look'], answer: 0, why: '主語 the low moon（三人称単数）に続く文の動詞なので looks（look ＋形容詞「～に見える」）。look は主語と合わず、looking・to look だけでは文の動詞にならない。' },
+    ],
+    underline: {
+      phrase: 'shrink',
+      choices: ['become smaller', 'become brighter', 'move faster', 'disappear completely'],
+      answer: 0,
+      why: 'shrink は「ちぢむ・小さくなる」。まわりにくらべる物がなくなると、大きく見えていた月が小さく見えるという流れ。',
+    },
+    order: {
+      words: ['what', 'we', 'see', 'is', 'not', 'always'],
+      rest: 'what is really there',
+      answer: 'what we see is not always',
+      ja: '私たちに見えているものは、いつも～とはかぎらない（not always「いつも～とはかぎらない」）',
+    },
+    tf: [
+      { statement: '地平線の近くにあるとき、月は実際に地球に近い。', answer: false, why: '第1段落 In fact, the distance hardly changes during one night。' },
+      { statement: '月の錯覚は、私たちの脳の中で起きている。', answer: true, why: '第2段落 it happens in our brains, not in the sky。' },
+      { statement: '紙のつつを通して見ると、大きな月はもっと大きく見える。', answer: false, why: '第4段落 the moon suddenly seems to shrink。小さく見える。' },
+    ],
+    qa: [
+      { q: 'According to the second paragraph, why does the low moon look big?', choices: ['Because the brain compares it with trees and buildings nearby.', 'Because it is closer to Earth.', 'Because the air makes it brighter.', 'Because photographs make it larger.'], answer: 0, why: '第2段落 Our brains compare the moon with these familiar objects and decide that it must be very large。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
