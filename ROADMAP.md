@@ -2153,6 +2153,8 @@
 
 - [x] 文法：前置詞の熟語⑲ on average ／ at best ／ on the whole
 
+- [x] 長文（共通テスト）：朝型と夜型（Morning Larks and Night Owls）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

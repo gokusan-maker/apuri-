@@ -10242,6 +10242,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-morning-people',
+    title: 'Morning Larks and Night Owls',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Some people wake up early full of energy, while others feel sleepy until noon but become lively at night. People of the first type are often called morning larks, and those of the second type are called night owls. Scientists say these differences are not just a matter of habit; they ( A ) partly decided by our genes.",
+      "Every person has a kind of clock inside the body. This clock tells us when to feel sleepy and when to feel awake. In morning larks, the clock runs a little early, and in night owls, it runs a little late. Most people are somewhere in between.",
+      "Our inner clock also changes with age. Young children usually wake up very early. During the teenage years, the clock moves later, so many high school students find it hard to get up in the morning. After about the age of twenty, it slowly moves back ( B ) again.",
+      "Knowing your type can be useful. If you are a night owl, you may not do your best work early in the morning. Planning important tasks for the time of day when you feel most awake can help you work and study better.",
+    ],
+    ja: [
+      '朝早く元気いっぱいに目をさます人もいれば、昼までねむいのに夜になると元気になる人もいる。前のタイプの人はよく「朝型（ヒバリ）」、あとのタイプの人は「夜型（フクロウ）」とよばれる。科学者によると、こうしたちがいはただの習慣の問題ではなく、一部は遺伝子によって決まっているという。',
+      'だれにでも、体の中に時計のようなものがある。この時計が、いつねむくなり、いつ目がさえるかを教えてくれる。朝型の人ではこの時計が少し早く進み、夜型の人では少しおそく進む。たいていの人は、その中間のどこかにいる。',
+      '体内時計は年れいによっても変わる。小さな子どもはたいてい、とても早く目をさます。10代のあいだに時計はおそいほうへずれるので、多くの高校生は朝起きるのがつらいと感じる。20才ごろをすぎると、時計はゆっくりとまた早いほうへもどっていく。',
+      '自分のタイプを知ることは役に立つ。夜型なら、朝早くにはいちばんよい仕事ができないかもしれない。いちばん目がさえている時間帯に大事な作業を予定すれば、よりよく働いたり勉強したりできるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['are', 'is', 'being', 'to be'], answer: 0, why: 'セミコロンのあとの文の動詞。主語 they（＝these differences、複数）なので受け身 are decided。is は複数の主語と合わず、being・to be だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['earlier', 'early than', 'earliest of', 'more early than'], answer: 0, why: 'moves back earlier「（また）早いほうへもどる」。比較級は earlier。early than・more early than は比べる相手がなく形もおかしい、earliest of はうしろに名詞がいる。' },
+    ],
+    underline: {
+      phrase: 'lively',
+      choices: ['full of energy', 'very quiet', 'tired and sleepy', 'worried'],
+      answer: 0,
+      why: 'lively は「元気な・生き生きした」（-ly だが形容詞）。become lively at night で「夜に元気になる」。',
+    },
+    order: {
+      words: ['find', 'it', 'hard', 'to', 'get', 'up'],
+      rest: 'in the morning',
+      answer: 'find it hard to get up',
+      ja: '起きるのがつらいと感じる（find it ＋形容詞＋to ～「～するのは…だと思う」）',
+    },
+    tf: [
+      { statement: '朝型か夜型かは、習慣だけで決まる。', answer: false, why: '第1段落 these differences are not just a matter of habit; they are partly decided by our genes。' },
+      { statement: '10代になると、体内時計はおそいほうへずれる。', answer: true, why: '第3段落 During the teenage years, the clock moves later。' },
+      { statement: 'たいていの人は、はっきり朝型か夜型のどちらかだ。', answer: false, why: '第2段落 Most people are somewhere in between。' },
+    ],
+    qa: [
+      { q: 'What does the writer suggest at the end?', choices: ['Plan important tasks for the time you feel most awake.', 'Always get up early in the morning.', 'Sleep only at night.', 'Change your genes.'], answer: 0, why: '第4段落 Planning important tasks for the time of day when you feel most awake can help you work and study better。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
