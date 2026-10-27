@@ -9040,6 +9040,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-summer-dress',
+    title: 'Notice: Summer Dress Code',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees: To save energy and keep everyone comfortable during the hot months, Greenfield Insurance will follow a summer dress code from June 1 to September 30. During this period, the air conditioning in the office will be set to 28 degrees.",
+      "Under the summer dress code, employees do not need to wear jackets or ties. Short-sleeved shirts and light trousers or skirts are acceptable. However, T-shirts, shorts, and sandals are still not ( A ) in the office.",
+      "Please note that the summer dress code does not apply when you meet clients. If you have a meeting with a client, either at our office or at theirs, please wear a jacket. Spare jackets are available in the lockers on each floor for staff who need one at short ( B ).",
+      "We hope this will help you stay cool and work comfortably this summer. If you have any questions, please contact the General Affairs Department.",
+    ],
+    ja: [
+      '全社員のみなさんへ：暑い時期に省エネをし、みなさんが快適に過ごせるよう、グリーンフィールド保険は6月1日から9月30日まで夏の服装規定を取り入れます。この期間、事務所の冷房は28度に設定されます。',
+      '夏の服装規定では、社員は上着やネクタイを身につける必要はありません。半そでのシャツや軽いズボン・スカートでかまいません。しかし、Tシャツ、半ズボン、サンダルは、事務所では今までどおり認められません。',
+      '夏の服装規定は、お客様と会うときには当てはまらないことにご注意ください。当社でも先方でも、お客様との打ち合わせがある場合は、上着を着てください。急に上着が必要になった社員のために、予備の上着が各階のロッカーに用意してあります。',
+      'これによって、この夏、みなさんがすずしく快適に仕事ができることを願っています。ご質問があれば、総務部までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['allowed', 'allow', 'allowing', 'to allow'], answer: 0, why: 'T シャツなどは「認められる」側なので、be ＋ 過去分詞の受け身 are not allowed。' },
+      { id: 'B', choices: ['notice', 'noticing', 'noticed', 'to notice'], answer: 0, why: 'at short notice「急に・直前に」。形容詞 short のあとは名詞 notice。' },
+    ],
+    tf: [
+      { statement: '夏の服装規定の間、ネクタイをしなくてよい。', answer: true, why: '第2段落 employees do not need to wear jackets or ties。' },
+      { statement: '夏の服装規定の間は、サンダルで出勤してよい。', answer: false, why: '第2段落 T-shirts, shorts, and sandals are still not allowed。' },
+      { statement: 'お客様と会うときは、上着を着る必要がある。', answer: true, why: '第3段落 If you have a meeting with a client, … please wear a jacket。' },
+    ],
+    qa: [
+      { q: 'What temperature will the air conditioning be set to?', choices: ['28 degrees.', '25 degrees.', '30 degrees.', '18 degrees.'], answer: 0, why: '第1段落 the air conditioning … will be set to 28 degrees。' },
+      { q: 'Where can staff find spare jackets?', choices: ['In the lockers on each floor.', 'At the General Affairs Department only.', 'At a client\'s office.', 'In the reception area.'], answer: 0, why: '第3段落 Spare jackets are available in the lockers on each floor。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
