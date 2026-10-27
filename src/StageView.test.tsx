@@ -1,6 +1,6 @@
 import { passageQs } from './readingboss'
 import { LONG_PASSAGES } from './longreading'
-import { fireEvent, render, screen, within } from '@testing-library/react'
+import { cleanup, fireEvent, render, screen, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
@@ -582,6 +582,17 @@ it('ボスの城の問題の階：階のボスののこりHPを数字でも出�
     fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
   }
   expect(document.querySelector('.bfloor .boss-ko')).not.toBeNull() // 4問正解でボスをたおして K.O.!
+})
+
+it('ボスの城のミックスの階では、問題の種類の札（単語・文法・読解）が出る', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const mix = bossFloorQs('中2', 3)
+  render(<BossFloor title="t" qs={mix} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.bfloor .arena-qtag')!.textContent).toMatch(/単語|文法|読解/)
+  cleanup()
+  render(<BossFloor title="t" qs={bossFloorQs('中2', 1)} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.bfloor .arena-qtag')).toBeNull() // 文法だけの階では出さない
 })
 
 it('ボスの城の問題の階：最後の問題で「🔔 ラスト1問！」', async () => {

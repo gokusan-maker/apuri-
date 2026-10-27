@@ -150,6 +150,8 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       </p>
       {/* 最後の問題：ラスト1問の合図 */}
       {i === qs.length - 1 && picked === null && <p className="bfloor-last">🔔 ラスト1問！</p>}
+      {/* ミックスの階（単語・文法・読解がまざる）では、問題の種類の札を出す */}
+      {new Set(qs.map((x) => x.team)).size > 1 && <p className="arena-qtag">{q.team === 'grammar' ? '📐 文法' : q.team === 'reading' ? '📖 読解' : '🔤 単語'}</p>}
       <p className={`bfloor-q team-${q.team}`}>{q.word.en}</p>
       {q.hint && picked === null && !hint && (
         <button className="hint-5050" onClick={() => setHint(true)}>
