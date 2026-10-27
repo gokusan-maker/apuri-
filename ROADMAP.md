@@ -2294,6 +2294,8 @@
 
 - [x] 文法：前置詞 against の熟語 against the law ／ against the rules ／ against one's will
 
+- [x] 文法 against の熟語：誤答 lawyer（文としては成り立つ）を lawfully に直す
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

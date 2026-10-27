@@ -7546,7 +7546,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He had to join the team against his will.', ja: '彼は気がすすまないのに、チームに入らなければならなかった。' },
     ],
     questions: [
-      { sentence: 'Smoking here is against the ___.', choices: ['law', 'lawful', 'lawyer'], answer: 0, why: 'against the law「法律違反で」。the のあとは名詞 law。' },
+      { sentence: 'Smoking here is against the ___.', choices: ['law', 'lawful', 'lawfully'], answer: 0, why: 'against the law「法律違反で」。the のあとは名詞 law。' },
       { sentence: 'Touching the ball with your hands is against the ___ in soccer.', choices: ['rules', 'rule of', 'ruled'], answer: 0, why: 'against the rules「規則違反で」。the rules と複数形にする。' },
       { sentence: 'She was sent to the city against her ___.', choices: ['will', 'willing', 'willingly'], answer: 0, why: 'against one’s will「意志に反して」。her のあとは名詞 will。' },
     ],

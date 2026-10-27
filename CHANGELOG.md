@@ -2636,3 +2636,4 @@
 - 2026-10-27: 長文読解（共通テスト）に「水たまりはどこへ行く？」を追加
 - 2026-10-27: 闘技場の結果に、単語・文法・読解それぞれの正解数を表示
 - 2026-10-27: 文法に「前置詞 against の熟語 against the law ／ against the rules ／ against one’s will」の単元を追加
+- 2026-10-27: 文法 against の熟語の誤答 lawyer を lawfully に修正
