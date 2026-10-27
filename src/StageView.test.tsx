@@ -519,3 +519,29 @@ it('ボスの城の問題の階も、ボス戦と同じ暗いゲーム画面（b
   render(<BossFloor title="t" qs={bossFloorQs('中1', 1)} onDone={() => {}} onBack={() => {}} />)
   expect(document.querySelector('.card.bfloor')!.classList.contains('battle-v2')).toBe(true)
 })
+
+it('城はどの階にもボスがいる：1〜4階は階のボス（レベルのボスとは別）。正解するとHPが減り、クリアでたおせる', async () => {
+  const { floorBossLook, LEVEL_BOSS_LOOK, bossFloorQs } = await import('./bosscastle')
+  const { BOSSES } = await import('./boss')
+  const { COURSES } = await import('./wordcourse')
+  for (const c of COURSES) {
+    const names = [0, 1, 2, 3].map((f) => floorBossLook(c.id, f).name)
+    expect(new Set(names).size).toBe(4)
+    expect(names).not.toContain(BOSSES[LEVEL_BOSS_LOOK[c.id]].name)
+  }
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const castle = screen.getByRole('region', { name: '中1のボスの城' })
+  expect(within(castle).getByText(new RegExp(`👾 ${floorBossLook('中1', 0).name}・10問`))).toBeInTheDocument()
+  const { BossFloor } = await import('./BossFloorView')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} boss={floorBossLook('中1', 1)} onDone={() => {}} onBack={() => {}} />)
+  const hp = () => screen.getByRole('progressbar', { name: '階のボスのHP' })
+  expect(hp()).toHaveAttribute('aria-valuenow', '4')
+  for (const q of qs) {
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(hp()).toHaveAttribute('aria-valuenow', '0')
+  expect(screen.getByText(`${floorBossLook('中1', 1).name}をたおした！`)).toBeInTheDocument()
+})

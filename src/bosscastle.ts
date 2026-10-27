@@ -1,6 +1,6 @@
 // ボスの城：15レベル（中1〜東大・TOEIC・TOEFL/IELTS・ネイティブ）のボスが下から順にいる。
-// ボスごとに5階：1〜4階は単語・文法・読解・ミックスの問題（単語は10問・8問正解、ほかは5問・4問正解で次へ）、5階でそのレベルのボスと戦う
-import { teamBossQuestions, type TeamQ } from './boss'
+// ボスごとに5階：どの階にもボスがいる。1〜4階は「階のボス」が守る単語・文法・読解・ミックスの問題（単語は10問・8問正解、ほかは5問・4問正解で次へ）、5階でそのレベルのボスと戦う
+import { BOSSES, teamBossQuestions, type BossLook, type TeamQ } from './boss'
 import { levelUnits } from './grammarcastle'
 import { passagesFor, type ReadLevel } from './readlevel'
 import type { LongPassage } from './longreading'
@@ -128,6 +128,14 @@ export function saveBossLevel(id: CourseId): void {
   } catch {
     /* 保存できなくても動く */
   }
+}
+
+// どの階にもボスがいる（オーナーの要望）：1〜4階は「階のボス」。そのレベルのボスとは別のボスが、階ごとに順番に守っている
+export function floorBossLook(course: CourseId, floor: number): BossLook {
+  const main = LEVEL_BOSS_LOOK[course]
+  const others = (Object.keys(BOSSES) as Level[]).filter((l) => l !== main)
+  const ci = COURSES.findIndex((c) => c.id === course)
+  return BOSSES[others[(Math.max(0, ci) * (BC_FLOORS - 1) + floor) % others.length]]
 }
 
 // 問題の階をクリアしたときの、上の階で待つボスのひとこと（floor：クリアした階 0〜3）

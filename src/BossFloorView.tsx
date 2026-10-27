@@ -1,16 +1,34 @@
 import { useState } from 'react'
-import type { TeamQ } from './boss'
+import type { BossLook, TeamQ } from './boss'
+import { BossArena } from './BossArenaView'
+import { BossFigure } from './BossView'
 import { bcPassOf } from './bosscastle'
 import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
-export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, best }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; best?: number }) {
+export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, best, boss }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; best?: number; boss?: BossLook }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [hint, setHint] = useState(false)
   const q = qs[i]
   const pass = bcPassOf(qs.length)
+  // 階のボス：クリアに必要な正解数がそのままボスのHP。正解するたびにダメージ
+  const bossHp = Math.max(0, pass - score)
+  const bossView = boss && (
+    <div className={`bfloor-boss${bossHp === 0 ? ' down' : ''}`}>
+      <div className="boss-figure">
+        <BossArena bg="castle" color={boss.color} />
+        <BossFigure hit={picked !== null && picked === q?.answer} look={boss} />
+      </div>
+      <div className="boss-plate">
+        <p className="boss-name">{bossHp === 0 ? `${boss.name}をたおした！` : `階のボス ${boss.name}`}</p>
+        <div className="boss-hp" role="progressbar" aria-label="階のボスのHP" aria-valuemin={0} aria-valuemax={pass} aria-valuenow={bossHp}>
+          <div className={`boss-hp-fill${bossHp / pass <= 0.25 ? ' low' : bossHp / pass <= 0.5 ? ' mid' : ''}`} style={{ width: `${(bossHp / pass) * 100}%` }} />
+        </div>
+      </div>
+    </div>
+  )
   const retryBtn = onRetry && (
     <button className="good next-unit-btn bfloor-retry" onClick={onRetry}>
       🔁 再チャレンジ（{qs.length}問）
@@ -19,6 +37,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   if (!q)
     return (
       <section className="card bfloor battle-v2" aria-label={title}>
+        {bossView}
         <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
           {score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
@@ -38,6 +57,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         ← 城にもどる
       </button>
       <p className="bfloor-title">{title}</p>
+      {bossView}
       <p className="bfloor-count">
         {i + 1} / {qs.length}
       </p>
