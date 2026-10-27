@@ -710,3 +710,24 @@ it('闘技場の塔に、いままでの最高の階の🚩が出る', async () 
   const flag = document.querySelector('.af-best')!
   expect(flag.closest('.arena-floor')!.textContent).toContain('6階')
 })
+
+it('闘技場：3連続正解から、いまの階が燃える（🔥）', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  const { levelUnits } = await import('./grammarcastle')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  const pickRight = () => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 6).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
+    const g = COURSES.slice(0, 6).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === (w ? w.ja : g!.choices[g!.answer]))!)
+  }
+  for (let k = 0; k < 2; k++) {
+    pickRight()
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(document.querySelector('.arena-floor.on-fire')).toBeNull()
+  pickRight()
+  expect(document.querySelector('.arena-floor.here.on-fire')).not.toBeNull()
+})

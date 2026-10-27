@@ -127,11 +127,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
                 {f > ARENA_TOP ? '☁️' : '🌱'}
               </div>
             ) : (
-              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
+              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
                 <span className="af-num">{f + 1}階</span>
                 <span className="af-lv">{arenaCourse(f).label}</span>
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
-                {f === shown && <span className="af-me" aria-hidden="true">🦸</span>}
+                {f === shown && <span className="af-me" aria-hidden="true">{streak >= 3 ? '🔥🦸' : '🦸'}</span>}
               </div>
             ),
           )}
