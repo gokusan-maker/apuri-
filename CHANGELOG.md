@@ -2509,3 +2509,4 @@
 - 2026-10-27: 文法に「群前置詞⑧ in honor of ／ in need of ／ for lack of」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「Free Language Classes for Staff」（社員向け無料語学クラス）を追加
 - 2026-10-27: ボス戦で、ボスの HP が4分の1以下になるとボスがふらふらする演出を追加
+- 2026-10-27: 文法に「前置詞の熟語 by chance ／ for free ／ at once（偶然・無料で・すぐに）」の単元を追加

@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'prep-idiom-chance': { wrong: 'I met him by a chance yesterday.', right: 'I met him by chance yesterday.', why: 'by chance「偶然に」。a はつけない。' },
   'group-prep-honor': { wrong: 'The car is in needed of repair.', right: 'The car is in need of repair.', why: 'in need of ～。in のあとは名詞 need。' },
   'group-prep-result': { wrong: 'As a result the rain, the game was canceled.', right: 'As a result of the rain, the game was canceled.', why: 'as a result of ～。of をわすれない。' },
   'group-prep-account': { wrong: 'The event was canceled on account the rain.', right: 'The event was canceled on account of the rain.', why: 'on account of ～。of をわすれない。' },
