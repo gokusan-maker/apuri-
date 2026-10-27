@@ -7,7 +7,7 @@ import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
 // まちがえると自分のライフ（❤️）がへり、0になったら負け（オーナーの要望）
-export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, perfectBonus = 0, best, boss }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; perfectBonus?: number; best?: number; boss?: BossLook }) {
+export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, perfectBonus = 0, best, boss, round = 0 }: { title: string; round?: number; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; perfectBonus?: number; best?: number; boss?: BossLook }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
@@ -101,7 +101,10 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <button className="list-link" onClick={onBack}>
         ← 城にもどる
       </button>
-      <p className="bfloor-title">{title}</p>
+      <p className="bfloor-title">
+        {title}
+        {round > 0 && <span className="bfloor-round">🔁 {round + 1}回目</span>}
+      </p>
       {/* はじめの問題の前だけ、これまでの最高を出す（目標にする） */}
       {best !== undefined && i === 0 && picked === null && (
         <p className="bfloor-prev-best">

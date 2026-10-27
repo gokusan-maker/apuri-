@@ -362,6 +362,7 @@ it('ボス部屋は城：地図はなく、中1〜ネイティブの15レベル�
   // 結果のあと、すぐに同じ階をもう一度（同じ単元の同じ10問。順番は変わる）
   fireEvent.click(screen.getByText('🔁 再チャレンジ（10問）'))
   expect(screen.getByText('1 / 10')).toBeInTheDocument()
+  expect(screen.getByText('🔁 2回目')).toBeInTheDocument()
   const again: string[] = []
   for (let n = 0; n < 10; n++) {
     again.push(document.querySelector('.bfloor-q')!.textContent!)

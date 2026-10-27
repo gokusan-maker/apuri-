@@ -602,6 +602,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
         onRetry={() => setBcFloor((cur) => (cur ? { ...cur, qs: retryFloorQs(cur.qs), first: !loadBcClears().includes(cur.id), round: (cur.round ?? 0) + 1 } : cur))}
         reward={bcFloor.first && onRankBonus ? BC_FLOOR_COINS : 0}
         perfectBonus={onRankBonus ? BC_PERFECT_COINS : 0}
+        round={bcFloor.round ?? 0}
         best={loadBcBest()[bcFloor.id]}
         boss={floorBossLook(bcFloor.course, bcFloor.floor)}
         onDone={(score) => {
