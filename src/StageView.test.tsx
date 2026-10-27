@@ -961,7 +961,9 @@ it('闘技場の結果に、いちばん長い連続正解を出す', async () =
     fireEvent.click(screen.getByText(/^次へ/))
   }
   fireEvent.click(screen.getByText('🏁 終了'))
-  expect(screen.getByText('🔥 いちばん長い連続正解：2問')).toBeInTheDocument()
+  expect(screen.getByText('🔥 いちばん長い連続正解：2問（🆕 最高記録！）')).toBeInTheDocument()
+  const { loadArenaBestStreak } = await import('./arena')
+  expect(loadArenaBestStreak()).toBe(2) // 連続正解の最高記録は保存される
   fireEvent.click(screen.getByText('⚔ 続きから戦う'))
   arenaPick(true)
   fireEvent.click(screen.getByText('🏁 終了'))

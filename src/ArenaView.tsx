@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaEndlessTicket, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaEndlessTicket, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, loadArenaBestStreak, recordArenaBest, recordArenaBestStreak } from './arena'
 import { quizXp, type Source } from './monster'
 import { COURSES } from './wordcourse'
 import { playCorrect, playWrong } from './sound'
@@ -41,7 +41,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [goalJust, setGoalJust] = useState(false) // この答えで目標に着いた
   const goalAt = base + GOAL * (goals + 1) // いまの目標の階（0から）
   const [climbed, setClimbed] = useState<number | null>(null) // この答えで「きょう10階ごと」に着いた
-  const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
+  const [ended, setEnded] = useState<{ newBest: boolean; best: number; streakBest: number; newStreak: boolean } | null>(null)
   const [prevBest, setPrevBest] = useState(loadArenaBest)
   // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
   const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
@@ -131,7 +131,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     }
     const best = Math.max(top, prevBest ?? 0)
     recordArenaBest(top)
-    setEnded({ newBest: prevBest === null || top > prevBest, best })
+    const streakBest = loadArenaBestStreak()
+    const newStreak = maxStreak >= 2 && recordArenaBestStreak(maxStreak)
+    setEnded({ newBest: prevBest === null || top > prevBest, best, streakBest: Math.max(streakBest, maxStreak), newStreak })
     setPrevBest(best)
   }
 
@@ -170,7 +172,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               .join('　')}
           </p>
         )}
-        {maxStreak >= 2 && <p className="arena-max-streak">🔥 いちばん長い連続正解：{maxStreak}問</p>}
+        {maxStreak >= 2 && (
+          <p className="arena-max-streak">
+            🔥 いちばん長い連続正解：{maxStreak}問{ended.newStreak ? '（🆕 最高記録！）' : `（最高 ${ended.streakBest}問）`}
+          </p>
+        )}
         {guards > 0 && <p className="arena-max-streak">🛡 盾がまもった：{guards}回</p>}
         {missed.length > 0 && (
           <div className="arena-missed" aria-label="まちがえた問題">

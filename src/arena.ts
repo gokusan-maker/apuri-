@@ -165,3 +165,23 @@ export function recordArenaBest(f: number): boolean {
   }
   return true
 }
+
+// 連続正解の最高記録（何回の挑戦をまたいでものこる）
+const STREAK_KEY = 'eitan:arena-best-streak'
+export function loadArenaBestStreak(): number {
+  try {
+    return readInt(STREAK_KEY) ?? 0
+  } catch {
+    return 0
+  }
+}
+// 更新したら true
+export function recordArenaBestStreak(n: number): boolean {
+  if (n <= loadArenaBestStreak()) return false
+  try {
+    localStorage.setItem(STREAK_KEY, String(Math.floor(n)))
+  } catch {
+    /* 保存できなくても動く */
+  }
+  return true
+}
