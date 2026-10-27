@@ -560,6 +560,18 @@ it('ボスの城の問題の階：まちがえると階のボスがこうげき�
   expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
 })
 
+it('ボスの城の問題の階の結果に、のこりライフを出す', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  qs.forEach((q, k) => {
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => (k === 0 ? b.textContent !== q.choices[q.answer] : b.textContent === q.choices[q.answer]))!)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  })
+  expect(screen.getByLabelText('のこりライフ 1 / 2')).toHaveTextContent('のこりライフ ❤️🤍')
+})
+
 it('ボスの城の問題の階：全問正解でパーフェクト、前の最高より上なら自己ベスト更新', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')

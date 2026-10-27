@@ -63,6 +63,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
           {dead ? `💀 ライフがなくなった… ${score}/${qs.length}問正解` : score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
+        {!dead && (
+          <p className="bfloor-life-left" aria-label={`のこりライフ ${lives} / ${maxLives}`}>
+            のこりライフ {'❤️'.repeat(lives)}
+            {'🤍'.repeat(maxLives - lives)}
+          </p>
+        )}
         {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！</p>}
         {best !== undefined && score > best && <p className="bfloor-best">🏅 自己ベスト更新！（前回まで {best}問）</p>}
         {score >= pass && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
