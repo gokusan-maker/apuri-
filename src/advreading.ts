@@ -8786,6 +8786,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-brain-freeze',
+    title: 'The Science of Brain Freeze',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Imagine eating shaved ice quickly on a hot summer day. Suddenly, you feel a sharp pain in your forehead. This is often called \"brain freeze,\" although your brain does not actually freeze. The pain usually disappears ( A ) less than a minute.",
+      "Brain freeze happens when something very cold touches the roof of the mouth. The cold causes the blood vessels there to become narrow, and then they quickly become wide again as the area warms up. This sudden change is noticed by a large nerve in the face, which sends a pain signal to the brain.",
+      "Interestingly, the brain cannot tell exactly where the signal came from. As a result, we feel the pain in the forehead instead of in the mouth. This kind of pain, felt in a place ( B ) from its real cause, is known as \"referred pain.\"",
+      "The good news is that brain freeze is easy to avoid. Eating cold food slowly gives the mouth time to adjust. If it does happen, pressing your tongue against the roof of your mouth can help warm the area. Some researchers even study brain freeze to learn more about other kinds of headaches.",
+    ],
+    ja: [
+      '暑い夏の日に、かき氷を急いで食べているところを想像してみよう。とつぜん、おでこにするどい痛みを感じる。これはよく「ブレイン・フリーズ」とよばれるが、実際に脳がこおるわけではない。痛みはたいてい1分もしないうちに消える。',
+      'ブレイン・フリーズは、とても冷たいものが口の上の部分（上あご）にふれたときに起こる。冷たさによってそこの血管が細くなり、その部分があたたまるにつれて、血管はまたすぐに太くなる。この急な変化を顔にある大きな神経が感じとり、脳に痛みの信号を送る。',
+      '興味深いことに、脳はその信号がどこから来たのかを正確に知ることができない。その結果、私たちは口の中ではなくおでこに痛みを感じる。このように、本当の原因から離れた場所に感じる痛みは「関連痛」として知られている。',
+      'よい知らせは、ブレイン・フリーズは簡単にさけられるということだ。冷たいものをゆっくり食べれば、口が慣れる時間ができる。もし起きてしまったら、舌を上あごにおしあてると、その部分をあたためるのに役立つ。ほかの種類の頭痛についてもっと知るために、ブレイン・フリーズを研究している研究者さえいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'at', 'on', 'since'], answer: 0, why: 'in less than a minute「1分もたたないうちに」。時間の経過を表す in。at・on は時の一点・日に使い、since は「～以来」。' },
+      { id: 'B', choices: ['far', 'farther than', 'farness', 'by far'], answer: 0, why: 'far from ～「～から遠い・離れた」。a place far from its real cause で「本当の原因から離れた場所」。' },
+    ],
+    underline: {
+      phrase: 'adjust',
+      choices: ['get used to a new condition', 'become very cold', 'stop working', 'eat faster'],
+      answer: 0,
+      why: 'adjust は「（新しい状況に）慣れる・適応する」。',
+    },
+    order: {
+      words: ['cannot', 'tell', 'exactly', 'where', 'the', 'signal', 'came', 'from'],
+      rest: '',
+      answer: 'cannot tell exactly where the signal came from',
+      ja: '信号がどこから来たのか正確にはわからない（tell ＋ 間接疑問）',
+    },
+    tf: [
+      { statement: 'ブレイン・フリーズのとき、実際に脳がこおっている。', answer: false, why: '第1段落 your brain does not actually freeze。' },
+      { statement: '冷たいものが上あごにふれると、そこの血管がいったん細くなる。', answer: true, why: '第2段落 The cold causes the blood vessels there to become narrow。' },
+      { statement: '冷たいものをゆっくり食べると、ブレイン・フリーズを防ぎやすい。', answer: true, why: '第4段落 Eating cold food slowly gives the mouth time to adjust。' },
+    ],
+    qa: [
+      { q: 'Why do we feel the pain in the forehead?', choices: ['The brain cannot tell exactly where the signal came from.', 'The forehead becomes very cold.', 'The blood vessels in the forehead freeze.', 'We eat too much sugar.'], answer: 0, why: '第3段落 the brain cannot tell exactly where the signal came from. As a result, we feel the pain in the forehead。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

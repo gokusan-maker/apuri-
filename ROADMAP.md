@@ -1905,6 +1905,8 @@
 
 - [x] 文法：形容詞＋前置詞⑦（be harmful to ／ be related to ／ be grateful for）
 
+- [x] 長文（共通テスト）：評論「The Science of Brain Freeze」（かき氷の頭痛）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

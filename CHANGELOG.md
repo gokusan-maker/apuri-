@@ -2443,3 +2443,4 @@
 - 2026-10-27: TOEIC の長文に、お知らせ「New Bicycle Parking」（新しい自転車置き場）を追加
 - 2026-10-27: 闘技場で、3連続正解ごとに2階ジャンプ（🚀）するように
 - 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑦（be harmful to ／ be related to ／ be grateful for）」の単元を追加
+- 2026-10-27: 高3（共通テスト）の長文に、評論「The Science of Brain Freeze」（冷たいものを食べたときの頭痛のしくみ）を追加
