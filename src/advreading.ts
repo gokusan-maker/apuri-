@@ -10488,6 +10488,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-paper-cut',
+    title: 'Why Paper Cuts Hurt So Much',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A paper cut is tiny, and it usually does not even bleed much. Yet many people say it hurts more than a much bigger wound. Why should such a small cut be so painful? There are several reasons, and most of them ( A ) to do with where paper cuts happen.",
+      "First, we usually cut our fingers, and our fingertips have far more nerve endings than most other parts of the body. This makes them very good at feeling things, which is useful when we touch and hold objects. Unfortunately, it also means they feel pain very strongly.",
+      "Second, the edge of a sheet of paper is not as smooth as it looks. Under a microscope, it is rough, like a tiny saw. Instead of making a clean cut, it tears the skin, ( B ) more damage to the nerves.",
+      "Finally, a paper cut is usually shallow, so it does not bleed enough to form a thick covering over the wound. The nerves stay open to the air, and every time we use the finger, the cut opens again. Covering it with a bandage can help it heal faster and hurt less.",
+    ],
+    ja: [
+      '紙で指を切った傷は小さく、たいていはあまり血も出ない。それなのに、もっと大きな傷よりいたいと言う人は多い。なぜそんなに小さな傷がそれほどいたいのだろうか。理由はいくつかあり、そのほとんどは、紙で切る場所に関係している。',
+      'まず、私たちが切るのはたいてい指で、指先には体のほかのほとんどの部分よりもずっと多くの神経の先がある。そのため指先は物を感じるのがとても得意で、物にさわったりつかんだりするときに役に立つ。あいにく、それは指先がいたみもとても強く感じるということでもある。',
+      '次に、紙のふちは見た目ほどなめらかではない。けんび鏡で見ると、小さなのこぎりのようにざらざらしている。きれいに切るのではなく皮ふをひきさくので、神経をより多くきずつけてしまう。',
+      '最後に、紙で切った傷はたいてい浅いので、傷の上に厚いかさぶたのおおいができるほど血が出ない。神経は空気にさらされたままになり、指を使うたびに傷がまた開いてしまう。ばんそうこうでおおうと、早く治り、いたみもへる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['have', 'has', 'having', 'to have'], answer: 0, why: '主語 most of them（複数）に続く文の動詞なので have（have to do with ～「～と関係がある」）。has は単数の主語の形で、having・to have だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['causing', 'causes', 'caused', 'to causing'], answer: 0, why: 'コンマのあとに分詞構文 causing ～「（そして）～を引き起こす」。causes を置くと接続詞なしで動詞が2つ並ぶ。caused（受け身の意味）では目的語 more damage と合わず、to causing は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'shallow',
+      choices: ['not deep', 'very long', 'very wide', 'dirty'],
+      answer: 0,
+      why: 'shallow は「浅い」（⇔ deep「深い」）。浅いので血があまり出ないという流れ。',
+    },
+    order: {
+      words: ['the', 'edge', 'of', 'a', 'sheet', 'of', 'paper'],
+      rest: 'is not as smooth as it looks',
+      answer: 'the edge of a sheet of paper',
+      ja: '紙1まいのふち（a sheet of paper「紙1まい」）',
+    },
+    tf: [
+      { statement: '指先には、体のほかの部分より多くの神経の先がある。', answer: true, why: '第2段落 our fingertips have far more nerve endings than most other parts of the body。' },
+      { statement: '紙のふちは、けんび鏡で見るとなめらかだ。', answer: false, why: '第3段落 Under a microscope, it is rough, like a tiny saw。' },
+      { statement: '紙で切った傷は、ばんそうこうでおおわないほうが早く治る。', answer: false, why: '第4段落 Covering it with a bandage can help it heal faster。' },
+    ],
+    qa: [
+      { q: 'Why does a paper cut keep hurting when we use the finger?', choices: ['Because the cut opens again each time.', 'Because paper has poison in it.', 'Because the cut is very deep.', 'Because it bleeds too much.'], answer: 0, why: '第4段落 every time we use the finger, the cut opens again。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
