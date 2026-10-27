@@ -29,6 +29,13 @@ const TITLES: [number, string][] = [
   [0, '🌱 見習い'],
 ]
 export const arenaTitle = (lv: number): string => TITLES.find(([min]) => clamp(lv) >= min)![1]
+// 塔の空の色：下の階は青空、上へ行くほど夕焼け→星空（0〜14）
+export function arenaSky(lv: number): [string, string] {
+  const t = clamp(lv) / ARENA_TOP
+  if (t < 0.34) return ['#0ea5e9', '#1e3a8a']
+  if (t < 0.67) return ['#f97316', '#7c2d12']
+  return ['#4c1d95', '#020617']
+}
 // その階から始まる称号のアイコン（塔の階に小さく出す。1階の見習いは出さない）
 export function arenaTitleIconAt(lv: number): string | null {
   const t = TITLES.find(([min]) => min === lv && min > 0)

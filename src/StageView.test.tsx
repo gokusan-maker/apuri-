@@ -781,3 +781,13 @@ it('闘技場：3回続けてまちがえると応援が出る', async () => {
   miss()
   expect(screen.getByText('💪 ドンマイ！ 1問ずつ取りもどそう')).toBeInTheDocument()
 })
+
+it('闘技場の塔の空は、下の階は青空・上の階は星空', async () => {
+  const { arenaSky, ARENA_TOP } = await import('./arena')
+  expect(arenaSky(0)[0]).toBe('#0ea5e9')
+  expect(arenaSky(7)[0]).toBe('#f97316')
+  expect(arenaSky(ARENA_TOP)[0]).toBe('#4c1d95')
+  const { Arena } = await import('./ArenaView')
+  render(<Arena start={ARENA_TOP} onExit={() => {}} />)
+  expect((document.querySelector('.arena-tower') as HTMLElement).style.getPropertyValue('--sky1')).toBe('#4c1d95')
+})

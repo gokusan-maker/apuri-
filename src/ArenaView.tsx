@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -137,7 +137,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
         <span>{streak >= 2 ? `🔥${streak}連続` : `🏟 ${count}問め`}</span>
       </div>
       {/* 塔の階：いまの階を中心に上下2階ずつ。答えるたびに上下に動く */}
-      <div className="arena-tower" role="progressbar" aria-label="闘技場の階" aria-valuemin={1} aria-valuemax={ARENA_TOP + 1} aria-valuenow={shown + 1}>
+      <div className="arena-tower" style={{ '--sky1': arenaSky(shown)[0], '--sky2': arenaSky(shown)[1] } as CSSProperties} role="progressbar" aria-label="闘技場の階" aria-valuemin={1} aria-valuemax={ARENA_TOP + 1} aria-valuenow={shown + 1}>
         <div key={`${shown}-${count}`} className={`arena-shaft${dir ? ` move-${dir}` : ''}${jump ? ' jump' : ''}`}>
           {Array.from({ length: SHAFT * 2 + 1 }, (_, k) => shown + SHAFT - k).map((f) =>
             f < 0 || f > ARENA_TOP ? (
