@@ -2284,6 +2284,8 @@
 
 - [x] ボスの城の問題の階：まちがえたら「正解は「～」」を出す
 
+- [x] 文法：前置詞 within の熟語 within walking distance ／ within reach ／ within limits
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

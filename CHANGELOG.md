@@ -2631,3 +2631,4 @@
 - 2026-10-27: 文法に「前置詞 beyond の熟語 beyond description ／ beyond belief ／ beyond repair」の単元を追加
 - 2026-10-27: 長文読解（TOEIC メール文）に「ワークショップへの招待」を追加
 - 2026-10-27: ボスの城の問題の階で、まちがえたら正しい答えを表示
+- 2026-10-27: 文法に「前置詞 within の熟語 within walking distance ／ within reach ／ within limits」の単元を追加
