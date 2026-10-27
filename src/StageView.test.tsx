@@ -752,3 +752,11 @@ it('闘技場の文法の問題には「📐 文法」の札が出る', async ()
   pick()
   expect(screen.getByText('📐 文法')).toBeInTheDocument() // 3問め
 })
+
+it('闘技場の塔で、新しい称号が始まる階にそのアイコンが出る', async () => {
+  const { arenaTitleIconAt } = await import('./arena')
+  expect(arenaTitleIconAt(0)).toBeNull()
+  expect(arenaTitleIconAt(3)).toBe('🗡')
+  expect(arenaTitleIconAt(4)).toBeNull()
+  expect(arenaTitleIconAt(14)).toBe('👑')
+})

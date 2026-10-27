@@ -29,6 +29,11 @@ const TITLES: [number, string][] = [
   [0, '🌱 見習い'],
 ]
 export const arenaTitle = (lv: number): string => TITLES.find(([min]) => clamp(lv) >= min)![1]
+// その階から始まる称号のアイコン（塔の階に小さく出す。1階の見習いは出さない）
+export function arenaTitleIconAt(lv: number): string | null {
+  const t = TITLES.find(([min]) => min === lv && min > 0)
+  return t ? t[1].split(' ')[0] : null
+}
 // 次の称号まであと何階か（いちばん上の称号なら null）
 export function arenaNextTitle(lv: number): { title: string; floors: number } | null {
   const next = [...TITLES].reverse().find(([min]) => min > clamp(lv))

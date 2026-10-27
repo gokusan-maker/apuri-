@@ -4154,3 +4154,4 @@ header .event-chips { margin: 0 0 2px; }
 .arena-missed li { display: flex; justify-content: space-between; gap: 8px; font-size: 0.8rem; }
 .am-en { font-weight: 800; color: #fff; overflow-wrap: anywhere; }
 .am-ja { color: #cbd5e1; text-align: right; }
+.af-title { font-size: 0.85rem; opacity: 0.9; }
