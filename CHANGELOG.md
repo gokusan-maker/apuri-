@@ -2515,3 +2515,4 @@
 - 2026-10-27: 文法に「前置詞の熟語② in public ／ in person ／ for sale（人前で・じかに・売り物の）」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「Cleaning Out the Office Refrigerator」（会社の冷蔵庫の片づけ）を追加
 - 2026-10-27: ボス戦で、ダメージを受けるたびにボスの HP の数字がはねる演出を追加
+- 2026-10-27: 文法に「前置詞の熟語③ out of order ／ out of breath ／ out of reach（故障して・息を切らして・手の届かない）」の単元を追加
