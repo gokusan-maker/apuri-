@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaLook, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
-import { BossArena } from './BossArenaView'
-import { BossFigure } from './BossView'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
-// 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える
+// 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える。
+// ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
+const SHAFT = 2 // いまの階の上下に見せる階の数
+const floorColor = (f: number) => `hsl(${150 - f * 11} 75% 48%)`
 // onAnswer：単語の問題の正誤を学習の記録に入れ、相棒のモンスターに XP（ボス戦と同じ）
 export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: number; onExit: () => void; onCoins?: (n: number) => void; onTicket?: (n: number) => void; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }) {
   const [lv, setLv] = useState(start)
@@ -22,11 +23,13 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
   const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
   const [newRecord, setNewRecord] = useState(false)
   const [newTitle, setNewTitle] = useState<string | null>(null) // はじめて着いた称号（ガチャチケット1枚）
-  const [moved, setMoved] = useState<'up' | 'down' | null>(null) // 階が変わった直後：新しい相手が登場
-  const look = arenaLook(lv)
   const correct = picked !== null && picked === q.answer
   const jump = picked !== null && isArenaJump(correct, streak)
   const nextLv = picked === null ? lv : arenaNext(lv, correct, correct ? streak : 0)
+  // 答えたらすぐに塔の階が上下する（次へを押す前から新しい階を見せる）
+  const shown = nextLv
+  const dir = picked === null ? null : nextLv > lv ? 'up' : nextLv < lv ? 'down' : 'stay'
+  const color = floorColor(shown)
 
   function pick(i: number) {
     if (picked !== null) return
@@ -61,7 +64,6 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
     }
   }
   function next() {
-    setMoved(nextLv > lv ? 'up' : nextLv < lv ? 'down' : null)
     setLv(nextLv)
     setQ(arenaQuestionAt(nextLv, count, Math.random, q.word.id))
     setPicked(null)
@@ -75,7 +77,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
 
   if (ended)
     return (
-      <section className="card boss battle-v2 arena-result" style={{ '--boss': look.color } as CSSProperties} aria-label="闘技場の結果">
+      <section className="card boss battle-v2 arena-result" style={{ '--boss': color } as CSSProperties} aria-label="闘技場の結果">
         <p className="arena-result-title">🏟 闘技場 おつかれさま！</p>
         <p className="arena-result-floor" role="status">
           いまのあなたは <strong>{arenaFloor(lv)}</strong>
@@ -109,32 +111,36 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
     )
 
   return (
-    <section className="card boss battle-v2 arena" style={{ '--boss': look.color } as CSSProperties} aria-label="闘技場">
+    <section className="card boss battle-v2 arena" style={{ '--boss': color } as CSSProperties} aria-label="闘技場">
       <div className="stage-head">
         <button className="stage-back" onClick={finish}>
           🏁 終了
         </button>
-        <span>🏟 {arenaFloor(lv)}</span>
+        <span>{streak >= 2 ? `🔥${streak}連続` : `🏟 ${count}問め`}</span>
       </div>
-      <div className="boss-figure">
-        <BossArena bg="castle" color={look.color} />
-        <span key={lv} className={`arena-foe${moved ? ` enter-${moved}` : ''}`}>
-          <BossFigure hit={correct} look={look} />
-        </span>
-        {moved && picked === null && (
-          <span key={`b${lv}`} className={`arena-banner ${moved}`} aria-hidden="true">
-            {moved === 'up' ? `⬆ ${lv + 1}階` : `⬇ ${lv + 1}階`}
-          </span>
-        )}
-      </div>
-      <div className="boss-plate">
-        <p className="boss-name">{look.name}</p>
-        <p className="boss-hp-num">{streak >= 2 ? `🔥${streak}連続` : `${count}問`}</p>
-        {/* 闘技場の階（中1＝1階 〜 ネイティブ＝15階） */}
-        <div className="boss-hp arena-meter" role="progressbar" aria-label="闘技場の階" aria-valuemin={1} aria-valuemax={ARENA_TOP + 1} aria-valuenow={lv + 1}>
-          <div className="boss-hp-fill" style={{ width: `${((lv + 1) / (ARENA_TOP + 1)) * 100}%` }} />
+      {/* 塔の階：いまの階を中心に上下2階ずつ。答えるたびに上下に動く */}
+      <div className="arena-tower" role="progressbar" aria-label="闘技場の階" aria-valuemin={1} aria-valuemax={ARENA_TOP + 1} aria-valuenow={shown + 1}>
+        <div key={`${shown}-${count}`} className={`arena-shaft${dir ? ` move-${dir}` : ''}${jump ? ' jump' : ''}`}>
+          {Array.from({ length: SHAFT * 2 + 1 }, (_, k) => shown + SHAFT - k).map((f) =>
+            f < 0 || f > ARENA_TOP ? (
+              <div key={f} className="arena-floor empty" aria-hidden="true">
+                {f > ARENA_TOP ? '☁️' : '🌱'}
+              </div>
+            ) : (
+              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
+                <span className="af-num">{f + 1}階</span>
+                <span className="af-lv">{arenaCourse(f).label}</span>
+                {f === shown && <span className="af-me" aria-hidden="true">🦸</span>}
+              </div>
+            ),
+          )}
         </div>
+        {dir === 'up' && <span key={`u${count}`} className="arena-arrow up" aria-hidden="true">{jump ? '🚀' : '⬆'}</span>}
+        {dir === 'down' && <span key={`d${count}`} className="arena-arrow down" aria-hidden="true">⬇</span>}
       </div>
+      <p className="arena-now">
+        いま <strong>{arenaFloor(shown)}</strong>
+      </p>
       <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
       <div className="choices">
         {q.choices.map((c, i) => (
@@ -146,8 +152,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
       {picked !== null && (
         <>
           <p className={`arena-move ${correct ? 'up' : 'down'}`} role="status">
-            {correct ? (nextLv > lv ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : '⬆ レベルアップ！'} ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : `${nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ　` : ''}正解は「${q.choices[q.answer]}」`}
+            {correct ? (nextLv > lv ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : '⬆ レベルアップ！'} ${arenaFloor(nextLv)}へ` : '👑 いちばん上の階！') : nextLv < lv ? `⬇ レベルダウン… ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
           </p>
+          {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}

@@ -4081,3 +4081,32 @@ header .event-chips { margin: 0 0 2px; }
 .arena-title-badge { display: inline-block; margin: 2px 0 6px; padding: 3px 12px; border-radius: 999px; background: linear-gradient(180deg, #fde68a, #f59e0b); color: #451a03; font-weight: 900; font-size: 0.9rem; }
 .battle-v2 .en.boss-sentence-q { font-size: 1.05rem; line-height: 1.45; text-align: left; }
 .arena-next-title { margin: 0 0 6px; font-size: 0.78rem; color: var(--muted); }
+/* 闘技場：ボスは出さず、塔の階が答えるたびに上下する（エレベーターのように） */
+.arena-tower { position: relative; height: 170px; margin: 6px 0 4px; overflow: hidden; border-radius: 16px; background: linear-gradient(180deg, #0b1020, #1e1b4b 50%, #0b1020); border: 1px solid rgb(255 255 255 / 0.14); -webkit-mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent); mask-image: linear-gradient(180deg, transparent, #000 22%, #000 78%, transparent); }
+.arena-shaft { position: absolute; inset: 0; display: grid; grid-template-rows: repeat(5, 34px); align-content: center; }
+.arena-shaft.move-up { animation: shaft-up 0.55s cubic-bezier(0.2, 0.9, 0.3, 1.15); }
+.arena-shaft.move-up.jump { animation-name: shaft-jump; animation-duration: 0.75s; }
+.arena-shaft.move-down { animation: shaft-down 0.55s cubic-bezier(0.3, 0.6, 0.4, 1); }
+.arena-shaft.move-stay { animation: shaft-stay 0.4s ease-in-out; }
+@keyframes shaft-up { from { transform: translateY(-34px); } }
+@keyframes shaft-jump { from { transform: translateY(-68px); } }
+@keyframes shaft-down { from { transform: translateY(34px); } }
+@keyframes shaft-stay { 30% { transform: translateY(-4px); } 60% { transform: translateY(3px); } }
+.arena-floor { --fc: #64748b; position: relative; display: flex; align-items: center; gap: 8px; margin: 2px 22px; padding: 0 12px; height: 30px; border-radius: 8px; color: rgb(255 255 255 / 0.55); background: rgb(255 255 255 / 0.05); border-left: 4px solid var(--fc, #64748b); font-size: 0.78rem; font-weight: 800; }
+.arena-floor.empty { justify-content: center; border-left-color: transparent; background: none; }
+.arena-floor.here { color: #fff; background: linear-gradient(90deg, color-mix(in srgb, var(--fc) 55%, transparent), rgb(255 255 255 / 0.06)); box-shadow: 0 0 16px color-mix(in srgb, var(--fc) 60%, transparent); font-size: 0.95rem; }
+.af-num { min-width: 3.2em; }
+.af-lv { opacity: 0.9; }
+.af-me { margin-left: auto; font-size: 1.3rem; animation: me-bob 0.9s ease-in-out infinite alternate; }
+@keyframes me-bob { to { transform: translateY(-3px); } }
+.arena-arrow { position: absolute; right: 8px; top: 50%; z-index: 2; font-size: 1.6rem; transform: translateY(-50%); animation: arrow-fly 0.8s ease-out forwards; pointer-events: none; }
+.arena-arrow.up { color: #4ade80; }
+.arena-arrow.down { color: #f87171; animation-name: arrow-fall; }
+@keyframes arrow-fly { from { transform: translateY(10px); opacity: 1; } to { transform: translateY(-60px); opacity: 0; } }
+@keyframes arrow-fall { from { transform: translateY(-40px); opacity: 1; } to { transform: translateY(20px); opacity: 0; } }
+.arena-now { margin: 2px 0 4px; font-size: 0.85rem; color: var(--muted); }
+.arena-now strong { color: #fff; font-size: 1.05rem; }
+.battle-v2.arena { padding-top: 0; }
+.battle-v2.arena > .stage-head { padding-bottom: 4px; }
+@media (prefers-reduced-motion: reduce) { .arena-shaft, .af-me, .arena-arrow { animation: none !important; } }
+.arena-answer { margin: 0 0 4px; font-size: 0.85rem; color: #e2e8f0; }

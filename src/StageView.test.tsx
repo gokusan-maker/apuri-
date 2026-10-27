@@ -548,7 +548,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   const entry = screen.getByRole('region', { name: '闘技場' })
   fireEvent.click(within(entry).getByRole('button', { name: /闘技場で戦う/ }))
   const arena = screen.getByRole('region', { name: '闘技場' })
-  expect(within(arena).getByText('🏟 1階（中1レベル）')).toBeInTheDocument()
+  expect(within(arena).getByText('1階（中1レベル）')).toBeInTheDocument()
   const floor = () => Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))
   const { courseWords } = await import('./wordcourse')
   const pickAnswer = (correct: boolean) => {
@@ -559,10 +559,12 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   }
   pickAnswer(true)
   expect(screen.getByText('⬆ レベルアップ！ 2階（中2レベル）へ')).toBeInTheDocument()
+  expect(floor()).toBe(2) // 答えたらすぐに塔の階が上がる
+  expect(document.querySelector('.arena-shaft')!.classList.contains('move-up')).toBe(true)
   fireEvent.click(screen.getByText('次へ（中2）'))
   expect(floor()).toBe(2)
-  expect(document.querySelector('.arena-foe')!.classList.contains('enter-up')).toBe(true) // 新しい相手が上から登場
-  expect(document.querySelector('.arena-banner')!.textContent).toBe('⬆ 2階')
+  expect(document.querySelector('.arena .boss-figure')).toBeNull() // ボスは出さない
+  expect(document.querySelector('.arena-floor.here')!.textContent).toContain('2階')
   pickAnswer(false)
   expect(screen.getByRole('status')).toHaveTextContent('⬇ レベルダウン… 1階（中1レベル）へ')
   fireEvent.click(screen.getByText('次へ（中1）'))
