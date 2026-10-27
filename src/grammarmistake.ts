@@ -49,6 +49,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'not-a-but-b': { wrong: 'That animal is not a cat and a fox.', right: 'That animal is not a cat but a fox.', why: '「A ではなく B」は not A but B。and は使わない。' },
   'prep-idiom-in-by': { wrong: 'Please explain it in detailed.', right: 'Please explain it in detail.', why: 'in detail「くわしく」。in のあとは名詞 detail を使う。' },
   'prep-idiom-for-in': { wrong: 'He tried in vainly to open the door.', right: 'He tried in vain to open the door.', why: 'in vain「むだに」。in のあとは vain のまま（vainly は副詞なので in のあとに置かない）。' },
+  'prep-idiom-out-at': { wrong: 'At time, he forgets his homework.', right: 'At times, he forgets his homework.', why: 'at times「ときどき」。times と複数形にする。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
