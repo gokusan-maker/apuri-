@@ -4194,3 +4194,8 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor.hurt { animation: bfloor-hurt 0.35s ease-out; }
 @keyframes bfloor-hurt { 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-3px); } }
 @media (prefers-reduced-motion: reduce) { .bfloor.hurt { animation: none; } }
+/* 闘技場：次のレベルまでの進み */
+.arena-tonext { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: 0.75rem; color: var(--muted); }
+.atn-bar { flex: 1; height: 6px; border-radius: 999px; background: rgb(255 255 255 / 0.12); overflow: hidden; }
+.atn-bar i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #4ade80, #facc15); transition: width 0.4s ease-out; }
+.atn-text { white-space: nowrap; }

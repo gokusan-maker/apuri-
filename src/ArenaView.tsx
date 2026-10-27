@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaToNext, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -203,6 +203,15 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       <p className="arena-now">
         いま <strong>{arenaFloor(shown)}</strong>
       </p>
+      {/* 次のレベルまでの進み（1レベル20階） */}
+      <div className="arena-tonext" aria-label={`${arenaToNext(shown).label}まで あと${arenaToNext(shown).floors}階`}>
+        <span className="atn-bar" aria-hidden="true">
+          <i style={{ width: `${arenaToNext(shown).progress * 100}%` }} />
+        </span>
+        <span className="atn-text">
+          {arenaToNext(shown).label}まで あと{arenaToNext(shown).floors}階
+        </span>
+      </div>
       {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
       {isArenaReading(q) && <p className="arena-qtag reading">📖 読解　文の意味をえらぼう</p>}
       <div className="arena-q">

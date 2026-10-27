@@ -26,6 +26,17 @@ export function isArenaLevelUp(from: number, to: number): boolean {
   if (b === null) return a !== null || Math.floor(to / ARENA_ENDLESS_EVERY) > Math.floor(from / ARENA_ENDLESS_EVERY)
   return a !== null && b > a
 }
+// 次のレベル（無限の階では次の10階ごとのお祝い）まであと何階か、とそのレベル内の進み（0〜1）
+export function arenaToNext(f: number): { floors: number; label: string; progress: number } {
+  const x = atLeast0(f)
+  if (isArenaEndless(x)) {
+    const k = x % ARENA_ENDLESS_EVERY
+    return { floors: ARENA_ENDLESS_EVERY - k, label: `${x - k + ARENA_ENDLESS_EVERY + 1}階`, progress: k / ARENA_ENDLESS_EVERY }
+  }
+  const k = x % ARENA_PER
+  const next = x - k + ARENA_PER
+  return { floors: ARENA_PER - k, label: isArenaEndless(next) ? '♾ 無限の階' : `${COURSES[arenaLevel(next)!].label}レベル`, progress: k / ARENA_PER }
+}
 export const isArenaLevelDown = (from: number, to: number) => to < from && (arenaLevel(to) ?? LAST + 1) < (arenaLevel(from) ?? LAST + 1)
 // 正解なら上へ、まちがいなら下へ（1階より下へは行かない）。
 // streak（この答えを入れた連続正解の数）が3の倍数になったら、2階ジャンプ

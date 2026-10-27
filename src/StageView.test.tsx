@@ -678,6 +678,20 @@ it('闘技場：いちばん上のレベルの上は、いろいろなレベル�
   expect(screen.getByText('次へ（♾ ランダム）')).toBeInTheDocument()
 })
 
+it('闘技場：次のレベルまで あと何階 かを出す', async () => {
+  const { arenaToNext, ARENA_ENDLESS } = await import('./arena')
+  expect(arenaToNext(0)).toEqual({ floors: 20, label: '中2レベル', progress: 0 })
+  expect(arenaToNext(15)).toEqual({ floors: 5, label: '中2レベル', progress: 0.75 })
+  expect(arenaToNext(ARENA_ENDLESS - 1).label).toBe('♾ 無限の階')
+  expect(arenaToNext(ARENA_ENDLESS + 3)).toEqual({ floors: 7, label: `${ARENA_ENDLESS + 11}階`, progress: 0.3 })
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={17} onExit={() => {}} />)
+  expect(screen.getByLabelText('中2レベルまで あと3階')).toBeInTheDocument()
+  arenaPick(true)
+  expect(screen.getByLabelText('中2レベルまで あと2階')).toBeInTheDocument()
+})
+
 it('闘技場：前の「レベル」で保存した最高記録は、そのレベルの1階目として読む', async () => {
   const { loadArenaBest, recordArenaBest } = await import('./arena')
   localStorage.clear()
