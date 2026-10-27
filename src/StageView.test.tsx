@@ -577,6 +577,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(screen.getByText('次の称号「🗡 戦士」まで あと3階')).toBeInTheDocument()
   expect(screen.getByText('🏅 最高記録 更新！ 2階（中2レベル）')).toBeInTheDocument()
   expect(loadArenaBest()).toBe(1)
+  expect(screen.queryByText(/はじめの階/)).toBeNull() // いまがはじめの階なら出さない
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/最高 2階（中2レベル）/)).toBeInTheDocument()
 })
@@ -790,4 +791,17 @@ it('闘技場の塔の空は、下の階は青空・上の階は星空', async (
   const { Arena } = await import('./ArenaView')
   render(<Arena start={ARENA_TOP} onExit={() => {}} />)
   expect((document.querySelector('.arena-tower') as HTMLElement).style.getPropertyValue('--sky1')).toBe('#4c1d95')
+})
+
+it('闘技場の結果から、はじめの階にもどって戦える', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  localStorage.clear()
+  render(<Arena start={2} onExit={() => {}} />)
+  const en = document.querySelector('.arena .en')!.textContent!
+  const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  fireEvent.click(screen.getByText('🔁 はじめの階（3階（中3レベル））から'))
+  expect(screen.getByRole('progressbar', { name: '闘技場の階' })).toHaveAttribute('aria-valuenow', '3')
 })

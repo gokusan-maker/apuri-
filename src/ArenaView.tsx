@@ -73,6 +73,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
     setPicked(null)
   }
   function finish() {
+    // 答えたあとに終了したときは、上下したあとの階で終わる
+    if (picked !== null) {
+      setLv(nextLv)
+      setQ(arenaQuestionAt(nextLv, count, Math.random, q.word.id))
+      setPicked(null)
+    }
     const best = Math.max(top, prevBest ?? 0)
     recordArenaBest(top)
     setEnded({ newBest: prevBest === null || top > prevBest, best })
@@ -122,6 +128,24 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
         >
           ⚔ 続きから戦う
         </button>
+        {lv !== start && (
+          <button
+            className="list-link"
+            onClick={() => {
+              setEnded(null)
+              setMissed([])
+              setCount(0)
+              setRight(0)
+              setStreak(0)
+              setLv(start)
+              setTop(start)
+              setQ(arenaQuestionAt(start, 0))
+              setPicked(null)
+            }}
+          >
+            🔁 はじめの階（{arenaFloor(start)}）から
+          </button>
+        )}
         <button className="list-link" onClick={onExit}>
           ← 城にもどる
         </button>
