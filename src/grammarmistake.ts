@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'verb-prep-concentrate': { wrong: 'We participated the festival.', right: 'We participated in the festival.', why: 'participate in ～「～に参加する」。in が必要。' },
   'verb-prep-across': { wrong: 'I ran my teacher into at the station.', right: 'I ran into my teacher at the station.', why: 'run into ～ の目的語は前置詞 into のうしろ。' },
   'verb-prep-hear': { wrong: 'We must deal this problem.', right: 'We must deal with this problem.', why: 'deal with ～「～に対処する」。with が必要。' },
   'adj-prep-5': { wrong: 'He is independent on his parents.', right: 'He is independent of his parents.', why: 'independent は of（dependent は on）。' },

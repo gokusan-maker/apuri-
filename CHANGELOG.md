@@ -2430,3 +2430,4 @@
 - 2026-10-27: 文法に「自動詞 ＋ 前置詞 ③（come across ／ run into ／ look into）」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「A New Way to Order Office Supplies」（事務用品の注文がオンラインフォームに）を追加
 - 2026-10-27: 闘技場で、いままでの最高より上の階に着くたびに🪙5（「🆕 最高記録！」を表示し、記録はその場で保存）
+- 2026-10-27: 文法に「自動詞 ＋ 前置詞 ④（concentrate on ／ participate in ／ care about）」の単元を追加
