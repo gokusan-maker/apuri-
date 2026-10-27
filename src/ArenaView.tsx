@@ -3,6 +3,7 @@ import type { CSSProperties, ReactNode } from 'react'
 import { ARENA_BEST_COINS, ARENA_QUICK_MS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
+import { speak } from './speech'
 
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える。
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
@@ -199,7 +200,14 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         いま <strong>{arenaFloor(shown)}</strong>
       </p>
       {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
-      <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
+      <div className="arena-q">
+        <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
+        {!isArenaGrammar(q) && (
+          <button className="arena-speak" aria-label="発音を聞く" onClick={() => speak(q.word.en)}>
+            🔊
+          </button>
+        )}
+      </div>
       <div className="choices">
         {q.choices.map((c, i) => (
           <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}`} disabled={picked !== null} onClick={(e) => pick(i, e.timeStamp)}>

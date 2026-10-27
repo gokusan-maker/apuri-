@@ -830,3 +830,10 @@ it('闘技場：3秒以内に正解すると「⚡ はやい！」', async () =>
   pickRight()
   expect(screen.getByText('⚡ はやい！')).toBeInTheDocument()
 })
+
+it('闘技場の単語の問題には 🔊（発音を聞く）ボタン', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  expect(screen.getByRole('button', { name: '発音を聞く' })).toBeInTheDocument()
+})

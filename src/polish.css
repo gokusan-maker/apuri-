@@ -4171,3 +4171,5 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes hp-pop { 0% { transform: scale(1.5); color: #fca5a5; } }
 @media (prefers-reduced-motion: reduce) { .battle-v2 .boss-plate .boss-hp-num.hp-pop { animation: none; } }
 .arena-quick { margin: 0 0 4px; font-weight: 900; color: #fde047; font-style: italic; animation: trait-pop 0.25s ease-out; }
+.arena-q { position: relative; }
+.arena-speak { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); padding: 2px 6px; border: none; border-radius: 8px; background: rgb(255 255 255 / 0.12); font-size: 1rem; }
