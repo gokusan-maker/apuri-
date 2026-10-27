@@ -2479,3 +2479,4 @@
 - 2026-10-27: 文法に「前置詞 against ／ throughout ／ unlike（～に反対して・～の間ずっと・～とちがって）」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「Annual Health Checkups」（会社の健康診断）を追加
 - 2026-10-27: ボス戦で、まちがえて失ったハートが 💔 でわれる演出を追加
+- 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑧（be popular with ／ be strict with ／ be polite to）」の単元を追加
