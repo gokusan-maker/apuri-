@@ -732,3 +732,22 @@ it('闘技場：3連続正解から、いまの階が燃える（🔥）', async
   pickRight()
   expect(document.querySelector('.arena-floor.here.on-fire')).not.toBeNull()
 })
+
+it('闘技場の文法の問題には「📐 文法」の札が出る', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  const { levelUnits } = await import('./grammarcastle')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  const pick = () => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 3).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
+    const g = COURSES.slice(0, 3).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent !== (w ? w.ja : g!.choices[g!.answer]))!)
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(screen.queryByText('📐 文法')).toBeNull()
+  pick()
+  pick()
+  expect(screen.getByText('📐 文法')).toBeInTheDocument() // 3問め
+})

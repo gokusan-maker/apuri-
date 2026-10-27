@@ -147,6 +147,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
       <p className="arena-now">
         いま <strong>{arenaFloor(shown)}</strong>
       </p>
+      {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
       <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
       <div className="choices">
         {q.choices.map((c, i) => (
