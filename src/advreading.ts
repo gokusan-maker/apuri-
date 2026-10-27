@@ -9141,6 +9141,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-onion-tears',
+    title: 'Why Onions Make Us Cry',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Cutting onions is one of the few kitchen jobs that can make even a professional chef cry. The tears have nothing to do with sadness. They are the body's way of ( A ) the eyes from a chemical that the onion releases.",
+      "An onion is made of many tiny cells. As long as the onion is whole, certain substances inside these cells are kept apart. When a knife breaks the cells, however, the substances mix and react with each other. This reaction produces a gas that floats up into the air.",
+      "When the gas reaches our eyes, it irritates the nerves on their surface. The brain responds by telling the tear glands to produce more tears, which wash the gas away. In other words, crying while cutting onions is a kind of defense system.",
+      "There are several ways to cry less. Using a sharp knife breaks ( B ) cells, so less gas is released. Chilling the onion in the refrigerator before cutting it slows down the reaction. Interestingly, scientists have even developed onions that produce almost no tear gas, although they are not yet common in stores.",
+    ],
+    ja: [
+      'タマネギを切るのは、プロの料理人でさえ泣かせることのある、数少ない台所仕事の1つだ。その涙は悲しみとは何の関係もない。それは、タマネギが出す化学物質から目を守るための体のしくみなのだ。',
+      'タマネギは、たくさんの小さな細胞でできている。タマネギがまるごとのままであれば、これらの細胞の中にあるいくつかの物質ははなれた状態に保たれている。しかし、包丁が細胞をこわすと、それらの物質がまざって反応し合う。この反応によって、空気中にただよう気体ができる。',
+      'その気体が目に届くと、目の表面の神経を刺激する。脳はそれに反応して涙腺にもっと涙を出すよう指示し、涙がその気体を洗い流す。言いかえれば、タマネギを切りながら泣くのは、一種の防御のしくみなのだ。',
+      '泣くのを減らす方法がいくつかある。よく切れる包丁を使うとこわれる細胞が少なくなるので、出る気体も少なくなる。切る前にタマネギを冷蔵庫で冷やしておくと、反応がゆっくりになる。興味深いことに、科学者たちは涙の出る気体をほとんど出さないタマネギまで開発しているが、まだお店ではあまり見かけない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['protecting', 'protect', 'protected', 'to protecting'], answer: 0, why: '前置詞 of のあとは動名詞 protecting。protect A from B「A を B から守る」。' },
+      { id: 'B', choices: ['fewer', 'less', 'little', 'few of'], answer: 0, why: '数えられる名詞 cells の前で「より少ない」は fewer。less は数えられない名詞、little も数えられない名詞に使い、few of のあとは the などが必要。' },
+    ],
+    underline: {
+      phrase: 'irritates',
+      choices: ['bothers and makes sore', 'cools down', 'cleans', 'makes stronger'],
+      answer: 0,
+      why: 'irritate は「（体の一部を）刺激してひりひりさせる」。',
+    },
+    order: {
+      words: ['have', 'nothing', 'to', 'do', 'with'],
+      rest: 'sadness',
+      answer: 'have nothing to do with',
+      ja: '～とは何の関係もない（have nothing to do with ～）',
+    },
+    tf: [
+      { statement: 'タマネギを切ったときの涙は、悲しみから出るものだ。', answer: false, why: '第1段落 The tears have nothing to do with sadness。' },
+      { statement: '包丁が細胞をこわすと、物質がまざって気体ができる。', answer: true, why: '第2段落 When a knife breaks the cells, … the substances mix … This reaction produces a gas。' },
+      { statement: '切る前にタマネギを冷やすと、反応が速くなる。', answer: false, why: '第4段落 Chilling the onion … slows down the reaction。ゆっくりになる。' },
+    ],
+    qa: [
+      { q: 'Why does a sharp knife help?', choices: ['It breaks fewer cells, so less gas is released.', 'It makes the onion colder.', 'It produces more tears.', 'It removes the gas from the air.'], answer: 0, why: '第4段落 Using a sharp knife breaks fewer cells, so less gas is released。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
