@@ -10734,6 +10734,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-job-offer',
+    title: 'E-mail: Job Offer',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Nakamura, Thank you for visiting our office last Friday for your second interview. Everyone on the team enjoyed meeting you, and I am pleased to offer you the position of web designer at Blue Harbor Media.",
+      "Your first day of work would be Monday, April 7. You would work from 9:30 A.M. to 6:00 P.M., Monday through Friday. During your first three months, you will work closely with our senior designer, Ms. Gomez, ( A ) will help you learn our tools and projects.",
+      "Your starting salary and other details are explained in the attached document. Please read it carefully. If you agree with everything, sign the last page and return it to me by March 20. If you have any questions about the conditions, I would be happy ( B ) them by phone or e-mail.",
+      "We are very excited about the possibility of you joining our team, and we hope to hear from you soon. Best regards, Linda Moore, Human Resources Manager, Blue Harbor Media",
+    ],
+    ja: [
+      'ナカムラ様　先週の金曜日、2回目の面接のために当社にお越しいただき、ありがとうございました。チームのみんながお会いできてよろこんでおり、ブルーハーバー・メディアのウェブデザイナーの職をご用意できることをうれしく思います。',
+      'お仕事の初日は4月7日（月）となります。勤務は月曜日から金曜日の午前9時30分から午後6時までです。最初の3か月間は、上級デザイナーのゴメスさんといっしょに仕事をしていただきます。ゴメスさんが、当社の道具や仕事について学ぶお手伝いをします。',
+      '最初のお給料などのくわしいことは、添付の書類に書いてあります。よくお読みください。すべてに同意していただけたら、最後のページに署名して、3月20日までに私あてにお返しください。条件についてご質問があれば、電話かメールでよろこんでお答えします。',
+      'あなたがチームに加わってくださるかもしれないことを、とても楽しみにしています。早いお返事をお待ちしています。ブルーハーバー・メディア　人事部長　リンダ・ムーア',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whom', 'whose'], answer: 0, why: 'コンマのあとで Ms. Gomez（人）を説明し、うしろに主語がなく will help が続くので主格の関係代名詞 who。which は人に使わず、whom は目的格、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to answer', 'answering', 'answer', 'answered'], answer: 0, why: 'be happy to ～「よろこんで～する」。形容詞 happy のあとは to ＋動詞の原形。answering・answer・answered はこの形にならない。' },
+    ],
+    underline: {
+      phrase: 'position',
+      choices: ['a job', 'a place to sit', 'a way of standing', 'an opinion'],
+      answer: 0,
+      why: 'position はここでは「職・地位」。ウェブデザイナーの仕事をさしている。',
+    },
+    order: {
+      words: ['you', 'will', 'work', 'closely', 'with'],
+      rest: 'our senior designer',
+      answer: 'you will work closely with',
+      ja: '～といっしょに（近くで）仕事をする（work closely with ～）',
+    },
+    tf: [
+      { statement: 'ナカムラさんは、この会社で面接を2回受けた。', answer: true, why: '第1段落 your second interview。' },
+      { statement: '仕事の初日は3月20日だ。', answer: false, why: '第2段落 Your first day of work would be Monday, April 7。3月20日は書類を返すしめきり。' },
+      { statement: 'お給料のくわしいことは、添付の書類に書いてある。', answer: true, why: '第3段落 Your starting salary and other details are explained in the attached document。' },
+    ],
+    qa: [
+      { q: 'What should Mr. Nakamura do if he agrees with the conditions?', choices: ['Sign the last page and return it by March 20.', 'Call Ms. Gomez.', 'Visit the office on Friday.', 'Send his own design.'], answer: 0, why: '第3段落 sign the last page and return it to me by March 20。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
