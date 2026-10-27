@@ -9111,6 +9111,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-out-of-stock',
+    title: 'Email: An Item Is Out of Stock',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Garcia, Thank you for your recent order from Homeline Kitchenware. Unfortunately, one of the items you ordered, the 24-centimeter frying pan, is currently out of stock. We expect to receive more from our supplier ( A ) two weeks.",
+      "The other items in your order, the set of knives and the cutting board, are available and were shipped this morning. They should arrive within three business days. You will not be charged for the frying pan until it is shipped.",
+      "If you would prefer not to wait, you can cancel the frying pan from your order at any time by logging in to your account. Alternatively, we can send you a similar 26-centimeter pan, which is in stock, at the same price. If you choose this option, please reply to this email by Friday, and we will ship it ( B ).",
+      "We apologize for the inconvenience and thank you for your patience. Sincerely, Customer Care Team, Homeline Kitchenware",
+    ],
+    ja: [
+      'ガルシア様　このたびはホームライン・キッチン用品をご注文いただき、ありがとうございます。あいにく、ご注文の品の1つである24センチのフライパンは、現在在庫切れとなっております。仕入れ先から2週間以内に入荷する見込みです。',
+      'ご注文のほかの品、包丁セットとまな板は在庫があり、今朝発送いたしました。3営業日以内に届く予定です。フライパンの代金は、発送するまで請求いたしません。',
+      'お待ちになりたくない場合は、アカウントにログインして、いつでもフライパンを注文から取り消すことができます。あるいは、在庫のある似た26センチのフライパンを同じ価格でお送りすることもできます。こちらをお選びの場合は、金曜日までにこのメールにご返信ください。すぐに発送いたします。',
+      'ご不便をおかけして申し訳ございません。お待ちいただき、ありがとうございます。ホームライン・キッチン用品　カスタマーケアチーム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['within', 'unless', 'since', 'among'], answer: 0, why: 'within two weeks「2週間以内に」。unless は接続詞なのでうしろに文が必要、since（～以来）は未来のことに使えず、among は「（3つ以上の）間で」。' },
+      { id: 'B', choices: ['immediately', 'immediate', 'immediacy', 'more immediate'], answer: 0, why: '動詞 ship を修飾するので副詞 immediately「すぐに」。immediate は形容詞、immediacy は名詞。' },
+    ],
+    tf: [
+      { statement: '24センチのフライパンは、すぐに発送された。', answer: false, why: '第1段落 is currently out of stock。在庫切れ。' },
+      { statement: 'フライパンの代金は、発送されるまで請求されない。', answer: true, why: '第2段落 You will not be charged for the frying pan until it is shipped。' },
+      { statement: '26センチのフライパンは、24センチのものより高い。', answer: false, why: '第3段落 at the same price。同じ価格。' },
+    ],
+    qa: [
+      { q: 'Which items were shipped this morning?', choices: ['The set of knives and the cutting board.', 'The 24-centimeter frying pan.', 'The 26-centimeter pan.', 'All the items in the order.'], answer: 0, why: '第2段落 the set of knives and the cutting board, are available and were shipped this morning。' },
+      { q: 'What should Ms. Garcia do if she wants the 26-centimeter pan?', choices: ['Reply to the email by Friday.', 'Call the supplier.', 'Wait two weeks.', 'Cancel the whole order.'], answer: 0, why: '第3段落 If you choose this option, please reply to this email by Friday。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
