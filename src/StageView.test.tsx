@@ -891,6 +891,7 @@ it('闘技場：この回の目標（はじめの階から5階上）に着くと
   }
   expect(done).toBe(true)
   expect(screen.queryByText(/この回の目標/)).toBeNull()
+  expect(screen.getByText('🎯 次の目標（2つ目）：51階')).toBeInTheDocument() // 目標は次々と出る
 })
 
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
