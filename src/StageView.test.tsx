@@ -565,6 +565,7 @@ it('ボスの城の問題の階：まちがえると階のボスがこうげき�
   expect(document.querySelector('.boss-atk-fx')).not.toBeNull()
   expect(document.querySelector('.bfloor .boss-figure')!.classList.contains('attack')).toBe(true)
   expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
+  expect(screen.getByText(`正解は「${qs[1].choices[qs[1].answer]}」`)).toBeInTheDocument() // 正しい答えを見せる
 })
 
 it('ボスの城の問題の階：階のボスののこりHPを数字でも出す', async () => {

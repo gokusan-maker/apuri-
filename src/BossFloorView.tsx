@@ -197,6 +197,8 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         </button>
       )}
       {/* 最後の問題に答えたら、結果を見なくてもすぐ再チャレンジできる */}
+      {/* まちがえたら正しい答えを見せる（覚えなおせるように） */}
+      {hurt && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
       {dead && picked !== null && <p className="bfloor-down">💀 ライフがなくなった！</p>}
       {picked !== null && (i === qs.length - 1 || dead) && onRetry && (
         <button
