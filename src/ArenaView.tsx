@@ -323,6 +323,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
           {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
+          {/* 10連続ごとの大きなお祝い */}
+          {correct && streak > 0 && streak % 10 === 0 && (
+            <p key={`s${streak}`} className="arena-record arena-title-get" role="status">
+              🔥🔥 {streak}連続正解！ すごすぎる！
+            </p>
+          )}
           {correct && quick && <p className="arena-quick">{quicks >= 3 ? `⚡⚡⚡ 電光石火！ ${quicks}問続けて はやい！` : '⚡ はやい！'}</p>}
           {correct && goalJust && (
             <p className="arena-record">

@@ -894,6 +894,18 @@ it('闘技場：この回の目標（はじめの階から5階上）に着くと
   expect(screen.getByText('🎯 次の目標（2つ目）：51階')).toBeInTheDocument() // 目標は次々と出る
 })
 
+it('闘技場：10連続正解ごとに「🔥🔥 N連続正解！」', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  for (let k = 1; k <= 10; k++) {
+    arenaPick(true)
+    if (k === 9) expect(screen.queryByText(/すごすぎる/)).toBeNull()
+    if (k < 10) fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(screen.getByText('🔥🔥 10連続正解！ すごすぎる！')).toBeInTheDocument()
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
