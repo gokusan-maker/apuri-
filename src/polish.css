@@ -4130,3 +4130,7 @@ header .event-chips { margin: 0 0 2px; }
 .battle-v2 .en.miss { border-color: #ef4444; box-shadow: 0 0 16px rgb(239 68 68 / 0.6); animation: panel-miss 0.4s ease-in-out; }
 @keyframes panel-miss { 20% { transform: translateX(-8px); } 40% { transform: translateX(7px); } 60% { transform: translateX(-5px); } 80% { transform: translateX(3px); } }
 @media (prefers-reduced-motion: reduce) { .battle-v2 .en.miss { animation: none; } }
+/* ボス戦：失ったハートが 💔 でわれる */
+.heart-break { display: inline-block; animation: heart-break 0.6s ease-out; }
+@keyframes heart-break { 0% { transform: scale(1.5); } 40% { transform: scale(0.9) rotate(-12deg); } 70% { transform: rotate(8deg); } }
+@media (prefers-reduced-motion: reduce) { .heart-break { animation: none; } }

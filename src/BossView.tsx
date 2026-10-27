@@ -707,7 +707,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         </p>
       )}
       <p className="boss-status">
-        <span aria-label={`のこりハート ${hearts}`}>{'❤️'.repeat(hearts) + '🤍'.repeat(HEARTS - hearts)}</span>
+        <span aria-label={`のこりハート ${hearts}`}>
+          {/* いまの問題で失ったハートは 💔 でわれる */}
+          {Array.from({ length: HEARTS }, (_, k) =>
+            k < hearts ? '❤️' : k < hearts + (atk && atk.at === index && picked !== null ? atk.lose : 0) ? (
+              <span key={`b${index}-${k}`} className="heart-break">
+                💔
+              </span>
+            ) : (
+              '🤍'
+            ),
+          )}
+        </span>
         {comeback && !won && <span className="comeback-badge">⚡逆転チャンス！ダメージ2倍</span>}
         {combo >= 2 && (
           <span key={combo} className={`combo${combo >= BIG_COMBO ? ' big' : ''}`}>

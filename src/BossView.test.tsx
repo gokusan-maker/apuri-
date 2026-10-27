@@ -126,6 +126,15 @@ describe('ボス戦', () => {
     expect(card().classList.contains('pinch')).toBe(true)
   })
 
+  it('まちがえて失ったハートは 💔 でわれる（次の問題では🤍）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+    answer(false)
+    expect(screen.getByLabelText('のこりハート 2').querySelector('.heart-break')!.textContent).toBe('💔')
+    fireEvent.click(screen.getByText('次へ'))
+    expect(screen.getByLabelText('のこりハート 2').querySelector('.heart-break')).toBeNull()
+    expect(screen.getByLabelText('のこりハート 2').textContent).toBe('❤️❤️🤍')
+  })
+
   it('まちがえると問題のパネルがゆれる（miss）', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     expect(document.querySelector('.boss .en')!.classList.contains('miss')).toBe(false)
