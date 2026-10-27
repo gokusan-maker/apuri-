@@ -9567,6 +9567,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sweat',
+    title: 'The Cool Science of Sweat',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Few people enjoy being sweaty, but sweating is one of the most important ways our bodies protect themselves. Humans have millions of sweat glands in their skin, more than almost any other animal. When we get hot, these glands release water onto the surface of the skin.",
+      "Sweat itself does not cool us down. Instead, the cooling happens when the sweat evaporates, or turns from liquid into gas. To change into gas, the water needs energy, and it takes that energy from our skin in the form of heat. This is ( A ) we feel cooler when a breeze dries our sweat.",
+      "This also explains why hot, humid days feel so uncomfortable. When the air is already full of water, sweat cannot evaporate easily. It simply stays on the skin, ( B ) us feeling hot and sticky. On a dry day, however, the same temperature can feel much more pleasant.",
+      "Some scientists believe that our excellent ability to sweat helped early humans survive. It may have allowed them to keep walking or running in the heat for long periods, while many animals had to stop and rest. So the next time you are covered in sweat, remember that your body is working hard to keep you safe.",
+    ],
+    ja: [
+      '汗をかくのが好きな人はほとんどいないが、汗をかくことは体が自分を守るもっとも大切な方法の1つだ。人間の皮ふには何百万もの汗腺があり、それはほかのほとんどどの動物よりも多い。体が熱くなると、これらの汗腺が皮ふの表面に水分を出す。',
+      '汗そのものが体を冷やすわけではない。そうではなく、冷えるのは汗が蒸発する、つまり液体から気体に変わるときなのだ。気体に変わるために水はエネルギーを必要とし、そのエネルギーを熱という形で皮ふからうばう。これが、風が汗をかわかすとすずしく感じる理由だ。',
+      'このことは、暑くてじめじめした日がとても不快に感じられる理由も説明する。空気がすでに水分でいっぱいだと、汗は蒸発しにくい。汗はただ皮ふの上に残り、私たちは暑くてべたべたした気分になる。しかし、乾いた日には、同じ気温でもずっと快適に感じられる。',
+      '汗をかく優れた能力が、初期の人類が生きのびるのに役立ったと考える科学者もいる。多くの動物が止まって休まなければならなかった間も、人類は暑さの中で長い時間歩いたり走ったりし続けられたのかもしれない。だから今度汗びっしょりになったら、体があなたを守るために一生けんめいはたらいていることを思い出そう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['why', 'what', 'which', 'whose'], answer: 0, why: 'This is why ～「これが～する理由だ」。うしろが完全な文（we feel cooler …）なので関係副詞 why。what・which はうしろに欠けた名詞が必要で、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['leaving', 'leaves', 'left', 'to leaving'], answer: 0, why: 'コンマのあとに分詞構文 leaving ～「（その結果）～のままにする」。leave ＋ 人 ＋ 形容詞。leaves を置くと接続詞なしで動詞が2つ並ぶ。' },
+    ],
+    underline: {
+      phrase: 'evaporates',
+      choices: ['turns from liquid into gas', 'becomes very cold', 'falls to the ground', 'gets thicker'],
+      answer: 0,
+      why: 'evaporate は「蒸発する」。本文でも or turns from liquid into gas と言いかえている。',
+    },
+    order: {
+      words: ['more', 'than', 'almost', 'any', 'other', 'animal'],
+      rest: '',
+      answer: 'more than almost any other animal',
+      ja: 'ほかのほとんどどの動物よりも多い（比較級 ＋ than any other ＋ 単数名詞）',
+    },
+    tf: [
+      { statement: '汗が体を冷やすのは、汗が蒸発するときだ。', answer: true, why: '第2段落 the cooling happens when the sweat evaporates。' },
+      { statement: 'じめじめした日には、汗がすぐに蒸発する。', answer: false, why: '第3段落 When the air is already full of water, sweat cannot evaporate easily。' },
+      { statement: '人間は、ほかのほとんどの動物より汗腺が多い。', answer: true, why: '第1段落 more than almost any other animal。' },
+    ],
+    qa: [
+      { q: 'How might sweating have helped early humans?', choices: ['They could keep moving in the heat for a long time.', 'They could run faster than all animals.', 'They needed less water to live.', 'They could sleep outside in the cold.'], answer: 0, why: '第4段落 It may have allowed them to keep walking or running in the heat for long periods。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
