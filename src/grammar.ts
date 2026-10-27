@@ -7155,8 +7155,8 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He helped me, so I bought him lunch in return.', ja: '彼が手伝ってくれたので、お返しに昼ごはんをおごった。' },
     ],
     questions: [
-      { sentence: 'Please move your bike. It is in the ___.', choices: ['way', 'ways', 'wayside'], answer: 0, why: 'in the way「じゃまになって」。the のあとは単数の way。' },
-      { sentence: 'By the ___, have you finished your report?', choices: ['way', 'ways', 'wayside'], answer: 0, why: 'by the way「ところで」。話題を変えるときに使い、the way の形で決まっている。' },
+      { sentence: 'Please move your bike. It is in the ___.', choices: ['way', 'ways', 'away'], answer: 0, why: 'in the way「じゃまになって」。the のあとは単数の way。' },
+      { sentence: 'By the ___, have you finished your report?', choices: ['way', 'ways', 'away'], answer: 0, why: 'by the way「ところで」。話題を変えるときに使い、the way の形で決まっている。' },
       { sentence: 'She gave me a book in ___ for my help.', choices: ['return', 'returned', 'returning'], answer: 0, why: 'in return for ～「～のお返しに」。in のあとは名詞 return。' },
     ],
   },
