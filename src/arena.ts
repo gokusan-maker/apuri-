@@ -27,6 +27,11 @@ const TITLES: [number, string][] = [
   [0, '🌱 見習い'],
 ]
 export const arenaTitle = (lv: number): string => TITLES.find(([min]) => clamp(lv) >= min)![1]
+// 次の称号まであと何階か（いちばん上の称号なら null）
+export function arenaNextTitle(lv: number): { title: string; floors: number } | null {
+  const next = [...TITLES].reverse().find(([min]) => min > clamp(lv))
+  return next ? { title: next[1], floors: next[0] - clamp(lv) } : null
+}
 // そのレベルの相手：そのレベルのボスのキャラクター
 export const arenaLook = (lv: number): BossLook => BOSSES[LEVEL_BOSS_LOOK[arenaCourse(lv).id]]
 export const arenaStart = (course: CourseId): number => clamp(COURSES.findIndex((c) => c.id === course))

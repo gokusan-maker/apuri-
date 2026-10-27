@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import type { CSSProperties } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaTitle, arenaLook, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaTitle, arenaLook, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, loadArenaBest, recordArenaBest } from './arena'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
 import { playCorrect, playWrong } from './sound'
@@ -68,6 +68,11 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
           いまのあなたは <strong>{arenaFloor(lv)}</strong>
         </p>
         <p className="arena-title-badge">称号：{arenaTitle(lv)}</p>
+        {arenaNextTitle(lv) && (
+          <p className="arena-next-title">
+            次の称号「{arenaNextTitle(lv)!.title}」まで あと{arenaNextTitle(lv)!.floors}階
+          </p>
+        )}
         <p className="arena-result-sub">
           {count}問中 {right}問正解・きょういちばん上は {arenaFloor(top)}
         </p>
