@@ -889,6 +889,7 @@ it('闘技場：次のレベルまで あと何階 かを出す', async () => {
   localStorage.clear()
   render(<Arena start={17} onExit={() => {}} />)
   expect(screen.getByLabelText('中2レベルまで あと3階')).toBeInTheDocument()
+  expect(document.querySelector('.arena-now-title')).toHaveTextContent('🌱 見習い') // いまの称号
   arenaPick(true)
   expect(screen.getByLabelText('中2レベルまで あと2階')).toBeInTheDocument()
 })

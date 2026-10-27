@@ -266,6 +266,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       </div>
       <p className="arena-now">
         いま <strong>{arenaFloor(shown)}</strong>
+        <span className="arena-now-title">{arenaTitle(shown)}</span>
       </p>
       {/* 次のレベルまでの進み（1レベル20階） */}
       <div className="arena-tonext" aria-label={`${arenaToNext(shown).label}まで あと${arenaToNext(shown).floors}階`}>
