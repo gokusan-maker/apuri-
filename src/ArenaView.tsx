@@ -6,7 +6,7 @@ import { BossFigure } from './BossView'
 import { playCorrect, playWrong } from './sound'
 
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える
-export function Arena({ start, onExit, onCoins }: { start: number; onExit: () => void; onCoins?: (n: number) => void }) {
+export function Arena({ start, onExit, onCoins, onTicket }: { start: number; onExit: () => void; onCoins?: (n: number) => void; onTicket?: (n: number) => void }) {
   const [lv, setLv] = useState(start)
   const [q, setQ] = useState(() => arenaQuestionAt(start, 0))
   const [picked, setPicked] = useState<number | null>(null)
@@ -19,6 +19,7 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
   // いままでの最高（はじめてなら、スタートの階）。これより上に着くと記録更新でコイン
   const [record, setRecord] = useState(() => Math.max(prevBest ?? start, start))
   const [newRecord, setNewRecord] = useState(false)
+  const [newTitle, setNewTitle] = useState<string | null>(null) // はじめて着いた称号（ガチャチケット1枚）
   const [moved, setMoved] = useState<'up' | 'down' | null>(null) // 階が変わった直後：新しい相手が登場
   const look = arenaLook(lv)
   const correct = picked !== null && picked === q.answer
@@ -39,11 +40,20 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
         setNewRecord(true)
         recordArenaBest(up)
         onCoins?.(ARENA_BEST_COINS)
-      } else setNewRecord(false)
+        // 最高記録で新しい称号に上がったら、ガチャチケット1枚（称号ごとに1回）
+        if (arenaTitle(up) !== arenaTitle(record)) {
+          setNewTitle(arenaTitle(up))
+          onTicket?.(1)
+        } else setNewTitle(null)
+      } else {
+        setNewRecord(false)
+        setNewTitle(null)
+      }
       playCorrect()
     } else {
       setStreak(0)
       setNewRecord(false)
+      setNewTitle(null)
       playWrong()
     }
   }
@@ -138,6 +148,11 @@ export function Arena({ start, onExit, onCoins }: { start: number; onExit: () =>
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}
+            </p>
+          )}
+          {correct && newTitle && (
+            <p className="arena-record arena-title-get" role="status">
+              🎖 新しい称号「{newTitle}」！ 🎟ガチャチケット×1
             </p>
           )}
           <button className="good next-unit-btn" onClick={next}>

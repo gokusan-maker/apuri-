@@ -659,3 +659,31 @@ it('闘技場：3連続正解ごとに2階ジャンプ', async () => {
   pickRight()
   expect(document.querySelector('.arena-move')).toHaveTextContent('🚀 3連続！ 2階ジャンプ！ 5階（高2レベル）へ')
 })
+
+it('闘技場：最高記録で新しい称号に上がると、ガチャチケット1枚（称号ごとに1回）', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  const { levelUnits } = await import('./grammarcastle')
+  localStorage.clear()
+  localStorage.setItem('eitan:arena-best', '1')
+  const ticket = vi.fn()
+  render(<Arena start={1} onExit={() => {}} onTicket={ticket} />)
+  const pick = (right: boolean) => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 6).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
+    const g = COURSES.slice(0, 6).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
+    const ans = w ? w.ja : g!.choices[g!.answer]
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => (right ? b.textContent === ans : b.textContent !== ans))!)
+  }
+  pick(true) // 2階→3階（見習いのまま）
+  expect(ticket).not.toHaveBeenCalled()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pick(true) // 3階→4階：戦士に上がる
+  expect(ticket).toHaveBeenCalledWith(1)
+  expect(screen.getByText('🎖 新しい称号「🗡 戦士」！ 🎟ガチャチケット×1')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pick(false) // 4階→3階
+  fireEvent.click(screen.getByText(/^次へ/))
+  pick(true) // また4階：記録更新ではないのでチケットなし
+  expect(ticket).toHaveBeenCalledTimes(1)
+})
