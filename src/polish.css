@@ -4178,3 +4178,19 @@ header .event-chips { margin: 0 0 2px; }
 .arena-floor.summit.here { box-shadow: 0 0 22px rgb(250 204 21 / 0.8); }
 .af-summit { font-size: 0.72rem; color: #fde047; }
 .arena-qtag.reading { background: rgb(74 222 128 / 0.18); color: #86efac; }
+/* 闘技場：レベルの区切りをこえたときの LEVEL UP! の演出 */
+.arena-levelup { position: absolute; z-index: 3; left: 50%; top: 50%; display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 20px; border-radius: 16px; background: linear-gradient(180deg, #fde047, #f97316); color: #451a03; white-space: nowrap; box-shadow: 0 0 32px rgb(250 204 21 / 0.9); transform: translate(-50%, -50%); animation: levelup-pop 2s ease-out forwards; pointer-events: none; }
+.arena-levelup b { font-size: 1.6rem; font-style: italic; letter-spacing: 0.06em; text-shadow: 2px 2px 0 #fff7ed; }
+.arena-levelup span { font-size: 0.9rem; font-weight: 800; }
+@keyframes levelup-pop { 0% { transform: translate(-50%, -50%) scale(0.2) rotate(-12deg); opacity: 0; } 15% { transform: translate(-50%, -50%) scale(1.25) rotate(3deg); opacity: 1; } 28% { transform: translate(-50%, -50%) scale(1) rotate(0); } 85% { opacity: 1; } 100% { transform: translate(-50%, -70%) scale(1); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .arena-levelup { animation: none; } }
+.arena-floor.lv-gate { border-top: 2px dashed rgb(250 204 21 / 0.7); }
+.arena-floor.endless { background: linear-gradient(90deg, rgb(168 85 247 / 0.28), rgb(14 165 233 / 0.12)); }
+/* ボスの城の問題の階：自分のライフ */
+.bfloor-life { display: flex; align-items: center; justify-content: center; gap: 2px; margin: 4px 0; font-size: 1.15rem; }
+.bfloor-life-label { margin-right: 6px; font-size: 0.75rem; font-weight: 700; opacity: 0.8; }
+.bfloor-life.empty { filter: grayscale(0.6); }
+.bfloor-down { margin: 6px 0; color: #f87171; font-weight: 900; text-align: center; }
+.bfloor.hurt { animation: bfloor-hurt 0.35s ease-out; }
+@keyframes bfloor-hurt { 25% { transform: translateX(-6px); } 50% { transform: translateX(6px); } 75% { transform: translateX(-3px); } }
+@media (prefers-reduced-motion: reduce) { .bfloor.hurt { animation: none; } }

@@ -2,17 +2,39 @@ import { useState } from 'react'
 import type { BossLook, TeamQ } from './boss'
 import { BossArena } from './BossArenaView'
 import { BossFigure } from './BossView'
-import { bcPassOf } from './bosscastle'
+import { bcLivesOf, bcPassOf } from './bosscastle'
 import { playCorrect, playWrong } from './sound'
 
 // ボスの城の問題の階：単語は10問（8問以上）、ほかは5問（4問以上）正解でクリア。終わったらすぐ再チャレンジできる
+// まちがえると自分のライフ（❤️）がへり、0になったら負け（オーナーの要望）
 export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 0, best, boss }: { title: string; qs: TeamQ[]; onDone: (score: number) => void; onBack: () => void; onRetry?: () => void; taunt?: string; reward?: number; best?: number; boss?: BossLook }) {
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [hint, setHint] = useState(false)
+  const maxLives = bcLivesOf(qs.length)
+  const [lives, setLives] = useState(maxLives)
   const q = qs[i]
   const pass = bcPassOf(qs.length)
+  const hurt = picked !== null && q !== undefined && picked !== q.answer
+  const dead = lives <= 0
+  // 自分のライフ：いまの問題で失ったハートは 💔 でわれる
+  const lifeView = (
+    <p className={`bfloor-life${dead ? ' empty' : ''}`} aria-label={`のこりライフ ${lives}`}>
+      <span className="bfloor-life-label">あなたのライフ</span>
+      {Array.from({ length: maxLives }, (_, k) =>
+        k < lives ? (
+          '❤️'
+        ) : k === lives && hurt ? (
+          <span key={`b${i}`} className="heart-break">
+            💔
+          </span>
+        ) : (
+          '🤍'
+        ),
+      )}
+    </p>
+  )
   // 階のボス：クリアに必要な正解数がそのままボスのHP。正解するたびにダメージ
   const bossHp = Math.max(0, pass - score)
   const bossView = boss && (
@@ -39,7 +61,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <section className="card bfloor battle-v2" aria-label={title}>
         {bossView}
         <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
-          {score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
+          {dead ? `💀 ライフがなくなった… ${score}/${qs.length}問正解` : score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
         {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！</p>}
         {best !== undefined && score > best && <p className="bfloor-best">🏅 自己ベスト更新！（前回まで {best}問）</p>}
@@ -52,12 +74,13 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       </section>
     )
   return (
-    <section className="card bfloor battle-v2" aria-label={title}>
+    <section className={`card bfloor battle-v2${hurt ? ' hurt' : ''}`} aria-label={title}>
       <button className="list-link" onClick={onBack}>
         ← 城にもどる
       </button>
       <p className="bfloor-title">{title}</p>
       {bossView}
+      {lifeView}
       <p className="bfloor-count">
         {i + 1} / {qs.length}
       </p>
@@ -84,7 +107,10 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
               if (k === q.answer) {
                 setScore(score + 1)
                 playCorrect()
-              } else playWrong()
+              } else {
+                setLives(lives - 1)
+                playWrong()
+              }
             }}
           >
             {c}
@@ -95,18 +121,20 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         <button
           className="good next-unit-btn"
           onClick={() => {
-            const last = i === qs.length - 1
-            setI(i + 1)
+            // ライフが0になったら、のこりの問題はとばして結果へ
+            const last = i === qs.length - 1 || dead
+            setI(dead ? qs.length : i + 1)
             setPicked(null)
             setHint(false)
             if (last) onDone(score)
           }}
         >
-          {i === qs.length - 1 ? '結果を見る' : '次へ'}
+          {i === qs.length - 1 || dead ? '結果を見る' : '次へ'}
         </button>
       )}
       {/* 最後の問題に答えたら、結果を見なくてもすぐ再チャレンジできる */}
-      {picked !== null && i === qs.length - 1 && onRetry && (
+      {dead && picked !== null && <p className="bfloor-down">💀 ライフがなくなった！</p>}
+      {picked !== null && (i === qs.length - 1 || dead) && onRetry && (
         <button
           className="list-link bfloor-retry-now"
           onClick={() => {

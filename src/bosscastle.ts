@@ -2,6 +2,7 @@
 // ボスごとに5階：どの階にもボスがいる。1〜4階は「階のボス」が守る単語・文法・読解・ミックスの問題（単語は10問・8問正解、ほかは5問・4問正解で次へ）、5階でそのレベルのボスと戦う
 import { BOSSES, teamBossQuestions, type BossLook, type TeamQ } from './boss'
 import { levelUnits } from './grammarcastle'
+import { shuffle } from './quiz'
 import { passagesFor, type ReadLevel } from './readlevel'
 import type { LongPassage } from './longreading'
 import { COURSES, courseWords, type CourseId } from './wordcourse'
@@ -52,6 +53,15 @@ export function bossFloorQs(course: CourseId, floor: number, rnd: () => number =
   if (floor === 2) return by('reading').slice(0, BC_QS)
   return [...by('word').slice(5, 7), ...by('grammar').slice(5, 7), ...by('reading').slice(5, 6)]
 }
+// 再チャレンジ：同じ単元の同じ問題をもう一度（順番と選択肢の並びだけ変える。オーナーの要望）
+export function retryFloorQs(qs: TeamQ[], rnd: () => number = Math.random): TeamQ[] {
+  return shuffle(qs, rnd).map((q) => {
+    const choices = shuffle(q.choices, rnd)
+    return { ...q, choices, answer: choices.indexOf(q.choices[q.answer]) }
+  })
+}
+// 階のライフ：まちがえてもクリアできる回数＋1（単語10問は❤️3つ、5問の階は❤️2つ）。0になったら負け
+export const bcLivesOf = (n: number): number => n - bcPassOf(n) + 1
 
 // 問題の階ごとの最高得点（階の id → 正解数）
 const BEST_KEY = 'eitan:bcastle-best'
