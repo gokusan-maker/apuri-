@@ -2500,3 +2500,4 @@
 - 2026-10-27: 文法に「群前置詞⑤ in exchange for ／ in response to ／ in contrast to」の単元を追加
 - 2026-10-27: 高3（共通テスト）の長文に、評論「Why Hair Turns Gray」（髪が白くなるしくみ）を追加
 - 2026-10-27: 闘技場で、3回続けてまちがえると「💪 ドンマイ！」の応援が出るように
+- 2026-10-27: 文法に「群前置詞⑥ on account of ／ in accordance with ／ with the exception of」の単元を追加
