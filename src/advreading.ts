@@ -11308,6 +11308,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-polar-bear',
+    title: 'Life on the Ice',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Polar bears live in the Arctic, one of the coldest places on Earth. Surprisingly, their fur is not really white. Each hair is clear and hollow, and it only looks white because it reflects light. Under the fur, their skin ( A ) black, which helps it take in heat from the sun.",
+      "Polar bears depend on sea ice to survive. They mainly eat seals, and they hunt them by waiting next to holes in the ice where seals come up to breathe. Without the ice, it is very difficult for the bears to catch enough food.",
+      "In recent years, the Arctic has been getting warmer, and the sea ice melts earlier in spring and forms later in autumn. This means polar bears have less time to hunt. Some bears now have to swim long distances to find ice, ( B ) uses a lot of their energy.",
+      "Scientists are watching polar bears closely. Because they are so sensitive to changes in the ice, their health tells us a great deal about how the Arctic is changing.",
+    ],
+    ja: [
+      'ホッキョクグマは、地球でもとくに寒い場所の1つである北極に住んでいる。おどろくことに、その毛は本当は白くない。1本1本の毛はとうめいで中が空どうになっていて、光をはね返すので白く見えるだけなのだ。毛の下の皮ふは黒く、太陽の熱を取りこむのに役立っている。',
+      'ホッキョクグマが生きのびるには、海の氷が欠かせない。おもにアザラシを食べ、アザラシが息をするために顔を出す氷の穴のそばで待ってつかまえる。氷がなければ、クマが十分なえさをつかまえるのはとても難しい。',
+      '近年、北極は暖かくなってきていて、海の氷は春にはより早くとけ、秋にはよりおそくできるようになった。つまり、ホッキョクグマが狩りをできる時間が短くなっているのだ。今では、氷を見つけるために長い距離を泳がなければならないクマもいて、それは多くのエネルギーを使う。',
+      '科学者たちはホッキョクグマを注意深く見守っている。ホッキョクグマは氷の変化にとても敏感なので、その健康状態から、北極がどのように変わってきているかが多くわかるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is', 'are', 'being', 'to be'], answer: 0, why: '主語 their skin（単数）に続く文の動詞なので is。are は複数の主語の形で、being・to be だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容（長い距離を泳ぐこと）を受けて「そしてそれは」と続ける関係代名詞 which。that はコンマのあとに使えず、what は先行詞なしで使う語、it では接続詞がなく文が2つ並ぶ。' },
+    ],
+    underline: {
+      phrase: 'sensitive',
+      choices: ['easily affected by something', 'very strong', 'not interested', 'very large'],
+      answer: 0,
+      why: 'sensitive to ～ は「～に敏感な・～のえいきょうを受けやすい」。氷が少し変わるだけでえいきょうを受けるという意味。',
+    },
+    order: {
+      words: ['it', 'is', 'very', 'difficult', 'for', 'the', 'bears'],
+      rest: 'to catch enough food',
+      answer: 'it is very difficult for the bears',
+      ja: 'クマが～するのはとても難しい（it is ～ for … to ―「…が―するのは～だ」）',
+    },
+    tf: [
+      { statement: 'ホッキョクグマの毛は、本当は白くない。', answer: true, why: '第1段落 their fur is not really white。' },
+      { statement: 'ホッキョクグマは、おもに魚を食べる。', answer: false, why: '第2段落 They mainly eat seals。' },
+      { statement: '海の氷は、近年おそくとけるようになった。', answer: false, why: '第3段落 the sea ice melts earlier in spring。' },
+    ],
+    qa: [
+      { q: 'How do polar bears usually catch seals?', choices: ['By waiting next to holes in the ice.', 'By chasing them in deep water.', 'By digging in the snow.', 'By climbing trees.'], answer: 0, why: '第2段落 they hunt them by waiting next to holes in the ice。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
