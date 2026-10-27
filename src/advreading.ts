@@ -9496,6 +9496,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-twinkling-stars',
+    title: 'Why Do Stars Twinkle?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a clear night, the stars seem to sparkle and shake, as if they were alive. This is the twinkling that many songs and poems describe. Surprisingly, however, the stars themselves are not flickering at all. The twinkling happens ( A ) of our own planet's air.",
+      "Before starlight reaches our eyes, it has to pass through many layers of air. These layers have different temperatures and are always moving, so they bend the light slightly in different directions. Because a star is so far away that it looks like a tiny point, even small changes make it seem to jump and change brightness.",
+      "Planets, on the other hand, usually shine with a steady light. They are much closer to us, so they appear as tiny disks rather than single points. The small bends in the light tend to ( B ) each other out across the disk, so planets twinkle much less than stars.",
+      "Twinkling may be beautiful, but it is a problem for astronomers who want clear pictures. That is one reason some telescopes are placed in space, far above the air. Others use special mirrors that change shape many times a second to correct the blurring.",
+    ],
+    ja: [
+      '晴れた夜には、星がまるで生きているかのようにきらきら光り、ゆれているように見える。これが、多くの歌や詩にえがかれている「またたき」だ。しかし意外なことに、星そのものはまったくちらついていない。またたきは、私たち自身の惑星の空気のせいで起こるのだ。',
+      '星の光は、私たちの目に届く前に、空気の多くの層を通りぬけなければならない。これらの層は温度がちがい、いつも動いているので、光をさまざまな方向へ少しずつ曲げる。星はとても遠くにあって小さな点のように見えるので、わずかな変化でも、とびはねたり明るさが変わったりするように見える。',
+      '一方、惑星はたいていゆれずに光る。惑星は私たちにずっと近いので、1つの点ではなく小さな円盤のように見える。光の小さな曲がりは円盤全体でおたがいに打ち消し合いやすいので、惑星は星よりもずっとまたたきにくい。',
+      'またたきは美しいかもしれないが、はっきりした写真をとりたい天文学者にとっては問題だ。それが、空気よりはるか上の宇宙に置かれる望遠鏡がある理由の1つだ。ほかの望遠鏡は、1秒間に何回も形を変える特別な鏡を使ってぼやけを直している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'because to', 'due', 'owing'], answer: 0, why: 'because of ～「～のせいで」。because to という形はなく、due・owing は to と組んで due to ～・owing to ～ の形で使う。' },
+      { id: 'B', choices: ['cancel', 'cancels', 'canceling', 'canceled'], answer: 0, why: 'tend to ＋ 動詞の原形「～しがちだ」。cancel each other out「おたがいに打ち消し合う」。' },
+    ],
+    underline: {
+      phrase: 'flickering',
+      choices: ['shining unsteadily', 'moving closer', 'growing bigger', 'disappearing forever'],
+      answer: 0,
+      why: 'flicker は「（光が）ちらちらする・ゆらめく」。shine unsteadily とほぼ同じ意味。',
+    },
+    order: {
+      words: ['is', 'so', 'far', 'away', 'that', 'it'],
+      rest: 'looks like a tiny point',
+      answer: 'is so far away that it',
+      ja: 'とても遠いので～（so ～ that …）',
+    },
+    tf: [
+      { statement: '星がまたたくのは、星そのものがちらついているからだ。', answer: false, why: '第1段落 the stars themselves are not flickering at all。' },
+      { statement: '惑星は、ふつう星よりもまたたきにくい。', answer: true, why: '第3段落 planets twinkle much less than stars。' },
+      { statement: '宇宙に置かれた望遠鏡は、空気によるまたたきの影響を受けにくい。', answer: true, why: '第4段落 some telescopes are placed in space, far above the air。' },
+    ],
+    qa: [
+      { q: 'Why do planets twinkle less than stars?', choices: ['They look like tiny disks, so the small bends in light cancel out.', 'They are much hotter than stars.', 'They are farther away than stars.', 'They have no air around them.'], answer: 0, why: '第3段落 they appear as tiny disks … The small bends in the light tend to cancel each other out。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
