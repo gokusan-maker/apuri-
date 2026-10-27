@@ -8614,6 +8614,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-supply-orders',
+    title: 'Memo: A New Way to Order Office Supplies',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To: All Employees. From: General Affairs. Starting on October 1, office supplies such as pens, paper, and printer ink will no longer be ordered by email. ( A ), all requests must be made through the new online form on the company website.",
+      "To place an order, log in with your employee number, choose the items you need, and click \"Submit.\" Orders received by noon on Wednesday will be delivered to your desk on Friday of the same week. Orders received after that time will be delivered the following Friday.",
+      "Please note that each department has a monthly budget for supplies. If an order would go over the budget, the online form will ask for approval from your manager before it is ( B ).",
+      "We believe this new system will save time and reduce mistakes. If you have trouble using the form, please contact Mia Chen in General Affairs at extension 305.",
+    ],
+    ja: [
+      '宛先：全社員　差出人：総務部。10月1日から、ペン・紙・プリンターのインクなどの事務用品は、メールでは注文しないことになります。そのかわりに、すべての依頼は会社のウェブサイトにある新しいオンラインフォームから行ってください。',
+      '注文するには、社員番号でログインし、必要な品物を選んで「送信」をクリックしてください。水曜日の正午までに受けつけた注文は、同じ週の金曜日に自分の机まで届けられます。それ以降に受けつけた注文は、翌週の金曜日に届けられます。',
+      '各部署には事務用品の月ごとの予算があることにご注意ください。注文が予算をこえる場合、オンラインフォームは、注文が送られる前に上司の承認を求めます。',
+      'この新しいしくみによって、時間が節約でき、まちがいも減ると考えています。フォームの使い方でお困りの場合は、内線305の総務部ミア・チェンまでご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Instead', 'Because', 'Although', 'Unless'], answer: 0, why: '「メールではなく、そのかわりに～」と前の文を受ける副詞 Instead。Because・Although・Unless は接続詞なので、コンマのあとに文を1つだけ続ける形では使えない。' },
+      { id: 'B', choices: ['sent', 'send', 'sending', 'to send'], answer: 0, why: '主語 it（注文）は「送られる」側なので受け身 is sent。is send・is to send（予定）では意味が通らず、is sending は「送っている」になる。' },
+    ],
+    tf: [
+      { statement: '10月1日からは、事務用品をメールで注文できなくなる。', answer: true, why: '第1段落 will no longer be ordered by email。' },
+      { statement: '水曜日の正午までの注文は、その週の金曜日に届く。', answer: true, why: '第2段落 Orders received by noon on Wednesday will be delivered … on Friday of the same week。' },
+      { statement: '予算をこえる注文は、自動的に取り消される。', answer: false, why: '第3段落 the online form will ask for approval from your manager。取り消されるのではなく上司の承認が必要になる。' },
+    ],
+    qa: [
+      { q: 'What should employees use to order supplies from October 1?', choices: ['An online form on the company website.', 'Email to General Affairs.', 'A paper form at the front desk.', 'A phone call to their manager.'], answer: 0, why: '第1段落 all requests must be made through the new online form on the company website。' },
+      { q: 'When will an order received on Thursday be delivered?', choices: ['On Friday of the following week.', 'On the same day.', 'On Friday of the same week.', 'On the next Monday.'], answer: 0, why: '第2段落 Orders received after that time will be delivered the following Friday。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
