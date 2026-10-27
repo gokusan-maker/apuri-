@@ -9750,6 +9750,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-autumn-leaves',
+    title: 'Why Leaves Change Color',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In autumn, many trees turn bright red, orange, and yellow. People often think that the leaves make these colors in autumn, but in fact some of the colors ( A ) in the leaves all summer long.",
+      "Leaves are green because they contain a lot of chlorophyll, a substance that plants use to make food from sunlight. Chlorophyll is so strong in color that it hides the yellow and orange substances that are also in the leaves. When the days become shorter and cooler, trees stop producing chlorophyll. As the green slowly disappears, the yellow and orange colors finally appear.",
+      "Red is different. Some trees, such as maples, actually make a new red substance in autumn. Scientists believe this red color may work like sunscreen, ( B ) the leaves from strong light while the tree takes back useful nutrients before the leaves fall.",
+      "The weather also affects how beautiful the colors become. Sunny days and cool nights help trees make more red, while a very warm or rainy autumn often produces duller colors. So the next time you walk under colorful trees, remember that you are seeing both old colors that were hidden and new ones made for the season.",
+    ],
+    ja: [
+      '秋になると、多くの木があざやかな赤やオレンジ、黄色に変わる。葉は秋にこうした色を作るのだと思われがちだが、実は色の一部は夏のあいだずっと葉の中にあるのだ。',
+      '葉が緑色なのは、植物が日光から養分を作るのに使う物質、葉緑素をたくさんふくんでいるからだ。葉緑素は色がとても強いので、葉の中にある黄色やオレンジ色の物質をかくしてしまう。日が短く涼しくなると、木は葉緑素を作るのをやめる。緑がゆっくり消えていくにつれて、黄色やオレンジ色がようやくあらわれる。',
+      '赤はちがう。カエデなど一部の木は、秋に新しく赤い物質を実際に作る。科学者たちは、この赤い色が日焼け止めのようなはたらきをして、葉が落ちる前に木が役に立つ栄養分を取りもどすあいだ、強い光から葉を守っているのではないかと考えている。',
+      '天気も、色がどれだけ美しくなるかに影響する。晴れた日と涼しい夜は木が赤をより多く作るのを助けるが、とても暖かい秋や雨の多い秋は、色がくすみがちだ。だから次に色づいた木の下を歩くときは、かくれていた昔からの色と、この季節のために作られた新しい色の両方を見ているのだと思い出してほしい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['have been', 'has been', 'having been', 'to be'], answer: 0, why: '主語 some of the colors（複数）に続く文の動詞。「夏のあいだずっと」と続いているので現在完了 have been。has は単数の主語、having been・to be だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['protecting', 'protects', 'protected', 'to protecting'], answer: 0, why: 'コンマのあとに分詞構文 protecting ～「（そして）～を守る」。protects を置くと接続詞なしで動詞が2つ並ぶ。protected（受け身の意味）では目的語 the leaves と合わず、to protecting は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'duller',
+      choices: ['less bright', 'more exciting', 'heavier', 'more natural'],
+      answer: 0,
+      why: 'dull は色について「くすんだ・あざやかでない」。duller は比較級で「よりくすんだ」。前の文の「美しくなる」と対比されている。',
+    },
+    order: {
+      words: ['trees', 'stop', 'producing', 'chlorophyll'],
+      rest: 'when the days become shorter and cooler',
+      answer: 'trees stop producing chlorophyll',
+      ja: '木は葉緑素を作るのをやめる（stop ～ing「～するのをやめる」）',
+    },
+    tf: [
+      { statement: '黄色やオレンジ色の物質は、夏のあいだは葉緑素にかくれている。', answer: true, why: '第2段落 it hides the yellow and orange substances that are also in the leaves。' },
+      { statement: '赤い色も、夏のあいだから葉の中にある。', answer: false, why: '第3段落 Some trees ... actually make a new red substance in autumn。赤は秋に新しく作られる。' },
+      { statement: 'とても暖かい秋は、色があざやかになりやすい。', answer: false, why: '第4段落 a very warm or rainy autumn often produces duller colors。' },
+    ],
+    qa: [
+      { q: 'Why do the yellow and orange colors appear in autumn?', choices: ['Because the green chlorophyll that hid them disappears.', 'Because trees make them for the first time.', 'Because the leaves get more sunlight.', 'Because rain washes the green color away.'], answer: 0, why: '第2段落 As the green slowly disappears, the yellow and orange colors finally appear。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
