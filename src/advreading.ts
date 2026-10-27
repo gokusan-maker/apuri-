@@ -9608,6 +9608,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-fridge-cleaning',
+    title: 'Memo: Cleaning Out the Office Refrigerator',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To: All Staff on the Third Floor. From: Office Manager. To keep our shared kitchen clean and healthy, the refrigerator will be cleaned out every Friday at 4:00 p.m., starting this week.",
+      "Any food or drinks that are not labeled with the owner's name and the date will be ( A ) away during the cleaning. Labels and markers are available in the drawer next to the sink. Please also remember that items should not be kept in the refrigerator for more than one week.",
+      "We have received several complaints about unpleasant smells and spilled drinks. If you spill something, please wipe it up right away. Large containers take up a lot of space, so we ask you to bring your lunch in a ( B ) box whenever possible.",
+      "We appreciate your cooperation in keeping the kitchen a pleasant place for everyone. If you have any suggestions, please leave a note in the box on the kitchen counter.",
+    ],
+    ja: [
+      '宛先：3階の全社員　差出人：オフィス管理者。共用の台所を清潔で衛生的に保つため、今週から毎週金曜日の午後4時に冷蔵庫の中を片づけます。',
+      '持ち主の名前と日付のラベルがはられていない食べ物や飲み物は、片づけのときに捨てられます。ラベルとマーカーは流しの横の引き出しにあります。また、冷蔵庫に1週間をこえて物を入れておかないようにしてください。',
+      'いやなにおいや、こぼれた飲み物についての苦情がいくつか届いています。何かをこぼしたら、すぐにふいてください。大きな容器は場所をとるので、できるだけ小さめの弁当箱で昼食を持ってきてください。',
+      '台所をみんなにとって気持ちのよい場所に保つためのご協力に感謝します。ご提案があれば、台所のカウンターにある箱にメモを入れてください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['thrown', 'throw', 'threw', 'throwing'], answer: 0, why: '食べ物は「捨てられる」側なので、be ＋ 過去分詞の受け身 will be thrown away。threw は過去形で be のあとに置けない。' },
+      { id: 'B', choices: ['smaller', 'smallest', 'smallness', 'smally'], answer: 0, why: '名詞 box の前に置く形容詞。前の文の Large containers と比べて「より小さい」なので比較級 smaller。a smallest とは言わず、smallness は名詞、smally という語はない。' },
+    ],
+    tf: [
+      { statement: '冷蔵庫の片づけは、毎週金曜日の午後に行われる。', answer: true, why: '第1段落 every Friday at 4:00 p.m.。' },
+      { statement: 'ラベルのない食べ物は、片づけのときに捨てられる。', answer: true, why: '第2段落 not labeled … will be thrown away。' },
+      { statement: '冷蔵庫には、物を2週間まで入れておいてよい。', answer: false, why: '第2段落 should not be kept … for more than one week。' },
+    ],
+    qa: [
+      { q: 'Where can staff find labels?', choices: ['In the drawer next to the sink.', 'On the kitchen counter.', 'In the office manager\'s room.', 'Inside the refrigerator.'], answer: 0, why: '第2段落 Labels and markers are available in the drawer next to the sink。' },
+      { q: 'What have some staff complained about?', choices: ['Unpleasant smells and spilled drinks.', 'The price of lunch.', 'The size of the kitchen.', 'The cleaning schedule.'], answer: 0, why: '第3段落 We have received several complaints about unpleasant smells and spilled drinks。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
