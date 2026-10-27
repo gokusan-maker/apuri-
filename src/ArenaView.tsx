@@ -89,7 +89,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
           </p>
         )}
         <p className="arena-result-sub">
-          {count}問中 {right}問正解・きょういちばん上は {arenaFloor(top)}
+          {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
         <p className="arena-result-best">{ended.newBest ? `🏅 最高記録 更新！ ${arenaFloor(top)}` : `最高記録 ${arenaFloor(ended.best)}`}</p>
         <button
