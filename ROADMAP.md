@@ -1881,6 +1881,8 @@
 
 - [x] 文法：自動詞＋前置詞④（concentrate on ／ participate in ／ care about）
 
+- [x] 長文（共通テスト）：評論「The Hidden Work of Blinking」（まばたきの役目）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

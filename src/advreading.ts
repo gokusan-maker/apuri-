@@ -8644,6 +8644,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-blinking',
+    title: 'The Hidden Work of Blinking',
+    level: '難関大（評論）',
+    paragraphs: [
+      "We blink so often that we hardly notice it. An adult usually blinks around fifteen to twenty times a minute, and each blink lasts only a fraction of a second. ( A ) these blinks, our eyes are closed for several minutes every hour while we are awake.",
+      "The most obvious job of blinking is to protect the eyes. Each blink spreads a thin layer of tears across the surface of the eye, which keeps it wet and washes away dust. When we stare at a screen, however, we tend to blink much less, so our eyes can become dry and tired.",
+      "Interestingly, we blink far more often than is needed just to keep our eyes wet. Some researchers think blinking may also give the brain a tiny break. Studies have found that people often blink at natural pauses, such as the end of a sentence when reading or a scene change in a movie.",
+      "Why don't we notice the world going dark each time we blink? The brain seems to fill in the gap, so that what we see appears ( B ). In this way, an action as simple as blinking shows how much work our bodies and brains do without our being aware of it.",
+    ],
+    ja: [
+      '私たちはとてもひんぱんにまばたきをするので、ほとんどそれに気づかない。大人はふつう1分間に15〜20回ほどまばたきをし、1回のまばたきはほんの一瞬しか続かない。こうしたまばたきのせいで、私たちは起きている間、1時間に数分間は目を閉じていることになる。',
+      'まばたきのもっともはっきりした役目は、目を守ることだ。まばたきのたびに目の表面に涙のうすい層が広がり、目をうるおしてほこりを洗い流す。しかし、画面を見つめていると、私たちはまばたきがずっと少なくなりがちで、そのため目が乾いてつかれることがある。',
+      '興味深いことに、私たちは目をうるおすだけに必要な回数よりもずっと多くまばたきをしている。まばたきは脳にほんの小さな休けいをあたえているのかもしれないと考える研究者もいる。研究では、人は読書中の文の終わりや映画の場面の変わり目など、自然な区切りでまばたきすることが多いとわかっている。',
+      'なぜ私たちは、まばたきのたびに世界が暗くなることに気づかないのだろうか。脳がそのすき間をうめているらしく、そのため見えるものはとぎれずに続いているように見える。このように、まばたきのような単純な動作も、私たちの体と脳が、私たちの気づかないうちにどれほど多くの仕事をしているかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['Because of', 'Because', 'Although', 'Despite of'], answer: 0, why: 'うしろが名詞（these blinks）なので前置詞句 Because of。Because・Although は接続詞で文が必要、Despite of という形はない。' },
+      { id: 'B', choices: ['continuous', 'continuously', 'continue', 'to continuing'], answer: 0, why: 'appear ＋ 形容詞「～に見える」。副詞 continuously や動詞の原形は置けない。' },
+    ],
+    underline: {
+      phrase: 'a fraction of a second',
+      choices: ['a very short time', 'exactly one second', 'a few minutes', 'a long time'],
+      answer: 0,
+      why: 'a fraction of a second は「1秒のほんの一部」、つまり「ほんの一瞬」。',
+    },
+    order: {
+      words: ['far', 'more', 'often', 'than', 'is', 'needed'],
+      rest: 'just to keep our eyes wet',
+      answer: 'far more often than is needed',
+      ja: '必要な回数よりずっと多く（far ＋ 比較級、than のあとの主語が省かれた形）',
+    },
+    tf: [
+      { statement: '画面を見つめていると、まばたきの回数が減りやすい。', answer: true, why: '第2段落 When we stare at a screen, … we tend to blink much less。' },
+      { statement: '私たちは、目をうるおすのに必要な回数しかまばたきをしない。', answer: false, why: '第3段落 we blink far more often than is needed just to keep our eyes wet。' },
+      { statement: '人は文の終わりなど、自然な区切りでまばたきすることが多い。', answer: true, why: '第3段落 people often blink at natural pauses, such as the end of a sentence。' },
+    ],
+    qa: [
+      { q: 'What is the most obvious job of blinking?', choices: ['To protect the eyes.', 'To help us fall asleep.', 'To make the eyes look bigger.', 'To send messages to other people.'], answer: 0, why: '第2段落 The most obvious job of blinking is to protect the eyes。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
