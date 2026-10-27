@@ -10365,6 +10365,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-cricket-thermometer',
+    title: 'A Living Thermometer',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On warm summer nights, you can often hear crickets singing in the grass. Surprisingly, these small insects can tell you the temperature. The warmer it is, the faster crickets ( A ) their sound.",
+      "Crickets do not actually sing with their mouths. A male cricket rubs the edge of one wing against the other, a little like running a fingernail along the teeth of a comb. Males make this sound mainly to attract females and to warn other males to stay away.",
+      "Crickets are cold-blooded, which means their body temperature changes with the air around them. When the air is warm, their muscles work faster, so they can rub their wings more often. When it gets cooler, their movements slow down, and the chirping becomes slower ( B ).",
+      "Long ago, a scientist found a simple rule for one kind of cricket. If you count its chirps for 14 seconds and add 40, you get the temperature in degrees Fahrenheit. The rule does not work for every kind of cricket, but it shows how closely animals are connected to the world around them.",
+    ],
+    ja: [
+      '暖かい夏の夜には、草むらでコオロギが鳴いているのがよく聞こえる。おどろくことに、この小さな虫は気温を教えてくれる。暖かければ暖かいほど、コオロギは速く音を出すのだ。',
+      'コオロギは実は口で鳴いているのではない。オスのコオロギは、片方のはねのふちをもう片方のはねにこすりつける。くしの歯につめを走らせるのに少し似ている。オスがこの音を出すのは、おもにメスを引きつけ、ほかのオスに近づくなと知らせるためだ。',
+      'コオロギは変温動物で、体温がまわりの空気といっしょに変わる。空気が暖かいときは筋肉が速く動くので、はねを何度もこすり合わせることができる。涼しくなると動きがゆっくりになり、鳴き声もさらにゆっくりになる。',
+      'ずっと前、ある科学者が、ある種類のコオロギについて簡単なきまりを見つけた。14秒間の鳴き声の回数を数えて40を足すと、華氏の気温になるというのだ。このきまりはすべての種類のコオロギにあてはまるわけではないが、動物がまわりの世界といかに強くつながっているかを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['make', 'makes', 'making', 'to make'], answer: 0, why: '「the ＋比較級 ～, the ＋比較級 …」の文で、主語 crickets（複数）に続く動詞なので make。makes は単数の主語の形で、making・to make だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['still', 'more slow', 'slowest', 'slowness'], answer: 0, why: '比較級 slower を強める副詞 still「さらに・いっそう」。more slow は slower と重なり、slowest（最上級）・slowness（名詞）は比較級のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'attract',
+      choices: ['make someone want to come closer', 'push someone away', 'make someone sleepy', 'teach someone a song'],
+      answer: 0,
+      why: 'attract は「引きつける」。メスを自分のところへ来させるために鳴くという意味。',
+    },
+    order: {
+      words: ['their', 'body', 'temperature', 'changes', 'with'],
+      rest: 'the air around them',
+      answer: 'their body temperature changes with',
+      ja: '体温が～といっしょに変わる（change with ～「～につれて変わる」）',
+    },
+    tf: [
+      { statement: 'コオロギは口を使って鳴く。', answer: false, why: '第2段落 Crickets do not actually sing with their mouths。' },
+      { statement: '涼しくなると、コオロギの鳴き声はゆっくりになる。', answer: true, why: '第3段落 When it gets cooler ... the chirping becomes slower still。' },
+      { statement: '14秒の鳴き声のきまりは、すべてのコオロギにあてはまる。', answer: false, why: '第4段落 The rule does not work for every kind of cricket。' },
+    ],
+    qa: [
+      { q: 'Why do crickets chirp faster when it is warm?', choices: ['Because their muscles work faster in warm air.', 'Because they are hungry.', 'Because they want to cool down.', 'Because there are more females at night.'], answer: 0, why: '第3段落 When the air is warm, their muscles work faster, so they can rub their wings more often。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
