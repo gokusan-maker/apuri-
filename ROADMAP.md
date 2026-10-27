@@ -2003,6 +2003,8 @@
 
 - [x] 文法：群前置詞③ in place of ／ on top of ／ in the middle of
 
+- [x] 長文（共通テスト）：評論「Why We Shiver in the Cold」（寒さでふるえるしくみ）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

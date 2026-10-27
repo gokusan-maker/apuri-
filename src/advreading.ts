@@ -9354,6 +9354,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-shivering',
+    title: 'Why We Shiver in the Cold',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When you step outside on a freezing winter morning, your body may start to shake without your permission. This shaking, called shivering, is not a sign of weakness. It is one of the body's clever ways of ( A ) warm.",
+      "The human body works best at a temperature of about 37 degrees Celsius. When the brain senses that the body is getting too cold, it sends signals to the muscles, telling them to tighten and relax very quickly. Each tiny movement produces a little heat, and together these movements can raise the amount of heat the body produces several times over.",
+      "Shivering uses a lot of energy, so it cannot continue for a very long time. That is one reason people feel tired and hungry after spending a long time in the cold. Babies, who cannot shiver well, rely on a special kind of fat that ( B ) heat directly.",
+      "Shivering is a useful warning, too. If you start to shiver, it is a sign that you should put on more clothes or find a warm place. Strangely, people can also shiver when they have a fever, because the brain mistakenly decides that the body needs to be warmer.",
+    ],
+    ja: [
+      '凍えるような冬の朝に外へ出ると、体が勝手にふるえだすことがある。このふるえは「ふるえ（シバリング）」とよばれ、弱さのしるしではない。それは体があたたかさを保つための、かしこい方法の1つなのだ。',
+      '人間の体は、およそ37度の体温でもっともよくはたらく。体が冷えすぎていると脳が感じると、脳は筋肉に信号を送り、とても速く縮んだりゆるんだりするよう命じる。1つ1つの小さな動きが少しずつ熱を生み、それらが合わさると、体が生み出す熱の量を何倍にも増やすことができる。',
+      'ふるえは多くのエネルギーを使うので、あまり長くは続けられない。それが、寒い場所に長くいたあとに、つかれたりおなかがすいたりする理由の1つだ。うまくふるえることができない赤ちゃんは、直接熱を生み出す特別な種類の脂肪にたよっている。',
+      'ふるえは役に立つ警告でもある。ふるえ始めたら、もっと服を着るか、あたたかい場所をさがすべきだというしるしだ。不思議なことに、人は熱があるときにもふるえることがある。脳が、体をもっとあたためる必要があるとまちがって判断するからだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['staying', 'stay', 'stayed', 'to staying'], answer: 0, why: '前置詞 of のあとは動名詞 staying。stay warm「あたたかいままでいる」。' },
+      { id: 'B', choices: ['produces', 'produce', 'producing', 'to produce'], answer: 0, why: '関係代名詞 that の先行詞は a special kind of fat（単数）なので produces。producing・to produce では関係代名詞節の動詞がなくなる。' },
+    ],
+    underline: {
+      phrase: 'mistakenly',
+      choices: ['wrongly', 'quickly', 'carefully', 'happily'],
+      answer: 0,
+      why: 'mistakenly は「まちがって」。wrongly と同じ意味。',
+    },
+    order: {
+      words: ['is', 'not', 'a', 'sign', 'of', 'weakness'],
+      rest: '',
+      answer: 'is not a sign of weakness',
+      ja: '弱さのしるしではない（a sign of ～「～のしるし」）',
+    },
+    tf: [
+      { statement: 'ふるえは、体があたたかさを保つための方法の1つだ。', answer: true, why: '第1段落 It is one of the body\'s clever ways of staying warm。' },
+      { statement: 'ふるえはエネルギーをほとんど使わないので、いつまでも続けられる。', answer: false, why: '第3段落 Shivering uses a lot of energy, so it cannot continue for a very long time。' },
+      { statement: '熱があるときにふるえることもある。', answer: true, why: '第4段落 people can also shiver when they have a fever。' },
+    ],
+    qa: [
+      { q: 'How do babies keep warm if they cannot shiver well?', choices: ['They rely on a special kind of fat that produces heat.', 'They sleep more than adults.', 'They move their arms quickly.', 'They drink warm milk.'], answer: 0, why: '第3段落 Babies, who cannot shiver well, rely on a special kind of fat that produces heat directly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -2492,3 +2492,4 @@
 - 2026-10-27: TOEIC の長文に、お知らせ「Changes to Our Loyalty Card」（カフェのポイントカードがアプリに）を追加
 - 2026-10-27: 闘技場の文法の問題に「📐 文法」の札を表示
 - 2026-10-27: 文法に「群前置詞③ in place of ／ on top of ／ in the middle of」の単元を追加
+- 2026-10-27: 高3（共通テスト）の長文に、評論「Why We Shiver in the Cold」（寒さで体がふるえるしくみ）を追加
