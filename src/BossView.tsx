@@ -646,6 +646,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             VS
           </span>
         )}
+        {/* 勝ったら格闘ゲームのような K.O. のはんこ */}
+        {won && (
+          <span className="boss-ko" aria-hidden="true">
+            K.O.!
+          </span>
+        )}
         {hit && lastDmg > 0 && (
           <span key={`d${index}`} className={`dmg-pop${crit ? ' crit' : ''}`} aria-hidden="true">
             -{lastDmg}

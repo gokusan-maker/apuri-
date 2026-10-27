@@ -116,6 +116,13 @@ describe('ボス戦', () => {
     expect(screen.getByRole('progressbar', { name: 'ボスのHP' })).toHaveAttribute('aria-valuenow', '220')
   })
 
+  it('ボスをたおすと K.O. のはんこが出る', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+    expect(document.querySelector('.boss-ko')).toBeNull()
+    answer(true)
+    expect(document.querySelector('.boss-ko')!.textContent).toBe('K.O.!')
+  })
+
   it('ボスのHPが数字でも出て、正解すると減る', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} hp={300} onWin={() => {}} onExit={() => {}} />)
     expect(screen.getByText('のこりHP 300 / 300')).toBeInTheDocument()
