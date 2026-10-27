@@ -11349,6 +11349,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-membership-renewal',
+    title: 'E-mail: Time to Renew Your Membership',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Silva, Thank you for being a member of Greenleaf Sports Club for the past year. We are writing to remind you that your membership will end on September 30. To keep using our gym, pool, and tennis courts, please renew it ( A ) that date.",
+      "If you renew before September 15, you will receive a 15 percent discount on the yearly fee. You will also get two free sessions with one of our personal trainers. These sessions can be used at any time during the next twelve months.",
+      "You can renew online by logging in to your account on our website, or at the front desk during opening hours. Please note that the price of a yearly membership will increase from October 1, so renewing now is the best way to ( B ) money.",
+      "We hope you will continue to enjoy our facilities. If you have any questions, please do not hesitate to contact us. Best regards, Greenleaf Sports Club Membership Team",
+    ],
+    ja: [
+      'シルバ様　この1年間、グリーンリーフ・スポーツクラブの会員でいてくださり、ありがとうございます。会員資格が9月30日で終わることをお知らせいたします。ジム、プール、テニスコートを引き続きご利用になるには、その日までに更新してください。',
+      '9月15日より前に更新すると、年会費が15パーセント割引になります。また、パーソナルトレーナーとのセッションが2回無料になります。このセッションは、次の12か月のあいだならいつでも使えます。',
+      'ウェブサイトのアカウントにログインしてオンラインで更新するか、営業時間中に受付で更新できます。10月1日から年会費が値上がりしますので、今のうちに更新するのがいちばんお金の節約になります。',
+      '引き続き施設をお楽しみいただけることを願っています。ご質問があれば、どうぞえんりょなくご連絡ください。グリーンリーフ・スポーツクラブ　会員担当チーム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by', 'since', 'among', 'between'], answer: 0, why: 'renew it by that date「その日までに更新する」。「～までに（期限）」は by。since は現在完了といっしょに「～以来」で使い、among・between は2つ以上のものの「あいだ」を表すので that date の前には置けない。' },
+      { id: 'B', choices: ['save', 'saving', 'saved', 'saves'], answer: 0, why: 'the best way to ～「～するいちばんよい方法」。to のあとは動詞の原形 save。saving・saved・saves は to のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'renew',
+      choices: ['continue something for another period', 'stop using something', 'make something cheaper', 'give something to a friend'],
+      answer: 0,
+      why: 'renew は「（契約などを）更新する」。会員資格をもう1年続けるという意味。',
+    },
+    order: {
+      words: ['please', 'do', 'not', 'hesitate', 'to', 'contact', 'us'],
+      rest: '',
+      answer: 'please do not hesitate to contact us',
+      ja: 'どうぞえんりょなくご連絡ください（hesitate to ～「～するのをためらう」）',
+    },
+    tf: [
+      { statement: '会員資格は9月30日で終わる。', answer: true, why: '第1段落 your membership will end on September 30。' },
+      { statement: '9月20日に更新しても、15パーセント割引になる。', answer: false, why: '第2段落 If you renew before September 15。' },
+      { statement: '10月1日から年会費が安くなる。', answer: false, why: '第3段落 the price of a yearly membership will increase from October 1。' },
+    ],
+    qa: [
+      { q: 'What will Mr. Silva get if he renews before September 15?', choices: ['A discount and two free sessions with a trainer.', 'A free tennis racket.', 'A month of free membership.', 'A new locker.'], answer: 0, why: '第2段落 you will receive a 15 percent discount ... You will also get two free sessions with one of our personal trainers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
