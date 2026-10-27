@@ -10939,6 +10939,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-eggshell',
+    title: 'The Strength of an Eggshell',
+    level: '難関大（評論）',
+    paragraphs: [
+      "An eggshell is less than half a millimeter thick, and it cracks easily when you hit it on the edge of a bowl. Yet if you hold an egg in your hand and squeeze it evenly from both ends, it is surprisingly difficult to break. Why ( A ) such a thin shell so strong?",
+      "The secret is its curved shape. When you press on the ends of an egg, the force does not stay in one place. Instead, the curve spreads the force out across the whole shell. Because no single point has to take all the pressure, the shell can hold much more weight than you might expect.",
+      "This shape is very useful for birds. A mother bird must sit on her eggs to keep them warm, and the shells have to support her weight without breaking. At the same time, the shell must be weak enough from the inside ( B ) the baby bird to break out when it is ready to hatch.",
+      "People have learned from this idea. Many bridges, tunnels, and buildings use curved arches and domes, which carry heavy loads in the same way an eggshell does.",
+    ],
+    ja: [
+      '卵のからは厚さが0.5ミリもなく、ボウルのふちに打ちつけると簡単にひびが入る。それなのに、卵を手に持って両はしから均等ににぎると、おどろくほどわれにくい。どうしてそんなにうすいからが、こんなに強いのだろうか。',
+      'ひみつは曲がった形にある。卵のはしをおすと、力は1か所にとどまらない。かわりに、曲面がからの全体に力を広げる。1つの点がすべての力を受けなくてよいので、からは思ったよりずっと重いものをささえられるのだ。',
+      'この形は鳥にとってとても役に立つ。母鳥は卵を温めるために卵の上にすわらなければならず、からはわれずに母鳥の重さをささえなければならない。同時に、ひなが生まれる準備ができたときにからをやぶって出られるくらい、内側からは弱くなければならない。',
+      '人はこの考え方から学んできた。多くの橋やトンネル、建物は、曲がったアーチやドームを使っている。それらは卵のからと同じしくみで、重いものをささえているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is', 'does', 'are', 'being'], answer: 0, why: 'Why is ＋主語＋形容詞？「なぜ～は…なのか」。主語 such a thin shell（単数）なので is。does だと動詞の原形がいる、are は複数の主語の形、being では疑問文にならない。' },
+      { id: 'B', choices: ['for', 'of', 'with', 'by'], answer: 0, why: '形容詞＋enough for ＋人＋to ～「（人）が～できるほど…」。to 不定詞の意味上の主語は for で表す。of・with・by はこの形では使えない。' },
+    ],
+    underline: {
+      phrase: 'evenly',
+      choices: ['with the same amount of force everywhere', 'very quickly', 'only on one side', 'with a hammer'],
+      answer: 0,
+      why: 'evenly は「均等に・むらなく」。両はしから同じ強さでにぎるという意味。',
+    },
+    order: {
+      words: ['the', 'curve', 'spreads', 'the', 'force', 'out'],
+      rest: 'across the whole shell',
+      answer: 'the curve spreads the force out',
+      ja: '曲面が力を広げる（spread ～ out「～を広げる」）',
+    },
+    tf: [
+      { statement: '卵のからは厚さが1ミリ以上ある。', answer: false, why: '第1段落 less than half a millimeter thick。' },
+      { statement: '曲がった形は、力をから全体に広げる。', answer: true, why: '第2段落 the curve spreads the force out across the whole shell。' },
+      { statement: '橋やトンネルにも、アーチやドームの形が使われている。', answer: true, why: '第4段落 Many bridges, tunnels, and buildings use curved arches and domes。' },
+    ],
+    qa: [
+      { q: 'Why must an eggshell be strong?', choices: ['Because the mother bird sits on the eggs.', 'Because eggs fall from trees.', 'Because the baby bird is very heavy.', 'Because eggs are kept in water.'], answer: 0, why: '第3段落 A mother bird must sit on her eggs ... the shells have to support her weight without breaking。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
