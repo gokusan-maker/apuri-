@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_QUICK_MS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_QUICK_MS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -42,7 +42,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     setQuick(i === q.answer && shownAt.current > 0 && at - shownAt.current <= ARENA_QUICK_MS)
     setPicked(i)
     setCount(count + 1)
-    if (!isArenaGrammar(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
+    if (!isArenaGrammar(q) && !isArenaReading(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
     setMisses(i === q.answer ? 0 : misses + 1)
     if (i === q.answer) {
       setRight(right + 1)
@@ -201,9 +201,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         いま <strong>{arenaFloor(shown)}</strong>
       </p>
       {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
+      {isArenaReading(q) && <p className="arena-qtag reading">📖 読解　文の意味をえらぼう</p>}
       <div className="arena-q">
-        <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
-        {!isArenaGrammar(q) && (
+        <p className={`en${isArenaGrammar(q) || isArenaReading(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
+        {!isArenaGrammar(q) && !isArenaReading(q) && (
           <button className="arena-speak" aria-label="発音を聞く" onClick={() => speak(q.word.en)}>
             🔊
           </button>

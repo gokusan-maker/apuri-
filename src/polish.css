@@ -4177,3 +4177,4 @@ header .event-chips { margin: 0 0 2px; }
 .arena-floor.summit { border-left-color: #facc15; background: linear-gradient(90deg, rgb(250 204 21 / 0.25), rgb(255 255 255 / 0.05)); }
 .arena-floor.summit.here { box-shadow: 0 0 22px rgb(250 204 21 / 0.8); }
 .af-summit { font-size: 0.72rem; color: #fde047; }
+.arena-qtag.reading { background: rgb(74 222 128 / 0.18); color: #86efac; }

@@ -3,7 +3,7 @@
 import { BOSSES, type BossLook } from './boss'
 import { LEVEL_BOSS_LOOK } from './bosscastle'
 import { levelUnits } from './grammarcastle'
-import { randomQuestion, type Question } from './quiz'
+import { randomQuestion, shuffle, type Question } from './quiz'
 import { COURSES, courseWords, type CourseId } from './wordcourse'
 import type { Word } from './words'
 
@@ -50,7 +50,6 @@ export function arenaNextTitle(lv: number): { title: string; floors: number } | 
 // そのレベルの相手：そのレベルのボスのキャラクター
 export const arenaLook = (lv: number): BossLook => BOSSES[LEVEL_BOSS_LOOK[arenaCourse(lv).id]]
 export const arenaStart = (course: CourseId): number => clamp(COURSES.findIndex((c) => c.id === course))
-export const ARENA_GRAMMAR_EVERY = 3 // 3問に1問は、そのレベルの文法の問題
 export const isArenaGrammar = (q: Question<Word>) => q.word.id.startsWith('g:')
 // そのレベルの文法の問題を1問（単語の問題と同じ形にする）
 function arenaGrammarQ(lv: number, rnd: () => number): Question<Word> | null {
@@ -61,12 +60,29 @@ function arenaGrammarQ(lv: number, rnd: () => number): Question<Word> | null {
   const g = u.questions[k]
   return { word: { id: `g:${u.id}:${k}`, en: g.sentence, ja: g.choices[g.answer], example: '', exampleJa: '' } as Word, choices: g.choices, answer: g.answer }
 }
-// n 問目（0から）の問題：ふだんはそのレベルの単語、3問に1問は文法（直前と同じ問題は避ける）
+// 読解：そのレベルの単語の例文を読んで、正しい意味をえらぶ（文の内容をつかむ問題）
+export const isArenaReading = (q: Question<Word>) => q.word.id.startsWith('r:')
+function arenaReadingQ(lv: number, rnd: () => number): Question<Word> | null {
+  const pool = courseWords(arenaCourse(lv).id).filter((w) => w.example && w.exampleJa)
+  if (pool.length < 4) return null
+  const w = pool[Math.floor(rnd() * pool.length)]
+  const others = shuffle(pool.filter((x) => x.exampleJa !== w.exampleJa), rnd)
+    .map((x) => x.exampleJa)
+    .filter((t, k, a) => a.indexOf(t) === k)
+    .slice(0, 3)
+  const choices = shuffle([w.exampleJa, ...others], rnd)
+  return { word: { ...w, id: `r:${w.id}`, en: w.example, ja: w.exampleJa }, choices, answer: choices.indexOf(w.exampleJa) }
+}
+// n 問目（0から）の問題：単語 → 文法 → 読解 の順にくり返す（オーナーの要望：単語以外も）。直前と同じ問題は避ける
+export type ArenaKind = 'word' | 'grammar' | 'reading'
+export const arenaKindAt = (n: number): ArenaKind => (['word', 'grammar', 'reading'] as const)[n % 3]
 export function arenaQuestionAt(lv: number, n: number, rnd: () => number = Math.random, avoid?: string): Question<Word> {
-  if (n % ARENA_GRAMMAR_EVERY === ARENA_GRAMMAR_EVERY - 1) {
-    let g = arenaGrammarQ(lv, rnd)
-    for (let k = 0; k < 3 && g && avoid && g.word.id === avoid; k++) g = arenaGrammarQ(lv, rnd)
-    if (g) return g
+  const kind = arenaKindAt(n)
+  const make = kind === 'grammar' ? arenaGrammarQ : kind === 'reading' ? arenaReadingQ : null
+  if (make) {
+    let q = make(lv, rnd)
+    for (let k = 0; k < 3 && q && avoid && q.word.id === avoid; k++) q = make(lv, rnd)
+    if (q) return q
   }
   return arenaQuestion(lv, rnd, avoid)
 }

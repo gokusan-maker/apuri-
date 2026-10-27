@@ -5,6 +5,24 @@ import { describe, expect, it, vi } from 'vitest'
 import { stagesOf } from './stages'
 import { Stages } from './StageView'
 import { UNIV_BOSSES } from './univ'
+import { COURSES as ALL_COURSES, courseWords as allCourseWords } from './wordcourse'
+import { levelUnits as allLevelUnits } from './grammarcastle'
+
+// 闘技場の問題（単語・文法・読解）の正しい答え
+function arenaRight(): string {
+  const en = document.querySelector('.arena .en')!.textContent!
+  const ws = ALL_COURSES.flatMap((c) => allCourseWords(c.id))
+  const w = ws.find((x) => x.en === en)
+  if (w) return w.ja
+  const r = ws.find((x) => x.example === en)
+  if (r) return r.exampleJa!
+  const g = ALL_COURSES.flatMap((c) => allLevelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)!
+  return g.choices[g.answer]
+}
+const arenaPick = (right: boolean) => {
+  const ans = arenaRight()
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => (right ? b.textContent === ans : b.textContent !== ans))!)
+}
 
 describe('ステージ画面', () => {
   it('ステージ1だけ遊べて、全問正解で星3つ', () => {
@@ -550,13 +568,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   const arena = screen.getByRole('region', { name: '闘技場' })
   expect(within(arena).getByText('1階（中1レベル）')).toBeInTheDocument()
   const floor = () => Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))
-  const { courseWords } = await import('./wordcourse')
-  const pickAnswer = (correct: boolean) => {
-    const en = document.querySelector('.arena .en')!.textContent
-    const w = [...courseWords('中1'), ...courseWords('中2')].find((x) => x.en === en)!
-    const btns = [...document.querySelectorAll<HTMLButtonElement>('.arena .choice')]
-    fireEvent.click(btns.find((b) => (correct ? b.textContent === w.ja : b.textContent !== w.ja))!)
-  }
+  const pickAnswer = (correct: boolean) => arenaPick(correct)
   pickAnswer(true)
   expect(screen.getByText('⬆ レベルアップ！ 2階（中2レベル）へ')).toBeInTheDocument()
   expect(floor()).toBe(2) // 答えたらすぐに塔の階が上がる
@@ -585,16 +597,11 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
 it('闘技場：いままでの最高より上の階に着くたびに🪙5（最高記録はその場で保存）', async () => {
   const { Arena } = await import('./ArenaView')
   const { ARENA_BEST_COINS, loadArenaBest } = await import('./arena')
-  const { courseWords } = await import('./wordcourse')
   localStorage.clear()
   localStorage.setItem('eitan:arena-best', '1') // 最高は2階
   const coins = vi.fn()
   render(<Arena start={0} onExit={() => {}} onCoins={coins} />)
-  const pickRight = () => {
-    const en = document.querySelector('.arena .en')!.textContent
-    const w = [...courseWords('中1'), ...courseWords('中2'), ...courseWords('中3')].find((x) => x.en === en)!
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
-  }
+  const pickRight = () => arenaPick(true)
   pickRight() // 1階→2階：最高と同じなのでなし
   expect(coins).not.toHaveBeenCalled()
   fireEvent.click(screen.getByText(/^次へ/))
@@ -615,15 +622,23 @@ it('闘技場の階ごとの称号', async () => {
   expect(arenaNextTitle(ARENA_TOP)).toBeNull()
 })
 
-it('闘技場は3問に1問、そのレベルの文法の問題が出る', async () => {
-  const { arenaQuestionAt, isArenaGrammar } = await import('./arena')
-  expect(isArenaGrammar(arenaQuestionAt(0, 0))).toBe(false)
-  expect(isArenaGrammar(arenaQuestionAt(0, 1))).toBe(false)
-  const g = arenaQuestionAt(0, 2)
+it('闘技場は 単語→文法→読解 の順に、そのレベルの問題が出る', async () => {
+  const { arenaQuestionAt, arenaKindAt, isArenaGrammar, isArenaReading } = await import('./arena')
+  expect(arenaKindAt(0)).toBe('word')
+  expect(arenaKindAt(4)).toBe('grammar')
+  expect(arenaKindAt(5)).toBe('reading')
+  const w = arenaQuestionAt(0, 0)
+  expect(isArenaGrammar(w) || isArenaReading(w)).toBe(false)
+  const g = arenaQuestionAt(0, 1)
   expect(isArenaGrammar(g)).toBe(true)
   expect(g.word.en).toContain('___')
   expect(g.choices[g.answer]).toBe(g.word.ja)
-  expect(isArenaGrammar(arenaQuestionAt(9, 5))).toBe(true)
+  const r = arenaQuestionAt(0, 2)
+  expect(isArenaReading(r)).toBe(true)
+  expect(r.word.en.split(' ').length).toBeGreaterThan(2) // 文で出る
+  expect(r.choices[r.answer]).toBe(r.word.ja)
+  expect(new Set(r.choices).size).toBe(r.choices.length)
+  expect(isArenaReading(arenaQuestionAt(9, 5))).toBe(true)
 })
 
 it('闘技場：3連続正解ごとに2階ジャンプ', async () => {
@@ -634,18 +649,9 @@ it('闘技場：3連続正解ごとに2階ジャンプ', async () => {
   expect(arenaNext(2, false, 3)).toBe(1)
   expect(isArenaJump(true, 2)).toBe(false)
   const { Arena } = await import('./ArenaView')
-  const { courseWords } = await import('./wordcourse')
-  const { levelUnits } = await import('./grammarcastle')
-  const { COURSES } = await import('./wordcourse')
   localStorage.clear()
   render(<Arena start={0} onExit={() => {}} />)
-  const pickRight = () => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
-    const g = COURSES.slice(0, 5).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
-    const right = w ? w.ja : g!.choices[g!.answer]
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === right)!)
-  }
+  const pickRight = () => arenaPick(true)
   pickRight()
   fireEvent.click(screen.getByText(/^次へ/))
   pickRight()
@@ -656,19 +662,11 @@ it('闘技場：3連続正解ごとに2階ジャンプ', async () => {
 
 it('闘技場：最高記録で新しい称号に上がると、ガチャチケット1枚（称号ごとに1回）', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
-  const { levelUnits } = await import('./grammarcastle')
   localStorage.clear()
   localStorage.setItem('eitan:arena-best', '1')
   const ticket = vi.fn()
   render(<Arena start={1} onExit={() => {}} onTicket={ticket} />)
-  const pick = (right: boolean) => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 6).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
-    const g = COURSES.slice(0, 6).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
-    const ans = w ? w.ja : g!.choices[g!.answer]
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => (right ? b.textContent === ans : b.textContent !== ans))!)
-  }
+  const pick = (right: boolean) => arenaPick(right)
   pick(true) // 2階→3階（見習いのまま）
   expect(ticket).not.toHaveBeenCalled()
   fireEvent.click(screen.getByText(/^次へ/))
@@ -690,7 +688,7 @@ it('闘技場の単語の答えは学習の記録になり、正解で相棒に 
   render(<Arena start={0} onExit={() => {}} onAnswer={ans} />)
   const en = document.querySelector('.arena .en')!.textContent
   const w = courseWords('中1').find((x) => x.en === en)!
-  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  arenaPick(true)
   expect(ans).toHaveBeenCalledWith(true, expect.any(Number), w.id, 'quiz')
   expect(ans.mock.calls[0][1]).toBeGreaterThan(0)
 })
@@ -716,16 +714,9 @@ it('闘技場の塔に、いままでの最高の階の🚩が出る', async () 
 
 it('闘技場：3連続正解から、いまの階が燃える（🔥）', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
-  const { levelUnits } = await import('./grammarcastle')
   localStorage.clear()
   render(<Arena start={0} onExit={() => {}} />)
-  const pickRight = () => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 6).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
-    const g = COURSES.slice(0, 6).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === (w ? w.ja : g!.choices[g!.answer]))!)
-  }
+  const pickRight = () => arenaPick(true)
   for (let k = 0; k < 2; k++) {
     pickRight()
     fireEvent.click(screen.getByText(/^次へ/))
@@ -737,21 +728,18 @@ it('闘技場：3連続正解から、いまの階が燃える（🔥）', async
 
 it('闘技場の文法の問題には「📐 文法」の札が出る', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
-  const { levelUnits } = await import('./grammarcastle')
   localStorage.clear()
   render(<Arena start={0} onExit={() => {}} />)
   const pick = () => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 3).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
-    const g = COURSES.slice(0, 3).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent !== (w ? w.ja : g!.choices[g!.answer]))!)
+    arenaPick(false)
     fireEvent.click(screen.getByText(/^次へ/))
   }
   expect(screen.queryByText('📐 文法')).toBeNull()
   pick()
+  expect(screen.getByText('📐 文法')).toBeInTheDocument() // 2問め
   pick()
-  expect(screen.getByText('📐 文法')).toBeInTheDocument() // 3問め
+  expect(screen.getByText(/📖 読解/)).toBeInTheDocument() // 3問めは読解
+  expect(screen.queryByRole('button', { name: '発音を聞く' })).toBeNull()
 })
 
 it('闘技場の塔で、新しい称号が始まる階にそのアイコンが出る', async () => {
@@ -764,16 +752,9 @@ it('闘技場の塔で、新しい称号が始まる階にそのアイコンが�
 
 it('闘技場：3回続けてまちがえると応援が出る', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
-  const { levelUnits } = await import('./grammarcastle')
   localStorage.clear()
   render(<Arena start={3} onExit={() => {}} />)
-  const miss = () => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)
-    const g = COURSES.slice(0, 5).flatMap((c) => levelUnits(c.id)).flatMap((u) => u.questions).find((x) => x.sentence === en)
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent !== (w ? w.ja : g!.choices[g!.answer]))!)
-  }
+  const miss = () => arenaPick(false)
   miss()
   fireEvent.click(screen.getByText(/^次へ/))
   miss()
@@ -795,12 +776,9 @@ it('闘技場の塔の空は、下の階は青空・上の階は星空', async (
 
 it('闘技場の結果から、はじめの階にもどって戦える', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
   localStorage.clear()
   render(<Arena start={2} onExit={() => {}} />)
-  const en = document.querySelector('.arena .en')!.textContent!
-  const w = COURSES.slice(0, 5).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)!
-  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  arenaPick(true)
   fireEvent.click(screen.getByText('🏁 終了'))
   fireEvent.click(screen.getByText('🔁 はじめの階（3階（中3レベル））から'))
   expect(screen.getByRole('progressbar', { name: '闘技場の階' })).toHaveAttribute('aria-valuenow', '3')
@@ -816,14 +794,9 @@ it('闘技場の塔をのぼるのは相棒のモンスター（いなければ 
 
 it('闘技場：3秒以内に正解すると「⚡ はやい！」', async () => {
   const { Arena } = await import('./ArenaView')
-  const { COURSES, courseWords } = await import('./wordcourse')
   localStorage.clear()
   render(<Arena start={0} onExit={() => {}} />)
-  const pickRight = () => {
-    const en = document.querySelector('.arena .en')!.textContent!
-    const w = COURSES.slice(0, 3).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)!
-    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
-  }
+  const pickRight = () => arenaPick(true)
   pickRight() // 最初の問題は数えない
   expect(screen.queryByText('⚡ はやい！')).toBeNull()
   fireEvent.click(screen.getByText(/^次へ/))
