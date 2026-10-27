@@ -1893,6 +1893,8 @@
 
 - [x] 文法：自動詞＋前置詞⑤（suffer from ／ recover from ／ differ from）
 
+- [x] 長文（共通テスト）：評論「Why Some People Sneeze in the Sun」（光くしゃみ反射）
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

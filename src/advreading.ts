@@ -8715,6 +8715,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sneezing',
+    title: 'Why Some People Sneeze in the Sun',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A sneeze is the body's way of clearing the nose. When dust, pollen, or something else bothers the inside of the nose, a message is sent to the brain, and the body quickly pushes air out through the nose and mouth. We cannot stop a sneeze once it has started, and we usually close our eyes ( A ) we sneeze.",
+      "Strangely, some people also sneeze when they suddenly step into bright sunlight. This is sometimes called the \"photic sneeze reflex.\" Studies suggest that it affects roughly one in four people, and it often runs in families.",
+      "Scientists are not completely sure why it happens. One popular idea is that the nerves that carry signals from the eyes and the nose are very close to each other. When the eyes react to strong light, the signal may accidentally \"spill over\" to the nose, ( B ) the brain to start a sneeze.",
+      "For most people, this reflex is just a small surprise. However, it could be dangerous for drivers or pilots who suddenly come out of a tunnel into bright light. Wearing sunglasses can help. This tiny mystery shows that even everyday actions can be connected in ways we do not expect.",
+    ],
+    ja: [
+      'くしゃみは、体が鼻の中をきれいにするための方法だ。ほこりや花粉などが鼻の内側を刺激すると、脳に信号が送られ、体はすばやく鼻と口から空気をおし出す。いったん始まったくしゃみは止められず、私たちはふつう、くしゃみをするとき目を閉じる。',
+      '不思議なことに、急に明るい日光の下に出たときにくしゃみをする人もいる。これは「光くしゃみ反射」とよばれることがある。研究によると、これはおよそ4人に1人に見られ、家族の中で受けつがれることが多いようだ。',
+      'なぜそれが起こるのか、科学者にもはっきりとはわかっていない。よく知られた考えの1つは、目からの信号と鼻からの信号を運ぶ神経がとても近くにあるというものだ。目が強い光に反応すると、その信号がうっかり鼻のほうへ「あふれ」、脳にくしゃみを始めさせるのかもしれない。',
+      'ほとんどの人にとって、この反射はちょっとしたおどろきにすぎない。しかし、トンネルから急に明るい光の中に出る運転手やパイロットにとっては危険になりうる。サングラスをかけると役に立つ。この小さななぞは、日常の動作でさえ、思いもよらない形でつながっていることがあると教えてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'during', 'while of', 'for'], answer: 0, why: 'うしろが文（we sneeze）なので接続詞 when。during・for は前置詞で名詞が必要、while of という形はない。' },
+      { id: 'B', choices: ['causing', 'causes', 'caused', 'to causing'], answer: 0, why: 'コンマのあとに分詞構文 causing ～「（そして）～させる」。causes を置くと接続詞なしで動詞が2つ並び、caused（受け身の意味）では目的語 the brain と合わない。' },
+    ],
+    underline: {
+      phrase: 'runs in families',
+      choices: ['is often shared by parents and children', 'makes families run fast', 'happens only to children', 'stops when people get older'],
+      answer: 0,
+      why: 'run in the family は「（性質などが）家族に受けつがれる」。親子でよく同じ性質をもつということ。',
+    },
+    order: {
+      words: ['are', 'very', 'close', 'to', 'each', 'other'],
+      rest: '',
+      answer: 'are very close to each other',
+      ja: 'おたがいにとても近い（be close to ～「～に近い」）',
+    },
+    tf: [
+      { statement: 'くしゃみは、始まっても途中で止められる。', answer: false, why: '第1段落 We cannot stop a sneeze once it has started。' },
+      { statement: '光くしゃみ反射は、およそ4人に1人に見られる。', answer: true, why: '第2段落 it affects roughly one in four people。' },
+      { statement: '光くしゃみ反射が起こる理由は、完全に解明されている。', answer: false, why: '第3段落 Scientists are not completely sure why it happens。' },
+    ],
+    qa: [
+      { q: 'Who might find the photic sneeze reflex dangerous?', choices: ['Drivers or pilots coming out of a tunnel.', 'People who stay inside all day.', 'Children reading books at night.', 'Doctors working in hospitals.'], answer: 0, why: '第4段落 it could be dangerous for drivers or pilots who suddenly come out of a tunnel into bright light。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
