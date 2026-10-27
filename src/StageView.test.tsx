@@ -545,3 +545,41 @@ it('城はどの階にもボスがいる：1〜4階は階のボス（レベル�
   expect(hp()).toHaveAttribute('aria-valuenow', '0')
   expect(screen.getByText(`${floorBossLook('中1', 1).name}をたおした！`)).toBeInTheDocument()
 })
+
+it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで下の階。終了でいまの階を伝え、最高記録を残す', async () => {
+  const { arenaNext, arenaFloor, arenaStart, loadArenaBest, ARENA_TOP } = await import('./arena')
+  expect(arenaNext(3, true)).toBe(4)
+  expect(arenaNext(3, false)).toBe(2)
+  expect(arenaNext(0, false)).toBe(0)
+  expect(arenaNext(ARENA_TOP, true)).toBe(ARENA_TOP)
+  expect(arenaFloor(0)).toBe('1階（中1レベル）')
+  expect(arenaStart('中2')).toBe(1)
+  localStorage.clear()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  const entry = screen.getByRole('region', { name: '闘技場' })
+  fireEvent.click(within(entry).getByRole('button', { name: /闘技場で戦う/ }))
+  const arena = screen.getByRole('region', { name: '闘技場' })
+  expect(within(arena).getByText('🏟 1階（中1レベル）')).toBeInTheDocument()
+  const floor = () => Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))
+  const { courseWords } = await import('./wordcourse')
+  const pickAnswer = (correct: boolean) => {
+    const en = document.querySelector('.arena .en')!.textContent
+    const w = [...courseWords('中1'), ...courseWords('中2')].find((x) => x.en === en)!
+    const btns = [...document.querySelectorAll<HTMLButtonElement>('.arena .choice')]
+    fireEvent.click(btns.find((b) => (correct ? b.textContent === w.ja : b.textContent !== w.ja))!)
+  }
+  pickAnswer(true)
+  expect(screen.getByText('⬆ レベルアップ！ 2階（中2レベル）へ')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ（中2）'))
+  expect(floor()).toBe(2)
+  pickAnswer(false)
+  expect(screen.getByRole('status')).toHaveTextContent('⬇ レベルダウン… 1階（中1レベル）へ')
+  fireEvent.click(screen.getByText('次へ（中1）'))
+  expect(floor()).toBe(1)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByRole('status')).toHaveTextContent('いまのあなたは 1階（中1レベル）')
+  expect(screen.getByText('🏅 最高記録 更新！ 2階（中2レベル）')).toBeInTheDocument()
+  expect(loadArenaBest()).toBe(1)
+  fireEvent.click(screen.getByText('← 城にもどる'))
+  expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/最高 2階（中2レベル）/)).toBeInTheDocument()
+})

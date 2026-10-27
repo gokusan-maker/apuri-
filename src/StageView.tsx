@@ -19,6 +19,8 @@ import { GOLD_COINS, KEYS_FOR_GOLD, openTreasure, type Treasure } from './treasu
 import { usePersistent } from './usePersistent'
 import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
+import { Arena } from './ArenaView'
+import { arenaFloor, arenaStart, loadArenaBest } from './arena'
 import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
@@ -109,6 +111,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const [univFight, setUnivFight] = useState<UnivBoss | null>(null)
   const [bcFloor, setBcFloor] = useState<(BcFloor & { qs: TeamQ[]; first?: boolean; round?: number }) | null>(null) // ボスの城の問題の階（1〜4階）
   const [bcClears, setBcClears] = useState(loadBcClears)
+  const [arenaOn, setArenaOn] = useState(false) // 城の下の闘技場
   const [lvFight, setLvFight] = useState<CourseId | null>(null) // レベルのボスと戦っている
   const [lboss, setLboss] = useState(loadLevelBoss) // たおしたレベルのボス
   const [farewell, setFarewell] = useState<string | null>(null) // はじめてたおしたボスの負けおしみ（城にもどったら見せる）
@@ -582,6 +585,9 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
     )
   }
 
+  // 闘技場（城の下）：エンドレス
+  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} />
+
   // ボスの城の問題の階
   if (part === 'boss' && bcFloor)
     return (
@@ -607,6 +613,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
       />
     )
 
+  const arenaBest = loadArenaBest() // 闘技場の最高の階
   const bcBest = loadBcBest() // ボスの城の問題の階ごとの最高得点
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
   return (
@@ -651,6 +658,22 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor), first: !bcClears.includes(f.id) })
           }}
         />
+        {/* 城の下の闘技場：エンドレスで戦い、正解でレベルアップ・まちがいでレベルダウン（オーナーの要望） */}
+        <div className="arena-entry" role="region" aria-label="闘技場">
+          <p className="arena-entry-title">🏟 闘技場（エンドレス）</p>
+          <p className="arena-entry-sub">
+            正解で上の階、まちがいで下の階へ。{arenaBest !== null ? `最高 ${arenaFloor(arenaBest)}` : 'どこまで上がれる？'}
+          </p>
+          <button
+            className="good next-unit-btn"
+            onClick={() => {
+              window.scrollTo?.({ top: 0 })
+              setArenaOn(true)
+            }}
+          >
+            ⚔ 闘技場で戦う（{courseById(bossLv).label}から）
+          </button>
+        </div>
         {farewell && (
           <p className="bfloor-taunt" role="status">
             {farewell}
