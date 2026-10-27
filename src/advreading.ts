@@ -9537,6 +9537,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-language-classes',
+    title: 'Notice: Free Language Classes for Staff',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "As our company continues to grow overseas, Hartwell Trading is pleased to offer free language classes to all employees. Starting in October, classes in English, Spanish, and Mandarin Chinese will be held in Meeting Room C every Tuesday and Thursday from 5:30 p.m. to 6:30 p.m.",
+      "Each course lasts twelve weeks and is divided into beginner and intermediate levels. Before the first class, everyone who signs up will take a short online test so that they can be placed in the ( A ) level.",
+      "Class sizes are limited to fifteen people, so we encourage you to register early. To sign up, please complete the form on the staff website by September 19. Employees who attend at least 80 percent of the classes will receive a certificate of ( B ).",
+      "We hope these classes will help you communicate more confidently with our partners around the world. For more details, please contact Training Coordinator Sara Lin.",
+    ],
+    ja: [
+      '海外での事業が広がり続けていることを受けて、ハートウェル貿易は全社員に無料の語学クラスを提供します。10月から、英語、スペイン語、中国語（標準語）のクラスを、毎週火曜日と木曜日の午後5時30分から6時30分まで、会議室Cで行います。',
+      '各コースは12週間で、初級と中級に分かれています。最初の授業の前に、申しこんだ人は全員、適切なレベルに分けられるよう、短いオンラインテストを受けます。',
+      '1クラスの定員は15人までなので、早めの登録をおすすめします。申しこむには、9月19日までに社員用ウェブサイトのフォームに記入してください。授業の80パーセント以上に出席した社員には、修了証がわたされます。',
+      'これらのクラスが、世界中の取引先とより自信をもってやりとりする助けになることを願っています。くわしくは、研修担当のサラ・リンまでお問い合わせください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['appropriate', 'appropriately', 'appropriateness', 'appropriation'], answer: 0, why: '名詞 level の前なので形容詞 appropriate「適切な」。appropriately は副詞、残りは名詞。' },
+      { id: 'B', choices: ['completion', 'complete', 'completely', 'completed'], answer: 0, why: 'a certificate of ～「～の証明書」。前置詞 of のあとは名詞 completion「修了」。' },
+    ],
+    tf: [
+      { statement: '語学クラスは、社員なら無料で受けられる。', answer: true, why: '第1段落 offer free language classes to all employees。' },
+      { statement: 'クラスの前に、レベル分けのテストを受ける。', answer: true, why: '第2段落 will take a short online test so that they can be placed in the appropriate level。' },
+      { statement: '1クラスの人数に上限はない。', answer: false, why: '第3段落 Class sizes are limited to fifteen people。' },
+    ],
+    qa: [
+      { q: 'Who will receive a certificate?', choices: ['Employees who attend at least 80 percent of the classes.', 'Everyone who signs up.', 'Only intermediate students.', 'Employees who pass the online test.'], answer: 0, why: '第3段落 Employees who attend at least 80 percent of the classes will receive a certificate of completion。' },
+      { q: 'How long does each course last?', choices: ['Twelve weeks.', 'Fifteen weeks.', 'Eight weeks.', 'One year.'], answer: 0, why: '第2段落 Each course lasts twelve weeks。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
