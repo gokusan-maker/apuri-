@@ -26,6 +26,12 @@ export function isArenaLevelUp(from: number, to: number): boolean {
   if (b === null) return a !== null || Math.floor(to / ARENA_ENDLESS_EVERY) > Math.floor(from / ARENA_ENDLESS_EVERY)
   return a !== null && b > a
 }
+// 結果のランク：5問以上答えたとき、正答率90%以上で S、70%以上で A、それより下は B（5問未満は null）
+export function arenaRank(right: number, count: number): 'S' | 'A' | 'B' | null {
+  if (count < 5) return null
+  const p = right / count
+  return p >= 0.9 ? 'S' : p >= 0.7 ? 'A' : 'B'
+}
 // 次のレベル（無限の階では次の10階ごとのお祝い）まであと何階か、とそのレベル内の進み（0〜1）
 export function arenaToNext(f: number): { floors: number; label: string; progress: number } {
   const x = atLeast0(f)

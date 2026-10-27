@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaToNext, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { COURSES } from './wordcourse'
 import { playCorrect, playWrong } from './sound'
@@ -125,6 +125,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <p className="arena-result-floor" role="status">
           いまのあなたは <strong>{arenaFloor(lv)}</strong>
         </p>
+        {arenaRank(right, count) && (
+          <p className={`bfloor-rank rank-${arenaRank(right, count)}`} aria-label={`ランク ${arenaRank(right, count)}`}>
+            {arenaRank(right, count)}
+          </p>
+        )}
         <p className="arena-title-badge">称号：{arenaTitle(lv)}</p>
         {/* きょう、はじめのレベルより上のレベルまで上がれたら */}
         {arenaLvLabel(top) !== arenaLvLabel(start) && top > start && (

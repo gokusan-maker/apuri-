@@ -827,6 +827,23 @@ it('闘技場：この回で10階のぼるごとに「🏆 この回で10階 の
   expect(Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))).toBeGreaterThanOrEqual(51)
 })
 
+it('闘技場の結果：5問以上答えると正答率でランク（90%以上 S・70%以上 A）', async () => {
+  const { arenaRank } = await import('./arena')
+  expect(arenaRank(4, 4)).toBeNull()
+  expect(arenaRank(9, 10)).toBe('S')
+  expect(arenaRank(7, 10)).toBe('A')
+  expect(arenaRank(6, 10)).toBe('B')
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  for (const r of [true, true, true, false, true]) {
+    arenaPick(r)
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByLabelText('ランク A')).toBeInTheDocument()
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
