@@ -117,6 +117,8 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         {Array.from({ length: pass }, (_, k) => (k < score ? '★' : '☆')).join('')}
         <span>{score >= pass ? ' クリア確定！' : ` あと${pass - score}問正解でクリア`}</span>
       </p>
+      {/* 最後の問題：ラスト1問の合図 */}
+      {i === qs.length - 1 && picked === null && <p className="bfloor-last">🔔 ラスト1問！</p>}
       <p className={`bfloor-q team-${q.team}`}>{q.word.en}</p>
       {q.hint && picked === null && !hint && (
         <button className="hint-5050" onClick={() => setHint(true)}>

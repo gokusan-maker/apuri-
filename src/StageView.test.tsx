@@ -563,6 +563,20 @@ it('ボスの城の問題の階：まちがえると階のボスがこうげき�
   expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
 })
 
+it('ボスの城の問題の階：最後の問題で「🔔 ラスト1問！」', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  qs.forEach((q, k) => {
+    if (k < qs.length - 1) expect(screen.queryByText('🔔 ラスト1問！')).toBeNull()
+    else expect(screen.getByText('🔔 ラスト1問！')).toBeInTheDocument()
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+    if (k < qs.length - 1) fireEvent.click(screen.getByText('次へ'))
+  })
+  expect(screen.queryByText('🔔 ラスト1問！')).toBeNull() // 答えたら消える
+})
+
 it('ボスの城の問題の階：3連続正解から「🔥 N連続正解！」', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')
