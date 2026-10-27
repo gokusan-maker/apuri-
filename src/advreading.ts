@@ -11390,6 +11390,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-giant-panda',
+    title: 'A Bear That Eats Bamboo',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Giant pandas are bears, but unlike most bears, they eat almost nothing but bamboo. An adult panda spends up to fourteen hours a day eating and ( A ) as much as 12 kilograms of bamboo every day.",
+      "This is surprising because a panda's body is actually built to eat meat. Its stomach and intestines are short, like those of other meat-eating animals, so it cannot get much energy from plants. That is why pandas must eat so much bamboo and why they move slowly and rest a lot to save energy.",
+      "Pandas have a special way of holding bamboo. Besides their five fingers, they have a bone in the wrist that works like a thumb. With this \"false thumb,\" they can grip the stems firmly ( B ) they eat.",
+      "Wild pandas live only in the mountains of central China. Their number fell for many years, but thanks to protected forests and careful research, it has slowly started to rise again.",
+    ],
+    ja: [
+      'ジャイアントパンダはクマのなかまだが、ほとんどのクマとはちがって、竹以外のものはほとんど食べない。おとなのパンダは1日に最大14時間も食べつづけ、毎日12キログラムもの竹を食べる。',
+      'これはおどろくべきことだ。パンダの体は、実は肉を食べるようにできているからだ。胃や腸はほかの肉食動物と同じように短いので、植物からはあまりエネルギーをとれない。だからパンダはたくさんの竹を食べなければならず、エネルギーを節約するためにゆっくり動いてよく休むのだ。',
+      'パンダには、竹を持つための特別な方法がある。5本の指のほかに、手首に親指のようなはたらきをする骨があるのだ。この「にせの親指」で、食べるあいだ竹のくきをしっかりにぎることができる。',
+      '野生のパンダは、中国中部の山の中にしかいない。その数は長いあいだへりつづけたが、保護された森とていねいな研究のおかげで、少しずつまたふえはじめている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['eats', 'eat', 'eating', 'eaten'], answer: 0, why: 'and で spends とならぶ文の動詞。主語 An adult panda（三人称単数）なので eats。eat は主語と合わず、eating・eaten だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['while', 'during', 'among', 'despite'], answer: 0, why: 'うしろに主語と動詞（they eat）が続くので接続詞 while「～するあいだ」。during・among・despite は前置詞なので、主語と動詞の前には置けない。' },
+    ],
+    underline: {
+      phrase: 'grip',
+      choices: ['hold tightly', 'cut into pieces', 'throw away', 'wash carefully'],
+      answer: 0,
+      why: 'grip は「しっかりにぎる」。firmly「しっかりと」とともに、竹を落とさずに持てるという意味。',
+    },
+    order: {
+      words: ['it', 'cannot', 'get', 'much', 'energy', 'from'],
+      rest: 'plants',
+      answer: 'it cannot get much energy from',
+      ja: '～からあまりエネルギーをとれない（not ～ much「あまり～ない」）',
+    },
+    tf: [
+      { statement: 'パンダはクマのなかまだ。', answer: true, why: '第1段落 Giant pandas are bears。' },
+      { statement: 'パンダの腸は長く、植物から多くのエネルギーをとれる。', answer: false, why: '第2段落 Its stomach and intestines are short ... it cannot get much energy from plants。' },
+      { statement: '野生のパンダの数は、今もへりつづけている。', answer: false, why: '第4段落 it has slowly started to rise again。' },
+    ],
+    qa: [
+      { q: 'Why do pandas move slowly and rest a lot?', choices: ['To save energy.', 'To hide from enemies.', 'Because they are always sleepy.', 'Because bamboo is heavy.'], answer: 0, why: '第2段落 they move slowly and rest a lot to save energy。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
