@@ -69,6 +69,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-no-way': { wrong: 'He is in no ways to blame.', right: 'He is in no way to blame.', why: 'in no way「決して～ない」。no のあとは単数の way。' },
   'prep-idiom-contrary': { wrong: 'On contrary, I love it.', right: 'On the contrary, I love it.', why: 'on the contrary「それどころか」。the をわすれない。' },
   'prep-idiom-place': { wrong: 'In first place, we need more money.', right: 'In the first place, we need more money.', why: 'in the first place「まず第一に」。the をわすれない。' },
+  'prep-idiom-on-the': { wrong: 'Prices are on the rising.', right: 'Prices are on the rise.', why: 'on the rise「上がって・ふえて」。the のあとは名詞 rise。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
