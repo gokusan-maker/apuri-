@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'force-require-to': { wrong: 'We were forced wait for an hour.', right: 'We were forced to wait for an hour.', why: 'be forced to ～「～せざるをえない」。to が必要。' },
   'remind-warn-to': { wrong: 'She advised me to not eating too much.', right: 'She advised me not to eat too much.', why: '「～しないように」は not to ＋ 原形。' },
   'explain-to': { wrong: 'Please explain me the rule.', right: 'Please explain the rule to me.', why: 'explain は「人」を直接目的語にできない。物 to 人 の語順。' },
   'verb-a-with-b': { wrong: 'The box was filled of toys.', right: 'The box was filled with toys.', why: 'be filled with ～「～でいっぱいだ」（be full of ～ なら of）。' },
