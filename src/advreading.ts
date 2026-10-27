@@ -9832,6 +9832,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-round-bubbles',
+    title: 'Why Bubbles Are Round',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Whether you blow through a round wand or a square one, soap bubbles always come out round. Children are often surprised by this, but scientists have a simple explanation. The answer ( A ) in a force that pulls the surface of the bubble inward.",
+      "A soap bubble is a very thin layer of water held between two layers of soap. The water particles at the surface pull on each other, and this pulling makes the surface try to become as small as possible. Of all the shapes that can hold a certain amount of air, a sphere has the smallest surface. That is why a floating bubble always becomes round.",
+      "Bubbles are not round forever, though. When several bubbles stick together, the walls between them become flat, ( B ) shapes like the cells of a honeycomb. Gravity also slowly pulls the water down to the bottom of a bubble, so the top becomes thinner and thinner until the bubble pops.",
+      "The same idea appears in nature. Raindrops that are small also tend to be round, and some insects can walk on water because the surface acts like a thin skin. So the next time you blow bubbles, remember that you are watching a basic rule of nature at work.",
+    ],
+    ja: [
+      '丸い輪で吹いても四角い輪で吹いても、しゃぼん玉はいつも丸くなる。子どもたちはよくおどろくが、科学者には簡単な説明がある。答えは、しゃぼん玉の表面を内側に引っぱる力にあるのだ。',
+      'しゃぼん玉は、2つのせっけんの層のあいだにはさまれた、とてもうすい水の層だ。表面の水の粒どうしは引っぱり合い、この引っぱる力のせいで、表面はできるだけ小さくなろうとする。決まった量の空気をつつむことのできるあらゆる形の中で、球は表面がいちばん小さい。だから、うかんでいるしゃぼん玉は必ず丸くなるのだ。',
+      'でも、しゃぼん玉はずっと丸いわけではない。いくつかのしゃぼん玉がくっつくと、そのあいだのかべは平らになり、ハチの巣の部屋のような形を作る。また、重力が水を少しずつしゃぼん玉の底へ引っぱるので、上の部分はどんどんうすくなり、ついにはわれてしまう。',
+      '同じ考え方は自然の中にも見られる。小さな雨つぶも丸くなりやすく、水の表面がうすい皮のようなはたらきをするので、水の上を歩ける虫もいる。だから次にしゃぼん玉を吹くときは、自然の基本的なきまりがはたらいているところを見ているのだと思い出してほしい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['lies', 'lie', 'lying', 'lain'], answer: 0, why: '主語 The answer（三人称単数）に続く文の動詞なので lies（lie in ～「～にある」）。lie は主語と合わず、lying・lain だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['forming', 'forms', 'formed', 'to forming'], answer: 0, why: 'コンマのあとに分詞構文 forming ～「（そして）～を作る」。forms を置くと接続詞なしで動詞が2つ並ぶ。formed（受け身の意味）では目的語 shapes と合わず、to forming は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'sphere',
+      choices: ['a round shape like a ball', 'a flat square', 'a thin wall', 'a kind of soap'],
+      answer: 0,
+      why: 'sphere は「球・球体」。前の文の「表面ができるだけ小さくなる」形で、うしろの「だからしゃぼん玉は丸くなる」につながる。',
+    },
+    order: {
+      words: ['try', 'to', 'become', 'as', 'small', 'as', 'possible'],
+      rest: '',
+      answer: 'try to become as small as possible',
+      ja: 'できるだけ小さくなろうとする（as ～ as possible「できるだけ～」）',
+    },
+    tf: [
+      { statement: '四角い輪で吹くと、しゃぼん玉は四角くなる。', answer: false, why: '第1段落 Whether you blow through a round wand or a square one, soap bubbles always come out round。' },
+      { statement: '球は、同じ量の空気をつつむ形の中で表面がいちばん小さい。', answer: true, why: '第2段落 a sphere has the smallest surface。' },
+      { statement: 'しゃぼん玉は、重力で上の部分がうすくなり、やがてわれる。', answer: true, why: '第3段落 the top becomes thinner and thinner until the bubble pops。' },
+    ],
+    qa: [
+      { q: 'Why does a floating bubble become round?', choices: ['Because its surface tries to become as small as possible.', 'Because the wand is always round.', 'Because gravity pulls it into a ball.', 'Because the air inside is heavy.'], answer: 0, why: '第2段落 this pulling makes the surface try to become as small as possible ... a sphere has the smallest surface。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
