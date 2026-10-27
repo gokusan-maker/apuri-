@@ -47,6 +47,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'future-q-neg': { wrong: "I don't going to watch TV tonight.", right: "I'm not going to watch TV tonight.", why: 'be going to の否定は be 動詞のあとに not。' },
   'this-these': { wrong: 'This are my books.', right: 'These are my books.', why: '複数の物は these。be 動詞も are にそろえる。' },
   'not-a-but-b': { wrong: 'That animal is not a cat and a fox.', right: 'That animal is not a cat but a fox.', why: '「A ではなく B」は not A but B。and は使わない。' },
+  'prep-idiom-in-by': { wrong: 'Please explain it in detailed.', right: 'Please explain it in detail.', why: 'in detail「くわしく」。in のあとは名詞 detail を使う。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
