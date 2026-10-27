@@ -10119,6 +10119,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-order-delay',
+    title: 'E-mail: Your Order Has Been Delayed',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Lopez, Thank you for your recent order of 200 office chairs from Comfort Seating. We are writing to let you know that your delivery, which was planned for April 8, will be delayed by about one week.",
+      "One of the machines at our factory broke down last month, and we were unable to produce chairs for several days. The machine has now been repaired, and our staff are working extra hours to ( A ) up for the lost time. We expect to send your chairs on April 15 at the latest.",
+      "We understand that you are preparing to open a new office, and we are very sorry for any trouble this may cause. If you need some chairs sooner, we can send 50 of them by April 10 and the rest later. There would be no additional delivery charge for this.",
+      "As an apology, we would also like to offer you a 10 percent discount on your next order. Please let us know by replying to this e-mail ( B ) you would like a partial delivery. Sincerely, Amy Chen, Customer Service, Comfort Seating",
+    ],
+    ja: [
+      'ロペス様　このたびはコンフォート・シーティングにオフィスチェア200脚をご注文いただき、ありがとうございます。4月8日の予定だったお届けが、1週間ほどおくれることをお知らせいたします。',
+      '先月、当社の工場の機械が1台こわれ、数日間いすを作ることができませんでした。機械はすでに修理され、スタッフが失った時間を取りもどすために残業しています。おそくとも4月15日にはいすを発送できる見こみです。',
+      '新しい事務所を開く準備をされていることは承知しており、ご迷惑をおかけしてまことに申し訳ありません。もっと早くいすが必要でしたら、4月10日までに50脚をお送りし、残りをあとでお届けすることもできます。その場合も追加の配送料はかかりません。',
+      'おわびとして、次回のご注文を10パーセント割り引きさせていただきます。一部を先にお届けすることをご希望かどうか、このメールへのご返信でお知らせください。コンフォート・シーティング　カスタマーサービス　エイミー・チェン',
+    ],
+    blanks: [
+      { id: 'A', choices: ['make', 'making', 'made', 'makes'], answer: 0, why: 'to のあとは動詞の原形なので make（make up for ～「～のうめ合わせをする・取りもどす」）。' },
+      { id: 'B', choices: ['whether', 'what', 'which of', 'about'], answer: 0, why: 'うしろに完全な文（you would like a partial delivery）が続き、「～かどうか」の意味になる接続詞 whether。what はうしろに欠けた部分がいる、which of・about はうしろに文をとれない。' },
+    ],
+    underline: {
+      phrase: 'at the latest',
+      choices: ['not later than', 'a little after', 'only if it is sunny', 'very early in the morning'],
+      answer: 0,
+      why: 'at the latest は「おそくとも」。4月15日より後にはならないという意味。',
+    },
+    order: {
+      words: ['we', 'were', 'unable', 'to', 'produce', 'chairs'],
+      rest: 'for several days',
+      answer: 'we were unable to produce chairs',
+      ja: 'いすを作ることができなかった（be unable to ～「～できない」）',
+    },
+    tf: [
+      { statement: 'いすのお届けは、1か月おくれる。', answer: false, why: '第1段落 will be delayed by about one week。' },
+      { statement: '50脚を先に送ってもらう場合、追加の配送料はかからない。', answer: true, why: '第3段落 There would be no additional delivery charge for this。' },
+      { statement: 'ロペスさんは、次の注文が10パーセント安くなる。', answer: true, why: '第4段落 a 10 percent discount on your next order。' },
+    ],
+    qa: [
+      { q: 'Why was the order delayed?', choices: ['A machine at the factory broke down.', 'The chairs were the wrong color.', 'Mr. Lopez changed his order.', 'The office was not ready.'], answer: 0, why: '第2段落 One of the machines at our factory broke down last month。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
