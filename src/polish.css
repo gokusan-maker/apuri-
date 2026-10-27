@@ -4220,3 +4220,4 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes me-ouch { 20% { transform: translateX(-5px) rotate(-10deg); } 50% { transform: translateX(4px) rotate(6deg); } 80% { transform: translateX(-2px); } }
 @media (prefers-reduced-motion: reduce) { .af-me.ouch { animation: none; } }
 .arena-max-streak { margin: 2px 0; color: #fb923c; font-weight: 800; }
+.bfloor-combo { margin: 2px 0; color: #fb923c; font-weight: 900; text-align: center; animation: heart-break 0.5s ease-out; }

@@ -563,6 +563,24 @@ it('ボスの城の問題の階：まちがえると階のボスがこうげき�
   expect(screen.getByText(`💥 ${boss.name}のこうげき！ ライフ -1`)).toBeInTheDocument()
 })
 
+it('ボスの城の問題の階：3連続正解から「🔥 N連続正解！」', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  const ans = (q: (typeof qs)[number], right: boolean) => fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => (right ? b.textContent === q.choices[q.answer] : b.textContent !== q.choices[q.answer]))!)
+  ans(qs[0], true)
+  fireEvent.click(screen.getByText('次へ'))
+  ans(qs[1], true)
+  expect(screen.queryByText(/連続正解！/)).toBeNull()
+  fireEvent.click(screen.getByText('次へ'))
+  ans(qs[2], true)
+  expect(screen.getByText('🔥 3連続正解！')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('次へ'))
+  ans(qs[3], false)
+  expect(screen.queryByText(/連続正解！/)).toBeNull()
+})
+
 it('ボスの城の問題の階の結果に、のこりライフを出す', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')

@@ -11,6 +11,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   const [i, setI] = useState(0)
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
+  const [combo, setCombo] = useState(0) // 連続正解
   const [hint, setHint] = useState(false)
   const maxLives = bcLivesOf(qs.length)
   const [lives, setLives] = useState(maxLives)
@@ -87,6 +88,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <p className="bfloor-title">{title}</p>
       {bossView}
       {lifeView}
+      {/* 3連続正解からコンボの表示 */}
+      {picked !== null && combo >= 3 && (
+        <p key={`combo${i}`} className="bfloor-combo" role="status">
+          🔥 {combo}連続正解！
+        </p>
+      )}
       {/* のこりライフ1つ：あと1回まちがえると負け */}
       {lives === 1 && maxLives > 1 && picked === null && <p className="bfloor-pinch">⚠ ピンチ！ あと1回まちがえると負け</p>}
       {/* まちがえたら階のボスのこうげき（ボス戦と同じ演出） */}
@@ -127,8 +134,10 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
               setPicked(k)
               if (k === q.answer) {
                 setScore(score + 1)
+                setCombo(combo + 1)
                 playCorrect()
               } else {
+                setCombo(0)
                 setLives(lives - 1)
                 playWrong()
               }
