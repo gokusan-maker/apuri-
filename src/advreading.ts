@@ -9914,6 +9914,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-room-change',
+    title: 'E-mail: Change to Your Meeting Room',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Tanaka, Thank you for choosing the Lakeside Hotel for your company's training seminar on Thursday, May 15. I am writing to let you know about a change to your booking.",
+      "Unfortunately, the Oak Room, which you reserved, will not be available that day because of a problem with its air conditioning. Our engineers are working on it, but they cannot promise that the repairs ( A ) finished in time. We have therefore moved your seminar to the Maple Room on the third floor.",
+      "The Maple Room is slightly larger and has the same equipment, including a projector, a microphone, and a whiteboard. It can seat up to 40 people, so there will be enough space for your 32 participants. To apologize for the trouble, we will provide coffee and snacks during the afternoon break at no extra ( B ).",
+      "If the new room does not suit your needs, please reply to this e-mail by Friday, May 9, and we will try to find another solution. We look forward to welcoming you and your team. Best regards, Daniel Brooks, Events Manager",
+    ],
+    ja: [
+      'タナカ様　5月15日（木）の御社の研修セミナーに、レイクサイド・ホテルをお選びいただきありがとうございます。ご予約の変更についてお知らせするため、ご連絡いたしました。',
+      'あいにく、ご予約のオークルームは、空調の不具合のためその日はお使いいただけません。技術者が修理していますが、修理が間に合うとはお約束できません。そのため、セミナーの会場を3階のメープルルームに変更いたしました。',
+      'メープルルームは少し広く、プロジェクター、マイク、ホワイトボードなど同じ設備がそろっています。最大40人がすわれるので、32人の参加者のみなさまに十分な広さがあります。ご迷惑をおかけしたおわびとして、午後の休けい時間にコーヒーとお菓子を追加料金なしでご用意いたします。',
+      '新しい部屋がご希望に合わない場合は、5月9日（金）までにこのメールにご返信ください。ほかの方法を探してみます。みなさまのお越しをお待ちしております。よろしくお願いいたします。イベント担当マネージャー　ダニエル・ブルックス',
+    ],
+    blanks: [
+      { id: 'A', choices: ['will be', 'will', 'being', 'to be'], answer: 0, why: 'that 節の中の文の動詞。「修理が（間に合って）終わるだろう」は受け身の未来 will be finished。will だけでは be がなく、being・to be だけでは that 節の動詞にならない。' },
+      { id: 'B', choices: ['charge', 'charging', 'charged', 'charges to'], answer: 0, why: 'at no extra charge「追加料金なしで」。extra（形容詞）のあとは名詞 charge。charging・charged・charges to は形として入らない。' },
+    ],
+    underline: {
+      phrase: 'suit your needs',
+      choices: ['be right for what you want', 'cost too much', 'be too far away', 'be ready on time'],
+      answer: 0,
+      why: 'suit ～ は「～に合う・都合がよい」。suit your needs で「ご希望・必要に合う」。',
+    },
+    order: {
+      words: ['there', 'will', 'be', 'enough', 'space', 'for'],
+      rest: 'your 32 participants',
+      answer: 'there will be enough space for',
+      ja: '～に十分な広さがあるでしょう（there will be ～「～があるだろう」）',
+    },
+    tf: [
+      { statement: 'オークルームは、空調の不具合で使えない。', answer: true, why: '第2段落 will not be available that day because of a problem with its air conditioning。' },
+      { statement: 'メープルルームには、プロジェクターがない。', answer: false, why: '第3段落 has the same equipment, including a projector。' },
+      { statement: 'セミナーの参加者は40人だ。', answer: false, why: '第3段落 your 32 participants。40人は部屋の最大人数。' },
+    ],
+    qa: [
+      { q: 'What will the hotel give to apologize?', choices: ['Free coffee and snacks during a break.', 'A cheaper room price.', 'A free night at the hotel.', 'A larger projector.'], answer: 0, why: '第3段落 we will provide coffee and snacks during the afternoon break at no extra charge。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
