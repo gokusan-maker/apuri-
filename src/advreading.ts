@@ -11144,6 +11144,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-parrots',
+    title: 'How Parrots Learn to Talk',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Parrots are famous for copying human words. Some pet parrots can say hundreds of words and even whistle songs. But why do these birds copy sounds at all? Scientists believe the answer ( A ) to do with how parrots live in the wild.",
+      "Wild parrots live in large groups called flocks. Each flock has its own set of calls, a little like a local accent. Young parrots learn these calls by listening to the adults around them, and using the right calls helps them stay part of the group.",
+      "A pet parrot has no flock of other birds, so it treats the people in its home as its flock. When it copies their words, it is trying to fit in, just as it would copy the calls of other parrots in the forest.",
+      "Parrots are able to copy sounds so well because of a special part of their brain. Recent studies show that this part is larger in parrots than in other birds ( B ) can copy sounds, such as songbirds. Some parrots even seem to understand simple meanings, like the names of colors and shapes.",
+    ],
+    ja: [
+      'オウムは人間の言葉をまねすることで有名だ。何百もの言葉を話したり、歌を口笛でふいたりできるペットのオウムもいる。それにしても、なぜこの鳥たちは音をまねするのだろうか。科学者たちは、その答えが野生のオウムの暮らし方に関係していると考えている。',
+      '野生のオウムは、「群れ」とよばれる大きな集団で暮らしている。それぞれの群れには、少し地方のなまりのような、独自の鳴き声がある。若いオウムはまわりのおとなの声を聞いてこうした鳴き声を覚え、正しい鳴き声を使うことで群れの一員でいられる。',
+      'ペットのオウムにはほかの鳥の群れがないので、家の人たちを自分の群れとして考える。人の言葉をまねするとき、オウムは森でほかのオウムの鳴き声をまねするのと同じように、なかまに入ろうとしているのだ。',
+      'オウムがこれほどじょうずに音をまねできるのは、脳の特別な部分のおかげだ。最近の研究で、この部分は、さえずる鳥など音をまねできるほかの鳥よりも、オウムのほうが大きいことがわかっている。色や形の名前のような簡単な意味を理解しているように見えるオウムさえいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['has', 'have', 'having', 'to have'], answer: 0, why: 'that が省略された節の主語 the answer（単数）に続く動詞なので has（have to do with ～「～と関係がある」）。have は単数の主語と合わず、having・to have だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 other birds で、うしろに主語がなく can copy が続くので主格の関係代名詞 that。what は先行詞をとらず、whose はうしろに名詞、where はうしろに完全な文が必要。' },
+    ],
+    underline: {
+      phrase: 'fit in',
+      choices: ['be accepted as part of a group', 'fly away alone', 'become very angry', 'eat a lot'],
+      answer: 0,
+      why: 'fit in は「なじむ・なかまに入る」。家族を群れとして、その一員になろうとしているという意味。',
+    },
+    order: {
+      words: ['it', 'treats', 'the', 'people', 'in', 'its', 'home'],
+      rest: 'as its flock',
+      answer: 'it treats the people in its home',
+      ja: '家の人たちを～としてあつかう（treat A as B「AをBとしてあつかう」）',
+    },
+    tf: [
+      { statement: '野生のオウムは、ひとりで暮らすことが多い。', answer: false, why: '第2段落 Wild parrots live in large groups called flocks。' },
+      { statement: 'ペットのオウムは、家の人を群れのなかまとして考える。', answer: true, why: '第3段落 it treats the people in its home as its flock。' },
+      { statement: 'オウムの脳の特別な部分は、さえずる鳥より小さい。', answer: false, why: '第4段落 this part is larger in parrots than in other birds。' },
+    ],
+    qa: [
+      { q: 'Why do young wild parrots learn the calls of their flock?', choices: ['To stay part of the group.', 'To find food by themselves.', 'To scare away people.', 'To sing for other kinds of birds.'], answer: 0, why: '第2段落 using the right calls helps them stay part of the group。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
