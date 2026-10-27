@@ -10447,6 +10447,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-jellyfish',
+    title: 'Jellyfish: Simple but Successful',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Jellyfish are some of the strangest animals in the sea. They have no brain, no heart, and no bones. About 95 percent of their body is water. Even so, jellyfish have lived in the oceans for more than 500 million years, much longer than dinosaurs ( A ).",
+      "How can such a simple animal survive for so long? One reason is that jellyfish need very little energy. They do not chase their food. Instead, they drift with the ocean currents and catch small animals that touch their long arms. These arms are covered with tiny stingers that shoot poison into their prey.",
+      "Jellyfish are also good at living in difficult places. Some kinds can survive in water with very little oxygen, where most fish would die. When the sea becomes warmer or polluted, the number of jellyfish sometimes increases quickly, ( B ) problems for fishing boats and beaches.",
+      "Scientists are now studying jellyfish to learn more about the health of the oceans. Watching how their numbers change can tell us how the sea itself is changing.",
+    ],
+    ja: [
+      'クラゲは、海の中でもとても変わった生き物だ。脳も心臓も骨もない。体の約95パーセントは水だ。それでもクラゲは5億年以上も海で生きてきた。恐竜よりずっと長い。',
+      'こんなに単純な生き物が、どうしてそれほど長く生きのびてこられたのだろう。理由の1つは、クラゲがほとんどエネルギーを必要としないことだ。クラゲはえさを追いかけない。かわりに海流にのってただよい、長い腕にふれた小さな生き物をつかまえる。腕は小さな針でおおわれていて、えものに毒をうちこむ。',
+      'クラゲは、きびしい場所で生きるのも得意だ。ほとんどの魚が死んでしまうような、酸素がとても少ない水の中でも生きられる種類もいる。海が暖かくなったりよごれたりすると、クラゲの数が急にふえることがあり、漁船や海水浴場にとって問題を起こす。',
+      '科学者たちは今、海の健康についてもっと知るために、クラゲを研究している。クラゲの数の変わり方を見ると、海そのものがどう変わってきているかがわかるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['did', 'do', 'doing', 'done'], answer: 0, why: '比較の than のあとで、前の動詞 have lived をくり返すかわりの代動詞。恐竜はむかしの生き物なので過去形 did。doing・done は代動詞として文の動詞にならず、do は現在のことになって合わない。' },
+      { id: 'B', choices: ['causing', 'causes', 'caused', 'to causing'], answer: 0, why: 'コンマのあとに分詞構文 causing ～「（そして）～を引き起こす」。causes を置くと接続詞なしで動詞が2つ並ぶ。caused（受け身の意味）では目的語 problems と合わず、to causing は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'drift',
+      choices: ['move slowly, carried by water or air', 'swim very fast', 'sleep deeply', 'dive to the bottom'],
+      answer: 0,
+      why: 'drift は「ただよう・流される」。自分で泳がずに海流にのって動くという意味。',
+    },
+    order: {
+      words: ['catch', 'small', 'animals', 'that', 'touch'],
+      rest: 'their long arms',
+      answer: 'catch small animals that touch',
+      ja: '～にふれる小さな生き物をつかまえる（that 以下が animals を説明する）',
+    },
+    tf: [
+      { statement: 'クラゲには脳も心臓もない。', answer: true, why: '第1段落 They have no brain, no heart, and no bones。' },
+      { statement: 'クラゲは、えさを追いかけてつかまえる。', answer: false, why: '第2段落 They do not chase their food。' },
+      { statement: '海がよごれると、クラゲの数がふえることがある。', answer: true, why: '第3段落 When the sea becomes warmer or polluted, the number of jellyfish sometimes increases quickly。' },
+    ],
+    qa: [
+      { q: 'Why are scientists studying jellyfish now?', choices: ['To learn more about the health of the oceans.', 'To make new kinds of food.', 'To stop them from eating fish.', 'To find out how dinosaurs lived.'], answer: 0, why: '第4段落 Scientists are now studying jellyfish to learn more about the health of the oceans。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
