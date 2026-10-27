@@ -10816,6 +10816,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-museum-hours',
+    title: 'Notice: New Opening Hours at the City Museum',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "The Westfield City Museum is pleased to announce new opening hours beginning on Saturday, May 3. Until now, the museum has closed at 5:00 P.M. every day. From May 3, it will stay open until 8:00 P.M. on Fridays and Saturdays, so that visitors who work during the day can enjoy our exhibitions.",
+      "On these evenings, the museum café will also stay open, serving light meals and drinks. In addition, short guided tours of the main hall will start every hour from 5:00 P.M. Each tour lasts about 30 minutes, and there is no need to book ( A ).",
+      "Please note that the museum will now be closed on Mondays, except for national holidays. This change is necessary to give our staff time to clean and repair the exhibition rooms.",
+      "Admission prices will remain the same: 800 yen for adults and free for children under 12. Members of the Friends of the Museum club can enter free of charge at any time. For further information about our exhibitions and events, please visit our website or call the information desk ( B ) 045-555-0123.",
+    ],
+    ja: [
+      'ウェストフィールド市立博物館は、5月3日（土）から新しい開館時間になることをお知らせします。これまで博物館は毎日午後5時に閉館していました。5月3日からは、昼間に働いている方にも展示を楽しんでいただけるよう、金曜日と土曜日は午後8時まで開館します。',
+      'この2日の夜は、博物館のカフェも開いていて、軽食や飲み物を出します。また、午後5時から毎時、メインホールの短いガイドツアーが始まります。どのツアーも約30分で、前もって予約する必要はありません。',
+      'なお、博物館はこれから、国民の祝日をのぞいて月曜日が休館になりますのでご注意ください。この変更は、スタッフが展示室をそうじしたり修理したりする時間をつくるために必要なものです。',
+      '入館料は変わらず、大人800円、12才未満の子どもは無料です。博物館友の会の会員の方は、いつでも無料で入館できます。展示やイベントについてくわしくは、ウェブサイトをごらんいただくか、案内所（045-555-0123）にお電話ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in advance', 'in advanced', 'on advance', 'advance in'], answer: 0, why: 'in advance「前もって」。この形で決まっていて、in advanced・on advance・advance in は使えない。' },
+      { id: 'B', choices: ['at', 'in', 'of', 'to'], answer: 0, why: 'call ～ at ＋電話番号「～の番号に電話する」。電話番号の前は at。in・of・to はこの形では使わない。' },
+    ],
+    underline: {
+      phrase: 'free of charge',
+      choices: ['without paying', 'only on Mondays', 'with a guide', 'for a short time'],
+      answer: 0,
+      why: 'free of charge は「無料で」。お金をはらわずに入れるという意味。',
+    },
+    order: {
+      words: ['visitors', 'who', 'work', 'during', 'the', 'day'],
+      rest: 'can enjoy our exhibitions',
+      answer: 'visitors who work during the day',
+      ja: '昼間に働いている来館者（who 以下が visitors を説明する）',
+    },
+    tf: [
+      { statement: '5月3日から、博物館は毎日午後8時まで開く。', answer: false, why: '第1段落 it will stay open until 8:00 P.M. on Fridays and Saturdays。毎日ではない。' },
+      { statement: 'ガイドツアーは前もって予約しなければならない。', answer: false, why: '第2段落 there is no need to book in advance。' },
+      { statement: '12才未満の子どもは無料で入れる。', answer: true, why: '第4段落 free for children under 12。' },
+    ],
+    qa: [
+      { q: 'Why will the museum be closed on Mondays?', choices: ['To give staff time to clean and repair the rooms.', 'Because few people visit on Mondays.', 'Because the café is closed.', 'To save money on electricity.'], answer: 0, why: '第3段落 This change is necessary to give our staff time to clean and repair the exhibition rooms。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
