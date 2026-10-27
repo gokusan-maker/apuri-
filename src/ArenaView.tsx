@@ -16,6 +16,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
   const [count, setCount] = useState(0)
   const [right, setRight] = useState(0)
   const [streak, setStreak] = useState(0)
+  const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
   const [prevBest, setPrevBest] = useState(loadArenaBest)
@@ -57,6 +58,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
       }
       playCorrect()
     } else {
+      if (!missed.some((m) => m.en === q.word.en)) setMissed([...missed, { en: q.word.en, ja: q.choices[q.answer] }])
       setStreak(0)
       setNewRecord(false)
       setNewTitle(null)
@@ -91,11 +93,25 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer }: { start: n
         <p className="arena-result-sub">
           {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
+        {missed.length > 0 && (
+          <div className="arena-missed" aria-label="まちがえた問題">
+            <p className="arena-missed-title">📝 ふりかえり（{missed.length}問）</p>
+            <ul>
+              {missed.slice(0, 8).map((m) => (
+                <li key={m.en}>
+                  <span className="am-en">{m.en}</span>
+                  <span className="am-ja">{m.ja}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         <p className="arena-result-best">{ended.newBest ? `🏅 最高記録 更新！ ${arenaFloor(top)}` : `最高記録 ${arenaFloor(ended.best)}`}</p>
         <button
           className="good next-unit-btn"
           onClick={() => {
             setEnded(null)
+            setMissed([])
             setCount(0)
             setRight(0)
             setStreak(0)

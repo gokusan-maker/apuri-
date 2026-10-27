@@ -573,6 +573,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(screen.getByRole('status')).toHaveTextContent('いまのあなたは 1階（中1レベル）')
   expect(screen.getByText('称号：🌱 見習い')).toBeInTheDocument()
   expect(screen.getByText(/2問中 1問正解（正答率 50%）/)).toBeInTheDocument()
+  expect(screen.getByLabelText('まちがえた問題')).toHaveTextContent('📝 ふりかえり（1問）')
   expect(screen.getByText('次の称号「🗡 戦士」まで あと3階')).toBeInTheDocument()
   expect(screen.getByText('🏅 最高記録 更新！ 2階（中2レベル）')).toBeInTheDocument()
   expect(loadArenaBest()).toBe(1)
