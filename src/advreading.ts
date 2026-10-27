@@ -9425,6 +9425,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-gray-hair',
+    title: 'Why Hair Turns Gray',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Sooner or later, most people find their first gray hair. Some people notice it in their twenties, while others keep their natural color until much later. But what actually happens when hair turns gray?",
+      "The color of our hair comes from a natural pigment called melanin. Special cells at the root of each hair produce this pigment and add it to the hair as it grows. As we get older, these pigment-making cells gradually decrease in number. With less melanin, new hairs grow in gray, and with almost ( A ) at all, they look white.",
+      "The age at which hair starts to turn gray depends mostly on our genes. If your parents went gray early, there is a good chance that you will too. However, scientists have found evidence that stress may also play a part. In one study with mice, extreme stress damaged the cells that are needed to produce new pigment cells.",
+      "Interestingly, a hair that has already grown out cannot suddenly change color, ( B ) the popular stories about people whose hair turned white overnight. Gray hair appears only as new hairs grow from the root. So, even though it can be surprising, gray hair is simply a natural part of growing older.",
+    ],
+    ja: [
+      '遅かれ早かれ、ほとんどの人は最初の白髪を見つける。20代で気づく人もいれば、ずっとあとまで生まれつきの色を保つ人もいる。しかし、髪が白くなるとき、実際には何が起きているのだろうか。',
+      '髪の色は、メラニンという天然の色素から来ている。1本1本の髪の根もとにある特別な細胞がこの色素を作り、髪がのびるにつれて髪に加えていく。年をとるにつれて、この色素を作る細胞はだんだん数が減っていく。メラニンが少なくなると新しい髪は灰色になり、ほとんどなくなると白く見える。',
+      '髪が白くなり始める年れいは、主に遺伝子によって決まる。親が早くから白髪になっていたら、あなたもそうなる可能性が高い。しかし、ストレスも関わっているかもしれないという証拠を科学者たちは見つけている。マウスを使ったある研究では、強いストレスが、新しい色素細胞を作るのに必要な細胞をいためた。',
+      '興味深いことに、一晩で髪が真っ白になった人についてのよく知られた話とはちがって、すでにのびた髪が急に色を変えることはない。白髪は、新しい髪が根もとから生えてくるときにだけあらわれる。だから、おどろくことはあっても、白髪は年をとることのごく自然な一部なのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['none', 'nothing of', 'no', 'not'], answer: 0, why: 'almost none (at all)「ほとんどまったくない」。none は代名詞で melanin を受ける。no は名詞の前に置く形容詞、not は副詞なので、ここでは使えない。' },
+      { id: 'B', choices: ['despite', 'although', 'even though', 'whereas'], answer: 0, why: 'うしろが名詞句（the popular stories …）なので前置詞 despite「～にもかかわらず」。although・even though・whereas は接続詞で、うしろに主語と動詞のある文が必要。' },
+    ],
+    underline: {
+      phrase: 'play a part',
+      choices: ['have some effect', 'act in a play', 'take a rest', 'make a choice'],
+      answer: 0,
+      why: 'play a part (in ～) は「（～に）関わる・役割を果たす」。have some effect とほぼ同じ意味。',
+    },
+    order: {
+      words: ['there', 'is', 'a', 'good', 'chance', 'that'],
+      rest: 'you will too',
+      answer: 'there is a good chance that',
+      ja: '～する可能性が高い（there is a good chance that ～）',
+    },
+    tf: [
+      { statement: '髪の色は、メラニンという色素から来ている。', answer: true, why: '第2段落 The color of our hair comes from a natural pigment called melanin。' },
+      { statement: '髪が白くなり始める年れいは、主に遺伝子で決まる。', answer: true, why: '第3段落 depends mostly on our genes。' },
+      { statement: 'すでにのびた髪が、一晩で白く変わることはよくある。', answer: false, why: '第4段落 a hair that has already grown out cannot suddenly change color。' },
+    ],
+    qa: [
+      { q: 'What happened in the study with mice?', choices: ['Extreme stress damaged cells needed to make new pigment cells.', 'The mice\'s hair turned white overnight.', 'The mice produced more melanin.', 'Stress had no effect on the mice.'], answer: 0, why: '第3段落 extreme stress damaged the cells that are needed to produce new pigment cells。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
