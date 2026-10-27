@@ -135,6 +135,12 @@ describe('ボス戦', () => {
     expect(screen.getByLabelText('のこりハート 2').textContent).toBe('❤️❤️🤍')
   })
 
+  it('会心の一撃で画面がゆれる（crit-shake）', () => {
+    render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
+    answer(true) // すぐに答えると会心
+    expect(document.querySelector('.card.boss')!.classList.contains('crit-shake')).toBe(true)
+  })
+
   it('まちがえると問題のパネルがゆれる（miss）', () => {
     render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} />)
     expect(document.querySelector('.boss .en')!.classList.contains('miss')).toBe(false)
