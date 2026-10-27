@@ -1127,6 +1127,7 @@ it('闘技場：3回続けてまちがえると応援が出る', async () => {
   fireEvent.click(screen.getByText(/^次へ/))
   miss()
   expect(screen.getByText('💪 ドンマイ！ 1問ずつ取りもどそう')).toBeInTheDocument()
+  expect(document.querySelector('.arena-floor.here .af-say')).toHaveTextContent('まけないで！') // 相棒もはげます
 })
 
 it('闘技場の塔の空は、下の階は青空・上の階は星空', async () => {

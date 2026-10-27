@@ -254,6 +254,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                     {/* 相棒のひとこと：レベルアップで喜び、盾がまもると強がる */}
                     {levelUp && <span className="af-say">やったー！</span>}
                     {picked !== null && !correct && guarded && <span className="af-say">セーフ！</span>}
+                    {picked !== null && !correct && !guarded && misses >= 3 && <span className="af-say">まけないで！</span>}
                   </span>}
               </div>
             ),
