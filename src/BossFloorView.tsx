@@ -14,6 +14,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   const [combo, setCombo] = useState(0) // 連続正解
   const [maxCombo, setMaxCombo] = useState(0) // いちばん長い連続正解（結果で見せる）
   const [hint, setHint] = useState(false)
+  const [hints, setHints] = useState(0) // ヒントを見た回数
   const maxLives = bcLivesOf(qs.length)
   const [lives, setLives] = useState(maxLives)
   const q = qs[i]
@@ -86,6 +87,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
           </p>
         )}
         {maxCombo >= 3 && score < qs.length && <p className="bfloor-best">🔥 いちばん長い連続正解 {maxCombo}問</p>}
+        {score >= pass && hints === 0 && qs.some((x) => x.hint) && <p className="bfloor-best">💡 ヒントなしでクリア！</p>}
         {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！{perfectBonus > 0 ? ` ボーナス 🪙${perfectBonus}` : ''}</p>}
         {best !== undefined && score > best && <p className="bfloor-best">🏅 自己ベスト更新！（前回まで {best}問）</p>}
         {score >= pass && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
@@ -154,7 +156,10 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       {new Set(qs.map((x) => x.team)).size > 1 && <p className="arena-qtag">{q.team === 'grammar' ? '📐 文法' : q.team === 'reading' ? '📖 読解' : '🔤 単語'}</p>}
       <p className={`bfloor-q team-${q.team}`}>{q.word.en}</p>
       {q.hint && picked === null && !hint && (
-        <button className="hint-5050" onClick={() => setHint(true)}>
+        <button className="hint-5050" onClick={() => {
+            setHint(true)
+            setHints(hints + 1)
+          }}>
           💡 ヒント
         </button>
       )}

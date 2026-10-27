@@ -595,6 +595,26 @@ it('ボスの城のミックスの階では、問題の種類の札（単語・�
   expect(document.querySelector('.bfloor .arena-qtag')).toBeNull() // 文法だけの階では出さない
 })
 
+it('ボスの城の文法の階：ヒントを見ずにクリアすると「💡 ヒントなしでクリア！」', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  const play = (useHint: boolean) => {
+    qs.forEach((q, k) => {
+      if (useHint && k === 0) fireEvent.click(screen.getByText('💡 ヒント'))
+      fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+      fireEvent.click(screen.getByText(/次へ|結果を見る/))
+    })
+  }
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  play(false)
+  expect(screen.getByText('💡 ヒントなしでクリア！')).toBeInTheDocument()
+  cleanup()
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  play(true)
+  expect(screen.queryByText('💡 ヒントなしでクリア！')).toBeNull()
+})
+
 it('ボスの城の問題の階：最後の問題で「🔔 ラスト1問！」', async () => {
   const { BossFloor } = await import('./BossFloorView')
   const { bossFloorQs } = await import('./bosscastle')
