@@ -11062,6 +11062,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-workshop-invite',
+    title: 'E-mail: Invitation to a Workshop',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Brown, I am writing to invite you to a free workshop on presentation skills, which will be held at our training center on Thursday, November 20, from 1:00 P.M. to 4:00 P.M. The workshop is open to all employees in the sales department.",
+      "The workshop will be led by Dr. Emily Hart, a well-known speaker who has trained staff at many international companies. She will show participants how to plan a clear message, use slides effectively, and speak with confidence in front of an audience.",
+      "Participants will also have the chance to give a short presentation and receive advice. For this reason, the number of places is limited to 20. If you are interested ( A ) taking part, please reply to this e-mail by November 7. Places will be given in the order that replies are received.",
+      "Coffee and light snacks will be provided during the break. Please bring a laptop if you have one. We hope you will be able to ( B ). Best regards, Kenji Ono, Training Manager",
+    ],
+    ja: [
+      'ブラウン様　11月20日（木）午後1時から4時まで研修センターでおこなわれる、プレゼンテーションの技術についての無料ワークショップにご招待したく、ご連絡いたしました。ワークショップには営業部の社員ならどなたでも参加できます。',
+      'ワークショップの講師は、多くの国際的な会社で社員を指導してきた有名な講演者、エミリー・ハート博士です。わかりやすい話の組み立て方、スライドの上手な使い方、聞き手の前で自信を持って話す方法を教えてくれます。',
+      '参加者は短いプレゼンテーションをして、助言を受ける機会もあります。そのため、定員は20人までとなっています。参加をご希望の方は、11月7日までにこのメールにご返信ください。お返事が届いた順に席をおわたしします。',
+      '休けいのあいだには、コーヒーと軽いおやつをご用意します。ノートパソコンをお持ちの方はご持参ください。ご参加いただけることを願っています。研修担当マネージャー　小野ケンジ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'be interested in ～ing「～することに興味がある」。interested のあとの前置詞は in。on・at・with はこの形では使えない。' },
+      { id: 'B', choices: ['attend', 'attending', 'attended', 'attendance'], answer: 0, why: 'be able to のあとは動詞の原形なので attend「出席する」。attending・attended・attendance（名詞）は to のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'with confidence',
+      choices: ['without being afraid', 'very quietly', 'in a hurry', 'with a lot of paper'],
+      answer: 0,
+      why: 'with confidence は「自信を持って」。こわがらずに堂々と話すという意味。',
+    },
+    order: {
+      words: ['places', 'will', 'be', 'given', 'in', 'the', 'order'],
+      rest: 'that replies are received',
+      answer: 'places will be given in the order',
+      ja: '席は～の順にわたされる（in the order that ～「～の順に」）',
+    },
+    tf: [
+      { statement: 'ワークショップは有料だ。', answer: false, why: '第1段落 a free workshop。' },
+      { statement: 'ワークショップに参加できるのは20人までだ。', answer: true, why: '第3段落 the number of places is limited to 20。' },
+      { statement: '参加者は全員、ノートパソコンを買わなければならない。', answer: false, why: '第4段落 Please bring a laptop if you have one。持っていればでよい。' },
+    ],
+    qa: [
+      { q: 'How will places at the workshop be given?', choices: ['In the order that replies are received.', 'By drawing lots.', 'Only to managers.', 'By a short test.'], answer: 0, why: '第3段落 Places will be given in the order that replies are received。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
