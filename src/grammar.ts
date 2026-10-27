@@ -7582,7 +7582,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'Except ___ Monday, the shop is open every day.', choices: ['for', 'of', 'to'], answer: 0, why: 'except for ～「～をのぞいて」。except のあとは for。' },
       { sentence: 'Aside ___ the price, I like this bag very much.', choices: ['from', 'of', 'for'], answer: 0, why: 'aside from ～「～は別として」。aside のあとは from。' },
-      { sentence: 'The room was quiet except ___ the sound of the clock.', choices: ['for', 'of', 'at'], answer: 0, why: 'except for ～「～があるほかは」。except のあとは for。' },
+      { sentence: 'Except ___ the sound of the clock, the room was quiet.', choices: ['for', 'of', 'on'], answer: 0, why: 'except for ～「～があるほかは」。except のあとは for。' },
     ],
   },
   {
