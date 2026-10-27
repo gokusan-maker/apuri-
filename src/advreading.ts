@@ -10078,6 +10078,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-boomerang',
+    title: 'Why a Boomerang Comes Back',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A boomerang is a curved piece of wood or plastic that flies through the air and returns to the person who threw it. For thousands of years, people in Australia have made boomerangs, and today many people enjoy them as a sport. But how can a simple stick ( A ) its way back?",
+      "The secret is in its shape. Each arm of a returning boomerang is shaped like the wing of an airplane, with one side curved and the other side flatter. As the boomerang spins, air moves faster over the curved side, and this creates a force that pushes it sideways.",
+      "Because the boomerang is spinning, the top arm always moves through the air faster than the bottom arm. The top arm therefore gets a stronger push, and this makes the boomerang slowly turn in a large circle, ( B ) it back to the thrower.",
+      "Throwing one well takes practice. A boomerang must be thrown almost straight up and down, not flat like a plate, and the wind must be considered. Not all boomerangs return, either. Some heavy ones were used for hunting and were made to fly straight.",
+    ],
+    ja: [
+      'ブーメランは、空中を飛んで投げた人のところへもどってくる、曲がった木やプラスチックの道具だ。何千年ものあいだ、オーストラリアの人々はブーメランを作ってきたし、今では多くの人がスポーツとして楽しんでいる。それにしても、ただの棒がどうやってもどる道を見つけられるのだろうか。',
+      'ひみつはその形にある。もどってくるブーメランのそれぞれの腕は飛行機のつばさのような形をしていて、片側がふくらみ、もう片側は平らに近い。ブーメランが回転すると、ふくらんだ側の上を空気が速く流れ、それがブーメランを横へおす力を生む。',
+      'ブーメランは回転しているので、上側の腕はいつも下側の腕より速く空気の中を進む。そのため上側の腕のほうが強くおされ、ブーメランはゆっくりと大きな円をえがいて曲がり、投げた人のところへもどってくる。',
+      'うまく投げるには練習がいる。ブーメランは皿のように平らにではなく、ほぼたてにして投げなければならず、風のことも考える必要がある。また、すべてのブーメランがもどってくるわけではない。重いものの中には狩りに使われ、まっすぐ飛ぶように作られたものもあった。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['find', 'finds', 'finding', 'found'], answer: 0, why: '助動詞 can のあとは動詞の原形なので find（find one’s way「道を見つけて進む」）。' },
+      { id: 'B', choices: ['bringing', 'brings', 'brought', 'to bringing'], answer: 0, why: 'コンマのあとに分詞構文 bringing ～「（そして）～を運ぶ」。brings を置くと接続詞なしで動詞が2つ並ぶ。brought（受け身の意味）では目的語 it と合わず、to bringing は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'considered',
+      choices: ['thought about carefully', 'stopped completely', 'made stronger', 'forgotten'],
+      answer: 0,
+      why: 'consider は「よく考える・考えに入れる」。the wind must be considered で「風のことも考えなければならない」。',
+    },
+    order: {
+      words: ['air', 'moves', 'faster', 'over', 'the', 'curved', 'side'],
+      rest: '',
+      answer: 'air moves faster over the curved side',
+      ja: 'ふくらんだ側の上を空気が速く流れる（faster は fast の比較級）',
+    },
+    tf: [
+      { statement: 'ブーメランの腕は、飛行機のつばさのような形をしている。', answer: true, why: '第2段落 Each arm ... is shaped like the wing of an airplane。' },
+      { statement: 'ブーメランは、皿のように平らにして投げるとよい。', answer: false, why: '第4段落 must be thrown almost straight up and down, not flat like a plate。' },
+      { statement: 'すべてのブーメランは、投げた人のところへもどってくる。', answer: false, why: '第4段落 Not all boomerangs return。' },
+    ],
+    qa: [
+      { q: 'Why does the top arm get a stronger push?', choices: ['Because it moves through the air faster than the bottom arm.', 'Because it is heavier.', 'Because it is made of plastic.', 'Because the wind always blows from above.'], answer: 0, why: '第3段落 the top arm always moves through the air faster than the bottom arm. The top arm therefore gets a stronger push。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
