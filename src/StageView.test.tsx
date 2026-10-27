@@ -771,6 +771,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(screen.queryByText(/はじめの階/)).toBeNull() // いまがはじめの階なら出さない
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/最高 2階（中1レベル）/)).toBeInTheDocument()
+  expect(within(screen.getByRole('region', { name: '闘技場' })).queryByText(/最高 \d+連続/)).toBeNull() // 連続正解が1問だけなら出さない
 })
 
 it('闘技場：レベルの区切り（20階ごと）をこえると LEVEL UP! の演出、下がるとレベルダウン', async () => {
@@ -968,6 +969,9 @@ it('闘技場の結果に、いちばん長い連続正解を出す', async () =
   arenaPick(true)
   fireEvent.click(screen.getByText('🏁 終了'))
   expect(screen.queryByText(/いちばん長い連続正解/)).toBeNull() // 1問だけなら出さない
+  cleanup()
+  render(<Stages part="boss" levels={['中1']} record={{}} onClear={() => {}} />)
+  expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/🔥最高 2連続/)).toBeInTheDocument() // 入り口にも出す
 })
 
 it('闘技場：次のレベルまで あと何階 かを出す', async () => {
