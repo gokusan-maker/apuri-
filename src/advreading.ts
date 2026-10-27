@@ -8685,6 +8685,36 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'toeic-charity-run',
+    title: 'Notice: Charity Fun Run',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "Northgate Foods is proud to hold its third annual Charity Fun Run on Saturday, May 17, at Riverside Park. All money raised will be donated to the City Children's Hospital. Employees, their families, and friends are all welcome to ( A ).",
+      "Participants can choose either the 3-kilometer walk or the 10-kilometer run. The entry fee is $15 for adults and free for children under twelve. Everyone who finishes will receive a T-shirt and a free lunch provided by our cafeteria team.",
+      "To sign up, please fill out the form on the staff website by May 9. We are also looking for volunteers to help at the water stations and the finish line. Volunteers do not have to pay the entry fee, and they will ( B ) a T-shirt as a thank-you.",
+      "Last year, we raised over $8,000. With your help, we hope to beat that record this year. For more information, please contact Ryan Ortiz in Human Resources.",
+    ],
+    ja: [
+      'ノースゲート食品は、5月17日（土）にリバーサイド公園で、第3回の毎年恒例チャリティー・ファンランを開催します。集まったお金はすべて市立こども病院に寄付されます。社員、その家族、友人のみなさん、どなたでも参加を歓迎します。',
+      '参加者は3キロのウォーキングか10キロのランのどちらかを選べます。参加費は大人15ドル、12歳未満の子どもは無料です。完走・完歩した人は全員、Tシャツと、社員食堂チームが用意する無料の昼食がもらえます。',
+      '申しこむには、5月9日までに社員用ウェブサイトのフォームに記入してください。給水所とゴール地点で手伝ってくれるボランティアも募集しています。ボランティアは参加費をはらう必要はなく、お礼としてTシャツがもらえます。',
+      '昨年は8,000ドル以上が集まりました。みなさんの協力で、今年はその記録をこえたいと思っています。くわしくは、人事部のライアン・オルティスまでお問い合わせください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['join', 'joining', 'joined', 'joins'], answer: 0, why: 'be welcome to ～「自由に～してよい」。to のあとは動詞の原形。' },
+      { id: 'B', choices: ['receive', 'receiving', 'received', 'to receive'], answer: 0, why: '助動詞 will のあとは動詞の原形。' },
+    ],
+    tf: [
+      { statement: '集まったお金は市立こども病院に寄付される。', answer: true, why: "第1段落 All money raised will be donated to the City Children's Hospital。" },
+      { statement: '12歳未満の子どもも参加費として15ドル必要だ。', answer: false, why: '第2段落 free for children under twelve。' },
+      { statement: 'ボランティアは参加費をはらわなくてよい。', answer: true, why: '第3段落 Volunteers do not have to pay the entry fee。' },
+    ],
+    qa: [
+      { q: 'What will everyone who finishes receive?', choices: ['A T-shirt and a free lunch.', 'A medal and $15.', 'A ticket to the hospital.', 'A day off from work.'], answer: 0, why: '第2段落 Everyone who finishes will receive a T-shirt and a free lunch。' },
+      { q: 'What is the deadline for signing up?', choices: ['May 9.', 'May 17.', 'May 12.', 'There is no deadline.'], answer: 0, why: '第3段落 please fill out the form on the staff website by May 9。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
