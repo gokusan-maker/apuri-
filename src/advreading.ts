@@ -11226,6 +11226,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ostrich',
+    title: 'The Bird That Cannot Fly',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The ostrich is the largest bird in the world. An adult can be more than two meters tall and weigh over 100 kilograms. It has wings, but it ( A ) fly. Its body is simply too heavy for its small wings to lift.",
+      "Instead of flying, the ostrich runs. With its long, strong legs, it can reach speeds of about 70 kilometers per hour, faster than a racehorse. Each step can cover three to five meters. Running is its main way of escaping from lions and other dangerous animals.",
+      "Ostriches also use their wings, even though they cannot fly. When they run fast and need to turn quickly, they spread their wings to keep their balance. The wings also help to keep their eggs and chicks warm, and males show them off ( B ) attract females.",
+      "There is a popular story that ostriches hide their heads in the sand when they are afraid. This is not true. They do lower their heads to the ground, but this is usually to turn their eggs, which are laid in holes in the sand.",
+    ],
+    ja: [
+      'ダチョウは世界でいちばん大きな鳥だ。おとなは背の高さが2メートル以上、体重が100キログラム以上になることもある。つばさはあるが、飛ぶことはできない。小さなつばさで持ち上げるには、体が重すぎるのだ。',
+      '飛ぶかわりに、ダチョウは走る。長くて強い足で、時速約70キロメートルの速さを出すことができ、競走馬より速い。ひと足で3メートルから5メートル進むこともある。走ることが、ライオンなどの危険な動物からにげるおもな方法だ。',
+      'ダチョウは飛べなくても、つばさを使う。速く走っていて急に向きを変えなければならないとき、つばさを広げてバランスをとる。つばさは卵やひなを温めるのにも役立ち、オスはメスを引きつけるためにつばさを見せびらかす。',
+      'ダチョウはこわいと頭を砂の中にかくすという、よく知られた話がある。これは本当ではない。たしかに頭を地面に低く下げるが、それはたいてい、砂の穴に産んだ卵の向きを変えるためなのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['cannot', 'not can', 'cannot to', 'not'], answer: 0, why: '助動詞 can の否定は cannot ＋動詞の原形。not can・cannot to という形はなく、not だけでは文の動詞にならない（does not が必要）。' },
+      { id: 'B', choices: ['to', 'for', 'so', 'by'], answer: 0, why: '目的を表す不定詞「～するために」なので to ＋動詞の原形 attract。for・by は前置詞で動詞の原形をとれず、so はうしろに主語と動詞が必要。' },
+    ],
+    underline: {
+      phrase: 'show them off',
+      choices: ['display them proudly', 'hide them', 'clean them', 'break them'],
+      answer: 0,
+      why: 'show off ～ は「～を見せびらかす」。オスがメスにつばさを見せて引きつけるという意味。',
+    },
+    order: {
+      words: ['its', 'body', 'is', 'simply', 'too', 'heavy'],
+      rest: 'for its small wings to lift',
+      answer: 'its body is simply too heavy',
+      ja: '体がとにかく重すぎる（too ～ for … to ― 「…が―するには～すぎる」）',
+    },
+    tf: [
+      { statement: 'ダチョウは競走馬より速く走れる。', answer: true, why: '第2段落 about 70 kilometers per hour, faster than a racehorse。' },
+      { statement: 'ダチョウは飛べないので、つばさをまったく使わない。', answer: false, why: '第3段落 Ostriches also use their wings, even though they cannot fly。' },
+      { statement: 'ダチョウはこわいと頭を砂にかくす。', answer: false, why: '第4段落 This is not true。' },
+    ],
+    qa: [
+      { q: 'Why do ostriches lower their heads to the ground?', choices: ['Usually to turn their eggs.', 'To hide from lions.', 'To sleep.', 'To drink water.'], answer: 0, why: '第4段落 this is usually to turn their eggs。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
