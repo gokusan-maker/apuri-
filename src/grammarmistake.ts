@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'prep-idiom-at': { wrong: 'You need at less three players.', right: 'You need at least three players.', why: '「少なくとも」は at least。' },
   'prep-idiom-on': { wrong: 'The new car is on displayed at the shop.', right: 'The new car is on display at the shop.', why: 'on display「展示中で」。on のあとは名詞 display。' },
   'prep-idiom-under': { wrong: 'The bridge is under construct.', right: 'The bridge is under construction.', why: 'under のあとは名詞 construction。' },
   'prep-idiom-out-of': { wrong: 'I was out of breathe after the race.', right: 'I was out of breath after the race.', why: 'out of breath。of のあとは名詞 breath（breathe は動詞）。' },
