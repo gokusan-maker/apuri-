@@ -9955,6 +9955,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-morning-dew',
+    title: 'Where Morning Dew Comes From',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a clear morning, you may find tiny drops of water covering the grass, even though it did not rain at night. This water is called dew. Many people believe dew falls from the sky, but in fact it ( A ) from the air right next to the ground.",
+      "Air always contains some water in the form of a gas called water vapor. Warm air can hold more water vapor than cold air. On a clear night, the ground and the grass lose their heat quickly, and the air touching them becomes cold. When this air cannot hold all of its water vapor anymore, the extra vapor changes into liquid water.",
+      "You can see the same thing at home. When you take a cold drink out of the fridge on a hot day, the outside of the glass soon becomes wet. The water does not come through the glass. It comes from the warm air, which is cooled ( B ) it touches the cold surface.",
+      "Dew is more than a pretty sight. In some dry areas, plants and small animals depend on it for much of the water they need. People there have even built nets to collect dew and fog for drinking water.",
+    ],
+    ja: [
+      '晴れた朝、夜に雨がふらなかったのに、草が小さな水のつぶでおおわれていることがある。この水は露（つゆ）とよばれる。露は空から落ちてくると思っている人が多いが、実は地面のすぐ近くの空気から生まれるのだ。',
+      '空気にはいつも、水蒸気とよばれる気体のかたちで水がいくらかふくまれている。暖かい空気は、冷たい空気よりも多くの水蒸気をふくむことができる。晴れた夜には地面や草がすぐに熱を失い、それにふれている空気が冷たくなる。この空気が水蒸気をすべてふくんでいられなくなると、あまった水蒸気が液体の水に変わる。',
+      '同じことは家でも見られる。暑い日に冷蔵庫から冷たい飲み物を出すと、コップの外側がすぐにぬれてくる。水はコップを通りぬけてくるのではない。暖かい空気が冷たい表面にふれたときに冷やされ、そこから水が出てくるのだ。',
+      '露は、ただきれいなだけのものではない。乾燥した地域では、植物や小さな動物が、必要な水の多くを露にたよっている。そこに住む人々は、飲み水にするために露や霧を集めるネットを作ったことさえある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['forms', 'form', 'forming', 'formed by'], answer: 0, why: 'but のあとの文の動詞。主語 it（＝dew、三人称単数）なので forms（form「できる・生まれる」）。form は主語と合わず、forming・formed by だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['when', 'during', 'because of', 'in spite of'], answer: 0, why: 'うしろに主語と動詞（it touches）が続くので接続詞 when。during・because of・in spite of は前置詞（句）で、文をつなげない。' },
+    ],
+    underline: {
+      phrase: 'depend on',
+      choices: ['need something to live', 'move away from', 'make something dirty', 'stop using'],
+      answer: 0,
+      why: 'depend on ～ は「～にたよる」。必要な水の多くを露にたよっているという意味。',
+    },
+    order: {
+      words: ['warm', 'air', 'can', 'hold', 'more', 'water', 'vapor'],
+      rest: 'than cold air',
+      answer: 'warm air can hold more water vapor',
+      ja: '暖かい空気はより多くの水蒸気をふくむことができる（比較級 more ～ than ...）',
+    },
+    tf: [
+      { statement: '露は、夜に空から落ちてきた水だ。', answer: false, why: '第1段落 in fact it forms from the air right next to the ground。' },
+      { statement: '冷たい空気は、暖かい空気よりも多くの水蒸気をふくむことができる。', answer: false, why: '第2段落 Warm air can hold more water vapor than cold air。' },
+      { statement: '乾燥した地域には、露を集めて飲み水にする人々がいる。', answer: true, why: '第4段落 People there have even built nets to collect dew and fog for drinking water。' },
+    ],
+    qa: [
+      { q: 'Why does the outside of a cold glass become wet on a hot day?', choices: ['Because warm air is cooled when it touches the glass.', 'Because water comes through the glass.', 'Because the drink is too full.', 'Because it rained outside.'], answer: 0, why: '第3段落 It comes from the warm air, which is cooled when it touches the cold surface。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
