@@ -10324,6 +10324,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-volunteer-thanks',
+    title: 'E-mail: Thank You for Volunteering',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear volunteers, On behalf of the Green Bay Beach Club, I would like to thank all of you who joined last Sunday's beach clean-up. More than 120 people took part, which is the largest number in the event's ten-year history.",
+      "Together, we collected about 350 kilograms of trash, including plastic bottles, fishing nets, and even an old bicycle. The local newspaper wrote a story about our work, and several people have already contacted us to ask ( A ) they can join next time.",
+      "We have also received some helpful feedback. Many of you said that the event started too early and that there were not enough gloves for everyone. We will start one hour later next time, at 9:00 A.M., and we will prepare 50 more pairs of gloves.",
+      "Our next clean-up is planned for Sunday, October 12. If you would like to take part again, please sign up on our website by October 5. Volunteers ( B ) bring a friend will receive a free club T-shirt. Thank you again for helping to keep our beach beautiful. Best wishes, Sarah Wilson, Event Coordinator",
+    ],
+    ja: [
+      'ボランティアのみなさまへ　グリーンベイ・ビーチクラブを代表して、先週の日曜日の海岸清掃に参加してくださったみなさまにお礼を申し上げます。120人をこえる方が参加し、この行事の10年の歴史でいちばん多い人数になりました。',
+      'みんなで、ペットボトルや漁あみ、古い自転車までふくめて、約350キログラムのごみを集めました。地元の新聞が私たちの活動について記事を書き、すでに何人もの方から、次回どうすれば参加できるかという問い合わせがありました。',
+      '役に立つご意見もいただきました。多くの方から、行事の始まりが早すぎたこと、全員分の手ぶくろがなかったことをご指摘いただきました。次回は1時間おそい午前9時に始め、手ぶくろを50組多く用意します。',
+      '次の清掃は10月12日（日）の予定です。また参加したい方は、10月5日までにウェブサイトで申しこんでください。友だちを連れてきてくださったボランティアの方には、クラブのTシャツを無料でさしあげます。海岸を美しくたもつためのご協力に、あらためて感謝します。イベント担当　サラ・ウィルソン',
+    ],
+    blanks: [
+      { id: 'A', choices: ['how', 'about', 'during', 'because of'], answer: 0, why: 'ask のあとに「どうやって～できるか」という間接疑問が続くので、疑問詞 how。about・during・because of は前置詞（句）なので、主語と動詞（they can join）の前には置けない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 Volunteers（人）で、うしろに主語がなく bring が続くので主格の関係代名詞 who。which は人に使わず、whose はうしろに名詞が、what は先行詞なしで使う。' },
+    ],
+    underline: {
+      phrase: 'feedback',
+      choices: ['opinions about how something went', 'money given to a club', 'trash found on a beach', 'a list of volunteers'],
+      answer: 0,
+      why: 'feedback は「意見・感想」。行事が早すぎた、手ぶくろが足りなかったという参加者の声のこと。',
+    },
+    order: {
+      words: ['there', 'were', 'not', 'enough', 'gloves', 'for'],
+      rest: 'everyone',
+      answer: 'there were not enough gloves for',
+      ja: '～に十分な手ぶくろがなかった（there were not enough ～「十分な～がなかった」）',
+    },
+    tf: [
+      { statement: '先週の清掃には、これまででいちばん多くの人が参加した。', answer: true, why: '第1段落 which is the largest number in the event\'s ten-year history。' },
+      { statement: '次回の清掃は、前回より1時間早く始まる。', answer: false, why: '第3段落 We will start one hour later next time。' },
+      { statement: '次回の申しこみは、10月5日までにウェブサイトでする。', answer: true, why: '第4段落 please sign up on our website by October 5。' },
+    ],
+    qa: [
+      { q: 'What will volunteers get if they bring a friend?', choices: ['A free club T-shirt.', 'A new pair of gloves.', 'A free lunch.', 'A newspaper.'], answer: 0, why: '第4段落 Volunteers who bring a friend will receive a free club T-shirt。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
