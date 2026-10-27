@@ -10775,6 +10775,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-peacock',
+    title: 'The Peacock’s Beautiful Tail',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The male peacock has one of the most beautiful tails in the animal world. When he opens it like a giant fan, more than a hundred shining \"eyes\" of blue and green appear. The female peahen, ( A ), is mostly brown and much plainer.",
+      "For a long time, this tail puzzled scientists. It is heavy and makes it harder for the bird to fly away from tigers and other enemies. How could such a dangerous feature help the bird survive?",
+      "The answer seems to lie in how females choose a partner. Studies suggest that peahens often prefer males with larger and brighter tails. A big, healthy tail may show that the male is strong and has found plenty of food. Because females choose these males, their young are more likely to have beautiful tails, too.",
+      "In this way, the tail helps males ( B ) babies, even though it does not help them survive. Scientists call this process sexual selection, and it can explain many colorful features of animals, from bright bird feathers to the loud songs of frogs.",
+    ],
+    ja: [
+      'オスのクジャクは、動物の世界でもとくに美しい尾を持っている。大きなおうぎのように尾を広げると、青や緑にかがやく100をこえる「目玉もよう」があらわれる。一方、メスはほとんど茶色で、ずっと地味だ。',
+      '長いあいだ、この尾は科学者をなやませてきた。尾は重く、トラなどの敵からにげて飛ぶのをむずかしくする。どうしてそんな危険な特徴が、鳥が生きのびるのに役立つのだろうか。',
+      '答えは、メスがどのように相手をえらぶかにあるようだ。研究によると、メスはより大きくてあざやかな尾を持つオスを好むことが多い。大きくて健康な尾は、そのオスが強く、えさをたくさん見つけてきたことを示しているのかもしれない。メスがそうしたオスをえらぶので、その子どもも美しい尾を持ちやすくなる。',
+      'このように、尾は生きのびるのには役立たなくても、オスが子どもを残すのに役立っている。科学者はこのしくみを性淘汰とよび、それによって、鳥のあざやかな羽からカエルの大きな鳴き声まで、動物の色とりどりの特徴の多くを説明できる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['on the other hand', 'other hand', 'on other hands', 'the other hand on'], answer: 0, why: '前のオスと対比して「一方」を表すのは on the other hand。この形で決まっていて、ほかの形は使えない。' },
+      { id: 'B', choices: ['have', 'has', 'having', 'had'], answer: 0, why: 'help ＋人＋動詞の原形「（人）が～するのを助ける」なので have。has・having・had は help ～ のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'plainer',
+      choices: ['less colorful and simple', 'more expensive', 'much larger', 'more dangerous'],
+      answer: 0,
+      why: 'plain は「地味な・かざりのない」。plainer は比較級で、あざやかなオスとくらべて地味だという意味。',
+    },
+    order: {
+      words: ['peahens', 'often', 'prefer', 'males', 'with'],
+      rest: 'larger and brighter tails',
+      answer: 'peahens often prefer males with',
+      ja: 'メスは～を持ったオスを好むことが多い（with ～「～を持った」）',
+    },
+    tf: [
+      { statement: 'メスのクジャクも、オスと同じようにあざやかな尾を持つ。', answer: false, why: '第1段落 The female peahen ... is mostly brown and much plainer。' },
+      { statement: 'オスの大きな尾は、敵からにげるのをむずかしくする。', answer: true, why: '第2段落 It is heavy and makes it harder for the bird to fly away。' },
+      { statement: 'メスは、より大きくてあざやかな尾のオスを好むことが多い。', answer: true, why: '第3段落 peahens often prefer males with larger and brighter tails。' },
+    ],
+    qa: [
+      { q: 'What may a big, healthy tail show?', choices: ['That the male is strong and has found plenty of food.', 'That the male can fly very fast.', 'That the male is very young.', 'That the male lives alone.'], answer: 0, why: '第3段落 A big, healthy tail may show that the male is strong and has found plenty of food。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
