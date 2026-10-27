@@ -37,6 +37,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const shown = nextLv
   const dir = picked === null ? null : nextLv > lv ? 'up' : nextLv < lv ? 'down' : 'stay'
   const color = floorColor(shown)
+  const levelUp = picked !== null && isArenaLevelUp(lv, nextLv)
 
   // at：クリックしたときの event.timeStamp（ミリ秒）
   function pick(i: number, at = 0) {
@@ -190,7 +191,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
                 {arenaTitleIconAt(f) && <span className="af-title" title={`ここから称号「${arenaTitle(f)}」`}>{arenaTitleIconAt(f)}</span>}
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
-                {f === shown && <span className={`af-me${me ? ' has-fig' : ''}`} aria-hidden="true">
+                {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}`} aria-hidden="true">
                     {streak >= 3 && '🔥'}
                     {me ?? '🦸'}
                   </span>}
@@ -199,7 +200,17 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           )}
         </div>
         {dir === 'up' && <span key={`u${count}`} className="arena-arrow up" aria-hidden="true">{jump ? '🚀' : '⬆'}</span>}
-        {picked !== null && isArenaLevelUp(lv, nextLv) && (
+        {/* LEVEL UP!：相棒がとびはね、紙ふぶきが舞う */}
+        {levelUp && (
+          <span key={`c${count}`} className="arena-confetti" aria-hidden="true">
+            {['🎊', '✨', '🎉', '⭐', '✨', '🎊'].map((c, k) => (
+              <i key={k} style={{ '--k': k } as CSSProperties}>
+                {c}
+              </i>
+            ))}
+          </span>
+        )}
+        {levelUp && (
           <span key={`m${count}`} className="arena-levelup" role="status">
             <b>LEVEL UP!</b>
             <span>{isArenaEndless(nextLv) ? (isArenaEndless(lv) ? `🎉 ${nextLv + 1}階 到達！` : '♾ 無限の階へ！') : `${arenaLvLabel(nextLv)}レベルに上がった！`}</span>

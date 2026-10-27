@@ -4208,3 +4208,10 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-pinch { margin: 2px 0; color: #fca5a5; font-size: 0.85rem; font-weight: 800; text-align: center; animation: pinch-blink 1s ease-in-out infinite; }
 @keyframes pinch-blink { 50% { opacity: 0.55; } }
 @media (prefers-reduced-motion: reduce) { .bfloor-pinch { animation: none; } }
+/* 闘技場の LEVEL UP!：相棒がとびはね、紙ふぶきが舞う */
+.af-me.cheer { animation: me-cheer 0.5s ease-out 3; }
+@keyframes me-cheer { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-14px) rotate(-8deg); } }
+.arena-confetti { position: absolute; inset: 0; z-index: 2; overflow: hidden; pointer-events: none; }
+.arena-confetti i { --k: 0; position: absolute; top: -10%; left: calc(8% + var(--k) * 16%); font-style: normal; font-size: 1.2rem; animation: confetti-fall 1.8s ease-in forwards; animation-delay: calc(var(--k) * 0.08s); }
+@keyframes confetti-fall { to { transform: translateY(260px) rotate(320deg); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .af-me.cheer, .arena-confetti i { animation: none; } }
