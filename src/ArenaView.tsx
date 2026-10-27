@@ -19,6 +19,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [count, setCount] = useState(0)
   const [right, setRight] = useState(0)
   const [streak, setStreak] = useState(0)
+  const [maxStreak, setMaxStreak] = useState(0) // きょういちばん長い連続正解（結果で見せる）
   const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
   const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
   const [quick, setQuick] = useState(false)
@@ -50,6 +51,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
+      setMaxStreak(Math.max(maxStreak, streak + 1))
       const up = arenaNext(lv, true, streak + 1)
       setTop(Math.max(top, up))
       if (up > record) {
@@ -117,6 +119,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <p className="arena-result-sub">
           {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
+        {maxStreak >= 2 && <p className="arena-max-streak">🔥 いちばん長い連続正解：{maxStreak}問</p>}
         {missed.length > 0 && (
           <div className="arena-missed" aria-label="まちがえた問題">
             <p className="arena-missed-title">📝 ふりかえり（{missed.length}問）</p>
@@ -139,6 +142,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setCount(0)
             setRight(0)
             setStreak(0)
+            setMaxStreak(0)
             setTop(lv)
           }}
         >
@@ -153,6 +157,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setCount(0)
               setRight(0)
               setStreak(0)
+              setMaxStreak(0)
+            setMaxStreak(0)
               setLv(start)
               setTop(start)
               setQ(arenaQuestionAt(start, 0))

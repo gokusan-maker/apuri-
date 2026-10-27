@@ -733,6 +733,22 @@ it('闘技場の結果：はじめのレベルより上のレベルまで上が�
   expect(screen.queryByText(/まで上がった！/)).toBeNull()
 })
 
+it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  for (const right of [true, true, false, true]) {
+    arenaPick(right)
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByText('🔥 いちばん長い連続正解：2問')).toBeInTheDocument()
+  fireEvent.click(screen.getByText('⚔ 続きから戦う'))
+  arenaPick(true)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.queryByText(/いちばん長い連続正解/)).toBeNull() // 1問だけなら出さない
+})
+
 it('闘技場：次のレベルまで あと何階 かを出す', async () => {
   const { arenaToNext, ARENA_ENDLESS } = await import('./arena')
   expect(arenaToNext(0)).toEqual({ floors: 20, label: '中2レベル', progress: 0 })
