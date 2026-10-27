@@ -9709,6 +9709,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ice-floats',
+    title: 'Why Ice Floats',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When you put ice cubes into a glass of water, they float at the top. This seems completely normal, but it is actually quite unusual. Most substances become heavier for their size when they turn from liquid into solid, so the solid form usually ( A ).",
+      "Water behaves differently because of the way its tiny particles connect. As water freezes, the particles arrange themselves into an open pattern with lots of empty space. As a result, ice takes up about nine percent more space than the same amount of liquid water. Because it is lighter for its size, ice floats.",
+      "This strange property is very important for life on Earth. In winter, lakes and ponds freeze from the top down. The layer of ice on the surface acts like a blanket, ( B ) the water below from the cold air. Fish and other creatures can survive the winter in the liquid water under the ice.",
+      "If ice sank instead, lakes would freeze from the bottom up, and in cold places many of them might turn into solid blocks of ice. Life in fresh water would be much more difficult. A simple glass of iced water, then, shows a property that helps make our planet a good place to live.",
+    ],
+    ja: [
+      '水の入ったコップに氷を入れると、氷は上にうかぶ。これはまったくふつうのことに思えるが、実はかなりめずらしいことなのだ。ほとんどの物質は液体から固体に変わると、大きさのわりに重くなるので、ふつうは固体のほうがしずむ。',
+      '水がちがったふるまいをするのは、水の小さな粒どうしのつながり方のためだ。水がこおるとき、粒はすき間の多いすかすかの形にならぶ。その結果、氷は同じ量の液体の水よりも、約9パーセント多く場所をとる。大きさのわりに軽いので、氷はうかぶのだ。',
+      'この不思議な性質は、地球の生き物にとってとても大切だ。冬、湖や池は上からこおっていく。表面の氷の層は毛布のようなはたらきをし、下の水を冷たい空気から守る。魚やほかの生き物は、氷の下の液体の水の中で冬をこすことができる。',
+      'もし氷がしずむとしたら、湖は底からこおっていき、寒い地域では多くの湖が氷のかたまりになってしまうかもしれない。淡水での生活はずっと難しくなるだろう。だから、氷水の入ったただのコップが、私たちの惑星を住みやすい場所にしている性質を見せてくれているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['sinks', 'sink', 'sinking', 'sunk'], answer: 0, why: '主語 the solid form（三人称単数）に続く動詞なので sinks。sinking・sunk だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['protecting', 'protects', 'protected', 'to protecting'], answer: 0, why: 'コンマのあとに分詞構文 protecting ～「（そして）～を守る」。protects を置くと接続詞なしで動詞が2つ並び、protected（受け身の意味）では目的語 the water と合わない。' },
+    ],
+    underline: {
+      phrase: 'property',
+      choices: ['a special quality of something', 'a piece of land', 'a kind of ice', 'a rule of a game'],
+      answer: 0,
+      why: 'ここでの property は「（物質の）性質・特性」。「土地・財産」の意味もあるが、文脈から性質の意味。',
+    },
+    order: {
+      words: ['takes', 'up', 'about', 'nine', 'percent', 'more', 'space'],
+      rest: 'than the same amount of liquid water',
+      answer: 'takes up about nine percent more space',
+      ja: '約9パーセント多くの場所をとる（take up ～「（場所を）とる」）',
+    },
+    tf: [
+      { statement: 'ほとんどの物質は、固体になると大きさのわりに重くなる。', answer: true, why: '第1段落 Most substances become heavier for their size when they turn from liquid into solid。' },
+      { statement: '氷は、同じ量の液体の水より場所をとらない。', answer: false, why: '第2段落 ice takes up about nine percent more space。' },
+      { statement: '冬、湖は上からこおっていく。', answer: true, why: '第3段落 lakes and ponds freeze from the top down。' },
+    ],
+    qa: [
+      { q: 'How does the layer of ice help fish in winter?', choices: ['It protects the water below from the cold air.', 'It gives them more food.', 'It makes the water warmer than the air in summer.', 'It lets more sunlight into the water.'], answer: 0, why: '第3段落 acts like a blanket, protecting the water below from the cold air。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
