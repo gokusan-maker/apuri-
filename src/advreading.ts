@@ -11021,6 +11021,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-hail',
+    title: 'Ice Falling in Summer',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a hot summer afternoon, small balls of ice sometimes fall from the sky. This ice is called hail. It may seem strange that ice can fall when it is warm on the ground, but hail actually ( A ) most often in spring and summer.",
+      "Hail is born inside tall thunderclouds. In these clouds, strong winds blow upward and carry drops of water high into the sky, where the air is far below freezing. There, the drops turn into small pieces of ice.",
+      "As a piece of ice falls, it collects more water, and the wind may push it up again. Each time it goes up and down, a new layer of ice freezes around it, a little like the layers of an onion. When the hailstone becomes too heavy for the wind to hold up, it falls to the ground.",
+      "Most hailstones are about the size of a pea, but some grow as big as a tennis ball. Large hail can break car windows and damage crops, ( B ) weather services warn people when it is likely to fall.",
+    ],
+    ja: [
+      '暑い夏の午後に、小さな氷のつぶが空から落ちてくることがある。この氷はひょうとよばれる。地上が暖かいのに氷がふるのはふしぎに思えるかもしれないが、ひょうは実は春や夏にいちばんよくふる。',
+      'ひょうは、高くのびた雷雲の中で生まれる。こうした雲の中では強い風が上へふき、水のつぶを空高くへ運ぶ。そこは空気がこおる温度よりずっと低く、つぶは小さな氷のかけらになる。',
+      '氷のかけらは落ちながらさらに水を集め、風にまたおし上げられることもある。上がったり下がったりするたびに、まわりに新しい氷の層がこおりつく。少しタマネギの層に似ている。ひょうのつぶが重くなりすぎて風がささえられなくなると、地面に落ちてくる。',
+      'ほとんどのひょうはエンドウ豆くらいの大きさだが、テニスボールほどの大きさになるものもある。大きなひょうは車の窓をわったり作物をいためたりすることがあるので、気象の機関はひょうがふりそうなときに人々に注意をよびかけている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['falls', 'fall', 'falling', 'fallen'], answer: 0, why: '主語 hail（数えられない名詞で単数あつかい）に続く文の動詞なので falls。fall は主語と合わず、falling・fallen だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['so', 'because of', 'such as', 'in order'], answer: 0, why: 'うしろに主語と動詞（weather services warn）が続き、「それで」と結果を表す接続詞 so。because of・such as はうしろに名詞をとり、in order はそのままでは文をつなげない。' },
+    ],
+    underline: {
+      phrase: 'layer',
+      choices: ['a thin covering over something', 'a large hole', 'a strong wind', 'a kind of cloud'],
+      answer: 0,
+      why: 'layer は「層」。氷のつぶのまわりにうすい氷が1まいずつ重なっていくようすを表している。',
+    },
+    order: {
+      words: ['too', 'heavy', 'for', 'the', 'wind', 'to', 'hold', 'up'],
+      rest: '',
+      answer: 'too heavy for the wind to hold up',
+      ja: '重すぎて風がささえられない（too ～ for … to ― 「…が―するには～すぎる」）',
+    },
+    tf: [
+      { statement: 'ひょうは冬にいちばんよくふる。', answer: false, why: '第1段落 hail actually falls most often in spring and summer。' },
+      { statement: 'ひょうは、高い雷雲の中で生まれる。', answer: true, why: '第2段落 Hail is born inside tall thunderclouds。' },
+      { statement: 'ひょうはどれもエンドウ豆より小さい。', answer: false, why: '第4段落 some grow as big as a tennis ball。' },
+    ],
+    qa: [
+      { q: 'How does a hailstone get bigger?', choices: ['A new layer of ice freezes around it each time it goes up and down.', 'It joins with snow on the ground.', 'It melts and freezes on the ground.', 'It is pushed by cars.'], answer: 0, why: '第3段落 Each time it goes up and down, a new layer of ice freezes around it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
