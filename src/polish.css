@@ -4221,3 +4221,4 @@ header .event-chips { margin: 0 0 2px; }
 @media (prefers-reduced-motion: reduce) { .af-me.ouch { animation: none; } }
 .arena-max-streak { margin: 2px 0; color: #fb923c; font-weight: 800; }
 .bfloor-combo { margin: 2px 0; color: #fb923c; font-weight: 900; text-align: center; animation: heart-break 0.5s ease-out; }
+.arena-shield { color: #93c5fd; }

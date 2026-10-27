@@ -10,6 +10,7 @@ import { speak } from './speech'
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
 // 1レベル20階。レベルの区切りをこえると「LEVEL UP!」の演出。いちばん上のレベルの上は無限の階
 const SHAFT = 2 // いまの階の上下に見せる階の数
+const SHIELD_EVERY = 5 // 5連続正解ごとに盾（次のまちがいで1回だけ階が落ちない）
 const floorColor = (f: number) => (isArenaEndless(f) ? `hsl(${(f * 37) % 360} 80% 55%)` : `hsl(${150 - (arenaLevel(f) ?? 0) * 11} 75% 48%)`)
 // onAnswer：単語の問題の正誤を学習の記録に入れ、相棒のモンスターに XP（ボス戦と同じ）
 export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { start: number; me?: ReactNode; onExit: () => void; onCoins?: (n: number) => void; onTicket?: (n: number) => void; onAnswer?: (correct: boolean, xp: number, wordId: string, source: Source) => void }) {
@@ -20,6 +21,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [right, setRight] = useState(0)
   const [streak, setStreak] = useState(0)
   const [maxStreak, setMaxStreak] = useState(0) // きょういちばん長い連続正解（結果で見せる）
+  const [shield, setShield] = useState(false)
+  const [gotShield, setGotShield] = useState(false) // この答えで盾をもらった
+  const [guarded, setGuarded] = useState(false) // この答えのまちがいを盾がまもった
   const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
   const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
   const [quick, setQuick] = useState(false)
@@ -33,7 +37,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [newTitle, setNewTitle] = useState<string | null>(null) // はじめて着いた称号（ガチャチケット1枚）
   const correct = picked !== null && picked === q.answer
   const jump = picked !== null && isArenaJump(correct, streak)
-  const nextLv = picked === null ? lv : arenaNext(lv, correct, correct ? streak : 0)
+  const nextLv = picked === null || (!correct && guarded) ? lv : arenaNext(lv, correct, correct ? streak : 0)
   // 答えたらすぐに塔の階が上下する（次へを押す前から新しい階を見せる）
   const shown = nextLv
   const dir = picked === null ? null : nextLv > lv ? 'up' : nextLv < lv ? 'down' : 'stay'
@@ -48,6 +52,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     setCount(count + 1)
     if (!isArenaGrammar(q) && !isArenaReading(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
     setMisses(i === q.answer ? 0 : misses + 1)
+    const earn = i === q.answer && (streak + 1) % SHIELD_EVERY === 0 && !shield
+    setGotShield(earn)
+    setGuarded(i !== q.answer && shield)
+    if (earn) setShield(true)
+    else if (i !== q.answer && shield) setShield(false)
     if (i === q.answer) {
       setRight(right + 1)
       setStreak(streak + 1)
@@ -180,7 +189,14 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <button className="stage-back" onClick={finish}>
           🏁 終了
         </button>
-        <span>{streak >= 2 ? `🔥${streak}連続` : `🏟 ${count}問め`}</span>
+        <span>
+          {shield && (
+            <span className="arena-shield" title="次のまちがいで1回だけ階が落ちない">
+              🛡{' '}
+            </span>
+          )}
+          {streak >= 2 ? `🔥${streak}連続` : `🏟 ${count}問め`}
+        </span>
       </div>
       {/* 塔の階：いまの階を中心に上下2階ずつ。答えるたびに上下に動く */}
       <div className="arena-tower" style={{ '--sky1': arenaSky(shown)[0], '--sky2': arenaSky(shown)[1] } as CSSProperties} role="progressbar" aria-label="闘技場の階" aria-valuemin={1} aria-valuemax={ARENA_ENDLESS} aria-valuenow={shown + 1}>
@@ -258,9 +274,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       {picked !== null && (
         <>
           <p className={`arena-move ${correct ? 'up' : 'down'}`} role="status">
-            {correct ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : isArenaLevelUp(lv, nextLv) ? '⬆ レベルアップ！' : '⬆ 1階のぼった！'} ${arenaFloor(nextLv)}へ` : nextLv < lv ? `${isArenaLevelDown(lv, nextLv) ? '⬇ レベルダウン…' : '⬇ 1階おちた…'} ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
+            {!correct && guarded ? '🛡 盾がまもった！ 階はそのまま' : correct ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : isArenaLevelUp(lv, nextLv) ? '⬆ レベルアップ！' : '⬆ 1階のぼった！'} ${arenaFloor(nextLv)}へ` : nextLv < lv ? `${isArenaLevelDown(lv, nextLv) ? '⬇ レベルダウン…' : '⬇ 1階おちた…'} ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
           </p>
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
+          {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
           {correct && quick && <p className="arena-quick">⚡ はやい！</p>}
           {correct && newRecord && (

@@ -751,6 +751,30 @@ it('闘技場の結果：はじめのレベルより上のレベルまで上が�
   expect(screen.queryByText(/まで上がった！/)).toBeNull()
 })
 
+it('闘技場：5連続正解で盾をもらい、次のまちがいで1回だけ階が落ちない', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={30} onExit={() => {}} />)
+  const floor = () => Number(screen.getByRole('progressbar', { name: '闘技場の階' }).getAttribute('aria-valuenow'))
+  for (let k = 0; k < 4; k++) {
+    arenaPick(true)
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  expect(document.querySelector('.arena-shield')).toBeNull()
+  arenaPick(true)
+  expect(screen.getByText('🛡 5連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/^次へ/))
+  expect(document.querySelector('.arena-shield')).not.toBeNull()
+  const at = floor()
+  arenaPick(false)
+  expect(screen.getByText('🛡 盾がまもった！ 階はそのまま')).toBeInTheDocument()
+  expect(floor()).toBe(at)
+  fireEvent.click(screen.getByText(/^次へ/))
+  expect(document.querySelector('.arena-shield')).toBeNull()
+  arenaPick(false)
+  expect(floor()).toBe(at - 1) // 盾は1回だけ
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
