@@ -612,6 +612,10 @@ it('ボスの城の問題の階：3連続正解から「🔥 N連続正解！」
   fireEvent.click(screen.getByText('次へ'))
   ans(qs[3], false)
   expect(screen.queryByText(/連続正解！/)).toBeNull()
+  fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  ans(qs[4], true)
+  fireEvent.click(screen.getByText('結果を見る'))
+  expect(screen.getByText('🔥 いちばん長い連続正解 3問')).toBeInTheDocument()
 })
 
 it('ボスの城の問題の階の結果に、のこりライフを出す', async () => {

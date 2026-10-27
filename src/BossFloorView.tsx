@@ -12,6 +12,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
   const [picked, setPicked] = useState<number | null>(null)
   const [score, setScore] = useState(0)
   const [combo, setCombo] = useState(0) // 連続正解
+  const [maxCombo, setMaxCombo] = useState(0) // いちばん長い連続正解（結果で見せる）
   const [hint, setHint] = useState(false)
   const maxLives = bcLivesOf(qs.length)
   const [lives, setLives] = useState(maxLives)
@@ -84,6 +85,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
             {bcRankOf(maxLives - lives)}
           </p>
         )}
+        {maxCombo >= 3 && score < qs.length && <p className="bfloor-best">🔥 いちばん長い連続正解 {maxCombo}問</p>}
         {score === qs.length && <p className="bfloor-perfect">💯 パーフェクト！{perfectBonus > 0 ? ` ボーナス 🪙${perfectBonus}` : ''}</p>}
         {best !== undefined && score > best && <p className="bfloor-best">🏅 自己ベスト更新！（前回まで {best}問）</p>}
         {score >= pass && reward > 0 && <p className="bfloor-reward">🪙 {reward}コイン ゲット！</p>}
@@ -157,6 +159,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
               if (k === q.answer) {
                 setScore(score + 1)
                 setCombo(combo + 1)
+                setMaxCombo(Math.max(maxCombo, combo + 1))
                 playCorrect()
               } else {
                 setCombo(0)
