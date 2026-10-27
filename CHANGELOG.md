@@ -2436,3 +2436,4 @@
 - 2026-10-27: 文法に「形容詞 ＋ 前置詞 ⑥（be short of ／ be ashamed of ／ be curious about）」の単元を追加
 - 2026-10-27: TOEIC の長文に、お知らせ「Charity Fun Run」（会社のチャリティー・ファンラン）を追加
 - 2026-10-27: 闘技場の結果に、階ごとの称号を表示（見習い→戦士→騎士→勇者→英雄→伝説の英語王）
+- 2026-10-27: 文法に「自動詞 ＋ 前置詞 ⑤（suffer from ／ recover from ／ differ from）」の単元を追加
