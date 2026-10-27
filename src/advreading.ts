@@ -10529,6 +10529,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-meeting-reschedule',
+    title: 'E-mail: Rescheduling Our Meeting',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Patel, I am writing about our meeting to discuss the new advertising plan, which is scheduled for Wednesday, February 12, at 2:00 P.M. Unfortunately, I have to ask if we could change the date.",
+      "Our company president has asked me to attend an important conference in Osaka that week, and I will be away from the office from February 11 to 13. I am very sorry for the short notice, and I understand that you have already ( A ) your schedule for the meeting.",
+      "Would it be possible to meet on Monday, February 17, or Tuesday, February 18, instead? I am free all day on both days. If neither date works for you, please let me know which days you are available, and I will do my best to fit my schedule to ( B ).",
+      "In the meantime, I have attached the latest version of the plan so that you can look it over before we meet. Please feel free to send me any questions by e-mail. Thank you for your understanding. Kind regards, Hiroshi Kato, Marketing Department",
+    ],
+    ja: [
+      'パテル様　2月12日（水）午後2時に予定している、新しい広告計画について話し合う打ち合わせの件でご連絡いたしました。申し訳ありませんが、日にちを変えていただけないかお願いしなければなりません。',
+      'その週、社長から大阪での大事な会議に出るよう言われ、2月11日から13日まで会社をはなれます。急なお知らせでまことに申し訳なく、すでに打ち合わせのために予定を空けてくださっていることも承知しております。',
+      'かわりに2月17日（月）か18日（火）にお会いすることはできますでしょうか。どちらの日も一日じゅう空いております。どちらの日もご都合が悪い場合は、ご都合のよい日をお知らせください。できるかぎりそちらに予定を合わせます。',
+      'それまでのあいだに打ち合わせの前に目を通していただけるよう、計画の最新版を添付いたしました。ご質問があれば、どうぞえんりょなくメールでお送りください。ご理解に感謝いたします。マーケティング部　加藤ひろし',
+    ],
+    blanks: [
+      { id: 'A', choices: ['arranged', 'arrange', 'arranging', 'to arrange'], answer: 0, why: '現在完了 have already ＋過去分詞なので arranged（arrange one’s schedule「予定を調整する」）。arrange・arranging・to arrange は have のあとに置けない。' },
+      { id: 'B', choices: ['yours', 'your', 'you’re', 'yourself of'], answer: 0, why: '前置詞 to のあとに「あなたの予定」を1語で表す所有代名詞 yours（= your schedule）。your はうしろに名詞が必要、you’re は you are の短縮形、yourself of は形として成り立たない。' },
+    ],
+    underline: {
+      phrase: 'short notice',
+      choices: ['telling someone about something only a little time before it happens', 'a very short letter', 'a small sign on a wall', 'a quick phone call'],
+      answer: 0,
+      why: 'short notice は「急な知らせ」。予定の直前になって知らせることを指す。',
+    },
+    order: {
+      words: ['so', 'that', 'you', 'can', 'look', 'it', 'over'],
+      rest: 'before we meet',
+      answer: 'so that you can look it over',
+      ja: 'あなたがそれに目を通せるように（so that ～ can ...「～が…できるように」）',
+    },
+    tf: [
+      { statement: '加藤さんは、2月11日から13日まで会社にいない。', answer: true, why: '第2段落 I will be away from the office from February 11 to 13。' },
+      { statement: '加藤さんは、2月17日の午前中だけ空いている。', answer: false, why: '第3段落 I am free all day on both days。' },
+      { statement: 'メールには、計画の最新版がついている。', answer: true, why: '第4段落 I have attached the latest version of the plan。' },
+    ],
+    qa: [
+      { q: 'Why does Mr. Kato want to change the meeting date?', choices: ['He has to attend a conference in Osaka.', 'He is sick.', 'The plan is not ready yet.', 'Ms. Patel asked him to.'], answer: 0, why: '第2段落 Our company president has asked me to attend an important conference in Osaka that week。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
