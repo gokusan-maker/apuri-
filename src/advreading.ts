@@ -10136,7 +10136,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
     blanks: [
       { id: 'A', choices: ['make', 'making', 'made', 'makes'], answer: 0, why: 'to のあとは動詞の原形なので make（make up for ～「～のうめ合わせをする・取りもどす」）。' },
-      { id: 'B', choices: ['whether', 'what', 'which of', 'about'], answer: 0, why: 'うしろに完全な文（you would like a partial delivery）が続き、「～かどうか」の意味になる接続詞 whether。what はうしろに欠けた部分がいる、which of・about はうしろに文をとれない。' },
+      { id: 'B', choices: ['whether', 'what', 'whose', 'about'], answer: 0, why: 'うしろに完全な文（you would like a partial delivery）が続き、「～かどうか」の意味になる接続詞 whether。what・whose はうしろに名詞や欠けた部分がいる形で、about は前置詞なので文をとれない。' },
     ],
     underline: {
       phrase: 'at the latest',
