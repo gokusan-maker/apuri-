@@ -4134,3 +4134,6 @@ header .event-chips { margin: 0 0 2px; }
 .heart-break { display: inline-block; animation: heart-break 0.6s ease-out; }
 @keyframes heart-break { 0% { transform: scale(1.5); } 40% { transform: scale(0.9) rotate(-12deg); } 70% { transform: rotate(8deg); } }
 @media (prefers-reduced-motion: reduce) { .heart-break { animation: none; } }
+/* ボス戦・闘技場：答えたら A〜D の札が ✓ ／ ✕ に変わる */
+.battle-v2 .choice.correct::before { content: '✓'; color: #fff; background: #15803d; }
+.battle-v2 .choice.wrong::before { content: '✕'; color: #fff; background: #991b1b; }

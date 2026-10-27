@@ -125,3 +125,8 @@ it('ホームは今日の課題のボタンまで1画面におさまるよう、
   expect(css).toContain('header .monster-stage { width: 88px; height: 88px; }')
   expect(css).toContain('.today-tasks .today-task:not(.done) .today-task-mark { display: none; }')
 })
+
+it('ボス戦の選択肢は、答えたら A〜D の札が ✓ ／ ✕ に変わる', () => {
+  expect(css).toContain(".battle-v2 .choice.correct::before { content: '✓';")
+  expect(css).toContain(".battle-v2 .choice.wrong::before { content: '✕';")
+})
