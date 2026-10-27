@@ -10693,6 +10693,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-maple-syrup',
+    title: 'From Tree to Pancake',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Maple syrup is a sweet, brown liquid that many people pour on pancakes. Surprisingly, it comes directly from trees. Most of the world's maple syrup ( A ) in Canada, especially in the province of Quebec.",
+      "In early spring, when nights are still freezing but days are warmer, the sap inside sugar maple trees begins to move. Sap is a clear liquid that carries water and sugar through the tree. Farmers make a small hole in each tree and collect the sap through a tube or into a bucket.",
+      "Fresh sap does not taste like syrup at all. It is mostly water and only about two percent sugar. To make syrup, farmers boil the sap for many hours until most of the water has gone. About 40 liters of sap are needed to make just one liter of syrup, ( B ) is why real maple syrup is expensive.",
+      "Collecting sap does not seriously harm the trees. A healthy tree can give sap every spring for more than a hundred years. However, warmer winters caused by climate change may shorten the season, and farmers are worried about the future.",
+    ],
+    ja: [
+      'メープルシロップは、多くの人がパンケーキにかける、あまくて茶色い液体だ。おどろくことに、それは木からそのままとれる。世界のメープルシロップのほとんどはカナダ、とくにケベック州で作られている。',
+      '早春、夜はまだこおるほど寒いが昼は暖かくなってくると、サトウカエデの木の中の樹液が動きはじめる。樹液は、木の中で水分や糖分を運ぶとうめいな液体だ。農家はそれぞれの木に小さな穴をあけ、管やバケツで樹液を集める。',
+      'とりたての樹液は、まったくシロップの味がしない。ほとんどが水で、糖分は2パーセントほどしかない。シロップを作るために、農家は水分のほとんどがなくなるまで、何時間も樹液をにつめる。シロップをたった1リットル作るのに約40リットルの樹液が必要で、それが本物のメープルシロップが高い理由だ。',
+      '樹液を集めても、木が大きくきずつくことはない。健康な木は、100年以上も毎年春に樹液を出すことができる。しかし、気候変動による暖かい冬で季節が短くなるかもしれず、農家は将来を心配している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is produced', 'produces', 'producing', 'to be produced'], answer: 0, why: '主語 Most of the world’s maple syrup（数えられない名詞で単数あつかい）。シロップは「作られる」ので受け身 is produced。producing・to be produced だけでは文の動詞にならず、produces では「シロップが作る」となり目的語もない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の文全体を受けて「そしてそのことが」と続ける関係代名詞 which。that はコンマのあとに使えず、what は先行詞なしで使う語、it では接続詞がなく文が2つ並ぶ。' },
+    ],
+    underline: {
+      phrase: 'harm',
+      choices: ['hurt or damage', 'help grow', 'move to another place', 'make sweeter'],
+      answer: 0,
+      why: 'harm は「害をあたえる・きずつける」。樹液をとっても木が大きくきずつくことはないという意味。',
+    },
+    order: {
+      words: ['until', 'most', 'of', 'the', 'water', 'has', 'gone'],
+      rest: '',
+      answer: 'until most of the water has gone',
+      ja: '水分のほとんどがなくなるまで（until のあとは現在完了で「～してしまうまで」）',
+    },
+    tf: [
+      { statement: '世界のメープルシロップのほとんどはカナダで作られる。', answer: true, why: '第1段落 Most of the world’s maple syrup is produced in Canada。' },
+      { statement: 'とりたての樹液は、もうシロップのようにあまい。', answer: false, why: '第3段落 Fresh sap does not taste like syrup at all。' },
+      { statement: '樹液を集めると、木はすぐにかれてしまう。', answer: false, why: '第4段落 Collecting sap does not seriously harm the trees。' },
+    ],
+    qa: [
+      { q: 'Why is real maple syrup expensive?', choices: ['Because a lot of sap is needed to make a little syrup.', 'Because maple trees grow only in cities.', 'Because the syrup is made in winter.', 'Because farmers add a lot of sugar.'], answer: 0, why: '第3段落 About 40 liters of sap are needed to make just one liter of syrup, which is why real maple syrup is expensive。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
