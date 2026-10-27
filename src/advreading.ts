@@ -10980,6 +10980,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-parking-repair',
+    title: 'Notice: Parking Garage Repair Work',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees at Lakeview Tower: The underground parking garage will be closed for repair work from Monday, August 4, to Sunday, August 17. During this period, the floor of the garage will be repaired and new lights will be ( A ) to make the area brighter and safer.",
+      "While the garage is closed, employees who usually drive to work may use the public parking lot on Maple Street, about a five-minute walk from our building. The company will pay the parking fees for these two weeks. Please keep your receipts and give them to the general affairs office by August 22.",
+      "We also encourage you to try other ways of getting to work if possible. The train station is only ten minutes away on foot, and the city bus stops right in front of the building every fifteen minutes.",
+      "Bicycle parking will not be affected by the work. We understand that this change may be inconvenient, and we thank you for your patience. If you have any questions, please contact Ms. Kim in general affairs ( B ) extension 214.",
+    ],
+    ja: [
+      'レイクビュー・タワーの全社員のみなさまへ：地下駐車場は、補修工事のため8月4日（月）から8月17日（日）まで閉鎖されます。この期間に駐車場のゆかを補修し、場所をより明るく安全にするために新しい照明を取りつけます。',
+      '駐車場が閉まっているあいだ、ふだん車で通勤している社員は、ビルから歩いて5分ほどのメープル通りの公共駐車場を使ってかまいません。この2週間の駐車料金は会社がしはらいます。領収書はとっておき、8月22日までに総務部にわたしてください。',
+      'できれば、ほかの方法で通勤してみることもおすすめします。駅までは歩いてたった10分で、市バスは15分ごとにビルの目の前にとまります。',
+      '自転車置き場は工事のえいきょうを受けません。この変更でご不便をおかけするかもしれませんが、ご協力に感謝します。ご質問があれば、総務部のキムさん（内線214）までご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['installed', 'install', 'installing', 'to install'], answer: 0, why: 'will be ＋過去分詞の受け身「取りつけられる」なので installed。install・installing・to install は will be のあとで受け身にならない。' },
+      { id: 'B', choices: ['at', 'in', 'of', 'for'], answer: 0, why: 'contact ～ at ＋番号「（番号）で～に連絡する」。番号の前は at。in・of・for はこの形では使えない。' },
+    ],
+    underline: {
+      phrase: 'encourage',
+      choices: ['suggest that someone does something', 'stop someone from doing something', 'pay for something', 'make something cheaper'],
+      answer: 0,
+      why: 'encourage ～ to ... は「～に…するようすすめる」。ほかの方法で通勤してみることをすすめている。',
+    },
+    order: {
+      words: ['the', 'company', 'will', 'pay', 'the', 'parking', 'fees'],
+      rest: 'for these two weeks',
+      answer: 'the company will pay the parking fees',
+      ja: '会社が駐車料金をしはらう（pay ～ fees「～の料金をはらう」）',
+    },
+    tf: [
+      { statement: '駐車場は8月4日から2週間閉鎖される。', answer: true, why: '第1段落 from Monday, August 4, to Sunday, August 17。' },
+      { statement: 'メープル通りの駐車場の料金は、社員が自分ではらう。', answer: false, why: '第2段落 The company will pay the parking fees。' },
+      { statement: '工事のあいだ、自転車置き場も使えない。', answer: false, why: '第4段落 Bicycle parking will not be affected by the work。' },
+    ],
+    qa: [
+      { q: 'What should employees do with their parking receipts?', choices: ['Give them to the general affairs office by August 22.', 'Throw them away.', 'Send them to the city.', 'Show them to the bus driver.'], answer: 0, why: '第2段落 Please keep your receipts and give them to the general affairs office by August 22。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -2268,6 +2268,8 @@
 
 - [x] 文法：前置詞 from ～ to … の熟語 from top to bottom ／ from head to toe ／ from door to door
 
+- [x] 長文（TOEIC お知らせ文）：駐車場の補修工事のお知らせ
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
