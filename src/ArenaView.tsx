@@ -1,6 +1,6 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
+import { ARENA_BEST_COINS, ARENA_QUICK_MS, ARENA_TOP, arenaCourse, arenaFloor, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaMilestone, loadArenaBest, recordArenaBest } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 
@@ -17,6 +17,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [right, setRight] = useState(0)
   const [streak, setStreak] = useState(0)
   const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
+  const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
+  const [quick, setQuick] = useState(false)
   const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [ended, setEnded] = useState<{ newBest: boolean; best: number } | null>(null)
@@ -33,8 +35,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const dir = picked === null ? null : nextLv > lv ? 'up' : nextLv < lv ? 'down' : 'stay'
   const color = floorColor(shown)
 
-  function pick(i: number) {
+  // at：クリックしたときの event.timeStamp（ミリ秒）
+  function pick(i: number, at = 0) {
     if (picked !== null) return
+    setQuick(i === q.answer && shownAt.current > 0 && at - shownAt.current <= ARENA_QUICK_MS)
     setPicked(i)
     setCount(count + 1)
     if (!isArenaGrammar(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
@@ -67,7 +71,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       playWrong()
     }
   }
-  function next() {
+  function next(at = 0) {
+    shownAt.current = at
     setLv(nextLv)
     setQ(arenaQuestionAt(nextLv, count, Math.random, q.word.id))
     setPicked(null)
@@ -197,7 +202,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       <p className={`en${isArenaGrammar(q) ? ' boss-sentence-q' : ''}`}>{q.word.en}</p>
       <div className="choices">
         {q.choices.map((c, i) => (
-          <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}`} disabled={picked !== null} onClick={() => pick(i)}>
+          <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}`} disabled={picked !== null} onClick={(e) => pick(i, e.timeStamp)}>
             {c}
           </button>
         ))}
@@ -209,6 +214,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           </p>
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
+          {correct && quick && <p className="arena-quick">⚡ はやい！</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">
               🆕 最高記録！ 🪙{ARENA_BEST_COINS}
@@ -219,7 +225,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               🎖 新しい称号「{newTitle}」！ 🎟ガチャチケット×1
             </p>
           )}
-          <button className="good next-unit-btn" onClick={next}>
+          <button className="good next-unit-btn" onClick={(e) => next(e.timeStamp)}>
             次へ（{arenaCourse(nextLv).label}）
           </button>
         </>

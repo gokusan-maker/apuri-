@@ -9,6 +9,7 @@ import type { Word } from './words'
 
 export const ARENA_TOP = COURSES.length - 1
 export const ARENA_BEST_COINS = 5
+export const ARENA_QUICK_MS = 3000 // 3秒以内に正解すると「はやい！」
 export const ARENA_MILESTONES = [5, 10, 15] // この階に上がったときはお祝い
 export const isArenaMilestone = (from: number, to: number) => to > from && ARENA_MILESTONES.some((m) => m - 1 > from && m - 1 <= to) // いままでの最高より上の階に着くたびに
 const clamp = (lv: number) => Math.max(0, Math.min(ARENA_TOP, lv))

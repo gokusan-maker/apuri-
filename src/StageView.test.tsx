@@ -813,3 +813,20 @@ it('闘技場の塔をのぼるのは相棒のモンスター（いなければ 
   fireEvent.click(within(screen.getByRole('region', { name: '闘技場' })).getByRole('button', { name: /闘技場で戦う/ }))
   expect(document.querySelector('.arena-floor.here .af-fig svg')).not.toBeNull()
 })
+
+it('闘技場：3秒以内に正解すると「⚡ はやい！」', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { COURSES, courseWords } = await import('./wordcourse')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  const pickRight = () => {
+    const en = document.querySelector('.arena .en')!.textContent!
+    const w = COURSES.slice(0, 3).flatMap((c) => courseWords(c.id)).find((x) => x.en === en)!
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.arena .choice')].find((b) => b.textContent === w.ja)!)
+  }
+  pickRight() // 最初の問題は数えない
+  expect(screen.queryByText('⚡ はやい！')).toBeNull()
+  fireEvent.click(screen.getByText(/^次へ/))
+  pickRight()
+  expect(screen.getByText('⚡ はやい！')).toBeInTheDocument()
+})
