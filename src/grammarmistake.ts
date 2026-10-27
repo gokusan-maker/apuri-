@@ -51,6 +51,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
   'mixed-conditional': { wrong: 'If I had eaten breakfast, I would not have been hungry now.', right: 'If I had eaten breakfast, I would not be hungry now.', why: '結果が「今」なら主節は would ＋ 原形。' },
+  'verb-a-with-b': { wrong: 'The box was filled of toys.', right: 'The box was filled with toys.', why: 'be filled with ～「～でいっぱいだ」（be full of ～ なら of）。' },
   'verb-a-into-b': { wrong: 'Please translate this into to English.', right: 'Please translate this into English.', why: 'translate A into B。into のあとに to はいらない。' },
   'verb-prep-dream': { wrong: 'I dream to become a doctor.', right: 'I dream of becoming a doctor.', why: 'dream of ～ing「～することを夢見る」。' },
   'adj-prep-7': { wrong: 'I am grateful of your help.', right: 'I am grateful for your help.', why: '感謝する「こと」には for、「人」には to。' },
