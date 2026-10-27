@@ -29,6 +29,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [misses, setMisses] = useState(0) // 連続まちがい（3回で応援）
   const shownAt = useRef(0) // 問題が出た時刻（0 は最初の問題：最初に答えたときから数える）
   const [quick, setQuick] = useState(false)
+  const [quicks, setQuicks] = useState(0) // 続けて「はやい！」で正解した数
   const [missed, setMissed] = useState<{ en: string; ja: string }[]>([]) // まちがえた問題（結果でふりかえる）
   const [top, setTop] = useState(start)
   const [base, setBase] = useState(start) // この回のはじめの階（きょう何階のぼったかを数える）
@@ -51,7 +52,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   // at：クリックしたときの event.timeStamp（ミリ秒）
   function pick(i: number, at = 0) {
     if (picked !== null) return
-    setQuick(i === q.answer && shownAt.current > 0 && at - shownAt.current <= ARENA_QUICK_MS)
+    const fast = i === q.answer && shownAt.current > 0 && at - shownAt.current <= ARENA_QUICK_MS
+    setQuick(fast)
+    setQuicks(fast ? quicks + 1 : 0)
     setPicked(i)
     setCount(count + 1)
     if (!isArenaGrammar(q) && !isArenaReading(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
@@ -292,7 +295,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
           {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
           {!correct && misses >= 3 && <p className="arena-cheer">💪 ドンマイ！ 1問ずつ取りもどそう</p>}
-          {correct && quick && <p className="arena-quick">⚡ はやい！</p>}
+          {correct && quick && <p className="arena-quick">{quicks >= 3 ? `⚡⚡⚡ 電光石火！ ${quicks}問続けて はやい！` : '⚡ はやい！'}</p>}
           {correct && climbed && <p className="arena-record">🏆 この回で {climbed}階 のぼった！</p>}
           {correct && newRecord && (
             <p className="arena-record" role="status">

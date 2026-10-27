@@ -1060,6 +1060,27 @@ it('闘技場：3秒以内に正解すると「⚡ はやい！」', async () =>
   expect(screen.getByText('⚡ はやい！')).toBeInTheDocument()
 })
 
+it('闘技場：3問続けて「はやい！」で正解すると「⚡⚡⚡ 電光石火！」', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  arenaPick(true) // 最初の問題は数えない
+  fireEvent.click(screen.getByText(/^次へ/))
+  // クリックはすぐなので、どれも3秒以内
+  for (let k = 1; k <= 2; k++) {
+    arenaPick(true)
+    expect(screen.getByText('⚡ はやい！')).toBeInTheDocument()
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  arenaPick(true)
+  expect(screen.getByText('⚡⚡⚡ 電光石火！ 3問続けて はやい！')).toBeInTheDocument()
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(false)
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(true)
+  expect(screen.getByText('⚡ はやい！')).toBeInTheDocument() // まちがえたら数えなおし
+})
+
 it('闘技場の単語の問題には 🔊（発音を聞く）ボタン', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
