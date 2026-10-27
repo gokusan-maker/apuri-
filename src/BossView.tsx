@@ -669,7 +669,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           <div className="boss-hp-ghost" aria-hidden="true" style={{ width: `${(hp / maxHp) * 100}%` }} />
           <div className={`boss-hp-fill${hp / maxHp <= 0.25 ? ' low' : hp / maxHp <= 0.5 ? ' mid' : ''}`} style={{ width: `${(hp / maxHp) * 100}%` }} />
         </div>
-        <p className="boss-hp-num">
+        <p key={`hp${hp}`} className={`boss-hp-num${hp < maxHp ? ' hp-pop' : ''}`}>
           のこりHP {hp} / {maxHp}
         </p>
       </div>
