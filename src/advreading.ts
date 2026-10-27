@@ -10283,6 +10283,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-dizzy',
+    title: 'Why Spinning Makes Us Dizzy',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When children spin around and around and then suddenly stop, they often fall over, laughing. The room seems to keep turning even though they are standing still. This feeling of dizziness ( A ) from a small part of the inner ear.",
+      "Deep inside each ear are three tiny tubes filled with liquid. When you turn your head, the liquid moves and touches very small hairs. These hairs send messages to the brain, telling it which way the head is moving. This system helps us keep our balance.",
+      "When you spin for a long time, the liquid starts to move together with the tubes. Then, when you stop, the liquid keeps moving for a few seconds, just as water in a cup keeps turning after you stop stirring it. Your ears tell the brain that you are still turning, ( B ) your eyes say that you are not. This mix-up makes you feel dizzy.",
+      "Ballet dancers and figure skaters spin many times without falling. One trick they use is to keep looking at a single point for as long as possible while they turn. With practice, their brains also learn to pay less attention to the confusing messages.",
+    ],
+    ja: [
+      '子どもたちがぐるぐる回ってから急に止まると、笑いながらたおれてしまうことがよくある。じっと立っているのに、部屋が回りつづけているように見えるのだ。この目が回る感じは、耳のおくの小さな部分から生まれる。',
+      'それぞれの耳のおくには、液体で満たされた3本の小さな管がある。頭を回すと液体が動き、とても小さな毛にふれる。この毛が脳に信号を送り、頭がどちらへ動いているかを伝える。このしくみが、私たちが体のバランスをとるのを助けている。',
+      '長いあいだ回っていると、液体は管といっしょに動きはじめる。そして止まると、コップの水をかきまぜるのをやめてもしばらく回りつづけるのと同じように、液体は数秒間動きつづける。耳は脳に「まだ回っている」と伝えるのに、目は「回っていない」と伝える。この食いちがいのせいで、目が回るのだ。',
+      'バレエのダンサーやフィギュアスケートの選手は、何回回ってもたおれない。かれらが使うコツの1つは、回りながら、できるだけ長く1つの点を見つづけることだ。練習をつむと、脳もまぎらわしい信号をあまり気にしないようになっていく。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['comes', 'come', 'coming', 'to come'], answer: 0, why: '主語 This feeling（三人称単数）に続く文の動詞なので comes（come from ～「～から来る」）。come は主語と合わず、coming・to come だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'instead of'], answer: 0, why: 'うしろに主語と動詞（your eyes say）が続くので接続詞 while「～なのに・一方で」。during・despite・instead of は前置詞（句）なので、文の前には置けない。' },
+    ],
+    underline: {
+      phrase: 'mix-up',
+      choices: ['a confusing difference between two messages', 'a kind of drink', 'a fast dance', 'a sudden loud sound'],
+      answer: 0,
+      why: 'mix-up は「混乱・取りちがえ」。耳と目がちがう信号を送ることを指している。',
+    },
+    order: {
+      words: ['which', 'way', 'the', 'head', 'is', 'moving'],
+      rest: '',
+      answer: 'which way the head is moving',
+      ja: '頭がどちらへ動いているか（間接疑問：疑問詞＋主語＋動詞の順）',
+    },
+    tf: [
+      { statement: '目が回る感じは、耳のおくの部分から生まれる。', answer: true, why: '第1段落 This feeling of dizziness comes from a small part of the inner ear。' },
+      { statement: '回るのをやめると、耳の中の液体もすぐに止まる。', answer: false, why: '第3段落 the liquid keeps moving for a few seconds。' },
+      { statement: 'ダンサーは、回りながら1つの点を見つづけるコツを使う。', answer: true, why: '第4段落 keep looking at a single point for as long as possible while they turn。' },
+    ],
+    qa: [
+      { q: 'What do the tiny hairs in the ear do?', choices: ['They send messages to the brain about how the head is moving.', 'They keep the ear warm.', 'They clean the liquid.', 'They help us hear music.'], answer: 0, why: '第2段落 These hairs send messages to the brain, telling it which way the head is moving。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
