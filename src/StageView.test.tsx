@@ -908,6 +908,18 @@ it('闘技場：10連続正解ごとに「🔥🔥 N連続正解！」', async (
   expect(screen.getByText('🔥🔥 10連続正解！ すごすぎる！')).toBeInTheDocument()
 })
 
+it('闘技場の結果に、単語・文法・読解それぞれの正解数を出す', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={0} onExit={() => {}} />)
+  for (const r of [true, false, true, true]) {
+    arenaPick(r) // 単語→文法→読解→単語
+    fireEvent.click(screen.getByText(/^次へ/))
+  }
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByLabelText('種類ごとの正解')).toHaveTextContent('🔤 単語 2/2 📐 文法 0/1 📖 読解 1/1')
+})
+
 it('闘技場の結果に、いちばん長い連続正解を出す', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()

@@ -9,6 +9,8 @@ import { speak } from './speech'
 // 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える。
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
 // 1レベル20階。レベルの区切りをこえると「LEVEL UP!」の演出。いちばん上のレベルの上は無限の階
+const NO_KIND = { word: [0, 0], grammar: [0, 0], reading: [0, 0] } as Record<'word' | 'grammar' | 'reading', [number, number]>
+const KIND_LABEL = { word: '🔤 単語', grammar: '📐 文法', reading: '📖 読解' } as const
 const SHAFT = 2 // いまの階の上下に見せる階の数
 const GOAL = 5 // この回の目標：はじめの階から5階上
 const CLIMB_EVERY = 10 // この回で10階のぼるごとにお祝い
@@ -21,6 +23,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [picked, setPicked] = useState<number | null>(null)
   const [count, setCount] = useState(0)
   const [right, setRight] = useState(0)
+  const [byKind, setByKind] = useState(NO_KIND) // 種類ごとの［正解, 問題数］（結果で見せる）
   const [streak, setStreak] = useState(0)
   const [maxStreak, setMaxStreak] = useState(0) // きょういちばん長い連続正解（結果で見せる）
   const [shield, setShield] = useState(false)
@@ -62,6 +65,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
     setQuicks(fast ? quicks + 1 : 0)
     setPicked(i)
     setCount(count + 1)
+    const kind = isArenaGrammar(q) ? 'grammar' : isArenaReading(q) ? 'reading' : 'word'
+    setByKind({ ...byKind, [kind]: [byKind[kind][0] + (i === q.answer ? 1 : 0), byKind[kind][1] + 1] })
     if (!isArenaGrammar(q) && !isArenaReading(q)) onAnswer?.(i === q.answer, i === q.answer ? quizXp(streak + 1) : 0, q.word.id, 'quiz')
     setMisses(i === q.answer ? 0 : misses + 1)
     const earn = i === q.answer && (streak + 1) % SHIELD_EVERY === 0 && !shield
@@ -157,6 +162,14 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <p className="arena-result-sub">
           {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
+        {count > 0 && (
+          <p className="arena-by-kind" aria-label="種類ごとの正解">
+            {(['word', 'grammar', 'reading'] as const)
+              .filter((k) => byKind[k][1] > 0)
+              .map((k) => `${KIND_LABEL[k]} ${byKind[k][0]}/${byKind[k][1]}`)
+              .join('　')}
+          </p>
+        )}
         {maxStreak >= 2 && <p className="arena-max-streak">🔥 いちばん長い連続正解：{maxStreak}問</p>}
         {guards > 0 && <p className="arena-max-streak">🛡 盾がまもった：{guards}回</p>}
         {missed.length > 0 && (
@@ -179,6 +192,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setEnded(null)
             setMissed([])
             setCount(0)
+            setByKind(NO_KIND)
             setRight(0)
             setStreak(0)
             setMaxStreak(0)
@@ -197,6 +211,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setEnded(null)
               setMissed([])
               setCount(0)
+            setByKind(NO_KIND)
               setRight(0)
               setStreak(0)
               setMaxStreak(0)
