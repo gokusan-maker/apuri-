@@ -39,6 +39,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   peacock: { id: 'cheer', name: 'はねひろげ', desc: '2問正解ごとに必殺技ゲージ +1' },
   wolf: { id: 'claw', name: 'ムーンファング', desc: '2問正解ごとに必殺技ゲージ +1' },
   parrot: { id: 'cheer', name: 'まねっこリピート', desc: '2問正解ごとに必殺技ゲージ +1' },
+  bat: { id: 'cheer', name: 'エコーキャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -102,6 +103,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   peacock: { name: 'クジャク・フェザーショー', color: '#14b8a6' },
   wolf: { name: 'オオカミ・ムーンハウル', color: '#64748b' },
   parrot: { name: 'オウム・エコーボイス', color: '#16a34a' },
+  bat: { name: 'コウモリ・ナイトウェーブ', color: '#7c3aed' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -152,6 +154,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   peacock: { en: 'Look at my beautiful feathers!', ja: 'ぼくのきれいな羽を見て！' },
   wolf: { en: 'Let’s read it out loud together!', ja: 'いっしょに声に出して読もう！' },
   parrot: { en: 'Repeat after me! Repeat after me!', ja: 'まねしてね！ まねしてね！' },
+  bat: { en: 'I can hear sounds you cannot!', ja: 'きみに聞こえない音も聞こえるよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

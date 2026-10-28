@@ -410,6 +410,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 62 Q50 56 58 62 Q58 74 50 78 Q54 70 44 62 Z" fill="#facc15" stroke="#a16207" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'bat')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 大きくとがった耳 */}
+        <path d="M24 42 L18 8 L40 30 Z" />
+        <path d="M76 42 L82 8 L60 30 Z" />
+      </g>
+    )
   if (species === 'wolf')
     return (
       <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">

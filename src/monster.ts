@@ -316,14 +316,15 @@ export const SPECIES: Species[] = [
   { id: 'alpaca', name: 'モフパカ', egg: 'アンデスのタマゴ', token: 'モフ', bigToken: 'モフパカ', color: '#fef3c7', line: '#78350f', rate: 0.02, desc: 'もこもこの毛のアルパカ。ふわふわの毛の中に、覚えた単語をいっぱいしまっている。' },
   { id: 'mole', name: 'モグッチ', egg: 'つちの中のタマゴ', token: 'モグ', bigToken: 'モグッチ', color: '#57534e', line: '#1c1917', rate: 0.02, desc: '土の中をほり進むモグラ。目はちいさいけれど、耳と鼻で英語の音をしっかりつかまえる。' },
   { id: 'dolphin', name: 'ドルフィ', egg: 'さんごのタマゴ', token: 'ドル', bigToken: 'ドルフィ', color: '#60a5fa', line: '#1e3a8a', rate: 0.02, desc: '海をとびはねるイルカ。音で仲間と話すので、英語の発音を聞き分けるのが得意。' },
-  { id: 'hippo', name: 'カバッチ', egg: 'どろんこのタマゴ', token: 'カバ', bigToken: 'カバッチ', color: '#c4b5fd', line: '#4c1d95', rate: 0.03, desc: '大きな口のカバ。水の中でのんびりしながら、大きな口で長い文もまるごと覚える。' },
-  { id: 'crab', name: 'チョッキン', egg: 'すなはまのタマゴ', token: 'チョキ', bigToken: 'チョッキン', color: '#f87171', line: '#7f1d1d', rate: 0.03, desc: '大きなハサミのカニ。横歩きしながら、まちがえた単語をチョキンと切って覚えなおす。' },
-  { id: 'tiger', name: 'シマトラ', egg: 'たけやぶのタマゴ', token: 'トラ', bigToken: 'シマトラ', color: '#fb923c', line: '#7c2d12', rate: 0.03, desc: 'しましまのトラ。ねらった単語にそっと近づいて、一気にがぶっと覚える。' },
+  { id: 'hippo', name: 'カバッチ', egg: 'どろんこのタマゴ', token: 'カバ', bigToken: 'カバッチ', color: '#c4b5fd', line: '#4c1d95', rate: 0.02, desc: '大きな口のカバ。水の中でのんびりしながら、大きな口で長い文もまるごと覚える。' },
+  { id: 'crab', name: 'チョッキン', egg: 'すなはまのタマゴ', token: 'チョキ', bigToken: 'チョッキン', color: '#f87171', line: '#7f1d1d', rate: 0.02, desc: '大きなハサミのカニ。横歩きしながら、まちがえた単語をチョキンと切って覚えなおす。' },
+  { id: 'tiger', name: 'シマトラ', egg: 'たけやぶのタマゴ', token: 'トラ', bigToken: 'シマトラ', color: '#fb923c', line: '#7c2d12', rate: 0.02, desc: 'しましまのトラ。ねらった単語にそっと近づいて、一気にがぶっと覚える。' },
   { id: 'chameleon', name: 'イロカメ', egg: 'このはのタマゴ', token: 'イロ', bigToken: 'イロカメ', color: '#86efac', line: '#14532d', rate: 0.03, desc: '体の色をかえるカメレオン。単語の意味によって、くるくる色をかえて覚える。' },
   { id: 'swan', name: 'シラトリ', egg: 'みずべのタマゴ', token: 'シラ', bigToken: 'シラトリ', color: '#f1f5f9', line: '#334155', rate: 0.03, desc: '湖をすべるハクチョウ。水の上ではしずかだけど、水の下では足をいっしょうけんめい動かして練習している。' },
   { id: 'peacock', name: 'クジャラン', egg: 'はなぞののタマゴ', token: 'クジャ', bigToken: 'クジャラン', color: '#2dd4bf', line: '#134e4a', rate: 0.03, desc: 'きれいな羽のクジャク。正解するたびに、羽を大きく広げてみせてくれる。' },
   { id: 'wolf', name: 'ウルフィ', egg: 'つきよのタマゴ', token: 'ウル', bigToken: 'ウルフィ', color: '#94a3b8', line: '#1e293b', rate: 0.03, desc: '月夜にほえるオオカミ。なかまといっしょに、声をそろえて英語を読みあげる。' },
   { id: 'parrot', name: 'オウムン', egg: 'ねったいのタマゴ', token: 'オウ', bigToken: 'オウムン', color: '#4ade80', line: '#166534', rate: 0.03, desc: 'カラフルなオウム。聞いた英語をそのまままねして、発音の練習をてつだってくれる。' },
+  { id: 'bat', name: 'コウモン', egg: 'どうくつのタマゴ', token: 'コウ', bigToken: 'コウモン', color: '#a78bfa', line: '#3b0764', rate: 0.03, desc: 'どうくつにすむコウモリ。小さな音のはねかえりで、英語の音のちがいを聞き分ける。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 

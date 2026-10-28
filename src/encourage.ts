@@ -42,6 +42,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   peacock: { streak: ['羽を広げて、大正解！', 'きらきら、連続正解！'], wrong: ['羽をたたんで、もう一回！', 'ひと休みして、また広げよう！'] },
   wolf: { streak: ['わお〜ん、大正解！', 'むれのリーダーみたいに連続正解！'], wrong: ['月を見上げて、もう一回！', 'なかまがいるよ、次いこう！'] },
   parrot: { streak: ['せいかい！ せいかい！', 'まねっこじょうず、連続正解！'], wrong: ['もう一回、もう一回！', 'まねして、次はできるよ！'] },
+  bat: { streak: ['音をキャッチ、大正解！', 'ぱたぱた、連続正解！'], wrong: ['もう一回、耳をすませて！', 'さかさまにぶら下がって、考えなおそう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -93,6 +94,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   peacock: { streak: [['What a show!', 'みごとなショー！']], wrong: [['Fold your wings and try again.', '羽をたたんで、もう一回。']] },
   wolf: { streak: [['Leader of the pack!', 'むれのリーダーだね！']], wrong: [['Howl and try again.', 'ほえて、もう一回。']] },
   parrot: { streak: [['Great job! Great job!', 'すごい！ すごい！']], wrong: [['Again! Again!', 'もう一回！ もう一回！']] },
+  bat: { streak: [['Great ears!', 'すごい耳だね！']], wrong: [['Listen again.', 'もう一度聞いてみよう。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
