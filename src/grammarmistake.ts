@@ -130,6 +130,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-onthemove': { wrong: 'I was in a rushing, so I took a taxi.', right: 'I was in a rush, so I took a taxi.', why: 'in a rush「急いで」。a のあとは名詞 rush（rushing は入らない）。' },
   'prep-idiom-underage': { wrong: 'Children under the aged of six can ride for free.', right: 'Children under the age of six can ride for free.', why: 'under the age of ～「～歳未満の」。the のあとは名詞 age（aged は入らない）。' },
   'prep-idiom-inspace': { wrong: 'The astronauts stayed on space for six months.', right: 'The astronauts stayed in space for six months.', why: '「宇宙で」は in space（the はつけない）。on space とは言わない。' },
+  'prep-idiom-inaminute': { wrong: 'Wait here. I’ll be back in a minutes.', right: 'Wait here. I’ll be back in a minute.', why: 'in a minute「すぐに」。a のあとは単数 minute（in a minutes とは言わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
