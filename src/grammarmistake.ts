@@ -115,6 +115,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-pain': { wrong: 'She looked at the letter in surprised.', right: 'She looked at the letter in surprise.', why: 'in surprise「おどろいて」。in のあとは名詞 surprise（surprised は形容詞）。' },
   'prep-idiom-condition': { wrong: 'My grandmother is in good healthy.', right: 'My grandmother is in good health.', why: 'in good health「健康で」。good のあとは名詞 health（healthy は形容詞）。' },
   'prep-idiom-byhand': { wrong: 'This sweater was made by hands.', right: 'This sweater was made by hand.', why: 'by hand「手で・手作業で」。by のあとは a も -s もつけない単数の名詞 hand。' },
+  'prep-idiom-strike': { wrong: 'The train workers are on strikes today.', right: 'The train workers are on strike today.', why: 'on strike「ストライキ中で」。strike は a も -s もつけない（on strikes とは言わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
