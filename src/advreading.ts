@@ -11800,6 +11800,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-volunteer-guide',
+    title: 'E-mail: Volunteer Guides Wanted',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear members of the Maple Town Tourist Association, Our town will hold its annual Autumn Festival on Saturday, October 18, and Sunday, October 19. Last year, more than 20,000 visitors came, and we expect even more this year. For this reason, we are looking for volunteers to ( A ) as guides.",
+      "Guides will stand at the station and in the main square to help visitors find their way. You will also hand out maps and answer simple questions about the events. No special experience is needed, but volunteers who can speak English or Chinese will be especially welcome.",
+      "Each shift lasts four hours, from 9:00 A.M. to 1:00 P.M. or from 1:00 P.M. to 5:00 P.M. All volunteers will receive a festival T-shirt, a free lunch, and a 1,000-yen gift card for local shops. A short training meeting will be held on October 11 for everyone ( B ) has signed up.",
+      "If you are interested, please fill in the attached form and send it back to me by October 3. Thank you for your help in making the festival a success. Kind regards, Yumi Sato, Festival Committee",
+    ],
+    ja: [
+      'メープルタウン観光協会の会員のみなさまへ　町では、10月18日（土）と19日（日）に毎年恒例の秋祭りを開きます。昨年は2万人をこえる人が来てくださり、今年はさらに多くなると見こんでいます。そのため、案内役をしてくださるボランティアを募集しています。',
+      '案内役は駅と中央広場に立ち、来場者が道をさがすのを手伝います。地図をくばったり、行事についての簡単な質問に答えたりもします。特別な経験はいりませんが、英語や中国語を話せる方はとくに歓迎します。',
+      '1回の担当は4時間で、午前9時から午後1時まで、または午後1時から5時までです。ボランティア全員に、お祭りのTシャツ、無料の昼食、地元のお店で使える1000円分の商品券をさしあげます。申しこんだ方全員を対象に、10月11日に短い説明会を開きます。',
+      'ご興味のある方は、添付の用紙に記入し、10月3日までに私あてに送り返してください。お祭りを成功させるためのご協力に感謝します。お祭り実行委員会　佐藤ゆみ',
+    ],
+    blanks: [
+      { id: 'A', choices: ['work', 'working', 'worked', 'works'], answer: 0, why: 'volunteers to ～「～するボランティア」。to のあとは動詞の原形なので work（work as ～「～として働く」）。working・worked・works は to のあとに置けない。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'whom'], answer: 0, why: '先行詞 everyone（人）で、うしろに主語がなく has signed up が続くので主格の関係代名詞 who。which は人に使わず、whose はうしろに名詞が必要、whom は目的格で主語にならない。' },
+    ],
+    underline: {
+      phrase: 'hand out',
+      choices: ['give to many people', 'throw away', 'make by hand', 'keep for yourself'],
+      answer: 0,
+      why: 'hand out ～ は「～をくばる」。来場者に地図を1まいずつわたすという意味。',
+    },
+    order: {
+      words: ['help', 'visitors', 'find', 'their', 'way'],
+      rest: '',
+      answer: 'help visitors find their way',
+      ja: '来場者が道をさがすのを手伝う（help ＋人＋動詞の原形「（人）が～するのを手伝う」）',
+    },
+    tf: [
+      { statement: 'ボランティアには、特別な経験が必要だ。', answer: false, why: '第2段落 No special experience is needed。' },
+      { statement: '1回の担当は4時間だ。', answer: true, why: '第3段落 Each shift lasts four hours。' },
+      { statement: '用紙は10月11日までに送り返す。', answer: false, why: '第4段落 send it back to me by October 3。10月11日は説明会の日。' },
+    ],
+    qa: [
+      { q: 'What will all volunteers receive?', choices: ['A T-shirt, a free lunch, and a gift card.', 'A free hotel room.', 'A ticket for the train.', 'Money for each hour.'], answer: 0, why: '第3段落 All volunteers will receive a festival T-shirt, a free lunch, and a 1,000-yen gift card。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
