@@ -13194,6 +13194,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-trafficlight',
+    title: 'The First Traffic Light',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long before cars filled the streets, there were already traffic problems. In 1868, horses and carriages crowded a busy road in London, so the city put up the world's first traffic signal. It was a gas light ( A ) by a police officer, who changed it by hand.",
+      "Sadly, the light did not last long. After only a few weeks, the gas inside it exploded, and the officer was hurt. People did not try traffic lights again for many years.",
+      "In the early 1900s, electric traffic lights appeared in the United States. They were safer, and soon they spread around the world. Later, a yellow light was added between green and red so that drivers had time to stop.",
+      "In Japan, people often call the green light \"blue.\" This is ( B ) the Japanese word ao was once used for both blue and green. A small light on the street can tell us about history and even about language.",
+    ],
+    ja: [
+      '車が通りをうめつくすずっと前から、交通の問題はすでにあった。1868年、ロンドンのにぎやかな道に馬や馬車があふれたので、市は世界で最初の交通信号を立てた。それは警察官が操作するガスの明かりで、警察官が手で切りかえていた。',
+      '残念ながら、その明かりは長く続かなかった。たった数週間で中のガスが爆発し、警察官がけがをしたのだ。人々はその後何年も、信号をもう一度ためそうとしなかった。',
+      '1900年代のはじめに、アメリカで電気の信号が登場した。それはより安全で、まもなく世界中に広まった。のちに、運転手が止まる時間を持てるように、緑と赤のあいだに黄色の明かりが加えられた。',
+      '日本では、緑の信号をよく「青」と呼ぶ。これは、日本語の「あお」という言葉が、かつては青と緑の両方に使われていたからだ。通りの小さな明かりが、歴史や言葉についてまで教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['operated', 'operating', 'operates', 'to operate'], answer: 0, why: '「警察官によって操作されるガスの明かり」なので、過去分詞 operated がうしろから light を説明する（by a police officer が受け身のしるし）。operating だと明かりが操作することになり、operates は動詞の形、to operate は意味が合わない。' },
+      { id: 'B', choices: ['because', 'because of', 'despite', 'during'], answer: 0, why: 'This is because ～「これは～だからだ」。うしろに文（主語＋動詞）が続くので接続詞 because。because of・despite・during は前置詞なので、うしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'did not last long',
+      choices: ['was used for only a short time', 'was very bright', 'was too expensive', 'was copied by other cities'],
+      answer: 0,
+      why: 'last は「続く・もつ」。その明かりは短いあいだしか使われなかった、という意味。',
+    },
+    order: {
+      words: ['so', 'that', 'drivers', 'had', 'time', 'to', 'stop'],
+      rest: '',
+      answer: 'so that drivers had time to stop',
+      ja: '運転手が止まる時間を持てるように（so that ～「～するように」）',
+    },
+    tf: [
+      { statement: '世界で最初の交通信号は、電気の明かりだった。', answer: false, why: '第1段落 It was a gas light。' },
+      { statement: '最初の信号は、数週間で爆発した。', answer: true, why: '第2段落 After only a few weeks, the gas inside it exploded。' },
+      { statement: '黄色の明かりは、緑と赤のあいだに加えられた。', answer: true, why: '第3段落 a yellow light was added between green and red。' },
+    ],
+    qa: [
+      { q: 'Why do people in Japan call the green light "blue"?', choices: ['Because the word ao was once used for both blue and green.', 'Because the light is really blue.', 'Because blue lights are cheaper.', 'Because a law says so.'], answer: 0, why: '第4段落 This is because the Japanese word ao was once used for both blue and green。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
