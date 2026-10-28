@@ -2338,6 +2338,8 @@
 
 - [x] 文法：群前置詞 in the presence of ／ in the absence of
 
+- [x] 文法 in the presence of の単元：誤答 presents（名詞なので形は成り立つ）を presently に直す
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 

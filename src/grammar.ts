@@ -7665,7 +7665,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In the absence of the captain, Yuki led the team.', ja: 'キャプテンがいないあいだ、ユキがチームを引っぱった。' },
     ],
     questions: [
-      { sentence: 'She felt shy in the ___ of so many people.', choices: ['presence', 'present', 'presents'], answer: 0, why: 'in the presence of ～「～のいるところで」。the のあとは名詞 presence。' },
+      { sentence: 'She felt shy in the ___ of so many people.', choices: ['presence', 'present', 'presently'], answer: 0, why: 'in the presence of ～「～のいるところで」。the のあとは名詞 presence。' },
       { sentence: 'In the ___ of our teacher, the class was very noisy.', choices: ['absence', 'absent', 'absently'], answer: 0, why: 'in the absence of ～「～がいないときに」。the のあとは名詞 absence。' },
       { sentence: 'The papers were signed in the presence ___ a lawyer.', choices: ['of', 'for', 'with'], answer: 0, why: 'in the presence of ～。presence のあとは of。' },
     ],
