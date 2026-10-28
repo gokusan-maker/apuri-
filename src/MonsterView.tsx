@@ -395,6 +395,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'tiger')
+    return (
+      <g stroke={line} strokeWidth="3" strokeLinecap="round" fill="none">
+        {/* ひたいのしまもよう */}
+        <path d="M40 30 L44 40 M50 26 L50 38 M60 30 L56 40" />
+      </g>
+    )
   if (species === 'crab')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
