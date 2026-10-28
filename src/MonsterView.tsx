@@ -395,6 +395,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'giraffe')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinecap="round">
+        {/* 頭の上の2本のつの（オシコーン） */}
+        <path d="M40 30 L36 12 M60 30 L64 12" fill="none" />
+        <circle cx="36" cy="11" r="4" fill="#92400e" />
+        <circle cx="64" cy="11" r="4" fill="#92400e" />
+      </g>
+    )
   if (species === 'bear')
     return (
       <g stroke={line} strokeWidth="2.5">

@@ -25,6 +25,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   flamingo: { dir: 'ja-en', label: '日→英', icon: '🦩' },
   otter: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   bear: { dir: 'en-ja', label: '英→日', icon: '🐻' },
+  giraffe: { dir: 'ja-en', label: '日→英', icon: '🦒' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 

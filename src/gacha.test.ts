@@ -71,10 +71,10 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  const want = { mochi: 180, fox: 30, penguin: 30, rabbit: 40, cat: 40, dragon: 40, owl: 40, turtle: 40, hamster: 40, sheep: 40, squirrel: 40, panda: 40, lion: 40, elephant: 40, koala: 40, hedgehog: 40, pelican: 40, seal: 40, flamingo: 40, otter: 40, bear: 40, octopus: 40 }
+  const want = { mochi: 180, fox: 30, penguin: 30, rabbit: 30, cat: 30, dragon: 40, owl: 30, turtle: 30, hamster: 40, sheep: 40, squirrel: 40, panda: 40, lion: 40, elephant: 40, koala: 40, hedgehog: 40, pelican: 40, seal: 40, flamingo: 40, otter: 40, bear: 40, giraffe: 40, octopus: 40 }
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.34)!
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.32)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
