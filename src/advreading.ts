@@ -11763,7 +11763,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     title: 'Squirrels and Their Hidden Food',
     level: '難関大（評論）',
     paragraphs: [
-      "In autumn, squirrels are very busy. They collect nuts and seeds and hide them in many different places to eat during the winter, when food is hard to find. A single squirrel may hide thousands of nuts in one season, burying each one in a separate hole ( A ) the ground.",
+      "In autumn, squirrels are very busy. They collect nuts and seeds and hide them in many different places to eat during the winter, when food is hard to find. A single squirrel may hide thousands of nuts in one season, ( A ) each one in a separate hole in the ground.",
       "How can a squirrel find so many hidden nuts? Scientists have found that squirrels use their excellent memory to remember where many of them are. They also use their strong sense of smell to find nuts buried under snow.",
       "Interestingly, squirrels sometimes pretend to hide a nut when they think another animal is watching. They dig a hole and cover it, but they actually keep the nut in their mouth. This trick ( B ) it harder for thieves to steal their food.",
       "Not every nut is found again, however. The ones that squirrels forget can grow into new trees in spring. In this way, these small animals help forests to spread, even without meaning to.",
@@ -11775,7 +11775,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'しかし、すべての木の実がまた見つかるわけではない。リスがわすれた木の実は、春に新しい木に育つことがある。このようにして、この小さな動物は、そのつもりがなくても森が広がるのを助けているのだ。',
     ],
     blanks: [
-      { id: 'A', choices: ['in', 'into of', 'inside of in', 'ins'], answer: 0, why: 'a hole in the ground「地面の穴」。場所を表す前置詞 in。into of・inside of in・ins という形はない。' },
+      { id: 'A', choices: ['burying', 'buried', 'bury', 'to burying'], answer: 0, why: 'コンマのあとに分詞構文 burying ～「（そして）～をうめる」。buried・bury を置くと接続詞なしで動詞が2つ並び、to burying は形として成り立たない。' },
       { id: 'B', choices: ['makes', 'make', 'making', 'made of'], answer: 0, why: '主語 This trick（単数）に続く文の動詞なので makes（make it harder for ～ to ...「～が…するのをむずかしくする」）。make は単数の主語と合わず、making だけでは文の動詞にならず、made of では it が目的語にならない。' },
     ],
     underline: {
