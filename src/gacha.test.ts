@@ -71,10 +71,10 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  const want = { mochi: 180, fox: 90, penguin: 90, rabbit: 90, cat: 70, dragon: 80, owl: 70, turtle: 70, hamster: 60, sheep: 50, squirrel: 50, panda: 50, octopus: 50 }
+  const want = { mochi: 180, fox: 80, penguin: 80, rabbit: 80, cat: 70, dragon: 80, owl: 70, turtle: 60, hamster: 50, sheep: 50, squirrel: 50, panda: 50, lion: 50, octopus: 50 }
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.56)!
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.53)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
@@ -101,7 +101,7 @@ it('週末はドラコが出やすい（8%→18%、そのぶんモチが減る�
   expect(total).toBeCloseTo(1)
   let dragons = 0
   for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
-  expect(dragons).toBe(180)
+  expect(Math.abs(dragons - 180)).toBeLessThanOrEqual(1) // 小数の足し算の誤差で、さかいめの1つがずれることがある
 })
 
 it('最近のガチャの結果は新しい順に10回まで残る', async () => {

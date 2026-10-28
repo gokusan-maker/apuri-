@@ -18,6 +18,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   sheep: { streak: ['メェ〜！もこもこ大正解！', 'ふわふわ、いい調子！'], wrong: ['だいじょうぶ、ふわっと気をとりなおそう！', 'ひつじを数えて、もう一回！'] },
   squirrel: { streak: ['どんぐりみたいに、単語がたまっていくね！', 'キキッ、その調子！'], wrong: ['だいじょうぶ、しっぽをふって気をとりなおそう！', 'もう一回、どんぐりさがし！'] },
   panda: { streak: ['ササがおいしい！じゃなくて、大正解！', 'のんびり、でも確実だね！'], wrong: ['だいじょうぶ、ササを食べてひと休み！', 'ころんでも、またおき上がろう！'] },
+  lion: { streak: ['ガオー！百獣の王の大正解！', 'その調子、王さまみたい！'], wrong: ['だいじょうぶ、王さまもまちがえる！', 'ほえて気合を入れなおそう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -45,6 +46,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   sheep: { streak: [['Baa! You are doing great!', 'メェ〜！すごいね！']], wrong: [['Take a deep breath and try again.', '深呼吸して、もう一回。']] },
   squirrel: { streak: [['Nuts about English!', '英語に夢中だね！']], wrong: [['Shake your tail and try again!', 'しっぽをふって、もう一回！']] },
   panda: { streak: [['Great job, my friend!', 'やったね、なかま！']], wrong: [['Relax and try again.', 'のんびり、もう一回。']] },
+  lion: { streak: [['You are the king of English!', 'きみは英語の王さまだ！']], wrong: [['Be brave and try again!', '勇気を出して、もう一回！']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }

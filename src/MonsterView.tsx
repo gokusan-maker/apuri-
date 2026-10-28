@@ -256,7 +256,7 @@ function Markings({ form, line }: { form: Form; line: string }) {
 }
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
-const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel', 'panda']
+const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel', 'panda', 'lion']
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
   if (species === 'owl')
     return (
@@ -270,6 +270,14 @@ function SpeciesTail({ species, fill, line }: { species: string; fill: string; l
   if (species === 'hamster') return <circle cx="80" cy="82" r="4" fill={fill} stroke={line} strokeWidth="2" />
   if (species === 'sheep') return <circle cx="82" cy="80" r="6" fill="#fff" stroke={line} strokeWidth="2" />
   if (species === 'panda') return <circle cx="80" cy="84" r="4" fill="#1f2937" />
+  if (species === 'lion')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinecap="round">
+        {/* 先にふさのついた、ながいしっぽ */}
+        <path d="M76 82 Q96 84 94 66" fill="none" />
+        <circle cx="94" cy="62" r="5" fill="#b45309" />
+      </g>
+    )
   if (species === 'squirrel')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -322,6 +330,11 @@ function SpeciesBack({ species, fill, line, hidden }: { species: string; fill: s
       </g>
     )
   if (species === 'octopus') return <path d="M22 56 Q16 8 50 6 Q84 8 78 56 Z" fill={fill} stroke={line} strokeWidth="3" strokeLinejoin="round" />
+  if (species === 'lion')
+    return (
+      // 頭のまわりの、ぎざぎざのたてがみ
+      <path d="M50 2 L58 12 L70 6 L72 18 L86 18 L82 30 L94 38 L84 46 L92 58 L78 60 L80 74 L66 70 L60 82 L50 72 L40 82 L34 70 L20 74 L22 60 L8 58 L16 46 L6 38 L18 30 L14 18 L28 18 L30 6 L42 12 Z" fill={hidden ? fill : '#b45309'} stroke={line} strokeWidth="2.5" strokeLinejoin="round" />
+    )
   return null
 }
 
@@ -372,6 +385,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M74 40 L72 18 L56 30 Z" fill={fill} />
         <path d="M30 34 L31 24 L38 30 Z M70 34 L69 24 L62 30 Z" fill="#f9a8d4" stroke="none" />
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
+      </g>
+    )
+  if (species === 'lion')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5">
+        <circle cx="30" cy="30" r="7" />
+        <circle cx="70" cy="30" r="7" />
       </g>
     )
   if (species === 'panda')
@@ -444,6 +464,13 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'lion')
+    return (
+      <g>
+        <ellipse cx="50" cy="74" rx="14" ry="10" fill="#fef3c7" opacity="0.9" />
+        <path d="M46 70 L54 70 L50 75 Z" fill="#78350f" />
+      </g>
+    )
   if (species === 'panda')
     return (
       <g fill="#1f2937" opacity="0.85">
