@@ -94,6 +94,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'group-prep-support': { wrong: 'Many people spoke in support for the plan.', right: 'Many people spoke in support of the plan.', why: 'in support of ～「～を支持して」。support のあとは of。' },
   'group-prep-connection': { wrong: 'I am calling in connection to your order.', right: 'I am calling in connection with your order.', why: 'in connection with ～「～に関して」。connection のあとは with。' },
   'group-prep-begin-end': { wrong: 'We have a test in the end of this month.', right: 'We have a test at the end of this month.', why: '「～の終わりに」は at the end of ～。in the end は「結局」という別の意味。' },
+  'group-prep-back': { wrong: 'He sat at back of the bus.', right: 'He sat at the back of the bus.', why: 'at the back of ～「～のうしろのほうに」。the をわすれない。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
