@@ -13358,6 +13358,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sudoku',
+    title: 'A Puzzle That Traveled the World',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Sudoku is a number puzzle played on a grid of nine rows and nine columns. Each row, each column, and each small box must contain the numbers one to nine only once. Many people think it was born in Japan, but its story is more interesting than that.",
+      "In 1979, a puzzle magazine in the United States printed a puzzle ( A ) \"Number Place.\" A few years later, a Japanese puzzle company found it and gave it a new name, sudoku, which means something like \"single numbers.\" It became popular in Japan, and in the early 2000s, newspapers in Britain began to print it every day.",
+      "Soon, people all over the world were solving sudoku on trains and in waiting rooms. One reason is that you only need careful thinking, not math, ( B ) it. You never add or subtract anything.",
+      "Today, sudoku is a word known in many languages. A puzzle that started in America and got its name in Japan has become a small piece of world culture.",
+    ],
+    ja: [
+      '数独は、9行9列のますで遊ぶ数字のパズルだ。どの行にも、どの列にも、どの小さな箱にも、1から9までの数字を1回ずつだけ入れなければならない。日本で生まれたと思っている人が多いが、その話はもっとおもしろい。',
+      '1979年、アメリカのパズル雑誌が「ナンバープレース」と呼ばれるパズルをのせた。数年後、日本のパズル会社がそれを見つけ、「数独」という新しい名前をつけた。これは「ひとつだけの数字」というような意味だ。それは日本で人気になり、2000年代のはじめにはイギリスの新聞が毎日のせるようになった。',
+      'まもなく、世界中の人々が電車や待合室で数独をとくようになった。その理由の1つは、それをとくのに計算ではなく、注意深く考えることだけが必要だということだ。何かを足したり引いたりすることはまったくない。',
+      '今日、数独は多くの言語で知られた言葉になっている。アメリカで始まり、日本で名前をもらったパズルが、世界の文化の小さな一部になったのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['called', 'calling', 'calls', 'to call'], answer: 0, why: '「ナンバープレースと呼ばれるパズル」なので、過去分詞 called がうしろから puzzle を説明する。calling だとパズルが呼ぶことになり、calls は動詞の形、to call は意味が合わない。' },
+      { id: 'B', choices: ['to solve', 'solving', 'solved', 'solve'], answer: 0, why: '「それをとくために」と目的を表すので to 不定詞 to solve。solving・solved・solve では目的の意味にならない。' },
+    ],
+    underline: {
+      phrase: 'subtract',
+      choices: ['take one number away from another', 'write a story', 'draw a picture', 'read aloud'],
+      answer: 0,
+      why: 'subtract は「引き算をする」。add（足す）と対になる言葉。',
+    },
+    order: {
+      words: ['gave', 'it', 'a', 'new', 'name'],
+      rest: '',
+      answer: 'gave it a new name',
+      ja: 'それに新しい名前をつけた（give ＋人・もの＋もの「～に…をあたえる」）',
+    },
+    tf: [
+      { statement: '数独のもとになったパズルは、アメリカの雑誌にのった。', answer: true, why: '第2段落 a puzzle magazine in the United States printed a puzzle called "Number Place"。' },
+      { statement: '数独をとくには、足し算や引き算が必要だ。', answer: false, why: '第3段落 You never add or subtract anything。' },
+      { statement: '「数独」という名前は、日本のパズル会社がつけた。', answer: true, why: '第2段落 a Japanese puzzle company found it and gave it a new name, sudoku。' },
+    ],
+    qa: [
+      { q: 'What must each row of a sudoku contain?', choices: ['The numbers one to nine only once.', 'Only even numbers.', 'Letters of the alphabet.', 'The same number nine times.'], answer: 0, why: '第1段落 Each row ... must contain the numbers one to nine only once。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
