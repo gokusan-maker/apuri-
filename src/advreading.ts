@@ -12210,6 +12210,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-seedvault',
+    title: 'A Safe Box for the World’s Seeds',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a cold island far north of Norway, there is a building dug deep into a mountain. It is called the Global Seed Vault, and it protects seeds ( A ) from almost every country in the world.",
+      "Why do we need such a place? Farms around the world grow many kinds of rice, wheat, and beans. If a war, a flood, or a disease destroys some of these plants, their seeds might be lost forever. The vault keeps a copy of them, just like a backup of important computer files.",
+      "The place was chosen carefully. The ground there stays frozen all year, and the vault is high above the sea. Inside, the seeds are kept at about minus eighteen degrees. Even if the power ( B ) off, the cold rock would keep the seeds frozen for a long time.",
+      "Today the vault holds more than a million samples. Most people will never visit it, but it quietly protects the food of future generations.",
+    ],
+    ja: [
+      'ノルウェーのはるか北の寒い島に、山の奥深くにほられた建物がある。それはスバールバル世界種子貯蔵庫と呼ばれ、世界のほとんどすべての国から送られた種を守っている。',
+      'なぜそのような場所が必要なのだろうか。世界中の農場では、多くの種類の米や小麦、豆が育てられている。もし戦争や洪水、病気がこうした植物の一部をだめにしてしまったら、その種は永遠に失われてしまうかもしれない。貯蔵庫は、大切なコンピューターのファイルのバックアップのように、その写しをとっておくのだ。',
+      'その場所は注意深く選ばれた。そこの地面は一年中こおっていて、貯蔵庫は海面よりずっと高いところにある。中では、種はおよそマイナス18度に保たれている。たとえ電気が止まっても、冷たい岩が長いあいだ種をこおらせたままにしておくだろう。',
+      '今日、貯蔵庫には100万を超える標本がある。ほとんどの人はそこを訪れることはないだろうが、それは未来の世代の食べ物を静かに守っているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['sent', 'sending', 'send', 'sends'], answer: 0, why: '「世界中の国から送られた種」なので、過去分詞 sent がうしろから seeds を説明する。sending だと種が送ることになり、send・sends は動詞の形なので名詞を説明できない。' },
+      { id: 'B', choices: ['went', 'goes', 'gone', 'going'], answer: 0, why: 'あとが would keep なので、仮定法過去（Even if ＋過去形, ... would ～）。go off「（電気が）止まる」の過去形 went。goes は would と合わず、gone・going だけでは動詞にならない。' },
+    ],
+    underline: {
+      phrase: 'a backup',
+      choices: ['an extra copy kept in case of loss', 'a broken machine', 'a new kind of food', 'a map of the island'],
+      answer: 0,
+      why: 'backup は「予備の写し」。なくなったときのためにとっておくもの。',
+    },
+    order: {
+      words: ['might', 'be', 'lost', 'forever'],
+      rest: '',
+      answer: 'might be lost forever',
+      ja: '永遠に失われるかもしれない（助動詞 ＋ be ＋過去分詞の受け身）',
+    },
+    tf: [
+      { statement: '貯蔵庫は、山の中にほられている。', answer: true, why: '第1段落 a building dug deep into a mountain。' },
+      { statement: '貯蔵庫の場所は、海のすぐそばの低い土地だ。', answer: false, why: '第3段落 the vault is high above the sea。' },
+      { statement: '多くの人がこの貯蔵庫を見学に訪れる。', answer: false, why: '第4段落 Most people will never visit it。' },
+    ],
+    qa: [
+      { q: 'Why does the vault keep copies of seeds?', choices: ['So that plants are not lost forever after a disaster.', 'So that farmers can sell them at a high price.', 'So that tourists can see them.', 'So that the island can grow rice.'], answer: 0, why: '第2段落 If a war, a flood, or a disease destroys some of these plants, their seeds might be lost forever. The vault keeps a copy of them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
