@@ -395,6 +395,17 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'alpaca')
+    return (
+      <g>
+        {/* 頭の上のもこもこの毛 */}
+        <g fill="#fffbeb" stroke="#d6b88a" strokeWidth="1.5">
+          <circle cx="38" cy="24" r="9" />
+          <circle cx="50" cy="20" r="10" />
+          <circle cx="62" cy="24" r="9" />
+        </g>
+      </g>
+    )
   if (species === 'sloth')
     return (
       <g>
