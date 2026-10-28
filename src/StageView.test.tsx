@@ -1212,6 +1212,18 @@ it('闘技場：3回続けてまちがえると応援が出る', async () => {
   expect(document.querySelector('.arena-floor.here .af-say')).toHaveTextContent('まけないで！') // 相棒もはげます
 })
 
+it('闘技場の塔の階には、高さに合わせた飾り（木→雲→星→宇宙）', async () => {
+  const { arenaDecor, ARENA_ENDLESS } = await import('./arena')
+  expect(arenaDecor(0)).toBe('🌳')
+  expect(arenaDecor(30)).toBe('☁️')
+  expect(arenaDecor(90)).toBe('⭐')
+  expect(arenaDecor(ARENA_ENDLESS)).toBe('🌌')
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={95} onExit={() => {}} />)
+  expect(document.querySelector('.arena-floor.here .af-decor')).toHaveTextContent('⭐')
+})
+
 it('闘技場の塔の空は、下の階は青空・上の階は星空', async () => {
   const { arenaSky, ARENA_ENDLESS, ARENA_PER } = await import('./arena')
   expect(arenaSky(0)[0]).toBe('#0ea5e9')

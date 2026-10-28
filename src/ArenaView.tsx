@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, isArenaEndless, isArenaEndlessTicket, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, loadArenaBestStreak, recordArenaBest, recordArenaBestStreak, saveArenaLast } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaDecor, arenaFloor, arenaLevel, arenaRank, arenaToNext, isArenaEndless, isArenaEndlessTicket, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, loadArenaBestStreak, recordArenaBest, recordArenaBestStreak, saveArenaLast } from './arena'
 import { quizXp, type Source } from './monster'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
@@ -275,6 +275,9 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               </div>
             ) : (
               <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}${f === shown && shield ? ' shielded' : ''}${f === ARENA_ENDLESS ? ' summit' : ''}${f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS ? ' lv-gate' : ''}${isArenaEndless(f) ? ' endless' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
+                <span className="af-decor" aria-hidden="true">
+                  {arenaDecor(f)}
+                </span>
                 <span className="af-num">{f + 1}階</span>
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
                 {f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS && <span className="af-gate">⭐ 節目</span>}

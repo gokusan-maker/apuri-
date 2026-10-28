@@ -4255,3 +4255,4 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor.battle-v2 .choice { border: 1px solid rgb(167 139 250 / 0.35); box-shadow: 0 2px 0 rgb(0 0 0 / 0.25); }
 .bfloor.battle-v2 .choice.correct { box-shadow: 0 0 14px rgb(74 222 128 / 0.6); }
 .bfloor.battle-v2 .choice.wrong { box-shadow: 0 0 14px rgb(248 113 113 / 0.6); }
+.af-decor { margin-right: 4px; font-size: 0.8rem; opacity: 0.85; }

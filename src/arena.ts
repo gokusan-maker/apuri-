@@ -77,6 +77,14 @@ export function arenaSky(f: number): [string, string] {
   if (t < 0.67) return ['#f97316', '#7c2d12']
   return ['#4c1d95', '#020617']
 }
+// 塔の階の飾り：高さに合わせて、地上の木→雲→星→宇宙（オーナーの依頼：デザインを高める）
+export function arenaDecor(f: number): string {
+  const x = atLeast0(f)
+  if (isArenaEndless(x)) return '🌌'
+  if (x >= 90) return '⭐'
+  if (x >= 30) return '☁️'
+  return '🌳'
+}
 // その階から始まる称号のアイコン（塔の階に小さく出す。1階の見習いは出さない）
 export function arenaTitleIconAt(f: number): string | null {
   const t = TITLES.find(([min]) => min === f && min > 0)
