@@ -403,6 +403,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'wolf')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* ぴんと立ったとがった耳 */}
+        <path d="M22 40 L26 10 L42 30 Z" />
+        <path d="M78 40 L74 10 L58 30 Z" />
+      </g>
+    )
   if (species === 'peacock')
     return (
       <g stroke={line} strokeWidth="1.5">
