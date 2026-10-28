@@ -18,6 +18,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   lion: { id: 'fire', name: 'ライオンハート', desc: '正解するたびに +3 ダメージ' },
   elephant: { id: 'guard', name: 'ぶあつい耳ガード', desc: '1回だけ、まちがえてもハートを守る' },
   koala: { id: 'cheer', name: 'ねむねむパワー', desc: '2問正解ごとに必殺技ゲージ +1' },
+  hedgehog: { id: 'claw', name: 'トゲトゲガード', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -60,6 +61,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   lion: { name: 'キング・オブ・ロアー', color: '#d97706' },
   elephant: { name: 'パオーン・ウォーターキャノン', color: '#0ea5e9' },
   koala: { name: 'ユーカリ・ドリームアタック', color: '#64748b' },
+  hedgehog: { name: 'ハリネズミ・ローリングニードル', color: '#b45309' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -89,6 +91,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   lion: { en: 'Hear me roar!', ja: 'ぼくのほえ声を聞け！' },
   elephant: { en: 'I never forget a word!', ja: 'ぼくは一度覚えたことばをわすれないよ！' },
   koala: { en: 'I am awake now!', ja: 'いま目がさめたよ！' },
+  hedgehog: { en: 'Small, but sharp!', ja: '小さいけど、するどいよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

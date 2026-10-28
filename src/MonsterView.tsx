@@ -388,6 +388,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'hedgehog')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2" strokeLinejoin="round">
+        {/* 頭のうしろのトゲトゲ */}
+        <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
+      </g>
+    )
   if (species === 'koala')
     return (
       <g stroke={line} strokeWidth="2.5">
@@ -484,6 +491,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'hedgehog')
+    return (
+      <g>
+        {/* とがった小さな鼻 */}
+        <circle cx="50" cy="70" r="4" fill="#1f2937" />
+        <ellipse cx="50" cy="76" rx="11" ry="6" fill="#fde7c7" opacity="0.8" />
+      </g>
+    )
   if (species === 'koala')
     return (
       <g>
