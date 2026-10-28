@@ -11718,6 +11718,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-frogs-life',
+    title: 'From Tadpole to Frog',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A frog does not look like a frog when it is born. It starts its life as a tiny egg in a pond, and then it hatches into a tadpole. A tadpole has a long tail and breathes through gills, just like a fish. It ( A ) in the water and eats small plants.",
+      "Over several weeks, the tadpole's body changes dramatically. First, back legs appear, and then front legs. At the same time, lungs develop so that it can breathe air. Finally, the tail becomes shorter and shorter until it disappears completely. This amazing change is called metamorphosis.",
+      "As an adult, the frog can live both in water and on land. It catches insects with its long, sticky tongue. Its skin must stay wet, ( B ) frogs usually live near ponds, rivers, or other damp places.",
+      "Because frogs breathe partly through their skin, they are easily harmed by polluted water. For this reason, scientists sometimes use the number of frogs in an area to judge how clean the environment is.",
+    ],
+    ja: [
+      'カエルは、生まれたときはカエルの姿をしていない。池の中の小さな卵として一生が始まり、それからふ化してオタマジャクシになる。オタマジャクシには長い尾があり、魚と同じようにえらで息をする。水の中で暮らし、小さな植物を食べる。',
+      '何週間かのあいだに、オタマジャクシの体は大きく変わる。まず後ろ足が、それから前足が出てくる。同時に、空気をすえるように肺ができる。最後に、尾はどんどん短くなり、完全に消えてしまう。このおどろくべき変化を変態という。',
+      'おとなになると、カエルは水の中でも陸の上でも暮らせる。長くてねばねばした舌で虫をつかまえる。皮ふはいつもしめっていなければならないので、カエルはふつう池や川など、しめった場所の近くに住んでいる。',
+      'カエルは一部を皮ふで息をしているので、よごれた水のえいきょうを受けやすい。このため、科学者はある地域のカエルの数を使って、環境がどれくらいきれいかを判断することがある。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['lives', 'live', 'living', 'lived in'], answer: 0, why: '主語 It（＝a tadpole、三人称単数）で、まわりの文と同じ現在形なので lives。live は主語と合わず、living だけでは文の動詞にならない。lived in では in が2つ重なってしまう。' },
+      { id: 'B', choices: ['so', 'because of', 'such as', 'in order'], answer: 0, why: 'うしろに主語と動詞（frogs usually live）が続き、「それで」と結果を表す接続詞 so。because of・such as はうしろに名詞をとり、in order はそのままでは文をつなげない。' },
+    ],
+    underline: {
+      phrase: 'dramatically',
+      choices: ['in a very big way', 'very slowly', 'only a little', 'in secret'],
+      answer: 0,
+      why: 'dramatically は「劇的に・大きく」。足が生え、尾が消えるほど体が大きく変わるという意味。',
+    },
+    order: {
+      words: ['so', 'that', 'it', 'can', 'breathe', 'air'],
+      rest: '',
+      answer: 'so that it can breathe air',
+      ja: '空気をすえるように（so that ～ can ...「～が…できるように」）',
+    },
+    tf: [
+      { statement: 'オタマジャクシは、えらで息をする。', answer: true, why: '第1段落 breathes through gills, just like a fish。' },
+      { statement: 'オタマジャクシは、まず前足が出てくる。', answer: false, why: '第2段落 First, back legs appear, and then front legs。' },
+      { statement: 'カエルは、よごれた水のえいきょうを受けにくい。', answer: false, why: '第4段落 they are easily harmed by polluted water。' },
+    ],
+    qa: [
+      { q: 'Why do scientists sometimes count frogs?', choices: ['To judge how clean the environment is.', 'To find new kinds of insects.', 'To learn how to swim faster.', 'To decide where to build ponds.'], answer: 0, why: '第4段落 scientists sometimes use the number of frogs in an area to judge how clean the environment is。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
