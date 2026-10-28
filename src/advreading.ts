@@ -11472,6 +11472,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-elephant-trunk',
+    title: 'The Amazing Elephant Trunk',
+    level: '難関大（評論）',
+    paragraphs: [
+      "An elephant's trunk is one of the most useful body parts in the animal world. It is a long nose joined with the upper lip, and it contains no bones at all. Instead, it ( A ) of tens of thousands of muscles, which allow it to move in almost any direction.",
+      "Elephants use their trunks for many things. They breathe and smell through them, of course, but they also use them like a hand. With the tip of the trunk, an elephant can pick up something as small as a peanut. With the whole trunk, it can lift a heavy log.",
+      "The trunk is also important for drinking. An elephant sucks water into its trunk and then pours it into its mouth. An adult can hold several liters of water in its trunk at one time. On hot days, elephants spray water or mud over their backs ( B ) cool down.",
+      "Elephants even use their trunks to communicate. They touch each other gently with them, a little like people hugging, to show friendship and comfort.",
+    ],
+    ja: [
+      'ゾウの鼻は、動物の世界でもとくに役に立つ体の部分の1つだ。上くちびるとつながった長い鼻で、骨はまったくない。そのかわり、何万もの筋肉でできていて、そのおかげでほとんどどの方向にも動かせる。',
+      'ゾウは鼻をいろいろなことに使う。もちろん鼻で息をしたりにおいをかいだりするが、手のようにも使う。鼻の先で、ピーナッツほど小さなものも拾い上げられる。鼻全体を使えば、重い丸太を持ち上げることもできる。',
+      '鼻は水を飲むのにも大切だ。ゾウは鼻に水をすいこみ、それから口に流しこむ。おとなのゾウは、一度に数リットルの水を鼻にためておける。暑い日には、体を冷やすために背中に水やどろをふきかける。',
+      'ゾウは、気持ちを伝えるのにも鼻を使う。人がだき合うのに少し似て、鼻でおたがいにやさしくふれ合い、友情やなぐさめを示すのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['consists', 'consist', 'consisting', 'is consisted'], answer: 0, why: '主語 it（＝the trunk、三人称単数）に続く文の動詞なので consists（consist of ～「～からできている」）。consist は主語と合わず、consisting だけでは文の動詞にならない。consist は受け身にしないので is consisted も使えない。' },
+      { id: 'B', choices: ['to', 'for', 'so', 'by'], answer: 0, why: '目的を表す不定詞「～するために」なので to ＋動詞の原形 cool down。for・by は前置詞で動詞の原形をとれず、so はうしろに主語と動詞が必要。' },
+    ],
+    underline: {
+      phrase: 'comfort',
+      choices: ['a feeling of being less sad or worried', 'a kind of food', 'a loud noise', 'a fight'],
+      answer: 0,
+      why: 'comfort は名詞で「なぐさめ・安心」。やさしくふれ合って、気持ちを楽にさせるという意味。',
+    },
+    order: {
+      words: ['something', 'as', 'small', 'as', 'a', 'peanut'],
+      rest: '',
+      answer: 'something as small as a peanut',
+      ja: 'ピーナッツほど小さなもの（as ～ as ...「…と同じくらい～」）',
+    },
+    tf: [
+      { statement: 'ゾウの鼻には骨がたくさんある。', answer: false, why: '第1段落 it contains no bones at all。' },
+      { statement: 'ゾウは鼻の先で小さなものも拾える。', answer: true, why: '第2段落 an elephant can pick up something as small as a peanut。' },
+      { statement: 'ゾウは鼻で直接水を飲みこむ。', answer: false, why: '第3段落 An elephant sucks water into its trunk and then pours it into its mouth。' },
+    ],
+    qa: [
+      { q: 'How do elephants show friendship?', choices: ['They gently touch each other with their trunks.', 'They spray water at each other.', 'They lift logs together.', 'They make loud sounds.'], answer: 0, why: '第4段落 They touch each other gently with them ... to show friendship and comfort。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
