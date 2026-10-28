@@ -12005,6 +12005,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-koalas',
+    title: 'The Sleepy Koala',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Koalas live in the forests of eastern Australia, and they spend almost their whole lives in eucalyptus trees. They are famous for being sleepy. In fact, a koala ( A ) between 18 and 22 hours a day, usually curled up in the fork of a tree.",
+      "The reason for all this sleep is their food. Koalas eat almost nothing but eucalyptus leaves. These leaves are tough, low in energy, and even contain substances that are poisonous to most animals. Koalas have special bacteria in their stomachs that help them break down the leaves, but digesting them takes a lot of time and energy.",
+      "By sleeping so much, koalas save the little energy they get from their food. They also get most of the water they need from the leaves, ( B ) they rarely have to climb down to drink.",
+      "Although koalas look like bears, they are not bears at all. They are marsupials, like kangaroos. A baby koala, called a joey, lives in its mother's pouch for about six months before it starts riding on her back.",
+    ],
+    ja: [
+      'コアラはオーストラリア東部の森に住み、ほとんど一生をユーカリの木の上ですごす。ねむってばかりいることで有名だ。実際、コアラは1日に18時間から22時間ねむり、たいていは木のまたで丸くなっている。',
+      'こんなにねむる理由は、その食べ物にある。コアラはユーカリの葉以外ほとんど何も食べない。この葉はかたく、エネルギーが少なく、ほとんどの動物にとって毒になる物質までふくんでいる。コアラの胃には葉を分解するのを助ける特別な細菌がいるが、葉を消化するには多くの時間とエネルギーがかかる。',
+      'たくさんねむることで、コアラは食べ物から得られるわずかなエネルギーを節約している。また、必要な水のほとんどを葉からとるので、水を飲みに木からおりることはめったにない。',
+      'コアラはクマに見えるが、クマのなかまではまったくない。カンガルーと同じ有袋類だ。コアラの赤ちゃんはジョーイとよばれ、母親の背中に乗りはじめるまで、約6か月間母親のふくろの中で育つ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['sleeps', 'sleep', 'sleeping', 'slept for'], answer: 0, why: '主語 a koala（単数）に続く文の動詞で、ふだんのことなので現在形 sleeps。sleep は主語と合わず、sleeping だけでは文の動詞にならない。slept for では過去のことになり、うしろの between とも合わない。' },
+      { id: 'B', choices: ['so', 'because of', 'such as', 'instead of'], answer: 0, why: 'うしろに主語と動詞（they rarely have to climb）が続き、「それで」と結果を表す接続詞 so。because of・such as・instead of は前置詞のはたらきで、うしろに文をとれない。' },
+    ],
+    underline: {
+      phrase: 'break down',
+      choices: ['change into smaller parts', 'stop working', 'cry loudly', 'build up'],
+      answer: 0,
+      why: 'break down はここでは「分解する」。かたい葉を、体に吸収できる形に分けるという意味。',
+    },
+    order: {
+      words: ['they', 'rarely', 'have', 'to', 'climb', 'down'],
+      rest: 'to drink',
+      answer: 'they rarely have to climb down',
+      ja: 'めったに木からおりなくてよい（rarely「めったに～ない」）',
+    },
+    tf: [
+      { statement: 'コアラは1日のほとんどをねむってすごす。', answer: true, why: '第1段落 a koala sleeps between 18 and 22 hours a day。' },
+      { statement: 'ユーカリの葉は、エネルギーがたっぷりある。', answer: false, why: '第2段落 These leaves are tough, low in energy。' },
+      { statement: 'コアラはクマのなかまだ。', answer: false, why: '第4段落 they are not bears at all. They are marsupials。' },
+    ],
+    qa: [
+      { q: 'Why do koalas sleep so much?', choices: ['To save the little energy they get from eucalyptus leaves.', 'Because they are afraid of other animals.', 'Because it is always dark in the forest.', 'To keep their babies warm.'], answer: 0, why: '第3段落 By sleeping so much, koalas save the little energy they get from their food。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
