@@ -11759,6 +11759,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-squirrels',
+    title: 'Squirrels and Their Hidden Food',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In autumn, squirrels are very busy. They collect nuts and seeds and hide them in many different places to eat during the winter, when food is hard to find. A single squirrel may hide thousands of nuts in one season, burying each one in a separate hole ( A ) the ground.",
+      "How can a squirrel find so many hidden nuts? Scientists have found that squirrels use their excellent memory to remember where many of them are. They also use their strong sense of smell to find nuts buried under snow.",
+      "Interestingly, squirrels sometimes pretend to hide a nut when they think another animal is watching. They dig a hole and cover it, but they actually keep the nut in their mouth. This trick ( B ) it harder for thieves to steal their food.",
+      "Not every nut is found again, however. The ones that squirrels forget can grow into new trees in spring. In this way, these small animals help forests to spread, even without meaning to.",
+    ],
+    ja: [
+      '秋になると、リスはとてもいそがしい。食べ物が見つけにくい冬に食べるため、木の実や種を集め、たくさんのちがう場所にかくすのだ。1ぴきのリスが、1つの季節に何千個もの木の実をかくすこともあり、1つずつ地面の別々の穴にうめていく。',
+      'リスはどうやって、そんなにたくさんかくした木の実を見つけられるのだろうか。科学者たちは、リスがすぐれた記憶力を使って、その多くの場所を覚えていることを発見した。また、雪の下にうめた木の実を見つけるのに、するどい鼻も使う。',
+      'おもしろいことに、リスはほかの動物に見られていると思うと、木の実をかくすふりをすることがある。穴をほってうめるのだが、実は木の実は口の中に入れたままなのだ。この作戦のおかげで、どろぼうは食べ物をぬすみにくくなる。',
+      'しかし、すべての木の実がまた見つかるわけではない。リスがわすれた木の実は、春に新しい木に育つことがある。このようにして、この小さな動物は、そのつもりがなくても森が広がるのを助けているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['in', 'into of', 'inside of in', 'ins'], answer: 0, why: 'a hole in the ground「地面の穴」。場所を表す前置詞 in。into of・inside of in・ins という形はない。' },
+      { id: 'B', choices: ['makes', 'make', 'making', 'made of'], answer: 0, why: '主語 This trick（単数）に続く文の動詞なので makes（make it harder for ～ to ...「～が…するのをむずかしくする」）。make は単数の主語と合わず、making だけでは文の動詞にならず、made of では it が目的語にならない。' },
+    ],
+    underline: {
+      phrase: 'pretend',
+      choices: ['act as if something is true when it is not', 'forget something', 'find something by smell', 'eat very quickly'],
+      answer: 0,
+      why: 'pretend to ～ は「～するふりをする」。本当はかくしていないのに、かくしているように見せるという意味。',
+    },
+    order: {
+      words: ['they', 'actually', 'keep', 'the', 'nut', 'in', 'their', 'mouth'],
+      rest: '',
+      answer: 'they actually keep the nut in their mouth',
+      ja: '実は木の実を口の中に入れたままにしている（keep ～ in ...「～を…に入れておく」）',
+    },
+    tf: [
+      { statement: 'リスは、かくした木の実をすべて覚えている。', answer: false, why: '第4段落 Not every nut is found again。' },
+      { statement: 'リスは、雪の下の木の実を鼻で見つけることもある。', answer: true, why: '第2段落 They also use their strong sense of smell to find nuts buried under snow。' },
+      { statement: 'リスがわすれた木の実が、新しい木になることがある。', answer: true, why: '第4段落 The ones that squirrels forget can grow into new trees in spring。' },
+    ],
+    qa: [
+      { q: 'Why do squirrels sometimes pretend to hide a nut?', choices: ['To make it harder for other animals to steal their food.', 'To practice digging.', 'To keep their mouths warm.', 'To show other squirrels where food is.'], answer: 0, why: '第3段落 This trick makes it harder for thieves to steal their food。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
