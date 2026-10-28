@@ -1430,3 +1430,24 @@ it('闘技場：選択肢は上から順にふわっと並ぶ（CSS。正解・�
   expect(css).toMatch(/\.arena \.choices \.choice:not\(\.correct\):not\(\.wrong\), \.bfloor \.choices \.choice:not\(\.correct\):not\(\.wrong\) \{ animation: choice-in/) // ボス城の階も同じ
   expect(css).toMatch(/\.arena \.choices \.choice:nth-child\(4\), \.bfloor \.choices \.choice:nth-child\(4\) \{ animation-delay/)
 })
+
+it('闘技場の結果：ランクSのときは王冠がきらっと光る（Aのときは出ない）', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  const { unmount } = render(<Arena start={5} onExit={() => {}} />)
+  for (let k = 0; k < 5; k++) {
+    arenaPick(true)
+    if (k < 4) fireEvent.click(screen.getByText(/^次へ/))
+  }
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByLabelText('ランク S').querySelector('.rank-crown')!.textContent).toBe('👑')
+  unmount()
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  for (let k = 0; k < 5; k++) {
+    arenaPick(k > 0)
+    if (k < 4) fireEvent.click(screen.getByText(/^次へ/))
+  }
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByLabelText('ランク A').querySelector('.rank-crown')).toBeNull()
+})

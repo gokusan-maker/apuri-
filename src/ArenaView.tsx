@@ -160,6 +160,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         </p>
         {arenaRank(right, count) && (
           <p className={`bfloor-rank rank-${arenaRank(right, count)}`} aria-label={`ランク ${arenaRank(right, count)}`}>
+            {/* ボス城と同じく、ランクSだけ王冠がきらっと光る */}
+            {arenaRank(right, count) === 'S' && (
+              <span className="rank-crown" aria-hidden="true">
+                👑
+              </span>
+            )}
             {arenaRank(right, count)}
           </p>
         )}
