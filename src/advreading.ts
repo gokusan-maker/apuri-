@@ -12046,6 +12046,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-new-cafe',
+    title: 'Notice: A New Café Opens in the Lobby',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all workers in the Harbor Point Building: We are happy to announce that a new café, Bean & Leaf, will open in the main lobby on Monday, September 1. The café will be open from 7:30 A.M. to 6:00 P.M. on weekdays and will be ( A ) on weekends.",
+      "Bean & Leaf will serve coffee, tea, fresh juice, sandwiches, and salads. All of the vegetables come from farms in the local area, and there will be several dishes for people who do not eat meat. Customers can also order online and pick up their food without waiting in line.",
+      "To celebrate the opening, every customer will receive a free cookie with any drink during the first week. In addition, building workers who show their ID cards will get a 10 percent discount every day.",
+      "Because the café will use part of the lobby, the seating area near the main entrance will be moved to the second floor. We are sorry for any trouble this may cause, and we hope you ( B ) the new café. Please contact the building office if you have any questions.",
+    ],
+    ja: [
+      'ハーバーポイント・ビルで働くみなさまへ：9月1日（月）に、メインロビーに新しいカフェ「ビーン＆リーフ」が開店することをお知らせします。カフェは平日の午前7時30分から午後6時まで営業し、週末は休みです。',
+      'ビーン＆リーフでは、コーヒー、紅茶、しぼりたてのジュース、サンドイッチ、サラダを出します。野菜はすべて地元の農家から仕入れていて、肉を食べない人のための料理もいくつかあります。オンラインで注文して、列にならばずに受け取ることもできます。',
+      '開店を記念して、最初の1週間は、飲み物を注文したお客さま全員に無料のクッキーをさしあげます。また、社員証を見せたビルで働く方は、毎日10パーセント引きになります。',
+      'カフェがロビーの一部を使うため、正面入口近くの休けいスペースは2階にうつります。ご不便をおかけするかもしれませんが、新しいカフェを楽しんでいただければと思います。ご質問があれば、ビル管理室にご連絡ください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['closed', 'close', 'closing', 'closes'], answer: 0, why: 'will be ＋形容詞・過去分詞「～の状態になる」。will be closed「休みになる」。close・closes は be のあとに置けず、closing では「閉まりかけている」となり意味も形も合わない。' },
+      { id: 'B', choices: ['enjoy', 'enjoying', 'to enjoy', 'enjoyment'], answer: 0, why: 'hope (that) ＋主語＋動詞。主語 you に続く文の動詞なので enjoy。enjoying・to enjoy だけでは文の動詞にならず、enjoyment は名詞。' },
+    ],
+    underline: {
+      phrase: 'celebrate',
+      choices: ['do something special for a happy event', 'feel sorry about', 'close for a short time', 'move to another floor'],
+      answer: 0,
+      why: 'celebrate は「祝う」。開店というおめでたいことを記念して、特別なサービスをするという意味。',
+    },
+    order: {
+      words: ['pick', 'up', 'their', 'food', 'without', 'waiting'],
+      rest: 'in line',
+      answer: 'pick up their food without waiting',
+      ja: '列にならばずに食べ物を受け取る（without ～ing「～せずに」）',
+    },
+    tf: [
+      { statement: 'カフェは週末も営業する。', answer: false, why: '第1段落 will be closed on weekends。' },
+      { statement: 'カフェの野菜は、地元の農家から来ている。', answer: true, why: '第2段落 All of the vegetables come from farms in the local area。' },
+      { statement: '休けいスペースは、3階にうつる。', answer: false, why: '第4段落 will be moved to the second floor。' },
+    ],
+    qa: [
+      { q: 'What will building workers get if they show their ID cards?', choices: ['A 10 percent discount every day.', 'A free lunch once a week.', 'A free cookie every day.', 'A parking space.'], answer: 0, why: '第3段落 building workers who show their ID cards will get a 10 percent discount every day。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
