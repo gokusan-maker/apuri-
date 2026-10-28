@@ -256,7 +256,7 @@ function Markings({ form, line }: { form: Form; line: string }) {
 }
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
-const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel', 'panda', 'lion']
+const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel', 'panda', 'lion', 'elephant']
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
   if (species === 'owl')
     return (
@@ -270,6 +270,7 @@ function SpeciesTail({ species, fill, line }: { species: string; fill: string; l
   if (species === 'hamster') return <circle cx="80" cy="82" r="4" fill={fill} stroke={line} strokeWidth="2" />
   if (species === 'sheep') return <circle cx="82" cy="80" r="6" fill="#fff" stroke={line} strokeWidth="2" />
   if (species === 'panda') return <circle cx="80" cy="84" r="4" fill="#1f2937" />
+  if (species === 'elephant') return <path d="M78 82 Q88 84 88 92" fill="none" stroke={line} strokeWidth="2.5" strokeLinecap="round" />
   if (species === 'lion')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinecap="round">
@@ -387,6 +388,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'elephant')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 大きくひらいた耳 */}
+        <path d="M24 34 Q2 30 4 56 Q8 72 24 64 Z" />
+        <path d="M76 34 Q98 30 96 56 Q92 72 76 64 Z" />
+        <path d="M20 42 Q10 44 12 56 Q16 62 22 58 Z M80 42 Q90 44 88 56 Q84 62 78 58 Z" fill="#fbcfe8" stroke="none" opacity="0.7" />
+      </g>
+    )
   if (species === 'lion')
     return (
       <g fill={fill} stroke={line} strokeWidth="2.5">
@@ -464,6 +474,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'elephant')
+    return (
+      <g fill="none" stroke="#4b5563" strokeLinecap="round">
+        {/* まん中から下にのびる、くるんとした鼻 */}
+        <path d="M50 62 Q52 78 46 86 Q42 90 46 92" strokeWidth="9" />
+        <path d="M50 62 Q52 78 46 86 Q42 90 46 92" strokeWidth="5" stroke="#a8b3c4" />
+      </g>
+    )
   if (species === 'lion')
     return (
       <g>
