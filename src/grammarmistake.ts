@@ -119,7 +119,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-onphone': { wrong: 'I saw the singer in TV last night.', right: 'I saw the singer on TV last night.', why: 'on TV「テレビで」。テレビ・ラジオ・電話などの「メディアで」は on を使う。' },
   'prep-idiom-withpleasure': { wrong: 'She gave her speech with confident.', right: 'She gave her speech with confidence.', why: 'with confidence「自信をもって」。with のあとは名詞 confidence（confident は形容詞）。' },
   'prep-idiom-pairs': { wrong: 'Please practice the dialogue in pair.', right: 'Please practice the dialogue in pairs.', why: 'in pairs「ふたり一組で」。pairs と複数形にする（in pair とは言わない）。' },
-  'prep-idiom-incash': { wrong: 'Can I pay by cash?', right: 'Can I pay in cash?', why: '「現金で払う」は pay in cash（カードなら by card）。cash には in を使う。' },
+  'prep-idiom-incash': { wrong: 'Can I pay in card?', right: 'Can I pay by card?', why: '「カードで払う」は pay by card。現金なら pay in cash と in を使う。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },

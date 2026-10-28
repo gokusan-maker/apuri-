@@ -12661,6 +12661,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-monalisa',
+    title: 'The Day the Mona Lisa Disappeared',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Today the Mona Lisa is one of the most famous paintings in the world. But about a hundred years ago, it was not so special to most people. Then, one morning in 1911, it suddenly disappeared from the Louvre Museum in Paris.",
+      "At first, nobody noticed that it was gone. The guards thought it had been taken away to be photographed. When they finally realized the truth, the news spread all over the world. Crowds even came to the museum to look at the empty space ( A ) the painting had hung.",
+      "More than two years later, the thief was caught in Italy. He was a man ( B ) had once worked at the museum. He had simply hidden the painting under his clothes and walked out.",
+      "When the Mona Lisa came back, more people than ever wanted to see it. In a strange way, losing the painting made it famous.",
+    ],
+    ja: [
+      '今日、モナ・リザは世界で最も有名な絵の1つだ。しかし100年ほど前、たいていの人にとってそれほど特別なものではなかった。そして1911年のある朝、パリのルーブル美術館から突然消えてしまった。',
+      '最初は、だれも絵がなくなったことに気づかなかった。警備員たちは、写真をとるために運び出されたのだと思っていた。ついに本当のことがわかると、そのニュースは世界中に広まった。絵がかかっていた何もない場所を見るために、美術館に人が大勢おしかけることさえあった。',
+      '2年以上たって、どろぼうはイタリアでつかまった。彼は、かつてその美術館で働いていた男だった。彼はただ絵を服の下にかくして、歩いて出ていったのだった。',
+      'モナ・リザがもどってくると、これまで以上に多くの人がそれを見たがった。ふしぎなことに、絵をなくしたことが、その絵を有名にしたのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 the empty space（場所）で、うしろに完全な文（the painting had hung）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 a man（人）で、うしろの had once worked の主語が欠けているので関係代名詞 who。which はもの、whose はうしろに名詞が必要、what は先行詞をとらない。' },
+    ],
+    underline: {
+      phrase: 'realized the truth',
+      choices: ['understood what had really happened', 'told a lie', 'forgot the painting', 'painted a new picture'],
+      answer: 0,
+      why: 'realize は「（はっきり）気づく・理解する」。本当に起きたことがわかった、という意味。',
+    },
+    order: {
+      words: ['more', 'people', 'than', 'ever', 'wanted', 'to', 'see', 'it'],
+      rest: '',
+      answer: 'more people than ever wanted to see it',
+      ja: 'これまで以上に多くの人がそれを見たがった（than ever「これまでよりも」）',
+    },
+    tf: [
+      { statement: '絵がなくなってすぐに、警備員はぬすまれたと気づいた。', answer: false, why: '第2段落 At first, nobody noticed ... The guards thought it had been taken away to be photographed。' },
+      { statement: 'どろぼうは、以前その美術館で働いていた。', answer: true, why: '第3段落 He was a man who had once worked at the museum。' },
+      { statement: '絵がもどると、前よりも多くの人が見たがった。', answer: true, why: '第4段落 more people than ever wanted to see it。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what made the Mona Lisa famous?', choices: ['The fact that it was stolen.', 'A new frame.', 'A low price.', 'A television program.'], answer: 0, why: '第4段落 losing the painting made it famous。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
