@@ -256,7 +256,7 @@ function Markings({ form, line }: { form: Form; line: string }) {
 }
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
-const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel']
+const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep', 'squirrel', 'panda']
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
   if (species === 'owl')
     return (
@@ -269,6 +269,7 @@ function SpeciesTail({ species, fill, line }: { species: string; fill: string; l
   if (species === 'rabbit') return <circle cx="82" cy="80" r="7" fill="#fff" stroke={line} strokeWidth="2" />
   if (species === 'hamster') return <circle cx="80" cy="82" r="4" fill={fill} stroke={line} strokeWidth="2" />
   if (species === 'sheep') return <circle cx="82" cy="80" r="6" fill="#fff" stroke={line} strokeWidth="2" />
+  if (species === 'panda') return <circle cx="80" cy="84" r="4" fill="#1f2937" />
   if (species === 'squirrel')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -373,6 +374,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'panda')
+    return (
+      <g fill="#1f2937" stroke="#1f2937" strokeWidth="2">
+        {/* 黒くてまるい耳 */}
+        <circle cx="26" cy="28" r="10" />
+        <circle cx="74" cy="28" r="10" />
+      </g>
+    )
   if (species === 'squirrel')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -435,6 +444,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'panda')
+    return (
+      <g fill="#1f2937" opacity="0.85">
+        {/* 目のまわりの黒いもよう */}
+        <ellipse cx="36" cy="54" rx="9" ry="7" transform="rotate(-20 36 54)" />
+        <ellipse cx="64" cy="54" rx="9" ry="7" transform="rotate(20 64 54)" />
+      </g>
+    )
   if (species === 'squirrel')
     return (
       <g>

@@ -14,6 +14,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   hamster: { id: 'cheer', name: 'ほっぺため', desc: '2問正解ごとに必殺技ゲージ +1' },
   sheep: { id: 'guard', name: 'もこもこクッション', desc: '1回だけ、まちがえてもハートを守る' },
   squirrel: { id: 'foxfire', name: 'どんぐりストック', desc: '3問正解ごとに +5 ダメージ' },
+  panda: { id: 'revive', name: 'のんびり根性', desc: '1回だけ、ハートが0になってもハート1でふんばる' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -52,6 +53,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   hamster: { name: 'ひまわりのたね乱れうち', color: '#f59e0b' },
   sheep: { name: 'もこもこウールストーム', color: '#94a3b8' },
   squirrel: { name: 'どんぐりマシンガン', color: '#b45309' },
+  panda: { name: 'ササの葉トルネード', color: '#15803d' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -77,6 +79,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   hamster: { en: 'Small but full of energy!', ja: '小さくても元気いっぱい！' },
   sheep: { en: 'Soft wool, strong heart!', ja: 'やわらかい毛でも、心は強いよ！' },
   squirrel: { en: 'I saved my best moves for you!', ja: 'とっておきのわざを見せてあげる！' },
+  panda: { en: 'Take it easy, I am strong!', ja: 'のんびりでも、ぼくは強いよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

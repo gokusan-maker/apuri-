@@ -15,6 +15,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   hamster: { dir: 'en-ja', label: '単語', icon: '🔤' },
   sheep: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   squirrel: { dir: 'order', label: '並べかえ', icon: '🔀' },
+  panda: { dir: 'gmix', label: '文法', icon: '📐' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
