@@ -71,10 +71,10 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  const want = { mochi: 180, fox: 40, penguin: 40, rabbit: 40, cat: 40, dragon: 60, owl: 40, turtle: 40, hamster: 40, sheep: 40, squirrel: 40, panda: 40, lion: 40, elephant: 40, koala: 40, hedgehog: 40, pelican: 40, seal: 40, flamingo: 40, otter: 40, octopus: 40 }
+  const want = { mochi: 180, fox: 30, penguin: 30, rabbit: 40, cat: 40, dragon: 40, owl: 40, turtle: 40, hamster: 40, sheep: 40, squirrel: 40, panda: 40, lion: 40, elephant: 40, koala: 40, hedgehog: 40, pelican: 40, seal: 40, flamingo: 40, otter: 40, bear: 40, octopus: 40 }
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.37)!
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.34)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
@@ -95,13 +95,13 @@ it('天井：スーパーレア以上が出ないまま20回目はきんいろ�
   expect(r2.wallet.pity).toBe(0)
 })
 
-it('週末はドラコが出やすい（6%→16%、そのぶんモチが減る）', async () => {
+it('週末はドラコが出やすい（4%→14%、そのぶんモチが減る）', async () => {
   const { rollSpecies, SPECIES, speciesRate } = await import('./monster')
   const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, true), 0)
   expect(total).toBeCloseTo(1)
   let dragons = 0
   for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
-  expect(Math.abs(dragons - 160)).toBeLessThanOrEqual(1) // 小数の足し算の誤差で、さかいめの1つがずれることがある
+  expect(Math.abs(dragons - 140)).toBeLessThanOrEqual(1) // 小数の足し算の誤差で、さかいめの1つがずれることがある
 })
 
 it('最近のガチャの結果は新しい順に10回まで残る', async () => {
@@ -295,4 +295,9 @@ it('制覇した城が多いほどレアが出やすい（ふつうの範囲だ�
   expect(luckyRoll(0.58, 5)).toBeCloseTo(0.63) // ふつう → レア
   expect(luckyRoll(0.3, 0)).toBe(0.3)
   expect(luckyRoll(0.95, 5)).toBe(0.95) // スーパーレアの範囲は動かさない
+})
+
+it('キャラクターごとにタマゴの名前はちがう（同じ名前のタマゴはない）', async () => {
+  const { SPECIES } = await import('./monster')
+  expect(new Set(SPECIES.map((sp) => sp.egg)).size).toBe(SPECIES.length)
 })

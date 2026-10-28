@@ -289,11 +289,11 @@ export type Species = {
 // ガチャで出る割合（合計1）。週末のドラコ2倍・ピックアップの上乗せはモチの分からまわすので、モチは0.18以上にしておく
 export const SPECIES: Species[] = [
   { id: 'mochi', name: 'モチ', egg: 'ふしぎなタマゴ', token: 'モチ', bigToken: 'モチ', color: '', line: '', rate: 0.18, desc: 'ぷにぷにのなかよしモンスター。カードで単語をコツコツ覚えるのが好き。' },
-  { id: 'fox', name: 'コンコン', egg: 'こがねのタマゴ', token: 'コン', bigToken: 'コンコ', color: '#fdba74', line: '#c2410c', rate: 0.04, desc: 'ふさふさしっぽのかしこいキツネ。文法のきまりを見ぬくのが得意。' },
-  { id: 'penguin', name: 'ペンペン', egg: 'こおりのタマゴ', token: 'ペン', bigToken: 'ペンギ', color: '#93c5fd', line: '#1e3a8a', rate: 0.04, desc: 'よちよち歩きのペンギン。ばらばらの単語をきれいに並べるのが好き。' },
+  { id: 'fox', name: 'コンコン', egg: 'こがねのタマゴ', token: 'コン', bigToken: 'コンコ', color: '#fdba74', line: '#c2410c', rate: 0.03, desc: 'ふさふさしっぽのかしこいキツネ。文法のきまりを見ぬくのが得意。' },
+  { id: 'penguin', name: 'ペンペン', egg: 'こおりのタマゴ', token: 'ペン', bigToken: 'ペンギ', color: '#93c5fd', line: '#1e3a8a', rate: 0.03, desc: 'よちよち歩きのペンギン。ばらばらの単語をきれいに並べるのが好き。' },
   { id: 'rabbit', name: 'ウサピョン', egg: 'つきのタマゴ', token: 'ピョン', bigToken: 'ピョンタ', color: '#fbcfe8', line: '#9d174d', rate: 0.04, desc: '長い耳のウサギ。どんな小さな英語の音も聞きのがさない。' },
   { id: 'cat', name: 'ニャンタ', egg: 'しましまのタマゴ', token: 'ニャン', bigToken: 'ニャンタ', color: '#cbd5e1', line: '#475569', rate: 0.04, desc: '気まぐれなネコ。日本語を英語に言いかえるのが得意。' },
-  { id: 'dragon', name: 'ドラコ', egg: 'ほのおのタマゴ', token: 'ドラ', bigToken: 'ドラゴ', color: '#fca5a5', line: '#b91c1c', rate: 0.06, desc: 'めったに出会えない小さなドラゴン。育つと英語で話しはじめ、英文の意味を読みとくのが得意。' },
+  { id: 'dragon', name: 'ドラコ', egg: 'ほのおのタマゴ', token: 'ドラ', bigToken: 'ドラゴ', color: '#fca5a5', line: '#b91c1c', rate: 0.04, desc: 'めったに出会えない小さなドラゴン。育つと英語で話しはじめ、英文の意味を読みとくのが得意。' },
   { id: 'owl', name: 'ホーホー', egg: 'もりのタマゴ', token: 'ホー', bigToken: 'ホーホ', color: '#d6b88f', line: '#78350f', rate: 0.04, desc: '大きな目のものしりフクロウ。長い英文も夜おそくまで読みつづけられる。' },
   { id: 'turtle', name: 'カメスケ', egg: 'こうらのタマゴ', token: 'カメ', bigToken: 'カメスケ', color: '#5eead4', line: '#0f766e', rate: 0.04, desc: 'かたいこうらのカメ。ゆっくりでも毎日コツコツ単語を覚える。' },
   { id: 'hamster', name: 'ハムリン', egg: 'ひまわりのタマゴ', token: 'ハム', bigToken: 'ハムリ', color: '#fcd34d', line: '#b45309', rate: 0.04, desc: 'ほっぺに何でもつめこむハムスター。たくさんの単語をほっぺにためて覚える。' },
@@ -304,10 +304,11 @@ export const SPECIES: Species[] = [
   { id: 'elephant', name: 'パオン', egg: 'みずうみのタマゴ', token: 'パオ', bigToken: 'パオン', color: '#a8b3c4', line: '#4b5563', rate: 0.04, desc: '大きな耳のゾウ。一度覚えた単語はぜったいにわすれない。' },
   { id: 'koala', name: 'ユーカ', egg: 'ユーカリのタマゴ', token: 'ユー', bigToken: 'ユーカ', color: '#9ca3af', line: '#374151', rate: 0.04, desc: 'ふわふわの耳のコアラ。のんびりねむりながらも、聞いた英語はちゃんと覚えている。' },
   { id: 'hedgehog', name: 'ハリポン', egg: 'トゲトゲのタマゴ', token: 'ハリ', bigToken: 'ハリポン', color: '#b45309', line: '#451a03', rate: 0.04, desc: '背中がトゲトゲのハリネズミ。こわがりだけど、まちがえた単語にはトゲのように何度もささって覚える。' },
-  { id: 'pelican', name: 'ペリッチ', egg: 'みずうみのタマゴ', token: 'ペリ', bigToken: 'ペリッチ', color: '#f8fafc', line: '#475569', rate: 0.04, desc: '大きなくちばしのペリカン。のどのふくろに、聞いた英単語をたっぷりためこむ。' },
-  { id: 'seal', name: 'アザラン', egg: 'こおりのタマゴ', token: 'アザ', bigToken: 'アザラン', color: '#cbd5e1', line: '#334155', rate: 0.04, desc: 'まるまるとしたアザラシ。氷の上でごろごろしながら、英語のリズムに合わせてヒレをたたく。' },
+  { id: 'pelican', name: 'ペリッチ', egg: 'みなとのタマゴ', token: 'ペリ', bigToken: 'ペリッチ', color: '#f8fafc', line: '#475569', rate: 0.04, desc: '大きなくちばしのペリカン。のどのふくろに、聞いた英単語をたっぷりためこむ。' },
+  { id: 'seal', name: 'アザラン', egg: 'りゅうひょうのタマゴ', token: 'アザ', bigToken: 'アザラン', color: '#cbd5e1', line: '#334155', rate: 0.04, desc: 'まるまるとしたアザラシ。氷の上でごろごろしながら、英語のリズムに合わせてヒレをたたく。' },
   { id: 'flamingo', name: 'フラミン', egg: 'さくら色のタマゴ', token: 'フラ', bigToken: 'フラミン', color: '#f9a8d4', line: '#9d174d', rate: 0.04, desc: 'ピンクのフラミンゴ。かた足で立ったまま、じっと英語を聞いて集中する。' },
   { id: 'otter', name: 'カワッチ', egg: 'かわらのタマゴ', token: 'カワ', bigToken: 'カワッチ', color: '#a16207', line: '#422006', rate: 0.04, desc: '川であそぶカワウソ。お気に入りの小石をおなかにのせて、覚えた単語をかぞえている。' },
+  { id: 'bear', name: 'ベアボン', egg: 'はちみつのタマゴ', token: 'ベア', bigToken: 'ベアボン', color: '#92400e', line: '#3b1d06', rate: 0.04, desc: '森にすむ子グマ。はちみつが大好きで、あまい単語ほどよく覚える。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.04, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 

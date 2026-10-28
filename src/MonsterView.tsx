@@ -395,6 +395,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'bear')
+    return (
+      <g stroke={line} strokeWidth="2.5">
+        {/* 小さなまるい耳 */}
+        <circle cx="26" cy="26" r="9" fill={fill} />
+        <circle cx="74" cy="26" r="9" fill={fill} />
+        <circle cx="26" cy="26" r="4.5" fill="#fcd34d" stroke="none" />
+        <circle cx="74" cy="26" r="4.5" fill="#fcd34d" stroke="none" />
+      </g>
+    )
   if (species === 'koala')
     return (
       <g stroke={line} strokeWidth="2.5">

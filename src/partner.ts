@@ -23,6 +23,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   seal: { id: 'cheer', name: 'ヒレぱちぱち', desc: '2問正解ごとに必殺技ゲージ +1' },
   flamingo: { id: 'cheer', name: 'かた足バランス', desc: '2問正解ごとに必殺技ゲージ +1' },
   otter: { id: 'cheer', name: 'こいしコロコロ', desc: '2問正解ごとに必殺技ゲージ +1' },
+  bear: { id: 'claw', name: 'くまのつめ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -70,6 +71,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   seal: { name: 'アザラシ・アイススライド', color: '#7dd3fc' },
   flamingo: { name: 'フラミンゴ・ピンクダンス', color: '#ec4899' },
   otter: { name: 'カワウソ・リバーウェーブ', color: '#0ea5e9' },
+  bear: { name: 'クマ・ハニーハグ', color: '#d97706' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -104,6 +106,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   seal: { en: 'Clap, clap! Nice job!', ja: 'ぱちぱち！ よくできたね！' },
   flamingo: { en: 'I can stand on one leg all day!', ja: 'かた足で一日じゅう立っていられるよ！' },
   otter: { en: 'Let’s float and learn together!', ja: 'ぷかぷかうかんで、いっしょに覚えよう！' },
+  bear: { en: 'Honey tastes better after studying!', ja: '勉強のあとのはちみつは最高！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
