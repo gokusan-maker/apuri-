@@ -7769,7 +7769,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'Please put your bags at the ___ of the classroom.', choices: ['back', 'backs', 'backed'], answer: 0, why: 'at the back of ～「～のうしろのほうに」。the のあとは単数の back。' },
       { sentence: 'The cat is sleeping in the ___ of the sofa.', choices: ['corner', 'corners', 'cornered'], answer: 0, why: 'in the corner of ～「～のすみに」。the のあとは単数の corner。' },
-      { sentence: 'We sat at the back ___ the hall.', choices: ['of', 'to', 'by'], answer: 0, why: 'at the back of ～。back のあとは of。' },
+      { sentence: 'We sat at the ___ of the hall to see the stage better.', choices: ['front', 'fronts', 'fronted'], answer: 0, why: 'at the front of ～「～の前のほうに」。the のあとは単数の front。' },
     ],
   },
   {
