@@ -12825,6 +12825,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-mushroom',
+    title: 'The Hidden World Under a Mushroom',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When you find a mushroom in the forest, you are only looking at a small part of a much larger living thing. The part ( A ) we see above the ground is like the fruit of a tree. The main body is a huge net of thin white threads hidden in the soil.",
+      "Mushrooms belong to a group called fungi, and they are not plants. They cannot make their own food from sunlight. Instead, many of them get food by breaking down dead leaves and fallen trees. Without them, the forest floor would soon be buried under old leaves.",
+      "Some fungi also live together with trees. Their threads wrap around the roots and help trees ( B ) water and food from the soil. In return, the trees give the fungi sugar.",
+      "So the next time you see a mushroom, remember that it is a sign of a busy hidden world, quietly keeping the forest alive.",
+    ],
+    ja: [
+      '森でキノコを見つけたとき、あなたが見ているのは、ずっと大きな生き物のほんの一部にすぎない。地面の上に見えている部分は、木の実のようなものだ。本体は、土の中にかくれた、細く白い糸の大きなあみなのだ。',
+      'キノコは菌類というなかまに入り、植物ではない。日光から自分で栄養を作ることはできない。そのかわり、多くのキノコは落ち葉やたおれた木を分解して栄養を得ている。キノコがいなければ、森の地面はすぐに古い葉にうもれてしまうだろう。',
+      '木といっしょに生きる菌類もいる。その糸は根にまきつき、木が土から水や栄養をとるのを助ける。そのお返しに、木は菌類に糖をあたえる。',
+      'だから次にキノコを見たら、それが、森を静かに生かし続けている、いそがしい見えない世界のしるしだということを思い出してほしい。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the part（もの）で、うしろの we see の目的語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['take', 'taking', 'took', 'taken'], answer: 0, why: 'help ＋もの＋動詞の原形「～が…するのを助ける」なので take。taking・took・taken はこの形に入らない。' },
+    ],
+    underline: {
+      phrase: 'In return',
+      choices: ['as a way of giving something back', 'for no reason', 'at the same time every year', 'by mistake'],
+      answer: 0,
+      why: 'in return は「お返しに」。助けてもらったお礼に、木が糖をあたえるという意味。',
+    },
+    order: {
+      words: ['would', 'soon', 'be', 'buried', 'under', 'old', 'leaves'],
+      rest: '',
+      answer: 'would soon be buried under old leaves',
+      ja: 'すぐに古い葉にうもれてしまうだろう（would ＋ be ＋過去分詞の受け身）',
+    },
+    tf: [
+      { statement: 'キノコは植物のなかまで、日光から栄養を作る。', answer: false, why: '第2段落 they are not plants. They cannot make their own food from sunlight。' },
+      { statement: 'キノコの本体は、土の中の細い糸のあみだ。', answer: true, why: '第1段落 The main body is a huge net of thin white threads hidden in the soil。' },
+      { statement: '木は、助けてくれる菌類に糖をあたえる。', answer: true, why: '第3段落 the trees give the fungi sugar。' },
+    ],
+    qa: [
+      { q: 'How do many mushrooms get food?', choices: ['By breaking down dead leaves and fallen trees.', 'By making food from sunlight.', 'By eating insects.', 'By drinking rainwater only.'], answer: 0, why: '第2段落 many of them get food by breaking down dead leaves and fallen trees。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
