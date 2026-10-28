@@ -25,6 +25,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   const [right, setRight] = useState(0)
   const [byKind, setByKind] = useState(NO_KIND) // 種類ごとの［正解, 問題数］（結果で見せる）
   const [streak, setStreak] = useState(0)
+  const [maxJump, setMaxJump] = useState(1) // いちばん大きく一気に上がった階の数（結果で見せる）
   const [maxStreak, setMaxStreak] = useState(0) // きょういちばん長い連続正解（結果で見せる）
   const [shield, setShield] = useState(false)
   const [gotShield, setGotShield] = useState(false) // この答えで盾をもらった
@@ -84,6 +85,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       setRight(right + 1)
       setStreak(streak + 1)
       setMaxStreak(Math.max(maxStreak, streak + 1))
+      setMaxJump(Math.max(maxJump, arenaNext(lv, true, streak + 1) - lv))
       const up = arenaNext(lv, true, streak + 1)
       setTop(Math.max(top, up))
       const k = Math.floor((up - base) / CLIMB_EVERY)
@@ -180,6 +182,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             🔥 いちばん長い連続正解：{maxStreak}問{ended.newStreak ? '（🆕 最高記録！）' : `（最高 ${ended.streakBest}問）`}
           </p>
         )}
+        {maxJump >= 2 && <p className="arena-max-streak">🚀 いちばん大きなジャンプ：一気に {maxJump}階</p>}
         {guards > 0 && <p className="arena-max-streak">🛡 盾がまもった：{guards}回</p>}
         {missed.length > 0 && (
           <div className="arena-missed" aria-label="まちがえた問題">
@@ -208,6 +211,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             setRight(0)
             setStreak(0)
             setMaxStreak(0)
+            setMaxJump(1)
             setGuards(0)
             setTop(lv)
             setBase(lv)
@@ -227,6 +231,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               setRight(0)
               setStreak(0)
               setMaxStreak(0)
+            setMaxJump(1)
               setGuards(0)
               setLv(start)
               setTop(start)
