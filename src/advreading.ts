@@ -12538,6 +12538,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-instantramen',
+    title: 'The Birth of Instant Ramen',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In the 1950s, many people in Japan were busy and short of food. A businessman named Momofuku Ando wanted to make noodles that were tasty, could be kept for a long time, and were easy ( A ).",
+      "He built a small shed behind his house and worked there every day by himself. He tried many ways of drying noodles, but none of them worked well. After ( B ) for about a year, he got a hint from his wife's cooking. When she fried tempura, the hot oil pushed the water out of the food.",
+      "Ando fried his noodles in the same way. The oil dried them quickly and left tiny holes in them. Later, when hot water was poured on the noodles, it went into these holes, and the noodles became soft again in just a few minutes.",
+      "His Chicken Ramen went on sale in 1958. Today, people around the world eat billions of servings of instant noodles every year.",
+    ],
+    ja: [
+      '1950年代、日本の多くの人は忙しく、食べ物も不足していた。安藤百福という実業家は、おいしくて、長く保存でき、作るのが簡単なめんを作りたいと思った。',
+      '彼は家の裏に小さな小屋を建て、毎日ひとりでそこで研究した。めんをかわかす方法をいろいろ試したが、どれもうまくいかなかった。1年ほど試し続けたあと、彼は妻の料理からヒントを得た。妻が天ぷらをあげると、熱い油が食べ物から水分をおし出していたのだ。',
+      '安藤は、めんを同じ方法であげた。油はめんをすばやくかわかし、めんに小さな穴をたくさん残した。あとでお湯をめんに注ぐと、お湯がその穴に入り、めんはほんの数分でまたやわらかくなった。',
+      '彼の「チキンラーメン」は1958年に発売された。今日、世界中の人々が毎年何十億食ものインスタントめんを食べている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to cook', 'cooking', 'cooked', 'cook'], answer: 0, why: 'easy to ～「～しやすい」。形容詞 easy のあとは to 不定詞 to cook。cooking・cooked・cook は easy のあとにそのまま置けない。' },
+      { id: 'B', choices: ['trying', 'try', 'tried', 'to try'], answer: 0, why: '前置詞 after のあとは動名詞 trying（after ～ing「～したあとで」）。try・tried・to try は前置詞のあとに置けない。' },
+    ],
+    underline: {
+      phrase: 'short of food',
+      choices: ['did not have enough food', 'ate too much food', 'sold food to other countries', 'cooked food quickly'],
+      answer: 0,
+      why: 'be short of ～ は「～が不足している」。食べ物が十分になかったという意味。',
+    },
+    order: {
+      words: ['the', 'hot', 'oil', 'pushed', 'the', 'water', 'out'],
+      rest: 'of the food',
+      answer: 'the hot oil pushed the water out',
+      ja: '熱い油が水分をおし出した（push A out of B「AをBからおし出す」）',
+    },
+    tf: [
+      { statement: '安藤は、大きな工場で多くの人といっしょに研究した。', answer: false, why: '第2段落 He built a small shed behind his house and worked there every day by himself。' },
+      { statement: '天ぷらの作り方がヒントになった。', answer: true, why: '第2段落 he got a hint from his wife\'s cooking. When she fried tempura ...。' },
+      { statement: 'めんにできた小さな穴に、お湯が入る。', answer: true, why: '第3段落 hot water ... went into these holes。' },
+    ],
+    qa: [
+      { q: 'Why did the noodles become soft again quickly?', choices: ['Hot water went into the tiny holes made by the oil.', 'They were cut into very small pieces.', 'They were kept in a cold place.', 'They were cooked for an hour.'], answer: 0, why: '第3段落 The oil ... left tiny holes in them ... hot water ... went into these holes, and the noodles became soft again。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
