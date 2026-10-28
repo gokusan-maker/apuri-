@@ -1322,7 +1322,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             <span className="mood-meter-bar">
               <span style={{ width: `${(mood100.points / mood100.max) * 100}%` }} />
             </span>
-            {mood100.points >= mood100.max ? '💗 ごきげんMAX！ 今日はXP1.2倍' : `💗 ごきげん ${mood100.points}/${mood100.max}`}
+            {/* ごきげんが上がるたびに、ハートがぽんとはねる（key で作りなおす） */}
+            <span key={`mh${mood100.points}`} className="mood-heart">
+              💗
+            </span>
+            {mood100.points >= mood100.max ? ' ごきげんMAX！ 今日はXP1.2倍' : ` ごきげん ${mood100.points}/${mood100.max}`}
           </p>
         )}
         {friends.length > 0 && (

@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import { expect, it } from 'vitest'
 import { RoomScene } from './RoomSceneView'
 import { ROOMS } from './shop'
@@ -47,4 +47,13 @@ it('🏅に連続達成日数（2日以上）が出る', async () => {
   unmount()
   render(<Monster monster={{ xp: 0 } as never} trioDone trioStreak={1} />)
   expect(document.querySelector('[aria-label="今日の課題3つクリア"]')?.textContent).toBe('🏅')
+})
+
+it('ごきげんが上がると、メーターのハートが作りなおされてぽんとはねる', async () => {
+  const { Monster } = await import('./MonsterView')
+  const r = render(<Monster monster={{ xp: 0 } as never} mood100={{ points: 5, max: 20 }} />)
+  const before = document.querySelector('.mood-heart')!
+  expect(screen.getByLabelText('ごきげん 5 / 20').textContent).toContain('💗 ごきげん 5/20')
+  r.rerender(<Monster monster={{ xp: 0 } as never} mood100={{ points: 6, max: 20 }} />)
+  expect(document.querySelector('.mood-heart')).not.toBe(before)
 })
