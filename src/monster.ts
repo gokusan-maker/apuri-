@@ -291,10 +291,10 @@ export const SPECIES: Species[] = [
   { id: 'mochi', name: 'モチ', egg: 'ふしぎなタマゴ', token: 'モチ', bigToken: 'モチ', color: '', line: '', rate: 0.18, desc: 'ぷにぷにのなかよしモンスター。カードで単語をコツコツ覚えるのが好き。' },
   { id: 'fox', name: 'コンコン', egg: 'こがねのタマゴ', token: 'コン', bigToken: 'コンコ', color: '#fdba74', line: '#c2410c', rate: 0.02, desc: 'ふさふさしっぽのかしこいキツネ。文法のきまりを見ぬくのが得意。' },
   { id: 'penguin', name: 'ペンペン', egg: 'こおりのタマゴ', token: 'ペン', bigToken: 'ペンギ', color: '#93c5fd', line: '#1e3a8a', rate: 0.02, desc: 'よちよち歩きのペンギン。ばらばらの単語をきれいに並べるのが好き。' },
-  { id: 'rabbit', name: 'ウサピョン', egg: 'つきのタマゴ', token: 'ピョン', bigToken: 'ピョンタ', color: '#fbcfe8', line: '#9d174d', rate: 0.03, desc: '長い耳のウサギ。どんな小さな英語の音も聞きのがさない。' },
-  { id: 'cat', name: 'ニャンタ', egg: 'しましまのタマゴ', token: 'ニャン', bigToken: 'ニャンタ', color: '#cbd5e1', line: '#475569', rate: 0.03, desc: '気まぐれなネコ。日本語を英語に言いかえるのが得意。' },
+  { id: 'rabbit', name: 'ウサピョン', egg: 'つきのタマゴ', token: 'ピョン', bigToken: 'ピョンタ', color: '#fbcfe8', line: '#9d174d', rate: 0.02, desc: '長い耳のウサギ。どんな小さな英語の音も聞きのがさない。' },
+  { id: 'cat', name: 'ニャンタ', egg: 'しましまのタマゴ', token: 'ニャン', bigToken: 'ニャンタ', color: '#cbd5e1', line: '#475569', rate: 0.02, desc: '気まぐれなネコ。日本語を英語に言いかえるのが得意。' },
   { id: 'dragon', name: 'ドラコ', egg: 'ほのおのタマゴ', token: 'ドラ', bigToken: 'ドラゴ', color: '#fca5a5', line: '#b91c1c', rate: 0.03, desc: 'めったに出会えない小さなドラゴン。育つと英語で話しはじめ、英文の意味を読みとくのが得意。' },
-  { id: 'owl', name: 'ホーホー', egg: 'もりのタマゴ', token: 'ホー', bigToken: 'ホーホ', color: '#d6b88f', line: '#78350f', rate: 0.03, desc: '大きな目のものしりフクロウ。長い英文も夜おそくまで読みつづけられる。' },
+  { id: 'owl', name: 'ホーホー', egg: 'もりのタマゴ', token: 'ホー', bigToken: 'ホーホ', color: '#d6b88f', line: '#78350f', rate: 0.02, desc: '大きな目のものしりフクロウ。長い英文も夜おそくまで読みつづけられる。' },
   { id: 'turtle', name: 'カメスケ', egg: 'こうらのタマゴ', token: 'カメ', bigToken: 'カメスケ', color: '#5eead4', line: '#0f766e', rate: 0.03, desc: 'かたいこうらのカメ。ゆっくりでも毎日コツコツ単語を覚える。' },
   { id: 'hamster', name: 'ハムリン', egg: 'ひまわりのタマゴ', token: 'ハム', bigToken: 'ハムリ', color: '#fcd34d', line: '#b45309', rate: 0.03, desc: 'ほっぺに何でもつめこむハムスター。たくさんの単語をほっぺにためて覚える。' },
   { id: 'sheep', name: 'モコリ', egg: 'わたぐものタマゴ', token: 'モコ', bigToken: 'モコリ', color: '#f1f5f9', line: '#64748b', rate: 0.03, desc: 'もこもこの毛のヒツジ。ねむくなるまで単語を数えるのが日課。' },
@@ -316,6 +316,7 @@ export const SPECIES: Species[] = [
   { id: 'alpaca', name: 'モフパカ', egg: 'アンデスのタマゴ', token: 'モフ', bigToken: 'モフパカ', color: '#fef3c7', line: '#78350f', rate: 0.03, desc: 'もこもこの毛のアルパカ。ふわふわの毛の中に、覚えた単語をいっぱいしまっている。' },
   { id: 'mole', name: 'モグッチ', egg: 'つちの中のタマゴ', token: 'モグ', bigToken: 'モグッチ', color: '#57534e', line: '#1c1917', rate: 0.03, desc: '土の中をほり進むモグラ。目はちいさいけれど、耳と鼻で英語の音をしっかりつかまえる。' },
   { id: 'dolphin', name: 'ドルフィ', egg: 'さんごのタマゴ', token: 'ドル', bigToken: 'ドルフィ', color: '#60a5fa', line: '#1e3a8a', rate: 0.03, desc: '海をとびはねるイルカ。音で仲間と話すので、英語の発音を聞き分けるのが得意。' },
+  { id: 'hippo', name: 'カバッチ', egg: 'どろんこのタマゴ', token: 'カバ', bigToken: 'カバッチ', color: '#c4b5fd', line: '#4c1d95', rate: 0.03, desc: '大きな口のカバ。水の中でのんびりしながら、大きな口で長い文もまるごと覚える。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 

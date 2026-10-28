@@ -395,6 +395,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'hippo')
+    return (
+      <g>
+        {/* 大きな鼻づらと、ふたつの鼻の穴 */}
+        <ellipse cx="50" cy="72" rx="18" ry="11" fill="#ddd6fe" opacity="0.9" />
+        <ellipse cx="44" cy="70" rx="2.5" ry="3" fill="#4c1d95" />
+        <ellipse cx="56" cy="70" rx="2.5" ry="3" fill="#4c1d95" />
+      </g>
+    )
   if (species === 'dolphin')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
