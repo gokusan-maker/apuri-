@@ -71,7 +71,7 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  const want = { mochi: 180, fox: 50, penguin: 50, rabbit: 50, cat: 50, dragon: 60, owl: 50, turtle: 50, hamster: 40, sheep: 40, squirrel: 40, panda: 50, lion: 50, elephant: 50, koala: 50, hedgehog: 50, pelican: 40, octopus: 50 }
+  const want = { mochi: 180, fox: 50, penguin: 50, rabbit: 50, cat: 50, dragon: 60, owl: 50, turtle: 50, hamster: 40, sheep: 40, squirrel: 40, panda: 40, lion: 40, elephant: 40, koala: 40, hedgehog: 50, pelican: 40, seal: 40, octopus: 50 }
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
   const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.42)!
