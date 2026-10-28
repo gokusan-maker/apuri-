@@ -12128,6 +12128,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-honeyguide',
+    title: 'A Bird That Works with People',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In parts of Africa lives a small bird called the honeyguide. It loves to eat beeswax, the material bees use to build their nests. However, the bird cannot ( A ) open the nests by itself, because they are hidden inside trees and guarded by angry bees.",
+      "So the honeyguide asks people for help. When it finds a nest, it flies to a group of honey hunters and makes a loud call. Then it leads them from tree to tree until they reach the nest.",
+      "The hunters also call the bird. In one area, they use a special sound ( B ) by their parents. Scientists found that honeyguides answer this sound much more often than other sounds, so the birds seem to understand it.",
+      "After the hunters take the honey, they leave the wax behind for the bird. Both sides gain something: the people get sweet food, and the bird gets its meal. This partnership shows that wild animals and humans can learn to work together.",
+    ],
+    ja: [
+      'アフリカの一部には、ミツオシエという小さな鳥がすんでいる。この鳥は、ハチが巣を作るのに使う材料であるミツロウを食べるのが大好きだ。しかし、巣は木の中にかくれていて、おこったハチに守られているので、自分で巣をこわして開けることはできない。',
+      'そこでミツオシエは人間に助けを求める。巣を見つけると、はちみつをとる人たちのところへ飛んでいき、大きな声で鳴く。それから、巣に着くまで木から木へと人々を案内するのだ。',
+      'はちみつをとる人たちも、鳥を呼ぶ。ある地域では、親から教わった特別な音を使う。科学者たちは、ミツオシエがほかの音よりもこの音にずっとよく反応することを発見した。だから鳥はこの音を理解しているようだ。',
+      'はちみつをとったあと、人々は鳥のためにミツロウを残していく。どちらも得をする。人間はあまい食べ物を手に入れ、鳥は食事を手に入れるのだ。この協力関係は、野生の動物と人間がいっしょに働けるようになることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['break', 'to break', 'breaking', 'broke'], answer: 0, why: '助動詞 cannot のあとは動詞の原形 break（break open「こわして開ける」）。to break・breaking・broke は助動詞のあとに置けない。' },
+      { id: 'B', choices: ['taught', 'teaching', 'teach', 'teaches'], answer: 0, why: '「親から教わった音」なので、過去分詞 taught がうしろから sound を説明する（by their parents が受け身のしるし）。teaching だと音が教えることになり、teach・teaches は動詞の形なので名詞を説明できない。' },
+    ],
+    underline: {
+      phrase: 'guarded',
+      choices: ['protected', 'eaten', 'opened', 'painted'],
+      answer: 0,
+      why: 'guard は「守る」。巣はおこったハチに守られている、という意味なので protected。',
+    },
+    order: {
+      words: ['leads', 'them', 'from', 'tree', 'to', 'tree'],
+      rest: 'until they reach the nest',
+      answer: 'leads them from tree to tree',
+      ja: '木から木へと彼らを案内する（from A to A「AからAへと」）',
+    },
+    tf: [
+      { statement: 'ミツオシエは、自分の力でハチの巣を開けられる。', answer: false, why: '第1段落 the bird cannot break open the nests by itself。' },
+      { statement: 'はちみつをとる人たちは、特別な音で鳥を呼ぶことがある。', answer: true, why: '第3段落 they use a special sound taught by their parents。' },
+      { statement: '人々は、はちみつをとったあとミツロウを鳥に残す。', answer: true, why: '第4段落 they leave the wax behind for the bird。' },
+    ],
+    qa: [
+      { q: 'What does the honeyguide get from the partnership?', choices: ['The wax left by the hunters.', 'The honey in a jar.', 'A safe place to sleep.', 'Food from the hunters’ homes.'], answer: 0, why: '第4段落 they leave the wax behind for the bird ... the bird gets its meal。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
