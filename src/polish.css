@@ -4299,3 +4299,9 @@ header .event-chips { margin: 0 0 2px; }
 }
 @keyframes zukan-flash { 0% { background-position: 100% 0; box-shadow: 0 0 0 rgb(250 204 21 / 0); } 50% { box-shadow: 0 0 14px rgb(250 204 21 / 0.9); } 100% { background-position: -100% 0; box-shadow: 0 0 0 rgb(250 204 21 / 0); } }
 @media (prefers-reduced-motion: reduce) { .zukan-no-flash { animation: none; } }
+
+/* キャラクター図鑑：まだ会っていない子のシルエットが、ゆっくりゆれる（だれだろう？） */
+.char-book-list li.locked svg { animation: locked-sway 3s ease-in-out infinite; transform-origin: 50% 90%; }
+.char-book-list li.locked:nth-child(even) svg { animation-delay: -1.5s; }
+@keyframes locked-sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+@media (prefers-reduced-motion: reduce) { .char-book-list li.locked svg { animation: none; } }

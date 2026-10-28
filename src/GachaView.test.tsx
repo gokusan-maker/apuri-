@@ -279,3 +279,8 @@ it('ガチャのタマゴは、出たキャラクターの色で光る', () => {
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect((document.querySelector('.gacha-egg.sp-glow') as HTMLElement).style.getPropertyValue('--sp-glow')).toBe(speciesOf('fox').color)
 })
+
+it('図鑑：まだ会っていないキャラのシルエットはゆっくりゆれる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.char-book-list li\.locked svg \{ animation: locked-sway/)
+})
