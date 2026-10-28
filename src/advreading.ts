@@ -13071,6 +13071,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-stickynote',
+    title: 'The Glue That Did Not Stick',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1968, a scientist at a company in the United States was trying to make a very strong glue. Instead, he made a weak one. It stuck to things, but it could be pulled off easily and used again. Nobody knew what to do with it.",
+      "Several years later, another worker at the company had a small problem. He sang in a church choir and used pieces of paper ( A ) his pages in the songbook. However, the pieces kept falling out. Then he remembered the weak glue.",
+      "He put a little of it on his paper markers. They stayed in place, and when he removed them, the book was not damaged. He realized that this was the use ( B ) the glue had been waiting for.",
+      "The company started selling small sticky notes in 1980, and they soon became popular in offices and schools all over the world. A \"failed\" glue turned out to be just right for a different job.",
+    ],
+    ja: [
+      '1968年、アメリカのある会社の科学者が、とても強い接着剤を作ろうとしていた。ところが、彼が作ったのは弱い接着剤だった。それはものにくっつくが、かんたんにはがせて、何度も使えた。だれもそれをどう使えばよいかわからなかった。',
+      '数年後、同じ会社の別の社員がちょっとした問題をかかえていた。彼は教会の聖歌隊で歌っていて、歌の本のページに印をつけるために紙切れを使っていた。しかし、紙切れはすぐに落ちてしまった。そのとき、彼はあの弱い接着剤を思い出した。',
+      '彼は紙のしおりに接着剤を少しつけた。しおりはその場にとどまり、はがしても本はいたまなかった。彼は、これこそがその接着剤が待っていた使い道だと気づいた。',
+      'その会社は1980年に小さなふせんを売りはじめ、それはまもなく世界中の会社や学校で人気になった。「失敗した」接着剤が、別の仕事にはぴったりだったとわかったのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to mark', 'marking', 'marked', 'mark'], answer: 0, why: '「ページに印をつけるために」と目的を表すので to 不定詞 to mark。marking・marked・mark では目的の意味にならない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the use（もの）で、うしろの had been waiting for の目的語（for のあと）が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'stayed in place',
+      choices: ['did not move from where they were', 'fell on the floor', 'turned into dust', 'flew away'],
+      answer: 0,
+      why: 'stay in place は「その場にとどまる」。しおりが落ちずに、はさんだ場所にあったという意味。',
+    },
+    order: {
+      words: ['could', 'be', 'pulled', 'off', 'easily'],
+      rest: 'and used again',
+      answer: 'could be pulled off easily',
+      ja: 'かんたんにはがせた（助動詞 ＋ be ＋過去分詞の受け身）',
+    },
+    tf: [
+      { statement: '科学者は、はじめから弱い接着剤を作ろうとしていた。', answer: false, why: '第1段落 was trying to make a very strong glue. Instead, he made a weak one。' },
+      { statement: '歌の本にはさんだ紙切れは、よく落ちてしまった。', answer: true, why: '第2段落 the pieces kept falling out。' },
+      { statement: 'ふせんは1980年に売りはじめられた。', answer: true, why: '第4段落 The company started selling small sticky notes in 1980。' },
+    ],
+    qa: [
+      { q: 'Why was the weak glue good for paper markers?', choices: ['They stayed in place and could be removed without damaging the book.', 'They made the book heavier.', 'They changed the color of the pages.', 'They could not be removed at all.'], answer: 0, why: '第3段落 They stayed in place, and when he removed them, the book was not damaged。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
