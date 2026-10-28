@@ -1394,3 +1394,11 @@ it('ボスの城の問題の階：ランクSのときは王冠がきらっと光
   })
   expect(screen.getByLabelText('ランク S').querySelector('.rank-crown')!.textContent).toBe('👑')
 })
+
+it('闘技場の結果：称号の札にゆっくり光が流れる（CSS。もとの金色のグラデーションも残す）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  const rule = css.match(/\.arena-result \.arena-title-badge \{[^}]*\}/)![0]
+  expect(rule).toMatch(/animation: title-sheen/)
+  expect(rule).toMatch(/#fde68a, #f59e0b/)
+})
