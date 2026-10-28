@@ -12620,6 +12620,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-spiderweb',
+    title: 'The Secrets of a Spider Web',
+    level: '難関大（評論）',
+    paragraphs: [
+      "On a cool morning, you may find a spider web shining with drops of water. It looks delicate, but spider silk is surprisingly strong. For its weight, it is said to be stronger than steel.",
+      "A web is made of more than one kind of thread. The long lines that go out from the center like the spokes of a wheel are dry. The spiral lines that go around them are covered with a sticky liquid, so insects get caught there. The spider walks only on the threads ( A ) are not sticky, so it does not get stuck in its own trap.",
+      "Making a web uses a lot of energy. Some spiders even eat their old webs ( B ) the material again when they build a new one.",
+      "Scientists are studying spider silk because it is light, strong, and can stretch. Someday it may help us make better ropes, clothes, or even medical threads for doctors.",
+    ],
+    ja: [
+      'すずしい朝、水のつぶでかがやくクモの巣を見つけることがあるかもしれない。こわれやすそうに見えるが、クモの糸はおどろくほど強い。重さのわりには、鉄よりも強いと言われている。',
+      'クモの巣は、1種類だけではない糸でできている。車輪のスポークのように中心から外へのびる長い糸は、ねばねばしていない。そのまわりを回るうずまきの糸はねばねばした液でおおわれていて、虫はそこでつかまる。クモはねばねばしていない糸の上だけを歩くので、自分のわなにかからないのだ。',
+      '巣を作るには、たくさんのエネルギーを使う。新しい巣を作るときに、材料をもう一度使うために古い巣を食べてしまうクモさえいる。',
+      'クモの糸は軽くて強く、のびることもできるので、科学者たちが研究している。いつか、よりよいロープや服、さらには医者が使う医療用の糸を作るのに役立つかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 the threads（もの）で、うしろの are not sticky の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to use', 'using', 'used', 'use'], answer: 0, why: '「材料をもう一度使うために」と目的を表すので to 不定詞 to use。using・used・use では目的の意味にならない。' },
+    ],
+    underline: {
+      phrase: 'delicate',
+      choices: ['easy to break', 'very heavy', 'brightly colored', 'very old'],
+      answer: 0,
+      why: 'delicate は「こわれやすい・繊細な」。クモの巣は見た目はこわれやすそうだ、という意味。',
+    },
+    order: {
+      words: ['does', 'not', 'get', 'stuck', 'in', 'its', 'own', 'trap'],
+      rest: '',
+      answer: 'does not get stuck in its own trap',
+      ja: '自分のわなにかからない（get stuck「くっついて動けなくなる」）',
+    },
+    tf: [
+      { statement: 'クモの巣の糸は、すべてねばねばしている。', answer: false, why: '第2段落 The long lines that go out from the center ... are dry。' },
+      { statement: 'クモは、ねばねばしていない糸の上を歩く。', answer: true, why: '第2段落 The spider walks only on the threads that are not sticky。' },
+      { statement: '古い巣を食べるクモもいる。', answer: true, why: '第3段落 Some spiders even eat their old webs。' },
+    ],
+    qa: [
+      { q: 'Why are scientists studying spider silk?', choices: ['Because it is light, strong, and can stretch.', 'Because it tastes good.', 'Because it shines in the dark.', 'Because it is easy to find in stores.'], answer: 0, why: '第4段落 Scientists are studying spider silk because it is light, strong, and can stretch。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
