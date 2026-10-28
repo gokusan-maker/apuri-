@@ -395,6 +395,18 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'frog')
+    return (
+      <g stroke={line} strokeWidth="2.5">
+        {/* 頭の上にとび出た大きな目 */}
+        <circle cx="32" cy="24" r="10" fill={fill} />
+        <circle cx="68" cy="24" r="10" fill={fill} />
+        <circle cx="32" cy="24" r="5" fill="#fff" stroke="none" />
+        <circle cx="68" cy="24" r="5" fill="#fff" stroke="none" />
+        <circle cx="33" cy="25" r="2.5" fill="#1f2937" stroke="none" />
+        <circle cx="69" cy="25" r="2.5" fill="#1f2937" stroke="none" />
+      </g>
+    )
   if (species === 'giraffe')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinecap="round">

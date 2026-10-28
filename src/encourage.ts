@@ -28,6 +28,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   otter: { streak: ['ぷかぷか、いい調子！', '小石がまたふえたよ、正解！'], wrong: ['川の流れにのって、もう一回！', '小石をなくしただけ、だいじょうぶ！'] },
   bear: { streak: ['はちみつみたいにあまい正解！', 'のっしのっし、連続正解！'], wrong: ['くまった…でも、もう一回！', 'ひとなめして、気をとりなおそう！'] },
   giraffe: { streak: ['首をのばして、大正解！', '高いところから見ると、全部わかる！'], wrong: ['首をひっこめて、もう一回！', '目線をかえて、次いこう！'] },
+  frog: { streak: ['ケロッと大正解！', 'ぴょんぴょん、連続ジャンプ！'], wrong: ['雨のあとは晴れるよ、もう一回！', 'ひとジャンプして、気をとりなおそう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -65,6 +66,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   otter: { streak: [['You’re on a roll!', '波にのってるね！']], wrong: [['Go with the flow and try again.', '流れにのって、もう一回。']] },
   bear: { streak: [['Sweet as honey!', 'はちみつみたいにあまい！']], wrong: [['Bear with it and try again.', 'がまんして、もう一回。']] },
   giraffe: { streak: [['Head and shoulders above the rest!', 'ずばぬけてるね！']], wrong: [['Look again from up high.', '高いところから、もう一度見てみよう。']] },
+  frog: { streak: [['Hop to it! Great job!', 'その調子でぴょん！']], wrong: [['Jump back in and try again.', 'またとびこんで、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }

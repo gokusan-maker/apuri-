@@ -25,6 +25,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   otter: { id: 'cheer', name: 'こいしコロコロ', desc: '2問正解ごとに必殺技ゲージ +1' },
   bear: { id: 'claw', name: 'くまのつめ', desc: '2問正解ごとに必殺技ゲージ +1' },
   giraffe: { id: 'cheer', name: 'のびのびネック', desc: '2問正解ごとに必殺技ゲージ +1' },
+  frog: { id: 'cheer', name: 'ケロケロジャンプ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -74,6 +75,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   otter: { name: 'カワウソ・リバーウェーブ', color: '#0ea5e9' },
   bear: { name: 'クマ・ハニーハグ', color: '#d97706' },
   giraffe: { name: 'キリン・スカイネック', color: '#eab308' },
+  frog: { name: 'カエル・レインストーム', color: '#22c55e' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -110,6 +112,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   otter: { en: 'Let’s float and learn together!', ja: 'ぷかぷかうかんで、いっしょに覚えよう！' },
   bear: { en: 'Honey tastes better after studying!', ja: '勉強のあとのはちみつは最高！' },
   giraffe: { en: 'I can see the answer from up here!', ja: 'ここから答えが見えるよ！' },
+  frog: { en: 'Hop, hop! One more jump!', ja: 'ぴょんぴょん！ もうひとジャンプ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
