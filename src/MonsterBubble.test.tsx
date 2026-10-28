@@ -63,3 +63,12 @@ it('相棒：レベルアップまであと少し（8割以上）だと経験値
   expect(document.querySelector('.xp-bar')).not.toBeNull()
   expect(document.querySelector('.xp-bar.almost')).toBeNull()
 })
+
+it('相棒の画面：コインの数が変わると、数字が作りなおされて下からすっと入れかわる', () => {
+  const r = render(<Monster monster={{ xp: 0 } as never} coins={10} />)
+  const before = document.querySelector('.coin-num')!
+  expect(screen.getByLabelText('コイン 10枚・ショップを開く').textContent).toBe('🪙 10')
+  r.rerender(<Monster monster={{ xp: 0 } as never} coins={15} />)
+  expect(document.querySelector('.coin-num')).not.toBe(before)
+  expect(document.querySelector('.coin-num')!.textContent).toBe('15')
+})

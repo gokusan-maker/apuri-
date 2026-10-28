@@ -4394,3 +4394,8 @@ header .event-chips { margin: 0 0 2px; }
 .arena-resume { animation: resume-in 0.6s ease-out both; }
 @keyframes resume-in { from { opacity: 0; transform: translateY(-10px) scale(0.96); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .arena-resume { animation: none; } }
+
+/* 相棒の画面：コインの数が変わると、数字が下からすっと入れかわる */
+.coin-num { display: inline-block; animation: coin-num-in 0.35s ease-out; }
+@keyframes coin-num-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .coin-num { animation: none; } }

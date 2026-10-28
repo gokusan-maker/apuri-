@@ -1414,7 +1414,11 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           XP {into} / {need}
           {coins !== undefined && (
             <button className="coins" onClick={onShop} aria-label={`コイン ${coins}枚・ショップを開く`}>
-              🪙 {coins}
+              🪙{' '}
+              {/* コインの数が変わると、数字が下からすっと入れかわる */}
+              <span key={coins} className="coin-num">
+                {coins}
+              </span>
             </button>
           )}
         </p>
