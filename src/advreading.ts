@@ -12948,6 +12948,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-planetarium',
+    title: 'A Night Sky Indoors',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In big cities, it is hard ( A ) many stars at night because of the bright lights. But in a planetarium, you can enjoy a sky full of stars at any time, even in the middle of the day.",
+      "A planetarium has a round ceiling ( B ) a dome. In the center of the room, a special projector shines tiny points of light onto the dome. When the room gets dark, the points look just like real stars.",
+      "The first modern planetarium of this kind opened in Germany in 1923. Visitors were amazed, and soon many cities built their own. Today, some projectors can show millions of stars and even the Milky Way.",
+      "A planetarium can also show the sky from long ago or from the other side of the earth. In this way, it lets people travel through time and space without leaving their seats. That is why many schools bring students there to learn about the sky.",
+    ],
+    ja: [
+      '大都市では、明るい光のせいで、夜にたくさんの星を見るのはむずかしい。しかしプラネタリウムでは、昼の真ん中でさえ、いつでも星がいっぱいの空を楽しめる。',
+      'プラネタリウムには、ドームと呼ばれる丸い天井がある。部屋の中央では、特別な投影機がドームに小さな光の点を映し出す。部屋が暗くなると、その点は本物の星そっくりに見える。',
+      'このような近代的なプラネタリウムは、1923年にドイツではじめて開かれた。来た人たちはおどろき、まもなく多くの都市が自分たちのプラネタリウムを作った。今日では、何百万もの星や天の川まで映せる投影機もある。',
+      'プラネタリウムは、昔の空や、地球の反対側の空を見せることもできる。こうして、席をはなれることなく、時間と宇宙を旅させてくれるのだ。だから多くの学校が、空について学ぶために生徒をそこへ連れていく。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to see', 'seeing', 'seen', 'see'], answer: 0, why: 'it is hard to ～「～するのはむずかしい」。it は to 以下を指すので to see。seeing・seen・see はこの形に入らない。' },
+      { id: 'B', choices: ['called', 'calling', 'calls', 'to call'], answer: 0, why: '「ドームと呼ばれる天井」なので、過去分詞 called がうしろから ceiling を説明する。calling だと天井が呼ぶことになり、calls は動詞の形、to call は意味が合わない。' },
+    ],
+    underline: {
+      phrase: 'amazed',
+      choices: ['very surprised', 'very bored', 'a little sleepy', 'quite angry'],
+      answer: 0,
+      why: 'amazed は「とてもおどろいて」。はじめて見た人たちが、とてもおどろいたという意味。',
+    },
+    order: {
+      words: ['travel', 'through', 'time', 'and', 'space'],
+      rest: 'without leaving their seats',
+      answer: 'travel through time and space',
+      ja: '時間と宇宙を旅する（through ～「～を通りぬけて」）',
+    },
+    tf: [
+      { statement: 'プラネタリウムでは、昼間でも星空を楽しめる。', answer: true, why: '第1段落 you can enjoy a sky full of stars at any time, even in the middle of the day。' },
+      { statement: '投影機は、ドームの外側に光を映す。', answer: false, why: '第2段落 a special projector shines tiny points of light onto the dome（部屋の中央からドームに映す）。' },
+      { statement: 'プラネタリウムは、昔の空を見せることもできる。', answer: true, why: '第4段落 A planetarium can also show the sky from long ago。' },
+    ],
+    qa: [
+      { q: 'Where did the first modern planetarium of this kind open?', choices: ['In Germany.', 'In Japan.', 'In the United States.', 'In France.'], answer: 0, why: '第3段落 The first modern planetarium of this kind opened in Germany in 1923。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
