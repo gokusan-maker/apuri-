@@ -1346,3 +1346,18 @@ it('闘技場：いまの階の数字はかわるたびに作りなおされて�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-now-num \{ display: inline-block; animation: floor-num-pop/)
 })
+
+it('闘技場の結果：最高記録を更新したときだけ紙ふぶきが舞う', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  arenaPick(true)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.getByText(/最高記録 更新！/)).toBeInTheDocument()
+  expect(document.querySelector('.arena-result .best-confetti')).not.toBeNull()
+  fireEvent.click(screen.getByText('⚔ 続きから戦う'))
+  arenaPick(false)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(screen.queryByText(/最高記録 更新！/)).toBeNull()
+  expect(document.querySelector('.arena-result .best-confetti')).toBeNull()
+})

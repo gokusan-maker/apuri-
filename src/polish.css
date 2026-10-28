@@ -4305,3 +4305,7 @@ header .event-chips { margin: 0 0 2px; }
 .char-book-list li.locked:nth-child(even) svg { animation-delay: -1.5s; }
 @keyframes locked-sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
 @media (prefers-reduced-motion: reduce) { .char-book-list li.locked svg { animation: none; } }
+
+/* 闘技場の結果：最高記録を更新したら紙ふぶき（結果カードの中だけに降らせる） */
+.arena-result { position: relative; overflow: hidden; }
+.best-confetti i { animation-duration: 2.4s; }

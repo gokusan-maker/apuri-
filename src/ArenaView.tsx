@@ -144,6 +144,16 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   if (ended)
     return (
       <section className="card boss battle-v2 arena-result" style={{ '--boss': color } as CSSProperties} aria-label="闘技場の結果">
+        {/* 最高記録を更新したら紙ふぶきが舞う */}
+        {ended.newBest && (
+          <span className="arena-confetti best-confetti" aria-hidden="true">
+            {['🎊', '🏅', '🎉', '⭐', '🏅', '🎊'].map((c, k) => (
+              <i key={k} style={{ '--k': k } as CSSProperties}>
+                {c}
+              </i>
+            ))}
+          </span>
+        )}
         <p className="arena-result-title">🏟 闘技場 おつかれさま！</p>
         <p className="arena-result-floor" role="status">
           いまのあなたは <strong>{arenaFloor(lv)}</strong>
