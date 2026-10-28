@@ -1402,3 +1402,8 @@ it('闘技場の結果：称号の札にゆっくり光が流れる（CSS。も�
   expect(rule).toMatch(/animation: title-sheen/)
   expect(rule).toMatch(/#fde68a, #f59e0b/)
 })
+
+it('闘技場：盾のアイコンはときどきキラッと光る（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-shield \{ display: inline-block; animation: shield-glint/)
+})

@@ -4364,3 +4364,8 @@ header .event-chips { margin: 0 0 2px; }
   left: calc(6% + var(--k) * 21%); top: calc(8% + var(--k) * 14%); animation: star-twinkle 1.1s ease-in-out infinite; animation-delay: calc(var(--k) * 0.22s); opacity: 0; }
 @keyframes star-twinkle { 0%, 100% { opacity: 0; transform: scale(0.4); } 50% { opacity: 1; transform: scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .first-stars { display: none; } }
+
+/* 闘技場：盾を持っているあいだ、盾のアイコンがときどきキラッと光る */
+.arena-shield { display: inline-block; animation: shield-glint 2.6s ease-in-out infinite; }
+@keyframes shield-glint { 0%, 70%, 100% { filter: drop-shadow(0 0 0 rgb(147 197 253 / 0)); transform: scale(1); } 80% { filter: drop-shadow(0 0 6px rgb(147 197 253 / 0.95)) brightness(1.4); transform: scale(1.18); } }
+@media (prefers-reduced-motion: reduce) { .arena-shield { animation: none; } }
