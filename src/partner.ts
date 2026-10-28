@@ -32,6 +32,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   mole: { id: 'claw', name: 'ほりほりクロー', desc: '2問正解ごとに必殺技ゲージ +1' },
   dolphin: { id: 'cheer', name: 'ソナーキャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   hippo: { id: 'claw', name: 'おおぐちバイト', desc: '2問正解ごとに必殺技ゲージ +1' },
+  crab: { id: 'claw', name: 'チョキチョキハサミ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -88,6 +89,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   mole: { name: 'モグラ・アンダーグラウンド', color: '#a16207' },
   dolphin: { name: 'イルカ・オーシャンジャンプ', color: '#3b82f6' },
   hippo: { name: 'カバ・ビッグマウスウェーブ', color: '#8b5cf6' },
+  crab: { name: 'カニ・クロススラッシュ', color: '#ef4444' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -131,6 +133,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   mole: { en: 'I dug up the answer!', ja: '答えをほりあてたよ！' },
   dolphin: { en: 'I can hear every sound!', ja: 'どんな音も聞き分けられるよ！' },
   hippo: { en: 'My big mouth can hold long sentences!', ja: '大きな口なら、長い文もまるごと入るよ！' },
+  crab: { en: 'Snip, snip! Mistakes are gone!', ja: 'チョキチョキ！ まちがいは切っちゃった！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

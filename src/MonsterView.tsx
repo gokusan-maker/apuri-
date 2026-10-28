@@ -395,6 +395,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'crab')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 頭の上の大きなハサミ */}
+        <path d="M18 34 L10 16 L22 22 L24 12 L30 30 Z" fill={fill} />
+        <path d="M82 34 L90 16 L78 22 L76 12 L70 30 Z" fill={fill} />
+      </g>
+    )
   if (species === 'hippo')
     return (
       <g>
