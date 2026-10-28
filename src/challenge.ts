@@ -46,6 +46,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   polarbear: { dir: 'en-ja', label: '英→日', icon: '🐻‍❄️' },
   duck: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   squid: { dir: 'en-ja', label: '英→日', icon: '🦑' },
+  chicken: { dir: 'ja-en', label: '日→英', icon: '🐔' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 

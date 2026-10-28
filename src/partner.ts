@@ -45,6 +45,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   polarbear: { id: 'claw', name: 'こおりのつめ', desc: '2問正解ごとに必殺技ゲージ +1' },
   duck: { id: 'cheer', name: 'ガーガーコール', desc: '2問正解ごとに必殺技ゲージ +1' },
   squid: { id: 'claw', name: '10本足キャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
+  chicken: { id: 'cheer', name: 'あさいちばん', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -114,6 +115,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   polarbear: { name: 'シロクマ・ブリザードハグ', color: '#7dd3fc' },
   duck: { name: 'アヒル・スプラッシュパレード', color: '#eab308' },
   squid: { name: 'イカ・ディープシーフラッシュ', color: '#a855f7' },
+  chicken: { name: 'ニワトリ・モーニングコール', color: '#dc2626' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -170,6 +172,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   polarbear: { en: 'Cold days can’t stop me!', ja: '寒い日でも、ぼくは止まらないよ！' },
   duck: { en: 'Quack! Let’s read it loudly!', ja: 'ガー！ 大きな声で読もう！' },
   squid: { en: 'Ten arms catch ten words!', ja: '10本の足で、10個の単語をキャッチ！' },
+  chicken: { en: 'Good morning! Time to study!', ja: 'おはよう！ 勉強の時間だよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
