@@ -13276,6 +13276,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ferriswheel',
+    title: 'A Wheel to Beat a Tower',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1889, Paris showed the world the Eiffel Tower at a large fair. Four years later, Chicago held its own world's fair, and the planners wanted something even more amazing. They asked engineers for ideas ( A ) could beat the famous tower.",
+      "A young engineer named George Ferris had a bold plan: a giant wheel that people could ride. Many people thought it would fall down, but he did not give up. His wheel was about 80 meters tall and had 36 cars. Each car was big enough ( B ) about 60 people.",
+      "When the wheel opened in 1893, it was a huge success. Riders could see the whole fair and the city from the top. More than a million people rode it during the fair.",
+      "Today, big wheels stand in amusement parks and cities all over the world, and many of them are still called Ferris wheels. They remind us that a brave idea can turn into a ride that everyone enjoys.",
+    ],
+    ja: [
+      '1889年、パリは大きな博覧会でエッフェル塔を世界に見せた。4年後、シカゴでも万国博覧会が開かれ、計画した人たちはもっとおどろくようなものをほしがった。彼らは、あの有名な塔を上回るアイデアを技術者たちに求めた。',
+      'ジョージ・フェリスという若い技術者には、大たんな計画があった。人が乗れる巨大な車輪だ。多くの人がたおれるだろうと思ったが、彼はあきらめなかった。その車輪は高さおよそ80メートルで、36台のゴンドラがあった。1台1台が、およそ60人を乗せられるほど大きかった。',
+      '1893年に観覧車が開くと、大成功をおさめた。乗った人はてっぺんから博覧会全体と街を見わたせた。博覧会のあいだに、100万人以上が乗った。',
+      '今日、大きな観覧車は世界中の遊園地や街に立ち、その多くは今でも「フェリス・ホイール」と呼ばれている。観覧車は、勇気あるアイデアがみんなの楽しむ乗り物に変わりうることを思い出させてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 ideas（もの）で、うしろの could beat の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to carry', 'carrying', 'carried', 'carry'], answer: 0, why: '形容詞 ＋ enough to ～「～できるほど…」なので to carry。carrying・carried・carry は enough のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'a bold plan',
+      choices: ['a plan that was brave and unusual', 'a plan that was very small', 'a plan that was copied', 'a plan that failed at once'],
+      answer: 0,
+      why: 'bold は「大たんな・勇気のある」。ふつうの人が思いつかない、思いきった計画という意味。',
+    },
+    order: {
+      words: ['could', 'see', 'the', 'whole', 'fair'],
+      rest: 'and the city from the top',
+      answer: 'could see the whole fair',
+      ja: '博覧会全体を見わたせた（the whole ～「～全体」）',
+    },
+    tf: [
+      { statement: 'シカゴの計画者たちは、エッフェル塔を上回るものをほしがった。', answer: true, why: '第1段落 They asked engineers for ideas that could beat the famous tower。' },
+      { statement: 'フェリスの計画は、はじめからみんなに信じられていた。', answer: false, why: '第2段落 Many people thought it would fall down。' },
+      { statement: '博覧会のあいだに、100万人以上が観覧車に乗った。', answer: true, why: '第3段落 More than a million people rode it during the fair。' },
+    ],
+    qa: [
+      { q: 'How many people could each car carry?', choices: ['About 60.', 'About 6.', 'About 36.', 'About 80.'], answer: 0, why: '第2段落 Each car was big enough to carry about 60 people。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
