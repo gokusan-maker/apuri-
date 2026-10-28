@@ -19,6 +19,9 @@ it('ガチャのページにキャラクター図鑑：会っていない子は 
   expect(locked).toHaveLength(SPECIES.length - 2)
   fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
   expect(screen.getByRole('status').textContent).toContain('ボスへのダメージをふやす')
+  // 押したカードはくるっと回る（押したものだけ）
+  expect(screen.getByRole('button', { name: 'コンコン（アタック型）' }).closest('li')!.classList.contains('picked')).toBe(true)
+  expect(document.querySelectorAll('.char-book-list li.picked')).toHaveLength(1)
 })
 
 it('なかま交換は、交換する10体をえらべる（10体えらぶまで交換できない）', () => {

@@ -602,7 +602,7 @@ function CharBook({ owned }: { owned: string[] }) {
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (
-            <li key={sp.id} className={ok ? 'got' : 'locked'}>
+            <li key={sp.id} className={`${ok ? 'got' : 'locked'}${pick === sp.id ? ' picked' : ''}`}>
               <button className="char-book-pick" aria-label={ok ? `${sp.name}（${t.name}）` : 'まだ会っていないキャラクター'} onClick={() => setPick(pick === sp.id ? null : sp.id)}>
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>

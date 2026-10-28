@@ -4337,3 +4337,8 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes xp-almost { to { box-shadow: 0 0 10px 2px rgb(250 204 21 / 0.85); } }
 @keyframes xp-sparkle { from { background-position: 150% 0, 0 0; } to { background-position: -50% 0, 0 0; } }
 @media (prefers-reduced-motion: reduce) { .xp-bar.almost, .xp-bar.almost .xp-fill { animation: none; } }
+
+/* 図鑑：キャラを押すと、カードがくるっと1回転する */
+.char-book-list li.picked .char-book-pick { animation: card-spin 0.6s ease-out; border-color: color-mix(in srgb, var(--accent) 60%, transparent); }
+@keyframes card-spin { 0% { transform: rotate(0) scale(1); } 50% { transform: rotate(180deg) scale(1.08); } 100% { transform: rotate(360deg) scale(1); } } /* 裏返しは使わない（オーナーの要望）。平面のまま回す */
+@media (prefers-reduced-motion: reduce) { .char-book-list li.picked .char-book-pick { animation: none; } }
