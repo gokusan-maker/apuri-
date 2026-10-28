@@ -325,9 +325,10 @@ export const SPECIES: Species[] = [
   { id: 'wolf', name: 'ウルフィ', egg: 'つきよのタマゴ', token: 'ウル', bigToken: 'ウルフィ', color: '#94a3b8', line: '#1e293b', rate: 0.02, desc: '月夜にほえるオオカミ。なかまといっしょに、声をそろえて英語を読みあげる。' },
   { id: 'parrot', name: 'オウムン', egg: 'ねったいのタマゴ', token: 'オウ', bigToken: 'オウムン', color: '#4ade80', line: '#166534', rate: 0.02, desc: 'カラフルなオウム。聞いた英語をそのまままねして、発音の練習をてつだってくれる。' },
   { id: 'bat', name: 'コウモン', egg: 'どうくつのタマゴ', token: 'コウ', bigToken: 'コウモン', color: '#a78bfa', line: '#3b0764', rate: 0.02, desc: 'どうくつにすむコウモリ。小さな音のはねかえりで、英語の音のちがいを聞き分ける。' },
-  { id: 'seahorse', name: 'タツノン', egg: 'うみくさのタマゴ', token: 'タツ', bigToken: 'タツノン', color: '#fcd34d', line: '#92400e', rate: 0.03, desc: '海草につかまるタツノオトシゴ。小さな体でも、しっぽでしっかり単語をつかんではなさない。' },
-  { id: 'camel', name: 'ラクダン', egg: 'さばくのタマゴ', token: 'ラク', bigToken: 'ラクダン', color: '#d6a35c', line: '#78350f', rate: 0.03, desc: 'さばくを歩くラクダ。こぶに覚えた単語をたくわえて、長い道のりもへっちゃら。' },
-  { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
+  { id: 'seahorse', name: 'タツノン', egg: 'うみくさのタマゴ', token: 'タツ', bigToken: 'タツノン', color: '#fcd34d', line: '#92400e', rate: 0.02, desc: '海草につかまるタツノオトシゴ。小さな体でも、しっぽでしっかり単語をつかんではなさない。' },
+  { id: 'camel', name: 'ラクダン', egg: 'さばくのタマゴ', token: 'ラク', bigToken: 'ラクダン', color: '#d6a35c', line: '#78350f', rate: 0.02, desc: 'さばくを歩くラクダ。こぶに覚えた単語をたくわえて、長い道のりもへっちゃら。' },
+  { id: 'polarbear', name: 'シロクマン', egg: 'ほっきょくのタマゴ', token: 'シロ', bigToken: 'シロクマン', color: '#f8fafc', line: '#475569', rate: 0.03, desc: '氷の上のシロクマ。寒さにも負けず、毎日こつこつ英語を続ける力もち。' },
+  { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
 export const speciesOf = (id: string | undefined): Species => SPECIES.find((x) => x.id === id) ?? SPECIES[0]

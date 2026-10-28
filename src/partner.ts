@@ -42,6 +42,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   bat: { id: 'cheer', name: 'エコーキャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   seahorse: { id: 'cheer', name: 'しっぽキャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   camel: { id: 'cheer', name: 'こぶたくわえ', desc: '2問正解ごとに必殺技ゲージ +1' },
+  polarbear: { id: 'claw', name: 'こおりのつめ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -108,6 +109,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   bat: { name: 'コウモリ・ナイトウェーブ', color: '#7c3aed' },
   seahorse: { name: 'タツノオトシゴ・ゆらゆらウェーブ', color: '#f59e0b' },
   camel: { name: 'ラクダ・デザートストーム', color: '#b45309' },
+  polarbear: { name: 'シロクマ・ブリザードハグ', color: '#7dd3fc' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -161,6 +163,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   bat: { en: 'I can hear sounds you cannot!', ja: 'きみに聞こえない音も聞こえるよ！' },
   seahorse: { en: 'Hold on tight to new words!', ja: '新しい単語はしっかりつかもう！' },
   camel: { en: 'Step by step, we can go far!', ja: '一歩ずつなら、遠くまで行けるよ！' },
+  polarbear: { en: 'Cold days can’t stop me!', ja: '寒い日でも、ぼくは止まらないよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

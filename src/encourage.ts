@@ -45,6 +45,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   bat: { streak: ['音をキャッチ、大正解！', 'ぱたぱた、連続正解！'], wrong: ['もう一回、耳をすませて！', 'さかさまにぶら下がって、考えなおそう！'] },
   seahorse: { streak: ['しっぽでしっかり、大正解！', 'ゆらゆら、連続正解！'], wrong: ['波にゆられて、もう一回！', 'しっぽでつかみなおそう！'] },
   camel: { streak: ['一歩ずつ、大正解！', 'こぶにためて、連続正解！'], wrong: ['さばくの道は長いよ、もう一回！', 'ひと休みして、また歩こう！'] },
+  polarbear: { streak: ['氷の上でも、大正解！', 'のっしのっし、連続正解！'], wrong: ['ひえても負けない、もう一回！', '氷をわって、また進もう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -99,6 +100,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   bat: { streak: [['Great ears!', 'すごい耳だね！']], wrong: [['Listen again.', 'もう一度聞いてみよう。']] },
   seahorse: { streak: [['You held on tight!', 'しっかりつかんだね！']], wrong: [['Hold on and try again.', 'しっかりつかんで、もう一回。']] },
   camel: { streak: [['Going the distance!', '遠くまで進んでるね！']], wrong: [['One more step. Try again.', 'もう一歩。もう一回。']] },
+  polarbear: { streak: [['Cool and strong!', 'クールで力強い！']], wrong: [['Stay warm and try again.', 'あたたかくして、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
