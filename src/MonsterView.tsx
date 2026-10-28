@@ -395,6 +395,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'raccoon')
+    return (
+      <g>
+        {/* 目のまわりの黒いマスク */}
+        <path d="M22 50 Q36 40 48 52 Q36 60 22 50 Z M78 50 Q64 40 52 52 Q64 60 78 50 Z" fill="#292524" opacity="0.55" />
+      </g>
+    )
   if (species === 'frog')
     return (
       <g stroke={line} strokeWidth="2.5">
