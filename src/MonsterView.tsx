@@ -403,6 +403,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'peacock')
+    return (
+      <g stroke={line} strokeWidth="1.5">
+        {/* 頭の上の小さなかざり羽 */}
+        <path d="M50 30 L42 12 M50 30 L50 8 M50 30 L58 12" fill="none" />
+        <circle cx="42" cy="11" r="3.5" fill="#1d4ed8" />
+        <circle cx="50" cy="7" r="3.5" fill="#1d4ed8" />
+        <circle cx="58" cy="11" r="3.5" fill="#1d4ed8" />
+      </g>
+    )
   if (species === 'chameleon')
     return (
       <g stroke={line} strokeWidth="2" strokeLinejoin="round">
