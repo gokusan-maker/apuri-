@@ -4309,3 +4309,8 @@ header .event-chips { margin: 0 0 2px; }
 /* 闘技場の結果：最高記録を更新したら紙ふぶき（結果カードの中だけに降らせる） */
 .arena-result { position: relative; overflow: hidden; }
 .best-confetti i { animation-duration: 2.4s; }
+
+/* ボス城の階：クリアの文字が、ぽんと出たあときらっと光る */
+.bfloor .stage-result.clear { animation: pop 0.4s, clear-shine 1.4s 0.4s ease-in-out 2; }
+@keyframes clear-shine { 0%, 100% { text-shadow: 0 0 0 rgb(253 224 71 / 0); } 50% { text-shadow: 0 0 12px rgb(253 224 71 / 0.95), 0 0 24px rgb(245 158 11 / 0.6); } }
+@media (prefers-reduced-motion: reduce) { .bfloor .stage-result.clear { animation: none; } }

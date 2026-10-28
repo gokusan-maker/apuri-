@@ -1361,3 +1361,8 @@ it('闘技場の結果：最高記録を更新したときだけ紙ふぶきが�
   expect(screen.queryByText(/最高記録 更新！/)).toBeNull()
   expect(document.querySelector('.arena-result .best-confetti')).toBeNull()
 })
+
+it('ボス城の階：クリアの文字がきらっと光る（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.stage-result\.clear \{ animation: pop 0\.4s, clear-shine/)
+})
