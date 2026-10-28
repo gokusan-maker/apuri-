@@ -124,7 +124,11 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       {/* 3連続正解からコンボの表示 */}
       {picked !== null && combo >= 3 && (
         <p key={`combo${i}`} className="bfloor-combo" role="status">
-          🔥 {combo}連続正解！
+          {/* 闘技場と同じく、炎がゆらゆらゆれる */}
+          <span className="arena-flame" aria-hidden="true">
+            🔥
+          </span>{' '}
+          {combo}連続正解！
         </p>
       )}
       {/* のこりライフ1つ：あと1回まちがえると負け */}

@@ -643,7 +643,8 @@ it('ボスの城の問題の階：3連続正解から「🔥 N連続正解！」
   expect(screen.queryByText(/連続正解！/)).toBeNull()
   fireEvent.click(screen.getByText('次へ'))
   ans(qs[2], true)
-  expect(screen.getByText('🔥 3連続正解！')).toBeInTheDocument()
+  expect(document.querySelector('.bfloor-combo')!.textContent).toBe('🔥 3連続正解！')
+  expect(document.querySelector('.bfloor-combo .arena-flame')).not.toBeNull() // 炎がゆれる
   fireEvent.click(screen.getByText('次へ'))
   ans(qs[3], false)
   expect(screen.queryByText(/連続正解！/)).toBeNull()
