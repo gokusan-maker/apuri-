@@ -12907,6 +12907,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toothbrush',
+    title: 'Before the Toothbrush',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long before toothbrushes were sold in shops, people still wanted to keep their teeth clean. In many parts of the world, they used a small stick ( A ) from a tree. They chewed one end until it became soft and spread out like a brush, and then rubbed their teeth with it.",
+      "In Japan, too, people once cleaned their teeth with a twig of willow with one end beaten into soft fibers. Later, in China, brushes with stiff animal hair on a handle of bamboo or bone were made, and the idea slowly spread to other countries.",
+      "Animal hair had a problem, however. Nylon came to be used in the twentieth century because it dries quickly, ( B ) animal hair often stayed wet and became dirty.",
+      "Today we can choose from many kinds of toothbrushes, but they all come from the same simple wish: to keep a bright, healthy smile.",
+    ],
+    ja: [
+      '歯ブラシが店で売られるずっと前から、人々は歯をきれいに保ちたいと思っていた。世界の多くの地域では、木から切りとった小さな枝を使っていた。片方のはしをかんでやわらかくし、ブラシのように広げてから、それで歯をこすったのだ。',
+      '日本でも、かつてはヤナギの小枝の片方のはしをたたいてやわらかいせんいにしたもので歯をみがいていた。のちに中国では、竹や骨の柄にかたい動物の毛をつけたブラシが作られ、その考えはゆっくりとほかの国に広まった。',
+      'しかし、動物の毛には問題があった。20世紀になってナイロンが使われるようになったのは、それがすぐにかわくからだ。一方、動物の毛はぬれたままになることが多く、よごれやすかった。',
+      '今日、私たちは多くの種類の歯ブラシから選べるが、どれも同じ単純な願いから生まれている。明るく健康的な笑顔を保ちたいという願いだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['cut', 'cutting', 'cuts', 'to cutting'], answer: 0, why: '「木から切りとられた小枝」なので、過去分詞 cut がうしろから stick を説明する。cutting だと枝が切ることになり、cuts は動詞の形、to cutting は形がおかしい。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろに文（animal hair often stayed wet）が続き、前の文と対比しているので接続詞 while「一方で」。during・despite・because of は前置詞なので、うしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'spread out',
+      choices: ['opened up and became wider', 'broke into two pieces', 'became hard and smooth', 'turned black'],
+      answer: 0,
+      why: 'spread out は「広がる」。枝のはしが、ブラシのように広がったという意味。',
+    },
+    order: {
+      words: ['to', 'keep', 'their', 'teeth', 'clean'],
+      rest: '',
+      answer: 'to keep their teeth clean',
+      ja: '歯をきれいに保つこと（keep ＋もの＋形容詞「～を…にしておく」）',
+    },
+    tf: [
+      { statement: '歯ブラシが売られる前、人々は木の枝で歯をみがいていた。', answer: true, why: '第1段落 they used a small stick cut from a tree ... rubbed their teeth with it。' },
+      { statement: '動物の毛のブラシは、すぐにかわくので人気があった。', answer: false, why: '第3段落 animal hair often stayed wet and became dirty。' },
+      { statement: 'ナイロンの毛は、20世紀に使われるようになった。', answer: true, why: '第3段落 Nylon came to be used in the twentieth century。' },
+    ],
+    qa: [
+      { q: 'Why did people start to use nylon for toothbrushes?', choices: ['Because it dries quickly.', 'Because it tastes sweet.', 'Because it is made from trees.', 'Because it is heavier than hair.'], answer: 0, why: '第3段落 Nylon came to be used ... because it dries quickly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
