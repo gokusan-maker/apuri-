@@ -291,3 +291,8 @@ it('ガチャ：出てきたタマゴがぷるぷるふるえる（CSS。光の 
   expect(css).toMatch(/\.gacha-result \.gacha-egg svg \{ transform-origin: 50% 85%; animation: egg-tremble/)
   expect(css).toMatch(/@keyframes egg-tremble/)
 })
+
+it('ガチャ：NEW! の札がぴょこっと左右にゆれる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-new-chips > span\.gacha-new \{ display: inline-block; animation: new-wiggle/)
+})

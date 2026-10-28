@@ -4320,3 +4320,8 @@ header .event-chips { margin: 0 0 2px; }
 .gacha-result.fast .gacha-egg svg { animation-delay: 0.3s; }
 @keyframes egg-tremble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-5deg) translateX(-1px); } 75% { transform: rotate(5deg) translateX(1px); } }
 @media (prefers-reduced-motion: reduce) { .gacha-result .gacha-egg svg { animation: none; } }
+
+/* ガチャ：「NEW!」の札が、ぴょこっと左右にゆれる */
+.gacha-new-chips > span.gacha-new { display: inline-block; animation: new-wiggle 0.5s 2.2s ease-in-out 3; }
+@keyframes new-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg) scale(1.1); } 75% { transform: rotate(10deg) scale(1.1); } }
+@media (prefers-reduced-motion: reduce) { .gacha-new-chips > span.gacha-new { animation: none; } }
