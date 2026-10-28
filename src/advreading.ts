@@ -11857,7 +11857,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       '動物保護施設のねこは、箱をあたえられるとストレスがへることも研究でわかっている。かくれる場所があると、新しい住まいに早くなれるのだ。だから次にねこが箱に入っても、ただ遊んでいるだけではないと思い出してほしい。安心できる場所をさがしているのだ。',
     ],
     blanks: [
-      { id: 'A', choices: ['to', 'than', 'for', 'over of'], answer: 0, why: 'prefer A to B「BよりAを好む」。prefer では比べる相手の前に to を使う。than はふつう prefer とは使わず、for は「～のために」の意味になり、over of という形はない。' },
+      { id: 'A', choices: ['to', 'at', 'from', 'over of'], answer: 0, why: 'prefer A to B「BよりAを好む」。prefer では比べる相手の前に to を使う。at・from は prefer A ＿ B の形では使えず、over of という形はない。' },
       { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a place（場所）で、うしろに完全な文（it can relax）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
     ],
     underline: {
