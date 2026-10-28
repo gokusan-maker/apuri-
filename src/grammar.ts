@@ -7888,7 +7888,7 @@ export const GRAMMAR: GrammarUnit[] = [
     questions: [
       { sentence: 'The road was repaired at a ___ of five million yen.', choices: ['cost', 'costs', 'costly'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは単数の名詞 cost。' },
       { sentence: 'The ship was seen at a ___ of two kilometers.', choices: ['distance', 'distant', 'distances'], answer: 0, why: 'at a distance of ～「～はなれたところに」。a のあとは名詞 distance（distant は形容詞）。' },
-      { sentence: 'The park was made ___ a cost of one million dollars.', choices: ['at', 'on', 'of'], answer: 0, why: 'at a cost of ～。cost の前は at。' },
+      { sentence: 'The tower was built at a ___ of one million dollars.', choices: ['cost', 'costing', 'costed'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは名詞 cost。' },
     ],
   },
   {
