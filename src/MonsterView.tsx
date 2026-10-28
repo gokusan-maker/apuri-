@@ -403,6 +403,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'squid')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 頭の上の三角のひれ */}
+        <path d="M30 34 L50 4 L70 34 Z" />
+      </g>
+    )
   if (species === 'duck')
     return (
       <g>

@@ -329,6 +329,7 @@ export const SPECIES: Species[] = [
   { id: 'camel', name: 'ラクダン', egg: 'さばくのタマゴ', token: 'ラク', bigToken: 'ラクダン', color: '#d6a35c', line: '#78350f', rate: 0.02, desc: 'さばくを歩くラクダ。こぶに覚えた単語をたくわえて、長い道のりもへっちゃら。' },
   { id: 'polarbear', name: 'シロクマン', egg: 'ほっきょくのタマゴ', token: 'シロ', bigToken: 'シロクマン', color: '#f8fafc', line: '#475569', rate: 0.03, desc: '氷の上のシロクマ。寒さにも負けず、毎日こつこつ英語を続ける力もち。' },
   { id: 'duck', name: 'アヒルン', egg: 'いけのタマゴ', token: 'アヒ', bigToken: 'アヒルン', color: '#fde047', line: '#a16207', rate: 0.02, desc: '池をすいすい泳ぐアヒル。ガーガー大きな声で、英語を元気に読みあげる。' },
+  { id: 'squid', name: 'イカッチ', egg: 'しんかいのタマゴ', token: 'イカ', bigToken: 'イカッチ', color: '#e9d5ff', line: '#6b21a8', rate: 0.02, desc: '深い海を泳ぐイカ。10本の足で、10個の単語をいっぺんにつかまえる。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
