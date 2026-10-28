@@ -36,7 +36,7 @@ it('鳴き声は小さいすがたほど高い', () => {
 })
 
 it('キャラクターごとに鳴き声の高さと並びがちがう', () => {
-  expect(Object.keys(CHIRP_STYLE).sort()).toEqual(['alpaca', 'bear', 'cat', 'chameleon', 'crab', 'dolphin', 'dragon', 'elephant', 'flamingo', 'fox', 'frog', 'giraffe', 'hamster', 'hedgehog', 'hippo', 'koala', 'lion', 'mochi', 'mole', 'octopus', 'otter', 'owl', 'panda', 'peacock', 'pelican', 'penguin', 'rabbit', 'raccoon', 'seal', 'sheep', 'sloth', 'squirrel', 'swan', 'tiger', 'turtle', 'wolf'])
+  expect(Object.keys(CHIRP_STYLE).sort()).toEqual(['alpaca', 'bear', 'cat', 'chameleon', 'crab', 'dolphin', 'dragon', 'elephant', 'flamingo', 'fox', 'frog', 'giraffe', 'hamster', 'hedgehog', 'hippo', 'koala', 'lion', 'mochi', 'mole', 'octopus', 'otter', 'owl', 'panda', 'parrot', 'peacock', 'pelican', 'penguin', 'rabbit', 'raccoon', 'seal', 'sheep', 'sloth', 'squirrel', 'swan', 'tiger', 'turtle', 'wolf'])
   expect(CHIRP_STYLE.dragon.pitch).toBeLessThan(CHIRP_STYLE.rabbit.pitch)
 })
 

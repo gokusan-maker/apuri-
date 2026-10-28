@@ -99,6 +99,7 @@ export const CHIRP_STYLE: Record<string, { pitch: number; steps: number[] }> = {
   swan: { pitch: 1.0, steps: [1, 1.15, 1.3] }, // こーこー
   peacock: { pitch: 1.3, steps: [1, 1.4, 1.2] }, // ケーン
   wolf: { pitch: 0.8, steps: [1, 1.3, 1.5, 1.2] }, // わお〜ん
+  parrot: { pitch: 1.6, steps: [1, 1.2, 1, 1.2] }, // ぴゅるっ
   octopus: { pitch: 1.2, steps: [1, 1.3, 1, 1.3] }, // ぷくぷく
 }
 
