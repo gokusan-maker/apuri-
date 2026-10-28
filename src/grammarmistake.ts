@@ -97,6 +97,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'group-prep-back': { wrong: 'He sat at back of the bus.', right: 'He sat at the back of the bus.', why: 'at the back of ～「～のうしろのほうに」。the をわすれない。' },
   'group-prep-hope': { wrong: 'He went to the shop in the hope of buy a cheap TV.', right: 'He went to the shop in the hope of buying a cheap TV.', why: 'in the hope of ～ing「～することを望んで」。of のあとは動名詞。' },
   'group-prep-view': { wrong: 'In view on the rain, the game was put off.', right: 'In view of the rain, the game was put off.', why: 'in view of ～「～を考えると」。view のあとは of。' },
+  'group-prep-verge': { wrong: 'She was on the verge to cry.', right: 'She was on the verge of crying.', why: 'on the verge of ～ing「今にも～しそうで」。of のあとは動名詞。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
