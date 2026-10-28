@@ -12579,6 +12579,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-windturbine',
+    title: 'Giant Fans That Make Electricity',
+    level: '難関大（評論）',
+    paragraphs: [
+      "You may have seen tall white towers with three long blades turning slowly in the wind. They are wind turbines, and they change the power of moving air into electricity. Unlike power plants that burn oil or coal, they produce almost no smoke.",
+      "The blades are very long, and the top of the tower is high above the ground, because the wind is stronger up there. Many wind farms are also built at sea, ( A ) the wind is stronger and steadier than on land.",
+      "Wind turbines have problems, too. They do not work when there is no wind, and birds sometimes fly into the blades. Scientists are looking for answers. In one study in Norway, painting one of the three blades black made the blades easier for birds ( B ), and far fewer birds were hit.",
+      "Small ideas like this help us use the power of nature while protecting the animals that share it with us.",
+    ],
+    ja: [
+      '3本の長い羽根が風でゆっくり回っている、背の高い白い塔を見たことがあるかもしれない。それは風力発電機で、動く空気の力を電気に変える。石油や石炭を燃やす発電所とちがって、けむりをほとんど出さない。',
+      '羽根はとても長く、塔のてっぺんは地面からずっと高いところにある。上のほうが風が強いからだ。多くの風力発電所は海の上にも作られている。そこでは陸の上よりも風が強く、安定しているのだ。',
+      '風力発電機にも問題はある。風がないときは動かず、鳥がときどき羽根にぶつかってしまう。科学者たちは答えをさがしている。ノルウェーのある研究では、3本の羽根のうち1本を黒くぬると、鳥から羽根が見えやすくなり、ぶつかる鳥がずっと少なくなった。',
+      'このような小さな工夫が、自然の力を使いながら、自然をともにする動物たちを守る助けになっているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 sea（場所）で、うしろに完全な文（the wind is stronger ...）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to see', 'seeing', 'seen', 'see'], answer: 0, why: 'easy for ～ to …「～にとって…しやすい」。easier for birds のあとは to 不定詞 to see。seeing・seen・see は入らない。' },
+    ],
+    underline: {
+      phrase: 'steadier',
+      choices: ['changing less often', 'much colder', 'more dangerous', 'more colorful'],
+      answer: 0,
+      why: 'steady は「安定した・一定の」。steadier は「より安定した」、つまり変わりにくいという意味。',
+    },
+    order: {
+      words: ['change', 'the', 'power', 'of', 'moving', 'air'],
+      rest: 'into electricity',
+      answer: 'change the power of moving air',
+      ja: '動く空気の力を変える（change A into B「AをBに変える」）',
+    },
+    tf: [
+      { statement: '風力発電機は、石炭を燃やす発電所よりも多くのけむりを出す。', answer: false, why: '第1段落 they produce almost no smoke。' },
+      { statement: '海の上は、陸の上よりも風が強く安定している。', answer: true, why: '第2段落 the wind is stronger and steadier than on land。' },
+      { statement: '羽根の1本を黒くぬると、ぶつかる鳥が減った。', answer: true, why: '第3段落 painting one of the three blades black ... far fewer birds were hit。' },
+    ],
+    qa: [
+      { q: 'Why are the towers so tall?', choices: ['Because the wind is stronger high above the ground.', 'Because birds like tall towers.', 'Because they are easier to paint.', 'Because they need to be seen from the sea.'], answer: 0, why: '第2段落 the top of the tower is high above the ground, because the wind is stronger up there。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
