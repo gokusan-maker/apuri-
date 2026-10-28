@@ -141,3 +141,7 @@ it('ボスの城の問題の階は、夜の城の背景と問題カードのか�
   expect(css).toContain('.bfloor.battle-v2 .bfloor-q { padding: 12px 14px;')
   expect(css).toContain('.bfloor.battle-v2 .choice.correct { box-shadow:')
 })
+
+it('ボス戦の問題カードは、そのボスの色でかがやく（コンボの炎・まちがいのときは除く）', () => {
+  expect(css).toContain('.boss.battle-v2 p.en:not(.on-fire):not(.miss) { border-radius: 14px; box-shadow: 0 0 0 1px color-mix(in srgb, var(--boss) 55%, transparent)')
+})
