@@ -4412,3 +4412,8 @@ header .event-chips { margin: 0 0 2px; }
 .gacha-log li.log-newest { border-radius: 8px; background: color-mix(in srgb, #facc15 16%, transparent); animation: log-newest 1.6s ease-in-out 2; }
 @keyframes log-newest { 50% { box-shadow: 0 0 10px rgb(250 204 21 / 0.7); } }
 @media (prefers-reduced-motion: reduce) { .gacha-log li.log-newest { animation: none; } }
+
+/* 相棒：進化したとき、体のまわりに光の輪が広がる（.monster-stage はもとから position: relative） */
+.evolve-ring { position: absolute; left: 50%; top: 50%; width: 80px; height: 80px; margin: -40px 0 0 -40px; border-radius: 50%; border: 4px solid rgb(253 224 71 / 0.9); box-shadow: 0 0 16px rgb(253 224 71 / 0.8); pointer-events: none; z-index: 1; animation: evolve-ring 1.2s ease-out 3 backwards; }
+@keyframes evolve-ring { from { transform: scale(0.4); opacity: 1; } to { transform: scale(2.4); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .evolve-ring { display: none; } }

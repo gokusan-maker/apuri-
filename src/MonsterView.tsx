@@ -1284,6 +1284,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             🏅{trioStreak >= 2 && <small className="stage-trio-n">{trioStreak}</small>}
           </span>
         )}
+      {/* 進化したときは、体のまわりに光の輪が広がる */}
+      {evolved && <span className="evolve-ring" aria-hidden="true" />}
       <button
         key={poke}
         className={`monster-body${cls}${evolved ? ' evolve' : ''}${poke ? (react === 'tickle' ? ' wiggle' : ' bounce') : ''}`}

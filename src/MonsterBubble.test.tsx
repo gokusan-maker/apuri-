@@ -72,3 +72,11 @@ it('相棒の画面：コインの数が変わると、数字が作りなおさ�
   expect(document.querySelector('.coin-num')).not.toBe(before)
   expect(document.querySelector('.coin-num')!.textContent).toBe('15')
 })
+
+it('相棒：進化したときだけ、体のまわりに光の輪が広がる', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} evolved />)
+  expect(document.querySelector('.evolve-ring')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} />)
+  expect(document.querySelector('.evolve-ring')).toBeNull()
+})
