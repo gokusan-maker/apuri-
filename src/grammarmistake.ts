@@ -125,6 +125,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-intherain': { wrong: 'We waited for the bus in the rainy.', right: 'We waited for the bus in the rain.', why: 'in the rain「雨の中で」。the のあとは名詞 rain（rainy は形容詞）。' },
   'prep-idiom-bythehour': { wrong: 'We rent the boat by hour.', right: 'We rent the boat by the hour.', why: '単位を表す by the hour「1時間いくらで」。by のあとに the を忘れない。' },
   'prep-idiom-inuniform': { wrong: 'The girl on red is my sister.', right: 'The girl in red is my sister.', why: '「～を着て」は in：the girl in red「赤い服の女の子」。on は使わない。' },
+  'prep-idiom-tomysurprise': { wrong: 'To my surprised, the shop was closed.', right: 'To my surprise, the shop was closed.', why: 'to my surprise「おどろいたことに」。my のあとは名詞 surprise（surprised は形容詞）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
