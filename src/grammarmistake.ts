@@ -110,6 +110,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-contrast': { wrong: 'In compare with Tokyo, my town is very quiet.', right: 'In comparison with Tokyo, my town is very quiet.', why: 'in comparison with ～「～とくらべると」。in のあとは名詞 comparison（compare は動詞）。' },
   'prep-idiom-theory': { wrong: 'In theoretical, this plan should work.', right: 'In theory, this plan should work.', why: 'in theory「理論上は・たてまえでは」。in のあとは名詞 theory（theoretical は形容詞）。' },
   'prep-idiom-brief': { wrong: 'In conclude, we need more time.', right: 'In conclusion, we need more time.', why: 'in conclusion「最後に・結論として」。in のあとは名詞 conclusion（conclude は動詞）。' },
+  'prep-idiom-ages': { wrong: 'I haven’t seen you for age!', right: 'I haven’t seen you for ages!', why: 'for ages「長いあいだ・ずっと」。ages と複数形にする（for age とは言わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
