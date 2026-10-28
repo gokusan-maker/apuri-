@@ -12251,6 +12251,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-crosswalk',
+    title: 'Smart Ideas at the Crosswalk',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Crossing the street looks like a simple thing, but it can be hard for some people. Many towns have added small ideas to crosswalks to make them safer for everyone.",
+      "One idea is sound. At some crosswalks in Japan, a bird-like sound plays when the light turns green. This helps people who cannot see well ( A ) the road safely. In some places, the sound is different for each direction, so people can tell which way they may walk.",
+      "Another idea is time. Some crosswalks have lights ( B ) count down the seconds before the signal changes. Then older people and children can decide whether they have enough time to start crossing.",
+      "There are also bumpy yellow blocks on the sidewalk. People can feel them with their feet or a cane and find the edge of the road. Each idea is small, but together they show that a town can be designed with all of its people in mind.",
+    ],
+    ja: [
+      '道をわたるのは簡単なことに見えるが、人によってはむずかしいこともある。多くの町が、横断歩道をだれにとってもより安全にするために、小さな工夫を加えてきた。',
+      '1つ目の工夫は音だ。日本のいくつかの横断歩道では、信号が青になると鳥の鳴き声のような音が鳴る。これは、目がよく見えない人たちが安全に道をわたる助けになる。場所によっては方向ごとに音がちがうので、どちらの向きに歩いてよいかがわかる。',
+      'もう1つの工夫は時間だ。信号が変わるまでの秒数をカウントダウンする表示がある横断歩道もある。そうすれば、お年寄りや子どもは、わたりはじめるのに十分な時間があるかどうかを決められる。',
+      '歩道には、でこぼこした黄色いブロックもある。人々は足やつえでそれを感じとり、道のはしを見つけることができる。1つ1つの工夫は小さいが、合わせると、町はそこに住むすべての人のことを考えて設計できるということがわかる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['cross', 'crossing', 'crossed', 'to crossing'], answer: 0, why: 'help ＋人＋動詞の原形「（人）が～するのを助ける」なので cross。crossing・crossed は help のこの形に入らず、to crossing は to のあとが原形でない。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 lights（もの）で、うしろの count down の主語が欠けているので関係代名詞 that。what は先行詞をとらず、whose はうしろに名詞が、where はうしろに完全な文が必要。' },
+    ],
+    underline: {
+      phrase: 'in mind',
+      choices: ['while thinking about them', 'without seeing them', 'after forgetting them', 'by moving them away'],
+      answer: 0,
+      why: 'with ～ in mind は「～のことを考えて・念頭において」という意味。',
+    },
+    order: {
+      words: ['whether', 'they', 'have', 'enough', 'time'],
+      rest: 'to start crossing',
+      answer: 'whether they have enough time',
+      ja: '十分な時間があるかどうか（whether ＋主語＋動詞「～かどうか」）',
+    },
+    tf: [
+      { statement: '日本のいくつかの横断歩道では、青信号のときに鳥のような音が鳴る。', answer: true, why: '第2段落 a bird-like sound plays when the light turns green。' },
+      { statement: 'カウントダウンの表示は、車の運転手だけのためのものだ。', answer: false, why: '第3段落 older people and children can decide whether they have enough time to start crossing。' },
+      { statement: '黄色いブロックは、足やつえで感じとれる。', answer: true, why: '第4段落 People can feel them with their feet or a cane。' },
+    ],
+    qa: [
+      { q: 'Why is the sound different for each direction in some places?', choices: ['So that people can tell which way they may walk.', 'So that birds will come to the street.', 'So that cars can drive faster.', 'So that the lights save power.'], answer: 0, why: '第2段落 the sound is different for each direction, so people can tell which way they may walk。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
