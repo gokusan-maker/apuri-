@@ -11636,6 +11636,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-swans',
+    title: 'The Long Journey of Swans',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every autumn, thousands of whooper swans fly from Siberia to Japan. They travel more than 3,000 kilometers to spend the winter in lakes and rivers that do not freeze. In early spring, they ( A ) back north to raise their young.",
+      "Swans are large and heavy birds, so flying such a long way takes a lot of energy. To save energy, they often fly in a V shape. The bird at the front pushes through the air, and the birds behind it fly more easily in the moving air. The swans take turns at the front so that no single bird gets too tired.",
+      "Swans usually choose one partner and stay with it for many years. Families also travel together. Young swans learn the route by following their parents, ( B ) is why they can find the same lakes every year.",
+      "In some places in Japan, local people protect the lakes where the swans stay. Every winter, many visitors come to watch the beautiful white birds, and their arrival has become a sign of the changing seasons.",
+    ],
+    ja: [
+      '毎年秋、何千羽ものオオハクチョウがシベリアから日本へ飛んでくる。こおらない湖や川で冬をすごすために、3000キロメートル以上も旅をするのだ。春の初めには、子育てをするためにまた北へ飛んでもどる。',
+      'ハクチョウは大きくて重い鳥なので、そんなに長い道のりを飛ぶにはたくさんのエネルギーがいる。エネルギーを節約するため、ハクチョウはよくV字の形になって飛ぶ。先頭の鳥が空気をおし分けて進み、うしろの鳥たちは動いている空気の中でより楽に飛べる。1羽だけがつかれすぎないよう、ハクチョウたちは先頭を交代する。',
+      'ハクチョウはふつう1羽の相手をえらび、何年もいっしょにいる。家族もいっしょに旅をする。若いハクチョウは親のあとをついて飛ぶことで道すじを覚える。だから毎年同じ湖を見つけられるのだ。',
+      '日本の一部の地域では、地元の人々がハクチョウのとどまる湖を守っている。毎年冬になると、多くの人が美しい白い鳥を見にやってきて、その到着は季節の変わり目のしるしになっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['fly', 'flies', 'flying', 'flown'], answer: 0, why: '主語 they（複数）に続く文の動詞なので fly。flies は単数の主語の形で、flying・flown だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容（親のあとをついて道を覚えること）を受け、「そしてそれが」と続ける関係代名詞 which（which is why ～「それが～の理由だ」）。that はコンマのあとに使えず、what は先行詞なしで使う語、it では接続詞がなく文が2つ並ぶ。' },
+    ],
+    underline: {
+      phrase: 'take turns',
+      choices: ['do something one after another', 'fly faster', 'stop and rest', 'turn around and go home'],
+      answer: 0,
+      why: 'take turns は「交代でする」。先頭を順番にかわるという意味。',
+    },
+    order: {
+      words: ['so', 'that', 'no', 'single', 'bird', 'gets', 'too', 'tired'],
+      rest: '',
+      answer: 'so that no single bird gets too tired',
+      ja: '1羽だけがつかれすぎないように（so that ～「～するように」）',
+    },
+    tf: [
+      { statement: 'オオハクチョウは春に日本へやってくる。', answer: false, why: '第1段落 Every autumn, thousands of whooper swans fly from Siberia to Japan。' },
+      { statement: 'ハクチョウはエネルギーを節約するために、V字の形で飛ぶ。', answer: true, why: '第2段落 To save energy, they often fly in a V shape。' },
+      { statement: '若いハクチョウは、ひとりで道すじをさがして覚える。', answer: false, why: '第3段落 Young swans learn the route by following their parents。' },
+    ],
+    qa: [
+      { q: 'Why do swans take turns at the front?', choices: ['So that no single bird gets too tired.', 'So that they can find food.', 'Because the front is warmer.', 'Because young birds must lead.'], answer: 0, why: '第2段落 The swans take turns at the front so that no single bird gets too tired。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
