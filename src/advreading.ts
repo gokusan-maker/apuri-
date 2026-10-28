@@ -11554,6 +11554,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-hedgehog',
+    title: 'The Spiny Hedgehog',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hedgehogs are small animals covered with thousands of sharp spines. An adult has about 5,000 to 7,000 of them on its back. These spines are not poisonous, and they do not come out easily, but they ( A ) an excellent defense.",
+      "When a hedgehog feels danger, it rolls itself into a tight ball. Its head, legs, and soft belly are hidden inside, and only the spines can be seen from the outside. Most animals that try to bite a hedgehog in this shape quickly give up.",
+      "Hedgehogs are active mainly at night. They walk slowly through gardens and fields, looking for insects, worms, and snails. Because they eat many garden pests, some farmers and gardeners are happy to see them.",
+      "In cold countries, hedgehogs hibernate during the winter. Before winter comes, they eat a lot ( B ) store fat in their bodies. Then they build a nest of dry leaves and sleep there for several months until spring arrives.",
+    ],
+    ja: [
+      'ハリネズミは、何千本ものするどいとげにおおわれた小さな動物だ。おとなには背中に約5000本から7000本のとげがある。このとげに毒はなく、簡単にぬけることもないが、すばらしい守りになる。',
+      'ハリネズミは危険を感じると、体をきつく丸めてボールのようになる。頭や足、やわらかいおなかは中にかくれ、外からはとげしか見えない。この形のハリネズミにかみつこうとしたほとんどの動物は、すぐにあきらめてしまう。',
+      'ハリネズミは、おもに夜に活動する。庭や野原をゆっくり歩きまわり、虫やミミズ、カタツムリをさがす。庭をあらす生き物をたくさん食べてくれるので、ハリネズミを見るとよろこぶ農家や庭師もいる。',
+      '寒い国では、ハリネズミは冬のあいだ冬眠する。冬が来る前に、たくさん食べて体にしぼうをたくわえる。それから、かれ葉で巣を作り、春が来るまで何か月もそこでねむるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['make', 'makes', 'making', 'to make'], answer: 0, why: 'but のあとの文の動詞。主語 they（＝these spines、複数）なので make（make an excellent defense「すばらしい守りになる」）。makes は単数の主語の形で、making・to make だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['to', 'for', 'so', 'by'], answer: 0, why: '目的を表す不定詞「～するために」なので to ＋動詞の原形 store。for・by は前置詞で動詞の原形をとれず、so はうしろに主語と動詞が必要。' },
+    ],
+    underline: {
+      phrase: 'give up',
+      choices: ['stop trying', 'try harder', 'run faster', 'call for help'],
+      answer: 0,
+      why: 'give up は「あきらめる」。とげのボールにかみつこうとしても、すぐにやめてしまうという意味。',
+    },
+    order: {
+      words: ['only', 'the', 'spines', 'can', 'be', 'seen'],
+      rest: 'from the outside',
+      answer: 'only the spines can be seen',
+      ja: 'とげしか見えない（can be seen「見られることができる」）',
+    },
+    tf: [
+      { statement: 'ハリネズミのとげには毒がある。', answer: false, why: '第1段落 These spines are not poisonous。' },
+      { statement: 'ハリネズミは、おもに夜に活動する。', answer: true, why: '第3段落 Hedgehogs are active mainly at night。' },
+      { statement: '寒い国のハリネズミは、冬のあいだも毎晩えさをさがす。', answer: false, why: '第4段落 In cold countries, hedgehogs hibernate during the winter。' },
+    ],
+    qa: [
+      { q: 'Why are some gardeners happy to see hedgehogs?', choices: ['Because they eat many garden pests.', 'Because they plant flowers.', 'Because they scare away birds.', 'Because they make nests in trees.'], answer: 0, why: '第3段落 Because they eat many garden pests, some farmers and gardeners are happy to see them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
