@@ -128,6 +128,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-tomysurprise': { wrong: 'To my surprised, the shop was closed.', right: 'To my surprise, the shop was closed.', why: 'to my surprise「おどろいたことに」。my のあとは名詞 surprise（surprised は形容詞）。' },
   'prep-idiom-latest': { wrong: 'Please hand in your report by Friday at the late.', right: 'Please hand in your report by Friday at the latest.', why: 'at the latest「おそくとも」。最上級 latest を使う（at the late とは言わない）。' },
   'prep-idiom-onthemove': { wrong: 'I was in a rushing, so I took a taxi.', right: 'I was in a rush, so I took a taxi.', why: 'in a rush「急いで」。a のあとは名詞 rush（rushing は入らない）。' },
+  'prep-idiom-underage': { wrong: 'Children under the aged of six can ride for free.', right: 'Children under the age of six can ride for free.', why: 'under the age of ～「～歳未満の」。the のあとは名詞 age（aged は入らない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
