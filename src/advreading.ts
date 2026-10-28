@@ -11513,6 +11513,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-supplier-price',
+    title: 'E-mail: Change in Prices',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Park, Thank you for your continued business with Fresh Farm Supplies. We are writing to inform you that the prices of some of our products will change from November 1.",
+      "Because of poor weather this summer, the cost of growing vegetables has gone up. As a result, the prices of tomatoes, carrots, and onions will increase by about 8 percent. However, the prices of rice and other grains will ( A ) the same.",
+      "We understand that this may affect your restaurant's budget. If you place an order of more than 50,000 yen at one time, we will continue to give you a 5 percent discount, just as before. We also offer free delivery for all orders made ( B ) Friday at noon.",
+      "We have attached our new price list for your reference. If you have any questions, please feel free to contact me directly. We appreciate your understanding and look forward to serving you for many years to come. Sincerely, Tom Becker, Sales Manager",
+    ],
+    ja: [
+      'パク様　いつもフレッシュ・ファーム・サプライズをごひいきいただき、ありがとうございます。11月1日から、当社の商品の一部の値段が変わることをお知らせいたします。',
+      '今年の夏の悪天候のため、野菜を育てる費用が上がりました。その結果、トマト、ニンジン、タマネギの値段が約8パーセント上がります。しかし、米やほかの穀物の値段は変わりません。',
+      'このことが御店の予算にえいきょうするかもしれないことは承知しております。一度に5万円をこえるご注文には、これまでどおり5パーセントの割引をつづけます。また、金曜日の正午までのご注文はすべて、配送料が無料です。',
+      'ご参考までに、新しい価格表を添付いたしました。ご質問があれば、どうぞえんりょなく私に直接ご連絡ください。ご理解に感謝し、これからも長くお役に立てることを楽しみにしております。営業部長　トム・ベッカー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['remain', 'remains', 'remaining', 'remained'], answer: 0, why: 'will のあとは動詞の原形なので remain（remain the same「変わらない」）。remains・remaining・remained は will のあとに置けない。' },
+      { id: 'B', choices: ['before', 'ago', 'since of', 'previous'], answer: 0, why: '「金曜日の正午より前に」なので前置詞 before。ago は「（今から）～前に」で名詞のうしろに置く語、since of という形はなく、previous は形容詞なので名詞の前に置けない。' },
+    ],
+    underline: {
+      phrase: 'for your reference',
+      choices: ['so that you can look at it when needed', 'as a free gift', 'to sign and return', 'to show to customers'],
+      answer: 0,
+      why: 'for your reference は「ご参考までに」。必要なときに見られるように価格表をつけたという意味。',
+    },
+    order: {
+      words: ['the', 'cost', 'of', 'growing', 'vegetables', 'has', 'gone', 'up'],
+      rest: '',
+      answer: 'the cost of growing vegetables has gone up',
+      ja: '野菜を育てる費用が上がった（go up「上がる」）',
+    },
+    tf: [
+      { statement: 'トマトの値段は約8パーセント上がる。', answer: true, why: '第2段落 the prices of tomatoes, carrots, and onions will increase by about 8 percent。' },
+      { statement: '米の値段も上がる。', answer: false, why: '第2段落 the prices of rice and other grains will remain the same。' },
+      { statement: '5万円をこえる注文の割引は、なくなる。', answer: false, why: '第3段落 we will continue to give you a 5 percent discount, just as before。' },
+    ],
+    qa: [
+      { q: 'Why are some prices going up?', choices: ['Poor summer weather made growing vegetables more expensive.', 'The company opened a new shop.', 'Delivery costs have doubled.', 'The restaurant ordered less.'], answer: 0, why: '第2段落 Because of poor weather this summer, the cost of growing vegetables has gone up。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
