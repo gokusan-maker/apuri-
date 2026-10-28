@@ -168,7 +168,7 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         {q.choices.map((c, k) => (
           <button
             key={c}
-            className={`choice${picked !== null && k === q.answer ? ' correct' : ''}${picked === k && k !== q.answer ? ' wrong' : ''}`}
+            className={`choice${picked !== null && k === q.answer ? ' correct' : ''}${picked === k && k !== q.answer ? ' wrong' : ''}${picked === k ? ' rippled' : ''}`}
             disabled={picked !== null}
             onClick={() => {
               setPicked(k)

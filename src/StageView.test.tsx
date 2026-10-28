@@ -1313,3 +1313,15 @@ it('闘技場：押した選択肢だけに光る波紋（rippled）がつく', 
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena \.choice\.rippled::after/)
 })
+
+it('ボス城の階：押した選択肢に光る波紋（rippled）がつく', async () => {
+  localStorage.clear()
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  render(<BossFloor title="1階" qs={bossFloorQs('中1', 0)} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.bfloor .choice.rippled')).toBeNull()
+  fireEvent.click(document.querySelector<HTMLButtonElement>('.bfloor .choice')!)
+  expect(document.querySelectorAll('.bfloor .choice.rippled')).toHaveLength(1)
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.choice\.rippled::after/)
+})
