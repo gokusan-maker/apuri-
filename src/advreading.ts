@@ -11923,6 +11923,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-lion-pride',
+    title: 'Life in a Lion Pride',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Most big cats, such as tigers and leopards, live alone. Lions are different. They live in groups called prides, which usually ( A ) of several adult females, their cubs, and one to three adult males.",
+      "The females in a pride are often sisters, mothers, and daughters, so they stay together for their whole lives. They do most of the hunting, working as a team to catch large animals like zebras. By hunting together, they can catch prey that would be too big for one lion.",
+      "The males have a different job. They protect the pride's area from other males, often by roaring loudly at night. A lion's roar can be heard up to eight kilometers away. Young males leave the pride when they are two or three years old and live on their own until they are strong enough to join another pride.",
+      "Living in a group has many advantages. The females raise their cubs together, and one mother will even feed another mother's cubs. In this way, the pride helps more young lions grow up safely, ( B ) is important for the future of the group.",
+    ],
+    ja: [
+      'トラやヒョウなど、ほとんどの大型のネコのなかまは1頭で暮らしている。ライオンはちがう。プライドとよばれる群れで暮らし、群れはふつう数頭のおとなのメス、その子どもたち、1頭から3頭のおとなのオスでできている。',
+      '群れのメスたちは姉妹や母と娘であることが多く、一生いっしょにいる。メスが狩りのほとんどをし、チームとして協力してシマウマのような大きな動物をつかまえる。いっしょに狩りをすることで、1頭では大きすぎるえものもつかまえられるのだ。',
+      'オスには別の役目がある。夜に大きな声でほえることなどで、ほかのオスから群れのなわばりを守るのだ。ライオンのほえ声は、8キロメートルもはなれたところまで聞こえることがある。若いオスは2才か3才になると群れをはなれ、ほかの群れに加われるほど強くなるまで、ひとりで暮らす。',
+      '群れで暮らすことには多くの利点がある。メスたちはいっしょに子育てをし、母親がほかの母親の子に乳をあたえることさえある。このようにして、群れはより多くの子どもが安全に育つのを助けており、それは群れの将来にとって大切なことだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['consist', 'consists', 'consisting', 'are consisted'], answer: 0, why: '関係代名詞 which の先行詞は prides（複数）なので consist（consist of ～「～でできている」）。consists は単数の形で、consisting だけでは関係詞節の動詞にならない。consist は受け身にしないので are consisted も使えない。' },
+      { id: 'B', choices: ['which', 'that', 'what', 'it'], answer: 0, why: 'コンマのあとで前の内容（より多くの子どもが安全に育つこと）を受け、「そしてそれは」と続ける関係代名詞 which。that はコンマのあとに使えず、what は先行詞なしで使う語、it では接続詞がなく文が2つ並ぶ。' },
+    ],
+    underline: {
+      phrase: 'advantages',
+      choices: ['good points', 'dangers', 'rules', 'problems'],
+      answer: 0,
+      why: 'advantage は「利点・よい点」（⇔ disadvantage）。群れで暮らすよいところを、このあとにあげている。',
+    },
+    order: {
+      words: ['prey', 'that', 'would', 'be', 'too', 'big', 'for', 'one', 'lion'],
+      rest: '',
+      answer: 'prey that would be too big for one lion',
+      ja: '1頭のライオンには大きすぎるえもの（that 以下が prey を説明する）',
+    },
+    tf: [
+      { statement: 'トラも、ライオンと同じように群れで暮らす。', answer: false, why: '第1段落 Most big cats, such as tigers and leopards, live alone. Lions are different。' },
+      { statement: '群れの狩りのほとんどは、メスがする。', answer: true, why: '第2段落 They do most of the hunting。' },
+      { statement: '若いオスは、一生同じ群れにいる。', answer: false, why: '第3段落 Young males leave the pride when they are two or three years old。' },
+    ],
+    qa: [
+      { q: 'What is the main job of the males in a pride?', choices: ['To protect the pride’s area from other males.', 'To hunt zebras.', 'To feed the cubs.', 'To find water.'], answer: 0, why: '第3段落 They protect the pride’s area from other males。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
