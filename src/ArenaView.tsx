@@ -352,7 +352,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       </div>
       <div className="choices">
         {q.choices.map((c, i) => (
-          <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}`} disabled={picked !== null} onClick={(e) => pick(i, e.timeStamp)}>
+          <button key={c} className={`choice${picked !== null && i === q.answer ? ' correct' : ''}${picked === i && i !== q.answer ? ' wrong' : ''}${picked === i ? ' rippled' : ''}`} disabled={picked !== null} onClick={(e) => pick(i, e.timeStamp)}>
             {c}
           </button>
         ))}

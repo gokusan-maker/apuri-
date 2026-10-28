@@ -1301,3 +1301,15 @@ it('闘技場：無限の階の入り口は金色で「♾ 無限の階」', asy
   expect(top.classList.contains('summit')).toBe(true)
   expect(top.textContent).toContain('♾ 無限の階')
 })
+
+it('闘技場：押した選択肢だけに光る波紋（rippled）がつく', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  expect(document.querySelector('.arena .choice.rippled')).toBeNull()
+  arenaPick(false)
+  expect(document.querySelectorAll('.arena .choice.rippled')).toHaveLength(1)
+  expect(document.querySelector('.arena .choice.rippled')!.classList.contains('wrong')).toBe(true)
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena \.choice\.rippled::after/)
+})
