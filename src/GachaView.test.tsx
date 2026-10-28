@@ -309,3 +309,8 @@ it('ガチャのまとめ引き：SR・UR のカードだけふちが虹色に�
   expect(css).toMatch(/\.gacha-multi li\.r-SR, \.gacha-multi li\.r-UR \{ animation: treasure-pop 0\.6s ease-out both, rare-rim/)
   expect(css).toMatch(/@keyframes rare-rim/)
 })
+
+it('ガチャ：ボタンを押すとぷるんとゆれる（CSS。押せないときはゆれない）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-btn:not\(:disabled\):active \{ animation: gacha-jiggle/)
+})
