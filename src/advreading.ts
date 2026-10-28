@@ -11677,6 +11677,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-lost-item',
+    title: 'E-mail: An Item Left at the Hotel',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Mr. Garcia, Thank you for staying at the Riverside Hotel from May 2 to May 5. After you checked out, our cleaning staff found a black jacket in the closet of your room, number 412. We believe it ( A ) to you.",
+      "The jacket is being kept safely at our front desk. If you would like us to send it to you, please reply to this e-mail with your full address and phone number. We will send it by express mail, and it should arrive within three to five days.",
+      "There is a small charge for shipping, which you can pay by credit card. Alternatively, if you plan to visit our area again soon, you are welcome to pick it up in person. Please bring a photo ID ( B ) you come.",
+      "We will keep the jacket for 60 days. After that, it will be given to a local charity. We look forward to hearing from you. Best regards, Hannah Lee, Guest Services, Riverside Hotel",
+    ],
+    ja: [
+      'ガルシア様　5月2日から5日まで、リバーサイド・ホテルにお泊まりいただきありがとうございました。チェックアウトのあと、清掃スタッフが412号室のクローゼットで黒い上着を見つけました。お客様のものだと思われます。',
+      '上着はフロントで大切に保管しております。お送りすることをご希望でしたら、このメールにご住所とお電話番号をご返信ください。速達でお送りし、3日から5日ほどで届くはずです。',
+      '送料が少しかかり、クレジットカードでおしはらいいただけます。または、近いうちにまたこちらにいらっしゃる予定でしたら、ご自身で受け取りにいらしてもかまいません。お越しの際は、写真つきの身分証明書をお持ちください。',
+      '上着は60日間お預かりします。その後は、地元の慈善団体に寄付いたします。ご連絡をお待ちしております。リバーサイド・ホテル　ゲストサービス　ハンナ・リー',
+    ],
+    blanks: [
+      { id: 'A', choices: ['belongs', 'belong', 'belonging', 'is belonged'], answer: 0, why: 'that が省略された節の主語 it（単数）に続く動詞なので belongs（belong to ～「～のものである」）。belong は主語と合わず、belonging だけでは文の動詞にならない。belong は受け身にしないので is belonged も使えない。' },
+      { id: 'B', choices: ['when', 'during', 'while of', 'at'], answer: 0, why: 'うしろに主語と動詞（you come）が続くので接続詞 when「～するときに」。during・at は前置詞で、主語と動詞の文の前に置けない。while of という形はない。' },
+    ],
+    underline: {
+      phrase: 'in person',
+      choices: ['by coming yourself', 'by mail', 'by phone', 'through a friend'],
+      answer: 0,
+      why: 'in person は「本人が直接・自分で」。ホテルまで自分で取りに来るという意味。',
+    },
+    order: {
+      words: ['the', 'jacket', 'is', 'being', 'kept', 'safely'],
+      rest: 'at our front desk',
+      answer: 'the jacket is being kept safely',
+      ja: '上着は大切に保管されている（is being ＋過去分詞「～されているところだ」）',
+    },
+    tf: [
+      { statement: '上着は412号室のクローゼットで見つかった。', answer: true, why: '第1段落 found a black jacket in the closet of your room, number 412。' },
+      { statement: '上着を送ってもらう送料は無料だ。', answer: false, why: '第3段落 There is a small charge for shipping。' },
+      { statement: 'ホテルは上着をずっと預かってくれる。', answer: false, why: '第4段落 We will keep the jacket for 60 days。' },
+    ],
+    qa: [
+      { q: 'What should Mr. Garcia send if he wants the jacket mailed?', choices: ['His full address and phone number.', 'A photo of the jacket.', 'His room key.', 'A letter to the charity.'], answer: 0, why: '第2段落 please reply to this e-mail with your full address and phone number。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
