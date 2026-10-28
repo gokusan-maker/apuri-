@@ -12989,6 +12989,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-eyeglasses',
+    title: 'Seeing Clearly Again',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long ago, people ( A ) eyes became weak with age had a serious problem. They could no longer read small letters or do fine work such as sewing. For many workers, this meant the end of their careers.",
+      "Around the end of the thirteenth century, eyeglasses appeared in Italy. The first ones were simply two round pieces of glass in frames joined together. People had to hold them in front of their eyes or balance them on their noses.",
+      "Surprisingly, it took hundreds of years before long arms were added to the sides ( B ) the glasses would stay on the face. After that, people could wear them all day while they walked, read, or worked.",
+      "Today, many people around the world wear glasses or contact lenses. Thanks to this old invention, people can keep reading and learning for their whole lives, and glasses have even become a part of fashion.",
+    ],
+    ja: [
+      '昔、年をとって目が弱くなった人たちは、深刻な問題をかかえていた。小さな文字を読んだり、ぬいものなどの細かい作業をしたりできなくなったのだ。多くの働く人にとって、それは仕事の終わりを意味した。',
+      '13世紀の終わりごろ、イタリアでめがねが登場した。最初のめがねは、わくに入れた2枚の丸いガラスをつないだだけのものだった。人々はそれを目の前で持つか、鼻の上にのせてバランスをとらなければならなかった。',
+      'おどろいたことに、めがねが顔からずれないように横に長いつるがつけられるまで、何百年もかかった。それ以来、人々は歩いたり読んだり働いたりしながら、一日中めがねをかけていられるようになった。',
+      '今日、世界中の多くの人がめがねやコンタクトレンズを使っている。この古い発明のおかげで、人々は一生読んだり学んだりし続けられ、めがねはおしゃれの一部にさえなっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'who', 'which', 'what'], answer: 0, why: 'people の「目」が弱くなった、と所有の関係なので関係代名詞 whose（whose eyes「その目が」）。who・which はうしろに欠けた部分が必要で、what は先行詞をとらない。' },
+      { id: 'B', choices: ['so that', 'in order', 'because of', 'despite'], answer: 0, why: '「めがねが顔からずれないように」と目的を表し、うしろに文が続くので so that。in order は to が、because of・despite は名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'the end of their careers',
+      choices: ['they could not continue their jobs', 'they got a better job', 'they finished school', 'they became rich'],
+      answer: 0,
+      why: 'career は「仕事・職業人生」。目が弱くなると、仕事を続けられなくなったという意味。',
+    },
+    order: {
+      words: ['keep', 'reading', 'and', 'learning'],
+      rest: 'for their whole lives',
+      answer: 'keep reading and learning',
+      ja: '読んだり学んだりし続ける（keep ～ing「～し続ける」）',
+    },
+    tf: [
+      { statement: '最初のめがねには、耳にかけるつるがついていた。', answer: false, why: '第2・3段落 People had to hold them ... it took hundreds of years before long arms were added。' },
+      { statement: 'めがねは、13世紀の終わりごろイタリアで登場した。', answer: true, why: '第2段落 Around the end of the thirteenth century, eyeglasses appeared in Italy。' },
+      { statement: '今日、めがねはおしゃれの一部にもなっている。', answer: true, why: '第4段落 glasses have even become a part of fashion。' },
+    ],
+    qa: [
+      { q: 'What problem did people with weak eyes have long ago?', choices: ['They could not read small letters or do fine work.', 'They could not walk.', 'They could not hear well.', 'They could not eat hard food.'], answer: 0, why: '第1段落 They could no longer read small letters or do fine work such as sewing。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
