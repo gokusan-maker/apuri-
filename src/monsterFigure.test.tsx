@@ -103,9 +103,9 @@ it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラ�
   const { Zukan } = await import('./MonsterView')
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon' }]} />)
-  expect(screen.getByText(/キャラクター 2 \/ 10/)).toBeInTheDocument()
+  expect(screen.getByText(/キャラクター 2 \/ 11/)).toBeInTheDocument()
   expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
-  expect(screen.getByLabelText("まだ出会っていないキャラクター 8").textContent).toBe("？×8")
+  expect(screen.getByLabelText("まだ出会っていないキャラクター 9").textContent).toBe("？×9")
 })
 
 it('図鑑のキャラクターをタップすると説明とチャレンジの種類が出る', async () => {
@@ -132,7 +132,7 @@ it('コレクション表：キャラクター×色ちがいの持っている�
   const { Zukan } = await import('./MonsterView')
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon', kind: 'kin' }]} />)
-  expect(screen.getByLabelText('コレクション表 2 / 80・コンプリート率 2%').textContent).toBe('2/80')
+  expect(screen.getByLabelText('コレクション表 2 / 88・コンプリート率 2%').textContent).toBe('2/88')
   expect(screen.getByRole('progressbar', { name: 'コンプリート率' })).toHaveAttribute('aria-valuenow', '2')
   expect(screen.getByLabelText('ドラコ・きんいろ（持っている）')).toBeInTheDocument()
   expect(screen.getByLabelText('ドラコ・にじいろ（まだ）')).toBeInTheDocument()

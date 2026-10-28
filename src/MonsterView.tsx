@@ -254,7 +254,7 @@ function Markings({ form, line }: { form: Form; line: string }) {
 }
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
-const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster']
+const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster', 'sheep']
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
   if (species === 'owl')
     return (
@@ -266,6 +266,7 @@ function SpeciesTail({ species, fill, line }: { species: string; fill: string; l
   if (species === 'turtle') return <path d="M78 84 Q90 86 94 80 Q88 78 78 78 Z" fill={fill} stroke={line} strokeWidth="2.2" strokeLinejoin="round" />
   if (species === 'rabbit') return <circle cx="82" cy="80" r="7" fill="#fff" stroke={line} strokeWidth="2" />
   if (species === 'hamster') return <circle cx="80" cy="82" r="4" fill={fill} stroke={line} strokeWidth="2" />
+  if (species === 'sheep') return <circle cx="82" cy="80" r="6" fill="#fff" stroke={line} strokeWidth="2" />
   if (species === 'cat')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinecap="round" fill="none">
@@ -362,6 +363,22 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'sheep')
+    return (
+      <g>
+        {/* もこもこの毛と、くるんとした角 */}
+        <g fill="#fff" stroke={line} strokeWidth="2">
+          <circle cx="32" cy="24" r="9" />
+          <circle cx="44" cy="18" r="9" />
+          <circle cx="56" cy="18" r="9" />
+          <circle cx="68" cy="24" r="9" />
+        </g>
+        <g fill="none" stroke="#a16207" strokeWidth="4" strokeLinecap="round">
+          <path d="M22 40 Q10 34 14 24 Q20 18 24 28" />
+          <path d="M78 40 Q90 34 86 24 Q80 18 76 28" />
+        </g>
+      </g>
+    )
   if (species === 'hamster')
     return (
       <g stroke={line} strokeWidth="2.5">
@@ -399,6 +416,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'sheep')
+    return (
+      <g fill="#fff" stroke="#cbd5e1" strokeWidth="1.5">
+        <circle cx="22" cy="78" r="7" />
+        <circle cx="78" cy="78" r="7" />
+        <circle cx="50" cy="90" r="7" />
+      </g>
+    )
   if (species === 'hamster')
     return (
       <g>
