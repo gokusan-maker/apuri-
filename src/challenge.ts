@@ -41,6 +41,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   wolf: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   parrot: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   bat: { dir: 'listen', label: 'リスニング', icon: '🎧' },
+  seahorse: { dir: 'en-ja', label: '英→日', icon: '🌊' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
