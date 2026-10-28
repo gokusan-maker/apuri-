@@ -21,7 +21,7 @@ import { Castle } from './CastleView'
 import { BossFloor } from './BossFloorView'
 import { Arena } from './ArenaView'
 import { MonsterFigure } from './MonsterView'
-import { arenaFloor, arenaStart, loadArenaBest, loadArenaBestStreak } from './arena'
+import { arenaFloor, loadArenaBest, loadArenaBestStreak, loadArenaLast } from './arena'
 import { nextBossMilestone, BOSS_MILESTONE_COINS, loadBossMilestones, newBossMilestones, saveBossMilestones, BC_FLOOR_COINS, BC_PERFECT_COINS, ALL_BOSS_TICKETS, ALL_BOSS_TITLE, allBossBeaten, loadAllBossClaimed, saveAllBossClaimed, BC_FLOORS, BC_KIND, bcPassOf, BC_WORD_QS, floorBossLook, loadBcBest, recordBcBest, BC_QS, bossCastleFloors, bossFloorQs, retryFloorQs, bossFarewell, bossPassages, bossTaunt, LEVEL_BOSS_LOOK, loadBcClears, loadBossLevel, loadLevelBoss, saveBcClears, saveBossLevel, saveLevelBoss, type BcFloor } from './bosscastle'
 import { COURSES, courseById, courseWords, loadCourse, type CourseId } from './wordcourse'
 import { LevelPick } from './LevelPickView'
@@ -588,7 +588,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   }
 
   // 闘技場（城の下）：エンドレス
-  if (part === 'boss' && arenaOn) return <Arena start={arenaStart(bossLv)} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} onAnswer={onAnswer} me={partner ? <span className="af-fig"><MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood="happy" /></span> : undefined} />
+  if (part === 'boss' && arenaOn) return <Arena start={loadArenaLast()} onExit={() => setArenaOn(false)} onCoins={onRankBonus} onTicket={onCastleReward} onAnswer={onAnswer} me={partner ? <span className="af-fig"><MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood="happy" /></span> : undefined} />
 
   // ボスの城の問題の階
   if (part === 'boss' && bcFloor)
@@ -663,11 +663,11 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
             else setBcFloor({ ...f, qs: bossFloorQs(f.course, f.floor), first: !bcClears.includes(f.id) })
           }}
         />
-        {/* 城の下の闘技場：エンドレスで戦い、正解でレベルアップ・まちがいでレベルダウン（オーナーの要望） */}
+        {/* 城の下の闘技場：エンドレスで戦い、正解で上の階・まちがいで下の階。前回の階から始まる（オーナーの要望） */}
         <div className="arena-entry" role="region" aria-label="闘技場">
           <p className="arena-entry-title">🏟 闘技場（エンドレス）</p>
           <p className="arena-entry-sub">
-            正解で上の階、まちがいで下の階へ。{arenaBest !== null ? `最高 ${arenaFloor(arenaBest)}` : 'どこまで上がれる？'}
+            正解で上の階、まちがいで下の階へ。連続正解で一気に上がる！ {loadArenaLast() > 0 ? `前回の ${arenaFloor(loadArenaLast())}から` : '1階から'}・{arenaBest !== null ? `最高 ${arenaFloor(arenaBest)}` : 'どこまで上がれる？'}
             {loadArenaBestStreak() >= 2 && `・🔥最高 ${loadArenaBestStreak()}連続`}
           </p>
           <button

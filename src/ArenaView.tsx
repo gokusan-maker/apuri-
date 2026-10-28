@@ -1,14 +1,14 @@
 import { useRef, useState } from 'react'
 import type { CSSProperties, ReactNode } from 'react'
-import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, arenaLvLabel, isArenaEndless, isArenaEndlessTicket, isArenaLevelDown, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, loadArenaBestStreak, recordArenaBest, recordArenaBestStreak } from './arena'
+import { ARENA_BEST_COINS, ARENA_ENDLESS, ARENA_PER, ARENA_QUICK_MS, arenaFloor, arenaLevel, arenaRank, arenaToNext, isArenaEndless, isArenaEndlessTicket, isArenaLevelUp, arenaNextTitle, arenaSky, arenaTitle, arenaTitleIconAt, arenaNext, isArenaJump, arenaQuestionAt, isArenaGrammar, isArenaReading, loadArenaBest, loadArenaBestStreak, recordArenaBest, recordArenaBestStreak, saveArenaLast } from './arena'
 import { quizXp, type Source } from './monster'
-import { COURSES } from './wordcourse'
 import { playCorrect, playWrong } from './sound'
 import { speak } from './speech'
 
-// 闘技場：エンドレスで戦う。正解でレベルアップ、まちがいでレベルダウン。「終了」で、いまのレベルを階で伝える。
+// 闘技場：エンドレスで戦う。正解で上の階、まちがいで1階下へ。連続正解では一気に何階も上がる。「終了」で、いまの階を伝える。
+// レベルは見せず、階だけで見せる。次の挑戦は前回の階から始まる（オーナーの要望）
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
-// 1レベル20階。レベルの区切りをこえると「LEVEL UP!」の演出。いちばん上のレベルの上は無限の階
+// 20階ごとの節目に着くとお祝いの演出。300階の上は無限の階
 const NO_KIND = { word: [0, 0], grammar: [0, 0], reading: [0, 0] } as Record<'word' | 'grammar' | 'reading', [number, number]>
 const KIND_LABEL = { word: '🔤 単語', grammar: '📐 文法', reading: '📖 読解' } as const
 const SHAFT = 2 // いまの階の上下に見せる階の数
@@ -119,10 +119,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
   function next(at = 0) {
     shownAt.current = at
     setLv(nextLv)
+    saveArenaLast(nextLv)
     setQ(arenaQuestionAt(nextLv, count, Math.random, q.word.id))
     setPicked(null)
   }
   function finish() {
+    saveArenaLast(nextLv)
     // 答えたあとに終了したときは、上下したあとの階で終わる
     if (picked !== null) {
       setLv(nextLv)
@@ -150,10 +152,10 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           </p>
         )}
         <p className="arena-title-badge">称号：{arenaTitle(lv)}</p>
-        {/* きょう、はじめのレベルより上のレベルまで上がれたら */}
-        {arenaLvLabel(top) !== arenaLvLabel(start) && top > start && (
+        {/* この回、はじめの階よりどれだけ上がれたか */}
+        {top > base && (
           <p className="arena-lv-climb">
-            📈 {arenaLvLabel(start)} → {arenaLvLabel(top)} まで上がった！
+            📈 {arenaFloor(base)} → {arenaFloor(top)} まで上がった！
           </p>
         )}
         {arenaNextTitle(lv) && (
@@ -268,9 +270,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             ) : (
               <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}${f === shown && shield ? ' shielded' : ''}${f === ARENA_ENDLESS ? ' summit' : ''}${f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS ? ' lv-gate' : ''}${isArenaEndless(f) ? ' endless' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
                 <span className="af-num">{f + 1}階</span>
-                <span className="af-lv">{arenaLvLabel(f)}</span>
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
-                {f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS && <span className="af-gate">▶ {arenaLvLabel(f)} START</span>}
+                {f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS && <span className="af-gate">⭐ 節目</span>}
                 {arenaTitleIconAt(f) && <span className="af-title" title={`ここから称号「${arenaTitle(f)}」`}>{arenaTitleIconAt(f)}</span>}
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
                 {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}${picked !== null && !correct ? ' ouch' : ''}`} aria-hidden="true">
@@ -298,8 +299,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         )}
         {levelUp && (
           <span key={`m${count}`} className="arena-levelup" role="status">
-            <b>LEVEL UP!</b>
-            <span>{isArenaEndless(nextLv) ? (isArenaEndless(lv) ? `🎉 ${nextLv + 1}階 到達！` : '♾ 無限の階へ！') : `${arenaLvLabel(nextLv)}レベルに上がった！`}</span>
+            <b>🎉 {nextLv + 1}階 到達！</b>
+            <span>{isArenaEndless(nextLv) && !isArenaEndless(lv) ? '♾ 無限の階へ！' : 'ここまで来た！'}</span>
           </span>
         )}
         {dir === 'down' && <span key={`d${count}`} className="arena-arrow down" aria-hidden="true">⬇</span>}
@@ -308,7 +309,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         いま <strong>{arenaFloor(shown)}</strong>
         <span className="arena-now-title">{arenaTitle(shown)}</span>
       </p>
-      {/* 次のレベルまでの進み（1レベル20階） */}
+      {/* 次の節目（20階ごと）までの進み */}
       {!(picked !== null && goalJust) && (
         <p className="arena-goal">
           🎯 {goals > 0 ? `次の目標（${goals + 1}つ目）` : 'この回の目標'}：{goalAt + 1}階
@@ -322,8 +323,6 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           {arenaToNext(shown).label}まで あと{arenaToNext(shown).floors}階
         </span>
       </div>
-      {/* 無限の階は毎問ちがうレベルから出るので、どのレベルの問題かを見せる */}
-      {isArenaEndless(lv) && <p className="arena-qtag endless-lv">♾ {COURSES[q.lv].label}レベルの問題</p>}
       {isArenaGrammar(q) && <p className="arena-qtag">📐 文法</p>}
       {isArenaReading(q) && <p className="arena-qtag reading">📖 読解　文の意味をえらぼう</p>}
       <div className="arena-q">
@@ -344,7 +343,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       {picked !== null && (
         <>
           <p className={`arena-move ${correct ? 'up' : 'down'}`} role="status">
-            {!correct && guarded ? '🛡 盾がまもった！ 階はそのまま' : correct ? `${jump && nextLv - lv === 2 ? `🚀 ${streak}連続！ 2階ジャンプ！` : isArenaLevelUp(lv, nextLv) ? '⬆ レベルアップ！' : '⬆ 1階のぼった！'} ${arenaFloor(nextLv)}へ` : nextLv < lv ? `${isArenaLevelDown(lv, nextLv) ? '⬇ レベルダウン…' : '⬇ 1階おちた…'} ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
+            {!correct && guarded ? '🛡 盾がまもった！ 階はそのまま' : correct ? `${jump ? `🚀 ${streak}連続！ 一気に${nextLv - lv}階アップ！` : '⬆ 1階のぼった！'} ${arenaFloor(nextLv)}へ` : nextLv < lv ? `⬇ 1階おちた… ${arenaFloor(nextLv)}へ` : '😣 いちばん下の階でふんばった！'}
           </p>
           {!correct && <p className="arena-answer">正解は「{q.choices[q.answer]}」</p>}
           {correct && gotShield && <p className="arena-record">🛡 {SHIELD_EVERY}連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）</p>}
@@ -378,7 +377,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
             </p>
           )}
           <button className="good next-unit-btn" onClick={(e) => next(e.timeStamp)}>
-            次へ（{arenaLvLabel(nextLv)}）
+            次へ（{arenaFloor(nextLv)}）
           </button>
         </>
       )}

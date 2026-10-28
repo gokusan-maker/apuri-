@@ -4,7 +4,7 @@ import { BOSSES, type BossLook } from './boss'
 import { LEVEL_BOSS_LOOK } from './bosscastle'
 import { levelUnits } from './grammarcastle'
 import { randomQuestion, shuffle, type Question } from './quiz'
-import { COURSES, courseWords, type CourseId } from './wordcourse'
+import { COURSES, courseWords } from './wordcourse'
 import type { Word } from './words'
 
 // 1つのレベルを20階に分ける（中1＝1〜20階、中2＝21〜40階…）。いちばん上のレベルの上は、いろいろなレベルの問題がランダムに出る無限の階（オーナーの要望）
@@ -44,17 +44,18 @@ export function arenaToNext(f: number): { floors: number; label: string; progres
   }
   const k = x % ARENA_PER
   const next = x - k + ARENA_PER
-  return { floors: ARENA_PER - k, label: isArenaEndless(next) ? '♾ 無限の階' : `${COURSES[arenaLevel(next)!].label}レベル`, progress: k / ARENA_PER }
+  return { floors: ARENA_PER - k, label: isArenaEndless(next) ? '♾ 無限の階' : `${next + 1}階`, progress: k / ARENA_PER }
 }
 export const isArenaLevelDown = (from: number, to: number) => to < from && (arenaLevel(to) ?? LAST + 1) < (arenaLevel(from) ?? LAST + 1)
-// 正解なら上へ、まちがいなら下へ（1階より下へは行かない）。
-// streak（この答えを入れた連続正解の数）が3の倍数になったら、2階ジャンプ
-export const ARENA_JUMP_EVERY = 3
-export const isArenaJump = (correct: boolean, streak = 0) => correct && streak > 0 && streak % ARENA_JUMP_EVERY === 0
-export const arenaNext = (f: number, correct: boolean, streak = 0): number => atLeast0(f + (correct ? (isArenaJump(correct, streak) ? 2 : 1) : -1))
+// 正解なら上へ、まちがいなら1階下へ（1階より下へは行かない）。
+// 連続正解では一気に上がる：streak（この答えを入れた連続正解の数）の階だけ上がる（最大5階）（オーナーの要望）
+export const ARENA_MAX_JUMP = 5
+export const arenaStep = (streak = 1) => Math.max(1, Math.min(ARENA_MAX_JUMP, streak))
+export const isArenaJump = (correct: boolean, streak = 0) => correct && streak >= 2
+export const arenaNext = (f: number, correct: boolean, streak = 0): number => atLeast0(f + (correct ? arenaStep(streak) : -1))
 export const arenaCourse = (f: number) => COURSES[arenaLevel(f) ?? LAST]
-export const arenaLvLabel = (f: number) => (isArenaEndless(f) ? '♾ ランダム' : arenaCourse(f).label)
-export const arenaFloor = (f: number): string => `${atLeast0(f) + 1}階（${isArenaEndless(f) ? 'ランダム' : `${arenaCourse(f).label}レベル`}）`
+// 闘技場はレベルではなく階だけで見せる（オーナーの要望）。問題のむずかしさは、うらで階から決める
+export const arenaFloor = (f: number): string => `${atLeast0(f) + 1}階`
 // 階ごとの称号（結果で伝える）。レベルの区切りで上がる
 const TITLES: [number, string][] = [
   [ARENA_ENDLESS, '👑 伝説の英語王'],
@@ -87,8 +88,6 @@ export function arenaNextTitle(f: number): { title: string; floors: number } | n
 }
 // そのレベルの相手：そのレベルのボスのキャラクター
 export const arenaLook = (f: number): BossLook => BOSSES[LEVEL_BOSS_LOOK[arenaCourse(f).id]]
-// えらんだレベルのいちばん下の階から始める
-export const arenaStart = (course: CourseId): number => Math.max(0, COURSES.findIndex((c) => c.id === course)) * ARENA_PER
 export const isArenaGrammar = (q: Question<Word>) => q.word.id.startsWith('g:')
 // そのレベルの文法の問題を1問（単語の問題と同じ形にする）
 function arenaGrammarQ(lv: number, rnd: () => number): Question<Word> | null {
@@ -184,4 +183,21 @@ export function recordArenaBestStreak(n: number): boolean {
     /* 保存できなくても動く */
   }
   return true
+}
+
+// 前回の挑戦でいた階（次はここから始める。オーナーの要望）
+const LAST_KEY = 'eitan:arena-last-floor'
+export function loadArenaLast(): number {
+  try {
+    return readInt(LAST_KEY) ?? 0
+  } catch {
+    return 0
+  }
+}
+export function saveArenaLast(f: number) {
+  try {
+    localStorage.setItem(LAST_KEY, String(atLeast0(f)))
+  } catch {
+    /* 保存できなくても動く */
+  }
 }
