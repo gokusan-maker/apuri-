@@ -11882,6 +11882,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-fire-drill',
+    title: 'Notice: Fire Drill Next Week',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees in the Green Hill Office Tower: A fire drill will take place on Wednesday, November 12, at 10:30 A.M. Every person in the building, including visitors, is required to ( A ) part. The drill will last about 20 minutes.",
+      "When the alarm sounds, please stop working immediately and leave the building by the nearest stairs. Do not use the elevators. Staff on each floor have been chosen as fire wardens, and they will wear yellow vests. Please follow their instructions.",
+      "Once you are outside, go to the meeting point in the parking lot across the street. Your fire warden will check that everyone from your floor is there. Please do not go back into the building until you are told that it is safe.",
+      "If you have a physical condition that makes it hard to use the stairs, please tell the building manager by November 7 so that we can make special arrangements. Thank you for your cooperation. Fire drills help keep everyone safe ( B ) the event of a real emergency.",
+    ],
+    ja: [
+      'グリーンヒル・オフィスタワーの全社員のみなさまへ：11月12日（水）午前10時30分に避難訓練をおこないます。来客の方もふくめ、建物にいる全員が参加しなければなりません。訓練は約20分です。',
+      '警報が鳴ったら、すぐに仕事をやめて、いちばん近い階段で建物の外に出てください。エレベーターは使わないでください。各階で防火担当者がえらばれており、黄色いベストを着ています。その指示にしたがってください。',
+      '外に出たら、通りの向かいの駐車場にある集合場所へ行ってください。防火担当者が、同じ階の全員がそろっているかを確かめます。安全だと言われるまで、建物にもどらないでください。',
+      '体の具合で階段を使うのが難しい方は、特別な手配ができるよう、11月7日までに建物の管理人に伝えてください。ご協力に感謝します。避難訓練は、本当の緊急事態が起きたときに、みんなの安全を守るのに役立ちます。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['take', 'taking', 'took', 'takes'], answer: 0, why: 'be required to ～「～しなければならない」。to のあとは動詞の原形なので take（take part「参加する」）。taking・took・takes は to のあとに置けない。' },
+      { id: 'B', choices: ['in', 'on', 'at', 'by'], answer: 0, why: 'in the event of ～「（万一）～の場合には」。この形で決まっていて、on・at・by は使えない。' },
+    ],
+    underline: {
+      phrase: 'immediately',
+      choices: ['right away', 'after lunch', 'very slowly', 'only if possible'],
+      answer: 0,
+      why: 'immediately は「すぐに・ただちに」。警報が鳴ったらすぐに仕事をやめるという意味。',
+    },
+    order: {
+      words: ['do', 'not', 'go', 'back', 'into', 'the', 'building'],
+      rest: 'until you are told that it is safe',
+      answer: 'do not go back into the building',
+      ja: '建物にもどらないでください（go back into ～「～の中へもどる」）',
+    },
+    tf: [
+      { statement: '訓練には、来客の人も参加する。', answer: true, why: '第1段落 Every person in the building, including visitors, is required to take part。' },
+      { statement: '避難するときは、エレベーターを使う。', answer: false, why: '第2段落 Do not use the elevators。' },
+      { statement: '集合場所は、建物の屋上だ。', answer: false, why: '第3段落 go to the meeting point in the parking lot across the street。' },
+    ],
+    qa: [
+      { q: 'How can employees recognize the fire wardens?', choices: ['They wear yellow vests.', 'They carry red flags.', 'They stand by the elevators.', 'They wear white hats.'], answer: 0, why: '第2段落 they will wear yellow vests。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
