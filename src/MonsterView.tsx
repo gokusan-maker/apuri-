@@ -403,6 +403,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'duck')
+    return (
+      <g>
+        {/* 平たいオレンジのくちばし */}
+        <ellipse cx="50" cy="68" rx="12" ry="5" fill="#fb923c" stroke="#9a3412" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'parrot')
     return (
       <g>

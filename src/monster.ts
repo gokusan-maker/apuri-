@@ -328,6 +328,7 @@ export const SPECIES: Species[] = [
   { id: 'seahorse', name: 'タツノン', egg: 'うみくさのタマゴ', token: 'タツ', bigToken: 'タツノン', color: '#fcd34d', line: '#92400e', rate: 0.02, desc: '海草につかまるタツノオトシゴ。小さな体でも、しっぽでしっかり単語をつかんではなさない。' },
   { id: 'camel', name: 'ラクダン', egg: 'さばくのタマゴ', token: 'ラク', bigToken: 'ラクダン', color: '#d6a35c', line: '#78350f', rate: 0.02, desc: 'さばくを歩くラクダ。こぶに覚えた単語をたくわえて、長い道のりもへっちゃら。' },
   { id: 'polarbear', name: 'シロクマン', egg: 'ほっきょくのタマゴ', token: 'シロ', bigToken: 'シロクマン', color: '#f8fafc', line: '#475569', rate: 0.03, desc: '氷の上のシロクマ。寒さにも負けず、毎日こつこつ英語を続ける力もち。' },
+  { id: 'duck', name: 'アヒルン', egg: 'いけのタマゴ', token: 'アヒ', bigToken: 'アヒルン', color: '#fde047', line: '#a16207', rate: 0.02, desc: '池をすいすい泳ぐアヒル。ガーガー大きな声で、英語を元気に読みあげる。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
@@ -339,10 +340,19 @@ export const DRAGON_UP = 0.1
 
 export const PICKUP_UP = 0.08 // 日替わりピックアップの上乗せ（モチの分からまわす）
 
+// モチ以外の rate は「出やすさの重み」。モチの rate はそのまま、のこり（1 − モチ）を重みの割合で分ける。
+// こうしておくと、キャラを足してもほかの子の rate を下げなくてよい（合計はいつも100%）
+export function baseRate(sp: Species): number {
+  const mochi = SPECIES[0].rate
+  if (sp.id === 'mochi') return mochi
+  const others = SPECIES.reduce((a, x) => (x.id === 'mochi' ? a : a + x.rate), 0)
+  return (sp.rate / others) * (1 - mochi)
+}
+
 export function speciesRate(sp: Species, dragonUp = false, pickup?: string): number {
   const up = (id: string) => (dragonUp && id === 'dragon' ? DRAGON_UP : 0) + (pickup && pickup !== 'mochi' && id === pickup ? PICKUP_UP : 0)
-  if (sp.id === 'mochi') return sp.rate - SPECIES.reduce((a, x) => a + up(x.id), 0)
-  return sp.rate + up(sp.id)
+  if (sp.id === 'mochi') return baseRate(sp) - SPECIES.reduce((a, x) => a + up(x.id), 0)
+  return baseRate(sp) + up(sp.id)
 }
 
 export function rollSpecies(r: number, dragonUp = false, pickup?: string): Species {
