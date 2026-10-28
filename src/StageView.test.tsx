@@ -1451,3 +1451,8 @@ it('闘技場の結果：ランクSのときは王冠がきらっと光る（A�
   fireEvent.click(screen.getByText('🏁 終了'))
   expect(screen.getByLabelText('ランク A').querySelector('.rank-crown')).toBeNull()
 })
+
+it('ボス城の階：ボスをたおすと、くるくる回ってたおれる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor-boss\.down \.boss-figure > svg:not\(\.boss-arena\) \{ animation: boss-spin-down/)
+})

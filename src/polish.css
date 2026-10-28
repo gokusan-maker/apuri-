@@ -4432,3 +4432,8 @@ header .event-chips { margin: 0 0 2px; }
 .monster-level.lv-shine { display: inline-block; animation: lv-shine 0.8s ease-out 3; }
 @keyframes lv-shine { 0%, 100% { text-shadow: none; transform: scale(1); } 40% { text-shadow: 0 0 8px rgb(250 204 21 / 0.95), 0 0 16px rgb(245 158 11 / 0.7); transform: scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .monster-level.lv-shine { animation: none; } }
+
+/* ボス城の階：ボスをたおすと、くるくる回ってからたおれる（最後は上のルールと同じ、かたむいた灰色の姿） */
+.bfloor-boss.down .boss-figure > svg:not(.boss-arena) { animation: boss-spin-down 0.9s ease-in backwards; }
+@keyframes boss-spin-down { 0% { transform: rotate(0) translateY(0); filter: none; } 60% { transform: rotate(-660deg) translateY(-6px) scale(0.9); } 100% { transform: rotate(-732deg) translateY(10px); } }
+@media (prefers-reduced-motion: reduce) { .bfloor-boss.down .boss-figure > svg:not(.boss-arena) { animation: none; } }
