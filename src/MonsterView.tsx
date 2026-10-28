@@ -254,7 +254,7 @@ function Markings({ form, line }: { form: Form; line: string }) {
 }
 
 // キャラクターの種類ごとのパーツ（ドラゴン・キツネ・ペンギン）
-const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle']
+const SPECIES_TAILS = ['fox', 'dragon', 'rabbit', 'cat', 'owl', 'turtle', 'hamster']
 function SpeciesTail({ species, fill, line }: { species: string; fill: string; line: string }) {
   if (species === 'owl')
     return (
@@ -265,6 +265,7 @@ function SpeciesTail({ species, fill, line }: { species: string; fill: string; l
     )
   if (species === 'turtle') return <path d="M78 84 Q90 86 94 80 Q88 78 78 78 Z" fill={fill} stroke={line} strokeWidth="2.2" strokeLinejoin="round" />
   if (species === 'rabbit') return <circle cx="82" cy="80" r="7" fill="#fff" stroke={line} strokeWidth="2" />
+  if (species === 'hamster') return <circle cx="80" cy="82" r="4" fill={fill} stroke={line} strokeWidth="2" />
   if (species === 'cat')
     return (
       <g stroke={line} strokeWidth="2.5" strokeLinecap="round" fill="none">
@@ -361,6 +362,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'hamster')
+    return (
+      <g stroke={line} strokeWidth="2.5">
+        <circle cx="26" cy="30" r="10" fill={fill} />
+        <circle cx="74" cy="30" r="10" fill={fill} />
+        <circle cx="26" cy="30" r="5" fill="#fda4af" stroke="none" />
+        <circle cx="74" cy="30" r="5" fill="#fda4af" stroke="none" />
+      </g>
+    )
   if (species === 'owl')
     return (
       <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -389,6 +399,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'hamster')
+    return (
+      <g>
+        <ellipse cx="50" cy="76" rx="16" ry="11" fill="#fff" opacity="0.85" />
+        <circle cx="24" cy="66" r="8" fill="#fde68a" opacity="0.9" />
+        <circle cx="76" cy="66" r="8" fill="#fde68a" opacity="0.9" />
+      </g>
+    )
   if (species === 'owl')
     return (
       <g>
