@@ -135,3 +135,9 @@ it('闘技場：上がると 🦸 がはね、下がるとしょんぼりする'
   expect(css).toContain('.arena-shaft.move-up .af-me { animation: me-hop')
   expect(css).toContain('.arena-shaft.move-down .af-me { animation: me-slump')
 })
+
+it('ボスの城の問題の階は、夜の城の背景と問題カードのかがやき（ボス戦なみの見た目）', () => {
+  expect(css).toContain('.bfloor.battle-v2 { background: radial-gradient(')
+  expect(css).toContain('.bfloor.battle-v2 .bfloor-q { padding: 12px 14px;')
+  expect(css).toContain('.bfloor.battle-v2 .choice.correct { box-shadow:')
+})
