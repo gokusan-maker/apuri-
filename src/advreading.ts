@@ -13112,6 +13112,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-safetypin',
+    title: 'An Invention Made in Three Hours',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1849, an inventor in New York had a problem. He needed money ( A ) back a small debt to a friend. So he picked up a piece of wire and began to think about what he could make with it.",
+      "He bent the wire into a coil in the middle so that it would spring back. Then he made one end sharp and added a small cap at the other end. The cap was a clasp ( B ) covered the sharp point, so the pin would not hurt anyone or come open by itself.",
+      "It is said that he finished the design in only about three hours. He then sold the rights to his idea for a small amount of money, and he was able to pay back his friend.",
+      "Sadly, the company that bought the idea earned far more from it than he did. Still, the safety pin he created is used in almost every home today, from fixing clothes to holding name tags.",
+    ],
+    ja: [
+      '1849年、ニューヨークのある発明家が問題をかかえていた。友だちへの小さな借金を返すためにお金が必要だったのだ。そこで彼は1本の針金を手にとり、それで何が作れるかを考えはじめた。',
+      '彼は針金の真ん中をくるっと巻いて、ばねのようにもどるようにした。それから片方のはしをとがらせ、もう片方のはしに小さなふたをつけた。そのふたはとがった先をおおう留め具で、ピンが人をけがさせたり、ひとりでに開いたりしないようになっていた。',
+      '彼はたった3時間ほどでそのデザインを完成させたと言われている。その後、彼はアイデアの権利を少しのお金で売り、友だちにお金を返すことができた。',
+      '残念なことに、そのアイデアを買った会社は、彼よりもずっと多くのお金をもうけた。それでも、彼が生み出した安全ピンは、服を直すことから名札をとめることまで、今日ほとんどすべての家庭で使われている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to pay', 'paying', 'paid', 'pay'], answer: 0, why: '「借金を返すために」と目的を表すので to 不定詞 to pay（pay back「返す」）。paying・paid・pay では目的の意味にならない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a clasp（もの）で、うしろの covered の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'spring back',
+      choices: ['return quickly to its first shape', 'break into pieces', 'stay bent forever', 'become very hot'],
+      answer: 0,
+      why: 'spring back は「（ばねのように）はねもどる」。曲げても元の形にもどるという意味。',
+    },
+    order: {
+      words: ['what', 'he', 'could', 'make', 'with', 'it'],
+      rest: '',
+      answer: 'what he could make with it',
+      ja: 'それで何が作れるか（what ＋主語＋動詞「何を～か」）',
+    },
+    tf: [
+      { statement: '発明家は、友だちに借金を返すお金が必要だった。', answer: true, why: '第1段落 He needed money to pay back a small debt to a friend。' },
+      { statement: '安全ピンのデザインには、何か月もかかった。', answer: false, why: '第3段落 he finished the design in only about three hours。' },
+      { statement: 'アイデアを買った会社は、発明家よりも多くもうけた。', answer: true, why: '第4段落 the company that bought the idea earned far more from it than he did。' },
+    ],
+    qa: [
+      { q: 'What was the cap at the end of the pin for?', choices: ['To cover the sharp point.', 'To make the pin heavier.', 'To change its color.', 'To hold a name tag.'], answer: 0, why: '第2段落 The cap was a clasp that covered the sharp point。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
