@@ -83,6 +83,12 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         )}
         {score >= pass && (
           <p className={`bfloor-rank rank-${bcRankOf(maxLives - lives)}`} aria-label={`ランク ${bcRankOf(maxLives - lives)}`}>
+            {/* ランクSだけ王冠がきらっと光る */}
+            {bcRankOf(maxLives - lives) === 'S' && (
+              <span className="rank-crown" aria-hidden="true">
+                👑
+              </span>
+            )}
             {bcRankOf(maxLives - lives)}
           </p>
         )}

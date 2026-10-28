@@ -665,6 +665,7 @@ it('ボスの城の問題の階の結果に、のこりライフを出す', asyn
   })
   expect(screen.getByLabelText('のこりライフ 1 / 2')).toHaveTextContent('のこりライフ ❤️🤍')
   expect(screen.getByLabelText('ランク A')).toBeInTheDocument() // まちがい1つでクリアは A
+  expect(document.querySelector('.rank-crown')).toBeNull() // 王冠はランクSだけ
   const { bcRankOf } = await import('./bosscastle')
   expect([bcRankOf(0), bcRankOf(1), bcRankOf(2)]).toEqual(['S', 'A', 'B'])
 })
@@ -1380,4 +1381,16 @@ it('闘技場：2連続正解から炎のアイコンがゆらゆらゆれる', 
   expect(document.querySelector('.arena-flame')!.parentElement!.textContent).toContain('🔥2連続')
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-flame \{ display: inline-block;[^}]*animation: flame-flicker/)
+})
+
+it('ボスの城の問題の階：ランクSのときは王冠がきらっと光る', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  qs.forEach((q) => {
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === q.choices[q.answer])!)
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  })
+  expect(screen.getByLabelText('ランク S').querySelector('.rank-crown')!.textContent).toBe('👑')
 })
