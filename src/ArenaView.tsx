@@ -272,7 +272,17 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
               🛡{' '}
             </span>
           )}
-          {streak >= 2 ? `🔥${streak}連続` : `🏟 ${count}問め`}
+          {streak >= 2 ? (
+            <>
+              {/* 連続正解中は炎がゆらゆらゆれる */}
+              <span className="arena-flame" aria-hidden="true">
+                🔥
+              </span>
+              {streak}連続
+            </>
+          ) : (
+            `🏟 ${count}問め`
+          )}
         </span>
       </div>
       {/* 塔の階：いまの階を中心に上下2階ずつ。答えるたびに上下に動く */}

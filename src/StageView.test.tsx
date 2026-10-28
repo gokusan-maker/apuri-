@@ -1366,3 +1366,17 @@ it('ボス城の階：クリアの文字がきらっと光る（CSS）', async (
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.stage-result\.clear \{ animation: pop 0\.4s, clear-shine/)
 })
+
+it('闘技場：2連続正解から炎のアイコンがゆらゆらゆれる', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  expect(document.querySelector('.arena-flame')).toBeNull()
+  arenaPick(true)
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(true)
+  expect(document.querySelector('.arena-flame')!.textContent).toBe('🔥')
+  expect(document.querySelector('.arena-flame')!.parentElement!.textContent).toContain('🔥2連続')
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-flame \{ display: inline-block;[^}]*animation: flame-flicker/)
+})

@@ -4325,3 +4325,8 @@ header .event-chips { margin: 0 0 2px; }
 .gacha-new-chips > span.gacha-new { display: inline-block; animation: new-wiggle 0.5s 2.2s ease-in-out 3; }
 @keyframes new-wiggle { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-10deg) scale(1.1); } 75% { transform: rotate(10deg) scale(1.1); } }
 @media (prefers-reduced-motion: reduce) { .gacha-new-chips > span.gacha-new { animation: none; } }
+
+/* 闘技場：連続正解中の炎がゆらゆらゆれる */
+.arena-flame { display: inline-block; transform-origin: 50% 90%; animation: flame-flicker 0.9s ease-in-out infinite alternate; }
+@keyframes flame-flicker { 0% { transform: rotate(-8deg) scale(1); } 50% { transform: rotate(4deg) scale(1.12, 1.18); } 100% { transform: rotate(8deg) scale(0.96, 1.05); } }
+@media (prefers-reduced-motion: reduce) { .arena-flame { animation: none; } }
