@@ -134,6 +134,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-harmony': { wrong: 'We should live in harmonious with nature.', right: 'We should live in harmony with nature.', why: 'in harmony with ～「～と調和して」。in のあとは名詞 harmony（harmonious は形容詞）。' },
   'prep-idiom-forfun': { wrong: 'I play the guitar just for funny.', right: 'I play the guitar just for fun.', why: 'for fun「楽しみで・遊びで」。for のあとは名詞 fun（funny は形容詞）。' },
   'prep-idiom-atwork': { wrong: 'My father is at working now.', right: 'My father is at work now.', why: 'at work「仕事中で・職場で」。at のあとは名詞 work（working は入らない）。' },
+  'prep-idiom-inmyopinion': { wrong: 'On my opinion, summer is the best season.', right: 'In my opinion, summer is the best season.', why: 'in my opinion「私の意見では」。in を使う（on my opinion とは言わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
