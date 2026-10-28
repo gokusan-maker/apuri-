@@ -270,6 +270,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 <span className="af-num">{f + 1}階</span>
                 <span className="af-lv">{arenaLvLabel(f)}</span>
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
+                {f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS && <span className="af-gate">▶ {arenaLvLabel(f)} START</span>}
                 {arenaTitleIconAt(f) && <span className="af-title" title={`ここから称号「${arenaTitle(f)}」`}>{arenaTitleIconAt(f)}</span>}
                 {f === record && f !== shown && <span className="af-best" title="いままでの最高の階">🚩 最高</span>}
                 {f === shown && <span className={`af-me${me ? ' has-fig' : ''}${levelUp ? ' cheer' : ''}${picked !== null && !correct ? ' ouch' : ''}`} aria-hidden="true">

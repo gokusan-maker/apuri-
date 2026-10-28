@@ -799,6 +799,7 @@ it('闘技場：レベルの区切り（20階ごと）をこえると LEVEL UP! 
   fireEvent.click(screen.getByText('次へ（中2）'))
   expect(document.querySelector('.arena-confetti')).toBeNull()
   expect(document.querySelector('.arena-floor.here')!.classList.contains('lv-gate')).toBe(true)
+  expect(document.querySelector('.arena-floor.here .af-gate')).toHaveTextContent('▶ 中2 START') // レベルの入り口の札
   arenaPick(false)
   expect(screen.getByText('⬇ レベルダウン… 20階（中1レベル）へ')).toBeInTheDocument()
   expect(document.querySelector('.arena-floor.here .af-me')!.classList.contains('ouch')).toBe(true) // まちがえると相棒がよろける

@@ -4240,3 +4240,4 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-round { margin-left: 6px; font-size: 0.75rem; color: #fde68a; }
 .arena-by-kind { margin: 2px 0; font-size: 0.8rem; color: var(--muted); }
 .am-kind { margin-right: 4px; }
+.af-gate { font-size: 0.68rem; font-weight: 800; color: #fde047; }
