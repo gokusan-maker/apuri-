@@ -12743,6 +12743,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-hotairballoon',
+    title: 'The First Hot Air Balloon',
+    level: '難関大（評論）',
+    paragraphs: [
+      "More than two hundred years ago in France, two brothers noticed something interesting. Warm air from a fire made a paper bag ( A ) into the sky. Hot air is lighter than cool air, so it goes up and can carry light things with it.",
+      "The brothers built a large balloon of cloth and paper. In 1783, before any person flew in it, they sent up three animals: a sheep, a duck, and a rooster. The animals landed safely, and soon after that, people took their first balloon flight.",
+      "A hot air balloon has no wheel to turn, so the pilot cannot simply choose a direction. Instead, the pilot heats the air to go up or lets it cool to go down. Winds at different heights often blow in different directions, so the pilot looks for winds ( B ) are moving the right way.",
+      "Today, colorful balloons still fill the sky at festivals around the world, showing how a simple idea can lift people's dreams.",
+    ],
+    ja: [
+      '200年以上前のフランスで、ふたりの兄弟がおもしろいことに気づいた。火からのあたたかい空気が、紙のふくろを空へ上げたのだ。あたたかい空気は冷たい空気より軽いので、上にのぼり、軽いものをいっしょに運ぶことができる。',
+      '兄弟は布と紙で大きな気球を作った。1783年、人が乗る前に、彼らはヒツジ、アヒル、ニワトリの3びきの動物を飛ばした。動物たちは無事に着陸し、その後まもなく、人がはじめて気球で空を飛んだ。',
+      '熱気球には回すハンドルがないので、操縦する人は好きな方向を選ぶことはできない。かわりに、空気を熱して上がったり、冷まして下がったりする。高さによって風がちがう方向にふくことが多いので、操縦する人は正しい方向に動いている風をさがすのだ。',
+      '今日でも、世界中のお祭りで色とりどりの気球が空をうめつくし、単純なアイデアが人々の夢を持ち上げられることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rise', 'rising', 'rose', 'to rise'], answer: 0, why: 'make ＋もの＋動詞の原形「～を…させる」なので rise。rising・rose・to rise は make のこの形には入らない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 winds（もの）で、うしろの are moving の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'landed safely',
+      choices: ['came down to the ground without getting hurt', 'flew away forever', 'got lost in the sky', 'fell into the sea'],
+      answer: 0,
+      why: 'land は「着陸する」、safely は「無事に」。けがをせずに地面におりた、という意味。',
+    },
+    order: {
+      words: ['heats', 'the', 'air', 'to', 'go', 'up'],
+      rest: '',
+      answer: 'heats the air to go up',
+      ja: '上がるために空気を熱する（to ～「～するために」）',
+    },
+    tf: [
+      { statement: '最初の気球には、人より先に動物が乗った。', answer: true, why: '第2段落 before any person flew in it, they sent up three animals。' },
+      { statement: '熱気球は、ハンドルで好きな方向へ進める。', answer: false, why: '第3段落 A hot air balloon has no wheel to turn, so the pilot cannot simply choose a direction。' },
+      { statement: '高さによって、風の向きがちがうことが多い。', answer: true, why: '第3段落 Winds at different heights often blow in different directions。' },
+    ],
+    qa: [
+      { q: 'Why does hot air go up?', choices: ['Because it is lighter than cool air.', 'Because it is pulled by the sun.', 'Because it is full of water.', 'Because the wind always blows up.'], answer: 0, why: '第1段落 Hot air is lighter than cool air, so it goes up。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
