@@ -287,6 +287,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           )}
         </div>
         {dir === 'up' && <span key={`u${count}`} className="arena-arrow up" aria-hidden="true">{jump ? '🚀' : '⬆'}</span>}
+        {/* 一気に上がったときは、上がった階の数を大きく出す */}
+        {dir === 'up' && jump && (
+          <span key={`j${count}`} className="arena-jump-pop" aria-hidden="true">
+            +{nextLv - lv}階
+          </span>
+        )}
         {/* LEVEL UP!：相棒がとびはね、紙ふぶきが舞う */}
         {levelUp && (
           <span key={`c${count}`} className="arena-confetti" aria-hidden="true">

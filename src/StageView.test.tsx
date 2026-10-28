@@ -1092,6 +1092,7 @@ it('闘技場：連続正解では一気に上がる（2連続で2階、3連続�
   fireEvent.click(screen.getByText(/^次へ/))
   arenaPick(true) // 4→7階
   expect(document.querySelector('.arena-move')).toHaveTextContent('🚀 3連続！ 一気に3階アップ！ 7階へ')
+  expect(document.querySelector('.arena-jump-pop')).toHaveTextContent('+3階') // 上がった階の数を大きく
 })
 
 it('闘技場：次の挑戦は前回の階から始まる', async () => {
