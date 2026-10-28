@@ -91,6 +91,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'group-prep-presence': { wrong: 'He was nervous in the presents of the king.', right: 'He was nervous in the presence of the king.', why: 'in the presence of ～「～のいるところで」。presence（存在）と presents（プレゼント）をまちがえない。' },
   'group-prep-place-at': { wrong: 'Write your name at top of the page.', right: 'Write your name at the top of the page.', why: 'at the top of ～「～のいちばん上に」。the をわすれない。' },
   'group-prep-means': { wrong: 'We went to Kyoto by way to Nagoya.', right: 'We went to Kyoto by way of Nagoya.', why: 'by way of ～「～経由で」。way のあとは of。' },
+  'group-prep-support': { wrong: 'Many people spoke in support for the plan.', right: 'Many people spoke in support of the plan.', why: 'in support of ～「～を支持して」。support のあとは of。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
