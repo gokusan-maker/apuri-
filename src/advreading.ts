@@ -12292,6 +12292,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-eraser',
+    title: 'The Story of the Eraser',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Today we can buy an eraser at any shop, but long ago people did not have one. When they made a mistake with a pencil, they often rubbed it out with a small piece of soft bread.",
+      "In 1770, an English scientist noticed that a piece of rubber could remove marks ( A ) by pencils very well. This is ( B ) the British still call an eraser a \"rubber.\" However, early rubber had a problem. It became sticky in summer and hard in winter, and it soon went bad.",
+      "Later, people found a way to make rubber stronger by heating it with other materials. After that, erasers lasted much longer and worked in any season.",
+      "Now many erasers are made of plastic instead of rubber. They pick up the black powder of the pencil and roll it into small pieces. From bread to plastic, the eraser has changed a lot, but its job is still the same: giving us a second chance.",
+    ],
+    ja: [
+      '今日では消しゴムはどんな店でも買えるが、昔の人は持っていなかった。鉛筆でまちがえると、小さなやわらかいパンのかけらでこすって消すことが多かった。',
+      '1770年、あるイギリスの科学者が、ゴムのかけらで鉛筆で書いた跡がよく消せることに気づいた。こういうわけで、イギリス人は今でも消しゴムを「ラバー」と呼ぶのだ。しかし、初期のゴムには問題があった。夏にはべたべたし、冬にはかたくなり、すぐにだめになってしまったのだ。',
+      'のちに、人々はゴムをほかの材料といっしょに熱して、より強くする方法を見つけた。それ以来、消しゴムはずっと長持ちするようになり、どの季節でも使えるようになった。',
+      '今では、多くの消しゴムはゴムではなくプラスチックで作られている。それらは鉛筆の黒い粉をくっつけて、小さなかすに丸める。パンからプラスチックへと消しゴムは大きく変わったが、その仕事は今も同じだ。私たちにもう一度チャンスをくれることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['made', 'making', 'make', 'makes'], answer: 0, why: '「鉛筆によって書かれた跡」なので、過去分詞 made がうしろから marks を説明する（by pencils が受け身のしるし）。making だと跡が作ることになり、make・makes は動詞の形なので名詞を説明できない。' },
+      { id: 'B', choices: ['why', 'what', 'which', 'whose'], answer: 0, why: 'This is why ～「こういうわけで～」。前の文（ゴムで鉛筆の跡が消せると気づいた）が理由になっている。うしろの the British still call an eraser a "rubber" は欠けた部分のない完全な文なので、what・which は入らず、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'went bad',
+      choices: ['became too old to use', 'became very popular', 'became cheaper', 'became bigger'],
+      answer: 0,
+      why: 'go bad は「だめになる・悪くなる」。ゴムが使えない状態になったという意味。',
+    },
+    order: {
+      words: ['found', 'a', 'way', 'to', 'make', 'rubber', 'stronger'],
+      rest: 'by heating it with other materials',
+      answer: 'found a way to make rubber stronger',
+      ja: 'ゴムをより強くする方法を見つけた（a way to ～「～する方法」、make ＋もの＋形容詞）',
+    },
+    tf: [
+      { statement: '昔の人は、パンで鉛筆の跡を消すことがあった。', answer: true, why: '第1段落 they often rubbed it out with a small piece of soft bread。' },
+      { statement: '初期のゴムの消しゴムは、どの季節でも同じように使えた。', answer: false, why: '第2段落 It became sticky in summer and hard in winter。' },
+      { statement: '今では、多くの消しゴムがプラスチックでできている。', answer: true, why: '第4段落 Now many erasers are made of plastic instead of rubber。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what is the job of an eraser?', choices: ['To give us a second chance.', 'To make pencils sharper.', 'To keep paper clean from water.', 'To make bread softer.'], answer: 0, why: '第4段落 its job is still the same: giving us a second chance。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
