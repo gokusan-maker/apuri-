@@ -12784,6 +12784,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-yoyo',
+    title: 'The Long Life of the Yo-yo',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The yo-yo is one of the oldest toys in the world. A picture ( A ) on a vase from ancient Greece shows a boy playing with a toy that looks just like one. That means children were enjoying yo-yos more than two thousand years ago.",
+      "For a long time, a yo-yo could only go down and come back up. Then an important change was made. Instead of tying the string to the center, people began to put a loose loop around it. This allows the yo-yo ( B ) at the bottom of the string for a while. Players call this \"sleeping.\"",
+      "Because a sleeping yo-yo keeps turning, players can do many tricks with it, such as \"walking the dog\" along the floor. Some players even use two yo-yos at the same time.",
+      "Every few years, the yo-yo becomes popular again among children. A simple toy can last for a very long time if it keeps giving people new ways to play.",
+    ],
+    ja: [
+      'ヨーヨーは、世界で最も古いおもちゃの1つだ。古代ギリシャのつぼにえがかれた絵には、ヨーヨーにそっくりなおもちゃで遊ぶ少年がうつっている。つまり、2000年以上前から子どもたちはヨーヨーを楽しんでいたのだ。',
+      '長いあいだ、ヨーヨーは下に落ちてまた上がってくるだけだった。そして大切な工夫が加えられた。ひもを真ん中の軸に結ぶかわりに、ゆるい輪をかけるようになったのだ。これによって、ヨーヨーはひもの先でしばらく回り続けられる。遊ぶ人たちはこれを「スリーパー（ねむっている）」と呼ぶ。',
+      'ねむっているヨーヨーは回り続けるので、ゆかの上を走らせる「犬のさんぽ」のような、いろいろな技ができる。2つのヨーヨーを同時に使う人さえいる。',
+      '何年かごとに、ヨーヨーは子どもたちのあいだでまた人気になる。単純なおもちゃでも、新しい遊び方をあたえ続けるなら、とても長く愛されるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['painted', 'painting', 'paints', 'paint'], answer: 0, why: '「つぼにえがかれた絵」なので、過去分詞 painted がうしろから picture を説明する。painting だと絵がえがくことになり、paints・paint は動詞の形なので名詞を説明できない。' },
+      { id: 'B', choices: ['to spin', 'spinning', 'spun', 'spin'], answer: 0, why: 'allow ＋もの＋to ～「～が…できるようにする」なので to spin。spinning・spun・spin は allow のこの形には入らない。' },
+    ],
+    underline: {
+      phrase: 'a loose loop',
+      choices: ['a ring of string that is not tied tightly', 'a long piece of wood', 'a hard metal ball', 'a knot that never moves'],
+      answer: 0,
+      why: 'loose は「ゆるい」、loop は「輪」。きつく結んでいない、ひもの輪のこと。',
+    },
+    order: {
+      words: ['children', 'were', 'enjoying', 'yo-yos'],
+      rest: 'more than two thousand years ago',
+      answer: 'children were enjoying yo-yos',
+      ja: '子どもたちはヨーヨーを楽しんでいた（過去進行形 was / were ＋ ～ing）',
+    },
+    tf: [
+      { statement: '古代ギリシャのつぼに、ヨーヨーのようなおもちゃの絵がある。', answer: true, why: '第1段落 A picture painted on a vase from ancient Greece shows a boy playing with a toy that looks just like one。' },
+      { statement: 'ひもを軸にしっかり結ぶと、ヨーヨーは先で回り続ける。', answer: false, why: '第2段落 Instead of tying the string to the center, people began to put a loose loop around it. This allows the yo-yo to spin。' },
+      { statement: '2つのヨーヨーを同時に使う人もいる。', answer: true, why: '第3段落 Some players even use two yo-yos at the same time。' },
+    ],
+    qa: [
+      { q: 'What do players call a yo-yo that keeps spinning at the bottom?', choices: ['A sleeping yo-yo.', 'A flying yo-yo.', 'A walking yo-yo.', 'A broken yo-yo.'], answer: 0, why: '第2段落 Players call this "sleeping."' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
