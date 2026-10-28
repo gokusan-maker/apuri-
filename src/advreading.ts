@@ -13030,6 +13030,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-bubblewrap',
+    title: 'A Failed Idea That Popped',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In 1957, two engineers in the United States had an unusual plan. They tried to make wallpaper ( A ) had a bumpy surface. They sealed two plastic sheets together and trapped many small bubbles of air between them.",
+      "Sadly, nobody wanted ( B ) it on their walls. Next, the engineers tried selling it as a cover to keep greenhouses warm, but that did not work well either. Their invention seemed to have no use at all.",
+      "Then they found the right job for it. The air bubbles were soft, so they could protect things from bumps and drops. A computer company began using the sheets to pack its machines, and soon many other companies did the same.",
+      "Today, bubble wrap is used all over the world to send fragile things safely. Many people also enjoy popping the bubbles with their fingers. The story shows that a failure can turn into a success if we look at it from a different side.",
+    ],
+    ja: [
+      '1957年、アメリカのふたりの技術者が、めずらしい計画を立てた。表面がでこぼこしたかべ紙を作ろうとしたのだ。彼らは2枚のプラスチックのシートをはり合わせ、そのあいだに小さな空気のあわをたくさんとじこめた。',
+      '残念ながら、それをかべにはりたい人はだれもいなかった。次に、温室をあたたかく保つおおいとして売ろうとしたが、それもうまくいかなかった。彼らの発明には、まったく使い道がないように思えた。',
+      'そして、ぴったりの仕事が見つかった。空気のあわはやわらかいので、ぶつけたり落としたりしたときにものを守れたのだ。あるコンピューターの会社が、機械をつつむのにそのシートを使いはじめ、まもなく多くの会社が同じようにした。',
+      '今日、エアパッキン（プチプチ）は、こわれやすいものを安全に送るために世界中で使われている。指であわをつぶすのを楽しむ人も多い。この話は、失敗でも別の面から見れば成功に変わりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 wallpaper（もの）で、うしろの had の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to put', 'putting', 'put', 'puts'], answer: 0, why: 'want のあとは to 不定詞（want to ～「～したい」）。putting・put・puts は want のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'fragile',
+      choices: ['easy to break', 'very heavy', 'too expensive', 'very large'],
+      answer: 0,
+      why: 'fragile は「こわれやすい」。こわれやすいものを安全に送る、という意味。',
+    },
+    order: {
+      words: ['protect', 'things', 'from', 'bumps', 'and', 'drops'],
+      rest: '',
+      answer: 'protect things from bumps and drops',
+      ja: 'ぶつけたり落としたりすることからものを守る（protect A from B「AをBから守る」）',
+    },
+    tf: [
+      { statement: '技術者たちは、はじめからものをつつむ材料を作ろうとしていた。', answer: false, why: '第1段落 They tried to make wallpaper。' },
+      { statement: '温室のおおいとしても、うまくいかなかった。', answer: true, why: '第2段落 tried selling it as a cover to keep greenhouses warm, but that did not work well either。' },
+      { statement: 'あるコンピューターの会社が、機械をつつむのに使いはじめた。', answer: true, why: '第3段落 A computer company began using the sheets to pack its machines。' },
+    ],
+    qa: [
+      { q: 'What does the story show?', choices: ['A failure can become a success if we look at it differently.', 'Wallpaper is the most useful invention.', 'Engineers should never change their plans.', 'Plastic is bad for greenhouses.'], answer: 0, why: '第4段落 a failure can turn into a success if we look at it from a different side。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
