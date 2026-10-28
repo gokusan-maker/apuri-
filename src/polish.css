@@ -4265,3 +4265,5 @@ header .event-chips { margin: 0 0 2px; }
 .gacha-egg.sp-glow { --sp-glow: #86efac; filter: drop-shadow(0 0 10px var(--sp-glow)) drop-shadow(0 0 22px var(--sp-glow)); animation: sp-glow-pulse 1.4s ease-in-out infinite alternate; }
 @keyframes sp-glow-pulse { from { filter: drop-shadow(0 0 6px var(--sp-glow)); } to { filter: drop-shadow(0 0 14px var(--sp-glow)) drop-shadow(0 0 28px var(--sp-glow)); } }
 @media (prefers-reduced-motion: reduce) { .gacha-egg.sp-glow { animation: none; } }
+/* 図鑑：キャラクターのカードのふちを、そのキャラクターの色に */
+.zukan-pick.sp-card { --sp-c: #16a34a; border: 2px solid var(--sp-c); box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--sp-c) 35%, transparent); }

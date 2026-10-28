@@ -3,7 +3,7 @@ import type { Daypart } from './daytime'
 import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
-import { useEffect, useId, useState, type FormEvent } from 'react'
+import { useEffect, useId, useState, type CSSProperties, type FormEvent } from 'react'
 import { FORM_DESC, FORMS, formOf, kindOf, KINDS, RARITY_LABEL, SPECIES, speciesOf, withKind, withSpecies, levelInfo, levelsToNextStage, growthOf, growthScale, growthText, NAME_MAX, nextFormOf, seenForms, type Form, type MonsterState } from './monster'
 import { completionPct } from './gacha'
 import { loadPosesSeen, poseAt, savePosesSeen, seePose } from './pose'
@@ -1309,8 +1309,10 @@ export function Zukan({ monsters }: { monsters: MonsterState[] }) {
             const got = true
             return (
               <li key={sp.id} className={got ? 'got' : 'locked'}>
+                {/* カードのふちを、そのキャラクターの色に（オーナーの依頼：デザインを高める） */}
                 <button
-                  className="zukan-pick"
+                  className="zukan-pick sp-card"
+                  style={{ '--sp-c': sp.line || '#16a34a' } as CSSProperties}
                   disabled={!got}
                   aria-label={got ? `${sp.name}：${sp.desc}` : 'まだ出会っていないキャラクター'}
                   onClick={() => setSpDetail(spDetail === sp.id ? null : sp.id)}

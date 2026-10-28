@@ -104,6 +104,7 @@ it('図鑑にキャラクター（モチ・コンコン・ペンペン・ドラ�
   const { screen } = await import('@testing-library/react')
   render(<Zukan monsters={[{ xp: 0 }, { xp: 0, species: 'dragon' }]} />)
   expect(screen.getByText(/キャラクター 2 \/ 14/)).toBeInTheDocument()
+  expect(document.querySelectorAll('.zukan-pick.sp-card').length).toBeGreaterThan(0) // カードのふちはキャラクターの色
   expect(screen.getByLabelText(/^ドラコ：/)).toBeInTheDocument()
   expect(screen.getByLabelText("まだ出会っていないキャラクター 12").textContent).toBe("？×12")
 })
