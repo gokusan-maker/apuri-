@@ -11431,6 +11431,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-health-check',
+    title: 'Notice: Annual Health Check',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all employees of Hayashi Trading: This year's health check will take place in the meeting rooms on the fifth floor from Monday, June 9, to Friday, June 13. All full-time employees are required to take part. The check takes about 40 minutes and ( A ) during working hours.",
+      "Please choose a time that suits you by signing up on the company website by May 30. Because blood will be taken, you should not eat anything for at least eight hours before your check. You may drink water, but please avoid coffee, tea, and juice.",
+      "When you come, please bring your staff ID card and the question sheet that will be sent to you by e-mail. Filling in the sheet in advance will make the check go more smoothly.",
+      "Your results will be sent to your home in about three weeks. If a doctor finds something that needs attention, the health office will contact you directly. Any employee who cannot attend during the week should talk to the health office ( B ) possible.",
+    ],
+    ja: [
+      'ハヤシ商事の全社員のみなさまへ：今年の健康診断は、6月9日（月）から6月13日（金）まで、5階の会議室でおこないます。正社員の方は全員受けなければなりません。診断は約40分で、勤務時間中におこないます。',
+      '5月30日までに会社のウェブサイトで申しこみ、都合のよい時間をえらんでください。血液をとるので、診断の少なくとも8時間前からは何も食べないでください。水は飲んでかまいませんが、コーヒー、お茶、ジュースはさけてください。',
+      '来るときは、社員証と、メールで送られてくる問診票を持ってきてください。前もって問診票に書いておくと、診断がスムーズに進みます。',
+      '結果は約3週間後にご自宅に送られます。医師が注意の必要なことを見つけた場合は、保健室から直接ご連絡します。その週に受けられない社員は、できるだけ早く保健室に相談してください。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is done', 'does', 'doing', 'to be done'], answer: 0, why: 'and で takes とならぶ文の動詞。主語 The check（診断）は「おこなわれる」ので受け身 is done。does では目的語がなく意味も合わず、doing・to be done だけでは文の動詞にならない。' },
+      { id: 'B', choices: ['as soon as', 'as soon', 'soon as', 'so soon as of'], answer: 0, why: 'as soon as possible「できるだけ早く」。この形で決まっていて、as soon・soon as・so soon as of は使えない。' },
+    ],
+    underline: {
+      phrase: 'smoothly',
+      choices: ['easily, without problems', 'very slowly', 'with a lot of noise', 'only once'],
+      answer: 0,
+      why: 'smoothly は「すらすらと・順調に」。問診票を先に書いておけば、診断がとどこおりなく進むという意味。',
+    },
+    order: {
+      words: ['you', 'should', 'not', 'eat', 'anything', 'for'],
+      rest: 'at least eight hours',
+      answer: 'you should not eat anything for',
+      ja: '～のあいだ何も食べないほうがよい（not ～ anything「何も～ない」）',
+    },
+    tf: [
+      { statement: '健康診断は、正社員は全員受けなければならない。', answer: true, why: '第1段落 All full-time employees are required to take part。' },
+      { statement: '診断の前に、コーヒーは飲んでもよい。', answer: false, why: '第2段落 please avoid coffee, tea, and juice。' },
+      { statement: '結果は、診断の日にわたされる。', answer: false, why: '第4段落 Your results will be sent to your home in about three weeks。' },
+    ],
+    qa: [
+      { q: 'What should employees bring to the health check?', choices: ['Their staff ID card and the question sheet.', 'A bottle of juice.', 'Their own doctor.', 'A copy of last year’s results.'], answer: 0, why: '第3段落 please bring your staff ID card and the question sheet。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
