@@ -1,4 +1,5 @@
 import { typeOf } from './chartype'
+import type { Daypart } from './daytime'
 import { slotOf, wearList } from './shop'
 import { playChirp } from './sound'
 import { bondHearts, bondLevel, daysToNext } from './bond'
@@ -34,6 +35,7 @@ type Props = {
   mood?: Mood
   leveledUp?: boolean
   night?: boolean // 夜は部屋を暗くして星を出す
+  daypart?: Daypart // 時間帯で部屋の背景の色を変える
   friends?: { m: MonsterState; i: number }[] // 相棒以外の仲間（i は仲間の番号）
   onSwitch?: (i: number) => void
   season?: SeasonFx // 季節の背景演出
@@ -956,7 +958,7 @@ export function MonsterFigure({
   )
 }
 
-export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, sleepy = false, learned = [], night = false, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false, trioStreak = 0 }: Props) {
+export function Monster({ monster, onRename, coins, onShop, room, title, cheer, feeling, gain, mood = 'normal', leveledUp = false, evolved = false, deco, sleepy = false, learned = [], night = false, daypart, friends = [], onSwitch, onPetBonus, onPetStampTicket, season, onPet, mood100, epithet, trioDone = false, trioStreak = 0 }: Props) {
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
@@ -979,7 +981,7 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const form = formOf(monster)
   const cls = mood === 'happy' ? ' bounce' : mood === 'lonely' ? ' droop' : ''
   return (
-    <section className={`monster${room ? ' has-room' : ''}`} aria-label="相棒モンスター">
+    <section className={`monster${room ? ' has-room' : ''}${daypart ? ` daypart-${daypart}` : ''}`} aria-label="相棒モンスター">
       {season && (
         <span className={`season-fx season-${season.id}`} aria-label={`季節の演出：${season.name}`}>
           {[0, 1, 2, 3, 4, 5].map((i) => (

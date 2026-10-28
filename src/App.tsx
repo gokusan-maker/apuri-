@@ -151,7 +151,7 @@ import { cloudSave, loadCode, loadSavedAt, shouldAutoSave } from './cloud'
 import { Challenge } from './ChallengeView'
 import { difficultyOf, loadChallengeDay, loadChallengeStreak, nextChallengeStreak, saveChallengeDay, saveChallengeStreak, STREAK_TICKET_DAYS } from './challenge'
 import { cancelSpeech, speak, speakPet } from './speech'
-import { isNight } from './daytime'
+import { isNight, daypartOf } from './daytime'
 import { RIVAL_COINS } from './rival'
 import { playFanfare } from './sound'
 import { loadBest } from './timeAttack'
@@ -1491,6 +1491,7 @@ function App() {
             deco={seasonEvent?.icon}
             sleepy={hour >= 22 || hour < 5}
             night={isNight(hour)}
+            daypart={daypartOf(hour)}
             season={seasonFxOf(today)}
             learned={learnedSample}
             monster={monster}

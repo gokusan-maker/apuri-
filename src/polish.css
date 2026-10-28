@@ -4256,3 +4256,8 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor.battle-v2 .choice.correct { box-shadow: 0 0 14px rgb(74 222 128 / 0.6); }
 .bfloor.battle-v2 .choice.wrong { box-shadow: 0 0 14px rgb(248 113 113 / 0.6); }
 .af-decor { margin-right: 4px; font-size: 0.8rem; opacity: 0.85; }
+/* 相棒の部屋：時間帯で背景の色が変わる（朝はやわらかい黄色、昼は青空、夕方はオレンジ、夜はこん色） */
+.monster.daypart-morning { background-image: linear-gradient(180deg, rgb(254 240 138 / 0.35), transparent 70%); }
+.monster.daypart-day { background-image: linear-gradient(180deg, rgb(125 211 252 / 0.3), transparent 70%); }
+.monster.daypart-evening { background-image: linear-gradient(180deg, rgb(251 146 60 / 0.32), rgb(244 114 182 / 0.12) 60%, transparent 90%); }
+.monster.daypart-night { background-image: linear-gradient(180deg, rgb(30 27 75 / 0.5), rgb(15 23 42 / 0.2) 70%, transparent); }
