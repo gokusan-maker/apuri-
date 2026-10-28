@@ -54,3 +54,12 @@ it('相棒をなでても、なでた回数（なでなで10回！など）は�
   for (let i = 0; i < 10; i++) fireEvent.click(screen.getByLabelText('相棒にさわる'))
   expect(screen.queryByText(/なでなで\d+回/)).toBeNull()
 })
+
+it('相棒：レベルアップまであと少し（8割以上）だと経験値のバーがきらきら光る', () => {
+  const { unmount } = render(<Monster monster={{ xp: 17 } as never} />)
+  expect(document.querySelector('.xp-bar.almost')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 5 } as never} />)
+  expect(document.querySelector('.xp-bar')).not.toBeNull()
+  expect(document.querySelector('.xp-bar.almost')).toBeNull()
+})

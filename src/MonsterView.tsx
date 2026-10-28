@@ -1331,7 +1331,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             {feeling && <span className="feeling">{` ${feeling.icon} ${feeling.text}`}</span>}
           </p>
         )}
-        <div className="xp-bar" role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
+        {/* レベルアップまであと少し（8割以上）だと、バーがきらきら光る */}
+        <div className={`xp-bar${need > 0 && into / need >= 0.8 ? ' almost' : ''}`} role="progressbar" aria-valuemin={0} aria-valuemax={need} aria-valuenow={into}>
           <div className="xp-fill" style={{ width: `${(into / need) * 100}%` }} />
         </div>
         <p className="xp-text">

@@ -4330,3 +4330,10 @@ header .event-chips { margin: 0 0 2px; }
 .arena-flame { display: inline-block; transform-origin: 50% 90%; animation: flame-flicker 0.9s ease-in-out infinite alternate; }
 @keyframes flame-flicker { 0% { transform: rotate(-8deg) scale(1); } 50% { transform: rotate(4deg) scale(1.12, 1.18); } 100% { transform: rotate(8deg) scale(0.96, 1.05); } }
 @media (prefers-reduced-motion: reduce) { .arena-flame { animation: none; } }
+
+/* 相棒：レベルアップまであと少しのとき、経験値のバーがきらきら光る */
+.xp-bar.almost { box-shadow: 0 0 0 2px rgb(250 204 21 / 0.5); animation: xp-almost 1.2s ease-in-out infinite alternate; }
+.xp-bar.almost .xp-fill { background-image: linear-gradient(110deg, rgb(255 255 255 / 0) 30%, rgb(255 255 255 / 0.6) 50%, rgb(255 255 255 / 0) 70%), linear-gradient(90deg, #facc15, #f97316); background-size: 200% 100%, 100% 100%; animation: xp-sparkle 1.6s linear infinite; }
+@keyframes xp-almost { to { box-shadow: 0 0 10px 2px rgb(250 204 21 / 0.85); } }
+@keyframes xp-sparkle { from { background-position: 150% 0, 0 0; } to { background-position: -50% 0, 0 0; } }
+@media (prefers-reduced-motion: reduce) { .xp-bar.almost, .xp-bar.almost .xp-fill { animation: none; } }
