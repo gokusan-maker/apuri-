@@ -12062,7 +12062,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'カフェがロビーの一部を使うため、正面入口近くの休けいスペースは2階にうつります。ご不便をおかけするかもしれませんが、新しいカフェを楽しんでいただければと思います。ご質問があれば、ビル管理室にご連絡ください。',
     ],
     blanks: [
-      { id: 'A', choices: ['closed', 'close', 'closing', 'closes'], answer: 0, why: 'will be ＋形容詞・過去分詞「～の状態になる」。will be closed「休みになる」。close・closes は be のあとに置けず、closing では「閉まりかけている」となり意味も形も合わない。' },
+      { id: 'A', choices: ['closed', 'close', 'closure', 'closes'], answer: 0, why: 'will be closed「休みになる（閉まっている）」。be のあとに状態を表す過去分詞 closed。close・closes は動詞なので be のあとに置けず、closure は名詞で「カフェ＝閉鎖」となり形が合わない。' },
       { id: 'B', choices: ['enjoy', 'enjoying', 'to enjoy', 'enjoyment'], answer: 0, why: 'hope (that) ＋主語＋動詞。主語 you に続く文の動詞なので enjoy。enjoying・to enjoy だけでは文の動詞にならず、enjoyment は名詞。' },
     ],
     underline: {
