@@ -1106,6 +1106,7 @@ it('闘技場：次の挑戦は前回の階から始まる', async () => {
   arenaPick(true) // 1→2→4階
   fireEvent.click(screen.getByText('🏁 終了'))
   expect(loadArenaLast()).toBe(3)
+  expect(screen.getByText('▶ 次はこの 4階から始まるよ')).toBeInTheDocument()
   fireEvent.click(screen.getByText('← 城にもどる'))
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/前回の 4階から/)).toBeInTheDocument()
   fireEvent.click(within(screen.getByRole('region', { name: '闘技場' })).getByRole('button', { name: /闘技場で戦う/ }))

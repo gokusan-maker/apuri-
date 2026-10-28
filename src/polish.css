@@ -4247,3 +4247,4 @@ header .event-chips { margin: 0 0 2px; }
 .arena-jump-pop { position: absolute; z-index: 3; right: 12px; top: 8px; color: #fde047; font-size: 1.6rem; font-weight: 900; text-shadow: 0 2px 0 #b45309, 0 0 12px rgb(250 204 21 / 0.8); animation: jump-pop 1.2s ease-out forwards; pointer-events: none; }
 @keyframes jump-pop { 0% { transform: translateY(20px) scale(0.5); opacity: 0; } 20% { transform: translateY(0) scale(1.2); opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(-20px) scale(1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .arena-jump-pop { animation: none; } }
+.arena-next-start { margin: 2px 0; font-size: 0.8rem; color: #93c5fd; }

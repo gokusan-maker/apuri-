@@ -152,6 +152,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
           </p>
         )}
         <p className="arena-title-badge">称号：{arenaTitle(lv)}</p>
+        <p className="arena-next-start">▶ 次はこの {arenaFloor(lv)}から始まるよ</p>
         {/* この回、はじめの階よりどれだけ上がれたか */}
         {top > base && (
           <p className="arena-lv-climb">
