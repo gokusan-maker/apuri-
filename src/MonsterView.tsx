@@ -388,6 +388,16 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 44 l4 -6 M50 42 l0 -7 M64 44 l-4 -6" stroke={line} strokeWidth="2" opacity="0.5" />
       </g>
     )
+  if (species === 'koala')
+    return (
+      <g stroke={line} strokeWidth="2.5">
+        {/* ふわふわの大きなまるい耳 */}
+        <circle cx="20" cy="34" r="14" fill={fill} />
+        <circle cx="80" cy="34" r="14" fill={fill} />
+        <circle cx="20" cy="34" r="8" fill="#f3f4f6" stroke="none" />
+        <circle cx="80" cy="34" r="8" fill="#f3f4f6" stroke="none" />
+      </g>
+    )
   if (species === 'elephant')
     return (
       <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
@@ -474,6 +484,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'koala')
+    return (
+      <g>
+        {/* 大きな黒い鼻 */}
+        <ellipse cx="50" cy="66" rx="7" ry="9" fill="#1f2937" />
+        <ellipse cx="50" cy="80" rx="12" ry="7" fill="#f3f4f6" opacity="0.8" />
+      </g>
+    )
   if (species === 'elephant')
     return (
       <g fill="none" stroke="#4b5563" strokeLinecap="round">

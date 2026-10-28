@@ -18,6 +18,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   panda: { dir: 'gmix', label: '文法', icon: '📐' },
   lion: { dir: 'sentence-read', label: '英文和訳', icon: '📜' },
   elephant: { dir: 'en-ja', label: '単語', icon: '🔤' },
+  koala: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
