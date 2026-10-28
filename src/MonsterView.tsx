@@ -491,6 +491,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'otter')
+    return (
+      <g>
+        {/* 白っぽい口もとと、まるい鼻 */}
+        <ellipse cx="50" cy="72" rx="13" ry="8" fill="#fef3c7" opacity="0.9" />
+        <ellipse cx="50" cy="67" rx="5" ry="3.5" fill="#1f2937" />
+      </g>
+    )
   if (species === 'flamingo')
     return (
       <g stroke="#9d174d" strokeWidth="2" strokeLinejoin="round">

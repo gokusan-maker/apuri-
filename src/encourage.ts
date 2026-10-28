@@ -25,6 +25,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   pelican: { streak: ['くちばしで、正解をキャッチ！', 'ぐわっ、いい調子！'], wrong: ['にがした魚は、もう一回すくおう！', 'だいじょうぶ、次はキャッチできるよ！'] },
   seal: { streak: ['ヒレでぱちぱち、大正解！', 'つるつる、すべるように正解！'], wrong: ['氷ですべっただけ、もう一回！', 'ごろんとひと休みして、次いこう！'] },
   flamingo: { streak: ['かた足でも、ぴたっと正解！', 'ピンクにかがやく連続正解！'], wrong: ['ぐらっとしたけど、立てなおそう！', 'バランスをとって、もう一回！'] },
+  otter: { streak: ['ぷかぷか、いい調子！', '小石がまたふえたよ、正解！'], wrong: ['川の流れにのって、もう一回！', '小石をなくしただけ、だいじょうぶ！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -59,6 +60,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   pelican: { streak: [['What a catch!', 'みごとなキャッチ！']], wrong: [['Scoop it up next time.', '次はすくい上げよう。']] },
   seal: { streak: [['Clap, clap! Great!', 'ぱちぱち！ すごい！']], wrong: [['Just a slip. Try again!', 'ちょっとすべっただけ。もう一回！']] },
   flamingo: { streak: [['Perfect balance!', 'かんぺきなバランス！']], wrong: [['Find your balance and try again.', 'バランスをとって、もう一回。']] },
+  otter: { streak: [['You’re on a roll!', '波にのってるね！']], wrong: [['Go with the flow and try again.', '流れにのって、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
