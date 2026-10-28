@@ -11841,6 +11841,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-cats-boxes',
+    title: 'Why Cats Love Boxes',
+    level: '難関大（評論）',
+    paragraphs: [
+      "If you put an empty cardboard box on the floor, there is a good chance your cat will jump into it within minutes. Many cat owners are surprised that their pets seem to prefer a cheap box ( A ) an expensive cat bed. Scientists have several ideas about why this happens.",
+      "One reason is safety. In the wild, cats like to hide in small spaces where enemies cannot easily reach them. Inside a box, a cat can watch what is happening around it without being seen. This makes it feel calm and secure.",
+      "Another reason is warmth. Cats are most comfortable at temperatures higher than those most people prefer at home. Cardboard keeps heat in, so a box is a warm place to rest, especially on a cold day.",
+      "Studies have also shown that cats in animal shelters become less stressed when they are given boxes. With a place to hide, they get used to their new home more quickly. So the next time your cat climbs into a box, remember that it is not just playing. It is looking for a place ( B ) it can relax.",
+    ],
+    ja: [
+      '空の段ボール箱をゆかに置くと、数分のうちにねこがその中にとびこむことがよくある。ペットが高いねこ用ベッドより安い箱のほうを好むようなので、おどろく飼い主も多い。科学者たちには、こうなる理由についていくつかの考えがある。',
+      '理由の1つは安全だ。野生では、ねこは敵が簡単にとどかないせまい場所にかくれるのを好む。箱の中なら、ねこは自分の姿を見られずに、まわりで起きていることを見ていられる。そのため、落ち着いて安心できるのだ。',
+      'もう1つの理由は暖かさだ。ねこは、たいていの人が家で好むよりも高い温度でいちばん心地よく感じる。段ボールは熱をにがさないので、箱はとくに寒い日には暖かい休み場所になる。',
+      '動物保護施設のねこは、箱をあたえられるとストレスがへることも研究でわかっている。かくれる場所があると、新しい住まいに早くなれるのだ。だから次にねこが箱に入っても、ただ遊んでいるだけではないと思い出してほしい。安心できる場所をさがしているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to', 'than', 'for', 'over of'], answer: 0, why: 'prefer A to B「BよりAを好む」。prefer では比べる相手の前に to を使う。than はふつう prefer とは使わず、for は「～のために」の意味になり、over of という形はない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a place（場所）で、うしろに完全な文（it can relax）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'secure',
+      choices: ['safe and free from worry', 'very hungry', 'excited and noisy', 'cold and lonely'],
+      answer: 0,
+      why: 'secure は「安心な・安全な」。calm と並んで、落ち着いて安心できるという意味。',
+    },
+    order: {
+      words: ['without', 'being', 'seen'],
+      rest: '',
+      answer: 'without being seen',
+      ja: '見られることなく（without ＋ being ＋過去分詞「～されずに」）',
+    },
+    tf: [
+      { statement: 'ねこは、高いねこ用ベッドより箱を好むことがある。', answer: true, why: '第1段落 their pets seem to prefer a cheap box to an expensive cat bed。' },
+      { statement: '段ボールは熱をにがしやすい。', answer: false, why: '第3段落 Cardboard keeps heat in。' },
+      { statement: '保護施設のねこは、箱があるとストレスがへる。', answer: true, why: '第4段落 cats in animal shelters become less stressed when they are given boxes。' },
+    ],
+    qa: [
+      { q: 'Why do cats feel safe inside a box?', choices: ['They can watch around them without being seen.', 'Boxes smell like food.', 'Boxes are very cold.', 'Other cats cannot find the box.'], answer: 0, why: '第2段落 Inside a box, a cat can watch what is happening around it without being seen。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
