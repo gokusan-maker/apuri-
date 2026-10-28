@@ -1440,7 +1440,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
             ) : (
               form.name
             )}{' '}
-            <span className="monster-level">Lv.{level}</span>
+            {/* レベルアップしたときは「Lv」の数字がきらっと光る */}
+            <span className={`monster-level${leveledUp ? ' lv-shine' : ''}`}>Lv.{level}</span>
             {growthOf(level) > 0 && <span className="buddy-growth" aria-label={`成長の星 ${growthOf(level)}`}>{growthText(growthOf(level))}</span>}
             {onRename && (
               <button

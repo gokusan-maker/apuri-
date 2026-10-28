@@ -80,3 +80,12 @@ it('相棒：進化したときだけ、体のまわりに光の輪が広がる'
   render(<Monster monster={{ xp: 500 } as never} />)
   expect(document.querySelector('.evolve-ring')).toBeNull()
 })
+
+it('相棒：レベルアップしたときだけ、「Lv」の数字がきらっと光る', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} leveledUp />)
+  expect(document.querySelector('.monster-level.lv-shine')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} />)
+  expect(document.querySelector('.monster-level')).not.toBeNull()
+  expect(document.querySelector('.monster-level.lv-shine')).toBeNull()
+})
