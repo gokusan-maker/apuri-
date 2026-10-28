@@ -13399,6 +13399,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-blackboard',
+    title: 'The Board at the Front of the Classroom',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Two hundred years ago, classrooms looked very different. Paper was expensive, so each student had a small slate ( A ) they wrote on with a piece of stone. The teacher had to walk from desk to desk to check each student's work.",
+      "In the early 1800s, a teacher in Scotland is said to have had a simple idea. He joined many small slates together and hung the large board on the wall. This allowed the whole class ( B ) the same thing at once, and the teacher could explain maps and numbers to everyone together.",
+      "The idea spread quickly. Later, boards were painted dark green, because that color was easier on the eyes than black. In many schools today, white boards with markers or large screens have taken their place.",
+      "The tools have changed, but the purpose is the same. A board at the front of the room helps a teacher share ideas with many students at the same time.",
+    ],
+    ja: [
+      '200年前、教室はとてもちがって見えた。紙は高かったので、生徒はひとりひとり、石のかけらで字を書く小さな石板を持っていた。先生は、ひとりひとりの作業を見るために、机から机へと歩かなければならなかった。',
+      '1800年代のはじめ、スコットランドのある先生が単純なアイデアを思いついたと言われている。小さな石板をたくさんつなぎ合わせ、その大きな板をかべにかけたのだ。これによってクラス全体が同じものを一度に見られるようになり、先生は地図や数をみんなにいっしょに説明できた。',
+      'その考えはすぐに広まった。のちに、黒よりも目にやさしいので、板は深い緑色にぬられるようになった。今日の多くの学校では、マーカーで書く白い板や大きな画面がそのかわりになっている。',
+      '道具は変わったが、目的は同じだ。教室の前の板は、先生がたくさんの生徒と同時に考えを分かち合う助けになっているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a small slate（もの）で、うしろの wrote on の目的語（on のあと）が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to see', 'seeing', 'seen', 'see'], answer: 0, why: 'allow ＋人＋to ～「（人）が～できるようにする」なので to see。seeing・seen・see は allow のこの形には入らない。' },
+    ],
+    underline: {
+      phrase: 'easier on the eyes',
+      choices: ['less tiring to look at', 'more expensive', 'harder to clean', 'brighter than the sun'],
+      answer: 0,
+      why: 'easy on the eyes は「目にやさしい・見ていてつかれにくい」という意味。',
+    },
+    order: {
+      words: ['have', 'taken', 'their', 'place'],
+      rest: '',
+      answer: 'have taken their place',
+      ja: 'そのかわりになっている（take one’s place「～にとってかわる」、現在完了）',
+    },
+    tf: [
+      { statement: '200年前、生徒はひとりひとり小さな石板を持っていた。', answer: true, why: '第1段落 each student had a small slate。' },
+      { statement: '黒板は、はじめから緑色にぬられていた。', answer: false, why: '第3段落 Later, boards were painted dark green。' },
+      { statement: '今では白い板や画面を使う学校も多い。', answer: true, why: '第3段落 white boards with markers or large screens have taken their place。' },
+    ],
+    qa: [
+      { q: 'What did the large board on the wall make possible?', choices: ['The whole class could see the same thing at once.', 'Students could take it home.', 'Paper became cheaper.', 'Teachers no longer needed to teach.'], answer: 0, why: '第2段落 This allowed the whole class to see the same thing at once。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
