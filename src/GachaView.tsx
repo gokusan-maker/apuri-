@@ -486,6 +486,16 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
       {result && (
         <div key={result.key} className={`gacha-result r-${result.kind.rarity}${fast ? ' fast' : ''}${result.first ? ' first-pull' : ''}`} role="status">
           {result.first && <p className="gacha-first">✨ きょうの1回目！キラキラカプセル ✨</p>}
+          {/* きょうの1回目は、カプセルのまわりで小さな星がまたたく */}
+          {result.first && (
+            <span className="first-stars" aria-hidden="true">
+              {['✦', '✧', '✦', '✧', '✦'].map((c, k) => (
+                <i key={k} style={{ '--k': k } as CSSProperties}>
+                  {c}
+                </i>
+              ))}
+            </span>
+          )}
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
           <span className={`gacha-capsule${result.mystery ? ' mystery' : ''}`} aria-hidden="true" style={result.mystery ? undefined : result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {!result.mystery && gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
