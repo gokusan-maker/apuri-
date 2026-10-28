@@ -13317,6 +13317,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-crossword',
+    title: 'The Birth of the Crossword',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In December 1913, readers of a New York newspaper found something new in the Sunday paper. It was a word game ( A ) by one of the writers for a special holiday page. Readers had to read short hints and write words into small squares, where the words crossed each other.",
+      "The first puzzle was shaped like a diamond, and it was quite easy. Still, people enjoyed ( B ) the empty squares, and they asked for more. Soon, the newspaper printed a new puzzle every week.",
+      "In the 1920s, crosswords became a huge trend. Books of puzzles sold very well, and people solved them on trains and in cafes. Some even worried that people were spending too much time on them.",
+      "Today, crosswords appear in newspapers, magazines, and apps in many languages. They are not only fun but also a good way to learn new words, because each answer must fit both the hint and the letters around it.",
+    ],
+    ja: [
+      '1913年12月、ニューヨークのある新聞の読者は、日曜版に新しいものを見つけた。それは、記者のひとりが休日の特別なページのために作った言葉のゲームだった。読者は短いヒントを読んで、言葉どうしが交わる小さなますに言葉を書きこまなければならなかった。',
+      '最初のパズルはひし形で、かなりかんたんだった。それでも、人々はあいたますをうめるのを楽しみ、もっとほしいとたのんだ。まもなく、新聞は毎週新しいパズルをのせるようになった。',
+      '1920年代、クロスワードは大流行した。パズルの本はよく売れ、人々は電車やカフェでそれをといた。人々がパズルに時間を使いすぎていると心配する人さえいた。',
+      '今日、クロスワードは多くの言語で、新聞や雑誌、アプリにのっている。楽しいだけでなく、新しい言葉を学ぶよい方法でもある。どの答えも、ヒントとまわりの文字の両方に合わなければならないからだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['made', 'making', 'makes', 'to making'], answer: 0, why: '「記者によって作られたゲーム」なので、過去分詞 made がうしろから game を説明する（by one of the writers が受け身のしるし）。making だとゲームが作ることになり、makes は動詞の形、to making は形がおかしい。' },
+      { id: 'B', choices: ['filling in', 'to fill in', 'fill in', 'filled in'], answer: 0, why: 'enjoy のあとは動名詞（enjoy ～ing「～して楽しむ」）なので filling in。enjoy は to 不定詞や原形・過去分詞をとらない。' },
+    ],
+    underline: {
+      phrase: 'a huge trend',
+      choices: ['something very popular at that time', 'a very difficult test', 'a large building', 'a long train trip'],
+      answer: 0,
+      why: 'trend は「流行」。huge trend で「大流行」、つまりその時代にとても人気だったという意味。',
+    },
+    order: {
+      words: ['a', 'good', 'way', 'to', 'learn', 'new', 'words'],
+      rest: '',
+      answer: 'a good way to learn new words',
+      ja: '新しい言葉を学ぶよい方法（a way to ～「～する方法」）',
+    },
+    tf: [
+      { statement: '最初のクロスワードは、とてもむずかしかった。', answer: false, why: '第2段落 it was quite easy。' },
+      { statement: '1920年代には、パズルの本がよく売れた。', answer: true, why: '第3段落 Books of puzzles sold very well。' },
+      { statement: 'クロスワードは、新しい言葉を学ぶのにも役立つ。', answer: true, why: '第4段落 a good way to learn new words。' },
+    ],
+    qa: [
+      { q: 'Why are crosswords a good way to learn new words?', choices: ['Each answer must fit both the hint and the letters around it.', 'They are always very easy.', 'They are only printed in English.', 'They give the answers first.'], answer: 0, why: '第4段落 because each answer must fit both the hint and the letters around it。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
