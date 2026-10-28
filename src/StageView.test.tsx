@@ -1418,3 +1418,8 @@ it('ボス城の階：のこりライフが1つになると、ハートがどき
   fireEvent.click(screen.getByText('次へ'))
   expect(document.querySelectorAll('.bfloor-life .heart-beat')).toHaveLength(1)
 })
+
+it('闘技場：「前回の続き」のお知らせは、ふわっと出てくる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-resume \{ animation: resume-in/)
+})
