@@ -435,7 +435,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           <summary>最近のガチャ（{log.length}回）</summary>
           <ul>
             {log.map((g, i) => (
-              <li key={i}>
+              // いちばん新しい行（先頭）だけ少し光る
+              <li key={i} className={i === 0 ? 'log-newest' : undefined}>
                 {g.day.slice(5).replace('-', '/')} <span className={`kind-tag r-${kindOf(g.kind).rarity}`}>{kindOf(g.kind).id === 'normal' ? '' : `${kindOf(g.kind).name}の`}</span>
                 {speciesOf(g.species).name}
               </li>

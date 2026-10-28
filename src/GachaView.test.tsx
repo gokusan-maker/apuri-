@@ -58,10 +58,15 @@ it('もう持っているキャラクターなら、図鑑の番号は出さな�
 
 it('ガチャを引くと「最近のガチャ」に残る', () => {
   localStorage.clear()
-  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('dragon') })} />)
+  render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={() => ({ kind: kindOf('kin'), species: speciesOf('dragon') })} />)
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByText('最近のガチャ（1回）')).toBeInTheDocument()
   expect(document.querySelector('.gacha-log li')!.textContent).toContain('きんいろのドラコ')
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByText('最近のガチャ（2回）')).toBeInTheDocument()
+  const rows = document.querySelectorAll('.gacha-log li')
+  expect(rows[0].classList.contains('log-newest')).toBe(true) // いちばん新しい行だけ光る
+  expect(document.querySelectorAll('.gacha-log li.log-newest')).toHaveLength(1)
 })
 
 it('レア度で確定演出が変わる（ウルトラレアは虹色、ふつうは無し）', () => {

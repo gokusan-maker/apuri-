@@ -4407,3 +4407,8 @@ header .event-chips { margin: 0 0 2px; }
 .arena .choices .choice:nth-child(4), .bfloor .choices .choice:nth-child(4) { animation-delay: 0.18s; }
 @keyframes choice-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .arena .choices .choice:not(.correct):not(.wrong), .bfloor .choices .choice:not(.correct):not(.wrong) { animation: none; } }
+
+/* ガチャ：「最近のガチャ」のいちばん新しい行が、少しだけ光る */
+.gacha-log li.log-newest { border-radius: 8px; background: color-mix(in srgb, #facc15 16%, transparent); animation: log-newest 1.6s ease-in-out 2; }
+@keyframes log-newest { 50% { box-shadow: 0 0 10px rgb(250 204 21 / 0.7); } }
+@media (prefers-reduced-motion: reduce) { .gacha-log li.log-newest { animation: none; } }
