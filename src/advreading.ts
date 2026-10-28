@@ -12866,6 +12866,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-scarecrow',
+    title: 'The Scarecrow’s Job',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For thousands of years, farmers have used scarecrows ( A ) birds away from their fields. A scarecrow is a doll dressed in old clothes and placed among the crops. From far away, it looks like a person standing guard.",
+      "However, birds are clever. If a scarecrow stays in the same place for many days, the birds soon learn that it never moves. Then they come back and eat the seeds again. So farmers move their scarecrows from time to time, or hang shiny objects on them that flash in the sun and move in the wind.",
+      "Today, scarecrows are also used for fun. In one mountain village in Japan, a woman made life-size dolls of the people who had lived there. Now it is known as a village ( B ) there are more dolls than people, and visitors come to see them.",
+      "From protecting crops to bringing visitors, the simple scarecrow has found new work to do.",
+    ],
+    ja: [
+      '何千年ものあいだ、農家の人たちは鳥を畑から遠ざけるためにかかしを使ってきた。かかしは古い服を着せて作物のあいだに置いた人形だ。遠くからだと、見はりをしている人が立っているように見える。',
+      'しかし、鳥はかしこい。かかしが何日も同じ場所にあると、鳥はやがてそれがまったく動かないことを学ぶ。そしてもどってきて、また種を食べてしまう。そこで農家の人たちは、ときどきかかしを動かしたり、日光にきらめき風にゆれる光るものをつるしたりする。',
+      '今日では、かかしは楽しみのためにも使われている。日本のある山の村では、ひとりの女性が、かつてそこに住んでいた人たちの等身大の人形を作った。今ではそこは人よりも人形のほうが多い村として知られ、それを見に観光客がやって来る。',
+      '作物を守ることから観光客をよぶことまで、単純なかかしは新しい仕事を見つけたのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to keep', 'keeping', 'kept', 'keep'], answer: 0, why: '「鳥を遠ざけるために」と目的を表すので to 不定詞 to keep（keep A away from B「AをBから遠ざける」）。keeping・kept・keep では目的の意味にならない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a village（場所）で、うしろに完全な文（there are more dolls than people）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'standing guard',
+      choices: ['watching over a place to protect it', 'sleeping on the ground', 'running away quickly', 'planting new seeds'],
+      answer: 0,
+      why: 'stand guard は「見はりをする」。畑を守るために見ている人のように見える、という意味。',
+    },
+    order: {
+      words: ['the', 'birds', 'soon', 'learn', 'that', 'it', 'never', 'moves'],
+      rest: '',
+      answer: 'the birds soon learn that it never moves',
+      ja: '鳥はやがてそれがまったく動かないことを学ぶ（learn that ～「～ということを学ぶ」）',
+    },
+    tf: [
+      { statement: '鳥は、ずっと同じ場所にあるかかしをこわがり続ける。', answer: false, why: '第2段落 the birds soon learn that it never moves. Then they come back。' },
+      { statement: '農家の人は、かかしに光るものをつるすことがある。', answer: true, why: '第2段落 hang shiny objects on them。' },
+      { statement: '日本のある村には、人よりも人形のほうが多い。', answer: true, why: '第3段落 a village where there are more dolls than people。' },
+    ],
+    qa: [
+      { q: 'Why do farmers move their scarecrows from time to time?', choices: ['So that birds do not learn that the scarecrows never move.', 'So that the dolls can get some sun.', 'Because visitors want to see them.', 'Because the clothes get dirty.'], answer: 0, why: '第2段落 If a scarecrow stays in the same place ... the birds soon learn that it never moves ... So farmers move their scarecrows。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
