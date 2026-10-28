@@ -7716,7 +7716,7 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The plants died for want of water.', ja: '植物は水が足りなくてかれてしまった。' },
     ],
     questions: [
-      { sentence: 'Many fans came in support ___ the team.', choices: ['of', 'for', 'to'], answer: 0, why: 'in support of ～「～を支持して」。support のあとは of。' },
+      { sentence: 'Many fans came in support ___ the team.', choices: ['of', 'at', 'to'], answer: 0, why: 'in support of ～「～を支持して」。support のあとは of。' },
       { sentence: 'The project stopped for ___ of money.', choices: ['want', 'wants', 'wanting'], answer: 0, why: 'for want of ～「～が足りないので」。for のあとは単数の名詞 want。' },
       { sentence: 'She gave a speech in ___ of the plan.', choices: ['support', 'supporting', 'supported'], answer: 0, why: 'in support of ～。in のあとは名詞 support。' },
     ],

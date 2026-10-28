@@ -2360,6 +2360,8 @@
 
 - [x] 文法：群前置詞 in support of ／ for want of
 
+- [x] 文法 in support of の単元：誤答 for（in support for と言うこともある）を at に直す
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
