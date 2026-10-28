@@ -106,6 +106,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-by-2': { wrong: 'She is a doctor by professional.', right: 'She is a doctor by profession.', why: 'by profession「職業は」。by のあとは名詞 profession。' },
   'prep-idiom-schedule': { wrong: 'The work is behind the schedules.', right: 'The work is behind schedule.', why: 'behind schedule「予定よりおくれて」。the も -s もつけない。' },
   'prep-idiom-spirits': { wrong: 'He was in a good moody today.', right: 'He was in a good mood today.', why: 'in a good mood「きげんがよくて」。good のあとは名詞 mood（moody は形容詞）。' },
+  'prep-idiom-turn': { wrong: 'The trip cost 30,000 yen in totally.', right: 'The trip cost 30,000 yen in total.', why: 'in total「合計で」。in のあとは名詞 total（totally は副詞なので入らない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
