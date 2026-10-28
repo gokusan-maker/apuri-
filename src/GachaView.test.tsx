@@ -297,3 +297,10 @@ it('ガチャ：NEW! の札がぴょこっと左右にゆれる（CSS）', async
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-new-chips > span\.gacha-new \{ display: inline-block; animation: new-wiggle/)
 })
+
+it('ガチャのまとめ引き：SR・UR のカードだけふちが虹色に光る（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.gacha-multi li\.r-SR, \.gacha-multi li\.r-UR \{ animation: treasure-pop 0\.6s ease-out both, rare-rim/)
+  expect(css).toMatch(/@keyframes rare-rim/)
+})

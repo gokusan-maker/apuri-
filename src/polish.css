@@ -4369,3 +4369,13 @@ header .event-chips { margin: 0 0 2px; }
 .arena-shield { display: inline-block; animation: shield-glint 2.6s ease-in-out infinite; }
 @keyframes shield-glint { 0%, 70%, 100% { filter: drop-shadow(0 0 0 rgb(147 197 253 / 0)); transform: scale(1); } 80% { filter: drop-shadow(0 0 6px rgb(147 197 253 / 0.95)) brightness(1.4); transform: scale(1.18); } }
 @media (prefers-reduced-motion: reduce) { .arena-shield { animation: none; } }
+
+/* ガチャのまとめ引き：SR・UR のカードだけ、ふちが虹色に光る（出てくる動きはそのまま） */
+.gacha-multi li.r-SR, .gacha-multi li.r-UR { animation: treasure-pop 0.6s ease-out both, rare-rim 2.4s linear infinite; }
+@keyframes rare-rim {
+  0%, 100% { box-shadow: 0 0 0 2px #f87171, 0 0 10px rgb(248 113 113 / 0.6); }
+  25% { box-shadow: 0 0 0 2px #fbbf24, 0 0 10px rgb(251 191 36 / 0.6); }
+  50% { box-shadow: 0 0 0 2px #4ade80, 0 0 10px rgb(74 222 128 / 0.6); }
+  75% { box-shadow: 0 0 0 2px #60a5fa, 0 0 10px rgb(96 165 250 / 0.6); }
+}
+@media (prefers-reduced-motion: reduce) { .gacha-multi li.r-SR, .gacha-multi li.r-UR { animation: none; box-shadow: 0 0 0 2px #fbbf24; } }
