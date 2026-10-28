@@ -395,6 +395,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M18 44 L10 30 L24 34 L22 18 L36 26 L42 10 L50 24 L58 10 L64 26 L78 18 L76 34 L90 30 L82 44 Z" />
       </g>
     )
+  if (species === 'dolphin')
+    return (
+      <g stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 頭の上のせびれ */}
+        <path d="M44 28 Q52 6 64 22 Q56 24 52 30 Z" fill={fill} />
+      </g>
+    )
   if (species === 'mole')
     return (
       <g>

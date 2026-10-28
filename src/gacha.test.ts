@@ -71,10 +71,10 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   const { rollSpecies, formOf } = await import('./monster')
   const count: Record<string, number> = {}
   for (let i = 0; i < 1000; i++) count[rollSpecies(i / 1000).id] = (count[rollSpecies(i / 1000).id] ?? 0) + 1
-  const want = { mochi: 180, fox: 30, penguin: 30, rabbit: 30, cat: 30, dragon: 40, owl: 30, turtle: 30, hamster: 30, sheep: 30, squirrel: 30, panda: 30, lion: 30, elephant: 30, koala: 30, hedgehog: 30, pelican: 30, seal: 30, flamingo: 30, otter: 30, bear: 30, giraffe: 30, frog: 30, raccoon: 30, sloth: 30, alpaca: 30, mole: 30, octopus: 30 }
+  const want = { mochi: 180, fox: 20, penguin: 20, rabbit: 30, cat: 30, dragon: 30, owl: 30, turtle: 30, hamster: 30, sheep: 30, squirrel: 30, panda: 30, lion: 30, elephant: 30, koala: 30, hedgehog: 30, pelican: 30, seal: 30, flamingo: 30, otter: 30, bear: 30, giraffe: 30, frog: 30, raccoon: 30, sloth: 30, alpaca: 30, mole: 30, dolphin: 30, octopus: 30 }
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.32)!
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.3)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
@@ -95,13 +95,13 @@ it('天井：スーパーレア以上が出ないまま20回目はきんいろ�
   expect(r2.wallet.pity).toBe(0)
 })
 
-it('週末はドラコが出やすい（4%→14%、そのぶんモチが減る）', async () => {
+it('週末はドラコが出やすい（3%→13%、そのぶんモチが減る）', async () => {
   const { rollSpecies, SPECIES, speciesRate } = await import('./monster')
   const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, true), 0)
   expect(total).toBeCloseTo(1)
   let dragons = 0
   for (let i = 0; i < 1000; i++) if (rollSpecies(i / 1000, true).id === 'dragon') dragons++
-  expect(Math.abs(dragons - 140)).toBeLessThanOrEqual(1) // 小数の足し算の誤差で、さかいめの1つがずれることがある
+  expect(Math.abs(dragons - 130)).toBeLessThanOrEqual(1) // 小数の足し算の誤差で、さかいめの1つがずれることがある
 })
 
 it('最近のガチャの結果は新しい順に10回まで残る', async () => {
