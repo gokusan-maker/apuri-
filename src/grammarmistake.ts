@@ -122,6 +122,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-incash': { wrong: 'Can I pay in card?', right: 'Can I pay by card?', why: '「カードで払う」は pay by card。現金なら pay in cash と in を使う。' },
   'prep-idiom-dawn': { wrong: 'The fireworks started in midnight.', right: 'The fireworks started at midnight.', why: 'at midnight「真夜中（午前0時）に」。時の一点を表すので at を使う（in midnight とは言わない）。' },
   'prep-idiom-mondaymorning': { wrong: 'We have a test in Monday morning.', right: 'We have a test on Monday morning.', why: '曜日がつくと、朝・午後・夜でも on（on Monday morning）。in the morning とは使い分ける。' },
+  'prep-idiom-intherain': { wrong: 'We waited for the bus in the rainy.', right: 'We waited for the bus in the rain.', why: 'in the rain「雨の中で」。the のあとは名詞 rain（rainy は形容詞）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
