@@ -312,9 +312,10 @@ export const SPECIES: Species[] = [
   { id: 'giraffe', name: 'ジラフィ', egg: 'サバンナのタマゴ', token: 'ジラ', bigToken: 'ジラフィ', color: '#facc15', line: '#713f12', rate: 0.03, desc: '首の長いキリン。高いところから、むずかしい単語も見のがさない。' },
   { id: 'frog', name: 'ピョコタ', egg: 'はすの葉のタマゴ', token: 'ピョコ', bigToken: 'ピョコタ', color: '#4ade80', line: '#14532d', rate: 0.03, desc: 'はすの葉の上のカエル。雨の日がすきで、正解するとケロッと高くジャンプする。' },
   { id: 'raccoon', name: 'アライッチ', egg: 'せせらぎのタマゴ', token: 'アラ', bigToken: 'アライッチ', color: '#a8a29e', line: '#292524', rate: 0.03, desc: 'しましまのしっぽのアライグマ。なんでも川でていねいに洗うように、単語も一つずつていねいに覚える。' },
-  { id: 'sloth', name: 'ノンビリン', egg: 'ジャングルのタマゴ', token: 'ノン', bigToken: 'ノンビリン', color: '#d6d3d1', line: '#57534e', rate: 0.04, desc: '木にぶら下がるナマケモノ。動きはゆっくりだけど、一度覚えた単語はずっとわすれない。' },
-  { id: 'alpaca', name: 'モフパカ', egg: 'アンデスのタマゴ', token: 'モフ', bigToken: 'モフパカ', color: '#fef3c7', line: '#78350f', rate: 0.04, desc: 'もこもこの毛のアルパカ。ふわふわの毛の中に、覚えた単語をいっぱいしまっている。' },
-  { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.04, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
+  { id: 'sloth', name: 'ノンビリン', egg: 'ジャングルのタマゴ', token: 'ノン', bigToken: 'ノンビリン', color: '#d6d3d1', line: '#57534e', rate: 0.03, desc: '木にぶら下がるナマケモノ。動きはゆっくりだけど、一度覚えた単語はずっとわすれない。' },
+  { id: 'alpaca', name: 'モフパカ', egg: 'アンデスのタマゴ', token: 'モフ', bigToken: 'モフパカ', color: '#fef3c7', line: '#78350f', rate: 0.03, desc: 'もこもこの毛のアルパカ。ふわふわの毛の中に、覚えた単語をいっぱいしまっている。' },
+  { id: 'mole', name: 'モグッチ', egg: 'つちの中のタマゴ', token: 'モグ', bigToken: 'モグッチ', color: '#57534e', line: '#1c1917', rate: 0.03, desc: '土の中をほり進むモグラ。目はちいさいけれど、耳と鼻で英語の音をしっかりつかまえる。' },
+  { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
 export const speciesOf = (id: string | undefined): Species => SPECIES.find((x) => x.id === id) ?? SPECIES[0]

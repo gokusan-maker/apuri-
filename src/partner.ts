@@ -29,6 +29,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   raccoon: { id: 'claw', name: 'ごしごしウォッシュ', desc: '2問正解ごとに必殺技ゲージ +1' },
   sloth: { id: 'cheer', name: 'のんびりパワー', desc: '2問正解ごとに必殺技ゲージ +1' },
   alpaca: { id: 'cheer', name: 'もこもこガード', desc: '2問正解ごとに必殺技ゲージ +1' },
+  mole: { id: 'claw', name: 'ほりほりクロー', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -82,6 +83,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   raccoon: { name: 'アライグマ・バブルウォッシュ', color: '#78716c' },
   sloth: { name: 'ナマケモノ・スローモーション', color: '#a8a29e' },
   alpaca: { name: 'アルパカ・フワフワクラウド', color: '#fbbf24' },
+  mole: { name: 'モグラ・アンダーグラウンド', color: '#a16207' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -122,6 +124,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   raccoon: { en: 'Let’s wash away the mistakes!', ja: 'まちがいは洗い流しちゃおう！' },
   sloth: { en: 'Slowly, but I never forget!', ja: 'ゆっくりだけど、ぜったいわすれないよ！' },
   alpaca: { en: 'So fluffy, so smart!', ja: 'ふわふわで、かしこいよ！' },
+  mole: { en: 'I dug up the answer!', ja: '答えをほりあてたよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

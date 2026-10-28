@@ -32,6 +32,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   raccoon: { streak: ['ていねいに洗って、ぴかぴか正解！', 'ごしごし、連続正解！'], wrong: ['まちがいは洗い流して、もう一回！', 'もういちどていねいにやってみよう！'] },
   sloth: { streak: ['ゆ〜っくり、でも正解！', 'のんびり連続正解！'], wrong: ['あせらない、あせらない。もう一回！', 'ぶら〜んとひと休みして、次いこう！'] },
   alpaca: { streak: ['もこもこ、ふわふわ正解！', 'もふもふパワーで連続正解！'], wrong: ['ふわっと気をとりなおそう！', 'もこもこの毛でつつんで、もう一回！'] },
+  mole: { streak: ['ほりあてた、大正解！', 'もぐもぐ、どんどん正解！'], wrong: ['もう少しほってみよう！', '土の中で、もう一回考えよう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -73,6 +74,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   raccoon: { streak: [['Squeaky clean answers!', 'ぴかぴかの答え！']], wrong: [['Wash it off and try again.', '洗い流して、もう一回。']] },
   sloth: { streak: [['Slowly but surely!', 'ゆっくり、でも確実に！']], wrong: [['No rush. Try again.', 'あわてないで、もう一回。']] },
   alpaca: { streak: [['Soft and smart!', 'やわらかくて、かしこい！']], wrong: [['Fluff it off and try again.', 'ふわっとはらって、もう一回。']] },
+  mole: { streak: [['You dug deep!', '深くほりあてたね！']], wrong: [['Dig a little more.', 'もう少しほってみよう。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
