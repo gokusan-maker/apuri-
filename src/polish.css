@@ -4241,3 +4241,5 @@ header .event-chips { margin: 0 0 2px; }
 .arena-by-kind { margin: 2px 0; font-size: 0.8rem; color: var(--muted); }
 .am-kind { margin-right: 4px; }
 .af-gate { font-size: 0.68rem; font-weight: 800; color: #fde047; }
+/* 闘技場：盾があるあいだ、いまの階が青く光る */
+.arena-floor.here.shielded { box-shadow: 0 0 0 2px #60a5fa, 0 0 18px rgb(96 165 250 / 0.7); }

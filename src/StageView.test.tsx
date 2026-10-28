@@ -861,6 +861,7 @@ it('闘技場：5連続正解で盾をもらい、次のまちがいで1回だ�
   expect(screen.getByText('🛡 5連続正解！ 盾をゲット（次のまちがいで1回だけ落ちない）')).toBeInTheDocument()
   fireEvent.click(screen.getByText(/^次へ/))
   expect(document.querySelector('.arena-shield')).not.toBeNull()
+  expect(document.querySelector('.arena-floor.here.shielded')).not.toBeNull() // 盾があるあいだ、いまの階が青く光る
   const at = floor()
   arenaPick(false)
   expect(screen.getByText('🛡 盾がまもった！ 階はそのまま')).toBeInTheDocument()

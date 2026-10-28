@@ -266,7 +266,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
                 🌱
               </div>
             ) : (
-              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}${f === ARENA_ENDLESS ? ' summit' : ''}${f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS ? ' lv-gate' : ''}${isArenaEndless(f) ? ' endless' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
+              <div key={f} className={`arena-floor${f === shown ? ' here' : ''}${f === shown && streak >= 3 ? ' on-fire' : ''}${f === shown && shield ? ' shielded' : ''}${f === ARENA_ENDLESS ? ' summit' : ''}${f % ARENA_PER === 0 && f > 0 && f < ARENA_ENDLESS ? ' lv-gate' : ''}${isArenaEndless(f) ? ' endless' : ''}`} style={{ '--fc': floorColor(f) } as CSSProperties} aria-hidden={f !== shown}>
                 <span className="af-num">{f + 1}階</span>
                 <span className="af-lv">{arenaLvLabel(f)}</span>
                 {f === ARENA_ENDLESS && <span className="af-summit">♾ 無限の階</span>}
