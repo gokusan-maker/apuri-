@@ -13153,6 +13153,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-dodo',
+    title: 'The Bird That Could Not Run Away',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The dodo was a large bird that lived on a small island in the Indian Ocean. It could not fly, but that was not a problem for a long time. It lived on an island ( A ) there were no animals that hunted it.",
+      "Because it had no enemies, the dodo had no reason ( B ) afraid. When people first arrived on the island around 1600, the birds did not run away from them. They also built their nests on the ground, where their eggs were easy to reach.",
+      "The people brought animals such as rats, pigs, and dogs. These animals ate the dodos' eggs, and people also hunted the birds. In less than a hundred years, the dodo was gone forever.",
+      "Today, the dodo is a famous symbol of extinction. Its story reminds us that when we move into a new place, we can change the lives of the animals there very quickly. It also teaches us to protect animals before it is too late.",
+    ],
+    ja: [
+      'ドードーは、インド洋の小さな島にすんでいた大きな鳥だ。飛ぶことはできなかったが、長いあいだそれは問題ではなかった。ドードーは、自分をおそう動物がいない島で暮らしていたのだ。',
+      '敵がいなかったので、ドードーにはこわがる理由がなかった。1600年ごろに人々がはじめて島に着いたとき、鳥たちは人からにげなかった。また、巣を地面に作っていたので、卵に手が届きやすかった。',
+      '人々は、ネズミやブタ、イヌなどの動物を連れてきた。これらの動物がドードーの卵を食べ、人々も鳥をつかまえた。100年もたたないうちに、ドードーは永遠にいなくなってしまった。',
+      '今日、ドードーは絶滅の有名なシンボルになっている。その話は、私たちが新しい場所に入っていくと、そこにいる動物たちの暮らしをとても早く変えてしまうことがあると思い出させてくれる。また、手おくれになる前に動物を守ることも教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 an island（場所）で、うしろに完全な文（there were no animals ...）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to be', 'being', 'been', 'be'], answer: 0, why: 'reason to ～「～する理由」。名詞 reason を to 不定詞がうしろから説明するので to be。being・been・be はこの形に入らない。' },
+    ],
+    underline: {
+      phrase: 'extinction',
+      choices: ['the end of a kind of animal or plant', 'the birth of a new animal', 'a long trip across the sea', 'a large group of birds'],
+      answer: 0,
+      why: 'extinction は「絶滅」。ある種類の生き物がいなくなってしまうこと。',
+    },
+    order: {
+      words: ['built', 'their', 'nests', 'on', 'the', 'ground'],
+      rest: '',
+      answer: 'built their nests on the ground',
+      ja: '巣を地面に作った（build a nest「巣を作る」）',
+    },
+    tf: [
+      { statement: 'ドードーは空を飛べた。', answer: false, why: '第1段落 It could not fly。' },
+      { statement: '人が来たとき、ドードーは人からにげなかった。', answer: true, why: '第2段落 the birds did not run away from them。' },
+      { statement: '人が連れてきた動物が、ドードーの卵を食べた。', answer: true, why: '第3段落 These animals ate the dodos’ eggs。' },
+    ],
+    qa: [
+      { q: 'Why did the dodo have no reason to be afraid?', choices: ['Because it had no enemies on the island.', 'Because it could fly very fast.', 'Because it was bigger than people.', 'Because it lived in the sea.'], answer: 0, why: '第2段落 Because it had no enemies, the dodo had no reason to be afraid。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
