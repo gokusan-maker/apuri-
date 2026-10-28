@@ -2451,6 +2451,8 @@
 
 - [x] 長文 新しいカフェ開店：空所Aの誤答 closing（will be closing と言えてしまう）を closure に直す
 
+- [x] 文法：前置詞の熟語㊳ in a good mood ／ in high spirits
+
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討
 
