@@ -12021,7 +12021,7 @@ export const ADV_PASSAGES: LongPassage[] = [
       'コアラはクマに見えるが、クマのなかまではまったくない。カンガルーと同じ有袋類だ。コアラの赤ちゃんはジョーイとよばれ、母親の背中に乗りはじめるまで、約6か月間母親のふくろの中で育つ。',
     ],
     blanks: [
-      { id: 'A', choices: ['sleeps', 'sleep', 'sleeping', 'slept for'], answer: 0, why: '主語 a koala（単数）に続く文の動詞で、ふだんのことなので現在形 sleeps。sleep は主語と合わず、sleeping だけでは文の動詞にならない。slept for では過去のことになり、うしろの between とも合わない。' },
+      { id: 'A', choices: ['sleeps', 'sleep', 'sleeping', 'to sleep'], answer: 0, why: '主語 a koala（単数）に続く文の動詞で、ふだんのことなので現在形 sleeps。sleep は主語と合わず、sleeping・to sleep だけでは文の動詞にならない。' },
       { id: 'B', choices: ['so', 'because of', 'such as', 'instead of'], answer: 0, why: 'うしろに主語と動詞（they rarely have to climb）が続き、「それで」と結果を表す接続詞 so。because of・such as・instead of は前置詞のはたらきで、うしろに文をとれない。' },
     ],
     underline: {
