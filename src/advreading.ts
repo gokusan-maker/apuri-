@@ -12087,6 +12087,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-pelicans',
+    title: 'The Pelican’s Big Bill',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Pelicans are large water birds with very long bills. Under the bill hangs a stretchy pouch of skin. This pouch can hold up to ten liters of water, which ( A ) more than the bird's own stomach can hold.",
+      "Many people think pelicans carry fish in their pouches, but this is not quite true. The pouch is used like a fishing net. A pelican dips its head into the water and scoops up fish together with lots of water. Then it tips its head forward to let the water flow out before it swallows the fish.",
+      "Some kinds of pelicans fish together in groups. They swim in a line and beat their wings on the water to drive the fish into shallow areas, ( B ) the fish are easier to catch.",
+      "The pouch has another use, too. On hot days, pelicans shake the thin skin of their pouches to cool their bodies down. In this way, one body part helps them both find food and stay comfortable in the heat.",
+    ],
+    ja: [
+      'ペリカンは、とても長いくちばしを持つ大きな水鳥だ。くちばしの下には、のびちぢみする皮のふくろがぶら下がっている。このふくろには水を10リットルまで入れられ、それは鳥自身の胃に入る量よりも多い。',
+      'ペリカンはふくろに魚を入れて運ぶと多くの人が思っているが、それは正確ではない。ふくろは魚をとるあみのように使われる。ペリカンは頭を水につっこみ、たくさんの水といっしょに魚をすくい上げる。それから頭を前にかたむけて水を流し出し、魚を飲みこむのだ。',
+      '群れでいっしょに魚をとる種類のペリカンもいる。一列に泳ぎ、水面をつばさでたたいて魚を浅い場所に追いこむ。そこでは魚をつかまえやすいのだ。',
+      'ふくろには、もう1つの使い道もある。暑い日には、ペリカンはふくろのうすい皮をふるわせて体を冷やす。このように、1つの体の部分が、えさをとることにも、暑さの中で快適にすごすことにも役立っているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['is', 'are', 'being', 'to be'], answer: 0, why: 'コンマのあとの関係代名詞 which は前の内容（10リットルの水が入ること）を受けるので単数あつかいで is。are は複数の主語の形で、being・to be だけでは関係詞節の動詞にならない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 shallow areas（場所）で、うしろに完全な文（the fish are easier to catch）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'scoops up',
+      choices: ['picks up with a curved shape', 'throws away', 'cuts into pieces', 'hides under a rock'],
+      answer: 0,
+      why: 'scoop up は「すくい上げる」。ふくろをスプーンやあみのように使って魚をとるという意味。',
+    },
+    order: {
+      words: ['to', 'let', 'the', 'water', 'flow', 'out'],
+      rest: 'before it swallows the fish',
+      answer: 'to let the water flow out',
+      ja: '水を流し出すために（let ＋もの＋動詞の原形「～が…するようにする」）',
+    },
+    tf: [
+      { statement: 'ペリカンは、ふくろに魚をためて運ぶ。', answer: false, why: '第2段落 Many people think pelicans carry fish in their pouches, but this is not quite true。' },
+      { statement: '群れで魚を浅い場所に追いこむペリカンもいる。', answer: true, why: '第3段落 They swim in a line and beat their wings on the water to drive the fish into shallow areas。' },
+      { statement: 'ふくろは、体を冷やすのにも使われる。', answer: true, why: '第4段落 pelicans shake the thin skin of their pouches to cool their bodies down。' },
+    ],
+    qa: [
+      { q: 'What does a pelican do before it swallows the fish?', choices: ['It lets the water flow out of its pouch.', 'It flies high into the sky.', 'It shares the fish with others.', 'It cuts the fish with its bill.'], answer: 0, why: '第2段落 it tips its head forward to let the water flow out before it swallows the fish。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
