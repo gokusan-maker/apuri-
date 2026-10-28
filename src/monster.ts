@@ -304,9 +304,9 @@ export const SPECIES: Species[] = [
   { id: 'elephant', name: 'パオン', egg: 'みずうみのタマゴ', token: 'パオ', bigToken: 'パオン', color: '#a8b3c4', line: '#4b5563', rate: 0.02, desc: '大きな耳のゾウ。一度覚えた単語はぜったいにわすれない。' },
   { id: 'koala', name: 'ユーカ', egg: 'ユーカリのタマゴ', token: 'ユー', bigToken: 'ユーカ', color: '#9ca3af', line: '#374151', rate: 0.02, desc: 'ふわふわの耳のコアラ。のんびりねむりながらも、聞いた英語はちゃんと覚えている。' },
   { id: 'hedgehog', name: 'ハリポン', egg: 'トゲトゲのタマゴ', token: 'ハリ', bigToken: 'ハリポン', color: '#b45309', line: '#451a03', rate: 0.02, desc: '背中がトゲトゲのハリネズミ。こわがりだけど、まちがえた単語にはトゲのように何度もささって覚える。' },
-  { id: 'pelican', name: 'ペリッチ', egg: 'みなとのタマゴ', token: 'ペリ', bigToken: 'ペリッチ', color: '#f8fafc', line: '#475569', rate: 0.03, desc: '大きなくちばしのペリカン。のどのふくろに、聞いた英単語をたっぷりためこむ。' },
-  { id: 'seal', name: 'アザラン', egg: 'りゅうひょうのタマゴ', token: 'アザ', bigToken: 'アザラン', color: '#cbd5e1', line: '#334155', rate: 0.03, desc: 'まるまるとしたアザラシ。氷の上でごろごろしながら、英語のリズムに合わせてヒレをたたく。' },
-  { id: 'flamingo', name: 'フラミン', egg: 'さくら色のタマゴ', token: 'フラ', bigToken: 'フラミン', color: '#f9a8d4', line: '#9d174d', rate: 0.03, desc: 'ピンクのフラミンゴ。かた足で立ったまま、じっと英語を聞いて集中する。' },
+  { id: 'pelican', name: 'ペリッチ', egg: 'みなとのタマゴ', token: 'ペリ', bigToken: 'ペリッチ', color: '#f8fafc', line: '#475569', rate: 0.02, desc: '大きなくちばしのペリカン。のどのふくろに、聞いた英単語をたっぷりためこむ。' },
+  { id: 'seal', name: 'アザラン', egg: 'りゅうひょうのタマゴ', token: 'アザ', bigToken: 'アザラン', color: '#cbd5e1', line: '#334155', rate: 0.02, desc: 'まるまるとしたアザラシ。氷の上でごろごろしながら、英語のリズムに合わせてヒレをたたく。' },
+  { id: 'flamingo', name: 'フラミン', egg: 'さくら色のタマゴ', token: 'フラ', bigToken: 'フラミン', color: '#f9a8d4', line: '#9d174d', rate: 0.02, desc: 'ピンクのフラミンゴ。かた足で立ったまま、じっと英語を聞いて集中する。' },
   { id: 'otter', name: 'カワッチ', egg: 'かわらのタマゴ', token: 'カワ', bigToken: 'カワッチ', color: '#a16207', line: '#422006', rate: 0.03, desc: '川であそぶカワウソ。お気に入りの小石をおなかにのせて、覚えた単語をかぞえている。' },
   { id: 'bear', name: 'ベアボン', egg: 'はちみつのタマゴ', token: 'ベア', bigToken: 'ベアボン', color: '#92400e', line: '#3b1d06', rate: 0.03, desc: '森にすむ子グマ。はちみつが大好きで、あまい単語ほどよく覚える。' },
   { id: 'giraffe', name: 'ジラフィ', egg: 'サバンナのタマゴ', token: 'ジラ', bigToken: 'ジラフィ', color: '#facc15', line: '#713f12', rate: 0.03, desc: '首の長いキリン。高いところから、むずかしい単語も見のがさない。' },
@@ -320,6 +320,7 @@ export const SPECIES: Species[] = [
   { id: 'crab', name: 'チョッキン', egg: 'すなはまのタマゴ', token: 'チョキ', bigToken: 'チョッキン', color: '#f87171', line: '#7f1d1d', rate: 0.03, desc: '大きなハサミのカニ。横歩きしながら、まちがえた単語をチョキンと切って覚えなおす。' },
   { id: 'tiger', name: 'シマトラ', egg: 'たけやぶのタマゴ', token: 'トラ', bigToken: 'シマトラ', color: '#fb923c', line: '#7c2d12', rate: 0.03, desc: 'しましまのトラ。ねらった単語にそっと近づいて、一気にがぶっと覚える。' },
   { id: 'chameleon', name: 'イロカメ', egg: 'このはのタマゴ', token: 'イロ', bigToken: 'イロカメ', color: '#86efac', line: '#14532d', rate: 0.03, desc: '体の色をかえるカメレオン。単語の意味によって、くるくる色をかえて覚える。' },
+  { id: 'swan', name: 'シラトリ', egg: 'みずべのタマゴ', token: 'シラ', bigToken: 'シラトリ', color: '#f1f5f9', line: '#334155', rate: 0.03, desc: '湖をすべるハクチョウ。水の上ではしずかだけど、水の下では足をいっしょうけんめい動かして練習している。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 

@@ -38,6 +38,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   crab: { streak: ['チョッキン、大正解！', '横歩きでも、まっすぐ正解！'], wrong: ['まちがいはチョキンと切って、もう一回！', '横にずれただけ、次いこう！'] },
   tiger: { streak: ['がおっ、大正解！', 'しましまパワーで連続正解！'], wrong: ['ねらいなおして、もう一回！', 'そっと近づいて、次はつかまえよう！'] },
   chameleon: { streak: ['色がかわるほど、大正解！', 'くるくる、連続正解！'], wrong: ['色をかえて、もう一回！', 'まわりをよく見て、次いこう！'] },
+  swan: { streak: ['すいすい、大正解！', 'しずかに、でも確実に正解！'], wrong: ['水の下でがんばれば、次はできるよ！', '羽をととのえて、もう一回！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -85,6 +86,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   crab: { streak: [['Sharp as a claw!', 'ハサミみたいにするどい！']], wrong: [['Snip it and try again.', 'チョキンと切って、もう一回。']] },
   tiger: { streak: [['Fierce and focused!', 'するどくて集中してる！']], wrong: [['Take aim and try again.', 'ねらいなおして、もう一回。']] },
   chameleon: { streak: [['Showing your true colors!', '本当の力が出てるね！']], wrong: [['Change and try again.', '気分をかえて、もう一回。']] },
+  swan: { streak: [['Smooth and graceful!', 'なめらかで美しい！']], wrong: [['Keep paddling and try again.', 'こぎ続けて、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
