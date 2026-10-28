@@ -12333,6 +12333,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-paperclip',
+    title: 'The Simple Paper Clip',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A paper clip is just a small piece of wire ( A ) into two loops, but it is one of the most useful tools on a desk. Before it was invented, people held papers together with pins or string, which could make holes or easily come loose.",
+      "In the late 1800s, many inventors tried to make a better clip. Some of their designs did not hold papers well, and others tore them. The shape we use most today became popular because it is easy to slide on and it holds papers firmly without damaging them.",
+      "The paper clip has also become a symbol. During the Second World War, some people in Norway wore paper clips on their clothes ( B ) show that they stood together.",
+      "Today we rarely think about paper clips. Still, their story reminds us that a simple idea, if it solves a real problem, can last for more than a hundred years.",
+    ],
+    ja: [
+      'ゼムクリップは、2つの輪の形に曲げられた小さな針金にすぎないが、机の上で最も役に立つ道具の1つだ。それが発明される前は、人々はピンやひもで紙をまとめていたが、それだと穴があいたり、すぐにほどけたりした。',
+      '1800年代の終わりに、多くの発明家がよりよいクリップを作ろうとした。紙をうまくとめられないデザインもあれば、紙をやぶってしまうデザインもあった。今日最もよく使われている形が広まったのは、すっとはめやすく、紙をいためずにしっかりとめられるからだ。',
+      'ゼムクリップは、しるしにもなった。第二次世界大戦中、ノルウェーの一部の人々は、自分たちが団結していることを示すために、服にクリップをつけた。',
+      '今日、私たちはクリップのことをめったに考えない。それでも、その物語は、単純なアイデアでも本当の問題を解決するものなら、100年以上も長く使われうるということを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['bent', 'bending', 'bend', 'bends'], answer: 0, why: '「2つの輪に曲げられた針金」なので、過去分詞 bent がうしろから wire を説明する。bending だと針金が曲げることになり、bend・bends は動詞の形なので名詞を説明できない。' },
+      { id: 'B', choices: ['to', 'for', 'so', 'of'], answer: 0, why: '「～を示すために」と目的を表すので、不定詞の to ＋動詞の原形 show。for・of のあとに動詞の原形は置けず、so だけでは目的の意味にならない（so that ～ なら可）。' },
+    ],
+    underline: {
+      phrase: 'come loose',
+      choices: ['stop being tied or held tightly', 'become very expensive', 'turn into a different color', 'arrive at the office'],
+      answer: 0,
+      why: 'come loose は「ゆるむ・ほどける」。ひもなどがしっかりとまっていない状態になること。',
+    },
+    order: {
+      words: ['holds', 'papers', 'firmly', 'without', 'damaging', 'them'],
+      rest: '',
+      answer: 'holds papers firmly without damaging them',
+      ja: '紙をいためずにしっかりとめる（without ～ing「～せずに」）',
+    },
+    tf: [
+      { statement: 'クリップが発明される前は、ピンやひもで紙をまとめていた。', answer: true, why: '第1段落 people held papers together with pins or string。' },
+      { statement: '1800年代の終わりのクリップは、どれも紙をうまくとめられた。', answer: false, why: '第2段落 Some of their designs did not hold papers well, and others tore them。' },
+      { statement: 'ノルウェーでは、クリップが団結のしるしとして使われたことがある。', answer: true, why: '第3段落 some people in Norway wore paper clips on their clothes to show that they stood together。' },
+    ],
+    qa: [
+      { q: 'Why did today’s shape of the paper clip become popular?', choices: ['It is easy to put on and holds papers without damaging them.', 'It is made of gold.', 'It can make holes in papers.', 'It was the first clip ever made.'], answer: 0, why: '第2段落 it is easy to slide on and it holds papers firmly without damaging them。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
