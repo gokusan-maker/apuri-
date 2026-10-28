@@ -4437,3 +4437,8 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor-boss.down .boss-figure > svg:not(.boss-arena) { animation: boss-spin-down 0.9s ease-in backwards; }
 @keyframes boss-spin-down { 0% { transform: rotate(0) translateY(0); filter: none; } 60% { transform: rotate(-660deg) translateY(-6px) scale(0.9); } 100% { transform: rotate(-732deg) translateY(10px); } }
 @media (prefers-reduced-motion: reduce) { .bfloor-boss.down .boss-figure > svg:not(.boss-arena) { animation: none; } }
+
+/* 闘技場：階が下がったときは、数字がはねるかわりに少しだけ下にしずむ */
+.arena-now-num.sink { animation: floor-num-sink 0.5s ease-out; color: #fca5a5; }
+@keyframes floor-num-sink { 0% { transform: translateY(-6px); opacity: 0.4; } 60% { transform: translateY(4px); } 100% { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .arena-now-num.sink { animation: none; } }

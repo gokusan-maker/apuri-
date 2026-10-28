@@ -1456,3 +1456,14 @@ it('ボス城の階：ボスをたおすと、くるくる回ってたおれる�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor-boss\.down \.boss-figure > svg:not\(\.boss-arena\) \{ animation: boss-spin-down/)
 })
+
+it('闘技場：階が下がったときは、階の数字が少しだけ下にしずむ（上がったときはしずまない）', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  arenaPick(true)
+  expect(document.querySelector('.arena-now-num.sink')).toBeNull()
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(false)
+  expect(document.querySelector('.arena-now-num.sink')).not.toBeNull()
+})

@@ -351,7 +351,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       <p className="arena-now">
         いま{' '}
         {/* 階がかわるたびに数字がぽんとはねる（key で作りなおしてアニメを最初から） */}
-        <strong key={shown} className="arena-now-num">
+        <strong key={shown} className={`arena-now-num${dir === 'down' ? ' sink' : ''}`}>
           {arenaFloor(shown)}
         </strong>
         <span className="arena-now-title">{arenaTitle(shown)}</span>
