@@ -1332,3 +1332,17 @@ it('闘技場・ボス城：正解した選択肢は波紋が金色にかがや�
   expect(css).toMatch(/\.arena \.choice\.correct\.rippled::after, \.bfloor \.choice\.correct\.rippled::after \{/)
   expect(css).not.toMatch(/\.choice\.correct::before, \.bfloor/) // A・B・C の札（::before）はこわさない
 })
+
+it('闘技場：いまの階の数字はかわるたびに作りなおされて、ぽんとはねる', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  const before = document.querySelector('.arena-now-num')!
+  expect(before.textContent).toBe('6階')
+  arenaPick(true)
+  const after = document.querySelector('.arena-now-num')!
+  expect(after.textContent).toBe('7階')
+  expect(after).not.toBe(before)
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-now-num \{ display: inline-block; animation: floor-num-pop/)
+})

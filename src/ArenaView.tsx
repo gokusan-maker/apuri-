@@ -323,7 +323,11 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
       {/* 前回の続きから始めたときは、はじめの問題の前に知らせる */}
       {start > 0 && count === 0 && picked === null && <p className="arena-resume">🔁 前回の続き、{arenaFloor(start)}から！</p>}
       <p className="arena-now">
-        いま <strong>{arenaFloor(shown)}</strong>
+        いま{' '}
+        {/* 階がかわるたびに数字がぽんとはねる（key で作りなおしてアニメを最初から） */}
+        <strong key={shown} className="arena-now-num">
+          {arenaFloor(shown)}
+        </strong>
         <span className="arena-now-title">{arenaTitle(shown)}</span>
       </p>
       {/* 次の節目（10階ごと）までの進み */}
