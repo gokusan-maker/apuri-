@@ -12456,6 +12456,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-compost',
+    title: 'Turning Food Scraps into Soil',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every day, families throw away vegetable peels, eggshells, and old tea leaves. Most of this goes into the garbage and is burned. But there is another choice: we can turn these scraps into compost, a kind of rich soil.",
+      "Making compost is simple. You put food scraps and dry leaves together in a box and mix them from time to time. Tiny living things, too small to see, eat the scraps and break them down. Earthworms also help by eating and mixing the material. After a few months, the pile becomes dark and soft, and it smells like a forest floor.",
+      "When gardeners add compost to the ground, it gives the soil food and helps the plants ( A ) better. It also holds water, so gardens need less watering.",
+      "Making compost is a way ( B ) less garbage and to return food to the earth. It shows that something we call waste can become useful again.",
+    ],
+    ja: [
+      '毎日、家庭では野菜の皮や卵のから、使ったお茶の葉を捨てている。そのほとんどはごみになって燃やされる。しかし、別の道もある。こうした食べ物のくずを、たい肥という栄養たっぷりの土に変えることができるのだ。',
+      'たい肥を作るのは簡単だ。食べ物のくずとかれ葉をいっしょに箱に入れ、ときどきまぜる。目に見えないほど小さな生き物がくずを食べて分解する。ミミズも、食べたりまぜたりして手伝う。数か月たつと、山は黒くやわらかくなり、森の地面のようなにおいがする。',
+      '庭師がたい肥を地面に加えると、それは土に栄養をあたえ、植物がよりよく育つのを助ける。また水をたくわえるので、庭に水をやる回数も少なくてすむ。',
+      'たい肥を作ることは、ごみを減らし、食べ物を大地に返す1つの方法だ。それは、私たちがごみと呼ぶものが、また役に立つものになりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['grow', 'growing', 'grew', 'grown'], answer: 0, why: 'help ＋もの・人＋動詞の原形「～が…するのを助ける」なので grow。growing・grew・grown はこの形に入らない。' },
+      { id: 'B', choices: ['to produce', 'producing', 'produced', 'produce'], answer: 0, why: 'a way to ～「～する方法」。うしろの and to return と同じ形の to 不定詞にする。producing・produced・produce は a way のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'break them down',
+      choices: ['change them into smaller and simpler parts', 'put them in a box', 'throw them far away', 'make them bigger'],
+      answer: 0,
+      why: 'break down は「分解する」。小さな生き物がくずを細かく、単純なものに変えていくこと。',
+    },
+    order: {
+      words: ['too', 'small', 'to', 'see'],
+      rest: '',
+      answer: 'too small to see',
+      ja: '小さすぎて見えない（too ～ to …「～すぎて…できない」）',
+    },
+    tf: [
+      { statement: 'たい肥は、食べ物のくずとかれ葉から作れる。', answer: true, why: '第2段落 You put food scraps and dry leaves together in a box。' },
+      { statement: 'たい肥は、1日でできあがる。', answer: false, why: '第2段落 After a few months, the pile becomes dark and soft。' },
+      { statement: 'たい肥を使うと、庭に水をやる回数が減る。', answer: true, why: '第3段落 It also holds water, so gardens need less watering。' },
+    ],
+    qa: [
+      { q: 'What do earthworms do in making compost?', choices: ['They eat and mix the material.', 'They burn the garbage.', 'They bring water from the river.', 'They plant new seeds.'], answer: 0, why: '第2段落 Earthworms also help by eating and mixing the material。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
