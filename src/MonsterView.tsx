@@ -410,6 +410,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 62 Q50 56 58 62 Q58 74 50 78 Q54 70 44 62 Z" fill="#facc15" stroke="#a16207" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'camel')
+    return (
+      <g fill={fill} stroke={line} strokeWidth="2.5" strokeLinejoin="round">
+        {/* 頭のうしろに見えるふたつのこぶ */}
+        <path d="M24 34 Q32 14 42 30 Q50 16 58 30 Q68 14 76 34 Z" />
+      </g>
+    )
   if (species === 'seahorse')
     return (
       <g fill={fill} stroke={line} strokeWidth="2" strokeLinejoin="round">

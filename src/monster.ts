@@ -322,10 +322,11 @@ export const SPECIES: Species[] = [
   { id: 'chameleon', name: 'イロカメ', egg: 'このはのタマゴ', token: 'イロ', bigToken: 'イロカメ', color: '#86efac', line: '#14532d', rate: 0.02, desc: '体の色をかえるカメレオン。単語の意味によって、くるくる色をかえて覚える。' },
   { id: 'swan', name: 'シラトリ', egg: 'みずべのタマゴ', token: 'シラ', bigToken: 'シラトリ', color: '#f1f5f9', line: '#334155', rate: 0.02, desc: '湖をすべるハクチョウ。水の上ではしずかだけど、水の下では足をいっしょうけんめい動かして練習している。' },
   { id: 'peacock', name: 'クジャラン', egg: 'はなぞののタマゴ', token: 'クジャ', bigToken: 'クジャラン', color: '#2dd4bf', line: '#134e4a', rate: 0.02, desc: 'きれいな羽のクジャク。正解するたびに、羽を大きく広げてみせてくれる。' },
-  { id: 'wolf', name: 'ウルフィ', egg: 'つきよのタマゴ', token: 'ウル', bigToken: 'ウルフィ', color: '#94a3b8', line: '#1e293b', rate: 0.03, desc: '月夜にほえるオオカミ。なかまといっしょに、声をそろえて英語を読みあげる。' },
-  { id: 'parrot', name: 'オウムン', egg: 'ねったいのタマゴ', token: 'オウ', bigToken: 'オウムン', color: '#4ade80', line: '#166534', rate: 0.03, desc: 'カラフルなオウム。聞いた英語をそのまままねして、発音の練習をてつだってくれる。' },
-  { id: 'bat', name: 'コウモン', egg: 'どうくつのタマゴ', token: 'コウ', bigToken: 'コウモン', color: '#a78bfa', line: '#3b0764', rate: 0.03, desc: 'どうくつにすむコウモリ。小さな音のはねかえりで、英語の音のちがいを聞き分ける。' },
+  { id: 'wolf', name: 'ウルフィ', egg: 'つきよのタマゴ', token: 'ウル', bigToken: 'ウルフィ', color: '#94a3b8', line: '#1e293b', rate: 0.02, desc: '月夜にほえるオオカミ。なかまといっしょに、声をそろえて英語を読みあげる。' },
+  { id: 'parrot', name: 'オウムン', egg: 'ねったいのタマゴ', token: 'オウ', bigToken: 'オウムン', color: '#4ade80', line: '#166534', rate: 0.02, desc: 'カラフルなオウム。聞いた英語をそのまままねして、発音の練習をてつだってくれる。' },
+  { id: 'bat', name: 'コウモン', egg: 'どうくつのタマゴ', token: 'コウ', bigToken: 'コウモン', color: '#a78bfa', line: '#3b0764', rate: 0.02, desc: 'どうくつにすむコウモリ。小さな音のはねかえりで、英語の音のちがいを聞き分ける。' },
   { id: 'seahorse', name: 'タツノン', egg: 'うみくさのタマゴ', token: 'タツ', bigToken: 'タツノン', color: '#fcd34d', line: '#92400e', rate: 0.03, desc: '海草につかまるタツノオトシゴ。小さな体でも、しっぽでしっかり単語をつかんではなさない。' },
+  { id: 'camel', name: 'ラクダン', egg: 'さばくのタマゴ', token: 'ラク', bigToken: 'ラクダン', color: '#d6a35c', line: '#78350f', rate: 0.03, desc: 'さばくを歩くラクダ。こぶに覚えた単語をたくわえて、長い道のりもへっちゃら。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.03, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
