@@ -11964,6 +11964,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-interview-schedule',
+    title: 'E-mail: Your Interview Time',
+    level: '難関大（メール文）',
+    paragraphs: [
+      "Dear Ms. Rivera, Thank you for applying for the position of sales assistant at Sunny Day Foods. We were impressed by your application and would like to invite you to an interview at our main office on Tuesday, June 10, at 2:00 P.M.",
+      "The interview will last about 45 minutes. You will first meet our sales manager, Mr. Clark, and then take a short written test on basic math and computer skills. Please arrive ten minutes early and ( A ) your name at the reception desk on the first floor.",
+      "Please bring a copy of your résumé and a photo ID. If you have any certificates related to sales or customer service, you may bring them as well. Our office is a three-minute walk from Central Station, so we recommend that you come by train, ( B ) parking near the building is limited.",
+      "Please reply to this e-mail by June 5 to confirm that you can attend. If the time is not convenient, let us know, and we will try to arrange another time. We look forward to meeting you. Best regards, Laura Kim, Human Resources",
+    ],
+    ja: [
+      'リベラ様　サニーデイ・フーズの販売アシスタントの職にご応募いただき、ありがとうございます。ご応募の内容がすばらしかったので、6月10日（火）午後2時に本社での面接にお招きしたいと思います。',
+      '面接は約45分です。まず営業部長のクラークと会っていただき、そのあと基本的な計算とパソコンの技能についての短い筆記試験を受けていただきます。10分前にお越しになり、1階の受付でお名前をお伝えください。',
+      '履歴書のコピーと写真つきの身分証明書をお持ちください。販売や接客に関する資格をお持ちでしたら、それもお持ちいただいてかまいません。事務所はセントラル駅から歩いて3分です。建物の近くの駐車場はかぎられているので、電車でのお越しをおすすめします。',
+      '出席できるかどうかを確かめるため、6月5日までにこのメールにご返信ください。ご都合が悪い場合はお知らせいただければ、別の時間を調整するようにいたします。お会いできるのを楽しみにしております。人事部　ローラ・キム',
+    ],
+    blanks: [
+      { id: 'A', choices: ['give', 'giving', 'gave', 'gives'], answer: 0, why: 'please のあとの arrive と and でならぶ命令文の動詞なので、原形 give（give one’s name「名前を伝える」）。giving・gave・gives は命令文の動詞にならない。' },
+      { id: 'B', choices: ['because', 'because of', 'due to', 'thanks to'], answer: 0, why: 'うしろに主語と動詞（parking ... is limited）が続くので接続詞 because。because of・due to・thanks to は前置詞のはたらきで、うしろに名詞しかとれない。' },
+    ],
+    underline: {
+      phrase: 'impressed',
+      choices: ['thought something was very good', 'were surprised and angry', 'felt very tired', 'did not understand'],
+      answer: 0,
+      why: 'be impressed by ～ は「～に感心する・強い印象を受ける」。応募の内容がよかったという意味。',
+    },
+    order: {
+      words: ['we', 'recommend', 'that', 'you', 'come', 'by', 'train'],
+      rest: '',
+      answer: 'we recommend that you come by train',
+      ja: '電車で来ることをおすすめします（recommend that ＋主語＋動詞の原形）',
+    },
+    tf: [
+      { statement: '面接は約45分かかる。', answer: true, why: '第2段落 The interview will last about 45 minutes。' },
+      { statement: '面接のあとに、実技の料理の試験がある。', answer: false, why: '第2段落 take a short written test on basic math and computer skills。' },
+      { statement: '建物の近くには、駐車場がたくさんある。', answer: false, why: '第3段落 parking near the building is limited。' },
+    ],
+    qa: [
+      { q: 'What should Ms. Rivera do by June 5?', choices: ['Reply to confirm that she can attend.', 'Send her résumé by mail.', 'Take the written test.', 'Visit the office.'], answer: 0, why: '第4段落 Please reply to this e-mail by June 5 to confirm that you can attend。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
