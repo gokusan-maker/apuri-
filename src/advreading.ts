@@ -13235,6 +13235,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-skyscraper',
+    title: 'How Buildings Learned to Touch the Sky',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a long time, it was hard to build very tall buildings. Old buildings were made of stone or brick, and they were buildings ( A ) walls had to hold up all the weight. The taller a building was, the thicker its lower walls had to be.",
+      "In the late 1800s, builders in the United States began to use frames of strong steel. The steel frame carried the weight like a skeleton, so the walls could be thin and light. In 1885, a ten-story building with a steel frame was completed in Chicago, and many people call it the first skyscraper.",
+      "Height alone was not enough, however. Without safe elevators, nobody would want ( B ) up to the top floor every day. The elevator and the steel frame together made tall cities possible.",
+      "Today, the tallest building in the world, in Dubai, is more than 800 meters high. It all began with the simple idea of letting a strong frame do the hard work.",
+    ],
+    ja: [
+      '長いあいだ、とても高い建物を建てるのはむずかしかった。昔の建物は石やれんがでできていて、かべがすべての重さをささえなければならない建物だった。建物が高くなればなるほど、下のほうのかべを厚くしなければならなかった。',
+      '1800年代の終わりに、アメリカの建築家たちは強い鉄骨のわく組みを使いはじめた。鉄骨は骨組みのように重さをささえたので、かべはうすく軽くできた。1885年、鉄骨を使った10階建ての建物がシカゴで完成し、多くの人がそれを最初の超高層ビルと呼んでいる。',
+      'しかし、高さだけでは足りなかった。安全なエレベーターがなければ、毎日いちばん上の階まで歩いて上りたい人はいないだろう。エレベーターと鉄骨がいっしょになって、高い建物の並ぶ都市ができるようになったのだ。',
+      '今日、世界一高いドバイの建物は、800メートル以上の高さがある。そのすべては、強いわく組みにたいへんな仕事をまかせるという、単純な考えから始まったのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'who', 'which', 'what'], answer: 0, why: 'buildings の「かべ」がすべての重さをささえる、と所有の関係なので関係代名詞 whose（whose walls「そのかべが」）。who・which はうしろに欠けた部分が必要で、what は先行詞をとらない。' },
+      { id: 'B', choices: ['to walk', 'walking', 'walked', 'walk'], answer: 0, why: 'want のあとは to 不定詞（want to ～「～したい」）なので to walk。walking・walked・walk は want のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'like a skeleton',
+      choices: ['in the same way as the bones of a body', 'like a heavy stone', 'like a thin piece of glass', 'in the same way as a roof'],
+      answer: 0,
+      why: 'skeleton は「骨格・がい骨」。鉄骨が、体の骨のように建物の重さをささえるという意味。',
+    },
+    order: {
+      words: ['the', 'thicker', 'its', 'lower', 'walls', 'had', 'to', 'be'],
+      rest: '',
+      answer: 'the thicker its lower walls had to be',
+      ja: '下のほうのかべをそれだけ厚くしなければならなかった（the ＋比較級 ～, the ＋比較級 …「～すればするほど…」）',
+    },
+    tf: [
+      { statement: '昔の石の建物では、かべが重さをささえていた。', answer: true, why: '第1段落 they were buildings whose walls had to hold up all the weight。' },
+      { statement: '鉄骨を使うと、かべを厚くしなければならなかった。', answer: false, why: '第2段落 so the walls could be thin and light。' },
+      { statement: 'エレベーターも、高い建物には欠かせなかった。', answer: true, why: '第3段落 The elevator and the steel frame together made tall cities possible。' },
+    ],
+    qa: [
+      { q: 'What did the steel frame do?', choices: ['It carried the weight of the building.', 'It made the walls thicker.', 'It kept the building warm.', 'It made the building shorter.'], answer: 0, why: '第2段落 The steel frame carried the weight like a skeleton。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
