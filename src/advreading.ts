@@ -12415,6 +12415,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-sakurafront',
+    title: 'Following the Cherry Blossoms',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Every spring, people in Japan watch the news to find out when the cherry trees will bloom. In each city, experts check special sample trees and announce the day ( A ) the first flowers open.",
+      "If you put these days on a map, you can see a line moving from south to north. It starts in the warmer areas in March and reaches Hokkaido around May. This line is often called the \"cherry blossom front.\"",
+      "You might think that a warmer winter always makes the flowers open earlier, but that is not true. Cherry trees need a period of cold weather to wake up from their winter sleep. If winter is too warm, the trees in some southern areas may bloom later than ( B ).",
+      "So the cherry blossom front is not only a sign of spring. It also tells scientists how the weather is changing from year to year.",
+    ],
+    ja: [
+      '毎年春になると、日本の人々は桜がいつさくかを知るためにニュースを見る。それぞれの都市では、専門家が特別な標本の木を調べ、最初の花が開いた日を発表する。',
+      'これらの日を地図にかきこむと、南から北へ動いていく線が見える。それはあたたかい地域で3月に始まり、5月ごろに北海道に届く。この線は「桜前線」とよく呼ばれる。',
+      '冬があたたかいと花はいつも早くさくと思うかもしれないが、それは正しくない。桜の木は、冬のねむりから目をさますために、寒い時期を必要とする。冬があたたかすぎると、南のほうの一部の地域では、木がいつもよりおそくさくことがある。',
+      'だから桜前線は、春のしるしであるだけではない。それは、天気が年ごとにどう変わっているかを科学者に教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['when', 'which', 'what', 'who'], answer: 0, why: '先行詞 the day（時）で、うしろに完全な文（the first flowers open）が続くので関係副詞 when。which・what はうしろに欠けた部分が必要で、who は人。' },
+      { id: 'B', choices: ['usual', 'usually', 'use', 'used'], answer: 0, why: 'than usual「いつもより」は決まった言い方。than usually・than use・than used とは言わない。' },
+    ],
+    underline: {
+      phrase: 'wake up from their winter sleep',
+      choices: ['start growing again after the cold season', 'fall down in the snow', 'lose all their branches', 'move to a warmer place'],
+      answer: 0,
+      why: '木が「冬のねむりから目をさます」とは、寒い季節のあとにまた育ちはじめること。',
+    },
+    order: {
+      words: ['to', 'find', 'out', 'when', 'the', 'cherry', 'trees', 'will', 'bloom'],
+      rest: '',
+      answer: 'to find out when the cherry trees will bloom',
+      ja: '桜がいつさくかを知るために（when ＋主語＋動詞「いつ～か」）',
+    },
+    tf: [
+      { statement: '桜前線は、北から南へ動いていく。', answer: false, why: '第2段落 a line moving from south to north。' },
+      { statement: '冬があたたかすぎると、桜がいつもよりおそくさく地域がある。', answer: true, why: '第3段落 If winter is too warm, the trees in some southern areas may bloom later than usual。' },
+      { statement: '桜前線は、天気の変化を知る手がかりにもなる。', answer: true, why: '第4段落 It also tells scientists how the weather is changing from year to year。' },
+    ],
+    qa: [
+      { q: 'Why do cherry trees need cold weather?', choices: ['To wake up from their winter sleep.', 'To keep insects away.', 'To make their leaves red.', 'To grow taller in summer.'], answer: 0, why: '第3段落 Cherry trees need a period of cold weather to wake up from their winter sleep。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
