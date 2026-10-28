@@ -12702,6 +12702,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-homingpigeon',
+    title: 'Birds That Always Come Home',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Homing pigeons have a surprising skill. Even when they are taken hundreds of kilometers away in a closed box, they can fly straight back home. For a long time, people used this skill to send messages. In wars, pigeons ( A ) carried small notes on their legs saved many lives.",
+      "How can they find their way? Scientists think the birds use several tools at once. During the day, they can use the position of the sun. They also seem ( B ) the Earth's magnetic field, like a built-in compass.",
+      "When they come closer to home, pigeons may also recognize roads, rivers, and buildings from the sky. Some studies even suggest that smells carried by the wind help them.",
+      "Today we have phones and the internet, so we do not need pigeons to carry messages. Still, people keep studying these birds, because their skill may teach us new ideas about how animals understand the world.",
+    ],
+    ja: [
+      '伝書バトにはおどろくべき力がある。とじた箱に入れて何百キロもはなれた所へ連れていかれても、まっすぐ家に飛んで帰れるのだ。長いあいだ、人々はこの力を使って手紙を送った。戦争では、足に小さなメモをつけて運んだハトが多くの命を救った。',
+      'ハトはどうやって道を見つけるのだろうか。科学者たちは、この鳥がいくつもの道具を同時に使っていると考えている。昼のあいだは、太陽の位置を使える。また、体にそなわった方位磁石のように、地球の磁気を感じとっているようだ。',
+      '家の近くまで来ると、ハトは空から道路や川、建物を見分けているのかもしれない。風に運ばれるにおいが助けになっていると考える研究さえある。',
+      '今日では電話やインターネットがあるので、手紙を運ぶのにハトは必要ない。それでも人々はこの鳥の研究を続けている。その力が、動物が世界をどのように理解しているかについて、新しい考えを教えてくれるかもしれないからだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 pigeons（動物）で、うしろの carried の主語が欠けているので関係代名詞 that。what は先行詞をとらず、whose はうしろに名詞が、where はうしろに完全な文が必要。' },
+      { id: 'B', choices: ['to sense', 'sensing', 'sensed', 'sense'], answer: 0, why: 'seem to ～「～するようだ」。seem のあとは to 不定詞 to sense。sensing・sensed・sense は seem のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'a built-in compass',
+      choices: ['a sense of direction inside the body', 'a map drawn on paper', 'a small machine on the leg', 'a light in the sky'],
+      answer: 0,
+      why: 'built-in は「つくりつけの・もともとそなわった」。体の中に方位磁石のような感覚がある、という意味。',
+    },
+    order: {
+      words: ['use', 'several', 'tools', 'at', 'once'],
+      rest: '',
+      answer: 'use several tools at once',
+      ja: 'いくつもの道具を同時に使う（at once「同時に」）',
+    },
+    tf: [
+      { statement: '伝書バトは、遠くへ連れていかれると家に帰れない。', answer: false, why: '第1段落 they can fly straight back home。' },
+      { statement: 'ハトは昼のあいだ、太陽の位置を使えると考えられている。', answer: true, why: '第2段落 During the day, they can use the position of the sun。' },
+      { statement: '今日では、手紙を運ぶのにハトはもう必要ない。', answer: true, why: '第4段落 we do not need pigeons to carry messages。' },
+    ],
+    qa: [
+      { q: 'Why do people keep studying homing pigeons?', choices: ['Their skill may teach us new ideas about how animals understand the world.', 'They are needed to carry messages today.', 'They can talk with people.', 'They are the fastest birds in the world.'], answer: 0, why: '第4段落 their skill may teach us new ideas about how animals understand the world。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
