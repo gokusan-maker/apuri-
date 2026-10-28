@@ -34,6 +34,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   hippo: { id: 'claw', name: 'おおぐちバイト', desc: '2問正解ごとに必殺技ゲージ +1' },
   crab: { id: 'claw', name: 'チョキチョキハサミ', desc: '2問正解ごとに必殺技ゲージ +1' },
   tiger: { id: 'claw', name: 'タイガークロー', desc: '2問正解ごとに必殺技ゲージ +1' },
+  chameleon: { id: 'cheer', name: 'いろがわりチェンジ', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -92,6 +93,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   hippo: { name: 'カバ・ビッグマウスウェーブ', color: '#8b5cf6' },
   crab: { name: 'カニ・クロススラッシュ', color: '#ef4444' },
   tiger: { name: 'トラ・ストライプストライク', color: '#f97316' },
+  chameleon: { name: 'カメレオン・レインボーカラー', color: '#22c55e' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -137,6 +139,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   hippo: { en: 'My big mouth can hold long sentences!', ja: '大きな口なら、長い文もまるごと入るよ！' },
   crab: { en: 'Snip, snip! Mistakes are gone!', ja: 'チョキチョキ！ まちがいは切っちゃった！' },
   tiger: { en: 'I caught that word in one jump!', ja: 'ひとっとびで単語をつかまえた！' },
+  chameleon: { en: 'Watch me change colors!', ja: '色がかわるところを見ててね！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
