@@ -101,6 +101,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'group-prep-wake': { wrong: 'In the light on the new facts, we changed our plan.', right: 'In the light of the new facts, we changed our plan.', why: 'in the light of ～「～をふまえて」。light のあとは of。' },
   'group-prep-heart': { wrong: 'The hotel is in the heart from the city.', right: 'The hotel is in the heart of the city.', why: 'in the heart of ～「～の中心に」。heart のあとは of。' },
   'group-prep-age': { wrong: 'He started piano in the age of five.', right: 'He started piano at the age of five.', why: 'at the age of ～「～才のときに」。age の前は at。' },
+  'group-prep-cost': { wrong: 'They built the bridge in a cost of ten million yen.', right: 'They built the bridge at a cost of ten million yen.', why: 'at a cost of ～「～の費用で」。cost の前は at。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
