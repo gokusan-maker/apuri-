@@ -4442,3 +4442,8 @@ header .event-chips { margin: 0 0 2px; }
 .arena-now-num.sink { animation: floor-num-sink 0.5s ease-out; color: #fca5a5; }
 @keyframes floor-num-sink { 0% { transform: translateY(-6px); opacity: 0.4; } 60% { transform: translateY(4px); } 100% { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .arena-now-num.sink { animation: none; } }
+
+/* ガチャ：同じ子が出てコインがもどったとき、その文字がちゃりんとはねる（出てくる演出のあとに） */
+p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
+@keyframes dup-bounce { 0% { transform: translateY(-14px) scale(0.8); opacity: 0; } 50% { transform: translateY(3px) scale(1.1); opacity: 1; } 75% { transform: translateY(-3px); } 100% { transform: none; } }
+@media (prefers-reduced-motion: reduce) { p.gacha-dup { animation: none; } }

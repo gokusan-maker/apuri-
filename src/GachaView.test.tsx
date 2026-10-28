@@ -314,3 +314,8 @@ it('ガチャ：ボタンを押すとぷるんとゆれる（CSS。押せない�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-btn:not\(:disabled\):active \{ animation: gacha-jiggle/)
 })
+
+it('ガチャ：かぶりでコインがもどった文字は、ちゃりんとはねる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/p\.gacha-dup \{ animation: dup-bounce/)
+})
