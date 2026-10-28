@@ -4248,3 +4248,4 @@ header .event-chips { margin: 0 0 2px; }
 @keyframes jump-pop { 0% { transform: translateY(20px) scale(0.5); opacity: 0; } 20% { transform: translateY(0) scale(1.2); opacity: 1; } 80% { opacity: 1; } 100% { transform: translateY(-20px) scale(1); opacity: 0; } }
 @media (prefers-reduced-motion: reduce) { .arena-jump-pop { animation: none; } }
 .arena-next-start { margin: 2px 0; font-size: 0.8rem; color: #93c5fd; }
+.arena-resume { margin: 0 0 4px; color: #93c5fd; font-weight: 800; text-align: center; }

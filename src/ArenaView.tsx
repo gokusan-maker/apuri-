@@ -312,6 +312,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         )}
         {dir === 'down' && <span key={`d${count}`} className="arena-arrow down" aria-hidden="true">⬇</span>}
       </div>
+      {/* 前回の続きから始めたときは、はじめの問題の前に知らせる */}
+      {start > 0 && count === 0 && picked === null && <p className="arena-resume">🔁 前回の続き、{arenaFloor(start)}から！</p>}
       <p className="arena-now">
         いま <strong>{arenaFloor(shown)}</strong>
         <span className="arena-now-title">{arenaTitle(shown)}</span>

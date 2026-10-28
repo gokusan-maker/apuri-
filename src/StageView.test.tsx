@@ -1111,6 +1111,9 @@ it('闘技場：次の挑戦は前回の階から始まる', async () => {
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/前回の 4階から/)).toBeInTheDocument()
   fireEvent.click(within(screen.getByRole('region', { name: '闘技場' })).getByRole('button', { name: /闘技場で戦う/ }))
   expect(screen.getByRole('progressbar', { name: '闘技場の階' })).toHaveAttribute('aria-valuenow', '4')
+  expect(screen.getByText('🔁 前回の続き、4階から！')).toBeInTheDocument()
+  arenaPick(true)
+  expect(screen.queryByText(/前回の続き/)).toBeNull()
 })
 
 it('闘技場：最高記録で新しい称号に上がると、ガチャチケット1枚（称号ごとに1回）', async () => {
