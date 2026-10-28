@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react'
 import { dayKey } from './srs'
 import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
@@ -488,7 +489,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           {result.kind.rarity !== 'N' && <span className="gacha-burst" aria-hidden="true" />}
           <span className={`gacha-capsule${result.mystery ? ' mystery' : ''}`} aria-hidden="true" style={result.mystery ? undefined : result.kind.rarity === 'N' ? { background: `linear-gradient(180deg, ${capsuleColorOf(capsule)} 50%, #f8fafc 50%)` } : undefined} />
           {!result.mystery && gachaOmen(result.kind.rarity) && <p className="gacha-omen">{gachaOmen(result.kind.rarity)}</p>}
-          <span className="gacha-egg">
+          {/* タマゴのまわりに、そのキャラクターの色の光（オーナーの依頼：デザインを高める） */}
+          <span className="gacha-egg sp-glow" style={{ '--sp-glow': result.species.color || '#86efac' } as CSSProperties}>
             <MonsterFigure form={withSpecies(FORMS[0], result.species.id)} kind={result.kind.id} mood="happy" />
           </span>
           <p className="gacha-rarity">{RARITY_LABEL[result.kind.rarity]}！</p>

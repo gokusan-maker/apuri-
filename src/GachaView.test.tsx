@@ -139,6 +139,7 @@ it('その日はじめてのガチャは「きょうの1回目」でキラキラ
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.getByText('✨ きょうの1回目！キラキラカプセル ✨')).toBeInTheDocument()
   expect(document.querySelector('.gacha-result.first-pull')).not.toBeNull()
+  expect((document.querySelector('.gacha-egg.sp-glow') as HTMLElement).style.getPropertyValue('--sp-glow')).toBe('#86efac') // モチは緑の光
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.queryByText(/きょうの1回目/)).toBeNull()
 })
@@ -263,4 +264,11 @@ it('ガチャを引くと画面いっぱいの演出ページが開き、スキ�
 it('制覇した城があれば、ガチャに城のボーナス（レアの出やすさ +n%）を表示', () => {
   render(<Gacha coins={GACHA_PRICE} members={1} castles={3} onDraw={() => null} />)
   expect(screen.getByLabelText('城のボーナス')).toHaveTextContent('+3%')
+})
+
+it('ガチャのタマゴは、出たキャラクターの色で光る', () => {
+  localStorage.clear()
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('normal'), species: speciesOf('fox') })} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect((document.querySelector('.gacha-egg.sp-glow') as HTMLElement).style.getPropertyValue('--sp-glow')).toBe(speciesOf('fox').color)
 })
