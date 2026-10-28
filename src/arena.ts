@@ -7,8 +7,9 @@ import { randomQuestion, shuffle, type Question } from './quiz'
 import { COURSES, courseWords } from './wordcourse'
 import type { Word } from './words'
 
-// 1つのレベルを20階に分ける（中1＝1〜20階、中2＝21〜40階…）。いちばん上のレベルの上は、いろいろなレベルの問題がランダムに出る無限の階（オーナーの要望）
-export const ARENA_PER = 20
+// むずかしさの段は10階ごと（1〜10階＝中1、11〜20階＝中2…）。画面にはレベルを出さず階だけ。いちばん上の段の上は、いろいろな問題がランダムに出る無限の階（オーナーの要望）
+// むずかしさは10階ごとに1段上がる（オーナーの要望：どんどん難しく）。段の途中でも、上の階ほど次の段の問題がまざる
+export const ARENA_PER = 10
 export const ARENA_ENDLESS = COURSES.length * ARENA_PER // ここ（0から数えた階）から上は無限の階
 export const ARENA_BEST_COINS = 5 // 最高記録で新しいレベルに着いたとき
 export const ARENA_QUICK_MS = 3000 // 3秒以内に正解すると「はやい！」
@@ -118,7 +119,9 @@ export const arenaKindAt = (n: number): ArenaKind => (['word', 'grammar', 'readi
 // lv：その問題のレベル（0〜14。無限の階で「どのレベルの問題か」を見せる）
 export type ArenaQuestion = Question<Word> & { lv: number }
 export function arenaQuestionAt(f: number, n: number, rnd: () => number = Math.random, avoid?: string): ArenaQuestion {
-  const lv = arenaLevel(f) ?? Math.floor(rnd() * COURSES.length)
+  const base = arenaLevel(f)
+  // 段の中で上の階ほど、次の段の問題が出やすい（10階めではほぼ次の段）
+  const lv = base === null ? Math.floor(rnd() * COURSES.length) : base < LAST && rnd() < (atLeast0(f) % ARENA_PER) / ARENA_PER ? base + 1 : base
   const kind = arenaKindAt(n)
   const make = kind === 'grammar' ? arenaGrammarQ : kind === 'reading' ? arenaReadingQ : null
   if (make) {

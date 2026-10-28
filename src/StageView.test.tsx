@@ -765,7 +765,7 @@ it('ボス部屋の城の下に闘技場：正解で上の階、まちがいで�
   expect(screen.getByText('称号：🌱 見習い')).toBeInTheDocument()
   expect(screen.getByText(/2問中 1問正解（正答率 50%）/)).toBeInTheDocument()
   expect(screen.getByLabelText('まちがえた問題')).toHaveTextContent('📝 ふりかえり（1問）')
-  expect(screen.getByText('次の称号「🔰 ルーキー」まで あと20階')).toBeInTheDocument()
+  expect(screen.getByText('次の称号「🔰 ルーキー」まで あと10階')).toBeInTheDocument()
   expect(screen.getByText('🏅 最高記録 更新！ 2階')).toBeInTheDocument()
   expect(loadArenaBest()).toBe(1)
   expect(screen.queryByText(/はじめの階/)).toBeNull() // いまがはじめの階なら出さない
@@ -972,19 +972,28 @@ it('闘技場の結果に、いちばん長い連続正解を出す', async () =
   expect(within(screen.getByRole('region', { name: '闘技場' })).getByText(/🔥最高 2連続/)).toBeInTheDocument() // 入り口にも出す
 })
 
-it('闘技場：次の節目（20階ごと）まで あと何階 かを出す', async () => {
+it('闘技場：次の節目（10階ごと）まで あと何階 かを出す', async () => {
   const { arenaToNext, ARENA_ENDLESS } = await import('./arena')
-  expect(arenaToNext(0)).toEqual({ floors: 20, label: '21階', progress: 0 })
-  expect(arenaToNext(15)).toEqual({ floors: 5, label: '21階', progress: 0.75 })
+  expect(arenaToNext(0)).toEqual({ floors: 10, label: '11階', progress: 0 })
+  expect(arenaToNext(15)).toEqual({ floors: 5, label: '21階', progress: 0.5 })
   expect(arenaToNext(ARENA_ENDLESS - 1).label).toBe('♾ 無限の階')
   expect(arenaToNext(ARENA_ENDLESS + 3)).toEqual({ floors: 7, label: `${ARENA_ENDLESS + 11}階`, progress: 0.3 })
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
-  render(<Arena start={17} onExit={() => {}} />)
-  expect(screen.getByLabelText('21階まで あと3階')).toBeInTheDocument()
+  render(<Arena start={7} onExit={() => {}} />)
+  expect(screen.getByLabelText('11階まで あと3階')).toBeInTheDocument()
   expect(document.querySelector('.arena-now-title')).toHaveTextContent('🌱 見習い') // いまの称号
   arenaPick(true)
-  expect(screen.getByLabelText('21階まで あと2階')).toBeInTheDocument()
+  expect(screen.getByLabelText('11階まで あと2階')).toBeInTheDocument()
+})
+
+it('闘技場：上の階ほどむずかしい問題が出る（10階ごとに1段、段の途中でも次の段がまざる）', async () => {
+  const { arenaQuestionAt, ARENA_PER } = await import('./arena')
+  expect(ARENA_PER).toBe(10)
+  expect(arenaQuestionAt(0, 0, () => 0.5).lv).toBe(0)
+  expect(arenaQuestionAt(10, 0, () => 0.5).lv).toBe(1)
+  expect(arenaQuestionAt(19, 0, () => 0.5).lv).toBe(2) // 段の上のほうは次の段の問題
+  expect(arenaQuestionAt(12, 0, () => 0.5).lv).toBe(1)
 })
 
 it('闘技場の無限の階：最高記録で50階ごとにガチャチケット', async () => {
@@ -1010,10 +1019,10 @@ it('闘技場：前の「レベル」で保存した最高記録は、そのレ�
   const { loadArenaBest, recordArenaBest } = await import('./arena')
   localStorage.clear()
   localStorage.setItem('eitan:arena-best', '2')
-  expect(loadArenaBest()).toBe(40)
-  expect(recordArenaBest(41)).toBe(true)
-  expect(loadArenaBest()).toBe(41)
-  expect(recordArenaBest(30)).toBe(false)
+  expect(loadArenaBest()).toBe(20)
+  expect(recordArenaBest(21)).toBe(true)
+  expect(loadArenaBest()).toBe(21)
+  expect(recordArenaBest(15)).toBe(false)
 })
 
 it('闘技場：最高記録で20階ごとの節目に着いたら🪙5（最高記録はその場で保存）', async () => {
@@ -1038,11 +1047,11 @@ it('闘技場：最高記録で20階ごとの節目に着いたら🪙5（最高
 it('闘技場の階ごとの称号', async () => {
   const { arenaTitle, arenaNextTitle, ARENA_ENDLESS } = await import('./arena')
   expect(arenaTitle(0)).toBe('🌱 見習い')
-  expect(arenaTitle(20)).toBe('🔰 ルーキー')
-  expect(arenaTitle(60)).toBe('🗡 戦士')
-  expect(arenaTitle(180)).toBe('⚔ 勇者')
+  expect(arenaTitle(10)).toBe('🔰 ルーキー')
+  expect(arenaTitle(30)).toBe('🗡 戦士')
+  expect(arenaTitle(90)).toBe('⚔ 勇者')
   expect(arenaTitle(ARENA_ENDLESS + 3)).toBe('👑 伝説の英語王')
-  expect(arenaNextTitle(100)).toEqual({ title: '🛡 騎士', floors: 20 })
+  expect(arenaNextTitle(50)).toEqual({ title: '🛡 騎士', floors: 10 })
   expect(arenaNextTitle(ARENA_ENDLESS)).toBeNull()
 })
 
@@ -1105,19 +1114,19 @@ it('闘技場：次の挑戦は前回の階から始まる', async () => {
 it('闘技場：最高記録で新しい称号に上がると、ガチャチケット1枚（称号ごとに1回）', async () => {
   const { Arena } = await import('./ArenaView')
   localStorage.clear()
-  localStorage.setItem('eitan:arena-best-floor', '18')
+  localStorage.setItem('eitan:arena-best-floor', '8')
   const ticket = vi.fn()
-  render(<Arena start={18} onExit={() => {}} onTicket={ticket} />)
-  arenaPick(true) // 19→20階（見習いのまま）
+  render(<Arena start={8} onExit={() => {}} onTicket={ticket} />)
+  arenaPick(true) // 9→10階（見習いのまま）
   expect(ticket).not.toHaveBeenCalled()
   fireEvent.click(screen.getByText(/^次へ/))
-  arenaPick(true) // 20→21階：ルーキーに上がる
+  arenaPick(true) // 2連続で一気に2階：10→12階：ルーキーに上がる
   expect(ticket).toHaveBeenCalledWith(1)
   expect(screen.getByText('🎖 新しい称号「🔰 ルーキー」！ 🎟ガチャチケット×1')).toBeInTheDocument()
   fireEvent.click(screen.getByText(/^次へ/))
-  arenaPick(false) // 21→20階
+  arenaPick(false) // 12→11階
   fireEvent.click(screen.getByText(/^次へ/))
-  arenaPick(true) // また21階：記録更新ではないのでチケットなし
+  arenaPick(true) // また12階：記録更新ではないのでチケットなし
   expect(ticket).toHaveBeenCalledTimes(1)
 })
 
@@ -1176,9 +1185,9 @@ it('闘技場の文法の問題には「📐 文法」の札が出る', async ()
 it('闘技場の塔で、新しい称号が始まる階にそのアイコンが出る', async () => {
   const { arenaTitleIconAt, ARENA_ENDLESS } = await import('./arena')
   expect(arenaTitleIconAt(0)).toBeNull()
-  expect(arenaTitleIconAt(20)).toBe('🔰')
-  expect(arenaTitleIconAt(60)).toBe('🗡')
-  expect(arenaTitleIconAt(61)).toBeNull()
+  expect(arenaTitleIconAt(10)).toBe('🔰')
+  expect(arenaTitleIconAt(30)).toBe('🗡')
+  expect(arenaTitleIconAt(31)).toBeNull()
   expect(arenaTitleIconAt(ARENA_ENDLESS)).toBe('👑')
 })
 

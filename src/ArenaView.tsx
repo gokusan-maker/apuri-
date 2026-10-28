@@ -8,7 +8,7 @@ import { speak } from './speech'
 // 闘技場：エンドレスで戦う。正解で上の階、まちがいで1階下へ。連続正解では一気に何階も上がる。「終了」で、いまの階を伝える。
 // レベルは見せず、階だけで見せる。次の挑戦は前回の階から始まる（オーナーの要望）
 // ボス戦ではないので、ボスは出さず「塔の階」が答えるたびに上下する（オーナーの要望）
-// 20階ごとの節目に着くとお祝いの演出。300階の上は無限の階
+// 10階ごとの節目に着くとお祝いの演出。150階の上は無限の階
 const NO_KIND = { word: [0, 0], grammar: [0, 0], reading: [0, 0] } as Record<'word' | 'grammar' | 'reading', [number, number]>
 const KIND_LABEL = { word: '🔤 単語', grammar: '📐 文法', reading: '📖 読解' } as const
 const SHAFT = 2 // いまの階の上下に見せる階の数
@@ -309,7 +309,7 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         いま <strong>{arenaFloor(shown)}</strong>
         <span className="arena-now-title">{arenaTitle(shown)}</span>
       </p>
-      {/* 次の節目（20階ごと）までの進み */}
+      {/* 次の節目（10階ごと）までの進み */}
       {!(picked !== null && goalJust) && (
         <p className="arena-goal">
           🎯 {goals > 0 ? `次の目標（${goals + 1}つ目）` : 'この回の目標'}：{goalAt + 1}階
