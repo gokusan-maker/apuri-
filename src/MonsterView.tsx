@@ -491,6 +491,14 @@ function SpeciesFace({ species }: { species: string }) {
       </g>
     )
   if (species === 'rabbit') return <ellipse cx="50" cy="76" rx="14" ry="9" fill="#fff" opacity="0.8" />
+  if (species === 'pelican')
+    return (
+      <g stroke="#b45309" strokeWidth="2" strokeLinejoin="round">
+        {/* 長いくちばしと、のどのふくろ */}
+        <path d="M40 64 L60 64 L54 82 L46 82 Z" fill="#fbbf24" />
+        <path d="M44 82 Q50 94 56 82 Z" fill="#fde68a" />
+      </g>
+    )
   if (species === 'hedgehog')
     return (
       <g>

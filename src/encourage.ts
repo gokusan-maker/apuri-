@@ -22,6 +22,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   elephant: { streak: ['パオーン！しっかり覚えてるね！', 'ずしんずしん、いい調子！'], wrong: ['だいじょうぶ、次はわすれないよ！', '鼻で水をかけて、気をとりなおそう！'] },
   koala: { streak: ['ねむいけど、大正解！', 'ふわふわ、いい調子！'], wrong: ['だいじょうぶ、ひとねむりして気をとりなおそう！', 'ユーカリを食べて、もう一回！'] },
   hedgehog: { streak: ['トゲトゲ、するどい正解！', 'まるまって、また正解！'], wrong: ['トゲでちくっと、覚えなおそう！', 'こわくないよ、もう一回！'] },
+  pelican: { streak: ['くちばしで、正解をキャッチ！', 'ぐわっ、いい調子！'], wrong: ['にがした魚は、もう一回すくおう！', 'だいじょうぶ、次はキャッチできるよ！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -53,6 +54,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   elephant: { streak: [['You have a great memory!', 'すごい記憶力だね！']], wrong: [['Big steps, try again!', '大きな一歩で、もう一回！']] },
   koala: { streak: [['Wide awake and doing great!', '目がさめて、絶好調！']], wrong: [['No worries, try again.', '気にしないで、もう一回。']] },
   hedgehog: { streak: [['Sharp answers!', 'するどい答え！']], wrong: [['Roll up and try again.', 'まるまって、もう一回。']] },
+  pelican: { streak: [['What a catch!', 'みごとなキャッチ！']], wrong: [['Scoop it up next time.', '次はすくい上げよう。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
