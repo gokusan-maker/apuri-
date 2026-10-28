@@ -47,6 +47,13 @@ it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {
   render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true, newSpecies: true })} />)
   fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
   expect(screen.getByLabelText('はじめて：ニャンタ・うみ色').textContent).toBe('NEW!ニャンタうみ色')
+  expect(document.querySelector('.zukan-no-flash')!.textContent).toMatch(/図鑑 No\.\d+ に登録！/) // 新しいキャラは図鑑の番号がきらっと光る
+})
+
+it('もう持っているキャラクターなら、図鑑の番号は出さない', () => {
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: true })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(document.querySelector('.zukan-no-flash')).toBeNull()
 })
 
 it('ガチャを引くと「最近のガチャ」に残る', () => {

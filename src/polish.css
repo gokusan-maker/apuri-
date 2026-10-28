@@ -4290,3 +4290,12 @@ header .event-chips { margin: 0 0 2px; }
 .arena-now-num { display: inline-block; animation: floor-num-pop 0.45s ease-out; }
 @keyframes floor-num-pop { 0% { transform: scale(0.6); } 60% { transform: scale(1.25); } 100% { transform: scale(1); } }
 @media (prefers-reduced-motion: reduce) { .arena-now-num { animation: none; } }
+
+/* ガチャ：新しいキャラが出たとき、図鑑の番号がきらっと光る */
+.zukan-no-flash {
+  display: inline-block; margin: 6px auto 0; padding: 3px 12px; border-radius: 999px;
+  font-weight: 800; color: #92400e; background: linear-gradient(90deg, #fef3c7, #fde68a, #fef3c7);
+  background-size: 200% 100%; animation: zukan-flash 1.2s ease-out 2;
+}
+@keyframes zukan-flash { 0% { background-position: 100% 0; box-shadow: 0 0 0 rgb(250 204 21 / 0); } 50% { box-shadow: 0 0 14px rgb(250 204 21 / 0.9); } 100% { background-position: -100% 0; box-shadow: 0 0 0 rgb(250 204 21 / 0); } }
+@media (prefers-reduced-motion: reduce) { .zukan-no-flash { animation: none; } }

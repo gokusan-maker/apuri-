@@ -506,6 +506,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               {result.newKind && <span>{result.kind.name}</span>}
             </p>
           )}
+          {result.newSpecies && (
+            <p className="zukan-no-flash" role="status">
+              📖 図鑑 No.{SPECIES.findIndex((sp) => sp.id === result.species.id) + 1} に登録！
+            </p>
+          )}
           <p className="gacha-name">
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
