@@ -12497,6 +12497,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-firstlunch',
+    title: 'The First School Lunch in Japan',
+    level: '難関大（評論）',
+    paragraphs: [
+      "School lunch in Japan is said to have started in 1889 at a small school in Yamagata. The school was for children ( A ) families were poor, and many of them came to school hungry.",
+      "The lunch was very simple: rice balls, grilled salted fish, and pickles. Still, it was a big help. Children who had enough to eat could think more clearly and enjoy their lessons.",
+      "Little by little, the idea spread to other parts of the country. After the Second World War, when food was scarce, school lunch became even more important, and many schools began to serve milk and bread.",
+      "Today, school lunch menus are planned by experts ( B ) children get the nutrients they need. In many schools, students also serve the food and clean up together. In this way, school lunch teaches not only about healthy eating but also about working as a team.",
+    ],
+    ja: [
+      '日本の学校給食は、1889年に山形の小さな学校で始まったと言われている。その学校は家が貧しい子どもたちのための学校で、多くの子がおなかをすかせて登校していた。',
+      'その昼食はとても質素で、おにぎり、焼いた塩ざけ、つけものだった。それでも大きな助けになった。十分に食べられた子どもたちは、よりはっきりと考えられ、授業を楽しめたのだ。',
+      '少しずつ、その考えは国のほかの地域に広まった。第二次世界大戦のあと、食べ物が足りなかったころ、給食はいっそう大切になり、多くの学校で牛乳とパンが出されるようになった。',
+      '今日、給食のこんだては、子どもたちが必要な栄養をとれるように専門家が考えている。多くの学校では、生徒が料理を配り、いっしょに片づけもする。このように給食は、健康的な食事だけでなく、チームで協力することも教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'who', 'which', 'what'], answer: 0, why: 'children の「家族」が貧しい、と所有の関係なので関係代名詞 whose（whose families「その家族が」）。who・which はうしろに欠けた部分が必要で、what は先行詞をとらない。' },
+      { id: 'B', choices: ['so that', 'in order', 'because of', 'despite'], answer: 0, why: '「子どもたちが必要な栄養をとれるように」と目的を表し、うしろに文（主語＋動詞）が続くので so that。in order は to が、because of・despite は名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'scarce',
+      choices: ['hard to get because there was not enough', 'very cheap and easy to find', 'too sweet to eat', 'kept only for adults'],
+      answer: 0,
+      why: 'scarce は「とぼしい・不足している」。戦後は食べ物が足りなかった、という意味。',
+    },
+    order: {
+      words: ['not', 'only', 'about', 'healthy', 'eating'],
+      rest: 'but also about working as a team',
+      answer: 'not only about healthy eating',
+      ja: '健康的な食事についてだけでなく（not only A but also B「AだけでなくBも」）',
+    },
+    tf: [
+      { statement: '最初の給食は、ぜいたくなごちそうだった。', answer: false, why: '第2段落 The lunch was very simple。' },
+      { statement: '戦後、多くの学校で牛乳とパンが出されるようになった。', answer: true, why: '第3段落 many schools began to serve milk and bread。' },
+      { statement: '多くの学校では、生徒も料理を配ったり片づけたりする。', answer: true, why: '第4段落 students also serve the food and clean up together。' },
+    ],
+    qa: [
+      { q: 'How did the first school lunch help the children?', choices: ['They could think more clearly and enjoy their lessons.', 'They could go home earlier.', 'They did not need to study.', 'They could sell the food.'], answer: 0, why: '第2段落 Children who had enough to eat could think more clearly and enjoy their lessons。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
