@@ -607,7 +607,14 @@ function CharBook({ owned }: { owned: string[] }) {
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
   return (
     <details className="gacha-odds char-book chip-fold cf-1">
-      <summary aria-label={`キャラクター図鑑 ${n} / ${SPECIES.length}`}>📖 キャラクター図鑑（{n}/{SPECIES.length}）</summary>
+      <summary aria-label={`キャラクター図鑑 ${n} / ${SPECIES.length}`}>
+        📖 キャラクター図鑑（
+        {/* 会えたキャラがふえると、数字がぽんとはねる */}
+        <span key={n} className="book-count">
+          {n}
+        </span>
+        /{SPECIES.length}）
+      </summary>
       <ul className="char-book-list">
         {SPECIES.map((sp) => {
           const ok = got.has(sp.id)
