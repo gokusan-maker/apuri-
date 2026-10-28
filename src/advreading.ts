@@ -12169,6 +12169,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-tinyhouse',
+    title: 'Living in a Tiny House',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In recent years, some people have chosen to live in very small homes called tiny houses. Most of them are smaller than a parking space for two cars. They are popular with people who want ( A ) less money on housing.",
+      "A tiny house has everything a family needs, but in a small space. The bed may be in a loft above the kitchen, and the table may fold into the wall. Many tiny houses are built on wheels, so the owner has a home ( B ) can be moved to a new town.",
+      "Living in a small space also changes how people think about things. Since there is little room, owners must decide carefully what to keep. Many say they buy fewer things and feel freer.",
+      "Of course, tiny houses are not for everyone. A large family may find them too crowded. Still, they make us ask an important question: how much do we really need to live happily?",
+    ],
+    ja: [
+      '近年、タイニーハウスと呼ばれるとても小さな家に住むことを選ぶ人たちがいる。そのほとんどは、車2台分の駐車スペースより小さい。住まいにかけるお金を少なくしたい人たちに人気がある。',
+      'タイニーハウスには家族に必要なものが全部そろっているが、それが小さな空間におさまっている。ベッドは台所の上のロフトにあるかもしれないし、テーブルはかべにたたみこめるかもしれない。多くのタイニーハウスは車輪の上に建てられているので、持ち主は新しい町へ動かせる家を持っていることになる。',
+      '小さな空間で暮らすと、ものについての考え方も変わる。場所がほとんどないので、持ち主は何をとっておくかを注意深く決めなければならない。多くの人が、ものを買う量が減り、より自由に感じると言う。',
+      'もちろん、タイニーハウスはだれにでも向いているわけではない。大家族にはせますぎると感じられるかもしれない。それでも、タイニーハウスは私たちに大切な問いを投げかける。幸せに暮らすのに、私たちは本当はどれだけのものが必要なのだろうか。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to spend', 'spend', 'spending', 'spent'], answer: 0, why: 'want のあとは to 不定詞（want to ～「～したい」）。want は動名詞や原形・過去分詞を直接とらない。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '先行詞 a home（もの）で、うしろの can be moved の主語が欠けているので関係代名詞 which。who は人、what は先行詞をとらず、where はうしろに完全な文が必要。' },
+    ],
+    underline: {
+      phrase: 'fold into the wall',
+      choices: ['be put away flat against the wall', 'be painted on the wall', 'break the wall', 'hang a picture on the wall'],
+      answer: 0,
+      why: 'fold は「たたむ」。テーブルをたたんでかべにしまえる、という意味。',
+    },
+    order: {
+      words: ['decide', 'carefully', 'what', 'to', 'keep'],
+      rest: '',
+      answer: 'decide carefully what to keep',
+      ja: '何をとっておくかを注意深く決める（what to ～「何を～するか」）',
+    },
+    tf: [
+      { statement: 'タイニーハウスのほとんどは、車2台分の駐車スペースより小さい。', answer: true, why: '第1段落 Most of them are smaller than a parking space for two cars。' },
+      { statement: 'タイニーハウスの持ち主の多くは、前よりものを多く買うようになる。', answer: false, why: '第3段落 Many say they buy fewer things and feel freer。' },
+      { statement: '筆者は、タイニーハウスがだれにでも合うと考えている。', answer: false, why: '第4段落 tiny houses are not for everyone。' },
+    ],
+    qa: [
+      { q: 'Why can many tiny houses be moved to a new town?', choices: ['Because they are built on wheels.', 'Because they have no kitchen.', 'Because they are made of paper.', 'Because the town pays for it.'], answer: 0, why: '第2段落 Many tiny houses are built on wheels, so the owner has a home which can be moved to a new town。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
