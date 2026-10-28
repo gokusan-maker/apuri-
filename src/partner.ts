@@ -21,6 +21,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   hedgehog: { id: 'claw', name: 'トゲトゲガード', desc: '2問正解ごとに必殺技ゲージ +1' },
   pelican: { id: 'cheer', name: 'くちばしキャッチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   seal: { id: 'cheer', name: 'ヒレぱちぱち', desc: '2問正解ごとに必殺技ゲージ +1' },
+  flamingo: { id: 'cheer', name: 'かた足バランス', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -66,6 +67,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   hedgehog: { name: 'ハリネズミ・ローリングニードル', color: '#b45309' },
   pelican: { name: 'ペリカン・ビッグスプラッシュ', color: '#38bdf8' },
   seal: { name: 'アザラシ・アイススライド', color: '#7dd3fc' },
+  flamingo: { name: 'フラミンゴ・ピンクダンス', color: '#ec4899' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -98,6 +100,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   hedgehog: { en: 'Small, but sharp!', ja: '小さいけど、するどいよ！' },
   pelican: { en: 'My bill can hold a lot of words!', ja: 'ぼくのくちばしには、単語がたくさん入るよ！' },
   seal: { en: 'Clap, clap! Nice job!', ja: 'ぱちぱち！ よくできたね！' },
+  flamingo: { en: 'I can stand on one leg all day!', ja: 'かた足で一日じゅう立っていられるよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
