@@ -284,3 +284,10 @@ it('図鑑：まだ会っていないキャラのシルエットはゆっくり�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.char-book-list li\.locked svg \{ animation: locked-sway/)
 })
+
+it('ガチャ：出てきたタマゴがぷるぷるふるえる（CSS。光の span とは別に中の絵を動かす）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.gacha-result \.gacha-egg svg \{ transform-origin: 50% 85%; animation: egg-tremble/)
+  expect(css).toMatch(/@keyframes egg-tremble/)
+})

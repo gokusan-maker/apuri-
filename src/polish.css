@@ -4314,3 +4314,9 @@ header .event-chips { margin: 0 0 2px; }
 .bfloor .stage-result.clear { animation: pop 0.4s, clear-shine 1.4s 0.4s ease-in-out 2; }
 @keyframes clear-shine { 0%, 100% { text-shadow: 0 0 0 rgb(253 224 71 / 0); } 50% { text-shadow: 0 0 12px rgb(253 224 71 / 0.95), 0 0 24px rgb(245 158 11 / 0.6); } }
 @media (prefers-reduced-motion: reduce) { .bfloor .stage-result.clear { animation: none; } }
+
+/* ガチャ：出てきたタマゴが、いまにも割れそうにぷるぷるふるえる（span の光とぶつからないよう中の絵だけ動かす） */
+.gacha-result .gacha-egg svg { transform-origin: 50% 85%; animation: egg-tremble 0.12s 1.6s linear 6; }
+.gacha-result.fast .gacha-egg svg { animation-delay: 0.3s; }
+@keyframes egg-tremble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-5deg) translateX(-1px); } 75% { transform: rotate(5deg) translateX(1px); } }
+@media (prefers-reduced-motion: reduce) { .gacha-result .gacha-egg svg { animation: none; } }
