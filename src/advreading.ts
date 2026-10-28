@@ -11595,6 +11595,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-toeic-recycling',
+    title: 'Notice: New Recycling Rules in the Office',
+    level: '難関大（お知らせ文）',
+    paragraphs: [
+      "To all staff of Bright Star Design: From Monday, April 7, we will start a new recycling program in our office. The goal is to cut the amount of trash we throw away by half ( A ) the end of the year.",
+      "Three new bins will be placed in the kitchen on each floor: a blue one for paper, a green one for plastic bottles, and a yellow one for cans. Please empty bottles and cans and rinse them with water before you put them in the bins. Food waste should still go in the regular trash.",
+      "To reduce paper use, printers will be set to print on both sides of the paper automatically. If you need to print on one side only, you can change the setting each time. We also ask you to send documents by e-mail whenever possible ( B ) printing them.",
+      "Each month, the floor that recycles the most will receive a free lunch from the company. Results will be posted on the notice board near the elevators. Thank you for helping us make our office greener.",
+    ],
+    ja: [
+      'ブライトスター・デザインのスタッフのみなさまへ：4月7日（月）から、事務所で新しいリサイクルの取り組みを始めます。目標は、年末までにすてるごみの量を半分にへらすことです。',
+      '各階の給湯室に、新しいごみ箱を3つ置きます。紙用の青、ペットボトル用の緑、かん用の黄色です。ペットボトルとかんは、中を空にして水ですすいでから入れてください。生ごみはこれまでどおり、ふつうのごみに入れてください。',
+      '紙の使用をへらすため、プリンターは自動で紙の両面に印刷するように設定されます。片面だけに印刷したいときは、そのたびに設定を変えられます。また、できるときはいつでも、書類を印刷するかわりにメールで送ってください。',
+      '毎月、いちばん多くリサイクルした階には、会社から無料の昼食がふるまわれます。結果は、エレベーター近くの掲示板に貼り出されます。事務所をより環境にやさしくするためのご協力に感謝します。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['by', 'since', 'among', 'between'], answer: 0, why: '「年末までに（期限）」なので by。since は現在完了といっしょに「～以来」で使い、among・between は2つ以上のものの「あいだ」を表すので the end of the year の前には置けない。' },
+      { id: 'B', choices: ['instead of', 'instead', 'rather', 'in place'], answer: 0, why: 'うしろに動名詞 printing が続くので、前置詞のはたらきをする instead of「～するかわりに」。instead・rather は副詞で動名詞を目的語にとれず、in place だけではうしろに名詞をつなげない（in place of が必要）。' },
+    ],
+    underline: {
+      phrase: 'rinse',
+      choices: ['wash quickly with water', 'break into pieces', 'paint', 'fill with sand'],
+      answer: 0,
+      why: 'rinse は「すすぐ・水で軽くあらう」。ボトルやかんを水であらってから入れるという意味。',
+    },
+    order: {
+      words: ['the', 'floor', 'that', 'recycles', 'the', 'most'],
+      rest: 'will receive a free lunch',
+      answer: 'the floor that recycles the most',
+      ja: 'いちばん多くリサイクルした階（that 以下が floor を説明する）',
+    },
+    tf: [
+      { statement: '生ごみも、新しいごみ箱に入れる。', answer: false, why: '第2段落 Food waste should still go in the regular trash。' },
+      { statement: 'プリンターは自動で両面に印刷する。', answer: true, why: '第3段落 printers will be set to print on both sides of the paper automatically。' },
+      { statement: 'いちばん多くリサイクルした階には、毎月ボーナスのお金が出る。', answer: false, why: '第4段落 will receive a free lunch from the company。お金ではなく昼食。' },
+    ],
+    qa: [
+      { q: 'What is the goal of the new program?', choices: ['To cut the amount of trash by half by the end of the year.', 'To buy new printers.', 'To build a new kitchen.', 'To stop using e-mail.'], answer: 0, why: '第1段落 The goal is to cut the amount of trash we throw away by half by the end of the year。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
