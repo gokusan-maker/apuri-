@@ -1325,3 +1325,10 @@ it('ボス城の階：押した選択肢に光る波紋（rippled）がつく', 
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.choice\.rippled::after/)
 })
+
+it('闘技場・ボス城：正解の選択肢に光の帯が流れる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.arena \.choice\.correct::before, \.bfloor \.choice\.correct::before \{/)
+  expect(css).toMatch(/@keyframes choice-shine/)
+})
