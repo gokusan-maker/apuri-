@@ -1407,3 +1407,14 @@ it('闘技場：盾のアイコンはときどきキラッと光る（CSS）', a
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.arena-shield \{ display: inline-block; animation: shield-glint/)
 })
+
+it('ボス城の階：のこりライフが1つになると、ハートがどきどき動く', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.bfloor-life .heart-beat')).toBeNull() // ライフが2つのうちは動かない
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent !== qs[0].choices[qs[0].answer])!)
+  fireEvent.click(screen.getByText('次へ'))
+  expect(document.querySelectorAll('.bfloor-life .heart-beat')).toHaveLength(1)
+})

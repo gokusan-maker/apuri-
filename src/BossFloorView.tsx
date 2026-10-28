@@ -27,7 +27,14 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
       <span className="bfloor-life-label">あなたのライフ</span>
       {Array.from({ length: maxLives }, (_, k) =>
         k < lives ? (
-          '❤️'
+          // のこり1つのハートは、どきどき動く
+          lives === 1 ? (
+            <span key={`l${k}`} className="heart-beat">
+              ❤️
+            </span>
+          ) : (
+            '❤️'
+          )
         ) : k === lives && hurt ? (
           <span key={`b${i}`} className="heart-break">
             💔
