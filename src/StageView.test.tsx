@@ -1427,6 +1427,6 @@ it('闘技場：「前回の続き」のお知らせは、ふわっと出てく�
 it('闘技場：選択肢は上から順にふわっと並ぶ（CSS。正解・不正解の色の動きはじゃましない）', async () => {
   const { readFileSync } = await import('node:fs')
   const css = readFileSync('src/polish.css', 'utf8')
-  expect(css).toMatch(/\.arena \.choices \.choice:not\(\.correct\):not\(\.wrong\) \{ animation: choice-in/)
-  expect(css).toMatch(/\.arena \.choices \.choice:nth-child\(4\) \{ animation-delay/)
+  expect(css).toMatch(/\.arena \.choices \.choice:not\(\.correct\):not\(\.wrong\), \.bfloor \.choices \.choice:not\(\.correct\):not\(\.wrong\) \{ animation: choice-in/) // ボス城の階も同じ
+  expect(css).toMatch(/\.arena \.choices \.choice:nth-child\(4\), \.bfloor \.choices \.choice:nth-child\(4\) \{ animation-delay/)
 })

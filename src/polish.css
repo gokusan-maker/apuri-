@@ -4401,9 +4401,9 @@ header .event-chips { margin: 0 0 2px; }
 @media (prefers-reduced-motion: reduce) { .coin-num { animation: none; } }
 
 /* 闘技場：問題が出るたびに、選択肢が上から順にふわっと並ぶ */
-.arena .choices .choice:not(.correct):not(.wrong) { animation: choice-in 0.35s ease-out backwards; } /* both にすると押したときの沈みこみが消えるので backwards */
-.arena .choices .choice:nth-child(2) { animation-delay: 0.06s; }
-.arena .choices .choice:nth-child(3) { animation-delay: 0.12s; }
-.arena .choices .choice:nth-child(4) { animation-delay: 0.18s; }
+.arena .choices .choice:not(.correct):not(.wrong), .bfloor .choices .choice:not(.correct):not(.wrong) { animation: choice-in 0.35s ease-out backwards; } /* both にすると押したときの沈みこみが消えるので backwards */
+.arena .choices .choice:nth-child(2), .bfloor .choices .choice:nth-child(2) { animation-delay: 0.06s; }
+.arena .choices .choice:nth-child(3), .bfloor .choices .choice:nth-child(3) { animation-delay: 0.12s; }
+.arena .choices .choice:nth-child(4), .bfloor .choices .choice:nth-child(4) { animation-delay: 0.18s; }
 @keyframes choice-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .arena .choices .choice:not(.correct):not(.wrong) { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .arena .choices .choice:not(.correct):not(.wrong), .bfloor .choices .choice:not(.correct):not(.wrong) { animation: none; } }
