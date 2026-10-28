@@ -12374,6 +12374,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-kaitenzushi',
+    title: 'Sushi on a Moving Belt',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many sushi restaurants in Japan, small plates of sushi move slowly past the customers on a belt. This style is called kaiten-zushi, and it started in Osaka in the late 1950s.",
+      "The man who created it had a small restaurant with too few workers. He wanted a way to serve many customers quickly. He had an idea after ( A ) a moving belt that carried bottles at a beer factory.",
+      "It took him several years to make the belt work well. The speed had to be just right: too fast, and people could not pick up the plates; too slow, and the sushi would not reach everyone. Finally, his restaurant opened, and customers could take ( B ) they liked without waiting.",
+      "Today kaiten-zushi is popular in many countries. Some restaurants now use touch screens and send orders on fast lanes. Still, the basic idea is the same as the one born in a small shop in Osaka.",
+    ],
+    ja: [
+      '日本の多くのすし屋では、すしをのせた小さな皿が、ベルトの上を客の前でゆっくりと流れていく。このスタイルは回転ずしと呼ばれ、1950年代の終わりに大阪で始まった。',
+      'それを生み出した人は、働く人が少なすぎる小さな店を持っていた。彼は、多くの客にすばやく料理を出す方法をほしがっていた。ビール工場でびんを運ぶ動くベルトを見たあとで、彼はあるアイデアを思いついた。',
+      'ベルトがうまく動くようにするには、何年もかかった。速さはちょうどよくなければならなかった。速すぎると皿を取れないし、おそすぎるとすしが全員に届かない。ついに彼の店が開き、客は待たずに好きなものを取れるようになった。',
+      '今日、回転ずしは多くの国で人気がある。今ではタッチパネルを使い、速いレーンで注文を届ける店もある。それでも、基本の考えは大阪の小さな店で生まれたものと同じなのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['seeing', 'see', 'saw', 'seen'], answer: 0, why: '前置詞 after のあとは動名詞 seeing（after ～ing「～したあとで」）。see・saw・seen は前置詞のあとに置けない。' },
+      { id: 'B', choices: ['what', 'which', 'that', 'who'], answer: 0, why: 'take のあとに先行詞がないので、「～するもの」を表す関係代名詞 what（what they liked「好きなもの」）。which・that は前に先行詞が必要で、who は人。' },
+    ],
+    underline: {
+      phrase: 'just right',
+      choices: ['neither too much nor too little', 'very fast', 'completely wrong', 'a little late'],
+      answer: 0,
+      why: 'just right は「ちょうどよい」。このあと too fast（速すぎる）と too slow（おそすぎる）の両方がだめだと説明している。',
+    },
+    order: {
+      words: ['a', 'way', 'to', 'serve', 'many', 'customers'],
+      rest: 'quickly',
+      answer: 'a way to serve many customers',
+      ja: '多くの客に料理を出す方法（a way to ～「～する方法」）',
+    },
+    tf: [
+      { statement: '回転ずしは、1950年代の終わりに大阪で始まった。', answer: true, why: '第1段落 it started in Osaka in the late 1950s。' },
+      { statement: 'そのアイデアは、ビール工場のベルトから生まれた。', answer: true, why: '第2段落 He had an idea after seeing a moving belt that carried bottles at a beer factory。' },
+      { statement: 'ベルトは、できるだけ速く動かすのがよいとされた。', answer: false, why: '第3段落 too fast, and people could not pick up the plates。' },
+    ],
+    qa: [
+      { q: 'Why did the man want a new way to serve sushi?', choices: ['His restaurant had too few workers.', 'He wanted to sell beer.', 'His customers did not like sushi.', 'He wanted to close his shop.'], answer: 0, why: '第2段落 had a small restaurant with too few workers. He wanted a way to serve many customers quickly。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
