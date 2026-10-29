@@ -41,6 +41,7 @@ it('ガチャには出る確率や、何が出やすいかを書かない（お�
   expect(document.body.textContent).not.toContain('コンコン')
   expect(document.body.textContent).not.toContain('ドラコ')
   expect(screen.getByText(/お楽しみ/)).toBeInTheDocument()
+  expect(document.querySelectorAll('.gacha-pickup .pickup-stars i')).toHaveLength(3) // ピックアップのまわりで星がまたたく
 })
 
 it('はじめてのキャラクター・色ちがいは NEW! と出る', () => {

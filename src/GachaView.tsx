@@ -320,6 +320,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
         <div className="gacha-pickup">
           <span className="gacha-pickup-fig">
             <MonsterFigure form={withSpecies(FORMS[0], pickup.id)} hidden />
+            {/* だれかはひみつのまま、まわりで星がまたたく */}
+            <span className="pickup-stars" aria-hidden="true">
+              <i>✦</i>
+              <i>✧</i>
+              <i>✦</i>
+            </span>
           </span>
           <span>
             <strong>🎯 今日のピックアップ</strong>

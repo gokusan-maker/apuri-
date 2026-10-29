@@ -4452,3 +4452,12 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .bfloor .next-unit-btn, .arena .next-unit-btn { animation: next-btn-in 0.4s ease-out 0.15s backwards; }
 @keyframes next-btn-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .bfloor .next-unit-btn, .arena .next-unit-btn { animation: none; } }
+
+/* ガチャ：今日のピックアップのシルエットのまわりで、星がまたたく */
+.gacha-pickup-fig { position: relative; }
+.pickup-stars { position: absolute; inset: -6px; pointer-events: none; }
+.pickup-stars i { position: absolute; font-style: normal; font-size: 0.8rem; color: #facc15; text-shadow: 0 0 5px rgb(250 204 21 / 0.9); animation: star-twinkle 1.4s ease-in-out infinite; opacity: 0; }
+.pickup-stars i:nth-child(1) { left: 0; top: 0; }
+.pickup-stars i:nth-child(2) { right: 0; top: 30%; animation-delay: 0.45s; }
+.pickup-stars i:nth-child(3) { left: 30%; bottom: 0; animation-delay: 0.9s; }
+@media (prefers-reduced-motion: reduce) { .pickup-stars { display: none; } }
