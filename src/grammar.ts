@@ -4299,9 +4299,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What is the point of buying a new phone every year?', ja: '毎年新しい電話を買って何になるの？' },
     ],
     questions: [
-      { sentence: 'There is no point ___ worrying about it.', choices: ['in', 'to', 'for'], answer: 0, why: 'There is no point in -ing「～してもむだだ」。' },
-      { sentence: 'There is no point in ___ him. He never listens.', choices: ['asking', 'ask', 'to ask'], answer: 0, why: '前置詞 in のあとは動名詞 asking。' },
-      { sentence: 'What is the point of ___ so early?', choices: ['getting up', 'get up', 'to get up'], answer: 0, why: '前置詞 of のあとは動名詞 getting up。' },
+      { sentence: 'There is no point ___ worrying about it.', choices: ['in', 'to', 'for', 'at'], answer: 0, why: 'There is no point in -ing「～してもむだだ」。' },
+      { sentence: 'There is no point in ___ him. He never listens.', choices: ['asking', 'ask', 'to ask', 'asked'], answer: 0, why: '前置詞 in のあとは動名詞 asking。' },
+      { sentence: 'What is the point of ___ so early?', choices: ['getting up', 'get up', 'to get up', 'got up'], answer: 0, why: '前置詞 of のあとは動名詞 getting up。' },
     ],
   },
   {
@@ -4316,9 +4316,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We regret to say that the concert has been canceled.', ja: '残念ながら、コンサートは中止になりました。' },
     ],
     questions: [
-      { sentence: 'I regret ___ so much money last month.', choices: ['spending', 'spend', 'spent'], answer: 0, why: '先月（過去）にしたことを後悔するので regret -ing。' },
-      { sentence: 'We regret ___ you that the flight has been canceled.', choices: ['to inform', 'inform', 'informed'], answer: 0, why: '「残念ながらお知らせします」は regret to ＋ 原形。' },
-      { sentence: 'He regrets not ___ harder at school.', choices: ['studying', 'study', 'studied'], answer: 0, why: '「～しなかったことを後悔する」は regret not -ing。not は動名詞の前に置く。' },
+      { sentence: 'I regret ___ so much money last month.', choices: ['spending', 'spend', 'spent', 'to spend'], answer: 0, why: '先月（過去）にしたことを後悔するので regret -ing。' },
+      { sentence: 'We regret ___ you that the flight has been canceled.', choices: ['to inform', 'inform', 'informed', 'to informing'], answer: 0, why: '「残念ながらお知らせします」は regret to ＋ 原形。' },
+      { sentence: 'He regrets not ___ harder at school.', choices: ['studying', 'study', 'studied', 'to study'], answer: 0, why: '「～しなかったことを後悔する」は regret not -ing。not は動名詞の前に置く。' },
     ],
   },
   {
@@ -4333,9 +4333,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How come she didn\'t come to the party?', ja: 'どうして彼女はパーティーに来なかったの？' },
     ],
     questions: [
-      { sentence: 'How come ___ so tired?', choices: ['you are', 'are you', 'do you'], answer: 0, why: 'How come のうしろはふつうの語順（主語 ＋ 動詞）。' },
-      { sentence: '___ come you didn\'t call me?', choices: ['How', 'Why', 'What'], answer: 0, why: 'How come ～?「どうして～なの？」の決まった形。' },
-      { sentence: 'How come she ___ the party?', choices: ['missed', 'did she miss', 'does she miss'], answer: 0, why: 'How come のうしろは疑問文の語順にせず、did も使わない：she missed。' },
+      { sentence: 'How come ___ so tired?', choices: ['you are', 'are you', 'do you', 'were you'], answer: 0, why: 'How come のうしろはふつうの語順（主語 ＋ 動詞）。' },
+      { sentence: '___ come you didn\'t call me?', choices: ['How', 'Why', 'What', 'Which'], answer: 0, why: 'How come ～?「どうして～なの？」の決まった形。' },
+      { sentence: 'How come she ___ the party?', choices: ['missed', 'did she miss', 'does she miss', 'missing'], answer: 0, why: 'How come のうしろは疑問文の語順にせず、did も使わない：she missed。' },
     ],
   },
   {
@@ -4350,9 +4350,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He has never been abroad, let alone to Africa.', ja: '彼は外国に行ったことがない。アフリカはなおさらだ。' },
     ],
     questions: [
-      { sentence: 'I can\'t ride a bicycle, ___ drive a car.', choices: ['let alone', 'in addition', 'so as'], answer: 0, why: '否定の文 ＋ let alone ～「まして～はできない」。in addition・so as のうしろに原形は続かない。' },
-      { sentence: 'He can hardly read English, let ___ write it.', choices: ['alone', 'only', 'along'], answer: 0, why: 'let alone ～ の決まった形。' },
-      { sentence: 'She didn\'t even say hello, let alone ___ me a gift.', choices: ['give', 'giving', 'gave'], answer: 0, why: 'let alone のうしろは前の say と同じ原形 give にそろえる。' },
+      { sentence: 'I can\'t ride a bicycle, ___ drive a car.', choices: ['let alone', 'in addition', 'so as', 'as well'], answer: 0, why: '否定の文 ＋ let alone ～「まして～はできない」。in addition・so as のうしろに原形は続かない。' },
+      { sentence: 'He can hardly read English, let ___ write it.', choices: ['alone', 'only', 'along', 'alike'], answer: 0, why: 'let alone ～ の決まった形。' },
+      { sentence: 'She didn\'t even say hello, let alone ___ me a gift.', choices: ['give', 'giving', 'gave', 'gives'], answer: 0, why: 'let alone のうしろは前の say と同じ原形 give にそろえる。' },
     ],
   },
   {
@@ -4367,9 +4367,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The road was closed; therefore, we took another way.', ja: '道が通行止めだった。だから、別の道を通った。' },
     ],
     questions: [
-      { sentence: 'It was raining. ___, we went out.', choices: ['However', 'Although', 'Despite'], answer: 0, why: '文頭で前の文を受けて「しかし」とつなぐ副詞 However。Although のあとは文、Despite のあとは名詞が続く。' },
-      { sentence: 'He was sick. ___, he stayed home.', choices: ['Therefore', 'Because', 'So that'], answer: 0, why: '「だから」と前の文を受ける副詞 Therefore。Because・So that は接続詞で、うしろにすぐ文が続く。' },
-      { sentence: 'I like tea; ___, my sister prefers coffee.', choices: ['however', 'despite', 'unless'], answer: 0, why: 'セミコロンのあとで「しかし」とつなぐ副詞 however。despite のあとは名詞、unless のあとにコンマは置かない。' },
+      { sentence: 'It was raining. ___, we went out.', choices: ['However', 'Although', 'Despite', 'Even though'], answer: 0, why: '文頭で前の文を受けて「しかし」とつなぐ副詞 However。Although のあとは文、Despite のあとは名詞が続く。' },
+      { sentence: 'He was sick. ___, he stayed home.', choices: ['Therefore', 'Because', 'So that', 'Since'], answer: 0, why: '「だから」と前の文を受ける副詞 Therefore。Because・So that は接続詞で、うしろにすぐ文が続く。' },
+      { sentence: 'I like tea; ___, my sister prefers coffee.', choices: ['however', 'despite', 'unless', 'although'], answer: 0, why: 'セミコロンのあとで「しかし」とつなぐ副詞 however。despite のあとは名詞、unless のあとにコンマは置かない。' },
     ],
   },
   {
@@ -4384,9 +4384,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Not a single person came to help.', ja: 'だれ1人、助けに来なかった。' },
     ],
     questions: [
-      { sentence: 'There was not a ___ cloud in the sky.', choices: ['single', 'alone', 'only'], answer: 0, why: 'not a single ～「1つも～ない」。a only・a alone という形はない。' },
-      { sentence: 'Not a single student ___ late today.', choices: ['was', 'were', 'being'], answer: 0, why: 'a single student は単数なので was。' },
-      { sentence: 'I didn\'t make ___ mistake.', choices: ['a single', 'single', 'singles'], answer: 0, why: 'not a single ＋ 単数名詞。a が必要。' },
+      { sentence: 'There was not a ___ cloud in the sky.', choices: ['single', 'alone', 'only', 'lonely'], answer: 0, why: 'not a single ～「1つも～ない」。a only・a alone という形はない。' },
+      { sentence: 'Not a single student ___ late today.', choices: ['was', 'were', 'being', 'are'], answer: 0, why: 'a single student は単数なので was。' },
+      { sentence: 'I didn\'t make ___ mistake.', choices: ['a single', 'single', 'singles', 'singly'], answer: 0, why: 'not a single ＋ 単数名詞。a が必要。' },
     ],
   },
   {
@@ -4401,9 +4401,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He seldom, if ever, watches TV.', ja: '彼はテレビを見ることは、あったとしてもめったにない。' },
     ],
     questions: [
-      { sentence: 'There are few, if ___, mistakes in this report.', choices: ['any', 'ever', 'none'], answer: 0, why: '名詞（mistakes）について「あるとしても」は if any。' },
-      { sentence: 'He seldom, if ___, eats breakfast.', choices: ['ever', 'any', 'never'], answer: 0, why: '動作の回数（seldom）について「あったとしても」は if ever。' },
-      { sentence: 'There is little, if ___, hope of finding it.', choices: ['any', 'ever', 'much'], answer: 0, why: '名詞（hope）について little, if any「あるとしてもほとんどない」。' },
+      { sentence: 'There are few, if ___, mistakes in this report.', choices: ['any', 'ever', 'none', 'some'], answer: 0, why: '名詞（mistakes）について「あるとしても」は if any。' },
+      { sentence: 'He seldom, if ___, eats breakfast.', choices: ['ever', 'any', 'never', 'not'], answer: 0, why: '動作の回数（seldom）について「あったとしても」は if ever。' },
+      { sentence: 'There is little, if ___, hope of finding it.', choices: ['any', 'ever', 'much', 'so'], answer: 0, why: '名詞（hope）について little, if any「あるとしてもほとんどない」。' },
     ],
   },
   {
@@ -4418,9 +4418,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Not that it matters, but where did you buy that hat?', ja: 'べつにどうでもいいんだけど、その帽子どこで買ったの？' },
     ],
     questions: [
-      { sentence: 'I don\'t eat much meat. ___ that I dislike it.', choices: ['Not', 'No', 'Never'], answer: 0, why: 'Not that ～「～というわけではないが」の決まった形。' },
-      { sentence: 'Not ___ I don\'t trust you, but I want to check.', choices: ['that', 'what', 'which'], answer: 0, why: 'Not that ＋ 文。うしろは欠けのない文なので that。' },
-      { sentence: 'Not that it ___, but where did you buy it?', choices: ['matters', 'matter', 'mattering'], answer: 0, why: 'that のうしろはふつうの文。主語 it は三人称単数なので matters。' },
+      { sentence: 'I don\'t eat much meat. ___ that I dislike it.', choices: ['Not', 'No', 'Never', 'Nor'], answer: 0, why: 'Not that ～「～というわけではないが」の決まった形。' },
+      { sentence: 'Not ___ I don\'t trust you, but I want to check.', choices: ['that', 'what', 'which', 'why'], answer: 0, why: 'Not that ＋ 文。うしろは欠けのない文なので that。' },
+      { sentence: 'Not that it ___, but where did you buy it?', choices: ['matters', 'matter', 'mattering', 'are mattering'], answer: 0, why: 'that のうしろはふつうの文。主語 it は三人称単数なので matters。' },
     ],
   },
   {
@@ -4435,9 +4435,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The match is as good as over.', ja: '試合はもう終わったも同然だ。' },
     ],
     questions: [
-      { sentence: 'The car is as good ___ new.', choices: ['as', 'than', 'so'], answer: 0, why: 'as good as ～「～も同然」。' },
-      { sentence: 'The game is as ___ as over.', choices: ['good', 'well', 'better'], answer: 0, why: 'as good as over「終わったも同然」の決まった形。' },
-      { sentence: 'He as good as ___ he would come.', choices: ['promised', 'promise', 'promising'], answer: 0, why: 'as good as ＋ 動詞「～したも同然」。過去の文なので promised。' },
+      { sentence: 'The car is as good ___ new.', choices: ['as', 'than', 'so', 'to'], answer: 0, why: 'as good as ～「～も同然」。' },
+      { sentence: 'The game is as ___ as over.', choices: ['good', 'well', 'better', 'best'], answer: 0, why: 'as good as over「終わったも同然」の決まった形。' },
+      { sentence: 'He as good as ___ he would come.', choices: ['promised', 'promise', 'promising', 'promises'], answer: 0, why: 'as good as ＋ 動詞「～したも同然」。過去の文なので promised。' },
     ],
   },
   {
@@ -4452,9 +4452,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She read what few books there were in the village.', ja: '彼女は村にあった少ない本をすべて読んだ。' },
     ],
     questions: [
-      { sentence: 'She gave me ___ little money she had.', choices: ['what', 'which', 'who'], answer: 0, why: 'what little ＋ 名詞「少ないながらすべての～」。' },
-      { sentence: 'He sold what ___ books he owned.', choices: ['few', 'little', 'much'], answer: 0, why: 'books は数えられる名詞の複数なので what few。' },
-      { sentence: 'I did what little I ___ to help.', choices: ['could', 'might be', 'was'], answer: 0, why: 'what little I could (do)「できるわずかなことをすべて」。' },
+      { sentence: 'She gave me ___ little money she had.', choices: ['what', 'which', 'who', 'that'], answer: 0, why: 'what little ＋ 名詞「少ないながらすべての～」。' },
+      { sentence: 'He sold what ___ books he owned.', choices: ['few', 'little', 'much', 'many'], answer: 0, why: 'books は数えられる名詞の複数なので what few。' },
+      { sentence: 'I did what little I ___ to help.', choices: ['could', 'might be', 'was', 'should to'], answer: 0, why: 'what little I could (do)「できるわずかなことをすべて」。' },
     ],
   },
   {
