@@ -50,6 +50,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   squid: { streak: ['10本足で、大正解！', 'すいすい、連続正解！'], wrong: ['すみをはいて、気をとりなおそう！', '深い海でもう一回考えよう！'] },
   chicken: { streak: ['コケコッコー、大正解！', '朝から絶好調、連続正解！'], wrong: ['早起きして、もう一回！', 'つつきなおして、次いこう！'] },
   pig: { streak: ['くんくん、大正解！', 'ブーブー、連続正解！'], wrong: ['においをかぎなおして、もう一回！', 'どろんこになっても、次いこう！'] },
+  beaver: { streak: ['かじかじ、大正解！', 'こつこつ積んで、連続正解！'], wrong: ['もう一本運んで、もう一回！', 'ダムは一日でできないよ、次いこう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -109,6 +110,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   squid: { streak: [['Ten out of ten!', '10点満点！']], wrong: [['Swim back and try again.', '泳いでもどって、もう一回。']] },
   chicken: { streak: [['Early bird wins!', '早起きは得をするね！']], wrong: [['Wake up and try again.', '目をさまして、もう一回。']] },
   pig: { streak: [['You sniffed it out!', 'かぎつけたね！']], wrong: [['Sniff again and try.', 'もう一度かいでみよう。']] },
+  beaver: { streak: [['Busy as a beaver!', 'よく働くね！']], wrong: [['Build it again.', 'また積み上げよう。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }

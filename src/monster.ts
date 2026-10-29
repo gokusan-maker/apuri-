@@ -332,6 +332,7 @@ export const SPECIES: Species[] = [
   { id: 'squid', name: 'イカッチ', egg: 'しんかいのタマゴ', token: 'イカ', bigToken: 'イカッチ', color: '#e9d5ff', line: '#6b21a8', rate: 0.02, desc: '深い海を泳ぐイカ。10本の足で、10個の単語をいっぺんにつかまえる。' },
   { id: 'chicken', name: 'コケッコ', egg: 'わらのタマゴ', token: 'コケ', bigToken: 'コケッコ', color: '#fef2f2', line: '#991b1b', rate: 0.02, desc: '朝一番に鳴くニワトリ。毎朝早起きして、その日の英単語をみんなに知らせる。' },
   { id: 'pig', name: 'ブタッチ', egg: 'こやのタマゴ', token: 'ブタ', bigToken: 'ブタッチ', color: '#fbcfe8', line: '#9d174d', rate: 0.02, desc: 'ピンクのブタ。鼻がきくので、においをかぐように正しい答えを見つけだす。' },
+  { id: 'beaver', name: 'ビバッチ', egg: 'ダムのタマゴ', token: 'ビバ', bigToken: 'ビバッチ', color: '#a16207', line: '#422006', rate: 0.02, desc: '川にダムを作るビーバー。木を一本ずつ運ぶように、単語を一つずつ積み上げていく。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
