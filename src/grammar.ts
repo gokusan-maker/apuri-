@@ -3755,9 +3755,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It never rains but it pours.', ja: '降れば必ずどしゃ降り（悪いことは重なる）。' },
     ],
     questions: [
-      { sentence: 'I never hear this song ___ thinking of my grandmother.', choices: ['without', 'so', 'than'], answer: 0, why: 'never A without B（-ing）「A すると必ず B する」。' },
-      { sentence: 'She never goes out without ___ her umbrella.', choices: ['taking', 'take', 'to take'], answer: 0, why: '前置詞 without のあとは動名詞。' },
-      { sentence: 'He ___ visits us without bringing a gift.', choices: ['never', 'ever', 'yet'], answer: 0, why: 'never ～ without -ing「～すると必ず…する」。ever・yet はこの位置で visits を否定できない。' },
+      { sentence: 'I never hear this song ___ thinking of my grandmother.', choices: ['without', 'so', 'than', 'unless'], answer: 0, why: 'never A without B（-ing）「A すると必ず B する」。' },
+      { sentence: 'She never goes out without ___ her umbrella.', choices: ['taking', 'take', 'to take', 'took'], answer: 0, why: '前置詞 without のあとは動名詞。' },
+      { sentence: 'He ___ visits us without bringing a gift.', choices: ['never', 'ever', 'yet', 'not'], answer: 0, why: 'never ～ without -ing「～すると必ず…する」。ever・yet はこの位置で visits を否定できない。' },
     ],
   },
   {
@@ -3806,9 +3806,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We were worried about his absence from school.', ja: '私たちは彼が学校を休んでいることを心配した。' },
     ],
     questions: [
-      { sentence: 'His sudden ___ surprised everyone.', choices: ['arrival', 'arrive', 'arrived'], answer: 0, why: '所有格 His ＋形容詞 sudden のあとは名詞 arrival「到着」。' },
-      { sentence: 'The ___ of the new bridge took five years.', choices: ['construction', 'construct', 'constructed'], answer: 0, why: 'The ～ of …「…の～」。the のあとは名詞 construction。' },
-      { sentence: 'I was impressed by her ___ to help others.', choices: ['willingness', 'willing', 'willingly'], answer: 0, why: '所有格 her のあとは名詞。willing（形容詞）の名詞形 willingness「進んで～する気持ち」。' },
+      { sentence: 'His sudden ___ surprised everyone.', choices: ['arrival', 'arrive', 'arrived', 'arrivals'], answer: 0, why: '所有格 His ＋形容詞 sudden のあとは名詞 arrival「到着」。' },
+      { sentence: 'The ___ of the new bridge took five years.', choices: ['construction', 'construct', 'constructed', 'constructive'], answer: 0, why: 'The ～ of …「…の～」。the のあとは名詞 construction。' },
+      { sentence: 'I was impressed by her ___ to help others.', choices: ['willingness', 'willing', 'willingly', 'will'], answer: 0, why: '所有格 her のあとは名詞。willing（形容詞）の名詞形 willingness「進んで～する気持ち」。' },
     ],
   },
   {
@@ -3823,9 +3823,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She said that she gets up at six every day.', ja: '彼女は毎日6時に起きると言った。' },
     ],
     questions: [
-      { sentence: 'Our teacher said that the sun ___ in the east.', choices: ['rises', 'rise', 'rising'], answer: 0, why: 'いつでも正しいこと（不変の真理）は、主節が過去でも現在形 rises。' },
-      { sentence: 'We learned that Columbus ___ America in 1492.', choices: ['reached', 'reach', 'reaching'], answer: 0, why: '歴史上の出来事は過去形のまま reached。' },
-      { sentence: 'He said that light ___ faster than sound.', choices: ['travels', 'travel', 'traveling'], answer: 0, why: '光が音より速いのは不変の真理なので現在形 travels。' },
+      { sentence: 'Our teacher said that the sun ___ in the east.', choices: ['rises', 'rise', 'rising', 'risen'], answer: 0, why: 'いつでも正しいこと（不変の真理）は、主節が過去でも現在形 rises。' },
+      { sentence: 'We learned that Columbus ___ America in 1492.', choices: ['reached', 'reach', 'reaching', 'has reached'], answer: 0, why: '歴史上の出来事は過去形のまま reached。' },
+      { sentence: 'He said that light ___ faster than sound.', choices: ['travels', 'travel', 'traveling', 'to travel'], answer: 0, why: '光が音より速いのは不変の真理なので現在形 travels。' },
     ],
   },
   {
@@ -3840,9 +3840,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I don\'t play the piano now, but I used to.', ja: '今はピアノをひかないが、昔はひいていた。' },
     ],
     questions: [
-      { sentence: 'Do you want to join us? — Yes, I\'d love ___.', choices: ['to', 'so', 'for'], answer: 0, why: '代不定詞。I\'d love to (join you) の join you を省いて to だけ残す。' },
-      { sentence: 'You don\'t have to come if you don\'t want ___.', choices: ['to', 'so', 'for'], answer: 0, why: 'want to (come) の come を省いた代不定詞。' },
-      { sentence: 'I don\'t eat meat now, but I used ___.', choices: ['to', 'so', 'for'], answer: 0, why: 'used to (eat meat) の eat meat を省いた代不定詞。' },
+      { sentence: 'Do you want to join us? — Yes, I\'d love ___.', choices: ['to', 'so', 'for', 'that'], answer: 0, why: '代不定詞。I\'d love to (join you) の join you を省いて to だけ残す。' },
+      { sentence: 'You don\'t have to come if you don\'t want ___.', choices: ['to', 'so', 'for', 'that'], answer: 0, why: 'want to (come) の come を省いた代不定詞。' },
+      { sentence: 'I don\'t eat meat now, but I used ___.', choices: ['to', 'so', 'for', 'that'], answer: 0, why: 'used to (eat meat) の eat meat を省いた代不定詞。' },
     ],
   },
   {
@@ -3857,9 +3857,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Speak quietly lest the baby wake up.', ja: '赤ちゃんが起きないように、静かに話して。' },
     ],
     questions: [
-      { sentence: 'He wrote the number down ___ he should forget it.', choices: ['lest', 'in case of', 'despite'], answer: 0, why: 'うしろが文（he should forget it）なので接続詞 lest「～しないように」。in case of・despite は前置詞の働きで文を続けられない。' },
-      { sentence: 'Speak quietly lest the baby ___ up.', choices: ['wake', 'waking', 'to wake'], answer: 0, why: 'lest S (should) 原形。should が省かれて原形 wake が残る。-ing や to 不定詞は述語にならない。' },
-      { sentence: 'She hurried lest she ___ miss the last bus.', choices: ['should', 'to', 'being'], answer: 0, why: 'lest S should 原形 の形。to・being のあとに原形 miss を続けて述語にすることはできない。' },
+      { sentence: 'He wrote the number down ___ he should forget it.', choices: ['lest', 'in case of', 'despite', 'so as'], answer: 0, why: 'うしろが文（he should forget it）なので接続詞 lest「～しないように」。in case of・despite は前置詞の働きで文を続けられない。' },
+      { sentence: 'Speak quietly lest the baby ___ up.', choices: ['wake', 'waking', 'to wake', 'woke'], answer: 0, why: 'lest S (should) 原形。should が省かれて原形 wake が残る。-ing や to 不定詞は述語にならない。' },
+      { sentence: 'She hurried lest she ___ miss the last bus.', choices: ['should', 'to', 'being', 'would to'], answer: 0, why: 'lest S should 原形 の形。to・being のあとに原形 miss を続けて述語にすることはできない。' },
     ],
   },
   {
@@ -3874,9 +3874,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You might as well talk to a wall as try to change his mind.', ja: '彼の考えを変えようとするのは、かべに話しかけるようなものだ。' },
     ],
     questions: [
-      { sentence: 'The bus has already gone. We might as well ___.', choices: ['walk', 'walking', 'to walk'], answer: 0, why: 'might as well のあとは動詞の原形 walk。' },
-      { sentence: 'There is nothing to do here, so we may as ___ go home.', choices: ['well', 'good', 'better'], answer: 0, why: 'may (might) as well 原形 の決まった形。good・better は入らない。' },
-      { sentence: 'You might ___ well throw your money away as spend it on that.', choices: ['as', 'so', 'too'], answer: 0, why: 'might as well A as B「B するのは A するようなものだ」。as well の前は as。' },
+      { sentence: 'The bus has already gone. We might as well ___.', choices: ['walk', 'walking', 'to walk', 'walked'], answer: 0, why: 'might as well のあとは動詞の原形 walk。' },
+      { sentence: 'There is nothing to do here, so we may as ___ go home.', choices: ['well', 'good', 'better', 'best'], answer: 0, why: 'may (might) as well 原形 の決まった形。good・better は入らない。' },
+      { sentence: 'You might ___ well throw your money away as spend it on that.', choices: ['as', 'so', 'too', 'very'], answer: 0, why: 'might as well A as B「B するのは A するようなものだ」。as well の前は as。' },
     ],
   },
   {
@@ -3891,9 +3891,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We cannot help but admire her courage.', ja: '彼女の勇気には感心せずにはいられない。' },
     ],
     questions: [
-      { sentence: 'I could not but ___ at his joke.', choices: ['laugh', 'laughing', 'to laugh'], answer: 0, why: 'cannot but のあとは動詞の原形 laugh。' },
-      { sentence: 'We cannot ___ admire her courage.', choices: ['but', 'for', 'of'], answer: 0, why: 'cannot but 原形「～せずにはいられない」。for・of のあとに動詞の原形は続かない。' },
-      { sentence: 'She could not help but ___ when she saw the puppy.', choices: ['smile', 'smiling', 'smiled'], answer: 0, why: 'cannot help but のあとも原形 smile。' },
+      { sentence: 'I could not but ___ at his joke.', choices: ['laugh', 'laughing', 'to laugh', 'laughed'], answer: 0, why: 'cannot but のあとは動詞の原形 laugh。' },
+      { sentence: 'We cannot ___ admire her courage.', choices: ['but', 'for', 'of', 'with'], answer: 0, why: 'cannot but 原形「～せずにはいられない」。for・of のあとに動詞の原形は続かない。' },
+      { sentence: 'She could not help but ___ when she saw the puppy.', choices: ['smile', 'smiling', 'smiled', 'smiles'], answer: 0, why: 'cannot help but のあとも原形 smile。' },
     ],
   },
   {
@@ -3908,9 +3908,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was on the point of giving up when she helped me.', ja: 'あきらめかけていたとき、彼女が助けてくれた。' },
     ],
     questions: [
-      { sentence: 'The train was on the point of ___ when we arrived.', choices: ['leaving', 'leave', 'to leave'], answer: 0, why: 'of は前置詞なので、うしろは動名詞 leaving。' },
-      { sentence: 'I was on the ___ of calling you.', choices: ['point', 'top', 'end'], answer: 0, why: 'be on the point of -ing「今にも～しようとしている」の決まった形。' },
-      { sentence: 'She was ___ the point of giving up.', choices: ['on', 'by', 'for'], answer: 0, why: 'be on the point of -ing。point の前は on。' },
+      { sentence: 'The train was on the point of ___ when we arrived.', choices: ['leaving', 'leave', 'to leave', 'left'], answer: 0, why: 'of は前置詞なので、うしろは動名詞 leaving。' },
+      { sentence: 'I was on the ___ of calling you.', choices: ['point', 'top', 'end', 'way'], answer: 0, why: 'be on the point of -ing「今にも～しようとしている」の決まった形。' },
+      { sentence: 'She was ___ the point of giving up.', choices: ['on', 'by', 'for', 'at'], answer: 0, why: 'be on the point of -ing。point の前は on。' },
     ],
   },
   {
@@ -3925,9 +3925,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It was all but impossible to find a seat.', ja: '席を見つけるのは、ほとんど不可能だった。' },
     ],
     questions: [
-      { sentence: 'He ate nothing ___ bread for lunch.', choices: ['but', 'only', 'unless'], answer: 0, why: 'nothing but ～「～だけ」。nothing only・nothing unless という形はない。' },
-      { sentence: 'The work is all but ___.', choices: ['finished', 'finishing', 'finish'], answer: 0, why: 'all but ～「ほとんど～」。仕事は「終えられる」側なので過去分詞 finished。' },
-      { sentence: 'It was ___ but impossible to get tickets.', choices: ['all', 'any', 'every'], answer: 0, why: 'all but impossible「ほとんど不可能」。any but・every but という形はない（anything but なら「少しも～ない」）。' },
+      { sentence: 'He ate nothing ___ bread for lunch.', choices: ['but', 'only', 'unless', 'than'], answer: 0, why: 'nothing but ～「～だけ」。nothing only・nothing unless という形はない。' },
+      { sentence: 'The work is all but ___.', choices: ['finished', 'finishing', 'finish', 'finishes'], answer: 0, why: 'all but ～「ほとんど～」。仕事は「終えられる」側なので過去分詞 finished。' },
+      { sentence: 'It was ___ but impossible to get tickets.', choices: ['all', 'any', 'every', 'some'], answer: 0, why: 'all but impossible「ほとんど不可能」。any but・every but という形はない（anything but なら「少しも～ない」）。' },
     ],
   },
   {
@@ -3942,9 +3942,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Not a few people agreed with her.', ja: '少なからぬ人が彼女に賛成した。' },
     ],
     questions: [
-      { sentence: 'Quite a ___ people came to the party.', choices: ['few', 'little', 'lot'], answer: 0, why: 'people は数えられる名詞の複数なので quite a few。quite a lot なら of が必要、little は数えられない名詞に使う。' },
-      { sentence: 'There were not a ___ mistakes in his report.', choices: ['few', 'little', 'much'], answer: 0, why: 'mistakes は数えられる名詞の複数なので not a few「少なからぬ」。little・much は数えられない名詞に使う。' },
-      { sentence: 'She spent quite a ___ of money on the trip.', choices: ['lot', 'few', 'many'], answer: 0, why: 'money は数えられない名詞なので quite a lot of。few・many は数えられる名詞に使い、a many という形もない。' },
+      { sentence: 'Quite a ___ people came to the party.', choices: ['few', 'little', 'lot', 'many'], answer: 0, why: 'people は数えられる名詞の複数なので quite a few。quite a lot なら of が必要、little は数えられない名詞に使う。' },
+      { sentence: 'There were not a ___ mistakes in his report.', choices: ['few', 'little', 'much', 'lot'], answer: 0, why: 'mistakes は数えられる名詞の複数なので not a few「少なからぬ」。little・much は数えられない名詞に使う。' },
+      { sentence: 'She spent quite a ___ of money on the trip.', choices: ['lot', 'few', 'many', 'much'], answer: 0, why: 'money は数えられない名詞なので quite a lot of。few・many は数えられる名詞に使い、a many という形もない。' },
     ],
   },
   {

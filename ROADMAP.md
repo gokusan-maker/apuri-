@@ -90,7 +90,8 @@
   - [x] ⑲ as good as・what little・if any / if ever・Not that・however / therefore・not a single・How come・let alone・There is no point in・regret ～ing / to の10単元に4つ目の選択肢（429→399）
   - [x] ⑳ come to do・All you have to do is・独立分詞構文・without so much as・the former / the latter・up to・need not・ought to・tend to・What if の10単元に4つ目の選択肢（399→369）
   - [x] ㉑ whereas・given that・It occurs to・not because ～ but because・make oneself understood・There seems to be・by far・so ～ a ＋名詞・every other・rather than の10単元に4つ目の選択肢（369→339）
-  - [ ] ㉒ つづきの10単元を4択に
+  - [x] ㉒ nothing but / all but・quite a few・cannot but・on the point of・lest・might as well・名詞構文・時制の一致の例外・代不定詞・never ～ without の10単元に4つ目の選択肢（339→309）
+  - [ ] ㉓ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
