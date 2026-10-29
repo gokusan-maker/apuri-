@@ -586,6 +586,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="69" cy="25" r="2.5" fill="#1f2937" stroke="none" />
       </g>
     )
+  if (species === 'snail')
+    return (
+      <g stroke={line} strokeWidth="2" strokeLinecap="round" fill="none">
+        {/* 頭の上の2本のしょっ角 */}
+        <path d="M42 30 L36 10 M58 30 L64 10" />
+        <circle cx="36" cy="9" r="3" fill={line} />
+        <circle cx="64" cy="9" r="3" fill={line} />
+      </g>
+    )
   if (species === 'goat')
     return (
       <g stroke="#57534e" strokeWidth="3" strokeLinecap="round" fill="none">

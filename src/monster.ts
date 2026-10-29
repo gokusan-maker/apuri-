@@ -336,6 +336,7 @@ export const SPECIES: Species[] = [
   { id: 'deer', name: 'シカノン', egg: 'もみじのタマゴ', token: 'シカ', bigToken: 'シカノン', color: '#d97706', line: '#78350f', rate: 0.02, desc: '森にすむシカ。耳をぴんと立てて、遠くの小さな英語の音も聞きのがさない。' },
   { id: 'goat', name: 'ヤギッチ', egg: 'まきばのタマゴ', token: 'ヤギ', bigToken: 'ヤギッチ', color: '#e7e5e4', line: '#44403c', rate: 0.02, desc: 'けわしい山も登るヤギ。むずかしい問題でも、ひょいひょいと上っていく。' },
   { id: 'mouse', name: 'チュータ', egg: 'チーズのタマゴ', token: 'チュー', bigToken: 'チュータ', color: '#d4d4d8', line: '#3f3f46', rate: 0.02, desc: '小さなネズミ。すばしっこく動き回って、小さな単語のちがいも見つけだす。' },
+  { id: 'snail', name: 'カタツン', egg: 'あじさいのタマゴ', token: 'カタ', bigToken: 'カタツン', color: '#c4b5fd', line: '#5b21b6', rate: 0.02, desc: 'あじさいの葉の上のカタツムリ。ゆっくりでも、毎日少しずつ前へ進むのが得意。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 
