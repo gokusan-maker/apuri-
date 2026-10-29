@@ -15341,6 +15341,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Should We Bring Extinct Species Back to Life?', 'How Mammoths Lived in the Ice Age', 'The History of Genetics', 'Why Films Show Dinosaurs'], answer: 0, why: '全体として、脱絶滅の方法・利点・反論を検討し、それを行うべきかを問うている。' },
   },
   {
+    id: 'kyotsu-sad-music',
+    title: 'Why Do We Enjoy Sad Music?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Most of us try to avoid situations that make us feel sad. We do not usually choose to lose a game or to say goodbye to a friend. Yet many people deliberately listen to slow, sad songs, and they often say that they enjoy the experience. This seems like a puzzle. Why would anyone want to hear music that makes them feel unhappy?",
+      "One explanation is that the sadness we feel when listening to music is different from the sadness of real life. When a friend moves away, the loss is real and we cannot control it. When we listen to a sad song, however, we know that nothing bad has actually happened, and we can stop the music at any time. Some researchers describe this as experiencing an emotion from a safe distance, ( A ) allows us to explore feelings without suffering real harm.",
+      "Another explanation focuses on comfort. When people are already feeling low, a sad song may make them feel understood, as if the singer were sharing their experience. Surveys have found that many listeners choose sad music when they are lonely or disappointed, and that they often feel calmer or more hopeful afterward. In this sense, sad music can work less like a cause of sadness than like a companion during difficult times.",
+      "Not everyone responds in the same way, however. Studies suggest that people who are more sensitive to other people’s feelings tend to enjoy sad music more, while some others find it simply depressing. There is also a risk that a person who repeatedly listens to sad songs while focusing only on negative thoughts may feel worse rather than better. The effect seems to depend on how and why the music is used. For most listeners, a few sad songs can be helpful, but it may be wise to notice how the music actually makes them feel.",
+      "Sad music, then, reveals something interesting about human emotions. We do not simply seek pleasure and avoid pain. ( B ), we sometimes look for experiences that move us deeply, even when those experiences include sadness, because they help us to understand ourselves and to feel connected to others, ( C ) the people who wrote and performed the songs we love.",
+    ],
+    ja: [
+      'わたしたちの多くは、悲しい気持ちになる状況をさけようとする。ふつう、試合に負けることや友だちとお別れすることを自分から選びはしない。ところが多くの人は、ゆっくりした悲しい歌をわざわざ聞き、その体験を楽しんでいるとよく言う。これはなぞのように思える。なぜ、自分を不幸な気持ちにさせる音楽を聞きたいと思う人がいるのだろうか。',
+      'ひとつの説明は、音楽を聞いているときに感じる悲しみは、実生活の悲しみとはちがうというものである。友だちが引っこしてしまうとき、その喪失は本物で、わたしたちにはどうすることもできない。しかし悲しい歌を聞くときは、実際には何も悪いことは起きていないとわかっているし、いつでも音楽を止められる。研究者の中には、これを安全なきょりから感情を体験することだと説明する人もいる。それによって、本当の害を受けずに気持ちを探ることができるのである。',
+      'もうひとつの説明は、なぐさめに注目するものである。すでに落ちこんでいるとき、悲しい歌は、まるで歌い手が自分の経験を分かち合ってくれているかのように、理解されていると感じさせてくれるかもしれない。調査によれば、多くの聞き手はさびしいときやがっかりしたときに悲しい音楽を選び、聞いたあとには落ち着いたり希望をもてたりすることが多い。この意味で、悲しい音楽は悲しみの原因というより、つらいときの仲間のようにはたらくことがあるのだ。',
+      'しかし、だれもが同じように反応するわけではない。研究によれば、ほかの人の気持ちに敏感な人ほど悲しい音楽を楽しむ傾向がある一方、ただ気がめいるだけだと感じる人もいる。また、悪い考えばかりに目を向けながら悲しい歌をくり返し聞く人は、気分がよくなるどころか悪くなるおそれもある。その効果は、音楽をどのように、なぜ使うかによって変わるようだ。たいていの聞き手にとって悲しい歌を少し聞くのは役に立つが、その音楽で実際にどんな気分になるかに気をつけるのが賢明かもしれない。',
+      'つまり悲しい音楽は、人間の感情についておもしろいことを明らかにしている。わたしたちはただ快楽を求めて苦痛をさけているわけではない。むしろ、悲しみをふくんでいても、深く心を動かされる体験を求めることがある。それが自分自身を理解し、ほかの人々、とりわけ好きな歌を作ったり歌ったりした人々とのつながりを感じる助けになるからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '前の内容（安全なきょりから感情を体験すること）を受け、うしろに主語が欠けている（allows us …）ので非制限用法の which。what は先行詞をふくむので、コンマのあとに使えない。' },
+      { id: 'B', choices: ['Instead', 'Therefore', 'For example', 'Similarly'], answer: 0, why: '「ただ快楽を求めているわけではない。そのかわり（むしろ）、心を動かす体験を求める」とつなぐので Instead。' },
+      { id: 'C', choices: ['including', 'except', 'instead of', 'apart from'], answer: 0, why: '「ほかの人々、そこには好きな歌を作った人々もふくまれる」なので including（～をふくめて）。except では「～を除いて」と逆になる。' },
+    ],
+    tf: [
+      { statement: '多くの人は、悲しい歌を聞くことを楽しんでいると言う。', answer: true, why: '第1段落 they often say that they enjoy the experience。' },
+      { statement: '音楽による悲しみは、実生活の悲しみと同じで、自分ではどうすることもできない。', answer: false, why: '第2段落 we know that nothing bad has actually happened, and we can stop the music at any time。' },
+      { statement: '研究によれば、だれもが悲しい音楽を聞くと気分がよくなる。', answer: false, why: '第4段落 Not everyone responds in the same way … some others find it simply depressing。' },
+      { statement: '悲しい歌は、つらいときの仲間のようにはたらくことがある。', answer: true, why: '第3段落 sad music can work less like a cause of sadness than like a companion during difficult times。' },
+    ],
+    qa: [
+      { q: 'What does "experiencing an emotion from a safe distance" mean in the passage?', choices: ['Feeling sadness without any real loss or harm.', 'Listening to music in a quiet room far from other people.', 'Avoiding all kinds of sad emotions.', 'Watching other people cry at a concert.'], answer: 0, why: '第2段落：実際には何も悪いことは起きておらず、いつでも止められるので、本当の害なしに感情を体験できるという意味。' },
+      { q: 'According to the passage, who tends to enjoy sad music more?', choices: ['People who are more sensitive to others’ feelings.', 'People who never feel lonely.', 'People who play musical instruments.', 'People who dislike all kinds of music.'], answer: 0, why: '第4段落 people who are more sensitive to other people’s feelings tend to enjoy sad music more。' },
+    ],
+    gist: [
+      { para: 2, choices: ['悲しい歌は理解されている感じをあたえる', '歌手になるための練習', 'さびしさの原因', 'コンサートの楽しみ方'], answer: 0, why: '第3段落は、悲しい歌が理解されている感じや落ち着きをあたえる「なぐさめ」の面を説明している。' },
+      { para: 3, choices: ['反応は人によってちがい、悪くなることもある', '悲しい音楽は禁止すべきだ', '音楽の好みは年齢で決まる', 'みんな同じように感じる'], answer: 0, why: '第4段落は、人による反応のちがいと、使い方によっては気分が悪くなるおそれを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

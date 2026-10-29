@@ -228,3 +228,9 @@ it('本番の長さの長文：旧帝大の「脱絶滅」は600語以上・1文
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(tierOf(p)).toBe('kyutei')
 })
+
+it('本番の長さの長文：共通テスト評論の「悲しい音楽」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-sad-music')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})
