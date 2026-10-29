@@ -4129,9 +4129,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If you keep trying, you are bound to succeed.', ja: 'がんばり続ければ、きっと成功する。' },
     ],
     questions: [
-      { sentence: 'People tend ___ forget names quickly.', choices: ['to', 'for', 'on'], answer: 0, why: 'tend to ＋ 原形「～しがちだ」。' },
-      { sentence: 'If you keep practicing, you are bound ___ improve.', choices: ['to', 'for', 'with'], answer: 0, why: 'be bound to ＋ 原形「きっと～する」。' },
-      { sentence: 'Prices tend to ___ in winter.', choices: ['rise', 'rising', 'rose'], answer: 0, why: 'tend to のあとは動詞の原形 rise。' },
+      { sentence: 'People tend ___ forget names quickly.', choices: ['to', 'for', 'on', 'in'], answer: 0, why: 'tend to ＋ 原形「～しがちだ」。' },
+      { sentence: 'If you keep practicing, you are bound ___ improve.', choices: ['to', 'for', 'with', 'by'], answer: 0, why: 'be bound to ＋ 原形「きっと～する」。' },
+      { sentence: 'Prices tend to ___ in winter.', choices: ['rise', 'rising', 'rose', 'risen'], answer: 0, why: 'tend to のあとは動詞の原形 rise。' },
     ],
   },
   {
@@ -4146,9 +4146,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What if we had lunch in the park?', ja: '公園でお昼を食べるのはどう？' },
     ],
     questions: [
-      { sentence: '___ if it rains tomorrow?', choices: ['What', 'How', 'Why'], answer: 0, why: 'What if ～?「もし～したらどうなる？」の決まった形。' },
-      { sentence: 'What if we ___ late for the train?', choices: ['are', 'be', 'being'], answer: 0, why: 'if のあとは未来のことでも現在形 are。be・being は述語にならない。' },
-      { sentence: 'What ___ we took a taxi instead?', choices: ['if', 'when', 'that'], answer: 0, why: '提案の What if ～?「～したらどう？」。' },
+      { sentence: '___ if it rains tomorrow?', choices: ['What', 'How', 'Why', 'Who'], answer: 0, why: 'What if ～?「もし～したらどうなる？」の決まった形。' },
+      { sentence: 'What if we ___ late for the train?', choices: ['are', 'be', 'being', 'to be'], answer: 0, why: 'if のあとは未来のことでも現在形 are。be・being は述語にならない。' },
+      { sentence: 'What ___ we took a taxi instead?', choices: ['if', 'when', 'that', 'how'], answer: 0, why: '提案の What if ～?「～したらどう？」。' },
     ],
   },
   {
@@ -4163,9 +4163,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You needn\'t have bought a ticket. It was free.', ja: 'チケットを買う必要はなかったのに。無料だったんだよ。' },
     ],
     questions: [
-      { sentence: 'You need not ___ today.', choices: ['come', 'to come', 'coming'], answer: 0, why: '助動詞 need not のあとは動詞の原形 come。' },
-      { sentence: 'You ___ have brought an umbrella. It didn\'t rain.', choices: ['needn\'t', 'didn\'t', 'don\'t'], answer: 0, why: 'needn\'t have ＋ 過去分詞「～する必要はなかったのに」。didn\'t・don\'t のあとに have brought は続かない。' },
-      { sentence: 'You don\'t ___ to hurry. We have plenty of time.', choices: ['need', 'needs', 'needed'], answer: 0, why: '一般動詞の need。don\'t のあとは原形 need（don\'t need to ～「～する必要はない」）。' },
+      { sentence: 'You need not ___ today.', choices: ['come', 'to come', 'coming', 'came'], answer: 0, why: '助動詞 need not のあとは動詞の原形 come。' },
+      { sentence: 'You ___ have brought an umbrella. It didn\'t rain.', choices: ['needn\'t', 'didn\'t', 'don\'t', "mustn't"], answer: 0, why: 'needn\'t have ＋ 過去分詞「～する必要はなかったのに」。didn\'t・don\'t のあとに have brought は続かない。' },
+      { sentence: 'You don\'t ___ to hurry. We have plenty of time.', choices: ['need', 'needs', 'needed', 'needing'], answer: 0, why: '一般動詞の need。don\'t のあとは原形 need（don\'t need to ～「～する必要はない」）。' },
     ],
   },
   {
@@ -4180,9 +4180,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We ought not to waste water.', ja: '水をむだにすべきではない。' },
     ],
     questions: [
-      { sentence: 'You ought ___ see a doctor.', choices: ['to', 'for', 'that'], answer: 0, why: 'ought to ＋ 原形「～すべきだ」。' },
-      { sentence: 'You ought ___ to eat so much sugar.', choices: ['not', 'no', 'none'], answer: 0, why: '否定は ought not to。not が ought と to の間に入る。' },
-      { sentence: 'He ought to ___ more careful.', choices: ['be', 'being', 'been'], answer: 0, why: 'ought to のあとは動詞の原形 be。' },
+      { sentence: 'You ought ___ see a doctor.', choices: ['to', 'for', 'that', 'of'], answer: 0, why: 'ought to ＋ 原形「～すべきだ」。' },
+      { sentence: 'You ought ___ to eat so much sugar.', choices: ['not', 'no', 'none', 'nor'], answer: 0, why: '否定は ought not to。not が ought と to の間に入る。' },
+      { sentence: 'He ought to ___ more careful.', choices: ['be', 'being', 'been', 'is'], answer: 0, why: 'ought to のあとは動詞の原形 be。' },
     ],
   },
   {
@@ -4197,9 +4197,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Between trains and buses, I prefer the former.', ja: '電車とバスなら、前者（電車）のほうが好きだ。' },
     ],
     questions: [
-      { sentence: 'I have a cat and a dog. The ___ is white, and the latter is black.', choices: ['former', 'formal', 'before'], answer: 0, why: '先に出たほう（a cat）は the former「前者」。' },
-      { sentence: 'Between soccer and tennis, I prefer the ___, because I like playing alone.', choices: ['latter', 'lately', 'late'], answer: 0, why: 'あとに出たほう（tennis）は the latter「後者」。lately は副詞「最近」。' },
-      { sentence: 'The ___ plan is cheaper, but the latter is faster.', choices: ['former', 'formerly', 'formally'], answer: 0, why: '名詞 plan の前なので形容詞の former「前者の」。formerly・formally は副詞。' },
+      { sentence: 'I have a cat and a dog. The ___ is white, and the latter is black.', choices: ['former', 'formal', 'before', 'formerly'], answer: 0, why: '先に出たほう（a cat）は the former「前者」。' },
+      { sentence: 'Between soccer and tennis, I prefer the ___, because I like playing alone.', choices: ['latter', 'lately', 'late', 'latest'], answer: 0, why: 'あとに出たほう（tennis）は the latter「後者」。lately は副詞「最近」。' },
+      { sentence: 'The ___ plan is cheaper, but the latter is faster.', choices: ['former', 'formerly', 'formally', 'form'], answer: 0, why: '名詞 plan の前なので形容詞の former「前者の」。formerly・formally は副詞。' },
     ],
   },
   {
@@ -4214,9 +4214,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Whether we win or lose is up to us.', ja: '勝つか負けるかは、私たちしだいだ。' },
     ],
     questions: [
-      { sentence: 'It\'s ___ to you to decide.', choices: ['up', 'down', 'off'], answer: 0, why: 'be up to 人「人しだいだ」。' },
-      { sentence: 'It is up to the team ___ the next leader.', choices: ['to choose', 'choosing', 'chose'], answer: 0, why: 'It is up to 人 to ＋ 原形。本当の主語は to choose 以下。' },
-      { sentence: 'Whether we go or not is up ___ you.', choices: ['to', 'for', 'at'], answer: 0, why: 'be up to 人「人しだいだ」。前置詞は to。' },
+      { sentence: 'It\'s ___ to you to decide.', choices: ['up', 'down', 'off', 'over'], answer: 0, why: 'be up to 人「人しだいだ」。' },
+      { sentence: 'It is up to the team ___ the next leader.', choices: ['to choose', 'choosing', 'chose', 'chooses'], answer: 0, why: 'It is up to 人 to ＋ 原形。本当の主語は to choose 以下。' },
+      { sentence: 'Whether we go or not is up ___ you.', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'be up to 人「人しだいだ」。前置詞は to。' },
     ],
   },
   {
@@ -4231,9 +4231,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Weather permitting, we will go hiking tomorrow.', ja: '天気がよければ、明日ハイキングに行きます。' },
     ],
     questions: [
-      { sentence: '___ Sunday, the bank was closed.', choices: ['It being', 'Being', 'It was'], answer: 0, why: '主節の主語（the bank）とちがう主語 It を置いた独立分詞構文。It was では接続詞がなく2つの文がつながらない。' },
-      { sentence: 'Weather ___, we will have a picnic tomorrow.', choices: ['permitting', 'permitted', 'permits'], answer: 0, why: 'weather permitting「天気がよければ」の決まった形。permits では接続詞なしに文が2つ並んでしまう。' },
-      { sentence: 'There ___ no bus, we had to walk.', choices: ['being', 'been', 'be'], answer: 0, why: 'There being ～「～があるので（ないので）」の独立分詞構文。' },
+      { sentence: '___ Sunday, the bank was closed.', choices: ['It being', 'Being', 'It was', 'It is'], answer: 0, why: '主節の主語（the bank）とちがう主語 It を置いた独立分詞構文。It was では接続詞がなく2つの文がつながらない。' },
+      { sentence: 'Weather ___, we will have a picnic tomorrow.', choices: ['permitting', 'permitted', 'permits', 'permit'], answer: 0, why: 'weather permitting「天気がよければ」の決まった形。permits では接続詞なしに文が2つ並んでしまう。' },
+      { sentence: 'There ___ no bus, we had to walk.', choices: ['being', 'been', 'be', 'is'], answer: 0, why: 'There being ～「～があるので（ないので）」の独立分詞構文。' },
     ],
   },
   {
@@ -4248,9 +4248,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She did not even look at me.', ja: '彼女は私を見さえしなかった。' },
     ],
     questions: [
-      { sentence: 'He left without so much as ___ goodbye.', choices: ['saying', 'say', 'to say'], answer: 0, why: 'without は前置詞なので、うしろは動名詞 saying。' },
-      { sentence: 'She did not so much ___ look at me.', choices: ['as', 'than', 'so'], answer: 0, why: 'not so much as ＋ 原形「～さえしない」。' },
-      { sentence: 'He didn\'t ___ say thank you.', choices: ['even', 'either', 'neither'], answer: 0, why: 'not even ～「～さえしない」。either は文の最後、neither は not といっしょに使わない。' },
+      { sentence: 'He left without so much as ___ goodbye.', choices: ['saying', 'say', 'to say', 'said'], answer: 0, why: 'without は前置詞なので、うしろは動名詞 saying。' },
+      { sentence: 'She did not so much ___ look at me.', choices: ['as', 'than', 'so', 'like'], answer: 0, why: 'not so much as ＋ 原形「～さえしない」。' },
+      { sentence: 'He didn\'t ___ say thank you.', choices: ['even', 'either', 'neither', 'also'], answer: 0, why: 'not even ～「～さえしない」。either は文の最後、neither は not といっしょに使わない。' },
     ],
   },
   {
@@ -4265,9 +4265,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We got to know each other at summer camp.', ja: '私たちはサマーキャンプで知り合いになった。' },
     ],
     questions: [
-      { sentence: 'I came ___ like natto after living in Japan.', choices: ['to', 'for', 'into'], answer: 0, why: 'come to ＋ 原形「～するようになる」。' },
-      { sentence: 'We soon got to ___ each other well.', choices: ['know', 'knowing', 'knew'], answer: 0, why: 'get to ＋ 原形「～するようになる」。to のあとは原形 know。' },
-      { sentence: 'How did you come to ___ interested in history?', choices: ['be', 'being', 'been'], answer: 0, why: 'come to ＋ 原形。be interested in ～「～に興味がある」の be。' },
+      { sentence: 'I came ___ like natto after living in Japan.', choices: ['to', 'for', 'into', 'at'], answer: 0, why: 'come to ＋ 原形「～するようになる」。' },
+      { sentence: 'We soon got to ___ each other well.', choices: ['know', 'knowing', 'knew', 'to know'], answer: 0, why: 'get to ＋ 原形「～するようになる」。to のあとは原形 know。' },
+      { sentence: 'How did you come to ___ interested in history?', choices: ['be', 'being', 'been', 'to be'], answer: 0, why: 'come to ＋ 原形。be interested in ～「～に興味がある」の be。' },
     ],
   },
   {
@@ -4282,9 +4282,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'All I could do was watch.', ja: '私にできたのは、見ていることだけだった。' },
     ],
     questions: [
-      { sentence: 'All you have to do is ___ this button.', choices: ['press', 'pressing', 'pressed'], answer: 0, why: 'All you have to do is (to) ＋ 原形。to が省かれて原形 press。' },
-      { sentence: 'All you have ___ do is wait.', choices: ['to', 'for', 'that'], answer: 0, why: 'have to do「しなければならないこと」。have のあとは to。' },
-      { sentence: '___ you have to do is ask.', choices: ['All', 'Every', 'Each'], answer: 0, why: 'All you have to do「あなたがしなければならないすべてのこと」。every・each のうしろには名詞が必要。' },
+      { sentence: 'All you have to do is ___ this button.', choices: ['press', 'pressing', 'pressed', 'presses'], answer: 0, why: 'All you have to do is (to) ＋ 原形。to が省かれて原形 press。' },
+      { sentence: 'All you have ___ do is wait.', choices: ['to', 'for', 'that', 'of'], answer: 0, why: 'have to do「しなければならないこと」。have のあとは to。' },
+      { sentence: '___ you have to do is ask.', choices: ['All', 'Every', 'Each', 'Any'], answer: 0, why: 'All you have to do「あなたがしなければならないすべてのこと」。every・each のうしろには名詞が必要。' },
     ],
   },
   {
