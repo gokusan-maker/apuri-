@@ -82,6 +82,10 @@ export function BossFloor({ title, qs, onDone, onBack, onRetry, taunt, reward = 
         <p className={`stage-result${score >= pass ? ' clear' : ''}`} role="status">
           {dead ? `💀 ライフがなくなった… ${score}/${qs.length}問正解` : score >= pass ? `🏰 クリア！ ${score}/${qs.length}問正解` : `あと少し！ ${score}/${qs.length}問（${pass}問以上でクリア）`}
         </p>
+        {/* 正解の数のバーが、左からのびていく（闘技場の結果と同じ） */}
+        <span className="acc-bar" aria-hidden="true">
+          <i style={{ width: `${Math.round((score / qs.length) * 100)}%` }} />
+        </span>
         {!dead && (
           <p className="bfloor-life-left" aria-label={`のこりライフ ${lives} / ${maxLives}`}>
             のこりライフ {'❤️'.repeat(lives)}
