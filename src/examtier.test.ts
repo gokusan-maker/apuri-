@@ -156,3 +156,10 @@ it('本番の長さの長文：共通テスト評論の「カッコウの托卵�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：IELTS の成長マインドセットの長文は700〜950語で NOT GIVEN の設問がある', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-growth-mindset')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(700)
+  expect(passageStats(p).words).toBeLessThanOrEqual(950)
+  expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
+})
