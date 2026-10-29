@@ -4568,3 +4568,8 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .book-filter { display: block; margin: 6px auto; font-size: 0.8rem; }
 .lineup-pick { all: unset; cursor: pointer; display: block; border-radius: 8px; }
 .lineup-pick:focus-visible { outline: 2px solid var(--accent, #6366f1); }
+
+/* デザイン68：キャラガチャを開くと、ラインナップのシルエットが左から順に小さくはねる（1回だけ） */
+.chara-gacha-lineup li { animation: lineup-hop 0.45s ease-out both; animation-delay: calc(var(--i, 0) * 30ms); }
+@keyframes lineup-hop { 0% { transform: translateY(0); } 40% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .chara-gacha-lineup li { animation: none; } }

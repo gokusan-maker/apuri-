@@ -420,3 +420,13 @@ it('デザイン67：キャラガチャのラインナップで、まだ会っ�
   const first = SPECIES.find((s) => s.id !== 'mochi')!
   expect(screen.getByText(new RegExp(`${first.egg}から生まれるらしい`))).toBeInTheDocument()
 })
+
+it('デザイン68：キャラガチャのラインナップは左から順にはねる（順番の --i がつく・動きをへらす設定では止まる）', async () => {
+  const { readFileSync } = await import('node:fs')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const items = within(screen.getByRole('list', { name: '出てくるキャラクター' })).getAllByRole('listitem')
+  expect(items[0].style.getPropertyValue('--i')).toBe('0')
+  expect(items[2].style.getPropertyValue('--i')).toBe('2')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/prefers-reduced-motion: reduce\) \{ \.chara-gacha-lineup li \{ animation: none; \} \}/)
+})

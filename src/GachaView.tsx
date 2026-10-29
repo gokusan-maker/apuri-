@@ -155,7 +155,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             {SPECIES.map((sp) => {
               const met = (ownedSpecies ?? []).includes(sp.id) || sp.id === 'mochi'
               return (
-                <li key={sp.id} title={met ? `${sp.name}（${typeOf(sp.id).name}）` : 'まだ会っていないキャラクター'}>
+                <li key={sp.id} title={met ? `${sp.name}（${typeOf(sp.id).name}）` : 'まだ会っていないキャラクター'} style={{ '--i': Math.min(SPECIES.indexOf(sp), 30) } as CSSProperties}>
                   <button className="lineup-pick" aria-label={met ? sp.name : 'まだ会っていないキャラクターのヒント'} onClick={() => setLineupHint(lineupHint === sp.id ? '' : sp.id)}>
                     <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!met} />
                   </button>
