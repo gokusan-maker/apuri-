@@ -464,6 +464,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M34 30 Q38 24 42 30 M44 26 Q48 20 52 26 M54 26 Q58 20 62 26 M60 30 Q64 24 68 30" fill="none" stroke="#5c3d1e" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'capybara')
+    return (
+      <g>
+        {/* 頭の上のみかんと、ゆけむり */}
+        <circle cx="50" cy="20" r="6" fill="#fb923c" stroke="#9a3412" strokeWidth="1.5" />
+        <path d="M50 14 L52 11" stroke="#15803d" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
