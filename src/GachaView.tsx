@@ -660,6 +660,7 @@ function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
           {n}
         </span>
         /{SPECIES.length}）
+        {SPECIES.length - n > 0 && SPECIES.length - n <= 5 && <span className="book-near">あと{SPECIES.length - n}体！</span>}
       </summary>
       <ul className="char-book-list">
         {SPECIES.map((sp) => {

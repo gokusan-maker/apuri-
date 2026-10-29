@@ -379,3 +379,15 @@ it('デザイン61：キャラガチャで新しいキャラが出ると、図�
   expect(item).toHaveClass('got')
   expect(item).toHaveClass('fresh')
 })
+
+it('デザイン62：キャラ図鑑ののこりが5体以下になると「あと○体！」が出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const all = SPECIES.map((s) => s.id)
+  const { unmount } = render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={all.slice(0, all.length - 3)} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.getByText('あと3体！')).toBeInTheDocument()
+  unmount()
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.queryByText(/^あと\d+体！$/)).not.toBeInTheDocument()
+})
