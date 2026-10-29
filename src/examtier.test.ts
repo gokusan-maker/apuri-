@@ -189,3 +189,9 @@ it('本番の長さの長文：IELTS の宇宙ごみの長文は700〜950語で 
   expect(passageStats(p).words).toBeLessThanOrEqual(950)
   expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
 })
+
+it('本番の長さの長文：共通テスト評論の「無料の試食」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-free-samples')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})

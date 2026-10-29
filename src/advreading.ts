@@ -15090,6 +15090,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-free-samples',
+    title: 'Why Shops Give Things Away for Free',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "If you walk through the food section of a large supermarket on a weekend, you may be offered a small piece of cheese, a cup of juice, or a slice of a new kind of sausage. At first, giving products away for free might seem like a strange way for a business to make money. In fact, free samples are one of the oldest and most effective tools in marketing, and economists and psychologists have tried to explain why they work so well.",
+      "The simplest reason is that samples reduce risk for customers. Many people are unwilling to spend money on a product they have never tried, especially if it is expensive or unfamiliar. A free taste allows them to find out whether they like it before they pay. If they do, the main reason for hesitating disappears. ( A ) this point of view, a sample is not really a gift but a kind of advertisement that lets the product speak for itself.",
+      "A second explanation comes from psychology. Researchers have found that people tend to feel a sense of obligation when they receive something, even something small, and that they often want to return the favor. This tendency, which is called reciprocity, can be seen in many areas of social life, from exchanging presents to helping neighbors. When a smiling shop assistant hands us a free sample, some of us may feel that it would be impolite to walk away without buying anything, ( B ) we did not plan to buy the product at all.",
+      "Samples can also simply make products more noticeable. In a large store with thousands of items, it is easy for a new product to be ignored. A sample gives customers a reason to stop, look, and remember the product’s name. Some studies have suggested that sales of a product can rise sharply on the days when samples are offered, and that the effect sometimes continues for a while afterward.",
+      "Of course, free samples have costs for businesses, including the products themselves and the wages of the staff who hand them out. Companies therefore choose carefully which products to offer and when. Understanding the reasons behind samples can also help us as shoppers. Knowing that a small gift may make us feel we owe something allows us to make our decisions more calmly, ( C ) that we buy things because we want them, not because we feel we should.",
+    ],
+    ja: [
+      '週末に大きなスーパーの食品売り場を歩くと、チーズのひとかけらやジュースのカップ、新しい種類のソーセージのひと切れをすすめられることがある。はじめは、商品をただであげてしまうのは、店がお金をかせぐ方法としてはふしぎに思えるかもしれない。実は、試食や試供品はマーケティングのもっとも古く、もっとも効果的な道具のひとつであり、経済学者や心理学者はなぜそれがこれほどうまくいくのかを説明しようとしてきた。',
+      'いちばん単純な理由は、試食が客にとっての危険をへらすことである。多くの人は、一度も試したことのない商品にお金を使いたがらない。とくにそれが高かったり、なじみがなかったりする場合はそうだ。無料でひと口食べてみれば、お金を払う前に気に入るかどうかを確かめられる。もし気に入れば、ためらうおもな理由はなくなる。この見方からすれば、試食は本当はおくり物ではなく、商品に自分で語らせる一種の広告なのである。',
+      '2つめの説明は心理学から来ている。研究者たちは、人は何かを受け取ると、たとえ小さなものでも義務感をいだきやすく、そのお返しをしたくなることが多いと見いだした。返報性とよばれるこの傾向は、プレゼントの交換から近所の人を手伝うことまで、社会生活の多くの場面で見られる。にこやかな店員が無料の試食を手わたしてくれると、わたしたちの中には、もともとその商品を買うつもりがまったくなかったとしても、何も買わずに立ち去るのは失礼だと感じる人もいるかもしれない。',
+      '試食はまた、単純に商品を目立たせることもできる。何千もの品物がある大きな店では、新しい商品は見すごされやすい。試食は客に、立ち止まり、見て、商品の名前をおぼえる理由をあたえる。試食がある日には商品の売り上げが大きく上がることがあり、その効果がしばらく続くこともあると示した研究もある。',
+      'もちろん、試食には商品そのものや配る店員の賃金など、店にとっての費用もかかる。そのため会社は、どの商品をいつ出すかを注意深く選んでいる。試食の理由を理解することは、買い物をするわたしたちにとっても役に立つ。小さなおくり物によって何かお返しをしなければと感じてしまうかもしれないと知っていれば、より落ち着いて決めることができる。そうすれば、そうすべきだと感じるからではなく、ほしいから物を買うようになれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['From', 'In', 'On', 'With'], answer: 0, why: 'from this point of view「この見方からすれば」。' },
+      { id: 'B', choices: ['even if', 'only if', 'as long as', 'because'], answer: 0, why: '「もともと買うつもりがまったくなかったとしても」と譲歩を表すので even if。' },
+      { id: 'C', choices: ['so', 'such', 'as', 'even'], answer: 0, why: 'so that ～「～するように・そうすれば～」。make our decisions more calmly, so that we buy things because we want them。' },
+    ],
+    tf: [
+      { statement: '試食は、客が買う前に商品を試せるので、買うことへの不安をへらす。', answer: true, why: '第2段落 samples reduce risk for customers … find out whether they like it before they pay。' },
+      { statement: '返報性とは、何かをもらうとお返しをしたくなる傾向のことである。', answer: true, why: '第3段落 people tend to feel a sense of obligation when they receive something … want to return the favor. This tendency, which is called reciprocity。' },
+      { statement: '研究によれば、試食の効果は試食をしている日だけで、すぐになくなる。', answer: false, why: '第4段落 the effect sometimes continues for a while afterward。' },
+      { statement: '筆者は、試食には店にとって何の費用もかからないと述べている。', answer: false, why: '第5段落 free samples have costs for businesses, including the products themselves and the wages of the staff。' },
+    ],
+    qa: [
+      { q: 'Why does the writer say a sample is "not really a gift"?', choices: ['Because it works as a kind of advertisement for the product.', 'Because customers must pay for it later.', 'Because it is too small to be useful.', 'Because shops only give samples to regular customers.'], answer: 0, why: '第2段落 a sample is not really a gift but a kind of advertisement that lets the product speak for itself。' },
+      { q: 'What advice does the writer give to shoppers?', choices: ['Be aware that a small gift can make you feel you should buy, and decide calmly.', 'Never try free samples in supermarkets.', 'Always buy a product after trying a sample.', 'Ask shops to give more free samples.'], answer: 0, why: '第5段落 Knowing that a small gift may make us feel we owe something allows us to make our decisions more calmly。' },
+    ],
+    gist: [
+      { para: 2, choices: ['もらうとお返ししたくなる心理', 'プレゼントの選び方', '店員の接客のしかた', '近所づきあいの大切さ'], answer: 0, why: '第3段落は「返報性」という心理で試食の効果を説明している。プレゼントや近所の例はその傾向の例にすぎない。' },
+      { para: 3, choices: ['試食で商品が目立つようになる', '大きな店の品物の数', '新商品の作り方', '売り上げの計算方法'], answer: 0, why: '第4段落は、試食が客に立ち止まって商品をおぼえる理由をあたえ、売り上げが上がることを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
