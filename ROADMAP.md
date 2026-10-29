@@ -41,7 +41,7 @@
 - [x] IELTS Academic の長さ（700〜950語）の長文を作る②：動物の寿命と進化（TRUE/FALSE/NOT GIVEN 6問・見出し選択3問）
 - [x] IELTS Academic の長さ（700〜950語）の長文を作る③：機械翻訳の歴史（TRUE/FALSE/NOT GIVEN 6問・見出し選択3問）
 - [ ] IELTS Academic の長さ（700〜950語）の長文を作る④（歴史・文化）
-- [ ] 文法（高校）の簡単すぎる単元を見直す：品詞ちがいだけの4択を、入試に近いまぎらわしい選択肢にする（前置詞の熟語から）
+- [x] 文法（高校）の簡単すぎる単元を見直す：品詞ちがいだけの4択を、入試に近いまぎらわしい選択肢にする（前置詞の熟語から）
   - [x] ① 中学レベルの前置詞の熟語（at night, on the bus, by mistake など33単元）を高校から中2・中3へ移す
   - [x] ② 前置詞の熟語10単元を、まぎらわしい前置詞・意味の近い名詞の4択に作りかえる（品詞ちがいだけの問題 291→266。テストでふえないようにした）
   - [x] ③ 前置詞の熟語10単元（in pain, in theory, in turn, on schedule, by birth など）を4択に作りかえる（266→239）
@@ -51,7 +51,7 @@
   - [x] ⑦ 前置詞の熟語8単元（in no time / in no way、at best / at least、by all means / at all costs など）を4択に作りかえる（175→154）
   - [x] ⑧ 前置詞の熟語8単元（at heart / by heart、in demand / in progress、burst into tears など）を4択に作りかえる（154→132）
   - [x] ⑨ 前置詞の熟語8単元（by heart / at heart、on display / on board、in honor of / in favor of など）を4択に作りかえる（132→111）
-  - [ ] ⑩ のこりの品詞ちがいだけの問題（111問）を10単元ずつ作りかえる
+  - [x] ⑩ 群前置詞6単元（on account of / on behalf of、in favor of / in charge of など）を4択に作りかえる（111→96）。のこりの96問は、分詞・動名詞・時制など「形を選ぶこと」自体が文法のポイントの問題なので、そのままにする
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める

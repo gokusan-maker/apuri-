@@ -6730,9 +6730,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I would like to thank you on behalf of all the students.', ja: '生徒全員を代表して、お礼を申し上げます。' },
     ],
     questions: [
-      { sentence: 'Ms. Sato is in ___ of the music club.', choices: ['charge', 'charges', 'charged'], answer: 0, why: 'in charge of ～「～を担当して」。charge は単数の名詞のまま。' },
-      { sentence: 'She gave a speech on ___ of her team.', choices: ['behalf', 'behave', 'behind'], answer: 0, why: 'on behalf of ～「～を代表して」。behave は動詞、behind は前置詞。' },
-      { sentence: 'Most students were in ___ of the new rule.', choices: ['favor', 'favorite', 'favorable'], answer: 0, why: 'in favor of ～「～に賛成して」。favorite・favorable は形容詞なので in のあとに置けない。' },
+      { sentence: 'Ms. Sato is ___ charge of the music club.', choices: ['in', 'on', 'at', 'under'], answer: 0, why: 'in charge of ～「～を担当して」。' },
+      { sentence: 'The captain accepted the trophy on ___ of the whole team.', choices: ['behalf', 'account', 'top', 'charge'], answer: 0, why: 'on behalf of ～「～を代表して」。on account of は「～のために（理由）」で意味が合わない。' },
+      { sentence: 'Most of the students voted in ___ of the new school rule.', choices: ['favor', 'charge', 'place', 'honor'], answer: 0, why: 'vote in favor of ～「～に賛成の投票をする」。in charge of は「～を担当して」。' },
     ],
   },
   {
@@ -6747,9 +6747,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Apart from a few mistakes, your essay is excellent.', ja: '少しのまちがいを別にすれば、きみの作文はすばらしい。' },
     ],
     questions: [
-      { sentence: 'The game will be held ___ of the weather.', choices: ['regardless', 'regard', 'regards'], answer: 0, why: 'regardless of ～「～に関係なく」。' },
-      { sentence: '___ from the price, I like this bike.', choices: ['Apart', 'Part', 'Apartment'], answer: 0, why: 'apart from ～「～は別として」。' },
-      { sentence: 'He moved to the countryside for the ___ of his health.', choices: ['sake', 'sakes', 'saking'], answer: 0, why: 'for the sake of ～「～のために」。sake は s をつけない。' },
+      { sentence: 'The match will be played ___ of the weather.', choices: ['regardless', 'in spite', 'instead', 'because'], answer: 0, why: 'regardless of ～「～に関係なく」。in spite of は of が重なり、instead of / because of は意味が合わない。' },
+      { sentence: '___ from a few spelling mistakes, your essay is excellent.', choices: ['Apart', 'Away', 'Except', 'Instead'], answer: 0, why: 'apart from ～「～は別として」（= aside from / except for）。Except だけなら from は続かない（except for）。' },
+      { sentence: 'He moved to the countryside for the ___ of his health.', choices: ['sake', 'purpose', 'cost', 'cause'], answer: 0, why: 'for the sake of ～「～のために」。for the purpose of は「～の目的で」で、うしろは動名詞（for the purpose of improving his health）。' },
     ],
   },
   {
@@ -6764,9 +6764,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My phone rang in the middle of the movie.', ja: '映画の最中にスマホが鳴った。' },
     ],
     questions: [
-      { sentence: 'Ken played in ___ of his injured teammate.', choices: ['place', 'placed', 'places'], answer: 0, why: 'in place of ～「～のかわりに」。place は名詞の単数のまま。' },
-      { sentence: 'A cat is sleeping on ___ of the car.', choices: ['top', 'tops', 'topping'], answer: 0, why: 'on top of ～「～の上に」。' },
-      { sentence: 'I woke up in the ___ of the night.', choices: ['middle', 'midnight', 'mean'], answer: 0, why: 'in the middle of ～「～のまん中に・最中に」。' },
+      { sentence: 'Because the teacher was sick, Mr. Ito taught the class in ___ of her.', choices: ['place', 'case', 'spite', 'front'], answer: 0, why: 'in place of ～「～のかわりに」（= instead of）。in spite of は「～にもかかわらず」、in front of は「～の前に」。' },
+      { sentence: 'He lost his job, and on ___ of that, his car broke down.', choices: ['top', 'account', 'behalf', 'end'], answer: 0, why: 'on top of ～「～に加えて・～の上に」。悪いことが重なる文脈。' },
+      { sentence: 'My phone rang in the ___ of the meeting.', choices: ['middle', 'center', 'heart', 'half'], answer: 0, why: 'in the middle of ～「（時間・活動の）最中に」。center / heart は場所のまん中に使い、会議の「最中」には使わない。' },
     ],
   },
   {
@@ -6798,9 +6798,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In contrast to his quiet brother, Taro loves talking.', ja: '静かな兄とは対照的に、タロウは話すのが大好きだ。' },
     ],
     questions: [
-      { sentence: 'He gave me a cake in ___ for my help.', choices: ['exchange', 'exchanged', 'exchanging'], answer: 0, why: 'in exchange for ～「～と交換に・～のお礼に」。in のあとは名詞 exchange。' },
-      { sentence: 'In ___ to your question, the store opens at ten.', choices: ['response', 'respond', 'responsive'], answer: 0, why: 'in response to ～「～に答えて」。in のあとは名詞 response。' },
-      { sentence: 'In ___ to his loud sister, Ken is very quiet.', choices: ['contrast', 'contrasted', 'contrasting'], answer: 0, why: 'in contrast to ～「～と対照的に」。in のあとは名詞 contrast。' },
+      { sentence: 'The farmer gave us fresh vegetables in exchange ___ our help with the harvest.', choices: ['for', 'of', 'with', 'to'], answer: 0, why: 'in exchange for ～「～と交換に」。' },
+      { sentence: 'In ___ to the customers’ complaints, the company changed its policy.', choices: ['response', 'return', 'addition', 'contrast'], answer: 0, why: 'in response to ～「～に応えて」。in return for は「～のお返しに」、in addition to は「～に加えて」、in contrast to は「～と対照的に」。' },
+      { sentence: 'In ___ to his talkative brother, Ken is a quiet boy.', choices: ['contrast', 'addition', 'response', 'return'], answer: 0, why: '「おしゃべりな兄とは対照的に、ケンは静か」なので in contrast to ～。in addition to は「～に加えて」。' },
     ],
   },
   {
@@ -6815,9 +6815,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'All the students, with the exception of Ken, passed the test.', ja: 'ケンを除いて、生徒全員がテストに合格した。' },
     ],
     questions: [
-      { sentence: 'The trains stopped on ___ of the strong wind.', choices: ['account', 'accounts', 'accounting'], answer: 0, why: 'on account of ～「～のために（理由）」。' },
-      { sentence: 'Please act in ___ with the school rules.', choices: ['accordance', 'according', 'accorded'], answer: 0, why: 'in accordance with ～「～に従って」。in のあとは名詞 accordance。' },
-      { sentence: 'Everyone came, with the ___ of Mika.', choices: ['exception', 'except', 'exceptional'], answer: 0, why: 'with the exception of ～「～を除いて」。the のあとは名詞 exception。' },
+      { sentence: 'The outdoor concert was postponed on ___ of the heavy rain.', choices: ['account', 'behalf', 'charge', 'top'], answer: 0, why: 'on account of ～「～のために（理由）」（= because of）。on behalf of は「～を代表して」。' },
+      { sentence: 'Employees must act in ___ with company rules.', choices: ['accordance', 'according', 'agreement to', 'order'], answer: 0, why: 'in accordance with ～「～に従って」。according は according to ～ の形で使い、in のあとには来ない。' },
+      { sentence: 'Everyone passed the exam, with the ___ of two students.', choices: ['exception', 'except', 'excepting', 'exclusion of'], answer: 0, why: 'with the exception of ～「～を除いて」。the のあとは名詞 exception。' },
     ],
   },
   {
@@ -6832,9 +6832,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The birds flew south in search of warmer weather.', ja: '鳥たちはもっとあたたかい気候を求めて南へ飛んでいった。' },
     ],
     questions: [
-      { sentence: 'As a ___ of the heavy snow, school was closed.', choices: ['result', 'resulted', 'resulting'], answer: 0, why: 'as a result of ～「～の結果として」。a のあとは名詞 result。' },
-      { sentence: 'They walked around the town in ___ of a good restaurant.', choices: ['search', 'searched', 'searching'], answer: 0, why: 'in search of ～「～をさがして」。in のあとは名詞 search。' },
-      { sentence: 'He jumped into the river at the ___ of his own life.', choices: ['risk', 'risky', 'risked'], answer: 0, why: 'at the risk of ～「～の危険をおかして」。the のあとは名詞 risk。' },
+      { sentence: 'As a ___ of the heavy snow, all the trains were cancelled.', choices: ['result', 'cause', 'reason', 'effect'], answer: 0, why: 'as a result of ～「～の結果として」。the cause of / the reason for は形が合わず、as an effect of とは言わない。' },
+      { sentence: 'The explorers traveled for weeks ___ search of the lost city.', choices: ['in', 'on', 'for', 'at'], answer: 0, why: 'in search of ～「～をさがして」。' },
+      { sentence: 'The firefighter entered the burning house at the ___ of his own life.', choices: ['risk', 'result', 'sake', 'mercy'], answer: 0, why: 'at the risk of ～「～の危険をおかして」。at the mercy of は「～のなすがままに」で意味が合わない。' },
     ],
   },
   {
