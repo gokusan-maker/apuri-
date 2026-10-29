@@ -1450,6 +1450,13 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
   const [editing, setEditing] = useState(false)
   const [draft, setDraft] = useState('')
   const [line, setLine] = useState<Line | null>(null)
+  // デザイン71：相棒を切りかえたら、新しい相棒が「よろしくね！」とあいさつする
+  const who = `${monster.species ?? ''}|${monster.name ?? ''}`
+  const [greetFor, setGreetFor] = useState(who)
+  if (who !== greetFor) {
+    setGreetFor(who)
+    setLine({ en: 'Nice to work with you!', ja: `${monster.name ?? formOf(monster).name}だよ。よろしくね！` })
+  }
   const [poke, setPoke] = useState(0)
   const [posesSeen, setPosesSeen] = useState(loadPosesSeen)
   const [petStamps, setPetStamps] = useState(loadPetStamps)

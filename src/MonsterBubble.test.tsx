@@ -118,3 +118,10 @@ it('相棒：夕方の時間だけ、空がオレンジ色に変わっていく'
   render(<Monster monster={{ xp: 500 } as never} daypart="day" />)
   expect(document.querySelector('.evening-glow')).toBeNull()
 })
+
+it('デザイン71：相棒を切りかえると、新しい相棒が「よろしくね！」とあいさつする', () => {
+  const { rerender } = render(<Monster monster={{ xp: 500, species: 'fox', name: 'コン' } as never} />)
+  expect(screen.queryByText(/よろしくね！/)).not.toBeInTheDocument()
+  rerender(<Monster monster={{ xp: 500, species: 'turtle', name: 'カメスケ' } as never} />)
+  expect(screen.getByText('カメスケだよ。よろしくね！')).toBeInTheDocument()
+})
