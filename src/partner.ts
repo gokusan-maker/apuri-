@@ -49,6 +49,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   pig: { id: 'cheer', name: 'くんくんサーチ', desc: '2問正解ごとに必殺技ゲージ +1' },
   beaver: { id: 'claw', name: 'かじかじツース', desc: '2問正解ごとに必殺技ゲージ +1' },
   deer: { id: 'cheer', name: 'ぴんと耳', desc: '2問正解ごとに必殺技ゲージ +1' },
+  goat: { id: 'claw', name: 'つのつきアタック', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -122,6 +123,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   pig: { name: 'ブタ・ピンクタックル', color: '#ec4899' },
   beaver: { name: 'ビーバー・ダムブレイク', color: '#92400e' },
   deer: { name: 'シカ・フォレストダッシュ', color: '#b45309' },
+  goat: { name: 'ヤギ・マウンテンクライム', color: '#78716c' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -182,6 +184,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   pig: { en: 'I can smell the right answer!', ja: '正しい答えのにおいがするよ！' },
   beaver: { en: 'One word at a time builds a big dam!', ja: '一つずつ積めば、大きなダムになるよ！' },
   deer: { en: 'My ears catch every sound!', ja: 'ぼくの耳はどんな音もキャッチするよ！' },
+  goat: { en: 'No hill is too steep for me!', ja: 'どんな坂もへっちゃらだよ！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi

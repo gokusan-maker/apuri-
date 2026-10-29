@@ -578,6 +578,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="69" cy="25" r="2.5" fill="#1f2937" stroke="none" />
       </g>
     )
+  if (species === 'goat')
+    return (
+      <g stroke="#57534e" strokeWidth="3" strokeLinecap="round" fill="none">
+        {/* うしろに曲がった2本のつの */}
+        <path d="M40 30 Q34 12 24 16 M60 30 Q66 12 76 16" />
+      </g>
+    )
   if (species === 'deer')
     return (
       <g stroke="#78350f" strokeWidth="2.5" strokeLinecap="round" fill="none">

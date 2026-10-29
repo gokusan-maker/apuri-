@@ -52,6 +52,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   pig: { streak: ['くんくん、大正解！', 'ブーブー、連続正解！'], wrong: ['においをかぎなおして、もう一回！', 'どろんこになっても、次いこう！'] },
   beaver: { streak: ['かじかじ、大正解！', 'こつこつ積んで、連続正解！'], wrong: ['もう一本運んで、もう一回！', 'ダムは一日でできないよ、次いこう！'] },
   deer: { streak: ['ぴょんととんで、大正解！', '森をかけぬけて、連続正解！'], wrong: ['耳をすまして、もう一回！', 'ひと休みして、また走ろう！'] },
+  goat: { streak: ['ひょいひょい、大正解！', '山のてっぺんまで、連続正解！'], wrong: ['足をすべらせただけ、もう一回！', 'ゆっくり登りなおそう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -113,6 +114,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   pig: { streak: [['You sniffed it out!', 'かぎつけたね！']], wrong: [['Sniff again and try.', 'もう一度かいでみよう。']] },
   beaver: { streak: [['Busy as a beaver!', 'よく働くね！']], wrong: [['Build it again.', 'また積み上げよう。']] },
   deer: { streak: [['Quick as a deer!', 'シカみたいにすばやい！']], wrong: [['Listen closely and try again.', 'よく聞いて、もう一回。']] },
+  goat: { streak: [['On top of the mountain!', '山のてっぺんだ！']], wrong: [['Climb again and try.', 'もう一度登ってみよう。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
