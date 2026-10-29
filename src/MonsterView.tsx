@@ -486,6 +486,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M36 84 L44 84 M36 88 L44 88 M56 84 L64 84 M56 88 L64 88" stroke="#f8fafc" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'quokka')
+    return (
+      <g>
+        {/* にっこり上がった口もと */}
+        <path d="M42 66 Q50 74 58 66" fill="none" stroke="#5a3a22" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
