@@ -540,6 +540,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 22 Q38 10 32 8 M56 22 Q62 10 68 8" fill="none" stroke="#3f6212" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'puffin')
+    return (
+      <g>
+        {/* 三角の大きなしまもようのくちばし */}
+        <path d="M42 60 L62 66 L42 72 Z" fill="#f97316" stroke="#9a3412" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M48 62 L48 70" stroke="#facc15" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
