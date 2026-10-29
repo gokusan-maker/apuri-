@@ -13645,6 +13645,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-kotatsu',
+    title: 'A Warm Table for Cold Days',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In winter, many homes in Japan bring out a kotatsu. It is a low table ( A ) has a heater under it. A thick blanket is put between the frame and the tabletop, so the warm air stays under the table and keeps people's legs warm.",
+      "Long ago, people used a small fire in a hole in the floor instead of an electric heater. They sat around it with their legs under a blanket. In the 1950s and 1960s, electric kotatsu became common, and they were much safer and easier to use.",
+      "A kotatsu warms only a small space, not the whole room, so it uses less energy than many other heaters. Families often eat, talk, and watch TV around it together.",
+      "There is one problem, though. A kotatsu is so comfortable that many people say it is hard ( B ) once you get in. Some even fall asleep there and do not want to move until morning.",
+    ],
+    ja: [
+      '冬になると、日本の多くの家ではこたつを出す。こたつは、下にヒーターがついた低いテーブルだ。わく組みとテーブルの板のあいだに厚いふとんをはさむので、あたたかい空気がテーブルの下にとどまり、人々の足をあたためる。',
+      '昔は、電気のヒーターのかわりに、ゆかの穴に入れた小さな火を使っていた。人々はふとんの下に足を入れて、そのまわりにすわった。1950年代から1960年代にかけて電気ごたつが広まり、ずっと安全で使いやすくなった。',
+      'こたつは部屋全体ではなく、せまい場所だけをあたためるので、ほかの多くの暖房よりも使うエネルギーが少ない。家族はよくこたつのまわりで、いっしょに食べたり、話したり、テレビを見たりする。',
+      'でも、1つ問題がある。こたつはとても気持ちがいいので、一度入ると出るのがむずかしいと多くの人が言う。そこでねむってしまい、朝まで動きたくなくなる人さえいる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a low table（もの）で、うしろの has の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to leave', 'leaving', 'left', 'leave'], answer: 0, why: 'it is hard to ～「～するのはむずかしい」なので to leave。leaving・left・leave はこの形に入らない。' },
+    ],
+    underline: {
+      phrase: 'bring out',
+      choices: ['take something out to use it', 'throw something away', 'sell something', 'break something'],
+      answer: 0,
+      why: 'bring out は「（しまってあったものを）出してくる」。冬になるとこたつを出して使うという意味。',
+    },
+    order: {
+      words: ['uses', 'less', 'energy', 'than', 'many', 'other', 'heaters'],
+      rest: '',
+      answer: 'uses less energy than many other heaters',
+      ja: 'ほかの多くの暖房よりも使うエネルギーが少ない（less ～ than …「…より少ない～」）',
+    },
+    tf: [
+      { statement: 'こたつは、部屋全体をあたためる。', answer: false, why: '第3段落 A kotatsu warms only a small space, not the whole room。' },
+      { statement: '昔は、電気ではなく火を使っていた。', answer: true, why: '第2段落 people used a small fire in a hole in the floor instead of an electric heater。' },
+      { statement: 'こたつで朝までねむってしまう人もいる。', answer: true, why: '第4段落 Some even fall asleep there and do not want to move until morning。' },
+    ],
+    qa: [
+      { q: 'Why does a kotatsu use less energy than many other heaters?', choices: ['It warms only a small space.', 'It has no heater.', 'It is used only in summer.', 'It is made of paper.'], answer: 0, why: '第3段落 A kotatsu warms only a small space, not the whole room, so it uses less energy。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
