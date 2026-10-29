@@ -6305,9 +6305,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Thank you for lending me your notebook.', ja: 'ノートを貸してくれてありがとう。' },
     ],
     questions: [
-      { sentence: 'Thank you ___ inviting me to your party.', choices: ['for', 'to', 'with'], answer: 0, why: 'thank 人 for ～「～のことで感謝する」。' },
-      { sentence: 'The teacher praised Mika ___ her kindness.', choices: ['for', 'of', 'at'], answer: 0, why: 'praise 人 for ～「～のことで人をほめる」。' },
-      { sentence: 'He was punished for ___ the rules.', choices: ['breaking', 'break', 'broke'], answer: 0, why: '前置詞 for のあとの動詞は -ing。' },
+      { sentence: 'Thank you ___ inviting me to your party.', choices: ['for', 'to', 'with', 'of'], answer: 0, why: 'thank 人 for ～「～のことで人に感謝する」。' },
+      { sentence: 'The teacher praised Mika ___ her kindness to the new student.', choices: ['for', 'of', 'at', 'with'], answer: 0, why: 'praise 人 for ～「～のことで人をほめる」（blame / punish 人 for と同じ for）。' },
+      { sentence: 'He was punished for ___ the school rules.', choices: ['breaking', 'break', 'broke', 'to break'], answer: 0, why: '前置詞 for のあとの動詞は動名詞 breaking。' },
     ],
   },
   {
@@ -6322,9 +6322,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'His friends talked him out of selling his guitar.', ja: '友だちが説得して、彼にギターを売るのをやめさせた。' },
     ],
     questions: [
-      { sentence: 'She talked her father ___ buying a new bike for her.', choices: ['into', 'to', 'at'], answer: 0, why: 'talk 人 into ～ing「説得して～させる」。' },
-      { sentence: 'My friends talked me out of ___ the team.', choices: ['quitting', 'quit', 'to quit'], answer: 0, why: '前置詞 out of のあとは -ing。' },
-      { sentence: 'I persuaded him ___ a doctor.', choices: ['to see', 'seeing', 'see'], answer: 0, why: 'persuade 人 to ～「説得して～させる」。' },
+      { sentence: 'She finally talked her father ___ buying her a new bike.', choices: ['into', 'to', 'out', 'over'], answer: 0, why: 'talk 人 into ～ing「人を説得して～させる」。' },
+      { sentence: 'My friends talked me out of ___ the team.', choices: ['quitting', 'quit', 'to quit', 'quitted'], answer: 0, why: 'talk 人 out of ～ing「人を説得して～をやめさせる」。of は前置詞なので動名詞 quitting。' },
+      { sentence: 'I persuaded my grandfather ___ a doctor about his cough.', choices: ['to see', 'seeing', 'see', 'saw'], answer: 0, why: 'persuade 人 to ～「人を説得して～させる」。' },
     ],
   },
   {
@@ -6339,9 +6339,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our teacher was satisfied with our presentation.', ja: '先生は私たちの発表に満足していた。' },
     ],
     questions: [
-      { sentence: 'The station was crowded ___ tourists.', choices: ['with', 'of', 'to'], answer: 0, why: 'be crowded with ～「～で混雑している」。' },
-      { sentence: 'Are you satisfied ___ your new phone?', choices: ['with', 'to', 'at'], answer: 0, why: 'be satisfied with ～「～に満足している」。' },
-      { sentence: "Mom was angry ___ me because I didn't clean my room.", choices: ['with', 'for', 'of'], answer: 0, why: 'be angry with 人「人に腹を立てている」。' },
+      { sentence: 'During the holidays, the station was crowded ___ tourists.', choices: ['with', 'of', 'at', 'to'], answer: 0, why: 'be crowded with ～「～で混雑している」。' },
+      { sentence: 'Are you satisfied ___ your new smartphone?', choices: ['with', 'to', 'at', 'of'], answer: 0, why: 'be satisfied with ～「～に満足している」。' },
+      { sentence: 'My mother was angry ___ me because I didn’t clean my room.', choices: ['with', 'for', 'of', 'to'], answer: 0, why: 'be angry with 人「人に腹を立てている」（物事には about / at）。' },
     ],
   },
   {
@@ -6356,9 +6356,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My brother applied for a job at a bookstore.', ja: '兄は書店の仕事に応募した。' },
     ],
     questions: [
-      { sentence: 'This bike belongs ___ my cousin.', choices: ['to', 'for', 'with'], answer: 0, why: 'belong to ～「～のものだ」。' },
-      { sentence: 'Please reply ___ this email by Friday.', choices: ['to', 'for', 'at'], answer: 0, why: 'reply to ～「～に返事をする」。' },
-      { sentence: 'She applied ___ a part-time job at the bakery.', choices: ['for', 'at', 'with'], answer: 0, why: 'apply for ～「（仕事など）に応募する」。' },
+      { sentence: 'This bike doesn’t belong ___ me. It’s my cousin’s.', choices: ['to', 'for', 'with', 'of'], answer: 0, why: 'belong to ～「～のものである・～に所属する」。' },
+      { sentence: 'Please reply ___ this email by Friday.', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'reply to ～「～に返事をする」（answer は他動詞なので answer this email と前置詞なし）。' },
+      { sentence: 'She applied ___ a part-time job at the bakery.', choices: ['for', 'to', 'at', 'with'], answer: 0, why: 'apply for 仕事・奨学金など「～に応募する・申しこむ」。apply to は「（会社・大学など）に」申しこむ相手を表す。' },
     ],
   },
   {
@@ -6373,9 +6373,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My cousin became independent of his parents at twenty.', ja: 'いとこは20歳で親から独立した。' },
     ],
     questions: [
-      { sentence: 'This book is suitable ___ beginners.', choices: ['for', 'of', 'at'], answer: 0, why: 'be suitable for ～「～に向いている」。' },
-      { sentence: "He was jealous ___ his friend's success.", choices: ['of', 'to', 'at'], answer: 0, why: 'be jealous of ～「～をうらやむ」。' },
-      { sentence: 'She wants to be independent ___ her parents.', choices: ['of', 'on', 'at'], answer: 0, why: 'be independent of ～「～から独立している」。on は dependent と組む。' },
+      { sentence: 'This textbook is suitable ___ beginners who have never studied French.', choices: ['for', 'to', 'with', 'at'], answer: 0, why: 'be suitable for ～「～に向いている・適している」。' },
+      { sentence: 'He was jealous ___ his brother’s success.', choices: ['of', 'with', 'for', 'at'], answer: 0, why: 'be jealous of ～「～をうらやむ・ねたむ」（be envious of と同じ of）。' },
+      { sentence: 'After she found a job, she became financially independent ___ her parents.', choices: ['of', 'on', 'from of', 'with'], answer: 0, why: 'be independent of ～「～から独立している」。dependent on（～にたよっている）と前置詞がちがうので注意。' },
     ],
   },
   {
@@ -6390,9 +6390,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was happy to hear from my old classmate.', ja: '昔のクラスメートから連絡があってうれしかった。' },
     ],
     questions: [
-      { sentence: 'We need to deal ___ this problem soon.', choices: ['with', 'to', 'at'], answer: 0, why: 'deal with ～「～に対処する」。' },
-      { sentence: "I haven't heard ___ Emma since she moved to Canada.", choices: ['from', 'to', 'at'], answer: 0, why: 'hear from ～「～から連絡がある」。' },
-      { sentence: 'Have you ever heard ___ this singer?', choices: ['of', 'to', 'at'], answer: 0, why: 'hear of ～「～のことを聞く（知っている）」。' },
+      { sentence: 'The government must deal ___ the problem of rising prices as soon as possible.', choices: ['with', 'to', 'at', 'on'], answer: 0, why: 'deal with ～「～に対処する・～をあつかう」。' },
+      { sentence: 'I haven’t heard ___ Emma since she moved to Canada. I hope she is well.', choices: ['from', 'of', 'to', 'about of'], answer: 0, why: 'hear from 人「人から連絡（手紙・メール）がある」。hear of は「～のうわさ・存在を聞く」で、連絡の意味にはならない。' },
+      { sentence: 'Have you ever heard ___ this singer? She is becoming popular in Korea.', choices: ['of', 'from', 'to', 'at'], answer: 0, why: '「この歌手のことを聞いたことがあるか（存在を知っているか）」なので hear of ～。hear from は「本人から連絡がある」。' },
     ],
   },
   {
