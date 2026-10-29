@@ -6101,9 +6101,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our class went on a trip to Kyoto.', ja: '私たちのクラスは京都へ旅行に出かけた。' },
     ],
     questions: [
-      { sentence: "Let's go ___ a walk after lunch.", choices: ['for', 'to', 'at'], answer: 0, why: 'go for a walk「散歩に行く」。' },
-      { sentence: 'We went ___ a picnic by the river.', choices: ['on', 'at', 'into'], answer: 0, why: 'go on a picnic「ピクニックに出かける」。' },
-      { sentence: "It's late. You should go ___ bed now.", choices: ['to', 'for', 'on'], answer: 0, why: 'go to bed「寝る」。' },
+      { sentence: 'Let’s go ___ a walk after lunch.', choices: ['for', 'to', 'in', 'at'], answer: 0, why: 'go for a walk「散歩に行く」。' },
+      { sentence: 'Last Sunday we went ___ a picnic by the river.', choices: ['on', 'with', 'at', 'into'], answer: 0, why: 'go on a picnic「ピクニックに出かける」（go on a trip も同じ on）。' },
+      { sentence: 'It’s late. You should go ___ bed now.', choices: ['to', 'for', 'on', 'in'], answer: 0, why: 'go to bed「寝る」（the はつけない）。' },
     ],
   },
   {
@@ -6118,9 +6118,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I think of my coach as a second father.', ja: '私はコーチを第二の父だと思っている。' },
     ],
     questions: [
-      { sentence: 'Many people regard him ___ a hero.', choices: ['as', 'for', 'to'], answer: 0, why: 'regard A as B「A を B とみなす」。' },
-      { sentence: 'I think ___ her as my sister.', choices: ['of', 'to', 'for'], answer: 0, why: 'think of A as B「A を B だと考える」。' },
-      { sentence: 'This castle is regarded ___ one of the most beautiful in Japan.', choices: ['as', 'that', 'for'], answer: 0, why: '受け身 be regarded as ～「～とみなされている」。' },
+      { sentence: 'Many people regard him ___ a national hero.', choices: ['as', 'for', 'to', 'like'], answer: 0, why: 'regard A as B「A を B とみなす」（see / view / think of A as B も同じ as）。' },
+      { sentence: 'I think ___ her as my own sister.', choices: ['of', 'to', 'for', 'with'], answer: 0, why: 'think of A as B「A を B だと考える」。' },
+      { sentence: 'This castle is regarded ___ one of the most beautiful in Japan.', choices: ['as', 'that', 'for', 'to be as'], answer: 0, why: '受け身 be regarded as ～「～とみなされている」。' },
     ],
   },
   {
@@ -6135,9 +6135,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is natural that parents worry about their children.', ja: '親が子どものことを心配するのは当然だ。' },
     ],
     questions: [
-      { sentence: "___ is a pity that you can't come to the party.", choices: ['It', 'This', 'There'], answer: 0, why: 'that 以下を指す形式主語は It。' },
-      { sentence: 'It is natural ___ she is proud of her son.', choices: ['that', 'what', 'which'], answer: 0, why: 'It is ～ that ＋ 文。うしろは欠けのない文なので that。' },
-      { sentence: 'It is strange that he ___ say such a thing.', choices: ['should', 'shall to', 'would to'], answer: 0, why: '気持ちを強める should ＋ 原形。助動詞のあとに to は来ない。' },
+      { sentence: '___ is a pity that you can’t come to the party.', choices: ['It', 'This', 'There', 'That'], answer: 0, why: 'that 以下を指す形式主語は It。' },
+      { sentence: 'It is natural ___ she is proud of her son.', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'It is ～ that ＋ 完全な文。what / which はうしろに欠けた名詞が必要。' },
+      { sentence: 'It is strange that he ___ say such a thing.', choices: ['should', 'shall to', 'would to', 'must to'], answer: 0, why: '感情・判断を表す It is ～ that のあとの should（意外さを強める）。助動詞のあとに to は来ない。' },
     ],
   },
   {
@@ -6152,9 +6152,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In those days, my grandfather lived by the sea.', ja: 'そのころ、祖父は海のそばに住んでいた。' },
     ],
     questions: [
-      { sentence: 'These days, more people ___ bikes to work.', choices: ['ride', 'rode', 'had ridden'], answer: 0, why: 'these days「このごろ」は現在のことなので現在形。' },
-      { sentence: 'I ___ Ken at the station the other day.', choices: ['saw', 'have seen', 'see'], answer: 0, why: 'the other day「先日」は過去の時なので過去形。現在完了は過去の時を表す語と使えない。' },
-      { sentence: 'In those days, there ___ no smartphones.', choices: ['were', 'are', 'have been'], answer: 0, why: 'in those days「そのころは」は過去なので were。' },
+      { sentence: 'These days, more and more people ___ bikes to work.', choices: ['ride', 'rode', 'had ridden', 'were riding'], answer: 0, why: 'these days「このごろ」は現在のことなので現在形。' },
+      { sentence: 'I ___ Ken at the station the other day.', choices: ['saw', 'have seen', 'see', 'have been seeing'], answer: 0, why: 'the other day「先日」は過去の時なので過去形。現在完了は過去の一時点を表す語といっしょに使えない（入試頻出）。' },
+      { sentence: 'In those days, there ___ no smartphones.', choices: ['were', 'are', 'have been', 'will be'], answer: 0, why: 'in those days「そのころは」は過去なので were。' },
     ],
   },
   {
@@ -6169,9 +6169,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The woman in the blue coat is my aunt.', ja: '青いコートの女性は私のおばです。' },
     ],
     questions: [
-      { sentence: 'Please write your answers ___ English.', choices: ['in', 'by', 'with'], answer: 0, why: '「英語で」は in English。' },
-      { sentence: 'The teacher read the story ___ a loud voice.', choices: ['in', 'by', 'on'], answer: 0, why: '「大きな声で」は in a loud voice。' },
-      { sentence: 'Who is the girl ___ the red dress?', choices: ['in', 'on', 'at'], answer: 0, why: '「赤いドレスを着た」は in the red dress。' },
+      { sentence: 'Please write your answers ___ English, not Japanese.', choices: ['in', 'by', 'with', 'on'], answer: 0, why: '言語を表す「英語で」は in English。' },
+      { sentence: 'The teacher read the story ___ a loud voice so that everyone could hear.', choices: ['in', 'by', 'with', 'on'], answer: 0, why: '「大きな声で」は in a loud voice。' },
+      { sentence: 'Who is the woman ___ the red dress?', choices: ['in', 'on', 'at', 'with of'], answer: 0, why: '「赤いドレスを着た」は in the red dress（着ているものの in）。' },
     ],
   },
   {
@@ -6186,9 +6186,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The coach praised us for our teamwork.', ja: 'コーチは私たちのチームワークをほめてくれた。' },
     ],
     questions: [
-      { sentence: 'We congratulated Ken ___ winning the race.', choices: ['on', 'to', 'at'], answer: 0, why: 'congratulate A on B「A の B を祝う」。' },
-      { sentence: 'The teacher praised Mika ___ her hard work.', choices: ['for', 'to', 'at'], answer: 0, why: 'praise A for B「A を B のことでほめる」。' },
-      { sentence: 'She thanked me for ___ her with her homework.', choices: ['helping', 'help', 'to help'], answer: 0, why: '前置詞 for のあとは -ing。' },
+      { sentence: 'We all congratulated Ken ___ winning the race.', choices: ['on', 'for', 'to', 'at'], answer: 0, why: 'congratulate 人 on ～「人の～を祝う」。praise / thank 人 for と前置詞がちがうので注意（入試頻出）。' },
+      { sentence: 'The coach praised the players ___ their hard work.', choices: ['for', 'on', 'to', 'at'], answer: 0, why: 'praise 人 for ～「～のことで人をほめる」。' },
+      { sentence: 'She thanked me for ___ her with her homework.', choices: ['helping', 'help', 'to help', 'helped'], answer: 0, why: '前置詞 for のあとは動名詞 helping。' },
     ],
   },
   {
