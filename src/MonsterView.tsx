@@ -457,6 +457,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M51 20 L54 18 M52 14 L55 12 M53 8 L55 7" stroke="#94a3b8" strokeWidth="1" />
       </g>
     )
+  if (species === 'pangolin')
+    return (
+      <g>
+        {/* 頭から背中にならぶうろこ */}
+        <path d="M34 30 Q38 24 42 30 M44 26 Q48 20 52 26 M54 26 Q58 20 62 26 M60 30 Q64 24 68 30" fill="none" stroke="#5c3d1e" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
