@@ -49,6 +49,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   chicken: { dir: 'ja-en', label: '日→英', icon: '🐔' },
   pig: { dir: 'en-ja', label: '英→日', icon: '🐷' },
   beaver: { dir: 'ja-en', label: '日→英', icon: '🦫' },
+  deer: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 
