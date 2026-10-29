@@ -555,6 +555,17 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M48 62 Q62 70 74 84 L70 86 Q58 74 46 68 Z" fill="#e7cfa0" stroke="#713f12" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'starfish')
+    return (
+      <g>
+        {/* 体の小さなつぶつぶもよう */}
+        <circle cx="40" cy="48" r="2" fill="#fecdd3" />
+        <circle cx="60" cy="48" r="2" fill="#fecdd3" />
+        <circle cx="50" cy="40" r="2" fill="#fecdd3" />
+        <circle cx="44" cy="58" r="2" fill="#fecdd3" />
+        <circle cx="56" cy="58" r="2" fill="#fecdd3" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
