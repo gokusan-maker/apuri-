@@ -1525,6 +1525,16 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       )}
       <div className={`monster-stage${room ? ` room-${room}` : ''}${mood100 && mood100.points >= mood100.max ? ' stage-max' : ''}`}>
         <RoomScene room={room} align="xMaxYMax" />
+        {/* デザイン72：今日の課題を3つクリアした日は、相棒のまわりに花びらが1回だけまう */}
+        {trioDone && (
+          <span className="trio-petals" aria-hidden="true">
+            {[0, 1, 2, 3, 4, 5].map((j) => (
+              <i key={j} style={{ left: `${10 + j * 15}%`, animationDelay: `${j * 0.25}s` } as CSSProperties}>
+                🌸
+              </i>
+            ))}
+          </span>
+        )}
         {trioDone && (
           <span className="stage-trio" aria-label={trioStreak >= 2 ? `今日の課題3つクリア ${trioStreak}日連続` : '今日の課題3つクリア'}>
             🏅{trioStreak >= 2 && <small className="stage-trio-n">{trioStreak}</small>}

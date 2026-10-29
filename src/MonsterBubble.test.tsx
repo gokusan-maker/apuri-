@@ -125,3 +125,10 @@ it('デザイン71：相棒を切りかえると、新しい相棒が「よろ�
   rerender(<Monster monster={{ xp: 500, species: 'turtle', name: 'カメスケ' } as never} />)
   expect(screen.getByText('カメスケだよ。よろしくね！')).toBeInTheDocument()
 })
+
+it('デザイン72：今日の課題を3つクリアした日は、相棒のまわりに花びらがまう（クリアしていない日は出ない）', () => {
+  const { container, rerender } = render(<Monster monster={{ xp: 500 } as never} />)
+  expect(container.querySelector('.trio-petals')).toBeNull()
+  rerender(<Monster monster={{ xp: 500 } as never} trioDone />)
+  expect(container.querySelectorAll('.trio-petals i')).toHaveLength(6)
+})

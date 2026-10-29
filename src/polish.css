@@ -4573,3 +4573,9 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .chara-gacha-lineup li { animation: lineup-hop 0.45s ease-out both; animation-delay: calc(var(--i, 0) * 30ms); }
 @keyframes lineup-hop { 0% { transform: translateY(0); } 40% { transform: translateY(-6px); } 100% { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .chara-gacha-lineup li { animation: none; } }
+
+/* デザイン72：今日の課題を3つクリアした日は、相棒のまわりに花びらが1回だけまう */
+.trio-petals { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 2; }
+.trio-petals i { position: absolute; top: -10%; font-style: normal; font-size: 0.9rem; opacity: 0; animation: trio-petal 2.4s ease-in 1 both; }
+@keyframes trio-petal { 0% { opacity: 0; transform: translateY(0) rotate(0deg); } 15% { opacity: 1; } 100% { opacity: 0; transform: translateY(120px) rotate(240deg); } }
+@media (prefers-reduced-motion: reduce) { .trio-petals { display: none; } }
