@@ -13481,6 +13481,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-wasabi',
+    title: 'The Green Paste with Sushi',
+    level: '難関大（評論）',
+    paragraphs: [
+      "When people eat sushi, they often add a little green paste called wasabi. Real wasabi comes from the root of a plant ( A ) grows in cool, clean mountain water in Japan. Farmers need clear water that keeps flowing all year, and the plant takes a long time to grow.",
+      "Because of this, real wasabi is so hard to grow ( B ) it is very expensive. In fact, much of the \"wasabi\" sold around the world is not real wasabi at all. It is usually made from a different root mixed with green coloring.",
+      "Wasabi is hot, but its heat is different from the heat of chili peppers. It goes up into the nose quickly and then disappears after a few seconds. The fresh taste also fades soon after the root is grated, so good restaurants grate it just before serving.",
+      "Next time you eat sushi, you may want to check whether your wasabi is the real thing.",
+    ],
+    ja: [
+      'すしを食べるとき、人々はわさびと呼ばれる緑色のペーストを少しつけることが多い。本物のわさびは、日本のすずしくてきれいな山の水の中で育つ植物の根からとれる。農家には一年中流れ続ける澄んだ水が必要で、植物は育つのに長い時間がかかる。',
+      'このため、本物のわさびは育てるのがとてもむずかしく、とても高い。実は、世界中で売られている「わさび」の多くは、まったく本物のわさびではない。ふつうは別の根に緑の色をまぜて作られている。',
+      'わさびはからいが、そのからさはトウガラシのからさとはちがう。すぐに鼻にぬけて、数秒たつと消えてしまう。また、新鮮な風味は根をすりおろしたあとすぐに弱くなるので、よい店では出す直前にすりおろす。',
+      '次にすしを食べるときは、そのわさびが本物かどうか確かめてみるとよいかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a plant（もの）で、うしろの grows の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['that', 'which', 'what', 'as'], answer: 0, why: 'so ～ that …「とても～なので…」。so hard to grow のあとに結果を表す that が続く。which・what・as はこの形には入らない。' },
+    ],
+    underline: {
+      phrase: 'fades',
+      choices: ['becomes weaker little by little', 'becomes stronger', 'changes color', 'grows bigger'],
+      answer: 0,
+      why: 'fade は「（色・味・音などが）だんだん弱くなる・うすれる」。',
+    },
+    order: {
+      words: ['whether', 'your', 'wasabi', 'is', 'the', 'real', 'thing'],
+      rest: '',
+      answer: 'whether your wasabi is the real thing',
+      ja: 'あなたのわさびが本物かどうか（whether ～「～かどうか」）',
+    },
+    tf: [
+      { statement: '本物のわさびは、すずしくきれいな水で育つ。', answer: true, why: '第1段落 a plant that grows in cool, clean mountain water。' },
+      { statement: '世界で売られている「わさび」は、すべて本物だ。', answer: false, why: '第2段落 much of the "wasabi" sold around the world is not real wasabi at all。' },
+      { statement: 'わさびのからさは、すぐに鼻にぬけて消える。', answer: true, why: '第3段落 It goes up into the nose quickly and then disappears after a few seconds。' },
+    ],
+    qa: [
+      { q: 'Why do good restaurants grate wasabi just before serving?', choices: ['Because the fresh taste fades soon after grating.', 'Because it becomes too hot later.', 'Because customers like to watch.', 'Because the root turns black.'], answer: 0, why: '第3段落 The fresh taste also fades soon after the root is grated。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
