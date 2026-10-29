@@ -1467,3 +1467,8 @@ it('闘技場：階が下がったときは、階の数字が少しだけ下に�
   arenaPick(false)
   expect(document.querySelector('.arena-now-num.sink')).not.toBeNull()
 })
+
+it('ボス城の階：答えたあとの「次へ」ボタンは、ふわっと出てくる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.next-unit-btn \{ animation: next-btn-in/)
+})
