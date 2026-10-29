@@ -7512,9 +7512,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My old phone is broken beyond repair.', ja: '古い携帯電話は修理できないほどこわれている。' },
     ],
     questions: [
-      { sentence: 'The view from the top was beyond ___.', choices: ['description', 'describe', 'described'], answer: 0, why: 'beyond description「言葉で表せないほど」。beyond のあとは名詞 description。' },
-      { sentence: 'Her story was strange beyond ___.', choices: ['belief', 'believe', 'believed'], answer: 0, why: 'beyond belief「信じられないほど」。beyond のあとは名詞 belief。' },
-      { sentence: 'The car was damaged beyond ___.', choices: ['repair', 'repaired', 'repairable'], answer: 0, why: 'beyond repair「修理できないほど」。beyond のあとは名詞 repair。' },
+      { sentence: 'The beauty of the sunset was ___ description.', choices: ['beyond', 'within', 'under', 'against'], answer: 0, why: 'beyond description「言葉では言い表せないほど」。' },
+      { sentence: 'The old bicycle was damaged beyond ___, so we had to buy a new one.', choices: ['repair', 'belief', 'control', 'doubt'], answer: 0, why: '新しいのを買ったので beyond repair「修理できないほど」。beyond belief は「信じられないほど」、beyond control は「手に負えない」、beyond doubt は「疑いなく」。' },
+      { sentence: 'His guilt was proved beyond ___.', choices: ['doubt', 'repair', 'description', 'reach'], answer: 0, why: 'beyond doubt「疑いの余地なく」。' },
     ],
   },
   {
@@ -7529,9 +7529,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Keep your glasses within reach.', ja: 'めがねは手のとどくところに置いておきなさい。' },
     ],
     questions: [
-      { sentence: 'The beach is within ___ distance of the hotel.', choices: ['walking', 'walk', 'walked'], answer: 0, why: 'within walking distance「歩いて行ける距離に」。distance の前は walking。' },
-      { sentence: 'Put the TV remote within ___ of Grandpa.', choices: ['reach', 'reaching', 'reached'], answer: 0, why: 'within reach「手のとどくところに」。within のあとは名詞 reach。' },
-      { sentence: 'You can play games, but only within ___.', choices: ['limits', 'limited', 'limiting'], answer: 0, why: 'within limits「限度内で・ほどほどに」。limits と複数形にする。' },
+      { sentence: 'The station is ___ walking distance of our school, so we don’t need a bus.', choices: ['within', 'beyond', 'out of', 'under'], answer: 0, why: 'within walking distance (of ～)「（～から）歩いて行ける距離に」。バスがいらないので within。beyond / out of では「歩いて行けない」になる。' },
+      { sentence: 'Keep medicines out of ___ of small children.', choices: ['reach', 'touch', 'hand', 'arm'], answer: 0, why: 'out of reach of ～「～の手のとどかないところに」（⇔ within reach）。' },
+      { sentence: 'You may use your phone at night, but ___ limits.', choices: ['within', 'beyond', 'without', 'against'], answer: 0, why: 'within limits「限度内で・ほどほどに」。but と合うのは制限つきの within。' },
     ],
   },
   {
@@ -7546,9 +7546,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He had to join the team against his will.', ja: '彼は気がすすまないのに、チームに入らなければならなかった。' },
     ],
     questions: [
-      { sentence: 'Smoking here is against the ___.', choices: ['law', 'lawful', 'lawfully'], answer: 0, why: 'against the law「法律違反で」。the のあとは名詞 law。' },
-      { sentence: 'Touching the ball with your hands is against the ___ in soccer.', choices: ['rules', 'rule of', 'ruled'], answer: 0, why: 'against the rules「規則違反で」。the rules と複数形にする。' },
-      { sentence: 'She was sent to the city against her ___.', choices: ['will', 'willing', 'willingly'], answer: 0, why: 'against one’s will「意志に反して」。her のあとは名詞 will。' },
+      { sentence: 'In many countries, it is ___ the law to drive without a license.', choices: ['against', 'over', 'beyond', 'without'], answer: 0, why: 'against the law「法律に違反して」。' },
+      { sentence: 'Using a phone during the exam is against the ___.', choices: ['rules', 'rule of', 'ruler', 'ruling'], answer: 0, why: 'against the rules「規則違反で」。rules と複数形。' },
+      { sentence: 'He was forced to sign the paper ___ his will.', choices: ['against', 'for', 'with', 'beyond'], answer: 0, why: 'against one’s will「意志に反して」。forced（むりやり）と合う。' },
     ],
   },
   {
@@ -7563,9 +7563,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The park was built for the benefit of local children.', ja: 'その公園は地元の子どもたちのためにつくられた。' },
     ],
     questions: [
-      { sentence: 'She saved money for the purpose of ___ a car.', choices: ['buying', 'buy', 'bought'], answer: 0, why: 'for the purpose of ～ing「～する目的で」。of のあとは動名詞 buying。' },
-      { sentence: 'The event was held for the ___ of the poor.', choices: ['benefit', 'beneficial', 'benefited'], answer: 0, why: 'for the benefit of ～「～のために」。the のあとは名詞 benefit。' },
-      { sentence: 'This room is used for the ___ of meetings only.', choices: ['purpose', 'purposely', 'purposed'], answer: 0, why: 'for the purpose of ～「～の目的で」。the のあとは名詞 purpose。' },
+      { sentence: 'She went to Italy for the purpose of ___ art.', choices: ['studying', 'study', 'studied', 'to study'], answer: 0, why: 'for the purpose of ～ing「～する目的で」。of は前置詞なので動名詞 studying。to study は in order to study の形で使う。' },
+      { sentence: 'The concert was held for the ___ of children who had lost their homes.', choices: ['benefit', 'purpose', 'sake of', 'reason'], answer: 0, why: 'for the benefit of ～「～のために・～の利益になるように」。for the purpose of ～は「～の目的で」で、うしろに人は来ない。' },
+      { sentence: 'This land may be used only ___ the purpose of farming.', choices: ['for', 'to', 'with', 'by'], answer: 0, why: 'for the purpose of ～。前置詞は for。' },
     ],
   },
   {
@@ -7614,9 +7614,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In terms of price, this phone is the best.', ja: '値段の点では、この電話がいちばんだ。' },
     ],
     questions: [
-      { sentence: 'With ___ to your e-mail, the meeting will start at ten.', choices: ['regard', 'regarded', 'regarding'], answer: 0, why: 'with regard to ～「～に関して」。with のあとは名詞 regard。' },
-      { sentence: 'In ___ of size, this room is perfect for us.', choices: ['terms', 'term', 'termed'], answer: 0, why: 'in terms of ～「～の点で」。terms と複数形にする。' },
-      { sentence: 'The two cars are similar in terms ___ speed.', choices: ['of', 'for', 'to'], answer: 0, why: 'in terms of ～「～の点で」。terms のあとは of。' },
+      { sentence: 'With ___ to your question, I will reply by Friday.', choices: ['regard', 'regards', 'regarding', 'respects'], answer: 0, why: 'with regard to ～「～に関して」。with のあとは単数の regard。regards は Best regards（よろしく）などの別の用法。' },
+      { sentence: 'In ___ of price, this phone is the best choice, but its battery is weak.', choices: ['terms', 'term', 'view', 'spite'], answer: 0, why: 'in terms of ～「～の点で」。terms と複数形。in view of は「～を考慮して」、in spite of は「～にもかかわらず」で意味が合わない。' },
+      { sentence: 'The two plans are very different ___ terms of cost.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in terms of ～。前置詞は in。' },
     ],
   },
   {
@@ -7631,9 +7631,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She stayed calm in the face of danger.', ja: '彼女は危険に直面しても落ち着いていた。' },
     ],
     questions: [
-      { sentence: 'In the event ___ an earthquake, get under a desk.', choices: ['of', 'for', 'with'], answer: 0, why: 'in the event of ～「～の場合には」。event のあとは of。' },
-      { sentence: 'They kept going in the ___ of strong wind.', choices: ['face', 'faces', 'facing'], answer: 0, why: 'in the face of ～「～に直面して」。the のあとは単数の名詞 face。' },
-      { sentence: 'In the ___ of heavy snow, the school will close.', choices: ['event', 'events', 'eventual'], answer: 0, why: 'in the event of ～「～の場合には」。the のあとは単数の名詞 event。' },
+      { sentence: 'In the ___ of fire, do not use the elevators.', choices: ['event', 'face', 'case of', 'time'], answer: 0, why: 'in the event of ～「～の場合には」（= in case of ～）。in the face of は「～に直面して」。case of は of が重なる。' },
+      { sentence: 'The team stayed calm in the ___ of strong criticism.', choices: ['face', 'event', 'front', 'eye'], answer: 0, why: 'in the face of ～「～に直面して・～にもかかわらず」。in the event of は「～が起きた場合には」で意味が合わない。' },
+      { sentence: 'Classes will be cancelled ___ the event of a typhoon warning.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in the event of ～。前置詞は in。' },
     ],
   },
   {
@@ -7648,9 +7648,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The small boat was at the mercy of the waves.', ja: '小さな船は波のなすがままだった。' },
     ],
     questions: [
-      { sentence: 'Don\'t win the game at the ___ of your friends.', choices: ['expense', 'expenses', 'expensive'], answer: 0, why: 'at the expense of ～「～をぎせいにして」。the のあとは単数の名詞 expense。' },
-      { sentence: 'Farmers are often at the ___ of the weather.', choices: ['mercy', 'merciful', 'mercies'], answer: 0, why: 'at the mercy of ～「～のなすがままに」。the のあとは単数の名詞 mercy。' },
-      { sentence: 'The city grew quickly at the expense ___ its forests.', choices: ['of', 'for', 'by'], answer: 0, why: 'at the expense of ～「～をぎせいにして」。expense のあとは of。' },
+      { sentence: 'The factory increased its profits ___ the expense of workers’ health.', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at the expense of ～「～をぎせいにして」。' },
+      { sentence: 'Without a strong roof, the small cabin was at the ___ of the storm.', choices: ['mercy', 'expense', 'cost', 'risk'], answer: 0, why: 'at the mercy of ～「～のなすがままに」。嵐に対してなすすべがないので mercy。at the expense / cost of は「～をぎせいにして」。' },
+      { sentence: 'He finished the work quickly, but at the ___ of quality.', choices: ['expense', 'mercy', 'price of', 'loss'], answer: 0, why: 'at the expense of ～「～をぎせいにして」。at the mercy of は「～のなすがままに」で意味が合わない。at the price of も「～を代償に」だが of が重なる。' },
     ],
   },
   {
@@ -7665,9 +7665,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In the absence of the captain, Yuki led the team.', ja: 'キャプテンがいないあいだ、ユキがチームを引っぱった。' },
     ],
     questions: [
-      { sentence: 'She felt shy in the ___ of so many people.', choices: ['presence', 'present', 'presently'], answer: 0, why: 'in the presence of ～「～のいるところで」。the のあとは名詞 presence。' },
-      { sentence: 'In the ___ of our teacher, the class was very noisy.', choices: ['absence', 'absent', 'absently'], answer: 0, why: 'in the absence of ～「～がいないときに」。the のあとは名詞 absence。' },
-      { sentence: 'The papers were signed in the presence ___ a lawyer.', choices: ['of', 'for', 'with'], answer: 0, why: 'in the presence of ～。presence のあとは of。' },
+      { sentence: 'The contract must be signed ___ the presence of two witnesses.', choices: ['in', 'at', 'on', 'under'], answer: 0, why: 'in the presence of ～「～のいる前で・～の立ち会いのもとで」。' },
+      { sentence: 'In the ___ of the manager, her assistant made all the decisions.', choices: ['absence', 'presence', 'place', 'case'], answer: 0, why: '「部長がいないあいだ、アシスタントがすべての決定をした」なので in the absence of ～「～がいないときに」。in the presence of だと「部長の前で」になり、アシスタントがすべて決めることと合わない。' },
+      { sentence: 'Never speak badly of others ___ the presence of children.', choices: ['in', 'with', 'for', 'by'], answer: 0, why: 'in the presence of ～。前置詞は in。' },
     ],
   },
   {
@@ -7682,9 +7682,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We stayed at a hotel at the foot of the mountain.', ja: '私たちは山のふもとのホテルにとまった。' },
     ],
     questions: [
-      { sentence: 'Please sign at the ___ of this page.', choices: ['bottom', 'bottoms', 'bottomed'], answer: 0, why: 'at the bottom of ～「～のいちばん下に」。the のあとは単数の bottom。' },
-      { sentence: 'The village lies at the ___ of the mountain.', choices: ['foot', 'feet', 'footed'], answer: 0, why: 'at the foot of ～「～のふもとに」。この形では feet ではなく単数の foot。' },
-      { sentence: 'His name is at the ___ of the list.', choices: ['top', 'tops', 'topped'], answer: 0, why: 'at the top of ～「～のいちばん上に」。the のあとは単数の top。' },
+      { sentence: 'Please write your name ___ the top of the answer sheet.', choices: ['at', 'over', 'under', 'with'], answer: 0, why: 'at the top of ～「～のいちばん上に」。用紙の上の部分という「点」は at。' },
+      { sentence: 'A small village lies at the ___ of the mountain, where the river begins.', choices: ['foot', 'feet', 'toe', 'knee'], answer: 0, why: 'at the foot of ～「（山の）ふもとに」。この形では feet ではなく単数の foot。' },
+      { sentence: 'The ring was found at the ___ of the lake after twenty years.', choices: ['bottom', 'foot', 'top', 'end'], answer: 0, why: '湖の「底」なので at the bottom of ～。foot は山のふもと、top は上、end は「はし・終わり」。' },
     ],
   },
   {
@@ -7699,9 +7699,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In the course of the trip, we made many friends.', ja: '旅のあいだに、私たちはたくさんの友だちができた。' },
     ],
     questions: [
-      { sentence: 'The bus goes to the airport by way ___ the station.', choices: ['of', 'to', 'by'], answer: 0, why: 'by way of ～「～経由で」。way のあとは of。' },
-      { sentence: 'They talked by ___ of sign language.', choices: ['means', 'mean', 'meaning'], answer: 0, why: 'by means of ～「～という手段で」。means はこの形のまま。' },
-      { sentence: 'In the ___ of the meeting, many ideas came up.', choices: ['course', 'courses', 'coursed'], answer: 0, why: 'in the course of ～「～のあいだに」。the のあとは単数の course。' },
+      { sentence: 'We flew to London by ___ of Dubai, which made the journey much longer.', choices: ['way', 'means', 'course', 'help'], answer: 0, why: 'by way of ～「～経由で」。by means of は「～という手段で」で、都市名の前には来ない。' },
+      { sentence: 'Ancient sailors found their way across the ocean by ___ of the stars.', choices: ['means', 'way', 'course', 'side'], answer: 0, why: 'by means of ～「～（という手段）によって」。星を使って航海したので手段の means。by way of は「経由で」。' },
+      { sentence: '___ the course of the long discussion, several new ideas emerged.', choices: ['In', 'On', 'At', 'For'], answer: 0, why: 'in the course of ～「～のあいだに・～の過程で」。' },
     ],
   },
   {
