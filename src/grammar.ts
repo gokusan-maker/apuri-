@@ -7716,9 +7716,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The plants died for want of water.', ja: '植物は水が足りなくてかれてしまった。' },
     ],
     questions: [
-      { sentence: 'Many fans came in support ___ the team.', choices: ['of', 'at', 'to'], answer: 0, why: 'in support of ～「～を支持して」。support のあとは of。' },
-      { sentence: 'The project stopped for ___ of money.', choices: ['want', 'wants', 'wanting'], answer: 0, why: 'for want of ～「～が足りないので」。for のあとは単数の名詞 want。' },
-      { sentence: 'She gave a speech in ___ of the plan.', choices: ['support', 'supporting', 'supported'], answer: 0, why: 'in support of ～。in のあとは名詞 support。' },
+      { sentence: 'Thousands of people marched ___ support of the new law.', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'in support of ～「～を支持して」。' },
+      { sentence: 'The plants died for ___ of water during the long dry summer.', choices: ['want', 'loss', 'fear', 'place'], answer: 0, why: 'for want of ～「～が足りないので」（= for lack of ～）。for fear of ～は「～をおそれて」で意味が合わない。' },
+      { sentence: 'She spoke in ___ of the plan, saying it would help local farmers.', choices: ['support', 'agree', 'supporting', 'approve'], answer: 0, why: 'in support of ～「～を支持して」。in のあとは名詞 support。agree / approve は動詞なので in のあとに来ない。' },
     ],
   },
   {
@@ -7750,9 +7750,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The post office is at the end of this street.', ja: '郵便局はこの通りのつきあたりにある。' },
     ],
     questions: [
-      { sentence: 'We will move to Osaka at the ___ of next month.', choices: ['end', 'ending', 'ended'], answer: 0, why: 'at the end of ～「～の終わりに」。the のあとは名詞 end。' },
-      { sentence: 'Our school trip is at the ___ of May.', choices: ['beginning', 'begin', 'began'], answer: 0, why: 'at the beginning of ～「～の初めに」。the のあとは名詞 beginning。' },
-      { sentence: 'Turn left ___ the end of the road.', choices: ['at', 'on', 'of'], answer: 0, why: 'at the end of ～「～のつきあたりで」。end の前は at。' },
+      { sentence: 'The new tax will come into effect ___ the beginning of next year.', choices: ['at', 'on', 'over', 'for'], answer: 0, why: 'at the beginning of ～「～の初めに」。' },
+      { sentence: '___ the end of the film, everyone in the theater was crying.', choices: ['At', 'In', 'On', 'For'], answer: 0, why: 'at the end of ～「～の終わりに」。in the end は「結局・最後には」で of が続かない。' },
+      { sentence: 'I didn’t want to go at first, but ___ the end I really enjoyed the trip.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in the end「結局・最後には」。at the end of ～と区別する（of がないので in the end）。' },
     ],
   },
   {
@@ -7767,9 +7767,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A tall plant stands in the corner of the room.', ja: '部屋のすみに背の高い植物が置いてある。' },
     ],
     questions: [
-      { sentence: 'Please put your bags at the ___ of the classroom.', choices: ['back', 'backs', 'backed'], answer: 0, why: 'at the back of ～「～のうしろのほうに」。the のあとは単数の back。' },
-      { sentence: 'The cat is sleeping in the ___ of the sofa.', choices: ['corner', 'corners', 'cornered'], answer: 0, why: 'in the corner of ～「～のすみに」。the のあとは単数の corner。' },
-      { sentence: 'We sat at the ___ of the hall to see the stage better.', choices: ['front', 'fronts', 'fronted'], answer: 0, why: 'at the front of ～「～の前のほうに」。the のあとは単数の front。' },
+      { sentence: 'Tall students were asked to stand ___ the back of the group photo.', choices: ['at', 'over', 'to', 'with'], answer: 0, why: 'at the back of ～「～のうしろのほうに」。' },
+      { sentence: 'There is an old piano ___ the corner of the room.', choices: ['in', 'on', 'over', 'to'], answer: 0, why: '部屋の内側のすみは in the corner of ～。通りの角（外側）は on / at the corner of ～。' },
+      { sentence: 'The restaurant is on the ___ of Main Street and Second Avenue.', choices: ['corner', 'center', 'heart', 'back'], answer: 0, why: 'on the corner of A and B「A通りとB通りの角に」。' },
     ],
   },
   {
@@ -7801,9 +7801,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Players are chosen on the basis of skill.', ja: '選手は技術にもとづいてえらばれる。' },
     ],
     questions: [
-      { sentence: 'In ___ of the time, let\'s finish here.', choices: ['view', 'views', 'viewed'], answer: 0, why: 'in view of ～「～を考えると」。in のあとは単数の名詞 view。' },
-      { sentence: 'The prize was given on the ___ of the votes.', choices: ['basis', 'basic', 'basically'], answer: 0, why: 'on the basis of ～「～にもとづいて」。the のあとは名詞 basis。' },
-      { sentence: 'We made the decision on the basis ___ the survey.', choices: ['of', 'at', 'to'], answer: 0, why: 'on the basis of ～。basis のあとは of。' },
+      { sentence: '___ view of the bad weather, the outdoor concert has been cancelled.', choices: ['In', 'On', 'At', 'By'], answer: 0, why: 'in view of ～「～を考えると・～のために」。' },
+      { sentence: 'Students are selected on the ___ of their test results and interviews.', choices: ['basis', 'base', 'basic', 'bases'], answer: 0, why: 'on the basis of ～「～にもとづいて」。名詞 basis。base（土台・基地）は on the base of ～とは言わない。' },
+      { sentence: 'Doctors should make decisions on the basis ___ scientific evidence.', choices: ['of', 'for', 'with', 'from'], answer: 0, why: 'on the basis of ～。basis のあとは of。' },
     ],
   },
   {
@@ -7818,9 +7818,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There is a small house on the edge of the forest.', ja: '森のはずれに小さな家がある。' },
     ],
     questions: [
-      { sentence: 'The old bridge is on the verge of ___ down.', choices: ['falling', 'fall', 'to fall'], answer: 0, why: 'on the verge of ～ing「今にも～しそうで」。of のあとは動名詞 falling。' },
-      { sentence: 'Don\'t stand on the ___ of the cliff.', choices: ['edge', 'edges of', 'edgy'], answer: 0, why: 'on the edge of ～「～のふちに」。the のあとは単数の名詞 edge。' },
-      { sentence: 'The company was on the ___ of closing.', choices: ['verge', 'verges of', 'verging'], answer: 0, why: 'on the verge of ～ing。the のあとは単数の名詞 verge。' },
+      { sentence: 'Many species of frogs are on the verge of ___ out.', choices: ['dying', 'die', 'to die', 'died'], answer: 0, why: 'on the verge of ～ing「今にも～しそうで」。of は前置詞なので動名詞 dying。die out「絶滅する」。' },
+      { sentence: 'She was ___ the edge of tears when she heard the sad news.', choices: ['on', 'in', 'at', 'by'], answer: 0, why: 'on the edge of ～「今にも～しそうで・～のふちに」。on the verge of と同じく on。' },
+      { sentence: 'After years of losses, the company was on the ___ of collapse.', choices: ['verge', 'way', 'top', 'side'], answer: 0, why: 'on the verge of ～「今にも～しそうで」。on the way は「途中で」、on the top of は「～の上に」、on the side of は「～の味方で」。' },
     ],
   },
   {
@@ -7835,9 +7835,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Prices rose in the wake of the storm.', ja: '嵐のあと、物価が上がった。' },
     ],
     questions: [
-      { sentence: 'In the ___ of his advice, I decided to study abroad.', choices: ['light', 'lights', 'lighted'], answer: 0, why: 'in the light of ～「～をふまえて」。the のあとは単数の名詞 light。' },
-      { sentence: 'Many shops closed in the ___ of the earthquake.', choices: ['wake', 'wakes', 'waking'], answer: 0, why: 'in the wake of ～「～のあとに」。the のあとは単数の名詞 wake。' },
-      { sentence: 'New rules were made in the wake ___ the accident.', choices: ['of', 'at', 'to'], answer: 0, why: 'in the wake of ～。wake のあとは of。' },
+      { sentence: 'In the ___ of the new evidence, the court decided to reopen the case.', choices: ['light', 'sight', 'view', 'eye'], answer: 0, why: 'in (the) light of ～「～をふまえて・～を考慮して」。in view of も似た意味だが the をつけない。in the sight of は「～の目から見て」。' },
+      { sentence: 'Tourism fell sharply in the ___ of the terrorist attacks.', choices: ['wake', 'back', 'rear', 'tail'], answer: 0, why: 'in the wake of ～「～のあとで・～の結果として」。船が通ったあとの航跡が語源。' },
+      { sentence: 'Safety checks were tightened ___ the wake of the accident.', choices: ['in', 'on', 'at', 'by'], answer: 0, why: 'in the wake of ～。前置詞は in。' },
     ],
   },
   {
@@ -7852,9 +7852,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She was at the center of attention at the party.', ja: '彼女はパーティーで注目のまとだった。' },
     ],
     questions: [
-      { sentence: 'Our school is in the ___ of the town.', choices: ['heart', 'hearts', 'hearty'], answer: 0, why: 'in the heart of ～「～のまん中に」。the のあとは単数の名詞 heart。' },
-      { sentence: 'A tall tower stands at the ___ of the park.', choices: ['center', 'central', 'centers of'], answer: 0, why: 'at the center of ～「～の中心に」。the のあとは単数の名詞 center（central は形容詞）。' },
-      { sentence: 'The village is in the heart ___ the mountains.', choices: ['of', 'at', 'to'], answer: 0, why: 'in the heart of ～。heart のあとは of。' },
+      { sentence: 'The hotel is located ___ the heart of the old city, close to all the main sights.', choices: ['in', 'on', 'by', 'over'], answer: 0, why: 'in the heart of ～「～のまん中に」。' },
+      { sentence: 'Climate change is now ___ the center of political debate in many countries.', choices: ['at', 'on', 'over', 'for'], answer: 0, why: 'at the center of ～「～の中心に」。議論・関心の中心にも使う。' },
+      { sentence: 'The small lake lies deep in the ___ of the forest.', choices: ['heart', 'middle of', 'inside', 'core of'], answer: 0, why: 'in the heart of ～「～の奥深く・まん中に」。the のあとに of が続くので名詞1語の heart。middle of / core of は of が重なる。' },
     ],
   },
   {
@@ -7869,9 +7869,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The train runs at a speed of 300 kilometers an hour.', ja: 'その列車は時速300キロで走る。' },
     ],
     questions: [
-      { sentence: 'She learned to swim at the ___ of four.', choices: ['age', 'ages', 'aged of'], answer: 0, why: 'at the age of ～「～才のときに」。the のあとは単数の名詞 age。' },
-      { sentence: 'The car was going at a ___ of 80 kilometers an hour.', choices: ['speed', 'speeds', 'speedy'], answer: 0, why: 'at a speed of ～「～の速さで」。a のあとは単数の名詞 speed。' },
-      { sentence: 'He became a doctor ___ the age of thirty.', choices: ['at', 'on', 'of'], answer: 0, why: 'at the age of ～。age の前は at。' },
+      { sentence: 'Mozart is said to have written his first piece of music ___ the age of five.', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at the age of ～「～歳のときに」。by the age of ～は「～歳までに」の意味になる。ここは5歳という一時点なので at。' },
+      { sentence: 'The new train can travel at a ___ of over 300 kilometers per hour.', choices: ['speed', 'level', 'pace of', 'distance'], answer: 0, why: 'at a speed of ～「～の速さで」。km/h（時速）と結びつくのは speed。at a rate of は割合（percent など）、distance は「距離」で意味が合わない。' },
+      { sentence: 'Children in Japan start elementary school ___ the age of six.', choices: ['at', 'on', 'with', 'for'], answer: 0, why: 'at the age of six「6歳で」。' },
     ],
   },
   {
