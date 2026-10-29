@@ -110,3 +110,14 @@ it('デザイン78：ショップの部屋で、いま使っている部屋に�
   expect(document.querySelector('.room-sample.using.room-ocean')).not.toBeNull()
   expect(document.querySelector('.room-sample.using.room-forest')).toBeNull()
 })
+
+it('デザイン79：おやつをあげると「おいしい！」がうかび、好物ならハートがつく', () => {
+  const { unmount } = render(<Shop wallet={{ coins: 100, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(screen.queryByText(/^おいしい！/)).toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(SNACKS[0].name) }))
+  expect(screen.getByText('おいしい！')).toBeInTheDocument()
+  unmount()
+  render(<Shop wallet={{ coins: 100, owned: [] }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} favSnack={SNACKS[0].id} />)
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(SNACKS[0].name) }))
+  expect(screen.getByText('おいしい！💕')).toBeInTheDocument()
+})

@@ -4601,3 +4601,10 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .room-sample { position: relative; }
 .room-sample.using { outline: 2px solid #22c55e; outline-offset: -2px; }
 .room-using-ribbon { position: absolute; top: 4px; right: 4px; padding: 0 6px; border-radius: 999px; background: #22c55e; color: #fff; font-size: 0.66rem; font-weight: 700; line-height: 1.5; }
+
+/* デザイン79：おやつをあげると「おいしい！」がふわっと1回うかぶ */
+.shop-preview { position: relative; }
+.snack-yum { position: absolute; left: 50%; top: 8%; transform: translateX(-50%); padding: 1px 8px; border-radius: 999px; background: #fff7ed; color: #9a3412; font-size: 0.75rem; font-weight: 700; white-space: nowrap; animation: snack-yum 1.4s ease-out 1 both; pointer-events: none; }
+.snack-yum.fav { background: #fdf2f8; color: #be185d; }
+@keyframes snack-yum { 0% { opacity: 0; translate: 0 6px; } 20% { opacity: 1; translate: 0 0; } 80% { opacity: 1; } 100% { opacity: 0; translate: 0 -14px; } }
+@media (prefers-reduced-motion: reduce) { .snack-yum { animation: none; } }

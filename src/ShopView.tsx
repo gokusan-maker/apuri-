@@ -71,7 +71,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
   const shownRoom = tryRoom && !wallet.owned.includes(tryRoom) ? tryRoom : wallet.room
   const form = formOf(monster)
   const canWear = form.stage > 0
-  const [eating, setEating] = useState<{ icon: string; key: number } | null>(null)
+  const [eating, setEating] = useState<{ icon: string; key: number; fav?: boolean } | null>(null)
   const [outfits, setOutfits] = useState(loadOutfits)
   const [tab, setTab] = useState<ShopTab>(initialTab ?? (onGacha ? 'gacha' : 'snack'))
   const tabs = SHOP_TABS.filter((t) => t.id !== 'gacha' || onGacha)
@@ -97,6 +97,12 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           {eating && (
             <span key={eating.key} className="snack-bite" aria-label="もぐもぐ">
               {eating.icon}
+            </span>
+          )}
+          {/* デザイン79：おやつをあげると「おいしい！」がふわっと1回うかぶ（好物ならハートつき） */}
+          {eating && (
+            <span key={`yum${eating.key}`} className={`snack-yum${eating.fav ? ' fav' : ''}`} role="status">
+              {eating.fav ? 'おいしい！💕' : 'おいしい！'}
             </span>
           )}
         </div>
@@ -135,7 +141,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
             disabled={snacksLeft <= 0 || wallet.coins < sn.price}
             onClick={() => {
               onEat(sn.id)
-              setEating({ icon: sn.icon, key: Date.now() })
+              setEating({ icon: sn.icon, key: Date.now(), fav: favSnack === sn.id })
             }}
           >
             {favSnack === sn.id && <span className="fav-snack-tag">💕 好物 XP2倍！</span>}
