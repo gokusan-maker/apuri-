@@ -15428,6 +15428,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-umami',
+    title: 'The Taste That Took a Century to Be Accepted',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For a long time, many people in the West believed that there were only four basic tastes: sweet, sour, salty, and bitter. Today, however, scientists generally agree that there is a fifth, which is known around the world by its Japanese name, umami. The story of how this taste was discovered and finally accepted shows how scientific ideas can take a long time to travel between cultures.",
+      "In 1908, a Japanese chemist named Kikunae Ikeda became curious about the special flavor of dashi, a soup stock made from a kind of seaweed called kombu. He felt that this rich, savory taste could not be explained by any of the four known tastes. After careful experiments, he succeeded in identifying the substance responsible for it, a chemical called glutamate. He named the taste umami, from the Japanese word for delicious, and soon helped to develop a seasoning that allowed people to add this flavor to their cooking.",
+      "Ikeda’s findings were well known in Japan, but they received little attention elsewhere for many decades. One reason was language, since much of the early research was published in Japanese. Another was that umami is often hard to notice on its own. It is usually experienced together with other tastes, in foods such as tomatoes, cheese, mushrooms, and meat, ( A ) many people simply did not recognize it as a separate taste.",
+      "The situation began to change around the year 2000, when scientists in several countries discovered receptors on the tongue that respond specifically to glutamate. This provided strong biological evidence that umami is indeed a basic taste, just like sweetness or bitterness. Since then, the word has spread into many languages, and chefs around the world now use it to describe the deep flavors they try to create.",
+      "The history of umami reminds us that what seems obvious in one culture may go unnoticed in another. It also shows that good observation in everyday life, such as paying attention to the taste of a familiar soup, can lead to important scientific discoveries. ( B ) Ikeda had not wondered why dashi tasted so good, the fifth taste might have remained unnamed for much longer, ( C ) it had been present in food all along.",
+    ],
+    ja: [
+      '長いあいだ、西洋の多くの人々は、基本の味は甘味、酸味、塩味、苦味の4つしかないと信じていた。しかし今日、科学者たちはおおむね5つめの味があることで一致しており、それは世界中で日本語の名前「うま味（umami）」で知られている。この味がどのように発見され、ついに受け入れられたかという話は、科学の考えが文化のあいだを伝わるのに長い時間がかかりうることを示している。',
+      '1908年、日本の化学者池田菊苗は、昆布という海藻から作るだしの特別な味に興味をもった。彼は、このこくのある味わいは、知られている4つの味のどれでも説明できないと感じた。注意深い実験のあと、彼はその味のもとになっている物質、グルタミン酸を見つけることに成功した。彼はその味を「おいしい」という日本語からうま味と名づけ、まもなく人々がこの味を料理に加えられる調味料の開発にも力を貸した。',
+      '池田の発見は日本ではよく知られていたが、ほかの国では何十年ものあいだほとんど注目されなかった。理由のひとつは言語で、初期の研究の多くが日本語で発表されていたからである。もうひとつは、うま味はそれだけでは気づきにくいことが多いということだ。うま味はたいてい、トマトやチーズやきのこや肉のような食べ物の中で、ほかの味といっしょに感じられるので、多くの人はそれを別の味として認識していなかったのである。',
+      '2000年ごろ、いくつかの国の科学者たちが、グルタミン酸にとくに反応する舌の受容体を見つけたことで、状況は変わりはじめた。これは、うま味が甘味や苦味と同じように本当に基本の味であるという、強い生物学的な証拠となった。それ以来、この言葉は多くの言語に広まり、世界中の料理人が、自分たちが作ろうとしている深い味わいを表すのに使っている。',
+      'うま味の歴史は、ある文化で明らかに思えることが、別の文化では見すごされることがあると思い出させてくれる。また、なじみのあるスープの味に注意をはらうような日常生活の中のよい観察が、大切な科学の発見につながりうることも示している。もし池田がなぜだしがこんなにおいしいのかとふしぎに思わなかったら、5つめの味は、ずっと食べ物の中にあったにもかかわらず、もっと長いあいだ名前のないままだったかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「ほかの味といっしょに感じられる。だから別の味として認識されなかった」と結果を表すので so。' },
+      { id: 'B', choices: ['If', 'Since', 'Unless', 'When'], answer: 0, why: 'If Ikeda had not wondered …, the fifth taste might have remained …「もし池田がふしぎに思わなかったら」。仮定法過去完了の if。Unless had not は二重否定になる。' },
+      { id: 'C', choices: ['even though', 'because', 'so that', 'as if'], answer: 0, why: '「ずっと食べ物の中にあったにもかかわらず、名前のないままだったかもしれない」と譲歩を表すので even though。' },
+    ],
+    tf: [
+      { statement: '池田菊苗は、昆布だしの味に興味をもったことからうま味を発見した。', answer: true, why: '第2段落 became curious about the special flavor of dashi … made from … kombu。' },
+      { statement: '池田の発見は、発表されてすぐに世界中で広く受け入れられた。', answer: false, why: '第3段落 they received little attention elsewhere for many decades。' },
+      { statement: 'うま味は、それだけでとてもはっきり感じられることが多い。', answer: false, why: '第3段落 umami is often hard to notice on its own. It is usually experienced together with other tastes。' },
+      { statement: 'グルタミン酸に反応する舌の受容体の発見は、うま味が基本の味だという証拠になった。', answer: true, why: '第4段落 This provided strong biological evidence that umami is indeed a basic taste。' },
+    ],
+    qa: [
+      { q: 'Which of the following was NOT given as a reason why umami was ignored outside Japan?', choices: ['Glutamate was too expensive to study.', 'Much of the early research was written in Japanese.', 'Umami is usually tasted together with other flavors.', 'Many people did not recognize it as a separate taste.'], answer: 0, why: '第3段落の理由は、言語（日本語で発表された）と、ほかの味といっしょに感じられて気づきにくいことの2つ。費用については書かれていない。' },
+      { q: 'What lesson does the writer draw from the story of umami?', choices: ['Careful observation in everyday life can lead to scientific discoveries.', 'Japanese food is better than Western food.', 'There are only four basic tastes.', 'New ideas are always accepted quickly.'], answer: 0, why: '第5段落 good observation in everyday life … can lead to important scientific discoveries。' },
+    ],
+    gist: [
+      { para: 1, choices: ['だしの味からうま味の正体を見つけた', '海藻の育て方', '日本の料理の歴史', '調味料の売り方'], answer: 0, why: '第2段落は、池田がだしの味に疑問をもち、グルタミン酸を見つけてうま味と名づけたことを述べている。' },
+      { para: 3, choices: ['舌の受容体の発見で受け入れられた', '料理人がうま味をきらった', '4つの味が否定された', '新しい調味料が禁止された'], answer: 0, why: '第4段落は、グルタミン酸に反応する受容体の発見によってうま味が基本の味として認められたことを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
