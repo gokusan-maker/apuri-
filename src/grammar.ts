@@ -6407,9 +6407,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The school is looking into the cause of the problem.', ja: '学校はその問題の原因を調べている。' },
     ],
     questions: [
-      { sentence: 'I came ___ an old photo in the box.', choices: ['across', 'of', 'than'], answer: 0, why: 'come across ～「～をたまたま見つける」。' },
-      { sentence: 'I ran ___ my teacher at the station yesterday.', choices: ['into', 'of', 'than'], answer: 0, why: 'run into ～「～にばったり会う」。' },
-      { sentence: 'The police are looking ___ the accident.', choices: ['into', 'of', 'during'], answer: 0, why: 'look into ～「～を調べる」。' },
+      { sentence: 'While cleaning my room, I came ___ an old photo of my grandparents.', choices: ['across', 'over', 'along', 'through'], answer: 0, why: 'come across ～「～をたまたま見つける・出会う」。' },
+      { sentence: 'I ran ___ my old teacher at the station yesterday.', choices: ['into', 'over', 'across of', 'out'], answer: 0, why: 'run into ～「～にばったり会う」（= bump into）。run out は「なくなる」。' },
+      { sentence: 'The police are looking ___ the cause of the accident.', choices: ['into', 'after', 'forward', 'out'], answer: 0, why: 'look into ～「～を調べる」（= investigate）。look after は「世話をする」、look forward to は「楽しみにする」、look out は「気をつける」。' },
     ],
   },
   {
@@ -6424,9 +6424,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Many people participated in the beach cleanup.', ja: 'たくさんの人が海岸のそうじに参加した。' },
     ],
     questions: [
-      { sentence: "I can't concentrate ___ my homework with the TV on.", choices: ['on', 'to', 'than'], answer: 0, why: 'concentrate on ～「～に集中する」。' },
-      { sentence: 'Over 200 students participated ___ the event.', choices: ['in', 'to', 'of'], answer: 0, why: 'participate in ～「～に参加する」。' },
-      { sentence: 'He really cares ___ the environment.', choices: ['about', 'to', 'than'], answer: 0, why: 'care about ～「～を大切に思う」。' },
+      { sentence: 'I can’t concentrate ___ my homework with the TV on.', choices: ['on', 'in', 'to', 'at'], answer: 0, why: 'concentrate on ～「～に集中する」（= focus on）。' },
+      { sentence: 'More than 200 students participated ___ the event.', choices: ['in', 'to', 'at', 'for'], answer: 0, why: 'participate in ～「～に参加する」（= take part in）。join は他動詞なので前置詞なし。' },
+      { sentence: 'He really cares ___ the environment and always recycles.', choices: ['about', 'for of', 'to', 'with'], answer: 0, why: 'care about ～「～を大切に思う・気にかける」（care for は「世話をする・好む」）。' },
     ],
   },
   {
@@ -6441,9 +6441,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My little brother is curious about everything.', ja: '弟は何にでも興味しんしんだ。' },
     ],
     questions: [
-      { sentence: "We're short ___ time, so let's hurry.", choices: ['of', 'at', 'than'], answer: 0, why: 'be short of ～「～が足りない」。' },
-      { sentence: 'He was ashamed ___ his rude words.', choices: ['of', 'to', 'than'], answer: 0, why: 'be ashamed of ～「～をはずかしく思う」。' },
-      { sentence: 'Children are curious ___ the world around them.', choices: ['about', 'to', 'than'], answer: 0, why: 'be curious about ～「～に興味しんしんだ」。' },
+      { sentence: 'We’re running short ___ time, so let’s hurry.', choices: ['of', 'in', 'at', 'with'], answer: 0, why: 'be / run short of ～「～が足りない」。' },
+      { sentence: 'He was ashamed ___ having told a lie to his best friend.', choices: ['of', 'at', 'about of', 'to'], answer: 0, why: 'be ashamed of ～「～をはずかしく思う」。of のあとは動名詞 having told。' },
+      { sentence: 'Young children are curious ___ everything around them.', choices: ['about', 'of', 'for', 'with'], answer: 0, why: 'be curious about ～「～に興味しんしんだ」。' },
     ],
   },
   {
@@ -6458,9 +6458,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It took her a week to recover from the flu.', ja: '彼女がインフルエンザから回復するのに1週間かかった。' },
     ],
     questions: [
-      { sentence: 'Many people suffer ___ hay fever in spring.', choices: ['from', 'to', 'than'], answer: 0, why: 'suffer from ～「～に苦しむ」。' },
-      { sentence: 'She has fully recovered ___ her cold.', choices: ['from', 'to', 'than'], answer: 0, why: 'recover from ～「～から回復する」。' },
-      { sentence: 'Japanese ___ from English in many ways.', choices: ['differs', 'is differ', 'different'], answer: 0, why: 'differ from ～「～とちがう」。differ は動詞なので be をつけず、主語が三人称単数なので differs。different は形容詞なので be が必要。' },
+      { sentence: 'Many people suffer ___ hay fever in spring.', choices: ['from', 'at', 'by', 'of'], answer: 0, why: 'suffer from ～「～に苦しむ・（病気に）かかっている」。' },
+      { sentence: 'It took her two weeks to recover ___ the flu.', choices: ['from', 'of', 'to', 'out'], answer: 0, why: 'recover from ～「～から回復する」。' },
+      { sentence: 'Japanese ___ from English in many ways.', choices: ['differs', 'is differ', 'different', 'is differing to'], answer: 0, why: 'differ from ～「～とちがう」。differ は動詞なので be をつけない（be different from ～と同じ意味）。' },
     ],
   },
   {
@@ -6475,9 +6475,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In this sentence, "it" refers to the old bridge.', ja: 'この文では、"it" は古い橋を指している。' },
     ],
     questions: [
-      { sentence: 'You can always rely ___ me.', choices: ['on', 'to', 'than'], answer: 0, why: 'rely on ～「～にたよる」。' },
-      { sentence: 'Please respond ___ the survey by Monday.', choices: ['to', 'of', 'than'], answer: 0, why: 'respond to ～「～に答える」。' },
-      { sentence: 'The word "they" refers ___ the students.', choices: ['to', 'on', 'than'], answer: 0, why: 'refer to ～「～を指す」。' },
+      { sentence: 'You can always rely ___ me when you need help.', choices: ['on', 'to', 'in', 'with'], answer: 0, why: 'rely on ～「～にたよる」（= depend on / count on）。' },
+      { sentence: 'Please respond ___ the survey by Monday.', choices: ['to', 'for', 'on', 'with'], answer: 0, why: 'respond to ～「～に答える・応じる」（= reply to）。' },
+      { sentence: 'In this sentence, the word "they" refers ___ the students.', choices: ['to', 'on', 'for', 'with'], answer: 0, why: 'refer to ～「～を指す・～に言及する」。' },
     ],
   },
   {
@@ -6492,9 +6492,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I am grateful for all your support.', ja: 'あなたのすべての支えに感謝しています。' },
     ],
     questions: [
-      { sentence: 'Too much sugar is harmful ___ your teeth.', choices: ['to', 'of', 'than'], answer: 0, why: 'be harmful to ～「～に有害だ」。' },
-      { sentence: 'This problem is closely related ___ climate change.', choices: ['to', 'of', 'than'], answer: 0, why: 'be related to ～「～と関係がある」。' },
-      { sentence: "I'm grateful ___ your kind advice.", choices: ['for', 'of', 'than'], answer: 0, why: '感謝する「こと」は be grateful for ～。' },
+      { sentence: 'Too much sugar is harmful ___ your teeth.', choices: ['to', 'for', 'with', 'at'], answer: 0, why: 'be harmful to ～「～に有害だ」（be good for ～と前置詞がちがう）。' },
+      { sentence: 'Scientists believe this problem is closely related ___ climate change.', choices: ['to', 'at', 'for', 'about'], answer: 0, why: 'be related to ～「～と関係がある」。' },
+      { sentence: 'I’m very grateful ___ your kind advice.', choices: ['for', 'to', 'of', 'with'], answer: 0, why: '感謝する「こと」には for（be grateful for 物事）。感謝する「人」には to（be grateful to 人）。' },
     ],
   },
   {
