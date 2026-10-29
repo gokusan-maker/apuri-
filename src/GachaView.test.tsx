@@ -307,7 +307,8 @@ it('ガチャ：NEW! の札がぴょこっと左右にゆれる（CSS）', async
 it('ガチャのまとめ引き：SR・UR のカードだけふちが虹色に光る（CSS）', async () => {
   const { readFileSync } = await import('node:fs')
   const css = readFileSync('src/polish.css', 'utf8')
-  expect(css).toMatch(/\.gacha-multi li\.r-SR, \.gacha-multi li\.r-UR \{ animation: treasure-pop 0\.6s ease-out both, rare-rim/)
+  expect(css).toMatch(/\.gacha-multi li\.r-SR, \.gacha-multi li\.r-UR \{ animation: multi-card-in 0\.6s ease-out both, rare-rim/)
+  expect(css).toMatch(/\.gacha-multi li \{ animation-name: multi-card-in; \}/) // 1枚ずつくるっと出てくる
   expect(css).toMatch(/@keyframes rare-rim/)
 })
 

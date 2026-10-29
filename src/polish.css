@@ -4371,7 +4371,7 @@ header .event-chips { margin: 0 0 2px; }
 @media (prefers-reduced-motion: reduce) { .arena-shield { animation: none; } }
 
 /* ガチャのまとめ引き：SR・UR のカードだけ、ふちが虹色に光る（出てくる動きはそのまま） */
-.gacha-multi li.r-SR, .gacha-multi li.r-UR { animation: treasure-pop 0.6s ease-out both, rare-rim 2.4s linear infinite; }
+.gacha-multi li.r-SR, .gacha-multi li.r-UR { animation: multi-card-in 0.6s ease-out both, rare-rim 2.4s linear infinite; }
 @keyframes rare-rim {
   0%, 100% { box-shadow: 0 0 0 2px #f87171, 0 0 10px rgb(248 113 113 / 0.6); }
   25% { box-shadow: 0 0 0 2px #fbbf24, 0 0 10px rgb(251 191 36 / 0.6); }
@@ -4481,3 +4481,8 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .friend-mini:active svg { animation: friend-hop 0.3s ease-out; }
 @keyframes friend-hop { 0% { transform: translateY(0); } 40% { transform: translateY(-6px) scale(1.08); } 100% { transform: translateY(0); } }
 @media (prefers-reduced-motion: reduce) { .friend-mini:active svg { animation: none; } }
+
+/* ガチャのまとめ引き：カードが1枚ずつ、くるっと回りながら出てくる（平面のまま回す） */
+.gacha-multi li { animation-name: multi-card-in; }
+@keyframes multi-card-in { 0% { transform: rotate(-200deg) scale(0.3); opacity: 0; } 70% { transform: rotate(10deg) scale(1.15); opacity: 1; } 100% { transform: rotate(0) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .gacha-multi li { animation: none; } }
