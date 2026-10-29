@@ -13891,6 +13891,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-chochin',
+    title: 'Lights Made of Paper',
+    level: '難関大（評論）',
+    paragraphs: [
+      "At summer festivals in Japan, you can see rows of glowing paper lanterns called chochin. A chochin has a frame ( A ) of thin bamboo, and it is covered with strong Japanese paper. Long ago, a candle was placed inside, and the soft light helped people walk on dark streets.",
+      "One clever point is that a chochin can be folded flat ( B ) it is not used. Then it is easy to carry and store. This made it a useful light for travelers in the days before electric lights.",
+      "Lanterns also have a special meaning. In some places, during the Obon season in summer, people float small lanterns on rivers. They believe the lights guide the spirits of their family members who have died.",
+      "Today, many chochin use electric bulbs instead of candles because they are safer. Still, when the lanterns light up the night, they remind people of old traditions and the warm feeling of a summer evening.",
+    ],
+    ja: [
+      '日本の夏祭りでは、ちょうちんと呼ばれる光る紙の明かりがならんでいるのが見られる。ちょうちんには細い竹でできたわく組みがあり、じょうぶな和紙でおおわれている。昔は中にろうそくを置き、そのやわらかな光が、人々が暗い道を歩く助けになった。',
+      'かしこい点の1つは、使わないときにちょうちんを平らにたためることだ。そうすると持ち運びやしまうのがかんたんになる。このため、電気の明かりがなかった時代には、旅をする人にとって便利な明かりだった。',
+      'ちょうちんには特別な意味もある。ある地域では、夏のお盆の時期に、人々が小さな明かりを川に流す。その明かりが、なくなった家族のたましいを導くと信じているのだ。',
+      '今日では、安全なので、ろうそくのかわりに電球を使うちょうちんが多い。それでも、ちょうちんが夜を照らすと、人々は古い伝統や、夏の夜のあたたかい気持ちを思い出すのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['made', 'making', 'makes', 'to make'], answer: 0, why: '「細い竹でできたわく組み」なので、過去分詞 made がうしろから frame を説明する（be made of ～「～でできている」）。making・makes・to make は入らない。' },
+      { id: 'B', choices: ['when', 'during', 'despite', 'because of'], answer: 0, why: 'うしろに文（it is not used）が続き、「～するときに」を表すので接続詞 when。during・despite・because of は前置詞なので、うしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'glowing',
+      choices: ['giving out a soft light', 'making a loud sound', 'moving very fast', 'getting very cold'],
+      answer: 0,
+      why: 'glow は「（やわらかく）光る・かがやく」。ちょうちんがやわらかい光を出しているという意味。',
+    },
+    order: {
+      words: ['easy', 'to', 'carry', 'and', 'store'],
+      rest: '',
+      answer: 'easy to carry and store',
+      ja: '持ち運びやしまうのがかんたん（easy to ～「～しやすい」）',
+    },
+    tf: [
+      { statement: 'ちょうちんのわく組みは、細い竹でできている。', answer: true, why: '第1段落 A chochin has a frame made of thin bamboo。' },
+      { statement: 'ちょうちんは、たたむことができない。', answer: false, why: '第2段落 a chochin can be folded flat when it is not used。' },
+      { statement: '今では、電球を使うちょうちんが多い。', answer: true, why: '第4段落 many chochin use electric bulbs instead of candles。' },
+    ],
+    qa: [
+      { q: 'Why was a chochin useful for travelers long ago?', choices: ['It could be folded flat and carried easily.', 'It was very heavy.', 'It used electric bulbs.', 'It could be eaten.'], answer: 0, why: '第2段落 Then it is easy to carry and store. This made it a useful light for travelers。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
