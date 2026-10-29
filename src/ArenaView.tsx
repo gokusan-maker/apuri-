@@ -274,6 +274,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
 
   return (
     <section className="card boss battle-v2 arena" style={{ '--boss': color } as CSSProperties} aria-label="闘技場">
+      {/* 無限の階に入ると、うしろで星がゆっくり流れる */}
+      {isArenaEndless(shown) && <span className="arena-starfield" aria-hidden="true" />}
       <div className="stage-head">
         <button className="stage-back" onClick={finish}>
           🏁 終了

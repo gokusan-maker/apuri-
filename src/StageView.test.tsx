@@ -1527,3 +1527,14 @@ it('ボス城の階の結果：正解の数のバーが、正解した割合の�
   })
   expect(document.querySelector<HTMLElement>('.bfloor .acc-bar i')!.style.width).toBe('100%')
 })
+
+it('闘技場：無限の階に入ると、うしろで星がゆっくり流れる（ふつうの階では出ない）', async () => {
+  const { Arena } = await import('./ArenaView')
+  const { ARENA_ENDLESS } = await import('./arena')
+  localStorage.clear()
+  const { unmount } = render(<Arena start={5} onExit={() => {}} />)
+  expect(document.querySelector('.arena-starfield')).toBeNull()
+  unmount()
+  render(<Arena start={ARENA_ENDLESS + 2} onExit={() => {}} />)
+  expect(document.querySelector('.arena .arena-starfield')).not.toBeNull()
+})
