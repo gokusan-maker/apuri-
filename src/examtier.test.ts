@@ -96,3 +96,10 @@ it('本番の長さの長文：私大・国公立の「在宅勤務と都市」�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(17)
   expect(tierOf(p)).toBe('shiritsu')
 })
+
+it('本番の長さの長文：IELTS の機械翻訳の長文は700〜950語で NOT GIVEN の設問がある', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-machine-translation')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(700)
+  expect(passageStats(p).words).toBeLessThanOrEqual(950)
+  expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
+})
