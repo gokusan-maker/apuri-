@@ -14396,6 +14396,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-talking-strangers',
+    title: 'Why We Avoid Talking to Strangers',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On a crowded morning train, dozens of people may stand within arm’s length of one another for half an hour without exchanging a single word. Most of them are looking at their phones, and anyone who started a conversation with the person next to them would probably be seen as slightly strange. This silence seems natural to us, but psychologists have begun to ask whether it is actually in our own interest.",
+      "In a series of experiments, researchers asked commuters to do one of three things during their journey: to talk with a stranger, to sit quietly by themselves, or to behave as they normally would. Before the experiment, most participants predicted that talking with a stranger would be the least pleasant option. The results showed the opposite. Those who had a conversation reported a more positive journey than those in the other groups, and none of them said that their attempt to talk had been rudely rejected.",
+      "Why, then, do we keep to ourselves? One reason seems to be that we underestimate how interested other people are in talking to us. We assume that strangers want to be left alone, ( A ) they are likely to be making the same assumption about us. As a result, each person waits for the other to speak first, and nobody does. Another reason is that we tend to imagine that a conversation will be awkward or will end badly, although in practice most people respond politely and many enjoy the chance to talk.",
+      "These findings do not mean that everyone should start chatting with every stranger they meet. Some people genuinely need quiet time, and in some situations a conversation would be unwelcome or even unsafe. ( B ), they suggest that our fear of brief social contact is often greater than it needs to be, and that small moments of connection, such as a short chat with a shop assistant or a neighbor, can make a real difference to how we feel during the day.",
+      "Some researchers believe that this matters more than ever. As technology allows us to shop, work, and travel with less and less contact with other people, opportunities for casual conversation are disappearing. If we are not careful, we may lose a simple source of happiness without even noticing it, ( C ) we never realized how much it was worth.",
+    ],
+    ja: [
+      '混んだ朝の電車では、何十人もの人がたがいに手のとどく距離に30分も立っていながら、ひとことも言葉をかわさないことがある。ほとんどの人はスマートフォンを見ていて、となりの人に話しかけはじめた人がいれば、たぶん少し変わった人だと思われるだろう。この沈黙はわたしたちにはあたりまえに思えるが、心理学者たちは、それが本当にわたしたち自身のためになっているのかを問いはじめている。',
+      '一連の実験で、研究者たちは通勤客に、移動中に3つのうちどれかをするようたのんだ。知らない人と話す、ひとりで静かにすわっている、ふだんどおりにふるまう、の3つである。実験の前、ほとんどの参加者は、知らない人と話すのがいちばん楽しくない選択だろうと予想していた。結果は逆だった。会話をした人たちは、ほかのグループの人たちより移動が楽しかったと報告し、話しかけようとして失礼にことわられたと答えた人はひとりもいなかった。',
+      'では、なぜわたしたちは人とかかわらないのだろうか。理由のひとつは、ほかの人がどれほど自分と話したがっているかを、わたしたちが低く見積もっていることのようだ。わたしたちは知らない人はそっとしておいてほしいのだと思いこむが、相手もおそらくわたしたちについて同じように思いこんでいる。その結果、それぞれが相手が先に話すのを待ち、だれも話さない。もうひとつの理由は、会話が気まずくなったり悪い終わり方をしたりすると想像しがちなことだ。実際には、たいていの人はていねいに応じ、話す機会を楽しむ人も多いのだが。',
+      'こうした発見は、だれもが会う知らない人みんなとおしゃべりを始めるべきだという意味ではない。本当に静かな時間が必要な人もいるし、会話が歓迎されなかったり、安全でなかったりする場面もある。それでも、短い人とのふれ合いへのおそれは、必要以上に大きいことが多く、店員や近所の人とのちょっとしたおしゃべりのような小さなつながりの瞬間が、その日の気分に本当にちがいを生みうることを示している。',
+      'このことは今まで以上に大切だと考える研究者もいる。技術のおかげで、わたしたちはほかの人とのふれ合いをますます少なくして買い物をし、働き、移動できるようになり、気軽な会話の機会は消えつつある。気をつけていないと、わたしたちはその価値がどれほど大きかったかに気づいていなかったために、失ったことにさえ気づかないまま、幸せの単純な源を失ってしまうかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so'], answer: 0, why: '「わたしたちは～と思いこむが、一方で相手も同じことを思いこんでいる」と2つを対比しているので while（～だが一方で）。because では理由になり、意味が通らない。' },
+      { id: 'B', choices: ['Even so', 'As a result', 'For instance', 'In addition'], answer: 0, why: '前の文で「話しかけるべきでない場面もある」と譲歩し、「それでも、おそれは必要以上に大きい」と主張にもどるので Even so（それでも）。' },
+      { id: 'C', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「その価値に気づかなかったので、失ったことにも気づかない」と理由を表すので because。' },
+    ],
+    tf: [
+      { statement: '実験の前、多くの参加者は、知らない人と話すのはあまり楽しくないだろうと考えていた。', answer: true, why: '第2段落 most participants predicted that talking with a stranger would be the least pleasant option。' },
+      { statement: '実験では、話しかけた人の多くが相手に失礼な態度でことわられた。', answer: false, why: '第2段落 none of them said that their attempt to talk had been rudely rejected。' },
+      { statement: '筆者は、どんな場面でも知らない人に話しかけるべきだと主張している。', answer: false, why: '第4段落 These findings do not mean that everyone should start chatting with every stranger … in some situations a conversation would be unwelcome or even unsafe。' },
+      { statement: '技術の発達で、気軽な会話の機会がへっていると考える研究者がいる。', answer: true, why: '第5段落 opportunities for casual conversation are disappearing。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why does nobody on the train start a conversation?', choices: ['Each person assumes the others want to be left alone and waits for them to speak first.', 'Talking on trains is against the rules in most cities.', 'People are too tired to speak in the morning.', 'Most passengers do not speak the same language.'], answer: 0, why: '第3段落 We assume that strangers want to be left alone … each person waits for the other to speak first, and nobody does。' },
+      { q: 'Which of the following would the writer most likely agree with?', choices: ['A short, friendly chat with a shop assistant can improve your mood.', 'People should never use phones on trains.', 'Quiet people are less happy than talkative people.', 'Technology has made people more sociable than before.'], answer: 0, why: '第4段落 small moments of connection, such as a short chat with a shop assistant … can make a real difference to how we feel。' },
+    ],
+    gist: [
+      { para: 2, choices: ['人が話しかけない理由：相手の気持ちの思いちがい', '電車でのマナーの歴史', 'スマートフォンの使いすぎ', '会話を上手に終わらせる方法'], answer: 0, why: '第3段落は、相手が話したがっていることを低く見積もること、会話がうまくいかないと想像することの2つの理由をあげている。' },
+      { para: 3, choices: ['話しかけるおそれは必要以上に大きい', '知らない人とは決して話すべきでない', '静かな時間はむだである', '店員はいつもいそがしい'], answer: 0, why: '第4段落は、例外を認めたうえで Even so … our fear of brief social contact is often greater than it needs to be と述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
