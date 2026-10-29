@@ -13932,6 +13932,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-daruma',
+    title: 'The Doll That Always Gets Up',
+    level: '難関大（評論）',
+    paragraphs: [
+      "A daruma is a round, red Japanese doll with a serious face. It has no arms or legs, but it has one special secret. It is a doll ( A ) bottom is heavy, so when you push it over, it always rocks back and stands up again.",
+      "Because of this, the daruma has become a symbol of never giving up. There is a Japanese saying that means \"fall down seven times, get up eight.\" Many people keep a daruma at home or at work to remind themselves to keep trying.",
+      "Many daruma are sold with both eyes left white. When people make a wish or set a goal, they paint in one eye. They paint the other eye only when the wish comes ( B ). Until then, the doll with one eye watches them work toward their goal.",
+      "Students sometimes buy a daruma before an important exam. Win or lose, the doll reminds them that getting back up is what matters most.",
+    ],
+    ja: [
+      'だるまは、まじめな顔をした、丸くて赤い日本の人形だ。手も足もないが、特別なひみつが1つある。底が重い人形なので、おしたおしても必ずゆれもどって、また立ち上がるのだ。',
+      'このため、だるまはあきらめないことのしるしになった。日本には「七転び八起き」という意味のことわざがある。多くの人が、がんばり続けることを思い出すために、家や職場にだるまを置いている。',
+      '多くのだるまは、両目が白いまま売られている。人々は願いごとをしたり目標を決めたりすると、片方の目をぬる。もう片方の目は、願いがかなったときにだけぬる。それまでは、片目のだるまが、目標に向かってがんばる人を見守っているのだ。',
+      '大事な試験の前に、だるまを買う生徒もいる。勝っても負けても、だるまは、もう一度立ち上がることこそがいちばん大切だと教えてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['whose', 'which', 'that', 'what'], answer: 0, why: 'a doll の「底」が重い、と所有の関係なので関係代名詞 whose（whose bottom「その底が」）。which・that はうしろに欠けた部分が必要で、what は先行詞をとらない。' },
+      { id: 'B', choices: ['true', 'truly', 'truth'], answer: 0, why: 'come true「（願い・夢が）かなう」。come のあとは形容詞 true。truly は副詞、truth は名詞なので入らない。' },
+    ],
+    underline: {
+      phrase: 'never giving up',
+      choices: ['continuing to try without stopping', 'losing all the time', 'sleeping a lot', 'buying many dolls'],
+      answer: 0,
+      why: 'give up は「あきらめる」。never giving up で「決してあきらめないこと」、つまりがんばり続けること。',
+    },
+    order: {
+      words: ['to', 'remind', 'themselves', 'to', 'keep', 'trying'],
+      rest: '',
+      answer: 'to remind themselves to keep trying',
+      ja: 'がんばり続けることを自分に思い出させるために（remind ＋人＋to ～「（人）に～することを思い出させる」）',
+    },
+    tf: [
+      { statement: 'だるまは、おしたおしてもまた立ち上がる。', answer: true, why: '第1段落 when you push it over, it always rocks back and stands up again。' },
+      { statement: 'だるまは、目がぬられた状態で売られることが多い。', answer: false, why: '第3段落 Many daruma are sold with both eyes left white。' },
+      { statement: '願いがかなったら、もう片方の目をぬる。', answer: true, why: '第3段落 They paint the other eye only when the wish comes true。' },
+    ],
+    qa: [
+      { q: 'Why does a daruma always stand up again?', choices: ['Its bottom is heavy.', 'It has strong legs.', 'Someone holds it.', 'It is made of rubber.'], answer: 0, why: '第1段落 It is a doll whose bottom is heavy, so ... it always rocks back and stands up again。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
