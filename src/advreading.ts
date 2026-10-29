@@ -13604,6 +13604,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ricecooker',
+    title: 'The Machine That Changed the Kitchen',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For a long time, cooking rice in Japan was hard work. People cooked it in a pot over a fire early in the morning. They had to watch the fire carefully ( A ) the rice from burning, and they changed the heat many times.",
+      "In the 1950s, a Japanese company began selling an electric rice cooker. Its secret was simple. While there is water in the pot, the temperature stays at about 100 degrees. When all the water is gone, the temperature rises quickly. The cooker had a switch ( B ) turned off the heat by itself at that moment.",
+      "Now people could put rice and water in the pot at night and wake up to fresh rice. This gave families, especially the people who usually cooked, much more free time in the morning.",
+      "Today, rice cookers can do many things, such as cooking cakes and keeping rice warm all day. Still, they are all based on that first simple idea.",
+    ],
+    ja: [
+      '長いあいだ、日本でごはんをたくのはたいへんな仕事だった。人々は朝早く、火にかけたなべでごはんをたいた。ごはんがこげないように火を注意深く見ていなければならず、何度も火かげんを変えた。',
+      '1950年代、日本のある会社が電気炊飯器を売りはじめた。そのひみつは単純だった。なべに水があるあいだは、温度はおよそ100度のままだ。水がすべてなくなると、温度はすぐに上がる。炊飯器には、そのしゅんかんにひとりでに熱を切るスイッチがついていたのだ。',
+      'これで人々は、夜のうちになべに米と水を入れておき、朝起きるとたきたてのごはんが食べられるようになった。これは家族、とくにいつも料理をしていた人に、朝のずっと多くの自由な時間をあたえた。',
+      '今日、炊飯器はケーキを焼いたり、一日中ごはんをあたたかく保ったりと、いろいろなことができる。それでも、どれもあの最初の単純なアイデアがもとになっているのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['to keep', 'keeping', 'kept', 'keep'], answer: 0, why: '「ごはんがこげないように」と目的を表すので to 不定詞 to keep（keep A from ～ing「Aが～しないようにする」）。keeping・kept・keep では目的の意味にならない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a switch（もの）で、うしろの turned off の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'by itself',
+      choices: ['without anyone touching it', 'with a lot of noise', 'very slowly', 'only at night'],
+      answer: 0,
+      why: 'by itself は「ひとりでに・自動で」。だれもさわらなくても熱が切れたという意味。',
+    },
+    order: {
+      words: ['wake', 'up', 'to', 'fresh', 'rice'],
+      rest: '',
+      answer: 'wake up to fresh rice',
+      ja: '起きるとたきたてのごはんがある（wake up to ～「目がさめると～がある」）',
+    },
+    tf: [
+      { statement: '昔は、ごはんがこげないように火を見ていなければならなかった。', answer: true, why: '第1段落 They had to watch the fire carefully to keep the rice from burning。' },
+      { statement: '水がなくなっても、なべの温度は100度のままだ。', answer: false, why: '第2段落 When all the water is gone, the temperature rises quickly。' },
+      { statement: '電気炊飯器のおかげで、朝の自由な時間がふえた。', answer: true, why: '第3段落 This gave families ... much more free time in the morning。' },
+    ],
+    qa: [
+      { q: 'What was the secret of the first electric rice cooker?', choices: ['A switch turned off the heat when the water was gone.', 'It used a very large fire.', 'It cooked rice in cold water.', 'It needed a person to watch it all the time.'], answer: 0, why: '第2段落 The cooker had a switch that turned off the heat by itself at that moment。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
