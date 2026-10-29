@@ -236,7 +236,7 @@ describe('高校の文法問題のむずかしさ', () => {
   const formOnly = (q: { choices: string[] }) => q.choices.every((c) => c.slice(0, 3).toLowerCase() === q.choices[0].slice(0, 3).toLowerCase())
   const hs = GRAMMAR.filter((u) => gradeOf(u.id) === '高校').flatMap((u) => u.questions)
   it('品詞ちがいだけの4択はへらしていく（ふえたら失敗）', () => {
-    expect(hs.filter(formOnly).length).toBeLessThanOrEqual(88)
+    expect(hs.filter(formOnly).length).toBeLessThanOrEqual(87)
   })
   it('見直した単元は4択で、品詞ちがいだけの問題がない', () => {
     for (const id of ['prep-idiom-inaword', 'prep-idiom-atspeed', 'prep-idiom-latest', 'prep-idiom-condition']) {
@@ -252,6 +252,6 @@ describe('高校の文法問題のむずかしさ', () => {
 describe('高校の文法問題の選択肢の数', () => {
   it('3択の問題はへらしていく（入試にあわせて4択にする。ふえたら失敗）', () => {
     const hs = GRAMMAR.filter((u) => gradeOf(u.id) === '高校').flatMap((u) => u.questions)
-    expect(hs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(825)
+    expect(hs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(807)
   })
 })

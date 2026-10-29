@@ -6611,9 +6611,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I had a hard time finding the station.', ja: '駅を見つけるのに苦労した。' },
     ],
     questions: [
-      { sentence: 'The children had fun ___ in the pool.', choices: ['swimming', 'to swim', 'swim'], answer: 0, why: 'have fun ～ing「～して楽しむ」。' },
-      { sentence: 'I had a hard time ___ asleep last night.', choices: ['falling', 'to fall', 'fell'], answer: 0, why: 'have a hard time ～ing「～するのに苦労する」。' },
-      { sentence: 'Did you have a good time ___ with your cousins?', choices: ['talking', 'talked', 'talk'], answer: 0, why: 'have a good time ～ing「～して楽しく過ごす」。' },
+      { sentence: 'The children had fun ___ in the pool all afternoon.', choices: ['swimming', 'to swim', 'swim', 'swam'], answer: 0, why: 'have fun ～ing「～して楽しむ」。' },
+      { sentence: 'I had a hard time ___ asleep last night because of the noise.', choices: ['falling', 'to fall', 'fell', 'fall'], answer: 0, why: 'have a hard time ～ing「～するのに苦労する」（have difficulty / trouble ～ing も同じ形）。' },
+      { sentence: 'She had trouble ___ the answer to the last question.', choices: ['finding', 'to find', 'found', 'find'], answer: 0, why: 'have trouble ～ing「～するのに苦労する」。' },
     ],
   },
   {
@@ -6628,9 +6628,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Besides tennis, she plays the piano.', ja: 'テニスのほかに、彼女はピアノもひく。' },
     ],
     questions: [
-      { sentence: 'Come and sit ___ me.', choices: ['beside', 'besides', 'except'], answer: 0, why: '「となりに」は場所の beside。' },
-      { sentence: '___ English, she speaks Chinese and Korean.', choices: ['Besides', 'Beside', 'Except'], answer: 0, why: '「英語に加えて」は besides。' },
-      { sentence: 'Everyone came to the party ___ Tom.', choices: ['except', 'beside', 'among'], answer: 0, why: '「トム以外は」は except。' },
+      { sentence: 'Come and sit ___ me so that we can share the book.', choices: ['beside', 'besides', 'except', 'between'], answer: 0, why: '「となりに」は場所の beside。besides は「～に加えて」。between は2つのもののあいだ。' },
+      { sentence: '___ English, she speaks Chinese and Korean.', choices: ['Besides', 'Beside', 'Except', 'Without'], answer: 0, why: '「英語に加えて」は besides。except だと「英語を除いて」になり、話せる言語の説明として意味が合わない。' },
+      { sentence: 'Everyone came to the party ___ Tom, who was sick in bed.', choices: ['except', 'besides', 'beside', 'with'], answer: 0, why: '「トム以外はみんな」なので except。besides では「トムに加えて」になる。' },
     ],
   },
   {
@@ -6645,9 +6645,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We walked past the old castle on our way home.', ja: '私たちは帰り道に古い城のそばを通りすぎた。' },
     ],
     questions: [
-      { sentence: 'The cat came in ___ the open window.', choices: ['through', 'thorough', 'threw'], answer: 0, why: '「～を通りぬけて」は前置詞 through。thorough は形容詞、threw は throw の過去形。' },
-      { sentence: 'The dog ran ___ me.', choices: ['toward', 'forward', 'afterward'], answer: 0, why: '「～のほうへ」は前置詞 toward。forward・afterward は副詞なので、うしろに名詞を置けない。' },
-      { sentence: 'We walked ___ the museum on our way to school.', choices: ['past', 'passed', 'pass'], answer: 0, why: '「～のそばを通りすぎて」は前置詞 past。walked のあとに動詞 passed・pass は置けない。' },
+      { sentence: 'The cat came in ___ the open window.', choices: ['through', 'across', 'along', 'over'], answer: 0, why: '窓を「通りぬけて」入るので through。across は「横切って」、along は「～にそって」。' },
+      { sentence: 'When the dog saw its owner, it ran ___ her with its tail wagging.', choices: ['toward', 'forward', 'afterward', 'backward'], answer: 0, why: '「～のほうへ」は前置詞 toward。forward・afterward・backward は副詞なので、うしろに名詞を置けない。' },
+      { sentence: 'We walked ___ the museum on our way to the station.', choices: ['past', 'passed', 'pass', 'passing by of'], answer: 0, why: '「～のそばを通りすぎて」は前置詞 past。walked のあとに動詞 passed / pass は置けない。' },
     ],
   },
   {
@@ -6662,9 +6662,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The temperature dropped below zero last night.', ja: '昨夜、気温は零下まで下がった。' },
     ],
     questions: [
-      { sentence: 'Our plane was flying ___ the clouds.', choices: ['above', 'abroad', 'upper'], answer: 0, why: '「～より上に」は前置詞 above。abroad は副詞、upper は形容詞なので名詞の前に置けない。' },
-      { sentence: 'The temperature fell ___ zero.', choices: ['below', 'bottom', 'lower'], answer: 0, why: '「～より下に」は前置詞 below。bottom は名詞、lower は形容詞・動詞。' },
-      { sentence: 'The small village is ___ the mountains.', choices: ['beyond', 'further', 'farther'], answer: 0, why: '「～の向こうに」は前置詞 beyond。further・farther は副詞・形容詞なので、うしろに名詞を直接置けない。' },
+      { sentence: 'Our plane was flying high ___ the clouds.', choices: ['above', 'over of', 'up', 'upper'], answer: 0, why: '「～より上に」は前置詞 above。upper は形容詞、up は「上へ」で the clouds の前に置いて「～より上に」の意味にならない。' },
+      { sentence: 'Last night the temperature dropped ___ zero for the first time this winter.', choices: ['below', 'under of', 'down', 'lower'], answer: 0, why: '温度・数値の「～より下に」は below（below zero「氷点下」）。' },
+      { sentence: 'The small village lies just ___ the mountains, so it is hard to reach.', choices: ['beyond', 'further', 'farther', 'besides'], answer: 0, why: '「～の向こうに」は前置詞 beyond。further / farther はうしろに名詞を直接置けず、besides は「～に加えて」。' },
     ],
   },
   {
@@ -6679,9 +6679,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Unlike her brother, Mika loves getting up early.', ja: '兄とちがって、ミカは早起きが大好きだ。' },
     ],
     questions: [
-      { sentence: 'Are you for or ___ the plan?', choices: ['against', 'again', 'agent'], answer: 0, why: '「～に反対して」は前置詞 against。again は副詞、agent は名詞。' },
-      { sentence: 'It snowed ___ the night.', choices: ['throughout', 'thoroughly', 'though'], answer: 0, why: '「～の間ずっと」は前置詞 throughout。thoroughly は副詞、though は接続詞なので名詞を続けられない。' },
-      { sentence: '___ his brother, Ken is very quiet.', choices: ['Unlike', 'Dislike', 'Unlikely'], answer: 0, why: '「～とちがって」は前置詞 unlike。dislike は動詞、unlikely は形容詞。' },
+      { sentence: 'Most of the members voted ___ the proposal, so it was rejected.', choices: ['against', 'for', 'with', 'over'], answer: 0, why: '「否決された」ので vote against ～「～に反対票を投じる」。vote for は「賛成票を投じる」で逆。' },
+      { sentence: 'The museum is open ___ the year, even on national holidays.', choices: ['throughout', 'through out of', 'during of', 'within of'], answer: 0, why: 'throughout the year「1年じゅうずっと」。during のあとに of は来ない。' },
+      { sentence: '___ his talkative brother, Ken rarely speaks in class.', choices: ['Unlike', 'Dislike', 'Unlikely', 'Alike'], answer: 0, why: '「～とちがって」は前置詞 unlike。dislike は動詞、unlikely・alike は形容詞（副詞）で、うしろに名詞を続けて「～とちがって」の意味にならない。' },
     ],
   },
   {
@@ -6696,9 +6696,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our coach is strict with us, but she is fair.', ja: 'コーチは私たちにきびしいが、公平だ。' },
     ],
     questions: [
-      { sentence: 'This song is popular ___ young people.', choices: ['with', 'of', 'than'], answer: 0, why: 'be popular with ～「～に人気がある」。' },
-      { sentence: 'Our teacher is strict ___ us about homework.', choices: ['with', 'of', 'than'], answer: 0, why: 'be strict with 人「人にきびしい」。' },
-      { sentence: 'Always be polite ___ older people.', choices: ['to', 'of', 'than'], answer: 0, why: 'be polite to 人「人に礼儀正しい」。' },
+      { sentence: 'This app has become very popular ___ teenagers around the world.', choices: ['with', 'for', 'of', 'to'], answer: 0, why: 'be popular with / among ～「～に人気がある」。' },
+      { sentence: 'Our coach is strict ___ us about being on time, but she is always fair.', choices: ['with', 'to', 'for', 'at'], answer: 0, why: 'be strict with 人「人にきびしい」（be strict about 物事）。' },
+      { sentence: 'You should be polite ___ everyone, even when you disagree with them.', choices: ['to', 'on', 'for', 'at'], answer: 0, why: 'be polite to 人「人に礼儀正しい」。kind to / rude to と同じ to。' },
     ],
   },
   {
