@@ -148,6 +148,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-withasmile': { wrong: 'The clerk welcomed us with a smiling.', right: 'The clerk welcomed us with a smile.', why: 'with a smile「にっこりして」。a のあとは名詞 smile（smiling は入らない）。' },
   'prep-idiom-atspeed': { wrong: 'Keep the fish at a temperatures of 2 degrees.', right: 'Keep the fish at a temperature of 2 degrees.', why: 'at a temperature of ～「～の温度で」。a のあとは単数 temperature。' },
   'prep-idiom-inaword': { wrong: 'He is my father’s brother. In other word, he is my uncle.', right: 'He is my father’s brother. In other words, he is my uncle.', why: 'in other words「言いかえれば」。words と複数形にする。' },
+  'prep-idiom-atthesametime': { wrong: 'Please enter the room one at the time.', right: 'Please enter the room one at a time.', why: 'one at a time「1人（1つ）ずつ」。the ではなく a を使う。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
