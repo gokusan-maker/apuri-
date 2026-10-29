@@ -509,6 +509,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M30 38 Q50 30 70 38 M28 46 Q50 38 72 46" fill="none" stroke="#44403c" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'toucan')
+    return (
+      <g>
+        {/* 大きなオレンジのくちばし */}
+        <path d="M42 60 Q62 56 76 66 Q62 72 42 68 Z" fill="#fb923c" stroke="#9a3412" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M70 64 Q74 66 76 66" fill="none" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
