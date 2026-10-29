@@ -13809,6 +13809,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-climbfuji',
+    title: 'Climbing Mt. Fuji at Night',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Mt. Fuji is 3,776 meters high, and every summer many people try to climb it. The mountain is usually open for climbing only in July, August, and early September, when there is little snow on the trails.",
+      "Many climbers start walking in the evening and stay at a mountain hut for a few hours. They leave again in the middle of the night. These are people ( A ) want to see the sunrise from the top. In Japanese, this view is called goraiko, and many climbers say it is the best part of the trip.",
+      "However, the top of the mountain is very different from the bottom. Even in summer, the temperature can drop to almost zero degrees, and the air has less oxygen. Some people get headaches because they climb too fast. So it is important ( B ) slowly and take breaks.",
+      "With warm clothes, enough water, and plenty of rest, climbers can safely enjoy one of the most beautiful mornings in Japan.",
+    ],
+    ja: [
+      '富士山の高さは3776メートルで、毎年夏に多くの人が登ろうとする。登山道に雪がほとんどない7月、8月、9月のはじめだけ、ふつうは登山ができる。',
+      '多くの登山者は夕方に歩きはじめ、山小屋で数時間休む。そして真夜中にまた出発する。彼らは、頂上から日の出を見たい人たちだ。日本語ではこのながめを「ご来光」と呼び、多くの登山者がそれを旅でいちばんよいところだと言う。',
+      'しかし、山の頂上はふもととはまったくちがう。夏でも気温は0度近くまで下がることがあり、空気中の酸素も少ない。速く登りすぎて頭が痛くなる人もいる。だから、ゆっくり登って休けいをとることが大切だ。',
+      'あたたかい服、十分な水、そしてたっぷりの休みがあれば、登山者は日本で最も美しい朝の1つを安全に楽しめるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 people（人）で、うしろの want の主語が欠けているので関係代名詞 who。which はもの、whose はうしろに名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['to climb', 'climbing', 'climbed', 'climb'], answer: 0, why: 'it is important to ～「～することが大切だ」なので to climb。climbing・climbed・climb はこの形に入らない。' },
+    ],
+    underline: {
+      phrase: 'take breaks',
+      choices: ['stop and rest for a while', 'break something', 'run very fast', 'carry heavy bags'],
+      answer: 0,
+      why: 'take a break は「休けいする」。ときどき止まって休むという意味。',
+    },
+    order: {
+      words: ['one', 'of', 'the', 'most', 'beautiful', 'mornings'],
+      rest: 'in Japan',
+      answer: 'one of the most beautiful mornings',
+      ja: '最も美しい朝の1つ（one of the ＋最上級＋複数名詞）',
+    },
+    tf: [
+      { statement: '富士山は、一年中いつでも登れる。', answer: false, why: '第1段落 The mountain is usually open for climbing only in July, August, and early September。' },
+      { statement: '夜に出発して、頂上で日の出を見る登山者が多い。', answer: true, why: '第2段落 They leave again in the middle of the night. These are people who want to see the sunrise from the top。' },
+      { statement: '頂上は、夏でも気温がとても低くなることがある。', answer: true, why: '第3段落 Even in summer, the temperature can drop to almost zero degrees。' },
+    ],
+    qa: [
+      { q: 'Why do some people get headaches on Mt. Fuji?', choices: ['Because they climb too fast.', 'Because the sun is too bright.', 'Because the huts are noisy.', 'Because they drink too much water.'], answer: 0, why: '第3段落 Some people get headaches because they climb too fast。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
