@@ -11,6 +11,7 @@ import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MUL
 import { typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
+import { challengeOf } from './challenge'
 import { MonsterFigure } from './MonsterView'
 import { GachaReveal } from './GachaRevealView'
 
@@ -703,6 +704,7 @@ function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
           {got.has(pick) ? (
             <>
               <strong>{speciesOf(pick).name}</strong>：{speciesOf(pick).desc}
+              <span className="zukan-challenge">（今日のチャレンジ：{challengeOf(pick).icon} {challengeOf(pick).label}）</span>
             </>
           ) : (
             <>{speciesOf(pick).egg}から生まれるらしい…</>

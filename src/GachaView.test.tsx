@@ -430,3 +430,13 @@ it('デザイン68：キャラガチャのラインナップは左から順に�
   expect(items[2].style.getPropertyValue('--i')).toBe('2')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/prefers-reduced-motion: reduce\) \{ \.chara-gacha-lineup li \{ animation: none; \} \}/)
 })
+
+it('デザイン70：キャラ図鑑で会えた子をえらぶと、その子の「今日のチャレンジ」の問題の種類も出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const { challengeOf } = await import('./challenge')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText(`（今日のチャレンジ：${challengeOf('fox').icon} ${challengeOf('fox').label}）`)).toBeInTheDocument()
+})
