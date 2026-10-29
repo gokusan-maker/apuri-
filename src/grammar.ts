@@ -5659,9 +5659,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is sure of passing the test.', ja: '彼女はテストに合格すると確信している。' },
     ],
     questions: [
-      { sentence: 'He is sure ___ the game; he has practiced very hard.', choices: ['of winning', 'to winning', 'win'], answer: 0, why: '「（彼自身が）勝てると確信している」は be sure of ＋ -ing。of のあとは -ing。' },
-      { sentence: 'Leave now, and you are sure ___ the last train.', choices: ['to catch', 'of catch', 'catching'], answer: 0, why: '「（話し手から見て）きっと～する」は be sure to ＋ 原形。' },
-      { sentence: 'I\'m sure ___ she will like your present.', choices: ['that', 'of', 'to'], answer: 0, why: 'うしろが文（she will like …）なので be sure that ～。' },
+      { sentence: 'He is sure ___ the game; he has practiced very hard.', choices: ['of winning', 'to winning', 'win', 'for winning'], answer: 0, why: '「（彼自身が）勝てると確信している」は be sure of ＋ -ing。of のあとは -ing。' },
+      { sentence: 'Leave now, and you are sure ___ the last train.', choices: ['to catch', 'of catch', 'catching', 'to catching'], answer: 0, why: '「（話し手から見て）きっと～する」は be sure to ＋ 原形。' },
+      { sentence: 'I\'m sure ___ she will like your present.', choices: ['that', 'of', 'to', 'for'], answer: 0, why: 'うしろが文（she will like …）なので be sure that ～。' },
     ],
   },
   {
@@ -5676,9 +5676,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is learning Spanish with a view to working in Mexico.', ja: '彼女はメキシコで働くつもりで、スペイン語を学んでいる。' },
     ],
     questions: [
-      { sentence: 'She devoted herself to ___ sick children.', choices: ['helping', 'help', 'helped'], answer: 0, why: 'devote oneself to の to は前置詞なので ～ing。' },
-      { sentence: 'He saved money with a view ___ a car.', choices: ['to buying', 'to buy', 'for buy'], answer: 0, why: 'with a view to ～ing「～する目的で」。to のあとは ～ing。' },
-      { sentence: 'The company is committed to ___ less plastic.', choices: ['using', 'use', 'used'], answer: 0, why: 'be committed to ～ing「～に全力で取り組む」。' },
+      { sentence: 'She devoted herself to ___ sick children.', choices: ['helping', 'help', 'helped', 'helps'], answer: 0, why: 'devote oneself to の to は前置詞なので ～ing。' },
+      { sentence: 'He saved money with a view ___ a car.', choices: ['to buying', 'to buy', 'for buy', 'of buying'], answer: 0, why: 'with a view to ～ing「～する目的で」。to のあとは ～ing。' },
+      { sentence: 'The company is committed to ___ less plastic.', choices: ['using', 'use', 'used', 'uses'], answer: 0, why: 'be committed to ～ing「～に全力で取り組む」。' },
     ],
   },
   {
@@ -5693,9 +5693,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I should have known better than to leave my bike unlocked.', ja: '自転車にかぎをかけずに置いておくなんて、ばかなことをした。' },
     ],
     questions: [
-      { sentence: 'He knows better ___ to touch a hot pan.', choices: ['than', 'as', 'that'], answer: 0, why: 'know better than to ～「～するほどばかではない」。比較の than。' },
-      { sentence: 'You should know better than ___ during the test.', choices: ['to talk', 'talking', 'talk'], answer: 0, why: 'know better than のあとは to ＋ 原形。' },
-      { sentence: 'I should have known better than ___ him my password.', choices: ['to give', 'giving', 'gave'], answer: 0, why: 'should have known better than to ～「～するなんてばかだった」。than のあとは to ＋ 原形。' },
+      { sentence: 'He knows better ___ to touch a hot pan.', choices: ['than', 'as', 'that', 'so'], answer: 0, why: 'know better than to ～「～するほどばかではない」。比較の than。' },
+      { sentence: 'You should know better than ___ during the test.', choices: ['to talk', 'talking', 'talk', 'to talking'], answer: 0, why: 'know better than のあとは to ＋ 原形。' },
+      { sentence: 'I should have known better than ___ him my password.', choices: ['to give', 'giving', 'gave', 'to giving'], answer: 0, why: 'should have known better than to ～「～するなんてばかだった」。than のあとは to ＋ 原形。' },
     ],
   },
   {
@@ -5710,9 +5710,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If you have any questions, don\'t hesitate to ask.', ja: '質問があれば、えんりょなく聞いてください。' },
     ],
     questions: [
-      { sentence: 'He was reluctant ___ his old car.', choices: ['to sell', 'selling', 'sell'], answer: 0, why: 'be reluctant to ＋ 原形「～したがらない」。' },
-      { sentence: 'Please don\'t hesitate ___ me if you need help.', choices: ['to call', 'calling', 'call'], answer: 0, why: 'hesitate to ＋ 原形「～するのをためらう」。' },
-      { sentence: 'I\'m ___ to agree with you, but let me think a little more.', choices: ['inclined', 'inclining', 'incline'], answer: 0, why: 'be inclined to ～「～したい気がする」。be のあとは形容詞のはたらきの inclined。' },
+      { sentence: 'He was reluctant ___ his old car.', choices: ['to sell', 'selling', 'sell', 'to selling'], answer: 0, why: 'be reluctant to ＋ 原形「～したがらない」。' },
+      { sentence: 'Please don\'t hesitate ___ me if you need help.', choices: ['to call', 'calling', 'call', 'for calling'], answer: 0, why: 'hesitate to ＋ 原形「～するのをためらう」。' },
+      { sentence: 'I\'m ___ to agree with you, but let me think a little more.', choices: ['inclined', 'inclining', 'incline', 'to incline'], answer: 0, why: 'be inclined to ～「～したい気がする」。be のあとは形容詞のはたらきの inclined。' },
     ],
   },
   {
@@ -5727,9 +5727,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He took the wrong train and ended up in Osaka.', ja: '彼はちがう電車に乗って、結局大阪に着いてしまった。' },
     ],
     questions: [
-      { sentence: 'It started to rain, so we ended up ___ the movie at home.', choices: ['watching', 'to watch', 'watched'], answer: 0, why: 'end up -ing「結局～することになる」。' },
-      { sentence: 'I didn\'t plan to buy anything, but I ended up ___ three books.', choices: ['buying', 'to buy', 'bought'], answer: 0, why: 'end up のあとは -ing。to ＋ 原形は続かない。' },
-      { sentence: 'She took a wrong turn and ended up ___ a small village.', choices: ['in', 'to', 'on'], answer: 0, why: 'end up in ＋ 場所「結局～に行きつく」。' },
+      { sentence: 'It started to rain, so we ended up ___ the movie at home.', choices: ['watching', 'to watch', 'watched', 'to watching'], answer: 0, why: 'end up -ing「結局～することになる」。' },
+      { sentence: 'I didn\'t plan to buy anything, but I ended up ___ three books.', choices: ['buying', 'to buy', 'bought', 'to buying'], answer: 0, why: 'end up のあとは -ing。to ＋ 原形は続かない。' },
+      { sentence: 'She took a wrong turn and ended up ___ a small village.', choices: ['in', 'to', 'on', 'for'], answer: 0, why: 'end up in ＋ 場所「結局～に行きつく」。' },
     ],
   },
   {
@@ -5744,9 +5744,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This project needs a great deal of time.', ja: 'この計画にはたくさんの時間が必要だ。' },
     ],
     questions: [
-      { sentence: 'He spent a great deal of ___ on the project.', choices: ['money', 'coins', 'dollars'], answer: 0, why: 'a great deal of のあとは数えられない名詞。money は数えられない名詞、coins・dollars は複数形の数えられる名詞。' },
-      { sentence: 'A large ___ of students joined the event.', choices: ['number', 'amount', 'deal'], answer: 0, why: 'students（数えられる名詞の複数形）には a large number of。amount・deal は量に使う。' },
-      { sentence: 'There is a large amount of ___ in this lake.', choices: ['water', 'bottles', 'stones'], answer: 0, why: 'a large amount of のあとは数えられない名詞。water。' },
+      { sentence: 'He spent a great deal of ___ on the project.', choices: ['money', 'coins', 'dollars', 'bills'], answer: 0, why: 'a great deal of のあとは数えられない名詞。money は数えられない名詞、coins・dollars は複数形の数えられる名詞。' },
+      { sentence: 'A large ___ of students joined the event.', choices: ['number', 'amount', 'deal', 'plenty'], answer: 0, why: 'students（数えられる名詞の複数形）には a large number of。amount・deal は量に使う。' },
+      { sentence: 'There is a large amount of ___ in this lake.', choices: ['water', 'bottles', 'stones', 'trees'], answer: 0, why: 'a large amount of のあとは数えられない名詞。water。' },
     ],
   },
   {
@@ -5761,9 +5761,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Every student in this class has a dictionary.', ja: 'このクラスの生徒はみんな辞書を持っている。' },
     ],
     questions: [
-      { sentence: 'The teacher, as well as the students, ___ excited about the trip.', choices: ['is', 'are', 'be'], answer: 0, why: 'A as well as B は A（the teacher）に合わせて is。' },
-      { sentence: 'Either you or Ken ___ to clean the room.', choices: ['has', 'have', 'having'], answer: 0, why: 'either A or B は近いほうの B（Ken・3人称単数）に合わせて has。' },
-      { sentence: 'Each of the students ___ a tablet.', choices: ['has', 'have', 'having'], answer: 0, why: 'each of ～ は「それぞれ」で単数あつかいなので has。' },
+      { sentence: 'The teacher, as well as the students, ___ excited about the trip.', choices: ['is', 'are', 'be', 'were'], answer: 0, why: 'A as well as B は A（the teacher）に合わせて is。' },
+      { sentence: 'Either you or Ken ___ to clean the room.', choices: ['has', 'have', 'having', 'to have'], answer: 0, why: 'either A or B は近いほうの B（Ken・3人称単数）に合わせて has。' },
+      { sentence: 'Each of the students ___ a tablet.', choices: ['has', 'have', 'having', 'are having'], answer: 0, why: 'each of ～ は「それぞれ」で単数あつかいなので has。' },
     ],
   },
   {
@@ -5778,9 +5778,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We saw the old building pulled down.', ja: '私たちはその古い建物が取りこわされるのを見た。' },
     ],
     questions: [
-      { sentence: 'I heard my name ___ in the crowd.', choices: ['called', 'calling', 'call'], answer: 0, why: '名前は「呼ばれる」側なので過去分詞 called。' },
-      { sentence: 'She saw her bike ___ away by a stranger.', choices: ['taken', 'taking', 'take'], answer: 0, why: '自転車は「持っていかれる」側なので過去分詞 taken。by a stranger もヒント。' },
-      { sentence: 'He heard the window ___ by the strong wind.', choices: ['broken', 'breaking', 'break'], answer: 0, why: '窓は風に「割られる」側なので過去分詞 broken。' },
+      { sentence: 'I heard my name ___ in the crowd.', choices: ['called', 'calling', 'call', 'to call'], answer: 0, why: '名前は「呼ばれる」側なので過去分詞 called。' },
+      { sentence: 'She saw her bike ___ away by a stranger.', choices: ['taken', 'taking', 'take', 'to take'], answer: 0, why: '自転車は「持っていかれる」側なので過去分詞 taken。by a stranger もヒント。' },
+      { sentence: 'He heard the window ___ by the strong wind.', choices: ['broken', 'breaking', 'break', 'to break'], answer: 0, why: '窓は風に「割られる」側なので過去分詞 broken。' },
     ],
   },
   {
@@ -5795,9 +5795,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is proud of never missing a practice.', ja: '彼は練習を一度も休まないことをほこりにしている。' },
     ],
     questions: [
-      { sentence: 'I\'m sorry for ___ you back yesterday.', choices: ['not calling', 'calling not', "don't call"], answer: 0, why: '動名詞の否定は not ＋ -ing。前置詞 for のあとに don\'t call のような文の形は来ない。' },
-      { sentence: 'She was angry about ___ invited to the party.', choices: ['not being', 'being not', 'not been'], answer: 0, why: '「招待されなかったこと」は受け身の動名詞の否定 not being ＋ 過去分詞。' },
-      { sentence: 'Thank you for ___ anyone about my secret.', choices: ['not telling', 'telling not', 'no telling'], answer: 0, why: '「だれにも言わないでくれたこと」は not ＋ -ing。' },
+      { sentence: 'I\'m sorry for ___ you back yesterday.', choices: ['not calling', 'calling not', "don't call", 'no calling'], answer: 0, why: '動名詞の否定は not ＋ -ing。前置詞 for のあとに don\'t call のような文の形は来ない。' },
+      { sentence: 'She was angry about ___ invited to the party.', choices: ['not being', 'being not', 'not been', 'not be'], answer: 0, why: '「招待されなかったこと」は受け身の動名詞の否定 not being ＋ 過去分詞。' },
+      { sentence: 'Thank you for ___ anyone about my secret.', choices: ['not telling', 'telling not', 'no telling', 'not tell'], answer: 0, why: '「だれにも言わないでくれたこと」は not ＋ -ing。' },
     ],
   },
   {
@@ -5812,9 +5812,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was wondering if you could check my essay.', ja: '私の作文を見ていただけないでしょうか。' },
     ],
     questions: [
-      { sentence: 'I wonder ___ the museum is open on Mondays.', choices: ['if', 'what', 'who'], answer: 0, why: '「～かどうか」は if（whether）。what・who は the museum is open とつながらない。' },
-      { sentence: 'I wonder where ___.', choices: ['he lives', 'does he live', 'lives he'], answer: 0, why: '疑問詞のあとは 主語 ＋ 動詞 の語順（間接疑問）。' },
-      { sentence: 'I was wondering if you ___ help me with my report.', choices: ['could', 'can to', 'would to'], answer: 0, why: 'I was wondering if you could ～「～していただけないでしょうか」。助動詞のあとに to は来ない。' },
+      { sentence: 'I wonder ___ the museum is open on Mondays.', choices: ['if', 'what', 'who', 'that'], answer: 0, why: '「～かどうか」は if（whether）。what・who は the museum is open とつながらない。' },
+      { sentence: 'I wonder where ___.', choices: ['he lives', 'does he live', 'lives he', 'does live he'], answer: 0, why: '疑問詞のあとは 主語 ＋ 動詞 の語順（間接疑問）。' },
+      { sentence: 'I was wondering if you ___ help me with my report.', choices: ['could', 'can to', 'would to', 'should to'], answer: 0, why: 'I was wondering if you could ～「～していただけないでしょうか」。助動詞のあとに to は来ない。' },
     ],
   },
   {

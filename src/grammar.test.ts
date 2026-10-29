@@ -252,6 +252,6 @@ describe('高校の文法問題のむずかしさ', () => {
 describe('高校の文法問題の選択肢の数', () => {
   it('3択の問題はへらしていく（入試にあわせて4択にする。ふえたら失敗）', () => {
     const hs = GRAMMAR.filter((u) => gradeOf(u.id) === '高校').flatMap((u) => u.questions)
-    expect(hs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(669)
+    expect(hs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(639)
   })
 })
