@@ -147,6 +147,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-inclass': { wrong: 'We can’t eat on class.', right: 'We can’t eat in class.', why: '「授業中に」は in class。on class とは言わない（the もつけない）。' },
   'prep-idiom-withasmile': { wrong: 'The clerk welcomed us with a smiling.', right: 'The clerk welcomed us with a smile.', why: 'with a smile「にっこりして」。a のあとは名詞 smile（smiling は入らない）。' },
   'prep-idiom-atspeed': { wrong: 'Keep the fish at a temperatures of 2 degrees.', right: 'Keep the fish at a temperature of 2 degrees.', why: 'at a temperature of ～「～の温度で」。a のあとは単数 temperature。' },
+  'prep-idiom-inaword': { wrong: 'He is my father’s brother. In other word, he is my uncle.', right: 'He is my father’s brother. In other words, he is my uncle.', why: 'in other words「言いかえれば」。words と複数形にする。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
