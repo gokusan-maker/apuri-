@@ -56,3 +56,10 @@ it('本番の長さの長文：私大・国公立の「眠っている脳」は5
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(17)
   expect(tierOf(p)).toBe('shiritsu')
 })
+
+it('本番の長さの長文：IELTS のコンテナの長文は700語以上で TRUE／FALSE／NOT GIVEN の設問がある', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-shipping-container')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(700)
+  expect(passageStats(p).words).toBeLessThanOrEqual(950)
+  expect(p.tfng!.some((x) => x.answer === 2)).toBe(true)
+})

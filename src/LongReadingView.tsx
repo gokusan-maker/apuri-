@@ -1,7 +1,7 @@
 import { weekKey } from './rareboss'
 import { useContext, useEffect, useRef, useState, type ReactNode } from 'react'
 import { PlayContext, usePlaying } from './playing'
-import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, LONG_PERFECT_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, type LongPassage } from './longreading'
+import { keySentence, difficultyOf, loadWeekResults, pushWeekResult, weekTop, solvedBadges, loadBookmarks, saveBookmarks, addGenreStats, loadGenreStats, wpmOf, levelPick, TYPE_TIPS, loadLongHistory, pushLongHistory, readingLevel, DAILY_LONG_COINS, LONG_PERFECT_COINS, dailyLong, loadDailyLongDay, saveDailyLongDay, loadLongTimes, recordLongTime, seqRight, paraSeqQ, nextLong, isNewLong, levelVerdict, gradeChallenge, LONG_MEDAL, GENRES, genreOf, type Genre, loadLongDraft, saveLongDraft, randomLong, longStars, addReadWords, loadReadWords, wordCount, evidenceParas, formatTime, recommendLong, shownTitle, LONG_PASSAGES, loadLongRecord, loadTypeStats, mergeTypes, saveTypeStats, TYPE_LABEL, typeResults, type QType, MARKS, saveLongRecord, scoreLong, targetMinutes, totalOf, XP_LONG_ITEM, TFNG_LABELS, type LongPassage } from './longreading'
 import { dailyPick } from './readlevel'
 import { blankIdioms, keyWords } from './longvocab'
 import { LongVocabQuiz } from './LongVocabQuizView'
@@ -96,6 +96,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   const [seq, setSeq] = useState<number[]>([]) // 出来事の順番
   const [pseq, setPseq] = useState<number[]>([]) // 段落の文の並べかえ
   const [comp, setComp] = useState<Record<number, number>>({}) // 英文の完成
+  const [ng, setNg] = useState<Record<number, number>>({}) // TRUE／FALSE／NOT GIVEN
   const [took, setTook] = useState(0) // かかった秒数
   const [done, setDone] = useState(false)
   const [showJa, setShowJa] = useState(false)
@@ -157,6 +158,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
     setOrder(d?.order ?? [])
     setSents(d?.sents ?? {})
     setQa(d?.qa ?? {})
+    setNg(d?.tfng ?? {})
     setRefer(d?.refer)
     setGist(d?.gist ?? {})
     setTitlePick(d?.title)
@@ -177,8 +179,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
   // 答えかけの内容をとっておく（採点したら消す）
   useEffect(() => {
     if (!p) return
-    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq, pseq })
-  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq, pseq])
+    saveLongDraft(p.id, done ? null : { blanks, tf, picks, under, order, sents, qa, refer, gist, title: titlePick, comp, insert: ins, summary: summ, vocab: voc, seq, pseq, tfng: ng })
+  }, [p, done, blanks, tf, picks, under, order, sents, qa, refer, gist, titlePick, comp, ins, summ, voc, seq, pseq, ng])
 
   const passageItem = (x: LongPassage) => (
     <li key={x.id} className="with-fav">
@@ -391,8 +393,8 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
     : []
   const orderText = p.order ? order.map((i) => p.order!.words[i]).join(' ') : ''
   const pq = paraSeqQ(p)
-  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq })
-  const answered = Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length + (p.seq && seq.length === p.seq.events.length ? 1 : 0) + (pq && pseq.length === pq.events.length ? 1 : 0)
+  const { score, total } = scoreLong(p, blanks, tf, picks, { underline: under, order: orderText, sentences: sents, qa, refer, gist, title: titlePick, complete: comp, insert: ins, summary: summ, vocab: voc, seq, pseq, tfng: ng })
+  const answered = Object.keys(ng).length + Object.keys(blanks).length + Object.keys(tf).length + picks.length + (under !== undefined ? 1 : 0) + (p.order && order.length === p.order.words.length ? 1 : 0) + Object.keys(sents).length + Object.keys(qa).length + (refer !== undefined ? 1 : 0) + Object.keys(gist).length + (titlePick !== undefined ? 1 : 0) + Object.keys(comp).length + (ins !== undefined ? 1 : 0) + Object.keys(summ).length + Object.keys(voc).length + (p.seq && seq.length === p.seq.events.length ? 1 : 0) + (pq && pseq.length === pq.events.length ? 1 : 0)
   const see = (v: unknown) => done || (instant && v !== undefined && v !== null) // その問題の答えと解説を見せる
   const markNow = (ok: boolean) => (done || instant ? (ok ? ' right' : ' wrong') : '')
 
@@ -681,6 +683,31 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
           )}
         </div>
       ))}
+
+      {p.tfng && (
+        <>
+          <h3 className="long-q">問　次の文が本文の内容と合っていれば TRUE、合っていなければ FALSE、本文に書かれていなければ NOT GIVEN を選びなさい。</h3>
+          {p.tfng.map((x, n) => (
+            <div key={n} className="long-item">
+              <p className="long-statement">
+                ({n + 1}) {x.statement}
+              </p>
+              <div className="long-choices tf">
+                {TFNG_LABELS.map((c, i) => (
+                  <button key={c} className={`long-choice${ng[n] === i ? ' picked' : ''}${see(ng[n]) && i === x.answer ? ' answer' : ''}`} disabled={see(ng[n])} aria-pressed={ng[n] === i} aria-label={`(${n + 1}) ${c}`} onClick={() => setNg({ ...ng, [n]: i })}>
+                    {c}
+                  </button>
+                ))}
+              </div>
+              {see(ng[n]) && (
+                <p className={`long-why${markNow(ng[n] === x.answer)}`}>
+                  {ng[n] === x.answer ? '⭕' : '❌'} 正解 {TFNG_LABELS[x.answer]}：{x.why}
+                </p>
+              )}
+            </div>
+          ))}
+        </>
+      )}
 
       {p.qa && (
         <>
@@ -1053,6 +1080,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
               setOrder([])
               setSents({})
               setQa({})
+              setNg({})
               setRefer(undefined)
               setGist({})
               setTitlePick(undefined)
@@ -1081,6 +1109,7 @@ export function LongReading({ onAnswer, onFavorite, onCoins, passages, title, st
                 if (p.order && orderText !== p.order.answer) setOrder([])
                 setSents(keep(sents, (k, v) => p.sentences?.find((x) => x.id === k)?.answer === v))
                 setQa(keep(qa, (k, v) => p.qa?.[Number(k)]?.answer === v))
+                setNg(keep(ng, (k, v) => p.tfng?.[Number(k)]?.answer === v))
                 if (p.refer && refer !== p.refer.answer) setRefer(undefined)
                 setGist(keep(gist, (k, v) => p.gist?.[Number(k)]?.answer === v))
                 if (p.titleQ && titlePick !== p.titleQ.answer) setTitlePick(undefined)

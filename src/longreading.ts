@@ -19,8 +19,10 @@ export type ParaSeq = { at: number; shown: number[]; why: string }
 export type VocabQ = { word: string; choices: string[]; answer: number; why: string }
 export type SummaryQ = { text: string; blanks: { choices: string[]; answer: number; why: string }[] }
 export type InsertQ = { sentence: string; after: number[]; answer: number; why: string }
+export type Tfng = { statement: string; answer: 0 | 1 | 2; why: string } // IELTS 形式：TRUE(0)／FALSE(1)／NOT GIVEN(2)（本文に書かれていない）
+export const TFNG_LABELS = ['TRUE', 'FALSE', 'NOT GIVEN']
 export type EnglishQA = { q: string; choices: string[]; answer: number; why: string } // 英問英答（complete では q が文の前半）
-export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[]; seq?: SeqQ; paraSeq?: ParaSeq; gistKind?: 'transl' } // gistKind：gist を「段落の和訳をえらぶ」問題として出す（国立レベル以上）
+export type LongPassage = { id: string; title: string; level: string; paragraphs: string[]; ja: string[]; blanks: Blank[]; tf: TrueFalse[]; pick2?: PickTwo; underline?: Underline; order?: Ordering; sentences?: SentenceBlank[]; qa?: EnglishQA[]; table?: string[][]; refer?: Refer; gist?: Gist[]; titleQ?: TitleQ; complete?: EnglishQA[]; insert?: InsertQ; summary?: SummaryQ; vocab?: VocabQ[]; seq?: SeqQ; paraSeq?: ParaSeq; gistKind?: 'transl'; tfng?: Tfng[] } // gistKind：gist を「段落の和訳をえらぶ」問題として出す（国立レベル以上）
 
 export const MARKS = ['ア', 'イ', 'ウ', 'エ', 'オ', 'カ']
 
@@ -5908,7 +5910,7 @@ export function paraSeqQ(p: LongPassage): SeqQ | null {
   return { events: p.paraSeq.shown.map((i) => parts[i]), answer: parts.map((_, k) => p.paraSeq!.shown.indexOf(k)), why: p.paraSeq.why }
 }
 
-export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number>; seq?: number[]; pseq?: number[] } = {}): { score: number; total: number } {
+export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Record<number, boolean>, picks: number[] = [], extra: { underline?: number; order?: string; sentences?: Record<string, number>; qa?: Record<number, number>; refer?: number; gist?: Record<number, number>; title?: number; complete?: Record<number, number>; insert?: number; summary?: Record<number, number>; vocab?: Record<number, number>; seq?: number[]; pseq?: number[]; tfng?: Record<number, number> } = {}): { score: number; total: number } {
   const b = p.blanks.filter((x) => blanks[x.id] === x.answer).length
   const t = p.tf.filter((x, i) => tf[i] === x.answer).length
   const k = p.pick2 ? picks.filter((i) => p.pick2!.answers.includes(i)).length : 0
@@ -5925,7 +5927,8 @@ export function scoreLong(p: LongPassage, blanks: Record<string, number>, tf: Re
   const vo = (p.vocab ?? []).filter((x, i) => extra.vocab?.[i] === x.answer).length
   const sq = p.seq && seqRight(p.seq, extra.seq) ? 1 : 0
   const ps = p.paraSeq && seqRight(paraSeqQ(p)!, extra.pseq) ? 1 : 0
-  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su + vo + sq + ps, total: totalOf(p) }
+  const ng = (p.tfng ?? []).filter((x, i) => extra.tfng?.[i] === x.answer).length
+  return { score: b + t + k + u + o + se + qa + rf + gi + ti + co + ins + su + vo + sq + ps + ng, total: totalOf(p) }
 }
 
 export type LongRecord = Record<string, number> // 長文id → 最高点
@@ -5950,7 +5953,7 @@ export function saveLongRecord(r: LongRecord): void {
 }
 
 // 長文の点数の合計（一覧に出す）
-export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0) + (p.seq ? 1 : 0) + (p.paraSeq ? 1 : 0)
+export const totalOf = (p: LongPassage) => p.blanks.length + p.tf.length + (p.pick2 ? 2 : 0) + (p.underline ? 1 : 0) + (p.order ? 1 : 0) + (p.sentences?.length ?? 0) + (p.qa?.length ?? 0) + (p.refer ? 1 : 0) + (p.gist?.length ?? 0) + (p.titleQ ? 1 : 0) + (p.complete?.length ?? 0) + (p.insert ? 1 : 0) + (p.summary?.blanks.length ?? 0) + (p.vocab?.length ?? 0) + (p.seq ? 1 : 0) + (p.paraSeq ? 1 : 0) + (p.tfng?.length ?? 0)
 // 満点をとった長文の数
 export const perfectLongCount = (rec: LongRecord = loadLongRecord()) => LONG_PASSAGES.filter((p) => rec[p.id] === totalOf(p)).length
 
@@ -6128,6 +6131,7 @@ export type LongDraft = {
   vocab?: Record<number, number>
   seq?: number[]
   pseq?: number[]
+  tfng?: Record<number, number>
 }
 const DRAFT_KEY = 'eitan:long-draft'
 const isObj = (v: unknown): v is Record<string, unknown> => !!v && typeof v === 'object' && !Array.isArray(v)
@@ -6141,7 +6145,7 @@ export function loadLongDraft(id: string): LongDraft | null {
     const d = isObj(all) ? all[id] : null
     if (!isObj(d)) return null
     const tf = isObj(d.tf) ? (Object.fromEntries(Object.entries(d.tf).filter(([, x]) => typeof x === 'boolean')) as Record<number, boolean>) : {}
-    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary), vocab: numMap(d.vocab), seq: nums(d.seq), pseq: nums(d.pseq) }
+    return { blanks: numMap(d.blanks), tf, picks: nums(d.picks), under: opt(d.under), order: nums(d.order), sents: numMap(d.sents), qa: numMap(d.qa), refer: opt(d.refer), gist: numMap(d.gist), title: opt(d.title), comp: numMap(d.comp), insert: opt(d.insert), summary: numMap(d.summary), vocab: numMap(d.vocab), seq: nums(d.seq), pseq: nums(d.pseq), ...(isObj(d.tfng) ? { tfng: numMap(d.tfng) } : {}) }
   } catch {
     return null
   }
@@ -6149,7 +6153,7 @@ export function loadLongDraft(id: string): LongDraft | null {
 
 // 1問も答えていなければ消す
 export const draftEmpty = (d: LongDraft) =>
-  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}, d.vocab ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined && (d.seq ?? []).length === 0 && (d.pseq ?? []).length === 0
+  [d.blanks, d.tf, d.sents, d.qa, d.gist, d.comp, d.summary ?? {}, d.vocab ?? {}, d.tfng ?? {}].every((m) => Object.keys(m).length === 0) && d.picks.length === 0 && d.order.length === 0 && d.under === undefined && d.refer === undefined && d.title === undefined && d.insert === undefined && (d.seq ?? []).length === 0 && (d.pseq ?? []).length === 0
 
 export function saveLongDraft(id: string, d: LongDraft | null): void {
   try {

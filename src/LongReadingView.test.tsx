@@ -596,3 +596,13 @@ it('読解の「よく出る熟語」もアイコンつきの色ボタン', () =
   render(<LongReading />)
   expect(document.querySelector('details.long-idioms.game-fold summary .lg-icon')?.textContent).toBe('📗')
 })
+
+it('IELTS 形式：TRUE／FALSE／NOT GIVEN を選ぶと、その問題も採点される', async () => {
+  localStorage.clear()
+  const { ADV_PASSAGES } = await import('./advreading')
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-shipping-container')!
+  render(<LongReading passages={[p]} start={p} />)
+  expect(screen.getByText(/NOT GIVEN を選びなさい/)).toBeTruthy()
+  fireEvent.click(screen.getByRole('button', { name: '(3) NOT GIVEN' }))
+  expect(screen.getAllByText(new RegExp(`のこり ${totalOf(p) - 1}問`)).length).toBeGreaterThan(0)
+})
