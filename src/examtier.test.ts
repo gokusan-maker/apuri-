@@ -143,3 +143,10 @@ it('本番の長さの長文：IELTS のリワイルディングの長文は700�
   expect(passageStats(p).words).toBeLessThanOrEqual(950)
   expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
 })
+
+it('本番の長さの長文：旧帝大の「抗生物質への耐性」は600語以上・1文18語以上で旧帝大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyutei-antibiotic-resistance')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(tierOf(p)).toBe('kyutei')
+})
