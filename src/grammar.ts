@@ -4469,9 +4469,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The reason for the delay was that the road was closed.', ja: 'おくれた理由は、道が通行止めだったことだ。' },
     ],
     questions: [
-      { sentence: 'The reason I was late is ___ the train stopped.', choices: ['that', 'because of', 'what'], answer: 0, why: 'The reason ～ is that ＋ 文。because of のうしろは名詞、what は欠けた部分のある文をとる。' },
-      { sentence: 'The reason ___ she quit is unclear.', choices: ['why', 'what', 'how'], answer: 0, why: '理由を表す reason のあとの関係副詞は why。' },
-      { sentence: 'The reason for the delay ___ that a truck broke down.', choices: ['was', 'were', 'being'], answer: 0, why: '主語は The reason（単数）なので was。' },
+      { sentence: 'The reason I was late is ___ the train stopped.', choices: ['that', 'because of', 'what', 'why'], answer: 0, why: 'The reason ～ is that ＋ 文。because of のうしろは名詞、what は欠けた部分のある文をとる。' },
+      { sentence: 'The reason ___ she quit is unclear.', choices: ['why', 'what', 'how', 'which'], answer: 0, why: '理由を表す reason のあとの関係副詞は why。' },
+      { sentence: 'The reason for the delay ___ that a truck broke down.', choices: ['was', 'were', 'being', 'are'], answer: 0, why: '主語は The reason（単数）なので was。' },
     ],
   },
   {
@@ -4486,9 +4486,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Two of the five boys stayed, and the others went home.', ja: '5人の男の子のうち2人は残り、残りの子は家に帰った。' },
     ],
     questions: [
-      { sentence: 'Some students like math, and ___ like English.', choices: ['others', 'the other', 'another'], answer: 0, why: 'Some ～, others …「～もいれば…もいる」。like（複数の動詞）に合うのは others。' },
-      { sentence: 'There are ten pens. Three are red, and ___ are blue.', choices: ['the others', 'the other', 'another'], answer: 0, why: '全部で10本のうち「残り全部（7本）」なので複数の the others。' },
-      { sentence: 'Some people walk to work; ___ take the bus.', choices: ['others', 'other', 'the other'], answer: 0, why: '「ほかの人たち」は代名詞 others。other だけでは名詞の代わりにならない。' },
+      { sentence: 'Some students like math, and ___ like English.', choices: ['others', 'the other', 'another', 'other'], answer: 0, why: 'Some ～, others …「～もいれば…もいる」。like（複数の動詞）に合うのは others。' },
+      { sentence: 'There are ten pens. Three are red, and ___ are blue.', choices: ['the others', 'the other', 'another', 'others'], answer: 0, why: '全部で10本のうち「残り全部（7本）」なので複数の the others。' },
+      { sentence: 'Some people walk to work; ___ take the bus.', choices: ['others', 'other', 'the other', 'another'], answer: 0, why: '「ほかの人たち」は代名詞 others。other だけでは名詞の代わりにならない。' },
     ],
   },
   {
@@ -4503,9 +4503,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'As for the price, we will tell you later.', ja: '値段については、あとでお知らせします。' },
     ],
     questions: [
-      { sentence: 'I have no idea as ___ where he went.', choices: ['to', 'for', 'of'], answer: 0, why: 'as to ～「～について」。うしろに疑問詞のかたまり where he went。' },
-      { sentence: '___ for me, I prefer tea.', choices: ['As', 'So', 'Such'], answer: 0, why: 'As for ～「～はどうかというと」。' },
-      { sentence: 'There is some doubt as to ___ he will come.', choices: ['whether', 'what', 'which'], answer: 0, why: 'うしろが欠けのない文（he will come）なので whether「～かどうか」。' },
+      { sentence: 'I have no idea as ___ where he went.', choices: ['to', 'for', 'of', 'by'], answer: 0, why: 'as to ～「～について」。うしろに疑問詞のかたまり where he went。' },
+      { sentence: '___ for me, I prefer tea.', choices: ['As', 'So', 'Such', 'Even'], answer: 0, why: 'As for ～「～はどうかというと」。' },
+      { sentence: 'There is some doubt as to ___ he will come.', choices: ['whether', 'what', 'which', 'who'], answer: 0, why: 'うしろが欠けのない文（he will come）なので whether「～かどうか」。' },
     ],
   },
   {
@@ -4520,9 +4520,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How much does it cost to send this package?', ja: 'この荷物を送るのにいくらかかりますか。' },
     ],
     questions: [
-      { sentence: 'It cost me 3,000 yen ___ fix my bike.', choices: ['to', 'for', 'that'], answer: 0, why: 'It costs 人 金額 to ＋ 原形。' },
-      { sentence: 'How much did it ___ you to fly to Okinawa?', choices: ['cost', 'costs', 'costing'], answer: 0, why: 'did のあとは原形 cost。' },
-      { sentence: 'It ___ him a lot of money to build the house.', choices: ['cost', 'spent', 'used'], answer: 0, why: 'It を主語にして「お金がかかる」は cost。spend・use は人を主語にする。' },
+      { sentence: 'It cost me 3,000 yen ___ fix my bike.', choices: ['to', 'for', 'that', 'in'], answer: 0, why: 'It costs 人 金額 to ＋ 原形。' },
+      { sentence: 'How much did it ___ you to fly to Okinawa?', choices: ['cost', 'costs', 'costing', 'to cost'], answer: 0, why: 'did のあとは原形 cost。' },
+      { sentence: 'It ___ him a lot of money to build the house.', choices: ['cost', 'spent', 'used', 'paid'], answer: 0, why: 'It を主語にして「お金がかかる」は cost。spend・use は人を主語にする。' },
     ],
   },
   {
@@ -4537,9 +4537,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We made the most of our short vacation.', ja: '私たちは短い休みを最大限に楽しんだ。' },
     ],
     questions: [
-      { sentence: 'You should make good ___ of your free time.', choices: ['use', 'using', 'used'], answer: 0, why: 'make good use of ～「～をうまく使う」。good のあとは名詞 use。' },
-      { sentence: 'Let\'s take ___ of the nice weather and go hiking.', choices: ['advantage', 'advance', 'adventure'], answer: 0, why: 'take advantage of ～「～を利用する」。' },
-      { sentence: 'She made the ___ of her stay in London.', choices: ['most', 'more', 'much'], answer: 0, why: 'make the most of ～「～を最大限に生かす」。' },
+      { sentence: 'You should make good ___ of your free time.', choices: ['use', 'using', 'used', 'uses'], answer: 0, why: 'make good use of ～「～をうまく使う」。good のあとは名詞 use。' },
+      { sentence: 'Let\'s take ___ of the nice weather and go hiking.', choices: ['advantage', 'advance', 'adventure', 'advent'], answer: 0, why: 'take advantage of ～「～を利用する」。' },
+      { sentence: 'She made the ___ of her stay in London.', choices: ['most', 'more', 'much', 'many'], answer: 0, why: 'make the most of ～「～を最大限に生かす」。' },
     ],
   },
   {
@@ -4554,9 +4554,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is able to swim two kilometers.', ja: '彼女は2キロ泳ぐことができる。' },
     ],
     questions: [
-      { sentence: 'This car is capable of ___ 200 km per hour.', choices: ['going', 'go', 'to go'], answer: 0, why: 'of は前置詞なので、うしろは動名詞 going。' },
-      { sentence: 'She is ___ of solving the problem.', choices: ['capable', 'able', 'possible'], answer: 0, why: '人を主語にして of -ing を続けられるのは capable。able は to ＋ 原形と組む。' },
-      { sentence: 'He is able ___ speak three languages.', choices: ['to', 'of', 'for'], answer: 0, why: 'be able to ＋ 原形「～できる」。' },
+      { sentence: 'This car is capable of ___ 200 km per hour.', choices: ['going', 'go', 'to go', 'to going'], answer: 0, why: 'of は前置詞なので、うしろは動名詞 going。' },
+      { sentence: 'She is ___ of solving the problem.', choices: ['capable', 'able', 'possible', 'skillful'], answer: 0, why: '人を主語にして of -ing を続けられるのは capable。able は to ＋ 原形と組む。' },
+      { sentence: 'He is able ___ speak three languages.', choices: ['to', 'of', 'for', 'at'], answer: 0, why: 'be able to ＋ 原形「～できる」。' },
     ],
   },
   {
@@ -4571,9 +4571,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Nothing is more precious than time.', ja: '時間ほど貴重なものはない。' },
     ],
     questions: [
-      { sentence: 'There is nothing ___ a hot bath after a long day.', choices: ['like', 'as', 'than'], answer: 0, why: 'There is nothing like ～「～ほどよいものはない」。' },
-      { sentence: 'Nothing is ___ valuable than true friends.', choices: ['more', 'most', 'much'], answer: 0, why: 'Nothing is ＋ 比較級 ＋ than …。than があるので比較級 more。' },
-      { sentence: 'There is nothing I like better ___ reading.', choices: ['than', 'as', 'to'], answer: 0, why: '比較級 better のあとは than。' },
+      { sentence: 'There is nothing ___ a hot bath after a long day.', choices: ['like', 'as', 'than', 'so'], answer: 0, why: 'There is nothing like ～「～ほどよいものはない」。' },
+      { sentence: 'Nothing is ___ valuable than true friends.', choices: ['more', 'most', 'much', 'very'], answer: 0, why: 'Nothing is ＋ 比較級 ＋ than …。than があるので比較級 more。' },
+      { sentence: 'There is nothing I like better ___ reading.', choices: ['than', 'as', 'to', 'more'], answer: 0, why: '比較級 better のあとは than。' },
     ],
   },
   {
@@ -4588,9 +4588,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'With all his faults, I still like him.', ja: '欠点はあるけれど、それでも私は彼が好きだ。' },
     ],
     questions: [
-      { sentence: '___ all his money, he is not happy.', choices: ['For', 'By', 'In'], answer: 0, why: 'For all ～「～にもかかわらず」。' },
-      { sentence: 'For all ___ efforts, she failed the test.', choices: ['her', 'she', 'hers'], answer: 0, why: '名詞 efforts の前は所有格 her。' },
-      { sentence: 'With all his faults, I still like ___.', choices: ['him', 'he', 'his'], answer: 0, why: 'like の目的語なので目的格 him。' },
+      { sentence: '___ all his money, he is not happy.', choices: ['For', 'By', 'In', 'On'], answer: 0, why: 'For all ～「～にもかかわらず」。' },
+      { sentence: 'For all ___ efforts, she failed the test.', choices: ['her', 'she', 'hers', 'herself'], answer: 0, why: '名詞 efforts の前は所有格 her。' },
+      { sentence: 'With all his faults, I still like ___.', choices: ['him', 'he', 'his', 'himself'], answer: 0, why: 'like の目的語なので目的格 him。' },
     ],
   },
   {
@@ -4605,9 +4605,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It will not be long before summer vacation starts.', ja: 'もうすぐ夏休みが始まる。' },
     ],
     questions: [
-      { sentence: 'It was not long ___ he got used to the new school.', choices: ['before', 'during', 'while'], answer: 0, why: 'It was not long before ～「まもなく～した」。during のうしろは名詞、while では意味がつながらない。' },
-      { sentence: 'It will not be long before spring ___.', choices: ['comes', 'will come', 'came'], answer: 0, why: '時を表す before のかたまりの中は、未来のことでも現在形 comes。' },
-      { sentence: 'He will be back ___ long.', choices: ['before', 'after', 'for'], answer: 0, why: 'before long「まもなく」の決まった形。' },
+      { sentence: 'It was not long ___ he got used to the new school.', choices: ['before', 'during', 'while', 'by'], answer: 0, why: 'It was not long before ～「まもなく～した」。during のうしろは名詞、while では意味がつながらない。' },
+      { sentence: 'It will not be long before spring ___.', choices: ['comes', 'will come', 'came', 'had come'], answer: 0, why: '時を表す before のかたまりの中は、未来のことでも現在形 comes。' },
+      { sentence: 'He will be back ___ long.', choices: ['before', 'after', 'for', 'since'], answer: 0, why: 'before long「まもなく」の決まった形。' },
     ],
   },
   {
@@ -4622,9 +4622,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is three years senior to me.', ja: '彼女は私より3歳年上だ。' },
     ],
     questions: [
-      { sentence: 'This model is superior ___ the old one.', choices: ['to', 'than', 'from'], answer: 0, why: 'superior to ～「～よりすぐれている」。than は使わない。' },
-      { sentence: 'She is two years senior ___ me.', choices: ['to', 'than', 'of'], answer: 0, why: 'senior to ～「～より年上」。' },
-      { sentence: 'This product is ___ to that one in quality.', choices: ['inferior', 'worse', 'lower'], answer: 0, why: 'to と組んで「～よりおとる」のは inferior。worse・lower は than と組む。' },
+      { sentence: 'This model is superior ___ the old one.', choices: ['to', 'than', 'from', 'for'], answer: 0, why: 'superior to ～「～よりすぐれている」。than は使わない。' },
+      { sentence: 'She is two years senior ___ me.', choices: ['to', 'than', 'of', 'for'], answer: 0, why: 'senior to ～「～より年上」。' },
+      { sentence: 'This product is ___ to that one in quality.', choices: ['inferior', 'worse', 'lower', 'less'], answer: 0, why: 'to と組んで「～よりおとる」のは inferior。worse・lower は than と組む。' },
     ],
   },
   {

@@ -83,7 +83,8 @@
   - [x] ⑮ similar to・take pride in・provide A with B・replace A with B・be used for / to・It is true that ～ but・succeed in・graduate from・agree with / to / on・depend on の10単元に4つ目の選択肢（549→519）
   - [x] ⑯ consist of・result in / from・apologize to 人 for・accuse 人 of・be known for / as・be familiar with / to・hope と wish・insist on・接続詞＋～ing・if possible の10単元に4つ目の選択肢（519→489）
   - [x] ⑰ be eager to・what is worse・need ～ing・otherwise・whether to・What ～ for?・make it a rule to・take it for granted・afford to・ever since の10単元に4つ目の選択肢（489→459）
-  - [ ] ⑱ つづきの10単元を4択に
+  - [x] ⑱ It is not long before・superior to・nothing like・for all・make use of・be capable of・as to・It costs 人 ～ to・The reason is that・some / others の10単元に4つ目の選択肢（459→429）
+  - [ ] ⑲ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
