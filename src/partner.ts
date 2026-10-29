@@ -55,6 +55,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   badger: { id: 'claw', name: 'あなほりクロー', desc: '2問正解ごとに必殺技ゲージ +1' },
   jellyfish: { id: 'cheer', name: 'ふわふわドリフト', desc: '2問正解ごとに必殺技ゲージ +1' },
   whale: { id: 'cheer', name: 'しおふきシャワー', desc: '2問正解ごとに必殺技ゲージ +1' },
+  hummingbird: { id: 'cheer', name: 'はやわざホバー', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -134,6 +135,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   badger: { name: 'アナグマ・ディープディグ', color: '#57534e' },
   jellyfish: { name: 'クラゲ・ルミナスウェーブ', color: '#38bdf8' },
   whale: { name: 'クジラ・オーシャンソング', color: '#2563eb' },
+  hummingbird: { name: 'ハチドリ・フラッシュウィング', color: '#10b981' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -200,6 +202,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   badger: { en: 'Let’s dig deeper into this word!', ja: 'この単語をもっと深くほってみよう！' },
   jellyfish: { en: 'Just float and feel the rhythm!', ja: 'ふわっとうかんで、リズムを感じよう！' },
   whale: { en: 'My song can travel across the sea!', ja: 'ぼくの歌は海をこえてとどくよ！' },
+  hummingbird: { en: 'Fast wings, fast answers!', ja: '速い羽で、速い答え！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
