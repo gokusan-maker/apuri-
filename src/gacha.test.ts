@@ -77,7 +77,9 @@ it('ガチャでキャラクターの種類も決まる（合計100%）', async 
   expect(ALL.reduce((a, sp) => a + rateOf(sp), 0)).toBeCloseTo(1)
   expect(Object.keys(count).sort()).toEqual(Object.keys(want).sort())
   for (const [k, v] of Object.entries(want)) expect(Math.abs(count[k] - v)).toBeLessThanOrEqual(1)
-  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, 0.27)!
+  // ドラコが出る乱数：ドラコより前の子の割合の合計 ＋ ドラコの割合の半分（キャラがふえても変わらないように計算する）
+  const dragonAt = ALL.slice(0, ALL.findIndex((sp) => sp.id === 'dragon')).reduce((a, sp) => a + rateOf(sp), 0) + rateOf(ALL.find((sp) => sp.id === 'dragon')!) / 2
+  const r = drawEgg({ coins: 100, owned: [] }, { active: 0, members: [{ xp: 0 }] }, 0.1, false, dragonAt)!
   expect(r.party.members[1]).toEqual({ xp: 0, species: 'dragon' })
   expect(formOf({ xp: 30, species: 'dragon' }).name).toBe('ちびドラ')
   expect(formOf({ xp: 0, species: 'fox' }).name).toBe('こがねのタマゴ')
@@ -133,7 +135,7 @@ it('同じキャラ・同じ色の子がいればかぶり（キャラや色が�
 })
 
 it('日替わりピックアップは日付で決まり、そのキャラが出やすくなる（合計は100%のまま）', async () => {
-  const { pickupOf, rollSpecies, SPECIES, speciesRate, PICKUP_UP } = await import('./monster')
+  const { pickupOf, rollSpecies, SPECIES, speciesRate, PICKUP_UP, baseRate } = await import('./monster')
   const p = pickupOf('2026-10-21')
   expect(p.id).not.toBe('mochi')
   expect(pickupOf('2026-10-21')).toBe(p)
@@ -142,7 +144,7 @@ it('日替わりピックアップは日付で決まり、そのキャラが出�
     const total = SPECIES.reduce((a, sp) => a + speciesRate(sp, up, p.id), 0)
     expect(total).toBeCloseTo(1)
   }
-  expect(speciesRate(p, false, p.id)).toBeCloseTo(p.rate + PICKUP_UP)
+  expect(speciesRate(p, false, p.id)).toBeCloseTo(baseRate(p) + PICKUP_UP)
   const count = (pick?: string) => Array.from({ length: 1000 }, (_, i) => rollSpecies(i / 1000, false, pick)).filter((sp) => sp.id === p.id).length
   expect(count(p.id)).toBeGreaterThan(count())
 })

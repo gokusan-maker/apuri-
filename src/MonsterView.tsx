@@ -403,6 +403,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'badger')
+    return (
+      <g>
+        {/* 顔の真ん中の白いすじ */}
+        <path d="M46 24 Q50 22 54 24 L53 60 Q50 62 47 60 Z" fill="#f5f5f4" opacity="0.9" />
+      </g>
+    )
   if (species === 'mouse')
     return (
       <g>

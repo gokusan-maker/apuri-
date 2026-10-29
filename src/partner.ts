@@ -52,6 +52,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   goat: { id: 'claw', name: 'つのつきアタック', desc: '2問正解ごとに必殺技ゲージ +1' },
   mouse: { id: 'cheer', name: 'ちょこまかダッシュ', desc: '2問正解ごとに必殺技ゲージ +1' },
   snail: { id: 'cheer', name: 'のんびりシェル', desc: '2問正解ごとに必殺技ゲージ +1' },
+  badger: { id: 'claw', name: 'あなほりクロー', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -128,6 +129,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   goat: { name: 'ヤギ・マウンテンクライム', color: '#78716c' },
   mouse: { name: 'ネズミ・チーズラッシュ', color: '#a1a1aa' },
   snail: { name: 'カタツムリ・スパイラルシェル', color: '#8b5cf6' },
+  badger: { name: 'アナグマ・ディープディグ', color: '#57534e' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -191,6 +193,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   goat: { en: 'No hill is too steep for me!', ja: 'どんな坂もへっちゃらだよ！' },
   mouse: { en: 'Small but quick!', ja: '小さいけど、すばやいよ！' },
   snail: { en: 'Slow is fine. Just keep going!', ja: 'ゆっくりでいいよ。続けることが大事！' },
+  badger: { en: 'Let’s dig deeper into this word!', ja: 'この単語をもっと深くほってみよう！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
