@@ -4419,7 +4419,7 @@ header .event-chips { margin: 0 0 2px; }
 @media (prefers-reduced-motion: reduce) { .evolve-ring { display: none; } }
 
 /* ガチャ：ガチャのボタンを押すと、ぷるんとゆれる */
-.gacha-btn:not(:disabled):active { animation: gacha-jiggle 0.3s ease-out; }
+.gacha-btn:not(:disabled):not(.short):active { animation: gacha-jiggle 0.3s ease-out; }
 @keyframes gacha-jiggle { 0% { transform: scale(1, 1); } 30% { transform: scale(1.06, 0.92); } 60% { transform: scale(0.97, 1.04); } 100% { transform: scale(1, 1); } }
 @media (prefers-reduced-motion: reduce) { .gacha-btn:not(:disabled):active { animation: none; } }
 
@@ -4547,3 +4547,10 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .streak-flame.big { transform-origin: 50% 90%; animation: flame-burst 0.7s ease-out 0.5s backwards, flame-flicker 0.9s ease-in-out 1.2s infinite alternate; }
 @keyframes flame-burst { 0% { transform: scale(1); } 50% { transform: scale(1.9); filter: drop-shadow(0 0 8px rgb(251 146 60 / 0.9)); } 100% { transform: scale(1.2); } }
 @media (prefers-reduced-motion: reduce) { .streak-flame.big { animation: none; } }
+
+/* デザイン58：コインがたりないときにガチャのボタンを押すと、小さく首をふる */
+.gacha-btn.short { opacity: 0.6; }
+.gacha-btn.gacha-shake { animation: gacha-shake 0.4s ease-in-out; }
+@keyframes gacha-shake { 0%, 100% { transform: translateX(0); } 20% { transform: translateX(-6px); } 40% { transform: translateX(5px); } 60% { transform: translateX(-4px); } 80% { transform: translateX(2px); } }
+.gacha-short-note { margin: 4px 0 0; font-size: 0.8rem; color: var(--muted, #6b7280); text-align: center; }
+@media (prefers-reduced-motion: reduce) { .gacha-btn.gacha-shake { animation: none; } }

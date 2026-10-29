@@ -76,6 +76,7 @@ type Props = {
 // タマゴガチャ：カプセルがゆれて開き、タマゴが出てくる
 export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
+  const [shake, setShake] = useState(0) // コインがたりないのに押した回数（首をふる）
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
   const [named, setNamed] = useState('')
@@ -165,12 +166,19 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
         </button>
       )}
       <button
-        className="good gacha-btn"
-        disabled={full || coins < price}
-        onClick={() => drawOne(false)}
+        key={`gacha-${shake}`}
+        className={`good gacha-btn${!full && coins < price ? ' short' : ''}${shake > 0 && !full && coins < price ? ' gacha-shake' : ''}`}
+        disabled={full}
+        aria-disabled={!full && coins < price}
+        onClick={() => (coins < price ? setShake(shake + 1) : drawOne(false))}
       >
         {full ? '仲間がいっぱい' : `🎰 ガチャを引く 🪙${price}`}
       </button>
+      {shake > 0 && !full && coins < price && (
+        <p className="gacha-short-note" role="status">
+          🪙 コインがあと {price - coins} たりないよ。問題に正解してためよう！
+        </p>
+      )}
       <div className="gacha-multi">
       {onDrawMulti && !full && (
         <button

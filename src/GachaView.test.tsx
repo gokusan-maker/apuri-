@@ -17,7 +17,7 @@ it('ガチャを引くとレア度と出たタマゴが表示される', () => {
 
 it('コインが足りないときや仲間がいっぱいのときは引けない', () => {
   const { unmount } = render(<Gacha coins={GACHA_PRICE - 1} members={1} onDraw={() => null} />)
-  expect(screen.getByRole('button', { name: /ガチャを引く/ })).toBeDisabled()
+  expect(screen.getByRole('button', { name: /ガチャを引く/ })).toHaveAttribute('aria-disabled', 'true') // 押すと首をふるだけで引けない（デザイン58）
   unmount()
   render(<Gacha coins={999} members={PARTY_MAX} onDraw={() => null} />)
   expect(screen.getByRole('button', { name: '仲間がいっぱい' })).toBeDisabled()
@@ -314,7 +314,7 @@ it('ガチャのまとめ引き：SR・UR のカードだけふちが虹色に�
 
 it('ガチャ：ボタンを押すとぷるんとゆれる（CSS。押せないときはゆれない）', async () => {
   const { readFileSync } = await import('node:fs')
-  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-btn:not\(:disabled\):active \{ animation: gacha-jiggle/)
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.gacha-btn:not\(:disabled\):not\(\.short\):active \{ animation: gacha-jiggle/)
 })
 
 it('ガチャ：かぶりでコインがもどった文字は、ちゃりんとはねる（CSS）', async () => {
@@ -327,4 +327,15 @@ it('ガチャ：UR が出たときだけ、画面のふちが一瞬虹色に光�
   const css = readFileSync('src/polish.css', 'utf8')
   expect(css).toMatch(/\.gacha-result\.r-UR::before \{[^}]*animation: ur-edge/)
   expect(css).not.toMatch(/\.gacha-result\.r-SR::before/)
+})
+
+it('デザイン58：コインがたりないときにガチャを押すと、ボタンが首をふって、あといくつたりないかを出す', () => {
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf('mochi') }))
+  render(<Gacha coins={GACHA_PRICE - 5} members={1} onDraw={onDraw} />)
+  const btn = screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` })
+  expect(btn).toHaveAttribute('aria-disabled', 'true')
+  fireEvent.click(btn)
+  expect(onDraw).not.toHaveBeenCalled()
+  expect(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` })).toHaveClass('gacha-shake')
+  expect(screen.getByText(/コインがあと 5 たりない/)).toBeInTheDocument()
 })
