@@ -3551,9 +3551,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'As is often the case with children, he got bored quickly.', ja: '子どもにはよくあることだが、彼はすぐにあきてしまった。' },
     ],
     questions: [
-      { sentence: 'This is the same watch ___ I lost last month.', choices: ['as', 'than', 'so'], answer: 0, why: 'the same ～ as … で「…と同じ～」。' },
-      { sentence: '___ is often the case with him, he forgot his umbrella.', choices: ['As', 'What', 'That'], answer: 0, why: 'As is often the case with ～「～にはよくあることだが」。文全体を受ける as。' },
-      { sentence: 'Choose such friends ___ will help you grow.', choices: ['as', 'than', 'so'], answer: 0, why: 'such ～ as …「…のような～」。as が will help の主語のはたらき。' },
+      { sentence: 'This is the same watch ___ I lost last month.', choices: ['as', 'than', 'so', 'what'], answer: 0, why: 'the same ～ as … で「…と同じ～」。' },
+      { sentence: '___ is often the case with him, he forgot his umbrella.', choices: ['As', 'What', 'That', 'It'], answer: 0, why: 'As is often the case with ～「～にはよくあることだが」。文全体を受ける as。' },
+      { sentence: 'Choose such friends ___ will help you grow.', choices: ['as', 'than', 'so', 'what'], answer: 0, why: 'such ～ as …「…のような～」。as が will help の主語のはたらき。' },
     ],
   },
   {
@@ -3568,9 +3568,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If it should rain tomorrow, the game will be canceled.', ja: '万一明日雨が降ったら、試合は中止になる。' },
     ],
     questions: [
-      { sentence: 'If the earth ___ to stop turning, what would happen?', choices: ['were', 'is', 'will'], answer: 0, why: 'If S were to ～「もし～するとしたら」（仮の話）。' },
-      { sentence: 'If you ___ see Ken, please give him this letter.', choices: ['should', 'would', 'were'], answer: 0, why: 'If S should ～「万一～したら」。主節は命令文。' },
-      { sentence: 'If I were to live abroad, I ___ choose Canada.', choices: ['would', 'will', 'am'], answer: 0, why: 'If S were to ～ の主節は would ＋原形。' },
+      { sentence: 'If the earth ___ to stop turning, what would happen?', choices: ['were', 'is', 'will', 'has'], answer: 0, why: 'If S were to ～「もし～するとしたら」（仮の話）。' },
+      { sentence: 'If you ___ see Ken, please give him this letter.', choices: ['should', 'would', 'were', 'will to'], answer: 0, why: 'If S should ～「万一～したら」。主節は命令文。' },
+      { sentence: 'If I were to live abroad, I ___ choose Canada.', choices: ['would', 'will', 'am', 'can'], answer: 0, why: 'If S were to ～ の主節は would ＋原形。' },
     ],
   },
   {
@@ -3585,9 +3585,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Much as I like summer, I can\'t stand this heat.', ja: '夏は大好きだけれど、この暑さにはたえられない。' },
     ],
     questions: [
-      { sentence: 'Small ___ it is, the room is comfortable.', choices: ['as', 'so', 'than'], answer: 0, why: '形容詞 ＋ as ＋ S V で「～だけれども」。' },
-      { sentence: '___ as I like him, I can\'t agree with his idea.', choices: ['Much', 'Many', 'Very'], answer: 0, why: 'Much as I like ～「～は好きだけれども」。' },
-      { sentence: 'Rich as he is, he ___ happy.', choices: ['is not', 'not is', 'does not'], answer: 0, why: '「金持ちだけれども幸せではない」。be 動詞の否定は is not。' },
+      { sentence: 'Small ___ it is, the room is comfortable.', choices: ['as', 'so', 'than', 'that'], answer: 0, why: '形容詞 ＋ as ＋ S V で「～だけれども」。' },
+      { sentence: '___ as I like him, I can\'t agree with his idea.', choices: ['Much', 'Many', 'Very', 'Such'], answer: 0, why: 'Much as I like ～「～は好きだけれども」。' },
+      { sentence: 'Rich as he is, he ___ happy.', choices: ['is not', 'not is', 'does not', 'is no'], answer: 0, why: '「金持ちだけれども幸せではない」。be 動詞の否定は is not。' },
     ],
   },
   {
@@ -3636,9 +3636,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My hometown is very different from what it used to be.', ja: '私の故郷は昔とはずいぶんちがう。' },
     ],
     questions: [
-      { sentence: 'He lost his wallet, and ___ was worse, his phone too.', choices: ['what', 'which', 'that'], answer: 0, why: 'what is (was) worse「さらに悪いことに」。' },
-      { sentence: 'The town is not ___ it was twenty years ago.', choices: ['what', 'that', 'which'], answer: 0, why: 'what S was「昔の S」。' },
-      { sentence: 'She is kind, and what is ___, she is very funny.', choices: ['more', 'most', 'much'], answer: 0, why: 'what is more「さらに・そのうえ」。' },
+      { sentence: 'He lost his wallet, and ___ was worse, his phone too.', choices: ['what', 'which', 'that', 'it'], answer: 0, why: 'what is (was) worse「さらに悪いことに」。' },
+      { sentence: 'The town is not ___ it was twenty years ago.', choices: ['what', 'that', 'which', 'who'], answer: 0, why: 'what S was「昔の S」。' },
+      { sentence: 'She is kind, and what is ___, she is very funny.', choices: ['more', 'most', 'much', 'many'], answer: 0, why: 'what is more「さらに・そのうえ」。' },
     ],
   },
   {
@@ -9161,9 +9161,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'On seeing the teacher, the students stood up.', ja: '先生を見るとすぐに、生徒たちは立ち上がった。' },
     ],
     questions: [
-      { sentence: '___ reaching the top of the mountain, we took a lot of pictures.', choices: ['On', 'Of', 'For'], answer: 0, why: 'On ＋ ～ing「～するとすぐに」。頂上に着くとすぐに写真をとった。' },
-      { sentence: 'On ___ the good news, he jumped for joy.', choices: ['hearing', 'heard', 'to hear'], answer: 0, why: '前置詞 on のあとは動名詞 hearing。' },
-      { sentence: 'On ___ home, I took a shower right away.', choices: ['getting', 'get', 'got'], answer: 0, why: 'On getting home「家に着くとすぐに」＝ As soon as I got home。' },
+      { sentence: '___ reaching the top of the mountain, we took a lot of pictures.', choices: ['On', 'Of', 'For', 'At'], answer: 0, why: 'On ＋ ～ing「～するとすぐに」。頂上に着くとすぐに写真をとった。' },
+      { sentence: 'On ___ the good news, he jumped for joy.', choices: ['hearing', 'heard', 'to hear', 'hears'], answer: 0, why: '前置詞 on のあとは動名詞 hearing。' },
+      { sentence: 'On ___ home, I took a shower right away.', choices: ['getting', 'get', 'got', 'gets'], answer: 0, why: 'On getting home「家に着くとすぐに」＝ As soon as I got home。' },
     ],
   },
   {
@@ -9331,9 +9331,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please carry the box with care.', ja: 'その箱は注意して運んでください。' },
     ],
     questions: [
-      { sentence: 'The old map was of great ___ to us during the hike.', choices: ['use', 'useful', 'usefully'], answer: 0, why: 'of ＋ 名詞 で形容詞の意味。of great use＝very useful。of のあとに形容詞・副詞は来ない。' },
-      { sentence: 'Ken answered the hard question ___ ease.', choices: ['with', 'of', 'by'], answer: 0, why: 'with ease＝easily「簡単に」。with ＋ 抽象名詞 で副詞の意味。' },
-      { sentence: 'Whether he wins or not is of no ___ to me.', choices: ['importance', 'important', 'importantly'], answer: 0, why: 'of no importance＝not important at all「まったく重要でない」。of のあとは名詞。' },
+      { sentence: 'The old map was of great ___ to us during the hike.', choices: ['use', 'useful', 'usefully', 'uses'], answer: 0, why: 'of ＋ 名詞 で形容詞の意味。of great use＝very useful。of のあとに形容詞・副詞は来ない。' },
+      { sentence: 'Ken answered the hard question ___ ease.', choices: ['with', 'of', 'by', 'for'], answer: 0, why: 'with ease＝easily「簡単に」。with ＋ 抽象名詞 で副詞の意味。' },
+      { sentence: 'Whether he wins or not is of no ___ to me.', choices: ['importance', 'important', 'importantly', 'importances'], answer: 0, why: 'of no importance＝not important at all「まったく重要でない」。of のあとは名詞。' },
     ],
   },
   {
@@ -9382,9 +9382,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We cannot praise her courage too much.', ja: '彼女の勇気はいくらほめてもほめすぎることはない。' },
     ],
     questions: [
-      { sentence: 'You cannot be ___ careful when you cross this busy street.', choices: ['too', 'much', 'enough'], answer: 0, why: 'cannot be too ＋ 形容詞「いくら～でもすぎることはない」。much careful・enough careful とは言わない（enough は形容詞のあと）。' },
-      { sentence: 'We cannot thank Ms. Kato ___ for her kind help.', choices: ['enough', 'too', 'such'], answer: 0, why: 'cannot thank ～ enough「いくら感謝してもしきれない」。too なら too much の形にする。such は副詞として動詞を修飾できない。' },
-      { sentence: 'You cannot practice too ___ before the big concert.', choices: ['much', 'many', 'more'], answer: 0, why: '動詞 practice を強めるのは too much。too many は数えられる名詞の前、too more とは言わない。' },
+      { sentence: 'You cannot be ___ careful when you cross this busy street.', choices: ['too', 'much', 'enough', 'very'], answer: 0, why: 'cannot be too ＋ 形容詞「いくら～でもすぎることはない」。much careful・enough careful とは言わない（enough は形容詞のあと）。' },
+      { sentence: 'We cannot thank Ms. Kato ___ for her kind help.', choices: ['enough', 'too', 'such', 'very'], answer: 0, why: 'cannot thank ～ enough「いくら感謝してもしきれない」。too なら too much の形にする。such は副詞として動詞を修飾できない。' },
+      { sentence: 'You cannot practice too ___ before the big concert.', choices: ['much', 'many', 'more', 'lot'], answer: 0, why: '動詞 practice を強めるのは too much。too many は数えられる名詞の前、too more とは言わない。' },
     ],
   },
   {
@@ -9518,9 +9518,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It was raining, and to make matters worse, I lost my umbrella.', ja: '雨が降っていて、さらに悪いことに、かさをなくしてしまった。' },
     ],
     questions: [
-      { sentence: 'To ___ the truth, I was a little scared during the test.', choices: ['tell', 'say', 'speak'], answer: 0, why: 'to tell the truth「実を言うと」は決まった形。say・speak は使わない。' },
-      { sentence: '___ to say, health is more important than money.', choices: ['Needless', 'Unless', 'Useless'], answer: 0, why: 'needless to say「言うまでもなく」。' },
-      { sentence: 'To begin ___, we need to decide the date of the party.', choices: ['with', 'at', 'from'], answer: 0, why: 'to begin with「まず第一に」。' },
+      { sentence: 'To ___ the truth, I was a little scared during the test.', choices: ['tell', 'say', 'speak', 'talk'], answer: 0, why: 'to tell the truth「実を言うと」は決まった形。say・speak は使わない。' },
+      { sentence: '___ to say, health is more important than money.', choices: ['Needless', 'Unless', 'Useless', 'Needed'], answer: 0, why: 'needless to say「言うまでもなく」。' },
+      { sentence: 'To begin ___, we need to decide the date of the party.', choices: ['with', 'at', 'from', 'by'], answer: 0, why: 'to begin with「まず第一に」。' },
     ],
   },
   {
@@ -9552,9 +9552,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I opened the box, only to find it empty.', ja: '箱を開けたが、中はからっぽだった。' },
     ],
     questions: [
-      { sentence: 'My cousin grew up ___ a doctor.', choices: ['to be', 'being', 'be'], answer: 0, why: 'grow up to be ～「成長して～になる」。結果を表す不定詞。' },
-      { sentence: 'We ran to the shop, only ___ that it was closed.', choices: ['to find', 'finding', 'found'], answer: 0, why: '～, only to ...「～したが、結局…だった」。only のあとは to 不定詞。' },
-      { sentence: 'He left his hometown, never ___ back again.', choices: ['to come', 'coming', 'came'], answer: 0, why: '～, never to ...「～して、二度と…しなかった」。never のあとは to 不定詞。' },
+      { sentence: 'My cousin grew up ___ a doctor.', choices: ['to be', 'being', 'be', 'been'], answer: 0, why: 'grow up to be ～「成長して～になる」。結果を表す不定詞。' },
+      { sentence: 'We ran to the shop, only ___ that it was closed.', choices: ['to find', 'finding', 'found', 'find'], answer: 0, why: '～, only to ...「～したが、結局…だった」。only のあとは to 不定詞。' },
+      { sentence: 'He left his hometown, never ___ back again.', choices: ['to come', 'coming', 'came', 'come'], answer: 0, why: '～, never to ...「～して、二度と…しなかった」。never のあとは to 不定詞。' },
     ],
   },
   {
@@ -9569,9 +9569,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My dog follows me wherever I go.', ja: '私の犬は、私が行くところどこへでもついてくる。' },
     ],
     questions: [
-      { sentence: 'You can sit ___ you like.', choices: ['wherever', 'whatever', 'whoever'], answer: 0, why: '「好きなところにすわる」は場所なので wherever。sit は目的語をとらないので whatever・whoever は入らない。' },
-      { sentence: '___ I visit my grandmother, she makes me a cake.', choices: ['Whenever', 'Whatever', 'Which'], answer: 0, why: '「おばあちゃんをたずねるときはいつも」なので Whenever。I visit my grandmother は完全な文なので Whatever・Which は入らない。' },
-      { sentence: 'Call me ___ you need help.', choices: ['whenever', 'whatever', 'whichever'], answer: 0, why: '「助けが必要なときはいつでも」なので whenever。you need help は完全な文なので whatever・whichever は入らない。' },
+      { sentence: 'You can sit ___ you like.', choices: ['wherever', 'whatever', 'whoever', 'whom'], answer: 0, why: '「好きなところにすわる」は場所なので wherever。sit は目的語をとらないので whatever・whoever は入らない。' },
+      { sentence: '___ I visit my grandmother, she makes me a cake.', choices: ['Whenever', 'Whatever', 'Which', 'Whom'], answer: 0, why: '「おばあちゃんをたずねるときはいつも」なので Whenever。I visit my grandmother は完全な文なので Whatever・Which は入らない。' },
+      { sentence: 'Call me ___ you need help.', choices: ['whenever', 'whatever', 'whichever', 'whom'], answer: 0, why: '「助けが必要なときはいつでも」なので whenever。you need help は完全な文なので whatever・whichever は入らない。' },
     ],
   },
 ]

@@ -94,7 +94,8 @@
   - [x] ㉑ whereas・given that・It occurs to・not because ～ but because・make oneself understood・There seems to be・by far・so ～ a ＋名詞・every other・rather than の10単元に4つ目の選択肢（369→339）
   - [x] ㉒ nothing but / all but・quite a few・cannot but・on the point of・lest・might as well・名詞構文・時制の一致の例外・代不定詞・never ～ without の10単元に4つ目の選択肢（339→309）
   - [x] ㉓ provided that・those who・使役・知覚の受け身・It is no wonder・the very・過去完了進行形・完了動名詞・for fear of・all the ＋比較級・anything but の10単元に4つ目の選択肢（309→279）
-  - [ ] ㉔ つづきの10単元を4択に
+  - [x] ㉔ what is more・関係代名詞の as・were to / should・譲歩の as・独立不定詞・結果の不定詞・wherever / whenever・cannot ～ too・of ＋抽象名詞・on ～ing の10単元に4つ目の選択肢（279→249）
+  - [ ] ㉕ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
