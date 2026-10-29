@@ -13686,6 +13686,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-postoffice',
+    title: 'How Letters Found Their Way',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Before modern post offices, sending a letter in Japan was not easy. Letters were carried by runners ( A ) ran from town to town. The service was fast, but it was expensive, and the price changed depending on the distance.",
+      "In 1871, Japan started a new postal service. The government created a system ( B ) anyone could send a letter anywhere in the country for the same price. To do this, it set up post offices and mailboxes in many towns and sold stamps.",
+      "The new service quickly became popular. People could now write to family members who lived far away without worrying about the cost. Later, postal codes were added so that machines could sort letters faster.",
+      "Today, many people send emails and messages instead. Still, a handwritten letter can carry feelings that are hard to send through a screen. The red mailbox on the corner is a small reminder of how people stay connected.",
+    ],
+    ja: [
+      '近代的な郵便局ができる前、日本で手紙を送るのはかんたんではなかった。手紙は町から町へと走る飛脚によって運ばれていた。そのサービスは速かったが高く、きょりによって値段が変わった。',
+      '1871年、日本は新しい郵便のしくみを始めた。政府は、だれでも国のどこへでも同じ値段で手紙を送れるしくみを作った。そのために、多くの町に郵便局やポストを置き、切手を売った。',
+      '新しいサービスはすぐに広まった。人々は、費用を心配せずに遠くに住む家族に手紙を書けるようになった。のちに、機械が手紙をもっと速く仕分けできるように、郵便番号が加えられた。',
+      '今日では、多くの人がかわりにメールやメッセージを送る。それでも、手書きの手紙は、画面ではとどけにくい気持ちを運ぶことができる。角にある赤いポストは、人々がどのようにつながっているかを思い出させてくれる小さなしるしなのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 runners（人）で、うしろの ran の主語が欠けているので関係代名詞 who。which はもの、whose はうしろに名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a system で、うしろに完全な文（anyone could send a letter ...）が続くので「前置詞＋関係代名詞」の in which（＝そのしくみの中で）。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'sort',
+      choices: ['put things into groups', 'write a story', 'carry something heavy', 'throw something away'],
+      answer: 0,
+      why: 'sort は「分ける・仕分ける」。手紙を行き先ごとに分けるという意味。',
+    },
+    order: {
+      words: ['without', 'worrying', 'about', 'the', 'cost'],
+      rest: '',
+      answer: 'without worrying about the cost',
+      ja: '費用を心配せずに（without ～ing「～せずに」）',
+    },
+    tf: [
+      { statement: '飛脚のサービスは、きょりに関係なく同じ値段だった。', answer: false, why: '第1段落 the price changed depending on the distance。' },
+      { statement: '1871年に始まったしくみでは、どこへでも同じ値段で手紙を送れた。', answer: true, why: '第2段落 anyone could send a letter anywhere in the country for the same price。' },
+      { statement: '郵便番号は、機械が手紙を速く仕分けるために加えられた。', answer: true, why: '第3段落 postal codes were added so that machines could sort letters faster。' },
+    ],
+    qa: [
+      { q: 'What did the government do to start the new service?', choices: ['It set up post offices and mailboxes and sold stamps.', 'It hired more runners.', 'It made letters more expensive.', 'It stopped people from writing letters.'], answer: 0, why: '第2段落 it set up post offices and mailboxes in many towns and sold stamps。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
