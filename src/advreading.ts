@@ -14176,6 +14176,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'shiritsu-sleeping-brain',
+    title: 'What the Sleeping Brain Does',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of human history, sleep was regarded as a kind of temporary death, a period in which the mind simply switched off and the body rested until morning. It is easy to see why people thought so, since a sleeping person appears to do nothing at all and remembers almost none of what happens during the night. Over the past few decades, however, researchers who record the electrical activity of the brain have discovered that the sleeping brain is anything but idle, and that some of its most important work may in fact be done while we are unaware of it.",
+      "One of the clearest findings concerns memory. In a typical experiment, volunteers are asked to learn a list of word pairs or a simple sequence of finger movements in the evening, and they are then tested the following morning after either a full night of sleep or a night in which they were kept awake. Again and again, those who slept remember more than those who did not, and in some studies their performance on the movement task is actually better in the morning than it was at the end of the practice session, ( A ) they had continued practicing in their sleep.",
+      "How can this be explained? According to one influential theory, the brain uses certain stages of sleep to replay the experiences of the day, moving information from a temporary store, in which new memories are fragile and easily disturbed, to a more stable form in which they are connected with knowledge the person already has. Recordings made in animals support this idea: patterns of brain activity that appeared while a rat was exploring a maze during the day have been observed to repeat, in compressed form, while the same animal was asleep that night.",
+      "Sleep, however, does not simply preserve everything. Researchers have suggested that it also helps the brain decide what is worth keeping, strengthening memories that seem important or emotionally meaningful while allowing trivial details to fade. If this is correct, forgetting is not merely a failure of the system ( B ) a necessary part of how it works, because a brain that held on to every detail of every day would find it much harder to notice the general patterns that make experience useful.",
+      "These discoveries have practical implications that are easy to overlook. Students preparing for an examination often reduce their sleep in order to gain more hours for study, believing that time spent in bed is time wasted. The research described above suggests that this strategy may be self-defeating, since cutting sleep can weaken the very process by which the material studied during the day becomes part of long-term memory. A student who studies for one hour less and sleeps for one hour more may, in other words, remember more of what he or she has learned.",
+      "None of this means that scientists fully understand why we sleep, and many questions remain unanswered, including why some animals appear to need far less sleep than others and how much of the benefit depends on the particular stage of sleep involved. ( C ), the picture that has emerged is very different from the old image of sleep as an empty interval between days. Rather than a pause in the life of the mind, sleep now appears to be one of the periods in which the mind organizes itself most actively.",
+    ],
+    ja: [
+      '人類の歴史の大部分で、睡眠は一種の一時的な死、つまり心がただ止まり、体が朝まで休む時間だと考えられていた。人々がそう考えた理由はわかりやすい。眠っている人はまったく何もしていないように見え、夜のあいだに起きたことをほとんど何もおぼえていないからである。しかしここ数十年で、脳の電気的な活動を記録する研究者たちは、眠っている脳は決してなまけているわけではなく、そのもっとも重要な仕事のいくつかは、実はわたしたちが気づかないあいだに行われているのかもしれないことを発見した。',
+      'もっとも明確な発見のひとつは記憶にかんするものだ。典型的な実験では、ボランティアは夜に単語の組のリストや指の動きの簡単な順番をおぼえるよう求められ、ひと晩ぐっすり眠ったあと、あるいは起こされたまま過ごした夜のあと、翌朝にテストを受ける。くり返し、眠った人は眠らなかった人より多くをおぼえており、いくつかの研究では、動きの課題の成績が練習の終わりよりも朝のほうが実際によくなっている。まるで眠っているあいだも練習をつづけていたかのようである。',
+      'これはどう説明できるのだろうか。有力な理論のひとつによれば、脳は睡眠のある段階を使ってその日の経験を再生し、新しい記憶がこわれやすく乱されやすい一時的な保管場所から、その人がすでにもっている知識と結びついたより安定した形へと、情報を移している。動物で行われた記録はこの考えを支持している。ネズミが昼に迷路を探検しているあいだに現れた脳の活動のパターンが、その夜同じ動物が眠っているあいだに、短縮された形でくり返されるのが観察されているのだ。',
+      'しかし睡眠は、すべてをそのまま保存するわけではない。研究者たちは、睡眠が何を残す価値があるかを脳が決めるのにも役立っていると示唆している。重要に思えることや感情的に意味のある記憶を強める一方で、ささいな細部は薄れるにまかせるのだ。もしこれが正しければ、忘れることはしくみの失敗にすぎないのではなく、そのはたらきに欠かせない一部だということになる。毎日のあらゆる細部をにぎりしめている脳は、経験を役に立つものにする全体的なパターンに気づくのがずっと難しくなるだろうからだ。',
+      'こうした発見には、見落とされやすい実用的な意味がある。試験の準備をする学生は、ベッドで過ごす時間はむだだと信じて、勉強時間をふやすために睡眠をけずることが多い。上で述べた研究は、この作戦が逆効果かもしれないことを示している。睡眠をけずると、日中に勉強した内容が長期記憶の一部になるまさにそのしくみが弱まりうるからだ。言いかえれば、勉強を1時間へらして1時間多く眠る学生のほうが、学んだことをより多くおぼえているかもしれないのである。',
+      'これは、なぜわたしたちが眠るのかを科学者が完全に理解しているという意味ではない。なぜ一部の動物はほかの動物よりずっと少ない睡眠ですむように見えるのか、その効果のどれだけが睡眠の特定の段階によるのか、といった多くの問いが答えられないまま残っている。それでも、明らかになってきた姿は、睡眠を日と日のあいだの空白の時間とみる古いイメージとは大きくちがう。心の活動の休止ではなく、睡眠は今や、心がもっとも活発に自らを整理している時間のひとつであるように思われる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as if', 'even though', 'so that', 'in case'], answer: 0, why: '「まるで眠っているあいだも練習をつづけていたかのように」。as if ＋過去完了で、事実ではないことを「まるで～したかのように」と表す。even though は「～にもかかわらず」で、実際には練習していないので合わない。' },
+      { id: 'B', choices: ['but', 'and', 'or', 'nor'], answer: 0, why: 'not merely A but B「単に A ではなく B」。not only A but (also) B と同じ形。' },
+      { id: 'C', choices: ['Even so', 'As a result', 'For example', 'In contrast'], answer: 0, why: '前の文で「まだわからないことが多い」と述べ、そのうえで「それでも古いイメージとは大きくちがう」と譲歩してつなぐので Even so（それでも）。As a result は因果、For example は例示で合わない。' },
+    ],
+    tf: [
+      { statement: '昔の人々は、眠っているあいだも脳が記憶を整理していると考えていた。', answer: false, why: '第1段落 sleep was regarded as a kind of temporary death … the mind simply switched off。心は止まると考えられていた。' },
+      { statement: '実験では、眠ったグループのほうが眠らなかったグループよりも多くを記憶していた。', answer: true, why: '第2段落 those who slept remember more than those who did not。' },
+      { statement: '筆者によれば、睡眠は一日のすべての経験を同じ強さで保存する。', answer: false, why: '第4段落 Sleep, however, does not simply preserve everything … allowing trivial details to fade。重要なものを強め、ささいな細部は薄れる。' },
+      { statement: '一部の動物がほかの動物より少ない睡眠ですむ理由は、すでに解明されている。', answer: false, why: '第6段落 many questions remain unanswered, including why some animals appear to need far less sleep。まだわかっていない。' },
+    ],
+    qa: [
+      { q: 'What do the recordings made in rats suggest?', choices: ['The brain replays daytime experiences during sleep.', 'Rats learn mazes faster when they sleep less.', 'Rats dream about places they have never seen.', 'Brain activity stops completely during deep sleep.'], answer: 0, why: '第3段落 patterns … during the day have been observed to repeat … while the same animal was asleep。昼の経験を再生している。' },
+      { q: 'According to the writer, why might forgetting be useful?', choices: ['It helps the brain notice general patterns instead of being overwhelmed by details.', 'It allows people to sleep for fewer hours.', 'It prevents people from having emotional memories.', 'It makes examinations easier for students.'], answer: 0, why: '第4段落 a brain that held on to every detail … would find it much harder to notice the general patterns。' },
+      { q: 'Which piece of advice is most consistent with the passage?', choices: ['Get enough sleep after studying instead of staying up late to study more.', 'Study only in the morning and never in the evening.', 'Practice a skill once and then avoid it for several days.', 'Sleep as little as possible before an important examination.'], answer: 0, why: '第5段落 A student who studies for one hour less and sleeps for one hour more may … remember more。' },
+    ],
+    gist: [
+      { para: 2, choices: ['睡眠中に記憶が安定した形へ移されるという理論', '睡眠時間の国ごとのちがい', '迷路の作り方', '夢の内容を記録する方法'], answer: 0, why: '第3段落は How can this be explained? と問い、記憶を一時的な保管場所から安定した形へ移すという理論と、ネズミの記録による裏づけを述べている。' },
+      { para: 4, choices: ['睡眠をけずって勉強する作戦は逆効果になりうる', '試験の点数を上げる勉強法の一覧', '学生が眠れない原因', 'ベッドの選び方'], answer: 0, why: '第5段落は this strategy may be self-defeating と述べ、睡眠をけずると記憶が定着しにくくなると説明している。' },
+    ],
+    titleQ: { choices: ['What the Sleeping Brain Does', 'How to Study for Examinations', 'The History of Dreams', 'Why Rats Explore Mazes'], answer: 0, why: '全体を通して、眠っている脳が記憶を整理し選んでいることを述べている。試験やネズミは一部の例にすぎない。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

@@ -49,3 +49,10 @@ it('本番の長さの長文：共通テスト評論のヒートアイランド�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(15)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：私大・国公立の「眠っている脳」は500語以上・1文17語以上で私大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'shiritsu-sleeping-brain')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(500)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(17)
+  expect(tierOf(p)).toBe('shiritsu')
+})
