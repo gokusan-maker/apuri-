@@ -4564,3 +4564,4 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .book-near { display: inline-block; margin-left: 6px; padding: 1px 8px; border-radius: 999px; background: linear-gradient(90deg, #f59e0b, #ef4444); color: #fff; font-size: 0.72rem; font-weight: 700; animation: book-near-pulse 1.6s ease-in-out infinite; }
 @keyframes book-near-pulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.08); } }
 @media (prefers-reduced-motion: reduce) { .book-near { animation: none; } }
+.book-near.book-done { background: linear-gradient(90deg, #facc15, #f59e0b); color: #422006; }

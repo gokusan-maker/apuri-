@@ -391,3 +391,11 @@ it('デザイン62：キャラ図鑑ののこりが5体以下になると「あ�
   fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
   expect(screen.queryByText(/^あと\d+体！$/)).not.toBeInTheDocument()
 })
+
+it('デザイン64：キャラ図鑑をぜんぶうめると「👑 コンプリート！」のバッジが出る', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={SPECIES.map((s) => s.id)} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  expect(screen.getByText('👑 コンプリート！')).toBeInTheDocument()
+  expect(screen.queryByText(/^あと\d+体！$/)).not.toBeInTheDocument()
+})
