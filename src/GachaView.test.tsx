@@ -321,3 +321,10 @@ it('ガチャ：かぶりでコインがもどった文字は、ちゃりんと�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/p\.gacha-dup \{ animation: dup-bounce/)
 })
+
+it('ガチャ：UR が出たときだけ、画面のふちが一瞬虹色に光る（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.gacha-result\.r-UR::before \{[^}]*animation: ur-edge/)
+  expect(css).not.toMatch(/\.gacha-result\.r-SR::before/)
+})
