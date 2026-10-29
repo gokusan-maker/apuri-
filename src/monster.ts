@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'lemur', name: 'ワオリン', egg: 'バオバブのタマゴ', token: 'ワオ', bigToken: 'ワオリン', color: '#d4d4d8', line: '#3f3f46', rate: 0.02, desc: 'しましまの長いしっぽのワオキツネザル。朝はみんなで日光浴をして、頭をすっきりさせてから勉強する。' },
   { id: 'redpanda', name: 'レサパン', egg: 'こずえのタマゴ', token: 'レサ', bigToken: 'レサパン', color: '#f97316', line: '#7c2d12', rate: 0.02, desc: 'しまもようのしっぽのレッサーパンダ。木の上でひなたぼっこしながら、英文をのんびり読みとく。' },
   { id: 'meerkat', name: 'ミーアン', egg: 'みはりだいのタマゴ', token: 'ミー', bigToken: 'ミーアン', color: '#e7c9a0', line: '#6b4423', rate: 0.02, desc: 'うしろ足ですっと立つミーアキャット。みんなの見はり役で、まちがいやすいところをいち早く見つける。' },
   { id: 'kangaroo', name: 'カンガルン', egg: 'ふくろのタマゴ', token: 'カン', bigToken: 'カンガルン', color: '#d6a46c', line: '#7c4a1e', rate: 0.02, desc: 'おなかのふくろに単語カードをしまうカンガルー。大きくジャンプして、むずかしい問題もひとっとび。' },

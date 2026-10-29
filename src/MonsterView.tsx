@@ -433,6 +433,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M67 56 Q62 64 56 58" fill="none" stroke="#fff7ed" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'lemur')
+    return (
+      <g>
+        {/* 目のまわりの黒いもようと、白い顔 */}
+        <path d="M30 42 L44 52 L32 58 Z" fill="#27272a" />
+        <path d="M70 42 L56 52 L68 58 Z" fill="#27272a" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
