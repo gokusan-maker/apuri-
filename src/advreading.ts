@@ -13768,6 +13768,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-airbag',
+    title: 'Faster Than a Blink',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Many cars today have airbags in the steering wheel and the dashboard. They stay hidden until a crash, and then they suddenly fill with gas and form soft cushions in front of the people inside.",
+      "How do they know when to open? Cars have sensors ( A ) notice a very sudden stop. When a sensor feels a strong crash, it sends a signal, and a small chemical reaction quickly makes a large amount of gas.",
+      "Timing is everything. The bag must open quickly enough ( B ) the driver before his or her head hits the wheel. In fact, it fills in only a few hundredths of a second, which is faster than a blink.",
+      "However, airbags work best together with seat belts. The belt holds the body in the seat, and the airbag protects the head and chest. That is why everyone in a car should always wear a seat belt, even when the car has airbags.",
+    ],
+    ja: [
+      '今日の多くの車には、ハンドルやダッシュボードにエアバッグがついている。しょうとつするまではかくれているが、そのとき急にガスでふくらみ、乗っている人の前にやわらかいクッションを作る。',
+      'エアバッグは、いつ開けばよいかをどうやって知るのだろうか。車には、とても急な停止に気づくセンサーがある。センサーが強いしょうとつを感じると信号を送り、小さな化学反応が一気に大量のガスを作るのだ。',
+      'タイミングがすべてだ。運転手の頭がハンドルにぶつかる前に受け止められるほど、ふくろは速く開かなければならない。実際、ふくろはほんの数百分の1秒でふくらむ。これはまばたきよりも速い。',
+      'しかし、エアバッグはシートベルトといっしょのときにいちばんよく働く。ベルトが体を座席にとどめ、エアバッグが頭や胸を守るのだ。だから、エアバッグがある車でも、乗る人はみんな、いつもシートベルトをしめるべきなのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 sensors（もの）で、うしろの notice の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['to catch', 'catching', 'caught', 'catch'], answer: 0, why: '副詞 ＋ enough to ～「～できるほど…」なので to catch。catching・caught・catch は enough のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'Timing is everything',
+      choices: ['doing it at the right moment is the most important thing', 'the price is very high', 'the bag is very big', 'nobody can see the bag'],
+      answer: 0,
+      why: '「タイミングがすべて」、つまりちょうどよいしゅんかんに開くことがいちばん大切だという意味。',
+    },
+    order: {
+      words: ['work', 'best', 'together', 'with', 'seat', 'belts'],
+      rest: '',
+      answer: 'work best together with seat belts',
+      ja: 'シートベルトといっしょのときにいちばんよく働く（together with ～「～といっしょに」）',
+    },
+    tf: [
+      { statement: 'エアバッグは、ふだんは見えないところにかくれている。', answer: true, why: '第1段落 They stay hidden until a crash。' },
+      { statement: 'エアバッグは、ふくらむのに数秒かかる。', answer: false, why: '第3段落 it fills in only a few hundredths of a second。' },
+      { statement: 'エアバッグがあれば、シートベルトはいらない。', answer: false, why: '第4段落 everyone in a car should always wear a seat belt, even when the car has airbags。' },
+    ],
+    qa: [
+      { q: 'What makes the gas that fills an airbag?', choices: ['A small chemical reaction.', 'The driver’s breath.', 'A pump powered by the sun.', 'Wind from outside the car.'], answer: 0, why: '第2段落 a small chemical reaction quickly makes a large amount of gas。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
