@@ -102,3 +102,11 @@ it('相棒：夜の時間だけ、まわりをほたるの光がとぶ', () => {
   render(<Monster monster={{ xp: 500 } as never} />)
   expect(document.querySelector('.fireflies')).toBeNull()
 })
+
+it('相棒：朝の時間だけ、窓から光がさしこむ', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} daypart="morning" />)
+  expect(document.querySelector('.morning-rays')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} daypart="evening" />)
+  expect(document.querySelector('.morning-rays')).toBeNull()
+})
