@@ -14137,6 +14137,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-heat-island',
+    title: 'Why Cities Stay Hot at Night',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On a summer evening, people who leave the center of a large city for the suburbs often notice that the air feels noticeably cooler only a short train ride away. This is not their imagination. Measurements taken in many cities show that urban areas can be several degrees warmer than the surrounding countryside, and that the difference is often greatest after sunset rather than during the day. Scientists call this phenomenon the urban heat island, and it has become an important subject of study as more and more of the world’s population comes to live in cities.",
+      "The main cause lies in the materials ( A ) cities are built. Concrete, asphalt, and brick absorb a great deal of energy from the sun during the day and release it slowly as heat after dark, so the streets and walls continue to warm the air long after the sun has gone down. In the countryside, by contrast, much of the ground is covered with soil and plants, which hold water. When that water evaporates, it carries heat away from the surface, in much the same way that sweat cools the human body on a hot day.",
+      "The shape of a city matters as well. Tall buildings standing close together trap heat between them and block the wind that might otherwise carry it away. In addition, air conditioners, cars, and factories all release waste heat directly into the streets. This creates an unfortunate cycle: as the city becomes hotter, people use their air conditioners more, and the extra heat those machines give off makes the outdoor air hotter ( B ).",
+      "These higher temperatures are more than a matter of comfort. During heat waves, hospitals in large cities tend to receive more patients suffering from heat-related illness, and elderly people living alone are thought to be especially at risk because their bodies cannot recover during nights that never cool down. Hot cities also consume more electricity, which can place a heavy burden on power supplies at the very moment they are needed most.",
+      "Fortunately, cities are not powerless. Some have planted trees along their streets, since shade keeps pavements from heating up and leaves release water into the air. Others have encouraged owners to cover roofs with plants or to paint them in light colors that reflect sunlight instead of absorbing it. Such measures cannot remove the heat island ( C ), but studies suggest they can lower local temperatures by a meaningful amount, and they often bring other benefits, such as cleaner air and more pleasant places for people to walk and rest.",
+    ],
+    ja: [
+      '夏の夕方、大都市の中心から郊外へ出かける人は、電車で少し行っただけで空気がはっきりと涼しく感じられることによく気づく。これは気のせいではない。多くの都市でとられた測定によれば、都市部はまわりの田園地帯より数度暖かいことがあり、その差は日中よりも日没後にもっとも大きくなることが多い。科学者はこの現象をヒートアイランド（都市の熱の島）とよび、世界の人口のますます多くが都市に住むようになるにつれ、重要な研究テーマになってきた。',
+      'おもな原因は、都市が作られている材料にある。コンクリート、アスファルト、れんがは日中に太陽から多くのエネルギーを吸収し、暗くなってから熱としてゆっくりと放出する。そのため、日がしずんだずっとあとまで、道路や壁が空気を暖めつづける。それに対して田園地帯では、地面の多くが水をふくむ土や植物におおわれている。その水が蒸発するとき、表面から熱を運び去る。暑い日に汗が人の体を冷やすのとほとんど同じしくみである。',
+      '都市の形も関係している。高い建物が密集して建っていると、そのあいだに熱がこもり、熱を運び去ってくれるはずの風がさえぎられる。さらに、エアコンや車や工場はどれも、廃熱を通りにじかに出している。これが困った悪循環を生む。都市が暑くなるにつれ、人々はエアコンをもっと使い、その機械が出す余分な熱が外の空気をさらに暑くするのだ。',
+      'こうした高い気温は、快適さだけの問題ではない。熱波のあいだ、大都市の病院には熱中症などで苦しむ患者がより多く運ばれる傾向があり、ひとり暮らしの高齢者はとくに危険だと考えられている。いつまでも涼しくならない夜には、体が回復できないからだ。暑い都市はまた電気を多く使うので、もっとも必要とされるまさにそのときに、電力の供給に大きな負担をかけることがある。',
+      'さいわい、都市はなすすべがないわけではない。通りに木を植えた都市もある。日かげが歩道の温度上昇をふせぎ、葉が水分を空気中に出すからだ。屋根を植物でおおったり、日光を吸収するかわりに反射する明るい色にぬったりするよう、持ち主にすすめた都市もある。こうした対策でヒートアイランドを完全になくすことはできないが、研究によれば、その地域の気温を意味のある程度下げることができ、空気がきれいになったり、人が歩いたり休んだりするのに心地よい場所ができたりといった、ほかの利点をもたらすことも多い。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['from which', 'by whom', 'in that', 'what'], answer: 0, why: 'cities are built from the materials（都市はその材料から作られる）の from which。in that は「～という点で」で名詞を修飾できず、what は先行詞 materials があるので使えない。' },
+      { id: 'B', choices: ['still', 'very', 'more', 'already'], answer: 0, why: '比較級 hotter を強めるのは still（さらに）。very は比較級を強められず、more hotter は比較級の重複、already は「すでに」で意味が合わない。' },
+      { id: 'C', choices: ['entirely', 'partly', 'hardly', 'nearly'], answer: 0, why: 'not ～ entirely で「完全に～するわけではない」（部分否定）。直後の but … lower local temperatures by a meaningful amount（ある程度は下げられる）とつながる。' },
+    ],
+    tf: [
+      { statement: '都市と田園の気温差は、日中よりも夜のほうが大きくなりやすい。', answer: true, why: '第1段落 the difference is often greatest after sunset rather than during the day。' },
+      { statement: '田園地帯が涼しいのは、土や植物にふくまれる水が蒸発するときに熱をうばうからである。', answer: true, why: '第2段落 When that water evaporates, it carries heat away from the surface。' },
+      { statement: '筆者は、木を植えたり屋根の色を変えたりすれば、ヒートアイランドは完全に解消できると述べている。', answer: false, why: '第5段落 Such measures cannot remove the heat island entirely。完全にはなくせない。' },
+      { statement: '暑い都市では、電力がもっとも必要なときに供給がきびしくなるおそれがある。', answer: true, why: '第4段落 place a heavy burden on power supplies at the very moment they are needed most。' },
+    ],
+    qa: [
+      { q: 'Why are elderly people living alone thought to be especially at risk?', choices: ['Because high night temperatures prevent their bodies from recovering.', 'Because they use air conditioners more than other people.', 'Because they usually live in the suburbs.', 'Because hospitals refuse to accept them during heat waves.'], answer: 0, why: '第4段落 their bodies cannot recover during nights that never cool down。' },
+      { q: 'What does the writer mean by "an unfortunate cycle" in the third paragraph?', choices: ['Heat leads to more air conditioning, which in turn produces more heat.', 'People move to the suburbs and then return to the city.', 'Buildings are torn down and rebuilt again and again.', 'Wind carries heat out of the city and brings it back at night.'], answer: 0, why: '直後の as the city becomes hotter, people use their air conditioners more, and the extra heat … makes the outdoor air hotter。原因と結果がくり返される。' },
+      { q: 'Which of the following would the writer most likely support?', choices: ['Planting trees along a busy shopping street.', 'Replacing a park with a large parking lot.', 'Painting roofs dark so that they absorb more sunlight.', 'Building taller towers closer together.'], answer: 0, why: '第5段落で木を植えることを有効な対策として紹介している。駐車場（アスファルト）、黒い屋根、高層ビルの密集はいずれも本文では熱を増やす原因。' },
+    ],
+    gist: [
+      { para: 1, choices: ['都市の材料が熱をためて夜に放出する', '都市の人口がふえつづけている', '汗が体を冷やすしくみ', '田園地帯の農業のようす'], answer: 0, why: '第2段落は The main cause lies in the materials … で始まり、材料が熱をためることを説明している。汗の話はたとえにすぎない。' },
+      { para: 2, choices: ['建物の配置と廃熱が暑さを強める', 'エアコンの正しい使い方', '風力発電の利点', '工場の移転計画'], answer: 0, why: '第3段落は The shape of a city matters as well で始まり、第2段落の材料とは別の原因として、建物の密集と廃熱をあげている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

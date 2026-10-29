@@ -1,6 +1,6 @@
 import { expect, it } from 'vitest'
 import { ADV_PASSAGES } from './advreading'
-import { EXAM_TIERS, passagesForTier } from './examtier'
+import { EXAM_TIERS, passageStats, passagesForTier, tierOf } from './examtier'
 
 it('大学入試のレベル：共通テスト・私立難関大・私立医学部・国公立大・旧帝大・国立医学部', () => {
   expect(EXAM_TIERS.map((t) => t.label)).toEqual(['すべて', '高校基礎', '共通テスト', '私立難関大', '私立医学部', '国公立大', '旧帝大', '国立医学部'])
@@ -41,4 +41,11 @@ it('レベルの下限：本文が下限にとどかない長文は、とどく�
   for (const p of passagesForTier('kyutei')) expect(passageStats(p).wps, p.id).toBeGreaterThanOrEqual(TIER_FLOOR.kyutei.wps)
   // 1文が短くやさしい長文（例：ミツオシエ）は共通テストではなく高校基礎に入る
   expect(tierOf(univ.find((p) => p.id === 'adv-honeyguide')!)).toBe('kiso')
+})
+
+it('本番の長さの長文：共通テスト評論のヒートアイランドは350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-heat-island')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(15)
+  expect(tierOf(p)).toBe('kyotsu')
 })
