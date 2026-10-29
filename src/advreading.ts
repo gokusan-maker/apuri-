@@ -15259,6 +15259,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-home-advantage',
+    title: 'Why Teams Win More at Home',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many sports, teams tend to win more often when they play in their own stadium than when they travel to play somewhere else. This pattern, known as home advantage, has been observed in soccer, basketball, baseball, and many other games, and in some leagues it has been strong enough to affect which teams win championships. Researchers have long tried to understand what causes it.",
+      "Several explanations have been suggested. One is travel. Visiting teams may have to spend many hours on buses or planes, sleep in unfamiliar hotels, and sometimes cross time zones, all of which can leave players tired. Another explanation is familiarity. Home players know every detail of their own field or court, such as how the ball bounces or how the wind usually blows, ( A ) visiting players must adjust quickly to new conditions.",
+      "Perhaps the most discussed factor, however, is the crowd. A large number of supporters cheering for the home team may encourage its players and put pressure on their opponents. Some studies have also suggested that crowds can influence referees, who may, without realizing it, make slightly more decisions in favor of the home team when thousands of people are shouting at them.",
+      "An unusual opportunity to test this idea came in 2020, when many professional leagues played matches in empty stadiums because of the global pandemic. Researchers compared the results of these games with those from earlier seasons. In several studies, home advantage became noticeably smaller, and referees gave fewer penalties against visiting teams than before. These findings suggest that the presence of fans plays a real role, ( B ) they do not show that crowds are the only cause.",
+      "Understanding home advantage matters not only to sports fans but also to scientists interested in how people behave under social pressure. The case of the empty stadiums shows how an unexpected event can provide evidence that would otherwise be very difficult to collect, since researchers could never ask leagues to play without fans simply for the sake of an experiment. It also reminds us that even experienced professionals, such as referees, can be influenced by their surroundings in ways they may not notice, ( C ) they try hard to be fair.",
+    ],
+    ja: [
+      '多くのスポーツで、チームは自分たちのスタジアムでプレーするとき、よそへ遠征してプレーするときよりも勝つことが多い傾向がある。ホームアドバンテージとして知られるこの傾向は、サッカー、バスケットボール、野球など多くの競技で見られ、リーグによっては、どのチームが優勝するかを左右するほど強いこともある。研究者たちは長いあいだ、その原因を理解しようとしてきた。',
+      'いくつかの説明が示されてきた。ひとつは移動である。遠征するチームは、バスや飛行機で何時間も過ごし、なじみのないホテルでねむり、ときには時差のある地域をこえなければならないことがあり、そのどれもが選手をつかれさせうる。もうひとつの説明はなじみである。ホームの選手は、ボールがどうはねるか、風がふだんどうふくかなど、自分たちのフィールドやコートのすみずみまで知っているが、遠征する選手は新しい条件にすばやく合わせなければならない。',
+      'しかし、もっとも議論されている要因は、おそらく観客だろう。ホームチームを応援する大勢のサポーターは、その選手たちをはげまし、相手に圧力をかけるかもしれない。観客が審判に影響しうることを示した研究もある。何千人もの人にさけばれていると、審判は気づかないうちに、ホームチームに有利な判定を少しだけ多くしてしまうかもしれないのだ。',
+      'この考えを確かめるめずらしい機会が2020年に訪れた。世界的な感染症の流行のために、多くのプロリーグが無観客のスタジアムで試合をしたのである。研究者たちはこうした試合の結果を、それ以前のシーズンの結果とくらべた。いくつかの研究では、ホームアドバンテージがはっきり小さくなり、審判が遠征チームに出す反則も以前より少なくなった。こうした発見は、ファンの存在が本当に役割を果たしていることを示しているが、観客が唯一の原因だということを示しているわけではない。',
+      'ホームアドバンテージを理解することは、スポーツファンだけでなく、社会的な圧力の中で人がどうふるまうかに関心のある科学者にとっても大切である。無観客のスタジアムの例は、思いがけないできごとが、ほかの方法ではとても集めにくい証拠をあたえてくれることを示している。研究者がただ実験のためにリーグに無観客で試合をしてくれとたのむことなど、決してできないからだ。それはまた、審判のような経験豊かなプロでさえ、公平であろうと努力していても、気づかないような形でまわりの環境に影響されうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so'], answer: 0, why: 'ホームの選手と遠征する選手を対比しているので while（～である一方）。' },
+      { id: 'B', choices: ['but', 'so', 'or', 'for'], answer: 0, why: '「ファンが役割を果たしていることを示しているが、唯一の原因だとは示していない」と逆接なので but。' },
+      { id: 'C', choices: ['even when', 'only if', 'as soon as', 'so that'], answer: 0, why: '「公平であろうと努力していても、影響されうる」と譲歩を表すので even when（～するときでさえ）。' },
+    ],
+    tf: [
+      { statement: 'ホームアドバンテージは、サッカーだけで見られる現象である。', answer: false, why: '第1段落 has been observed in soccer, basketball, baseball, and many other games。' },
+      { statement: '遠征するチームは、移動のつかれや時差の影響を受けることがある。', answer: true, why: '第2段落 Visiting teams may have to spend many hours on buses or planes … cross time zones, all of which can leave players tired。' },
+      { statement: '無観客の試合では、いくつかの研究でホームアドバンテージが小さくなった。', answer: true, why: '第4段落 In several studies, home advantage became noticeably smaller。' },
+      { statement: '筆者は、観客がホームアドバンテージの唯一の原因だと結論づけている。', answer: false, why: '第4段落 they do not show that crowds are the only cause。' },
+    ],
+    qa: [
+      { q: 'Why were the games of 2020 useful to researchers?', choices: ['They made it possible to compare results with and without crowds.', 'They were the first games ever played in empty stadiums for an experiment.', 'Referees were not used in those games.', 'Visiting teams did not have to travel.'], answer: 0, why: '第4〜5段落：無観客の試合と以前のシーズンをくらべられた。研究者が実験のために無観客をたのむことはできないので、思いがけない機会だった。' },
+      { q: 'What does the passage suggest about referees?', choices: ['They may be influenced by crowds without realizing it.', 'They always favor visiting teams.', 'They are never affected by their surroundings.', 'They prefer to work in empty stadiums.'], answer: 0, why: '第3段落 who may, without realizing it, make slightly more decisions in favor of the home team、第5段落 can be influenced by their surroundings in ways they may not notice。' },
+    ],
+    gist: [
+      { para: 1, choices: ['移動のつかれと会場へのなじみ', '飛行機の選び方', 'ホテルの予約のしかた', '時差ぼけの治し方'], answer: 0, why: '第2段落は、ホームアドバンテージの説明として移動となじみの2つをあげている。' },
+      { para: 3, choices: ['無観客の試合で考えを確かめた', 'スタジアムの建て方', '感染症の予防法', '新しいリーグの始まり'], answer: 0, why: '第4段落は、2020年の無観客試合を使って観客の影響を確かめた研究を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
