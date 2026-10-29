@@ -180,3 +180,10 @@ describe('相棒は1レベルごとに育つ', () => {
     expect(growthScale(40)).toBe(1.15)
   })
 })
+
+it('キャラクター追加㊼：キツツキのキツツキンがいて、タマゴの名前がほかとかぶらない', async () => {
+  const { SPECIES } = await import('./monster')
+  const w = SPECIES.find((s) => s.id === 'woodpecker')!
+  expect(w.name).toBe('キツツキン')
+  expect(SPECIES.filter((s) => s.egg === w.egg)).toHaveLength(1)
+})
