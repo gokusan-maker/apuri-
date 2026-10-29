@@ -1,4 +1,5 @@
 import { BuddyFigure } from './BuddyFigureView'
+import { streakClass } from './streakstyle'
 import type { GrammarDrill } from './grammardrills'
 import { dequeue, enqueue } from './toastQueue'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
@@ -1465,7 +1466,7 @@ function App() {
       <header>
         <div className="top">
           <h1>イングリッシュモンスター</h1>
-          <p className={`streak${streakDays > 0 ? ' on' : ''}`} aria-label={`連続学習 ${streakDays} 日`}>
+          <p className={streakClass(streakDays)} aria-label={`連続学習 ${streakDays} 日`}>
             🔥 {streakDays}日
           </p>
         </div>
