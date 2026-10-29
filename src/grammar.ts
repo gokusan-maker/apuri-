@@ -2735,9 +2735,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I had no more than 100 yen in my wallet.', ja: 'さいふにはたった100円しかなかった。' },
     ],
     questions: [
-      { sentence: 'As ___ as 2,000 people joined the marathon.', choices: ['many', 'much', 'more'], answer: 0, why: '人の数（数えられる）なので as many as。' },
-      { sentence: 'The test took no ___ than ten minutes. It was very short.', choices: ['more', 'less', 'many'], answer: 0, why: '「たった10分」（少ないと感じる）は no more than。' },
-      { sentence: 'He read no ___ than fifty books this summer. Amazing!', choices: ['less', 'many', 'much'], answer: 0, why: '「50冊も」（多いと感じる）は no less than。' },
+      { sentence: 'As ___ as 2,000 people joined the marathon.', choices: ['many', 'much', 'more', 'most'], answer: 0, why: '人の数（数えられる）なので as many as。' },
+      { sentence: 'The test took no ___ than ten minutes. It was very short.', choices: ['more', 'less', 'many', 'least'], answer: 0, why: '「たった10分」（少ないと感じる）は no more than。' },
+      { sentence: 'He read no ___ than fifty books this summer. Amazing!', choices: ['less', 'many', 'much', 'little'], answer: 0, why: '「50冊も」（多いと感じる）は no less than。' },
     ],
   },
   {
@@ -2803,9 +2803,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I only have ten minutes.', ja: '10分しかない。' },
     ],
     questions: [
-      { sentence: '___ my little brother knows that word.', choices: ['Even', 'Ever', 'Only if'], answer: 0, why: '「弟でさえ知っている」なので even を強めたい語（my little brother）の前に。' },
-      { sentence: 'I ___ ate one cookie. I was not hungry.', choices: ['only', 'even', 'ever'], answer: 0, why: '「1枚だけ食べた」なので only。一般動詞の前に置く。' },
-      { sentence: 'The train left ___ now.', choices: ['just', 'only', 'even'], answer: 0, why: 'just now「たった今」。' },
+      { sentence: '___ my little brother knows that word.', choices: ['Even', 'Ever', 'Only if', 'Ever since'], answer: 0, why: '「弟でさえ知っている」なので even を強めたい語（my little brother）の前に。' },
+      { sentence: 'I ___ ate one cookie. I was not hungry.', choices: ['only', 'even', 'ever', 'yet'], answer: 0, why: '「1枚だけ食べた」なので only。一般動詞の前に置く。' },
+      { sentence: 'The train left ___ now.', choices: ['just', 'only', 'even', 'still'], answer: 0, why: 'just now「たった今」。' },
     ],
   },
   {
@@ -2854,9 +2854,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Yui is the younger of the two sisters.', ja: 'ユイは姉妹2人のうち年下のほうだ。' },
     ],
     questions: [
-      { sentence: 'Tom is ___ of the two boys.', choices: ['the taller', 'taller', 'the tallest'], answer: 0, why: '2人のうちの「高いほう」なので the ＋ 比較級。' },
-      { sentence: 'Which is the ___ of the two answers?', choices: ['better', 'well', 'good'], answer: 0, why: '2つのうちなので比較級 better（the better）。' },
-      { sentence: 'Mt. Fuji is the highest ___ the three mountains.', choices: ['of', 'in', 'than'], answer: 0, why: '3つ以上の中では最上級 ＋ of。' },
+      { sentence: 'Tom is ___ of the two boys.', choices: ['the taller', 'taller', 'the tallest', 'tall'], answer: 0, why: '2人のうちの「高いほう」なので the ＋ 比較級。' },
+      { sentence: 'Which is the ___ of the two answers?', choices: ['better', 'well', 'good', 'most'], answer: 0, why: '2つのうちなので比較級 better（the better）。' },
+      { sentence: 'Mt. Fuji is the highest ___ the three mountains.', choices: ['of', 'in', 'than', 'with'], answer: 0, why: '3つ以上の中では最上級 ＋ of。' },
     ],
   },
   {
@@ -2905,9 +2905,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "It's no use worrying about the past.", ja: '過ぎたことを心配してもむだだ。' },
     ],
     questions: [
-      { sentence: 'I feel like ___ a movie tonight.', choices: ['watching', 'to watch', 'watch'], answer: 0, why: 'feel like のあとは -ing。' },
-      { sentence: "It's no use ___ to him. He never listens.", choices: ['talking', 'talk', 'to talking'], answer: 0, why: 'It is no use -ing「〜してもむだだ」。' },
-      { sentence: 'There is no ___ what she will say.', choices: ['knowing', 'know', 'to know'], answer: 0, why: 'There is no -ing「〜することはできない」。' },
+      { sentence: 'I feel like ___ a movie tonight.', choices: ['watching', 'to watch', 'watch', 'watched'], answer: 0, why: 'feel like のあとは -ing。' },
+      { sentence: "It's no use ___ to him. He never listens.", choices: ['talking', 'talk', 'to talking', 'talked'], answer: 0, why: 'It is no use -ing「〜してもむだだ」。' },
+      { sentence: 'There is no ___ what she will say.', choices: ['knowing', 'know', 'to know', 'knew'], answer: 0, why: 'There is no -ing「〜することはできない」。' },
     ],
   },
   {
@@ -2922,9 +2922,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is what we call a win-win situation.', ja: 'これがいわゆる「両者が得をする」状況だ。' },
     ],
     questions: [
-      { sentence: 'He is ___ is called a genius.', choices: ['what', 'which', 'that'], answer: 0, why: 'what is called 〜「いわゆる〜」。' },
-      { sentence: 'This is what we ___ "fast food."', choices: ['call', 'called', 'calling'], answer: 0, why: 'what we call 〜「いわゆる〜」。we のあとは動詞の原形（現在形）。' },
-      { sentence: 'Tokyo is what ___ called a "megacity."', choices: ['is', 'are', 'calls'], answer: 0, why: 'what is called の形。what は単数あつかい。' },
+      { sentence: 'He is ___ is called a genius.', choices: ['what', 'which', 'that', 'who'], answer: 0, why: 'what is called 〜「いわゆる〜」。' },
+      { sentence: 'This is what we ___ "fast food."', choices: ['call', 'called', 'calling', 'calls'], answer: 0, why: 'what we call 〜「いわゆる〜」。we のあとは動詞の原形（現在形）。' },
+      { sentence: 'Tokyo is what ___ called a "megacity."', choices: ['is', 'are', 'calls', 'being'], answer: 0, why: 'what is called の形。what は単数あつかい。' },
     ],
   },
   {
@@ -2939,9 +2939,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It rarely snows in this town.', ja: 'この町ではめったに雪がふらない。' },
     ],
     questions: [
-      { sentence: 'It was so dark that I could ___ see anything.', choices: ['hardly', 'hard', 'not hardly'], answer: 0, why: '「ほとんど見えなかった」は hardly。hard は「一生けんめい・かたい」。' },
-      { sentence: 'My father ___ watches TV. He is always busy.', choices: ['seldom', 'often', 'always'], answer: 0, why: 'いつもいそがしいので「めったに見ない」seldom。' },
-      { sentence: 'She ___ comes late. She is usually on time.', choices: ['rarely', 'never not', 'hardly not'], answer: 0, why: 'rarely だけで否定の意味。not は重ねない。' },
+      { sentence: 'It was so dark that I could ___ see anything.', choices: ['hardly', 'hard', 'not hardly', 'hardest'], answer: 0, why: '「ほとんど見えなかった」は hardly。hard は「一生けんめい・かたい」。' },
+      { sentence: 'My father ___ watches TV. He is always busy.', choices: ['seldom', 'often', 'always', 'not seldom'], answer: 0, why: 'いつもいそがしいので「めったに見ない」seldom。' },
+      { sentence: 'She ___ comes late. She is usually on time.', choices: ['rarely', 'never not', 'hardly not', 'not rarely'], answer: 0, why: 'rarely だけで否定の意味。not は重ねない。' },
     ],
   },
   {
@@ -2973,9 +2973,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is necessary that the report be finished by Friday.', ja: 'その報告書は金曜日までに仕上げられる必要がある。' },
     ],
     questions: [
-      { sentence: 'My teacher suggested that I ___ more books.', choices: ['read', 'reads', 'reading'], answer: 0, why: 'suggest that 〜 の節は (should) ＋ 原形。' },
-      { sentence: 'She demanded that he ___ the money back at once.', choices: ['pay', 'pays', 'paid to'], answer: 0, why: '過去の文でも、要求の that 節は原形 pay（should pay も可）。' },
-      { sentence: 'It is important that everyone ___ the rules.', choices: ['follow', 'to follow', 'following'], answer: 0, why: 'It is important that 〜 の節も (should) ＋ 原形。everyone でも follow のまま。' },
+      { sentence: 'My teacher suggested that I ___ more books.', choices: ['read', 'reads', 'reading', 'will read'], answer: 0, why: 'suggest that 〜 の節は (should) ＋ 原形。' },
+      { sentence: 'She demanded that he ___ the money back at once.', choices: ['pay', 'pays', 'paid to', 'will pay'], answer: 0, why: '過去の文でも、要求の that 節は原形 pay（should pay も可）。' },
+      { sentence: 'It is important that everyone ___ the rules.', choices: ['follow', 'to follow', 'following', 'followed to'], answer: 0, why: 'It is important that 〜 の節も (should) ＋ 原形。everyone でも follow のまま。' },
     ],
   },
   {
@@ -3007,9 +3007,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is worth trying, even if you fail.', ja: 'たとえ失敗しても、やってみる価値はある。' },
     ],
     questions: [
-      { sentence: 'The castle is worth ___.', choices: ['visiting', 'to visit', 'visit'], answer: 0, why: 'be worth のあとは動名詞。' },
-      { sentence: 'This story is worth ___.', choices: ['reading', 'reading it', 'being read it'], answer: 0, why: '主語 This story が reading の目的語なので it は置かない。' },
-      { sentence: 'It is ___ asking the teacher for advice.', choices: ['worth', 'worthy to', 'worth of'], answer: 0, why: 'It is worth ～ing「～する価値がある」。' },
+      { sentence: 'The castle is worth ___.', choices: ['visiting', 'to visit', 'visit', 'visited'], answer: 0, why: 'be worth のあとは動名詞。' },
+      { sentence: 'This story is worth ___.', choices: ['reading', 'reading it', 'being read it', 'read'], answer: 0, why: '主語 This story が reading の目的語なので it は置かない。' },
+      { sentence: 'It is ___ asking the teacher for advice.', choices: ['worth', 'worthy to', 'worth of', 'worthy'], answer: 0, why: 'It is worth ～ing「～する価値がある」。' },
     ],
   },
   {
@@ -3041,9 +3041,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A short nap can keep you from feeling tired.', ja: '短い昼寝をすると、つかれを感じにくくなる。' },
     ],
     questions: [
-      { sentence: 'The fever prevented her ___ going to school.', choices: ['from', 'to', 'of'], answer: 0, why: 'prevent A from ～ing「A が～するのをさまたげる」。' },
-      { sentence: 'The loud music kept me from ___.', choices: ['studying', 'study', 'to study'], answer: 0, why: 'from は前置詞なので、あとは動名詞。' },
-      { sentence: 'The storm ___ the plane from taking off.', choices: ['prevented', 'let', 'made'], answer: 0, why: 'A from ～ing の形をとれるのは prevent。let / make は〈A ＋ 原形〉。' },
+      { sentence: 'The fever prevented her ___ going to school.', choices: ['from', 'to', 'of', 'with'], answer: 0, why: 'prevent A from ～ing「A が～するのをさまたげる」。' },
+      { sentence: 'The loud music kept me from ___.', choices: ['studying', 'study', 'to study', 'studied'], answer: 0, why: 'from は前置詞なので、あとは動名詞。' },
+      { sentence: 'The storm ___ the plane from taking off.', choices: ['prevented', 'let', 'made', 'had'], answer: 0, why: 'A from ～ing の形をとれるのは prevent。let / make は〈A ＋ 原形〉。' },
     ],
   },
   {
@@ -3075,9 +3075,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Although the test was hard, many students passed it.', ja: 'テストはむずかしかったが、多くの生徒が合格した。' },
     ],
     questions: [
-      { sentence: '___ the heavy snow, the bus came on time.', choices: ['Despite', 'Although', 'Despite of'], answer: 0, why: 'あとが名詞 the heavy snow なので前置詞 Despite。despite of とは言わない。' },
-      { sentence: '___ she was sick, she went to school.', choices: ['Although', 'Despite', 'In spite of'], answer: 0, why: 'あとが文（she was sick）なので接続詞 Although。' },
-      { sentence: 'In spite ___ the noise, the baby slept well.', choices: ['of', 'for', 'with'], answer: 0, why: 'in spite of ＋ 名詞「～にもかかわらず」。' },
+      { sentence: '___ the heavy snow, the bus came on time.', choices: ['Despite', 'Although', 'Despite of', 'Though'], answer: 0, why: 'あとが名詞 the heavy snow なので前置詞 Despite。despite of とは言わない。' },
+      { sentence: '___ she was sick, she went to school.', choices: ['Although', 'Despite', 'In spite of', 'Because of'], answer: 0, why: 'あとが文（she was sick）なので接続詞 Although。' },
+      { sentence: 'In spite ___ the noise, the baby slept well.', choices: ['of', 'for', 'with', 'by'], answer: 0, why: 'in spite of ＋ 名詞「～にもかかわらず」。' },
     ],
   },
   {
