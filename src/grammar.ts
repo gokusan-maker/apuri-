@@ -7478,9 +7478,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He was covered in mud from head to toe.', ja: '彼は全身どろだらけだった。' },
     ],
     questions: [
-      { sentence: 'She checked the report from top to ___.', choices: ['bottom', 'bottoms', 'the bottom of'], answer: 0, why: 'from top to bottom「すみずみまで」。to のあとは the のない単数の bottom。' },
-      { sentence: 'The boy was wet from head to ___.', choices: ['toe', 'toes of', 'the toes of'], answer: 0, why: 'from head to toe「全身」。to のあとは the のない単数の toe。' },
-      { sentence: 'The volunteers went from door to ___ asking for help.', choices: ['door', 'doors of', 'the door of'], answer: 0, why: 'from door to door「一軒一軒」。to のあとは同じ door。' },
+      { sentence: 'We cleaned the whole house from top to ___ before the guests arrived.', choices: ['bottom', 'end', 'foot', 'base'], answer: 0, why: 'from top to bottom「上から下まで・すみずみまで」。' },
+      { sentence: 'The boy came home covered in mud from head to ___.', choices: ['toe', 'knee', 'leg', 'heel'], answer: 0, why: 'from head to toe「頭のてっぺんからつま先まで・全身」。' },
+      { sentence: 'The volunteers went from door ___ door collecting money for the hospital.', choices: ['to', 'by', 'in', 'after'], answer: 0, why: 'from door to door「一軒一軒」。' },
     ],
   },
   {
@@ -7580,9 +7580,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Aside from the rain, we had a great trip.', ja: '雨は別として、すばらしい旅行だった。' },
     ],
     questions: [
-      { sentence: 'Except ___ Monday, the shop is open every day.', choices: ['for', 'of', 'to'], answer: 0, why: 'except for ～「～をのぞいて」。except のあとは for。' },
-      { sentence: 'Aside ___ the price, I like this bag very much.', choices: ['from', 'of', 'for'], answer: 0, why: 'aside from ～「～は別として」。aside のあとは from。' },
-      { sentence: 'Except ___ the sound of the clock, the room was quiet.', choices: ['for', 'of', 'on'], answer: 0, why: 'except for ～「～があるほかは」。except のあとは for。' },
+      { sentence: 'The shop is open every day ___ for Mondays.', choices: ['except', 'besides', 'without', 'apart'], answer: 0, why: 'except for ～「～をのぞいて」。apart なら apart from。besides（～に加えて）は for が続かない。' },
+      { sentence: 'Aside ___ the price, I really like this bag.', choices: ['from', 'of', 'for', 'to'], answer: 0, why: 'aside from ～「～は別として」（= apart from）。' },
+      { sentence: 'Your essay is very good ___ for a few spelling mistakes.', choices: ['except', 'besides', 'including', 'beside'], answer: 0, why: 'except for ～「～があるほかは」。besides は「～に加えて」、beside は「～のそばに」で意味が合わない。' },
     ],
   },
   {
@@ -7597,9 +7597,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In contrast to his brother, Ken is very quiet.', ja: '兄とは対照的に、ケンはとても静かだ。' },
     ],
     questions: [
-      { sentence: 'Contrary ___ popular belief, bats are not blind.', choices: ['to', 'of', 'by'], answer: 0, why: 'contrary to ～「～に反して」。contrary のあとは to。' },
-      { sentence: 'In contrast ___ the city, the village is very calm.', choices: ['to', 'of', 'on'], answer: 0, why: 'in contrast to ～「～と対照的に」。contrast のあとは to（with も可）。' },
-      { sentence: '___ to what we feared, the plan worked well.', choices: ['Contrary', 'Contrarily', 'Contrast'], answer: 0, why: 'contrary to ～「～に反して」。to の前は形容詞 contrary。' },
+      { sentence: 'Contrary ___ popular belief, bats are not blind.', choices: ['to', 'of', 'with', 'from'], answer: 0, why: 'contrary to ～「～に反して」。' },
+      { sentence: 'In contrast ___ the busy city, the village is calm and quiet.', choices: ['to', 'of', 'from', 'against'], answer: 0, why: 'in contrast to / with ～「～と対照的に」。' },
+      { sentence: '___ to what we had feared, the plan worked perfectly.', choices: ['Contrary', 'Opposite', 'Unlike', 'Against'], answer: 0, why: 'contrary to ～「～に反して」。unlike は前置詞なので to は続かず、opposite to は場所の「向かい側に」の意味がふつう。' },
     ],
   },
   {
@@ -7733,9 +7733,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Prices went up in line with the cost of oil.', ja: '石油の値段にそって物価が上がった。' },
     ],
     questions: [
-      { sentence: 'I have a question in connection ___ the trip.', choices: ['with', 'of', 'at'], answer: 0, why: 'in connection with ～「～に関して」。connection のあとは with。' },
-      { sentence: 'The school changed its rules in line ___ the new law.', choices: ['with', 'of', 'at'], answer: 0, why: 'in line with ～「～にそって」。line のあとは with。' },
-      { sentence: 'Two men were questioned in ___ with the fire.', choices: ['connection', 'connected', 'connecting'], answer: 0, why: 'in connection with ～。in のあとは名詞 connection。' },
+      { sentence: 'The police want to speak to two men in connection ___ the robbery.', choices: ['with', 'of', 'to', 'for'], answer: 0, why: 'in connection with ～「～に関連して」。' },
+      { sentence: 'The school changed its rules in ___ with the new law.', choices: ['line', 'connection', 'charge', 'favor'], answer: 0, why: 'in line with ～「～にそって・～に従って」。法律に合わせてルールを変えたので line。in connection with は「～に関連して」で、変えた方向を表さない。' },
+      { sentence: 'I am writing ___ connection with the job advertised in yesterday’s newspaper.', choices: ['in', 'on', 'with', 'by'], answer: 0, why: 'in connection with ～「～に関して」。手紙・メールの書き出しでよく使う。' },
     ],
   },
   {
@@ -7784,9 +7784,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The club was started with the aim of helping old people.', ja: 'そのクラブはお年よりを助けることを目的に始められた。' },
     ],
     questions: [
-      { sentence: 'I came early in the hope of ___ a good seat.', choices: ['getting', 'get', 'to get'], answer: 0, why: 'in the hope of ～ing「～することを望んで」。of のあとは動名詞 getting。' },
-      { sentence: 'They practiced hard with the aim of ___ the contest.', choices: ['winning', 'win', 'to win'], answer: 0, why: 'with the aim of ～ing「～することをめざして」。of のあとは動名詞 winning。' },
-      { sentence: 'He called her in the ___ of hearing good news.', choices: ['hope', 'hopes of', 'hopeful'], answer: 0, why: 'in the hope of ～ing。the のあとは単数の名詞 hope。' },
+      { sentence: 'I arrived early in the hope of ___ a good seat.', choices: ['getting', 'get', 'to get', 'got'], answer: 0, why: 'in the hope of ～ing「～することを望んで」。of は前置詞なので動名詞 getting。' },
+      { sentence: 'They trained hard ___ the aim of winning the championship.', choices: ['with', 'in', 'for', 'on'], answer: 0, why: 'with the aim of ～ing「～することをめざして」。' },
+      { sentence: 'He wrote to the company in the ___ of finding a job.', choices: ['hope', 'aim', 'wish', 'dream'], answer: 0, why: 'in the hope of ～「～を望んで」。the aim of なら with the aim of と前置詞が with になる。' },
     ],
   },
   {
@@ -8056,9 +8056,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In a nutshell, the movie is about friendship.', ja: 'ひとことで言えば、その映画は友情についての話だ。' },
     ],
     questions: [
-      { sentence: 'Our class discussed the news in ___.', choices: ['depth', 'deep', 'deeply'], answer: 0, why: 'in depth「深く・徹底的に」。in のあとは名詞 depth。' },
-      { sentence: 'The teacher talked at ___ about the trip rules.', choices: ['length', 'long', 'lengthy'], answer: 0, why: 'at length「くわしく・長々と」。at のあとは名詞 length。' },
-      { sentence: 'In a ___, our plan is to save money and travel.', choices: ['nutshell', 'nutshells', 'nut shelled'], answer: 0, why: 'in a nutshell「ひとことで言えば」。a のあとは単数の名詞 nutshell。' },
+      { sentence: 'The documentary examines the causes of the war ___ depth.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in depth「深く・徹底的に」。' },
+      { sentence: 'The speaker talked at ___ about his childhood, and many people fell asleep.', choices: ['length', 'depth', 'once', 'last'], answer: 0, why: '「多くの人がねむってしまった」ので at length「長々と」。at once は「すぐに」、at last は「ついに」。' },
+      { sentence: 'In a ___, the new plan will save money and time.', choices: ['nutshell', 'word of', 'short', 'brief of'], answer: 0, why: 'in a nutshell「ひとことで言えば・要するに」。in short / in brief は a をつけない。' },
     ],
   },
   {
