@@ -8641,17 +8641,17 @@ export const GRAMMAR: GrammarUnit[] = [
   },
   {
     id: 'prep-idiom-atspeed',
-    title: '前置詞の熟語79 at a speed of ／ at a price of ／ at a temperature of（～の速さで・～の値段で・～の温度で）',
+    title: '前置詞の熟語79 at a price of ／ at a cost of ／ at a temperature of（～の値段で・～の費用で・～の温度で）',
     points: [
-      '速さ・値段・温度などの「目もりの一点」は at：at a speed of ～「～の速さで」、at a price of ～「～の値段で」、at a temperature of ～「～の温度で」。',
-      'at a のあとは単数の名詞：speed・price・temperature。speedy・priced・temperatures などは入らない。',
+      '値段・費用・温度などの「目もりの一点」は at：at a price of ～「～の値段で」、at a cost of ～「～の費用で」、at a temperature of ～「～の温度で」（速さの at a speed of も同じ形）。',
+      'at a のあとは単数の名詞：price・cost・temperature。priced・costly・temperatures などは入らない。',
     ],
     examples: [
-      { en: 'The bullet train runs at a speed of about 300 kilometers an hour.', ja: '新幹線はおよそ時速300キロの速さで走る。' },
+      { en: 'The new library was built at a cost of five billion yen.', ja: '新しい図書館は50億円の費用で建てられた。' },
       { en: 'Water boils at a temperature of 100 degrees.', ja: '水は100度の温度でふっとうする。' },
     ],
     questions: [
-      { sentence: 'The bird can fly at a ___ of 100 km an hour.', choices: ['speed', 'speedy', 'speeding'], answer: 0, why: 'at a speed of ～「～の速さで」。a のあとは名詞 speed。' },
+      { sentence: 'The bridge was built at a ___ of ten million dollars.', choices: ['cost', 'costly', 'costs'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは単数の名詞 cost。' },
       { sentence: 'The shop sells these T-shirts at a ___ of 1,500 yen.', choices: ['price', 'priced', 'pricing'], answer: 0, why: 'at a price of ～「～の値段で」。a のあとは名詞 price。' },
       { sentence: 'Keep the milk at a ___ of below 10 degrees.', choices: ['temperature', 'temperate', 'temperatures'], answer: 0, why: 'at a temperature of ～「～の温度で」。a のあとは単数の名詞 temperature。' },
     ],

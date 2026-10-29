@@ -2693,7 +2693,7 @@
 
 - [x] 長文（共通テスト）：何百万もの命を救った贈り物（シートベルト）
 
-- [x] 文法：前置詞の熟語79 at a speed of ／ at a price of ／ at a temperature of
+- [x] 文法：前置詞の熟語79 at a price of ／ at a cost of ／ at a temperature of
 
 ## アイデア（未整理）
 - 単語データが増えてバンドルが約206KB（gzip）になった。オフライン前提なので分割より、例文の重複などを見直す方向で検討

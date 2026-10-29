@@ -146,7 +146,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-inthepast': { wrong: 'A new park will open in the nearly future.', right: 'A new park will open in the near future.', why: 'in the near future「近いうちに」。future の前は形容詞 near（nearly は副詞）。' },
   'prep-idiom-inclass': { wrong: 'We can’t eat on class.', right: 'We can’t eat in class.', why: '「授業中に」は in class。on class とは言わない（the もつけない）。' },
   'prep-idiom-withasmile': { wrong: 'The clerk welcomed us with a smiling.', right: 'The clerk welcomed us with a smile.', why: 'with a smile「にっこりして」。a のあとは名詞 smile（smiling は入らない）。' },
-  'prep-idiom-atspeed': { wrong: 'The car was running at a speedy of 80 km an hour.', right: 'The car was running at a speed of 80 km an hour.', why: 'at a speed of ～「～の速さで」。a のあとは名詞 speed（speedy は形容詞）。' },
+  'prep-idiom-atspeed': { wrong: 'Keep the fish at a temperatures of 2 degrees.', right: 'Keep the fish at a temperature of 2 degrees.', why: 'at a temperature of ～「～の温度で」。a のあとは単数 temperature。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
