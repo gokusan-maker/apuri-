@@ -121,3 +121,11 @@ it('デザイン79：おやつをあげると「おいしい！」がうかび�
   fireEvent.click(screen.getByRole('button', { name: new RegExp(SNACKS[0].name) }))
   expect(screen.getByText('おいしい！💕')).toBeInTheDocument()
 })
+
+it('デザイン80：着せかえを変えたときだけ、見本の相棒がくるっとまわる（開いたときはまわらない）', () => {
+  const props = { onBuy: () => {}, onWear: () => {}, onClose: () => {}, snacksLeft: 3, onEat: () => {} }
+  const { rerender } = render(<Shop initialTab="wear" wallet={{ coins: 0, owned: ['ribbon', 'hat'] }} monster={{ xp: 200, wear: 'ribbon' }} {...props} />)
+  expect(document.querySelector('.shop-wear-spin.on')).toBeNull()
+  rerender(<Shop initialTab="wear" wallet={{ coins: 0, owned: ['ribbon', 'hat'] }} monster={{ xp: 200, wear: 'hat' }} {...props} />)
+  expect(document.querySelector('.shop-wear-spin.on')).not.toBeNull()
+})

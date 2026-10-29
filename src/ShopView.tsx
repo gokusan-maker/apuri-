@@ -71,6 +71,7 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
   const shownRoom = tryRoom && !wallet.owned.includes(tryRoom) ? tryRoom : wallet.room
   const form = formOf(monster)
   const canWear = form.stage > 0
+  const [firstWear] = useState(monster.wear) // 開いたときの着せかえ（変えたときだけまわる）
   const [eating, setEating] = useState<{ icon: string; key: number; fav?: boolean } | null>(null)
   const [outfits, setOutfits] = useState(loadOutfits)
   const [tab, setTab] = useState<ShopTab>(initialTab ?? (onGacha ? 'gacha' : 'snack'))
@@ -93,7 +94,10 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
       <div className={`shop-stage${shownRoom ? ` room-${shownRoom}` : ''}`}>
         <RoomScene room={shownRoom} align="xMaxYMax" />
         <div className="shop-preview">
-          <MonsterFigure form={form} wear={monster.wear} kind={monster.kind} mood={eating ? 'eat' : 'happy'} />
+          {/* デザイン80：着せかえを変えると、見本の相棒がくるっと1回まわる（key で毎回アニメーションしなおす） */}
+          <span key={`wear-${monster.wear ?? 'none'}`} className={`shop-wear-spin${monster.wear !== firstWear ? ' on' : ''}`}>
+            <MonsterFigure form={form} wear={monster.wear} kind={monster.kind} mood={eating ? 'eat' : 'happy'} />
+          </span>
           {eating && (
             <span key={eating.key} className="snack-bite" aria-label="もぐもぐ">
               {eating.icon}

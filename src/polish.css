@@ -4608,3 +4608,9 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .snack-yum.fav { background: #fdf2f8; color: #be185d; }
 @keyframes snack-yum { 0% { opacity: 0; translate: 0 6px; } 20% { opacity: 1; translate: 0 0; } 80% { opacity: 1; } 100% { opacity: 0; translate: 0 -14px; } }
 @media (prefers-reduced-motion: reduce) { .snack-yum { animation: none; } }
+
+/* デザイン80：着せかえを変えると、ショップの見本の相棒がくるっと1回まわる（平面の回転だけ） */
+.shop-wear-spin { display: block; }
+.shop-wear-spin.on { animation: wear-spin 0.6s ease-out 1; }
+@keyframes wear-spin { 0% { transform: rotate(0deg) scale(1); } 50% { transform: rotate(180deg) scale(0.9); } 100% { transform: rotate(360deg) scale(1); } }
+@media (prefers-reduced-motion: reduce) { .shop-wear-spin.on { animation: none; } }
