@@ -14434,6 +14434,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'shiritsu-remote-work',
+    title: 'What Happens to Cities When Work Moves Home?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "For most of the twentieth century, the daily routine of office workers in large cities followed a predictable pattern, in which millions of people traveled into the center every morning and returned to the suburbs every evening. This pattern shaped not only transport systems but also the entire economy of city centers, where restaurants, dry cleaners, and shops depended on the steady stream of customers that office workers provided during their lunch breaks and after work.",
+      "The spread of fast internet connections and video-calling software had already made working from home possible for many jobs by the early twenty-first century, but relatively few employers encouraged it, partly because managers doubted that people would work as hard without being observed. The sudden need to keep offices closed during the global pandemic that began in 2020 forced an enormous experiment, and many organizations discovered, to their surprise, that a large share of their work could be done remotely ( A ) any serious loss of productivity.",
+      "When offices reopened, a considerable number of workers were unwilling to return to the old routine, and many companies adopted hybrid arrangements in which employees spend only part of the week in the office. For workers, the advantages are easy to see: less time and money spent on commuting, greater flexibility to care for children or elderly relatives, and in some cases the freedom to live in cheaper areas far from the city. Critics point out, however, that remote work is not equally available to everyone, since cleaners, nurses, shop assistants, and factory workers cannot do their jobs from a kitchen table.",
+      "The effects on cities have been mixed. In some business districts, office buildings that were once fully occupied now stand partly empty, and the small businesses that served office workers have lost customers, with some forced to close. At the same time, residential neighborhoods and smaller towns have gained activity, as people who work from home spend more of their money locally. In other words, the economic life of cities has not disappeared ( B ) shifted, moving away from the center toward the places where people actually live.",
+      "Some urban planners see this shift as an opportunity rather than a threat. They argue that empty office space could be converted into apartments, which many cities badly need, and that city centers might become more varied and lively places if they were no longer dominated by a single kind of activity. Such conversions are not always easy, because office buildings are often designed with deep floors and few windows, but several cities have begun to offer support to developers willing to try.",
+      "It is still too early to know what the long-term pattern will be, and the answer is likely to differ from city to city and from industry to industry. What seems clear is that the assumption on which much of urban life was built, ( C ) that most people must gather in the same place every weekday in order to work, can no longer be taken for granted. How cities respond to this change may shape the quality of urban life for decades to come.",
+    ],
+    ja: [
+      '20世紀の大部分を通じて、大都市の会社員の毎日はわかりやすいパターンをたどっていた。何百万人もの人が毎朝中心部へ通い、毎晩郊外へ帰っていったのである。このパターンは交通機関だけでなく、都心の経済全体をも形づくっていた。都心では、レストランやクリーニング店や商店が、昼休みや仕事帰りに会社員がもたらす客の安定した流れにたよっていた。',
+      '速いインターネット回線とビデオ通話のソフトの広まりによって、21世紀の初めまでには多くの仕事で在宅勤務がすでに可能になっていたが、それをすすめる雇い主は比較的少なかった。ひとつには、見られていなければ人はそれほど熱心に働かないだろうと管理職が疑っていたからだ。2020年に始まった世界的な感染症の流行のあいだ、急にオフィスを閉めておく必要が生じたことで、大規模な実験がおこなわれることになった。そして多くの組織が、おどろいたことに、仕事の大部分は生産性を大きく落とすことなく遠隔でできるとわかったのである。',
+      'オフィスが再開されると、かなりの数の働き手が古い日課にもどることをいやがり、多くの会社は、社員が週の一部だけオフィスで過ごすハイブリッド型の働き方を取り入れた。働き手にとっての利点はわかりやすい。通勤にかかる時間とお金がへり、子どもや高齢の家族の世話をする柔軟さが増し、場合によっては都市から遠くはなれた安い地域に住む自由も得られる。しかし批判する人たちは、在宅勤務はだれにでも等しく可能なわけではないと指摘する。清掃員、看護師、店員、工場の労働者は、台所のテーブルで仕事をすることはできないからだ。',
+      '都市への影響はさまざまである。かつてはいっぱいだったオフィスビルが今では一部空いたままになっているビジネス街もあり、会社員を相手にしていた小さな店は客を失い、閉店に追いこまれたところもある。同時に、住宅地や小さな町では活気が増している。在宅で働く人が、お金をより多く地元で使うからだ。言いかえれば、都市の経済活動は消えたのではなく移ったのであり、中心部から、人々が実際に住んでいる場所へと移動したのである。',
+      'この変化を脅威ではなく好機と見る都市計画家もいる。彼らは、空いたオフィスを多くの都市でとても不足しているアパートに作りかえられるし、都心がひとつの種類の活動だけに支配されなくなれば、もっと多様で活気のある場所になるかもしれないと主張する。オフィスビルは奥行きが深く窓が少なく設計されていることが多いので、こうした改装はいつも簡単なわけではないが、挑戦しようとする開発業者への支援を始めた都市もいくつかある。',
+      '長期的なパターンがどうなるかを知るにはまだ早すぎるし、その答えは都市ごと、産業ごとにちがうだろう。はっきりしているように思えるのは、都市生活の多くがよりどころにしてきた前提、つまり働くためにはほとんどの人が平日は毎日同じ場所に集まらなければならないという前提を、もはやあたりまえとは考えられないということだ。都市がこの変化にどう対応するかが、今後何十年にもわたって都市生活の質を左右するかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['without', 'despite', 'beyond', 'except'], answer: 0, why: '「生産性を大きく落とすことなく」なので without ～「～なしに」。despite（～にもかかわらず）では意味が通らない。' },
+      { id: 'B', choices: ['but', 'and', 'or', 'nor'], answer: 0, why: 'not A but B「A ではなく B」。has not disappeared but shifted「消えたのではなく移った」。' },
+      { id: 'C', choices: ['namely', 'otherwise', 'instead', 'therefore'], answer: 0, why: '直前の the assumption の中身を具体的に言いかえて示すので namely「すなわち」。' },
+    ],
+    tf: [
+      { statement: '感染症の流行の前から、多くの仕事で在宅勤務は技術的に可能だった。', answer: true, why: '第2段落 had already made working from home possible for many jobs by the early twenty-first century。' },
+      { statement: '筆者によれば、在宅勤務はどんな職業の人にも等しく利用できる。', answer: false, why: '第3段落 remote work is not equally available to everyone, since cleaners, nurses … cannot do their jobs from a kitchen table。' },
+      { statement: '在宅勤務がふえて、住宅地や小さな町では活気が増している。', answer: true, why: '第4段落 residential neighborhoods and smaller towns have gained activity。' },
+      { statement: 'オフィスビルは窓が多いので、アパートに作りかえるのは簡単である。', answer: false, why: '第5段落 office buildings are often designed with deep floors and few windows。改装は簡単ではない。' },
+    ],
+    qa: [
+      { q: 'Why did relatively few employers encourage working from home before 2020?', choices: ['Managers doubted that people would work hard without being watched.', 'The internet was not fast enough for any kind of work.', 'Workers did not want to stay at home.', 'It was against the law in most countries.'], answer: 0, why: '第2段落 partly because managers doubted that people would work as hard without being observed。' },
+      { q: 'What does the writer mean by saying that economic life "has not disappeared but shifted"?', choices: ['Spending has moved from city centers to the areas where people live.', 'Businesses in all areas have closed.', 'People have stopped spending money altogether.', 'Office workers now spend more in the city center.'], answer: 0, why: '第4段落 moving away from the center toward the places where people actually live。' },
+      { q: 'How do some urban planners view the change?', choices: ['As a chance to make city centers more varied, for example by building homes.', 'As a disaster that will destroy all cities.', 'As a reason to build more office towers.', 'As unimportant for the future of cities.'], answer: 0, why: '第5段落 see this shift as an opportunity … empty office space could be converted into apartments … more varied and lively places。' },
+    ],
+    gist: [
+      { para: 3, choices: ['影響の両面：都心の店は客を失い、住宅地は活気づく', '在宅勤務の健康への影響', 'ビデオ通話のソフトの歴史', '郊外の住宅の値段'], answer: 0, why: '第4段落は The effects on cities have been mixed で始まり、都心の衰退と住宅地の活気の両面を述べている。' },
+      { para: 5, choices: ['都市生活の前提がゆらいでいる', '在宅勤務はすぐに終わる', 'すべての都市は同じように変わる', '会社はオフィスを広げるべきだ'], answer: 0, why: '第6段落は、毎日同じ場所に集まるという前提が can no longer be taken for granted だと述べている。答えは都市や産業ごとにちがうとしている。' },
+    ],
+    titleQ: { choices: ['What Happens to Cities When Work Moves Home?', 'How to Set Up a Home Office', 'The History of the Internet', 'Why Nurses Cannot Work from Home'], answer: 0, why: '全体として、在宅勤務の広まりが都市の経済と生活にどんな影響をあたえるかを論じている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
