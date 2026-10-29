@@ -13727,6 +13727,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-seatbelt',
+    title: 'A Gift That Saved Millions',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Early cars had no seat belts. Later, some cars had simple belts ( A ) went only across the waist. In a crash, however, the upper body could still be thrown forward, and people were often badly hurt.",
+      "In 1959, an engineer at a car company in Sweden designed a new belt. It went across both the chest and the waist and was fastened at one point beside the seat. It was strong, and anyone could put it on with one hand in a few seconds.",
+      "The company could have kept the design to itself and made a lot of money. Instead, it decided to let other car makers use the idea for free, because it believed that saving lives was more important ( B ) earning money.",
+      "Today, this kind of belt is used in cars all over the world, and it is said to have saved millions of lives. The story shows that sharing a good idea can sometimes be the greatest gift of all.",
+    ],
+    ja: [
+      '初期の自動車にはシートベルトがなかった。のちに、こしのところだけを横切る単純なベルトがついた車も出てきた。しかし、しょうとつすると上半身が前に投げ出されることがあり、人々はしばしば大けがをした。',
+      '1959年、スウェーデンの自動車会社の技術者が新しいベルトを設計した。それは胸とこしの両方を横切り、座席の横の1か所でとめるものだった。じょうぶで、だれでも数秒で片手でつけることができた。',
+      'その会社は、そのデザインをひとりじめにして大もうけすることもできた。しかしそうせずに、ほかの自動車会社にそのアイデアを無料で使わせることにした。お金をかせぐことより、命を救うことのほうが大切だと考えたからだ。',
+      '今日、この種類のベルトは世界中の車で使われていて、何百万もの命を救ってきたと言われている。この話は、よいアイデアを分かち合うことが、ときに最高の贈り物になりうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 simple belts（もの）で、うしろの went の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['than', 'as', 'to', 'from'], answer: 0, why: '比較級 more important のあとは than「～より」。as・to・from は比較級のあとに置かない。' },
+    ],
+    underline: {
+      phrase: 'kept the design to itself',
+      choices: ['did not share the design with others', 'threw the design away', 'sold the design at a low price', 'changed the design every year'],
+      answer: 0,
+      why: 'keep ～ to oneself は「～をひとりじめにする・人に分けない」という意味。',
+    },
+    order: {
+      words: ['let', 'other', 'car', 'makers', 'use', 'the', 'idea'],
+      rest: 'for free',
+      answer: 'let other car makers use the idea',
+      ja: 'ほかの自動車会社にそのアイデアを使わせる（let ＋人＋動詞の原形「～に…させる」）',
+    },
+    tf: [
+      { statement: '初期の自動車には、シートベルトがなかった。', answer: true, why: '第1段落 Early cars had no seat belts。' },
+      { statement: '新しいベルトは、両手を使わないとつけられなかった。', answer: false, why: '第2段落 anyone could put it on with one hand in a few seconds。' },
+      { statement: 'その会社は、アイデアをほかの会社に無料で使わせた。', answer: true, why: '第3段落 it decided to let other car makers use the idea for free。' },
+    ],
+    qa: [
+      { q: 'Why did the company share its design for free?', choices: ['It believed saving lives was more important than earning money.', 'The design did not work well.', 'Other companies paid a lot for it.', 'The engineer left the company.'], answer: 0, why: '第3段落 because it believed that saving lives was more important than earning money。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
