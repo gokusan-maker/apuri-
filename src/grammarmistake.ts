@@ -139,6 +139,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-bothsides': { wrong: 'There are shops on both side of the street.', right: 'There are shops on both sides of the street.', why: 'on both sides「両側に」。both のあとは複数形 sides。' },
   'prep-idiom-onthebus': { wrong: 'I read a book on the taxi.', right: 'I read a book in the taxi.', why: 'タクシーや車など、立って歩けない小さな乗り物は in（in the taxi・in the car）。バス・電車・飛行機は on。' },
   'prep-idiom-bysubway': { wrong: 'We went to the island by a boat.', right: 'We went to the island by boat.', why: '手段の by のあとは a・the をつけない（by boat・by subway）。' },
+  'prep-idiom-fordessert': { wrong: 'We had cake for desert.', right: 'We had cake for dessert.', why: '「デザートに」は for dessert（s が2つ）。desert は「さばく」で別の単語。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
