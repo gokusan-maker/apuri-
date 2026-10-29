@@ -4809,9 +4809,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'When reading English, try to guess the meaning of new words.', ja: '英語を読むときは、知らない単語の意味を推測してみよう。' },
     ],
     questions: [
-      { sentence: 'Be careful while ___ the street.', choices: ['crossing', 'cross', 'crossed'], answer: 0, why: 'while -ing「～している間に」。主語（you）と be 動詞が省かれている。' },
-      { sentence: 'When ___ a letter, write clearly.', choices: ['writing', 'write', 'wrote'], answer: 0, why: 'when -ing「～するときに」。' },
-      { sentence: 'I met Ken while I ___ for the bus.', choices: ['was waiting', 'am waiting', 'wait'], answer: 0, why: '過去のある時に進行中だったことは過去進行形 was waiting。' },
+      { sentence: 'Be careful while ___ the street.', choices: ['crossing', 'cross', 'crossed', 'to cross'], answer: 0, why: 'while -ing「～している間に」。主語（you）と be 動詞が省かれている。' },
+      { sentence: 'When ___ a letter, write clearly.', choices: ['writing', 'write', 'wrote', 'to write'], answer: 0, why: 'when -ing「～するときに」。' },
+      { sentence: 'I met Ken while I ___ for the bus.', choices: ['was waiting', 'am waiting', 'wait', 'have waited'], answer: 0, why: '過去のある時に進行中だったことは過去進行形 was waiting。' },
     ],
   },
   {
@@ -4826,9 +4826,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I can stay late if necessary.', ja: '必要なら遅くまで残れます。' },
     ],
     questions: [
-      { sentence: 'Please call me back today, if ___.', choices: ['possible', 'possibly', 'possibility'], answer: 0, why: 'if (it is) possible「できれば」。be のあとなので形容詞 possible。' },
-      { sentence: 'I will help you if ___.', choices: ['necessary', 'necessarily', 'need'], answer: 0, why: 'if (it is) necessary「必要なら」。' },
-      { sentence: 'Bring a dictionary to class if ___.', choices: ['possible', 'possibly', 'possibility'], answer: 0, why: 'if possible「できれば」の決まった形。' },
+      { sentence: 'Please call me back today, if ___.', choices: ['possible', 'possibly', 'possibility', 'possibilities'], answer: 0, why: 'if (it is) possible「できれば」。be のあとなので形容詞 possible。' },
+      { sentence: 'I will help you if ___.', choices: ['necessary', 'necessarily', 'need', 'needs'], answer: 0, why: 'if (it is) necessary「必要なら」。' },
+      { sentence: 'Bring a dictionary to class if ___.', choices: ['possible', 'possibly', 'possibility', 'possibles'], answer: 0, why: 'if possible「できれば」の決まった形。' },
     ],
   },
   {
@@ -4843,9 +4843,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I wish I could fly like a bird.', ja: '鳥のように飛べたらいいのに。' },
     ],
     questions: [
-      { sentence: 'I ___ it will be sunny tomorrow.', choices: ['hope', 'wish', 'want'], answer: 0, why: '実現しそうな未来のことを望むのは hope。wish のうしろは仮定法、want のうしろに that 節は来ない。' },
-      { sentence: 'I wish I ___ a car. I have to walk everywhere.', choices: ['had', 'have', 'will have'], answer: 0, why: '今の事実（車がない）とちがうことを願うので、wish のうしろは過去形 had。' },
-      { sentence: 'I hope you ___ a nice trip.', choices: ['have', 'would have', 'having'], answer: 0, why: 'hope のうしろはふつうの時制。これからの旅なので現在形 have（未来の意味）。' },
+      { sentence: 'I ___ it will be sunny tomorrow.', choices: ['hope', 'wish', 'want', 'wonder'], answer: 0, why: '実現しそうな未来のことを望むのは hope。wish のうしろは仮定法、want のうしろに that 節は来ない。' },
+      { sentence: 'I wish I ___ a car. I have to walk everywhere.', choices: ['had', 'have', 'will have', 'having'], answer: 0, why: '今の事実（車がない）とちがうことを願うので、wish のうしろは過去形 had。' },
+      { sentence: 'I hope you ___ a nice trip.', choices: ['have', 'would have', 'having', 'to have'], answer: 0, why: 'hope のうしろはふつうの時制。これからの旅なので現在形 have（未来の意味）。' },
     ],
   },
   {
@@ -4860,9 +4860,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She insisted on paying for the meal.', ja: '彼女は食事代をはらうと言ってゆずらなかった。' },
     ],
     questions: [
-      { sentence: 'He insisted on ___ for dinner.', choices: ['paying', 'pay', 'to pay'], answer: 0, why: '前置詞 on のあとは動名詞 paying。' },
-      { sentence: 'She insisted ___ going alone.', choices: ['on', 'in', 'to'], answer: 0, why: 'insist on -ing「～すると言いはる」。' },
-      { sentence: 'They insisted on my ___ with them.', choices: ['staying', 'stay', 'to stay'], answer: 0, why: '所有格 my は動名詞の意味上の主語。on のあとは動名詞 staying。' },
+      { sentence: 'He insisted on ___ for dinner.', choices: ['paying', 'pay', 'to pay', 'paid'], answer: 0, why: '前置詞 on のあとは動名詞 paying。' },
+      { sentence: 'She insisted ___ going alone.', choices: ['on', 'in', 'to', 'at'], answer: 0, why: 'insist on -ing「～すると言いはる」。' },
+      { sentence: 'They insisted on my ___ with them.', choices: ['staying', 'stay', 'to stay', 'stayed'], answer: 0, why: '所有格 my は動名詞の意味上の主語。on のあとは動名詞 staying。' },
     ],
   },
   {
@@ -4877,9 +4877,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Edison is known as a great inventor.', ja: 'エジソンは偉大な発明家として知られている。' },
     ],
     questions: [
-      { sentence: 'Kyoto is known ___ its old temples.', choices: ['for', 'as', 'to'], answer: 0, why: '有名な理由・特徴（古い寺）は be known for。' },
-      { sentence: 'He is known ___ the father of modern science.', choices: ['as', 'for', 'by'], answer: 0, why: '呼び名・立場（近代科学の父）は be known as。' },
-      { sentence: 'This town is known ___ a center of the silk trade.', choices: ['as', 'for', 'with'], answer: 0, why: '「～として」知られているので be known as。' },
+      { sentence: 'Kyoto is known ___ its old temples.', choices: ['for', 'as', 'to', 'with'], answer: 0, why: '有名な理由・特徴（古い寺）は be known for。' },
+      { sentence: 'He is known ___ the father of modern science.', choices: ['as', 'for', 'by', 'to'], answer: 0, why: '呼び名・立場（近代科学の父）は be known as。' },
+      { sentence: 'This town is known ___ a center of the silk trade.', choices: ['as', 'for', 'with', 'to'], answer: 0, why: '「～として」知られているので be known as。' },
     ],
   },
   {
@@ -4894,9 +4894,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Her face is familiar to me.', ja: '彼女の顔には見覚えがある。' },
     ],
     questions: [
-      { sentence: 'I am familiar ___ this area.', choices: ['with', 'to', 'for'], answer: 0, why: '人が主語で「～をよく知っている」は be familiar with。' },
-      { sentence: 'This song is familiar ___ many Japanese people.', choices: ['to', 'with', 'for'], answer: 0, why: '物事が主語で「（人）によく知られている」は be familiar to。' },
-      { sentence: 'Are you ___ with this computer program?', choices: ['familiar', 'familiarly', 'family'], answer: 0, why: 'be familiar with ～。be のあとは形容詞 familiar。' },
+      { sentence: 'I am familiar ___ this area.', choices: ['with', 'to', 'for', 'of'], answer: 0, why: '人が主語で「～をよく知っている」は be familiar with。' },
+      { sentence: 'This song is familiar ___ many Japanese people.', choices: ['to', 'with', 'for', 'at'], answer: 0, why: '物事が主語で「（人）によく知られている」は be familiar to。' },
+      { sentence: 'Are you ___ with this computer program?', choices: ['familiar', 'familiarly', 'family', 'familiarity'], answer: 0, why: 'be familiar with ～。be のあとは形容詞 familiar。' },
     ],
   },
   {
@@ -4911,9 +4911,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Thank you for inviting me.', ja: 'さそってくれてありがとう。' },
     ],
     questions: [
-      { sentence: 'I apologized ___ her for being late.', choices: ['to', 'for', 'with'], answer: 0, why: 'apologize to 人 for ～。人の前は to。' },
-      { sentence: 'She thanked me ___ helping her.', choices: ['for', 'to', 'of'], answer: 0, why: 'thank 人 for ～「～のことで人に感謝する」。' },
-      { sentence: 'He apologized for ___ my umbrella.', choices: ['losing', 'lose', 'to lose'], answer: 0, why: '前置詞 for のあとは動名詞 losing。' },
+      { sentence: 'I apologized ___ her for being late.', choices: ['to', 'for', 'with', 'at'], answer: 0, why: 'apologize to 人 for ～。人の前は to。' },
+      { sentence: 'She thanked me ___ helping her.', choices: ['for', 'to', 'of', 'with'], answer: 0, why: 'thank 人 for ～「～のことで人に感謝する」。' },
+      { sentence: 'He apologized for ___ my umbrella.', choices: ['losing', 'lose', 'to lose', 'lost'], answer: 0, why: '前置詞 for のあとは動名詞 losing。' },
     ],
   },
   {
@@ -4928,9 +4928,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Don\'t blame others for your own mistakes.', ja: '自分のまちがいを人のせいにしてはいけない。' },
     ],
     questions: [
-      { sentence: 'They accused him ___ stealing the money.', choices: ['of', 'for', 'with'], answer: 0, why: 'accuse 人 of ～「～のことで人を非難する」。' },
-      { sentence: 'Don\'t blame me ___ the mistake.', choices: ['for', 'of', 'on'], answer: 0, why: 'blame 人 for ～「～を人のせいにする」。' },
-      { sentence: 'She was accused of ___ the rules.', choices: ['breaking', 'break', 'broke'], answer: 0, why: '前置詞 of のあとは動名詞 breaking。' },
+      { sentence: 'They accused him ___ stealing the money.', choices: ['of', 'for', 'with', 'about'], answer: 0, why: 'accuse 人 of ～「～のことで人を非難する」。' },
+      { sentence: 'Don\'t blame me ___ the mistake.', choices: ['for', 'of', 'on', 'at'], answer: 0, why: 'blame 人 for ～「～を人のせいにする」。' },
+      { sentence: 'She was accused of ___ the rules.', choices: ['breaking', 'break', 'broke', 'to break'], answer: 0, why: '前置詞 of のあとは動名詞 breaking。' },
     ],
   },
   {
@@ -4945,9 +4945,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our class is made up of thirty students.', ja: '私たちのクラスは30人の生徒で構成されている。' },
     ],
     questions: [
-      { sentence: 'The team consists ___ eleven players.', choices: ['of', 'by', 'from'], answer: 0, why: 'consist of ～「～からなる」。' },
-      { sentence: 'The committee is made up ___ five members.', choices: ['of', 'by', 'from'], answer: 0, why: 'be made up of ～「～で構成されている」。' },
-      { sentence: 'Japan ___ of many islands.', choices: ['consists', 'is consisted', 'consisting'], answer: 0, why: 'consist は受け身にしない。主語は三人称単数なので consists。' },
+      { sentence: 'The team consists ___ eleven players.', choices: ['of', 'by', 'from', 'with'], answer: 0, why: 'consist of ～「～からなる」。' },
+      { sentence: 'The committee is made up ___ five members.', choices: ['of', 'by', 'from', 'with'], answer: 0, why: 'be made up of ～「～で構成されている」。' },
+      { sentence: 'Japan ___ of many islands.', choices: ['consists', 'is consisted', 'consisting', 'is consisting'], answer: 0, why: 'consist は受け身にしない。主語は三人称単数なので consists。' },
     ],
   },
   {
@@ -4962,9 +4962,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The fire resulted from a broken heater.', ja: 'その火事はこわれたヒーターが原因で起きた。' },
     ],
     questions: [
-      { sentence: 'Careless driving can result ___ accidents.', choices: ['in', 'at', 'to'], answer: 0, why: '原因 ＋ result in ＋ 結果「～という結果になる」。' },
-      { sentence: 'His success resulted ___ years of hard work.', choices: ['from', 'at', 'to'], answer: 0, why: '結果 ＋ result from ＋ 原因「～から生じる」。' },
-      { sentence: 'The storm resulted in ___ damage.', choices: ['serious', 'seriously', 'seriousness'], answer: 0, why: '名詞 damage の前なので形容詞 serious。' },
+      { sentence: 'Careless driving can result ___ accidents.', choices: ['in', 'at', 'to', 'for'], answer: 0, why: '原因 ＋ result in ＋ 結果「～という結果になる」。' },
+      { sentence: 'His success resulted ___ years of hard work.', choices: ['from', 'at', 'to', 'with'], answer: 0, why: '結果 ＋ result from ＋ 原因「～から生じる」。' },
+      { sentence: 'The storm resulted in ___ damage.', choices: ['serious', 'seriously', 'seriousness', 'serious of'], answer: 0, why: '名詞 damage の前なので形容詞 serious。' },
     ],
   },
   {

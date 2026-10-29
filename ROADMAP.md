@@ -80,7 +80,8 @@
   - [x] ⑬ try ～ing / to・mean ～ing / to・lie / lay・rise / raise・its / it’s・their / there・a friend of mine・差の by・数えられない名詞・名詞の数と動詞の10単元に4つ目の選択肢（609→579）
   - [x] ⑭ What do you say to ～ing・in / within・動名詞をとる動詞・不定詞をとる動詞・句動詞と代名詞・carry out・look up to・get along with・due to・owe A to B の10単元に4つ目の選択肢（579→549）
   - [x] ⑮ similar to・take pride in・provide A with B・replace A with B・be used for / to・It is true that ～ but・succeed in・graduate from・agree with / to / on・depend on の10単元に4つ目の選択肢（549→519）
-  - [ ] ⑯ つづきの10単元を4択に
+  - [x] ⑯ consist of・result in / from・apologize to 人 for・accuse 人 of・be known for / as・be familiar with / to・hope と wish・insist on・接続詞＋～ing・if possible の10単元に4つ目の選択肢（519→489）
+  - [ ] ⑰ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
