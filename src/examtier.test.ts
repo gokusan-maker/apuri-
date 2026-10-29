@@ -76,3 +76,10 @@ it('本番の長さの長文：私大・国公立の「おとなの言語学習�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(17)
   expect(tierOf(p)).toBe('shiritsu')
 })
+
+it('本番の長さの長文：IELTS の動物の寿命の長文は700〜950語で NOT GIVEN の設問がある', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-animal-lifespan')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(700)
+  expect(passageStats(p).words).toBeLessThanOrEqual(950)
+  expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
+})
