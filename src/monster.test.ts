@@ -285,3 +285,10 @@ it('キャラクター追加61：オニオオハシのオオハシンがいて�
   expect(t.name).toBe('オオハシン')
   expect(SPECIES.filter((s) => s.egg === t.egg)).toHaveLength(1)
 })
+
+it('キャラクター追加62：フェネックのフェネンがいて、タマゴの名前がほかとかぶらない', async () => {
+  const { SPECIES } = await import('./monster')
+  const f = SPECIES.find((s) => s.id === 'fennec')!
+  expect(f.name).toBe('フェネン')
+  expect(SPECIES.filter((s) => s.egg === f.egg)).toHaveLength(1)
+})
