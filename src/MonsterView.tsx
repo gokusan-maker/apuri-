@@ -403,6 +403,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'pig')
+    return (
+      <g>
+        {/* まるい鼻と、ふたつの鼻の穴 */}
+        <ellipse cx="50" cy="68" rx="10" ry="7" fill="#f9a8d4" stroke="#9d174d" strokeWidth="1.5" />
+        <ellipse cx="46" cy="68" rx="1.8" ry="2.5" fill="#9d174d" />
+        <ellipse cx="54" cy="68" rx="1.8" ry="2.5" fill="#9d174d" />
+      </g>
+    )
   if (species === 'chicken')
     return (
       <g fill="#ef4444" stroke="#991b1b" strokeWidth="1.5" strokeLinejoin="round">
