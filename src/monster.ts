@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'butterfly', name: 'チョウリン', egg: 'さなぎのタマゴ', token: 'チョウ', bigToken: 'チョウリン', color: '#c4b5fd', line: '#5b21b6', rate: 0.02, desc: 'あおむしからさなぎになり、羽を広げたチョウ。少しずつ変わっていく自分を楽しみながら、ひらひら英語を学ぶ。' },
   { id: 'starfish', name: 'ヒトデン', egg: 'いそだまりのタマゴ', token: 'ヒト', bigToken: 'ヒトデン', color: '#fb7185', line: '#9f1239', rate: 0.02, desc: '5本のうでの星の形のヒトデ。うでが1本とれてもまた生えてくる、あきらめない心のもちぬし。' },
   { id: 'kiwi', name: 'キウィン', egg: 'しだのもりのタマゴ', token: 'キウ', bigToken: 'キウィン', color: '#a16207', line: '#422006', rate: 0.02, desc: 'ニュージーランドの飛べない鳥キーウィ。長いくちばしの先の鼻で土の中をかぎ分けて、かくれた答えを見つけ出す。' },
   { id: 'puffin', name: 'パフィン', egg: 'がけのうえのタマゴ', token: 'パフ', bigToken: 'パフィン', color: '#f8fafc', line: '#111827', rate: 0.02, desc: 'カラフルなくちばしのツノメドリ。北の海のがけにすみ、くちばしにたくさんの魚ならぬ単語をくわえて帰ってくる。' },

@@ -566,6 +566,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="56" cy="58" r="2" fill="#fecdd3" />
       </g>
     )
+  if (species === 'butterfly')
+    return (
+      <g>
+        {/* 左右の大きな羽 */}
+        <path d="M30 44 Q8 30 12 56 Q20 66 34 58 Z" fill="#ddd6fe" stroke="#5b21b6" strokeWidth="1.5" />
+        <path d="M70 44 Q92 30 88 56 Q80 66 66 58 Z" fill="#ddd6fe" stroke="#5b21b6" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
