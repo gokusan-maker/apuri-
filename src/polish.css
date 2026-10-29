@@ -4616,3 +4616,4 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 @media (prefers-reduced-motion: reduce) { .shop-wear-spin.on { animation: none; } }
 .party-sorts { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; }
 .party-sort { font-size: 0.8rem; }
+.party-count { margin: -4px 0 6px; font-size: 0.8rem; color: var(--muted, #6b7280); font-weight: 700; }

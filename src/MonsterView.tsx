@@ -2024,6 +2024,10 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
       <h2>
         単語のなかま <span className="attr-badge attr-word">属性：単語</span>
       </h2>
+      {/* デザイン85：なかまの数とおきにいり★の数 */}
+      <p className="party-count" aria-label={`なかま ${party.members.length}体・おきにいり ${party.members.filter((m) => m.fav).length}体`}>
+        🐾 {party.members.length}体{party.members.some((m) => m.fav) && `・★ ${party.members.filter((m) => m.fav).length}体`}
+      </p>
       <details className="party-help chip-fold cf-4">
         <summary>ℹ️ なかまについて</summary>
         <p className="stats-note">ガチャのモチたちは属性「単語」。単語の相棒のわくにだけおけます（文法・読解のなかまは「あいぼう」の上で入れかえ）。</p>

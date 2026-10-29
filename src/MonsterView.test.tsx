@@ -38,3 +38,9 @@ it('デザイン84：なかま一覧をタイプでしぼりこめる（相棒�
   const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
   expect(names.sort()).toEqual(['A', 'B'])
 })
+
+it('デザイン85：なかま一覧の上に、なかまの数とおきにいり★の数が出る', () => {
+  const party = { active: 0, members: [{ xp: 10 }, { xp: 20, fav: true }, { xp: 30, fav: true }] }
+  render(<Party party={party as never} onSelect={() => {}} />)
+  expect(screen.getByLabelText('なかま 3体・おきにいり 2体').textContent).toBe('🐾 3体・★ 2体')
+})
