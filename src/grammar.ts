@@ -5829,9 +5829,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The museum opens at nine tomorrow.', ja: '博物館は明日9時に開く。' },
     ],
     questions: [
-      { sentence: 'Hurry up! The bus ___ in five minutes.', choices: ['leaves', 'left', 'has left'], answer: 0, why: '時刻表で決まっている予定は現在形。in five minutes（5分後に）は未来なので過去形・現在完了は使えない。' },
-      { sentence: 'I ___ my grandparents this weekend. I\'ve already bought the tickets.', choices: ['am visiting', 'visited', 'have visited'], answer: 0, why: 'this weekend（未来）の決まった予定は現在進行形。' },
-      { sentence: 'What time ___ the movie start tonight?', choices: ['does', 'did', 'has'], answer: 0, why: '決まった予定は現在形。start は一般動詞なので疑問文は does。' },
+      { sentence: 'Hurry up! The bus ___ in five minutes.', choices: ['leaves', 'left', 'has left', 'had left'], answer: 0, why: '時刻表で決まっている予定は現在形。in five minutes（5分後に）は未来なので過去形・現在完了は使えない。' },
+      { sentence: 'I ___ my grandparents this weekend. I\'ve already bought the tickets.', choices: ['am visiting', 'visited', 'have visited', 'had visited'], answer: 0, why: 'this weekend（未来）の決まった予定は現在進行形。' },
+      { sentence: 'What time ___ the movie start tonight?', choices: ['does', 'did', 'has', 'do'], answer: 0, why: '決まった予定は現在形。start は一般動詞なので疑問文は does。' },
     ],
   },
   {
@@ -5846,9 +5846,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We arrived just in time for the train.', ja: '私たちは電車にぎりぎり間に合った。' },
     ],
     questions: [
-      { sentence: 'He broke the window ___ purpose.', choices: ['on', 'by', 'in'], answer: 0, why: 'on purpose「わざと」。by・in purpose とは言わない。' },
-      { sentence: 'Sorry, I took your umbrella ___ mistake.', choices: ['by', 'on', 'in'], answer: 0, why: 'by mistake「まちがえて」。' },
-      { sentence: 'Please buy your tickets ___ advance.', choices: ['in', 'on', 'by'], answer: 0, why: 'in advance「前もって」。' },
+      { sentence: 'He broke the window ___ purpose.', choices: ['on', 'by', 'in', 'with'], answer: 0, why: 'on purpose「わざと」。by・in purpose とは言わない。' },
+      { sentence: 'Sorry, I took your umbrella ___ mistake.', choices: ['by', 'on', 'in', 'with'], answer: 0, why: 'by mistake「まちがえて」。' },
+      { sentence: 'Please buy your tickets ___ advance.', choices: ['in', 'on', 'by', 'at'], answer: 0, why: 'in advance「前もって」。' },
     ],
   },
   {
@@ -5863,9 +5863,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I thought the test would be hard. In fact, it was quite easy.', ja: 'テストは難しいと思っていた。実際は、かなりやさしかった。' },
     ],
     questions: [
-      { sentence: 'It snowed all night. ___ a result, the trains stopped.', choices: ['As', 'For', 'By'], answer: 0, why: 'as a result「その結果」。for・by a result とは言わない。' },
-      { sentence: 'Ken looks quiet. ___ fact, he is very funny.', choices: ['In', 'On', 'At'], answer: 0, why: 'in fact「実は」。' },
-      { sentence: 'City life is exciting. On the other ___, it can be stressful.', choices: ['hand', 'hands', 'handed'], answer: 0, why: 'on the other hand「一方で」。hand は単数。' },
+      { sentence: 'It snowed all night. ___ a result, the trains stopped.', choices: ['As', 'For', 'By', 'In'], answer: 0, why: 'as a result「その結果」。for・by a result とは言わない。' },
+      { sentence: 'Ken looks quiet. ___ fact, he is very funny.', choices: ['In', 'On', 'At', 'By'], answer: 0, why: 'in fact「実は」。' },
+      { sentence: 'City life is exciting. On the other ___, it can be stressful.', choices: ['hand', 'hands', 'handed', 'side'], answer: 0, why: 'on the other hand「一方で」。hand は単数。' },
     ],
   },
   {
@@ -5880,9 +5880,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'After many tries, he passed the test at last.', ja: '何度も挑戦して、彼はついに合格した。' },
     ],
     questions: [
-      { sentence: 'At ___, I didn\'t like natto, but now I love it.', choices: ['first', 'firstly', 'the first'], answer: 0, why: 'at first「最初は」。firstly・the first にはしない。' },
-      { sentence: 'We waited for two hours, and at ___ the bus came.', choices: ['last', 'the last', 'lastly'], answer: 0, why: 'at last「ついに」。' },
-      { sentence: 'We talked about it for a long time. In the ___, we chose the blue one.', choices: ['end', 'ending', 'ends'], answer: 0, why: 'in the end「結局」。' },
+      { sentence: 'At ___, I didn\'t like natto, but now I love it.', choices: ['first', 'firstly', 'the first', 'last'], answer: 0, why: 'at first「最初は」。firstly・the first にはしない。' },
+      { sentence: 'We waited for two hours, and at ___ the bus came.', choices: ['last', 'the last', 'lastly', 'first'], answer: 0, why: 'at last「ついに」。' },
+      { sentence: 'We talked about it for a long time. In the ___, we chose the blue one.', choices: ['end', 'ending', 'ends', 'way'], answer: 0, why: 'in the end「結局」。' },
     ],
   },
   {
@@ -5897,9 +5897,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is kind enough to help everyone. ＝ She is so kind that she helps everyone.', ja: '彼女はとても親切で、みんなを助ける。' },
     ],
     questions: [
-      { sentence: 'The tea was so hot that I ___ drink it.', choices: ["couldn't", "can't to", 'not could'], answer: 0, why: '過去の文なので so ～ that ＋ 主語 ＋ couldn\'t。can\'t のあとに to は来ない。' },
-      { sentence: 'This question is too difficult for me to answer. ＝ This question is so difficult that I can\'t answer ___.', choices: ['it', 'itself', 'its'], answer: 0, why: 'so ～ that の文では answer の目的語 it が必要。' },
-      { sentence: 'He was rich enough to buy the house. ＝ He was so rich that he ___ buy the house.', choices: ['could', 'can to', 'could to'], answer: 0, why: 'enough to ＝ so ～ that ＋ 主語 ＋ can（過去なら could）。助動詞のあとに to は来ない。' },
+      { sentence: 'The tea was so hot that I ___ drink it.', choices: ["couldn't", "can't to", 'not could', 'could not to'], answer: 0, why: '過去の文なので so ～ that ＋ 主語 ＋ couldn\'t。can\'t のあとに to は来ない。' },
+      { sentence: 'This question is too difficult for me to answer. ＝ This question is so difficult that I can\'t answer ___.', choices: ['it', 'itself', 'its', 'them'], answer: 0, why: 'so ～ that の文では answer の目的語 it が必要。' },
+      { sentence: 'He was rich enough to buy the house. ＝ He was so rich that he ___ buy the house.', choices: ['could', 'can to', 'could to', 'would to'], answer: 0, why: 'enough to ＝ so ～ that ＋ 主語 ＋ can（過去なら could）。助動詞のあとに to は来ない。' },
     ],
   },
   {
@@ -5914,9 +5914,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I'd like my steak cooked well, please.", ja: 'ステーキはよく焼いてください。' },
     ],
     questions: [
-      { sentence: 'I want this letter ___ by Friday.', choices: ['sent', 'sending', 'to sending'], answer: 0, why: '手紙は「送られる」側なので過去分詞 sent。' },
-      { sentence: "I'd like my coffee ___ with milk, please.", choices: ['served', 'serving', 'serve'], answer: 0, why: 'コーヒーは「出される」側なので過去分詞 served。' },
-      { sentence: 'She wanted her room ___ before the guests came.', choices: ['cleaned', 'cleaning', 'to cleaning'], answer: 0, why: '部屋は「そうじされる」側なので過去分詞 cleaned。' },
+      { sentence: 'I want this letter ___ by Friday.', choices: ['sent', 'sending', 'to sending', 'to send'], answer: 0, why: '手紙は「送られる」側なので過去分詞 sent。' },
+      { sentence: "I'd like my coffee ___ with milk, please.", choices: ['served', 'serving', 'serve', 'to serve'], answer: 0, why: 'コーヒーは「出される」側なので過去分詞 served。' },
+      { sentence: 'She wanted her room ___ before the guests came.', choices: ['cleaned', 'cleaning', 'to cleaning', 'to clean'], answer: 0, why: '部屋は「そうじされる」側なので過去分詞 cleaned。' },
     ],
   },
   {
@@ -5931,9 +5931,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Can't you swim? — No, I can't.", ja: '泳げないの？ — うん、泳げないんだ。' },
     ],
     questions: [
-      { sentence: "Don't you like natto? — ___, I don't. I can't eat it.", choices: ['No', 'Yes', 'Not'], answer: 0, why: '答えの内容が「好きではない（否定）」なので No, I don\'t.。Yes のあとに I don\'t は続かない。' },
-      { sentence: "Aren't you tired? — ___, I am. I walked for three hours.", choices: ['Yes', 'No', 'Not'], answer: 0, why: '答えの内容が「疲れている（肯定）」なので Yes, I am.。' },
-      { sentence: '___ you go to the party last night?', choices: ["Didn't", "Don't", "Weren't"], answer: 0, why: 'last night（過去）で、go は一般動詞なので Didn\'t you go ～?。' },
+      { sentence: "Don't you like natto? — ___, I don't. I can't eat it.", choices: ['No', 'Yes', 'Not', 'Never'], answer: 0, why: '答えの内容が「好きではない（否定）」なので No, I don\'t.。Yes のあとに I don\'t は続かない。' },
+      { sentence: "Aren't you tired? — ___, I am. I walked for three hours.", choices: ['Yes', 'No', 'Not', 'Never'], answer: 0, why: '答えの内容が「疲れている（肯定）」なので Yes, I am.。' },
+      { sentence: '___ you go to the party last night?', choices: ["Didn't", "Don't", "Weren't", "Hadn't"], answer: 0, why: 'last night（過去）で、go は一般動詞なので Didn\'t you go ～?。' },
     ],
   },
   {
@@ -5948,9 +5948,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He wrote five books, two of which became best sellers.', ja: '彼は本を5冊書き、そのうち2冊はベストセラーになった。' },
     ],
     questions: [
-      { sentence: 'She has two sisters, both of ___ are teachers.', choices: ['whom', 'who', 'them'], answer: 0, why: '人を受けて of のあとなので whom。them だとコンマだけで文がつながってしまう。' },
-      { sentence: 'I bought ten apples, some of ___ were rotten.', choices: ['which', 'that', 'what'], answer: 0, why: '物を受けて of のあとなので which。that・what はこの形では使えない。' },
-      { sentence: 'There were forty students, most ___ whom passed the test.', choices: ['of', 'for', 'in'], answer: 0, why: 'most of whom「そのうちのほとんど」。' },
+      { sentence: 'She has two sisters, both of ___ are teachers.', choices: ['whom', 'who', 'them', 'they'], answer: 0, why: '人を受けて of のあとなので whom。them だとコンマだけで文がつながってしまう。' },
+      { sentence: 'I bought ten apples, some of ___ were rotten.', choices: ['which', 'that', 'what', 'them'], answer: 0, why: '物を受けて of のあとなので which。that・what はこの形では使えない。' },
+      { sentence: 'There were forty students, most ___ whom passed the test.', choices: ['of', 'for', 'in', 'with'], answer: 0, why: 'most of whom「そのうちのほとんど」。' },
     ],
   },
   {
@@ -5965,9 +5965,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The prices at this store are lower than those at the station.', ja: 'この店の値段は駅の店の値段より安い。' },
     ],
     questions: [
-      { sentence: 'The climate of Japan is milder than ___ of Canada.', choices: ['that', 'those', 'it'], answer: 0, why: 'the climate（単数）のくり返しなので that。' },
-      { sentence: 'The prices in this shop are lower than ___ in that shop.', choices: ['those', 'that', 'them'], answer: 0, why: 'the prices（複数）のくり返しなので those。' },
-      { sentence: 'The tail of this dog is longer than that ___ my dog.', choices: ['of', 'for', 'in'], answer: 0, why: 'that of ～「～のそれ（しっぽ）」。' },
+      { sentence: 'The climate of Japan is milder than ___ of Canada.', choices: ['that', 'those', 'it', 'one'], answer: 0, why: 'the climate（単数）のくり返しなので that。' },
+      { sentence: 'The prices in this shop are lower than ___ in that shop.', choices: ['those', 'that', 'them', 'it'], answer: 0, why: 'the prices（複数）のくり返しなので those。' },
+      { sentence: 'The tail of this dog is longer than that ___ my dog.', choices: ['of', 'for', 'in', 'with'], answer: 0, why: 'that of ～「～のそれ（しっぽ）」。' },
     ],
   },
   {
@@ -5982,9 +5982,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "What's wrong? You look pale.", ja: 'どうしたの？顔色が悪いよ。' },
     ],
     questions: [
-      { sentence: 'There is something wrong ___ my bike.', choices: ['with', 'for', 'to'], answer: 0, why: 'something wrong with ～「～はどこかおかしい」。' },
-      { sentence: '___ is wrong with you? You look tired.', choices: ['What', 'How', 'Which'], answer: 0, why: 'What\'s wrong with ～?「～はどうしたの？」。' },
-      { sentence: 'The doctor said nothing was wrong ___ my heart.', choices: ['with', 'of', 'at'], answer: 0, why: 'nothing is wrong with ～「～はどこも悪くない」。' },
+      { sentence: 'There is something wrong ___ my bike.', choices: ['with', 'for', 'to', 'by'], answer: 0, why: 'something wrong with ～「～はどこかおかしい」。' },
+      { sentence: '___ is wrong with you? You look tired.', choices: ['What', 'How', 'Which', 'Who'], answer: 0, why: 'What\'s wrong with ～?「～はどうしたの？」。' },
+      { sentence: 'The doctor said nothing was wrong ___ my heart.', choices: ['with', 'of', 'at', 'by'], answer: 0, why: 'nothing is wrong with ～「～はどこも悪くない」。' },
     ],
   },
   {
