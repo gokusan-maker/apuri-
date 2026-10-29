@@ -152,6 +152,7 @@ export const MISTAKES: Record<string, Mistake> = {
   'prep-idiom-bythewindow': { wrong: 'My seat is on the window, so I can see outside.', right: 'My seat is by the window, so I can see outside.', why: '「～のそばに」は by（by the window「まどのそばに」）。on the window だと「まどの表面に」になってしまう。' },
   'prep-idiom-bymistake': { wrong: 'I sent the email to the wrong person by mistaken.', right: 'I sent the email to the wrong person by mistake.', why: 'by mistake「まちがえて」。by のあとは名詞 mistake（mistaken は形容詞）。' },
   'prep-idiom-underwater': { wrong: 'Fish can breathe on water.', right: 'Fish can breathe under water.', why: '「水の中（水面の下）で」は under water。on water は「水の上で」になってしまう。' },
+  'prep-idiom-aroundtheworld': { wrong: 'This song is popular all over the worlds.', right: 'This song is popular all over the world.', why: 'all over the world「世界中で」。world は単数（the worlds とは言わない）。' },
   'less-least': { wrong: 'This movie is less exciting as the first one.', right: 'This movie is less exciting than the first one.', why: 'less ～ のあとは than。as は as ～ as の形で使う。' },
   'noun-construction': { wrong: 'His sudden arrive surprised everyone.', right: 'His sudden arrival surprised everyone.', why: '所有格＋形容詞のあとは名詞 arrival。' },
   'tense-agreement-exception': { wrong: 'The teacher said that the earth went around the sun.', right: 'The teacher said that the earth goes around the sun.', why: '不変の真理は、主節が過去でも現在形のまま。' },
