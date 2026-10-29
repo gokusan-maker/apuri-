@@ -493,6 +493,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M42 66 Q50 74 58 66" fill="none" stroke="#5a3a22" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'snowleopard')
+    return (
+      <g>
+        {/* 体の黒いはん点もよう */}
+        <circle cx="34" cy="44" r="3" fill="none" stroke="#475569" strokeWidth="1.8" />
+        <circle cx="66" cy="44" r="3" fill="none" stroke="#475569" strokeWidth="1.8" />
+        <circle cx="50" cy="34" r="2.5" fill="none" stroke="#475569" strokeWidth="1.8" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
