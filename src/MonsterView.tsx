@@ -449,6 +449,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M76 40 L86 34 M76 46 L88 46 M76 52 L86 58" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" />
       </g>
     )
+  if (species === 'narwhal')
+    return (
+      <g>
+        {/* おでこからまっすぐのびる、らせんもようのきば */}
+        <path d="M50 26 L56 2 L52 26 Z" fill="#f8fafc" stroke="#475569" strokeWidth="1.5" strokeLinejoin="round" />
+        <path d="M51 20 L54 18 M52 14 L55 12 M53 8 L55 7" stroke="#94a3b8" strokeWidth="1" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

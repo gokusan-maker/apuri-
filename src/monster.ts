@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'narwhal', name: 'イッカクン', egg: 'オーロラのタマゴ', token: 'イッカ', bigToken: 'イッカクン', color: '#cbd5e1', line: '#334155', rate: 0.02, desc: '長い1本のきばをもつイッカク。北の海の王子さまで、まっすぐなきばのように正しい答えをつらぬく。' },
   { id: 'axolotl', name: 'ウパリン', egg: 'みずくさのタマゴ', token: 'ウパ', bigToken: 'ウパリン', color: '#fbcfe8', line: '#9d174d', rate: 0.02, desc: 'えらがふさふさのウーパールーパー。いつもにこにこ顔で、まちがえてもすぐに元気をとりもどす。' },
   { id: 'lemur', name: 'ワオリン', egg: 'バオバブのタマゴ', token: 'ワオ', bigToken: 'ワオリン', color: '#d4d4d8', line: '#3f3f46', rate: 0.02, desc: 'しましまの長いしっぽのワオキツネザル。朝はみんなで日光浴をして、頭をすっきりさせてから勉強する。' },
   { id: 'redpanda', name: 'レサパン', egg: 'こずえのタマゴ', token: 'レサ', bigToken: 'レサパン', color: '#f97316', line: '#7c2d12', rate: 0.02, desc: 'しまもようのしっぽのレッサーパンダ。木の上でひなたぼっこしながら、英文をのんびり読みとく。' },
