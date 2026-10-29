@@ -14055,6 +14055,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-icecreamcone',
+    title: 'A Sweet Idea at a Fair',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Long ago, people in hot countries enjoyed cold desserts made from snow or ice ( A ) with fruit juice or honey. Later, cooks in Europe began to make frozen desserts with milk and cream, and ice cream slowly became popular around the world.",
+      "For a long time, ice cream was served in glass dishes. Then, at a large fair in the United States in 1904, something new is said to have happened. An ice cream seller was so busy that he ran out of dishes. Next to him, a man was selling thin, crispy waffles.",
+      "The waffle seller had an idea. He rolled one of his waffles into a cone shape and gave it to the ice cream seller, who put a scoop of ice cream on top. Customers loved it, because they could eat the dish as well as the dessert.",
+      "Today, ice cream cones are sold everywhere. The story shows that two people working side by side can solve a problem ( B ) neither of them could solve alone.",
+    ],
+    ja: [
+      '昔、暑い国の人々は、雪や氷に果物のジュースやはちみつをまぜて作った冷たいデザートを楽しんでいた。のちに、ヨーロッパの料理人たちが牛乳やクリームでこおらせたデザートを作りはじめ、アイスクリームはゆっくりと世界中に広まった。',
+      '長いあいだ、アイスクリームはガラスの皿で出されていた。そして1904年、アメリカの大きな博覧会で、新しいことが起きたと言われている。あるアイスクリーム売りがあまりにいそがしくて、皿を切らしてしまったのだ。そのとなりでは、ある男がうすくてパリパリのワッフルを売っていた。',
+      'ワッフル売りはあることを思いついた。ワッフルを1枚くるっと巻いてコーンの形にし、アイスクリーム売りにわたした。アイスクリーム売りはその上にアイスクリームをひとすくいのせた。お客さんたちは大喜びだった。デザートだけでなく、皿まで食べられたからだ。',
+      '今日、アイスクリームのコーンはどこでも売られている。この話は、となりどうしで働く2人が、どちらもひとりでは解決できない問題を解決できることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['mixed', 'mixing', 'mixes', 'to mixing'], answer: 0, why: '「果物のジュースやはちみつとまぜられた雪や氷」なので、過去分詞 mixed がうしろから snow or ice を説明する。mixing だと雪がまぜることになり、mixes は動詞の形、to mixing は形がおかしい。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a problem（もの）で、うしろの could solve の目的語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'ran out of',
+      choices: ['used all of and had none left', 'ran away from', 'bought too many', 'cleaned carefully'],
+      answer: 0,
+      why: 'run out of ～ は「～を切らす・使いきる」。皿がなくなってしまったという意味。',
+    },
+    order: {
+      words: ['eat', 'the', 'dish', 'as', 'well', 'as', 'the', 'dessert'],
+      rest: '',
+      answer: 'eat the dish as well as the dessert',
+      ja: 'デザートだけでなく皿も食べる（A as well as B「BだけでなくAも」）',
+    },
+    tf: [
+      { statement: '昔の人は、雪や氷を使って冷たいデザートを作った。', answer: true, why: '第1段落 people in hot countries enjoyed cold desserts made from snow or ice。' },
+      { statement: 'アイスクリーム売りは、皿がありあまっていた。', answer: false, why: '第2段落 he ran out of dishes。' },
+      { statement: 'コーンは、ワッフルを巻いて作られた。', answer: true, why: '第3段落 He rolled one of his waffles into a cone shape。' },
+    ],
+    qa: [
+      { q: 'Why did customers love the new ice cream?', choices: ['They could eat the dish as well as the dessert.', 'It was free.', 'It was very hot.', 'It came in a glass dish.'], answer: 0, why: '第3段落 Customers loved it, because they could eat the dish as well as the dessert。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
