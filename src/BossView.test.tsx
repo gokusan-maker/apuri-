@@ -194,7 +194,8 @@ describe('ボス戦', () => {
       fireEvent.click(screen.getByText('次へ'))
     }
     expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
-    expect(document.querySelector('.lose-cheer')!.textContent).toMatch(/^🐣 モチ「.+」$/)
+    expect(document.querySelector('.lose-cheer')!.textContent).toMatch(/^モチ「.+」$/)
+    expect(document.querySelector('.lose-cheer .lose-cheer-fig svg')).not.toBeNull() // デザイン76：しょんぼり顔の相棒の絵
   })
 
   it('勝つと読解のなかま（竜）が英語で勝利のひとこと（和訳つき）', async () => {

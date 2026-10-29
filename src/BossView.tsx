@@ -924,7 +924,18 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               ))}
             </div>
           ) : (
-            partner && <p className="grammar-praise lose-cheer">🐣 {partner.name}「{cheerOnLose(corrects)}」</p>
+            partner && (
+              <p className="grammar-praise lose-cheer">
+                {partner.form.stage > 0 ? (
+                  <span className="lose-cheer-fig" aria-hidden="true">
+                    <MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood="lonely" />
+                  </span>
+                ) : (
+                  '🐣 '
+                )}
+                {partner.name}「{cheerOnLose(corrects)}」
+              </p>
+            )
           )}
           {!teamOn && <p className="result-message">{reading ? '本文をもう一度ゆっくり読んで、もう一度挑戦しよう！' : '苦手な単語を復習して、もう一度挑戦しよう！'}</p>}
           {onSpend && !continued && hearts <= 0 && index < qs.length && (

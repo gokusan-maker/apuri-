@@ -4592,3 +4592,7 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .win-partner-say { font-weight: 700; font-size: 0.9rem; }
 @keyframes win-hop { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-12px); } 60% { transform: translateY(-12px); } }
 @media (prefers-reduced-motion: reduce) { .win-partner-fig { animation: none; } }
+
+/* デザイン76：ボスに負けたとき、はげましてくれる相棒の絵を小さく出す（しょんぼり顔） */
+.lose-cheer-fig { display: inline-block; width: 36px; vertical-align: middle; margin-right: 4px; }
+.lose-cheer-fig svg { width: 100%; height: auto; display: block; }

@@ -15110,7 +15110,7 @@ export const ADV_PASSAGES: LongPassage[] = [
     blanks: [
       { id: 'A', choices: ['From', 'In', 'On', 'With'], answer: 0, why: 'from this point of view「この見方からすれば」。' },
       { id: 'B', choices: ['even if', 'only if', 'as long as', 'because'], answer: 0, why: '「もともと買うつもりがまったくなかったとしても」と譲歩を表すので even if。' },
-      { id: 'C', choices: ['so', 'such', 'as', 'even'], answer: 0, why: 'so that ～「～するように・そうすれば～」。make our decisions more calmly, so that we buy things because we want them。' },
+      { id: 'C', choices: ['so', 'very', 'as', 'even'], answer: 0, why: 'so that ～「～するように・そうすれば～」。make our decisions more calmly, so that we buy things because we want them。' },
     ],
     tf: [
       { statement: '試食は、客が買う前に商品を試せるので、買うことへの不安をへらす。', answer: true, why: '第2段落 samples reduce risk for customers … find out whether they like it before they pay。' },
