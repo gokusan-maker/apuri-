@@ -4979,9 +4979,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My parents agreed to my idea.', ja: '両親は私の考えを受け入れてくれた。' },
     ],
     questions: [
-      { sentence: 'I agree ___ you. That is a good idea.', choices: ['with', 'to', 'on'], answer: 0, why: '人に賛成するのは agree with 人。' },
-      { sentence: 'The boss agreed ___ our plan.', choices: ['to', 'in', 'at'], answer: 0, why: '提案・計画を受け入れるのは agree to。' },
-      { sentence: 'We finally agreed ___ a date for the party.', choices: ['on', 'in', 'at'], answer: 0, why: '決めること（日付）について合意するのは agree on。' },
+      { sentence: 'I agree ___ you. That is a good idea.', choices: ['with', 'to', 'on', 'for'], answer: 0, why: '人に賛成するのは agree with 人。' },
+      { sentence: 'The boss agreed ___ our plan.', choices: ['to', 'in', 'at', 'for'], answer: 0, why: '提案・計画を受け入れるのは agree to。' },
+      { sentence: 'We finally agreed ___ a date for the party.', choices: ['on', 'in', 'at', 'for'], answer: 0, why: '決めること（日付）について合意するのは agree on。' },
     ],
   },
   {
@@ -4996,9 +4996,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our trip depends on the weather.', ja: '旅行は天気しだいだ。' },
     ],
     questions: [
-      { sentence: 'Children depend ___ their parents.', choices: ['on', 'to', 'with'], answer: 0, why: 'depend on ～「～にたよる」。' },
-      { sentence: 'Whether we go or not depends ___ the weather.', choices: ['on', 'in', 'at'], answer: 0, why: 'depend on ～「～しだいだ」。' },
-      { sentence: '"Will you come?" "It ___."', choices: ['depends', 'is depending', 'depend'], answer: 0, why: 'It depends.「場合による」。depend はふつう進行形にせず、主語 It なので depends。' },
+      { sentence: 'Children depend ___ their parents.', choices: ['on', 'to', 'with', 'at'], answer: 0, why: 'depend on ～「～にたよる」。' },
+      { sentence: 'Whether we go or not depends ___ the weather.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: 'depend on ～「～しだいだ」。' },
+      { sentence: '"Will you come?" "It ___."', choices: ['depends', 'is depending', 'depend', 'depending'], answer: 0, why: 'It depends.「場合による」。depend はふつう進行形にせず、主語 It なので depends。' },
     ],
   },
   {
@@ -5013,9 +5013,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I failed to wake up on time this morning.', ja: '今朝は時間どおりに起きられなかった。' },
     ],
     questions: [
-      { sentence: 'She succeeded ___ passing the exam.', choices: ['in', 'at', 'to'], answer: 0, why: 'succeed in -ing「～することに成功する」。' },
-      { sentence: 'He failed ___ catch the train.', choices: ['to', 'in', 'at'], answer: 0, why: 'fail to ＋ 原形「～しそこなう」。' },
-      { sentence: 'They succeeded in ___ the mountain.', choices: ['climbing', 'climb', 'to climb'], answer: 0, why: '前置詞 in のあとは動名詞 climbing。' },
+      { sentence: 'She succeeded ___ passing the exam.', choices: ['in', 'at', 'to', 'for'], answer: 0, why: 'succeed in -ing「～することに成功する」。' },
+      { sentence: 'He failed ___ catch the train.', choices: ['to', 'in', 'at', 'for'], answer: 0, why: 'fail to ＋ 原形「～しそこなう」。' },
+      { sentence: 'They succeeded in ___ the mountain.', choices: ['climbing', 'climb', 'to climb', 'climbed'], answer: 0, why: '前置詞 in のあとは動名詞 climbing。' },
     ],
   },
   {
@@ -5030,9 +5030,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He complained to the hotel about the noise.', ja: '彼は騒音のことでホテルに苦情を言った。' },
     ],
     questions: [
-      { sentence: 'My brother graduated ___ high school last year.', choices: ['from', 'at', 'in'], answer: 0, why: 'graduate from ＋ 学校「～を卒業する」。' },
-      { sentence: 'She often complains ___ the noise.', choices: ['about', 'to', 'at'], answer: 0, why: '文句を言う事柄の前は about。' },
-      { sentence: 'He complained ___ the manager about the service.', choices: ['to', 'about', 'with'], answer: 0, why: '苦情を言う相手（人）の前は to。' },
+      { sentence: 'My brother graduated ___ high school last year.', choices: ['from', 'at', 'in', 'of'], answer: 0, why: 'graduate from ＋ 学校「～を卒業する」。' },
+      { sentence: 'She often complains ___ the noise.', choices: ['about', 'to', 'at', 'on'], answer: 0, why: '文句を言う事柄の前は about。' },
+      { sentence: 'He complained ___ the manager about the service.', choices: ['to', 'about', 'with', 'for'], answer: 0, why: '苦情を言う相手（人）の前は to。' },
     ],
   },
   {
@@ -5047,9 +5047,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Salt is used to keep food fresh.', ja: '塩は食べ物を長もちさせるのに使われる。' },
     ],
     questions: [
-      { sentence: 'This knife is used ___ cutting bread.', choices: ['for', 'with', 'at'], answer: 0, why: 'be used for -ing「～するのに使われる」。' },
-      { sentence: 'This room is used ___ meetings.', choices: ['for', 'at', 'of'], answer: 0, why: 'be used for ＋ 名詞「～のために使われる」。' },
-      { sentence: 'Bamboo is used ___ make baskets.', choices: ['to', 'for', 'by'], answer: 0, why: '原形 make が続くので be used to ＋ 原形「～するのに使われる」。' },
+      { sentence: 'This knife is used ___ cutting bread.', choices: ['for', 'with', 'at', 'to'], answer: 0, why: 'be used for -ing「～するのに使われる」。' },
+      { sentence: 'This room is used ___ meetings.', choices: ['for', 'at', 'of', 'with'], answer: 0, why: 'be used for ＋ 名詞「～のために使われる」。' },
+      { sentence: 'Bamboo is used ___ make baskets.', choices: ['to', 'for', 'by', 'with'], answer: 0, why: '原形 make が続くので be used to ＋ 原形「～するのに使われる」。' },
     ],
   },
   {
@@ -5064,9 +5064,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'True, the trip was expensive, but it was worth it.', ja: 'たしかに旅行は高かったが、それだけの価値はあった。' },
     ],
     questions: [
-      { sentence: 'It is ___ that he is young, but he is very wise.', choices: ['true', 'truth', 'truly'], answer: 0, why: 'It is true that ～「たしかに～だ」。be のあとは形容詞 true。' },
-      { sentence: 'It is true ___ this car is old, but it still runs well.', choices: ['that', 'what', 'which'], answer: 0, why: 'It is true that ＋ 文。うしろは欠けのない文なので that。' },
-      { sentence: 'True, the test was hard, ___ I did my best.', choices: ['but', 'despite', 'because of'], answer: 0, why: 'True, ～, but …「たしかに～だが…」。despite・because of のうしろに文は続かない。' },
+      { sentence: 'It is ___ that he is young, but he is very wise.', choices: ['true', 'truth', 'truly', 'trust'], answer: 0, why: 'It is true that ～「たしかに～だ」。be のあとは形容詞 true。' },
+      { sentence: 'It is true ___ this car is old, but it still runs well.', choices: ['that', 'what', 'which', 'who'], answer: 0, why: 'It is true that ＋ 文。うしろは欠けのない文なので that。' },
+      { sentence: 'True, the test was hard, ___ I did my best.', choices: ['but', 'despite', 'because of', 'in spite'], answer: 0, why: 'True, ～, but …「たしかに～だが…」。despite・because of のうしろに文は続かない。' },
     ],
   },
   {
@@ -5081,9 +5081,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Trees provide shade for animals.', ja: '木は動物に日かげをあたえる。' },
     ],
     questions: [
-      { sentence: 'The school provides students ___ lunch.', choices: ['with', 'of', 'at'], answer: 0, why: 'provide 人 with 物「人に物をあたえる」。' },
-      { sentence: 'The hotel provides towels ___ guests.', choices: ['for', 'at', 'of'], answer: 0, why: '物が先なら provide 物 for 人。' },
-      { sentence: 'They ___ us with food and water.', choices: ['provided', 'gave', 'offered'], answer: 0, why: '人 with 物 の形をとるのは provide。give・offer は give 人 物 の形で with は使わない。' },
+      { sentence: 'The school provides students ___ lunch.', choices: ['with', 'of', 'at', 'to'], answer: 0, why: 'provide 人 with 物「人に物をあたえる」。' },
+      { sentence: 'The hotel provides towels ___ guests.', choices: ['for', 'at', 'of', 'with'], answer: 0, why: '物が先なら provide 物 for 人。' },
+      { sentence: 'They ___ us with food and water.', choices: ['provided', 'gave', 'offered', 'brought'], answer: 0, why: '人 with 物 の形をとるのは provide。give・offer は give 人 物 の形で with は使わない。' },
     ],
   },
   {
@@ -5098,9 +5098,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Compared with Tokyo, this town is very quiet.', ja: '東京とくらべると、この町はとても静かだ。' },
     ],
     questions: [
-      { sentence: 'I replaced the old battery ___ a new one.', choices: ['with', 'at', 'of'], answer: 0, why: 'replace A with B「A を B と取りかえる」。' },
-      { sentence: 'Don\'t compare yourself ___ others.', choices: ['with', 'at', 'of'], answer: 0, why: 'compare A with B「A を B とくらべる」。' },
-      { sentence: '___ with last year, sales have grown.', choices: ['Compared', 'Compare', 'Comparison'], answer: 0, why: '分詞構文 Compared with ～「～とくらべると」。' },
+      { sentence: 'I replaced the old battery ___ a new one.', choices: ['with', 'at', 'of', 'to'], answer: 0, why: 'replace A with B「A を B と取りかえる」。' },
+      { sentence: 'Don\'t compare yourself ___ others.', choices: ['with', 'at', 'of', 'for'], answer: 0, why: 'compare A with B「A を B とくらべる」。' },
+      { sentence: '___ with last year, sales have grown.', choices: ['Compared', 'Compare', 'Comparison', 'Comparing'], answer: 0, why: '分詞構文 Compared with ～「～とくらべると」。' },
     ],
   },
   {
@@ -5115,9 +5115,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is responsible for the school newspaper.', ja: '彼女は学校新聞の担当だ。' },
     ],
     questions: [
-      { sentence: 'My idea is similar ___ yours.', choices: ['to', 'with', 'from'], answer: 0, why: 'be similar to ～「～とにている」。' },
-      { sentence: 'Who is responsible ___ this project?', choices: ['for', 'of', 'at'], answer: 0, why: 'be responsible for ～「～に責任がある」。' },
-      { sentence: 'Are you aware ___ the danger?', choices: ['of', 'for', 'to'], answer: 0, why: 'be aware of ～「～に気づいている」。' },
+      { sentence: 'My idea is similar ___ yours.', choices: ['to', 'with', 'from', 'at'], answer: 0, why: 'be similar to ～「～とにている」。' },
+      { sentence: 'Who is responsible ___ this project?', choices: ['for', 'of', 'at', 'with'], answer: 0, why: 'be responsible for ～「～に責任がある」。' },
+      { sentence: 'Are you aware ___ the danger?', choices: ['of', 'for', 'to', 'with'], answer: 0, why: 'be aware of ～「～に気づいている」。' },
     ],
   },
   {
@@ -5132,9 +5132,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I am proud of my little sister.', ja: '私は妹をほこりに思う。' },
     ],
     questions: [
-      { sentence: 'She takes pride ___ her work.', choices: ['in', 'of', 'on'], answer: 0, why: 'take pride in ～「～をほこりに思う」。' },
-      { sentence: 'He is proud ___ his son.', choices: ['of', 'in', 'at'], answer: 0, why: 'be proud of ～「～をほこりに思う」。' },
-      { sentence: 'They take great ___ in their town\'s history.', choices: ['pride', 'proud', 'proudly'], answer: 0, why: 'take の目的語なので名詞 pride。' },
+      { sentence: 'She takes pride ___ her work.', choices: ['in', 'of', 'on', 'at'], answer: 0, why: 'take pride in ～「～をほこりに思う」。' },
+      { sentence: 'He is proud ___ his son.', choices: ['of', 'in', 'at', 'with'], answer: 0, why: 'be proud of ～「～をほこりに思う」。' },
+      { sentence: 'They take great ___ in their town\'s history.', choices: ['pride', 'proud', 'proudly', 'pridefully'], answer: 0, why: 'take の目的語なので名詞 pride。' },
     ],
   },
   {
