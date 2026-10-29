@@ -5999,9 +5999,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Because of the heavy snow, we were forced to stay home.', ja: '大雪のせいで、私たちは家にいるしかなかった。' },
     ],
     questions: [
-      { sentence: 'All students are required ___ their ID cards.', choices: ['to bring', 'bringing', 'bring'], answer: 0, why: 'be required to ＋ 原形「～することが求められる」。' },
-      { sentence: 'The new station is expected ___ next spring.', choices: ['to open', 'opening', 'open'], answer: 0, why: 'be expected to ＋ 原形「～する予定だ・～すると見こまれている」。' },
-      { sentence: 'Because of the storm, we were ___ to cancel the trip.', choices: ['forced', 'forcing', 'force'], answer: 0, why: 'be forced to ～「～せざるをえない」。受け身なので過去分詞 forced。' },
+      { sentence: 'All students are required ___ their ID cards.', choices: ['to bring', 'bringing', 'bring', 'to bringing'], answer: 0, why: 'be required to ＋ 原形「～することが求められる」。' },
+      { sentence: 'The new station is expected ___ next spring.', choices: ['to open', 'opening', 'open', 'to opening'], answer: 0, why: 'be expected to ＋ 原形「～する予定だ・～すると見こまれている」。' },
+      { sentence: 'Because of the storm, we were ___ to cancel the trip.', choices: ['forced', 'forcing', 'force', 'forcibly'], answer: 0, why: 'be forced to ～「～せざるをえない」。受け身なので過去分詞 forced。' },
     ],
   },
   {
@@ -6016,9 +6016,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The painting is thought to have been stolen in 1990.', ja: 'その絵は1990年にぬすまれたと考えられている。' },
     ],
     questions: [
-      { sentence: 'It is believed ___ the city was founded 1,000 years ago.', choices: ['that', 'to', 'for'], answer: 0, why: 'うしろが文なので It is believed that ～。' },
-      { sentence: 'The singer is thought ___ the best song of the year last year.', choices: ['to have written', 'to writing', 'written'], answer: 0, why: '書いたのは過去（last year）なので to have ＋ 過去分詞。' },
-      { sentence: 'Ten people are reported ___ in the accident.', choices: ['to have been hurt', 'to hurt', 'hurting'], answer: 0, why: '「けがをした（過去・受け身）と報じられている」は to have been ＋ 過去分詞。' },
+      { sentence: 'It is believed ___ the city was founded 1,000 years ago.', choices: ['that', 'to', 'for', 'which'], answer: 0, why: 'うしろが文なので It is believed that ～。' },
+      { sentence: 'The singer is thought ___ the best song of the year last year.', choices: ['to have written', 'to writing', 'written', 'to write'], answer: 0, why: '書いたのは過去（last year）なので to have ＋ 過去分詞。' },
+      { sentence: 'Ten people are reported ___ in the accident.', choices: ['to have been hurt', 'to hurt', 'hurting', 'to be hurting'], answer: 0, why: '「けがをした（過去・受け身）と報じられている」は to have been ＋ 過去分詞。' },
     ],
   },
   {
@@ -6033,9 +6033,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Half of the pizza was eaten in five minutes.', ja: 'ピザの半分は5分で食べられてしまった。' },
     ],
     questions: [
-      { sentence: 'Half of the students ___ absent today.', choices: ['were', 'was', 'is'], answer: 0, why: 'of のあとの the students（複数）に合わせて were。' },
-      { sentence: 'The rest of the cake ___ in the fridge.', choices: ['is', 'are', 'were'], answer: 0, why: 'of のあとの the cake（単数）に合わせて is。' },
-      { sentence: 'Most of the water in the lake ___ clean.', choices: ['is', 'are', 'were'], answer: 0, why: 'water は数えられない名詞なので単数あつかいの is。' },
+      { sentence: 'Half of the students ___ absent today.', choices: ['were', 'was', 'is', 'has been'], answer: 0, why: 'of のあとの the students（複数）に合わせて were。' },
+      { sentence: 'The rest of the cake ___ in the fridge.', choices: ['is', 'are', 'were', 'have'], answer: 0, why: 'of のあとの the cake（単数）に合わせて is。' },
+      { sentence: 'Most of the water in the lake ___ clean.', choices: ['is', 'are', 'were', 'are being'], answer: 0, why: 'water は数えられない名詞なので単数あつかいの is。' },
     ],
   },
   {
@@ -6050,9 +6050,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My teacher is easy to talk to.', ja: '私の先生は話しかけやすい。' },
     ],
     questions: [
-      { sentence: 'This question is difficult ___.', choices: ['to answer', 'to answer it', 'answering it'], answer: 0, why: '主語の this question が answer の目的語なので、うしろに it を置かない。' },
-      { sentence: 'This river is dangerous to swim ___.', choices: ['in', 'it', 'on it'], answer: 0, why: 'swim in the river の in を残す：dangerous to swim in。' },
-      { sentence: 'Ken is easy ___ with.', choices: ['to talk', 'talking', 'to talk to'], answer: 0, why: 'talk with Ken の with を残す形：easy to talk with。' },
+      { sentence: 'This question is difficult ___.', choices: ['to answer', 'to answer it', 'answering it', 'to answering'], answer: 0, why: '主語の this question が answer の目的語なので、うしろに it を置かない。' },
+      { sentence: 'This river is dangerous to swim ___.', choices: ['in', 'it', 'on it', 'to it'], answer: 0, why: 'swim in the river の in を残す：dangerous to swim in。' },
+      { sentence: 'Ken is easy ___ with.', choices: ['to talk', 'talking', 'to talk to', 'to talk at'], answer: 0, why: 'talk with Ken の with を残す形：easy to talk with。' },
     ],
   },
   {
@@ -6067,9 +6067,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The teacher told us not to run in the hall.', ja: '先生は私たちに、ろうかを走らないようにと言った。' },
     ],
     questions: [
-      { sentence: 'Ken said to me yesterday, "I am tired." → Ken told me that he ___ tired.', choices: ['was', 'am', 'be'], answer: 0, why: '時制を過去にずらし、主語 he に合わせて was。' },
-      { sentence: 'She said to me, "Close the window." → She told me ___ the window.', choices: ['to close', 'closing', 'closed'], answer: 0, why: '命令文の間接話法は tell ＋ 人 ＋ to ＋ 原形。' },
-      { sentence: 'He said to us, "I will help you." → He told us that he ___ help us.', choices: ['would', 'will to', 'shall to'], answer: 0, why: 'will を過去にずらして would。助動詞のあとに to は来ない。' },
+      { sentence: 'Ken said to me yesterday, "I am tired." → Ken told me that he ___ tired.', choices: ['was', 'am', 'be', 'being'], answer: 0, why: '時制を過去にずらし、主語 he に合わせて was。' },
+      { sentence: 'She said to me, "Close the window." → She told me ___ the window.', choices: ['to close', 'closing', 'closed', 'to closing'], answer: 0, why: '命令文の間接話法は tell ＋ 人 ＋ to ＋ 原形。' },
+      { sentence: 'He said to us, "I will help you." → He told us that he ___ help us.', choices: ['would', 'will to', 'shall to', 'would to'], answer: 0, why: 'will を過去にずらして would。助動詞のあとに to は来ない。' },
     ],
   },
   {
@@ -6084,9 +6084,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Since you are free today, why don\'t we go shopping?', ja: '今日はひまなんだから、買い物に行かない？' },
     ],
     questions: [
-      { sentence: '___ it was raining, we stayed home.', choices: ['Since', 'Because of', 'During'], answer: 0, why: 'うしろが文（it was raining）なので接続詞 Since「～なので」。because of・during のあとは名詞。' },
-      { sentence: '___ you are tired, you should go to bed early.', choices: ['As', 'Despite', 'Due to'], answer: 0, why: 'うしろが文なので接続詞 As「～なので」。despite・due to のあとは名詞。' },
-      { sentence: 'I have lived in this town ___ 2015.', choices: ['since', 'as', 'because'], answer: 0, why: '現在完了と「2015年以来」なので since（ここは理由ではなく「～以来」）。' },
+      { sentence: '___ it was raining, we stayed home.', choices: ['Since', 'Because of', 'During', 'Although'], answer: 0, why: 'うしろが文（it was raining）なので接続詞 Since「～なので」。because of・during のあとは名詞。' },
+      { sentence: '___ you are tired, you should go to bed early.', choices: ['As', 'Despite', 'Due to', 'Because of'], answer: 0, why: 'うしろが文なので接続詞 As「～なので」。despite・due to のあとは名詞。' },
+      { sentence: 'I have lived in this town ___ 2015.', choices: ['since', 'as', 'because', 'for'], answer: 0, why: '現在完了と「2015年以来」なので since（ここは理由ではなく「～以来」）。' },
     ],
   },
   {

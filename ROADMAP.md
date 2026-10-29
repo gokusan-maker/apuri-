@@ -70,7 +70,8 @@
   - [x] ⑥ hear from / hear of、be independent of / dependent on、apply for / to、talk 人 into / out of、thank / praise 人 for の6単元を4択に（771→753）
   - [x] ⑦ 形容詞＋前置詞（absent from / tired of など）・判断の理由の不定詞・as ～ as ever / any・enough の位置・sound like の6単元を4択に（753→735）
   - [x] ⑧ congratulate 人 on / praise 人 for・in English・時を表す語と時制・It is a pity that・regard A as B・go for a walk の6単元を4択に（735→717）
-  - [ ] ⑨ つづきの6〜10単元を4択に
+  - [x] ⑨ 理由の since / as・間接話法・easy to read の形・部分を表す語と動詞・It is believed that・be expected to の6単元に4つ目の選択肢を足す（717→699）
+  - [ ] ⑩ つづきの6〜10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
