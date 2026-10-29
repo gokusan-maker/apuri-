@@ -582,6 +582,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="62" cy="52" rx="8" ry="6" fill="#3f2d1d" opacity="0.75" />
       </g>
     )
+  if (species === 'yak')
+    return (
+      <g>
+        {/* 左右にのびる角と、ひたいの長い毛 */}
+        <path d="M28 30 Q16 26 18 14 M72 30 Q84 26 82 14" fill="none" stroke="#e7e5e4" strokeWidth="4" strokeLinecap="round" />
+        <path d="M40 30 Q50 40 60 30" fill="#4a3628" stroke="#2a1d14" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
