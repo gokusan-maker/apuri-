@@ -3602,9 +3602,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She studied all the harder because she had failed once.', ja: '一度失敗したので、彼女はいっそう熱心に勉強した。' },
     ],
     questions: [
-      { sentence: 'I love her all the ___ for her faults.', choices: ['more', 'most', 'much'], answer: 0, why: 'all the ＋比較級 ＋ for ～「～なのでいっそう」。比較級 more。' },
-      { sentence: 'He worked all the ___ because his boss praised him.', choices: ['harder', 'hardest', 'hard'], answer: 0, why: 'all the ＋比較級 ＋ because ～。比較級 harder。' },
-      { sentence: 'He is ___ the wiser for his long experience.', choices: ['none', 'no', 'not'], answer: 0, why: 'none the ＋比較級「それでも少しも～ない」。' },
+      { sentence: 'I love her all the ___ for her faults.', choices: ['more', 'most', 'much', 'many'], answer: 0, why: 'all the ＋比較級 ＋ for ～「～なのでいっそう」。比較級 more。' },
+      { sentence: 'He worked all the ___ because his boss praised him.', choices: ['harder', 'hardest', 'hard', 'more hard'], answer: 0, why: 'all the ＋比較級 ＋ because ～。比較級 harder。' },
+      { sentence: 'He is ___ the wiser for his long experience.', choices: ['none', 'no', 'not', 'nothing'], answer: 0, why: 'none the ＋比較級「それでも少しも～ない」。' },
     ],
   },
   {
@@ -3619,9 +3619,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He failed to keep his promise.', ja: '彼は約束を守らなかった。' },
     ],
     questions: [
-      { sentence: 'The movie was ___ but boring; I loved it.', choices: ['anything', 'any', 'anyone'], answer: 0, why: 'anything but ～「少しも～ではない」。any・anyone ではこの形にならない。' },
-      { sentence: 'The cause of the accident remains to ___ found.', choices: ['be', 'being', 'been'], answer: 0, why: 'remain to be ＋過去分詞「まだ～されていない」。' },
-      { sentence: 'She never ___ to call her mother on Sundays.', choices: ['fails', 'misses', 'loses'], answer: 0, why: 'never fail to ～「必ず～する」（～しないことがない）。' },
+      { sentence: 'The movie was ___ but boring; I loved it.', choices: ['anything', 'any', 'anyone', 'anywhere'], answer: 0, why: 'anything but ～「少しも～ではない」。any・anyone ではこの形にならない。' },
+      { sentence: 'The cause of the accident remains to ___ found.', choices: ['be', 'being', 'been', 'is'], answer: 0, why: 'remain to be ＋過去分詞「まだ～されていない」。' },
+      { sentence: 'She never ___ to call her mother on Sundays.', choices: ['fails', 'misses', 'loses', 'fail'], answer: 0, why: 'never fail to ～「必ず～する」（～しないことがない）。' },
     ],
   },
   {
@@ -3653,9 +3653,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It had been raining all night, so the ground was wet.', ja: '一晩じゅう雨が降り続いていたので、地面はぬれていた。' },
     ],
     questions: [
-      { sentence: 'We had been ___ for an hour when the train finally arrived.', choices: ['waiting', 'waited', 'wait'], answer: 0, why: 'had been ＋ -ing で「（その時まで）ずっと～していた」。' },
-      { sentence: 'He was tired because he ___ been running all morning.', choices: ['had', 'has', 'was'], answer: 0, why: '過去（was tired）の時点までの継続なので過去完了進行形 had been running。' },
-      { sentence: 'How long had you been ___ English before you went abroad?', choices: ['learning', 'learned', 'learn'], answer: 0, why: '過去完了進行形の疑問文。had been のあとは -ing。' },
+      { sentence: 'We had been ___ for an hour when the train finally arrived.', choices: ['waiting', 'waited', 'wait', 'waits'], answer: 0, why: 'had been ＋ -ing で「（その時まで）ずっと～していた」。' },
+      { sentence: 'He was tired because he ___ been running all morning.', choices: ['had', 'has', 'was', 'is'], answer: 0, why: '過去（was tired）の時点までの継続なので過去完了進行形 had been running。' },
+      { sentence: 'How long had you been ___ English before you went abroad?', choices: ['learning', 'learned', 'learn', 'learns'], answer: 0, why: '過去完了進行形の疑問文。had been のあとは -ing。' },
     ],
   },
   {
@@ -3670,9 +3670,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The child was afraid of being left alone.', ja: 'その子はひとりにされるのをこわがっていた。' },
     ],
     questions: [
-      { sentence: 'He denied ___ seen the man before.', choices: ['having', 'to have', 'had'], answer: 0, why: 'deny は動名詞を目的語にとる。以前のことなので完了形の動名詞 having seen。' },
-      { sentence: 'Nobody likes ___ laughed at.', choices: ['being', 'to being', 'been'], answer: 0, why: '「笑われること」は受け身の動名詞 being laughed at。' },
-      { sentence: 'She is proud of having ___ the race.', choices: ['won', 'win', 'winning'], answer: 0, why: 'having ＋過去分詞。win の過去分詞は won。' },
+      { sentence: 'He denied ___ seen the man before.', choices: ['having', 'to have', 'had', 'have'], answer: 0, why: 'deny は動名詞を目的語にとる。以前のことなので完了形の動名詞 having seen。' },
+      { sentence: 'Nobody likes ___ laughed at.', choices: ['being', 'to being', 'been', 'be'], answer: 0, why: '「笑われること」は受け身の動名詞 being laughed at。' },
+      { sentence: 'She is proud of having ___ the race.', choices: ['won', 'win', 'winning', 'wins'], answer: 0, why: 'having ＋過去分詞。win の過去分詞は won。' },
     ],
   },
   {
@@ -3687,9 +3687,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We left early so as not to miss the bus.', ja: 'バスに乗りおくれないように早く出た。' },
     ],
     questions: [
-      { sentence: 'He took a map for fear ___ getting lost.', choices: ['of', 'to', 'that'], answer: 0, why: 'for fear of ～ing「～しないように」。' },
-      { sentence: 'She tiptoed so as ___ to wake her parents.', choices: ['not', 'no', 'never be'], answer: 0, why: 'so as not to ～ の語順。not は to の前。' },
-      { sentence: 'Take notes in order ___ forget the main points.', choices: ['not to', 'to no', 'no to'], answer: 0, why: 'in order not to ～「～しないように」。not を to の前に置く。no は動詞を否定できない。' },
+      { sentence: 'He took a map for fear ___ getting lost.', choices: ['of', 'to', 'that', 'for'], answer: 0, why: 'for fear of ～ing「～しないように」。' },
+      { sentence: 'She tiptoed so as ___ to wake her parents.', choices: ['not', 'no', 'never be', 'none'], answer: 0, why: 'so as not to ～ の語順。not は to の前。' },
+      { sentence: 'Take notes in order ___ forget the main points.', choices: ['not to', 'to no', 'no to', 'not for'], answer: 0, why: 'in order not to ～「～しないように」。not を to の前に置く。no は動詞を否定できない。' },
     ],
   },
   {
@@ -3704,9 +3704,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She was heard to sing in the next room.', ja: '彼女がとなりの部屋で歌うのが聞こえた。' },
     ],
     questions: [
-      { sentence: 'He was made ___ the dishes.', choices: ['to wash', 'wash', 'washed'], answer: 0, why: '使役の make の受け身は be made to 原形。' },
-      { sentence: 'The man was seen ___ the shop.', choices: ['to leave', 'leave', 'left'], answer: 0, why: '知覚動詞の受け身は be seen to 原形（または -ing）。' },
-      { sentence: 'I was made ___ my name three times.', choices: ['to write', 'write', 'writing'], answer: 0, why: 'be made to 原形「～させられる」。' },
+      { sentence: 'He was made ___ the dishes.', choices: ['to wash', 'wash', 'washed', 'washing'], answer: 0, why: '使役の make の受け身は be made to 原形。' },
+      { sentence: 'The man was seen ___ the shop.', choices: ['to leave', 'leave', 'left', 'leaves'], answer: 0, why: '知覚動詞の受け身は be seen to 原形（または -ing）。' },
+      { sentence: 'I was made ___ my name three times.', choices: ['to write', 'write', 'writing', 'wrote'], answer: 0, why: 'be made to 原形「～させられる」。' },
     ],
   },
   {
@@ -3721,9 +3721,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Needless to say, health is more important than money.', ja: '言うまでもなく、健康はお金より大切だ。' },
     ],
     questions: [
-      { sentence: 'It is no ___ that he is sleepy; he stayed up late.', choices: ['wonder', 'doubt it', 'surprised'], answer: 0, why: 'It is no wonder (that) ～「～なのは当然だ」。' },
-      { sentence: '___ to say, we were very happy.', choices: ['Needless', 'Needed', 'Need'], answer: 0, why: 'needless to say「言うまでもなく」。' },
-      { sentence: 'It goes without ___ that safety comes first.', choices: ['saying', 'say', 'to say'], answer: 0, why: 'It goes without saying that ～「～は言うまでもない」。without のあとは動名詞。' },
+      { sentence: 'It is no ___ that he is sleepy; he stayed up late.', choices: ['wonder', 'doubt it', 'surprised', 'wondering'], answer: 0, why: 'It is no wonder (that) ～「～なのは当然だ」。' },
+      { sentence: '___ to say, we were very happy.', choices: ['Needless', 'Needed', 'Need', 'Needing'], answer: 0, why: 'needless to say「言うまでもなく」。' },
+      { sentence: 'It goes without ___ that safety comes first.', choices: ['saying', 'say', 'to say', 'to saying'], answer: 0, why: 'It goes without saying that ～「～は言うまでもない」。without のあとは動名詞。' },
     ],
   },
   {
@@ -3738,9 +3738,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Why in the world did you say that?', ja: 'いったいなぜそんなことを言ったの？' },
     ],
     questions: [
-      { sentence: 'This is the ___ watch I lost last week.', choices: ['very', 'much', 'so'], answer: 0, why: 'the very ＋名詞「まさにその～」。' },
-      { sentence: 'What on ___ is that noise?', choices: ['earth', 'world', 'ground'], answer: 0, why: '疑問詞 ＋ on earth「いったい」。in the world とも言う。' },
-      { sentence: 'I am not tired ___ all.', choices: ['at', 'in', 'on'], answer: 0, why: 'not ～ at all「まったく～ない」。' },
+      { sentence: 'This is the ___ watch I lost last week.', choices: ['very', 'much', 'so', 'too'], answer: 0, why: 'the very ＋名詞「まさにその～」。' },
+      { sentence: 'What on ___ is that noise?', choices: ['earth', 'world', 'ground', 'space'], answer: 0, why: '疑問詞 ＋ on earth「いったい」。in the world とも言う。' },
+      { sentence: 'I am not tired ___ all.', choices: ['at', 'in', 'on', 'for'], answer: 0, why: 'not ～ at all「まったく～ない」。' },
     ],
   },
   {
@@ -3772,9 +3772,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Suppose you won a million yen, what would you do?', ja: 'もし100万円当たったら、どうする？' },
     ],
     questions: [
-      { sentence: 'You can borrow my bike ___ that you bring it back tonight.', choices: ['provided', 'unless', 'although'], answer: 0, why: 'provided that ～「～という条件で」。' },
-      { sentence: '___ it rains tomorrow, what will you do?', choices: ['Suppose', 'Because of', 'Despite'], answer: 0, why: 'Suppose ～「もし～としたら」。Because of・Despite のうしろに文は続かない。' },
-      { sentence: 'He agreed on ___ that his name would not be used.', choices: ['condition', 'case', 'order'], answer: 0, why: 'on condition that ～「～という条件で」。' },
+      { sentence: 'You can borrow my bike ___ that you bring it back tonight.', choices: ['provided', 'unless', 'although', 'in case'], answer: 0, why: 'provided that ～「～という条件で」。' },
+      { sentence: '___ it rains tomorrow, what will you do?', choices: ['Suppose', 'Because of', 'Despite', 'In spite'], answer: 0, why: 'Suppose ～「もし～としたら」。Because of・Despite のうしろに文は続かない。' },
+      { sentence: 'He agreed on ___ that his name would not be used.', choices: ['condition', 'case', 'order', 'purpose'], answer: 0, why: 'on condition that ～「～という条件で」。' },
     ],
   },
   {
@@ -3789,9 +3789,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Tea and coffee are both popular, but I prefer the latter.', ja: '紅茶もコーヒーも人気だが、私は後者のほうが好きだ。' },
     ],
     questions: [
-      { sentence: '___ who want to join the club should sign here.', choices: ['Those', 'That', 'Them'], answer: 0, why: 'those who ～「～する人々」。' },
-      { sentence: 'I met Ken and Mike; the ___ is taller than the latter.', choices: ['former', 'formerly', 'formal'], answer: 0, why: 'the former「前者」と the latter「後者」。' },
-      { sentence: 'The prize goes to those ___ work the hardest.', choices: ['who', 'whom', 'whose'], answer: 0, why: 'those who ～「～する人々」。work の主語なので主格の who。' },
+      { sentence: '___ who want to join the club should sign here.', choices: ['Those', 'That', 'Them', 'These'], answer: 0, why: 'those who ～「～する人々」。' },
+      { sentence: 'I met Ken and Mike; the ___ is taller than the latter.', choices: ['former', 'formerly', 'formal', 'formality'], answer: 0, why: 'the former「前者」と the latter「後者」。' },
+      { sentence: 'The prize goes to those ___ work the hardest.', choices: ['who', 'whom', 'whose', 'which'], answer: 0, why: 'those who ～「～する人々」。work の主語なので主格の who。' },
     ],
   },
   {
