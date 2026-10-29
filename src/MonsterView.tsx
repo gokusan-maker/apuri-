@@ -441,6 +441,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M70 42 L56 52 L68 58 Z" fill="#27272a" />
       </g>
     )
+  if (species === 'axolotl')
+    return (
+      <g>
+        {/* 頭の左右のふさふさのえら */}
+        <path d="M24 40 L14 34 M24 46 L12 46 M24 52 L14 58" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" />
+        <path d="M76 40 L86 34 M76 46 L88 46 M76 52 L86 58" stroke="#ec4899" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
