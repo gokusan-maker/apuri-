@@ -7886,9 +7886,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We watched the birds at a distance of fifty meters.', ja: '私たちは50メートルはなれたところから鳥を見た。' },
     ],
     questions: [
-      { sentence: 'The road was repaired at a ___ of five million yen.', choices: ['cost', 'costs', 'costly'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは単数の名詞 cost。' },
-      { sentence: 'The ship was seen at a ___ of two kilometers.', choices: ['distance', 'distant', 'distances'], answer: 0, why: 'at a distance of ～「～はなれたところに」。a のあとは名詞 distance（distant は形容詞）。' },
-      { sentence: 'The tower was built at a ___ of one million dollars.', choices: ['cost', 'costing', 'costed'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは名詞 cost。' },
+      { sentence: 'The old castle was restored ___ a cost of three billion yen.', choices: ['at', 'in', 'for', 'with'], answer: 0, why: 'at a cost of ～「～の費用で」。' },
+      { sentence: 'The mountain can be seen clearly ___ a distance of fifty kilometers.', choices: ['at', 'in', 'from', 'by'], answer: 0, why: 'at a distance of ～「～はなれたところで」。from a distance は「遠くから」で、数値を続けるときは at a distance of。' },
+      { sentence: 'He saved the child’s life at the ___ of his own.', choices: ['cost', 'rate', 'speed', 'level'], answer: 0, why: 'at the cost of ～「～を犠牲にして」。of his own は of his own life のこと。at the rate of は「～の割合で」で意味が合わない。' },
     ],
   },
   {
@@ -7903,9 +7903,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He reads at the rate of two books a week.', ja: '彼は週に2冊の割合で本を読む。' },
     ],
     questions: [
-      { sentence: 'The runner crossed the line at full ___.', choices: ['speed', 'speeds', 'speedy'], answer: 0, why: 'at full speed「全速力で」。full のあとは単数の名詞 speed。' },
-      { sentence: 'The town is growing at the ___ of 2 percent a year.', choices: ['rate', 'rates', 'rated'], answer: 0, why: 'at the rate of ～「～の割合で」。the のあとは単数の名詞 rate。' },
-      { sentence: 'Prices are rising at the rate ___ 5 percent.', choices: ['of', 'at', 'to'], answer: 0, why: 'at the rate of ～。rate のあとは of。' },
+      { sentence: 'The ambulance raced to the hospital ___ full speed.', choices: ['at', 'in', 'with', 'on'], answer: 0, why: 'at full speed「全速力で」。速度・割合を表す at。' },
+      { sentence: 'The population is increasing at the ___ of about one percent a year.', choices: ['rate', 'speed', 'level', 'amount'], answer: 0, why: 'at the rate of ～「～の割合で」。percent（割合）と結びつくのは rate。' },
+      { sentence: 'The glaciers are melting ___ an alarming rate.', choices: ['at', 'in', 'by', 'with'], answer: 0, why: 'at a ～ rate「～な速さ・割合で」。前置詞は at。' },
     ],
   },
   {
@@ -7920,9 +7920,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I know the singer by name, but I have never heard her songs.', ja: 'その歌手の名前は知っているが、歌は聞いたことがない。' },
     ],
     questions: [
-      { sentence: 'My aunt is a lawyer by ___.', choices: ['profession', 'professional', 'professionally'], answer: 0, why: 'by profession「職業は」。by のあとは名詞 profession。' },
-      { sentence: 'She is Canadian by ___.', choices: ['birth', 'born', 'bearing'], answer: 0, why: 'by birth「生まれは」。by のあとは名詞 birth。' },
-      { sentence: 'The teacher called each student by ___.', choices: ['name', 'named', 'naming'], answer: 0, why: 'by name「名前で」。by のあとは名詞 name。' },
+      { sentence: 'He works as a teacher, but he is a musician ___ nature.', choices: ['by', 'in', 'of', 'for'], answer: 0, why: 'by nature「生まれつき・本来」。by birth / by profession / by name と同じ by。' },
+      { sentence: 'Although she has lived in Japan for years, she is French ___ birth.', choices: ['by', 'in', 'on', 'at'], answer: 0, why: 'by birth「生まれは」。' },
+      { sentence: 'The principal knows every student in the school ___ name.', choices: ['by', 'with', 'in', 'on'], answer: 0, why: 'know ～ by name「～の名前を知っている」。' },
     ],
   },
   {
@@ -7937,9 +7937,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The old piano is out of tune.', ja: 'その古いピアノは音がずれている。' },
     ],
     questions: [
-      { sentence: 'The train left right on ___.', choices: ['schedule', 'schedules', 'scheduled'], answer: 0, why: 'on schedule「予定どおりに」。on のあとは単数の schedule。' },
-      { sentence: 'The building work is two weeks behind ___.', choices: ['schedule', 'schedules', 'scheduling'], answer: 0, why: 'behind schedule「予定よりおくれて」。behind のあとは単数の schedule。' },
-      { sentence: 'His guitar was a little out of ___.', choices: ['tune', 'tunes', 'tuned'], answer: 0, why: 'out of tune「音がずれて」。of のあとは単数の名詞 tune。' },
+      { sentence: 'Despite the heavy snow, the flight left exactly ___ schedule.', choices: ['on', 'in', 'at', 'by'], answer: 0, why: 'on schedule「予定どおりに」。on time と同じく on を使う。' },
+      { sentence: 'Because of the storm, the construction project is now three weeks ___ schedule.', choices: ['behind', 'after', 'below', 'late'], answer: 0, why: 'behind schedule「予定よりおくれて」。after schedule / late schedule とは言わない。' },
+      { sentence: 'The piano had not been played for years, so it was badly ___ of tune.', choices: ['out', 'off', 'away', 'under'], answer: 0, why: 'out of tune「音程がずれて」（⇔ in tune）。' },
     ],
   },
   {
@@ -7954,9 +7954,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The children were in high spirits on the last day of school.', ja: '学校の最後の日、子どもたちは元気いっぱいだった。' },
     ],
     questions: [
-      { sentence: 'She is in a bad ___ this morning.', choices: ['mood', 'moody', 'moodily'], answer: 0, why: 'in a bad mood「きげんが悪くて」。bad のあとは名詞 mood。' },
-      { sentence: 'The fans were in high ___ after the game.', choices: ['spirits', 'spirit of', 'spirited'], answer: 0, why: 'in high spirits「上きげんで」。spirits と複数形の名詞にする。' },
-      { sentence: 'Everyone was in a good ___ at the party.', choices: ['mood', 'moods of', 'moody'], answer: 0, why: 'in a good mood。a のあとは単数の名詞 mood。' },
+      { sentence: 'He shouted at everyone this morning. He must be ___ a bad mood.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in a bad mood「きげんが悪くて」。' },
+      { sentence: 'After winning the final, the players returned home in high ___.', choices: ['spirits', 'spirit', 'minds', 'hearts'], answer: 0, why: 'in high spirits「上きげんで・元気いっぱいで」。spirits と複数形にする。' },
+      { sentence: 'I’m not ___ the mood for a party tonight. I’d rather stay home.', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'be in the mood for ～「～する気分である」。not in the mood で「～する気になれない」。' },
     ],
   },
   {
@@ -7971,9 +7971,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The two sisters washed the dishes by turns.', ja: 'ふたりの姉妹は交代で皿を洗った。' },
     ],
     questions: [
-      { sentence: 'Our team scored nine goals in ___ this season.', choices: ['total', 'totally', 'totaled'], answer: 0, why: 'in total「合計で」。in のあとは名詞 total。' },
-      { sentence: 'Each student read a line of the poem in ___.', choices: ['turn', 'turned', 'turns of'], answer: 0, why: 'in turn「順番に」。in のあとは名詞 turn。turned は入らない。' },
-      { sentence: 'My parents drove the car by ___ on the long trip.', choices: ['turns', 'turning', 'turn of'], answer: 0, why: 'by turns「交代で」。by turns と複数形の名詞にする。' },
+      { sentence: 'The repairs cost 50,000 yen for parts and 30,000 yen for labor, 80,000 yen ___ total.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in total「合計で」。' },
+      { sentence: 'The children stood in a line and answered the teacher’s questions in ___.', choices: ['turn', 'total', 'time', 'case'], answer: 0, why: 'in turn「順番に」。in total は「合計で」、in time は「間に合って」で意味が合わない。' },
+      { sentence: 'On the long drive, my parents took the wheel ___ turns.', choices: ['by', 'in', 'at', 'on'], answer: 0, why: 'by turns「交代で」（= in turn / take turns）。by turns の形では by を使う。' },
     ],
   },
   {
@@ -7988,9 +7988,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The old phone was heavy. The new one is light by comparison.', ja: '古い電話は重かった。くらべると新しいのは軽い。' },
     ],
     questions: [
-      { sentence: 'In ___ with Osaka, this city is small.', choices: ['comparison', 'compare', 'compared'], answer: 0, why: 'in comparison with ～「～とくらべると」。in のあとは名詞 comparison。' },
-      { sentence: 'Prices at this shop are low in ___ with the station shops.', choices: ['comparison', 'comparing', 'compares'], answer: 0, why: 'in comparison with ～「～とくらべると」。in のあとは名詞 comparison。' },
-      { sentence: 'My old bike was slow. My new one is fast by ___.', choices: ['comparison', 'compare', 'compares'], answer: 0, why: 'by comparison「くらべると」。by のあとは名詞 comparison。' },
+      { sentence: '___ comparison with last year, sales have nearly doubled.', choices: ['In', 'At', 'On', 'For'], answer: 0, why: 'in comparison with ～「～とくらべると」（= compared with ～）。' },
+      { sentence: 'Our village is quiet in comparison ___ the busy town nearby.', choices: ['with', 'than', 'for', 'over'], answer: 0, why: 'in comparison with / to ～。than は比較級のあとに使う語で、comparison のあとには来ない。' },
+      { sentence: 'The first test was hard. The second, by ___, was surprisingly easy.', choices: ['comparison', 'compare', 'comparing', 'compared'], answer: 0, why: 'by comparison「くらべると」。by のあとは名詞 comparison。compared は compared with ～ の形で使い、by のあとには来ない。' },
     ],
   },
   {
@@ -8005,9 +8005,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She looks calm, but in reality she is very nervous.', ja: '彼女は落ち着いて見えるが、本当はとても緊張している。' },
     ],
     questions: [
-      { sentence: 'In ___, anyone can learn to swim in a week.', choices: ['theory', 'theoretical', 'theoretically'], answer: 0, why: 'in theory「理論上は」。in のあとは名詞 theory。' },
-      { sentence: 'The idea sounded good, but it did not work in ___.', choices: ['practice', 'practical', 'practically'], answer: 0, why: 'in practice「実際には」。in のあとは名詞 practice。' },
-      { sentence: 'The movie star seems rich, but in ___ he has little money.', choices: ['reality', 'real', 'really'], answer: 0, why: 'in reality「現実には・本当は」。in のあとは名詞 reality。' },
+      { sentence: 'In ___, the new system should save time, but nobody has tested it yet.', choices: ['theory', 'practice', 'reality', 'fact'], answer: 0, why: '「まだだれも試していない」ので in theory「理論上は」。in practice / in reality / in fact は「実際には」で、試していないことと合わない。' },
+      { sentence: 'The rule looks fair on paper, but in ___ it is rarely followed.', choices: ['practice', 'theory', 'principle', 'conclusion'], answer: 0, why: 'on paper（書類の上では）と対比して in practice「実際には」。in theory / in principle は on paper と同じ側の意味になる。' },
+      { sentence: 'She appears calm on stage, but in ___ she is extremely nervous.', choices: ['reality', 'theory', 'principle', 'brief'], answer: 0, why: 'appears（～に見える）と対比して in reality「現実には・本当は」。' },
     ],
   },
   {
@@ -8022,9 +8022,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The school as a whole joined the clean-up day.', ja: '学校全体で清掃の日に参加した。' },
     ],
     questions: [
-      { sentence: 'In ___, the plan saves both time and money.', choices: ['brief', 'briefly', 'briefed'], answer: 0, why: 'in brief「手短に言えば」。in のあとは名詞 brief。' },
-      { sentence: 'In ___, I believe that reading every day helps us.', choices: ['conclusion', 'conclude', 'concluded'], answer: 0, why: 'in conclusion「結論として」。in のあとは名詞 conclusion。' },
-      { sentence: 'Our class as a ___ did well in the sports festival.', choices: ['whole', 'wholly', 'wholes'], answer: 0, why: 'as a whole「全体として」。a のあとは単数の名詞 whole。' },
+      { sentence: 'The report is long, but ___ brief, it recommends closing two factories.', choices: ['in', 'at', 'on', 'for'], answer: 0, why: 'in brief「手短に言えば」（= in short）。' },
+      { sentence: 'Last of all, the speaker said, "In ___, I would like to thank everyone who helped."', choices: ['conclusion', 'addition', 'contrast', 'general'], answer: 0, why: 'スピーチの最後なので in conclusion「結論として・最後に」。in addition は「さらに」、in contrast は「対照的に」、in general は「一般に」で、締めくくりにならない。' },
+      { sentence: 'Some members disagreed, but the team ___ a whole supported the plan.', choices: ['as', 'in', 'on', 'for'], answer: 0, why: 'as a whole「全体として」。on the whole（概して）と混同しない。on a whole とは言わない。' },
     ],
   },
   {
@@ -8073,9 +8073,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Many old trees in this forest are at risk of dying.', ja: 'この森の古い木の多くは、かれるおそれがある。' },
     ],
     questions: [
-      { sentence: 'The player held his leg in ___ after the fall.', choices: ['pain', 'painful', 'painfully'], answer: 0, why: 'in pain「痛がって」。in のあとは名詞 pain。' },
-      { sentence: 'My mother opened the box in ___.', choices: ['surprise', 'surprised', 'surprising'], answer: 0, why: 'in surprise「おどろいて」。in のあとは名詞 surprise。' },
-      { sentence: 'Some sea animals are at ___ because of plastic waste.', choices: ['risk', 'risky', 'risked'], answer: 0, why: 'at risk「危険にさらされて」。at のあとは名詞 risk。' },
+      { sentence: 'The injured player lay on the ground, clearly ___ pain.', choices: ['in', 'at', 'with', 'on'], answer: 0, why: 'in pain「痛がって・苦しんで」。状態を表す in。' },
+      { sentence: 'When she heard the news, she looked up from her book ___ surprise.', choices: ['in', 'at', 'by', 'on'], answer: 0, why: 'in surprise「おどろいて」。be surprised at ～と混同して at にしない。' },
+      { sentence: 'Without clean water, thousands of children are ___ risk of serious illness.', choices: ['at', 'in', 'on', 'under'], answer: 0, why: 'at risk (of ～)「（～の）危険にさらされて」。前置詞は at。' },
     ],
   },
   {
