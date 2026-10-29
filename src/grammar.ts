@@ -3959,9 +3959,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The train comes every fifteen minutes.', ja: '電車は15分ごとに来る。' },
     ],
     questions: [
-      { sentence: 'I go swimming every ___ day.', choices: ['other', 'another', 'others'], answer: 0, why: 'every other day「1日おきに」。every another・every others という形はない。' },
-      { sentence: 'The bus comes every ten ___.', choices: ['minutes', 'minute', 'of minutes'], answer: 0, why: 'every ＋ 数 ＋ 複数形「～ごとに」。ten のあとは複数形 minutes。' },
-      { sentence: 'She calls her parents every ___ weeks.', choices: ['two', 'second', 'twice'], answer: 0, why: 'every ＋ 数（two）＋ 複数形 weeks。every second なら week（単数）、twice は every のあとに置けない。' },
+      { sentence: 'I go swimming every ___ day.', choices: ['other', 'another', 'others', 'one'], answer: 0, why: 'every other day「1日おきに」。every another・every others という形はない。' },
+      { sentence: 'The bus comes every ten ___.', choices: ['minutes', 'minute', 'of minutes', 'minutes of'], answer: 0, why: 'every ＋ 数 ＋ 複数形「～ごとに」。ten のあとは複数形 minutes。' },
+      { sentence: 'She calls her parents every ___ weeks.', choices: ['two', 'second', 'twice', 'twos'], answer: 0, why: 'every ＋ 数（two）＋ 複数形 weeks。every second なら week（単数）、twice は every のあとに置けない。' },
     ],
   },
   {
@@ -3976,9 +3976,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is a teacher rather than a scholar.', ja: '彼は学者というより、むしろ教師だ。' },
     ],
     questions: [
-      { sentence: 'I\'d like to stay home rather than ___ out.', choices: ['go', 'went', 'gone'], answer: 0, why: 'to stay と形をそろえて、rather than のあとも原形 go。過去形・過去分詞は入らない。' },
-      { sentence: 'She chose to study ___ than play games.', choices: ['rather', 'more', 'better'], answer: 0, why: 'A rather than B「B よりむしろ A」。動詞の原形どうしをつなぐのは rather than。' },
-      { sentence: 'He is a writer rather ___ a scientist.', choices: ['than', 'then', 'that'], answer: 0, why: 'rather than ～「～よりむしろ」。then（そのとき）とつづりがにているので注意。' },
+      { sentence: 'I\'d like to stay home rather than ___ out.', choices: ['go', 'went', 'gone', 'goes'], answer: 0, why: 'to stay と形をそろえて、rather than のあとも原形 go。過去形・過去分詞は入らない。' },
+      { sentence: 'She chose to study ___ than play games.', choices: ['rather', 'more', 'better', 'most'], answer: 0, why: 'A rather than B「B よりむしろ A」。動詞の原形どうしをつなぐのは rather than。' },
+      { sentence: 'He is a writer rather ___ a scientist.', choices: ['than', 'then', 'that', 'when'], answer: 0, why: 'rather than ～「～よりむしろ」。then（そのとき）とつづりがにているので注意。' },
     ],
   },
   {
@@ -3993,9 +3993,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The new phone is much lighter than the old one.', ja: '新しい電話は古いのよりずっと軽い。' },
     ],
     questions: [
-      { sentence: 'This is ___ the best movie I have ever seen.', choices: ['by far', 'very', 'so'], answer: 0, why: '最上級（the best）を強めるのは by far。very・so は the の前に置けない。' },
-      { sentence: 'She is much the ___ student in the class.', choices: ['tallest', 'tall', 'most tall'], answer: 0, why: 'much the ＋ 最上級「ずばぬけて～」。tall の最上級は tallest（most tall とはしない）。' },
-      { sentence: 'This bag is ___ cheaper than that one.', choices: ['much', 'very', 'more'], answer: 0, why: '比較級（cheaper）を強めるのは much。very は比較級を強められず、more cheaper は比較級が二重になる。' },
+      { sentence: 'This is ___ the best movie I have ever seen.', choices: ['by far', 'very', 'so', 'too'], answer: 0, why: '最上級（the best）を強めるのは by far。very・so は the の前に置けない。' },
+      { sentence: 'She is much the ___ student in the class.', choices: ['tallest', 'tall', 'most tall', 'taller'], answer: 0, why: 'much the ＋ 最上級「ずばぬけて～」。tall の最上級は tallest（most tall とはしない）。' },
+      { sentence: 'This bag is ___ cheaper than that one.', choices: ['much', 'very', 'more', 'too'], answer: 0, why: '比較級（cheaper）を強めるのは much。very は比較級を強められず、more cheaper は比較級が二重になる。' },
     ],
   },
   {
@@ -4010,9 +4010,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is too difficult a book for children.', ja: 'これは子どもにはむずかしすぎる本だ。' },
     ],
     questions: [
-      { sentence: 'It was ___ nice a day that we went to the beach.', choices: ['so', 'such', 'very'], answer: 0, why: '「形容詞 ＋ a ＋ 名詞」の前に置けるのは so。such なら such a nice day の順になる。' },
-      { sentence: 'It was such ___ that we went out.', choices: ['a nice day', 'nice a day', 'a day nice'], answer: 0, why: 'such は「a ＋ 形容詞 ＋ 名詞」の順：such a nice day。' },
-      { sentence: 'This is too heavy ___ for me to carry.', choices: ['a box', 'box a', 'the box'], answer: 0, why: 'too ＋ 形容詞 ＋ a ＋ 名詞：too heavy a box。the は使わない。' },
+      { sentence: 'It was ___ nice a day that we went to the beach.', choices: ['so', 'such', 'very', 'quite'], answer: 0, why: '「形容詞 ＋ a ＋ 名詞」の前に置けるのは so。such なら such a nice day の順になる。' },
+      { sentence: 'It was such ___ that we went out.', choices: ['a nice day', 'nice a day', 'a day nice', 'nice day'], answer: 0, why: 'such は「a ＋ 形容詞 ＋ 名詞」の順：such a nice day。' },
+      { sentence: 'This is too heavy ___ for me to carry.', choices: ['a box', 'box a', 'the box', 'boxes'], answer: 0, why: 'too ＋ 形容詞 ＋ a ＋ 名詞：too heavy a box。the は使わない。' },
     ],
   },
   {
@@ -4027,9 +4027,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She shouted to make herself heard.', ja: '彼女は声を聞いてもらおうとさけんだ。' },
     ],
     questions: [
-      { sentence: 'I could not make myself ___ in English.', choices: ['understood', 'understand', 'understanding'], answer: 0, why: '自分が「理解される」側なので、make oneself ＋ 過去分詞 understood。' },
-      { sentence: 'She spoke loudly to make herself ___ over the noise.', choices: ['heard', 'hear', 'to hear'], answer: 0, why: '自分の声が「聞かれる」側なので過去分詞 heard。' },
-      { sentence: 'Can you make ___ understood in French?', choices: ['yourself', 'you', 'your'], answer: 0, why: '主語 you と同じ人なので再帰代名詞 yourself。' },
+      { sentence: 'I could not make myself ___ in English.', choices: ['understood', 'understand', 'understanding', 'to understand'], answer: 0, why: '自分が「理解される」側なので、make oneself ＋ 過去分詞 understood。' },
+      { sentence: 'She spoke loudly to make herself ___ over the noise.', choices: ['heard', 'hear', 'to hear', 'hearing'], answer: 0, why: '自分の声が「聞かれる」側なので過去分詞 heard。' },
+      { sentence: 'Can you make ___ understood in French?', choices: ['yourself', 'you', 'your', 'yours'], answer: 0, why: '主語 you と同じ人なので再帰代名詞 yourself。' },
     ],
   },
   {
@@ -4044,9 +4044,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There seems to have been an accident on the highway.', ja: '高速道路で事故があったようだ。' },
     ],
     questions: [
-      { sentence: 'There seems ___ a problem with the printer.', choices: ['to be', 'being', 'be'], answer: 0, why: 'seem to ＋ 原形。There seems to be ～「～があるようだ」。' },
-      { sentence: 'There ___ to be many people in the park.', choices: ['seem', 'seems', 'seeming'], answer: 0, why: 'うしろの名詞 many people が複数なので seem（三人称単数の s はつけない）。' },
-      { sentence: 'There seems to have ___ an accident.', choices: ['been', 'be', 'being'], answer: 0, why: '過去のことは完了不定詞 to have been。have のあとは過去分詞 been。' },
+      { sentence: 'There seems ___ a problem with the printer.', choices: ['to be', 'being', 'be', 'been'], answer: 0, why: 'seem to ＋ 原形。There seems to be ～「～があるようだ」。' },
+      { sentence: 'There ___ to be many people in the park.', choices: ['seem', 'seems', 'seeming', 'seemingly'], answer: 0, why: 'うしろの名詞 many people が複数なので seem（三人称単数の s はつけない）。' },
+      { sentence: 'There seems to have ___ an accident.', choices: ['been', 'be', 'being', 'was'], answer: 0, why: '過去のことは完了不定詞 to have been。have のあとは過去分詞 been。' },
     ],
   },
   {
@@ -4061,9 +4061,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It never occurred to him to ask for help.', ja: '助けを求めようとは、彼は思いもしなかった。' },
     ],
     questions: [
-      { sentence: 'It suddenly ___ to me that I had left my keys at home.', choices: ['occurred', 'thought', 'remembered'], answer: 0, why: 'It occurs to 人 that ～「～が頭にうかぶ」。It を主語にして to 人 を続けられるのは occur。' },
-      { sentence: 'It never occurred ___ him to ask for help.', choices: ['to', 'for', 'with'], answer: 0, why: 'occur to 人「人の頭にうかぶ」。前置詞は to。' },
-      { sentence: 'A good idea occurred ___ me during the walk.', choices: ['to', 'at', 'on'], answer: 0, why: '考えが「人に」うかぶので occur to 人。' },
+      { sentence: 'It suddenly ___ to me that I had left my keys at home.', choices: ['occurred', 'thought', 'remembered', 'realized'], answer: 0, why: 'It occurs to 人 that ～「～が頭にうかぶ」。It を主語にして to 人 を続けられるのは occur。' },
+      { sentence: 'It never occurred ___ him to ask for help.', choices: ['to', 'for', 'with', 'by'], answer: 0, why: 'occur to 人「人の頭にうかぶ」。前置詞は to。' },
+      { sentence: 'A good idea occurred ___ me during the walk.', choices: ['to', 'at', 'on', 'by'], answer: 0, why: '考えが「人に」うかぶので occur to 人。' },
     ],
   },
   {
@@ -4078,9 +4078,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He won not because of luck but because of hard work.', ja: '彼が勝ったのは運のおかげではなく、努力のおかげだ。' },
     ],
     questions: [
-      { sentence: 'I study English not because I have to, ___ because I enjoy it.', choices: ['but', 'so', 'than'], answer: 0, why: 'not because A but because B「A だからではなく B だから」。' },
-      { sentence: 'She left early not ___ she was tired but because she had work.', choices: ['because', 'because of', 'due to'], answer: 0, why: 'うしろが文（she was tired）なので接続詞 because。because of・due to のうしろは名詞。' },
-      { sentence: 'He was praised not because of his talent but because ___ his effort.', choices: ['of', 'for', 'by'], answer: 0, why: 'his effort は名詞なので because of。前半の because of と形をそろえる。' },
+      { sentence: 'I study English not because I have to, ___ because I enjoy it.', choices: ['but', 'so', 'than', 'or'], answer: 0, why: 'not because A but because B「A だからではなく B だから」。' },
+      { sentence: 'She left early not ___ she was tired but because she had work.', choices: ['because', 'because of', 'due to', 'because to'], answer: 0, why: 'うしろが文（she was tired）なので接続詞 because。because of・due to のうしろは名詞。' },
+      { sentence: 'He was praised not because of his talent but because ___ his effort.', choices: ['of', 'for', 'by', 'with'], answer: 0, why: 'his effort は名詞なので because of。前半の because of と形をそろえる。' },
     ],
   },
   {
@@ -4095,9 +4095,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'While some students walk to school, others take the bus.', ja: '歩いて通学する生徒もいる一方、バスで通う生徒もいる。' },
     ],
     questions: [
-      { sentence: 'My brother likes sports, ___ I prefer reading.', choices: ['whereas', 'despite', 'instead of'], answer: 0, why: 'うしろが文（I prefer reading）なので接続詞 whereas。despite・instead of は前置詞の働きで文を続けられない。' },
-      { sentence: 'Some people work best in the morning, ___ others work best at night.', choices: ['while', 'during', 'unlike'], answer: 0, why: '対比の接続詞 while「～である一方」。during・unlike のうしろは名詞。' },
-      { sentence: '___ the old phone was heavy, the new one is very light.', choices: ['Whereas', 'Unlike', 'In spite of'], answer: 0, why: 'うしろが文（the old phone was heavy）なので接続詞 Whereas。Unlike・In spite of のうしろは名詞。' },
+      { sentence: 'My brother likes sports, ___ I prefer reading.', choices: ['whereas', 'despite', 'instead of', 'because of'], answer: 0, why: 'うしろが文（I prefer reading）なので接続詞 whereas。despite・instead of は前置詞の働きで文を続けられない。' },
+      { sentence: 'Some people work best in the morning, ___ others work best at night.', choices: ['while', 'during', 'unlike', 'despite'], answer: 0, why: '対比の接続詞 while「～である一方」。during・unlike のうしろは名詞。' },
+      { sentence: '___ the old phone was heavy, the new one is very light.', choices: ['Whereas', 'Unlike', 'In spite of', 'Despite'], answer: 0, why: 'うしろが文（the old phone was heavy）なので接続詞 Whereas。Unlike・In spite of のうしろは名詞。' },
     ],
   },
   {
@@ -4112,9 +4112,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Given the weather, the event was a success.', ja: '天気を考えると、そのもよおしは成功だった。' },
     ],
     questions: [
-      { sentence: '___ that he is only ten, his English is excellent.', choices: ['Given', 'Giving', 'To give'], answer: 0, why: 'given that ～「～を考えると」。決まった形で、giving・to give にはしない。' },
-      { sentence: 'Given ___ age, she did very well in the race.', choices: ['her', 'she', 'hers'], answer: 0, why: 'given ＋ 名詞「～を考えると」。age の前は所有格 her。' },
-      { sentence: 'Given ___ it was raining, many people came.', choices: ['that', 'what', 'which'], answer: 0, why: 'given that ＋ 文（it was raining）。うしろが欠けのない文なので that。' },
+      { sentence: '___ that he is only ten, his English is excellent.', choices: ['Given', 'Giving', 'To give', 'Gave'], answer: 0, why: 'given that ～「～を考えると」。決まった形で、giving・to give にはしない。' },
+      { sentence: 'Given ___ age, she did very well in the race.', choices: ['her', 'she', 'hers', 'herself'], answer: 0, why: 'given ＋ 名詞「～を考えると」。age の前は所有格 her。' },
+      { sentence: 'Given ___ it was raining, many people came.', choices: ['that', 'what', 'which', 'who'], answer: 0, why: 'given that ＋ 文（it was raining）。うしろが欠けのない文なので that。' },
     ],
   },
   {
