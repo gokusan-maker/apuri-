@@ -14096,6 +14096,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-crayon',
+    title: 'Colors in a Small Stick',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Crayons are one of the first drawing tools many children use. A crayon is a stick of wax mixed with colored powder. The wax holds the color together, and when you rub the crayon on paper, a thin layer of colored wax stays on the page.",
+      "At first, crayons were not made for children. Factories made them for workers ( A ) marked boxes and pieces of wood. Those crayons were dark and often contained materials that were not safe for children.",
+      "In the early 1900s, companies began to make safer crayons in bright colors for children, and sold them in small boxes. Because they were cheap, did not need water like paint, and did not break as easily as chalk, they became popular in homes and schools.",
+      "Crayons do have one weak point. They are made of wax ( B ) melts when it gets hot, so you should never leave them in a car on a summer day. Keep them cool, and they will keep your pictures colorful.",
+    ],
+    ja: [
+      'クレヨンは、多くの子どもが最初に使うお絵かきの道具の1つだ。クレヨンは、色の粉をまぜたろうの棒だ。ろうが色をまとめていて、紙にこすると、色のついたうすいろうの層が紙に残る。',
+      '最初、クレヨンは子どものために作られたものではなかった。工場は、箱や木材に印をつける作業員のためにクレヨンを作っていた。そのクレヨンは色が暗く、子どもにとって安全でない材料がふくまれていることも多かった。',
+      '1900年代のはじめ、会社が子どものために明るい色の安全なクレヨンを作り、小さな箱に入れて売りはじめた。安く、絵の具のように水がいらず、チョークほどかんたんにおれなかったので、家庭や学校で人気になった。',
+      'クレヨンには1つ弱点がある。暑くなるととけるろうでできているので、夏の日に車の中に置きっぱなしにしてはいけない。すずしいところに置いておけば、絵をいつまでも色あざやかにしてくれるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 workers（人）で、うしろの marked の主語が欠けているので関係代名詞 who。which はもの、whose はうしろに名詞が必要、what は先行詞をとらない。' },
+      { id: 'B', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 wax（もの）で、うしろの melts の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'weak point',
+      choices: ['a problem or something not good about it', 'its best color', 'a sharp end', 'the price of a box'],
+      answer: 0,
+      why: 'weak point は「弱点」。クレヨンのよくないところという意味。',
+    },
+    order: {
+      words: ['did', 'not', 'break', 'as', 'easily', 'as', 'chalk'],
+      rest: '',
+      answer: 'did not break as easily as chalk',
+      ja: 'チョークほどかんたんにおれなかった（not as ～ as …「…ほど～ない」）',
+    },
+    tf: [
+      { statement: 'クレヨンは、ろうと色の粉でできている。', answer: true, why: '第1段落 A crayon is a stick of wax mixed with colored powder。' },
+      { statement: '最初のクレヨンは、子どものために作られた。', answer: false, why: '第2段落 At first, crayons were not made for children。' },
+      { statement: '夏の日に、クレヨンを車の中に置いてはいけない。', answer: true, why: '第4段落 you should never leave them in a car on a summer day。' },
+    ],
+    qa: [
+      { q: 'Why did crayons become popular in homes and schools?', choices: ['They were cheap and did not need water.', 'They were very heavy.', 'They melted easily.', 'They were made only for workers.'], answer: 0, why: '第3段落 Because they were cheap, did not need water like paint, and did not break as easily as chalk。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
