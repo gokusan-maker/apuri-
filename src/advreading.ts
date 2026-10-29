@@ -15003,6 +15003,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What a Runaway Trolley Teaches Us About Morality', 'How Trolleys Were Invented', 'The Safety of Railway Bridges', 'Why Workers Should Avoid Tracks'], answer: 0, why: '全体として、トロッコ問題を手がかりに、道徳的な判断がどのように形づくられ、なぜ考える価値があるのかを論じている。' },
   },
   {
+    id: 'kyotsu-english-spelling',
+    title: 'Why English Spelling Is So Strange',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Anyone who has studied English knows that its spelling can be confusing. The letters “ough” are pronounced differently in “though,” “through,” and “tough,” and many words, such as “knight” and “island,” contain letters that are not pronounced at all. Learners often wonder why a language used by so many people has such an irregular writing system. The answer lies largely in history.",
+      "One important reason is that English spelling became fixed before its pronunciation had finished changing. In the late fifteenth century, William Caxton set up one of the first printing presses in England, and printed books gradually encouraged writers to use more consistent spellings. During roughly the same period, however, the way English speakers pronounced many long vowels was changing dramatically. This change, which historians call the Great Vowel Shift, continued for about two hundred years. As a result, many words are still spelled in a way that reflects how they sounded centuries ago, ( A ) how they sound today.",
+      "The “k” in “knight” is a good example. In earlier forms of English, it was actually pronounced, and the word sounded quite different from the modern one. The spelling remained, but the sound disappeared. Other silent letters were added on purpose. Some scholars in the sixteenth century, who greatly admired Latin, inserted letters to show a word’s connection to Latin, even when those letters had never been pronounced in English. The “s” in “island” was added in this way, although the word in fact has no Latin origin.",
+      "A third reason is that English has borrowed words from many other languages, including French, Latin, Greek, and more recently Japanese. Borrowed words often keep spellings that follow the rules of their original language, ( B ) English ends up with several different ways of writing the same sound.",
+      "There have been attempts to make English spelling more regular. In the United States, the dictionary writer Noah Webster promoted simpler forms such as “color” instead of “colour” and “center” instead of “centre,” and many of them are now standard in American English. Larger reforms, however, have never succeeded, partly because changing the spelling of thousands of words would make older books harder to read. For learners, the irregularities can be frustrating, but they also tell a fascinating story about the history of the people ( C ) have spoken the language.",
+    ],
+    ja: [
+      '英語を勉強したことのある人なら、そのつづりがまぎらわしいことがあると知っている。「ough」という文字は though、through、tough でそれぞれちがうように発音され、knight や island のように、まったく発音されない文字をふくむ単語も多い。学習者はよく、これほど多くの人に使われている言語が、なぜこんなに不規則な書き方をするのかとふしぎに思う。その答えはおもに歴史の中にある。',
+      'ひとつの大切な理由は、英語のつづりが、発音が変わり終わる前に固定されてしまったことである。15世紀の終わりに、ウィリアム・キャクストンがイングランドで最初期の印刷機のひとつを設置し、印刷された本は、書き手がより一貫したつづりを使うようしだいにうながした。しかしほぼ同じ時期に、英語を話す人々の多くの長い母音の発音は大きく変わりつつあった。歴史家が大母音推移とよぶこの変化は、約200年続いた。その結果、多くの単語は今でも、今日の発音ではなく何世紀も前の発音を反映したつづりで書かれているのである。',
+      'knight の k はよい例である。英語の昔の形では、それは実際に発音されており、その単語は現代のものとはかなりちがう音だった。つづりは残ったが、音は消えてしまったのだ。ほかの発音されない文字は、わざと加えられた。ラテン語を深く尊敬していた16世紀の学者の中には、単語とラテン語とのつながりを示すために、英語では一度も発音されたことのない文字でさえ書き加える人がいた。island の s はこのようにして加えられたが、実はこの単語はラテン語から来たものではない。',
+      '3つめの理由は、英語がフランス語、ラテン語、ギリシャ語、そして最近では日本語をふくむ多くのほかの言語から単語を借りてきたことである。借りてきた単語は、もとの言語の規則にしたがったつづりをそのまま残すことが多いので、英語では同じ音をいくつものちがうしかたで書くことになる。',
+      '英語のつづりをもっと規則的にしようとする試みもあった。アメリカでは、辞書の編者ノア・ウェブスターが colour ではなく color、centre ではなく center のようなより簡単な形を広め、その多くは今ではアメリカ英語の標準になっている。しかし、より大きな改革は一度も成功していない。ひとつには、何千もの単語のつづりを変えると、古い本が読みにくくなってしまうからだ。学習者にとって不規則さはもどかしいこともあるが、それはまた、その言語を話してきた人々の歴史について、魅力的な物語を語ってもくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['rather than', 'as well as', 'because of', 'in addition to'], answer: 0, why: '「今日の発音ではなく、何世紀も前の発音を反映している」なので A rather than B「B ではなく A」。as well as では「今日の発音も」となり意味が逆になる。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「もとの言語のつづりを残すことが多い。だから同じ音をいくつものしかたで書くことになる」と結果を表すので so。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞が the people（人）で、うしろに動詞 have spoken が続く主格なので who。' },
+    ],
+    tf: [
+      { statement: '大母音推移は、印刷機が使われはじめるよりずっと前に終わっていた。', answer: false, why: '第2段落 During roughly the same period … the way English speakers pronounced many long vowels was changing … continued for about two hundred years。印刷機とほぼ同じ時期に進んでいた。' },
+      { statement: 'knight の k は、昔の英語では発音されていた。', answer: true, why: '第3段落 In earlier forms of English, it was actually pronounced。' },
+      { statement: 'island の s は、この単語がラテン語から来たので、もとから発音されていた。', answer: false, why: '第3段落 The “s” in “island” was added in this way, although the word in fact has no Latin origin。' },
+      { statement: 'ウェブスターが広めたつづりの多くは、今ではアメリカ英語の標準になっている。', answer: true, why: '第5段落 many of them are now standard in American English。' },
+    ],
+    qa: [
+      { q: 'According to the passage, why have large spelling reforms never succeeded?', choices: ['Changing many spellings would make older books harder to read.', 'English speakers like irregular spelling.', 'Printing presses cannot print new spellings.', 'Noah Webster opposed all changes.'], answer: 0, why: '第5段落 partly because changing the spelling of thousands of words would make older books harder to read。' },
+      { q: 'Which of the following is NOT given as a reason for irregular English spelling?', choices: ['English has fewer letters than other languages.', 'Spelling was fixed before pronunciation stopped changing.', 'Some letters were added to show a link with Latin.', 'English borrowed words from many languages.'], answer: 0, why: '第2〜4段落で、つづりの固定と発音の変化、ラテン語風の文字の追加、借用語の3つが理由としてあげられている。文字の数については書かれていない。' },
+    ],
+    gist: [
+      { para: 1, choices: ['つづりが固定されたあとも発音が変わった', '印刷機のしくみ', 'キャクストンの一生', '母音の正しい発音のしかた'], answer: 0, why: '第2段落は、印刷でつづりが固まったころ、大母音推移で発音が変わっていたことを説明している。' },
+      { para: 4, choices: ['つづりを規則的にする試みとその限界', 'アメリカとイギリスの文化のちがい', '辞書の作り方', '古い本の保存方法'], answer: 0, why: '第5段落は、ウェブスターの改革の成功と、大きな改革が成功しなかった理由を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
