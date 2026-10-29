@@ -74,7 +74,8 @@
   - [x] ⑨ 理由の since / as・間接話法・easy to read の形・部分を表す語と動詞・It is believed that・be expected to の6単元に4つ目の選択肢を足す（717→699）
   - [x] ⑩ something wrong with・that of / those of・some of whom・否定疑問文・want ＋ O ＋ 過去分詞・so ～ that・at first / at last・つなぎの言葉・on purpose・未来を表す現在形の10単元に4つ目の選択肢（数えなおして 669）
   - [x] ⑪ I wonder if・not ～ing・知覚動詞＋O＋過去分詞・主語と動詞の一致・number / amount・end up ～ing・hesitate to・know better than・devote oneself to ～ing・be sure of / to の10単元に4つ目の選択肢（669→639）
-  - [ ] ⑫ つづきの10単元を4択に
+  - [x] ⑫ so far / by then の時制・afraid of / to・go on ～ing / to・It seems that・無生物主語・remain seated・had hoped・likely that / to・仮定法の混合・Were it not for の10単元に4つ目の選択肢（639→609）
+  - [ ] ⑬ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。

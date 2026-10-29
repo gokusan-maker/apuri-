@@ -5489,9 +5489,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If she had taken the job, she would be living in Paris now.', ja: '彼女がその仕事を受けていたら、今ごろパリに住んでいるだろう。' },
     ],
     questions: [
-      { sentence: 'If I had taken the medicine, I ___ better now.', choices: ['would feel', 'would have felt', 'will feel'], answer: 0, why: '結果は「今」なので主節は仮定法過去 would ＋ 原形。' },
-      { sentence: 'If she ___ harder last year, she would be a college student now.', choices: ['had studied', 'studied', 'has studied'], answer: 0, why: '仮定は「去年」の過去のことなので if の中は過去完了 had studied。' },
-      { sentence: 'If I had not missed the bus, I ___ at school now.', choices: ['would be', 'would have been', 'am'], answer: 0, why: '結果は「今」なので would be。' },
+      { sentence: 'If I had taken the medicine, I ___ better now.', choices: ['would feel', 'would have felt', 'will feel', 'will have felt'], answer: 0, why: '結果は「今」なので主節は仮定法過去 would ＋ 原形。' },
+      { sentence: 'If she ___ harder last year, she would be a college student now.', choices: ['had studied', 'studied', 'has studied', 'studies'], answer: 0, why: '仮定は「去年」の過去のことなので if の中は過去完了 had studied。' },
+      { sentence: 'If I had not missed the bus, I ___ at school now.', choices: ['would be', 'would have been', 'am', 'will be'], answer: 0, why: '結果は「今」なので would be。' },
     ],
   },
   {
@@ -5506,9 +5506,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Had it not been for your advice, I would have given up.', ja: 'あなたの助言がなかったら、あきらめていただろう。' },
     ],
     questions: [
-      { sentence: 'If it ___ not for your help, I could not finish this.', choices: ['were', 'is', 'be'], answer: 0, why: '今の事実の反対を仮定する If it were not for ～。' },
-      { sentence: '___ it not for the rain, we would go out.', choices: ['Were', 'Is', 'Be'], answer: 0, why: 'If を省いた倒置 Were it not for ～。' },
-      { sentence: 'If it had not been ___ his advice, I would have failed.', choices: ['for', 'of', 'by'], answer: 0, why: 'If it had not been for ～「～がなかったら」の決まった形。' },
+      { sentence: 'If it ___ not for your help, I could not finish this.', choices: ['were', 'is', 'be', 'are'], answer: 0, why: '今の事実の反対を仮定する If it were not for ～。' },
+      { sentence: '___ it not for the rain, we would go out.', choices: ['Were', 'Is', 'Be', 'Are'], answer: 0, why: 'If を省いた倒置 Were it not for ～。' },
+      { sentence: 'If it had not been ___ his advice, I would have failed.', choices: ['for', 'of', 'by', 'with'], answer: 0, why: 'If it had not been for ～「～がなかったら」の決まった形。' },
     ],
   },
   {
@@ -5523,9 +5523,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is certain to like this present.', ja: '彼はきっとこのプレゼントを気に入るだろう。' },
     ],
     questions: [
-      { sentence: 'It is likely ___ he will be late again.', choices: ['that', 'to', 'for'], answer: 0, why: 'うしろが文（he will be late）なので It is likely that ～。' },
-      { sentence: 'She is likely ___ the race this time.', choices: ['to win', 'that she wins', 'winning'], answer: 0, why: '人が主語のときは S is likely to ＋ 原形。' },
-      { sentence: 'It is certain that Ken will pass. ＝ Ken is certain ___ pass.', choices: ['to', 'that', 'of'], answer: 0, why: 'It is certain that S V ＝ S is certain to V「きっと～する」。' },
+      { sentence: 'It is likely ___ he will be late again.', choices: ['that', 'to', 'for', 'which'], answer: 0, why: 'うしろが文（he will be late）なので It is likely that ～。' },
+      { sentence: 'She is likely ___ the race this time.', choices: ['to win', 'that she wins', 'winning', 'to winning'], answer: 0, why: '人が主語のときは S is likely to ＋ 原形。' },
+      { sentence: 'It is certain that Ken will pass. ＝ Ken is certain ___ pass.', choices: ['to', 'that', 'of', 'for'], answer: 0, why: 'It is certain that S V ＝ S is certain to V「きっと～する」。' },
     ],
   },
   {
@@ -5540,9 +5540,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She had intended to call him, but she forgot.', ja: '彼女は彼に電話するつもりだったが、忘れてしまった。' },
     ],
     questions: [
-      { sentence: 'I ___ to visit Kyoto last spring, but I got sick.', choices: ['had hoped', 'have hoped', 'am hoping'], answer: 0, why: 'last spring（過去）より前からの望みが実現しなかったので had hoped to ～。現在完了は過去の時を表す語といっしょに使えない。' },
-      { sentence: 'We had expected ___ early, but the train was late.', choices: ['to arrive', 'arriving', 'arrive'], answer: 0, why: 'expect のあとは to ＋ 原形。had expected to ～「～するはずだった」。' },
-      { sentence: 'He hoped to ___ the work by noon, but he couldn\'t.', choices: ['have finished', 'finishing', 'finished'], answer: 0, why: 'hoped to have ＋ 過去分詞「～したかったのだが（できなかった）」。to のあとは原形 have。' },
+      { sentence: 'I ___ to visit Kyoto last spring, but I got sick.', choices: ['had hoped', 'have hoped', 'am hoping', 'hope'], answer: 0, why: 'last spring（過去）より前からの望みが実現しなかったので had hoped to ～。現在完了は過去の時を表す語といっしょに使えない。' },
+      { sentence: 'We had expected ___ early, but the train was late.', choices: ['to arrive', 'arriving', 'arrive', 'for arriving'], answer: 0, why: 'expect のあとは to ＋ 原形。had expected to ～「～するはずだった」。' },
+      { sentence: 'He hoped to ___ the work by noon, but he couldn\'t.', choices: ['have finished', 'finishing', 'finished', 'have finishing'], answer: 0, why: 'hoped to have ＋ 過去分詞「～したかったのだが（できなかった）」。to のあとは原形 have。' },
     ],
   },
   {
@@ -5557,9 +5557,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I\'m sorry to have kept you waiting so long.', ja: '長い間お待たせしてすみません。' },
     ],
     questions: [
-      { sentence: 'Please remain ___ until the bus stops.', choices: ['seated', 'seating', 'to seat'], answer: 0, why: 'seat は「すわらせる」。すわっている側は「すわらされた」状態なので remain seated。' },
-      { sentence: 'Sorry to keep you ___.', choices: ['waiting', 'waited', 'to wait'], answer: 0, why: 'you が「待っている」（する側）なので keep ＋ 人 ＋ -ing。' },
-      { sentence: 'The window remained ___ all day.', choices: ['locked', 'locking', 'to lock'], answer: 0, why: '窓は「かぎをかけられた」側なので remain ＋ 過去分詞。' },
+      { sentence: 'Please remain ___ until the bus stops.', choices: ['seated', 'seating', 'to seat', 'seat'], answer: 0, why: 'seat は「すわらせる」。すわっている側は「すわらされた」状態なので remain seated。' },
+      { sentence: 'Sorry to keep you ___.', choices: ['waiting', 'waited', 'to wait', 'wait'], answer: 0, why: 'you が「待っている」（する側）なので keep ＋ 人 ＋ -ing。' },
+      { sentence: 'The window remained ___ all day.', choices: ['locked', 'locking', 'to lock', 'lock'], answer: 0, why: '窓は「かぎをかけられた」側なので remain ＋ 過去分詞。' },
     ],
   },
   {
@@ -5574,9 +5574,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A ten-minute walk will bring you to the park.', ja: '10分歩けば公園に着きます。' },
     ],
     questions: [
-      { sentence: 'What ___ you so angry yesterday?', choices: ['made', 'did', 'was'], answer: 0, why: 'What made you ～?「何があなたを～にしたのか」＝「なぜ～だったのか」。make ＋人＋形容詞。' },
-      { sentence: 'This medicine will make you ___ better.', choices: ['feel', 'to feel', 'felt'], answer: 0, why: 'make ＋人＋原形「人に～させる」。「この薬を飲めば気分がよくなる」。' },
-      { sentence: 'The new road enables people ___ the town in ten minutes.', choices: ['to reach', 'reach', 'reaching'], answer: 0, why: 'enable ＋人＋to 原形「（もの）のおかげで人は～できる」。' },
+      { sentence: 'What ___ you so angry yesterday?', choices: ['made', 'did', 'was', 'let'], answer: 0, why: 'What made you ～?「何があなたを～にしたのか」＝「なぜ～だったのか」。make ＋人＋形容詞。' },
+      { sentence: 'This medicine will make you ___ better.', choices: ['feel', 'to feel', 'felt', 'feeling'], answer: 0, why: 'make ＋人＋原形「人に～させる」。「この薬を飲めば気分がよくなる」。' },
+      { sentence: 'The new road enables people ___ the town in ten minutes.', choices: ['to reach', 'reach', 'reaching', 'for reaching'], answer: 0, why: 'enable ＋人＋to 原形「（もの）のおかげで人は～できる」。' },
     ],
   },
   {
@@ -5591,9 +5591,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She seems to have forgotten our plan.', ja: '彼女は私たちの計画を忘れてしまったようだ。' },
     ],
     questions: [
-      { sentence: 'It seems ___ she knows the answer.', choices: ['that', 'to', 'for'], answer: 0, why: 'うしろが文（she knows …）なので It seems that ～。' },
-      { sentence: 'It seems that he is sick. ＝ He seems ___ sick.', choices: ['to be', 'that he is', 'being'], answer: 0, why: '人が主語なら S seems to ＋ 原形。is → to be。' },
-      { sentence: 'It seems that they lost the key. ＝ They seem to ___ the key.', choices: ['have lost', 'lost', 'losing'], answer: 0, why: 'lost（過去）は seem（現在）より前のことなので to have ＋ 過去分詞。' },
+      { sentence: 'It seems ___ she knows the answer.', choices: ['that', 'to', 'for', 'as'], answer: 0, why: 'うしろが文（she knows …）なので It seems that ～。' },
+      { sentence: 'It seems that he is sick. ＝ He seems ___ sick.', choices: ['to be', 'that he is', 'being', 'is'], answer: 0, why: '人が主語なら S seems to ＋ 原形。is → to be。' },
+      { sentence: 'It seems that they lost the key. ＝ They seem to ___ the key.', choices: ['have lost', 'lost', 'losing', 'have losing'], answer: 0, why: 'lost（過去）は seem（現在）より前のことなので to have ＋ 過去分詞。' },
     ],
   },
   {
@@ -5608,9 +5608,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was afraid of being late, so I took a taxi.', ja: '遅れるのではないかと心配で、タクシーに乗った。' },
     ],
     questions: [
-      { sentence: 'He was afraid ___ his parents the truth, so he said nothing.', choices: ['to tell', 'of tell', 'telling'], answer: 0, why: '「こわくて言えなかった」は be afraid to ＋ 原形。of のあとに原形は来ない。' },
-      { sentence: 'I\'m afraid ___ the bus, so I\'ll leave now.', choices: ['of missing', 'to missing', 'miss'], answer: 0, why: '「乗りおくれないか心配」は be afraid of ＋ -ing。' },
-      { sentence: 'Don\'t be afraid ___ mistakes.', choices: ['of making', 'to making', 'make'], answer: 0, why: '前置詞 of のあとは動名詞 making。' },
+      { sentence: 'He was afraid ___ his parents the truth, so he said nothing.', choices: ['to tell', 'of tell', 'telling', 'for telling'], answer: 0, why: '「こわくて言えなかった」は be afraid to ＋ 原形。of のあとに原形は来ない。' },
+      { sentence: 'I\'m afraid ___ the bus, so I\'ll leave now.', choices: ['of missing', 'to missing', 'miss', 'for missing'], answer: 0, why: '「乗りおくれないか心配」は be afraid of ＋ -ing。' },
+      { sentence: 'Don\'t be afraid ___ mistakes.', choices: ['of making', 'to making', 'make', 'for making'], answer: 0, why: '前置詞 of のあとは動名詞 making。' },
     ],
   },
   {
@@ -5625,9 +5625,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'After high school, she went on to study medicine.', ja: '高校のあと、彼女は医学を学ぶ道に進んだ。' },
     ],
     questions: [
-      { sentence: 'He went on ___ even though he was tired.', choices: ['running', 'to running', 'run'], answer: 0, why: '「疲れていても走り続けた」は go on -ing。' },
-      { sentence: 'After explaining the rules, the teacher went on ___ us an example.', choices: ['to give', 'to giving', 'give'], answer: 0, why: '「ルールの説明に続けて、例を示した」は go on to ＋ 原形。' },
-      { sentence: 'Please go ___ with your work.', choices: ['on', 'in', 'at'], answer: 0, why: 'go on with ～「～を続ける」。' },
+      { sentence: 'He went on ___ even though he was tired.', choices: ['running', 'to running', 'run', 'for running'], answer: 0, why: '「疲れていても走り続けた」は go on -ing。' },
+      { sentence: 'After explaining the rules, the teacher went on ___ us an example.', choices: ['to give', 'to giving', 'give', 'for giving'], answer: 0, why: '「ルールの説明に続けて、例を示した」は go on to ＋ 原形。' },
+      { sentence: 'Please go ___ with your work.', choices: ['on', 'in', 'at', 'up'], answer: 0, why: 'go on with ～「～を続ける」。' },
     ],
   },
   {
@@ -5642,9 +5642,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We arrived at noon. By then, the shop had already closed.', ja: '私たちは正午に着いた。その時までに、店はもう閉まっていた。' },
     ],
     questions: [
-      { sentence: 'So far, we ___ three tests this term.', choices: ['have had', 'had had', 'are having'], answer: 0, why: 'so far「今までのところ」は現在完了。' },
-      { sentence: 'I arrived at nine, but by then the movie ___.', choices: ['had started', 'has started', 'starts'], answer: 0, why: 'by then（過去の9時）までに終わっていたことは過去完了。' },
-      { sentence: 'By the end of this year, I ___ here for ten years.', choices: ['will have lived', 'have lived', 'had lived'], answer: 0, why: '未来の時（今年の終わり）までの継続は未来完了 will have ＋ 過去分詞。' },
+      { sentence: 'So far, we ___ three tests this term.', choices: ['have had', 'had had', 'are having', 'were having'], answer: 0, why: 'so far「今までのところ」は現在完了。' },
+      { sentence: 'I arrived at nine, but by then the movie ___.', choices: ['had started', 'has started', 'starts', 'would start'], answer: 0, why: 'by then（過去の9時）までに終わっていたことは過去完了。' },
+      { sentence: 'By the end of this year, I ___ here for ten years.', choices: ['will have lived', 'have lived', 'had lived', 'am living'], answer: 0, why: '未来の時（今年の終わり）までの継続は未来完了 will have ＋ 過去分詞。' },
     ],
   },
   {
