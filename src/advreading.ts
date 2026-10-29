@@ -14921,6 +14921,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-e-waste',
+    title: 'The Hidden Treasure in Old Phones',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Most of us own more electronic devices than we realize. Besides the phone in our pocket, there may be an old phone in a drawer, a broken tablet in a cupboard, and a pile of chargers and cables that no longer fit anything we use. When these devices finally leave our homes, they become what is called electronic waste, or e-waste, and the amount of it is growing faster than almost any other kind of rubbish.",
+      "According to a United Nations report, the world produced about 62 million tons of e-waste in 2022, and less than a quarter of it was properly collected and recycled. The rest was thrown away with ordinary rubbish, stored in homes, or sent to places where it was taken apart in unsafe ways. This is a problem for two reasons. First, many devices contain harmful substances, such as lead and mercury, that can damage soil, water, and human health if they are not handled carefully. Second, throwing away e-waste means throwing away valuable materials.",
+      "A single smartphone contains small amounts of gold, silver, copper, and other metals that are expensive and difficult to mine. In fact, a ton of discarded phones can contain far more gold than a ton of ore taken from a typical gold mine. For this reason, some people describe cities full of unused electronics as “urban mines.” ( A ) these metals are recovered and reused, they can reduce the need to dig new mines, which often damage forests and rivers.",
+      "Japan offered a well-known example of this idea when it prepared for the Tokyo Olympic and Paralympic Games. Instead of using newly mined metal, the organizers collected old phones and other small devices from people across the country and used the recovered gold, silver, and copper to make the medals. The project showed that recycling e-waste is not only possible but can also capture public attention.",
+      "Recycling alone, however, cannot solve the problem. Many devices are designed in ways that make them hard to repair or take apart, ( B ) people often replace them as soon as a part breaks. Some experts argue that the most effective solution is to make products that last longer and can be fixed easily. Until then, the simplest thing each of us can do is to take old devices to proper collection points rather than leaving them in a drawer, ( C ) they are of no use to anyone.",
+    ],
+    ja: [
+      'わたしたちの多くは、自分で思っている以上にたくさんの電子機器をもっている。ポケットの中の電話のほかに、引き出しの中の古い電話や、戸だなの中のこわれたタブレット、今使っているどれにももう合わない充電器やケーブルの山があるかもしれない。こうした機器が最後に家を出ると、電子ごみ（Eごみ）とよばれるものになり、その量はほかのほとんどどんな種類のごみよりも速くふえている。',
+      '国連の報告によれば、2022年に世界は約6200万トンの電子ごみを出し、その4分の1にも満たない量しか適切に回収・リサイクルされなかった。残りはふつうのごみといっしょに捨てられたり、家に置かれたままになったり、安全でない方法で分解される場所に送られたりした。これには2つの理由で問題がある。第一に、多くの機器には鉛や水銀のような有害な物質がふくまれており、注意してあつかわないと土や水や人の健康をそこないうる。第二に、電子ごみを捨てることは価値のある材料を捨てることを意味するのである。',
+      '1台のスマートフォンには、高価で採掘の難しい金、銀、銅などの金属が少しずつふくまれている。実際、捨てられた電話1トンには、ふつうの金鉱山からとれた鉱石1トンよりずっと多くの金がふくまれていることがある。このため、使われていない電子機器でいっぱいの都市を「都市鉱山」とよぶ人もいる。こうした金属を取り出して再利用すれば、新しい鉱山をほる必要をへらすことができる。鉱山はしばしば森や川をそこなうのである。',
+      '日本は、東京オリンピック・パラリンピックの準備のときに、この考えのよく知られた例を示した。主催者は、新しく採掘した金属を使うかわりに、全国の人々から古い電話などの小型機器を集め、取り出した金・銀・銅でメダルを作ったのである。この取り組みは、電子ごみのリサイクルが可能なだけでなく、人々の関心を集めることもできると示した。',
+      'しかし、リサイクルだけでは問題を解決できない。多くの機器は修理したり分解したりしにくいように作られているので、人は部品がひとつこわれるとすぐに買いかえてしまうことが多い。もっとも効果的な解決策は、長もちして簡単に直せる製品を作ることだと主張する専門家もいる。それまでのあいだ、わたしたち一人ひとりができるもっとも簡単なことは、古い機器を引き出しに入れたままにするのではなく、きちんとした回収場所に持っていくことである。引き出しの中では、それはだれの役にも立たないのだから。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['If', 'Unless', 'Although', 'Until'], answer: 0, why: '「金属を取り出して再利用すれば、新しい鉱山の必要をへらせる」と条件を表すので If。Unless では「再利用しないかぎり」と逆の意味になる。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'yet'], answer: 0, why: '「修理しにくく作られている。だから買いかえてしまう」と結果を表すので so。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'when'], answer: 0, why: '先行詞 a drawer（場所）を受け、「そこでは」とうしろに完全な文（they are of no use to anyone）が続くので関係副詞 where。which だとうしろに欠けた名詞が必要。' },
+    ],
+    tf: [
+      { statement: '2022年に出た電子ごみの半分以上が適切にリサイクルされた。', answer: false, why: '第2段落 less than a quarter of it was properly collected and recycled。' },
+      { statement: '捨てられた電話には、ふつうの金鉱石より多くの金がふくまれていることがある。', answer: true, why: '第3段落 a ton of discarded phones can contain far more gold than a ton of ore taken from a typical gold mine。' },
+      { statement: '東京大会のメダルは、新しく採掘した金属だけで作られた。', answer: false, why: '第4段落 Instead of using newly mined metal … used the recovered gold, silver, and copper to make the medals。' },
+      { statement: '筆者は、リサイクルだけで電子ごみの問題は解決できると考えている。', answer: false, why: '第5段落 Recycling alone, however, cannot solve the problem。' },
+    ],
+    qa: [
+      { q: 'Why does the writer say throwing away e-waste is "throwing away valuable materials"?', choices: ['Devices contain metals such as gold and copper that can be recovered.', 'Old phones can be sold for a high price in shops.', 'E-waste can be burned to make electricity.', 'Chargers can be used with every new device.'], answer: 0, why: '第3段落 A single smartphone contains small amounts of gold, silver, copper, and other metals。' },
+      { q: 'What does the writer suggest is the most effective long-term solution?', choices: ['Making products that last longer and are easy to repair.', 'Building more gold mines.', 'Keeping old devices at home.', 'Banning smartphones completely.'], answer: 0, why: '第5段落 the most effective solution is to make products that last longer and can be fixed easily。' },
+    ],
+    gist: [
+      { para: 2, choices: ['使わなくなった電子機器は「都市鉱山」になる', '金鉱山の歴史', 'スマートフォンの値段', '森を守る方法'], answer: 0, why: '第3段落は、電子機器にふくまれる金属を取り出せることから「都市鉱山」とよばれることを説明している。' },
+      { para: 3, choices: ['リサイクル金属でメダルを作った例', 'オリンピックの競技の選び方', '日本の鉱山の数', 'メダルのデザインの歴史'], answer: 0, why: '第4段落は、東京大会で古い機器から取り出した金属でメダルを作った例を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
