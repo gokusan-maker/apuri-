@@ -49,7 +49,8 @@
   - [x] ⑥ 前置詞の熟語10単元（under way, on the contrary / on the other hand, in no way / by no means など）を4択に作りかえる（201→175）
   - [x] ⑦ 前置詞の熟語8単元（in no time / in no way、at best / at least、by all means / at all costs など）を4択に作りかえる（175→154）
   - [x] ⑧ 前置詞の熟語8単元（at heart / by heart、in demand / in progress、burst into tears など）を4択に作りかえる（154→132）
-  - [ ] ⑨ のこりの品詞ちがいだけの問題（132問）を10単元ずつ作りかえる
+  - [x] ⑨ 前置詞の熟語8単元（by heart / at heart、on display / on board、in honor of / in favor of など）を4択に作りかえる（132→111）
+  - [ ] ⑩ のこりの品詞ちがいだけの問題（111問）を10単元ずつ作りかえる
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める

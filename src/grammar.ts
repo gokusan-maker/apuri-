@@ -6849,9 +6849,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The project stopped for lack of money.', ja: 'その計画は資金不足で止まった。' },
     ],
     questions: [
-      { sentence: 'A statue was built in ___ of the brave firefighters.', choices: ['honor', 'honest', 'honorable'], answer: 0, why: 'in honor of ～「～をたたえて」。in のあとは名詞 honor。' },
-      { sentence: 'This old bridge is in ___ of repair.', choices: ['need', 'needed', 'needy'], answer: 0, why: 'in need of ～「～を必要として」。in のあとは名詞 need。' },
-      { sentence: 'The game was canceled for ___ of players.', choices: ['lack', 'lacked', 'lacking'], answer: 0, why: 'for lack of ～「～が足りないために」。for のあとは名詞 lack。' },
+      { sentence: 'A party was held in ___ of the teacher who was retiring.', choices: ['honor', 'need', 'charge', 'favor'], answer: 0, why: 'in honor of ～「～をたたえて・～に敬意を表して」。in favor of は「～に賛成して」で、退職する先生のパーティーには合わない。' },
+      { sentence: 'After years of heavy use, the old bridge is badly ___ need of repair.', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'be in need of ～「～を必要としている」。' },
+      { sentence: 'The match was cancelled for ___ of players.', choices: ['lack', 'sake', 'loss', 'fear'], answer: 0, why: 'for lack of ～「～が足りないために」。for the sake of は「～のために」で the が必要、for fear of は「～をおそれて」。' },
     ],
   },
   {
@@ -6866,9 +6866,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Children under six can enter the museum for free.', ja: '6歳未満の子どもは無料で博物館に入れる。' },
     ],
     questions: [
-      { sentence: 'I found this café by ___.', choices: ['chance', 'chances', 'chancing'], answer: 0, why: 'by chance「偶然に」。chance は単数のまま。' },
-      { sentence: 'You can get this sticker for ___.', choices: ['free', 'freely', 'freed'], answer: 0, why: 'for free「無料で」。freely は副詞「自由に」、freed は過去分詞。' },
-      { sentence: 'The doctor told him to go to the hospital at ___.', choices: ['once', 'ones', 'oncely'], answer: 0, why: 'at once「すぐに」。ones・oncely という形はこの意味では使わない。' },
+      { sentence: 'I met my old teacher ___ chance at the airport.', choices: ['by', 'in', 'on', 'for'], answer: 0, why: 'by chance「偶然に」（= by accident）。' },
+      { sentence: 'Children under six can enter the zoo for ___.', choices: ['free', 'nothing of', 'freedom', 'freely'], answer: 0, why: 'for free「無料で」（= for nothing / free of charge）。freely は「自由に」。' },
+      { sentence: 'The doctor said he needed an operation, so he went to the hospital at ___.', choices: ['once', 'first', 'last', 'times'], answer: 0, why: 'at once「すぐに」。at first は「最初は」、at last は「ついに」、at times は「ときどき」。' },
     ],
   },
   {
@@ -6883,9 +6883,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I would like to thank her in person.', ja: '彼女に直接お礼を言いたい。' },
     ],
     questions: [
-      { sentence: 'Please do not eat in ___ on the train.', choices: ['public', 'publicly', 'publish'], answer: 0, why: 'in public「人前で」。in のあとは名詞 public。' },
-      { sentence: 'You need to apply in ___ at the city office.', choices: ['person', 'personal', 'personally'], answer: 0, why: 'in person「本人がじかに」。in のあとは名詞 person。' },
-      { sentence: 'The house next to ours is for ___.', choices: ['sale', 'sell', 'sold'], answer: 0, why: 'for sale「売り物の」。for のあとは名詞 sale。' },
+      { sentence: 'Some people feel nervous when they have to speak ___ public.', choices: ['in', 'at', 'on', 'for'], answer: 0, why: 'in public「人前で」（⇔ in private）。' },
+      { sentence: 'I’ve talked to her on the phone many times, but I’ve never met her in ___.', choices: ['person', 'public', 'private', 'secret'], answer: 0, why: '「電話では話したが、じかには会ったことがない」なので in person「じかに・本人が」。' },
+      { sentence: 'The house on the corner has been ___ sale for months, but nobody has bought it.', choices: ['for', 'by', 'in', 'at'], answer: 0, why: 'for sale「売りに出されて」。' },
     ],
   },
   {
@@ -6900,9 +6900,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Keep this medicine out of reach of children.', ja: 'この薬は子どもの手の届かないところに置いてください。' },
     ],
     questions: [
-      { sentence: 'Sorry, this vending machine is out of ___.', choices: ['order', 'ordered', 'orderly'], answer: 0, why: 'out of order「故障して」。of のあとは名詞 order。' },
-      { sentence: 'I was out of ___ after running to the station.', choices: ['breath', 'breathe', 'breathed'], answer: 0, why: 'out of breath「息を切らして」。of のあとは名詞 breath（breathe は動詞）。' },
-      { sentence: 'Put the scissors out of ___ of small children.', choices: ['reach', 'reaching', 'reached'], answer: 0, why: 'out of reach of ～「～の手の届かないところに」。of のあとは名詞 reach。' },
+      { sentence: 'The elevator is out of ___, so we have to use the stairs.', choices: ['order', 'stock', 'date', 'breath'], answer: 0, why: '階段を使わなければならないので out of order「故障して」。' },
+      { sentence: 'After running all the way to the station, I was completely out of ___.', choices: ['breath', 'order', 'reach', 'shape of'], answer: 0, why: 'out of breath「息を切らして」。' },
+      { sentence: 'Keep sharp knives ___ of the reach of children.', choices: ['out', 'off', 'away', 'outside'], answer: 0, why: 'out of (the) reach of ～「～の手のとどかないところに」。' },
     ],
   },
   {
@@ -6917,9 +6917,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She can stay calm even under pressure.', ja: '彼女はプレッシャーの中でも落ち着いていられる。' },
     ],
     questions: [
-      { sentence: 'The new stadium is still under ___.', choices: ['construction', 'construct', 'constructive'], answer: 0, why: 'under construction「建設中で」。under のあとは名詞。' },
-      { sentence: 'The fire is now under ___.', choices: ['control', 'controlled', 'controlling'], answer: 0, why: 'under control「おさまって・制御されて」。under のあとは名詞 control。' },
-      { sentence: 'Good players can think clearly under ___.', choices: ['pressure', 'pressing', 'pressed'], answer: 0, why: 'under pressure「プレッシャーの中で」。under のあとは名詞 pressure。' },
+      { sentence: 'The new library is still under ___ and will open next year.', choices: ['construction', 'control', 'pressure', 'age'], answer: 0, why: '「来年開館する」ので under construction「建設中で」。' },
+      { sentence: 'After several hours, the firefighters finally brought the fire under ___.', choices: ['control', 'construction', 'pressure', 'repair'], answer: 0, why: 'bring ～ under control「～をおさえる・制御する」。' },
+      { sentence: 'Good players can make calm decisions even ___ pressure.', choices: ['under', 'in', 'on', 'with'], answer: 0, why: 'under pressure「プレッシャーの中で」。' },
     ],
   },
   {
@@ -6934,9 +6934,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Old maps are on display at the city museum.', ja: '市の博物館で古い地図が展示されている。' },
     ],
     questions: [
-      { sentence: 'The doctor is on ___ until eight.', choices: ['duty', 'duties', 'dutiful'], answer: 0, why: 'on duty「勤務中で」。duty は単数のまま。' },
-      { sentence: 'Her paintings are on ___ in the hall.', choices: ['display', 'displayed', 'displaying'], answer: 0, why: 'on display「展示中で」。on のあとは名詞 display。' },
-      { sentence: 'All the passengers are now on ___.', choices: ['board', 'boarded', 'boarding'], answer: 0, why: 'on board「（乗り物に）乗って」。on のあとは名詞 board。' },
+      { sentence: 'A security guard is ___ duty at the entrance 24 hours a day.', choices: ['on', 'in', 'at', 'under'], answer: 0, why: 'on duty「勤務中で」（⇔ off duty）。' },
+      { sentence: 'The museum’s oldest painting is now on ___ for the first time in fifty years.', choices: ['display', 'board', 'duty', 'air'], answer: 0, why: 'on display「展示されて」。on board は「乗って」、on duty は「勤務中で」。' },
+      { sentence: 'Once all the passengers were ___ board, the ship left the port.', choices: ['on', 'in', 'at', 'aboard'], answer: 0, why: 'on board「（船・飛行機などに）乗って」（= aboard。aboard board とは言わない）。' },
     ],
   },
   {
@@ -6951,9 +6951,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was at a loss for words when I heard the news.', ja: 'その知らせを聞いて、言葉が出なかった。' },
     ],
     questions: [
-      { sentence: 'It takes at ___ an hour to get to the airport.', choices: ['least', 'less', 'lesser'], answer: 0, why: 'at least「少なくとも」。' },
-      { sentence: 'I felt at ___ with my host family.', choices: ['ease', 'easy', 'easily'], answer: 0, why: 'at ease「くつろいで」。at のあとは名詞 ease。' },
-      { sentence: 'She was at a ___ for words.', choices: ['loss', 'lose', 'lost'], answer: 0, why: 'be at a loss for words「言葉が出ない」。a のあとは名詞 loss。' },
+      { sentence: 'You should sleep for at ___ seven hours a night.', choices: ['least', 'most', 'best', 'last'], answer: 0, why: '「少なくとも7時間」なので at least。at most は「多くても」で、健康のすすめとして意味が合わない。' },
+      { sentence: 'The teacher’s warm smile put the nervous students at ___.', choices: ['ease', 'rest', 'peace of', 'home of'], answer: 0, why: 'put ～ at ease「～をくつろがせる・安心させる」。at rest は「休んで・静止して」で、put ～ at rest とは言わない。' },
+      { sentence: 'When she was asked such a strange question, she was at a ___ for words.', choices: ['loss', 'lack', 'need', 'end'], answer: 0, why: 'be at a loss for words「言葉につまる」。at a loss「とほうにくれて」。' },
     ],
   },
   {
@@ -6968,9 +6968,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We learned the short poem by heart.', ja: '私たちはその短い詩を暗記した。' },
     ],
     questions: [
-      { sentence: 'The guide talked about the old castle in ___.', choices: ['detail', 'detailed', 'detailing'], answer: 0, why: 'in detail「くわしく」。in のあとは名詞 detail。' },
-      { sentence: 'Sorry, I can\'t talk now. I\'m in a ___.', choices: ['hurry', 'hurried', 'hurriedly'], answer: 0, why: 'be in a hurry「急いでいる」。a のあとは名詞 hurry。' },
-      { sentence: 'He knows all the song\'s words by ___.', choices: ['heart', 'hearty', 'heartily'], answer: 0, why: 'know ～ by heart「～を暗記している」。by のあとは名詞 heart。' },
+      { sentence: 'The report explains the causes of the accident ___ detail.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in detail「くわしく」。' },
+      { sentence: 'He left the house in such a ___ that he forgot his keys.', choices: ['hurry', 'detail', 'moment', 'way'], answer: 0, why: 'in a hurry「急いで」。such a hurry that ～「とても急いでいたので～」。' },
+      { sentence: 'The actor had to learn all his lines ___ heart before the first rehearsal.', choices: ['by', 'at', 'in', 'with'], answer: 0, why: 'learn ～ by heart「～を暗記する」。at heart は「根は」で意味がちがう。' },
     ],
   },
   {
