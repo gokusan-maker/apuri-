@@ -57,6 +57,7 @@ export const CHALLENGE_BY_SPECIES: Record<string, ChallengeKind> = {
   jellyfish: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   whale: { dir: 'listen', label: 'リスニング', icon: '🎧' },
   hummingbird: { dir: 'en-ja', label: '英→日', icon: '🐦' },
+  ostrich: { dir: 'ja-en', label: '日→英', icon: '🏃' },
   octopus: { dir: 'ja-en', label: '和文英訳（単語）', icon: '✍' },
 }
 

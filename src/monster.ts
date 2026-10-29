@@ -341,6 +341,7 @@ export const SPECIES: Species[] = [
   { id: 'jellyfish', name: 'クラリン', egg: 'なみまのタマゴ', token: 'クラ', bigToken: 'クラリン', color: '#bae6fd', line: '#0369a1', rate: 0.02, desc: 'ふわふわただようクラゲ。波にゆられながら、のんびり英語のリズムを楽しむ。' },
   { id: 'whale', name: 'クジラン', egg: 'おおうなばらのタマゴ', token: 'クジ', bigToken: 'クジラン', color: '#60a5fa', line: '#1e3a8a', rate: 0.02, desc: '大きな海を旅するクジラ。遠くまでとどく歌声で、英語の歌もじょうずに歌う。' },
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
+  { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'octopus', name: 'タコリン', egg: 'うみのタマゴ', token: 'タコ', bigToken: 'タコリ', color: '#fda4af', line: '#be123c', rate: 0.02, desc: '8本の足でいろいろできるタコ。日本語を英語に言いかえるのがすばやい。' },
 ]
 

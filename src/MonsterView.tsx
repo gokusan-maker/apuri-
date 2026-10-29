@@ -403,6 +403,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="50" cy="63" rx="7" ry="3" fill="#1f2937" />
       </g>
     )
+  if (species === 'ostrich')
+    return (
+      <g>
+        {/* 平たい黄色のくちばし */}
+        <ellipse cx="50" cy="69" rx="10" ry="4.5" fill="#fbbf24" stroke="#92400e" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'hummingbird')
     return (
       <g>
