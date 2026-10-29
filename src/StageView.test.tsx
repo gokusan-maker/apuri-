@@ -1470,5 +1470,5 @@ it('闘技場：階が下がったときは、階の数字が少しだけ下に�
 
 it('ボス城の階：答えたあとの「次へ」ボタンは、ふわっと出てくる（CSS）', async () => {
   const { readFileSync } = await import('node:fs')
-  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.next-unit-btn \{ animation: next-btn-in/)
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.next-unit-btn, \.arena \.next-unit-btn \{ animation: next-btn-in/) // 闘技場も同じ
 })

@@ -4449,6 +4449,6 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 @media (prefers-reduced-motion: reduce) { p.gacha-dup { animation: none; } }
 
 /* ボス城の階：答えたあと、「次へ」ボタンがふわっと出てくる（少しおくれて、正解の色を見てから） */
-.bfloor .next-unit-btn { animation: next-btn-in 0.4s ease-out 0.15s backwards; }
+.bfloor .next-unit-btn, .arena .next-unit-btn { animation: next-btn-in 0.4s ease-out 0.15s backwards; }
 @keyframes next-btn-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .bfloor .next-unit-btn { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .bfloor .next-unit-btn, .arena .next-unit-btn { animation: none; } }
