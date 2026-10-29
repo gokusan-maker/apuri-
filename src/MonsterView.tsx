@@ -425,6 +425,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <ellipse cx="60" cy="50" rx="6" ry="5" fill="none" stroke="#3f2a14" strokeWidth="3" />
       </g>
     )
+  if (species === 'redpanda')
+    return (
+      <g>
+        {/* 目の下の白いもよう */}
+        <path d="M33 56 Q38 64 44 58" fill="none" stroke="#fff7ed" strokeWidth="3" strokeLinecap="round" />
+        <path d="M67 56 Q62 64 56 58" fill="none" stroke="#fff7ed" strokeWidth="3" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
