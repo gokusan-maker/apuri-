@@ -3517,9 +3517,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My father was busy cooking dinner when I came home.', ja: '私が帰ったとき、父は夕食を作るのにいそがしかった。' },
     ],
     questions: [
-      { sentence: 'I had trouble ___ my homework.', choices: ['finishing', 'to finish', 'finish'], answer: 0, why: 'have trouble ～ing「～するのに苦労する」。' },
-      { sentence: 'Mom is busy ___ the house.', choices: ['cleaning', 'to clean', 'clean'], answer: 0, why: 'be busy ～ing「～するのにいそがしい」。' },
-      { sentence: 'He had difficulty ___ asleep last night.', choices: ['falling', 'to fall', 'fell'], answer: 0, why: 'have difficulty ～ing「～するのに苦労する」。' },
+      { sentence: 'I had trouble ___ my homework.', choices: ['finishing', 'to finish', 'finish', 'finished'], answer: 0, why: 'have trouble ～ing「～するのに苦労する」。' },
+      { sentence: 'Mom is busy ___ the house.', choices: ['cleaning', 'to clean', 'clean', 'cleaned'], answer: 0, why: 'be busy ～ing「～するのにいそがしい」。' },
+      { sentence: 'He had difficulty ___ asleep last night.', choices: ['falling', 'to fall', 'fell', 'to falling'], answer: 0, why: 'have difficulty ～ing「～するのに苦労する」。' },
     ],
   },
   {
@@ -3534,9 +3534,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Some people object to building a new road here.', ja: 'ここに新しい道路を作ることに反対する人もいる。' },
     ],
     questions: [
-      { sentence: 'When it comes to ___ English, Ken is very good.', choices: ['speaking', 'speak', 'spoke'], answer: 0, why: 'when it comes to の to は前置詞なので ～ing。' },
-      { sentence: 'In addition ___ studying, he works part-time.', choices: ['to', 'for', 'of'], answer: 0, why: 'in addition to ～「～に加えて」。' },
-      { sentence: 'My parents object to my ___ out late.', choices: ['staying', 'stay', 'stayed'], answer: 0, why: 'object to のあとは名詞か ～ing。my は動名詞の意味上の主語。' },
+      { sentence: 'When it comes to ___ English, Ken is very good.', choices: ['speaking', 'speak', 'spoke', 'speaks'], answer: 0, why: 'when it comes to の to は前置詞なので ～ing。' },
+      { sentence: 'In addition ___ studying, he works part-time.', choices: ['to', 'for', 'of', 'with'], answer: 0, why: 'in addition to ～「～に加えて」。' },
+      { sentence: 'My parents object to my ___ out late.', choices: ['staying', 'stay', 'stayed', 'stays'], answer: 0, why: 'object to のあとは名詞か ～ing。my は動名詞の意味上の主語。' },
     ],
   },
   {
@@ -8804,9 +8804,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'For me, math is the least difficult subject.', ja: '私にとって、数学はいちばん難しくない教科だ。' },
     ],
     questions: [
-      { sentence: 'This movie is ___ exciting than the first one.', choices: ['less', 'little', 'fewer'], answer: 0, why: '形容詞の前で「…ほど～でない」は less ～ than。' },
-      { sentence: 'Of the three bags, this one is the ___ expensive.', choices: ['least', 'less', 'little'], answer: 0, why: '3つの中で「いちばん～でない」は the least。' },
-      { sentence: 'I have ___ free time than last year.', choices: ['less', 'fewer', 'few'], answer: 0, why: 'time は数えられない名詞なので less。fewer は数えられる名詞に使う。' },
+      { sentence: 'This movie is ___ exciting than the first one.', choices: ['less', 'little', 'fewer', 'lesser'], answer: 0, why: '形容詞の前で「…ほど～でない」は less ～ than。' },
+      { sentence: 'Of the three bags, this one is the ___ expensive.', choices: ['least', 'less', 'little', 'fewest'], answer: 0, why: '3つの中で「いちばん～でない」は the least。' },
+      { sentence: 'I have ___ free time than last year.', choices: ['less', 'fewer', 'few', 'littler'], answer: 0, why: 'time は数えられない名詞なので less。fewer は数えられる名詞に使う。' },
     ],
   },
   {
@@ -8906,9 +8906,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A man robbed her of her bag on the street.', ja: '男が通りで彼女からかばんをうばった。' },
     ],
     questions: [
-      { sentence: 'This photo reminds me ___ our trip to Okinawa.', choices: ['of', 'to', 'for'], answer: 0, why: 'remind A of B「A に B を思い出させる」。' },
-      { sentence: 'Please inform us ___ any changes to the plan.', choices: ['of', 'to', 'for'], answer: 0, why: 'inform A of B「A に B を知らせる」。' },
-      { sentence: 'Someone ___ my bike from the station.', choices: ['stole', 'robbed', 'reminded'], answer: 0, why: '物（my bike）が目的語で from 人・場所 が続くので steal（過去形 stole）。rob は人が目的語。' },
+      { sentence: 'This photo reminds me ___ our trip to Okinawa.', choices: ['of', 'to', 'for', 'at'], answer: 0, why: 'remind A of B「A に B を思い出させる」。' },
+      { sentence: 'Please inform us ___ any changes to the plan.', choices: ['of', 'to', 'for', 'at'], answer: 0, why: 'inform A of B「A に B を知らせる」。' },
+      { sentence: 'Someone ___ my bike from the station.', choices: ['stole', 'robbed', 'reminded', 'informed'], answer: 0, why: '物（my bike）が目的語で from 人・場所 が続くので steal（過去形 stole）。rob は人が目的語。' },
     ],
   },
   {
@@ -8957,9 +8957,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Success depends not so much on talent as on effort.', ja: '成功は才能というよりむしろ努力しだいだ。' },
     ],
     questions: [
-      { sentence: 'She is not so much a singer ___ an actor.', choices: ['as', 'than', 'but'], answer: 0, why: 'not so much A as B「A というよりむしろ B」。' },
-      { sentence: 'I want to walk ___ than take the bus.', choices: ['rather', 'more', 'better'], answer: 0, why: 'B rather than A「A よりむしろ B」。' },
-      { sentence: 'The trip was not so much a vacation ___ a lesson.', choices: ['as', 'than', 'so'], answer: 0, why: 'not so much A as B の形。' },
+      { sentence: 'She is not so much a singer ___ an actor.', choices: ['as', 'than', 'but', 'so'], answer: 0, why: 'not so much A as B「A というよりむしろ B」。' },
+      { sentence: 'I want to walk ___ than take the bus.', choices: ['rather', 'more', 'better', 'much'], answer: 0, why: 'B rather than A「A よりむしろ B」。' },
+      { sentence: 'The trip was not so much a vacation ___ a lesson.', choices: ['as', 'than', 'so', 'but'], answer: 0, why: 'not so much A as B の形。' },
     ],
   },
   {
@@ -8991,9 +8991,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Even though she was tired, she finished her homework.', ja: '彼女はつかれていたのに、宿題を終わらせた。' },
     ],
     questions: [
-      { sentence: '___ it snows tonight, the trains will run on time.', choices: ['Even if', 'Even though', 'Because'], answer: 0, why: '今夜雪が降るかはまだわからない（仮定）ので Even if。' },
-      { sentence: '___ he was sick, he came to the meeting.', choices: ['Even though', 'Unless', 'So'], answer: 0, why: '病気だったのは事実なので「～なのに」の Even though。' },
-      { sentence: 'I will keep trying even ___ I fail many times.', choices: ['if', 'so', 'but'], answer: 0, why: '「たとえ何度失敗しても」なので even if。' },
+      { sentence: '___ it snows tonight, the trains will run on time.', choices: ['Even if', 'Even though', 'Because', 'Despite'], answer: 0, why: '今夜雪が降るかはまだわからない（仮定）ので Even if。' },
+      { sentence: '___ he was sick, he came to the meeting.', choices: ['Even though', 'Unless', 'So', 'Despite'], answer: 0, why: '病気だったのは事実なので「～なのに」の Even though。' },
+      { sentence: 'I will keep trying even ___ I fail many times.', choices: ['if', 'so', 'but', 'as'], answer: 0, why: '「たとえ何度失敗しても」なので even if。' },
     ],
   },
   {
@@ -9025,9 +9025,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The number of visitors is increasing every year.', ja: '訪れる人の数は毎年ふえている。' },
     ],
     questions: [
-      { sentence: 'A number of people ___ waiting outside the shop.', choices: ['are', 'is', 'be'], answer: 0, why: 'a number of ～「たくさんの～」は複数あつかいなので are。' },
-      { sentence: 'The number of children in this town ___ getting smaller.', choices: ['is', 'are', 'be'], answer: 0, why: 'the number of ～「～の数」は数（number）が主語なので単数の is。' },
-      { sentence: '___ number of cars on this road is very large.', choices: ['The', 'A', 'Many'], answer: 0, why: '動詞が単数の is なので「～の数」の The number of。' },
+      { sentence: 'A number of people ___ waiting outside the shop.', choices: ['are', 'is', 'be', 'was'], answer: 0, why: 'a number of ～「たくさんの～」は複数あつかいなので are。' },
+      { sentence: 'The number of children in this town ___ getting smaller.', choices: ['is', 'are', 'be', 'were'], answer: 0, why: 'the number of ～「～の数」は数（number）が主語なので単数の is。' },
+      { sentence: '___ number of cars on this road is very large.', choices: ['The', 'A', 'Many', 'Much'], answer: 0, why: '動詞が単数の is なので「～の数」の The number of。' },
     ],
   },
   {
@@ -9110,9 +9110,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My grandfather would tell me stories before bed.', ja: '祖父は寝る前によくお話をしてくれたものだ。' },
     ],
     questions: [
-      { sentence: 'On summer evenings, we ___ often sit outside and watch the stars.', choices: ['would', 'will', 'are'], answer: 0, why: '過去によくした動作は would often ＋ 原形。' },
-      { sentence: 'My grandmother would ___ cookies for us every Sunday.', choices: ['bake', 'baked', 'baking'], answer: 0, why: 'would のあとは動詞の原形。' },
-      { sentence: 'There ___ to be a small bookstore on this corner.', choices: ['used', 'would', 'could'], answer: 0, why: '「（昔は）～があった」という状態は used to。would は状態には使わない。' },
+      { sentence: 'On summer evenings, we ___ often sit outside and watch the stars.', choices: ['would', 'will', 'are', 'were'], answer: 0, why: '過去によくした動作は would often ＋ 原形。' },
+      { sentence: 'My grandmother would ___ cookies for us every Sunday.', choices: ['bake', 'baked', 'baking', 'bakes'], answer: 0, why: 'would のあとは動詞の原形。' },
+      { sentence: 'There ___ to be a small bookstore on this corner.', choices: ['used', 'would', 'could', 'should'], answer: 0, why: '「（昔は）～があった」という状態は used to。would は状態には使わない。' },
     ],
   },
   {
@@ -9127,9 +9127,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Neither Ken nor Mika came to the meeting.', ja: 'ケンもミカも会議に来なかった。' },
     ],
     questions: [
-      { sentence: 'Our new teacher speaks ___ French nor German.', choices: ['neither', 'either', 'both'], answer: 0, why: 'nor と組むのは neither。neither A nor B「A も B も～ない」。' },
-      { sentence: 'The old man could neither read ___ write.', choices: ['nor', 'but', 'and'], answer: 0, why: 'neither A nor B の形。neither のあとは nor で受ける。' },
-      { sentence: 'Neither my uncle nor my cousin ___ coffee.', choices: ['drinks', 'drink', 'drinking'], answer: 0, why: '動詞は近いほうの my cousin（3人称単数）に合わせて drinks。' },
+      { sentence: 'Our new teacher speaks ___ French nor German.', choices: ['neither', 'either', 'both', 'nor'], answer: 0, why: 'nor と組むのは neither。neither A nor B「A も B も～ない」。' },
+      { sentence: 'The old man could neither read ___ write.', choices: ['nor', 'but', 'and', 'so'], answer: 0, why: 'neither A nor B の形。neither のあとは nor で受ける。' },
+      { sentence: 'Neither my uncle nor my cousin ___ coffee.', choices: ['drinks', 'drink', 'drinking', 'are drinking'], answer: 0, why: '動詞は近いほうの my cousin（3人称単数）に合わせて drinks。' },
     ],
   },
   {
@@ -9144,9 +9144,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is the last place I expected to see you.', ja: 'ここできみに会うとはまったく思っていなかった。' },
     ],
     questions: [
-      { sentence: 'Ken is very honest. He is the ___ person to tell a lie.', choices: ['last', 'lastly', 'at last'], answer: 0, why: 'the last person to ～「最も～しそうにない人」。名詞 person の前なので形容詞の last。' },
-      { sentence: 'Yumi works so hard. She is the last person ___ give up halfway.', choices: ['to', 'for', 'of'], answer: 0, why: 'the last ＋ 名詞 ＋ to ＋ 原形。give の前は to。' },
-      { sentence: 'He is the last man ___ I want to talk to now.', choices: ['that', 'what', 'whose'], answer: 0, why: 'the last man (that) I want to talk to「今いちばん話したくない人」。先行詞のある関係代名詞 that。' },
+      { sentence: 'Ken is very honest. He is the ___ person to tell a lie.', choices: ['last', 'lastly', 'at last', 'latest'], answer: 0, why: 'the last person to ～「最も～しそうにない人」。名詞 person の前なので形容詞の last。' },
+      { sentence: 'Yumi works so hard. She is the last person ___ give up halfway.', choices: ['to', 'for', 'of', 'by'], answer: 0, why: 'the last ＋ 名詞 ＋ to ＋ 原形。give の前は to。' },
+      { sentence: 'He is the last man ___ I want to talk to now.', choices: ['that', 'what', 'whose', 'which'], answer: 0, why: 'the last man (that) I want to talk to「今いちばん話したくない人」。先行詞のある関係代名詞 that。' },
     ],
   },
   {
