@@ -69,10 +69,12 @@ it('ボスのヒント：○×・英問英答の9割以上に根拠の1文が出
   expect(withQuote / qs.length).toBeGreaterThan(0.9)
 })
 
-it('基本の単語帳（数・色など）のボスに高校入試の長文を出さない。高校基礎は中3〜高校入試', () => {
+it('基本の単語帳（数・色など）のボスに高校入試の長文を出さない。高校基礎は中3〜高校入試', async () => {
   for (const lv of ['数', '色・形', '曜日・月', '会話', 'テーマ別'] as const) expect(readingPoolFor(lv).every((p) => /^(中2|初級)/.test(p.level))).toBe(true)
   expect(readingPoolFor('中3').every((p) => /^中(3|2〜中3)/.test(p.level))).toBe(true)
-  expect(readingPoolFor('高校基礎').every((p) => p.level.includes('高校入試') || p.level.startsWith('中3'))).toBe(true)
+  const { tierOf } = await import('./examtier')
+  // 高校基礎は、中3〜高校入試と、共通テストの下限にとどかない「高校基礎」レベルの長文
+  expect(readingPoolFor('高校基礎').every((p) => p.level.includes('高校入試') || p.level.startsWith('中3') || tierOf(p) === 'kiso')).toBe(true)
 })
 
 it('英検2級より上のボスは、入試・留学レベルの長文と入試の文法', async () => {

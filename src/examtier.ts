@@ -2,9 +2,10 @@
 import { ADV_PASSAGES } from './advreading'
 import type { LongPassage } from './longreading'
 
-export type ExamTier = 'all' | 'kyotsu' | 'shiritsu' | 'shiritsu-med' | 'kokkoritsu' | 'kyutei' | 'kokuritsu-med'
+export type ExamTier = 'all' | 'kiso' | 'kyotsu' | 'shiritsu' | 'shiritsu-med' | 'kokkoritsu' | 'kyutei' | 'kokuritsu-med'
 export const EXAM_TIERS: { id: ExamTier; label: string }[] = [
   { id: 'all', label: 'すべて' },
+  { id: 'kiso', label: '高校基礎' },
   { id: 'kyotsu', label: '共通テスト' },
   { id: 'shiritsu', label: '私立難関大' },
   { id: 'shiritsu-med', label: '私立医学部' },
@@ -30,7 +31,43 @@ const TIER_OF: Record<string, Exclude<ExamTier, 'all'>> = {
   'adv-forgetting': 'kokuritsu-med', 'adv-brain-cleaning': 'kokuritsu-med', 'adv-microbiome': 'kokuritsu-med', 'adv-transplant': 'kokuritsu-med', 'adv-handwashing': 'kokuritsu-med', 'adv-attention': 'kokuritsu-med', 'adv-hedonic-adaptation': 'kokuritsu-med', 'adv-curiosity': 'kokuritsu-med', 'adv-learning-styles': 'kokuritsu-med', 'adv-zeigarnik': 'kokuritsu-med', 'adv-peak-end': 'kokuritsu-med', 'adv-boomerang': 'kyotsu', 'adv-stale-bread': 'kyotsu', 'adv-morning-people': 'kyotsu', 'adv-dizzy': 'kyotsu', 'adv-cricket-thermometer': 'kyotsu', 'adv-jellyfish': 'kyotsu', 'adv-paper-cut': 'kyotsu', 'adv-seahorse': 'kyotsu', 'adv-pufferfish': 'kyotsu', 'adv-maple-syrup': 'kyotsu', 'adv-peacock': 'kyotsu', 'adv-tortoise': 'kyotsu', 'adv-eggshell': 'kyotsu', 'adv-hail': 'kyotsu', 'adv-puddles': 'kyotsu', 'adv-parrots': 'kyotsu', 'adv-ostrich': 'kyotsu', 'adv-polar-bear': 'kyotsu', 'adv-giant-panda': 'kyotsu', 'adv-elephant-trunk': 'kyotsu', 'adv-hedgehog': 'kyotsu', 'adv-swans': 'kyotsu', 'adv-frogs-life': 'kyotsu', 'adv-squirrels': 'kyotsu', 'adv-cats-boxes': 'kyotsu', 'adv-lion-pride': 'kyotsu', 'adv-koalas': 'kyotsu', 'adv-pelicans': 'kyotsu', 'adv-honeyguide': 'kyotsu', 'adv-tinyhouse': 'kyotsu', 'adv-seedvault': 'kyotsu', 'adv-crosswalk': 'kyotsu', 'adv-eraser': 'kyotsu', 'adv-paperclip': 'kyotsu', 'adv-kaitenzushi': 'kyotsu', 'adv-sakurafront': 'kyotsu', 'adv-compost': 'kyotsu', 'adv-firstlunch': 'kyotsu', 'adv-instantramen': 'kyotsu', 'adv-windturbine': 'kyotsu', 'adv-spiderweb': 'kyotsu', 'adv-monalisa': 'kyotsu', 'adv-homingpigeon': 'kyotsu', 'adv-hotairballoon': 'kyotsu', 'adv-yoyo': 'kyotsu', 'adv-mushroom': 'kyotsu', 'adv-scarecrow': 'kyotsu', 'adv-toothbrush': 'kyotsu', 'adv-planetarium': 'kyotsu', 'adv-eyeglasses': 'kyotsu', 'adv-bubblewrap': 'kyotsu', 'adv-stickynote': 'kyotsu', 'adv-safetypin': 'kyotsu', 'adv-dodo': 'kyotsu', 'adv-trafficlight': 'kyotsu', 'adv-skyscraper': 'kyotsu', 'adv-ferriswheel': 'kyotsu', 'adv-crossword': 'kyotsu', 'adv-sudoku': 'kyotsu', 'adv-blackboard': 'kyotsu', 'adv-thermometer': 'kyotsu', 'adv-wasabi': 'kyotsu', 'adv-guidedog': 'kyotsu', 'adv-liberty': 'kyotsu', 'adv-ricecooker': 'kyotsu', 'adv-kotatsu': 'kyotsu', 'adv-postoffice': 'kyotsu', 'adv-seatbelt': 'kyotsu', 'adv-airbag': 'kyotsu', 'adv-climbfuji': 'kyotsu', 'adv-seikan': 'kyotsu', 'adv-chochin': 'kyotsu', 'adv-daruma': 'kyotsu', 'adv-ikebana': 'kyotsu', 'adv-spinningtop': 'kyotsu', 'adv-icecreamcone': 'kyotsu', 'adv-crayon': 'kyotsu',
 }
 
-export const tierOf = (p: LongPassage): Exclude<ExamTier, 'all'> => TIER_OF[p.id] ?? (p.level.startsWith('難関大（評論）') ? 'kokkoritsu' : 'kyotsu')
+// 本文のむずかしさを数で見る：語数と、1文あたりの平均語数（入試の長文ほど1文が長く、構文が複雑になる）
+export function passageStats(p: LongPassage): { words: number; wps: number } {
+  const text = p.paragraphs.join(' ')
+  const words = (text.match(/[A-Za-z][A-Za-z'’-]*/g) ?? []).length
+  const sentences = text.split(/[.!?]+["”)]?\s/).filter((s) => s.trim().length > 0).length
+  return { words, wps: words / Math.max(1, sentences) }
+}
+
+// レベルの下限（実際の入試を目安にした最低ライン）。下限に届かない長文は、届くレベルまで下げて出す
+// （ねらい：共通テストの評論は1文15語以上・200語以上、私大・国公立は1文16.5〜17語以上、旧帝大・国立医は1文17.5語以上）
+const TIER_ORDER: Exclude<ExamTier, 'all'>[] = ['kiso', 'kyotsu', 'shiritsu', 'shiritsu-med', 'kokkoritsu', 'kyutei', 'kokuritsu-med']
+export const TIER_FLOOR: Record<Exclude<ExamTier, 'all' | 'kiso'>, { wps: number; words: number }> = {
+  kyotsu: { wps: 15, words: 200 },
+  shiritsu: { wps: 16.5, words: 190 },
+  'shiritsu-med': { wps: 16.5, words: 190 },
+  kokkoritsu: { wps: 17, words: 190 },
+  kyutei: { wps: 17.5, words: 190 },
+  'kokuritsu-med': { wps: 17.5, words: 190 },
+}
+// 共通テストのお知らせ・メールなどの実用文は、本番でも短め（1文も短い）なので語数だけを見る
+const practical = (p: LongPassage) => /メール|お知らせ/.test(p.level)
+export function meetsTier(p: LongPassage, t: Exclude<ExamTier, 'all'>): boolean {
+  if (t === 'kiso') return true
+  const s = passageStats(p)
+  if (t === 'kyotsu' && practical(p)) return s.words >= 140
+  return s.wps >= TIER_FLOOR[t].wps && s.words >= TIER_FLOOR[t].words
+}
+const tierCache = new Map<string, Exclude<ExamTier, 'all'>>()
+export function tierOf(p: LongPassage): Exclude<ExamTier, 'all'> {
+  const hit = tierCache.get(p.id)
+  if (hit) return hit
+  const declared = TIER_OF[p.id] ?? (p.level.startsWith('難関大（評論）') ? 'kokkoritsu' : 'kyotsu')
+  let i = TIER_ORDER.indexOf(declared)
+  while (i > 0 && !meetsTier(p, TIER_ORDER[i])) i--
+  tierCache.set(p.id, TIER_ORDER[i])
+  return TIER_ORDER[i]
+}
 
 export function passagesForTier(tier: ExamTier, list: LongPassage[] = ADV_PASSAGES.filter((p) => p.level.startsWith('難関大'))): LongPassage[] {
   return (tier === 'all' ? list : list.filter((p) => tierOf(p) === tier)).map((p) => withTranslation(p, list))

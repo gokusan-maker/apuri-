@@ -38,7 +38,7 @@ export function readingPoolFor(level: Level, list: LongPassage[] = [...LONG_PASS
     if (level === '英検2級') return tierIn(p, ['kyotsu', 'shiritsu'])
     if (level === '英検準1級') return tierIn(p, ['kokkoritsu', 'kyutei', 'shiritsu'])
     if (level === '英検1級' || level === 'ネイティブ') return tierIn(p, ['kyutei', 'kokuritsu-med', 'shiritsu-med']) || head(p) === 'TOEFL・IELTS'
-    if (level === '高校基礎' || level === '熟語' || level === 'ビジネス') return ['高校入試', '中3〜高校入試'].includes(head(p))
+    if (level === '高校基礎' || level === '熟語' || level === 'ビジネス') return ['高校入試', '中3〜高校入試'].includes(head(p)) || tierIn(p, ['kiso'])
     if (level === '中3') return ['中3', '中2〜中3', '中3〜高校入試'].includes(head(p))
     if (level === '中2') return ['中2', '中2〜中3'].includes(head(p))
     return ['初級', '中2'].includes(head(p)) // 中1と、曜日・数・色などの基本の単語帳

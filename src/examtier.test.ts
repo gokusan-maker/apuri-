@@ -3,7 +3,7 @@ import { ADV_PASSAGES } from './advreading'
 import { EXAM_TIERS, passagesForTier } from './examtier'
 
 it('大学入試のレベル：共通テスト・私立難関大・私立医学部・国公立大・旧帝大・国立医学部', () => {
-  expect(EXAM_TIERS.map((t) => t.label)).toEqual(['すべて', '共通テスト', '私立難関大', '私立医学部', '国公立大', '旧帝大', '国立医学部'])
+  expect(EXAM_TIERS.map((t) => t.label)).toEqual(['すべて', '高校基礎', '共通テスト', '私立難関大', '私立医学部', '国公立大', '旧帝大', '国立医学部'])
 })
 
 it('難関大の長文はどれか1つのレベルに入り、どのレベルにも長文が2本以上ある', () => {
@@ -12,7 +12,6 @@ it('難関大の長文はどれか1つのレベルに入り、どのレベルに
   const sum = EXAM_TIERS.filter((t) => t.id !== 'all').reduce((n, t) => n + passagesForTier(t.id).length, 0)
   expect(sum).toBe(univ.length)
   for (const t of EXAM_TIERS) expect(passagesForTier(t.id).length, t.label).toBeGreaterThanOrEqual(2)
-  expect(passagesForTier('kyotsu').every((p) => p.paragraphs.join(' ').split(/\s+/).length < 220)).toBe(true) // 共通テストは長すぎない
 })
 
 it('国公立大より上のレベルは「段落の和訳をえらぶ」難しい問題がつく（正解は本文の和訳、選択肢は4つでかぶらない）', async () => {
@@ -28,4 +27,18 @@ it('国公立大より上のレベルは「段落の和訳をえらぶ」難し�
   }
   expect(passagesForTier('kyotsu').every((p) => p.gistKind === undefined)).toBe(true)
   expect(tierOf(passagesForTier('kyutei')[0])).toBe('kyutei')
+})
+
+it('レベルの下限：本文が下限にとどかない長文は、とどくレベルまで下がる（実際の入試の語数・1文の長さが目安）', async () => {
+  const { tierOf, meetsTier, passageStats, TIER_FLOOR } = await import('./examtier')
+  const univ = ADV_PASSAGES.filter((p) => p.level.startsWith('難関大'))
+  for (const p of univ) expect(meetsTier(p, tierOf(p)), p.id).toBe(true)
+  // 共通テストの評論は1文15語以上・200語以上、旧帝大は1文17.5語以上
+  for (const p of passagesForTier('kyotsu').filter((x) => !/メール|お知らせ/.test(x.level))) {
+    expect(passageStats(p).wps, p.id).toBeGreaterThanOrEqual(TIER_FLOOR.kyotsu.wps)
+    expect(passageStats(p).words, p.id).toBeGreaterThanOrEqual(TIER_FLOOR.kyotsu.words)
+  }
+  for (const p of passagesForTier('kyutei')) expect(passageStats(p).wps, p.id).toBeGreaterThanOrEqual(TIER_FLOOR.kyutei.wps)
+  // 1文が短くやさしい長文（例：ミツオシエ）は共通テストではなく高校基礎に入る
+  expect(tierOf(univ.find((p) => p.id === 'adv-honeyguide')!)).toBe('kiso')
 })

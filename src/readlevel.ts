@@ -41,7 +41,8 @@ export function passagesFor(level: ReadLevel): LongPassage[] {
     case '高1':
       return [...LONG_PASSAGES.filter((p) => ['中3〜高校入試', '高校入試'].includes(head(p))), ...hsAdv.slice(0, Math.ceil(hsAdv.length / 2))]
     case '高2':
-      return hsAdv.slice(Math.ceil(hsAdv.length / 2))
+      // 高校入試の後半と、共通テストの下限にとどかない「高校基礎」の長文
+      return [...hsAdv.slice(Math.ceil(hsAdv.length / 2)), ...tier('kiso')]
     case '高3':
       return tier('kyotsu')
     case '私学':
