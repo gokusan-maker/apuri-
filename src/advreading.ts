@@ -14703,6 +14703,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Does the Language We Speak Shape the Way We Think?', 'How to Learn Russian Quickly', 'The Life of Benjamin Lee Whorf', 'Why All Languages Are the Same'], answer: 0, why: '全体として、言語が考えに影響するかという問いを、強い説から慎重な研究まで検討している。' },
   },
   {
+    id: 'kyotsu-sand-shortage',
+    title: 'Can the World Run Out of Sand?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think about natural resources that might run short, they usually imagine oil, metals, or fresh water. Few would list sand. After all, there seem to be endless beaches and deserts covered with it. Yet experts have begun to warn that the world is using sand faster than nature can replace it, and that this ordinary material deserves far more attention than it receives.",
+      "Sand is one of the most widely used materials on Earth. It is a key ingredient in concrete, which forms the buildings, roads, and bridges of modern cities, and it is also used to make glass and the tiny chips inside electronic devices. As cities grow rapidly, especially in Asia and Africa, the demand for concrete has risen enormously. Some estimates suggest that tens of billions of tons of sand and gravel are taken from the ground, rivers, and sea every year.",
+      "It may seem strange that this demand cannot simply be met by the world’s deserts. The problem is that desert sand is usually not suitable for building. Grains that have been blown by the wind for a long time become smooth and round, so they do not lock together well in concrete. Builders therefore prefer the rougher sand found in rivers, lakes, and along coasts, ( A ) these are exactly the places where removing it can cause the most damage.",
+      "When large amounts of sand are dug out of rivers, the riverbed can become deeper, which may cause riverbanks to collapse and lower the water level in nearby wells. Taking sand from beaches and the seabed can destroy the homes of fish and other animals and leave coastal areas more exposed to storms. In some countries, the trade has also become linked to illegal activity, ( B ) the profits are high and rules are difficult to enforce.",
+      "Researchers are looking for ways to reduce the pressure on natural sand. Concrete from demolished buildings can be crushed and reused, and some companies are experimenting with materials made from crushed rock or recycled glass. Designing buildings that last longer and use less concrete would also help. None of these solutions is perfect, but together they suggest that we should begin to think of sand ( C ) a valuable resource rather than as something we can take for granted.",
+    ],
+    ja: [
+      '足りなくなるかもしれない天然資源について考えるとき、人はふつう石油や金属や真水を思いうかべる。砂をあげる人はほとんどいないだろう。なにしろ、砂におおわれた浜辺や砂漠はどこまでも続いているように見えるからだ。しかし専門家たちは、世界は自然が補うよりも速く砂を使っており、このありふれた材料は今受けているよりもずっと多くの注目に値すると警告しはじめている。',
+      '砂は地球でもっとも広く使われている材料のひとつである。現代の都市の建物や道路や橋を形づくるコンクリートの主要な材料であり、ガラスや電子機器の中の小さなチップを作るのにも使われる。とくにアジアやアフリカで都市が急速に成長するにつれ、コンクリートの需要はばく大にふえた。毎年、何百億トンもの砂や砂利が、地面や川や海から取り出されているという推定もある。',
+      'この需要を世界の砂漠だけでまかなえないのは、ふしぎに思えるかもしれない。問題は、砂漠の砂はたいてい建築に向いていないことだ。長いあいだ風にふかれてきた粒はなめらかで丸くなるので、コンクリートの中でうまくかみ合わない。そのため建築業者は川や湖や海岸で見つかる角ばった砂を好むが、そうした場所こそ、砂を取りのぞくともっとも大きな害が生じうる場所なのである。',
+      '川から大量の砂がほり出されると、川底が深くなり、川岸がくずれたり、近くの井戸の水位が下がったりすることがある。浜辺や海底から砂をとると、魚などの動物のすみかがこわされ、沿岸の地域が嵐にさらされやすくなることがある。また、利益が大きく規則を守らせるのが難しいため、砂の取引が違法な活動と結びついてしまった国もある。',
+      '研究者たちは、天然の砂への負担をへらす方法をさがしている。取りこわした建物のコンクリートはくだいて再利用でき、くだいた岩や再生ガラスから作った材料を試している会社もある。より長もちし、コンクリートを少なくしか使わない建物を設計することも役に立つだろう。どの解決策も完ぺきではないが、全体として見ると、わたしたちは砂を、あたりまえにあるものとしてではなく、価値ある資源として考えはじめるべきだということを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'so', 'or', 'for'], answer: 0, why: '「建築業者は川や海岸の砂を好むが、そこは取るともっとも害が大きい場所だ」と逆接なので but。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '違法な活動と結びついた理由「利益が大きく、規則を守らせるのが難しいから」なので because。' },
+      { id: 'C', choices: ['as', 'for', 'like', 'to'], answer: 0, why: 'think of A as B「A を B と考える」。rather than as … とも対応している。' },
+    ],
+    tf: [
+      { statement: '砂漠の砂は粒が角ばっているので、コンクリートに向いている。', answer: false, why: '第3段落 Grains that have been blown by the wind … become smooth and round, so they do not lock together well in concrete。' },
+      { statement: '川から砂を大量にとると、近くの井戸の水位が下がることがある。', answer: true, why: '第4段落 lower the water level in nearby wells。' },
+      { statement: '筆者は、砂の問題にはすでに完ぺきな解決策があると述べている。', answer: false, why: '第5段落 None of these solutions is perfect。' },
+      { statement: 'コンクリートの需要がふえた一因は、都市の急速な成長である。', answer: true, why: '第2段落 As cities grow rapidly … the demand for concrete has risen enormously。' },
+    ],
+    qa: [
+      { q: 'Why can’t desert sand simply solve the shortage?', choices: ['Its grains are too smooth and round to hold together well in concrete.', 'Deserts are too far from cities.', 'Desert sand contains too much salt.', 'It is illegal to take sand from deserts.'], answer: 0, why: '第3段落 Grains … become smooth and round, so they do not lock together well in concrete。' },
+      { q: 'Which of the following would the writer most likely support?', choices: ['Reusing crushed concrete from old buildings in new construction.', 'Taking more sand from beaches to protect rivers.', 'Building more short-lived buildings.', 'Stopping all construction in Asia and Africa.'], answer: 0, why: '第5段落 Concrete from demolished buildings can be crushed and reused。' },
+    ],
+    gist: [
+      { para: 2, choices: ['砂漠の砂が建築に向かない理由', '砂漠の観光の人気', '風の強さを測る方法', '湖の水がへる原因'], answer: 0, why: '第3段落は、風で丸くなった砂漠の砂はコンクリートでかみ合わないことを説明している。' },
+      { para: 3, choices: ['砂をとることによる環境への害', '海の魚の種類', '嵐の予報のしかた', '井戸のほり方'], answer: 0, why: '第4段落は、川岸がくずれる・すみかがこわされるなど、砂の採取による害をあげている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
