@@ -6509,9 +6509,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "My parents didn't approve of my plan at first.", ja: '両親は最初、私の計画に賛成しなかった。' },
     ],
     questions: [
-      { sentence: 'She dreams ___ becoming a pilot.', choices: ['of', 'to', 'than'], answer: 0, why: 'dream of ～ing「～することを夢見る」。' },
-      { sentence: "My father doesn't approve ___ my staying up late.", choices: ['of', 'to', 'than'], answer: 0, why: 'approve of ～「～に賛成する」。' },
-      { sentence: 'We are busy preparing ___ the school festival.', choices: ['for', 'to', 'than'], answer: 0, why: 'prepare for ～「～の準備をする」。' },
+      { sentence: 'As a child, she dreamed ___ becoming a pilot.', choices: ['of', 'to', 'for', 'with'], answer: 0, why: 'dream of ～ing「～することを夢見る」。' },
+      { sentence: 'My parents don’t approve ___ my staying up late.', choices: ['of', 'to', 'with', 'for'], answer: 0, why: 'approve of ～「～をよいと認める・賛成する」。' },
+      { sentence: 'The whole school is busy preparing ___ the festival.', choices: ['for', 'to', 'of', 'with'], answer: 0, why: 'prepare for ～「～の準備をする」。' },
     ],
   },
   {
@@ -6526,9 +6526,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'They turned the empty lot into a small park.', ja: '彼らは空き地を小さな公園に変えた。' },
     ],
     questions: [
-      { sentence: 'Divide the cake ___ eight pieces.', choices: ['into', 'of', 'than'], answer: 0, why: 'divide A into B「A を B に分ける」。' },
-      { sentence: 'Can you translate this sentence ___ Japanese?', choices: ['into', 'of', 'than'], answer: 0, why: 'translate A into B「A を B に訳す」。' },
-      { sentence: 'The old school was turned ___ a museum.', choices: ['into', 'of', 'than'], answer: 0, why: 'turn A into B の受け身 A is turned into B「A は B に変えられる」。' },
+      { sentence: 'The teacher divided the class ___ four groups.', choices: ['into', 'in', 'to', 'by'], answer: 0, why: 'divide A into B「A を B に分ける」。' },
+      { sentence: 'This novel has been translated ___ more than thirty languages.', choices: ['into', 'to', 'in', 'for'], answer: 0, why: 'translate A into B「A を B に翻訳する」。' },
+      { sentence: 'The old factory was turned ___ an art museum.', choices: ['into', 'to', 'for', 'over'], answer: 0, why: 'turn A into B の受け身「A は B に変えられる」。turn over は「ひっくり返す・ゆずる」。' },
     ],
   },
   {
@@ -6543,9 +6543,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The mountains were covered with snow.', ja: '山々は雪でおおわれていた。' },
     ],
     questions: [
-      { sentence: 'Fill the glass ___ water, please.', choices: ['with', 'of', 'than'], answer: 0, why: 'fill A with B「A を B で満たす」。' },
-      { sentence: 'The table was covered ___ a white cloth.', choices: ['with', 'of', 'than'], answer: 0, why: 'cover A with B の受け身 be covered with ～。' },
-      { sentence: 'The farm supplies the town ___ fresh milk.', choices: ['with', 'of', 'than'], answer: 0, why: 'supply A with B「A に B を供給する」。' },
+      { sentence: 'She filled the bottle ___ cold water before the hike.', choices: ['with', 'of', 'by', 'in'], answer: 0, why: 'fill A with B「A を B で満たす」（be full of ～と混同しない）。' },
+      { sentence: 'By morning, the whole town was covered ___ snow.', choices: ['with', 'of', 'from', 'at'], answer: 0, why: 'be covered with ～「～でおおわれている」（be covered in ～ も可）。' },
+      { sentence: 'The farm supplies the local school ___ fresh vegetables.', choices: ['with', 'for', 'to', 'of'], answer: 0, why: 'supply A with B「A に B を供給する」（= supply B to A）。この語順では with。' },
     ],
   },
   {
@@ -6560,9 +6560,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Let me introduce my cousin to you.', ja: 'あなたに私のいとこを紹介させてください。' },
     ],
     questions: [
-      { sentence: 'Can you explain this rule ___ me?', choices: ['to', 'of', 'than'], answer: 0, why: 'explain 物 to 人「人に物を説明する」。' },
-      { sentence: 'Let me introduce my friend ___ you.', choices: ['to', 'of', 'than'], answer: 0, why: 'introduce A to B「A を B に紹介する」。' },
-      { sentence: 'The guide explained the plan ___.', choices: ['to us', 'us', 'at us'], answer: 0, why: 'explain は「人」を直接目的語にできないので、to us とする。' },
+      { sentence: 'Could you explain this rule ___ me?', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'explain 物 to 人「人に物を説明する」。' },
+      { sentence: 'Let me introduce my friend ___ you.', choices: ['to', 'for', 'with', 'at'], answer: 0, why: 'introduce A to B「A を B に紹介する」。' },
+      { sentence: 'The guide explained ___ how to use the map.', choices: ['to us', 'us', 'at us', 'for us'], answer: 0, why: 'explain は「人」を直接目的語にとれないので explain to 人 ～。explain us は不可（入試頻出のまちがい）。' },
     ],
   },
   {
@@ -6577,9 +6577,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The guide warned us not to go near the edge.', ja: 'ガイドは私たちに、はしに近づかないよう警告した。' },
     ],
     questions: [
-      { sentence: 'Remind me ___ the windows before we leave.', choices: ['to close', 'closing', 'close'], answer: 0, why: 'remind 人 to ～「人に忘れずに～するよう言う」。' },
-      { sentence: 'The doctor advised him ___ more vegetables.', choices: ['to eat', 'eat', 'eating'], answer: 0, why: 'advise 人 to ～「人に～するよう助言する」。' },
-      { sentence: 'My mother warned me ___ late again.', choices: ['not to be', 'to not being', 'not be'], answer: 0, why: '「～しないように」は not to ～。' },
+      { sentence: 'Please remind me ___ the windows before we leave.', choices: ['to close', 'closing', 'close', 'of closing'], answer: 0, why: 'remind 人 to ～「人に忘れずに～するよう言う」。remind 人 of ～ は「人に～を思い出させる」で意味がちがう。' },
+      { sentence: 'The doctor advised him ___ more vegetables and less meat.', choices: ['to eat', 'eat', 'eating', 'that eat'], answer: 0, why: 'advise 人 to ～「人に～するよう助言する」。' },
+      { sentence: 'My mother warned me ___ late for school again.', choices: ['not to be', 'to not being', 'not be', 'don’t be'], answer: 0, why: '「～しないように」は not to ～（不定詞の否定は to の前に not）。' },
     ],
   },
   {
@@ -6594,9 +6594,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Visitors are required to show their tickets at the gate.', ja: '来場者は門でチケットを見せる必要がある。' },
     ],
     questions: [
-      { sentence: 'The rain forced us ___ the game.', choices: ['to stop', 'stopping', 'stop'], answer: 0, why: 'force 人 to ～「人に～させる（むりやり）」。' },
-      { sentence: 'All students are required ___ a uniform.', choices: ['to wear', 'wearing', 'wear'], answer: 0, why: 'require 人 to ～ の受け身 be required to ～。' },
-      { sentence: 'My parents forbid me ___ out after nine.', choices: ['to go', 'go', 'went'], answer: 0, why: 'forbid 人 to ～「人に～することを禁じる」。' },
+      { sentence: 'The heavy rain forced the referee ___ the game.', choices: ['to stop', 'stopping', 'stop', 'stopped'], answer: 0, why: 'force 人 to ～「人にむりやり～させる」。make 人 ～（原形）と混同しない。' },
+      { sentence: 'All visitors are required ___ an ID card at the entrance.', choices: ['to show', 'showing', 'show', 'shown'], answer: 0, why: 'require 人 to ～ の受け身 be required to ～「～することを求められる」。' },
+      { sentence: 'The rules forbid students ___ their phones during tests.', choices: ['to use', 'use', 'from use', 'used'], answer: 0, why: 'forbid 人 to ～「人に～することを禁じる」（forbid 人 from ～ing も可だが from use は不可）。' },
     ],
   },
   {

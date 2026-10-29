@@ -61,7 +61,8 @@
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）
   - [x] ③ 形容詞＋前置詞・against / throughout / unlike・above / below / beyond・through / toward / past・beside / besides・have fun ～ing の6単元を4択に（825→807）
-  - [ ] ④ つづきの6〜10単元を4択に
+  - [x] ④ force / require / forbid・remind / warn / advise・explain 物 to 人・fill A with B・divide A into B・dream of の6単元を4択に（807→789）
+  - [ ] ⑤ つづきの6〜10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
