@@ -410,3 +410,13 @@ it('デザイン66：キャラ図鑑で「まだ会っていない子だけ見�
   expect(screen.queryByRole('button', { name: new RegExp(`^${turtle.name}（`) })).not.toBeInTheDocument()
   expect(screen.getAllByRole('button', { name: 'まだ会っていないキャラクター' })).toHaveLength(SPECIES.length - 2)
 })
+
+it('デザイン67：キャラガチャのラインナップで、まだ会っていない子をタップすると生まれるタマゴのヒントが出る', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const lineup = screen.getByRole('list', { name: '出てくるキャラクター' })
+  fireEvent.click(within(lineup).getAllByRole('button', { name: 'まだ会っていないキャラクターのヒント' })[0])
+  const first = SPECIES.find((s) => s.id !== 'mochi')!
+  expect(screen.getByText(new RegExp(`${first.egg}から生まれるらしい`))).toBeInTheDocument()
+})

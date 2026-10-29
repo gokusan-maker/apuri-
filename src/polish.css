@@ -4566,3 +4566,5 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 @media (prefers-reduced-motion: reduce) { .book-near { animation: none; } }
 .book-near.book-done { background: linear-gradient(90deg, #facc15, #f59e0b); color: #422006; }
 .book-filter { display: block; margin: 6px auto; font-size: 0.8rem; }
+.lineup-pick { all: unset; cursor: pointer; display: block; border-radius: 8px; }
+.lineup-pick:focus-visible { outline: 2px solid var(--accent, #6366f1); }

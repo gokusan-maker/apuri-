@@ -94,6 +94,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
   const [tab, setTab] = useState<'egg' | 'chara'>('egg') // ガチャの種類
   const [charaGot, setCharaGot] = useState('') // キャラガチャで出た子の名前
   const [freshId, setFreshId] = useState('') // 図鑑にはじめてのったキャラ（光ってうまる）
+  const [lineupHint, setLineupHint] = useState('') // ラインナップでタップした子（ヒントを出す）
   const drawChara = () => {
     const k = onChara?.() ?? null
     if (!k) return
@@ -151,12 +152,22 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           <h3 className="shop-h">🐣 キャラガチャ（仲間 {members} / {PARTY_MAX}）</h3>
           <p className="chara-gacha-note">タマゴではなく、もう生まれた姿で出てくるよ。すぐにボス戦でいっしょに戦える！</p>
           <ul className="chara-gacha-lineup" aria-label="出てくるキャラクター">
-            {SPECIES.map((sp) => (
-              <li key={sp.id} title={`${sp.name}（${typeOf(sp.id).name}）`}>
-                <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!(ownedSpecies ?? []).includes(sp.id) && sp.id !== 'mochi'} />
-              </li>
-            ))}
+            {SPECIES.map((sp) => {
+              const met = (ownedSpecies ?? []).includes(sp.id) || sp.id === 'mochi'
+              return (
+                <li key={sp.id} title={met ? `${sp.name}（${typeOf(sp.id).name}）` : 'まだ会っていないキャラクター'}>
+                  <button className="lineup-pick" aria-label={met ? sp.name : 'まだ会っていないキャラクターのヒント'} onClick={() => setLineupHint(lineupHint === sp.id ? '' : sp.id)}>
+                    <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!met} />
+                  </button>
+                </li>
+              )
+            })}
           </ul>
+          {lineupHint && (
+            <p className="zukan-detail lineup-hint" role="status">
+              {(ownedSpecies ?? []).includes(lineupHint) || lineupHint === 'mochi' ? `${speciesOf(lineupHint).name}：${speciesOf(lineupHint).desc}` : `💡 ${speciesOf(lineupHint).egg}から生まれるらしい…（${typeOf(lineupHint).icon} ${typeOf(lineupHint).name}）`}
+            </p>
+          )}
           <button
             key={`chara-${shakeM === 1 ? shakeN : 0}`}
             className={`good gacha-btn chara-btn${!full && coins < charaPrice ? ' short' : ''}${!full && coins < charaPrice && shakeM === 1 ? ' gacha-shake' : ''}`}
