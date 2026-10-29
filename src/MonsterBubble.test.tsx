@@ -110,3 +110,11 @@ it('相棒：朝の時間だけ、窓から光がさしこむ', () => {
   render(<Monster monster={{ xp: 500 } as never} daypart="evening" />)
   expect(document.querySelector('.morning-rays')).toBeNull()
 })
+
+it('相棒：夕方の時間だけ、空がオレンジ色に変わっていく', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} daypart="evening" />)
+  expect(document.querySelector('.evening-glow')).not.toBeNull()
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} daypart="day" />)
+  expect(document.querySelector('.evening-glow')).toBeNull()
+})

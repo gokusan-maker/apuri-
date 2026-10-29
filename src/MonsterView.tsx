@@ -1388,6 +1388,8 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
       )}
       {/* 朝の時間は、窓からななめに光がさしこむ */}
       {daypart === 'morning' && <span className="morning-rays" aria-hidden="true" />}
+      {/* 夕方は、空がゆっくりオレンジ色に変わっていく */}
+      {daypart === 'evening' && <span className="evening-glow" aria-hidden="true" />}
       {/* 夜は相棒のまわりを、小さなほたるの光がふわふわとぶ */}
       {night && (
         <span className="fireflies" aria-hidden="true">
