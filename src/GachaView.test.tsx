@@ -399,3 +399,14 @@ it('デザイン64：キャラ図鑑をぜんぶうめると「👑 コンプリ
   expect(screen.getByText('👑 コンプリート！')).toBeInTheDocument()
   expect(screen.queryByText(/^あと\d+体！$/)).not.toBeInTheDocument()
 })
+
+it('デザイン66：キャラ図鑑で「まだ会っていない子だけ見る」にすると、会えた子がかくれる', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'turtle']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const turtle = SPECIES.find((s) => s.id === 'turtle')!
+  expect(screen.getByRole('button', { name: new RegExp(`^${turtle.name}（`) })).toBeInTheDocument()
+  fireEvent.click(screen.getByRole('button', { name: '❓ まだ会っていない子だけ見る' }))
+  expect(screen.queryByRole('button', { name: new RegExp(`^${turtle.name}（`) })).not.toBeInTheDocument()
+  expect(screen.getAllByRole('button', { name: 'まだ会っていないキャラクター' })).toHaveLength(SPECIES.length - 2)
+})

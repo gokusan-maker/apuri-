@@ -650,6 +650,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
 function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
   const got = new Set(['mochi', ...owned])
   const [pick, setPick] = useState<string | null>(null)
+  const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
   return (
     <details className="gacha-odds char-book chip-fold cf-1">
@@ -663,8 +664,13 @@ function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
         {SPECIES.length - n > 0 && SPECIES.length - n <= 5 && <span className="book-near">あと{SPECIES.length - n}体！</span>}
         {n === SPECIES.length && <span className="book-near book-done">👑 コンプリート！</span>}
       </summary>
+      {n < SPECIES.length && (
+        <button className="list-link pill-btn book-filter" aria-pressed={onlyNew} onClick={() => setOnlyNew(!onlyNew)}>
+          {onlyNew ? '📖 ぜんぶ見る' : '❓ まだ会っていない子だけ見る'}
+        </button>
+      )}
       <ul className="char-book-list">
-        {SPECIES.map((sp) => {
+        {SPECIES.filter((sp) => !onlyNew || !got.has(sp.id)).map((sp) => {
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (
