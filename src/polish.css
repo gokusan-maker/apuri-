@@ -4584,3 +4584,11 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .streak.week-gold { background: linear-gradient(90deg, #fde047, #f59e0b); color: #422006; border-radius: 999px; padding: 0 8px; box-shadow: 0 0 8px rgb(250 204 21 / 0.7); animation: week-gold-glow 1.8s ease-in-out infinite; }
 @keyframes week-gold-glow { 0%, 100% { box-shadow: 0 0 6px rgb(250 204 21 / 0.5); } 50% { box-shadow: 0 0 14px rgb(250 204 21 / 0.9); } }
 @media (prefers-reduced-motion: reduce) { .streak.week-gold { animation: none; } }
+
+/* デザイン74：ボスに勝ったら、いっしょに戦った相棒が小さくジャンプしてよろこぶ */
+.win-partner { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 4px 0 8px; }
+.win-partner-fig { width: 56px; display: block; animation: win-hop 0.6s ease-out 3; }
+.win-partner-fig svg { width: 100%; height: auto; display: block; }
+.win-partner-say { font-weight: 700; font-size: 0.9rem; }
+@keyframes win-hop { 0%, 100% { transform: translateY(0); } 40% { transform: translateY(-12px); } 60% { transform: translateY(-12px); } }
+@media (prefers-reduced-motion: reduce) { .win-partner-fig { animation: none; } }

@@ -641,3 +641,14 @@ it('まちがえるとボスのこうげきの演出（ツメあと・メッセ�
   expect(document.querySelector('.boss-atk-fx .slash')).not.toBeNull()
   expect(document.querySelector('.boss.hurt')).not.toBeNull()
 })
+
+it('デザイン74：ボスに勝つと、いっしょに戦った相棒が結果画面でジャンプしてよろこぶ', async () => {
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={1} traits={[]} partner={{ form: FORMS[1], name: 'モチ' }} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('モチも大よろこび！')).toBeInTheDocument()
+  expect(document.querySelector('.win-partner-fig svg')).not.toBeNull()
+})

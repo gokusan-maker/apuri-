@@ -21,6 +21,7 @@ import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
 import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, addSealTraits, traitAfterHit, bossTraits, type BossTrait, arenaSeasonOf } from './boss'
 import { quizXp, type Form, type Source } from './monster'
+import { MonsterFigure } from './MonsterView'
 import { easyIf } from './quiz'
 import { playBossSound, playComboCorrect, playCorrect, playWrong } from './sound'
 import { LEVELS, levelOf, WORDS, type Level, type Word } from './words'
@@ -830,6 +831,15 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
           )}
           {revenge && <p className="level-up boss-revenge">🔥 リベンジ成功！ 🪙{REVENGE_COINS}</p>}
           <p className="level-up boss-result">ボスをたおした！ 🎉</p>
+          {/* デザイン74：勝ったら、いっしょに戦った相棒が小さくジャンプしてよろこぶ */}
+          {partner && partner.form.stage > 0 && (
+            <div className="win-partner" aria-label={`${partner.name}も大よろこび！`}>
+              <span className="win-partner-fig" aria-hidden="true">
+                <MonsterFigure form={partner.form} kind={partner.kind} wear={partner.wear} mood="star" />
+              </span>
+              <span className="win-partner-say">{partner.name}も大よろこび！</span>
+            </div>
+          )}
           <p className="buddy-chips game-chips boss-records">
             {time && (
               <span className={time.best ? 'game-best' : undefined} aria-label={`タイム ${formatSec(time.sec)}${time.best ? ' 最短記録！' : ''}`}>
