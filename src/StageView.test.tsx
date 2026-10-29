@@ -962,7 +962,8 @@ it('闘技場の結果に、いちばん長い連続正解を出す', async () =
     fireEvent.click(screen.getByText(/^次へ/))
   }
   fireEvent.click(screen.getByText('🏁 終了'))
-  expect(screen.getByText('🔥 いちばん長い連続正解：2問（🆕 最高記録！）')).toBeInTheDocument()
+  expect(document.querySelector('.streak-flame')!.parentElement!.textContent).toBe('🔥 いちばん長い連続正解：2問（🆕 最高記録！）')
+  expect(document.querySelector('.streak-flame.big')).not.toBeNull() // 最高記録の更新で炎が大きくなる
   expect(screen.getByText('🚀 いちばん大きなジャンプ：一気に 2階')).toBeInTheDocument()
   const { loadArenaBestStreak } = await import('./arena')
   expect(loadArenaBestStreak()).toBe(2) // 連続正解の最高記録は保存される

@@ -201,7 +201,8 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         )}
         {maxStreak >= 2 && (
           <p className="arena-max-streak">
-            🔥 いちばん長い連続正解：{maxStreak}問{ended.newStreak ? '（🆕 最高記録！）' : `（最高 ${ended.streakBest}問）`}
+            {/* 最高記録を更新したときは、炎がぼっと大きくなる */}
+            <span className={`streak-flame${ended.newStreak ? ' big' : ''}`}>🔥</span> いちばん長い連続正解：{maxStreak}問{ended.newStreak ? '（🆕 最高記録！）' : `（最高 ${ended.streakBest}問）`}
           </p>
         )}
         {maxJump >= 2 && <p className="arena-max-streak">🚀 いちばん大きなジャンプ：一気に {maxJump}階</p>}

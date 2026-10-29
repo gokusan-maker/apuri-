@@ -4541,3 +4541,9 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .evening-glow { position: absolute; inset: 0; z-index: 0; pointer-events: none; border-radius: inherit; background: linear-gradient(180deg, rgb(251 146 60 / 0.35), rgb(244 114 182 / 0.12) 60%, transparent); animation: evening-glow 8s ease-in-out infinite alternate; }
 @keyframes evening-glow { from { opacity: 0.4; } to { opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .evening-glow { animation: none; } }
+
+/* 闘技場の結果：連続正解の最高記録を更新したら、炎がぼっと大きくなる */
+.streak-flame { display: inline-block; }
+.streak-flame.big { transform-origin: 50% 90%; animation: flame-burst 0.7s ease-out 0.5s backwards, flame-flicker 0.9s ease-in-out 1.2s infinite alternate; }
+@keyframes flame-burst { 0% { transform: scale(1); } 50% { transform: scale(1.9); filter: drop-shadow(0 0 8px rgb(251 146 60 / 0.9)); } 100% { transform: scale(1.2); } }
+@media (prefers-reduced-motion: reduce) { .streak-flame.big { animation: none; } }
