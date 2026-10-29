@@ -94,3 +94,11 @@ it('相棒の画面：なかまのアイコンは押すとぴょこっとはね�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.friend-mini:active svg \{ animation: friend-hop/)
 })
+
+it('相棒：夜の時間だけ、まわりをほたるの光がとぶ', () => {
+  const { unmount } = render(<Monster monster={{ xp: 500 } as never} night />)
+  expect(document.querySelectorAll('.fireflies i')).toHaveLength(4)
+  unmount()
+  render(<Monster monster={{ xp: 500 } as never} />)
+  expect(document.querySelector('.fireflies')).toBeNull()
+})

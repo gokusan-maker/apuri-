@@ -1379,6 +1379,15 @@ export function Monster({ monster, onRename, coins, onShop, room, title, cheer, 
           <i />
         </span>
       )}
+      {/* 夜は相棒のまわりを、小さなほたるの光がふわふわとぶ */}
+      {night && (
+        <span className="fireflies" aria-hidden="true">
+          <i />
+          <i />
+          <i />
+          <i />
+        </span>
+      )}
       {sleepy && (
         <span className="monster-zzz" aria-label="ねむそう">
           💤
