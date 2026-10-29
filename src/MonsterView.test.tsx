@@ -27,3 +27,14 @@ it('デザイン83：なかま一覧で「おきにいりだけ」にすると�
   const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
   expect(names.sort()).toEqual(['A', 'B'])
 })
+
+it('デザイン84：なかま一覧をタイプでしぼりこめる（相棒はいつも見える）', async () => {
+  const { typeOf } = await import('./chartype')
+  const { SPECIES } = await import('./monster')
+  const a = SPECIES.find((s) => s.id !== 'mochi' && typeOf(s.id).id !== typeOf('mochi').id)!
+  const party = { active: 0, members: [{ xp: 10, name: 'A', species: 'mochi' }, { xp: 20, name: 'B', species: a.id }, { xp: 30, name: 'C', species: 'mochi' }] }
+  render(<Party party={party as never} onSelect={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: `${typeOf(a.id).icon} ${typeOf(a.id).name}` }))
+  const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
+  expect(names.sort()).toEqual(['A', 'B'])
+})

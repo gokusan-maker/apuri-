@@ -2006,7 +2006,9 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
   const [byLv, setByLv] = useState(false) // デザイン82：なかまをレベルの高い順にならべる
   const [favOnly, setFavOnly] = useState(false) // デザイン83：おきにいり★の子だけ見る
   const sorted = byLv ? [...displayOrder(party)].sort((a, b) => party.members[b].xp - party.members[a].xp) : displayOrder(party)
-  const order = favOnly ? sorted.filter((i) => party.members[i].fav || i === party.active) : sorted
+  const [typeOnly, setTypeOnly] = useState('') // デザイン84：タイプでしぼりこむ
+  const types = [...new Set(party.members.map((m) => typeOf(m.species).id))]
+  const order = sorted.filter((i) => i === party.active || ((!favOnly || party.members[i].fav) && (!typeOnly || typeOf(party.members[i].species).id === typeOnly)))
   // 相棒は、はじめの24体に入っていなくても必ず見せる
   const shown = order.slice(0, limit).includes(party.active) ? order.slice(0, limit) : [party.active, ...order.slice(0, limit - 1)]
   return (
@@ -2047,6 +2049,18 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
               {favOnly ? '👀 みんな見る' : '★ おきにいりだけ'}
             </button>
           )}
+        </p>
+      )}
+      {party.members.length > 2 && types.length > 1 && (
+        <p className="party-sorts party-types" role="group" aria-label="タイプでしぼりこむ">
+          {types.map((t) => {
+            const ty = party.members.map((m) => typeOf(m.species)).find((x) => x.id === t)!
+            return (
+              <button key={t} className={`list-link pill-btn party-sort char-type t-${t}`} aria-pressed={typeOnly === t} onClick={() => setTypeOnly(typeOnly === t ? '' : t)}>
+                {ty.icon} {ty.name}
+              </button>
+            )
+          })}
         </p>
       )}
       <ul className="badge-grid">
