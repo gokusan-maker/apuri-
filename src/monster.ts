@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'kiwi', name: 'キウィン', egg: 'しだのもりのタマゴ', token: 'キウ', bigToken: 'キウィン', color: '#a16207', line: '#422006', rate: 0.02, desc: 'ニュージーランドの飛べない鳥キーウィ。長いくちばしの先の鼻で土の中をかぎ分けて、かくれた答えを見つけ出す。' },
   { id: 'puffin', name: 'パフィン', egg: 'がけのうえのタマゴ', token: 'パフ', bigToken: 'パフィン', color: '#f8fafc', line: '#111827', rate: 0.02, desc: 'カラフルなくちばしのツノメドリ。北の海のがけにすみ、くちばしにたくさんの魚ならぬ単語をくわえて帰ってくる。' },
   { id: 'firefly', name: 'ホタリン', egg: 'なつのよるのタマゴ', token: 'ホタ', bigToken: 'ホタリン', color: '#fef08a', line: '#3f6212', rate: 0.02, desc: 'おしりがぽわっと光るホタル。夏の夜の小川で、暗い中でも正しい答えを明るく照らしてくれる。' },
   { id: 'manatee', name: 'マナティン', egg: 'もばのタマゴ', token: 'マナ', bigToken: 'マナティン', color: '#b6c2cc', line: '#3f4a55', rate: 0.02, desc: 'あたたかい海でのんびり草を食べるマナティー。やさしい性格で、まちがえた問題もゆっくり一緒に見なおしてくれる。' },

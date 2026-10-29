@@ -548,6 +548,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M48 62 L48 70" stroke="#facc15" strokeWidth="2" />
       </g>
     )
+  if (species === 'kiwi')
+    return (
+      <g>
+        {/* 細長くて少し下を向いたくちばし */}
+        <path d="M48 62 Q62 70 74 84 L70 86 Q58 74 46 68 Z" fill="#e7cfa0" stroke="#713f12" strokeWidth="1.5" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
