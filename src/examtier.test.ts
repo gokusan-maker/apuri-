@@ -69,3 +69,10 @@ it('本番の長さの長文：共通テスト評論のデジタル地図は350�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：私大・国公立の「おとなの言語学習」は500語以上・1文17語以上で私大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'shiritsu-late-learners')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(500)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(17)
+  expect(tierOf(p)).toBe('shiritsu')
+})

@@ -14305,6 +14305,48 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'shiritsu-late-learners',
+    title: 'Is It Ever Too Late to Learn a Language?',
+    level: '難関大（評論）',
+    paragraphs: [
+      "It is widely believed that children learn foreign languages almost effortlessly, while adults struggle for years and never quite sound like native speakers. This belief is so common that many parents rush to enroll their young children in language classes, and many adults give up before they have even started, convinced that their brains are simply too old to acquire a new language. Like many popular beliefs, however, this one contains some truth but also a good deal of exaggeration.",
+      "The idea that there is a limited period in childhood during which language can be learned most easily is known as the critical period hypothesis. Its strongest evidence comes from pronunciation: people who begin learning a language after the early teenage years rarely lose their foreign accent completely, even after decades of living abroad. Studies of grammar have suggested a similar pattern, with learners who start very young tending, on average, to reach a level closer to that of native speakers ( A ) those who start as adults.",
+      "Yet these averages hide an important fact, which is that children and adults usually learn in very different conditions. A child who moves to a new country is surrounded by the language at school and at play for many hours each day, has few responsibilities, and is rarely embarrassed to make mistakes. An adult, by contrast, may attend a class for two or three hours a week after a tiring day at work, and may avoid speaking for fear of appearing foolish. When researchers compare children and adults who receive the same amount of instruction over the same short period, adults often learn faster, at least at first, because they can use their knowledge of grammar, their reading skills, and their experience of learning in general.",
+      "In other words, the advantage of starting young appears to lie less in the speed of learning than in the final level that can be reached after many years of immersion. For most adult learners, whose goal is to communicate effectively rather than to be mistaken for a native speaker, this distinction matters a great deal. A businessperson who negotiates successfully in a second language, or a traveler who can discuss politics with local people, has achieved something valuable, ( B ) a slight accent reveals that the language was learned later in life.",
+      "There are also reasons to believe that learning a language in adulthood brings benefits of its own. Some studies have suggested that people who regularly use two languages may become better at switching between tasks and ignoring irrelevant information, although researchers continue to debate how strong and reliable these effects are. Less controversially, learning a new language gives adults access to new books, films, and friendships, and many describe the experience as changing the way they see their own culture.",
+      "None of this means that age makes no difference. It does suggest, however, that the common belief that adults cannot learn languages is not only inaccurate but also harmful, since it discourages people from attempting something they are perfectly capable of achieving. The most important factors for adult learners seem to be the amount of meaningful contact they have with the language and their willingness to keep going despite inevitable mistakes, ( C ) of which depends on the age at which they begin.",
+    ],
+    ja: [
+      '子どもはほとんど苦労せずに外国語をおぼえるが、おとなは何年も苦労したあげく、決してネイティブスピーカーのようには聞こえない、と広く信じられている。この考えはとてもありふれているので、多くの親は幼い子どもを急いで語学教室に入れ、多くのおとなは、自分の脳は新しい言語を身につけるには年をとりすぎていると思いこんで、始める前からあきらめてしまう。しかし、世間で信じられている多くのことと同じように、この考えにもいくらかの真実とともに、かなりの誇張がふくまれている。',
+      '子ども時代には言語をもっとも楽に学べる限られた期間があるという考えは、臨界期仮説として知られている。そのもっとも強い証拠は発音から得られている。10代の初めより後に言語を学びはじめた人は、何十年も外国に住んだあとでさえ、外国なまりが完全に消えることはめったにない。文法の研究も同じような傾向を示しており、とても幼いときに始めた学習者は、平均すると、おとなになってから始めた人よりもネイティブスピーカーに近いレベルに達する傾向がある。',
+      'しかし、こうした平均は大切な事実をかくしている。それは、子どもとおとなはふつう、まったくちがう条件で学んでいるということだ。新しい国に引っこした子どもは、毎日何時間も学校や遊びの場でその言語にかこまれ、責任はほとんどなく、まちがえてもめったにはずかしがらない。それに対しておとなは、仕事でつかれた一日のあと、週に2、3時間クラスに通うだけかもしれず、ばかに見えるのをおそれて話すのをさけるかもしれない。同じ短い期間に同じ量の授業を受けた子どもとおとなをくらべると、少なくとも最初のうちは、おとなのほうが速く学ぶことが多い。文法の知識や読む力、そして学習全般の経験を使えるからである。',
+      '言いかえれば、早く始めることの利点は、学ぶ速さよりも、何年も言語にひたったあとに到達できる最終的なレベルにあるようだ。ネイティブスピーカーとまちがえられることではなく、うまくコミュニケーションをとることを目標とするたいていのおとなの学習者にとって、この区別はとても重要である。第二言語でうまく交渉するビジネスパーソンや、地元の人と政治について話し合える旅行者は、たとえかすかななまりで、その言語を人生の後半に学んだことがわかるとしても、価値あることをなしとげたのだ。',
+      'おとなになってから言語を学ぶことには、それならではの利点もあると考える理由がある。いくつかの研究は、ふだんから2つの言語を使う人は、作業を切りかえたり、関係のない情報を無視したりするのがうまくなるかもしれないと示しているが、その効果がどれほど強く確かなものかについては、研究者のあいだで今も議論がつづいている。それほど議論の余地がないのは、新しい言語を学ぶことで、おとなが新しい本や映画や友情にふれられるようになることであり、多くの人はその経験によって自分自身の文化の見方が変わったと語っている。',
+      'これは、年齢がまったく関係ないという意味ではない。しかし、おとなは言語を学べないという世間の考えは、不正確なだけでなく有害でもあることを示している。人々が十分になしとげられることに挑戦するのを、思いとどまらせてしまうからだ。おとなの学習者にとってもっとも大切なのは、その言語と意味のある形でどれだけふれ合うかと、さけられないまちがいがあってもつづけようとする意欲であるようで、そのどちらも、学びはじめる年齢によって決まるものではない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['than', 'to', 'from', 'as'], answer: 0, why: 'closer to that of native speakers than those who start as adults。比較級 closer と結びつくのは than。to は closer to の to と混同しやすいが、くらべる相手は than で示す。' },
+      { id: 'B', choices: ['even if', 'only if', 'as long as', 'so that'], answer: 0, why: '「たとえかすかななまりで後から学んだことがわかるとしても、価値あることをなしとげた」と譲歩しているので even if。only if（～の場合にかぎり）や as long as（～するかぎり）は条件で、意味が逆になる。' },
+      { id: 'C', choices: ['neither', 'both', 'either', 'none'], answer: 0, why: '「接触の量」と「意欲」の2つについて「どちらも年齢で決まらない」なので neither of which。2つなので none ではなく neither。both / either では「年齢で決まる」と肯定になってしまう。' },
+    ],
+    tf: [
+      { statement: '臨界期仮説のもっとも強い証拠は、発音にかんするものである。', answer: true, why: '第2段落 Its strongest evidence comes from pronunciation。' },
+      { statement: '同じ量の授業を短い期間受けると、最初はおとなのほうが速く学ぶことが多い。', answer: true, why: '第3段落 adults often learn faster, at least at first。' },
+      { statement: '2つの言語を使うと作業の切りかえがうまくなるという効果は、すでに確かなものと証明されている。', answer: false, why: '第5段落 researchers continue to debate how strong and reliable these effects are。まだ議論がつづいている。' },
+      { statement: '筆者は、年齢は言語の学習にまったく影響しないと考えている。', answer: false, why: '第6段落 None of this means that age makes no difference。影響がないとは言っていない。' },
+    ],
+    qa: [
+      { q: 'According to the writer, why do studies comparing average results of children and adults give a misleading picture?', choices: ['Children and adults usually learn under very different conditions.', 'Adults are usually tested on more difficult grammar.', 'Children always have better teachers than adults.', 'Most studies include only a small number of children.'], answer: 0, why: '第3段落 these averages hide an important fact, which is that children and adults usually learn in very different conditions。' },
+      { q: 'What does the writer suggest is the real advantage of starting young?', choices: ['A higher final level after many years of immersion.', 'A faster speed of learning in the first few months.', 'A larger vocabulary than adults from the very start.', 'Less need to study grammar at all.'], answer: 0, why: '第4段落 the advantage of starting young appears to lie less in the speed of learning than in the final level。less A than B「A よりむしろ B」。' },
+      { q: 'Why does the writer call the common belief about adults "harmful"?', choices: ['It discourages adults from trying something they are able to do.', 'It causes children to study too many languages.', 'It makes teachers lower the quality of their classes.', 'It leads adults to speak with a stronger accent.'], answer: 0, why: '第6段落 since it discourages people from attempting something they are perfectly capable of achieving。' },
+    ],
+    gist: [
+      { para: 2, choices: ['子どもとおとなの学習条件のちがい', '発音を直すための練習方法', '外国に引っこす家族の悩み', '週末の語学教室の選び方'], answer: 0, why: '第3段落は、子どもは毎日言語にかこまれ、おとなは週に数時間しか学べないという条件のちがいを説明している。' },
+      { para: 3, choices: ['早く始める利点は速さではなく最終的なレベルにある', 'ネイティブのように話すことが学習の唯一の目標である', 'ビジネスでは第二言語は役に立たない', 'なまりのある英語は通じない'], answer: 0, why: '第4段落は less in the speed of learning than in the final level とまとめ、おとなの目標にとってはこの区別が大切だと述べている。' },
+    ],
+    titleQ: { choices: ['Is It Ever Too Late to Learn a Language?', 'How Children Learn to Read', 'The History of Language Schools', 'Why Accents Should Be Removed'], answer: 0, why: '全体として「おとなは言語を学べない」という考えの誇張を検討し、おとなでも十分に学べると結論している。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
