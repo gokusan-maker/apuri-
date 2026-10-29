@@ -150,3 +150,9 @@ it('本番の長さの長文：旧帝大の「抗生物質への耐性」は600�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(tierOf(p)).toBe('kyutei')
 })
+
+it('本番の長さの長文：共通テスト評論の「カッコウの托卵」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-cuckoo')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})

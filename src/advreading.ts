@@ -14834,6 +14834,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Shared Problem of Antibiotic Resistance', 'How Fleming Discovered Mold', 'Why Farm Animals Grow Faster', 'The History of Vaccines'], answer: 0, why: '全体として、抗生物質への耐性がなぜ起こり、なぜ社会全体で取り組むべき問題なのかを論じている。' },
   },
   {
+    id: 'kyotsu-cuckoo',
+    title: 'The Bird That Lets Others Raise Its Young',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Most birds spend a great deal of time and energy raising their chicks. They build nests, sit on their eggs to keep them warm, and fly back and forth all day to bring food to their hungry young. The common cuckoo, however, does none of this. Instead, the female lays her eggs in the nests of other, usually smaller, species and leaves the work of raising her chicks entirely to them.",
+      "The strategy can be remarkably effective. A female cuckoo watches a nest carefully and waits until the owners are away. Then she quickly lays a single egg, sometimes removing one of the host’s eggs at the same time, so that the number of eggs in the nest does not change. In many cases, the cuckoo’s egg looks very similar to the host’s eggs in color and pattern, ( A ) the host birds rarely notice that anything is wrong.",
+      "The trick does not end there. The cuckoo chick usually hatches before the host’s own chicks, and within hours it pushes the other eggs or newly hatched chicks out of the nest one by one. From then on, the host parents work tirelessly to feed a single chick that may soon grow much larger than they are. Its loud and frequent begging calls seem to persuade them that they are feeding a whole nest of hungry young.",
+      "Not all host species are so easily fooled. Over many generations, some have become better at recognizing eggs that look different from their own and either push them out or abandon the nest. In response, cuckoos that lay eggs closely matching those of their hosts have been more successful, ( B ) has led to even more accurate copying. Biologists describe this kind of relationship as an evolutionary arms race, in which each side’s improvements put pressure on the other to improve as well.",
+      "The cuckoo’s behavior may seem cruel to us, but it is better understood as a result of natural selection than as a moral choice. Studying such relationships helps scientists understand how species influence one another’s evolution. It also reminds us that nature is full of strategies that are surprising, and sometimes uncomfortable, from a human point of view, ( C ) they make perfect sense in terms of survival.",
+    ],
+    ja: [
+      'たいていの鳥は、ひなを育てるのに多くの時間とエネルギーを使う。巣を作り、卵をあたためるためにその上にすわり、おなかをすかせたひなに食べ物を運ぶために一日中行ったり来たりする。しかしカッコウはこうしたことを何もしない。そのかわり、メスはほかの、たいていはより小さな種の鳥の巣に卵を産み、ひなを育てる仕事をすっかりその鳥にまかせてしまうのである。',
+      'この作戦はおどろくほど効果的なことがある。メスのカッコウは巣を注意深く見張り、持ち主がいなくなるまで待つ。そしてすばやく卵を1個産み、ときには同時に巣の持ち主の卵を1個取りのぞく。そうすれば巣の中の卵の数が変わらないからだ。多くの場合、カッコウの卵は色やもようが巣の持ち主の卵にとてもよく似ているので、持ち主の鳥は何かがおかしいことにめったに気づかない。',
+      'たくらみはそれで終わりではない。カッコウのひなはふつう、巣の持ち主のひなより先にかえり、数時間のうちに、ほかの卵やかえったばかりのひなを1つずつ巣の外におし出してしまう。それ以来、巣の持ち主の親鳥は、やがて自分たちよりずっと大きくなるかもしれない1羽のひなに、休みなくえさを運ぶ。ひなの大きく何度もくり返される鳴き声が、親鳥に、おなかをすかせたひながいっぱいいる巣にえさをあたえているのだと思いこませるようなのだ。',
+      'すべての種が、こうも簡単にだまされるわけではない。何世代にもわたって、自分の卵とちがって見える卵を見分けるのがうまくなり、それをおし出したり巣を捨てたりするようになった種もある。それに対して、巣の持ち主の卵によく似た卵を産むカッコウのほうがうまくいくようになり、そのことがさらに正確なまねにつながった。生物学者はこのような関係を進化の軍拡競争とよぶ。一方の改良が、もう一方にも改良をせまるのである。',
+      'カッコウのふるまいはわたしたちには残酷に思えるかもしれないが、道徳的な選択というより、自然選択の結果として理解するほうがよい。こうした関係を研究することは、種がたがいの進化にどう影響し合うかを科学者が理解する助けになる。それはまた、生き残りという点ではまったく理にかなっているけれども、人間の視点からはおどろくような、ときには心地よくない作戦に自然が満ちていることを、わたしたちに思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'yet'], answer: 0, why: '「卵がよく似ている。だから気づかない」と結果を表すので so。but / yet では逆接になる。' },
+      { id: 'B', choices: ['which', 'what', 'that', 'it'], answer: 0, why: '前の文の内容全体（よく似た卵を産むカッコウが成功したこと）を受ける非制限用法の which。コンマのあとに that は使えない。' },
+      { id: 'C', choices: ['although', 'because', 'unless', 'so that'], answer: 0, why: '「人間からは心地よくないが、生き残りの点では理にかなっている」と逆接・譲歩なので although。' },
+    ],
+    tf: [
+      { statement: 'カッコウのメスは、自分で巣を作って卵をあたためる。', answer: false, why: '第1段落 The common cuckoo, however, does none of this。' },
+      { statement: 'カッコウは、巣の卵の数が変わらないように持ち主の卵を取りのぞくことがある。', answer: true, why: '第2段落 sometimes removing one of the host’s eggs at the same time, so that the number of eggs in the nest does not change。' },
+      { statement: 'カッコウのひなは、巣の持ち主のひなよりあとにかえることが多い。', answer: false, why: '第3段落 The cuckoo chick usually hatches before the host’s own chicks。' },
+      { statement: '筆者は、カッコウのふるまいを道徳的にまちがった選択だと考えている。', answer: false, why: '第5段落 it is better understood as a result of natural selection than as a moral choice。' },
+    ],
+    qa: [
+      { q: 'What does "an evolutionary arms race" refer to in the passage?', choices: ['Hosts get better at spotting cuckoo eggs, and cuckoos get better at copying host eggs.', 'Cuckoos and hosts fight over food every day.', 'Larger birds always win against smaller ones.', 'Scientists compete to study cuckoos.'], answer: 0, why: '第4段落：持ち主は見分けがうまくなり、カッコウはよりよく似た卵を産むようになる。each side’s improvements put pressure on the other。' },
+      { q: 'Why do the host parents keep feeding the cuckoo chick?', choices: ['Its loud, frequent calls make them act as if they had many hungry chicks.', 'It is their own chick.', 'The cuckoo mother pays them back with food.', 'They know it is a cuckoo but feel sorry for it.'], answer: 0, why: '第3段落 Its loud and frequent begging calls seem to persuade them that they are feeding a whole nest of hungry young。' },
+    ],
+    gist: [
+      { para: 2, choices: ['カッコウのひなが巣を独りじめする', '親鳥のえさの選び方', '卵がかえるまでの日数', '巣の作り方のちがい'], answer: 0, why: '第3段落は、ひながほかの卵をおし出し、1羽で親鳥のえさを受けることを述べている。' },
+      { para: 3, choices: ['だます側とだまされる側の進化の競争', 'カッコウが絶滅しかけている理由', '卵の色が決まるしくみ', '大きな鳥が小さな鳥をおそう話'], answer: 0, why: '第4段落は、見分ける力とまねる力がたがいに高まる「進化の軍拡競争」を説明している。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
