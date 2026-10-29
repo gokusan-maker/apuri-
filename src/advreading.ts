@@ -14571,6 +14571,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Doctor Who Drank the Evidence', 'How to Avoid Stress at Work', 'The History of Spicy Food', 'Why Antibiotics Are Dangerous'], answer: 0, why: 'マーシャルが細菌を飲んで証拠を示した話を中心に、潰瘍の原因の発見と科学における証拠の役割を論じている。' },
   },
   {
+    id: 'kyotsu-ten-thousand-steps',
+    title: 'Where Did 10,000 Steps Come From?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many people who wear fitness watches or carry smartphones try to walk 10,000 steps every day. The number is so familiar that it is often treated as a scientific target, as if researchers had carefully calculated exactly how much walking the human body needs. Surprisingly, however, the figure seems to have begun not in a laboratory but in an advertising campaign.",
+      "In the 1960s, around the time of the Tokyo Olympics, a Japanese company began selling a pedometer whose name meant “10,000-step meter.” The round number was easy to remember and sounded impressive, and it soon spread far beyond Japan. Over the following decades, it was repeated so often that many people came to believe it was based on medical evidence, ( A ) it had originally been chosen largely for marketing reasons.",
+      "This does not mean that walking 10,000 steps is a bad idea. Researchers agree that regular physical activity lowers the risk of heart disease, diabetes, and many other health problems. The question is whether 10,000 is a meaningful line. In recent years, several large studies have followed thousands of people over many years and compared the number of steps they took with their health. One study of older women, for example, found that those who walked about 4,400 steps a day had a noticeably lower risk of death than those who walked about 2,700, and that the benefit increased with more steps but leveled off at around 7,500.",
+      "Findings like these suggest that the relationship between walking and health is gradual rather than sudden. There is no magic point at which the body switches from “unhealthy” to “healthy.” Instead, every additional bit of movement seems to help, especially for people who are currently very inactive. For such people, a target of 10,000 steps may even be discouraging, ( B ) it can make a realistic increase from 3,000 to 5,000 steps feel like a failure.",
+      "None of this is to say that round numbers are useless. A simple goal can motivate people to get up from their desks and go outside. The lesson is rather that we should be careful about treating a familiar number as a scientific fact ( C ) we know where it came from.",
+    ],
+    ja: [
+      'フィットネスウォッチを身につけたりスマートフォンを持ち歩いたりする多くの人は、毎日1万歩歩こうとする。この数字はとてもなじみがあるので、まるで研究者が人間の体にどれだけの歩行が必要かを注意深く正確に計算したかのように、科学的な目標としてあつかわれることが多い。しかしおどろいたことに、この数字は研究室ではなく広告の宣伝から始まったようなのである。',
+      '1960年代、東京オリンピックのころ、日本のある会社が「1万歩計」という意味の名前の歩数計を売り出した。そのきりのよい数字はおぼえやすく、りっぱに聞こえたので、やがて日本をはるかにこえて広まった。その後の数十年のあいだに、この数字は何度もくり返されたので、もともとはおもに宣伝の理由で選ばれたにもかかわらず、多くの人がそれは医学的な証拠にもとづいていると信じるようになった。',
+      'これは、1万歩歩くのが悪い考えだという意味ではない。研究者たちは、ふだんから体を動かすことが心臓病や糖尿病、そのほか多くの健康問題の危険を下げることで一致している。問題は、1万という数字が意味のある線なのかどうかである。近年、いくつかの大規模な研究が何千人もの人を何年も追跡し、歩いた歩数と健康をくらべた。たとえば高齢の女性を対象としたある研究では、1日に約4,400歩歩いた人は約2,700歩の人より死亡の危険がはっきり低く、その効果は歩数がふえるほど大きくなったが、約7,500歩で頭打ちになった。',
+      'このような発見は、歩くことと健康の関係が、急にではなく少しずつ変わるものであることを示している。体が「不健康」から「健康」に切りかわる魔法の地点はない。そのかわり、少し体を動かすたびに役に立つようで、とくに今あまり体を動かしていない人にはそうである。そういう人にとって、1万歩という目標はかえってやる気をなくさせるかもしれない。3,000歩から5,000歩への現実的なふえ方が、失敗のように感じられてしまうからだ。',
+      'きりのよい数字が役に立たないというわけではない。単純な目標は、人を机から立ち上がらせて外に出る気にさせることができる。教訓はむしろ、なじみのある数字を、それがどこから来たのかを知る前に科学的な事実としてあつかうことには注意すべきだということである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even though', 'because', 'as long as', 'so that'], answer: 0, why: '「もともとは宣伝の理由で選ばれたにもかかわらず、医学的な証拠にもとづくと信じられた」と逆接なので even though。' },
+      { id: 'B', choices: ['since', 'although', 'unless', 'whereas'], answer: 0, why: '「やる気をなくさせるかもしれない」理由を「3,000→5,000歩のふえ方が失敗に感じられるから」と述べるので since（～なので）。' },
+      { id: 'C', choices: ['before', 'after', 'because', 'while'], answer: 0, why: '「どこから来たのかを知る前に、科学的事実としてあつかうことに注意すべきだ」なので before。after では「知ったあとで」となり、教訓として意味が通らない。' },
+    ],
+    tf: [
+      { statement: '1万歩という数字は、もともと研究者の計算から生まれた。', answer: false, why: '第1段落 the figure seems to have begun not in a laboratory but in an advertising campaign。' },
+      { statement: '高齢の女性の研究では、歩数がふえるほど効果が大きくなり、約7,500歩で頭打ちになった。', answer: true, why: '第3段落 the benefit increased with more steps but leveled off at around 7,500。' },
+      { statement: '筆者は、1万歩歩くことは健康に悪いと主張している。', answer: false, why: '第3段落 This does not mean that walking 10,000 steps is a bad idea。' },
+      { statement: '筆者によれば、あまり体を動かしていない人にとって、少しの運動の増加にも意味がある。', answer: true, why: '第4段落 every additional bit of movement seems to help, especially for people who are currently very inactive。' },
+    ],
+    qa: [
+      { q: 'What does the writer mean by saying the relationship is "gradual rather than sudden"?', choices: ['Health benefits increase little by little as people walk more.', 'People must walk exactly 10,000 steps to become healthy.', 'Walking has no effect on health until people are old.', 'The benefits of walking appear only after many years.'], answer: 0, why: '第4段落 There is no magic point … every additional bit of movement seems to help。少しずつ効果がふえるという意味。' },
+      { q: 'Which of the following best expresses the writer’s main point?', choices: ['A familiar number should not be treated as a scientific fact without knowing its origin.', 'Fitness watches give incorrect step counts.', 'Advertising should be banned in health products.', 'Everyone should walk at least 10,000 steps a day.'], answer: 0, why: '第5段落 we should be careful about treating a familiar number as a scientific fact before we know where it came from。' },
+    ],
+    gist: [
+      { para: 1, choices: ['1万歩という数字は宣伝から広まった', '東京オリンピックの競技の歴史', '歩数計のしくみ', '日本の会社の海外進出'], answer: 0, why: '第2段落は歩数計の名前から1万という数字が広まり、医学的根拠があると誤解されたことを述べている。' },
+      { para: 3, choices: ['健康への効果は少しずつ増える', '運動しない人は健康になれない', '1万歩は最低限の目標である', '歩数を数えるのは時間のむだである'], answer: 0, why: '第4段落は gradual rather than sudden と述べ、運動の少しの増加にも意味があるとしている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
