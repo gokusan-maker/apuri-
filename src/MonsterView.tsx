@@ -590,6 +590,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M40 30 Q50 40 60 30" fill="#4a3628" stroke="#2a1d14" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'gecko')
+    return (
+      <g>
+        {/* 大きな丸い目のまわりのふち */}
+        <circle cx="38" cy="48" r="9" fill="none" stroke="#166534" strokeWidth="2" />
+        <circle cx="62" cy="48" r="9" fill="none" stroke="#166534" strokeWidth="2" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
