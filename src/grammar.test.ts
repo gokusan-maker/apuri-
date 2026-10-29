@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest'
-import { GRAMMAR, loadGrammar, saveGrammar } from './grammar'
+import { GRAMMAR, gradeOf, loadGrammar, saveGrammar } from './grammar'
 
 describe('文法', () => {
   beforeEach(() => localStorage.clear())
@@ -220,4 +220,13 @@ it('文法単元の id は「まちがえやすい単語」と重ならない（
   const old = ['ago-before', 'almost-most', 'another-other', 'between-among', 'by-until', 'few-little', 'make-do', 'say-tell']
   const ids = new Set(CONFUSING.map((u) => u.id))
   expect(GRAMMAR.filter((u) => ids.has(u.id) && !old.includes(u.id)).map((u) => u.id)).toEqual([])
+})
+
+describe('文法のレベル', () => {
+  it('中学レベルの前置詞の熟語は高校ではなく中学の学年にある', () => {
+    expect(gradeOf('prep-idiom-atnight')).toBe('中2')
+    expect(gradeOf('prep-idiom-onthebus')).toBe('中2')
+    expect(gradeOf('prep-idiom-bymistake')).toBe('中3')
+    expect(gradeOf('prep-idiom-inmyopinion')).toBe('中3')
+  })
 })
