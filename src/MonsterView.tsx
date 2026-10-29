@@ -1996,7 +1996,9 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
   const locked = EGG_MILESTONES.slice(party.members.length - (party.gacha ?? 0) - 1)
   const [limit, setLimit] = useState(PARTY_PAGE) // 仲間は500体まで。はじめは24体だけ見せて「もっと見る」
   const [byLv, setByLv] = useState(false) // デザイン82：なかまをレベルの高い順にならべる
-  const order = byLv ? [...displayOrder(party)].sort((a, b) => party.members[b].xp - party.members[a].xp) : displayOrder(party)
+  const [favOnly, setFavOnly] = useState(false) // デザイン83：おきにいり★の子だけ見る
+  const sorted = byLv ? [...displayOrder(party)].sort((a, b) => party.members[b].xp - party.members[a].xp) : displayOrder(party)
+  const order = favOnly ? sorted.filter((i) => party.members[i].fav || i === party.active) : sorted
   // 相棒は、はじめの24体に入っていなくても必ず見せる
   const shown = order.slice(0, limit).includes(party.active) ? order.slice(0, limit) : [party.active, ...order.slice(0, limit - 1)]
   return (
@@ -2028,9 +2030,16 @@ export function Party({ party, onSelect, onRename, onFav, onRelease, onWarm, war
       )}
 
       {party.members.length > 2 && (
-        <button className="list-link pill-btn party-sort" aria-pressed={byLv} onClick={() => setByLv(!byLv)}>
-          {byLv ? '🔀 いつものならび' : '⬆️ レベルの高い順'}
-        </button>
+        <p className="party-sorts">
+          <button className="list-link pill-btn party-sort" aria-pressed={byLv} onClick={() => setByLv(!byLv)}>
+            {byLv ? '🔀 いつものならび' : '⬆️ レベルの高い順'}
+          </button>
+          {party.members.some((m) => m.fav) && (
+            <button className="list-link pill-btn party-sort" aria-pressed={favOnly} onClick={() => setFavOnly(!favOnly)}>
+              {favOnly ? '👀 みんな見る' : '★ おきにいりだけ'}
+            </button>
+          )}
+        </p>
       )}
       <ul className="badge-grid">
         {shown.map((i) => {

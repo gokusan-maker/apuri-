@@ -19,3 +19,11 @@ it('デザイン82：なかまを「レベルの高い順」にならべかえ�
   const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
   expect(names).toEqual(['B', 'C', 'A'])
 })
+
+it('デザイン83：なかま一覧で「おきにいりだけ」にすると、★の子と相棒だけが見える', () => {
+  const party = { active: 0, members: [{ xp: 10, name: 'A' }, { xp: 900, name: 'B', fav: true }, { xp: 300, name: 'C' }] }
+  render(<Party party={party as never} onSelect={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: '★ おきにいりだけ' }))
+  const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
+  expect(names.sort()).toEqual(['A', 'B'])
+})
