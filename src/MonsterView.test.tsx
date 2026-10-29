@@ -11,3 +11,11 @@ it('仲間がたくさんいるときは24体ずつ見せて「もっと見る�
   fireEvent.click(screen.getByRole('button', { name: /もっと見る（あと16体）/ }))
   expect(document.querySelectorAll('.party-member')).toHaveLength(40)
 })
+
+it('デザイン82：なかまを「レベルの高い順」にならべかえられる', () => {
+  const party = { active: 0, members: [{ xp: 10, name: 'A' }, { xp: 900, name: 'B' }, { xp: 300, name: 'C' }] }
+  render(<Party party={party as never} onSelect={() => {}} />)
+  fireEvent.click(screen.getByRole('button', { name: '⬆️ レベルの高い順' }))
+  const names = [...document.querySelectorAll('.party-member .badge-name')].map((e) => e.textContent)
+  expect(names).toEqual(['B', 'C', 'A'])
+})
