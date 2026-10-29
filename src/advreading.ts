@@ -14267,6 +14267,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-digital-maps',
+    title: 'Do Digital Maps Weaken Our Sense of Direction?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Not long ago, travelers in an unfamiliar city had to study a paper map, ask strangers for directions, and pay close attention to landmarks such as rivers, towers, and unusual buildings. Today, most of us simply follow the blue dot on a smartphone screen, turning left or right whenever a calm voice tells us to. This change has made travel easier and less stressful, but some researchers have begun to ask whether it also has a hidden cost.",
+      "Their concern is based on what we know about how the brain learns space. When people find their own way, they build what psychologists call a mental map, an inner picture of how places are connected to one another. Studies of experienced taxi drivers, who must memorize the complex streets of a large city, have suggested that this kind of active learning can even be linked to changes in the parts of the brain that support memory. ( A ) we follow turn-by-turn instructions, however, we may reach our destination without forming much of a mental map at all.",
+      "Several experiments support this idea. In one typical design, two groups of volunteers walk the same route through a town, one group using a navigation app and the other using a paper map. Afterward, the people who used the app often have more difficulty drawing the route or pointing toward the starting point, even though they made fewer wrong turns on the way. In other words, the app helped them to arrive but did ( B ) to help them understand where they had been.",
+      "It would be a mistake, however, to conclude that digital maps are simply harmful. For people who cannot read paper maps easily, or who are traveling in a country where they do not speak the language, these tools can provide independence and safety. They also save time and fuel by suggesting routes that avoid heavy traffic. The question, then, is not whether we should use such technology but how we can use it without losing skills that may still be valuable.",
+      "Some researchers suggest small changes in habit. Before starting a journey, we could look at the whole route on the map instead of only the next instruction, or we could try to notice a few landmarks along the way. On familiar trips, we might turn the app off entirely and rely on our own memory. Such practices take a little more effort, but they allow us to enjoy the convenience of technology ( C ) keeping our own sense of direction active.",
+    ],
+    ja: [
+      'つい最近まで、知らない町を旅する人は、紙の地図をよく見て、知らない人に道をたずね、川や塔や変わった建物などの目じるしに注意をはらわなければならなかった。今では、わたしたちの多くはスマートフォンの画面の青い点についていき、落ち着いた声に言われるたびに右や左に曲がるだけだ。この変化で旅は楽になりストレスも減ったが、そこには見えない代償もあるのではないかと問いはじめた研究者もいる。',
+      'その心配は、脳が空間をどのように学ぶかについてわかっていることにもとづいている。人が自分で道を見つけるとき、心理学者が「メンタルマップ」とよぶもの、つまり場所どうしがどうつながっているかを表す心の中の絵を作る。大都市の複雑な道をおぼえなければならない経験豊かなタクシー運転手の研究は、このような能動的な学習が、記憶を支える脳の部分の変化とさえ結びつきうることを示している。しかし、曲がり角ごとの指示に従うときには、メンタルマップをほとんど作らないまま目的地に着いてしまうのかもしれない。',
+      'いくつかの実験がこの考えを支持している。よくある実験では、ボランティアの2つのグループが町の同じ道を歩く。一方のグループはナビアプリを使い、もう一方は紙の地図を使う。そのあと、アプリを使った人たちは、道のとちゅうでまちがえて曲がった回数は少なかったにもかかわらず、道順を描いたり出発点の方向を指さしたりするのに苦労することが多い。言いかえれば、アプリは到着するのを助けたが、どこを通ってきたのかを理解するのにはほとんど役立たなかったのだ。',
+      'しかし、デジタル地図が単に有害だと結論づけるのはまちがいだろう。紙の地図を読むのが苦手な人や、ことばが話せない国を旅している人にとって、こうした道具は自立と安全をあたえてくれる。また、ひどい渋滞をさける道を教えてくれるので、時間と燃料の節約にもなる。だから問題は、そうした技術を使うべきかどうかではなく、まだ価値があるかもしれない能力を失わずに、どう使えるかということなのである。',
+      '習慣を少し変えることを提案する研究者もいる。出かける前に、次の指示だけでなく地図で道順の全体を見たり、とちゅうでいくつかの目じるしに気づくようにしたりできる。行き慣れた道では、アプリを完全に切って自分の記憶にたよってもよいだろう。こうしたやり方には少しよけいに手間がかかるが、自分の方向感覚をはたらかせたまま、技術の便利さを楽しむことができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['When', 'Unless', 'Although', 'Until'], answer: 0, why: '「指示に従うときには、メンタルマップをほとんど作らないまま着くかもしれない」なので When。Unless（～しないかぎり）、Although（～だけれども）、Until（～まで）では意味が通らない。' },
+      { id: 'B', choices: ['little', 'few', 'much', 'less'], answer: 0, why: 'did little to ～「～するのにほとんど役立たなかった」。but で「到着は助けた」と対比している。few は数えられる名詞に使い、much では「大いに役立った」と逆の意味になる。' },
+      { id: 'C', choices: ['while', 'during', 'unless', 'because'], answer: 0, why: 'while ～ing「～しながら」。during は前置詞で、うしろに動名詞の句をとって「～しながら」の意味にはならない。' },
+    ],
+    tf: [
+      { statement: 'ナビアプリを使ったグループは、紙の地図のグループよりも道をまちがえることが多かった。', answer: false, why: '第3段落 even though they made fewer wrong turns on the way。まちがいは少なかった。' },
+      { statement: 'アプリを使った人は、通った道を思い出して描くのに苦労することがあった。', answer: true, why: '第3段落 often have more difficulty drawing the route。' },
+      { statement: '筆者は、デジタル地図の使用をやめるべきだと主張している。', answer: false, why: '第4段落 The question, then, is not whether we should use such technology but how we can use it。使い方の問題だとしている。' },
+      { statement: 'デジタル地図は、ことばの通じない国を旅する人の助けになりうる。', answer: true, why: '第4段落 traveling in a country where they do not speak the language, these tools can provide independence and safety。' },
+    ],
+    qa: [
+      { q: 'Why does the writer mention experienced taxi drivers?', choices: ['To show that actively learning routes may be connected with changes in the brain.', 'To prove that taxi drivers never use navigation apps.', 'To explain why traffic is heavy in large cities.', 'To argue that paper maps are cheaper than smartphones.'], answer: 0, why: '第2段落 this kind of active learning can even be linked to changes in the parts of the brain that support memory。能動的な学習の効果の例として出している。' },
+      { q: 'Which of the following best summarizes the writer’s position?', choices: ['Digital maps are useful, but we should use them in ways that keep our own navigation skills working.', 'Digital maps are dangerous and should be banned for young people.', 'Paper maps are always better than digital maps.', 'Our sense of direction is not affected by technology at all.'], answer: 0, why: '第4・5段落で、利点を認めたうえで「能力を失わずにどう使うか」を問い、習慣を少し変えることを提案している。' },
+    ],
+    gist: [
+      { para: 2, choices: ['実験：アプリは到着を助けるが、道の理解は進まない', 'アプリと紙の地図の値段のくらべ', 'タクシー運転手の仕事', '町の道路の作り方'], answer: 0, why: '第3段落は2つのグループの実験の結果を述べ、In other words でまとめている。' },
+      { para: 4, choices: ['方向感覚をはたらかせながら技術を使う工夫', 'アプリの新しい機能の紹介', '旅行の費用を節約する方法', '目じるしになる建物の歴史'], answer: 0, why: '第5段落は small changes in habit（習慣の小さな変化）を提案している。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

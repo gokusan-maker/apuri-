@@ -63,3 +63,9 @@ it('本番の長さの長文：IELTS のコンテナの長文は700語以上で 
   expect(passageStats(p).words).toBeLessThanOrEqual(950)
   expect(p.tfng!.some((x) => x.answer === 2)).toBe(true)
 })
+
+it('本番の長さの長文：共通テスト評論のデジタル地図は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-digital-maps')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})
