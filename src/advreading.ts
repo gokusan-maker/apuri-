@@ -14014,6 +14014,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-spinningtop',
+    title: 'Why a Top Does Not Fall',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Spinning tops are among the oldest toys in the world. Children in many countries have played with them for thousands of years. In Japan, tops called koma are a traditional toy, especially around the New Year.",
+      "If you stand a top on its point without spinning it, it falls over at once. But a top ( A ) fast can stand on its tiny point for a long time. This is because a spinning object tends to keep turning in the same direction, and this helps it stay upright.",
+      "As the top slows down, it begins to wobble. Finally, when it is spinning too slowly, it falls over. Players try to throw their tops in a way that makes them spin as long as possible.",
+      "Some children also play a game ( B ) two tops hit each other. The top that keeps spinning longer is the winner. A simple toy like this can teach us about science while we are having fun.",
+    ],
+    ja: [
+      'こまは、世界で最も古いおもちゃの1つだ。多くの国の子どもたちが、何千年ものあいだこまで遊んできた。日本では、こまはとくにお正月のころに遊ぶ伝統的なおもちゃだ。',
+      'こまを回さずに先っぽで立てようとすると、すぐにたおれてしまう。しかし、速く回っているこまは、小さな先っぽで長いあいだ立っていられる。回っている物は同じ向きに回り続けようとする性質があり、これがまっすぐ立っている助けになるからだ。',
+      'こまはおそくなるにつれて、ふらふらゆれはじめる。そしてついに、回るのがおそくなりすぎると、たおれてしまう。遊ぶ人たちは、できるだけ長く回るようにこまを投げようとする。',
+      '2つのこまをぶつけ合う遊びをする子どもたちもいる。長く回り続けたこまが勝ちだ。このような単純なおもちゃが、楽しみながら科学について教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['spinning', 'spun', 'spins', 'to spin'], answer: 0, why: '「速く回っているこま」なので、現在分詞 spinning がうしろから top を説明する。spun だと「回された」、spins は動詞の形、to spin は意味が合わない。' },
+      { id: 'B', choices: ['in which', 'which', 'what', 'whose'], answer: 0, why: '先行詞 a game で、うしろに完全な文（two tops hit each other）が続くので「前置詞＋関係代名詞」の in which。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'wobble',
+      choices: ['move unsteadily from side to side', 'jump high into the air', 'change its color', 'become much faster'],
+      answer: 0,
+      why: 'wobble は「ぐらぐらゆれる」。こまがまっすぐ立てずに左右にゆれるという意味。',
+    },
+    order: {
+      words: ['spin', 'as', 'long', 'as', 'possible'],
+      rest: '',
+      answer: 'spin as long as possible',
+      ja: 'できるだけ長く回る（as ～ as possible「できるだけ～」）',
+    },
+    tf: [
+      { statement: '回していないこまは、先っぽで立てるとすぐにたおれる。', answer: true, why: '第2段落 If you stand a top on its point without spinning it, it falls over at once。' },
+      { statement: 'こまは、おそくなるほどまっすぐ安定する。', answer: false, why: '第3段落 As the top slows down, it begins to wobble。' },
+      { statement: 'こまをぶつけ合う遊びでは、長く回ったほうが勝ちだ。', answer: true, why: '第4段落 The top that keeps spinning longer is the winner。' },
+    ],
+    qa: [
+      { q: 'Why can a spinning top stay upright?', choices: ['A spinning object tends to keep turning in the same direction.', 'It has a very wide bottom.', 'Someone holds it up.', 'It is made of light paper.'], answer: 0, why: '第2段落 a spinning object tends to keep turning in the same direction, and this helps it stay upright。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
