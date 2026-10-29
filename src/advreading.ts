@@ -13563,6 +13563,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-liberty',
+    title: 'A Statue That Crossed the Ocean',
+    level: '難関大（評論）',
+    paragraphs: [
+      "The Statue of Liberty stands on a small island in New York. Many people do not know that it was made in France. It was a gift ( A ) by the people of France to the United States as a sign of friendship.",
+      "The statue was built in Paris over several years. It was much too large ( B ) in one piece, so workers took it apart. More than three hundred pieces were packed into about two hundred wooden boxes and carried across the Atlantic Ocean by ship in 1885.",
+      "In New York, the pieces were put together again on a tall stone base. The statue was finally opened in 1886. At that time, it was the color of a new copper coin.",
+      "Over the next thirty years or so, the copper slowly reacted with the air and turned green. This green layer actually protects the metal underneath. Today, the green statue is one of the most famous symbols of freedom in the world.",
+    ],
+    ja: [
+      '自由の女神像は、ニューヨークの小さな島に立っている。それがフランスで作られたことを知らない人は多い。それは友情のしるしとして、フランスの人々からアメリカにおくられた贈り物だった。',
+      '像はパリで何年もかけて作られた。1つのまま運ぶにはあまりにも大きすぎたので、作業員たちはそれを分解した。300をこえる部品がおよそ200の木箱につめられ、1885年に船で大西洋をこえて運ばれた。',
+      'ニューヨークでは、部品は高い石の台の上でもう一度組み立てられた。像はついに1886年に公開された。そのころ、像は新しい銅貨のような色だった。',
+      'その後30年ほどのあいだに、銅はゆっくりと空気と反応して緑色になった。この緑のまくは、実は下の金属を守っている。今日、緑色の像は、世界で最も有名な自由のシンボルの1つになっている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['given', 'giving', 'gives', 'to giving'], answer: 0, why: '「フランスの人々からおくられた贈り物」なので、過去分詞 given がうしろから gift を説明する（by the people of France が受け身のしるし）。giving だと贈り物がおくることになり、gives は動詞の形、to giving は形がおかしい。' },
+      { id: 'B', choices: ['to ship', 'shipping', 'shipped', 'ship'], answer: 0, why: 'too ～ to …「…するには～すぎる」なので to ship。shipping・shipped・ship は too large のあとにそのまま置けない。' },
+    ],
+    underline: {
+      phrase: 'took it apart',
+      choices: ['separated it into pieces', 'painted it green', 'made it bigger', 'sold it to a museum'],
+      answer: 0,
+      why: 'take ～ apart は「～を分解する」。像をいくつもの部品に分けたという意味。',
+    },
+    order: {
+      words: ['were', 'put', 'together', 'again'],
+      rest: 'on a tall stone base',
+      answer: 'were put together again',
+      ja: 'もう一度組み立てられた（put together「組み立てる」の受け身）',
+    },
+    tf: [
+      { statement: '自由の女神像は、アメリカで作られた。', answer: false, why: '第1段落 it was made in France。' },
+      { statement: '像は部品に分けられて、船で運ばれた。', answer: true, why: '第2段落 workers took it apart ... carried across the Atlantic Ocean by ship。' },
+      { statement: '像の緑色のまくは、下の金属を守っている。', answer: true, why: '第4段落 This green layer actually protects the metal underneath。' },
+    ],
+    qa: [
+      { q: 'What color was the statue when it was first opened?', choices: ['The color of a new copper coin.', 'Green.', 'White.', 'Black.'], answer: 0, why: '第3段落 At that time, it was the color of a new copper coin。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
