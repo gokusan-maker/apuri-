@@ -8090,9 +8090,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Don’t worry. Your cat is in good hands with my sister.', ja: '心配しないで。君のネコは姉がちゃんと世話をするから。' },
     ],
     questions: [
-      { sentence: 'The piano is old, but it is still in good ___.', choices: ['condition', 'conditional', 'conditioned'], answer: 0, why: 'in good condition「よい状態で」。good のあとは名詞 condition。' },
-      { sentence: 'My grandfather is ninety and in good ___.', choices: ['health', 'healthy', 'healthily'], answer: 0, why: 'in good health「健康で」。good のあとは名詞 health。' },
-      { sentence: 'The baby is in good ___ with the nurse.', choices: ['hands', 'hand', 'handy'], answer: 0, why: 'in good hands「安心してまかせられて」。hands と複数形にする。' },
+      { sentence: 'The house is over a hundred years old, but it is still in excellent ___.', choices: ['condition', 'situation', 'circumstance', 'position'], answer: 0, why: 'in good / excellent condition「よい状態で」。物の状態は condition。situation は「状況」、circumstance は「事情」で、物の状態には使わない。' },
+      { sentence: 'Despite his age, my grandfather remains in good ___ and walks every day.', choices: ['health', 'body', 'life', 'medicine'], answer: 0, why: 'in good health「健康で」。in good body / in good life という言い方はない。' },
+      { sentence: 'Don’t worry about your dog while you are away. He is in good ___.', choices: ['hands', 'hand', 'arms', 'eyes'], answer: 0, why: 'be in good hands「安心してまかせられる（よい人に世話をされている）」。hands と複数形。in good hand とは言わない。' },
     ],
   },
   {
@@ -8124,9 +8124,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our school radio show goes on air every Friday.', ja: '学校のラジオ番組は毎週金曜日に放送される。' },
     ],
     questions: [
-      { sentence: 'My sister is on a ___, so she skipped dessert.', choices: ['diet', 'diets', 'dieting'], answer: 0, why: 'on a diet「ダイエット中で」。a のあとは単数の名詞 diet。' },
-      { sentence: 'The bus drivers went on ___ for higher pay.', choices: ['strike', 'strikes', 'striking'], answer: 0, why: 'go on strike「ストライキをする」。strike は a も -s もつけない。' },
-      { sentence: 'The new drama will be on ___ at nine tonight.', choices: ['air', 'airs', 'aired'], answer: 0, why: 'on air「放送中で」。air は a も -s もつけない。' },
+      { sentence: 'The doctor told my father to go ___ a diet to lower his blood pressure.', choices: ['on', 'in', 'to', 'for'], answer: 0, why: 'go on a diet「ダイエットをする」。状態の on（on a diet / on strike / on air）。' },
+      { sentence: 'Train services were cancelled because the workers were ___ strike.', choices: ['on', 'in', 'at', 'under'], answer: 0, why: 'be on strike「ストライキ中で」。前置詞は on。' },
+      { sentence: 'Please keep quiet. We will be ___ air in thirty seconds.', choices: ['on', 'in', 'at', 'over'], answer: 0, why: 'on air「放送中で」。on the air とも言う。' },
     ],
   },
   {
@@ -8158,9 +8158,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The coach explained the rules with patience.', ja: 'コーチはしんぼう強くルールを説明した。' },
     ],
     questions: [
-      { sentence: '"Will you join our team?" "With ___!"', choices: ['pleasure', 'pleased', 'pleasant'], answer: 0, why: 'With pleasure.「喜んで。」with のあとは名詞 pleasure。' },
-      { sentence: 'After much practice, Ken played the piano with ___.', choices: ['confidence', 'confident', 'confidently'], answer: 0, why: 'with confidence「自信をもって」。with のあとは名詞 confidence。' },
-      { sentence: 'The nurse answered all of our questions with ___.', choices: ['patience', 'patient', 'patiently'], answer: 0, why: 'with patience「しんぼう強く」。with のあとは名詞 patience。' },
+      { sentence: '"Could you help me carry these boxes?" "___ pleasure."', choices: ['With', 'For', 'In', 'By'], answer: 0, why: 'With pleasure.「喜んで。」依頼を引き受ける決まった返事。' },
+      { sentence: 'Having prepared thoroughly, she spoke ___ confidence at the interview.', choices: ['with', 'in', 'by', 'on'], answer: 0, why: 'with confidence「自信をもって」＝ confidently。with ＋抽象名詞で副詞の意味になる。in confidence は「内緒で」で意味が変わる。' },
+      { sentence: 'Teaching small children requires a great deal of ___.', choices: ['patience', 'patients', 'patient', 'patiently'], answer: 0, why: '「小さい子どもを教えるには大きな忍耐が必要だ」。a great deal of のあとは不可算名詞 patience。patients（患者たち）と発音が同じなので注意。' },
     ],
   },
   {
@@ -8260,9 +8260,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Pencils are cheaper when you buy them by the dozen.', ja: '鉛筆はダース単位で買うと安くなる。' },
     ],
     questions: [
-      { sentence: 'The parking lot charges by the ___.', choices: ['hour', 'hourly', 'hours'], answer: 0, why: 'by the hour「1時間いくらで」。単位は単数の名詞 hour。' },
-      { sentence: 'The farmer sells his eggs by the ___.', choices: ['dozen', 'dozenth', 'dozened'], answer: 0, why: 'by the dozen「ダース単位で」。the のあとは名詞 dozen。' },
-      { sentence: 'In this store, cloth is sold by the ___.', choices: ['meter', 'metric', 'metered'], answer: 0, why: 'by the meter「1メートルいくらで」。the のあとは名詞 meter。' },
+      { sentence: 'Most part-time workers in this shop are paid ___ the hour.', choices: ['by', 'for', 'per', 'in'], answer: 0, why: 'be paid by the hour「時給で支払われる」。単位を表す by the ＋単数名詞。per は per hour で the をつけない。' },
+      { sentence: 'Eggs are usually sold ___ the dozen in that market.', choices: ['by', 'in', 'for', 'at'], answer: 0, why: 'by the dozen「ダース単位で」。単位を表す by the ＋単数名詞。' },
+      { sentence: 'This fabric is sold by ___ meter, not by the roll.', choices: ['the', 'a', 'one', 'each'], answer: 0, why: 'by the meter「1メートル単位で」。単位を表すときは by the ＋単数名詞で、the を使う。' },
     ],
   },
   {
@@ -8311,9 +8311,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The walk to the station takes ten minutes at most.', ja: '駅まで歩いても、せいぜい10分だ。' },
     ],
     questions: [
-      { sentence: 'Please return the book by Monday at the ___.', choices: ['latest', 'late', 'lately'], answer: 0, why: 'at the latest「おそくとも」。最上級 latest を使う。' },
-      { sentence: 'The new road will be finished next spring at the ___.', choices: ['earliest', 'early', 'earlier'], answer: 0, why: 'at the earliest「早くても」。最上級 earliest を使う。' },
-      { sentence: 'The ticket costs 1,000 yen at ___.', choices: ['most', 'more', 'much'], answer: 0, why: 'at most「多くても・せいぜい」。最上級 most を使う。' },
+      { sentence: 'Applications must reach our office by Friday ___ the latest.', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at the latest「おそくとも」。最上級と結びつく at（at the earliest / at most / at least）。' },
+      { sentence: 'Given the repairs needed, the museum will reopen in June at the ___.', choices: ['earliest', 'latest', 'soonest', 'fastest'], answer: 0, why: '「修理が必要なので早くても6月」という文脈なので at the earliest「早くても」。at the latest だと「おそくとも6月」で、修理が必要という理由と合わない。' },
+      { sentence: 'The trip should take three hours at ___, even if the traffic is heavy.', choices: ['most', 'least', 'first', 'last'], answer: 0, why: '「渋滞しても、多くても3時間」なので at most「多くても・せいぜい」。at least は「少なくとも」で逆の意味。' },
     ],
   },
   {
@@ -8328,9 +8328,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our family is always on the move during the holidays.', ja: 'わが家は休みのあいだ、いつも動き回っている。' },
     ],
     questions: [
-      { sentence: 'He left home in a ___ and forgot his lunch.', choices: ['rush', 'rushed', 'rushing'], answer: 0, why: 'in a rush「急いで」。a のあとは名詞 rush。' },
-      { sentence: 'In autumn, many birds are on the ___ to warmer places.', choices: ['move', 'moving', 'moved'], answer: 0, why: 'on the move「移動中で」。the のあとは名詞 move。' },
-      { sentence: 'The police are looking for the thief, who is still on the ___.', choices: ['run', 'running', 'ran'], answer: 0, why: 'on the run「にげている」。the のあとは名詞 run。' },
+      { sentence: 'Sorry I can’t talk now. I’m ___ a rush to catch my train.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in a rush「急いで」（= in a hurry）。前置詞は in。' },
+      { sentence: 'Every autumn, millions of birds are on the ___ toward warmer regions.', choices: ['move', 'run', 'spot', 'air'], answer: 0, why: 'on the move「移動中で」。on the run は「逃走中で」、on the spot は「その場で」、on air は「放送中で」。' },
+      { sentence: 'The prisoner who escaped last week is still ___ the run.', choices: ['on', 'in', 'at', 'under'], answer: 0, why: 'on the run「逃走中で」。前置詞は on。' },
     ],
   },
   {
@@ -8345,9 +8345,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In Japan, people come of age at eighteen.', ja: '日本では、18歳で成人する。' },
     ],
     questions: [
-      { sentence: 'Kids under the ___ of ten must ride with an adult.', choices: ['age', 'aged', 'ages'], answer: 0, why: 'under the age of ～「～歳未満の」。the のあとは名詞 age。' },
-      { sentence: 'People over the ___ of 65 can buy cheaper tickets.', choices: ['age', 'aged', 'aging'], answer: 0, why: 'over the age of ～「～歳をこえた」。the のあとは名詞 age。' },
-      { sentence: 'My sister will come of ___ next year.', choices: ['age', 'aged', 'ages'], answer: 0, why: 'come of age「成人する」。of のあとは名詞 age。' },
+      { sentence: 'Children ___ the age of twelve are not allowed to see this film alone.', choices: ['under', 'beneath', 'down', 'behind'], answer: 0, why: 'under the age of ～「～歳未満の」。年齢・金額の「未満」は under。beneath は位置や身分の「下」で年齢には使わない。' },
+      { sentence: 'This health check is recommended for adults ___ the age of fifty.', choices: ['over', 'across', 'through', 'along'], answer: 0, why: 'over the age of ～「～歳をこえた」。年齢の「以上・こえて」は over。' },
+      { sentence: 'In Japan, young people now come ___ age at eighteen.', choices: ['of', 'to', 'at', 'in'], answer: 0, why: 'come of age「成人する」。of を使う決まった言い方。' },
     ],
   },
   {
@@ -8396,9 +8396,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The children answered "Yes!" in unison.', ja: '子どもたちは声をそろえて「はい！」と答えた。' },
     ],
     questions: [
-      { sentence: 'Cats and dogs can live together in ___.', choices: ['harmony', 'harmonious', 'harmonize'], answer: 0, why: 'in harmony「仲よく・調和して」。in のあとは名詞 harmony。' },
-      { sentence: 'The class said "Thank you!" in ___.', choices: ['unison', 'united', 'unite'], answer: 0, why: 'in unison「声をそろえて」。in のあとは名詞 unison。' },
-      { sentence: 'Everyone sang "Happy Birthday" in ___.', choices: ['chorus', 'choral', 'chorused'], answer: 0, why: 'in chorus「みんなで声をそろえて」。in のあとは名詞 chorus。' },
+      { sentence: 'The village has tried for centuries to live in ___ with the forest around it.', choices: ['harmony', 'unison', 'chorus', 'order'], answer: 0, why: 'live in harmony with ～「～と調和して暮らす」。in unison / in chorus は「声をそろえて」、in order は「整って」で、自然と共生する意味にならない。' },
+      { sentence: 'When the teacher entered, the students greeted her ___ unison.', choices: ['in', 'with', 'by', 'at'], answer: 0, why: 'in unison「声をそろえて・いっせいに」。前置詞は in。' },
+      { sentence: 'When the band began the famous song, the whole audience joined in ___ chorus.', choices: ['in', 'on', 'by', 'with'], answer: 0, why: 'in chorus「声をそろえて」。in unison と同じく in を使う。' },
     ],
   },
   {
@@ -8651,9 +8651,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Water boils at a temperature of 100 degrees.', ja: '水は100度の温度でふっとうする。' },
     ],
     questions: [
-      { sentence: 'The bridge was built at a ___ of ten million dollars.', choices: ['cost', 'costly', 'costs'], answer: 0, why: 'at a cost of ～「～の費用で」。a のあとは単数の名詞 cost。' },
-      { sentence: 'The shop sells these T-shirts at a ___ of 1,500 yen.', choices: ['price', 'priced', 'pricing'], answer: 0, why: 'at a price of ～「～の値段で」。a のあとは名詞 price。' },
-      { sentence: 'Keep the milk at a ___ of below 10 degrees.', choices: ['temperature', 'temperate', 'temperatures'], answer: 0, why: 'at a temperature of ～「～の温度で」。a のあとは単数の名詞 temperature。' },
+      { sentence: 'The new stadium was completed ___ a cost of over two billion yen.', choices: ['at', 'in', 'with', 'for'], answer: 0, why: 'at a cost of ～「～の費用で」。値段・費用・速度・温度などの「点」を表す at。' },
+      { sentence: 'Used cars are often sold ___ a price well below their original value.', choices: ['at', 'on', 'in', 'by'], answer: 0, why: 'at a price「～の値段で」。値段・費用・速度などの「点」を表す at。' },
+      { sentence: 'The vaccine must be stored ___ a temperature of minus seventy degrees.', choices: ['at', 'in', 'on', 'under'], answer: 0, why: 'at a temperature of ～「～の温度で」。温度・速度などの数値の前は at。' },
     ],
   },
   {
@@ -8668,9 +8668,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is a vegetarian. In other words, she doesn’t eat meat.', ja: '彼女はベジタリアンだ。言いかえれば、肉を食べない。' },
     ],
     questions: [
-      { sentence: 'In a ___, our school trip was a great success.', choices: ['word', 'words', 'wording'], answer: 0, why: 'in a word「ひとことで言えば」。a のあとは単数 word。' },
-      { sentence: 'He is my mother’s father. In other ___, he is my grandfather.', choices: ['words', 'word', 'wordy'], answer: 0, why: 'in other words「言いかえれば」。words と複数形にする。' },
-      { sentence: 'I’ll come back in a week, ___ is, next Friday.', choices: ['that', 'this', 'it'], answer: 0, why: 'that is「つまり」。決まった言い方で that を使う。' },
+      { sentence: 'The plan is too expensive, too slow, and too risky. ___ a word, it will not work.', choices: ['In', 'At', 'On', 'By'], answer: 0, why: 'in a word「ひとことで言えば」。前置詞は in。at a word などとは言わない。' },
+      { sentence: 'He rarely spends money on anything. In other ___, he is quite stingy.', choices: ['words', 'word', 'terms', 'ways'], answer: 0, why: 'in other words「言いかえれば」。複数の words。in other terms とは言わない（in terms of ～「～の点で」と混同しない）。' },
+      { sentence: 'The meeting will be held on the first Monday of next month, ___ is, May 4.', choices: ['that', 'which', 'what', 'it'], answer: 0, why: 'that is (to say)「つまり・すなわち」。直前の内容を具体的に言いかえる決まった言い方。which is では前の文全体を受ける関係詞になり、言いかえの意味にならない。' },
     ],
   },
   {

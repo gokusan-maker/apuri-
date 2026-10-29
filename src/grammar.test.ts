@@ -230,3 +230,21 @@ describe('文法のレベル', () => {
     expect(gradeOf('prep-idiom-inmyopinion')).toBe('中3')
   })
 })
+
+describe('高校の文法問題のむずかしさ', () => {
+  // まちがいの選択肢が答えと同じつづりで始まる（品詞ちがいだけの）問題
+  const formOnly = (q: { choices: string[] }) => q.choices.every((c) => c.slice(0, 3).toLowerCase() === q.choices[0].slice(0, 3).toLowerCase())
+  const hs = GRAMMAR.filter((u) => gradeOf(u.id) === '高校').flatMap((u) => u.questions)
+  it('品詞ちがいだけの4択はへらしていく（ふえたら失敗）', () => {
+    expect(hs.filter(formOnly).length).toBeLessThanOrEqual(266)
+  })
+  it('見直した単元は4択で、品詞ちがいだけの問題がない', () => {
+    for (const id of ['prep-idiom-inaword', 'prep-idiom-atspeed', 'prep-idiom-latest', 'prep-idiom-condition']) {
+      const u = GRAMMAR.find((x) => x.id === id)!
+      for (const q of u.questions) {
+        expect(q.choices).toHaveLength(4)
+        expect(formOnly(q), q.sentence).toBe(false)
+      }
+    }
+  })
+})
