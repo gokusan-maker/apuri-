@@ -362,3 +362,20 @@ it('デザイン60：コインがたりないときにキャラガチャを押�
   expect(screen.getByRole('button', { name: `🐣 キャラガチャを引く 🪙${CHARA_PRICE}` })).toHaveClass('gacha-shake')
   expect(screen.getByText('🪙 キャラガチャにはコインがあと 10 たりないよ')).toBeInTheDocument()
 })
+
+it('デザイン61：キャラガチャで新しいキャラが出ると、図鑑のそのキャラが光ってうまる', async () => {
+  const { CHARA_PRICE } = await import('./gacha')
+  const { useState } = await import('react')
+  const { SPECIES } = await import('./monster')
+  const turtle = SPECIES.find((s) => s.id === 'turtle')!
+  function Wrap() {
+    const [owned, setOwned] = useState(['mochi'])
+    return <Gacha coins={CHARA_PRICE} members={2} onDraw={() => null} ownedSpecies={owned} onChara={() => (setOwned([...owned, 'turtle']), { kind: kindOf('normal'), species: turtle })} />
+  }
+  render(<Wrap />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  fireEvent.click(screen.getByRole('button', { name: `🐣 キャラガチャを引く 🪙${CHARA_PRICE}` }))
+  const item = screen.getByRole('button', { name: new RegExp(`^${turtle.name}（`) }).closest('li')!
+  expect(item).toHaveClass('got')
+  expect(item).toHaveClass('fresh')
+})

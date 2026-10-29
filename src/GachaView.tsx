@@ -93,9 +93,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
   const [picks, setPicks] = useState<number[] | null>(null) // 交換する子をえらんでいるところ
   const [tab, setTab] = useState<'egg' | 'chara'>('egg') // ガチャの種類
   const [charaGot, setCharaGot] = useState('') // キャラガチャで出た子の名前
+  const [freshId, setFreshId] = useState('') // 図鑑にはじめてのったキャラ（光ってうまる）
   const drawChara = () => {
     const k = onChara?.() ?? null
     if (!k) return
+    setFreshId(k.species.id !== 'mochi' && !(ownedSpecies ?? []).includes(k.species.id) ? k.species.id : '')
     setReveal([k])
     record(k)
     setCharaGot(`${k.kind.id === 'normal' ? '' : `${k.kind.name}の`}${k.species.name}`)
@@ -174,7 +176,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🎉 {charaGot}が仲間になった！ 「記録」→「あいぼう」で相棒にできるよ
             </p>
           )}
-          {ownedSpecies && <CharBook owned={ownedSpecies} />}
+          {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} />}
         </div>
       ) : (
         <>
@@ -473,7 +475,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
           🏰 城のボーナス：レアが出やすさ +{Math.round(castleLuck(castles) * 100)}%（制覇した城 {castles}）
         </p>
       )}
-      {ownedSpecies && <CharBook owned={ownedSpecies} />}
+      {ownedSpecies && <CharBook owned={ownedSpecies} fresh={freshId} />}
       {log.length > 0 && (
         <details className="gacha-odds gacha-log chip-fold cf-4">
           <summary>最近のガチャ（{log.length}回）</summary>
@@ -645,7 +647,7 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
 }
 
 // キャラクター図鑑：ガチャで出るキャラ全部。まだ会っていない子はシルエットと「？？？」
-function CharBook({ owned }: { owned: string[] }) {
+function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
   const got = new Set(['mochi', ...owned])
   const [pick, setPick] = useState<string | null>(null)
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
@@ -664,7 +666,7 @@ function CharBook({ owned }: { owned: string[] }) {
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (
-            <li key={sp.id} className={`${ok ? 'got' : 'locked'}${pick === sp.id ? ' picked' : ''}`}>
+            <li key={sp.id} className={`${ok ? 'got' : 'locked'}${pick === sp.id ? ' picked' : ''}${ok && fresh === sp.id ? ' fresh' : ''}`}>
               <button className="char-book-pick" aria-label={ok ? `${sp.name}（${t.name}）` : 'まだ会っていないキャラクター'} onClick={() => setPick(pick === sp.id ? null : sp.id)}>
                 <MonsterFigure form={withSpecies(FORMS[2], sp.id)} hidden={!ok} />
                 <span className="char-book-name">{ok ? sp.name : '？？？'}</span>
