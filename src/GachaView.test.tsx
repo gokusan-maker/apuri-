@@ -119,7 +119,7 @@ it('3連ガチャは3つの結果が並び、いちばんレアな確定演出�
 
 it('3連ガチャはコインか仲間の空きが足りないと押せない', () => {
   const { rerender } = render(<Gacha coins={GACHA_PRICE * 2} members={1} onDraw={() => null} onDrawMulti={() => []} />)
-  expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
+  expect(screen.getByRole('button', { name: /3連ガチャ/ })).toHaveAttribute('aria-disabled', 'true') // コイン不足は押すと首をふるだけ（デザイン59）
   rerender(<Gacha coins={GACHA_PRICE * 3} members={PARTY_MAX - 2} onDraw={() => null} onDrawMulti={() => []} />)
   expect(screen.getByRole('button', { name: /3連ガチャ/ })).toBeDisabled()
 })
@@ -338,4 +338,16 @@ it('デザイン58：コインがたりないときにガチャを押すと、�
   expect(onDraw).not.toHaveBeenCalled()
   expect(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` })).toHaveClass('gacha-shake')
   expect(screen.getByText(/コインがあと 5 たりない/)).toBeInTheDocument()
+})
+
+it('デザイン59：コインがたりないときに3連・5連ガチャを押すと、そのボタンが首をふる', () => {
+  const onDrawMulti = vi.fn(() => [])
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => null} onDrawMulti={onDrawMulti} />)
+  const b5 = screen.getByRole('button', { name: /5連ガチャ/ })
+  expect(b5).toHaveAttribute('aria-disabled', 'true')
+  fireEvent.click(b5)
+  expect(onDrawMulti).not.toHaveBeenCalled()
+  expect(screen.getByRole('button', { name: /5連ガチャ/ })).toHaveClass('gacha-shake')
+  expect(screen.getByRole('button', { name: /3連ガチャ/ })).not.toHaveClass('gacha-shake')
+  expect(screen.getByText(/5連ガチャにはコインがあと/)).toBeInTheDocument()
 })

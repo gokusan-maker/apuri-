@@ -77,6 +77,12 @@ type Props = {
 export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, castles = 0, points, onExchange, stickers, boostColor, luckyBag, onLuckyBag, dragonUp = false, pickup, stepLeft, price = GACHA_PRICE, onDraw, free = false, onFree, rareTickets = 0, srTickets = 0, onTier, tradeCount, tradeDisabled = false, onTrade, tradePool, onDrawMulti, onRaise, onNameNew, ownedSpecies, onChara, charaPrice = CHARA_PRICE }: Props) {
   const [result, setResult] = useState<(GachaResult & { key: number; first?: boolean }) | null>(null)
   const [shake, setShake] = useState(0) // コインがたりないのに押した回数（首をふる）
+  const [shakeM, setShakeM] = useState(0) // 首をふった連ガチャ（3 か 5）
+  const [shakeN, setShakeN] = useState(0)
+  const shakeAt = (n: number) => {
+    setShakeM(n)
+    setShakeN(shakeN + 1)
+  }
   const [log, setLog] = useState(loadGachaLog)
   const [naming, setNaming] = useState<string | null>(null) // 出た子の名前の入力中
   const [named, setNamed] = useState('')
@@ -113,6 +119,8 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
     }
   }
   const canMulti = !!onDrawMulti && members + MULTI <= PARTY_MAX && coins >= price * MULTI
+  const poor3 = members + MULTI <= PARTY_MAX && coins < price * MULTI // 空きはあるのにコインがたりない（押すと首をふる）
+  const poor5 = members + MULTI5 <= PARTY_MAX && coins < price * MULTI5
   return (
     <div className="gacha">
       {reveal && reveal.length > 0 && (
@@ -182,9 +190,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
       <div className="gacha-multi">
       {onDrawMulti && !full && (
         <button
-          className="good gacha-btn multi"
-          disabled={!canMulti}
+          key={`multi3-${shakeM === 3 ? shakeN : 0}`}
+          className={`good gacha-btn multi${poor3 ? ' short' : ''}${poor3 && shakeM === 3 ? ' gacha-shake' : ''}`}
+          disabled={!canMulti && !poor3}
+          aria-disabled={poor3}
           onClick={() => {
+            if (poor3) return shakeAt(3)
             const list = onDrawMulti(MULTI)
             if (list.length === 0) return
             setResult(null)
@@ -202,9 +213,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
       )}
       {onDrawMulti && !full && (
         <button
-          className="good gacha-btn multi multi5"
-          disabled={!(members + MULTI5 <= PARTY_MAX && coins >= price * MULTI5)}
+          key={`multi5-${shakeM === 5 ? shakeN : 0}`}
+          className={`good gacha-btn multi multi5${poor5 ? ' short' : ''}${poor5 && shakeM === 5 ? ' gacha-shake' : ''}`}
+          disabled={!(members + MULTI5 <= PARTY_MAX && coins >= price * MULTI5) && !poor5}
+          aria-disabled={poor5}
           onClick={() => {
+            if (poor5) return shakeAt(5)
             const list = onDrawMulti(MULTI5)
             if (list.length === 0) return
             setResult(null)
@@ -221,6 +235,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
         </button>
       )}
       </div>
+      {shakeM > 0 && (shakeM === 3 ? poor3 : poor5) && (
+        <p className="gacha-short-note" role="status">
+          🪙 {shakeM}連ガチャにはコインがあと {price * shakeM - coins} たりないよ
+        </p>
+      )}
       {full && <p className="stats-note gacha-full-hint">なかまがいっぱい！ 「記録」→「あいぼう」の「なかま」で 👋 おわかれすると、コインにかわってガチャを続けられるよ。</p>}
       {onTrade && tradeCount !== undefined && (
         <div className="gacha-trade" aria-label={`なかま10体でチケット1まい（いま ${Math.min(tradeCount, MEMBERS_FOR_TICKET)}/${MEMBERS_FOR_TICKET}体）`}>
