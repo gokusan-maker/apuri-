@@ -653,3 +653,13 @@ it('デザイン74：ボスに勝つと、いっしょに戦った相棒が結�
   expect(screen.getByLabelText('モチも大よろこび！')).toBeInTheDocument()
   expect(document.querySelector('.win-partner-fig svg')).not.toBeNull()
 })
+
+it('デザイン86：相棒のヒントは「1戦に1回」と書かれ、使ったあとの問題では「使ったよ」と出る', async () => {
+  const { FORMS } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={50} traits={[]} partner={{ form: FORMS[1], name: 'モチ' }} />)
+  const btn = screen.getByRole('button', { name: /💡 ヒント1戦に1回/ })
+  fireEvent.click(btn)
+  answer(true)
+  fireEvent.click(screen.getByText('次へ'))
+  expect(screen.getByText('💡 ヒントはこのボス戦で使ったよ')).toBeInTheDocument()
+})

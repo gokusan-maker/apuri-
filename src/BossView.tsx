@@ -1075,9 +1075,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               title={`${partner.name}が考え方のヒントをくれる`}
               onClick={() => setHintAt({ index, hide: -1 })}
             >
-              💡 ヒント
+              💡 ヒント<small className="hint-once">1戦に1回</small>
             </button>
           )}
+          {/* デザイン86：相棒のヒントを使ったあとは、使ったことを小さく出す */}
+          {partner && !('passage' in q) && hintAt !== null && hintAt.index !== index && picked === null && <p className="hint-used">💡 ヒントはこのボス戦で使ったよ</p>}
           {!('passage' in q) && hintAt?.index === index && picked === null && (
             <p className="read-hint-text boss-hint-text">💡 {(q as { hint?: string }).hint ?? wordHint(q.word, q.choices[q.answer])}</p>
           )}
