@@ -13440,6 +13440,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-thermometer',
+    title: 'How We Learned to Measure Heat',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Today we can check the temperature in a second, but for most of history people could only say \"hot\" or \"cold.\" Around 1600, scientists in Italy made a glass tube ( A ) with water and air. When the air got warmer, the water moved. It showed changes in heat, but it had no numbers.",
+      "Later, inventors began to use mercury or alcohol inside thin glass tubes and added a scale. One scale, still used in the United States, was made in the early 1700s.",
+      "In 1742, a Swedish scientist named Anders Celsius created another scale. Surprisingly, his first scale was upside down: 0 was the point ( B ) water boiled, and 100 was the point where it froze. Soon after, others turned it the other way around, and that is the scale most of the world uses today.",
+      "Thanks to these ideas, doctors can find a fever quickly, and we can choose the right clothes before we go out.",
+    ],
+    ja: [
+      '今日では一瞬で温度を確かめられるが、歴史のほとんどのあいだ、人々は「暑い」か「寒い」かしか言えなかった。1600年ごろ、イタリアの科学者たちは、水と空気を入れたガラスの管を作った。空気があたたかくなると水が動いた。熱の変化はわかったが、数字はなかった。',
+      'のちに発明家たちは、細いガラスの管の中に水銀やアルコールを使い、目もりをつけはじめた。今もアメリカで使われている目もりの1つは、1700年代のはじめに作られた。',
+      '1742年、スウェーデンの科学者アンデルス・セルシウスが別の目もりを作った。おどろいたことに、彼の最初の目もりは上下が逆だった。0が水のふっとうする点で、100が水のこおる点だったのだ。まもなく、ほかの人たちがそれを逆向きにして、それが今日、世界のほとんどで使われている目もりになった。',
+      'こうした考えのおかげで、医者はすばやく熱を見つけられ、私たちは出かける前にちょうどよい服を選べるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['filled', 'filling', 'fills', 'to fill'], answer: 0, why: '「水と空気で満たされたガラスの管」なので、過去分詞 filled がうしろから tube を説明する（be filled with ～「～で満たされている」）。filling・fills・to fill は入らない。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞 the point（点・場所）で、うしろに完全な文（water boiled）が続くので関係副詞 where。which・what はうしろに欠けた部分が必要で、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'upside down',
+      choices: ['with the top at the bottom', 'very easy to read', 'too small to see', 'painted in many colors'],
+      answer: 0,
+      why: 'upside down は「上下が逆さまに」。0 と 100 の位置が今とは逆だったという意味。',
+    },
+    order: {
+      words: ['turned', 'it', 'the', 'other', 'way', 'around'],
+      rest: '',
+      answer: 'turned it the other way around',
+      ja: 'それを逆向きにした（the other way around「逆に」）',
+    },
+    tf: [
+      { statement: '1600年ごろのガラスの管には、すでに数字の目もりがあった。', answer: false, why: '第1段落 It showed changes in heat, but it had no numbers。' },
+      { statement: 'セルシウスの最初の目もりでは、0が水のふっとうする点だった。', answer: true, why: '第3段落 0 was the point where water boiled。' },
+      { statement: '温度計のおかげで、医者はすばやく熱を見つけられる。', answer: true, why: '第4段落 doctors can find a fever quickly。' },
+    ],
+    qa: [
+      { q: 'What was surprising about Celsius’s first scale?', choices: ['It was upside down.', 'It had no numbers.', 'It used only water.', 'It was made in Italy.'], answer: 0, why: '第3段落 Surprisingly, his first scale was upside down。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
