@@ -15172,6 +15172,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What Really Happened During Tulip Mania?', 'How to Grow Tulips at Home', 'The Life of Charles Mackay', 'Why Prices Always Rise'], answer: 0, why: '全体として、よく知られたチューリップ・バブルの話を当時の記録と照らし合わせ、何が本当に起きたのかを問いなおしている。' },
   },
   {
+    id: 'kyotsu-microwave-oven',
+    title: 'The Melted Chocolate Bar That Changed Cooking',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Many important inventions were not planned. They began when someone noticed something unexpected and, instead of ignoring it, asked why it had happened. The microwave oven, which is now found in kitchens all over the world, is a good example of how curiosity about a small accident can lead to a product that changes everyday life.",
+      "In the 1940s, an American engineer named Percy Spencer was working for a company that made equipment for radar, a technology used to detect aircraft and ships. One of the key parts of a radar system was a device called a magnetron, which produced microwaves, a kind of invisible energy. According to the well-known story, one day around 1945, while Spencer was standing near a working magnetron, he noticed that a chocolate bar in his pocket had melted.",
+      "Other people had probably experienced similar things before, but Spencer decided to investigate. He placed some corn kernels near the device and watched them pop. He then tried an egg, which heated up so quickly that it burst. These simple experiments convinced him that microwaves could be used to cook food, and his company soon applied for a patent on the idea.",
+      "The first microwave ovens, however, were very different from the ones we use today. Introduced in 1947, they were nearly as tall as an adult, weighed hundreds of kilograms, and were extremely expensive. ( A ), they were mainly used by restaurants, ships, and railway companies rather than by ordinary families. It took about twenty more years of improvements before smaller and cheaper models that could sit on a kitchen counter became widely available.",
+      "The story of the microwave oven shows that discovery often depends not only on luck but also on the readiness to notice and question. As the scientist Louis Pasteur is often quoted as saying, chance favors the prepared mind. Spencer’s melted chocolate would have meant nothing ( B ) he had not been curious enough to ask what had caused it. In the same way, many of the conveniences we now take for granted began with someone who refused to ignore a small surprise, ( C ) seemed unimportant at the time.",
+    ],
+    ja: [
+      '多くの大切な発明は、計画されたものではなかった。だれかが思いがけないことに気づき、それを無視するかわりに、なぜそれが起きたのかを問うたときに始まったのである。今では世界中の台所にある電子レンジは、小さな事故への好奇心が日常生活を変える製品につながりうることを示すよい例である。',
+      '1940年代、パーシー・スペンサーというアメリカの技術者は、航空機や船を見つけるのに使われる技術であるレーダーの装置を作る会社で働いていた。レーダーの主要な部品のひとつは、目に見えないエネルギーの一種であるマイクロ波を出すマグネトロンという装置だった。よく知られた話によれば、1945年ごろのある日、スペンサーは動いているマグネトロンの近くに立っていたとき、ポケットの中のチョコレートがとけていることに気づいた。',
+      'ほかの人もおそらく以前に似たような経験をしていたが、スペンサーは調べてみることにした。彼はトウモロコシの粒を装置の近くに置き、それがはじけるのを見た。次に卵を試したところ、あまりに速く熱くなったので破裂してしまった。こうした簡単な実験によって、彼はマイクロ波を料理に使えると確信し、彼の会社はまもなくこのアイデアの特許を申請した。',
+      'しかし、最初の電子レンジは今わたしたちが使っているものとはまったくちがっていた。1947年に登場したそれは、おとなの背たけほどの高さがあり、重さは何百キログラムもあり、とても高価だった。そのため、おもに一般の家庭ではなく、レストランや船や鉄道会社で使われた。台所の調理台に置けるより小さく安い型が広く手に入るようになるまでには、さらに20年ほどの改良が必要だった。',
+      '電子レンジの話は、発見が運だけでなく、気づいて問いかける心がまえにもよることを示している。科学者ルイ・パスツールのことばとしてよく引用されるように、偶然は準備のできた心にほほえむのである。スペンサーのとけたチョコレートも、もし彼が何が原因かを問うほど好奇心をもっていなかったら、何の意味ももたなかっただろう。同じように、今わたしたちがあたりまえだと思っている便利なものの多くは、当時は重要でないように思えた小さなおどろきを無視しなかっただれかから始まったのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['As a result', 'For example', 'In contrast', 'Nevertheless'], answer: 0, why: '「大きく重く高価だった。その結果、おもにレストランや船で使われた」と結果を表すので As a result。' },
+      { id: 'B', choices: ['if', 'because', 'unless', 'although'], answer: 0, why: 'would have meant nothing if he had not been curious「もし好奇心がなかったら何の意味もなかっただろう」。仮定法過去完了の if。unless he had not と二重否定になるので不可。' },
+      { id: 'C', choices: ['which', 'what', 'where', 'who'], answer: 0, why: '先行詞 a small surprise を受け、うしろに主語が欠けている（seemed unimportant）ので、非制限用法の which。who は人に使う。' },
+    ],
+    tf: [
+      { statement: 'スペンサーは、レーダーの装置を作る会社で働いていた。', answer: true, why: '第2段落 working for a company that made equipment for radar。' },
+      { statement: 'スペンサーは、チョコレートがとけたことを気にせず、すぐに仕事にもどった。', answer: false, why: '第3段落 Spencer decided to investigate … placed some corn kernels near the device。' },
+      { statement: '最初の電子レンジは、小さくて安かったので、すぐに多くの家庭に広まった。', answer: false, why: '第4段落 nearly as tall as an adult, weighed hundreds of kilograms, and were extremely expensive … mainly used by restaurants, ships, and railway companies。' },
+      { statement: '筆者は、発見には運だけでなく、気づいて問いかける心がまえも必要だと考えている。', answer: true, why: '第5段落 discovery often depends not only on luck but also on the readiness to notice and question。' },
+    ],
+    qa: [
+      { q: 'What did Spencer’s experiment with an egg show?', choices: ['Microwaves could heat food very quickly.', 'Eggs cannot be cooked with radar.', 'Magnetrons were dangerous to humans.', 'Corn and eggs cook at the same speed.'], answer: 0, why: '第3段落 an egg, which heated up so quickly that it burst … convinced him that microwaves could be used to cook food。' },
+      { q: 'What does "chance favors the prepared mind" mean in this passage?', choices: ['Lucky accidents lead to discoveries only for people ready to notice and question them.', 'People should prepare meals carefully before cooking.', 'Inventions always come from long planning, not from chance.', 'Only famous scientists can make discoveries.'], answer: 0, why: '第5段落：運（偶然）は、気づいて問いかける準備のできた人にだけ発見をもたらすという意味。スペンサーの例がそれを示している。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ふしぎに思って実験してみた', 'トウモロコシの育て方', '特許の取り方', '卵の安全な料理法'], answer: 0, why: '第3段落は、スペンサーがとけたチョコレートを調べるためにトウモロコシや卵で実験したことを述べている。' },
+      { para: 3, choices: ['最初の電子レンジは大きく高価だった', '鉄道会社の歴史', 'レストランの料理の変化', '台所の設計のしかた'], answer: 0, why: '第4段落は、最初の電子レンジが大きく重く高価で、家庭に広まるまで約20年かかったことを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
