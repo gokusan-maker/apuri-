@@ -56,6 +56,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   mouse: { streak: ['チューッと大正解！', 'ちょこまか、連続正解！'], wrong: ['チーズを食べて、もう一回！', '小さな穴から、もう一度のぞいてみよう！'] },
   snail: { streak: ['ゆっくり、でも大正解！', 'にょろにょろ、連続正解！'], wrong: ['からにこもって、もう一回！', 'あじさいの葉で、ひと休み！'] },
   badger: { streak: ['ほりあてた、大正解！', 'ざくざく、連続正解！'], wrong: ['もう少し深くほってみよう！', '穴でひと休みして、次いこう！'] },
+  jellyfish: { streak: ['ふわふわ、大正解！', 'ゆらゆら、連続正解！'], wrong: ['波にまかせて、もう一回！', 'ぷかぷかうかんで、気をとりなおそう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -121,6 +122,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   mouse: { streak: [['Quick as a mouse!', 'ネズミみたいにすばやい！']], wrong: [['Squeak! Try again.', 'チュー！ もう一回。']] },
   snail: { streak: [['Little by little!', '少しずつ、確実に！']], wrong: [['Take your time and try again.', 'ゆっくりでいいよ、もう一回。']] },
   badger: { streak: [['You dug it out!', 'ほり出したね！']], wrong: [['Dig a little deeper.', 'もう少し深くほろう。']] },
+  jellyfish: { streak: [['Going with the flow!', '流れにのってるね！']], wrong: [['Float back and try again.', 'ふわっともどって、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }
