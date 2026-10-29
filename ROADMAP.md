@@ -77,7 +77,8 @@
   - [x] ⑪ I wonder if・not ～ing・知覚動詞＋O＋過去分詞・主語と動詞の一致・number / amount・end up ～ing・hesitate to・know better than・devote oneself to ～ing・be sure of / to の10単元に4つ目の選択肢（669→639）
   - [x] ⑫ so far / by then の時制・afraid of / to・go on ～ing / to・It seems that・無生物主語・remain seated・had hoped・likely that / to・仮定法の混合・Were it not for の10単元に4つ目の選択肢（639→609）
   - [x] ⑬ try ～ing / to・mean ～ing / to・lie / lay・rise / raise・its / it’s・their / there・a friend of mine・差の by・数えられない名詞・名詞の数と動詞の10単元に4つ目の選択肢（609→579）
-  - [ ] ⑭ つづきの10単元を4択に
+  - [x] ⑭ What do you say to ～ing・in / within・動名詞をとる動詞・不定詞をとる動詞・句動詞と代名詞・carry out・look up to・get along with・due to・owe A to B の10単元に4つ目の選択肢（579→549）
+  - [ ] ⑮ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。

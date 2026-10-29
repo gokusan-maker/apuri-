@@ -5149,9 +5149,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The new library is due to open next month.', ja: '新しい図書館は来月開館する予定だ。' },
     ],
     questions: [
-      { sentence: 'The game was canceled ___ to the rain.', choices: ['due', 'because', 'since'], answer: 0, why: 'due to ＋ 名詞「～が原因で」。because to・since to という形はない。' },
-      { sentence: 'The train is due ___ arrive at 3:00.', choices: ['to', 'for', 'at'], answer: 0, why: 'be due to ＋ 原形「～する予定だ」。' },
-      { sentence: 'Owing ___ the strike, there were no buses.', choices: ['to', 'for', 'of'], answer: 0, why: 'owing to ～「～が原因で」。' },
+      { sentence: 'The game was canceled ___ to the rain.', choices: ['due', 'because', 'since', 'for'], answer: 0, why: 'due to ＋ 名詞「～が原因で」。because to・since to という形はない。' },
+      { sentence: 'The train is due ___ arrive at 3:00.', choices: ['to', 'for', 'at', 'on'], answer: 0, why: 'be due to ＋ 原形「～する予定だ」。' },
+      { sentence: 'Owing ___ the strike, there were no buses.', choices: ['to', 'for', 'of', 'by'], answer: 0, why: 'owing to ～「～が原因で」。' },
     ],
   },
   {
@@ -5166,9 +5166,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How much do I owe you for the tickets?', ja: 'チケット代、いくら借りているかな。' },
     ],
     questions: [
-      { sentence: 'I owe my success ___ my teachers.', choices: ['to', 'for', 'with'], answer: 0, why: 'owe A to B「A は B のおかげだ」。' },
-      { sentence: 'How much do I ___ you?', choices: ['owe', 'own', 'have'], answer: 0, why: 'owe 人 お金「人にお金を借りている」。own は「所有する」。' },
-      { sentence: 'She owes her life ___ the doctor.', choices: ['to', 'by', 'from'], answer: 0, why: 'owe A to B「A は B のおかげだ」。命があるのは医師のおかげ。' },
+      { sentence: 'I owe my success ___ my teachers.', choices: ['to', 'for', 'with', 'at'], answer: 0, why: 'owe A to B「A は B のおかげだ」。' },
+      { sentence: 'How much do I ___ you?', choices: ['owe', 'own', 'have', 'owed'], answer: 0, why: 'owe 人 お金「人にお金を借りている」。own は「所有する」。' },
+      { sentence: 'She owes her life ___ the doctor.', choices: ['to', 'by', 'from', 'with'], answer: 0, why: 'owe A to B「A は B のおかげだ」。命があるのは医師のおかげ。' },
     ],
   },
   {
@@ -5183,9 +5183,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I can\'t put up with his rude jokes.', ja: '彼の失礼な冗談にはがまんできない。' },
     ],
     questions: [
-      { sentence: 'Many students look up ___ their coach.', choices: ['to', 'on', 'with'], answer: 0, why: 'look up to ～「～を尊敬する」。' },
-      { sentence: 'I can\'t put up ___ this noise any longer.', choices: ['with', 'to', 'on'], answer: 0, why: 'put up with ～「～をがまんする」。' },
-      { sentence: 'Don\'t look down ___ people who are different.', choices: ['on', 'to', 'with'], answer: 0, why: 'look down on ～「～を見下す」。' },
+      { sentence: 'Many students look up ___ their coach.', choices: ['to', 'on', 'with', 'for'], answer: 0, why: 'look up to ～「～を尊敬する」。' },
+      { sentence: 'I can\'t put up ___ this noise any longer.', choices: ['with', 'to', 'on', 'for'], answer: 0, why: 'put up with ～「～をがまんする」。' },
+      { sentence: 'Don\'t look down ___ people who are different.', choices: ['on', 'to', 'with', 'for'], answer: 0, why: 'look down on ～「～を見下す」。' },
     ],
   },
   {
@@ -5200,9 +5200,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We ran out of time before the end of the test.', ja: 'テストの終わりまでに時間が足りなくなった。' },
     ],
     questions: [
-      { sentence: 'I get along well ___ my classmates.', choices: ['with', 'to', 'for'], answer: 0, why: 'get along with ～「～と仲よくやっていく」。' },
-      { sentence: 'We have run out ___ milk.', choices: ['of', 'from', 'with'], answer: 0, why: 'run out of ～「～を使い切る」。' },
-      { sentence: 'She came up ___ a great idea.', choices: ['with', 'to', 'for'], answer: 0, why: 'come up with ～「～を思いつく」。' },
+      { sentence: 'I get along well ___ my classmates.', choices: ['with', 'to', 'for', 'at'], answer: 0, why: 'get along with ～「～と仲よくやっていく」。' },
+      { sentence: 'We have run out ___ milk.', choices: ['of', 'from', 'with', 'for'], answer: 0, why: 'run out of ～「～を使い切る」。' },
+      { sentence: 'She came up ___ a great idea.', choices: ['with', 'to', 'for', 'at'], answer: 0, why: 'come up with ～「～を思いつく」。' },
     ],
   },
   {
@@ -5217,9 +5217,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Your hat fell. Please pick it up.', ja: '帽子が落ちたよ。拾ってね。' },
     ],
     questions: [
-      { sentence: 'It\'s dark. Please turn ___.', choices: ['it on', 'on it', 'it'], answer: 0, why: '代名詞 it は動詞と副詞の間：turn it on。' },
-      { sentence: 'Your coat is on the floor. Pick ___.', choices: ['it up', 'up it', 'up'], answer: 0, why: '代名詞 it は動詞と副詞の間：pick it up。' },
-      { sentence: 'These shoes are too small. I\'ll take ___.', choices: ['them off', 'off them', 'off'], answer: 0, why: '代名詞 them は動詞と副詞の間：take them off。' },
+      { sentence: 'It\'s dark. Please turn ___.', choices: ['it on', 'on it', 'it', 'on'], answer: 0, why: '代名詞 it は動詞と副詞の間：turn it on。' },
+      { sentence: 'Your coat is on the floor. Pick ___.', choices: ['it up', 'up it', 'up', 'it'], answer: 0, why: '代名詞 it は動詞と副詞の間：pick it up。' },
+      { sentence: 'These shoes are too small. I\'ll take ___.', choices: ['them off', 'off them', 'off', 'them of'], answer: 0, why: '代名詞 them は動詞と副詞の間：take them off。' },
     ],
   },
   {
@@ -5234,9 +5234,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The concert was called off because of the storm.', ja: '嵐のため、コンサートは中止になった。' },
     ],
     questions: [
-      { sentence: 'The scientists carried ___ an experiment.', choices: ['out', 'away', 'down'], answer: 0, why: 'carry out ～「～を実行する」。' },
-      { sentence: 'The game was called ___ because of rain.', choices: ['off', 'out', 'up'], answer: 0, why: 'call off ～「～を中止する」の受け身。' },
-      { sentence: 'I want to find ___ the truth.', choices: ['out', 'off', 'away'], answer: 0, why: 'find out ～「～を見つけ出す」。' },
+      { sentence: 'The scientists carried ___ an experiment.', choices: ['out', 'away', 'down', 'up'], answer: 0, why: 'carry out ～「～を実行する」。' },
+      { sentence: 'The game was called ___ because of rain.', choices: ['off', 'out', 'up', 'down'], answer: 0, why: 'call off ～「～を中止する」の受け身。' },
+      { sentence: 'I want to find ___ the truth.', choices: ['out', 'off', 'away', 'up'], answer: 0, why: 'find out ～「～を見つけ出す」。' },
     ],
   },
   {
@@ -5251,9 +5251,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I always put off cleaning my room.', ja: '私はいつも部屋のそうじを先のばしにしてしまう。' },
     ],
     questions: [
-      { sentence: 'He admitted ___ the window.', choices: ['breaking', 'to break', 'break'], answer: 0, why: 'admit のあとは動名詞 breaking。' },
-      { sentence: 'Try to avoid ___ too much sugar.', choices: ['eating', 'to eat', 'eat'], answer: 0, why: 'avoid のあとは動名詞 eating。' },
-      { sentence: 'Don\'t put off ___ your homework.', choices: ['doing', 'to do', 'do'], answer: 0, why: 'put off のあとは動名詞 doing（off は副詞だがうしろは -ing）。' },
+      { sentence: 'He admitted ___ the window.', choices: ['breaking', 'to break', 'break', 'broke'], answer: 0, why: 'admit のあとは動名詞 breaking。' },
+      { sentence: 'Try to avoid ___ too much sugar.', choices: ['eating', 'to eat', 'eat', 'ate'], answer: 0, why: 'avoid のあとは動名詞 eating。' },
+      { sentence: 'Don\'t put off ___ your homework.', choices: ['doing', 'to do', 'do', 'did'], answer: 0, why: 'put off のあとは動名詞 doing（off は副詞だがうしろは -ing）。' },
     ],
   },
   {
@@ -5268,9 +5268,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The cat pretended to be asleep.', ja: 'そのねこはねむっているふりをした。' },
     ],
     questions: [
-      { sentence: 'She refused ___ the money.', choices: ['to take', 'taking', 'take'], answer: 0, why: 'refuse のあとは to 不定詞 to take。' },
-      { sentence: 'We managed ___ the last train.', choices: ['to catch', 'catching', 'catch'], answer: 0, why: 'manage to ～「なんとか～する」。' },
-      { sentence: 'He pretended ___ asleep.', choices: ['to be', 'being', 'be'], answer: 0, why: 'pretend to ～「～するふりをする」。' },
+      { sentence: 'She refused ___ the money.', choices: ['to take', 'taking', 'take', 'took'], answer: 0, why: 'refuse のあとは to 不定詞 to take。' },
+      { sentence: 'We managed ___ the last train.', choices: ['to catch', 'catching', 'catch', 'caught'], answer: 0, why: 'manage to ～「なんとか～する」。' },
+      { sentence: 'He pretended ___ asleep.', choices: ['to be', 'being', 'be', 'been'], answer: 0, why: 'pretend to ～「～するふりをする」。' },
     ],
   },
   {
@@ -5285,9 +5285,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Why don\'t we study together after school?', ja: '放課後いっしょに勉強しない？' },
     ],
     questions: [
-      { sentence: 'What do you say ___ going for a walk?', choices: ['to', 'for', 'at'], answer: 0, why: 'What do you say to -ing?「～するのはどう？」。' },
-      { sentence: 'Why don\'t we ___ a break?', choices: ['take', 'taking', 'to take'], answer: 0, why: 'Why don\'t we ＋ 原形 ～?「～しませんか」。' },
-      { sentence: 'What do you say to ___ out for dinner?', choices: ['eating', 'eat', 'ate'], answer: 0, why: 'to は前置詞なので、うしろは動名詞 eating。' },
+      { sentence: 'What do you say ___ going for a walk?', choices: ['to', 'for', 'at', 'with'], answer: 0, why: 'What do you say to -ing?「～するのはどう？」。' },
+      { sentence: 'Why don\'t we ___ a break?', choices: ['take', 'taking', 'to take', 'took'], answer: 0, why: 'Why don\'t we ＋ 原形 ～?「～しませんか」。' },
+      { sentence: 'What do you say to ___ out for dinner?', choices: ['eating', 'eat', 'ate', 'to eat'], answer: 0, why: 'to は前置詞なので、うしろは動名詞 eating。' },
     ],
   },
   {
@@ -5302,9 +5302,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The package will arrive within a week.', ja: '荷物は1週間以内に届く。' },
     ],
     questions: [
-      { sentence: 'The bus will come ___ ten minutes.', choices: ['in', 'since', 'ago'], answer: 0, why: '今から「～後に」は in ＋ 時間。' },
-      { sentence: 'Please finish the report ___ a week.', choices: ['within', 'since', 'ago'], answer: 0, why: '「～以内に」は within ＋ 時間。' },
-      { sentence: 'I will be back ___ an hour.', choices: ['in', 'since', 'before'], answer: 0, why: '今から「1時間後に」は in an hour。' },
+      { sentence: 'The bus will come ___ ten minutes.', choices: ['in', 'since', 'ago', 'for'], answer: 0, why: '今から「～後に」は in ＋ 時間。' },
+      { sentence: 'Please finish the report ___ a week.', choices: ['within', 'since', 'ago', 'for'], answer: 0, why: '「～以内に」は within ＋ 時間。' },
+      { sentence: 'I will be back ___ an hour.', choices: ['in', 'since', 'before', 'ago'], answer: 0, why: '今から「1時間後に」は in an hour。' },
     ],
   },
   {
