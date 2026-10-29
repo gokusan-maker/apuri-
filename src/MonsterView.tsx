@@ -525,6 +525,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M74 30 L82 2 L60 22 Z" fill="#fde68a" stroke="#92400e" strokeWidth="1.5" strokeLinejoin="round" />
       </g>
     )
+  if (species === 'manatee')
+    return (
+      <g>
+        {/* 口のまわりのひげ */}
+        <path d="M38 66 L30 64 M38 70 L30 72 M62 66 L70 64 M62 70 L70 72" stroke="#3f4a55" strokeWidth="1.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
