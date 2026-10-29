@@ -1483,3 +1483,24 @@ it('闘技場：10階ごとの「到達！」の札に虹色の光が流れる�
   const css = readFileSync('src/polish.css', 'utf8')
   expect(css).toMatch(/\.arena-levelup::after \{[^}]*animation: levelup-rainbow/)
 })
+
+it('ボス城の階：ボスのHPが半分を切ると、HPの数字が赤く点めつする', async () => {
+  const { BossFloor } = await import('./BossFloorView')
+  const { bossFloorQs, floorBossLook } = await import('./bosscastle')
+  const qs = bossFloorQs('中1', 1)
+  render(<BossFloor title="t" qs={qs} boss={floorBossLook('中1', 1)} onDone={() => {}} onBack={() => {}} />)
+  expect(document.querySelector('.boss-hp-num.hp-danger')).toBeNull()
+  const seen = new Set<boolean>()
+  for (let k = 0; k < qs.length; k++) {
+    fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.bfloor .choice')].find((b) => b.textContent === qs[k].choices[qs[k].answer])!)
+    const bar = screen.queryByRole('progressbar', { name: '階のボスのHP' })
+    if (!bar) break
+    const hp = Number(bar.getAttribute('aria-valuenow'))
+    const max = Number(bar.getAttribute('aria-valuemax'))
+    seen.add(hp > 0 && hp / max < 0.5)
+    expect(!!document.querySelector('.boss-hp-num.hp-danger')).toBe(hp > 0 && hp / max < 0.5)
+    if (hp === 0) break
+    fireEvent.click(screen.getByText(/次へ|結果を見る/))
+  }
+  expect(seen.has(true)).toBe(true) // 半分を切ったところを通った
+})
