@@ -351,3 +351,14 @@ it('デザイン59：コインがたりないときに3連・5連ガチャを押
   expect(screen.getByRole('button', { name: /3連ガチャ/ })).not.toHaveClass('gacha-shake')
   expect(screen.getByText(/5連ガチャにはコインがあと/)).toBeInTheDocument()
 })
+
+it('デザイン60：コインがたりないときにキャラガチャを押すと、ボタンが首をふる', async () => {
+  const { CHARA_PRICE } = await import('./gacha')
+  const onChara = vi.fn(() => null)
+  render(<Gacha coins={CHARA_PRICE - 10} members={2} onDraw={() => null} ownedSpecies={['mochi']} onChara={onChara} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  fireEvent.click(screen.getByRole('button', { name: `🐣 キャラガチャを引く 🪙${CHARA_PRICE}` }))
+  expect(onChara).not.toHaveBeenCalled()
+  expect(screen.getByRole('button', { name: `🐣 キャラガチャを引く 🪙${CHARA_PRICE}` })).toHaveClass('gacha-shake')
+  expect(screen.getByText('🪙 キャラガチャにはコインがあと 10 たりないよ')).toBeInTheDocument()
+})

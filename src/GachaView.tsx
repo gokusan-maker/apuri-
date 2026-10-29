@@ -155,9 +155,20 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               </li>
             ))}
           </ul>
-          <button className="good gacha-btn chara-btn" disabled={full || coins < charaPrice} onClick={drawChara}>
+          <button
+            key={`chara-${shakeM === 1 ? shakeN : 0}`}
+            className={`good gacha-btn chara-btn${!full && coins < charaPrice ? ' short' : ''}${!full && coins < charaPrice && shakeM === 1 ? ' gacha-shake' : ''}`}
+            disabled={full}
+            aria-disabled={!full && coins < charaPrice}
+            onClick={() => (coins < charaPrice ? shakeAt(1) : drawChara())}
+          >
             {full ? '仲間がいっぱい' : `🐣 キャラガチャを引く 🪙${charaPrice}`}
           </button>
+          {shakeM === 1 && !full && coins < charaPrice && (
+            <p className="gacha-short-note" role="status">
+              🪙 キャラガチャにはコインがあと {charaPrice - coins} たりないよ
+            </p>
+          )}
           {charaGot && (
             <p className="chara-gacha-got" role="status">
               🎉 {charaGot}が仲間になった！ 「記録」→「あいぼう」で相棒にできるよ
