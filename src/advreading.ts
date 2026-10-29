@@ -13522,6 +13522,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-guidedog',
+    title: 'A Dog with an Important Job',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Guide dogs are dogs ( A ) help people who cannot see well walk safely. They stop before steps and the edges of roads, and they lead their partners around things in the way, such as bikes or signs.",
+      "A guide dog's training begins when it is still a puppy. For about a year, it lives with a volunteer family. There it learns to stay calm around people, cars, and loud noises. After that, it goes to a special school, where trainers teach it the skills it needs for the job.",
+      "When a guide dog is wearing its harness, it is working and must stay focused. So you should not touch, feed, or call a guide dog ( B ) it is working, even if it looks very friendly. If you want to help, it is better to speak to its partner first.",
+      "Guide dogs give their partners the freedom to go to school, to work, and to many other places. They show us how animals and people can support each other every day.",
+    ],
+    ja: [
+      '盲導犬は、目がよく見えない人が安全に歩けるように助ける犬だ。階段や道のはしの前で止まり、自転車や看板のような、道をふさいでいるもののまわりへパートナーを導く。',
+      '盲導犬の訓練は、まだ子犬のうちに始まる。1年ほどのあいだ、ボランティアの家族といっしょに暮らす。そこで、人や車、大きな音のそばでも落ち着いていられるように学ぶ。そのあと特別な学校に行き、訓練士が仕事に必要な技術を教える。',
+      '盲導犬がハーネスをつけているときは、仕事中なので集中していなければならない。だから、どんなに人なつっこく見えても、仕事中の盲導犬にさわったり、えさをあげたり、呼んだりしてはいけない。手伝いたいときは、まずパートナーに話しかけるほうがよい。',
+      '盲導犬は、パートナーに学校や仕事、ほかの多くの場所へ行く自由をあたえている。動物と人が毎日ささえ合えることを、私たちに教えてくれるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 dogs（動物）で、うしろの help の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['while', 'during', 'despite', 'because of'], answer: 0, why: 'うしろに文（it is working）が続き、「～しているあいだは」を表すので接続詞 while。during・despite・because of は前置詞なので、うしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'stay focused',
+      choices: ['keep paying attention to its work', 'fall asleep quickly', 'play with other dogs', 'run as fast as possible'],
+      answer: 0,
+      why: 'stay focused は「集中し続ける」。仕事に注意をはらい続けるという意味。',
+    },
+    order: {
+      words: ['it', 'is', 'better', 'to', 'speak', 'to', 'its', 'partner'],
+      rest: 'first',
+      answer: 'it is better to speak to its partner',
+      ja: 'パートナーに話しかけるほうがよい（it is better to ～「～するほうがよい」）',
+    },
+    tf: [
+      { statement: '盲導犬は、階段の前で止まる。', answer: true, why: '第1段落 They stop before steps and the edges of roads。' },
+      { statement: '盲導犬は、生まれてすぐに特別な学校に入る。', answer: false, why: '第2段落 For about a year, it lives with a volunteer family. After that, it goes to a special school。' },
+      { statement: '仕事中の盲導犬には、えさをあげてもよい。', answer: false, why: '第3段落 you should not touch, feed, or call a guide dog while it is working。' },
+    ],
+    qa: [
+      { q: 'What should you do if you want to help?', choices: ['Speak to the dog’s partner first.', 'Call the dog’s name loudly.', 'Give the dog some food.', 'Take off its harness.'], answer: 0, why: '第3段落 If you want to help, it is better to speak to its partner first。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
