@@ -6713,9 +6713,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is cold outside, so put on your coat.', ja: '外は寒いから、コートを着なさい。' },
     ],
     questions: [
-      { sentence: 'He turned ___ my invitation politely.', choices: ['down', 'below', 'under'], answer: 0, why: 'turn down ～「～を断る」。below・under は前置詞で、この意味にならない。' },
-      { sentence: "Let's set ___ the tent before dark.", choices: ['up', 'upper', 'uphill'], answer: 0, why: 'set up ～「～を組み立てる」。upper は形容詞、uphill は「坂の上へ」で合わない。' },
-      { sentence: 'This is a nice hat. Can I ___?', choices: ['put it on', 'put on it', 'put it'], answer: 0, why: '目的語が代名詞 it のときは put it on の語順。' },
+      { sentence: 'She was offered the job, but she turned it ___ because the pay was too low.', choices: ['down', 'up', 'off', 'over'], answer: 0, why: 'turn down ～「～を断る」。turn up は「現れる・音量を上げる」、turn off は「消す」。' },
+      { sentence: 'It took us an hour to set ___ the tent.', choices: ['up', 'down', 'off', 'out'], answer: 0, why: 'set up ～「～を組み立てる・設置する」。' },
+      { sentence: 'This is a nice hat. Can I ___?', choices: ['put it on', 'put on it', 'put it', 'wear on it'], answer: 0, why: '目的語が代名詞 it のときは put it on の語順（put on it は不可）。' },
     ],
   },
   {
@@ -6781,9 +6781,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The project was finished ahead of schedule.', ja: 'その計画は予定より早く終わった。' },
     ],
     questions: [
-      { sentence: 'The hotel is close ___ the beach.', choices: ['to', 'of', 'than'], answer: 0, why: 'close to ～「～の近くに」。' },
-      { sentence: 'Our team is two points ahead ___ theirs.', choices: ['of', 'to', 'than'], answer: 0, why: 'ahead of ～「～より先に・リードして」。' },
-      { sentence: 'Please arrive ten minutes prior ___ the interview.', choices: ['to', 'of', 'than'], answer: 0, why: 'prior to ～「～より前に」。' },
+      { sentence: 'The hotel is very close ___ the beach.', choices: ['to', 'by', 'from', 'with'], answer: 0, why: 'close to ～「～の近くに」。' },
+      { sentence: 'Our team is two points ___ of theirs with five minutes left.', choices: ['ahead', 'before', 'front', 'prior'], answer: 0, why: 'ahead of ～「～より先に・～をリードして」。before / prior to は時間の「前」で、得点のリードには使わない。' },
+      { sentence: 'Please check in at least an hour ___ to departure.', choices: ['prior', 'ahead', 'before', 'previous of'], answer: 0, why: 'prior to ～「～より前に」（= before ～）。ahead なら ahead of、before なら before departure で to はいらない。' },
     ],
   },
   {
@@ -7155,9 +7155,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He helped me, so I bought him lunch in return.', ja: '彼が手伝ってくれたので、お返しに昼ごはんをおごった。' },
     ],
     questions: [
-      { sentence: 'Please move your bike. It is in the ___.', choices: ['way', 'ways', 'away'], answer: 0, why: 'in the way「じゃまになって」。the のあとは単数の way。' },
-      { sentence: 'By the ___, have you finished your report?', choices: ['way', 'ways', 'away'], answer: 0, why: 'by the way「ところで」。話題を変えるときに使い、the way の形で決まっている。' },
-      { sentence: 'She gave me a book in ___ for my help.', choices: ['return', 'returned', 'returning'], answer: 0, why: 'in return for ～「～のお返しに」。in のあとは名詞 return。' },
+      { sentence: 'Could you move your bag, please? It’s ___ the way.', choices: ['in', 'on', 'by', 'out of'], answer: 0, why: 'in the way「じゃまになって」。on the way は「途中で」、by the way は「ところで」、out of the way は「じゃまにならない所に」で、どれも意味が合わない。' },
+      { sentence: 'That reminds me — ___ the way, did you finish your report?', choices: ['by', 'in', 'on', 'under'], answer: 0, why: '話題を変える by the way「ところで」。' },
+      { sentence: 'He helped me with my homework, and in ___ I cooked dinner for him.', choices: ['return', 'turn', 'exchange', 'place'], answer: 0, why: 'in return「お返しに」。in turn は「順番に・今度は」で、お礼の意味にはならない。in exchange は for ～ が必要。' },
     ],
   },
   {
@@ -7206,9 +7206,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It rained on and off all day.', ja: '一日じゅう雨がふったりやんだりした。' },
     ],
     questions: [
-      { sentence: 'I still write to my old teacher now and ___.', choices: ['then', 'than', 'them'], answer: 0, why: 'now and then「ときどき」。then の形で決まっている（than は比較で使う語）。' },
-      { sentence: 'Once in a ___, my father cooks dinner.', choices: ['while', 'whiles', 'whilst'], answer: 0, why: 'once in a while「たまに」。a のあとは while の形で決まっている。' },
-      { sentence: 'The light went on and ___ during the storm.', choices: ['off', 'of', 'out of'], answer: 0, why: 'on and off「ついたり消えたり・とぎれとぎれに」。on と反対の off をならべる。' },
+      { sentence: 'I don’t see my cousins often, but we meet now and ___.', choices: ['then', 'later', 'soon', 'ever'], answer: 0, why: 'now and then「ときどき」（= now and again / from time to time）。' },
+      { sentence: 'Once in a ___, my father cooks dinner for the whole family.', choices: ['while', 'time', 'day', 'way'], answer: 0, why: 'once in a while「たまに」。' },
+      { sentence: 'It rained ___ and off all day, so we stayed inside.', choices: ['on', 'in', 'up', 'out'], answer: 0, why: 'on and off（off and on）「降ったりやんだり・とぎれとぎれに」。' },
     ],
   },
   {
@@ -7427,9 +7427,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The two friends walked side by side.', ja: '2人の友だちはならんで歩いた。' },
     ],
     questions: [
-      { sentence: 'Let\'s solve the problem step by ___.', choices: ['step', 'steps', 'a step'], answer: 0, why: 'step by step「一歩ずつ・段階をふんで」。by の前後は同じ形の step。' },
-      { sentence: 'The guests left the room one by ___.', choices: ['one', 'ones', 'the one'], answer: 0, why: 'one by one「1人ずつ」。by の前後は同じ one。' },
-      { sentence: 'The two boats sailed side by ___.', choices: ['side', 'sides', 'a side'], answer: 0, why: 'side by side「ならんで」。by の前後は同じ side。' },
+      { sentence: 'The teacher explained the math problem step ___ step.', choices: ['by', 'to', 'for', 'on'], answer: 0, why: 'step by step「一歩ずつ・段階をふんで」。' },
+      { sentence: 'The students entered the exam room one ___ one.', choices: ['by', 'for', 'to', 'with'], answer: 0, why: 'one by one「1人ずつ」。' },
+      { sentence: 'The two old friends walked side by ___ along the river.', choices: ['side', 'hand', 'face', 'arm'], answer: 0, why: 'side by side「ならんで」。hand in hand（手をつないで）、face to face（面と向かって）と前置詞がちがう。' },
     ],
   },
   {
@@ -7444,9 +7444,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The baby is growing day by day.', ja: '赤ちゃんは日に日に大きくなっている。' },
     ],
     questions: [
-      { sentence: 'Little by ___, she got used to her new school.', choices: ['little', 'less', 'a little'], answer: 0, why: 'little by little「少しずつ」。by の前後は同じ little。' },
-      { sentence: 'The days are getting warmer day by ___.', choices: ['day', 'days', 'daily'], answer: 0, why: 'day by day「日に日に」。by の前後は同じ day。' },
-      { sentence: 'The number of visitors grows year by ___.', choices: ['year', 'years', 'yearly'], answer: 0, why: 'year by year「年々」。by の前後は同じ year。' },
+      { sentence: 'At first the language was difficult, but ___ by little she got used to it.', choices: ['little', 'few', 'less', 'small'], answer: 0, why: 'little by little「少しずつ」。' },
+      { sentence: 'The patient is getting stronger day ___ day.', choices: ['by', 'to', 'from', 'for'], answer: 0, why: 'day by day「日に日に（変化して）」。' },
+      { sentence: 'The population of the village has been falling year ___ year.', choices: ['by', 'in', 'of', 'on'], answer: 0, why: 'year by year「年々」。' },
     ],
   },
   {
