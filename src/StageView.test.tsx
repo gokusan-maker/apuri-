@@ -1477,3 +1477,9 @@ it('ヒントで消えた選択肢は、ふわっと薄くなる（CSS）', asyn
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.choice\.hinted-out \{ transition: opacity 0\.5s ease-out; animation: hint-fade/)
 })
+
+it('闘技場：10階ごとの「到達！」の札に虹色の光が流れる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  const css = readFileSync('src/polish.css', 'utf8')
+  expect(css).toMatch(/\.arena-levelup::after \{[^}]*animation: levelup-rainbow/)
+})
