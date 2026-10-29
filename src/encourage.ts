@@ -61,6 +61,7 @@ const JA_SPECIES: Record<string, Record<CheerEvent, string[]>> = {
   hummingbird: { streak: ['目にも止まらぬ大正解！', 'ぶんぶん、連続正解！'], wrong: ['花のみつを飲んで、もう一回！', 'ホバリングして、ひと休み！'] },
   ostrich: { streak: ['猛ダッシュで、大正解！', 'だだだっと連続正解！'], wrong: ['ひと息ついて、もう一回！', '速すぎたかも、次はていねいに！'] },
   woodpecker: { streak: ['コンコン、連続正解！', 'リズムよくきざめたね！'], wrong: ['もう一度コンコン、たたいてみよう！', 'あせらず、リズムをとりもどそう！'] },
+  kangaroo: { streak: ['ぴょーんと、大ジャンプ正解！', 'ふくろいっぱいの連続正解！'], wrong: ['着地しっぱい、もう一回ジャンプ！', 'ひと休みして、もう一度とんでみよう！'] },
   turtle: { streak: ['のそのそ、でも全部正解！', 'コツコツがいちばんだよ！'], wrong: ['だいじょうぶ、ゆっくりいこう！', 'こうらにこもらず、もう一回！'] },
   octopus: { streak: ['タコタコ！8本足で大かつやく！', 'ぷくぷく、いい調子！'], wrong: ['タコ…からまっちゃった！', 'すみをはいて、気をとりなおそう！'] },
 }
@@ -131,6 +132,7 @@ const EN_SPECIES: Record<string, Record<CheerEvent, [string, string][]>> = {
   hummingbird: { streak: [['Lightning fast!', 'いなずまみたいに速い！']], wrong: [['Hover and try again.', 'ホバリングして、もう一回。']] },
   ostrich: { streak: [['Running at full speed!', '全速力だね！']], wrong: [['Slow down and try again.', 'ゆっくり、もう一回。']] },
   woodpecker: { streak: [['Knock, knock! Right again!', 'コンコン！また正解！']], wrong: [['Keep tapping. You will get it.', 'たたきつづけよう。きっとできるよ。']] },
+  kangaroo: { streak: [['What a big jump!', 'すごい大ジャンプ！']], wrong: [['Bounce back and try again.', 'はねかえって、もう一回。']] },
   turtle: { streak: [['Slow and steady!', 'ゆっくり確実に！']], wrong: [['Keep going, step by step.', '一歩ずつ進もう。']] },
   octopus: { streak: [['All eight arms are cheering!', '8本の足でおうえん中！']], wrong: [["Shake it off and try again!", '気をとりなおして、もう一回！']] },
 }

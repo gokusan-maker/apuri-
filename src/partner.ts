@@ -58,6 +58,7 @@ export const PARTNER_SKILLS: Record<string, Skill> = {
   hummingbird: { id: 'cheer', name: 'はやわざホバー', desc: '2問正解ごとに必殺技ゲージ +1' },
   ostrich: { id: 'cheer', name: 'だいちのキック', desc: '2問正解ごとに必殺技ゲージ +1' },
   woodpecker: { id: 'foxfire', name: 'ドラミング', desc: '3問正解ごとに +5 ダメージ' },
+  kangaroo: { id: 'cheer', name: 'ふくろのおまもり', desc: '2問正解ごとに必殺技ゲージ +1' },
   octopus: { id: 'claw', name: '8本足ラッシュ', desc: '会心の一撃が5秒以内まで出る' },
 }
 
@@ -140,6 +141,7 @@ export const SPECIAL_MOVES: Record<string, { name: string; color: string }> = {
   hummingbird: { name: 'ハチドリ・フラッシュウィング', color: '#10b981' },
   ostrich: { name: 'ダチョウ・サバンナダッシュ', color: '#a16207' },
   woodpecker: { name: 'キツツキ・ドラミングラッシュ', color: '#b91c1c' },
+  kangaroo: { name: 'カンガルー・ハイジャンプ', color: '#b45309' },
   octopus: { name: 'タコすみスプラッシュ', color: '#e11d48' },
 }
 export const specialOf = (species: string | undefined) => SPECIAL_MOVES[species ?? 'mochi'] ?? SPECIAL_MOVES.mochi
@@ -209,6 +211,7 @@ export const PARTNER_REPLIES: Record<string, { en: string; ja: string }> = {
   hummingbird: { en: 'Fast wings, fast answers!', ja: '速い羽で、速い答え！' },
   ostrich: { en: 'I can’t fly, but I can run fast!', ja: '飛べないけど、速く走れるよ！' },
   woodpecker: { en: 'Knock, knock! Let’s learn a new word!', ja: 'コンコン！新しい単語をおぼえよう！' },
+  kangaroo: { en: 'Jump with me! Let’s learn together!', ja: 'いっしょにジャンプ！いっしょに学ぼう！' },
   octopus: { en: 'Eight arms are better than two!', ja: '8本の足は2本より強いよ！' },
 }
 export const replyOf = (species: string | undefined) => PARTNER_REPLIES[species ?? 'mochi'] ?? PARTNER_REPLIES.mochi
