@@ -4476,3 +4476,8 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 }
 @keyframes levelup-rainbow { from { background-position: 130% 0; } to { background-position: -30% 0; } }
 @media (prefers-reduced-motion: reduce) { .arena-levelup::after { display: none; } }
+
+/* 相棒の画面：なかまのアイコンを押すと、ぴょこっとはねる */
+.friend-mini:active svg { animation: friend-hop 0.3s ease-out; }
+@keyframes friend-hop { 0% { transform: translateY(0); } 40% { transform: translateY(-6px) scale(1.08); } 100% { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .friend-mini:active svg { animation: none; } }

@@ -89,3 +89,8 @@ it('相棒：レベルアップしたときだけ、「Lv」の数字がきら�
   expect(document.querySelector('.monster-level')).not.toBeNull()
   expect(document.querySelector('.monster-level.lv-shine')).toBeNull()
 })
+
+it('相棒の画面：なかまのアイコンは押すとぴょこっとはねる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.friend-mini:active svg \{ animation: friend-hop/)
+})
