@@ -67,7 +67,8 @@
   - [x] ④ force / require / forbid・remind / warn / advise・explain 物 to 人・fill A with B・divide A into B・dream of の6単元を4択に（807→789）
   - [x] ⑤ 形容詞＋前置詞・自動詞＋前置詞の6単元（rely on / respond to / refer to、suffer from、concentrate on、come across / look into など）を4択に（789→771）
   - [x] ⑥ hear from / hear of、be independent of / dependent on、apply for / to、talk 人 into / out of、thank / praise 人 for の6単元を4択に（771→753）
-  - [ ] ⑦ つづきの6〜10単元を4択に
+  - [x] ⑦ 形容詞＋前置詞（absent from / tired of など）・判断の理由の不定詞・as ～ as ever / any・enough の位置・sound like の6単元を4択に（753→735）
+  - [ ] ⑧ つづきの6〜10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。

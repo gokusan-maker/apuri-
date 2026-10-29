@@ -6203,9 +6203,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It sounds like fun. Can I join you?', ja: '楽しそうだね。いっしょに行ってもいい？' },
     ],
     questions: [
-      { sentence: 'That ___ like a great idea!', choices: ['sounds', 'sounds to', 'is sounding to'], answer: 0, why: 'sound like ＋ 名詞「～のように聞こえる（～みたいだね）」。' },
-      { sentence: 'This candy tastes ___ strawberries.', choices: ['like', 'as', 'to'], answer: 0, why: '名詞の前なので taste like ～「～の味がする」。' },
-      { sentence: 'Your plan sounds ___.', choices: ['interesting', 'like interesting', 'interestingly'], answer: 0, why: '形容詞なら sound ＋ 形容詞。like はつけない。副詞の interestingly は使えない。' },
+      { sentence: 'That ___ like a great idea!', choices: ['sounds', 'sounds to', 'is sounding to', 'hears'], answer: 0, why: 'sound like ＋ 名詞「～のように聞こえる（～みたいだね）」。hear は「聞く」側の動詞で、この形にはならない。' },
+      { sentence: 'This candy tastes ___ strawberries.', choices: ['like', 'as', 'to', 'of like'], answer: 0, why: '名詞の前なので taste like ～「～の味がする」。' },
+      { sentence: 'Your plan sounds ___.', choices: ['interesting', 'like interesting', 'interestingly', 'to interesting'], answer: 0, why: '形容詞なら sound ＋ 形容詞で like はつけない。副詞の interestingly は補語にならない。' },
     ],
   },
   {
@@ -6220,9 +6220,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She ran fast enough to catch the bus.', ja: '彼女はバスに間に合うくらい速く走った。' },
     ],
     questions: [
-      { sentence: "We don't have ___ to buy a new car.", choices: ['enough money', 'enoughly money', 'money of enough'], answer: 0, why: '名詞 money の前に enough を置く。' },
-      { sentence: "He isn't ___ to drive a car.", choices: ['old enough', 'enough old', 'enough age'], answer: 0, why: '形容詞 old のうしろに enough を置く。' },
-      { sentence: 'Is there ___ for everyone at the party?', choices: ['enough food', 'food enoughs', 'enoughs food'], answer: 0, why: 'enough ＋ 名詞。enough に s はつかない。' },
+      { sentence: 'We don’t have ___ to buy a new car this year.', choices: ['enough money', 'money enoughly', 'enoughly money', 'money of enough'], answer: 0, why: '名詞の前に enough を置く（enough money）。' },
+      { sentence: 'He isn’t ___ to drive a car yet.', choices: ['old enough', 'enough old', 'enough age', 'old as enough'], answer: 0, why: '形容詞・副詞の場合はうしろに enough を置く（old enough）。' },
+      { sentence: 'The room wasn’t ___ for all the guests, so some had to stand outside.', choices: ['big enough', 'enough big', 'enough bigger', 'as big enough'], answer: 0, why: '形容詞 big のうしろに enough。' },
     ],
   },
   {
@@ -6237,9 +6237,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This park is as beautiful as any in the city.', ja: 'この公園は町のどの公園にも負けないほど美しい。' },
     ],
     questions: [
-      { sentence: 'My grandmother is as healthy as ___.', choices: ['ever', 'never', 'always'], answer: 0, why: 'as ～ as ever「相変わらず～」。' },
-      { sentence: 'He works as hard as ___ student in his class.', choices: ['any', 'all', 'each of'], answer: 0, why: 'as ～ as any ＋ 単数名詞「どの…にも負けないほど」。' },
-      { sentence: 'She is as good ___ as anyone in the club.', choices: ['a singer', 'singer', 'an singer'], answer: 0, why: 'as ＋ 形容詞 ＋ a ＋ 名詞 ＋ as の語順。singer は数えられるので a が必要。' },
+      { sentence: 'My grandmother is ninety, but she is as healthy as ___.', choices: ['ever', 'never', 'always', 'before of'], answer: 0, why: 'as ～ as ever「相変わらず～」。' },
+      { sentence: 'He works as hard as ___ student in his class.', choices: ['any', 'all', 'each of', 'every of'], answer: 0, why: 'as ～ as any ＋ 単数名詞「どの…にも負けないほど～」（最上級に近い意味）。' },
+      { sentence: 'She is as good ___ as anyone in the club.', choices: ['a singer', 'singer', 'an singer', 'the singers'], answer: 0, why: 'as ＋ 形容詞 ＋ a ＋ 名詞 ＋ as の語順。singer は数えられる名詞なので a が必要。' },
     ],
   },
   {
@@ -6254,9 +6254,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She must be clever to solve that problem so quickly.', ja: 'あの問題をあんなに速く解くなんて、彼女はかしこいにちがいない。' },
     ],
     questions: [
-      { sentence: 'You were kind ___ me with my bag.', choices: ['to help', 'helping', 'help'], answer: 0, why: '「手伝ってくれるなんて親切だ」。判断の理由の to ＋ 原形。' },
-      { sentence: 'He must be tired ___ asleep on the train.', choices: ['to fall', 'falling', 'fall'], answer: 0, why: 'must be ～ to …「…するなんて～にちがいない」。' },
-      { sentence: 'She was careless ___ her umbrella at the station.', choices: ['to leave', 'left', 'leaves'], answer: 0, why: '「置き忘れるなんて不注意だった」。to ＋ 原形。' },
+      { sentence: 'It was very kind of you ___ me with my heavy bag.', choices: ['to help', 'helping', 'help', 'helped'], answer: 0, why: 'It is kind of 人 to ～「～してくれるなんて人は親切だ」。' },
+      { sentence: 'He must be very tired ___ asleep on the noisy train.', choices: ['to fall', 'falling', 'fall', 'fell'], answer: 0, why: 'must be ～ to …「…するなんて～にちがいない」。判断の根拠を表す不定詞。' },
+      { sentence: 'She was careless ___ her umbrella on the train again.', choices: ['to leave', 'leaving', 'left', 'leaves'], answer: 0, why: '「また置き忘れるなんて不注意だった」。判断の理由の to ＋ 原形。' },
     ],
   },
   {
@@ -6271,9 +6271,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I'm poor at singing, but I love music.", ja: '私は歌うのは苦手だけど、音楽は大好きだ。' },
     ],
     questions: [
-      { sentence: 'My sister is fond ___ cats.', choices: ['of', 'with', 'to'], answer: 0, why: 'be fond of ～「～が好きだ」。' },
-      { sentence: "I'm tired ___ eating the same food every day.", choices: ['of', 'at', 'on'], answer: 0, why: 'be tired of ～「～にあきている」。' },
-      { sentence: 'Ken is poor ___ drawing pictures.', choices: ['at', 'on', 'to'], answer: 0, why: 'be poor at ～「～が苦手だ」。' },
+      { sentence: 'My sister is very fond ___ cats.', choices: ['of', 'with', 'to', 'for'], answer: 0, why: 'be fond of ～「～が好きだ」。' },
+      { sentence: 'I’m tired ___ eating the same food every day.', choices: ['of', 'from', 'at', 'with'], answer: 0, why: 'be tired of ～「～にあきている」。be tired from ～ は「～でつかれている」で意味がちがう。' },
+      { sentence: 'Ken is poor ___ drawing, but he is good at music.', choices: ['at', 'to', 'on', 'for'], answer: 0, why: 'be poor at ～「～が苦手だ」（⇔ be good at）。' },
     ],
   },
   {
@@ -6288,9 +6288,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please be kind to your little brother.', ja: '弟にやさしくしてあげてね。' },
     ],
     questions: [
-      { sentence: 'Three students were absent ___ class today.', choices: ['from', 'of', 'to'], answer: 0, why: 'be absent from ～「～を欠席する」。' },
-      { sentence: "Hurry up, or we'll be late ___ the concert.", choices: ['for', 'of', 'with'], answer: 0, why: 'be late for ～「～に遅れる」。' },
-      { sentence: 'My aunt is always kind ___ animals.', choices: ['to', 'at', 'from'], answer: 0, why: 'be kind to ～「～に親切だ」。' },
+      { sentence: 'Three students were absent ___ class today because of the flu.', choices: ['from', 'of', 'to', 'at'], answer: 0, why: 'be absent from ～「～を欠席する」。' },
+      { sentence: 'Hurry up, or we’ll be late ___ the concert.', choices: ['for', 'of', 'at', 'with'], answer: 0, why: 'be late for ～「～に遅れる」。' },
+      { sentence: 'My aunt is always kind ___ animals and often helps lost cats.', choices: ['to', 'for', 'at', 'from'], answer: 0, why: 'be kind to ～「～に親切だ」（It is kind of 人 to ～ と区別する）。' },
     ],
   },
   {
