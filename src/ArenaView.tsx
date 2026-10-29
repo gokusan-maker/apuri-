@@ -185,6 +185,12 @@ export function Arena({ start, onExit, onCoins, onTicket, onAnswer, me }: { star
         <p className="arena-result-sub">
           {count}問中 {right}問正解{count > 0 ? `（正答率 ${Math.round((right / count) * 100)}%）` : ''}・きょういちばん上は {arenaFloor(top)}
         </p>
+        {/* 正答率のバーが、左からのびていく */}
+        {count > 0 && (
+          <span className="acc-bar" aria-hidden="true">
+            <i style={{ width: `${Math.round((right / count) * 100)}%` }} />
+          </span>
+        )}
         {count > 0 && (
           <p className="arena-by-kind" aria-label="種類ごとの正解">
             {(['word', 'grammar', 'reading'] as const)

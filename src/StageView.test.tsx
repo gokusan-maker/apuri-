@@ -1504,3 +1504,14 @@ it('ボス城の階：ボスのHPが半分を切ると、HPの数字が赤く点
   }
   expect(seen.has(true)).toBe(true) // 半分を切ったところを通った
 })
+
+it('闘技場の結果：正答率のバーが、正答率の長さまでのびる', async () => {
+  const { Arena } = await import('./ArenaView')
+  localStorage.clear()
+  render(<Arena start={5} onExit={() => {}} />)
+  arenaPick(true)
+  fireEvent.click(screen.getByText(/^次へ/))
+  arenaPick(false)
+  fireEvent.click(screen.getByText('🏁 終了'))
+  expect(document.querySelector<HTMLElement>('.acc-bar i')!.style.width).toBe('50%')
+})
