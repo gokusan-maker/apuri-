@@ -13850,6 +13850,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-seikan',
+    title: 'A Railway Under the Sea',
+    level: '難関大（評論）',
+    paragraphs: [
+      "Hokkaido and Honshu, two of Japan's main islands, are separated by a narrow strait. For many years, people crossed it only by ferry. In bad weather, the ships could not sail, and in 1954 a ferry sank in a typhoon, and many people lost their lives.",
+      "After that accident, people began to plan a safer way to cross. The answer was a long railway tunnel ( A ) under the sea. Building it was extremely difficult. Water often poured into the tunnel, and workers had to stop it again and again.",
+      "It took more than twenty years ( B ) the work. When the tunnel finally opened in 1988, it was about 54 kilometers long, and trains could travel between the two islands in any weather.",
+      "Today, even bullet trains run through it. Many passengers do not notice that they are deep under the sea, but the tunnel is a quiet reminder of the hard work of the people who built it.",
+    ],
+    ja: [
+      '日本のおもな島である北海道と本州は、せまい海峡でへだてられている。長いあいだ、人々はフェリーでしかそこをわたれなかった。天気が悪いと船は出られず、1954年には台風でフェリーがしずみ、多くの人が命を失った。',
+      'その事故のあと、人々はもっと安全にわたる方法を計画しはじめた。その答えが、海の下にほられた長い鉄道のトンネルだった。それを作るのはきわめてむずかしかった。トンネルにはしばしば水がどっと流れこみ、作業員は何度も何度もそれを止めなければならなかった。',
+      'その工事を終えるのに20年以上かかった。1988年についにトンネルが開くと、その長さはおよそ54キロメートルで、列車はどんな天気でも2つの島のあいだを行き来できるようになった。',
+      '今日では、新幹線までそこを走っている。多くの乗客は海の深い下にいることに気づかないが、トンネルは、それを作った人々のたいへんな努力を静かに思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['dug', 'digging', 'digs', 'to dig'], answer: 0, why: '「海の下にほられたトンネル」なので、過去分詞 dug がうしろから tunnel を説明する。digging だとトンネルがほることになり、digs は動詞の形、to dig は意味が合わない。' },
+      { id: 'B', choices: ['to finish', 'finishing', 'finished', 'finish'], answer: 0, why: 'It takes ＋時間＋to ～「～するのに（時間）がかかる」なので to finish。finishing・finished・finish はこの形に入らない。' },
+    ],
+    underline: {
+      phrase: 'poured into',
+      choices: ['flowed quickly in large amounts into', 'was carried out of', 'was frozen inside', 'was cleaned from'],
+      answer: 0,
+      why: 'pour into ～ は「～にどっと流れこむ」。たくさんの水がトンネルに入ってきたという意味。',
+    },
+    order: {
+      words: ['began', 'to', 'plan', 'a', 'safer', 'way', 'to', 'cross'],
+      rest: '',
+      answer: 'began to plan a safer way to cross',
+      ja: 'もっと安全にわたる方法を計画しはじめた（a way to ～「～する方法」）',
+    },
+    tf: [
+      { statement: 'トンネルができる前は、フェリーで海峡をわたっていた。', answer: true, why: '第1段落 people crossed it only by ferry。' },
+      { statement: 'トンネルの工事は、数か月で終わった。', answer: false, why: '第3段落 It took more than twenty years to finish the work。' },
+      { statement: '今では、新幹線もトンネルを走っている。', answer: true, why: '第4段落 even bullet trains run through it。' },
+    ],
+    qa: [
+      { q: 'Why did people start planning the tunnel?', choices: ['A ferry sank in a typhoon, and they wanted a safer way to cross.', 'Ferries were too fast.', 'The islands moved closer together.', 'People wanted to see fish under the sea.'], answer: 0, why: '第1・2段落 in 1954 a ferry sank in a typhoon ... After that accident, people began to plan a safer way to cross。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
