@@ -4461,3 +4461,8 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .pickup-stars i:nth-child(2) { right: 0; top: 30%; animation-delay: 0.45s; }
 .pickup-stars i:nth-child(3) { left: 30%; bottom: 0; animation-delay: 0.9s; }
 @media (prefers-reduced-motion: reduce) { .pickup-stars { display: none; } }
+
+/* ヒントで消えた選択肢は、いきなり消さずにふわっと薄くなる */
+.choice.hinted-out { transition: opacity 0.5s ease-out; animation: hint-fade 0.5s ease-out; }
+@keyframes hint-fade { from { opacity: 1; transform: scale(1); } to { opacity: 0.3; transform: scale(0.97); } }
+@media (prefers-reduced-motion: reduce) { .choice.hinted-out { animation: none; transition: none; } }

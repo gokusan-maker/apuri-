@@ -1472,3 +1472,8 @@ it('ボス城の階：答えたあとの「次へ」ボタンは、ふわっと�
   const { readFileSync } = await import('node:fs')
   expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.bfloor \.next-unit-btn, \.arena \.next-unit-btn \{ animation: next-btn-in/) // 闘技場も同じ
 })
+
+it('ヒントで消えた選択肢は、ふわっと薄くなる（CSS）', async () => {
+  const { readFileSync } = await import('node:fs')
+  expect(readFileSync('src/polish.css', 'utf8')).toMatch(/\.choice\.hinted-out \{ transition: opacity 0\.5s ease-out; animation: hint-fade/)
+})
