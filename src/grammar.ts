@@ -7121,9 +7121,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He answered the question on the spot.', ja: '彼はその場で質問に答えた。' },
     ],
     questions: [
-      { sentence: 'At ___, the museum is closed for repairs.', choices: ['present', 'presently', 'presents'], answer: 0, why: 'at present「現在は」。at のあとは present のまま。' },
-      { sentence: 'Studying a little every day pays off in the long ___.', choices: ['run', 'running', 'runs'], answer: 0, why: 'in the long run「長い目で見れば」。the long のあとは run の形で決まっている。' },
-      { sentence: 'She was offered the job on the ___.', choices: ['spot', 'spots', 'spotted'], answer: 0, why: 'on the spot「その場で」。the のあとは単数の名詞 spot。' },
+      { sentence: '___ present, the museum is closed for repairs.', choices: ['At', 'In', 'On', 'For'], answer: 0, why: 'at present「現在は」。for the present は「当分は」で、形がちがう。' },
+      { sentence: 'Exercise may feel hard at first, but it pays off in the long ___.', choices: ['run', 'time', 'way', 'term of'], answer: 0, why: 'in the long run「長い目で見れば」。' },
+      { sentence: 'The man was arrested ___ the spot.', choices: ['on', 'in', 'at', 'by'], answer: 0, why: 'on the spot「その場で・即座に」。' },
     ],
   },
   {
@@ -7138,9 +7138,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In a sense, mistakes are good teachers.', ja: 'ある意味で、失敗はよい先生だ。' },
     ],
     questions: [
-      { sentence: 'The team wanted to win the final at all ___.', choices: ['costs', 'cost', 'costing'], answer: 0, why: 'at all costs「どんなことをしても」。costs と複数形にする。' },
-      { sentence: 'You can use my old bike for the time ___.', choices: ['being', 'been', 'be'], answer: 0, why: 'for the time being「当分のあいだ」。the time のあとは being の形で決まっている。' },
-      { sentence: 'In a ___, every day is a new start.', choices: ['sense', 'sensible', 'senses'], answer: 0, why: 'in a sense「ある意味で」。a のあとは単数の名詞 sense。' },
+      { sentence: 'The general told his soldiers to defend the bridge at all ___.', choices: ['costs', 'cost', 'prices', 'means'], answer: 0, why: 'at all costs「どんな犠牲をはらっても」。costs と複数形。by all means（ぜひどうぞ）と区別する。' },
+      { sentence: 'The shop is closed for the time ___, but it will reopen next spring.', choices: ['being', 'present', 'now', 'moment'], answer: 0, why: 'for the time being「当分のあいだ」。' },
+      { sentence: '___ a sense, every mistake is a chance to learn.', choices: ['In', 'On', 'By', 'With'], answer: 0, why: 'in a sense「ある意味で」。' },
     ],
   },
   {
@@ -7172,9 +7172,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'On the whole, the trip was a lot of fun.', ja: '全体として、その旅行はとても楽しかった。' },
     ],
     questions: [
-      { sentence: 'On ___, it rains ten days a month here.', choices: ['average', 'averaged', 'averaging'], answer: 0, why: 'on average「平均して」。on のあとは名詞 average。' },
-      { sentence: 'The old car can go 60 kilometers an hour at ___.', choices: ['best', 'better', 'good'], answer: 0, why: 'at best「よくても・せいぜい」。at のあとは最上級 best の形で決まっている。' },
-      { sentence: 'On the ___, I liked the movie.', choices: ['whole', 'wholly', 'wholeness'], answer: 0, why: 'on the whole「全体として」。the のあとは whole の形で決まっている。' },
+      { sentence: '___ average, people in this town walk about 6,000 steps a day.', choices: ['On', 'In', 'At', 'By'], answer: 0, why: 'on average「平均して」。' },
+      { sentence: 'The old car can only go about 60 kilometers an hour at ___.', choices: ['best', 'least', 'last', 'first'], answer: 0, why: '「せいぜい時速60キロ」なので at best「よくても・せいぜい」。at least は「少なくとも」で、only と合わない。' },
+      { sentence: 'There were a few weak scenes, but on the ___, I enjoyed the film.', choices: ['whole', 'contrary', 'way', 'spot'], answer: 0, why: 'on the whole「全体として・概して」。on the contrary は「それどころか」で but とつながらない。' },
     ],
   },
   {
@@ -7189,9 +7189,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The snow melted in no time.', ja: '雪はあっという間にとけた。' },
     ],
     questions: [
-      { sentence: 'Sorry, she is out at the ___.', choices: ['moment', 'moments', 'momentary'], answer: 0, why: 'at the moment「ちょうど今」。the のあとは単数の名詞 moment。' },
-      { sentence: 'Don\'t worry. The bus will come in no ___.', choices: ['time', 'times', 'timely'], answer: 0, why: 'in no time「すぐに」。no のあとは time の形で決まっている。' },
-      { sentence: 'I liked the little dog at first ___.', choices: ['sight', 'sights', 'sighted'], answer: 0, why: 'at first sight「ひと目で」。sight は単数のまま。' },
+      { sentence: 'I’m afraid she’s busy at the ___. Can she call you back?', choices: ['moment', 'minute of', 'second of', 'hour'], answer: 0, why: 'at the moment「ちょうど今」。' },
+      { sentence: 'Don’t worry, the repair is easy. It will be finished in no ___.', choices: ['time', 'moment', 'way', 'case'], answer: 0, why: 'in no time「すぐに」。in no way は「決して～ない」で意味が逆になる。' },
+      { sentence: 'They fell in love ___ first sight.', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at first sight「ひと目で」。' },
     ],
   },
   {
@@ -7223,9 +7223,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'On second thought, I\'ll have tea instead of coffee.', ja: 'やっぱり、コーヒーのかわりに紅茶にします。' },
     ],
     questions: [
-      { sentence: 'Dinner is almost ready. In the ___, wash your hands.', choices: ['meantime', 'meanwhiles', 'meaning'], answer: 0, why: 'in the meantime「そのあいだに」。the のあとは meantime。' },
-      { sentence: 'By and ___, the students liked the new rules.', choices: ['large', 'largely', 'larger'], answer: 0, why: 'by and large「概して」。large の形で決まっている。' },
-      { sentence: 'On second ___, let\'s take the train.', choices: ['thought', 'thinking', 'think'], answer: 0, why: 'on second thought「考えなおして」。second のあとは名詞 thought。' },
+      { sentence: 'The doctor will see you soon. In the ___, please fill in this form.', choices: ['meantime', 'meanwhile of', 'moment', 'end'], answer: 0, why: 'in the meantime「そのあいだに」（= meanwhile）。in the end は「結局」。' },
+      { sentence: 'There were a few problems, but by and ___, the event was a success.', choices: ['large', 'big', 'wide', 'far'], answer: 0, why: 'by and large「概して・全体的に」。by and big とは言わない。' },
+      { sentence: 'I’ll take the bus. No, on second ___, I’ll walk.', choices: ['thought', 'idea', 'mind', 'opinion'], answer: 0, why: 'on second thought「考えなおして」（イギリス英語では on second thoughts）。' },
     ],
   },
   {
@@ -7240,9 +7240,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Keep a dictionary at hand when you read.', ja: '本を読むときは、辞書を手元に置いておこう。' },
     ],
     questions: [
-      { sentence: 'I heard a dog barking in the ___.', choices: ['distance', 'distant', 'distantly'], answer: 0, why: 'in the distance「遠くに」。the のあとは名詞 distance。' },
-      { sentence: 'The plane flew higher and was soon out of ___.', choices: ['sight', 'sighted', 'sightly'], answer: 0, why: 'out of sight「見えなくなって」。of のあとは名詞 sight。' },
-      { sentence: 'Always keep your phone close at ___.', choices: ['hand', 'handy', 'handed'], answer: 0, why: 'close at hand「すぐ手元に」。at のあとは名詞 hand。' },
+      { sentence: 'We could see the lights of the city ___ the distance.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in the distance「遠くに」。at a distance は「少しはなれて」で、the distance の前は in。' },
+      { sentence: 'Out of ___, out of mind.', choices: ['sight', 'eye', 'view', 'look'], answer: 0, why: 'Out of sight, out of mind.「去る者は日々にうとし（見えなくなると忘れられる）」。out of sight「見えなくなって」。' },
+      { sentence: 'The exams are close ___ hand, so I must study harder.', choices: ['at', 'in', 'on', 'by'], answer: 0, why: 'at hand「すぐ近くに・間近に」。in hand は「手がけて・管理して」で意味がちがう。' },
     ],
   },
   {
@@ -7257,9 +7257,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I\'m a little under the weather today.', ja: '今日は少し体調が悪い。' },
     ],
     questions: [
-      { sentence: 'It is cooler in the ___ of that big tree.', choices: ['shade', 'shady', 'shaded'], answer: 0, why: 'in the shade「日かげで」。the のあとは名詞 shade。' },
-      { sentence: 'Owls can see well in the ___.', choices: ['dark', 'darkly', 'darken'], answer: 0, why: 'in the dark「暗やみで」。the dark で「暗やみ」という名詞になる。' },
-      { sentence: 'He stayed home because he was under the ___.', choices: ['weather', 'weathers', 'weathered'], answer: 0, why: 'under the weather「体調が悪くて」。the のあとは単数の weather。' },
+      { sentence: 'Let’s sit ___ the shade of that tree. It’s too hot in the sun.', choices: ['in', 'on', 'at', 'under of'], answer: 0, why: 'in the shade「日かげで」（⇔ in the sun）。' },
+      { sentence: 'Nobody told me about the plan. I was completely in the ___.', choices: ['dark', 'shade', 'night', 'black'], answer: 0, why: 'be in the dark (about ～)「（～について）何も知らされていない」。in the shade は「日かげで」。' },
+      { sentence: 'I think I’ll stay home today. I’m feeling a bit under the ___.', choices: ['weather', 'sky', 'rain', 'climate'], answer: 0, why: 'under the weather「体調がすぐれない」。' },
     ],
   },
   {
@@ -7274,9 +7274,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"May I use your pen?" "By all means."', ja: '「ペンを借りてもいい？」「もちろん、どうぞ。」' },
     ],
     questions: [
-      { sentence: 'I\'m not sure if he will come. In any ___, let\'s wait ten more minutes.', choices: ['case', 'cases', 'casing'], answer: 0, why: 'in any case「とにかく」。any のあとは単数の case。' },
-      { sentence: '"The shop is closed today." "In that ___, let\'s go tomorrow."', choices: ['case', 'cases', 'casing'], answer: 0, why: 'in that case「それなら」。that のあとは単数の case。' },
-      { sentence: '"Can I sit here?" "By all ___."', choices: ['means', 'meaning', 'meant'], answer: 0, why: 'by all means「ぜひどうぞ」。means の形で決まっている。' },
+      { sentence: 'I’m not sure if he will come, but ___ any case, let’s start the meeting.', choices: ['in', 'at', 'on', 'by'], answer: 0, why: 'in any case「とにかく・いずれにしても」（= at any rate）。' },
+      { sentence: '"The museum is closed on Mondays." "In that ___, let’s go on Tuesday."', choices: ['case', 'time', 'way', 'place'], answer: 0, why: '相手の言ったことを受けて「それなら」は in that case。' },
+      { sentence: '"May I borrow your dictionary?" "___ all means."', choices: ['By', 'With', 'In', 'For'], answer: 0, why: 'By all means.「どうぞどうぞ・ぜひ」。by no means（決して～ない）と形が似ているので注意。' },
     ],
   },
   {

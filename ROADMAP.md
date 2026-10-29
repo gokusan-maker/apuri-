@@ -44,7 +44,8 @@
   - [x] ④ 群前置詞8単元（at the age of, in the wake of, on the verge of, in view of など）を4択に作りかえる（239→223）
   - [x] ⑤ 群前置詞・against・within・beyond の10単元を4択に作りかえる（by way of / by means of、in the presence / absence of など意味で選ぶ。223→202）
   - [x] ⑥ 前置詞の熟語10単元（under way, on the contrary / on the other hand, in no way / by no means など）を4択に作りかえる（201→175）
-  - [ ] ⑦ のこりの品詞ちがいだけの問題（175問）を10単元ずつ作りかえる
+  - [x] ⑦ 前置詞の熟語8単元（in no time / in no way、at best / at least、by all means / at all costs など）を4択に作りかえる（175→154）
+  - [ ] ⑧ のこりの品詞ちがいだけの問題（154問）を10単元ずつ作りかえる
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
