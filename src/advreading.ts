@@ -13973,6 +13973,47 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'adv-ikebana',
+    title: 'The Art of Fewer Flowers',
+    level: '難関大（評論）',
+    paragraphs: [
+      "In many countries, people put lots of colorful flowers into a vase to make a big, full bunch. Ikebana, the Japanese art of arranging flowers, is quite different. It is often a style ( A ) uses only a few flowers and branches.",
+      "In ikebana, empty space is just as important as the flowers themselves. Arrangers think carefully about ( B ) to leave empty space and how each stem should lean. The lines of the branches are meant to look natural, as if they were still growing outside.",
+      "Ikebana also shows the season. In spring, an arrangement might include plum or cherry branches; in autumn, it might use colored leaves. A small arrangement can bring the feeling of nature into a room.",
+      "People who practice ikebana say it teaches them to look closely and to appreciate simple things. With only a few flowers, they try to express something beautiful and calm.",
+    ],
+    ja: [
+      '多くの国では、たくさんの色とりどりの花を花びんに入れて、大きくてにぎやかな花束を作る。花をいける日本の芸術である生け花は、それとはかなりちがう。生け花は、ほんの少しの花や枝だけを使うスタイルであることが多い。',
+      '生け花では、何もない空間が花そのものと同じくらい大切だ。いける人は、どこに空間を残すか、それぞれのくきをどうかたむけるかを注意深く考える。枝の線は、まるで外でまだ育っているかのように、自然に見えるようにするのだ。',
+      '生け花は季節も表す。春なら梅や桜の枝を入れるかもしれないし、秋なら色づいた葉を使うかもしれない。小さな作品でも、部屋の中に自然の感じを持ちこむことができる。',
+      '生け花をする人たちは、それがよく見ることや、シンプルなものを大切に思うことを教えてくれると言う。ほんの少しの花で、美しくおだやかなものを表そうとするのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a style で、うしろの uses の主語が欠けているので関係代名詞 that。what は先行詞をとらず、where はうしろに完全な文が、whose はうしろに名詞が必要。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'where to ～「どこに～すべきか」。leave empty space には目的語がそろっているので what・which は入らず、whose はうしろに名詞が必要。' },
+    ],
+    underline: {
+      phrase: 'appreciate',
+      choices: ['understand and value', 'throw away', 'make bigger', 'forget about'],
+      answer: 0,
+      why: 'appreciate は「よさがわかる・ありがたく思う」。シンプルなものを大切に思うという意味。',
+    },
+    order: {
+      words: ['as', 'if', 'they', 'were', 'still', 'growing'],
+      rest: 'outside',
+      answer: 'as if they were still growing',
+      ja: 'まるでまだ育っているかのように（as if ＋過去形「まるで～かのように」）',
+    },
+    tf: [
+      { statement: '生け花では、たくさんの花でにぎやかにすることが多い。', answer: false, why: '第1段落 It is often a style that uses only a few flowers and branches。' },
+      { statement: '生け花では、何もない空間も大切にされる。', answer: true, why: '第2段落 empty space is just as important as the flowers themselves。' },
+      { statement: '生け花は、季節を表すこともある。', answer: true, why: '第3段落 Ikebana also shows the season。' },
+    ],
+    qa: [
+      { q: 'What might an autumn arrangement use?', choices: ['Colored leaves.', 'Cherry branches.', 'Plastic flowers.', 'Snow.'], answer: 0, why: '第3段落 in autumn, it might use colored leaves。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
