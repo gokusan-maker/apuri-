@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'armadillo', name: 'アルマン', egg: 'サボテンのタマゴ', token: 'アル', bigToken: 'アルマン', color: '#a8a29e', line: '#44403c', rate: 0.02, desc: 'かたいよろいのアルマジロ。くるんとボールのように丸まって、ころころ転がりながら答えにたどりつく。' },
   { id: 'snowleopard', name: 'ユキヒョン', egg: 'ゆきやまのタマゴ', token: 'ユキ', bigToken: 'ユキヒョン', color: '#e2e8f0', line: '#475569', rate: 0.02, desc: '雪山にすむユキヒョウ。ふさふさの長いしっぽでバランスをとり、むずかしい問題にもしずかにねらいをさだめる。' },
   { id: 'quokka', name: 'クオッカン', egg: 'えがおのタマゴ', token: 'クオ', bigToken: 'クオッカン', color: '#c9a27e', line: '#5a3a22', rate: 0.02, desc: '「世界一しあわせな動物」とよばれるクオッカ。いつもにっこり笑顔で、まわりのみんなを元気にする。' },
   { id: 'okapi', name: 'オカピン', egg: 'みつりんのタマゴ', token: 'オカ', bigToken: 'オカピン', color: '#7c4a32', line: '#2b1810', rate: 0.02, desc: '足にしまもようのあるオカピ。森の奥でひっそりくらす、はずかしがり屋の物知りで、むずかしい単語もこっそり知っている。' },

@@ -502,6 +502,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="50" cy="34" r="2.5" fill="none" stroke="#475569" strokeWidth="1.8" />
       </g>
     )
+  if (species === 'armadillo')
+    return (
+      <g>
+        {/* 背中の帯もよう */}
+        <path d="M30 38 Q50 30 70 38 M28 46 Q50 38 72 46" fill="none" stroke="#44403c" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
