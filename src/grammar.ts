@@ -4639,9 +4639,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Can you afford a trip to Hawaii?', ja: 'ハワイ旅行に行く余裕はある？' },
     ],
     questions: [
-      { sentence: 'I can\'t afford ___ a new car.', choices: ['to buy', 'buying', 'buy'], answer: 0, why: 'can afford to ＋ 原形「～する余裕がある」。' },
-      { sentence: 'We cannot ___ to waste time.', choices: ['afford', 'allow', 'let'], answer: 0, why: 'can\'t afford to ～「～する余裕がない」。allow・let は「人に～させる」で、人の目的語が必要。' },
-      { sentence: 'Can you afford ___ new phone?', choices: ['a', 'to', 'for'], answer: 0, why: 'afford ＋ 名詞「～を買う余裕がある」。phone の前に a。' },
+      { sentence: 'I can\'t afford ___ a new car.', choices: ['to buy', 'buying', 'buy', 'to buying'], answer: 0, why: 'can afford to ＋ 原形「～する余裕がある」。' },
+      { sentence: 'We cannot ___ to waste time.', choices: ['afford', 'allow', 'let', 'have'], answer: 0, why: 'can\'t afford to ～「～する余裕がない」。allow・let は「人に～させる」で、人の目的語が必要。' },
+      { sentence: 'Can you afford ___ new phone?', choices: ['a', 'to', 'for', 'an'], answer: 0, why: 'afford ＋ 名詞「～を買う余裕がある」。phone の前に a。' },
     ],
   },
   {
@@ -4656,9 +4656,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She moved to Kyoto, and she has lived there ever since.', ja: '彼女は京都にひっこして、それ以来ずっとそこに住んでいる。' },
     ],
     questions: [
-      { sentence: 'I have lived here ever ___ I was a child.', choices: ['since', 'for', 'from'], answer: 0, why: 'ever since ＋ 文「～以来ずっと」。' },
-      { sentence: 'She has been happy ever since she ___ the job.', choices: ['got', 'gets', 'getting'], answer: 0, why: 'since のうしろは過去の出来事なので過去形 got。' },
-      { sentence: 'He moved to Osaka in 2020 and has lived there ever ___.', choices: ['since', 'before', 'ago'], answer: 0, why: '文の最後の ever since「それ以来ずっと」。' },
+      { sentence: 'I have lived here ever ___ I was a child.', choices: ['since', 'for', 'from', 'ago'], answer: 0, why: 'ever since ＋ 文「～以来ずっと」。' },
+      { sentence: 'She has been happy ever since she ___ the job.', choices: ['got', 'gets', 'getting', 'has got'], answer: 0, why: 'since のうしろは過去の出来事なので過去形 got。' },
+      { sentence: 'He moved to Osaka in 2020 and has lived there ever ___.', choices: ['since', 'before', 'ago', 'after'], answer: 0, why: '文の最後の ever since「それ以来ずっと」。' },
     ],
   },
   {
@@ -4673,9 +4673,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She makes it a rule not to eat after nine.', ja: '彼女は9時以降は食べないことにしている。' },
     ],
     questions: [
-      { sentence: 'I make ___ a rule to walk for 30 minutes every day.', choices: ['it', 'that', 'this'], answer: 0, why: '形式目的語 it。本当の目的語は to walk 以下。' },
-      { sentence: 'She makes it a rule ___ up early.', choices: ['to get', 'getting', 'get'], answer: 0, why: 'make it a rule to ＋ 原形。' },
-      { sentence: 'He makes it a ___ to read the news every morning.', choices: ['rule', 'role', 'rail'], answer: 0, why: 'make it a rule to ～「～することにしている」。role（役割）とつづりがにているので注意。' },
+      { sentence: 'I make ___ a rule to walk for 30 minutes every day.', choices: ['it', 'that', 'this', 'what'], answer: 0, why: '形式目的語 it。本当の目的語は to walk 以下。' },
+      { sentence: 'She makes it a rule ___ up early.', choices: ['to get', 'getting', 'get', 'to getting'], answer: 0, why: 'make it a rule to ＋ 原形。' },
+      { sentence: 'He makes it a ___ to read the news every morning.', choices: ['rule', 'role', 'rail', 'roll'], answer: 0, why: 'make it a rule to ～「～することにしている」。role（役割）とつづりがにているので注意。' },
     ],
   },
   {
@@ -4690,9 +4690,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Don\'t take your friends for granted.', ja: '友だちがいるのを当たり前だと思ってはいけない。' },
     ],
     questions: [
-      { sentence: 'We take it for ___ that water is safe to drink.', choices: ['granted', 'grant', 'granting'], answer: 0, why: 'take it for granted that ～ の決まった形。granted は過去分詞。' },
-      { sentence: 'Don\'t take your parents\' help for ___.', choices: ['granted', 'given', 'sure'], answer: 0, why: 'take ～ for granted「～を当たり前と思う」。' },
-      { sentence: 'I took ___ for granted that he would come.', choices: ['it', 'that', 'this'], answer: 0, why: '形式目的語 it。本当の目的語は that he would come。' },
+      { sentence: 'We take it for ___ that water is safe to drink.', choices: ['granted', 'grant', 'granting', 'grants'], answer: 0, why: 'take it for granted that ～ の決まった形。granted は過去分詞。' },
+      { sentence: 'Don\'t take your parents\' help for ___.', choices: ['granted', 'given', 'sure', 'gift'], answer: 0, why: 'take ～ for granted「～を当たり前と思う」。' },
+      { sentence: 'I took ___ for granted that he would come.', choices: ['it', 'that', 'this', 'what'], answer: 0, why: '形式目的語 it。本当の目的語は that he would come。' },
     ],
   },
   {
@@ -4707,9 +4707,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'They discussed whether to cancel the game.', ja: '彼らは試合を中止するかどうかを話し合った。' },
     ],
     questions: [
-      { sentence: 'I can\'t decide ___ to go or not.', choices: ['whether', 'if', 'that'], answer: 0, why: 'to 不定詞と組めるのは whether。if to ～ とは言わない。' },
-      { sentence: 'She is wondering whether ___ the job.', choices: ['to take', 'taking', 'take'], answer: 0, why: 'whether to ＋ 原形「～すべきかどうか」。' },
-      { sentence: 'We discussed whether ___ go by bus or by train.', choices: ['to', 'for', 'that'], answer: 0, why: 'whether to A or B「A すべきか B すべきか」。' },
+      { sentence: 'I can\'t decide ___ to go or not.', choices: ['whether', 'if', 'that', 'what'], answer: 0, why: 'to 不定詞と組めるのは whether。if to ～ とは言わない。' },
+      { sentence: 'She is wondering whether ___ the job.', choices: ['to take', 'taking', 'take', 'to taking'], answer: 0, why: 'whether to ＋ 原形「～すべきかどうか」。' },
+      { sentence: 'We discussed whether ___ go by bus or by train.', choices: ['to', 'for', 'that', 'of'], answer: 0, why: 'whether to A or B「A すべきか B すべきか」。' },
     ],
   },
   {
@@ -4724,9 +4724,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"I need a hammer." "What for?"', ja: '「かなづちがいるんだ」「何に使うの？」' },
     ],
     questions: [
-      { sentence: 'What did you come here ___?', choices: ['for', 'of', 'at'], answer: 0, why: 'What ～ for?「何のために～？」。for が文の最後に残る。' },
-      { sentence: '"I need some money." "What ___?"', choices: ['for', 'to', 'by'], answer: 0, why: 'What for?「何のために？」の決まった形。' },
-      { sentence: '___ did you buy this for?', choices: ['What', 'Why', 'How'], answer: 0, why: '文の最後に for があるので What ～ for?。Why ～ for? とはしない。' },
+      { sentence: 'What did you come here ___?', choices: ['for', 'of', 'at', 'to'], answer: 0, why: 'What ～ for?「何のために～？」。for が文の最後に残る。' },
+      { sentence: '"I need some money." "What ___?"', choices: ['for', 'to', 'by', 'of'], answer: 0, why: 'What for?「何のために？」の決まった形。' },
+      { sentence: '___ did you buy this for?', choices: ['What', 'Why', 'How', 'When'], answer: 0, why: '文の最後に for があるので What ～ for?。Why ～ for? とはしない。' },
     ],
   },
   {
@@ -4741,9 +4741,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'These shoes need to be cleaned.', ja: 'このくつはみがく必要がある。' },
     ],
     questions: [
-      { sentence: 'My bike needs ___.', choices: ['repairing', 'to repair', 'repaired'], answer: 0, why: '物が主語の need -ing は「～される必要がある」。to repair だと自転車が何かを直すことになる。' },
-      { sentence: 'The windows need ___ washed.', choices: ['to be', 'being', 'be'], answer: 0, why: 'need to be ＋ 過去分詞「～される必要がある」。' },
-      { sentence: 'This shirt needs ___. It has a stain.', choices: ['washing', 'to wash', 'wash'], answer: 0, why: '物が主語の need -ing「～される必要がある」。' },
+      { sentence: 'My bike needs ___.', choices: ['repairing', 'to repair', 'repaired', 'repair'], answer: 0, why: '物が主語の need -ing は「～される必要がある」。to repair だと自転車が何かを直すことになる。' },
+      { sentence: 'The windows need ___ washed.', choices: ['to be', 'being', 'be', 'been'], answer: 0, why: 'need to be ＋ 過去分詞「～される必要がある」。' },
+      { sentence: 'This shirt needs ___. It has a stain.', choices: ['washing', 'to wash', 'wash', 'to washing'], answer: 0, why: '物が主語の need -ing「～される必要がある」。' },
     ],
   },
   {
@@ -4758,9 +4758,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Hurry up, or you will be late.', ja: '急ぎなさい、さもないとおくれるよ。' },
     ],
     questions: [
-      { sentence: 'I took a taxi; ___, I would have been late.', choices: ['otherwise', 'unless', 'without'], answer: 0, why: '「そうでなければ」は otherwise。unless のうしろには文、without のうしろには名詞が必要。' },
-      { sentence: 'Hurry up, ___ you will miss the bus.', choices: ['or', 'unless', 'despite'], answer: 0, why: '命令文 ＋ or ～「さもないと～」。unless のあとに will は使わず、despite のうしろは名詞。' },
-      { sentence: 'He studied hard; otherwise he ___ the test.', choices: ['would have failed', 'failing', 'fail'], answer: 0, why: '過去の事実（勉強した）の反対を仮定するので would have ＋ 過去分詞。' },
+      { sentence: 'I took a taxi; ___, I would have been late.', choices: ['otherwise', 'unless', 'without', 'if'], answer: 0, why: '「そうでなければ」は otherwise。unless のうしろには文、without のうしろには名詞が必要。' },
+      { sentence: 'Hurry up, ___ you will miss the bus.', choices: ['or', 'unless', 'despite', 'and'], answer: 0, why: '命令文 ＋ or ～「さもないと～」。unless のあとに will は使わず、despite のうしろは名詞。' },
+      { sentence: 'He studied hard; otherwise he ___ the test.', choices: ['would have failed', 'failing', 'fail', 'had failed'], answer: 0, why: '過去の事実（勉強した）の反対を仮定するので would have ＋ 過去分詞。' },
     ],
   },
   {
@@ -4775,9 +4775,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is always willing to help others.', ja: '彼はいつも進んで人を助ける。' },
     ],
     questions: [
-      { sentence: 'She is eager ___ study abroad.', choices: ['to', 'of', 'at'], answer: 0, why: 'be eager to ＋ 原形「しきりに～したがる」。' },
-      { sentence: 'He is willing ___ help us.', choices: ['to', 'for', 'with'], answer: 0, why: 'be willing to ＋ 原形「進んで～する」。' },
-      { sentence: 'They were anxious ___ the results.', choices: ['about', 'to', 'with'], answer: 0, why: 'be anxious about ＋ 名詞「～を心配している」。' },
+      { sentence: 'She is eager ___ study abroad.', choices: ['to', 'of', 'at', 'for'], answer: 0, why: 'be eager to ＋ 原形「しきりに～したがる」。' },
+      { sentence: 'He is willing ___ help us.', choices: ['to', 'for', 'with', 'of'], answer: 0, why: 'be willing to ＋ 原形「進んで～する」。' },
+      { sentence: 'They were anxious ___ the results.', choices: ['about', 'to', 'with', 'at'], answer: 0, why: 'be anxious about ＋ 名詞「～を心配している」。' },
     ],
   },
   {
@@ -4792,9 +4792,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'To make matters worse, my phone battery died.', ja: 'さらに悪いことに、電話の電池が切れた。' },
     ],
     questions: [
-      { sentence: 'It was raining, and what was ___, I had no umbrella.', choices: ['worse', 'badly', 'worsen'], answer: 0, why: 'what is (was) worse「さらに悪いことに」。bad の比較級 worse。' },
-      { sentence: 'To make matters ___, the bus broke down.', choices: ['worse', 'badly', 'worsen'], answer: 0, why: 'to make matters worse「さらに悪いことに」。make O C の C に形容詞の比較級 worse。' },
-      { sentence: 'I lost my wallet. What is ___, my phone was in it.', choices: ['worse', 'badly', 'more bad'], answer: 0, why: 'What is worse の決まった形。bad の比較級は worse（more bad とは言わない）。' },
+      { sentence: 'It was raining, and what was ___, I had no umbrella.', choices: ['worse', 'badly', 'worsen', 'worst'], answer: 0, why: 'what is (was) worse「さらに悪いことに」。bad の比較級 worse。' },
+      { sentence: 'To make matters ___, the bus broke down.', choices: ['worse', 'badly', 'worsen', 'worst'], answer: 0, why: 'to make matters worse「さらに悪いことに」。make O C の C に形容詞の比較級 worse。' },
+      { sentence: 'I lost my wallet. What is ___, my phone was in it.', choices: ['worse', 'badly', 'more bad', 'worst'], answer: 0, why: 'What is worse の決まった形。bad の比較級は worse（more bad とは言わない）。' },
     ],
   },
   {
