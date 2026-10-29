@@ -5319,9 +5319,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You can find more information on our website.', ja: 'くわしい情報はウェブサイトで見られます。' },
     ],
     questions: [
-      { sentence: 'Can you give me some ___?', choices: ['advice', 'advices', 'an advice'], answer: 0, why: 'advice は数えられない名詞なので、-s も an もつけない。' },
-      { sentence: 'I need ___ about the tour.', choices: ['information', 'an information', 'informations'], answer: 0, why: 'information は数えられない名詞。' },
-      { sentence: 'She bought two ___ of furniture.', choices: ['pieces', 'piece', 'furnitures'], answer: 0, why: '数えるときは two pieces of furniture。piece を複数にする。' },
+      { sentence: 'Can you give me some ___?', choices: ['advice', 'advices', 'an advice', 'advise'], answer: 0, why: 'advice は数えられない名詞なので、-s も an もつけない。' },
+      { sentence: 'I need ___ about the tour.', choices: ['information', 'an information', 'informations', 'informing'], answer: 0, why: 'information は数えられない名詞。' },
+      { sentence: 'She bought two ___ of furniture.', choices: ['pieces', 'piece', 'furnitures', 'piece of'], answer: 0, why: '数えるときは two pieces of furniture。piece を複数にする。' },
     ],
   },
   {
@@ -5336,9 +5336,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'No news is good news.', ja: '便りのないのはよい便り。' },
     ],
     questions: [
-      { sentence: 'The police ___ looking for the thief.', choices: ['are', 'is', 'was'], answer: 0, why: 'police は複数あつかいなので are。' },
-      { sentence: 'The news ___ surprising.', choices: ['was', 'were', 'are'], answer: 0, why: 'news は単数あつかいなので was。' },
-      { sentence: 'Many people ___ waiting outside.', choices: ['were', 'was', 'is'], answer: 0, why: 'people は複数あつかいなので were。' },
+      { sentence: 'The police ___ looking for the thief.', choices: ['are', 'is', 'was', 'has'], answer: 0, why: 'police は複数あつかいなので are。' },
+      { sentence: 'The news ___ surprising.', choices: ['was', 'were', 'are', 'have been'], answer: 0, why: 'news は単数あつかいなので was。' },
+      { sentence: 'Many people ___ waiting outside.', choices: ['were', 'was', 'is', 'has'], answer: 0, why: 'people は複数あつかいなので were。' },
     ],
   },
   {
@@ -5353,9 +5353,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This old camera of my grandfather\'s still works.', ja: '祖父のこの古いカメラは今でも動く。' },
     ],
     questions: [
-      { sentence: 'She is a friend of ___.', choices: ['mine', 'me', 'my'], answer: 0, why: 'a friend of mine。of のあとは所有代名詞 mine。' },
-      { sentence: 'I met an old friend of ___ at the station.', choices: ['my father\'s', 'my fathers', 'my father is'], answer: 0, why: '人のときは a friend of ～\'s の形。' },
-      { sentence: 'This is ___ of mine.', choices: ['a book', 'my book', 'book'], answer: 0, why: 'a ＋ 名詞 ＋ of mine。my と mine をいっしょには使わない。' },
+      { sentence: 'She is a friend of ___.', choices: ['mine', 'me', 'my', 'I'], answer: 0, why: 'a friend of mine。of のあとは所有代名詞 mine。' },
+      { sentence: 'I met an old friend of ___ at the station.', choices: ['my father\'s', 'my fathers', 'my father is', 'my father'], answer: 0, why: '人のときは a friend of ～\'s の形。' },
+      { sentence: 'This is ___ of mine.', choices: ['a book', 'my book', 'book', 'the book'], answer: 0, why: 'a ＋ 名詞 ＋ of mine。my と mine をいっしょには使わない。' },
     ],
   },
   {
@@ -5370,9 +5370,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This bridge is ten meters longer than that one.', ja: 'この橋はあの橋より10メートル長い。' },
     ],
     questions: [
-      { sentence: 'She is older than me ___ two years.', choices: ['by', 'for', 'in'], answer: 0, why: '差を表す by「～だけ」。' },
-      { sentence: 'Our team lost ___ one point.', choices: ['by', 'for', 'with'], answer: 0, why: 'lose by ～「～の差で負ける」。' },
-      { sentence: 'He is three years ___ than his brother.', choices: ['older', 'old', 'oldest'], answer: 0, why: 'than があるので比較級 older。数（three years）は比較級の前に置く。' },
+      { sentence: 'She is older than me ___ two years.', choices: ['by', 'for', 'in', 'at'], answer: 0, why: '差を表す by「～だけ」。' },
+      { sentence: 'Our team lost ___ one point.', choices: ['by', 'for', 'with', 'at'], answer: 0, why: 'lose by ～「～の差で負ける」。' },
+      { sentence: 'He is three years ___ than his brother.', choices: ['older', 'old', 'oldest', 'more old'], answer: 0, why: 'than があるので比較級 older。数（three years）は比較級の前に置く。' },
     ],
   },
   {
@@ -5387,9 +5387,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It\'s been a long day.', ja: '長い一日だった。（It has been）' },
     ],
     questions: [
-      { sentence: 'The dog wagged ___ tail.', choices: ['its', 'it\'s', 'it'], answer: 0, why: '「その（犬の）しっぽ」なので所有格 its。it\'s は it is の短縮形。' },
-      { sentence: '___ raining outside.', choices: ['It\'s', 'Its', 'It'], answer: 0, why: 'It is raining の短縮形 It\'s。' },
-      { sentence: '___ bag is this?', choices: ['Whose', 'Who\'s', 'Who'], answer: 0, why: '「だれのかばん」なので所有の Whose。Who\'s は Who is の短縮形。' },
+      { sentence: 'The dog wagged ___ tail.', choices: ['its', 'it\'s', 'it', 'it is'], answer: 0, why: '「その（犬の）しっぽ」なので所有格 its。it\'s は it is の短縮形。' },
+      { sentence: '___ raining outside.', choices: ['It\'s', 'Its', 'It', 'There'], answer: 0, why: 'It is raining の短縮形 It\'s。' },
+      { sentence: '___ bag is this?', choices: ['Whose', 'Who\'s', 'Who', 'Whom'], answer: 0, why: '「だれのかばん」なので所有の Whose。Who\'s は Who is の短縮形。' },
     ],
   },
   {
@@ -5404,9 +5404,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There are many shops over there.', ja: 'あそこにはたくさんの店がある。' },
     ],
     questions: [
-      { sentence: 'The students left ___ bags in the classroom.', choices: ['their', 'there', 'they\'re'], answer: 0, why: '「彼らのかばん」なので所有格 their。' },
-      { sentence: '___ is a cat under the table.', choices: ['There', 'Their', 'They\'re'], answer: 0, why: 'There is ～「～がいる」。' },
-      { sentence: '___ coming to the party tonight.', choices: ['They\'re', 'Their', 'There'], answer: 0, why: 'They are coming の短縮形 They\'re。' },
+      { sentence: 'The students left ___ bags in the classroom.', choices: ['their', 'there', 'they\'re', 'theirs'], answer: 0, why: '「彼らのかばん」なので所有格 their。' },
+      { sentence: '___ is a cat under the table.', choices: ['There', 'Their', 'They\'re', 'They'], answer: 0, why: 'There is ～「～がいる」。' },
+      { sentence: '___ coming to the party tonight.', choices: ['They\'re', 'Their', 'There', 'They'], answer: 0, why: 'They are coming の短縮形 They\'re。' },
     ],
   },
   {
@@ -5421,9 +5421,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She laid the baby gently in the bed.', ja: '彼女は赤ちゃんをそっとベッドに寝かせた。' },
     ],
     questions: [
-      { sentence: 'I ___ down on the sofa because I was tired.', choices: ['lay', 'laid', 'lied'], answer: 0, why: '「横になった」は lie の過去形 lay。laid は目的語が必要、lied は「うそをついた」。' },
-      { sentence: 'Please ___ the baby on the bed.', choices: ['lay', 'lie', 'lain'], answer: 0, why: '目的語（the baby）があるので「横にする」の lay。' },
-      { sentence: 'Yesterday she ___ the book on the desk.', choices: ['laid', 'lay', 'lied'], answer: 0, why: '目的語（the book）があり過去なので lay の過去形 laid。' },
+      { sentence: 'I ___ down on the sofa because I was tired.', choices: ['lay', 'laid', 'lied', 'lain'], answer: 0, why: '「横になった」は lie の過去形 lay。laid は目的語が必要、lied は「うそをついた」。' },
+      { sentence: 'Please ___ the baby on the bed.', choices: ['lay', 'lie', 'lain', 'laid'], answer: 0, why: '目的語（the baby）があるので「横にする」の lay。' },
+      { sentence: 'Yesterday she ___ the book on the desk.', choices: ['laid', 'lay', 'lied', 'lain'], answer: 0, why: '目的語（the book）があり過去なので lay の過去形 laid。' },
     ],
   },
   {
@@ -5438,9 +5438,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Raise your hand if you know the answer.', ja: '答えがわかったら手をあげて。' },
     ],
     questions: [
-      { sentence: 'Please ___ your hand if you have a question.', choices: ['raise', 'rise', 'rose'], answer: 0, why: '目的語（your hand）があるので「上げる」の raise。' },
-      { sentence: 'The sun ___ in the east.', choices: ['rises', 'raises', 'raised'], answer: 0, why: '目的語がないので「のぼる」の rise。主語は三人称単数で rises。' },
-      { sentence: 'Prices have ___ a lot this year.', choices: ['risen', 'raised', 'rose'], answer: 0, why: '目的語がないので rise。have のあとは過去分詞 risen。' },
+      { sentence: 'Please ___ your hand if you have a question.', choices: ['raise', 'rise', 'rose', 'raised'], answer: 0, why: '目的語（your hand）があるので「上げる」の raise。' },
+      { sentence: 'The sun ___ in the east.', choices: ['rises', 'raises', 'raised', 'risen'], answer: 0, why: '目的語がないので「のぼる」の rise。主語は三人称単数で rises。' },
+      { sentence: 'Prices have ___ a lot this year.', choices: ['risen', 'raised', 'rose', 'rising'], answer: 0, why: '目的語がないので rise。have のあとは過去分詞 risen。' },
     ],
   },
   {
@@ -5455,9 +5455,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I tried to call you, but the line was busy.', ja: '電話しようとしたけど、話し中だった。' },
     ],
     questions: [
-      { sentence: 'If you can\'t sleep, try ___ a glass of warm milk.', choices: ['drinking', 'drink', 'drank'], answer: 0, why: '「ためしに～してみる」は try -ing。' },
-      { sentence: 'He tried ___ the heavy box, but he couldn\'t.', choices: ['to lift', 'lift', 'lifted'], answer: 0, why: '「～しようとした（けどできなかった）」は try to ＋ 原形。' },
-      { sentence: 'Try ___ the computer off and on again.', choices: ['turning', 'turn', 'turned'], answer: 0, why: 'ためしにやってみる try -ing。turn ～ off「～を切る」。' },
+      { sentence: 'If you can\'t sleep, try ___ a glass of warm milk.', choices: ['drinking', 'drink', 'drank', 'drunk'], answer: 0, why: '「ためしに～してみる」は try -ing。' },
+      { sentence: 'He tried ___ the heavy box, but he couldn\'t.', choices: ['to lift', 'lift', 'lifted', 'lifts'], answer: 0, why: '「～しようとした（けどできなかった）」は try to ＋ 原形。' },
+      { sentence: 'Try ___ the computer off and on again.', choices: ['turning', 'turn', 'turned', 'turns'], answer: 0, why: 'ためしにやってみる try -ing。turn ～ off「～を切る」。' },
     ],
   },
   {
@@ -5472,9 +5472,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Winning the game means going to the finals.', ja: 'その試合に勝てば決勝に進むことになる。' },
     ],
     questions: [
-      { sentence: 'I didn\'t mean ___ you.', choices: ['to hurt', 'hurt', 'hurts'], answer: 0, why: '「～するつもりだ」は mean to ＋ 原形。' },
-      { sentence: 'Taking this job will mean ___ to Osaka.', choices: ['moving', 'move', 'moved'], answer: 0, why: '物事が主語で「～することになる」は mean -ing。' },
-      { sentence: 'Sorry, I meant ___ you back yesterday.', choices: ['to call', 'call', 'called'], answer: 0, why: '「電話を返すつもりだった」は mean to ＋ 原形。' },
+      { sentence: 'I didn\'t mean ___ you.', choices: ['to hurt', 'hurt', 'hurts', 'hurting'], answer: 0, why: '「～するつもりだ」は mean to ＋ 原形。' },
+      { sentence: 'Taking this job will mean ___ to Osaka.', choices: ['moving', 'move', 'moved', 'to move'], answer: 0, why: '物事が主語で「～することになる」は mean -ing。' },
+      { sentence: 'Sorry, I meant ___ you back yesterday.', choices: ['to call', 'call', 'called', 'calling'], answer: 0, why: '「電話を返すつもりだった」は mean to ＋ 原形。' },
     ],
   },
   {
