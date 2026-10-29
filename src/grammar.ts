@@ -7291,9 +7291,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'At any rate, we finished the work on time.', ja: 'とにかく、私たちは時間どおりに仕事を終えた。' },
     ],
     questions: [
-      { sentence: 'The new rule is in no ___ fair to small shops.', choices: ['way', 'ways', 'wayward'], answer: 0, why: 'in no way「決して～ない」。no のあとは単数の way。' },
-      { sentence: 'It was a hard game. At any ___, we did our best.', choices: ['rate', 'rates', 'rated'], answer: 0, why: 'at any rate「とにかく」。any のあとは単数の rate。' },
-      { sentence: 'I\'m in no ___ angry with you.', choices: ['way', 'ways', 'wayward'], answer: 0, why: 'in no way「少しも～ない」。no way の形で決まっている。' },
+      { sentence: 'This decision is ___ no way connected with what happened last year.', choices: ['in', 'on', 'by', 'at'], answer: 0, why: 'in no way「決して～ない」（= not at all）。' },
+      { sentence: 'The weather was terrible. ___ any rate, we managed to finish the race.', choices: ['At', 'In', 'On', 'By'], answer: 0, why: 'at any rate「とにかく・いずれにしても」。' },
+      { sentence: 'I am ___ no means sure that he will agree.', choices: ['by', 'in', 'at', 'on'], answer: 0, why: 'by no means「決して～ない」。in no way と同じ意味だが、means の前は by。' },
     ],
   },
   {
@@ -7308,9 +7308,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Tokyo is crowded. By contrast, my hometown is very quiet.', ja: '東京はこんでいる。それに対して、ぼくのふるさとはとても静かだ。' },
     ],
     questions: [
-      { sentence: '"You must be tired." "On the ___, I feel great."', choices: ['contrary', 'contrarily', 'contraries'], answer: 0, why: 'on the contrary「それどころか」。the のあとは contrary の形で決まっている。' },
-      { sentence: 'Summers here are hot. By ___, winters are mild.', choices: ['contrast', 'contrasting', 'contrasted'], answer: 0, why: 'by contrast「対照的に」。by のあとは名詞 contrast。' },
-      { sentence: 'He isn\'t lazy. On the ___, he works very hard.', choices: ['contrary', 'contrarily', 'contraries'], answer: 0, why: 'on the contrary「それどころか（反対に）」。前の内容を打ち消して反対のことを言う。' },
+      { sentence: '"You must be bored." "On the ___. I’m having a wonderful time."', choices: ['contrary', 'contrast', 'other hand', 'opposite of'], answer: 0, why: '相手の言ったことを強く否定して「それどころか」は on the contrary。on the other hand は2つのことをくらべる「一方で」で、相手の発言の否定には使わない。' },
+      { sentence: 'Summers here are very hot. ___ contrast, winters are mild.', choices: ['By', 'On', 'At', 'For'], answer: 0, why: 'by contrast「対照的に」（in contrast も可だが、ここに in はない）。' },
+      { sentence: 'He is not lazy. ___ the contrary, he works harder than anyone.', choices: ['On', 'In', 'By', 'To'], answer: 0, why: 'on the contrary「それどころか（逆に）」。前の否定文を強く打ち消す。' },
     ],
   },
   {
@@ -7325,9 +7325,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Above all, be kind to others.', ja: '何よりも、人にやさしくしなさい。' },
     ],
     questions: [
-      { sentence: 'Why did you buy it in the first ___?', choices: ['place', 'places', 'placed'], answer: 0, why: 'in the first place「そもそも」。first のあとは単数の place。' },
-      { sentence: 'She is smart, funny, and ___ all, honest.', choices: ['above', 'over of', 'up'], answer: 0, why: 'above all「何よりも」。above all の形で決まっている。' },
-      { sentence: 'In the first place, the room is too small. In the second ___, it is too expensive.', choices: ['place', 'places', 'placing'], answer: 0, why: 'in the second place「第二に」。in the first place に続けて理由をならべる。' },
+      { sentence: 'If you didn’t like the movie, why did you go to see it in the first ___?', choices: ['place', 'time', 'case', 'way'], answer: 0, why: 'in the first place「そもそも」。for the first time（はじめて）と混同しない。' },
+      { sentence: 'A good leader must be fair and, ___ all, honest.', choices: ['above', 'under', 'after', 'beyond'], answer: 0, why: 'above all「何よりも」。after all は「結局」で意味がちがう。' },
+      { sentence: 'I can’t join the trip. In the first place, I have no money. In the ___ place, I have an exam.', choices: ['second', 'next', 'other', 'last'], answer: 0, why: 'in the first place … in the second place …「第一に…第二に…」。' },
     ],
   },
   {
@@ -7342,9 +7342,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My mother is always on the go.', ja: '母はいつもいそがしく動きまわっている。' },
     ],
     questions: [
-      { sentence: 'Food prices are on the ___ again.', choices: ['rise', 'rising', 'risen'], answer: 0, why: 'on the rise「上がって」。the のあとは名詞 rise。' },
-      { sentence: 'The number of children in the town is on the ___.', choices: ['decline', 'declining', 'declined'], answer: 0, why: 'on the decline「へって」。the のあとは名詞 decline。' },
-      { sentence: 'Busy parents are on the ___ from morning till night.', choices: ['go', 'going', 'gone'], answer: 0, why: 'on the go「いそがしく動きまわって」。the のあとは go の形で決まっている。' },
+      { sentence: 'Crime in the city is ___ the rise, so the police have increased patrols.', choices: ['on', 'in', 'at', 'up'], answer: 0, why: 'on the rise「増加して」。' },
+      { sentence: 'As fewer people buy newspapers, the industry is on the ___.', choices: ['decline', 'rise', 'go', 'way'], answer: 0, why: '購読者がへっているので on the decline「減少して・おとろえて」。on the rise は逆の意味。' },
+      { sentence: 'Busy parents are on the ___ from morning till night.', choices: ['go', 'rise', 'decline', 'air'], answer: 0, why: 'on the go「いそがしく動きまわって」。' },
     ],
   },
   {
@@ -7359,9 +7359,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A trip abroad this year is out of the question.', ja: '今年の海外旅行はありえない。' },
     ],
     questions: [
-      { sentence: 'The car went out of ___ on the icy road.', choices: ['control', 'controlled', 'controlling'], answer: 0, why: 'out of control「制御できなくなって」。of のあとは名詞 control。' },
-      { sentence: 'My uncle has been out of ___ since the factory closed.', choices: ['work', 'working', 'worked'], answer: 0, why: 'out of work「失業して」。of のあとは名詞 work。' },
-      { sentence: 'Buying a new car now is out of the ___.', choices: ['question', 'questioned', 'questioning'], answer: 0, why: 'out of the question「ありえない・問題外で」。the のあとは名詞 question。' },
+      { sentence: 'The fire spread quickly and was soon ___ of control.', choices: ['out', 'off', 'beyond', 'under'], answer: 0, why: 'out of control「手がつけられない」。under control は逆に「制御されて」で of が続かない。' },
+      { sentence: 'Since the factory closed, many people in the town have been out of ___.', choices: ['work', 'order', 'reach', 'date'], answer: 0, why: 'out of work「失業して」。out of order は「故障して」、out of reach は「手のとどかない」、out of date は「時代おくれの」。' },
+      { sentence: 'Going on a trip abroad this year is out of the ___. We don’t have enough money.', choices: ['question', 'way', 'problem', 'matter'], answer: 0, why: 'out of the question「論外で・ありえない」。out of the way は「じゃまにならない所に」。' },
     ],
   },
   {
@@ -7376,9 +7376,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Thank you for coming on such short notice.', ja: '急なお願いだったのに、来てくれてありがとう。' },
     ],
     questions: [
-      { sentence: 'We finished the project ahead of ___.', choices: ['time', 'times', 'timing'], answer: 0, why: 'ahead of time「予定より早く」。time は単数のまま。' },
-      { sentence: 'Sorry, I can\'t come on such short ___.', choices: ['notice', 'noticed', 'noticing'], answer: 0, why: 'on short notice「急に・直前の知らせで」。short のあとは名詞 notice。' },
-      { sentence: 'The plan may cost more in the short ___, but it will save money later.', choices: ['term', 'terms', 'termed'], answer: 0, why: 'in the short term「短期的には」。short のあとは単数の term。' },
+      { sentence: 'If you can’t come, please tell us ___ of time.', choices: ['ahead', 'before', 'front', 'early'], answer: 0, why: 'ahead of time「前もって」（= in advance）。before of / front of time とは言わない。' },
+      { sentence: 'Thank you for helping us ___ such short notice.', choices: ['on', 'in', 'with', 'for'], answer: 0, why: 'on short notice「急な知らせで」（イギリス英語では at short notice）。' },
+      { sentence: 'The new policy may be unpopular in the short ___, but it will benefit the country in the long run.', choices: ['term', 'time', 'way', 'length'], answer: 0, why: 'in the short term「短期的には」。in the long run（長い目で見れば）と対になる言い方。' },
     ],
   },
   {
@@ -7393,9 +7393,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Our teacher is on leave this month.', ja: '私たちの先生は今月、休みをとっている。' },
     ],
     questions: [
-      { sentence: 'She often travels to Singapore on ___.', choices: ['business', 'businesses', 'busy'], answer: 0, why: 'on business「仕事で」。on のあとは a のない単数の business。' },
-      { sentence: 'We were on ___ in Hokkaido last summer.', choices: ['vacation', 'vacant', 'vacationing'], answer: 0, why: 'on vacation「休暇で」。on のあとは単数の vacation。' },
-      { sentence: 'Mr. Sato is on ___ until next week.', choices: ['leave', 'leaving', 'left'], answer: 0, why: 'on leave「休みをとって」。ここでの leave は「休暇」という名詞。' },
+      { sentence: 'He isn’t here this week. He has gone to Seoul ___ business.', choices: ['on', 'at', 'in', 'by'], answer: 0, why: 'on business「仕事で（出張して）」。' },
+      { sentence: 'The office is quiet because half the staff are on ___ this week.', choices: ['vacation', 'holiday of', 'rest', 'break of'], answer: 0, why: 'be on vacation「休暇中で」。holiday なら on holiday（of は不要）。' },
+      { sentence: 'The teacher is ___ leave for three months after having a baby.', choices: ['on', 'in', 'at', 'off'], answer: 0, why: 'on leave「休暇をとって」。この leave は名詞「休暇」。' },
     ],
   },
   {
@@ -7410,9 +7410,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My grandfather walks every day to stay in shape.', ja: '祖父は体調をたもつために毎日歩いている。' },
     ],
     questions: [
-      { sentence: 'I\'m not in the ___ for a movie today.', choices: ['mood', 'moody', 'moods'], answer: 0, why: 'be in the mood for ～「～したい気分だ」。the のあとは単数の名詞 mood。' },
-      { sentence: 'She swims twice a week to keep in ___.', choices: ['shape', 'shaped', 'shapely'], answer: 0, why: 'keep in shape「体調をたもつ」。in のあとは名詞 shape。' },
-      { sentence: 'You will be in ___ if you are late again.', choices: ['trouble', 'troubled', 'troublesome'], answer: 0, why: 'be in trouble「こまったことになる」。in のあとは名詞 trouble。' },
+      { sentence: 'I’m tired, so I’m not ___ the mood for cooking tonight.', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'be in the mood for ～「～したい気分だ」。' },
+      { sentence: 'He runs every morning to stay ___ shape.', choices: ['in', 'on', 'at', 'into'], answer: 0, why: 'stay / keep in shape「体調をよくたもつ」。' },
+      { sentence: 'If you don’t finish your report by tomorrow, you will be in ___ with the teacher.', choices: ['trouble', 'danger', 'mood', 'shape'], answer: 0, why: 'be in trouble with ～「～にしかられる・～ともめる」。in danger は「危険な状態で」で with ～が続かない。' },
     ],
   },
   {
@@ -7461,9 +7461,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'From time to time, I write letters to my grandmother.', ja: 'ときどき、祖母に手紙を書く。' },
     ],
     questions: [
-      { sentence: 'The two leaders met face to ___ for the first time.', choices: ['face', 'faces', 'a face'], answer: 0, why: 'face to face「面と向かって」。to の前後は同じ face。' },
-      { sentence: 'The children walked hand in ___ to school.', choices: ['hand', 'hands', 'handed'], answer: 0, why: 'hand in hand「手をつないで」。in の前後は同じ hand。' },
-      { sentence: 'We eat out from time to ___.', choices: ['time', 'times', 'timely'], answer: 0, why: 'from time to time「ときどき」。to のあとは単数の time。' },
+      { sentence: 'It is better to discuss such a serious problem face ___ face rather than by email.', choices: ['to', 'by', 'in', 'with'], answer: 0, why: 'face to face「面と向かって」。' },
+      { sentence: 'The couple walked along the beach hand ___ hand.', choices: ['in', 'to', 'by', 'with'], answer: 0, why: 'hand in hand「手をつないで」。face to face と前置詞がちがうので注意。' },
+      { sentence: 'I don’t go to the gym often, but I go ___ time to time.', choices: ['from', 'by', 'at', 'for'], answer: 0, why: 'from time to time「ときどき」（= sometimes）。' },
     ],
   },
   {
@@ -7495,9 +7495,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Plans for the festival are already under way.', ja: 'お祭りの準備はもう始まっている。' },
     ],
     questions: [
-      { sentence: 'The elevator is under ___ today.', choices: ['repair', 'repairing', 'repaired'], answer: 0, why: 'under repair「修理中で」。under のあとは名詞 repair。' },
-      { sentence: 'The new school rules are still under ___.', choices: ['discussion', 'discussing', 'discussed'], answer: 0, why: 'under discussion「話し合い中で」。under のあとは名詞 discussion。' },
-      { sentence: 'Work on the new station is now under ___.', choices: ['way', 'ways', 'wayward'], answer: 0, why: 'under way「進行中で」。under のあとは単数の way。' },
+      { sentence: 'Sorry, you can’t use this elevator. It is ___ repair until Friday.', choices: ['under', 'in', 'on', 'below'], answer: 0, why: 'under repair「修理中で」。under ＋名詞で「～されている最中」（under construction / under discussion）。' },
+      { sentence: 'The proposal is still under ___, so no final decision has been made.', choices: ['discussion', 'control', 'pressure', 'age'], answer: 0, why: '「まだ最終決定されていない」ので under discussion「検討中で」。under control は「制御されて」、under pressure は「圧力を受けて」。' },
+      { sentence: 'Preparations for the festival are already well ___ way.', choices: ['under', 'on', 'in', 'by'], answer: 0, why: 'under way「進行中で」（underway とも書く）。on the way（途中で）と混同しない。' },
     ],
   },
   {
