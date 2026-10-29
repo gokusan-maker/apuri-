@@ -98,7 +98,8 @@
   - [x] ㉓ provided that・those who・使役・知覚の受け身・It is no wonder・the very・過去完了進行形・完了動名詞・for fear of・all the ＋比較級・anything but の10単元に4つ目の選択肢（309→279）
   - [x] ㉔ what is more・関係代名詞の as・were to / should・譲歩の as・独立不定詞・結果の不定詞・wherever / whenever・cannot ～ too・of ＋抽象名詞・on ～ing の10単元に4つ目の選択肢（279→249）
   - [x] ㉕ the last ～ to・neither A nor B・would often / used to・a number of / the number of・even if / even though・not so much A as B・remind A of B・less / least・to ＋ ～ing・have trouble ～ing の10単元に4つ目の選択肢（249→219）
-  - [ ] ㉖ つづきの10単元を4択に
+  - [x] ㉖ by the time・疑問文の間接話法・未来進行形・be supposed to・have / get ＋人＋～・関係副詞 why / how・If only・happen to / turn out・as well as・instead of / according to の10単元に4つ目の選択肢（219→189）
+  - [ ] ㉗ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。

@@ -3092,9 +3092,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Thanks to your help, I finished my homework early.', ja: 'あなたが手伝ってくれたおかげで、宿題が早く終わった。' },
     ],
     questions: [
-      { sentence: 'Let\'s drink tea instead ___ coffee.', choices: ['of', 'to', 'for'], answer: 0, why: 'instead of ～「～の代わりに」。' },
-      { sentence: 'Instead of ___ TV, he read a book.', choices: ['watching', 'watch', 'to watch'], answer: 0, why: 'instead of は前置詞のはたらきなので、あとは動名詞。' },
-      { sentence: '___ the news, the museum will open next month.', choices: ['According to', 'Thanks for', 'Instead to'], answer: 0, why: 'According to ～「～によれば」。情報のでどころを表す。' },
+      { sentence: 'Let\'s drink tea instead ___ coffee.', choices: ['of', 'to', 'for', 'with'], answer: 0, why: 'instead of ～「～の代わりに」。' },
+      { sentence: 'Instead of ___ TV, he read a book.', choices: ['watching', 'watch', 'to watch', 'watched'], answer: 0, why: 'instead of は前置詞のはたらきなので、あとは動名詞。' },
+      { sentence: '___ the news, the museum will open next month.', choices: ['According to', 'Thanks for', 'Instead to', 'According with'], answer: 0, why: 'According to ～「～によれば」。情報のでどころを表す。' },
     ],
   },
   {
@@ -3126,9 +3126,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My brother, as well as my parents, likes jazz.', ja: '両親だけでなく兄もジャズが好きだ。' },
     ],
     questions: [
-      { sentence: 'Tom, as well as his friends, ___ going to the concert.', choices: ['is', 'are', 'were'], answer: 0, why: 'A as well as B の主語は A（Tom）に動詞を合わせるので is。' },
-      { sentence: 'He plays the guitar as well ___ the piano.', choices: ['as', 'so', 'than'], answer: 0, why: 'A as well as B「B だけでなく A も」。' },
-      { sentence: 'Not only my sisters but also my mother ___ cats.', choices: ['loves', 'love', 'loving'], answer: 0, why: 'not only B but also A では、動詞は近い A（my mother）に合わせる。' },
+      { sentence: 'Tom, as well as his friends, ___ going to the concert.', choices: ['is', 'are', 'were', 'have'], answer: 0, why: 'A as well as B の主語は A（Tom）に動詞を合わせるので is。' },
+      { sentence: 'He plays the guitar as well ___ the piano.', choices: ['as', 'so', 'than', 'such'], answer: 0, why: 'A as well as B「B だけでなく A も」。' },
+      { sentence: 'Not only my sisters but also my mother ___ cats.', choices: ['loves', 'love', 'loving', 'is loving'], answer: 0, why: 'not only B but also A では、動詞は近い A（my mother）に合わせる。' },
     ],
   },
   {
@@ -3194,9 +3194,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The test turned out to be easier than I expected.', ja: 'テストは予想より簡単だとわかった。' },
     ],
     questions: [
-      { sentence: 'I happened ___ an old friend in the park.', choices: ['to see', 'seeing', 'see'], answer: 0, why: 'happen to ＋ 原形「たまたま～する」。' },
-      { sentence: 'The man turned out ___ a famous singer.', choices: ['to be', 'being', 'be'], answer: 0, why: 'turn out to be ～「～だとわかる」。' },
-      { sentence: 'It ___ out that he was right.', choices: ['turned', 'happened', 'took'], answer: 0, why: 'It turned out that ～「～だとわかった」。' },
+      { sentence: 'I happened ___ an old friend in the park.', choices: ['to see', 'seeing', 'see', 'saw'], answer: 0, why: 'happen to ＋ 原形「たまたま～する」。' },
+      { sentence: 'The man turned out ___ a famous singer.', choices: ['to be', 'being', 'be', 'been'], answer: 0, why: 'turn out to be ～「～だとわかる」。' },
+      { sentence: 'It ___ out that he was right.', choices: ['turned', 'happened', 'took', 'fell'], answer: 0, why: 'It turned out that ～「～だとわかった」。' },
     ],
   },
   {
@@ -3211,9 +3211,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If only I had listened to my mother!', ja: '母の言うことを聞いていればよかったのに。' },
     ],
     questions: [
-      { sentence: 'If only I ___ how to swim!', choices: ['knew', 'know', 'have known'], answer: 0, why: '今の事実と反対の願いなので過去形 knew。' },
-      { sentence: 'If only we ___ the earlier train yesterday!', choices: ['had taken', 'took', 'take'], answer: 0, why: 'yesterday（過去）の事実と反対の願いなので過去完了 had taken。' },
-      { sentence: '___ only he were here with us!', choices: ['If', 'Even', 'As'], answer: 0, why: 'If only ～!「～でさえあればなあ」。' },
+      { sentence: 'If only I ___ how to swim!', choices: ['knew', 'know', 'have known', 'known'], answer: 0, why: '今の事実と反対の願いなので過去形 knew。' },
+      { sentence: 'If only we ___ the earlier train yesterday!', choices: ['had taken', 'took', 'take', 'takes'], answer: 0, why: 'yesterday（過去）の事実と反対の願いなので過去完了 had taken。' },
+      { sentence: '___ only he were here with us!', choices: ['If', 'Even', 'As', 'So'], answer: 0, why: 'If only ～!「～でさえあればなあ」。' },
     ],
   },
   {
@@ -3313,9 +3313,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is how my grandmother makes miso soup.', ja: 'こうやって祖母はみそ汁を作るんだよ。' },
     ],
     questions: [
-      { sentence: 'It rained all day. That is ___ we stayed home.', choices: ['why', 'because', 'how'], answer: 0, why: '前の文が理由で、その結果を言うので That is why ～「そういうわけで～」。' },
-      { sentence: 'This is ___ I solved the problem.', choices: ['how', 'the way how', 'what'], answer: 0, why: '「こうやって解いた」は This is how ～。the way how とは言わない。' },
-      { sentence: 'Do you know the reason ___ she left early?', choices: ['why', 'which', 'what'], answer: 0, why: 'the reason のあとに文を続けるときは関係副詞 why。' },
+      { sentence: 'It rained all day. That is ___ we stayed home.', choices: ['why', 'because', 'how', 'what'], answer: 0, why: '前の文が理由で、その結果を言うので That is why ～「そういうわけで～」。' },
+      { sentence: 'This is ___ I solved the problem.', choices: ['how', 'the way how', 'what', 'how the way'], answer: 0, why: '「こうやって解いた」は This is how ～。the way how とは言わない。' },
+      { sentence: 'Do you know the reason ___ she left early?', choices: ['why', 'which', 'what', 'who'], answer: 0, why: 'the reason のあとに文を続けるときは関係副詞 why。' },
     ],
   },
   {
@@ -3347,9 +3347,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Can you get your sister to call me later?', ja: 'あとでお姉さんに電話してもらえるようにたのんでくれる？' },
     ],
     questions: [
-      { sentence: 'I had the clerk ___ the box for me.', choices: ['wrap', 'to wrap', 'wrapped'], answer: 0, why: 'have ＋ 人 ＋ 動詞の原形「人に～してもらう」。' },
-      { sentence: 'She got her father ___ her to the station.', choices: ['to drive', 'drive', 'driven'], answer: 0, why: 'get ＋ 人 ＋ to ＋ 原形。get のときは to が入る。' },
-      { sentence: 'I will ___ my friend check my English essay.', choices: ['have', 'get', 'ask'], answer: 0, why: 'あとが原形 check なので have。get と ask なら to check になる。' },
+      { sentence: 'I had the clerk ___ the box for me.', choices: ['wrap', 'to wrap', 'wrapped', 'wraps'], answer: 0, why: 'have ＋ 人 ＋ 動詞の原形「人に～してもらう」。' },
+      { sentence: 'She got her father ___ her to the station.', choices: ['to drive', 'drive', 'driven', 'drives'], answer: 0, why: 'get ＋ 人 ＋ to ＋ 原形。get のときは to が入る。' },
+      { sentence: 'I will ___ my friend check my English essay.', choices: ['have', 'get', 'ask', 'make to'], answer: 0, why: 'あとが原形 check なので have。get と ask なら to check になる。' },
     ],
   },
   {
@@ -3398,9 +3398,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was supposed to call her yesterday, but I forgot.', ja: 'きのう彼女に電話するはずだったのに、忘れてしまった。' },
     ],
     questions: [
-      { sentence: 'Students are supposed ___ their rooms every day.', choices: ['to clean', 'cleaning', 'clean'], answer: 0, why: 'be supposed to ＋ 動詞の原形。' },
-      { sentence: 'The train ___ supposed to arrive at noon, but it was late.', choices: ['was', 'is', 'has'], answer: 0, why: '「来るはずだったのに遅れた」という過去の予定なので was supposed to。' },
-      { sentence: 'You are ___ supposed to run in the hallway.', choices: ['not', 'no', "don't"], answer: 0, why: '否定は be not supposed to ～「～してはいけないことになっている」。' },
+      { sentence: 'Students are supposed ___ their rooms every day.', choices: ['to clean', 'cleaning', 'clean', 'to cleaning'], answer: 0, why: 'be supposed to ＋ 動詞の原形。' },
+      { sentence: 'The train ___ supposed to arrive at noon, but it was late.', choices: ['was', 'is', 'has', 'does'], answer: 0, why: '「来るはずだったのに遅れた」という過去の予定なので was supposed to。' },
+      { sentence: 'You are ___ supposed to run in the hallway.', choices: ['not', 'no', "don't", 'none'], answer: 0, why: '否定は be not supposed to ～「～してはいけないことになっている」。' },
     ],
   },
   {
@@ -3415,9 +3415,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'At noon tomorrow, we will be eating lunch in the park.', ja: 'あしたの正午には、私たちは公園でお昼を食べているだろう。' },
     ],
     questions: [
-      { sentence: 'This time next week, I will ___ in Okinawa.', choices: ['be swimming', 'swimming', 'be swim'], answer: 0, why: '「来週の今ごろは泳いでいるだろう」は will be ＋ ～ing。' },
-      { sentence: 'At ten tonight, she will be ___ for the test.', choices: ['studying', 'study', 'studied'], answer: 0, why: 'will be のあとは ～ing。' },
-      { sentence: '___ you be using the computer this afternoon?', choices: ['Will', 'Are', 'Do'], answer: 0, why: '未来進行形の疑問文は Will を主語の前に出す。' },
+      { sentence: 'This time next week, I will ___ in Okinawa.', choices: ['be swimming', 'swimming', 'be swim', 'been swimming'], answer: 0, why: '「来週の今ごろは泳いでいるだろう」は will be ＋ ～ing。' },
+      { sentence: 'At ten tonight, she will be ___ for the test.', choices: ['studying', 'study', 'studied', 'studies'], answer: 0, why: 'will be のあとは ～ing。' },
+      { sentence: '___ you be using the computer this afternoon?', choices: ['Will', 'Are', 'Do', 'Did'], answer: 0, why: '未来進行形の疑問文は Will を主語の前に出す。' },
     ],
   },
   {
@@ -3432,9 +3432,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My friend asked me if I could lend him a pen.', ja: '友だちが、ペンを貸してくれないかと私にたずねた。' },
     ],
     questions: [
-      { sentence: 'She asked me where ___.', choices: ['I lived', 'did I live', 'do I live'], answer: 0, why: '間接疑問の語順は〈疑問詞 ＋ 主語 ＋ 動詞〉。asked に合わせて過去形 lived。' },
-      { sentence: 'He asked me ___ I liked soccer.', choices: ['if', 'what', 'that'], answer: 0, why: 'Yes / No でたずねる内容なので if（〜かどうか）。' },
-      { sentence: 'Mom asked me what time I ___ home.', choices: ['would come', 'will I come', 'do I come'], answer: 0, why: '語順は〈主語 ＋ 動詞〉。過去の文なので will は would にずらす。' },
+      { sentence: 'She asked me where ___.', choices: ['I lived', 'did I live', 'do I live', 'lived I'], answer: 0, why: '間接疑問の語順は〈疑問詞 ＋ 主語 ＋ 動詞〉。asked に合わせて過去形 lived。' },
+      { sentence: 'He asked me ___ I liked soccer.', choices: ['if', 'what', 'that', 'which'], answer: 0, why: 'Yes / No でたずねる内容なので if（〜かどうか）。' },
+      { sentence: 'Mom asked me what time I ___ home.', choices: ['would come', 'will I come', 'do I come', 'came I'], answer: 0, why: '語順は〈主語 ＋ 動詞〉。過去の文なので will は would にずらす。' },
     ],
   },
   {
@@ -3483,9 +3483,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'By the time the doctor came, the baby had fallen asleep.', ja: '医者が来たころには、赤ちゃんはもうねむっていた。' },
     ],
     questions: [
-      { sentence: 'By the time you ___ home, dinner will be ready.', choices: ['get', 'will get', 'got'], answer: 0, why: 'by the time の中は、未来のことでも現在形。' },
-      { sentence: 'By the time we arrived, the concert ___ already started.', choices: ['had', 'has', 'will have'], answer: 0, why: '過去のある時点（arrived）より前に終わっていたことは過去完了 had started。' },
-      { sentence: '___ the time she wakes up, I will have left.', choices: ['By', 'Until', 'For'], answer: 0, why: 'by the time ～「～するころには」。' },
+      { sentence: 'By the time you ___ home, dinner will be ready.', choices: ['get', 'will get', 'got', 'getting'], answer: 0, why: 'by the time の中は、未来のことでも現在形。' },
+      { sentence: 'By the time we arrived, the concert ___ already started.', choices: ['had', 'has', 'will have', 'have'], answer: 0, why: '過去のある時点（arrived）より前に終わっていたことは過去完了 had started。' },
+      { sentence: '___ the time she wakes up, I will have left.', choices: ['By', 'Until', 'For', 'Since'], answer: 0, why: 'by the time ～「～するころには」。' },
     ],
   },
   {
