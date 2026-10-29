@@ -194,7 +194,8 @@ export function Shop({ initialTab, wallet, monster, onBuy, onWear, onSetWear, on
           const owned = wallet.owned.includes(r.id)
           const using = wallet.room === r.id
           return (
-            <li key={r.id} className={`got room-${r.id} room-sample`}>
+            <li key={r.id} className={`got room-${r.id} room-sample${using ? ' using' : ''}`}>
+              {using && <span className="room-using-ribbon">✓ つかっている</span>}
               <span className="badge-icon" aria-hidden="true">
                 {r.icon}
               </span>

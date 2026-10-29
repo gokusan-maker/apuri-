@@ -103,3 +103,10 @@ it('バトルアイテムの持っている数は1つ以上のときだけ右上
   fireEvent.click(screen.getByRole('tab', { name: /アイテム/ }))
   expect([...document.querySelectorAll('.item-owned')].map((e) => e.textContent)).toEqual(['×2'])
 })
+
+it('デザイン78：ショップの部屋で、いま使っている部屋にだけ「✓ つかっている」のリボンが出る', () => {
+  render(<Shop initialTab="wear" wallet={{ coins: 0, owned: ['ocean', 'forest'], room: 'ocean' }} monster={{ xp: 200 }} onBuy={() => {}} onWear={() => {}} onClose={() => {}} snacksLeft={3} onEat={() => {}} />)
+  expect(screen.getAllByText('✓ つかっている')).toHaveLength(1)
+  expect(document.querySelector('.room-sample.using.room-ocean')).not.toBeNull()
+  expect(document.querySelector('.room-sample.using.room-forest')).toBeNull()
+})

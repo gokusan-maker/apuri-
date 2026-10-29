@@ -4596,3 +4596,8 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 /* デザイン76：ボスに負けたとき、はげましてくれる相棒の絵を小さく出す（しょんぼり顔） */
 .lose-cheer-fig { display: inline-block; width: 36px; vertical-align: middle; margin-right: 4px; }
 .lose-cheer-fig svg { width: 100%; height: auto; display: block; }
+
+/* デザイン78：ショップの部屋で、いま使っている部屋に「✓ つかっている」のリボン */
+.room-sample { position: relative; }
+.room-sample.using { outline: 2px solid #22c55e; outline-offset: -2px; }
+.room-using-ribbon { position: absolute; top: 4px; right: 4px; padding: 0 6px; border-radius: 999px; background: #22c55e; color: #fff; font-size: 0.66rem; font-weight: 700; line-height: 1.5; }
