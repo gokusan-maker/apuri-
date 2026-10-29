@@ -6985,9 +6985,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We looked for the key in vain.', ja: '私たちはかぎをさがしたが、見つからなかった。' },
     ],
     questions: [
-      { sentence: 'She decided to stop eating snacks for ___.', choices: ['good', 'goodness', 'goods'], answer: 0, why: 'for good「永久に・これを最後に」。' },
-      { sentence: 'Nobody knows for ___ when the store will open.', choices: ['sure', 'surely', 'sureness'], answer: 0, why: 'for sure「確かに・はっきりと」。for のあとは sure のまま。' },
-      { sentence: 'He tried in ___ to open the old box.', choices: ['vain', 'vainly', 'vanity'], answer: 0, why: 'in vain「むだに・かいなく」。in のあとは vain のまま。' },
+      { sentence: 'He left his hometown ___ good and never came back.', choices: ['for', 'in', 'at', 'by'], answer: 0, why: 'for good「永久に・これを最後に」。' },
+      { sentence: 'Nobody knows ___ sure what caused the accident.', choices: ['for', 'in', 'at', 'by'], answer: 0, why: 'for sure「確かに・はっきりと」。' },
+      { sentence: 'The firefighters tried to save the old house, but all their efforts were in ___.', choices: ['vain', 'time', 'turn', 'order'], answer: 0, why: 'in vain「むだに・かいなく」。' },
     ],
   },
   {
@@ -7002,9 +7002,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'At times, I listen to music while I study.', ja: 'ときどき、勉強しながら音楽を聞く。' },
     ],
     questions: [
-      { sentence: 'The information on this website is out of ___.', choices: ['date', 'dated', 'dating'], answer: 0, why: 'out of date「古い・時代おくれの」。of のあとは名詞 date。' },
-      { sentence: 'Sorry, that size is out of ___ right now.', choices: ['stock', 'stocked', 'stocking'], answer: 0, why: 'out of stock「品切れで」。of のあとは名詞 stock。' },
-      { sentence: 'At ___, my little brother can be very noisy.', choices: ['times', 'time', 'timing'], answer: 0, why: 'at times「ときどき」。times と複数形にする（at time とは言わない）。' },
+      { sentence: 'This map is out of ___. Many of the roads have changed.', choices: ['date', 'stock', 'order', 'shape'], answer: 0, why: '道が変わっているので out of date「時代おくれの・古い」。out of stock は「品切れで」、out of order は「故障して」。' },
+      { sentence: 'I’m sorry, but that model is out of ___. We’ll get more next week.', choices: ['stock', 'date', 'order', 'sight'], answer: 0, why: '「来週入荷する」ので out of stock「品切れで」。' },
+      { sentence: '___ times, my little brother can be very noisy.', choices: ['At', 'In', 'On', 'For'], answer: 0, why: 'at times「ときどき」（= sometimes）。' },
     ],
   },
   {
@@ -7019,9 +7019,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The teacher chose three students at random.', ja: '先生は生徒を3人、無作為にえらんだ。' },
     ],
     questions: [
-      { sentence: 'In ___, young people get up later than older people.', choices: ['general', 'generally', 'generalize'], answer: 0, why: 'in general「一般に」。in のあとは general のまま（generally は副詞）。' },
-      { sentence: 'I like all sports, and soccer in ___.', choices: ['particular', 'particularly', 'particle'], answer: 0, why: 'in particular「とくに」。in のあとは particular のまま（particularly は副詞）。' },
-      { sentence: 'The computer picks the winners at ___.', choices: ['random', 'randomly', 'randomness'], answer: 0, why: 'at random「でたらめに・無作為に」。at のあとは random のまま（randomly は副詞）。' },
+      { sentence: 'In ___, people who exercise regularly sleep better.', choices: ['general', 'particular', 'random', 'detail'], answer: 0, why: '「一般に」は in general。in particular は「とくに」で、文頭で一般論を述べる言い方にならない。' },
+      { sentence: 'I enjoy all kinds of music, but I love jazz in ___.', choices: ['particular', 'general', 'common', 'short'], answer: 0, why: '「とりわけジャズが好き」なので in particular「とくに」。' },
+      { sentence: 'The winners were chosen ___ random from all the people who entered.', choices: ['at', 'in', 'by', 'on'], answer: 0, why: 'at random「無作為に」。' },
     ],
   },
   {
@@ -7036,9 +7036,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Many kinds of frogs are in danger.', ja: '多くの種類のカエルが危険な状態にある。' },
     ],
     questions: [
-      { sentence: 'It has rained for four days in a ___.', choices: ['row', 'rows', 'rowing'], answer: 0, why: 'in a row「連続で」。a のあとは単数の row。' },
-      { sentence: 'The students listened to the story in ___.', choices: ['silence', 'silent', 'silently'], answer: 0, why: 'in silence「だまって」。in のあとは名詞 silence（silent は形容詞）。' },
-      { sentence: 'The old bridge is in ___ of falling down.', choices: ['danger', 'dangerous', 'dangerously'], answer: 0, why: 'be in danger of ～ing「～するおそれがある」。in のあとは名詞 danger。' },
+      { sentence: 'Our team has won five games in a ___.', choices: ['row', 'line', 'time', 'turn'], answer: 0, why: 'in a row「連続で」。in a line は「1列に」で、連続の意味にはならない。' },
+      { sentence: 'The audience listened ___ silence as the old man told his story.', choices: ['in', 'with', 'on', 'at'], answer: 0, why: 'in silence「だまって」。' },
+      { sentence: 'Many species are ___ danger of extinction because of climate change.', choices: ['in', 'at', 'on', 'under'], answer: 0, why: 'be in danger of ～「～の危険がある」。at risk of と前置詞がちがうので注意。' },
     ],
   },
   {
@@ -7053,9 +7053,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The two countries were at war for ten years.', ja: 'その2つの国は10年間戦争をしていた。' },
     ],
     questions: [
-      { sentence: 'Call 119! The kitchen is on ___!', choices: ['fire', 'fiery', 'fired'], answer: 0, why: 'on fire「燃えて」。on のあとは名詞 fire。' },
-      { sentence: 'The little girl came home in ___.', choices: ['tears', 'tearful', 'teared'], answer: 0, why: 'in tears「泣いて」。tears と複数形の名詞にする。' },
-      { sentence: 'The two kingdoms were at ___ for many years.', choices: ['war', 'warlike', 'wars'], answer: 0, why: 'at war「戦争中で」。at war の形で使い、wars と複数にはしない。' },
+      { sentence: 'Call the fire department! The building across the street is ___ fire!', choices: ['on', 'in', 'at', 'under'], answer: 0, why: 'be on fire「燃えている」。' },
+      { sentence: 'When she heard the sad news, she burst ___ tears.', choices: ['into', 'in', 'on', 'at'], answer: 0, why: 'burst into tears「わっと泣き出す」。状態は in tears（泣いて）だが、「泣き出す」という変化は into。' },
+      { sentence: 'The two countries have been ___ war for over ten years.', choices: ['at', 'in', 'on', 'under'], answer: 0, why: 'be at war「戦争中である」（⇔ at peace）。' },
     ],
   },
   {
@@ -7070,9 +7070,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My sister is shy by nature.', ja: '姉は生まれつき人見知りだ。' },
     ],
     questions: [
-      { sentence: 'He practiced the magic trick in ___.', choices: ['secret', 'secretly', 'secrets'], answer: 0, why: 'in secret「こっそり」。in のあとは単数の名詞 secret（secretly は副詞）。' },
-      { sentence: 'Cats are curious by ___.', choices: ['nature', 'natural', 'naturally'], answer: 0, why: 'by nature「生まれつき・もともと」。by のあとは名詞 nature。' },
-      { sentence: 'Long skirts are in ___ again this year.', choices: ['fashion', 'fashionable', 'fashioned'], answer: 0, why: 'in fashion「流行して」。in のあとは名詞 fashion（fashionable は形容詞）。' },
+      { sentence: 'The two leaders met ___ secret to discuss the problem.', choices: ['in', 'on', 'at', 'by'], answer: 0, why: 'in secret「ひそかに・こっそり」（= secretly）。' },
+      { sentence: 'My brother is optimistic by ___. He rarely worries about anything.', choices: ['nature', 'heart', 'mistake', 'chance'], answer: 0, why: 'by nature「生まれつき・もともと」。性格を言うときは by nature。by heart は「暗記して」、by chance は「偶然に」。' },
+      { sentence: 'Wide trousers are ___ fashion again this year.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in fashion「流行して」（⇔ out of fashion）。' },
     ],
   },
   {
@@ -7087,9 +7087,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'In short, we need more time.', ja: '要するに、もっと時間が必要だ。' },
     ],
     questions: [
-      { sentence: 'Good programmers are always in ___.', choices: ['demand', 'demanding', 'demanded'], answer: 0, why: 'in demand「需要があって」。in のあとは名詞 demand。' },
-      { sentence: 'Please be quiet. A test is in ___.', choices: ['progress', 'progressive', 'progressed'], answer: 0, why: 'in progress「進行中で」。in のあとは名詞 progress。' },
-      { sentence: 'In ___, the plan was a big success.', choices: ['short', 'shortly', 'shortness'], answer: 0, why: 'in short「要するに」。この形で決まっている（shortly は「まもなく」という副詞）。' },
+      { sentence: 'Nurses are in great ___ as the population grows older.', choices: ['demand', 'progress', 'need of', 'request of'], answer: 0, why: 'be in demand「需要がある」。in progress は「進行中で」。' },
+      { sentence: 'Please do not enter. An exam is in ___.', choices: ['progress', 'demand', 'charge', 'time'], answer: 0, why: 'in progress「進行中で」。in demand は「需要があって」、in charge は「担当して」。' },
+      { sentence: 'The hotel was dirty, noisy, and expensive. In ___, it was a disaster.', choices: ['short', 'brief of', 'case', 'order'], answer: 0, why: 'in short「要するに」（= in brief / in a word）。' },
     ],
   },
   {
@@ -7104,9 +7104,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He looks strict, but he is kind at heart.', ja: '彼はきびしそうに見えるが、根はやさしい。' },
     ],
     questions: [
-      { sentence: 'The two sisters have nothing in ___.', choices: ['common', 'commonly', 'commons'], answer: 0, why: 'have nothing in common「共通点がまったくない」。in common の形で決まっている。' },
-      { sentence: 'She seems cool, but she is warm at ___.', choices: ['heart', 'hearty', 'heartily'], answer: 0, why: 'at heart「根は・心の底では」。at のあとは名詞 heart。' },
-      { sentence: 'I knew at a ___ that the answer was wrong.', choices: ['glance', 'glanced', 'glancing'], answer: 0, why: 'at a glance「ひと目で」。a のあとは名詞 glance。' },
+      { sentence: 'Although they grew up in different countries, the two scientists have a lot ___ common.', choices: ['in', 'at', 'on', 'with'], answer: 0, why: 'have ～ in common「～を共通にもつ」。' },
+      { sentence: 'He acts tough, but he is a kind man ___ heart.', choices: ['at', 'in', 'by', 'on'], answer: 0, why: 'at heart「根は・心の底では」。by heart は「暗記して」で意味がちがう。' },
+      { sentence: 'The chart shows ___ a glance how prices have changed.', choices: ['at', 'in', 'on', 'with'], answer: 0, why: 'at a glance「ひと目で」。' },
     ],
   },
   {
