@@ -146,4 +146,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'It (A) is (B) about time (C) we (D) leave.', choices: ['(A) is', '(B) about time', '(C) we', '(D) leave'], answer: 3, why: 'It is (about / high) time ＋主語＋過去形「もう～してもよいころだ」：we left。' },
     ],
   },
+  {
+    id: 'exam-error-advanced',
+    title: '入試の正誤問題⑦（総合・難関大）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。難関大でよく出る倒置・分詞構文・仮定法・付加疑問をまぜた総合問題。',
+      '否定語が文の最初に出ると倒置（Hardly had I ～）、分詞構文の意味上の主語は文の主語と同じ、suggest that のあとは原形、に注目する。',
+    ],
+    examples: [
+      { en: 'No sooner had she left than the phone rang.', ja: '彼女が出て行くとすぐに電話が鳴った。（No sooner ～ than の倒置）' },
+      { en: 'After I had finished my homework, my mother let me watch TV.', ja: '宿題を終えたあと、母がテレビを見させてくれた。' },
+    ],
+    questions: [
+      { sentence: '(A) Hardly (B) I had arrived (C) when it (D) began to rain.', choices: ['(A) Hardly', '(B) I had arrived', '(C) when it', '(D) began to rain'], answer: 1, why: '否定の Hardly が文の最初に出ると倒置になる：Hardly had I arrived when ～「着くとすぐに～」。' },
+      { sentence: 'The doctor (A) suggested that he (B) stops (C) smoking (D) immediately.', choices: ['(A) suggested that he', '(B) stops', '(C) smoking', '(D) immediately'], answer: 1, why: 'suggest that のあとは動詞の原形（または should ＋原形）：he stop smoking。' },
+      { sentence: '(A) Having finished (B) my homework, (C) my mother let me (D) watch TV.', choices: ['(A) Having finished', '(B) my homework', '(C) my mother let me', '(D) watch TV'], answer: 0, why: '分詞構文の意味上の主語は文の主語（my mother）になるが、宿題を終えたのは「私」。After I had finished とする。' },
+      { sentence: 'Not until (A) he lost his job (B) he realized (C) how important (D) health was.', choices: ['(A) he lost his job', '(B) he realized', '(C) how important', '(D) health was'], answer: 1, why: 'Not until ～ が文の最初に出ると、主節は倒置：did he realize。' },
+      { sentence: 'I (A) would rather (B) stay home (C) than (D) going out tonight.', choices: ['(A) would rather', '(B) stay home', '(C) than', '(D) going out'], answer: 3, why: 'would rather A than B の A・B はどちらも動詞の原形：than go out。' },
+      { sentence: '(A) No sooner (B) had she left (C) when (D) the phone rang.', choices: ['(A) No sooner', '(B) had she left', '(C) when', '(D) the phone rang'], answer: 2, why: 'No sooner は than と組む：No sooner had she left than ～。when は Hardly / Scarcely と組む。' },
+      { sentence: 'Hardly anyone (A) came (B) to the party, (C) didn’t (D) they?', choices: ['(A) came', '(B) to the party', '(C) didn’t', '(D) they'], answer: 2, why: 'hardly anyone は否定の意味なので、付加疑問は肯定の did they?' },
+      { sentence: 'The house (A) whose roof (B) is red (C) belongs to (D) my uncle’s.', choices: ['(A) whose roof', '(B) is red', '(C) belongs to', '(D) my uncle’s'], answer: 3, why: 'belong to のあとは「人」：belongs to my uncle。my uncle’s（おじのもの）は使わない。' },
+      { sentence: '(A) Were I (B) you, I (C) will accept (D) the offer at once.', choices: ['(A) Were I', '(B) you', '(C) will accept', '(D) the offer at once'], answer: 2, why: 'Were I you は If I were you の倒置（仮定法過去）なので、後半は would accept。' },
+      { sentence: 'She is one of (A) the (B) most talented (C) pianist (D) in Japan.', choices: ['(A) the', '(B) most talented', '(C) pianist', '(D) in Japan'], answer: 2, why: 'one of the ＋最上級のあとの名詞は複数形：one of the most talented pianists。' },
+    ],
+  },
 ]
