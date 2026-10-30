@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'walrus', name: 'セイウッチ', egg: 'きたのうみのタマゴ', token: 'セイ', bigToken: 'セイウッチ', color: '#d6a77a', line: '#5b3a1e', rate: 0.02, desc: '北の冷たい海にすむセイウチ。長いきばを氷に引っかけて体を持ち上げるように、むずかしい問題にもぐっと食らいつく。' },
   { id: 'hermitcrab', name: 'ヤドカリン', egg: 'まきがいのタマゴ', token: 'ヤド', bigToken: 'ヤドカリン', color: '#fdba74', line: '#7c2d12', rate: 0.02, desc: '貝がらを背おって暮らすヤドカリ。体が大きくなると新しい貝がらに引っこすように、おぼえた単語がふえるたびに一回り大きくなる。' },
   { id: 'ladybug', name: 'テントン', egg: 'ななほしのタマゴ', token: 'テン', bigToken: 'テントン', color: '#ef4444', line: '#450a0a', rate: 0.02, desc: '赤いせなかに黒い星のテントウムシ。草のてっぺんまでのぼってから飛び立つように、一つずつ上をめざして単語をおぼえる。' },
   { id: 'eagle', name: 'ワシーン', egg: 'たかねのタマゴ', token: 'ワシ', bigToken: 'ワシーン', color: '#d6d3d1', line: '#44403c', rate: 0.02, desc: '高い山の上を飛ぶワシ。空の上からでも小さなものを見つけるするどい目で、文の中の大事な単語を見のがさない。' },
