@@ -100,7 +100,8 @@
   - [x] ④ つづきの10単元を4択に：have to・look ＋形容詞・after / before・形容詞＋前置詞・call A B・How about・数の表し方・because of・ago / before・help ＋人＋原形（192→162）
   - [x] ⑤ つづきの10単元を4択に：形容詞の順番・get の使い方・look の句動詞・the same / different・another / other・would like・to と ing・So do I・say / tell・be able to（162→132）
   - [x] ⑥ つづきの10単元を4択に：-thing ＋形容詞・one / it・take の熟語・during / for・比較級 and 比較級・疑問詞が主語の文・to / for 人・不定詞の3用法・too many / much・need to（132→102）
-  - [ ] ⑦ つづきの10単元を4択に
+  - [x] ⑦ つづきの10単元を4択に：未来の疑問文と否定文・Which ～ better・時の接続詞と現在形・There was / were・like / such as・by の使い方・be famous / full / similar・else・最上級の in / of・be born（102→72）
+  - [ ] ⑧ つづきの10単元を4択に
   - [x] ① 知覚動詞・感情の分詞・not only A but also B・though・nobody / nothing・命令文＋and / or・It takes・if / whether・使役動詞・付加疑問の10単元に4つ目の選択肢（243→213）
   - [x] ② 付加疑問と感嘆文・too / enough・so ～ that・仮定法・It is ～ for 人 to・疑問詞＋to・間接疑問・分詞の後置修飾・関係代名詞の省略・関係代名詞の10単元に4つ目の選択肢（213→183）
   - [x] ③ 現在完了進行形・経験・継続・関係代名詞 what・whose・while / during・倍数表現・完了・as soon as・not to の10単元に4つ目の選択肢（183→153。tell 人 to not 〜 は正解にもなるので選択肢から外した）

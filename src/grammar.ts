@@ -8855,9 +8855,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Are you going to visit your grandparents this weekend?', ja: '今週末、祖父母をたずねる予定ですか。' },
     ],
     questions: [
-      { sentence: "It ___ rain tomorrow, so let's go on a picnic.", choices: ["won't", "doesn't", "isn't"], answer: 0, why: "明日（未来）のことの否定は won't ＋ 原形。" },
-      { sentence: '___ you going to play tennis this Sunday?', choices: ['Are', 'Do', 'Will'], answer: 0, why: 'be going to の疑問文は be 動詞を前に出す。' },
-      { sentence: '"Will you come to the party?" "No, I ___."', choices: ["won't", "don't", 'am not'], answer: 0, why: "Will you ～? には will を使って答える。No, I won't." },
+      { sentence: "It ___ rain tomorrow, so let's go on a picnic.", choices: ["won't", "doesn't", "isn't", "wasn't"], answer: 0, why: "明日（未来）のことの否定は won't ＋ 原形。" },
+      { sentence: '___ you going to play tennis this Sunday?', choices: ['Are', 'Do', 'Will', 'Is'], answer: 0, why: 'be going to の疑問文は be 動詞を前に出す。' },
+      { sentence: '"Will you come to the party?" "No, I ___."', choices: ["won't", "don't", 'am not', "willn't"], answer: 0, why: "Will you ～? には will を使って答える。No, I won't." },
     ],
   },
   {
@@ -8940,9 +8940,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Which season do you like the best?', ja: 'どの季節がいちばん好きですか。' },
     ],
     questions: [
-      { sentence: 'Which do you like ___, rice or bread?', choices: ['better', 'more good', 'well'], answer: 0, why: 'like の比較級は better（like A better than B）。' },
-      { sentence: 'Which subject do you like the ___?', choices: ['best', 'better', 'most good'], answer: 0, why: '「いちばん好き」は like ～ the best。' },
-      { sentence: 'Which is ___, this pen or that one?', choices: ['cheaper', 'cheap', 'cheapest'], answer: 0, why: '2つをくらべるので比較級 cheaper。' },
+      { sentence: 'Which do you like ___, rice or bread?', choices: ['better', 'more good', 'well', 'most well'], answer: 0, why: 'like の比較級は better（like A better than B）。' },
+      { sentence: 'Which subject do you like the ___?', choices: ['best', 'better', 'most good', 'good'], answer: 0, why: '「いちばん好き」は like ～ the best。' },
+      { sentence: 'Which is ___, this pen or that one?', choices: ['cheaper', 'cheap', 'cheapest', 'more cheap'], answer: 0, why: '2つをくらべるので比較級 cheaper。' },
     ],
   },
   {
@@ -8974,9 +8974,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I will wait here until the rain stops.', ja: '雨がやむまでここで待ちます。' },
     ],
     questions: [
-      { sentence: 'Send me a message when you ___ at the station tomorrow.', choices: ['arrive', 'will arrive', 'arrived'], answer: 0, why: '時を表す when のあとは、未来のことでも現在形。' },
-      { sentence: 'Let\'s stay inside until the storm ___.', choices: ['passes', 'will pass', 'passed'], answer: 0, why: 'until のあとは、未来のことでも現在形。' },
-      { sentence: 'Please brush your teeth before you ___ to bed tonight.', choices: ['go', 'will go', 'went'], answer: 0, why: 'before のあとは、未来のことでも現在形。' },
+      { sentence: 'Send me a message when you ___ at the station tomorrow.', choices: ['arrive', 'will arrive', 'arrived', 'arrives'], answer: 0, why: '時を表す when のあとは、未来のことでも現在形。' },
+      { sentence: 'Let\'s stay inside until the storm ___.', choices: ['passes', 'will pass', 'passed', 'pass'], answer: 0, why: 'until のあとは、未来のことでも現在形。' },
+      { sentence: 'Please brush your teeth before you ___ to bed tonight.', choices: ['go', 'will go', 'went', 'goes'], answer: 0, why: 'before のあとは、未来のことでも現在形。' },
     ],
   },
   {
@@ -9042,9 +9042,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There were many people at the festival yesterday.', ja: '昨日のお祭りにはたくさんの人がいた。' },
     ],
     questions: [
-      { sentence: 'There ___ a big earthquake in this area long ago.', choices: ['was', 'were', 'is'], answer: 0, why: 'a big earthquake（単数）で過去（long ago）なので was。' },
-      { sentence: 'There ___ five eggs in the box this morning.', choices: ['were', 'was', 'are'], answer: 0, why: 'five eggs（複数）で過去（this morning）なので were。' },
-      { sentence: '___ there any good shows on TV last night?', choices: ['Were', 'Was', 'Did'], answer: 0, why: 'any good shows（複数）の過去の疑問文なので Were there ～?' },
+      { sentence: 'There ___ a big earthquake in this area long ago.', choices: ['was', 'were', 'is', 'are'], answer: 0, why: 'a big earthquake（単数）で過去（long ago）なので was。' },
+      { sentence: 'There ___ five eggs in the box this morning.', choices: ['were', 'was', 'are', 'be'], answer: 0, why: 'five eggs（複数）で過去（this morning）なので were。' },
+      { sentence: '___ there any good shows on TV last night?', choices: ['Were', 'Was', 'Did', 'Do'], answer: 0, why: 'any good shows（複数）の過去の疑問文なので Were there ～?' },
     ],
   },
   {
@@ -9059,9 +9059,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'That cloud looks like a big fish.', ja: 'あの雲は大きな魚のように見える。' },
     ],
     questions: [
-      { sentence: 'We sell vegetables ___ as carrots and onions.', choices: ['such', 'so', 'like'], answer: 0, why: '例をあげる「たとえば～のような」は such as。' },
-      { sentence: 'That rock looks ___ a sleeping cat.', choices: ['like', 'as', 'such'], answer: 0, why: 'look like ＋ 名詞「～のように見える」。' },
-      { sentence: 'He can swim ___ a fish.', choices: ['like', 'such', 'so'], answer: 0, why: '前置詞の like「～のように」。' },
+      { sentence: 'We sell vegetables ___ as carrots and onions.', choices: ['such', 'so', 'like', 'for'], answer: 0, why: '例をあげる「たとえば～のような」は such as。' },
+      { sentence: 'That rock looks ___ a sleeping cat.', choices: ['like', 'as', 'such', 'so'], answer: 0, why: 'look like ＋ 名詞「～のように見える」。' },
+      { sentence: 'He can swim ___ a fish.', choices: ['like', 'such', 'so', 'to'], answer: 0, why: '前置詞の like「～のように」。' },
     ],
   },
   {
@@ -9178,9 +9178,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This song was written by a high school student.', ja: 'この歌は高校生によって書かれた。' },
     ],
     questions: [
-      { sentence: 'I usually go to school ___ bike.', choices: ['by', 'at', 'for'], answer: 0, why: '乗り物の手段は by ＋ 乗り物（a をつけない）。by bike「自転車で」。' },
-      { sentence: 'There is a small cafe ___ the station.', choices: ['by', 'from', 'into'], answer: 0, why: 'by ＋ 場所「～のそばに」。' },
-      { sentence: 'This picture was painted ___ my sister.', choices: ['by', 'to', 'at'], answer: 0, why: '受け身の「～によって」は by。' },
+      { sentence: 'I usually go to school ___ bike.', choices: ['by', 'at', 'for', 'with'], answer: 0, why: '乗り物の手段は by ＋ 乗り物（a をつけない）。by bike「自転車で」。' },
+      { sentence: 'There is a small cafe ___ the station.', choices: ['by', 'from', 'into', 'between'], answer: 0, why: 'by ＋ 場所「～のそばに」。' },
+      { sentence: 'This picture was painted ___ my sister.', choices: ['by', 'to', 'at', 'from'], answer: 0, why: '受け身の「～によって」は by。' },
     ],
   },
   {
@@ -9229,9 +9229,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The station was full of people.', ja: '駅は人でいっぱいだった。' },
     ],
     questions: [
-      { sentence: 'Kyoto is famous ___ its old temples.', choices: ['for', 'of', 'at'], answer: 0, why: 'be famous for ～「～で有名だ」。' },
-      { sentence: 'The box was full ___ old letters.', choices: ['of', 'by', 'at'], answer: 0, why: 'be full of ～「～でいっぱいだ」。' },
-      { sentence: 'Your new bag is similar ___ mine.', choices: ['to', 'from', 'at'], answer: 0, why: 'be similar to ～「～に似ている」。' },
+      { sentence: 'Kyoto is famous ___ its old temples.', choices: ['for', 'of', 'at', 'by'], answer: 0, why: 'be famous for ～「～で有名だ」。' },
+      { sentence: 'The box was full ___ old letters.', choices: ['of', 'by', 'at', 'for'], answer: 0, why: 'be full of ～「～でいっぱいだ」。' },
+      { sentence: 'Your new bag is similar ___ mine.', choices: ['to', 'from', 'at', 'of'], answer: 0, why: 'be similar to ～「～に似ている」。' },
     ],
   },
   {
@@ -9246,9 +9246,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Who else is coming to the party?', ja: 'ほかにだれがパーティーに来るの？' },
     ],
     questions: [
-      { sentence: 'Would you like anything ___ to drink?', choices: ['else', 'other', 'another'], answer: 0, why: 'anything のあとに置いて「ほかに何か」は anything else。' },
-      { sentence: 'What ___ did you buy at the store?', choices: ['else', 'other', 'another'], answer: 0, why: '疑問詞のあとに置いて「ほかに何を」は What else。' },
-      { sentence: 'Is there anyone ___ in the room?', choices: ['else', 'others', 'another'], answer: 0, why: '「ほかにだれか」は anyone else。' },
+      { sentence: 'Would you like anything ___ to drink?', choices: ['else', 'other', 'another', 'others'], answer: 0, why: 'anything のあとに置いて「ほかに何か」は anything else。' },
+      { sentence: 'What ___ did you buy at the store?', choices: ['else', 'other', 'another', 'others'], answer: 0, why: '疑問詞のあとに置いて「ほかに何を」は What else。' },
+      { sentence: 'Is there anyone ___ in the room?', choices: ['else', 'others', 'another', 'other'], answer: 0, why: '「ほかにだれか」は anyone else。' },
     ],
   },
   {
@@ -9263,9 +9263,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This dog is the smallest of the five.', ja: 'この犬は5匹の中でいちばん小さい。' },
     ],
     questions: [
-      { sentence: 'Ken is the tallest ___ his class.', choices: ['in', 'from', 'by'], answer: 0, why: '「クラスの中で」はグループ・場所なので in。' },
-      { sentence: 'This is the biggest ___ the three boxes.', choices: ['of', 'in', 'at'], answer: 0, why: 'the three（3つ）のような数の集まりの中では of。' },
-      { sentence: 'Mt. Fuji is the highest mountain ___ Japan.', choices: ['in', 'at', 'by'], answer: 0, why: '「日本で」は場所なので in。' },
+      { sentence: 'Ken is the tallest ___ his class.', choices: ['in', 'from', 'by', 'with'], answer: 0, why: '「クラスの中で」はグループ・場所なので in。' },
+      { sentence: 'This is the biggest ___ the three boxes.', choices: ['of', 'in', 'at', 'from'], answer: 0, why: 'the three（3つ）のような数の集まりの中では of。' },
+      { sentence: 'Mt. Fuji is the highest mountain ___ Japan.', choices: ['in', 'at', 'by', 'for'], answer: 0, why: '「日本で」は場所なので in。' },
     ],
   },
   {
@@ -9314,9 +9314,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'When were you born? — I was born on June 10.', ja: 'あなたはいつ生まれたの？— 6月10日に生まれたよ。' },
     ],
     questions: [
-      { sentence: 'My little sister ___ born in 2015.', choices: ['was', 'did', 'has'], answer: 0, why: '「生まれた」は was born。did born・has born とは言わない。' },
-      { sentence: 'Where were you ___? — In Sendai.', choices: ['born', 'bear', 'birth'], answer: 0, why: 'be born「生まれる」。were you のあとは過去分詞の born。birth は名詞。' },
-      { sentence: 'Our teacher was born ___ March 21.', choices: ['on', 'in', 'at'], answer: 0, why: '日付（March 21）の前は on。月や年だけなら in。' },
+      { sentence: 'My little sister ___ born in 2015.', choices: ['was', 'did', 'has', 'is'], answer: 0, why: '「生まれた」は was born。did born・has born とは言わない。' },
+      { sentence: 'Where were you ___? — In Sendai.', choices: ['born', 'bear', 'birth', 'borned'], answer: 0, why: 'be born「生まれる」。were you のあとは過去分詞の born。birth は名詞。' },
+      { sentence: 'Our teacher was born ___ March 21.', choices: ['on', 'in', 'at', 'from'], answer: 0, why: '日付（March 21）の前は on。月や年だけなら in。' },
     ],
   },
   {
