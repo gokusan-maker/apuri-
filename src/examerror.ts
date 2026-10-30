@@ -74,4 +74,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She speaks English (A) as (B) fluent (C) as (D) a native speaker.', choices: ['(A) as', '(B) fluent', '(C) as', '(D) a native speaker'], answer: 1, why: '動詞 speaks を説明するので副詞 fluently：as fluently as。' },
     ],
   },
+  {
+    id: 'exam-error-verbal',
+    title: '入試の正誤問題④（不定詞・動名詞・接続詞）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      '動詞のあとが to ～ か ～ing か（decide to / give up ～ing）、前置詞のあとは ～ing、接続詞は1つの文に1つ（though と but を重ねない）に注目する。',
+    ],
+    examples: [
+      { en: 'She gave up eating sweets to stay healthy.', ja: '彼女は健康でいるためにあまいものを食べるのをやめた。（give up ～ing）' },
+      { en: 'We went out for a walk though it was raining hard.', ja: '雨が強くふっていたが、私たちは散歩に出かけた。' },
+    ],
+    questions: [
+      { sentence: 'I (A) am looking forward (B) to (C) see you (D) again soon.', choices: ['(A) am looking forward', '(B) to', '(C) see you', '(D) again soon'], answer: 2, why: 'look forward to の to は前置詞なので、うしろは動名詞 seeing。' },
+      { sentence: 'She (A) stopped (B) to eat sweets (C) because she wanted (D) to lose weight.', choices: ['(A) stopped', '(B) to eat sweets', '(C) because she wanted', '(D) to lose weight'], answer: 1, why: '「やせたいので、あまいものを食べるのをやめた」なので stop ～ing：stopped eating sweets。stop to eat は「食べるために立ち止まる」。' },
+      { sentence: 'We went out (A) for a walk (B) though it (C) was raining (D) hardly.', choices: ['(A) for a walk', '(B) though it', '(C) was raining', '(D) hardly'], answer: 3, why: '「激しく」は hard。hardly は「ほとんど～ない」という別の意味の副詞。' },
+      { sentence: 'Would you mind (A) to open (B) the window? It is (C) very hot (D) in here.', choices: ['(A) to open', '(B) the window', '(C) very hot', '(D) in here'], answer: 0, why: 'mind のあとは動名詞：Would you mind opening ～?' },
+      { sentence: 'He decided (A) studying abroad (B) after he (C) graduated (D) from high school.', choices: ['(A) studying abroad', '(B) after he', '(C) graduated', '(D) from high school'], answer: 0, why: 'decide のあとは不定詞：decided to study abroad。' },
+      { sentence: 'The game (A) was put off (B) until Sunday (C) because of (D) it was raining.', choices: ['(A) was put off', '(B) until Sunday', '(C) because of', '(D) it was raining'], answer: 2, why: 'うしろが主語＋動詞の文（it was raining）なので接続詞 because。because of のあとは名詞。' },
+      { sentence: 'It is (A) kind (B) for you (C) to help me (D) with my homework.', choices: ['(A) kind', '(B) for you', '(C) to help me', '(D) with my homework'], answer: 1, why: 'kind のように人の性質を表す形容詞では of 人：It is kind of you to ～。' },
+      { sentence: 'My father (A) has given up (B) smoking (C) when I (D) was born.', choices: ['(A) has given up', '(B) smoking', '(C) when I', '(D) was born'], answer: 0, why: 'when I was born は過去のある時点なので、現在完了ではなく過去形 gave up。' },
+      { sentence: 'I remember (A) visiting (B) this museum (C) when I was a child, (D) so I know it very good.', choices: ['(A) visiting', '(B) this museum', '(C) when I was a child', '(D) so I know it very good'], answer: 3, why: '動詞 know を説明するのは副詞 well：know it very well。' },
+      { sentence: 'Please call me (A) as soon as you (B) will arrive (C) at the station (D) tomorrow.', choices: ['(A) as soon as you', '(B) will arrive', '(C) at the station', '(D) tomorrow'], answer: 1, why: '時を表す as soon as の中は、未来のことでも現在形 arrive。' },
+    ],
+  },
 ]
