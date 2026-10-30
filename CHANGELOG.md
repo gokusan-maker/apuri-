@@ -3225,3 +3225,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑬（TOEFL・IELTS の書き言葉⑤：result in・be caused by・lead to・owing to・have an effect on・contribute to）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「かべの上の芸術（ストリートアート）」（芸術・非制限の which／what … look like の空所）
 - 2026-10-30: キャラクター追加：ウォンバン（ウォンバット・あなぐらのころころタマゴ・ねばりのとくぎ）
+- 2026-10-30: 文法：入試の正誤問題⑳（主語と動詞の一致の難問：one of・mathematics・news・a number of・either A or B・not only A but also B・the rich）10問

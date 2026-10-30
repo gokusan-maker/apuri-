@@ -434,6 +434,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This road is (A) three times (B) as (C) longer (D) as that one.', choices: ['(A) three times', '(B) as', '(C) longer', '(D) as that one'], answer: 2, why: '倍数＋ as ＋原級＋ as：three times as long as。' },
     ],
   },
+  {
+    id: 'exam-error-agree2',
+    title: '入試の正誤問題⑳（主語と動詞の一致の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'one of ＋複数名詞は単数、学科名 mathematics・news・まとまった時間は単数、a number of ～ は複数、either A or B / not only A but also B は B に合わせる、the ＋形容詞は複数あつかい、に注目する。',
+    ],
+    examples: [
+      { en: 'One of my friends lives in Canada.', ja: '友だちの1人はカナダに住んでいる。（主語の中心は One）' },
+      { en: 'A number of students were late for school.', ja: '多くの生徒が学校におくれた。（a number of は複数あつかい）' },
+    ],
+    questions: [
+      { sentence: 'One of my friends (A) live (B) in (C) Canada (D) now.', choices: ['(A) live', '(B) in', '(C) Canada', '(D) now'], answer: 0, why: '主語の中心は One（1人）なので単数：One of my friends lives。' },
+      { sentence: 'The students (A) in this class (B) has (C) finished (D) their homework.', choices: ['(A) in this class', '(B) has', '(C) finished', '(D) their homework'], answer: 1, why: '主語の中心は The students（複数）なので have finished。' },
+      { sentence: 'My favorite (A) subject (B) is math, because (C) mathematics (D) are interesting.', choices: ['(A) subject', '(B) is math, because', '(C) mathematics', '(D) are interesting'], answer: 3, why: 'mathematics は s で終わるが学科名なので単数あつかい：mathematics is interesting。' },
+      { sentence: 'For anyone, (A) ten years (B) are (C) a long time (D) to wait.', choices: ['(A) ten years', '(B) are', '(C) a long time', '(D) to wait'], answer: 1, why: '時間・きょり・お金のまとまりは単数あつかい：ten years is a long time。' },
+      { sentence: 'Either my parents or my brother (A) are (B) going to (C) pick me up (D) after school.', choices: ['(A) are', '(B) going to', '(C) pick me up', '(D) after school'], answer: 0, why: 'either A or B では動詞は B（近いほう）に合わせる。B は my brother（単数）なので is going to。' },
+      { sentence: 'Everybody was surprised because the news (A) about (B) the accident (C) were (D) shocking.', choices: ['(A) about', '(B) the accident', '(C) were', '(D) shocking'], answer: 2, why: 'news は数えられない名詞で単数あつかい：the news … was shocking。' },
+      { sentence: 'This morning, (A) a number of (B) students (C) was (D) late for school.', choices: ['(A) a number of', '(B) students', '(C) was', '(D) late for school'], answer: 2, why: 'a number of ＋複数名詞「多くの～」は複数あつかい：were late。' },
+      { sentence: 'Not only (A) the students (B) but also (C) the teacher (D) were surprised.', choices: ['(A) the students', '(B) but also', '(C) the teacher', '(D) were surprised'], answer: 3, why: 'not only A but also B では動詞は B（the teacher）に合わせる：was surprised。' },
+      { sentence: 'On the shelf (A) there (B) is (C) many books (D) about history.', choices: ['(A) there', '(B) is', '(C) many books', '(D) about history'], answer: 1, why: 'there is / are のうしろの名詞が many books（複数）なので are。' },
+      { sentence: 'People say that (A) the rich (B) is (C) not always (D) happy.', choices: ['(A) the rich', '(B) is', '(C) not always', '(D) happy'], answer: 1, why: 'the ＋形容詞は「～な人々」で複数あつかい：the rich are。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
