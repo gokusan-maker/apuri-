@@ -18058,6 +18058,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Art on the Walls', 'How to Clean Buildings', 'The History of Museums', 'Why Rents Are Rising'], answer: 0, why: '全体として、グラフィティからストリートアートへの変化、利点、反対意見を述べている。' },
   },
   {
+    id: 'kyotsu-fingerprints',
+    title: 'The Patterns on Our Fingers',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Look closely at the tips of your fingers, and you will see thin lines curving in patterns of loops, circles, and arches. These patterns, known as fingerprints, are so detailed that no two people have ever been found to have exactly the same ones. Even identical twins, who share almost all of their genes, have fingerprints that are different from each other. This simple fact has had surprisingly important effects on science, law, and technology.",
+      "Fingerprints begin to form before a person is born. While a baby is still growing inside its mother, the skin on its fingers develops ridges. The exact pattern depends not only on genes but also on tiny differences in the conditions around the baby, such as its position and the pressure on its fingers. This is why even twins end up with different patterns. Once formed, the basic pattern stays the same throughout a person's life, ( A ) the fingers grow larger. Even if the skin is slightly damaged, the same pattern usually returns as it heals.",
+      "Because fingerprints are both unique and permanent, they have long been used to identify people. Around the end of the nineteenth century, police in several countries began to collect fingerprints from people they arrested and to compare them with marks left at crime scenes. This method proved far more reliable than earlier systems based on measuring parts of the body, and it quickly spread around the world.",
+      "Today, fingerprints are used in many parts of daily life. Many smartphones can be unlocked simply by touching a sensor, and some countries record the fingerprints of travellers when they enter. These technologies are convenient, but they also raise concerns about privacy. Unlike a password, a fingerprint cannot be changed if it is stolen, ( B ) some experts warn that such information must be protected very carefully.",
+      "Scientists are still discussing why humans have fingerprints at all. One idea is that the ridges help us to grip objects, especially when our hands are wet. Another suggests that they increase the sensitivity of our fingertips, making it easier to feel the texture of surfaces. Whatever their original purpose, fingerprints remind us ( C ) every person is, in a very real sense, one of a kind.",
+    ],
+    ja: [
+      '指先をよく見ると、輪やうずまき、弓の形にカーブした細い線が見えるだろう。指紋として知られるこうした模様はとてもこまかく、まったく同じ指紋をもつ2人の人はこれまで見つかっていない。遺伝子のほとんどすべてを共有する一卵性双生児でさえ、おたがいにちがう指紋をもっている。この単純な事実は、科学や法律、技術におどろくほど大きな影響をあたえてきた。',
+      '指紋は人が生まれる前にでき始める。赤ちゃんがまだ母親のおなかの中で育っているあいだに、指の皮ふにすじができる。正確な模様は、遺伝子だけでなく、赤ちゃんの位置や指にかかる圧力など、赤ちゃんの周りの条件の小さなちがいにもよる。このため、双子でさえちがう模様になるのである。いったんできると、指が大きくなっても、基本的な模様は一生変わらない。皮ふが少し傷ついても、治るにつれてふつうは同じ模様がもどってくる。',
+      '指紋は一人一人ちがい、しかも変わらないので、長いあいだ人を見分けるのに使われてきた。19世紀の終わりごろ、いくつかの国の警察は、逮捕した人の指紋を集め、犯罪現場に残された跡と比べるようになった。この方法は、体の部分の長さをはかる以前のやり方よりもずっと信頼できることがわかり、すぐに世界中に広まった。',
+      '今日、指紋は日常生活の多くの場面で使われている。多くのスマートフォンはセンサーにふれるだけでロックを解除でき、入国する旅行者の指紋を記録する国もある。こうした技術は便利だが、プライバシーについての心配も生む。パスワードとちがって、指紋はぬすまれても変えることができないので、そうした情報はとても注意深く守られなければならないと警告する専門家もいる。',
+      '科学者は、そもそもなぜ人間に指紋があるのかを今も議論している。一つの考えは、すじが、とくに手がぬれているときに物をつかむのを助けるというものである。別の考えは、すじが指先の感覚をするどくし、物の表面の手ざわりを感じやすくするというものである。もともとの目的が何であれ、指紋は、一人一人が本当の意味でかけがえのない存在であることを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['even though', 'because', 'unless', 'so that'], answer: 0, why: '「指が大きくなっても、模様は変わらない」と譲歩を表すので even though（～だけれども）。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「指紋は変えられない、だから注意深く守るべきだと警告する専門家もいる」と結果を表すので so。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '一卵性双生児は、まったく同じ指紋をもっている。', answer: false, why: '第1段落 Even identical twins … have fingerprints that are different from each other。' },
+      { statement: '指紋は、人が生まれる前にでき始める。', answer: true, why: '第2段落 Fingerprints begin to form before a person is born。' },
+      { statement: '指紋による方法は、体の部分の長さをはかる方法より信頼できた。', answer: true, why: '第3段落 This method proved far more reliable than earlier systems based on measuring parts of the body。' },
+      { statement: '筆者によれば、指紋はぬすまれてもパスワードのように変えられる。', answer: false, why: '第4段落 Unlike a password, a fingerprint cannot be changed if it is stolen。' },
+    ],
+    qa: [
+      { q: 'Why do even twins have different fingerprints?', choices: ['Small differences in conditions before birth affect the pattern.', 'Their parents have different fingerprints.', 'Their fingers grow at different speeds after birth.', 'They use their hands differently as adults.'], answer: 0, why: '第2段落 The exact pattern depends … also on tiny differences in the conditions around the baby … This is why even twins end up with different patterns。' },
+      { q: 'Which is NOT mentioned as a possible reason humans have fingerprints?', choices: ['They keep our hands warm.', 'They help us to grip objects.', 'They make it easier to grip when hands are wet.', 'They increase the sensitivity of our fingertips.'], answer: 0, why: '第5段落に手をあたためるという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['警察による指紋の利用の始まり', '犯罪の歴史', '体の長さのはかり方', '世界の警察の制服'], answer: 0, why: '第3段落は、19世紀の終わりに警察が指紋で人を見分けるようになったことを述べている。' },
+      { para: 3, choices: ['日常での指紋の利用とプライバシーの心配', 'スマートフォンの作り方', '旅行の計画', 'パスワードの作り方'], answer: 0, why: '第4段落は、スマートフォンや入国での指紋の利用と、プライバシーの心配を述べている。' },
+    ],
+    titleQ: { choices: ['The Patterns on Our Fingers', 'How to Catch a Thief', 'The History of Smartphones', 'Why Twins Look the Same'], answer: 0, why: '全体として、指紋のでき方、人を見分ける利用、日常での利用と心配、指紋の役割を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
