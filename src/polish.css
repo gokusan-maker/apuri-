@@ -4619,3 +4619,6 @@ p.gacha-dup { animation: dup-bounce 0.6s ease-out 1.8s backwards; }
 .party-count { margin: -4px 0 6px; font-size: 0.8rem; color: var(--muted, #6b7280); font-weight: 700; }
 .hint-once { display: block; font-size: 0.62rem; font-weight: 400; opacity: 0.8; }
 .hint-used { margin: 2px 0; font-size: 0.75rem; color: var(--muted, #6b7280); text-align: center; }
+
+/* デザイン89：負けた画面の最大コンボ */
+.boss-lose-combo { margin: 2px 0 6px; font-weight: 800; color: var(--accent, #f97316); }

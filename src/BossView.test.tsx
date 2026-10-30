@@ -672,3 +672,27 @@ it('デザイン88：ボスに勝つと、結果画面にそのボス戦の最�
   }
   expect(screen.getByLabelText(/^最大コンボ \d+$/).textContent).toMatch(/^🔥 最大 \d+ コンボ$/)
 })
+
+it('デザイン89：ボスに負けた結果画面にも、そのボス戦の最大コンボが出る（2連続以上のとき）', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={999} traits={[]} />)
+  answer(true)
+  fireEvent.click(screen.getByText('次へ'))
+  answer(true)
+  fireEvent.click(screen.getByText('次へ'))
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  expect(screen.getByLabelText('最大コンボ 2').textContent).toBe('🔥 最大 2 コンボ')
+})
+
+it('デザイン89：連続正解がないまま負けたときは、最大コンボを出さない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={999} traits={[]} />)
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  expect(screen.queryByLabelText(/^最大コンボ/)).toBeNull()
+})
