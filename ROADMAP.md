@@ -102,7 +102,8 @@
   - [x] ㉕ the last ～ to・neither A nor B・would often / used to・a number of / the number of・even if / even though・not so much A as B・remind A of B・less / least・to ＋ ～ing・have trouble ～ing の10単元に4つ目の選択肢（249→219）
   - [x] ㉖ by the time・疑問文の間接話法・未来進行形・be supposed to・have / get ＋人＋～・関係副詞 why / how・If only・happen to / turn out・as well as・instead of / according to の10単元に4つ目の選択肢（219→189）
   - [x] ㉗ despite / although・prevent A from・be worth ～ing・suggest that ＋原形・hardly / seldom・what is called・動名詞の慣用表現・the 比較級 of the two・even / only・no more than の10単元に4つ目の選択肢（189→159）
-  - [ ] ㉘ つづきの10単元を4択に
+  - [x] ㉘ so ～ as to・allow / enable 人 to・every time / the moment・同格のコンマ・譲歩の whether・now that / once・強い否定・分詞の慣用表現・be used to・in order to の10単元に4つ目の選択肢（159→129）
+  - [ ] ㉙ つづきの10単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。

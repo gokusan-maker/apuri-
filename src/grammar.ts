@@ -2412,9 +2412,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Speak quietly so as not to wake the baby.', ja: '赤ちゃんを起こさないように、静かに話して。' },
     ],
     questions: [
-      { sentence: 'She saved money in order ___ a new bike.', choices: ['to buy', 'buying', 'for buy'], answer: 0, why: 'in order to ＋ 動詞の原形。' },
-      { sentence: 'I wrote it down so as ___ forget it.', choices: ['not to', 'to not', 'no to'], answer: 0, why: '「忘れないように」は so as not to。not は to の前。' },
-      { sentence: 'We left early ___ order to avoid the traffic.', choices: ['in', 'on', 'for'], answer: 0, why: 'in order to のまとまり。' },
+      { sentence: 'She saved money in order ___ a new bike.', choices: ['to buy', 'buying', 'for buy', 'buy'], answer: 0, why: 'in order to ＋ 動詞の原形。' },
+      { sentence: 'I wrote it down so as ___ forget it.', choices: ['not to', 'to not', 'no to', 'not'], answer: 0, why: '「忘れないように」は so as not to。not は to の前。' },
+      { sentence: 'We left early ___ order to avoid the traffic.', choices: ['in', 'on', 'for', 'at'], answer: 0, why: 'in order to のまとまり。' },
     ],
   },
   {
@@ -2429,9 +2429,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She soon got used to life in Tokyo.', ja: '彼女はすぐに東京での生活に慣れた。' },
     ],
     questions: [
-      { sentence: 'My father is used to ___ long hours.', choices: ['working', 'work', 'worked'], answer: 0, why: 'be used to のあとは -ing（前置詞の to）。' },
-      { sentence: 'You will soon ___ used to the new school.', choices: ['get', 'be getting to', 'use'], answer: 0, why: '「慣れる」という変化は get used to。' },
-      { sentence: 'I ___ play the piano, but I stopped.', choices: ['used to', 'am used to', 'get used to'], answer: 0, why: '「以前は〜していた」は used to ＋ 動詞の原形。' },
+      { sentence: 'My father is used to ___ long hours.', choices: ['working', 'work', 'worked', 'works'], answer: 0, why: 'be used to のあとは -ing（前置詞の to）。' },
+      { sentence: 'You will soon ___ used to the new school.', choices: ['get', 'be getting to', 'use', 'used'], answer: 0, why: '「慣れる」という変化は get used to。' },
+      { sentence: 'I ___ play the piano, but I stopped.', choices: ['used to', 'am used to', 'get used to', 'was used to'], answer: 0, why: '「以前は〜していた」は used to ＋ 動詞の原形。' },
     ],
   },
   {
@@ -2463,9 +2463,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Judging from the sky, it will rain soon.', ja: '空のようすから判断すると、もうすぐ雨がふるだろう。' },
     ],
     questions: [
-      { sentence: '___ speaking, I did not like the movie.', choices: ['Frankly', 'Frank', 'Franker'], answer: 0, why: 'frankly speaking「正直に言うと」。副詞 ＋ speaking の形。' },
-      { sentence: '___ from his face, he is very tired.', choices: ['Judging', 'Judged', 'Judge'], answer: 0, why: 'judging from 〜「〜から判断すると」。' },
-      { sentence: '___ his age, he runs very fast.', choices: ['Considering', 'Considered', 'To consider'], answer: 0, why: 'considering 〜「〜を考えると（〜のわりには）」。' },
+      { sentence: '___ speaking, I did not like the movie.', choices: ['Frankly', 'Frank', 'Franker', 'Frankness'], answer: 0, why: 'frankly speaking「正直に言うと」。副詞 ＋ speaking の形。' },
+      { sentence: '___ from his face, he is very tired.', choices: ['Judging', 'Judged', 'Judge', 'Judgment'], answer: 0, why: 'judging from 〜「〜から判断すると」。' },
+      { sentence: '___ his age, he runs very fast.', choices: ['Considering', 'Considered', 'To consider', 'Consider'], answer: 0, why: 'considering 〜「〜を考えると（〜のわりには）」。' },
     ],
   },
   {
@@ -2497,9 +2497,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This puzzle is by no means easy.', ja: 'このパズルは決してかんたんではない。' },
     ],
     questions: [
-      { sentence: "I don't like horror movies ___ all.", choices: ['at', 'in', 'for'], answer: 0, why: 'not 〜 at all「まったく〜ない」。' },
-      { sentence: 'His answer was ___ from perfect.', choices: ['far', 'long', 'much'], answer: 0, why: 'far from 〜「少しも〜ではない」。' },
-      { sentence: 'The test was by ___ means difficult.', choices: ['no', 'not', 'any'], answer: 0, why: 'by no means「決して〜ない」。' },
+      { sentence: "I don't like horror movies ___ all.", choices: ['at', 'in', 'for', 'on'], answer: 0, why: 'not 〜 at all「まったく〜ない」。' },
+      { sentence: 'His answer was ___ from perfect.', choices: ['far', 'long', 'much', 'very'], answer: 0, why: 'far from 〜「少しも〜ではない」。' },
+      { sentence: 'The test was by ___ means difficult.', choices: ['no', 'not', 'any', 'some'], answer: 0, why: 'by no means「決して〜ない」。' },
     ],
   },
   {
@@ -2514,9 +2514,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Once you learn to ride a bike, you never forget.', ja: 'いったん自転車に乗れるようになると、決してわすれない。' },
     ],
     questions: [
-      { sentence: '___ that you are a junior high student, you should get up by yourself.', choices: ['Now', 'Once', 'Since'], answer: 0, why: 'now that 〜「〜した今は」。' },
-      { sentence: '___ you open the box, you will understand.', choices: ['Once', 'Now', 'Than'], answer: 0, why: 'once 〜「いったん〜すると」。' },
-      { sentence: 'Once she ___ home, I will call you.', choices: ['gets', 'will get', 'got'], answer: 0, why: '未来のことでも once のあとは現在形。' },
+      { sentence: '___ that you are a junior high student, you should get up by yourself.', choices: ['Now', 'Once', 'Since', 'Because'], answer: 0, why: 'now that 〜「〜した今は」。' },
+      { sentence: '___ you open the box, you will understand.', choices: ['Once', 'Now', 'Than', 'Despite'], answer: 0, why: 'once 〜「いったん〜すると」。' },
+      { sentence: 'Once she ___ home, I will call you.', choices: ['gets', 'will get', 'got', 'will have got'], answer: 0, why: '未来のことでも once のあとは現在形。' },
     ],
   },
   {
@@ -2548,9 +2548,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Whether it is sunny or rainy, he walks his dog.', ja: '晴れでも雨でも、彼は犬の散歩をする。' },
     ],
     questions: [
-      { sentence: '___ you win or lose, do your best.', choices: ['Whether', 'If', 'Unless'], answer: 0, why: 'Whether A or B「A であろうと B であろうと」。' },
-      { sentence: 'Whether it ___ tomorrow or not, the game will be held.', choices: ['rains', 'will rain', 'rained'], answer: 0, why: '副詞のまとまりの中なので、未来のことでも現在形。' },
-      { sentence: 'Whether you agree ___ not, we must decide today.', choices: ['or', 'and', 'nor'], answer: 0, why: 'whether 〜 or not「〜であろうとなかろうと」。' },
+      { sentence: '___ you win or lose, do your best.', choices: ['Whether', 'If', 'Unless', 'Even'], answer: 0, why: 'Whether A or B「A であろうと B であろうと」。' },
+      { sentence: 'Whether it ___ tomorrow or not, the game will be held.', choices: ['rains', 'will rain', 'rained', 'will be rained'], answer: 0, why: '副詞のまとまりの中なので、未来のことでも現在形。' },
+      { sentence: 'Whether you agree ___ not, we must decide today.', choices: ['or', 'and', 'nor', 'but'], answer: 0, why: 'whether 〜 or not「〜であろうとなかろうと」。' },
     ],
   },
   {
@@ -2582,9 +2582,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I met Emma, a student from Canada.', ja: 'カナダから来た生徒のエマに会った。' },
     ],
     questions: [
-      { sentence: 'Tom, my best friend, ___ in Osaka.', choices: ['lives', 'live', 'living'], answer: 0, why: '主語は Tom（1人）なので lives。my best friend は言いかえ。' },
-      { sentence: 'This is Pochi, ___ dog.', choices: ['our', 'we', 'us'], answer: 0, why: 'Pochi を言いかえる名詞のまとまり our dog。' },
-      { sentence: 'Mt. Fuji, the highest mountain in Japan, ___ beautiful.', choices: ['is', 'are', 'be'], answer: 0, why: '主語は Mt. Fuji（1つ）なので is。' },
+      { sentence: 'Tom, my best friend, ___ in Osaka.', choices: ['lives', 'live', 'living', 'are living'], answer: 0, why: '主語は Tom（1人）なので lives。my best friend は言いかえ。' },
+      { sentence: 'This is Pochi, ___ dog.', choices: ['our', 'we', 'us', 'ours'], answer: 0, why: 'Pochi を言いかえる名詞のまとまり our dog。' },
+      { sentence: 'Mt. Fuji, the highest mountain in Japan, ___ beautiful.', choices: ['is', 'are', 'be', 'being'], answer: 0, why: '主語は Mt. Fuji（1つ）なので is。' },
     ],
   },
   {
@@ -2616,9 +2616,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The moment she saw her dog, she started to cry.', ja: '犬を見たとたん、彼女は泣きだした。' },
     ],
     questions: [
-      { sentence: '___ time I visit Kyoto, I find something new.', choices: ['Every', 'All', 'Some'], answer: 0, why: 'every time 〜「〜するたびに」。' },
-      { sentence: 'The next time you ___ here, call me.', choices: ['come', 'will come', 'came'], answer: 0, why: '時を表すまとまりの中は、未来のことでも現在形。' },
-      { sentence: 'The ___ he got home, it began to rain.', choices: ['moment', 'minute ago', 'time ago'], answer: 0, why: 'the moment 〜「〜したとたん」。' },
+      { sentence: '___ time I visit Kyoto, I find something new.', choices: ['Every', 'All', 'Some', 'Many'], answer: 0, why: 'every time 〜「〜するたびに」。' },
+      { sentence: 'The next time you ___ here, call me.', choices: ['come', 'will come', 'came', 'would come'], answer: 0, why: '時を表すまとまりの中は、未来のことでも現在形。' },
+      { sentence: 'The ___ he got home, it began to rain.', choices: ['moment', 'minute ago', 'time ago', 'hour ago'], answer: 0, why: 'the moment 〜「〜したとたん」。' },
     ],
   },
   {
@@ -2633,9 +2633,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The coach encouraged us to keep trying.', ja: 'コーチは私たちにがんばり続けるようはげました。' },
     ],
     questions: [
-      { sentence: 'The teacher allowed us ___ early.', choices: ['to leave', 'leave', 'leaving'], answer: 0, why: 'allow 人 to 〜 の形。' },
-      { sentence: 'The internet ___ us to learn from anywhere.', choices: ['enables', 'makes', 'lets'], answer: 0, why: 'enable 人 to 〜。make / let は to を使わず原形（make us learn）。' },
-      { sentence: 'Students are not ___ to use phones in class.', choices: ['allowed', 'allowing', 'allow'], answer: 0, why: '受け身 be allowed to 〜「〜することを許されている」。' },
+      { sentence: 'The teacher allowed us ___ early.', choices: ['to leave', 'leave', 'leaving', 'to leaving'], answer: 0, why: 'allow 人 to 〜 の形。' },
+      { sentence: 'The internet ___ us to learn from anywhere.', choices: ['enables', 'makes', 'lets', 'has'], answer: 0, why: 'enable 人 to 〜。make / let は to を使わず原形（make us learn）。' },
+      { sentence: 'Students are not ___ to use phones in class.', choices: ['allowed', 'allowing', 'allow', 'allows'], answer: 0, why: '受け身 be allowed to 〜「〜することを許されている」。' },
     ],
   },
   {
@@ -2684,9 +2684,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is not such a fool as to believe that story.', ja: '彼はその話を信じるほどばかではない。' },
     ],
     questions: [
-      { sentence: 'He was so kind ___ to show me the way.', choices: ['as', 'that', 'for'], answer: 0, why: 'so 〜 as to …「…するほど〜」。' },
-      { sentence: 'She was so tired as ___ asleep on the train.', choices: ['to fall', 'falling', 'fell'], answer: 0, why: 'as to のあとは動詞の原形。' },
-      { sentence: "I'm not ___ a child as to cry about it.", choices: ['such', 'so', 'very'], answer: 0, why: '名詞（a child）があるので such 〜 as to。' },
+      { sentence: 'He was so kind ___ to show me the way.', choices: ['as', 'that', 'for', 'than'], answer: 0, why: 'so 〜 as to …「…するほど〜」。' },
+      { sentence: 'She was so tired as ___ asleep on the train.', choices: ['to fall', 'falling', 'fell', 'fall'], answer: 0, why: 'as to のあとは動詞の原形。' },
+      { sentence: "I'm not ___ a child as to cry about it.", choices: ['such', 'so', 'very', 'too'], answer: 0, why: '名詞（a child）があるので such 〜 as to。' },
     ],
   },
   {
