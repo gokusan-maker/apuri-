@@ -15637,6 +15637,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-virtual-water',
+    title: 'The Hidden Water in What We Buy',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think about saving water, they usually think of turning off the tap while brushing their teeth or taking shorter showers. These habits are useful, but they deal with only a small part of the water we actually use. Much larger amounts are hidden in the food we eat and the products we buy, and this hidden water is often called virtual water.",
+      "The idea of virtual water refers to the total amount of water needed to produce something. A cup of coffee, for example, requires water not only for brewing but also for growing the coffee plants, processing the beans, and transporting them. When all these steps are added together, the amount becomes surprisingly large. Meat generally needs much more water than vegetables, ( A ) the animals must drink and the crops used to feed them must also be grown.",
+      "This idea helps to explain an important feature of world trade. When a country imports wheat or rice, it is in a sense also importing the water that was used to grow those crops. Some countries with very little rain therefore choose to buy food from abroad instead of growing it themselves. In this way, they can save their limited water for drinking and other needs. On the other hand, countries that export large amounts of food may be using up their own water supplies without fully realizing it.",
+      "Experts point out that virtual water should not be judged by numbers alone. Water used in a region where rain is plentiful has a very different effect from the same amount taken from a dry region ( B ) rivers and underground water are already running low. For this reason, many researchers now pay attention not only to how much water a product uses but also to where that water comes from.",
+      "Thinking about virtual water does not mean that we must stop eating meat or drinking coffee. It does, however, remind us that our everyday choices are connected to rivers, farms, and communities in faraway places. By wasting less food and choosing products with care, each of us can reduce the amount of water that is used for things we never actually use. Saving water, in other words, can happen ( C ) at the tap but also at the shop and on the dinner table.",
+    ],
+    ja: [
+      '水を節約することを考えるとき、人々はふつう、歯をみがくあいだ蛇口をしめることや、シャワーを短くすることを思いうかべる。こうした習慣は役に立つが、わたしたちが実際に使っている水のほんの一部をあつかっているにすぎない。はるかに多くの量が、わたしたちが食べる食べ物や買う製品の中にかくれており、このかくれた水はしばしば「仮想水（バーチャルウォーター）」とよばれる。',
+      '仮想水という考えは、何かを生産するのに必要な水の総量を指す。たとえば1杯のコーヒーには、いれるためだけでなく、コーヒーの木を育て、豆を加工し、運ぶための水も必要である。これらの段階をすべて足し合わせると、その量はおどろくほど大きくなる。肉は一般に野菜よりはるかに多くの水を必要とする。動物が水を飲まなければならないうえ、えさになる作物も育てなければならないからである。',
+      'この考えは、世界の貿易の大切な特徴を説明するのに役立つ。ある国が小麦や米を輸入するとき、それはある意味で、その作物を育てるのに使われた水も輸入していることになる。そのため、雨がとても少ない国の中には、食べ物を自分で育てるかわりに外国から買うことを選ぶ国もある。こうすることで、かぎられた水を飲み水やほかの必要のためにとっておくことができる。一方、大量の食べ物を輸出する国は、十分に気づかないまま自分たちの水の供給を使いはたしているかもしれない。',
+      '専門家は、仮想水を数字だけで判断すべきではないと指摘する。雨の多い地域で使われる水は、川や地下水がすでに少なくなっている乾いた地域から取られる同じ量の水とは、まったくちがう影響をもつ。このため、多くの研究者は今、製品がどれだけの水を使うかだけでなく、その水がどこから来るのかにも注目している。',
+      '仮想水について考えることは、肉を食べたりコーヒーを飲んだりするのをやめなければならないということではない。しかしそれは、わたしたちの日々の選択が、遠くはなれた場所の川や農場や地域社会とつながっていることを思い出させてくれる。食べ物のむだを減らし、製品を注意して選ぶことで、わたしたち一人ひとりが、実際には使わないもののために使われる水の量を減らすことができる。言いかえれば、水の節約は蛇口のところだけでなく、店や食卓でも起こりうるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'so that'], answer: 0, why: '「肉が多くの水を必要とする」理由「動物が水を飲み、えさの作物も育てる必要がある」を表すので because。' },
+      { id: 'B', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '先行詞は a dry region（場所）で、うしろが完全な文（rivers and underground water are already running low）なので関係副詞 where。' },
+      { id: 'C', choices: ['not only', 'not', 'only not', 'neither'], answer: 0, why: 'あとの but also と組み合わせて not only A but also B「A だけでなく B も」。' },
+    ],
+    tf: [
+      { statement: '仮想水とは、製品を生産するのに必要な水の総量のことである。', answer: true, why: '第2段落 The idea of virtual water refers to the total amount of water needed to produce something。' },
+      { statement: '肉は一般に、野菜より少ない水で生産できる。', answer: false, why: '第2段落 Meat generally needs much more water than vegetables。' },
+      { statement: '雨の少ない国の中には、水を節約するために食べ物を輸入する国もある。', answer: true, why: '第3段落 Some countries with very little rain therefore choose to buy food from abroad … they can save their limited water。' },
+      { statement: '筆者は、水を守るためにコーヒーを飲むのをやめるべきだと主張している。', answer: false, why: '第5段落 Thinking about virtual water does not mean that we must stop eating meat or drinking coffee。' },
+    ],
+    qa: [
+      { q: 'Why do experts say virtual water should not be judged by numbers alone?', choices: ['The effect of using water depends on whether the region is wet or dry.', 'The numbers are always too small to matter.', 'Water cannot be measured accurately.', 'Only drinking water is important.'], answer: 0, why: '第4段落 Water used in a region where rain is plentiful has a very different effect from the same amount taken from a dry region。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Our everyday choices about food and products can help save water.', 'People should take shorter showers.', 'Countries should stop trading food.', 'Coffee uses more water than any other product.'], answer: 0, why: '第5段落 By wasting less food and choosing products with care, each of us can reduce the amount of water。' },
+    ],
+    gist: [
+      { para: 2, choices: ['食べ物の貿易は水のやりとりでもあること', '小麦と米の育て方のちがい', '雨がふるしくみ', '飲み水のきれいにし方'], answer: 0, why: '第3段落は、作物の輸入はその作物を育てた水の輸入でもあり、水の少ない国が食べ物を輸入して水を節約することを述べている。' },
+      { para: 3, choices: ['水の量だけでなく、どこの水かも大切であること', '地下水の掘り方', '雨の多い地域の観光', '川の長さのくらべ方'], answer: 0, why: '第4段落は、同じ量でも雨の多い地域と乾いた地域では影響がちがうので、水がどこから来るかにも注目すべきだと述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
