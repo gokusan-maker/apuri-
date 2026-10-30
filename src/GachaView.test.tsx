@@ -440,3 +440,24 @@ it('デザイン70：キャラ図鑑で会えた子をえらぶと、その子�
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
   expect(screen.getByText(`（今日のチャレンジ：${challengeOf('fox').icon} ${challengeOf('fox').label}）`)).toBeInTheDocument()
 })
+
+it('デザイン95：キャラ図鑑で会えた子をえらぶと、その子のとくぎ名も出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const { skillOf } = await import('./partner')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText(`（とくぎ：${skillOf('fox').name}）`)).toBeInTheDocument()
+})
+
+it('デザイン95：まだ会っていない子をえらんでも、とくぎ名は出さない', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const lineup = screen.getByRole('list', { name: '出てくるキャラクター' })
+  fireEvent.click(within(lineup).getAllByRole('button', { name: 'まだ会っていないキャラクターのヒント' })[0])
+  const first = SPECIES.find((s) => s.id !== 'mochi')!
+  expect(screen.getByText(new RegExp(`${first.egg}から生まれるらしい`))).toBeInTheDocument()
+  expect(screen.queryByText(/（とくぎ：/)).toBeNull()
+})
