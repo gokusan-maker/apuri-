@@ -15719,6 +15719,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['What Did Printing Really Change?', 'How to Build a Printing Machine', 'The Life of Johannes Gutenberg', 'Why People Stopped Reading'], answer: 0, why: '全体として、印刷が知識・政治・宗教にあたえた影響を認めつつ、それがただ一つの原因ではなかったことを論じている。' },
   },
   {
+    id: 'kyotsu-barcode',
+    title: 'The Small Stripes That Changed Shopping',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Almost every product in a supermarket carries a small pattern of black and white stripes. Most shoppers hardly notice it, yet this simple design, called a barcode, has changed the way goods are sold, stored, and moved around the world. Its history shows how a small idea can grow into a system that affects millions of people every day.",
+      "Before barcodes were widely used, store workers had to put a price label on each item by hand, and cashiers had to type every price into the cash register. This was slow, and mistakes were common. Stores also found it difficult to know exactly how many of each product they had sold, ( A ) checking the shelves and storerooms took a great deal of time.",
+      "The basic idea of a barcode is simple. Each pattern of stripes stands for a number, and a scanner reads the pattern by measuring how light is reflected from the black and white parts. The number is then sent to a computer, which finds the name and price of the product. In 1974, a pack of chewing gum became one of the first products to be sold in a store using this kind of system, and within a few decades barcodes had become common in shops in many countries.",
+      "The greatest effect of barcodes, however, may be one that shoppers never see. Because every sale is recorded automatically, stores can find out quickly which products are popular and which are not. They can order new goods before the shelves become empty, and they can avoid keeping too much stock in storerooms. Factories and delivery companies use the same kind of information to plan ( B ) much to produce and where to send it.",
+      "Today, newer kinds of codes, such as square codes that can be read by smartphones, are used for tickets, payments, and even restaurant menus. These codes can hold much more information than the original stripes. Even so, they are based on the same idea: turning information into a pattern that a machine can read quickly and accurately. The barcode is a good example of a technology ( C ) has become so much a part of daily life that we rarely stop to think about it.",
+    ],
+    ja: [
+      'スーパーマーケットのほとんどすべての商品には、白と黒のしまの小さな模様がついている。たいていの買い物客はそれにほとんど気づかないが、バーコードとよばれるこの単純なデザインは、品物が売られ、保管され、世界中に運ばれるしかたを変えてきた。その歴史は、小さなアイデアが、毎日何百万もの人々に影響をあたえるしくみにまで成長しうることを示している。',
+      'バーコードが広く使われる前、店員は一つひとつの品物に手で値札をはらなければならず、レジ係はすべての値段をレジに打ちこまなければならなかった。これは時間がかかり、まちがいもよくあった。店はまた、それぞれの商品をいくつ売ったのかを正確に知るのも難しいと感じていた。棚や倉庫を確かめるのに、とても多くの時間がかかったからである。',
+      'バーコードの基本的な考えは単純である。それぞれのしまの模様は数字を表しており、スキャナーは黒と白の部分から光がどのようにはね返るかを測ってその模様を読み取る。その数字はコンピューターに送られ、コンピューターが商品の名前と値段を見つける。1974年、チューインガム1パックが、この種のしくみを使って店で売られた最初の商品の一つになり、数十年のうちにバーコードは多くの国の店でふつうのものになった。',
+      'しかし、バーコードの最も大きな影響は、買い物客が決して目にしないものかもしれない。すべての売り上げが自動的に記録されるので、店はどの商品が人気があり、どれがそうでないかをすばやく知ることができる。棚が空になる前に新しい品物を注文でき、倉庫に在庫をかかえすぎることもさけられる。工場や配送会社も同じような情報を使って、どれだけ作り、どこへ送るかを計画している。',
+      '今日では、スマートフォンで読み取れる四角いコードのような新しい種類のコードが、切符や支払い、さらにはレストランのメニューにまで使われている。こうしたコードは、もとのしまよりもはるかに多くの情報をもつことができる。それでも、それらは同じ考え、つまり情報を機械がすばやく正確に読み取れる模様に変えるという考えにもとづいている。バーコードは、日々の暮らしの一部になりすぎて、わたしたちがそれについて立ち止まって考えることがめったにない技術のよい例なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'so that'], answer: 0, why: '「売った数を知るのが難しかった」理由「棚や倉庫を確かめるのに時間がかかった」を表すので because。' },
+      { id: 'B', choices: ['how', 'what', 'which', 'why'], answer: 0, why: 'how much to produce「どれだけ作るか」。much の前に置いて量をたずねるのは how。' },
+      { id: 'C', choices: ['that', 'what', 'who', 'where'], answer: 0, why: '先行詞 a technology を受け、うしろに主語が欠けている（has become …）ので主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: 'バーコードが使われる前は、レジ係がすべての値段を打ちこんでいた。', answer: true, why: '第2段落 cashiers had to type every price into the cash register。' },
+      { statement: 'スキャナーは、しまの色を音に変えて読み取る。', answer: false, why: '第3段落 a scanner reads the pattern by measuring how light is reflected。光のはね返りを測る。' },
+      { statement: 'バーコードのおかげで、店はどの商品が人気かをすばやく知ることができる。', answer: true, why: '第4段落 stores can find out quickly which products are popular and which are not。' },
+      { statement: '新しい四角いコードは、もとのしまより少ない情報しかもてない。', answer: false, why: '第5段落 These codes can hold much more information than the original stripes。' },
+    ],
+    qa: [
+      { q: 'According to the passage, what may be the greatest effect of barcodes?', choices: ['Stores and companies can use sales records to plan orders and deliveries.', 'Shoppers can pay without any money.', 'Products have become much more expensive.', 'Cashiers no longer need to work in stores.'], answer: 0, why: '第4段落 Because every sale is recorded automatically … They can order new goods … Factories and delivery companies use the same kind of information to plan。' },
+      { q: 'What idea do barcodes and newer square codes share?', choices: ['Turning information into a pattern a machine can read quickly.', 'Using only black and white colors.', 'Being read only in supermarkets.', 'Holding the same amount of information.'], answer: 0, why: '第5段落 they are based on the same idea: turning information into a pattern that a machine can read quickly and accurately。' },
+    ],
+    gist: [
+      { para: 2, choices: ['バーコードが数字を表し、機械が読み取るしくみ', 'チューインガムの作り方', 'レジの値段の決め方', 'スーパーマーケットの歴史'], answer: 0, why: '第3段落は、しまの模様が数字を表し、スキャナーとコンピューターがそれを読み取るしくみと、使われはじめたころのことを説明している。' },
+      { para: 3, choices: ['売り上げの記録が注文や生産の計画に役立つこと', '倉庫の建て方', '買い物客の好きな色', '配送のトラックの種類'], answer: 0, why: '第4段落は、自動で記録される売り上げが、店の注文や工場・配送会社の計画に使われることを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

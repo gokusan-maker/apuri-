@@ -286,3 +286,9 @@ it('本番の長さの長文：旧帝大評論の「印刷」は600語以上・1
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(tierOf(p)).toBe('kyutei')
 })
+
+it('本番の長さの長文：共通テスト評論の「バーコード」は350語以上で共通テストのレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyotsu-barcode')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
+  expect(tierOf(p)).toBe('kyotsu')
+})
