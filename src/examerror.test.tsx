@@ -140,3 +140,11 @@ it('正誤問題⑬：名詞・代名詞の難問の単元が10問ある（単�
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) furnitures')
   expect(new Set(EXAM_ERROR.map((x) => x.id)).size).toBe(EXAM_ERROR.length)
 })
+
+it('誤文訂正⑦：比較・倒置の難問の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-7')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('have I seen')
+  expect(new Set(EXAM_FIX.map((x) => x.id)).size).toBe(EXAM_FIX.length)
+})

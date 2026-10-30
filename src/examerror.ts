@@ -402,6 +402,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'He sat on the sofa [with his eyes closing].', choices: ['with his eyes closed', 'with closing his eyes', 'with his eyes close', 'his eyes closing with'], answer: 0, why: '付帯状況の with ＋名詞＋分詞。目は「閉じられた」状態なので過去分詞：with his eyes closed。' },
     ],
   },
+  {
+    id: 'exam-fix-7',
+    title: '入試の誤文訂正⑦（比較・倒置の難問）',
+    points: ['最上級と比較級、the ＋比較級, the ＋比較級、比較級を強める much、倍数表現、superior to、否定語や Only ～ が文頭に出たときの倒置など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Never have I seen such a beautiful sunset.', ja: 'こんなに美しい夕日は見たことがない。（Never が文頭で倒置）' }],
+    questions: [
+      { sentence: 'She is [the taller] girl in her class.', choices: ['the tallest', 'taller', 'more tall', 'most tall'], answer: 0, why: 'in her class「クラスの中で」と3人以上の中で比べるので最上級：the tallest。' },
+      { sentence: 'The more you practice, [better] you will become.', choices: ['the better', 'the best', 'more better', 'best'], answer: 0, why: 'the ＋比較級 ～, the ＋比較級 …「～すればするほど…」：the better。' },
+      { sentence: 'He is [very] taller than his brother.', choices: ['much', 'more', 'so', 'too'], answer: 0, why: '比較級を強めるのは much（または far / even）。very は比較級を強めない。' },
+      { sentence: 'Never [I have seen] such a beautiful sunset.', choices: ['have I seen', 'I saw', 'I had seen', 'saw I'], answer: 0, why: '否定語 Never が文頭に出ると疑問文の語順に倒置：Never have I seen。' },
+      { sentence: 'Little [he knew] that his friends were planning a party for him.', choices: ['did he know', 'he did know', 'knew he', 'he knows'], answer: 0, why: 'Little「少しも～ない」が文頭に出ると倒置：Little did he know。' },
+      { sentence: 'This bag is [twice as heavier] as that one.', choices: ['twice as heavy', 'twice heavier', 'as twice heavy', 'heavier twice'], answer: 0, why: '倍数表現は 倍数＋ as ＋原級＋ as：twice as heavy as。' },
+      { sentence: 'No other mountain in Japan is [higher as] Mt. Fuji.', choices: ['higher than', 'as higher than', 'the highest', 'more high than'], answer: 0, why: 'No other ～ is ＋比較級＋ than …「…ほど～なものはない」：higher than。' },
+      { sentence: 'Only after the accident [he realized] how dangerous the road was.', choices: ['did he realize', 'he did realize', 'realized he', 'he had realized'], answer: 0, why: 'Only ＋副詞句が文頭に出ると倒置：Only after the accident did he realize。' },
+      { sentence: 'So tired [I was] that I fell asleep at once.', choices: ['was I', 'I am', 'did I', 'I had'], answer: 0, why: 'So ＋形容詞が文頭に出ると倒置：So tired was I that ～。be 動詞なので was I。' },
+      { sentence: 'She is [superior than] me in math.', choices: ['superior to', 'more superior to', 'superior over', 'superior with'], answer: 0, why: 'superior「すぐれている」はラテン語由来の比較の語で than ではなく to を使う：superior to。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
