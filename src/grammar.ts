@@ -179,9 +179,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is the bike which my father gave me.', ja: 'これは父がくれた自転車だ。' },
     ],
     questions: [
-      { sentence: 'The girl ___ is singing is my sister.', choices: ['who', 'which', 'what'], answer: 0, why: '「歌っている女の子」は人なので who。' },
-      { sentence: 'I lost the pen ___ I bought yesterday.', choices: ['who', 'which', 'where'], answer: 1, why: 'pen は物なので which。' },
-      { sentence: 'He has a dog ___ runs very fast.', choices: ['who', 'that', 'what'], answer: 1, why: '動物には that（または which）。' },
+      { sentence: 'The girl ___ is singing is my sister.', choices: ['who', 'which', 'what', 'whose'], answer: 0, why: '「歌っている女の子」は人なので who。' },
+      { sentence: 'I lost the pen ___ I bought yesterday.', choices: ['who', 'which', 'where', 'what'], answer: 1, why: 'pen は物なので which。' },
+      { sentence: 'He has a dog ___ runs very fast.', choices: ['who', 'that', 'what', 'whose'], answer: 1, why: '動物には that（または which）。' },
     ],
   },
   {
@@ -280,9 +280,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What a beautiful sunset!', ja: 'なんてきれいな夕日でしょう！' },
     ],
     questions: [
-      { sentence: 'She is your sister, ___?', choices: ['is she', 'isn\'t she', 'doesn\'t she'], answer: 1, why: 'be動詞の肯定文なので isn\'t she。' },
-      { sentence: 'You didn\'t go there, ___?', choices: ['did you', 'didn\'t you', 'do you'], answer: 0, why: '過去の否定文なので肯定の did you。' },
-      { sentence: '___ tall this tree is!', choices: ['What', 'How', 'Very'], answer: 1, why: '形容詞 tall だけが続くので How。' },
+      { sentence: 'She is your sister, ___?', choices: ['is she', 'isn\'t she', 'doesn\'t she', "aren't she"], answer: 1, why: 'be動詞の肯定文なので isn\'t she。' },
+      { sentence: 'You didn\'t go there, ___?', choices: ['did you', 'didn\'t you', 'do you', "don't you"], answer: 0, why: '過去の否定文なので肯定の did you。' },
+      { sentence: '___ tall this tree is!', choices: ['What', 'How', 'Very', 'Which'], answer: 1, why: '形容詞 tall だけが続くので How。' },
     ],
   },
   {
@@ -294,9 +294,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Tell me why you were late.', ja: 'なぜ遅れたのか教えて。' },
     ],
     questions: [
-      { sentence: 'I don\'t know where ___.', choices: ['does she live', 'she lives', 'lives she'], answer: 1, why: '文の中では「疑問詞＋主語＋動詞」なので where she lives。' },
-      { sentence: 'Can you tell me what ___?', choices: ['this is', 'is this', 'this'], answer: 0, why: '主語 this ＋動詞 is の順。' },
-      { sentence: 'I wonder when ___ back.', choices: ['will he come', 'he will come', 'comes he'], answer: 1, why: '主語 he ＋ will come の順。' },
+      { sentence: 'I don\'t know where ___.', choices: ['does she live', 'she lives', 'lives she', 'is she live'], answer: 1, why: '文の中では「疑問詞＋主語＋動詞」なので where she lives。' },
+      { sentence: 'Can you tell me what ___?', choices: ['this is', 'is this', 'this', 'is it this'], answer: 0, why: '主語 this ＋動詞 is の順。' },
+      { sentence: 'I wonder when ___ back.', choices: ['will he come', 'he will come', 'comes he', 'he comes will'], answer: 1, why: '主語 he ＋ will come の順。' },
     ],
   },
   {
@@ -311,9 +311,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is a car made in Japan.', ja: 'これは日本で作られた車です。' },
     ],
     questions: [
-      { sentence: 'The boy ___ by the door is my brother.', choices: ['standing', 'stood', 'stands'], answer: 0, why: '「立っている」男の子なので ing 形の standing。' },
-      { sentence: 'I found a ___ window.', choices: ['breaking', 'broken', 'break'], answer: 1, why: '「割られた」窓なので過去分詞の broken。' },
-      { sentence: 'English is a language ___ all over the world.', choices: ['speaking', 'spoke', 'spoken'], answer: 2, why: '「話されている」言語なので過去分詞の spoken。' },
+      { sentence: 'The boy ___ by the door is my brother.', choices: ['standing', 'stood', 'stands', 'is standing'], answer: 0, why: '「立っている」男の子なので ing 形の standing。' },
+      { sentence: 'I found a ___ window.', choices: ['breaking', 'broken', 'break', 'broke'], answer: 1, why: '「割られた」窓なので過去分詞の broken。' },
+      { sentence: 'English is a language ___ all over the world.', choices: ['speaking', 'spoke', 'spoken', 'speaks'], answer: 2, why: '「話されている」言語なので過去分詞の spoken。' },
     ],
   },
   {
@@ -328,9 +328,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If I were you, I would ask the teacher.', ja: '私があなたなら、先生に聞くだろう。' },
     ],
     questions: [
-      { sentence: 'I wish I ___ fly like a bird.', choices: ['can', 'could', 'will'], answer: 1, why: '今できないことを願うので can の過去形 could。' },
-      { sentence: 'If I ___ rich, I would travel around the world.', choices: ['am', 'were', 'be'], answer: 1, why: '事実とちがう想像なので were。' },
-      { sentence: 'If it were sunny, we ___ go to the beach.', choices: ['will', 'would', 'are'], answer: 1, why: '仮定法の文の後半は would ＋ 動詞の原形。' },
+      { sentence: 'I wish I ___ fly like a bird.', choices: ['can', 'could', 'will', 'am'], answer: 1, why: '今できないことを願うので can の過去形 could。' },
+      { sentence: 'If I ___ rich, I would travel around the world.', choices: ['am', 'were', 'be', 'is'], answer: 1, why: '事実とちがう想像なので were。' },
+      { sentence: 'If it were sunny, we ___ go to the beach.', choices: ['will', 'would', 'are', 'were'], answer: 1, why: '仮定法の文の後半は would ＋ 動詞の原形。' },
     ],
   },
   {
@@ -356,9 +356,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I don't know what to say.", ja: '何と言えばいいかわからない。' },
     ],
     questions: [
-      { sentence: 'Can you tell me ___ to get to the station?', choices: ['how', 'what', 'who'], answer: 0, why: '「駅への行き方」は how to get to 〜。' },
-      { sentence: "I don't know ___ to buy for her birthday.", choices: ['what', 'how', 'where'], answer: 0, why: '「何を買えばいいか」は what to buy。' },
-      { sentence: 'Please tell me ___ to put this box.', choices: ['where', 'what', 'how'], answer: 0, why: '「どこに置けばいいか」は where to put。' },
+      { sentence: 'Can you tell me ___ to get to the station?', choices: ['how', 'what', 'who', 'which'], answer: 0, why: '「駅への行き方」は how to get to 〜。' },
+      { sentence: "I don't know ___ to buy for her birthday.", choices: ['what', 'how', 'where', 'whose'], answer: 0, why: '「何を買えばいいか」は what to buy。' },
+      { sentence: 'Please tell me ___ to put this box.', choices: ['where', 'what', 'how', 'who'], answer: 0, why: '「どこに置けばいいか」は where to put。' },
     ],
   },
   {
@@ -387,9 +387,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is important to sleep well.', ja: 'よく眠ることは大切だ。' },
     ],
     questions: [
-      { sentence: 'It is hard ___ me to get up early.', choices: ['for', 'to', 'of'], answer: 0, why: '「私にとって」は for me。' },
-      { sentence: 'It is fun to ___ new words.', choices: ['learn', 'learning', 'learned'], answer: 0, why: 'to のあとは動詞の原形。' },
-      { sentence: '___ is dangerous to swim here.', choices: ['It', 'This', 'There'], answer: 0, why: 'It is … to ～ の形。It を使う。' },
+      { sentence: 'It is hard ___ me to get up early.', choices: ['for', 'to', 'of', 'with'], answer: 0, why: '「私にとって」は for me。' },
+      { sentence: 'It is fun to ___ new words.', choices: ['learn', 'learning', 'learned', 'learns'], answer: 0, why: 'to のあとは動詞の原形。' },
+      { sentence: '___ is dangerous to swim here.', choices: ['It', 'This', 'There', 'That'], answer: 0, why: 'It is … to ～ の形。It を使う。' },
     ],
   },
   {
@@ -478,9 +478,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is old enough to drive a car.', ja: '彼は車を運転できる年れいだ。' },
     ],
     questions: [
-      { sentence: 'The soup is ___ hot to eat now.', choices: ['too', 'enough', 'very'], answer: 0, why: '「熱すぎて食べられない」なので too ～ to。' },
-      { sentence: 'She is tall ___ to reach the top shelf.', choices: ['too', 'enough', 'so'], answer: 1, why: '「届くほど背が高い」なので形容詞のあとに enough。' },
-      { sentence: 'I was ___ tired to finish my homework.', choices: ['too', 'enough', 'much'], answer: 0, why: '「疲れすぎて終えられなかった」なので too ～ to。' },
+      { sentence: 'The soup is ___ hot to eat now.', choices: ['too', 'enough', 'very', 'more'], answer: 0, why: '「熱すぎて食べられない」なので too ～ to。' },
+      { sentence: 'She is tall ___ to reach the top shelf.', choices: ['too', 'enough', 'so', 'very'], answer: 1, why: '「届くほど背が高い」なので形容詞のあとに enough。' },
+      { sentence: 'I was ___ tired to finish my homework.', choices: ['too', 'enough', 'much', 'so'], answer: 0, why: '「疲れすぎて終えられなかった」なので too ～ to。' },
     ],
   },
   {
@@ -576,9 +576,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He ran so fast that nobody could catch him.', ja: '彼はとても速く走ったので、だれも追いつけなかった。' },
     ],
     questions: [
-      { sentence: 'The box was ___ heavy that I couldn\'t carry it.', choices: ['so', 'too', 'very'], answer: 0, why: 'so ～ that … で「とても～なので…」。' },
-      { sentence: 'She was so tired ___ she went to bed early.', choices: ['that', 'than', 'then'], answer: 0, why: 'so ～ that の that。' },
-      { sentence: 'The movie was so funny that we ___ a lot.', choices: ['laughed', 'laugh', 'laughing'], answer: 0, why: '過去の話なので laughed。' },
+      { sentence: 'The box was ___ heavy that I couldn\'t carry it.', choices: ['so', 'too', 'very', 'such'], answer: 0, why: 'so ～ that … で「とても～なので…」。' },
+      { sentence: 'She was so tired ___ she went to bed early.', choices: ['that', 'than', 'then', 'when'], answer: 0, why: 'so ～ that の that。' },
+      { sentence: 'The movie was so funny that we ___ a lot.', choices: ['laughed', 'laugh', 'laughing', 'laughs'], answer: 0, why: '過去の話なので laughed。' },
     ],
   },
   {
@@ -842,9 +842,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The boy I met yesterday was very kind.', ja: '昨日私が会った男の子はとても親切だった。' },
     ],
     questions: [
-      { sentence: 'The movie we ___ last night was exciting.', choices: ['saw', 'seeing', 'see'], answer: 0, why: 'the movie (that) we saw ＝「私たちが昨夜見た映画」。過去なので saw。' },
-      { sentence: 'Is this the bag ___ you lost?', choices: ['who', 'you', '（何も入らない）'], answer: 2, why: '目的語の関係代名詞は省略できるので、the bag you lost でよい。' },
-      { sentence: 'The song she sang ___ beautiful.', choices: ['were', 'was', 'be'], answer: 1, why: '主語は the song（単数）、過去なので was。' },
+      { sentence: 'The movie we ___ last night was exciting.', choices: ['saw', 'seeing', 'see', 'sees'], answer: 0, why: 'the movie (that) we saw ＝「私たちが昨夜見た映画」。過去なので saw。' },
+      { sentence: 'Is this the bag ___ you lost?', choices: ['who', 'you', '（何も入らない）', 'what'], answer: 2, why: '目的語の関係代名詞は省略できるので、the bag you lost でよい。' },
+      { sentence: 'The song she sang ___ beautiful.', choices: ['were', 'was', 'be', 'are'], answer: 1, why: '主語は the song（単数）、過去なので was。' },
     ],
   },
   {
