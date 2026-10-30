@@ -3210,3 +3210,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑰（形容詞・副詞の難問：good/well・a few/a little・late/lately・taste/look ＋形容詞・alive/living）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「洗濯機が生んだ時間」（技術・くらし・非制限の who／the way that の空所）
 - 2026-10-30: デザイン：ボス図鑑の見出しに、まだ勝っていないボスの数（あと○体）を出すようにした
+- 2026-10-30: 文法：入試の誤文訂正⑪（TOEFL・IELTS の書き言葉③：rise/raise・from A to B・between A and B・As can be seen・twice as ～ as）10問

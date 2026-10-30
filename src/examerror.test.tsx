@@ -197,3 +197,10 @@ it('正誤問題⑰：形容詞・副詞の難問の単元が10問ある', async
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) good')
 })
+
+it('誤文訂正⑪：数字・グラフの説明の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-11')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('rose')
+})

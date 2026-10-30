@@ -570,6 +570,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'You should save some money [in case of] you lose your job.', choices: ['in case', 'in case of if', 'in the case', 'because of'], answer: 0, why: 'うしろが主語＋動詞なので接続詞 in case「～する場合にそなえて」。in case of のあとは名詞。' },
     ],
   },
+  {
+    id: 'exam-fix-11',
+    title: '入試の誤文訂正⑪（TOEFL・IELTS の書き言葉③：数字・グラフの説明）',
+    points: ['IELTS のグラフ問題などで使う表現。rise と raise、from A to B、between A and B、形容詞＋名詞（a significant increase）、twice as ～ as、As can be seen、half of など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'As can be seen in the chart, sales rose sharply between 2010 and 2020.', ja: 'グラフからわかるように、売り上げは2010年から2020年のあいだに急に上がった。' }],
+    questions: [
+      { sentence: 'Sales [raised] sharply in 2020.', choices: ['rose', 'were risen', 'arised', 'rised'], answer: 0, why: '「上がる」は自動詞 rise（過去形 rose）。raise は「～を上げる」で目的語が必要。' },
+      { sentence: 'The percentage of students who walk to school [decreased by] 30% in 2010 to 20% in 2020.', choices: ['decreased from', 'decreased of', 'decreased in', 'decreased at'], answer: 0, why: '「A から B へ」へった、は from A to B：decreased from 30% to 20%。' },
+      { sentence: 'There was a [significantly] increase in prices last year.', choices: ['significant', 'significance', 'signify', 'significantly of'], answer: 0, why: '名詞 increase を説明するのは形容詞：a significant increase。' },
+      { sentence: '[As can see] in the chart, the number of tourists doubled.', choices: ['As can be seen', 'As we can seeing', 'As seen we can', 'As can saw'], answer: 0, why: '「～からわかるように」は As can be seen in ～（受け身）。' },
+      { sentence: 'The price of rice was [twice higher than] it was in 2000.', choices: ['twice as high as', 'two times higher as', 'twice high than', 'twice as higher as'], answer: 0, why: '倍数表現は 倍数＋ as ＋原級＋ as：twice as high as。' },
+      { sentence: 'Car ownership remained [stably] over the decade.', choices: ['stable', 'stability', 'stabled', 'stabilize'], answer: 0, why: 'remain「～のままである」のうしろは形容詞：remained stable。' },
+      { sentence: '[Between 2010 to 2020], the population of the city grew steadily.', choices: ['Between 2010 and 2020', 'Between 2010 or 2020', 'From 2010 and 2020', 'Since 2010 to 2020'], answer: 0, why: 'between A and B か from A to B の形にする。between と to をまぜない。' },
+      { sentence: 'Approximately [the half] of the respondents agreed with the plan.', choices: ['half', 'a half of the', 'the half of', 'halves of'], answer: 0, why: '「～の半分」は half of ～ で、the はつけない：half of the respondents。' },
+      { sentence: 'The figure for Japan was [much more lower] than that for Canada.', choices: ['much lower', 'more lower', 'very lower', 'much low'], answer: 0, why: 'lower はすでに比較級なので more はつけない。強めるのは much：much lower。' },
+      { sentence: 'Each of the three countries [show] a rising trend.', choices: ['shows', 'are showing', 'showing', 'have shown'], answer: 0, why: '主語の中心は Each（単数）なので shows。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
