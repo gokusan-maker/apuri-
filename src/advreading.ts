@@ -15852,6 +15852,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-warm-up',
+    title: 'Rethinking the Warm-Up',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For many years, students in physical education classes were told to begin exercise by standing still and stretching their muscles for a long time. Holding a stretch for thirty seconds or more was thought to prevent injuries and improve performance. In recent decades, however, sports scientists have looked more carefully at this habit, and their findings have changed the way many coaches prepare their athletes. The question is not whether we should warm up, but how we should do it.",
+      "The main purpose of a warm-up is to get the body ready for activity. As we move, our heart beats faster, more blood flows to the muscles, and the temperature of the muscles rises. Warm muscles can contract more quickly and are generally less likely to be damaged. A good warm-up also prepares the nervous system, ( A ) the brain and muscles can work together smoothly during sudden movements.",
+      "Several studies have suggested that long periods of static stretching, in which a position is held without movement, may slightly reduce the power of the muscles for a short time afterward. For activities that require strength and speed, such as sprinting or jumping, this small loss could matter. For this reason, many coaches now recommend dynamic warm-ups instead. These include movements such as light jogging, high knees, and leg swings, ( B ) gradually increase in speed and range.",
+      "This does not mean that static stretching is useless. It can help improve flexibility over time, and some sports, such as gymnastics or dance, require a wide range of movement. Many experts suggest doing static stretches after exercise or as a separate routine, rather than just before a race. They also point out that the effects of stretching are often small, and that individual differences between athletes are large.",
+      "The story of the warm-up shows that even familiar habits can be improved when they are tested carefully. What everyone once believed was simply common sense turned out to be only partly correct. For students and athletes, the lesson is not to follow advice without thinking, but to understand the reasons ( C ) it and to adjust their routines as new evidence becomes available.",
+    ],
+    ja: [
+      '長年のあいだ、体育の授業の生徒たちは、運動を始めるときには、じっと立ったまま長い時間筋肉をのばすように言われていた。30秒以上ストレッチの姿勢を続けることが、けがを防ぎ、成績を上げると考えられていたのである。しかしここ数十年、スポーツ科学者たちはこの習慣をもっと注意深く調べ、その発見は多くのコーチが選手に準備をさせるやり方を変えてきた。問題は、ウォーミングアップをすべきかどうかではなく、どのようにすべきかである。',
+      'ウォーミングアップの主な目的は、体を運動の準備ができた状態にすることである。体を動かすと心臓は速く打ち、より多くの血液が筋肉に流れ、筋肉の温度が上がる。温まった筋肉はより速く縮むことができ、一般にきずつきにくい。よいウォーミングアップは神経のはたらきも準備させ、そのため急な動きのあいだも脳と筋肉がなめらかに協力できるのである。',
+      'いくつかの研究は、動かずに姿勢を保つ静的ストレッチを長く行うと、そのあとしばらくのあいだ筋肉の力がわずかに下がるかもしれないことを示している。短距離走やジャンプのように力と速さを必要とする運動では、この小さな低下が問題になりうる。このため、今では多くのコーチがかわりに動的ウォーミングアップをすすめている。これには軽いジョギング、もも上げ、足のふり上げなどの動きがふくまれ、それらは少しずつ速さと動きの幅を大きくしていく。',
+      'これは静的ストレッチが役に立たないという意味ではない。それは時間をかけて体のやわらかさを高めるのに役立ち、体操やダンスのように大きな動きの幅を必要とするスポーツもある。多くの専門家は、静的ストレッチを競技の直前にするのではなく、運動のあとや別の習慣として行うことをすすめている。彼らはまた、ストレッチの効果はたいてい小さく、選手ごとの個人差が大きいことも指摘している。',
+      'ウォーミングアップの話は、なじみのある習慣でも、注意深く確かめられれば改善できることを示している。かつてだれもが当たり前だと信じていたことは、一部しか正しくないとわかった。生徒や選手にとっての教訓は、考えずに助言に従うのではなく、その背後にある理由を理解し、新しい証拠が手に入るにつれて自分の習慣を調整することである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so that', 'even if', 'unless', 'as if'], answer: 0, why: '「神経のはたらきを準備させ、その結果脳と筋肉がなめらかに協力できる」と目的・結果を表すので so that。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '先行詞は movements（動き）で、うしろに主語が欠けている（gradually increase …）ので、コンマのあとの非制限用法の which。' },
+      { id: 'C', choices: ['behind', 'without', 'against', 'except'], answer: 0, why: 'the reasons behind it「その背後にある理由」。助言の理由を理解するという意味。' },
+    ],
+    tf: [
+      { statement: '温まった筋肉は、一般にきずつきにくい。', answer: true, why: '第2段落 Warm muscles … are generally less likely to be damaged。' },
+      { statement: '長い静的ストレッチは、そのあとしばらく筋肉の力を大きく上げることがわかった。', answer: false, why: '第3段落 may slightly reduce the power of the muscles for a short time afterward。' },
+      { statement: '多くのコーチは、今では動的ウォーミングアップをすすめている。', answer: true, why: '第3段落 many coaches now recommend dynamic warm-ups instead。' },
+      { statement: '筆者は、静的ストレッチはまったく役に立たないと述べている。', answer: false, why: '第4段落 This does not mean that static stretching is useless。' },
+    ],
+    qa: [
+      { q: 'When do many experts suggest doing static stretches?', choices: ['After exercise or as a separate routine.', 'Just before a race.', 'Only on the day of a competition.', 'Instead of all other training.'], answer: 0, why: '第4段落 doing static stretches after exercise or as a separate routine, rather than just before a race。' },
+      { q: 'What is the main lesson of the last paragraph?', choices: ['Understand the reasons for advice and change habits as evidence changes.', 'Always follow the advice of coaches.', 'Stop doing warm-ups before exercise.', 'Common sense is always correct.'], answer: 0, why: '第5段落 understand the reasons behind it and to adjust their routines as new evidence becomes available。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ウォーミングアップで体と神経が準備されるしくみ', '心臓の病気の治し方', '筋肉の大きくし方', '体温の測り方'], answer: 0, why: '第2段落は、運動で血流と筋肉の温度が上がり、神経のはたらきも準備されるというウォーミングアップの目的を説明している。' },
+      { para: 3, choices: ['静的ストレッチにも役割があること', '体操の歴史', 'ダンスの練習のしかた', '選手の選び方'], answer: 0, why: '第4段落は、静的ストレッチは柔軟性を高めるのに役立つので、運動のあとなどに行うとよいと述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
