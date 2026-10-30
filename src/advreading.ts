@@ -17278,6 +17278,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Telling Patients the Truth', 'How to Become a Doctor', 'The History of Cancer Research', 'Why Families Should Make Decisions'], answer: 0, why: '全体として、医師が患者に重い病気の真実を伝えるべきか、どう伝えるべきかを論じている。' },
   },
   {
+    id: 'kyotsu-street-pianos',
+    title: 'Pianos in Public Places',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In recent years, pianos have begun to appear in places where few people would expect to find them, such as train stations, airports, shopping centres, and public squares. Anyone who passes by is free to sit down and play. These instruments are often called street pianos or station pianos, and in many cities they have become a familiar part of daily life. Many of the pianos are old instruments that were given away by families, and some have been painted with bright colours by local artists.",
+      "The idea is simple, but its effects can be surprising. A station is usually a place ( A ) people walk quickly and rarely speak to strangers. When someone starts playing a piano there, however, travellers often slow down, stop to listen, and sometimes even begin talking to one another. For a few minutes, a busy public space can feel more like a small concert hall. Some people say that they missed their train because they did not want to leave before the music ended.",
+      "Street pianos also give people a chance to perform who might never play in front of an audience otherwise. Some players are trained musicians, but many are children, students, or older people who learned the piano long ago and simply enjoy playing again. Videos of these performances are often shared online, ( B ) some players have become well known as a result.",
+      "Not everyone welcomes the pianos, though. Some people complain about noise, especially when the same songs are played again and again or when players continue for a long time. Pianos placed outdoors can also be damaged by rain, heat, and careless users. To deal with these problems, many organisers set hours when the piano may be used, ask players to limit their time, and arrange for regular tuning and repair.",
+      "Supporters argue that the benefits are worth the effort. They say that street pianos remind people that music is not only something ( C ) listen to through earphones, but also something that can be shared with others face to face. In a world where many people spend their time looking at screens, a piano in a station may be a small but valuable way to bring people together. For this reason, more and more cities are planning to place pianos in their public spaces.",
+    ],
+    ja: [
+      '近年、ピアノは、駅や空港、ショッピングセンター、公共の広場など、それがあるとはほとんどの人が思わない場所に現れはじめた。通りかかった人はだれでも自由にすわってひくことができる。こうした楽器はしばしばストリートピアノや駅ピアノとよばれ、多くの都市で日常生活のなじみのある一部となっている。ピアノの多くは家庭からゆずられた古い楽器で、地元の芸術家によって明るい色でぬられたものもある。',
+      '考え方はかんたんだが、その効果はおどろくべきものになりうる。駅はふつう、人々が早足で歩き、知らない人とめったに話さない場所である。しかし、だれかがそこでピアノをひきはじめると、旅行者はしばしば歩みをゆるめ、立ち止まって聞き、ときにはおたがいに話しはじめることさえある。数分のあいだ、いそがしい公共の場所が、小さなコンサートホールのように感じられることがある。音楽が終わる前にはなれたくなくて、電車に乗りおくれたと言う人もいる。',
+      'ストリートピアノは、ほかの方法ではけっして観客の前でひくことがないかもしれない人々に、演奏する機会もあたえる。訓練を受けた音楽家もいるが、多くは子ども、学生、あるいはずっと前にピアノを習い、ふたたびひくことをただ楽しんでいる年配の人たちである。こうした演奏の動画はしばしばインターネットで共有され、その結果、有名になった人もいる。',
+      'しかし、だれもがピアノを歓迎しているわけではない。とくに同じ曲が何度もひかれたり、長い時間ひきつづけられたりすると、うるさいと不満を言う人もいる。屋外に置かれたピアノは、雨や暑さ、不注意な利用者によって傷むこともある。こうした問題に対処するため、多くの主催者は、ピアノを使ってよい時間を決め、演奏者に時間を限るようたのみ、定期的な調律や修理を手配している。',
+      '支持する人々は、その利点は手間をかける価値があると主張する。ストリートピアノは、音楽はイヤホンで聞くものであるだけでなく、顔をあわせてほかの人と分かち合えるものでもあることを人々に思い出させる、と彼らは言う。多くの人が画面を見て時間をすごす世界で、駅のピアノは、人々を結びつける小さいけれど価値のある方法なのかもしれない。このため、公共の場所にピアノを置くことを計画する都市がますます増えている。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は a place（場所）で、うしろが完全な文（people walk quickly …）なので関係副詞 where。' },
+      { id: 'B', choices: ['and', 'but', 'or', 'unless'], answer: 0, why: '「動画が共有される、そして（その結果）有名になった人もいる」と内容をつけ加えるので and。' },
+      { id: 'C', choices: ['to', 'for', 'of', 'by'], answer: 0, why: 'something to listen to「聞くためのもの」。不定詞の形容詞用法で something を説明する。' },
+    ],
+    tf: [
+      { statement: 'ストリートピアノは、通りかかった人ならだれでもひくことができる。', answer: true, why: '第1段落 Anyone who passes by is free to sit down and play。' },
+      { statement: 'ストリートピアノをひくのは、訓練を受けた音楽家だけである。', answer: false, why: '第3段落 many are children, students, or older people。' },
+      { statement: 'ピアノの音がうるさいと不満を言う人もいる。', answer: true, why: '第4段落 Some people complain about noise。' },
+      { statement: '主催者の多くは、問題があるのでピアノをすぐに撤去している。', answer: false, why: '第4段落 主催者は時間を決め、調律や修理を手配している（set hours … arrange for regular tuning and repair）。' },
+    ],
+    qa: [
+      { q: 'What often happens when someone starts playing a piano in a station?', choices: ['Travellers slow down, listen, and sometimes talk to each other.', 'The trains stop running for a while.', 'Station staff ask the player to leave.', 'People buy tickets for a concert.'], answer: 0, why: '第2段落 travellers often slow down, stop to listen, and sometimes even begin talking to one another。' },
+      { q: 'Which is NOT mentioned as a way organisers deal with problems?', choices: ['Charging money to play the piano.', 'Setting hours when the piano may be used.', 'Asking players to limit their time.', 'Arranging regular tuning and repair.'], answer: 0, why: '第4段落にお金をとる話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['人前で演奏する機会をあたえること', 'ピアノの作り方', '駅の歴史', '音楽学校の選び方'], answer: 0, why: '第3段落は、ふだん観客の前でひかない人に演奏の機会をあたえることを述べている。' },
+      { para: 3, choices: ['ストリートピアノの問題とその対策', 'ピアノの値段', '屋外コンサートの宣伝', '有名なピアニストの紹介'], answer: 0, why: '第4段落は、騒音や傷みの問題と、主催者の対策を述べている。' },
+    ],
+    titleQ: { choices: ['Pianos in Public Places', 'How to Tune a Piano', 'The History of Train Stations', 'Why Earphones Are Useful'], answer: 0, why: '全体として、駅や広場に置かれたピアノの効果・問題・価値を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
