@@ -589,3 +589,14 @@ it('デザイン122：キャラ図鑑で、なかまにいるけれど Lv.1 の�
   expect(screen.getAllByLabelText('まだ育てていない')).toHaveLength(1)
   expect(screen.getByLabelText('まだ育てていない').closest('li')!.querySelector('.char-book-name')!.textContent).toBe(speciesOf('fox').name)
 })
+
+it('デザイン123：ガチャの結果に、同じタイプのなかまが何体いるかが出る', async () => {
+  localStorage.clear()
+  const { typeOf } = await import('./chartype')
+  const owned = ['mochi', 'cat', 'fox', 'dragon']
+  const t = typeOf('cat')
+  const n = owned.filter((sp) => typeOf(sp).id === t.id).length
+  render(<Gacha coins={GACHA_PRICE} members={4} ownedSpecies={owned} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(screen.getByLabelText(`${t.name}のなかま ${n}体`).textContent).toBe(`${t.icon} ${t.name}のなかま：${n}体`)
+})

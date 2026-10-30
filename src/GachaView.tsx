@@ -594,6 +594,16 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               <span className="muted">（{skillOf(result.species.id).desc}）</span>
             </p>
           )}
+          {!result.mystery && ownedSpecies && (() => {
+            // デザイン123：同じタイプのなかまが何体になったか
+            const t = typeOf(result.species.id)
+            const n = ownedSpecies.filter((sp) => typeOf(sp).id === t.id).length
+            return n > 0 ? (
+              <p className="gacha-skill gacha-type-count" aria-label={`${t.name}のなかま ${n}体`}>
+                {t.icon} {t.name}のなかま：{n}体
+              </p>
+            ) : null
+          })()}
           {onNameNew && (named ? (
             <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
           ) : naming === null ? (
