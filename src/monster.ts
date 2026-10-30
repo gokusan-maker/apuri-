@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'mantis', name: 'カマキリン', egg: 'くさむらのみどりタマゴ', token: 'カマ', bigToken: 'カマキリン', color: '#86efac', line: '#166534', rate: 0.02, desc: '草むらでじっとかまえるカマキリ。大きなかまをすばやく動かすように、正しい答えをさっとつかまえる。' },
   { id: 'lynx', name: 'ヤマネコン', egg: 'ゆきのもりのみみタマゴ', token: 'ヤマ', bigToken: 'ヤマネコン', color: '#e7d3b0', line: '#5b4a33', rate: 0.02, desc: '雪の森にすむ、耳の先に黒い毛のあるオオヤマネコ。小さな音も聞きのがさない耳で、英語の音もしっかり聞き取る。' },
   { id: 'cheetah', name: 'チーターン', egg: 'ひろいそうげんのはやてタマゴ', token: 'チタ', bigToken: 'チーターン', color: '#fcd34d', line: '#78350f', rate: 0.02, desc: '草原をだれよりも速く走るチーター。一気に走りぬけるように、問題にもすばやく答えて連続正解をのばす。' },
   { id: 'pufferfish', name: 'フグリン', egg: 'ぷくぷくうみのタマゴ', token: 'フグ', bigToken: 'フグリン', color: '#fde68a', line: '#92400e', rate: 0.02, desc: 'おどろくと水をすってぷくっとふくらむフグ。体を大きくして身を守るように、まちがえてもへこまず、ふくらむ元気で次に向かう。' },
