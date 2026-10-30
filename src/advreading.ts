@@ -17668,6 +17668,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Speaking Without Words', 'How to Count to Ten', 'The History of Travel', 'Why Smiling Is Rude'], answer: 0, why: '全体として、身ぶりや体の言葉が文化によってちがうことと、その学び方を述べている。' },
   },
   {
+    id: 'kyotsu-returnable-bottles',
+    title: 'The Return of the Glass Bottle',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Not so long ago, in many countries, milk, juice, and other drinks were sold in glass bottles that customers returned to the shop after use. The bottles were collected, washed, and filled again, sometimes dozens of times. Today, most drinks are sold in plastic bottles or cans that are thrown away or recycled after being used only once. Yet in recent years, the old system of returnable bottles has begun to attract attention again.",
+      "The main reason is the growing concern about waste. Even when plastic bottles are collected for recycling, a large amount of energy is needed to melt them down and turn them into new products, and not all of them are actually recycled. Many end up in rubbish dumps or in the ocean. A glass bottle that is used again and again, by contrast, can replace many single-use containers during its life, ( A ) reduces both waste and the use of new materials.",
+      "Several countries and companies have introduced systems to make returning bottles easier. In some places, customers pay a small deposit when they buy a drink, and the money is given back when they return the empty bottle. This simple rule gives people a clear reason to bring bottles back instead of throwing them away. Machines in supermarkets can accept the bottles automatically and print a receipt ( B ) can be used to receive the deposit.",
+      "However, returnable bottles also have disadvantages. Glass is heavy, so transporting full and empty bottles over long distances uses fuel. Washing the bottles requires water and energy, and the system only works well if enough customers actually return them. For these reasons, experts say that returnable bottles are most effective when they are used within a limited area, such as a single city or region, where the distance between the factory and the shops is short.",
+      "Some people believe that the future of drink containers may combine old and new ideas. Companies are developing lighter and stronger reusable bottles, and some are testing apps that track how many times each bottle has been used. Whatever form it takes, the return of the reusable bottle reminds us ( C ) solutions to modern problems can sometimes be found by looking back at the habits of the past.",
+    ],
+    ja: [
+      'それほど昔ではないころ、多くの国で、牛乳やジュースなどの飲み物はガラスびんで売られ、客は使ったあとそのびんを店に返していた。びんは集められ、洗われ、ふたたび中身をつめられ、ときには何十回も使われた。今日、ほとんどの飲み物はペットボトルや缶で売られ、1回だけ使われたあとに捨てられるかリサイクルされる。しかし近年、返却できるびんという古いしくみがふたたび注目を集めはじめている。',
+      'おもな理由は、ごみについての心配の高まりである。ペットボトルがリサイクルのために集められても、それをとかして新しい製品に変えるには多くのエネルギーが必要であり、そのすべてが実際にリサイクルされるわけでもない。多くはごみ捨て場や海に行きつく。それに対して、何度もくり返し使われるガラスびんは、その一生のあいだに多くの使い捨ての容器の代わりになり、そのことがごみと新しい材料の使用の両方をへらす。',
+      'びんを返しやすくするしくみを取り入れた国や会社もいくつかある。ある場所では、客は飲み物を買うときに少しの預かり金をはらい、空きびんを返すとそのお金がもどってくる。このかんたんなきまりは、びんを捨てずに持ってくるはっきりした理由を人々にあたえる。スーパーマーケットの機械は自動的にびんを受けとり、預かり金を受けとるのに使えるレシートを印刷することができる。',
+      'しかし、返却できるびんには欠点もある。ガラスは重いので、中身の入ったびんや空きびんを長いきょり運ぶと燃料を使う。びんを洗うには水とエネルギーが必要であり、このしくみは十分な数の客が実際にびんを返したときにしかうまくいかない。こうした理由から専門家は、返却できるびんは、工場と店のあいだのきょりが短い一つの都市や地域のような、限られた範囲で使われるときに最も効果的だと言う。',
+      '飲み物の容器の未来は、古い考えと新しい考えを組み合わせたものになるかもしれないと考える人もいる。会社はより軽くじょうぶなくり返し使えるびんを開発しており、それぞれのびんが何回使われたかを記録するアプリをためしている会社もある。どんな形になるにせよ、くり返し使えるびんがもどってきたことは、現代の問題の解決策が、ときには過去の習慣をふり返ることで見つかることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（多くの使い捨て容器の代わりになること）を受け、reduces の主語になるので which。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a receipt（物）を受け、うしろの can be used の主語になるので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '昔は、ガラスびんが何十回も使われることがあった。', answer: true, why: '第1段落 filled again, sometimes dozens of times。' },
+      { statement: '集められたペットボトルは、すべて実際にリサイクルされる。', answer: false, why: '第2段落 not all of them are actually recycled。' },
+      { statement: '預かり金のしくみでは、空きびんを返すとお金がもどってくる。', answer: true, why: '第3段落 the money is given back when they return the empty bottle。' },
+      { statement: '専門家によれば、返却できるびんは長いきょりを運ぶときに最も効果的である。', answer: false, why: '第4段落 most effective when they are used within a limited area … where the distance … is short。' },
+    ],
+    qa: [
+      { q: 'Why does the deposit system encourage people to return bottles?', choices: ['They get their money back when they return the empty bottle.', 'They receive a free drink every time.', 'They must pay a large fine otherwise.', 'The bottles become more beautiful.'], answer: 0, why: '第3段落 the money is given back when they return the empty bottle. This simple rule gives people a clear reason to bring bottles back。' },
+      { q: 'Which is NOT mentioned as a disadvantage of returnable bottles?', choices: ['Glass bottles make drinks taste bad.', 'Glass is heavy to transport.', 'Washing requires water and energy.', 'The system needs enough customers to return them.'], answer: 0, why: '第4段落に味が悪くなる話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['使い捨ての容器が生むごみの問題', 'ガラスの作り方', '海の生き物の種類', 'エネルギーの値段'], answer: 0, why: '第2段落は、ペットボトルのリサイクルの問題と、くり返し使えるびんがごみをへらすことを述べている。' },
+      { para: 2, choices: ['びんを返しやすくするしくみ（預かり金）', 'スーパーの開店時間', 'レシートの紙の種類', '飲み物の新しい味'], answer: 0, why: '第3段落は、預かり金や自動の機械など、びんを返しやすくするしくみを述べている。' },
+    ],
+    titleQ: { choices: ['The Return of the Glass Bottle', 'How to Make Plastic', 'The History of Supermarkets', 'Why Glass Is Dangerous'], answer: 0, why: '全体として、返却できるガラスびんの利点・しくみ・欠点・未来を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
