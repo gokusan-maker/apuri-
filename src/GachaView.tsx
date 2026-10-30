@@ -3,7 +3,7 @@ import { dayKey } from './srs'
 import { takeFirstPull } from './gachafirst'
 import { useState } from 'react'
 import { speak } from './speech'
-import { skillOf } from './partner'
+import { skillOf, specialOf } from './partner'
 import { STICKERS, STICKER_TICKETS } from './stickers'
 import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE, loadGachaFast, saveGachaFast, capsuleColorOf, CAPSULE_COLORS, isReach, loadCapsule, saveCapsule } from './gacha'
 import { MEMBERS_FOR_TICKET } from './party'
@@ -707,6 +707,7 @@ function CharBook({ owned, fresh = '' }: { owned: string[]; fresh?: string }) {
               <strong>{speciesOf(pick).name}</strong>：{speciesOf(pick).desc}
               <span className="zukan-challenge">（今日のチャレンジ：{challengeOf(pick).icon} {challengeOf(pick).label}）</span>
               <span className="zukan-challenge">（とくぎ：{skillOf(pick).name}）</span>
+              <span className="zukan-challenge">（必殺技：{specialOf(pick).name}）</span>
             </>
           ) : (
             <>{speciesOf(pick).egg}から生まれるらしい…</>

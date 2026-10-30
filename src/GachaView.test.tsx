@@ -461,3 +461,13 @@ it('デザイン95：まだ会っていない子をえらんでも、とくぎ�
   expect(screen.getByText(new RegExp(`${first.egg}から生まれるらしい`))).toBeInTheDocument()
   expect(screen.queryByText(/（とくぎ：/)).toBeNull()
 })
+
+it('デザイン97：キャラ図鑑で会えた子をえらぶと、その子の必殺技の名前も出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const { specialOf } = await import('./partner')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText(`（必殺技：${specialOf('fox').name}）`)).toBeInTheDocument()
+})
