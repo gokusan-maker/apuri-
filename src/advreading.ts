@@ -17317,6 +17317,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Pianos in Public Places', 'How to Tune a Piano', 'The History of Train Stations', 'Why Earphones Are Useful'], answer: 0, why: '全体として、駅や広場に置かれたピアノの効果・問題・価値を述べている。' },
   },
   {
+    id: 'kyotsu-walking-health',
+    title: 'The Power of Walking',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people think about exercise, they often imagine running long distances, lifting heavy weights, or joining an expensive sports club. However, one of the simplest and most effective forms of exercise requires no special equipment at all. It is walking, an activity that most people already do every day without thinking about it. For this reason, its value as a form of exercise is often forgotten.",
+      "Doctors and health experts have long pointed out that regular walking can bring many benefits. It strengthens the heart, helps to control body weight, and keeps the muscles and bones of the legs strong. Because walking puts less stress on the knees than running, it is also suitable for older people and for those who are just beginning to exercise. Many experts suggest walking briskly for about thirty minutes on most days of the week.",
+      "Walking is good not only for the body but also for the mind. Many people say that a short walk helps them to feel calmer when they are worried or tired. Walking outside, especially in parks or near trees and water, gives people a chance to rest their eyes from screens and to notice the changing seasons. Some writers and scientists have even said that their best ideas came to them while they were walking, ( A ) moving the body seems to help the mind to think freely.",
+      "Despite these advantages, many people find it difficult to walk enough in daily life. They travel by car or train, work at desks for long hours, and use elevators instead of stairs. To solve this problem, some people have started making small changes to their routines. They get off the bus one stop early, take the stairs at their station, or walk while talking on the phone. Others use a step counter on their smartphones, ( B ) they can check how far they have walked each day.",
+      "Of course, walking alone cannot solve every health problem, and people with certain medical conditions should ask a doctor before starting any new exercise. Still, for most people, walking is an easy, free, and pleasant way to stay healthy. The most important thing is not to walk a very long distance once, but to make walking a habit ( C ) can be continued for many years.",
+    ],
+    ja: [
+      '運動について考えるとき、人々はしばしば、長い距離を走ったり、重いものを持ち上げたり、高いスポーツクラブに入ったりすることを思いうかべる。しかし、最もかんたんで最も効果的な運動の一つは、特別な道具をまったく必要としない。それは歩くことであり、ほとんどの人がすでに毎日、何も考えずにしている活動である。そのため、運動としての価値はしばしば忘れられている。',
+      '医師や健康の専門家は、定期的に歩くことが多くの利点をもたらしうると長く指摘してきた。歩くことは心臓を強くし、体重を管理するのを助け、足の筋肉や骨を強く保つ。歩くことは走ることよりもひざへの負担が少ないので、年配の人や運動を始めたばかりの人にも向いている。多くの専門家は、週のほとんどの日に約30分、早足で歩くことをすすめている。',
+      '歩くことは体だけでなく心にもよい。多くの人は、心配なときやつかれているときに、少し歩くと気持ちが落ち着くと言う。外を歩くこと、とくに公園や木や水の近くを歩くことは、画面から目を休め、季節の移り変わりに気づく機会をあたえてくれる。作家や科学者の中には、最もよい考えは歩いているあいだにうかんだと言う人さえいる。体を動かすことが、心が自由に考えるのを助けるようなのである。',
+      'こうした利点があるにもかかわらず、多くの人は日常生活で十分に歩くのがむずかしいと感じている。車や電車で移動し、長い時間机で働き、階段のかわりにエレベーターを使う。この問題を解決するために、生活の習慣を少し変えはじめた人もいる。バスを1つ手前の停留所で降りたり、駅で階段を使ったり、電話で話しながら歩いたりするのである。スマートフォンの歩数計を使って、毎日どれだけ歩いたかを確かめられるようにしている人もいる。',
+      'もちろん、歩くことだけですべての健康の問題を解決することはできず、ある種の病気をもつ人は、新しい運動を始める前に医師にたずねるべきである。それでも、ほとんどの人にとって、歩くことは健康を保つための、かんたんで、お金がかからず、楽しい方法である。最も大切なのは、一度にとても長い距離を歩くことではなく、何年も続けられる習慣にすることである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['as', 'unless', 'or', 'until'], answer: 0, why: '「歩いているときによい考えがうかんだ。体を動かすことが心を助けるようだから」と理由を表すので as（～なので）。' },
+      { id: 'B', choices: ['so that', 'even if', 'as if', 'in case of'], answer: 0, why: '「歩数計を使う、毎日どれだけ歩いたか確かめられるように」と目的を表すので so that ＋主語＋can。' },
+      { id: 'C', choices: ['that', 'what', 'where', 'whose'], answer: 0, why: '先行詞 a habit を受け、うしろの can be continued の主語が欠けているので主格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '歩くことには特別な道具が必要である。', answer: false, why: '第1段落 requires no special equipment at all。' },
+      { statement: '歩くことは走ることよりもひざへの負担が少ない。', answer: true, why: '第2段落 walking puts less stress on the knees than running。' },
+      { statement: '歩いているときによい考えがうかんだと言う作家や科学者がいる。', answer: true, why: '第3段落 their best ideas came to them while they were walking。' },
+      { statement: '筆者は、一度にできるだけ長い距離を歩くことが最も大切だと述べている。', answer: false, why: '第5段落 The most important thing is not to walk a very long distance once, but to make walking a habit。' },
+    ],
+    qa: [
+      { q: 'Why is walking suitable for older people, according to the passage?', choices: ['It puts less stress on the knees than running.', 'It is always done in a sports club.', 'It needs heavy equipment.', 'It can only be done near water.'], answer: 0, why: '第2段落 Because walking puts less stress on the knees than running, it is also suitable for older people。' },
+      { q: 'Which is NOT mentioned as a small change people make to walk more?', choices: ['Moving to a house near the sea.', 'Getting off the bus one stop early.', 'Taking the stairs at the station.', 'Walking while talking on the phone.'], answer: 0, why: '第4段落に海の近くに引っこす話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['歩くことが心にあたえるよい影響', '公園の作り方', '作家の生活', 'スマートフォンの使い方'], answer: 0, why: '第3段落は、歩くことが気持ちを落ち着かせ、考えを助けるなど、心へのよい影響を述べている。' },
+      { para: 3, choices: ['十分に歩くための生活のくふう', '電車の歴史', 'エレベーターのしくみ', '会社の働き方の決まり'], answer: 0, why: '第4段落は、日常生活で歩く量をふやすための小さな変化を述べている。' },
+    ],
+    titleQ: { choices: ['The Power of Walking', 'How to Build a Sports Club', 'The History of Running', 'Why Elevators Are Necessary'], answer: 0, why: '全体として、歩くことの体と心への利点と、続けるくふうを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
