@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'beluga', name: 'シロイルン', egg: 'こおりのうみのうたタマゴ', token: 'シロ', bigToken: 'シロイルン', color: '#f1f5f9', line: '#475569', rate: 0.02, desc: '冷たい北の海にすむ白いシロイルカ。「海のカナリア」とよばれるほどいろいろな声で鳴くように、英語の音もまねして楽しく覚える。' },
   { id: 'crane', name: 'ツルリン', egg: 'しろいしっちのタマゴ', token: 'ツル', bigToken: 'ツルリン', color: '#f8fafc', line: '#334155', rate: 0.02, desc: '頭のてっぺんが赤い、白くて大きなタンチョウ。つがいで息を合わせておどるように、問題とリズムよく向き合う。' },
   { id: 'flyingfish', name: 'トビウオン', egg: 'なみのうえのつばさタマゴ', token: 'トビ', bigToken: 'トビウオン', color: '#7dd3fc', line: '#0c4a6e', rate: 0.02, desc: '大きなむなびれを広げて海の上を飛ぶトビウオ。波をこえて遠くまで飛ぶように、むずかしいレベルにもひと飛びでちょうせんする。' },
   { id: 'sunfish', name: 'マンボン', egg: 'おおうみのひなたタマゴ', token: 'マン', bigToken: 'マンボン', color: '#cbd5e1', line: '#475569', rate: 0.02, desc: '大きな海をのんびりただようマンボウ。海の表面で日なたぼっこをするように、あせらずゆっくり、自分のペースで単語を覚える。' },
