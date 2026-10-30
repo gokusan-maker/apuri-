@@ -17746,6 +17746,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Everyday Life in Space', 'How to Build a Rocket', 'The History of the Moon', 'Why Spicy Food Is Healthy'], answer: 0, why: '全体として、宇宙ステーションでの食事・すいみん・運動と、その研究の意味を述べている。' },
   },
   {
+    id: 'kyotsu-universal-design',
+    title: 'Design for Everyone',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Have you ever noticed that many doors in shops and stations open automatically, or that some shampoo bottles have small bumps on their sides? These features may seem minor, but they are examples of an idea called universal design. The aim of universal design is to create products, buildings, and services that can be used easily by as many people as possible, regardless of their age, ability, or situation.",
+      "In the past, special equipment was often added for particular groups of people only after a building or product had been completed. For example, a ramp might be built beside the stairs of an old building so that wheelchair users could enter. Universal design takes a different approach. Instead of making separate solutions for a few people, designers try from the beginning to make one design ( A ) works well for everyone.",
+      "A good example is the low-floor bus. Because the floor of the bus is close to the ground and there are no steps at the entrance, people in wheelchairs can board more easily. However, the design also helps older people, parents with baby strollers, and travellers with heavy suitcases. In the same way, the bumps on shampoo bottles were first intended to help people who cannot see well, but they also help anyone who is washing their hair with their eyes closed.",
+      "Universal design is not only about physical things. Information can also be designed to be easier to understand. Signs that use simple pictures instead of only words can help foreign visitors and young children, ( B ) clear announcements with large, easy-to-read text on screens can help people who have difficulty hearing. Websites can also be designed so that their text can be read aloud by computer programs or made larger on the screen.",
+      "Supporters of universal design point out that almost everyone will need help at some point in their lives. We may break a leg, grow older, carry a small child, or travel in a country whose language we cannot read. Designing for the widest possible range of people is therefore not a special favour for a small group but a benefit for society as a whole. As one designer put it, a world that is easy to use for those ( C ) face the most difficulties is likely to be easier for everyone else, too.",
+    ],
+    ja: [
+      '店や駅の多くのドアが自動で開いたり、シャンプーのボトルの横に小さなでこぼこがあったりすることに気づいたことがあるだろうか。こうした特徴は小さなことに思えるかもしれないが、ユニバーサルデザインとよばれる考え方の例である。ユニバーサルデザインの目的は、年齢や能力、状況にかかわらず、できるだけ多くの人がかんたんに使える製品や建物、サービスを作ることである。',
+      'かつては、建物や製品ができあがったあとで、特定の人々のための特別な設備があとから加えられることが多かった。たとえば、車いすを使う人が入れるように、古い建物の階段のわきにスロープが作られることがあった。ユニバーサルデザインは別のやり方をとる。少数の人のために別の解決策を作るのではなく、設計する人は最初から、だれにとってもうまくはたらく一つのデザインを作ろうとするのである。',
+      'よい例は、床の低いバスである。バスの床が地面に近く、入口に段がないので、車いすの人はより乗りやすい。しかしこのデザインは、年配の人、ベビーカーを使う親、重いスーツケースを持つ旅行者の助けにもなる。同じように、シャンプーのボトルのでこぼこは、はじめは目がよく見えない人を助けるためのものだったが、目をとじて髪を洗っているだれにとっても役に立つ。',
+      'ユニバーサルデザインは、物だけにかかわるものではない。情報も、よりわかりやすくなるよう設計することができる。言葉だけでなくかんたんな絵を使った案内表示は、外国からの訪問者や小さな子どもを助けることができ、一方で、画面に大きく読みやすい文字で示されるはっきりしたお知らせは、耳が聞こえにくい人を助けることができる。ウェブサイトも、その文章をコンピューターのプログラムで読み上げたり、画面で大きくしたりできるように設計することができる。',
+      'ユニバーサルデザインを支持する人々は、ほとんどだれもが人生のどこかで助けを必要とするようになると指摘する。私たちは足の骨を折ったり、年をとったり、小さな子どもをだいたり、言葉の読めない国を旅したりするかもしれない。したがって、できるだけ広い範囲の人々のために設計することは、少数の人への特別なはからいではなく、社会全体にとっての利益なのである。あるデザイナーが言ったように、最も多くの困難に直面する人々にとって使いやすい世界は、ほかのすべての人にとっても使いやすい可能性が高いのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 one design（物）を受け、うしろの works の主語になるので主格の関係代名詞 that。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'until'], answer: 0, why: '「絵の表示は外国人や子どもを助け、一方で、文字のお知らせは耳の聞こえにくい人を助ける」と2つを対比するので while。' },
+      { id: 'C', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞 those（人々）を受け、うしろの face の主語になるので主格の関係代名詞 who。' },
+    ],
+    tf: [
+      { statement: 'ユニバーサルデザインの目的は、できるだけ多くの人が使いやすい物を作ることである。', answer: true, why: '第1段落 can be used easily by as many people as possible。' },
+      { statement: 'ユニバーサルデザインでは、完成したあとで特別な設備を加えることを大切にする。', answer: false, why: '第2段落 designers try from the beginning to make one design that works well for everyone。' },
+      { statement: '床の低いバスは、重いスーツケースを持つ旅行者の助けにもなる。', answer: true, why: '第3段落 the design also helps … travellers with heavy suitcases。' },
+      { statement: '筆者によれば、ユニバーサルデザインは建物や製品だけにかかわる。', answer: false, why: '第4段落 Universal design is not only about physical things. Information can also be designed。' },
+    ],
+    qa: [
+      { q: 'Who were the bumps on shampoo bottles first intended to help?', choices: ['People who cannot see well.', 'Children who cannot read.', 'People who work in shops.', 'Travellers from other countries.'], answer: 0, why: '第3段落 the bumps on shampoo bottles were first intended to help people who cannot see well。' },
+      { q: 'Why do supporters say universal design benefits society as a whole?', choices: ['Almost everyone will need help at some point in their lives.', 'It makes products much cheaper.', 'It is required only by a few people.', 'It makes buildings taller.'], answer: 0, why: '第5段落 almost everyone will need help at some point in their lives。' },
+    ],
+    gist: [
+      { para: 2, choices: ['一つのデザインが多くの人を助ける例', 'バスの運転のしかた', 'シャンプーの作り方', 'スーツケースの選び方'], answer: 0, why: '第3段落は、床の低いバスやシャンプーのでこぼこが、多くの人の役に立つ例をあげている。' },
+      { para: 3, choices: ['わかりやすい情報のデザイン', '外国語の勉強のしかた', 'テレビ番組の作り方', 'コンピューターの歴史'], answer: 0, why: '第4段落は、絵の表示や読みやすい文字など、情報をわかりやすくするデザインを述べている。' },
+    ],
+    titleQ: { choices: ['Design for Everyone', 'How to Build a Bus', 'The History of Shampoo', 'Why Stairs Are Necessary'], answer: 0, why: '全体として、だれにとっても使いやすいユニバーサルデザインの考え方と例、その意義を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
