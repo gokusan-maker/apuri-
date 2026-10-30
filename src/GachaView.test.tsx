@@ -545,3 +545,24 @@ it('デザイン110：ガチャの結果で、図鑑のコンプリートまで�
   fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
   expect(screen.getByText('🏁 コンプリートまであと2体！')).toBeInTheDocument()
 })
+
+it('デザイン112：新しい子に会って、会えた数が10の倍数になったら「🎉 ○体目！」が出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const others = SPECIES.map((s) => s.id).filter((id) => id !== 'mochi')
+  const owned = ['mochi', ...others.slice(0, 8)] // 9体に会っている
+  const drawn = others[8]
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf(drawn) }))
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={onDraw} ownedSpecies={owned} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText('🎉 10体目！')).toBeInTheDocument()
+})
+
+it('デザイン112：もう会っている子が出たときは「○体目」は出ない', async () => {
+  const { SPECIES } = await import('./monster')
+  const others = SPECIES.map((s) => s.id).filter((id) => id !== 'mochi')
+  const owned = ['mochi', ...others.slice(0, 9)]
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf(others[0]) }))
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={onDraw} ownedSpecies={owned} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.queryByText(/体目！/)).toBeNull()
+})

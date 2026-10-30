@@ -619,6 +619,12 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             const left = SPECIES.filter((sp) => sp.id !== 'mochi' && sp.id !== result.species.id && !ownedSpecies.includes(sp.id)).length
             return left > 0 && left <= 3 ? <p className="gacha-near">🏁 コンプリートまであと{left}体！</p> : null
           })()}
+          {ownedSpecies && (() => {
+            // デザイン112：新しい子に会って、会えた数が10の倍数になったとき
+            if (result.species.id === 'mochi' || ownedSpecies.includes(result.species.id)) return null
+            const met = new Set(['mochi', ...ownedSpecies, result.species.id]).size
+            return met % 10 === 0 ? <p className="gacha-near">🎉 {met}体目！</p> : null
+          })()}
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
           {result.mystery && <p className="gacha-lucky">❓ ミステリーカプセル！ おまけ 🪙{MYSTERY_COINS}</p>}
           {result.sticker && <p className="gacha-sticker">🏷 おまけシール {result.sticker}</p>}
