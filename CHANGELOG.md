@@ -3219,3 +3219,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑫（TOEFL・IELTS の書き言葉④：In my opinion・agree with・On the one hand・the reason why・It can be argued that）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「なぜ空想するのか（心のさまよい）」（心理・行動・結果の so／because／目的格の that の空所）
 - 2026-10-30: キャラクター追加：スカンクン（スカンク・しましまのもりのタマゴ・まもりのとくぎ）
+- 2026-10-30: 文法：入試の正誤問題⑲（比較の難問：more taller・as ～ as・any other・than yours・fewer・Nothing is so ～ as・倍数表現）10問

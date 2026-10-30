@@ -218,3 +218,10 @@ it('誤文訂正⑫：意見を述べる表現の単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('with')
 })
+
+it('正誤問題⑲：比較の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-compare2')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[7].choices[u.questions[7].answer]).toBe('(A) less')
+})

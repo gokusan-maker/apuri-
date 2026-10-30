@@ -410,6 +410,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'If only I (A) had (B) studied harder, I (C) could have (D) pass the exam.', choices: ['(A) had', '(B) studied harder, I', '(C) could have', '(D) pass the exam'], answer: 3, why: 'could have のあとは過去分詞：could have passed。' },
     ],
   },
+  {
+    id: 'exam-error-compare2',
+    title: '入試の正誤問題⑲（比較の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'more や most の重ね使い、as ～ as と than のまぜ使い、any other ＋単数名詞、than yours のように比べる物をそろえること、fewer と less、Nothing is so ～ as、倍数表現に注目する。',
+    ],
+    examples: [
+      { en: 'Tom is taller than any other boy in his class.', ja: 'トムはクラスのほかのどの男の子よりも背が高い。（自分をのぞく any other）' },
+      { en: 'Nothing is so important as health.', ja: '健康ほど大切なものはない。' },
+    ],
+    questions: [
+      { sentence: 'She is (A) more (B) taller (C) than (D) her sister.', choices: ['(A) more', '(B) taller', '(C) than', '(D) her sister'], answer: 0, why: 'taller はすでに比較級なので more はいらない：She is taller than her sister。' },
+      { sentence: 'This book is (A) as (B) interesting (C) than (D) that one.', choices: ['(A) as', '(B) interesting', '(C) than', '(D) that one'], answer: 2, why: '原級の比較は as ～ as：as interesting as that one。' },
+      { sentence: 'Tom is taller (A) than (B) any boy (C) in (D) his class.', choices: ['(A) than', '(B) any boy', '(C) in', '(D) his class'], answer: 1, why: 'Tom も同じクラスの男の子なので、自分をのぞく any other boy。' },
+      { sentence: 'My bag is (A) much (B) heavier (C) than (D) you.', choices: ['(A) much', '(B) heavier', '(C) than', '(D) you'], answer: 3, why: '比べるのは「私のかばん」と「あなたのかばん」：than yours。' },
+      { sentence: 'He is (A) the most fastest (B) runner (C) on (D) the team.', choices: ['(A) the most fastest', '(B) runner', '(C) on', '(D) the team'], answer: 0, why: 'fastest はすでに最上級なので most はいらない：the fastest runner。' },
+      { sentence: 'This is (A) by far (B) the better (C) movie (D) of the three.', choices: ['(A) by far', '(B) the better', '(C) movie', '(D) of the three'], answer: 1, why: '3つの中で比べるので最上級：by far the best movie。' },
+      { sentence: 'The (A) more you read, (B) the more (C) you will (D) learned.', choices: ['(A) more you read,', '(B) the more', '(C) you will', '(D) learned'], answer: 3, why: '助動詞 will のあとは原形：you will learn。' },
+      { sentence: 'I have (A) less (B) friends (C) than my brother (D) does.', choices: ['(A) less', '(B) friends', '(C) than my brother', '(D) does'], answer: 0, why: 'friends は数えられる名詞の複数形なので fewer：fewer friends。' },
+      { sentence: 'Nothing is (A) so (B) important (C) than (D) health.', choices: ['(A) so', '(B) important', '(C) than', '(D) health'], answer: 2, why: 'Nothing is so ～ as …「…ほど～なものはない」：so important as health（または more important than）。' },
+      { sentence: 'This road is (A) three times (B) as (C) longer (D) as that one.', choices: ['(A) three times', '(B) as', '(C) longer', '(D) as that one'], answer: 2, why: '倍数＋ as ＋原級＋ as：three times as long as。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
