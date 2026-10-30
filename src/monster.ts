@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'molecricket', name: 'ケララ', egg: 'つちのなかのタマゴ', token: 'ケラ', bigToken: 'ケララ', color: '#a8a29e', line: '#44403c', rate: 0.02, desc: '土の中にトンネルをほって暮らすケラ。小さな前足でどんどんほり進むように、単語の意味を深くまでほり下げる。' },
   { id: 'bison', name: 'バイソン', egg: 'だいそうげんのタマゴ', token: 'バイ', bigToken: 'バイソンキング', color: '#92400e', line: '#451a03', rate: 0.02, desc: '広い草原をむれで進むバイソン。ふぶきにも頭を向けてまっすぐ進むように、むずかしい問題にも正面から立ち向かう。' },
   { id: 'platypus', name: 'カモノハッシー', egg: 'ふしぎないずみのタマゴ', token: 'カモ', bigToken: 'カモノハッシー', color: '#a78bfa', line: '#4c1d95', rate: 0.02, desc: 'カモのようなくちばしをもつふしぎな動物カモノハシ。くちばしで水の中の小さな動きを感じとるように、文のちょっとしたちがいにも気づく。' },
   { id: 'koi', name: 'コイノボリン', egg: 'にしきいけのタマゴ', token: 'コイ', bigToken: 'コイノボリン', color: '#fb923c', line: '#7c2d12', rate: 0.02, desc: '池をゆうゆうと泳ぐニシキゴイ。滝をのぼって竜になるという言い伝えのように、むずかしい単語の滝もぐんぐんのぼる。' },
