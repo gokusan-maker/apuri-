@@ -18019,6 +18019,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Who Decides What Time It Is?', 'How to Build a Railway', 'The History of the Pacific Ocean', 'Why Clocks Are Round'], answer: 0, why: '全体として、時間帯が生まれた理由としくみ、日付変更線を述べ、時刻も人間の決定の結果だとまとめている。' },
   },
   {
+    id: 'kyotsu-street-art',
+    title: 'Art on the Walls',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Walk through certain neighbourhoods in many cities today and you may see huge, colourful paintings covering the sides of buildings. Some show portraits of local heroes, others show animals, landscapes, or messages of hope. This kind of public painting, often called street art, has become a popular attraction, and some visitors even travel to particular cities just to see it. Guided walking tours of murals are now offered in a number of places.",
+      "Street art has a complicated history. Its roots are often traced to graffiti, writing or drawing on walls without permission. For many years, graffiti was seen mainly as a crime that damaged property and made neighbourhoods look neglected. City governments spent large amounts of money removing it, and people who painted on walls without permission could be fined or arrested. Even today, painting on someone else's property without asking is illegal in most places.",
+      "Over time, however, some people began to see artistic value in certain works. Painters developed their own styles, and some became famous, with their works shown in galleries and sold for high prices. At the same time, city officials and building owners started to invite artists to paint large murals legally. Such projects can turn a dull grey wall into a landmark, ( A ) may encourage tourists to visit areas they would otherwise ignore. In this way, a form of expression that was once removed is now sometimes paid for by the city itself.",
+      "Supporters argue that street art brings many benefits. It makes public spaces more attractive, gives young artists a place to show their talents, and can help residents feel proud of their neighbourhood. Some cities have created \"legal walls\" where anyone may paint freely, ( B ) reduces illegal graffiti elsewhere. In some communities, residents are invited to help design murals, so the works reflect the history and identity of the people who live there.",
+      "Not everyone is convinced, though. Some residents feel that bright murals do not suit the character of their area, and others worry that popular street art can raise rents and push out the very people who made the neighbourhood interesting. These debates show that street art raises important questions about who public spaces belong to and who has the right to decide ( C ) they should look like.",
+    ],
+    ja: [
+      '今日、多くの都市のある地域を歩くと、建物の側面をおおう、巨大で色あざやかな絵を見ることがあるかもしれない。地元の英雄の肖像をえがいたものもあれば、動物や風景、希望のメッセージをえがいたものもある。ストリートアートとよばれることが多いこの種の公共の絵は人気のある見どころとなり、それを見るためだけに特定の都市を旅する人さえいる。今ではいくつかの場所で、壁画をめぐるガイドつきの散歩ツアーも行われている。',
+      'ストリートアートには複雑な歴史がある。そのルーツは、許可なくかべに文字や絵をかくグラフィティにあるとされることが多い。長年のあいだ、グラフィティはおもに、財産を傷つけ地域を荒れたように見せる犯罪だと見られていた。市の役所は落書きを消すのに多くのお金を使い、許可なくかべに絵をかいた人はばっ金を科されたり逮捕されたりすることがあった。今日でも、ほとんどの場所で、ほかの人の持ち物に許可なく絵をかくことは違法である。',
+      'しかし時がたつにつれ、ある作品に芸術的な価値を見いだす人も出てきた。画家たちは独自の作風を発展させ、作品が美術館に展示されたり高値で売られたりして有名になる人もいた。同時に、市の職員や建物の持ち主が、芸術家を招いて合法的に大きな壁画をかいてもらうようになった。こうした取り組みは、つまらない灰色のかべを名所に変えることができ、それは観光客がふだんなら素通りする地域をおとずれるきっかけになりうる。このようにして、かつては消されていた表現の形が、今では市そのものがお金を出すものになることもある。',
+      '支持する人々は、ストリートアートには多くの利点があると主張する。公共の場所をより魅力的にし、若い芸術家に才能を示す場所をあたえ、住民が自分の地域をほこりに思う助けにもなる。だれでも自由に絵をかいてよい「合法のかべ」を作った都市もあり、それはほかの場所の違法な落書きをへらしている。地域によっては住民が壁画のデザインを手伝うよう招かれるので、作品はそこに住む人々の歴史や個性を映し出す。',
+      'しかし、だれもが納得しているわけではない。明るい壁画は自分の地域の雰囲気に合わないと感じる住民もいれば、人気のあるストリートアートが家賃を上げ、その地域をおもしろくしてきた人々そのものを追い出すことになるのではないかと心配する人もいる。こうした議論は、ストリートアートが、公共の場所はだれのものか、そしてそれがどのように見えるべきかを決める権利はだれにあるのかという、大切な問いを投げかけていることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（かべを名所に変えること）を受け、may encourage の主語になるので which。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'whose'], answer: 0, why: 'コンマのあとで前の内容（合法のかべを作ったこと）を受け、reduces の主語になるので which。' },
+      { id: 'C', choices: ['what', 'how', 'which', 'that'], answer: 0, why: 'decide のあとに「それがどのように見えるべきか」という疑問の名詞節を置く。like の目的語が欠けているので what（what … look like）。' },
+    ],
+    tf: [
+      { statement: 'グラフィティは長いあいだ、おもに犯罪だと見られていた。', answer: true, why: '第2段落 graffiti was seen mainly as a crime。' },
+      { statement: '今日では、どこでも許可なく他人のかべに絵をかいてよい。', answer: false, why: '第2段落 painting on someone else\'s property without asking is illegal in most places。' },
+      { statement: '住民が壁画のデザインを手伝う地域もある。', answer: true, why: '第4段落 residents are invited to help design murals。' },
+      { statement: '筆者によれば、ストリートアートに反対する人はいない。', answer: false, why: '第5段落 Not everyone is convinced, though。' },
+    ],
+    qa: [
+      { q: 'What can legal murals do for an area?', choices: ['Turn a dull wall into a landmark and attract tourists.', 'Make rents lower everywhere.', 'Stop all crime in the city.', 'Replace all galleries.'], answer: 0, why: '第3段落 Such projects can turn a dull grey wall into a landmark, which may encourage tourists to visit。' },
+      { q: 'What is one worry some residents have about popular street art?', choices: ['It can raise rents and push out local people.', 'It uses too much water.', 'It makes the streets too dark.', 'It is too small to see.'], answer: 0, why: '第5段落 popular street art can raise rents and push out the very people who made the neighbourhood interesting。' },
+    ],
+    gist: [
+      { para: 1, choices: ['犯罪と見られてきたグラフィティの歴史', '美術館の作り方', '警察の仕事', 'ペンキの値段'], answer: 0, why: '第2段落は、グラフィティがおもに犯罪と見られ、消されたり罰せられたりしてきた歴史を述べている。' },
+      { para: 3, choices: ['ストリートアートの利点', '絵の具の作り方', '観光バスの路線', '学校の美術の授業'], answer: 0, why: '第4段落は、公共の場所を魅力的にする、若い芸術家の場所になるなどの利点を述べている。' },
+    ],
+    titleQ: { choices: ['Art on the Walls', 'How to Clean Buildings', 'The History of Museums', 'Why Rents Are Rising'], answer: 0, why: '全体として、グラフィティからストリートアートへの変化、利点、反対意見を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
