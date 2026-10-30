@@ -17434,6 +17434,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Growing Together', 'How to Build a Railway', 'The Price of Land in Cities', 'Why Processed Food Is Cheap'], answer: 0, why: '全体として、コミュニティガーデンのしくみ、食と社会の利点、課題を述べている。' },
   },
   {
+    id: 'kyotsu-weather-forecast',
+    title: 'How Weather Forecasts Are Made',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Every morning, millions of people check the weather forecast before leaving home. They want to know whether they should take an umbrella or wear a warm coat. Most people do not think much about how these forecasts are made, but behind each one lies a huge amount of data, powerful computers, and the work of many scientists around the world.",
+      "The first step in making a forecast is to collect information about the present state of the atmosphere. Weather stations on land measure temperature, air pressure, humidity, and wind. Balloons carry instruments high into the sky, ships and planes send reports from places far from land, and satellites take pictures of clouds over the whole planet. All of this information is shared between countries, ( A ) the weather in one place is affected by conditions thousands of kilometres away.",
+      "Next, the data are fed into computer programs called weather models. These programs use the laws of physics to calculate how the air will move and change over the coming hours and days. Because the atmosphere is extremely complex, the calculations require some of the most powerful computers in existence. The models divide the atmosphere into a huge number of small boxes and work out what is likely to happen in each one.",
+      "Even with the best computers, however, forecasts can never be perfect. Small errors in the starting data can grow larger as the calculation continues, so a forecast for tomorrow is usually much more reliable than one for next week. To deal with this uncertainty, forecasters often run the same model many times with slightly different starting conditions. If most of the results agree, they can be more confident; if the results differ widely, they know ( B ) the forecast is less certain. This is why forecasts often give a percentage chance of rain.",
+      "Over the past few decades, forecasts have improved greatly. A forecast for several days ahead today is often as accurate as a forecast for one day ahead was in the past. Better forecasts help farmers decide when to plant and harvest, allow airlines to plan safer routes, and give people time to prepare for dangerous storms. Weather forecasting is a good example of ( C ) science and international cooperation can make everyday life safer.",
+    ],
+    ja: [
+      '毎朝、何百万もの人が家を出る前に天気予報を確かめる。かさを持っていくべきか、あたたかいコートを着るべきかを知りたいのである。ほとんどの人は、こうした予報がどのように作られるかをあまり考えないが、一つ一つの予報のうしろには、ばく大な量のデータと高性能なコンピューター、そして世界中の多くの科学者の仕事がある。',
+      '予報を作る最初の段階は、今の大気の状態についての情報を集めることである。陸上の気象観測所は、気温、気圧、湿度、風をはかる。気球は観測機器を空高く運び、船や飛行機は陸から遠い場所から報告を送り、人工衛星は地球全体の雲の写真をとる。これらの情報はすべて国どうしで共有される。ある場所の天気は、何千キロもはなれた場所の状態に影響されるからである。',
+      '次に、データは気象モデルとよばれるコンピューターのプログラムに入れられる。これらのプログラムは物理の法則を使って、これからの数時間や数日のあいだに空気がどのように動き変化するかを計算する。大気はきわめて複雑なので、その計算には、存在する中で最も高性能なコンピューターのいくつかが必要である。モデルは大気をばく大な数の小さな箱に分け、それぞれの箱で何が起こりそうかを計算する。',
+      'しかし、最高のコンピューターを使っても、予報が完全になることはけっしてない。最初のデータの小さな誤差は計算が進むにつれて大きくなることがあるので、明日の予報はふつう、来週の予報よりもずっと信頼できる。この不確かさに対処するために、予報する人はしばしば、最初の条件を少しずつ変えて同じモデルを何度も動かす。結果のほとんどが一致すれば、より自信をもつことができ、結果が大きくちがえば、予報があまり確かでないとわかる。予報がしばしば雨の確率をパーセントで示すのはこのためである。',
+      'ここ数十年のあいだに、予報は大きく進歩した。今日の数日先の予報は、昔の1日先の予報と同じくらい正確であることが多い。よりよい予報は、農家が種まきや収穫の時期を決めるのを助け、航空会社がより安全な航路を計画できるようにし、人々に危険なあらしにそなえる時間をあたえる。天気予報は、科学と国際的な協力が日常生活をより安全にしうることのよい例なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「情報は国どうしで共有される。なぜなら天気は遠くの状態に影響されるから」と理由を表すので because。' },
+      { id: 'B', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'know のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文（the forecast is less certain）。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'who'], answer: 0, why: 'a good example of how ～「どのように～かのよい例」。うしろが完全な文（science … can make everyday life safer）なので how。' },
+    ],
+    tf: [
+      { statement: '天気予報のための情報は、国どうしで共有される。', answer: true, why: '第2段落 All of this information is shared between countries。' },
+      { statement: '気象モデルの計算は、ふつうのパソコンでかんたんにできる。', answer: false, why: '第3段落 the calculations require some of the most powerful computers in existence。' },
+      { statement: '明日の予報はふつう、来週の予報よりも信頼できる。', answer: true, why: '第4段落 a forecast for tomorrow is usually much more reliable than one for next week。' },
+      { statement: '筆者によれば、天気予報の正確さはここ数十年で下がった。', answer: false, why: '第5段落 Over the past few decades, forecasts have improved greatly。' },
+    ],
+    qa: [
+      { q: 'Why do forecasters run the same model many times?', choices: ['To deal with uncertainty by comparing results from slightly different starting conditions.', 'Because the computers often break down.', 'To make the forecast take longer.', 'Because each country uses a different model.'], answer: 0, why: '第4段落 To deal with this uncertainty, forecasters often run the same model many times with slightly different starting conditions。' },
+      { q: 'Which is NOT mentioned as a source of weather information?', choices: ['Reports from people’s smartphones.', 'Weather stations on land.', 'Balloons carrying instruments.', 'Satellites taking pictures of clouds.'], answer: 0, why: '第2段落にスマートフォンの話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['気象モデルによる計算のしくみ', 'コンピューターの値段', '物理学者の生活', '箱の作り方'], answer: 0, why: '第3段落は、データを気象モデルに入れ、物理の法則で大気の変化を計算することを述べている。' },
+      { para: 3, choices: ['予報が完全にならない理由と確率で示すわけ', '雨の多い国の紹介', 'かさの選び方', 'パーセントの計算のしかた'], answer: 0, why: '第4段落は、誤差が大きくなるため予報は完全でなく、何度も計算して確率で示すことを述べている。' },
+    ],
+    titleQ: { choices: ['How Weather Forecasts Are Made', 'The History of Umbrellas', 'Why Satellites Are Expensive', 'How to Become a Farmer'], answer: 0, why: '全体として、データ集め・計算・不確かさ・進歩という天気予報の作られ方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',

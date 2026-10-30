@@ -255,7 +255,7 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'She (A) arrived (B) to (C) Tokyo (D) late last night.', choices: ['(A) arrived', '(B) to', '(C) Tokyo', '(D) late last night'], answer: 1, why: 'arrive のあとは到着する場所に合わせて in（都市・国）や at（駅など）：arrived in Tokyo。to は使わない。' },
-      { sentence: 'I (A) have lived (B) in this town (C) since (D) five years ago and more.', choices: ['(A) have lived', '(B) in this town', '(C) since', '(D) five years ago and more'], answer: 2, why: '期間（five years）は for で表す。since は「～以来」で起点に使う。' },
+      { sentence: 'I (A) have lived (B) in this town (C) since (D) five years.', choices: ['(A) have lived', '(B) in this town', '(C) since', '(D) five years'], answer: 2, why: '期間（five years）は for で表す。since は「～以来」で起点に使う。' },
       { sentence: 'He (A) is (B) a honest man who (C) works (D) at a bank.', choices: ['(A) is', '(B) a honest man who', '(C) works', '(D) at a bank'], answer: 1, why: 'honest は h を発音せず母音で始まるので an honest man。' },
       { sentence: 'We (A) usually go (B) to school (C) by the bus (D) every day.', choices: ['(A) usually go', '(B) to school', '(C) by the bus', '(D) every day'], answer: 2, why: '交通手段の by のあとは冠詞をつけない：by bus。' },
       { sentence: '(A) The water (B) in this river (C) is very clean, so we can swim (D) at it.', choices: ['(A) The water', '(B) in this river', '(C) is very clean, so we can swim', '(D) at it'], answer: 3, why: '川の「中で」泳ぐので in：swim in it。' },
