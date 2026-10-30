@@ -359,3 +359,10 @@ it('本番の長さの長文：旧帝大評論の「二言語使用の利点」�
   expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
   expect(tierOf(p)).toBe('kyutei')
 })
+
+it('本番の長さの長文：IELTS の「森の学校」の長文は700〜950語で NOT GIVEN の設問がある', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'ielts-forest-school')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(700)
+  expect(passageStats(p).words).toBeLessThanOrEqual(950)
+  expect(p.tfng!.filter((x) => x.answer === 2).length).toBeGreaterThanOrEqual(2)
+})
