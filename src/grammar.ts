@@ -8039,9 +8039,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We waited for ages, but the bus never came.', ja: '長いあいだ待ったけれど、バスは来なかった。' },
     ],
     questions: [
-      { sentence: 'You can use my pen for ___. Give it back later.', choices: ['now', 'nowadays', 'newly'], answer: 0, why: 'for now「とりあえず・今のところは」。nowadays「近ごろは」は for のあとに置かない。' },
-      { sentence: 'Please sit here and rest for a ___.', choices: ['while', 'whiles', 'whilst'], answer: 0, why: 'for a while「しばらくのあいだ」。a のあとは単数の名詞 while。' },
-      { sentence: 'I haven’t talked to my cousin for ___.', choices: ['ages', 'age', 'aged'], answer: 0, why: 'for ages「長いあいだ」。ages と複数形にする。' },
+      { sentence: 'You can use my pen for ___. Give it back later.', choices: ['now', 'nowadays', 'newly', 'new'], answer: 0, why: 'for now「とりあえず・今のところは」。nowadays「近ごろは」は for のあとに置かない。' },
+      { sentence: 'Please sit here and rest for a ___.', choices: ['while', 'whiles', 'whilst', 'whiling'], answer: 0, why: 'for a while「しばらくのあいだ」。a のあとは単数の名詞 while。' },
+      { sentence: 'I haven’t talked to my cousin for ___.', choices: ['ages', 'age', 'aged', 'aging'], answer: 0, why: 'for ages「長いあいだ」。ages と複数形にする。' },
     ],
   },
   {
@@ -8107,9 +8107,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please send the documents to Canada by air.', ja: 'その書類はカナダへ航空便で送ってください。' },
     ],
     questions: [
-      { sentence: 'These cards were all written by ___.', choices: ['hand', 'hands', 'handy'], answer: 0, why: 'by hand「手で」。by のあとは -s のない単数の名詞 hand。' },
-      { sentence: 'The letter will reach London in a week if you send it by ___.', choices: ['air', 'airs', 'airy'], answer: 0, why: 'by air「航空便で」。by のあとは a も -s もつけない名詞 air。' },
-      { sentence: 'You can order a pizza by ___ or online.', choices: ['phone', 'phones', 'phoned'], answer: 0, why: 'by phone「電話で」。by のあとは -s のない単数の名詞 phone。' },
+      { sentence: 'These cards were all written by ___.', choices: ['hand', 'hands', 'handy', 'handed'], answer: 0, why: 'by hand「手で」。by のあとは -s のない単数の名詞 hand。' },
+      { sentence: 'The letter will reach London in a week if you send it by ___.', choices: ['air', 'airs', 'airy', 'aired'], answer: 0, why: 'by air「航空便で」。by のあとは a も -s もつけない名詞 air。' },
+      { sentence: 'You can order a pizza by ___ or online.', choices: ['phone', 'phones', 'phoned', 'phoning'], answer: 0, why: 'by phone「電話で」。by のあとは -s のない単数の名詞 phone。' },
     ],
   },
   {
@@ -8175,9 +8175,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The children sat in a circle and sang a song.', ja: '子どもたちは輪になってすわり、歌を歌った。' },
     ],
     questions: [
-      { sentence: 'The teacher told us to work in ___.', choices: ['pairs', 'pair', 'paired'], answer: 0, why: 'in pairs「ふたり一組で」。pairs と複数形にする。' },
-      { sentence: 'The dancers stood in a ___ around the fire.', choices: ['circle', 'circles', 'circled'], answer: 0, why: 'in a circle「輪になって」。a のあとは単数の名詞 circle。' },
-      { sentence: 'The visitors walked around the museum in small ___.', choices: ['groups', 'group', 'grouped'], answer: 0, why: 'in groups「グループで」。small のあとは複数形 groups（a がないので単数 group は入らない）。' },
+      { sentence: 'The teacher told us to work in ___.', choices: ['pairs', 'pair', 'paired', 'pairing'], answer: 0, why: 'in pairs「ふたり一組で」。pairs と複数形にする。' },
+      { sentence: 'The dancers stood in a ___ around the fire.', choices: ['circle', 'circles', 'circled', 'circling'], answer: 0, why: 'in a circle「輪になって」。a のあとは単数の名詞 circle。' },
+      { sentence: 'The visitors walked around the museum in small ___.', choices: ['groups', 'group', 'grouped', 'grouping'], answer: 0, why: 'in groups「グループで」。small のあとは複数形 groups（a がないので単数 group は入らない）。' },
     ],
   },
   {
@@ -8192,9 +8192,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The librarian asked us to talk in a low voice.', ja: '図書館の人は、小さな声で話すように私たちにたのんだ。' },
     ],
     questions: [
-      { sentence: 'Write your answers in ___ so you can erase them.', choices: ['pencil', 'penciled', 'penciling'], answer: 0, why: 'write in pencil「鉛筆で書く」。in のあとは名詞 pencil。' },
-      { sentence: 'This shop is small, so you have to pay in ___.', choices: ['cash', 'cashed', 'cashing'], answer: 0, why: 'pay in cash「現金で払う」。in のあとは名詞 cash。' },
-      { sentence: 'The baby is sleeping, so please speak in a low ___.', choices: ['voice', 'voiced', 'voicing'], answer: 0, why: 'in a low voice「小さな声で」。a low のあとは名詞 voice。' },
+      { sentence: 'Write your answers in ___ so you can erase them.', choices: ['pencil', 'penciled', 'penciling', 'pencily'], answer: 0, why: 'write in pencil「鉛筆で書く」。in のあとは名詞 pencil。' },
+      { sentence: 'This shop is small, so you have to pay in ___.', choices: ['cash', 'cashed', 'cashing', 'cashes'], answer: 0, why: 'pay in cash「現金で払う」。in のあとは名詞 cash。' },
+      { sentence: 'The baby is sleeping, so please speak in a low ___.', choices: ['voice', 'voiced', 'voicing', 'voices'], answer: 0, why: 'in a low voice「小さな声で」。a low のあとは名詞 voice。' },
     ],
   },
   {
@@ -8277,9 +8277,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Who is the man in black over there?', ja: 'あそこにいる黒い服の男性はだれですか。' },
     ],
     questions: [
-      { sentence: 'On the first day, all the students came in school ___.', choices: ['uniform', 'uniformed', 'uniformly'], answer: 0, why: 'in uniform「制服を着て」。in school のあとは名詞 uniform。' },
-      { sentence: 'The singer ___ white is very popular.', choices: ['in', 'on', 'with'], answer: 0, why: 'the singer in white「白い服の歌手」。「～を着て」は in。' },
-      { sentence: 'The king walked around the town in ___.', choices: ['disguise', 'disguised', 'disguising'], answer: 0, why: 'in disguise「変装して」。in のあとは名詞 disguise。' },
+      { sentence: 'On the first day, all the students came in school ___.', choices: ['uniform', 'uniformed', 'uniformly', 'uniforming'], answer: 0, why: 'in uniform「制服を着て」。in school のあとは名詞 uniform。' },
+      { sentence: 'The singer ___ white is very popular.', choices: ['in', 'on', 'with', 'at'], answer: 0, why: 'the singer in white「白い服の歌手」。「～を着て」は in。' },
+      { sentence: 'The king walked around the town in ___.', choices: ['disguise', 'disguised', 'disguising', 'disguises'], answer: 0, why: 'in disguise「変装して」。in のあとは名詞 disguise。' },
     ],
   },
   {
@@ -8294,9 +8294,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'To our relief, the lost dog came home.', ja: 'ほっとしたことに、まいごの犬が家に帰ってきた。' },
     ],
     questions: [
-      { sentence: 'To my ___, my little brother cooked dinner for us.', choices: ['surprise', 'surprised', 'surprising'], answer: 0, why: 'to my surprise「おどろいたことに」。my のあとは名詞 surprise。' },
-      { sentence: 'To her ___, the test was easier than she thought.', choices: ['relief', 'relieved', 'relieve'], answer: 0, why: 'to her relief「ほっとしたことに」。her のあとは名詞 relief。' },
-      { sentence: '___ my joy, my grandparents came to watch my game.', choices: ['To', 'For', 'With'], answer: 0, why: 'to my joy「うれしいことに」。感情を表すこの形は to を使う。' },
+      { sentence: 'To my ___, my little brother cooked dinner for us.', choices: ['surprise', 'surprised', 'surprising', 'surprises'], answer: 0, why: 'to my surprise「おどろいたことに」。my のあとは名詞 surprise。' },
+      { sentence: 'To her ___, the test was easier than she thought.', choices: ['relief', 'relieved', 'relieve', 'relieving'], answer: 0, why: 'to her relief「ほっとしたことに」。her のあとは名詞 relief。' },
+      { sentence: '___ my joy, my grandparents came to watch my game.', choices: ['To', 'For', 'With', 'At'], answer: 0, why: 'to my joy「うれしいことに」。感情を表すこの形は to を使う。' },
     ],
   },
   {
@@ -9076,9 +9076,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He was willing to help us with the work.', ja: '彼は進んで仕事を手伝ってくれた。' },
     ],
     questions: [
-      { sentence: 'Is everyone ready ___ start the game?', choices: ['to', 'for', 'at'], answer: 0, why: 'あとに動詞の原形（start）が続くので be ready to。' },
-      { sentence: 'She was willing ___ teach me how to cook.', choices: ['to', 'for', 'with'], answer: 0, why: 'be willing to ＋ 原形「進んで～する」。' },
-      { sentence: 'I studied hard, so I am ready ___ tomorrow\'s exam.', choices: ['for', 'to', 'at'], answer: 0, why: 'あとが名詞（tomorrow\'s exam）なので be ready for。' },
+      { sentence: 'Is everyone ready ___ start the game?', choices: ['to', 'for', 'at', 'of'], answer: 0, why: 'あとに動詞の原形（start）が続くので be ready to。' },
+      { sentence: 'She was willing ___ teach me how to cook.', choices: ['to', 'for', 'with', 'by'], answer: 0, why: 'be willing to ＋ 原形「進んで～する」。' },
+      { sentence: 'I studied hard, so I am ready ___ tomorrow\'s exam.', choices: ['for', 'to', 'at', 'of'], answer: 0, why: 'あとが名詞（tomorrow\'s exam）なので be ready for。' },
     ],
   },
   {
@@ -9280,9 +9280,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "We won't have to wait. The train is coming.", ja: '待たなくてよさそうだ。電車が来ている。' },
     ],
     questions: [
-      { sentence: "It's going to rain, so you will ___ to take an umbrella.", choices: ['have', 'must', 'has'], answer: 0, why: 'will のあとは原形。「～しなければならないだろう」は will have to。will must とは言わない。' },
-      { sentence: "Tomorrow is Sunday, so I won't ___ to get up early.", choices: ['have', 'had', 'having'], answer: 0, why: "won't のあとは原形 have。won't have to「～しなくてよいだろう」。" },
-      { sentence: 'We ___ have to wait long. The bus will come soon.', choices: ["won't", "don't will", 'not will'], answer: 0, why: "未来の否定は won't ＋ 原形。won't have to「～しなくてよいだろう」。" },
+      { sentence: "It's going to rain, so you will ___ to take an umbrella.", choices: ['have', 'must', 'has', 'had'], answer: 0, why: 'will のあとは原形。「～しなければならないだろう」は will have to。will must とは言わない。' },
+      { sentence: "Tomorrow is Sunday, so I won't ___ to get up early.", choices: ['have', 'had', 'having', 'has'], answer: 0, why: "won't のあとは原形 have。won't have to「～しなくてよいだろう」。" },
+      { sentence: 'We ___ have to wait long. The bus will come soon.', choices: ["won't", "don't will", 'not will', "won't not"], answer: 0, why: "未来の否定は won't ＋ 原形。won't have to「～しなくてよいだろう」。" },
     ],
   },
   {
@@ -9416,9 +9416,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I don't have as much free time as last year.", ja: '去年ほど自由な時間がない。' },
     ],
     questions: [
-      { sentence: "I don't have as ___ money as my brother.", choices: ['much', 'many', 'more'], answer: 0, why: 'money は数えられない名詞なので as much 〜 as。as のあいだは比較級にしない。' },
-      { sentence: 'Yuki read as ___ books as Ken last month.', choices: ['many', 'much', 'more'], answer: 0, why: 'books は数えられる名詞の複数形なので as many 〜 as。' },
-      { sentence: 'There are not as many students in this class ___ in that class.', choices: ['as', 'than', 'so'], answer: 0, why: 'as many 〜 as … の形。than は比較級（more）のあとで使う。' },
+      { sentence: "I don't have as ___ money as my brother.", choices: ['much', 'many', 'more', 'most'], answer: 0, why: 'money は数えられない名詞なので as much 〜 as。as のあいだは比較級にしない。' },
+      { sentence: 'Yuki read as ___ books as Ken last month.', choices: ['many', 'much', 'more', 'most'], answer: 0, why: 'books は数えられる名詞の複数形なので as many 〜 as。' },
+      { sentence: 'There are not as many students in this class ___ in that class.', choices: ['as', 'than', 'so', 'that'], answer: 0, why: 'as many 〜 as … の形。than は比較級（more）のあとで使う。' },
     ],
   },
   {
@@ -9484,9 +9484,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How many times have you been to Kyoto? — Twice.', ja: '京都に何回行ったことがある？— 2回だよ。' },
     ],
     questions: [
-      { sentence: 'How ___ have you known Ms. Ito? — Since I was ten.', choices: ['long', 'many', 'often'], answer: 0, why: '答えが since ～（期間）なので How long。How many なら times などの名詞が必要。' },
-      { sentence: 'How many ___ has Ken visited the museum? — Three times.', choices: ['times', 'long', 'days'], answer: 0, why: '回数をたずねるのは How many times。答えも three times。' },
-      { sentence: 'How long ___ your brother been sick? — For two days.', choices: ['has', 'have', 'is'], answer: 0, why: '主語 your brother は3人称単数なので has ＋ been（現在完了）。' },
+      { sentence: 'How ___ have you known Ms. Ito? — Since I was ten.', choices: ['long', 'many', 'often', 'much'], answer: 0, why: '答えが since ～（期間）なので How long。How many なら times などの名詞が必要。' },
+      { sentence: 'How many ___ has Ken visited the museum? — Three times.', choices: ['times', 'long', 'days', 'hours'], answer: 0, why: '回数をたずねるのは How many times。答えも three times。' },
+      { sentence: 'How long ___ your brother been sick? — For two days.', choices: ['has', 'have', 'is', 'does'], answer: 0, why: '主語 your brother は3人称単数なので has ＋ been（現在完了）。' },
     ],
   },
   {
