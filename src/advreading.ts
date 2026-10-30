@@ -17590,6 +17590,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Restaurants on Wheels', 'How to Drive a Truck', 'The History of Curry', 'Why Restaurants Are Expensive'], answer: 0, why: '全体として、フードトラックの利点と課題、成功の意味を述べている。' },
   },
   {
+    id: 'kyotsu-radio-exercises',
+    title: 'Exercise for Everyone',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Early on summer mornings in Japan, groups of children and older people can often be seen gathering in parks and schoolyards. When a familiar piano melody begins to play from a radio or speaker, everyone starts moving together, stretching their arms, bending their knees, and turning their bodies. This short set of exercises, known as radio exercises, has been part of Japanese life for nearly a hundred years.",
+      "Radio exercises are simple by design. Each set lasts only about three minutes and consists of movements that most people can do without special training or equipment. Because the instructions are given by a voice on the radio, people can join in anywhere ( A ) they can hear the broadcast, whether at home, at school, or in the workplace. In many companies, workers do the exercises together before starting their jobs in the morning. Some people say that this short time of moving together helps them to feel part of a team.",
+      "For many Japanese people, radio exercises are connected with childhood memories of summer holidays. In some neighbourhoods, children receive a card and get a stamp each morning they attend. Collecting stamps encourages children to wake up early and keep a regular routine during the long holiday, and at the end of the summer, those who come every day may receive a small prize.",
+      "Health experts point out that exercises like these have real benefits. Gentle stretching in the morning can wake up the body, improve blood flow, and help to prevent stiffness in the shoulders and back. For older people in particular, moving regularly is important for keeping their muscles and joints flexible, ( B ) can reduce the risk of falls. Doing the exercises with others also gives people a reason to leave the house and talk with their neighbours.",
+      "In recent years, radio exercises have also attracted attention outside Japan. Videos of the exercises are shared online, and some schools and communities abroad have tried them as an easy way to encourage activity. Although radio exercises may look old-fashioned to some young people, their long history suggests that a simple activity ( C ) anyone can join may be one of the best ways to keep a whole community healthy. Sometimes the most lasting ideas are also the simplest ones.",
+    ],
+    ja: [
+      '日本の夏の早朝には、子どもや年配の人たちが公園や校庭に集まっているのがよく見られる。なじみのあるピアノのメロディーがラジオやスピーカーから流れはじめると、みんながいっせいに体を動かしはじめ、うでをのばし、ひざを曲げ、体をひねる。ラジオ体操として知られるこの短い運動は、100年近くのあいだ日本の生活の一部となってきた。',
+      'ラジオ体操は、もともとかんたんに作られている。1回はわずか約3分で、ほとんどの人が特別な訓練や道具なしでできる動きでできている。指示はラジオの声で出されるので、人々は家でも学校でも職場でも、放送が聞こえるところならどこでも参加できる。多くの会社では、働く人たちが朝、仕事を始める前にいっしょに体操をする。いっしょに体を動かすこの短い時間が、チームの一員だと感じる助けになると言う人もいる。',
+      '多くの日本人にとって、ラジオ体操は夏休みの子どものころの思い出と結びついている。地域によっては、子どもたちはカードを受けとり、参加した朝ごとにスタンプをもらう。スタンプを集めることは、子どもたちが長い休みのあいだも早起きし、規則正しい生活を続けるはげみになり、夏の終わりには、毎日来た子どもが小さなごほうびをもらえることもある。',
+      '健康の専門家は、このような運動には本当の利点があると指摘している。朝のおだやかなストレッチは、体を目ざめさせ、血のめぐりをよくし、肩や背中のこりを防ぐのに役立つ。とくに年配の人にとって、定期的に体を動かすことは筋肉や関節をやわらかく保つために大切であり、それは転ぶ危険をへらしうる。ほかの人といっしょに体操をすることは、人々が家を出て近所の人と話すきっかけにもなる。',
+      '近年、ラジオ体操は日本の外でも注目を集めている。体操の動画はインターネットで共有され、海外の学校や地域の中には、体を動かすことをうながすかんたんな方法としてためしたところもある。ラジオ体操は若い人には古くさく見えるかもしれないが、その長い歴史は、だれでも参加できるかんたんな活動が、地域全体を健康に保つ最もよい方法の一つかもしれないことを示している。ときには、最も長く続く考えは、最もかんたんな考えでもあるのだ。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: 'anywhere (where) ～「～するところならどこでも」。うしろが完全な文（they can hear the broadcast）なので where。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: 'コンマのあとで前の内容（体を動かして筋肉や関節をやわらかく保つこと）を受け、can reduce の主語になるので which。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a simple activity を受け、うしろの join の目的語が欠けているので目的格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: 'ラジオ体操の1回は約3分である。', answer: true, why: '第2段落 Each set lasts only about three minutes。' },
+      { statement: 'ラジオ体操には特別な道具が必要である。', answer: false, why: '第2段落 movements that most people can do without special training or equipment。' },
+      { statement: '地域によっては、参加した子どもがカードにスタンプをもらう。', answer: true, why: '第3段落 children receive a card and get a stamp each morning they attend。' },
+      { statement: '筆者によれば、ラジオ体操は日本の外ではまったく知られていない。', answer: false, why: '第5段落 radio exercises have also attracted attention outside Japan。' },
+    ],
+    qa: [
+      { q: 'Why do stamps encourage children during the summer holiday?', choices: ['They help children wake up early and keep a regular routine.', 'They can be exchanged for money.', 'They are needed to enter school.', 'They show who is the fastest runner.'], answer: 0, why: '第3段落 Collecting stamps encourages children to wake up early and keep a regular routine。' },
+      { q: 'Which is NOT mentioned as a benefit of morning stretching?', choices: ['It makes people taller.', 'It wakes up the body.', 'It improves blood flow.', 'It helps to prevent stiffness.'], answer: 0, why: '第4段落に背がのびる話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['夏休みの子どもの思い出とスタンプ', 'カードの印刷のしかた', '学校の宿題', 'ごほうびの値段'], answer: 0, why: '第3段落は、夏休みのラジオ体操とスタンプカードが子どもの習慣をささえることを述べている。' },
+      { para: 3, choices: ['体と人のつながりにとっての利点', '病院の作り方', '肩の病気の名前', '転んだときの手当て'], answer: 0, why: '第4段落は、ストレッチの健康への利点と、近所の人と話すきっかけになることを述べている。' },
+    ],
+    titleQ: { choices: ['Exercise for Everyone', 'How to Make a Radio', 'The History of Piano Music', 'Why Children Should Sleep Late'], answer: 0, why: '全体として、ラジオ体操のしくみ、思い出、健康への利点、海外での注目を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
