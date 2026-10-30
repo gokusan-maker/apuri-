@@ -921,6 +921,10 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       ) : lost && picked === null ? (
         <>
           <p className="boss-result">まけてしまった…</p>
+          {/* デザイン91：負けても、このボス戦で正解した数を見せる */}
+          <p className="boss-lose-combo" aria-label={`正解した数 ${corrects}`}>
+            ⭕ {corrects}問正解
+          </p>
           {bestCombo >= 2 && ( // デザイン89：負けても、このボス戦の最大コンボを見せる
             <p className="boss-lose-combo" aria-label={`最大コンボ ${bestCombo}`}>
               🔥 最大 {bestCombo} コンボ

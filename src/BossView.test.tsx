@@ -707,3 +707,15 @@ it('デザイン90：ボスに勝つと、結果画面にそのボス戦で正�
   }
   expect(screen.getByLabelText(`正解した数 ${n}`).textContent).toBe(`⭕ ${n}問正解`)
 })
+
+it('デザイン91：ボスに負けた結果画面にも、そのボス戦で正解した数が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={999} traits={[]} />)
+  answer(true)
+  fireEvent.click(screen.getByText('次へ'))
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  expect(screen.getByLabelText('正解した数 1').textContent).toBe('⭕ 1問正解')
+})
