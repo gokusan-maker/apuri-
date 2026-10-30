@@ -17629,6 +17629,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Exercise for Everyone', 'How to Make a Radio', 'The History of Piano Music', 'Why Children Should Sleep Late'], answer: 0, why: '全体として、ラジオ体操のしくみ、思い出、健康への利点、海外での注目を述べている。' },
   },
   {
+    id: 'kyotsu-gestures',
+    title: 'Speaking Without Words',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we talk with other people, we communicate not only with words but also with our hands, faces, and bodies. We nod to show agreement, wave to say hello, and point to show the way. These gestures are so natural that we rarely think about them. However, people who travel abroad sometimes discover that a gesture which seems completely ordinary at home can have a very different meaning in another country.",
+      "Take, for example, the simple act of moving the head. In many countries, nodding up and down means \"yes\" and shaking the head from side to side means \"no.\" In a few places, however, these movements are understood in almost the opposite way, which can cause confusion for visitors. Similarly, the gesture used to call someone over differs from culture to culture. In some countries people wave their fingers toward themselves with the palm facing up, ( A ) in others the palm faces down.",
+      "Hand signs can also cause misunderstandings. A raised thumb is a friendly sign of approval in many parts of the world, but in some regions it has traditionally been considered rude. A circle made with the thumb and first finger may mean \"OK\" to one person, \"money\" to another, and \"zero\" to someone else. Even the number of fingers people use when counting, and the order in which they raise them, can vary between countries.",
+      "Differences in body language go beyond the hands. In some cultures, looking directly into another person's eyes is a sign of honesty and confidence, while in others, too much eye contact with an older person or a teacher may seem disrespectful. The distance people keep between themselves during a conversation also varies. Standing close may feel friendly to some people, but others may feel uncomfortable ( B ) someone comes too near.",
+      "Because of these differences, experts on communication advise travellers to observe how local people behave and to avoid gestures they are not sure about. At the same time, a smile and a polite attitude are understood in most places, and many people are forgiving when visitors make innocent mistakes. Learning about gestures in other cultures is not only useful for avoiding misunderstandings; it also reminds us ( C ) communication depends on much more than the words we choose.",
+    ],
+    ja: [
+      'ほかの人と話すとき、私たちは言葉だけでなく、手や顔や体でも伝え合っている。同意を示すためにうなずき、あいさつのために手をふり、道を示すために指さす。こうした身ぶりはあまりに自然なので、私たちはそれについてほとんど考えない。しかし外国を旅行する人は、自分の国ではまったくふつうに思える身ぶりが、別の国ではまったくちがう意味をもつことがあると気づくことがある。',
+      'たとえば、頭を動かすというかんたんな動作を考えてみよう。多くの国では、首を上下にふってうなずくと「はい」、左右にふると「いいえ」を意味する。しかしいくつかの場所では、これらの動きがほとんど反対に理解され、訪れた人を混乱させることがある。同じように、人を呼びよせるときの身ぶりも文化によってちがう。手のひらを上に向けて指を自分のほうへ動かす国もあれば、一方で手のひらを下に向ける国もある。',
+      '手の合図も誤解の原因になりうる。親指を立てるのは世界の多くの地域で賛成を示す親しみのある合図だが、地域によっては伝統的に失礼だと考えられてきた。親指と人さし指で作る輪は、ある人には「オーケー」、別の人には「お金」、また別の人には「ゼロ」を意味するかもしれない。数をかぞえるときに使う指の数や、指を立てる順番でさえ、国によってちがうことがある。',
+      '体の言葉のちがいは手だけにとどまらない。ある文化では、相手の目をまっすぐ見ることは正直さと自信のしるしだが、別の文化では、年上の人や先生と目を合わせすぎると失礼に見えるかもしれない。会話のあいだに人と人がとるきょりもちがう。近くに立つことを親しみやすいと感じる人もいるが、だれかが近づきすぎると落ち着かなく感じる人もいる。',
+      'こうしたちがいがあるので、コミュニケーションの専門家は、旅行する人に、地元の人のふるまいをよく見て、自信のない身ぶりはさけるよう助言している。同時に、笑顔とていねいな態度はほとんどの場所で理解され、訪れた人が悪気のないまちがいをしても、多くの人は大目に見てくれる。ほかの文化の身ぶりについて学ぶことは、誤解をさけるのに役立つだけでなく、コミュニケーションが私たちの選ぶ言葉よりもずっと多くのものに左右されることを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'since'], answer: 0, why: '「手のひらを上に向ける国もあれば、一方で下に向ける国もある」と2つを対比するので while（一方で）。' },
+      { id: 'B', choices: ['when', 'what', 'which', 'whose'], answer: 0, why: '「だれかが近づきすぎるとき」と時を表す節をつなぐので接続詞 when。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '首を上下にふる動きが、ほとんど反対の意味に理解される場所もある。', answer: true, why: '第2段落 In a few places, however, these movements are understood in almost the opposite way。' },
+      { statement: '親指を立てる合図は、世界中どこでも賛成の意味である。', answer: false, why: '第3段落 in some regions it has traditionally been considered rude。' },
+      { statement: '会話のときに人がとるきょりは、文化によってちがう。', answer: true, why: '第4段落 The distance people keep between themselves during a conversation also varies。' },
+      { statement: '筆者によれば、訪れた人のまちがいを大目に見る人はいない。', answer: false, why: '第5段落 many people are forgiving when visitors make innocent mistakes。' },
+    ],
+    qa: [
+      { q: 'What can a circle made with the thumb and first finger mean?', choices: ['“OK,” “money,” or “zero,” depending on the person.', 'Only “hello” in every country.', 'A sign that someone is angry.', 'A way to call a taxi.'], answer: 0, why: '第3段落 may mean "OK" to one person, "money" to another, and "zero" to someone else。' },
+      { q: 'What do communication experts advise travellers to do?', choices: ['Observe local people and avoid gestures they are not sure about.', 'Use as many gestures as possible.', 'Never smile at strangers.', 'Always stand very close to people.'], answer: 0, why: '第5段落 advise travellers to observe how local people behave and to avoid gestures they are not sure about。' },
+    ],
+    gist: [
+      { para: 2, choices: ['手の合図による誤解', 'お金の数え方', '指の運動のしかた', '写真のとり方'], answer: 0, why: '第3段落は、親指を立てる合図や指の輪など、手の合図の意味が国によってちがうことを述べている。' },
+      { para: 3, choices: ['目線や人とのきょりのちがい', '目の病気の治し方', '学校の先生の仕事', '家の広さのちがい'], answer: 0, why: '第4段落は、目を合わせることや会話のきょりについての文化のちがいを述べている。' },
+    ],
+    titleQ: { choices: ['Speaking Without Words', 'How to Count to Ten', 'The History of Travel', 'Why Smiling Is Rude'], answer: 0, why: '全体として、身ぶりや体の言葉が文化によってちがうことと、その学び方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
