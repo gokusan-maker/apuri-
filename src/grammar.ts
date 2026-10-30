@@ -1783,9 +1783,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Written in easy English, this book is good for beginners.', ja: 'やさしい英語で書かれているので、この本は初心者によい。' },
     ],
     questions: [
-      { sentence: '___ to music, she cleaned her room.', choices: ['Listening', 'Listened', 'Listens'], answer: 0, why: '「音楽を聞きながら」。聞くのは主語の she なので能動の -ing 形。' },
-      { sentence: '___ from the hill, the town looks beautiful.', choices: ['Seen', 'Seeing', 'See'], answer: 0, why: '町は丘から「見られる」側なので過去分詞 Seen。' },
-      { sentence: 'Feeling tired, he ___ to bed early.', choices: ['went', 'going', 'to go'], answer: 0, why: '分詞構文のあとには「主語＋動詞」の文が続く。he went。' },
+      { sentence: '___ to music, she cleaned her room.', choices: ['Listening', 'Listened', 'Listens', 'Listen'], answer: 0, why: '「音楽を聞きながら」。聞くのは主語の she なので能動の -ing 形。' },
+      { sentence: '___ from the hill, the town looks beautiful.', choices: ['Seen', 'Seeing', 'See', 'Saw'], answer: 0, why: '町は丘から「見られる」側なので過去分詞 Seen。' },
+      { sentence: 'Feeling tired, he ___ to bed early.', choices: ['went', 'going', 'to go', 'gone'], answer: 0, why: '分詞構文のあとには「主語＋動詞」の文が続く。he went。' },
     ],
   },
   {
@@ -1851,9 +1851,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Whoever comes first will get a prize.', ja: '最初に来た人はだれでも賞品がもらえる。' },
     ],
     questions: [
-      { sentence: 'Take ___ you need from the box.', choices: ['whatever', 'whoever', 'however'], answer: 0, why: '「必要なものは何でも」。物のことなので whatever。' },
-      { sentence: '___ wants to join the club is welcome.', choices: ['Whoever', 'Whatever', 'Whenever'], answer: 0, why: '「参加したい人はだれでも」。人のことなので whoever。' },
-      { sentence: '___ happens, I will not give up.', choices: ['Whatever', 'Whoever', 'Wherever'], answer: 0, why: '「たとえ何が起きても」は Whatever happens。' },
+      { sentence: 'Take ___ you need from the box.', choices: ['whatever', 'whoever', 'however', 'whenever'], answer: 0, why: '「必要なものは何でも」。物のことなので whatever。' },
+      { sentence: '___ wants to join the club is welcome.', choices: ['Whoever', 'Whatever', 'Whenever', 'However'], answer: 0, why: '「参加したい人はだれでも」。人のことなので whoever。' },
+      { sentence: '___ happens, I will not give up.', choices: ['Whatever', 'Whoever', 'Wherever', 'Whenever'], answer: 0, why: '「たとえ何が起きても」は Whatever happens。' },
     ],
   },
   {
@@ -1868,9 +1868,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Don't speak with your mouth full.", ja: '口に物をいっぱい入れたまま話してはいけない。' },
     ],
     questions: [
-      { sentence: 'He fell asleep with the TV ___.', choices: ['on', 'in', 'at'], answer: 0, why: 'with the TV on「テレビをつけたままで」。on は「（電気などが）ついている」状態。' },
-      { sentence: 'She stood there with her arms ___.', choices: ['folded', 'folding', 'fold'], answer: 0, why: '腕は「組まれる」側なので過去分詞 folded「腕を組んで」。' },
-      { sentence: 'He waited in the car with the engine ___.', choices: ['running', 'run', 'to run'], answer: 0, why: 'エンジンが「動いている」ので -ing 形 running「エンジンをかけたまま」。' },
+      { sentence: 'He fell asleep with the TV ___.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: 'with the TV on「テレビをつけたままで」。on は「（電気などが）ついている」状態。' },
+      { sentence: 'She stood there with her arms ___.', choices: ['folded', 'folding', 'fold', 'folds'], answer: 0, why: '腕は「組まれる」側なので過去分詞 folded「腕を組んで」。' },
+      { sentence: 'He waited in the car with the engine ___.', choices: ['running', 'run', 'to run', 'ran'], answer: 0, why: 'エンジンが「動いている」ので -ing 形 running「エンジンをかけたまま」。' },
     ],
   },
   {
@@ -1885,9 +1885,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I should have brought an umbrella.', ja: 'かさを持ってくるべきだった。' },
     ],
     questions: [
-      { sentence: 'She looks very happy. She ___ passed the test.', choices: ['must have', 'should have', "can't have"], answer: 0, why: '「合格したにちがいない」という推量は must have ＋ 過去分詞。' },
-      { sentence: "I'm so tired. I ___ gone to bed earlier.", choices: ['should have', 'must have', 'may have'], answer: 0, why: '「もっと早く寝るべきだった」という後悔は should have ＋ 過去分詞。' },
-      { sentence: 'He was in Osaka yesterday, so he ___ seen you in Tokyo.', choices: ["can't have", 'must have', 'should have'], answer: 0, why: '大阪にいたので「東京で会ったはずがない」。can\'t have ＋ 過去分詞。' },
+      { sentence: 'She looks very happy. She ___ passed the test.', choices: ['must have', 'should have', "can't have", 'will be'], answer: 0, why: '「合格したにちがいない」という推量は must have ＋ 過去分詞。' },
+      { sentence: "I'm so tired. I ___ gone to bed earlier.", choices: ['should have', 'must have', 'may have', 'would be'], answer: 0, why: '「もっと早く寝るべきだった」という後悔は should have ＋ 過去分詞。' },
+      { sentence: 'He was in Osaka yesterday, so he ___ seen you in Tokyo.', choices: ["can't have", 'must have', 'should have', 'is'], answer: 0, why: '大阪にいたので「東京で会ったはずがない」。can\'t have ＋ 過去分詞。' },
     ],
   },
   {
@@ -1902,9 +1902,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'By next April, she will have studied English for five years.', ja: '来年の4月で、彼女は5年間英語を勉強したことになる。' },
     ],
     questions: [
-      { sentence: 'By the time you arrive, we ___ dinner.', choices: ['will have finished', 'have finished', 'finished'], answer: 0, why: '「あなたが着くころ（未来）には、夕食を終えているだろう」は will have ＋ 過去分詞。' },
-      { sentence: 'I will have ___ this book by tomorrow.', choices: ['read', 'reading', 'to read'], answer: 0, why: 'will have のあとは過去分詞。read の過去分詞は read（発音は [red]）。' },
-      { sentence: 'Next month, he will have worked here ___ three years.', choices: ['for', 'since', 'by'], answer: 0, why: '「3年間」という期間は for ＋ 期間。since は始まった時点を表す。' },
+      { sentence: 'By the time you arrive, we ___ dinner.', choices: ['will have finished', 'have finished', 'finished', 'will finished'], answer: 0, why: '「あなたが着くころ（未来）には、夕食を終えているだろう」は will have ＋ 過去分詞。' },
+      { sentence: 'I will have ___ this book by tomorrow.', choices: ['read', 'reading', 'to read', 'reads'], answer: 0, why: 'will have のあとは過去分詞。read の過去分詞は read（発音は [red]）。' },
+      { sentence: 'Next month, he will have worked here ___ three years.', choices: ['for', 'since', 'by', 'during'], answer: 0, why: '「3年間」という期間は for ＋ 期間。since は始まった時点を表す。' },
     ],
   },
   {
@@ -1919,9 +1919,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He passed the test, which made his mother happy.', ja: '彼は試験に合格し、そのことが母親を喜ばせた。' },
     ],
     questions: [
-      { sentence: 'My sister, ___ works at a hospital, is very kind.', choices: ['who', 'which', 'that'], answer: 0, why: 'コンマのあとの非制限用法では that は使えない。人（my sister）なので who。' },
-      { sentence: 'I visited Kyoto, ___ has many old temples.', choices: ['which', 'who', 'that'], answer: 0, why: '物・場所（Kyoto）なので which。コンマのあとに that は使えない。' },
-      { sentence: 'She smiled at me, ___ made me happy.', choices: ['which', 'who', 'what'], answer: 0, why: ', which は前の文全体（彼女がほほえんだこと）を指せる。' },
+      { sentence: 'My sister, ___ works at a hospital, is very kind.', choices: ['who', 'which', 'that', 'whom'], answer: 0, why: 'コンマのあとの非制限用法では that は使えない。人（my sister）なので who。' },
+      { sentence: 'I visited Kyoto, ___ has many old temples.', choices: ['which', 'who', 'that', 'where'], answer: 0, why: '物・場所（Kyoto）なので which。コンマのあとに that は使えない。' },
+      { sentence: 'She smiled at me, ___ made me happy.', choices: ['which', 'who', 'what', 'that'], answer: 0, why: ', which は前の文全体（彼女がほほえんだこと）を指せる。' },
     ],
   },
   {
@@ -1936,9 +1936,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Speak louder so that everyone can hear you.', ja: 'みんなに聞こえるように、もっと大きな声で話して。' },
     ],
     questions: [
-      { sentence: 'She studied hard ___ she could pass the exam.', choices: ['so that', 'such that', 'even if'], answer: 0, why: '「合格できるように」と目的を表すので so that。' },
-      { sentence: 'I wrote it down so that I ___ forget it.', choices: ["wouldn't", "not", "doesn't"], answer: 0, why: '過去の文の目的なので would の否定 wouldn\'t「忘れないように」。' },
-      { sentence: 'Turn on the light so that we ___ see the map.', choices: ['can', 'could have', 'are'], answer: 0, why: '今これからの目的なので can「地図が見えるように」。' },
+      { sentence: 'She studied hard ___ she could pass the exam.', choices: ['so that', 'such that', 'even if', 'in order'], answer: 0, why: '「合格できるように」と目的を表すので so that。' },
+      { sentence: 'I wrote it down so that I ___ forget it.', choices: ["wouldn't", "not", "doesn't", 'not to'], answer: 0, why: '過去の文の目的なので would の否定 wouldn\'t「忘れないように」。' },
+      { sentence: 'Turn on the light so that we ___ see the map.', choices: ['can', 'could have', 'are', 'were'], answer: 0, why: '今これからの目的なので can「地図が見えるように」。' },
     ],
   },
   {
@@ -1953,9 +1953,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The internet makes it easy to learn new things.', ja: 'インターネットのおかげで、新しいことを学ぶのがかんたんになる。' },
     ],
     questions: [
-      { sentence: 'I found ___ hard to answer the question.', choices: ['it', 'that', 'this'], answer: 0, why: 'find it ＋ 形容詞 ＋ to 〜。it が to answer the question を指す。' },
-      { sentence: 'The map made it easy ___ the station.', choices: ['to find', 'finding', 'found'], answer: 0, why: 'make it ＋ 形容詞 ＋ to 〜。it の中身は to find the station。' },
-      { sentence: 'Do you think it important ___ breakfast every day?', choices: ['to eat', 'eat', 'ate'], answer: 0, why: 'think it ＋ 形容詞 ＋ to 〜「〜するのは…だと思う」。' },
+      { sentence: 'I found ___ hard to answer the question.', choices: ['it', 'that', 'this', 'what'], answer: 0, why: 'find it ＋ 形容詞 ＋ to 〜。it が to answer the question を指す。' },
+      { sentence: 'The map made it easy ___ the station.', choices: ['to find', 'finding', 'found', 'find'], answer: 0, why: 'make it ＋ 形容詞 ＋ to 〜。it の中身は to find the station。' },
+      { sentence: 'Do you think it important ___ breakfast every day?', choices: ['to eat', 'eat', 'ate', 'eats'], answer: 0, why: 'think it ＋ 形容詞 ＋ to 〜「〜するのは…だと思う」。' },
     ],
   },
   {
@@ -1970,9 +1970,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I thought he would come.', ja: '彼は来るだろうと思った。' },
     ],
     questions: [
-      { sentence: 'He said that he ___ hungry.', choices: ['was', 'is', 'be'], answer: 0, why: 'said（過去）に合わせて was。' },
-      { sentence: 'I knew that she ___ help me.', choices: ['would', 'will', 'can'], answer: 0, why: 'knew（過去）に合わせて will を would にする。' },
-      { sentence: 'Tom told me that he ___ lost his key the day before.', choices: ['had', 'has', 'have'], answer: 0, why: '「言った」ときよりさらに前のことなので過去完了 had lost。' },
+      { sentence: 'He said that he ___ hungry.', choices: ['was', 'is', 'be', 'being'], answer: 0, why: 'said（過去）に合わせて was。' },
+      { sentence: 'I knew that she ___ help me.', choices: ['would', 'will', 'can', 'is'], answer: 0, why: 'knew（過去）に合わせて will を would にする。' },
+      { sentence: 'Tom told me that he ___ lost his key the day before.', choices: ['had', 'has', 'have', 'having'], answer: 0, why: '「言った」ときよりさらに前のことなので過去完了 had lost。' },
     ],
   },
   {
@@ -2004,9 +2004,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I remember my father reading to me every night.', ja: '父が毎晩本を読んでくれたことを覚えている。' },
     ],
     questions: [
-      { sentence: 'Do you mind ___ opening the window?', choices: ['my', 'I', 'mine'], answer: 0, why: '動名詞 opening の意味上の主語は所有格 my（または目的格 me）。I は使えない。' },
-      { sentence: 'She was surprised at ___ coming so early.', choices: ['his', 'he', 'he is'], answer: 0, why: '「彼がとても早く来たこと」。動名詞の前は所有格 his。' },
-      { sentence: 'I remember my mother ___ me this song.', choices: ['singing', 'sung', 'to sing'], answer: 0, why: 'remember ＋ 人 ＋ -ing「人が〜したことを覚えている」。' },
+      { sentence: 'Do you mind ___ opening the window?', choices: ['my', 'I', 'mine', 'myself'], answer: 0, why: '動名詞 opening の意味上の主語は所有格 my（または目的格 me）。I は使えない。' },
+      { sentence: 'She was surprised at ___ coming so early.', choices: ['his', 'he', 'he is', 'he was'], answer: 0, why: '「彼がとても早く来たこと」。動名詞の前は所有格 his。' },
+      { sentence: 'I remember my mother ___ me this song.', choices: ['singing', 'sung', 'to sing', 'sang'], answer: 0, why: 'remember ＋ 人 ＋ -ing「人が〜したことを覚えている」。' },
     ],
   },
   {

@@ -108,7 +108,8 @@
   - [x] ㉘ so ～ as to・allow / enable 人 to・every time / the moment・同格のコンマ・譲歩の whether・now that / once・強い否定・分詞の慣用表現・be used to・in order to の10単元に4つ目の選択肢（159→129）
   - [x] ㉙ may well / might as well・No sooner ～ than・the ＋形容詞・if の省略と倒置・as long as / as far as・It is time・would rather・without / but for・完了分詞構文・完了不定詞の10単元に4つ目の選択肢（129→99）
   - [x] ㉚ 否定の分詞構文・as if・no matter how・最上級の言いかえ・同格の that・強調の do・be to・have ＋物＋過去分詞・not until・部分否定の10単元に4つ目の選択肢（99→69）
-  - [ ] ㉛ つづきの10単元を4択に
+  - [x] ㉛ 動名詞の意味上の主語・形式目的語 it・時制の一致・非制限用法・so that・助動詞＋完了形・未来完了・複合関係詞・付帯状況の with・分詞構文の10単元に4つ目の選択肢（69→39）
+  - [ ] ㉜ のこりの単元を4択に
 
 ### オーナーの依頼（2026-10-28）：問題を増やす・キャラクターを増やす・デザインをさらに高める
 毎回の回で、エンタメ枠ではキャラクターの追加とデザインの改善を、文法・長文枠では問題の追加を優先して進める。
