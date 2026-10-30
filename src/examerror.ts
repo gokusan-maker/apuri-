@@ -194,6 +194,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'Not only (A) does smoking damage the lungs, (B) but it also (C) increase (D) the risk of heart disease.', choices: ['(A) does smoking damage the lungs', '(B) but it also', '(C) increase', '(D) the risk of heart disease'], answer: 2, why: '後半の主語 it（smoking）は3人称単数なので increases。' },
     ],
   },
+  {
+    id: 'exam-error-usage',
+    title: '入試の正誤問題⑩（使役・知覚・動詞の語法）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      'make / let / have ＋人＋原形、知覚動詞（see / hear）＋人＋原形、get ＋人＋ to ～、allow ＋人＋ to ～ のように、動詞ごとのうしろの形に注目する。',
+    ],
+    examples: [
+      { en: 'My father let me use his camera.', ja: '父は私にカメラを使わせてくれた。（let ＋人＋原形）' },
+      { en: 'My parents allow me to stay up late on Saturdays.', ja: '両親は土曜日には私が夜おそくまで起きているのを許してくれる。（allow ＋人＋ to ～）' },
+    ],
+    questions: [
+      { sentence: 'My mother (A) made me (B) to clean (C) my room (D) before dinner.', choices: ['(A) made me', '(B) to clean', '(C) my room', '(D) before dinner'], answer: 1, why: '使役の make ＋人＋動詞の原形：made me clean。' },
+      { sentence: 'Yesterday my father (A) let (B) my sister and me (C) to use (D) his computer.', choices: ['(A) let', '(B) my sister and me', '(C) to use', '(D) his computer'], answer: 2, why: 'let ＋人＋動詞の原形：let my sister and me use。' },
+      { sentence: 'We (A) heard (B) someone (C) to call (D) our names.', choices: ['(A) heard', '(B) someone', '(C) to call', '(D) our names'], answer: 2, why: '知覚動詞 hear ＋人＋原形（または -ing）：heard someone call。' },
+      { sentence: 'She (A) let to (B) her son (C) play (D) video games.', choices: ['(A) let to', '(B) her son', '(C) play', '(D) video games'], answer: 0, why: 'let のあとにすぐ人を置く：let her son play。to はいらない。' },
+      { sentence: 'I (A) got my hair (B) cut (C) at a new salon (D) in last week.', choices: ['(A) got my hair', '(B) cut', '(C) at a new salon', '(D) in last week'], answer: 3, why: 'last week の前には前置詞をつけない。get ＋物＋過去分詞（cut）は正しい。' },
+      { sentence: 'She (A) seems (B) to be tired, so let her (C) to rest (D) for a while.', choices: ['(A) seems', '(B) to be tired', '(C) to rest', '(D) for a while'], answer: 2, why: 'let ＋人＋原形：let her rest。' },
+      { sentence: 'I (A) saw a man (B) to enter (C) the building (D) through the back door.', choices: ['(A) saw a man', '(B) to enter', '(C) the building', '(D) through the back door'], answer: 1, why: '知覚動詞 see ＋人＋原形（または -ing）：saw a man enter。' },
+      { sentence: 'He (A) is said (B) that he (C) is (D) a good doctor.', choices: ['(A) is said', '(B) that he', '(C) is', '(D) a good doctor'], answer: 1, why: '人が主語なら He is said to be ～。that を使うなら It is said that he is ～。' },
+      { sentence: 'Mr. Sato (A) suggested (B) me (C) that I should (D) see a doctor.', choices: ['(A) suggested', '(B) me', '(C) that I should', '(D) see a doctor'], answer: 1, why: 'suggest は人をすぐあとに置けない：suggested (to me) that I should ～。' },
+      { sentence: '(A) It (B) took (C) three hours (D) for me to finishing the report.', choices: ['(A) It', '(B) took', '(C) three hours', '(D) for me to finishing the report'], answer: 3, why: 'It takes ＋時間＋ for 人 to ＋原形：for me to finish。' },
+    ],
+  },
 ]
 
 // 正誤問題をすべての単元からランダムに n 問まとめて出す
