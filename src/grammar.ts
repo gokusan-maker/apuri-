@@ -109,9 +109,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The bridge was built ten years ago.', ja: 'その橋は10年前に建てられた。' },
     ],
     questions: [
-      { sentence: 'This room is ___ every day.', choices: ['clean', 'cleaned', 'cleaning'], answer: 1, why: '「掃除される」なので be動詞 ＋ 過去分詞 cleaned。' },
-      { sentence: 'English is ___ in many countries.', choices: ['speak', 'spoke', 'spoken'], answer: 2, why: 'speak の過去分詞は spoken。' },
-      { sentence: 'The letter was written ___ my sister.', choices: ['by', 'of', 'to'], answer: 0, why: '「〜によって」は by。' },
+      { sentence: 'This room is ___ every day.', choices: ['clean', 'cleaned', 'cleaning', 'cleans'], answer: 1, why: '「掃除される」なので be動詞 ＋ 過去分詞 cleaned。' },
+      { sentence: 'English is ___ in many countries.', choices: ['speak', 'spoke', 'spoken', 'speaks'], answer: 2, why: 'speak の過去分詞は spoken。' },
+      { sentence: 'The letter was written ___ my sister.', choices: ['by', 'of', 'to', 'at'], answer: 0, why: '「〜によって」は by。' },
     ],
   },
   {
@@ -137,9 +137,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You should go to bed early.', ja: '早く寝たほうがいいよ。' },
     ],
     questions: [
-      { sentence: 'My brother can ___ very fast.', choices: ['swim', 'swims', 'swimming'], answer: 0, why: '助動詞 can のあとは原形 swim。' },
-      { sentence: 'You ___ wash your hands before lunch.', choices: ['must', 'are', 'do'], answer: 0, why: '「〜しなければならない」は must ＋ 原形。' },
-      { sentence: 'It is cold. You ___ wear a coat.', choices: ['should', 'can’t', 'were'], answer: 0, why: '「〜したほうがいい」は should。' },
+      { sentence: 'My brother can ___ very fast.', choices: ['swim', 'swims', 'swimming', 'swam'], answer: 0, why: '助動詞 can のあとは原形 swim。' },
+      { sentence: 'You ___ wash your hands before lunch.', choices: ['must', 'are', 'do', 'is'], answer: 0, why: '「〜しなければならない」は must ＋ 原形。' },
+      { sentence: 'It is cold. You ___ wear a coat.', choices: ['should', 'can’t', 'were', 'are'], answer: 0, why: '「〜したほうがいい」は should。' },
     ],
   },
   {
@@ -342,9 +342,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I know he is busy.', ja: '彼がいそがしいことは知っている。（that の省略）' },
     ],
     questions: [
-      { sentence: 'I hope ___ you will come to the party.', choices: ['that', 'what', 'if'], answer: 0, why: '「〜ということを望む」は hope that 〜。' },
-      { sentence: 'She says that the test ___ easy.', choices: ['was', 'be', 'being'], answer: 0, why: 'that のあとは「主語＋動詞」。the test was easy。' },
-      { sentence: 'I think ___ is a good idea.', choices: ['it', 'to', 'for'], answer: 0, why: 'that が省略された形。I think (that) it is a good idea。' },
+      { sentence: 'I hope ___ you will come to the party.', choices: ['that', 'what', 'if', 'which'], answer: 0, why: '「〜ということを望む」は hope that 〜。' },
+      { sentence: 'She says that the test ___ easy.', choices: ['was', 'be', 'being', 'were'], answer: 0, why: 'that のあとは「主語＋動詞」。the test was easy。' },
+      { sentence: 'I think ___ is a good idea.', choices: ['it', 'to', 'for', 'of'], answer: 0, why: 'that が省略された形。I think (that) it is a good idea。' },
     ],
   },
   {
@@ -506,9 +506,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He made the cake by himself.', ja: '彼はひとりでケーキを作った。' },
     ],
     questions: [
-      { sentence: 'Please help ___ to the cookies.', choices: ['you', 'yourself', 'your'], answer: 1, why: 'help yourself で「自由に取って食べてね」。' },
-      { sentence: 'She looked at ___ in the mirror.', choices: ['hers', 'herself', 'she'], answer: 1, why: '主語と同じ人（自分自身）を見るので herself。' },
-      { sentence: 'The children enjoyed ___ at the beach.', choices: ['themselves', 'them', 'their'], answer: 0, why: 'enjoy oneself で「楽しむ」。主語が複数なので themselves。' },
+      { sentence: 'Please help ___ to the cookies.', choices: ['you', 'yourself', 'your', 'yours'], answer: 1, why: 'help yourself で「自由に取って食べてね」。' },
+      { sentence: 'She looked at ___ in the mirror.', choices: ['hers', 'herself', 'she', 'herselves'], answer: 1, why: '主語と同じ人（自分自身）を見るので herself。' },
+      { sentence: 'The children enjoyed ___ at the beach.', choices: ['themselves', 'them', 'their', 'themself'], answer: 0, why: 'enjoy oneself で「楽しむ」。主語が複数なので themselves。' },
     ],
   },
   {
@@ -534,9 +534,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Call me if you need help.', ja: '助けが必要なら電話してね。' },
     ],
     questions: [
-      { sentence: 'If it ___ sunny tomorrow, let\'s go to the beach.', choices: ['is', 'will be', 'was'], answer: 0, why: '未来のことでも if の中は現在形 is。' },
-      { sentence: 'If you hurry, you ___ catch the bus.', choices: ['can', 'are', 'were'], answer: 0, why: '「急げばバスに間に合う」は can。' },
-      { sentence: '___ you are tired, take a rest.', choices: ['If', 'But', 'So'], answer: 0, why: '「もし疲れているなら」は If。' },
+      { sentence: 'If it ___ sunny tomorrow, let\'s go to the beach.', choices: ['is', 'will be', 'was', 'would be'], answer: 0, why: '未来のことでも if の中は現在形 is。' },
+      { sentence: 'If you hurry, you ___ catch the bus.', choices: ['can', 'are', 'were', 'do'], answer: 0, why: '「急げばバスに間に合う」は can。' },
+      { sentence: '___ you are tired, take a rest.', choices: ['If', 'But', 'So', 'Or'], answer: 0, why: '「もし疲れているなら」は If。' },
     ],
   },
   {
@@ -590,9 +590,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Would you mind closing the door?', ja: 'ドアを閉めていただけませんか。' },
     ],
     questions: [
-      { sentence: '___ you tell me the way to the station?', choices: ['Could', 'Must', 'Should'], answer: 0, why: 'ていねいなお願いは Could you ～?' },
-      { sentence: 'Would you mind ___ a little?', choices: ['wait', 'waiting', 'to wait'], answer: 1, why: 'mind のあとは ～ing。' },
-      { sentence: '"Would you mind helping me?" "No, not at ___."', choices: ['all', 'once', 'last'], answer: 0, why: '「いいですよ」は No, not at all.' },
+      { sentence: '___ you tell me the way to the station?', choices: ['Could', 'Must', 'Should', 'Are'], answer: 0, why: 'ていねいなお願いは Could you ～?' },
+      { sentence: 'Would you mind ___ a little?', choices: ['wait', 'waiting', 'to wait', 'waited'], answer: 1, why: 'mind のあとは ～ing。' },
+      { sentence: '"Would you mind helping me?" "No, not at ___."', choices: ['all', 'once', 'last', 'first'], answer: 0, why: '「いいですよ」は No, not at all.' },
     ],
   },
   {
@@ -716,9 +716,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She was surprised to hear the news.', ja: '彼女はその知らせを聞いておどろいた。' },
     ],
     questions: [
-      { sentence: 'I am happy ___ you again.', choices: ['meet', 'to meet', 'meeting'], answer: 1, why: '「会えてうれしい」は happy to ＋原形。' },
-      { sentence: 'We were sad ___ goodbye to our teacher.', choices: ['to say', 'said', 'says'], answer: 0, why: '感情（sad）の原因は to ＋原形。' },
-      { sentence: 'He was surprised to ___ the big dog.', choices: ['saw', 'seeing', 'see'], answer: 2, why: 'to のあとは動詞の原形 see。' },
+      { sentence: 'I am happy ___ you again.', choices: ['meet', 'to meet', 'meeting', 'met'], answer: 1, why: '「会えてうれしい」は happy to ＋原形。' },
+      { sentence: 'We were sad ___ goodbye to our teacher.', choices: ['to say', 'said', 'says', 'saying'], answer: 0, why: '感情（sad）の原因は to ＋原形。' },
+      { sentence: 'He was surprised to ___ the big dog.', choices: ['saw', 'seeing', 'see', 'sees'], answer: 2, why: 'to のあとは動詞の原形 see。' },
     ],
   },
   {
@@ -772,9 +772,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'These cookies are not sold at the supermarket.', ja: 'このクッキーはスーパーでは売られていません。' },
     ],
     questions: [
-      { sentence: '___ English spoken in Australia?', choices: ['Does', 'Is', 'Do'], answer: 1, why: '受け身（be ＋過去分詞）の疑問文は be動詞を前に出す。主語 English は単数なので Is。' },
-      { sentence: 'The window was ___ broken by the wind.', choices: ['not', "don't", "didn't"], answer: 0, why: '受け身の否定文は be動詞のあとに not。' },
-      { sentence: 'Were these photos ___ in Hokkaido?', choices: ['take', 'took', 'taken'], answer: 2, why: '受け身なので過去分詞 taken。' },
+      { sentence: '___ English spoken in Australia?', choices: ['Does', 'Is', 'Do', 'Are'], answer: 1, why: '受け身（be ＋過去分詞）の疑問文は be動詞を前に出す。主語 English は単数なので Is。' },
+      { sentence: 'The window was ___ broken by the wind.', choices: ['not', "don't", "didn't", "isn't"], answer: 0, why: '受け身の否定文は be動詞のあとに not。' },
+      { sentence: 'Were these photos ___ in Hokkaido?', choices: ['take', 'took', 'taken', 'takes'], answer: 2, why: '受け身なので過去分詞 taken。' },
     ],
   },
   {
@@ -786,9 +786,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How about going to the zoo this weekend?', ja: '今週末、動物園に行くのはどう？' },
     ],
     questions: [
-      { sentence: 'We are looking forward to ___ the concert.', choices: ['go', 'going', 'went'], answer: 1, why: 'look forward to のあとは 〜ing（to は前置詞）。' },
-      { sentence: 'How about ___ lunch together?', choices: ['having', 'have', 'to have'], answer: 0, why: 'How about のあとは 〜ing。' },
-      { sentence: 'My sister is good at ___ pictures.', choices: ['draw', 'drew', 'drawing'], answer: 2, why: '前置詞 at のあとなので drawing。' },
+      { sentence: 'We are looking forward to ___ the concert.', choices: ['go', 'going', 'went', 'goes'], answer: 1, why: 'look forward to のあとは 〜ing（to は前置詞）。' },
+      { sentence: 'How about ___ lunch together?', choices: ['having', 'have', 'to have', 'had'], answer: 0, why: 'How about のあとは 〜ing。' },
+      { sentence: 'My sister is good at ___ pictures.', choices: ['draw', 'drew', 'drawing', 'draws'], answer: 2, why: '前置詞 at のあとなので drawing。' },
     ],
   },
   {
@@ -912,9 +912,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "There aren't any eggs in the fridge.", ja: '冷蔵庫には卵が1つもない。' },
     ],
     questions: [
-      { sentence: 'Do you have ___ pets?', choices: ['much', 'any', 'a'], answer: 1, why: 'ふつうの疑問文なので any。' },
-      { sentence: 'Would you like ___ cookies?', choices: ['some', 'much', 'a'], answer: 0, why: '人にすすめる疑問文なので some。' },
-      { sentence: "We didn't see ___ birds in the park.", choices: ['some', 'any', 'no'], answer: 1, why: "否定文（didn't）なので any。" },
+      { sentence: 'Do you have ___ pets?', choices: ['much', 'any', 'a', 'an'], answer: 1, why: 'ふつうの疑問文なので any。' },
+      { sentence: 'Would you like ___ cookies?', choices: ['some', 'much', 'a', 'an'], answer: 0, why: '人にすすめる疑問文なので some。' },
+      { sentence: "We didn't see ___ birds in the park.", choices: ['some', 'any', 'no', 'a'], answer: 1, why: "否定文（didn't）なので any。" },
     ],
   },
   {
