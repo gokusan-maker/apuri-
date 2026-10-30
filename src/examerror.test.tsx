@@ -104,3 +104,10 @@ it('誤文訂正④：TOEFL・IELTS の書き言葉の単元が10問ある', asy
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('discuss')
 })
+
+it('正誤問題⑪：make/do・say/tell などの語法の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-words')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(B) make')
+})

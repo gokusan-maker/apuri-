@@ -218,6 +218,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) It (B) took (C) three hours (D) for me to finishing the report.', choices: ['(A) It', '(B) took', '(C) three hours', '(D) for me to finishing the report'], answer: 3, why: 'It takes ＋時間＋ for 人 to ＋原形：for me to finish。' },
     ],
   },
+  {
+    id: 'exam-error-words',
+    title: '入試の正誤問題⑪（make/do・say/tell など語法）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'make（作る）と do（する）、say（言う）と tell（人に伝える）、explain・marry のように前置詞や人の置き方がまぎらわしい動詞に注目する。TOEFL・IELTS の書き言葉でもよくまちがえる。',
+    ],
+    examples: [
+      { en: 'I have to do my homework before dinner.', ja: '夕食前に宿題をしなければならない。（do one’s homework）' },
+      { en: 'Could you tell me the way to the station?', ja: '駅への道を教えていただけますか。（tell ＋人＋物）' },
+    ],
+    questions: [
+      { sentence: 'Could you (A) say me (B) the way (C) to (D) the station?', choices: ['(A) say me', '(B) the way', '(C) to', '(D) the station'], answer: 0, why: '「人に道を教える」は tell ＋人＋物：tell me the way。say は人を目的語にとらない。' },
+      { sentence: 'I (A) have to (B) make (C) my homework (D) before dinner.', choices: ['(A) have to', '(B) make', '(C) my homework', '(D) before dinner'], answer: 1, why: '「宿題をする」は do my homework。make は「作る」。' },
+      { sentence: 'He (A) told (B) that he (C) would (D) be late.', choices: ['(A) told', '(B) that he', '(C) would', '(D) be late'], answer: 0, why: 'tell は「だれに」が必要：told me that ～。人を言わないなら said that ～。' },
+      { sentence: 'Please (A) don’t (B) forget (C) to make (D) the shopping.', choices: ['(A) don’t', '(B) forget', '(C) to make', '(D) the shopping'], answer: 2, why: '「買い物をする」は do the shopping。' },
+      { sentence: 'The teacher (A) explained (B) us (C) the meaning (D) of the word.', choices: ['(A) explained', '(B) us', '(C) the meaning', '(D) of the word'], answer: 1, why: 'explain は人をすぐあとに置けない：explained the meaning of the word to us。' },
+      { sentence: 'I (A) look forward (B) to (C) see (D) you again.', choices: ['(A) look forward', '(B) to', '(C) see', '(D) you again'], answer: 2, why: 'look forward to の to は前置詞なので動名詞：look forward to seeing。' },
+      { sentence: 'She (A) married (B) with (C) a doctor (D) last year.', choices: ['(A) married', '(B) with', '(C) a doctor', '(D) last year'], answer: 1, why: 'marry は他動詞で with はいらない：married a doctor（get married to ～ も可）。' },
+      { sentence: 'The doctor (A) advised (B) him (C) to give up (D) to smoke.', choices: ['(A) advised', '(B) him', '(C) to give up', '(D) to smoke'], answer: 3, why: 'give up のうしろは動名詞：give up smoking。' },
+      { sentence: 'Let’s (A) make (B) a decision (C) after we (D) will hear his opinion.', choices: ['(A) make', '(B) a decision', '(C) after we', '(D) will hear his opinion'], answer: 3, why: '時を表す after の節では未来のことも現在形：after we hear。' },
+      { sentence: 'He (A) lay (B) the book (C) on the desk and (D) went out.', choices: ['(A) lay', '(B) the book', '(C) on the desk and', '(D) went out'], answer: 0, why: '「（物を）置く」は他動詞 lay の過去形 laid。lay は lie（横になる）の過去形。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
