@@ -92,7 +92,7 @@ import { loadPlayed } from './playedModes'
 import { Album } from './AlbumView'
 import { eventFor } from './events'
 import { addHistory, lastDays, loadHistory, saveHistory } from './history'
-import { addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
+import { speciesTopLevels, addEggs, eggsEarned, feedHelpers, loadParty, loadWarm, nextWarm, releaseCoins, releaseMember, saveParty, saveWarm, toggleFav, tradeableMembers, tradeMembers, updateActive, WARM_XP, warmLeft } from './party'
 import { TRIO_COINS, loadTrio, saveTrio, trioSpecies, COLOR_COMPLETE_TICKETS, completedSpecies, loadColorComplete, saveColorComplete, dailyColor, MYSTERY_COINS, MYSTERY_RATE, LUCKY_BAG_PRICE, loadLuckyBagMonth, saveLuckyBagMonth, PARTY_MAX, loadGachaPoints, saveGachaPoints, POINTS_FOR_SR, srEgg, MULTI5, SLOT_COINS, slotOf, seasonalKindOf, addStats, addTicket, bonusOf, isLuckyPull, LUCKY_COINS, drawEgg, gachaPrice, loadGachaStats, saveGachaStats, DUP_REFUND, isDuplicate, loadStep, nextStep, RARE_FULL_COINS, rareEgg, saveStep, stepLeft, TICKET_MAX, loadNStreak, saveNStreak, rareDue, RARE_EVERY, CHARA_PRICE, HATCH_XP , luckyRoll } from './gacha'
 import {
   feed,
@@ -1767,6 +1767,7 @@ function App() {
           onNameNew={(name) => setParty((p) => ({ ...p, members: p.members.map((m, j) => (j === p.members.length - 1 ? rename(m, name) : m)) }))}
           onGacha={(ticket) => drawMany(ticket, 1)[0] ?? null}
           ownedSpecies={party.members.map((m) => m.species ?? 'mochi')}
+          speciesLevels={speciesTopLevels(party.members)}
           onCharaGacha={() => {
             // キャラガチャ：タマゴガチャの代金に上のせぶんを先にはらう
             const extra = CHARA_PRICE - (gachaPrice(hour) - omikujiDiscount(today))

@@ -1,5 +1,5 @@
 // 仲間（複数の相棒）。節目でタマゴがもらえ、相棒を切り替えられる。
-import { feed, loadMonster, sanitizeMonster, type MonsterState } from './monster'
+import { feed, levelInfo, loadMonster, sanitizeMonster, type MonsterState } from './monster'
 
 export type Party = {
   active: number
@@ -151,4 +151,15 @@ export function saveWarm(l: WarmLog): void {
   } catch {
     // ストレージが使えない環境では保存をあきらめる
   }
+}
+
+// デザイン101：キャラの種類ごとに、いちばん育っている子のレベル（キャラ図鑑用）
+export function speciesTopLevels(members: MonsterState[]): Record<string, number> {
+  const out: Record<string, number> = {}
+  for (const m of members) {
+    const sp = m.species ?? 'mochi'
+    const lv = levelInfo(m.xp).level
+    if (!(sp in out) || lv > out[sp]) out[sp] = lv
+  }
+  return out
 }

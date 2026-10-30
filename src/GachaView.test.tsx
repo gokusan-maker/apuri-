@@ -496,3 +496,12 @@ it('デザイン100：キャラ図鑑のあいさつは🔊を押したときだ
   expect(sp).toHaveBeenCalledWith(replyOf('fox').en)
   sp.mockRestore()
 })
+
+it('デザイン101：キャラ図鑑で会えた子をえらぶと、その種類でいちばん育っている子のレベルが出る', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} speciesLevels={{ mochi: 3, fox: 12 }} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText('（いちばん育っている子：Lv.12）')).toBeInTheDocument()
+})

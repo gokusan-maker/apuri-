@@ -92,3 +92,13 @@ it('えらんだ10体とチケット交換できる（相棒・★の子や10体
   expect(tradeMembers(p, [0, ...picks.slice(1)])).toBeNull()
   expect(tradeMembers(p, [3, ...picks.slice(1)])).toBeNull()
 })
+
+describe('デザイン101：種類ごとのいちばん高いレベル', () => {
+  it('同じ種類が何体いても、いちばん育っている子のレベルになる', async () => {
+    const { speciesTopLevels } = await import('./party')
+    const { levelInfo } = await import('./monster')
+    const t = speciesTopLevels([{ xp: 0 }, { xp: 500, species: 'fox' }, { xp: 50, species: 'fox' }])
+    expect(t.mochi).toBe(1)
+    expect(t.fox).toBe(levelInfo(500).level)
+  })
+})
