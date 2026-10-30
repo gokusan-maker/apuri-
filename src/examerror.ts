@@ -258,6 +258,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Although] the heavy rain, we went out for a walk.', choices: ['Despite', 'Even though', 'Because', 'However'], answer: 0, why: 'うしろが名詞（the heavy rain）なので前置詞 Despite。although・even though のあとには主語＋動詞が必要。' },
     ],
   },
+  {
+    id: 'exam-fix-3',
+    title: '入試の誤文訂正③（医学部・難関大レベル）',
+    points: ['倒置・仮定法・主語と動詞の一致・動名詞・まぎらわしい語など、難関大で出やすい誤り。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Hardly had I arrived when it began to rain.', ja: '着いたとたんに雨がふり始めた。（Hardly が文頭に出ると倒置）' }],
+    questions: [
+      { sentence: 'Hardly [I had arrived] at the station when it began to rain.', choices: ['had I arrived', 'I arrived', 'did I arrived', 'I have arrived'], answer: 0, why: '否定の Hardly が文頭に出ると倒置：Hardly had I arrived … when ～「～するとすぐに…」。' },
+      { sentence: 'It is high time we [go] to bed.', choices: ['went', 'will go', 'have gone', 'are going'], answer: 0, why: 'It is high time ＋主語＋過去形「もう～してよいころだ」（仮定法過去）。' },
+      { sentence: 'If it [were not] for your help last year, I would have failed the exam.', choices: ['had not been', 'is not', 'was not', 'has not been'], answer: 0, why: '過去の事実に反する仮定（last year・would have failed）なので仮定法過去完了：If it had not been for ～。' },
+      { sentence: 'Not only [she speaks] French, but she also speaks Chinese.', choices: ['does she speak', 'she does speak', 'speaks she', 'did she speaks'], answer: 0, why: 'Not only が文頭に出ると疑問文の語順に倒置：Not only does she speak ～。' },
+      { sentence: 'The doctor recommended that he [stops] smoking.', choices: ['stop', 'will stop', 'stopping', 'to stop'], answer: 0, why: 'recommend that ～ の節では動詞の原形（または should ＋原形）を使う：that he stop smoking。' },
+      { sentence: 'Each of the patients [have] a private room in this hospital.', choices: ['has', 'are having', 'were', 'having'], answer: 0, why: '主語の中心は Each（それぞれ）なので単数あつかい：Each of the patients has ～。' },
+      { sentence: 'She strongly objected to [be treated] like a child.', choices: ['being treated', 'treat', 'treated', 'have treated'], answer: 0, why: 'object to の to は前置詞なので動名詞。「あつかわれる」なので受け身の being treated。' },
+      { sentence: 'The new medicine had [an affect] on his heart rate.', choices: ['an effect', 'an affection', 'an effective', 'affects'], answer: 0, why: '名詞「影響」は effect（have an effect on ～）。affect はふつう動詞「影響する」。' },
+      { sentence: 'He is one of the doctors who [is] respected by everyone in the town.', choices: ['are', 'has', 'was', 'being'], answer: 0, why: '関係代名詞 who の先行詞は複数の the doctors なので、動詞も複数の are。' },
+      { sentence: 'Neither the nurses nor the doctor [were] aware of the problem.', choices: ['was', 'have', 'are', 'being'], answer: 0, why: 'neither A nor B では動詞は B（近いほう）に合わせる。B は the doctor（単数）なので was。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

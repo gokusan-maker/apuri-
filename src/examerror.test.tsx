@@ -89,3 +89,11 @@ it('誤文訂正の正解の位置はかたよらない', async () => {
   const { EXAM_FIX } = await import('./examerror')
   expect(new Set(EXAM_FIX.flatMap((u) => u.questions.map((q) => q.answer))).size).toBe(4)
 })
+
+it('誤文訂正③：医学部・難関大レベルの単元が10問あり、答えは正しい形になっている', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-3')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('had I arrived')
+  for (const q of u.questions) expect(q.choices).toHaveLength(4)
+})
