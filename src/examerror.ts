@@ -122,4 +122,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The news (A) were (B) so shocking (C) that nobody (D) said a word.', choices: ['(A) were', '(B) so shocking', '(C) that nobody', '(D) said a word'], answer: 0, why: 'news は -s で終わるが数えられない名詞で、単数あつかい：The news was ～。' },
     ],
   },
+  {
+    id: 'exam-error-agree',
+    title: '入試の正誤問題⑥（一致・語順・助動詞）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      '主語と動詞の一致（neither A nor B・everyone・the number of）、間接疑問の語順（疑問詞＋主語＋動詞）、助動詞のあとは原形、に注目する。',
+    ],
+    examples: [
+      { en: 'Could you tell me where the station is?', ja: '駅がどこにあるか教えていただけますか。（文の中の疑問は主語＋動詞の順）' },
+      { en: 'Everyone in my class likes music.', ja: 'クラスのみんなが音楽が好きだ。（everyone は単数あつかい）' },
+    ],
+    questions: [
+      { sentence: 'Neither my brother nor my parents (A) is (B) going to (C) attend (D) the meeting.', choices: ['(A) is', '(B) going to', '(C) attend', '(D) the meeting'], answer: 0, why: 'neither A nor B の動詞は B（my parents＝複数）に合わせて are。' },
+      { sentence: 'Could you tell me (A) where (B) is the station (C) near (D) here?', choices: ['(A) where', '(B) is the station', '(C) near', '(D) here'], answer: 1, why: '文の中に入った疑問（間接疑問）は疑問詞＋主語＋動詞の順：where the station is。' },
+      { sentence: 'You (A) must not (B) to use your phone (C) during (D) the test.', choices: ['(A) must not', '(B) to use your phone', '(C) during', '(D) the test'], answer: 1, why: '助動詞 must のあとは to をつけない原形：must not use。' },
+      { sentence: 'She (A) asked me (B) what time (C) did the meeting (D) start.', choices: ['(A) asked me', '(B) what time', '(C) did the meeting', '(D) start'], answer: 2, why: '間接疑問なので did を使わず主語＋動詞の順：what time the meeting started。' },
+      { sentence: 'You (A) had better (B) not (C) going out (D) tonight.', choices: ['(A) had better', '(B) not', '(C) going out', '(D) tonight'], answer: 2, why: 'had better (not) のあとは動詞の原形：had better not go out。' },
+      { sentence: 'Everyone in my family (A) like (B) to watch (C) soccer (D) on TV.', choices: ['(A) like', '(B) to watch', '(C) soccer', '(D) on TV'], answer: 0, why: 'everyone は単数あつかいなので likes。' },
+      { sentence: 'He (A) needs not (B) worry about (C) the test (D) tomorrow.', choices: ['(A) needs not', '(B) worry about', '(C) the test', '(D) tomorrow'], answer: 0, why: '助動詞の need には -s をつけない：He need not worry。一般動詞なら He doesn’t need to worry。' },
+      { sentence: 'This bag is (A) too heavy (B) for me (C) to carry (D) it.', choices: ['(A) too heavy', '(B) for me', '(C) to carry', '(D) it'], answer: 3, why: 'too ～ to … の文では、主語（This bag）が carry の目的語にあたるので it はいらない。' },
+      { sentence: 'I don’t know (A) how old (B) is she, (C) but she looks (D) very young.', choices: ['(A) how old', '(B) is she', '(C) but she looks', '(D) very young'], answer: 1, why: '間接疑問は疑問詞＋主語＋動詞の順：how old she is。' },
+      { sentence: 'It (A) is (B) about time (C) we (D) leave.', choices: ['(A) is', '(B) about time', '(C) we', '(D) leave'], answer: 3, why: 'It is (about / high) time ＋主語＋過去形「もう～してもよいころだ」：we left。' },
+    ],
+  },
 ]
