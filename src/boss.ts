@@ -344,6 +344,25 @@ export function recordBossTime(name: string, sec: number): boolean {
   }
   return true
 }
+// デザイン93：まちがえずにたおしたボスの名前（ボス選びの画面に ✨ を出す）
+const NOMISS_KEY = 'eitan:boss-nomiss'
+export function loadNoMissBosses(): string[] {
+  try {
+    const v = JSON.parse(localStorage.getItem(NOMISS_KEY) ?? '[]') as unknown
+    return Array.isArray(v) ? v.filter((x): x is string => typeof x === 'string') : []
+  } catch {
+    return []
+  }
+}
+export function recordNoMissBoss(name: string): void {
+  const all = loadNoMissBosses()
+  if (all.includes(name)) return
+  try {
+    localStorage.setItem(NOMISS_KEY, JSON.stringify([...all, name]))
+  } catch {
+    // ストレージが使えない環境では保存をあきらめる
+  }
+}
 export const formatSec = (sec: number) => `${Math.floor(sec / 60)}分${String(sec % 60).padStart(2, '0')}秒`
 
 // ボスの子分：HPが半分になるとあらわれ、次の正解でたおすと🪙2

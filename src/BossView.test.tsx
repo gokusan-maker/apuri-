@@ -740,3 +740,14 @@ it('デザイン92：1回でもまちがえて勝ったときは「ノーミス�
   expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
   expect(screen.queryByLabelText('ノーミス')).toBeNull()
 })
+
+it('デザイン93：まちがえずにボスに勝つと、そのボスがノーミスの記録に残る', async () => {
+  const { loadNoMissBosses } = await import('./boss')
+  localStorage.removeItem('eitan:boss-nomiss')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(loadNoMissBosses().length).toBe(1)
+})

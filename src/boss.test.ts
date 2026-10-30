@@ -226,3 +226,22 @@ it('会心の一撃なら、かたいウロコは防げず、さいせいは止�
   expect(traitAfterHit('regen', 60, 45, 100, false, true)).toEqual({ hp: 45, blocked: 0, healed: 0, regenSealed: true })
   expect(traitAfterHit('regen', 60, 45, 100, false).regenSealed).toBe(false)
 })
+
+describe('デザイン93：ノーミスでたおしたボスの記録', () => {
+  it('記録したボスの名前が読みこめ、同じ名前は2回入らない', async () => {
+    const { loadNoMissBosses, recordNoMissBoss } = await import('./boss')
+    localStorage.removeItem('eitan:boss-nomiss')
+    expect(loadNoMissBosses()).toEqual([])
+    recordNoMissBoss('スライム')
+    recordNoMissBoss('スライム')
+    recordNoMissBoss('ドラゴン')
+    expect(loadNoMissBosses()).toEqual(['スライム', 'ドラゴン'])
+  })
+  it('こわれたデータは空としてあつかう', async () => {
+    const { loadNoMissBosses } = await import('./boss')
+    localStorage.setItem('eitan:boss-nomiss', '{"a":1}')
+    expect(loadNoMissBosses()).toEqual([])
+    localStorage.setItem('eitan:boss-nomiss', '["x", 3]')
+    expect(loadNoMissBosses()).toEqual(['x'])
+  })
+})

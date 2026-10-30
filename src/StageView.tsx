@@ -3,7 +3,7 @@ import { BossTime } from './BossTimeView'
 import { useContext, useState, type ComponentProps, type CSSProperties } from 'react'
 import { medalFor } from './medal'
 import type { Source } from './monster'
-import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits, BOSS_TRAITS, bossBgOf } from './boss'
+import { BOSS_REMATCH_XP, BOSS_XP, BOSSES, formatSec, loadBossTimes, loadNoMissBosses, bossUnlocked, DAILY_BOSS_COINS, dailyBossLevel, HEARTS, dailyHp, loadBossTaBest, STRONG_COINS, SUDDEN_COINS, STRONG_HP, GOLDEN_COINS, goldenLevelOf, RUSH_COINS, RUSH_EX_COINS, STREAK_COINS, STREAK_EVERY, RUSH_EX_LEVELS, RUSH_LEVELS, type BossRecord, type TeamQ, bossTraits, BOSS_TRAITS, bossBgOf } from './boss'
 import { dayKey } from './srs'
 import { Boss, BossFigure } from './BossView'
 import type { BattleBag, BattleItemId } from './battleitems'
@@ -621,6 +621,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
   const arenaBest = loadArenaBest() // 闘技場の最高の階
   const bcBest = loadBcBest() // ボスの城の問題の階ごとの最高得点
   const bossTimes = loadBossTimes() // ボスごとの最短タイム（タイルに小さく出す）
+  const noMiss = loadNoMissBosses() // デザイン93：ノーミスでたおしたボス
   return (
     <section className="card stages">
       {part !== 'boss' && <h2>{part === 'stages' ? '🗺 単語ステージ' : 'ステージ'}</h2>}{/* ボス部屋は単語・文法と同じく、城の上に見出しを出さない */}
@@ -761,6 +762,7 @@ export function Stages({ part = 'all', levels, record, onClear, onTreasure, onAn
                 <small className="boss-pick-lv">
                   {c.label}
                   {bossTimes[look.name] !== undefined && <span className="boss-pick-time" title={`最短タイム ${formatSec(bossTimes[look.name])}`}> ⏱{Math.floor(bossTimes[look.name] / 60)}:{String(bossTimes[look.name] % 60).padStart(2, '0')}</span>}
+                  {noMiss.includes(look.name) && <span className="boss-pick-nomiss" aria-label="ノーミスでたおした" title="ノーミスでたおした"> ✨</span>}
                 </small>
               </button>
             )
