@@ -574,3 +574,12 @@ it('デザイン116：キャラ図鑑で、今の相棒と同じ種類の子に�
   expect(marks).toHaveLength(1)
   expect(marks[0].closest('li')!.textContent).toContain(speciesOf('fox').name)
 })
+
+it('デザイン120：ガチャの結果に、出た子のとくぎが小さく出る', async () => {
+  localStorage.clear()
+  const { skillOf } = await import('./partner')
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={() => ({ kind: kindOf('umi'), species: speciesOf('cat'), newKind: false, newSpecies: false })} />)
+  fireEvent.click(screen.getByRole('button', { name: /ガチャを引く/ }))
+  expect(document.querySelector('.gacha-skill')!.textContent).toContain(`とくぎ：${skillOf('cat').name}`)
+  expect(document.querySelector('.gacha-skill')!.textContent).toContain(skillOf('cat').desc)
+})

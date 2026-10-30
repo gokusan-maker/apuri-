@@ -587,6 +587,13 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
             {result.kind.id === 'normal' ? '' : `${result.kind.name}の`}
             {result.species.egg}が仲間になった！
           </p>
+          {!result.mystery && (
+            // デザイン120：出た子のとくぎも小さく出す
+            <p className="gacha-skill">
+              ✨ とくぎ：{skillOf(result.species.id).name}
+              <span className="muted">（{skillOf(result.species.id).desc}）</span>
+            </p>
+          )}
           {onNameNew && (named ? (
             <p className="gacha-named">🏷 「{named}」と名前をつけたよ！</p>
           ) : naming === null ? (

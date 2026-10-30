@@ -4636,3 +4636,10 @@ button.boss-book-trait { background: none; border: none; padding: 0; font: inher
 
 /* デザイン116：キャラ図鑑の今の相棒のしるし */
 .char-book-partner { display: block; font-size: 0.7rem; font-weight: 800; color: #b45309; }
+
+/* デザイン120：ガチャ結果のとくぎ */
+.gacha-skill {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  overflow-wrap: anywhere;
+}
