@@ -662,6 +662,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 62 Q38 66 34 64 M56 62 Q62 66 66 64" fill="none" stroke="#7c2d12" strokeWidth="2" strokeLinecap="round" />
       </g>
     )
+  if (species === 'platypus')
+    return (
+      <g>
+        {/* 平たいくちばし */}
+        <ellipse cx="50" cy="62" rx="10" ry="4" fill="#4c1d95" opacity="0.8" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
