@@ -634,6 +634,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="64" cy="70" r="4" fill="#1c1917" />
       </g>
     )
+  if (species === 'hermitcrab')
+    return (
+      <g>
+        {/* 背中のうずまき貝がら */}
+        <path d="M70 62 a10 10 0 1 1 -2 -8 a6 6 0 1 0 -4 6" fill="none" stroke="#7c2d12" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
