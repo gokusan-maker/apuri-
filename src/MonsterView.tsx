@@ -713,6 +713,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="62" cy="46" r="11" fill="none" stroke="#5c3d1e" strokeWidth="2" />
       </g>
     )
+  if (species === 'mandarinduck')
+    return (
+      <g>
+        {/* 頭のかざり羽 */}
+        <path d="M50 22 Q60 14 68 22 Q60 20 50 26 Z" fill="#fb923c" stroke="#7c2d12" strokeWidth="1.5" strokeLinejoin="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
