@@ -3222,3 +3222,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑲（比較の難問：more taller・as ～ as・any other・than yours・fewer・Nothing is so ～ as・倍数表現）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「時間帯（タイムゾーン）はだれが決める？」（地理・世界・because／対比の while の空所）
 - 2026-10-30: デザイン：キャラ図鑑の説明に、同じタイプのほかのキャラの数（ほかに○体）を出すようにした
+- 2026-10-30: 文法：入試の誤文訂正⑬（TOEFL・IELTS の書き言葉⑤：result in・be caused by・lead to・owing to・have an effect on・contribute to）10問

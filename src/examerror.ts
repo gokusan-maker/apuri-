@@ -654,6 +654,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'It can be [argue] that online learning is less effective.', choices: ['argued', 'arguing', 'to argue', 'argues'], answer: 0, why: '助動詞 can のあとの受け身は be ＋過去分詞：It can be argued that ～「～と主張することもできる」。' },
     ],
   },
+  {
+    id: 'exam-fix-13',
+    title: '入試の誤文訂正⑬（TOEFL・IELTS の書き言葉⑤：原因と結果の表現）',
+    points: ['原因と結果を書くときの表現。result in（～という結果になる）、be caused by、lead to、owing to、have an effect on、As a result、contribute to、The reason … is that、affect と effect など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Heavy rain resulted in flooding.', ja: '大雨の結果、洪水が起きた。（原因 result in 結果）' }],
+    questions: [
+      { sentence: 'Heavy rain [resulted to] serious flooding.', choices: ['resulted in', 'resulted from', 'was resulted in', 'resulted at'], answer: 0, why: '原因 result in 結果「～という結果になる」。result from は「～から生じる」で原因と結果が逆になる。' },
+      { sentence: 'Air pollution in the city [is caused from] cars and factories.', choices: ['is caused by', 'causes by', 'is causing by', 'caused from'], answer: 0, why: '「～によって引き起こされる」は be caused by ～。' },
+      { sentence: 'Smoking can [lead] lung disease.', choices: ['lead to', 'leads to', 'lead for', 'be led'], answer: 0, why: 'lead to ～「～につながる」。助動詞 can のあとは原形なので lead to。' },
+      { sentence: 'The flight was cancelled [owing] the heavy snow.', choices: ['owing to', 'owe to', 'owing for', 'owed to'], answer: 0, why: '「～のために（原因）」は owing to ＋名詞（due to・because of と同じ）。' },
+      { sentence: 'Long-term stress [has an effect to] our health.', choices: ['has an effect on', 'has an affect on', 'effects on', 'has effect to'], answer: 0, why: '「～に影響をあたえる」は have an effect on ～。名詞は effect、前置詞は on。' },
+      { sentence: '[As result], many small shops closed.', choices: ['As a result', 'As the result of', 'Resulting', 'By result'], answer: 0, why: '「その結果」は As a result（a が必要）。As a result of のあとには名詞が続く。' },
+      { sentence: 'The new law [makes people to drive] more carefully.', choices: ['makes people drive', 'makes people driving', 'makes to people drive', 'is made people drive'], answer: 0, why: '使役の make ＋人＋原形：makes people drive。' },
+      { sentence: 'Lack of sleep [contributes] poor performance at school.', choices: ['contributes to', 'contributes for', 'is contributed to', 'contributing'], answer: 0, why: '「～の一因となる」は contribute to ～。' },
+      { sentence: 'The reason for the delay [was because] the train broke down.', choices: ['was that', 'was why', 'was because of', 'is because'], answer: 0, why: 'The reason … is that ～ が正式な形。reason と because は意味が重なるので、小論文では was because をさける。' },
+      { sentence: 'The rise in prices [was affected] many families.', choices: ['affected', 'was effected', 'effected to', 'affected on'], answer: 0, why: '「～に影響する」は他動詞 affect で、ここでは物価の上昇が影響をあたえる側なので能動態：affected many families。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
