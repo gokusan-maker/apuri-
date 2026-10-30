@@ -3192,3 +3192,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑭（関係詞・接続詞の難問：where/why・whose・who/whom・because of・whether or not）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「ラジオ体操」（スポーツ・健康・関係副詞 where／非制限の which の空所）
 - 2026-10-30: キャラクター追加：カマキリン（カマキリ・くさむらのみどりタマゴ・アタックのとくぎ）
+- 2026-10-30: 文法：入試の誤文訂正⑧（助動詞・不定詞の難問：had better not・must/should have ＋過去分詞・kind of you・too ～ to・would rather・cannot help -ing）10問

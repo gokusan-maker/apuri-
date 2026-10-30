@@ -444,6 +444,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'She is [superior than] me in math.', choices: ['superior to', 'more superior to', 'superior over', 'superior with'], answer: 0, why: 'superior「すぐれている」はラテン語由来の比較の語で than ではなく to を使う：superior to。' },
     ],
   },
+  {
+    id: 'exam-fix-8',
+    title: '入試の誤文訂正⑧（助動詞・不定詞の難問）',
+    points: ['had better not、助動詞＋ have ＋過去分詞、used to、It is kind of you to ～、kind enough to ～、too ～ to …、would rather、cannot help -ing、疑問詞＋ to 不定詞など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'You should have told me the truth yesterday.', ja: '昨日、本当のことを言ってくれるべきだったのに。（should have ＋過去分詞）' }],
+    questions: [
+      { sentence: 'You [had not better] go out tonight.', choices: ['had better not', 'not had better', 'had not better to', 'had better not to'], answer: 0, why: 'had better の否定は not をうしろに置く：had better not ＋原形。' },
+      { sentence: 'He [must have be] tired after the long trip.', choices: ['must have been', 'must be have', 'must had been', 'must to be'], answer: 0, why: '過去のことの推量「～だったにちがいない」は must have ＋過去分詞：must have been。' },
+      { sentence: 'You [should told] me the truth yesterday.', choices: ['should have told', 'should tell', 'should be told', 'should had told'], answer: 0, why: '過去にしなかったことへの「～すべきだったのに」は should have ＋過去分詞。' },
+      { sentence: 'I [used to going] to the beach every summer when I was a child.', choices: ['used to go', 'use to going', 'was used to go', 'used going'], answer: 0, why: '過去の習慣「よく～したものだ」は used to ＋原形：used to go。' },
+      { sentence: 'It is very kind [for you] to help me.', choices: ['of you', 'to you', 'with you', 'by you'], answer: 0, why: 'kind のように人の性質を表す形容詞では for ではなく of：It is kind of you to ～。' },
+      { sentence: 'She was [enough kind] to show me the way to the station.', choices: ['kind enough', 'enough kindly', 'too kind', 'so kind'], answer: 0, why: '形容詞＋ enough to ～「～するほど…」：kind enough to show。enough は形容詞のうしろ。' },
+      { sentence: 'This box is [too heavy for me to carry it].', choices: ['too heavy for me to carry', 'too heavy to me carrying', 'so heavy for me to carry', 'heavy enough for me carry'], answer: 0, why: '主語の This box が carry の目的語なので、うしろに it を置かない：too heavy for me to carry。' },
+      { sentence: 'I [would rather to stay] home than go out in this rain.', choices: ['would rather stay', 'would rather staying', 'had rather to stay', 'would better stay'], answer: 0, why: 'would rather ＋原形（than ＋原形）「…するよりむしろ～したい」：would rather stay。' },
+      { sentence: 'Whenever I hear that joke, I [cannot help to laugh].', choices: ['cannot help laughing', 'cannot help laugh', 'can help not laughing', 'cannot helping laugh'], answer: 0, why: 'cannot help -ing「～せずにはいられない」：cannot help laughing。' },
+      { sentence: 'I don’t know [what to do it] next.', choices: ['what to do', 'what doing it', 'to do what', 'what should do'], answer: 0, why: '疑問詞＋ to 不定詞「何を～すべきか」：what to do。what が do の目的語なので it はいらない。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

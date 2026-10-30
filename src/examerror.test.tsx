@@ -155,3 +155,10 @@ it('正誤問題⑭：関係詞・接続詞の難問の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('(A) who father')
 })
+
+it('誤文訂正⑧：助動詞・不定詞の難問の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-8')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('had better not')
+})
