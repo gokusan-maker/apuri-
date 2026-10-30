@@ -16738,6 +16738,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Is It Ever Right to Lie?', 'The Life of Immanuel Kant', 'How to Choose a Good Gift', 'Why Murderers Are Dangerous'], answer: 0, why: '全体として、うそはいつもまちがいなのかをカントの立場、結果を重視する立場、中間の見方から検討している。' },
   },
   {
+    id: 'kyotsu-blue-sky',
+    title: 'Why the Sky Is Blue',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Children often ask why the sky is blue, and many adults find that they cannot give a clear answer. The question may seem simple, but the explanation involves the nature of light and the air around us. Scientists in the nineteenth century worked hard to solve this puzzle, and their answer also explains why sunsets are often red or orange.",
+      "Sunlight looks white, but it is actually a mixture of many colors. We can see these colors when light passes through a prism or when a rainbow appears after rain. Each color of light travels as a wave, and the colors differ in the length of their waves. Red light has longer waves, while blue and violet light have shorter ones. The difference in wavelength may seem small, but it has a large effect on how light behaves in the air.",
+      "When sunlight enters the Earth's atmosphere, it meets tiny particles of gas in the air. These particles are much smaller than the waves of light, and they scatter, or spread out, short waves much more strongly than long ones. As a result, blue light is scattered in all directions across the sky, ( A ) we see blue wherever we look. This process is called Rayleigh scattering, after the British scientist who explained it. On the Moon, which has almost no air, the sky looks black even during the day.",
+      "If violet light has even shorter waves than blue, why is the sky not violet? One reason is that sunlight contains less violet light than blue light. Another is that our eyes are more sensitive to blue. Some violet light is also absorbed high in the atmosphere. ( B ) the sky appears blue to us rather than violet.",
+      "The same idea explains the colors of sunset. When the sun is low in the sky, its light must pass through much more air before it reaches our eyes. Most of the blue light is scattered away along this long path, so the light that remains is mainly red and orange. The sky we see every day is a reminder that even familiar sights can have scientific explanations ( C ) are both simple and beautiful.",
+    ],
+    ja: [
+      '子どもはよく空がなぜ青いのかとたずねるが、多くの大人は、はっきりした答えをあたえられないことに気づく。この問いはかんたんに見えるかもしれないが、その説明には光の性質とわたしたちのまわりの空気がかかわっている。19世紀の科学者たちはこのなぞを解くために熱心に取り組み、その答えは夕焼けがしばしば赤やオレンジ色になる理由も説明している。',
+      '日光は白く見えるが、実はたくさんの色がまざったものである。光がプリズムを通るときや、雨のあとににじが出るときに、わたしたちはこうした色を見ることができる。それぞれの色の光は波として進み、色によって波の長さがちがう。赤い光は波が長く、青やむらさきの光は波が短い。波の長さのちがいは小さく思えるかもしれないが、それは光が空気中でどうふるまうかに大きな影響をあたえる。',
+      '日光が地球の大気に入ると、空気中の気体の小さな粒子に出会う。こうした粒子は光の波よりずっと小さく、長い波よりも短い波をはるかに強く散乱させる、つまり四方に広げる。その結果、青い光が空全体のあらゆる方向に散乱され、そのためどこを見ても青く見えるのである。この過程は、それを説明したイギリスの科学者の名前にちなんでレイリー散乱とよばれている。ほとんど空気のない月では、昼間でも空は黒く見える。',
+      'むらさきの光が青よりもさらに短い波をもつのなら、なぜ空はむらさきではないのだろうか。理由の一つは、日光には青い光よりもむらさきの光が少ないことである。もう一つは、わたしたちの目が青により敏感なことである。また、むらさきの光の一部は大気の高いところで吸収される。こうした理由がいっしょになって、空はわたしたちにむらさきではなく青に見えるのである。',
+      '同じ考えが夕焼けの色を説明する。太陽が空の低いところにあるとき、その光はわたしたちの目に届くまでにずっと多くの空気を通らなければならない。この長い道のりのあいだに青い光のほとんどが散乱されてしまうので、残った光は主に赤やオレンジ色になる。わたしたちが毎日見る空は、見なれた景色でさえ、かんたんでしかも美しい科学的な説明をもちうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'unless', 'although'], answer: 0, why: '「青い光があらゆる方向に散乱される、その結果どこを見ても青い」と結果を表すので so。' },
+      { id: 'B', choices: ['Together, these factors mean that', 'In contrast to this', 'For the first time', 'Even without these reasons'], answer: 0, why: '前にあげた3つの理由をまとめて「こうした理由がいっしょになって」と結論を述べるので Together, these factors mean that。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 scientific explanations を受け、うしろに主語が欠けている（are both simple …）ので主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: '日光は、たくさんの色がまざったものである。', answer: true, why: '第2段落 Sunlight looks white, but it is actually a mixture of many colors。' },
+      { statement: '赤い光は、青い光より波が短い。', answer: false, why: '第2段落 Red light has longer waves, while blue and violet light have shorter ones。' },
+      { statement: '空気中の粒子は、短い波を長い波よりも強く散乱させる。', answer: true, why: '第3段落 they scatter … short waves much more strongly than long ones。' },
+      { statement: '夕方、太陽の光は昼間より少ない空気を通って届く。', answer: false, why: '第5段落 its light must pass through much more air before it reaches our eyes。' },
+    ],
+    qa: [
+      { q: 'Which is NOT given as a reason why the sky does not look violet?', choices: ['Violet light has longer waves than red light.', 'Sunlight contains less violet light than blue light.', 'Our eyes are more sensitive to blue.', 'Some violet light is absorbed high in the atmosphere.'], answer: 0, why: '第4段落の3つの理由は、むらさきの光が少ない・目が青に敏感・一部が吸収される。むらさきの波が赤より長いというのは本文と逆。' },
+      { q: 'Why are sunsets often red or orange?', choices: ['Most blue light is scattered away on the long path through the air.', 'The sun becomes colder in the evening.', 'Clouds are always red at sunset.', 'Red light is scattered more strongly than blue light.'], answer: 0, why: '第5段落 Most of the blue light is scattered away along this long path, so the light that remains is mainly red and orange。' },
+    ],
+    gist: [
+      { para: 2, choices: ['短い波の青い光が空全体に散乱されること', '気体の重さのはかり方', 'イギリスの科学の歴史', '雲のでき方'], answer: 0, why: '第3段落は、空気中の小さな粒子が短い波の青い光を強く散乱させ、空が青く見えるしくみ（レイリー散乱）を説明している。' },
+      { para: 4, choices: ['夕焼けが赤くなる理由', '太陽の大きさ', '目の病気', 'オレンジの育て方'], answer: 0, why: '第5段落は、低い太陽の光が長い道のりで青い光を失い、赤やオレンジ色が残ることを説明している。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
