@@ -95,7 +95,9 @@
   - [x] ⑩ 群前置詞6単元（on account of / on behalf of、in favor of / in charge of など）を4択に作りかえる（111→96）。のこりの96問は、分詞・動名詞・時制など「形を選ぶこと」自体が文法のポイントの問題なので、そのままにする
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
 - [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
-- [ ] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+- [x] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+- [ ] 文法（中1）の3択の問題（129問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+  - [ ] ① 10単元ずつ4択に
   - [x] ① 10単元ずつ4択に：some / any・再帰代名詞・that 節・動名詞の熟語・受け身の疑問文と否定文・受け身・感情＋to・ていねいな依頼・助動詞・if ＋現在形（282→252）
   - [x] ② つづきの10単元を4択に：SVOO / SVOC・接続詞・want to・動名詞・不定詞・one of the ＋最上級・as ～ as・比較・未来・過去進行形（252→222）
   - [x] ③ つづきの10単元を4択に：by / until・形容詞的用法の不定詞・Shall I / we・前置詞のまとまり・前置詞＋動名詞・few / little・good / well の比較・both / either・between / among・may / might（222→192）
@@ -104,7 +106,7 @@
   - [x] ⑥ つづきの10単元を4択に：-thing ＋形容詞・one / it・take の熟語・during / for・比較級 and 比較級・疑問詞が主語の文・to / for 人・不定詞の3用法・too many / much・need to（132→102）
   - [x] ⑦ つづきの10単元を4択に：未来の疑問文と否定文・Which ～ better・時の接続詞と現在形・There was / were・like / such as・by の使い方・be famous / full / similar・else・最上級の in / of・be born（102→72）
   - [x] ⑧ つづきの10単元を4択に：give / make ＋物＋ to / for・Thank you for・There will be・道案内・at work・in space・on the phone・in the rain・on Friday morning・on both sides（72→42）
-  - [ ] ⑨ のこりの単元を4択に
+  - [x] ⑨ のこりの単元を4択に：乗り物・食事・場所の前置詞の熟語12単元と、too / either・each / every の2択6問（42→0。中2の3択はなくなった）
   - [x] ① 知覚動詞・感情の分詞・not only A but also B・though・nobody / nothing・命令文＋and / or・It takes・if / whether・使役動詞・付加疑問の10単元に4つ目の選択肢（243→213）
   - [x] ② 付加疑問と感嘆文・too / enough・so ～ that・仮定法・It is ～ for 人 to・疑問詞＋to・間接疑問・分詞の後置修飾・関係代名詞の省略・関係代名詞の10単元に4つ目の選択肢（213→183）
   - [x] ③ 現在完了進行形・経験・継続・関係代名詞 what・whose・while / during・倍数表現・完了・as soon as・not to の10単元に4つ目の選択肢（183→153。tell 人 to not 〜 は正解にもなるので選択肢から外した）

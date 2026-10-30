@@ -604,9 +604,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I don't eat meat. My brother doesn't eat meat, either.", ja: '私は肉を食べない。兄も食べない。' },
     ],
     questions: [
-      { sentence: 'Ken can swim. Aki can swim, ___.', choices: ['too', 'either'], answer: 0, why: '肯定文の「〜も」は too。' },
-      { sentence: "I can't sing well. My father can't sing well, ___.", choices: ['too', 'either'], answer: 1, why: '否定文の「〜も」は either。' },
-      { sentence: 'She ___ plays the piano.', choices: ['also', 'either'], answer: 0, why: '一般動詞の前に置くのは also。' },
+      { sentence: 'Ken can swim. Aki can swim, ___.', choices: ['too', 'either', 'neither', 'so'], answer: 0, why: '肯定文の「〜も」は too。' },
+      { sentence: "I can't sing well. My father can't sing well, ___.", choices: ['too', 'either', 'so', 'not'], answer: 1, why: '否定文の「〜も」は either。' },
+      { sentence: 'She ___ plays the piano.', choices: ['also', 'either', 'neither', 'so'], answer: 0, why: '一般動詞の前に置くのは also。' },
     ],
   },
   {
@@ -618,9 +618,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'All the students were happy.', ja: '生徒たちはみんな喜んでいた。' },
     ],
     questions: [
-      { sentence: 'Every ___ in this class is kind.', choices: ['student', 'students'], answer: 0, why: 'every のあとは単数形。' },
-      { sentence: 'Each person ___ a name card.', choices: ['has', 'have'], answer: 0, why: 'each ＋単数なので has。' },
-      { sentence: 'All the ___ were ready.', choices: ['player', 'players'], answer: 1, why: 'all のあとは複数形。' },
+      { sentence: 'Every ___ in this class is kind.', choices: ['student', 'students', 'studented', 'the student'], answer: 0, why: 'every のあとは単数形。' },
+      { sentence: 'Each person ___ a name card.', choices: ['has', 'have', 'having', 'are have'], answer: 0, why: 'each ＋単数なので has。' },
+      { sentence: 'All the ___ were ready.', choices: ['player', 'players', "player's", 'playing'], answer: 1, why: 'all のあとは複数形。' },
     ],
   },
   {
@@ -8498,9 +8498,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We were late, so we went to the station in a taxi.', ja: 'おくれていたので、駅までタクシーで行った。' },
     ],
     questions: [
-      { sentence: 'There were many students ___ the bus this morning.', choices: ['on', 'at', 'to'], answer: 0, why: 'バスは中を歩ける大きな乗り物なので on the bus。' },
-      { sentence: 'My aunt came to the party ___ a taxi.', choices: ['in', 'on', 'at'], answer: 0, why: 'タクシーは小さな乗り物なので in a taxi。' },
-      { sentence: 'Please keep your seat belt on ___ the plane.', choices: ['on', 'at', 'to'], answer: 0, why: '飛行機は中を歩ける大きな乗り物なので on the plane。' },
+      { sentence: 'There were many students ___ the bus this morning.', choices: ['on', 'at', 'to', 'into'], answer: 0, why: 'バスは中を歩ける大きな乗り物なので on the bus。' },
+      { sentence: 'My aunt came to the party ___ a taxi.', choices: ['in', 'on', 'at', 'to'], answer: 0, why: 'タクシーは小さな乗り物なので in a taxi。' },
+      { sentence: 'Please keep your seat belt on ___ the plane.', choices: ['on', 'at', 'to', 'into'], answer: 0, why: '飛行機は中を歩ける大きな乗り物なので on the plane。' },
     ],
   },
   {
@@ -8515,9 +8515,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The station is close, so I always go there on foot.', ja: '駅は近いので、私はいつも歩いて行く。' },
     ],
     questions: [
-      { sentence: 'It is faster to go to the museum by ___.', choices: ['subway', 'subways', 'subwayed'], answer: 0, why: 'by subway「地下鉄で」。by のあとは -s のない名詞 subway（a・the もつけない）。' },
-      { sentence: 'We crossed the lake by ___.', choices: ['boat', 'boats', 'boated'], answer: 0, why: 'by boat「船で」。by のあとは -s のない名詞 boat。' },
-      { sentence: 'My grandmother goes shopping ___ foot every day.', choices: ['on', 'at', 'in'], answer: 0, why: '「歩いて」は on foot。決まった言い方。' },
+      { sentence: 'It is faster to go to the museum by ___.', choices: ['subway', 'subways', 'subwayed', 'subwaying'], answer: 0, why: 'by subway「地下鉄で」。by のあとは -s のない名詞 subway（a・the もつけない）。' },
+      { sentence: 'We crossed the lake by ___.', choices: ['boat', 'boats', 'boated', 'boating'], answer: 0, why: 'by boat「船で」。by のあとは -s のない名詞 boat。' },
+      { sentence: 'My grandmother goes shopping ___ foot every day.', choices: ['on', 'at', 'in', 'with'], answer: 0, why: '「歩いて」は on foot。決まった言い方。' },
     ],
   },
   {
@@ -8532,9 +8532,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I eat a banana for a snack after school.', ja: '放課後、おやつにバナナを食べる。' },
     ],
     questions: [
-      { sentence: 'We had strawberry ice cream for ___.', choices: ['dessert', 'desert', 'deserted'], answer: 0, why: 'for dessert「デザートに」。desert は「さばく」なので意味が合わない。' },
-      { sentence: 'My brother ate some cookies for a ___.', choices: ['snack', 'snacks', 'snacking'], answer: 0, why: 'for a snack「おやつに」。a のあとは単数の名詞 snack。' },
-      { sentence: 'What do you usually have ___ breakfast?', choices: ['for', 'on', 'to'], answer: 0, why: 'have ～ for breakfast「朝ごはんに～を食べる」。食事には for。' },
+      { sentence: 'We had strawberry ice cream for ___.', choices: ['dessert', 'desert', 'deserted', 'dessertly'], answer: 0, why: 'for dessert「デザートに」。desert は「さばく」なので意味が合わない。' },
+      { sentence: 'My brother ate some cookies for a ___.', choices: ['snack', 'snacks', 'snacking', 'snacked'], answer: 0, why: 'for a snack「おやつに」。a のあとは単数の名詞 snack。' },
+      { sentence: 'What do you usually have ___ breakfast?', choices: ['for', 'on', 'to', 'at'], answer: 0, why: 'have ～ for breakfast「朝ごはんに～を食べる」。食事には for。' },
     ],
   },
   {
@@ -8549,9 +8549,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You can find the answer on page 25.', ja: '答えは25ページにあります。' },
     ],
     questions: [
-      { sentence: 'Who is the man ___ the picture?', choices: ['in', 'on', 'at'], answer: 0, why: '絵や写真の中に写っているものは in the picture。' },
-      { sentence: 'Can you find Osaka ___ the map?', choices: ['on', 'in', 'at'], answer: 0, why: '地図の上に書かれているものは on the map。' },
-      { sentence: 'The new words are listed ___ page 40.', choices: ['on', 'in', 'at'], answer: 0, why: 'ページの上に書かれているので on page 40。' },
+      { sentence: 'Who is the man ___ the picture?', choices: ['in', 'on', 'at', 'to'], answer: 0, why: '絵や写真の中に写っているものは in the picture。' },
+      { sentence: 'Can you find Osaka ___ the map?', choices: ['on', 'in', 'at', 'to'], answer: 0, why: '地図の上に書かれているものは on the map。' },
+      { sentence: 'The new words are listed ___ page 40.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: 'ページの上に書かれているので on page 40。' },
     ],
   },
   {
@@ -8566,9 +8566,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'You can find a lot of information on the internet.', ja: 'インターネットでたくさんの情報を見つけられる。' },
     ],
     questions: [
-      { sentence: 'My father read about the game ___ the newspaper.', choices: ['in', 'on', 'at'], answer: 0, why: '新聞の中に書いてあるので in the newspaper。' },
-      { sentence: 'If you don’t know the word, look it up ___ the dictionary.', choices: ['in', 'on', 'at'], answer: 0, why: '辞書の中で調べるので in the dictionary。' },
-      { sentence: 'I found a good cake recipe ___ the internet.', choices: ['on', 'in', 'at'], answer: 0, why: 'インターネットはメディアなので on the internet。' },
+      { sentence: 'My father read about the game ___ the newspaper.', choices: ['in', 'on', 'at', 'to'], answer: 0, why: '新聞の中に書いてあるので in the newspaper。' },
+      { sentence: 'If you don’t know the word, look it up ___ the dictionary.', choices: ['in', 'on', 'at', 'to'], answer: 0, why: '辞書の中で調べるので in the dictionary。' },
+      { sentence: 'I found a good cake recipe ___ the internet.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: 'インターネットはメディアなので on the internet。' },
     ],
   },
   {
@@ -8583,9 +8583,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My uncle gave a speech at my cousin’s wedding.', ja: 'おじは、いとこの結婚式でスピーチをした。' },
     ],
     questions: [
-      { sentence: 'I first met Ken ___ a party last year.', choices: ['at', 'on', 'to'], answer: 0, why: '行事の場で会ったので at a party。' },
-      { sentence: 'The teachers discussed the new rule ___ the meeting.', choices: ['at', 'on', 'to'], answer: 0, why: '会議の場で話し合ったので at the meeting。' },
-      { sentence: 'My grandmother cried with joy ___ my sister’s wedding.', choices: ['at', 'on', 'to'], answer: 0, why: '結婚式の場で泣いたので at a wedding。' },
+      { sentence: 'I first met Ken ___ a party last year.', choices: ['at', 'on', 'to', 'into'], answer: 0, why: '行事の場で会ったので at a party。' },
+      { sentence: 'The teachers discussed the new rule ___ the meeting.', choices: ['at', 'on', 'to', 'into'], answer: 0, why: '会議の場で話し合ったので at the meeting。' },
+      { sentence: 'My grandmother cried with joy ___ my sister’s wedding.', choices: ['at', 'on', 'to', 'into'], answer: 0, why: '結婚式の場で泣いたので at a wedding。' },
     ],
   },
   {
@@ -8617,9 +8617,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Let’s practice soccer after class today.', ja: '今日は授業のあとでサッカーの練習をしよう。' },
     ],
     questions: [
-      { sentence: 'Please turn off your phone ___ class.', choices: ['in', 'on', 'to'], answer: 0, why: 'in class「授業中に」。' },
-      { sentence: 'Can you help me with my homework after ___?', choices: ['class', 'classy', 'classic'], answer: 0, why: 'after class「授業のあとで」。after のあとは名詞 class（a・the なし）。' },
-      { sentence: 'We have a short meeting ___ class every morning.', choices: ['before', 'ago', 'later'], answer: 0, why: 'before class「授業の前に」。ago・later は名詞の前に置く前置詞としては使えない。' },
+      { sentence: 'Please turn off your phone ___ class.', choices: ['in', 'on', 'to', 'into'], answer: 0, why: 'in class「授業中に」。' },
+      { sentence: 'Can you help me with my homework after ___?', choices: ['class', 'classy', 'classic', 'classed'], answer: 0, why: 'after class「授業のあとで」。after のあとは名詞 class（a・the なし）。' },
+      { sentence: 'We have a short meeting ___ class every morning.', choices: ['before', 'ago', 'later', 'since'], answer: 0, why: 'before class「授業の前に」。ago・later は名詞の前に置く前置詞としては使えない。' },
     ],
   },
   {
@@ -8702,9 +8702,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My grandparents live in a small house by the sea.', ja: '祖父母は海のそばの小さな家に住んでいる。' },
     ],
     questions: [
-      { sentence: 'I like to sit ___ the window on the train.', choices: ['by', 'on', 'to'], answer: 0, why: '「まどのそばに」は by the window。' },
-      { sentence: 'Please put your umbrella ___ the door.', choices: ['by', 'on', 'to'], answer: 0, why: '「ドアのそばに」は by the door。' },
-      { sentence: 'We stayed at a hotel ___ the sea last summer.', choices: ['by', 'in', 'to'], answer: 0, why: '「海のそばの」は by the sea。in the sea だと海の中になってしまう。' },
+      { sentence: 'I like to sit ___ the window on the train.', choices: ['by', 'on', 'to', 'into'], answer: 0, why: '「まどのそばに」は by the window。' },
+      { sentence: 'Please put your umbrella ___ the door.', choices: ['by', 'on', 'to', 'from'], answer: 0, why: '「ドアのそばに」は by the door。' },
+      { sentence: 'We stayed at a hotel ___ the sea last summer.', choices: ['by', 'in', 'to', 'from'], answer: 0, why: '「海のそばの」は by the sea。in the sea だと海の中になってしまう。' },
     ],
   },
   {
@@ -8736,9 +8736,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We ate our lunch under a big tree in the park.', ja: '公園の大きな木の下でお弁当を食べた。' },
     ],
     questions: [
-      { sentence: 'Fish breathe ___ water with their gills.', choices: ['under', 'on', 'above'], answer: 0, why: '水の中で呼吸するので under water。on・above だと水の上になる。' },
-      { sentence: 'On hot days, we rest ___ a big tree.', choices: ['under', 'on', 'into'], answer: 0, why: '木の下でやすむので under a tree。' },
-      { sentence: 'Divers can see colorful fish ___ the sea.', choices: ['under', 'on', 'to'], answer: 0, why: '海の中で見るので under the sea。' },
+      { sentence: 'Fish breathe ___ water with their gills.', choices: ['under', 'on', 'above', 'onto'], answer: 0, why: '水の中で呼吸するので under water。on・above だと水の上になる。' },
+      { sentence: 'On hot days, we rest ___ a big tree.', choices: ['under', 'on', 'into', 'onto'], answer: 0, why: '木の下でやすむので under a tree。' },
+      { sentence: 'Divers can see colorful fish ___ the sea.', choices: ['under', 'on', 'to', 'into'], answer: 0, why: '海の中で見るので under the sea。' },
     ],
   },
   {
@@ -8753,9 +8753,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The bakery is just around the corner.', ja: 'パン屋は角を曲がってすぐのところにある。' },
     ],
     questions: [
-      { sentence: 'Soccer is played all over the ___.', choices: ['world', 'worlds', 'worldly'], answer: 0, why: 'all over the world「世界中で」。world は単数。' },
-      { sentence: 'The post office is just around the ___.', choices: ['corner', 'corners', 'cornered'], answer: 0, why: 'around the corner「角を曲がったところに」。単数の名詞 corner。' },
-      { sentence: 'My uncle sailed ___ the world on a small boat.', choices: ['around', 'among', 'between'], answer: 0, why: 'around the world「世界をまわって」。among・between は「あいだに」なので合わない。' },
+      { sentence: 'Soccer is played all over the ___.', choices: ['world', 'worlds', 'worldly', 'worlded'], answer: 0, why: 'all over the world「世界中で」。world は単数。' },
+      { sentence: 'The post office is just around the ___.', choices: ['corner', 'corners', 'cornered', 'cornering'], answer: 0, why: 'around the corner「角を曲がったところに」。単数の名詞 corner。' },
+      { sentence: 'My uncle sailed ___ the world on a small boat.', choices: ['around', 'among', 'between', 'during'], answer: 0, why: 'around the world「世界をまわって」。among・between は「あいだに」なので合わない。' },
     ],
   },
   {
@@ -8770,9 +8770,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The baby cried all night, so I didn’t sleep well.', ja: '赤ちゃんが一晩中泣いたので、よくねむれなかった。' },
     ],
     questions: [
-      { sentence: 'Bats usually fly ___ night.', choices: ['at', 'on', 'to'], answer: 0, why: '「夜に」は at night。' },
-      { sentence: 'It snowed a lot ___ the night.', choices: ['during', 'while', 'when'], answer: 0, why: 'during the night「夜のあいだに」。while・when のあとには文が必要。' },
-      { sentence: 'My brother played video games all ___.', choices: ['night', 'nights', 'nightly'], answer: 0, why: 'all night「一晩中」。night は単数。' },
+      { sentence: 'Bats usually fly ___ night.', choices: ['at', 'on', 'to', 'in'], answer: 0, why: '「夜に」は at night。' },
+      { sentence: 'It snowed a lot ___ the night.', choices: ['during', 'while', 'when', 'since'], answer: 0, why: 'during the night「夜のあいだに」。while・when のあとには文が必要。' },
+      { sentence: 'My brother played video games all ___.', choices: ['night', 'nights', 'nightly', 'nighted'], answer: 0, why: 'all night「一晩中」。night は単数。' },
     ],
   },
   {
@@ -8787,9 +8787,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We watched the fireworks on the roof of the school.', ja: '学校の屋上で花火を見た。' },
     ],
     questions: [
-      { sentence: 'The library is ___ the third floor.', choices: ['on', 'in', 'to'], answer: 0, why: '建物の「～階に」は on the ～ floor。' },
-      { sentence: 'From our classroom on the top ___, we can see the sea.', choices: ['floor', 'floors', 'flooring'], answer: 0, why: 'on the top floor「最上階に」。floor は単数。' },
-      { sentence: 'A cat is sleeping ___ the roof.', choices: ['on', 'in', 'to'], answer: 0, why: '屋根の上は on the roof。' },
+      { sentence: 'The library is ___ the third floor.', choices: ['on', 'in', 'to', 'into'], answer: 0, why: '建物の「～階に」は on the ～ floor。' },
+      { sentence: 'From our classroom on the top ___, we can see the sea.', choices: ['floor', 'floors', 'flooring', 'floored'], answer: 0, why: 'on the top floor「最上階に」。floor は単数。' },
+      { sentence: 'A cat is sleeping ___ the roof.', choices: ['on', 'in', 'to', 'into'], answer: 0, why: '屋根の上は on the roof。' },
     ],
   },
   {
