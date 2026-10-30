@@ -779,6 +779,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <circle cx="70" cy="30" r="9" fill="#d1d5db" stroke="#4b5563" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'anteater')
+    return (
+      <g>
+        {/* 長い鼻 */}
+        <path d="M50 60 Q62 66 74 74" fill="none" stroke="#57442d" strokeWidth="5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
