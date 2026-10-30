@@ -859,6 +859,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
+            {bestCombo >= 10 && <span className="game-best" aria-label="すごいコンボ">🔥🔥 すごいコンボ！</span>} {/* デザイン96 */}
             <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
               💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
             </span>

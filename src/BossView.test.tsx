@@ -751,3 +751,25 @@ it('デザイン93：まちがえずにボスに勝つと、そのボスがノ�
   }
   expect(loadNoMissBosses().length).toBe(1)
 })
+
+it('デザイン96：最大コンボが10以上でボスに勝つと「🔥🔥 すごいコンボ！」が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={200} traits={[]} />)
+  for (let i = 0; i < 60 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(Number(screen.getByLabelText(/^最大コンボ \d+$/).getAttribute('aria-label')!.match(/\d+/)![0])).toBeGreaterThanOrEqual(10)
+  expect(screen.getByLabelText('すごいコンボ').textContent).toBe('🔥🔥 すごいコンボ！')
+})
+
+it('デザイン96：最大コンボが10未満なら「すごいコンボ」は出ない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  const n = Number(screen.getByLabelText(/^最大コンボ \d+$/).getAttribute('aria-label')!.match(/\d+/)![0])
+  expect(n).toBeLessThan(10)
+  expect(screen.queryByLabelText('すごいコンボ')).toBeNull()
+})
