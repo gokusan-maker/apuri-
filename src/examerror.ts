@@ -338,6 +338,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The man stood there for a long time (A) with (B) his (C) arms (D) folding.', choices: ['(A) with', '(B) his', '(C) arms', '(D) folding'], answer: 3, why: '付帯状況の with ＋名詞＋分詞。うでは「組まれた」状態なので過去分詞 folded。' },
     ],
   },
+  {
+    id: 'exam-error-passive',
+    title: '入試の正誤問題⑯（受け身・時制の一致の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'be ＋過去分詞の形、spoken to by のように前置詞が残る受け身、使役 make の受け身の to、進行形の受け身 being ＋過去分詞、時制の一致（will → would）に注目する。',
+    ],
+    examples: [
+      { en: 'I was spoken to by a stranger at the station.', ja: '駅で知らない人に話しかけられた。（speak to の to が残る）' },
+      { en: 'The room is being cleaned now.', ja: '部屋は今そうじされているところだ。（進行形の受け身）' },
+    ],
+    questions: [
+      { sentence: 'The letter (A) was (B) wrote (C) by my sister (D) last week.', choices: ['(A) was', '(B) wrote', '(C) by my sister', '(D) last week'], answer: 1, why: '受け身は be ＋過去分詞。write の過去分詞は written：was written。' },
+      { sentence: 'This bridge (A) built (B) about (C) a hundred years (D) ago.', choices: ['(A) built', '(B) about', '(C) a hundred years', '(D) ago'], answer: 0, why: '橋は「建てられた」ので受け身：was built。' },
+      { sentence: 'She told me that she (A) will (B) come (C) to the party (D) the next day.', choices: ['(A) will', '(B) come', '(C) to the party', '(D) the next day'], answer: 0, why: 'told（過去）に合わせて時制の一致で will → would：she would come … the next day。' },
+      { sentence: 'I (A) was (B) spoken (C) by a stranger (D) at the station.', choices: ['(A) was', '(B) spoken', '(C) by a stranger', '(D) at the station'], answer: 1, why: 'speak to ～ の受け身は to を残す：was spoken to by ～。' },
+      { sentence: 'The festival (A) will (B) be held (C) in (D) next month.', choices: ['(A) will', '(B) be held', '(C) in', '(D) next month'], answer: 2, why: 'next month の前には前置詞をつけない：will be held next month。' },
+      { sentence: 'He (A) was made (B) work (C) late (D) by his boss.', choices: ['(A) was made', '(B) work', '(C) late', '(D) by his boss'], answer: 1, why: '使役の make の受け身では to を入れる：was made to work。' },
+      { sentence: 'The room (A) is (B) being (C) clean (D) now.', choices: ['(A) is', '(B) being', '(C) clean', '(D) now'], answer: 2, why: '進行形の受け身は be being ＋過去分詞：is being cleaned。' },
+      { sentence: 'This song (A) is (B) loved (C) to (D) young people.', choices: ['(A) is', '(B) loved', '(C) to', '(D) young people'], answer: 2, why: '受け身で「～によって」は by：is loved by young people。' },
+      { sentence: 'My bike (A) was (B) stolen (C) while I (D) am shopping.', choices: ['(A) was', '(B) stolen', '(C) while I', '(D) am shopping'], answer: 3, why: '自転車がぬすまれたのは過去なので、そのとき買い物をしていたのも過去：while I was shopping。' },
+      { sentence: 'The museum (A) was closed (B) because it (C) was (D) repairing.', choices: ['(A) was closed', '(B) because it', '(C) was', '(D) repairing'], answer: 3, why: '博物館は「修理される」側なので進行形の受け身：was being repaired。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

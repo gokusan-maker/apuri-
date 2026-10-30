@@ -3201,3 +3201,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑨（語順・語法の難問：間接疑問・such a ～・What do you think・reach/resemble・lend/borrow・Most students）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「宇宙でのくらし」（科学・宇宙・結果の so／while／関係副詞 where の空所）
 - 2026-10-30: キャラクター追加：トビウオン（トビウオ・なみのうえのつばさタマゴ・サポートのとくぎ）
+- 2026-10-30: 文法：入試の正誤問題⑯（受け身・時制の一致の難問：was written・spoken to by・was made to・is being cleaned・will → would）10問

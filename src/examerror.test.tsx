@@ -176,3 +176,10 @@ it('誤文訂正⑨：語順・語法の難問の単元が10問ある', async ()
   expect(u.questions).toHaveLength(10)
   expect(u.questions[5].choices[u.questions[5].answer]).toBe('lend me')
 })
+
+it('正誤問題⑯：受け身・時制の一致の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-passive')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[3].choices[u.questions[3].answer]).toBe('(B) spoken')
+})
