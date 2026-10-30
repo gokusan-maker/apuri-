@@ -68,3 +68,16 @@ describe('レベルに合った誤答（CEFR の点検①）', () => {
     expect(distractorPool(WORDS.slice(0, 3), WORDS)).toBe(WORDS)
   })
 })
+
+describe('レベルに合った誤答（CEFR の点検②）', () => {
+  it('ボス戦・ライバル戦・対戦・タイムアタックの単語問題は、誤答も出題レベルの訳から出る', async () => {
+    const { bossQuestions } = await import('./boss')
+    const { wordsOf } = await import('./words')
+    for (const lv of ['中3', '高校基礎'] as const) {
+      const words = wordsOf([lv])
+      const jas = new Set(words.map((w) => w.ja))
+      for (const q of bossQuestions(words, false)) for (const c of q.choices) expect(jas.has(c), `${lv}:${c}`).toBe(true)
+      for (const q of makeQuiz(words, (w) => w.ja, 20)) for (const c of q.choices) expect(jas.has(c)).toBe(true)
+    }
+  })
+})
