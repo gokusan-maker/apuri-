@@ -1696,9 +1696,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "It's five o'clock.", ja: '5時です。' },
     ],
     questions: [
-      { sentence: '___ is very hot today.', choices: ['It', 'There', 'They'], answer: 0, why: '暑さを言う文の主語は It。' },
-      { sentence: "What time is ___? — It's ten.", choices: ['this', 'it', 'that'], answer: 1, why: '時刻をたずねるときは What time is it?' },
-      { sentence: '___ snowed a lot last night.', choices: ['It', 'There', 'This'], answer: 0, why: '天気（雪がふる）の文の主語は It。' },
+      { sentence: '___ is very hot today.', choices: ['It', 'There', 'They', 'He'], answer: 0, why: '暑さを言う文の主語は It。' },
+      { sentence: "What time is ___? — It's ten.", choices: ['this', 'it', 'that', 'there'], answer: 1, why: '時刻をたずねるときは What time is it?' },
+      { sentence: '___ snowed a lot last night.', choices: ['It', 'There', 'This', 'They'], answer: 0, why: '天気（雪がふる）の文の主語は It。' },
     ],
   },
   {
@@ -1710,9 +1710,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I take the train to school.', ja: '私は電車で学校へ行く。' },
     ],
     questions: [
-      { sentence: "Don't forget to ___ an umbrella.", choices: ['take', 'make', 'do'], answer: 0, why: '「（かさを）持っていく」は take。' },
-      { sentence: 'We ___ a walk in the park every morning.', choices: ['make', 'take', 'do'], answer: 1, why: '「散歩する」は take a walk。' },
-      { sentence: 'Can you ___ a picture of us?', choices: ['take', 'make', 'do'], answer: 0, why: '「写真をとる」は take a picture。' },
+      { sentence: "Don't forget to ___ an umbrella.", choices: ['take', 'make', 'do', 'go'], answer: 0, why: '「（かさを）持っていく」は take。' },
+      { sentence: 'We ___ a walk in the park every morning.', choices: ['make', 'take', 'do', 'go'], answer: 1, why: '「散歩する」は take a walk。' },
+      { sentence: 'Can you ___ a picture of us?', choices: ['take', 'make', 'do', 'go'], answer: 0, why: '「写真をとる」は take a picture。' },
     ],
   },
   {
@@ -1724,9 +1724,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Let's do our best!", ja: 'ベストをつくそう！' },
     ],
     questions: [
-      { sentence: 'I have to ___ my homework tonight.', choices: ['make', 'do', 'take'], answer: 1, why: '宿題を「する」は do my homework。' },
-      { sentence: 'She ___ a lot of friends at the camp.', choices: ['made', 'did', 'took'], answer: 0, why: '「友だちをつくる」は make friends。' },
-      { sentence: "Don't be afraid of ___ mistakes.", choices: ['doing', 'making', 'taking'], answer: 1, why: '「まちがえる」は make a mistake。前置詞 of のあとは -ing。' },
+      { sentence: 'I have to ___ my homework tonight.', choices: ['make', 'do', 'take', 'go'], answer: 1, why: '宿題を「する」は do my homework。' },
+      { sentence: 'She ___ a lot of friends at the camp.', choices: ['made', 'did', 'took', 'went'], answer: 0, why: '「友だちをつくる」は make friends。' },
+      { sentence: "Don't be afraid of ___ mistakes.", choices: ['doing', 'making', 'taking', 'going'], answer: 1, why: '「まちがえる」は make a mistake。前置詞 of のあとは -ing。' },
     ],
   },
   {
@@ -1766,9 +1766,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How much is this T-shirt?', ja: 'このTシャツはいくらですか。' },
     ],
     questions: [
-      { sentence: 'How ___ pencils do you have?', choices: ['many', 'much', 'long'], answer: 0, why: '数えられる名詞（pencils）の数は How many。' },
-      { sentence: "How ___ is this cake? — It's 300 yen.", choices: ['many', 'much', 'old'], answer: 1, why: '値段は How much。' },
-      { sentence: 'How much ___ do you drink every day?', choices: ['water', 'waters', 'glass'], answer: 0, why: 'How much のあとは数えられない名詞（water）。' },
+      { sentence: 'How ___ pencils do you have?', choices: ['many', 'much', 'long', 'old'], answer: 0, why: '数えられる名詞（pencils）の数は How many。' },
+      { sentence: "How ___ is this cake? — It's 300 yen.", choices: ['many', 'much', 'old', 'far'], answer: 1, why: '値段は How much。' },
+      { sentence: 'How much ___ do you drink every day?', choices: ['water', 'waters', 'glass', 'cups'], answer: 0, why: 'How much のあとは数えられない名詞（water）。' },
     ],
   },
   {
@@ -2837,9 +2837,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Who are you waiting for?', ja: 'だれを待っているの？' },
     ],
     questions: [
-      { sentence: 'Please listen ___ me carefully.', choices: ['to', 'at', 'for'], answer: 0, why: 'listen to 〜「〜を聞く」。' },
-      { sentence: "Let's wait ___ the next bus.", choices: ['for', 'to', 'on'], answer: 0, why: 'wait for 〜「〜を待つ」。' },
-      { sentence: 'We arrived ___ the station at noon.', choices: ['at', 'to', 'for'], answer: 0, why: '駅のような地点に着くときは arrive at。arrive to とは言わない。' },
+      { sentence: 'Please listen ___ me carefully.', choices: ['to', 'at', 'for', 'of'], answer: 0, why: 'listen to 〜「〜を聞く」。' },
+      { sentence: "Let's wait ___ the next bus.", choices: ['for', 'to', 'on', 'at'], answer: 0, why: 'wait for 〜「〜を待つ」。' },
+      { sentence: 'We arrived ___ the station at noon.', choices: ['at', 'to', 'for', 'on'], answer: 0, why: '駅のような地点に着くときは arrive at。arrive to とは言わない。' },
     ],
   },
   {
@@ -2956,9 +2956,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What kind of food do you like?', ja: 'どんな種類の食べ物が好き？' },
     ],
     questions: [
-      { sentence: '___ sport do you play? — I play tennis.', choices: ['What', 'Who', 'Where'], answer: 0, why: 'What ＋ 名詞「何の〜」。' },
-      { sentence: 'What ___ of books do you read?', choices: ['kind', 'kinds to', 'kindly'], answer: 0, why: 'What kind of 〜?「どんな種類の〜？」。' },
-      { sentence: 'What ___ is it today? — It is Friday.', choices: ['day', 'date', 'time'], answer: 0, why: '曜日をたずねるのは What day。日付なら What date。' },
+      { sentence: '___ sport do you play? — I play tennis.', choices: ['What', 'Who', 'Where', 'How'], answer: 0, why: 'What ＋ 名詞「何の〜」。' },
+      { sentence: 'What ___ of books do you read?', choices: ['kind', 'kinds to', 'kindly', 'kinded'], answer: 0, why: 'What kind of 〜?「どんな種類の〜？」。' },
+      { sentence: 'What ___ is it today? — It is Friday.', choices: ['day', 'date', 'time', 'days'], answer: 0, why: '曜日をたずねるのは What day。日付なら What date。' },
     ],
   },
   {
@@ -3058,9 +3058,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The children are brushing their teeth.', ja: '子どもたちは歯をみがいている。' },
     ],
     questions: [
-      { sentence: 'I visited two ___ in Kyushu.', choices: ['cities', 'citys', 'cityes'], answer: 0, why: '〈子音字 ＋ y〉は y を i にかえて -es。' },
-      { sentence: 'Three ___ are playing in the park.', choices: ['children', 'childs', 'childrens'], answer: 0, why: 'child の複数形は children（不規則）。' },
-      { sentence: 'Please wash these ___.', choices: ['dishes', 'dishs', 'dish'], answer: 0, why: 'sh で終わる語は -es。these があるので複数形。' },
+      { sentence: 'I visited two ___ in Kyushu.', choices: ['cities', 'citys', 'cityes', 'cityies'], answer: 0, why: '〈子音字 ＋ y〉は y を i にかえて -es。' },
+      { sentence: 'Three ___ are playing in the park.', choices: ['children', 'childs', 'childrens', 'childes'], answer: 0, why: 'child の複数形は children（不規則）。' },
+      { sentence: 'Please wash these ___.', choices: ['dishes', 'dishs', 'dish', 'dishies'], answer: 0, why: 'sh で終わる語は -es。these があるので複数形。' },
     ],
   },
   {
@@ -3143,9 +3143,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There is a big tree behind my house.', ja: '私の家のうしろに大きな木がある。' },
     ],
     questions: [
-      { sentence: 'My bag is ___ the desk. It is on the floor.', choices: ['under', 'on', 'over'], answer: 0, why: '床にある → 机の「下に」なので under。' },
-      { sentence: 'Please wait in front ___ the station.', choices: ['of', 'to', 'at'], answer: 0, why: 'in front of ～「～の前で」。' },
-      { sentence: 'Ken sits ___ to me in class.', choices: ['next', 'near', 'behind'], answer: 0, why: 'next to ～「～のとなりに」。near・behind は to をつけない。' },
+      { sentence: 'My bag is ___ the desk. It is on the floor.', choices: ['under', 'on', 'over', 'onto'], answer: 0, why: '床にある → 机の「下に」なので under。' },
+      { sentence: 'Please wait in front ___ the station.', choices: ['of', 'to', 'at', 'for'], answer: 0, why: 'in front of ～「～の前で」。' },
+      { sentence: 'Ken sits ___ to me in class.', choices: ['next', 'near', 'behind', 'beside'], answer: 0, why: 'next to ～「～のとなりに」。near・behind は to をつけない。' },
     ],
   },
   {
@@ -3279,9 +3279,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Were your friends at the party? — No, they weren\'t.', ja: 'あなたの友だちはパーティーにいたの？—いいえ、いなかったよ。' },
     ],
     questions: [
-      { sentence: 'We ___ busy last week.', choices: ['were', 'was', 'are'], answer: 0, why: '主語 We は複数で、last week（過去）なので were。' },
-      { sentence: '___ she at school yesterday?', choices: ['Was', 'Were', 'Did'], answer: 0, why: '主語 she は単数で過去なので Was。be動詞の文に Did は使わない。' },
-      { sentence: 'The movie ___ interesting. I fell asleep.', choices: ["wasn't", "didn't", "weren't"], answer: 0, why: 'The movie は単数。be動詞の過去の否定は wasn\'t。' },
+      { sentence: 'We ___ busy last week.', choices: ['were', 'was', 'are', 'is'], answer: 0, why: '主語 We は複数で、last week（過去）なので were。' },
+      { sentence: '___ she at school yesterday?', choices: ['Was', 'Were', 'Did', 'Are'], answer: 0, why: '主語 she は単数で過去なので Was。be動詞の文に Did は使わない。' },
+      { sentence: 'The movie ___ interesting. I fell asleep.', choices: ["wasn't", "didn't", "weren't", "don't"], answer: 0, why: 'The movie は単数。be動詞の過去の否定は wasn\'t。' },
     ],
   },
   {
@@ -3364,9 +3364,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "My cat doesn't like water.", ja: 'うちのネコは水がきらいだ。' },
     ],
     questions: [
-      { sentence: '___ your sister speak English?', choices: ['Does', 'Do', 'Is'], answer: 0, why: '主語 your sister は3人称単数で一般動詞の文なので Does。' },
-      { sentence: "Ken doesn't ___ coffee.", choices: ['drink', 'drinks', 'drinking'], answer: 0, why: "doesn't のあとの動詞は原形。" },
-      { sentence: 'Do they walk to school? — No, they ___.', choices: ["don't", "doesn't", "aren't"], answer: 0, why: 'Do で聞かれたら do / don\'t で答える。主語 they は複数。' },
+      { sentence: '___ your sister speak English?', choices: ['Does', 'Do', 'Is', 'Are'], answer: 0, why: '主語 your sister は3人称単数で一般動詞の文なので Does。' },
+      { sentence: "Ken doesn't ___ coffee.", choices: ['drink', 'drinks', 'drinking', 'drank'], answer: 0, why: "doesn't のあとの動詞は原形。" },
+      { sentence: 'Do they walk to school? — No, they ___.', choices: ["don't", "doesn't", "aren't", "didn't"], answer: 0, why: 'Do で聞かれたら do / don\'t で答える。主語 they は複数。' },
     ],
   },
   {
