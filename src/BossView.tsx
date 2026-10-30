@@ -329,6 +329,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [minionAt, setMinionAt] = useState(-1) // 子分をたおした問題の番号
   const [newRecord, setNewRecord] = useState(0) // この戦いで更新した最大ダメージ
   const [special, setSpecial] = useState(0) // 必殺技を出した回数（演出のキー）
+  const [skillUsed, setSkillUsed] = useState(0) // デザイン121：この戦いで相棒のとくぎが出た回数
+  const fireSkill = () => {
+    onSkill?.()
+    setSkillUsed((n) => n + 1)
+  }
   const startedAt = useRef(0) // 戦いを始めた時刻（タイム記録用）
   const [time, setTime] = useState<{ sec: number; best: boolean } | null>(null)
   const shownAt = useRef(0) // 今の問題が出た時刻（会心の一撃の判定用）
@@ -381,12 +386,12 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const critical = isCritical(ms, critMs * (traits.includes('quick') ? QUICK_RATE : 1))
       if (!critical && traits.includes('quick') && isCritical(ms, critMs)) setTraitMsg(`${BOSS_TRAITS.quick.icon} ${look.name}の${BOSS_TRAITS.quick.name}！ 会心をかわされた`)
       if (critical && skill && !isCritical(ms, CRIT_MS * slow)) {
-        onSkill?.()
+        fireSkill()
         setSkillMsg(`${partner!.name}の${skill!.name}！ 会心の一撃`)
       }
       const extra = skill ? skillDamage(skill.id, n, lv) : 0
       if (extra > 0) {
-        onSkill?.()
+        fireSkill()
         setSkillMsg(`${partner!.name}の${skill!.name}！ +${extra}`)
       }
       const downTurn = teamOn && 'team' in q && teamHp[q.team as TeamRole] <= 0 // ダウン中のなかまの番はダメージ半分
@@ -423,7 +428,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       setCrits(nc)
       const plus = skill ? skillGauge(skill.id, n, lv) : 0
       if (plus > 0) {
-        onSkill?.()
+        fireSkill()
         setSkillMsg(`${partner!.name}の${skill!.name}！ ゲージ+${plus}`)
       }
       setGauge(Math.min(GAUGE_MAX, gaugeAfter(gauge, critical) + plus))
@@ -462,7 +467,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const who = teamOn && 'team' in q ? hitTarget(teamHp, q.team as TeamRole) : undefined
       const teamHit = who ? hitMember(teamHp, who, charge ? CHARGE_HIT : MEMBER_HIT) : null
       const revive = skill?.id === 'revive' && canSave && hearts - lose <= 0
-      if (guard || revive) onSkill?.()
+      if (guard || revive) fireSkill()
       if (guard || revive || shield) setAtk({ at: index, lose: 0 }) // こうげきは来たけど守った
       if (guard) {
         setSaves(saves + 1)
@@ -597,6 +602,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setMissed([])
     setWrongs(0)
     setSpecial(0)
+    setSkillUsed(0)
     setGauge(0)
     setCorrects(0)
     setTeamHits({ word: 0, grammar: 0, reading: 0 })
@@ -859,6 +865,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             {wrongs === 0 && <span className="game-best" aria-label="ノーミス">✨ ノーミス！</span>}
             <span aria-label={`たおすまでの問題数 ${corrects + wrongs}`}>📝 {corrects + wrongs}問でたおした</span> {/* デザイン115 */}
             {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
+            {skill && skillUsed > 0 && <span aria-label={`とくぎ ${skillUsed}回`}>✨ {skill.name} {skillUsed}回</span>} {/* デザイン121 */}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}

@@ -793,3 +793,17 @@ it('デザイン115：ボスに勝つと、結果画面にたおすまでに答�
   }
   expect(screen.getByLabelText(`たおすまでの問題数 ${n}`).textContent).toBe(`📝 ${n}問でたおした`)
 })
+
+it('デザイン121：ボスに勝つと、結果画面に相棒のとくぎが何回はたらいたかが出る', async () => {
+  const { FORMS, withSpecies } = await import('./monster')
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} partner={{ form: withSpecies(FORMS[1], 'dragon'), species: 'dragon', name: 'ドラ', skillUses: 30 }} />)
+  answer(true)
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.getByLabelText('とくぎ 1回').textContent).toBe('✨ 火の息 1回')
+})
+
+it('デザイン121：相棒がいないときは、とくぎの回数は出ない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} />)
+  answer(true)
+  expect(screen.queryByLabelText(/^とくぎ \d+回$/)).toBeNull()
+})
