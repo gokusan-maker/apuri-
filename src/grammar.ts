@@ -1570,9 +1570,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I bought two small black bags.', ja: '私は小さな黒いかばんを2つ買った。' },
     ],
     questions: [
-      { sentence: 'He has a ___ car.', choices: ['red big', 'big red', 'bigly red'], answer: 1, why: '大きさ（big）→ 色（red）の順。' },
-      { sentence: 'Look at those ___ birds.', choices: ['three little white', 'white little three', 'little three white'], answer: 0, why: '数 → 大きさ → 色 の順。' },
-      { sentence: 'This is a ___ table.', choices: ['wooden new', 'new wooden', 'newly wooden'], answer: 1, why: '新しさ（new）→ 材料（wooden）の順。' },
+      { sentence: 'He has a ___ car.', choices: ['red big', 'big red', 'bigly red', 'big reds'], answer: 1, why: '大きさ（big）→ 色（red）の順。' },
+      { sentence: 'Look at those ___ birds.', choices: ['three little white', 'white little three', 'little three white', 'three whites little'], answer: 0, why: '数 → 大きさ → 色 の順。' },
+      { sentence: 'This is a ___ table.', choices: ['wooden new', 'new wooden', 'newly wooden', 'wooden newly'], answer: 1, why: '新しさ（new）→ 材料（wooden）の順。' },
     ],
   },
   {
@@ -1584,9 +1584,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She looks after her little brother.', ja: '彼女は弟の世話をしている。' },
     ],
     questions: [
-      { sentence: 'I lost my key. I am looking ___ it now.', choices: ['at', 'for', 'after'], answer: 1, why: '「さがす」は look for。' },
-      { sentence: 'Can you look ___ my dog while I am away?', choices: ['after', 'for', 'up'], answer: 0, why: '「世話をする」は look after。' },
-      { sentence: "If you don't know the word, look it ___ in a dictionary.", choices: ['at', 'after', 'up'], answer: 2, why: '「（辞書で）調べる」は look up。' },
+      { sentence: 'I lost my key. I am looking ___ it now.', choices: ['at', 'for', 'after', 'up'], answer: 1, why: '「さがす」は look for。' },
+      { sentence: 'Can you look ___ my dog while I am away?', choices: ['after', 'for', 'up', 'in'], answer: 0, why: '「世話をする」は look after。' },
+      { sentence: "If you don't know the word, look it ___ in a dictionary.", choices: ['at', 'after', 'up', 'for'], answer: 2, why: '「（辞書で）調べる」は look up。' },
     ],
   },
   {
@@ -1598,9 +1598,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is getting dark.', ja: 'だんだん暗くなってきている。' },
     ],
     questions: [
-      { sentence: 'How can I get ___ the station?', choices: ['to', 'at', 'in'], answer: 0, why: '「〜に着く」は get to 〜。' },
-      { sentence: 'I usually get ___ at six.', choices: ['up', 'to', 'for'], answer: 0, why: '「起きる」は get up。' },
-      { sentence: 'It got ___ in the evening.', choices: ['cold', 'coldly', 'to cold'], answer: 0, why: 'get ＋形容詞 で「〜になる」。' },
+      { sentence: 'How can I get ___ the station?', choices: ['to', 'at', 'in', 'for'], answer: 0, why: '「〜に着く」は get to 〜。' },
+      { sentence: 'I usually get ___ at six.', choices: ['up', 'to', 'for', 'with'], answer: 0, why: '「起きる」は get up。' },
+      { sentence: 'It got ___ in the evening.', choices: ['cold', 'coldly', 'to cold', 'colds'], answer: 0, why: 'get ＋形容詞 で「〜になる」。' },
     ],
   },
   {
@@ -1612,9 +1612,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I have two cats. One is white, and the other is black.', ja: 'ねこを2匹飼っている。1匹は白で、もう1匹は黒だ。' },
     ],
     questions: [
-      { sentence: 'This shirt is too small. Please show me ___ one.', choices: ['another', 'other', 'the others'], answer: 0, why: '「別の1つ」は another one。' },
-      { sentence: 'I have two brothers. One is ten, and ___ is seven.', choices: ['another', 'the other', 'others'], answer: 1, why: '2人のうちの「もう一方」は the other。' },
-      { sentence: 'Would you like ___ cup of tea?', choices: ['another', 'other', 'others'], answer: 0, why: '「もう1杯」は another cup。' },
+      { sentence: 'This shirt is too small. Please show me ___ one.', choices: ['another', 'other', 'the others', 'others'], answer: 0, why: '「別の1つ」は another one。' },
+      { sentence: 'I have two brothers. One is ten, and ___ is seven.', choices: ['another', 'the other', 'others', 'other'], answer: 1, why: '2人のうちの「もう一方」は the other。' },
+      { sentence: 'Would you like ___ cup of tea?', choices: ['another', 'other', 'others', 'the others'], answer: 0, why: '「もう1杯」は another cup。' },
     ],
   },
   {
@@ -1626,9 +1626,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Life in Tokyo is different from life in my town.', ja: '東京の生活は私の町の生活とちがう。' },
     ],
     questions: [
-      { sentence: 'Your shoes are the same ___ mine.', choices: ['as', 'to', 'with'], answer: 0, why: 'the same as 〜 で「〜と同じ」。' },
-      { sentence: 'This book is different ___ that one.', choices: ['as', 'from', 'with'], answer: 1, why: 'different from 〜 で「〜とちがう」。' },
-      { sentence: 'We go to ___ school.', choices: ['same', 'a same', 'the same'], answer: 2, why: 'same の前には the をつける。' },
+      { sentence: 'Your shoes are the same ___ mine.', choices: ['as', 'to', 'with', 'for'], answer: 0, why: 'the same as 〜 で「〜と同じ」。' },
+      { sentence: 'This book is different ___ that one.', choices: ['as', 'from', 'with', 'by'], answer: 1, why: 'different from 〜 で「〜とちがう」。' },
+      { sentence: 'We go to ___ school.', choices: ['same', 'a same', 'the same', 'same a'], answer: 2, why: 'same の前には the をつける。' },
     ],
   },
   {
@@ -1640,9 +1640,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It started raining.', ja: '雨がふりはじめた。' },
     ],
     questions: [
-      { sentence: 'We hope ___ you again soon.', choices: ['seeing', 'to see', 'see'], answer: 1, why: 'hope のあとは to ＋動詞の原形。' },
-      { sentence: 'He finished ___ his homework.', choices: ['doing', 'to do', 'do'], answer: 0, why: 'finish のあとは -ing 形。' },
-      { sentence: 'She decided ___ the piano.', choices: ['learning', 'to learn', 'learn'], answer: 1, why: 'decide のあとは to ＋動詞の原形。' },
+      { sentence: 'We hope ___ you again soon.', choices: ['seeing', 'to see', 'see', 'saw'], answer: 1, why: 'hope のあとは to ＋動詞の原形。' },
+      { sentence: 'He finished ___ his homework.', choices: ['doing', 'to do', 'do', 'did'], answer: 0, why: 'finish のあとは -ing 形。' },
+      { sentence: 'She decided ___ the piano.', choices: ['learning', 'to learn', 'learn', 'learned'], answer: 1, why: 'decide のあとは to ＋動詞の原形。' },
     ],
   },
   {
@@ -1654,9 +1654,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Would you like some cake?', ja: 'ケーキはいかがですか。' },
     ],
     questions: [
-      { sentence: 'I would like ___ to the museum.', choices: ['go', 'going', 'to go'], answer: 2, why: 'would like のあとに動詞を続けるときは to ＋動詞の原形。' },
-      { sentence: '___ you like some tea? — Yes, please.', choices: ['Do', 'Would', 'Are'], answer: 1, why: '人にすすめるときは Would you like 〜?' },
-      { sentence: 'I would ___ a cup of coffee.', choices: ['like', 'likes', 'liking'], answer: 0, why: 'would のあとは動詞の原形 like。' },
+      { sentence: 'I would like ___ to the museum.', choices: ['go', 'going', 'to go', 'went'], answer: 2, why: 'would like のあとに動詞を続けるときは to ＋動詞の原形。' },
+      { sentence: '___ you like some tea? — Yes, please.', choices: ['Do', 'Would', 'Are', 'Have'], answer: 1, why: '人にすすめるときは Would you like 〜?' },
+      { sentence: 'I would ___ a cup of coffee.', choices: ['like', 'likes', 'liking', 'liked'], answer: 0, why: 'would のあとは動詞の原形 like。' },
     ],
   },
   {
@@ -1682,9 +1682,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"I can\'t swim." "Neither can I."', ja: '「泳げない」「私も泳げない」' },
     ],
     questions: [
-      { sentence: '"I am hungry." "So ___ I."', choices: ['do', 'am', 'did'], answer: 1, why: 'be動詞 am の文なので So am I.' },
-      { sentence: '"I don\'t like snakes." "___ do I."', choices: ['So', 'Too', 'Neither'], answer: 2, why: '否定の文に「私も」は Neither do I.' },
-      { sentence: '"I went to the zoo yesterday." "So ___ I."', choices: ['do', 'did', 'was'], answer: 1, why: '過去の一般動詞（went）なので So did I.' },
+      { sentence: '"I am hungry." "So ___ I."', choices: ['do', 'am', 'did', 'is'], answer: 1, why: 'be動詞 am の文なので So am I.' },
+      { sentence: '"I don\'t like snakes." "___ do I."', choices: ['So', 'Too', 'Neither', 'Either'], answer: 2, why: '否定の文に「私も」は Neither do I.' },
+      { sentence: '"I went to the zoo yesterday." "So ___ I."', choices: ['do', 'did', 'was', 'went'], answer: 1, why: '過去の一般動詞（went）なので So did I.' },
     ],
   },
   {
@@ -1738,9 +1738,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She speaks three languages.', ja: '彼女は3か国語を話す。' },
     ],
     questions: [
-      { sentence: 'Please ___ me your name.', choices: ['say', 'tell', 'speak'], answer: 1, why: '「人に〜を言う・教える」は tell ＋人＋もの。' },
-      { sentence: 'He can ___ Chinese well.', choices: ['speak', 'tell', 'say'], answer: 0, why: '言語を「話す」は speak。' },
-      { sentence: 'What did she ___ to you?', choices: ['tell', 'say', 'talk'], answer: 1, why: '「〜に何と言ったか」は say 〜 to 人。tell なら人がすぐあとにくる。' },
+      { sentence: 'Please ___ me your name.', choices: ['say', 'tell', 'speak', 'talk'], answer: 1, why: '「人に〜を言う・教える」は tell ＋人＋もの。' },
+      { sentence: 'He can ___ Chinese well.', choices: ['speak', 'tell', 'say', 'speaks'], answer: 0, why: '言語を「話す」は speak。' },
+      { sentence: 'What did she ___ to you?', choices: ['tell', 'say', 'talk', 'speak'], answer: 1, why: '「〜に何と言ったか」は say 〜 to 人。tell なら人がすぐあとにくる。' },
     ],
   },
   {
@@ -1752,9 +1752,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She was able to finish the work.', ja: '彼女はその仕事を終えることができた。' },
     ],
     questions: [
-      { sentence: 'He will ___ to come tomorrow.', choices: ['can', 'be able', 'able'], answer: 1, why: 'will のあとは will be able to 〜。' },
-      { sentence: 'We ___ able to see the mountain from here.', choices: ['are', 'is', 'can'], answer: 0, why: '主語 We に合わせて be動詞は are。' },
-      { sentence: 'I ___ ride a bike when I was five.', choices: ['can', 'could', 'am able'], answer: 1, why: '過去の「できた」は could。' },
+      { sentence: 'He will ___ to come tomorrow.', choices: ['can', 'be able', 'able', 'could'], answer: 1, why: 'will のあとは will be able to 〜。' },
+      { sentence: 'We ___ able to see the mountain from here.', choices: ['are', 'is', 'can', 'were'], answer: 0, why: '主語 We に合わせて be動詞は are。' },
+      { sentence: 'I ___ ride a bike when I was five.', choices: ['can', 'could', 'am able', 'was able'], answer: 1, why: '過去の「できた」は could。' },
     ],
   },
   {
