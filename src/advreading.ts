@@ -17512,6 +17512,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Art of Folding Paper', 'How to Build a Satellite', 'The Price of Paper in Japan', 'Why Glue Is Important'], answer: 0, why: '全体として、折り紙の歴史、世界への広まり、科学での利用、今日の楽しみ方を述べている。' },
   },
   {
+    id: 'kyotsu-asking-questions',
+    title: 'The Power of Asking Questions',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Young children ask a surprising number of questions. Why is the sky blue? Where does rain come from? Why do cats have whiskers? Parents sometimes feel tired of answering them, but these questions show that children are actively trying to understand the world around them. As children grow older, however, many of them seem to ask fewer and fewer questions, especially at school.",
+      "There are several possible reasons for this change. Some students worry that their classmates will think they are slow if they ask a question that seems too simple. Others feel that there is no time to ask questions because the teacher must cover a lot of material before an exam. In some classrooms, students are mainly expected to listen and take notes, ( A ) asking questions may feel like interrupting the lesson.",
+      "Yet asking questions is one of the most effective ways to learn. When students try to put their confusion into words, they have to think carefully about what they understand and what they do not. This process alone can make their thinking clearer. In addition, a good question often helps not only the student who asks it but also others in the class, who may have been wondering about the same thing but were too shy to speak.",
+      "For these reasons, some teachers have started to encourage questions in new ways. In some classes, students write their questions on small cards, which are collected and answered at the end of the lesson, so that no one has to speak in front of everyone. Other teachers begin a new topic by asking students to make a list of everything they would like to know about it. This shows students that questions are a starting point for learning, not a sign of weakness.",
+      "Of course, learning to ask good questions takes practice. A question such as “What is the answer?” is less useful than one ( B ) explains exactly which part of a problem is difficult. However, the most important step is simply to become comfortable with asking. Students who develop this habit at school are likely to keep it for life, and the ability to ask clear questions is valuable in almost every job. As one teacher put it, a question is not a confession that you know little, but proof ( C ) you want to know more.",
+    ],
+    ja: [
+      '幼い子どもはおどろくほど多くの質問をする。空はなぜ青いの？雨はどこから来るの？ネコにはなぜひげがあるの？親はときどき答えるのにつかれてしまうが、こうした質問は、子どもが周りの世界を積極的に理解しようとしていることを示している。しかし子どもが大きくなるにつれて、とくに学校で、質問をする回数がだんだんへっていくように見える子どもが多い。',
+      'この変化には、いくつかの理由が考えられる。かんたんすぎるように見える質問をすると、同級生におそいと思われるのではないかと心配する生徒もいる。先生が試験の前に多くの内容を教えなければならないので、質問する時間がないと感じる生徒もいる。教室によっては、生徒はおもに聞いてノートをとることを期待されており、そのため質問することは授業のじゃまをすることのように感じられるかもしれない。',
+      'それでも、質問することは最も効果的な学び方の一つである。生徒が自分のとまどいを言葉にしようとすると、自分が何を理解していて何を理解していないかを注意深く考えなければならない。この過程だけでも、考えがよりはっきりすることがある。さらに、よい質問はしばしば、それをたずねた生徒だけでなく、同じことを疑問に思っていたのにはずかしくて言えなかったクラスのほかの人たちも助ける。',
+      'こうした理由から、新しい方法で質問をうながしはじめた先生もいる。あるクラスでは、生徒は小さなカードに質問を書き、それが集められて授業の終わりに答えられるので、だれもみんなの前で話さなくてよい。別の先生は、新しい単元を始めるときに、それについて知りたいことをすべてリストにするよう生徒にたのむ。このことは、質問は弱さのしるしではなく、学びの出発点だということを生徒に示している。',
+      'もちろん、よい質問のしかたを身につけるには練習が必要である。「答えは何ですか」のような質問は、問題のどの部分がむずかしいのかを正確に説明する質問よりも役に立たない。しかし最も大切な一歩は、ただ質問することに慣れることである。学校でこの習慣を身につけた生徒は一生それを持ちつづけるだろうし、はっきりした質問をする力はほとんどどんな仕事でも価値がある。ある先生が言ったように、質問は自分があまり知らないという告白ではなく、もっと知りたいという証拠なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「生徒はおもに聞くことを期待されている、だから質問は授業のじゃまのように感じられる」と結果を表すので so。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 one（＝ a question）を受け、うしろの explains の主語になるので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'proof that ～「～という証拠」。proof の内容を説明する同格の that で、うしろは完全な文（you want to know more）。' },
+    ],
+    tf: [
+      { statement: '幼い子どもの質問は、周りの世界を理解しようとしていることを示している。', answer: true, why: '第1段落 these questions show that children are actively trying to understand the world。' },
+      { statement: 'かんたんな質問をすると同級生におそいと思われると心配する生徒がいる。', answer: true, why: '第2段落 Some students worry that their classmates will think they are slow。' },
+      { statement: 'よい質問は、たずねた生徒だけの役に立つ。', answer: false, why: '第3段落 a good question often helps not only the student who asks it but also others in the class。' },
+      { statement: '筆者によれば、質問は自分があまり知らないことの告白である。', answer: false, why: '第5段落 a question is not a confession that you know little, but proof that you want to know more。' },
+    ],
+    qa: [
+      { q: 'Why do some teachers ask students to write questions on small cards?', choices: ['So that no one has to speak in front of everyone.', 'So that students can take the cards home.', 'To make the lesson longer.', 'To check students’ handwriting.'], answer: 0, why: '第4段落 so that no one has to speak in front of everyone。' },
+      { q: 'Which kind of question does the writer say is more useful?', choices: ['One that explains exactly which part of a problem is difficult.', 'One that only asks for the answer.', 'One that is asked very quickly.', 'One that is asked only before an exam.'], answer: 0, why: '第5段落 “What is the answer?” is less useful than one that explains exactly which part of a problem is difficult。' },
+    ],
+    gist: [
+      { para: 1, choices: ['生徒が学校で質問しなくなる理由', '試験の作り方', 'ノートのとり方', '先生になる方法'], answer: 0, why: '第2段落は、はずかしさや時間のなさ、授業の形など、質問がへる理由をあげている。' },
+      { para: 3, choices: ['質問をうながすための先生のくふう', 'カードの作り方', '授業時間の決め方', '同級生との遊び方'], answer: 0, why: '第4段落は、カードに書く方法やリストを作る方法など、質問をうながす先生のくふうを述べている。' },
+    ],
+    titleQ: { choices: ['The Power of Asking Questions', 'Why the Sky Is Blue', 'How to Pass Every Exam', 'Why Teachers Should Talk More'], answer: 0, why: '全体として、質問がへる理由、質問の学びへの効果、質問をうながすくふうを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
