@@ -706,6 +706,7 @@ function CharBook({ owned, fresh = '', levels }: { owned: string[]; fresh?: stri
           {got.has(pick) ? (
             <>
               <strong>{speciesOf(pick).name}</strong>：{speciesOf(pick).desc}
+              <span className="zukan-challenge">（{speciesOf(pick).egg}から生まれた）</span>
               {owned.includes(pick) && <span className="zukan-challenge">（なかまに {owned.filter((x) => x === pick).length}体）</span>}
               {levels?.[pick] !== undefined && <span className="zukan-challenge">（いちばん育っている子：Lv.{levels[pick]}）</span>}
               <span className="zukan-challenge">（今日のチャレンジ：{challengeOf(pick).icon} {challengeOf(pick).label}）</span>

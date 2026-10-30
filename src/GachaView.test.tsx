@@ -514,3 +514,12 @@ it('デザイン102：キャラ図鑑で会えた子をえらぶと、その種�
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
   expect(screen.getByText('（なかまに 2体）')).toBeInTheDocument()
 })
+
+it('デザイン104：キャラ図鑑で会えた子をえらぶと、その子が生まれたタマゴの名前も出る', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText(`（${fox.egg}から生まれた）`)).toBeInTheDocument()
+})
