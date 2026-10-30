@@ -3204,3 +3204,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑯（受け身・時制の一致の難問：was written・spoken to by・was made to・is being cleaned・will → would）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「ユニバーサルデザイン」（社会・福祉・関係代名詞 that/who／対比の while の空所）
 - 2026-10-30: デザイン：ガチャの結果に、同じタイプ（⚔🛡💪📣⚡）のなかまが何体いるかを出すようにした
+- 2026-10-30: 文法：入試の誤文訂正⑩（TOEFL・IELTS の書き言葉②：although/despite・however・in addition・because/because of・not only ～ but also・in case）10問

@@ -528,6 +528,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: '[Almost students] in my class like soccer.', choices: ['Most students', 'Almost of students', 'Most of student', 'The almost students'], answer: 0, why: 'almost は副詞なので名詞を直接説明できない：Most students（または Almost all students）。' },
     ],
   },
+  {
+    id: 'exam-fix-10',
+    title: '入試の誤文訂正⑩（TOEFL・IELTS の書き言葉②：つなぎ言葉）',
+    points: ['小論文でよく使うつなぎ言葉。although（接続詞）と despite（前置詞）、however（副詞）、in addition と in contrast、because と because of、not only A but also B の形のそろえ方など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'The plan is expensive. However, it is effective.', ja: 'その計画は費用がかかる。しかし、効果的だ。（文と文をつなぐ副詞 However）' }],
+    questions: [
+      { sentence: '[Despite] it was raining heavily, the event continued.', choices: ['Although', 'Despite of', 'In spite', 'Because of'], answer: 0, why: 'うしろが主語＋動詞（it was raining）なので接続詞 Although。despite は前置詞で名詞が続く。' },
+      { sentence: 'The plan is expensive. [Although], it is very effective.', choices: ['However', 'Even', 'Despite', 'Because'], answer: 0, why: '前の文を受けて「しかし」と新しい文を始めるのは副詞 However。although は文と文を1つにつなぐ接続詞。' },
+      { sentence: 'Regular exercise improves physical health. [In contrast], it reduces stress.', choices: ['In addition', 'On the contrary', 'Instead', 'Otherwise'], answer: 0, why: '「さらに」と利点をつけ加えるので In addition。In contrast は反対のことを述べるときに使う。' },
+      { sentence: 'Many people moved to cities [due to] they wanted better jobs.', choices: ['because', 'due', 'owing', 'because of'], answer: 0, why: 'うしろが主語＋動詞（they wanted）なので接続詞 because。due to・because of のあとは名詞。' },
+      { sentence: '[Even] the weather was bad, the match was held as planned.', choices: ['Even though', 'Even if not', 'Even so', 'Although of'], answer: 0, why: 'うしろが主語＋動詞なので接続詞 Even though「～だけれども」。Even だけでは文をつなげない。' },
+      { sentence: '[As a result of] the rain stopped, we went out for a walk.', choices: ['As soon as', 'As a result', 'Because of', 'In spite of'], answer: 0, why: 'うしろが主語＋動詞（the rain stopped）なので接続詞 As soon as「～するとすぐに」。As a result of のあとは名詞。' },
+      { sentence: 'Technology has many benefits; [for instance], it also has some serious risks.', choices: ['nevertheless', 'for example', 'as a result', 'in other words'], answer: 0, why: '利点に対して「それでもなお」危険もあると反対の内容を続けるので nevertheless。for instance は例をあげるとき。' },
+      { sentence: 'The city is famous not only for its food [but its history].', choices: ['but also for its history', 'also its history', 'but also its history for', 'and its history also'], answer: 0, why: 'not only for A but also for B と、前と同じ形（for ＋名詞）にそろえる。' },
+      { sentence: '[In spite] the high cost, many people bought the new phone.', choices: ['In spite of', 'Although', 'Even though', 'Despite of'], answer: 0, why: 'うしろが名詞（the high cost）なので前置詞 In spite of（または Despite）。' },
+      { sentence: 'You should save some money [in case of] you lose your job.', choices: ['in case', 'in case of if', 'in the case', 'because of'], answer: 0, why: 'うしろが主語＋動詞なので接続詞 in case「～する場合にそなえて」。in case of のあとは名詞。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

@@ -183,3 +183,10 @@ it('正誤問題⑯：受け身・時制の一致の難問の単元が10問あ�
   expect(u.questions).toHaveLength(10)
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('(B) spoken')
 })
+
+it('誤文訂正⑩：TOEFL・IELTS のつなぎ言葉の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-10')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('However')
+})
