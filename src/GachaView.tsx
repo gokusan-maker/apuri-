@@ -703,6 +703,9 @@ function CharBook({ owned, fresh = '', levels }: { owned: string[]; fresh?: stri
       </ul>
       {pick && (
         <p className="zukan-detail" role="status">
+          <button className="zukan-close" onClick={() => setPick(null)} aria-label="説明をとじる">
+            ✕
+          </button>
           {got.has(pick) ? (
             <>
               <strong>{speciesOf(pick).name}</strong>：{speciesOf(pick).desc}

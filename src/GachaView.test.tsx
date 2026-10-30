@@ -523,3 +523,14 @@ it('デザイン104：キャラ図鑑で会えた子をえらぶと、その子�
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
   expect(screen.getByText(`（${fox.egg}から生まれた）`)).toBeInTheDocument()
 })
+
+it('デザイン105：キャラ図鑑の詳しい説明は ✕ ボタンで閉じられる', async () => {
+  const { SPECIES } = await import('./monster')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(document.querySelector('.zukan-detail')).not.toBeNull()
+  fireEvent.click(screen.getByRole('button', { name: '説明をとじる' }))
+  expect(document.querySelector('.zukan-detail')).toBeNull()
+})
