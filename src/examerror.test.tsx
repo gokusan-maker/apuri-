@@ -148,3 +148,10 @@ it('誤文訂正⑦：比較・倒置の難問の単元が10問ある', async ()
   expect(u.questions[3].choices[u.questions[3].answer]).toBe('have I seen')
   expect(new Set(EXAM_FIX.map((x) => x.id)).size).toBe(EXAM_FIX.length)
 })
+
+it('正誤問題⑭：関係詞・接続詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-relconj')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(A) who father')
+})

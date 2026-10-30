@@ -290,6 +290,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: '(A) Two sheeps (B) were eating (C) grass (D) in the field.', choices: ['(A) Two sheeps', '(B) were eating', '(C) grass', '(D) in the field'], answer: 0, why: 'sheep は単数と複数が同じ形：Two sheep。' },
     ],
   },
+  {
+    id: 'exam-error-relconj',
+    title: '入試の正誤問題⑭（関係詞・接続詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '関係代名詞と関係副詞（which と where・why）、whose、主格の who と目的格の whom、関係代名詞のあとの目的語の重複、because と because of、whether or not に注目する。',
+    ],
+    examples: [
+      { en: 'This is the town where my father was born.', ja: 'ここは父が生まれた町だ。（うしろが完全な文なので where）' },
+      { en: 'I have a friend whose father is a pilot.', ja: '私には父親がパイロットの友だちがいる。（所有の whose）' },
+    ],
+    questions: [
+      { sentence: 'This is the town (A) which (B) my father (C) was born (D) in 1970.', choices: ['(A) which', '(B) my father', '(C) was born', '(D) in 1970'], answer: 0, why: 'うしろが完全な文（my father was born）なので関係副詞 where（または in which）：the town where my father was born。' },
+      { sentence: 'I have a friend (A) who father (B) is (C) a pilot (D) in Canada.', choices: ['(A) who father', '(B) is', '(C) a pilot', '(D) in Canada'], answer: 0, why: '「その友だちの父」と所有を表すので whose：a friend whose father is ～。' },
+      { sentence: '(A) What (B) surprised me (C) were (D) his kindness.', choices: ['(A) What', '(B) surprised me', '(C) were', '(D) his kindness'], answer: 2, why: 'What ～ が主語の名詞節は単数あつかい。補語も his kindness（単数）なので was。' },
+      { sentence: 'Tell me (A) the reason (B) which (C) you were (D) absent yesterday.', choices: ['(A) the reason', '(B) which', '(C) you were', '(D) absent yesterday'], answer: 1, why: 'the reason のあとでうしろが完全な文なら関係副詞 why：the reason why you were absent。' },
+      { sentence: 'She was absent (A) because of (B) she (C) had (D) a cold.', choices: ['(A) because of', '(B) she', '(C) had', '(D) a cold'], answer: 0, why: 'うしろが主語＋動詞（she had）なので接続詞 because。because of のあとは名詞。' },
+      { sentence: 'I (A) will go hiking (B) unless it (C) will rain (D) tomorrow.', choices: ['(A) will go hiking', '(B) unless it', '(C) will rain', '(D) tomorrow'], answer: 2, why: '条件を表す unless の節では未来のことも現在形：unless it rains。' },
+      { sentence: 'He is the only person (A) that (B) I (C) can trust (D) him.', choices: ['(A) that', '(B) I', '(C) can trust', '(D) him'], answer: 3, why: '関係代名詞 that が trust の目的語になっているので、him はいらない。' },
+      { sentence: 'Do you know (A) the man (B) whom (C) is talking (D) to Ms. Ito?', choices: ['(A) the man', '(B) whom', '(C) is talking', '(D) to Ms. Ito'], answer: 1, why: '関係代名詞が is talking の主語になるので主格の who：the man who is talking。' },
+      { sentence: 'I (A) don’t know (B) if or not (C) he will (D) come.', choices: ['(A) don’t know', '(B) if or not', '(C) he will', '(D) come'], answer: 1, why: '「～かどうか」で or not をすぐあとに続けられるのは whether：whether or not。' },
+      { sentence: 'This is the park (A) where (B) we (C) often played (D) when we are children.', choices: ['(A) where', '(B) we', '(C) often played', '(D) when we are children'], answer: 3, why: '子どものころは過去のことなので were：when we were children。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
