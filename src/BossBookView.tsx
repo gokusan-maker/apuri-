@@ -44,6 +44,12 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
         <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
           {beaten}/{all.length}
         </span>
+        {beaten < all.length && (
+          // デザイン124：まだ勝っていないボスの数
+          <span className="fold-meta" aria-label={`まだ勝っていないボス ${all.length - beaten}体`}>
+            あと{all.length - beaten}体
+          </span>
+        )}
       </summary>
       <details className="trait-guide chip-fold cf-1">
         <summary>🔮 とくぎのしくみ（4しゅるい）</summary>

@@ -309,3 +309,15 @@ it('デザイン118：ボス図鑑の「🏆 勝った回数順」で、勝っ�
   const names = [...document.querySelectorAll('.boss-book-list li.got .badge-name')].map((x) => x.textContent)
   expect(names[0]).toBe('テストボス')
 })
+
+it('デザイン124：ボス図鑑に、まだ勝っていないボスの数が「あと○体」で出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  const total = Number(screen.getByLabelText(/ボス図鑑 1 \/ \d+体/).getAttribute('aria-label')!.match(/\/ (\d+)体/)![1])
+  expect(screen.getByLabelText(`まだ勝っていないボス ${total - 1}体`).textContent).toBe(`あと${total - 1}体`)
+})
