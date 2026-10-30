@@ -3207,3 +3207,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑩（TOEFL・IELTS の書き言葉②：although/despite・however・in addition・because/because of・not only ～ but also・in case）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「はしの文化」（食・文化・関係副詞 where／結果の so の空所）
 - 2026-10-30: キャラクター追加：ツルリン（タンチョウ・しろいしっちのタマゴ・サポートのとくぎ）
+- 2026-10-30: 文法：入試の正誤問題⑰（形容詞・副詞の難問：good/well・a few/a little・late/lately・taste/look ＋形容詞・alive/living）10問

@@ -362,6 +362,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'The museum (A) was closed (B) because it (C) was (D) repairing.', choices: ['(A) was closed', '(B) because it', '(C) was', '(D) repairing'], answer: 3, why: '博物館は「修理される」側なので進行形の受け身：was being repaired。' },
     ],
   },
+  {
+    id: 'exam-error-adj',
+    title: '入試の正誤問題⑰（形容詞・副詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'good と well、a few と a little、late と lately、every ＋単数名詞、taste・look ＋形容詞、alive と living、fast の比較級に注目する。',
+    ],
+    examples: [
+      { en: 'This soup tastes wonderful.', ja: 'このスープはすばらしい味がする。（taste ＋形容詞）' },
+      { en: 'Lately, I have been very busy.', ja: '最近、とてもいそがしい。（lately ＝最近）' },
+    ],
+    questions: [
+      { sentence: 'She (A) sings (B) very (C) good (D) for a beginner.', choices: ['(A) sings', '(B) very', '(C) good', '(D) for a beginner'], answer: 2, why: '動詞 sings を説明するのは副詞 well。good は形容詞。' },
+      { sentence: 'I (A) have (B) a few (C) money (D) left.', choices: ['(A) have', '(B) a few', '(C) money', '(D) left'], answer: 1, why: 'money は数えられない名詞なので a little：a little money。' },
+      { sentence: '(A) Late, (B) I (C) have been (D) very busy.', choices: ['(A) Late,', '(B) I', '(C) have been', '(D) very busy'], answer: 0, why: '「最近」は lately。late は「おそく」。' },
+      { sentence: 'The test was easy, so (A) nearly (B) every (C) students (D) passed.', choices: ['(A) nearly', '(B) every', '(C) students', '(D) passed'], answer: 2, why: 'every のうしろは単数名詞：every student。' },
+      { sentence: 'This soup (A) tastes (B) wonderfully (C) to (D) me.', choices: ['(A) tastes', '(B) wonderfully', '(C) to', '(D) me'], answer: 1, why: 'taste は「～な味がする」で、うしろに形容詞を置く：tastes wonderful。' },
+      { sentence: '(A) The (B) alive fish (C) were swimming (D) in the tank.', choices: ['(A) The', '(B) alive fish', '(C) were swimming', '(D) in the tank'], answer: 1, why: 'alive は名詞の前に置かない（補語で使う）。名詞の前なら living：the living fish。' },
+      { sentence: 'My brother (A) can (B) run (C) much (D) more fast than me.', choices: ['(A) can', '(B) run', '(C) much', '(D) more fast than me'], answer: 3, why: 'fast の比較級は faster：much faster than me。' },
+      { sentence: 'She (A) left the room (B) without (C) saying a word, looking (D) very angrily.', choices: ['(A) left the room', '(B) without', '(C) saying a word, looking', '(D) very angrily'], answer: 3, why: 'look「～に見える」のうしろは形容詞：looking very angry。' },
+      { sentence: '(A) Most of (B) the (C) student (D) like music.', choices: ['(A) Most of', '(B) the', '(C) student', '(D) like music'], answer: 2, why: 'Most of the のうしろは特定の集団を表す複数名詞：Most of the students。' },
+      { sentence: 'I (A) feel (B) sleepy (C) because I went to bed (D) lately last night.', choices: ['(A) feel', '(B) sleepy', '(C) because I went to bed', '(D) lately last night'], answer: 3, why: '「おそく（寝た）」は late。lately は「最近」。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

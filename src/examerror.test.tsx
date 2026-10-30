@@ -190,3 +190,10 @@ it('誤文訂正⑩：TOEFL・IELTS のつなぎ言葉の単元が10問ある', 
   expect(u.questions).toHaveLength(10)
   expect(u.questions[1].choices[u.questions[1].answer]).toBe('However')
 })
+
+it('正誤問題⑰：形容詞・副詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-adj')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[0].choices[u.questions[0].answer]).toBe('(C) good')
+})
