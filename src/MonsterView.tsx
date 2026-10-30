@@ -755,6 +755,15 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 56 L50 70" stroke="#451a03" strokeWidth="5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'fireflysquid')
+    return (
+      <g>
+        {/* 体の光る点 */}
+        <circle cx="34" cy="68" r="2.5" fill="#60a5fa" />
+        <circle cx="50" cy="74" r="2.5" fill="#60a5fa" />
+        <circle cx="66" cy="68" r="2.5" fill="#60a5fa" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

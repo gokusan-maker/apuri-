@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'fireflysquid', name: 'ホタルイカン', egg: 'ふかいうみのひかりのタマゴ', token: 'イカ', bigToken: 'ホタルイカン', color: '#93c5fd', line: '#1e3a8a', rate: 0.02, desc: '春の夜の海で青く光るホタルイカ。暗い海でも光で仲間に合図を送るように、むずかしい問題でも答えの光を見つける。' },
   { id: 'coati', name: 'ハナグマン', egg: 'みなみのもりのタマゴ', token: 'ハナ', bigToken: 'ハナグマン', color: '#b45309', line: '#451a03', rate: 0.02, desc: '長い鼻としっぽをもつハナグマ。鼻で地面をかぎまわって食べ物を見つけるように、長文の中から答えのヒントをかぎ当てる。' },
   { id: 'reindeer', name: 'トナカイン', egg: 'ゆきのそりのタマゴ', token: 'トナ', bigToken: 'トナカイン', color: '#a16207', line: '#422006', rate: 0.02, desc: '雪の国で長い旅をするトナカイ。何百キロも歩きつづけるねばり強さで、毎日の単語の旅もこつこつ続ける。' },
   { id: 'phoenix', name: 'フェニックス', egg: 'ほのおのはねのタマゴ', token: 'フェ', bigToken: 'フェニックス', color: '#f97316', line: '#7c2d12', rate: 0.02, desc: '100体目の記念キャラ。伝説の火の鳥フェニックス。何度まちがえても炎の中からよみがえるように、あきらめずに単語をおぼえなおす。' },
