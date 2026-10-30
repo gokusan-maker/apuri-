@@ -242,6 +242,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'He (A) lay (B) the book (C) on the desk and (D) went out.', choices: ['(A) lay', '(B) the book', '(C) on the desk and', '(D) went out'], answer: 0, why: '「（物を）置く」は他動詞 lay の過去形 laid。lay は lie（横になる）の過去形。' },
     ],
   },
+  {
+    id: 'exam-error-prep',
+    title: '入試の正誤問題⑫（前置詞・冠詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'arrive in / at、for と since、an honest、by bus（冠詞なし）、Mt. ～（the なし）、時刻の at など、前置詞と冠詞のこまかいきまりに注目する。',
+    ],
+    examples: [
+      { en: 'She arrived in Tokyo late last night.', ja: '彼女は昨夜おそく東京に着いた。（arrive in ＋都市）' },
+      { en: 'We usually go to school by bus.', ja: '私たちはふだんバスで学校へ行く。（by ＋乗り物に冠詞なし）' },
+    ],
+    questions: [
+      { sentence: 'She (A) arrived (B) to (C) Tokyo (D) late last night.', choices: ['(A) arrived', '(B) to', '(C) Tokyo', '(D) late last night'], answer: 1, why: 'arrive のあとは到着する場所に合わせて in（都市・国）や at（駅など）：arrived in Tokyo。to は使わない。' },
+      { sentence: 'I (A) have lived (B) in this town (C) since (D) five years ago and more.', choices: ['(A) have lived', '(B) in this town', '(C) since', '(D) five years ago and more'], answer: 2, why: '期間（five years）は for で表す。since は「～以来」で起点に使う。' },
+      { sentence: 'He (A) is (B) a honest man who (C) works (D) at a bank.', choices: ['(A) is', '(B) a honest man who', '(C) works', '(D) at a bank'], answer: 1, why: 'honest は h を発音せず母音で始まるので an honest man。' },
+      { sentence: 'We (A) usually go (B) to school (C) by the bus (D) every day.', choices: ['(A) usually go', '(B) to school', '(C) by the bus', '(D) every day'], answer: 2, why: '交通手段の by のあとは冠詞をつけない：by bus。' },
+      { sentence: '(A) The water (B) in this river (C) is very clean, so we can swim (D) at it.', choices: ['(A) The water', '(B) in this river', '(C) is very clean, so we can swim', '(D) at it'], answer: 3, why: '川の「中で」泳ぐので in：swim in it。' },
+      { sentence: '(A) The Mt. Fuji is (B) the highest mountain (C) in (D) Japan.', choices: ['(A) The Mt. Fuji is', '(B) the highest mountain', '(C) in', '(D) Japan'], answer: 0, why: '山の名前（Mt. ～）には the をつけない：Mt. Fuji is ～。' },
+      { sentence: '(A) On the morning (B) of May 5, he (C) left home (D) in seven o’clock.', choices: ['(A) On the morning', '(B) of May 5, he', '(C) left home', '(D) in seven o’clock'], answer: 3, why: '時刻には at：at seven o’clock。特定の日の朝は on the morning of ～ で正しい。' },
+      { sentence: 'He (A) apologized (B) to me (C) for (D) to be late.', choices: ['(A) apologized', '(B) to me', '(C) for', '(D) to be late'], answer: 3, why: '前置詞 for のあとは動名詞：for being late。' },
+      { sentence: 'I (A) discussed about (B) the plan (C) with (D) my teacher.', choices: ['(A) discussed about', '(B) the plan', '(C) with', '(D) my teacher'], answer: 0, why: 'discuss は他動詞で about はいらない：discussed the plan。' },
+      { sentence: 'Please (A) wait (B) for me (C) at front of (D) the station.', choices: ['(A) wait', '(B) for me', '(C) at front of', '(D) the station'], answer: 2, why: '「～の前で」は in front of：in front of the station。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

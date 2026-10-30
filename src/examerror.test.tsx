@@ -118,3 +118,10 @@ it('誤文訂正⑤：時制・仮定法の難問の単元が10問ある', async
   expect(u.questions).toHaveLength(10)
   expect(u.questions[4].choices[u.questions[4].answer]).toBe('could')
 })
+
+it('正誤問題⑫：前置詞・冠詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-prep')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[2].choices[u.questions[2].answer]).toBe('(B) a honest man who')
+})
