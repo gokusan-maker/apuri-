@@ -486,6 +486,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I don’t know [what to do it] next.', choices: ['what to do', 'what doing it', 'to do what', 'what should do'], answer: 0, why: '疑問詞＋ to 不定詞「何を～すべきか」：what to do。what が do の目的語なので it はいらない。' },
     ],
   },
+  {
+    id: 'exam-fix-9',
+    title: '入試の誤文訂正⑨（語順・語法の難問）',
+    points: ['間接疑問の語順、such a ＋形容詞＋名詞、What do you think ～?、reach / resemble（前置詞なし）、lend と borrow、Most と Almost など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'What do you think about this plan?', ja: 'この計画についてどう思いますか。（「どう」でも How ではなく What）' }],
+    questions: [
+      { sentence: 'I don’t know [what is his name].', choices: ['what his name is', 'what is name his', 'his name what is', 'what name is his'], answer: 0, why: '文の中に入る疑問（間接疑問）は 疑問詞＋主語＋動詞 の順：what his name is。' },
+      { sentence: 'He is [a so kind] man that everyone likes him.', choices: ['such a kind', 'so a kind', 'a such kind', 'kind so a'], answer: 0, why: 'such a ＋形容詞＋名詞＋ that ～：such a kind man。' },
+      { sentence: '[How do you think] about this plan?', choices: ['What do you think', 'How think you', 'What you think', 'How are you thinking'], answer: 0, why: '「どう思うか」と考えの内容をたずねるときは What do you think ～?。' },
+      { sentence: 'He [reached to] the station at noon.', choices: ['reached', 'reached at', 'arrived', 'got'], answer: 0, why: 'reach は他動詞で前置詞はいらない：reached the station。arrive・get なら at / to が必要。' },
+      { sentence: 'She [resembles with] her mother very much.', choices: ['resembles', 'is resembling', 'resembles to', 'resemble with'], answer: 0, why: 'resemble「～に似ている」は他動詞で前置詞はいらず、ふつう進行形にもしない：resembles her mother。' },
+      { sentence: 'Can you [borrow me] your pen for a minute?', choices: ['lend me', 'borrow to me', 'rent me', 'lend to me'], answer: 0, why: '「貸す」は lend ＋人＋物：lend me your pen。borrow は「借りる」。' },
+      { sentence: 'There [is a lot of] people in the park today.', choices: ['are a lot of', 'is many', 'are much', 'is lots'], answer: 0, why: 'There is / are のうしろの名詞が people（複数）なので are：There are a lot of people。' },
+      { sentence: 'I have [never been seen] such a big fish.', choices: ['never seen', 'been never seen', 'seen never', 'never be seen'], answer: 0, why: '「見たことがない」は現在完了の経験 have never ＋過去分詞：have never seen。' },
+      { sentence: 'It [costed] me 5,000 yen to fix my bike.', choices: ['cost', 'was costing', 'costs to', 'was cost'], answer: 0, why: 'cost の過去形は cost（原形と同じ形）。It cost me ～ to …「…するのに～かかった」。' },
+      { sentence: '[Almost students] in my class like soccer.', choices: ['Most students', 'Almost of students', 'Most of student', 'The almost students'], answer: 0, why: 'almost は副詞なので名詞を直接説明できない：Most students（または Almost all students）。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）

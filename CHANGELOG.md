@@ -3198,3 +3198,4 @@
 - 2026-10-30: 文法：入試の正誤問題⑮（動名詞・分詞の難問：remember -ing・avoid/mind/be worth -ing・boring/bored・with ＋名詞＋過去分詞）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「返却できるガラスびん」（環境・資源・非制限の which／関係代名詞 that の空所）
 - 2026-10-30: キャラクター追加：マンボン（マンボウ・おおうみのひなたタマゴ・ねばりのとくぎ）
+- 2026-10-30: 文法：入試の誤文訂正⑨（語順・語法の難問：間接疑問・such a ～・What do you think・reach/resemble・lend/borrow・Most students）10問
