@@ -2157,9 +2157,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The castle is said to have been built 400 years ago.', ja: 'その城は400年前に建てられたと言われている。' },
     ],
     questions: [
-      { sentence: 'He seems to ___ a cold last week.', choices: ['have had', 'had', 'having'], answer: 0, why: 'last week（過去）のことを今「〜したようだ」と言うので完了不定詞 to have had。' },
-      { sentence: 'The bridge is said to have ___ built in 1900.', choices: ['been', 'be', 'being'], answer: 0, why: '橋は「建てられた」と受け身なので to have been built。' },
-      { sentence: 'She appears ___ the news already.', choices: ['to have heard', 'to hearing', 'hear'], answer: 0, why: '「もう知らせを聞いたようだ」。前のことなので to have heard。' },
+      { sentence: 'He seems to ___ a cold last week.', choices: ['have had', 'had', 'having', 'has had'], answer: 0, why: 'last week（過去）のことを今「〜したようだ」と言うので完了不定詞 to have had。' },
+      { sentence: 'The bridge is said to have ___ built in 1900.', choices: ['been', 'be', 'being', 'is'], answer: 0, why: '橋は「建てられた」と受け身なので to have been built。' },
+      { sentence: 'She appears ___ the news already.', choices: ['to have heard', 'to hearing', 'hear', 'to has heard'], answer: 0, why: '「もう知らせを聞いたようだ」。前のことなので to have heard。' },
     ],
   },
   {
@@ -2191,9 +2191,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Having lived in Canada, she speaks English well.', ja: 'カナダに住んでいたので、彼女は英語を上手に話す。' },
     ],
     questions: [
-      { sentence: '___ finished the test, he left the room.', choices: ['Having', 'Being', 'Had'], answer: 0, why: '「テストを終えてから」と前のことなので Having ＋ 過去分詞。' },
-      { sentence: 'Having ___ the movie before, I knew the ending.', choices: ['seen', 'saw', 'seeing'], answer: 0, why: 'Having のあとは過去分詞 seen。' },
-      { sentence: 'Having been ___ in old English, the letter was hard to read.', choices: ['written', 'writing', 'wrote'], answer: 0, why: '手紙は「書かれた」側なので Having been written。' },
+      { sentence: '___ finished the test, he left the room.', choices: ['Having', 'Being', 'Had', 'Have'], answer: 0, why: '「テストを終えてから」と前のことなので Having ＋ 過去分詞。' },
+      { sentence: 'Having ___ the movie before, I knew the ending.', choices: ['seen', 'saw', 'seeing', 'see'], answer: 0, why: 'Having のあとは過去分詞 seen。' },
+      { sentence: 'Having been ___ in old English, the letter was hard to read.', choices: ['written', 'writing', 'wrote', 'write'], answer: 0, why: '手紙は「書かれた」側なので Having been written。' },
     ],
   },
   {
@@ -2225,9 +2225,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'But for your advice, I would have made a big mistake.', ja: 'あなたの助言がなかったら、大きなまちがいをしていただろう。' },
     ],
     questions: [
-      { sentence: '___ the internet, our lives would be very different.', choices: ['Without', 'With', 'Unless'], answer: 0, why: '「インターネットがなければ」。Unless のあとには文（主語＋動詞）が必要。' },
-      { sentence: "Without your help, I ___ finished the work yesterday.", choices: ["couldn't have", "can't", "won't"], answer: 0, why: '過去（yesterday）のことの仮定なので could have ＋ 過去分詞の否定。' },
-      { sentence: 'But ___ the map, we would get lost.', choices: ['for', 'with', 'by'], answer: 0, why: 'But for 〜「〜がなければ」。' },
+      { sentence: '___ the internet, our lives would be very different.', choices: ['Without', 'With', 'Unless', 'Although'], answer: 0, why: '「インターネットがなければ」。Unless のあとには文（主語＋動詞）が必要。' },
+      { sentence: "Without your help, I ___ finished the work yesterday.", choices: ["couldn't have", "can't", "won't", "wouldn't"], answer: 0, why: '過去（yesterday）のことの仮定なので could have ＋ 過去分詞の否定。' },
+      { sentence: 'But ___ the map, we would get lost.', choices: ['for', 'with', 'by', 'of'], answer: 0, why: 'But for 〜「〜がなければ」。' },
     ],
   },
   {
@@ -2242,9 +2242,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My brother prefers reading to watching TV.', ja: '兄はテレビを見るより本を読むほうが好きだ。' },
     ],
     questions: [
-      { sentence: "I'd rather ___ a bus than walk.", choices: ['take', 'to take', 'taking'], answer: 0, why: 'would rather のあとは動詞の原形。' },
-      { sentence: 'She prefers tea ___ coffee.', choices: ['to', 'than', 'from'], answer: 0, why: 'prefer A to B「B より A が好き」。' },
-      { sentence: "I'd rather ___ talk about it now.", choices: ['not', "don't", 'no'], answer: 0, why: 'would rather の否定は would rather not ＋ 原形。' },
+      { sentence: "I'd rather ___ a bus than walk.", choices: ['take', 'to take', 'taking', 'took'], answer: 0, why: 'would rather のあとは動詞の原形。' },
+      { sentence: 'She prefers tea ___ coffee.', choices: ['to', 'than', 'from', 'for'], answer: 0, why: 'prefer A to B「B より A が好き」。' },
+      { sentence: "I'd rather ___ talk about it now.", choices: ['not', "don't", 'no', "won't"], answer: 0, why: 'would rather の否定は would rather not ＋ 原形。' },
     ],
   },
   {
@@ -2259,9 +2259,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I could not help laughing at his joke.', ja: '彼の冗談に笑わずにはいられなかった。' },
     ],
     questions: [
-      { sentence: 'It is time we ___ home.', choices: ['went', 'go', 'going'], answer: 0, why: 'It is time ＋ 主語 ＋ 過去形。' },
-      { sentence: 'She could not help ___ when she heard the news.', choices: ['crying', 'cry', 'to cry'], answer: 0, why: 'cannot help -ing「〜せずにはいられない」。' },
-      { sentence: "It's high time you ___ your room.", choices: ['cleaned', 'clean', 'will clean'], answer: 0, why: 'high time でも過去形を使う。' },
+      { sentence: 'It is time we ___ home.', choices: ['went', 'go', 'going', 'will go'], answer: 0, why: 'It is time ＋ 主語 ＋ 過去形。' },
+      { sentence: 'She could not help ___ when she heard the news.', choices: ['crying', 'cry', 'to cry', 'cried'], answer: 0, why: 'cannot help -ing「〜せずにはいられない」。' },
+      { sentence: "It's high time you ___ your room.", choices: ['cleaned', 'clean', 'will clean', 'are cleaning'], answer: 0, why: 'high time でも過去形を使う。' },
     ],
   },
   {
@@ -2276,9 +2276,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Take an umbrella in case it rains.', ja: '雨がふる場合に備えて、かさを持っていきなさい。' },
     ],
     questions: [
-      { sentence: '___ I know, he has never been late.', choices: ['As far as', 'As long as', 'In case'], answer: 0, why: 'As far as I know「私の知るかぎりでは」（知識の範囲）。' },
-      { sentence: "Write down my number in case you ___ lost.", choices: ['get', 'will get', 'got'], answer: 0, why: 'in case のあとは未来のことでも現在形。' },
-      { sentence: "I don't mind ___ you are happy.", choices: ['as long as', 'as far as', 'in case'], answer: 0, why: '「きみが幸せでありさえすれば」という条件なので as long as。' },
+      { sentence: '___ I know, he has never been late.', choices: ['As far as', 'As long as', 'In case', 'As soon as'], answer: 0, why: 'As far as I know「私の知るかぎりでは」（知識の範囲）。' },
+      { sentence: "Write down my number in case you ___ lost.", choices: ['get', 'will get', 'got', 'would get'], answer: 0, why: 'in case のあとは未来のことでも現在形。' },
+      { sentence: "I don't mind ___ you are happy.", choices: ['as long as', 'as far as', 'in case', 'so that'], answer: 0, why: '「きみが幸せでありさえすれば」という条件なので as long as。' },
     ],
   },
   {
@@ -2293,9 +2293,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Should you need any help, please call me.', ja: '万一助けが必要なら、電話してください。' },
     ],
     questions: [
-      { sentence: '___ I left earlier, I would have caught the train.', choices: ['Had', 'If', 'Have'], answer: 0, why: 'If I had left の if を省いて Had I left。If なら If I had left になる。' },
-      { sentence: '___ you have any questions, feel free to ask.', choices: ['Should', 'Would', 'Could'], answer: 0, why: 'Should you 〜「万一〜なら」。' },
-      { sentence: '___ I you, I would accept the offer.', choices: ['Were', 'Was', 'Am'], answer: 0, why: 'If I were you の倒置で Were I you。' },
+      { sentence: '___ I left earlier, I would have caught the train.', choices: ['Had', 'If', 'Have', 'Did'], answer: 0, why: 'If I had left の if を省いて Had I left。If なら If I had left になる。' },
+      { sentence: '___ you have any questions, feel free to ask.', choices: ['Should', 'Would', 'Could', 'Will'], answer: 0, why: 'Should you 〜「万一〜なら」。' },
+      { sentence: '___ I you, I would accept the offer.', choices: ['Were', 'Was', 'Am', 'Be'], answer: 0, why: 'If I were you の倒置で Were I you。' },
     ],
   },
   {
@@ -2344,9 +2344,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The rich should help the poor.', ja: 'お金持ちの人々はまずしい人々を助けるべきだ。' },
     ],
     questions: [
-      { sentence: 'The young ___ often interested in new technology.', choices: ['are', 'is', 'was'], answer: 0, why: 'the young は「若い人々」なので複数あつかい。' },
-      { sentence: 'We collected money for ___.', choices: ['the poor', 'the poors', 'poor'], answer: 0, why: 'the ＋ 形容詞で「〜な人々」。s はつけない。' },
-      { sentence: 'Schools should be easy to use for ___ blind.', choices: ['the', 'a', 'an'], answer: 0, why: 'the blind で「目の不自由な人々」。' },
+      { sentence: 'The young ___ often interested in new technology.', choices: ['are', 'is', 'was', 'has'], answer: 0, why: 'the young は「若い人々」なので複数あつかい。' },
+      { sentence: 'We collected money for ___.', choices: ['the poor', 'the poors', 'poor', 'a poor'], answer: 0, why: 'the ＋ 形容詞で「〜な人々」。s はつけない。' },
+      { sentence: 'Schools should be easy to use for ___ blind.', choices: ['the', 'a', 'an', 'some'], answer: 0, why: 'the blind で「目の不自由な人々」。' },
     ],
   },
   {
@@ -2361,9 +2361,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She had hardly sat down when the phone rang.', ja: '彼女がすわったとたんに、電話が鳴った。' },
     ],
     questions: [
-      { sentence: 'No sooner had he come home ___ he went to bed.', choices: ['than', 'when', 'that'], answer: 0, why: 'no sooner 〜 than の組み合わせ。' },
-      { sentence: 'Hardly had we started ___ it began to rain.', choices: ['when', 'than', 'so'], answer: 0, why: 'hardly 〜 when の組み合わせ。' },
-      { sentence: 'No sooner ___ the bell rung than the students ran out.', choices: ['had', 'did', 'was'], answer: 0, why: 'No sooner を文頭に出すと had ＋ 主語 ＋ 過去分詞の倒置。' },
+      { sentence: 'No sooner had he come home ___ he went to bed.', choices: ['than', 'when', 'that', 'as'], answer: 0, why: 'no sooner 〜 than の組み合わせ。' },
+      { sentence: 'Hardly had we started ___ it began to rain.', choices: ['when', 'than', 'so', 'then'], answer: 0, why: 'hardly 〜 when の組み合わせ。' },
+      { sentence: 'No sooner ___ the bell rung than the students ran out.', choices: ['had', 'did', 'was', 'has'], answer: 0, why: 'No sooner を文頭に出すと had ＋ 主語 ＋ 過去分詞の倒置。' },
     ],
   },
   {
@@ -2395,9 +2395,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The bus is late. We might as well walk.', ja: 'バスがおくれている。歩いたほうがいいかもね。' },
     ],
     questions: [
-      { sentence: 'You studied all night, so you may ___ be sleepy.', choices: ['well', 'good', 'as'], answer: 0, why: 'may well ＋ 原形「〜するのももっともだ」。' },
-      { sentence: "There's nothing to do. We might as well ___ to bed.", choices: ['go', 'to go', 'going'], answer: 0, why: 'might as well のあとは動詞の原形。' },
-      { sentence: 'It ___ well rain this afternoon. Look at those clouds.', choices: ['may', 'must', 'should'], answer: 0, why: 'may well「たぶん〜だろう」。' },
+      { sentence: 'You studied all night, so you may ___ be sleepy.', choices: ['well', 'good', 'as', 'much'], answer: 0, why: 'may well ＋ 原形「〜するのももっともだ」。' },
+      { sentence: "There's nothing to do. We might as well ___ to bed.", choices: ['go', 'to go', 'going', 'went'], answer: 0, why: 'might as well のあとは動詞の原形。' },
+      { sentence: 'It ___ well rain this afternoon. Look at those clouds.', choices: ['may', 'must', 'should', 'will'], answer: 0, why: 'may well「たぶん〜だろう」。' },
     ],
   },
   {
