@@ -125,3 +125,10 @@ it('正誤問題⑫：前置詞・冠詞の難問の単元が10問ある', async
   expect(u.questions).toHaveLength(10)
   expect(u.questions[2].choices[u.questions[2].answer]).toBe('(B) a honest man who')
 })
+
+it('誤文訂正⑥：接続詞・分詞構文の難問の単元が10問ある', async () => {
+  const { EXAM_FIX } = await import('./examerror')
+  const u = EXAM_FIX.find((x) => x.id === 'exam-fix-6')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('Seen')
+})

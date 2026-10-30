@@ -360,6 +360,24 @@ const RAW_FIX: GrammarUnit[] = [
       { sentence: 'I [am living] in Osaka for ten years now.', choices: ['have been living', 'was living', 'had lived', 'will live'], answer: 0, why: 'for ten years now「今まで10年間ずっと」は現在完了進行形：have been living。' },
     ],
   },
+  {
+    id: 'exam-fix-6',
+    title: '入試の誤文訂正⑥（接続詞・分詞構文の難問）',
+    points: ['分詞構文（意味上の主語・受け身・完了形・否定の not の位置）、付帯状況の with、命令文＋ or、unless、so / such … that など。［ ］の部分を正しくするものを4つから選ぶ。'],
+    examples: [{ en: 'Seen from the plane, the city looked like a toy.', ja: '飛行機から見ると、町はおもちゃのように見えた。（町は「見られる」ので過去分詞 Seen）' }],
+    questions: [
+      { sentence: '[Raining heavily], we stayed at home all day.', choices: ['It raining heavily', 'Rained heavily', 'Having rained heavily', 'To rain heavily'], answer: 0, why: '雨がふるのは we ではないので、分詞構文の前に意味上の主語 It を置く（独立分詞構文）：It raining heavily。' },
+      { sentence: '[Seeing] from the plane, the city looked like a toy.', choices: ['Seen', 'Being seeing', 'Having seeing', 'To see'], answer: 0, why: '主語の the city は「見られる」側なので過去分詞 Seen。' },
+      { sentence: '[Knowing not] what to say, she remained silent.', choices: ['Not knowing', 'Knowing no', 'Not knew', 'No knowing'], answer: 0, why: '分詞構文の否定は not を分詞の前に置く：Not knowing。' },
+      { sentence: '[Having finishing] my homework, I went out to play.', choices: ['Having finished', 'Have finished', 'Had finished', 'Finishing having'], answer: 0, why: '「～し終えてから」と前のことを表す完了形の分詞構文は Having ＋過去分詞：Having finished。' },
+      { sentence: 'You can use my car [as long] you drive carefully.', choices: ['as long as', 'so long', 'as far', 'long as'], answer: 0, why: '条件「～しさえすれば」は as long as ＋主語＋動詞。' },
+      { sentence: 'Though it was very cold, [but we went] swimming in the sea.', choices: ['we went', 'and we went', 'so we went', 'but went'], answer: 0, why: 'Though と but をいっしょに使わない。Though ～, we went … とする。' },
+      { sentence: 'Hurry up, [and] you will miss the last bus.', choices: ['or', 'but', 'so', 'then'], answer: 0, why: '命令文＋ or「～しなさい、さもないと…」。and だと「そうすれば乗りおくれる」となり意味が合わない。' },
+      { sentence: '[Unless you don’t study] harder, you will fail the exam.', choices: ['Unless you study', 'If you study', 'Unless you studied', 'If you don’t studied'], answer: 0, why: 'unless は「～しないかぎり」で、すでに否定の意味をふくむので not はいらない：Unless you study。' },
+      { sentence: 'It was [such hot day] that we went to the beach.', choices: ['such a hot day', 'so hot day', 'such hot a day', 'so a hot day'], answer: 0, why: 'such ＋ a ＋形容詞＋名詞＋ that ～：such a hot day。so を使うなら so hot a day。' },
+      { sentence: 'He sat on the sofa [with his eyes closing].', choices: ['with his eyes closed', 'with closing his eyes', 'with his eyes close', 'his eyes closing with'], answer: 0, why: '付帯状況の with ＋名詞＋分詞。目は「閉じられた」状態なので過去分詞：with his eyes closed。' },
+    ],
+  },
 ]
 
 // 正解の位置がかたよらないよう、問題ごとに選択肢をずらす（正解は書いた順のいちばん前）
