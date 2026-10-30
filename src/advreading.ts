@@ -17356,6 +17356,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Power of Walking', 'How to Build a Sports Club', 'The History of Running', 'Why Elevators Are Necessary'], answer: 0, why: '全体として、歩くことの体と心への利点と、続けるくふうを述べている。' },
   },
   {
+    id: 'kyotsu-fireflies',
+    title: 'Bringing Back the Fireflies',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "On warm evenings in early summer, small lights can sometimes be seen floating above rivers and rice fields in Japan. These lights are made by fireflies, insects that produce light inside their bodies. For centuries, watching fireflies has been a popular summer activity, and they appear in many old poems and stories. Today, however, fireflies are much harder to find than they once were, especially near large towns and cities.",
+      "There are several reasons why the number of fireflies has fallen. Many kinds of fireflies spend the early part of their lives in water, where the young insects feed on small snails. When rivers were straightened and lined with concrete to prevent flooding, the places ( A ) the young fireflies and the snails lived were often destroyed. Pollution from homes, factories, and farms also made some rivers too dirty for them to survive.",
+      "Light is another problem. Fireflies use their flashing lights to find partners, and each kind has its own pattern of flashes. Bright street lamps, car headlights, and lights from buildings can make it difficult for fireflies to see one another's signals, so they may fail to find partners and produce young. In this way, the lights that make human life convenient at night can quietly harm these small insects. Even a single bright lamp near a river may be enough to keep fireflies away from that area.",
+      "In many communities, people have started working to bring fireflies back. Volunteers clean rivers, remove rubbish, and plant grass along the banks so that the young insects have places to hide. Some towns have replaced concrete walls with stones and soil, ( B ) others have asked residents to turn off unnecessary lights during the firefly season. Schools sometimes raise young fireflies in classrooms and release them into local rivers, which helps children learn about nature.",
+      "These efforts show that protecting fireflies is not only about saving one kind of insect. A river ( C ) fireflies can live is usually a river with clean water, healthy plants, and many other living things. For this reason, fireflies are sometimes called a sign of a healthy environment. When people see their soft lights return on a summer night, they can feel that their work to improve the local environment has been worthwhile.",
+    ],
+    ja: [
+      '初夏のあたたかい夕方、日本の川や田んぼの上に、小さな光がただよっているのが見えることがある。この光はホタルという、体の中で光を作る昆虫が出している。何世紀にもわたって、ホタルを見ることは夏の人気のある楽しみであり、ホタルは多くの古い詩や物語に登場する。しかし今日、とくに大きな町や都市の近くでは、ホタルはかつてよりもずっと見つけにくくなっている。',
+      'ホタルの数がへった理由はいくつかある。多くの種類のホタルは、生まれてしばらくのあいだを水の中ですごし、そこで幼虫は小さな巻き貝を食べる。洪水を防ぐために川がまっすぐにされ、コンクリートでおおわれると、ホタルの幼虫や巻き貝がすんでいた場所はしばしばこわされた。家や工場、農地から出る汚れも、いくつかの川をホタルが生きられないほどよごしてしまった。',
+      '光も別の問題である。ホタルは点めつする光を使って相手を見つけ、種類ごとに独自の点めつのパターンをもっている。明るい街灯や車のヘッドライト、建物の明かりは、ホタルがおたがいの合図を見るのをむずかしくすることがあり、そのためホタルは相手を見つけられず、子孫を残せないかもしれない。このように、夜の人間の生活を便利にする明かりが、この小さな昆虫を静かに傷つけることがあるのである。川の近くにある明るい電灯がたった1つでも、ホタルをその場所から遠ざけるのに十分かもしれない。',
+      '多くの地域で、人々はホタルを取りもどすための活動を始めている。ボランティアは川をそうじし、ごみを取りのぞき、幼虫がかくれる場所をもてるように岸に草を植える。コンクリートのかべを石や土に取りかえた町もあれば、ホタルの季節には住民に不要な明かりを消すようたのんでいる町もある。学校では教室でホタルの幼虫を育てて地元の川に放すこともあり、それは子どもたちが自然について学ぶのに役立っている。',
+      'こうした取り組みは、ホタルを守ることが一種類の昆虫を救うことだけではないことを示している。ホタルがすめる川は、たいてい、きれいな水と元気な植物、そしてほかの多くの生き物がいる川である。このため、ホタルはときに健康な環境のしるしとよばれる。夏の夜にそのやわらかな光がもどってくるのを見ると、人々は地域の環境をよくするための自分たちの努力がむくわれたと感じることができるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は the places（場所）で、うしろが完全な文（the young fireflies and the snails lived）なので関係副詞 where。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'until'], answer: 0, why: '「～した町もあれば、一方で…した町もある」と2つを対比するので while（一方で）。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'who'], answer: 0, why: '先行詞は A river（場所）で、うしろが完全な文（fireflies can live）なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '多くの種類のホタルは、生まれてしばらく水の中ですごす。', answer: true, why: '第2段落 Many kinds of fireflies spend the early part of their lives in water。' },
+      { statement: 'ホタルの光の点めつのパターンは、どの種類でも同じである。', answer: false, why: '第3段落 each kind has its own pattern of flashes。' },
+      { statement: 'ホタルの季節に不要な明かりを消すよう住民にたのむ町がある。', answer: true, why: '第4段落 others have asked residents to turn off unnecessary lights during the firefly season。' },
+      { statement: '筆者は、ホタルを守ることはその昆虫だけのためで、ほかの生き物には関係ないと述べている。', answer: false, why: '第5段落 protecting fireflies is not only about saving one kind of insect。' },
+    ],
+    qa: [
+      { q: 'Why can bright lights at night be a problem for fireflies?', choices: ['They make it hard for fireflies to see each other’s signals.', 'They make the rivers too warm.', 'They kill the snails in the water.', 'They make the fireflies grow too fast.'], answer: 0, why: '第3段落 lights … can make it difficult for fireflies to see one another\'s signals。' },
+      { q: 'Which is NOT mentioned as an activity to bring fireflies back?', choices: ['Selling fireflies to visitors.', 'Cleaning rivers and removing rubbish.', 'Planting grass along the banks.', 'Raising young fireflies in classrooms.'], answer: 0, why: '第4段落にホタルを売る話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['ホタルがへった理由（川の工事と汚れ）', '巻き貝の料理のしかた', '洪水の歴史', '工場の作り方'], answer: 0, why: '第2段落は、川の工事で幼虫や巻き貝のすみかがこわされたことや汚れを理由としてあげている。' },
+      { para: 3, choices: ['ホタルを取りもどすための地域の取り組み', '学校の教室のかざり方', '石と土の値段', '夏祭りの準備'], answer: 0, why: '第4段落は、ボランティアや町、学校によるホタルを取りもどす活動を述べている。' },
+    ],
+    titleQ: { choices: ['Bringing Back the Fireflies', 'How to Make Street Lamps', 'The History of Rice Fields', 'Why Insects Are Dangerous'], answer: 0, why: '全体として、ホタルがへった理由と、ホタルを取りもどす取り組み、その意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
