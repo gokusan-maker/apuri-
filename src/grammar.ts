@@ -2480,9 +2480,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'They say the new shop is very popular.', ja: '新しい店はとても人気があるそうだ。' },
     ],
     questions: [
-      { sentence: 'It is ___ that the lake has a monster.', choices: ['said', 'saying', 'say'], answer: 0, why: 'It is said that 〜（受け身）。' },
-      { sentence: '___ say that this winter will be cold.', choices: ['They', 'It', 'There'], answer: 0, why: 'They say 〜「〜だそうだ」。' },
-      { sentence: 'He is said ___ a good cook.', choices: ['to be', 'that he is', 'being'], answer: 0, why: '主語を前に出すと is said to ＋ 動詞の原形。' },
+      { sentence: 'It is ___ that the lake has a monster.', choices: ['said', 'saying', 'say', 'says'], answer: 0, why: 'It is said that 〜（受け身）。' },
+      { sentence: '___ say that this winter will be cold.', choices: ['They', 'It', 'There', 'This'], answer: 0, why: 'They say 〜「〜だそうだ」。' },
+      { sentence: 'He is said ___ a good cook.', choices: ['to be', 'that he is', 'being', 'be'], answer: 0, why: '主語を前に出すと is said to ＋ 動詞の原形。' },
     ],
   },
   {
@@ -2565,9 +2565,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Cheese is made from milk.', ja: 'チーズは牛乳から作られる。' },
     ],
     questions: [
-      { sentence: 'This chair is made ___ wood.', choices: ['of', 'at', 'by'], answer: 0, why: '材料（木）が見てわかるので made of。' },
-      { sentence: 'His name is known ___ everyone in the town.', choices: ['to', 'at', 'for'], answer: 0, why: 'be known to 〜「〜に知られている」。' },
-      { sentence: 'The box was filled ___ old letters.', choices: ['with', 'of', 'to'], answer: 0, why: 'be filled with 〜「〜でいっぱいだ」。' },
+      { sentence: 'This chair is made ___ wood.', choices: ['of', 'at', 'by', 'on'], answer: 0, why: '材料（木）が見てわかるので made of。' },
+      { sentence: 'His name is known ___ everyone in the town.', choices: ['to', 'at', 'for', 'with'], answer: 0, why: 'be known to 〜「〜に知られている」。' },
+      { sentence: 'The box was filled ___ old letters.', choices: ['with', 'of', 'to', 'at'], answer: 0, why: 'be filled with 〜「〜でいっぱいだ」。' },
     ],
   },
   {
@@ -2667,9 +2667,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"Will it rain tomorrow?" "I hope not."', ja: '「明日は雨かな？」「ふらないといいな」' },
     ],
     questions: [
-      { sentence: '"Is this the right bus?" "I think ___."', choices: ['so', 'it', 'that'], answer: 0, why: '前の内容を受けるのは so（I think so.）。' },
-      { sentence: '"Will the test be difficult?" "I hope ___."', choices: ['not', 'no', "don't"], answer: 0, why: '「そうならないといい」は I hope not.' },
-      { sentence: '"Is he angry?" "I don\'t think ___."', choices: ['so', 'not', 'it'], answer: 0, why: '「そうは思わない」は I don\'t think so.' },
+      { sentence: '"Is this the right bus?" "I think ___."', choices: ['so', 'it', 'that', 'this'], answer: 0, why: '前の内容を受けるのは so（I think so.）。' },
+      { sentence: '"Will the test be difficult?" "I hope ___."', choices: ['not', 'no', "don't", 'not to'], answer: 0, why: '「そうならないといい」は I hope not.' },
+      { sentence: '"Is he angry?" "I don\'t think ___."', choices: ['so', 'not', 'it', 'no'], answer: 0, why: '「そうは思わない」は I don\'t think so.' },
     ],
   },
   {
@@ -2701,9 +2701,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I'm sure that she will win the race.", ja: 'きっと彼女はレースに勝つと思う。' },
     ],
     questions: [
-      { sentence: "I'm ___ that you liked the present.", choices: ['glad', 'gladly', 'gladness'], answer: 0, why: 'be glad that 〜「〜ということがうれしい」。形容詞 glad。' },
-      { sentence: "I'm afraid ___ it will rain tomorrow.", choices: ['that', 'to', 'of'], answer: 0, why: 'あとに主語＋動詞（it will rain）が続くので that 節。' },
-      { sentence: 'She was surprised ___ her brother passed the test.', choices: ['that', 'to', 'for'], answer: 0, why: '主語（her brother）がちがうので that 節。' },
+      { sentence: "I'm ___ that you liked the present.", choices: ['glad', 'gladly', 'gladness', 'gladden'], answer: 0, why: 'be glad that 〜「〜ということがうれしい」。形容詞 glad。' },
+      { sentence: "I'm afraid ___ it will rain tomorrow.", choices: ['that', 'to', 'of', 'for'], answer: 0, why: 'あとに主語＋動詞（it will rain）が続くので that 節。' },
+      { sentence: 'She was surprised ___ her brother passed the test.', choices: ['that', 'to', 'for', 'of'], answer: 0, why: '主語（her brother）がちがうので that 節。' },
     ],
   },
   {
@@ -2752,9 +2752,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Three quarters of the money was used for books.', ja: 'そのお金の4分の3が本に使われた。' },
     ],
     questions: [
-      { sentence: '2/3 ＝ two ___', choices: ['thirds', 'third', 'threes'], answer: 0, why: '分子が2以上なので分母の序数に s をつける。' },
-      { sentence: 'Half of the apples ___ red.', choices: ['are', 'is', 'be'], answer: 0, why: 'of のあとの apples（複数）に合わせて are。' },
-      { sentence: 'A ___ of an hour is fifteen minutes.', choices: ['quarter', 'fourth of', 'half'], answer: 0, why: '1時間の4分の1 ＝ a quarter of an hour（15分）。' },
+      { sentence: '2/3 ＝ two ___', choices: ['thirds', 'third', 'threes', "third's"], answer: 0, why: '分子が2以上なので分母の序数に s をつける。' },
+      { sentence: 'Half of the apples ___ red.', choices: ['are', 'is', 'be', 'am'], answer: 0, why: 'of のあとの apples（複数）に合わせて are。' },
+      { sentence: 'A ___ of an hour is fifteen minutes.', choices: ['quarter', 'fourth of', 'half', 'quart'], answer: 0, why: '1時間の4分の1 ＝ a quarter of an hour（15分）。' },
     ],
   },
   {
@@ -2769,9 +2769,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Let's walk to the park, shall we?", ja: '公園まで歩こうよ、ね？' },
     ],
     questions: [
-      { sentence: 'Close the door, ___ you?', choices: ['will', 'do', 'are'], answer: 0, why: '命令文の付加疑問は , will you?' },
-      { sentence: "Let's start the game, ___ we?", choices: ['shall', 'will', 'do'], answer: 0, why: "Let's 〜 の付加疑問は , shall we?" },
-      { sentence: 'Be quiet, ___?', choices: ['will you', 'are you', "don't you"], answer: 0, why: 'be で始まる命令文でも , will you?' },
+      { sentence: 'Close the door, ___ you?', choices: ['will', 'do', 'are', 'did'], answer: 0, why: '命令文の付加疑問は , will you?' },
+      { sentence: "Let's start the game, ___ we?", choices: ['shall', 'will', 'do', 'are'], answer: 0, why: "Let's 〜 の付加疑問は , shall we?" },
+      { sentence: 'Be quiet, ___?', choices: ['will you', 'are you', "don't you", 'do you'], answer: 0, why: 'be で始まる命令文でも , will you?' },
     ],
   },
   {
@@ -2786,9 +2786,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The children introduced themselves.', ja: '子どもたちは自己紹介をした。' },
     ],
     questions: [
-      { sentence: 'Tom and Mike are good friends. They know ___ well.', choices: ['each other', 'themselves', 'them'], answer: 0, why: '「おたがいをよく知っている」なので each other。' },
-      { sentence: 'Please help ___ to some cake, everyone.', choices: ['yourselves', 'each other', 'you'], answer: 0, why: 'help yourself (yourselves) to 〜「自由に取って食べる」。自分で取るので -selves。' },
-      { sentence: 'The two teams shook hands with ___ after the game.', choices: ['each other', 'themselves', 'itself'], answer: 0, why: '相手チームと握手するので each other。' },
+      { sentence: 'Tom and Mike are good friends. They know ___ well.', choices: ['each other', 'themselves', 'them', 'ourselves'], answer: 0, why: '「おたがいをよく知っている」なので each other。' },
+      { sentence: 'Please help ___ to some cake, everyone.', choices: ['yourselves', 'each other', 'you', 'yours'], answer: 0, why: 'help yourself (yourselves) to 〜「自由に取って食べる」。自分で取るので -selves。' },
+      { sentence: 'The two teams shook hands with ___ after the game.', choices: ['each other', 'themselves', 'itself', 'their'], answer: 0, why: '相手チームと握手するので each other。' },
     ],
   },
   {
@@ -2820,9 +2820,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Be careful not to get hurt.', ja: 'けがをしないように気をつけて。' },
     ],
     questions: [
-      { sentence: 'My aunt ___ married last spring.', choices: ['got', 'was getting to', 'get'], answer: 0, why: '去年の春に「結婚した」（変化）なので got married。' },
-      { sentence: "Don't go into the forest alone. You may get ___.", choices: ['lost', 'lose', 'losing'], answer: 0, why: 'get lost「道に迷う」。get ＋ 過去分詞。' },
-      { sentence: 'He fell off his bike and got ___.', choices: ['hurt', 'hurting', 'to hurt'], answer: 0, why: 'get hurt「けがをする」。hurt の過去分詞は hurt。' },
+      { sentence: 'My aunt ___ married last spring.', choices: ['got', 'was getting to', 'get', 'gets'], answer: 0, why: '去年の春に「結婚した」（変化）なので got married。' },
+      { sentence: "Don't go into the forest alone. You may get ___.", choices: ['lost', 'lose', 'losing', 'loses'], answer: 0, why: 'get lost「道に迷う」。get ＋ 過去分詞。' },
+      { sentence: 'He fell off his bike and got ___.', choices: ['hurt', 'hurting', 'to hurt', 'hurts'], answer: 0, why: 'get hurt「けがをする」。hurt の過去分詞は hurt。' },
     ],
   },
   {
@@ -2888,9 +2888,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It is likely to snow tonight.', ja: '今夜は雪がふりそうだ。' },
     ],
     questions: [
-      { sentence: 'Hurry up! The train is about ___ leave.', choices: ['to', 'for', 'of'], answer: 0, why: 'be about to ＋ 原形「まさに〜しようとしている」。' },
-      { sentence: 'Our team is ___ to win. They are very strong.', choices: ['likely', 'like', 'liking'], answer: 0, why: 'be likely to 〜「〜しそうだ」。' },
-      { sentence: 'You are sure to ___ the test if you study.', choices: ['pass', 'passing', 'passed'], answer: 0, why: 'be sure to のあとは動詞の原形。' },
+      { sentence: 'Hurry up! The train is about ___ leave.', choices: ['to', 'for', 'of', 'at'], answer: 0, why: 'be about to ＋ 原形「まさに〜しようとしている」。' },
+      { sentence: 'Our team is ___ to win. They are very strong.', choices: ['likely', 'like', 'liking', 'likes'], answer: 0, why: 'be likely to 〜「〜しそうだ」。' },
+      { sentence: 'You are sure to ___ the test if you study.', choices: ['pass', 'passing', 'passed', 'be passed'], answer: 0, why: 'be sure to のあとは動詞の原形。' },
     ],
   },
   {
@@ -3024,9 +3024,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "He just ate lunch. He can't be hungry.", ja: '彼はお昼を食べたばかりだ。おなかがすいているはずがない。' },
     ],
     questions: [
-      { sentence: 'You walked for five hours. You ___ be very tired.', choices: ['must', "can't", "don't have to"], answer: 0, why: '5時間歩いた → 「つかれているにちがいない」なので must。' },
-      { sentence: "Ken is in London now. The boy over there ___ be Ken.", choices: ["can't", 'must', 'should'], answer: 0, why: 'ケンはロンドンにいる → 「あそこの男の子がケンのはずがない」なので can\'t。' },
-      { sentence: "That ___ be Yuki's bag. It has her name on it.", choices: ['must', "can't", 'may not'], answer: 0, why: '名前が書いてある → 「ユキのかばんにちがいない」。' },
+      { sentence: 'You walked for five hours. You ___ be very tired.', choices: ['must', "can't", "don't have to", 'had'], answer: 0, why: '5時間歩いた → 「つかれているにちがいない」なので must。' },
+      { sentence: "Ken is in London now. The boy over there ___ be Ken.", choices: ["can't", 'must', 'should', 'has'], answer: 0, why: 'ケンはロンドンにいる → 「あそこの男の子がケンのはずがない」なので can\'t。' },
+      { sentence: "That ___ be Yuki's bag. It has her name on it.", choices: ['must', "can't", 'may not', "mustn't to"], answer: 0, why: '名前が書いてある → 「ユキのかばんにちがいない」。' },
     ],
   },
   {
