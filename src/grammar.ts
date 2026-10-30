@@ -433,9 +433,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We don\'t have much milk in the fridge.', ja: '冷蔵庫に牛乳があまりない。' },
     ],
     questions: [
-      { sentence: 'How ___ brothers do you have?', choices: ['much', 'many'], answer: 1, why: 'brothers は数えられる名詞の複数形なので many。' },
+      { sentence: 'How ___ brothers do you have?', choices: ['much', 'many', 'old', 'long'], answer: 1, why: 'brothers は数えられる名詞の複数形なので many。' },
       { sentence: 'Can I have some ___?', choices: ['water', 'a water', 'waters', 'a waters'], answer: 0, why: 'water は数えられないので a もつけず、複数形にもしない。' },
-      { sentence: 'There isn\'t ___ time before the bus comes.', choices: ['many', 'much'], answer: 1, why: 'time（時間）は数えられない名詞なので much。' },
+      { sentence: 'There isn\'t ___ time before the bus comes.', choices: ['many', 'much', 'few', 'a few'], answer: 1, why: 'time（時間）は数えられない名詞なので much。' },
     ],
   },
   {
@@ -464,9 +464,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She drives carefully.', ja: '彼女は注意深く運転する。' },
     ],
     questions: [
-      { sentence: 'Please speak ___. The baby is sleeping.', choices: ['quiet', 'quietly'], answer: 1, why: '動詞 speak を説明するので副詞 quietly。' },
-      { sentence: 'Ken is a very ___ runner.', choices: ['fast', 'fastly'], answer: 0, why: 'fast は形容詞も副詞も fast。fastly という語はない。' },
-      { sentence: 'My sister plays the piano very ___.', choices: ['good', 'well'], answer: 1, why: '動詞 plays を説明するので good の副詞 well。' },
+      { sentence: 'Please speak ___. The baby is sleeping.', choices: ['quiet', 'quietly', 'quietness', 'quiets'], answer: 1, why: '動詞 speak を説明するので副詞 quietly。' },
+      { sentence: 'Ken is a very ___ runner.', choices: ['fast', 'fastly', 'faster', 'fastness'], answer: 0, why: 'fast は形容詞も副詞も fast。fastly という語はない。' },
+      { sentence: 'My sister plays the piano very ___.', choices: ['good', 'well', 'better', 'goodly'], answer: 1, why: '動詞 plays を説明するので good の副詞 well。' },
     ],
   },
   {
@@ -8838,9 +8838,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Look at those birds over there.', ja: 'あそこにいるあの鳥たちを見て。' },
     ],
     questions: [
-      { sentence: '___ are my shoes.', choices: ['These', 'This', 'It'], answer: 0, why: 'are と shoes（複数）に合わせて these。' },
-      { sentence: 'Look at ___ birds over there!', choices: ['those', 'that', 'this'], answer: 0, why: '遠くの複数の物は those。birds が複数なので that・this は使えない。' },
-      { sentence: 'This ___ my bag.', choices: ['is', 'are', 'am'], answer: 0, why: 'this は1つの物なので is。' },
+      { sentence: '___ are my shoes.', choices: ['These', 'This', 'It', 'That'], answer: 0, why: 'are と shoes（複数）に合わせて these。' },
+      { sentence: 'Look at ___ birds over there!', choices: ['those', 'that', 'this', 'it'], answer: 0, why: '遠くの複数の物は those。birds が複数なので that・this は使えない。' },
+      { sentence: 'This ___ my bag.', choices: ['is', 'are', 'am', 'be'], answer: 0, why: 'this は1つの物なので is。' },
     ],
   },
   {
@@ -8872,9 +8872,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is my second visit to Kyoto.', ja: '京都に来るのはこれが2回目です。' },
     ],
     questions: [
-      { sentence: 'My birthday is March ___.', choices: ['third', 'three', 'threeth'], answer: 0, why: '日付は序数を使う。3番目は third。' },
-      { sentence: 'This is my ___ visit to Kyoto.', choices: ['second', 'two', 'twice'], answer: 0, why: '「2回目の訪問」は序数の second。' },
-      { sentence: 'Our school festival is ___ October 10th.', choices: ['on', 'in', 'at'], answer: 0, why: '日付の前の前置詞は on。' },
+      { sentence: 'My birthday is March ___.', choices: ['third', 'three', 'threeth', 'thirds'], answer: 0, why: '日付は序数を使う。3番目は third。' },
+      { sentence: 'This is my ___ visit to Kyoto.', choices: ['second', 'two', 'twice', 'secondly'], answer: 0, why: '「2回目の訪問」は序数の second。' },
+      { sentence: 'Our school festival is ___ October 10th.', choices: ['on', 'in', 'at', 'from'], answer: 0, why: '日付の前の前置詞は on。' },
     ],
   },
   {
@@ -8889,9 +8889,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: '"Can you ride a bike?" "Yes, I can."', ja: '「自転車に乗れる？」「うん、乗れるよ。」' },
     ],
     questions: [
-      { sentence: 'Ken can ___ very fast.', choices: ['run', 'runs', 'running'], answer: 0, why: 'can のあとは動詞の原形。主語が3人称単数でも -s はつけない。' },
-      { sentence: '"Can you swim?" "No, I ___."', choices: ["can't", "don't", 'am not'], answer: 0, why: 'Can you ～? には can を使って答える。' },
-      { sentence: '___ your father cook?', choices: ['Can', 'Is', 'Are'], answer: 0, why: 'cook は動詞なので、「～できますか」は Can を前に出す。' },
+      { sentence: 'Ken can ___ very fast.', choices: ['run', 'runs', 'running', 'ran'], answer: 0, why: 'can のあとは動詞の原形。主語が3人称単数でも -s はつけない。' },
+      { sentence: '"Can you swim?" "No, I ___."', choices: ["can't", "don't", 'am not', "doesn't"], answer: 0, why: 'Can you ～? には can を使って答える。' },
+      { sentence: '___ your father cook?', choices: ['Can', 'Is', 'Are', 'Do'], answer: 0, why: 'cook は動詞なので、「～できますか」は Can を前に出す。' },
     ],
   },
   {
@@ -8923,9 +8923,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How many students are there in your class?', ja: 'あなたのクラスには何人の生徒がいますか。' },
     ],
     questions: [
-      { sentence: '___ there a library near your house?', choices: ['Is', 'Are', 'Do'], answer: 0, why: 'a library（単数）なので Is there ～?' },
-      { sentence: 'How many cats ___ there in the park?', choices: ['are', 'is', 'do'], answer: 0, why: 'How many cats（複数）なので are there。' },
-      { sentence: '"Is there a pool at your school?" "No, there ___."', choices: ["isn't", "aren't", "doesn't"], answer: 0, why: 'Is there ～? には there is / there isn\'t で答える。' },
+      { sentence: '___ there a library near your house?', choices: ['Is', 'Are', 'Do', 'Does'], answer: 0, why: 'a library（単数）なので Is there ～?' },
+      { sentence: 'How many cats ___ there in the park?', choices: ['are', 'is', 'do', 'does'], answer: 0, why: 'How many cats（複数）なので are there。' },
+      { sentence: '"Is there a pool at your school?" "No, there ___."', choices: ["isn't", "aren't", "doesn't", 'not'], answer: 0, why: 'Is there ～? には there is / there isn\'t で答える。' },
     ],
   },
   {
@@ -9093,9 +9093,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My mother went shopping at the new mall yesterday.', ja: '母は昨日、新しいショッピングモールへ買い物に行った。' },
     ],
     questions: [
-      { sentence: "Let's go ___ in the sea next Sunday.", choices: ['swimming', 'swim', 'swam'], answer: 0, why: '「泳ぎに行く」は go swimming。' },
-      { sentence: 'My sister went ___ in Shibuya last weekend.', choices: ['shopping', 'shop', 'shopped'], answer: 0, why: '「買い物に行った」は went shopping。' },
-      { sentence: 'Did you go ___ during the summer vacation?', choices: ['camping', 'camp', 'camped'], answer: 0, why: '「キャンプに行く」は go camping。' },
+      { sentence: "Let's go ___ in the sea next Sunday.", choices: ['swimming', 'swim', 'swam', 'swims'], answer: 0, why: '「泳ぎに行く」は go swimming。' },
+      { sentence: 'My sister went ___ in Shibuya last weekend.', choices: ['shopping', 'shop', 'shopped', 'shops'], answer: 0, why: '「買い物に行った」は went shopping。' },
+      { sentence: 'Did you go ___ during the summer vacation?', choices: ['camping', 'camp', 'camped', 'camps'], answer: 0, why: '「キャンプに行く」は go camping。' },
     ],
   },
   {
@@ -9195,9 +9195,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What time does the movie start? — It starts at seven.', ja: '映画は何時に始まりますか。— 7時に始まります。' },
     ],
     questions: [
-      { sentence: '___ time do you leave home in the morning?', choices: ['What', 'How', 'Who'], answer: 0, why: '「何時に」は What time。' },
-      { sentence: 'What time ___ your sister go to bed?', choices: ['does', 'do', 'is'], answer: 0, why: '主語 your sister は3人称単数で、一般動詞 go の疑問文なので does。' },
-      { sentence: 'We usually have dinner ___ seven.', choices: ['at', 'on', 'of'], answer: 0, why: '時刻の「～時に」は at。' },
+      { sentence: '___ time do you leave home in the morning?', choices: ['What', 'How', 'Who', 'Whose'], answer: 0, why: '「何時に」は What time。' },
+      { sentence: 'What time ___ your sister go to bed?', choices: ['does', 'do', 'is', 'are'], answer: 0, why: '主語 your sister は3人称単数で、一般動詞 go の疑問文なので does。' },
+      { sentence: 'We usually have dinner ___ seven.', choices: ['at', 'on', 'of', 'in'], answer: 0, why: '時刻の「～時に」は at。' },
     ],
   },
   {
@@ -9212,9 +9212,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My uncle visits us three times a year.', ja: 'おじは年に3回うちに来ます。' },
     ],
     questions: [
-      { sentence: 'I go swimming ___ a week.', choices: ['twice', 'two', 'second'], answer: 0, why: '「2回」は twice。two は数そのもので回数にはならない。' },
-      { sentence: 'She practices the piano three ___ a week.', choices: ['times', 'time', 'timing'], answer: 0, why: '3回以上は 数 ＋ times（複数形）。' },
-      { sentence: 'We visit our grandparents once ___ month.', choices: ['a', 'the', 'an'], answer: 0, why: '「1か月に1回」は once a month。a は「～につき」。month は子音で始まるので an ではない。' },
+      { sentence: 'I go swimming ___ a week.', choices: ['twice', 'two', 'second', 'twices'], answer: 0, why: '「2回」は twice。two は数そのもので回数にはならない。' },
+      { sentence: 'She practices the piano three ___ a week.', choices: ['times', 'time', 'timing', 'timed'], answer: 0, why: '3回以上は 数 ＋ times（複数形）。' },
+      { sentence: 'We visit our grandparents once ___ month.', choices: ['a', 'the', 'an', 'one'], answer: 0, why: '「1か月に1回」は once a month。a は「～につき」。month は子音で始まるので an ではない。' },
     ],
   },
   {
@@ -9297,9 +9297,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Can you carry this bag? — No problem.', ja: 'このかばんを運んでくれる？— いいよ。' },
     ],
     questions: [
-      { sentence: '___ I use your pen? — Sure.', choices: ['Can', 'Am', 'Is'], answer: 0, why: '「～してもいい？」は Can I ＋ 原形。Am I・Is I のあとに use（原形）は続かない。' },
-      { sentence: 'Can you ___ the window, please? — OK.', choices: ['close', 'closes', 'closing'], answer: 0, why: 'can のあとは動詞の原形。' },
-      { sentence: 'Can you help me? — Sure. ___ problem.', choices: ['No', 'Not', 'None'], answer: 0, why: 'No problem.「いいよ・おやすいご用」。' },
+      { sentence: '___ I use your pen? — Sure.', choices: ['Can', 'Am', 'Is', 'Are'], answer: 0, why: '「～してもいい？」は Can I ＋ 原形。Am I・Is I のあとに use（原形）は続かない。' },
+      { sentence: 'Can you ___ the window, please? — OK.', choices: ['close', 'closes', 'closing', 'closed'], answer: 0, why: 'can のあとは動詞の原形。' },
+      { sentence: 'Can you help me? — Sure. ___ problem.', choices: ['No', 'Not', 'None', 'Nothing'], answer: 0, why: 'No problem.「いいよ・おやすいご用」。' },
     ],
   },
   {
@@ -9399,9 +9399,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I saw a cat. The cat was sleeping on a car.', ja: 'ねこを見た。そのねこは車の上で寝ていた。' },
     ],
     questions: [
-      { sentence: 'I eat ___ egg every morning.', choices: ['an', 'a', 'two'], answer: 0, why: 'egg は母音の音（エ）で始まるので an。two なら eggs になる。' },
-      { sentence: 'We waited for ___ hour at the station.', choices: ['an', 'a', 'many'], answer: 0, why: 'hour は h を読まず「アワー」と母音の音で始まるので an。many なら hours になる。' },
-      { sentence: 'Look at ___ moon. It is very bright tonight.', choices: ['the', 'an', 'two'], answer: 0, why: '空の月は1つしかないので the moon。moon は子音で始まるので an は使わない。' },
+      { sentence: 'I eat ___ egg every morning.', choices: ['an', 'a', 'two', 'many'], answer: 0, why: 'egg は母音の音（エ）で始まるので an。two なら eggs になる。' },
+      { sentence: 'We waited for ___ hour at the station.', choices: ['an', 'a', 'many', 'much'], answer: 0, why: 'hour は h を読まず「アワー」と母音の音で始まるので an。many なら hours になる。' },
+      { sentence: 'Look at ___ moon. It is very bright tonight.', choices: ['the', 'an', 'two', 'a'], answer: 0, why: '空の月は1つしかないので the moon。moon は子音で始まるので an は使わない。' },
     ],
   },
   {
@@ -9433,9 +9433,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Did you eat lunch? — Yes, I ate a sandwich.', ja: 'お昼を食べた？— うん、サンドイッチを食べたよ。' },
     ],
     questions: [
-      { sentence: 'I ___ a big fish at the lake yesterday.', choices: ['caught', 'catched', 'catch'], answer: 0, why: 'catch の過去形は caught（不規則動詞）。catched とは言わない。' },
-      { sentence: 'Mika ___ a letter to her friend last night.', choices: ['wrote', 'writed', 'writes'], answer: 0, why: 'write の過去形は wrote。last night なので過去形。' },
-      { sentence: 'We ___ a rainbow after the rain this morning.', choices: ['saw', 'seed', 'see'], answer: 0, why: 'see の過去形は saw。this morning（けさ）の出来事なので過去形。' },
+      { sentence: 'I ___ a big fish at the lake yesterday.', choices: ['caught', 'catched', 'catch', 'caughted'], answer: 0, why: 'catch の過去形は caught（不規則動詞）。catched とは言わない。' },
+      { sentence: 'Mika ___ a letter to her friend last night.', choices: ['wrote', 'writed', 'writes', 'wroted'], answer: 0, why: 'write の過去形は wrote。last night なので過去形。' },
+      { sentence: 'We ___ a rainbow after the rain this morning.', choices: ['saw', 'seed', 'see', 'sawed'], answer: 0, why: 'see の過去形は saw。this morning（けさ）の出来事なので過去形。' },
     ],
   },
   {
@@ -9467,9 +9467,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "My brother isn't sleeping. He's reading a book.", ja: '弟は寝ていない。本を読んでいる。' },
     ],
     questions: [
-      { sentence: '___ you studying English now? — Yes, I am.', choices: ['Are', 'Do', 'Is'], answer: 0, why: '進行形の疑問文は be動詞を前に出す。主語 you なので Are。Do は一般動詞の疑問文。' },
-      { sentence: "Ken ___ watching TV. He's doing his homework.", choices: ["isn't", "doesn't", "don't"], answer: 0, why: "進行形の否定文は be動詞＋not。Ken は1人なので isn't。" },
-      { sentence: 'What ___ your sister doing? — She is playing the piano.', choices: ['is', 'does', 'are'], answer: 0, why: '主語 your sister は1人なので is。答えも She is playing の進行形。' },
+      { sentence: '___ you studying English now? — Yes, I am.', choices: ['Are', 'Do', 'Is', 'Does'], answer: 0, why: '進行形の疑問文は be動詞を前に出す。主語 you なので Are。Do は一般動詞の疑問文。' },
+      { sentence: "Ken ___ watching TV. He's doing his homework.", choices: ["isn't", "doesn't", "don't", "aren't"], answer: 0, why: "進行形の否定文は be動詞＋not。Ken は1人なので isn't。" },
+      { sentence: 'What ___ your sister doing? — She is playing the piano.', choices: ['is', 'does', 'are', 'do'], answer: 0, why: '主語 your sister は1人なので is。答えも She is playing の進行形。' },
     ],
   },
   {
@@ -9535,9 +9535,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We play basketball after school.', ja: '私たちは放課後バスケットボールをする。' },
     ],
     questions: [
-      { sentence: 'Yui can play ___ flute very well.', choices: ['the', 'a', 'to'], answer: 0, why: '楽器は play the ＋ 楽器。' },
-      { sentence: 'Do you play ___ every Sunday? — Yes, I do.', choices: ['tennis', 'the tennis', 'a tennis'], answer: 0, why: 'スポーツは play ＋ スポーツで、the も a もつけない。' },
-      { sentence: 'My grandfather plays ___ guitar at night.', choices: ['the', 'an', 'some'], answer: 0, why: '楽器なので play the guitar。' },
+      { sentence: 'Yui can play ___ flute very well.', choices: ['the', 'a', 'to', 'an'], answer: 0, why: '楽器は play the ＋ 楽器。' },
+      { sentence: 'Do you play ___ every Sunday? — Yes, I do.', choices: ['tennis', 'the tennis', 'a tennis', 'tennises'], answer: 0, why: 'スポーツは play ＋ スポーツで、the も a もつけない。' },
+      { sentence: 'My grandfather plays ___ guitar at night.', choices: ['the', 'an', 'some', 'to'], answer: 0, why: '楽器なので play the guitar。' },
     ],
   },
   {
