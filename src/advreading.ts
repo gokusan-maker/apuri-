@@ -16519,6 +16519,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-self-checkout',
+    title: 'Paying Without a Cashier',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many supermarkets today, customers can scan their own items and pay at a machine instead of waiting for a cashier. These self-checkout machines have spread quickly in recent years, and some new shops have no human cashiers at all. Although the machines may look like a simple convenience, they raise interesting questions about how technology changes work and everyday life.",
+      "For shops, self-checkout has several clear advantages. One worker can watch many machines at the same time, so fewer staff are needed at the registers. This can lower costs, especially in places where it is difficult to find enough workers. Many customers also like the machines ( A ) they can pay quickly when they have only a few items, without waiting in a long line. Some people also prefer not to talk with anyone when they are tired or in a hurry.",
+      "However, the machines are not perfect. Some customers find them confusing, particularly older people or those who are not used to new technology. When an item cannot be scanned or the machine stops, a staff member must come and help, which can take time. Some shops have also reported that more goods are taken without being paid for, whether by mistake or on purpose, when customers check out by themselves. To prevent this, some machines now use cameras or weigh each item that is placed in the bag.",
+      "There are also concerns about jobs. If fewer cashiers are needed, some workers may lose their positions or have to learn new skills. On the other hand, supporters argue that staff who no longer work at the registers can spend more time helping customers find products, keeping shelves full, or giving advice. Some shops even train former cashiers to manage online orders. In their view, technology does not simply remove jobs ( B ) changes the kinds of work that people do.",
+      "Because of these mixed results, many shops now offer both self-checkout machines and registers with cashiers. Customers can choose the method that suits them best. The story of self-checkout shows that new technology rarely solves every problem at once. Its real value often depends on how carefully people decide ( C ) to use it and how they support those who find it difficult.",
+    ],
+    ja: [
+      '今日の多くのスーパーマーケットでは、客はレジ係を待つかわりに、自分で品物を読み取って機械で支払うことができる。こうしたセルフレジはここ数年で急速に広まり、レジ係がまったくいない新しい店もある。機械はただの便利な道具のように見えるかもしれないが、技術が仕事や日々の生活をどう変えるのかについて、興味深い問いを投げかけている。',
+      '店にとって、セルフレジにはいくつかのはっきりした利点がある。一人の店員が同時に多くの機械を見守れるので、レジに必要な職員が少なくてすむ。これは、とくに十分な働き手を見つけるのが難しい場所で、費用を下げることができる。多くの客もこの機械を気に入っている。品物が少ないとき、長い列に並ばずにすばやく支払えるからである。つかれているときや急いでいるときに、だれとも話したくないという人もいる。',
+      'しかし、機械は完全ではない。とくにお年寄りや新しい技術になれていない人の中には、機械をわかりにくいと感じる客もいる。品物が読み取れなかったり機械が止まったりすると、店員が来て手伝わなければならず、時間がかかることがある。また、客が自分で会計をするときには、まちがいであれわざとであれ、代金が支払われないまま持ち去られる品物がふえたと報告している店もある。これを防ぐために、今ではカメラを使ったり、袋に入れた品物の重さをはかったりする機械もある。',
+      '仕事についての心配もある。必要なレジ係が少なくなれば、職を失ったり、新しい技能を学ばなければならなくなったりする働き手もいるかもしれない。一方で支持する人々は、レジで働かなくなった店員は、客が商品を見つけるのを手伝ったり、棚をいっぱいにしたり、助言をしたりすることにより多くの時間を使えると主張する。元レジ係にオンラインの注文をあつかう訓練をする店さえある。彼らの考えでは、技術は単に仕事をなくすのではなく、人々がする仕事の種類を変えるのである。',
+      'こうしたまちまちな結果のために、今では多くの店がセルフレジとレジ係のいるレジの両方を用意している。客は自分にいちばん合う方法を選ぶことができる。セルフレジの話は、新しい技術が一度にすべての問題を解決することはめったにないことを示している。その本当の価値は、人々がそれをどのように使うかをどれだけ注意深く決めるか、そしてそれを難しいと感じる人をどのようにささえるかにかかっていることが多いのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「多くの客が機械を気に入っている」理由「並ばずにすばやく支払える」を表すので because。' },
+      { id: 'B', choices: ['but', 'and', 'or', 'so'], answer: 0, why: 'not simply A but B「単に A ではなく B」。技術は仕事をなくすのではなく、仕事の種類を変える。' },
+      { id: 'C', choices: ['how', 'what', 'which', 'whose'], answer: 0, why: 'decide how to use it「それをどのように使うかを決める」。use のあとに目的語 it があるので、方法をたずねる how。' },
+    ],
+    tf: [
+      { statement: 'レジ係がまったくいない新しい店もある。', answer: true, why: '第1段落 some new shops have no human cashiers at all。' },
+      { statement: '一人の店員は、一度に1台の機械しか見守れない。', answer: false, why: '第2段落 One worker can watch many machines at the same time。' },
+      { statement: 'セルフレジをわかりにくいと感じる客もいる。', answer: true, why: '第3段落 Some customers find them confusing。' },
+      { statement: '筆者は、店はセルフレジだけにするべきだと主張している。', answer: false, why: '第5段落 many shops now offer both … Customers can choose the method that suits them best。' },
+    ],
+    qa: [
+      { q: 'What problem have some shops reported with self-checkout?', choices: ['More goods are taken without being paid for.', 'Customers spend too much money.', 'The machines are too large for shops.', 'Cashiers refuse to use the machines.'], answer: 0, why: '第3段落 more goods are taken without being paid for。' },
+      { q: 'According to supporters, what can staff do if they no longer work at the registers?', choices: ['Help customers, keep shelves full, or give advice.', 'Go home early every day.', 'Repair the machines only.', 'Work as cashiers in other shops.'], answer: 0, why: '第4段落 helping customers find products, keeping shelves full, or giving advice。' },
+    ],
+    gist: [
+      { para: 1, choices: ['店と客にとってのセルフレジの利点', 'レジ係の給料', '長い列のでき方', '品物の値段の決め方'], answer: 0, why: '第2段落は、職員が少なくてすむ・すばやく支払えるといった、店と客にとっての利点を述べている。' },
+      { para: 3, choices: ['仕事がなくなる心配と、仕事の種類が変わるという考え', '新しい技能の学び方', '棚の並べ方', '店員の選び方'], answer: 0, why: '第4段落は、職を失う心配と、技術は仕事の種類を変えるという支持者の考えの両方を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
