@@ -96,6 +96,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                   {e.wins}回たおした・最高 <strong className={`rank-mini rank-${e.best}`}>{e.best}</strong>
                   {times[b.name] !== undefined && <>・⏱ 最短 {formatSec(times[b.name])}{times[b.name] < 60 && <strong className="speed-clear"> ⚡ スピードクリア</strong>}</>}
                   {noMiss.includes(b.name) && <strong className="speed-clear"> ✨ ノーミス</strong>}
+                  {/^\d{4}-\d{2}-\d{2}$/.test(e.first ?? '') && <span className="boss-book-first">・📅 はじめて勝った日 {Number(e.first.slice(5, 7))}月{Number(e.first.slice(8, 10))}日</span>}
                 </span>
               )}
               {e && (
