@@ -204,3 +204,21 @@ it('デザイン94：ノーミスの記録がなければ「✨ ノーミス」�
   render(<BossBook />)
   expect(screen.queryByText(/✨ ノーミス/)).toBeNull()
 })
+
+it('デザイン106：ボス図鑑のとくぎをタップすると、説明と封じのコツが出て、もう一度タップで閉じる', async () => {
+  const { BOSS_TRAITS, traitOf } = await import('./boss')
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  const btn = document.querySelector<HTMLButtonElement>('button.boss-book-trait')!
+  const name = document.querySelector('.boss-book li.got .badge-name, li.got .badge-name')!.textContent!
+  fireEvent.click(btn)
+  const t = BOSS_TRAITS[traitOf(name)]
+  expect(document.querySelector('.boss-book-trait-desc')!.textContent).toBe(`${t.desc}／🔑 ${t.tip}`)
+  fireEvent.click(btn)
+  expect(document.querySelector('.boss-book-trait-desc')).toBeNull()
+})

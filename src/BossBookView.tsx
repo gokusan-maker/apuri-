@@ -19,6 +19,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const [book] = useState(loadBook)
   const [times] = useState(loadBossTimes)
   const [noMiss] = useState(loadNoMissBosses) // デザイン94：ノーミスでたおしたボス
+  const [traitOpen, setTraitOpen] = useState<string | null>(null) // デザイン106：とくぎの説明を開いているボス
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
   const base: BossLook[] = [...Object.values(BOSSES), ...UNIV_BOSSES]
@@ -98,8 +99,18 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
                 </span>
               )}
               {e && (
-                <span className="boss-book-trait" title={BOSS_TRAITS[traitOf(b.name)].desc}>
+                <button
+                  className="boss-book-trait"
+                  title={BOSS_TRAITS[traitOf(b.name)].desc}
+                  aria-expanded={traitOpen === b.name}
+                  onClick={() => setTraitOpen(traitOpen === b.name ? null : b.name)}
+                >
                   とくぎ：{BOSS_TRAITS[traitOf(b.name)].icon} {BOSS_TRAITS[traitOf(b.name)].name}
+                </button>
+              )}
+              {e && traitOpen === b.name && (
+                <span className="boss-book-trait-desc" role="status">
+                  {BOSS_TRAITS[traitOf(b.name)].desc}／🔑 {BOSS_TRAITS[traitOf(b.name)].tip}
                 </span>
               )}
               {e && onFight && Object.values(BOSSES).some((x) => x.name === b.name) && (
