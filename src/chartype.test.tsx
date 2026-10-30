@@ -113,3 +113,10 @@ it('デザイン119：キャラ図鑑をタイプでしぼりこめる（もう�
   fireEvent.click(btn)
   expect(document.querySelectorAll('.char-book-list li')).toHaveLength(all)
 })
+
+it('デザイン126：キャラ図鑑の説明に、同じタイプのほかのキャラの数が出る', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox']} />)
+  fireEvent.click(screen.getByRole('button', { name: 'コンコン（アタック型）' }))
+  const n = SPECIES.filter((sp) => sp.id !== 'fox' && typeOf(sp.id).id === 'attack').length
+  expect(screen.getByRole('status').textContent).toContain(`（同じアタック型のキャラ：ほかに${n}体）`)
+})
