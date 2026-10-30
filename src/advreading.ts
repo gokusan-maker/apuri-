@@ -17824,6 +17824,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Two Sticks, Many Cultures', 'How to Cook Rice', 'The History of Spoons', 'Why Metal Is Strong'], answer: 0, why: '全体として、はしの歴史、国によるちがい、作法、環境とのかかわりを述べている。' },
   },
   {
+    id: 'kyotsu-washing-machine',
+    title: 'The Machine That Gave Us Time',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people are asked which invention has changed daily life the most, they often name the smartphone, the car, or the internet. Some historians, however, argue that a much less exciting machine deserves a place on the list: the washing machine. Although it is found in almost every home in many countries today, it has had a surprisingly large effect on how people spend their time. To understand why, we need to look at what washing clothes was like in the past.",
+      "Before washing machines became common, washing clothes was hard physical work. Water had to be carried from a well or river and heated over a fire. Clothes were rubbed by hand against a board, beaten, rinsed several times, and then squeezed to remove the water. For a large family, this could take a whole day each week, and in many households the work was done mainly by women, ( A ) had little time left for other activities.",
+      "Electric washing machines changed this situation. The early models were expensive and still needed a lot of attention, but over the years they became cheaper, safer, and more automatic. Eventually, people could simply put clothes and soap into the machine, press a button, and do something else while it worked. Machines that could also dry clothes made the process even easier.",
+      "Some researchers believe that the time saved in this way had important social effects. With less time needed for housework, more women were able to take jobs outside the home, continue their education, or take part in community activities. Of course, many other changes in society also contributed to this, so the washing machine was not the only cause. Still, it is a good example of how a household tool can influence the way ( B ) families organise their lives.",
+      "Today, washing machines continue to develop. Modern machines use less water and electricity than older ones, and some can be controlled with a smartphone. At the same time, in many parts of the world, people still wash clothes by hand because they cannot afford a machine or do not have a reliable supply of electricity and water. The history of the washing machine reminds us ( C ) technology that seems ordinary to some people may still be a luxury for others.",
+    ],
+    ja: [
+      'どの発明が日常生活を最も変えたかとたずねられると、人々はしばしばスマートフォンや車、インターネットの名前をあげる。しかし、ずっと地味な機械もそのリストにのる価値があると主張する歴史家もいる。洗濯機である。今日、多くの国でほとんどすべての家にあるけれども、洗濯機は人々の時間の使い方におどろくほど大きな影響をあたえてきた。その理由を理解するには、昔の洗濯がどのようなものだったかを見る必要がある。',
+      '洗濯機が広まる前は、服を洗うことはきつい体の仕事だった。水は井戸や川から運ばなければならず、火で温められた。服は手で板にこすりつけられ、たたかれ、何度もすすがれ、それから水を取るためにしぼられた。大家族では、これに毎週まる1日かかることもあり、多くの家庭ではこの仕事はおもに女性が行い、女性たちにはほかの活動のための時間がほとんど残らなかった。',
+      '電気の洗濯機がこの状況を変えた。初期の型は値段が高く、まだ多くの手間が必要だったが、年月がたつにつれて、より安く、より安全に、より自動的になった。やがて人々は、服と洗剤を機械に入れ、ボタンをおし、機械が動いているあいだに別のことをするだけでよくなった。服をかわかすこともできる機械は、その手順をさらにかんたんにした。',
+      'このようにして節約された時間が、大切な社会的影響をもったと考える研究者もいる。家事に必要な時間がへったことで、より多くの女性が家の外で仕事についたり、教育を続けたり、地域の活動に参加したりできるようになった。もちろん、社会のほかの多くの変化もこれに関係しており、洗濯機だけが原因だったわけではない。それでも、それは家庭の道具が、家族の生活のしかたにどのように影響しうるかのよい例である。',
+      '今日も、洗濯機は進歩しつづけている。現代の機械は古いものよりも水や電気を使う量が少なく、スマートフォンで操作できるものもある。同時に、世界の多くの地域では、機械を買う余裕がなかったり、電気や水が安定して手に入らなかったりするために、人々は今も手で服を洗っている。洗濯機の歴史は、ある人々にとってふつうに思える技術が、別の人々にとってはまだぜいたくなものかもしれないことを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: 'コンマのあとで先行詞 women（人）を受け、うしろの had の主語になるので主格の関係代名詞 who（非制限用法）。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'which of'], answer: 0, why: 'the way that ～「～するしかた」。the way のあとの that は省略もできる。the way how とは言わない。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whether'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '洗濯機が広まる前は、服を洗うのに毎週まる1日かかる家庭もあった。', answer: true, why: '第2段落 this could take a whole day each week。' },
+      { statement: '初期の電気の洗濯機は、値段が安く手間もかからなかった。', answer: false, why: '第3段落 The early models were expensive and still needed a lot of attention。' },
+      { statement: '研究者によれば、女性の社会参加がふえた原因は洗濯機だけである。', answer: false, why: '第4段落 many other changes in society also contributed to this, so the washing machine was not the only cause。' },
+      { statement: '今も世界の多くの地域では、人々が手で服を洗っている。', answer: true, why: '第5段落 in many parts of the world, people still wash clothes by hand。' },
+    ],
+    qa: [
+      { q: 'What did people have to do before washing machines became common?', choices: ['Carry and heat water, then rub, rinse, and squeeze the clothes by hand.', 'Send all their clothes to factories.', 'Wear the same clothes for a year.', 'Use machines powered by the wind.'], answer: 0, why: '第2段落 Water had to be carried … heated … rubbed by hand … rinsed … squeezed。' },
+      { q: 'Why do some people still wash clothes by hand today?', choices: ['They cannot afford a machine or lack reliable electricity and water.', 'Machines are not sold anywhere.', 'Hand washing uses less time.', 'Machines cannot wash cotton.'], answer: 0, why: '第5段落 because they cannot afford a machine or do not have a reliable supply of electricity and water。' },
+    ],
+    gist: [
+      { para: 2, choices: ['洗濯機の進歩と自動化', '電気の発明の歴史', '洗剤の作り方', 'ボタンのデザイン'], answer: 0, why: '第3段落は、洗濯機がより安く、安全に、自動的になっていった進歩を述べている。' },
+      { para: 3, choices: ['節約された時間がもたらした社会的影響', '女性の服の流行', '学校の時間割', '地域の祭りの準備'], answer: 0, why: '第4段落は、家事の時間がへったことで女性の仕事や教育への参加がふえたことを述べている。' },
+    ],
+    titleQ: { choices: ['The Machine That Gave Us Time', 'How to Fix a Smartphone', 'The History of Rivers', 'Why Clothes Are Expensive'], answer: 0, why: '全体として、洗濯機が家事の時間を減らし社会に影響をあたえたことを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
