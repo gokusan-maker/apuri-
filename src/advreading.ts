@@ -17395,6 +17395,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Bringing Back the Fireflies', 'How to Make Street Lamps', 'The History of Rice Fields', 'Why Insects Are Dangerous'], answer: 0, why: '全体として、ホタルがへった理由と、ホタルを取りもどす取り組み、その意味を述べている。' },
   },
   {
+    id: 'kyotsu-community-gardens',
+    title: 'Growing Together',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many cities around the world, small pieces of empty land can be found between buildings, beside railway lines, or behind schools. Often these spaces are left unused for years, and some become places where people throw away rubbish. In recent decades, however, residents in a number of cities have begun to turn such spaces into community gardens, where neighbours grow vegetables, fruit, and flowers together. What was once an ugly and unsafe corner can become one of the most pleasant places in the neighbourhood.",
+      "A community garden is usually divided into small plots. Each family or person looks after one plot, but tools, water, and some areas such as paths and benches are shared. Members decide together how the garden will be managed, for example who will water the plants during holidays and how the vegetables that are not needed will be used. In some gardens, extra vegetables are given to local food banks or to elderly people ( A ) live alone.",
+      "One obvious benefit of community gardens is fresh food. In some city neighbourhoods, shops selling fresh vegetables are few and far away, and people may depend on cheap processed food. Growing vegetables close to home makes it easier for families to eat healthily, and children who help in the garden often become more interested in trying new vegetables. Gardening is also a form of gentle exercise that people of all ages can enjoy.",
+      "Perhaps even more important, however, are the social benefits. In large cities, many people do not know their neighbours, even after living in the same place for years. Working side by side in a garden gives people a natural reason to talk, ( B ) members often share advice, seeds, and recipes. Older residents can teach younger people skills they learned long ago, and newcomers to the area can make friends more easily.",
+      "Community gardens do face difficulties. Land in cities is valuable, and gardens are sometimes closed when the owner decides to build on the land. Disagreements between members about rules or the use of shared areas can also arise. Nevertheless, many cities now support community gardens by lending land or providing water, because they have found that a small garden can do much more ( C ) produce food: it can help to build a stronger and friendlier community.",
+    ],
+    ja: [
+      '世界の多くの都市では、建物のあいだや線路のわき、学校の裏などに、小さな空き地を見つけることができる。こうした場所は何年も使われないままのことが多く、ごみを捨てる場所になってしまうところもある。しかしここ数十年、多くの都市の住民が、そうした場所をコミュニティガーデンに変えはじめた。そこでは近所の人々がいっしょに野菜や果物、花を育てる。かつては見苦しく安全でなかった一角が、地域で最も気持ちのよい場所の一つになることもある。',
+      'コミュニティガーデンはふつう、小さな区画に分けられている。それぞれの家族や人が1つの区画の世話をするが、道具や水、そして通路やベンチなどの一部の場所は共有される。メンバーは、たとえば休みのあいだにだれが植物に水をやるか、必要でない野菜をどう使うかなど、ガーデンの運営のしかたをいっしょに決める。ガーデンによっては、あまった野菜を地元のフードバンクや、ひとりでくらす年配の人にあげるところもある。',
+      'コミュニティガーデンのわかりやすい利点の一つは、新鮮な食べ物である。都市の地域によっては、新鮮な野菜を売る店が少なく遠くにあり、人々は安い加工食品にたよるかもしれない。家の近くで野菜を育てると、家族が健康的に食べるのが楽になり、ガーデンで手伝う子どもはしばしば新しい野菜を食べてみることに興味をもつようになる。ガーデニングは、あらゆる年齢の人が楽しめるおだやかな運動でもある。',
+      'しかし、おそらくもっと大切なのは、社会的な利点である。大都市では、同じ場所に何年住んでいても近所の人を知らない人が多い。ガーデンでならんで作業することは、人々に話をする自然なきっかけをあたえ、メンバーはしばしばアドバイスや種、料理の作り方を分かち合う。年配の住民はずっと前に身につけた技術を若い人に教えることができ、その地域に新しく来た人も友だちを作りやすくなる。',
+      'コミュニティガーデンには困難もある。都市の土地は価値が高く、持ち主がその土地に建物を建てると決めると、ガーデンが閉じられることもある。規則や共有の場所の使い方をめぐって、メンバーのあいだで意見が分かれることもありうる。それでも今では多くの都市が、土地を貸したり水を提供したりしてコミュニティガーデンをささえている。小さなガーデンは食べ物を作る以上のことができる、つまり、よりつよく親しみのある地域社会を作るのに役立ちうるとわかったからである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['who', 'which', 'whose', 'what'], answer: 0, why: '先行詞は elderly people（人）で、うしろの live の主語になるので主格の関係代名詞 who。' },
+      { id: 'B', choices: ['and', 'but', 'or', 'unless'], answer: 0, why: '「話すきっかけをあたえる、そして（その結果）アドバイスなどを分かち合う」と内容をつけ加えるので and。' },
+      { id: 'C', choices: ['than', 'as', 'that', 'to'], answer: 0, why: 'much more ～ than …「…よりずっと多くのこと」。比較級 more と対になるのは than。' },
+    ],
+    tf: [
+      { statement: 'コミュニティガーデンでは、道具や水は共有される。', answer: true, why: '第2段落 tools, water, and some areas such as paths and benches are shared。' },
+      { statement: 'ガーデンの運営のしかたは、市役所だけが決める。', answer: false, why: '第2段落 Members decide together how the garden will be managed。' },
+      { statement: 'ガーデンを手伝う子どもは、新しい野菜を食べてみることに興味をもつことが多い。', answer: true, why: '第3段落 children who help in the garden often become more interested in trying new vegetables。' },
+      { statement: '筆者によれば、都市の土地は安いので、ガーデンが閉じられることはない。', answer: false, why: '第5段落 Land in cities is valuable, and gardens are sometimes closed。' },
+    ],
+    qa: [
+      { q: 'What happens to extra vegetables in some gardens?', choices: ['They are given to food banks or elderly people.', 'They are sold to large supermarkets.', 'They are thrown away as rubbish.', 'They are sent to other countries.'], answer: 0, why: '第2段落 extra vegetables are given to local food banks or to elderly people。' },
+      { q: 'Which is NOT mentioned as a social benefit of community gardens?', choices: ['Members can earn a lot of money.', 'People get a natural reason to talk.', 'Older residents can teach younger people.', 'Newcomers can make friends more easily.'], answer: 0, why: '第4段落にお金をかせぐ話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['新鮮な食べ物と健康への利点', '加工食品の作り方', '店の場所の決め方', 'スポーツの大会'], answer: 0, why: '第3段落は、新鮮な野菜が手に入り健康的に食べられること、運動にもなることを述べている。' },
+      { para: 3, choices: ['近所の人どうしのつながりを生む社会的な利点', '料理の作り方の歴史', '種の値段', '大都市の交通'], answer: 0, why: '第4段落は、ガーデンが人々の会話や交流のきっかけになることを述べている。' },
+    ],
+    titleQ: { choices: ['Growing Together', 'How to Build a Railway', 'The Price of Land in Cities', 'Why Processed Food Is Cheap'], answer: 0, why: '全体として、コミュニティガーデンのしくみ、食と社会の利点、課題を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
