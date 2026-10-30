@@ -79,6 +79,9 @@
   - [x] ⑨ 前置詞の熟語8単元（by heart / at heart、on display / on board、in honor of / in favor of など）を4択に作りかえる（132→111）
   - [x] ⑩ 群前置詞6単元（on account of / on behalf of、in favor of / in charge of など）を4択に作りかえる（111→96）。のこりの96問は、分詞・動名詞・時制など「形を選ぶこと」自体が文法のポイントの問題なので、そのままにする
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
+- [ ] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+  - [x] ① 知覚動詞・感情の分詞・not only A but also B・though・nobody / nothing・命令文＋and / or・It takes・if / whether・使役動詞・付加疑問の10単元に4つ目の選択肢（243→213）
+  - [ ] ② つづきの10単元を4択に
 - [x] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）

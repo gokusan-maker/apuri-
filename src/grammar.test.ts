@@ -255,3 +255,10 @@ describe('高校の文法問題の選択肢の数', () => {
     expect(hs.filter((q) => q.choices.length < 4).length).toBe(0)
   })
 })
+
+describe('中3の文法問題の選択肢の数', () => {
+  it('中3の3択の問題はへらしていく（高校入試にあわせて4択にする。ふえたら失敗）', () => {
+    const qs = GRAMMAR.filter((u) => gradeOf(u.id) === '中3').flatMap((u) => u.questions)
+    expect(qs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(213)
+  })
+})

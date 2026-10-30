@@ -562,9 +562,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How long does it take to get to the station?', ja: '駅までどのくらいかかりますか。' },
     ],
     questions: [
-      { sentence: 'It ___ an hour to finish my homework.', choices: ['takes', 'spends', 'has'], answer: 0, why: '「時間がかかる」は It takes。' },
-      { sentence: 'How long does it take ___ to Osaka by train?', choices: ['go', 'to go', 'going'], answer: 1, why: 'It takes ～ to ＋動詞の原形。' },
-      { sentence: 'It took ___ three hours to clean the room.', choices: ['me', 'my', 'I'], answer: 0, why: 'It takes ＋人（目的格）＋時間。' },
+      { sentence: 'It ___ an hour to finish my homework.', choices: ['takes', 'spends', 'has', 'makes'], answer: 0, why: '「時間がかかる」は It takes。' },
+      { sentence: 'How long does it take ___ to Osaka by train?', choices: ['go', 'to go', 'going', 'went'], answer: 1, why: 'It takes ～ to ＋動詞の原形。' },
+      { sentence: 'It took ___ three hours to clean the room.', choices: ['me', 'my', 'I', 'mine'], answer: 0, why: 'It takes ＋人（目的格）＋時間。' },
     ],
   },
   {
@@ -646,9 +646,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "You don't like carrots, do you?", ja: 'ニンジンは好きじゃないよね？' },
     ],
     questions: [
-      { sentence: 'Ken is your friend, ___ he?', choices: ["isn't", 'is', "doesn't"], answer: 0, why: '肯定の be動詞の文なので isn\'t he?' },
-      { sentence: 'You can swim, ___ you?', choices: ["can't", 'can', "don't"], answer: 0, why: 'can の肯定文なので can\'t you?' },
-      { sentence: "She didn't come, ___ she?", choices: ['did', "didn't", 'does'], answer: 0, why: '否定文なので肯定の did she?' },
+      { sentence: 'Ken is your friend, ___ he?', choices: ["isn't", 'is', "doesn't", "aren't"], answer: 0, why: '肯定の be動詞の文なので isn\'t he?' },
+      { sentence: 'You can swim, ___ you?', choices: ["can't", 'can', "don't", "won't"], answer: 0, why: 'can の肯定文なので can\'t you?' },
+      { sentence: "She didn't come, ___ she?", choices: ['did', "didn't", 'does', "isn't"], answer: 0, why: '否定文なので肯定の did she?' },
     ],
   },
   {
@@ -730,9 +730,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Hurry up, or you will be late for school.', ja: '急ぎなさい、さもないと学校に遅れるよ。' },
     ],
     questions: [
-      { sentence: 'Study hard, ___ you will pass the test.', choices: ['and', 'or', 'but'], answer: 0, why: '「そうすれば合格する」とよい結果なので and。' },
-      { sentence: 'Take an umbrella, ___ you will get wet.', choices: ['and', 'or', 'so'], answer: 1, why: '「さもないとぬれる」とよくない結果なので or。' },
-      { sentence: 'Turn right at the corner, ___ you will see the station.', choices: ['or', 'and', 'but'], answer: 1, why: '「そうすれば駅が見える」なので and。' },
+      { sentence: 'Study hard, ___ you will pass the test.', choices: ['and', 'or', 'but', 'nor'], answer: 0, why: '「そうすれば合格する」とよい結果なので and。' },
+      { sentence: 'Take an umbrella, ___ you will get wet.', choices: ['and', 'or', 'so', 'nor'], answer: 1, why: '「さもないとぬれる」とよくない結果なので or。' },
+      { sentence: 'Turn right at the corner, ___ you will see the station.', choices: ['or', 'and', 'but', 'nor'], answer: 1, why: '「そうすれば駅が見える」なので and。' },
     ],
   },
   {
@@ -800,9 +800,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Let me carry your bag.', ja: 'あなたのかばんを運ばせてください。' },
     ],
     questions: [
-      { sentence: 'My father let me ___ his camera.', choices: ['use', 'to use', 'using'], answer: 0, why: 'let ＋人＋動詞の原形。' },
-      { sentence: 'The sad movie made her ___.', choices: ['cried', 'cry', 'to cry'], answer: 1, why: 'make ＋人＋動詞の原形で「〜させる」。' },
-      { sentence: 'Can you help me ___ this box?', choices: ['moving', 'moved', 'move'], answer: 2, why: 'help ＋人＋動詞の原形で「人が〜するのを手伝う」。' },
+      { sentence: 'My father let me ___ his camera.', choices: ['use', 'to use', 'using', 'used'], answer: 0, why: 'let ＋人＋動詞の原形。' },
+      { sentence: 'The sad movie made her ___.', choices: ['cried', 'cry', 'to cry', 'cries'], answer: 1, why: 'make ＋人＋動詞の原形で「〜させる」。' },
+      { sentence: 'Can you help me ___ this box?', choices: ['moving', 'moved', 'move', 'moves'], answer: 2, why: 'help ＋人＋動詞の原形で「人が〜するのを手伝う」。' },
     ],
   },
   {
@@ -828,9 +828,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Can you check whether the store is open?', ja: 'その店が開いているかどうか確かめてくれる？' },
     ],
     questions: [
-      { sentence: 'I wonder ___ it will rain tomorrow.', choices: ['if', 'that', 'what'], answer: 0, why: '「〜かどうか」は if（whether）。' },
-      { sentence: "I'm not sure ___ she likes cats.", choices: ['whether', 'which', 'who'], answer: 0, why: '「好きかどうか」なので whether。' },
-      { sentence: 'Please ask him if he ___ us tomorrow.', choices: ['help', 'will help', 'helping'], answer: 1, why: '「〜かどうか」の if のあとは、未来なら will を使う。' },
+      { sentence: 'I wonder ___ it will rain tomorrow.', choices: ['if', 'that', 'what', 'who'], answer: 0, why: '「〜かどうか」は if（whether）。' },
+      { sentence: "I'm not sure ___ she likes cats.", choices: ['whether', 'which', 'who', 'what'], answer: 0, why: '「好きかどうか」なので whether。' },
+      { sentence: 'Please ask him if he ___ us tomorrow.', choices: ['help', 'will help', 'helping', 'helped'], answer: 1, why: '「〜かどうか」の if のあとは、未来なら will を使う。' },
     ],
   },
   {
@@ -870,9 +870,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There is nothing in the box.', ja: '箱の中には何もない。' },
     ],
     questions: [
-      { sentence: 'Nobody ___ his phone number.', choices: ['know', 'knows', 'knowing'], answer: 1, why: 'nobody は3人称単数あつかいなので knows。' },
-      { sentence: 'I had ___ to eat this morning.', choices: ['nothing', 'anything', 'no'], answer: 0, why: '「何も食べるものがなかった」は had nothing to eat（not がないので nothing）。' },
-      { sentence: "I don't have ___ money with me.", choices: ['no', 'any', 'nothing'], answer: 1, why: "not があるときは any（don't have any 〜 ＝ 少しも〜ない）。" },
+      { sentence: 'Nobody ___ his phone number.', choices: ['know', 'knows', 'knowing', 'have known'], answer: 1, why: 'nobody は3人称単数あつかいなので knows。' },
+      { sentence: 'I had ___ to eat this morning.', choices: ['nothing', 'anything', 'no', 'not'], answer: 0, why: '「何も食べるものがなかった」は had nothing to eat（not がないので nothing）。' },
+      { sentence: "I don't have ___ money with me.", choices: ['no', 'any', 'nothing', 'none'], answer: 1, why: "not があるときは any（don't have any 〜 ＝ 少しも〜ない）。" },
     ],
   },
   {
@@ -884,9 +884,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "We enjoyed the trip though it rained every day.", ja: '毎日雨がふったけれど、私たちは旅行を楽しんだ。' },
     ],
     questions: [
-      { sentence: '___ it was very hot, they played soccer outside.', choices: ['Because', 'Although', 'So'], answer: 1, why: '「とても暑かったけれど」なので Although。' },
-      { sentence: 'She went to school ___ she had a slight cold.', choices: ['though', 'because of', 'so'], answer: 0, why: '「少しかぜぎみだったのに」なので though（あとに文が続く）。' },
-      { sentence: 'Though the test was difficult, ___', choices: ['I got a good score.', 'but I got a good score.', 'so I got a good score.'], answer: 0, why: 'though のある文には but や so を重ねない。' },
+      { sentence: '___ it was very hot, they played soccer outside.', choices: ['Because', 'Although', 'So', 'Despite'], answer: 1, why: '「とても暑かったけれど」なので Although。' },
+      { sentence: 'She went to school ___ she had a slight cold.', choices: ['though', 'because of', 'so', 'despite'], answer: 0, why: '「少しかぜぎみだったのに」なので though（あとに文が続く）。' },
+      { sentence: 'Though the test was difficult, ___', choices: ['I got a good score.', 'but I got a good score.', 'so I got a good score.', 'and I got a good score.'], answer: 0, why: 'though のある文には but や so を重ねない。' },
     ],
   },
   {
@@ -926,9 +926,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This park is popular not only with children but also with adults.', ja: 'この公園は子どもだけでなく大人にも人気がある。' },
     ],
     questions: [
-      { sentence: 'He is not only kind ___ also funny.', choices: ['and', 'but', 'or'], answer: 1, why: 'not only A but also B の形。' },
-      { sentence: 'Not only Ken but also his parents ___ coming to the party.', choices: ['is', 'are', 'am'], answer: 1, why: '動詞は B（his parents）に合わせるので are。' },
-      { sentence: 'This app is useful not ___ for students but also for teachers.', choices: ['only', 'just a', 'very'], answer: 0, why: 'not only 〜 but also … の形。' },
+      { sentence: 'He is not only kind ___ also funny.', choices: ['and', 'but', 'or', 'so'], answer: 1, why: 'not only A but also B の形。' },
+      { sentence: 'Not only Ken but also his parents ___ coming to the party.', choices: ['is', 'are', 'am', 'be'], answer: 1, why: '動詞は B（his parents）に合わせるので are。' },
+      { sentence: 'This app is useful not ___ for students but also for teachers.', choices: ['only', 'just a', 'very', 'too'], answer: 0, why: 'not only 〜 but also … の形。' },
     ],
   },
   {
@@ -940,9 +940,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I was excited about the movie.', ja: '私はその映画にわくわくした。' },
     ],
     questions: [
-      { sentence: 'The story was very ___.', choices: ['interesting', 'interested', 'interest'], answer: 0, why: '話が「おもしろい（興味をひく）」性質なので -ing。' },
-      { sentence: 'I was ___ to hear the news.', choices: ['surprising', 'surprised', 'surprise'], answer: 1, why: '私が「おどろいた」気持ちなので -ed。' },
-      { sentence: 'She felt ___ after the long walk.', choices: ['tiring', 'tired', 'tire'], answer: 1, why: '彼女が「つかれた」気持ちなので -ed。' },
+      { sentence: 'The story was very ___.', choices: ['interesting', 'interested', 'interest', 'interests'], answer: 0, why: '話が「おもしろい（興味をひく）」性質なので -ing。' },
+      { sentence: 'I was ___ to hear the news.', choices: ['surprising', 'surprised', 'surprise', 'surprises'], answer: 1, why: '私が「おどろいた」気持ちなので -ed。' },
+      { sentence: 'She felt ___ after the long walk.', choices: ['tiring', 'tired', 'tire', 'tires'], answer: 1, why: '彼女が「つかれた」気持ちなので -ed。' },
     ],
   },
   {
@@ -954,9 +954,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We heard the birds singing.', ja: '私たちは鳥がさえずっているのを聞いた。' },
     ],
     questions: [
-      { sentence: 'I heard someone ___ my name.', choices: ['call', 'to call', 'called'], answer: 0, why: 'hear ＋人＋動詞の原形。to はつけない。' },
-      { sentence: 'She saw a cat ___ on the roof.', choices: ['sleeping', 'to sleep', 'slept'], answer: 0, why: '「ねているところを見た」なので -ing。' },
-      { sentence: 'We watched the children ___ soccer.', choices: ['to play', 'play', 'played'], answer: 1, why: 'watch ＋人＋動詞の原形。' },
+      { sentence: 'I heard someone ___ my name.', choices: ['call', 'to call', 'called', 'calls'], answer: 0, why: 'hear ＋人＋動詞の原形。to はつけない。' },
+      { sentence: 'She saw a cat ___ on the roof.', choices: ['sleeping', 'to sleep', 'slept', 'sleeps'], answer: 0, why: '「ねているところを見た」なので -ing。' },
+      { sentence: 'We watched the children ___ soccer.', choices: ['to play', 'play', 'played', 'plays'], answer: 1, why: 'watch ＋人＋動詞の原形。' },
     ],
   },
   {
