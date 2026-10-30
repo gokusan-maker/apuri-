@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'pufferfish', name: 'フグリン', egg: 'ぷくぷくうみのタマゴ', token: 'フグ', bigToken: 'フグリン', color: '#fde68a', line: '#92400e', rate: 0.02, desc: 'おどろくと水をすってぷくっとふくらむフグ。体を大きくして身を守るように、まちがえてもへこまず、ふくらむ元気で次に向かう。' },
   { id: 'anteater', name: 'アリクイン', egg: 'みなみのもりのながいはなタマゴ', token: 'クイ', bigToken: 'アリクイン', color: '#d6c3a5', line: '#57442d', rate: 0.02, desc: '長い鼻と舌でアリをたくさん食べるアリクイ。小さなアリを1ぴきずつ見つけるように、小さな単語も1つずつのがさず覚える。' },
   { id: 'chinchilla', name: 'チンチラン', egg: 'たかいやまのふわふわタマゴ', token: 'チラ', bigToken: 'チンチラン', color: '#e5e7eb', line: '#4b5563', rate: 0.02, desc: '高い山の岩場にすむ、ふわふわの毛のチンチラ。砂あびで毛をきれいにするように、まちがえた単語もくり返してきれいに覚える。' },
   { id: 'shoebill', name: 'ハシビロン', egg: 'しずかなぬまのタマゴ', token: 'ハシ', bigToken: 'ハシビロン', color: '#cbd5e1', line: '#334155', rate: 0.02, desc: '沼地でじっと動かずに立つハシビロコウ。何時間でも待って一瞬で魚をつかまえるように、あわてずに問題をよく見て答える。' },

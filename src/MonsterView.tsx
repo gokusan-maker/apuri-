@@ -786,6 +786,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 60 Q62 66 74 74" fill="none" stroke="#57442d" strokeWidth="5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'pufferfish')
+    return (
+      <g>
+        {/* 体のとげ */}
+        <path d="M24 50 l-6 -2 M76 50 l6 -2 M50 22 l0 -6 M30 32 l-4 -4 M70 32 l4 -4" stroke="#92400e" strokeWidth="2" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
