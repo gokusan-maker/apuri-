@@ -16116,6 +16116,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-weekend',
+    title: 'How the Weekend Was Invented',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, many people look forward to the weekend as a natural part of life. It is easy to forget that a two-day break from work at the end of every week is a fairly recent idea. For most of history, people worked six or even seven days a week, and the weekend as we know it developed only after long social and economic changes.",
+      "In many traditional societies, one day of each week was set aside for rest or religious activities. However, the other days were usually filled with work, especially for farmers, who had to care for animals and crops every day. When factories spread in the nineteenth century, workers often had to work long hours six days a week, ( A ) they had little time to rest or spend with their families.",
+      "Over time, workers and their supporters began to demand shorter working hours. In some places, workers were given a half day off on Saturday in addition to Sunday. This change was supported not only by workers but also by some religious leaders and business owners, who believed that rested workers would be healthier and more productive. Free Saturday afternoons also gave people time for new activities, such as watching or playing sports.",
+      "In 1926, the American car maker Henry Ford introduced a five-day working week in his factories without reducing workers' pay. He believed that people with more free time would travel, shop, and enjoy leisure activities, and that this would increase demand for products such as cars. Other companies gradually followed, and in many countries the two-day weekend became normal during the twentieth century.",
+      "The history of the weekend reminds us that the patterns of our daily lives are not fixed. They are the result of decisions ( B ) people made in response to the needs of their time. Today, some companies are experimenting with a four-day working week, and it is possible that the weekend of the future will look quite different from the one we know now. Changes in technology, such as working from home, may also affect how people divide their time. Whatever happens, the question of how to balance work and rest is likely to remain ( C ) important as ever.",
+    ],
+    ja: [
+      '今日、多くの人々は週末を生活の自然な一部として楽しみにしている。毎週の終わりに仕事から2日間の休みがあるというのが、かなり新しい考えだということは忘れられがちである。歴史の大部分のあいだ、人々は週に6日、あるいは7日も働いており、わたしたちが知っているような週末は、長い社会と経済の変化を経てようやく生まれたのである。',
+      '多くの伝統的な社会では、毎週1日が休みや宗教の活動のために取っておかれていた。しかしほかの日はふつう仕事でうまっており、とくに毎日動物や作物の世話をしなければならない農民はそうだった。19世紀に工場が広まると、労働者はしばしば週に6日、長い時間働かなければならず、そのため休んだり家族と過ごしたりする時間はほとんどなかった。',
+      'やがて、労働者とその支持者たちは、より短い労働時間を求めはじめた。ある地域では、労働者は日曜日に加えて土曜日に半日の休みをあたえられた。この変化は労働者だけでなく、休んだ労働者のほうが健康で生産的になると信じた一部の宗教指導者や経営者にも支持された。土曜日の午後が休みになったことで、人々はスポーツを見たりしたりするような新しい活動の時間も得た。',
+      '1926年、アメリカの自動車会社の経営者ヘンリー・フォードは、労働者の給料を減らさずに、自分の工場で週5日労働を取り入れた。彼は、自由な時間の多い人々は旅行や買い物をし、余暇の活動を楽しむようになり、それが車のような製品の需要をふやすだろうと考えた。ほかの会社も少しずつそれにならい、多くの国で20世紀のあいだに2日間の週末がふつうになった。',
+      '週末の歴史は、わたしたちの日々の生活の型が決まったものではないことを思い出させてくれる。それらは、人々がその時代の必要に応えてした決定の結果なのである。今日、週4日労働を試している会社もあり、将来の週末は今わたしたちが知っているものとはかなりちがって見えるかもしれない。家で働くことのような技術の変化も、人々が時間をどう分けるかに影響するかもしれない。何が起きても、仕事と休みのつり合いをどうとるかという問いは、これまでと同じように大切でありつづけるだろう。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'unless', 'although'], answer: 0, why: '「週に6日長時間働かなければならなかった、その結果休む時間がほとんどなかった」と結果を表すので so。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 decisions を受け、うしろの made の目的語が欠けているので目的格の関係代名詞 that（which も可）。' },
+      { id: 'C', choices: ['as', 'so', 'more', 'than'], answer: 0, why: 'as important as ever「これまでと同じように大切な」。as ～ as ever の形。' },
+    ],
+    tf: [
+      { statement: '毎週2日間の休みは、とても古くからある考えである。', answer: false, why: '第1段落 a two-day break from work at the end of every week is a fairly recent idea。' },
+      { statement: '19世紀の工場労働者は、週に6日長時間働くことが多かった。', answer: true, why: '第2段落 workers often had to work long hours six days a week。' },
+      { statement: 'フォードは、週5日労働にするときに労働者の給料を減らした。', answer: false, why: '第4段落 without reducing workers’ pay。' },
+      { statement: '今日、週4日労働を試している会社もある。', answer: true, why: '第5段落 some companies are experimenting with a four-day working week。' },
+    ],
+    qa: [
+      { q: 'Why did some business owners support giving workers more time off?', choices: ['They believed rested workers would be healthier and more productive.', 'They wanted to close their factories.', 'They had too many workers.', 'They were forced by farmers.'], answer: 0, why: '第3段落 who believed that rested workers would be healthier and more productive。' },
+      { q: 'Why did Henry Ford think a five-day week would be good for business?', choices: ['People with more free time would buy more products such as cars.', 'Factories would use less electricity.', 'Workers would not need to be paid.', 'Cars could be made more slowly.'], answer: 0, why: '第4段落 people with more free time would travel, shop … this would increase demand for products such as cars。' },
+    ],
+    gist: [
+      { para: 1, choices: ['農民や工場労働者には休みがほとんどなかったこと', '宗教の歴史', '動物の育て方', '工場の建て方'], answer: 0, why: '第2段落は、伝統的な社会でも工場の時代でも、人々には休む時間がほとんどなかったことを述べている。' },
+      { para: 3, choices: ['フォードが週5日労働を取り入れた理由と広まり', '自動車の作り方', '旅行の歴史', '給料の計算のしかた'], answer: 0, why: '第4段落は、フォードが週5日労働を取り入れた理由と、それがほかの会社に広まったことを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
