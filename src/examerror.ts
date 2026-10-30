@@ -26,4 +26,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She (A) was surprised (B) at the news that her favorite singer (C) has died (D) the day before.', choices: ['(A) was surprised', '(B) at', '(C) has died', '(D) the day before'], answer: 2, why: 'the day before「その前日に」は過去のある時点よりさらに前なので、過去完了 had died。' },
     ],
   },
+  {
+    id: 'exam-error-relative',
+    title: '入試の正誤問題②（関係詞・分詞）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      '関係詞は「先行詞が人か物か」「うしろの文に何が欠けているか」「コンマのあとか」、分詞は「する側（-ing）か、される側（過去分詞）か」に注目する。',
+    ],
+    examples: [
+      { en: 'This is the house where my grandmother was born.', ja: 'これは祖母が生まれた家だ。（was born は目的語をとらないので where）' },
+      { en: 'The picture painted by my sister won a prize.', ja: '姉がかいた絵が賞をとった。（絵は「かかれた」側なので過去分詞）' },
+    ],
+    questions: [
+      { sentence: 'The man (A) who (B) lives next door (C) have a big dog (D) named Max.', choices: ['(A) who', '(B) lives next door', '(C) have a big dog', '(D) named Max'], answer: 2, why: '文の主語は The man（1人）なので動詞は has。who lives next door は The man を説明する部分。' },
+      { sentence: 'This is the town (A) which my father (B) was born (C) and (D) grew up.', choices: ['(A) which my father', '(B) was born', '(C) and', '(D) grew up'], answer: 0, why: 'was born も grew up も目的語をとらないので、場所を表す関係副詞 where（または in which）。' },
+      { sentence: 'Do you know the girl (A) whose (B) is talking (C) with our teacher (D) over there?', choices: ['(A) whose', '(B) is talking', '(C) with our teacher', '(D) over there'], answer: 0, why: 'うしろに主語が欠けていて（is talking）、先行詞は人なので who。whose のあとには名詞が必要。' },
+      { sentence: 'The book (A) that I (B) bought it yesterday (C) is (D) very interesting.', choices: ['(A) that I', '(B) bought it yesterday', '(C) is', '(D) very interesting'], answer: 1, why: 'that が bought の目的語の役わりをしているので、it はいらない：that I bought yesterday。' },
+      { sentence: 'I received a letter (A) from a friend (B) in Canada, (C) which was (D) wrote in English.', choices: ['(A) from a friend', '(B) in Canada', '(C) which was', '(D) wrote in English'], answer: 3, why: '手紙は「書かれた」側なので受け身 was written。wrote は過去形で、was のあとには置けない。' },
+      { sentence: 'The children (A) playing in the park (B) looks (C) very happy (D) today.', choices: ['(A) playing in the park', '(B) looks', '(C) very happy', '(D) today'], answer: 1, why: '主語は The children（複数）なので動詞は look。playing in the park は children を説明する部分。' },
+      { sentence: 'What I want to say (A) is (B) that we should (C) protect (D) the environment which we live.', choices: ['(A) is', '(B) that we should', '(C) protect', '(D) the environment which we live'], answer: 3, why: 'live は目的語をとらないので、the environment in which we live（または where we live）。' },
+      { sentence: 'Kyoto, (A) that I visited (B) last year, (C) is famous (D) for its old temples.', choices: ['(A) that I visited', '(B) last year', '(C) is famous', '(D) for its old temples'], answer: 0, why: 'コンマのあと（非制限用法）では that は使えないので which I visited。' },
+      { sentence: '(A) Seen from the top of the hill, the town (B) looked (C) likely (D) a toy.', choices: ['(A) Seen', '(B) looked', '(C) likely', '(D) a toy'], answer: 2, why: '「～のように見えた」は looked like ＋名詞。likely は「ありそうな」という形容詞で、名詞の前に置けない。' },
+      { sentence: 'There were many people (A) waiting (B) for the bus, (C) most of them (D) were students.', choices: ['(A) waiting', '(B) for the bus', '(C) most of them', '(D) were students'], answer: 2, why: '2つの文をコンマだけでつなぐことはできないので、関係代名詞を使って most of whom were students。' },
+    ],
+  },
 ]
