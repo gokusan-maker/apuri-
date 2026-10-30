@@ -81,3 +81,12 @@ describe('レベルに合った誤答（CEFR の点検②）', () => {
     }
   })
 })
+
+describe('単語のレベルの点検③：訳の長さが近い誤答', () => {
+  it('候補の中から、訳の長さが正解に近い3つを誤答にする', async () => {
+    const { makeQuestion } = await import('./quiz')
+    const items = ['あいうえお', 'か', 'きく', 'さしすせそ', 'たちつてと', 'なにぬねの', 'はひふへほまみむ', 'や', 'らりるれろわをん'].map((l, i) => ({ id: String(i), l }))
+    const q = makeQuestion(items[0], items, (x) => x.l, () => 0.5)
+    expect([...q.choices].sort()).toEqual(['あいうえお', 'さしすせそ', 'たちつてと', 'なにぬねの'].sort())
+  })
+})

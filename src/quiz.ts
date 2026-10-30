@@ -16,7 +16,8 @@ export function shuffle<T>(items: T[], rng: Rng = Math.random): T[] {
   return a
 }
 
-// 正解1つ＋意味が重ならない誤答3つ
+// 正解1つ＋意味が重ならない誤答3つ（ランダムな候補 CAND_N 個のうち、訳の長さが正解に近い3つ）
+export const CAND_N = 8
 export function makeQuestion<T extends { id: string }>(
   word: T,
   all: T[],
@@ -25,14 +26,20 @@ export function makeQuestion<T extends { id: string }>(
 ): Question<T> {
   const correct = label(word)
   const seen = new Set([correct])
-  const wrong: string[] = []
+  const cands: string[] = []
   for (const w of shuffle(all, rng)) {
     const l = label(w)
     if (w.id === word.id || !l || seen.has(l)) continue
     seen.add(l)
-    wrong.push(l)
-    if (wrong.length === 3) break
+    cands.push(l)
+    if (cands.length === CAND_N) break
   }
+  // 単語のレベルの点検③：訳の長さが正解に近い誤答を選ぶ（長さのちがいで答えがすぐわからないように）
+  const wrong = cands
+    .map((l, i) => ({ l, i, d: Math.abs(l.length - correct.length) }))
+    .sort((x, y) => x.d - y.d || x.i - y.i)
+    .slice(0, 3)
+    .map((x) => x.l)
   const choices = shuffle([correct, ...wrong], rng)
   return { word, choices, answer: choices.indexOf(correct) }
 }
