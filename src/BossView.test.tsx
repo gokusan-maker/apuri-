@@ -719,3 +719,24 @@ it('デザイン91：ボスに負けた結果画面にも、そのボス戦で�
   expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
   expect(screen.getByLabelText('正解した数 1').textContent).toBe('⭕ 1問正解')
 })
+
+it('デザイン92：まちがえずにボスに勝つと「✨ ノーミス！」が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText('ノーミス').textContent).toBe('✨ ノーミス！')
+})
+
+it('デザイン92：1回でもまちがえて勝ったときは「ノーミス」を出さない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  answer(false)
+  fireEvent.click(screen.getByText('次へ'))
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.queryByLabelText('ノーミス')).toBeNull()
+})

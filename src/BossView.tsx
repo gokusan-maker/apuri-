@@ -285,6 +285,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [teamHp, setTeamHp] = useState<TeamHp>(() => fullTeamHp(memberMax)) // チームバトル：なかまの体力
   const [healed, setHealed] = useState(false) // 回復は1戦1回まで
   const [missed, setMissed] = useState<Word[]>([])
+  const [wrongs, setWrongs] = useState(0) // デザイン92：このボス戦でまちがえた回数
   const [crit, setCrit] = useState(false)
   const [gauge, setGauge] = useState(() => Math.min(GAUGE_MAX - 1, sup.gauge))
   const skill = partner && partner.form.stage > 0 ? skillOf(partner.species) : null
@@ -487,6 +488,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
         setHp(Math.min(maxHp, hp + DRAIN_HEAL))
         setTraitMsg(`${BOSS_TRAITS.drain.icon} ${look.name}の${BOSS_TRAITS.drain.name}！ HP +${Math.min(DRAIN_HEAL, maxHp - hp)}`)
       }
+      setWrongs((w) => w + 1)
       if (q.word.id) setMissed((m) => (m.some((w) => w.id === q.word.id) ? m : [...m, q.word]))
       playWrong()
       answerFor(q)?.(false, 0, q.word.id, 'quiz')
@@ -592,6 +594,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHit(false)
     setHealed(false)
     setMissed([])
+    setWrongs(0)
     setGauge(0)
     setCorrects(0)
     setTeamHits({ word: 0, grammar: 0, reading: 0 })
@@ -851,6 +854,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               </span>
             )}
             {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
+            {wrongs === 0 && <span className="game-best" aria-label="ノーミス">✨ ノーミス！</span>}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
