@@ -696,3 +696,14 @@ it('デザイン89：連続正解がないまま負けたときは、最大コ�
   expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
   expect(screen.queryByLabelText(/^最大コンボ/)).toBeNull()
 })
+
+it('デザイン90：ボスに勝つと、結果画面にそのボス戦で正解した数が出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  let n = 0
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    n++
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText(`正解した数 ${n}`).textContent).toBe(`⭕ ${n}問正解`)
+})
