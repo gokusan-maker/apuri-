@@ -3213,3 +3213,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑪（TOEFL・IELTS の書き言葉③：rise/raise・from A to B・between A and B・As can be seen・twice as ～ as）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「動物の擬態」（自然・動物・非制限の which／名詞節 that の空所）
 - 2026-10-30: キャラクター追加：シロイルン（シロイルカ・こおりのうみのうたタマゴ・サポートのとくぎ）
+- 2026-10-30: 文法：入試の正誤問題⑱（仮定法・助動詞の難問：would have ＋過去分詞・I wish・as if・Were I の倒置・need not ＋原形・had better not）10問

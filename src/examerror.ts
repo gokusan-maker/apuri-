@@ -386,6 +386,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'I (A) feel (B) sleepy (C) because I went to bed (D) lately last night.', choices: ['(A) feel', '(B) sleepy', '(C) because I went to bed', '(D) lately last night'], answer: 3, why: '「おそく（寝た）」は late。lately は「最近」。' },
     ],
   },
+  {
+    id: 'exam-error-subj',
+    title: '入試の正誤問題⑱（仮定法・助動詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      '仮定法過去（would ＋原形）と仮定法過去完了（would have ＋過去分詞）、I wish・as if・If only、Were I ～ の倒置、It is necessary that ＋原形、need not ＋原形、had better not に注目する。',
+    ],
+    examples: [
+      { en: 'If it had not rained yesterday, we would have gone on a picnic.', ja: '昨日雨がふらなかったら、ピクニックに行ったのに。（仮定法過去完了）' },
+      { en: 'Were I a bird, I could fly to you.', ja: 'もし私が鳥なら、あなたのところへ飛んでいけるのに。（If I were の倒置）' },
+    ],
+    questions: [
+      { sentence: 'If I (A) were (B) you, I (C) will (D) apologize to her.', choices: ['(A) were', '(B) you, I', '(C) will', '(D) apologize to her'], answer: 2, why: '仮定法過去なので主節は would ＋原形：I would apologize。' },
+      { sentence: 'If it (A) had not rained (B) yesterday, we (C) would go (D) on a picnic.', choices: ['(A) had not rained', '(B) yesterday, we', '(C) would go', '(D) on a picnic'], answer: 2, why: '過去の事実に反する仮定（仮定法過去完了）なので主節は would have ＋過去分詞：would have gone。' },
+      { sentence: 'I wish I (A) have (B) more time (C) to read (D) books.', choices: ['(A) have', '(B) more time', '(C) to read', '(D) books'], answer: 0, why: 'I wish ＋仮定法過去「今～ならいいのに」：I wish I had。' },
+      { sentence: 'It is (A) necessary that every student (B) submits (C) the report (D) by Friday.', choices: ['(A) necessary that every student', '(B) submits', '(C) the report', '(D) by Friday'], answer: 1, why: 'It is necessary that ～ の節では動詞の原形（または should ＋原形）：every student submit。' },
+      { sentence: '(A) Were (B) I (C) a bird, I (D) can fly to you.', choices: ['(A) Were', '(B) I', '(C) a bird, I', '(D) can fly to you'], answer: 3, why: 'Were I ～ は If I were ～ の倒置（仮定法過去）なので主節は could ＋原形：I could fly。' },
+      { sentence: 'He talks (A) as if he (B) has been (C) to Paris many times, but he (D) has never been there.', choices: ['(A) as if he', '(B) has been', '(C) to Paris many times, but he', '(D) has never been there'], answer: 1, why: '事実とちがう過去の経験なので as if ＋仮定法過去完了：as if he had been。' },
+      { sentence: 'You (A) need not (B) to worry (C) about (D) the test.', choices: ['(A) need not', '(B) to worry', '(C) about', '(D) the test'], answer: 1, why: '助動詞の need not のあとは原形：need not worry。' },
+      { sentence: 'If you (A) had told (B) me earlier, I (C) could help (D) you then.', choices: ['(A) had told', '(B) me earlier, I', '(C) could help', '(D) you then'], answer: 2, why: '過去の事実に反する仮定なので could have ＋過去分詞：could have helped。' },
+      { sentence: 'You (A) had not better (B) leave (C) now (D) because it is raining.', choices: ['(A) had not better', '(B) leave', '(C) now', '(D) because it is raining'], answer: 0, why: 'had better の否定は had better not：You had better not leave。' },
+      { sentence: 'If only I (A) had (B) studied harder, I (C) could have (D) pass the exam.', choices: ['(A) had', '(B) studied harder, I', '(C) could have', '(D) pass the exam'], answer: 3, why: 'could have のあとは過去分詞：could have passed。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ
