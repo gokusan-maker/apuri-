@@ -17008,6 +17008,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How the Railways Changed Time', 'The Life of a Railway Engineer', 'How to Read a Timetable', 'Why the Sun Rises in the East'], answer: 0, why: '全体として、鉄道の登場が地方時から標準時・時間帯への移り変わりをもたらしたことを論じている。' },
   },
   {
+    id: 'kyotsu-yawning',
+    title: 'Why Do We Yawn?',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Everyone yawns. We yawn when we are tired, when we are bored, and sometimes even when we are nervous before an important event. Many animals yawn too, including dogs, cats, birds, and even some fish. Yet although yawning is one of the most common things our bodies do, scientists still do not fully agree on why it happens.",
+      "For a long time, many people believed that we yawn because our bodies need more oxygen. According to this idea, a deep yawn brings extra air into the lungs when we are breathing slowly. However, experiments have not supported this explanation well. In some studies, people who breathed air with more oxygen did not yawn less, ( A ) people who breathed air with less oxygen did not yawn more.",
+      "Another explanation is that yawning helps to cool the brain. When we yawn, we take in a large amount of air and stretch the muscles of the jaw, which may increase the flow of blood to the head. Some researchers have found that people yawn more often when the air is cool than when it is very hot, which seems to fit this idea. Still, more research is needed before this theory can be accepted. Scientists also need to explain why animals living in very different environments yawn in similar ways.",
+      "One of the most interesting facts about yawning is that it is contagious. When we see someone else yawn, or even read about yawning, we often begin to yawn ourselves. Some scientists think that this may be connected with our ability to understand the feelings of others, ( B ) other studies have found that the link is weaker than first thought. Interestingly, young children and some animals are less likely to catch yawns from others. Dogs, however, sometimes seem to yawn after seeing their owners yawn.",
+      "Even if we do not know exactly why we yawn, yawning reminds us that many ordinary things about our bodies are still mysterious. Simple questions that children ask can lead to serious scientific research. The next time you yawn, you may want to think about the many possible reasons ( C ) scientists are still trying to understand. You may even notice that reading this passage has made you yawn.",
+    ],
+    ja: [
+      'だれでもあくびをする。わたしたちはつかれたとき、たいくつなとき、そしてときには大切なできごとの前に緊張しているときにさえあくびをする。犬やねこ、鳥、さらには一部の魚など、多くの動物もあくびをする。しかし、あくびは体がする最もふつうのことの一つであるにもかかわらず、科学者たちはそれがなぜ起こるのかについて、今もすっかり意見が一致しているわけではない。',
+      '長いあいだ、多くの人は、体がより多くの酸素を必要とするからあくびをすると信じていた。この考えによれば、ゆっくり呼吸しているときに、深いあくびが肺に余分な空気を取りこむ。しかし実験は、この説明をあまり支持していない。いくつかの研究では、酸素の多い空気を吸った人はあくびが減らず、また酸素の少ない空気を吸った人もあくびがふえなかった。',
+      '別の説明は、あくびが脳を冷やすのに役立つというものである。あくびをするとき、わたしたちはたくさんの空気を取りこみ、あごの筋肉をのばす。それが頭への血の流れをふやすのかもしれない。とても暑いときよりも空気がすずしいときのほうが、人はあくびをよくすることを見つけた研究者もおり、それはこの考えに合うように思われる。それでも、この説が受け入れられるには、さらに研究が必要である。科学者はまた、まったくちがう環境に住む動物たちがなぜ同じようにあくびをするのかも説明する必要がある。',
+      'あくびについて最も興味深い事実の一つは、それがうつることである。ほかの人があくびをするのを見たり、あくびについて読んだりするだけで、わたしたちはしばしば自分もあくびをしはじめる。これはほかの人の気持ちを理解する力と関係があるかもしれないと考える科学者もいるが、そのつながりは最初に考えられていたより弱いことを見つけた研究もある。おもしろいことに、小さな子どもや一部の動物は、ほかからあくびがうつりにくい。ただし犬は、飼い主があくびをするのを見たあとにあくびをするように見えることがある。',
+      'たとえわたしたちがなぜあくびをするのかを正確に知らなくても、あくびは、体についての多くのふつうのことが今もなぞであることを思い出させてくれる。子どもがたずねるかんたんな問いが、本格的な科学の研究につながることもある。次にあくびをするとき、科学者たちが今も理解しようとしているたくさんの理由について考えてみるとよいかもしれない。この文章を読んで、あくびが出てしまったことに気づくかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['and', 'but', 'so', 'because'], answer: 0, why: '「酸素の多い空気であくびが減らなかった」と「酸素の少ない空気であくびがふえなかった」を同じ向きでつなぐので and。' },
+      { id: 'B', choices: ['while', 'because', 'unless', 'so that'], answer: 0, why: '「関係があると考える科学者もいる」と「つながりは弱いという研究もある」を対比しているので while「～である一方」。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the many possible reasons を受け、うしろの understand の目的語が欠けているので目的格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: 'あくびをするのは人間だけである。', answer: false, why: '第1段落 Many animals yawn too, including dogs, cats, birds, and even some fish。' },
+      { statement: '実験は、酸素が足りないからあくびをするという説明をあまり支持していない。', answer: true, why: '第2段落 experiments have not supported this explanation well。' },
+      { statement: '人は、とても暑いときのほうがすずしいときよりあくびをよくするという研究がある。', answer: false, why: '第3段落 people yawn more often when the air is cool than when it is very hot。' },
+      { statement: '小さな子どもは、ほかの人からあくびがうつりにくい。', answer: true, why: '第4段落 young children and some animals are less likely to catch yawns from others。' },
+    ],
+    qa: [
+      { q: 'Which idea about yawning seems to be supported by the effect of air temperature?', choices: ['Yawning helps to cool the brain.', 'Yawning brings more oxygen into the lungs.', 'Yawning shows that a person is angry.', 'Yawning makes the jaw stronger.'], answer: 0, why: '第3段落 people yawn more often when the air is cool than when it is very hot, which seems to fit this idea（脳を冷やす説）。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Ordinary things about our bodies can still be mysterious and worth studying.', 'Scientists have completely explained yawning.', 'Children should not ask simple questions.', 'Yawning is a sign of serious illness.'], answer: 0, why: '第5段落 many ordinary things about our bodies are still mysterious. Simple questions … can lead to serious scientific research。' },
+    ],
+    gist: [
+      { para: 1, choices: ['酸素の不足であくびをするという説が支持されないこと', '肺の病気', '呼吸の練習のしかた', '空気のよごれ'], answer: 0, why: '第2段落は、酸素が足りないからあくびをするという昔からの考えが、実験であまり支持されていないことを述べている。' },
+      { para: 3, choices: ['あくびがうつることと、それについての考え', '子どもの育て方', '動物の気持ち', '本の読み方'], answer: 0, why: '第4段落は、あくびがほかの人にうつることと、それが他人の気持ちを理解する力と関係するかについての考えを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
