@@ -663,3 +663,12 @@ it('デザイン86：相棒のヒントは「1戦に1回」と書かれ、使っ
   fireEvent.click(screen.getByText('次へ'))
   expect(screen.getByText('💡 ヒントはこのボス戦で使ったよ')).toBeInTheDocument()
 })
+
+it('デザイン88：ボスに勝つと、結果画面にそのボス戦の最大コンボが出る', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={30} traits={[]} />)
+  for (let i = 0; i < 20 && !screen.queryByText('ボスをたおした！ 🎉'); i++) {
+    answer(true)
+    if (!screen.queryByText('ボスをたおした！ 🎉')) fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByLabelText(/^最大コンボ \d+$/).textContent).toMatch(/^🔥 最大 \d+ コンボ$/)
+})

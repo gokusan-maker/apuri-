@@ -278,6 +278,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
   const [hp, setHp] = useState(maxHp)
   const [hearts, setHearts] = useState(startHearts)
   const [combo, setCombo] = useState(0)
+  const [bestCombo, setBestCombo] = useState(0) // デザイン88：このボス戦でいちばん続いた連続正解
   const [picked, setPicked] = useState<number | null>(null)
   const [hit, setHit] = useState(false)
   const [atk, setAtk] = useState<{ at: number; lose: number; who?: TeamRole; dmg?: number; counter?: boolean; ko?: boolean } | null>(null) // ボスのこうげき（演出用）。チームバトルでは受けたなかまとダメージ
@@ -369,6 +370,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       const c = combo + 1
       const n = corrects + 1
       setCombo(c)
+      if (c > bestCombo) setBestCombo(c)
       if (c % 3 === 0) setShield(true)
       setCorrects(n)
       const ms = nowMs() - shownAt.current
@@ -585,6 +587,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHearts(startHearts)
     setTeamHp(fullTeamHp(memberMax))
     setCombo(0)
+    setBestCombo(0)
     setPicked(null)
     setHit(false)
     setHealed(false)
@@ -848,6 +851,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
               </span>
             )}
             {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
+            {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
             <span className={newRecord > 0 ? 'game-best' : undefined} aria-label={newRecord > 0 ? `最大ダメージ記録を更新！ ${newRecord}` : `最大ダメージ記録 ${loadMaxHit()}`}>
               💥 {newRecord > 0 ? `${newRecord} 更新！` : `最大 ${loadMaxHit()}`}
             </span>
