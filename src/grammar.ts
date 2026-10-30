@@ -81,9 +81,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I am going to visit Kyoto next month.', ja: '来月京都を訪れる予定だ。' },
     ],
     questions: [
-      { sentence: 'It ___ rain tomorrow.', choices: ['will', 'is', 'does'], answer: 0, why: '未来のことなので will ＋ 原形 rain。' },
-      { sentence: 'I am going ___ visit my uncle.', choices: ['to', 'for', 'at'], answer: 0, why: 'be going to ＋ 動詞の原形。' },
-      { sentence: 'Will you ___ free this evening?', choices: ['are', 'be', 'is'], answer: 1, why: 'will のあとは原形なので be。' },
+      { sentence: 'It ___ rain tomorrow.', choices: ['will', 'is', 'does', 'was'], answer: 0, why: '未来のことなので will ＋ 原形 rain。' },
+      { sentence: 'I am going ___ visit my uncle.', choices: ['to', 'for', 'at', 'in'], answer: 0, why: 'be going to ＋ 動詞の原形。' },
+      { sentence: 'Will you ___ free this evening?', choices: ['are', 'be', 'is', 'were'], answer: 1, why: 'will のあとは原形なので be。' },
     ],
   },
   {
@@ -95,9 +95,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is the most popular game in my class.', ja: 'これは私のクラスでいちばん人気のゲームだ。' },
     ],
     questions: [
-      { sentence: 'This bag is ___ than that one.', choices: ['big', 'bigger', 'biggest'], answer: 1, why: 'than があるので比較級 bigger。' },
-      { sentence: 'This is the ___ interesting book of all.', choices: ['more', 'most', 'much'], answer: 1, why: 'interesting は長い語なので the most interesting。' },
-      { sentence: 'Tom runs as ___ as Ken.', choices: ['fast', 'faster', 'fastest'], answer: 0, why: 'as 〜 as の間は形を変えない。' },
+      { sentence: 'This bag is ___ than that one.', choices: ['big', 'bigger', 'biggest', 'more big'], answer: 1, why: 'than があるので比較級 bigger。' },
+      { sentence: 'This is the ___ interesting book of all.', choices: ['more', 'most', 'much', 'very'], answer: 1, why: 'interesting は長い語なので the most interesting。' },
+      { sentence: 'Tom runs as ___ as Ken.', choices: ['fast', 'faster', 'fastest', 'more fast'], answer: 0, why: 'as 〜 as の間は形を変えない。' },
     ],
   },
   {
@@ -151,9 +151,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He went to the store to buy milk.', ja: '彼は牛乳を買いに店へ行った。' },
     ],
     questions: [
-      { sentence: 'I want ___ visit Canada someday.', choices: ['to', 'for', 'in'], answer: 0, why: 'want to ＋ 原形で「〜したい」。' },
-      { sentence: 'She went to the library to ___ some books.', choices: ['borrow', 'borrowed', 'borrowing'], answer: 0, why: 'to のあとは原形。' },
-      { sentence: 'I have a lot of homework ___ do today.', choices: ['to', 'at', 'of'], answer: 0, why: '「するべき宿題」は homework to do。' },
+      { sentence: 'I want ___ visit Canada someday.', choices: ['to', 'for', 'in', 'at'], answer: 0, why: 'want to ＋ 原形で「〜したい」。' },
+      { sentence: 'She went to the library to ___ some books.', choices: ['borrow', 'borrowed', 'borrowing', 'borrows'], answer: 0, why: 'to のあとは原形。' },
+      { sentence: 'I have a lot of homework ___ do today.', choices: ['to', 'at', 'of', 'for'], answer: 0, why: '「するべき宿題」は homework to do。' },
     ],
   },
   {
@@ -165,9 +165,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She is good at drawing.', ja: '彼女は絵をかくのが得意だ。' },
     ],
     questions: [
-      { sentence: 'We enjoyed ___ at the beach.', choices: ['swim', 'swimming', 'to swim'], answer: 1, why: 'enjoy のあとは -ing 形。' },
-      { sentence: 'Did you finish ___ your report?', choices: ['write', 'writing', 'wrote'], answer: 1, why: 'finish のあとは -ing 形。' },
-      { sentence: 'Thank you for ___ me.', choices: ['help', 'helped', 'helping'], answer: 2, why: '前置詞 for のあとは -ing 形。' },
+      { sentence: 'We enjoyed ___ at the beach.', choices: ['swim', 'swimming', 'to swim', 'swam'], answer: 1, why: 'enjoy のあとは -ing 形。' },
+      { sentence: 'Did you finish ___ your report?', choices: ['write', 'writing', 'wrote', 'to write'], answer: 1, why: 'finish のあとは -ing 形。' },
+      { sentence: 'Thank you for ___ me.', choices: ['help', 'helped', 'helping', 'to help'], answer: 2, why: '前置詞 for のあとは -ing 形。' },
     ],
   },
   {
@@ -221,9 +221,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'If it rains, we will stay home.', ja: 'もし雨なら、家にいます。' },
     ],
     questions: [
-      { sentence: 'I stayed home ___ I had a cold.', choices: ['because', 'if', 'but'], answer: 0, why: '「かぜをひいていたので」理由は because。' },
-      { sentence: '___ you are free, let\'s play tennis.', choices: ['Because', 'If', 'So'], answer: 1, why: '「もしひまなら」は If。' },
-      { sentence: 'Call me ___ you get home.', choices: ['when', 'because', 'or'], answer: 0, why: '「家に着いたとき」は when。' },
+      { sentence: 'I stayed home ___ I had a cold.', choices: ['because', 'if', 'but', 'that'], answer: 0, why: '「かぜをひいていたので」理由は because。' },
+      { sentence: '___ you are free, let\'s play tennis.', choices: ['Because', 'If', 'So', 'And'], answer: 1, why: '「もしひまなら」は If。' },
+      { sentence: 'Call me ___ you get home.', choices: ['when', 'because', 'or', 'but'], answer: 0, why: '「家に着いたとき」は when。' },
     ],
   },
   {
@@ -373,9 +373,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We call the cat Tama.', ja: '私たちはその猫をタマと呼ぶ。' },
     ],
     questions: [
-      { sentence: 'Please show ___ your notebook.', choices: ['me', 'I', 'my'], answer: 0, why: '「私に見せて」は show me ＋ 物。' },
-      { sentence: 'The movie made ___ sad.', choices: ['her', 'she', 'hers'], answer: 0, why: 'make A B の A は「〜を」の形。her。' },
-      { sentence: 'My friends call ___ Ken.', choices: ['me', 'my', 'I'], answer: 0, why: 'call A B「AをBと呼ぶ」。A は me。' },
+      { sentence: 'Please show ___ your notebook.', choices: ['me', 'I', 'my', 'mine'], answer: 0, why: '「私に見せて」は show me ＋ 物。' },
+      { sentence: 'The movie made ___ sad.', choices: ['her', 'she', 'hers', 'to her'], answer: 0, why: 'make A B の A は「〜を」の形。her。' },
+      { sentence: 'My friends call ___ Ken.', choices: ['me', 'my', 'I', 'myself'], answer: 0, why: 'call A B「AをBと呼ぶ」。A は me。' },
     ],
   },
   {
@@ -401,9 +401,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'They were playing soccer when it started to rain.', ja: '雨がふりだしたとき、彼らはサッカーをしていた。' },
     ],
     questions: [
-      { sentence: 'She ___ cooking when I came home.', choices: ['was', 'were', 'is'], answer: 0, why: 'she で過去のことなので was。' },
-      { sentence: 'We were ___ TV at that time.', choices: ['watch', 'watching', 'watched'], answer: 1, why: 'were のあとは ing 形。' },
-      { sentence: 'What ___ you doing then?', choices: ['was', 'were', 'did'], answer: 1, why: 'you なので were。' },
+      { sentence: 'She ___ cooking when I came home.', choices: ['was', 'were', 'is', 'are'], answer: 0, why: 'she で過去のことなので was。' },
+      { sentence: 'We were ___ TV at that time.', choices: ['watch', 'watching', 'watched', 'watches'], answer: 1, why: 'were のあとは ing 形。' },
+      { sentence: 'What ___ you doing then?', choices: ['was', 'were', 'did', 'do'], answer: 1, why: 'you なので were。' },
     ],
   },
   {
@@ -492,9 +492,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My mother wants me to clean my room.', ja: '母は私に部屋をそうじしてほしいと思っている。' },
     ],
     questions: [
-      { sentence: 'I want ___ a new bike.', choices: ['buy', 'to buy', 'buying'], answer: 1, why: '「～したい」は want to ＋動詞の原形。' },
-      { sentence: 'The teacher told us ___ quiet.', choices: ['be', 'to be', 'being'], answer: 1, why: 'tell ＋人＋ to ～で「～するように言う」。' },
-      { sentence: 'I want ___ to help me.', choices: ['you', 'your', 'yours'], answer: 0, why: 'want ＋人＋ to ～。人の部分は目的格 you。' },
+      { sentence: 'I want ___ a new bike.', choices: ['buy', 'to buy', 'buying', 'bought'], answer: 1, why: '「～したい」は want to ＋動詞の原形。' },
+      { sentence: 'The teacher told us ___ quiet.', choices: ['be', 'to be', 'being', 'been'], answer: 1, why: 'tell ＋人＋ to ～で「～するように言う」。' },
+      { sentence: 'I want ___ to help me.', choices: ['you', 'your', 'yours', "you're"], answer: 0, why: 'want ＋人＋ to ～。人の部分は目的格 you。' },
     ],
   },
   {
@@ -674,9 +674,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This bag is not as heavy as that one.', ja: 'このかばんはあのかばんほど重くない。' },
     ],
     questions: [
-      { sentence: 'My cat is as ___ as your dog.', choices: ['big', 'bigger', 'biggest'], answer: 0, why: 'as と as の間は原級。' },
-      { sentence: 'I can run as fast ___ Aki.', choices: ['as', 'than', 'so'], answer: 0, why: 'as 〜 as の形。' },
-      { sentence: 'Math is not as ___ as English for me.', choices: ['easy', 'easier', 'easiest'], answer: 0, why: 'not as 〜 as でも原級。' },
+      { sentence: 'My cat is as ___ as your dog.', choices: ['big', 'bigger', 'biggest', 'more big'], answer: 0, why: 'as と as の間は原級。' },
+      { sentence: 'I can run as fast ___ Aki.', choices: ['as', 'than', 'so', 'that'], answer: 0, why: 'as 〜 as の形。' },
+      { sentence: 'Math is not as ___ as English for me.', choices: ['easy', 'easier', 'easiest', 'easily'], answer: 0, why: 'not as 〜 as でも原級。' },
     ],
   },
   {
@@ -744,9 +744,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He is one of the fastest runners on our team.', ja: '彼は私たちのチームでもっとも足の速い選手の1人です。' },
     ],
     questions: [
-      { sentence: 'This is one of the ___ books in the library.', choices: ['more old', 'much old', 'oldest'], answer: 2, why: 'one of the ＋最上級。' },
-      { sentence: 'She is one of the best ___ in our class.', choices: ['singer', 'singers', 'singing'], answer: 1, why: 'one of the 〜 のあとの名詞は複数形。' },
-      { sentence: 'Soccer is one of the ___ popular sports in the world.', choices: ['mostly', 'most', 'much'], answer: 1, why: 'popular の最上級は most popular。' },
+      { sentence: 'This is one of the ___ books in the library.', choices: ['more old', 'much old', 'oldest', 'old'], answer: 2, why: 'one of the ＋最上級。' },
+      { sentence: 'She is one of the best ___ in our class.', choices: ['singer', 'singers', 'singing', 'sing'], answer: 1, why: 'one of the 〜 のあとの名詞は複数形。' },
+      { sentence: 'Soccer is one of the ___ popular sports in the world.', choices: ['mostly', 'most', 'much', 'very'], answer: 1, why: 'popular の最上級は most popular。' },
     ],
   },
   {
