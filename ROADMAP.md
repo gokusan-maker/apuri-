@@ -85,7 +85,9 @@
   - [x] ⑨ 前置詞の熟語8単元（by heart / at heart、on display / on board、in honor of / in favor of など）を4択に作りかえる（132→111）
   - [x] ⑩ 群前置詞6単元（on account of / on behalf of、in favor of / in charge of など）を4択に作りかえる（111→96）。のこりの96問は、分詞・動名詞・時制など「形を選ぶこと」自体が文法のポイントの問題なので、そのままにする
 - [ ] 単語のレベル（CEFR）と問題の出し方が合っているかを点検する
-- [ ] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+- [x] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+- [ ] 文法（中2）の3択の問題（282問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
+  - [ ] ① 10単元ずつ4択に
   - [x] ① 知覚動詞・感情の分詞・not only A but also B・though・nobody / nothing・命令文＋and / or・It takes・if / whether・使役動詞・付加疑問の10単元に4つ目の選択肢（243→213）
   - [x] ② 付加疑問と感嘆文・too / enough・so ～ that・仮定法・It is ～ for 人 to・疑問詞＋to・間接疑問・分詞の後置修飾・関係代名詞の省略・関係代名詞の10単元に4つ目の選択肢（213→183）
   - [x] ③ 現在完了進行形・経験・継続・関係代名詞 what・whose・while / during・倍数表現・完了・as soon as・not to の10単元に4つ目の選択肢（183→153。tell 人 to not 〜 は正解にもなるので選択肢から外した）
@@ -93,7 +95,7 @@
   - [x] ⑤ It is said that・受け身＋前置詞・I think so・形容詞＋that・分数・命令文の付加疑問・each other・get ＋過去分詞・be about to・must / can't be の10単元に4つ目の選択肢（123→93）
   - [x] ⑥ 状態の変化（get / go ＋形容詞）・助動詞の受け身・as ～ as possible・the second ＋最上級・most of・almost / most・the first time・make sure・not A but B・have been / gone の10単元に4つ目の選択肢（93→63）
   - [x] ⑦ be ready / willing to・will have to・as many / much ～ as・How long ＋現在完了・for now / for ages・in cash・to my surprise・in uniform・by hand・in pairs の10単元に4つ目の選択肢（63→33）
-  - [ ] ⑧ のこりの単元を4択に
+  - [x] ⑧ のこりの単元（for fun・in my opinion・in order・with a smile・by mistake・in the past・at the same time・in a minute・at dawn）に4つ目の選択肢、for / since・What / How の感嘆文の2択は4択に（33→0。中3の3択はなくなった）
 - [x] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）

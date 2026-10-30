@@ -548,9 +548,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She has played tennis since she was eight.', ja: '彼女は8歳のときからテニスをしている。' },
     ],
     questions: [
-      { sentence: 'We have known each other ___ ten years.', choices: ['for', 'since'], answer: 0, why: '「10年間」は期間なので for。' },
-      { sentence: 'It has been raining ___ this morning.', choices: ['for', 'since'], answer: 1, why: '「今朝から」は始まった時なので since。' },
-      { sentence: 'He has been sick ___ last Monday.', choices: ['for', 'since'], answer: 1, why: '「この前の月曜日から」なので since。' },
+      { sentence: 'We have known each other ___ ten years.', choices: ['for', 'since', 'during', 'in'], answer: 0, why: '「10年間」は期間なので for。' },
+      { sentence: 'It has been raining ___ this morning.', choices: ['for', 'since', 'during', 'in'], answer: 1, why: '「今朝から」は始まった時なので since。' },
+      { sentence: 'He has been sick ___ last Monday.', choices: ['for', 'since', 'during', 'in'], answer: 1, why: '「この前の月曜日から」なので since。' },
     ],
   },
   {
@@ -660,9 +660,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How fast he runs!', ja: '彼はなんて速く走るんだろう！' },
     ],
     questions: [
-      { sentence: '___ a nice day!', choices: ['What', 'How'], answer: 0, why: '後ろに a ＋名詞があるので What。' },
-      { sentence: '___ cute!', choices: ['What', 'How'], answer: 1, why: '形容詞だけなので How。' },
-      { sentence: 'What ___ interesting book!', choices: ['a', 'an'], answer: 1, why: 'interesting は母音で始まるので an。' },
+      { sentence: '___ a nice day!', choices: ['What', 'How', 'Which', 'Whose'], answer: 0, why: '後ろに a ＋名詞があるので What。' },
+      { sentence: '___ cute!', choices: ['What', 'How', 'Which', 'Whose'], answer: 1, why: '形容詞だけなので How。' },
+      { sentence: 'What ___ interesting book!', choices: ['a', 'an', 'the', 'some'], answer: 1, why: 'interesting は母音で始まるので an。' },
     ],
   },
   {
@@ -8209,9 +8209,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We took pictures of the beach at sunset.', ja: '私たちは日の入りに浜辺の写真をとった。' },
     ],
     questions: [
-      { sentence: 'The birds begin to sing ___ dawn.', choices: ['at', 'in', 'on'], answer: 0, why: 'at dawn「夜明けに」。時の一点なので at。in・on は使わない。' },
-      { sentence: 'The sky turned orange ___ sunset.', choices: ['at', 'in', 'on'], answer: 0, why: 'at sunset「日の入りに」。時の一点なので at。' },
-      { sentence: 'Cinderella had to leave the party ___ midnight.', choices: ['at', 'in', 'on'], answer: 0, why: 'at midnight「真夜中に」。時の一点なので at。' },
+      { sentence: 'The birds begin to sing ___ dawn.', choices: ['at', 'in', 'on', 'for'], answer: 0, why: 'at dawn「夜明けに」。時の一点なので at。in・on は使わない。' },
+      { sentence: 'The sky turned orange ___ sunset.', choices: ['at', 'in', 'on', 'to'], answer: 0, why: 'at sunset「日の入りに」。時の一点なので at。' },
+      { sentence: 'Cinderella had to leave the party ___ midnight.', choices: ['at', 'in', 'on', 'to'], answer: 0, why: 'at midnight「真夜中に」。時の一点なので at。' },
     ],
   },
   {
@@ -8379,9 +8379,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The fireworks lit up the sky in an instant.', ja: '花火が一瞬で空を明るくした。' },
     ],
     questions: [
-      { sentence: 'Just wait. I’ll call you back in a ___.', choices: ['minute', 'minutes', 'minutely'], answer: 0, why: 'in a minute「すぐに」。a のあとは単数の名詞 minute。' },
-      { sentence: 'The train will arrive in a ___.', choices: ['moment', 'moments', 'momentary'], answer: 0, why: 'in a moment「まもなく」。a のあとは単数の名詞 moment。' },
-      { sentence: 'The ice cream melted in an ___ on the hot day.', choices: ['instant', 'instants', 'instantly'], answer: 0, why: 'in an instant「あっというまに」。an のあとは単数の名詞 instant。' },
+      { sentence: 'Just wait. I’ll call you back in a ___.', choices: ['minute', 'minutes', 'minutely', 'minuted'], answer: 0, why: 'in a minute「すぐに」。a のあとは単数の名詞 minute。' },
+      { sentence: 'The train will arrive in a ___.', choices: ['moment', 'moments', 'momentary', 'momented'], answer: 0, why: 'in a moment「まもなく」。a のあとは単数の名詞 moment。' },
+      { sentence: 'The ice cream melted in an ___ on the hot day.', choices: ['instant', 'instants', 'instantly', 'instance'], answer: 0, why: 'in an instant「あっというまに」。an のあとは単数の名詞 instant。' },
     ],
   },
   {
@@ -8413,9 +8413,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Let’s walk to school for a change.', ja: 'たまには学校まで歩いて行こう。' },
     ],
     questions: [
-      { sentence: 'She writes short stories just for ___.', choices: ['fun', 'funny', 'funnily'], answer: 0, why: 'for fun「楽しみで」。for のあとは名詞 fun。' },
-      { sentence: 'We usually eat at home, but let’s eat out for a ___.', choices: ['change', 'changed', 'changing'], answer: 0, why: 'for a change「気分転換に・たまには」。a のあとは名詞 change。' },
-      { sentence: 'The sign on the house says "For ___."', choices: ['Rent', 'Rented', 'Rents'], answer: 0, why: 'for rent「貸し出し用の」。for のあとは名詞 rent（a も -s もつけない）。' },
+      { sentence: 'She writes short stories just for ___.', choices: ['fun', 'funny', 'funnily', 'funs'], answer: 0, why: 'for fun「楽しみで」。for のあとは名詞 fun。' },
+      { sentence: 'We usually eat at home, but let’s eat out for a ___.', choices: ['change', 'changed', 'changing', 'changes'], answer: 0, why: 'for a change「気分転換に・たまには」。a のあとは名詞 change。' },
+      { sentence: 'The sign on the house says "For ___."', choices: ['Rent', 'Rented', 'Rents', 'Renting'], answer: 0, why: 'for rent「貸し出し用の」。for のあとは名詞 rent（a も -s もつけない）。' },
     ],
   },
   {
@@ -8447,9 +8447,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Fold the paper in this way, and you can make a crane.', ja: 'このようにして紙を折ると、つるが作れます。' },
     ],
     questions: [
-      { sentence: 'In my ___, the new library is too small.', choices: ['opinion', 'opinions', 'opine'], answer: 0, why: 'in my opinion「私の意見では」。単数の名詞 opinion を使う。' },
-      { sentence: 'Mix the flour and eggs ___ this way.', choices: ['in', 'on', 'by'], answer: 0, why: 'in this way「このようにして」。やり方を表すときは in。' },
-      { sentence: 'Please write your name ___ the same way as your friend.', choices: ['in', 'on', 'at'], answer: 0, why: 'in the same way「同じように」。やり方を表すときは in。' },
+      { sentence: 'In my ___, the new library is too small.', choices: ['opinion', 'opinions', 'opine', 'opinioned'], answer: 0, why: 'in my opinion「私の意見では」。単数の名詞 opinion を使う。' },
+      { sentence: 'Mix the flour and eggs ___ this way.', choices: ['in', 'on', 'by', 'at'], answer: 0, why: 'in this way「このようにして」。やり方を表すときは in。' },
+      { sentence: 'Please write your name ___ the same way as your friend.', choices: ['in', 'on', 'at', 'by'], answer: 0, why: 'in the same way「同じように」。やり方を表すときは in。' },
     ],
   },
   {
@@ -8464,9 +8464,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please put these cards in the right order.', ja: 'これらのカードを正しい順に並べてください。' },
     ],
     questions: [
-      { sentence: 'The students’ names are written in alphabetical ___.', choices: ['order', 'ordered', 'orderly'], answer: 0, why: 'in alphabetical order「アルファベット順に」。alphabetical のあとは名詞 order。' },
-      { sentence: 'Our class lined up in order of ___.', choices: ['height', 'high', 'highly'], answer: 0, why: 'in order of height「背の順に」。of のあとは名詞 height。' },
-      { sentence: 'Put the pictures of the story in the right ___.', choices: ['order', 'ordered', 'ordering'], answer: 0, why: 'in the right order「正しい順に」。the right のあとは名詞 order。' },
+      { sentence: 'The students’ names are written in alphabetical ___.', choices: ['order', 'ordered', 'orderly', 'orders'], answer: 0, why: 'in alphabetical order「アルファベット順に」。alphabetical のあとは名詞 order。' },
+      { sentence: 'Our class lined up in order of ___.', choices: ['height', 'high', 'highly', 'higher'], answer: 0, why: 'in order of height「背の順に」。of のあとは名詞 height。' },
+      { sentence: 'Put the pictures of the story in the right ___.', choices: ['order', 'ordered', 'ordering', 'orders'], answer: 0, why: 'in the right order「正しい順に」。the right のあとは名詞 order。' },
     ],
   },
   {
@@ -8600,9 +8600,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Robots may do many jobs in the near future.', ja: '近いうちに、ロボットが多くの仕事をするかもしれない。' },
     ],
     questions: [
-      { sentence: '___ the past, this town was a small fishing village.', choices: ['In', 'On', 'At'], answer: 0, why: 'in the past「昔は」。時のはばを表すので in。' },
-      { sentence: 'What do you want to be in the ___?', choices: ['future', 'futuristic', 'forward'], answer: 0, why: 'in the future「将来」。the のあとは名詞 future。' },
-      { sentence: 'We will move to a new house in the ___ future.', choices: ['near', 'nearly', 'nearby'], answer: 0, why: 'in the near future「近いうちに」。future を説明するのは形容詞 near。' },
+      { sentence: '___ the past, this town was a small fishing village.', choices: ['In', 'On', 'At', 'For'], answer: 0, why: 'in the past「昔は」。時のはばを表すので in。' },
+      { sentence: 'What do you want to be in the ___?', choices: ['future', 'futuristic', 'forward', 'futures'], answer: 0, why: 'in the future「将来」。the のあとは名詞 future。' },
+      { sentence: 'We will move to a new house in the ___ future.', choices: ['near', 'nearly', 'nearby', 'next'], answer: 0, why: 'in the near future「近いうちに」。future を説明するのは形容詞 near。' },
     ],
   },
   {
@@ -8634,9 +8634,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My friend left the station with a wave.', ja: '友だちは手をふって駅を出ていった。' },
     ],
     questions: [
-      { sentence: 'Our new teacher said hello with a ___.', choices: ['smile', 'smiling', 'smiled'], answer: 0, why: 'with a smile「にっこりして」。a のあとは名詞 smile。' },
-      { sentence: 'After the long test, Ken sat down with a ___ of relief.', choices: ['sigh', 'sighing', 'sighed'], answer: 0, why: 'with a sigh of relief「ほっとため息をついて」。a のあとは名詞 sigh。' },
-      { sentence: 'The little girl said goodbye with a ___ of her hand.', choices: ['wave', 'waving', 'waved'], answer: 0, why: 'with a wave「手をふって」。a のあとは名詞 wave。' },
+      { sentence: 'Our new teacher said hello with a ___.', choices: ['smile', 'smiling', 'smiled', 'smiles'], answer: 0, why: 'with a smile「にっこりして」。a のあとは名詞 smile。' },
+      { sentence: 'After the long test, Ken sat down with a ___ of relief.', choices: ['sigh', 'sighing', 'sighed', 'sighs'], answer: 0, why: 'with a sigh of relief「ほっとため息をついて」。a のあとは名詞 sigh。' },
+      { sentence: 'The little girl said goodbye with a ___ of her hand.', choices: ['wave', 'waving', 'waved', 'waves'], answer: 0, why: 'with a wave「手をふって」。a のあとは名詞 wave。' },
     ],
   },
   {
@@ -8685,9 +8685,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please take the cookies one at a time.', ja: 'クッキーは1つずつとってください。' },
     ],
     questions: [
-      { sentence: 'The two runners crossed the finish line at the same ___.', choices: ['time', 'timing', 'timed'], answer: 0, why: 'at the same time「同時に」。the same のあとは名詞 time。' },
-      { sentence: 'The doctor can see only one patient at a ___.', choices: ['time', 'timely', 'timer'], answer: 0, why: 'at a time「一度に」。a のあとは名詞 time。' },
-      { sentence: 'I visited my old school for the ___ time before it closed.', choices: ['last', 'latest', 'lately'], answer: 0, why: 'for the last time「最後に」。the のあとは形容詞 last。' },
+      { sentence: 'The two runners crossed the finish line at the same ___.', choices: ['time', 'timing', 'timed', 'times'], answer: 0, why: 'at the same time「同時に」。the same のあとは名詞 time。' },
+      { sentence: 'The doctor can see only one patient at a ___.', choices: ['time', 'timely', 'timer', 'times'], answer: 0, why: 'at a time「一度に」。a のあとは名詞 time。' },
+      { sentence: 'I visited my old school for the ___ time before it closed.', choices: ['last', 'latest', 'lately', 'late'], answer: 0, why: 'for the last time「最後に」。the のあとは形容詞 last。' },
     ],
   },
   {
@@ -8719,9 +8719,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I like many sports. For example, I play tennis and soccer.', ja: '私はいろいろなスポーツが好きだ。たとえばテニスやサッカーをする。' },
     ],
     questions: [
-      { sentence: 'Sorry, I opened your letter by ___.', choices: ['mistake', 'mistaken', 'mistook'], answer: 0, why: 'by mistake「まちがえて」。by のあとは名詞 mistake。' },
-      { sentence: 'We caught the last train by ___.', choices: ['luck', 'lucky', 'luckily'], answer: 0, why: 'by luck「運よく」。by のあとは名詞 luck。' },
-      { sentence: 'Some animals sleep in winter. For ___, bears do.', choices: ['example', 'examples', 'exemplary'], answer: 0, why: 'for example「たとえば」。example は単数。' },
+      { sentence: 'Sorry, I opened your letter by ___.', choices: ['mistake', 'mistaken', 'mistook', 'mistakes'], answer: 0, why: 'by mistake「まちがえて」。by のあとは名詞 mistake。' },
+      { sentence: 'We caught the last train by ___.', choices: ['luck', 'lucky', 'luckily', 'luckier'], answer: 0, why: 'by luck「運よく」。by のあとは名詞 luck。' },
+      { sentence: 'Some animals sleep in winter. For ___, bears do.', choices: ['example', 'examples', 'exemplary', 'exampled'], answer: 0, why: 'for example「たとえば」。example は単数。' },
     ],
   },
   {
