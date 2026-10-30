@@ -824,6 +824,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M50 84 l6 12 l4 -14 Z" fill="#94a3b8" stroke="#475569" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'flyingfish')
+    return (
+      <g>
+        {/* 大きなむなびれ */}
+        <path d="M30 56 l-16 -10 l6 16 Z" fill="#bae6fd" stroke="#0c4a6e" strokeWidth="1.5" />
+        <path d="M70 56 l16 -10 l-6 16 Z" fill="#bae6fd" stroke="#0c4a6e" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>

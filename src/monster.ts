@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'flyingfish', name: 'トビウオン', egg: 'なみのうえのつばさタマゴ', token: 'トビ', bigToken: 'トビウオン', color: '#7dd3fc', line: '#0c4a6e', rate: 0.02, desc: '大きなむなびれを広げて海の上を飛ぶトビウオ。波をこえて遠くまで飛ぶように、むずかしいレベルにもひと飛びでちょうせんする。' },
   { id: 'sunfish', name: 'マンボン', egg: 'おおうみのひなたタマゴ', token: 'マン', bigToken: 'マンボン', color: '#cbd5e1', line: '#475569', rate: 0.02, desc: '大きな海をのんびりただようマンボウ。海の表面で日なたぼっこをするように、あせらずゆっくり、自分のペースで単語を覚える。' },
   { id: 'mantis', name: 'カマキリン', egg: 'くさむらのみどりタマゴ', token: 'カマ', bigToken: 'カマキリン', color: '#86efac', line: '#166534', rate: 0.02, desc: '草むらでじっとかまえるカマキリ。大きなかまをすばやく動かすように、正しい答えをさっとつかまえる。' },
   { id: 'lynx', name: 'ヤマネコン', egg: 'ゆきのもりのみみタマゴ', token: 'ヤマ', bigToken: 'ヤマネコン', color: '#e7d3b0', line: '#5b4a33', rate: 0.02, desc: '雪の森にすむ、耳の先に黒い毛のあるオオヤマネコ。小さな音も聞きのがさない耳で、英語の音もしっかり聞き取る。' },
