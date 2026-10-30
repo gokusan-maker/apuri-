@@ -771,6 +771,14 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M44 58 Q50 72 56 58 Z" fill="#a8a29e" stroke="#57534e" strokeWidth="1.5" />
       </g>
     )
+  if (species === 'chinchilla')
+    return (
+      <g>
+        {/* 大きな丸い耳 */}
+        <circle cx="30" cy="30" r="9" fill="#d1d5db" stroke="#4b5563" strokeWidth="1.5" />
+        <circle cx="70" cy="30" r="9" fill="#d1d5db" stroke="#4b5563" strokeWidth="1.5" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
