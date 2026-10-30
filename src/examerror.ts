@@ -170,4 +170,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'She is one of (A) the (B) most talented (C) pianist (D) in Japan.', choices: ['(A) the', '(B) most talented', '(C) pianist', '(D) in Japan'], answer: 2, why: 'one of the ＋最上級のあとの名詞は複数形：one of the most talented pianists。' },
     ],
   },
+  {
+    id: 'exam-error-medical',
+    title: '入試の正誤問題⑧（総合・医学部）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。医学部の入試によく出る医療・健康の話題の文で、総合的に確かめる。',
+      '長い主語の中心の名詞と動詞の一致、仮定法の倒置、分詞の向き（involved / developed）、前置詞と接続詞のちがい（despite / although）に注目する。',
+    ],
+    examples: [
+      { en: 'The number of patients with diabetes has increased.', ja: '糖尿病の患者の数はふえている。（主語の中心は The number なので単数）' },
+      { en: 'Despite the doctor’s warning, he continued to smoke.', ja: '医師の警告にもかかわらず、彼はたばこを吸い続けた。（despite のあとは名詞）' },
+    ],
+    questions: [
+      { sentence: 'The patient, (A) whose symptoms (B) had worsened overnight, (C) were taken (D) to the ICU.', choices: ['(A) whose symptoms', '(B) had worsened overnight', '(C) were taken', '(D) to the ICU'], answer: 2, why: '文の主語は The patient（1人）なので was taken。コンマのあいだは説明の部分。' },
+      { sentence: '(A) Unless the infection (B) is treated promptly, it (C) may spread (D) rapid.', choices: ['(A) Unless the infection', '(B) is treated promptly', '(C) may spread', '(D) rapid'], answer: 3, why: '動詞 spread を説明するので副詞 rapidly。' },
+      { sentence: 'The number of people (A) suffering from allergies (B) have increased (C) markedly (D) in recent decades.', choices: ['(A) suffering from allergies', '(B) have increased', '(C) markedly', '(D) in recent decades'], answer: 1, why: '主語の中心は The number（数）なので単数あつかい：has increased。' },
+      { sentence: '(A) Had the tumor (B) been detected earlier, the patient (C) might survive (D) the operation.', choices: ['(A) Had the tumor', '(B) been detected earlier', '(C) might survive', '(D) the operation'], answer: 2, why: 'Had the tumor been detected は If the tumor had been detected の倒置（過去の反対）なので、後半は might have survived。' },
+      { sentence: 'The drug (A) was found (B) to be effective, (C) but its side effects (D) was serious.', choices: ['(A) was found', '(B) to be effective', '(C) but its side effects', '(D) was serious'], answer: 3, why: 'its side effects（複数）が主語なので were serious。' },
+      { sentence: 'Researchers (A) have been studying (B) the disease (C) since (D) more than ten years.', choices: ['(A) have been studying', '(B) the disease', '(C) since', '(D) more than ten years'], answer: 2, why: '「10年以上のあいだ」と期間を表すので for。since は始まった時点を表す。' },
+      { sentence: '(A) Although (B) the doctor’s warning, he (C) continued (D) to smoke.', choices: ['(A) Although', '(B) the doctor’s warning', '(C) continued', '(D) to smoke'], answer: 0, why: 'うしろが名詞（the doctor’s warning）なので前置詞 Despite。although のあとには主語＋動詞が必要。' },
+      { sentence: 'The vaccine, (A) which (B) developed in 2020, (C) has saved (D) many lives.', choices: ['(A) which', '(B) developed in 2020', '(C) has saved', '(D) many lives'], answer: 1, why: 'ワクチンは「開発された」側なので受け身 which was developed。' },
+      { sentence: '(A) Few patients (B) were aware (C) of the risks (D) involving in the treatment.', choices: ['(A) Few patients', '(B) were aware', '(C) of the risks', '(D) involving in the treatment'], answer: 3, why: 'the risks involved in ～「～にともなう危険」。be involved in の過去分詞を使う。' },
+      { sentence: 'Not only (A) does smoking damage the lungs, (B) but it also (C) increase (D) the risk of heart disease.', choices: ['(A) does smoking damage the lungs', '(B) but it also', '(C) increase', '(D) the risk of heart disease'], answer: 2, why: '後半の主語 it（smoking）は3人称単数なので increases。' },
+    ],
+  },
 ]
