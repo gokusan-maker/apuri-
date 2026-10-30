@@ -8141,9 +8141,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We watched the soccer game on TV.', ja: '私たちはテレビでサッカーの試合を見た。' },
     ],
     questions: [
-      { sentence: 'Please be quiet. Dad is talking on the ___.', choices: ['phone', 'phones', 'phoned'], answer: 0, why: 'talk on the phone「電話で話す」。the のあとは単数の名詞 phone。' },
-      { sentence: 'I heard about the storm on the ___ this morning.', choices: ['radio', 'radioed', 'radioing'], answer: 0, why: 'on the radio「ラジオで」。the のあとは名詞 radio。' },
-      { sentence: 'The famous chef cooked a meal ___ TV last night.', choices: ['on', 'in', 'at'], answer: 0, why: '「テレビで」は on TV。テレビやラジオなどのメディアには on を使う。' },
+      { sentence: 'Please be quiet. Dad is talking on the ___.', choices: ['phone', 'phones', 'phoned', 'phoning'], answer: 0, why: 'talk on the phone「電話で話す」。the のあとは単数の名詞 phone。' },
+      { sentence: 'I heard about the storm on the ___ this morning.', choices: ['radio', 'radioed', 'radioing', 'radios'], answer: 0, why: 'on the radio「ラジオで」。the のあとは名詞 radio。' },
+      { sentence: 'The famous chef cooked a meal ___ TV last night.', choices: ['on', 'in', 'at', 'by'], answer: 0, why: '「テレビで」は on TV。テレビやラジオなどのメディアには on を使う。' },
     ],
   },
   {
@@ -8226,9 +8226,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Smartphones were not common in the 1990s.', ja: '1990年代には、スマートフォンは一般的ではなかった。' },
     ],
     questions: [
-      { sentence: 'We have a club meeting ___ Friday morning.', choices: ['on', 'in', 'at'], answer: 0, why: '曜日がつくと、朝でも on（on Friday morning）。' },
-      { sentence: 'The museum is quiet ___ weekdays.', choices: ['on', 'in', 'at'], answer: 0, why: 'on weekdays「平日に」。曜日と同じく on を使う。' },
-      { sentence: 'My parents met ___ the 1990s.', choices: ['in', 'on', 'at'], answer: 0, why: 'in the 1990s「1990年代に」。年代など長い期間は in。' },
+      { sentence: 'We have a club meeting ___ Friday morning.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: '曜日がつくと、朝でも on（on Friday morning）。' },
+      { sentence: 'The museum is quiet ___ weekdays.', choices: ['on', 'in', 'at', 'to'], answer: 0, why: 'on weekdays「平日に」。曜日と同じく on を使う。' },
+      { sentence: 'My parents met ___ the 1990s.', choices: ['in', 'on', 'at', 'to'], answer: 0, why: 'in the 1990s「1990年代に」。年代など長い期間は in。' },
     ],
   },
   {
@@ -8243,9 +8243,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The flags were waving in the wind.', ja: '旗が風にはためいていた。' },
     ],
     questions: [
-      { sentence: 'Don’t walk home in the ___ without an umbrella.', choices: ['rain', 'rainy', 'rained'], answer: 0, why: 'in the rain「雨の中で」。the のあとは名詞 rain。' },
-      { sentence: 'Our dog loves to roll around in the ___.', choices: ['snow', 'snowy', 'snowed'], answer: 0, why: 'in the snow「雪の中で」。the のあとは名詞 snow。' },
-      { sentence: 'The leaves were dancing in the ___.', choices: ['wind', 'windy', 'winded'], answer: 0, why: 'in the wind「風に（ふかれて）」。the のあとは名詞 wind。' },
+      { sentence: 'Don’t walk home in the ___ without an umbrella.', choices: ['rain', 'rainy', 'rained', 'raining'], answer: 0, why: 'in the rain「雨の中で」。the のあとは名詞 rain。' },
+      { sentence: 'Our dog loves to roll around in the ___.', choices: ['snow', 'snowy', 'snowed', 'snowing'], answer: 0, why: 'in the snow「雪の中で」。the のあとは名詞 snow。' },
+      { sentence: 'The leaves were dancing in the ___.', choices: ['wind', 'windy', 'winded', 'winding'], answer: 0, why: 'in the wind「風に（ふかれて）」。the のあとは名詞 wind。' },
     ],
   },
   {
@@ -8362,9 +8362,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'A rainbow appeared in the sky after the rain.', ja: '雨のあと、空ににじが出た。' },
     ],
     questions: [
-      { sentence: 'The astronauts did many experiments ___ space.', choices: ['in', 'on', 'at'], answer: 0, why: 'in space「宇宙で」。広がりの中なので in。' },
-      { sentence: 'People first walked ___ the moon in 1969.', choices: ['on', 'in', 'at'], answer: 0, why: 'on the moon「月面で」。表面の上なので on。' },
-      { sentence: 'Look! Many birds are flying ___ the sky.', choices: ['in', 'on', 'at'], answer: 0, why: 'in the sky「空に」。空は広がりの中と考えるので in。' },
+      { sentence: 'The astronauts did many experiments ___ space.', choices: ['in', 'on', 'at', 'to'], answer: 0, why: 'in space「宇宙で」。広がりの中なので in。' },
+      { sentence: 'People first walked ___ the moon in 1969.', choices: ['on', 'in', 'at', 'by'], answer: 0, why: 'on the moon「月面で」。表面の上なので on。' },
+      { sentence: 'Look! Many birds are flying ___ the sky.', choices: ['in', 'on', 'at', 'with'], answer: 0, why: 'in the sky「空に」。空は広がりの中と考えるので in。' },
     ],
   },
   {
@@ -8430,9 +8430,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The fishermen were at sea for two weeks.', ja: '漁師たちは2週間海に出ていた。' },
     ],
     questions: [
-      { sentence: 'My mother is at ___ until six o’clock.', choices: ['work', 'working', 'worked'], answer: 0, why: 'at work「仕事中で」。at のあとは名詞 work。' },
-      { sentence: 'The ship has been at ___ for a month.', choices: ['sea', 'seas', 'seaside'], answer: 0, why: 'at sea「航海中で」。the も -s もつけない名詞 sea。' },
-      { sentence: 'I wasn’t at school yesterday. I was ___ the doctor’s.', choices: ['at', 'on', 'to'], answer: 0, why: 'be at the doctor’s「医者のところにいる」。いる場所なので at（行くときは go to）。' },
+      { sentence: 'My mother is at ___ until six o’clock.', choices: ['work', 'working', 'worked', 'works'], answer: 0, why: 'at work「仕事中で」。at のあとは名詞 work。' },
+      { sentence: 'The ship has been at ___ for a month.', choices: ['sea', 'seas', 'seaside', 'seaing'], answer: 0, why: 'at sea「航海中で」。the も -s もつけない名詞 sea。' },
+      { sentence: 'I wasn’t at school yesterday. I was ___ the doctor’s.', choices: ['at', 'on', 'to', 'into'], answer: 0, why: 'be at the doctor’s「医者のところにいる」。いる場所なので at（行くときは go to）。' },
     ],
   },
   {
@@ -8481,9 +8481,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Cherry trees are planted on both sides of the river.', ja: '川の両側に桜の木が植えられている。' },
     ],
     questions: [
-      { sentence: 'The bus stop is on the ___ side of the road.', choices: ['other', 'another', 'others'], answer: 0, why: 'on the other side「反対側に」。the のあとは other（another は the とつかわない）。' },
-      { sentence: 'There are tall buildings on both ___ of the street.', choices: ['sides', 'side', 'sided'], answer: 0, why: 'on both sides「両側に」。both のあとは複数形 sides。' },
-      { sentence: 'Turn left at the corner, and the library is on your ___.', choices: ['right', 'rightly', 'rightful'], answer: 0, why: 'on your right「あなたの右手に」。your のあとは名詞 right。' },
+      { sentence: 'The bus stop is on the ___ side of the road.', choices: ['other', 'another', 'others', 'any'], answer: 0, why: 'on the other side「反対側に」。the のあとは other（another は the とつかわない）。' },
+      { sentence: 'There are tall buildings on both ___ of the street.', choices: ['sides', 'side', 'sided', 'siding'], answer: 0, why: 'on both sides「両側に」。both のあとは複数形 sides。' },
+      { sentence: 'Turn left at the corner, and the library is on your ___.', choices: ['right', 'rightly', 'rightful', 'righter'], answer: 0, why: 'on your right「あなたの右手に」。your のあとは名詞 right。' },
     ],
   },
   {
@@ -9348,9 +9348,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My father cooked dinner for us.', ja: '父は私たちのために夕食を作ってくれた。' },
     ],
     questions: [
-      { sentence: 'Kenta gave his old bike ___ his cousin.', choices: ['to', 'at', 'of'], answer: 0, why: 'give 物 to 人「人に物をあげる」。give は to を使う。' },
-      { sentence: 'My mother made a cake ___ me on my birthday.', choices: ['for', 'to', 'at'], answer: 0, why: 'make 物 for 人「人のために物を作る」。make は for を使う（to は使わない）。' },
-      { sentence: 'Please show your ticket ___ the staff at the gate.', choices: ['to', 'at', 'of'], answer: 0, why: 'show 物 to 人「人に物を見せる」。show は to を使う。' },
+      { sentence: 'Kenta gave his old bike ___ his cousin.', choices: ['to', 'at', 'of', 'from'], answer: 0, why: 'give 物 to 人「人に物をあげる」。give は to を使う。' },
+      { sentence: 'My mother made a cake ___ me on my birthday.', choices: ['for', 'to', 'at', 'with'], answer: 0, why: 'make 物 for 人「人のために物を作る」。make は for を使う（to は使わない）。' },
+      { sentence: 'Please show your ticket ___ the staff at the gate.', choices: ['to', 'at', 'of', 'from'], answer: 0, why: 'show 物 to 人「人に物を見せる」。show は to を使う。' },
     ],
   },
   {
@@ -9365,9 +9365,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "I'm sorry to hear that you were sick.", ja: '具合が悪かったと聞いて気の毒に思います。' },
     ],
     questions: [
-      { sentence: 'Thank you ___ the nice present.', choices: ['for', 'to', 'with'], answer: 0, why: 'Thank you for ～「～をありがとう」。お礼の理由は for で表す。' },
-      { sentence: "I'm sorry ___ late this morning.", choices: ['for being', 'to being', 'being'], answer: 0, why: "I'm sorry for ～ing「～してごめんなさい」。前置詞 for のあとは ～ing。" },
-      { sentence: "I'm sorry ___ hear that your dog is sick.", choices: ['to', 'for', 'of'], answer: 0, why: "I'm sorry to ＋ 原形「～して残念に思う」。hear は原形なので to。" },
+      { sentence: 'Thank you ___ the nice present.', choices: ['for', 'to', 'with', 'of'], answer: 0, why: 'Thank you for ～「～をありがとう」。お礼の理由は for で表す。' },
+      { sentence: "I'm sorry ___ late this morning.", choices: ['for being', 'to being', 'being', 'of being'], answer: 0, why: "I'm sorry for ～ing「～してごめんなさい」。前置詞 for のあとは ～ing。" },
+      { sentence: "I'm sorry ___ hear that your dog is sick.", choices: ['to', 'for', 'of', 'at'], answer: 0, why: "I'm sorry to ＋ 原形「～して残念に思う」。hear は原形なので to。" },
     ],
   },
   {
@@ -9450,9 +9450,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Will there be a bus after nine? — No, there won\'t.', ja: '9時以降にバスはありますか。— いいえ、ありません。' },
     ],
     questions: [
-      { sentence: 'There ___ be a festival in our town next Sunday.', choices: ['will', 'is', 'are'], answer: 0, why: '未来の「～がある」は There will be。be の前に is・are は置けない。' },
-      { sentence: '___ there be enough chairs for everyone? — Yes, there will.', choices: ['Will', 'Do', 'Are'], answer: 0, why: '疑問文は Will there be ～? の語順。答えも there will。' },
-      { sentence: "There ___ be any rain tomorrow, so we can go hiking.", choices: ["won't", "isn't", "doesn't"], answer: 0, why: "否定は There won't be ～。be の前に isn't・doesn't は置けない。" },
+      { sentence: 'There ___ be a festival in our town next Sunday.', choices: ['will', 'is', 'are', 'was'], answer: 0, why: '未来の「～がある」は There will be。be の前に is・are は置けない。' },
+      { sentence: '___ there be enough chairs for everyone? — Yes, there will.', choices: ['Will', 'Do', 'Are', 'Is'], answer: 0, why: '疑問文は Will there be ～? の語順。答えも there will。' },
+      { sentence: "There ___ be any rain tomorrow, so we can go hiking.", choices: ["won't", "isn't", "doesn't", "aren't"], answer: 0, why: "否定は There won't be ～。be の前に isn't・doesn't は置けない。" },
     ],
   },
   {
@@ -9501,9 +9501,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "You'll see the station on your left.", ja: '駅は左手に見えますよ。' },
     ],
     questions: [
-      { sentence: 'Excuse me. How can I ___ to the city hall?', choices: ['get', 'arrive', 'reach'], answer: 0, why: 'How can I get to ～?「～へはどう行けばいいですか」。arrive は arrive at、reach は to なしで使う。' },
-      { sentence: 'Turn left ___ the second corner.', choices: ['at', 'on', 'in'], answer: 0, why: '曲がる地点（角）は at：turn left at the corner。' },
-      { sentence: "Go straight, and you'll see the post office ___ your right.", choices: ['on', 'at', 'in'], answer: 0, why: '「右手に・左手に」は on your right / on your left。' },
+      { sentence: 'Excuse me. How can I ___ to the city hall?', choices: ['get', 'arrive', 'reach', 'visit'], answer: 0, why: 'How can I get to ～?「～へはどう行けばいいですか」。arrive は arrive at、reach は to なしで使う。' },
+      { sentence: 'Turn left ___ the second corner.', choices: ['at', 'on', 'in', 'by'], answer: 0, why: '曲がる地点（角）は at：turn left at the corner。' },
+      { sentence: "Go straight, and you'll see the post office ___ your right.", choices: ['on', 'at', 'in', 'for'], answer: 0, why: '「右手に・左手に」は on your right / on your left。' },
     ],
   },
   {
