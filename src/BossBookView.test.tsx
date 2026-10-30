@@ -233,3 +233,14 @@ it('デザイン107：ボス図鑑のカードに、そのボスに初めて勝�
   render(<BossBook />)
   expect(document.querySelector('.boss-book-first')!.textContent).toMatch(/^・📅 はじめて勝った日 \d{1,2}月\d{1,2}日$/)
 })
+
+it('デザイン108：ボス図鑑の見出しに、ノーミスでたおしたボスの数が出る', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  render(<BossBook />)
+  expect(screen.getByLabelText('ノーミス 1体').textContent).toBe('✨1')
+})

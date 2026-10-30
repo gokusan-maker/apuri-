@@ -29,11 +29,13 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const all = [...base, ...extra]
   const beaten = all.filter((b) => book[b.name]).length
   const speedy = all.filter((b) => book[b.name] && (times[b.name] ?? Infinity) < 60).length
+  const clean = all.filter((b) => book[b.name] && noMiss.includes(b.name)).length // デザイン108：ノーミスでたおしたボスの数
   return (
     <details className="boss-book game-fold">
       <summary>
         <span className="lg-icon" aria-hidden="true">📕</span>ボス図鑑
         {speedy > 0 && <span className="fold-meta" aria-label={`スピードクリア ${speedy}体`}>⚡{speedy}</span>}
+        {clean > 0 && <span className="fold-meta" aria-label={`ノーミス ${clean}体`}>✨{clean}</span>}
         <span className="fold-meta" aria-label={`ボス図鑑 ${beaten} / ${all.length}体`}>
           {beaten}/{all.length}
         </span>
