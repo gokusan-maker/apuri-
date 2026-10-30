@@ -343,6 +343,7 @@ export const SPECIES: Species[] = [
   { id: 'hummingbird', name: 'ハチドリン', egg: 'あさつゆのタマゴ', token: 'ハチ', bigToken: 'ハチドリン', color: '#34d399', line: '#065f46', rate: 0.02, desc: 'とても小さなハチドリ。目にも止まらぬ速さで羽ばたいて、花から花へ単語を集める。' },
   { id: 'ostrich', name: 'ダチョラン', egg: 'だいちのタマゴ', token: 'ダチョ', bigToken: 'ダチョラン', color: '#a8a29e', line: '#292524', rate: 0.02, desc: '世界一大きな鳥、ダチョウ。空は飛べないけれど、だれよりも速く走って答えにたどりつく。' },
   { id: 'woodpecker', name: 'キツツキン', egg: 'こだまのタマゴ', token: 'キツ', bigToken: 'キツツキン', color: '#fca5a5', line: '#7f1d1d', rate: 0.02, desc: '赤いぼうしのキツツキ。コンコンと木をたたくリズムで、英単語を一つずつ頭にきざむ。' },
+  { id: 'zebra', name: 'シマウマン', egg: 'しろくろのタマゴ', token: 'シマ', bigToken: 'シマウマン', color: '#f1f5f9', line: '#1e293b', rate: 0.02, desc: 'サバンナを走るシマウマ。しまもようは1頭ずつちがい、白と黒をきっちり見分けるように、にた単語もまちがえない。' },
   { id: 'gecko', name: 'ヤモリン', egg: 'まどべのタマゴ', token: 'ヤモ', bigToken: 'ヤモリン', color: '#86efac', line: '#166534', rate: 0.02, desc: '家を守るといわれるヤモリ。足のうらでかべにもぴたっとはりつき、一度おぼえた単語もはなさない。' },
   { id: 'yak', name: 'ヤクモ', egg: 'こうげんのタマゴ', token: 'ヤク', bigToken: 'ヤクモ', color: '#6b4f3a', line: '#2a1d14', rate: 0.02, desc: '高い山にすむ毛の長いヤク。寒さにもつかれにも強く、長い単語のリストもゆっくり一歩ずつのぼりきる。' },
   { id: 'tanuki', name: 'ポンタ', egg: 'さとやまのタマゴ', token: 'ポン', bigToken: 'ポンタ', color: '#a78b6d', line: '#3f2d1d', rate: 0.02, desc: '目のまわりが黒いタヌキ。おなかをぽんとたたいて元気を出し、むずかしい問題にもとぼけた顔で立ち向かう。' },
