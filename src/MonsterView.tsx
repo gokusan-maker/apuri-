@@ -683,6 +683,13 @@ function SpeciesHead({ species, fill, line, big = false }: { species: string; fi
         <path d="M24 70 L16 74 M24 74 L16 80 M76 70 L84 74 M76 74 L84 80" stroke="#44403c" strokeWidth="2.5" strokeLinecap="round" />
       </g>
     )
+  if (species === 'clione')
+    return (
+      <g>
+        {/* 小さなはねのようなひれ */}
+        <path d="M26 56 Q18 50 22 44 M74 56 Q82 50 78 44" fill="none" stroke="#0369a1" strokeWidth="2.5" strokeLinecap="round" />
+      </g>
+    )
   if (species === 'woodpecker')
     return (
       <g>
