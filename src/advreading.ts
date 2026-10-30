@@ -17143,6 +17143,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Is It Ever Too Late to Learn a Language?', 'How Babies Learn to Walk', 'The Life of Eric Lenneberg', 'Why Schools Teach Mathematics'], answer: 0, why: '全体として、臨界期の考えと研究結果を検討し、言語を学ぶのに遅すぎることはあるのかを問うている。' },
   },
   {
+    id: 'kyotsu-bike-sharing',
+    title: 'Bicycles for Everyone',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "In many cities around the world, rows of bicycles that anyone can rent are now a familiar sight. With a smartphone or a card, a person can unlock a bicycle, ride it across town, and leave it at another station or parking area. These bike-sharing systems have spread quickly in recent years, and they are changing the way many people move around cities. Some systems even offer electric bicycles, which make it easier to climb hills.",
+      "Bike-sharing offers several advantages. Riding a bicycle does not produce exhaust gases, so it can help to reduce air pollution and the amount of carbon dioxide released by traffic. It is also good exercise, and many people find that cycling short distances is faster than walking and cheaper than taking a taxi. For people who live a little too far from a train station to walk, a shared bicycle can make public transport much easier to use.",
+      "However, these systems also face problems. In some cities, so many bicycles were placed on the streets that they blocked sidewalks and became a nuisance for pedestrians. Some bicycles were damaged or left in places where they were not allowed. In addition, cycling can be dangerous in cities ( A ) there are few lanes that separate bicycles from cars, and some people are afraid to ride in heavy traffic. Bad weather, such as rain or snow, can also make people less willing to use the bicycles.",
+      "Cities have tried different ways to solve these problems. Some have set clear rules about where bicycles may be parked and have limited the number of bicycles each company can offer. Others have built more cycle lanes and improved signs at busy crossings. Some companies use GPS to check where their bicycles are, ( B ) they can quickly move bicycles that have been left in the wrong place.",
+      "The experience of bike-sharing shows that a good idea needs careful planning to succeed. Technology can make it easy to rent a bicycle, but the system also depends on safe roads, clear rules, and users who respect other people. When these conditions are met, shared bicycles can become a useful part of city life, making it possible for more people to choose a cleaner and healthier way ( C ) travel.",
+    ],
+    ja: [
+      '世界の多くの都市で、だれでも借りられる自転車の列は、今ではおなじみの光景になっている。スマートフォンやカードがあれば、人は自転車のかぎを開け、町を横切って乗り、別のステーションや駐輪場に置いていくことができる。こうした自転車シェアの仕組みはここ数年で急速に広まり、多くの人々の都市での移動のしかたを変えつつある。電動アシスト自転車を用意している仕組みさえあり、それを使えば坂道をのぼるのが楽になる。',
+      '自転車シェアにはいくつかの利点がある。自転車に乗っても排気ガスは出ないので、大気汚染や交通から出る二酸化炭素の量を減らすのに役立つ。それはまたよい運動になり、短い距離なら自転車のほうが歩くより速く、タクシーに乗るより安いと感じる人も多い。駅まで歩くには少し遠いところに住む人にとって、シェア自転車は公共交通機関をずっと使いやすくしてくれる。',
+      'しかし、こうした仕組みには問題もある。ある都市では、あまりに多くの自転車が通りに置かれたため、歩道をふさぎ、歩行者のめいわくになった。こわされたり、置いてはいけない場所に放置されたりした自転車もあった。さらに、自転車と車を分ける専用の道が少ない都市では自転車に乗るのは危険なことがあり、交通の多い中で乗るのをこわがる人もいる。雨や雪のような悪い天気も、人々が自転車を使いたがらなくなる原因になる。',
+      '都市はこうした問題を解決するためにさまざまな方法を試してきた。自転車を置いてよい場所についてはっきりした規則を決め、各会社が出せる自転車の数を制限した都市もある。自転車専用の道をふやし、こみ合う交差点の標識を改善した都市もある。GPSを使って自転車の場所を確かめ、まちがった場所に置かれた自転車をすばやく動かせるようにしている会社もある。',
+      '自転車シェアの経験は、よい考えが成功するには注意深い計画が必要だということを示している。技術は自転車を借りるのをかんたんにできるが、その仕組みは安全な道路やはっきりした規則、そしてほかの人を尊重する利用者にもかかっている。こうした条件がそろえば、シェア自転車は都市の生活の役に立つ一部になり、より多くの人がよりきれいで健康的な移動の方法を選べるようになるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は cities（場所）で、うしろが完全な文（there are few lanes …）なので関係副詞 where。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「GPSで自転車の場所を確かめる、その結果すばやく動かせる」と結果を表すので so（so that の that が省略された形とも考えられる）。' },
+      { id: 'C', choices: ['to', 'for', 'of', 'by'], answer: 0, why: 'a … way to travel「移動する方法」。way のあとに to ＋動詞の原形を置いて「～する方法」を表す。' },
+    ],
+    tf: [
+      { statement: 'シェア自転車は、別のステーションや駐輪場に置いていくことができる。', answer: true, why: '第1段落 leave it at another station or parking area。' },
+      { statement: '自転車に乗ると、排気ガスが多く出る。', answer: false, why: '第2段落 Riding a bicycle does not produce exhaust gases。' },
+      { statement: 'ある都市では、多すぎる自転車が歩道をふさいだ。', answer: true, why: '第3段落 so many bicycles were placed on the streets that they blocked sidewalks。' },
+      { statement: '筆者は、技術さえあれば自転車シェアは必ず成功すると述べている。', answer: false, why: '第5段落 the system also depends on safe roads, clear rules, and users who respect other people。' },
+    ],
+    qa: [
+      { q: 'How can a shared bicycle help people who live a little far from a train station?', choices: ['It can make public transport much easier to use.', 'It can replace trains completely.', 'It can carry many passengers at once.', 'It can be used only on weekends.'], answer: 0, why: '第2段落 a shared bicycle can make public transport much easier to use。' },
+      { q: 'Which is NOT mentioned as a way cities tried to solve the problems?', choices: ['Making cycling free for everyone.', 'Setting rules about where bicycles may be parked.', 'Building more cycle lanes.', 'Limiting the number of bicycles each company can offer.'], answer: 0, why: '第4段落で述べられているのは、駐輪の規則・会社ごとの台数の制限・自転車専用の道・標識の改善。無料にすることは書かれていない。' },
+    ],
+    gist: [
+      { para: 1, choices: ['自転車シェアの利点', '自転車の作り方', 'タクシーの料金', '駅の場所の決め方'], answer: 0, why: '第2段落は、環境・運動・公共交通機関との組み合わせなど、自転車シェアの利点を述べている。' },
+      { para: 3, choices: ['問題を解決するための都市や会社の取り組み', 'GPS の歴史', '交差点の作り方', '会社の選び方'], answer: 0, why: '第4段落は、駐輪の規則や専用の道、GPS の利用など、問題を解決するための取り組みを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
