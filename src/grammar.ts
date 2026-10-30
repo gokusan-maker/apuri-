@@ -39,9 +39,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'He has two cats.', ja: '彼はねこを2匹飼っている。' },
     ],
     questions: [
-      { sentence: 'She ___ tennis every Sunday.', choices: ['play', 'plays', 'playing'], answer: 1, why: '主語 she ＋現在の文なので plays。' },
-      { sentence: 'My father ___ coffee in the morning.', choices: ['drink', 'drinks', 'drinking'], answer: 1, why: '主語 my father は1人なので drinks。' },
-      { sentence: 'Ken ___ a big dog.', choices: ['have', 'has', 'haves'], answer: 1, why: 'have は三人称単数で has になる。' },
+      { sentence: 'She ___ tennis every Sunday.', choices: ['play', 'plays', 'playing', 'is play'], answer: 1, why: '主語 she ＋現在の文なので plays。' },
+      { sentence: 'My father ___ coffee in the morning.', choices: ['drink', 'drinks', 'drinking', 'drunk'], answer: 1, why: '主語 my father は1人なので drinks。' },
+      { sentence: 'Ken ___ a big dog.', choices: ['have', 'has', 'haves', 'having'], answer: 1, why: 'have は三人称単数で has になる。' },
     ],
   },
   {
@@ -53,9 +53,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Did you eat breakfast?', ja: '朝ごはんを食べましたか？' },
     ],
     questions: [
-      { sentence: 'I ___ my grandmother last week.', choices: ['visit', 'visited', 'visiting'], answer: 1, why: 'last week（先週）なので過去形 visited。' },
-      { sentence: 'We ___ to the zoo yesterday.', choices: ['go', 'went', 'gone'], answer: 1, why: 'go の過去形は went（不規則動詞）。' },
-      { sentence: 'She ___ not come to school yesterday.', choices: ['does', 'did', 'is'], answer: 1, why: '過去の否定は did not ＋動詞の原形。' },
+      { sentence: 'I ___ my grandmother last week.', choices: ['visit', 'visited', 'visiting', 'visits'], answer: 1, why: 'last week（先週）なので過去形 visited。' },
+      { sentence: 'We ___ to the zoo yesterday.', choices: ['go', 'went', 'gone', 'goes'], answer: 1, why: 'go の過去形は went（不規則動詞）。' },
+      { sentence: 'She ___ not come to school yesterday.', choices: ['does', 'did', 'is', 'was'], answer: 1, why: '過去の否定は did not ＋動詞の原形。' },
     ],
   },
   {
@@ -67,9 +67,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We were talking about the game.', ja: '私たちは試合の話をしていた。' },
     ],
     questions: [
-      { sentence: 'Look! The cat ___ sleeping on the sofa.', choices: ['is', 'are', 'does'], answer: 0, why: 'the cat は1匹なので is ＋ sleeping。' },
-      { sentence: 'They are ___ soccer in the park now.', choices: ['play', 'playing', 'played'], answer: 1, why: 'be動詞のあとは -ing 形。' },
-      { sentence: 'I was ___ a bath when you called me.', choices: ['take', 'taking', 'took'], answer: 1, why: '過去進行形は was ＋ -ing。' },
+      { sentence: 'Look! The cat ___ sleeping on the sofa.', choices: ['is', 'are', 'does', 'am'], answer: 0, why: 'the cat は1匹なので is ＋ sleeping。' },
+      { sentence: 'They are ___ soccer in the park now.', choices: ['play', 'playing', 'played', 'plays'], answer: 1, why: 'be動詞のあとは -ing 形。' },
+      { sentence: 'I was ___ a bath when you called me.', choices: ['take', 'taking', 'took', 'takes'], answer: 1, why: '過去進行形は was ＋ -ing。' },
     ],
   },
   {
@@ -193,9 +193,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There are three parks in my town.', ja: '私の町には公園が3つある。' },
     ],
     questions: [
-      { sentence: 'There ___ a big tree in the garden.', choices: ['is', 'are', 'be'], answer: 0, why: 'a big tree は1本なので is。' },
-      { sentence: 'There ___ many people at the station.', choices: ['is', 'are', 'was'], answer: 1, why: 'many people は複数なので are。' },
-      { sentence: 'There ___ a festival last Sunday.', choices: ['is', 'are', 'was'], answer: 2, why: '過去（last Sunday）で1つなので was。' },
+      { sentence: 'There ___ a big tree in the garden.', choices: ['is', 'are', 'be', 'were'], answer: 0, why: 'a big tree は1本なので is。' },
+      { sentence: 'There ___ many people at the station.', choices: ['is', 'are', 'was', 'be'], answer: 1, why: 'many people は複数なので are。' },
+      { sentence: 'There ___ a festival last Sunday.', choices: ['is', 'are', 'was', 'were'], answer: 2, why: '過去（last Sunday）で1つなので was。' },
     ],
   },
   {
@@ -207,9 +207,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My birthday is in July.', ja: '私の誕生日は7月だ。' },
     ],
     questions: [
-      { sentence: 'I get up ___ six every day.', choices: ['at', 'on', 'in'], answer: 0, why: '時刻は at。' },
-      { sentence: 'We have no school ___ Sunday.', choices: ['at', 'on', 'in'], answer: 1, why: '曜日は on。' },
-      { sentence: 'It snows a lot ___ winter.', choices: ['at', 'on', 'in'], answer: 2, why: '季節は in。' },
+      { sentence: 'I get up ___ six every day.', choices: ['at', 'on', 'in', 'for'], answer: 0, why: '時刻は at。' },
+      { sentence: 'We have no school ___ Sunday.', choices: ['at', 'on', 'in', 'to'], answer: 1, why: '曜日は on。' },
+      { sentence: 'It snows a lot ___ winter.', choices: ['at', 'on', 'in', 'to'], answer: 2, why: '季節は in。' },
     ],
   },
   {
@@ -235,9 +235,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Let's play soccer after school.", ja: '放課後サッカーをしよう。' },
     ],
     questions: [
-      { sentence: '___ quiet in the library.', choices: ['Be', 'Are', 'Is'], answer: 0, why: 'be動詞の命令文は原形の Be で始める。' },
-      { sentence: "___ run in the hallway.", choices: ["Don't", "Doesn't", 'Not'], answer: 0, why: '「〜しないで」は Don’t ＋ 原形。' },
-      { sentence: "Let's ___ lunch together.", choices: ['eat', 'eats', 'eating'], answer: 0, why: "Let's のあとは原形。" },
+      { sentence: '___ quiet in the library.', choices: ['Be', 'Are', 'Is', 'Being'], answer: 0, why: 'be動詞の命令文は原形の Be で始める。' },
+      { sentence: "___ run in the hallway.", choices: ["Don't", "Doesn't", 'Not', "Won't"], answer: 0, why: '「〜しないで」は Don’t ＋ 原形。' },
+      { sentence: "Let's ___ lunch together.", choices: ['eat', 'eats', 'eating', 'ate'], answer: 0, why: "Let's のあとは原形。" },
     ],
   },
   {
@@ -249,9 +249,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How do you go to school?', ja: 'どうやって学校へ行きますか？' },
     ],
     questions: [
-      { sentence: '___ is your birthday? — It is May 5.', choices: ['When', 'Where', 'Who'], answer: 0, why: '日付を答えているので「いつ」の When。' },
-      { sentence: '___ is that girl? — She is my cousin.', choices: ['What', 'Who', 'How'], answer: 1, why: '人をたずねるので Who。' },
-      { sentence: '___ many brothers do you have?', choices: ['What', 'Which', 'How'], answer: 2, why: '数をたずねる「いくつ」は How many。' },
+      { sentence: '___ is your birthday? — It is May 5.', choices: ['When', 'Where', 'Who', 'Why'], answer: 0, why: '日付を答えているので「いつ」の When。' },
+      { sentence: '___ is that girl? — She is my cousin.', choices: ['What', 'Who', 'How', 'Whose'], answer: 1, why: '人をたずねるので Who。' },
+      { sentence: '___ many brothers do you have?', choices: ['What', 'Which', 'How', 'Who'], answer: 2, why: '数をたずねる「いくつ」は How many。' },
     ],
   },
   {
@@ -263,9 +263,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Do you know him?', ja: '彼を知っていますか？' },
     ],
     questions: [
-      { sentence: 'Please help ___.', choices: ['I', 'my', 'me'], answer: 2, why: '「私を」は me。' },
-      { sentence: 'That is ___ bike.', choices: ['she', 'her', 'hers'], answer: 1, why: '名詞の前の「彼女の」は her。' },
-      { sentence: 'Is this pen yours? — Yes, it\'s ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
+      { sentence: 'Please help ___.', choices: ['I', 'my', 'me', 'mine'], answer: 2, why: '「私を」は me。' },
+      { sentence: 'That is ___ bike.', choices: ['she', 'her', 'hers', 'herself'], answer: 1, why: '名詞の前の「彼女の」は her。' },
+      { sentence: 'Is this pen yours? — Yes, it\'s ___.', choices: ['my', 'me', 'mine', 'I'], answer: 2, why: '「私のもの」は mine。' },
     ],
   },
   {
@@ -434,7 +434,7 @@ export const GRAMMAR: GrammarUnit[] = [
     ],
     questions: [
       { sentence: 'How ___ brothers do you have?', choices: ['much', 'many'], answer: 1, why: 'brothers は数えられる名詞の複数形なので many。' },
-      { sentence: 'Can I have some ___?', choices: ['water', 'a water', 'waters'], answer: 0, why: 'water は数えられないので a もつけず、複数形にもしない。' },
+      { sentence: 'Can I have some ___?', choices: ['water', 'a water', 'waters', 'a waters'], answer: 0, why: 'water は数えられないので a もつけず、複数形にもしない。' },
       { sentence: 'There isn\'t ___ time before the bus comes.', choices: ['many', 'much'], answer: 1, why: 'time（時間）は数えられない名詞なので much。' },
     ],
   },
@@ -450,9 +450,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My father is always busy.', ja: '父はいつも忙しい。' },
     ],
     questions: [
-      { sentence: 'She ___ eats breakfast. She eats it every day.', choices: ['always', 'never', 'sometimes'], answer: 0, why: '毎日食べるので always（いつも）。' },
-      { sentence: 'I have ___ been to Hokkaido. I want to go someday.', choices: ['always', 'never', 'often'], answer: 1, why: '「いつか行きたい」ので一度も行ったことがない＝ never。' },
-      { sentence: 'Ken is ___ late for school.', choices: ['sometimes', 'sometime', 'some times'], answer: 0, why: '「ときどき」は sometimes。be動詞 is のあとに置く。' },
+      { sentence: 'She ___ eats breakfast. She eats it every day.', choices: ['always', 'never', 'sometimes', 'seldom'], answer: 0, why: '毎日食べるので always（いつも）。' },
+      { sentence: 'I have ___ been to Hokkaido. I want to go someday.', choices: ['always', 'never', 'often', 'ever'], answer: 1, why: '「いつか行きたい」ので一度も行ったことがない＝ never。' },
+      { sentence: 'Ken is ___ late for school.', choices: ['sometimes', 'sometime', 'some times', 'sometimely'], answer: 0, why: '「ときどき」は sometimes。be動詞 is のあとに置く。' },
     ],
   },
   {
