@@ -17785,6 +17785,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Design for Everyone', 'How to Build a Bus', 'The History of Shampoo', 'Why Stairs Are Necessary'], answer: 0, why: '全体として、だれにとっても使いやすいユニバーサルデザインの考え方と例、その意義を述べている。' },
   },
   {
+    id: 'kyotsu-chopsticks',
+    title: 'Two Sticks, Many Cultures',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For more than a billion people around the world, chopsticks are the most natural tool for eating. Two simple sticks, held in one hand, can pick up a single grain of rice, break apart a piece of fish, or lift noodles from a bowl. Although chopsticks may look the same everywhere, their shapes, materials, and the manners connected with them differ from country to country. Learning about these differences can tell us a great deal about the history and values of each culture.",
+      "Chopsticks are believed to have been used in China for thousands of years. At first, they were probably used mainly for cooking, such as stirring food in hot pots or taking it out of boiling water. Over time, they also became the main tool for eating, and their use gradually spread to neighbouring areas such as Japan, Korea, and Vietnam, ( A ) each culture developed its own style.",
+      "Today, the differences can be seen easily. Chinese chopsticks are often fairly long and have blunt ends, which is convenient for reaching dishes placed in the middle of a large table and shared by everyone. Japanese chopsticks are usually shorter and have pointed ends, which makes them suitable for removing small bones from fish. In Korea, chopsticks are often made of metal and are rather flat, and they are commonly used together with a spoon.",
+      "Manners are another important part of chopstick culture. In several countries, it is considered rude to stick chopsticks upright in a bowl of rice, because this resembles a practice connected with funerals. Passing food directly from one person's chopsticks to another's is also avoided in Japan for similar reasons. Pointing at people with chopsticks or waving them in the air while talking is generally thought to be impolite, ( B ) children are often taught these rules from an early age.",
+      "In recent years, chopsticks have also become part of discussions about the environment. Disposable wooden chopsticks are convenient for restaurants and convenience stores, but using large numbers of them only once creates waste. As a result, some people now carry their own reusable chopsticks in a small case. The story of chopsticks shows ( C ) even a very simple tool can reflect history, culture, and the values of the people who use it.",
+    ],
+    ja: [
+      '世界中の10億人以上の人々にとって、はしは食べるための最も自然な道具である。片手で持つ2本のかんたんな棒で、米を1つぶつまんだり、魚を一切れほぐしたり、どんぶりからめんを持ち上げたりできる。はしはどこでも同じように見えるかもしれないが、その形や材料、それにまつわる作法は国によってちがう。こうしたちがいについて学ぶと、それぞれの文化の歴史や価値観について多くのことがわかる。',
+      'はしは中国で何千年も使われてきたと考えられている。はじめは、熱いなべの中の食べ物をかきまぜたり、ゆでている湯から取り出したりするなど、おもに料理に使われていたのだろう。やがて、はしは食べるためのおもな道具にもなり、その使用は日本、朝鮮半島、ベトナムなどの近くの地域へだんだん広がり、そこでそれぞれの文化が独自の形を発展させた。',
+      '今日では、そのちがいはかんたんに見ることができる。中国のはしはしばしばかなり長く、先が丸くなっており、それは大きなテーブルの真ん中に置かれ、みんなで分け合う料理にとどくのに便利である。日本のはしはふつうもっと短く、先がとがっていて、魚の小さな骨を取るのに向いている。韓国では、はしはよく金属でできていて、かなり平たく、スプーンといっしょに使われることが多い。',
+      '作法も、はしの文化の大切な一部である。いくつかの国では、ごはんの入った茶わんにはしをまっすぐつき立てるのは失礼だと考えられている。葬式にかかわるならわしに似ているからである。日本では、同じような理由で、はしからはしへ直接食べ物をわたすこともさけられる。はしで人を指したり、話しながら空中でふり回したりすることも一般に失礼だと考えられており、そのため子どもたちはしばしば小さいころからこうしたきまりを教えられる。',
+      '近年、はしは環境についての議論の一部にもなっている。使い捨ての木のはしは、レストランやコンビニエンスストアにとって便利だが、大量のはしを1回だけ使うことはごみを生む。その結果、今では小さなケースに入れた自分のくり返し使えるはしを持ち歩く人もいる。はしの物語は、とてもかんたんな道具でさえ、歴史や文化、そしてそれを使う人々の価値観を映し出しうることを示している。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は neighbouring areas（場所）で、うしろが完全な文（each culture developed its own style）なので関係副詞 where。' },
+      { id: 'B', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「失礼だと考えられている、だから子どもは小さいころから教えられる」と結果を表すので so。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'はしは、はじめはおもに料理に使われていたと考えられる。', answer: true, why: '第2段落 At first, they were probably used mainly for cooking。' },
+      { statement: '日本のはしは、ふつう中国のはしより長い。', answer: false, why: '第3段落 Japanese chopsticks are usually shorter。' },
+      { statement: '韓国では、はしはスプーンといっしょに使われることが多い。', answer: true, why: '第3段落 they are commonly used together with a spoon。' },
+      { statement: '筆者によれば、使い捨てのはしはごみを生まない。', answer: false, why: '第5段落 using large numbers of them only once creates waste。' },
+    ],
+    qa: [
+      { q: 'Why are Chinese chopsticks often long with blunt ends?', choices: ['They are convenient for reaching shared dishes in the middle of a large table.', 'They are easier to make from metal.', 'They are used mainly for removing fish bones.', 'They are used only by children.'], answer: 0, why: '第3段落 convenient for reaching dishes placed in the middle of a large table and shared by everyone。' },
+      { q: 'Which is NOT mentioned as bad chopstick manners?', choices: ['Holding chopsticks in the right hand.', 'Sticking chopsticks upright in rice.', 'Pointing at people with chopsticks.', 'Waving chopsticks in the air while talking.'], answer: 0, why: '第4段落に右手で持つことが失礼だという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['国によるはしの形のちがい', 'テーブルの作り方', '魚の料理のしかた', 'スプーンの歴史'], answer: 0, why: '第3段落は、中国・日本・韓国のはしの長さや形、材料のちがいを述べている。' },
+      { para: 3, choices: ['はしの作法', '葬式の歴史', '子どもの遊び', '話し方の練習'], answer: 0, why: '第4段落は、はしをつき立てる、はしで指すなど、さけるべき作法を述べている。' },
+    ],
+    titleQ: { choices: ['Two Sticks, Many Cultures', 'How to Cook Rice', 'The History of Spoons', 'Why Metal Is Strong'], answer: 0, why: '全体として、はしの歴史、国によるちがい、作法、環境とのかかわりを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
