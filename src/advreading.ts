@@ -15985,6 +15985,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-filler-words',
+    title: 'The Hidden Work of “Um” and “Uh”',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When people give a speech, they are often told to avoid words such as “um” and “uh.” These small sounds, called fillers, are usually seen as a sign of nervousness or poor preparation. However, researchers who study everyday conversation have found that fillers are far more common, and perhaps more useful, than most people realize. In ordinary speech, a person may use several of them every minute without noticing.",
+      "Fillers appear in almost every language. Japanese speakers say “eto” or “ano,” while speakers of English say “um” or “uh.” The fact that so many languages have them suggests that they are not simply mistakes. Instead, they seem to be a natural part of how people speak when they are thinking and talking at the same time. Children begin to use them at an early age, and even skilled speakers such as teachers and news reporters use them in unplanned conversation.",
+      "One important role of fillers is to tell listeners that the speaker needs a little more time. In a conversation, people take turns quickly, and a long silence can make others think that a speaker has finished. By saying “um,” the speaker can keep his or her turn while searching for the right word. Some studies suggest that “uh” is often used before a short pause, ( A ) “um” tends to come before a longer one.",
+      "Fillers may also help listeners. In some experiments, people who heard a filler just before a word were better at noticing and remembering that word later. One possible explanation is that the filler warns listeners that something difficult or unexpected is coming, ( B ) they pay closer attention to what follows.",
+      "This does not mean that a speech full of fillers is a good one. In a formal presentation, too many of them can make the speaker seem unsure. Practicing a speech many times is one good way to reduce them. But in everyday conversation, fillers are part of the cooperation between speaker and listener. Rather than trying to remove every “um,” we might do better to understand the work these little words do and to use them ( C ) the situation requires.",
+    ],
+    ja: [
+      'スピーチをするとき、人々はよく「えーと」や「あのー」にあたる英語の um や uh のような言葉をさけるように言われる。フィラーとよばれるこうした小さな音は、ふつう緊張や準備不足のしるしと見られている。しかし、日常の会話を研究する人々は、フィラーがたいていの人が気づいているよりもはるかによく使われており、もしかするとより役に立っていることを見つけてきた。ふつうの話し言葉では、人は気づかないうちに1分間に何度もフィラーを使っていることがある。',
+      'フィラーはほとんどすべての言語に見られる。日本語を話す人は「えーと」や「あのー」と言い、英語を話す人は um や uh と言う。これほど多くの言語にフィラーがあるという事実は、それが単なるまちがいではないことを示している。むしろそれは、人が考えながら同時に話しているときの話し方の、自然な一部であるように思われる。子どもは小さいころからフィラーを使いはじめ、教師やニュースの記者のように話すことになれた人でさえ、準備していない会話ではフィラーを使う。',
+      'フィラーの大切な役割の一つは、話し手がもう少し時間を必要としていることを聞き手に伝えることである。会話では人々はすばやく交代して話すので、長いだまりは、話し手が話し終えたとほかの人に思わせることがある。um と言うことで、話し手は正しい言葉を探しているあいだも自分の番を保つことができる。uh は短い間の前に使われることが多いのに対し、um はより長い間の前に来がちだということを示す研究もある。',
+      'フィラーは聞き手の助けにもなるかもしれない。いくつかの実験では、ある言葉の直前にフィラーを聞いた人は、あとでその言葉に気づいたり覚えていたりするのが得意だった。考えられる説明の一つは、フィラーが聞き手に、何か難しいことや予想外のことが来ると知らせ、そのため聞き手がそのあとに続くことにより注意をはらうというものである。',
+      'これは、フィラーだらけのスピーチがよいスピーチだということではない。改まった発表では、フィラーが多すぎると話し手が自信なさそうに見えることがある。スピーチを何度も練習することは、フィラーを減らすよい方法の一つである。しかし日常の会話では、フィラーは話し手と聞き手の協力の一部である。um をすべて取りのぞこうとするよりも、これらの小さな言葉が果たしている働きを理解し、状況が必要とするように使うほうがよいのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['while', 'because', 'unless', 'so'], answer: 0, why: '「uh は短い間の前」と「um は長い間の前」を対比しているので while「～である一方」。' },
+      { id: 'B', choices: ['so', 'but', 'although', 'unless'], answer: 0, why: '「難しいことが来ると知らせる、その結果聞き手がより注意をはらう」と結果を表すので so。' },
+      { id: 'C', choices: ['as', 'than', 'if not', 'until'], answer: 0, why: 'as the situation requires「状況が必要とするように」。様態を表す接続詞 as。' },
+    ],
+    tf: [
+      { statement: 'フィラーは、ほとんどすべての言語に見られる。', answer: true, why: '第2段落 Fillers appear in almost every language。' },
+      { statement: '筆者は、フィラーは単なるまちがいだと考えている。', answer: false, why: '第2段落 suggests that they are not simply mistakes。' },
+      { statement: 'um と言うことで、話し手は言葉を探すあいだも自分の番を保てる。', answer: true, why: '第3段落 By saying “um,” the speaker can keep his or her turn while searching for the right word。' },
+      { statement: '筆者は、改まった発表ではフィラーをたくさん使うべきだと述べている。', answer: false, why: '第5段落 In a formal presentation, too many of them can make the speaker seem unsure。' },
+    ],
+    qa: [
+      { q: 'What did some experiments find about listeners who heard a filler before a word?', choices: ['They were better at noticing and remembering the word.', 'They forgot the word more quickly.', 'They stopped listening to the speaker.', 'They thought the speaker had finished.'], answer: 0, why: '第4段落 people who heard a filler just before a word were better at noticing and remembering that word later。' },
+      { q: 'What is the writer’s main point?', choices: ['Fillers do useful work in conversation and should be understood, not simply removed.', 'Fillers should never be used in any situation.', 'Japanese has more fillers than English.', 'Good speakers never pause.'], answer: 0, why: '第5段落 Rather than trying to remove every “um,” we might do better to understand the work these little words do。' },
+    ],
+    gist: [
+      { para: 2, choices: ['フィラーが話す番を保つ合図になること', '会話をすばやく終わらせる方法', 'だまっている時間の長さの測り方', 'スピーチの原稿の書き方'], answer: 0, why: '第3段落は、フィラーが「もう少し時間がほしい」と伝え、話し手が番を保てるようにする役割を説明している。' },
+      { para: 3, choices: ['フィラーが聞き手の注意を高めるかもしれないこと', '聞き手の記憶力のきたえ方', '予想外のできごとへの対応', '実験の費用'], answer: 0, why: '第4段落は、フィラーのあとの言葉に聞き手が気づき、覚えやすくなるという実験の結果を述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
