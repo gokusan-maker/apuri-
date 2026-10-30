@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { BOSS_TA_SECONDS, damage, loadBossTaBest, recordBossTaBest } from './boss'
-import { makeQuiz } from './quiz'
+import { distractorPool, makeQuiz } from './quiz'
 import { playCorrect, playWrong } from './sound'
 import { WORDS, type Word } from './words'
 
@@ -11,7 +11,7 @@ type Props = { words: Word[]; onBack: () => void }
 
 // ボスのタイムアタック：30秒でボスに何ダメージあたえられるか（コンボでダメージアップ）
 export function BossTime({ words, onBack }: Props) {
-  const [qs, setQs] = useState(() => makeQuiz(WORDS, (w) => w.ja, 60, rnd, words))
+  const [qs, setQs] = useState(() => makeQuiz(distractorPool(words, WORDS), (w) => w.ja, 60, rnd, words))
   const [i, setI] = useState(0)
   const [combo, setCombo] = useState(0)
   const [total, setTotal] = useState(0)
@@ -67,7 +67,7 @@ export function BossTime({ words, onBack }: Props) {
             className="flip"
             onClick={() => {
               const t = nowMs()
-              setQs(makeQuiz(WORDS, (w) => w.ja, 60, rnd, words))
+              setQs(makeQuiz(distractorPool(words, WORDS), (w) => w.ja, 60, rnd, words))
               setI(0)
               setCombo(0)
               setTotal(0)

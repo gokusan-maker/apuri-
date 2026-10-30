@@ -21,3 +21,14 @@ it('30秒で正解するたびにダメージがたまり、ベストが残る',
   expect(screen.getByRole('status').textContent).toMatch(/13ダメージ！.*🏆 ベスト記録！/)
   expect(localStorage.getItem('eitan:boss-ta-best')).toBe('13')
 })
+
+it('CEFR の点検①：ボスのタイムアタックの誤答は、えらんだレベルの単語の訳から出る', () => {
+  localStorage.clear()
+  const words = wordsOf(['中3'])
+  const jas = new Set(words.map((w) => w.ja))
+  render(<BossTime words={words} onBack={() => {}} />)
+  fireEvent.click(screen.getByText('スタート'))
+  const texts = [...document.querySelectorAll<HTMLButtonElement>('.boss-ta .choice')].map((b) => b.textContent!)
+  expect(texts.length).toBeGreaterThan(1)
+  for (const t of texts) expect(jas.has(t)).toBe(true)
+})

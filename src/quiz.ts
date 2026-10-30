@@ -37,6 +37,12 @@ export function makeQuestion<T extends { id: string }>(
   return { word, choices, answer: choices.indexOf(correct) }
 }
 
+// 誤答をえらぶ単語の集まり：出題レベルの単語が十分あればそのレベルから（上のレベルで中1の訳がまじって簡単にならないように）、少なければ全体から
+export const DISTRACTOR_MIN = 8
+export function distractorPool<T>(level: T[], all: T[]): T[] {
+  return level.length >= DISTRACTOR_MIN ? level : all
+}
+
 // targets から出題し、誤答は all から選ぶ（苦手だけ復習のときに使う）
 export function makeQuiz<T extends { id: string }>(
   all: T[],

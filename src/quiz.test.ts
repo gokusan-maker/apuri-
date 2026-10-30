@@ -59,3 +59,12 @@ describe('trimChoices', () => {
     expect(trimChoices(t, 3)).toBe(t)
   })
 })
+
+describe('レベルに合った誤答（CEFR の点検①）', () => {
+  it('出題レベルの単語が十分あれば、誤答はそのレベルから選ぶ', async () => {
+    const { distractorPool, DISTRACTOR_MIN } = await import('./quiz')
+    const level = WORDS.slice(0, DISTRACTOR_MIN)
+    expect(distractorPool(level, WORDS)).toBe(level)
+    expect(distractorPool(WORDS.slice(0, 3), WORDS)).toBe(WORDS)
+  })
+})
