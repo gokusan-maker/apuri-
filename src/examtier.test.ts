@@ -259,3 +259,10 @@ it('本番の長さの長文：共通テスト評論の「幹線道路を公園�
   expect(passageStats(p).words).toBeGreaterThanOrEqual(350)
   expect(tierOf(p)).toBe('kyotsu')
 })
+
+it('本番の長さの長文：旧帝大評論の「テスト効果」は600語以上・1文18語以上で旧帝大のレベルに残る', () => {
+  const p = ADV_PASSAGES.find((x) => x.id === 'kyutei-testing-effect')!
+  expect(passageStats(p).words).toBeGreaterThanOrEqual(600)
+  expect(passageStats(p).wps).toBeGreaterThanOrEqual(18)
+  expect(tierOf(p)).toBe('kyutei')
+})
