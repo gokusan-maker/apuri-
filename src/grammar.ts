@@ -2531,9 +2531,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There is nothing special in the box.', ja: '箱の中には特別なものは何もない。' },
     ],
     questions: [
-      { sentence: 'Did you see anything ___ at the zoo?', choices: ['interesting', 'interest', 'interestingly'], answer: 0, why: 'anything ＋ 形容詞の順。' },
-      { sentence: 'I want ___ to drink.', choices: ['something cold', 'cold something', 'some cold thing'], answer: 0, why: '-thing ＋ 形容詞 ＋ to 〜 の順。' },
-      { sentence: 'Nothing ___ happened today.', choices: ['new', 'news', 'newly'], answer: 0, why: 'nothing ＋ 形容詞 new「新しいことは何も」。' },
+      { sentence: 'Did you see anything ___ at the zoo?', choices: ['interesting', 'interest', 'interestingly', 'interests'], answer: 0, why: 'anything ＋ 形容詞の順。' },
+      { sentence: 'I want ___ to drink.', choices: ['something cold', 'cold something', 'some cold thing', 'cold anything'], answer: 0, why: '-thing ＋ 形容詞 ＋ to 〜 の順。' },
+      { sentence: 'Nothing ___ happened today.', choices: ['new', 'news', 'newly', 'newness'], answer: 0, why: 'nothing ＋ 形容詞 new「新しいことは何も」。' },
     ],
   },
   {
@@ -2599,9 +2599,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I found my key. It was under the bed.', ja: 'かぎが見つかった。（それは）ベッドの下にあった。' },
     ],
     questions: [
-      { sentence: "I don't have a pencil. Can you lend me ___?", choices: ['one', 'it', 'them'], answer: 0, why: '特定のえんぴつではなく「（どれでも）1本」なので one。' },
-      { sentence: 'My father gave me a watch. I wear ___ every day.', choices: ['it', 'one', 'ones'], answer: 0, why: 'もらった「その時計」そのものなので it。' },
-      { sentence: 'These shoes are too small. I want bigger ___.', choices: ['ones', 'one', 'it'], answer: 0, why: '複数の shoes の代わりなので ones。' },
+      { sentence: "I don't have a pencil. Can you lend me ___?", choices: ['one', 'it', 'them', 'its'], answer: 0, why: '特定のえんぴつではなく「（どれでも）1本」なので one。' },
+      { sentence: 'My father gave me a watch. I wear ___ every day.', choices: ['it', 'one', 'ones', 'its'], answer: 0, why: 'もらった「その時計」そのものなので it。' },
+      { sentence: 'These shoes are too small. I want bigger ___.', choices: ['ones', 'one', 'it', 'its'], answer: 0, why: '複数の shoes の代わりなので ones。' },
     ],
   },
   {
@@ -2650,9 +2650,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Many students took part in the speech contest.', ja: '多くの生徒がスピーチコンテストに参加した。' },
     ],
     questions: [
-      { sentence: 'Who will take care ___ the dog?', choices: ['of', 'for', 'with'], answer: 0, why: 'take care of 〜「〜の世話をする」。' },
-      { sentence: 'Let\'s take part ___ the festival.', choices: ['in', 'on', 'at'], answer: 0, why: 'take part in 〜「〜に参加する」。' },
-      { sentence: 'Can you take a look ___ my homework?', choices: ['at', 'to', 'of'], answer: 0, why: 'take a look at 〜「〜をちょっと見る」。' },
+      { sentence: 'Who will take care ___ the dog?', choices: ['of', 'for', 'with', 'at'], answer: 0, why: 'take care of 〜「〜の世話をする」。' },
+      { sentence: 'Let\'s take part ___ the festival.', choices: ['in', 'on', 'at', 'for'], answer: 0, why: 'take part in 〜「〜に参加する」。' },
+      { sentence: 'Can you take a look ___ my homework?', choices: ['at', 'to', 'of', 'by'], answer: 0, why: 'take a look at 〜「〜をちょっと見る」。' },
     ],
   },
   {
@@ -2718,9 +2718,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We stayed in Hokkaido for five days.', ja: '私たちは北海道に5日間滞在した。' },
     ],
     questions: [
-      { sentence: "Don't talk ___ the test.", choices: ['during', 'for', 'while'], answer: 0, why: '「テストの間」（いつの間か）なので during。while のあとは主語＋動詞。' },
-      { sentence: 'I have lived here ___ ten years.', choices: ['for', 'during', 'in'], answer: 0, why: '「10年間」（長さ）なので for。' },
-      { sentence: 'It rained ___ the night.', choices: ['during', 'for', 'since'], answer: 0, why: '「夜の間に」（特定の期間）なので during。' },
+      { sentence: "Don't talk ___ the test.", choices: ['during', 'for', 'while', 'since'], answer: 0, why: '「テストの間」（いつの間か）なので during。while のあとは主語＋動詞。' },
+      { sentence: 'I have lived here ___ ten years.', choices: ['for', 'during', 'in', 'since'], answer: 0, why: '「10年間」（長さ）なので for。' },
+      { sentence: 'It rained ___ the night.', choices: ['during', 'for', 'since', 'while'], answer: 0, why: '「夜の間に」（特定の期間）なので during。' },
     ],
   },
   {
@@ -2871,9 +2871,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The game became more and more exciting.', ja: '試合はますますおもしろくなった。' },
     ],
     questions: [
-      { sentence: 'The days are getting ___ and longer.', choices: ['longer', 'long', 'longest'], answer: 0, why: '比較級 and 比較級：longer and longer。' },
-      { sentence: 'This song is becoming more and more ___.', choices: ['popular', 'popularer', 'most popular'], answer: 0, why: 'more and more ＋ 形容詞の原級。' },
-      { sentence: 'It got ___ and darker outside.', choices: ['darker', 'more dark', 'dark'], answer: 0, why: 'dark の比較級は darker。darker and darker。' },
+      { sentence: 'The days are getting ___ and longer.', choices: ['longer', 'long', 'longest', 'more long'], answer: 0, why: '比較級 and 比較級：longer and longer。' },
+      { sentence: 'This song is becoming more and more ___.', choices: ['popular', 'popularer', 'most popular', 'populars'], answer: 0, why: 'more and more ＋ 形容詞の原級。' },
+      { sentence: 'It got ___ and darker outside.', choices: ['darker', 'more dark', 'dark', 'darkest'], answer: 0, why: 'dark の比較級は darker。darker and darker。' },
     ],
   },
   {
@@ -2990,9 +2990,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What happened to your bike?', ja: 'あなたの自転車に何があったの？' },
     ],
     questions: [
-      { sentence: 'Who ___ this picture? — My sister did.', choices: ['painted', 'did she paint', 'did you paint'], answer: 0, why: 'Who が主語なので did を使わず Who painted 〜? の語順。' },
-      { sentence: 'Who ___ Chinese in your class?', choices: ['speaks', 'speak', 'is speak'], answer: 0, why: '疑問詞の主語は3人称単数あつかいなので speaks。' },
-      { sentence: 'Who cleaned the room? — Ken ___.', choices: ['did', 'was', 'cleaned it did'], answer: 0, why: '過去の文の答えは〈主語 ＋ did〉。' },
+      { sentence: 'Who ___ this picture? — My sister did.', choices: ['painted', 'did she paint', 'did you paint', 'painting'], answer: 0, why: 'Who が主語なので did を使わず Who painted 〜? の語順。' },
+      { sentence: 'Who ___ Chinese in your class?', choices: ['speaks', 'speak', 'is speak', 'speaking'], answer: 0, why: '疑問詞の主語は3人称単数あつかいなので speaks。' },
+      { sentence: 'Who cleaned the room? — Ken ___.', choices: ['did', 'was', 'cleaned it did', 'does'], answer: 0, why: '過去の文の答えは〈主語 ＋ did〉。' },
     ],
   },
   {
@@ -3228,9 +3228,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I bought a scarf for my grandmother.', ja: '祖母にマフラーを買った。' },
     ],
     questions: [
-      { sentence: 'She sent a letter ___ her friend in Canada.', choices: ['to', 'with', 'at'], answer: 0, why: 'send は相手に届ける動詞なので to。' },
-      { sentence: 'My mother cooked dinner ___ us.', choices: ['for', 'to', 'of'], answer: 0, why: 'cook は「相手のために～する」動詞なので for。' },
-      { sentence: 'I have a new pen. I will give ___.', choices: ['it to you', 'you it', 'to you it'], answer: 0, why: '物が代名詞 it のときは give it to you の形にする。' },
+      { sentence: 'She sent a letter ___ her friend in Canada.', choices: ['to', 'with', 'at', 'of'], answer: 0, why: 'send は相手に届ける動詞なので to。' },
+      { sentence: 'My mother cooked dinner ___ us.', choices: ['for', 'to', 'of', 'at'], answer: 0, why: 'cook は「相手のために～する」動詞なので for。' },
+      { sentence: 'I have a new pen. I will give ___.', choices: ['it to you', 'you it', 'to you it', 'it you'], answer: 0, why: '物が代名詞 it のときは give it to you の形にする。' },
     ],
   },
   {
@@ -3245,9 +3245,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She got up early to catch the first train.', ja: '彼女は始発に乗るために早起きした。' },
     ],
     questions: [
-      { sentence: 'I went to the store ___ some milk.', choices: ['to buy', 'buying', 'bought'], answer: 0, why: '「牛乳を買うために」という目的を表す副詞的用法。' },
-      { sentence: 'Do you have anything ___?', choices: ['to eat', 'eating', 'eat'], answer: 0, why: 'anything を説明する形容詞的用法「何か食べるもの」。' },
-      { sentence: 'My dream is ___ a doctor.', choices: ['to become', 'become', 'became'], answer: 0, why: '「医者になること」が is の補語になる名詞的用法。' },
+      { sentence: 'I went to the store ___ some milk.', choices: ['to buy', 'buying', 'bought', 'buy'], answer: 0, why: '「牛乳を買うために」という目的を表す副詞的用法。' },
+      { sentence: 'Do you have anything ___?', choices: ['to eat', 'eating', 'eat', 'ate'], answer: 0, why: 'anything を説明する形容詞的用法「何か食べるもの」。' },
+      { sentence: 'My dream is ___ a doctor.', choices: ['to become', 'become', 'became', 'becomes'], answer: 0, why: '「医者になること」が is の補語になる名詞的用法。' },
     ],
   },
   {
@@ -3296,9 +3296,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'There are too many cars on this road.', ja: 'この道路は車が多すぎる。' },
     ],
     questions: [
-      { sentence: 'Don\'t eat too ___ sweets.', choices: ['many', 'much', 'little'], answer: 0, why: 'sweets は数えられる名詞の複数形なので too many。' },
-      { sentence: 'She spends too ___ money on clothes.', choices: ['much', 'many', 'few'], answer: 0, why: 'money は数えられない名詞なので too much。' },
-      { sentence: 'There were too ___ chairs, so some people had to stand.', choices: ['few', 'many', 'much'], answer: 0, why: '「立たなければならなかった」→ いすが少なすぎた。数えられる名詞なので too few。' },
+      { sentence: 'Don\'t eat too ___ sweets.', choices: ['many', 'much', 'little', 'more'], answer: 0, why: 'sweets は数えられる名詞の複数形なので too many。' },
+      { sentence: 'She spends too ___ money on clothes.', choices: ['much', 'many', 'few', 'more'], answer: 0, why: 'money は数えられない名詞なので too much。' },
+      { sentence: 'There were too ___ chairs, so some people had to stand.', choices: ['few', 'many', 'much', 'little'], answer: 0, why: '「立たなければならなかった」→ いすが少なすぎた。数えられる名詞なので too few。' },
     ],
   },
   {
@@ -3330,9 +3330,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "We don't need to hurry. The train leaves at ten.", ja: '急ぐ必要はないよ。電車は10時に出るから。' },
     ],
     questions: [
-      { sentence: 'He ___ to see a doctor.', choices: ['needs', 'need', 'needing'], answer: 0, why: '主語 He は3人称単数なので needs to。' },
-      { sentence: "You ___ need to come early. The meeting starts at noon.", choices: ["don't", "mustn't", "aren't"], answer: 0, why: "「早く来る必要はない」は don't need to ～。" },
-      { sentence: 'I needed ___ my homework before dinner.', choices: ['to finish', 'finish', 'finished'], answer: 0, why: 'need to ＋ 動詞の原形。過去は needed to。' },
+      { sentence: 'He ___ to see a doctor.', choices: ['needs', 'need', 'needing', 'is need'], answer: 0, why: '主語 He は3人称単数なので needs to。' },
+      { sentence: "You ___ need to come early. The meeting starts at noon.", choices: ["don't", "mustn't", "aren't", "doesn't"], answer: 0, why: "「早く来る必要はない」は don't need to ～。" },
+      { sentence: 'I needed ___ my homework before dinner.', choices: ['to finish', 'finish', 'finished', 'finishing'], answer: 0, why: 'need to ＋ 動詞の原形。過去は needed to。' },
     ],
   },
   {
