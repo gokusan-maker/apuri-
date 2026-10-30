@@ -614,6 +614,11 @@ export function Gacha({ partnerName, coins, members, tickets = 0, pityLeft, cast
               🔊
             </button>
           </p>
+          {ownedSpecies && (() => {
+            // デザイン110：図鑑のコンプリートが近いとき
+            const left = SPECIES.filter((sp) => sp.id !== 'mochi' && sp.id !== result.species.id && !ownedSpecies.includes(sp.id)).length
+            return left > 0 && left <= 3 ? <p className="gacha-near">🏁 コンプリートまであと{left}体！</p> : null
+          })()}
           {result.bonus && <p className="gacha-bonus">🎁 おまけカプセル！ {result.bonus}</p>}
           {result.mystery && <p className="gacha-lucky">❓ ミステリーカプセル！ おまけ 🪙{MYSTERY_COINS}</p>}
           {result.sticker && <p className="gacha-sticker">🏷 おまけシール {result.sticker}</p>}

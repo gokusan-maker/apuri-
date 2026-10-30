@@ -534,3 +534,14 @@ it('デザイン105：キャラ図鑑の詳しい説明は ✕ ボタンで閉�
   fireEvent.click(screen.getByRole('button', { name: '説明をとじる' }))
   expect(document.querySelector('.zukan-detail')).toBeNull()
 })
+
+it('デザイン110：ガチャの結果で、図鑑のコンプリートまであと3体以下なら「コンプリートまであと○体！」が出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const all = SPECIES.map((s) => s.id)
+  const owned = all.slice(0, all.length - 3) // のこり3体（mochi はふくむ）
+  const drawn = all[all.length - 1]
+  const onDraw = vi.fn(() => ({ kind: kindOf('kin'), species: speciesOf(drawn) }))
+  render(<Gacha coins={GACHA_PRICE} members={1} onDraw={onDraw} ownedSpecies={owned} />)
+  fireEvent.click(screen.getByRole('button', { name: `🎰 ガチャを引く 🪙${GACHA_PRICE}` }))
+  expect(screen.getByText('🏁 コンプリートまであと2体！')).toBeInTheDocument()
+})
