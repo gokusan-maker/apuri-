@@ -17473,6 +17473,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How Weather Forecasts Are Made', 'The History of Umbrellas', 'Why Satellites Are Expensive', 'How to Become a Farmer'], answer: 0, why: '全体として、データ集め・計算・不確かさ・進歩という天気予報の作られ方を述べている。' },
   },
   {
+    id: 'kyotsu-origami',
+    title: 'The Art of Folding Paper',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Origami, the art of folding paper into shapes such as birds, flowers, and animals, is known around the world as a traditional Japanese activity. Many children in Japan learn to fold a paper crane at school or at home, and visitors from abroad are often surprised that a single square of paper can become such a beautiful object without any cutting or glue.",
+      "Paper folding has a long history. After paper was brought to Japan many centuries ago, it was at first very expensive, so it was used mainly for important purposes such as religious ceremonies and formal gifts. Folded paper decorations were attached to presents to show respect, and people followed strict rules about how they should be folded. Only later, when paper became cheaper, ( A ) origami become a popular pastime that ordinary people could enjoy.",
+      "Origami is not only a Japanese tradition, however. Paper folding also developed in other parts of the world, and in the twentieth century, artists from many countries began to exchange ideas. A system of simple diagrams, using lines and arrows to show how each fold should be made, made it possible for people to learn new models from books even if they did not share a language. This helped origami spread quickly to schools and clubs around the world.",
+      "In recent decades, origami has also attracted the attention of scientists and engineers. Mathematicians have studied the rules that decide which shapes can be folded from a flat sheet, and engineers have used folding patterns to design objects that must be stored in a small space and then opened. For example, large panels for space satellites can be folded tightly for launch and then spread out once they reach space. Similar ideas have been used to design medical devices ( B ) can be folded small and opened inside the body.",
+      "Today, origami is enjoyed for many different reasons. For some people, it is a relaxing hobby that helps them to concentrate; for others, it is a way to teach children about shapes and numbers. The story of origami shows that a simple activity, passed down from generation to generation, can continue to grow and find new uses. It also reminds us ( C ) creativity does not always require expensive tools: sometimes a single sheet of paper is enough.",
+    ],
+    ja: [
+      '折り紙は、紙を折って鳥や花、動物などの形を作る芸術で、日本の伝統的な活動として世界中で知られている。日本の多くの子どもは学校や家で紙の鶴の折り方を学び、外国からの訪問者は、1枚の正方形の紙が、切ったりのりを使ったりせずにそれほど美しいものになることにしばしばおどろく。',
+      '紙を折ることには長い歴史がある。何世紀も前に紙が日本に伝わったあと、紙ははじめはとても高価だったので、おもに宗教的な儀式や正式な贈り物のような大切な目的に使われた。折った紙のかざりは敬意を示すために贈り物につけられ、人々はそれをどう折るべきかについてのきびしいきまりに従った。紙が安くなってからようやく、折り紙はふつうの人々が楽しめる人気のある娯楽になったのである。',
+      'しかし、折り紙は日本だけの伝統ではない。紙を折ることは世界のほかの地域でも発展し、20世紀には、多くの国の作家が考えを交換しはじめた。線と矢印を使ってそれぞれの折り方を示すかんたんな図のしくみによって、同じ言語を話さなくても、人々が本から新しい作品を学ぶことができるようになった。このことは、折り紙が世界中の学校やクラブにすばやく広まるのを助けた。',
+      'ここ数十年のあいだに、折り紙は科学者や技術者の注目も集めている。数学者は、平らな紙からどんな形が折れるかを決めるきまりを研究し、技術者は、小さな場所にしまってからあとで開かなければならない物を設計するために、折り方のパターンを使ってきた。たとえば、人工衛星の大きなパネルは、打ち上げのためにきつく折りたたまれ、宇宙にとどくと広げられる。同じような考えは、小さく折りたたんで体の中で開くことができる医療器具の設計にも使われている。',
+      '今日、折り紙はさまざまな理由で楽しまれている。ある人にとっては集中するのを助けるくつろいだ趣味であり、別の人にとっては子どもに形や数について教える方法である。折り紙の物語は、世代から世代へと受けつがれてきたかんたんな活動が、成長しつづけ、新しい使い道を見つけられることを示している。それはまた、創造性にはいつも高価な道具が必要なわけではない、ときには1枚の紙で十分だということを思い出させてくれるのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['did', 'was', 'does', 'is'], answer: 0, why: 'Only later, when ～ のように Only ＋副詞（句・節）が文頭に出ると倒置。一般動詞 become の過去なので did origami become。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 medical devices（物）を受け、うしろの can be folded の主語になるので主格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'if'], answer: 0, why: 'remind 人 that ～「人に～ということを思い出させる」。うしろは完全な文なので接続詞 that。' },
+    ],
+    tf: [
+      { statement: '折り紙では、ふつう紙を切ったりのりを使ったりしない。', answer: true, why: '第1段落 without any cutting or glue。' },
+      { statement: '紙が日本に伝わったころ、紙は安くてだれでも遊びに使えた。', answer: false, why: '第2段落 it was at first very expensive, so it was used mainly for important purposes。' },
+      { statement: '線と矢印の図によって、言語がちがっても折り方を学べるようになった。', answer: true, why: '第3段落 made it possible for people to learn new models from books even if they did not share a language。' },
+      { statement: '筆者は、折り紙は子どもの遊びにしか使われないと述べている。', answer: false, why: '第4段落 科学者や技術者も人工衛星のパネルや医療器具に折り方を使っている。' },
+    ],
+    qa: [
+      { q: 'How have engineers used origami?', choices: ['To design objects that are stored small and opened later, such as satellite panels.', 'To make paper cheaper.', 'To write new books about religion.', 'To teach mathematics without numbers.'], answer: 0, why: '第4段落 engineers have used folding patterns to design objects that must be stored in a small space and then opened。' },
+      { q: 'Which is NOT mentioned as a reason people enjoy origami today?', choices: ['It is a way to earn a lot of money.', 'It is a relaxing hobby.', 'It helps people to concentrate.', 'It is a way to teach children about shapes and numbers.'], answer: 0, why: '第5段落にお金をかせぐ話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['折り紙の歴史（儀式から娯楽へ）', '紙の作り方', '宗教の教え', '贈り物の値段'], answer: 0, why: '第2段落は、高価だった紙が儀式や贈り物に使われ、のちに人々の娯楽になった歴史を述べている。' },
+      { para: 3, choices: ['科学と技術における折り紙の利用', '宇宙旅行の歴史', '病院の作り方', '数学者の生活'], answer: 0, why: '第4段落は、数学者の研究や人工衛星のパネル、医療器具への折り紙の利用を述べている。' },
+    ],
+    titleQ: { choices: ['The Art of Folding Paper', 'How to Build a Satellite', 'The Price of Paper in Japan', 'Why Glue Is Important'], answer: 0, why: '全体として、折り紙の歴史、世界への広まり、科学での利用、今日の楽しみ方を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
