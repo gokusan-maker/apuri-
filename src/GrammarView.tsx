@@ -13,6 +13,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
+import { EXAM_ERROR } from './examerror'
 import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
@@ -483,6 +484,12 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
                   onClick={() => open(u)}
                 >
                   {u.title.split('の文法')[0]}
+                  <small>{u.questions.length}問</small>
+                </button>
+              ))}
+              {EXAM_ERROR.map((u) => (
+                <button key={u.id} className="exam-tier" onClick={() => open(u)}>
+                  {u.title.replace('入試の', '')}
                   <small>{u.questions.length}問</small>
                 </button>
               ))}
@@ -1240,9 +1247,11 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
       )}
       <p className="example blank-sentence">
         {before}
-        <span className={`blank${picked !== null ? ' filled' : ''}`}>
-          {picked !== null ? q.choices[q.answer] : '　　　'}
-        </span>
+        {after !== undefined && (
+          <span className={`blank${picked !== null ? ' filled' : ''}`}>
+            {picked !== null ? q.choices[q.answer] : '　　　'}
+          </span>
+        )}
         {after}
       </p>
       {picked === null && hidden?.step !== step && (
