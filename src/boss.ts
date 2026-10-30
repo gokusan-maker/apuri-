@@ -602,3 +602,7 @@ export function traitAfterHit(trait: BossTrait | BossTrait[], hp: number, nextHp
 // ボス戦の舞台の季節：12〜2月は雪、3〜4月はさくらの花びらが舞う
 export type ArenaSeason = 'snow' | 'sakura' | null
 export const arenaSeasonOf = (month: number): ArenaSeason => (month === 11 || month <= 1 ? 'snow' : month === 2 || month === 3 ? 'sakura' : null)
+
+// デザイン125：負けたときボスのHPが2割以下なら「おしい！」
+export const CLOSE_LOSS_RATE = 0.2
+export const isCloseLoss = (hp: number, maxHp: number): boolean => hp > 0 && maxHp > 0 && hp <= maxHp * CLOSE_LOSS_RATE

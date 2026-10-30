@@ -807,3 +807,21 @@ it('デザイン121：相棒がいないときは、とくぎの回数は出な�
   answer(true)
   expect(screen.queryByLabelText(/^とくぎ \d+回$/)).toBeNull()
 })
+
+it('デザイン125：ボスのHPが2割以下で負けたかどうかの判定', async () => {
+  const { isCloseLoss } = await import('./boss')
+  expect(isCloseLoss(20, 100)).toBe(true)
+  expect(isCloseLoss(1, 100)).toBe(true)
+  expect(isCloseLoss(21, 100)).toBe(false)
+  expect(isCloseLoss(0, 100)).toBe(false)
+})
+
+it('デザイン125：ボスのHPがたくさん残って負けたときは「おしい！」を出さない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={999} traits={[]} />)
+  for (let i = 0; i < 12 && !screen.queryByText('まけてしまった…'); i++) {
+    answer(false)
+    fireEvent.click(screen.getByText('次へ'))
+  }
+  expect(screen.getByText('まけてしまった…')).toBeInTheDocument()
+  expect(screen.queryByLabelText('おしい')).toBeNull()
+})

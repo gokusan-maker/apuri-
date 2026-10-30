@@ -19,7 +19,7 @@ import { BATTLE_ITEMS, BOMB_DAMAGE, dropOf, type BattleBag, type BattleItemId } 
 import { loadBook, markLost, recordWin, REVENGE_COINS, saveBook, takeRevenge } from './bossbook'
 import { dayKey } from './srs'
 import { skillCritMs, skillDamage, skillGauge, skillLevel, skillOf, skillSaves, specialOf, WEAK_BONUS, weakOf } from './partner'
-import { cheerOnLose, isComeback, BIG_COMBO, BOSS_HP, bossQuestions, BOSS_QUESTIONS, teamBossQuestions, TEAM_ORDER, TEAM_COMBO_DAMAGE, isTeamCombo, levelAttack, type TeamRole, BOSSES, CRIT_MS, critDamage, damage, GAUGE_MAX, gaugeAfter, HEAL_COST, HEARTS, CONTINUE_COST, defeatLineOf, introLineOf, bossBgOf, GOLDEN_COINS, goldenLook, isChance, isCharge, isAsleep, CHARGE_STUN, MINION_COINS, sRouletteOf, countBattle, shinyLook, hurtLineOf, isCritical, isEnraged, RANK_S_COINS, SPECIAL_DAMAGE, battleRank, loadMaxHit, recordHit, formatSec, loadBossTimes, recordBossTime, recordNoMissBoss, type BossLook, type BossRecord, attackElemOf, CHARGE_HIT, COUNTER_DMG, counterTarget, fullTeamHp, hitMember, hitTarget, isCounterTurn, MEMBER_HIT, MEMBER_HP, reviveOne, type TeamHp, BOSS_TRAITS, DRAIN_HEAL, QUICK_RATE, SEAL_COINS, SEAL_TICKET_EVERY, addSealWin, addSealTraits, traitAfterHit, bossTraits, type BossTrait, arenaSeasonOf } from './boss'
+import { addSealTraits, addSealWin, arenaSeasonOf, attackElemOf, battleRank, BIG_COMBO, BOSS_HP, BOSS_QUESTIONS, BOSS_TRAITS, bossBgOf, BOSSES, bossQuestions, bossTraits, CHARGE_HIT, CHARGE_STUN, cheerOnLose, CONTINUE_COST, countBattle, COUNTER_DMG, counterTarget, CRIT_MS, critDamage, damage, defeatLineOf, DRAIN_HEAL, formatSec, fullTeamHp, GAUGE_MAX, gaugeAfter, GOLDEN_COINS, goldenLook, HEAL_COST, HEARTS, hitMember, hitTarget, hurtLineOf, introLineOf, isAsleep, isChance, isCharge, isCloseLoss, isComeback, isCounterTurn, isCritical, isEnraged, isTeamCombo, levelAttack, loadBossTimes, loadMaxHit, MEMBER_HIT, MEMBER_HP, MINION_COINS, QUICK_RATE, RANK_S_COINS, recordBossTime, recordHit, recordNoMissBoss, reviveOne, SEAL_COINS, SEAL_TICKET_EVERY, shinyLook, SPECIAL_DAMAGE, sRouletteOf, TEAM_COMBO_DAMAGE, TEAM_ORDER, teamBossQuestions, traitAfterHit, type BossLook, type BossRecord, type BossTrait, type TeamHp, type TeamRole } from './boss'
 import { quizXp, type Form, type Source } from './monster'
 import { MonsterFigure } from './MonsterView'
 import { easyIf } from './quiz'
@@ -937,6 +937,11 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
       ) : lost && picked === null ? (
         <>
           <p className="boss-result">まけてしまった…</p>
+          {isCloseLoss(hp, maxHp) && ( // デザイン125：あと少しで勝てたとき
+            <p className="boss-lose-combo boss-close" aria-label="おしい">
+              😣 おしい！ のこりHP {hp} だった
+            </p>
+          )}
           {/* デザイン91：負けても、このボス戦で正解した数を見せる */}
           <p className="boss-lose-combo" aria-label={`正解した数 ${corrects}`}>
             ⭕ {corrects}問正解
