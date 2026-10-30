@@ -17902,6 +17902,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['Hiding in Plain Sight', 'How to Catch Fish', 'The History of Paint', 'Why Snow Is White'], answer: 0, why: '全体として、色や形による擬態、警告の色、擬態と技術・環境のかかわりを述べている。' },
   },
   {
+    id: 'kyotsu-bicycle-history',
+    title: 'How the Bicycle Was Born',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Today, the bicycle seems like a simple machine. It has two wheels of the same size, pedals, a chain, and brakes, and millions of people use it every day to travel to school or work. Yet the bicycle we know today is the result of a long series of experiments and improvements that took place over most of the nineteenth century.",
+      "One of the earliest machines of this kind appeared in Europe in the early nineteenth century. It had two wheels and a seat, but it had no pedals. Riders sat on it and pushed themselves forward by moving their feet along the ground, a little like walking while sitting down. Although it was faster than walking on good roads, it was heavy and uncomfortable, ( A ) it was seen by many people as an amusing toy rather than a serious way to travel.",
+      "Later in the century, inventors added pedals to the front wheel. Because each turn of the pedals turned the wheel only once, a larger front wheel meant a higher speed. As a result, some designs had an enormous front wheel and a tiny rear wheel. These machines could be fast, but riders sat high above the ground, and a sudden stop could throw them over the front of the bicycle. Riding one required courage as well as skill.",
+      "The next important step was the so-called safety bicycle. It had two wheels of similar size, and the pedals were connected to the rear wheel by a chain. This design allowed riders to go fast without sitting dangerously high, and it was much easier to control. Soon afterwards, tyres filled with air made the ride smoother and more comfortable. These changes turned the bicycle into a practical means of transport ( B ) ordinary people could use.",
+      "The bicycle had a great influence on society. It gave many people, including women, a new freedom to travel on their own, and it encouraged the improvement of roads. Some of the skills and parts developed for bicycles were later used in the making of cars and even aircraft. The history of the bicycle shows ( C ) a great invention is often not created at once, but grows step by step through the efforts of many people.",
+    ],
+    ja: [
+      '今日、自転車はかんたんな機械に見える。同じ大きさの2つの車輪、ペダル、チェーン、ブレーキがあり、何百万もの人が毎日それを使って学校や職場へ行く。しかし私たちが知っている自転車は、19世紀のほとんどのあいだに行われた、長い実験と改良のつみ重ねの結果である。',
+      'この種類の最も初期の機械の一つは、19世紀のはじめにヨーロッパに現れた。それには2つの車輪とサドルがあったが、ペダルはなかった。乗る人はそれにすわり、足で地面をけって前に進んだ。すわったまま歩くような感じである。よい道では歩くより速かったが、重く乗り心地が悪かったので、多くの人には本格的な移動の手段というより、おもしろいおもちゃと見られた。',
+      'その世紀の後半、発明家は前の車輪にペダルをつけた。ペダルを1回まわすと車輪も1回しかまわらないので、前の車輪が大きいほど速く走れた。その結果、とても大きな前輪と小さな後輪をもつ型も生まれた。こうした機械は速く走れたが、乗る人は地面から高い位置にすわり、急に止まると自転車の前に投げ出されることがあった。それに乗るには、技術だけでなく勇気も必要だった。',
+      '次の大切な一歩は、いわゆる安全型自転車であった。それには同じくらいの大きさの2つの車輪があり、ペダルはチェーンで後輪につながっていた。この設計によって、乗る人は危険なほど高い位置にすわらなくても速く走れるようになり、ずっとあやつりやすくなった。まもなく、空気を入れたタイヤが乗り心地をなめらかで快適にした。こうした変化によって、自転車はふつうの人々が使える実用的な交通手段になった。',
+      '自転車は社会に大きな影響をあたえた。それは女性をふくむ多くの人々に、自分で移動する新しい自由をあたえ、道路の改良もうながした。自転車のために発達した技術や部品のいくつかは、のちに自動車や、さらには飛行機の製造にも使われた。自転車の歴史は、すばらしい発明はしばしば一度に作られるのではなく、多くの人々の努力によって一歩ずつ育っていくことを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「重く乗り心地が悪かった、だからおもちゃと見られた」と結果を表すので so。' },
+      { id: 'B', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a practical means of transport（物）を受け、うしろの use の目的語が欠けているので目的格の関係代名詞 that。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: '最も初期の自転車のような機械には、ペダルがなかった。', answer: true, why: '第2段落 It had two wheels and a seat, but it had no pedals。' },
+      { statement: '前輪が大きい自転車は、乗る人が地面に近い位置にすわるので安全だった。', answer: false, why: '第3段落 riders sat high above the ground, and a sudden stop could throw them over the front。' },
+      { statement: '安全型自転車では、ペダルがチェーンで後輪につながっていた。', answer: true, why: '第4段落 the pedals were connected to the rear wheel by a chain。' },
+      { statement: '筆者によれば、自転車の技術はほかの乗り物には使われなかった。', answer: false, why: '第5段落 Some of the skills and parts … were later used in the making of cars and even aircraft。' },
+    ],
+    qa: [
+      { q: 'Why did some bicycles have an enormous front wheel?', choices: ['A larger front wheel meant a higher speed.', 'It made the bicycle lighter.', 'It was easier to stop quickly.', 'It allowed two people to ride.'], answer: 0, why: '第3段落 Because each turn of the pedals turned the wheel only once, a larger front wheel meant a higher speed。' },
+      { q: 'Which is NOT mentioned as an effect of the bicycle on society?', choices: ['It made train tickets cheaper.', 'It gave many people a new freedom to travel.', 'It encouraged the improvement of roads.', 'Its parts and skills were used for cars and aircraft.'], answer: 0, why: '第5段落に電車の切符が安くなった話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ペダルがついた大きな前輪の自転車', '車輪の作り方', 'サーカスの歴史', '勇気の育て方'], answer: 0, why: '第3段落は、前輪にペダルをつけ、大きな前輪で速く走る型が生まれたことを述べている。' },
+      { para: 3, choices: ['安全型自転車と空気入りタイヤ', 'チェーンの値段', 'タイヤの色', '交通事故の数'], answer: 0, why: '第4段落は、同じ大きさの車輪とチェーンの安全型自転車、空気入りタイヤの登場を述べている。' },
+    ],
+    titleQ: { choices: ['How the Bicycle Was Born', 'How to Fix a Flat Tyre', 'The History of Aircraft', 'Why Walking Is Healthy'], answer: 0, why: '全体として、ペダルのない機械から安全型自転車までの発達と社会への影響を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
