@@ -3195,3 +3195,4 @@
 - 2026-10-30: 文法：入試の誤文訂正⑧（助動詞・不定詞の難問：had better not・must/should have ＋過去分詞・kind of you・too ～ to・would rather・cannot help -ing）10問
 - 2026-10-30: 長文：共通テストの評論を本番の長さで「言葉を使わないコミュニケーション（身ぶりの文化差）」（言語・コミュニケーション・対比の while／when／that の空所）
 - 2026-10-30: デザイン：キャラ図鑑で、なかまにいるけれど Lv.1 のままの子に 🌱 をつけるようにした
+- 2026-10-30: 文法：入試の正誤問題⑮（動名詞・分詞の難問：remember -ing・avoid/mind/be worth -ing・boring/bored・with ＋名詞＋過去分詞）10問

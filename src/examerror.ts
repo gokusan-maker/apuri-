@@ -314,6 +314,30 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'This is the park (A) where (B) we (C) often played (D) when we are children.', choices: ['(A) where', '(B) we', '(C) often played', '(D) when we are children'], answer: 3, why: '子どものころは過去のことなので were：when we were children。' },
     ],
   },
+  {
+    id: 'exam-error-gerund',
+    title: '入試の正誤問題⑮（動名詞・分詞の難問）',
+    points: [
+      '文の (A)〜(D) のうち、まちがっている1か所を選ぶ。',
+      'remember -ing と remember to ～、avoid・mind・be worth・have trouble のあとの動名詞、boring と bored のような分詞の形容詞、付帯状況の with ＋名詞＋分詞に注目する。',
+    ],
+    examples: [
+      { en: 'I remember meeting him at a party last year.', ja: '去年パーティーで彼に会ったのを覚えている。（過去のこと → 動名詞）' },
+      { en: 'Many people left early because the movie was so boring.', ja: '映画がとてもたいくつだったので、多くの人が早く帰った。（人をたいくつさせる → boring）' },
+    ],
+    questions: [
+      { sentence: 'I (A) remember (B) to meet him (C) at a party (D) last year.', choices: ['(A) remember', '(B) to meet him', '(C) at a party', '(D) last year'], answer: 1, why: '過去にしたことを「覚えている」は remember ＋動名詞：remember meeting him。remember to ～ は「（これから）忘れずに～する」。' },
+      { sentence: 'Many people (A) left early (B) because (C) the movie was (D) so bored.', choices: ['(A) left early', '(B) because', '(C) the movie was', '(D) so bored'], answer: 3, why: '映画が人を「たいくつさせる」ので現在分詞の形容詞 boring。bored は人が「たいくつした」。' },
+      { sentence: '(A) Exciting (B) to hear (C) the news, she (D) called her friends.', choices: ['(A) Exciting', '(B) to hear', '(C) the news, she', '(D) called her friends'], answer: 0, why: '彼女が「わくわくした」ので過去分詞の形容詞 Excited。' },
+      { sentence: 'He (A) carefully (B) avoided (C) to answer (D) my question.', choices: ['(A) carefully', '(B) avoided', '(C) to answer', '(D) my question'], answer: 2, why: 'avoid のうしろは動名詞：avoided answering。' },
+      { sentence: 'On hot nights I (A) often (B) have trouble (C) to sleep (D) well.', choices: ['(A) often', '(B) have trouble', '(C) to sleep', '(D) well'], answer: 2, why: 'have trouble -ing「～するのに苦労する」：have trouble sleeping。' },
+      { sentence: 'Be careful: there is (A) glass (B) on the floor (C) from the (D) breaking window.', choices: ['(A) glass', '(B) on the floor', '(C) from the', '(D) breaking window'], answer: 3, why: '窓は「割られた」ので過去分詞 broken：the broken window。' },
+      { sentence: 'Would you (A) mind (B) to open (C) the window (D) for me?', choices: ['(A) mind', '(B) to open', '(C) the window', '(D) for me'], answer: 1, why: 'mind のうしろは動名詞：Would you mind opening ～?' },
+      { sentence: 'This book is (A) worth (B) to read (C) more than (D) once.', choices: ['(A) worth', '(B) to read', '(C) more than', '(D) once'], answer: 1, why: 'be worth -ing「～する価値がある」：worth reading。' },
+      { sentence: 'The (A) news (B) was so (C) surprised that (D) nobody believed it.', choices: ['(A) news', '(B) was so', '(C) surprised that', '(D) nobody believed it'], answer: 2, why: '知らせが人を「おどろかせる」ので surprising。' },
+      { sentence: 'The man stood there for a long time (A) with (B) his (C) arms (D) folding.', choices: ['(A) with', '(B) his', '(C) arms', '(D) folding'], answer: 3, why: '付帯状況の with ＋名詞＋分詞。うでは「組まれた」状態なので過去分詞 folded。' },
+    ],
+  },
 ]
 
 // 誤文訂正：［ ］の部分がまちがっている。正しい形を4択から選ぶ

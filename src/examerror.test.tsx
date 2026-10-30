@@ -162,3 +162,10 @@ it('誤文訂正⑧：助動詞・不定詞の難問の単元が10問ある', as
   expect(u.questions).toHaveLength(10)
   expect(u.questions[0].choices[u.questions[0].answer]).toBe('had better not')
 })
+
+it('正誤問題⑮：動名詞・分詞の難問の単元が10問ある', async () => {
+  const { EXAM_ERROR } = await import('./examerror')
+  const u = EXAM_ERROR.find((x) => x.id === 'exam-error-gerund')!
+  expect(u.questions).toHaveLength(10)
+  expect(u.questions[1].choices[u.questions[1].answer]).toBe('(D) so bored')
+})
