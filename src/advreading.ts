@@ -17707,6 +17707,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Return of the Glass Bottle', 'How to Make Plastic', 'The History of Supermarkets', 'Why Glass Is Dangerous'], answer: 0, why: '全体として、返却できるガラスびんの利点・しくみ・欠点・未来を述べている。' },
   },
   {
+    id: 'kyotsu-living-in-space',
+    title: 'Everyday Life in Space',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For most of human history, living in space was only a dream found in stories. Today, however, astronauts from several countries regularly spend months at a time on a space station that travels around the Earth. Their daily lives may seem exciting, but they also show how many ordinary activities become surprisingly difficult when there is almost no gravity. Everything that is not tied down, from pens to water, simply floats in the air.",
+      "Consider something as simple as eating. On Earth, food stays on a plate and drinks stay in a cup. On a space station, however, crumbs and drops of liquid can float away and get into equipment or into astronauts' eyes. For this reason, much of the food is specially prepared and packed, and drinks are taken through straws from sealed bags. Astronauts say that food often tastes less strong in space, ( A ) many of them like to add spicy sauces to their meals.",
+      "Sleeping is also different. Because there is no up or down, astronauts do not need beds in the usual sense. Instead, they sleep in small cabins inside sleeping bags that are attached to the wall so that they do not drift around while they are asleep. Some astronauts find it hard to get used to sleeping without feeling the weight of their bodies, and the noise of fans and machines can also make rest difficult.",
+      "One of the most serious challenges is protecting the body. In space, muscles and bones do not have to support the body's weight, so they gradually become weaker. To slow down this process, astronauts exercise for about two hours a day using special machines, ( B ) they are held in place with straps. Even so, after returning to Earth, they often need time to recover their strength and balance.",
+      "Studying how people live in space is not only important for astronauts. The research helps doctors understand how muscles and bones change, which may be useful for treating older people or patients who must stay in bed for a long time. It also prepares for future missions to more distant places, such as the Moon or Mars, ( C ) people may have to live for much longer periods far from home.",
+    ],
+    ja: [
+      '人類の歴史のほとんどのあいだ、宇宙でくらすことは物語の中にしかない夢であった。しかし今日では、いくつかの国の宇宙飛行士が、地球の周りを回る宇宙ステーションで、一度に何か月もすごすことがふつうになっている。彼らの毎日の生活はわくわくするものに見えるかもしれないが、重力がほとんどないと、ふだんの多くの活動がおどろくほどむずかしくなることも示している。ペンから水まで、固定されていないものはすべて、ただ空中にうかんでしまうのである。',
+      '食べるというかんたんなことを考えてみよう。地球では、食べ物は皿の上にとどまり、飲み物はコップの中にとどまる。しかし宇宙ステーションでは、食べ物のかけらや液体のしずくがただよっていき、機械や宇宙飛行士の目に入ることがある。このため、食べ物の多くは特別に調理されて包装され、飲み物はとじた袋からストローで飲む。宇宙飛行士は、宇宙では食べ物の味がうすく感じられることが多いと言い、そのため食事にからいソースを加えるのが好きな人が多い。',
+      'ねむることもちがう。上も下もないので、宇宙飛行士にはふつうの意味でのベッドは必要ない。そのかわり、ねむっているあいだにただよわないよう、かべにとりつけられたねぶくろに入り、小さな部屋でねむる。体の重さを感じずにねむることになかなか慣れない宇宙飛行士もおり、送風機や機械の音も休むのをむずかしくすることがある。',
+      '最も深刻な課題の一つは、体を守ることである。宇宙では、筋肉や骨は体の重さをささえなくてよいので、だんだん弱くなる。この変化をおそくするために、宇宙飛行士は特別な機械を使って1日に約2時間運動し、そのとき体はベルトで固定される。それでも地球にもどったあと、力とバランスを取りもどすのに時間がかかることが多い。',
+      '人が宇宙でどのようにくらすかを研究することは、宇宙飛行士にとってだけ大切なのではない。その研究は、筋肉や骨がどのように変化するかを医師が理解するのに役立ち、それは年配の人や長いあいだ寝ていなければならない患者の治療に役立つかもしれない。それはまた、月や火星のようなもっと遠い場所への将来の任務にそなえることにもなる。そこでは人々は、ずっと長いあいだ家から遠くはなれてくらさなければならないかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「宇宙では味がうすく感じられる、だからからいソースを加えるのが好きな人が多い」と結果を表すので so。' },
+      { id: 'B', choices: ['while', 'unless', 'until', 'because of'], answer: 0, why: '「機械で運動する、そのあいだ体はベルトで固定される」と同時に起こることを表すので while（～するあいだ）。' },
+      { id: 'C', choices: ['where', 'which', 'what', 'whose'], answer: 0, why: '先行詞は more distant places（場所）で、うしろが完全な文（people may have to live …）なので関係副詞 where。' },
+    ],
+    tf: [
+      { statement: '宇宙ステーションでは、食べ物のかけらがただよって機械に入ることがある。', answer: true, why: '第2段落 crumbs and drops of liquid can float away and get into equipment。' },
+      { statement: '宇宙飛行士は、地球と同じようなふつうのベッドでねむる。', answer: false, why: '第3段落 astronauts do not need beds in the usual sense … sleeping bags that are attached to the wall。' },
+      { statement: '宇宙では、筋肉や骨がだんだん弱くなる。', answer: true, why: '第4段落 muscles and bones … gradually become weaker。' },
+      { statement: '筆者によれば、宇宙でのくらしの研究は宇宙飛行士の役にしか立たない。', answer: false, why: '第5段落 not only important for astronauts … useful for treating older people or patients。' },
+    ],
+    qa: [
+      { q: 'Why do many astronauts like to add spicy sauces to their meals?', choices: ['Food often tastes less strong in space.', 'Spicy food is the only food allowed.', 'Sauces help them sleep.', 'Sauces make the food float.'], answer: 0, why: '第2段落 food often tastes less strong in space, so many of them like to add spicy sauces。' },
+      { q: 'Which is NOT mentioned as something that can make sleeping difficult in space?', choices: ['Bright sunlight from the windows all night.', 'Not feeling the weight of the body.', 'The noise of fans.', 'The noise of machines.'], answer: 0, why: '第3段落に窓からの日光の話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['宇宙でのねむり方のちがい', '家具の作り方', '夜空の星の名前', '送風機の歴史'], answer: 0, why: '第3段落は、かべのねぶくろでねむることや、ねむりにくさを述べている。' },
+      { para: 3, choices: ['筋肉や骨を守るための運動', 'スポーツ大会の開き方', 'ベルトの作り方', 'バランスのよい食事'], answer: 0, why: '第4段落は、筋肉や骨が弱くなるのを防ぐための毎日の運動を述べている。' },
+    ],
+    titleQ: { choices: ['Everyday Life in Space', 'How to Build a Rocket', 'The History of the Moon', 'Why Spicy Food Is Healthy'], answer: 0, why: '全体として、宇宙ステーションでの食事・すいみん・運動と、その研究の意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
