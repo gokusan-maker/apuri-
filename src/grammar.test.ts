@@ -273,6 +273,6 @@ describe('中2の文法問題の選択肢の数', () => {
 describe('中1の文法問題の選択肢の数', () => {
   it('中1の3択の問題はへらしていく（高校入試にあわせて4択にする。ふえたら失敗）', () => {
     const qs = GRAMMAR.filter((u) => gradeOf(u.id) === '中1').flatMap((u) => u.questions)
-    expect(qs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(101)
+    expect(qs.filter((q) => q.choices.length < 4).length).toBeLessThanOrEqual(71)
   })
 })

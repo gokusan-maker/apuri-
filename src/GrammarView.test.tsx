@@ -151,10 +151,10 @@ it('ヒントは選択肢を消さず、答えをかくした解説を出す', (
   const u = GRAMMAR[0]
   fireEvent.click(screen.getByRole('button', { name: u.title }))
   fireEvent.click(screen.getByText(/確認問題へ/))
-  expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
+  expect(document.querySelectorAll('.choices .choice')).toHaveLength(4) // 中1も入試と同じ4択
   fireEvent.click(screen.getByText(/💡 ヒント/))
   expect(spend).not.toHaveBeenCalled() // ヒントにコインは使わない
-  expect(document.querySelectorAll('.choices .choice')).toHaveLength(3)
+  expect(document.querySelectorAll('.choices .choice')).toHaveLength(4) // 中1も入試と同じ4択
   const hint = document.querySelector('.read-hint-text')!.textContent!
   expect(hint).toContain('＿＿')
 })

@@ -25,9 +25,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'They are in the music room.', ja: '彼らは音楽室にいます。' },
     ],
     questions: [
-      { sentence: 'My brother ___ a high school student.', choices: ['am', 'is', 'are'], answer: 1, why: '主語 my brother は1人なので is。' },
-      { sentence: 'You and I ___ good friends.', choices: ['am', 'is', 'are'], answer: 2, why: '「あなたと私」は2人（複数）なので are。' },
-      { sentence: 'I ___ hungry now.', choices: ['am', 'is', 'are'], answer: 0, why: '主語が I のときは am。' },
+      { sentence: 'My brother ___ a high school student.', choices: ['am', 'is', 'are', 'be'], answer: 1, why: '主語 my brother は1人なので is。' },
+      { sentence: 'You and I ___ good friends.', choices: ['am', 'is', 'are', 'be'], answer: 2, why: '「あなたと私」は2人（複数）なので are。' },
+      { sentence: 'I ___ hungry now.', choices: ['am', 'is', 'are', 'be'], answer: 0, why: '主語が I のときは am。' },
     ],
   },
   {
@@ -1150,9 +1150,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Do you know the name of this song?', ja: 'この歌の名前を知っていますか。' },
     ],
     questions: [
-      { sentence: 'That is ___ umbrella.', choices: ["Yuki's", 'Yuki', 'Yukis'], answer: 0, why: '人の「〜の」は \'s をつける。' },
-      { sentence: 'The ___ room is on the second floor.', choices: ["boys's", "boys'", "boy's s"], answer: 1, why: '-s で終わる複数形（boys）には \' だけをつける。' },
-      { sentence: 'We climbed to the top ___ the mountain.', choices: ['of', 'in', 'at'], answer: 0, why: 'もの（山）の「〜の」は the top of 〜。' },
+      { sentence: 'That is ___ umbrella.', choices: ["Yuki's", 'Yuki', 'Yukis', "Yuki is'"], answer: 0, why: '人の「〜の」は \'s をつける。' },
+      { sentence: 'The ___ room is on the second floor.', choices: ["boys's", "boys'", "boy's s", "boy'"], answer: 1, why: '-s で終わる複数形（boys）には \' だけをつける。' },
+      { sentence: 'We climbed to the top ___ the mountain.', choices: ['of', 'in', 'at', 'for'], answer: 0, why: 'もの（山）の「〜の」は the top of 〜。' },
     ],
   },
   {
@@ -1178,9 +1178,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'How far is it from here to the station?', ja: 'ここから駅までどのくらいの距離ですか。' },
     ],
     questions: [
-      { sentence: 'How ___ is your sister? — She is twelve.', choices: ['old', 'tall', 'long'], answer: 0, why: '年れいをたずねるのは How old。' },
-      { sentence: 'How ___ do you go to the gym? — Twice a week.', choices: ['long', 'often', 'far'], answer: 1, why: '回数（どのくらいよく）をたずねるのは How often。' },
-      { sentence: 'How ___ is Tokyo Skytree? — It is 634 meters tall.', choices: ['tall', 'old', 'many'], answer: 0, why: '高さをたずねるので How tall。' },
+      { sentence: 'How ___ is your sister? — She is twelve.', choices: ['old', 'tall', 'long', 'many'], answer: 0, why: '年れいをたずねるのは How old。' },
+      { sentence: 'How ___ do you go to the gym? — Twice a week.', choices: ['long', 'often', 'far', 'old'], answer: 1, why: '回数（どのくらいよく）をたずねるのは How often。' },
+      { sentence: 'How ___ is Tokyo Skytree? — It is 634 meters tall.', choices: ['tall', 'old', 'many', 'often'], answer: 0, why: '高さをたずねるので How tall。' },
     ],
   },
   {
@@ -1192,9 +1192,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Which bus goes to the station?', ja: 'どちらのバスが駅に行きますか。' },
     ],
     questions: [
-      { sentence: '___ notebook is this? — It is Yumi\'s.', choices: ['Whose', 'Who', 'Whom'], answer: 0, why: '「だれの」は Whose ＋名詞。' },
-      { sentence: '___ do you like better, rice or bread?', choices: ['What', 'Which', 'Whose'], answer: 1, why: '2つから選ばせるときは Which。' },
-      { sentence: 'Whose bag is that? — It is ___.', choices: ['my', 'me', 'mine'], answer: 2, why: '「私のもの」は mine。' },
+      { sentence: '___ notebook is this? — It is Yumi\'s.', choices: ['Whose', 'Who', 'Whom', 'What a'], answer: 0, why: '「だれの」は Whose ＋名詞。' },
+      { sentence: '___ do you like better, rice or bread?', choices: ['What', 'Which', 'Whose', 'Who'], answer: 1, why: '2つから選ばせるときは Which。' },
+      { sentence: 'Whose bag is that? — It is ___.', choices: ['my', 'me', 'mine', 'I'], answer: 2, why: '「私のもの」は mine。' },
     ],
   },
   {
@@ -1248,9 +1248,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Don't be afraid of making mistakes.", ja: 'まちがえることをこわがらないで。' },
     ],
     questions: [
-      { sentence: '___ careful when you cross the street.', choices: ['Be', 'Are', 'Do'], answer: 0, why: '形容詞（careful）の命令文は Be ＋形容詞。' },
-      { sentence: "Don't ___ late for school.", choices: ['are', 'be', 'is'], answer: 1, why: "Don't be ＋形容詞で「〜しないで」。" },
-      { sentence: '___ kind to your friends.', choices: ['Be', 'Being', 'To be'], answer: 0, why: '命令文は動詞の原形で始めるので Be。' },
+      { sentence: '___ careful when you cross the street.', choices: ['Be', 'Are', 'Do', 'Being'], answer: 0, why: '形容詞（careful）の命令文は Be ＋形容詞。' },
+      { sentence: "Don't ___ late for school.", choices: ['are', 'be', 'is', 'were'], answer: 1, why: "Don't be ＋形容詞で「〜しないで」。" },
+      { sentence: '___ kind to your friends.', choices: ['Be', 'Being', 'To be', 'Are'], answer: 0, why: '命令文は動詞の原形で始めるので Be。' },
     ],
   },
   {
@@ -1290,9 +1290,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I like tea, but my sister likes coffee.', ja: '私は紅茶が好きだが、姉はコーヒーが好きだ。' },
     ],
     questions: [
-      { sentence: 'I was tired, ___ I went to bed early.', choices: ['so', 'but', 'or'], answer: 0, why: '「つかれていた、だから早くねた」なので so。' },
-      { sentence: 'Do you want rice ___ bread?', choices: ['but', 'or', 'so'], answer: 1, why: '「ご飯かパンか」どちらかなので or。' },
-      { sentence: 'He is young, ___ he is very wise.', choices: ['so', 'or', 'but'], answer: 2, why: '「若いが、かしこい」と反対の内容なので but。' },
+      { sentence: 'I was tired, ___ I went to bed early.', choices: ['so', 'but', 'or', 'if'], answer: 0, why: '「つかれていた、だから早くねた」なので so。' },
+      { sentence: 'Do you want rice ___ bread?', choices: ['but', 'or', 'so', 'because'], answer: 1, why: '「ご飯かパンか」どちらかなので or。' },
+      { sentence: 'He is young, ___ he is very wise.', choices: ['so', 'or', 'but', 'if'], answer: 2, why: '「若いが、かしこい」と反対の内容なので but。' },
     ],
   },
   {
@@ -1318,9 +1318,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please write your name with a pen.', ja: 'ペンで名前を書いてください。' },
     ],
     questions: [
-      { sentence: 'They came here ___ car.', choices: ['by', 'with', 'on'], answer: 0, why: '乗り物の手段は by ＋名詞（a をつけない）。' },
-      { sentence: 'He cut the paper ___ scissors.', choices: ['by', 'with', 'on'], answer: 1, why: '道具を使うときは with。' },
-      { sentence: 'I usually go to the park on ___.', choices: ['walk', 'foot', 'feet'], answer: 1, why: '「歩いて」は on foot。' },
+      { sentence: 'They came here ___ car.', choices: ['by', 'with', 'on', 'at'], answer: 0, why: '乗り物の手段は by ＋名詞（a をつけない）。' },
+      { sentence: 'He cut the paper ___ scissors.', choices: ['by', 'with', 'on', 'at'], answer: 1, why: '道具を使うときは with。' },
+      { sentence: 'I usually go to the park on ___.', choices: ['walk', 'foot', 'feet', 'foots'], answer: 1, why: '「歩いて」は on foot。' },
     ],
   },
   {
@@ -1388,9 +1388,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Is this your bag? — No, it isn't.", ja: 'これはあなたのかばんですか。—いいえ、ちがいます。' },
     ],
     questions: [
-      { sentence: 'Does your sister play the piano? — Yes, she ___.', choices: ['does', 'is', 'do'], answer: 0, why: 'Does で聞かれたら does で答える。' },
-      { sentence: "Are you hungry? — No, I'___ not.", choices: ['m', 's', 're'], answer: 0, why: "Are you 〜? には I am（I'm）で答える。" },
-      { sentence: 'Can Ken swim? — Yes, ___ can.', choices: ['Ken', 'he', 'him'], answer: 1, why: '答えの主語は代名詞 he にする。' },
+      { sentence: 'Does your sister play the piano? — Yes, she ___.', choices: ['does', 'is', 'do', "doesn't"], answer: 0, why: 'Does で聞かれたら does で答える。' },
+      { sentence: "Are you hungry? — No, I'___ not.", choices: ['m', 's', 're', 'am'], answer: 0, why: "Are you 〜? には I am（I'm）で答える。" },
+      { sentence: 'Can Ken swim? — Yes, ___ can.', choices: ['Ken', 'he', 'him', 'his'], answer: 1, why: '答えの主語は代名詞 he にする。' },
     ],
   },
   {
@@ -1556,9 +1556,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'We have a test next Monday.', ja: '今度の月曜日にテストがある。' },
     ],
     questions: [
-      { sentence: 'I met him ___ year.', choices: ['in last', 'last', 'at last'], answer: 1, why: 'last year には前置詞をつけない。' },
-      { sentence: 'We will go camping ___ weekend.', choices: ['next', 'on next', 'in next'], answer: 0, why: 'next weekend には前置詞をつけない。' },
-      { sentence: 'She practices the piano ___.', choices: ['every day', 'on every day', 'in every day'], answer: 0, why: 'every day には前置詞をつけない。' },
+      { sentence: 'I met him ___ year.', choices: ['in last', 'last', 'at last', 'on last'], answer: 1, why: 'last year には前置詞をつけない。' },
+      { sentence: 'We will go camping ___ weekend.', choices: ['next', 'on next', 'in next', 'at next'], answer: 0, why: 'next weekend には前置詞をつけない。' },
+      { sentence: 'She practices the piano ___.', choices: ['every day', 'on every day', 'in every day', 'at every day'], answer: 0, why: 'every day には前置詞をつけない。' },
     ],
   },
   {
@@ -1668,9 +1668,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She ate two pieces of cake.', ja: '彼女はケーキを2切れ食べた。' },
     ],
     questions: [
-      { sentence: 'I drink two ___ of milk every day.', choices: ['glass', 'glasses', 'a glass'], answer: 1, why: '2つ以上なので入れ物の語を複数形に（glasses）。' },
-      { sentence: 'Please give me a ___ of paper.', choices: ['piece', 'pieces', 'cup'], answer: 0, why: '紙1枚は a piece of paper。' },
-      { sentence: 'He drank three cups of ___.', choices: ['coffees', 'coffee', 'a coffee'], answer: 1, why: 'coffee は数えられない名詞なので複数形にしない。' },
+      { sentence: 'I drink two ___ of milk every day.', choices: ['glass', 'glasses', 'a glass', 'glassing'], answer: 1, why: '2つ以上なので入れ物の語を複数形に（glasses）。' },
+      { sentence: 'Please give me a ___ of paper.', choices: ['piece', 'pieces', 'cup', 'piecing'], answer: 0, why: '紙1枚は a piece of paper。' },
+      { sentence: 'He drank three cups of ___.', choices: ['coffees', 'coffee', 'a coffee', 'coffeeing'], answer: 1, why: 'coffee は数えられない名詞なので複数形にしない。' },
     ],
   },
   {
