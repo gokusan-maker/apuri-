@@ -1220,9 +1220,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "You don't have to bring lunch today.", ja: '今日はお弁当を持ってこなくてもいいよ。' },
     ],
     questions: [
-      { sentence: 'She ___ to practice the piano every day.', choices: ['have', 'has', 'having'], answer: 1, why: '主語が三人称単数（She）なので has to。' },
-      { sentence: "It's Sunday. You ___ have to go to school.", choices: ["don't", "doesn't", 'not'], answer: 0, why: '「〜しなくてよい」は don\'t have to。主語は You。' },
-      { sentence: 'Last night I ___ to finish my homework.', choices: ['have', 'had', 'has'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
+      { sentence: 'She ___ to practice the piano every day.', choices: ['have', 'has', 'having', 'is'], answer: 1, why: '主語が三人称単数（She）なので has to。' },
+      { sentence: "It's Sunday. You ___ have to go to school.", choices: ["don't", "doesn't", 'not', "isn't"], answer: 0, why: '「〜しなくてよい」は don\'t have to。主語は You。' },
+      { sentence: 'Last night I ___ to finish my homework.', choices: ['have', 'had', 'has', 'having'], answer: 1, why: '過去の「〜しなければならなかった」は had to。' },
     ],
   },
   {
@@ -1262,9 +1262,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'That sounds interesting!', ja: 'それはおもしろそうだね！' },
     ],
     questions: [
-      { sentence: 'This cake looks ___.', choices: ['delicious', 'deliciously', 'like delicious'], answer: 0, why: 'look のあとは形容詞 delicious。' },
-      { sentence: 'Your idea sounds ___.', choices: ['greatly', 'great', 'like great'], answer: 1, why: 'sound のあとは形容詞 great。' },
-      { sentence: 'That cloud looks ___ a cat.', choices: ['like', 'as', 'to'], answer: 0, why: '名詞（a cat）が続くときは look like 〜。' },
+      { sentence: 'This cake looks ___.', choices: ['delicious', 'deliciously', 'like delicious', 'deliciousness'], answer: 0, why: 'look のあとは形容詞 delicious。' },
+      { sentence: 'Your idea sounds ___.', choices: ['greatly', 'great', 'like great', 'greatness'], answer: 1, why: 'sound のあとは形容詞 great。' },
+      { sentence: 'That cloud looks ___ a cat.', choices: ['like', 'as', 'to', 'with'], answer: 0, why: '名詞（a cat）が続くときは look like 〜。' },
     ],
   },
   {
@@ -1276,9 +1276,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Let\'s go home before it gets dark.', ja: '暗くなる前に家に帰ろう。' },
     ],
     questions: [
-      { sentence: 'Wash your hands ___ you eat.', choices: ['before', 'during', 'since'], answer: 0, why: '「食べる前に」なので before ＋文。' },
-      { sentence: 'He went to bed ___ he finished the book.', choices: ['during', 'after', 'until'], answer: 1, why: '「本を読み終えたあとで」なので after。' },
-      { sentence: 'Call me before you ___ the station.', choices: ['will leave', 'leave', 'left'], answer: 1, why: '未来のことでも before の中は現在形 leave。' },
+      { sentence: 'Wash your hands ___ you eat.', choices: ['before', 'during', 'since', 'for'], answer: 0, why: '「食べる前に」なので before ＋文。' },
+      { sentence: 'He went to bed ___ he finished the book.', choices: ['during', 'after', 'until', 'by'], answer: 1, why: '「本を読み終えたあとで」なので after。' },
+      { sentence: 'Call me before you ___ the station.', choices: ['will leave', 'leave', 'left', 'leaving'], answer: 1, why: '未来のことでも before の中は現在形 leave。' },
     ],
   },
   {
@@ -1304,9 +1304,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My little brother is afraid of dogs.', ja: '弟は犬がこわい。' },
     ],
     questions: [
-      { sentence: 'She is good ___ playing the guitar.', choices: ['at', 'in', 'of'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
-      { sentence: 'I am proud ___ my team.', choices: ['for', 'of', 'with'], answer: 1, why: 'be proud of 〜 で「〜をほこりに思う」。' },
-      { sentence: 'His idea is different ___ mine.', choices: ['from', 'on', 'at'], answer: 0, why: 'be different from 〜 で「〜とちがう」。' },
+      { sentence: 'She is good ___ playing the guitar.', choices: ['at', 'in', 'of', 'on'], answer: 0, why: 'be good at 〜 で「〜が得意だ」。' },
+      { sentence: 'I am proud ___ my team.', choices: ['for', 'of', 'with', 'at'], answer: 1, why: 'be proud of 〜 で「〜をほこりに思う」。' },
+      { sentence: 'His idea is different ___ mine.', choices: ['from', 'on', 'at', 'by'], answer: 0, why: 'be different from 〜 で「〜とちがう」。' },
     ],
   },
   {
@@ -1360,9 +1360,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: "Why don't you ask your teacher?", ja: '先生に聞いてみたらどう？' },
     ],
     questions: [
-      { sentence: 'How about ___ to the park this afternoon?', choices: ['go', 'going', 'to go'], answer: 1, why: 'How about のあとは -ing 形。' },
-      { sentence: "Why don't you ___ a rest?", choices: ['take', 'taking', 'took'], answer: 0, why: "Why don't you のあとは動詞の原形。" },
-      { sentence: '___ about this red one?', choices: ['What', 'Who', 'Why'], answer: 0, why: 'What about 〜? でも「〜はどう？」と言える。' },
+      { sentence: 'How about ___ to the park this afternoon?', choices: ['go', 'going', 'to go', 'went'], answer: 1, why: 'How about のあとは -ing 形。' },
+      { sentence: "Why don't you ___ a rest?", choices: ['take', 'taking', 'took', 'to take'], answer: 0, why: "Why don't you のあとは動詞の原形。" },
+      { sentence: '___ about this red one?', choices: ['What', 'Who', 'Why', 'Where'], answer: 0, why: 'What about 〜? でも「〜はどう？」と言える。' },
     ],
   },
   {
@@ -1374,9 +1374,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'What do you call this flower in English?', ja: 'この花は英語で何といいますか。' },
     ],
     questions: [
-      { sentence: 'Please ___ me Ken.', choices: ['call', 'say', 'speak'], answer: 0, why: '「私をケンとよんで」は call A B。' },
-      { sentence: 'What do you call this ___ English?', choices: ['by', 'in', 'on'], answer: 1, why: 'in English で「英語で」。' },
-      { sentence: 'His friends call ___ Taku.', choices: ['he', 'his', 'him'], answer: 2, why: 'call のあとの A は目的格 him。' },
+      { sentence: 'Please ___ me Ken.', choices: ['call', 'say', 'speak', 'tell'], answer: 0, why: '「私をケンとよんで」は call A B。' },
+      { sentence: 'What do you call this ___ English?', choices: ['by', 'in', 'on', 'at'], answer: 1, why: 'in English で「英語で」。' },
+      { sentence: 'His friends call ___ Taku.', choices: ['he', 'his', 'him', "he's"], answer: 2, why: 'call のあとの A は目的格 him。' },
     ],
   },
   {
@@ -1416,9 +1416,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Thousands of people came to the festival.', ja: '何千人もの人がお祭りに来た。' },
     ],
     questions: [
-      { sentence: 'This bike costs twenty ___ yen.', choices: ['thousand', 'thousands', 'thousands of'], answer: 0, why: '具体的な数（20）のあとは -s をつけない thousand。' },
-      { sentence: '___ of birds fly to this lake every winter.', choices: ['Hundred', 'Hundreds', 'A hundreds'], answer: 1, why: '「何百もの」は Hundreds of 〜。' },
-      { sentence: 'Five ___ people live in this town.', choices: ['million', 'millions', 'millions of'], answer: 0, why: '具体的な数（5）のあとは million。' },
+      { sentence: 'This bike costs twenty ___ yen.', choices: ['thousand', 'thousands', 'thousands of', 'thousand of'], answer: 0, why: '具体的な数（20）のあとは -s をつけない thousand。' },
+      { sentence: '___ of birds fly to this lake every winter.', choices: ['Hundred', 'Hundreds', 'A hundreds', 'Hundredth'], answer: 1, why: '「何百もの」は Hundreds of 〜。' },
+      { sentence: 'Five ___ people live in this town.', choices: ['million', 'millions', 'millions of', 'million of'], answer: 0, why: '具体的な数（5）のあとは million。' },
     ],
   },
   {
@@ -1458,9 +1458,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'The game was stopped because of the rain.', ja: '雨のために試合は中止になった。' },
     ],
     questions: [
-      { sentence: 'We stayed home ___ the storm.', choices: ['because', 'because of', 'so'], answer: 1, why: 'あとが名詞（the storm）なので because of。' },
-      { sentence: 'I was late ___ I missed the bus.', choices: ['because', 'because of', 'for'], answer: 0, why: 'あとが文（I missed the bus）なので because。' },
-      { sentence: 'The trains stopped because of ___.', choices: ['it snowed', 'the snow', 'snowed'], answer: 1, why: 'because of のあとは名詞 the snow。' },
+      { sentence: 'We stayed home ___ the storm.', choices: ['because', 'because of', 'so', 'because for'], answer: 1, why: 'あとが名詞（the storm）なので because of。' },
+      { sentence: 'I was late ___ I missed the bus.', choices: ['because', 'because of', 'for', 'by'], answer: 0, why: 'あとが文（I missed the bus）なので because。' },
+      { sentence: 'The trains stopped because of ___.', choices: ['it snowed', 'the snow', 'snowed', 'snows'], answer: 1, why: 'because of のあとは名詞 the snow。' },
     ],
   },
   {
@@ -1472,9 +1472,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I have heard this song before.', ja: '私はこの歌を前に聞いたことがある。' },
     ],
     questions: [
-      { sentence: 'I visited Kyoto three years ___.', choices: ['ago', 'before', 'since'], answer: 0, why: '今から数えて「3年前に」は three years ago。' },
-      { sentence: 'I have been to Okinawa ___.', choices: ['ago', 'last', 'before'], answer: 2, why: '現在完了で「前に」は before。ago は現在完了では使えない。' },
-      { sentence: 'How long ___ did you start learning English?', choices: ['ago', 'before', 'since'], answer: 0, why: 'How long ago 〜? で「どのくらい前に〜したか」。' },
+      { sentence: 'I visited Kyoto three years ___.', choices: ['ago', 'before', 'since', 'already'], answer: 0, why: '今から数えて「3年前に」は three years ago。' },
+      { sentence: 'I have been to Okinawa ___.', choices: ['ago', 'last', 'before', 'ever'], answer: 2, why: '現在完了で「前に」は before。ago は現在完了では使えない。' },
+      { sentence: 'How long ___ did you start learning English?', choices: ['ago', 'before', 'since', 'already'], answer: 0, why: 'How long ago 〜? で「どのくらい前に〜したか」。' },
     ],
   },
   {
@@ -1500,9 +1500,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My sister helped me with my homework.', ja: '姉が宿題を手伝ってくれた。' },
     ],
     questions: [
-      { sentence: 'Please help me ___ the dishes.', choices: ['wash', 'washed', 'washing'], answer: 0, why: 'help ＋人のあとは動詞の原形 wash。' },
-      { sentence: 'He helped his mother ___ her work.', choices: ['with', 'for', 'to'], answer: 0, why: 'help 人 with もの で「人の〜を手伝う」。' },
-      { sentence: 'Could you help ___ find my key?', choices: ['I', 'my', 'me'], answer: 2, why: 'help のあとの「人」は目的格 me。' },
+      { sentence: 'Please help me ___ the dishes.', choices: ['wash', 'washed', 'washing', 'washes'], answer: 0, why: 'help ＋人のあとは動詞の原形 wash。' },
+      { sentence: 'He helped his mother ___ her work.', choices: ['with', 'for', 'to', 'at'], answer: 0, why: 'help 人 with もの で「人の〜を手伝う」。' },
+      { sentence: 'Could you help ___ find my key?', choices: ['I', 'my', 'me', 'mine'], answer: 2, why: 'help のあとの「人」は目的格 me。' },
     ],
   },
   {
