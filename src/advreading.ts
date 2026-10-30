@@ -17551,6 +17551,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['The Power of Asking Questions', 'Why the Sky Is Blue', 'How to Pass Every Exam', 'Why Teachers Should Talk More'], answer: 0, why: '全体として、質問がへる理由、質問の学びへの効果、質問をうながすくふうを述べている。' },
   },
   {
+    id: 'kyotsu-food-trucks',
+    title: 'Restaurants on Wheels',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "At lunchtime in many cities, long lines of office workers can be seen waiting in front of small trucks parked by the side of the road. Inside each truck, cooks are busy preparing curry, tacos, sandwiches, or noodles. These food trucks, which serve meals directly from a vehicle, have become a common sight in business districts, parks, and event spaces in many countries.",
+      "One reason for their popularity is that food trucks make it easier for people to start their own businesses. Opening a traditional restaurant usually requires a large amount of money to rent a building, decorate it, and buy equipment. A food truck, by contrast, costs much less to prepare, ( A ) young cooks with new ideas can try their dishes without taking an enormous financial risk. Some owners who succeed with a truck later open a restaurant of their own.",
+      "Food trucks also have the advantage of being able to move. If one location does not attract enough customers, the owner can simply drive to another place. Many trucks visit office areas on weekdays and parks or festivals on weekends, following the crowds. Owners often use social media to announce where they will be each day, so regular customers can find their favourite trucks easily.",
+      "However, running a food truck is not as easy as it may look. The kitchen inside a truck is very small, so cooks must plan their menus carefully and work quickly in a limited space. Owners must also follow rules about food safety and obtain permission to sell in certain areas. In some cities, these rules are strict, and the number of places where trucks are allowed to park is limited. Bad weather can also reduce the number of customers, ( B ) income may change greatly from day to day.",
+      "Despite these difficulties, food trucks continue to attract both owners and customers. For customers, they offer a chance to try a wide variety of foods at reasonable prices, often from cultures they have never experienced before. For cities, they can bring life to empty spaces and create jobs. The success of food trucks shows ( C ) a small business with a good idea and the ability to adapt can find a place even in a competitive market.",
+    ],
+    ja: [
+      '多くの都市の昼食の時間には、道のわきにとめられた小さなトラックの前で、会社員が長い列を作って待っているのが見られる。それぞれのトラックの中では、料理人がカレーやタコス、サンドイッチ、めん類を作るのにいそがしい。車から直接食事を出すこうしたフードトラックは、多くの国で、オフィス街や公園、イベント会場でよく見かける光景になっている。',
+      'フードトラックが人気のある理由の一つは、人々が自分の商売を始めやすくなることである。ふつうのレストランを開くには、ふつう、建物を借り、内装をととのえ、設備を買うために多くのお金が必要である。それに対してフードトラックは、準備にかかるお金がずっと少ないので、新しい考えをもつ若い料理人が、大きなお金の危険をおかさずに自分の料理をためすことができる。トラックで成功した持ち主の中には、のちに自分のレストランを開く人もいる。',
+      'フードトラックには、移動できるという利点もある。ある場所に十分な客が集まらなければ、持ち主はただ別の場所へ車で行けばよい。多くのトラックは、人の集まる場所を追って、平日はオフィス街を、週末は公園や祭りをおとずれる。持ち主はしばしばSNSを使って毎日どこにいるかを知らせるので、常連客はお気に入りのトラックをかんたんに見つけることができる。',
+      'しかし、フードトラックの経営は見かけほどかんたんではない。トラックの中の台所はとてもせまいので、料理人はメニューを注意深く計画し、限られた場所ですばやく働かなければならない。持ち主は、食品の安全についてのきまりを守り、ある地域で売るための許可をとる必要もある。都市によってはこうしたきまりがきびしく、トラックがとめてよい場所の数も限られている。悪い天気も客の数をへらすことがあり、そのため収入は日によって大きく変わるかもしれない。',
+      'こうした困難にもかかわらず、フードトラックは持ち主と客の両方を引きつけつづけている。客にとっては、手ごろな値段で、しばしば今まで経験したことのない文化の、さまざまな食べ物をためす機会になる。都市にとっては、空いている場所に活気をもたらし、仕事を生み出すことができる。フードトラックの成功は、よい考えと変化に対応する力をもつ小さな商売が、競争のはげしい市場でも居場所を見つけられることを示しているのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「フードトラックは準備のお金がずっと少ない、だから若い料理人がためせる」と結果を表すので so。' },
+      { id: 'B', choices: ['so', 'although', 'unless', 'until'], answer: 0, why: '「悪い天気が客をへらすことがある、そのため収入が日によって変わる」と結果を表すので so。' },
+      { id: 'C', choices: ['that', 'what', 'which', 'whose'], answer: 0, why: 'show のあとに「～ということ」を表す名詞節を置くので接続詞 that。うしろは完全な文。' },
+    ],
+    tf: [
+      { statement: 'フードトラックは、ふつうのレストランより準備のお金が少ない。', answer: true, why: '第2段落 A food truck, by contrast, costs much less to prepare。' },
+      { statement: 'フードトラックは、毎日かならず同じ場所で営業しなければならない。', answer: false, why: '第3段落 the owner can simply drive to another place。' },
+      { statement: 'トラックの中の台所はせまいので、料理人はすばやく働く必要がある。', answer: true, why: '第4段落 cooks must plan their menus carefully and work quickly in a limited space。' },
+      { statement: '筆者によれば、フードトラックの収入は天気に関係なく毎日同じである。', answer: false, why: '第4段落 income may change greatly from day to day。' },
+    ],
+    qa: [
+      { q: 'How do regular customers find their favourite food trucks?', choices: ['Owners announce their locations on social media.', 'The trucks always stay in the same park.', 'Customers call the city office.', 'The trucks play loud music.'], answer: 0, why: '第3段落 Owners often use social media to announce where they will be each day。' },
+      { q: 'Which is NOT mentioned as a difficulty of running a food truck?', choices: ['Customers do not like eating outside.', 'The kitchen is very small.', 'Owners must obtain permission to sell.', 'Bad weather can reduce customers.'], answer: 0, why: '第4段落に客が外で食べるのをきらうという話はない。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 1, choices: ['少ないお金で商売を始められる利点', 'レストランの内装のしかた', '料理学校の選び方', '建物の家賃の決め方'], answer: 0, why: '第2段落は、ふつうのレストランよりお金がかからず、若い料理人が商売を始めやすいことを述べている。' },
+      { para: 2, choices: ['移動できることの利点', '車の運転のしかた', '祭りの歴史', 'SNSの作り方'], answer: 0, why: '第3段落は、客の多い場所へ移動でき、SNSで場所を知らせられることを述べている。' },
+    ],
+    titleQ: { choices: ['Restaurants on Wheels', 'How to Drive a Truck', 'The History of Curry', 'Why Restaurants Are Expensive'], answer: 0, why: '全体として、フードトラックの利点と課題、成功の意味を述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
