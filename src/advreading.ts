@@ -15466,6 +15466,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-pluto',
+    title: 'Why Pluto Is No Longer a Planet',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "For more than seventy years after its discovery in 1930, Pluto was taught in schools around the world as the ninth planet of our solar system. In 2006, however, an international organization of astronomers decided that Pluto should no longer be called a planet. The decision surprised and even upset many people, but the reasons behind it show how scientific categories can change as new information becomes available.",
+      "The trouble began with new discoveries in the outer solar system. Using more powerful telescopes, astronomers found that Pluto was not alone. It belongs to a region beyond Neptune that contains many icy objects, some of which are quite large. In 2005, scientists announced the discovery of an object called Eris, which seemed to be about the same size as Pluto. This raised a difficult question. If Pluto was a planet, should Eris be called a planet too? And what about the many other similar objects that might be found in the future?",
+      "To answer this question, the astronomers agreed on a formal definition. According to it, a planet must orbit the Sun, must be large enough for its own gravity to pull it into a nearly round shape, and must have cleared its orbit of other objects of similar size. Pluto meets the first two conditions, ( A ) it does not meet the third, because it shares its region of space with many other icy bodies. It was therefore placed in a new group called dwarf planets.",
+      "Not everyone agreed with the decision. Some scientists argued that the definition was too strict or difficult to apply, and many members of the public felt that something familiar had been taken away. Interest in Pluto, however, did not disappear. In 2015, a spacecraft flew past it and sent back detailed pictures showing mountains of ice and a surprisingly varied surface, ( B ) made Pluto more fascinating than ever.",
+      "The story of Pluto shows that scientific categories are tools that people create to organize knowledge, and that they may need to be revised when new evidence appears. Changing the name of something does not change the object itself. Pluto is the same world it always was. What has changed is our understanding of its place among the many objects ( C ) travel around the Sun.",
+    ],
+    ja: [
+      '1930年に発見されてから70年以上のあいだ、冥王星は世界中の学校で太陽系の9番目の惑星として教えられていた。しかし2006年、天文学者の国際的な組織は、冥王星をもう惑星とよぶべきではないと決めた。この決定は多くの人をおどろかせ、がっかりさせさえしたが、その理由は、新しい情報が手に入るにつれて科学の分類が変わりうることを示している。',
+      '問題は太陽系の外側での新しい発見から始まった。より強力な望遠鏡を使って、天文学者たちは冥王星がひとりではないことを見つけた。冥王星は海王星の外側にある、たくさんの氷の天体をふくむ領域に属しており、その中にはかなり大きいものもある。2005年、科学者たちは冥王星とほぼ同じ大きさに見えるエリスという天体の発見を発表した。これは難しい問いを生んだ。冥王星が惑星なら、エリスも惑星とよぶべきなのか。そして将来見つかるかもしれない、ほかの多くの似た天体はどうなるのか。',
+      'この問いに答えるため、天文学者たちは正式な定義に合意した。それによれば、惑星は太陽のまわりを回っていなければならず、自分の重力でほぼ丸い形になるほど大きくなければならず、自分の軌道から同じくらいの大きさのほかの天体を取りのぞいていなければならない。冥王星は最初の2つの条件は満たしているが、3つめは満たしていない。多くのほかの氷の天体と宇宙の領域を分け合っているからだ。そのため冥王星は、準惑星という新しいグループに入れられた。',
+      'だれもがこの決定に賛成したわけではない。定義はきびしすぎる、あるいはあてはめるのが難しいと主張する科学者もいたし、一般の人々の多くは、なじみのあるものを取り上げられたように感じた。しかし、冥王星への関心は消えなかった。2015年、宇宙探査機が冥王星のそばを通り、氷の山やおどろくほど変化に富んだ地表を写したくわしい画像を送ってきた。そのことで冥王星は、これまで以上に魅力的なものになったのである。',
+      '冥王星の話は、科学の分類が人々が知識を整理するために作る道具であり、新しい証拠が現れたときには見直す必要があるかもしれないことを示している。何かの名前を変えても、その物自体は変わらない。冥王星は、今も昔も同じ世界である。変わったのは、太陽のまわりを回る多くの天体の中での、冥王星の位置づけについてのわたしたちの理解なのである。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['but', 'so', 'or', 'because'], answer: 0, why: '「最初の2つの条件は満たすが、3つめは満たさない」と逆接なので but。' },
+      { id: 'B', choices: ['which', 'what', 'who', 'where'], answer: 0, why: '前の文の内容（画像を送ってきたこと）を受け、うしろに主語が欠けている（made Pluto …）ので非制限用法の which。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: 'the many objects that travel around the Sun「太陽のまわりを回る多くの天体」。先行詞 objects を受ける主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: '冥王星は1930年に発見され、長く9番目の惑星として教えられていた。', answer: true, why: '第1段落 For more than seventy years after its discovery in 1930, Pluto was taught … as the ninth planet。' },
+      { statement: 'エリスは、冥王星よりずっと小さい天体として発見された。', answer: false, why: '第2段落 which seemed to be about the same size as Pluto。ほぼ同じ大きさ。' },
+      { statement: '冥王星は、惑星の3つの条件のうち2つを満たしている。', answer: true, why: '第3段落 Pluto meets the first two conditions。' },
+      { statement: '筆者によれば、名前が変わったことで冥王星そのものも変わった。', answer: false, why: '第5段落 Changing the name of something does not change the object itself。' },
+    ],
+    qa: [
+      { q: 'Why does Pluto not meet the third condition for being a planet?', choices: ['It shares its region of space with many other icy objects.', 'It is too far from the Sun to orbit it.', 'It is not round.', 'It is smaller than the Moon.'], answer: 0, why: '第3段落 because it shares its region of space with many other icy bodies。軌道からほかの天体を取りのぞいていない。' },
+      { q: 'What is the main point of the last paragraph?', choices: ['Scientific categories are tools that can be revised as knowledge changes.', 'Pluto should be called a planet again.', 'Astronomers often make mistakes.', 'The names of planets never change.'], answer: 0, why: '第5段落 scientific categories are tools … they may need to be revised when new evidence appears。' },
+    ],
+    gist: [
+      { para: 1, choices: ['冥王星に似た天体が見つかり問いが生まれた', '望遠鏡の作り方', '海王星の大きさ', '氷の性質'], answer: 0, why: '第2段落は、エリスなど冥王星に似た天体の発見が「どれを惑星とよぶか」という問いを生んだことを述べている。' },
+      { para: 2, choices: ['惑星の定義と冥王星があてはまらない理由', '太陽の重力のしくみ', '準惑星の数', '軌道の計算のしかた'], answer: 0, why: '第3段落は、惑星の3つの条件と、冥王星が3つめを満たさないことを説明している。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
