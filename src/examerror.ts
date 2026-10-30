@@ -50,4 +50,28 @@ export const EXAM_ERROR: GrammarUnit[] = [
       { sentence: 'There were many people (A) waiting (B) for the bus, (C) most of them (D) were students.', choices: ['(A) waiting', '(B) for the bus', '(C) most of them', '(D) were students'], answer: 2, why: '2つの文をコンマだけでつなぐことはできないので、関係代名詞を使って most of whom were students。' },
     ],
   },
+  {
+    id: 'exam-error-compare',
+    title: '入試の正誤問題③（比較・仮定法）',
+    points: [
+      '文の (A)〜(D) のうち、文法的にまちがっている1か所を選ぶ。',
+      '比較は「何と何をくらべているか」「比較級を強める語（much・far）」、仮定法は「今の反対は過去形、過去の反対は had ＋過去分詞」に注目する。',
+    ],
+    examples: [
+      { en: 'The climate of Kyoto is hotter than that of Sapporo.', ja: '京都の気候は札幌の気候より暑い。（くらべるのは気候どうしなので that of）' },
+      { en: 'If I had known the answer, I would have told you.', ja: '答えを知っていたら、教えたのに。（過去の反対は had ＋過去分詞）' },
+    ],
+    questions: [
+      { sentence: 'This is (A) the most (B) beautiful lake (C) that I have (D) never seen.', choices: ['(A) the most', '(B) beautiful lake', '(C) that I have', '(D) never seen'], answer: 3, why: '最上級のあとの「今まで見た中で」は that I have ever seen。never だと意味が通らない。' },
+      { sentence: 'Tom is (A) much (B) taller (C) than (D) any boy in his class.', choices: ['(A) much', '(B) taller', '(C) than', '(D) any boy'], answer: 3, why: 'Tom もクラスの男の子なので、自分をのぞいて any other boy にする。' },
+      { sentence: 'If I (A) were you, I (B) will (C) apologize to her (D) right away.', choices: ['(A) were', '(B) will', '(C) apologize to her', '(D) right away'], answer: 1, why: '今の事実と反対の仮定（If I were you）なので、後半は would ＋原形。' },
+      { sentence: 'I wish I (A) can (B) speak French (C) as well (D) as you.', choices: ['(A) can', '(B) speak French', '(C) as well', '(D) as you'], answer: 0, why: 'I wish のあとの今かなわない願いは過去形：I wish I could speak。' },
+      { sentence: 'The population of Tokyo is (A) much (B) larger (C) than (D) Osaka.', choices: ['(A) much', '(B) larger', '(C) than', '(D) Osaka'], answer: 3, why: 'くらべるのは「人口」どうしなので than that of Osaka。' },
+      { sentence: 'If she (A) had taken the train, she (B) would not (C) miss (D) the meeting yesterday.', choices: ['(A) had taken', '(B) would not', '(C) miss', '(D) the meeting yesterday'], answer: 2, why: '過去の事実と反対の仮定なので、後半は would not have missed（would ＋ have ＋過去分詞）。' },
+      { sentence: 'This problem is (A) more (B) easier (C) than (D) the last one.', choices: ['(A) more', '(B) easier', '(C) than', '(D) the last one'], answer: 0, why: 'easier はすでに比較級なので more はつけない。強めるなら much easier。' },
+      { sentence: '(A) The more you (B) practice, (C) the better (D) can you play.', choices: ['(A) The more you', '(B) practice', '(C) the better', '(D) can you play'], answer: 3, why: 'the 比較級 ～, the 比較級 … のうしろはふつうの語順：the better you can play。' },
+      { sentence: 'It is (A) high time you (B) go (C) to bed, (D) Ken.', choices: ['(A) high time', '(B) go', '(C) to bed', '(D) Ken'], answer: 1, why: 'It is (high) time ＋主語＋過去形「もう～する時間だ」：you went to bed。' },
+      { sentence: 'She speaks English (A) as (B) fluent (C) as (D) a native speaker.', choices: ['(A) as', '(B) fluent', '(C) as', '(D) a native speaker'], answer: 1, why: '動詞 speaks を説明するので副詞 fluently：as fluently as。' },
+    ],
+  },
 ]
