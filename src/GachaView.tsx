@@ -9,7 +9,7 @@ import { castleLuck, helloLine, rareCheer, PITY, MYSTERY_COINS, LUCKY_BAG_PRICE,
 import { MEMBERS_FOR_TICKET } from './party'
 import { CHARA_PRICE, loadNStreak, RARE_EVERY } from './gacha'
 import { POINTS_FOR_SR, gachaShareText, GACHA_PRICE, gachaOmen, LUCKY_COINS, MULTI5, SLOT_COINS, loadGachaLog, loadGachaStats, PARTY_MAX, pushGachaLog } from './gacha'
-import { typeOf } from './chartype'
+import { CHAR_TYPES, typeOf } from './chartype'
 import { formOf, levelInfo, type MonsterState } from './monster'
 import { FORMS, kindOf, RARITY_LABEL, SPECIES, speciesOf, withSpecies, type Kind, type Species } from './monster'
 import { challengeOf } from './challenge'
@@ -677,6 +677,7 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
   const got = new Set(['mochi', ...owned])
   const [pick, setPick] = useState<string | null>(null)
   const [onlyNew, setOnlyNew] = useState(false) // まだ会っていない子だけ見る
+  const [typeOnly, setTypeOnly] = useState('') // デザイン119：タイプでしぼりこむ
   const n = SPECIES.filter((sp) => got.has(sp.id)).length
   return (
     <details className="gacha-odds char-book chip-fold cf-1">
@@ -695,8 +696,15 @@ function CharBook({ owned, fresh = '', levels, partner }: { owned: string[]; fre
           {onlyNew ? '📖 ぜんぶ見る' : '❓ まだ会っていない子だけ見る'}
         </button>
       )}
+      <p className="party-sorts party-types" role="group" aria-label="図鑑をタイプでしぼりこむ">
+        {Object.values(CHAR_TYPES).map((ty) => (
+          <button key={ty.id} className={`list-link pill-btn party-sort char-type t-${ty.id}`} aria-pressed={typeOnly === ty.id} onClick={() => setTypeOnly(typeOnly === ty.id ? '' : ty.id)}>
+            {ty.icon} {ty.name}
+          </button>
+        ))}
+      </p>
       <ul className="char-book-list">
-        {SPECIES.filter((sp) => !onlyNew || !got.has(sp.id)).map((sp) => {
+        {SPECIES.filter((sp) => (!onlyNew || !got.has(sp.id)) && (!typeOnly || typeOf(sp.id).id === typeOnly)).map((sp) => {
           const ok = got.has(sp.id)
           const t = typeOf(sp.id)
           return (

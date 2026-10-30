@@ -99,3 +99,17 @@ it('図鑑：会えたキャラの数がふえると、数字が作りなおさ�
   expect(document.querySelector('.book-count')).not.toBe(before)
   expect(document.querySelector('.book-count')!.textContent).toBe('3')
 })
+
+it('デザイン119：キャラ図鑑をタイプでしぼりこめる（もう一度おすと全部にもどる）', () => {
+  render(<Gacha partnerName="モチ" coins={0} members={2} pityLeft={10} onDraw={() => null} ownedSpecies={['mochi', 'fox', 'penguin']} />)
+  const all = document.querySelectorAll('.char-book-list li').length
+  expect(all).toBe(SPECIES.length)
+  const btn = screen.getByRole('button', { name: '🛡 シールド型' })
+  fireEvent.click(btn)
+  expect(btn.getAttribute('aria-pressed')).toBe('true')
+  const n = SPECIES.filter((sp) => typeOf(sp.id).id === 'shield').length
+  expect(document.querySelectorAll('.char-book-list li')).toHaveLength(n)
+  expect(screen.queryByRole('button', { name: 'コンコン（アタック型）' })).toBeNull()
+  fireEvent.click(btn)
+  expect(document.querySelectorAll('.char-book-list li')).toHaveLength(all)
+})
