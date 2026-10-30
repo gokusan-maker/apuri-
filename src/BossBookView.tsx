@@ -19,6 +19,7 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
   const [book] = useState(loadBook)
   const [times] = useState(loadBossTimes)
   const [noMiss] = useState(loadNoMissBosses) // デザイン94：ノーミスでたおしたボス
+  const [cleanOnly, setCleanOnly] = useState(false) // デザイン109：ノーミスでたおしたボスだけ見る
   const [traitOpen, setTraitOpen] = useState<string | null>(null) // デザイン106：とくぎの説明を開いているボス
   const [only, setOnly] = useState<keyof typeof BOSS_TRAITS | null>(null) // とくぎでしぼりこむ
   const [sealT] = useState(loadSealTraits) // とくぎごとの、封じて勝った回数
@@ -81,10 +82,15 @@ export function BossBook({ onFight }: { onFight?: (name: string) => void } = {})
               {BOSS_TRAITS[t].icon}
             </button>
           ))}
+          {clean > 0 && (
+            <button className={cleanOnly ? 'on' : ''} aria-pressed={cleanOnly} onClick={() => setCleanOnly(!cleanOnly)}>
+              ✨ノーミスだけ
+            </button>
+          )}
         </div>
       )}
       <ul className="boss-book-list">
-        {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only)).map((b) => {
+        {all.filter((b) => book[b.name] && (only === null || traitOf(b.name) === only) && (!cleanOnly || noMiss.includes(b.name))).map((b) => {
           const e = book[b.name]
           return (
             <li key={b.name} className={e ? 'got' : 'locked'}>

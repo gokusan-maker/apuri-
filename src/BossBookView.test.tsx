@@ -244,3 +244,24 @@ it('デザイン108：ボス図鑑の見出しに、ノーミスでたおした�
   render(<BossBook />)
   expect(screen.getByLabelText('ノーミス 1体').textContent).toBe('✨1')
 })
+
+it('デザイン109：ボス図鑑の「✨ノーミスだけ」で、ノーミスでたおしたボスだけになる', () => {
+  localStorage.clear()
+  const { unmount } = render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} />)
+  const en = document.querySelector('.boss .en')!.textContent
+  const w = wordsOf(['中1']).find((x) => x.en === en)!
+  fireEvent.click([...document.querySelectorAll<HTMLButtonElement>('.choice')].find((b) => b.textContent === w.ja)!)
+  unmount()
+  localStorage.setItem('eitan:boss-nomiss', '[]')
+  const { unmount: u2 } = render(<BossBook />)
+  expect(screen.queryByRole('button', { name: '✨ノーミスだけ' })).toBeNull() // ノーミスがいなければボタンは出ない
+  u2()
+  localStorage.setItem('eitan:boss-nomiss', JSON.stringify([document.title === 'x' ? '' : 'dummy']))
+  const book = JSON.parse(localStorage.getItem('eitan:boss-book')!) as Record<string, unknown>
+  localStorage.setItem('eitan:boss-nomiss', JSON.stringify(Object.keys(book)))
+  render(<BossBook />)
+  const before = document.querySelectorAll('.boss-book-list li.got').length
+  fireEvent.click(screen.getByRole('button', { name: '✨ノーミスだけ' }))
+  expect(document.querySelectorAll('.boss-book-list li.got').length).toBe(before)
+  expect(screen.getByRole('button', { name: '✨ノーミスだけ' })).toHaveAttribute('aria-pressed', 'true')
+})
