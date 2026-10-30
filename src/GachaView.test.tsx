@@ -471,3 +471,14 @@ it('デザイン97：キャラ図鑑で会えた子をえらぶと、その子�
   fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
   expect(screen.getByText(`（必殺技：${specialOf('fox').name}）`)).toBeInTheDocument()
 })
+
+it('デザイン99：キャラ図鑑で会えた子をえらぶと、その子のあいさつ（英語と日本語）も出る', async () => {
+  const { SPECIES } = await import('./monster')
+  const { replyOf } = await import('./partner')
+  render(<Gacha coins={0} members={2} onDraw={() => null} ownedSpecies={['mochi', 'fox']} onChara={() => null} />)
+  fireEvent.click(screen.getByRole('tab', { name: '🐣 キャラガチャ' }))
+  const fox = SPECIES.find((s) => s.id === 'fox')!
+  fireEvent.click(screen.getByRole('button', { name: new RegExp(`^${fox.name}（`) }))
+  expect(screen.getByText(`「${replyOf('fox').en}」`)).toBeInTheDocument()
+  expect(screen.getByText(`（${replyOf('fox').ja}）`)).toBeInTheDocument()
+})
