@@ -17941,6 +17941,45 @@ export const ADV_PASSAGES: LongPassage[] = [
     titleQ: { choices: ['How the Bicycle Was Born', 'How to Fix a Flat Tyre', 'The History of Aircraft', 'Why Walking Is Healthy'], answer: 0, why: '全体として、ペダルのない機械から安全型自転車までの発達と社会への影響を述べている。' },
   },
   {
+    id: 'kyotsu-daydreaming',
+    title: 'Why We Daydream',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "Have you ever been reading a book and suddenly realised that you had no idea what the last page was about? Or have you ever been sitting in class and found yourself thinking about your weekend plans instead of the lesson? If so, you were daydreaming. Psychologists call this experience mind wandering, and it is far more common than most people imagine.",
+      "According to some studies, people spend a large part of their waking hours thinking about something other than what they are actually doing. By some estimates, this may be close to half of the time. Mind wandering happens most often during tasks that are easy or repetitive, such as washing dishes, walking a familiar route, or listening to a long speech. In these situations, the brain does not need all of its attention for the task, ( A ) it begins to move to other topics.",
+      "For a long time, daydreaming was mainly seen as a problem. Teachers worried that students who stared out of the window were not learning, and employers feared that workers who let their minds wander would make mistakes. These concerns are not without reason. When a task requires careful attention, such as driving a car or solving a difficult maths problem, mind wandering can lead to errors and even accidents.",
+      "However, researchers have also found that daydreaming can have benefits. When the mind is allowed to wander, it often connects ideas that are not usually linked, which can lead to creative solutions. Many people report that good ideas come to them while they are taking a shower or going for a walk, rather than while they are sitting at a desk. Daydreaming also helps people plan for the future ( B ) they imagine what might happen and prepare for it.",
+      "The key, according to many psychologists, is balance. It is important to stay focused when a task truly needs attention, but it may also be useful to give the mind some free time. Taking short breaks, going for a walk without a phone, or simply looking out of the window for a few minutes can give the brain a chance to rest and make new connections. In other words, the habit ( C ) many of us were told to avoid may sometimes be exactly what we need.",
+    ],
+    ja: [
+      '本を読んでいて、最後の1ページに何が書いてあったかまったくわからないと急に気づいたことはないだろうか。あるいは、授業中にすわっていて、授業ではなく週末の予定について考えている自分に気づいたことはないだろうか。もしそうなら、あなたは空想していたのである。心理学者はこの経験を「マインドワンダリング（心のさまよい）」とよび、それはほとんどの人が想像するよりもずっとよくあることである。',
+      'いくつかの研究によれば、人々は起きている時間の大部分を、実際にしていること以外のことを考えてすごしている。ある推定では、これは時間の半分近くになるかもしれない。心のさまよいは、皿を洗う、なれた道を歩く、長い話を聞くなど、かんたんな作業やくり返しの作業のあいだに最もよく起こる。こうした場面では、脳はその作業にすべての注意を使う必要がないので、ほかの話題へ移りはじめるのである。',
+      '長いあいだ、空想はおもに問題だと見られていた。先生は、窓の外をながめている生徒は学んでいないのではないかと心配し、雇い主は、心をさまよわせる働き手がまちがいをするのではないかとおそれた。こうした心配には理由がないわけではない。車の運転やむずかしい数学の問題を解くことのように、作業に注意深さが必要なとき、心のさまよいはまちがいや、事故さえ引き起こしうる。',
+      'しかし研究者は、空想に利点がありうることも発見している。心をさまよわせると、ふだんは結びつかない考えがしばしば結びつき、それが創造的な解決策につながることがある。多くの人が、よい考えは机に向かってすわっているときではなく、シャワーをあびているときや散歩をしているときにうかぶと言う。空想は、何が起こりうるかを想像してそれにそなえるので、人々が将来の計画を立てるのにも役立つ。',
+      '多くの心理学者によれば、大切なのはバランスである。作業が本当に注意を必要とするときには集中していることが大切だが、心に自由な時間をあたえることも役に立つかもしれない。短い休けいをとったり、スマートフォンを持たずに散歩したり、ただ数分間窓の外をながめたりすることは、脳に休んで新しい結びつきを作る機会をあたえうる。言いかえれば、私たちの多くがさけるように言われてきた習慣が、ときにはまさに私たちに必要なものなのかもしれない。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['so', 'but', 'or', 'unless'], answer: 0, why: '「脳はすべての注意を使う必要がない、だからほかの話題へ移りはじめる」と結果を表すので so。' },
+      { id: 'B', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「何が起こりうるかを想像してそなえるので、計画を立てるのに役立つ」と理由を表すので because。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 the habit を受け、うしろの avoid の目的語が欠けているので目的格の関係代名詞 that。' },
+    ],
+    tf: [
+      { statement: '心のさまよいは、かんたんな作業やくり返しの作業のあいだに起こりやすい。', answer: true, why: '第2段落 Mind wandering happens most often during tasks that are easy or repetitive。' },
+      { statement: '筆者によれば、車の運転中の心のさまよいは危険ではない。', answer: false, why: '第3段落 such as driving a car … mind wandering can lead to errors and even accidents。' },
+      { statement: 'よい考えはシャワーや散歩のときにうかぶと言う人が多い。', answer: true, why: '第4段落 good ideas come to them while they are taking a shower or going for a walk。' },
+      { statement: '多くの心理学者は、いつも集中しつづけることだけが大切だと言う。', answer: false, why: '第5段落 The key … is balance … it may also be useful to give the mind some free time。' },
+    ],
+    qa: [
+      { q: 'How can daydreaming lead to creative solutions?', choices: ['It connects ideas that are not usually linked.', 'It makes people work longer hours.', 'It stops people from thinking.', 'It makes tasks more repetitive.'], answer: 0, why: '第4段落 it often connects ideas that are not usually linked, which can lead to creative solutions。' },
+      { q: 'Which is NOT mentioned as a way to give the mind free time?', choices: ['Playing games on a phone.', 'Taking short breaks.', 'Walking without a phone.', 'Looking out of the window.'], answer: 0, why: '第5段落にスマートフォンでゲームをする話はない（むしろ電話を持たずに歩くこと）。ほかの3つは本文にある。' },
+    ],
+    gist: [
+      { para: 2, choices: ['空想が問題とされてきた理由', '窓の作り方', '数学の問題の解き方', '会社の規則'], answer: 0, why: '第3段落は、空想が学習や仕事のじゃまになり、事故につながりうると心配されてきたことを述べている。' },
+      { para: 3, choices: ['空想の利点（創造性と計画）', 'シャワーの使い方', '机のならべ方', '旅行の計画'], answer: 0, why: '第4段落は、空想が創造的な考えや将来の計画に役立つことを述べている。' },
+    ],
+    titleQ: { choices: ['Why We Daydream', 'How to Wash Dishes', 'The History of Schools', 'Why Phones Are Dangerous'], answer: 0, why: '全体として、心のさまよいがどれほどよくあるか、その問題点と利点、バランスの大切さを述べている。' },
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
