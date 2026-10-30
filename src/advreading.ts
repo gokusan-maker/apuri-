@@ -16384,6 +16384,44 @@ export const ADV_PASSAGES: LongPassage[] = [
     ],
   },
   {
+    id: 'kyotsu-bees',
+    title: 'Small Workers, Big Jobs',
+    level: '共通テスト（評論）',
+    paragraphs: [
+      "When we think of bees, many of us first think of honey or of being stung. However, the most important work that bees do has little to do with either. As they fly from flower to flower to collect food, bees carry pollen, a fine powder that plants need in order to produce seeds and fruit. This process, called pollination, is essential for many of the plants that we and other animals depend on.",
+      "Many fruits and vegetables, such as apples, strawberries, and pumpkins, need animals to carry pollen from one flower to another. Wind can carry the pollen of some plants, including rice and wheat, but many other crops produce much less food without the help of insects. Bees are especially good pollinators ( A ) their bodies are covered with tiny hairs that pollen easily sticks to.",
+      "In recent years, scientists in many parts of the world have reported that the numbers of some kinds of bees are falling. There seem to be several causes. Natural areas full of wild flowers have been replaced by roads, buildings, and large fields of a single crop. Certain chemicals used to protect crops from pests can also harm bees, and diseases and changes in climate may make the situation worse. When bees become fewer, farmers may have to spend more money to grow the same amount of food.",
+      "People are trying different ways to help. Some farmers leave strips of wild flowers at the edges of their fields, ( B ) bees can find food throughout the season. In cities, people plant flowers on balconies and rooftops, and some schools and companies even keep beehives. Many researchers say that it is important to protect not only honeybees, which are kept by people, but also the many kinds of wild bees that live on their own. Some wild bees are better than honeybees at pollinating certain crops.",
+      "Bees may be small, but their work connects them to farms, gardens, forests, and our own dinner tables. If they disappear, it will not only be a loss for nature but also a serious problem for food production. Learning about bees reminds us that even the smallest living things can play a part ( C ) is far larger than their size suggests.",
+    ],
+    ja: [
+      'ハチと聞いて、わたしたちの多くはまずはちみつや、さされることを思いうかべる。しかし、ハチがする最も大切な仕事は、そのどちらともあまり関係がない。食べ物を集めるために花から花へと飛びまわるとき、ハチは花粉を運ぶ。花粉は、植物が種や実をつくるために必要な細かい粉である。受粉とよばれるこの過程は、わたしたちやほかの動物がたよっている植物の多くにとって欠かせない。',
+      'りんご、いちご、かぼちゃのような多くのくだものや野菜は、花粉をある花から別の花へ運んでくれる動物を必要とする。風は米や小麦をふくむ一部の植物の花粉を運ぶことができるが、ほかの多くの作物は虫の助けがないと、つくる食べ物がずっと少なくなる。ハチがとくにすぐれた受粉の運び手なのは、その体が、花粉がつきやすい小さな毛でおおわれているからである。',
+      '近年、世界の多くの地域の科学者たちが、ある種類のハチの数が減っていると報告している。原因はいくつかあるようだ。野生の花でいっぱいの自然の場所が、道路や建物、一種類の作物だけの広い畑に置きかわってきた。作物を害虫から守るために使われるある種の化学物質もハチをきずつけることがあり、病気や気候の変化が状況をさらに悪くするかもしれない。ハチが少なくなると、農家は同じ量の食べ物を育てるのに、より多くのお金を使わなければならなくなるかもしれない。',
+      '人々はさまざまな方法で助けようとしている。畑のはしに野生の花の帯を残して、季節を通してハチが食べ物を見つけられるようにする農家もある。都市では、人々がベランダや屋上に花を植え、ハチの巣箱を置く学校や会社さえある。多くの研究者は、人が飼っているミツバチだけでなく、自分たちだけで暮らす多くの種類の野生のハチも守ることが大切だと言っている。野生のハチの中には、ある種の作物の受粉がミツバチよりも得意なものもいる。',
+      'ハチは小さいかもしれないが、その仕事はハチを畑や庭、森、そしてわたしたち自身の食卓とつないでいる。もしハチがいなくなれば、それは自然にとっての損失であるだけでなく、食べ物の生産にとっても深刻な問題になるだろう。ハチについて学ぶと、最も小さな生き物でさえ、その大きさから思うよりもはるかに大きな役割を果たしうることを思い出させてくれる。',
+    ],
+    blanks: [
+      { id: 'A', choices: ['because', 'although', 'unless', 'until'], answer: 0, why: '「ハチがとくにすぐれた受粉の運び手である」理由「体が小さな毛でおおわれている」を表すので because。' },
+      { id: 'B', choices: ['so that', 'even if', 'as if', 'unless'], answer: 0, why: '「季節を通してハチが食べ物を見つけられるように」と目的を表すので so that。' },
+      { id: 'C', choices: ['that', 'what', 'whose', 'where'], answer: 0, why: '先行詞 a part を受け、うしろに主語が欠けている（is far larger …）ので主格の関係代名詞 that（which も可）。' },
+    ],
+    tf: [
+      { statement: '筆者によれば、ハチの最も大切な仕事ははちみつをつくることである。', answer: false, why: '第1段落 the most important work that bees do has little to do with either。最も大切なのは花粉を運ぶこと。' },
+      { statement: '米や小麦の花粉は、風で運ばれることがある。', answer: true, why: '第2段落 Wind can carry the pollen of some plants, including rice and wheat。' },
+      { statement: 'ある種の化学物質は、ハチをきずつけることがある。', answer: true, why: '第3段落 Certain chemicals used to protect crops from pests can also harm bees。' },
+      { statement: '研究者たちは、ミツバチだけを守ればよいと言っている。', answer: false, why: '第4段落 not only honeybees … but also the many kinds of wild bees。' },
+    ],
+    qa: [
+      { q: 'Why are bees especially good pollinators?', choices: ['Their bodies are covered with tiny hairs that pollen sticks to.', 'They can fly faster than other insects.', 'They make honey from pollen.', 'They live only in fields of a single crop.'], answer: 0, why: '第2段落 their bodies are covered with tiny hairs that pollen easily sticks to。' },
+      { q: 'Which is NOT given as a cause of the fall in bee numbers?', choices: ['People eating too much honey.', 'Loss of natural areas with wild flowers.', 'Chemicals used on crops.', 'Diseases and changes in climate.'], answer: 0, why: '第3段落で原因としてあげられているのは、自然の場所の減少・化学物質・病気と気候の変化。はちみつの食べすぎは書かれていない。' },
+    ],
+    gist: [
+      { para: 2, choices: ['ハチの数が減っている原因', 'はちみつのとり方', '道路の作り方', '害虫の種類'], answer: 0, why: '第3段落は、自然の場所の減少や化学物質、病気や気候の変化など、ハチが減っている原因を述べている。' },
+      { para: 3, choices: ['ハチを助けるための人々の取り組み', '屋上の使い方', '学校の行事', '野生の動物の飼い方'], answer: 0, why: '第4段落は、畑のはしの花の帯や都市の花、巣箱など、ハチを助ける取り組みを述べている。' },
+    ],
+  },
+  {
     id: 'adv-placebo',
     title: 'The Power of Expectation',
     level: '難関大（評論）',
