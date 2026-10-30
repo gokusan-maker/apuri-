@@ -195,3 +195,20 @@ export const EXAM_ERROR: GrammarUnit[] = [
     ],
   },
 ]
+
+// 正誤問題をすべての単元からランダムに n 問まとめて出す
+export function randomErrorUnit(n = 10, rng: () => number = Math.random): GrammarUnit {
+  const all = EXAM_ERROR.flatMap((u) => u.questions)
+  const pick = [...all]
+  for (let i = pick.length - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1))
+    ;[pick[i], pick[j]] = [pick[j], pick[i]]
+  }
+  return {
+    id: 'exam-error-random',
+    title: '入試の正誤問題（ランダム10問）',
+    points: ['いろいろな単元の正誤問題がランダムに出る。(A)〜(D) のうち、まちがっている1か所を選ぶ。'],
+    examples: [],
+    questions: pick.slice(0, n),
+  }
+}

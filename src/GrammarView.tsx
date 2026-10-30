@@ -13,7 +13,7 @@ import { GrammarTime } from './GrammarTimeView'
 import { GRAMMAR_MONSTER_COINS, monsterLook, monsterName, RUSH_COUNT, RUSH_GRAMMAR_COINS } from './grammarmonster'
 import { shuffle } from './quiz'
 import { EXAM_GRAMMAR } from './examgrammar'
-import { EXAM_ERROR } from './examerror'
+import { EXAM_ERROR, randomErrorUnit } from './examerror'
 import { Castle } from './CastleView'
 import { GrammarFigRows, GrammarFigure } from './GrammarFigView'
 import { FloorClear } from './FloorClearView'
@@ -493,6 +493,10 @@ export function Grammar({ castleOnly = false, belowCastle, castleLevel, onDrill,
                   <small>{u.questions.length}問</small>
                 </button>
               ))}
+              <button className="exam-tier" onClick={() => open(randomErrorUnit())}>
+                🎲 正誤問題ランダム
+                <small>10問</small>
+              </button>
             </div>
           </details>
         )}
