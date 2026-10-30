@@ -123,9 +123,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'She has lived in this town for five years.', ja: '彼女はこの町に5年間住んでいる。' },
     ],
     questions: [
-      { sentence: 'I have ___ this movie three times.', choices: ['see', 'saw', 'seen'], answer: 2, why: 'have のあとは過去分詞 seen。' },
-      { sentence: 'She has lived here ___ 2020.', choices: ['for', 'since', 'from'], answer: 1, why: '「2020年から（ずっと）」は since。' },
-      { sentence: 'I have ___ been to Hokkaido.', choices: ['never', 'yet', 'ago'], answer: 0, why: '「一度も〜ない」は never。' },
+      { sentence: 'I have ___ this movie three times.', choices: ['see', 'saw', 'seen', 'seeing'], answer: 2, why: 'have のあとは過去分詞 seen。' },
+      { sentence: 'She has lived here ___ 2020.', choices: ['for', 'since', 'from', 'at'], answer: 1, why: '「2020年から（ずっと）」は since。' },
+      { sentence: 'I have ___ been to Hokkaido.', choices: ['never', 'yet', 'ago', 'still'], answer: 0, why: '「一度も〜ない」は never。' },
     ],
   },
   {
@@ -415,9 +415,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'It has been raining since morning.', ja: '朝からずっと雨が降っている。' },
     ],
     questions: [
-      { sentence: 'He has ___ waiting for an hour.', choices: ['been', 'be', 'being'], answer: 0, why: 'has been ＋ ing の形。' },
-      { sentence: 'We have been playing ___ noon.', choices: ['since', 'for', 'at'], answer: 0, why: '「正午から」は since noon。' },
-      { sentence: 'They ___ been talking for thirty minutes.', choices: ['have', 'has', 'are'], answer: 0, why: 'they なので have。' },
+      { sentence: 'He has ___ waiting for an hour.', choices: ['been', 'be', 'being', 'was'], answer: 0, why: 'has been ＋ ing の形。' },
+      { sentence: 'We have been playing ___ noon.', choices: ['since', 'for', 'at', 'in'], answer: 0, why: '「正午から」は since noon。' },
+      { sentence: 'They ___ been talking for thirty minutes.', choices: ['have', 'has', 'are', 'were'], answer: 0, why: 'they なので have。' },
     ],
   },
   {
@@ -758,9 +758,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I have never been to a foreign country.', ja: '私は一度も外国に行ったことがありません。' },
     ],
     questions: [
-      { sentence: 'Have you ___ eaten Thai food?', choices: ['ever', 'never', 'yet'], answer: 0, why: '「今までに〜したことがありますか」は Have you ever 〜?。' },
-      { sentence: 'I have ___ climbed Mt. Fuji. I want to try it someday.', choices: ['ever', 'never', 'already'], answer: 1, why: '「一度も〜ない（いつか挑戦したい）」なので never。' },
-      { sentence: 'My sister has ___ to London three times.', choices: ['gone', 'been', 'went'], answer: 1, why: '「〜に行ったことがある」は have been to。has gone to は「行ってしまった（今いない）」。' },
+      { sentence: 'Have you ___ eaten Thai food?', choices: ['ever', 'never', 'yet', 'ago'], answer: 0, why: '「今までに〜したことがありますか」は Have you ever 〜?。' },
+      { sentence: 'I have ___ climbed Mt. Fuji. I want to try it someday.', choices: ['ever', 'never', 'already', 'ago'], answer: 1, why: '「一度も〜ない（いつか挑戦したい）」なので never。' },
+      { sentence: 'My sister has ___ to London three times.', choices: ['gone', 'been', 'went', 'go'], answer: 1, why: '「〜に行ったことがある」は have been to。has gone to は「行ってしまった（今いない）」。' },
     ],
   },
   {
@@ -996,9 +996,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Look at the house whose roof is red.', ja: '屋根が赤いあの家を見て。' },
     ],
     questions: [
-      { sentence: 'He is the boy ___ bike was stolen.', choices: ['who', 'whose', 'which'], answer: 1, why: '「その子の自転車が」なので whose ＋名詞。' },
-      { sentence: 'I know a woman whose son ___ in Canada.', choices: ['live', 'lives', 'living'], answer: 1, why: 'whose son（その息子が）が主語なので三人称単数の lives。' },
-      { sentence: 'This is a dog ___ eyes are blue.', choices: ['whose', 'that', 'what'], answer: 0, why: '「その犬の目が」なので whose。' },
+      { sentence: 'He is the boy ___ bike was stolen.', choices: ['who', 'whose', 'which', 'what'], answer: 1, why: '「その子の自転車が」なので whose ＋名詞。' },
+      { sentence: 'I know a woman whose son ___ in Canada.', choices: ['live', 'lives', 'living', 'are living'], answer: 1, why: 'whose son（その息子が）が主語なので三人称単数の lives。' },
+      { sentence: 'This is a dog ___ eyes are blue.', choices: ['whose', 'that', 'what', 'which'], answer: 0, why: '「その犬の目が」なので whose。' },
     ],
   },
   {
@@ -1010,9 +1010,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'This is what I wanted.', ja: 'これは私がほしかったものだ。' },
     ],
     questions: [
-      { sentence: 'Please show me ___ you bought.', choices: ['whose', 'that', 'what'], answer: 2, why: '前に名詞がなく「買ったもの」なので what。' },
-      { sentence: 'I could not understand ___ the teacher said.', choices: ['what', 'who', 'whose'], answer: 0, why: '「先生が言ったこと」なので what。' },
-      { sentence: 'This is the book ___ I wanted.', choices: ['what', 'which', 'whose'], answer: 1, why: '前に名詞 the book があるので which（what は使えない）。' },
+      { sentence: 'Please show me ___ you bought.', choices: ['whose', 'that', 'what', 'who'], answer: 2, why: '前に名詞がなく「買ったもの」なので what。' },
+      { sentence: 'I could not understand ___ the teacher said.', choices: ['what', 'who', 'whose', 'which'], answer: 0, why: '「先生が言ったこと」なので what。' },
+      { sentence: 'This is the book ___ I wanted.', choices: ['what', 'which', 'whose', 'who'], answer: 1, why: '前に名詞 the book があるので which（what は使えない）。' },
     ],
   },
   {
@@ -1024,9 +1024,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'My father has three times as many books as I do.', ja: '父は私の3倍の本を持っている。' },
     ],
     questions: [
-      { sentence: 'This box is ___ as heavy as that one.', choices: ['two', 'twice', 'second'], answer: 1, why: '「2倍」は twice as 〜 as。' },
-      { sentence: 'Her room is three ___ as large as mine.', choices: ['times', 'time', 'twice'], answer: 0, why: '3倍以上は「数＋times」。' },
-      { sentence: 'The new train is twice as ___ as the old one.', choices: ['faster', 'fastest', 'fast'], answer: 2, why: 'as と as の間は原級 fast。' },
+      { sentence: 'This box is ___ as heavy as that one.', choices: ['two', 'twice', 'second', 'double'], answer: 1, why: '「2倍」は twice as 〜 as。' },
+      { sentence: 'Her room is three ___ as large as mine.', choices: ['times', 'time', 'twice', 'timed'], answer: 0, why: '3倍以上は「数＋times」。' },
+      { sentence: 'The new train is twice as ___ as the old one.', choices: ['faster', 'fastest', 'fast', 'more fast'], answer: 2, why: 'as と as の間は原級 fast。' },
     ],
   },
   {
@@ -1038,9 +1038,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Please wait here while I get my bag.', ja: 'かばんを取ってくる間、ここで待っていてください。' },
     ],
     questions: [
-      { sentence: 'I fell asleep ___ I was watching TV.', choices: ['during', 'while', 'for'], answer: 1, why: '後ろに主語と動詞（I was watching）があるので while。' },
-      { sentence: 'We visited many temples ___ our trip to Kyoto.', choices: ['while', 'during', 'when'], answer: 1, why: '後ろが名詞（our trip）なので前置詞 during。' },
-      { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooking', 'cook'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
+      { sentence: 'I fell asleep ___ I was watching TV.', choices: ['during', 'while', 'for', 'by'], answer: 1, why: '後ろに主語と動詞（I was watching）があるので while。' },
+      { sentence: 'We visited many temples ___ our trip to Kyoto.', choices: ['while', 'during', 'when', 'between'], answer: 1, why: '後ろが名詞（our trip）なので前置詞 during。' },
+      { sentence: 'While my mother ___ dinner, I set the table.', choices: ['was cooking', 'cooking', 'cook', 'cooks'], answer: 0, why: '過去の「〜している間」なので過去進行形 was cooking。' },
     ],
   },
   {
@@ -1052,9 +1052,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'Has the bus left yet? — No, it has not left yet.', ja: 'バスはもう出発しましたか。—いいえ、まだ出発していません。' },
     ],
     questions: [
-      { sentence: 'She has ___ cleaned her room.', choices: ['yet', 'already', 'ever'], answer: 1, why: '肯定文で「もう〜した」は already（have と過去分詞の間）。' },
-      { sentence: 'Have you eaten lunch ___?', choices: ['still', 'just', 'yet'], answer: 2, why: '疑問文の「もう」は文の最後に yet。' },
-      { sentence: 'I have not read the letter ___.', choices: ['yet', 'already', 'just'], answer: 0, why: '否定文の「まだ（〜していない）」は yet。' },
+      { sentence: 'She has ___ cleaned her room.', choices: ['yet', 'already', 'ever', 'still'], answer: 1, why: '肯定文で「もう〜した」は already（have と過去分詞の間）。' },
+      { sentence: 'Have you eaten lunch ___?', choices: ['still', 'just', 'yet', 'ago'], answer: 2, why: '疑問文の「もう」は文の最後に yet。' },
+      { sentence: 'I have not read the letter ___.', choices: ['yet', 'already', 'just', 'ago'], answer: 0, why: '否定文の「まだ（〜していない）」は yet。' },
     ],
   },
   {
@@ -1080,9 +1080,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'As soon as the bell rang, the students ran outside.', ja: 'ベルが鳴るとすぐに、生徒たちは外へかけ出した。' },
     ],
     questions: [
-      { sentence: 'Please text me as soon ___ you get home.', choices: ['as', 'so', 'than'], answer: 0, why: 'as soon as 〜 の形。' },
-      { sentence: 'I will start my homework as soon as dinner ___.', choices: ['will end', 'ends', 'ended'], answer: 1, why: '未来のことでも as soon as の中は現在形 ends。' },
-      { sentence: 'As soon as she ___ the news, she began to cry.', choices: ['hears', 'heard', 'hearing'], answer: 1, why: '過去の話なので過去形 heard。' },
+      { sentence: 'Please text me as soon ___ you get home.', choices: ['as', 'so', 'than', 'that'], answer: 0, why: 'as soon as 〜 の形。' },
+      { sentence: 'I will start my homework as soon as dinner ___.', choices: ['will end', 'ends', 'ended', 'end'], answer: 1, why: '未来のことでも as soon as の中は現在形 ends。' },
+      { sentence: 'As soon as she ___ the news, she began to cry.', choices: ['hears', 'heard', 'hearing', 'hear'], answer: 1, why: '過去の話なので過去形 heard。' },
     ],
   },
   {
@@ -1332,9 +1332,9 @@ export const GRAMMAR: GrammarUnit[] = [
       { en: 'I asked him not to be late.', ja: '私は彼におくれないようにたのんだ。' },
     ],
     questions: [
-      { sentence: 'The teacher told us ___ run in the hallway.', choices: ['not to', 'to not', "don't"], answer: 0, why: '不定詞の否定は not to 〜。' },
-      { sentence: 'She asked me not ___ the door.', choices: ['open', 'to open', 'opening'], answer: 1, why: 'not to ＋動詞の原形。' },
-      { sentence: 'Please tell Ken ___ worry.', choices: ['not to', 'no to', 'not'], answer: 0, why: 'tell 人 not to 〜 の形。' },
+      { sentence: 'The teacher told us ___ run in the hallway.', choices: ['not to', 'no', "don't", 'not'], answer: 0, why: '不定詞の否定は not to 〜。' },
+      { sentence: 'She asked me not ___ the door.', choices: ['open', 'to open', 'opening', 'to opening'], answer: 1, why: 'not to ＋動詞の原形。' },
+      { sentence: 'Please tell Ken ___ worry.', choices: ['not to', 'no to', 'not', "don't to"], answer: 0, why: 'tell 人 not to 〜 の形。' },
     ],
   },
   {

@@ -83,7 +83,8 @@
 - [ ] 文法（中3）の3択の問題（243問）を高校入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 知覚動詞・感情の分詞・not only A but also B・though・nobody / nothing・命令文＋and / or・It takes・if / whether・使役動詞・付加疑問の10単元に4つ目の選択肢（243→213）
   - [x] ② 付加疑問と感嘆文・too / enough・so ～ that・仮定法・It is ～ for 人 to・疑問詞＋to・間接疑問・分詞の後置修飾・関係代名詞の省略・関係代名詞の10単元に4つ目の選択肢（213→183）
-  - [ ] ③ つづきの10単元を4択に
+  - [x] ③ 現在完了進行形・経験・継続・関係代名詞 what・whose・while / during・倍数表現・完了・as soon as・not to の10単元に4つ目の選択肢（183→153。tell 人 to not 〜 は正解にもなるので選択肢から外した）
+  - [ ] ④ つづきの10単元を4択に
 - [x] 文法（高校）の3択の問題（861問）を入試と同じ4択にする（まぎらわしい選択肢を1つ足す・答えが2つにならないか点検する）
   - [x] ① 群前置詞・前置詞の熟語6単元（in depth / at length、in line with、contrary to、except for など）を4択に（861→843。テストでふえないようにした）
   - [x] ② by の熟語・now and then・in the way / in return・ahead of / prior to・句動詞の6単元を4択に（843→825）
