@@ -773,3 +773,10 @@ it('デザイン96：最大コンボが10未満なら「すごいコンボ」は
   expect(n).toBeLessThan(10)
   expect(screen.queryByLabelText('すごいコンボ')).toBeNull()
 })
+
+it('デザイン114：必殺技を出さずに勝ったときは、結果画面に必殺技の回数を出さない', () => {
+  render(<Boss level="中1" words={wordsOf(['中1'])} onWin={() => {}} onExit={() => {}} hp={5} traits={[]} />)
+  answer(true)
+  expect(screen.getByText('ボスをたおした！ 🎉')).toBeInTheDocument()
+  expect(screen.queryByLabelText(/^必殺技 \d+回$/)).toBeNull()
+})

@@ -596,6 +596,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
     setHealed(false)
     setMissed([])
     setWrongs(0)
+    setSpecial(0)
     setGauge(0)
     setCorrects(0)
     setTeamHits({ word: 0, grammar: 0, reading: 0 })
@@ -856,6 +857,7 @@ export function Boss({ level, words, onAnswer, onWin, onExit, bonus = 100, onSpe
             )}
             {time && !time.best && <span>🏁 最短 {formatSec(loadBossTimes()[look.name] ?? time.sec)}</span>}
             {wrongs === 0 && <span className="game-best" aria-label="ノーミス">✨ ノーミス！</span>}
+            {special > 0 && <span aria-label={`必殺技 ${special}回`}>💥 必殺技 {special}回</span>} {/* デザイン114 */}
             {/* デザイン90：このボス戦で正解した数 */}
             <span aria-label={`正解した数 ${corrects}`}>⭕ {corrects}問正解</span>
             {bestCombo >= 2 && <span aria-label={`最大コンボ ${bestCombo}`}>🔥 最大 {bestCombo} コンボ</span>}
